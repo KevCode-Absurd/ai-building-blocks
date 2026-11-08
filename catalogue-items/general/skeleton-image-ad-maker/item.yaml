@@ -1,0 +1,20 @@
+slug: skeleton-image-ad-maker
+name: "Skeleton and X-ray image ad maker"
+summary: "Build a non-graphic skeleton or X-ray metaphor as a finished still image ad, grounded in the product and approved claims."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: image
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+  - {type: product_photos, required: true}
+outputs:
+  - {type: image_prompt}
+  - {type: image}
+  - {type: review}
+uses: []
+origin: own
+version: 1.0.0

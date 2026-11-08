@@ -765,6 +765,77 @@
         "read_by_coordinator"
       ],
       "additionalProperties": false
+    },
+    "visual_spec": {
+      "type": "object",
+      "description": "Host-reported visual specification; required for visual creative jobs and designed landing pages.",
+      "properties": {
+        "references": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "minItems": 1,
+          "maxItems": 100
+        },
+        "fonts": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "minItems": 1,
+          "maxItems": 100
+        },
+        "colors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "minItems": 1,
+          "maxItems": 100
+        },
+        "logo": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "formats": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "minItems": 1,
+          "maxItems": 100
+        },
+        "format_rationale": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "required_renderer": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        }
+      },
+      "required": [
+        "references",
+        "fonts",
+        "colors",
+        "logo",
+        "formats",
+        "format_rationale",
+        "required_renderer"
+      ],
+      "additionalProperties": false
     }
   },
   "required": [

@@ -1,4 +1,5 @@
 // Structural checks for host-authored job documents. They cannot prove what a host actually ran.
+import {discoverStudioFormats} from './studio-discovery.mjs';
 import jobSchema from './schemas/job.json' with { type: 'json' };
 import cardSchema from './schemas/job-card.json' with { type: 'json' };
 import teamSchema from './schemas/team-plan-v2.json' with { type: 'json' };
@@ -175,7 +176,9 @@ function teamChecks(d, c, add) {
     if (roles && !role) add(`${p}.role_id`, 'does not exist in the role inventory.');
     const families = list(jobIndexOf(c)?.families).filter(f => list(seat.families).includes(f.id));
     const roleItems = [...list(role?.toolbox), ...list(role?.core), ...list(role?.extended), ...list(role?.resources)].map(x => typeof x === 'string' ? x : x?.slug);
-    const allowed = families.length || role ? new Set([...families.flatMap(f => [...list(f.items), ...list(f.pickers), ...list(f.checks), ...list(f.tool_guides), ...list(f.supporting_items)]), ...roleItems]) : undefined;
+    const studio = c.job === 'make-image-ads' && (types.has('maker') || seat.role_id==='media-buyer') ? discoverStudioFormats(c) : null;
+    const studioItems = studio ? [...studio.visual_worlds,...studio.image_variants].map(x=>x.method).concat(studio.formats.filter(x=>x.medium==='image').flatMap(x=>x.related_methods)).filter(x=>x.status==='AVAILABLE').map(x=>x.slug) : [];
+    const allowed = families.length || role ? new Set([...families.flatMap(f => [...list(f.items), ...list(f.pickers), ...list(f.checks), ...list(f.tool_guides), ...list(f.supporting_items)]), ...roleItems, ...studioItems]) : undefined;
     unique(seat?.toolbox, 'slug', `${p}.toolbox`, add);
     list(seat?.toolbox).forEach((ref, j) => pinned(ref, `${p}.toolbox[${j}]`, c, add, allowed));
   });

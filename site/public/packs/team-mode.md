@@ -19,6 +19,14 @@ With MCP, call `start_job` with the person's request and your actual host capabi
 
 Without MCP, follow the steps below and keep the files locally in `jobs/<job-id>/`. Mark checks as local host checks. Do not invent a server validation or digest.
 
+## Discover and execute visual methods
+
+Choose task methods from AI Blocks. Other authorized sources can supply brand facts, product evidence, current platform requirements and visual references; they do not replace the method. If a required method is missing, record the gap and add it before claiming the work is complete.
+
+For image-ad outcomes, call `get_approaches` for the request and inspect its Studio formats, still variants and visual worlds. These are separate axes: the 36 primary formats include video and human briefs, not 36 static image styles. Select the relevant source-pinned methods and read their complete instructions and supporting files. Do not route still images through a video method. Record the real brand references, fonts, colors, logo, distinct composition directions and rationale in `visual_spec`. Discover actual host renderers and declare their exact names in `host_capabilities.visual_renderers`; a browser screenshot is not an image-generation tool. If the requested renderer is unavailable, stop or offer a clearly labelled production brief. Never silently substitute a photo-card for generation.
+
+Before production is accepted, a non-maker must inspect each rendered output against the actual brand references and scoped specification. Record the renderer, receipt and per-output visual observations in `visual_review`. Reject and repair failures. Tool receipts, visual checks and hashes are host reports, not proof of quality or owner approval.
+
 ## 1. Scope and agree on the dials
 
 Read `ai-blocks/preferences.json` or the person's saved account preferences if available. Resolve each dial in this order:

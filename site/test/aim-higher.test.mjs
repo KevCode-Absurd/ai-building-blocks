@@ -35,7 +35,7 @@ test('the job message carries the answers and asks the AI to aim higher before i
 });
 
 test('method v3 aims higher and credits the skill it comes from', () => {
-  assert.equal(METHOD_VERSION, 3);
+  assert.equal(METHOD_VERSION, 4);
   const md = methodMarkdown();
   assert.match(md, /## 2\. Aim higher/);
   assert.match(md, /Better, not bigger/);

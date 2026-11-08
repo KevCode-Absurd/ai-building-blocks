@@ -1,6 +1,7 @@
 // Deterministic staffing only. The host runs the seats; no hosted model work.
 import {classifyJob} from './router.mjs';
 import {rankRoles,rerankDiverse} from '../roles/specialist-matching.mjs';
+import {discoverStudioFormats,isStaticAdRequest} from './studio-discovery.mjs';
 const array=value=>Array.isArray(value)?value:[];
 const unique=values=>[...new Set(values)];
 const text=value=>typeof value==='string'?value.trim():'';
@@ -12,15 +13,16 @@ export const TEAM_TIERS={quick:{seats:[3,4],council_rounds:0,token_multiple:[1.5
 
 /** Retrieve explicit families. Free-text classification uses catalogue words,
  * not job-specific engine rules; an unknown job remains an honest empty result. */
-export function getApproaches(index={},query={}) {
+export function getApproaches(index={},query={},context={}) {
  if(!index||typeof index!=='object')index={};
  if(!query||typeof query!=='object'&&typeof query!=='string')query={};
  if(typeof query==='string')query={job:query};
  const jobs=index.jobs??{},named=text(query.job);
- if(named)return {schema:'ai-blocks-approach-result/1',job:named,...(jobs[named]??{families:[],lenses:[],coverage:{status:'UNKNOWN_JOB'}}),model_calls:0};
- const classification=classifyJob(query.task??query.request,index);
+ if(named)return {schema:'ai-blocks-approach-result/1',job:named,...(jobs[named]??{families:[],lenses:[],coverage:{status:'UNKNOWN_JOB'}}),...(named==='make-image-ads'?{studio:discoverStudioFormats(context)}:{}),model_calls:0};
+ const request=query.task??query.request,classification=classifyJob(request,index);
+ if(isStaticAdRequest(request)&&jobs['make-image-ads']){if(classification.job&&classification.job!=='make-image-ads')classification.alternatives=[classification.job,...classification.alternatives.filter(x=>x!==classification.job&&x!=='make-image-ads')].slice(0,3);classification.job='make-image-ads';}
  const entry=classification.job?jobs[classification.job]:null;
- return {schema:'ai-blocks-approach-result/1',job:classification.job,...(entry??{families:[],lenses:[],coverage:{status:'NO_MATCH'}}),alternatives:classification.alternatives,model_calls:0};
+ return {schema:'ai-blocks-approach-result/1',job:classification.job,...(entry??{families:[],lenses:[],coverage:{status:'NO_MATCH'}}),...(classification.job==='make-image-ads'?{studio:discoverStudioFormats(context)}:{}),alternatives:classification.alternatives,model_calls:0};
 }
 
 function normalRoles(input) {
@@ -54,7 +56,7 @@ export function proposeTeam(input={},context={}) {
  if(!config)errors.push({path:'tier',message:'Choose quick, standard or deep.'});
  if(!roles.length)errors.push({path:'roles',message:'No role inventory is available.'});
  if(errors.length)return {schema:'ai-blocks-team-proposal/1',ok:false,errors,warnings,seats:[],model_calls:0};
- const approachResult=getApproaches(context.approaches??{},{job:text(input.job??input.job_card?.job_type?.job),task});
+ const approachResult=getApproaches(context.approaches??{},{job:text(input.job??input.job_card?.job_type?.job),task},context);
  const familyPool=array(approachResult.families),chosenFamilies=input.job_card?.dials?.families?.value;
  const families=Array.isArray(chosenFamilies)?familyPool.filter(family=>chosenFamilies.includes(family.id)):familyPool;
  if(!families.length)warnings.push({path:'families',message:'This job has no reviewed approach mapping yet. Do not claim a variety pass until real families have been mapped.'});
@@ -104,14 +106,24 @@ export function proposeTeam(input={},context={}) {
  for(let n=0;n<makerCount;n++) {
   const assigned=families.filter((_,index)=>index%makerCount===n).map(family=>family.id);
   const familyRoles=roles.filter(role=>array(role.families).some(family=>assigned.includes(family))).sort((a,b)=>(ranked.find(row=>row.role.id===b.id)?.score??0)-(ranked.find(row=>row.role.id===a.id)?.score??0)||a.id.localeCompare(b.id));
-  const preferred=[...familyRoles.map(role=>role.id),...makerIds];
+  const creativeRoles=approachResult.job==='make-image-ads'?[n===0?'design-specialist':'scroll-stopping-image-ads']:[];
+  const preferred=[...creativeRoles.filter(id=>roles.some(role=>role.id===id)),...familyRoles.map(role=>role.id),...makerIds];
   const maker=add('maker',['maker','strategist'],{lens:['craft','customer','growth','outsider'][n],familyIds:assigned,prefer:preferred});
   if(maker){maker.responsibilities=['Write a rival route before reading other proposals','Produce the assigned families in their own pipelines','Run each method in full and record evidence'];makers.push(maker);}
+ }
+ if(approachResult.studio)for(const maker of makers){
+  const refs=[...approachResult.studio.visual_worlds,...approachResult.studio.image_variants].map(row=>row.method).concat(approachResult.studio.formats.filter(row=>row.medium==='image').flatMap(row=>row.related_methods)).filter(ref=>ref.status==='AVAILABLE');
+  for(const ref of refs)if(!maker.toolbox.some(pin=>pin.slug===ref.slug))maker.toolbox.push({slug:ref.slug,revision_sha256:ref.revision_sha256,why:'Studio creative format palette; load selected methods in full'});
+  maker.toolbox.sort((a,b)=>a.slug.localeCompare(b.slug));
+  maker.responsibilities.push('Inspect the complete Studio format and visual-world palette; select and load relevant pinned methods and actual renderer capability.');
+  const requested=array(input.job_card?.deliverables).reduce((n,row)=>n+(Number.isSafeInteger(row?.count)&&row.count>0?row.count:0),0);
+  if(requested)maker.budget.max_generations=Math.max(maker.budget.max_generations,Math.ceil(requested/Math.max(1,makers.length)));
  }
  const lead=[...makers].sort((a,b)=>(ranked.find(row=>row.role.id===b.role_id)?.score??0)-(ranked.find(row=>row.role.id===a.role_id)?.score??0)||a.role_id.localeCompare(b.role_id))[0]??null;
  if(lead)lead.responsibilities.unshift('Lead production for this request and coordinate makers');
  if(tier!=='quick') {
-  const red=add('red_team',['red_team','strategist'],{lens:'sceptic'});if(red)red.responsibilities=['Offer an independent rival route','Attack the leading choice and defend the weakest viable option'];
+  const red=add('red_team',['red_team','strategist'],{lens:'sceptic',prefer:approachResult.job==='make-image-ads'&&roles.some(role=>role.id==='media-buyer')?['media-buyer']:[]});if(red)red.responsibilities=['Offer an independent rival route','Attack the leading choice and defend the weakest viable option'];
+  if(red?.role_id==='media-buyer'&&approachResult.studio){const refs=[...approachResult.studio.visual_worlds,...approachResult.studio.image_variants].map(row=>row.method).concat(approachResult.studio.formats.filter(row=>row.medium==='image').flatMap(row=>row.related_methods)).filter(ref=>ref.status==='AVAILABLE');for(const ref of refs)if(!red.toolbox.some(pin=>pin.slug===ref.slug))red.toolbox.push({slug:ref.slug,revision_sha256:ref.revision_sha256,why:'Studio creative format palette for media review'});red.toolbox.sort((a,b)=>a.slug.localeCompare(b.slug));red.responsibilities.push('Review the relevant Studio format palette against the buyer and test plan.');}
   const fact=add('fact_checker',['fact_checker'],{lens:'numbers'});if(fact)fact.responsibilities=['Trace factual claims to sources','Downgrade claims that cannot be checked'];
  }
  const judges=[];
@@ -122,7 +134,7 @@ export function proposeTeam(input={},context={}) {
  if(tier!=='quick') {
   const critic=add('critic',['critic'],{lens:'brand-guardian'});if(critic)critic.responsibilities=['Challenge proposals through an independent discipline','Record the strongest dissent in plain language'];
  }
- const proposal={schema:'ai-blocks-team-proposal/1',ok:errors.length===0,job:approachResult.job,tier,goal:task,coordinator_seat_id:coordinator?.seat_id??null,lead_seat_id:lead?.seat_id??null,seats,working_groups:[{id:'production',lead_seat_id:lead?.seat_id??null,members:makers.map(seat=>seat.seat_id),reports_to:coordinator?.seat_id??null},{id:'independent-review',lead_seat_id:judges[0]?.seat_id??null,members:seats.filter(seat=>['judge','fact_checker','critic'].includes(seat.seat_type)).map(seat=>seat.seat_id),reports_to:coordinator?.seat_id??null}],estimate:{seats:seats.length,council_rounds:config.council_rounds,token_multiple:config.token_multiple,source:'estimated'},errors,warnings,model_calls:0,verification:'HOST_REPORTED_NOT_INDEPENDENTLY_VERIFIED'};
+ const proposal={schema:'ai-blocks-team-proposal/1',ok:errors.length===0,job:approachResult.job,tier,goal:task,coordinator_seat_id:coordinator?.seat_id??null,lead_seat_id:lead?.seat_id??null,seats,...(approachResult.studio?{studio_discovery:approachResult.studio}:{}),working_groups:[{id:'production',lead_seat_id:lead?.seat_id??null,members:makers.map(seat=>seat.seat_id),reports_to:coordinator?.seat_id??null},{id:'independent-review',lead_seat_id:judges[0]?.seat_id??null,members:seats.filter(seat=>['judge','fact_checker','critic'].includes(seat.seat_type)).map(seat=>seat.seat_id),reports_to:coordinator?.seat_id??null}],estimate:{seats:seats.length,council_rounds:config.council_rounds,token_multiple:config.token_multiple,source:'estimated'},errors,warnings,model_calls:0,verification:'HOST_REPORTED_NOT_INDEPENDENTLY_VERIFIED'};
  return {...proposal,proposal_id:'tp_'+identity(proposal)};
 }
 

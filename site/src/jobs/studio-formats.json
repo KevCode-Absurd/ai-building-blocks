@@ -1,0 +1,326 @@
+{
+  "source": "example-app-site/example-app/studio.html",
+  "sha256": "b4f934b8baa855411767fe86517787c29bfae1ac0d1dab8b0cdfe439e4cda3d5",
+  "formats": [
+    {
+      "id": "wide-face",
+      "name": "Wide Face portrait",
+      "description": "An extreme overhead ultra-wide portrait with natural skin detail. Use your chosen character and product with the camera look kept consistent.",
+      "href": "/example-app/formats/wide-face"
+    },
+    {
+      "id": "ad-concept",
+      "name": "Scroll-stopping ads for cold audiences",
+      "description": "Each ad is 1 idea in 1 striking picture: a tiny diorama, a comic panel, a thermal image, a billboard. Made for people who have never heard of you.",
+      "href": "/example-app/formats/ad-concept"
+    },
+    {
+      "id": "ad-proof",
+      "name": "Proof ads",
+      "description": "Each ad is 1 kind of proof: a customer's own words, 1 number, your product against the usual way, the product labelled. For people who are comparing.",
+      "href": "/example-app/formats/ad-proof"
+    },
+    {
+      "id": "ad-offer",
+      "name": "Offer ads",
+      "description": "1 offer argued 3 ways, because the person who needs proof is not the person who needs the deal: the deal said plainly, a real review, and why the product is worth it at full price. The offer line is its own text on every ad, so it changes on all of them at once.",
+      "href": "/example-app/formats/ad-offer"
+    },
+    {
+      "id": "review-ad",
+      "name": "Ad from a review",
+      "description": "Ads built on 1 thing buyers keep saying, in their own words: the phrase on the picture character for character, in formats made to carry a quote (a taped note, a strikethrough, a Q and A card). The feed headline is the phrase.",
+      "href": "/example-app/formats/review-ad"
+    },
+    {
+      "id": "from-references",
+      "name": "Recreate a winning ad",
+      "description": "Pick ads you like in the reference library, say what each should do, and the app builds yours on exactly those.",
+      "href": "/example-app/formats/from-references"
+    },
+    {
+      "id": "static",
+      "name": "Static ad from a script",
+      "description": "A script is written first, the way an ad argues in words, then 1 image carries that argument.",
+      "href": "/example-app/formats/static"
+    },
+    {
+      "id": "carousel",
+      "name": "Carousel",
+      "description": "2 to 6 cards read in order: a list, a before and after, how it works. Each card does 1 job.",
+      "href": "/example-app/formats/carousel"
+    },
+    {
+      "id": "long-copy",
+      "name": "Long-copy static",
+      "description": "A plain image with a long text beside it in the feed. For a buyer who needs the whole story before they click.",
+      "href": "/example-app/formats/long-copy"
+    },
+    {
+      "id": "advertorial-static",
+      "name": "Advertorial static",
+      "description": "An image that looks like the top of an article, leading to a page that tells the story.",
+      "href": "/example-app/formats/advertorial-static"
+    },
+    {
+      "id": "native",
+      "name": "Native ad",
+      "description": "A long first-person story with an image that looks like a person's own post, not an ad.",
+      "href": "/example-app/formats/native"
+    },
+    {
+      "id": "instant-photoshoot",
+      "name": "Instant photoshoot",
+      "description": "A whole shoot in 1 colour world: every picture shares 1 colour, 1 light and 1 set of props, so they look made in 1 afternoon.",
+      "href": "/example-app/formats/instant-photoshoot"
+    },
+    {
+      "id": "flash-photoshoot",
+      "name": "Flash photoshoot",
+      "description": "Pictures that look taken at a party on a small camera with the flash on: candid, warm, mid-action. Nobody looks at the camera.",
+      "href": "/example-app/formats/flash-photoshoot"
+    },
+    {
+      "id": "cinematic",
+      "name": "Cinematic film",
+      "description": "A photoreal film ad with consistent adult characters, matching scene coverage and a product-led payoff.",
+      "href": "/example-app/formats/cinematic"
+    },
+    {
+      "id": "new-hooks",
+      "name": "New hooks for a winning ad",
+      "description": "Keep the ad that works and change only its first seconds. The app reads your ad, finds its hook, and writes new openings that cut onto the same body.",
+      "href": "/example-app/formats/new-hooks"
+    },
+    {
+      "id": "ugc",
+      "name": "Realistic AI video (UGC) · video",
+      "description": "A person talking to camera with your product, the way a customer would film it on their phone.",
+      "href": "/example-app/formats/ugc"
+    },
+    {
+      "id": "podcast",
+      "name": "AI podcast clip · video",
+      "description": "2 people at microphones in a conversation that sounds overheard. Reads as content, not as an ad.",
+      "href": "/example-app/formats/podcast"
+    },
+    {
+      "id": "talking-object",
+      "name": "Talking object · video",
+      "description": "An object from the buyer's life gets a face and says what it has watched. Funny or tender in the first second.",
+      "href": "/example-app/formats/talking-object"
+    },
+    {
+      "id": "claymation",
+      "name": "Claymation story · video",
+      "description": "A narrated clay story about 1 small character. Good for a mechanism nobody can see.",
+      "href": "/example-app/formats/claymation"
+    },
+    {
+      "id": "comic",
+      "name": "Comic style · video",
+      "description": "A comic page filmed on an artist's desk and read panel by panel.",
+      "href": "/example-app/formats/comic"
+    },
+    {
+      "id": "explainer",
+      "name": "CGI explainer · video",
+      "description": "A narrated mini-documentary in rendered 3D, the kind that explains how something works inside the body or a machine.",
+      "href": "/example-app/formats/explainer"
+    },
+    {
+      "id": "satisfying",
+      "name": "Satisfying hook and demo · video",
+      "description": "4 to 5 wordless seconds in which the product does 1 motion that resolves, then its 1 action shown and said.",
+      "href": "/example-app/formats/satisfying"
+    },
+    {
+      "id": "cinematic-3d",
+      "name": "Cinematic 3D film · video",
+      "description": "A short animated film that looks like a frame from a 3D feature, with light and materials like a photograph. For a story with people in it.",
+      "href": "/example-app/formats/cinematic-3d"
+    },
+    {
+      "id": "clay-world",
+      "name": "Clay world · video",
+      "description": "A narrated story in a whole miniature clay world with a cast, in 1 of 4 looks: cinematic, goofy, clean or puppet. The look of a stop-motion film.",
+      "href": "/example-app/formats/clay-world"
+    },
+    {
+      "id": "wool",
+      "name": "Knitted wool world · video",
+      "description": "A narrated story in a miniature world knitted from yarn: the people, the room and your pack, all in stitches. Warm, and hard to scroll past.",
+      "href": "/example-app/formats/wool"
+    },
+    {
+      "id": "paper",
+      "name": "Paper world · video",
+      "description": "A narrated story in a world of cut, layered or folded paper, in 1 of 5 looks. A scene changes by a page turning or a layer peeling back.",
+      "href": "/example-app/formats/paper"
+    },
+    {
+      "id": "watercolor",
+      "name": "Watercolour story · video",
+      "description": "A narrated story painted in watercolour, where the paint itself moves: it blooms, bleeds and washes away. For a calm, natural or premium brand.",
+      "href": "/example-app/formats/watercolor"
+    },
+    {
+      "id": "anime",
+      "name": "Anime · video",
+      "description": "A drawn, animated ad with 1 original hero: a transformation, a big reveal, the old way against the new. In 1 of 5 drawn looks.",
+      "href": "/example-app/formats/anime"
+    },
+    {
+      "id": "skeleton",
+      "name": "Skeleton: what happens if · video",
+      "description": "A narrated \"what happens if you...\" journey, from Day 1 to Day 365, lived by 1 friendly cartoon skeleton. A question people stay to see answered.",
+      "href": "/example-app/formats/skeleton"
+    },
+    {
+      "id": "motion-graphics",
+      "name": "Motion graphics · video",
+      "description": "Moving type, diagrams, icons and cutouts of your product in your brand's colours. For a comparison, a number or how it works.",
+      "href": "/example-app/formats/motion-graphics"
+    },
+    {
+      "id": "collage",
+      "name": "Editorial collage explainer · video",
+      "description": "1 argument explained fast with paper cutouts, photos of your product, arrows and labels over a narration. It reads as content, not as an ad.",
+      "href": "/example-app/formats/collage"
+    },
+    {
+      "id": "song",
+      "name": "Song ad",
+      "description": "Your product sung: an original song about what your buyer gets, over an animated music video with 1 lead who sings on camera.",
+      "href": "/example-app/formats/song"
+    },
+    {
+      "id": "brief-ugc",
+      "name": "Creator brief",
+      "description": "A brief a real creator can film from: the script, the shots, what to say and what not to say.",
+      "href": "/example-app/formats/brief-ugc"
+    },
+    {
+      "id": "brief-founder",
+      "name": "Founder brief",
+      "description": "A script and shot notes for the founder to say to camera.",
+      "href": "/example-app/formats/brief-founder"
+    },
+    {
+      "id": "brief-editor",
+      "name": "Editor brief",
+      "description": "An edit brief with beat timings and visual notes for footage you already have.",
+      "href": "/example-app/formats/brief-editor"
+    },
+    {
+      "id": "organic",
+      "name": "Organic: founder videos and creators",
+      "description": "What the brand posts as itself. 10 videos the founder films on a phone, 1 a week, each with a brief written for it; and a short list of the creators you send product to, with who posted and what to do next.",
+      "href": "/example-app/formats/organic"
+    }
+  ],
+  "image_variants": [
+    {
+      "id": "ugc",
+      "name": "UGC photo · image",
+      "description": "A phone photo someone posted, with a typed-on caption. Made as a static ad.",
+      "href": "/example-app/_q/a181430f725bbe82.html"
+    },
+    {
+      "id": "podcast",
+      "name": "Podcast clip · image",
+      "description": "A frame of 2 people at microphones, with the line just said as its caption. Made as a static ad.",
+      "href": "/example-app/_q/e3301dd34ba7cfb9.html"
+    },
+    {
+      "id": "talking-object",
+      "name": "Talking object · image",
+      "description": "An object from the buyer's life with a face and 1 line in a speech bubble. Made as a static ad.",
+      "href": "/example-app/studio/new?kind=ad&format=talking-object"
+    },
+    {
+      "id": "claymation",
+      "name": "Claymation · image",
+      "description": "A small clay set: 1 character and 1 thing that is plainly wrong or put right. Made as a static ad.",
+      "href": "/example-app/studio/new?kind=ad&format=claymation"
+    },
+    {
+      "id": "comic",
+      "name": "Comic · image",
+      "description": "A comic page of 1 to 4 panels: the problem, then the turn. Made as a static ad.",
+      "href": "/example-app/studio/new?kind=ad&format=comic"
+    },
+    {
+      "id": "explainer",
+      "name": "CGI explainer · image",
+      "description": "The mechanism in 1 rendered picture: a cutaway or a scale shot with 2 or 3 labels. Made as a static ad.",
+      "href": "/example-app/studio/new?kind=ad&format=explainer"
+    },
+    {
+      "id": "satisfying",
+      "name": "Satisfying · image",
+      "description": "The product's 1 motion, frozen just before it resolves. Made as a static ad.",
+      "href": "/example-app/studio/new?kind=ad&format=satisfying"
+    },
+    {
+      "id": "cinematic-3d",
+      "name": "Cinematic 3D · image",
+      "description": "A still from a 3D animated film: 1 character, 1 moment, lit like a photograph. Made as a static ad.",
+      "href": "/example-app/studio/new?kind=ad&format=cinematic-3d"
+    },
+    {
+      "id": "clay-world",
+      "name": "Clay world · image",
+      "description": "A frame of a miniature clay world with its cast, in 1 of 4 clay looks. Made as a static ad.",
+      "href": "/example-app/studio/new?kind=ad&format=clay-world"
+    },
+    {
+      "id": "wool",
+      "name": "Knitted wool · image",
+      "description": "A scene in a world knitted from yarn, with the pack knitted too. Made as a static ad.",
+      "href": "/example-app/studio/new?kind=ad&format=wool"
+    },
+    {
+      "id": "paper",
+      "name": "Paper craft · image",
+      "description": "A scene cut, layered or folded from real paper, seen from inside it. Made as a static ad.",
+      "href": "/example-app/studio/new?kind=ad&format=paper"
+    },
+    {
+      "id": "watercolor",
+      "name": "Watercolour · image",
+      "description": "A watercolour painting on textured paper, with bare paper left around it. Made as a static ad.",
+      "href": "/example-app/studio/new?kind=ad&format=watercolor"
+    },
+    {
+      "id": "anime",
+      "name": "Anime · image",
+      "description": "1 drawn hero in a key pose, with 1 speech balloon or caption. Made as a static ad.",
+      "href": "/example-app/studio/new?kind=ad&format=anime"
+    },
+    {
+      "id": "skeleton",
+      "name": "Skeleton · image",
+      "description": "The question as the headline, and 1 to 3 rungs of the journey as panels. Made as a static ad.",
+      "href": "/example-app/studio/new?kind=ad&format=skeleton"
+    },
+    {
+      "id": "motion-graphics",
+      "name": "Motion graphic · image",
+      "description": "A designed graphic: the product cut out, 1 diagram or chart, and type in your brand's typefaces. Made as a static ad.",
+      "href": "/example-app/studio/new?kind=ad&format=motion-graphics"
+    },
+    {
+      "id": "collage",
+      "name": "Editorial collage · image",
+      "description": "1 claim, 1 proof picture and 1 arrow, in cut paper and product photos. Made as a static ad.",
+      "href": "/example-app/studio/new?kind=ad&format=collage"
+    },
+    {
+      "id": "founder",
+      "name": "Founder · image",
+      "description": "1 decision in the founder's words, on a real photo or a note. Nobody is generated. Made as a static ad.",
+      "href": "/example-app/studio/new?kind=ad&format=founder"
+    }
+  ]
+}

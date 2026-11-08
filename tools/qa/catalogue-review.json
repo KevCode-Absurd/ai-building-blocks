@@ -379,6 +379,78 @@
           "rationale": "The method runs designlang on the website URL the person gives it, so a live web page address is the one required input."
         }
       ]
+    },
+    "catalogue-items/general/skeleton-image-ad-maker/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-11-08",
+      "method_sha256": "0b1ca3efb700b5d8d6396739ae6f8b4d1ad79d393b9ee7aff592f7297ac6ec33",
+      "inputs": [
+        {
+          "type": "brief",
+          "required": true
+        },
+        {
+          "type": "brand_brain",
+          "required": true
+        },
+        {
+          "type": "product_photos",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "brief",
+          "quote": "Read the actual brand brain, real product photographs, buyer brief, approved claim evidence and relevant visual references first.",
+          "rationale": "The method requires the buyer brief to define the buyer and proposition."
+        },
+        {
+          "type": "brand_brain",
+          "quote": "Read the actual brand brain, real product photographs, buyer brief, approved claim evidence and relevant visual references first.",
+          "rationale": "The method requires the brand brain for identity and claim limits."
+        },
+        {
+          "type": "product_photos",
+          "quote": "Read the actual brand brain, real product photographs, buyer brief, approved claim evidence and relevant visual references first.",
+          "rationale": "The method requires real product photographs to preserve product fidelity."
+        }
+      ]
+    },
+    "catalogue-items/general/studio-world-image-ad-maker/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-11-08",
+      "method_sha256": "a889511fb6689180f4a245ef6840239ffb2d77982b5044f49e9ef436b779fa36",
+      "inputs": [
+        {
+          "type": "brief",
+          "required": true
+        },
+        {
+          "type": "brand_brain",
+          "required": true
+        },
+        {
+          "type": "product_photos",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "brief",
+          "quote": "Read the complete brand brain, buyer brief, authorized product photos and `references/studio-worlds.json` before choosing a world.",
+          "rationale": "The method requires the buyer brief to define the buyer and proposition."
+        },
+        {
+          "type": "brand_brain",
+          "quote": "Read the complete brand brain, buyer brief, authorized product photos and `references/studio-worlds.json` before choosing a world.",
+          "rationale": "The method requires the brand brain for identity and claim limits."
+        },
+        {
+          "type": "product_photos",
+          "quote": "Read the complete brand brain, buyer brief, authorized product photos and `references/studio-worlds.json` before choosing a world.",
+          "rationale": "The method requires real product photographs to preserve product fidelity."
+        }
+      ]
     }
   },
   "handoffs": {

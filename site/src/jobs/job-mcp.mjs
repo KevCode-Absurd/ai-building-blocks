@@ -8,7 +8,7 @@ import { checkSchema } from '../outcomes/schema-check.mjs';
 
 const text = maxLength => ({ type: 'string', minLength: 1, maxLength });
 const object = { type: 'object' }, hash = { type: 'string', pattern: '^[a-f0-9]{64}$' };
-const host = { type: 'object', properties: { parallel_agents: { type: 'boolean' }, max_parallel: { type: 'integer', minimum: 1, maximum: 100 }, models: { type: 'array', maxItems: 20, items: text(100) }, tools: { type: 'array', maxItems: 50, items: text(100) }, connectors: { type: 'array', maxItems: 50, items: text(100) }, budget: { type: 'string', enum: ['small', 'normal', 'large'] } }, additionalProperties: false };
+const host = { type: 'object', properties: { parallel_agents: { type: 'boolean' }, max_parallel: { type: 'integer', minimum: 1, maximum: 100 }, models: { type: 'array', maxItems: 20, items: text(100) }, tools: { type: 'array', maxItems: 50, items: text(100) }, visual_renderers: { type: 'array', maxItems: 20, items: text(100) }, connectors: { type: 'array', maxItems: 50, items: text(100) }, budget: { type: 'string', enum: ['small', 'normal', 'large'] } }, additionalProperties: false };
 const definition = (name, title, description, properties, required = [], rest) => ({ name, title, description, inputSchema: { type: 'object', properties, required, additionalProperties: false }, outputSchema: { type: 'object', properties: { schema: { type: 'string' } }, required: ['schema'], additionalProperties: true }, annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: name !== 'start_job', openWorldHint: false }, ...(rest ? { rest } : {}) });
 export const jobMcpTools = [
   definition('start_job', 'Scope a job and staff a flexible team', 'Dark-launch team protocol: define the real job and rubric, then assign a task lead and experts. Returns the tier estimate, host method, questions and local state. All thinking and work run in the user’s AI; no server model calls or action authority.', { request: text(4000), job:text(120), job_reason:text(1000), mode: { enum: ['auto', 'team', 'direct'], type: 'string' }, dials: object, host_capabilities: host, host_profile: { enum: ['parallel', 'sequential', 'pack'], type: 'string' }, context_refs: { type: 'array', maxItems: 30, items: object }, preferences: object, preferences_ref: object, parent_outcome_id: text(100), from_option: text(100), option_source: object, item_id: text(120), role_id: text(120), persona_id: text(120) }, ['request'], '/api/v1/jobs'),
@@ -31,7 +31,7 @@ export async function callJobTool(name, input = {}, context = {}) {
   if (name === 'propose_team') return proposeTeam(input, context);
   if (name === 'get_approaches') {
     if (!input.job && !input.task) throw new JobValidationError([{ path: 'job', message: 'Send job or task.' }]);
-    return getApproaches(context.approaches, input);
+    return getApproaches(context.approaches, input, context);
   }
   if (name === 'get_job_templates') return { schema: 'ai-blocks-job-templates/1', files: [{ path: 'JOB-METHOD.md', content: jobMethod(input.host_profile, input.tier) }, ...deliveryTemplates()], schemas: Object.keys(JOB_SCHEMAS).map(id => ({ id, url: `/api/v1/schemas/${id}.json` })), model_calls: 0 };
   if (name === 'get_job_preferences') return localPreferences(input.preferences);

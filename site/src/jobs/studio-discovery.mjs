@@ -1,0 +1,22 @@
+import studio from './studio-formats.json' with {type:'json'};
+import worlds from './studio-worlds.json' with {type:'json'};
+const generic='studio-world-image-ad-maker';
+// Creative production defaults to stills when no medium is specified; explicit
+// video requests stay on their own route. A candidate still needs scope review.
+export const isStaticAdRequest = value => typeof value==='string' && /\b(?:ads?|advertisements?|creatives?)\b/i.test(value) && (/\b(?:images?|stills?|static)\b/i.test(value) || !/\b(?:videos?|reels?|motion|animation|animated|film|clips?)\b/i.test(value)) && (/\b(?:make|create|produce|design|build|generate|draft|need|want)\b/i.test(value) || /\b\d+\s+(?:\w+\s+){0,3}(?:ads?|creatives?)\b/i.test(value));
+const exact={
+ 'paper-cutout':'paper-cutout-image-ad-maker','soft-clay':'clay-scene-image-ad-maker','skeleton-xray':'skeleton-image-ad-maker',
+};
+const variants={claymation:'clay-scene-image-ad-maker',comic:'comic-strip-image-ad-maker','clay-world':'clay-town-image-ad-maker',wool:'knitted-wool-image-ad-maker',paper:'paper-craft-image-ad-maker',watercolor:'watercolor-image-ad-maker','talking-object':'talking-object-image-ad-maker',collage:'paper-cutout-image-ad-maker',skeleton:'skeleton-image-ad-maker'};
+const worldVariant={explainer:'infographic','cinematic-3d':'character-3d',anime:'flat-cartoon','motion-graphics':'infographic'};
+const media={ 'wide-face':'image','ad-concept':'image','ad-proof':'image','ad-offer':'image','review-ad':'image','from-references':'image',static:'image',carousel:'image','long-copy':'image','advertorial-static':'image',native:'image','instant-photoshoot':'image','flash-photoshoot':'image','brief-ugc':'human-brief','brief-founder':'human-brief','brief-editor':'human-brief',organic:'human-brief' };
+// Related catalogue methods are navigation candidates, not claims of exact semantic equivalence.
+const primary={ 'wide-face':['overhead-portrait-image-maker'], 'ad-concept':[generic], 'ad-proof':['customer-quote-image-ad','fact-caption-image-ad-maker'], 'ad-offer':['single-image-ad-planner'], 'review-ad':['customer-quote-image-ad'], static:['single-image-ad-planner'], carousel:['carousel-ad-writer'], 'long-copy':['single-image-ad-planner'], 'advertorial-static':['article-headline-image-ad-maker'], 'instant-photoshoot':['phone-product-photoshoot'] };
+/** Published Studio inventory; material may suggest a direction, never asserts execution capability. */
+export function discoverStudioFormats(context={}) {
+ const manifest=context.manifest?.resources??{};
+ const items=Array.isArray(context.items)?context.items:[];
+ const pin=slug=>{const entry=manifest[slug],revision=entry?.revision_sha256,item=items.find(x=>x.slug===slug),flow=item&&(['workflow','routine','agent'].includes(item.type)||['orchestrator','agent'].includes(item.category));return {slug,...(revision?{revision_sha256:revision,load_with:item?(flow?'get_workflow':'get_skill'):'get_item',resources:(entry.files??[]).filter(f=>f.path?.startsWith(slug+'/')&&f.path!==slug+'/SKILL.md').map(f=>({path:f.path.slice(slug.length+1),sha256:f.sha256})),status:'AVAILABLE'}:{status:'MISSING_FROM_CATALOGUE'})};};
+ const fallback=()=>pin(generic);
+ return {schema:'ai-blocks-studio-format-discovery/1',source:{page:studio.source,sha256:studio.sha256,world_registry:worlds.source,world_sha256:worlds.sha256},formats:studio.formats.map(f=>({...f,medium:media[f.id]??'video',related_methods:(primary[f.id]??[]).map(pin),method_status:primary[f.id]?'RELATED_METHODS_CHECK_FIT':'NOT_YET_MAPPED'})),image_variants:studio.image_variants.map(f=>({...f,medium:'image',method:variants[f.id]?pin(variants[f.id]):fallback(),...(worldVariant[f.id]?{world_id:worldVariant[f.id]}:{}),mapping:variants[f.id]?'RELATED_CATALOGUE_METHOD':'GENERAL_STUDIO_METHOD'})),visual_worlds:worlds.worlds.map(w=>({...w,aliases:w.is,method:exact[w.id]?pin(exact[w.id]):fallback(),mapping:exact[w.id]?'RELATED_CATALOGUE_METHOD':'GENERAL_WORLD_METHOD'})),renderer_requirement:'An available image-generation or editing tool must actually render the work; a method or prompt is not an image. Video formats require a real video capability. If unavailable, stop or label a production brief.',selection:'These formats, image variants and worlds are different axes. The coordinator selects relevant methods and loads each pinned method and all its references in full. No user needs to name formats. The 36 formats include video and human briefs, not 36 image styles.',model_calls:0};
+}

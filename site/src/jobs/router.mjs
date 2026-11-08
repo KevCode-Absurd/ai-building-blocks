@@ -1,4 +1,5 @@
 // Classification chooses from published data; task-specific knowledge belongs in that data.
+import {isStaticAdRequest} from './studio-discovery.mjs';
 const STOP = new Set('a an and are as at be by for from get give have i in into is it its me my of on or our please that the their them these this to us want we with you your'.split(' '));
 const VERBS={create:'make',generate:'make',produce:'make',draft:'write',redesign:'design',audit:'check',review:'check',read:'check',analyze:'analyse',analyses:'analyse'};
 const token = word => {const v=VERBS[word]??word;return v.length>3&&v.endsWith('s')&&!v.endsWith('ss')?v.slice(0,-1):v;};
@@ -28,6 +29,7 @@ export function classifyJob(request, approaches = {}) {
 export function routeJob({ request, mode = 'auto', item_id, role_id, persona_id, parent_outcome_id } = {}, { approaches = {}, items = [], roles = [], personas = [] } = {}) {
   if (!['auto', 'team', 'direct'].includes(mode)) return { ok: false, errors: [{ path: 'mode', message: 'Choose auto, team or direct.' }] };
   const text = normalized(request), classification = classifyJob(request, approaches);
+  if(isStaticAdRequest(request)&&approaches.jobs?.['make-image-ads']){if(classification.job&&classification.job!=='make-image-ads')classification.alternatives=[classification.job,...classification.alternatives.filter(x=>x!==classification.job&&x!=='make-image-ads')].slice(0,3);classification.job='make-image-ads';}
   if (mode !== 'auto') return { ok: true, mode, mode_reason: `The caller chose ${mode} mode.`, job_type: classification };
   const collections = [items, Array.isArray(roles) ? roles : roles.roles ?? [], personas];
   const named = collections.flat().find(entry => {

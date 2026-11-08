@@ -67,7 +67,7 @@ test('a vague request becomes a brief, then a researched plan the owner approves
   assert.equal(r.engagement.id, '20261102-my-business-is-not-doing');
   // The method travels once, as METHOD.md, with examples for the list and object fields of the brief.
   assert.equal(r.method, undefined);
-  assert.equal(r.method_version, 3);
+  assert.equal(r.method_version, 4);
   assert.match(r.files['METHOD.md'], /## 2\. Aim higher/);
   assert.match(r.files['METHOD.md'], /\| ambition \|/);
   assert.match(r.files['METHOD.md'], /Research/);

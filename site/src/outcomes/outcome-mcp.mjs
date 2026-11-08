@@ -15,7 +15,7 @@ const annotations = { readOnlyHint: true, destructiveHint: false, idempotentHint
 const outputSchema = { type: 'object', properties: { schema: { type: 'string' } }, required: ['schema'], additionalProperties: true };
 
 /** The outcome part of a server's instructions (the local scoping preview uses it; the public MCP has its own short text). */
-export const OUTCOME_INSTRUCTIONS = 'For any outcome the owner wants (more customers, rising ad costs, launch a product, close the month, or something vague like "my business is not doing well"), call start_outcome with their own words and follow each result\'s next step. You pin the outcome down with one batch of questions, research how experts do the job (memory, our catalogue, then the web), compose a plan from our specialists and items, and the owner approves it before anything runs. Save the returned files in outcomes/<id>/. Decisions and live actions always stop for the owner; API keys stay with you and never go in files.';
+export const OUTCOME_INSTRUCTIONS = 'For any outcome the owner wants (more customers, rising ad costs, launch a product, close the month, or something vague like "my business is not doing well"), call start_outcome with their own words and follow each result\'s next step. You pin the outcome down with one batch of questions, research relevant facts and constraints, select task methods from AI Blocks, compose a plan from our specialists and items, and the owner approves it before anything runs. Save the returned files in outcomes/<id>/. Decisions and live actions always stop for the owner; API keys stay with you and never go in files.';
 
 /**
  * The outcome tools, one entry each. To add a tool, append an entry (or spread a list imported from another file):

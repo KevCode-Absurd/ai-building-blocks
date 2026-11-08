@@ -1,0 +1,21 @@
+slug: studio-world-image-ad-maker
+name: "Studio visual world image ad maker"
+summary: "Plan and render a source-grounded image ad in a selected Studio visual world, then compare it with brand references and the actual brief."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: image
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+  - {type: product_photos, required: true}
+outputs:
+  - {type: image_prompt}
+  - {type: image}
+  - {type: review}
+uses: []
+origin: own
+version: 1.0.0
+package_files: all

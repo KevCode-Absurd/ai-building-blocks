@@ -11,6 +11,32 @@ jobs:
     output_shape_default: many_artifacts
     default_volume: 10
     families:
+      - id: skeleton-xray-image-ad
+        name: Skeleton and X-ray image ad
+        what_it_looks_like: A non-graphic skeleton or X-ray metaphor in one static image.
+        when_it_wins: The metaphor fits the buyer and brand without implying unsupported medical claims.
+        modality: [image]
+        tools_needed: [image]
+        items: [skeleton-image-ad-maker]
+        pickers: [image-ad-settings-picker]
+        checks: [pre-launch-ad-checker]
+        tool_guides: []
+        seeds_from: [skeleton-image-ad-maker]
+        lenses: [craft, customer]
+        source: catalogue-items/general/skeleton-image-ad-maker/item.yaml
+      - id: studio-visual-world-image-ad
+        name: Studio visual world image ad
+        what_it_looks_like: A brand-specific still built from a chosen Studio visual world.
+        when_it_wins: The actual brand and buyer brief support a distinct visual treatment with no closer dedicated method.
+        modality: [image]
+        tools_needed: [image]
+        items: [studio-world-image-ad-maker]
+        pickers: [image-ad-settings-picker]
+        checks: [pre-launch-ad-checker]
+        tool_guides: []
+        seeds_from: [studio-world-image-ad-maker]
+        lenses: [craft, customer]
+        source: catalogue-items/general/studio-world-image-ad-maker/item.yaml
       - id: accurate-product-image-ad-maker
         name: Accurate product image ad maker
         what_it_looks_like: Paste your ad and photos. Get an image prompt that keeps

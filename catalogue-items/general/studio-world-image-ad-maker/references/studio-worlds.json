@@ -1,0 +1,369 @@
+{
+  "source": "example-app-site/example-app/_next/static/chunks/08igaordw0zev.js",
+  "sha256": "38ec7eead2dbdcf2ea83137dea47804849393727c23808949d33bc224241f821",
+  "worlds": [
+    {
+      "id": "paper-cutout",
+      "is": [
+        "paper cutout",
+        "collage",
+        "cut paper"
+      ],
+      "label": "Paper cutout and collage",
+      "family": "illustration",
+      "modes": [
+        "creative",
+        "brand-world"
+      ],
+      "look": "Layered cut paper, torn edges, tactile card and visible paper fibres, with real cast shadows between the layers. A handmade collage with a clearly distinct silhouette."
+    },
+    {
+      "id": "skeleton-xray",
+      "is": [
+        "skeleton",
+        "x-ray",
+        "bones"
+      ],
+      "label": "Skeleton and X-ray",
+      "family": "illustration",
+      "modes": [
+        "creative",
+        "communicative"
+      ],
+      "look": "An unmistakable stylised skeleton or translucent X-ray silhouette used as a visual metaphor. Non-graphic, no injury and no invented medical diagnosis, clinical result or evidence of efficacy."
+    },
+    {
+      "id": "problem-noir",
+      "is": [
+        "dark",
+        "moody",
+        "noir",
+        "hard shadow"
+      ],
+      "label": "Problem, lit like a thriller",
+      "family": "photoreal",
+      "modes": [
+        "creative"
+      ],
+      "look": "Dark and moody. The problem is the subject, lit like a scene from a thriller: 1 hard light, deep shadow."
+    },
+    {
+      "id": "studio-comparison",
+      "is": [
+        "desaturated",
+        "comparison"
+      ],
+      "label": "Studio comparison",
+      "family": "photoreal",
+      "modes": [
+        "communicative",
+        "creative"
+      ],
+      "look": "A seamless studio background. The unbranded alternative is desaturated and plain on 1 side; this product is saturated and sharp on the other."
+    },
+    {
+      "id": "macro-luxury",
+      "is": [
+        "dark",
+        "macro"
+      ],
+      "label": "Dark macro luxury",
+      "family": "photoreal",
+      "modes": [
+        "brand-world"
+      ],
+      "look": "Dark editorial product photography, very close, with 1 or 2 tiny specification callouts."
+    },
+    {
+      "id": "epic-monument",
+      "is": [
+        "epic",
+        "storm"
+      ],
+      "label": "Epic monument",
+      "family": "photoreal",
+      "modes": [
+        "brand-world",
+        "creative"
+      ],
+      "look": "The product as a legend: huge, on a mountain, in forge light or under a storm sky."
+    },
+    {
+      "id": "bw-accent",
+      "is": [
+        "black and white",
+        "monochrome",
+        "grayscale",
+        "greyscale",
+        "desaturated",
+        "muted"
+      ],
+      "label": "Black and white with 1 accent",
+      "family": "photoreal",
+      "modes": [
+        "brand-world",
+        "creative"
+      ],
+      "look": "Monochrome photography of effort or motion, with 1 thing in the brand's colour."
+    },
+    {
+      "id": "lifestyle-flags",
+      "is": [
+        "fact chips",
+        "small flags"
+      ],
+      "label": "Lifestyle with small flags",
+      "family": "photoreal",
+      "modes": [
+        "communicative",
+        "native"
+      ],
+      "look": "A warm, real-looking moment of life with the product in it, and at most 2 small chips carrying facts, inside the ad's ceiling of words."
+    },
+    {
+      "id": "absurd-photoreal",
+      "is": [
+        "absurd",
+        "surreal",
+        "impossible"
+      ],
+      "label": "Absurd, but photographed",
+      "family": "photoreal",
+      "modes": [
+        "creative"
+      ],
+      "look": "Something that cannot be true, shot as if it were: 1 impossible thing in an ordinary place, played straight."
+    },
+    {
+      "id": "soft-clay",
+      "is": [
+        "clay",
+        "pastel",
+        "3d"
+      ],
+      "label": "Soft clay and pastel 3D",
+      "family": "3d",
+      "modes": [
+        "communicative",
+        "creative"
+      ],
+      "look": "Rounded matte clay shapes in pastel colours: a chart, a sequence or a small landscape made of clay."
+    },
+    {
+      "id": "character-3d",
+      "is": [
+        "3d",
+        "cartoon"
+      ],
+      "label": "3D character scene",
+      "family": "3d",
+      "modes": [
+        "creative"
+      ],
+      "look": "Stylised 3D people with big, readable expressions, caught in 1 moment of the problem."
+    },
+    {
+      "id": "organ-character",
+      "is": [
+        "3d",
+        "cartoon",
+        "body part",
+        "organ"
+      ],
+      "label": "The body part as a character",
+      "family": "3d",
+      "modes": [
+        "creative",
+        "communicative"
+      ],
+      "look": "The part of the body the problem lives in, as a character with a face and a mood. The mechanism becomes someone."
+    },
+    {
+      "id": "mascot-world",
+      "is": [
+        "3d",
+        "mascot",
+        "cartoon"
+      ],
+      "label": "Product mascot world",
+      "family": "3d",
+      "modes": [
+        "creative",
+        "brand-world"
+      ],
+      "look": "A character made from the product lives a small adventure. The same character can return in every ad of the set."
+    },
+    {
+      "id": "miniature-diorama",
+      "is": [
+        "3d",
+        "miniature",
+        "diorama"
+      ],
+      "label": "Miniature diorama",
+      "family": "3d",
+      "modes": [
+        "communicative",
+        "creative"
+      ],
+      "look": "Tiny workers or people at work on a giant product or a giant version of the problem, like a model railway."
+    },
+    {
+      "id": "holo-pastel",
+      "is": [
+        "pastel",
+        "iridescent",
+        "3d"
+      ],
+      "label": "Dreamy pastel",
+      "family": "3d",
+      "modes": [
+        "brand-world"
+      ],
+      "look": "Iridescent light, soft pastel air. The product pours or floats into a calm scene."
+    },
+    {
+      "id": "storybook",
+      "is": [
+        "storybook",
+        "surreal",
+        "3d"
+      ],
+      "label": "Storybook surreal",
+      "family": "3d",
+      "modes": [
+        "brand-world",
+        "creative"
+      ],
+      "look": "A paper-and-card world from a picture book: a boat on a sea made of something else, a path that is a game board."
+    },
+    {
+      "id": "vintage-comic",
+      "is": [
+        "comic",
+        "retro",
+        "cartoon",
+        "halftone"
+      ],
+      "label": "Vintage comic or retro print",
+      "family": "illustration",
+      "modes": [
+        "creative"
+      ],
+      "look": "A panel from a mid-century comic or a retro poster: halftone dots, flat inks, 1 speech bubble."
+    },
+    {
+      "id": "flat-cartoon",
+      "is": [
+        "cartoon",
+        "drawing",
+        "illustration"
+      ],
+      "label": "Flat cartoon",
+      "family": "illustration",
+      "modes": [
+        "creative",
+        "communicative"
+      ],
+      "look": "A flat, friendly children's-book drawing of the problem at home."
+    },
+    {
+      "id": "hand-sketch",
+      "is": [
+        "sketch",
+        "handwriting",
+        "drawing"
+      ],
+      "label": "Hand sketch",
+      "family": "illustration",
+      "modes": [
+        "communicative",
+        "native"
+      ],
+      "look": "Ballpoint or marker on paper or a whiteboard: a diagram, a checklist or a scribble a person made to explain it."
+    },
+    {
+      "id": "engraving",
+      "is": [
+        "engraving",
+        "antique",
+        "illustration"
+      ],
+      "label": "Antique engraving",
+      "family": "illustration",
+      "modes": [
+        "communicative"
+      ],
+      "look": "A labelled diagram in the style of an old medical or botanical plate, on cream paper."
+    },
+    {
+      "id": "game-ui",
+      "is": [
+        "pixel art",
+        "video game",
+        "retro"
+      ],
+      "label": "Retro game screen",
+      "family": "illustration",
+      "modes": [
+        "creative",
+        "communicative"
+      ],
+      "look": "A pixel-art game screen of the app's own invention: health bars, a maze, a versus screen. No real game is copied."
+    },
+    {
+      "id": "scientific-imaging",
+      "is": [
+        "x-ray",
+        "thermal",
+        "scientific"
+      ],
+      "label": "Scientific imaging",
+      "family": "illustration",
+      "modes": [
+        "communicative"
+      ],
+      "look": "A thermal image, an X-ray or a cutaway that shows what the eye can't see."
+    },
+    {
+      "id": "infographic",
+      "is": [
+        "infographic",
+        "diagram"
+      ],
+      "label": "Annotated infographic",
+      "family": "illustration",
+      "modes": [
+        "communicative"
+      ],
+      "look": "The whole ad is 1 process diagram or timeline, with labels and arrows."
+    },
+    {
+      "id": "message-thread",
+      "is": [
+        "chat",
+        "text message",
+        "screenshot"
+      ],
+      "label": "A message between 2 people",
+      "family": "native",
+      "modes": [
+        "native"
+      ],
+      "look": "A plain chat between 2 people on a phone, in a generic design of the app's own. No real platform's interface is copied."
+    },
+    {
+      "id": "billboard-photo",
+      "is": [
+        "billboard"
+      ],
+      "label": "A photo of a billboard",
+      "family": "native",
+      "modes": [
+        "native",
+        "creative"
+      ],
+      "look": "The ad as a billboard on a city street, photographed from the pavement by a passer-by."
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import { callJobTool, jobMcpTools, getDialQuestions, getOrgChart } from '../jobs/job-mcp.mjs';
 import { getJobSchema } from '../jobs/contracts.mjs';
 import { proposeTeam } from '../jobs/propose-team.mjs';
+import { discoverStudioFormats, isStaticAdRequest } from '../jobs/studio-discovery.mjs';
 import { createScopeMcpService, scopeMcpTools } from '../intake/request-scope-mcp.mjs';
 import { callOutcomeTool, catalogueResolver, outcomeMcpTools } from '../outcomes/outcome-mcp.mjs';
 import { WORKFLOW_NOTES_LIMIT } from "../lib/workflow-limits.ts";
@@ -263,7 +264,15 @@ export class PublicCatalogueService {
     }
     if (outcomeMcpTools.some(tool => tool.name === name)) {
       // Outcome messages say exactly what to fix in the host's own brief, research or plan; nothing is stored.
-      try { return await callOutcomeTool(name, args, { resolve: catalogueResolver(this) }); }
+      try {
+        const result=await callOutcomeTool(name, args, { resolve: catalogueResolver(this) });
+        const request=typeof args.request==='string'?args.request:'';
+        if(name==='start_outcome' && isStaticAdRequest(request)) {
+          try { const c=await this.catalogue(),studio=discoverStudioFormats({manifest:c.manifest,items:c.items}); return {...result,studio_discovery:{...studio,formats:studio.formats.filter((format:{medium:string})=>format.medium==='image')},creative_next_action:'For this image-ad outcome, use the Studio image variants and visual worlds to select a substantive spread; load each selected revision-pinned AI Blocks method and its references in full. Check actual image rendering capability and visually review the output. Do not send static work to a video workflow. Unmapped entries remain explicit gaps.'}; }
+          catch { return {...result,studio_discovery:{status:'UNAVAILABLE'},creative_next_action:'The Studio catalogue could not be loaded. Retry get_approaches for make-image-ads before planning visual work; do not invent methods.'}; }
+        }
+        return result;
+      }
       catch (error) {
         if (error instanceof PublicApiError) throw error;
         return fail(400, 'invalid_arguments', `${error instanceof Error ? error.message.slice(0, 6000) : 'Invalid outcome arguments.'} Nothing was executed or saved.`);
@@ -324,7 +333,15 @@ export class PublicCatalogueService {
     pack['TEAM-MODE.md']=protocol;pack['TEAM.json']=strToU8(JSON.stringify(proposal,null,2));
     pack['approaches.json']=strToU8(JSON.stringify(await this.callTool('get_approaches',{...(args.job?{job:args.job}:{task:args.task})}),null,2));
     for(const seat of proposal.seats){const role=context.roles.profiles[seat.role_id] as {instructions?:string}|undefined;if(!role)return fail(503,'role_unavailable','A selected role setup is unavailable.');pack['seats/'+seat.seat_id+'/ROLE.json']=strToU8(JSON.stringify(role,null,2));pack['seats/'+seat.seat_id+'/ROLE.md']=strToU8(role.instructions??'Load the complete pinned methods in ROLE.json before work.');}
-    pack['README.md']=strToU8('Team proposal: prepared, not executed. Read TEAM-MODE.md first. TEAM.json is a roster proposal, not an approved team plan. Read every selected pinned source method in full. Persona biographies are not bundled here; these are verified source-backed role setups. No private memory is included.');
+    // The creative palette is a task-specific augmentation: bundle its actual pinned
+    // instructions and references, rather than only a list of role-level links.
+    const studio=discoverStudioFormats(context),p=proposal as typeof proposal & {studio_discovery?:unknown};
+    if(p.studio_discovery){
+      const c=await this.catalogue(),refs=[...studio.visual_worlds,...studio.image_variants].map((row:{method:{slug?:string;status:string}})=>row.method).concat(studio.formats.filter((row:{medium:string})=>row.medium==='image').flatMap((row:{related_methods:{slug?:string;status:string}[]})=>row.related_methods));
+      const slugs=[...new Set(refs.filter((ref:{status:string;slug?:string})=>ref.status==='AVAILABLE'&&ref.slug).map((ref:{slug?:string})=>ref.slug!))];
+      for(const slug of slugs){const entry=c.manifest.resources[slug];if(!entry) return fail(503,'asset_unavailable','A Studio method is missing from the pinned catalogue.');pack[`methods/${slug}/SKILL.md`]=await this.packaged(slug,entry,'SKILL.md',entry.instruction);for(const file of entry.files??[]){const prefix=slug+'/';if(file.path.startsWith(prefix)&&file.path!==prefix+'SKILL.md'){const relative=file.path.slice(prefix.length);pack[`methods/${slug}/${relative}`]=await this.packaged(slug,entry,relative,file);}}}
+    }
+    pack['README.md']=strToU8('Team proposal: prepared, not executed. Read TEAM-MODE.md first. TEAM.json is a roster proposal, not an approved team plan. Creative Studio method instructions and references are bundled under methods/ with their revisions in approaches.json; read every selected pinned source method in full. Persona biographies are not bundled here; these are verified source-backed role setups. No private memory is included.');
     const bytes=zipSync(pack,{level:6,mtime:new Date('2026-01-01T00:00:00Z')});return {bytes,filename:proposal.proposal_id+'.zip'};
   }
 

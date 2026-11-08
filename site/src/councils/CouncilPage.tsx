@@ -6,6 +6,7 @@ import {library} from '../lib/library-storage';
 import {download} from '../lib/download';
 import {StartupReady} from '../StartupReady';
 import {classifyJob} from '../jobs/router.mjs';
+import {isStaticAdRequest} from '../jobs/studio-discovery.mjs';
 import {proposeTeam} from '../jobs/propose-team.mjs';
 import {jobMethod} from '../jobs/method.mjs';
 import {assembleRubric} from '../jobs/rubric.mjs';
@@ -59,8 +60,9 @@ export default function CouncilPage({toast}:{toast:(message:string)=>void}){
  async function profileFor(id:string){if(profiles[id])return profiles[id];const profile=await loadJSON('/data/roles/'+encodeURIComponent(id)+'.json') as RoleProfile;setProfiles(old=>({...old,[id]:profile}));return profile;}
  async function staff(){await act('staff',async()=>{
   if(!draft.request.trim())throw Error('Describe the result you need first.');if(!roles.length)throw Error('The specialist library is still loading. Try again in a moment.');
-  const mark=version.current,job=draft.job||classifyJob(draft.job_to_be_done||draft.request,approaches).job;
-  const body={task:draft.job_to_be_done||draft.request,tier:draft.tier,...(job?{job}:{}),host_capabilities:{parallel_agents:true,max_parallel:6,tools:['web','browser','code','image','text']}};
+  const task=draft.job_to_be_done||draft.request,mark=version.current,job=draft.job||(isStaticAdRequest(task)?'make-image-ads':classifyJob(task,approaches).job);
+  // Browser planning cannot inspect the connected AI's execution tools.
+  const body={task,tier:draft.tier,...(job?{job}:{}),host_capabilities:{}};
   let proposal:any;
   try{const r=await fetch('/api/v1/team-proposals',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)});if(!r.ok||!r.headers.get('content-type')?.includes('json'))throw Error();proposal=await r.json();if(!proposal.ok||!proposal.seats?.length)throw Error();}
   catch{proposal=proposeTeam(body,{roles,personas,approaches});}

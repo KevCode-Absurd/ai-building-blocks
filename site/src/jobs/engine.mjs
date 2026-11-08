@@ -21,6 +21,13 @@ const types = seat => new Set([seat.seat_type, ...(seat.seat_types ?? [])]);
 const pathSafe = path => typeof path === 'string' && path.length <= 240 && !/^(?:[a-z]:|[\\/])|[\\\0?#%]|(?:^|\/)\.{1,2}(?:\/|$)/i.test(path);
 const bounded = value => { let raw; try { raw = JSON.stringify(value); } catch { fail('state', 'Send JSON data without cycles.'); } if (encoder.encode(raw).length > 240000) fail('state', 'Keep state below 240 KB; reference source files and keep artifacts local.'); refuseSecrets(value); };
 const stageSchema = { scope: 'ai-blocks-job-card/1', staff: 'ai-blocks-team-plan/2', council: 'ai-blocks-council/1', review: 'ai-blocks-review/1', deliver: 'ai-blocks-job-delivery/1' };
+const visualJobs = new Set(['make-image-ads', 'make-images', 'make-video-ads', 'design-work']);
+const visualRequest = request => (/\blanding[ -]?pages?\b/i.test(request) && /\b(?:design|redesign|build|visual|mockups?|prototypes?)\b/i.test(request)) || (/\b(?:ad|ads|advertising)\b/i.test(request) && /\b(?:creatives?|images?|videos?|visuals?)\b/i.test(request));
+const nonempty = x => typeof x === 'string' && !!x.trim();
+const nonemptyList = x => Array.isArray(x) && x.length > 0 && x.every(nonempty);
+function checkVisualSpec(spec) {
+  if (!object(spec) || !nonemptyList(spec.references) || !nonemptyList(spec.fonts) || !nonemptyList(spec.colors) || !nonempty(spec.logo) || !nonemptyList(spec.formats) || !nonempty(spec.format_rationale) || !nonempty(spec.required_renderer)) fail('document.visual_spec', 'Specify visual references, fonts, colors, logo, distinct format directions and rationale, and the required renderer. Mark unknown brand elements explicitly; do not invent them.');
+}
 
 function contextFor(view, base, catalogue) {
   return { ...catalogue, job: base.job_type.job, tier: base.tier, card: view.card, job_card: view.card, team: view.team, team_plan: view.team, routes: view.routes, spread: view.spread, rubric: view.rubric, review: view.review, evidence: view.evidence ?? { claims: view.card?.facts ?? [] }, approach_index: catalogue.approaches, catalogue: catalogue.items, explicit_dials: base.explicit_dials, host_capabilities: base.host_capabilities, proposal_contents: view.proposal_contents, deliverables: Object.fromEntries((view.production?.artifacts ?? []).map(a => [a.slot_id, a.producer_note])), production: view.production };
@@ -64,6 +71,12 @@ function productionCheck(document, view, base, context) {
     if ((claim.used_in ?? []).some(id => !ids.has(id))) fail('document.evidence.claims.used_in', 'Evidence may refer only to real produced slots.');
   }
   if (view.team.lead_seat_id && (document.lead_review?.by_seat !== view.team.lead_seat_id || document.lead_review?.status !== 'PASS' || !document.lead_review?.notes?.trim())) fail('document.lead_review', 'The task lead must check that the expert output meets the job before final review.');
+  if (view.card.visual_spec) {
+    const spec = view.card.visual_spec, review = document.visual_review, reviewer = seats.get(review?.by_seat);
+    if (!(base.host_capabilities.visual_renderers ?? []).includes(spec.required_renderer)) fail('document.visual_review.renderer', 'The required visual renderer is unavailable. Stop or deliver a clearly labelled production brief; do not silently substitute a photo-card or another renderer.');
+    if (!object(review) || review.renderer !== spec.required_renderer || !nonempty(review.receipt) || !reviewer || types(reviewer).has('maker') || !Array.isArray(review.items)) fail('document.visual_review', 'Record the actual renderer receipt and an independent non-maker visual review.');
+    if (review.items.length !== document.artifacts.length || new Set(review.items.map(x => x.slot_id)).size !== document.artifacts.length || document.artifacts.some(a => !review.items.some(x => x.slot_id === a.slot_id && x.status === 'PASS' && nonempty(x.reference_comparison) && nonempty(x.spec_comparison)))) fail('document.visual_review.items', 'Reject each output until visual comparison against the actual references and scoped specification passes; record the observations.');
+  }
 }
 
 /** Replays validated history on every call. A recomputed digest cannot make an invalid phase jump valid. */
@@ -81,6 +94,7 @@ function applyEvent(view, entry, base, catalogue) {
     check(stageSchema.scope, document, context);
     const brain=document.brand_brain;
     if(!brain||!['AVAILABLE','BUILT'].includes(brain.status)||!brain.business?.trim()||!pathSafe(brain.path)||!HASH.test(brain.sha256??'')||brain.read_by_coordinator!==true||!document.context_sources.some(source=>source.ref===brain.path))fail('document.brand_brain','Load and read the existing brand brain, or build a verified one first. Record its business, safe path, SHA-256 and matching context source before staffing.');
+    if (visualJobs.has(base.job_type.job) || visualRequest(base.request) || document.visual_spec !== undefined) checkVisualSpec(document.visual_spec);
     if (document.request_verbatim !== base.request) fail('document.request_verbatim', 'Keep the owner’s original request unchanged.');
     if (document.dials.depth.value !== base.tier) fail('document.dials.depth', 'Use the agreed tier from start_job; restart to change team size and budget.');
     const saved = updatePreferences(view.preferences ?? base.preferences, { job: base.job_type.job, answers: document.preference_answers ?? {}, job_id: base.job_id, at: entry.at });
@@ -214,7 +228,7 @@ export async function startJob(input = {}, catalogue = {}) {
     const selectedItem=input.item_id??(routed.selected_id&&catalogue.items?.some(i=>i.slug===routed.selected_id)?routed.selected_id:null);
     const selectedRole=input.role_id??(routed.selected_id&&(Array.isArray(catalogue.roles)?catalogue.roles:catalogue.roles?.roles??[]).some(r=>r.id===routed.selected_id)?routed.selected_id:null);
     const action=routed.mode==='outcome'?{tool:'start_outcome',args:{request:input.request}}:selectedItem?{tool:'get_item',args:{id:selectedItem}}:selectedRole?{tool:'prepare_specialist',args:{role_id:selectedRole}}:input.persona_id?{tool:'load_agent',server:'https://agents.useaiblocks.com/mcp',args:{id:input.persona_id}}:{tool:'find_specialist',args:{task:input.request}};
-    return {schema:'ai-blocks-job/1',job_id:'job_'+crypto.randomUUID(),...routed,tier:'quick',estimate:{seats:1,council_rounds:0,token_multiple:[1,1],source:'estimated'},host_profile:input.host_capabilities?.parallel_agents?'parallel':'sequential',phase:'ROUTE',next_action:{event:null,...action,instruction:'Before any production, read the complete verified brand brain or build one from authorized sources; use a verified project context brain for non-business work. Keep the path, hash and read receipt with the job. '+(routed.mode==='outcome'?'Continue in the outcome track, retaining the owner’s words.':'Load the named item or specialist through the existing direct tools.')},files:[],model_calls:0,stored_by_service:false,hosted_execution:false};
+    return {schema:'ai-blocks-job/1',job_id:'job_'+crypto.randomUUID(),...routed,tier:'quick',estimate:{seats:1,council_rounds:0,token_multiple:[1,1],source:'estimated'},host_profile:input.host_capabilities?.parallel_agents?'parallel':'sequential',phase:'ROUTE',next_action:{event:null,...action,instruction:'Before any production, read the complete verified brand brain or build one from authorized sources; use a verified project context brain for non-business work. Keep the path, hash and read receipt with the job. For visual work, inspect brand references and the requested formats, discover the actual required image/video or page renderer, and have a non-maker visually reject work that fails the references or specification. Never silently substitute a photo-card for requested generation. '+(routed.mode==='outcome'?'Continue in the outcome track, retaining the owner’s words.':'Load the named item or specialist through the existing direct tools.')},files:[],model_calls:0,stored_by_service:false,hosted_execution:false};
   }
   const approachJob = catalogue.approaches?.jobs?.[routed.job_type.job] ?? {}, host = input.host_capabilities ?? {};
   const resolved = resolveDials({ ...input, job: routed.job_type.job, approachJob }); if (!resolved.ok) throw new JobValidationError(resolved.errors);

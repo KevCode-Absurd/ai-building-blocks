@@ -67,7 +67,7 @@ export function buildExecutionPlan({ request = '', job, card, tier = 'standard',
       { role: 'reviewer', receives: ['original request','rubric','actual current artifacts','source references'], excludes: ['council votes','model identity as a quality signal'], produces: ['observations on each artifact','failed requirements and concrete repair instructions'] },
     ],
     gates: ['Scope matches the requested deliverable, not a convenient substitute.', 'Independent drafts exist before debate; preserve useful dissent.', 'The lead checks handoff contracts and current artifact revisions.', 'Required checks must pass; a high average score cannot hide a failed requirement.', ...(pages ? ['Launchable pages require editable source, existing-site integration evidence and browser-tested primary actions, responsive layouts and keyboard access.'] : []), ...(imageAds ? ['Inspect actual ad images for product/brand fidelity and substantive batch diversity.'] : []), 'Deliver actual files and honest flags. User acceptance and business performance remain unmeasured until observed.'],
-    refinement: { max_loops: loops, stop_on: ['critical requirement failure without a repair path','missing required capability or evidence','budget or loop limit'], repair: 'Identify the failing slot and requirement, change the actual artifact, and repeat affected checks on its new hash. Preserve the strongest alternate route.' },
+    refinement: { max_loops: loops, stop_on: ['critical requirement failure without a repair path','missing required capability or evidence','budget or loop limit'], repair: 'Retain an available CURRENT baseline or first native draft at its exact hash. Full review may retain it unchanged when accepted criteria pass; explicit exploration, variants, rewrite/redesign and supported craft improvements still control. Tie any bounded repair to an observed issue, accepted criterion and source/check evidence; preserve unaffected parts, compare with the incumbent and rerun affected checks before adoption. Limits are maxima, not work quotas. Preserve the strongest alternate route.' },
     execution: { hosted: false, model_calls: 0, parallel_available: host.parallel_agents === true, max_parallel: host.max_parallel ?? 1, isolation: host.parallel_agents ? 'REQUIRES_DISTINCT_CONTEXT_RECEIPTS' : 'SAME_CONTEXT_UNLESS_HOST_PROVIDES_ISOLATION', permission: 'An execution plan is not authority to send, spend or publish.' },
     source_trace: {schema:'ai-blocks-source-trace/1',required_for_selected_methods:true,require_pinned_resource_hashes:true,distinguish_read_from_executed:true,instruction:sourceTraceInstructions()},
     alternative_decision: {schema:'ai-blocks-alternative-decision/1',required_for_council:true,instruction:alternativeDecisionInstructions()},
@@ -127,7 +127,7 @@ export function validateProductionQuality({ document = {}, card = {}, team = {},
     errors.push(...trace.errors.map(error=>({path:`document.${error.path}`,message:error.message})));
   }
   const request=plan?.objective?.request_verbatim??card.request_verbatim??'';
-  const work=validateWorkContext(document.work_context??card.work_context,{request,required:plan?.work_context?.required??workContextRequirements(request).required,production:true,artifacts});
+  const work=validateWorkContext(document.work_context??card.work_context,{request,required:plan?.work_context?.required??workContextRequirements(request).required,production:true,artifacts,acceptance:card.acceptance});
   errors.push(...work.errors.map(error=>({path:`document.${error.path}`,message:error.message})));
   if(document.work_context&&card.work_context){
     for(const source of list(card.work_context.sources).filter(source=>source?.role==='BASELINE'))if(!list(document.work_context.sources).some(current=>current?.id===source.id&&current?.sha256===source.sha256))add('document.work_context.sources','Keep the scoped baseline snapshot for comparison. Record additional current observations separately rather than silently replacing the baseline.');
@@ -162,12 +162,22 @@ export function validateProductionQuality({ document = {}, card = {}, team = {},
   return { ok: errors.length === 0, errors, assurance: 'HOST_REPORTED_NOT_INDEPENDENTLY_VERIFIED' };
 }
 
+export function artifactRefinementInstructions() {
+  return `When an inspected CURRENT baseline or a first working native draft is already available, preserve its exact files and SHA-256 as the incumbent. This adds no mandatory prototype, new stage or extra model call. Explicit requests for exploration, variants, a rewrite or redesign still control; a requested new direction or an observed craft improvement can justify change. Retention is an option, not a required outcome. Complete the required independent review; retaining the incumbent unchanged is a legitimate result when it meets the accepted job. Use the explicit work-context retention contract for a no-change IMPROVE result; unchanged work cannot bypass missing or failed acceptance checks.
+
+Distinguish approved invariants from changeable baseline content: existing wording, hierarchy or process steps are not automatically requirements to preserve. A proposed revision must identify the current artifact and hash, the accepted criterion or requested new direction, supporting source/check or observed craft evidence, and the smallest justified change with its expected effect. An untested concern is a hypothesis, not a demonstrated defect or permission to rewrite. Keep unaffected parts and useful distinctiveness. Do not regenerate the whole deliverable merely to combine council ideas. Rerun affected checks on the new hash and compare the result with the incumbent before adopting it; reject or revert regressions and preserve unresolved flags.
+
+Team capacity, tool allowances and revision limits are maxima, not work quotas; explicit requested output counts and required review remain binding. Add a field, process step or recurring review only when it resolves a task-relevant failure or accepted requirement. Keep the daily action path concise and separate optional analysis from required handoff fields. These decisions remain host reports, not automatic semantic proof, owner acceptance or measured improvement.`;
+}
+
 export function executionQualityMethod() {
   return `## Execution quality contract
 
 ${sourceTraceInstructions()}
 
 ${alternativeDecisionInstructions()}
+
+${artifactRefinementInstructions()}
 
 For personal capability building, discover personal-agent-builder in the AI Blocks library and read its complete pinned method. Start from relevant context the host actually exposes, not assumed access to private memory. Choose prompt, skill, agent or collection; learn one useful task through project replay, scenarios and corrections. Proposed lessons need owner review and an actual save receipt or an explicit unavailable status. Personal use is separate from marketplace publication; an interview does not grant tool authority.
 

@@ -154,7 +154,7 @@ function safePath(path) {
   return typeof path === 'string' && !path.startsWith('/') && !path.includes('\\') && !/^[a-z]+:/i.test(path) && path.split('/').every(part => part && part !== '.' && part !== '..' && !/[\u0000-\u001f<>:"|?*]/.test(part) && !/[. ]$/.test(part) && !/^(con|prn|aux|nul|com[1-9]|lpt[1-9])(?:\.|$)/i.test(part));
 }
 function cardChecks(d, c, add, warn) {
-  if(d.work_context!==undefined)for(const error of validateWorkContext(d.work_context,{request:d.request_verbatim,required:false}).errors)add(error.path,error.message);
+  if(d.work_context!==undefined)for(const error of validateWorkContext(d.work_context,{request:d.request_verbatim,required:false,acceptance:d.acceptance}).errors)add(error.path,error.message);
   mixChecks(d.dials?.variety_mix, 'dials.variety_mix', add);
   for (const field of ['deliverables', 'constraints', 'context_sources', 'facts', 'unknowns', 'acceptance']) unique(d[field], field === 'deliverables' ? 'kind' : 'id', field, add);
   list(d.acceptance).forEach((row, idx) => { if (present(row?.threshold) && !/\d|\b(?:all|each|every|none|zero|pass|fail|yes|no|complete|present|source|trace|quote|verified|no rework|as is)\b/i.test(row.threshold)) add(`acceptance[${idx}].threshold`, 'must give a measurable count, rate, or pass/fail condition.'); });
@@ -358,7 +358,7 @@ function reviewChecks(d, c, add, warn) {
   }
 }
 function productionChecks(d, c, add, warn) {
-  if(d.work_context!==undefined)for(const error of validateWorkContext(d.work_context,{request:cardOf(c).request_verbatim??'',required:false,production:true,artifacts:d.artifacts}).errors)add(error.path,error.message);
+  if(d.work_context!==undefined)for(const error of validateWorkContext(d.work_context,{request:cardOf(c).request_verbatim??'',required:false,production:true,artifacts:d.artifacts,acceptance:cardOf(c).acceptance}).errors)add(error.path,error.message);
   for(const scoped of list((c.card??c.job_card)?.deliverables))if(list(d.artifacts).filter(a=>a?.kind===scoped.kind).length!==scoped.count)add('artifacts.kind','meet the scoped count for every deliverable kind.');
   const artifacts = list(d.artifacts), slots = list(c.spread?.slots), seats = list(teamOf(c).seats);
   unique(artifacts, 'slot_id', 'artifacts', add);
@@ -448,7 +448,7 @@ export function validateJobDocument(schema, document, context = {}) {
     if (schema === RUBRIC_SCHEMA) rubricChecks(document, add);
     else if (schema === landingPageDeliverySchema.title) errors.push(...validateLandingPageDelivery(document, { requireLaunchable: document.mode === 'LAUNCHABLE_SITE', artifacts: context.artifacts, existingSiteRequired: context.existing_site_required === true }).errors);
     else if (schema === VISUAL_DELIVERY_SCHEMA.title) errors.push(...validateVisualDelivery(document,{artifacts:context.artifacts??list(document.items).map(row=>({slot_id:row?.slot_id,sha256:row?.sha256,modality:'image'})),request:cardOf(context).request_verbatim??''}).errors);
-    else if (schema === WORK_CONTEXT_SCHEMA.title) errors.push(...validateWorkContext(document,{request:context.request??cardOf(context).request_verbatim??'',required:document.mode!=='CREATE',production:context.production_check===true,artifacts:context.artifacts??[]}).errors);
+    else if (schema === WORK_CONTEXT_SCHEMA.title) errors.push(...validateWorkContext(document,{request:context.request??cardOf(context).request_verbatim??'',required:document.mode!=='CREATE',production:context.production_check===true,artifacts:context.artifacts??[],acceptance:context.acceptance??cardOf(context).acceptance}).errors);
     else handlers[schema]?.(document, context, add, warn);
   } catch (error) { add('$', error instanceof Error ? error.message : 'must be a valid JSON document.'); }
   return { ok: errors.length === 0, errors, warnings };

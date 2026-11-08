@@ -108,7 +108,7 @@ async function applyEvent(view, entry, base, catalogue) {
   if (event !== 'revise' && event !== expectedEvent[view.phase]) fail('event', `The ${view.phase} phase expects ${expectedEvent[view.phase] ?? 'no work event'}.`);
   if (event === 'scope') {
     check(stageSchema.scope, document, context);
-    if(base.quality_policy?.version>=1){const work=validateWorkContext(document.work_context,{request:base.request});if(!work.ok)throw new JobValidationError(work.errors);}
+    if(base.quality_policy?.version>=1){const work=validateWorkContext(document.work_context,{request:base.request,acceptance:document.acceptance});if(!work.ok)throw new JobValidationError(work.errors);}
     const brain=document.brand_brain;
     if(!brain||!['AVAILABLE','BUILT'].includes(brain.status)||!brain.business?.trim()||!pathSafe(brain.path)||!HASH.test(brain.sha256??'')||brain.read_by_coordinator!==true||!document.context_sources.some(source=>source.ref===brain.path))fail('document.brand_brain','Load and read the existing brand brain, or build a verified one first. Record its business, safe path, SHA-256 and matching context source before staffing.');
     if (visualJobs.has(base.job_type.job) || visualRequest(base.request) || document.visual_spec !== undefined) checkVisualSpec(document.visual_spec);

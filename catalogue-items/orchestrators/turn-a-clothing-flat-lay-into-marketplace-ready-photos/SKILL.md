@@ -84,6 +84,12 @@ Pause here: Redo or retouch any picture the inspector flagged, then save the fin
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Clothing photo model and background editor](https://useaiblocks.com/skills/model-and-scene-swapper).
+- The [Virtual try-on photo maker](https://useaiblocks.com/skills/virtual-try-on-photo-maker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+## Optional on-model follow-up
+
+Only when the person asks for an on-model image, use the Virtual try-on photo maker with the actual original or approved cleaned flat-lay file, plus an authorised pose/model reference. A photo set exists only when the person returned actual files and the relevant garment checks passed; the audit report, prompts and ghost-shape preview are not substitutes for that source photo. Keep any unverified garment detail unknown. A new pose or generated image needs its own fidelity and current marketplace-rule checks.
+
+Discover the real image capability and missing references first. The imported method describes a paid dLazy path and uploads; an earlier photo workflow grants no permission to use that service, share images or spend. Use only the current task's authorised tools, rights and limits, and return a blocked handoff if the required capability or pose reference is unavailable.

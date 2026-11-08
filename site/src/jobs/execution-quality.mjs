@@ -10,7 +10,7 @@ const list = value => Array.isArray(value) ? value : [];
 const text = value => typeof value === 'string' && value.trim().length > 0;
 const hash = value => /^[a-f0-9]{64}$/.test(value ?? '');
 const safePath = value => text(value) && value.length <= 240 && !/^(?:[a-z]:|[\\/])|[\\\0?#%]|(?:^|\/)\.{1,2}(?:\/|$)/i.test(value);
-const normalize = value => String(value ?? '').toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, ' ').trim();
+const normalize = value => String(value ?? '').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}\p{M}]+/gu, ' ').trim();
 const types = seat => new Set([seat?.seat_type, ...list(seat?.seat_types)]);
 const stopwords = new Set(['a','an','and','the','for','of','in','on','to','with','image','ad','creative','product']);
 export const GENERAL_EXPLORATION_AXES = Object.freeze(['mechanism','evidence','tradeoff','structure']);

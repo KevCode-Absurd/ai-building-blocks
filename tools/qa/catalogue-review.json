@@ -748,6 +748,42 @@
           "rationale": "The required question is the actual page-building request, including product and audience facts gathered by the workflow. The broad port does not claim that a question alone supplies repository access, approved assets, verified offers or executed checks."
         }
       ]
+    },
+    "catalogue-items/orchestrators/turn-a-clothing-flat-lay-into-marketplace-ready-photos/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-11-08",
+      "method_sha256": "a80a2e3d129e458336ab2bc9437fc82d42d29ef2371983b7d4184ee3f29d8df7",
+      "inputs": [
+        {
+          "type": "product_photos",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "product_photos",
+          "quote": "**A flat-lay phone photo of the garment** (required). Front only, laid flat on a plain background, nothing folded.",
+          "rationale": "The workflow starts from an actual real-garment flat-lay photo; the person later returns actual generated/edited files at explicit checkpoints. The required photo input does not itself supply a marketplace name, image tool, missing garment details or permission to upload/spend."
+        }
+      ]
+    },
+    "catalogue-items/imported/virtual-try-on-photo-maker/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-11-08",
+      "method_sha256": "3eaa929b7d8663ddaf8f9ebd74e31e0367f5cd71e67e33bcc9201ffd44c1d3b1",
+      "inputs": [
+        {
+          "type": "product_photos",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "product_photos",
+          "quote": "Image 1 is the garment flat-lay:",
+          "rationale": "The required product_photos input is the actual garment photograph used as image 1, preserving true colour, fabric and fit. The complete method separately requires an authorised pose/scene reference as image 2, real tool access and cost approval; a garment photo or audit report alone is not sufficient to run it."
+        }
+      ]
     }
   },
   "handoffs": {
@@ -920,6 +956,20 @@
       "adaptation": "Build and open the actual changed React page using its supplied commands, then pass complete visible copy in reading order and current phone screenshots to the checker as landing_page. If no browser is available, provide only the actual copy and label visual/behavior checks unobserved.",
       "condition": "The actual changed page must be available as rendered preview or complete text. Do not treat TSX, a generated reference image or a producer PASS label as evidence of the observed page.",
       "rationale": "The code_change becomes the consumer landing_page through an explicit current render/copy capture. This supports a prelaunch checklist while keeping ad matching, real offer facts, speed measurement and launch authority separate."
+    },
+    "tools/orchestrator-pages/turn-a-clothing-flat-lay-into-marketplace-ready-photos.yaml#next#virtual-try-on-photo-maker": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-11-08",
+      "from_sha256": "a80a2e3d129e458336ab2bc9437fc82d42d29ef2371983b7d4184ee3f29d8df7",
+      "to_sha256": "3eaa929b7d8663ddaf8f9ebd74e31e0367f5cd71e67e33bcc9201ffd44c1d3b1",
+      "ports_sha256": "4ec43732e355d617264ecdae3ad6b4a6926f52c9456acd3e39aa9c65f4da1bcb",
+      "from_type": "photo_set",
+      "to_type": "product_photos",
+      "output_quote": "A photo set exists only when the person returned actual files and the relevant garment checks passed;",
+      "input_quote": "Image 1 is the garment flat-lay:",
+      "adaptation": "Select the actual approved cleaned flat-lay image from the returned photo_set, retain the original real-garment photo and fidelity observations, and label it as the garment image 1 for virtual try-on. Add a separately authorised pose/scene reference as image 2; do not pass the report, prompt, close-up or ghost-shape preview as the garment source.",
+      "condition": "Only when the owner requests an on-model follow-up and actual returned/approved photo files exist. Require the separate pose reference, image-edit capability, rights and authorised action/spend limits; no automatic dLazy upload or payment follows from the recommendation.",
+      "rationale": "The workflow begins and retains a flat-lay garment image; virtual try-on supports that source, whereas the old scene-swapper expects an already worn/model or mannequin image. The optional photo_set is only available after actual images return and pass their checks. The audit report is evidence to carry, not a substitute photograph; new generated images require fresh garment and marketplace checks."
     }
   }
 }

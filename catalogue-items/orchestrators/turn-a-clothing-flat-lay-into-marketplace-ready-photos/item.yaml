@@ -10,6 +10,7 @@ inputs:
   - {type: product_photos, required: true}
 outputs:
   - {type: audit_report}
+  - {type: photo_set, required: false}
 uses: [product-photo-retoucher, ghost-mannequin-photo-maker, fabric-close-up-maker, ai-product-photo-inspector, marketplace-photo-rule-checker]
 steps:
   - {uses: product-photo-retoucher, note: "Starts the chain from your phone photo and hands a cleaner flat-lay photo to step 2."}

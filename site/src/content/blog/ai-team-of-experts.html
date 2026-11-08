@@ -1,0 +1,160 @@
+<h2 id="short">Why a team of experts beats one assistant</h2>
+<p>Most people use AI as one helpful assistant: you ask a question, it answers, and you take whatever it gives you. That approach works well for small jobs, but on a bigger job a single chat usually gives you one way of thinking, one template and one kind of answer. Worse, nobody checks the result except the same chat that produced it.</p>
+<p>A better habit is to treat your AI like a team of experts, each with a different method and a clear position at the table. The experts work separately, so they can't copy each other, and someone who didn't make the work reviews it before you use it. People who build AI models use a related idea called "mixture of experts", although you don't need any of the theory. In practice, you only need a few separate chats, a few clear briefs and a short checklist.</p>
+<p>Here is the short version of this guide:</p>
+<ul>
+<li>Start with a coordinator, either you or one lead chat, who writes down the real job and describes what "done" looks like.</li>
+<li>Pick three to six specialists who work in different ways, from <a href="/roles">AI specialists</a>, <a href="https://agents.useaiblocks.com" rel="noopener">AI Blocks Agents</a> or <a href="/teams">Plan an AI team</a>.</li>
+<li>Give each specialist one seat on the team: maker, critic, fact checker or judge.</li>
+<li>Run every specialist in its own chat or project, so their answers stay genuinely different from each other.</li>
+<li>Merge the work, then ask someone who made none of it to check it against your short checklist.</li>
+<li>For a small, specific request, skip the team entirely and use one well-chosen specialist instead.</li>
+</ul>
+
+<h2 id="why">Why one AI chat keeps giving you the same kind of answer</h2>
+<p>If you ask one chat for a marketing plan, you'll usually get the plan it has seen most often, and if you ask again you'll get a close copy with different words. The reason lies in how a chat works. A single chat follows one line of reasoning, and every answer builds on what it has already written in that conversation, so its first idea quietly shapes everything that comes after it.</p>
+<p>Three particular problems appear when one chat handles the whole job:</p>
+<ul>
+<li><strong>One method:</strong> it solves the problem the same way every time, even when a different approach would suit your business much better.</li>
+<li><strong>No real disagreement:</strong> a chat rarely argues hard against its own earlier answer, which means weak ideas survive without a serious challenge.</li>
+<li><strong>Marking its own homework:</strong> when the same chat writes and reviews, it tends to miss its own mistakes, because it reads what it meant to say rather than what it actually said.</li>
+</ul>
+<p>A team solves each of these problems. Different specialists bring different methods, a critic is there specifically to push back, and an independent checker reads the finished work with fresh eyes. The same principle runs through our guide on <a href="/blog/stop-ai-making-things-up">stopping AI making things up</a>, which explains why a check works best when it comes from outside the chat that did the writing.</p>
+
+<h2 id="when-one">When one specialist is enough</h2>
+<p>A team takes more time and attention, so you shouldn't build one for every task. If your request is specific and the result is easy to judge, a single good specialist with the right skill will usually do the job. Requests such as "rewrite this product description in our voice" or "turn these meeting notes into an action list" belong to one expert, not a committee.</p>
+<p>Bring in a team when the job shows at least two of these signs:</p>
+<ul>
+<li>It needs more than one kind of skill, such as research, writing and careful work with numbers.</li>
+<li>There are several reasonable ways to do it, and you don't yet know which one suits your business.</li>
+<li>A mistake would cost you money, customers or the trust of people who rely on you.</li>
+<li>You want genuine choice in the result, rather than twenty slightly different copies of one idea.</li>
+</ul>
+<p>If only one of those signs applies, start with one specialist and add a separate checker at the end. That single extra step, done in a fresh chat, catches a surprising number of problems on its own.</p>
+
+<h2 id="seats">The four seats on the team</h2>
+<p>Every specialist on your team occupies one seat. The seat tells them exactly what their responsibility is in this round, and what they must leave to someone else, and keeping the seats separate is what keeps the team useful.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Seat</th><th scope="col">Their job</th><th scope="col">What they get</th><th scope="col">What they must not do</th></tr></thead>
+<tbody>
+<tr><td>Maker</td><td>Produce one version of the work, using their own method</td><td>The brief, your facts and the output they own</td><td>Read the other makers' drafts before writing their own</td></tr>
+<tr><td>Critic</td><td>Find the weakest parts and say how to fix them</td><td>The drafts, the brief and the checklist</td><td>Rewrite the work in their own style</td></tr>
+<tr><td>Fact checker</td><td>Check every claim, number and name against your sources</td><td>The merged draft and your fact file</td><td>Judge taste or tone</td></tr>
+<tr><td>Judge</td><td>Score the options against the checklist and pick, or rank them</td><td>The drafts with names removed, and the checklist</td><td>Know which specialist wrote which draft</td></tr>
+</tbody></table></div>
+<p>The most important rule is that nobody sits in two seats on the same piece of work. A maker never checks their own draft, and a judge never scores a draft they helped to write, because that separation is the whole reason for having a team.</p>
+
+<h2 id="method">How to put a team of AI experts on one job, step by step</h2>
+<h3>Step 1: Scope the real job</h3>
+<p>The coordinator is either you or a lead chat you set up only for planning. Their first task is to describe the real job in a few lines: what it's for, who will see it and what a finished result looks like. Most disappointing AI work starts with a vague job description, so these first five minutes usually save you an hour later.</p>
+<p>Paste the prompt below into a fresh chat to act as your coordinator. It won't do the work itself, because its only job is to plan the team.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Coordinator who plans the team</p><pre id="prompt-1">You are the coordinator for one job. Don't do the job yourself. Plan the team that will do it.
+
+The job: [what I need, in one or two sentences]
+Who it's for: [customers, my team, an investor, a supplier]
+What done looks like: [the file, list or decision I want at the end]
+Deadline and limits: [time, budget, things we must not say or do]
+My facts: [paste prices, product details, past results, or say NONE]
+
+Do this:
+1. Restate the job in one line, and list anything unclear. Ask me up to three questions, then carry on with your best guess marked [assumed].
+2. Ask me which I want: one kind of output, a mix, a wide spread, or "you decide". If I say "you decide", use 50% proven ideas, 30% new ones and 20% wild cards.
+3. Suggest 3 to 6 specialists who would each solve this in a different way. For each, give a job title, their method in one line and their seat: maker, critic, fact checker or judge.
+4. Write a checklist of 5 to 8 points that the final work must pass. Each point must be something a stranger could check.
+5. Say whether this job needs a team at all. If one specialist would do, say so.</pre><button type="button" class="copy-btn" data-copy="prompt-1">Copy prompt</button></div>
+<h3>Step 2: Settle what kind of output you want</h3>
+<p>Before anyone starts, answer one question: do you want one kind of output, a mix, a wide spread, or would you rather say "you decide"? If you want only one kind, name it precisely, because "three different email styles" and "three versions of one email" are very different requests.</p>
+<p>If you have no strong preference, use this mix as your default. About half the ideas should follow what already works for you, and about a third should try something new. Roughly one in five should be a deliberate wild card, which you might never choose but which stops the whole set from looking alike. That gives you 50% proven, 30% new and 20% wild card, and our guide to <a href="/blog/get-variety-from-ai">getting real variety from AI</a> explains the choice in more detail.</p>
+<h3>Step 3: Pick specialists with different methods</h3>
+<p>Choose three to six specialists, and make sure their methods are genuinely different. Two copywriters who both begin from customer reviews will hand you two similar drafts, whereas a copywriter who begins from reviews and a strategist who begins from your sales numbers will not.</p>
+<p>You'll find specialists in three places on AI Blocks. <a href="/roles">AI specialists</a> has more than 1,000 roles, such as a <a href="/roles/business-strategist">business strategist</a> or a <a href="/roles/specialized-pricing-analyst">pricing analyst</a>, and each one is a pack you download and give to your own AI. <a href="https://agents.useaiblocks.com" rel="noopener">AI Blocks Agents</a> has 505 named agents, and every profile includes a "Start in your AI" section with instructions for ChatGPT, Claude, Gemini, coding apps or a connector. Finally, <a href="/teams">Plan an AI team</a> lets you add specialists, decide who passes work to whom, and download the finished plan. Our guide on <a href="/blog/hire-ai-specialists">hiring an AI specialist</a> explains how to brief each one properly.</p>
+<h3>Step 4: Give each specialist a seat and a separate room</h3>
+<p>Put each specialist in its own chat, or better still, give each one its own project in ChatGPT or Claude, or its own Gem in Gemini, with the relevant files added. Keeping them apart stops them reading each other's work, which is exactly what keeps their answers different. When several specialists share one long conversation, the second one inevitably leans on the first one's ideas.</p>
+<p>Give every maker the same brief, the same facts and the same checklist, and then give each one a different method or output to own. Paste the prompt below as the first message in each maker's chat, after you've added that specialist's file.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Brief for one maker on the team</p><pre id="prompt-2">You are one specialist on a team. Other specialists are working on the same job in other chats. You won't see their work, and you shouldn't try to guess it.
+
+Your seat: maker
+Your method: [for example, start from customer reviews / start from our sales numbers / start from what rivals are not saying]
+The output you own: [for example, one email in a plain, story-led style]
+
+The job: [paste the one-line job from the coordinator]
+Facts you may use: [paste them, or attach the file]
+The checklist your work must pass: [paste the coordinator's checklist]
+
+Rules:
+- Use only the facts above. Write MISSING where you need one I didn't give.
+- Stick to your method, even if another approach seems easier.
+- At the end, list the two weakest parts of your own work, honestly.</pre><button type="button" class="copy-btn" data-copy="prompt-2">Copy prompt</button></div>
+<h3>Step 5: Let the critic push back</h3>
+<p>When the makers have finished, open a new chat for the critic and paste in every draft, together with the brief and the checklist. Ask the critic to identify the weakest part of each draft and suggest one specific way to fix it. Then send each maker the criticism of their own draft only, and let them revise it once, since one round of revision is usually enough.</p>
+<h3>Step 6: Merge the work</h3>
+<p>Next, the coordinator merges the results. Sometimes that means choosing one complete draft, and sometimes it means combining the opening from one, the offer from another and the evidence from a third. Keep every option you don't use in a separate file, because a wild card that loses today often turns out to suit next month's job.</p>
+<h3>Step 7: Check it with someone who didn't make it</h3>
+<p>The final step matters most. Give the merged work to a fact checker who made none of it, working in a completely fresh chat. If you'd also like a ranking, remove the specialists' names first and label the drafts A, B and C, so that the judge scores the work itself rather than whoever produced it.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Independent checker for the merged work</p><pre id="prompt-3">You are checking work that other people made. You didn't write any of it, and you have no reason to defend it.
+
+The work: [paste the merged draft, or drafts labelled A, B, C]
+The job it was meant to do: [one line]
+My facts and sources: [paste or attach]
+The checklist: [paste it]
+
+Do this:
+1. Go through the checklist point by point. For each, write PASS or FAIL, with the line that proves it.
+2. List every claim, number or name. Mark each one MATCHES MY FACTS, NOT IN MY FACTS or WRONG.
+3. If there are several drafts, rank them against the checklist only. Give one line on why the top one won.
+4. List the three changes that would most improve the work, in order.
+
+Don't rewrite the work. Don't praise it. Just check it.</pre><button type="button" class="copy-btn" data-copy="prompt-3">Copy prompt</button></div>
+
+<h2 id="example">A worked example: a bakery's new seasonal range</h2>
+<p>Here is an invented example to show how the method works in practice. Imagine you run a small neighbourhood bakery and want to launch a new seasonal range. You need a short launch email, a social media post and a sign for the counter, and you're honestly not sure which message will work best.</p>
+<p>The coordinator writes the job in one line: get regular customers and new local people to try the range during its first two weeks. The checklist includes the correct prices, no health claims and one clear reason to visit this week. For the output, you choose a mix: one message based on what worked last season, one fresh angle and one deliberate wild card.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Specialist</th><th scope="col">Seat</th><th scope="col">Method</th><th scope="col">What they hand back</th></tr></thead>
+<tbody>
+<tr><td>Email strategist</td><td>Maker (proven)</td><td>Starts from last season's best email and its results</td><td>A launch email in the style that worked before</td></tr>
+<tr><td>Social media strategist</td><td>Maker (new)</td><td>Starts from what locals say in reviews</td><td>A post built on customers' own words</td></tr>
+<tr><td>Creative strategist</td><td>Maker (wild card)</td><td>Starts from what other bakeries nearby never mention</td><td>An unusual angle, such as the baker's 4am start</td></tr>
+<tr><td>Business strategist</td><td>Critic</td><td>Checks each idea against cost and margin</td><td>The weakest point in each draft, with a fix</td></tr>
+<tr><td>Fact checker (fresh chat)</td><td>Fact checker and judge</td><td>Checks prices, claims and the checklist</td><td>Pass or fail on each point, and a blind ranking</td></tr>
+</tbody></table></div>
+<p>Because each maker works in its own project, the three messages come out genuinely different from each other. The critic points out that the wild card only works with a real photograph of the early start, and the checker catches an incorrect price in the email. You finish with three distinct, checked options and a clear reason for choosing one of them.</p>
+
+<h2 id="ai-blocks">Where to find your team on AI Blocks</h2>
+<p>Everything below is free to download or copy, and your own AI does the actual work, using your own account and your own files.</p>
+<ul>
+<li><strong><a href="/roles">AI specialists</a>:</strong> search more than 1,000 roles by job title. Each page shows the specialist's methods, deliverables and limits, and you download the pack for your AI.</li>
+<li><strong><a href="https://agents.useaiblocks.com" rel="noopener">AI Blocks Agents</a>:</strong> choose from 505 named agents, and use "Start in your AI" on any profile to get the file and the first message to paste.</li>
+<li><strong><a href="/teams">Plan an AI team</a>:</strong> choose the specialists, decide who hands work to whom, check the plan and download it. You can also copy a request that asks your own AI to suggest a team.</li>
+<li><strong>Checkers:</strong> the <a href="/skills/claim-fact-checker">claim fact-checker</a> scores each claim by confidence, and the <a href="/skills/second-opinion-reviewer">second-opinion reviewer</a> gives you a fresh reviewer's hardest objections.</li>
+<li><strong><a href="/minds">Minds</a>:</strong> add a way of thinking based on someone's public work as your critic or judge, as our guide on <a href="/blog/run-an-ai-council">running an AI council</a> explains.</li>
+<li><strong><a href="/api-and-mcp">Connect your AI</a>:</strong> once it's connected, your AI can search the library itself and find a specialist skill whenever the job needs one.</li>
+</ul>
+<p>For more guides about getting better work from the library, see <a href="/guides">all our guides</a>.</p>
+
+<h2 id="mistakes">Common mistakes, and what to do instead</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Mistake</th><th scope="col">Do this instead</th></tr></thead>
+<tbody>
+<tr><td>Running every specialist in one long chat</td><td>Give each one its own chat or project, so they can't copy each other</td></tr>
+<tr><td>Picking specialists who all work the same way</td><td>Give each maker a different starting point or method</td></tr>
+<tr><td>Letting the maker check their own work</td><td>Use a fresh chat that made none of it</td></tr>
+<tr><td>No checklist until the end</td><td>Write it at the start and give it to every seat</td></tr>
+<tr><td>Building a team for a small, clear task</td><td>Use one specialist, then one separate check</td></tr>
+<tr><td>Throwing away the drafts you didn't pick</td><td>Keep them in a file for the next job</td></tr>
+<tr><td>Different facts in each chat</td><td>Give every specialist the same fact file</td></tr>
+</tbody></table></div>
+
+<h2 id="faq">Questions people ask</h2>
+<h3>Do I need several AI subscriptions to run a team?</h3>
+<p>No, because one AI account is enough, and the specialists are simply separate chats or projects in the same app. Some people prefer to use a different AI app for the checker, since it can catch different kinds of mistakes, but that's entirely optional.</p>
+<h3>How many specialists should I use?</h3>
+<p>Three to six is a sensible range for most jobs. Fewer than three gives you very little real choice, while more than six makes the merging slow and the checking difficult. Start with two makers, one critic and one checker, and add more only when the job clearly needs them.</p>
+<h3>Does AI Blocks run the team for me?</h3>
+<p>No. AI Blocks gives you the specialists, skills and team plans for free, and your own AI does the work. You open the chats, paste the briefs and decide what to keep, and nothing on the site sends, posts or changes anything on your behalf.</p>
+<h3>What if the specialists all say the same thing?</h3>
+<p>That usually means their methods weren't different enough. Give each maker a clear starting point, such as reviews, sales numbers or competitors, and ask for the kinds of output you settled at the beginning. For advertising, the <a href="/skills/ad-sameness-checker">ad sameness checker</a> groups your ideas and scores how similar they are.</p>
+<h3>Can one chat play every specialist in turn?</h3>
+<p>It can, and that's still better than a single answer. However, the specialists will share one memory of the conversation, so they gradually drift towards the same ideas. Separate chats keep them properly apart, and at the very least you should run the checker in a fresh chat.</p>
+<h3>How is this different from an AI council?</h3>
+<p>A team makes something, such as an email, a plan or a web page, whereas a council helps you make one decision by arguing it out before you choose. The two work well together, because a team can build the options and a council can help you pick between them. See <a href="/blog/run-an-ai-council">how to run an AI council</a> for the method.</p>

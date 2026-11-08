@@ -1,0 +1,22 @@
+{
+  "slug": "use-ai-blocks-workflows",
+  "title": "How to use AI Blocks workflows from start to finish",
+  "seoTitle": "How to use AI Blocks workflows, step by step",
+  "description": "Run an AI Blocks workflow from start to finish: read the page, download it, run each step with approval stops, check the result, and build your own.",
+  "lede": "A workflow splits one bigger job into steps, each run by its own skill, with checks and pauses in between. This guide shows how to read a workflow page, run one step by step in your own AI, check the result with a fresh pair of eyes, and build your own.",
+  "category": "Use AI Blocks well",
+  "keywords": [
+    "AI Blocks workflows",
+    "how to run an AI workflow",
+    "AI workflow with approval steps",
+    "build your own AI workflow",
+    "turn an article into a workflow"
+  ],
+  "related": [
+    "use-ai-blocks-skills",
+    "build-ai-workflow-without-code",
+    "ai-team-of-experts"
+  ],
+  "minutes": 12,
+  "published": "2026-11-07"
+}

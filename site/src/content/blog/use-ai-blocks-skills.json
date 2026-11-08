@@ -1,0 +1,23 @@
+{
+  "slug": "use-ai-blocks-skills",
+  "title": "How to use AI Blocks skills to get better work",
+  "seoTitle": "How to use AI Blocks skills for better work",
+  "description": "Find the right AI Blocks skill, read its page, add it to Claude, ChatGPT or Gemini, give it your facts and check the result with a second skill.",
+  "lede": "A skill is a saved set of steps your AI follows for one job. This guide shows you how to pick the right one, add it to the AI you already use, feed it your facts and have a different skill check the work.",
+  "category": "Use AI Blocks well",
+  "keywords": [
+    "how to use AI skills",
+    "AI Blocks skills",
+    "SKILL.md",
+    "add a skill to ChatGPT",
+    "AI skill library"
+  ],
+  "related": [
+    "how-to-use-claude-skills",
+    "use-ai-blocks-prompts",
+    "use-ai-blocks-workflows",
+    "ai-prompts-vs-skills-vs-workflows"
+  ],
+  "minutes": 11,
+  "published": "2026-11-07"
+}

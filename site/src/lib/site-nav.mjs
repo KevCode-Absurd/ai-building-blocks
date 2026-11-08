@@ -18,9 +18,9 @@ export const MENU_GROUPS = [
   { id: "find", label: "Find", links: [["/#library", "Find a task", "find"], ["/minds", "Minds", "minds"], ["/tools", "Tools", "tools"], ["/ai-tools", "AI tool guides", "ai-tools"]] },
   { id: "build", label: "Build", links: [["/compose", "Build a workflow", "compose"], ["/get-it-done", "Get a whole job done", "get-it-done"], ["/from-a-source", "Turn an article or video into a workflow", "source"], ["/apps", "Turn a workflow into an app", "apps"]] },
   { id: "agents", label: "AI agents", links: [["/roles", "Hire an AI specialist", "roles"], ["/teams", "Plan an AI team", "teams"]] },
-  { id: "blog", label: "Blog", links: [["/blog", "All articles and guides", "blog"], ["/train-your-own-ai-agent", "Train your own AI agent", "train"], ["/industries", "AI help by business", "industries"], ["/how-we-test", "How we test", "how-we-test"]] },
+  { id: "blog", label: "Blog", links: [["/blog", "All articles and guides", "blog"], ["/train-your-own-ai-agent", "Train your own AI agent", "train"], ["/industries", "AI help by business", "industries"]] },
   { id: "your-ai", label: "Your AI", links: [["/api-and-mcp", "Connect your AI", "api-mcp"], ["/me-md", "Your me.md file", "memd"], ["/space", "Team space", "space"]] },
-  { id: "help", label: "Help", links: [["/how-it-works", "How it works", "guide"], ["/api-and-mcp#api", "Documentation", "documentation"], ["/support", "Help & contact", "support"]] },
+  { id: "help", label: "Help", links: [["/guides", "Guides", "guides"], ["/how-it-works", "How it works", "guide"], ["/api-and-mcp#api", "Documentation", "documentation"], ["/support", "Help & contact", "support"]] },
 ];
 
 /** Pages built only as plain HTML (scripts/lib/trust-pages.mjs): the app opens them with a normal page load. */
@@ -31,6 +31,6 @@ export const isStaticPage = (to) => STATIC_PAGES.some((p) => to === p || to.star
 export const FOOTER_GROUPS = [
   { label: "Explore", links: [["/#library", "Find a task", ""], ["/roles", "Hire an AI specialist", ""], ["/compose", "Build a workflow", ""], ["/tools", "Tools", ""], ["/minds", "Minds", ""], ["/industries", "AI help by business", "footer-industries"]] },
   { label: "Your AI", links: [["/api-and-mcp", "Connect your AI", "footer-api-mcp"], ["/space", "Team space", ""], ["/api-and-mcp#api", "Documentation", "footer-documentation"]] },
-  { label: "Help", links: [["/blog", "Blog", "footer-blog"], ["/how-it-works", "How it works", ""], ["/how-we-test", "How we test", "footer-how-we-test"], ["/support", "Help & contact", ""], ["/about", "About AI Blocks", ""]] },
+  { label: "Help", links: [["/blog", "Blog", "footer-blog"], ["/guides", "Guides", "footer-guides"], ["/how-we-test", "How we test", "footer-how-we-test"], ["/support", "Help & contact", ""], ["/about", "About AI Blocks", ""]] },
 ];
 export const FOOTER_LINE = "Reusable AI skills and workflows for the work you do.";

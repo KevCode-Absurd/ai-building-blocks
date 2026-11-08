@@ -22,7 +22,7 @@ import { readPrerenderShell, injectPrerender } from "./lib/prerender-shell.mjs";
 import { AREAS as JOB_AREAS, FUNCTIONS, TASKS } from "../src/lib/catalogue-taxonomy.mjs";
 import { BROWSER_TOOLS } from "../src/tools/browser-tools.mjs";
 import { INFO_PAGES, OPERATOR, POLICY_DATE, SOCIAL_PROFILES, SUPPORT_EMAIL, emailLink, infoPage } from "../src/lib/site-info.mjs";
-import { BLOG_DESCRIPTION, BLOG_PATH, BLOG_TITLE, articleLd, blogIndexHtml, blogPostHtml, inOrder, postPath, readingMinutes } from "../src/lib/blog.mjs";
+import { BLOG_DESCRIPTION, BLOG_PATH, BLOG_TITLE, GUIDES_DESCRIPTION, GUIDES_PATH, GUIDES_TITLE, GUIDE_SECTIONS, GUIDES, articleLd, blogIndexHtml, blogPostHtml, guidesIndexHtml, inOrder, postPath, readingMinutes } from "../src/lib/blog.mjs";
 import path from "node:path";
 import { normalizeSkillHtml } from "../src/lib/skill-html.mjs";
 import { similarHtml, skipWhenItems } from "./lib/similar-html.mjs";
@@ -306,7 +306,7 @@ function pageFor(url) {
       about: ["AI agents", "Training an AI agent", "ChatGPT projects", "Claude projects", "Gemini Gems"],
       associatedMedia: { "@type": "MediaObject", name: "AI agent starter pack", contentUrl: `${SITE}/templates/ai-agent-starter-pack.zip`, encodingFormat: "application/zip" } },
   };
-  if (url === BLOG_PATH || url.startsWith(`${BLOG_PATH}/`)) return blogPage(url);
+  if (url === BLOG_PATH || url.startsWith(`${BLOG_PATH}/`) || url === GUIDES_PATH) return blogPage(url);
   const info = infoPage(url);
   if (info) return {
     title: info.title, h1: info.title, documentTitle: SEO_PAGES[url]?.[0], desc: SEO_PAGES[url]?.[1] ?? info.description, modified: isoDate(POLICY_DATE),
@@ -573,6 +573,15 @@ function blogPage(url) {
     content: blogIndexHtml(blogPosts), mainClass: "blog-page", stylesheet, modified: blogPosts.map(p => p.updated ?? p.published ?? "2026-11-05").sort().at(-1),
     main: itemList(blogPosts.map(p => [p.title, postPath(p.slug)])),
   };
+  if (url === GUIDES_PATH) {
+    const keys = GUIDE_SECTIONS.flatMap(s => s.items);
+    const entries = keys.map(k => k.startsWith("/") ? GUIDES.find(g => g.href === k) && [GUIDES.find(g => g.href === k).title, k] : blogPosts.find(p => p.slug === k) && [blogPosts.find(p => p.slug === k).title, postPath(k)]).filter(Boolean);
+    return {
+      title: "Guides", h1: GUIDES_TITLE, documentTitle: "Guides: get the best work from AI Blocks | AI Blocks", desc: GUIDES_DESCRIPTION, collection: true,
+      content: guidesIndexHtml(blogPosts), mainClass: "blog-page", stylesheet, modified: keys.filter(k => !k.startsWith("/")).map(k => blogPosts.find(p => p.slug === k)).filter(Boolean).map(p => p.updated ?? p.published ?? "2026-11-05").sort().at(-1),
+      main: itemList(entries),
+    };
+  }
   const post = blogPosts.find(p => postPath(p.slug) === url);
   if (!post) return null;
   const seo = `${post.seoTitle} | ${BRAND}`;

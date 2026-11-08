@@ -1,0 +1,159 @@
+<h2 id="short">Why a council beats one confident answer</h2>
+<p>When you ask one AI chat whether to raise your prices, open a second shop or drop a product, you usually get one confident answer. It sounds sensible, it's nicely organised, and it's almost never challenged. Real decisions go better when people who think differently argue first and the person who has to live with the choice makes the final call.</p>
+<p>An AI council recreates that meeting. Several advisers, each with a different way of thinking, answer your question separately, challenge each other, revise or defend their positions and rank the answers without knowing who wrote which. You chair the council, and you finish with a short decision brief that keeps the strongest disagreement in full view instead of smoothing it over.</p>
+<p>Here is the short version of this guide:</p>
+<ul>
+<li>Run a council only for a real choice: two or more good options, a cost to getting it wrong, and no single fact that settles it.</li>
+<li>Seat three to five advisers who pull in different directions, using <a href="/minds">minds</a>, AI specialists or named agents.</li>
+<li>Collect independent first answers before anyone sees anyone else's view.</li>
+<li>Make each adviser cross-examine the answer they disagree with most, quoting the exact line they're attacking.</li>
+<li>Let every adviser revise or defend, then rank all the answers blind.</li>
+<li>Write the chair's decision with the strongest dissent and "what would change our mind", and keep the losing options for later.</li>
+</ul>
+
+<h2 id="when">When a council is worth running</h2>
+<p>A council takes more of your time than a single question, so save it for decisions that deserve it. The <a href="/skills/advisory-council">Advisory council</a> skill on AI Blocks uses a simple test. The choice must be real, with two or more good options, a cost to getting it wrong and no fact that settles it. If your question has one right answer, such as a tax deadline or a shipping rule, look it up or ask your AI directly.</p>
+<p>Good questions for a council usually sound like these:</p>
+<ul>
+<li>Should we add a cheaper option next to our main product, or keep one clear price?</li>
+<li>Should we open a second location this year, or invest the same money in delivery?</li>
+<li>Should we hire a full-time marketer, or keep working with two freelancers?</li>
+<li>Which of these three new product ideas should we test first, and which should we drop?</li>
+</ul>
+<p>A council won't replace professional advice. The Advisory council skill gives no legal, tax, medical or investment advice. Where money, law or health is at stake, its brief tells you to check with a qualified professional.</p>
+
+<h2 id="seats">Who sits on the council</h2>
+<p>Each seat on a council is an adviser with a particular way of thinking and one question they always bring. You can fill the seats with three kinds of adviser from AI Blocks, and you can mix them freely on the same council.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Kind of adviser</th><th scope="col">Where to find it</th><th scope="col">Best for</th></tr></thead>
+<tbody>
+<tr><td>Minds</td><td><a href="/minds">Minds</a>: 505 ways of thinking based on public work</td><td>Strong, distinct points of view, such as inverting a plan or starting from the customer</td></tr>
+<tr><td>AI specialists</td><td><a href="/roles">AI specialists</a>: more than 1,000 roles</td><td>Expert methods for one field, such as pricing, finance or email</td></tr>
+<tr><td>Named agents</td><td><a href="https://agents.useaiblocks.com" rel="noopener">AI Blocks Agents</a>: 505 agents</td><td>A ready-made adviser you load with "Start in your AI"</td></tr>
+</tbody></table></div>
+<p>A mind is an AI voice built from someone's public work, not the real person, and they haven't endorsed anything it says. That's worth remembering throughout, and the Advisory council skill states it at the start and in the brief's footer. Each mind's file also suggests the seats it suits best. For example, the <a href="/minds/nassim-taleb">Nassim Taleb mind</a> suggests seats such as "risk and fragility".</p>
+<p>When you don't know whom to choose, the Advisory council skill suggests seating three to five advisers who would pull in different directions. One should speak for the customer, such as the <a href="/minds/jeff-bezos">Jeff Bezos mind</a>, and one should look after money and risk, such as the <a href="/minds/charlie-munger">Charlie Munger mind</a>. Another can push for growth or a stronger offer, like the <a href="/minds/alex-hormozi">Alex Hormozi mind</a>, and one should question the question itself, like the <a href="/minds/richard-feynman">Richard Feynman mind</a> or the <a href="/minds/daniel-kahneman">Daniel Kahneman mind</a>.</p>
+<p>Specialists make excellent seats when the decision depends on expert knowledge. A <a href="/roles/specialized-pricing-analyst">pricing analyst</a> brings costs and margins to a pricing argument, and a <a href="/roles/finance-financial-analyst">financial analyst</a> can test whether the numbers behind an expansion actually work.</p>
+
+<h2 id="rounds">The rounds of a council</h2>
+<p>A council follows a fixed order, and each round exists for a reason. Skipping rounds is the most common way a council turns back into one confident answer.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Round</th><th scope="col">What happens</th><th scope="col">Why it matters</th></tr></thead>
+<tbody>
+<tr><td>1. Independent first answers</td><td>Each adviser answers alone, recommendation first, in 150 words or fewer</td><td>Nobody can copy the first confident voice</td></tr>
+<tr><td>2. Cross-examination</td><td>Each adviser quotes the answer they disagree with most and challenges it</td><td>Quotes force them to attack what was actually said</td></tr>
+<tr><td>3. Revise or defend</td><td>Each challenged adviser concedes fair points or defends their view</td><td>Weak positions change, strong ones get sharper</td></tr>
+<tr><td>4. Blind ranking</td><td>The answers are relabelled A, B, C and ranked without names</td><td>A famous name can't win on reputation</td></tr>
+<tr><td>5. The chair's decision</td><td>You get the decision, the strongest dissent and what would change your mind</td><td>You see the best case against before you commit</td></tr>
+<tr><td>6. Options kept</td><td>Losing options are saved with the reason they lost</td><td>When the facts change, you don't start again</td></tr>
+</tbody></table></div>
+<p>The blind ranking is borrowed from Andrej Karpathy's <a href="https://github.com/karpathy/llm-council" rel="noopener">LLM Council</a> project, which the Advisory council skill credits. In that project, AI models rank each other's answers without knowing whose they are, and then a chair writes the final answer.</p>
+
+<h2 id="method">How to run an AI council, step by step</h2>
+<p>You can run a council in two ways. The quicker way uses the Advisory council skill in a single chat, where one AI plays every adviser in turn. The stronger way gives each adviser its own chat, so their first answers are genuinely independent. Start with the quick way, and switch to separate chats when the decision is large.</p>
+<h3>Step 1: Write the question and what a good outcome looks like</h3>
+<p>Write your decision in one line, name the options, and describe a good outcome together with any hard limits, such as budget, time or values. "Should we add a one-off pack or keep subscription only, aiming for more first orders without hurting repeat buying?" works far better than "How do we grow?". Gather the two or three numbers that matter, such as price, margin and repeat rate, so the advisers argue from facts rather than guesses.</p>
+<h3>Step 2: Choose the seats</h3>
+<p>On the <a href="/minds">minds page</a>, you can select "Seat on council" on up to seven minds, then choose "Open the council in the builder". That creates a workflow with the minds side by side followed by the Advisory council step, which you then take to your own AI. Alternatively, download or copy the Advisory council skill and each mind's file, and name your advisers and their seats in the chat. If you'd like the skill to suggest a council, simply leave the seats out and it will propose three to five for you to approve.</p>
+<h3>Step 3: Collect independent first answers</h3>
+<p>For a quick council, the skill handles the opening round itself. For a stronger one, open a separate chat or project for each adviser, add that adviser's file and paste the prompt below. Because no adviser can see the others, nobody follows the first confident voice.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Independent first answer from one seat</p><pre id="prompt-1">You are one adviser on a council. Other advisers are answering the same question in separate chats, and you can't see their answers.
+
+Your seat: [for example, the customer's voice / money and risk / growth / the person who questions the question]
+The one question you always bring to this seat: [for example, "What would the customer thank us for in five years?"]
+
+The decision: [one line, with the options named]
+A good outcome: [one line]
+Hard limits: [budget, time, values, or none]
+Facts: [the numbers that matter, or say NONE]
+
+Answer in 150 words or fewer:
+1. Your recommendation, in the first sentence.
+2. Your reason, drawn from your own way of thinking. Name the idea you're using.
+3. The one risk you'd watch most closely.
+
+Use only the facts above. Write MISSING for any number you need and don't have. Don't hedge between options.</pre><button type="button" class="copy-btn" data-copy="prompt-1">Copy prompt</button></div>
+<h3>Step 4: Cross-examine, then revise or defend</h3>
+<p>Collect the first answers in one document and give every adviser the full set. Each adviser picks the answer they disagree with most and challenges it, quoting the exact sentence they object to. Quoting matters, because it stops advisers attacking a weaker version of the argument than the one actually made. Then each challenged adviser replies, either conceding a fair point and changing their recommendation, or defending it with a better reason.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Cross-examination with quotes</p><pre id="prompt-2">Here are the first answers from every adviser on the council, including yours.
+
+[paste all first answers, each with the adviser's seat]
+
+Do this, staying in your seat:
+1. Pick the answer you disagree with most. Quote the exact sentence you object to, in quotation marks.
+2. Challenge it in 80 words or fewer. Say what it misses, or what would go wrong if we followed it.
+3. If you agree with an answer, say so plainly and add the one thing it missed. Don't invent disagreement.
+4. Now look at your own first answer. Either revise your recommendation and say what changed your mind, or defend it in two sentences against the strongest challenge you can imagine.</pre><button type="button" class="copy-btn" data-copy="prompt-2">Copy prompt</button></div>
+<h3>Step 5: Rank the answers blind</h3>
+<p>Remove every adviser's name and seat, and relabel the revised answers A, B, C and so on. Then ask each adviser, or a fresh chat that took no part, to rank them from best to worst for this question. Count the ranks, then reveal who wrote which answer. When one AI plays every adviser in a single chat, the ranking is only simulated, as the Advisory council skill's page points out, so pay more attention to the reasons than to the scores.</p>
+<h3>Step 6: Write the chair's decision and keep the options</h3>
+<p>Finally, the chair writes the brief for you, in plain language rather than in any adviser's voice. It should state the decision, the strongest dissent at full strength and the facts that would change the call. Ask for the first three steps as well, and for a short list of the options that lost, each with the reason it lost and the condition that would bring it back.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: The chair's decision brief</p><pre id="prompt-3">You are the chair's clerk. You didn't sit on the council, and you don't argue for any adviser. Write the decision brief for me.
+
+The decision: [one line]
+Everything the council produced: [paste first answers, cross-examination, revisions and the blind ranking]
+
+Write:
+1. Recommended decision: one or two sentences, and which advisers back it.
+2. The strongest dissent: the best argument against, at full strength, and who made it. Don't soften it.
+3. What would change our mind: the one or two facts that would flip the decision, and how I could check each one quickly.
+4. First three steps: concrete, in order, each something I could start this week.
+5. Options kept for later: each option that lost, why it lost, and what would make it worth reopening.
+6. MISSING: any fact the council needed and didn't have.
+
+Every number must come from my facts or be marked MISSING.</pre><button type="button" class="copy-btn" data-copy="prompt-3">Copy prompt</button></div>
+
+<h2 id="agreement">How to stop everyone agreeing</h2>
+<p>The biggest danger with an AI council is polite agreement. AI advisers tend to be agreeable, and when one answer sounds confident, the others tend to drift towards it. Here are the habits that keep the argument honest:</p>
+<ul>
+<li><strong>Seat a red team:</strong> give one adviser the job of making the chosen plan fail. The <a href="/skills/plan-pre-mortem-runner">plan pre-mortem runner</a> or the <a href="/skills/failure-first-plan-check">plan failure reviewer</a> works well in this seat.</li>
+<li><strong>Ask for the best case for the weakest option:</strong> before the decision, ask one adviser to make the strongest possible argument for the option ranked last. Sometimes it survives, and when it doesn't you'll understand exactly why.</li>
+<li><strong>Balance the seats:</strong> make sure at least one adviser pushes for action and at least one looks for what could go wrong. If every adviser would say the same thing, swap one for someone who thinks very differently.</li>
+<li><strong>Keep first answers separate:</strong> the more independent the opening round, the more real disagreement survives into the brief.</li>
+<li><strong>Insist on quotes:</strong> a challenge that quotes the exact sentence is much harder to wave away than a general objection.</li>
+</ul>
+<p>You can use the same thinking when a team is making something rather than deciding something. Our guide to <a href="/blog/ai-team-of-experts">putting a team of AI experts on one job</a> covers critics and independent checkers in detail.</p>
+
+<h2 id="example">A worked example: a café deciding what to do next</h2>
+<p>Here is an invented example. Imagine you own a busy café with steady weekend queues, and you have enough savings for one big move this year. The two options are opening a small second site across town or adding a delivery service from the current kitchen.</p>
+<p>You seat four advisers: the Jeff Bezos mind for the customer, the Charlie Munger mind for money and risk, a pricing analyst for margins, and the Daniel Kahneman mind to question how you're framing the choice. In the first round, the customer seat favours delivery, the money seat warns against both until the margins are known, and the questioner asks whether weekend queues mean demand or simply too few tables.</p>
+<p>During cross-examination, the pricing analyst quotes the delivery argument and points out that delivery fees could take much of the margin on each order. The blind ranking puts the cautious answer first. The chair's brief recommends a three-month delivery trial with a strict margin limit, keeps the second site as an option, and names the fact that would change the call: weekday sales at the current café.</p>
+
+<h2 id="mistakes">Common mistakes, and what to do instead</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Mistake</th><th scope="col">Do this instead</th></tr></thead>
+<tbody>
+<tr><td>Running a council on a question with one right answer</td><td>Look it up or ask your AI directly</td></tr>
+<tr><td>Seating advisers who all think alike</td><td>Balance action against risk, and add someone who questions the question</td></tr>
+<tr><td>Letting advisers see each other's first answers</td><td>Collect first answers separately, then share them</td></tr>
+<tr><td>Challenges without quotes</td><td>Make every challenge quote the exact sentence</td></tr>
+<tr><td>Ranking with names showing</td><td>Relabel answers A, B, C before ranking</td></tr>
+<tr><td>A brief with no dissent in it</td><td>Keep the strongest dissent at full strength</td></tr>
+<tr><td>Deleting the options that lost</td><td>Save them with the reason they lost and what would bring them back</td></tr>
+<tr><td>Treating a mind as the real person</td><td>Remember it's an AI voice built from public work</td></tr>
+</tbody></table></div>
+
+<h2 id="ai-blocks">Where AI Blocks helps</h2>
+<p>Everything here is free, and your own AI runs the council using your own account. Nothing on the site makes the decision or takes any action for you.</p>
+<ul>
+<li>The <strong><a href="/skills/advisory-council">Advisory council</a></strong> skill seats up to seven advisers, runs the opening round, cross-examination and blind ranking, and hands you the chair's brief.</li>
+<li>On the <strong><a href="/minds">minds page</a></strong>, you can seat up to seven minds and open the council in the workflow builder.</li>
+<li><strong><a href="/roles">AI specialists</a></strong> and <strong><a href="https://agents.useaiblocks.com" rel="noopener">AI Blocks Agents</a></strong> give you expert seats for pricing, finance, marketing and much more.</li>
+<li>After the decision, the <a href="/skills/disagree-and-commit-note-writer">team decision and dissent note writer</a> turns the debate into a fair note your team can act on.</li>
+<li>Our guide to <a href="/blog/use-ai-minds">using AI minds as expert advisers</a> explains how to pick minds that genuinely disagree.</li>
+</ul>
+<p>For more guides about getting better work from the library, see <a href="/guides">all our guides</a>.</p>
+
+<h2 id="faq">Questions people ask</h2>
+<h3>Is an AI council the same as asking several AI apps?</h3>
+<p>Not quite. Asking several apps gives you several answers, but nobody challenges anybody, ranks the answers or writes a decision. A council adds the cross-examination, the blind ranking and the chair's brief, which is where most of the value comes from. You can still use different apps for different seats if you like.</p>
+<h3>Are the minds really those people?</h3>
+<p>No. Each mind is an AI voice built from that person's public work, and the real person hasn't endorsed anything it says. The Advisory council skill says so at the start and in the brief, and it marks anything a mind claims beyond its public record.</p>
+<h3>How many advisers should sit on a council?</h3>
+<p>Three to five usually works best. The Advisory council skill allows up to seven, but beyond five the rounds become long and the voices start to blur together. Three advisers who pull in clearly different directions are worth more than seven who mostly agree.</p>
+<h3>Can I run a council in one chat?</h3>
+<p>Yes, and the Advisory council skill is designed for exactly that. Because one AI plays every adviser, the voices are less independent and the blind ranking is simulated, so weigh the reasons more than the scores. For a large decision, give each adviser its own chat for the first round.</p>
+<h3>What should I do if the council can't agree?</h3>
+<p>That's often useful information. The chair's brief still makes a recommendation, but it also shows you the strongest dissent and the facts that would change the call. Check those facts first, because they usually settle the argument faster than another round of debate.</p>
+<h3>Can a council make legal or financial decisions for me?</h3>
+<p>No. A council helps you think a decision through, but it gives no legal, tax, medical or investment advice. Where money, law or health is at stake, take the brief to a qualified professional and let them advise you.</p>

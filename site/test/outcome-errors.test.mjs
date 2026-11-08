@@ -5,6 +5,7 @@ import { callOutcomeTool, catalogueResolver, outcomeMcpTools, OUTCOME_REST_OPERA
 import { BRIEF_SCHEMA, EVENT_SCHEMA, PLAN_SCHEMA, RESEARCH_SCHEMA } from '../src/outcomes/outcome-schema.mjs';
 import { FIELDS, ValidationError, validatePlan, validateResearch } from '../src/outcomes/plan-contract.mjs';
 import { EVENT_FIELDS } from '../src/outcomes/engagement.mjs';
+import { WORK_CONTEXT_SCHEMA } from '../src/jobs/work-context.mjs';
 import { checkSchema, nearest } from '../src/outcomes/schema-check.mjs';
 import example from '../src/outcomes/examples/rising-cpa.mjs';
 import { handlePublicMcp, PUBLIC_MCP_INSTRUCTIONS, PUBLIC_MCP_LISTED_TOOLS, PUBLIC_MCP_TOOLS, PUBLIC_MCP_VERSION, RETIRED_MCP_TOOLS } from '../src/server/public-mcp.ts';
@@ -35,6 +36,20 @@ test('outcome tool inputs are typed: events, briefs, research and plans carry th
   assert.deepEqual(checkSchema(EVENT_SCHEMA, { type: 'plan', research: example.research, plan: example.plan }), []);
   // The registry stays one list: REST routes and MCP definitions come from it.
   assert.deepEqual(Object.values(OUTCOME_REST_OPERATIONS), OUTCOME_TOOLS.map(t => t.name));
+});
+
+test('discovery delegates nested retention to the published full contract without hiding accepted fields',()=>{
+  const discovery=EVENT_SCHEMA.oneOf.find(branch=>branch.properties.type.const==='complete').properties.work_context;
+  assert.deepEqual(Object.keys(discovery.properties),Object.keys(WORK_CONTEXT_SCHEMA.properties));
+  assert.deepEqual(discovery.required,WORK_CONTEXT_SCHEMA.required);
+  assert.match(discovery.description,/GET \/api\/v1\/schemas\/ai-blocks-work-context\/1\.json/);
+  assert.match(discovery.description,/unchanged-artifact retention/);
+  // Discovery accepts a nested object; only the full contract is authoritative
+  // for its required fields, unknown fields and bounded evidence structures.
+  assert.deepEqual(checkSchema(discovery.properties.retention,{}),[]);
+  const fullIssues=checkSchema(WORK_CONTEXT_SCHEMA.properties.retention,{});
+  assert.deepEqual(fullIssues.map(issue=>issue.path).sort(),['artifacts','criteria','reason','request_review']);
+  assert.ok(checkSchema(WORK_CONTEXT_SCHEMA.properties.retention,{unexpected:true}).some(issue=>issue.path==='unexpected'));
 });
 
 test('every problem in an event comes back at once, with field paths and the value probably meant', async () => {

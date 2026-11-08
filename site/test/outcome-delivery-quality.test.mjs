@@ -46,13 +46,17 @@ test('baseline contract follows final existing-work scope without forcing unrela
   ]){const r=await ready({request,goal,format:'md',extension:'md'});assert.equal(r.ready.find(stage=>stage.stage_id==='build').delivery_requirements.work_context_required,expected,`${request}: ${goal}`);}
 });
 
-test('outcome retention uses actual accepted done IDs and keeps owner approval and native checks separate',async()=>{
+test('outcome retention uses actual accepted done IDs and keeps owner approval and native checks separate',async t=>{
   const r=await ready({request:'Improve the existing operating documents',goal:'Review and improve the operating documents',format:'md',extension:'md'});
   const prompt=r.ready.find(stage=>stage.stage_id==='build').prompt;assert.match(prompt,/explicit retention with changes:\[\]/);assert.match(prompt,/"id":"done-0","criterion":"Two usable outputs meet the accepted request\."/);assert.match(prompt,/not independent verification or owner approval/);
   const event=completion(r);delete event.landing_page_delivery;event.production_artifacts.forEach(artifact=>{artifact.modality='doc';artifact.kind='document';});
   const context=workContext(event.production_artifacts);context.changes=[];context.sources[0].sha256=sha;
   context.retention={reason:'The inspected current files already satisfy the accepted fixture job.',request_review:{observation:'Reviewed original request and required edits; no requested change remains unresolved in this synthetic current source.',receipt:'receipts/request-review.json'},artifacts:event.production_artifacts.map(artifact=>({path:artifact.path,sha256:artifact.sha256,source_id:'current-work'})),criteria:event.production_artifacts.map(artifact=>({id:'done-0',artifact_path:artifact.path,artifact_sha256:artifact.sha256,status:'PASS',observation:'This exact current artifact meets the accepted done criterion.',receipt:'receipts/current-review.json'}))};
   event.work_context=context;
+  const malformed=copy(event);malformed.work_context.retention={};await assert.rejects(step(r,malformed),/retention\.reason/);
+  const service=new PublicCatalogueService(asset,origin),client=new Client({name:'compact-retention-validation-regression',version:'1'});t.after(()=>client.close());
+  await client.connect(new StreamableHTTPClientTransport(new URL(origin+'/mcp'),{fetch:(input,init)=>handlePublicMcp(new Request(input,init),service)}));
+  const malformedResult=await client.callTool({name:'advance_outcome',arguments:args(r,malformed)});assert.equal(malformedResult.isError,true);assert.match(JSON.stringify(malformedResult),/retention\.reason/);
   const unknown=copy(event);unknown.work_context.retention.criteria[0].id='not-the-accepted-done-id';await assert.rejects(step(r,unknown),/accepted criterion|accepted criterion ID|accepted criterion before/);
   const pending=copy(event);pending.work_context.retention.criteria[0].status='NOT_RUN';await assert.rejects(step(r,pending),/blocks production retention/);
   const done=await step(r,event);assert.equal(done.engagement.stages.find(stage=>stage.id==='build').state,'AWAITING_APPROVAL');

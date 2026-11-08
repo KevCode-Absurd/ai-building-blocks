@@ -46,6 +46,8 @@ How to start:
 - **How it's bought** (optional): used up and bought again (a refill, a subscription), or bought once and kept. If not given, work it out: servings, a pack size or a subscription mean "again"; sizes, materials or a warranty mean "once".
 
 ## Steps
+The output of this method is copy and a page brief. For a launchable-page request, pass the accepted copy, evidence IDs and exact offer conditions to an appropriate AI Blocks implementation method; the writing output alone does not complete the website. Read the existing page before rewriting, retain correct brand language and working buyer choices, and explain changes through the buyer question they resolve.
+
 1. **Pin the page.** Write one buyer, one reason to buy, one offer. A second buyer or offer gets its own page. With no ad, say so and still pick one buyer.
 2. **Build the first screen from the ad.** On a phone this is about five short lines and a button.
    - Headline: the ad's main words, carried on. Never the product name alone.

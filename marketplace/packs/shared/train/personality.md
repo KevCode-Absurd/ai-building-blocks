@@ -5,6 +5,8 @@ This file is still a blank template. Your coach fills it in during training, in 
 
 This file shapes your agent's wording and layout. It never changes the facts. Every line should be backed by your real writing, so if the coach can't find a pattern in your samples, the section stays short.
 
+This is specialist presentation guidance, not a universal customer-output rule. The current task and approved brand/existing-work invariants take priority. Preserve requested verse, code, technical language, punctuation and expressive brand voices. Neutral house wording is only a fallback; no universal reading grade, sentence length, emoji or capitalisation ban applies. See OUTPUT-POLICY.md.
+
 The finished file starts with a heading in this shape: "# How [agent name] talks and writes". The sections below follow it, in this order.
 
 ## How I talk

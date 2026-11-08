@@ -230,6 +230,14 @@ export function searchShardIds(index: LibrarySearchIndex, query: string): number
   return [...ids].sort((a,b) => a-b);
 }
 export function searchLibraryIndex(index: LibrarySearchIndex, query: string): Map<string, SearchHit> {
+  // A published identifier is a lookup, not an intent or format hint. In
+  // particular, "agent-..." may identify a skill rather than an agent item.
+  // Resolve it before aliases can turn it into hundreds of similar goals.
+  const identifier = query.trim().toLowerCase();
+  if (/^[a-z\d]+(?:-[a-z\d]+)+$/.test(identifier)) {
+    const position = lowerBound(index.docs, identifier);
+    if (index.docs[position] === identifier) return new Map([[identifier, {score: 1_000_000_000, field: 'metadata', reason: 'Exact published ID.', strong: true}]]);
+  }
   // "write a skill" asks for a method that writes skills, not for every skill: a format word after a making verb is the subject.
   const makesFormat = /^\s*(?:(?:how (?:do|can) i|how to|i want to|help me|please)\s+)?(?:write|build|make|create|design|draft|set up|turn)\b/i.test(query);
   const preferred = makesFormat ? [] : [

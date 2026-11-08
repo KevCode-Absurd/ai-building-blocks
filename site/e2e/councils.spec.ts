@@ -32,8 +32,8 @@ test('council editor staffs a flexible team, changes its task lead, and retains 
 test('three route briefs can be edited and combined by individual parts',async({page})=>{
  await setup(page);await open(page);await staff(page);await page.getByRole('tab',{name:'Three routes & a mix',exact:true}).click();
  const routes=page.locator('.council-direction');await routes.nth(0).getByLabel('Route 1 first move',{exact:true}).fill('Interview returning customers');await routes.nth(0).getByRole('button',{name:'+ Keep this part',exact:true}).first().click();
- const second=routes.nth(1).getByRole('textbox');await second.nth(2).fill('Test a small operating-process change');await routes.nth(1).getByRole('button',{name:'+ Keep this part',exact:true}).nth(1).click();
- const third=routes.nth(2).getByRole('textbox');await third.nth(3).fill('Every claim must retain its source');await routes.nth(2).getByRole('button',{name:'+ Keep this part',exact:true}).last().click();
+ await routes.nth(1).getByLabel('Route 2 mechanism',{exact:true}).fill('Test a small operating-process change');await routes.nth(1).getByRole('button',{name:'+ Keep this part',exact:true}).nth(1).click();
+ await routes.nth(2).getByLabel('Route 3 guardrail',{exact:true}).fill('Every claim must retain its source');await routes.nth(2).getByRole('button',{name:'+ Keep this part',exact:true}).last().click();
  await expect(page.locator('.council-combined')).toContainText('Interview returning customers');await expect(page.locator('.council-combined')).toContainText('Test a small operating-process change');await expect(page.locator('.council-combined')).toContainText('Every claim must retain its source');await expect(page.locator('.council-keep-part.is-kept')).toHaveCount(3);
 });
 
@@ -42,8 +42,8 @@ test('planning pack carries the exact private brain bytes, hash, roster and thre
  const content=Buffer.from('# Verified project brain\n\nPRIVATE_CONTEXT_FOR_THIS_DOWNLOAD_ONLY\n');await page.getByLabel('Add brain file',{exact:true}).setInputFiles({name:'project-brain.md',mimeType:'text/markdown',buffer:content});await expect(page.getByLabel('Brain SHA-256',{exact:true})).toHaveValue(createHash('sha256').update(content).digest('hex'));
  expect(JSON.stringify(api.posted)).not.toContain('PRIVATE_CONTEXT');
  const wait=page.waitForEvent('download');await page.getByTestId('council-download-pack').click();const file=await wait,bytes=new Uint8Array(await fs.readFile((await file.path())!)),zip=unzipSync(bytes);
- expect(Object.keys(zip)).toEqual(expect.arrayContaining(['COUNCIL-DRAFT.json','TEAM.json','RUBRIC.json','ROUTE-BRIEFS.json','BRAND-BRAIN.json','RUN-MY-COUNCIL.md','brand-brain/project-brain.md']));
- expect(Buffer.from(zip['brand-brain/project-brain.md']).equals(content)).toBe(true);expect(strFromU8(zip['RUN-MY-COUNCIL.md'])).toContain('must read the complete brain');expect(JSON.parse(strFromU8(zip['COUNCIL-DRAFT.json'])).seats).toHaveLength(7);expect(JSON.parse(strFromU8(zip['ROUTE-BRIEFS.json'])).directions).toHaveLength(3);
+ expect(Object.keys(zip)).toEqual(expect.arrayContaining(['COUNCIL-DRAFT.json','EXECUTION-PLAN.json','TEAM.json','RUBRIC.json','ROUTE-BRIEFS.json','BRAND-BRAIN.json','RUN-MY-COUNCIL.md','brand-brain/project-brain.md']));
+ expect(JSON.parse(strFromU8(zip['EXECUTION-PLAN.json'])).execution.hosted).toBe(false);expect(Buffer.from(zip['brand-brain/project-brain.md']).equals(content)).toBe(true);expect(strFromU8(zip['RUN-MY-COUNCIL.md'])).toContain('must read the complete brain');expect(JSON.parse(strFromU8(zip['COUNCIL-DRAFT.json'])).seats).toHaveLength(7);expect(JSON.parse(strFromU8(zip['ROUTE-BRIEFS.json'])).directions).toHaveLength(3);
 });
 
 test('@mobile council editor keeps the map, controls and required brand-brain gate usable',async({page},info)=>{
@@ -59,4 +59,12 @@ test('named councils reopen with their people and require a fresh brain-read che
 });
 test('editable council JSON can be imported and malformed input preserves the working draft',async({page})=>{
  await setup(page);await open(page);await staff(page);const wait=page.waitForEvent('download');await page.getByTestId('council-download-json').click();const file=await wait,bytes=await fs.readFile((await file.path())!);await page.getByTestId('council-request').fill('Working draft retained on failure');await page.getByText('Save or load my council',{exact:false}).click();await page.getByLabel('Import council JSON file',{exact:true}).setInputFiles({name:'broken.json',mimeType:'application/json',buffer:Buffer.from('{broken')});await expect(page.getByTestId('council-request')).toHaveValue('Working draft retained on failure');await expect(page.getByText('Choose a valid council JSON file.',{exact:true})).toBeVisible();await page.getByLabel('Import council JSON file',{exact:true}).setInputFiles({name:'my-council.json',mimeType:'application/json',buffer:Buffer.concat([Buffer.from(' '.repeat(250000)),bytes])});await expect(page.getByTestId('council-request')).toHaveValue(goal);await expect(page.getByTestId('council-roster-person')).toHaveCount(7);
+});
+
+
+test('council delivery standard follows native page intent and general-task context',async({page})=>{
+ await setup(page);await open(page);const request=page.getByTestId('council-request'),standard=page.getByTestId('council-delivery-standard');
+ await request.fill('Build a landing page on our existing website');await expect(standard).toContainText('A page that works on your site.');await expect(standard).toContainText('editable source');await expect(standard).toContainText('execution not yet verified');
+ await request.fill('Create image-only landing-page mockups for design review');await expect(standard).toContainText('A design reference to review.');
+ await request.fill('Improve our existing onboarding process');await expect(standard).toContainText('preserve what works');await expect(standard).toContainText('mechanisms, evidence and tradeoffs');
 });

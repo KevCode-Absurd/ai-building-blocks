@@ -30,7 +30,7 @@ export const FIELDS = {
   capability: ['id', 'access', 'via', 'name', 'why'],
   stage: ['id', 'kind', 'name', 'goal', 'from_steps', 'owner', 'support', 'reviewers', 'uses', 'data', 'needs', 'depends_on', 'outputs', 'checks', 'gate', 'optional_when'],
   owner: ['role', 'gap'],
-  output: ['id', 'name', 'format', 'path'],
+  output: ['id', 'name', 'format', 'path', 'count'],
   check: ['id', 'name', 'required'],
   data: ['id', 'name', 'why', 'fields', 'routes', 'required_for', 'alternative'],
   route: ['kind', 'how'],
@@ -187,7 +187,7 @@ export function validatePlan(input, { research, brief } = {}) {
       if (absent(o.role) === absent(o.gap)) fail('A stage owner names one catalogue specialist (role) or describes the missing one (gap).');
       return absent(o.role) ? { gap: text(o.gap, 'Catalogue gap', 500) } : { role: id(o.role, 'Owner role') };
     });
-    const outputs = each(n, s.outputs, 'outputs', 'Stage outputs', 12, o => { object(o, 'Output'); keys(o, FIELDS.output, 'Output'); return { id: id(o.id, 'Output id'), name: text(o.name, 'Output name', 250), format: text(o.format, 'Output format', 40), path: safePath(o.path, 'Output path') }; });
+    const outputs = each(n, s.outputs, 'outputs', 'Stage outputs', 12, o => { object(o, 'Output'); keys(o, FIELDS.output, 'Output'); if(o.count!==undefined&&(!Number.isSafeInteger(o.count)||o.count<1||o.count>1000))fail('Output count must be a whole number from 1 to 1000.'); return { id: id(o.id, 'Output id'), name: text(o.name, 'Output name', 250), format: text(o.format, 'Output format', 40), path: safePath(o.path, 'Output path'),...(o.count===undefined?{}:{count:o.count}) }; });
     const checks = each(n, s.checks, 'checks', 'Stage checks', 12, x => { object(x, 'Check'); keys(x, FIELDS.check, 'Check'); return { id: id(x.id, 'Check id'), name: text(x.name, 'Check name', 500), required: x.required !== false }; });
     n.try('outputs', () => unique(outputs.map(o => o.id), 'Output ids')); n.try('checks', () => unique(checks.map(x => x.id), 'Check ids'));
     const kind = n.try('kind', () => one(s.kind, STAGE_KINDS, 'Stage kind'));

@@ -31,6 +31,42 @@ The check covers lists in `item.yaml`, `page.yaml` and the active fallback under
 
 The initial records contain 12 input-contract reviews and three handoff reviews. They are AI Blocks source reviews, not a claim that Kevin approved them or that a workflow ran successfully. Do not generate approval records from type matches alone.
 
+## Verify local delivery evidence
+
+The generic host adapter checks actual files before the host submits artifact/source/receipt references to MCP or the HTTP API. It makes no network, model or tool-execution calls and does not run commands found in a manifest. Choose an authorised absolute project directory as a host argument; a manifest cannot choose its root.
+
+```sh
+node tools/verify-delivery-evidence.mjs --root <absolute-project-directory> --manifest evidence.json
+node tools/verify-delivery-evidence.mjs --root <absolute-project-directory> --manifest evidence.json --output evidence-report.json
+```
+
+The manifest and optional new report path are relative to that directory. Without `--output`, no file is written. An output parent must already exist; the adapter never overwrites an existing report, the manifest or an evidence file. Exit codes are 0 for matching bytes, 1 for failed evidence, and 2 for invalid CLI/manifest-file access or report-write errors.
+
+Use this manifest shape, replacing every hash with the SHA-256 of the actual saved bytes:
+
+```json
+{
+  "schema": "ai-blocks-file-evidence/1",
+  "artifacts": [
+    {
+      "id": "result",
+      "path": "work/result.zip",
+      "sha256": "<actual lowercase SHA-256>",
+      "receipts": [{"path": "work/checks.json", "sha256": "<actual lowercase SHA-256>"}]
+    }
+  ],
+  "sources": [{"id": "baseline", "path": "inputs/current-source.json", "sha256": "<actual lowercase SHA-256>"}]
+}
+```
+
+All paths use relative `/` separators. Absolute/traversal/device paths, duplicate IDs or case-insensitive duplicate paths, and symlink/junction components are rejected. Every declared input must be a regular readable file under the resolved project root. Defaults cap the manifest at 2 MiB, the declared files (including receipts) at 1,000, each file at 256 MiB and total accepted file bytes at 1 GiB. The exported `verifyDeliveryEvidence({root,manifest,limits})` module permits tighter limits only. File identity/size/timestamp checks detect changes during hashing; the host should still use a controlled snapshot rather than a concurrently writable or hostile directory.
+
+The result reports observed hashes/byte counts and errors with assurance `LOCAL_BYTES_VERIFIED_SEMANTICS_UNVERIFIED`. Retain the report with the run and submit the matching artifact/receipt references. Re-run after a source or deliverable changes; a previously saved PASS is not current evidence. This local report is itself host-supplied to a remote service, not a signed remote attestation.
+
+**What it does not establish:** that every required deliverable was listed, that a source is current/true/owned, that a receipt describes an actual test, that the output is correct or visually good, or that the user approved publication. Compare the manifest with the agreed job/required output set, run real task checks, and preserve independent review and permissions separately. A receipt containing an invented PASS can have a matching hash; byte verification does not validate that claim. Factual currentness and task acceptance remain explicit host evidence, never inferred from the file timestamp.
+
+Run `node --test site/test/file-evidence-verifier.test.mjs` for focused regression coverage. Windows junction creation may require a host that allows the temporary test fixture; a skipped boundary test is reported explicitly and does not count as a passed security check.
+
 ## GitHub checks
 
 The workflow runs on pushes and pull requests, with Linux and Windows jobs. Windows also exercises the local DPAPI coverage. It installs locked dependencies, checks source contracts and generated sections, runs the complete unit suite, then builds and checks SEO. No model keys or deployment credentials are provided.

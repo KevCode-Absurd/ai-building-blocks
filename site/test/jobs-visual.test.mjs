@@ -3,8 +3,25 @@ import assert from 'node:assert/strict';
 import {startJob,advanceJob} from '../src/jobs/engine.mjs';
 import {jobMcpTools} from '../src/jobs/job-mcp.mjs';
 import {engineFixture} from './fixtures/jobs/engine-fixture.mjs';
+import {visualDelivery} from './fixtures/jobs/visual-delivery-fixture.mjs';
 const send=(r,e,c)=>advanceJob({job_id:r.job_id,state:r.state,state_digest:r.state_digest,...e},c);
 const spec={references:['brand/visual.md','reference-ads/01.png'],fonts:['Brand serif'],colors:['#123456'],logo:'brand/logo.png',formats:['editorial collage','illustrated explainer'],format_rationale:'Different composition and buyer jobs.',required_renderer:'imagegen'};
+test('actual fresh image production accepts one complete inspection format and rejects ZIP or stale legacy inspection',async()=>{
+ const f=engineFixture();f.input.host_capabilities.visual_renderers=['imagegen'];f.card.visual_spec=spec;
+ for(const family of f.context.approaches.jobs['write-documents'].families)family.modality=['image'];
+ f.card.dials.modalities.value=['image'];for(const slot of f.spread.slots)slot.modality='image';
+ f.production.artifacts.forEach((artifact,index)=>{artifact.modality='image';artifact.path=`ads/image-${index}.png`;artifact.sha256=String(index+1).repeat(64);});
+ f.production.visual_delivery=visualDelivery(f.production.artifacts);
+ let r=await startJob(f.input,f.context);for(const event of f.events.slice(0,4))r=await send(r,event,f.context);
+ const missing=structuredClone(f.production);delete missing.visual_delivery;await assert.rejects(()=>send(r,{event:'produce',document:missing},f.context),/visual_review|visual_delivery/);
+ const zip=structuredClone(f.production);zip.artifacts[0].path='ads/not-an-image.zip';await assert.rejects(()=>send(r,{event:'produce',document:zip},f.context),/raster image/);
+ assert.equal((await send(r,{event:'produce',document:f.production},f.context)).phase,'REVIEW');
+ const legacy=structuredClone(f.production),report=legacy.visual_delivery;delete legacy.visual_delivery;
+ legacy.visual_review={renderer:report.renderer,receipt:report.receipt,by_seat:report.reviewer_id,items:report.items.map(({maker_id,...row})=>row)};
+ assert.equal((await send(r,{event:'produce',document:legacy},f.context)).phase,'REVIEW');
+ legacy.visual_review.items[0].sha256='b'.repeat(64);legacy.diversity_review={by_seat:report.reviewer_id,receipt:report.receipt,items:report.items};
+ await assert.rejects(()=>send(r,{event:'produce',document:legacy},f.context),/current raster image/);
+});
 test('visual production requires the selected real renderer and a separate visual pass on every output',async()=>{
  const f=engineFixture();f.input.host_capabilities.visual_renderers=['imagegen'];f.card.visual_spec=spec;let r=await startJob(f.input,f.context);
  for(const e of f.events.slice(0,4))r=await send(r,e,f.context);

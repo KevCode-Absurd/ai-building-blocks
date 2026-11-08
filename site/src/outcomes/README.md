@@ -18,6 +18,16 @@ Turns "my business isn't doing well" into a finished, measured result, run by ou
 
 Everything is stateless. The host keeps `engagement.json` and sends it back with its `engagement_sha256`; the brief, research and plan are re-checked on every call. No model, storage, schedule or account access runs here.
 
+## Deliverable quality and compatibility
+
+New engagements use `ai-blocks-outcome-engagement/3` with the shared execution-quality policy. A stage's requirement follows its actual job: copy, audits and concept boards are intermediate work; implementing a landing page requires editable source. An explicit image-only mockup remains a labelled design reference. Existing `/2` engagements remain resumable with `LEGACY_STRUCTURAL_ONLY` assurance; they are not retroactively certified by the new checks.
+
+For a fresh landing-page implementation, a `complete` event carries `production_artifacts` linked to the declared output IDs, paths and current SHA-256 values, and `landing_page_delivery`. Every source output needs existing-site reuse/integration evidence, real brand sources and current-source receipts for the build, primary action, links/assets, phone/desktop layout, keyboard access and brand content. A screenshot or a high aggregate review score cannot satisfy that contract. The complete report schema is served at `/api/v1/schemas/ai-blocks-landing-page-delivery/1.json`.
+
+For a fresh static-ad production stage, `complete` also requires `visual_delivery`: the actual renderer and receipt, source references, a reviewer separate from every maker, and one current-hash inspection per image. Required checks cover brand, product fidelity, claims/copy and format. A varied batch includes observed comparisons of substantive concept differences; identical image hashes, self-review, stale evidence or failed required checks are rejected. The complete report schema is served at `/api/v1/schemas/ai-blocks-visual-delivery/1.json`. Concept/copy stages do not pretend to be generated images and do not need image-rendering receipts.
+
+The same checks run behind direct calls, public REST and MCP. Completed report records are revalidated on later calls. All observations are still host reports: the service does not run a browser, read private artifact bytes, verify model isolation or establish owner approval and conversion performance. Passing a readiness record never grants publication authority. Keep raw source, private brand information and actual receipts with the authorized host.
+
 ## Try it
 
 The outcome tools are in the local MCP preview (`site/scripts/scoping-mcp-preview.mjs`, Node 24). Add it to Claude Code, Claude Desktop or Codex as a stdio server, then say what you want:
@@ -67,5 +77,7 @@ Once a test is registered and launched, `read_back_outcome_experiment` without a
 After a finished round, `prepare_outcome_pattern` shows the exact anonymised `PATTERN.json` (names the owner wrote, figures, links, emails, phones and postcodes removed; names public sources use, such as platforms, kept) and its sha256. Only when the owner says yes to that sha256 does it return `PATTERN-SUBMISSION.json` in the review-queue format. Nothing is sent: the owner chooses to send it. A person at AI Blocks reviews it against a checklist (`pattern-review`); only an approved submission can be exported as a catalogue workflow draft (`pattern-export`), marked `status: draft` and `published: false`, which a person edits and moves into `catalogue-items/` by hand. `node tools/outcome-evals.mjs gaps` lists stages where no specialist fit, for phase 1.
 
 ## Making it better
+
+Fresh engagements also apply the generic existing-work contract to substantive IMPROVE or ASSESS production, including documents, processes and analyses. Completion includes `work_context` (public schema `/api/v1/schemas/ai-blocks-work-context/1.json`) and actual `production_artifacts`: a current inspected baseline, source-backed preservation and change hypotheses, and observed comparison results covering current output hashes. Stale or unknown baselines and planned comparisons cannot satisfy completion. Supporting copy and preliminary concepts for another deliverable remain intermediate; a request to improve that copy itself retains the baseline requirement. Legacy engagements remain explicitly weaker. The same semantic validator runs through direct calls, REST and MCP; its records are host-reported rather than independent execution evidence.
 
 Don't add playbooks. Improve the method (`method.mjs`), the rules (`plan-contract.mjs`) or the specialists and items plans are built from. Good plans come back as plan patterns, shared only with the owner's consent, and become catalogue workflows that later research finds.

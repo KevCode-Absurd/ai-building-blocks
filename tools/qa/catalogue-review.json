@@ -451,6 +451,303 @@
           "rationale": "The method requires real product photographs to preserve product fidelity."
         }
       ]
+    },
+    "catalogue-items/general/job-to-agent-goal-writer/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-11-08",
+      "method_sha256": "57bcd8d7833651a8b2d9d9d78d985f595c8fb886d6b99e4b89274d15ab9fcbb7",
+      "inputs": [
+        {
+          "type": "question",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "question",
+          "quote": "**The job** (required): what you want done, in your own words.",
+          "rationale": "The required question is the person’s own job and desired result; existing work and limits refine the goal rather than changing its required input type."
+        }
+      ]
+    },
+    "catalogue-items/general/website-brand-brain-builder/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-11-08",
+      "method_sha256": "01575b86e9e9016787690a5dbd5b7a373407b5a525bcf79e436f5f7cfccd0751",
+      "inputs": [
+        {
+          "type": "web_page",
+          "required": true
+        },
+        {
+          "type": "voc_reviews",
+          "required": false
+        },
+        {
+          "type": "performance_sheet",
+          "required": false
+        },
+        {
+          "type": "product_data",
+          "required": false
+        }
+      ],
+      "evidence": [
+        {
+          "type": "web_page",
+          "quote": "**Website address** (required). Pasted pages count, if the site can't be read.",
+          "rationale": "The required website source can be a readable URL or pasted pages; an unavailable site remains a named gap rather than an invented business record."
+        },
+        {
+          "type": "voc_reviews",
+          "quote": "**Customer words** (optional): reviews, survey answers, support emails, call notes, each quote numbered.",
+          "rationale": "Optional review and customer-language records ground buyer situations; absence leaves those profiles unknown or inferred."
+        },
+        {
+          "type": "performance_sheet",
+          "quote": "**Results** (optional): ads, emails, pages or offers that worked or didn't.",
+          "rationale": "Optional campaign or store performance exports supply dated results, distinct from claims and from content seen running."
+        },
+        {
+          "type": "product_data",
+          "quote": "**Brand material you already have** (optional): product sheets, packaging photos, a style guide, past ads, pasted pages.",
+          "rationale": "Optional product sheets and labelled brand materials supply product/offer/asset facts and their provenance for the reusable brain."
+        }
+      ]
+    },
+    "catalogue-items/general/personal-agent-builder/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-11-08",
+      "method_sha256": "18b59ecb155a3e6ac30019096541b2bda501ad5c2cb47c373144bd7775be4ae0",
+      "inputs": [
+        {
+          "type": "question",
+          "required": true
+        },
+        {
+          "type": "document",
+          "required": false
+        }
+      ],
+      "evidence": [
+        {
+          "type": "question",
+          "quote": "Required: the person's request about the work they want help with or the artifact they want to build.",
+          "rationale": "The initial user request supplies the work or artifact objective; the conversational method can clarify it and requires no separate prepared dossier."
+        },
+        {
+          "type": "document",
+          "quote": "Optional: permitted examples, edits, decision cases, existing instructions, a saved dossier or current working files.",
+          "rationale": "Existing instructions, examples or a dossier can be supplied as documents to ground capture and compilation, but personal creation can begin without them."
+        }
+      ]
+    },
+    "catalogue-items/ecommerce/shopify-landing-page-builder/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-11-08",
+      "method_sha256": "5674aaed2a2b4ae4fe7627bb8964e1e71787dd893b97feaac4cab922de95df53",
+      "inputs": [
+        {
+          "type": "design_direction",
+          "required": false
+        },
+        {
+          "type": "landing_page",
+          "required": true
+        },
+        {
+          "type": "page_layout_spec",
+          "required": false
+        },
+        {
+          "type": "product_data",
+          "required": false
+        }
+      ],
+      "evidence": [
+        {
+          "type": "landing_page",
+          "quote": "**Finished page copy** (required): sections, headings, body, questions, offer rows, button text, risk lines.",
+          "rationale": "The required landing_page port carries the accepted complete copy and its section order, not an assertion that a live website already exists. Store handles, theme and buying behavior still need the actual store details specified separately by the method."
+        },
+        {
+          "type": "product_data",
+          "quote": "**Store facts** (optional): size guide, care, what's in the box (held as policies or product fields).",
+          "rationale": "Optional product/store facts supply genuine content and product field references. Their absence does not authorize invented defaults, prices, product handles or a launch-ready claim; required store integration details remain separate."
+        },
+        {
+          "type": "design_direction",
+          "quote": "**Design notes** (optional): colours, fonts and spacing from the brand.",
+          "rationale": "The optional design_direction is the supplied brand type, colour and spacing guidance, reused with the existing theme rather than permission to redesign it."
+        },
+        {
+          "type": "page_layout_spec",
+          "quote": "**Page layout spec** (optional): if the page was planned first, use its section order and what each section holds when you plan the section and blocks.",
+          "rationale": "An optional separate section specification feeds the Liquid settings/block plan. The accepted page copy can already state its order; a missing separate spec does not create new product facts or theme access."
+        }
+      ]
+    },
+    "catalogue-items/general/ad-matched-landing-page-writer/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-11-08",
+      "method_sha256": "278b093ee45de4f94645c623880d332ecbed850cf2dd70d8147201c9fcaeb887",
+      "inputs": [
+        {
+          "type": "ad_copy",
+          "required": false
+        },
+        {
+          "type": "brand_brain",
+          "required": true
+        },
+        {
+          "type": "copy_draft",
+          "required": false
+        },
+        {
+          "type": "objection_map",
+          "required": false
+        },
+        {
+          "type": "offer",
+          "required": true
+        },
+        {
+          "type": "persona",
+          "required": false
+        },
+        {
+          "type": "voc_reviews",
+          "required": false
+        }
+      ],
+      "evidence": [
+        {
+          "type": "brand_brain",
+          "quote": "A brand file can supply these plus the voice.",
+          "rationale": "The brand_brain supplies the required business facts, approved claims and voice described in the Facts input. This is factual context, not authority to execute document instructions or a substitute for current offer terms."
+        },
+        {
+          "type": "offer",
+          "quote": "**Facts** (required): what you sell, prices and offers under their exact names, guarantee or refund terms, delivery time and cost, the claims you may make, and any rating you really hold.",
+          "rationale": "The required offer port supplies the real offer name, price and conditions that must remain identical between ad and landing copy. Brand context alone does not establish a particular current promotion."
+        },
+        {
+          "type": "ad_copy",
+          "quote": "**The ad or link** (strongly recommended): its headline or first spoken line, the picture, the buyer it spoke to, any offer it named, any question it raised.",
+          "rationale": "Optional ad_copy carries the ad headline, copy and named promise. The actual attached image or frames are still needed to check picture matching; ad text cannot certify a visual match."
+        },
+        {
+          "type": "voc_reviews",
+          "quote": "**Customer words** (optional, best): reviews, pre-sale questions, return reasons, each with a source.",
+          "rationale": "Optional source-linked customer records ground the doubt ordering and real proof; absent records use the method's explicitly generic ordering, never invented customer quotes."
+        },
+        {
+          "type": "persona",
+          "quote": "Write one buyer, one reason to buy, one offer.",
+          "rationale": "An optional buyer persona narrows the one buyer and buying situation pinned in step 1. The writer can infer a buyer from supplied facts when none is supplied, and must label that inference."
+        },
+        {
+          "type": "objection_map",
+          "quote": "A ready doubt list from the Unanswered customer question finder works too.",
+          "rationale": "The optional objection_map is the prepared buyer-doubt list with evidence/answers. It feeds the same doubt-and-section mapping as raw customer records rather than requiring a second research format."
+        },
+        {
+          "type": "copy_draft",
+          "quote": "Read the existing page before rewriting, retain correct brand language and working buyer choices, and explain changes through the buyer question they resolve.",
+          "rationale": "An optional existing page or campaign draft can be the copy_draft being rewritten. It provides current wording to retain or change; the writing result remains copy and a brief, not a built page."
+        }
+      ]
+    },
+    "catalogue-items/general/landing-page-design-planner/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-11-08",
+      "method_sha256": "6272872bf9423c7abf135ffe27b3075dd8d4e96ecf9b21e2d93f0348edac0fba",
+      "inputs": [
+        {
+          "type": "brand_brain",
+          "required": true
+        },
+        {
+          "type": "landing_page",
+          "required": true
+        },
+        {
+          "type": "voc_reviews",
+          "required": false
+        }
+      ],
+      "evidence": [
+        {
+          "type": "brand_brain",
+          "quote": "**Brand look** (required): colours with their jobs, fonts, voice, logo, product photos.",
+          "rationale": "The required brand_brain supplies actual visual assets, type, colour, voice and claim boundaries. The method explicitly preserves supplied fonts and colours and separately inspects the existing site and source."
+        },
+        {
+          "type": "landing_page",
+          "quote": "**The page's case** (required): the copy or brief, the buyer, the ad's promise, the offer, the facts.",
+          "rationale": "The required landing_page carries the accepted copy or page brief and its buyer case. Existing-page review also needs actual screenshots/source; a design plan is not an implemented page."
+        },
+        {
+          "type": "voc_reviews",
+          "quote": "**Customer words** (optional): supplied reviews, questions or interview excerpts with source IDs.",
+          "rationale": "The optional voc_reviews now has an explicit real-method instruction to use sourced customer words when selecting buyer questions and relevant proof. It stays optional, and inferred doubts remain separate from quoted evidence."
+        }
+      ]
+    },
+    "catalogue-items/general/static-html-landing-page-builder/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-11-08",
+      "method_sha256": "c62ed33e3ec0d04e1041af24b7e609f6fce498bed51bb0da2f7447996783264d",
+      "inputs": [
+        {
+          "type": "brief",
+          "required": false
+        },
+        {
+          "type": "landing_page",
+          "required": true
+        },
+        {
+          "type": "page_layout_spec",
+          "required": false
+        }
+      ],
+      "evidence": [
+        {
+          "type": "landing_page",
+          "quote": "Read the original request, constraints, approved page copy and layout.",
+          "rationale": "The required landing_page supplies accepted copy and page content to implement. It is not the source of a verified submission endpoint, current website access or browser-check results."
+        },
+        {
+          "type": "page_layout_spec",
+          "quote": "The original brief, the approved page copy and the approved layout.",
+          "rationale": "An optional separate page_layout_spec supplies the approved section layout; the same layout can already be embedded in the approved copy or original brief. Optionality applies to a separate document, not permission to disregard the accepted layout."
+        },
+        {
+          "type": "brief",
+          "quote": "Resolve the copy and the form destination from the original request and existing approved inputs.",
+          "rationale": "A separate brief is optional because the original user request can carry constraints, integration target and buyer action. An unresolved required endpoint or main action blocks launchable status rather than being invented."
+        }
+      ]
+    },
+    "catalogue-items/imported/react-landing-page-builder/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-11-08",
+      "method_sha256": "e850f781a0342b83ffc0095397c2b81f9e250f77440b7f268359ede859f9e626",
+      "inputs": [
+        {
+          "type": "question",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "question",
+          "quote": "Read the user's original request, brand brain and actual repository before choosing a design or framework.",
+          "rationale": "The required question is the actual page-building request, including product and audience facts gathered by the workflow. The broad port does not claim that a question alone supplies repository access, approved assets, verified offers or executed checks."
+        }
+      ]
     }
   },
   "handoffs": {
@@ -491,6 +788,138 @@
       "input_quote": "Paste operating revenue, operating costs",
       "rationale": "A requested workbook can carry the verified payment and operating-cash calculation into the bridge. It supplies only part of the financial evidence, not the financing definition, taxes, working capital or a complete model.",
       "condition": "The person requested a workbook, file tools were available, and the actual workbook was made and reviewed. Match period, units and cash-versus-invoice basis before reusing its figures."
+    },
+    "catalogue-items/general/lead-offer-tuner/page.yaml#next#ad-matched-landing-page-writer": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-11-08",
+      "from_sha256": "d5ce9f9f0d5031905717ae3db25db68aae59acbfc20b8fcba82ecc8a7be4432c",
+      "to_sha256": "278b093ee45de4f94645c623880d332ecbed850cf2dd70d8147201c9fcaeb887",
+      "ports_sha256": "142aa379dd26d25c00b8b7042d8e60ce244111477ed63238717b95d78443996e",
+      "type": "offer",
+      "output_quote": "Write the new title, the offer text, and where it sits in the ad.",
+      "input_quote": "**Facts** (required): what you sell, prices and offers under their exact names, guarantee or refund terms, delivery time and cost, the claims you may make, and any rating you really hold.",
+      "condition": "Use the approved rewritten reply offer only when the requested landing page is meant to continue that same offer; retain actual fees, eligibility and no-call conditions.",
+      "rationale": "The producer's real revised offer supplies the consumer offer port, not its entire brand or visual ad context. Predictions stay guesses, and the writer still needs approved business facts and any actual ad image before checking continuity."
+    },
+    "catalogue-items/general/motion-graphics-build-plan/page.yaml#before#website-brand-brain-builder": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-11-08",
+      "from_sha256": "01575b86e9e9016787690a5dbd5b7a373407b5a525bcf79e436f5f7cfccd0751",
+      "to_sha256": "701f06f24965cfe3bdacf3f0cda46d5c4ddf99532b73e5243957218b04e3aa07",
+      "ports_sha256": "7aa74471a9d33de6449bc49a0603954055e54bb4d3a285da5e80959580ce19ec",
+      "type": "brand_brain",
+      "output_quote": "*Image work:* how the product looks, colours, fonts, photo style, and the exact words allowed on the picture.",
+      "input_quote": "**Brand assets** (optional): font files, logo as a vector file, colour codes.",
+      "condition": "Use a task slice only when its actual fonts, logo and colour references are available and current; the source-linked brand packet cannot replace missing product cutout files or the script.",
+      "rationale": "The producer image-work slice supplies the consumer's optional brand context. Only actual approved asset references and exact permitted words pass onward; no raw research, fictional product geometry, tool credentials or spend authority is created."
+    },
+    "catalogue-items/general/reason-why-deal-writer/page.yaml#before#website-brand-brain-builder": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-11-08",
+      "from_sha256": "01575b86e9e9016787690a5dbd5b7a373407b5a525bcf79e436f5f7cfccd0751",
+      "to_sha256": "720143c28658593c549c61f282b296c276515cb549be859483bb15f05bd08543",
+      "ports_sha256": "fee40714691a399b3123099678988900ad3b50e2f70841482f6f001a97af6d02",
+      "type": "brand_brain",
+      "output_quote": "*Writing:* the chosen offer facts, approved claims with their conditions, buyer quotes, voice lines.",
+      "input_quote": "**Your brand file** (optional): voice and claims you can make.",
+      "condition": "Pass only the selected current offer and approved factual/voice slice; the owner still supplies a real deal, costs, eligible group and evidence for its reason.",
+      "rationale": "The writing slice is compatible optional brand context. It does not replace the required buyer shortlist and product economics, authorize a promotion, or turn a pending claim or a merely running ad into proof."
+    },
+    "catalogue-items/general/static-html-landing-page-builder/page.yaml#next#landing-page-30-point-checker": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-11-08",
+      "from_sha256": "c62ed33e3ec0d04e1041af24b7e609f6fce498bed51bb0da2f7447996783264d",
+      "to_sha256": "41c30e40f08451ff7bd51d09d9f252aed21724140b08e365bba223483a5b87f1",
+      "ports_sha256": "92dcb0e9af5ca8f3dced999523e1a1d172eb0030c61e501241241b648c4b5e8f",
+      "from_type": "web_page",
+      "to_type": "landing_page",
+      "output_quote": "index.html, styles.css and an assets/ folder, plus checks.md (what was checked and how) and README.md (how to preview, host and set up the form).",
+      "input_quote": "**The page** (required): its text top to bottom and, if you can, phone screenshots of the first screen and the buy area.",
+      "adaptation": "Open the actual current HTML preview, extract its complete visible page copy in reading order and attach current phone screenshots of the first screen and buy area as the landing_page input. Carry checks.md as observations, not a substitute for inspecting the preview.",
+      "condition": "Proceed once the actual preview or complete page text is available; mark unseen imagery, behavior and speed checks can't tell and never infer a launch or completed submission from source alone.",
+      "rationale": "The web_page source is adapted into the actual readable landing_page that the checker consumes. No ad, verified offer facts or speed report is synthesized, and unavailable checks remain explicit."
+    },
+    "catalogue-items/general/static-html-landing-page-builder/page.yaml#next#accessibility-checker": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-11-08",
+      "from_sha256": "c62ed33e3ec0d04e1041af24b7e609f6fce498bed51bb0da2f7447996783264d",
+      "to_sha256": "94ab3dfbaa8acf48d65137ded42d18e0697238a6d7510d0b538229e2ea7b9579",
+      "ports_sha256": "3542b9633bcebb73063e1f86a2837de5a71e9459be0c99a9cccb3eb4443abdaa",
+      "type": "web_page",
+      "output_quote": "index.html, styles.css and an assets/ folder, plus checks.md (what was checked and how) and README.md (how to preview, host and set up the form).",
+      "input_quote": "**`audit_html`** — for raw HTML strings, files (`Read` first, then `audit_html`), or JSX you've rendered to a string.",
+      "condition": "Audit the actual HTML file or authorised current preview using tools genuinely installed; without a live DOM, state the static coverage limit. Editing is permitted only when the owner asked for fixes.",
+      "rationale": "The produced HTML web_page is a direct optional web_page input to the accessibility checker, whose source explicitly supports HTML files. The method package supplies instructions rather than the auditing engine; an available port cannot establish actual tool execution or conformance."
+    },
+    "catalogue-items/imported/animated-landing-page-builder/page.yaml#next#ad-matched-landing-page-writer": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-11-08",
+      "from_sha256": "28de9c91b1e56b8313388341a171006085b81810232d9622c27619db601f3b52",
+      "to_sha256": "278b093ee45de4f94645c623880d332ecbed850cf2dd70d8147201c9fcaeb887",
+      "ports_sha256": "447eee4ba5b82ac3529aabfbde56bbe1d989bbca35b677f84cda678c2b02a470",
+      "from_type": "web_page",
+      "to_type": "copy_draft",
+      "output_quote": "Generate a polished, self-contained `.html` landing page from a text prompt or brief.",
+      "input_quote": "Read the existing page before rewriting, retain correct brand language and working buyer choices, and explain changes through the buyer question they resolve.",
+      "adaptation": "Extract the visible copy, section order and image notes from the actual produced HTML into a clearly labelled existing-page copy_draft. Preserve every CONFIRM CLAIM/placeholder flag; validate its facts independently against the approved brand and real offer before reuse.",
+      "condition": "Use only when the owner wants copy revision of that same draft and approved brand/offer facts are available; the animated builder's invented or confirm-claim content cannot become evidence.",
+      "rationale": "An animated HTML page can supply an optional existing copy draft after extraction; it does not supply the writer's required offer, factual brand context or visual ad match. This is a conditional rewrite of existing work, not automatic proof the generated page is usable."
+    },
+    "catalogue-items/imported/page-transition-animator/page.yaml#next#react-landing-page-builder": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-11-08",
+      "from_sha256": "6b15650d4a38cb9463488c11787322308b0fb67a0e3e62fdc0b384452c0484ab",
+      "to_sha256": "e850f781a0342b83ffc0095397c2b81f9e250f77440b7f268359ede859f9e626",
+      "ports_sha256": "d9b7fa189d6dcf3f521521a26f6b08f3007eed7d664744ccffbc98d8aa5e87b2",
+      "from_type": "code_change",
+      "to_type": "question",
+      "output_quote": "When adding view transitions to an existing app, **follow `references/implementation.md` step by step.**",
+      "input_quote": "Read the user's original request, brand brain and actual repository before choosing a design or framework.",
+      "adaptation": "When the owner separately requests a React landing page in the same application, include the actual transition patch, touched component paths and verified reduced-motion behavior as existing-work context in that implementation question. Preserve the owner's original page brief and repository as separate required context.",
+      "condition": "This is not an automatic typed pipeline. Use only for an explicitly requested new React page in the same actual project; a transition patch alone does not contain a product brief or authorise a new site.",
+      "rationale": "The producer makes scoped code changes, whereas the consumer requires an explicit page-building question. The reviewed bridge carries relevant existing components into that owner-requested task; it cannot derive a user intention, replacement framework or launch evidence from the patch."
+    },
+    "catalogue-items/imported/polished-interface-builder/page.yaml#next#react-landing-page-builder": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-11-08",
+      "from_sha256": "2a0bc6d9b0304ecb5de23677469803b75119b2c12e1c57bc32e435efc1580982",
+      "to_sha256": "e850f781a0342b83ffc0095397c2b81f9e250f77440b7f268359ede859f9e626",
+      "ports_sha256": "90ec3c02c71fd607525c9d871ce2f69700e63ad864c9f930cf06132dee99943a",
+      "from_type": "web_app",
+      "to_type": "question",
+      "output_quote": "Verify framework versions, installed dependencies, responsive behavior, and build output in the target repository before treating generated UI as production-ready.",
+      "input_quote": "Read the user's original request, brand brain and actual repository before choosing a design or framework.",
+      "adaptation": "For an owner-requested React landing page within the produced application, attach the actual current interface source, route/component map, accepted design decisions and unresolved placeholders to the original page implementation question. Inspect the repository instead of translating a screenshot into presumed code or dependencies.",
+      "condition": "Use only if the same actual application is React and a new page is requested. A generic interface or review-only result cannot automatically create the required product brief, factual offer, assets or execution receipts.",
+      "rationale": "The web_app is relevant existing-work context for a distinct page-building question after this explicit adaptation. The source's design defaults and placeholder names remain subordinate to the actual task and approved brand; no need to rebuild an already satisfactory interface is implied."
+    },
+    "catalogue-items/imported/react-landing-page-builder/page.yaml#next#landing-page-auditor": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-11-08",
+      "from_sha256": "e850f781a0342b83ffc0095397c2b81f9e250f77440b7f268359ede859f9e626",
+      "to_sha256": "cf86c5991cdfb50cd9f17d830b8e0b948c62bcd8a31c6170c7d141b4669048f2",
+      "ports_sha256": "6c3b23998dfbfe23c31172fdc94bbea7665139f02f16131dd7c1aeeec9a35344",
+      "from_type": "code_change",
+      "to_type": "landing_page",
+      "output_quote": "Deliver editable source or a patch, dependencies, local build/preview commands and an integration map.",
+      "input_quote": "**The page** (required): its address, or its full text and phone screenshots, top to bottom.",
+      "adaptation": "Only after the changed React page has actually been integrated into a live page with visitors, supply its current URL or complete rendered text and current phone screenshots as landing_page. Preserve the original source/check links, and supply analytics separately if financial sizing is requested.",
+      "condition": "The auditor explicitly excludes a page that is not live or has no visitors. For newly generated code or an unlaunched preview, use the 30-point checker instead; never claim this consumer is ready merely because a code_change exists.",
+      "rationale": "A code_change is not directly a readable live landing page. This conditional publication-and-capture adaptation respects the consumer's live-page scope, retains unseen checks as gaps and grants no authority to publish."
+    },
+    "catalogue-items/imported/react-landing-page-builder/page.yaml#next#landing-page-30-point-checker": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-11-08",
+      "from_sha256": "e850f781a0342b83ffc0095397c2b81f9e250f77440b7f268359ede859f9e626",
+      "to_sha256": "41c30e40f08451ff7bd51d09d9f252aed21724140b08e365bba223483a5b87f1",
+      "ports_sha256": "04f8c6cb7c12d92161c59f0fd4ea1f2dc447b46a504912e7eacf8495a4771391",
+      "from_type": "code_change",
+      "to_type": "landing_page",
+      "output_quote": "Deliver editable source or a patch, dependencies, local build/preview commands and an integration map.",
+      "input_quote": "**The page** (required): its text top to bottom and, if you can, phone screenshots of the first screen and the buy area.",
+      "adaptation": "Build and open the actual changed React page using its supplied commands, then pass complete visible copy in reading order and current phone screenshots to the checker as landing_page. If no browser is available, provide only the actual copy and label visual/behavior checks unobserved.",
+      "condition": "The actual changed page must be available as rendered preview or complete text. Do not treat TSX, a generated reference image or a producer PASS label as evidence of the observed page.",
+      "rationale": "The code_change becomes the consumer landing_page through an explicit current render/copy capture. This supports a prelaunch checklist while keeping ad matching, real offer facts, speed measurement and launch authority separate."
     }
   }
 }

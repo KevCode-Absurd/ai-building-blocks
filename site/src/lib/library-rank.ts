@@ -74,6 +74,7 @@ export function rankLibraryResults<B extends RankBlock>(blocks: B[], hits: Map<s
   const wantsMinds = /\b(?:minds?|experts?|thinkers?|people|person|who)\b/i.test(query);
   // Owners first: a developer's, investor's or researcher's item sits a little lower unless the request is theirs.
   const forSpecialist = SPECIALIST_REQUEST.test(query);
+  const identifier = query.trim().toLowerCase();
   const score = new Map<string, number>();
   for (const b of blocks) {
     const hit = hits.get(b.slug), words = nameWords(b);
@@ -112,6 +113,7 @@ export function rankLibraryResults<B extends RankBlock>(blocks: B[], hits: Map<s
     if (!forSpecialist && audienceOf(b) === "specialist") value -= SPECIALIST_NUDGE;
     if (isTested(b)) value += 0.15;
     if (b.slug === suggestion) value += 0.5;
+    if (/^[a-z\d]+(?:-[a-z\d]+)+$/.test(identifier) && b.slug === identifier) value += 1000;
     score.set(b.slug, value);
     scores?.set(b.slug, value);
   }

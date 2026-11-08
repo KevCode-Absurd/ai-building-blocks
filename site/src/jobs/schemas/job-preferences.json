@@ -421,6 +421,84 @@
       },
       "minItems": 0,
       "maxItems": 50
+    },
+    "feedback_records": {
+      "type": "array",
+      "maxItems": 50,
+      "items": {
+        "type": "object",
+        "properties": {
+          "job": {
+            "type": "string",
+            "maxLength": 120
+          },
+          "job_id": {
+            "type": "string",
+            "maxLength": 120
+          },
+          "at": {
+            "type": "string",
+            "maxLength": 40
+          },
+          "scope": {
+            "enum": [
+              "artifact",
+              "family"
+            ]
+          },
+          "family": {
+            "type": "string",
+            "maxLength": 120
+          },
+          "slot_id": {
+            "type": "string",
+            "maxLength": 120
+          },
+          "path": {
+            "type": "string",
+            "maxLength": 240
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "action": {
+            "enum": [
+              "keep",
+              "kill",
+              "more_like_this"
+            ]
+          },
+          "issue": {
+            "enum": [
+              "general",
+              "product",
+              "brand",
+              "copy",
+              "composition",
+              "usability",
+              "format"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "maxLength": 2000
+          }
+        },
+        "required": [
+          "job",
+          "at",
+          "scope",
+          "family",
+          "slot_id",
+          "path",
+          "sha256",
+          "action",
+          "issue",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
     }
   },
   "required": [

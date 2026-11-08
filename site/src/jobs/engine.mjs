@@ -6,8 +6,10 @@ import { dialQuestions } from './dial-questions.mjs';
 import { jobMethod, deliveryTemplates } from './method.mjs';
 import { assembleRubric, scoreReview } from './rubric.mjs';
 import { refuseSecrets } from '../outcomes/engagement.mjs';
+import { buildExecutionPlan, EXECUTION_QUALITY_POLICY, validateExploration, validateProductionQuality } from './execution-quality.mjs';
+import {validateWorkContext} from './work-context.mjs';
 
-export const JOB_STATE_SCHEMA = 'ai-blocks-job-state/1';
+export const JOB_STATE_SCHEMA = 'ai-blocks-job-state/2';
 export const JOB_EVENTS = ['scope', 'staff', 'diverge', 'council', 'produce', 'review', 'revise', 'deliver', 'feedback', 'set_preferences', 'block', 'reopen'];
 export const TIER_SETTINGS = Object.freeze({ quick: { seats: [3, 4], council_rounds: 0, loops: 0, token_multiple: [1.5, 2] }, standard: { seats: [5, 7], council_rounds: 1, loops: 1, token_multiple: [2.5, 4] }, deep: { seats: [8, 12], council_rounds: 2, loops: 2, token_multiple: [5, 8] } });
 const encoder = new TextEncoder(), HASH = /^[a-f0-9]{64}$/;
@@ -72,15 +74,16 @@ function productionCheck(document, view, base, context) {
   }
   if (view.team.lead_seat_id && (document.lead_review?.by_seat !== view.team.lead_seat_id || document.lead_review?.status !== 'PASS' || !document.lead_review?.notes?.trim())) fail('document.lead_review', 'The task lead must check that the expert output meets the job before final review.');
   if (view.card.visual_spec) {
-    const spec = view.card.visual_spec, review = document.visual_review, reviewer = seats.get(review?.by_seat);
+    const spec = view.card.visual_spec, review = document.visual_review??(document.visual_delivery?{...document.visual_delivery,by_seat:document.visual_delivery.reviewer_id}:undefined), reviewer = seats.get(review?.by_seat);
     if (!(base.host_capabilities.visual_renderers ?? []).includes(spec.required_renderer)) fail('document.visual_review.renderer', 'The required visual renderer is unavailable. Stop or deliver a clearly labelled production brief; do not silently substitute a photo-card or another renderer.');
     if (!object(review) || review.renderer !== spec.required_renderer || !nonempty(review.receipt) || !reviewer || types(reviewer).has('maker') || !Array.isArray(review.items)) fail('document.visual_review', 'Record the actual renderer receipt and an independent non-maker visual review.');
-    if (review.items.length !== document.artifacts.length || new Set(review.items.map(x => x.slot_id)).size !== document.artifacts.length || document.artifacts.some(a => !review.items.some(x => x.slot_id === a.slot_id && x.status === 'PASS' && nonempty(x.reference_comparison) && nonempty(x.spec_comparison)))) fail('document.visual_review.items', 'Reject each output until visual comparison against the actual references and scoped specification passes; record the observations.');
+    const reviewedArtifacts=document.visual_review?document.artifacts:document.artifacts.filter(artifact=>artifact.modality==='image');
+    if (review.items.length !== reviewedArtifacts.length || new Set(review.items.map(x => x.slot_id)).size !== reviewedArtifacts.length || reviewedArtifacts.some(a => !review.items.some(x => x.slot_id === a.slot_id && x.status === 'PASS' && nonempty(x.reference_comparison) && nonempty(x.spec_comparison)))) fail('document.visual_review.items', 'Reject each output until visual comparison against the actual references and scoped specification passes; record the observations.');
   }
 }
 
 /** Replays validated history on every call. A recomputed digest cannot make an invalid phase jump valid. */
-function applyEvent(view, entry, base, catalogue) {
+async function applyEvent(view, entry, base, catalogue) {
   const { event, document, schema } = entry, context = contextFor(view, base, catalogue);
   if (!JOB_EVENTS.includes(event)) fail('event', 'Unknown job event.');
   if (!object(document)) fail('document', 'Send a document object.');
@@ -92,6 +95,7 @@ function applyEvent(view, entry, base, catalogue) {
   if (event !== 'revise' && event !== expectedEvent[view.phase]) fail('event', `The ${view.phase} phase expects ${expectedEvent[view.phase] ?? 'no work event'}.`);
   if (event === 'scope') {
     check(stageSchema.scope, document, context);
+    if(base.quality_policy?.version===1){const work=validateWorkContext(document.work_context,{request:base.request});if(!work.ok)throw new JobValidationError(work.errors);}
     const brain=document.brand_brain;
     if(!brain||!['AVAILABLE','BUILT'].includes(brain.status)||!brain.business?.trim()||!pathSafe(brain.path)||!HASH.test(brain.sha256??'')||brain.read_by_coordinator!==true||!document.context_sources.some(source=>source.ref===brain.path))fail('document.brand_brain','Load and read the existing brand brain, or build a verified one first. Record its business, safe path, SHA-256 and matching context source before staffing.');
     if (visualJobs.has(base.job_type.job) || visualRequest(base.request) || document.visual_spec !== undefined) checkVisualSpec(document.visual_spec);
@@ -116,6 +120,10 @@ function applyEvent(view, entry, base, catalogue) {
     if (spread) check('ai-blocks-spread/1', spread, context);
     if (!routes || (view.card.output_shape === 'many_artifacts' && !spread)) fail('document', 'Send a route board and a spread for multi-output work.');
     if (view.card.output_shape === 'many_artifacts' && spread.slots.length !== view.card.deliverables.reduce((n, d) => n + d.count, 0)) fail('document.spread.slots', 'The spread count must match the scoped deliverables.');
+    if (base.quality_policy?.version === 1) {
+      const explored = await validateExploration({ routes, spread, proposal_contents: document.proposal_contents, team: view.team, policy: base.quality_policy, host: base.host_capabilities, card: view.card });
+      if (!explored.ok) throw new JobValidationError(explored.errors);
+    }
     return { ...view, phase: 'DELIBERATE', routes, ...(spread ? { spread } : {}), proposal_contents: document.proposal_contents ?? {} };
   }
   if (event === 'council') {
@@ -127,12 +135,23 @@ function applyEvent(view, entry, base, catalogue) {
     for(const proposal of document.proposals){
       const pinned=view.proposal_contents?.[proposal.file]??view.proposal_contents?.[proposal.label];
       if(typeof pinned==='string'&&proposal.content!==undefined&&proposal.content!==pinned)fail('document.proposals.content','A proposal cannot change the original blind text while being critiqued. Record later changes in revisions.');
+      if (base.quality_policy?.version === 1) {
+        const route = view.routes.routes.find(route => route.route_id === proposal.ref);
+        if (route?.draft_receipt?.path !== proposal.file || !nonempty(proposal.content) || proposal.content !== view.proposal_contents?.[proposal.file]) fail('document.proposals', 'Consider the exact frozen draft text and receipt path. Keep later changes in revisions, not the original proposal.');
+      }
     }
     if (document.status === 'CONSENSUS_UNTESTED' && (document.red_team?.length ?? 0) < 2) fail('document.red_team', 'A winner without substantive criticism needs a second red-team pass.');
     if (base.tier === 'deep' && !([1,2].every(pass=>document.red_team?.some(r=>r.pass===pass)))) fail('document.red_team', 'Deep tier requires two red-team rounds.');
     return { ...view, phase: 'PRODUCE', council: document };
   }
-  if (event === 'produce') { productionCheck(document, view, base, context); return { ...view, phase: 'REVIEW', production: document, evidence: document.evidence, reviews: [] }; }
+  if (event === 'produce') {
+    productionCheck(document, view, base, context);
+    if (base.quality_policy?.version === 1) {
+      const quality = validateProductionQuality({ document, card: view.card, team: view.team, plan: buildExecutionPlan({ request: base.request, job: base.job_type.job, card: view.card, tier: base.tier, host: base.host_capabilities }) });
+      if (!quality.ok) throw new JobValidationError(quality.errors);
+    }
+    return { ...view, phase: 'REVIEW', production: document, evidence: document.evidence, reviews: [] };
+  }
   if (event === 'review') {
     check(stageSchema.review, document, context);
     if (document.loop !== view.loops) fail('document.loop', 'Report the current review pass number.');
@@ -169,20 +188,30 @@ function applyEvent(view, entry, base, catalogue) {
   }
   if (event === 'feedback') {
     if (!Array.isArray(document.items) || document.items.length > 200) fail('document.items', 'Send scoped keep, kill or more_like_this feedback.');
-    const feedback = document.items.map(f => { const a = view.production.artifacts.find(a => a.slot_id === f.slot_id); if (!a || !['keep', 'kill', 'more_like_this'].includes(f.action)) fail('document.items', 'Feedback must refer to an actual output and a supported action.'); return { family: a.family, action: f.action }; });
+    const feedback = document.items.map(f => {
+      const a = view.production.artifacts.find(a => a.slot_id === f.slot_id);
+      if (!a || !['keep', 'kill', 'more_like_this'].includes(f.action)) fail('document.items', 'Feedback must refer to an actual output and a supported action.');
+      if (!base.quality_policy) return { family: a.family, action: f.action };
+      const scope = f.scope ?? 'artifact';
+      if (!['artifact', 'family'].includes(scope) || (scope === 'family' && !nonempty(f.reason))) fail('document.items.scope', 'Default feedback concerns this artifact. Applying it to an entire format family requires an explicit family scope and reason.');
+      if ((f.sha256 !== undefined && f.sha256 !== a.sha256) || (f.reason !== undefined && (typeof f.reason !== 'string' || f.reason.length > 2000))) fail('document.items', 'Keep feedback tied to the actual delivered revision and a reason of at most 2,000 characters.');
+      return { family: a.family, action: f.action, scope, slot_id: a.slot_id, path: a.path, sha256: a.sha256, reason: f.reason ?? '', issue: f.issue ?? 'general' };
+    });
     const updated = updatePreferences(view.preferences ?? base.preferences, { job: base.job_type.job, feedback, job_id: base.job_id, at: entry.at });
+    if (!updated.ok) throw new JobValidationError(updated.errors);
     return { ...view, phase: 'COMPLETE', feedback: document, preferences: updated.preferences, preferences_changed: updated.changed };
   }
   return view;
 }
 
-function replay(state, catalogue) {
-  if (!object(state) || state.schema !== JOB_STATE_SCHEMA || !object(state.base) || !Array.isArray(state.history) || state.history.length > 60) fail('state', 'Send the complete job-state document from the previous result.');
+async function replay(state, catalogue) {
+  if (!object(state) || ![JOB_STATE_SCHEMA, 'ai-blocks-job-state/1'].includes(state.schema) || !object(state.base) || !Array.isArray(state.history) || state.history.length > 60) fail('state', 'Send the complete job-state document from the previous result.');
   bounded(state);
   const base = state.base;
+  if (state.schema === JOB_STATE_SCHEMA && canonicalJobJSON(base.quality_policy) !== canonicalJobJSON(EXECUTION_QUALITY_POLICY)) fail('state.base.quality_policy', 'Current jobs require the complete execution-quality policy. Do not remove or weaken its gates.');
   if (!/^job_[a-z0-9_-]{1,70}$/.test(base.job_id ?? '') || !TIER_SETTINGS[base.tier] || typeof base.request !== 'string' || !base.request.trim() || base.request.length > 4000 || !object(base.job_type) || !object(base.host_capabilities)) fail('state.base', 'The job identity, request, type and tier must be complete.');
   let view = { phase: 'SCOPE', loops: 0 };
-  for (const entry of state.history) { if (!object(entry) || typeof entry.at !== 'string') fail('state.history', 'Invalid recorded event.'); view = applyEvent(view, entry, base, catalogue); }
+  for (const entry of state.history) { if (!object(entry) || typeof entry.at !== 'string') fail('state.history', 'Invalid recorded event.'); view = await applyEvent(view, entry, base, catalogue); }
   return view;
 }
 
@@ -194,7 +223,9 @@ function nextAction(view, base) {
 
 async function describe(state, view, catalogue, initial = false) {
   const base = state.base, settings = TIER_SETTINGS[base.tier];
+  const execution_plan = buildExecutionPlan({ request: base.request, job: base.job_type.job, card: view.card, tier: base.tier, host: base.host_capabilities });
   const files = [{ path: 'state.json', content: JSON.stringify(state, null, 2) }];
+  files.push({ path: 'EXECUTION-PLAN.json', content: JSON.stringify(execution_plan, null, 2) });
   if (initial) files.push({ path: 'JOB-METHOD.md', content: jobMethod(base.host_profile, base.tier) }, { path: 'templates/JOB-CARD.json', content: JSON.stringify({ schema: 'ai-blocks-job-card/1', request_verbatim: base.request, dials: base.dials, job_to_be_done: '', output_shape: catalogue.approaches?.jobs?.[base.job_type.job]?.output_shape_default ?? 'many_artifacts', deliverables: [], audience: '', constraints: [], context_sources: base.context_refs, brand_brain:{status:'AVAILABLE',business:'',path:'brand-brain/00-index.md',sha256:'',read_by_coordinator:false}, facts: [], unknowns: [], questions_asked: [], acceptance: [], preferences_ref: base.preferences_ref, priors: { source: base.preferences ? 'memory' : 'none', families_that_worked: [], families_that_failed: [] } }, null, 2) });
   let proposal;
   if (view.phase === 'STAFF') { proposal = proposeTeam({ task: base.request, job: base.job_type.job, job_card: view.card, tier: base.tier, host_capabilities: base.host_capabilities }, catalogue); files.push({ path: 'TEAM-PROPOSAL.json', content: JSON.stringify(proposal, null, 2) }); }
@@ -203,10 +234,11 @@ async function describe(state, view, catalogue, initial = false) {
   if (view.preferences_changed) files.push(...localPreferences(view.preferences).files);
   const warnings = [];
   if (base.host_profile !== 'parallel') warnings.push('A single-context host cannot prove independent review. State the actual isolation used.');
+  if (!base.quality_policy) warnings.push('This legacy job predates execution-quality gates. Start a new job to use frozen draft and artifact-quality validation.');
   if(view.production?.artifacts?.some(a=>a.budget?.used===null))warnings.push('The host did not expose some producer tool-call totals; their allowance use is not verified.');
   if (view.needs_revision) warnings.push('The review failed. Unresolved work cannot be described as passing.');
   if (view.preferences_changed) warnings.push('Preference files are proposals for the authorized host to save; no account write ran on this public service.');
-  return { schema: 'ai-blocks-job/1', job_id: base.job_id, mode: base.mode, mode_reason: base.mode_reason, job_type: base.job_type, tier: base.tier, estimate: { seats: settings.seats[1], council_rounds: settings.council_rounds, token_multiple: settings.token_multiple, source: 'estimated' }, host_profile: base.host_profile, phase: view.phase, ok: true, errors: [], warnings, state, state_digest: await jobStateDigest(state), next_action: nextAction(view, base), files, ...(initial ? { dials: base.dials, dial_questions: base.dial_questions } : {}), ...(proposal ? { proposal } : {}), ...(view.rubric ? { rubric: view.rubric } : {}), ...(view.review_score ? { review_score: view.review_score } : {}), ...(view.preferences_changed ? { preference_update: localPreferences(view.preferences) } : {}), model_calls: 0, hosted_execution: false, stored_by_service: false, assurance: 'HOST_REPORTED_NOT_INDEPENDENTLY_VERIFIED' };
+  return { schema: 'ai-blocks-job/1', execution_plan, job_id: base.job_id, mode: base.mode, mode_reason: base.mode_reason, job_type: base.job_type, tier: base.tier, estimate: { seats: settings.seats[1], council_rounds: settings.council_rounds, token_multiple: settings.token_multiple, source: 'estimated' }, host_profile: base.host_profile, phase: view.phase, ok: true, errors: [], warnings, state, state_digest: await jobStateDigest(state), next_action: nextAction(view, base), files, ...(initial ? { dials: base.dials, dial_questions: base.dial_questions } : {}), ...(proposal ? { proposal } : {}), ...(view.rubric ? { rubric: view.rubric } : {}), ...(view.review_score ? { review_score: view.review_score } : {}), ...(view.preferences_changed ? { preference_update: localPreferences(view.preferences) } : {}), model_calls: 0, hosted_execution: false, stored_by_service: false, assurance: 'HOST_REPORTED_NOT_INDEPENDENTLY_VERIFIED' };
 }
 
 export async function startJob(input = {}, catalogue = {}) {
@@ -216,7 +248,7 @@ export async function startJob(input = {}, catalogue = {}) {
   if(input.from_option){
     const source=input.option_source;
     if(!source?.state||!HASH.test(source.state_digest??'')||await jobStateDigest(source.state)!==source.state_digest)fail('option_source','A stateless option rerun needs the original validated state and digest. Send option_source:{state,state_digest} from that delivery.');
-    const prior=replay(source.state,catalogue),option=prior.council?.decision?.option_cards?.find(o=>o.option_id===input.from_option);
+    const prior=await replay(source.state,catalogue),option=prior.council?.decision?.option_cards?.find(o=>o.option_id===input.from_option);
     if(!option)fail('from_option','This option does not exist in the supplied job record.');
     const proposal=prior.council.proposals.find(p=>p.label===option.from);
     rerun={option_id:option.option_id,pitch:option.pitch,proposal,source_job_id:source.state.base.job_id};
@@ -228,13 +260,13 @@ export async function startJob(input = {}, catalogue = {}) {
     const selectedItem=input.item_id??(routed.selected_id&&catalogue.items?.some(i=>i.slug===routed.selected_id)?routed.selected_id:null);
     const selectedRole=input.role_id??(routed.selected_id&&(Array.isArray(catalogue.roles)?catalogue.roles:catalogue.roles?.roles??[]).some(r=>r.id===routed.selected_id)?routed.selected_id:null);
     const action=routed.mode==='outcome'?{tool:'start_outcome',args:{request:input.request}}:selectedItem?{tool:'get_item',args:{id:selectedItem}}:selectedRole?{tool:'prepare_specialist',args:{role_id:selectedRole}}:input.persona_id?{tool:'load_agent',server:'https://agents.useaiblocks.com/mcp',args:{id:input.persona_id}}:{tool:'find_specialist',args:{task:input.request}};
-    return {schema:'ai-blocks-job/1',job_id:'job_'+crypto.randomUUID(),...routed,tier:'quick',estimate:{seats:1,council_rounds:0,token_multiple:[1,1],source:'estimated'},host_profile:input.host_capabilities?.parallel_agents?'parallel':'sequential',phase:'ROUTE',next_action:{event:null,...action,instruction:'Before any production, read the complete verified brand brain or build one from authorized sources; use a verified project context brain for non-business work. Keep the path, hash and read receipt with the job. For visual work, inspect brand references and the requested formats, discover the actual required image/video or page renderer, and have a non-maker visually reject work that fails the references or specification. Never silently substitute a photo-card for requested generation. '+(routed.mode==='outcome'?'Continue in the outcome track, retaining the owner’s words.':'Load the named item or specialist through the existing direct tools.')},files:[],model_calls:0,stored_by_service:false,hosted_execution:false};
+    return {schema:'ai-blocks-job/1',execution_plan:buildExecutionPlan({request:input.request,job:routed.job_type.job,tier:'quick',host:input.host_capabilities}),job_id:'job_'+crypto.randomUUID(),...routed,tier:'quick',estimate:{seats:1,council_rounds:0,token_multiple:[1,1],source:'estimated'},host_profile:input.host_capabilities?.parallel_agents?'parallel':'sequential',phase:'ROUTE',next_action:{event:null,...action,instruction:'Before any production, read the complete verified brand brain or build one from authorized sources; use a verified project context brain for non-business work. Keep the path, hash and read receipt with the job. For visual work, inspect brand references and the requested formats, discover the actual required image/video or page renderer, and have a non-maker visually reject work that fails the references or specification. Never silently substitute a photo-card for requested generation. '+(routed.mode==='outcome'?'Continue in the outcome track, retaining the owner’s words.':'Load the named item or specialist through the existing direct tools.')},files:[],model_calls:0,stored_by_service:false,hosted_execution:false};
   }
   const approachJob = catalogue.approaches?.jobs?.[routed.job_type.job] ?? {}, host = input.host_capabilities ?? {};
   const resolved = resolveDials({ ...input, job: routed.job_type.job, approachJob }); if (!resolved.ok) throw new JobValidationError(resolved.errors);
   const host_profile = input.host_profile ?? (host.parallel_agents && host.max_parallel >= 2 ? 'parallel' : 'sequential');
   const tier = resolved.dials.depth.value;
-  const base = { job_id: `job_${crypto.randomUUID()}`, request: input.request, mode: 'team', mode_reason: routed.mode_reason, job_type: routed.job_type, tier, host_profile, host_capabilities: host, explicit_dials: input.dials ?? {}, dials: resolved.dials, dial_questions: dialQuestions({ dials: resolved.dials, approachJob, output_shape: approachJob.output_shape_default }), context_refs: input.context_refs ?? [], parent_outcome_id: input.parent_outcome_id ?? null, from_option: rerun ?? null, preferences: input.preferences ?? null, preferences_ref: input.preferences_ref ?? { store: input.preferences ? 'local' : 'none', id: '', version: input.preferences?.version ?? 0 } };
+  const base = { quality_policy: { ...EXECUTION_QUALITY_POLICY }, job_id: `job_${crypto.randomUUID()}`, request: input.request, mode: 'team', mode_reason: routed.mode_reason, job_type: routed.job_type, tier, host_profile, host_capabilities: host, explicit_dials: input.dials ?? {}, dials: resolved.dials, dial_questions: dialQuestions({ dials: resolved.dials, approachJob, output_shape: approachJob.output_shape_default }), context_refs: input.context_refs ?? [], parent_outcome_id: input.parent_outcome_id ?? null, from_option: rerun ?? null, preferences: input.preferences ?? null, preferences_ref: input.preferences_ref ?? { store: input.preferences ? 'local' : 'none', id: '', version: input.preferences?.version ?? 0 } };
   const state = { schema: JOB_STATE_SCHEMA, base, history: [] };
   const response = await describe(state, { phase: 'SCOPE', loops: 0 }, catalogue, true);
   if(rerun){response.rerun=rerun;response.files.push({path:'OPTION.json',content:JSON.stringify(rerun,null,2)});response.next_action.instruction+=' Scope this rerun around OPTION.json and preserve its winning conditions.';}
@@ -247,13 +279,13 @@ export async function advanceJob(input, catalogue = {}) {
   const { state, state_digest, job_id, event } = input ?? {};
   if (!HASH.test(state_digest ?? '') || await jobStateDigest(state) !== state_digest) fail('state_digest', 'The state changed. Send state.json and the digest from the latest result unchanged.');
   if (job_id !== state?.base?.job_id) fail('job_id', 'The job ID must match its state.');
-  let view = replay(state, catalogue), document = input.document;
+  let view = await replay(state, catalogue), document = input.document;
   if (event === 'staff' && (input.accept_proposal === true || document?.accept_proposal === true)) {
     const proposal = proposeTeam({ task: state.base.request, job: state.base.job_type.job, job_card: view.card, tier: state.base.tier, host_capabilities: state.base.host_capabilities }, catalogue);
     document = asTeamPlan(proposal, view.card);
   }
   const entry = { event, schema: input.schema ?? document?.schema ?? null, document, at: new Date().toISOString() };
-  view = applyEvent(view, entry, state.base, catalogue);
+  view = await applyEvent(view, entry, state.base, catalogue);
   const next = structuredClone({ ...state, history: [...state.history, entry] }); bounded(next);
   return describe(next, view, catalogue);
 }

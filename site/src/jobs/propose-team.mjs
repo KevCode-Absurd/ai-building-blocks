@@ -2,6 +2,7 @@
 import {classifyJob} from './router.mjs';
 import {rankRoles,rerankDiverse} from '../roles/specialist-matching.mjs';
 import {discoverStudioFormats,isStaticAdRequest} from './studio-discovery.mjs';
+import {buildExecutionPlan} from './execution-quality.mjs';
 const array=value=>Array.isArray(value)?value:[];
 const unique=values=>[...new Set(values)];
 const text=value=>typeof value==='string'?value.trim():'';
@@ -57,8 +58,13 @@ export function proposeTeam(input={},context={}) {
  if(!roles.length)errors.push({path:'roles',message:'No role inventory is available.'});
  if(errors.length)return {schema:'ai-blocks-team-proposal/1',ok:false,errors,warnings,seats:[],model_calls:0};
  const approachResult=getApproaches(context.approaches??{},{job:text(input.job??input.job_card?.job_type?.job),task},context);
+ const executionPlan=buildExecutionPlan({request:task,job:approachResult.job,card:input.job_card,tier,host:input.host_capabilities});
+ const launchable=executionPlan.landing_pages.delivery_mode==='LAUNCHABLE_SITE';
+ const implementationFamily=array(context.approaches?.jobs?.['write-landing-page']?.families).find(family=>family.id==='built-experiences');
  const familyPool=array(approachResult.families),chosenFamilies=input.job_card?.dials?.families?.value;
- const families=Array.isArray(chosenFamilies)?familyPool.filter(family=>chosenFamilies.includes(family.id)):familyPool;
+ const families=Array.isArray(chosenFamilies)?familyPool.filter(family=>chosenFamilies.includes(family.id)):familyPool.slice();
+ // Mixed ad + page jobs still need implementation, not only copy/design plans.
+ if(launchable&&implementationFamily&&!families.some(family=>family.id===implementationFamily.id))families.push(implementationFamily);
  if(!families.length)warnings.push({path:'families',message:'This job has no reviewed approach mapping yet. Do not claim a variety pass until real families have been mapped.'});
  if(context.approaches?.review_status&&context.approaches.review_status!=='REVIEWED')warnings.push({path:'approaches',message:'Approach mappings are source-seeded and still need review.'});
  const index={roles},ranked=rankRoles(index,task),rankedIds=new Set(ranked.map(row=>row.role.id));
@@ -105,11 +111,13 @@ export function proposeTeam(input={},context={}) {
  const makers=[];
  for(let n=0;n<makerCount;n++) {
   const assigned=families.filter((_,index)=>index%makerCount===n).map(family=>family.id);
+  if(launchable&&implementationFamily&&!assigned.includes(implementationFamily.id))assigned.push(implementationFamily.id);
   const familyRoles=roles.filter(role=>array(role.families).some(family=>assigned.includes(family))).sort((a,b)=>(ranked.find(row=>row.role.id===b.id)?.score??0)-(ranked.find(row=>row.role.id===a.id)?.score??0)||a.id.localeCompare(b.id));
-  const creativeRoles=approachResult.job==='make-image-ads'?[n===0?'design-specialist':'scroll-stopping-image-ads']:[];
+  const pageRoles=launchable?(n===0?['ad-landing-page','design-specialist']:/\bshopify\b/i.test(task)?['shopify-theme-specialist','engineering-frontend-developer']:/\b(?:react|next\.?js)\b/i.test(task)?['react-frontend-specialist','engineering-frontend-developer']:['engineering-frontend-developer','react-frontend-specialist']):[];
+  const creativeRoles=pageRoles.length?pageRoles:approachResult.job==='make-image-ads'?[n===0?'design-specialist':'scroll-stopping-image-ads']:[];
   const preferred=[...creativeRoles.filter(id=>roles.some(role=>role.id===id)),...familyRoles.map(role=>role.id),...makerIds];
   const maker=add('maker',['maker','strategist'],{lens:['craft','customer','growth','outsider'][n],familyIds:assigned,prefer:preferred});
-  if(maker){maker.responsibilities=['Write a rival route before reading other proposals','Produce the assigned families in their own pipelines','Run each method in full and record evidence'];makers.push(maker);}
+  if(maker){maker.responsibilities=['Write a rival route before reading other proposals','Produce the assigned families in their own pipelines','Run each method in full and record evidence'];if(launchable)maker.responsibilities.push(n===0?'Lead the buyer argument and brand design; reuse the existing site and hand an accepted specification to the implementer.':'Inspect the actual site stack, choose a compatible pinned builder, extend its real source/components, and verify the current build, buyer action, mobile and keyboard behaviour.');makers.push(maker);}
  }
  if(approachResult.studio)for(const maker of makers){
   const refs=[...approachResult.studio.visual_worlds,...approachResult.studio.image_variants].map(row=>row.method).concat(approachResult.studio.formats.filter(row=>row.medium==='image').flatMap(row=>row.related_methods)).filter(ref=>ref.status==='AVAILABLE');
@@ -119,7 +127,7 @@ export function proposeTeam(input={},context={}) {
   const requested=array(input.job_card?.deliverables).reduce((n,row)=>n+(Number.isSafeInteger(row?.count)&&row.count>0?row.count:0),0);
   if(requested)maker.budget.max_generations=Math.max(maker.budget.max_generations,Math.ceil(requested/Math.max(1,makers.length)));
  }
- const lead=[...makers].sort((a,b)=>(ranked.find(row=>row.role.id===b.role_id)?.score??0)-(ranked.find(row=>row.role.id===a.role_id)?.score??0)||a.role_id.localeCompare(b.role_id))[0]??null;
+ const lead=(launchable&&['ad-landing-page','design-specialist'].includes(makers[0]?.role_id)?makers[0]:null)??[...makers].sort((a,b)=>(ranked.find(row=>row.role.id===b.role_id)?.score??0)-(ranked.find(row=>row.role.id===a.role_id)?.score??0)||a.role_id.localeCompare(b.role_id))[0]??null;
  if(lead)lead.responsibilities.unshift('Lead production for this request and coordinate makers');
  if(tier!=='quick') {
   const red=add('red_team',['red_team','strategist'],{lens:'sceptic',prefer:approachResult.job==='make-image-ads'&&roles.some(role=>role.id==='media-buyer')?['media-buyer']:[]});if(red)red.responsibilities=['Offer an independent rival route','Attack the leading choice and defend the weakest viable option'];
@@ -134,7 +142,7 @@ export function proposeTeam(input={},context={}) {
  if(tier!=='quick') {
   const critic=add('critic',['critic'],{lens:'brand-guardian'});if(critic)critic.responsibilities=['Challenge proposals through an independent discipline','Record the strongest dissent in plain language'];
  }
- const proposal={schema:'ai-blocks-team-proposal/1',ok:errors.length===0,job:approachResult.job,tier,goal:task,coordinator_seat_id:coordinator?.seat_id??null,lead_seat_id:lead?.seat_id??null,seats,...(approachResult.studio?{studio_discovery:approachResult.studio}:{}),working_groups:[{id:'production',lead_seat_id:lead?.seat_id??null,members:makers.map(seat=>seat.seat_id),reports_to:coordinator?.seat_id??null},{id:'independent-review',lead_seat_id:judges[0]?.seat_id??null,members:seats.filter(seat=>['judge','fact_checker','critic'].includes(seat.seat_type)).map(seat=>seat.seat_id),reports_to:coordinator?.seat_id??null}],estimate:{seats:seats.length,council_rounds:config.council_rounds,token_multiple:config.token_multiple,source:'estimated'},errors,warnings,model_calls:0,verification:'HOST_REPORTED_NOT_INDEPENDENTLY_VERIFIED'};
+ const proposal={schema:'ai-blocks-team-proposal/1',ok:errors.length===0,job:approachResult.job,tier,goal:task,coordinator_seat_id:coordinator?.seat_id??null,lead_seat_id:lead?.seat_id??null,seats,...(launchable?{landing_page_execution:executionPlan.landing_pages}:{}),...(approachResult.studio?{studio_discovery:approachResult.studio}:{}),working_groups:[{id:'production',lead_seat_id:lead?.seat_id??null,members:makers.map(seat=>seat.seat_id),reports_to:coordinator?.seat_id??null},{id:'independent-review',lead_seat_id:judges[0]?.seat_id??null,members:seats.filter(seat=>['judge','fact_checker','critic'].includes(seat.seat_type)).map(seat=>seat.seat_id),reports_to:coordinator?.seat_id??null}],estimate:{seats:seats.length,council_rounds:config.council_rounds,token_multiple:config.token_multiple,source:'estimated'},errors,warnings,model_calls:0,verification:'HOST_REPORTED_NOT_INDEPENDENTLY_VERIFIED'};
  return {...proposal,proposal_id:'tp_'+identity(proposal)};
 }
 

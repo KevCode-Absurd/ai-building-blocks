@@ -168,6 +168,8 @@ Treat the answer as a lead to confirm, not as proof.
 
 **Test it.** Write the same short piece twice, once in their new voice and once as a plain assistant would. A reply to a client who wants a discount works well, or a 100-word progress update. Show both without saying which is which. Ask, "Which one sounds like you? What's off in it?" Fix personality.md until they pick theirs.
 
+Also test two conflicting customer voices and a non-prose task, such as verse or code. The current task must override the trainer's persona, approved brand/existing-work invariants precede specialist defaults, and neutral house wording comes last. Do not normalise every client to one sentence length, reading grade, vocabulary or punctuation style. Separate the agent's own status voice from the customer's deliverable voice. Use OUTPUT-POLICY.md.
+
 **Checkpoint.** They approve personality.md. If you used an export, remind them to delete their copy of it when they no longer need it.
 
 ### Stage 3: Your soul (about 30 minutes)
@@ -228,7 +230,7 @@ The `name` must use lowercase letters, numbers and single hyphens only, be 64 ch
 
 ### Stage 6: Test rounds (about 2 to 4 hours)
 
-This stage proves the agent is better than plain AI, and every lesson becomes a rule. Read training/test-briefs.md and training/scorecard.md first.
+This stage collects task-specific comparison evidence; it does not prove general superiority. Read training/test-briefs.md and training/scorecard.md first. Keep lessons scoped to their task, brand and failed requirement. Check factual provenance separately from presentation, permit verified authorised research, and never count a result with unresolved required placeholders or missing native artifacts as ready to use.
 
 **Pick five briefs.** training/test-briefs.md has five to eight. Choose five, starting with the hardest. If the person has a real tough situation from their own work, offer to swap it in, with the names taken out.
 

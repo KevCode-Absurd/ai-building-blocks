@@ -6,7 +6,57 @@
     <description>The newest free AI skills, workflows, prompts, agents and minds on AI Blocks, and the ones that changed most recently.</description>
     <language>en</language>
     <atom:link href="https://useaiblocks.com/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 05 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Plain HTML landing page builder</title>
+      <link>https://useaiblocks.com/skills/static-html-landing-page-builder</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/static-html-landing-page-builder</guid>
+      <description>Share approved copy and layout. Get a responsive HTML page, local files and recorded browser checks.</description>
+      <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Write and build a landing page</category>
+    </item>
+    <item>
+      <title>React landing page builder</title>
+      <link>https://useaiblocks.com/skills/react-landing-page-builder</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/react-landing-page-builder</guid>
+      <description>Describe your product and get a React landing page builder result: a Next.js page with hero, pricing, FAQ and proof sections, plus SEO tags.</description>
+      <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Write and build a landing page</category>
+    </item>
+    <item>
+      <title>Ad-matched landing page writer</title>
+      <link>https://useaiblocks.com/skills/ad-matched-landing-page-writer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/ad-matched-landing-page-writer</guid>
+      <description>Write landing page copy that picks up where your ad left off. Give it the ad, your facts and reviews. You get a page with the full cost stated.</description>
+      <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Write and build a landing page</category>
+    </item>
+    <item>
+      <title>Landing page design planner</title>
+      <link>https://useaiblocks.com/skills/landing-page-design-planner</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/landing-page-design-planner</guid>
+      <description>Plan a landing page design from your copy and brand. Get three different directions, a section plan and a build brief, before anyone builds.</description>
+      <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Write and build a landing page</category>
+    </item>
+    <item>
+      <title>Shopify landing page builder</title>
+      <link>https://useaiblocks.com/skills/shopify-landing-page-builder</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/shopify-landing-page-builder</guid>
+      <description>Turn your finished landing page copy into a Shopify landing page: a section file, a page template with your words in, and install steps.</description>
+      <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Write and build a landing page</category>
+    </item>
     <item>
       <title>Website design token extractor</title>
       <link>https://useaiblocks.com/skills/website-design-token-extractor</link>
@@ -956,56 +1006,6 @@
       <category>updated</category>
       <category>skill</category>
       <category>Grow on social</category>
-    </item>
-    <item>
-      <title>Break-even ad cost calculator</title>
-      <link>https://useaiblocks.com/prompts/break-even-ad-target-finder</link>
-      <guid isPermaLink="true">https://useaiblocks.com/prompts/break-even-ad-target-finder</guid>
-      <description>Share one product&apos;s price and costs. Get profit per order, an ad-cost limit and the sales return needed to break even.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>prompt</category>
-      <category>Track your numbers</category>
-    </item>
-    <item>
-      <title>Break-even ROAS and CPA calculator</title>
-      <link>https://useaiblocks.com/skills/break-even-roas-and-cpa-calculator</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/break-even-roas-and-cpa-calculator</guid>
-      <description>Share order value, costs and ad figures. Get ad-cost limits, a matching cost check and clear gaps before choosing a test.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Run Google Ads</category>
-    </item>
-    <item>
-      <title>Browse abandonment email flow builder</title>
-      <link>https://useaiblocks.com/skills/browse-abandonment-flow-builder</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/browse-abandonment-flow-builder</guid>
-      <description>Share products, proof and offer rules. Get site-visit and product-view email flows, with entry rules, timing and message outlines.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Write emails that get read</category>
-    </item>
-    <item>
-      <title>Bundle tier layout planner</title>
-      <link>https://useaiblocks.com/skills/bundle-tier-layout-planner</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/bundle-tier-layout-planner</guid>
-      <description>Plan a bundle tier layout for your product page. Give it your price and costs. You get three tiers, savings wording, a margin check and a test plan.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Make an offer people want</category>
-    </item>
-    <item>
-      <title>Buyer group video script writer</title>
-      <link>https://useaiblocks.com/skills/persona-script-multiplier</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/persona-script-multiplier</guid>
-      <description>Turn one winning video ad script into a script for each buyer group, with a matching page brief and claim notes. Test new buyers, not new ideas.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Write ad copy</category>
     </item>
   </channel>
 </rss>

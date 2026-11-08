@@ -1,4 +1,6 @@
 import type { Persona, TeamSeatType } from "../../core/types.ts";
+import {qualityMethodMarkdown} from '../directory/execution.ts';
+import {outputPolicyMarkdown} from '../runner/output-policy.ts';
 import { generalCoordinatorMarkdown, MAX_SEAT_BYTES, personaTeam, roleSeatMarkdown, seatBriefMarkdown, seatPlaybook, TEAM_SEAT_TYPES, teamMarkdown, type SeatRequest } from "../directory/team.ts";
 
 const SLUG = /^[a-z0-9][a-z0-9_-]{0,127}$/;
@@ -79,7 +81,7 @@ function clip(value: string, bytes: number): { text: string; cut: boolean } {
 
 export function trimmedSeatPack(persona: Persona | null, seat: SeatAssignment, soul: string, access: string, other_files: { path: string; purpose: string }[]): TrimmedSeatPack {
   const trimmed: string[] = [];
-  const files: Record<string, string> = {};
+  const files: Record<string, string> = {'QUALITY-METHOD.md':qualityMethodMarkdown(),'OUTPUT-POLICY.md':outputPolicyMarkdown()};
   const seat_types = seat.seat_types ?? [seat.seat_type];
   const neutralCoordinator = !persona && seat.seat_type === "coordinator" && seat.role_id === "general-coordinator";
   if (!persona) {

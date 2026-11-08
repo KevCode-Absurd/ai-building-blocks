@@ -1,5 +1,6 @@
 // Synthetic structural data. These fixtures are not real host recordings or quality evidence.
 import fs from 'node:fs';
+import { createHash } from 'node:crypto';
 import {proposeTeam} from '../../../src/jobs/propose-team.mjs';
 const rows = JSON.parse(fs.readFileSync(new URL('./contracts.json', import.meta.url), 'utf8'));
 const document = schema => structuredClone(rows.find(row => row.schema === schema).valid[0].document);
@@ -30,6 +31,15 @@ export function engineFixture({ tier = 'standard' } = {}) {
   council.ranking.ballots[0].order.push('C'); council.ranking.result.push('C');
   if(tier==='quick'){council.proposals=council.proposals.filter(p=>p.label!=='C');council.critiques=council.critiques.filter(c=>c.by_seat==='s1'&&c.on!=='C');council.ranking.ballots[0].order=['A','B'];council.ranking.result=['A','B'];council.red_team=[];council.decision.dissent.by_seat='s1';}
   if(tier==='deep')council.red_team.push({...council.red_team[0],pass:2});
+  const proposal_contents = Object.fromEntries(council.proposals.map(proposal => [proposal.file, proposal.content]));
+  for (const route of routes.routes) {
+    const proposal = council.proposals.find(proposal => proposal.ref === route.route_id);
+    route.draft_receipt = { context_id: `fixture-isolated-${route.owner_seat}`, path: proposal.file, sha256: createHash('sha256').update(proposal.content).digest('hex'), isolation: 'ISOLATED', saw_other_proposals: false };
+  }
+  const promises = ['Make an everyday ritual feel personal','Give a meaningful anniversary gift','Understand the construction before choosing','Wear a confident festive statement','Find a light piece for office days','Commission a piece around your story'];
+  const proofs = ['Close view of the actual setting','Gift presentation and size comparison','Exploded construction with sourced labels','Verified materials beside the worn piece','Measured proportions and fit view','Documented custom design steps'];
+  const compositions = ['Generous side-lit portrait with one focal object','Tactile tabletop still life with generous space','Asymmetric illustrated cutaway with precise callouts','Fashion spread with a strong silhouette','Quiet overhead flat lay with scale cue','Editorial sequential panels with material details'];
+  for (const [index, slot] of spread.slots.entries()) slot.concept = { audience: 'Business owners in the synthetic contract test', promise: promises[index], proof: proofs[index], composition: compositions[index], visual_world: 'A consistent synthetic test brand' };
   const production = document('ai-blocks-production/1');
   production.artifacts = spread.slots.map((slot, n) => ({ slot_id: slot.slot_id, kind: card.deliverables[0].kind, path: `deliverables/output-${n}.md`, sha256: 'a'.repeat(64), maker_seat: slot.maker_seat, family: slot.family, modality: slot.modality, items: structuredClone(slot.items), producer_note: 'A source-backed recommendation. All six outputs are delivered.', claims: [], checks: [{ id: 'useful', status: 'PASS' }], budget: { used: 0, allowance: 0 } }));
   const review = document('ai-blocks-review/1');
@@ -40,5 +50,5 @@ export function engineFixture({ tier = 'standard' } = {}) {
   if (!delivery.files.some(f => f.path === 'SPREAD.md')) delivery.files.push({ path: 'SPREAD.md', sha256: 'a'.repeat(64) });
   delivery.deliverables = production.artifacts.map(a => ({ slot_id: a.slot_id, path: a.path, sha256: a.sha256 }));
   const input = { request: card.request_verbatim, mode: 'team', dials: { depth: tier }, host_capabilities: { parallel_agents: true, max_parallel: 4, tools: ['text'], models: ['fixture-model'] } };
-  return { provenance: 'SYNTHETIC_STRUCTURAL_FIXTURE', input, context, card, team, routes, spread, council, production, review, delivery, events: [{ event: 'scope', document: card }, { event: 'staff', document: team }, { event: 'diverge', document: { routes, spread } }, { event: 'council', document: council }, { event: 'produce', document: production }, { event: 'review', document: review }, { event: 'deliver', document: delivery }, { event: 'feedback', document: { items: [{ slot_id: 'd0', action: 'keep' }] } }] };
+  return { provenance: 'SYNTHETIC_STRUCTURAL_FIXTURE', input, context, card, team, routes, spread, council, production, review, delivery, events: [{ event: 'scope', document: card }, { event: 'staff', document: team }, { event: 'diverge', document: { routes, spread, proposal_contents } }, { event: 'council', document: council }, { event: 'produce', document: production }, { event: 'review', document: review }, { event: 'deliver', document: delivery }, { event: 'feedback', document: { items: [{ slot_id: 'd0', action: 'keep' }] } }] };
 }

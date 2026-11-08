@@ -5372,5 +5372,1203 @@
         }
       }
     ]
+  },
+  {
+    "schema": "ai-blocks-landing-page-delivery/1",
+    "valid": [
+      {
+        "name": "launchable-source",
+        "document": {
+          "schema": "ai-blocks-landing-page-delivery/1",
+          "mode": "LAUNCHABLE_SITE",
+          "artifacts": [
+            {
+              "slot_id": "page-1",
+              "source": {
+                "path": "pages/source.zip",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "entrypoint": "src/page.tsx",
+                "build_command": "npm run build",
+                "preview_command": "npm run preview"
+              },
+              "existing_site": {
+                "status": "ADAPTED",
+                "url": "https://example.test",
+                "evidence": "receipts/site.json",
+                "rationale": "Synthetic contract fixture keeps the original site shell.",
+                "integration_target": "src/page.tsx",
+                "reused_components": [
+                  "Header",
+                  "brand.css"
+                ]
+              },
+              "brand": {
+                "brain_ref": "brand/index.md",
+                "font_refs": [
+                  "brand/fonts.css"
+                ],
+                "asset_refs": [
+                  "brand/logo.svg"
+                ],
+                "evidence": "receipts/brand.json"
+              },
+              "checks": [
+                {
+                  "id": "build",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/build.json",
+                  "observed": "Synthetic current-build observation for build."
+                },
+                {
+                  "id": "primary_action",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/primary_action.json",
+                  "observed": "Synthetic current-build observation for primary_action."
+                },
+                {
+                  "id": "links_assets",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/links_assets.json",
+                  "observed": "Synthetic current-build observation for links_assets."
+                },
+                {
+                  "id": "responsive",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/responsive.json",
+                  "observed": "Synthetic current-build observation for responsive.",
+                  "viewport": {
+                    "width": 390,
+                    "height": 844
+                  }
+                },
+                {
+                  "id": "keyboard_accessibility",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/keyboard_accessibility.json",
+                  "observed": "Synthetic current-build observation for keyboard_accessibility."
+                },
+                {
+                  "id": "brand_content",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/brand_content.json",
+                  "observed": "Synthetic current-build observation for brand_content."
+                },
+                {
+                  "id": "responsive",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/desktop.json",
+                  "observed": "Synthetic desktop layout comparison.",
+                  "viewport": {
+                    "width": 1440,
+                    "height": 900
+                  }
+                }
+              ],
+              "limitations": []
+            }
+          ]
+        }
+      },
+      {
+        "name": "second-current-source",
+        "document": {
+          "schema": "ai-blocks-landing-page-delivery/1",
+          "mode": "LAUNCHABLE_SITE",
+          "artifacts": [
+            {
+              "slot_id": "page-2",
+              "source": {
+                "path": "pages/source.zip",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "entrypoint": "src/page.tsx",
+                "build_command": "npm run build",
+                "preview_command": "npm run preview"
+              },
+              "existing_site": {
+                "status": "ADAPTED",
+                "url": "https://example.test",
+                "evidence": "receipts/site.json",
+                "rationale": "Synthetic contract fixture keeps the original site shell.",
+                "integration_target": "src/page.tsx",
+                "reused_components": [
+                  "Header",
+                  "brand.css"
+                ]
+              },
+              "brand": {
+                "brain_ref": "brand/index.md",
+                "font_refs": [
+                  "brand/fonts.css"
+                ],
+                "asset_refs": [
+                  "brand/logo.svg"
+                ],
+                "evidence": "receipts/brand.json"
+              },
+              "checks": [
+                {
+                  "id": "build",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/build.json",
+                  "observed": "Synthetic current-build observation for build."
+                },
+                {
+                  "id": "primary_action",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/primary_action.json",
+                  "observed": "Synthetic current-build observation for primary_action."
+                },
+                {
+                  "id": "links_assets",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/links_assets.json",
+                  "observed": "Synthetic current-build observation for links_assets."
+                },
+                {
+                  "id": "responsive",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/responsive.json",
+                  "observed": "Synthetic current-build observation for responsive.",
+                  "viewport": {
+                    "width": 390,
+                    "height": 844
+                  }
+                },
+                {
+                  "id": "keyboard_accessibility",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/keyboard_accessibility.json",
+                  "observed": "Synthetic current-build observation for keyboard_accessibility."
+                },
+                {
+                  "id": "brand_content",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/brand_content.json",
+                  "observed": "Synthetic current-build observation for brand_content."
+                },
+                {
+                  "id": "responsive",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/desktop.json",
+                  "observed": "Synthetic desktop layout comparison.",
+                  "viewport": {
+                    "width": 1440,
+                    "height": 900
+                  }
+                }
+              ],
+              "limitations": []
+            }
+          ]
+        }
+      },
+      {
+        "name": "explicit-design-reference",
+        "document": {
+          "schema": "ai-blocks-landing-page-delivery/1",
+          "mode": "DESIGN_REFERENCE",
+          "artifacts": []
+        }
+      }
+    ],
+    "invalid": [
+      {
+        "name": "null",
+        "document": null
+      },
+      {
+        "name": "empty",
+        "document": {}
+      },
+      {
+        "name": "missing-schema",
+        "document": {
+          "mode": "LAUNCHABLE_SITE",
+          "artifacts": [
+            {
+              "slot_id": "page-1",
+              "source": {
+                "path": "pages/source.zip",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "entrypoint": "src/page.tsx",
+                "build_command": "npm run build",
+                "preview_command": "npm run preview"
+              },
+              "existing_site": {
+                "status": "ADAPTED",
+                "url": "https://example.test",
+                "evidence": "receipts/site.json",
+                "rationale": "Synthetic contract fixture keeps the original site shell.",
+                "integration_target": "src/page.tsx",
+                "reused_components": [
+                  "Header",
+                  "brand.css"
+                ]
+              },
+              "brand": {
+                "brain_ref": "brand/index.md",
+                "font_refs": [
+                  "brand/fonts.css"
+                ],
+                "asset_refs": [
+                  "brand/logo.svg"
+                ],
+                "evidence": "receipts/brand.json"
+              },
+              "checks": [
+                {
+                  "id": "build",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/build.json",
+                  "observed": "Synthetic current-build observation for build."
+                },
+                {
+                  "id": "primary_action",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/primary_action.json",
+                  "observed": "Synthetic current-build observation for primary_action."
+                },
+                {
+                  "id": "links_assets",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/links_assets.json",
+                  "observed": "Synthetic current-build observation for links_assets."
+                },
+                {
+                  "id": "responsive",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/responsive.json",
+                  "observed": "Synthetic current-build observation for responsive.",
+                  "viewport": {
+                    "width": 390,
+                    "height": 844
+                  }
+                },
+                {
+                  "id": "keyboard_accessibility",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/keyboard_accessibility.json",
+                  "observed": "Synthetic current-build observation for keyboard_accessibility."
+                },
+                {
+                  "id": "brand_content",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/brand_content.json",
+                  "observed": "Synthetic current-build observation for brand_content."
+                },
+                {
+                  "id": "responsive",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/desktop.json",
+                  "observed": "Synthetic desktop layout comparison.",
+                  "viewport": {
+                    "width": 1440,
+                    "height": 900
+                  }
+                }
+              ],
+              "limitations": []
+            }
+          ]
+        }
+      },
+      {
+        "name": "wrong-schema",
+        "document": {
+          "schema": "unknown/1",
+          "mode": "LAUNCHABLE_SITE",
+          "artifacts": [
+            {
+              "slot_id": "page-1",
+              "source": {
+                "path": "pages/source.zip",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "entrypoint": "src/page.tsx",
+                "build_command": "npm run build",
+                "preview_command": "npm run preview"
+              },
+              "existing_site": {
+                "status": "ADAPTED",
+                "url": "https://example.test",
+                "evidence": "receipts/site.json",
+                "rationale": "Synthetic contract fixture keeps the original site shell.",
+                "integration_target": "src/page.tsx",
+                "reused_components": [
+                  "Header",
+                  "brand.css"
+                ]
+              },
+              "brand": {
+                "brain_ref": "brand/index.md",
+                "font_refs": [
+                  "brand/fonts.css"
+                ],
+                "asset_refs": [
+                  "brand/logo.svg"
+                ],
+                "evidence": "receipts/brand.json"
+              },
+              "checks": [
+                {
+                  "id": "build",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/build.json",
+                  "observed": "Synthetic current-build observation for build."
+                },
+                {
+                  "id": "primary_action",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/primary_action.json",
+                  "observed": "Synthetic current-build observation for primary_action."
+                },
+                {
+                  "id": "links_assets",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/links_assets.json",
+                  "observed": "Synthetic current-build observation for links_assets."
+                },
+                {
+                  "id": "responsive",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/responsive.json",
+                  "observed": "Synthetic current-build observation for responsive.",
+                  "viewport": {
+                    "width": 390,
+                    "height": 844
+                  }
+                },
+                {
+                  "id": "keyboard_accessibility",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/keyboard_accessibility.json",
+                  "observed": "Synthetic current-build observation for keyboard_accessibility."
+                },
+                {
+                  "id": "brand_content",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/brand_content.json",
+                  "observed": "Synthetic current-build observation for brand_content."
+                },
+                {
+                  "id": "responsive",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/desktop.json",
+                  "observed": "Synthetic desktop layout comparison.",
+                  "viewport": {
+                    "width": 1440,
+                    "height": 900
+                  }
+                }
+              ],
+              "limitations": []
+            }
+          ]
+        }
+      },
+      {
+        "name": "unsupported-field",
+        "document": {
+          "schema": "ai-blocks-landing-page-delivery/1",
+          "mode": "LAUNCHABLE_SITE",
+          "artifacts": [
+            {
+              "slot_id": "page-1",
+              "source": {
+                "path": "pages/source.zip",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "entrypoint": "src/page.tsx",
+                "build_command": "npm run build",
+                "preview_command": "npm run preview"
+              },
+              "existing_site": {
+                "status": "ADAPTED",
+                "url": "https://example.test",
+                "evidence": "receipts/site.json",
+                "rationale": "Synthetic contract fixture keeps the original site shell.",
+                "integration_target": "src/page.tsx",
+                "reused_components": [
+                  "Header",
+                  "brand.css"
+                ]
+              },
+              "brand": {
+                "brain_ref": "brand/index.md",
+                "font_refs": [
+                  "brand/fonts.css"
+                ],
+                "asset_refs": [
+                  "brand/logo.svg"
+                ],
+                "evidence": "receipts/brand.json"
+              },
+              "checks": [
+                {
+                  "id": "build",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/build.json",
+                  "observed": "Synthetic current-build observation for build."
+                },
+                {
+                  "id": "primary_action",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/primary_action.json",
+                  "observed": "Synthetic current-build observation for primary_action."
+                },
+                {
+                  "id": "links_assets",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/links_assets.json",
+                  "observed": "Synthetic current-build observation for links_assets."
+                },
+                {
+                  "id": "responsive",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/responsive.json",
+                  "observed": "Synthetic current-build observation for responsive.",
+                  "viewport": {
+                    "width": 390,
+                    "height": 844
+                  }
+                },
+                {
+                  "id": "keyboard_accessibility",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/keyboard_accessibility.json",
+                  "observed": "Synthetic current-build observation for keyboard_accessibility."
+                },
+                {
+                  "id": "brand_content",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/brand_content.json",
+                  "observed": "Synthetic current-build observation for brand_content."
+                },
+                {
+                  "id": "responsive",
+                  "status": "PASS",
+                  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "receipt": "receipts/desktop.json",
+                  "observed": "Synthetic desktop layout comparison.",
+                  "viewport": {
+                    "width": 1440,
+                    "height": 900
+                  }
+                }
+              ],
+              "limitations": []
+            }
+          ],
+          "unsupported": true
+        }
+      }
+    ]
+  },
+  {
+    "schema": "ai-blocks-visual-delivery/1",
+    "valid": [
+      {
+        "name": "valid-1",
+        "document": {
+          "schema": "ai-blocks-visual-delivery/1",
+          "renderer": "synthetic-renderer",
+          "receipt": "receipts/render-1.json",
+          "reviewer_id": "judge",
+          "references": [
+            "brand/product.jpg"
+          ],
+          "items": [
+            {
+              "slot_id": "image-1",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "maker_id": "maker",
+              "status": "PASS",
+              "reference_comparison": "Synthetic reference comparison.",
+              "spec_comparison": "Synthetic specification comparison.",
+              "checks": [
+                {
+                  "id": "brand",
+                  "status": "PASS",
+                  "receipt": "receipts/brand.json",
+                  "observed": "Synthetic observed brand."
+                },
+                {
+                  "id": "product_fidelity",
+                  "status": "PASS",
+                  "receipt": "receipts/product_fidelity.json",
+                  "observed": "Synthetic observed product_fidelity."
+                },
+                {
+                  "id": "claims_copy",
+                  "status": "PASS",
+                  "receipt": "receipts/claims_copy.json",
+                  "observed": "Synthetic observed claims_copy."
+                },
+                {
+                  "id": "format",
+                  "status": "PASS",
+                  "receipt": "receipts/format.json",
+                  "observed": "Synthetic observed format."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "valid-2",
+        "document": {
+          "schema": "ai-blocks-visual-delivery/1",
+          "renderer": "synthetic-renderer",
+          "receipt": "receipts/render-2.json",
+          "reviewer_id": "judge",
+          "references": [
+            "brand/product.jpg"
+          ],
+          "items": [
+            {
+              "slot_id": "image-1",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "maker_id": "maker",
+              "status": "PASS",
+              "reference_comparison": "Synthetic reference comparison.",
+              "spec_comparison": "Synthetic specification comparison.",
+              "checks": [
+                {
+                  "id": "brand",
+                  "status": "PASS",
+                  "receipt": "receipts/brand.json",
+                  "observed": "Synthetic observed brand."
+                },
+                {
+                  "id": "product_fidelity",
+                  "status": "PASS",
+                  "receipt": "receipts/product_fidelity.json",
+                  "observed": "Synthetic observed product_fidelity."
+                },
+                {
+                  "id": "claims_copy",
+                  "status": "PASS",
+                  "receipt": "receipts/claims_copy.json",
+                  "observed": "Synthetic observed claims_copy."
+                },
+                {
+                  "id": "format",
+                  "status": "PASS",
+                  "receipt": "receipts/format.json",
+                  "observed": "Synthetic observed format."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "valid-3",
+        "document": {
+          "schema": "ai-blocks-visual-delivery/1",
+          "renderer": "synthetic-renderer",
+          "receipt": "receipts/render-3.json",
+          "reviewer_id": "judge",
+          "references": [
+            "brand/product.jpg"
+          ],
+          "items": [
+            {
+              "slot_id": "image-1",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "maker_id": "maker",
+              "status": "PASS",
+              "reference_comparison": "Synthetic reference comparison.",
+              "spec_comparison": "Synthetic specification comparison.",
+              "checks": [
+                {
+                  "id": "brand",
+                  "status": "PASS",
+                  "receipt": "receipts/brand.json",
+                  "observed": "Synthetic observed brand."
+                },
+                {
+                  "id": "product_fidelity",
+                  "status": "PASS",
+                  "receipt": "receipts/product_fidelity.json",
+                  "observed": "Synthetic observed product_fidelity."
+                },
+                {
+                  "id": "claims_copy",
+                  "status": "PASS",
+                  "receipt": "receipts/claims_copy.json",
+                  "observed": "Synthetic observed claims_copy."
+                },
+                {
+                  "id": "format",
+                  "status": "PASS",
+                  "receipt": "receipts/format.json",
+                  "observed": "Synthetic observed format."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "invalid": [
+      {
+        "name": "null",
+        "document": null
+      },
+      {
+        "name": "empty",
+        "document": {}
+      },
+      {
+        "name": "missing-schema",
+        "document": {
+          "renderer": "synthetic-renderer",
+          "receipt": "receipts/render.json",
+          "reviewer_id": "judge",
+          "references": [
+            "brand/product.jpg"
+          ],
+          "items": [
+            {
+              "slot_id": "image-1",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "maker_id": "maker",
+              "status": "PASS",
+              "reference_comparison": "Synthetic reference comparison.",
+              "spec_comparison": "Synthetic specification comparison.",
+              "checks": [
+                {
+                  "id": "brand",
+                  "status": "PASS",
+                  "receipt": "receipts/brand.json",
+                  "observed": "Synthetic observed brand."
+                },
+                {
+                  "id": "product_fidelity",
+                  "status": "PASS",
+                  "receipt": "receipts/product_fidelity.json",
+                  "observed": "Synthetic observed product_fidelity."
+                },
+                {
+                  "id": "claims_copy",
+                  "status": "PASS",
+                  "receipt": "receipts/claims_copy.json",
+                  "observed": "Synthetic observed claims_copy."
+                },
+                {
+                  "id": "format",
+                  "status": "PASS",
+                  "receipt": "receipts/format.json",
+                  "observed": "Synthetic observed format."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "wrong-schema",
+        "document": {
+          "schema": "wrong",
+          "renderer": "synthetic-renderer",
+          "receipt": "receipts/render.json",
+          "reviewer_id": "judge",
+          "references": [
+            "brand/product.jpg"
+          ],
+          "items": [
+            {
+              "slot_id": "image-1",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "maker_id": "maker",
+              "status": "PASS",
+              "reference_comparison": "Synthetic reference comparison.",
+              "spec_comparison": "Synthetic specification comparison.",
+              "checks": [
+                {
+                  "id": "brand",
+                  "status": "PASS",
+                  "receipt": "receipts/brand.json",
+                  "observed": "Synthetic observed brand."
+                },
+                {
+                  "id": "product_fidelity",
+                  "status": "PASS",
+                  "receipt": "receipts/product_fidelity.json",
+                  "observed": "Synthetic observed product_fidelity."
+                },
+                {
+                  "id": "claims_copy",
+                  "status": "PASS",
+                  "receipt": "receipts/claims_copy.json",
+                  "observed": "Synthetic observed claims_copy."
+                },
+                {
+                  "id": "format",
+                  "status": "PASS",
+                  "receipt": "receipts/format.json",
+                  "observed": "Synthetic observed format."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "unsupported-field",
+        "document": {
+          "schema": "ai-blocks-visual-delivery/1",
+          "renderer": "synthetic-renderer",
+          "receipt": "receipts/render.json",
+          "reviewer_id": "judge",
+          "references": [
+            "brand/product.jpg"
+          ],
+          "items": [
+            {
+              "slot_id": "image-1",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "maker_id": "maker",
+              "status": "PASS",
+              "reference_comparison": "Synthetic reference comparison.",
+              "spec_comparison": "Synthetic specification comparison.",
+              "checks": [
+                {
+                  "id": "brand",
+                  "status": "PASS",
+                  "receipt": "receipts/brand.json",
+                  "observed": "Synthetic observed brand."
+                },
+                {
+                  "id": "product_fidelity",
+                  "status": "PASS",
+                  "receipt": "receipts/product_fidelity.json",
+                  "observed": "Synthetic observed product_fidelity."
+                },
+                {
+                  "id": "claims_copy",
+                  "status": "PASS",
+                  "receipt": "receipts/claims_copy.json",
+                  "observed": "Synthetic observed claims_copy."
+                },
+                {
+                  "id": "format",
+                  "status": "PASS",
+                  "receipt": "receipts/format.json",
+                  "observed": "Synthetic observed format."
+                }
+              ]
+            }
+          ],
+          "unsupported": true
+        }
+      }
+    ]
+  },
+  {
+    "schema": "ai-blocks-work-context/1",
+    "valid": [
+      {
+        "name": "current improvement baseline",
+        "document": {
+          "schema": "ai-blocks-work-context/1",
+          "mode": "IMPROVE",
+          "sources": [
+            {
+              "id": "current-work",
+              "ref": "project/current.md",
+              "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "observed_at": "2026-11-08T10:00:00Z",
+              "role": "BASELINE",
+              "currentness": "CURRENT",
+              "freshness_basis": "Inspected the owner-designated current revision in this synthetic fixture; no claim about live state.",
+              "observations": [
+                "The existing document has a supported process but its next action is ambiguous."
+              ],
+              "receipt": "receipts/baseline.json"
+            }
+          ],
+          "preserve": [
+            {
+              "rule": "Keep the supported process and its source citations.",
+              "source_id": "current-work"
+            }
+          ],
+          "changes": [
+            {
+              "problem": "The next action is ambiguous.",
+              "source_ids": [
+                "current-work"
+              ],
+              "proposed_change": "State the responsible role and next action.",
+              "expected_effect": "A reader can identify the next step.",
+              "verification": "Compare the next-action instruction and retained citations against the baseline."
+            }
+          ],
+          "comparison": {
+            "method": "Inspect the same process and next-action criteria before and after.",
+            "pass_condition": "All supported citations retained and every next action names its responsible role.",
+            "unmeasured": [
+              "Reader completion rate and business impact were not measured."
+            ]
+          }
+        }
+      },
+      {
+        "name": "current assessment baseline",
+        "document": {
+          "schema": "ai-blocks-work-context/1",
+          "mode": "ASSESS",
+          "sources": [
+            {
+              "id": "current-work",
+              "ref": "project/current.md",
+              "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "observed_at": "2026-11-08T10:00:00Z",
+              "role": "BASELINE",
+              "currentness": "CURRENT",
+              "freshness_basis": "Inspected the owner-designated current revision in this synthetic fixture; no claim about live state.",
+              "observations": [
+                "The existing document has a supported process but its next action is ambiguous."
+              ],
+              "receipt": "receipts/baseline.json"
+            }
+          ],
+          "preserve": [],
+          "changes": [],
+          "comparison": {
+            "method": "Inspect the same process and next-action criteria before and after.",
+            "pass_condition": "All supported citations retained and every next action names its responsible role.",
+            "unmeasured": [
+              "Reader completion rate and business impact were not measured."
+            ]
+          }
+        }
+      },
+      {
+        "name": "explicit create context",
+        "document": {
+          "schema": "ai-blocks-work-context/1",
+          "mode": "CREATE",
+          "sources": [],
+          "preserve": [],
+          "changes": [],
+          "comparison": {
+            "method": "Inspect the same process and next-action criteria before and after.",
+            "pass_condition": "All supported citations retained and every next action names its responsible role.",
+            "unmeasured": [
+              "Reader completion rate and business impact were not measured."
+            ]
+          }
+        }
+      }
+    ],
+    "invalid": [
+      {
+        "name": "unknown baseline",
+        "document": {
+          "schema": "ai-blocks-work-context/1",
+          "mode": "IMPROVE",
+          "sources": [
+            {
+              "id": "current-work",
+              "ref": "project/current.md",
+              "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "observed_at": "2026-11-08T10:00:00Z",
+              "role": "BASELINE",
+              "currentness": "UNKNOWN",
+              "freshness_basis": "Inspected the owner-designated current revision in this synthetic fixture; no claim about live state.",
+              "observations": [
+                "The existing document has a supported process but its next action is ambiguous."
+              ],
+              "receipt": "receipts/baseline.json"
+            }
+          ],
+          "preserve": [
+            {
+              "rule": "Keep the supported process and its source citations.",
+              "source_id": "current-work"
+            }
+          ],
+          "changes": [
+            {
+              "problem": "The next action is ambiguous.",
+              "source_ids": [
+                "current-work"
+              ],
+              "proposed_change": "State the responsible role and next action.",
+              "expected_effect": "A reader can identify the next step.",
+              "verification": "Compare the next-action instruction and retained citations against the baseline."
+            }
+          ],
+          "comparison": {
+            "method": "Inspect the same process and next-action criteria before and after.",
+            "pass_condition": "All supported citations retained and every next action names its responsible role.",
+            "unmeasured": [
+              "Reader completion rate and business impact were not measured."
+            ]
+          }
+        }
+      },
+      {
+        "name": "stale baseline",
+        "document": {
+          "schema": "ai-blocks-work-context/1",
+          "mode": "IMPROVE",
+          "sources": [
+            {
+              "id": "current-work",
+              "ref": "project/current.md",
+              "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "observed_at": "2026-11-08T10:00:00Z",
+              "role": "BASELINE",
+              "currentness": "STALE",
+              "freshness_basis": "Inspected the owner-designated current revision in this synthetic fixture; no claim about live state.",
+              "observations": [
+                "The existing document has a supported process but its next action is ambiguous."
+              ],
+              "receipt": "receipts/baseline.json"
+            }
+          ],
+          "preserve": [
+            {
+              "rule": "Keep the supported process and its source citations.",
+              "source_id": "current-work"
+            }
+          ],
+          "changes": [
+            {
+              "problem": "The next action is ambiguous.",
+              "source_ids": [
+                "current-work"
+              ],
+              "proposed_change": "State the responsible role and next action.",
+              "expected_effect": "A reader can identify the next step.",
+              "verification": "Compare the next-action instruction and retained citations against the baseline."
+            }
+          ],
+          "comparison": {
+            "method": "Inspect the same process and next-action criteria before and after.",
+            "pass_condition": "All supported citations retained and every next action names its responsible role.",
+            "unmeasured": [
+              "Reader completion rate and business impact were not measured."
+            ]
+          }
+        }
+      },
+      {
+        "name": "missing freshness basis",
+        "document": {
+          "schema": "ai-blocks-work-context/1",
+          "mode": "IMPROVE",
+          "sources": [
+            {
+              "id": "current-work",
+              "ref": "project/current.md",
+              "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "observed_at": "2026-11-08T10:00:00Z",
+              "role": "BASELINE",
+              "currentness": "CURRENT",
+              "observations": [
+                "The existing document has a supported process but its next action is ambiguous."
+              ],
+              "receipt": "receipts/baseline.json"
+            }
+          ],
+          "preserve": [
+            {
+              "rule": "Keep the supported process and its source citations.",
+              "source_id": "current-work"
+            }
+          ],
+          "changes": [
+            {
+              "problem": "The next action is ambiguous.",
+              "source_ids": [
+                "current-work"
+              ],
+              "proposed_change": "State the responsible role and next action.",
+              "expected_effect": "A reader can identify the next step.",
+              "verification": "Compare the next-action instruction and retained citations against the baseline."
+            }
+          ],
+          "comparison": {
+            "method": "Inspect the same process and next-action criteria before and after.",
+            "pass_condition": "All supported citations retained and every next action names its responsible role.",
+            "unmeasured": [
+              "Reader completion rate and business impact were not measured."
+            ]
+          }
+        }
+      },
+      {
+        "name": "unsupported source",
+        "document": {
+          "schema": "ai-blocks-work-context/1",
+          "mode": "IMPROVE",
+          "sources": [
+            {
+              "id": "current-work",
+              "ref": "project/current.md",
+              "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "observed_at": "2026-11-08T10:00:00Z",
+              "role": "BASELINE",
+              "currentness": "CURRENT",
+              "freshness_basis": "Inspected the owner-designated current revision in this synthetic fixture; no claim about live state.",
+              "observations": [
+                "The existing document has a supported process but its next action is ambiguous."
+              ],
+              "receipt": "receipts/baseline.json"
+            }
+          ],
+          "preserve": [
+            {
+              "rule": "Keep the supported process and its source citations.",
+              "source_id": "current-work"
+            }
+          ],
+          "changes": [
+            {
+              "problem": "The next action is ambiguous.",
+              "source_ids": [
+                "missing"
+              ],
+              "proposed_change": "State the responsible role and next action.",
+              "expected_effect": "A reader can identify the next step.",
+              "verification": "Compare the next-action instruction and retained citations against the baseline."
+            }
+          ],
+          "comparison": {
+            "method": "Inspect the same process and next-action criteria before and after.",
+            "pass_condition": "All supported citations retained and every next action names its responsible role.",
+            "unmeasured": [
+              "Reader completion rate and business impact were not measured."
+            ]
+          }
+        }
+      },
+      {
+        "name": "unknown field",
+        "document": {
+          "schema": "ai-blocks-work-context/1",
+          "mode": "IMPROVE",
+          "sources": [
+            {
+              "id": "current-work",
+              "ref": "project/current.md",
+              "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "observed_at": "2026-11-08T10:00:00Z",
+              "role": "BASELINE",
+              "currentness": "CURRENT",
+              "freshness_basis": "Inspected the owner-designated current revision in this synthetic fixture; no claim about live state.",
+              "observations": [
+                "The existing document has a supported process but its next action is ambiguous."
+              ],
+              "receipt": "receipts/baseline.json"
+            }
+          ],
+          "preserve": [
+            {
+              "rule": "Keep the supported process and its source citations.",
+              "source_id": "current-work"
+            }
+          ],
+          "changes": [
+            {
+              "problem": "The next action is ambiguous.",
+              "source_ids": [
+                "current-work"
+              ],
+              "proposed_change": "State the responsible role and next action.",
+              "expected_effect": "A reader can identify the next step.",
+              "verification": "Compare the next-action instruction and retained citations against the baseline."
+            }
+          ],
+          "comparison": {
+            "method": "Inspect the same process and next-action criteria before and after.",
+            "pass_condition": "All supported citations retained and every next action names its responsible role.",
+            "unmeasured": [
+              "Reader completion rate and business impact were not measured."
+            ]
+          },
+          "extra": true
+        }
+      },
+      {
+        "name": "missing preserve",
+        "document": {
+          "schema": "ai-blocks-work-context/1",
+          "mode": "IMPROVE",
+          "sources": [
+            {
+              "id": "current-work",
+              "ref": "project/current.md",
+              "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "observed_at": "2026-11-08T10:00:00Z",
+              "role": "BASELINE",
+              "currentness": "CURRENT",
+              "freshness_basis": "Inspected the owner-designated current revision in this synthetic fixture; no claim about live state.",
+              "observations": [
+                "The existing document has a supported process but its next action is ambiguous."
+              ],
+              "receipt": "receipts/baseline.json"
+            }
+          ],
+          "preserve": [],
+          "changes": [
+            {
+              "problem": "The next action is ambiguous.",
+              "source_ids": [
+                "current-work"
+              ],
+              "proposed_change": "State the responsible role and next action.",
+              "expected_effect": "A reader can identify the next step.",
+              "verification": "Compare the next-action instruction and retained citations against the baseline."
+            }
+          ],
+          "comparison": {
+            "method": "Inspect the same process and next-action criteria before and after.",
+            "pass_condition": "All supported citations retained and every next action names its responsible role.",
+            "unmeasured": [
+              "Reader completion rate and business impact were not measured."
+            ]
+          }
+        }
+      }
+    ]
   }
 ]

@@ -15,6 +15,8 @@ import { BANNED_PATTERNS, STYLE_RULES, buildHousePackage, genericMethod, rubricM
 import { writeZip } from "./zip.ts";
 import { AGENT_MIRROR, LIBRARY_ORIGIN, ORIGIN, PACK_LICENSE, PACK_SCHEMA, SKILL_MIRRORS, TEMPLATE_MARKER, type PackKind, type PackManifest } from "./format.ts";
 import { teamMarkdown } from "../directory/team.ts";
+import {qualityMethodMarkdown} from '../directory/execution.ts';
+import {OUTPUT_PRECEDENCE,FACT_RULE,READINESS_RULE,NATIVE_DELIVERY_RULE,outputPolicyMarkdown} from '../runner/output-policy.ts';
 import { agentFrontmatter, megaSources, teamListMarkdown, type MegaKit } from "./mega.ts";
 
 export class PackBuildError extends Error {}
@@ -190,6 +192,14 @@ Want an agent that works like you? Get the training pack: {{train_pack_url}}. Gu
 
 You are {{name}}. Your role: {{role_name}}. {{tagline}}
 
+Read OUTPUT-POLICY.md and QUALITY-METHOD.md before the task. ${OUTPUT_PRECEDENCE}
+
+${FACT_RULE}
+
+${READINESS_RULE}
+
+${NATIVE_DELIVERY_RULE}
+
 Read these files before you start, in this order:
 
 1. soul.md: who you are and how you think.
@@ -215,7 +225,7 @@ Read these files before you start, in this order:
 ## How you work
 
 - Start every job with the intake questions in playbook.md. Ask only for what is missing.
-- Use only facts the user gives you. Mark anything missing as a [placeholder]. Never invent numbers, names, quotes or results.
+- Use supplied facts and verified authorised research sources. Mark unresolved required inputs without guessing; a required placeholder blocks a ready-to-use claim.
 - Follow the method in playbook.md, then check the work against its quality checks before you hand it over.
 - Never ask for passwords, API keys or card numbers. Ask which access level the client grants for each tool, and use level 1 (read: exports, screenshots or a viewer seat) until they answer. Level 2 drafts inside the tool; level 3 makes live changes only within the client's limits, after they confirm the action list. Log every action.
 - Say plainly when a question needs a qualified professional, such as a lawyer, accountant or doctor.
@@ -255,6 +265,14 @@ Guide: {{guide_url}}
 
 This folder becomes your own AI agent for the {{role_name}} role.
 
+Read OUTPUT-POLICY.md and QUALITY-METHOD.md. ${OUTPUT_PRECEDENCE}
+
+${FACT_RULE}
+
+${READINESS_RULE}
+
+${NATIVE_DELIVERY_RULE}
+
 If soul.md still starts with a "template" line, training is not finished. Start by following instructions.md, and do no client work until training is done.
 
 When training is done, you are the person described in soul.md and personality.md. Read, in order: soul.md, personality.md, playbook.md, knowledge.md and access.md.
@@ -268,7 +286,7 @@ When training is done, you are the person described in soul.md and personality.m
 ## How you work
 
 - Start every job with the intake questions in playbook.md. Ask only for what is missing.
-- Use only facts the user gives you. Mark anything missing as a [placeholder]. Never invent numbers, names, quotes or results.
+- Use supplied facts and verified authorised research sources. Mark unresolved required inputs without guessing; a required placeholder blocks a ready-to-use claim.
 - Check the work against the quality checks in playbook.md before you hand it over.
 - Never ask for passwords, API keys or card numbers.
 
@@ -277,6 +295,10 @@ Pack version {{version}}, updated {{updated}}.
   "train/instructions.md": `# Training instructions
 
 You are a training coach. Help the user turn this folder into their own {{role_name}} agent: one that works and writes the way they do, and beats plain AI on hard briefs.
+
+Read OUTPUT-POLICY.md. ${OUTPUT_PRECEDENCE}
+
+Train with contrasting customer voices and a verse or code task. Preserve task-specific expression and native formats. Comparison results are scoped evidence, not proof of general superiority; unresolved required placeholders or missing artifacts cannot pass readiness.
 
 ## Ground rules
 
@@ -497,9 +519,11 @@ function jobSkill(jt: JobType, kind: PackKind, slug: string = jt.id): string {
     "## Facts and writing",
     "",
     bullets([
-      "Use only facts from the brief and the details. Where one is missing, write a short [placeholder], never a guess.",
-      "Never invent numbers, prices, results, quotes, reviews, names, awards or links.",
-      "Write the way personality.md says: plain words, short sentences, no hype.",
+      FACT_RULE,
+      READINESS_RULE,
+      "Never present invented numbers, prices, results, quotes, reviews, names, awards or links as real. Keep requested fiction and illustrative examples clearly distinct from factual claims.",
+      OUTPUT_PRECEDENCE,
+      NATIVE_DELIVERY_RULE,
     ]),
   ].join("\n");
 }
@@ -507,7 +531,7 @@ function jobSkill(jt: JobType, kind: PackKind, slug: string = jt.id): string {
 function personalityMarkdown(persona: Persona): string {
   const soul = soulView(persona);
   const style = persona.profile.style;
-  const out = [`# How ${persona.name} talks and writes`, ""];
+  const out = [`# How ${persona.name} talks and writes`, "",OUTPUT_PRECEDENCE,"",'Read OUTPUT-POLICY.md. Persona wording is a default for this specialist; it does not overwrite a customer\'s approved voice, requested genre or existing design conventions.',""];
   if (!soul?.voice && !style) out.push(`${persona.name} writes in the AI Blocks house style below: plain, specific and warm.`, "");
   if (soul?.voice) {
     const v = splitVoice(soul.voice);
@@ -529,7 +553,7 @@ function personalityMarkdown(persona: Persona): string {
     sample("How I open with a new client", style.sample_opening);
     sample("How I give hard feedback", style.sample_feedback);
   }
-  out.push("## Writing rules I always follow", "", bullets(STYLE_RULES), "", "## I never write", "", bullets(BANNED_PATTERNS));
+  out.push("## Neutral presentation fallback", "", bullets(STYLE_RULES), "", "## Factual integrity and access", "", bullets(BANNED_PATTERNS));
   return out.join("\n");
 }
 
@@ -602,6 +626,7 @@ function playbookMarkdown(persona: Persona, jts: JobType[], kind: PackKind, role
   const out: string[] = train
     ? [`# Playbook: ${roleName}`, "", `This playbook starts from ${persona.name}'s method. Your training coach rewrites each section marked "base method: make it yours" with you, in your words, until it is how you work.`, ""]
     : [`# How ${persona.name} works`, "", persona.tagline, ""];
+  out.push(OUTPUT_PRECEDENCE,"",'Read OUTPUT-POLICY.md for factual evidence, presentation precedence, native delivery and readiness.',"");
   out.push(...section("What I deliver"));
   out.push(bullets(persona.profile.outcomes.map(o => `**${o.title}**: ${o.deliverable}${o.job_type_id && titles.has(o.job_type_id) ? ` (job: ${titles.get(o.job_type_id)})` : ""}`)), "");
   out.push(...section("Before I start: what I ask for"));
@@ -619,14 +644,16 @@ function playbookMarkdown(persona: Persona, jts: JobType[], kind: PackKind, role
   }
   out.push("### Every job", "", bullets([
     "Every fact, number, name and quote comes from you or from a source I name.",
-    "Missing facts are [placeholders] you can fill in, never guesses.",
-    "Plain words and short sentences, with no hype.",
+    FACT_RULE,
+    READINESS_RULE,
+    OUTPUT_PRECEDENCE,
   ]), "");
   const notFor = notForList(persona, jts);
   if (notFor.length) out.push(...section("Not part of my work"), bullets(notFor), "");
   out.push(...section("Handoff"), bullets([
-    "You get the finished work in markdown, ready to use.",
-    "I list every [placeholder] at the end, so you know what to fill in.",
+    NATIVE_DELIVERY_RULE,
+    'The requested artifact comes first, with an optional Markdown summary. A summary or handoff is not a native deliverable.',
+    READINESS_RULE,
     "I say what to check before you publish or send it, and what I would do next.",
   ]));
   if (train) out.push("", "## Rules I learned", "", "Rules come from test rounds. See instructions.md, stage 6.");
@@ -713,10 +740,11 @@ function scorecardMarkdown(jts: JobType[]): string {
     out.push("");
   }
   out.push("## Every job", "", bullets([
-    "Uses only facts from the brief. Missing facts are [placeholders], never guesses.",
+    FACT_RULE,
+    READINESS_RULE,
     "Answers what the brief asked, for the reader it names.",
-    "Plain words and short sentences, with no hype.",
-    "A client could use it today with little or no editing.",
+    OUTPUT_PRECEDENCE,
+    'The requested native output and required checks are present; unresolved required inputs mean partial or blocked work.',
   ]), "", "## The result", "",
   "Your agent beats plain AI when it passes every must-pass item and wins on more briefs than it loses. Write down why it lost each one, and fix the files before the next round.");
   return out.join("\n");
@@ -907,6 +935,8 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
     { path: "knowledge.md", group: "knowledge", content: knowledgeMarkdown(persona, kit, kind, roleName, megaKit),
       purpose: knowledgeReady ? "What I know about the role, with sources, then my specialty." : megaKit ? "My specialty, and where my channel knowledge is." : "My specialty. The role's researched knowledge is coming." },
     { path: "access.md", group: "work", content: kitFiles["access.md"]?.trim() ? kitFiles["access.md"] : fallbackAccess(), purpose: "Tools I work with, what to share with me and what I never ask for." },
+    {path:'QUALITY-METHOD.md',group:'work',content:qualityMethodMarkdown(),purpose:'Shared job-to-delivery contract: current-work evidence, independent alternatives and artifact review.'},
+    {path:'OUTPUT-POLICY.md',group:'work',content:outputPolicyMarkdown(),purpose:'Task and brand presentation precedence, factual evidence, readiness and native-delivery limits.'},
     ...(skillDrafts.length ? [{
       path: "skills.md", group: "skill" as const, purpose: "Every skill in one file, for chat apps that take one upload at a time.",
       content: skillsBundle(skillDrafts.filter(d => d.path.endsWith("/SKILL.md")).map(d => ({ path: d.path, content: d.content! }))),

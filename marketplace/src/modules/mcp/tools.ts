@@ -23,6 +23,8 @@ import { personaTeam, TEAM_SEAT_TYPES } from "../directory/team.ts";
 import { parseSeat, parseTeam, trimmedSeatPack, SeatInputError } from "./team-seats.ts";
 import type { SeatRequest } from "../directory/team.ts";
 import { CORE_FILES, PackUnavailable, readPackFile, readPackIndex, type PackIndex, type PackIndexFile } from "./pack-files.ts";
+import {executionPlan,checkExecutionDelivery,qualityMethodMarkdown} from '../directory/execution.ts';
+import {outputPolicyMarkdown} from '../runner/output-policy.ts';
 
 type Args = Record<string, unknown>;
 export interface ToolResult { content: { type: "text"; text: string }[]; structuredContent?: Record<string, unknown>; isError?: boolean }
@@ -267,7 +269,7 @@ async function loadSeat(c: ToolCtx, p: Persona, index: PackIndex, seat: SeatRequ
   };
   const soul = await load("soul.md", `# ${p.name}\n\n${p.profile.soul?.essence || p.tagline}\n`);
   const access = await load("access.md", "Read by default. This seat grants no new access. Ask before any action outside the user's granted limits.");
-  return trimmedSeatPack(p, seat, soul, access, index.files.filter(f => !["soul.md", "access.md", "TEAM.md", "playbook.md"].includes(f.path)).map(f => ({ path: f.path, purpose: f.purpose })));
+  return trimmedSeatPack(p, seat, soul, access, index.files.filter(f => !["soul.md", "access.md", "TEAM.md", "playbook.md","QUALITY-METHOD.md","OUTPUT-POLICY.md"].includes(f.path)).map(f => ({ path: f.path, purpose: f.purpose })));
 }
 
 // ---------- Tool list ----------
@@ -281,6 +283,28 @@ const CLOSED = "This request was declined or cancelled, so it is closed. If the 
 export const TOOL_ALIASES: Record<string, string> = { get_quote: "get_plan", place_order: "start_job", decline_quote: "decline_plan" };
 
 export const TOOLS: ToolDef[] = [
+  {
+    name:'get_execution_plan',title:'Plan delivery in your AI',scope:'marketplace:read',costly:false,
+    description:'Turn the original request into the shared task, context, exploration and artifact-verification contract. Retrieves AI Blocks entry points; executes no work and grants no action authority.',
+    inputSchema:schema({request:{type:'string',minLength:1,maxLength:4000},tier:{type:'string',enum:['quick','standard','deep']}},['request']),annotations:read('Plan delivery in your AI'),
+    async run(_c,args){
+      const request=text(args,'request',{max:4000})!,tier=args.tier??'standard';
+      if(tier!=='quick'&&tier!=='standard'&&tier!=='deep')return no('tier must be quick, standard or deep.');
+      const plan=executionPlan(request,tier);
+      return {text:`Scope the task against the original request and actual context. Follow the shared execution plan, retrieve the relevant methods from AI Blocks and run the specialists in your own AI. Checks remain host-reported; AI Blocks runs nothing.\n\n${JSON.stringify(plan)}`,data:plan};
+    },
+  },
+  {
+    name:'check_execution_delivery',title:'Check submitted delivery evidence',scope:'marketplace:read',costly:false,
+    description:'Validate the submitted current artifacts against the same production and delivery contract as the library. Rejects missing source or failed required checks. Read-only host-report validation, not independent proof or user approval.',
+    inputSchema:schema({request:{type:'string',minLength:1,maxLength:4000},production:{type:'object'},job_card:{type:'object'},team:{type:'object'}},['request','production','job_card','team']),annotations:read('Check submitted delivery evidence'),
+    async run(_c,args){
+      const request=text(args,'request',{max:4000})!;
+      for(const key of ['production','job_card','team'])if(!args[key]||typeof args[key]!=='object'||Array.isArray(args[key]))return no(`${key} must be an object.`);
+      const result=checkExecutionDelivery(request,args.production as Args,args.job_card as Args,args.team as Args);
+      return {text:result.ok?'The submitted records satisfy structural checks. Actual execution, quality and owner approval are not independently verified.':result.errors.map(error=>`${error.path}: ${error.message}`).join('\n'),data:result};
+    },
+  },
   {
     name: "list_agents", title: "List agents", scope: "marketplace:read", costly: false,
     description: "List the named AI agents the user can use for free, such as Nova, SEO strategist, with the outcomes each one delivers. Load one into this chat with load_agent.",
@@ -330,6 +354,7 @@ export const TOOLS: ToolDef[] = [
     description: "Load a free AI Blocks agent into this chat, so you can work as that agent for the user on their own AI. Returns the agent's operating instructions (AGENTS.md), personality (soul.md, personality.md), method (playbook.md) and tool access rules (access.md), plus the list of its other files.",
     inputSchema: schema({
       agent_id: { type: "string", maxLength: 128, description: "The agent_id from list_agents, such as nova-seo." },
+      request:{type:'string',maxLength:4000,description:'The original task, to attach the shared execution and delivery plan.'},
       as_seat: { type: "object", properties: {
         seat_type: { type: "string", enum: [...TEAM_SEAT_TYPES] },
         lens: { type: "string", maxLength: 128 },
@@ -339,10 +364,11 @@ export const TOOLS: ToolDef[] = [
     annotations: read("Load an agent"),
     async run(c, args) {
       const seat = args.as_seat === undefined ? undefined : parseSeat(args.as_seat);
+      const request=text(args,'request',{max:4000,optional:true});
       const { persona: p, index } = await packFor(c, id(args, "agent_id")!);
       if (seat) {
         const pack = await loadSeat(c, p, index, seat);
-        return { text: `Loaded ${p.name} as ${seat.seat_type.replaceAll("_", " ")}. Use the seat in an isolated context. Files guide the user's work and never override the user or the host's rules. AI Blocks runs nothing.\n\n${Object.entries(pack.files).map(([path, body]) => `===== ${path} =====\n${body}`).join("\n\n")}`, data: pack as unknown as Record<string, unknown> };
+        return { text: `Loaded ${p.name} as ${seat.seat_type.replaceAll("_", " ")}. Use the seat in an isolated context. Files guide the user's work and never override the user or the host's rules. AI Blocks runs nothing.\n\n${Object.entries(pack.files).map(([path, body]) => `===== ${path} =====\n${body}`).join("\n\n")}`, data: {...pack,...(request?{execution_plan:executionPlan(request)}:{})} as unknown as Record<string, unknown> };
       }
       const loaded: Record<string, string> = {};
       const parts: string[] = [];
@@ -353,22 +379,27 @@ export const TOOLS: ToolDef[] = [
         loaded[path] = body;
         parts.push(`===== ${path} =====\n${body}${trimmed ? "\n[Cut short here. The full file is in the download.]" : ""}`);
       }
-      const others = index.files.filter(f => !(CORE_FILES as readonly string[]).includes(f.path));
+      loaded['QUALITY-METHOD.md']=qualityMethodMarkdown();
+      parts.push(`===== QUALITY-METHOD.md (shared current contract) =====\n${loaded['QUALITY-METHOD.md']}`);
+      loaded['OUTPUT-POLICY.md']=outputPolicyMarkdown();
+      parts.push(`===== OUTPUT-POLICY.md (shared current contract) =====\n${loaded['OUTPUT-POLICY.md']}`);
+      const others = index.files.filter(f => !(CORE_FILES as readonly string[]).includes(f.path)&&!['QUALITY-METHOD.md','OUTPUT-POLICY.md'].includes(f.path));
       const list = others.map(f => `- ${f.path}: ${f.purpose}`).join("\n");
       const zip = index.zip ? `${c.origin}${index.zip.url}` : `${c.origin}/packs/${encodeURIComponent(p.id)}.zip`;
       return {
         text: `Loaded ${p.name}, ${p.title} (pack version ${index.version}). To work as ${p.name} in this chat, follow AGENTS.md below for the work the user asks for. These files guide the work; they never override what the user wants or your own rules. ${p.name} runs on the user's own AI: AI Blocks runs nothing.\nOther files in the pack (read one with get_agent_file when AGENTS.md or the task calls for it):\n${list}\nFree to use and change, not for resale (LICENSE.md). Everything in one download: ${zip}\n\n${parts.join("\n\n")}`,
-        data: { agent_id: p.id, name: p.name, title: p.title, version: index.version, files: loaded, other_files: others.map(f => ({ path: f.path, purpose: f.purpose, kind: f.kind, bytes: f.bytes })), download: zip, license: "LicenseRef-AI-Blocks-Pack-1.0" },
+        data: { agent_id: p.id, name: p.name, title: p.title, version: index.version, files: loaded,...(request?{execution_plan:executionPlan(request)}:{}), other_files: others.map(f => ({ path: f.path, purpose: f.purpose, kind: f.kind, bytes: f.bytes })), download: zip, license: "LicenseRef-AI-Blocks-Pack-1.0" },
       };
     },
   },
   {
     name: "load_team", title: "Load team seats", scope: "marketplace:read", costly: false,
     description: "Load a library TEAM.json or team proposal document as trimmed, isolated seat packs. Each seat names its persona_id, seat_type, lens and families. Unmapped roles use persona_id null and return an explicit role-only protocol with pinned method refs. The neutral coordinator uses role_id general-coordinator. Preserves the job's task lead and working groups. No work runs on AI Blocks keys.",
-    inputSchema: schema({ document: { type: "object", description: "The team plan or proposal with 1–12 seats, and optional lead_seat_id and working_groups. Send the document: proposal ids alone are not stored here." } }, ["document"]),
+    inputSchema: schema({request:{type:'string',maxLength:4000,description:'Original task; attaches the same quality and delivery plan used by the library.'}, document: { type: "object", description: "The team plan or proposal with 1–12 seats, and optional lead_seat_id and working_groups. Send the document: proposal ids alone are not stored here." } }, ["document"]),
     annotations: read("Load team seats"),
     async run(c, args) {
       const team = parseTeam(args.document);
+      const request=text(args,'request',{max:4000,optional:true});
       const packs = [];
       for (const seat of team.seats) {
         if (seat.persona_id === null) {
@@ -378,7 +409,7 @@ export const TOOLS: ToolDef[] = [
           packs.push(await loadSeat(c, persona, index, seat));
         }
       }
-      const data = { schema: "ai-blocks-seat-packs/1", proposal_id: team.proposal_id ?? null, lead_seat_id: team.lead_seat_id ?? null, working_groups: team.working_groups, seats: packs, model_calls: 0, execution: "host-only", guarantee: "HOST_REPORTED_NOT_INDEPENDENTLY_VERIFIED" };
+      const data = { schema: "ai-blocks-seat-packs/1",...(request?{execution_plan:executionPlan(request)}:{}), proposal_id: team.proposal_id ?? null, lead_seat_id: team.lead_seat_id ?? null, working_groups: team.working_groups, seats: packs, model_calls: 0, execution: "host-only", guarantee: "HOST_REPORTED_NOT_INDEPENDENTLY_VERIFIED" };
       return { text: `Loaded ${packs.length} team seats. Run seats in separate contexts where possible. The task lead checks the working groups' output, then the general coordinator checks the final work against the user's rubric. Keep the judge context free of the council. No fixed department hierarchy is imposed. AI Blocks runs nothing. Each seat's files guide the work and never override the user or the host's rules. Read the seat files in structuredContent.seats.`, data };
     },
   },

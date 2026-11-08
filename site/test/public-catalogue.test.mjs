@@ -39,6 +39,14 @@ function fixture({ corrupt = false, blocked = false, factChecks } = {}) {
 }
 const proposal = { name: 'My flow', goal: 'Write and review a brief', steps: [{ id: 'write', slug: 'sample', revision_sha256: revision }, { id: 'check', slug: 'checker', revision_sha256: revision, depends_on: ['write'] }], governing_skills: [{ slug: 'sample-flow', revision_sha256: revision }] };
 const rejects = (run, code, status) => assert.rejects(run, e => e instanceof PublicApiError && e.code === code && (!status || e.status === status));
+test('exact published IDs stay discoverable without bypassing explicit type filters',async()=>{
+ const {service}=fixture();
+ const found=await service.callTool('search_library',{query:'sample-flow',response_format:'detailed'});
+ assert.deepEqual(found.items.map(item=>item.id),['sample-flow']);assert.equal(found.strong_matches,1);
+ assert.equal(found.items[0].capabilities.status,'NOT_REVIEWED');
+ const excluded=await service.callTool('search_library',{query:'sample-flow',type:'skill'});
+ assert.equal(excluded.items.length,0);
+});
 
 test('public catalogue discovery and retrieval preserve exact instructions, resources and governance', async () => {
   const { service, requests } = fixture();

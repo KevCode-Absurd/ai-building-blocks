@@ -7,6 +7,14 @@ description: Use when a landing page (article-style, reasons-to-buy or product p
 
 You produce a section file, a JSON page template that loads the finished copy, a list of images to upload, and plain install steps. The store owner creates a page, picks the template and edits the words in the theme editor.
 
+## Existing-store implementation contract
+
+Read the original job, brand brain and current theme source before choosing the page structure. Inspect the existing header, footer, type settings, colour tokens, product selector, cart behaviour and app blocks. Reuse those components and the established buying journey. Record the theme and integration files inspected, what stays, and the reason for each adaptation. If source is unavailable, deliver a clearly labelled integration preview with its limits; do not claim it is installed or launch-ready.
+
+Agree the buyer question and evidence for every section; do not force every product into the same hero/cards/testimonials pattern. Compare separately drafted directions before selecting one, keeping real brand assets and product facts fixed. A template name or style change alone does not establish meaningful variety.
+
+The final deliverable is editable Liquid and template JSON, not a raster image. Run Theme Check and test a duplicate-theme preview at phone and desktop widths, keyboard traversal, actual product options, the main purchase action, links, images and brand font loading. Save commands and observations against the current source-bundle hash. Recheck after repairs. A generated review score or passing syntax check is not evidence that the cart works. Record any test-order or live checkout limit honestly; do not publish or place an order without the existing task's authority.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.

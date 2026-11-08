@@ -204,7 +204,7 @@ test("tools/list returns every tool with input schemas and annotations", async (
   const { rpc } = await setup();
   const res = await rpc("tools/list", {});
   const tools: any[] = res.body.result.tools;
-  assert.deepEqual(tools.map(t => t.name), ["list_agents", "get_agent", "load_agent", "load_team", "get_agent_file", "list_job_types", "start_request", "answer_questions", "get_plan", "start_job", "decline_plan", "get_job", "get_delivery", "accept_delivery", "request_revision"]);
+  assert.deepEqual(tools.map(t => t.name), ["get_execution_plan", "check_execution_delivery", "list_agents", "get_agent", "load_agent", "load_team", "get_agent_file", "list_job_types", "start_request", "answer_questions", "get_plan", "start_job", "decline_plan", "get_job", "get_delivery", "accept_delivery", "request_revision"]);
   // Hiring is free: no tool name, title, description or input says money, quote or beta.
   for (const tool of tools) assert.doesNotMatch(JSON.stringify(tool), MONEY_WORDS, tool.name);
   for (const tool of tools) {
@@ -219,7 +219,7 @@ test("tools/list returns every tool with input schemas and annotations", async (
     assert.equal(tool.run, undefined);
   }
   const by = Object.fromEntries(tools.map(t => [t.name, t]));
-  for (const name of ["list_agents", "get_agent", "load_agent", "load_team", "get_agent_file", "list_job_types", "get_job", "get_delivery"]) assert.equal(by[name].annotations.readOnlyHint, true, name);
+  for (const name of ["get_execution_plan", "check_execution_delivery", "list_agents", "get_agent", "load_agent", "load_team", "get_agent_file", "list_job_types", "get_job", "get_delivery"]) assert.equal(by[name].annotations.readOnlyHint, true, name);
   for (const name of ["start_request", "answer_questions", "get_plan", "start_job", "decline_plan", "accept_delivery", "request_revision"]) assert.equal(by[name].annotations.readOnlyHint, false, name);
   assert.equal(by.accept_delivery.annotations.destructiveHint, true);
   assert.equal(by.decline_plan.annotations.destructiveHint, true);
@@ -792,7 +792,7 @@ function fakeAssets(extra: Record<string, string> = {}) {
 test("load_agent returns the agent's core files and lists the rest; get_agent_file reads any listed file", async () => {
   const assets = fakeAssets();
   const { call } = await setup({ beta: false, env: { ASSETS: assets } });
-  const res = await call("load_agent", { agent_id: "nova-seo" });
+  const res = await call("load_agent", { agent_id: "nova-seo",request:'Improve the existing onboarding flow' });
   assert.equal(res.isError, undefined, textOf(res));
   const text = textOf(res);
   assert.match(text, /Loaded Nova, SEO strategist \(pack version 1\.2\.0\)/);
@@ -801,9 +801,18 @@ test("load_agent returns the agent's core files and lists the rest; get_agent_fi
   for (const f of ["AGENTS.md", "soul.md", "personality.md", "playbook.md", "access.md"]) assert.ok(text.includes(`===== ${f} =====`), f);
   assert.match(text, /- knowledge\.md: Role knowledge/);
   assert.match(text, /https:\/\/agents\.test\/packs\/nova-seo\.zip/);
-  assert.deepEqual(Object.keys(res.structuredContent.files), ["AGENTS.md", "soul.md", "personality.md", "playbook.md", "access.md"]);
+  assert.deepEqual(Object.keys(res.structuredContent.files), ["AGENTS.md", "soul.md", "personality.md", "playbook.md", "access.md", "QUALITY-METHOD.md", "OUTPUT-POLICY.md"]);
+  assert.equal(res.structuredContent.execution_plan.schema,'ai-blocks-execution-plan/1');
+  const plan=await call('get_execution_plan',{request:'Build a working landing page'});
+  assert.equal(plan.structuredContent.landing_pages.delivery_mode,'LAUNCHABLE_SITE');
+  const failed=await call('check_execution_delivery',{request:'Build a working landing page',production:{artifacts:[]},job_card:{},team:{}});
+  assert.equal(failed.structuredContent.ok,false);
+  assert.equal(failed.structuredContent.hosted_execution,false);
   assert.deepEqual(res.structuredContent.other_files.map((f: { path: string }) => f.path), ["knowledge.md"]);
-  assert.doesNotMatch(visible(res), MONEY_WORDS);
+  // The public loader introduction has no paid gate. The agent's factual-integrity
+  // policy legitimately discusses prices and quotes as facts not to invent.
+  assert.doesNotMatch(text.split('===== AGENTS.md =====')[0], MONEY_WORDS);
+  assert.match(res.structuredContent.files['OUTPUT-POLICY.md'], /verified sources authorised for this task/);
 
   const file = await call("get_agent_file", { agent_id: "nova-seo", path: "knowledge.md" });
   assert.equal(file.isError, undefined, textOf(file));
@@ -837,7 +846,7 @@ test("with hosted jobs off, the connector finds and loads agents only, and never
   assert.doesNotMatch(instructions, MONEY_WORDS);
 
   const list = await rpc("tools/list", {});
-  assert.deepEqual(list.body.result.tools.map((x: { name: string }) => x.name), ["list_agents", "get_agent", "load_agent", "load_team", "get_agent_file"]);
+  assert.deepEqual(list.body.result.tools.map((x: { name: string }) => x.name), ["get_execution_plan", "check_execution_delivery", "list_agents", "get_agent", "load_agent", "load_team", "get_agent_file"]);
 
   const agents = await call("list_agents", {});
   assert.match(textOf(agents), /To use one, call load_agent with its agent_id/);
@@ -884,10 +893,11 @@ test("load_team returns six isolated seat packs with a neutral coordinator and a
   const assets = fakeAssets(extra);
   const { call } = await setup({ beta: false, env: { HOSTED_JOBS: "off", ASSETS: assets } });
   const document = JSON.parse(readFileSync(new URL("./fixtures/team-plan-six-seats.json", import.meta.url), "utf8"));
-  const result = await call("load_team", { document });
+  const result = await call("load_team", { document,request:'Improve the existing checkout without changing payment providers' });
   assert.equal(result.isError, undefined, textOf(result));
   const data = result.structuredContent;
   assert.equal(data.model_calls, 0);
+  assert.equal(data.execution_plan.schema,'ai-blocks-execution-plan/1');
   assert.equal(data.seats.length, 6);
   assert.equal(data.lead_seat_id, "strategy");
   assert.equal(data.working_groups[0].id, "production");
@@ -896,6 +906,7 @@ test("load_team returns six isolated seat packs with a neutral coordinator and a
     assert.ok(new TextEncoder().encode(JSON.stringify(seat)).length <= 60_000);
     assert.equal(seat.model_calls, 0);
     assert.ok(!seat.files["knowledge.md"]);
+    assert.match(seat.files['QUALITY-METHOD.md'],/Execution quality contract/);
   }
   assert.match(data.seats[5].review_context, /Exclude the council/);
   assert.ok(!assets.asked.some(path => path.endsWith("/knowledge.md")));

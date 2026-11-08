@@ -3,10 +3,16 @@
 import { canonicalTeamJSON } from '../teams/team-contract.mjs';
 import { STAGE_KINDS, fail, text, validateBrief, validatePlan, validateResearch, planMarkdown, researchMarkdown, hypothesesMarkdown } from './plan-contract.mjs';
 import { METHOD, methodMarkdown } from './method.mjs';
-import { nearest } from './schema-check.mjs';
+import { nearest, checkSchema } from './schema-check.mjs';
+import { buildExecutionPlan, EXECUTION_QUALITY_POLICY, validateProductionQuality } from '../jobs/execution-quality.mjs';
+import {LANDING_PAGE_DELIVERY_SCHEMA} from '../jobs/landing-page-delivery.mjs';
+import {VISUAL_DELIVERY_SCHEMA, validateVisualDelivery} from '../jobs/visual-delivery.mjs';
+import {validateArtifactManifest} from '../jobs/artifact-manifest.mjs';
+import {WORK_CONTEXT_SCHEMA,inferWorkMode,validateWorkContext} from '../jobs/work-context.mjs';
 
 export { fail, text };
-export const ENGAGEMENT_SCHEMA = 'ai-blocks-outcome-engagement/2';
+export const ENGAGEMENT_SCHEMA = 'ai-blocks-outcome-engagement/3';
+export const LEGACY_ENGAGEMENT_SCHEMA = 'ai-blocks-outcome-engagement/2';
 export const PHASES = ['DEFINE', 'RESEARCH', 'PLAN_REVIEW', 'RUN'];
 export const STAGE_STATES = ['WAITING', 'READY', 'IN_PROGRESS', 'AWAITING_APPROVAL', 'DONE', 'SKIPPED', 'BLOCKED'];
 const SETTLED = new Set(['DONE', 'SKIPPED']);
@@ -31,8 +37,9 @@ export async function engagementDigest(e) {
 /** Check that a host-returned engagement is coherent. The brief, research and plan are re-checked against the rules on every call. */
 export function checkEngagement(input) {
   const e = object(input, 'Engagement');
-  keys(e, ['schema', 'id', 'request', 'started', 'phase', 'round', 'autonomy', 'brief', 'research', 'plan', 'plan_version', 'plan_check', 'plan_changes', 'data', 'stages', 'records', 'history'], 'Engagement');
-  if (e.schema !== ENGAGEMENT_SCHEMA) fail('Unknown engagement schema.');
+  keys(e, ['schema', 'id', 'request', 'started', 'phase', 'round', 'autonomy', 'brief', 'research', 'plan', 'plan_version', 'plan_check', 'plan_changes', 'data', 'stages', 'records', 'history', 'quality_policy'], 'Engagement');
+  if (![ENGAGEMENT_SCHEMA, LEGACY_ENGAGEMENT_SCHEMA].includes(e.schema)) fail('Unknown engagement schema.');
+  if (e.schema === ENGAGEMENT_SCHEMA && !same(e.quality_policy, EXECUTION_QUALITY_POLICY)) fail('The current outcome engagement requires its unchanged execution quality policy. Start a new engagement rather than removing quality gates.');
   if (encoder.encode(JSON.stringify(e)).length > 200000) fail('The engagement exceeds 200 KB. Keep evidence in files and reference their paths.');
   refuseSecrets(e);
   if (!ID.test(e.id ?? '')) fail('Engagement id is invalid.');
@@ -49,7 +56,10 @@ export function checkEngagement(input) {
     if (!same(plan, e.plan) || !same(research, e.research) || !same(brief, e.brief)) fail('The plan was changed outside the outcome tools.');
     if (!Array.isArray(e.stages) || e.stages.map(s => s.id).join() !== plan.stages.map(s => s.id).join()) fail('Engagement stages do not match the plan.');
     if (!Array.isArray(e.data) || e.data.map(d => d.id).join() !== plan.data.map(d => d.id).join()) fail('Engagement data does not match the plan.');
-    for (const s of e.stages) if (!STAGE_STATES.includes(s.state)) fail(`Stage ${s.id} has an unknown state.`);
+    for (const s of e.stages) {
+      if (!STAGE_STATES.includes(s.state)) fail(`Stage ${s.id} has an unknown state.`);
+      if (['DONE', 'AWAITING_APPROVAL'].includes(s.state)) checkStageDelivery(e, plan.stages.find(def => def.id === s.id), s);
+    }
   } else if (['PLAN_REVIEW', 'RUN'].includes(e.phase) || e.stages?.length || e.data?.length) fail('There is no plan yet.');
   if (!Array.isArray(e.records?.decisions) || !object(e.records?.experiments, 'Experiment records')) fail('Engagement records are malformed.');
   if (!Array.isArray(e.history)) fail('Engagement history must be a list.');
@@ -89,10 +99,80 @@ export function startEngagement({ request, id, started } = {}) {
   refuseSecrets(words);
   const eid = id === undefined ? `${day.replaceAll('-', '')}-${slug(words) || 'outcome'}`.slice(0, 80).replace(/-+$/, '') : ID.test(id) ? id : fail('Engagement id must be a lowercase id.');
   return {
-    schema: ENGAGEMENT_SCHEMA, id: eid, request: words, started: day, phase: 'DEFINE', round: 1, autonomy: { level: 0 },
+    schema: ENGAGEMENT_SCHEMA, id: eid, request: words, started: day, phase: 'DEFINE', round: 1, autonomy: { level: 0 }, quality_policy: {...EXECUTION_QUALITY_POLICY},
     brief: null, research: null, plan: null, plan_version: 0, plan_check: null, plan_changes: null, data: [], stages: [],
     records: { decisions: [], experiments: {} }, history: [{ type: 'start', round: 1, at: day }],
   };
+}
+
+/** Select delivery requirements for the actual stage. Copy, audits and concept
+ * boards remain useful intermediate outputs; they do not certify a working site.
+ * The original request and accepted brief prevent a generic stage title from
+ * silently downgrading a requested implementation into a screenshot.
+ */
+export function stageDeliveryRequirements(e, def) {
+  const current = e.schema === ENGAGEMENT_SCHEMA;
+  if (def.kind !== 'production') return {required: false, assurance: current ? 'HOST_REPORTED' : 'LEGACY_STRUCTURAL_ONLY'};
+  const stageText = [def.name, def.goal, ...def.outputs.flatMap(o => [o.name, o.format, o.path])].join(' ');
+  const request = `${e.request} ${e.brief?.deliverable ?? ''}`;
+  const original = buildExecutionPlan({request});
+  const own = buildExecutionPlan({request: stageText});
+  const source = def.outputs.some(o => /\b(?:html|react|vue|svelte|astro|liquid|theme[ -]?files|source|website|interactive|web[ -]?app)\b/i.test(o.format) || /\.(?:html?|jsx?|tsx?|vue|svelte|astro|liquid)$/i.test(o.path));
+  const intermediate = /\b(?:copy|copywriting|audit|review|brief|concepts?|wireframes?|moodboards?|design[ -]directions?)\b/i.test(`${def.name} ${def.goal}`) && !source && !/\b(?:implement|launchable|functional|working|deployable|build|code)\b/i.test(`${def.name} ${def.goal}`);
+  const requested = !intermediate && (own.landing_pages.requested || (original.landing_pages.requested && source));
+  const mode = original.landing_pages.requested ? original.landing_pages.delivery_mode : own.landing_pages.delivery_mode;
+  const adContext=/\b(?:ads?|creatives?|advertising)\b/i.test(`${request} ${stageText}`);
+  const raster=def.outputs.some(o=>/\b(?:png|jpe?g|webp|avif|image)\b/i.test(o.format)||/\.(?:png|jpe?g|webp|avif)$/i.test(o.path));
+  const renderedAds=/\b(?:image[ -]?ads?|static[ -]?(?:ads?|creatives?)|ad[ -]?(?:images?|creatives?)|render(?:ed|ing)?)\b/i.test(stageText);
+  const requestedImageOutput=/\b(?:image[ -]?ads?|static[ -]?(?:ads?|creatives?)|ad[ -]?(?:images?|creatives?))\b/i.test(request);
+  const unspecifiedImageStage=requestedImageOutput&&!own.landing_pages.requested&&!source;
+  const purpose=`${def.name} ${def.goal}`;
+  const explicitRendering=/\b(?:render|photograph|photoshoot|generate\s+(?:the\s+)?images?|final[ -]images?|finished[ -]images?)\b/i.test(purpose);
+  const imageIntermediate=(/\b(?:copy|copywriting|scripts?|briefs?|concepts?|moodboards?|storyboards?|plans?|planning)\b/i.test(purpose)&&!explicitRendering)||(/\b(?:audit|review)\b/i.test(purpose)&&!explicitRendering&&!/\b(?:create|produce|make|build|generate)\b/i.test(purpose));
+  const imageRequired=current&&!imageIntermediate&&adContext&&(raster||renderedAds||unspecifiedImageStage);
+  const workMode=inferWorkMode(request), ownMode=inferWorkMode(purpose);
+  const planningOnly=/\b(?:concepts?|moodboards?|wireframes?|design[ -]directions?|briefs?|planning)\b/i.test(purpose)&&ownMode==='CREATE';
+  const supportingCopy=/\b(?:copy|copywriting|scripts?)\b/i.test(purpose)&&ownMode==='CREATE'&&!/\b(?:copy|copywriting|scripts?)\b/i.test(request);
+  const workRequired=current&&workMode!=='CREATE'&&!planningOnly&&!supportingCopy;
+  return {required: current && requested && mode === 'LAUNCHABLE_SITE', image_required:imageRequired, work_context_required:workRequired, work_mode:workMode, delivery_mode: requested ? mode : 'NONE', existing_site_required:original.landing_pages.existing_site_required, assurance: current ? 'HOST_REPORTED_NOT_INDEPENDENTLY_VERIFIED' : 'LEGACY_STRUCTURAL_ONLY'};
+}
+
+function checkStageDelivery(e, def, record) {
+  const requirement = stageDeliveryRequirements(e, def);
+  if(e.schema===ENGAGEMENT_SCHEMA&&(requirement.work_context_required||record.work_context!==undefined)){
+    const issues=checkSchema(WORK_CONTEXT_SCHEMA,record.work_context);
+    if(issues.length)fail(`Stage ${def.id} work_context: ${issues.map(error=>`${error.path}: ${error.message}`).join('; ')}`);
+    const work=validateWorkContext(record.work_context,{request:e.request,required:requirement.work_context_required===true,production:true,artifacts:record.production_artifacts});
+    if(!work.ok)fail(`Stage ${def.id} current-work comparison: ${work.errors.map(error=>`${error.path}: ${error.message}`).join('; ')}`);
+  }
+  const counted=e.schema===ENGAGEMENT_SCHEMA&&def.outputs.some(output=>output.count!==undefined);
+  if (!requirement.required && !requirement.image_required && !requirement.work_context_required && !counted && record.production_artifacts===undefined) return requirement;
+  const artifacts = record.production_artifacts;
+  if (!Array.isArray(artifacts) || !artifacts.length) fail(`Stage ${def.id} requires production_artifacts linked to the actual output hashes and current inspection receipts. A path or PASS assertion does not establish completed production.`);
+  for (const artifact of artifacts) {
+    object(artifact, 'Production artifact'); keys(artifact, ['slot_id', 'path', 'sha256', 'modality', 'kind','output_id','container_sha256'], 'Production artifact');
+  }
+  const manifest=validateArtifactManifest(artifacts,{outputs:record.outputs,specs:def.outputs});
+  if(!manifest.ok)fail(`Stage ${def.id} artifact manifest: ${manifest.errors.map(error=>`${error.path}: ${error.message}`).join('; ')}`);
+  const expectedSource = def.outputs.filter(o => /\b(?:html|react|vue|svelte|astro|liquid|theme[ -]?files|source|website|interactive|web[ -]?app|png|jpe?g|webp|avif|image)\b/i.test(o.format) || /\.(?:html?|jsx?|tsx?|vue|svelte|astro|liquid|png|jpe?g|webp|avif)$/i.test(o.path));
+  if (expectedSource.some(o => !manifest.coverage[o.id])) fail(`Stage ${def.id} needs readiness evidence for every declared page source output.`);
+  if(requirement.image_required){
+    const schemaIssues=checkSchema(VISUAL_DELIVERY_SCHEMA,record.visual_delivery);
+    if(schemaIssues.length)fail(`Stage ${def.id} visual_delivery: ${schemaIssues.map(error=>`${error.path}: ${error.message}`).join('; ')}`);
+    const images=artifacts.filter(artifact=>artifact.modality==='image');
+    if(!images.length)fail(`Stage ${def.id} must include the requested static image artifacts.`);
+    const result=validateVisualDelivery(record.visual_delivery,{artifacts:images,request:e.request});
+    if(!result.ok)fail(`Stage ${def.id} image inspection failed: ${result.errors.map(error=>`${error.path}: ${error.message}`).join('; ')}`);
+  }
+  if (!requirement.required) return requirement;
+  const schemaIssues=checkSchema(LANDING_PAGE_DELIVERY_SCHEMA,record.landing_page_delivery);
+  if(schemaIssues.length)fail(`Stage ${def.id} landing_page_delivery: ${schemaIssues.map(error=>`${error.path}: ${error.message}`).join('; ')}`);
+  const result = validateProductionQuality({
+    document: {artifacts: artifacts.filter(a=>a.modality==='interactive').map(a => ({...a, kind: a.kind ?? 'landing-page'})), landing_page_delivery: record.landing_page_delivery},
+    plan: {landing_pages: {requested: true, delivery_mode: 'LAUNCHABLE_SITE',existing_site_required:requirement.existing_site_required}},
+  });
+  if (!result.ok) fail(`Stage ${def.id} is not launchable: ${result.errors.map(error => `${error.path}: ${error.message}`).join('; ')}`);
+  return requirement;
 }
 
 /** Install a validated plan. Finished stages carry over when their definition is unchanged; the owner approves the plan unless autonomy allows. */
@@ -111,7 +191,7 @@ function installPlan(e, research, plan, check) {
 /** The fields each event type takes besides type and at. The advance_outcome input schema is built from this. */
 export const EVENT_FIELDS = {
   brief: ['brief'], plan: ['research', 'plan'], approve_plan: ['decision', 'by', 'note'],
-  data: ['data_id', 'status', 'note'], start: ['stage_id'], complete: ['stage_id', 'outputs', 'checks', 'summary'], approve: ['stage_id', 'decision', 'by', 'note'],
+  data: ['data_id', 'status', 'note'], start: ['stage_id'], complete: ['stage_id', 'outputs', 'checks', 'summary', 'production_artifacts', 'landing_page_delivery', 'visual_delivery','work_context'], approve: ['stage_id', 'decision', 'by', 'note'],
   skip: ['stage_id', 'reason'], block: ['stage_id', 'reason'], reopen: ['stage_id'], autonomy: ['level', 'by', 'note'], next_round: ['note'],
 };
 const PHASE_OF = { brief: PHASES, plan: ['RESEARCH', 'PLAN_REVIEW', 'RUN'], approve_plan: ['PLAN_REVIEW'], autonomy: PHASES };
@@ -171,7 +251,12 @@ export function advanceEngagement(input, event, { planCheck } = {}) {
       if (def.kind === 'decision' && !e.records.decisions.some(d => d.stage_id === s.id && d.round === e.round)) fail('Record the owner\'s decision with record_outcome_decision first.');
       if (def.kind === 'execution' && !Object.values(e.records.experiments).some(x => x.round === e.round)) fail('Register at least one experiment with record_outcome_experiment before launch is complete.');
       if (def.kind === 'learning' && Object.values(e.records.experiments).some(x => x.round === e.round && x.state !== 'CLOSED')) fail('Close every experiment from this round first.');
+      checkStageDelivery(e, def, {outputs, production_artifacts: event.production_artifacts, landing_page_delivery: event.landing_page_delivery,visual_delivery:event.visual_delivery,work_context:event.work_context});
       s.outputs = outputs; s.checks = checks; note = optionalText(event.summary, 'Summary', 2000);
+      if (event.production_artifacts !== undefined) s.production_artifacts = clone(event.production_artifacts);
+      if (event.landing_page_delivery !== undefined) s.landing_page_delivery = clone(event.landing_page_delivery);
+      if (event.visual_delivery !== undefined) s.visual_delivery = clone(event.visual_delivery);
+      if (event.work_context !== undefined) s.work_context = clone(event.work_context);
       if (note) s.summary = note;
       s.state = gateFor(def, e) === 'none' ? 'DONE' : 'AWAITING_APPROVAL'; break;
     }
@@ -217,7 +302,9 @@ export function stageInstruction(e, def) {
   const who = def.owner.role ? `the ${def.owner.role} specialist` : `the expert this stage needs (${def.owner.gap})`;
   const load = def.owner.role ? `Load the specialist with prepare_specialist {"role_id":"${def.owner.role}"}${def.support.length ? ` and, for their parts, ${def.support.map(r => `"${r}"`).join(', ')}` : ''}.` : `No catalogue specialist fits. Work as ${def.owner.gap}, using the items below, and note anything a specialist would have needed.`;
   const teamStage = ['production','decision'].includes(def.kind);
-  const jobHandoff = teamStage ? { tool:'start_job', args:{request:def.goal,mode:'team',parent_outcome_id:e.id,context_refs:[{id:'outcome-brief',kind:'files',ref:'BRIEF.md'},...inputs.map((ref,index)=>({id:'stage-input-'+index,kind:'files',ref}))]}, decision_record_tool:'record_outcome_decision' } : null;
+  const deliveryRequirements = stageDeliveryRequirements(e, def);
+  const handoffRequest = def.goal + (deliveryRequirements.required ? '\nRequired delivery: launchable landing-page source integrated with the existing website. A design image does not meet the job.' : '');
+  const jobHandoff = teamStage ? { tool:'start_job', args:{request:handoffRequest,mode:'team',parent_outcome_id:e.id,context_refs:[{id:'outcome-brief',kind:'files',ref:'BRIEF.md'},...inputs.map((ref,index)=>({id:'stage-input-'+index,kind:'files',ref}))]}, decision_record_tool:'record_outcome_decision' } : null;
   const prompt = [
     `You are ${who} on outcome engagement ${e.id} (plan v${e.plan_version}, round ${e.round}).`,
     `Goal: ${def.goal}`,
@@ -230,11 +317,14 @@ export function stageInstruction(e, def) {
     teamStage ? 'Run this stage through start_job with '+JSON.stringify(jobHandoff.args)+'. Follow the full team protocol: the general coordinator selects a task lead and flexible experts, validates real variety, runs the council and independent review, and returns the delivery decision record. Map considered routes, the choice, rationale, dissent and alternatives into record_outcome_decision. The council offers decision support; the owner still chooses at this stage’s existing approval gate. Team mode grants no new live-action authority.' : '',
     s.changes ? `The owner asked for changes: ${s.changes}` : '',
     `Write: ${def.outputs.map(o => `${o.path} (${o.name})`).join('; ')}.`,
+    deliveryRequirements.required ? 'Launch readiness: inspect and reuse the existing site, deliver editable source, and test the real primary action, links/assets, phone and desktop layouts, keyboard access and brand content. Include production_artifacts with output IDs, paths, current SHA-256 and modality interactive, plus landing_page_delivery with current-source receipts. A PNG or a high review score cannot replace these checks. This is a host-reported readiness record, not server verification or deployment authority.' : '',
+    deliveryRequirements.image_required ? 'Image delivery: include production_artifacts matching the rendered image output IDs, paths and SHA-256 values, and visual_delivery with renderer receipt, reviewer_id separate from every maker_id, source references and current-hash checks for brand, product_fidelity, claims_copy and format. For a varied batch, compare every image to another real image and record substantive observed differences. All review statements remain host reports, not proof of user acceptance.' : '',
+    deliveryRequirements.work_context_required ? 'Existing-work delivery: read the authoritative current baseline and supply work_context (GET /api/v1/schemas/ai-blocks-work-context/1.json), with dated source hashes and freshness basis, preservation rules, source-backed change hypotheses and observed comparison.results covering every current production_artifact hash. Unknown or stale baselines, planned checks and a high score cannot establish an improvement. Keep unmeasured outcomes explicit. This remains host-reported evidence, not independent verification.' : '',
     `Check before reporting: ${def.checks.map(c => `${c.id}: ${c.name}${c.required ? '' : ' (optional)'}`).join('; ')}.`,
     def.reviewers.length ? `Then have ${def.reviewers.map(r => `"${r}"`).join(', ')} review the output (prepare_specialist) and fix what they find.` : '',
     `Owner-reported numbers stay reports until checked. Don't invent data, results or approvals. When done, call advance_outcome with {"type":"complete","stage_id":"${def.id}","outputs":[...],"checks":[...]}.`,
   ].filter(Boolean).join('\n');
-  return { stage_id: def.id, kind: def.kind, name: def.name, state: s.state, owner: def.owner, support: def.support, reviewers: def.reviewers, uses: def.uses, inputs, data, capabilities: caps, outputs: def.outputs, checks: def.checks, gate: gateFor(def, e), ...(jobHandoff ? {job_handoff:jobHandoff} : {}), ...(def.optional_when ? { optional_when: def.optional_when } : {}), ...(s.limits ? { limits: s.limits } : {}), prompt };
+  return { stage_id: def.id, kind: def.kind, name: def.name, state: s.state, owner: def.owner, support: def.support, reviewers: def.reviewers, uses: def.uses, inputs, data, capabilities: caps, outputs: def.outputs, checks: def.checks, delivery_requirements: deliveryRequirements, gate: gateFor(def, e), ...(jobHandoff ? {job_handoff:jobHandoff} : {}), ...(def.optional_when ? { optional_when: def.optional_when } : {}), ...(s.limits ? { limits: s.limits } : {}), prompt };
 }
 
 export function briefMarkdown(e) {
@@ -273,9 +363,13 @@ export function planPattern(e) {
 /** What the host should do next, plus the files to save in outcomes/<id>/. */
 export async function describeEngagement(e, { initial = false } = {}) {
   const p = e.plan;
+  const fullExecutionPlan = buildExecutionPlan({ request: e.request, card: e.brief ? { job_to_be_done: e.brief.outcome, acceptance: (e.brief.done ?? []).map((criterion, index) => ({ id: 'done-' + index, criterion, threshold: 'Must pass', critical: true })) } : undefined });
   const files = { 'engagement.json': JSON.stringify(e, null, 2) + '\n', 'ENGAGEMENT.md': statusMarkdown(e), ...(e.brief ? { 'BRIEF.md': briefMarkdown(e) } : {}) };
   if (initial) Object.assign(files, { 'METHOD.md': methodMarkdown(), 'decisions.jsonl': '', 'experiments.jsonl': '', 'LEARNINGS.md': '# Learnings\n\nOne line per learning: date, scope (engagement, business or platform), the rule, and the decision or experiment it came from.\n' });
-  const base = { schema: 'ai-blocks-outcome-step/1', folder: `outcomes/${e.id}/`, engagement: e, engagement_sha256: await engagementDigest(e), review: { host_reported: true, independently_verified: false, grants_execution_authority: false } };
+  const execution_plan = { schema: fullExecutionPlan.schema, task_type: fullExecutionPlan.task_type, landing_pages: {requested:fullExecutionPlan.landing_pages.requested, delivery_mode:fullExecutionPlan.landing_pages.delivery_mode, existing_site_required:fullExecutionPlan.landing_pages.existing_site_required}, scope_required: !e.brief, file: 'EXECUTION-PLAN.json', assurance: 'HOST_REPORTED_NOT_INDEPENDENTLY_VERIFIED' };
+  // Progressive disclosure: the full role/context contract travels once scope is known.
+  files['EXECUTION-PLAN.json'] = JSON.stringify(e.brief ? fullExecutionPlan : execution_plan, null, 2) + '\n';
+  const base = { schema: 'ai-blocks-outcome-step/1', folder: `outcomes/${e.id}/`, execution_plan, engagement: e, engagement_sha256: await engagementDigest(e), review: { host_reported: true, independently_verified: false, grants_execution_authority: false, quality_assurance: e.schema === ENGAGEMENT_SCHEMA ? 'HOST_REPORTED_QUALITY_GATES' : 'LEGACY_STRUCTURAL_ONLY' } };
   // The method travels once, as files["METHOD.md"], which the host saves and rereads at each phase.
   if (e.phase === 'DEFINE') return { ...base, state: 'NEEDS_BRIEF', method_version: METHOD.version, next: `Ask the owner one batch of questions covering the brief frame${initial ? ' in files["METHOD.md"]' : ' in METHOD.md'} (skip what the conversation, memory or brand files already answer), then call advance_outcome with {"type":"brief","brief":{...}}.`, files };
   if (e.phase === 'RESEARCH') return { ...base, state: 'NEEDS_PLAN', next: `${e.plan_changes ? `The owner asked for changes to plan v${e.plan_version}: ${e.plan_changes}. ` : ''}Research relevant facts and constraints, choose task methods from the AI Blocks catalogue, write RESEARCH.md, and compose the plan from our catalogue, then call advance_outcome with {"type":"plan","research":{...},"plan":{...}}. METHOD.md has the rules.`, research_protocol: METHOD.research_protocol, composition_rules: METHOD.composition_rules, files };

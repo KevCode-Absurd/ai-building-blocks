@@ -34,7 +34,19 @@ How to start:
 
 The original brief, the approved page copy and the approved layout. Images and logos if you have them.
 
-Before writing any file, confirm two things with the person: that the copy is the approved final version, and whether a form endpoint exists (and which one). If no browser tool is available, build the files anyway and mark every browser check in checks.md as not run.
+Resolve the copy and the form destination from the original request and existing approved inputs. Ask only if an unsettled fact changes the implementation. If no browser tool is available, build the files anyway and mark every browser check in checks.md as not run.
+
+## Build on the existing website
+
+Inspect the real site and supplied source before building. Reuse its logo files, loaded font families and weights, colour tokens, navigation, footer and supported buyer journey. Record the existing URL, source files inspected, integration target and components retained or adapted. Do not replace a working application or theme with a standalone static page merely because this method is loaded: select a compatible AI Blocks builder instead. A new standalone static implementation is appropriate when the user requested it or the actual hosting target supports it; state that choice.
+
+Map each section to one buyer question and verified product evidence. Preserve essential variant, fit, cost and offer conditions. For product campaigns, link to the real product or a verified commerce action; an unconnected enquiry form must not pretend to take an order. An actual product photograph explains the product; a generated image is an illustration, not customer proof.
+
+## Acceptance evidence
+
+Deliver editable files, not a full-page image wrapped in HTML. Run the source check and local preview, then exercise the main buyer action, secondary links, image and font loading, keyboard navigation, visible focus and labels. Inspect at least one phone width from 320 to 430 px and one desktop width of 1024 px or more. Record the command, viewport, actual observation and receipt for each check, bound to the current source-bundle SHA-256. After a repair, repeat affected checks on the new bundle; an earlier screenshot does not verify new source. A PASS label without observations is insufficient.
+
+Separate implementation readiness from publication and business results. A page with a missing required endpoint or untested main action is an implementation preview with a stated blocker. It is not launchable because the code compiles or an automated judge likes its design. Keep owner feedback and measured conversion performance separate from technical checks.
 
 ## Steps
 

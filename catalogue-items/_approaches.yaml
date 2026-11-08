@@ -8348,21 +8348,26 @@ jobs:
       - id: built-experiences
         name: Built landing pages
         what_it_looks_like: A working HTML, React, animated or Shopify landing page.
-        when_it_wins: Your page copy and offer are settled and you need a design plan
-          before anyone builds it.
+        when_it_wins: The user needs editable page source that fits the existing site,
+          with a runnable preview and checked buyer interactions.
         modality:
-          - text
-        tools_needed: []
+          - interactive
+        tools_needed:
+          - code
+          - browser
         items:
           - animated-landing-page-builder
-          - landing-page-design-planner
-          - page-type-and-layout-planner
           - react-landing-page-builder
           - shopify-landing-page-builder
           - shopify-theme-code-writer
           - static-html-landing-page-builder
         pickers: []
-        checks: []
+        checks:
+          - landing-page-30-point-checker
+          - accessibility-checker
+        supporting_items:
+          - landing-page-design-planner
+          - page-type-and-layout-planner
         tool_guides: []
         seeds_from:
           - landing-page-design-planner

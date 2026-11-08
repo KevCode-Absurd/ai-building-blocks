@@ -76,7 +76,7 @@ export function resolveDials({ request = '', dials = {}, preferences, job, appro
 export const wantsDefaultSave = text => /\b(?:always|make (?:this|it) my default|save (?:this|these) as my defaults?)\b/i.test(String(text ?? ''));
 /**
  * @param {any} previous
- * @param {{job?: string, answers?: Record<string, unknown>, request?: string, feedback?: Array<{family:string, action:string}>, job_id?: string, at?: string, explicit?: boolean}} [options]
+ * @param {{job?: string, answers?: Record<string, unknown>, request?: string, feedback?: Array<any>, job_id?: string, at?: string, explicit?: boolean}} [options]
  */
 export function updatePreferences(previous, { job, answers = {}, request = '', feedback = [], job_id = '', at = new Date().toISOString(), explicit = false } = {}) {
   if (job !== undefined && (typeof job !== 'string' || !/^[a-z0-9][a-z0-9-]{0,119}$/.test(job) || ['constructor', 'prototype', '__proto__'].includes(job))) return { ok: false, errors: [{ path: 'job', message: 'Use a safe job slug.' }], preferences: null, changed: false };
@@ -86,6 +86,10 @@ export function updatePreferences(previous, { job, answers = {}, request = '', f
   const next = clone(previous ?? { schema: 'ai-blocks-job-preferences/1', owner_scope: 'local', version: 0, general: {}, by_job_type: {}, history: [] });
   const save = explicit || wantsDefaultSave(request) || Object.keys(answers).length > 0;
   const errors = validateDialValues(answers);
+  for (const [index, f] of feedback.entries()) {
+    if (!object(f) || !f.scope) continue; // Preserve legacy family-only callers.
+    if (!['artifact','family'].includes(f.scope) || !['keep','kill','more_like_this'].includes(f.action) || !/^[a-f0-9]{64}$/.test(f.sha256 ?? '') || !/^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$/.test(f.slot_id ?? '') || typeof f.path !== 'string' || f.path.length > 240 || !['general','product','brand','copy','composition','usability','format'].includes(f.issue ?? 'general') || typeof f.reason !== 'string' || f.reason.length > 2000 || (f.scope === 'family' && !f.reason.trim())) errors.push({path:`feedback[${index}]`,message:'Scoped feedback needs the delivered artifact revision, an allowed issue category and an explicit reason for a family-wide rule.'});
+  }
   if (errors.length) return { ok: false, errors, preferences: next, changed: false };
   if (!save && !feedback.length) return { ok: true, errors: [], preferences: next, changed: false };
   if (!job && feedback.length) return { ok: false, errors: [{ path: 'job', message: 'Feedback needs a job type.' }], preferences: next, changed: false };
@@ -95,13 +99,16 @@ export function updatePreferences(previous, { job, answers = {}, request = '', f
     const pool = new Map((target.proven_pool ?? []).map(f => [f.family, f]));
     for (const f of feedback) {
       if (!f.family || !['keep', 'kill', 'more_like_this'].includes(f.action)) continue;
+      if (f.scope === 'artifact') continue;
       if (f.action === 'kill') pool.delete(f.family);
       else pool.set(f.family, { family: f.family, evidence: `feedback:${f.action}`, updated: at.slice(0, 10) });
     }
     target.proven_pool = [...pool.values()].sort((a, b) => a.family.localeCompare(b.family)).slice(0, 100);
+    const scoped = feedback.filter(f => f.scope).map(f => ({ job, ...(job_id ? {job_id} : {}), at, scope:f.scope, family:f.family, slot_id:f.slot_id, path:f.path, sha256:f.sha256, action:f.action, issue:f.issue ?? 'general', reason:f.reason }));
+    if (scoped.length) next.feedback_records = [...(Array.isArray(next.feedback_records) ? next.feedback_records : []), ...scoped].slice(-50);
   }
   next.version += 1;
-  next.history = [...next.history, { at, change: feedback.length ? 'Updated proven families from feedback.' : `Saved ${Object.keys(answers).join(', ')}.`, by: feedback.length ? 'feedback' : explicit ? 'explicit_edit' : 'owner_answer', ...(job_id ? { job_id } : {}) }].slice(-50);
+  next.history = [...next.history, { at, change: feedback.length ? 'Recorded scoped feedback; family preferences change only for explicit family rules or legacy feedback.' : `Saved ${Object.keys(answers).join(', ')}.`, by: feedback.length ? 'feedback' : explicit ? 'explicit_edit' : 'owner_answer', ...(job_id ? { job_id } : {}) }].slice(-50);
   return { ok: true, errors: [], preferences: next, changed: true };
 }
 

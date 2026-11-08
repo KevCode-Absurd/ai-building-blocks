@@ -15,6 +15,166 @@
  ],
  "items": [
   {
+   "id": "https://useaiblocks.com/skills/static-html-landing-page-builder",
+   "url": "https://useaiblocks.com/skills/static-html-landing-page-builder",
+   "title": "Plain HTML landing page builder",
+   "summary": "Share approved copy and layout. Get a responsive HTML page, local files and recorded browser checks.",
+   "content_text": "Share approved copy and layout. Get a responsive HTML page, local files and recorded browser checks. Updated 2026-11-08.",
+   "date_published": "2026-10-22T00:00:00Z",
+   "date_modified": "2026-11-08T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Write and build a landing page"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/static-html-landing-page-builder.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/static-html-landing-page-builder/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/static-html-landing-page-builder.md",
+    "json": "https://useaiblocks.com/skills/static-html-landing-page-builder.json",
+    "skill": "https://useaiblocks.com/skills/static-html-landing-page-builder/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/react-landing-page-builder",
+   "url": "https://useaiblocks.com/skills/react-landing-page-builder",
+   "title": "React landing page builder",
+   "summary": "Describe your product and get a React landing page builder result: a Next.js page with hero, pricing, FAQ and proof sections, plus SEO tags.",
+   "content_text": "Describe your product and get a React landing page builder result: a Next.js page with hero, pricing, FAQ and proof sections, plus SEO tags. Updated 2026-11-08.",
+   "date_published": "2026-10-20T00:00:00Z",
+   "date_modified": "2026-11-08T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Write and build a landing page"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/react-landing-page-builder.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/react-landing-page-builder/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/react-landing-page-builder.md",
+    "json": "https://useaiblocks.com/skills/react-landing-page-builder.json",
+    "skill": "https://useaiblocks.com/skills/react-landing-page-builder/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/ad-matched-landing-page-writer",
+   "url": "https://useaiblocks.com/skills/ad-matched-landing-page-writer",
+   "title": "Ad-matched landing page writer",
+   "summary": "Write landing page copy that picks up where your ad left off. Give it the ad, your facts and reviews. You get a page with the full cost stated.",
+   "content_text": "Write landing page copy that picks up where your ad left off. Give it the ad, your facts and reviews. You get a page with the full cost stated. Updated 2026-11-08.",
+   "date_published": "2026-10-19T00:00:00Z",
+   "date_modified": "2026-11-08T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Write and build a landing page"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/ad-matched-landing-page-writer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/ad-matched-landing-page-writer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/ad-matched-landing-page-writer.md",
+    "json": "https://useaiblocks.com/skills/ad-matched-landing-page-writer.json",
+    "skill": "https://useaiblocks.com/skills/ad-matched-landing-page-writer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/landing-page-design-planner",
+   "url": "https://useaiblocks.com/skills/landing-page-design-planner",
+   "title": "Landing page design planner",
+   "summary": "Plan a landing page design from your copy and brand. Get three different directions, a section plan and a build brief, before anyone builds.",
+   "content_text": "Plan a landing page design from your copy and brand. Get three different directions, a section plan and a build brief, before anyone builds. Updated 2026-11-08.",
+   "date_published": "2026-10-19T00:00:00Z",
+   "date_modified": "2026-11-08T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Write and build a landing page"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/landing-page-design-planner.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/landing-page-design-planner/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/landing-page-design-planner.md",
+    "json": "https://useaiblocks.com/skills/landing-page-design-planner.json",
+    "skill": "https://useaiblocks.com/skills/landing-page-design-planner/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/shopify-landing-page-builder",
+   "url": "https://useaiblocks.com/skills/shopify-landing-page-builder",
+   "title": "Shopify landing page builder",
+   "summary": "Turn your finished landing page copy into a Shopify landing page: a section file, a page template with your words in, and install steps.",
+   "content_text": "Turn your finished landing page copy into a Shopify landing page: a section file, a page template with your words in, and install steps. Updated 2026-11-08.",
+   "date_published": "2026-10-19T00:00:00Z",
+   "date_modified": "2026-11-08T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Write and build a landing page"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/shopify-landing-page-builder.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/shopify-landing-page-builder/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/shopify-landing-page-builder.md",
+    "json": "https://useaiblocks.com/skills/shopify-landing-page-builder.json",
+    "skill": "https://useaiblocks.com/skills/shopify-landing-page-builder/SKILL.md"
+   }
+  },
+  {
    "id": "https://useaiblocks.com/skills/website-design-token-extractor",
    "url": "https://useaiblocks.com/skills/website-design-token-extractor",
    "title": "Website design token extractor",
@@ -3052,166 +3212,6 @@
     "markdown": "https://useaiblocks.com/skills/brand-social-account-checker.md",
     "json": "https://useaiblocks.com/skills/brand-social-account-checker.json",
     "skill": "https://useaiblocks.com/skills/brand-social-account-checker/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/prompts/break-even-ad-target-finder",
-   "url": "https://useaiblocks.com/prompts/break-even-ad-target-finder",
-   "title": "Break-even ad cost calculator",
-   "summary": "Share one product's price and costs. Get profit per order, an ad-cost limit and the sales return needed to break even.",
-   "content_text": "Share one product's price and costs. Get profit per order, an ad-cost limit and the sales return needed to break even. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "prompt",
-    "Track your numbers"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/prompts/break-even-ad-target-finder.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/break-even-ad-target-finder/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "prompt",
-    "markdown": "https://useaiblocks.com/prompts/break-even-ad-target-finder.md",
-    "json": "https://useaiblocks.com/prompts/break-even-ad-target-finder.json",
-    "skill": "https://useaiblocks.com/skills/break-even-ad-target-finder/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/break-even-roas-and-cpa-calculator",
-   "url": "https://useaiblocks.com/skills/break-even-roas-and-cpa-calculator",
-   "title": "Break-even ROAS and CPA calculator",
-   "summary": "Share order value, costs and ad figures. Get ad-cost limits, a matching cost check and clear gaps before choosing a test.",
-   "content_text": "Share order value, costs and ad figures. Get ad-cost limits, a matching cost check and clear gaps before choosing a test. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Run Google Ads"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/break-even-roas-and-cpa-calculator.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/break-even-roas-and-cpa-calculator/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/break-even-roas-and-cpa-calculator.md",
-    "json": "https://useaiblocks.com/skills/break-even-roas-and-cpa-calculator.json",
-    "skill": "https://useaiblocks.com/skills/break-even-roas-and-cpa-calculator/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/browse-abandonment-flow-builder",
-   "url": "https://useaiblocks.com/skills/browse-abandonment-flow-builder",
-   "title": "Browse abandonment email flow builder",
-   "summary": "Share products, proof and offer rules. Get site-visit and product-view email flows, with entry rules, timing and message outlines.",
-   "content_text": "Share products, proof and offer rules. Get site-visit and product-view email flows, with entry rules, timing and message outlines. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Write emails that get read"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/browse-abandonment-flow-builder.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/browse-abandonment-flow-builder/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/browse-abandonment-flow-builder.md",
-    "json": "https://useaiblocks.com/skills/browse-abandonment-flow-builder.json",
-    "skill": "https://useaiblocks.com/skills/browse-abandonment-flow-builder/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/bundle-tier-layout-planner",
-   "url": "https://useaiblocks.com/skills/bundle-tier-layout-planner",
-   "title": "Bundle tier layout planner",
-   "summary": "Plan a bundle tier layout for your product page. Give it your price and costs. You get three tiers, savings wording, a margin check and a test plan.",
-   "content_text": "Plan a bundle tier layout for your product page. Give it your price and costs. You get three tiers, savings wording, a margin check and a test plan. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Make an offer people want"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/bundle-tier-layout-planner.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/bundle-tier-layout-planner/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/bundle-tier-layout-planner.md",
-    "json": "https://useaiblocks.com/skills/bundle-tier-layout-planner.json",
-    "skill": "https://useaiblocks.com/skills/bundle-tier-layout-planner/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/persona-script-multiplier",
-   "url": "https://useaiblocks.com/skills/persona-script-multiplier",
-   "title": "Buyer group video script writer",
-   "summary": "Turn one winning video ad script into a script for each buyer group, with a matching page brief and claim notes. Test new buyers, not new ideas.",
-   "content_text": "Turn one winning video ad script into a script for each buyer group, with a matching page brief and claim notes. Test new buyers, not new ideas. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Write ad copy"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/persona-script-multiplier.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/persona-script-multiplier/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/persona-script-multiplier.md",
-    "json": "https://useaiblocks.com/skills/persona-script-multiplier.json",
-    "skill": "https://useaiblocks.com/skills/persona-script-multiplier/SKILL.md"
    }
   }
  ]

@@ -1,0 +1,73 @@
+new_slug: personal-agent-builder
+name: "Personal agent builder"
+summary: "Create a personal prompt, skill, agent or collection through real work, decision replay and reviewed corrections."
+job: set-up-ai
+thinking: medium
+thinking_why: "It adapts questions to real decisions, preserves conditional preferences and compiles the smallest useful artifact."
+headline: "Build an AI that learns how you work"
+subhead: "Start with a real assignment. Turn your decisions, examples and edits into useful instructions, with an editable private guide you can correct."
+explain: |
+  Good personal AI needs the distinctions you use in real work: what you notice, which tempting option you reject, when a rule stops applying and what makes an output feel right. A job title or a long list of traits rarely captures those choices.
+
+  This builder works in your current AI. It first shows the relevant context it can actually access, so you can correct it. Choose a prompt, skill, agent or collection, then work on an actual assignment. Useful decision replays, examples and corrections gradually become a small editable dossier. You keep, narrow, edit or reject proposed lessons.
+
+  You receive a private portable artifact and an honest account of what was saved. If your AI cannot persist memory, it gives you an updated file or instruction block to keep. It does not create a hosted service, train model weights, grant account access or publish a marketplace listing.
+when:
+  - "You want a personal AI assistant or agent that reflects how you work."
+  - "You want to turn tacit knowledge, judgment or taste into a reusable prompt or skill."
+  - "You keep correcting the same AI outputs and want reviewed, scoped lessons."
+  - "You want a collection of useful personal workflows without a long setup interview."
+not_for:
+  - "Automatic access to other chats, private memories or accounts your AI cannot reach."
+  - "A hosted runtime, live tool authorization or automatic model training."
+  - "Publishing private expertise or a marketplace listing without a separate decision."
+you_give:
+  - "What work you want help with or what you want to create; a short request is enough."
+  - "Permitted examples, edits, decisions, existing instructions or a saved dossier, if available."
+you_get:
+  - "Your chosen prompt, skill, agent instructions or collection, ready to use in your AI."
+  - "A small editable dossier of approved context, method, decision cases, taste and exceptions."
+  - "A clear record of reviewed changes, unresolved choices and actual save or export status."
+how_to_use:
+  - "Add the complete skill to your AI and describe one real assignment."
+  - "Correct the context summary and choose what may be used."
+  - "Choose a prompt, skill, agent or collection; start with a small skill if unsure."
+  - "Work with the first result. Explain consequential edits and review any proposed lesson."
+  - "Keep the private export or confirm the destination and receipt if your host can save it."
+how_it_works:
+  - title: "Starts with available context"
+    text: "Separates stated, inferred, stale and missing context, then lets you correct it."
+  - title: "Learns through actual decisions"
+    text: "Uses adaptive replay and optional changed-fact scenarios to uncover cues, alternatives and exceptions."
+  - title: "Keeps your distinctions editable"
+    text: "Proposes scoped lessons for keep, narrow, edit or reject; your taste can stay conditional."
+  - title: "Compiles a useful artifact"
+    text: "Builds the chosen prompt, skill, agent or collection with only the structure it needs."
+  - title: "Reports saving honestly"
+    text: "Shows the real save receipt or provides an export and says persistence is unavailable."
+output_sample:
+  input:
+    - "Your request about work you want help with or an artifact you want to build."
+    - "Optional permitted examples, edits, current instructions or dossier."
+  output:
+    - name: "Chosen artifact"
+      contains: "The actual prompt, reusable skill, bounded agent instructions or collection."
+    - name: "Editable dossier"
+      contains: "Relevant approved context, decision cases, conditional preferences, boundaries and open questions."
+    - name: "Change and save status"
+      contains: "Reviewed changes, actual destination/receipt or export-only status, and checks not run."
+output_shape: |
+  Use the native structure of the chosen artifact. Add a compact editable dossier and change notes only where useful. State actual persistence/export status, unresolved items and the next real assignment. Do not require every dossier section before the first usable result.
+works_best_with:
+  tools:
+    - {name: "Your current AI", why: "The work runs in your chosen AI; available memory and files depend on that host. Its provider and connected tools process supplied content under their own policies."}
+  inputs:
+    - "One real assignment and the context that materially changes it."
+    - "Examples and consequential edits with permission to use them."
+terms:
+  - term: "Dossier"
+    meaning: "A small editable record of relevant context, method, decision cases, preferences and boundaries."
+  - term: "Decision replay"
+    meaning: "Reconstructing what was known and chosen before the outcome was visible."
+  - term: "Conditional taste"
+    meaning: "A preference attached to a situation, examples and exceptions rather than imposed everywhere."

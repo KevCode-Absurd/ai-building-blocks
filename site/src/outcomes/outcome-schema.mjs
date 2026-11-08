@@ -3,6 +3,8 @@
 // without a type here is a build error, which keeps the two in step.
 import { ACCESS, BASELINE_SOURCES, CONNECTION_STATUSES, DIRECTIONS, FIELDS, GATES, ROUTES, SOURCE_KINDS, STAGE_KINDS, VIA } from './plan-contract.mjs';
 import { EVENT_FIELDS } from './engagement.mjs';
+import {VISUAL_DELIVERY_SCHEMA} from '../jobs/visual-delivery.mjs';
+import {WORK_CONTEXT_SCHEMA} from '../jobs/work-context.mjs';
 
 // Empty text is refused by the validators with a plain message, so strings carry only their length limit here.
 const str = (maxLength = 2000) => ({ type: 'string', maxLength });
@@ -51,7 +53,7 @@ export const PLAN_SCHEMA = shape('plan', {
   stages: list(shape('stage', {
     id, kind: one(STAGE_KINDS), name: str(120), goal: str(1500), from_steps: ids(10), owner, support: ids(8), reviewers: ids(6), uses: list(slug, 20),
     data: ids(40), needs: ids(40), depends_on: ids(40),
-    outputs: list(shape('output', { id, name: str(250), format: str(40), path: str(200) }, ['id', 'name', 'format', 'path']), 12),
+    outputs: list(shape('output', { id, name: str(250), format: str(40), path: str(200),count:{type:'integer',minimum:1,maximum:1000} }, ['id', 'name', 'format', 'path']), 12),
     checks: list(shape('check', { id, name: str(500), required: { type: 'boolean' } }, ['id', 'name']), 12),
     gate: one(GATES), optional_when: str(500),
   }, ['id', 'kind', 'name', 'goal', 'owner', 'gate']), 30, 1),
@@ -71,12 +73,18 @@ const EVENT_TYPES = {
   complete: {
     stage_id: id, outputs: list({ type: 'object', properties: { id, path: str(240), sha256: { type: 'string', pattern: '^[a-f0-9]{64}$' } }, required: ['id'], additionalProperties: false }),
     checks: list({ type: 'object', properties: { id, result: one(['PASS', 'FAIL', 'NOT_RUN']), note: str(1000) }, required: ['id', 'result'], additionalProperties: false }), summary: str(2000),
+    production_artifacts: list({type:'object', properties:{slot_id:id,path:str(240),sha256:{type:'string',pattern:'^[a-f0-9]{64}$'},modality:one(['interactive','image','text','doc','data']),kind:str(120),output_id:id,container_sha256:{type:'string',pattern:'^[a-f0-9]{64}$'}},required:['slot_id','path','sha256','modality'],additionalProperties:false},1000),
+    // Full nested report schemas are served separately and checked by the stage
+    // validator. Keep the front-door tool list small enough for discovery.
+    landing_page_delivery:{type:'object',description:'Current-source page report. Full schema: GET /api/v1/schemas/ai-blocks-landing-page-delivery/1.json. Read it before completion.',properties:{schema:{const:'ai-blocks-landing-page-delivery/1'},mode:one(['LAUNCHABLE_SITE','DESIGN_REFERENCE']),artifacts:list({type:'object'},1000)},required:['schema','mode','artifacts'],additionalProperties:false},
+    visual_delivery:{type:'object',description:'Static-ad report. Full schema: GET /api/v1/schemas/ai-blocks-visual-delivery/1.json. Read it before completion. Current image hashes, renderer receipt, independent reviewer and brand/product/claim/format inspection are required.',properties:Object.fromEntries(Object.entries(VISUAL_DELIVERY_SCHEMA.properties).map(([key,value])=>[key,key==='items'?{type:'array',minItems:1,maxItems:1000,items:{type:'object'}}:value])),required:VISUAL_DELIVERY_SCHEMA.required,additionalProperties:false},
+    work_context:{type:'object',description:'Existing-work context and observed comparison. Full schema: GET /api/v1/schemas/ai-blocks-work-context/1.json. Required for substantive IMPROVE or ASSESS production, with CURRENT baseline, preservation, source-backed changes and current-hash comparison.results.',properties:Object.fromEntries(Object.entries(WORK_CONTEXT_SCHEMA.properties).map(([key,value])=>[key,['sources','preserve','changes'].includes(key)?{type:'array',maxItems:value.maxItems,items:{type:'object'}}:key==='comparison'?{type:'object'}:value])),required:WORK_CONTEXT_SCHEMA.required,additionalProperties:false},
   },
   approve: { stage_id: id, decision, by, note: str(2000) },
   skip: { stage_id: id, reason: str(1000) }, block: { stage_id: id, reason: str(1000) }, reopen: { stage_id: id },
   autonomy: { level: { type: 'integer', minimum: 0, maximum: 3 }, by, note: str(1000) }, next_round: { note: str(1000) },
 };
-const OPTIONAL = new Set(['note', 'summary', 'at']);
+const OPTIONAL = new Set(['note', 'summary', 'at', 'production_artifacts', 'landing_page_delivery', 'visual_delivery','work_context']);
 export const EVENT_SCHEMA = {
   description: 'One event. type picks the fields: brief, plan (research + plan), approve_plan, data, start, complete, approve, skip, block, reopen, autonomy, next_round.',
   oneOf: Object.entries(EVENT_FIELDS).map(([type, fields]) => {

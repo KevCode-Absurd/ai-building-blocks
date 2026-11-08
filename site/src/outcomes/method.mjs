@@ -2,7 +2,7 @@
 // The host AI follows it to pin down the outcome, research how experts do the job and compose a plan from our catalogue.
 // Brief-frame examples show the shape of list and object fields; they are not rules, so they do not change METHOD_VERSION.
 // v3 adds the aim-higher pass (Felix Rieseberg's altitude, depth and range, via the be-ambitious skill) and asks for checks with numbers.
-export const METHOD_VERSION = 4;
+export const METHOD_VERSION = 5;
 
 export const BRIEF_FRAME = [
   { field: 'outcome', ask: 'What do you want to be true when this is done?', note: 'In the owner\'s terms, made specific.' },
@@ -24,13 +24,12 @@ export const BRIEF_FRAME = [
 // Aim higher: raise the outcome, the standard or the set of experts, never the size of the job.
 // From Felix Rieseberg's "How to be more ambitious: a tutorial for humans with models", as the be-ambitious skill (MIT, RoboNuggets) lays it out.
 export const AMBITION_RULES = [
-  'Better, not bigger. Raise the outcome (altitude), the standard (depth) or the experts involved (range). Never add deliverables or side quests; if a change makes the job larger without making it better, drop it. Most jobs need one or two of the three.',
-  'Altitude: in the question batch, state your guess at what the owner wants to happen after this is done, as one line they can accept with yes ("My guess: you want X so that Y"). Then write three rungs, each more ambitious: do the task well; get to the decisions behind it; keep the result true without being asked. Record them in ambition.',
-  'Pick the highest rung that has an outside judge and fits the owner\'s limits, access and deadline. Never replace what the owner asked for without their yes: a higher rung raises the request, it does not swap it. If a rung has no outside judge, step down one.',
-  'Depth: before researching, answer four questions. What would a top professional in this field do here that the owner did not ask for? What is the rawest material they would start from (the platform export, the ledger, the logs), instead of a summary? Which methods and tools would they use? What, other than you or the owner, would show the result is right? Use the answers: research from primary sources, start evidence stages from the raw material, and make that outside check a stage check or reviewer.',
-  'Set the target where good practitioners in this field land, not just better than today, when the owner\'s limits allow. Offer it in the question batch; the owner\'s answer wins. Report honestly against the judge: a missed hard target with real numbers is a good result.',
-  'Range: say what the job does as verbs ("get busy people to decide under uncertainty", not "a deck"), and add a support specialist or reviewer only when its field brings a different method. Do what that expert does, not how they talk.',
-  'Ambition raises the standard, not the permissions. Keep every live step the job needs (launching, sending, publishing, changing the site, the store or the books) as its own execution stage with gate approve_each_action: the owner says yes to each action when it comes, so never leave the step out to avoid asking. Anything that spends money or cannot be undone waits for that yes. Name missing data or access and what it would unlock; never invent it.',
+  'Better, not bigger. Raise the outcome (altitude), standard (depth) or useful expertise (range). Keep the requested deliverables and limits; drop side quests.',
+  'Altitude: state the likely goal beyond the task and let the owner correct it. Record three rungs: finish the task well; address the decisions behind it; keep the result true over time. Choose the highest rung with an outside judge that fits the limits and deadline. Never replace the request without the owner’s agreement.',
+  'Depth: identify what an expert would do, the raw evidence they would use, their methods/tools, and an outside check. Use primary evidence and make the check specific and repeatable.',
+  'Offer a professional target when evidence and limits support it. The owner’s answer wins; report missed targets honestly.',
+  'Range: describe the job as verbs, then add a specialist only for a distinct method or check. Extra roles alone do not improve quality.',
+  'Ambition raises the standard, not the permissions. Keep live changes as explicit execution stages with approve_each_action. Spend and irreversible actions require actual owner approval; name missing access or data instead of inventing it.',
 ];
 
 export const RESEARCH_PROTOCOL = [
@@ -56,6 +55,7 @@ export const KIND_GUIDE = {
 };
 
 export const COMPOSITION_RULES = [
+  'Read EXECUTION-PLAN.json after scoping. Freeze independent alternatives before debate; vary buyer promise, proof and composition, not just style. For a page build, reuse the existing site and staff an implementation maker. Deliver editable source with observed build, primary-action, assets, phone/desktop, keyboard and brand checks on the current hash; images are design references. Failed required checks block readiness regardless of scores. Keep owner acceptance and business performance separate.',
   'Turn each research step into one or more stages, and name the steps each stage carries out in from_steps. A step you leave out goes in dropped with the reason (for example: no data for it, out of the owner\'s limits).',
   'Give every stage a kind from the lifecycle. Kinds run in order: a stage may depend only on stages of the same or an earlier kind.',
   'Pick the owner specialist with find_specialist (or search_library type agent) and read the candidate before choosing. Add support specialists for distinct parts and reviewers to check the output. When nobody in the catalogue fits, set owner to {"gap":"<the expert you needed>"}.',

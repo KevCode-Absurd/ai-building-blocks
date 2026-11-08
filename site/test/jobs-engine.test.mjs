@@ -9,7 +9,9 @@ test('a structural fixture completes every phase with a dynamic lead, independen
   assert.equal(result.phase, 'SCOPE'); assert.equal(result.model_calls, 0);
   const phases = ['STAFF', 'DIVERGE', 'DELIBERATE', 'PRODUCE', 'REVIEW', 'DELIVER', 'LEARN', 'COMPLETE'];
   for (const [n, entry] of f.events.entries()) { result = await send(result, entry, f.context); assert.equal(result.phase, phases[n]); assert.equal(result.model_calls, 0); assert.equal(result.state_digest, await jobStateDigest(result.state)); }
-  assert.equal(result.preference_update.preferences.by_job_type['write-documents'].proven_pool[0].family, 'family-0');
+  assert.deepEqual(result.preference_update.preferences.by_job_type['write-documents'].proven_pool, []);
+  assert.equal(result.preference_update.preferences.feedback_records[0].slot_id,'d0');
+  assert.equal(result.preference_update.preferences.feedback_records[0].scope,'artifact');
   assert.equal(result.stored_by_service, false);
 });
 

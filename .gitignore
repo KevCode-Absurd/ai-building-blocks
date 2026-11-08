@@ -125,3 +125,5 @@ site/.copyable-build/
 /jobs-notes/
 !/tools/build-approaches.mjs
 !/tools/job-evals.mjs
+!/tools/verify-delivery-evidence.mjs
+!/docs/AGENT-QUALITY-ARCHITECTURE.md

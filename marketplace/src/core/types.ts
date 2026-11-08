@@ -69,7 +69,7 @@ export type ModelTier = "small" | "standard" | "premium";
 export interface AgentStep {
   id: string;            // snake_case
   title: string;
-  /** Prompt template. Placeholders: {{request}} {{spec}} {{rubric}} {{brand}} {{previous}} {{step:<id>}} {{feedback}} */
+  /** Prompt template. Placeholders: {{request}} {{spec}} {{rubric}} {{brand}} {{output_contract}} {{previous}} {{step:<id>}} {{feedback}} */
   prompt: string;
   tier: ModelTier;
   output: "markdown" | "json";

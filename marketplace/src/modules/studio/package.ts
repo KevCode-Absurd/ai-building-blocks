@@ -2,10 +2,11 @@
 // runner relies on, approved-rule merging and a check that compiled packages never copy an expert's past work.
 import { z } from "zod";
 import type { AgentPackage } from "../../core/types.ts";
+import {OUTPUT_PRECEDENCE,FACT_RULE,READINESS_RULE,HOSTED_TEXT_LIMIT} from '../runner/output-policy.ts';
 
 export const PACKAGE_SCHEMA = "ai-blocks-agent/1";
 /** Placeholders the runner fills in step prompts (see AgentStep in core/types.ts). {{step:<id>}} is checked separately. */
-const PLACEHOLDERS = new Set(["request", "spec", "rubric", "brand", "previous", "feedback"]);
+const PLACEHOLDERS = new Set(["request", "spec", "rubric", "brand", "output_contract", "previous", "feedback"]);
 const MAX_PACKAGE_CHARS = 250_000;
 export const MAX_RULES = 40;
 
@@ -127,8 +128,9 @@ export function withRuleBlock(pkg: AgentPackage): AgentPackage {
   const NL = String.fromCharCode(10);
   const list = (xs: string[]) => xs.map(x => `- ${x}`).join(NL);
   const parts: string[] = [];
-  if (pkg.style_rules.length) parts.push(["### How you write", list(pkg.style_rules)].join(NL));
-  if (pkg.banned_patterns.length) parts.push(["### Never write anything like this", list(pkg.banned_patterns)].join(NL));
+  parts.push(OUTPUT_PRECEDENCE,FACT_RULE,READINESS_RULE,HOSTED_TEXT_LIMIT);
+  if (pkg.style_rules.length) parts.push(["### Specialist presentation guidance (subject to task and brand precedence)", list(pkg.style_rules)].join(NL));
+  if (pkg.banned_patterns.length) parts.push(["### Specialist patterns to check (style preferences do not override the active task)", list(pkg.banned_patterns)].join(NL));
   parts.push(["### Check every draft against this before you finish", list(pkg.checklist)].join(NL));
   const instructions = [base, "", RULES_MARK, "## Rules you always follow", "", parts.join(NL + NL), ""].join(NL);
   return { ...pkg, skill: { ...pkg.skill, instructions } };

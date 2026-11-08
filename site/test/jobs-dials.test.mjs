@@ -61,3 +61,17 @@ test('saved family preferences resolve against the palette while preserving avoi
   assert.deepEqual(resolveDials({job:'job',preferences}).dials.families.value,{prefer:[],avoid:['long-report']});
   assert.deepEqual(dialQuestions({dials:{ask_before_start:{value:'use_defaults_silently'}}}),[]);
 });
+
+test('artifact feedback keeps its evidence without banning or endorsing the entire format',()=>{
+ const prior={schema:'ai-blocks-job-preferences/1',owner_scope:'local',version:1,general:{},by_job_type:{'make-image-ads':{proven_pool:[{family:'clay',evidence:'explicit earlier rule',updated:'2026-11-07'}]}},history:[]};
+ const feedback={family:'clay',scope:'artifact',slot_id:'ad01',path:'ads/ad01.png',sha256:'a'.repeat(64),action:'kill',reason:'Wrong pendant geometry; keep clay as a possible format.',issue:'product'};
+ const result=updatePreferences(prior,{job:'make-image-ads',job_id:'job_test',feedback:[feedback],at:'2026-11-08T10:00:00Z'});
+ assert.equal(result.ok,true);assert.equal(result.preferences.by_job_type['make-image-ads'].proven_pool[0].family,'clay');
+ assert.equal(result.preferences.feedback_records[0].sha256,'a'.repeat(64));assert.equal(result.preferences.feedback_records[0].issue,'product');assert.equal(result.preferences.feedback_records[0].job_id,'job_test');
+ assert.equal(validateJobDocument('ai-blocks-job-preferences/1',result.preferences).ok,true);
+ const family=updatePreferences(result.preferences,{job:'make-image-ads',feedback:[{...feedback,scope:'family',reason:'Do not use clay for this brand.'}],at:'2026-11-08T11:00:00Z'});
+ assert.equal(family.ok,true);assert.deepEqual(family.preferences.by_job_type['make-image-ads'].proven_pool,[]);
+ assert.equal(updatePreferences(prior,{job:'make-image-ads',feedback:[{...feedback,scope:'family',reason:''}]}).ok,false);
+ assert.equal(updatePreferences(prior,{job:'make-image-ads',feedback:[{...feedback,sha256:'stale'}]}).ok,false);
+ assert.equal(prior.feedback_records,undefined);
+});

@@ -139,6 +139,49 @@
             "type": "string",
             "minLength": 1,
             "maxLength": 300
+          },
+          "concept": {
+            "type": "object",
+            "properties": {
+              "audience": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "promise": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "proof": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "composition": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "visual_world": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              }
+            },
+            "required": [
+              "audience",
+              "promise",
+              "proof",
+              "composition",
+              "visual_world"
+            ],
+            "additionalProperties": false
+          },
+          "product_ref": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
           }
         },
         "required": [

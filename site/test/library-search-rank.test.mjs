@@ -6,6 +6,15 @@ import { buildLibrarySearchIndex, queryTokens, searchLibraryIndex } from '../src
 import { rankLibraryResults } from '../src/lib/library-rank.ts';
 
 const sourceHash = 'a'.repeat(64);
+test('a published ID resolves before kind hints and goal aliases, including renamed methods',()=>{
+ const rows=[{slug:'agent-goal-writer',title:'Persistent task contract',kind:'skill',summary:'A bounded outcome and verification contract.'},{slug:'life-goals-agent',title:'Life goals planner agent',kind:'agent',summary:'Plan roles and goals.'}];
+ const index=buildLibrarySearchIndex(rows,sourceHash);
+ for(const query of ['agent-goal-writer',' AGENT-GOAL-WRITER ']){
+  const hits=searchLibraryIndex(index,query);assert.deepEqual([...hits.keys()],['agent-goal-writer']);assert.equal(hits.get('agent-goal-writer').reason,'Exact published ID.');
+ }
+ assert(!searchLibraryIndex(index,'absent-agent-goal-writer').has('absent-agent-goal-writer'));
+ assert.equal(order(rows.map(r=>({slug:r.slug,name:r.title,type:r.kind})),'agent-goal-writer')[0],'agent-goal-writer');
+});
 const order = (blocks, query) => {
   const hits = new Map(blocks.map(b => [b.slug, { score: 5000, field: 'title' }]));
   return rankLibraryResults(blocks, hits, query, { isTested: () => false }).map(b => b.slug);

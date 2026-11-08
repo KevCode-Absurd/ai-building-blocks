@@ -131,6 +131,43 @@
               "new",
               "outlier"
             ]
+          },
+          "draft_receipt": {
+            "type": "object",
+            "properties": {
+              "context_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "path": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 240
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "isolation": {
+                "enum": [
+                  "ISOLATED",
+                  "SAME_CONTEXT"
+                ]
+              },
+              "saw_other_proposals": {
+                "const": false
+              }
+            },
+            "required": [
+              "context_id",
+              "path",
+              "sha256",
+              "isolation",
+              "saw_other_proposals"
+            ],
+            "additionalProperties": false,
+            "description": "Host-reported initial proposal isolation and frozen text hash, required by job-state/2."
           }
         },
         "required": [

@@ -146,7 +146,7 @@ test("agent pack: files in order, soul and personality from the persona, one job
   const pack = await build();
   assert.equal(pack.folder, "nova-seo");
   assert.deepEqual(pack.files.map(f => f.path), [
-    "README.md", "AGENTS.md", "CLAUDE.md", "soul.md", "personality.md", "playbook.md", "TEAM.md", "knowledge.md", "access.md",
+    "README.md", "AGENTS.md", "CLAUDE.md", "soul.md", "personality.md", "playbook.md", "TEAM.md", "knowledge.md", "access.md", "QUALITY-METHOD.md", "OUTPUT-POLICY.md",
     "skills.md", "skills/landing-page-copy/SKILL.md", "skills/seo-blog-post/SKILL.md", "LICENSE.md", "CHANGELOG.md", "pack.json",
   ]);
   const file = (p: string) => pack.files.find(f => f.path === p)!.content;
@@ -157,7 +157,7 @@ test("agent pack: files in order, soul and personality from the persona, one job
   assert.doesNotMatch(file("soul.md"), /How I talk|Let's win one search/);
   assert.match(file("personality.md"), /## How I talk\n\nPlain and warm, with short sentences\. I say things like:\n\n> Let's win one search before we chase ten\./);
   assert.doesNotMatch(file("personality.md"), /## Tone/, "no style sections without profile.style");
-  assert.match(file("personality.md"), /## Writing rules I always follow/);
+  assert.match(file("personality.md"), /## Neutral presentation fallback/);
   assert.match(file("playbook.md"), /## How I work\n\n1\. Read the brief/);
   assert.match(file("playbook.md"), /### Landing page copy\n\n- What are you selling\?/);
   assert.match(file("playbook.md"), /Every section leads to the one action/);

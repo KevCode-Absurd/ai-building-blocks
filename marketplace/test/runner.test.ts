@@ -108,14 +108,14 @@ test("house packages are deterministic and built from the persona's method", asy
   for (const c of LANDING_PAGE.rubric) assert.ok(a.skill.instructions.includes(c.pass_rule));
   assert.ok(a.banned_patterns.some(p => /invented quotes, testimonials or reviews/i.test(p)));
   assert.ok(a.banned_patterns.some(p => /invented numbers/i.test(p)));
-  assert.ok(a.banned_patterns.some(p => p.includes("seamless") && p.includes("unlock")));
-  assert.ok(a.style_rules.some(r => /grade 8 to 9/.test(r)));
+  assert.ok(!a.banned_patterns.some(p => p.includes("seamless") || p.includes("unlock")), "cosmetic vocabulary bans are not integrity rules");
+  assert.ok(a.style_rules.some(r => /current task first/.test(r)));
   assert.match(a.skill.name, /^[a-z0-9-]{1,64}$/);
   // Prompts use only the documented placeholders, and steps only refer to earlier steps.
   const seen: string[] = [];
   for (const step of a.steps) {
     for (const m of step.prompt.matchAll(/\{\{([^}]+)\}\}/g)) {
-      assert.match(m[1], /^(request|spec|rubric|brand|previous|feedback|step:[a-z_]+)$/);
+      assert.match(m[1], /^(request|spec|rubric|brand|output_contract|previous|feedback|step:[a-z_]+)$/);
       if (m[1].startsWith("step:")) assert.ok(seen.includes(m[1].slice(5)), `${step.id} uses ${m[1]} before it exists`);
     }
     seen.push(step.id);

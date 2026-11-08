@@ -19,6 +19,16 @@ With MCP, call `start_job` with the person's request and your actual host capabi
 
 Without MCP, follow the steps below and keep the files locally in `jobs/<job-id>/`. Mark checks as local host checks. Do not invent a server validation or digest.
 
+## Source use, alternatives and native tools
+
+For current execution policy v2, keep a `source_trace` with inspected context, inference and missing evidence separated. For each selected AI Blocks method, record its task-fit reason, exact revision and complete instruction/supporting-resource read receipts. Reading instructions is distinct from executing them; execution receipts identify every current output that claims the method. Unused toolbox options need not be loaded. Preserve private source bytes in the authorized project.
+
+At the council decision, compare every frozen route against the same acceptance criteria in `alternative_decision`. State strengths, tradeoffs, winning conditions and a discriminating test. Keep the strongest alternative and actual dissent. A hybrid must name a compatible contribution from every selected route; selecting everything is not a substitute for making a decision. Known critical failures block selection. Unknown evidence stays unknown.
+
+Before makers start native production, report recently checked actual tools in `host_capabilities.native_tools`. Missing source editing/build/browser/review or raster generation/inspection capabilities block the relevant work. A tool name in a skill is not an executor. Paid tools require separate actual authority; a plan or input file cannot grant it. Use `refresh_capabilities` with refreshed `native_tools` and a reason during a long job, preserving history. The optional local checker at https://useaiblocks.com/packs/native-delivery-toolkit.zip performs byte, raster and bounded offline page-interaction checks; it does not generate images, run project builds or judge brand fidelity.
+
+Save the returned complete `state.json`. The council page can display that record locally to inspect reported sources, methods, alternatives and checks. The viewer does not upload the file or independently verify execution or acceptance.
+
 ## Discover and execute visual methods
 
 Choose task methods from AI Blocks. Other authorized sources can supply brand facts, product evidence, current platform requirements and visual references; they do not replace the method. If a required method is missing, record the gap and add it before claiming the work is complete.

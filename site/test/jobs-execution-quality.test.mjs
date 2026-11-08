@@ -50,6 +50,8 @@ test('the shared plan distinguishes real pages, references and supporting copy o
   for (const request of ['Build five landing pages for the existing Shopify store','Make five landing pages','Build landing pages, no image-only mockups','Build a real landing page, not a mockup']) assert.equal(buildExecutionPlan({ request }).landing_pages.delivery_mode, 'LAUNCHABLE_SITE', request);
   for (const request of ['Create image-only landing-page mockups for design review','Create a landing-page design reference only']) assert.equal(buildExecutionPlan({ request }).landing_pages.delivery_mode, 'DESIGN_REFERENCE', request);
   for (const request of ['Write landing page copy','Audit our landing pages','Create copy for landing pages','Review the current landing page mockup']) assert.equal(buildExecutionPlan({ request }).landing_pages.delivery_mode, 'NONE', request);
+  for(const request of ['Create a working website','Design a website','Make a website for our service'])assert.equal(buildExecutionPlan({request}).landing_pages.delivery_mode,'LAUNCHABLE_SITE',request);
+  for(const request of ['Create a website audit','Create image ads and a landing page audit','Create website copy'])assert.equal(buildExecutionPlan({request}).landing_pages.delivery_mode,'NONE',request);
   const plan = buildExecutionPlan({ request: 'Create 25 image ads and build five landing pages', tier: 'deep', host: { parallel_agents: true, max_parallel: 4 } });
   assert.equal(plan.task_type, 'mixed_visual'); assert.equal(plan.refinement.max_loops, 2); assert.equal(plan.execution.hosted, false); assert.equal(plan.retrieval.dump_entire_library_into_context, false);
   assert.equal(buildExecutionPlan({request:'Adapt landing pages to the existing Shopify store'}).landing_pages.existing_site_required,true);
@@ -92,6 +94,7 @@ function imageProduction() {
   const f = engineFixture(), document = structuredClone(f.production);
   document.artifacts = document.artifacts.slice(0,2).map((artifact,index) => ({ ...artifact, modality: 'image',path:`ads/image-${index}.png`, sha256: String(index+1).repeat(64) }));
   document.visual_delivery=visualDelivery(document.artifacts);
+  for(const method of document.source_trace.methods)method.execution.artifacts=document.artifacts.map(artifact=>({path:artifact.path,sha256:artifact.sha256}));
   document.diversity_review = { by_seat: 's6', receipt: 'reviews/batch.md', items: document.artifacts.map((artifact,index) => ({ slot_id: artifact.slot_id, sha256: artifact.sha256, compared_with: [document.artifacts[1-index].slot_id], observed_differences: [{ axis: 'composition', observation: index ? 'The piece is worn in a portrait, with the product next to the face.' : 'The actual product is shown in a clean annotated overhead construction view.' },{ axis: 'proof', observation: index ? 'Fit is demonstrated by the model wearing the item.' : 'The material and setting are visible in the close cutaway.' }] })) };
   return { f, document, card: visual(f), team: f.team };
 }

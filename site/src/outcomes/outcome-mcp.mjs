@@ -7,6 +7,7 @@ import { checkSchema, nearest } from './schema-check.mjs';
 import example from './examples/rising-cpa.mjs';
 import { READBACK_TOOL } from './monitoring.mjs';
 import { PATTERN_TOOL } from './patterns.mjs';
+import {validateSourceTrace} from '../jobs/source-trace.mjs';
 
 const str = (maxLength = 4000) => ({ type: 'string', minLength: 1, maxLength });
 const hash = { type: 'string', pattern: '^[a-f0-9]{64}$', description: 'engagement_sha256 from the last outcome tool result. A different value means the engagement changed.' };
@@ -28,7 +29,7 @@ export const OUTCOME_INSTRUCTIONS = 'For any outcome the owner wants (more custo
 export const OUTCOME_TOOLS = [
   {
     name: 'start_outcome', title: 'Start here for any business goal', rest: '/api/v1/outcomes',
-    description: 'The front door for any goal or problem the owner states, in their own words. Returns a new engagement waiting for its brief, the next step and the files for outcomes/<id>/, with METHOD.md (brief frame with examples, research protocol, composition and run rules). include_example adds a worked example of a good brief, research and plan. No work runs here.',
+    description: 'Start any goal in the owner’s words. Returns the brief frame, METHOD.md, next step and local outcomes/<id>/ files. include_example adds a worked brief, research and plan. Execution runs in the connected AI.',
     input: { properties: {
       request: str(), engagement_id: { type: 'string', pattern: '^[a-z0-9][a-z0-9-]{0,79}$' }, started: { type: 'string', pattern: '^\\d{4}-\\d{2}-\\d{2}$' },
       include_example: { type: 'boolean', description: 'Add the worked example (rising ad costs) to see the quality bar. Off by default; it is large.' },
@@ -40,7 +41,7 @@ export const OUTCOME_TOOLS = [
   },
   {
     name: 'advance_outcome', title: 'Move an outcome engagement forward', rest: '/api/v1/outcome-steps', engagement: true,
-    description: 'Apply one event to an engagement. Before the run: brief (the pinned-down outcome), plan (research and the composed plan, checked against our rules and the live catalogue), approve_plan (owner only). During the run: data, start, complete (with outputs and checks), approve (owner only), skip, block, reopen, next_round; a plan event during the run is a revision. autonomy (owner only) works any time. Every problem in an event comes back at once, with its field path.',
+    description: 'Advance the engagement with brief, catalogue-checked plan, owner approve_plan, data, start, complete with outputs/checks/source receipts, owner approve, skip, block, reopen or next_round. plan revises the run; owner autonomy sets review level. Returns field-specific problems; executes no work.',
     input: { properties: { engagement, engagement_sha256: hash, event: EVENT_SCHEMA }, required: ['engagement', 'engagement_sha256', 'event'] },
     async run(a, { engagement: e, resolve, today }) {
       let planCheck;
@@ -56,18 +57,27 @@ export const OUTCOME_TOOLS = [
         if (resolve) { const found = await resolve(planRefs(plan, research)); await under('event', () => checkCatalogue(found, plan, research)); }
         planCheck = { catalogue_checked: Boolean(resolve), warnings: planWarnings(e.brief, research, plan, today ?? new Date().toISOString().slice(0, 10)) };
       }
+      if(a.event.type==='complete'&&(a.event.source_trace||e.quality_policy?.source_trace)){
+        const def=e.plan?.stages.find(stage=>stage.id===a.event.stage_id);
+        if(def?.uses.length&&resolve){
+          const found=await resolve({roles:[],items:def.uses,source_inventory:true});
+          if(!found.source_requirements)throw new ValidationError([{path:'event.source_trace',message:'The catalogue resolver cannot verify complete pinned source inventories. Retrieve the current source requirements before claiming selected methods executed.'}]);
+          const result=validateSourceTrace(a.event.source_trace,{requirements:found.source_requirements,methods:def.uses,artifacts:a.event.production_artifacts??a.event.outputs,production:true,required:true});
+          if(!result.ok)throw new ValidationError(result.errors.map(error=>({path:`event.${error.path}`,message:error.message})));
+        }
+      }
       return describeEngagement(await under('event', () => advanceEngagement(e, a.event, { planCheck })));
     },
   },
   {
     name: 'record_outcome_decision', title: 'Record the owner\'s decision', rest: '/api/v1/outcome-decisions', engagement: true,
-    description: 'Record what the owner chose, the options considered (best-ranked first), what they passed over and why. Passing over the top option needs a reason. Returns a line for decisions.jsonl and, if a durable rule was stated, a learning candidate with where to save it.',
+    description: 'Record the owner’s actual ranked options, choice and reasons for passing over the top option. Returns decisions.jsonl and any scoped learning candidate; saves nothing.',
     input: { properties: { engagement, engagement_sha256: hash, decision: DECISION_SCHEMA }, required: ['engagement', 'engagement_sha256', 'decision'] },
     run: (a, { engagement: e }) => under('decision', () => recordDecision(e, a.decision)),
   },
   {
     name: 'record_outcome_experiment', title: 'Register or close an experiment', rest: '/api/v1/outcome-experiments', engagement: true,
-    description: 'Register a test before it goes live (action register: change, metric, baseline, window, minimum volume, guardrails), then close it (action close: observed, volume, guardrail results, verdict). Low volume forces INCONCLUSIVE; a broken guardrail is never a WIN. Returns a line for experiments.jsonl, a learning candidate and an anonymised outcome report the owner may choose to share.',
+    description: 'Register change, metric, baseline, window, minimum volume and guardrails before launch; close with actual observations and verdict. Low volume is INCONCLUSIVE; broken guardrails cannot WIN. Returns local records and an optional share proposal.',
     input: { properties: { engagement, engagement_sha256: hash, experiment: EXPERIMENT_SCHEMA }, required: ['engagement', 'engagement_sha256', 'experiment'] },
     run: (a, { engagement: e }) => under('experiment', () => recordExperiment(e, a.experiment)),
   },
@@ -117,7 +127,19 @@ export async function callOutcomeTool(name, input = {}, { resolve, today } = {})
 
 /** Catalogue resolver over the public catalogue service: one role inventory read, item lookups from the cached index, and the nearest real id for each unknown one. */
 export function catalogueResolver(catalogue) {
-  return async ({ roles, items }) => {
+  return async ({ roles, items, source_inventory=false }) => {
+    if(source_inventory){
+      const methods=[],queue=[...items],seen=new Set();
+      while(queue.length){
+        const slug=queue.shift();if(seen.has(slug))continue;if(seen.size>=100)throw Error('Split source closures larger than 100 methods.');seen.add(slug);
+        const item=await catalogue.callTool('get_item',{id:slug,response_format:'detailed'});
+        if(!item?.instruction_resource||item.resource_validation?.status!=='PASS')throw new ValidationError([{path:'event.source_trace',message:`The ${slug} complete package inventory is unavailable or has unresolved supporting files.`}]);
+        const resources=[item.instruction_resource,...(item.resources??[])];
+        methods.push({slug,revision_sha256:item.revision_sha256,selected:items.includes(slug),resources:[...new Map(resources.map(file=>[file.path,{path:file.path,bytes:file.bytes,sha256:file.sha256}])).values()]});
+        queue.push(...(item.support_items??[]).map(child=>child.slug));
+      }
+      return {missing_roles:[],missing_items:[],source_requirements:{schema:'ai-blocks-source-trace-requirements/1',methods,errors:[],ok:true,assurance:'CATALOGUE_INVENTORY_NOT_EXECUTION'}};
+    }
     const content = (await catalogue.readResource('aiblocks://roles')).contents[0];
     const roleIds = (JSON.parse('text' in content ? content.text : '{}').roles ?? []).map(r => r.id);
     const known = new Set(roleIds);

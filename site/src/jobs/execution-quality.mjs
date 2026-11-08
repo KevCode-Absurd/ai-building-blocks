@@ -4,6 +4,9 @@ import { validateLandingPageDelivery } from './landing-page-delivery.mjs';
 import {workContextRequirements,validateWorkContext} from './work-context.mjs';
 import {CONCEPT_AXES,isControlledVariantRequest,requiresRasterProduction,validateImageDiversity} from './image-quality.mjs';
 import {validateVisualDelivery} from './visual-delivery.mjs';
+import {sourceTraceRequirements,validateSourceTrace,sourceTraceInstructions} from './source-trace.mjs';
+import {alternativeDecisionInstructions} from './alternative-decision.mjs';
+import {nativeExecutionRequirements} from './native-execution.mjs';
 export {CONCEPT_AXES,isControlledVariantRequest} from './image-quality.mjs';
 
 const list = value => Array.isArray(value) ? value : [];
@@ -14,7 +17,11 @@ const normalize = value => String(value ?? '').normalize('NFKC').toLowerCase().r
 const types = seat => new Set([seat?.seat_type, ...list(seat?.seat_types)]);
 const stopwords = new Set(['a','an','and','the','for','of','in','on','to','with','image','ad','creative','product']);
 export const GENERAL_EXPLORATION_AXES = Object.freeze(['mechanism','evidence','tradeoff','structure']);
-export const EXECUTION_QUALITY_POLICY = Object.freeze({ version: 1, independent_drafts: true, min_changed_axes: 2 });
+export const LEGACY_EXECUTION_QUALITY_POLICY = Object.freeze({ version: 1, independent_drafts: true, min_changed_axes: 2 });
+export const EXECUTION_QUALITY_POLICY = Object.freeze({ version: 2, independent_drafts: true, min_changed_axes: 2, source_trace: true, alternative_decision: true });
+export function supportedExecutionQualityPolicy(value) {
+  return [EXECUTION_QUALITY_POLICY,LEGACY_EXECUTION_QUALITY_POLICY].some(policy=>value&&Object.keys(value).length===Object.keys(policy).length&&Object.entries(policy).every(([key,item])=>value[key]===item));
+}
 
 export function conceptSimilarity(first, second) {
   const a = normalize(first), b = normalize(second);
@@ -29,11 +36,12 @@ export function conceptSimilarity(first, second) {
  */
 export function buildExecutionPlan({ request = '', job, card, tier = 'standard', host = {} } = {}) {
   const words = `${request} ${card?.job_to_be_done ?? ''}`;
-  const pageMention = /\blanding[ -]?pages?\b|\b(?:build|redesign|launch|implement)\b.{0,35}\b(?:website|site|webpage)\b/i.test(words);
+  const pageMention = /\blanding[ -]?pages?\b|\b(?:build|redesign|launch|implement|create|make|design|develop|extend|improve|adapt)\b.{0,35}\b(?:website|site|webpage)\b/i.test(words);
   const implementation = /\b(?:build|implement|code|redesign|launchable|functional|working|deployable|production[ -]ready)\b/i.test(request);
   const creation = implementation || /\b(?:create|make|generate|design)\b/i.test(request);
   const pageText = /\b(?:landing[ -]?pages?|website)\s+(?:copy|headlines?|outline)\b|\b(?:copy|copywriting|headlines?|outline)\b.{0,40}\b(?:landing[ -]?pages?|website)\b/i.test(request);
-  const supportingOnly = (pageText && !implementation) || (/\b(?:audit|critique|review|plan|planning)\b/i.test(request) && !creation);
+  const pageSupport = /\b(?:landing[ -]?pages?|website|site)\s+(?:audits?|reviews?|plans?|briefs?|copy|headlines?|outlines?)\b|\b(?:audit|critique|review|plan|planning)\b.{0,40}\b(?:landing[ -]?pages?|website|site)\b/i.test(request);
+  const supportingOnly = ((pageText||pageSupport) && !implementation) || (/\b(?:audit|critique|review|plan|planning)\b/i.test(request) && !creation);
   const pages = pageMention && !supportingOnly;
   // Remove explicitly rejected substitutes before identifying a reference-only request.
   const requestedReference = request.replace(/\b(?:not|no|without|avoid|instead of|rather than)\s+(?:an?\s+|any\s+)?(?:image[ -]only\s+|raster\s+|design[ -]only\s+)?(?:mockups?|design[ -]references?|raster|image[ -]only|concept[ -]only|design[ -]only)\b/gi, '');
@@ -43,7 +51,7 @@ export function buildExecutionPlan({ request = '', job, card, tier = 'standard',
   const delivery_mode = pages ? referenceOnly ? 'DESIGN_REFERENCE' : 'LAUNCHABLE_SITE' : 'NONE';
   const existing_site_required = pages && /\b(?:existing|current|live|reuse|adapt|extend)\b.{0,60}\b(?:website|site|store|landing[ -]?pages?)\b|\b(?:website|site|store|landing[ -]?pages?)\b.{0,40}\b(?:existing|current|reuse|adapt|extend)\b|\bbuild\s+on\b/i.test(words);
   const loops = tier === 'deep' ? 2 : tier === 'quick' ? 0 : 1;
-  return {
+  const plan = {
     schema: 'ai-blocks-execution-plan/1', task_type,
     objective: { request_verbatim: request, job_to_be_done: card?.job_to_be_done ?? null, acceptance: card?.acceptance ?? [], status: card ? 'SCOPED_HOST_REPORT' : 'REQUIRES_SCOPE' },
     work_context: {...workContextRequirements(request),source:card?.work_context?'SCOPED_JOB_CARD':'REQUIRES_SCOPE'},
@@ -61,8 +69,12 @@ export function buildExecutionPlan({ request = '', job, card, tier = 'standard',
     gates: ['Scope matches the requested deliverable, not a convenient substitute.', 'Independent drafts exist before debate; preserve useful dissent.', 'The lead checks handoff contracts and current artifact revisions.', 'Required checks must pass; a high average score cannot hide a failed requirement.', ...(pages ? ['Launchable pages require editable source, existing-site integration evidence and browser-tested primary actions, responsive layouts and keyboard access.'] : []), ...(imageAds ? ['Inspect actual ad images for product/brand fidelity and substantive batch diversity.'] : []), 'Deliver actual files and honest flags. User acceptance and business performance remain unmeasured until observed.'],
     refinement: { max_loops: loops, stop_on: ['critical requirement failure without a repair path','missing required capability or evidence','budget or loop limit'], repair: 'Identify the failing slot and requirement, change the actual artifact, and repeat affected checks on its new hash. Preserve the strongest alternate route.' },
     execution: { hosted: false, model_calls: 0, parallel_available: host.parallel_agents === true, max_parallel: host.max_parallel ?? 1, isolation: host.parallel_agents ? 'REQUIRES_DISTINCT_CONTEXT_RECEIPTS' : 'SAME_CONTEXT_UNLESS_HOST_PROVIDES_ISOLATION', permission: 'An execution plan is not authority to send, spend or publish.' },
+    source_trace: {schema:'ai-blocks-source-trace/1',required_for_selected_methods:true,require_pinned_resource_hashes:true,distinguish_read_from_executed:true,instruction:sourceTraceInstructions()},
+    alternative_decision: {schema:'ai-blocks-alternative-decision/1',required_for_council:true,instruction:alternativeDecisionInstructions()},
     verification_limit: 'Structured records and similarity heuristics are host-reported checks, not independent proof of execution, aesthetic quality, conversion lift or user approval.',
   };
+  plan.native_execution={requirements:nativeExecutionRequirements(plan),preflight:'Discover actual tools and run preflightNativeExecution before starting production. tools/inspect-native-delivery.mjs inspects supported local outputs; it does not replace a real build, authorized renderer or semantic review.',paid_tools_default:false};
+  return plan;
 }
 
 /** Validate frozen initial work before proposals are exposed to one another. */
@@ -80,6 +92,11 @@ export async function validateExploration({ routes, spread, proposal_contents = 
     if (digest !== receipt.sha256) add(`${p}.sha256`, 'The proposal receipt must hash the exact frozen proposal text.');
     if (team?.seats && !team.seats.some(seat => seat.seat_id === route.owner_seat)) add(p, 'The frozen proposal must belong to a staffed route owner.');
   }
+  if(policy.version>=2&&!isControlledVariantRequest(card.request_verbatim)&&card.dials?.variety_mix?.preset!=='focused')for(const [index,route]of list(routes?.routes).entries())for(const prior of list(routes?.routes).slice(0,index)){
+    const axes=['first_move','mechanism','segment','horizon'];
+    const changed=axes.filter(axis=>conceptSimilarity(route.differs_on?.[axis],prior.differs_on?.[axis])<.8);
+    if(changed.length<2||!changed.some(axis=>axis==='first_move'||axis==='mechanism'))add(`document.routes.routes[${index}].differs_on`,`This route is a near-duplicate of ${prior.route_id}; change at least two substantive dimensions including first move or mechanism, not only its name or tone.`);
+  }
   const slots = list(spread?.slots), requiresConcepts = Boolean(card.visual_spec) && card.dials?.variety_mix?.preset !== 'focused' && !isControlledVariantRequest(card.request_verbatim) && slots.length > 1;
   if (requiresConcepts) for (const [index, slot] of slots.entries()) {
     const p = `document.spread.slots[${index}].concept`;
@@ -95,9 +112,20 @@ export async function validateExploration({ routes, spread, proposal_contents = 
 }
 
 /** Validate artifact-level checks. A numeric score cannot override missing evidence. */
-export function validateProductionQuality({ document = {}, card = {}, team = {}, plan } = {}) {
+export function validateProductionQuality({ document = {}, card = {}, team = {}, plan, catalogue, require_trace = false } = {}) {
   const errors = [], add = (path, message) => errors.push({ path, message });
   const artifacts = list(document.artifacts);
+  const methods=[...new Map(artifacts.flatMap(artifact=>list(artifact.items)).map(method=>[method.slug,method])).values()];
+  if(document.source_trace||require_trace){
+    const requirements=catalogue?sourceTraceRequirements({methods,manifest:catalogue.manifest,items:catalogue.items}):undefined;
+    const context_sources=list(card.context_sources).map(source=>{
+      const baseline=list(card.work_context?.sources).find(current=>current.ref===source.ref&&current.role==='BASELINE');
+      const brain=card.brand_brain?.path===source.ref?card.brand_brain:undefined;
+      return {...source,...(brain||baseline?{sha256:brain?.sha256??baseline.sha256,required_inspection:true}:{})};
+    });
+    const trace=validateSourceTrace(document.source_trace,{requirements,methods,context_sources,artifacts,production:true,required:require_trace});
+    errors.push(...trace.errors.map(error=>({path:`document.${error.path}`,message:error.message})));
+  }
   const request=plan?.objective?.request_verbatim??card.request_verbatim??'';
   const work=validateWorkContext(document.work_context??card.work_context,{request,required:plan?.work_context?.required??workContextRequirements(request).required,production:true,artifacts});
   errors.push(...work.errors.map(error=>({path:`document.${error.path}`,message:error.message})));
@@ -136,6 +164,10 @@ export function validateProductionQuality({ document = {}, card = {}, team = {},
 
 export function executionQualityMethod() {
   return `## Execution quality contract
+
+${sourceTraceInstructions()}
+
+${alternativeDecisionInstructions()}
 
 For personal capability building, discover personal-agent-builder in the AI Blocks library and read its complete pinned method. Start from relevant context the host actually exposes, not assumed access to private memory. Choose prompt, skill, agent or collection; learn one useful task through project replay, scenarios and corrections. Proposed lessons need owner review and an actual save receipt or an explicit unavailable status. Personal use is separate from marketplace publication; an interview does not grant tool authority.
 

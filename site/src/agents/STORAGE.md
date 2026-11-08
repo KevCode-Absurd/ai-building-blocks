@@ -1,52 +1,30 @@
-# Authenticated expert-agent preview
+# Private personal judgment storage
 
-This is a separate preview entry, `src/worker-expert-preview.ts`. The production entry, production configuration, existing OAuth code and migration 0010 are unchanged. Do not point this preview at the production database. Migration `0011_expert_agent_records.sql` is new and has only been exercised locally.
+This is an additive integration in the existing authenticated personal/company MCP and API router. It makes no model calls and enables no hosted execution. Deployment is separate from code readiness: apply migrations `0011_expert_agent_records.sql` and `0012_expert_agent_deletion.sql` to the selected database, verify them, then set `EXPERT_AGENTS_ENABLED=true`. The default without the flag retains the old tool surface. Do not run the isolated preview worker as the production entry point: it intentionally exposes a narrower tool set.
 
-## Request path
+## Access and workflow
 
-On an independently configured preview domain, set `EXPERT_AGENTS_ENABLED="true"`, retain the existing API/OAuth security configuration, bind its own `SPACES` D1 database, and use the preview entry. Apply the existing migrations plus 0011 only to that preview database. A deployment/configuration and real host connection trial are still needed before anyone can use it remotely.
+Use the existing personal resource `/mcp/personal` with `saved:read` or explicitly consented `saved:write`. Company resources use their existing `company:read`/`company:write` grants and fresh workspace membership. Only the current workspace owner can write company records; original author checks additionally prevent silently taking over another expert's record. Payloads cannot assign ownership or workspace identity.
 
-The preview exposes expert tools on `/mcp/personal` or the existing company endpoint shape. It delegates OAuth/discovery and other routes to the existing worker. The expert endpoint advertises its own tools; it does not yet compose public catalogue or saved-library tools into that same tool list. Those existing connections and the preparation adapter remain available separately. With the flag absent, every request follows the existing worker.
+1. Retrieve `personal-agent-builder` in full and only relevant context the host actually has. List/get existing private records before creating duplicates.
+2. Save a user-authorized private profile and task-scoped agent. These are private records, not public marketplace credentials.
+3. Begin a capture against the current agent digest with selected evidence, declared source rights and permitted use. Record the next useful guided answer. An answer is evidence, not approved learning.
+4. Propose a small set of conditional lessons. Keep/narrow/edit/reject is supported through an exact reviewed proposal: replace an unreviewed proposal to edit or narrow it, preview the resulting revision, then accept or reject that digest. An earlier preview becomes invalid after any change.
+5. Acceptance atomically commits the revised agent and capture review. Rejection saves the review while leaving the agent unchanged. An approved correction is superseded by a new sourced capture using `replaces_id`; prior history remains retrievable.
+6. Every save returns `saved`, the authenticated destination, record versions/digests and `model_training:false`. Retrieve the record on a later request to verify persistence. Missing storage or permissions must produce an error, not an invented save receipt.
 
-Requests pass the existing origin/host/IP checks, bearer-token verification, resource/audience binding, per-grant limits, and MCP SDK transport. Tokens are not logged or forwarded to model providers. Read grants expose only read tools. Company membership is rechecked even for initialization/discovery; writes require both write consent and the current workspace owner. Authenticated user and scope determine ownership/workspace; tool arguments cannot select either. Existing author identity cannot silently transfer through company ownership changes.
+For ordinary task reuse, call `list_expert_records` with `kind:"agent"`, an optional current-task `query` (1–200 characters) and `limit` (1–25). This performs a Unicode-aware text match within the authenticated scope against names and task/deliverable scope only; exact exclusions suppress a candidate and never boost it. Query results contain short scope summaries, not raw captures, knowledge or pending proposals, and stay under a bounded response size. They are heuristic candidates, not a semantic suitability or expertise assessment. Retrieve the exact chosen revision, inspect its full scope, approved knowledge and source limitations, then prepare it only if appropriate. Check relevant saved workflows and scoped memory alongside these agents. Ordinary reuse requires neither a new builder interview nor a council. Omitting query retains the existing metadata listing behavior.
 
-These boundaries follow the [MCP authorization specification](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/docs/specification/2026-07-28/basic/authorization/security-considerations.mdx). Responses use `private, no-store`. Company-scoped records are readable by authorized company members: use personal scope for an expert's private material that the company should not receive. Buyer-private context must not be imported into a reusable expert package without separate permission.
+The website can use the same service through `POST /api/v1/personal/expert-agents`, or `/api/v1/company[/<workspace-token>]/expert-agents`, with `{ "name": "<documented-tool-name>", "arguments": { ... } }`. Browser requests use the existing same-origin signed-in account session; API clients use their resource-bound OAuth token. Foreign-origin browser writes and wrong-resource/revoked OAuth grants are refused. The operation names and argument schemas are the same as authenticated MCP discovery. No user content is placed in public catalogue assets.
 
-## Native conversation sequence
+Raw capture storage must itself match the source's declared allowed use: personal-only evidence cannot be saved in a company scope, where members could read it, or vice versa. This is rechecked on ongoing capture operations, including older preview records, reads and private exports. Restricted records are omitted from ordinary lists; explicit deletion remains available. Unknown-rights or expired material may remain an explicitly authorized, correctly scoped draft for review under the existing contract, but save/read/preview receipts report those limitations and never certify rights or renew permission. Existing worker-preparation, source-expiry and publication checks still apply; archival private JSON is not approval to reuse its contents.
 
-1. `save_expert_profile`: supply a private `ai-blocks-expert-profile/1` profile. The server assigns authenticated ownership; credentials remain self-reported. No public identity is created.
-2. `create_expert_agent`: choose an owned profile, task, deliverables, exclusions and review rules. The server saves an empty scoped agent.
-3. `get_expert_record` with `kind: "agent"`: retrieve the exact current agent and digest.
-4. `begin_expert_capture`: supply a new capture/source ID, the current `agent_sha256`, mode `interview` or `work-review`, and the selected evidence's declared rights/allowed uses/expiry.
-5. `get_expert_record` with `kind: "capture"`: receive its next question. The host asks it and uses its own model for interpretation.
-6. `record_expert_capture_answer`: persist the user-authorized answer. Repeat as useful. No transcript or external file is discovered automatically.
-7. `propose_expert_learning`: save conditional knowledge, exceptions, named replacements and optional practice cases. See [CAPTURE.md](CAPTURE.md). The current agent is unchanged.
-8. `preview_expert_learning`: render the exact `accept` or `reject` preview to the expert.
-9. `review_expert_learning`: send their decision, exact preview digest, expected capture storage version and expected agent storage version. Acceptance atomically saves both records; rejection saves the review and keeps the agent unchanged.
-10. `prepare_saved_expert_agent`: prepare a selected private revision for personal/company use, subject to declared source use and expiry. This does not authorize tool actions or commercial publication.
+## Export and deletion
 
-All mutations require `expected_version`, `idempotency_key` and `confirmed: true`. Those fields report a user-requested write; they do not independently prove human approval. New records require version zero. Reuse the same request key and exact arguments after an uncertain network response. Changed arguments with the same key fail. A conflicting expected version requires fetching and reviewing again.
+`export_expert_record` returns the chosen exact private record as portable JSON, including version/digest, with `contains_private_data:true`. `prepare_saved_expert_agent` exports usable private worker instructions from approved, permitted knowledge; neither operation publishes or runs an agent.
 
-`storage_version` is the version of a stored record. `agent.version` changes only when the agent changes; capture answers and proposals have their own storage versions. Profile versions must equal their expected storage version plus one. Prefixes namespace profile/agent/capture IDs internally; the same visible ID can exist in different kinds without collision.
+`delete_expert_record` permanently removes all versions of one explicitly requested record, bound to its current version and digest. It does not silently cascade: remove referencing captures before agents and agents before profiles. Deleting a capture does not erase separately approved agent knowledge; request the relevant agent deletion or an approved revision separately. Small content-free tombstones and idempotency digests remain to prevent retries recreating erased records. Deleted IDs cannot be reused. This is private application-record deletion, not a promise to erase remote model-provider logs, backups or other independently exported copies.
 
-## Persistence and transactions
+## Assurance and limits
 
-The service uses dedicated `expert_agent_versions` and `expert_agent_requests` tables, not the coordinator's workflow/memory/outcome/run types. Inserts are immutable through the service. An acceptance transaction inserts its receipt, agent revision and capture review together; database revision triggers abort stale writes. [D1 batch transactions](https://developers.cloudflare.com/d1/worker-api/d1-database/#batch) roll back the sequence if one statement fails. Local tests exercise the SQL with SQLite and an equivalent batch adapter; they are not a remote Cloudflare deployment test.
-
-The memory store mirrors these transaction and quota rules for tests. Each scope is bounded to 500 record IDs and 20 MB of version contents, with up to 1,000 storage versions per record and 600 KB per record. The HTTP transport retains the existing 64,000-byte request limit. Common credential patterns and unsafe JSON are rejected; this is not a comprehensive secret or personal-data detector. Stored evidence is private application data, not a promise of special encryption or resistance to all prompt extraction.
-
-`get_expert_record` for a capture returns the stable source evidence used by an accepted rule. Portable worker preparation currently includes source references, not this complete interview archive. Full evidence-bearing export/source closure is the next export PR. There is no durable evaluation-report storage, profile publication, marketplace hiring, payments, inference or scheduled learning in this slice.
-
-This preview retains history and has no deletion tool yet. Use synthetic or appropriately consented test data until scoped purge/retention controls and remote access review are implemented. Nothing should be called independently verified, trained, tested for professional competence, or market-ready based on these structural checks.
-
-## Local verification
-
-With Node 24 and the locked site dependencies installed:
-
-```powershell
-node --test site/test/expert-agent-*.test.mjs
-node site/node_modules/typescript/bin/tsc --noEmit -p site/tsconfig.expert-agent.json
-node site/scripts/demo-expert-agent-capture.mjs
-```
-
-The demo uses synthetic answers and the memory store. It performs no model calls, networking, deployment, spending, or actual expert evaluation. Tests additionally cover the SQL adapter, rollback races, OAuth PKCE, MCP HTTP, read/write consent, revoked/foreign-audience tokens and changing membership.
+Tests use synthetic content, real OAuth/HTTP protocol paths and SQLite-backed D1 adapter transactions. They check scope isolation, explicit write consent, exact preview binding, version conflicts, atomic acceptance, persistent restart reads, optional feature discovery, export and deletion. They do not establish professional expertise, user satisfaction or model-quality improvement. Approval remains host-reported; no hidden conversation access, automatic training, public listing or marketplace publication is implied.

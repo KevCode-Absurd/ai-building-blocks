@@ -518,7 +518,7 @@
     "catalogue-items/general/personal-agent-builder/item.yaml": {
       "reviewed_by": "AI Blocks source review (Codex)",
       "reviewed_on": "2026-11-08",
-      "method_sha256": "05e7b431fb87f455357cd5895a7d4ebd61f5ab60ae157a28a59d5e0932dc036b",
+      "method_sha256": "cd9645bb2ed536609ba4d14a3f33555e916450519f956ef0eb7693cb15f6c69c",
       "inputs": [
         {
           "type": "question",

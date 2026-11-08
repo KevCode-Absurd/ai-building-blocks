@@ -5,6 +5,7 @@ import { ACCESS, BASELINE_SOURCES, CONNECTION_STATUSES, DIRECTIONS, FIELDS, GATE
 import { EVENT_FIELDS } from './engagement.mjs';
 import {VISUAL_DELIVERY_SCHEMA} from '../jobs/visual-delivery.mjs';
 import {WORK_CONTEXT_SCHEMA} from '../jobs/work-context.mjs';
+import {SOURCE_TRACE_SCHEMA} from '../jobs/source-trace.mjs';
 
 // Empty text is refused by the validators with a plain message, so strings carry only their length limit here.
 const str = (maxLength = 2000) => ({ type: 'string', maxLength });
@@ -65,12 +66,17 @@ export const PLAN_SCHEMA = shape('plan', {
 // Every event's fields, typed. A plan event during the run is a revision.
 const decision = one(['APPROVED', 'CHANGES_REQUESTED']);
 const by = { type: 'string', description: '"owner", only after the owner actually said so.' };
+// Full capability fields are described in each ready production prompt and
+// enforced by the shared preflight; avoid repeating their schema in tools/list.
+const nativeTools={type:'array',maxItems:30,items:{type:'object'}};
 const EVENT_TYPES = {
   brief: { brief: BRIEF_SCHEMA }, plan: { research: RESEARCH_SCHEMA, plan: PLAN_SCHEMA },
   approve_plan: { decision, by, note: str(2000) },
   data: { data_id: id, status: one(['AVAILABLE', 'MISSING']), note: str(1000) },
-  start: { stage_id: id },
+  start: { stage_id: id,native_tools:nativeTools },
   complete: {
+    source_trace:{type:'object',description:'Read GET /api/v1/schemas/ai-blocks-source-trace/1.json. Selected methods need complete pinned source reads and separate execution receipts.'},
+    native_tools:nativeTools,
     stage_id: id, outputs: list({ type: 'object', properties: { id, path: str(240), sha256: { type: 'string', pattern: '^[a-f0-9]{64}$' } }, required: ['id'], additionalProperties: false }),
     checks: list({ type: 'object', properties: { id, result: one(['PASS', 'FAIL', 'NOT_RUN']), note: str(1000) }, required: ['id', 'result'], additionalProperties: false }), summary: str(2000),
     production_artifacts: list({type:'object', properties:{slot_id:id,path:str(240),sha256:{type:'string',pattern:'^[a-f0-9]{64}$'},modality:one(['interactive','image','text','doc','data']),kind:str(120),output_id:id,container_sha256:{type:'string',pattern:'^[a-f0-9]{64}$'}},required:['slot_id','path','sha256','modality'],additionalProperties:false},1000),
@@ -84,7 +90,7 @@ const EVENT_TYPES = {
   skip: { stage_id: id, reason: str(1000) }, block: { stage_id: id, reason: str(1000) }, reopen: { stage_id: id },
   autonomy: { level: { type: 'integer', minimum: 0, maximum: 3 }, by, note: str(1000) }, next_round: { note: str(1000) },
 };
-const OPTIONAL = new Set(['note', 'summary', 'at', 'production_artifacts', 'landing_page_delivery', 'visual_delivery','work_context']);
+const OPTIONAL = new Set(['note', 'summary', 'at', 'production_artifacts', 'landing_page_delivery', 'visual_delivery','work_context','source_trace','native_tools']);
 export const EVENT_SCHEMA = {
   description: 'One event. type picks the fields: brief, plan (research + plan), approve_plan, data, start, complete, approve, skip, block, reopen, autonomy, next_round.',
   oneOf: Object.entries(EVENT_FIELDS).map(([type, fields]) => {

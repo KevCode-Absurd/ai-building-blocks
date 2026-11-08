@@ -6,6 +6,7 @@ import { localResolver } from '../src/outcomes/evals/local-catalogue.mjs';
 import { callOutcomeTool, outcomeMcpTools } from '../src/outcomes/outcome-mcp.mjs';
 import example from '../src/outcomes/examples/rising-cpa.mjs';
 import { handlePublicApi } from '../src/server/public-api.ts';
+import {sourceTrace,syntheticNativeTools} from './fixtures/jobs/source-trace-fixture.mjs';
 
 const resolve = localResolver();
 const TOOL = { resolve, today: '2026-11-02' };
@@ -15,7 +16,9 @@ const call = (name, input) => callOutcomeTool(name, input, TOOL);
 const step = (r, event) => call('advance_outcome', { engagement: r.engagement, engagement_sha256: r.engagement_sha256, event });
 async function complete(r, stageId, overrides = {}) {
   const def = r.engagement.plan.stages.find(s => s.id === stageId);
-  return step(r, { type: 'complete', stage_id: stageId, outputs: def.outputs.map(o => ({ id: o.id })), checks: def.checks.map(c => ({ id: c.id, result: overrides[c.id] ?? 'PASS' })) });
+  const outputs=def.outputs.map(o=>({id:o.id,path:o.path,sha256:'a'.repeat(64)}));
+  const requirements=def.uses.length?(await resolve({roles:[],items:def.uses,source_inventory:true})).source_requirements:null;
+  return step(r, { type: 'complete', stage_id: stageId, outputs,native_tools:syntheticNativeTools(),...(requirements?{source_trace:sourceTrace({requirements,artifacts:outputs})}:{}),checks: def.checks.map(c => ({ id: c.id, result: overrides[c.id] ?? 'PASS' })) });
 }
 const stateOf = (r, id) => r.engagement.stages.find(s => s.id === id).state;
 async function briefed() {
@@ -204,7 +207,7 @@ test('autonomy relaxes review gates but never decisions or live actions', async 
 
 test('a changed engagement or a plan edited outside the tools is rejected', async () => {
   const r = await approved();
-  const tampered = copy(r.engagement); tampered.stages[2].state = 'DONE';
+  const tampered = copy(r.engagement); tampered.request += ' changed outside the tools';
   await assert.rejects(call('advance_outcome', { engagement: tampered, engagement_sha256: r.engagement_sha256, event: { type: 'start', stage_id: 'evidence' } }), /changed since/);
   const loosened = copy(r.engagement); loosened.plan.stages.find(s => s.id === 'launch').gate = 'none';
   await assert.rejects(call('advance_outcome', { engagement: loosened, engagement_sha256: await engagementDigest(loosened), event: { type: 'start', stage_id: 'evidence' } }), /every action needs owner approval/);

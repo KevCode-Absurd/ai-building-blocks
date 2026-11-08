@@ -5,6 +5,8 @@ import {VISUAL_DELIVERY_SCHEMA,validateVisualDelivery} from './visual-delivery.m
 import landingPageDeliverySchema from './schemas/landing-page-delivery.json' with { type: 'json' };
 import {validateLandingPageDelivery} from './landing-page-delivery.mjs';
 import {WORK_CONTEXT_SCHEMA,validateWorkContext} from './work-context.mjs';
+import {SOURCE_TRACE_SCHEMA} from './source-trace.mjs';
+import {ALTERNATIVE_DECISION_SCHEMA} from './alternative-decision.mjs';
 import jobSchema from './schemas/job.json' with { type: 'json' };
 import cardSchema from './schemas/job-card.json' with { type: 'json' };
 import teamSchema from './schemas/team-plan-v2.json' with { type: 'json' };
@@ -25,7 +27,9 @@ export const ROUTES_SCHEMA = 'ai-blocks-routes/1', SPREAD_SCHEMA = 'ai-blocks-sp
 export const EVIDENCE_SCHEMA = 'ai-blocks-evidence/1', RUBRIC_SCHEMA = 'ai-blocks-rubric/1', REVIEW_SCHEMA = 'ai-blocks-review/1';
 export const DELIVERY_SCHEMA = 'ai-blocks-job-delivery/1', PREFERENCES_SCHEMA = 'ai-blocks-job-preferences/1', APPROACH_INDEX_SCHEMA = 'ai-blocks-approach-index/1';
 export const PRODUCTION_SCHEMA = 'ai-blocks-production/1';
-export const JOB_SCHEMAS = Object.freeze(Object.fromEntries([jobSchema, cardSchema, teamSchema, routesSchema, spreadSchema, councilSchema, evidenceSchema, rubricSchema, reviewSchema, deliverySchema, preferencesSchema, approachesSchema, productionSchema, landingPageDeliverySchema,VISUAL_DELIVERY_SCHEMA,WORK_CONTEXT_SCHEMA].map(s => [s.title, s])));
+const productionWithTrace={...productionSchema,properties:{...productionSchema.properties,source_trace:SOURCE_TRACE_SCHEMA}};
+const councilWithDecision={...councilSchema,properties:{...councilSchema.properties,alternative_decision:ALTERNATIVE_DECISION_SCHEMA}};
+export const JOB_SCHEMAS = Object.freeze(Object.fromEntries([jobSchema, cardSchema, teamSchema, routesSchema, spreadSchema, councilWithDecision, evidenceSchema, rubricSchema, reviewSchema, deliverySchema, preferencesSchema, approachesSchema, productionWithTrace, landingPageDeliverySchema,VISUAL_DELIVERY_SCHEMA,WORK_CONTEXT_SCHEMA,SOURCE_TRACE_SCHEMA,ALTERNATIVE_DECISION_SCHEMA].map(s => [s.title, s])));
 export const SCHEMAS = JOB_SCHEMAS;
 export const getJobSchema = schema => JOB_SCHEMAS[schema] ?? null;
 const object = v => v !== null && typeof v === 'object' && !Array.isArray(v);

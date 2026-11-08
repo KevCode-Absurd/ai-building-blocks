@@ -9,6 +9,7 @@ import {handlePublicApi} from '../src/server/public-api.ts';
 import {handlePublicMcp} from '../src/server/public-mcp.ts';
 import {PublicCatalogueService} from '../src/server/public-catalogue.ts';
 import {workContext} from './fixtures/jobs/work-context-fixture.mjs';
+import {syntheticNativeTools} from './fixtures/jobs/source-trace-fixture.mjs';
 
 // Synthetic host records exercise contract enforcement, not real browser quality.
 const copy = value => structuredClone(value), sha = 'a'.repeat(64), old = 'b'.repeat(64);
@@ -73,7 +74,7 @@ function adCompletion(r){
 
 function completion(r) {
   const outputs = r.engagement.plan.stages.find(s=>s.id==='build').outputs.map(o=>({id:o.id,path:o.path,sha256:sha}));
-  return {type:'complete',stage_id:'build',outputs,checks:[{id:'verified',result:'PASS'}],production_artifacts:outputs.map(o=>({slot_id:o.id,path:o.path,sha256:o.sha256,modality:'interactive',kind:'landing-page'})),landing_page_delivery:{schema:'ai-blocks-landing-page-delivery/1',mode:'LAUNCHABLE_SITE',artifacts:outputs.map(o=>({
+  return {type:'complete',stage_id:'build',outputs,native_tools:syntheticNativeTools(),checks:[{id:'verified',result:'PASS'}],production_artifacts:outputs.map(o=>({slot_id:o.id,path:o.path,sha256:o.sha256,modality:'interactive',kind:'landing-page'})),landing_page_delivery:{schema:'ai-blocks-landing-page-delivery/1',mode:'LAUNCHABLE_SITE',artifacts:outputs.map(o=>({
     slot_id:o.id,source:{path:o.path,sha256:sha,entrypoint:`src/${o.id}.tsx`,build_command:'npm run build',preview_command:'npm run preview'},
     existing_site:{status:'ADAPTED',url:origin,evidence:'receipts/site.json',rationale:'Keep the existing design system and working commerce controls.',integration_target:`src/${o.id}.tsx`,reused_components:['Header','ProductPicker','brand.css']},
     brand:{brain_ref:'brand/00-start-here.md',font_refs:['brand/fonts.css'],asset_refs:['brand/logo.svg'],evidence:'receipts/brand.json'},
@@ -84,7 +85,7 @@ function completion(r) {
 test('fresh outcomes expose the same launchable contract and preserve independent owner approval',async()=>{
   const r=await ready();
   assert.equal(r.engagement.schema,'ai-blocks-outcome-engagement/3');
-  assert.equal(r.engagement.quality_policy.version,1);
+  assert.equal(r.engagement.quality_policy.version,2);
   const build=r.ready.find(s=>s.stage_id==='build');
   assert.equal(build.delivery_requirements.required,true);
   assert.match(build.prompt,/production_artifacts/);
@@ -123,7 +124,7 @@ test('every source output needs current readiness evidence; stale checks and unt
   tampered.stages.find(s=>s.id==='build').outputs[0].sha256=old;
   assert.throws(()=>checkEngagement(tampered),/current SHA-256/);
   const noPolicy=copy(r.engagement);delete noPolicy.quality_policy;
-  assert.throws(()=>checkEngagement(noPolicy),/unchanged execution quality policy/);
+  assert.throws(()=>checkEngagement(noPolicy),/supported execution quality policy/);
 });
 
 test('copy and explicit mockup requests remain scoped without being described as launchable',async()=>{

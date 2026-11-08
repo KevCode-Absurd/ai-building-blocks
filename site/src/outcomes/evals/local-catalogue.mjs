@@ -4,6 +4,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import {sourceTraceRequirements} from '../../jobs/source-trace.mjs';
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../../..');
 const dirs = folder => fs.readdirSync(folder, { withFileTypes: true }).filter(d => d.isDirectory()).map(d => d.name);
@@ -12,5 +13,13 @@ export function localResolver(root = REPO) {
   const roleIds = new Set(fs.readdirSync(path.join(root, 'site/public/data/roles')).filter(f => f.endsWith('.json')).map(f => f.slice(0, -5)));
   const catalogue = path.join(root, 'catalogue-items');
   const itemIds = new Set([...dirs(catalogue).flatMap(group => dirs(path.join(catalogue, group))), ...dirs(path.join(root, 'mini-tools'))]);
-  return async ({ roles, items }) => ({ missing_roles: roles.filter(r => !roleIds.has(r)), missing_items: items.filter(i => !itemIds.has(i)) });
+  return async ({ roles, items,source_inventory=false }) => {
+    const result={missing_roles:roles.filter(r=>!roleIds.has(r)),missing_items:items.filter(i=>!itemIds.has(i))};
+    if(source_inventory){
+      const manifest=JSON.parse(fs.readFileSync(path.join(root,'site/public/data/public-api-manifest.json'),'utf8'));
+      const all=JSON.parse(fs.readFileSync(path.join(root,'site/public/data/blocks.json'),'utf8'));
+      result.source_requirements=sourceTraceRequirements({methods:items,manifest,items:all.blocks});
+    }
+    return result;
+  };
 }

@@ -48,6 +48,10 @@ Requested raster/static-ad delivery requires actual raster artifacts, current ha
 
 The optional local file-evidence adapter checks actual source/artifact/receipt bytes under an explicitly authorized project root. It performs no network access or command execution, and rejects traversal and symlink/junction escape. MCP-only hosts must have the adapter available or report NOT_RUN. Its assurance is LOCAL_BYTES_VERIFIED_SEMANTICS_UNVERIFIED; it cannot determine whether a page is attractive, a source current, a claim true or a user satisfied.
 
+The downloadable native delivery toolkit adds real raster decoding/dimension checks and a bounded offline static-page preview with local interaction checks. It does not execute arbitrary build scripts, generate images, judge brand/product fidelity or authorize publication. Capability preflight requires recent actual host tool declarations before production; paid tools are rejected by default. A local/included tool can satisfy availability only when actually exposed by the host. The website council can display an imported job-state record locally, without uploading or persisting private reports. Its display is not engine replay or independent certification.
+
+Execution policy v2 adds source-use tracing and a criterion-by-criterion alternative decision record. The source trace distinguishes inspected evidence from inference and missing context, matches complete selected method/resource inventories and pins, and separates retrieved instructions from reported execution on current artifacts. The alternative decision compares frozen drafts against the same criteria, retains dissent and the strongest alternative, and explains compatibility when synthesizing. These are concise decision/evidence records, not private chain-of-thought or objective quality grades. Legacy policy v1 remains readable with an explicit weaker-guarantee warning.
+
 Keep these assurance levels separate:
 
 | Record | What it establishes | What it does not establish |
@@ -61,7 +65,7 @@ Keep these assurance levels separate:
 
 ## Memory and personal expertise
 
-Keep procedural methods, project/brand facts, scoped experience and run checkpoints separate. Within personal expertise, retain facts, procedures, heuristics, conditional preferences, examples/counterexamples, boundaries and unresolved proposals with provenance and scope. Existing expert-agent/capture contracts already support several of these types, source rights, exact reviewed changes and parent-linked revisions. Their authenticated storage adapter is preview-only; this work does not silently enable it on the production database.
+Keep procedural methods, project/brand facts, scoped experience and run checkpoints separate. Within personal expertise, retain facts, procedures, heuristics, conditional preferences, examples/counterexamples, boundaries and unresolved proposals with provenance and scope. The expert-agent/capture contracts support source rights, exact reviewed changes and parent-linked revisions. Their durable storage service composes additively into existing authenticated personal/company MCP and REST. Deployment requires reviewed migrations 0011/0012 and the explicit EXPERT_AGENTS_ENABLED flag; absent that flag, no new storage tools are exposed. Code readiness is not a release receipt.
 
 A correction about one artifact is initially artifact-scoped and retains its revision and reason. Broadening it into a family/method rule needs an explicit scope and rationale. One wrong product depiction must not silently ban a whole visual format. Existing company/personal memory save operations retain their consent and optimistic-version rules. When no save occurs, say so; changing a record does not train model weights.
 
@@ -93,4 +97,4 @@ Contract tests use rejected and accepted states, stale revisions, missing native
 
 Before expanding reliance, assess real owner-accepted work across representative task types, retain failures and compare current baseline to changed output. Personal users can start with one useful task and correction. Higher-risk reliance and public expertise claims require stronger evidence. Do not imply hosted execution, verified credentials, durable private storage, automatic personal-memory access or production publication where unavailable.
 
-No change here authorizes enabling hosted jobs, lifting provider budgets, changing the default MCP front door or copying private evidence into the catalogue. Publication status and actual test results belong in the release receipt, not this design contract.
+No change here authorizes enabling hosted jobs, lifting provider budgets, changing the default MCP front door or copying private evidence into the catalogue. Publication status and actual test results belong in the release receipt, not this design contract. See the native adapter guide and site/src/agents/STORAGE.md for the executable boundaries and persistence rollout.

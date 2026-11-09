@@ -17,8 +17,8 @@ test("facets and team notes come from saved persona text without a fixed hierarc
   assert.match(generalCoordinatorMarkdown(), /task-specific lead and flexible working groups/);
   assert.match(generalCoordinatorMarkdown(), /no invented person or biography/);
   for (const protocol of [notes, generalCoordinatorMarkdown(), roleSeatMarkdown("sample", {seat_type:"maker"}), seatBriefMarkdown(persona, {seat_type:"maker"})]) {
-    assert.match(protocol, /complete verified brand brain/);
-    assert.match(protocol, /SHA-256/);
+    assert.match(protocol, /context\/ files exist \(WORK-METHOD\.md, step 1\)/);
+    assert.doesNotMatch(protocol, /JOB-CARD\.json/, "no file the pack does not contain");
     assert.match(protocol, /Missing, stale or unread context blocks work/);
   }
   assert.doesNotMatch(generalCoordinatorMarkdown(), /department heads|Mehdi|Rhys/);

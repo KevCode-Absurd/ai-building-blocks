@@ -101,10 +101,12 @@ test("mega agent pack: traction playbook, 19 channels and 19 specialists, the te
   // sources.md: every local Sources list, grouped by file.
   const src = file("sources.md").content;
   assert.match(src, /## First traction kit/);
-  assert.match(src, /### Traction playbook: how I run traction \(traction-playbook\.md\)\n\n1\. Source 1, Publisher, https:\/\/orchestrator\.example\/1/);
-  assert.match(src, /### Traction playbook: saas \(traction-playbook\.md\)/);
-  assert.match(src, /### Channel: Sales \(channels\/sales\.md\)\n\n1\. Source 1, Publisher, https:\/\/sales\.example\/1/);
-  assert.equal([...src.matchAll(/^### Channel: /gm)].length, 19);
+  // Each file keeps its own Sources list; sources.md points to it once, so no list is in the pack twice.
+  assert.match(src, /- Traction playbook: how I run traction: \d+ sources?, listed under Sources in `traction-playbook\.md`\./);
+  assert.match(src, /- Traction playbook: saas: \d+ sources?, listed under Sources in `traction-playbook\.md`\./);
+  assert.match(src, /- Channel: Sales: \d+ sources?, listed under Sources in `channels\/sales\.md`\./);
+  assert.doesNotMatch(src, /https:\/\/sales\.example\/1/);
+  assert.equal([...src.matchAll(/^- Channel: /gm)].length, 19);
 
   // files.json: the new kinds and the kit's shared urls.
   const index = filesIndex(pack);

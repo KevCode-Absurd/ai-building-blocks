@@ -20,11 +20,11 @@ Your AI reads AGENTS.md first, because it explains who the agent is, which file 
 
 ## Use it in your AI
 
-The quickest start in ChatGPT, Claude or Gemini is the one-file version at {{one_file_url}}. It holds everything {{name}} needs in a single text file. Attach it to a new chat, then send: "You are {{name}}. The file I attached holds your instructions, method and knowledge. Read it and follow it, starting with its AGENTS.md part." Step-by-step help for each app is on {{name}}'s profile page, under "Start {{name}} in your AI".
+The quickest start in ChatGPT, Claude or Gemini is the one-file version at {{one_file_url}}. It holds everything {{name}} needs in a single text file. Attach it to a new chat, then send: "You are {{name}}. The file I attached holds your instructions, method and knowledge. Read it and follow it, starting with its AGENTS.md part. Before you start, ask me for my business name and website (or what I can paste instead), and what I need done." Step-by-step help for each app is on {{name}}'s profile page, under "Start {{name}} in your AI".
 
 To use the whole folder instead, unzip the pack first, then choose your tool from the sections below. Each section ends with a first message that you can copy and paste, after replacing the part in square brackets with a sentence or two about your own job.
 
-If your tool limits how many files you can add, start with soul.md, personality.md, playbook.md, knowledge.md and access.md, because together they hold the agent's character, method and expertise. After that, add the skills you expect to use most often.
+If your tool limits how many files you can add, start with WORK-METHOD.md, context/README.md, soul.md, personality.md, playbook.md, knowledge.md and access.md, because together they hold the agent's method, character and expertise. After that, add the skills you expect to use most often.
 
 ### Claude (claude.ai or the Claude app)
 
@@ -36,7 +36,7 @@ If your tool limits how many files you can add, start with soul.md, personality.
 First message:
 
 ```text
-You are {{name}}. Follow your project instructions and read your project files. Here is my job: [describe it]. Ask me only what you still need, then show me your plan before you start.
+You are {{name}}. Follow your project instructions and read your project files. My business: [name and website]. My job: [describe it]. Look at my site first, ask me only what you still need, then show me your plan before you start.
 ```
 
 ### Claude Code
@@ -47,7 +47,7 @@ You are {{name}}. Follow your project instructions and read your project files. 
 First message:
 
 ```text
-Read AGENTS.md and follow it. You are {{name}}. Here is my job: [describe it]. Ask me only what you still need, then show me your plan before you start.
+Read AGENTS.md and follow it. You are {{name}}. My business: [name and website]. My job: [describe it]. Look at my site first, ask me only what you still need, then show me your plan before you start.
 ```
 
 ### ChatGPT
@@ -59,7 +59,7 @@ Read AGENTS.md and follow it. You are {{name}}. Here is my job: [describe it]. A
 First message:
 
 ```text
-You are {{name}}. Follow your instructions and read your files. Here is my job: [describe it]. Ask me only what you still need, then show me your plan before you start.
+You are {{name}}. Follow your instructions and read your files. My business: [name and website]. My job: [describe it]. Look at my site first, ask me only what you still need, then show me your plan before you start.
 ```
 
 ### OpenAI Codex
@@ -70,7 +70,7 @@ You are {{name}}. Follow your instructions and read your files. Here is my job: 
 First message:
 
 ```text
-Read AGENTS.md and follow it. You are {{name}}. Here is my job: [describe it]. Ask me only what you still need, then show me your plan before you start.
+Read AGENTS.md and follow it. You are {{name}}. My business: [name and website]. My job: [describe it]. Look at my site first, ask me only what you still need, then show me your plan before you start.
 ```
 
 ### Gemini
@@ -83,7 +83,7 @@ Read AGENTS.md and follow it. You are {{name}}. Here is my job: [describe it]. A
 First message:
 
 ```text
-You are {{name}}. Follow your instructions and read your files. Here is my job: [describe it]. Ask me only what you still need, then show me your plan before you start.
+You are {{name}}. Follow your instructions and read your files. My business: [name and website]. My job: [describe it]. Look at my site first, ask me only what you still need, then show me your plan before you start.
 ```
 
 ### Cursor
@@ -94,7 +94,7 @@ You are {{name}}. Follow your instructions and read your files. Here is my job: 
 First message, in the Agent chat:
 
 ```text
-Read AGENTS.md and follow it. You are {{name}}. Here is my job: [describe it]. Ask me only what you still need, then show me your plan before you start.
+Read AGENTS.md and follow it. You are {{name}}. My business: [name and website]. My job: [describe it]. Look at my site first, ask me only what you still need, then show me your plan before you start.
 ```
 
 ## Load {{name}} without a download

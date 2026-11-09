@@ -3,6 +3,7 @@
 import type { AgentPackage, AgentStep, Area, JobType, Persona, PersonaSoul, RubricCriterion, SpecField } from "../../core/types.ts";
 import { sha256Hex, stableJson } from "../../core/db.ts";
 import {OUTPUT_PRECEDENCE,FACT_RULE,READINESS_RULE,NATIVE_DELIVERY_RULE,HOSTED_TEXT_LIMIT,NEUTRAL_STYLE,INTEGRITY_RULES,activeOutputContract,outputPolicyMarkdown} from './output-policy.ts';
+import { CAPTURE, familyOf, familySlice } from "../packs/families.ts";
 
 /** Presentation defaults have the lowest priority; they are not brand constraints. */
 export const STYLE_RULES: string[] = [OUTPUT_PRECEDENCE,...NEUTRAL_STYLE];
@@ -39,17 +40,20 @@ const AREA_TIPS: Record<Area, string> = {
   learning: "Start from what the learner can already do and what they must be able to do at the end. Check each part against that goal.",
 };
 
-/** A strong generic method for a job type when no persona wrote one. */
-export function genericMethod(jobType: JobType): string {
+/**
+ * The method for a job type when no persona wrote one: the Grounded Job Protocol's stages as they apply to the job's
+ * deliverable family (packs/families.ts), never one recipe for every job. Facts, readiness and delivery rules are
+ * added once by the package itself, not repeated here.
+ */
+export function jobMethod(jobType: JobType): string {
+  const family = familyOf(jobType);
+  const slice = familySlice(family);
   return [
-    "1. Read the request and the details twice. Write down the one result the buyer wants and who the work is for.",
-    `2. ${FACT_RULE}`,
-    `3. Note missing facts without guessing. A draft may mark [add your price]. ${READINESS_RULE}`,
-    `4. Plan the structure from the deliverable (${lowerFirst(jobType.deliverable)}) and give each part one job.`,
-    `5. ${OUTPUT_PRECEDENCE}`,
-    `6. ${AREA_TIPS[jobType.area] ?? "Keep every part useful to the buyer."}`,
-    "7. Check the draft against every rubric item and the checklist. Fix anything that fails before you hand it over.",
-    `8. ${NATIVE_DELIVERY_RULE}`,
+    `1. Ground: work from the buyer's real business, not the brief alone. Use the supplied brand profile, links and details; ${CAPTURE[family][0].replace(/`/g, "").replace(/^./, c => c.toLowerCase())}`,
+    `2. Taste: ${slice.taste.replace(/tools\/ai-default-patterns\.md/g, "the named AI defaults")}`,
+    `3. Diverge: ${slice.diverge}`,
+    `4. Build: ${lowerFirst(jobType.deliverable)}. ${slice.build} ${AREA_TIPS[jobType.area] ?? ""}`.trim(),
+    `5. Check: ${slice.check.replace(/Run tools\/check-brand-fidelity\.mjs \(or its manual checklist\) and test/, "Check brand fidelity against the brand profile and test")} Then check every rubric item; fix what fails.`,
   ].join("\n");
 }
 
@@ -172,7 +176,7 @@ export function buildHousePackage(persona: Persona | null, jobType: JobType): Ag
   const notFor = [...jobType.not_for, ...(persona?.profile.not_for ?? [])];
   const checklist = checklistFor(jobType, notFor);
   const name = persona ? `${persona.name}, ${persona.title}: ${jobType.title}` : `AI Blocks house agent: ${jobType.title}`;
-  const method = persona?.profile.method?.trim() || genericMethod(jobType);
+  const method = persona?.profile.method?.trim() || jobMethod(jobType);
 
   const intro = persona
     ? `You are ${persona.name}, ${persona.title} at AI Blocks. ${persona.tagline}\n\n${persona.profile.bio}`

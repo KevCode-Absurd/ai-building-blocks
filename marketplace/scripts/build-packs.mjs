@@ -34,6 +34,8 @@ import {
   RESERVED_PACK_PATHS, validateRoleKit,
 } from "../src/modules/packs/build.ts";
 import { validateMegaKit } from "../src/modules/packs/mega.ts";
+import { lintPack } from "../src/modules/packs/lint.ts";
+import { TOOL_FILES } from "../src/modules/packs/build.ts";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const args = Object.fromEntries(process.argv.slice(2).map(a => { const m = /^--([a-z]+)(?:=(.*))?$/.exec(a); return m ? [m[1], m[2] ?? "true"] : [a, "true"]; }));
@@ -140,6 +142,22 @@ for (const folder of existsSync(megaDir) ? readdirSync(megaDir).sort() : []) {
   megaFilesAsTheyStand.set(folder, files);
 }
 
+// ---------- Capture and check tools ----------
+// The library owns them (catalogue-items/general/<skill>/, any depth); --tools=<dir> reads them from one folder
+// instead. packs/shared/tools/ holds fallbacks for files the library does not have yet. A tool found nowhere is
+// left out, and the packs link to its public address (/tools/<file>) instead.
+const LIBRARY = path.resolve(ROOT, "..", "catalogue-items", "general");
+const TOOL_HOMES = ["brand-dna-capture", "brand-fidelity-check", "ai-default-patterns", "grounded-job-protocol"];
+const tools = {};
+const toolFrom = {};
+for (const { name } of TOOL_FILES) {
+  const dirs = args.tools ? [path.resolve(ROOT, args.tools)] : TOOL_HOMES.map(h => path.join(LIBRARY, h));
+  const found = dirs.flatMap(d => walk(d).filter(r => r.split("/").pop() === name).map(r => path.join(d, r)))[0];
+  if (found) { tools[name] = readFileSync(found, "utf8"); toolFrom[name] = path.relative(path.resolve(ROOT, ".."), found).replace(/\\/g, "/"); }
+  else if (templates[`tools/${name}`]?.trim()) { tools[name] = templates[`tools/${name}`]; toolFrom[name] = `marketplace/packs/shared/tools/${name} (fallback)`; }
+  else warnings.push(`tool ${name} is not in the library yet (${TOOL_HOMES.join(", ")}), so packs link to /tools/${name} instead of carrying it`);
+}
+
 // ---------- Personas ----------
 
 const jobTypes = listJobTypes();
@@ -150,7 +168,7 @@ for (const u of personasWithUnknownRole(personas)) warnings.push(`persona ${u.id
 const inputFor = (persona, kind, version) => {
   const role = getRole(persona.role);
   const mega = persona.mega ? megaKits.get(persona.mega.kit) ?? null : null;
-  return { persona, role, kit: role ? kits.get(role.id) ?? null : null, mega, jobTypes, templates, options: { kind, ...version } };
+  return { persona, role, kit: role ? kits.get(role.id) ?? null : null, mega, jobTypes, templates, tools, options: { kind, ...version } };
 };
 const started = Date.now();
 
@@ -202,6 +220,8 @@ const shared = new Map(); // url -> content, for the role and job copies written
 // from the shared templates or the builder. Researched role kit content may rightly cite a source's own CC licence.
 const OLD_LICENCE = /CC[ -]BY|creativecommons\.org|Creative Commons/i;
 const buildNotes = new Set();
+/** Pack linter findings (src/modules/packs/lint.ts). Any finding stops the build; --lint=report prints them and goes on. */
+const lintIssues = [];
 
 function writeAt(url, content) {
   const target = path.join(OUT, ...url.replace(/^\/packs\//, "").split("/"));
@@ -236,6 +256,7 @@ async function buildOne(persona) {
       if ((f.source === "agent" || f.source === "job") && OLD_LICENCE.test(f.content)) buildNotes.add(`${pack.kind} pack file ${f.path} still mentions CC BY; packs use the AI Blocks Agent Pack Licence 1.0 (fix its template)`);
     }
     for (const n of pack.notes) buildNotes.add(n);
+    for (const issue of lintPack(pack)) lintIssues.push({ pack: `${persona.id}${pack.kind === "train" ? "-train" : ""}`, ...issue });
   }
   const [agentZip, trainZip] = await Promise.all([packZip(agent), packZip(train)]);
   writeFileSync(path.join(OUT, `${persona.id}.zip`), agentZip);
@@ -280,11 +301,31 @@ try {
   if (err instanceof PackBuildError) fatal(err.message);
   throw err;
 }
-writeAt("/packs/index.json", `${JSON.stringify({ schema: "ai-blocks-pack-index/1", count: index.length, packs: index }, null, 2)}\n`);
+if (lintIssues.length) {
+  // Grouped by rule and message, so one broken template shows once with the packs it hits, not 505 times.
+  const groups = new Map();
+  for (const i of lintIssues) {
+    const key = `${i.rule}: ${i.file} ${i.message}`;
+    const g = groups.get(key) ?? [];
+    g.push(i.pack);
+    groups.set(key, g);
+  }
+  const lines = [...groups].sort((a, b) => b[1].length - a[1].length).map(([k, packs]) => `${k} [${packs.length} pack${packs.length === 1 ? "" : "s"}: ${packs.slice(0, 4).join(", ")}${packs.length > 4 ? ", ..." : ""}]`);
+  const byRule = {};
+  for (const i of lintIssues) byRule[i.rule] = (byRule[i.rule] ?? 0) + 1;
+  const summary = `the pack linter found ${lintIssues.length} problem(s) (${Object.entries(byRule).map(([r, n]) => `${r} ${n}`).join(", ")}) in ${new Set(lintIssues.map(i => i.pack)).size} pack(s)`;
+  if (args.lint === "report") {
+    console.warn(`build-packs: ${summary}:\n  ${lines.join("\n  ")}`);
+  } else {
+    fatal(`${summary}. Fix the template, role kit or job type named in each line (run with --lint=report to see all and keep going):\n  ${lines.slice(0, 40).join("\n  ")}${lines.length > 40 ? `\n  ...and ${lines.length - 40} more` : ""}`);
+  }
+}
+writeAt("/packs/index.json",`${JSON.stringify({ schema: "ai-blocks-pack-index/1", count: index.length, packs: index }, null, 2)}\n`);
 
 const mb = n => (n / 1024 / 1024).toFixed(1);
 for (const w of [...warnings, ...buildNotes]) console.warn(`build-packs: note: ${w}`);
 const sharedCount = prefix => [...shared.keys()].filter(u => u.startsWith(prefix)).length;
 console.log(`build-packs: ${index.length} agents: ${index.length * 2} zips (${mb(zipBytes)} MB), browsable copies ${mb(browseBytes)} MB (shared: ${sharedCount("/packs/roles/")} role files, ${sharedCount("/packs/jobs/")} job skills, ${sharedCount("/packs/mega/")} mega kit files); ${fileCount} files in ${path.relative(ROOT, OUT) || "."}`);
 console.log(`build-packs: mega kits ready: ${megaKits.size}; mega agents: ${index.filter(p => p.mega).length}`);
+console.log(`build-packs: tools: ${TOOL_FILES.map(t => `${t.name} ${toolFrom[t.name] ? `from ${toolFrom[t.name]}` : "not available"}`).join("; ")}`);
 console.log(`build-packs: role kits ready: ${kits.size} of ${listRoles().length} roles; knowledge pending for ${pending} of ${index.length} agents; ${((Date.now() - started) / 1000).toFixed(1)}s`);

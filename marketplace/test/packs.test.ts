@@ -146,8 +146,8 @@ test("agent pack: files in order, soul and personality from the persona, one job
   const pack = await build();
   assert.equal(pack.folder, "nova-seo");
   assert.deepEqual(pack.files.map(f => f.path), [
-    "README.md", "AGENTS.md", "CLAUDE.md", "soul.md", "personality.md", "playbook.md", "TEAM.md", "knowledge.md", "access.md", "QUALITY-METHOD.md", "OUTPUT-POLICY.md",
-    "skills.md", "skills/landing-page-copy/SKILL.md", "skills/seo-blog-post/SKILL.md", "LICENSE.md", "CHANGELOG.md", "pack.json",
+    "README.md", "AGENTS.md", "CLAUDE.md", "WORK-METHOD.md", "context/README.md", "soul.md", "personality.md", "playbook.md", "TEAM.md", "knowledge.md", "access.md", "QUALITY-METHOD.md", "OUTPUT-POLICY.md",
+    "skills.md", "skills/landing-page-copy/SKILL.md", "skills/seo-blog-post/SKILL.md", "library.md", "sources.md", "LICENSE.md", "CHANGELOG.md", "pack.json",
   ]);
   const file = (p: string) => pack.files.find(f => f.path === p)!.content;
   assert.equal(file("CLAUDE.md"), "@AGENTS.md\n");
@@ -157,10 +157,24 @@ test("agent pack: files in order, soul and personality from the persona, one job
   assert.doesNotMatch(file("soul.md"), /How I talk|Let's win one search/);
   assert.match(file("personality.md"), /## How I talk\n\nPlain and warm, with short sentences\. I say things like:\n\n> Let's win one search before we chase ten\./);
   assert.doesNotMatch(file("personality.md"), /## Tone/, "no style sections without profile.style");
-  assert.match(file("personality.md"), /## Neutral presentation fallback/);
+  // The persona's voice only: the output policy lives once, in OUTPUT-POLICY.md.
+  assert.doesNotMatch(file("personality.md"), /## Neutral presentation fallback|## Factual integrity/);
+  assert.match(file("personality.md"), /\(OUTPUT-POLICY\.md\)/);
   assert.match(file("playbook.md"), /## How I work\n\n1\. Read the brief/);
-  assert.match(file("playbook.md"), /### Landing page copy\n\n- What are you selling\?/);
-  assert.match(file("playbook.md"), /Every section leads to the one action/);
+  assert.match(file("playbook.md"), /These are my Build steps\. Ground, Taste and Diverge come before them/);
+  assert.match(file("playbook.md"), /### Landing page copy\n\n- Context: .+\n- Details: What are you selling; Who is it for/);
+  assert.match(file("playbook.md"), /Landing page copy: `skills\/landing-page-copy\/SKILL\.md`/);
+  // "Rules I learned" is there, typed, with how to add one.
+  assert.match(file("playbook.md"), /## Rules I learned\n\nAdd one line per lesson.+\nTypes: `decision_rule`, `taste_reference`, `never_do`, `exemplar`, `check`\./);
+  // The work method comes right after the entry point, and context/README.md says what to capture for this agent's jobs.
+  assert.match(file("WORK-METHOD.md"), /^# Work method/);
+  assert.match(file("context/README.md"), /## What to capture for my work\n\n### Copy \([^)]*Landing page copy\)/);
+  // A job skill: what to capture first, the family's stages, then gates (pass or fail) and craft (scored).
+  const skill = file("skills/landing-page-copy/SKILL.md");
+  for (const h of ["## Get this first", "## How to run this job", "## Gates: pass or fail", "## Craft: scored"]) assert.ok(skill.includes(`\n${h}\n`), h);
+  assert.match(skill, /1\. \*\*Ground\.\*\* Capture into `context\/` first/);
+  assert.match(skill, /Every section leads to the one action/);
+  assert.doesNotMatch(skill, /Read the request and the details twice/, "no generic recipe");
   assert.match(file("knowledge.md"), /researched knowledge for this role is coming/);
   assert.match(file("knowledge.md"), /## My specialty\n\nWhat I work with:\n\n- Search intent mapping/);
   for (const f of pack.files) {
@@ -173,7 +187,7 @@ test("agent pack: files in order, soul and personality from the persona, one job
     assert.equal(fm.name, id);
     assert.ok(fm.description.length > 20 && fm.description.length <= 1024);
   }
-  assert.match(file("skills/landing-page-copy/SKILL.md"), /must pass/);
+  assert.match(file("skills/landing-page-copy/SKILL.md"), /- And the gates for every job: WORK-METHOD\.md, step 5\./);
 
   const manifest = JSON.parse(file("pack.json"));
   assert.equal(manifest.schema, PACK_SCHEMA);

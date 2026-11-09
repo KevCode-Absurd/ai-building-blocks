@@ -61,7 +61,21 @@ export interface JobType {
   sample_briefs: SampleBrief[];    // at least 4: 2 public, 2 hidden
   keywords: string[];              // words buyers use, for classification
   demand_sources: { note: string; url: string }[]; // why this is one of the most-requested jobs
+  // Grounded Job Protocol fields (optional while the catalogue fills them in; the pack builder falls back by family).
+  family?: DeliverableFamily;
+  context_requirements?: ContextRequirement[];
+  gates?: string[];                // pass/fail, never averaged away
+  craft_rubric?: CraftCriterion[]; // weights sum to 100
+  mode_default?: JobMode;
 }
+
+/** The deliverable kinds of the Grounded Job Protocol (FRAME step). */
+export const DELIVERABLE_FAMILIES = ["web_page", "ad_creative", "copy", "email", "audit", "analysis", "strategy", "plan", "code", "ops_doc", "other"] as const;
+export type DeliverableFamily = (typeof DELIVERABLE_FAMILIES)[number];
+export type JobMode = "patch" | "extend" | "new";
+/** What the agent must capture or be given before it produces anything, e.g. { id: "site_url", label: "Your website", required: true, how: "Capture it with tools/capture-brand-dna.mjs" }. */
+export interface ContextRequirement { id: string; label: string; required: boolean; how: string }
+export interface CraftCriterion { criterion: string; weight: number; test: string }
 
 // ---------- Agent packages ----------
 

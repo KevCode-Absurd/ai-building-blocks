@@ -410,6 +410,14 @@ How you tell a client that something will not work, as you would write it.
 `,
 };
 
+/** Empty logs a train pack starts with; the coach fills them in (packs/shared/train/instructions.md). */
+const TRAIN_LOGS: { path: string; purpose: string; content: string }[] = [
+  { path: "training/capture-log.md", purpose: "Log of every fix made to the agent files during training, and the case that caused it.", content: "# Capture log\n\nOne line per fix: date, file changed, what changed, and the case or critique that caused it. Each fix also becomes a regression eval case.\n" },
+  { path: "training/improve/inbox.md", purpose: "This week's failures and edits, waiting for the weekly improvement loop.", content: "# Improvement inbox\n\nAdd the after-action reviews the agent drafts after real jobs, your edits with their reasons, and lost eval cases. The weekly loop in instructions.md empties this file.\n" },
+  { path: "training/improve/graveyard.md", purpose: "Improvement ideas that were scored and not kept, with the reason.", content: "# Graveyard\n\nIdeas from the weekly loop that were not kept, with their scores and why. Check here before proposing the same idea again.\n" },
+  { path: "training/decision-journal.md", purpose: "Calls written down before the result is known, to check your judgment later.", content: "# Decision journal\n\nFor calls that matter, write the entry before the result is known: the situation, what you decided, what you expect to happen and how sure you are. Add the result when it is in.\n" },
+];
+
 const REQUIRED_TEMPLATES: Record<PackKind, string[]> = {
   agent: ["README.md", "AGENTS.md", "WORK-METHOD.md", "LICENSE.md"],
   train: ["train/README.md", "train/AGENTS.md", "train/instructions.md", "train/soul.md", "train/personality.md", "WORK-METHOD.md", "LICENSE.md"],
@@ -1069,6 +1077,8 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
     { path: "WORK-METHOD.md", group: "start", template: "WORK-METHOD.md", resolveTools: true, purpose: "How every job runs: ground, taste, diverge, build, check and record, with the gates and craft rubrics." },
     { path: "context/README.md", group: "start", content: contextReadme(jts, toolNames, origin), resolveTools: true, purpose: "What to capture about the client before the work, by kind of work, and where each file goes." },
     ...(agent ? [] : [{ path: "instructions.md", group: "start" as const, template: "train/instructions.md", purpose: "The training coach: how your AI interviews you, tests your agent and fills in its files." }]),
+    // Training logs the coach writes into (instructions.md): shipped as empty starters so every named file exists.
+    ...(agent ? [] : TRAIN_LOGS.map(l => ({ path: l.path, group: "training" as const, content: l.content, purpose: l.purpose }))),
     agent
       ? { path: "soul.md", group: "identity", content: soulMarkdown(persona, origin) ?? fallbackSoul(persona, origin), purpose: "Who I am: how I think, what I care about and how I handle disagreement." }
       : { path: "soul.md", group: "identity", template: "train/soul.md", purpose: "Your agent's soul: a template your training coach fills in with you." },
@@ -1171,7 +1181,8 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
   for (const d of drafts) {
     if (d.path === "pack.json") continue;
     let content = d.template ? fillTemplate(d.template, templates[d.template], values) : d.content!;
-    if (d.resolveTools) content = resolveToolRefs(content, toolNames, origin);
+    // A pack never names a tools/ file it lacks: train packs ship no tools/, so their role kit files, playbook and knowledge point at the public copy.
+    if (d.resolveTools || (kind === "train" && (sourceOf(d) === "role" || d.path === "playbook.md" || d.path === "knowledge.md"))) content = resolveToolRefs(content, toolNames, origin);
     if (!agent && (d.path === "soul.md" || d.path === "personality.md") && !content.replace(/^\uFEFF/, "").trimStart().startsWith(TEMPLATE_MARKER)) {
       content = `${TEMPLATE_MARKER}\n${content}`;
     }

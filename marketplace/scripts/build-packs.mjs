@@ -145,14 +145,15 @@ for (const folder of existsSync(megaDir) ? readdirSync(megaDir).sort() : []) {
 // ---------- Capture and check tools ----------
 // The library owns them (catalogue-items/general/<skill>/, any depth); --tools=<dir> reads them from one folder
 // instead. packs/shared/tools/ holds fallbacks for files the library does not have yet. A tool found nowhere is
-// left out, and the packs link to its public address (/tools/<file>) instead.
+// left out, and the packs link to its public address (/tools/<file>) instead. The library names the defaults list
+// ai-default-patterns/patterns.md; packs carry it as tools/ai-default-patterns.md.
 const LIBRARY = path.resolve(ROOT, "..", "catalogue-items", "general");
 const TOOL_HOMES = ["brand-dna-capture", "brand-fidelity-check", "ai-default-patterns", "grounded-job-protocol"];
 const tools = {};
 const toolFrom = {};
 for (const { name } of TOOL_FILES) {
   const dirs = args.tools ? [path.resolve(ROOT, args.tools)] : TOOL_HOMES.map(h => path.join(LIBRARY, h));
-  const found = dirs.flatMap(d => walk(d).filter(r => r.split("/").pop() === name).map(r => path.join(d, r)))[0];
+  const found = dirs.flatMap(d => walk(d).filter(r => r.split("/").pop() === name || (name === "ai-default-patterns.md" && r === "patterns.md" && path.basename(d) === "ai-default-patterns")).map(r => path.join(d, r)))[0];
   if (found) { tools[name] = readFileSync(found, "utf8"); toolFrom[name] = path.relative(path.resolve(ROOT, ".."), found).replace(/\\/g, "/"); }
   else if (templates[`tools/${name}`]?.trim()) { tools[name] = templates[`tools/${name}`]; toolFrom[name] = `marketplace/packs/shared/tools/${name} (fallback)`; }
   else warnings.push(`tool ${name} is not in the library yet (${TOOL_HOMES.join(", ")}), so packs link to /tools/${name} instead of carrying it`);

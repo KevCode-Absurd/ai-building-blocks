@@ -7,6 +7,16 @@ import { getRole } from "./roles.ts";
 import { getPersona, listPersonas, searchPersonas } from "./service.ts";
 import { agentCard, agentProfile, areaCounts, browseOrder, pickFeatured, relatedAgents, soulMarkdown } from "./views.ts";
 import {executionPlan,checkExecutionDelivery} from './execution.ts';
+import { TOOL_FILES } from "../packs/build.ts";
+import { readPackIndex, skillOneFile } from "../mcp/pack-files.ts";
+
+/** A static file from the built site, or null when it is missing (the app's fallback page answers missing files with HTML). */
+async function builtFile(env: Env, base: string, path: string): Promise<string | null> {
+  if (!env.ASSETS) return null;
+  const res = await env.ASSETS.fetch(new Request(new URL(path, base)));
+  if (!res.ok || (res.headers.get("content-type") ?? "").includes("text/html")) return null;
+  return res.text();
+}
 
 /** Public, short-lived: browsers keep it a minute, shared caches five, then refresh in the background. */
 const PUBLIC_CACHE = { "cache-control": "public, max-age=60, s-maxage=300, stale-while-revalidate=600" };
@@ -115,6 +125,32 @@ export const routes: Route[] = [
       const md = soulMarkdown(persona, origin);
       if (!md) return textFile(`${persona.name} has no soul.md yet. Read ${persona.name}'s profile at ${origin}/agents/${persona.id}\n`, 404, "text/plain", false);
       return textFile(md, 200, "text/markdown");
+    },
+  },
+  {
+    // The capture and check tools every pack links to (context/README.md), served from the built packs with their
+    // own content types. Only the names in TOOL_FILES are answered.
+    method: "GET", path: "/tools/:file", handler: async ctx => {
+      const origin = ctx.env.APP_ORIGIN.replace(/\/+$/, "");
+      const tool = TOOL_FILES.find(t => t.name === ctx.params.file);
+      if (!tool) return textFile(`There is no tool at this address. The tools are: ${TOOL_FILES.map(t => `${origin}/tools/${t.name}`).join(", ")}\n`, 404, "text/plain", false);
+      const text = await builtFile(ctx.env, ctx.env.APP_ORIGIN, `/packs/tools/${tool.name}`);
+      if (text === null) return textFile(`${tool.name} is not published yet. Capture by hand for now: WORK-METHOD.md, step 1, route 3.\n`, 404, "text/plain", false);
+      return textFile(text, 200, tool.name.endsWith(".md") ? "text/markdown" : "text/javascript");
+    },
+  },
+  {
+    // One skill of an agent with the files the agent reads first, in one text file for chat apps: a smaller start
+    // than the whole agent (/packs/<id>.txt). Assembled from the built pack; nothing runs a model.
+    method: "GET", path: "/agents/:id/skills/:skill", handler: async ctx => {
+      const origin = ctx.env.APP_ORIGIN.replace(/\/+$/, "");
+      const m = /^([a-z0-9][a-z0-9-]{0,99})\.txt$/.exec(ctx.params.skill);
+      const persona = m ? await getPersona(ctx.env, ctx.params.id) : null;
+      if (!m || !persona || persona.status !== "live") return textFile(`We could not find that agent or skill. See every agent at ${origin}/agents\n`, 404, "text/plain", false);
+      const index = await readPackIndex(ctx.env, persona.id);
+      const text = index ? await skillOneFile(ctx.env, index, persona.name, persona.title, m[1]) : null;
+      if (!text) return textFile(`${persona.name} has no skill called ${m[1]}. The skills are listed at ${origin}/packs/${persona.id}/files.json\n`, 404, "text/plain", false);
+      return textFile(text, 200, "text/plain");
     },
   },
 ];

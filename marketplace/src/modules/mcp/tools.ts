@@ -22,8 +22,8 @@ import { hasScope, type Scope } from "./service.ts";
 import { personaTeam, TEAM_SEAT_TYPES } from "../directory/team.ts";
 import { parseSeat, parseTeam, trimmedSeatPack, SeatInputError } from "./team-seats.ts";
 import type { SeatRequest } from "../directory/team.ts";
-import { CORE_FILES, PackUnavailable, readPackFile, readPackIndex, type PackIndex, type PackIndexFile } from "./pack-files.ts";
-import {executionPlan,checkExecutionDelivery,qualityMethodMarkdown} from '../directory/execution.ts';
+import { loadPayload, PackUnavailable, readPackFile, readPackIndex, type PackIndex, type PackIndexFile } from "./pack-files.ts";
+import {executionPlan,checkExecutionDelivery} from '../directory/execution.ts';
 import {outputPolicyMarkdown} from '../runner/output-policy.ts';
 
 type Args = Record<string, unknown>;
@@ -351,10 +351,10 @@ export const TOOLS: ToolDef[] = [
   },
   {
     name: "load_agent", title: "Load an agent", scope: "marketplace:read", costly: false,
-    description: "Load a free AI Blocks agent into this chat, so you can work as that agent for the user on their own AI. Returns the agent's operating instructions (AGENTS.md), personality (soul.md, personality.md), method (playbook.md) and tool access rules (access.md), plus the list of its other files.",
+    description: "Load a free AI Blocks agent into this chat, so you can work as that agent for the user on their own AI. Returns its operating instructions (AGENTS.md), work method (WORK-METHOD.md: ground in the client's real business first), what to capture (context/README.md), personality, playbook, access rules and output policy. Pass the user's task as request to also get the matching skill or workflow in full and the relevant knowledge, in one payload under 60 KB.",
     inputSchema: schema({
       agent_id: { type: "string", maxLength: 128, description: "The agent_id from list_agents, such as nova-seo." },
-      request:{type:'string',maxLength:4000,description:'The original task, to attach the shared execution and delivery plan.'},
+      request: { type: "string", maxLength: 4000, description: "The user's task in their words. Routes it to the agent's best matching skill or workflow (no model is used) and attaches the shared execution plan." },
       as_seat: { type: "object", properties: {
         seat_type: { type: "string", enum: [...TEAM_SEAT_TYPES] },
         lens: { type: "string", maxLength: 128 },
@@ -370,25 +370,35 @@ export const TOOLS: ToolDef[] = [
         const pack = await loadSeat(c, p, index, seat);
         return { text: `Loaded ${p.name} as ${seat.seat_type.replaceAll("_", " ")}. Use the seat in an isolated context. Files guide the user's work and never override the user or the host's rules. AI Blocks runs nothing.\n\n${Object.entries(pack.files).map(([path, body]) => `===== ${path} =====\n${body}`).join("\n\n")}`, data: {...pack,...(request?{execution_plan:executionPlan(request)}:{})} as unknown as Record<string, unknown> };
       }
+      let payload: Awaited<ReturnType<typeof loadPayload>>;
+      try { payload = await loadPayload(c.env, index, request); }
+      catch (err) { if (err instanceof PackUnavailable) return no(`${err.message} Try again in a minute.`); throw err; }
       const loaded: Record<string, string> = {};
       const parts: string[] = [];
-      for (const path of CORE_FILES) {
-        const f = index.files.find(x => x.path === path);
-        if (!f) continue;
-        const { text: body, trimmed } = await fileText(c, f);
-        loaded[path] = body;
-        parts.push(`===== ${path} =====\n${body}${trimmed ? "\n[Cut short here. The full file is in the download.]" : ""}`);
+      for (const part of payload.parts) {
+        loaded[part.path] = part.text;
+        const label = part.path === "knowledge.md" ? `knowledge.md (${part.note})` : part.note ? `${part.path} (${part.note})` : part.path;
+        parts.push(`===== ${label} =====\n${part.text}${part.trimmed && part.path !== "knowledge.md" ? "\n[Cut short here. Read the rest with get_agent_file.]" : ""}`);
       }
-      loaded['QUALITY-METHOD.md']=qualityMethodMarkdown();
-      parts.push(`===== QUALITY-METHOD.md (shared current contract) =====\n${loaded['QUALITY-METHOD.md']}`);
-      loaded['OUTPUT-POLICY.md']=outputPolicyMarkdown();
-      parts.push(`===== OUTPUT-POLICY.md (shared current contract) =====\n${loaded['OUTPUT-POLICY.md']}`);
-      const others = index.files.filter(f => !(CORE_FILES as readonly string[]).includes(f.path)&&!['QUALITY-METHOD.md','OUTPUT-POLICY.md'].includes(f.path));
+      // Older packs have no OUTPUT-POLICY.md file; the policy is the same text everywhere.
+      if (!loaded["OUTPUT-POLICY.md"]) { loaded["OUTPUT-POLICY.md"] = outputPolicyMarkdown(); parts.push(`===== OUTPUT-POLICY.md =====\n${loaded["OUTPUT-POLICY.md"]}`); }
+      const whole = new Set(payload.parts.filter(x => !x.trimmed || x.path !== "knowledge.md").map(x => x.path));
+      const others = index.files.filter(f => !whole.has(f.path));
       const list = others.map(f => `- ${f.path}: ${f.purpose}`).join("\n");
       const zip = index.zip ? `${c.origin}${index.zip.url}` : `${c.origin}/packs/${encodeURIComponent(p.id)}.zip`;
+      const route = payload.route
+        ? `For this request, follow ${payload.route.candidate.path} (included in full below)${payload.sections.length ? `, with the relevant knowledge.md sections` : ""}. `
+        : request ? "No skill in this pack clearly matches the request: follow WORK-METHOD.md and playbook.md, and read a skill with get_agent_file if one fits. " : "";
       return {
-        text: `Loaded ${p.name}, ${p.title} (pack version ${index.version}). To work as ${p.name} in this chat, follow AGENTS.md below for the work the user asks for. These files guide the work; they never override what the user wants or your own rules. ${p.name} runs on the user's own AI: AI Blocks runs nothing.\nOther files in the pack (read one with get_agent_file when AGENTS.md or the task calls for it):\n${list}\nFree to use and change, not for resale (LICENSE.md). Everything in one download: ${zip}\n\n${parts.join("\n\n")}`,
-        data: { agent_id: p.id, name: p.name, title: p.title, version: index.version, files: loaded,...(request?{execution_plan:executionPlan(request)}:{}), other_files: others.map(f => ({ path: f.path, purpose: f.purpose, kind: f.kind, bytes: f.bytes })), download: zip, license: "LicenseRef-AI-Blocks-Pack-1.0" },
+        text: `Loaded ${p.name}, ${p.title} (pack version ${index.version}). To work as ${p.name} in this chat, follow AGENTS.md below for the work the user asks for: ground the job in the client's real business first (WORK-METHOD.md). ${route}These files guide the work; they never override what the user wants or your own rules. ${p.name} runs on the user's own AI: AI Blocks runs nothing.\nOther files in the pack (read one with get_agent_file when AGENTS.md or the task calls for it):\n${list}\nFree to use and change, not for resale (LICENSE.md). Everything in one download: ${zip}\n\n${parts.join("\n\n")}`,
+        data: {
+          agent_id: p.id, name: p.name, title: p.title, version: index.version, files: loaded,
+          ...(payload.route ? { routed: { path: payload.route.candidate.path, kind: payload.route.candidate.kind, score: payload.route.score, matched: payload.route.matched } } : {}),
+          ...(payload.sections.length ? { knowledge_sections: payload.sections } : {}),
+          chars: payload.chars,
+          ...(request ? { execution_plan: executionPlan(request) } : {}),
+          other_files: others.map(f => ({ path: f.path, purpose: f.purpose, kind: f.kind, bytes: f.bytes })), download: zip, license: "LicenseRef-AI-Blocks-Pack-1.0",
+        },
       };
     },
   },

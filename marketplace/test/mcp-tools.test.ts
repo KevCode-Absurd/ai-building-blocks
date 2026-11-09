@@ -801,7 +801,8 @@ test("load_agent returns the agent's core files and lists the rest; get_agent_fi
   for (const f of ["AGENTS.md", "soul.md", "personality.md", "playbook.md", "access.md"]) assert.ok(text.includes(`===== ${f} =====`), f);
   assert.match(text, /- knowledge\.md: Role knowledge/);
   assert.match(text, /https:\/\/agents\.test\/packs\/nova-seo\.zip/);
-  assert.deepEqual(Object.keys(res.structuredContent.files), ["AGENTS.md", "soul.md", "personality.md", "playbook.md", "access.md", "QUALITY-METHOD.md", "OUTPUT-POLICY.md"]);
+  // An older pack without WORK-METHOD.md or OUTPUT-POLICY.md: the files it has, then the shared output policy.
+  assert.deepEqual(Object.keys(res.structuredContent.files), ["AGENTS.md", "soul.md", "personality.md", "playbook.md", "access.md", "OUTPUT-POLICY.md"]);
   assert.equal(res.structuredContent.execution_plan.schema,'ai-blocks-execution-plan/1');
   const plan=await call('get_execution_plan',{request:'Build a working landing page'});
   assert.equal(plan.structuredContent.landing_pages.delivery_mode,'LAUNCHABLE_SITE');
@@ -827,6 +828,56 @@ test("load_agent returns the agent's core files and lists the rest; get_agent_fi
   const expert = await call("load_agent", { agent_id: "pat-expert-seo" });
   assert.equal(expert.isError, true);
   assert.match(textOf(expert), /built by an expert and has no download yet/);
+});
+
+test("load_agent with a request returns the work method, the routed skill in full and the relevant knowledge, under 60 KB", async () => {
+  const files = [
+    { path: "AGENTS.md", url: "/packs/nova-seo/AGENTS.md", bytes: 30, purpose: "Start here", kind: "start" },
+    { path: "WORK-METHOD.md", url: "/packs/nova-seo/WORK-METHOD.md", bytes: 30, purpose: "How every job runs", kind: "start" },
+    { path: "context/README.md", url: "/packs/nova-seo/context/README.md", bytes: 30, purpose: "What to capture", kind: "start" },
+    { path: "playbook.md", url: "/packs/nova-seo/playbook.md", bytes: 20, purpose: "How I work", kind: "work" },
+    { path: "OUTPUT-POLICY.md", url: "/packs/nova-seo/OUTPUT-POLICY.md", bytes: 20, purpose: "Output policy", kind: "work" },
+    { path: "knowledge.md", url: "/packs/roles/seo-specialist/knowledge.md", bytes: 20, purpose: "Role knowledge", kind: "knowledge" },
+    { path: "skills/keyword-research/SKILL.md", url: "/packs/roles/seo-specialist/skills/keyword-research/SKILL.md", bytes: 20, purpose: "Skill: keywords", kind: "skill" },
+    { path: "skills/seo-blog-post/SKILL.md", url: "/packs/jobs/seo-blog-post/SKILL.md", bytes: 20, purpose: "Skill: blog post", kind: "skill" },
+  ];
+  const routes = [
+    { path: "skills/seo-blog-post/SKILL.md", kind: "job", name: "SEO blog post article blog", text: "One search-ready blog post." },
+    { path: "skills/keyword-research/SKILL.md", kind: "skill", name: "keyword research", text: "Finds the searches that matter for one page." },
+  ];
+  const big = "x".repeat(70_000);
+  const assets = fakeAssets({
+    "/packs/nova-seo/files.json": JSON.stringify({ agent_id: "nova-seo", version: "2.0.0", updated: "2026-11-09", knowledge: "ready", files, routes }),
+    "/packs/nova-seo/WORK-METHOD.md": "# Work method: the Grounded Job Protocol\n\n1. Ground first.",
+    "/packs/nova-seo/context/README.md": "# Context: what to capture before the work",
+    "/packs/nova-seo/OUTPUT-POLICY.md": "# Output policy",
+    "/packs/roles/seo-specialist/skills/keyword-research/SKILL.md": "---\nname: keyword-research\n---\n# Keyword research\n\nStart from the seed keyword.",
+    "/packs/jobs/seo-blog-post/SKILL.md": "# SEO blog post",
+    "/packs/tools/ai-default-patterns.md": "# AI default patterns",
+    "/packs/roles/seo-specialist/knowledge.md": `# Knowledge\n\n## 4. Benchmarks\n\nKeyword difficulty and search volume.\n\n## 5. Decision rules\n\nPick one search per page.\n\n## 9. Glossary\n\n${big}`,
+  });
+  const { t, call } = await setup({ beta: false, env: { HOSTED_JOBS: "off", ASSETS: assets } });
+  const res = await call("load_agent", { agent_id: "nova-seo", request: "Do keyword research for our new page about dog grooming in Leeds" });
+  assert.equal(res.isError, undefined, textOf(res));
+  const data = res.structuredContent;
+  assert.equal(data.routed.path, "skills/keyword-research/SKILL.md");
+  assert.deepEqual(Object.keys(data.files).slice(0, 3), ["AGENTS.md", "WORK-METHOD.md", "context/README.md"], "the method comes right after the entry point");
+  assert.match(data.files["skills/keyword-research/SKILL.md"], /Start from the seed keyword/);
+  assert.deepEqual(data.knowledge_sections, ["4. Benchmarks", "5. Decision rules"], "relevant sections only; the huge glossary stays out");
+  assert.ok(new TextEncoder().encode(textOf(res)).length < 60_000, "the first payload stays under 60 KB");
+  assert.match(textOf(res), /For this request, follow skills\/keyword-research\/SKILL\.md/);
+  // The same pack, one skill in one file for chat apps.
+  const one = await t.api("GET", "/agents/nova-seo/skills/keyword-research.txt");
+  assert.equal(one.status, 200);
+  assert.match(one.res.headers.get("content-type") ?? "", /^text\/plain/);
+  assert.match(one.body, /===== FILE: WORK-METHOD\.md =====[\s\S]*===== FILE: skills\/keyword-research\/SKILL\.md =====/);
+  assert.equal((await t.api("GET", "/agents/nova-seo/skills/no-such-skill.txt")).status, 404);
+  // The capture tools, served with their own content types; unknown names are refused.
+  const tool = await t.api("GET", "/tools/ai-default-patterns.md");
+  assert.equal(tool.status, 200);
+  assert.match(tool.res.headers.get("content-type") ?? "", /^text\/markdown/);
+  assert.equal((await t.api("GET", "/tools/capture-brand-dna.mjs")).status, 404, "not published in this build");
+  assert.equal((await t.api("GET", "/tools/wrangler.jsonc")).status, 404);
 });
 
 test("load_agent says so plainly when the agent's files cannot be read", async () => {
@@ -906,7 +957,7 @@ test("load_team returns six isolated seat packs with a neutral coordinator and a
     assert.ok(new TextEncoder().encode(JSON.stringify(seat)).length <= 60_000);
     assert.equal(seat.model_calls, 0);
     assert.ok(!seat.files["knowledge.md"]);
-    assert.match(seat.files['QUALITY-METHOD.md'],/Execution quality contract/);
+    assert.match(seat.files['QUALITY-METHOD.md'],/Optional: for hosts that use the AI Blocks MCP job tools/);
   }
   assert.match(data.seats[5].review_context, /Exclude the council/);
   assert.ok(!assets.asked.some(path => path.endsWith("/knowledge.md")));

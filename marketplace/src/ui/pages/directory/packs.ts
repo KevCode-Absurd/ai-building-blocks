@@ -52,6 +52,7 @@ export const FILE_KINDS: { kind: string; label: string }[] = [
   { kind: "workflow", label: "Workflows" },
   { kind: "team", label: "Channel team" },
   { kind: "channel", label: "Channels" },
+  { kind: "tool", label: "Capture and check tools" },
   { kind: "training", label: "Training" },
   { kind: "about", label: "About this pack" },
 ];
@@ -172,12 +173,30 @@ export interface StartGuide {
 export const LARGE_ONE_FILE = 300_000;
 
 /**
- * The tabs of "Start in your AI", most used app first. Each first message needs no editing: the agent introduces
- * itself and asks what the person needs, so the start takes about a minute.
+ * What the agent asks for first, so its first move is to ground the job in the person's real business (WORK-METHOD.md,
+ * step 1) rather than a generic hello. Tailored by the agent's area of work: a website, the numbers, the code or the
+ * current document.
  */
-export function startGuides(a: { id: string; name: string; title: string }, oneFileBytes: number | null = null): StartGuide[] {
+export function groundingAsk(area?: string): string {
+  switch (area) {
+    case "finance": case "data":
+      return "Before you start, ask me for my business name, the numbers or export to work from, and what I need done.";
+    case "engineering":
+      return "Before you start, ask me for the code or repo to work in, and what I need done.";
+    case "people": case "operations":
+      return "Before you start, ask me for my business name, the document or process we use now, and what I need done.";
+    default:
+      return "Before you start, ask me for my business name and website (or what I can paste instead), and what I need done.";
+  }
+}
+
+/**
+ * The tabs of "Start in your AI", most used app first. Each first message needs no editing: the agent's first move is
+ * to ask for the person's business and what they need (groundingAsk), so the start takes about a minute.
+ */
+export function startGuides(a: { id: string; name: string; title: string; area?: string }, oneFileBytes: number | null = null): StartGuide[] {
   const { name, title } = a;
-  const hello = "Introduce yourself in two sentences, then ask what I need help with.";
+  const hello = groundingAsk(a.area);
   const read = "holds your instructions, method and knowledge. Read it and follow it, starting with its AGENTS.md part.";
   const chat = `You are ${name}, ${title}. The file I attached ${read} ${hello}`;
   const large = (oneFileBytes ?? 0) > LARGE_ONE_FILE;

@@ -79,9 +79,13 @@ function clip(value: string, bytes: number): { text: string; cut: boolean } {
   return { text: `${new TextDecoder("utf-8", { fatal: false }).decode(encoded.slice(0, bytes - 100)).replace(/\uFFFD$/, "")}\n[Excerpt cut here. Load the full file with get_agent_file.]`, cut: true };
 }
 
-export function trimmedSeatPack(persona: Persona | null, seat: SeatAssignment, soul: string, access: string, other_files: { path: string; purpose: string }[]): TrimmedSeatPack {
+/** Every seat grounds the job first: the outline is used when the pack's own WORK-METHOD.md is not passed. */
+export const SEAT_WORK_METHOD = "# Work method: the Grounded Job Protocol\n\n0. Frame: write context/job-card.md (client, outcome, deliverable kind, success measure, mode: patch whenever something exists).\n1. Ground: capture the real business into context/ before you make anything. Every choice cites it.\n2. Taste: write context/taste-brief.md: brand codes to keep, references, defaults to avoid.\n3. Diverge: 2 or 3 directions that differ on substance, not colour or wording.\n4. Build inside the client's system, with their real facts.\n5. Check in a separate pass: gates pass or fail, then craft.\n6. Record DECISIONS.md, and propose typed lessons for \"Rules I learned\" in playbook.md.\n";
+
+export function trimmedSeatPack(persona: Persona | null, seat: SeatAssignment, soul: string, access: string, other_files: { path: string; purpose: string }[], work_method = ""): TrimmedSeatPack {
   const trimmed: string[] = [];
   const files: Record<string, string> = {'QUALITY-METHOD.md':qualityMethodMarkdown(),'OUTPUT-POLICY.md':outputPolicyMarkdown()};
+  { const wm = clip(work_method || SEAT_WORK_METHOD, 8_000); files["WORK-METHOD.md"] = wm.text; if (wm.cut) trimmed.push("WORK-METHOD.md"); }
   const seat_types = seat.seat_types ?? [seat.seat_type];
   const neutralCoordinator = !persona && seat.seat_type === "coordinator" && seat.role_id === "general-coordinator";
   if (!persona) {

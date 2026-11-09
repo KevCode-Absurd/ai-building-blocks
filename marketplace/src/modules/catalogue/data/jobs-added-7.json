@@ -1409,12 +1409,12 @@
       },
       {
         "id": "pub_vtt",
-        "text": "WebVTT file for a 4-minute product video on our website for Hearth & Loom throws. Timed transcript pasted, one speaker, Mina. Add [music] at the start and end. Standard line length.",
+        "text": "WebVTT file for a 4-minute product video on our website for our throws. Timed transcript pasted, one speaker, Mina. Add [music] at the start and end. Standard line length.",
         "visibility": "public"
       },
       {
         "id": "pub_alt",
-        "text": "Alt text for 30 product photos for Hearth & Loom on Shopify. For each I've listed the file name, product, colour, pattern and what is in the shot (on a sofa, folded, close-up of the fringe). 6 are mood shots with no product focus.",
+        "text": "Alt text for 30 product photos for our Shopify store. For each I've listed the file name, product, colour, pattern and what is in the shot (on a sofa, folded, close-up of the fringe). 6 are mood shots with no product focus.",
         "visibility": "public"
       },
       {
@@ -1703,12 +1703,12 @@
       },
       {
         "id": "pub_host_read",
-        "text": "Podcast host-read ad for Hearth Seeds on a gardening show. Code GROW15 gives 15% off a first order at hearthseeds.com. Our seeds are open-pollinated and packed in paper. 60 and 30 second versions that sound like the host talking, plus talking points.",
+        "text": "Podcast host-read ad for our seed company on a gardening show. Code GROW15 gives 15% off a first order on our website. Our seeds are open-pollinated and packed in paper. 60 and 30 second versions that sound like the host talking, plus talking points.",
         "visibility": "public"
       },
       {
         "id": "hid_sonic",
-        "text": "Sonic logo brief for Tidewell, a sleep app. 3 seconds, played at app start and at the end of our video ads. Calm, soft, hopeful. No bells or chimes. It must sound good on phone speakers.",
+        "text": "Sonic logo brief for our sleep app. 3 seconds, played at app start and at the end of our video ads. Calm, soft, hopeful. No bells or chimes. It must sound good on phone speakers.",
         "visibility": "hidden"
       },
       {

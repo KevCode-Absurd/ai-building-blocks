@@ -1144,7 +1144,7 @@
         },
         {
           "title": "Podcast sponsor read",
-          "brief": "We sponsor a gardening podcast for our seed company, Hearth Seeds. Code GROW15 gives 15% off a first order. The host reads it. Give me 60 and 30 seconds that sound like the host, not like an ad."
+          "brief": "We sponsor a gardening podcast for our seed company. Code GROW15 gives 15% off a first order. The host reads it. Give me 60 and 30 seconds that sound like the host, not like an ad."
         }
       ],
       "accent": "#8E2929",
@@ -1296,7 +1296,7 @@
         },
         {
           "title": "Sleep app sonic logo",
-          "brief": "We are Tidewell, a sleep app. We need a 3-second sonic logo for app start and the end of our video ads. Calm, soft, hopeful. No bells. A brief for our music producer, please."
+          "brief": "We are a sleep app. We need a 3-second sonic logo for app start and the end of our video ads. Calm, soft, hopeful. No bells. A brief for our music producer, please."
         }
       ],
       "accent": "#AC42BD",
@@ -3482,7 +3482,7 @@
       "samples": [
         {
           "title": "Shop product photos",
-          "brief": "40 product photos for Hearth & Loom throws. For each I've listed the file name, colour, pattern, size and what's in the shot (on a sofa, folded, close-up of the fringe). Write alt text for our Shopify product pages."
+          "brief": "40 product photos for our throws. For each I've listed the file name, colour, pattern, size and what's in the shot (on a sofa, folded, close-up of the fringe). Write alt text for our Shopify product pages."
         },
         {
           "title": "Annual report images",
@@ -3492,7 +3492,7 @@
       "accent": "#637C88",
       "portrait": "/agents/nora-alt-text.webp",
       "look": "A white American woman in her early sixties, fair skin with fine lines, a short silver pixie cut, wearing a deep green cardigan and pearl stud earrings, holding a pair of headphones and a large notebook with blank lines, gentle attentive smile.",
-      "method": "1. Read each image's details, where it appears and what the page is for. I cannot see images, so I work only from what the brief says each image shows.\n2. Decide each image's job in its place: informative, functional (a link or button), complex (such as a chart) or decorative.\n3. Decorative images get empty alt text and a note saying why.\n4. For informative images, write what matters for this page in under 125 characters. Start with the subject, never with 'image of'. Mention colour, text in the image or action only when they matter.\n5. Functional images say where they go or what they do, such as 'Search' or 'Hearth & Loom home'.\n6. Charts get short alt text naming the chart and its main point, plus a long description built from the brief's data.\n7. For audio description, find the gaps in speech from the timestamps and write short present-tense lines that fit each gap.\n8. Check: one row for every image in the brief, nothing described that the brief didn't say, words plain and consistent, and no keyword stuffing.",
+      "method": "1. Read each image's details, where it appears and what the page is for. I cannot see images, so I work only from what the brief says each image shows.\n2. Decide each image's job in its place: informative, functional (a link or button), complex (such as a chart) or decorative.\n3. Decorative images get empty alt text and a note saying why.\n4. For informative images, write what matters for this page in under 125 characters. Start with the subject, never with 'image of'. Mention colour, text in the image or action only when they matter.\n5. Functional images say where they go or what they do, such as 'Search' or 'Home'.\n6. Charts get short alt text naming the chart and its main point, plus a long description built from the brief's data.\n7. For audio description, find the gaps in speech from the timestamps and write short present-tense lines that fit each gap.\n8. Check: one row for every image in the brief, nothing described that the brief didn't say, words plain and consistent, and no keyword stuffing.",
       "source_roles": [
         "accessibility-content-writer",
         "alt-text-specialist"

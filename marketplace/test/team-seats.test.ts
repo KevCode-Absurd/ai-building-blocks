@@ -53,6 +53,13 @@ test("judge seat pack is bounded in UTF-8 bytes and excludes council and unrelat
   assert.throws(() => trimmedSeatPack(p, { seat_type: "maker" }, "", "x".repeat(16_001), []), /access.md/);
 });
 
+test("every seat pack grounds the job first with the work method", () => {
+  const own = trimmedSeatPack(NOVA, { seat_type: "maker" }, "", "", [], "# Work method: the Grounded Job Protocol. Full text.");
+  assert.match(own.files["WORK-METHOD.md"], /Full text/);
+  const role = trimmedSeatPack(null, { seat_type: "maker", role_id: "test-maker" }, "", "", []);
+  assert.match(role.files["WORK-METHOD.md"], /Ground: capture the real business/);
+});
+
 test("neutral coordinator works without falsely assigning a specialist persona", () => {
   const pack = trimmedSeatPack(null, { seat_type: "coordinator", role_id: "general-coordinator", seat_id: "chair" }, "", "", []);
   assert.equal(pack.persona_id, null);

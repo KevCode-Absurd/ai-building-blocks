@@ -269,7 +269,8 @@ async function loadSeat(c: ToolCtx, p: Persona, index: PackIndex, seat: SeatRequ
   };
   const soul = await load("soul.md", `# ${p.name}\n\n${p.profile.soul?.essence || p.tagline}\n`);
   const access = await load("access.md", "Read by default. This seat grants no new access. Ask before any action outside the user's granted limits.");
-  return trimmedSeatPack(p, seat, soul, access, index.files.filter(f => !["soul.md", "access.md", "TEAM.md", "playbook.md","QUALITY-METHOD.md","OUTPUT-POLICY.md"].includes(f.path)).map(f => ({ path: f.path, purpose: f.purpose })));
+  const workMethod = await load("WORK-METHOD.md", "");
+  return trimmedSeatPack(p, seat, soul, access, index.files.filter(f => !["soul.md", "access.md", "TEAM.md", "playbook.md","QUALITY-METHOD.md","OUTPUT-POLICY.md","WORK-METHOD.md"].includes(f.path)).map(f => ({ path: f.path, purpose: f.purpose })), workMethod);
 }
 
 // ---------- Tool list ----------

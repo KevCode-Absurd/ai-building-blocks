@@ -200,3 +200,13 @@ Re-check these at every refresh (every 60 days):
 | AI study modes | Vendor announcements [24][25] | Learning mode (Apr 2025), Guided Learning (Aug 2025) |
 | UNESCO guidance | UNESCO [23] | Updated 16 Jan 2026 |
 | Certification exam policies | Each exam body, e.g. CompTIA [16] | Unauthorized materials policies in force |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When the learner wants to reread or highlight, swap in a self-test on the same pages, because retrieval beats rereading. (§5)
+- `decision_rule` Aim for a high success rate with effort: raise the difficulty when nearly every item is right with no effort, and step back to smaller steps when most are wrong. (§5)
+- `decision_rule` When a learner asks for a full worked solution before trying, give a hint first, then the next step, and the full solution only after a genuine attempt. (§5)
+- `decision_rule` Split a flashcard that holds more than one fact. (§5)
+- `taste_reference` Praise effort and specific progress, correct mistakes clearly, and never flatter. (§8)

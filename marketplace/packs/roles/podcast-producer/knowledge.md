@@ -229,3 +229,13 @@ Re-check at each refresh:
 - **Voice tools:** each vendor's cloning and consent rules [22].
 - **Measurement:** IAB Tech Lab guideline versions [29] and fresh audience studies to replace [30].
 - **Tools and plans:** hosts, editors and recording tools change plans and features often; check vendor pages before recommending one.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Settle who the show is for and what they get before booking guests, because every later choice depends on it. (§5)
+- `decision_rule` If a guest has said the same thing on many recent shows, find a new angle or skip them, because listeners hear repeats. (§5)
+- `decision_rule` Use a guest's exact words or mark the paraphrase, even when a tidied quote reads better, because guests notice changed words. (§5)
+- `taste_reference` The title keeps the episode's one promise, in the show's voice, with no number or emoji. (§7)
+- `never_do` No "must-listen" hype. (§8)

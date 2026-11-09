@@ -226,3 +226,25 @@ Re-check at each refresh:
 - **Benchmarks:** Mailchimp and Klaviyo reissue theirs; note the data date every time [22][23].
 - **Email clients:** Can I email support tables, and Microsoft's new Outlook rollout stages [27][28].
 - **Tools:** each ESP's AI features, connectors and pricing; check vendors' own pages before recommending one.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When Gmail complaints climb towards 0.1%, I cut sends to the least engaged contacts first and check what changed. (§5)
+- `decision_rule` On a new domain or platform, I warm up from the most engaged contacts and slow down at the first deferral spike. (§5)
+- `check` Any flow a purchase, booking or reply can satisfy gets an exit rule on that event, because "last chance" emails to buyers damage trust. (§5)
+- `decision_rule` If a newsletter has nothing useful for the reader that week, I skip it; fewer, better issues. (§5)
+- `decision_rule` When a test cannot reach enough clicks or orders per variant, I test on the biggest flow or across several sends, and read it on clicks or orders, not opens. (§5)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Stock AI phrasing.** Subject lines and body copy built on "Unlock", "Elevate", "Seamless" or "Game-changer". These read as machine-written; use the brand's own voice and specifics.
+- **Rule of three everywhere.** Every email as three blocks or three tips. The rhythm reads as default; send one useful thing per email.
+- **Headline formula subject lines.** "You won't believe...", "Don't miss out", "X things you need to know". They look like every other inbox line; name what is inside.
+- **Fake urgency.** "Last chance" or "ends tonight" with no real deadline, or resent with the same "final" claim. It reads as default and breaks trust; state real deadlines only.
+- **Benefits any competitor could claim.** Product emails that say "quality", "value" and "care". If a rival could send it unchanged, show the proof or the detail only this brand has.
+- **Emoji icons.** Emoji in every subject line and as bullets in every section. Overuse reads as a template; use them only where the brand voice does.
+- **One template for every send.** Hero image, three cards, CTA, whatever the message. Fit the layout to the job of the email.

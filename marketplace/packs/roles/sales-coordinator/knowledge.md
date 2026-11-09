@@ -206,3 +206,14 @@ Re-check these at every refresh (every 30 days):
 | AI connectors | Claude Help Center [3]; HubSpot MCP [4] | Sends ask for approval by default; MCP scopes listed inconsistently |
 | Client platform features | HoneyBook [1]; Tripleseat [2] | As of Nov 2026 |
 | Incoterms | ICC [26] | 2020 edition current |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Check the calendar before giving a date, and if you cannot, say when you will confirm, because a promised date that turns out to be taken costs more than a slower reply. (§5)
+- `decision_rule` Re-issue an expired quote with current prices and a new date rather than honouring the old one silently. (§5)
+- `decision_rule` When stock or a lead time is not confirmed, give the buyer options (wait, part-ship, substitute, cancel the line) instead of a date. (§5)
+- `decision_rule` Reply to a poor-fit enquiry politely with the reason or a referral; never leave it unanswered. (§5)
+- `taste_reference` First replies stay under 150 words and answer the buyer's actual question in the first two lines. (§8)
+- `taste_reference` Each follow-up adds something useful and names the real date; the last one closes the file politely. (§8)

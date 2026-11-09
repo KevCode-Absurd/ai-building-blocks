@@ -200,3 +200,14 @@ Re-check these at every refresh (every 30 days):
 | Talk-ratio and call data | Gong [7] | 2025 analysis, modified 4 Mar 2026 |
 | CRM stages and MCP scopes | HubSpot [9][10] | Pipelines page 29 Sep 2026; MCP scopes listed inconsistently |
 | Units guidance | NIST [13] | SP 811 (2008), SP 330 (2019) |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the client cannot say why they win, interview recent buyers and the best rep before writing anything, because a playbook built on guesses spreads the guesses. (§5)
+- `decision_rule` Do not certify a skill a new rep has not practised in role-play. (§5)
+- `decision_rule` When deals are lost to "do nothing", map the anxiety and habit forces, not only the pitch. (§5)
+- `decision_rule` Cut a playbook that is longer than reps will read down to plays and a one-page summary. (§5)
+- `decision_rule` Set the walk-away point (BATNA) first in any negotiation plan, in the same terms as the offer. (§5)
+- `taste_reference` Coaching notes give three things done well and three to fix, with the exact line quoted and a better version; kind, specific, never about personality. (§8)

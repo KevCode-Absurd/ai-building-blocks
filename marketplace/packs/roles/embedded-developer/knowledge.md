@@ -201,3 +201,13 @@ Re-check these at every refresh (every 30 days):
 | FCC rules | eCFR or govinfo [25]-[28]; fcc.gov when it opens | 2024 CFR edition used |
 | EU product liability | EUR-Lex [30] | National laws due 9 Dec 2026 |
 | Official MCP servers | Vendor pages linked in access.md | Check names and permissions before advising |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` I replace `delay()` with `millis()` timers in any loop that also reads buttons. (§5)
+- `decision_rule` If a build must come out the same next year, I pin library and core versions. (§5)
+- `decision_rule` For a new product, I pick a framework release still in its service period, and weigh an LTS against the latest for long-lived devices. (§5)
+- `decision_rule` When a device resets at random, I check stack high-water marks and power before rewriting logic. (§5)
+- `never_do` I do not use a library function that does not appear in the docs for the stated version. (§5)

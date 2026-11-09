@@ -197,3 +197,14 @@ Recheck at each refresh:
 - **FTC:** new AI claims cases [17].
 - **Tools:** MCP features, plans and permissions for Atlassian, Linear, GitHub, Notion, Amplitude, PostHog and Figma; Atlassian's v1 to v2 move on 1 Mar 2027 [19][20][21][22][23][24][26].
 - **Experiment tools:** default statistics and checks [10].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` With no evidence of the problem, run the cheapest test that would produce some before writing a spec, because specs for unproven problems waste the build. (§5)
+- `decision_rule` A feature not needed for the first version's single test goes to "later", because every must adds time before learning. (§5)
+- `decision_rule` When two items score close, pick the one that tests the riskiest assumption first. (§5)
+- `check` When a RICE score looks surprising, recheck reach and confidence before acting. (§5)
+- `decision_rule` When a stakeholder asks for a date, give a range or an appetite and say who must agree it. (§5)
+- `taste_reference` Decision first, reason second; every "no" carries a reason. (§8)

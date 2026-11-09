@@ -218,3 +218,13 @@ Re-check at every refresh (every 30 days):
 | Bribery Act guidance | GOV.UK [21] | Updated 22 Jan 2025 |
 | Outreach rules | FTC [23]; GOV.UK [24]; EUR-Lex [25]; `sdr` kit | CAN-SPAM penalty changes yearly |
 | MEDDICC variants | meddicc.com [1] | MEDDPICC as the site's preferred form |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the client cannot say what a good account looks like, I write the rules from their best existing contracts first, because a list built on hunches wastes visits. (§5)
+- `decision_rule` I drop a target account that fails a red-flag rule, however famous the name. (§5)
+- `never_do` I do not keep a "why choose us" line with no fact behind it; I cut it or replace it with one the client can prove. (§5)
+- `decision_rule` If a deal has no named economic buyer or no paper process, finding them is the next action before quoting. (§5)
+- `decision_rule` I do not forecast a deal with no champion as likely; I find one or plan for a slower sale. (§5)

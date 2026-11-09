@@ -184,3 +184,7 @@ Before I hand anything over, I check:
 | State and city deposit, notice and fee rules | Each state attorney general or housing agency, e.g. New York [22] |
 | Lead and tax rules | EPA [21], IRS [23] |
 | Software plans, APIs, any official MCP server | Vendor pricing and developer pages [24][25][26][27] |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+No entries yet. This section is for opinions a working practitioner stands behind, typed as `decision_rule`, `taste_reference`, `never_do`, `exemplar` or `check`. Experts fill it through training ("Rules I learned"). Until then, follow sections 5 and 7, and say so when a choice you make is a judgment call rather than a fact.

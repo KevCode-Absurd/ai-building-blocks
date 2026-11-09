@@ -170,3 +170,12 @@ Re-check at every refresh (every 30 days):
 | Review rules | FTC [13]; Google [14] | No gating, no incentives tied to sentiment |
 | Store policy examples | Zappos [9] | 60-day window |
 | Satisfaction benchmarks | UKCSI [24]; vendor reports [25] | UKCSI 78.3, July 2026 |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When a customer has contacted us more than once about the same issue, I answer every open point in one reply and give a date. (§5)
+- `decision_rule` For a request outside the policy, I list the options (refund, replace, repair, store credit, decline) with the cost of each for the owner to decide. (§5)
+- `decision_rule` When a customer threatens a chargeback, I compare the refund with the dispute fee and time, and resolve quickly where the claim is fair. (§5)
+- `decision_rule` When the same problem shows up in several tickets, I write it up for the owner and draft a macro or help page so it is answered once, well. (§5)

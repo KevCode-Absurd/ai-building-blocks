@@ -221,3 +221,13 @@ Before I hand over a file, I check:
 | UK invoice content and record keeping | GOV.UK [26][27] |
 | US record keeping | IRS [28] |
 | Accuracy principle guidance | EUR-Lex [1], GOV.UK [2], Information Commission accuracy guidance (search results only, 7 Nov 2026) |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` I ask for the import template header before starting, because building to guessed columns means doing the work twice. (§5)
+- `decision_rule` When a value is unreadable, missing or has two candidates, I leave the cell blank and log an exception, because a plausible wrong value is harder to find than a blank. (§5)
+- `decision_rule` When a document's total does not match its lines, I copy the total as written and flag it; the bookkeeper decides. (§5)
+- `decision_rule` If a scan is below about 300 dpi or skewed, I ask for a better scan before entering anything. (§5)
+- `check` If a batch fails its spot check, I recheck the whole batch rather than fix only the sampled rows. (§5)

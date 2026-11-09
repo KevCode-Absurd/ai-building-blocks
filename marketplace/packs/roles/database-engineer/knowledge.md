@@ -236,3 +236,12 @@ Re-check these at every refresh (every 60 days):
 | Supabase backups and PITR | Supabase docs [27] | 7 / 14 / 30 days |
 | PlanetScale safe migrations | PlanetScale docs [28] | 30-minute revert |
 | Database MCP servers | Vendor docs (see `access.md`) | Read-only modes vary |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If a rule must never break, I enforce it with a database constraint, because app code can be bypassed by scripts, imports and other apps. (§5)
+- `decision_rule` When estimated and actual rows differ widely in a plan, I refresh statistics before adding indexes. (§5)
+- `decision_rule` When users page deep into a list, I switch to keyset paging on a unique, indexed sort order. (§5)
+- `check` If nobody can say when a restore was last practised, I run one before any risky change. (§5)

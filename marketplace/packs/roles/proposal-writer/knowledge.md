@@ -192,3 +192,13 @@ Re-check at each refresh:
 - **Loopio and APMP benchmark reports**, issued yearly [30].
 - **Freelance platform terms** and proposal fees: read each platform's own help centre before writing.
 - **Proposal and RFP software** features and AI connectors: check vendors' own pages.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When scoring is price-only or LPTA, write short, compliant answers and put the effort into price, because quality earns no extra marks. (§5)
+- `decision_rule` When scoring is a tradeoff or quality-weighted, spend the effort on the highest-weighted questions first, because marks follow weights. (§5)
+- `decision_rule` When the client wants to promise an outcome they do not control, rewrite it as a commitment to actions and measures they do control. (§5)
+- `decision_rule` When a freelance post asks for a free sample of real work, offer a short plan or a past example instead, unless the client chooses otherwise. (§5)
+- `taste_reference` Write the executive summary last; lead each answer with the reply, then the evidence; "we will", not "we aim to". (§8)

@@ -232,3 +232,26 @@ Re-check at every refresh (this kit reviews every 30 days):
 - EDPB and UK guidance on storage and access technologies, especially the Information Commission's page and any new PECR exceptions [28][30].
 
 Where to check: LinkedIn Marketing Solutions Help, LinkedIn's legal pages, the LinkedIn Marketing API docs on Microsoft Learn (with their recent changes page), the EDPB, GOV.UK and the Information Commission.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Ask for deal size, close rate and sales cycle before setting any budget, because the most you can pay for a lead comes from those three numbers. (§5)
+- `decision_rule` With an audience under 50,000, use fewer ad sets and fewer formats, not more, because each split shrinks delivery. (§5)
+- `decision_rule` For a list of a few hundred named accounts, use a company list with a broad job function filter and run it as a long, steady campaign, because tiny lists are fragile. (§5)
+- `decision_rule` When leads are cheap but sales calls them junk, move to the qualified leads goal fed by the CRM or Conversions API, because the system can only learn what a good lead looks like if you tell it. (§5)
+- `decision_rule` Gate a guide or report with a Lead Gen Form only when sales can act on the lead; otherwise use a document ad with an ungated link, because a form costs volume. (§5)
+- `decision_rule` Judge brand reach on reach in the target companies and later pipeline from them, not on clicks, because most buyers are out of market today. (§5)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Every concept in one look.** All ad variants share one layout, colour treatment and image style, so a test compares copy only. Give each concept its own look so the test can tell them apart.
+- **One hook formula reused.** Every intro text opens with the same pattern, such as a stat followed by "Here's how". Vary the opening per concept, drawn from the buying group's real problems.
+- **Product on a gradient.** A product screenshot or device mock-up floating on a purple or blue gradient. It is the stock B2B ad; show the product in the buyer's context or in the client's brand colours.
+- **Stock hype words.** "Unlock", "Elevate", "Seamless" or "Game-changer" in headlines and intro text. Senior buyers skim past them; use the client's specific claim with its proof.
+- **Benefits any competitor could claim.** "Save time", "boost productivity", "all-in-one platform". Lead with the difference the client can prove.
+- **Fake urgency.** "Limited spots" or "Ends soon" on content that is always available. Use a real deadline or none.
+- **Checklist score with no diagnosis.** An account review that scores against a fixed checklist without saying why this account's cost per qualified lead moved. Diagnose this account first, then rank fixes by money at stake.

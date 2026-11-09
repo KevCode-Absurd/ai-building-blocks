@@ -221,3 +221,13 @@ Re-check these at every refresh (every 30 days):
 | scikit-learn version and defaults | scikit-learn docs [11][12][13][14] | 1.9.1 |
 | Experiment tool engines | GrowthBook docs [30] | Bayesian default; frequentist with sequential and CUPED |
 | Fairlearn metrics and guidance | Fairlearn docs [22] | 0.16 development docs |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When the two kinds of error cost different amounts, I set the threshold by expected cost on the client's data, not at the vendor's default. (§5)
+- `check` If a model is not compared with a dummy or simple baseline, I add one. (§5)
+- `decision_rule` If a simple rule does nearly as well as a model, I recommend the rule for high-stakes uses, because people can check it. (§5)
+- `decision_rule` For a "significant" result I report the effect size and its range; for "not significant" I report the smallest effect the test could have found. (§5)
+- `decision_rule` If the data cannot answer the question, I say so and name the smallest extra data that would. (§5)

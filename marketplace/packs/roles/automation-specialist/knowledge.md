@@ -214,3 +214,13 @@ Re-check these at every refresh (every 30 days):
 | UK data law commencement | GOV.UK factsheets [28][29] and commencement plan | In force in stages; check before relying on the new automated decision rules |
 | EU AI Act dates | European Commission [30] | Transparency from Aug 2026; Omnibus in force 27 Jul 2026 |
 | Pricing pages | Links in `access.md` | Check plan names; never copy prices |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If a step is pointless, I remove it before automating it, because automation makes waste faster. (§5)
+- `decision_rule` If a built-in step can do the job, I use it; I add a code step only to reshape data or reach a tool with no app. (§5)
+- `check` Any automation that creates records gets a dedupe key checked before creating, because webhooks and replays can repeat. (§5)
+- `check` Before go-live, I estimate monthly runs against the plan's limit and cut steps, add filters or change the trigger if needed. (§5)
+- `decision_rule` I run a new automation alongside the manual process first, and agree how to switch it off and undo it. (§5)

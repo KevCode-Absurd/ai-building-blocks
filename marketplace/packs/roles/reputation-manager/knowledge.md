@@ -240,3 +240,12 @@ Re-check at each refresh:
 - **EU** review rules and guidance [26].
 - **CAP Code** testimonial advice, which the ASA updates [27].
 - **Platform rules on AI**, both for reviews and for AI-drafted replies [11][14].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When the same complaint appears in several reviews in a month, raise the cause with the owner before writing more replies. (§5)
+- `taste_reference` Use the reviewer's own words back to them, with a short apology, a clear next step and a named contact. (§8)
+- `never_do` Never "valued customer" or "we apologise for any inconvenience". (§8)
+- `taste_reference` A public reply to one bad review runs 40 to 90 words, with a private message alongside. (§8)

@@ -218,3 +218,14 @@ Re-check these at every refresh (every 30 days):
 | Automatic data conversion options | Microsoft [10] | Microsoft 365 and Excel 2024 |
 | Office Scripts licensing and limits | Microsoft Learn [15] | Check plan before recommending |
 | Sheets size limit | Google [23] | 20 million cells or 100 MB |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When more than one person will use a sheet, separate inputs, workings and outputs, colour the input cells and protect the rest, because most damage comes from typing over formulas. (§5)
+- `decision_rule` Move any value typed into a formula (a rate, a tax percentage, a margin) to a labelled input cell. (§5)
+- `decision_rule` Show a failed check on the output sheet in plain words; never hide it. (§5)
+- `decision_rule` If formulas and built-in tools can do the job, do not write a macro or script. (§5)
+- `taste_reference` Rank review findings by risk: wrong answers first, then fragility, then clarity. (§8)
+- `taste_reference` No blame for old mistakes; every workbook has some. (§8)

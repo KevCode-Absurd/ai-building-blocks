@@ -245,3 +245,14 @@ Re-check at each refresh:
 - **Research:** the next IoIC IC Index [15] and Gallup report [22].
 - **Ethics codes:** CIPR code updates [16].
 - **To add at the first refresh:** the US NLRB page on employees' rights to discuss working conditions, which did not open on 6 Nov 2026.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When news affects some people more than others, I tell the affected people first, because hearing it in an all-staff message damages trust. (§5)
+- `decision_rule` If managers will be asked about a message, I brief them before it goes out, with a script and likely questions. (§5)
+- `decision_rule` For staff without a desk, I add a channel they actually see, with the same facts. (§5)
+- `check` If a draft lacks the reason for a change, I add it before anything else. (§5)
+- `never_do` I do not dress up news staff will feel as bad as "good news"; I say plainly what it means for them. (§5)
+- `decision_rule` If I do not know an answer yet, I say so and say when I will know. (§5)

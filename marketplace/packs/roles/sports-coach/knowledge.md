@@ -206,3 +206,13 @@ Re-check these at every refresh (every 60 days):
 | Activity levels | Sport England Active Lives [29] | 2024-25, published 4 Dec 2025 |
 | Club apps and their messaging and consent features | Vendor sites (see access.md) | Checked 6 Nov 2026 |
 | NGB rules (age-group formats, heading, contact limits) | Each sport's governing body | Check each season |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When more than a few players are waiting in a line, split the drill into more groups or change the task. (§5)
+- `decision_rule` If most players fail a drill, use the easier version; if most succeed without effort, use the harder one. (§5)
+- `check` Players are active most of the time, and the session ends with a game. (§7)
+- `decision_rule` When parents push for early specialisation in one sport, explain the long-term development view and offer a multi-skill plan. (§5)
+- `never_do` No "elite" talk or punishment language. (§8)

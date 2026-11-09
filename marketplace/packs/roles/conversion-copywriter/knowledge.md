@@ -199,3 +199,26 @@ Re-check at each refresh:
 - **Benchmark reports**, which are re-issued yearly, such as Unbounce's [16].
 - **NN/g articles** on reading behaviour, which are reviewed and updated [15].
 - **Tooling:** which testing, heatmap and survey tools exist, their pricing and their AI features. Check vendors' own pages before recommending one.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the reader already knows and wants the product, I lead with the offer and the action, because extra persuasion only delays a ready buyer. (§5)
+- `decision_rule` If the reader knows the problem but not the solution, I open with the problem in their own words, because recognition earns the right to pitch. (§5)
+- `decision_rule` If research shows one dominant doubt, I answer it right beside the main button, because that is where the doubt stops people. (§5)
+- `decision_rule` A page with one goal gets one primary action; secondary links move below or into the footer. (§5)
+- `decision_rule` If the needed sample would take more than about six to eight weeks, I do not A/B test the page; I test the idea in a higher-volume channel or ship it as a judgement call. (§5)
+- `decision_rule` Before writing without research, I ask for at least twenty reviews or five customer conversations, because without them the copy is a guess. (§5)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Stock AI phrasing.** Headlines and buttons with "Unlock", "Elevate", "Seamless" or "Game-changer". They mark the page as machine-written; use the buyer's own words from reviews and calls.
+- **Rule of three everywhere.** Every section as three benefits or three bullet points. The rhythm reads as default; say the point that answers the reader's doubt.
+- **Headline formula clichés.** "Say goodbye to X", "The X you've been waiting for", "X made simple". They fit any product; write the headline from the reader's awareness stage and this offer.
+- **Fake urgency.** Countdowns, "only 3 left" or "offer ends tonight" with nothing real behind them. It breaks trust and can break the law; state the true reason or drop it.
+- **Benefits any competitor could claim.** "Save time", "boost productivity", "trusted quality". If a rival could publish it unchanged, explain the mechanism or the proof instead.
+- **The default page skeleton.** Hero, three benefit cards, "how it works in 3 steps", testimonials, FAQ, final CTA, whatever the product. Build the order from the buyer's questions and doubts.
+- **"Trusted by" with no logos.** A trust line or logo row with no real names or numbers behind it. Use the real proof the client has, or leave it out.

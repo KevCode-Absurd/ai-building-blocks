@@ -200,3 +200,7 @@ Before I hand anything over, I check:
 | Scotland | mygov.scot [24][25] |
 | State seller disclosures and deadlines | The state real estate commission and association forms (Texas and California pages blocked fetching on 6 Nov 2026) |
 | Tool features, APIs, any official MCP server | Docusign [26][27][28], dotloop [29], SkySlope [30] |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+No entries yet. This section is for opinions a working practitioner stands behind, typed as `decision_rule`, `taste_reference`, `never_do`, `exemplar` or `check`. Experts fill it through training ("Rules I learned"). Until then, follow sections 5 and 7, and say so when a choice you make is a judgment call rather than a fact.

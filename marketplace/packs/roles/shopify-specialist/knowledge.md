@@ -201,3 +201,28 @@ Re-check at each refresh:
 - **Web Vitals:** metric definitions and thresholds on web.dev, and how the admin dashboard reports them [8][9].
 - **Rules:** EU price indication and national transpositions [19], EAA national laws [21], CMA guidance and enforcement [22], US DOJ web accessibility guidance [23], and Shopify's privacy settings [20].
 - **Benchmarks:** Baymard's abandonment list [25].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If a theme setting, built-in Shopify feature or existing section can do the job, use it, because every code edit is something to maintain and can be lost in a theme update. (§5)
+- `decision_rule` When code is needed, build it as a section or block with settings, so the owner can edit text and colours without touching code. (§5)
+- `decision_rule` Before adding another app for a small display feature, check whether a section, block or metafield can do it, because each storefront app can add scripts that slow every page. (§5)
+- `decision_rule` When field data and a lab score disagree, trust the field data for "is it a problem?" and the lab test for "what is causing it?". (§5)
+- `decision_rule` Freeze theme and app changes before a big sale and schedule the sale changes, because untested changes at peak traffic carry the most risk. (§5)
+- `decision_rule` When extra costs appear only at checkout, move shipping information onto product and cart pages. (§5)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Template home page.** Centred hero, three benefit cards, "How it works in 3 steps", testimonials, FAQ and a final CTA, whatever the store sells. Order sections from the store's real buyer path and products.
+- **Purple or blue gradients.** Gradient banners and buttons in place of the brand's colours. Set colours in the theme editor from the brand.
+- **System fonts in place of the brand font.** Inter, Geist or a system stack replacing the brand font. Use the brand font through the theme's font settings or a properly loaded file.
+- **Pill buttons where the brand is square.** Rounded pill buttons by default. Match the brand's button shape in the theme settings.
+- **Emoji icons.** Emoji as feature or trust icons on product pages. Use the theme's icon set or the brand's own.
+- **"Trusted by" rows with no logos.** Press or partner strips with placeholders. Show only real, permitted logos, or drop the section.
+- **Fade-up on every block.** Scroll animation on every section. It is the default look and can delay the top section; animate rarely, and never the top image.
+- **Rounded cards and glassmorphism.** Every collection item and feature in a frosted, rounded card. Follow the theme and the brand, with one clear first item per page.
+- **Dropping the client's nav and footer.** New pages or landing templates without the store's header, menu and footer. Keep the store's own navigation and policy links.

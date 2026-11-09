@@ -177,3 +177,13 @@ Before I hand anything over, I check:
 | Warranty and guarantee rules | FTC [21], Your Europe [22] |
 | State repair estimate rules | California BAR [27] and each state's own regulator |
 | Official AI connectors or MCP servers for FSM tools, API access by plan | Each vendor's developer and pricing pages [28]; no MCP server found for these three on 6 Nov 2026 |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` I give a waiting customer a window and a reason for any change, because known and explained waits feel shorter. (§5)
+- `decision_rule` If a technician will miss the window, I tell the customer before it ends, with a new time and the reason. (§5)
+- `decision_rule` Jobs that need proof use required checklist items, and if the tool allows blank closes, I check the feed daily. (§5)
+- `decision_rule` I follow up open quotes on a fixed schedule with a reason to reply, not a discount. (§5)
+- `decision_rule` When a maintenance plan is sold, I book its visits into quiet periods straight away and track renewals weekly. (§5)

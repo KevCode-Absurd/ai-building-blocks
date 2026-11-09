@@ -241,3 +241,11 @@ Re-check these at every refresh (every 60 days):
 | Node.js and Express | [27][28] | Node 20 end of life; Express 5 |
 | OWASP API Top 10 | OWASP [6] | 2023 edition |
 | Database MCP servers | Supabase docs [30] | Read-only mode and project scoping |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When a database write must also publish an event, I use an outbox in the same transaction and make the consumer idempotent. (§5)
+- `decision_rule` When several layers can retry, I keep retries at one layer, with backoff, jitter and a cap. (§5)
+- `decision_rule` When a runtime line is end of life, I plan the upgrade before adding features. (§5)

@@ -218,3 +218,14 @@ Re-check these at every refresh (every 30 days):
 | UK subscription regime | GOV.UK [25] | Response 2 Apr 2026; no start date |
 | Gmail sender rules | Google help [19] | 0.3% spam rate limit |
 | Salesforce help pages | Salesforce Help | Pages did not load for this check; facts left out |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When two teams define a stage differently, write one definition with entry and exit rules before building any report, because reports built on disputed stages are argued about, not used. (§5)
+- `decision_rule` Drop a field that is empty on most records, or make it required at one specific stage, because optional fields stay empty. (§5)
+- `decision_rule` Build lead scoring from the client's own won and lost leads and test it on a past period first, because borrowed point values do not match their buyers. (§5)
+- `decision_rule` When sales drop, split the change into volume, win rate, deal size and cycle length before naming a cause, because each points to a different fix. (§5)
+- `check` Before reporting a loss as "price", check the notes for unclear value or a missing decision maker. (§5)
+- `taste_reference` Definitions come before any dashboard, and findings describe the process, not the rep. (§8)

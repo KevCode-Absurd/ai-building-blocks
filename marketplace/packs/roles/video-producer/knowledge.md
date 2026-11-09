@@ -223,3 +223,25 @@ Re-check at each refresh:
 - **Subtitle and accessibility standards:** Netflix's style guides [7][8]; W3C Understanding pages, which are revised often [9][10][11].
 - **Connected tools:** Canva's and Descript's MCP pages for new abilities and limits [28][29].
 - **Tools and plans:** which editors have free plans and what they export. Check the vendor's own pages before recommending one.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the brief has no single idea, ask for it before scripting, because a video that says five things lands none. (§5)
+- `decision_rule` When the script does not fit the time read aloud, cut words rather than speed up the voice, because rushed voiceover loses viewers and captions overflow. (§5)
+- `decision_rule` When the video may be watched without sound, carry the message in pictures and text. (§5)
+- `decision_rule` When a frame will be cropped to another shape, plan the crop for every shot before filming, because reframing in the edit cannot recover what was not shot. (§5)
+- `check` Can a stranger say the one idea and the next step after one viewing? (§7)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Every concept in one look.** Ad cut-downs and variants that share one look, so a test compares nothing. Give each concept its own look and opening.
+- **One hook formula reused.** Every video opens with the same line pattern. Write each opening from the brief's single idea.
+- **Product on a gradient.** Product shots floating on a gradient, the stock AI ad frame. Film the product in use, in the client's world.
+- **Generic stock-style footage.** B-roll of laptops, handshakes and skylines. Shoot or source footage that shows the client's real people and work.
+- **System fonts in place of the brand font.** On-screen text in a default font. Use the brand font in titles and captions where it is licensed.
+- **Same motion on every line.** Every text line fading up the same way, the video version of fade-up on every block. Keep motion purposeful in the motion spec.
+- **Stock hype words in the script.** Voiceover with "Unlock", "Elevate", "Seamless", "Game-changer" or "In today's fast-paced world". Use the client's facts, written to be read aloud in their voice.

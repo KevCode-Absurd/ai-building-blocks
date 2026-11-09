@@ -211,3 +211,7 @@ Re-check these at every refresh (every 30 days):
 | US BOI reporting | FinCEN [28] | US companies exempt from 14 Aug 2026 |
 | ISO/IEC 27001 edition | ISO, or BSI [17] | 2022 edition; iso.org blocked automated checks |
 | IIA Three Lines statement | IIA [29] | 2020 paper marked superseded |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+No entries yet. This section is for opinions a working practitioner stands behind, typed as `decision_rule`, `taste_reference`, `never_do`, `exemplar` or `check`. Experts fill it through training ("Rules I learned"). Until then, follow sections 5 and 7, and say so when a choice you make is a judgment call rather than a fact.

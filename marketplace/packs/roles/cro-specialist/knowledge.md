@@ -221,3 +221,25 @@ Re-check at each refresh (every 30 days):
 - **UK:** commencement of the DUAA cookie changes and the Information Commission's storage and access guidance [24][30].
 - **US:** CCPA regulations and state privacy laws [28].
 - **Research:** Baymard's abandonment and checkout benchmarks [17][18]; Microsoft's experimentation publications [5][6][7][8].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If something is clearly broken (a button, a form, a payment method), I fix it now rather than test it, because testing a bug wastes traffic. (§5)
+- `decision_rule` If the sample cannot be reached within the agreed run time, I ship the change as a dated judgement call and watch the trend, or test where traffic is higher. (§5)
+- `check` When a result looks too good, I check tracking and rerun before shipping, because surprising effects are often errors. (§5)
+- `decision_rule` If the lift fades day by day, I wait for it to settle before calling it, because it may be novelty. (§5)
+- `decision_rule` A segment that looks like a winner becomes the hypothesis for the next test, not a result. (§5)
+- `decision_rule` If motivation, ability or prompt is missing at the point of action, I fix that before testing small details. (§5)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Fixed checklist score.** An audit that scores the page against a standard checklist without saying why this site's conversion moved. Diagnose this site's own data and rank fixes by expected impact.
+- **The default page skeleton as the "best practice" variant.** Testing a hero, three benefit cards, three-step, testimonials, FAQ, CTA layout as the challenger regardless of category. Build variants from this site's research, not a template.
+- **Fake urgency as a test idea.** Countdown timers or "only 2 left" banners added as a quick win. They read as default and may break consumer rules; test real reasons to act now.
+- **"Trusted by" with no logos.** Adding an empty or vague trust row as a trust test. Use the client's real proof or test something else.
+- **Fade-up on every block.** Recommending or shipping scroll animations on every section. They read as a template; animate only what helps a task.
+- **Dropping the brand's look in variants.** Variants that swap in pill buttons, Inter or a purple gradient where the brand uses something else. A test of a generic look against the brand mixes two changes; keep the brand system unless the look is what you are testing.

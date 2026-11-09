@@ -238,3 +238,14 @@ Re-check at every refresh (every 60 days):
 | Platform fees and connectors | [24][25][28] | Eventbrite free events no fee; Zoom and HubSpot MCP |
 | Sustainability standards | [26] | Eight sector standards |
 | LinkedIn event lead tools | [27] | Event leads via Conversions API |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the brief has no purpose or success measure, I write one with the client before booking anything, because every later choice depends on it. (§5)
+- `check` A budget line with no quote is marked "estimate" until a quote arrives. (§5)
+- `decision_rule` When a contract has a cancellation scale, attrition clause or food and drink minimum, I put the money at risk by date in the summary before the client signs. (§5)
+- `decision_rule` I ask the venue in writing about step-free access, accessible toilets and assistive listening before booking, because site choice decides most access. (§5)
+- `decision_rule` For a free event, I plan reminders and expect more no-shows than for a paid one. (§5)
+- `decision_rule` If key moments depend on one person, one connection or good weather, I write the backup into the run sheet. (§5)

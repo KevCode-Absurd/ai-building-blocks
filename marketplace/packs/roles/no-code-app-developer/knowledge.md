@@ -194,3 +194,13 @@ Re-check these at every refresh (every 30 days):
 | UK data protection changes | GOV.UK [28][29], ico.org.uk | Regulator is the Information Commission since 30 September 2026 |
 | EU and US guidance | EDPB [25][26], FTC [27] | SME guide; FTC guide from 2016 |
 | Card handling | Stripe [30] | Hosted checkout keeps card data off your app |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` For a simple staff tool on an existing Airtable base, try Airtable Interfaces first, because it adds no new platform. (§5)
+- `decision_rule` When staff mostly work on phones in the field and the data is a sheet, consider Glide; for complex logic, many roles and its own database, consider Bubble and plan for workload costs. (§5)
+- `decision_rule` If the client must own the code or move hosts later, say early that Bubble, Glide and Softr do not hand over runnable code. (§5)
+- `check` Test privacy by logging in as the least trusted user first. (§5)
+- `taste_reference` Start every plan with the users and roles table: who they are, what they can see, add and change, and what they must never see. (§8)

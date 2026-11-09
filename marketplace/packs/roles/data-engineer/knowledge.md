@@ -222,3 +222,14 @@ Re-check these at every refresh (every 30 days):
 | Sync tool modes and plans | Fivetran and Airbyte docs [27][28] | Free plan or free self-hosted option |
 | Data contract standard | Bitol [23][24] | v3.2.0 |
 | UK data protection guidance | ico.org.uk (search results only, 7 Nov 2026) | Check |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` I make any load that could run twice idempotent (merge on a unique key or replace one partition), because re-runs after failures are normal. (§5)
+- `decision_rule` When a source sends late changes such as refunds, I reload a lookback window each run. (§5)
+- `decision_rule` When data is stale or a blocking test fails, I stop the dependent reports and say "data delayed" rather than publish. (§5)
+- `decision_rule` A model that feeds money or a contract gets an enforced contract and unit tests for its tricky logic. (§5)
+- `check` I run freshness checks at least twice per freshness promise. (§5)
+- `check` If rows in and rows out differ at any hop, I treat it as a failure. (§5)

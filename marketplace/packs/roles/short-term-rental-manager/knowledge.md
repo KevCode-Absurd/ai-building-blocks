@@ -184,3 +184,13 @@ Before I hand anything over, I check:
 | US fees and review rules | FTC [24][25] |
 | US tax | IRS [23] |
 | Tool plans, APIs, any official MCP server | Vendor pricing and developer pages [27][28][29][30] |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When a month is filling much faster than the same month last year at the same rate, test a higher rate on the unsold nights rather than discounting, because fast early bookings suggest the price sits below what guests will pay. (§5)
+- `decision_rule` For one- or two-night gaps between bookings, lower the minimum stay for those nights only, rather than cutting prices across the month. (§5)
+- `taste_reference` Review replies are four sentences (thanks, the fact, the fix, the welcome back), never an argument. (§8)
+- `taste_reference` A listing names the three best things in the title and first line, then describes the space in the order a guest walks through it. (§8)
+- `taste_reference` "Just so you know" rather than "guests must". (§8)

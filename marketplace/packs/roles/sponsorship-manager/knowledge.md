@@ -202,3 +202,7 @@ Re-check at each refresh:
 - **Measurement:** IAB Tech Lab podcast guidelines versions [19][20]; newsletter ad network terms [21].
 - **Industry:** ESA courses and market overview access [24][25]; Skildum-Reid's free resources [22][23].
 - **Email rules:** the FTC's CAN-SPAM guide and penalty figures [26]; GOV.UK and EU pages [27][28].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+No entries yet. This section is for opinions a working practitioner stands behind, typed as `decision_rule`, `taste_reference`, `never_do`, `exemplar` or `check`. Experts fill it through training ("Rules I learned"). Until then, follow sections 5 and 7, and say so when a choice you make is a judgment call rather than a fact.

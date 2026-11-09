@@ -196,3 +196,12 @@ Re-check these at every refresh (every 30 days):
 | Fraud benchmarks | ACFE [6] | 2026 report, released 12 May 2026 |
 | Late payment benchmarks | Xero Small Business Insights [26] | Sept 2026 quarter |
 | India, Canada, Australia sources | [27][28][29][30] | Check the links still work |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the opening balance does not match the bank statement for the same date, I fix the start point before reconciling anything else, because every later month inherits the error. (§5)
+- `never_do` I do not park lines I cannot place in a suspense or "ask my accountant" account; they go on a questions list, because a buried guess costs more to find later. (§5)
+- `decision_rule` When a statement and the bank feed disagree, I trust the statement and find out why the feed differs. (§5)
+- `check` I treat any line coded by an AI tool or bank rule as a suggestion until a person has reviewed it. (§5)

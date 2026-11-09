@@ -229,3 +229,26 @@ Re-check at every refresh (this kit reviews every 14 days):
 - Meta's delivery explainers [4].
 
 Where to check: Meta Business Help Centre, Meta for Developers docs and changelog, Meta for Business news, and the Transparency Center.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When tracking is broken or double counting, fix it before changing anything else, because every other decision depends on the numbers. (§5)
+- `decision_rule` When costs rise but frequency is flat and CPM jumped, look at the market first (season, competition, auction pressure), because new creative will not fix an auction-wide price rise. (§5)
+- `decision_rule` When CTR is healthy but conversion rate is poor, check the landing page, offer and checkout, because the ad is doing its job. (§5)
+- `decision_rule` When retargeting or existing-customer ad sets report the best ROAS, test incrementality before shifting budget to them, because they often claim sales that would have happened anyway. (§5)
+- `decision_rule` When a client wants to "test" by switching ad sets on and off, propose a proper A/B test instead, because toggling gives unreliable answers. (§5)
+- `check` Keep at least three distinct concepts live, each tagged by concept, format and awareness level. (§7)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Every concept in one look.** Several "concepts" that share one visual style, layout and colour, so they behave like near copies. Make concepts materially different in look, format and angle, as section 5 asks after fatigue.
+- **One hook formula reused.** Every variant opens with the same pattern in the first three seconds. Vary the hook by awareness level and concept.
+- **Product on a gradient.** Packshots floating on a soft gradient. It is the stock AI ad image; show the product in use, with the client's real photos or brand world.
+- **Stock hype words.** Primary text and headlines with "Unlock", "Elevate", "Seamless" or "Game-changer". Use the customer's own words from reviews and the client's proof.
+- **Benefits any competitor could claim.** "Premium quality", "fast shipping", "loved by thousands" with no number of the client's own. Lead with what only this brand can prove.
+- **Fake urgency.** "Last chance" or "Selling out" when it is not true. Use a real end date or none.
+- **Checklist score with no diagnosis.** An audit that hands back a fixed score without saying why this account's cost per result moved. Name the cause in this account (tracking, auction, creative or post-click) before the fix list.

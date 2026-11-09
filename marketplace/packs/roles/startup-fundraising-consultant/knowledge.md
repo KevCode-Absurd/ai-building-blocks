@@ -205,3 +205,14 @@ Re-check these at every refresh (every 30 days):
 | Delaware franchise tax | Delaware Division of Corporations [25] | Two methods; use the lesser |
 | CAN-SPAM penalty | FTC [21] | 53,088 dollars per email |
 | India, Canada, Australia sources | [26] to [30] | Check the links still work |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the founder cannot say whether the company is default alive, work that out first, because it sets how much to raise and how fast. (§5)
+- `decision_rule` When traction is thin, lead the story with the insight and the team rather than inflating early numbers. (§5)
+- `decision_rule` Move an investor whose stage, cheque size or sector does not fit the round down a tier, however famous they are, because a misfit meeting costs time and signal. (§5)
+- `decision_rule` Put a bad month in the update with its cause and fix, because silence costs more trust than bad news. (§5)
+- `taste_reference` Slide headlines are claims, not labels: "Agencies cut scheduling time by half" rather than "Product". (§8)
+- `never_do` Avoid "unicorn", "conservative projections", "guaranteed" and "no competition". (§8)

@@ -222,3 +222,27 @@ Re-check these at every refresh (every 30 days):
 | Storybook docs | storybook.js.org [27] | 10.6 |
 | WCAG Understanding notes | W3C [29][30] | Updated 4 Oct 2026 |
 | Public system examples | Atlassian, GOV.UK [24][25][26] | GOV.UK Frontend v6.6.0 |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When a product has drift but no system, I run an inventory before proposing anything, because a side-by-side view wins agreement faster than a proposal. (§5)
+- `decision_rule` For a small team on a product that may change a lot, I adopt or adapt an existing system rather than build one. (§5)
+- `decision_rule` When a token name describes a colour or size, I add a semantic token that names the job and point it at the primitive. (§5)
+- `never_do` I do not create a token for a value that appears once with no reason; I map it to the nearest existing token and list the change. (§5)
+- `decision_rule` When a component is detached often, I find out why before adding variants, because detaching usually means a missing property. (§5)
+- `decision_rule` A proposed component without evidence that several teams need it stays local to the team that asked. (§5)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Inter, Geist or system fonts.** Tokens that set Inter, Geist or a system stack where the brand has its own typeface. The system then flattens the brand; map type tokens to the brand fonts.
+- **Pill buttons where the brand uses square ones.** A default `radius-full` on buttons in a system for a square-cornered brand. Take radius tokens from the brand, not the kit default.
+- **Rounded cards everywhere.** One large radius applied to every surface by default. Decide radius per component role from the brand's shape language.
+- **Purple or blue gradients.** Gradient tokens or default accent colours in purple or blue that the brand never used. Build colour tokens from the brand's own palette.
+- **Glassmorphism.** Blur and transparency tokens for "glass" surfaces as a default style. It reads as an AI default; add it only if the brand chooses it.
+- **Emoji icons.** Emoji used as the icon set in components or documentation. They read as a placeholder; use a proper icon set in the brand's style.
+- **Fade-up on every block.** A default entrance animation token applied to every component. Motion tokens should serve a job; set calm defaults and make entrance motion opt-in.
+- **Every section the same height.** Spacing tokens so uniform that every section and card comes out the same size. Give the scale enough range for real hierarchy.

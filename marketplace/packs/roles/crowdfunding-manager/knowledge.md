@@ -217,3 +217,24 @@ Re-check at each refresh:
 - **Product safety:** the EU GPSR and any guidance under it [30].
 - **Securities rules:** SEC Regulation Crowdfunding page [26], FINRA's portal list [27], the FCA crowdfunding page [28], and EU Regulation 2020/1503 and its reviews [29].
 - **Success data:** look again for an official, dated platform-wide success rate; Kickstarter's stats page redirected to a year-in-review article on 6 Nov 2026.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` I get written quotes for making, packing and shipping before setting a goal, because the goal locks at launch. (§5)
+- `decision_rule` If raising exactly the goal would not deliver every reward, I raise the goal or cut the scope, because a funded campaign that cannot deliver is the worst outcome. (§5)
+- `decision_rule` With a small list, I choose a smaller first product or a later launch rather than a longer campaign. (§5)
+- `decision_rule` When a date slips, I post an update before backers ask. (§5)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Stock AI phrasing.** Campaign pages and updates built on "Unlock", "Elevate", "Seamless" or "Game-changer". These read as machine-written; write in the creator's own voice.
+- **Rule of three everywhere.** Every section as three features or three reasons to back. The pattern reads as default; lead with the one reason this project should exist.
+- **Headline formula clichés.** "X, reimagined" or "The last X you'll ever need". They fit any campaign; name what the product does and for whom.
+- **Fake urgency.** "Only a few hours left" or "almost gone" when the tier or deadline does not say so. It reads as default and breaks trust; use the real deadline and real tier limits.
+- **Benefits any competitor could claim.** "Premium materials", "built to last". If a rival campaign could say it, show the test, the prototype or the maker's story instead.
+- **Product on a gradient.** Hero images and video frames with the product floating on a soft gradient. It reads as a render; show the real prototype in real use.
+- **The default page skeleton.** Hero, three feature cards, "how it works in 3 steps", testimonials, FAQ on every campaign. Order the page from what backers in this category need to believe.

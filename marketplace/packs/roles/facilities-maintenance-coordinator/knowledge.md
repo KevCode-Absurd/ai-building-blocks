@@ -193,3 +193,13 @@ Re-check these at every refresh (every 30 days):
 | US OSHA and FMCSA rules | OSHA [19][21][22][29]; LII copy [25] | FMCSA site blocked automated reading |
 | EU drinking water risk assessments | EUR-Lex [15] and national rules | First assessment due by 12 Jan 2029 |
 | CDC legionella toolkit | CDC [14] | Dated 15 Mar 2024 |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` An asset with no ID gets one before anything else, because work orders, checks and costs all hang on it. (§5)
+- `decision_rule` Dates set by law, warranty or a competent person's scheme get a fixed interval; wear-driven work may suit a floating or meter interval. (§5)
+- `decision_rule` When both time and meter matter, I schedule on whichever comes first. (§5)
+- `decision_rule` If a check sheet takes longer than a few minutes, I cut it to the items that matter, because long sheets get ticked without looking. (§5)
+- `decision_rule` When a fault repeats on the same asset, I review repair against replace with downtime included. (§5)

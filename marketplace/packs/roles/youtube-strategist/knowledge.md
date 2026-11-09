@@ -248,3 +248,26 @@ Re-check at each refresh (every 30 days):
 - **Disclosure rules:** FTC FAQ, ASA advice and the EU hub [24][25][26]; the joint ASA and CMA influencers' guide had a new edition on 23 October 2026 (see the affiliate and influencer marketing manager kit).
 - **How YouTube ranks:** recommendations and search pages [1][2]; Google's video guidance [23].
 - **Connected tools:** official connectors and MCP servers for YouTube data change often; check the vendor's own page before connecting.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the client cannot say who the channel is for in one line, write the channel promise before any topic list, because every title, series and thumbnail tests against it. (§5)
+- `decision_rule` Drop a video idea with no search demand and no clear reason to be shared or recommended, or turn it into a section of a better video. (§5)
+- `decision_rule` For a searched topic, write the title in the words the viewer would type, because relevance starts with the title and description. (§5)
+- `decision_rule` When click-through rate is high but average view duration is low, fix the promise or the opening, not the thumbnail. (§5)
+- `decision_rule` When a dip repeats at the same kind of moment (a sponsor read, a long intro, a recap), move or cut that kind of moment in the next script. (§5)
+- `decision_rule` When testing thumbnails or titles, change one thing per variant and read watch time share rather than CTR. (§5)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Every thumbnail in one look.** All thumbnails with the same face, arrow and colour layout. Keep a recognisable series look, but make the three concepts per video really different (section 8).
+- **One title formula reused.** Every title built on one pattern, such as "I tried X for 30 days". When the topic is searched, use the words the viewer would type (section 5).
+- **Headline formula clichés.** "You won't believe..." or "Everything you need to know about...". Make one promise the video keeps in its opening (section 7).
+- **Product on a gradient.** Thumbnails with the product cut out on a gradient. Show the product in use, or the result.
+- **Stock hype words.** Titles, descriptions and scripts with "Unlock", "Elevate", "Game-changer" or "In today's fast-paced world". Use the viewer's words.
+- **Fake urgency.** "Watch before it's deleted" style lines. They break the title's promise; state what the video really delivers.
+- **Generic stock-style images.** Stock imagery in thumbnails and B-roll. Use the creator's own footage and faces.

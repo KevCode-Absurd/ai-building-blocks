@@ -187,3 +187,14 @@ Re-check at each refresh:
 - **UK DMCC enforcement:** CMA fines, investigations and open letters on drip pricing, urgency and reviews [18][20][21][22].
 - **FTC** enforcement of the reviews rule and pricing guidance [16][26].
 - **Benchmarks:** Baymard's pages change without notice [2][25].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` I make a dimension shoppers search by into a filter only if every product in that category has the value, because a filter with gaps hides products. (§5)
+- `decision_rule` A product that could live in two categories gets one home and is reached from the other by a collection or link. (§5)
+- `decision_rule` I merge messy filter values at the source, and group them in the filter app only as a stopgap. (§5)
+- `decision_rule` I rank feed fixes by products blocked and their sales, and fix store data before adding feed rules, because store fixes reach every channel. (§5)
+- `decision_rule` When cover exceeds the selling season, I plan markdown steps now, with dates and floor prices, because late markdowns need deeper cuts. (§5)
+- `decision_rule` I drop bundles that save the buyer nothing they would notice; a bundle should solve a buyer's problem. (§5)

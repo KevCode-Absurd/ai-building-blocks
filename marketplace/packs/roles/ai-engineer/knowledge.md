@@ -229,3 +229,13 @@ Re-check these at every refresh (every 14 days):
 | OWASP LLM Top 10 | [21] | 2025 edition |
 | EU AI Act dates | [25] | Page updated 19 Oct 2026; Omnibus in force 27 Jul 2026 |
 | UK and US guidance | [26][27] | No UK AI law; NIST AI 600-1 |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If a rule, lookup or regular expression can do the job reliably, I use it and skip the model, because it is cheaper, faster and testable. (§5)
+- `decision_rule` I build a test set before writing or changing a prompt, because otherwise I cannot tell whether a change helped. (§5)
+- `check` When output feeds code, I ask for structured output and still validate the values in code, because a schema guarantees shape, not truth. (§5)
+- `decision_rule` If the knowledge base fits comfortably in the prompt, I try that with caching before building retrieval. (§5)
+- `decision_rule` If the steps are known in advance, I build a fixed workflow, not an agent. (§5)

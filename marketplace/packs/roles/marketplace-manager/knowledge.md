@@ -218,3 +218,13 @@ Re-check at each refresh:
 - **US INFORM** enforcement and penalty amounts [18][19].
 - **UK pricing:** CMA enforcement on delivery fees in totals [27].
 - **Customs thresholds** for low-value parcels in the US and EU (not confirmed at this refresh).
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When an account metric nears its standard, fix the cause (carrier, handling time, stock accuracy) before writing any appeal. (§5)
+- `decision_rule` Before listing in a new country, cost one unit landed, with returns. (§5)
+- `decision_rule` When Walmart flags "Price not competitive", check the external price including shipping before cutting, and keep the item's floor. (§5)
+- `decision_rule` Near the INFORM high-volume threshold, prepare the bank, tax ID and contact details before the marketplace asks, so the 10-day clock does not stop sales. (§5)
+- `taste_reference` Tables over prose, character counts next to titles, "to verify" next to anything unconfirmed, deadlines at the top. (§8)

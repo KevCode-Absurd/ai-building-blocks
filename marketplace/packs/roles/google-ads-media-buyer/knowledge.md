@@ -191,3 +191,26 @@ Re-check at each refresh (this kit is set to review every 30 days; the August 20
 - Benchmarks: LocaliQ updates yearly [30].
 
 Where to check: Google Ads Help (the announcements and "Highlights" pages), the Google Ads and Commerce blog, Merchant Center Help, and the Google tag platform developer docs.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If tracking counts anything but the real outcome as a primary conversion, I fix goals before touching bids, because Smart Bidding chases whatever you call a conversion. (§5)
+- `decision_rule` For a lead business that closes offline, I send qualified and won stages back, because bidding on raw form fills buys cheap, poor leads. (§5)
+- `decision_rule` Under about 15 conversions a month, I use Maximize conversions rather than Target ROAS, because target strategies need data. (§5)
+- `decision_rule` I add a negative at the narrowest level that solves the problem, exact first. (§5)
+- `decision_rule` I report brand and non-brand separately and test brand spend, because much brand traffic would have come anyway. (§5)
+- `decision_rule` When Shopping impressions are low for stocked products, I fix the feed before raising bids, because the feed decides eligibility. (§5)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Fixed checklist score.** An account audit scored against a standard checklist with no reason why this account's CPA or ROAS moved. Diagnose this account's own data and rank actions by expected impact.
+- **One hook formula reused.** Every responsive search ad headline built the same way ("Best X in Y", "Get X today"). They read as one ad repeated; give assets distinct angles.
+- **Every asset group in one look.** Performance Max asset groups whose images and videos share one style. It reads as one concept repeated; vary visual world and proof across groups.
+- **Product on a gradient.** Image assets with the product floating on a soft gradient. It reads as a template; show the product in use or the real difference.
+- **Benefits any competitor could claim.** Headlines like "High quality", "Trusted service" or "Best prices" that every advertiser on the results page uses. Use the client's provable specifics.
+- **Fake urgency.** Countdown customisers or "ends today" with no real deadline. It reads as default and breaks trust; use real dates only.
+- **Stock AI phrasing.** Ad text with "Unlock", "Elevate" or "Seamless". These read as machine-written; use the words searchers type.

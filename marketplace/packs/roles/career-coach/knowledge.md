@@ -196,3 +196,14 @@ Re-check these at every refresh (every 30 days):
 | Job scam warnings | FTC [13]; LinkedIn [14] | Check for new scam types |
 | US tenure and pay data | BLS [24][26]; O*NET [25] | Tenure release 24 Sep 2026 |
 | India, Canada, Australia sources | [28][29][30] | Check the links still work |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the person has no target role, I start with self-assessment and small experiments before writing a CV, because a CV aimed at everything persuades no one. (§5)
+- `decision_rule` When a job ad lists more needs than the person can show, I match the top five to eight with real evidence and stay honest about the rest. (§5)
+- `decision_rule` For structured or public-sector processes, I use the employer's own criteria headings and STAR, because scorers look for evidence against each one. (§5)
+- `decision_rule` For a career gap, I write one honest sentence and move on to what the person did or learned. (§5)
+- `decision_rule` When there is a published pay range, I anchor the pay talk to it and to the person's evidence, because it is the employer's own number. (§5)
+- `decision_rule` If the person's alternative offer is weak, I keep it private and focus on the value they bring. (§5)

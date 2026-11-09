@@ -220,3 +220,14 @@ Re-check these at every refresh (every 60 days):
 | UK anonymisation guidance | Information Commission [26] | Final 28 Mar 2025; under review after the DUAA |
 | UK business population figures | GOV.UK [30] | 2026 release published 5 Nov 2026 |
 | Forecasting and QA references | FPP3 [3][4][5], Aqua Book [20] | FPP3 3rd edition; Aqua Book 2025 |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When the question is vague, I restate it as a decision and agree it before touching the data, because the decision sets which numbers matter. (§5)
+- `decision_rule` When the same export arrives every month, I build a folder query and refresh it rather than repeat the clicks. (§5)
+- `decision_rule` For fuzzy duplicates, I merge exact matches automatically and send close matches to a person. (§5)
+- `check` Even when summary numbers look normal, I plot the data. (§5)
+- `decision_rule` If a forecast method cannot beat seasonal naive on held-back periods, I use seasonal naive, and I give any single forecast number with a range. (§5)
+- `decision_rule` When a benchmark differs in definition, period, size or region, I rate the comparison rough or weak instead of adjusting it with guesses. (§5)

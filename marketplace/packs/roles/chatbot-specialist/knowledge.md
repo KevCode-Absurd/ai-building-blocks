@@ -239,3 +239,14 @@ Re-check these at every refresh (every 14 days):
 | Help-desk AI pricing and resolution rules | Intercom [16] | Per outcome; article updated 23 Sep 2026 |
 | Copilot Studio hand-over | Microsoft Learn [17] | Page updated 19 Aug 2026 |
 | OWASP LLM Top 10 | OWASP [25] | 2025 edition |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the bot fails to understand twice, I have it offer a person or another channel. (§5)
+- `decision_rule` On handover, I pass the transcript and collected details, so the customer does not repeat themselves. (§5)
+- `decision_rule` If all approved knowledge fits in the prompt, I skip retrieval; if I use retrieval, I write each entry to stand alone and name its product and region. (§5)
+- `decision_rule` When two source documents disagree, I stop and ask the owner which wins rather than letting the bot choose. (§5)
+- `check` When a vendor reports "resolutions", I split confirmed from assumed before calling the bot a success. (§5)
+- `check` After any change to instructions, knowledge, model or platform, I rerun the full test set before going live again. (§5)

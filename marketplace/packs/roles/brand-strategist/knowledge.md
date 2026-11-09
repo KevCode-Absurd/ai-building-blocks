@@ -200,3 +200,24 @@ Re-check at each refresh:
 - **Public voice guides** used as examples (Mailchimp, Monzo, Microsoft, GOV.UK), which are revised without notice [4][5][6][7].
 - **Research updates** from Ehrenberg-Bass, the LinkedIn B2B Institute and the IPA [16][17][18].
 - **Testing and writing tools,** their free plans and AI features: check vendors' own pages.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If buyers cannot say what the client does after one look, I fix the one-line description before naming or voice work, because a new name cannot explain a confused offer. (§5)
+- `decision_rule` When every rival makes the same claim, I do not make a bigger one; I position on the real alternative and a difference the client can prove. (§5)
+- `check` I drop any name that fails the say-it, hear-it, spell-it test, however clever, because names live in conversation. (§5)
+- `decision_rule` I cut a voice guide down to traits, examples and word lists when it runs past what the team will read, because an unused guide has no effect. (§5)
+- `decision_rule` When the team wants another brand's voice, I borrow a quality, never the phrasing, and tie it back to what the client's buyers trust. (§5)
+- `check` Before recommending a rename, I list what the current name already earns: recognition, search traffic, reviews, signage. (§5)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Stock AI phrasing.** Positioning lines, values and taglines built on "Unlock", "Elevate", "Seamless" or "Game-changer". They mark the work as generic; use the words buyers use about the real problem.
+- **Rule-of-three values.** Three brand values or pillars as single abstract words ("Innovation, Integrity, Impact"). Any brand could own them; name the few behaviours that make this brand different.
+- **Headline formula taglines.** Taglines like "X, reimagined" or "The future of X". They fit any category; write a line tied to the brand's provable difference.
+- **Benefits any competitor could claim.** Positioning on "quality", "service" or "trust" that every rival also claims. Position on the real alternative and a difference the client can prove.
+- **Every territory in one tone.** Strategic routes that differ only in wording or style label and share one voice. Make routes differ on mechanism, proof, audience or offer, and say how each departs from the category default.

@@ -228,3 +228,14 @@ Re-check these at every refresh (every 30 days):
 | IBCS version | IBCS [21] | 2.0, 11 Jun 2026 |
 | WCAG version | W3C [22] | 2.2, Dec 2024 |
 | Airbnb Minerva posts | Airbnb engineering blog [27] | Page blocks fetching; confirmed by search |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If nobody can name the decision a dashboard supports, I write the decision first, because every chart should answer a question someone acts on. (§5)
+- `decision_rule` When two teams report different numbers for one metric, I show both formulas side by side on a small example, then recommend one definition for the owner to sign off. (§5)
+- `decision_rule` When a metric is about to become someone's target or bonus, I add a counter-metric that would expose gaming. (§5)
+- `decision_rule` Before setting a relationship to bi-directional, I try a measure or a bridging table, because bi-directional filters can slow the model and create ambiguous paths. (§5)
+- `decision_rule` For a business with no data team, I prefer the tool it already pays for and can maintain over the most capable one. (§5)
+- `check` When AI wrote a measure or an answer, I work it through by hand on sample rows before it ships. (§5)

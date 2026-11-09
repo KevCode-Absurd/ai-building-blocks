@@ -215,3 +215,14 @@ Re-check at every refresh (every 30 days):
 | Satisfaction index | UKCSI [30] | 78.3, July 2026 |
 | Data rights | EDPB SME guide [28][29] | One month to reply |
 | Help desk deletion rules | Zendesk [27] | 30 days, then permanent |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Set a target from the last four or more weeks of the client's own volume and handling time, checked against the rota, because a target the team cannot meet teaches everyone to ignore targets. (§5)
+- `decision_rule` When live chat or phone hours run past the staffed hours, staff those hours or show customers when the channel is closed. (§5)
+- `decision_rule` Use AutoQA to pick tickets for human review, and keep the human grade as the one that counts. (§5)
+- `decision_rule` When two reviewers score the same ticket differently, calibrate on that ticket before grading more. (§5)
+- `taste_reference` Coaching notes give two strengths and two habits to fix, each with a quoted line from a real ticket, written kindly. (§8)
+- `taste_reference` KPI packs open with a five-line summary, and thin themes are marked as thin. (§8)

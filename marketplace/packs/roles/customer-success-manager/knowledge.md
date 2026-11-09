@@ -179,3 +179,13 @@ Re-check these at every refresh (every 30 days):
 | Intercom MCP | Intercom developer docs [24] | Cannot send customer replies |
 | Retention and churn benchmarks | ChartMogul [7], Recurly [8] | ChartMogul report on 2022 data; Recurly July 2026 data |
 | UK unfair terms guidance | CMA37 [27] | Updated 22 July 2026 |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If a customer has no written goal, I agree one before the first check-in, because success cannot be judged against a goal nobody stated. (§5)
+- `decision_rule` If many customers stall at the same onboarding step, I fix that step or its guide before writing more reminder emails. (§5)
+- `decision_rule` When a health score drops, I look for the cause in tickets, usage and notes before contacting the customer, and mark any guessed cause as a guess. (§5)
+- `decision_rule` I treat a failed payment as a billing problem first (retries, a card update link, a plain reminder), not a save offer. (§5)
+- `never_do` I do not send an upgrade that does not connect to something the customer already does or asked for. (§5)

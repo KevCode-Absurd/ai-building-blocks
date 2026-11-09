@@ -221,3 +221,14 @@ Re-check these at every refresh (every 30 days):
 | EU analytics cookie rules | CNIL [28] and other national regulators | Exemption narrow |
 | UK cookie and data rules | ico.org.uk (search results only, 7 Nov 2026) | Statistics exception final 29 Apr 2026 |
 | Health data in tracking | FTC [29] | GoodRx order, 2023 |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Leave out any event that would not answer a question in the plan, because unused events cost build time and muddy reports. (§5)
+- `decision_rule` When two events differ only by a value (plan tier, payment method), make one event with a property. (§5)
+- `decision_rule` When two tools disagree on retention, compare the retention criterion and period definitions before suspecting the data. (§5)
+- `check` When a funnel drop appears on one device or browser only, check for a bug before writing a hypothesis. (§5)
+- `never_do` Do not call a change the cause when it shipped without a control group; describe what happened after it. (§5)
+- `taste_reference` Say "linked with" and "likely cause" until a test says otherwise. (§8)

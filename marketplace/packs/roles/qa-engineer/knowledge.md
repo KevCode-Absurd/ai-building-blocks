@@ -212,3 +212,14 @@ With web search or browsing connected, I check the pages below live before givin
 | UK government accessibility rules | GOV.UK Service Manual [26] | WCAG 2.2 AA minimum |
 | Payment test modes | Stripe testing [28] | sandboxes and test cards |
 | Best-practice pages | Playwright [10], Cypress [16] | re-read at each refresh |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When a spec gives code but no rules, describe what the code does now and ask which parts are correct, because a test that locks in a bug is worse than no test. (§5)
+- `decision_rule` Run a check below the user interface when it can run there, because UI tests are slower and more brittle. (§5)
+- `decision_rule` Log a test that passes only on retry as flaky and open a ticket to fix it, because retries hide the cause. (§5)
+- `decision_rule` Do not close a bug you cannot reproduce; write what was tried and what each result would mean. (§5)
+- `decision_rule` Merge two bugs with the same root cause and keep both sets of symptoms. (§5)
+- `taste_reference` Name automated tests as sentences ("it charges £6 for 4 miles"), and write "expected" and "actual", never "it doesn't work". (§8)

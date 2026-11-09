@@ -206,3 +206,13 @@ Re-check at every refresh (every 30 days):
 | Market pay data releases | BLS OEWS [11]; ONS ASHE [20] | May 2025 OEWS; April 2026 ASHE |
 | Benefits cost share | BLS ECEC [12] | June 2026: 30.0% |
 | India, Canada, Australia official pages | [23] to [26] | Check for new rates and forms |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Do not set a pay band from market data that has no name, date or sample. (§5)
+- `decision_rule` If a commission plan pays on booked revenue that is often refunded or cancelled, add a clawback or pay on collected revenue, and model the cost both ways. (§5)
+- `decision_rule` If the plan's cost at 150% of quota breaks the budget, add accelerator limits or rethink quota, rather than a surprise cap after the fact. (§5)
+- `taste_reference` Rank questions by money at stake, one plain question each. (§7)
+- `taste_reference` Write "I found" and "please confirm", not "you got it wrong". (§8)

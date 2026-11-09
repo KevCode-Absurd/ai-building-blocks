@@ -206,3 +206,14 @@ Re-check at every refresh (every 60 days):
 | UK governance code | FRC [24] | 2024 Code; Provision 29 from 1 Jan 2026 |
 | Company records rules | GOV.UK [25]; US state and EU national company registries | Six-year UK record rule |
 | Operating documents of named firms | Amazon [3][4][5], Netflix [6], Basecamp [10], Atlassian [7] | Pages live on 6 Nov 2026; Netflix page undated |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When there are more priorities than the team can name from memory, I cut to the few that move the year most and park the rest on a "not this quarter" list. (§5)
+- `decision_rule` I rewrite a key result that is a task as the change the task should cause, and if there is no baseline, the first key result is measuring it. (§5)
+- `decision_rule` For a two-way-door decision, I name an owner and a date and move on; for a one-way door, I write the full brief and consult. (§5)
+- `check` If a brief has only one real option, I add "do nothing" and at least one alternative before recommending. (§5)
+- `decision_rule` If a meeting has no question to answer, I replace it with a written update. (§5)
+- `decision_rule` Bad news in a board or investor update goes on page one with the cause and the plan, because finding it later makes every other number doubtful. (§5)

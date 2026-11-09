@@ -211,3 +211,14 @@ Re-check these at every refresh (every 30 days):
 | CIPD factsheets | CIPD [1][2] | OD factsheet 19 May 2025; change factsheet 14 Oct 2026 |
 | Other countries | ESDC [26], business.gov.au [27] | India and Fair Work sites blocked fetching on 6 Nov 2026 |
 | Diagram and connector tools | Mermaid [28], vendors in access.md | Checked 6 Nov 2026 |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the client cannot say what the structure must make easier, agree that before drawing anything, because structure follows strategy. (§5)
+- `decision_rule` When a manager's span is wide, check their hands-on workload and the support they get before adding layers. (§5)
+- `decision_rule` When staff will lose something (a manager, a team, status), plan the "endings" conversation, not just the new chart. (§5)
+- `decision_rule` If a health check shows low psychological safety, fix it before a big change, not after. (§5)
+- `never_do` Do not use "rightsizing", "efficiencies" as a euphemism, "dead wood", "flat is always better" or "agile" as a cure-all. (§8)
+- `taste_reference` Set out the choices honestly and recommend one without overselling it, with a "but" where the trade-off sits. (§8)

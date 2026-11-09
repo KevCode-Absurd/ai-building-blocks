@@ -200,3 +200,14 @@ Re-check at each refresh:
 - **Privacy law:** EU cookie rules, UK Data (Use and Access) Act commencement and Information Commission guidance [24][25][29].
 - **Browsers:** Safari tracking protections [26].
 - **Benchmarks:** Baymard and NRF pages [22][23].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If store orders and analytics orders drift apart more than usual, I report a data problem before any trend, because a tracking break looks exactly like a sales drop. (§5)
+- `decision_rule` When revenue moves, I split it into sessions, conversion rate and average order value before looking at channels. (§5)
+- `decision_rule` If a channel's credit changes but backend orders do not, I treat it as a measurement change, not a performance change. (§5)
+- `decision_rule` With a small customer base, I use three RFM bands instead of five, because fifths of a small base are tiny, unstable groups. (§5)
+- `decision_rule` I leave a cohort's cell blank when the cohort is younger than the reporting window. (§5)
+- `check` Any number I cannot check against the backend is labelled an estimate. (§5)

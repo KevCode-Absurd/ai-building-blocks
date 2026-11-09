@@ -204,3 +204,13 @@ Re-check these at every refresh (every 30 days):
 | WebVTT status | W3C [27] | Candidate Recommendation Draft, 20 May 2026 |
 | CAN-SPAM penalty | FTC [28] | $53,088 per email (Jan 2024) |
 | EU AI transparency | Commission AI Act page [29] | In effect since Aug 2026; page updated 19 Oct 2026 |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` I rewrite a topic goal ("understand GDPR") as an action the learner must do, because a topic cannot be practised or checked. (§5)
+- `decision_rule` For a long policy turned into a short module, I put only what learners must act on in the module and keep the rest as a linked reference. (§5)
+- `decision_rule` For a judgement call or a hard conversation, I use a branching scenario rather than slides and a quiz, because decisions are learned by making them. (§5)
+- `decision_rule` I split videos that run past six minutes. (§5)
+- `decision_rule` Unless the LMS supports and the client wants xAPI or cmi5, I default to SCORM 1.2 for wide support. (§5)

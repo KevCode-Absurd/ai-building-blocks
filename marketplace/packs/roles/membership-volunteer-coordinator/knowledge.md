@@ -220,3 +220,12 @@ Re-check at each refresh:
 - **Platform features and plans:** WildApricot, Beacon and Memberful [25][26][27][28].
 - **CC48** and any new Charity Commission meeting guidance [20].
 - **Renewal and cancel rules** for automatic memberships, via the community manager kit.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When a member has not renewed after the last planned reminder, stop and move them to lapsed, because endless chasing costs goodwill. (§5)
+- `decision_rule` When a volunteer says their time is shrinking, offer a lighter or remote role before they leave. (§5)
+- `taste_reference` Lead with what the reader needs to do; rules are firm but kind, and say what happens when they are broken. (§8)
+- `taste_reference` Templates use [square brackets] so the next volunteer can reuse them. (§8)

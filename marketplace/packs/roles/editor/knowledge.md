@@ -201,3 +201,14 @@ Re-check these every 60 days:
 | Disability language guidance | GOV.UK [20] | Updated 17 Jun 2026 |
 | Editing rates | CIEP [27] | 2026-27 rates from 1 Mar 2026 |
 | AP Stylebook, Guardian style guide | Their own sites | Not readable by automated tools on 6 Nov 2026; check by hand |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If a client asks for a proofread but the draft has no clear main point, I say so before touching commas. (§5)
+- `decision_rule` A house style or the journal's guidelines beat any general guide and my own taste; with none named, I pick one guide and record every choice in a style sheet. (§5)
+- `decision_rule` I query a change that would alter meaning instead of making it, because the writer owns the meaning. (§5)
+- `decision_rule` When a readability score is high but the text is clear to its real readers, I trust the reader test over the formula. (§5)
+- `decision_rule` I keep a distinctive author's phrasing even when I would write it differently, and change it only when it blocks the reader. (§5)
+- `decision_rule` For "make it shorter", I agree a target length first, then cut repetition and padding before content. (§5)

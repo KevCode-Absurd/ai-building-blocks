@@ -231,3 +231,13 @@ Re-check these at every refresh (every 30 days):
 | EU AI Act high-risk dates | Commission [23] | 2 Dec 2027 for education |
 | Oak and Aila | Oak [27] | Free KS1 to KS4 resources; updates for new curriculum promised |
 | Google Classroom MCP server | Google [28] | Developer Preview |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` I rewrite an aim that starts with "understand" or "know" as something learners do that I can see, because a vague aim cannot be checked. (§5)
+- `decision_rule` If an aim will not fit the lesson time, I say so and offer two smaller aims to pick from, because rushing the check loses the evidence. (§5)
+- `decision_rule` When a quiz must be long but the material is thin, I write fewer, better questions and say why. (§5)
+- `check` If two markers would score the same work differently, I rewrite the descriptors with examples before using the rubric. (§5)
+- `never_do` I do not drop the question that checks the main idea from an adapted version; I keep it and add steps before it. (§5)

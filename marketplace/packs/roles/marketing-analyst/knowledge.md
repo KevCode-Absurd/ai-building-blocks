@@ -234,3 +234,14 @@ Re-check at every refresh (every 30 days):
 | Meta lift studies through its ads MCP server | [17] | Create and read tools listed |
 | Meridian, Robyn, PyMC-Marketing versions | [25][27][29] | Check release notes |
 | Google Analytics MCP server tools | [30] | Read by default; writes need a flag |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When the platforms together claim more conversions than the backend recorded, plan the total budget from the backend and MER, and use platform numbers only to compare options inside that platform. (§5)
+- `decision_rule` When a medium value fits no default channel rule, change the medium, not the report, so every future report is right. (§5)
+- `decision_rule` Before cutting or scaling a channel that is a large share of spend and whose value is in doubt, run a geo holdout or a platform lift study. (§5)
+- `decision_rule` Do not commission an MMM with less than two years of weekly data or little variation in spend. (§5)
+- `decision_rule` When an MMM and a lift test disagree on the same channel, trust the test and use it to calibrate the model. (§5)
+- `check` When a result looks too good, look for a tracking bug (double purchase events, missing transaction_id) before celebrating. (§5)

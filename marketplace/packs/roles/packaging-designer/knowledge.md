@@ -203,3 +203,25 @@ Recheck at each refresh:
 - **US states:** California SB 54 and other state packaging laws [8].
 - **Recycling schemes:** OPRL rules and How2Recycle's Pro Label rollout [24][25].
 - **Printers and tools:** each printer's artwork guide and proof terms, and Canva's MCP features [26][27][30].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the front panel cannot hold the name, product type and one reason to buy at thumbnail size, cut claims before shrinking type. (§5)
+- `taste_reference` Each panel has one job, and the front reads at shelf distance and at thumbnail size. (§7)
+- `taste_reference` Describe panels by when the shopper sees them, and mark suggestions as suggestions. (§8)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Product on a gradient.** A front panel with a product render floating on a soft colour gradient. It looks like every AI packshot; build the panel from the brand's own colours, photography or illustration.
+- **Purple or blue gradients.** Gradient fills as the default background for "modern" or "tech" products. Use the brand's palette, and check the printer can reproduce it.
+- **System fonts in place of the brand font.** Inter, Geist or a default sans on the front panel because it was to hand. Use the brand's typefaces, licensed for packaging.
+- **Cream for "premium".** Cream or kraft backgrounds swapped in to signal premium when the brand never chose them. Keep the brand's colours, and ask whether premium is really the brief.
+- **Rounded badges everywhere.** Every claim in a rounded pill or burst, the pack version of rounded cards everywhere. Give each panel one job (section 7) and let type carry the hierarchy.
+- **Emoji-style icons.** Generic leaf, heart and tick icons for claims and features. Use the client's scheme symbols or no icon; claims need evidence anyway (section 5).
+- **Stock hype words.** "Elevate your routine", "seamless" or "game-changer" on the pack. Name the product type and one real reason to buy.
+- **Benefits any competitor could claim.** "Premium quality" or "made with love". Use the specific difference the client can back up.
+- **Rule-of-three claim lists.** Three claim bullets on every front panel by habit. The front holds name, product type and one reason to buy; cut claims before shrinking type (section 5).

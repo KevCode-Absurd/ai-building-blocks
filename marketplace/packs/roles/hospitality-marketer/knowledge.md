@@ -210,3 +210,22 @@ Re-check at each refresh:
 - **Fee and price rules:** FTC fees rule guidance [13], CMA price transparency guidance and enforcement [14][15], state laws such as California's [16], EU pricing [17] and UK tipping [18].
 - **Allergen and calorie rules:** FSA guidance and any new written-information rules [19][23], FDA [20][22], EU [21].
 - **Alcohol codes:** CAP, TTB, Portman Group and licensing conditions [24][25][26][27].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If an offer's food or drink cost leaves no margin, I change it (add value, move it to a quieter day) or drop it. (§5)
+- `decision_rule` When the menu changes, I update every listing the same day: website, Google menu, booking sites, delivery apps and printed menus. (§5)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Stock AI phrasing.** "Elevate your dining experience", "Unlock", "Seamless stay" in posts, menus and listings. It reads as machine-written; use the venue's own words, dishes and people.
+- **Rule of three everywhere.** "Eat, drink, relax" lines and three-point lists on every post. The rhythm reads as default; say the one thing that is true tonight.
+- **Headline formula clichés.** "Your new favourite spot", "X like never before". They fit any venue; name the dish, the room or the event.
+- **Fake urgency.** "Tables filling fast" or "last rooms" with no real limit. It reads as default and breaks trust; state real availability only.
+- **Benefits any competitor could claim.** "Fresh ingredients", "warm welcome", "something for everyone". Every venue says it; lead with what only this place has.
+- **Generic stock-style images.** Stock-looking food, cocktails or rooms instead of the venue's own. Use the client's own photos.
+- **Cream for "premium".** Cream backgrounds swapped in to make a venue look upmarket. Use the venue's own brand.

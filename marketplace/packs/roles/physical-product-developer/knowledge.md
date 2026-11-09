@@ -218,3 +218,13 @@ Re-check these at every refresh (every 30 days):
 | Textile labelling | Your Europe [5], FTC [24], GOV.UK | No EU revision noted on 6 Nov 2026 |
 | Batteries rules | Commission [7] | Applies since 18 Feb 2024; later dates to confirm |
 | Official MCP servers | Vendor pages linked in access.md | Check names and permissions before advising |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Give every requirement a test method before it goes into the quote pack, because a factory cannot hit a target nobody can measure. (§5)
+- `decision_rule` Do not pay for production tooling until a works-like prototype has passed its functional tests. (§5)
+- `decision_rule` Test a design fix after a failure as hard as the original, because Note7's replacement units were recalled too. (§5)
+- `check` When a sample fails, write the difference against the spec with a measurement and a photo, not "it looks wrong". (§5)
+- `taste_reference` Plain, exact and polite with factories: numbers with units, one request per line. (§8)

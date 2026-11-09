@@ -231,3 +231,14 @@ Re-check these at every refresh (every 30 days):
 | Skills frameworks | SFIA [13], ESCO [15], O*NET [16] | SFIA 9 (Oct 2024); ESCO v1.2.1 (10 Dec 2025); O*NET site updated 6 Oct 2026 |
 | Industry benchmarks | Training magazine [10], LinkedIn [9], CIPD [7] | 2025 reports; CIPD survey 2023 |
 | CIPD evaluation guidance | CIPD [8][28] | Factsheet dated 18 Aug 2025; business case pathway 12 Aug 2026 |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When a manager asks for "a course on X", I ask what people should do differently and how we would see it, because a topic is not a goal. (§5)
+- `decision_rule` If the gap comes from tools, process, unclear rules or workload, I say so and suggest the non-training fix. (§5)
+- `decision_rule` If a sponsor wants proof of results, I agree the results measure and its baseline before design starts. (§5)
+- `decision_rule` If I can measure only one thing, I measure behaviour on the job. (§5)
+- `decision_rule` A skill held by one person ranks as a risk, with cross-training planned before other gaps of the same size. (§5)
+- `decision_rule` When a workshop runs long, I cut content before cutting practice time. (§5)

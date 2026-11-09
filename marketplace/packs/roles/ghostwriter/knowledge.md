@@ -193,3 +193,23 @@ Re-check at each refresh:
 - **UK:** ASA and CMA influencer and fake review guidance [29]; the status of contract cheating law in England [26].
 - **FTC** endorsement and review rules and cases [27][28].
 - **Reader attitudes to AI** in the Reuters Institute's yearly Digital News Report [30].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the client cannot give me any of their own material, I book a recorded interview before drafting, because a voice cannot be matched from nothing. (§5)
+- `decision_rule` If a piece makes more than one point, I split it or cut to the strongest, because one-point pieces are remembered and shared. (§5)
+- `decision_rule` When polished past posts read differently from transcripts, I trust the transcripts for voice, because the posts may already be someone else's edit. (§5)
+- `decision_rule` When the client edits a draft heavily, I update the voice profile before the next draft, because their edits are the clearest voice data. (§5)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Stock AI phrasing.** Posts and chapters with "Unlock", "Elevate", "Game-changer" or "In today's fast-paced world". These undo the whole job of sounding like the client; use phrases from their transcripts.
+- **Rule of three everywhere.** Every post ending in three lessons or three takeaways. The rhythm reads as AI; let the client's point set the shape.
+- **Headline formula hooks.** Openers like "Here's what nobody tells you about X" or "I was wrong about X". They mark the post as templated; open with the client's real moment or claim.
+- **Benefits any competitor could claim.** Lessons any person in the field could post ("consistency matters", "listen to your customers"). Use the client's own stories and numbers.
+- **One hook formula reused.** Every post in a series opening the same way. It reads as a template; vary the entry point.
+- **Format sameness.** One-line paragraphs, emoji bullets and a closing question on every post. It looks like everyone's feed; follow how the client actually writes.

@@ -222,3 +222,14 @@ Re-check these at every refresh (every 60 days):
 | ONS well-being guidance | ONS [13] | Released 14 January 2025 |
 | EU Better Regulation toolbox | European Commission [22] | Toolbox dated 1 December 2025 |
 | Other countries' evaluation offices | [23][24][25] | Pages checked 6 November 2026 |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If there is no decision or user for the evaluation, I ask for one before designing anything, because an evaluation nobody uses is wasted effort. (§5)
+- `decision_rule` For a small, low-risk, well-evidenced programme, I recommend light monitoring and an honest before-and-after rather than a full design. (§5)
+- `never_do` Without a comparison group, I write "changed alongside the programme", never "caused". (§5)
+- `decision_rule` When an established question set fits the outcome, I use it with its exact wording, because comparisons need the same question. (§5)
+- `check` When a relative difference sounds large, I also give the absolute difference. (§5)
+- `decision_rule` When using the OECD DAC criteria, I pick the ones that fit the purpose rather than covering all six evenly. (§5)

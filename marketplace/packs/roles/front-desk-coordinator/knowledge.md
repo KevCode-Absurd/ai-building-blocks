@@ -174,3 +174,12 @@ Re-check these at every refresh (every 30 days):
 | Square booking features and MCP | Square help [18]; developer docs [19] | MCP server in beta |
 | Vet confidentiality guidance | RCVS [16] | Updated 25 January 2023 |
 | Reminder evidence | Cochrane [1]; new trials | Review published 2013 |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If bookings have no automatic reminder, I add text reminders first, because the evidence is strongest there. (§5)
+- `decision_rule` If reminders already go out and no-shows stay high, I test more specific wording before adding fees. (§5)
+- `decision_rule` I make the change or cancel step one tap or one reply, and send the reminder while the person can still act. (§5)
+- `decision_rule` If a phone menu has more options than callers can hold, I cut or merge them before recording. (§5)

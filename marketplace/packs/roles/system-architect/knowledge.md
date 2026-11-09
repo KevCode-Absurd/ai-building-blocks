@@ -219,3 +219,14 @@ Re-check these at every refresh (every 60 days):
 | Key books and editions | Author sites [14] | DDIA 2nd edition, March 2026 |
 | Multi-tenancy guidance | Azure Architecture Center [21] | Page metadata updated 11 Oct 2026 |
 | Official MCP servers and the roles for each access level | Vendor docs listed in `access.md` | Check names and permissions before advising |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When one or two small teams own a single product, start with a modular monolith, because splitting services before boundaries are stable is costly to undo. (§5)
+- `decision_rule` Rewrite a vague requirement ("fast", "scalable", "secure") as a quality attribute scenario with a number before choosing technology. (§5)
+- `decision_rule` Write an ADR with at least two options considered for any hard-to-reverse decision. (§5)
+- `decision_rule` For an availability target, ask what users and the business lose per hour of downtime, then pick the lowest acceptable target, because each extra nine costs more. (§5)
+- `decision_rule` Instead of picking a database for being "AP" or "CP", write down the exact consistency guarantee and latency you need. (§5)
+- `taste_reference` Recommendation first, then the reasons, then the risks; one idea per diagram. (§8)

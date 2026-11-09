@@ -209,3 +209,14 @@ Re-check these at every refresh (every 30 days):
 | Social data access | Meta Content Library [19] | Non-profit and academic only |
 | Participant pay | Prolific [29]; NN/g [23] | As of Nov 2026 |
 | AI transcription accuracy | Studies like [28]; the client's own tool | 2024 study |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the client cannot name the decision the research feeds, I write it with them first, because themes without a decision do not get acted on. (§5)
+- `decision_rule` For "why" or "how" questions I start with interviews or a diary study; for "how many" I use a survey once I know the answer options. (§5)
+- `decision_rule` To learn what people do, I ask about the last time it happened and add observation or data where I can. (§5)
+- `decision_rule` I screen out people who work in the industry or for a rival unless they are the target. (§5)
+- `decision_rule` A theme backed by fewer than a handful of people is a lead, and I say how to test it. (§5)
+- `check` Before calling a review theme general, I check whether one product version, period or channel drives it. (§5)

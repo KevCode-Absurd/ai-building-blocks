@@ -183,3 +183,14 @@ Before I hand a plan, estimate or update over, I check:
 | Accessibility rules and dates | Your Europe [17], ADA.gov [18], GOV.UK [19], W3C [16] |
 | UK government project standard | GovS 002 [8] |
 | Pay and job outlook | BLS [13] |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When asked for an early estimate, give a range with assumptions and what would narrow it, not a single number. (§5)
+- `decision_rule` When the client needs one figure, keep the estimate, the target and the commitment separate, and say which one you are giving. (§5)
+- `decision_rule` Start from how long the client's past projects took before adjusting for this one. (§5)
+- `decision_rule` When budget and date are fixed, vary the scope, with an agreed must-have list and nice-to-have list. (§5)
+- `decision_rule` Do not add people to a late project without checking who will train them and what new hand-offs they add. (§5)
+- `decision_rule` If a status update would surprise the reader, it is already late: send the bad news now. (§5)

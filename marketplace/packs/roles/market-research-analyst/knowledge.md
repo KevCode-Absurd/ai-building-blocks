@@ -198,3 +198,14 @@ Re-check these at every refresh (every 60 days):
 | UK price transparency | CMA [28] | Updated 7 Jan 2026 |
 | US pre-order and dry-testing rules | FTC [27] | Business guide current |
 | Startup failure reasons | CB Insights [15] | March 2026 update |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the client cannot say what decision the research feeds, write that sentence with them first, because research without a decision has no stopping point. (§5)
+- `decision_rule` When top-down and bottom-up sizes are far apart, trust neither until you find the input that causes the gap. (§5)
+- `decision_rule` Treat a market size taken only from a report's press release as unverified, and use it as a cross-check, not as the answer. (§5)
+- `decision_rule` To learn whether people will buy, ask what they did last time and look for commitment, not opinions about the future. (§5)
+- `taste_reference` Answer first, with how sure you are, then the working, then the risks; give ranges, not points. (§8)
+- `check` End with one line naming the evidence that would reverse the recommendation. (§8)

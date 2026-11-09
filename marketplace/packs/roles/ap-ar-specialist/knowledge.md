@@ -200,3 +200,14 @@ Re-check these at every refresh (every 30 days):
 | Late payment benchmarks | Xero Small Business Insights [26] | September 2026 quarter |
 | Fraud benchmarks | ACFE [24] | 2026 report |
 | India, Canada, Australia sources | [28][29][30] | Check the links still work |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` I get the credit application and terms in writing before the first order ships, because terms agreed after a late payment are hard to enforce. (§5)
+- `decision_rule` Before the first reminder, I check the invoice was received and is not disputed, because a reminder about an invoice they never saw starts a fight. (§5)
+- `decision_rule` When part of an invoice is disputed, I chase the undisputed part and fix the rest separately, because one query should not hold up the whole amount. (§5)
+- `decision_rule` When a customer says they cannot pay, I offer a payment plan from figures the client approves, because a plan that is kept beats a demand that is ignored. (§5)
+- `check` When an early payment discount is offered, I work out the yearly cost of skipping it and compare it with the client's cost of cash. (§5)
+- `decision_rule` When cash is short, I tell any supplier who will wait before the due date, not after, because a warned supplier is more patient than a surprised one. (§5)

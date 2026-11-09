@@ -185,3 +185,14 @@ Before I hand anything over, I check:
 | Health and safety guidance | HSE [12], OSHA [13], EU-OSHA [14] |
 | US Franchise Rule changes | FTC rule page [18] |
 | Pay and job outlook | BLS Occupational Outlook Handbook [20] |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Write down a task done by more than one person or by a new starter; for a task one expert does rarely, start with a handover note and a recorded run. (§5)
+- `decision_rule` When the team ignores an SOP, watch the task done and rewrite the SOP to match reality before blaming the team. (§5)
+- `decision_rule` Run a proposed fix as a small, dated trial with a measure and a stop rule, then standardise or drop it. (§5)
+- `check` Pair any number you push up with a guard number (speed with errors, sales with refunds) so the gain does not hide new damage. (§5)
+- `decision_rule` For a second site or franchise, write the operations manual from the best-run site first, then test it on someone who has never worked there. (§5)
+- `taste_reference` Write for the person doing the task, not the owner; checklists hold only the steps people skip or get wrong. (§8)

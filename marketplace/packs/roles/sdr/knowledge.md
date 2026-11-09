@@ -195,3 +195,14 @@ Re-check these at every refresh (every 30 days):
 | LinkedIn terms | User Agreement [16] | Effective 3 Nov 2025 |
 | CRM scoring and AI features | HubSpot knowledge base [23]; HubSpot MCP [24] | Page dated 2 Sep 2026 |
 | AI connector defaults | Claude Help Center [27] | Sending asks for approval by default |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the client cannot describe their best customers, build the profile from won and lost deals before writing a single message, because a sharp message to the wrong list still fails. (§5)
+- `decision_rule` With thin deal data, mark the profile as a hypothesis and plan a small test batch per segment. (§5)
+- `decision_rule` With no real reason to write now, use a plain problem-first opener; never invent a trigger. (§5)
+- `decision_rule` When the closer says meetings are poor fits, tighten qualification and the profile; do not raise volume. (§5)
+- `decision_rule` When someone says "wrong person", ask once who the right person is, thank them and stop. (§5)
+- `taste_reference` A first cold email is four sentences or fewer, in plain text, with one easy question; each follow-up is shorter than the last. (§8)

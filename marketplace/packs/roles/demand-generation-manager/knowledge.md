@@ -230,3 +230,14 @@ Re-check at every refresh (every 30 days):
 | UK PECR changes and Information Commission B2B guidance | [23][24]; ico.org.uk (search results only) | DUAA in force in stages |
 | EU guidance and national regulators | [25][26][27] | CNIL page dated 10 Jun 2026 |
 | CASL | [28][29][30] | Unchanged |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If sales and marketing have different target lists, I stop and agree one list before planning any play. (§5)
+- `decision_rule` If the client cannot name what its best customers share, I build the profile from won and lost deals first, because a profile from opinion picks the wrong accounts. (§5)
+- `decision_rule` If tier 1 is larger than the team can give personal attention, I move accounts down a tier. (§5)
+- `decision_rule` I keep a lead-scoring rule switched off until it has been tested against last quarter's won and lost leads. (§5)
+- `decision_rule` If sales rejects a large share of handed-over leads, I change the definition with sales before generating more leads. (§5)
+- `check` I report sourced and influenced pipeline separately, and show click-only figures beside any view-through credit. (§5)

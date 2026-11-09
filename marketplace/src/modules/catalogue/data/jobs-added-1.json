@@ -533,7 +533,7 @@
       },
       {
         "id": "existing_assets",
-        "label": "Messages and emails you already send",
+        "label": "Review requests you already send",
         "required": false,
         "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
       },
@@ -831,7 +831,7 @@
       },
       {
         "id": "existing_assets",
-        "label": "Messages and emails you already send",
+        "label": "Reminders and booking messages you already send",
         "required": false,
         "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
       },
@@ -1129,7 +1129,7 @@
       },
       {
         "id": "existing_assets",
-        "label": "Messages and emails you already send",
+        "label": "Replies you already send to enquiries",
         "required": false,
         "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
       },
@@ -1425,7 +1425,7 @@
       },
       {
         "id": "existing_assets",
-        "label": "Messages and emails you already send",
+        "label": "Order and delivery messages you already send",
         "required": false,
         "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
       },
@@ -1707,7 +1707,7 @@
       },
       {
         "id": "existing_assets",
-        "label": "Your current pages, copy or materials",
+        "label": "Push and in-app messages you already send",
         "required": false,
         "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
       },

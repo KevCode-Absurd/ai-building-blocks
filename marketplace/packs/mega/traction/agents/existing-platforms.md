@@ -13,7 +13,7 @@ I find out whether a platform someone else built can bring this business custome
 
 ## What I need from the lead
 
-The lead's standard hand-off brief (business, variant, goal, audience and offer, allowable cost per customer, limits and access), and in particular:
+The lead's standard hand-off brief, and in particular:
 
 - The traction goal, the business type, and which platforms the client already uses.
 - Links to current listings (app pages, marketplace listings, Business Profile, directory entries) or screenshots.

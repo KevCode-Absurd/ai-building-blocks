@@ -146,7 +146,7 @@ Thirty to sixty minutes, same day each week, one owner:
 4. **Next tests:** the top of the ICE-ranked backlog, sized and assigned.
 5. **Approvals and access:** drafts to publish, any level 3 action list, any spend change.
 
-The Traction pack's `workflows/weekly-traction-rhythm.md` spreads the same loop across the week for the growth leads.
+The Traction pack's weekly traction rhythm workflow (not in this pack) spreads the same loop across the week for the growth leads.
 
 ### 3.10 Tools, access and AI
 

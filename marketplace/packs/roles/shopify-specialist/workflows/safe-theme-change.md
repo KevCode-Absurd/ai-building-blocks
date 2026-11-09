@@ -4,7 +4,7 @@
 
 **Time:** usually one to five working days, most of it waiting for files, previews and approval.
 
-**Access:** steps are marked L1 (read), L2 (read and draft) or L3 (read, write and publish). Until the owner grants more, everything runs at L1 and the owner does the L2 and L3 steps.
+**Access:** steps are marked L1, L2 or L3 as set out in access.md. Until more is granted, everything runs at L1.
 
 ## Steps
 

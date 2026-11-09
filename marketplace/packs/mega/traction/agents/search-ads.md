@@ -13,7 +13,7 @@ I find out whether paid search can bring this business customers at a cost it ca
 
 ## What I need from the lead
 
-The lead's standard hand-off brief (business, variant, goal, audience and offer, allowable cost per customer, limits and access), and in particular:
+The lead's standard hand-off brief, and in particular:
 
 - Gross profit per new customer, or the inputs to work it out, and the payback period the client accepts.
 - What counts as a real conversion (sale, booked job, qualified lead, paid plan) and how it is tracked today.

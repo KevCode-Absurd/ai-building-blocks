@@ -4,7 +4,7 @@
 
 **Trigger:** the quarter ends, or a rival or win-rate change is spotted.
 
-**Access:** steps are marked L1 (read), L2 (read and draft) or L3 (read, write and publish within the client's limits). Until the client grants more, everything runs at L1 and the client does the L2 and L3 steps.
+**Access:** steps are marked L1, L2 or L3 as set out in access.md. Until more is granted, everything runs at L1.
 
 ## Steps
 

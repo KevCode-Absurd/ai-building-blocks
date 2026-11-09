@@ -86,7 +86,7 @@ At level 2, build the flow in draft or test mode. At level 3, publish to the agr
 
 ## Example of good output
 
-*Illustrative structure, not a real business: an online garden supplies shop. Copy the shape, never the content: every fact comes from the client's own context.*
+*Illustrative structure, not a real business: an online garden supplies shop whose bot hands orders and complaints to staff. Copy the shape, never the content: every fact comes from the client's own context.*
 
 ```mermaid
 flowchart TD

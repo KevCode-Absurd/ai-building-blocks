@@ -1,6 +1,6 @@
 // Validation for job types. The catalogue test runs every job type through validateJobType.
 import { z } from "zod";
-import { AREAS, type JobType } from "../../core/types.ts";
+import { AREAS, DELIVERABLE_FAMILIES, type JobType } from "../../core/types.ts";
 
 const id = z.string().regex(/^[a-z][a-z0-9_]{1,59}$/, "snake_case id");
 const slug = z.string().regex(/^[a-z][a-z0-9-]{2,59}$/, "kebab-case id");
@@ -39,6 +39,16 @@ export const jobTypeSchema = z.object({
   sample_briefs: z.array(z.object({ id, text: z.string().min(40).max(3000), visibility: z.enum(["public", "hidden"]) }).strict()).min(4).max(12),
   keywords: z.array(z.string().min(2).max(40)).min(4).max(30),
   demand_sources: z.array(z.object({ note: z.string().min(10).max(300), url: z.string().url().startsWith("https://") }).strict()).min(1).max(6),
+  // Grounded Job Protocol fields (DESIGN.md "Data and schema additions"). Optional until every job type has them.
+  family: z.enum(DELIVERABLE_FAMILIES).optional(),
+  context_requirements: z.array(z.object({
+    id, label: z.string().min(2).max(80), required: z.boolean(), how: z.string().min(10).max(300),
+  }).strict()).min(1).max(10).optional(),
+  gates: z.array(z.string().min(10).max(300)).min(1).max(10).optional(),
+  craft_rubric: z.array(z.object({
+    criterion: z.string().min(3).max(80), weight: z.number().int().min(1).max(60), test: z.string().min(15).max(400),
+  }).strict()).min(3).max(10).optional(),
+  mode_default: z.enum(["patch", "extend", "new"]).optional(),
 }).strict();
 
 export function validateJobType(value: unknown): { ok: true; jobType: JobType } | { ok: false; errors: string[] } {
@@ -57,5 +67,7 @@ export function validateJobType(value: unknown): { ok: true; jobType: JobType } 
   const vis = jt.sample_briefs.map(b => b.visibility);
   if (vis.filter(v => v === "public").length < 2 || vis.filter(v => v === "hidden").length < 2) errors.push("sample_briefs: need at least 2 public and 2 hidden");
   if (new Set(jt.sample_briefs.map(b => b.id)).size !== jt.sample_briefs.length) errors.push("sample_briefs: duplicate ids");
+  if (jt.craft_rubric && jt.craft_rubric.reduce((n, c) => n + c.weight, 0) !== 100) errors.push("craft_rubric: weights must sum to 100");
+  if (jt.context_requirements && new Set(jt.context_requirements.map(c => c.id)).size !== jt.context_requirements.length) errors.push("context_requirements: duplicate ids");
   return errors.length ? { ok: false, errors } : { ok: true, jobType: jt };
 }

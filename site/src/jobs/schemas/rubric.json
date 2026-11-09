@@ -128,6 +128,114 @@
         "critical_must_pass"
       ],
       "additionalProperties": false
+    },
+    "craft": {
+      "type": "object",
+      "properties": {
+        "deliverable_kind": {
+          "type": "string",
+          "enum": [
+            "web_page",
+            "ad_creative",
+            "copy",
+            "email",
+            "audit",
+            "analysis",
+            "strategy",
+            "plan",
+            "code",
+            "ops_doc",
+            "other"
+          ]
+        },
+        "family": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60
+        },
+        "criteria": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120,
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+              },
+              "criterion": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 300
+              },
+              "weight": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100
+              },
+              "test": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              }
+            },
+            "required": [
+              "id",
+              "criterion",
+              "weight",
+              "test"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 20
+        },
+        "gates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120,
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+              },
+              "gate": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              }
+            },
+            "required": [
+              "id",
+              "gate"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 40
+        },
+        "pass": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "floor": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        }
+      },
+      "required": [
+        "deliverable_kind",
+        "family",
+        "criteria",
+        "gates",
+        "pass"
+      ],
+      "additionalProperties": false
     }
   },
   "required": [

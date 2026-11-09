@@ -1,4 +1,5 @@
 import { callJobTool, jobMcpTools, getDialQuestions, getOrgChart } from '../jobs/job-mcp.mjs';
+import { CAPTURE_TOOLS, GJP_SKILLS, skillPreamble } from '../jobs/grounding.mjs';
 import { getJobSchema } from '../jobs/contracts.mjs';
 import { proposeTeam } from '../jobs/propose-team.mjs';
 import { discoverStudioFormats, isStaticAdRequest } from '../jobs/studio-discovery.mjs';
@@ -279,7 +280,7 @@ export class PublicCatalogueService {
       }
     }
     if (jobMcpTools.some(tool => tool.name === name)) {
-      try { return await callJobTool(name, args, ['get_job_preferences','set_job_preferences','get_job_templates'].includes(name) ? {} : await this.jobContext(args)); }
+      try { return await callJobTool(name, args, name === 'prepare_job_context' ? { grounding: await this.groundingContext() } : name === 'start_job' ? { ...await this.jobContext(args), grounding: await this.groundingContext() } : ['get_job_preferences','set_job_preferences','get_job_templates'].includes(name) ? {} : await this.jobContext(args)); }
       catch (error) {
         if (error instanceof PublicApiError) throw error;
         const e = error as {issues?:unknown;errors?:unknown;message?:string};
@@ -302,6 +303,25 @@ export class PublicCatalogueService {
       case "fetch": return this.openFetch(args);
       default: return fail(404, "unknown_tool", "Unknown public catalogue operation.");
     }
+  }
+
+  /** prepare_job_context reads the published GJP skills: revision-pinned script URLs and the AI-default patterns.json.
+   *  Anything missing falls back to the embedded spec list; this never blocks the tool. */
+  async groundingContext(): Promise<{ patterns?: unknown; scripts: { file: string; slug: string; path: string; revision_sha256: string; resource_url: string }[] }> {
+    const out: { patterns?: unknown; scripts: { file: string; slug: string; path: string; revision_sha256: string; resource_url: string }[] } = { scripts: [] };
+    let c: Catalogue;
+    try { c = await this.catalogue(); } catch { return out; }
+    for (const tool of CAPTURE_TOOLS) {
+      for (const skill of [tool.skill, ...Object.values(GJP_SKILLS)]) {
+        const entry = c.manifest.resources[skill], file = entry?.files?.find(f => f.path === `${skill}/${tool.path}`) ?? entry?.files?.find(f => f.path.startsWith(`${skill}/`) && f.path.endsWith(`/${tool.file}`));
+        if (entry && file) { out.scripts.push({ file: tool.file, slug: skill, path: file.path.slice(skill.length + 1), revision_sha256: entry.revision_sha256, resource_url: this.descriptor(skill, entry, file).resource_url }); break; }
+      }
+    }
+    const entry = c.manifest.resources[GJP_SKILLS.defaults], file = entry?.files?.find(f => f.path === `${GJP_SKILLS.defaults}/patterns.json`) ?? entry?.files?.find(f => f.path.startsWith(`${GJP_SKILLS.defaults}/`) && f.path.endsWith('/patterns.json'));
+    if (entry && file && file.bytes <= 1_000_000) {
+      try { out.patterns = JSON.parse(decoder.decode(await this.packaged(GJP_SKILLS.defaults, entry, file.path.slice(GJP_SKILLS.defaults.length + 1), file))); } catch { /* embedded fallback */ }
+    }
+    return out;
   }
 
   /** Read only deployment-pinned public data. Never carry account preferences in this cache. */
@@ -692,8 +712,11 @@ export class PublicCatalogueService {
       const linked = c.bySlug.get(child), found = c.manifest.resources[child];
       return linked && found ? { ...this.metadata(linked, found), relationship: "support-not-execution-edge" } : { slug: child, status: "UNAVAILABLE" };
     });
+    // Creative, page, ad, copy, email, audit and analysis skills: the grounding steps come before the method text.
+    const preamble = isFlow ? null : skillPreamble(item);
     return {
       schema: isFlow ? "abb-library-workflow/1" : "abb-skill/1", ...this.metadata(fullItem, entry), ...head, ...person, response_format: "detailed",
+      ...(preamble ? { before_you_run: preamble } : {}),
       instructions: instruction && instruction.length <= 48000 ? decoder.decode(instruction) : null,
       instructions_complete: !!instruction && instruction.length <= 48000,
       instruction_resource: this.descriptor(name, entry, entry.instruction, true),
@@ -705,7 +728,7 @@ export class PublicCatalogueService {
       ...handoff,
       ...(isFlow ? { ...governance, execution: item.execution ?? "host-interpreted", steps: (item.steps ?? []).map((s, i) => ({ id: `s${i + 1}`, slug: s.uses, notes: page.stepNotes?.[i] ?? s.note ?? "", depends_on: i ? [`s${i}`] : [], revision_sha256: c.manifest.resources[s.uses]?.revision_sha256 ?? null })), dependency_basis: "Declared catalogue step order; governing skill controls branches and gates. Support-only uses links do not create execution steps.", execution_policy: executionPolicy() } : {}),
       trust,
-      next_action: !instruction || instruction.length > 48000 ? "Retrieve all instruction chunks with get_resource, or have the host download and verify the supplied asset directly when archive-required. Then read all active required resources. No content was silently truncated." : "Read full instructions and all active references before execution. Tool availability and input acceptance are unverified.",
+      next_action: (preamble ? "Run before_you_run first: ground in the client's real assets or data, answer the taste questions and name the defaults to avoid. " : "") + (!instruction || instruction.length > 48000 ? "Retrieve all instruction chunks with get_resource, or have the host download and verify the supplied asset directly when archive-required. Then read all active required resources. No content was silently truncated." : "Read full instructions and all active references before execution. Tool availability and input acceptance are unverified."),
     };
   }
 

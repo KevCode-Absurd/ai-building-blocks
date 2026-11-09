@@ -1166,6 +1166,162 @@
           }
         }
       }
+    },
+    "grounding": {
+      "type": "object",
+      "description": "Host-reported context artifacts from the Grounded Job Protocol. Structure is checked before production; the files stay in the user's project.",
+      "properties": {
+        "brand_dna": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "source": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "captured_at": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 40
+            },
+            "method": {
+              "enum": [
+                "capture-brand-dna.mjs",
+                "brand-dna-snippet.js",
+                "manual"
+              ]
+            }
+          },
+          "required": [
+            "path",
+            "sha256",
+            "source",
+            "captured_at",
+            "method"
+          ],
+          "additionalProperties": false
+        },
+        "data_snapshot": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "source": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "captured_at": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 40
+            }
+          },
+          "required": [
+            "path",
+            "sha256",
+            "source",
+            "captured_at"
+          ],
+          "additionalProperties": false
+        },
+        "taste_brief": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "brand_codes": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "minItems": 0,
+              "maxItems": 40
+            },
+            "conventions_keep": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "minItems": 0,
+              "maxItems": 40
+            },
+            "conventions_break": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "minItems": 0,
+              "maxItems": 40
+            },
+            "references_admired": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "minItems": 0,
+              "maxItems": 40
+            },
+            "reference_avoid": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "minItems": 0,
+              "maxItems": 40
+            },
+            "defaults_to_avoid": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "minItems": 0,
+              "maxItems": 40
+            }
+          },
+          "required": [
+            "path",
+            "sha256"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
     }
   },
   "required": [

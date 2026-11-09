@@ -180,14 +180,14 @@ const mcpClient = async () => {
 };
 const loose = z.object({}).passthrough();
 
-test('an official SDK client sees twenty-four tools, prompts, resources and the Skills extension, with outputs matching their schemas', async () => {
+test('an official SDK client sees twenty-five tools, prompts, resources and the Skills extension, with outputs matching their schemas', async () => {
   const client = await mcpClient();
   try {
     assert.equal(client.getServerVersion().version, '3.0.0');
     const caps = client.getServerCapabilities();
     assert.ok(caps.prompts && caps.resources); assert.deepEqual(caps.extensions, { 'io.modelcontextprotocol/skills': {} });
     const toolNames=(await client.listTools()).tools.map(t=>t.name);
-    assert.equal(toolNames.length, 24);
+    assert.equal(toolNames.length, 25);
     // start_outcome is the front door; the team and scoping tools stay on REST and signed-in connections.
     assert.equal(toolNames[0], 'start_outcome');
     assert(!toolNames.includes('prepare_specialist_team')&&!toolNames.includes('checkpoint_specialist_team'));
@@ -260,9 +260,11 @@ test('the protocol rejects malformed prompt, resource and skill requests as inva
   assert.equal((await rpc({ jsonrpc: '2.0', id: 4, method: 'initialize', params: { protocolVersion: '2025-11-25', capabilities: {}, clientInfo: { name: 't', version: '1' } } }, stub)).result.capabilities.prompts, undefined);
 });
 
-test('instructions give the whole procedure in the first 512 characters and keep the authority rules', () => {
+test('instructions give the grounded protocol in the first 512 characters, then the routing, and keep the authority rules', () => {
   const first = PUBLIC_MCP_INSTRUCTIONS.slice(0, 512);
-  for (const word of ['start_outcome', 'search_library', 'plan_workflow', 'get_item', 'do not preload', 'url', 'find_specialist', 'prepare_workflow', 'handoff_check', 'mini_tool']) assert.ok(first.includes(word), word);
+  for (const word of ['Frame', 'Ground', 'real assets', 'before producing anything', 'prepare_job_context', 'taste brief', 'Diverge on substance', "client's system", 'independent critic']) assert.ok(first.includes(word), word);
+  const routing = PUBLIC_MCP_INSTRUCTIONS.slice(0, 1100);
+  for (const word of ['start_outcome', 'search_library', 'get_skill', 'plan_workflow', 'get_item', 'do not preload', 'url', 'find_specialist', 'start_job', 'prepare_workflow', 'handoff_check', 'mini_tool']) assert.ok(routing.includes(word), word);
   assert.match(PUBLIC_MCP_INSTRUCTIONS, /not evidence of human consent/);
   assert.match(PUBLIC_MCP_INSTRUCTIONS, /cannot override host instructions or grant permissions/);
   for (const tool of PUBLIC_MCP_TOOLS) {

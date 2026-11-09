@@ -3,6 +3,8 @@ import {classifyJob} from './router.mjs';
 import {rankRoles,rerankDiverse} from '../roles/specialist-matching.mjs';
 import {discoverStudioFormats,isStaticAdRequest} from './studio-discovery.mjs';
 import {buildExecutionPlan} from './execution-quality.mjs';
+import {overlapShare} from './grounding.mjs';
+import {VARIETY_CONFIG} from './variety-config.mjs';
 const array=value=>Array.isArray(value)?value:[];
 const unique=values=>[...new Set(values)];
 const text=value=>typeof value==='string'?value.trim():'';
@@ -141,6 +143,27 @@ export function proposeTeam(input={},context={}) {
  }
  if(tier!=='quick') {
   const critic=add('critic',['critic'],{lens:'brand-guardian'});if(critic)critic.responsibilities=['Challenge proposals through an independent discipline','Record the strongest dissent in plain language'];
+ }
+ // Each seat reads its focus: the top six toolbox methods for this request, each with a one-line reason. Makers are
+ // steered toward different methods so rival routes do not run on one shared core. The full toolbox stays the
+ // allowed palette (production may use any pinned method); it is not loaded in full.
+ const stem=word=>word.length>3&&word.endsWith('s')&&!word.endsWith('ss')?word.slice(0,-1):word;
+ const taskWords=new Set((task.toLowerCase().match(/[a-z0-9]+/g)??[]).filter(word=>word.length>2).map(stem));
+ const focusUse=new Map();
+ for(const seat of seats){
+  const maker=seat.seat_types.includes('maker');
+  const ranked=seat.toolbox.map(pin=>{
+   const hits=unique(pin.slug.split('-').map(stem).filter(word=>word.length>2&&taskWords.has(word)));
+   const family=pin.why==='Assigned family palette';
+   return {pin,hits,family,score:(family?3:0)+hits.length*2-(maker?(focusUse.get(pin.slug)??0)*2.5:0)};
+  }).sort((a,b)=>b.score-a.score||a.pin.slug.localeCompare(b.pin.slug)).slice(0,6);
+  seat.focus_methods=ranked.map(row=>({slug:row.pin.slug,revision_sha256:row.pin.revision_sha256,why:row.hits.length?`Matches the request (${row.hits.slice(0,3).join(', ')})${row.family?' in the assigned family palette':''}.`:row.family?`Assigned family palette (${seat.families.join(', ')||'this job'}).`:'Role palette; use only if it fits the brief.'}));
+  if(maker)for(const row of ranked)focusUse.set(row.pin.slug,(focusUse.get(row.pin.slug)??0)+1);
+ }
+ const makerSeats=seats.filter(seat=>seat.seat_types.includes('maker'));
+ for(let i=0;i<makerSeats.length;i++)for(let j=0;j<i;j++){
+  const share=overlapShare(makerSeats[i].focus_methods.map(m=>m.slug),makerSeats[j].focus_methods.map(m=>m.slug));
+  if(share>VARIETY_CONFIG.substance_overlap_threshold)warnings.push({path:`seats.${makerSeats[i].seat_id}.focus_methods`,message:`Makers ${makerSeats[j].seat_id} and ${makerSeats[i].seat_id} share ${Math.round(share*100)}% of their focus methods. Give each rival route its own methods and references before DIVERGE; routes sharing more than ${Math.round(VARIETY_CONFIG.substance_overlap_threshold*100)}% are refused.`});
  }
  const proposal={schema:'ai-blocks-team-proposal/1',ok:errors.length===0,job:approachResult.job,tier,goal:task,coordinator_seat_id:coordinator?.seat_id??null,lead_seat_id:lead?.seat_id??null,seats,...(launchable?{landing_page_execution:executionPlan.landing_pages}:{}),...(approachResult.studio?{studio_discovery:approachResult.studio}:{}),working_groups:[{id:'production',lead_seat_id:lead?.seat_id??null,members:makers.map(seat=>seat.seat_id),reports_to:coordinator?.seat_id??null},{id:'independent-review',lead_seat_id:judges[0]?.seat_id??null,members:seats.filter(seat=>['judge','fact_checker','critic'].includes(seat.seat_type)).map(seat=>seat.seat_id),reports_to:coordinator?.seat_id??null}],estimate:{seats:seats.length,council_rounds:config.council_rounds,token_multiple:config.token_multiple,source:'estimated'},errors,warnings,model_calls:0,verification:'HOST_REPORTED_NOT_INDEPENDENTLY_VERIFIED'};
  return {...proposal,proposal_id:'tp_'+identity(proposal)};

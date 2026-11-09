@@ -15,7 +15,7 @@ test('official HTTP MCP client lists start_outcome as the front door; scoped han
   try {
     await client.connect(transport);
     const inventory = (await client.listTools()).tools;
-    assert.equal(inventory.length, 24); assert.equal(new Set(inventory.map(t => t.name)).size, 24); assert.equal(inventory[0].name, 'start_outcome');
+    assert.equal(inventory.length, 25); assert.equal(new Set(inventory.map(t => t.name)).size, 25); assert.equal(inventory[0].name, 'start_outcome');
     // A client with a cached tool list gets a readable answer naming the REST route, not a protocol error.
     const moved = await client.callTool({ name: 'prepare_scoped_specialist_work', arguments: { scope: outcomeScope() } });
     assert.equal(moved.isError, true); assert.match(moved.content[0].text, /start_outcome.*POST https:\/\/example\.test\/api\/v1\/scoped-work-preparations /);

@@ -12,6 +12,9 @@ export const VARIETY_CONFIG = Object.freeze({
   min_makers: 2,
   wide_share_threshold: 60,
   route_similarity_threshold: 0.85,
+  // Rival routes (and maker seats' focus methods) that share more than this share of pinned methods or references
+  // differ only in label. Overlap is shared items over the smaller set.
+  substance_overlap_threshold: 0.6,
   balanced: Object.freeze({ max_families_required: 4, slots_per_family: 3, max_concentration: 0.5 }),
   wide: Object.freeze({ max_families_required: 5, slots_per_family: 2, max_concentration: 0.3 }),
   presets: Object.freeze({

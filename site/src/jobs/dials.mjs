@@ -1,4 +1,5 @@
 // Request-time preferences are deterministic data. A one-off request never changes saved defaults.
+import { resolveDeliverableKind } from './grounding.mjs';
 export const DIAL_NAMES = ['variety_mix', 'families', 'volume', 'decision_style', 'depth', 'modalities', 'risk', 'show_debate', 'ask_before_start'];
 export const MIX_PRESETS = Object.freeze({ focused: { preset: 'focused', proven: 100, new: 0, outlier: 0 }, balanced: { preset: 'balanced', proven: 50, new: 30, outlier: 20 }, wide: { preset: 'wide', proven: 20, new: 50, outlier: 30 } });
 export const RECOMMENDED_DIALS = Object.freeze({ variety_mix: MIX_PRESETS.balanced, families: 'you_choose', volume: 10, decision_style: 'one_path_plus_options', depth: 'standard', modalities: ['text'], risk: 'normal', show_debate: 'summary', ask_before_start: 'ask_first_time_per_job_type' });
@@ -35,7 +36,7 @@ export function validateDialValues(input = {}) {
 /** A count is inferred only with an explicit counted noun, never from dates or revenue targets. */
 export function requestDials(request, approachJob = {}) {
   const out = {}, text = String(request ?? ''), lower = text.toLowerCase();
-  const count = lower.match(/\b(?:give|make|write|create|produce|draft|build|need|want|deliver|design|generate)(?:\s+me)?\s+(\d{1,3})\s+(?:different\s+)?(?:ads?|assets?|creatives?|emails?|options?|routes?|plans?|pages?|messages?|outputs?|posts?|articles?|variants?|scripts?|ideas?|designs?|videos?)\b/);
+  const count = lower.match(/\b(?:give|make|write|create|produce|draft|build|need|want|deliver|design|generate)(?:\s+me)?\s+(\d{1,3})\s+(?:(?:different|image|static|video|short|new|social|product|landing|email|ad|display|story|carousel|ugc)\s+){0,2}(?:ads?|assets?|creatives?|emails?|options?|routes?|plans?|pages?|messages?|outputs?|posts?|articles?|variants?|scripts?|ideas?|designs?|videos?)\b/);
   if (count && Number(count[1]) > 0 && Number(count[1]) <= 200) out.volume = Number(count[1]);
   if (/\b(?:you decide|you choose|decide for me)\b/.test(lower)) out.variety_mix = clone(MIX_PRESETS.balanced);
   if (/\b(?:wide spread|wide variety|as varied as possible)\b/.test(lower)) out.variety_mix = clone(MIX_PRESETS.wide);
@@ -47,10 +48,25 @@ export function requestDials(request, approachJob = {}) {
   return out;
 }
 
+/** A request whose verb takes one deliverable ("build a landing page", "write an email") wants one output, not the approach default.
+ *  Returns the matched phrase so the card can trace the dial to the request. Counted requests are handled above. */
+const ONE = /\b(?:make|create|write|build|design|draft|produce|generate|redesign|rewrite|refresh|improve|fix|need|want|give)\s+(?:me\s+|us\s+)?(?:a|an|one|single|my|our|the)\s+(?:(?:new|single|simple|short|quick|full|[a-z]+)[ -]){0,2}(?:landing[ -]?page|web ?page|home ?page|homepage|product page|sales page|page|website|site|email|newsletter|ad|advert|post|article|blog post|report|audit|plan|strategy|script|video|logo|deck|brochure|flyer|banner|proposal|memo)\b(?!\s+(?:campaign|account|set|series|batch|sequence|library|variants?|options|ideas|copy|templates?|flows?|calendar|funnel)\b)/i;
+const MANY = /\b\d{1,3}\s+(?:[a-z]+\s+){0,2}(?:ads|emails|pages|posts|variants|creatives|images|videos|options|versions|concepts|headlines)\b|\b(?:several|multiple|a few|some|variants|versions)\b/i;
+export function namesOneDeliverable(request = '') {
+  const text = String(request ?? '');
+  if (MANY.test(text)) return null;
+  return text.match(ONE)?.[0] ?? null;
+}
+/** Kinds that are one piece of work by nature. */
+const ONE_OFF_KINDS = new Set(['audit', 'analysis', 'strategy', 'plan', 'code', 'ops_doc']);
+
 /** Sources are retained per dial so the delivery can explain defaults in one line. */
-export function resolveDials({ request = '', dials = {}, preferences, job, approachJob = {}, host_capabilities = {} } = {}) {
+export function resolveDials({ request = '', dials = {}, preferences, job, approachJob = {}, host_capabilities = {}, deliverable_kind } = {}) {
   const explicit = { ...requestDials(request, approachJob), ...dials };
-  const recommended = { ...RECOMMENDED_DIALS, volume: approachJob.default_volume ?? 10, modalities: host_capabilities.tools?.filter(t => ['image', 'video', 'audio', '3d', 'interactive', 'text', 'doc', 'data', 'code'].includes(t)) ?? ['text'] };
+  const single = !Object.hasOwn(explicit, 'volume') ? namesOneDeliverable(request) : null;
+  if (single) explicit.volume = 1;
+  const kind = resolveDeliverableKind(deliverable_kind, request).kind;
+  const recommended = { ...RECOMMENDED_DIALS, volume: ONE_OFF_KINDS.has(kind) ? 1 : approachJob.default_volume ?? 10, modalities: host_capabilities.tools?.filter(t => ['image', 'video', 'audio', '3d', 'interactive', 'text', 'doc', 'data', 'code'].includes(t)) ?? ['text'] };
   if (!recommended.modalities.length) recommended.modalities = ['text'];
   const errors = validateDialValues(explicit);
   if (errors.length) return { ok: false, errors, dials: {} };
@@ -67,7 +83,7 @@ export function resolveDials({ request = '', dials = {}, preferences, job, appro
       if (preferred.length || known.length) value = (preferred.length ? preferred : known).filter(id => !avoided.has(id));
     }
     if (key === 'variety_mix') resolved[key] = { ...clone(typeof value === 'string' ? MIX_PRESETS[value] : value), source };
-    else resolved[key] = { value: clone(value), source };
+    else resolved[key] = { value: clone(value), source, ...(key === 'volume' && single && source === 'request' ? { source_ref: single } : {}) };
   }
   const finalErrors = validateDialValues(Object.fromEntries(Object.entries(resolved).map(([k, v]) => [k, k === 'variety_mix' ? Object.fromEntries(Object.entries(v).filter(([n]) => n !== 'source')) : v.value])));
   return { ok: !finalErrors.length, errors: finalErrors, dials: resolved };

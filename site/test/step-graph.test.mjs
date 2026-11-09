@@ -167,9 +167,10 @@ test('an official MCP client gets plan_workflow and the changed tools as structu
   try {
     await client.connect(transport);
     const instructions = client.getInstructions();
-    const head = instructions.slice(0, 512);
-    // Public MCP 3.0.0: start_outcome is the front door; single items, specialists and workflows follow in the same 512 characters.
-    for (const phrase of ['start_outcome', 'find_specialist with the task', 'prepare_specialist with role_id', 'search_library', 'plan_workflow, then prepare_workflow', 'do not preload', 'url']) assert.ok(head.includes(phrase), `first 512 characters say: ${phrase}`);
+    // The grounded protocol takes the first 512 characters (with start_outcome for goals); the routing follows it.
+    assert.ok(instructions.slice(0, 512).includes('prepare_job_context') && instructions.slice(0, 512).includes('start_outcome'));
+    const head = instructions.slice(0, 1100);
+    for (const phrase of ['start_outcome', 'find_specialist', 'prepare_specialist with role_id', 'search_library', 'plan_workflow, then prepare_workflow', 'do not preload', 'url']) assert.ok(head.includes(phrase), `routing says: ${phrase}`);
     const tool = (await client.listTools()).tools.find(t => t.name === 'plan_workflow');
     assert.equal(tool.annotations.readOnlyHint, true); assert.equal(tool.annotations.openWorldHint, false);
     assert.equal(tool.outputSchema.type, 'object');

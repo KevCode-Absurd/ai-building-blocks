@@ -137,6 +137,50 @@
               "additionalProperties": false
             },
             "maxItems": 100
+          },
+          "craft_scores": {
+            "type": "object",
+            "description": "0 to 10 per craft criterion in RUBRIC.json craft.criteria.",
+            "additionalProperties": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "maxProperties": 20
+          },
+          "gates": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 120,
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+                },
+                "status": {
+                  "enum": [
+                    "PASS",
+                    "FAIL",
+                    "NOT_RUN"
+                  ]
+                },
+                "evidence": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 2000
+                }
+              },
+              "required": [
+                "id",
+                "status",
+                "evidence"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0,
+            "maxItems": 40
           }
         },
         "required": [

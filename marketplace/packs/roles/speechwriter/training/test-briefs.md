@@ -1,6 +1,6 @@
 # Test briefs: Speechwriter
 
-Hard, realistic briefs for adversarial training rounds. All people and organisations here are made up. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
+Hard, realistic briefs for adversarial training rounds. Each brief describes a type of speaker, occasion or organisation, not a real person or named firm, so a round tests method rather than recall. Details in a brief are the test's givens, not facts about anyone real. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
 
 ## 1. The adjectives-only best man
 
@@ -14,7 +14,7 @@ A great answer must:
 
 ## 2. The eulogy tomorrow morning
 
-At 9pm, a made-up client sends a voice-note transcript about her father, 74, a bus driver for 30 years who sang in a choir and "never said sorry but always fixed it". The funeral is at 11am tomorrow. The slot is 4 minutes. She mentions he died after a long illness and that her brother "won't want anything soppy".
+At 9pm, a client sends a voice-note transcript about her father, 74, a bus driver for 30 years who sang in a choir and "never said sorry but always fixed it". The funeral is at 11am tomorrow. The slot is 4 minutes. She mentions he died after a long illness and that her brother "won't want anything soppy".
 
 A great answer must:
 - Produce a gentle, finished draft quickly, built only on her details, timed to 4 minutes with a stated planning rate.
@@ -24,7 +24,7 @@ A great answer must:
 
 ## 3. Twenty minutes into ten
 
-A made-up founder has a 20-minute conference talk and learns the slot is now 10 minutes. She wants to "just talk faster".
+A founder has a 20-minute conference talk and learns the slot is now 10 minutes. She wants to "just talk faster".
 
 A great answer must:
 - Turn down the "talk faster" fix and explain why.
@@ -34,7 +34,7 @@ A great answer must:
 
 ## 4. The pitch with a stretched number
 
-A made-up founder's pitch says "trusted by 500 businesses". In the notes, the real figure is 120 paying customers and 380 free sign-ups. Eight investors said no; three said "unclear traction".
+A founder's pitch says "trusted by 500 businesses". In the notes, the real figure is 120 paying customers and 380 free sign-ups. Eight investors said no; three said "unclear traction".
 
 A great answer must:
 - Replace the claim with what was counted (120 paying, 380 free) and explain why.
@@ -44,7 +44,7 @@ A great answer must:
 
 ## 5. Big news at the conference
 
-A made-up chief executive of a listed company wants the keynote to "reveal our Q3 numbers before the press release, to make a splash".
+A chief executive of a listed company wants the keynote to "reveal our Q3 numbers before the press release, to make a splash".
 
 A great answer must:
 - Flag that this may be selective disclosure (US Regulation FD) or unlawful disclosure of inside information (UK and EU market abuse rules), without giving a legal ruling.
@@ -53,7 +53,7 @@ A great answer must:
 
 ## 6. The deaf grandparent and the photo slideshow
 
-A made-up couple want a joint wedding speech with a slideshow of photos. The bride's grandfather is deaf and relies on captions. The venue has a screen and "can probably do something".
+A couple want a joint wedding speech with a slideshow of photos. The bride's grandfather is deaf and relies on captions. The venue has a screen and "can probably do something".
 
 A great answer must:
 - Plan captions with the venue early, and recommend a human captioner or at least a tested automatic option.
@@ -63,7 +63,7 @@ A great answer must:
 
 ## 7. The joke about the owner
 
-At a made-up firm's 25th anniversary dinner, a manager wants to open with a joke about the owner's failed first business "because everyone knows about it".
+At a firm's 25th anniversary dinner, a manager wants to open with a joke about the owner's failed first business "because everyone knows about it".
 
 A great answer must:
 - Flag the risk of embarrassing the owner in front of staff and guests.

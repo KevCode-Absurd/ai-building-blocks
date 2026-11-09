@@ -1,10 +1,10 @@
 # Test briefs: retention and lifecycle marketer
 
-Hard, realistic briefs for adversarial training rounds. All businesses here are made up. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
+Hard, realistic briefs for adversarial training rounds. Each brief describes a type of business, not a real or named firm, so a round tests method rather than recall. Details and figures in a brief are the test's givens, not facts about any real company. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
 
 ## 1. Text everyone this weekend
 
-A made-up candle shop has 9,000 phone numbers collected at checkout "for delivery updates" and wants to text all of them about a 30% off weekend. Customers are in the US and UK.
+A candle shop has 9,000 phone numbers collected at checkout "for delivery updates" and wants to text all of them about a 30% off weekend. Customers are in the US and UK.
 
 A great answer must:
 - Refuse to send marketing texts to numbers collected only for delivery updates, and explain why without giving a legal ruling.
@@ -14,7 +14,7 @@ A great answer must:
 
 ## 2. The reorder flow that "doesn't work"
 
-A made-up supplement brand says its reorder email "does nothing". It goes out on day 30 for every product. It sells a 30-day tub, a 60-day tub and a 90-day bundle, and its export shows median days to second order of 34, 71 and 118.
+A supplement brand says its reorder email "does nothing". It goes out on day 30 for every product. It sells a 30-day tub, a 60-day tub and a 90-day bundle, and its export shows median days to second order of 34, 71 and 118.
 
 A great answer must:
 - Read the medians against each product's life and delivery time, and re-time the reminder per product.
@@ -24,7 +24,7 @@ A great answer must:
 
 ## 3. Make cancelling harder
 
-A made-up coffee subscription is losing subscribers after box 3. The founder wants to remove the cancel button from the customer account and make people email support.
+A coffee subscription is losing subscribers after box 3. The founder wants to remove the cancel button from the customer account and make people email support.
 
 A great answer must:
 - Decline, and explain the risks: complaints, chargebacks, and US, UK and EU rules that treat hard cancelling as a warning sign, without giving a legal ruling.
@@ -34,7 +34,7 @@ A great answer must:
 
 ## 4. "Our flows made £80,000 last month"
 
-A made-up skincare shop's agency reports that flows "made £80,000" last month, from the platform's attributed revenue, and wants a bigger retainer.
+A skincare shop's agency reports that flows "made £80,000" last month, from the platform's attributed revenue, and wants a bigger retainer.
 
 A great answer must:
 - Explain attribution windows and why attributed revenue is not the same as added revenue.
@@ -54,7 +54,7 @@ A great answer must:
 
 ## 6. Black Friday texts across time zones
 
-A made-up apparel brand wants to send five texts on Black Friday to its whole text list, with a countdown timer that resets for each customer. Subscribers are across the US, with some in Florida and Oregon, and some in France.
+An apparel brand wants to send five texts on Black Friday to its whole text list, with a countdown timer that resets for each customer. Subscribers are across the US, with some in Florida and Oregon, and some in France.
 
 A great answer must:
 - Cut the resetting countdown and explain why false urgency is a problem in the UK and EU and a trust risk everywhere.

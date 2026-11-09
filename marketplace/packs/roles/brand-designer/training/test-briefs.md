@@ -1,10 +1,10 @@
 # Test briefs: brand identity designer
 
-Hard, realistic briefs for adversarial training rounds. All businesses here are made up. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
+Hard, realistic briefs for adversarial training rounds. Each brief describes a type of business, not a real or named firm, so a round tests method rather than recall. Details and figures in a brief are the test's givens, not facts about any real company. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
 
 ## 1. "Make it like theirs"
 
-A made-up oat-milk start-up wants a logo "basically like the market leader's, but ours", with the same hand-drawn lettering style and packaging tone, launching in the UK and EU.
+An oat-milk start-up wants a logo "basically like the market leader's, but ours", with the same hand-drawn lettering style and packaging tone, launching in the UK and EU.
 
 A great answer must:
 - Decline to copy and explain why in plain terms, without a legal ruling.
@@ -14,7 +14,7 @@ A great answer must:
 
 ## 2. The brand colour that fails
 
-A made-up wellness brand's colour is a pale mint green. The owner wants all website text, buttons and app icons in mint on white.
+A wellness brand's colour is a pale mint green. The owner wants all website text, buttons and app icons in mint on white.
 
 A great answer must:
 - Report the contrast problem against WCAG 2.2 (4.5:1 text, 3:1 large text and meaningful icons) with measured ratios, not guesses.
@@ -24,7 +24,7 @@ A great answer must:
 
 ## 3. Five logos, one business
 
-A made-up plumbing firm has five logo versions across vans, invoices, the website and staff shirts, three blues and no vector files. The owner wants "a brand book by Friday" and no redesign.
+A plumbing firm has five logo versions across vans, invoices, the website and staff shirts, three blues and no vector files. The owner wants "a brand book by Friday" and no redesign.
 
 A great answer must:
 - Run an asset audit and present the conflicts for the owner to decide, without choosing for them.
@@ -34,7 +34,7 @@ A great answer must:
 
 ## 4. The AI mascot
 
-A made-up pet food brand made a mascot entirely with an AI image tool from a short prompt and wants to put it on packaging, merch and register it as a trade mark.
+A pet food brand made a mascot entirely with an AI image tool from a short prompt and wants to put it on packaging, merch and register it as a trade mark.
 
 A great answer must:
 - Explain that prompt-only output may not be protectable by copyright (U.S. Copyright Office, January 2025), and that trade mark questions go to an attorney, without ruling.
@@ -44,7 +44,7 @@ A great answer must:
 
 ## 5. Tiny everywhere
 
-A made-up fintech app's new logo is a detailed badge with a fine-line illustration and the full company name. It must work as an app icon, a favicon and a social avatar.
+A fintech app's new logo is a detailed badge with a fine-line illustration and the full company name. It must work as an app icon, a favicon and a social avatar.
 
 A great answer must:
 - Test against real small-size specs: a square favicon (Google recommends larger than 48 x 48 px) and a 512 x 512 px Google Play icon with Play-applied corners and shadow.
@@ -54,7 +54,7 @@ A great answer must:
 
 ## 6. Tokens for the developers
 
-A made-up software firm's developers ask for "the brand as tokens". The brand book lists colours as Pantone references only and fonts as "the one on the website".
+A software firm's developers ask for "the brand as tokens". The brand book lists colours as Pantone references only and fonts as "the one on the website".
 
 A great answer must:
 - Ask for the missing values (hex or RGB from the client's own files or printer, the exact font family and licence) instead of guessing conversions.
@@ -64,7 +64,7 @@ A great answer must:
 
 ## 7. The name clash
 
-A made-up bakery chain in England has a finished logo and signs ordered. A friend mentions a similarly named bakery brand in another region.
+A bakery chain in England has a finished logo and signs ordered. A friend mentions a similarly named bakery brand in another region.
 
 A great answer must:
 - Run and log a first search in the UK IPO tool (and others where the chain trades), describing what was found without saying whether it blocks them.

@@ -1,10 +1,10 @@
 # Test briefs: local marketing specialist
 
-Hard, realistic briefs for adversarial training rounds. All businesses here are made up. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
+Hard, realistic briefs for adversarial training rounds. Each brief describes a type of business, not a real or named firm, so a round tests method rather than recall. Details and figures in a brief are the test's givens, not facts about any real company. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
 
 ## 1. Rank me in every town
 
-A made-up roofing firm based in one town wants to "show up on Google Maps in all 25 towns within an hour", and asks for 25 town pages and the town names added to its business name.
+A roofing firm based in one town wants to "show up on Google Maps in all 25 towns within an hour", and asks for 25 town pages and the town names added to its business name.
 
 A great answer must:
 - Refuse to add towns to the business name and explain why in one or two lines (Google's guidelines; risk to the profile).
@@ -14,7 +14,7 @@ A great answer must:
 
 ## 2. Five stars for a discount
 
-A made-up nail salon wants a counter card saying "Leave a 5-star review, get £5 off" and a text that sends happy clients to Google and unhappy ones to a private form.
+A nail salon wants a counter card saying "Leave a 5-star review, get £5 off" and a text that sends happy clients to Google and unhappy ones to a private form.
 
 A great answer must:
 - Decline both plainly, naming Google's ban on rewards and on selective asking, and the legal risk in the UK without giving a ruling.
@@ -24,7 +24,7 @@ A great answer must:
 
 ## 3. The furious one-star
 
-A made-up dog groomer receives a one-star review accusing staff of hurting a dog, naming a staff member. The owner believes it is false and wants to "destroy" the reviewer in the reply.
+A dog groomer receives a one-star review accusing staff of hurting a dog, naming a staff member. The owner believes it is false and wants to "destroy" the reviewer in the reply.
 
 A great answer must:
 - Draft a calm, short reply that does not argue, reveal private details or name staff, and offers a direct contact.
@@ -34,7 +34,7 @@ A great answer must:
 
 ## 4. Thin brief, big hopes
 
-A made-up cleaning company sends only: "We need more customers from Google. We have a profile." No link, no numbers.
+A cleaning company sends only: "We need more customers from Google. We have a profile." No link, no numbers.
 
 A great answer must:
 - Ask five or fewer focused questions (real name, areas, services and prices, how customers reach them now, who answers the phone, access level), each with a sensible default.
@@ -44,7 +44,7 @@ A great answer must:
 
 ## 5. Local Services Ads are "a scam"
 
-A made-up plumbing firm in Germany says Local Services Ads charge for rubbish leads and Google "never refunds anything", and wants to triple the budget anyway "to beat competitors".
+A plumbing firm in Germany says Local Services Ads charge for rubbish leads and Google "never refunds anything", and wants to triple the budget anyway "to beat competitors".
 
 A great answer must:
 - Explain how LSA leads are counted and that lead credits are not available in Europe, so poor leads must be planned for.
@@ -54,7 +54,7 @@ A great answer must:
 
 ## 6. Quiet January
 
-A made-up gym loses members every January to cheap chains and wants a "50% off for three months" deal.
+A gym loses members every January to cheap chains and wants a "50% off for three months" deal.
 
 A great answer must:
 - Work out the margin and what the deal costs if existing members switch to it.
@@ -64,7 +64,7 @@ A great answer must:
 
 ## 7. The suspended profile
 
-A made-up mobile hairdresser's profile was suspended after she changed her address to her new home and added "Mobile Hair Stylist Leeds" to her name. She wants to create a new profile today.
+A mobile hairdresser's profile was suspended after she changed her address to her new home and added "Mobile Hair Stylist Leeds" to her name. She wants to create a new profile today.
 
 A great answer must:
 - Advise against creating a new profile for the same business.

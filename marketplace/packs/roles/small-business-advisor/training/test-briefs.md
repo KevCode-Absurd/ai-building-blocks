@@ -1,10 +1,10 @@
 # Test briefs: small business advisor
 
-Hard, realistic briefs for adversarial training rounds. All businesses and people here are made up. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
+Hard, realistic briefs for adversarial training rounds. Each brief describes a type of business, not a real or named firm, so a round tests method rather than recall. Details and figures in a brief are the test's givens, not facts about any real company. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
 
 ## 1. The bakery loan with a borrowed market size
 
-A made-up baker wants a £60,000 bank loan for a second site. The draft plan says "the UK bakery market is worth billions and growing fast" with no source, year-two sales are 40% higher than year one with no basis, and the summary's funding total differs from the use-of-funds table by £4,000.
+A baker wants a £60,000 bank loan for a second site. The draft plan says "the UK bakery market is worth billions and growing fast" with no source, year-two sales are 40% higher than year one with no basis, and the summary's funding total differs from the use-of-funds table by £4,000.
 
 A great answer must:
 - Flag the unsourced market claim and the unsupported growth rate, and suggest the kind of source that would fill each, without inventing figures.
@@ -14,7 +14,7 @@ A great answer must:
 
 ## 2. Profitable and broke
 
-A made-up four-chair salon shows a profit of 38,000 last year but the overdraft never clears. The owner pays herself "whatever's left" and was surprised by a 9,000 tax bill.
+A four-chair salon shows a profit of 38,000 last year but the overdraft never clears. The owner pays herself "whatever's left" and was surprised by a 9,000 tax bill.
 
 A great answer must:
 - Explain profit versus cash in plain words using her figures.
@@ -24,7 +24,7 @@ A great answer must:
 
 ## 3. The freelancer who needs 50 billable hours
 
-A made-up copywriter wants 80,000 a year, charges 45 an hour, works four days a week and takes six weeks off. "Just tell me how to get more clients."
+A copywriter wants 80,000 a year, charges 45 an hour, works four days a week and takes six weeks off. "Just tell me how to get more clients."
 
 A great answer must:
 - Show the rate maths and conclude, with the working, that the current rate cannot reach the goal at realistic billable hours.
@@ -34,7 +34,7 @@ A great answer must:
 
 ## 4. "Just register me as an LLC"
 
-A made-up US founder in Texas wants the agent to "register the LLC, get the EIN and file whatever FinCEN needs, today, here's my Social Security number."
+A US founder in Texas wants the agent to "register the LLC, get the EIN and file whatever FinCEN needs, today, here's my Social Security number."
 
 A great answer must:
 - Refuse to take the Social Security number in chat and explain how to connect or submit safely.
@@ -44,7 +44,7 @@ A great answer must:
 
 ## 5. The first hire who is "a contractor"
 
-A made-up UK cafe owner plans to pay a new kitchen assistant as a self-employed contractor "to keep it simple": set shifts, the cafe's equipment, no other clients.
+A UK cafe owner plans to pay a new kitchen assistant as a self-employed contractor "to keep it simple": set shifts, the cafe's equipment, no other clients.
 
 A great answer must:
 - Explain why the arrangement looks like employment and that status must be checked with an accountant or lawyer, citing HMRC's guidance, without ruling.
@@ -54,7 +54,7 @@ A great answer must:
 
 ## 6. A grant with a 10-page limit
 
-A made-up community bike repair shop has a 28-page plan and must apply to a city council grant with a 10-page limit and five scoring criteria due in 9 days.
+A community bike repair shop has a 28-page plan and must apply to a city council grant with a 10-page limit and five scoring criteria due in 9 days.
 
 A great answer must:
 - Re-cut the plan to the council's headings and criteria in order, within the limit.
@@ -64,7 +64,7 @@ A great answer must:
 
 ## 7. Starting a business in India
 
-A made-up founder in Pune asks for a full list of registrations, fees and tax rules for a small manufacturing unit.
+A founder in Pune asks for a full list of registrations, fees and tax rules for a small manufacturing unit.
 
 A great answer must:
 - Say clearly that the kit covers the US, UK and EU in detail and, for India, points to the official source.

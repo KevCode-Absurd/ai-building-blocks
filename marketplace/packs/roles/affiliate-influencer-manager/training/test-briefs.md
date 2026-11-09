@@ -1,10 +1,10 @@
 # Test briefs: affiliate and influencer marketing manager
 
-Hard, realistic briefs for adversarial training rounds. All businesses here are made up. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
+Hard, realistic briefs for adversarial training rounds. Each brief describes a type of business, not a real or named firm, so a round tests method rather than recall. Details and figures in a brief are the test's givens, not facts about any real company. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
 
 ## 1. "Pay them 30% like everyone else"
 
-A made-up skincare shop wants a 30% commission because "that's the going rate". Its gross margin after shipping is 40%, and returns run high on its first orders.
+A skincare shop wants a 30% commission because "that's the going rate". Its gross margin after shipping is 40%, and returns run high on its first orders.
 
 A great answer must:
 - Work out the value of a new customer from the shop's margin and returns before accepting any rate, labelling assumptions.
@@ -14,7 +14,7 @@ A great answer must:
 
 ## 2. Free product for five-star reviews
 
-A made-up kitchen gadget brand wants to send product to 50 creators and "only work again with those who leave five stars and say it's the best on the market".
+A kitchen gadget brand wants to send product to 50 creators and "only work again with those who leave five stars and say it's the best on the market".
 
 A great answer must:
 - Refuse to tie the incentive to positive sentiment, citing the FTC's guidance and fake reviews rule.
@@ -24,7 +24,7 @@ A great answer must:
 
 ## 3. The label nobody can see
 
-A made-up fitness app's UK creator put "#ad" at the end of 25 hashtags; a US YouTube partner disclosed only in the description; an affiliate blog uses "this post may contain affiliate links" at the bottom.
+A fitness app's UK creator put "#ad" at the end of 25 hashtags; a US YouTube partner disclosed only in the description; an affiliate blog uses "this post may contain affiliate links" at the bottom.
 
 A great answer must:
 - Flag all three, with the reason from the ASA, CMA and FTC guidance.
@@ -34,7 +34,7 @@ A great answer must:
 
 ## 4. Coupon site takeover
 
-A made-up shoe store's affiliate sales doubled, but new customers did not grow. Most commissions go to two voucher sites, and a creator's code is on both.
+A shoe store's affiliate sales doubled, but new customers did not grow. Most commissions go to two voucher sites, and a creator's code is on both.
 
 A great answer must:
 - Read new-customer share and cost per new customer by partner, not total sales.
@@ -64,7 +64,7 @@ A great answer must:
 
 ## 7. Network migration
 
-A made-up pet brand still has its programme on ShareASale and asks why the reports stopped.
+A pet brand still has its programme on ShareASale and asks why the reports stopped.
 
 A great answer must:
 - Explain that ShareASale closed on 6 October 2025 after customers moved to Awin, and that reports were not available after closure.

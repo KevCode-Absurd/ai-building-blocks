@@ -1,10 +1,10 @@
 # Test briefs: ecommerce analyst
 
-Hard, realistic briefs for adversarial training rounds. All businesses here are made up. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
+Hard, realistic briefs for adversarial training rounds. Each brief describes a type of business, not a real or named firm, so a round tests method rather than recall. Details and figures in a brief are the test's givens, not facts about any real company. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
 
 ## 1. The 30% drop
 
-A made-up candle shop on Shopify sends 8 weeks of GA4 and store exports. GA4 revenue fell 30% last week. The owner wants to cut Meta spend today. A theme update went live last Tuesday.
+A candle shop on Shopify sends 8 weeks of GA4 and store exports. GA4 revenue fell 30% last week. The owner wants to cut Meta spend today. A theme update went live last Tuesday.
 
 A great answer must:
 - Compare store orders with GA4 purchases by day before reading the drop.
@@ -15,7 +15,7 @@ A great answer must:
 
 ## 2. Best customers from a tiny base
 
-A made-up ceramics studio has 280 orders from 190 customers over two years and wants "an RFM analysis with 11 segments like Shopify".
+A ceramics studio has 280 orders from 190 customers over two years and wants "an RFM analysis with 11 segments like Shopify".
 
 A great answer must:
 - Explain that fifths of 190 customers make tiny, unstable groups.
@@ -26,7 +26,7 @@ A great answer must:
 
 ## 3. Revenue up, cash down
 
-A made-up supplements brand grew revenue 25% in a quarter with free delivery on all orders and a 20% first-order discount. Cash is tighter than ever.
+A supplements brand grew revenue 25% in a quarter with free delivery on all orders and a 20% first-order discount. Cash is tighter than ever.
 
 A great answer must:
 - Build contribution per order in layers, with cost coverage stated.
@@ -37,7 +37,7 @@ A great answer must:
 
 ## 4. The returns spike that isn't
 
-A made-up fashion store's January report shows returns at double December's rate. The owner wants to drop the free returns policy.
+A fashion store's January report shows returns at double December's rate. The owner wants to drop the free returns policy.
 
 A great answer must:
 - Point out that refunds are booked on the refund date, so December's orders are returning in January.
@@ -48,7 +48,7 @@ A great answer must:
 
 ## 5. Channel credit war
 
-A made-up homeware brand's Google Ads, Meta and email tool together claim 1,450 orders last month. The store took 1,020. Each agency wants more budget.
+A homeware brand's Google Ads, Meta and email tool together claim 1,450 orders last month. The store took 1,020. Each agency wants more budget.
 
 A great answer must:
 - Explain that each platform credits itself, so totals overlap.
@@ -59,7 +59,7 @@ A great answer must:
 
 ## 6. The cohort panic
 
-A made-up pet food store says "repeat buying collapsed": the September 2026 cohort's 90-day repeat rate is 4%, against 38% a year ago.
+A pet food store says "repeat buying collapsed": the September 2026 cohort's 90-day repeat rate is 4%, against 38% a year ago.
 
 A great answer must:
 - Notice the September cohort can't have a full 90-day window yet.

@@ -1,10 +1,10 @@
 # Test briefs: content marketer
 
-Hard, realistic briefs for adversarial training rounds. All businesses here are made up. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
+Hard, realistic briefs for adversarial training rounds. Each brief describes a type of business, not a real or named firm, so a round tests method rather than recall. Details and figures in a brief are the test's givens, not facts about any real company. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
 
 ## 1. The thin brief
 
-"We need a blog. Can you give us 20 topics?" The client is a made-up local electrician. Nothing else is given.
+"We need a blog. Can you give us 20 topics?" The client is a local electrician. Nothing else is given.
 
 A great answer must:
 - Ask, in five questions or fewer with defaults, for the business goal, the services that matter most, the area served, the questions customers ask, and the hours available.
@@ -14,7 +14,7 @@ A great answer must:
 
 ## 2. The scaled content request
 
-A made-up roofing company wants "one page for each of the 120 towns we cover, written by AI, same template".
+A roofing company wants "one page for each of the 120 towns we cover, written by AI, same template".
 
 A great answer must:
 - Explain the risk plainly: near-identical pages made mainly to rank fit Google's scaled content abuse policy, and rarely convert.
@@ -24,7 +24,7 @@ A great answer must:
 
 ## 3. Conflicting goals
 
-A made-up software company's founder wants "thought leadership" opinion pieces; the sales lead wants comparison and pricing pages because prospects keep asking.
+A software company's founder wants "thought leadership" opinion pieces; the sales lead wants comparison and pricing pages because prospects keep asking.
 
 A great answer must:
 - Name the conflict and tie both to the business goal.
@@ -33,7 +33,7 @@ A great answer must:
 
 ## 4. Tricky data
 
-A made-up bakery's blog traffic fell 40% after a Google core update. The owner wants to "rewrite everything".
+A bakery's blog traffic fell 40% after a Google core update. The owner wants to "rewrite everything".
 
 A great answer must:
 - Check the facts first: which pages and queries fell, whether the drop matches the update dates, whether tracking or seasonality explains part of it.
@@ -43,7 +43,7 @@ A great answer must:
 
 ## 5. The vanity metric client
 
-A made-up yoga studio reports "great" content results: email open rate up from 25% to 55% in a month. Bookings are flat.
+A yoga studio reports "great" content results: email open rate up from 25% to 55% in a month. Bookings are flat.
 
 A great answer must:
 - Explain that Apple Mail Privacy Protection can inflate opens, so opens are not reliable.
@@ -52,7 +52,7 @@ A great answer must:
 
 ## 6. AI draft with problems
 
-A made-up pet food brand pastes an AI-written article with three statistics, two "expert quotes" and no sources, and asks for "a quick polish".
+A pet food brand pastes an AI-written article with three statistics, two "expert quotes" and no sources, and asks for "a quick polish".
 
 A great answer must:
 - Refuse to polish unverified statistics and quotes into publishable copy; flag each one.
@@ -62,7 +62,7 @@ A great answer must:
 
 ## 7. Zero-click worries
 
-A made-up accounting firm's guides now appear in AI summaries but clicks are down. The partner asks whether content is still worth it.
+An accounting firm's guides now appear in AI summaries but clicks are down. The partner asks whether content is still worth it.
 
 A great answer must:
 - Use dated evidence on how AI summaries affect clicks, with its limits.

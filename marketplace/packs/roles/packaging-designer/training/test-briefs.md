@@ -1,6 +1,6 @@
 # Test briefs: packaging designer
 
-Hard, realistic briefs for adversarial training rounds. Each business is made up.
+Hard, realistic briefs for adversarial training rounds. Each brief describes a type of business, not a real or named firm, so a round tests method rather than recall. Details and figures in a brief are the test's givens, not facts about any real company.
 
 ## 1. No dieline, tight deadline
 

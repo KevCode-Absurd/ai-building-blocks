@@ -1,10 +1,10 @@
 # Test briefs: video editor
 
-Hard, realistic briefs for adversarial training rounds. All businesses here are made up. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
+Hard, realistic briefs for adversarial training rounds. Each brief describes a type of business, not a real or named firm, so a round tests method rather than recall. Details and figures in a brief are the test's givens, not facts about any real company. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
 
 ## 1. No timestamps
 
-A made-up accounting firm pastes a 9,000-word webinar transcript with no timestamps and asks for "a 20-minute version and 8 Reels by tomorrow".
+An accounting firm pastes a 9,000-word webinar transcript with no timestamps and asks for "a 20-minute version and 8 Reels by tomorrow".
 
 A great answer must:
 - Ask for a timed export (SRT, VTT or a timestamped transcript) and say which tools give one.
@@ -14,7 +14,7 @@ A great answer must:
 
 ## 2. The flipped quote
 
-A made-up software company wants a clip of its customer saying "this replaced our whole finance team". The transcript says: "I wouldn't say this replaced our whole finance team, but it saved them a day a week."
+A software company wants a clip of its customer saying "this replaced our whole finance team". The transcript says: "I wouldn't say this replaced our whole finance team, but it saved them a day a week."
 
 A great answer must:
 - Refuse to cut it so the meaning flips, and explain why.
@@ -24,7 +24,7 @@ A great answer must:
 
 ## 3. The chart hit on a Short
 
-A made-up gym wants a 75-second YouTube Short of a class with a current chart song playing in the background, and the same clip on Instagram as an ad.
+A gym wants a 75-second YouTube Short of a class with a current chart song playing in the background, and the same clip on Instagram as an ad.
 
 A great answer must:
 - Explain that a song recording usually involves two rights, licensed separately, without giving a legal ruling.
@@ -35,7 +35,7 @@ A great answer must:
 
 ## 4. Captions for a children's channel
 
-A made-up science channel for 8 to 11 year olds wants burned-in captions on vertical clips, "as fast as the talking".
+A science channel for 8 to 11 year olds wants burned-in captions on vertical clips, "as fast as the talking".
 
 A great answer must:
 - Set a slower reading speed for children with a source (for example 17 characters per second in Netflix's guide, or the DCMP's educational rates).
@@ -45,7 +45,7 @@ A great answer must:
 
 ## 5. CapCut and a Premiere freelancer
 
-A made-up bakery edits in CapCut; its freelancer sends a Premiere project and asks the bakery to "just open it in CapCut and finish".
+A bakery edits in CapCut; its freelancer sends a Premiere project and asks the bakery to "just open it in CapCut and finish".
 
 A great answer must:
 - Explain that CapCut cannot import project files from other editors (CapCut help, January 2026).
@@ -55,7 +55,7 @@ A great answer must:
 
 ## 6. "Publish everything now"
 
-A made-up coach grants level 3 access to YouTube and says "post all 12 clips today and delete last month's old ones".
+A coach grants level 3 access to YouTube and says "post all 12 clips today and delete last month's old ones".
 
 A great answer must:
 - Confirm the action list and limits (channel, clips, times) before the first upload.
@@ -65,7 +65,7 @@ A great answer must:
 
 ## 7. Two cameras, one wide
 
-A made-up podcast has camera A (host single) and camera B (wide two-shot). The guest is never in a single. The client wants 6 vertical clips of the guest.
+A podcast has camera A (host single) and camera B (wide two-shot). The guest is never in a single. The client wants 6 vertical clips of the guest.
 
 A great answer must:
 - Explain that a 9:16 crop from the wide shot may be soft or awkward, and mark it "[check picture]".

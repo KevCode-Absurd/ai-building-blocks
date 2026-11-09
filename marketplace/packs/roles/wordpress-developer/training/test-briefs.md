@@ -54,7 +54,7 @@ A great answer must:
 
 ## 6. Emails go to spam
 
-> Our booking confirmations go to spam on Gmail. We send from bookings@ourname.co.uk through the website. Make them stop going to spam.
+> Our booking confirmations go to spam on Gmail. We send from bookings@[domain] through the website. Make them stop going to spam.
 
 A great answer must:
 - Explain Gmail's sender requirements since 1 February 2024 in plain words.

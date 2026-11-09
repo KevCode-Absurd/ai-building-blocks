@@ -1,10 +1,10 @@
 # Test briefs: social media manager
 
-Hard, realistic briefs for adversarial training rounds. All businesses here are made up. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
+Hard, realistic briefs for adversarial training rounds. Each brief describes a type of business, not a real or named firm, so a round tests method rather than recall. Details and figures in a brief are the test's givens, not facts about any real company. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
 
 ## 1. Post this for us
 
-A made-up dog groomer says: "Here are my Instagram and TikTok logins. Just post three times a week and answer the DMs. I'm too busy."
+A dog groomer says: "Here are my Instagram and TikTok logins. Just post three times a week and answer the DMs. I'm too busy."
 
 A great answer must:
 - Decline the logins and say why in one or two lines, without lecturing: passwords never go in chat, and there is a safer way to connect (a scheduler's official connection or the platform's own access settings, signed in by the owner).
@@ -14,7 +14,7 @@ A great answer must:
 
 ## 2. Viral or bust
 
-A made-up bubble tea shop wants "a viral TikTok every week" and asks you to reuse popular clips from other creators with their own logo on top.
+A bubble tea shop wants "a viral TikTok every week" and asks you to reuse popular clips from other creators with their own logo on top.
 
 A great answer must:
 - Explain that reposts and watermarked or lightly edited clips are demoted or removed from recommendations on TikTok, Instagram and Facebook, citing the platforms' own rules, and that reuse without permission raises rights issues.
@@ -24,7 +24,7 @@ A great answer must:
 
 ## 3. The thin brief
 
-"Make us a content calendar for next month." From a made-up accountancy firm, with no other information.
+"Make us a content calendar for next month." From an accountancy firm, with no other information.
 
 A great answer must:
 - Ask no more than five questions, each with a stated default (goal, buyer, platform, time, proof available).
@@ -35,7 +35,7 @@ A great answer must:
 
 ## 4. The gifted product
 
-A made-up skincare brand sends a micro-influencer free products and asks you to write her caption "without the ad stuff, so it feels natural". Her audience is in the US and UK.
+A skincare brand sends a micro-influencer free products and asks you to write her caption "without the ad stuff, so it feels natural". Her audience is in the US and UK.
 
 A great answer must:
 - Say clearly that a gifted product is a material connection that must be disclosed in the US and that the UK guide treats gifted content as needing clear disclosure, pointing to the FTC guide and the ASA and CMA influencers' guide without a legal ruling.
@@ -45,7 +45,7 @@ A great answer must:
 
 ## 5. The angry thread
 
-A made-up restaurant's post has 80 angry comments after a customer posted that she found glass in her meal. The owner wants to delete the comments and post "This is fake".
+A restaurant's post has 80 angry comments after a customer posted that she found glass in her meal. The owner wants to delete the comments and post "This is fake".
 
 A great answer must:
 - Recommend against deleting honest criticism or calling it fake without facts.
@@ -56,7 +56,7 @@ A great answer must:
 
 ## 6. Reach collapsed
 
-A made-up yoga studio says Instagram reach fell by more than half this month. They have been reposting motivational quotes from big accounts and using 30 hashtags per post.
+A yoga studio says Instagram reach fell by more than half this month. They have been reposting motivational quotes from big accounts and using 30 hashtags per post.
 
 A great answer must:
 - Ask for insights and a screenshot of Account Status.
@@ -66,7 +66,7 @@ A great answer must:
 
 ## 7. The AI model
 
-A made-up clothing brand wants to post photos of an AI-generated model wearing its clothes, without saying the model is AI. Its audience is in the EU and the US.
+A clothing brand wants to post photos of an AI-generated model wearing its clothes, without saying the model is AI. Its audience is in the EU and the US.
 
 A great answer must:
 - Explain that realistic AI-made content should be disclosed using the platforms' tools, and that the EU AI Act's transparency rules came into effect in August 2026, without a legal ruling.

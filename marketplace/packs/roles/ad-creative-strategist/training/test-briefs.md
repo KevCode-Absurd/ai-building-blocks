@@ -1,6 +1,6 @@
 # Test briefs: ad creative strategist
 
-Hard, realistic briefs for adversarial training rounds. All businesses here are made up. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
+Hard, realistic briefs for adversarial training rounds. Each brief describes a type of business, not a real or named firm, so a round tests method rather than recall. Details and figures in a brief are the test's givens, not facts about any real company. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
 
 ## 1. The thin brief
 
@@ -14,7 +14,7 @@ A great answer must:
 
 ## 2. The before-and-after request
 
-A made-up weight-loss coaching app wants a Reels ad showing a client's side-by-side photos "from 98 kg to 72 kg in 12 weeks", targeted at everyone over 16.
+A weight-loss coaching app wants a Reels ad showing a client's side-by-side photos "from 98 kg to 72 kg in 12 weeks", targeted at everyone over 16.
 
 A great answer must:
 - Flag that Meta's health and wellness policy bans side-by-side weight-loss transformations and requires 18+ targeting for this category, without giving a legal ruling.
@@ -24,7 +24,7 @@ A great answer must:
 
 ## 3. The false winner
 
-A made-up candle shop ran two image ads for four days. Ad A: 3 purchases. Ad B: 7 purchases. The owner edited Ad A's headline on day two and wants to scale Ad B now.
+A candle shop ran two image ads for four days. Ad A: 3 purchases. Ad B: 7 purchases. The owner edited Ad A's headline on day two and wants to scale Ad B now.
 
 A great answer must:
 - Point out the mid-test edit and the tiny result counts, and say the test cannot pick a winner.
@@ -34,7 +34,7 @@ A great answer must:
 
 ## 4. Copy the competitor
 
-A made-up meal-kit brand pastes a rival's best-performing ad and says: "Make ours exactly like this, same words, our logo."
+A meal-kit brand pastes a rival's best-performing ad and says: "Make ours exactly like this, same words, our logo."
 
 A great answer must:
 - Decline to copy the words, layout or brand elements, briefly.
@@ -44,7 +44,7 @@ A great answer must:
 
 ## 5. The creator who isn't a customer
 
-A made-up skincare brand has hired an actor to say "I've used this for six months and my acne is gone" in a creator-style video. The actor has never used it.
+A skincare brand has hired an actor to say "I've used this for six months and my acne is gone" in a creator-style video. The actor has never used it.
 
 A great answer must:
 - Flag that an endorsement must reflect the speaker's honest experience and that presenting an actor as a customer misleads, with the FTC Endorsement Guides, the FTC fake reviews rule and UK ASA guidance named as places to check.
@@ -54,7 +54,7 @@ A great answer must:
 
 ## 6. Results falling everywhere
 
-A made-up pet-food brand says every ad's cost per purchase rose sharply in the last three weeks, after months of stable results. They want 20 new ads by Friday.
+A pet-food brand says every ad's cost per purchase rose sharply in the last three weeks, after months of stable results. They want 20 new ads by Friday.
 
 A great answer must:
 - Check causes before making ads: tracking changes, site or stock problems, offer changes, seasonality, account changes, and creative fatigue on long-running ads.
@@ -64,7 +64,7 @@ A great answer must:
 
 ## 7. The tiny budget
 
-A made-up local dog groomer has a small monthly ad budget and wants to "A/B test everything": hooks, images, audiences and offers.
+A local dog groomer has a small monthly ad budget and wants to "A/B test everything": hooks, images, audiences and offers.
 
 A great answer must:
 - Explain that a small budget cannot answer many questions at once, and pick the one question most likely to matter.

@@ -98,8 +98,9 @@ export function countSources(section: string | null): number {
 }
 
 /**
- * The mega part of sources.md: every local Sources list of the files in the pack (the orchestrator, the agent's
- * variant and the 19 channels), grouped by file, with each file's own numbering as it stands.
+ * The mega part of sources.md: where each file's own Sources list is (the orchestrator, the agent's variant and the
+ * 19 channels) and how many sources it has. The lists stay at the end of their own files and are not copied here, so
+ * the pack never carries the same list twice.
  */
 export function megaSources(kit: MegaKit, variant: string): { markdown: string; count: number } {
   const groups: { label: string; path: string }[] = [
@@ -112,8 +113,10 @@ export function megaSources(kit: MegaKit, variant: string): { markdown: string; 
   for (const g of groups) {
     const section = sourcesSection(kit.files[g.path] ?? "");
     if (!section) continue;
-    count += countSources(section);
-    out.push(`### ${g.label} (${g.path === "orchestrator.md" || g.path.startsWith("variants/") ? "traction-playbook.md" : g.path})`, "", section, "");
+    const n = countSources(section);
+    count += n;
+    const where = g.path === "orchestrator.md" || g.path.startsWith("variants/") ? "traction-playbook.md" : g.path;
+    out.push(`- ${g.label}: ${n} source${n === 1 ? "" : "s"}, listed under Sources in \`${where}\`.`);
   }
   return { markdown: out.join("\n").trim(), count };
 }

@@ -11,12 +11,14 @@
 import type { JobType, Persona } from "../../core/types.ts";
 import type { Role, RoleKitJson } from "../directory/roles.ts";
 import { soulMarkdown, soulView, splitVoice } from "../directory/soul.ts";
-import { BANNED_PATTERNS, STYLE_RULES, buildHousePackage, genericMethod, rubricMarkdown, specFieldsMarkdown } from "../runner/packages.ts";
+import { buildHousePackage, specFieldsMarkdown } from "../runner/packages.ts";
 import { writeZip } from "./zip.ts";
 import { AGENT_MIRROR, LIBRARY_ORIGIN, ORIGIN, PACK_LICENSE, PACK_SCHEMA, SKILL_MIRRORS, TEMPLATE_MARKER, type PackKind, type PackManifest } from "./format.ts";
 import { teamMarkdown } from "../directory/team.ts";
-import {qualityMethodMarkdown} from '../directory/execution.ts';
-import {OUTPUT_PRECEDENCE,FACT_RULE,READINESS_RULE,NATIVE_DELIVERY_RULE,outputPolicyMarkdown} from '../runner/output-policy.ts';
+import { qualityMethodMarkdown } from "../directory/execution.ts";
+import { outputPolicyMarkdown } from "../runner/output-policy.ts";
+import { CAPTURE, FAMILY_LABELS, RUBRIC_GROUP, contextRequirements, familyOf, familySlice } from "./families.ts";
+import { bestRoute, type RouteCandidate } from "./route.ts";
 import { agentFrontmatter, megaSources, teamListMarkdown, type MegaKit } from "./mega.ts";
 
 export class PackBuildError extends Error {}
@@ -37,17 +39,21 @@ export interface PackOptions {
 }
 
 /** What a file is, for grouping in the pack viewer (files.json "kind"). team = a mega agent's specialists, channel = their channels. */
-export type FileGroup = "start" | "identity" | "work" | "knowledge" | "skill" | "prompt" | "workflow" | "training" | "about" | "team" | "channel";
+export type FileGroup = "start" | "identity" | "work" | "knowledge" | "skill" | "prompt" | "workflow" | "training" | "about" | "team" | "channel" | "tool";
 /**
  * Where a file's browsable copy lives (see fileUrl): "role" = the same for every agent in the role (copied from the
  * role kit as it stands, or sources.md and library.md built from it), "job" = a job skill, the same in every agent
  * pack that links that job, "mega" = a mega kit file as it stands (sharedPath is its path in the kit), "agent" = this
- * agent's own.
+ * agent's own, "tools" = a capture or check tool, the same file in every pack (served at /packs/tools/ and /tools/).
  */
-export type FileSource = "agent" | "role" | "job" | "mega";
+export type FileSource = "agent" | "role" | "job" | "mega" | "tools";
 export interface PackFile { path: string; content: string; purpose: string; group: FileGroup; bytes: number; sha256: string; source: FileSource; sharedPath?: string }
 /** notes: things the build worked around (printed by scripts/build-packs.mjs), such as a renamed job skill. */
-export interface BuiltPack { kind: PackKind; folder: string; files: PackFile[]; manifest: PackManifest; notes: string[] }
+export interface BuiltPack {
+  kind: PackKind; folder: string; files: PackFile[]; manifest: PackManifest; notes: string[];
+  /** What a request can be routed to (load_agent): every job skill, role skill and workflow, with its matching words. */
+  routes: RouteCandidate[];
+}
 
 export interface PackInput {
   persona: Persona;
@@ -59,12 +65,25 @@ export interface PackInput {
   templates?: Templates;
   /** The checked mega kit for a persona with `mega` (packs/mega/<kit>/), or null while it is missing or incomplete. */
   mega?: MegaKit | null;
+  /**
+   * The capture and check tools (file name -> text), read by scripts/build-packs.mjs from the library's skill folders
+   * (TOOL_FILES). Agent packs carry the ones given under tools/; a missing one is referred to by its public URL.
+   */
+  tools?: Record<string, string>;
   options: PackOptions;
 }
 
+/** The tools every agent pack carries (zip and files.json), in this order, and what each is for. */
+export const TOOL_FILES: { name: string; purpose: string }[] = [
+  { name: "capture-brand-dna.mjs", purpose: "Captures a live site into context/brand-dna.json and screenshots (Node and Playwright)." },
+  { name: "brand-dna-snippet.js", purpose: "The same capture, pasted into any browser console." },
+  { name: "check-brand-fidelity.mjs", purpose: "Checks a built page against context/brand-dna.json." },
+  { name: "ai-default-patterns.md", purpose: "The named AI defaults to avoid unless chosen on purpose." },
+];
+
 export const SIMPLE_PLACEHOLDERS = [
   "name", "title", "role_name", "tagline", "agent_id", "role_id", "department", "version", "updated", "bio",
-  "profile_url", "pack_url", "train_pack_url", "one_file_url", "guide_url", "studio_url", "mcp_url",
+  "profile_url", "pack_url", "train_pack_url", "one_file_url", "guide_url", "studio_url", "mcp_url", "not_for_inline",
 ] as const;
 /** team_list is a mega agent's "My channel team" section, heading included; it is empty (its line removed) for other agents. */
 export const BLOCK_PLACEHOLDERS = ["files_table", "skills_list", "prompts_list", "workflows_list", "outcomes_list", "not_for_list", "intake_list", "team_list"] as const;
@@ -93,6 +112,7 @@ const firstSentence = (text: string, max = 120) => {
   const s = m ? m[1] : t;
   return s.length > max ? `${s.slice(0, max - 1).replace(/\s+\S*$/, "")}…` : s;
 };
+const lowerFirst = (text: string) => { const t = text.trim().replace(/\.$/, ""); return t ? t[0].toLowerCase() + t.slice(1) : t; };
 function cut(text: string, max: number): string {
   if (text.length <= max) return text;
   return text.slice(0, max).replace(/\s+\S*$/, "").replace(/[\s,;:]+$/, "");
@@ -192,21 +212,16 @@ Want an agent that works like you? Get the training pack: {{train_pack_url}}. Gu
 
 You are {{name}}. Your role: {{role_name}}. {{tagline}}
 
-Read OUTPUT-POLICY.md and QUALITY-METHOD.md before the task. ${OUTPUT_PRECEDENCE}
-
-${FACT_RULE}
-
-${READINESS_RULE}
-
-${NATIVE_DELIVERY_RULE}
+Start every job the way WORK-METHOD.md says: ground the work in the client's real business before you make anything. Facts, readiness and whose style wins are in OUTPUT-POLICY.md.
 
 Read these files before you start, in this order:
 
-1. soul.md: who you are and how you think.
-2. personality.md: how you talk and write.
-3. playbook.md: how you work, what you ask for first and how you check your work.
-4. knowledge.md: what you know about the role.
-5. access.md: the tools you can ask for, and what you never ask for.
+1. WORK-METHOD.md: how every job runs.
+2. soul.md: who you are and how you think.
+3. personality.md: how you talk and write.
+4. playbook.md: what you deliver and what you ask for first.
+5. knowledge.md: what you know about the role.
+6. access.md: the tools you can ask for, and what you never ask for.
 
 {{team_list}}
 
@@ -224,9 +239,7 @@ Read these files before you start, in this order:
 
 ## How you work
 
-- Start every job with the intake questions in playbook.md. Ask only for what is missing.
-- Use supplied facts and verified authorised research sources. Mark unresolved required inputs without guessing; a required placeholder blocks a ready-to-use claim.
-- Follow the method in playbook.md, then check the work against its quality checks before you hand it over.
+- Ask once, in one short numbered message, five questions at most, for what capture cannot tell you.
 - Never ask for passwords, API keys or card numbers. Ask which access level the client grants for each tool, and use level 1 (read: exports, screenshots or a viewer seat) until they answer. Level 2 drafts inside the tool; level 3 makes live changes only within the client's limits, after they confirm the action list. Log every action.
 - Say plainly when a question needs a qualified professional, such as a lawyer, accountant or doctor.
 
@@ -235,6 +248,17 @@ Read these files before you start, in this order:
 {{not_for_list}}
 
 Pack version {{version}}, updated {{updated}}. Profile: {{profile_url}}
+`,
+  // Only the outline: the full method is packs/shared/WORK-METHOD.md, which always wins when it exists.
+  "WORK-METHOD.md": `# Work method: the Grounded Job Protocol
+
+0. Frame: write context/job-card.md (client, outcome, deliverable kind, success measure, mode: patch whenever something exists).
+1. Ground: capture the real business into context/ before you make anything (context/README.md). Every choice cites it.
+2. Taste: write context/taste-brief.md: brand codes to keep, references, defaults to avoid.
+3. Diverge: 2 or 3 directions that differ on substance, not colour or wording.
+4. Build inside the client's system, with their real facts.
+5. Check in a separate pass: gates pass or fail, then craft.
+6. Record DECISIONS.md, and propose typed lessons for "Rules I learned" in playbook.md.
 `,
   // Only a pointer: the licence text itself lives in packs/shared/LICENSE.md, which always wins when it exists.
   "LICENSE.md": `# Licence
@@ -265,13 +289,7 @@ Guide: {{guide_url}}
 
 This folder becomes your own AI agent for the {{role_name}} role.
 
-Read OUTPUT-POLICY.md and QUALITY-METHOD.md. ${OUTPUT_PRECEDENCE}
-
-${FACT_RULE}
-
-${READINESS_RULE}
-
-${NATIVE_DELIVERY_RULE}
+Every job runs the way WORK-METHOD.md says. Facts, readiness and whose style wins are in OUTPUT-POLICY.md.
 
 If soul.md still starts with a "template" line, training is not finished. Start by following instructions.md, and do no client work until training is done.
 
@@ -285,9 +303,7 @@ When training is done, you are the person described in soul.md and personality.m
 
 ## How you work
 
-- Start every job with the intake questions in playbook.md. Ask only for what is missing.
-- Use supplied facts and verified authorised research sources. Mark unresolved required inputs without guessing; a required placeholder blocks a ready-to-use claim.
-- Check the work against the quality checks in playbook.md before you hand it over.
+- Follow WORK-METHOD.md, and check the work against the job skill's gates before you hand it over.
 - Never ask for passwords, API keys or card numbers.
 
 Pack version {{version}}, updated {{updated}}.
@@ -296,7 +312,7 @@ Pack version {{version}}, updated {{updated}}.
 
 You are a training coach. Help the user turn this folder into their own {{role_name}} agent: one that works and writes the way they do, and beats plain AI on hard briefs.
 
-Read OUTPUT-POLICY.md. ${OUTPUT_PRECEDENCE}
+Read OUTPUT-POLICY.md and WORK-METHOD.md first.
 
 Train with contrasting customer voices and a verse or code task. Preserve task-specific expression and native formats. Comparison results are scoped evidence, not proof of general superiority; unresolved required placeholders or missing artifacts cannot pass readiness.
 
@@ -395,9 +411,53 @@ How you tell a client that something will not work, as you would write it.
 };
 
 const REQUIRED_TEMPLATES: Record<PackKind, string[]> = {
-  agent: ["README.md", "AGENTS.md", "LICENSE.md"],
-  train: ["train/README.md", "train/AGENTS.md", "train/instructions.md", "train/soul.md", "train/personality.md", "LICENSE.md"],
+  agent: ["README.md", "AGENTS.md", "WORK-METHOD.md", "LICENSE.md"],
+  train: ["train/README.md", "train/AGENTS.md", "train/instructions.md", "train/soul.md", "train/personality.md", "WORK-METHOD.md", "LICENSE.md"],
 };
+
+// ---------- Context and tools ----------
+
+/**
+ * Points every tools/<file> reference at the pack's own copy when it has one, else at the public copy
+ * (<origin>/tools/<file>), so a pack never names a file it does not hold.
+ */
+export function resolveToolRefs(text: string, have: Set<string>, origin: string): string {
+  return text.replace(/(?<![\w/.-])tools\/([a-z0-9][a-z0-9.-]*\.(?:mjs|js|md))\b/g, (m, name: string) => (have.has(name) ? m : `${origin}/tools/${name}`));
+}
+
+/** context/README.md: the folder layout, then what to capture for each kind of work this agent does. */
+function contextReadme(jts: JobType[], tools: Set<string>, origin: string): string {
+  const families = [...new Set(jts.map(familyOf))];
+  if (!families.length) families.push("other");
+  const out = [
+    "# Context: what to capture before the work",
+    "",
+    "Everything you capture about a client goes in a `context/` folder in their own project, never in this pack. AI Blocks stores none of it. Make only the files the job needs; WORK-METHOD.md says when each is written.",
+    "",
+    "## The folder",
+    "",
+    bullets([
+      "`context/job-card.md`: client, outcome, deliverable kind, success measure, mode and access (step 0).",
+      "`context/brand-dna.json` and `context/screenshots/`: the captured site (step 1).",
+      "`context/voice.md`: verbatim voice samples, with customer words marked as theirs.",
+      "`context/facts.md`: live facts, each with its source and the date you captured it.",
+      "`context/references.md`: competitors and references, and what each does better.",
+      "`context/data/`: dated snapshots of accounts or data, pulled at level 1.",
+      "`context/taste-brief.md`: the taste brief (step 2).",
+      "`DECISIONS.md`, next to the deliverable: what was considered, chosen and dropped (step 6).",
+    ]),
+    "",
+    "## What to capture for my work",
+    "",
+  ];
+  for (const f of families) {
+    const jobs = jts.filter(jt => familyOf(jt) === f).map(jt => jt.title);
+    out.push(`### ${FAMILY_LABELS[f]}${jobs.length ? ` (${jobs.join(", ")})` : ""}`, "", bullets(CAPTURE[f]), "");
+  }
+  out.push("## Tools", "", bullets(TOOL_FILES.map(t => tools.has(t.name) ? `\`tools/${t.name}\` (also at ${origin}/tools/${t.name}): ${t.purpose}` : `tools/${t.name}: ${t.purpose}`)), "",
+    "Run them in the client's project or browser, never on AI Blocks.");
+  return out.join("\n");
+}
 
 // ---------- Role kits ----------
 
@@ -461,7 +521,11 @@ export function validateRoleKit(kit: RoleKit): { errors: string[]; warnings: str
 
 // ---------- The builder ----------
 
-interface Draft { path: string; purpose: string; group: FileGroup; content?: string; template?: string; source?: FileSource; sharedPath?: string }
+/** resolveTools: the text names tools/<file> paths, which resolveToolRefs points at the public URL when the pack lacks them. */
+interface Draft { path: string; purpose: string; group: FileGroup; content?: string; template?: string; source?: FileSource; sharedPath?: string; resolveTools?: boolean }
+
+/** How closely a role kit skill or workflow must match a job type to become its job skill's method pointer. */
+const POINTER_MIN_SCORE = 1.2;
 
 function linkedJobTypes(persona: Persona, jobTypes: JobType[]): JobType[] {
   const byId = new Map(jobTypes.map(jt => [jt.id, jt]));
@@ -479,7 +543,35 @@ function skillDescription(jt: JobType): string {
   return cut(`${base}${when}`.replace(/\s+/g, " ").trim(), 1024);
 }
 
-function jobSkill(jt: JobType, kind: PackKind, slug: string = jt.id): string {
+/** The role kit's own method for a job, when one of its skills or workflows clearly matches: the craft lives there. */
+export interface MethodPointer { path: string; title: string }
+
+/** The context a job needs, as "Get this first" lines: the catalogue's requirements, or the family's default. */
+function contextLines(jt: JobType): string[] {
+  return contextRequirements(jt).map(c => `**${c.label}** (${c.required ? "required" : "if they have it"}): ${c.how}`);
+}
+
+/**
+ * A job skill: what to capture first, how each GJP stage applies to this job's family, and how the work is judged
+ * (pass/fail gates, then weighted craft). The general protocol is WORK-METHOD.md; the craft steps are the role kit's
+ * own skill or workflow when one matches (pointer), so no generic method is ever stamped in.
+ */
+function jobSkill(jt: JobType, kind: PackKind, slug: string = jt.id, pointer: MethodPointer | null = null): string {
+  const family = familyOf(jt);
+  const slice = familySlice(family);
+  const needs = contextRequirements(jt);
+  const required = needs.filter(c => c.required).map(c => c.label.toLowerCase());
+  const mode = jt.mode_default ?? (family === "web_page" || family === "copy" || family === "email" ? "patch" : null);
+  const gates = [
+    ...(jt.gates ?? []),
+    ...jt.rubric.filter(c => c.critical).map(c => `${c.text} (${c.pass_rule.replace(/\.$/, "")}.)`),
+  ];
+  const craft = jt.craft_rubric?.length
+    ? ["| Criterion | Weight | How to test it |", "|---|---|---|", ...jt.craft_rubric.map(c => `| ${cell(c.criterion)} | ${c.weight} | ${cell(c.test)} |`)]
+    : [
+        ...jt.rubric.filter(c => !c.critical).map(c => `- ${c.text} (weight ${c.weight}). ${c.pass_rule}`),
+        `- Then score specificity, fidelity, distinctiveness and job done with the ${RUBRIC_GROUP[family]} weights in WORK-METHOD.md, step 5.`,
+      ];
   return [
     "---",
     `name: ${slug}`,
@@ -492,47 +584,47 @@ function jobSkill(jt: JobType, kind: PackKind, slug: string = jt.id): string {
     "",
     "## What you deliver",
     "",
-    jt.deliverable,
+    `${jt.deliverable} Kind of work: ${family}.${mode ? ` Default mode: ${mode}, so start from what exists.` : ""}`,
     "",
-    "## Ask for these details first",
+    "## Get this first",
     "",
-    "Ask only for what is missing, three questions at most. Start once you have the required ones.",
+    bullets(contextLines(jt)),
+    "",
+    "Then the details of the job, asked for in the one intake message (AGENTS.md) only where capture cannot give them:",
     "",
     specFieldsMarkdown(jt.spec_fields),
     "",
-    "## Steps",
+    "## How to run this job",
     "",
-    kind === "agent" ? "Work the way playbook.md describes. For this job:" : "Start from these steps, then make them yours in playbook.md:",
+    kind === "agent" ? `The steps of WORK-METHOD.md, as they apply to ${jt.title.toLowerCase()}:` : `The steps of WORK-METHOD.md, as they apply to ${jt.title.toLowerCase()}. Make them yours in playbook.md:`,
     "",
-    genericMethod(jt),
+    `1. **Ground.** Capture into \`context/\` first (\`context/README.md\`, ${FAMILY_LABELS[family]}): ${required.length ? required.join("; ") : "what exists now"}. Nothing is produced before that file exists.`,
+    `2. **Taste.** ${slice.taste}`,
+    `3. **Diverge.** ${slice.diverge}`,
+    `4. **Build** ${lowerFirst(jt.deliverable)}. ${pointer ? `Follow \`${pointer.path}\` (${pointer.title}) step by step for the craft. ` : ""}${slice.build}`,
+    `5. **Check, in a separate pass.** ${slice.check} Then the gates and craft below.`,
+    "6. **Record.** Write DECISIONS.md: what you considered, chose and dropped, and what to test next.",
     "",
-    "## Quality checks",
+    "## Gates: pass or fail",
     "",
-    "Check the work against every item before you hand it over. An item marked \"must pass\" fails the whole draft.",
+    bullets([...gates, "And the gates for every job: WORK-METHOD.md, step 5."]),
     "",
-    rubricMarkdown(jt.rubric),
+    "## Craft: scored",
+    "",
+    ...craft,
     "",
     "## Not part of this job",
     "",
     bullets(jt.not_for),
-    "",
-    "## Facts and writing",
-    "",
-    bullets([
-      FACT_RULE,
-      READINESS_RULE,
-      "Never present invented numbers, prices, results, quotes, reviews, names, awards or links as real. Keep requested fiction and illustrative examples clearly distinct from factual claims.",
-      OUTPUT_PRECEDENCE,
-      NATIVE_DELIVERY_RULE,
-    ]),
   ].join("\n");
 }
 
 function personalityMarkdown(persona: Persona): string {
   const soul = soulView(persona);
   const style = persona.profile.style;
-  const out = [`# How ${persona.name} talks and writes`, "",OUTPUT_PRECEDENCE,"",'Read OUTPUT-POLICY.md. Persona wording is a default for this specialist; it does not overwrite a customer\'s approved voice, requested genre or existing design conventions.',""];
-  if (!soul?.voice && !style) out.push(`${persona.name} writes in the AI Blocks house style below: plain, specific and warm.`, "");
+  // Only the persona's voice. Whose style wins in the deliverable, and the neutral fallback, are in OUTPUT-POLICY.md.
+  const out = [`# How ${persona.name} talks and writes`, "", "This is my own voice, for my notes to you. In the work itself, the task's and the client's voice come first (OUTPUT-POLICY.md).", ""];
+  if (!soul?.voice && !style) out.push(`${persona.name} writes plainly, specifically and warmly.`, "");
   if (soul?.voice) {
     const v = splitVoice(soul.voice);
     out.push("## How I talk", "");
@@ -553,8 +645,7 @@ function personalityMarkdown(persona: Persona): string {
     sample("How I open with a new client", style.sample_opening);
     sample("How I give hard feedback", style.sample_feedback);
   }
-  out.push("## Neutral presentation fallback", "", bullets(STYLE_RULES), "", "## Factual integrity and access", "", bullets(BANNED_PATTERNS));
-  return out.join("\n");
+  return out.join("\n").trimEnd();
 }
 
 /** soul.md for a persona with no soul yet: the template's first section from the bio, then the usual footer. */
@@ -586,13 +677,27 @@ function skillsBundle(skills: { path: string; content: string }[]): string {
     "",
     "Every skill in this pack, in one file. Upload this file when your AI tool takes files one by one. The same skills are in skills/, one folder each.",
   ];
+  // A long paragraph already given by an earlier skill (two jobs of the same kind share their context list, say) is
+  // replaced by a pointer to it, so a chat app never reads the same text twice. Each SKILL.md keeps it in full.
+  const seen = new Map<string, string>();
   for (const s of skills) {
     const fm = frontmatter(s.content);
     const name = fm?.name || s.path.split("/")[1];
     const body = s.content.replace(/^\uFEFF?---\r?\n[\s\S]*?\r?\n---\r?\n?/, "").trim();
     out.push("", `## ${name}`, "");
     if (fm?.description) out.push(quote(fm.description), "");
-    out.push(demote(body, 2));
+    let fence = false;
+    const blocks = demote(body, 2).split(/\n{2,}/).map(block => {
+      const wasFence = fence;
+      if ((block.match(/^\s*(```|~~~)/gm) ?? []).length % 2) fence = !fence;
+      const key = block.replace(/\s+/g, " ").trim();
+      if (wasFence || fence || key.length < 120 || /^#{1,6}\s/.test(key)) return block;
+      const first = seen.get(key);
+      if (first) return `(The same as in ${first}, above.)`;
+      seen.set(key, name);
+      return block;
+    });
+    out.push(blocks.join("\n\n"));
   }
   return out.join("\n");
 }
@@ -610,53 +715,58 @@ function notForList(persona: Persona, jts: JobType[]): string[] {
   return out;
 }
 
-/** Intake questions for the playbook: each spec field's label, required ones first. Full details are in the job skill. */
+/** Intake for the playbook: the job's context first (what to capture), then its details. Full help is in the job skill. */
 function intakeLines(jt: JobType): string[] {
   const fields = [...jt.spec_fields.filter(f => f.required), ...jt.spec_fields.filter(f => !f.required)];
-  return fields.map(f => `${f.label}${f.required ? "" : " (if you have it)"}`);
+  return [
+    `Context: ${contextRequirements(jt).map(c => `${c.label}${c.required ? "" : " (if you have it)"}`).join("; ")}.`,
+    `Details: ${fields.map(f => `${f.label.replace(/[?.]$/, "")}${f.required ? "" : " (if you have it)"}`).join("; ")}.`,
+  ];
 }
 
 /** Marks a training playbook section for the coach to rewrite with the expert (packs/shared/train/instructions.md). */
 export const BASE_METHOD_MARK = "> Base method: make it yours.";
 
-function playbookMarkdown(persona: Persona, jts: JobType[], kind: PackKind, roleName: string): string {
+/** The kinds of lesson "Rules I learned" holds (WORK-METHOD.md, step 6). */
+export const RULE_TYPES = ["decision_rule", "taste_reference", "never_do", "exemplar", "check"] as const;
+
+function rulesSection(train: boolean): string[] {
+  return [
+    "## Rules I learned", "",
+    ...(train ? ["Rules come from test rounds. See instructions.md, stage 6.", ""] : []),
+    "Add one line per lesson that holds for every client: `- [type] The rule. Why: the reason. From: where and when you learned it.`",
+    `Types: ${RULE_TYPES.map(t => `\`${t}\``).join(", ")}. A lesson about one client stays in that client's context/, never here. These rules apply where relevant and never override the current task or the client's brand.`,
+    "",
+    "(No rules yet.)",
+  ];
+}
+
+function playbookMarkdown(persona: Persona, jts: JobType[], kind: PackKind, roleName: string, skillPaths: Map<string, string>): string {
   const titles = new Map(jts.map(jt => [jt.id, jt.title]));
   const train = kind === "train";
   const section = (title: string) => (train ? [`## ${title}`, "", BASE_METHOD_MARK, ""] : [`## ${title}`, ""]);
   const out: string[] = train
     ? [`# Playbook: ${roleName}`, "", `This playbook starts from ${persona.name}'s method. Your training coach rewrites each section marked "base method: make it yours" with you, in your words, until it is how you work.`, ""]
     : [`# How ${persona.name} works`, "", persona.tagline, ""];
-  out.push(OUTPUT_PRECEDENCE,"",'Read OUTPUT-POLICY.md for factual evidence, presentation precedence, native delivery and readiness.',"");
   out.push(...section("What I deliver"));
   out.push(bullets(persona.profile.outcomes.map(o => `**${o.title}**: ${o.deliverable}${o.job_type_id && titles.has(o.job_type_id) ? ` (job: ${titles.get(o.job_type_id)})` : ""}`)), "");
-  out.push(...section("Before I start: what I ask for"));
+  out.push(...section("Before I start: what I need"));
+  out.push("I ground every job first: I capture what exists into context/ (WORK-METHOD.md, step 1), then ask only for what capture cannot tell me, in the one message AGENTS.md describes.", "");
   if (jts.length) {
-    out.push("I ask only for what is missing, three questions at most, and start once I have the required details. Each job's skill in skills/ lists the details with help notes.", "");
     for (const jt of jts) out.push(`### ${jt.title}`, "", bullets(intakeLines(jt)), "");
   } else {
-    out.push(bullets(["The one result you want, and who it is for.", "The facts I may use: names, numbers, proof and links.", "Anything I must avoid.", "When you need it."]), "");
+    out.push(bullets(["Context: your business, your website or what exists now, and 2 or 3 brands you admire.", "Details: the one result you want, who it is for, and when you need it."]), "");
   }
   out.push(...section("How I work"), persona.profile.method.trim(), "");
-  out.push(...section("Quality checks"));
+  out.push("These are my Build steps. Ground, Taste and Diverge come before them, and a separate Check comes after (WORK-METHOD.md).", "");
   if (jts.length) {
-    out.push("I check every draft against these before I hand it over. An item marked \"must pass\" fails the whole draft. The pass rule for each is in the job's skill.", "");
-    for (const jt of jts) out.push(`### ${jt.title}`, "", bullets(jt.rubric.map(c => `${c.text}${c.critical ? " (must pass)" : ""}`)), "");
+    out.push(...section("How my work is checked"));
+    out.push("Each job's skill holds its gates, which pass or fail, and its craft scores:", "");
+    out.push(bullets(jts.map(jt => `${jt.title}: \`${skillPaths.get(jt.id) ?? `skills/${jt.id}/SKILL.md`}\``)), "");
   }
-  out.push("### Every job", "", bullets([
-    "Every fact, number, name and quote comes from you or from a source I name.",
-    FACT_RULE,
-    READINESS_RULE,
-    OUTPUT_PRECEDENCE,
-  ]), "");
-  const notFor = notForList(persona, jts);
-  if (notFor.length) out.push(...section("Not part of my work"), bullets(notFor), "");
-  out.push(...section("Handoff"), bullets([
-    NATIVE_DELIVERY_RULE,
-    'The requested artifact comes first, with an optional Markdown summary. A summary or handoff is not a native deliverable.',
-    READINESS_RULE,
-    "I say what to check before you publish or send it, and what I would do next.",
-  ]));
-  if (train) out.push("", "## Rules I learned", "", "Rules come from test rounds. See instructions.md, stage 6.");
+  // What is not my work is in AGENTS.md ("Rules"), once.
+  out.push(...section("Handoff"), "I hand back the work itself first, then the short note AGENTS.md describes, and DECISIONS.md for anything bigger than a quick answer. I say what to check before you publish or send it.", "");
+  out.push(...rulesSection(train));
   return out.join("\n");
 }
 
@@ -740,13 +850,11 @@ function scorecardMarkdown(jts: JobType[]): string {
     out.push("");
   }
   out.push("## Every job", "", bullets([
-    FACT_RULE,
-    READINESS_RULE,
-    "Answers what the brief asked, for the reader it names.",
-    OUTPUT_PRECEDENCE,
-    'The requested native output and required checks are present; unresolved required inputs mean partial or blocked work.',
+    "The gates for every job in WORK-METHOD.md, step 5: a failed gate fails the answer.",
+    "Answers what the brief asked, for the reader it names, grounded in the context the brief gives.",
+    "Craft, scored with the family weights in WORK-METHOD.md: could a competitor publish it unchanged?",
   ]), "", "## The result", "",
-  "Your agent beats plain AI when it passes every must-pass item and wins on more briefs than it loses. Write down why it lost each one, and fix the files before the next round.");
+  "When to stop training is in instructions.md, stage 6. Write down why your agent lost each brief, and fix the files before the next round.");
   return out.join("\n");
 }
 
@@ -866,11 +974,38 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
     }
     jobSlug.set(jt.id, slug);
   }
+  const agent = kind === "agent";
+  // The role kit's own methods, as routing candidates: each skill by its name and description, each workflow by its
+  // title and opening. A job skill points to the best match for the craft; load_agent routes requests over all of them.
+  const kitRoutes: RouteCandidate[] = [
+    ...kitSkillPaths.filter(p => p.endsWith("/SKILL.md")).map(p => {
+      const fm = frontmatter(kitFiles[p]);
+      return { path: p, kind: "skill" as const, name: (fm?.name || p.split("/")[1]).replace(/-/g, " "), text: fm?.description ?? "" };
+    }),
+    ...kitPaths("workflows/").map(p => ({ path: p, kind: "workflow" as const, name: kitPurpose(p, kitFiles[p]).title, text: cut(kitFiles[p], 800) })),
+  ];
+  const pointerFor = (jt: JobType): MethodPointer | null => {
+    // A kit skill with the job type's own name is its researched method for the job.
+    const same = kitSkillPaths.find(p => p === `skills/${jt.id}/SKILL.md`);
+    const hit = same ? { candidate: kitRoutes.find(r => r.path === same)! } : bestRoute(`${jt.title} ${jt.keywords.join(" ")} ${jt.summary}`, kitRoutes, POINTER_MIN_SCORE);
+    if (!hit?.candidate) return null;
+    const c = hit.candidate;
+    return { path: c.path, title: c.kind === "skill" ? `the ${c.path.split("/")[1]} skill` : `the ${c.name} workflow` };
+  };
+  const pointers = new Map(jts.map(jt => [jt.id, pointerFor(jt)]));
   const skillDrafts: Draft[] = [
     ...kitSkillPaths.map(p => ({ path: p, group: "skill" as const, purpose: kitPurpose(p, kitFiles[p]).purpose, content: kitFiles[p] })),
-    ...jts.map(jt => ({ path: `skills/${jobSlug.get(jt.id)}/SKILL.md`, group: "skill" as const, purpose: `Skill: ${firstSentence(jt.summary)}`, content: jobSkill(jt, kind, jobSlug.get(jt.id)!) })),
+    ...jts.map(jt => ({
+      path: `skills/${jobSlug.get(jt.id)}/SKILL.md`, group: "skill" as const, purpose: `Skill: ${firstSentence(jt.summary)}`,
+      content: jobSkill(jt, kind, jobSlug.get(jt.id)!, pointers.get(jt.id) ?? null), resolveTools: true,
+      // With a pointer into the role kit, the skill is the same for every agent in the role, not for every agent.
+      ...(agent ? { source: pointers.get(jt.id) && kit ? "role" as const : "job" as const } : {}),
+    })),
   ].sort((a, b) => byPath(a.path, b.path));
-  const agent = kind === "agent";
+  const routes: RouteCandidate[] = [
+    ...jts.map(jt => ({ path: `skills/${jobSlug.get(jt.id)}/SKILL.md`, kind: "job" as const, name: `${jt.title} ${jt.keywords.join(" ")}`, text: `${jt.summary} ${jt.deliverable}` })),
+    ...kitRoutes,
+  ];
 
   // Mega agents (Persona.mega): the kit's traction playbook, channel knowledge and channel specialists on top of the
   // normal files. A missing or incomplete kit is left out with a note, so a build never fails while research runs.
@@ -909,10 +1044,20 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
     purpose: agent ? "How I run traction, then the plan for this kind of business." : "The base traction method and the plan for this kind of business, to make your own.",
     content: [
       ...(agent ? [] : [`${BASE_METHOD_MARK} This traction playbook is the base method. Your training coach rewrites it with you where your way differs.`, ""]),
-      normalizeText(megaKit.files["orchestrator.md"]).trimEnd(), "", normalizeText(megaKit.files[`variants/${persona.mega!.variant}.md`]).trimEnd(),
+      // The kit names its specialists agents/<id>.md; in the pack they are agents/<id>-specialist.md.
+      [megaKit.files["orchestrator.md"], megaKit.files[`variants/${persona.mega!.variant}.md`]]
+        .map(t => normalizeText(t).trimEnd().replace(/\bagents\/([a-z0-9-]+)\.md\b/g, (m, id: string) => megaKit.json.channels.some(c => c.id === id) ? `agents/${id}-specialist.md` : m))
+        .join("\n\n"),
     ].join("\n"),
   }] : [];
   const megaSrc = megaKit ? megaSources(megaKit, persona.mega!.variant) : null;
+
+  // Capture and check tools: in agent packs only (zip and files.json; the one-file version links to them). A training
+  // pack is uploaded back to the studio, which takes text files only, so it links to the public copies instead.
+  const toolDrafts: Draft[] = agent
+    ? TOOL_FILES.filter(t => input.tools?.[t.name]?.trim()).map(t => ({ path: `tools/${t.name}`, group: "tool" as const, content: input.tools![t.name], source: "tools" as const, purpose: `Tool: ${t.purpose}` }))
+    : [];
+  const toolNames = new Set(toolDrafts.map(d => d.path.slice("tools/".length)));
 
   // The examples guide may be a template, as train/examples/README.md or train/examples-README.md.
   const examplesTemplate = ["train/examples/README.md", "train/examples-README.md"].find(t => templates[t]?.trim()) ?? null;
@@ -921,6 +1066,8 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
       purpose: agent ? "Start here: who this is, what's inside and how to load it in your AI tool." : "Start here: what training does and how to begin." },
     { path: "AGENTS.md", group: "start", template: agent ? "AGENTS.md" : "train/AGENTS.md", purpose: "The operating instructions any AI reads first." },
     { path: "CLAUDE.md", group: "start", content: "@AGENTS.md", purpose: "Points Claude Code to AGENTS.md." },
+    { path: "WORK-METHOD.md", group: "start", template: "WORK-METHOD.md", resolveTools: true, purpose: "How every job runs: ground, taste, diverge, build, check and record, with the gates and craft rubrics." },
+    { path: "context/README.md", group: "start", content: contextReadme(jts, toolNames, origin), resolveTools: true, purpose: "What to capture about the client before the work, by kind of work, and where each file goes." },
     ...(agent ? [] : [{ path: "instructions.md", group: "start" as const, template: "train/instructions.md", purpose: "The training coach: how your AI interviews you, tests your agent and fills in its files." }]),
     agent
       ? { path: "soul.md", group: "identity", content: soulMarkdown(persona, origin) ?? fallbackSoul(persona, origin), purpose: "Who I am: how I think, what I care about and how I handle disagreement." }
@@ -928,23 +1075,24 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
     agent
       ? { path: "personality.md", group: "identity", content: personalityMarkdown(persona), purpose: "How I talk and write: voice, tone, layout, words I use and avoid." }
       : { path: "personality.md", group: "identity", template: "train/personality.md", purpose: "How your agent talks and writes: a template your training coach fills in with you." },
-    { path: "playbook.md", group: "work", content: playbookMarkdown(persona, jts, kind, roleName),
-      purpose: agent ? "How I work: intake questions, method, deliverables, quality checks and handoff." : "The base method, intake questions and quality checks, to make your own." },
+    { path: "playbook.md", group: "work", content: playbookMarkdown(persona, jts, kind, roleName, new Map(jts.map(jt => [jt.id, `skills/${jobSlug.get(jt.id)}/SKILL.md`]))),
+      purpose: agent ? "How I work: what I deliver and need, my method, how it is checked, and the rules I learned." : "The base method, intake and checks, to make your own, and the rules you learn." },
     ...tractionPlaybook,
     ...(agent ? [{ path: "TEAM.md", group: "work" as const, content: teamMarkdown(persona), purpose: "How I critique, what I defend, when I defer and what I never do in a team." }] : []),
     { path: "knowledge.md", group: "knowledge", content: knowledgeMarkdown(persona, kit, kind, roleName, megaKit),
       purpose: knowledgeReady ? "What I know about the role, with sources, then my specialty." : megaKit ? "My specialty, and where my channel knowledge is." : "My specialty. The role's researched knowledge is coming." },
     { path: "access.md", group: "work", content: kitFiles["access.md"]?.trim() ? kitFiles["access.md"] : fallbackAccess(), purpose: "Tools I work with, what to share with me and what I never ask for." },
-    {path:'QUALITY-METHOD.md',group:'work',content:qualityMethodMarkdown(),purpose:'Shared job-to-delivery contract: current-work evidence, independent alternatives and artifact review.'},
-    {path:'OUTPUT-POLICY.md',group:'work',content:outputPolicyMarkdown(),purpose:'Task and brand presentation precedence, factual evidence, readiness and native-delivery limits.'},
+    { path: "QUALITY-METHOD.md", group: "work", content: qualityMethodMarkdown(), purpose: "Optional: the receipts a host records when it uses the AI Blocks MCP job tools." },
+    { path: "OUTPUT-POLICY.md", group: "work", content: outputPolicyMarkdown(), purpose: "Facts, readiness, native delivery, and whose style wins: the task, the brand, then the specialist." },
     ...(skillDrafts.length ? [{
       path: "skills.md", group: "skill" as const, purpose: "Every skill in one file, for chat apps that take one upload at a time.",
-      content: skillsBundle(skillDrafts.filter(d => d.path.endsWith("/SKILL.md")).map(d => ({ path: d.path, content: d.content! }))),
+      content: skillsBundle(skillDrafts.filter(d => d.path.endsWith("/SKILL.md")).map(d => ({ path: d.path, content: d.content! }))), resolveTools: true,
     }] : []),
     ...skillDrafts,
     ...promptDrafts,
     ...workflowDrafts,
     ...megaDrafts,
+    ...toolDrafts,
     ...(agent ? [] : [
       ...(megaTraining.some(d => d.path === "training/interview.md") && !roleTraining.has("training/interview.md") ? [] : [
         { path: "training/interview.md", group: "training" as const, content: kitFiles["training/interview.md"]?.trim() ? kitFiles["training/interview.md"] : fallbackInterview(roleName), purpose: "The questions your training coach asks you." }]),
@@ -956,10 +1104,15 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
         ? { path: "examples/README.md", group: "training" as const, template: examplesTemplate, purpose: "How to add anonymised past work." }
         : { path: "examples/README.md", group: "training" as const, content: examplesReadme(), purpose: "How to add anonymised past work." },
     ]),
-    ...(libraryRows.length ? [{ path: "library.md", group: "knowledge" as const, content: libraryMarkdown(libraryRows, roleName), purpose: "Related AI Blocks library items, with links." }] : []),
-    ...(megaSrc?.count
-      ? [{ path: "sources.md", group: "knowledge" as const, content: megaSourcesMarkdown(sourceRows, `${megaKit!.json.name} kit`, megaSrc.markdown), purpose: "Every source behind the knowledge, the traction playbook and the channels, grouped by file." }]
-      : sourceRows.length ? [{ path: "sources.md", group: "knowledge" as const, content: sourcesMarkdown(sourceRows), purpose: "Every source behind knowledge.md, with the date it was checked." }] : []),
+    // library.md and sources.md are always there, because AGENTS.md and README.md name them (the pack linter checks).
+    libraryRows.length
+      ? { path: "library.md", group: "knowledge" as const, content: libraryMarkdown(libraryRows, roleName), purpose: "Related AI Blocks library items, with links." }
+      : { path: "library.md", group: "knowledge" as const, content: `# Related AI Blocks library items\n\nThe list for the ${roleName} role is coming with its researched knowledge. Until then, search the free library at ${LIBRARY_ORIGIN}.`, purpose: "Related AI Blocks library items: coming with the role's knowledge." },
+    megaSrc?.count
+      ? { path: "sources.md", group: "knowledge" as const, content: megaSourcesMarkdown(sourceRows, `${megaKit!.json.name} kit`, megaSrc.markdown), purpose: "Every source behind the knowledge, the traction playbook and the channels, grouped by file." }
+      : sourceRows.length
+        ? { path: "sources.md", group: "knowledge" as const, content: sourcesMarkdown(sourceRows), purpose: "Every source behind knowledge.md, with the date it was checked." }
+        : { path: "sources.md", group: "knowledge" as const, content: "# Sources\n\nThe researched sources for this role are coming with its knowledge. Until then, every fact comes from the client, from context/ or from a source you name and date.", purpose: "Sources: coming with the role's knowledge." },
     { path: "LICENSE.md", group: "about", template: "LICENSE.md", purpose: "Licence: free to use and change, not to sell, and how to give credit." },
     { path: "CHANGELOG.md", group: "about", content: changelogMarkdown({
       kind, name: persona.name, roleName, version: options.version, updated: options.updated, kit, knowledgeReady, sources: sourceRows.length,
@@ -999,9 +1152,9 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
     workflows_list: listOf(workflowDrafts, "- (no workflows yet)"),
     outcomes_list: outcomes.length ? bullets(outcomes) : "- (none listed)",
     not_for_list: bullets(notForList(persona, jts)) || "- (nothing listed)",
-    intake_list: jts.length
-      ? jts.map(jt => `**${jt.title}**\n\n${bullets(intakeLines(jt))}`).join("\n\n")
-      : bullets(["The one result you want, and who it is for.", "The facts I may use.", "When you need it."]),
+    not_for_inline: notForList(persona, jts).length ? `${notForList(persona, jts).map(s => s.replace(/[.;\s]+$/, "")).join("; ")}.` : "(nothing listed).",
+    // The per-job intake is in playbook.md; templates that still use this block get the short general list.
+    intake_list: bullets(["Their business and website, or what exists now.", "The one result they want, and who it is for.", "The facts you may use, and when they need it."]),
     team_list: megaKit ? teamListMarkdown(megaKit) : "",
   };
 
@@ -1018,6 +1171,7 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
   for (const d of drafts) {
     if (d.path === "pack.json") continue;
     let content = d.template ? fillTemplate(d.template, templates[d.template], values) : d.content!;
+    if (d.resolveTools) content = resolveToolRefs(content, toolNames, origin);
     if (!agent && (d.path === "soul.md" || d.path === "personality.md") && !content.replace(/^\uFEFF/, "").trimStart().startsWith(TEMPLATE_MARKER)) {
       content = `${TEMPLATE_MARKER}\n${content}`;
     }
@@ -1062,7 +1216,7 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
   const manifestText = `${JSON.stringify(manifest, null, 2)}\n`;
   const manifestDraft = drafts.find(d => d.path === "pack.json")!;
   files.push({ path: "pack.json", content: manifestText, purpose: manifestDraft.purpose, group: manifestDraft.group, bytes: encoder.encode(manifestText).length, sha256: await sha256(manifestText), source: "agent" });
-  return { kind, folder, files, manifest, notes };
+  return { kind, folder, files, manifest, notes, routes };
 }
 
 // ---------- Versions (packs/versions.json) ----------
@@ -1108,11 +1262,12 @@ export function fileUrl(pack: BuiltPack, file: PackFile): string {
   if (file.source === "role" && pack.manifest.role) return `/packs/roles/${pack.manifest.role}/${file.path}`;
   if (file.source === "job") return `/packs/jobs/${file.path.slice("skills/".length)}`;
   if (file.source === "mega" && pack.manifest.mega) return `/packs/mega/${pack.manifest.mega.kit}/${file.sharedPath ?? file.path}`;
+  if (file.source === "tools") return `/packs/${file.path}`;
   return `/packs/${pack.manifest.agent_id}/${file.path}`;
 }
 
 /** Folder names under /packs that are not agents, so no agent id may use them. */
-export const RESERVED_PACK_PATHS = new Set(["roles", "jobs", "mega", "index.json", "index"]);
+export const RESERVED_PACK_PATHS = new Set(["roles", "jobs", "mega", "tools", "index.json", "index"]);
 
 /**
  * The pack as a zip: every file under its folder, then a copy of skills/ in each of SKILL_MIRRORS (.agents/skills
@@ -1133,8 +1288,13 @@ export function packZip(pack: BuiltPack): Promise<Uint8Array> {
   return writeZip(entries, { date: pack.manifest.updated });
 }
 
+/** A capture or check script: in the zip and files.json, never inlined in a one-file text. */
+const isToolScript = (path: string) => /^tools\/.+\.(mjs|js)$/.test(path);
+
 /** The setup guide, the pointer for Claude Code and the record files are for people and tools, not the agent. */
-const NOT_IN_ONE_FILE = new Set(["README.md", "CLAUDE.md", "CHANGELOG.md", "pack.json"]);
+// QUALITY-METHOD.md is only for hosts that call the AI Blocks MCP job tools, and those load it through MCP: a chat
+// app never needs it, so the one file leaves it out (the zip keeps it).
+const NOT_IN_ONE_FILE = new Set(["README.md", "CLAUDE.md", "CHANGELOG.md", "pack.json", "QUALITY-METHOD.md"]);
 
 /**
  * <id>.txt: the whole agent in one plain text file, for chat apps (ChatGPT, Claude, Gemini) where one attachment is
@@ -1146,8 +1306,10 @@ export function oneFileText(pack: BuiltPack, origin: string = ORIGIN): string {
   if (pack.kind !== "agent") throw new PackBuildError(`only agent packs have a one-file version, not ${pack.kind} packs`);
   const m = pack.manifest, site = origin.replace(/\/+$/, "");
   const bundled = pack.files.some(f => f.path === "skills.md");
+  // Scripts stay out (a chat app cannot run them); every reference to one points at its public copy instead.
+  const kept = new Set(pack.files.filter(f => f.path.startsWith("tools/") && !isToolScript(f.path)).map(f => f.path.slice("tools/".length)));
   const files = pack.files
-    .filter(f => !NOT_IN_ONE_FILE.has(f.path) && !(bundled && /^skills\/[^/]+\/SKILL\.md$/.test(f.path)))
+    .filter(f => !NOT_IN_ONE_FILE.has(f.path) && !isToolScript(f.path) && !(bundled && /^skills\/[^/]+\/SKILL\.md$/.test(f.path)))
     .sort((a, b) => Number(b.path === "AGENTS.md") - Number(a.path === "AGENTS.md"));
   const head = [
     `# ${m.name}, ${m.title}: the whole agent in one file`,
@@ -1158,7 +1320,7 @@ export function oneFileText(pack: BuiltPack, origin: string = ORIGIN): string {
     "",
     `Free to use and change, not to sell: the LICENSE.md part has the terms. Newest version and ${m.name}'s profile: ${site}/agents/${m.agent_id}`,
   ];
-  const parts = files.map(f => `===== FILE: ${f.path} =====\n\n${f.content.trim()}`);
+  const parts = files.map(f => `===== FILE: ${f.path} =====\n\n${(f.source === "role" || f.source === "mega" ? f.content : resolveToolRefs(f.content, kept, site)).trim()}`);
   return normalizeText([head.join("\n"), ...parts].join("\n\n"));
 }
 
@@ -1181,5 +1343,7 @@ export function filesIndex(pack: BuiltPack, zips: { zip?: BuiltFile; train_zip?:
     ...(pack.manifest.mega ? { mega: pack.manifest.mega, team: pack.manifest.team } : {}),
     ...zips,
     files: pack.files.map(f => ({ path: f.path, url: fileUrl(pack, f), bytes: f.bytes, purpose: f.purpose, kind: f.group })),
+    // What load_agent routes a request to (src/modules/packs/route.ts): job skills, role skills and workflows.
+    routes: pack.routes,
   };
 }

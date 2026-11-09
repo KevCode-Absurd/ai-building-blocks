@@ -142,11 +142,12 @@ test("a persona's soul goes into its instructions and a soul.md file, without ov
   assert.ok(!packages.buildHousePackage(NOVA, LANDING_PAGE).skill.instructions.includes("## Who you are"), "no soul, no section");
 });
 
-test("generic house packages use a strong generic method; long jobs draft on the premium tier", async () => {
+test("generic house packages use the job family's grounded method, not one recipe; long jobs draft on the premium tier", async () => {
   const generic = packages.buildHousePackage(null, LANDING_PAGE);
   assert.ok(!generic.skill.instructions.includes(NOVA.profile.method));
-  assert.match(generic.skill.instructions, /Read the request and the details twice/);
-  assert.match(generic.skill.instructions, /\[add your price\]/);
+  assert.match(generic.skill.instructions, /1\. Ground: work from the buyer's real business/);
+  assert.match(generic.skill.instructions, /could a competitor publish this unchanged/);
+  assert.notEqual(packages.jobMethod(LANDING_PAGE), packages.jobMethod({ ...LANDING_PAGE, title: "Data analysis of a CSV", deliverable: "A worked analysis of your data", area: "data" }), "each family has its own stages");
   assert.notEqual(await packages.packageSha(generic), await packages.packageSha(packages.buildHousePackage(NOVA, LANDING_PAGE)));
   const whitePaper = { ...BLOG_POST, id: "white-paper", turnaround_hours: 96, price: { ...BLOG_POST.price, base_usd: 299 } };
   const long = packages.buildHousePackage(null, whitePaper);

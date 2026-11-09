@@ -1,9 +1,34 @@
 // The library, agent marketplace, API and downloaded packs share one contract.
 // This module never calls a provider, starts hosted work or changes permissions.
-import {buildExecutionPlan, executionQualityMethod, validateProductionQuality} from '../../../../site/src/jobs/execution-quality.mjs';
+import {buildExecutionPlan, validateProductionQuality} from '../../../../site/src/jobs/execution-quality.mjs';
 import {validateJobDocument} from '../../../../site/src/jobs/contracts.mjs';
 
-export const qualityMethodMarkdown = executionQualityMethod;
+/**
+ * QUALITY-METHOD.md in packs and seats. The plain method is WORK-METHOD.md; this file is only the optional receipt
+ * layer for hosts that call the AI Blocks MCP job tools, so a chat user can skip it. Each receipt field maps to a GJP
+ * step instead of restating it. The machine contract it describes is the library's (site/src/jobs/), unchanged.
+ */
+export function qualityMethodMarkdown(): string {
+  return `# Quality method: optional receipts
+
+The work method is \`WORK-METHOD.md\`. In a chat, follow it and skip this file.
+
+## Optional: for hosts that use the AI Blocks MCP job tools
+
+Read this section only when your host calls \`get_execution_plan\` or \`check_execution_delivery\` (agents.useaiblocks.com/mcp) or the library's \`advance_job\` (useaiblocks.com/mcp). The JSON files named here come from those tools; none of them is in this pack.
+
+- **Frame:** \`get_execution_plan\` returns EXECUTION-PLAN.json. Settle its reading of the task against the person's own words, and record CREATE, IMPROVE or ASSESS (patch, extend or new).
+- **Ground:** record what you captured as \`work_context\`: each source with its SHA-256, capture date, observations and CURRENT, STALE or UNKNOWN. A stale or unknown baseline blocks claims about the current work.
+- **Diverge:** each route owner writes a complete proposal before seeing the others. Save its exact text in \`proposal_contents\`, keyed by path, and record \`routes[].draft_receipt\` with context_id, path, sha256, isolation (ISOLATED or SAME_CONTEXT) and \`saw_other_proposals: false\`. For visual batches, each concept names audience, promise, proof, composition and visual_world.
+- **Check:** for every current artifact hash, record criterion, baseline_observation, result_observation, PASS, FAIL or NOT_RUN, the receipt and artifact_sha256. FAIL, NOT_RUN and BLOCKED never pass on a high overall score.
+- **Launchable pages:** \`production.landing_page_delivery\` names the editable source, the existing-site reuse, the brand sources, and current-hash checks for build, primary_action, links_assets, mobile and desktop layout, keyboard_accessibility and brand_content. An image is not a page.
+- **Images:** \`production.visual_delivery\` (ai-blocks-visual-delivery/1) carries the renderer and its receipt, the source references, a reviewer who did not make the image, and current image hashes with brand, product_fidelity, claims_copy and format checks.
+- **Local byte check:** where the host provides \`tools/verify-delivery-evidence.mjs\` (it is not in this pack), run it on an ai-blocks-file-evidence/1 manifest. Otherwise report the byte check as NOT_RUN.
+
+These records are host-reported. They are not independent proof, they are not the person's approval, and they grant no access.
+`;
+}
+
 export function executionPlan(request: string, tier: 'quick'|'standard'|'deep' = 'standard') {
   return {
     ...buildExecutionPlan({request,tier}),

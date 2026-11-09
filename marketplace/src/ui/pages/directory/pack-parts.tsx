@@ -70,11 +70,11 @@ function FirstMessage(props: { text: string }) {
  * version (one attachment), coding apps the folder, and the connector needs no download. The chosen tab is
  * remembered on this device.
  */
-export function PackDownloads(props: { agentId: string; name: string; title: string; pack: PackInfo }) {
+export function PackDownloads(props: { agentId: string; name: string; title: string; area?: string; pack: PackInfo }) {
   const { pack, name } = props;
   const [app, setApp] = useState<StartApp>(savedApp);
   const oneFile = pack.oneFile ?? { path: `/packs/${encodeURIComponent(props.agentId)}.txt`, bytes: null };
-  const guides = startGuides({ id: props.agentId, name, title: props.title }, oneFile.bytes);
+  const guides = startGuides({ id: props.agentId, name, title: props.title, area: props.area }, oneFile.bytes);
   const g = guides.find(x => x.id === app) ?? guides[0];
   const choose = (id: StartApp, focus = false) => {
     setApp(id);

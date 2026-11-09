@@ -155,7 +155,7 @@ test("Start in your AI: a tab per app, each with a first message that needs no e
     assert.ok(isStartApp(g.id), g.id);
     assert.match(g.message, /Danielle/, g.id);
     assert.doesNotMatch(g.message, /\[|\]/, `${g.id}: nothing to fill in`);
-    assert.match(g.message, /ask what I need help with\.$/, g.id);
+    assert.match(g.message, /ask me for my business name and website .+, and what I need done\.$/, `${g.id}: the first move is grounding`);
   }
   assert.deepEqual(guides.map(g => g.get), ["file", "file", "file", "folder", "connect"]);
   assert.match(guides[3].message, /^Read AGENTS\.md/);
@@ -165,4 +165,7 @@ test("Start in your AI: a tab per app, each with a first message that needs no e
   assert.match(big.open, /project/, "a file too long for one Claude chat goes in a project");
   assert.match(big.message, /file in this project/);
   assert.equal(isStartApp("copilot"), false);
+  // The first ask fits the kind of work: the numbers for finance, the code for engineering.
+  assert.match(startGuides({ ...agent, area: "finance" })[0].message, /the numbers or export to work from/);
+  assert.match(startGuides({ ...agent, area: "engineering" })[0].message, /the code or repo to work in/);
 });

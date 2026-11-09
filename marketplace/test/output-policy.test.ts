@@ -2,7 +2,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {selectOutputStyle,outputPolicyMarkdown,activeOutputContract,OUTPUT_PRECEDENCE,FACT_RULE,READINESS_RULE,HOSTED_TEXT_LIMIT} from '../src/modules/runner/output-policy.ts';
+import {selectOutputStyle,outputPolicyMarkdown,activeOutputContract,OUTPUT_PRECEDENCE,FACT_RULE,READINESS_RULE,NATIVE_DELIVERY_RULE,HOSTED_TEXT_LIMIT} from '../src/modules/runner/output-policy.ts';
 import {buildHousePackage,renderPrompt} from '../src/modules/runner/packages.ts';
 import {buildPack} from '../src/modules/packs/build.ts';
 import {trimmedSeatPack} from '../src/modules/mcp/team-seats.ts';
@@ -78,9 +78,12 @@ test('downloaded agent, training and trimmed seat all carry the same output poli
     const file=(name:string)=>pack.files.find(row=>row.path===name)!.content;
     assert.equal(file('OUTPUT-POLICY.md'),outputPolicyMarkdown());
     assert(file('AGENTS.md').includes('OUTPUT-POLICY.md'));
-    assert(file('playbook.md').includes(READINESS_RULE));
-    assert(file('skills/landing-page-copy/SKILL.md').includes(FACT_RULE));
-    assert(file('skills/landing-page-copy/SKILL.md').includes('Keep requested fiction and illustrative examples clearly distinct from factual claims.'));
+    // Each policy sentence lives in exactly one file of the pack: OUTPUT-POLICY.md. Every other file points to it.
+    for(const rule of [OUTPUT_PRECEDENCE,FACT_RULE,READINESS_RULE,NATIVE_DELIVERY_RULE]){
+      const holders=pack.files.filter(row=>row.content.includes(rule)).map(row=>row.path);
+      assert.deepEqual(holders,['OUTPUT-POLICY.md'],`${kind}: ${rule.slice(0,40)}`);
+    }
+    assert(file('personality.md').includes('OUTPUT-POLICY.md')||kind==='train');
     assert(!file('skills/landing-page-copy/SKILL.md').includes('Never invent numbers, prices, results, quotes, reviews, names, awards or links.'));
     assert(!file('playbook.md').includes('finished work in markdown, ready to use'));
     if(kind==='agent'){

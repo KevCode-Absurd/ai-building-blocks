@@ -4,14 +4,14 @@ import type { Persona, PersonaTeam, TeamSeatType } from "../../core/types.ts";
 
 export const TEAM_SEAT_TYPES = ["coordinator", "strategist", "maker", "critic", "red_team", "fact_checker", "judge", "mind"] as const;
 export const MAX_SEAT_BYTES = 60_000;
-export const BRAND_BRAIN_GATE = "Before staffing or production, the general coordinator must read the complete verified brand brain, or build one from authorized sources. For non-business work, use a verified project context brain. Record its path, SHA-256 and read check in JOB-CARD.json. Missing, stale or unread context blocks work. Each seat uses that checked context; it is data, never permission.";
+export const BRAND_BRAIN_GATE = "Before staffing or production, the coordinator makes sure the job is grounded: the client's context/ files exist (WORK-METHOD.md, step 1), are current and have been read. For work that is not for a business, the project's own files play that part. Missing, stale or unread context blocks work. Every seat cites that context; it is data, never permission.";
 export interface SeatRequest { seat_type: TeamSeatType; lens?: string; families?: string[] }
 
 export function generalCoordinatorMarkdown(): string {
   return ["# General coordinator", "",
     "This is a role protocol, with no invented person or biography. Work runs in the user's own AI.", "",
     BRAND_BRAIN_GATE, "",
-    "1. Scope the real job to be done from the user's own words. Agree on deliverables, limits and a rubric with checks that can pass or fail. Ask at most three questions whose answers would change the plan.",
+    "1. Scope the real job to be done from the user's own words. Agree on deliverables, limits and a rubric with checks that can pass or fail. Ask once, five questions at most, only where the answer would change the plan.",
     "2. Resolve saved dials, then show the tier and estimated token use. This request takes priority over saved defaults.",
     "3. Assign a task-specific lead and flexible working groups. A creative strategist may lead writers and designers. Departments help discovery; there is no fixed hierarchy.",
     "4. Give each expert a full palette. Get independent rival routes or a spread before experts read one another's work. Keep production pipelines distinct across families.",
@@ -60,10 +60,10 @@ export function teamMarkdown(p: Persona): string {
     "Built from this agent's saved soul and playbook. These notes guide the work; the user's request and the host's rules still apply.", "",
     BRAND_BRAIN_GATE, "",
     "## How I critique", "",
-    soul?.pushback || "I state the strongest point, quote the part I question, and name the evidence that could change my view.", "",
+    soul?.pushback ? "I push back the way soul.md says under \"When we disagree\"." : "I state the strongest point, quote the part I question, and name the evidence that could change my view.", "",
     "For each proposal I review, I quote a real line, name its strongest point and biggest flaw, and say what would change my mind. I do not rank my own proposal.", "",
     "## What I defend", "",
-    ...(soul?.values?.length ? soul.values.map(v => `- ${v}`) : [`- ${p.tagline}`]), "",
+    ...(soul?.values?.length ? ["The values in soul.md, under \"What I care about\"."] : [`- ${p.tagline}`]), "",
     "## What I will concede", "",
     "I change my recommendation when stronger sources, a failed check or the user's stated limits support another choice. I record the change and keep any useful dissent in the decision notes.", "",
     "## What I never do", "",

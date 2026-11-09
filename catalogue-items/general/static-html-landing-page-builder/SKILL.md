@@ -9,6 +9,10 @@ Read the original request, constraints, approved page copy and layout. Ask only 
 
 **You get:** index.html, styles.css, an assets/ folder, checks.md (what was checked in a browser, or marked not run) and README.md (how to preview, host and connect the form).
 
+## First, ground the job
+
+Before you start, follow the [Grounded job protocol](https://useaiblocks.com/skills/grounded-job-protocol). When the business has a live site, run [Brand DNA capture](https://useaiblocks.com/skills/brand-dna-capture) first and build from it: the same font files and roles, colours at their measured shares, button style, nav, footer and section order. Before hand-off, run [Brand fidelity check](https://useaiblocks.com/skills/brand-fidelity-check) on the built page and fix every failure.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.

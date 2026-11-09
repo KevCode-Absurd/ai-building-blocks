@@ -2,22 +2,24 @@ thinking: medium
 thinking_why: It asks a set list of questions, then applies fixed layout and style rules.
 new_slug: conversion-landing-page-designer
 name: Conversion landing page designer
-summary: Plan a landing page that turns visitors into buyers. Give your offer and audience. You get page order, copy, a layout pick and design rules.
+summary: Plan a page for a new product with no brand look yet. You get page order, copy, a layout pick and design rules.
 job: write-landing-page
 headline: Conversion landing page designer
-subhead: Tell it your offer and audience. Get a landing page plan, copy and strict design rules that turn visitors into buyers. Bring your offer and price. Use the result to plan your next step.
+subhead: Tell it your offer and audience. Get a landing page plan, copy and a starting set of design rules for a new product page. If you already have a site or brand, your own fonts, colours and layout come first.
 explain: |
   A complete landing page plan: the questions to ask, the section order, the layout, the copy, and strict visual rules so the page looks clean and sells. It handles both the words and the design, which usually get split and clash.
 
-  It starts with intake questions on offer, audience and proof. Then it sets page structure, picks a layout, and writes copy with conversion rules in mind. A second set of rules governs type sizes, spacing, corner radius, backgrounds, hero layout, icons and motion, so nothing looks random. It adds search and AI answer basics and a list of common mistakes. Use it when you build, restyle or review any page or section.
+  It starts with intake questions on offer, audience and proof. Then it sets page structure, picks a layout, and writes copy with conversion rules in mind. A second set of rules covers type sizes, spacing, corner radius, backgrounds, hero layout, icons and motion, so a new page does not look random. It adds search and AI answer basics and a list of common mistakes.
+
+  It is built for a new software or product page with no brand look yet. If your business already has a site, your AI captures it first with Brand DNA capture. Your fonts, colours, buttons and section order then win over these rules.
 when:
-  - You are building a landing page and want copy and layout planned together.
+  - You are building a landing page for a new product with no brand look yet, and want copy and layout planned together.
   - Your page looks busy and inconsistent and you want clear design rules.
   - You are reviewing a page someone else built.
   - You need to hand a developer exact styles to follow.
 not_for:
   - "You need a homepage or a site that serves many goals: use a plain site map and plan each page on its own."
-  - "You want to upgrade a site that already exists: use the redesign skill named in the skill file, then come back for the copy rules."
+  - "You want to improve or add to a site that already exists: start with the Grounded job protocol and Brand DNA capture, so your own look wins. Use this skill only for its conversion questions."
   - "You only want ad copy or a short email: write that with your AI directly, as this plan is built for a full page."
 you_give:
   - Your offer and price

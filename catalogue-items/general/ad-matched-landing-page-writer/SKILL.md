@@ -7,6 +7,10 @@ description: Use when you need the copy for a landing page or product page that 
 
 A buyer taps an ad because of one promise. If the page they land on doesn't pick up that promise straight away, they assume they're in the wrong place and leave. If it does, they have doubts to settle before they pay, and they skim for the answers. So this page does two jobs in order: first prove "you're in the right place", then answer the doubts, the most common first, with nothing about the cost left for checkout to reveal.
 
+## First, ground the job
+
+Before you start, follow the [Grounded job protocol](https://useaiblocks.com/skills/grounded-job-protocol). When the business has a live site, the mode is patch (rewrite the live page) or extend (a new page on the same site): capture it with [Brand DNA capture](https://useaiblocks.com/skills/brand-dna-capture) and write in its voice lines and button words, keeping its section order unless a doubt needs a new section. The first-screen recipe and doubt order below are defaults; the captured page and the customer words win where they differ.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.

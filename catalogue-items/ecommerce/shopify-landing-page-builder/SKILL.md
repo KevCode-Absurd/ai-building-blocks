@@ -15,6 +15,10 @@ Agree the buyer question and evidence for every section; do not force every prod
 
 The final deliverable is editable Liquid and template JSON, not a raster image. Run Theme Check and test a duplicate-theme preview at phone and desktop widths, keyboard traversal, actual product options, the main purchase action, links, images and brand font loading. Save commands and observations against the current source-bundle hash. Recheck after repairs. A generated review score or passing syntax check is not evidence that the cart works. Record any test-order or live checkout limit honestly; do not publish or place an order without the existing task's authority.
 
+## First, ground the job
+
+Before you start, follow the [Grounded job protocol](https://useaiblocks.com/skills/grounded-job-protocol). Run [Brand DNA capture](https://useaiblocks.com/skills/brand-dna-capture) on the live store first, and build the section from the theme's own fonts, colours, buttons and components it records. Before hand-off, run [Brand fidelity check](https://useaiblocks.com/skills/brand-fidelity-check) on the duplicate-theme preview and fix every failure.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.

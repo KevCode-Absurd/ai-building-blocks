@@ -9,6 +9,10 @@ Eyetracking research shows people spend most of their viewing time on the first 
 
 Not for a page that is not live or has no visitors (use a short landing page checklist first), or a full redesign brief (hire a designer, or fix the ranked problems here first). It sizes no fixes in money without your analytics.
 
+## First, ground the job
+
+Before you start, follow the [Grounded job protocol](https://useaiblocks.com/skills/grounded-job-protocol) in patch mode: the page is live, so the result is a set of changes to it, not a new design. Capture the page with [Brand DNA capture](https://useaiblocks.com/skills/brand-dna-capture) (or take desktop and 390 px screenshots) so every finding can point to evidence, and every fix can reuse the page's own fonts, colours, buttons and sections.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -68,11 +72,12 @@ This skill runs on its own. If something marked required is missing, ask once, i
 2. Scent: match or mismatch, with the detail.
 3. Glance: the four answers.
 4. Skim: the two-line story a skimmer takes away.
-5. Findings table: rank | read (glance / skim / doubt) | where (screen) | what the page does now | fix | severity 0 to 4 | ease (high / med / low) | needs analytics to size? (yes / no).
+5. Findings table: rank | read (glance / skim / doubt) | where (screen) | what the page does now | evidence (quote, screenshot and width, or number) | fix | severity 0 to 4 | ease (high / med / low) | needs analytics to size? (yes / no).
 6. Quick wins this week (up to five).
 7. Tests (up to three), each with a one-line hypothesis.
 8. Page score: now and after the quick wins, each with its sum.
 9. What the page can't tell us.
+10. Change-set: the quick wins and tests as numbered edits to the live page. Each edit names the finding it answers, the section it touches, whether it reuses an existing component or restyles one within the brand's fonts and colours, and its evidence. If the findings seem to call for a redesign, say why patches are not enough instead of designing a new page.
 
 ## Check before you hand it back
 - Every finding quotes or points to a specific place on the page.
@@ -80,6 +85,7 @@ This skill runs on its own. If something marked required is missing, ask once, i
 - No money figure or predicted lift appears without analytics.
 - No fix asks for proof, urgency, ratings or counts the business doesn't have.
 - Other brands' numbers aren't presented as this page's benchmarks.
+- Every fix is a change to the live page in its own fonts, colours and components; none is a redesign.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

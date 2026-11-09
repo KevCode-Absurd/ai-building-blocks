@@ -7,6 +7,10 @@ description: Use when you want a fast yes-or-no pass over a landing page or prod
 
 A buyer makes five stops on the way to paying. They arrive and check they're in the right place. They work out what it is. They decide whether to believe it. They look at what it will cost them and what happens if it goes wrong. And, often without noticing, they pick up on anything that feels off. Each check below sits at one of those stops, so a "no" tells you where buyers drop out.
 
+## First, ground the job
+
+Before you start, follow the [Grounded job protocol](https://useaiblocks.com/skills/grounded-job-protocol) in patch mode: the result is a set of changes to the live page, not a redesign. Capture the page with [Brand DNA capture](https://useaiblocks.com/skills/brand-dna-capture), or take desktop and 390 px screenshots, so each "no" has evidence and each fix uses the page's own fonts, colours, buttons and sections.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -101,7 +105,7 @@ The checks score measures the share of checks the page passes. Score = checks ma
 1. **Verdict** (two lines): the first stop where the page loses buyers, and the one check that shows it.
 2. **The checks**, grouped by stop: number, check, result (yes / no / can't tell / doesn't apply), deal-breaker or drag, evidence, fix.
 3. **Count by stop**: how many no's at each stop. This shows where the trouble clusters. It doesn't predict sales.
-4. **First five fixes**, in rank order.
+4. **First five fixes**, in rank order, written as a change-set to the live page: each edit with the check it fixes, the section it touches, its evidence, and whether it reuses an existing component or restyles one within the brand's own fonts and colours.
 5. **Checks score**: now and with the five fixes made, each with its sum, plus any deal-breaker left.
 6. **Can't tell**: what you couldn't see and what would let you judge it.
 
@@ -110,6 +114,7 @@ The checks score measures the share of checks the page passes. Score = checks ma
 - Nothing you couldn't see is marked "yes".
 - No fix adds a rating, count, price, offer or deadline that wasn't supplied.
 - The verdict names one stop, not a list.
+- Every fix is an edit to the live page in its own style, not a new design.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

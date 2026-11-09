@@ -38,6 +38,11 @@ How to start:
 3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 <!-- /needs -->
 
+## First, ground the job (added by AI Blocks)
+
+Before you start, follow the [Grounded job protocol](https://useaiblocks.com/skills/grounded-job-protocol). This skill's navy, teal and Inter look is a default for a new product with no brand. If the business has a live site, run [Brand DNA capture](https://useaiblocks.com/skills/brand-dna-capture) first and use its fonts, colours, button style and logo as the answer to Q3. The "default" answer is only for a new product with no brand. Keep the animation only as far as the brand's own site would; check the result with [Brand fidelity check](https://useaiblocks.com/skills/brand-fidelity-check).
+
+
 ## Invocation Triggers
 
 - "create a landing page"
@@ -150,7 +155,7 @@ See [`references/brand_system_design.md`](references/brand_system_design.md) for
 
 ### Typography
 
-- **Font family:** Inter (via Google Fonts)
+- **Font family:** the brand's own fonts from the capture or brand guide, loaded the same way the site loads them; Inter (via Google Fonts) only when there is no brand font
 - **Weight scale:** 400 (body), 500 (eyebrow), 600 (links), 700 (subtitle), 800 (H1 + H2)
 - **Size scale:**
   - Hero H1: 68–82px
@@ -375,3 +380,5 @@ Run `scripts/html_validator.py --file ${OUTPUT_DIR}/<slug>.html` after generatio
 **Version:** 1.0.0
 **Source spec:** `megaprompts/04-landing-megaprompt.md` (maintainer-local draft spec — gitignored, not present in the public repository)
 **Build pattern:** Path B (direct conversion). Distinct from `product-team/skills/landing-page-generator/`.
+
+Changed by AI Blocks (2026-11-09): added a First, ground the job section; with a live site the captured fonts, colours and button style are the brand overrides, and Inter is used only when there is no brand font.

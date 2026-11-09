@@ -1,6 +1,6 @@
 ---
 name: landing-page-design
-description: "Complete system for building high converting landing pages: intake questions, page structure, layout selection, conversion copywriting, SEO, plus strict visual rules for typography, spacing, corner radius, backgrounds, hero layout, icons, and motion. Use this skill whenever building, editing, styling, reviewing, or writing copy for ANY landing page, marketing site, web UI, page section, component, or prototype, even when the user does not mention design, conversion, tokens, or a design system. Always consult it before choosing page sections, headlines, CTAs, fonts, font sizes, spacing values, border radii, background colors, icons, or transitions."
+description: "System for building a new high converting landing page for a SaaS or software product that has no existing brand system: intake questions, page structure, layout selection, conversion copywriting, SEO, plus a default visual system (typography, spacing, radius, backgrounds, hero, icons, motion). Use it for a new product page with no live site or brand guide to follow. When the business already has a site or brand, run brand-dna-capture first: the brand's fonts, colours, components and section order win, and Part B applies only where the capture is silent."
 ---
 
 # Landing Page Design
@@ -9,7 +9,7 @@ A landing page is not a homepage. A homepage serves multiple intents. A landing 
 
 **one offer → one audience → one primary action.**
 
-This skill has two halves. **Part A** decides what the page says and how it is structured. **Part B** is the non negotiable visual system. Work through A before touching B.
+This skill has two halves. **Part A** decides what the page says and how it is structured. **Part B** is a default visual system for a product with no brand system of its own. Work through A before touching B.
 
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
@@ -35,9 +35,18 @@ How to start:
 3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 <!-- /needs -->
 
+## First, ground the job
+
+Before you start, follow the [Grounded job protocol](https://useaiblocks.com/skills/grounded-job-protocol): write the job card and choose the mode.
+
+- **The business has a live site or a brand guide** (mode patch or extend): run [Brand DNA capture](https://useaiblocks.com/skills/brand-dna-capture) first. Its fonts, colours and their shares, buttons, nav, footer and section order win over every rule in Part B and over the structure in A2. Use Part B only for values the capture does not cover, and say which ones.
+- **No site and no brand system** (mode new, for example a new SaaS product): Parts A and B apply as written, as one tested starting point rather than the only answer.
+- Name the defaults you will avoid from [AI default patterns](https://useaiblocks.com/skills/ai-default-patterns), and check the built page with [Brand fidelity check](https://useaiblocks.com/skills/brand-fidelity-check) whenever a live site exists.
+
+
 ## Scope
 
-Apply to all web UI work: landing pages, marketing sites, components, dashboards, prototypes, and design reviews. When a rule here conflicts with a framework default, this file wins. When the user's explicit prompt conflicts with a rule, the user wins.
+Apply to new landing pages and marketing pages for products without an existing brand system. Order of authority: the user's explicit prompt, then the captured brand (brand-dna.json, a brand guide, the live site's components), then this file, then framework defaults. For an existing site, this file supplies conversion logic (Part A) and fills gaps; it never replaces the brand's own look.
 
 **Companion skill.** For upgrading an *existing* site rather than building a new one, use `redesign-existing-projects` ([github.com/elayadesign/redesign-skill](https://github.com/elayadesign/redesign-skill)). It diagnoses generic patterns and defers to this file for every concrete value.
 
@@ -75,7 +84,11 @@ If the user cannot answer, make a reasonable assumption, state it in one line, a
 
 ## A2. Page structure
 
-**Above the fold (required)**
+**Start from the site's own structure when one exists.** For a page on an existing site, begin with the section order and section kinds in the brand capture (or the page layout spec), then add or move sections only where an intake answer gives a reason. Record each change.
+
+**One option: the 12 section SaaS structure.** It wins when the product is new software, the visitor arrives cold and needs the product explained, the buyer's questions really come in this order, and there is no site structure to keep. It is a weak fit for retail, luxury and editorial brands, for repeat visitors, and for product pages where buyers expect the store's own layout.
+
+**Above the fold**
 1. Headline, outcome plus audience
 2. Subheadline, clarifies how and adds specificity
 3. Primary CTA, clear verb plus what they get
@@ -93,7 +106,7 @@ If the user cannot answer, make a reasonable assumption, state it in one line, a
 11. Risk reversal, trial, cancel anytime, guarantee
 12. Final CTA, identical to the top
 
-Include the mandatory tagline reveal section from B11 somewhere in the mid page argument, typically right after the hero or after benefits.
+For a new product page, a tagline reveal section (B11) can sit in the mid page argument, typically right after the hero or after benefits. It is optional, and for an existing brand it is used only if the brand already uses that kind of moment.
 
 ## A3. Layout selection
 
@@ -169,21 +182,21 @@ Never rebuild the whole page on each iteration. Section by section keeps control
 
 # PART B — Visual system
 
-Every visual value must resolve through these rules instead of being invented ad hoc.
+For a product with no brand system, every visual value must resolve through these rules instead of being invented ad hoc. When a brand capture or brand guide exists, its values come first: keep the brand's fonts (including a second font, italics or heavy weights it uses), its type sizes, spacing, radius, backgrounds, icons and motion, and use these rules only where the brand is silent.
 
 ## B1. Typography
 
 ### Fonts
 
-**Use:** Geist, Manrope, Geist Mono, Poppins.
+**Existing brand:** use the brand's own fonts in their measured roles (brand-dna.json `type.roles`), load the same font files, and keep their case and weights. If a constraint blocks a brand font, embed it or stop and say so; never swap in one from the list below.
 
-**Never use:** Inter, Roboto, Arial, Open Sans, Helvetica.
+**New product with no brand fonts (default):** Geist, Manrope, Geist Mono or Poppins. Avoid Inter, Roboto, Arial, Open Sans and Helvetica unless the brief chooses one.
 
-**Never use italic fonts** anywhere in the interface.
+**Italics** are avoided by default, unless the brand uses them.
 
-**One typeface per site.** Do not pair two fonts unless the prompt explicitly asks for it. Geist Mono is allowed alongside a primary font only for code, data, or numeric UI where a monospace is functionally required.
+**One typeface per site by default.** Pair two fonts when the brand already does, or when the prompt asks for it. Geist Mono is allowed alongside a primary font only for code, data, or numeric UI where a monospace is functionally required.
 
-**Never use ultra bold weights** (900 / black). Cap at semibold or bold.
+**Ultra bold weights** (900 / black) are avoided by default. Keep them where the brand uses them.
 
 ### Copy rules
 
@@ -364,9 +377,9 @@ Things that get forgotten and make a page feel unfinished:
 - Semantic HTML: `<nav>`, `<main>`, `<article>`, `<aside>`, `<section>`
 - A way back from every page
 
-## B11. Tagline reveal section (mandatory)
+## B11. Tagline reveal section (optional)
 
-Every landing page includes one large type section stating the core benefit or tagline, separate from the hero. It sits further down the page as its own moment, not stacked directly under the hero.
+A new product page can include one large type section stating the core benefit or tagline, separate from the hero. Use it when the page has room for a single big statement and no brand pattern says otherwise. Skip it on an existing site unless the brand already uses this kind of moment. It sits further down the page as its own moment, not stacked directly under the hero.
 
 **Copy**
 - Minimum two lines of text.
@@ -386,7 +399,7 @@ Every landing page includes one large type section stating the core benefit or t
 
 # Output format
 
-When generating a landing page from scratch, return these in order before writing code:
+When generating a landing page from scratch for a new product, return these in order before writing code (for an existing site, start the outline from the captured section order):
 
 1. **Page outline** — sections and their order
 2. **Hero copy** — headline, subheadline, CTA, proof line
@@ -413,7 +426,7 @@ Next steps: check every figure and claim against real data, hand the layout and 
 - [ ] Layout type chosen deliberately
 
 **Visual**
-- [ ] Single approved typeface, no italics, no ultra bold
+- [ ] Brand fonts, colours and components kept when a brand exists (cite the capture); otherwise a single approved typeface, no italics, no ultra bold
 - [ ] No hyphens in copy, no orphaned words
 - [ ] Every font size lands on a Tailwind scale step
 - [ ] Every spacing value comes from the spacing table
@@ -422,13 +435,16 @@ Next steps: check every figure and claim against real data, hand the layout and 
 - [ ] Hero heading and subheading capped at 680px with meaningful line breaks
 - [ ] Icons from Phosphor, Solar, or Iconamoon
 - [ ] Every transition uses a custom cubic bezier, scroll reveals use IntersectionObserver
-- [ ] Tagline reveal section present, minimum two lines, words activate one at a time on scroll
+- [ ] If a tagline reveal section is used, minimum two lines, words activate one at a time on scroll
+- [ ] For an existing site: the brand fidelity check passes (fonts, colour shares, buttons, nav and footer, placeholders, facts, 390 px, primary action)
 
 **Content and ship**
 - [ ] No Lorem Ipsum, no placeholder brands, no AI cliches, no round fake numbers
 - [ ] Hover, active, focus, loading, empty, and error states all present
 - [ ] No dead links, current nav item indicated
 - [ ] 404, legal links, form validation, favicon, meta tags, alt text
+
+Changed by AI Blocks (2026-11-09): scoped the skill to new products with no brand system; existing brands run brand-dna-capture first and their system wins; the 12 sections, the tagline reveal and the font list became defaults with stated conditions.
 
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this

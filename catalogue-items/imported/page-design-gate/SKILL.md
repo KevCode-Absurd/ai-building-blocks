@@ -32,6 +32,11 @@ How to start:
 3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 <!-- /needs -->
 
+## First, ground the job (added by AI Blocks)
+
+Before you start, follow the [Grounded job protocol](https://useaiblocks.com/skills/grounded-job-protocol). If the page belongs to a business with a live site or brand guide, run [Brand DNA capture](https://useaiblocks.com/skills/brand-dna-capture) first: its fonts, colours and their shares, buttons, nav, footer and section order count as a brief that pins the look, so they win over every rule below. Use [AI default patterns](https://useaiblocks.com/skills/ai-default-patterns) for the defaults to avoid, and run [Brand fidelity check](https://useaiblocks.com/skills/brand-fidelity-check) next to the browser proof.
+
+
 ## Overview
 
 Two skills in one, plus the part both leave to the model: proof.
@@ -60,8 +65,8 @@ Write one line before building:
 
 - The audience picks the look, not your habit. A B2B buyer, a design-savvy consumer and a public-sector visitor need three different pages.
 - Set three dials from that read (1 to 10): **variance** (symmetry to art), **motion** (still to cinematic), **density** (gallery to cockpit). Default landing page: 7 / 6 / 4. Trust-first or regulated: 3 / 2 / 5.
-- Name one **signature detail** the page will be remembered by: a type treatment, a material, an interaction, a way the product is shown. One, done well.
-- If the brief pins fonts, colors or an era, the brief wins over every rule here.
+- Name one **signature detail** the page will be remembered by: a type treatment, a material, an interaction, a way the product is shown. One, done well. For an existing brand, pick one the brand already owns from the capture (its photography, its type, a component) instead of inventing a new one.
+- If the brief or the brand capture pins fonts, colors or an era, they win over every rule here.
 
 ### Step 2: Build on the craft floor
 
@@ -152,3 +157,5 @@ Adapted from [stas4000/tastegate](https://github.com/stas4000/tastegate) (MIT). 
 rules derive from taste-skill (MIT) and the craft floor from impeccable (Apache-2.0); both
 notices ship here in [references/THIRD_PARTY_NOTICES.md](references/THIRD_PARTY_NOTICES.md) with their
 full licenses under `references/`.
+
+Changed by AI Blocks (2026-11-09): added a First, ground the job section; the brand capture pins the look like a brief, and an existing brand reuses a signature detail it already owns.

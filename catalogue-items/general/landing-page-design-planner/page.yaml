@@ -6,26 +6,26 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 
 headline: "Landing page design planner"
-subhead: Give it your page copy and your brand's colours, fonts and photos. It sets one design system and plans three directions that differ in layout and what the pictures do. You get a section plan, a build brief, and a review if you send screenshots.
+subhead: Give it your live page or your page copy and brand. If the page is live, it measures it first and plans three sets of changes to it. For a new page it plans three directions that differ in layout and what the pictures do. You get a section plan, a build brief, and a review if you send screenshots.
 
 explain: |
   When you ask for page designs, you often get three versions of the same layout in three colours. Or your fonts get swapped and the delivery terms hidden to make it look cleaner.
 
-  This skill plans the design before anything is built. First it writes down a system from your own brand: which colours do which job, which font is for headings and which for reading, and one main visual move. Then it plans three directions that differ in how the first screen is composed, what the images do and how the argument flows, such as a product demonstration, a story told like a magazine, or a close look at details. Each section gets a phone and a desktop layout. Give it screenshots of a built page and it reviews them twice, once for design and once for technical problems like text that's too small or too faint.
+  This skill plans the design before anything is built. If your page is already live, it improves that page by default. It captures the live site first, then plans three ranked sets of changes, each tied to what it found. For a new page, it first writes down a system from your own brand: which colours do which job, which font is for headings and which for reading, and one main visual move. Then it plans three directions that differ in how the first screen is composed, what the images do and how the argument flows, such as a product demonstration, a story told like a magazine, or a close look at details. Each section gets a phone and a desktop layout. Give it screenshots of a built page and it reviews them twice, once for design and once for technical problems like text that's too small or too faint.
 
 when:
   - Your page copy and offer are settled and you need a design plan before anyone builds it.
   - A page is built and you want to know what looks wrong or is hard to read on a phone.
-  - You want to compare a few real options before committing to a redesign.
+  - You want to compare a few real options for improving a live page before anyone rebuilds it.
 not_for:
   - "You need the page copy written first: use the Ad-matched landing page writer, then bring the copy here."
   - "You are designing a dashboard or a tool screen: ask a designer for a product-tool layout brief instead."
   - "Your offer and copy are not settled yet: finish those first, because this plan does not invent offers, proof or claims."
 
 you_give:
-  - Your brand's colours and what each is for, fonts, voice, logo and product photos
+  - Your live page's address, so it can be measured first (or your brand's colours, fonts, voice, logo and product photos for a new page)
   - The page's copy or brief, the buyer, the ad that sends people there, the offer and the facts
-  - What may change, a light refresh or a full redesign (optional)
+  - Whether to improve the live page (the default), add a new page to your site, or do a full redesign (optional)
   - Phone and desktop screenshots of a built page, for a review (attach them; your AI can see pictures) (optional)
 you_get:
   - One design system with named colours, font roles, a main visual move and layout rules
@@ -38,7 +38,7 @@ how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your brand colours with hex codes and font names, and attach your product photos.
   - Paste the finished page copy and the ad that sends people to it.
-  - Say whether this is a refresh (keep what works) or a redesign (layout can change).
+  - If the page is live, your AI improves it by default. Say "full redesign" only if you want the layout to change.
   - Pick one direction, then hand the section plan to whoever builds the page. Once it's built, send screenshots back for the review.
 output_sample:
   input:
@@ -111,82 +111,62 @@ output_shape: |
   <one line per check missed, or none>
 
 example:
-  business: sprout
+  business: gehna
   input: |
     [the skill]
 
-    Brand look (sprout/brand.md): forest green #00582D, deep forest
-    #002C17 (headings, dark sections), cream #FFF7DF (hero background),
-    kelly green #007E40 (buttons), sunflower yellow #FFCC2E (stars,
-    badges), plum #581E5A (top banner). Work Sans bold headings, Work Sans
-    medium body, DM Mono small uppercase tags, a chunky display font for
-    big lines. Photos: bright, sunny, pouch on a soft 2-colour gradient,
-    gummies poured into a hand. Pack torn straight across the top only.
-
-    The page: our main product page for Sprout Original, copy and offer
-    as now (sprout/product-page.md). Buyer: people who quit powders.
-    Scope: redesign. Keep every price, term and the guarantee wording.
-    No screenshots yet.
+    Live page: https://www.gehnaindia.com/filigree-pearl-18k-gold-dangle-earrings
+    Brand capture: context/brand-dna.md and screenshots (9 Nov 2026).
+    Goal: more phone visitors add the earrings to the cart. Keep every
+    price, term and policy as on the site. Mode: improve the live page.
   output: |
-    DESIGN SYSTEM
-    Colours: cream #FFF7DF = page and hero background
-             deep forest #002C17 = headings, dark proof bands
-             kelly green #007E40 = the one main button
-             forest green #00582D = pouch, section accents
-             sunflower #FFCC2E = small badges only
-             plum #581E5A = announcement bar only
-    Type: headings Work Sans bold, body Work Sans medium 16 px and up,
-          tags DM Mono uppercase, big statement lines in the display font
-          (MISSING: its name and file)
-    Main visual move: the torn daily pack, gummies pouring into a palm
-    Layout rules: one idea per section; price, terms and button always
-      together; renewal price never smaller than body text
-    Line length: 45 to 75 characters   Motion: none beyond hover
-    Accessibility: yellow never carries text; contrast checked on cream
+    MODE: patch (the page is live; no redesign asked for)
 
-    DIRECTION A  "Rip. Tip. Enjoy."  (demonstration)
-    First screen: three steps across one hand-held shot: tear, tip, eat
-    Images: show the habit happening   Rhythm: how easy, what's inside,
-      proof, price   Phone: steps stack, button under step 3
-    DIRECTION B  "The shelf you clear"  (story)
-    First screen: a powder tub, shaker and pill bottles on one side, one
-      green pouch on the other   Images: before and after of the counter,
-      never of a body   Rhythm: the old way, the swap, reviews from
-      people who quit powders, price   Desktop: split screen
-    DIRECTION C  "What's in one pack"  (detail)
-    First screen: one daily pack, big, with 60+ / 21 / 6 g in DM Mono
-      tags   Images: close-ups and the nutrition label   Rhythm: what's
-      inside, testing, study, price   Phone: tags become a swipe row
+    DESIGN SYSTEM (from the capture, product page)
+    Colours: white page, about 60% of the page by pixels
+             charcoal #3E3F43 = text and the dark footer, about 12%
+             marigold #F4B54A = ADD TO CART and the offer line only, under 1%
+             wine = the "TOP 25" badge only; it stays small
+    Type: titles Nanum Myeongjo 800 30 px; body Lato 400 14 px;
+          buttons Lato UPPERCASE 14 px
+    Shapes: 4 px corners on buttons and boxes; round category chips
+    Keep: menu bar, photo gallery with thumbnails, four-cell spec grid,
+      dark footer, section order (product > FAQ > Complete Your Look >
+      You May Also Like > reviews > categories > Customer Favorites)
 
-    SECTION PLAN (direction B)
-    # | Section       | Buyer question            | Phone           | Image
-    1 | Hero          | What is it, for me?       | stacked split   | counter swap
-    2 | Plan box      | What does it cost?        | price, renewal, | pouch
-      |               |                           | guarantee, button together
-    3 | The old way   | Why switch?               | 3 short lines   | shaker, pills
-    4 | What's inside | Is it enough?             | 3 DM Mono tags  | label close-up
-    5 | Reviews       | Do people stick with it?  | 3 quote cards   | none
-    6 | Testing       | Can I trust it?           | one dark band   | none
-    7 | Questions     | What if...?               | open by default | none
+    CHANGE-SET A  "Clear the buying moment"  (recommended)
+    1. Move the WhatsApp bubble so it no longer covers the right end of
+       ADD TO CART at 390 px (seen on the phone screenshot). Reuse.
+    2. Show the delivery line ("Yours by 28 to 29 Nov") right under
+       ADD TO CART on phones; today it sits below the first screen.
+       Reuse the existing delivery row.
+    Test: add-to-cart rate on phones, change-set A against the live page.
 
-    BUILD BRIEF (direction B)
-    Job: first orders from people who quit powders. Cream page, deep
-    forest headings, one kelly green button, Work Sans, DM Mono tags.
-    Sections 1 to 7 as above, phone first. Images: the counter swap shot
-    and the label close-up (MISSING: both need shooting). Always visible:
-    the four lines below. Add no offer, rating or badge.
+    CHANGE-SET B  "Proof beside the product"
+    1. Move "4.8/5, 519 Google Reviews" from the banner above the photos
+       to just under the product title. Restyle within the capture:
+       Lato 14 px, the existing stars.
+    Test: add-to-cart rate, B against the live page.
 
-    KEPT VISIBLE ON PHONES
-    "Renews at $49.99 each 4 weeks", "30-day guarantee on your first
-    order", the text sign-up condition for $29.99, delivery time.
+    CHANGE-SET C  "Size and weight first"
+    1. Show the spec grid (gold 0.73 g, 18K, gemstone 1.87 ct, gross
+       1.1 g) above the karat choice on phones. Reuse the grid as is.
+    Test: add-to-cart rate and FAQ opens, C against the live page.
+
+    PICK: A, because it frees the main button on the first phone screen.
+
+    BUILD BRIEF (change-set A)
+    Edit the live product template only. No new colour, font or
+    component. Keep the header, footer and every section in place.
 
     NOT CHECKED
-    No screenshots yet, so no visual or technical review. Contrast of
-    white text on photos needs a look once built.
+    How the moved WhatsApp bubble behaves on very small phones (320 px).
+    Run the brand fidelity check on the patched page before hand-off.
+
 
 tweaks:
-  - what: Refresh or redesign
-    how: Say "refresh" to keep the layout and content you weren't asked to touch. Say "redesign" to let the directions recompose the page, while your facts, offer terms and behaviour stay fixed.
+  - what: Improve or redesign
+    how: With a live page, it plans changes to that page by default and keeps everything you weren't asked to touch. Say "full redesign" to let the directions recompose the page, while your facts, offer terms and behaviour stay fixed.
   - what: Your brand colours
     how: Give each colour a job (background, button, accent). With jobs set, the three directions use them consistently instead of guessing.
   - what: Product photos

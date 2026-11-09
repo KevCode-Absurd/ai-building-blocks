@@ -28,6 +28,15 @@ How to start:
 - **Claude:** Follows long design rules well and shows the plan before the code.
 <!-- /needs -->
 
+## First, ground the job (added by AI Blocks)
+
+Before you start, follow the [Grounded job protocol](https://useaiblocks.com/skills/grounded-job-protocol) and choose the mode.
+
+- **The client already has a site or brand** (patch or extend): "distinct" means recognisably theirs. Run [Brand DNA capture](https://useaiblocks.com/skills/brand-dna-capture) first. The captured fonts, colours and their shares, buttons, radius, nav, footer and section order are the brief: keep them, and spend your choices on layout and content within that system. The "one memorable element" and the type and caps advice below apply only where the capture leaves a gap.
+- **New product or brand** (new): the guidance below applies as written.
+- Either way, name the defaults to avoid from [AI default patterns](https://useaiblocks.com/skills/ai-default-patterns). With a live site, check the build with [Brand fidelity check](https://useaiblocks.com/skills/brand-fidelity-check).
+
+
 ## When not to use (added by AI Blocks)
 
 - The product already has a design system or component library. Use it, and keep the new screens consistent with it.
@@ -80,7 +89,7 @@ Default to line lengths of less than 80 characters. Serif typefaces can have sli
 
 Avoid these default typographic treatments; they are the commonest tells of a generated page:
 - Accenting just a single word or phrase in a headline, like putting one word in italic/bold or a different color.
-- Using all caps for labels.
+- Using all caps for labels (unless the brand's own labels or buttons are uppercase in the capture; then keep them).
 - Adding unnecessary typographic labels above content.
 
 Visual structure is information. Structural devices like outlines, borders, numbering, eyebrows, dividers, labels, etc., encode useful information about the content rather than decorate it. Many generic designs use numbered markers (01 / 02 / 03), but that's only appropriate if the content actually is a sequence — like a stepped process or a timeline. Before adding numbered markers, check the content really is a sequence.
@@ -112,7 +121,7 @@ When writing the code, be careful of structuring your CSS selector specificities
 
 ## Restraint and self-critique
 
-Spend your boldness in one place. Let one element be the memorable thing, keep everything around it quiet and disciplined, and cut any decoration that does not serve the brief. Build to a quality floor without announcing it: responsive down to mobile, visible keyboard focus, reduced motion respected, visually accessible, harmonious color palettes. Critique your own work as you build, taking screenshots to review if your environment supports it — a picture is worth 1000 tokens. Consider Chanel's advice: before leaving the house, take a look in the mirror and remove one accessory. Human creatives have memory and always try to do something new, so if you have a space to quickly jot down notes about what you've tried, it can help you in future passes.
+Spend your boldness in one place. For a new brand, let one element be the memorable thing; for an existing brand, the memorable thing is usually one the brand already owns (its photography, its type, a component), so reuse it rather than inventing a new signature, keep everything around it quiet and disciplined, and cut any decoration that does not serve the brief. Build to a quality floor without announcing it: responsive down to mobile, visible keyboard focus, reduced motion respected, visually accessible, harmonious color palettes. Critique your own work as you build, taking screenshots to review if your environment supports it — a picture is worth 1000 tokens. Consider Chanel's advice: before leaving the house, take a look in the mirror and remove one accessory. Human creatives have memory and always try to do something new, so if you have a space to quickly jot down notes about what you've tried, it can help you in future passes.
 
 ## More on writing in design
 
@@ -125,3 +134,5 @@ Use active voice as default. A CTA says exactly what happens when it is used: "S
 Treat failure and emptiness as moments for direction, not mood. Explain what went wrong and how to fix it, in the interface's voice rather than a person's. Errors don't apologize, and they are never vague about what happened. An empty screen is an invitation to act.
 
 Keep the tone conversational: plain verbs, sentence case, no filler, with tone matched to the brand and the audience. Let each written element do exactly one job.
+
+Changed by AI Blocks (2026-11-09): added a First, ground the job section; for an existing brand the captured system is the brief, and the one-memorable-element and all-caps advice apply only where the capture is silent.

@@ -545,7 +545,7 @@
     "catalogue-items/ecommerce/shopify-landing-page-builder/item.yaml": {
       "reviewed_by": "AI Blocks source review (Codex)",
       "reviewed_on": "2026-11-08",
-      "method_sha256": "5674aaed2a2b4ae4fe7627bb8964e1e71787dd893b97feaac4cab922de95df53",
+      "method_sha256": "ee4c0a310b6e042997a61158a7e1a4a431f0a291d5c560c5dcac0fed302f6fe1",
       "inputs": [
         {
           "type": "design_direction",
@@ -590,7 +590,7 @@
     "catalogue-items/general/ad-matched-landing-page-writer/item.yaml": {
       "reviewed_by": "AI Blocks source review (Codex)",
       "reviewed_on": "2026-11-08",
-      "method_sha256": "278b093ee45de4f94645c623880d332ecbed850cf2dd70d8147201c9fcaeb887",
+      "method_sha256": "223e81cad823753ca7864338e1cf57c4b3dec268ad33e5e849f0a8d9b2689456",
       "inputs": [
         {
           "type": "ad_copy",
@@ -662,7 +662,7 @@
     "catalogue-items/general/landing-page-design-planner/item.yaml": {
       "reviewed_by": "AI Blocks source review (Codex)",
       "reviewed_on": "2026-11-08",
-      "method_sha256": "6272872bf9423c7abf135ffe27b3075dd8d4e96ecf9b21e2d93f0348edac0fba",
+      "method_sha256": "2687b3517bc98216eb27ca6f20de41ca1b4a74659c6b7a8d11979a54e90e8762",
       "inputs": [
         {
           "type": "brand_brain",
@@ -698,7 +698,7 @@
     "catalogue-items/general/static-html-landing-page-builder/item.yaml": {
       "reviewed_by": "AI Blocks source review (Codex)",
       "reviewed_on": "2026-11-08",
-      "method_sha256": "c62ed33e3ec0d04e1041af24b7e609f6fce498bed51bb0da2f7447996783264d",
+      "method_sha256": "7df00b596b965b0447f950df2e3c7ae8c8ecf0d2efa99993ca452e303edd7357",
       "inputs": [
         {
           "type": "brief",
@@ -883,6 +883,258 @@
           "rationale": "When a live site exists, GROUND captures it; the site address is the optional web_page input."
         }
       ]
+    },
+    "catalogue-items/ecommerce/store-hero-section-writer/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "method_sha256": "8d9d660cbccf9407ac1dbb93e50f7c4e59184ce3a91a8b34647c18437e0bb62a",
+      "inputs": [
+        {
+          "type": "ad_copy",
+          "required": false
+        },
+        {
+          "type": "offer",
+          "required": true
+        },
+        {
+          "type": "voc_reviews",
+          "required": false
+        },
+        {
+          "type": "web_page",
+          "required": false
+        }
+      ],
+      "evidence": [
+        {
+          "type": "ad_copy",
+          "quote": "**The traffic source and the ad** (strongly advised).",
+          "rationale": "The headline repeats the ad's promise, so the ad's copy is read when it is supplied."
+        },
+        {
+          "type": "offer",
+          "quote": "**Offer, price and guarantee** (required).",
+          "rationale": "The method needs the live offer with its exact price, returns and guarantee terms before any doubt-reducer is written."
+        },
+        {
+          "type": "voc_reviews",
+          "quote": "**Proof you hold** (strongly advised): reviews, press, counts.",
+          "rationale": "Reviews and other customer proof are the real proof placed on the first screen; nothing is invented when they are missing."
+        },
+        {
+          "type": "web_page",
+          "quote": "**Page URL or screenshot, and weekly visits** (optional).",
+          "rationale": "The live page (or its screenshot) is the page being patched and is captured first when available."
+        }
+      ]
+    },
+    "catalogue-items/general/landing-page-30-point-checker/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "method_sha256": "284d329a8b1edc372acf03cb542f6c527dc8673f40db754c0eb8bf4060e4c2e9",
+      "inputs": [
+        {
+          "type": "brand_brain",
+          "required": false
+        },
+        {
+          "type": "design_direction",
+          "required": false
+        },
+        {
+          "type": "landing_page",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "brand_brain",
+          "quote": "**Your facts** (optional): real prices, offer terms, guarantee, delivery and returns terms, the claims you may make.",
+          "rationale": "A brand file supplies the real prices, terms and allowed claims that checks 16, 25 and 27 need."
+        },
+        {
+          "type": "design_direction",
+          "quote": "each fix uses the page's own fonts, colours, buttons and sections",
+          "rationale": "The page's visual direction (from the capture or a design direction file) constrains how each fix is written."
+        },
+        {
+          "type": "landing_page",
+          "quote": "**The page** (required): its text top to bottom",
+          "rationale": "Every check reads the page's own text and screenshots, which is the landing_page input."
+        }
+      ]
+    },
+    "catalogue-items/general/landing-page-auditor/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "method_sha256": "df0b5e531e8ff3c8cc5e72871a05385aa7cef73b4419abb1cc420db13e2daa47",
+      "inputs": [
+        {
+          "type": "ad_copy",
+          "required": false
+        },
+        {
+          "type": "brand_brain",
+          "required": false
+        },
+        {
+          "type": "landing_page",
+          "required": true
+        },
+        {
+          "type": "objection_map",
+          "required": false
+        },
+        {
+          "type": "performance_sheet",
+          "required": false
+        }
+      ],
+      "evidence": [
+        {
+          "type": "ad_copy",
+          "quote": "**The ad or link that leads to it** (optional but best): the promise the buyer arrived with.",
+          "rationale": "The ad's copy is compared with the first screen in the scent check."
+        },
+        {
+          "type": "brand_brain",
+          "quote": "**Brand file** (optional): buyer doubts, offer terms, proof on file, guarantee, delivery and cancellation terms, voice.",
+          "rationale": "A brand brain provides the doubts, terms and proof the doubt read checks against."
+        },
+        {
+          "type": "landing_page",
+          "quote": "**The page** (required): its address, or its full text and phone screenshots, top to bottom.",
+          "rationale": "The audit reads the live page itself, as text and phone screenshots."
+        },
+        {
+          "type": "objection_map",
+          "quote": "**Unanswered doubts** (optional): a list of buyer doubts the page does not yet answer",
+          "rationale": "An objection map lists doubts; each becomes a finding at the screen where a buyer would look for the answer."
+        },
+        {
+          "type": "performance_sheet",
+          "quote": "**Analytics** (optional): conversion by step, phone against desktop, traffic.",
+          "rationale": "A performance export lets fixes be sized; without it the method gives no money figures."
+        }
+      ]
+    },
+    "catalogue-items/imported/animated-landing-page-builder/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "method_sha256": "0697ba1284abf78da7d7efb4ef7ee8428fcbe25ee055172f8e67d106974b4f1a",
+      "inputs": [
+        {
+          "type": "brand_brain",
+          "required": false
+        },
+        {
+          "type": "brief",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "brand_brain",
+          "quote": "Brand colors / fonts to override the default (dark navy + teal + Inter)?",
+          "rationale": "A brand brain or capture supplies the brand overrides; with a live site the captured fonts and colours are used."
+        },
+        {
+          "type": "brief",
+          "quote": "What's the product or service? Give me the name + a 1–2 sentence elevator pitch",
+          "rationale": "The intake questions collect the brief: product, audience, brand and tone."
+        }
+      ]
+    },
+    "catalogue-items/imported/conversion-landing-page-designer/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "method_sha256": "9f01ca20d2d847cb4c698091f520454fb74cd736f81590591c43df9a56120a37",
+      "inputs": [
+        {
+          "type": "brand_brain",
+          "required": false
+        },
+        {
+          "type": "brief",
+          "required": true
+        },
+        {
+          "type": "page_layout_spec",
+          "required": false
+        }
+      ],
+      "evidence": [
+        {
+          "type": "brand_brain",
+          "quote": "Brand voice: casual or professional",
+          "rationale": "A brand brain answers the voice and constraints questions; for an existing brand its captured system wins."
+        },
+        {
+          "type": "brief",
+          "quote": "What is the offer, exactly what do they get?",
+          "rationale": "The intake gathers the offer, audience and primary action, which is the brief."
+        },
+        {
+          "type": "page_layout_spec",
+          "quote": "If you have a page layout spec from an earlier step, use its sections as the page structure",
+          "rationale": "An earlier layout spec replaces the default section structure."
+        }
+      ]
+    },
+    "catalogue-items/imported/interface-designer/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "method_sha256": "8e687e0467434c8ddc592a5dfbe34c8bf922e51320f47199e0a635bb806f3110",
+      "inputs": [
+        {
+          "type": "design_direction",
+          "required": false
+        },
+        {
+          "type": "question",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "design_direction",
+          "quote": "Brand colours, fonts and the framework (optional).",
+          "rationale": "A supplied design direction or brand capture sets the colours and fonts the design must keep."
+        },
+        {
+          "type": "question",
+          "quote": "What the page or app is for, and who uses it.",
+          "rationale": "The design starts from what the interface is for and who uses it, which is the question input."
+        }
+      ]
+    },
+    "catalogue-items/imported/page-design-gate/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "method_sha256": "8620d38746400ab67fa06f1a8c64923e6168e4aa17f782273bdd639cfc2f2e8d",
+      "inputs": [
+        {
+          "type": "brief",
+          "required": true
+        },
+        {
+          "type": "codebase",
+          "required": false
+        }
+      ],
+      "evidence": [
+        {
+          "type": "brief",
+          "quote": "If the brief or the brand capture pins fonts, colors or an era, they win over every rule here.",
+          "rationale": "The brief (and the brand capture) is read first and overrides the default craft rules."
+        },
+        {
+          "type": "codebase",
+          "quote": "Use for a redesign, a polish pass, or a \"make it look better\" request",
+          "rationale": "A polish pass works on an existing frontend, so the project's code is an optional input."
+        }
+      ]
     }
   },
   "handoffs": {
@@ -928,7 +1180,7 @@
       "reviewed_by": "AI Blocks source review (Codex)",
       "reviewed_on": "2026-11-08",
       "from_sha256": "d5ce9f9f0d5031905717ae3db25db68aae59acbfc20b8fcba82ecc8a7be4432c",
-      "to_sha256": "278b093ee45de4f94645c623880d332ecbed850cf2dd70d8147201c9fcaeb887",
+      "to_sha256": "223e81cad823753ca7864338e1cf57c4b3dec268ad33e5e849f0a8d9b2689456",
       "ports_sha256": "142aa379dd26d25c00b8b7042d8e60ce244111477ed63238717b95d78443996e",
       "type": "offer",
       "output_quote": "Write the new title, the offer text, and where it sits in the ad.",
@@ -963,8 +1215,8 @@
     "catalogue-items/general/static-html-landing-page-builder/page.yaml#next#landing-page-30-point-checker": {
       "reviewed_by": "AI Blocks source review (Codex)",
       "reviewed_on": "2026-11-08",
-      "from_sha256": "c62ed33e3ec0d04e1041af24b7e609f6fce498bed51bb0da2f7447996783264d",
-      "to_sha256": "41c30e40f08451ff7bd51d09d9f252aed21724140b08e365bba223483a5b87f1",
+      "from_sha256": "7df00b596b965b0447f950df2e3c7ae8c8ecf0d2efa99993ca452e303edd7357",
+      "to_sha256": "284d329a8b1edc372acf03cb542f6c527dc8673f40db754c0eb8bf4060e4c2e9",
       "ports_sha256": "92dcb0e9af5ca8f3dced999523e1a1d172eb0030c61e501241241b648c4b5e8f",
       "from_type": "web_page",
       "to_type": "landing_page",
@@ -977,7 +1229,7 @@
     "catalogue-items/general/static-html-landing-page-builder/page.yaml#next#accessibility-checker": {
       "reviewed_by": "AI Blocks source review (Codex)",
       "reviewed_on": "2026-11-08",
-      "from_sha256": "c62ed33e3ec0d04e1041af24b7e609f6fce498bed51bb0da2f7447996783264d",
+      "from_sha256": "7df00b596b965b0447f950df2e3c7ae8c8ecf0d2efa99993ca452e303edd7357",
       "to_sha256": "94ab3dfbaa8acf48d65137ded42d18e0697238a6d7510d0b538229e2ea7b9579",
       "ports_sha256": "3542b9633bcebb73063e1f86a2837de5a71e9459be0c99a9cccb3eb4443abdaa",
       "type": "web_page",
@@ -989,8 +1241,8 @@
     "catalogue-items/imported/animated-landing-page-builder/page.yaml#next#ad-matched-landing-page-writer": {
       "reviewed_by": "AI Blocks source review (Codex)",
       "reviewed_on": "2026-11-08",
-      "from_sha256": "28de9c91b1e56b8313388341a171006085b81810232d9622c27619db601f3b52",
-      "to_sha256": "278b093ee45de4f94645c623880d332ecbed850cf2dd70d8147201c9fcaeb887",
+      "from_sha256": "0697ba1284abf78da7d7efb4ef7ee8428fcbe25ee055172f8e67d106974b4f1a",
+      "to_sha256": "223e81cad823753ca7864338e1cf57c4b3dec268ad33e5e849f0a8d9b2689456",
       "ports_sha256": "447eee4ba5b82ac3529aabfbde56bbe1d989bbca35b677f84cda678c2b02a470",
       "from_type": "web_page",
       "to_type": "copy_draft",
@@ -1032,7 +1284,7 @@
       "reviewed_by": "AI Blocks source review (Codex)",
       "reviewed_on": "2026-11-08",
       "from_sha256": "0e71979de9e6238a50161c20a39f7f1c67fea4c15ac051a3f58811cabaef51dc",
-      "to_sha256": "cf86c5991cdfb50cd9f17d830b8e0b948c62bcd8a31c6170c7d141b4669048f2",
+      "to_sha256": "df0b5e531e8ff3c8cc5e72871a05385aa7cef73b4419abb1cc420db13e2daa47",
       "ports_sha256": "6c3b23998dfbfe23c31172fdc94bbea7665139f02f16131dd7c1aeeec9a35344",
       "from_type": "code_change",
       "to_type": "landing_page",
@@ -1046,7 +1298,7 @@
       "reviewed_by": "AI Blocks source review (Codex)",
       "reviewed_on": "2026-11-08",
       "from_sha256": "0e71979de9e6238a50161c20a39f7f1c67fea4c15ac051a3f58811cabaef51dc",
-      "to_sha256": "41c30e40f08451ff7bd51d09d9f252aed21724140b08e365bba223483a5b87f1",
+      "to_sha256": "284d329a8b1edc372acf03cb542f6c527dc8673f40db754c0eb8bf4060e4c2e9",
       "ports_sha256": "04f8c6cb7c12d92161c59f0fd4ea1f2dc447b46a504912e7eacf8495a4771391",
       "from_type": "code_change",
       "to_type": "landing_page",
@@ -1069,6 +1321,256 @@
       "adaptation": "Select the actual approved cleaned flat-lay image from the returned photo_set, retain the original real-garment photo and fidelity observations, and label it as the garment image 1 for virtual try-on. Add a separately authorised pose/scene reference as image 2; do not pass the report, prompt, close-up or ghost-shape preview as the garment source.",
       "condition": "Only when the owner requests an on-model follow-up and actual returned/approved photo files exist. Require the separate pose reference, image-edit capability, rights and authorised action/spend limits; no automatic dLazy upload or payment follows from the recommendation.",
       "rationale": "The workflow begins and retains a flat-lay garment image; virtual try-on supports that source, whereas the old scene-swapper expects an already worn/model or mannequin image. The optional photo_set is only available after actual images return and pass their checks. The audit report is evidence to carry, not a substitute photograph; new generated images require fresh garment and marketplace checks."
+    },
+    "catalogue-items/ecommerce/shopify-theme-picker/page.yaml#next#store-hero-section-writer": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "from_type": "shortlist",
+      "to_type": "web_page",
+      "output_quote": "THEME SHORTLIST for <store>, <products>, <budget>",
+      "input_quote": "**Page URL or screenshot, and weekly visits** (optional).",
+      "rationale": "After the owner installs a theme from the shortlist, the store's page built on it is what the hero writer patches.",
+      "adaptation": "The shortlist is not page content; the person supplies the live page URL or a screenshot once the chosen theme is installed.",
+      "condition": "Only after a shortlisted theme is installed and the product page exists on it.",
+      "from_sha256": "059b9b9eb76c5752e8e7ba023ca0ff267d645d2eeb6df5890b3e483d7714e791",
+      "to_sha256": "8d9d660cbccf9407ac1dbb93e50f7c4e59184ce3a91a8b34647c18437e0bb62a",
+      "ports_sha256": "32faca430adf93ec2461188661850f6c6a43925bde2cf736b2e349887639a436"
+    },
+    "catalogue-items/ecommerce/sold-out-proof-line-writer/page.yaml#next#store-hero-section-writer": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "type": "ad_copy",
+      "output_quote": "fact: <the fact> | date: <...> | source: <...>",
+      "input_quote": "**Proof you hold** (strongly advised): reviews, press, counts.",
+      "rationale": "Dated sales-proof lines (units sold, restocks) can be used as one of the two real proof elements on the first screen, each with its source and date.",
+      "condition": "Only lines whose fact, date and source are still true on the day the hero is written.",
+      "from_sha256": "87f00fa759841b7365a8e6926c97b2a0ca461d22e5fd3c4d28e6402344563953",
+      "to_sha256": "8d9d660cbccf9407ac1dbb93e50f7c4e59184ce3a91a8b34647c18437e0bb62a",
+      "ports_sha256": "6745bdd659e07f8c6a1290ed87c78bff5127119d3e0f5a1d2386e57a07bf3c9f"
+    },
+    "catalogue-items/ecommerce/store-hero-section-writer/page.yaml#next#store-social-proof-placer": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "from_type": "copy_draft",
+      "to_type": "landing_page",
+      "output_quote": "HEADLINE OPTIONS (5)",
+      "input_quote": "**The main doubts, and the pages where visitors hesitate most** (strongly advised).",
+      "rationale": "The chosen hero (headline, proof and button) is the top of the page the placer then fills with proof further down.",
+      "adaptation": "The hero copy is placed on the page under review; reviews and testimonials still come from the user's own sources.",
+      "condition": "Use the picked headline and the live page; never the four unpicked options.",
+      "from_sha256": "8d9d660cbccf9407ac1dbb93e50f7c4e59184ce3a91a8b34647c18437e0bb62a",
+      "to_sha256": "58c80bc452fddb2699b2eee0bb8f642b87c9e75aca0d6d326755c7b69416673c",
+      "ports_sha256": "3697f116749cd9b59311cbe740de74e8e5782626de439568a9234470df45c16b"
+    },
+    "catalogue-items/ecommerce/store-hero-section-writer/page.yaml#next#product-page-section-planner": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "from_type": "copy_draft",
+      "to_type": "product_data",
+      "output_quote": "HEADLINE OPTIONS (5)",
+      "input_quote": "**Product and price** (required).",
+      "rationale": "The hero fixes the product, price and offer wording at the top; the section planner arranges the rest of the product page around the same facts.",
+      "adaptation": "The product name, price and offer line from the hero are passed as the product facts; full product details still come from the store.",
+      "condition": "Only the picked headline and verified offer facts carry over.",
+      "from_sha256": "8d9d660cbccf9407ac1dbb93e50f7c4e59184ce3a91a8b34647c18437e0bb62a",
+      "to_sha256": "398f7646f527bff9ebba2371c9575f5674cd059bae39b90e4652c0f7d7ebae7f",
+      "ports_sha256": "4ba31c28d489f848347f104b71f673232baf91f7fcde7f7cb1acf4aec94bdec3"
+    },
+    "catalogue-items/ecommerce/store-social-proof-placer/page.yaml#next#store-hero-section-writer": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "from_type": "objection_map",
+      "to_type": "voc_reviews",
+      "output_quote": "PROOF MATCHED TO DOUBTS",
+      "input_quote": "**Proof you hold** (strongly advised): reviews, press, counts.",
+      "rationale": "Proof items already matched to doubts, each with its source, are the real proof the hero places on the first screen.",
+      "adaptation": "Only proof rows that carry a named source are passed on as the hero's proof; items on the drop list stay out.",
+      "condition": "Only sourced proof items, never placeholders or dropped items.",
+      "from_sha256": "58c80bc452fddb2699b2eee0bb8f642b87c9e75aca0d6d326755c7b69416673c",
+      "to_sha256": "8d9d660cbccf9407ac1dbb93e50f7c4e59184ce3a91a8b34647c18437e0bb62a",
+      "ports_sha256": "5d794e3db88c1b8168e1d586cc467e65026001fae49da2ba721773679027fb10"
+    },
+    "catalogue-items/general/site-search-basics-checker/item.yaml#next#landing-page-auditor": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "from_type": "audit_report",
+      "to_type": "performance_sheet",
+      "output_quote": "The pages with no traffic.",
+      "input_quote": "**Analytics** (optional): conversion by step, phone against desktop, traffic.",
+      "rationale": "Search findings show which pages get traffic, which helps choose and size the landing page the auditor reviews.",
+      "adaptation": "Per-page search traffic from the checker is given as traffic context; it is not a conversion export, so no money figures follow from it.",
+      "condition": "Only when the checker had real search traffic data for the page.",
+      "from_sha256": "e75c6317e6144473e8c26fb56cd967f00308fd0297a08fb2b285e9249cd8c72c",
+      "to_sha256": "df0b5e531e8ff3c8cc5e72871a05385aa7cef73b4419abb1cc420db13e2daa47",
+      "ports_sha256": "ae2c62a31506fd90f3bc248607eea574dea75b222fb39b9d9b5130c367f613fe"
+    },
+    "catalogue-items/general/small-usability-test-planner/item.yaml#next#landing-page-auditor": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "from_type": "plan",
+      "to_type": "landing_page",
+      "output_quote": "The goal. The tasks. Who to recruit.",
+      "input_quote": "**The page** (required): its address, or its full text and phone screenshots, top to bottom.",
+      "rationale": "The test plan names the page and the visitor tasks; the auditor reviews that same live page so findings and sessions can be compared.",
+      "adaptation": "The page named in the plan is opened and given to the auditor as its address or screenshots; the plan itself is not page content.",
+      "condition": "Only when the plan names a specific live page.",
+      "from_sha256": "49016d11b6565e80c0fae5b7feba28d69d64c7a8663d5ca213a5c0baf7377cae",
+      "to_sha256": "df0b5e531e8ff3c8cc5e72871a05385aa7cef73b4419abb1cc420db13e2daa47",
+      "ports_sha256": "8c73937e00094d5de6682484a5ae91c29b38c59d2662bb7f85510f3ef3dc3d97"
+    },
+    "catalogue-items/imported/animated-landing-page-builder/page.yaml#next#landing-page-30-point-checker": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "from_type": "web_page",
+      "to_type": "landing_page",
+      "output_quote": "Generate a polished, self-contained `.html` landing page from a text prompt or brief.",
+      "input_quote": "**The page** (required): its text top to bottom",
+      "rationale": "The generated HTML page is the page the checker reads, with its text and phone screenshots.",
+      "adaptation": "Open the HTML file in a browser and give its full text and phone screenshots to the checker.",
+      "condition": "Only after the generated page opens in a browser.",
+      "from_sha256": "0697ba1284abf78da7d7efb4ef7ee8428fcbe25ee055172f8e67d106974b4f1a",
+      "to_sha256": "284d329a8b1edc372acf03cb542f6c527dc8673f40db754c0eb8bf4060e4c2e9",
+      "ports_sha256": "92dcb0e9af5ca8f3dced999523e1a1d172eb0030c61e501241241b648c4b5e8f"
+    },
+    "catalogue-items/imported/page-design-gate/page.yaml#next#small-usability-test-planner": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "from_type": "web_app",
+      "to_type": "web_page",
+      "output_quote": "renders the page in a real browser at phone and desktop width",
+      "input_quote": "**The page or app** (optional): a link, a screenshot, or a plan for the flow you want tested.",
+      "rationale": "A page that passed the gate is ready for real people; the test planner takes it as the page under test.",
+      "adaptation": "The gated page is served at a link or captured as screenshots for the test sessions.",
+      "condition": "Only after the gate reports no open hard findings.",
+      "from_sha256": "8620d38746400ab67fa06f1a8c64923e6168e4aa17f782273bdd639cfc2f2e8d",
+      "to_sha256": "49016d11b6565e80c0fae5b7feba28d69d64c7a8663d5ca213a5c0baf7377cae",
+      "ports_sha256": "8db1efb182a4d49314602a75c1f3d38efd451adcf9b2bfa8330410be5dfe2604"
+    },
+    "catalogue-items/imported/page-design-gate/page.yaml#next#accessibility-checker": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "from_type": "web_app",
+      "to_type": "web_page",
+      "output_quote": "renders the page in a real browser at phone and desktop width",
+      "input_quote": "**`audit_html`** — for raw HTML strings, files (`Read` first, then `audit_html`), or JSX you've rendered to a string.",
+      "rationale": "The gated page's HTML is audited for accessibility beyond the gate's own contrast and overlap checks.",
+      "adaptation": "The built page's HTML file or rendered HTML string is passed to the accessibility audit.",
+      "condition": "Only after the page builds and renders in the gate.",
+      "from_sha256": "8620d38746400ab67fa06f1a8c64923e6168e4aa17f782273bdd639cfc2f2e8d",
+      "to_sha256": "94ab3dfbaa8acf48d65137ded42d18e0697238a6d7510d0b538229e2ea7b9579",
+      "ports_sha256": "b8878f101bf89dde9619a31126008a4984ed97a3a5cf37ee42bfc620b757ba75"
+    },
+    "catalogue-items/imported/page-traffic-conversion/page.yaml#next#landing-page-auditor": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "from_type": "audit_report",
+      "to_type": "performance_sheet",
+      "output_quote": "CSV file `traffic_by_page_<YYYY-MM-DD>.csv` with one row per page:",
+      "input_quote": "**Analytics** (optional): conversion by step, phone against desktop, traffic.",
+      "rationale": "Sessions and conversion rate per page are the traffic context the auditor uses to rank pages and to size fixes.",
+      "adaptation": "The per-page CSV rows for the audited page are passed as the analytics input.",
+      "condition": "Only when the store plan returned real session data.",
+      "from_sha256": "82d362a53ef8a3dda6b54dbf4dfe6ec9922c7ee3da032091809051c8ecb21422",
+      "to_sha256": "df0b5e531e8ff3c8cc5e72871a05385aa7cef73b4419abb1cc420db13e2daa47",
+      "ports_sha256": "ae2c62a31506fd90f3bc248607eea574dea75b222fb39b9d9b5130c367f613fe"
+    },
+    "catalogue-items/imported/page-traffic-conversion/page.yaml#next#conversion-landing-page-designer": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "from_type": "audit_report",
+      "to_type": "brief",
+      "output_quote": "CSV file `traffic_by_page_<YYYY-MM-DD>.csv` with one row per page:",
+      "input_quote": "What counts as a conversion? (click, signup, purchase)",
+      "rationale": "Traffic and conversion by page show which page to work on and the current baseline for the conversion question.",
+      "adaptation": "The baseline conversion rate and page choice go into the brief; the offer and audience still come from the person.",
+      "condition": "Only when real session data was returned for the page.",
+      "from_sha256": "82d362a53ef8a3dda6b54dbf4dfe6ec9922c7ee3da032091809051c8ecb21422",
+      "to_sha256": "9f01ca20d2d847cb4c698091f520454fb74cd736f81590591c43df9a56120a37",
+      "ports_sha256": "3f08c1ac345cc50c133a3084982e72c400f49bfbf57fea46202f500c70c23774"
+    },
+    "catalogue-items/imported/page-transition-animator/page.yaml#next#animated-landing-page-builder": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "from_type": "code_change",
+      "to_type": "brief",
+      "output_quote": "When adding view transitions to an existing app, **follow `references/implementation.md` step by step.**",
+      "input_quote": "What's the product or service? Give me the name + a 1–2 sentence elevator pitch",
+      "rationale": "Transition code is reused in the generated page; the builder still needs its own intake brief.",
+      "adaptation": "The person answers the intake questions; the transition approach is noted in the brief as a motion preference.",
+      "condition": "Only when the person wants the same transitions on the new page.",
+      "from_sha256": "6b15650d4a38cb9463488c11787322308b0fb67a0e3e62fdc0b384452c0484ab",
+      "to_sha256": "0697ba1284abf78da7d7efb4ef7ee8428fcbe25ee055172f8e67d106974b4f1a",
+      "ports_sha256": "adc3bea83c473ebed39cb346f99a7ace836baa9ea63634990b704f68e76a31ec"
+    },
+    "catalogue-items/imported/quiz-and-recommender-designer/page.yaml#next#conversion-landing-page-designer": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "from_type": "plan",
+      "to_type": "brief",
+      "output_quote": "is the quiz landing page (downstream of quiz design)",
+      "input_quote": "What is the offer, exactly what do they get?",
+      "rationale": "The quiz design (segments and the recommendation for each) becomes the offer and audience of the quiz landing page.",
+      "adaptation": "The quiz's promise and result-to-recommendation map are written into the brief as the offer and primary action.",
+      "condition": "Only after the quiz segments and recommendations are settled.",
+      "from_sha256": "0bfa43b6ab02300631effff828c9760ed5845c6d7018bc006824444d77a9f126",
+      "to_sha256": "9f01ca20d2d847cb4c698091f520454fb74cd736f81590591c43df9a56120a37",
+      "ports_sha256": "77fed7f3111ecfb32d7fcf9cb27659934cc31beeefdaeb90de5699759d4e8bdb"
+    },
+    "catalogue-items/imported/scroll-animation-site-builder/page.yaml#next#landing-page-auditor": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "from_type": "web_app",
+      "to_type": "landing_page",
+      "output_quote": "**Single self-contained HTML file** (inline CSS + JS) unless user asks for separate files",
+      "input_quote": "**The page** (required): its address, or its full text and phone screenshots, top to bottom.",
+      "rationale": "The built page is reviewed like any live page: first screen, skim and doubt read.",
+      "adaptation": "Open the HTML file and give the auditor its address or full text and phone screenshots.",
+      "condition": "Only after the file opens in a browser at phone width.",
+      "from_sha256": "1a43fa654d23ceba983fdd67e53be2c09e82c4d4634cde40eaf2170ced927060",
+      "to_sha256": "df0b5e531e8ff3c8cc5e72871a05385aa7cef73b4419abb1cc420db13e2daa47",
+      "ports_sha256": "1f6644bc1a5399c236c19c255c45928ef91a023d610151134669490edb6e7ed9"
+    },
+    "catalogue-items/imported/web-animation-builder/page.yaml#next#animated-landing-page-builder": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "from_type": "web_app",
+      "to_type": "brief",
+      "output_quote": "Short notes on where to put the code and how to test it in a browser.",
+      "input_quote": "What's the product or service? Give me the name + a 1–2 sentence elevator pitch",
+      "rationale": "Animation code can be reused on the generated landing page; the builder still needs its intake brief.",
+      "adaptation": "The person answers the intake questions and names the animation to reuse as a motion preference in the brief.",
+      "condition": "Only when the person wants that animation on the new page.",
+      "from_sha256": "613e09579b8411df9b5c4e96023fdccdd11bc8923c3e51cf1bbfb6e1e31f8d1b",
+      "to_sha256": "0697ba1284abf78da7d7efb4ef7ee8428fcbe25ee055172f8e67d106974b4f1a",
+      "ports_sha256": "e2170dc89bc734cd6cabde3fd0f2051fb1f5d4306975c06a1d5d2584731041b4"
+    },
+    "tools/orchestrator-pages/build-a-landing-page-fix-it-and-prove-the-top-change.yaml#next#landing-page-30-point-checker": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "from_type": "test_report",
+      "to_type": "landing_page",
+      "output_quote": "- Step 1: page order, copy by section, design rules and the button.",
+      "input_quote": "**The page** (required): its text top to bottom",
+      "rationale": "After the run, the page as changed can be checked again with the 30 checks.",
+      "adaptation": "The published page's text and phone screenshots are given to the checker; the test report is not page content.",
+      "condition": "Only after the winning change is live on the page.",
+      "from_sha256": "99f1420fb0b51d73038ae8cf2103f93b000d5121166c36493261aa232bf52a11",
+      "to_sha256": "284d329a8b1edc372acf03cb542f6c527dc8673f40db754c0eb8bf4060e4c2e9",
+      "ports_sha256": "df1e114f33232738b0834bb252597e7b8a4f67a7c45d490039bc9776f886a8bd"
+    },
+    "tools/orchestrator-pages/build-your-ads-shopify-page-and-check-it-live.yaml#next#landing-page-auditor": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "from_type": "audit_report",
+      "to_type": "landing_page",
+      "output_quote": "3 step files and the summary. The last file holds the audit report.",
+      "input_quote": "**The page** (required): its address, or its full text and phone screenshots, top to bottom.",
+      "rationale": "The live Shopify page from the run can get the deeper three-read audit.",
+      "adaptation": "The live page's address or screenshots are given to the auditor; the earlier audit report is context, not the page.",
+      "condition": "Only after the page is live on the store.",
+      "from_sha256": "0493bbc2322aff022009daf0210db2a10e9186cbed552ae874c512d91de7c047",
+      "to_sha256": "df0b5e531e8ff3c8cc5e72871a05385aa7cef73b4419abb1cc420db13e2daa47",
+      "ports_sha256": "ae2c62a31506fd90f3bc248607eea574dea75b222fb39b9d9b5130c367f613fe"
     }
   }
 }

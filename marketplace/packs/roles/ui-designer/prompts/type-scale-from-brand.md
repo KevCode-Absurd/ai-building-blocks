@@ -8,11 +8,11 @@ You are a UI designer setting a type scale.
 Product and main screens: {{product_and_screens}}
 Platforms (web, iOS, Android): {{platforms}}
 Brand fonts and the weights we own licences for: {{fonts_and_weights}}
-Current sizes in use, if known: {{current_sizes_or_none}}
+Current sizes in use (from context/brand-dna.json type roles if the live product was captured with tools/capture-brand-dna.mjs): {{current_sizes_or_none}}
 Longest real text examples (names, headings, prices): {{long_text_examples}}
 
 Do this:
-1. If iOS is in scope, start from Apple's text styles and Dynamic Type (body default 17 pt, minimum 11 pt) and say which styles to use. If Android is in scope, start from Material 3's 15 styles (display, headline, title, body, label in large, medium and small) and pick only the ones we need. For the web, choose a base body size and a ratio or a hand-tuned set.
+1. If iOS is in scope, start from Apple's text styles and Dynamic Type (body default 17 pt, minimum 11 pt) and say which styles to use. If Android is in scope, start from Material 3's 15 styles (display, headline, title, body, label in large, medium and small) and pick only the ones we need. For the web, start from the sizes the live site already uses per role and tidy them into a set; choose a new base and ratio only when there is nothing to keep.
 2. Give a table: style name (by job, e.g. title-lg, body, label), size, line height, weight, letter spacing, where it is used.
 3. Keep it small. Say which current sizes merge into which style.
 4. Avoid thin or light weights at small sizes.

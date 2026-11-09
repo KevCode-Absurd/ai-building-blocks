@@ -15,12 +15,16 @@
     "contrast check",
     "component style sheet"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-09",
   "review_every_days": 30,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: role knowledge with 30 sources (WCAG 2.2 and Understanding notes, WCAG 3 draft status, Apple HIG pages with change-log dates including Liquid Glass, Material 3 and Expressive in Compose, the European Accessibility Act on EUR-Lex, ADA and UK pointers), four skills, five prompts, two workflows, training interview and test briefs, and access levels per tool."
+    },
+    {
+      "date": "2026-11-09",
+      "note": "Style extraction and type scales start from the captured live product; examples name no made-up business."
     }
   ]
 }

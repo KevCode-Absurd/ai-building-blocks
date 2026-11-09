@@ -15,7 +15,7 @@
     "ab test analysis",
     "checkout optimisation"
   ],
-  "updated": "2026-11-07",
+  "updated": "2026-11-09",
   "review_every_days": 30,
   "changelog": [
     {
@@ -25,6 +25,10 @@
     {
       "date": "2026-11-07",
       "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name. Cited the regulator's storage and access guidance."
+    },
+    {
+      "date": "2026-11-09",
+      "note": "The research audit captures the live page as its baseline and checks built fixes for brand fidelity; examples name no made-up business."
     }
   ]
 }

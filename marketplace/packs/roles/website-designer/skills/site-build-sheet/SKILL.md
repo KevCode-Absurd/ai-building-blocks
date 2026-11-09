@@ -27,16 +27,17 @@ Access levels for this skill: the plan itself needs only level 1 (read: screensh
 
 ## Steps
 
-1. **List visitor tasks.** From the brief, write the five or so things visitors come to do ("see prices", "book a class", "check opening hours"). Ask the client to confirm or reorder them.
-2. **Write the page list.** One row per page: its one job, its main action, and the content it must hold. Keep it to what the tasks need; merge thin pages. Name the menu labels in the visitors' words.
-3. **Check features against the builder.** For each must-have, note whether the builder and plan do it natively, through an app or integration, or not at all. If not, say so and suggest the simplest route, such as a booking tool linked from a button.
-4. **Plan each page top to bottom.** For every section: the builder's block or element name (for example a Squarespace Image block in a Fluid Engine section, a Wix Studio stack, a Webflow Collection List, a Framer CMS list), the text or [add], the image with size and focal point, the alt text, and where any button or link goes.
-5. **Put the main action in the first screen on a phone.** The headline says what the business does and for whom; the button names the action.
-6. **Set image specs.** Give width and aspect ratio per slot. On Squarespace, about 2,500 px wide and under 500 KB suits most images. Keep the top image of each page right-sized and never lazy-loaded.
-7. **Write style settings** in the builder's own setting names: heading and body fonts and sizes, colours as hex with what each is for, button style, spacing. Check text and button colours reach 4.5:1 contrast (3:1 for large text).
-8. **Plan the footer and the boring pages.** Contact details, opening hours, privacy notice, cookie notice if needed, accessibility contact, and a helpful 404 page.
-9. **Order the build.** Global styles first, then header and footer, then pages in order of importance, then forms, then launch checks (skill: site-launch-check).
-10. **Build (level 2) and publish (level 3).** At level 2, build hidden or unpublished pages and duplicate any section before changing it. At level 3, show the action list and limits, get a yes, publish, and log each action.
+1. **Start from what exists.** If the client already has a site, capture it first (skill build-on-existing-site, step 1) and plan inside its global styles, header, footer and section patterns; a new page reuses them. Only a site with nothing to learn from starts blank.
+2. **List visitor tasks.** From the brief and the current site, write the five or so things visitors come to do ("see prices", "book a class", "check opening hours"). Ask the client to confirm or reorder them.
+3. **Write the page list.** One row per page: its one job, its main action, and the content it must hold. Keep it to what the tasks need; merge thin pages. Name the menu labels in the visitors' words.
+4. **Check features against the builder.** For each must-have, note whether the builder and plan do it natively, through an app or integration, or not at all. If not, say so and suggest the simplest route, such as a booking tool linked from a button.
+5. **Plan each page top to bottom.** Choose the section order from the visitor's task, where they arrive from and what the category's buyers expect to see (a timetable, a menu, prices, a gallery), not from the template's demo page. For every section: the builder's block or element name (for example a Squarespace Image block in a Fluid Engine section, a Wix Studio stack, a Webflow Collection List, a Framer CMS list), the text or [add], the image with size and focal point, the alt text, and where any button or link goes.
+6. **Put the main action in the first screen on a phone.** The headline says what the business does and for whom; the button names the action.
+7. **Set image specs.** Give width and aspect ratio per slot. On Squarespace, about 2,500 px wide and under 500 KB suits most images. Keep the top image of each page right-sized and never lazy-loaded.
+8. **Write style settings** in the builder's own setting names, taken from the captured site when there is one: heading and body fonts and sizes, colours as hex with what each is for, button style, spacing. Check text and button colours reach 4.5:1 contrast (3:1 for large text).
+9. **Plan the footer and the boring pages.** Contact details, opening hours, privacy notice, cookie notice if needed, accessibility contact, and a helpful 404 page.
+10. **Order the build.** Global styles first, then header and footer, then pages in order of importance, then forms, then launch checks (skill: site-launch-check).
+11. **Build (level 2) and publish (level 3).** At level 2, build hidden or unpublished pages and duplicate any section before changing it. At level 3, show the action list and limits, get a yes, publish, and log each action.
 
 ## Checks
 

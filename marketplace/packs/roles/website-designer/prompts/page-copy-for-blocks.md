@@ -11,7 +11,8 @@ Main action on this page: {{main_action}}
 Sections from the build sheet, top to bottom, with the block in each: {{sections}}
 The client's facts (services, prices, places, hours, credentials, real customer quotes): {{facts}}
 Words the client's customers use (from emails, reviews, calls): {{customer_words}}
-Tone the client wants: {{tone}}
+Lines in the client's own voice, copied from their live site (context/brand-dna.json voice samples): {{voice_samples}}
+Tone the client wants (the voice samples win where they differ): {{tone}}
 
 Do this:
 1. For each section, write the text for each block: headline, short paragraph, list items, button label.

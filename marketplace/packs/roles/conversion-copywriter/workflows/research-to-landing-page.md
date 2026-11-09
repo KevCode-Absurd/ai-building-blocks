@@ -6,7 +6,7 @@
 
 ## Steps
 
-1. **Intake (playbook intake questions).** Confirm the one action, the reader, the traffic source and its promise, the offer, the deadline, and who approves copy. Ask for the current page and its numbers for the last 4 to 8 weeks.
+1. **Intake (playbook intake questions).** Confirm the one action, the reader, the traffic source and its promise, the offer, the deadline, and who approves copy. Capture the current page and site (`node tools/capture-brand-dna.mjs <site> <page>`, or screenshots) for the client's own words, dated facts and page order, and ask for its numbers for the last 4 to 8 weeks.
 2. **Gather research (level 1; tools: review sites, survey tool, call recordings, help desk).** Ask for reviews (own and competitors'), five to ten sales call notes or transcripts, the most common pre-sale questions from the inbox or help desk, and, if time allows, a five-question survey to recent buyers. See access.md for what to share and how.
 3. **Mine the research (skill: voice-of-customer-mining).** Produce the VoC bank, theme counts, awareness and sophistication read, and message brief.
 4. **Decide the angle (prompt: awareness-and-sophistication-read).** Confirm where the page opens and what it must not open with.
@@ -16,7 +16,7 @@
 6. **Map objections and proof (prompt: objection-and-proof-map).** Collect permissions for any review or customer name you plan to use.
 7. **Write the page (skill: landing-page-copy).** Full copy with section jobs and evidence IDs, three headline options and design notes for the mobile first screen.
 8. **Honesty check (prompt: claim-and-review-check).** Fix every flag before the client sees the final draft.
-9. **Review the draft (skill: copy-review-and-test-plan).** Score your own draft against the 12 checks; fix anything scoring 0 or 1.
+9. **Review the draft (skill: copy-review-and-test-plan).** Score it in a separate pass (a fresh chat or another seat, not the one that wrote it) against the 12 checks and against the live page: what does the live page do better? Fix anything scoring 0 or 1.
    **Approval point 3:** the client approves the final copy, the chosen headline and the test plan.
 10. **Hand over.** Deliver the copy document, the research file, the test plan, and a short note on what to watch in the first two weeks after launch. At level 2, also build the page as a draft in the client's page builder. At level 3, publish it on the agreed page after approval point 3, and log it.
 

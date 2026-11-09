@@ -15,12 +15,16 @@
     "page speed",
     "web accessibility"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-09",
   "review_every_days": 30,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: role knowledge with 30 sources (Core Web Vitals, WCAG 2.2, ARIA patterns, React 19.3, Vue 3, Manifest V3, regional accessibility rules), four skills (component build, page speed diagnosis, accessibility fix pass, browser extension build), five prompts, two workflows, training interview and test briefs."
+    },
+    {
+      "date": "2026-11-09",
+      "note": "Build kit: new skill build-on-existing-site (capture the live site, choose patch, extend or new, build on its shell, check fidelity); the one-file landing page prompt picks its structure from a decision table instead of a fixed section order, and keeps the brand's own fonts."
     }
   ]
 }

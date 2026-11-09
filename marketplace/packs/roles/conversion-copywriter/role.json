@@ -14,12 +14,16 @@
     "sales copy",
     "conversion copy"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-09",
   "review_every_days": 30,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: canon, research method, page structure by awareness, offers, proof, testing, and US and UK rules on fake reviews, urgency and dark patterns, with 30 checked sources."
+    },
+    {
+      "date": "2026-11-09",
+      "note": "Landing page copy starts by capturing the live page; the research workflow reviews drafts in a separate pass; examples name no made-up business."
     }
   ]
 }

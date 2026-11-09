@@ -96,7 +96,7 @@ Run the checks below, then write the hand-over in the output format. **Level 2:*
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Harbour Lane Bikes", a bike hire shop.*
+*Illustrative structure, not a real business: a bike hire shop. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Summary.** `BookingFilter` lets customers filter available bikes by date, size and type, and tells the parent when filters change. React 19 with TypeScript, CSS Modules and Vitest with Testing Library, matching the repo.
 >

@@ -63,7 +63,7 @@ A sales sequence is a short conversation with one person who has shown some inte
 
 ## Example of good output (short)
 
-*Hollow Oak Pottery is a made-up business used only to show the format: a small studio that sells a £25 taster class and a six-week wheel course. Trigger: someone books the taster. Goal: book the six-week course. All research details are invented for this example.*
+*Illustrative structure, not a real business: a small pottery studio that sells a £25 taster class and a six-week wheel course. Trigger: someone books the taster. Goal: book the six-week course. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Sequence plan**
 
@@ -95,6 +95,6 @@ If you finish the course and feel it was not for you, we refund the last two wee
 **See the six-week course**
 
 Maya
-Hollow Oak Pottery
+[Business]
 
 *Why this works:* it answers the top doubt in the customer's own words, shows proof from people like the reader, states the guarantee plainly, and asks for one thing. Email 5 uses "last 2 places" only if that is true on the day it sends; otherwise it uses the real start date.

@@ -63,7 +63,7 @@ Most failed tests were never going to win, because the idea came from taste rath
 
 ## Example of good output (short)
 
-*Fernway Bike Hire is a made-up bike rental business with an online booking flow, used only to show the format. All numbers are invented.*
+*Illustrative structure, not a real business: a bike rental business with an online booking flow. Figures only show the shape. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Summary:** the biggest leak is the "Your details" step on mobile: 1,140 of 2,010 mobile visitors who reached it left (57%), against 31% on desktop. Recordings show the phone field rejecting numbers with spaces. Fix that today; then test showing the deposit amount on the bike-selection step.
 

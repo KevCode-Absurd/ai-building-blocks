@@ -72,7 +72,7 @@ If the client has none of this, ask for the fastest route: their last 30 reviews
 
 ## Example of good output (short)
 
-*Fernbrook Bike Fitting is a made-up business used only to show the format: a one-person bike-fitting studio. Its inputs, 34 reviews (R1 to R34) and 12 survey answers (S1 to S12), are invented for this example too.*
+*Illustrative structure, not a real business: a one-person bike-fitting studio. Its inputs, 34 reviews (R1 to R34) and 12 survey answers (S1 to S12), only show the shape. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Theme counts (46 sources coded)**
 

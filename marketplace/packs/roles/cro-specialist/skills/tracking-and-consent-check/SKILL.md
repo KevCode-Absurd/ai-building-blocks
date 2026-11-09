@@ -56,7 +56,7 @@ CRO depends on data, and data collected without valid consent is a legal risk an
 
 ## Example of good output (short)
 
-*Brightwell Dental is a made-up dental clinic with visitors from the UK and Ireland, used only to show the format.*
+*Illustrative structure, not a real business: a dental clinic with visitors from the UK and Ireland. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Summary**
 1. Clarity loads and records before the banner is answered, and no ConsentV2 signal is sent. Fix: load Clarity only after consent, or send the ConsentV2 signal from the banner.

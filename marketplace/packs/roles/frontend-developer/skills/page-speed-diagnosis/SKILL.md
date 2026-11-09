@@ -62,7 +62,7 @@ For each fix give: what to change, expected gain (high, medium or low, tied to w
 - Stop lazy-loading the hero image; add `fetchpriority="high"` to it; size and compress it.
 - Add `width` and `height` to images.
 - Remove or delay scripts the business no longer uses.
-- Preload one key font or switch to system fonts.
+- Preload the brand's key font file and subset it. Never swap the brand font for a system font without the client's say-so: it changes how the brand looks.
 
 **Level 2:** make the chosen fixes on a branch or a staging copy. **Level 3:** put them live after testing, within your limits, and log each change.
 
@@ -90,7 +90,7 @@ Same pages, same device profile, same location, at least three runs, record the 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Fernhill Dental", a three-chair dental practice on WordPress.*
+*Illustrative structure, not a real business: a three-chair dental practice on WordPress. Figures only show the shape. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Summary.** The home page fails Core Web Vitals on mobile because of LCP: 4.1 s at the 75th percentile in field data (PageSpeed Insights, 3 November). INP (150 ms) and CLS (0.04) pass. The LCP element is the hero photo, which is lazy-loaded and 1.8 MB.
 >

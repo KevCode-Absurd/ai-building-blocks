@@ -83,7 +83,7 @@ If research is missing, say so and either run the voice-of-customer-mining skill
 
 ## Example of good output (short)
 
-*Tidewell Bookkeeping is a made-up business used only to show the format: a two-person bookkeeping service for self-employed plumbers and electricians. The research IDs below refer to invented example data.*
+*Illustrative structure, not a real business: a two-person bookkeeping service for self-employed plumbers and electricians; the research IDs stand for the client's own VoC bank. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Brief:** Tradespeople who do their books late at night will book a free 20-minute call because we take receipts by photo and send a monthly summary, once we answer "I'll lose control of my numbers."
 
@@ -93,7 +93,7 @@ If research is missing, say so and either run the voice-of-customer-mining skill
 
 - Headline (who it is for): **Bookkeeping for plumbers and electricians who'd rather be on the tools**
 - Subhead (how it works): Snap your receipts on your phone. We do the rest and send you one clear summary each month.
-- Proof: one real, permissioned review with name and trade. In Tidewell's invented research, review R9 reads "I got my Sunday evenings back."
+- Proof: one real, permissioned review with name and trade. For example, a review in the client's VoC bank (R9) that reads like "I got my Sunday evenings back."
 - Button: **Book my free 20-minute call**
 - Microcopy: No contract. If it is not for you, you have lost 20 minutes, not money.
 

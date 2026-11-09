@@ -56,7 +56,7 @@ For print and social graphics, use the graphic designer kit's contrast-and-legib
 
 ## Example of good output (short)
 
-*Fernleaf Studio is a made-up yoga studio booking app used only to show the format. Access I have: level 1 (CSS and screenshots).*
+*Illustrative structure, not a real business: a yoga studio booking app; access I have: level 1 (CSS and screenshots). Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Pair | Rule | Light | Dark | Result |
 |---|---|---|---|---|

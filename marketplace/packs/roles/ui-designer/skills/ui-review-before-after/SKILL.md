@@ -57,7 +57,7 @@ This is a visual review. For a usability review of a flow, see the UX designer k
 
 ## Example of good output (short)
 
-*Fernleaf Studio is a made-up yoga studio booking app used only to show the format. Web, light theme. Access I have: level 1 (screenshots).*
+*Illustrative structure, not a real business: a yoga studio booking app; web, light theme; access I have: level 1 (screenshots). Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Summary.** The main button is the faintest thing on the booking screen, form fields are hard to see, and spacing between class cards changes from card to card.
 

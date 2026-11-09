@@ -90,7 +90,7 @@ Firefox supports Manifest V3 but uses event-driven background scripts, not servi
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Northgate Plumbing Supplies", using its own helpdesk and order tool.*
+*Illustrative structure, not a real business: a plumbing supplies wholesaler using its own helpdesk and order tool. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Story.** When an agent opens a ticket, they click "Open order" in the toolbar and the order opens in our order tool. Saves four clicks and one copy-paste per ticket.
 >

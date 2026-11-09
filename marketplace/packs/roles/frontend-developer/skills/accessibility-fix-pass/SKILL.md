@@ -98,7 +98,7 @@ Map each fix to a WCAG 2.2 criterion and level. List what still needs a person: 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Copper Kettle Catering", an event caterer with a quote form.*
+*Illustrative structure, not a real business: an event caterer with a quote form. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Summary.** People using a keyboard cannot open the menu on phones, the quote form has no labels, and the grey helper text fails contrast.
 >

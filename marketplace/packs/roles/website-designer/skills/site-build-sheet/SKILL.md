@@ -58,7 +58,7 @@ Access levels for this skill: the plan itself needs only level 1 (read: screensh
 
 ## Example of good output (short)
 
-*Harbourside Pottery is a made-up business used only to show the format: a pottery studio with classes, on Squarespace 7.1.*
+*Illustrative structure, not a real business: a pottery studio with classes, on Squarespace 7.1. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Page list**
 

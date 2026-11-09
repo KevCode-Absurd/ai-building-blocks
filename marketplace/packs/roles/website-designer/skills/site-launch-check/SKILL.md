@@ -57,7 +57,7 @@ Access levels for this skill: the check needs level 1 (read: the preview or live
 
 ## Example of good output (short)
 
-*Fernlea Physio is a made-up business used only to show the format: a two-room physiotherapy clinic in England launching on Wix.*
+*Illustrative structure, not a real business: a two-room physiotherapy clinic in England launching on Wix. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Verdict:** go after fixes. One issue blocks bookings; one risks email.
 

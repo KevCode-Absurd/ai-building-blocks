@@ -58,7 +58,7 @@ Needs foundations (type, spacing, colour roles, components). If there are none, 
 
 ## Example of good output (short)
 
-*Fernleaf Studio is a made-up yoga studio booking app used only to show the format. Screen: class detail, iPhone. Access I have: level 2 in Figma ("DRAFT" page).*
+*Illustrative structure, not a real business: a yoga studio booking app; screen: class detail, iPhone; access I have: level 2 in Figma ("DRAFT" page). Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Reading order:** class name, then time and teacher, then "Book this class". Price and cancellation rules are secondary.
 
@@ -71,4 +71,4 @@ Needs foundations (type, spacing, colour roles, components). If there are none, 
 
 **Largest text size:** time and teacher stack on two lines; button grows in height, never clips.
 
-**Action log:** 6 Nov, annotated 3 frames on page "DRAFT – class detail" in the Fernleaf app file. Result: done.
+**Action log:** 6 Nov, annotated 3 frames on page "DRAFT – class detail" in the client's app file. Result: done.

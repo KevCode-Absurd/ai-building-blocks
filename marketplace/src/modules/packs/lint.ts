@@ -62,6 +62,9 @@ function missingFiles(pack: BuiltPack): LintIssue[] {
         // A skill named by path is in the pack when skills/<name>/SKILL.md exists.
         if (/^skills\/[^/]+$/.test(ref.replace(/\/SKILL\.md$/, "")) && have.has(`${ref.replace(/\/SKILL\.md$/, "")}/SKILL.md`)) continue;
         if (/^examples\//.test(ref) || CREATED_FILES.test(ref)) continue;
+        // A tool the pack lacks is fine when the file says where to get it (resolveToolRefs adds that note, after a
+        // code span or below a fenced block).
+        if (ref.startsWith("tools/") && f.content.includes(`/${ref}`) && /into a tools\/ folder first/.test(f.content)) continue;
         seen.add(ref);
         issues.push({ rule: "missing_file", file: f.path, message: `refers to ${ref}, which this pack does not contain` });
       }

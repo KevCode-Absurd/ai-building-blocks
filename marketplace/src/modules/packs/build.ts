@@ -429,8 +429,29 @@ const REQUIRED_TEMPLATES: Record<PackKind, string[]> = {
  * Points every tools/<file> reference at the pack's own copy when it has one, else at the public copy
  * (<origin>/tools/<file>), so a pack never names a file it does not hold.
  */
+const TOOL_REF = /(?<![\w/.-])tools\/([a-z0-9][a-z0-9.-]*\.(?:mjs|js|md))\b/g;
+const FENCE = "```";
+
+/**
+ * Points tools/<file> references that this pack lacks at their public copy. Commands stay runnable: inside code
+ * (`node tools/x.mjs` or a fenced block) the relative path is kept and a note says where to get the file first;
+ * in prose the path becomes the link. Safe to run twice.
+ */
 export function resolveToolRefs(text: string, have: Set<string>, origin: string): string {
-  return text.replace(/(?<![\w/.-])tools\/([a-z0-9][a-z0-9.-]*\.(?:mjs|js|md))\b/g, (m, name: string) => (have.has(name) ? m : `${origin}/tools/${name}`));
+  const missing = (code: string) => [...new Set([...code.matchAll(TOOL_REF)].map(m => m[1]).filter(n => !have.has(n)))];
+  const urls = (names: string[]) => names.map(n => `${origin}/tools/${n}`).join(" and ");
+  // Odd parts are code: a fenced block or an inline span, each with any note already after it.
+  const code = /(```[\s\S]*?```(?:\n\(Get [^)\n]*\))?|`[^`\n]+`(?: \((?:also at|get) [^)\n]*\))?)/;
+  return text.split(code).map((part, i) => {
+    // In prose, "run tools/x.mjs" becomes a runnable command; any other mention becomes the link.
+    if (i % 2 === 0) return part.replace(TOOL_REF, (m, name: string, at: number, all: string) => have.has(name) ? m
+      : name.endsWith(".mjs") && /\b[Rr]un $/.test(all.slice(Math.max(0, at - 4), at)) ? `\`node tools/${name}\` (get ${urls([name])} into a tools/ folder first)`
+      : `${origin}/tools/${name}`);
+    if (/\)$/.test(part) && /( \((also at|get) |\n\(Get )/.test(part)) return part;
+    const names = missing(part);
+    if (!names.length) return part;
+    return part.startsWith(FENCE) ? `${part}\n(Get ${urls(names)} into a tools/ folder first.)` : `${part} (get ${urls(names)} into a tools/ folder first)`;
+  }).join("");
 }
 
 /** context/README.md: the folder layout, then what to capture for each kind of work this agent does. */
@@ -1331,7 +1352,7 @@ export function oneFileText(pack: BuiltPack, origin: string = ORIGIN): string {
     "",
     `Free to use and change, not to sell: the LICENSE.md part has the terms. Newest version and ${m.name}'s profile: ${site}/agents/${m.agent_id}`,
   ];
-  const parts = files.map(f => `===== FILE: ${f.path} =====\n\n${(f.source === "role" || f.source === "mega" ? f.content : resolveToolRefs(f.content, kept, site)).trim()}`);
+  const parts = files.map(f => `===== FILE: ${f.path} =====\n\n${resolveToolRefs(f.content, kept, site).trim()}`);
   return normalizeText([head.join("\n"), ...parts].join("\n\n"));
 }
 

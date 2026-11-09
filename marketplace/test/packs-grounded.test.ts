@@ -36,11 +36,14 @@ test("agent packs carry the capture tools under tools/; the one file links to th
   assert.equal(index.files.find(f => f.path === "tools/capture-brand-dna.mjs")!.url, "/packs/tools/capture-brand-dna.mjs");
   assert.equal(index.files.find(f => f.path === "tools/capture-brand-dna.mjs")!.kind, "tool");
   assert.ok(index.routes.length >= 2, "files.json lists what load_agent routes to");
-  assert.match(file(pack, "WORK-METHOD.md")!, /Run `tools\/capture-brand-dna\.mjs <url>`/);
+  assert.match(file(pack, "WORK-METHOD.md")!, /Run `node tools\/capture-brand-dna\.mjs <url>`/);
   const text = oneFileText(pack, "https://agents.test");
   assert.doesNotMatch(text, /===== FILE: tools\/.+\.(mjs|js) =====/);
   assert.match(text, /===== FILE: tools\/ai-default-patterns\.md =====/, "the default list is data the method needs");
-  assert.match(text, /Run `https:\/\/agents\.test\/tools\/capture-brand-dna\.mjs <url>`/);
+  // Commands stay runnable: the relative path is kept, with where to get the script first.
+  assert.match(text, /Run `node tools\/capture-brand-dna\.mjs <url>` \(get https:\/\/agents\.test\/tools\/capture-brand-dna\.mjs into a tools\/ folder first\)/);
+  assert.doesNotMatch(text, /`node https:|`https:\/\/[^`]*\.mjs/);
+  assert.doesNotMatch(text, /(https:\/\/agents\.test\/tools\/[\w.-]+)`? \(also at \1\)/, "no doubled tool links");
   assert.deepEqual(lintPack(pack), []);
   // A training pack goes back to the studio, which takes text files only: it links to the public tools.
   const train = await build({ templates: { ...TEMPLATES } }, "train");

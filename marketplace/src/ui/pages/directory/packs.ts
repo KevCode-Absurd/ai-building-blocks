@@ -182,7 +182,7 @@ export function groundingAsk(area?: string): string {
     case "finance": case "data":
       return "Before you start, ask me for my business name, the numbers or export to work from, and what I need done.";
     case "engineering":
-      return "Before you start, ask me for the code or repo to work in, and what I need done.";
+      return "Before you start, ask me for my business name and website (or the code or repo to work in), and what I need done.";
     case "people": case "operations":
       return "Before you start, ask me for my business name, the document or process we use now, and what I need done.";
     default:

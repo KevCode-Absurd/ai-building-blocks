@@ -20,7 +20,7 @@ What to capture for each kind of work, and where each file goes, is in `context/
 
 Three ways to capture a website, in order:
 
-1. Run `tools/capture-brand-dna.mjs <url>` where Node and Playwright are available. It writes `context/brand-dna.json` and `context/screenshots/`.
+1. Run `node tools/capture-brand-dna.mjs <url>` where Node and Playwright are available. It writes `context/brand-dna.json` and `context/screenshots/`.
 2. Paste `tools/brand-dna-snippet.js` into any browser tool or the devtools console on the live site, and save what it prints as `context/brand-dna.json`.
 3. Ask the client for the URL, screenshots of the key pages (phone and desktop) and their CSS or brand guide, and write `context/brand-dna.json` from those.
 

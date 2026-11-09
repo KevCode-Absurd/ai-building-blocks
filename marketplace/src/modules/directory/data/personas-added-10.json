@@ -1294,7 +1294,7 @@
           "id": "handoff",
           "title": "A lead hand-off plan with first messages",
           "deliverable": "Where leads go, who calls, a speed-to-call target, the first text and call script, and follow-up attempts.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "enquiry-reply-and-follow-up",
           "job_type_hint": "lead hand-off plan"
         },
         {
@@ -1917,7 +1917,7 @@
           "id": "review_rhythm",
           "title": "A review and photo posting rhythm",
           "deliverable": "Review request texts and emails for every customer, reply templates, and a weekly photo and post plan.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "review-request-messages",
           "job_type_hint": "review request rhythm"
         },
         {
@@ -2055,7 +2055,7 @@
           "id": "build_sheet",
           "title": "A page list and section-by-section build sheet",
           "deliverable": "Each page's job, then every section with the builder's block to use, the text, image sizes and links.",
-          "job_type_id": "website-wireframe-brief",
+          "job_type_id": "landing-page-build",
           "job_type_hint": "site builder build sheet"
         },
         {
@@ -2083,7 +2083,7 @@
           "id": "launch_checklist",
           "title": "A launch checklist",
           "deliverable": "Domain, forms, page titles, alt text, mobile checks and analytics, as a tick list.",
-          "job_type_id": "checklist-scorecard-job-aid",
+          "job_type_id": "website-or-store-launch-checklist",
           "job_type_hint": "website launch checklist"
         }
       ],
@@ -3172,7 +3172,7 @@
           "id": "copy_order",
           "title": "Copy in the right order: name, service, phone, web",
           "deliverable": "The words for each panel, short enough to read in three seconds.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "print-marketing-copy",
           "job_type_hint": "van livery copy"
         },
         {
@@ -3485,7 +3485,7 @@
           "id": "review_requests",
           "title": "Review request scripts and texts",
           "deliverable": "What the tech says at the end of the job, and the text and email that follow, for every customer.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "review-request-messages",
           "job_type_hint": "review request scripts"
         },
         {
@@ -3634,7 +3634,7 @@
           "id": "copy_versions",
           "title": "Postcard and letter copy in three versions",
           "deliverable": "Front and back copy for three versions, each testing one thing.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "print-marketing-copy",
           "job_type_hint": "direct mail copy"
         },
         {
@@ -3822,7 +3822,7 @@
           "id": "launch_checks",
           "title": "A launch-day checklist and first-week checks",
           "deliverable": "Orders, emails, payments, tax and shipping settings, redirects and analytics, as tick lists.",
-          "job_type_id": "checklist-scorecard-job-aid",
+          "job_type_id": "website-or-store-launch-checklist",
           "job_type_hint": "store launch checklist"
         }
       ],

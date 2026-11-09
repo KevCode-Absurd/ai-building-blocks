@@ -2642,7 +2642,7 @@
           "id": "landing_page",
           "title": "A one-page site or landing page in HTML and CSS",
           "deliverable": "One HTML file and one CSS file (or Tailwind) with every section, meta tags, a working form and hosting steps.",
-          "job_type_id": "app-feature-code",
+          "job_type_id": "landing-page-build",
           "job_type_hint": "landing page html css"
         },
         {

@@ -988,7 +988,7 @@
           "id": "profile_bio",
           "title": "A profile bio and pinned post",
           "deliverable": "A short bio and a pinned post that say who you help and what to do next.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "bio-and-profile-copy",
           "job_type_hint": "social bio"
         },
         {
@@ -2233,7 +2233,7 @@
           "id": "review_request_kit",
           "title": "A review request kit",
           "deliverable": "Short texts and emails asking happy customers for a review after a job, plus a counter script, all within platform rules.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "review-request-messages",
           "job_type_hint": "review request messages"
         },
         {
@@ -2418,7 +2418,7 @@
           "id": "review_request_plan",
           "title": "A plan to earn more reviews",
           "deliverable": "When and how to ask, wording for text, email and in person, and a tracker, all inside platform rules.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "review-request-messages",
           "job_type_hint": "review generation plan"
         },
         {
@@ -2895,7 +2895,7 @@
           "id": "profile_makeover",
           "title": "An Instagram profile makeover",
           "deliverable": "A new bio, link plan, highlight names and pinned post choices written for one clear goal.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "bio-and-profile-copy",
           "job_type_hint": "instagram profile"
         },
         {
@@ -4079,7 +4079,7 @@
           "id": "recall_messages",
           "title": "Patient reminder, no-show and recall messages",
           "deliverable": "Text and email messages for bookings, reminders, no-show follow-up, recall and reactivation, in your clinic's tone, with opt-out wording.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "reminder-and-recall-messages",
           "job_type_hint": "patient reminder messages"
         },
         {
@@ -4273,7 +4273,7 @@
           "id": "followup_sequence",
           "title": "An event follow-up sequence that earns replies",
           "deliverable": "Thank-you, replay, offer and personal follow-up messages for attendees and no-shows.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "enquiry-reply-and-follow-up",
           "job_type_hint": "event follow-up"
         },
         {
@@ -4728,7 +4728,7 @@
           "id": "founder_story",
           "title": "A founder story cut to what moves",
           "deliverable": "A 400 to 700 word story with the problem, the turn and the lesson, plus a 100 word short version.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "bio-and-profile-copy",
           "job_type_hint": "founder story"
         },
         {
@@ -5357,7 +5357,7 @@
           "id": "profile_rewrite",
           "title": "A LinkedIn profile rewrite",
           "deliverable": "Headline, about section, featured section plan and experience bullets that serve one goal.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "bio-and-profile-copy",
           "job_type_hint": "linkedin profile"
         },
         {

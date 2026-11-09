@@ -1917,7 +1917,7 @@
           "id": "onboard_offboard",
           "title": "Onboarding and offboarding checklists for contractors",
           "deliverable": "Two checklists: what to collect, share and grant on day one, and what to remove, return and pay on the last day.",
-          "job_type_id": "checklist-scorecard-job-aid",
+          "job_type_id": "joiner-and-leaver-checklists",
           "job_type_hint": "contractor onboarding checklist"
         },
         {
@@ -2794,7 +2794,7 @@
           "id": "site_scorecard",
           "title": "A site visit scorecard",
           "deliverable": "A scored checklist for field visits across standards, service, cleanliness and paperwork, with a follow-up action form.",
-          "job_type_id": "checklist-scorecard-job-aid",
+          "job_type_id": "quality-scorecard",
           "job_type_hint": "site audit scorecard"
         }
       ],
@@ -3832,7 +3832,7 @@
           "id": "trade_sheet",
           "title": "A sell sheet for bars, restaurants and shops",
           "deliverable": "A one-page sheet per product with specs, tasting notes, pack sizes, why it sells and how to order, for your sales team.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "sell-sheet-and-spec-sheet",
           "job_type_hint": "trade sell sheet"
         },
         {
@@ -4152,14 +4152,14 @@
           "id": "press_kit",
           "title": "Text for an electronic press kit",
           "deliverable": "All the words for your press kit: intro, bio, key facts, press quotes you supply, notable shows, a links list and a contact block.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "bio-and-profile-copy",
           "job_type_hint": "electronic press kit"
         },
         {
           "id": "artist_bios",
           "title": "Artist bios in three lengths",
           "deliverable": "A 50-word, 150-word and 400-word bio in your voice, plus a one-line description for listings.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "bio-and-profile-copy",
           "job_type_hint": "artist bio"
         },
         {
@@ -4173,7 +4173,7 @@
           "id": "release_one_sheet",
           "title": "A one-sheet for a single, EP or album",
           "deliverable": "A one-page sheet with the story behind the release, track notes, credits, dates and angles for press.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "bio-and-profile-copy",
           "job_type_hint": "music release one-sheet"
         },
         {
@@ -4833,14 +4833,14 @@
           "id": "venue_brochure",
           "title": "Venue brochure and package copy",
           "deliverable": "Copy for your brochure or sales pack: spaces, capacities, packages, what is included, prices from your list, add-ons and FAQs.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "print-marketing-copy",
           "job_type_hint": "venue brochure copy"
         },
         {
           "id": "enquiry_replies",
           "title": "Enquiry replies for each event type",
           "deliverable": "Fast first replies for weddings, corporate events, parties and conferences, each with key facts, two questions and a clear next step.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "enquiry-reply-and-follow-up",
           "job_type_hint": "venue enquiry reply"
         },
         {

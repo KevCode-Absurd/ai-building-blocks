@@ -1426,7 +1426,7 @@
           "id": "print_copy",
           "title": "Copy for a flyer or poster",
           "deliverable": "Headline, body, offer and call to action written to fit your flyer.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "print-marketing-copy",
           "job_type_hint": "flyer copy"
         }
       ],
@@ -1579,7 +1579,7 @@
           "id": "pack_copy",
           "title": "Front and back pack copy",
           "deliverable": "Front and back words written to fit your panels, with a list of facts to confirm.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "packaging-copy",
           "job_type_hint": "pack copy"
         },
         {

@@ -1285,7 +1285,7 @@
           "id": "review_plan",
           "title": "A plan to earn more honest reviews",
           "deliverable": "Timing, wording and follow-up for asking real buyers for reviews, within platform rules.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "review-request-messages",
           "job_type_hint": "review request plan"
         }
       ],

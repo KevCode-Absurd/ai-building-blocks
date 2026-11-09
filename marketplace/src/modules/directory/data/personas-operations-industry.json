@@ -1535,7 +1535,7 @@
           "id": "exit_handover",
           "title": "An exit handover checklist for a departing team member",
           "deliverable": "A dated checklist of tasks to hand over and to whom, open work, access for your IT person to review and questions to ask before the last day.",
-          "job_type_id": "checklist-scorecard-job-aid",
+          "job_type_id": "joiner-and-leaver-checklists",
           "job_type_hint": "exit handover"
         },
         {
@@ -2833,7 +2833,7 @@
           "id": "rebooking_messages",
           "title": "A rebooking and reminder message set",
           "deliverable": "Texts and emails for after-visit, six-week rebook and lapsed clients.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "reminder-and-recall-messages",
           "job_type_hint": "salon rebooking"
         },
         {
@@ -3460,7 +3460,7 @@
           "id": "deadline_emails",
           "title": "A year of client deadline reminders",
           "deliverable": "A calendar of reminder emails with what clients need to send you and when, for your own jurisdiction's dates that you provide.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "reminder-and-recall-messages",
           "job_type_hint": "deadline reminders"
         },
         {
@@ -3610,7 +3610,7 @@
           "id": "renewal_sequence",
           "title": "A renewal reminder sequence",
           "deliverable": "Emails and texts at 60, 30 and 7 days before renewal, in your tone.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "reminder-and-recall-messages",
           "job_type_hint": "renewal reminders"
         },
         {
@@ -3775,7 +3775,7 @@
           "id": "service_reminders",
           "title": "Service and MOT-style reminders",
           "deliverable": "Text and email reminders for upcoming services, seasonal checks and overdue work.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "reminder-and-recall-messages",
           "job_type_hint": "service reminders"
         },
         {
@@ -3924,7 +3924,7 @@
           "id": "enquiry_reply",
           "title": "An enquiry reply and follow-up set",
           "deliverable": "A warm first reply and three follow-ups that move an enquiry to a call.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "enquiry-reply-and-follow-up",
           "job_type_hint": "wedding enquiry reply"
         },
         {
@@ -3945,7 +3945,7 @@
           "id": "post_wedding_pack",
           "title": "A post-wedding thank-you and review request",
           "deliverable": "A thank-you note and a polite request for a review or referral.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "review-request-messages",
           "job_type_hint": "wedding thank you"
         }
       ],
@@ -4401,7 +4401,7 @@
           "id": "recall_reminders",
           "title": "Vaccination and check-up reminders",
           "deliverable": "A set of reminder messages for due, overdue and annual checks.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "reminder-and-recall-messages",
           "job_type_hint": "pet recall"
         },
         {
@@ -4555,7 +4555,7 @@
           "id": "inquiry_reply",
           "title": "An inquiry reply and follow-up set",
           "deliverable": "A warm reply with your approach and next step, plus follow-ups that move to a call.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "enquiry-reply-and-follow-up",
           "job_type_hint": "photographer inquiry"
         },
         {
@@ -4576,7 +4576,7 @@
           "id": "delivery_email",
           "title": "A delivery and review-request email",
           "deliverable": "An email delivering files, explaining use and asking for feedback or a referral.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "review-request-messages",
           "job_type_hint": "delivery email"
         }
       ],
@@ -4728,7 +4728,7 @@
           "id": "order_emails",
           "title": "Order and delivery emails",
           "deliverable": "Confirmation, dispatch, delay and arrival emails with storage and serving tips.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "order-and-delivery-messages",
           "job_type_hint": "order emails"
         },
         {

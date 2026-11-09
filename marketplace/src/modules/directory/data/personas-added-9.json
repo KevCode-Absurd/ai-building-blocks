@@ -199,7 +199,7 @@
           "id": "starter_leaver",
           "title": "A new starter and leaver IT checklist",
           "deliverable": "Accounts, devices, access and handback steps in order, with an owner for each step.",
-          "job_type_id": "checklist-scorecard-job-aid",
+          "job_type_id": "joiner-and-leaver-checklists",
           "job_type_hint": "joiner leaver checklist"
         },
         {

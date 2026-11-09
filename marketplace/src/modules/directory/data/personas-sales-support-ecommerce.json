@@ -203,7 +203,7 @@
           "id": "team_scorecard",
           "title": "A call scorecard for your team",
           "deliverable": "A one-page scorecard with eight criteria, a scale and an example of each level, so scores match across people.",
-          "job_type_id": "checklist-scorecard-job-aid",
+          "job_type_id": "quality-scorecard",
           "job_type_hint": "sales scorecard"
         }
       ],
@@ -976,7 +976,7 @@
           "id": "event_followup",
           "title": "Follow-up messages after an event or webinar",
           "deliverable": "A thank-you, a recap and two follow-ups, split by attended and did not attend.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "enquiry-reply-and-follow-up",
           "job_type_hint": "event follow-up emails"
         },
         {
@@ -1277,7 +1277,7 @@
           "id": "renewal_emails",
           "title": "A renewal email series",
           "deliverable": "Four emails from the first heads-up to the final reminder, in a warm and direct tone.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "reminder-and-recall-messages",
           "job_type_hint": "renewal emails"
         },
         {
@@ -1955,7 +1955,7 @@
           "id": "reorder_emails",
           "title": "Reorder emails for past buyers",
           "deliverable": "A set of messages by buyer type, timed to when each buyer is likely to run low.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "reminder-and-recall-messages",
           "job_type_hint": "reorder emails"
         },
         {
@@ -3427,14 +3427,14 @@
           "id": "booking_flow",
           "title": "A booking message set",
           "deliverable": "Confirmation, reminders at 48 and 2 hours, a reschedule note and a thank-you.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "reminder-and-recall-messages",
           "job_type_hint": "booking confirmation messages"
         },
         {
           "id": "noshow_plan",
           "title": "A no-show reduction plan",
           "deliverable": "Reminder timing, deposit wording, waitlist message and a policy note.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "reminder-and-recall-messages",
           "job_type_hint": "no-show reduction"
         },
         {
@@ -4401,7 +4401,7 @@
           "id": "reorder_flow",
           "title": "A reorder flow timed to your product",
           "deliverable": "Emails and texts timed to how long your product lasts, with copy for each stage and a stop rule once they reorder.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "reminder-and-recall-messages",
           "job_type_hint": "reorder emails"
         },
         {
@@ -5524,7 +5524,7 @@
           "id": "delay_messages",
           "title": "Customer messages for delays, lost parcels and cut-offs",
           "deliverable": "Short honest messages for delays, lost parcels and wrong items, plus banner, email and auto-reply text for holiday cut-off dates.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "order-and-delivery-messages",
           "job_type_hint": "shipping delay messages"
         },
         {

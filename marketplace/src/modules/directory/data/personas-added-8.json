@@ -509,7 +509,7 @@
           "id": "care_schedule",
           "title": "Care and maintenance schedule with reminder emails",
           "deliverable": "A care schedule by month or season, with reminder messages timed for each service date.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "reminder-and-recall-messages",
           "job_type_hint": "maintenance reminder messages"
         },
         {
@@ -824,7 +824,7 @@
           "id": "order_updates",
           "title": "Order and booking update templates ready for approval",
           "deliverable": "Templates for confirmed, ready, on its way, delayed and reminder, with fill-in fields and template category notes.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "order-and-delivery-messages",
           "job_type_hint": "whatsapp order updates"
         },
         {
@@ -1149,7 +1149,7 @@
           "id": "dm_flow",
           "title": "Comment-to-DM and lead capture flow for Instagram or Messenger",
           "deliverable": "The messages that reply to a comment, ask one or two questions and pass the lead on, with opt-out wording.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "enquiry-reply-and-follow-up",
           "job_type_hint": "comment to dm flow"
         },
         {
@@ -1293,7 +1293,7 @@
           "id": "delay_messages",
           "title": "Customer messages for late, lost and damaged orders",
           "deliverable": "Messages for each stage: delayed, being looked into, replacement sent and refunded, with timing.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "order-and-delivery-messages",
           "job_type_hint": "delivery problem messages"
         },
         {
@@ -1448,7 +1448,7 @@
           "id": "order_ack",
           "title": "Order acknowledgement and confirmation templates",
           "deliverable": "Acknowledgement, confirmation and dispatch templates with fill-in fields for PO, lines, dates and delivery.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "order-and-delivery-messages",
           "job_type_hint": "b2b order confirmations"
         },
         {
@@ -1613,7 +1613,7 @@
           "id": "first_replies",
           "title": "First-reply templates for web form, call-back and chat enquiries",
           "deliverable": "Fast first replies for each enquiry source, each asking one question and offering one next step.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "enquiry-reply-and-follow-up",
           "job_type_hint": "enquiry first replies"
         },
         {
@@ -1947,7 +1947,7 @@
           "id": "renewal_messages",
           "title": "Renewal and reminder message set",
           "deliverable": "Messages for visit reminders, renewal notices and lapsed members, timed through the year.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "reminder-and-recall-messages",
           "job_type_hint": "service plan renewal messages"
         },
         {
@@ -2729,21 +2729,21 @@
           "id": "spec_sheet",
           "title": "Product spec sheet with tables and options",
           "deliverable": "Spec sheet copy with key specs in tables, options and accessories, ordering codes and notes, from your data.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "sell-sheet-and-spec-sheet",
           "job_type_hint": "product spec sheet"
         },
         {
           "id": "sell_sheet",
           "title": "One-page sell sheet for distributors",
           "deliverable": "A one-page sell sheet: who it is for, the problem it solves, key specs, proof and how to order.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "sell-sheet-and-spec-sheet",
           "job_type_hint": "distributor sell sheet"
         },
         {
           "id": "line_card",
           "title": "Line card for a product range",
           "deliverable": "A one-page line card listing the range by family with short descriptions and ordering codes.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "sell-sheet-and-spec-sheet",
           "job_type_hint": "line card"
         },
         {
@@ -3732,7 +3732,7 @@
           "id": "recall_messages",
           "title": "Recall and reminder messages",
           "deliverable": "Reminder, recall and no-show messages timed for your practice, with opt-out wording.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "reminder-and-recall-messages",
           "job_type_hint": "recall and reminder messages"
         },
         {

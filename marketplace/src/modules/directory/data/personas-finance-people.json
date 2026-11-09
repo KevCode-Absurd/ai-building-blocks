@@ -4366,7 +4366,7 @@
           "id": "preboarding",
           "title": "A pre-boarding checklist from offer to day one",
           "deliverable": "A checklist of what to do before the first day, with an owner and a date for each item.",
-          "job_type_id": "checklist-scorecard-job-aid",
+          "job_type_id": "joiner-and-leaver-checklists",
           "job_type_hint": "pre-boarding checklist"
         },
         {

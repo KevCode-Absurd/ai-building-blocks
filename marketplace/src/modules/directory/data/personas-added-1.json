@@ -648,7 +648,7 @@
           "id": "one_pager",
           "title": "A one-page sales sheet for one product or service",
           "deliverable": "A one-pager with headline, the problem, how it works, three proof points, a short FAQ and a call to action, sized for print and PDF.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "sell-sheet-and-spec-sheet",
           "job_type_hint": "sales one-pager"
         },
         {
@@ -1118,21 +1118,21 @@
           "id": "brochure",
           "title": "Copy for a tri-fold or multi-page brochure",
           "deliverable": "Panel-by-panel copy written to your fold and page count, with headline, body text, proof, contact block and an image note for each panel.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "print-marketing-copy",
           "job_type_hint": "brochure copy"
         },
         {
           "id": "flyer",
           "title": "A flyer or poster for one offer or event",
           "deliverable": "Headline, subhead, three short benefit lines, offer details, call to action and a QR code note, written to fit A5, A4 or your size, plus two headline options.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "print-marketing-copy",
           "job_type_hint": "flyer copy"
         },
         {
           "id": "mailer",
           "title": "A direct mail postcard or letter",
           "deliverable": "Front and back copy for a postcard, or a one-page letter with an envelope line, written for one audience with a clear offer and a way to track replies.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "print-marketing-copy",
           "job_type_hint": "direct mail copy"
         },
         {
@@ -2527,7 +2527,7 @@
           "id": "speaker_kit",
           "title": "A speaker bio and one-sheet",
           "deliverable": "Short, medium and long speaker bios, three talk topics with one-line hooks, past talks, and a one-page speaker sheet for organisers.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "bio-and-profile-copy",
           "job_type_hint": "speaker one-sheet"
         },
         {
@@ -2986,7 +2986,7 @@
           "id": "guest_one_sheet",
           "title": "A podcast guest one-sheet",
           "deliverable": "A one-page sheet with your bio, three episode topics with hooks, sample questions, past appearances and links, ready to send to hosts.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "bio-and-profile-copy",
           "job_type_hint": "podcast guest one-sheet"
         },
         {
@@ -4064,7 +4064,7 @@
           "id": "request_campaign",
           "title": "A testimonial request campaign",
           "deliverable": "Who to ask and when, three request messages, a short question form that draws out specific answers, a thank-you note and a permission request.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "review-request-messages",
           "job_type_hint": "testimonial request emails"
         },
         {
@@ -4528,7 +4528,7 @@
           "id": "pack_copy",
           "title": "Front and back pack copy for one product",
           "deliverable": "Product name line, front claims, back story, how to use, ingredients or materials layout and contact block, written to fit your panel sizes.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "packaging-copy",
           "job_type_hint": "packaging copy"
         },
         {
@@ -4542,7 +4542,7 @@
           "id": "insert_cards",
           "title": "Unboxing insert cards and sticker lines",
           "deliverable": "Copy for a thank-you card, a how-to card, a review or reorder ask and short sticker lines, all in your brand voice.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "packaging-copy",
           "job_type_hint": "packaging insert copy"
         },
         {
@@ -5162,7 +5162,7 @@
           "id": "signage_copy",
           "title": "Window and in-store signage copy",
           "deliverable": "Copy for the window, A-board, shelf talkers, till point and counter cards, written to be read from a few metres away.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "print-marketing-copy",
           "job_type_hint": "retail signage copy"
         },
         {

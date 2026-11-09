@@ -2686,21 +2686,21 @@
           "id": "linkedin_profile",
           "title": "A LinkedIn profile rewrite",
           "deliverable": "A headline, About section, featured section ideas and experience entries, written for the clients or roles you want.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "bio-and-profile-copy",
           "job_type_hint": "linkedin profile"
         },
         {
           "id": "bios",
           "title": "A professional bio in three lengths",
           "deliverable": "Short, medium and long bios in first and third person for your website, talks and directories.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "bio-and-profile-copy",
           "job_type_hint": "professional bio"
         },
         {
           "id": "speaker_sheet",
           "title": "A speaker one-sheet and introduction",
           "deliverable": "A one-page speaker sheet with talk topics, and a short intro for the host to read out.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "bio-and-profile-copy",
           "job_type_hint": "speaker one-sheet"
         },
         {
@@ -4018,7 +4018,7 @@
           "id": "member_messages",
           "title": "Welcome and renewal messages for members",
           "deliverable": "Messages for joining, renewing, late payment reminders and lapsed members, with timing, channel and a stop rule.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "reminder-and-recall-messages",
           "job_type_hint": "member renewal messages"
         },
         {

@@ -1301,7 +1301,7 @@
           "id": "qa_scorecard",
           "title": "A support QA scorecard for your team",
           "deliverable": "Criteria with weights, a plain scoring guide, and an example of a pass and a fail for each line.",
-          "job_type_id": "checklist-scorecard-job-aid",
+          "job_type_id": "quality-scorecard",
           "job_type_hint": "support qa scorecard"
         },
         {
@@ -4079,7 +4079,7 @@
           "id": "starter_leaver_checklist",
           "title": "IT checklists for new starters and leavers",
           "deliverable": "The accounts, devices and access to set up on day one and to remove on the last day.",
-          "job_type_id": "checklist-scorecard-job-aid",
+          "job_type_id": "joiner-and-leaver-checklists",
           "job_type_hint": "it onboarding checklist"
         },
         {
@@ -5203,28 +5203,28 @@
           "id": "message_map",
           "title": "A lifecycle message map for your app",
           "deliverable": "Each push and in-app message with its trigger, audience, timing, frequency cap and goal.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "app-push-and-in-app-messages",
           "job_type_hint": "lifecycle messaging plan"
         },
         {
           "id": "push_set",
           "title": "A set of 20 push notifications",
           "deliverable": "Titles and body text within length limits, with two versions each to test and the screen each one opens.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "app-push-and-in-app-messages",
           "job_type_hint": "push notification copy"
         },
         {
           "id": "in_app_set",
           "title": "In-app banners, pop-ups and tooltips",
           "deliverable": "Copy for each format with headline, body and button text, plus when it shows and when it stops.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "app-push-and-in-app-messages",
           "job_type_hint": "in-app message copy"
         },
         {
           "id": "reengagement",
           "title": "A re-engagement series for quiet users",
           "deliverable": "Three to five messages over two weeks, each with a reason to come back and a stop rule.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "app-push-and-in-app-messages",
           "job_type_hint": "re-engagement push series"
         },
         {

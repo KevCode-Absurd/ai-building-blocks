@@ -1,0 +1,18 @@
+slug: expert-agent-blind-test
+name: "Expert agent blind test"
+summary: "Give it your agent and its test cases. You get a fair blind test against plain AI, with win rate and consistency."
+category: general
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - {type: document, required: true}
+  - {type: skill_pack, required: true}
+outputs:
+  - {type: test_report, required: true}
+uses: []
+next: [expert-agent-improvement-loop]
+origin: own
+example_pending: true
+version: 1.0.0

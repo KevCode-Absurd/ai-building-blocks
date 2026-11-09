@@ -1,0 +1,109 @@
+new_slug: expert-agent-improvement-loop
+name: "Expert agent improvement loop"
+summary: "Bring a week of your agent's mistakes. You get two tested fixes, a new version and a log of ideas you dropped."
+job: set-up-ai
+thinking: high
+thinking_why: "It has to find the real cause behind each mistake and keep client-only lessons out of the general rules."
+
+headline: "Expert agent improvement loop"
+subhead: "Bring your agent's mistakes from a week of real work, and your AI groups them, suggests ten specific fixes and lets you keep the best two. Each fix is tested blind against the previous version before it stays, and you get a new version, a changelog line and a record of the ideas you dropped."
+
+explain: |
+  An agent that learns from every comment slowly drifts. Fixes pile up, some contradict each other, and one client's preferences creep into work for the next client. Asking an AI for ten improvements gives you ten ideas, but it doesn't tell you which two are worth keeping or whether they quietly break something that already worked.
+
+  This skill runs a weekly routine of two to three hours that starts from real mistakes rather than general advice. It groups them by what went wrong and which file caused the problem, and it sends lessons that only fit one client to that client's own project. Your AI then proposes ten specific fixes, you score them and keep two, and both are tested blind on your test cases against the previous version. A fix stays only when nothing else gets worse. Once a month, it also refreshes the test and suggests ways for you to keep improving as an expert.
+
+when:
+  - "Your agent does real work each week and you correct it often."
+  - "You want it to get better without slowly turning generic."
+  - "You keep giving the same feedback and want it to stick."
+not_for:
+  - "Building the test cases. Use the Expert agent eval builder first."
+  - "A one-off review of a single draft."
+  - "Training a model's weights. This changes the agent's files only."
+
+you_give:
+  - "This week's mistakes, such as your edits with reasons, client complaints and failed test cases, with private details taken out"
+  - "Your agent's files, including its rules and version"
+  - "Your test cases and judge, and the last blind-test report (optional)"
+you_get:
+  - "Your mistakes grouped by cause, split into general and client-only"
+  - "Ten scored fix ideas, with the two you kept and why the others were dropped"
+  - "A blind regression result for each kept fix, a new version and a changelog line"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste or share the week's mistakes and your agent's files."
+  - "Score the ten ideas on how often, how bad, how easy, how well they fit and how risky, then keep two."
+  - "Let it run the blind regression on your test cases, and keep only the fixes that pass."
+  - "Save the new version, and once a month run the refresh and the ten-things prompt."
+
+how_it_works:
+  - title: "Collects mistakes"
+    text: "Puts each one on a line with the date, the job, what went wrong and your reason for any edit."
+  - title: "Groups them"
+    text: "By what went wrong and which file caused it, then sorts out the lessons that only fit one client."
+  - title: "Suggests ten fixes"
+    text: "Each names the problem it solves, the exact edit and what it could break."
+  - title: "You keep two"
+    text: "At least one must fix the biggest problem. The other eight go in a log so they aren't suggested again."
+  - title: "Tests them blind"
+    text: "Runs your test cases with the old and new version. A fix stays only with no new hard fails."
+  - title: "Bumps the version"
+    text: "Writes the changelog line with the numbers before and after, and updates the rules list."
+
+output_shape: |
+  WEEK OF <date>: <agent> v<old> to v<new>
+  CLUSTERS
+  <cluster>: <n> mistakes, <file at fault>, general or client-only
+  CANDIDATES
+  | # | Fix | Cluster | File | Scores | Kept? |
+  KEPT
+  <fix>: regression <passed or failed>, <before and after>
+  DROPPED
+  <idea>: <reason>
+  CLIENT-ONLY LESSONS
+  <lesson, sent to that client's project>
+  CHANGELOG LINE
+  <problem, change, before and after>
+  CHECKS MISSED
+  <one line each, or none>
+
+tweaks:
+  - what: "How many fixes"
+    how: "Two a week is the default. More makes it hard to see which change caused a later problem."
+  - what: "Client-only lessons"
+    how: "Ask whether the fix would be right for a different client. If not, it stays in that client's project."
+  - what: "Monthly refresh"
+    how: "New kept-back cases and fresh grades from you keep the test honest as your bar shifts."
+
+judge:
+  - "Every fix idea points to a real mistake from the week."
+  - "No lesson about one client reached the agent's general rules."
+  - "Each kept fix passed a blind test against the old version."
+  - "The dropped ideas have a reason each."
+  - "The version and changelog were updated together."
+
+test:
+  - "Run a week where you know the cause of one mistake and check the loop finds it."
+  - "Check that a client-only preference you gave ends up in that client's project, not in the rules."
+  - "After a month, run the blind test on the kept-back cases and compare with the first result."
+
+improve:
+  - "After each real job, have your agent draft a short review of what went well and what to change."
+  - "Keep a decision journal of important calls, with how likely you thought each outcome was."
+  - "Run a premortem before each plan. Imagine it failed and list the three most likely reasons."
+
+works_best_with:
+  tools:
+    - {name: "Claude Code or OpenAI Codex", why: "They can apply each fix to a copy of your agent and run the test cases on both versions."}
+    - {name: "Any good chat AI", why: "Claude, ChatGPT or Gemini can group the mistakes and draft the fixes for you to save."}
+  inputs:
+    - "Your edited drafts next to the agent's originals"
+    - "The decision journal entries that turned out wrong"
+
+terms:
+  - term: "Regression"
+    meaning: "A test that checks a change didn't make anything that used to work worse."
+  - term: "Client-only lesson"
+    meaning: "A lesson that fits one client and is kept in that client's own files, not the agent's."

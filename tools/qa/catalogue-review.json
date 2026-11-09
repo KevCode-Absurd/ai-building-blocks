@@ -516,17 +516,17 @@
       ]
     },
     "catalogue-items/general/personal-agent-builder/item.yaml": {
-      "reviewed_by": "AI Blocks source review (Codex)",
-      "reviewed_on": "2026-11-08",
-      "method_sha256": "05e7b431fb87f455357cd5895a7d4ebd61f5ab60ae157a28a59d5e0932dc036b",
+      "reviewed_by": "AI Blocks source review (Claude, W5 expert training)",
+      "reviewed_on": "2026-11-09",
+      "method_sha256": "4959a7b3adbaf2cdbd5b5a37dffafea7c7105d1e3fb462ac8df193907f26091e",
       "inputs": [
-        {
-          "type": "question",
-          "required": true
-        },
         {
           "type": "document",
           "required": false
+        },
+        {
+          "type": "question",
+          "required": true
         }
       ],
       "evidence": [
@@ -784,6 +784,114 @@
           "rationale": "The required product_photos input is the actual garment photograph used as image 1, preserving true colour, fabric and fit. The complete method separately requires an authorised pose/scene reference as image 2, real tool access and cost approval; a garment photo or audit report alone is not sufficient to run it."
         }
       ]
+    },
+    "catalogue-items/general/expert-knowledge-interview/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, W5 expert training)",
+      "reviewed_on": "2026-11-09",
+      "method_sha256": "6a40e5ec0aa464d96836d6ab7c9004d961ff37f6eccd7366501647cf1b2e3ac5",
+      "inputs": [
+        {
+          "type": "document",
+          "required": false
+        },
+        {
+          "type": "question",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "question",
+          "quote": "and the job the agent will do",
+          "rationale": "The expert states who is training and the job the agent will do; that request starts the interview and scopes every script."
+        },
+        {
+          "type": "document",
+          "quote": "an existing agent pack or playbook to start from",
+          "rationale": "An existing pack or playbook is optional starting material; the interview runs from real cases without it."
+        }
+      ]
+    },
+    "catalogue-items/general/expert-agent-eval-builder/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, W5 expert training)",
+      "reviewed_on": "2026-11-09",
+      "method_sha256": "f3997199bb8f2ccd5b66164f3f18be178b90f78685bf9abf8310476cbc3a3b56",
+      "inputs": [
+        {
+          "type": "document",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "document",
+          "quote": "if they have them: scope card, cases, decision rules, taste pairs and never-do list",
+          "rationale": "The captured agent files are the document the rubric and cases are built from; the method falls back to the list of jobs when files are thin."
+        }
+      ]
+    },
+    "catalogue-items/general/expert-agent-blind-test/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, W5 expert training)",
+      "reviewed_on": "2026-11-09",
+      "method_sha256": "ed417e43aca29f601b64868931ebf638893bc0fe490440f237461e4e535cb2a3",
+      "inputs": [
+        {
+          "type": "document",
+          "required": true
+        },
+        {
+          "type": "skill_pack",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "document",
+          "quote": "case files with input",
+          "rationale": "The eval set, rubric and judge files are documents the test reads; they define the cases both sides receive."
+        },
+        {
+          "type": "skill_pack",
+          "quote": "its files or pack, and its version",
+          "rationale": "The agent under test is a pack of skill and instruction files loaded on the agent side of the test."
+        }
+      ]
+    },
+    "catalogue-items/general/expert-agent-improvement-loop/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, W5 expert training)",
+      "reviewed_on": "2026-11-09",
+      "method_sha256": "fb6ca11560bdedc775baa0c6fff50790b4dc41fef7fa8b5b7a094dcf24efa988",
+      "inputs": [
+        {
+          "type": "document",
+          "required": true
+        },
+        {
+          "type": "feedback_notes",
+          "required": true
+        },
+        {
+          "type": "test_report",
+          "required": false
+        }
+      ],
+      "evidence": [
+        {
+          "type": "feedback_notes",
+          "quote": "the expert's edits with reasons, client complaints",
+          "rationale": "The week's failures and the expert's edits with reasons are the feedback notes the loop clusters; without them the loop has no evidence."
+        },
+        {
+          "type": "document",
+          "quote": "including \"Rules I learned\" and its version",
+          "rationale": "The agent's files are the document the candidate edits are applied to and versioned."
+        },
+        {
+          "type": "test_report",
+          "quote": "and failed eval cases",
+          "rationale": "Failed eval cases from a blind test report are one optional source of failures; real-use evidence alone can drive the loop."
+        }
+      ]
     }
   },
   "handoffs": {
@@ -970,6 +1078,39 @@
       "adaptation": "Select the actual approved cleaned flat-lay image from the returned photo_set, retain the original real-garment photo and fidelity observations, and label it as the garment image 1 for virtual try-on. Add a separately authorised pose/scene reference as image 2; do not pass the report, prompt, close-up or ghost-shape preview as the garment source.",
       "condition": "Only when the owner requests an on-model follow-up and actual returned/approved photo files exist. Require the separate pose reference, image-edit capability, rights and authorised action/spend limits; no automatic dLazy upload or payment follows from the recommendation.",
       "rationale": "The workflow begins and retains a flat-lay garment image; virtual try-on supports that source, whereas the old scene-swapper expects an already worn/model or mannequin image. The optional photo_set is only available after actual images return and pass their checks. The audit report is evidence to carry, not a substitute photograph; new generated images require fresh garment and marketplace checks."
+    },
+    "catalogue-items/general/expert-knowledge-interview/item.yaml#next#expert-agent-eval-builder": {
+      "reviewed_by": "AI Blocks source review (Claude, W5 expert training)",
+      "reviewed_on": "2026-11-09",
+      "from_sha256": "6a40e5ec0aa464d96836d6ab7c9004d961ff37f6eccd7366501647cf1b2e3ac5",
+      "to_sha256": "f3997199bb8f2ccd5b66164f3f18be178b90f78685bf9abf8310476cbc3a3b56",
+      "ports_sha256": "9bceba7d11aa230335b2bf8da388b7ab65b98eb6f1edc70c99f86a02360e9543",
+      "type": "document",
+      "output_quote": "The files, each in full (or written into their project if you can write files)",
+      "input_quote": "if they have them: scope card, cases, decision rules, taste pairs and never-do list",
+      "rationale": "The interview hands back the scope card, cases, decision rules, taste files and never-do list; the eval builder reads exactly those files to write the rubric and the eval cases."
+    },
+    "catalogue-items/general/expert-agent-eval-builder/item.yaml#next#expert-agent-blind-test": {
+      "reviewed_by": "AI Blocks source review (Claude, W5 expert training)",
+      "reviewed_on": "2026-11-09",
+      "from_sha256": "f3997199bb8f2ccd5b66164f3f18be178b90f78685bf9abf8310476cbc3a3b56",
+      "to_sha256": "ed417e43aca29f601b64868931ebf638893bc0fe490440f237461e4e535cb2a3",
+      "ports_sha256": "e127787d6b5838b772551e8e8cb0395fa3f4eae00f1af0bb7d09ba8a8f354e20",
+      "type": "document",
+      "output_quote": "`expert/rubric.md`, `evals/eval-set.md`, the case files, `evals/judge.md` with its agreement record",
+      "input_quote": "case files with input",
+      "rationale": "The eval builder produces the rubric, case files and calibrated judge; the blind test runs those cases and uses that judge and rubric."
+    },
+    "catalogue-items/general/expert-agent-blind-test/item.yaml#next#expert-agent-improvement-loop": {
+      "reviewed_by": "AI Blocks source review (Claude, W5 expert training)",
+      "reviewed_on": "2026-11-09",
+      "from_sha256": "ed417e43aca29f601b64868931ebf638893bc0fe490440f237461e4e535cb2a3",
+      "to_sha256": "fb6ca11560bdedc775baa0c6fff50790b4dc41fef7fa8b5b7a094dcf24efa988",
+      "ports_sha256": "13102fc9be9aac2f7e97439ec8c8f31e5bc0f95a5683a66628207621570fdf60",
+      "type": "test_report",
+      "output_quote": "Hand the losses to the expert, or to the expert-agent-improvement-loop skill.",
+      "input_quote": "and failed eval cases",
+      "rationale": "The blind test report lists losses with likely causes; the improvement loop takes failed eval cases as one source of failures to cluster."
     }
   }
 }

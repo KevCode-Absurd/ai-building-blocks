@@ -11,7 +11,7 @@ inputs:
   - {type: document, required: false}
 outputs:
   - {type: document, required: true}
-uses: []
+uses: [expert-knowledge-interview, expert-agent-eval-builder, expert-agent-blind-test, expert-agent-improvement-loop]
 package_files: all
 origin: own
 example_pending: true

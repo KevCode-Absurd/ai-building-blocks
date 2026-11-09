@@ -1,0 +1,18 @@
+slug: expert-knowledge-interview
+name: "Expert knowledge interview"
+summary: "Tell it your job and bring real cases. It interviews you and writes your judgment and taste into agent files."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: document, required: false}
+outputs:
+  - {type: document, required: true}
+uses: []
+next: [expert-agent-eval-builder]
+origin: own
+example_pending: true
+version: 1.0.0

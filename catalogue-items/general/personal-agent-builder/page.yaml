@@ -5,18 +5,15 @@ job: set-up-ai
 thinking: medium
 thinking_why: "It adapts questions to real decisions, preserves conditional preferences and compiles the smallest useful artifact."
 headline: "Build an AI that learns how you work"
-subhead: "Start with a real assignment. Turn your decisions, examples and edits into useful instructions, with an editable private guide you can correct."
+subhead: "Start with a real assignment and turn your decisions, examples and edits into useful instructions, with a private guide you can correct. If you are an expert who wants an agent that beats plain AI on your jobs, it runs the full four-step expert path."
 explain: |
-  Good personal AI needs the distinctions you use in real work: what you notice, which tempting option you reject, when a rule stops applying and what makes an output feel right. A job title or a long list of traits rarely captures those choices.
+  Good personal AI needs the distinctions you use in real work: what you notice, which tempting option you reject, when a rule stops applying and what makes an output feel right. A job title or a long list of traits rarely captures those choices, so this builder learns them from real assignments, decisions and edits instead.
 
-  This builder works in your current AI. It first shows the relevant context it can actually access, so you can correct it. Choose a prompt, skill, agent or collection, then work on an actual assignment. Useful decision replays, examples and corrections gradually become a small editable dossier. You keep, narrow, edit or reject proposed lessons.
-
-  You receive a private portable artifact and an honest account of what was saved. If your AI cannot persist memory, it gives you an updated file or instruction block to keep. It does not create a hosted service, train model weights, grant account access or publish a marketplace listing.
+  It offers two paths. The light path builds a prompt, skill, agent or collection one assignment at a time, and keeps what it learns in a small private guide you can edit, narrow or reject. The expert path is for professionals such as media buyers, copywriters or finance leads. It runs four library skills in order. The first interviews you about your real cases, and the second builds test cases with a judge tuned to your grades. The third runs a fair blind test against plain AI, and the fourth is a weekly loop that turns real mistakes into tested fixes. Either way, it tells you honestly what was saved. It never creates a hosted service, trains model weights or publishes anything for you.
 when:
   - "You want a personal AI assistant or agent that reflects how you work."
-  - "You want to turn tacit knowledge, judgment or taste into a reusable prompt or skill."
+  - "You are an expert and want an agent that makes your calls and proves it in a blind test."
   - "You keep correcting the same AI outputs and want reviewed, scoped lessons."
-  - "You want a collection of useful personal workflows without a long setup interview."
 not_for:
   - "Automatic access to other chats, private memories or accounts your AI cannot reach."
   - "A hosted runtime, live tool authorization or automatic model training."
@@ -24,14 +21,16 @@ not_for:
 you_give:
   - "What work you want help with or what you want to create; a short request is enough."
   - "Permitted examples, edits, decisions, existing instructions or a saved dossier, if available."
+  - "For the expert path, five to ten real cases from your work and a few hours across two or three weeks."
 you_get:
   - "Your chosen prompt, skill, agent instructions or collection, ready to use in your AI."
   - "A small editable dossier of approved context, method, decision cases, taste and exceptions."
+  - "On the expert path, a scope card, typed rules, a case library, a rubric, a test set and blind-test results."
   - "A clear record of reviewed changes, unresolved choices and actual save or export status."
 how_to_use:
   - "Add the complete skill to your AI and describe one real assignment."
   - "Correct the context summary and choose what may be used."
-  - "Choose a prompt, skill, agent or collection; start with a small skill if unsure."
+  - "Choose a prompt, skill, agent or collection, or the expert path if you want an agent for your professional work."
   - "Work with the first result. Explain consequential edits and review any proposed lesson."
   - "Keep the private export or confirm the destination and receipt if your host can save it."
 how_it_works:
@@ -39,6 +38,8 @@ how_it_works:
     text: "Separates stated, inferred, stale and missing context, then lets you correct it."
   - title: "Learns through actual decisions"
     text: "Uses adaptive replay and optional changed-fact scenarios to uncover cues, alternatives and exceptions."
+  - title: "Runs the expert path on request"
+    text: "Interview, test set and judge, blind test, then the weekly loop, with a gate between each step."
   - title: "Keeps your distinctions editable"
     text: "Proposes scoped lessons for keep, narrow, edit or reject; your taste can stay conditional."
   - title: "Compiles a useful artifact"
@@ -46,7 +47,28 @@ how_it_works:
   - title: "Reports saving honestly"
     text: "Shows the real save receipt or provides an export and says persistence is unavailable."
 output_shape: |
-  Use the native structure of the chosen artifact. Add a compact editable dossier and change notes only where useful. State actual persistence/export status, unresolved items and the next real assignment. Do not require every dossier section before the first usable result.
+  Use the native structure of the chosen artifact. Add a compact editable dossier and change notes only where useful. On the expert path, add the expert files (scope card, decision rules, cases, taste files, never-do list, rubric, eval set, "Rules I learned") and the latest blind-test result with its case count. State actual persistence/export status, unresolved items and the next real assignment. Do not require every dossier section before the first usable result.
+tweaks:
+  - what: "Light or expert path"
+    how: "Pick the light path for a quick personal skill. Pick the expert path when you want an agent for client work that you can test against plain AI."
+  - what: "Real assignments"
+    how: "A real job with real edits teaches more than a long description of how you work."
+  - what: "Exceptions"
+    how: "Say when your preference stops applying, so the AI keeps it conditional instead of using it everywhere."
+judge:
+  - "The artifact does the job you chose, with your context corrections applied."
+  - "Each approved lesson keeps its scope and exceptions."
+  - "Nothing inferred was saved as an approved rule without your yes."
+  - "Any save claim comes with a real receipt, or the file is handed to you to keep."
+  - "On the expert path, any claim that the agent beats plain AI comes with a blind-test result and its case count."
+test:
+  - "Give it a real assignment you have already done and compare its result with yours."
+  - "Change one key fact in a past case and check whether its advice changes the way yours would."
+  - "On the expert path, run the blind test on cases you wrote before building the agent."
+improve:
+  - "Explain why you edit its work, so each edit can become a reviewed lesson."
+  - "Keep lessons about one client in that client's files, not in the general guide."
+  - "Run the weekly improvement loop once the agent does real work for you."
 works_best_with:
   tools:
     - {name: "Your current AI", why: "The work runs in your chosen AI; available memory and files depend on that host. Its provider and connected tools process supplied content under their own policies."}

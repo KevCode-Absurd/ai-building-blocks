@@ -1,0 +1,319 @@
+{
+  "schema": "ai-blocks-default-patterns/1",
+  "version": "1.0.0",
+  "updated": "2026-11-09",
+  "note": "Add a pattern only when a blind test, a buyer report or the same choice across unrelated brands shows it. Each pattern is a default to avoid unless the brand or the brief chooses it on purpose.",
+  "patterns": [
+    {
+      "id": "web-template-stack",
+      "family": "web",
+      "description": "Centred hero, then 3 benefit cards, then \"How it works in 3 steps\", then testimonials, then FAQ, then a final call to action, whatever the category.",
+      "why": "It is the most common SaaS landing-page template in the model's training data, so it is what the model writes when nothing else decides the order.",
+      "fine_when": "A new software product with no site yet, where the buyer's questions really come in that order and a real reference page uses it.",
+      "check": "Compare the section kinds with the brand's own section order in brand-dna.json. If the candidate matches this stack and the brand's pages do not, flag it."
+    },
+    {
+      "id": "web-purple-gradient",
+      "family": "web",
+      "description": "Purple, indigo or blue-to-violet gradients on the hero, buttons or section backgrounds.",
+      "why": "Indigo was a framework default for years and models converge on it when no brand colour is given.",
+      "fine_when": "The brand's measured palette already uses those colours or a gradient.",
+      "check": "Any gradient, or any colour covering 3% or more of the page, that is not in the brand palette."
+    },
+    {
+      "id": "web-font-swap",
+      "family": "web",
+      "description": "Inter, Geist, Poppins, Manrope, Space Grotesk or system-ui used in place of the brand's fonts.",
+      "why": "These are the model's favourite modern sans fonts. A 'self-contained' or 'no external requests' brief also pushes it to system fonts without saying so.",
+      "fine_when": "The brand uses that font, or it is a new brand and the font was chosen in the taste brief for a stated reason.",
+      "check": "Font family per role (h1, h2, body, button, nav) against brand-dna.json, and whether the brand font file actually loaded."
+    },
+    {
+      "id": "web-pill-buttons",
+      "family": "web",
+      "description": "Fully rounded pill buttons where the brand's buttons are square or barely rounded.",
+      "why": "Pills read as friendly and modern, so the model picks them when the radius was not captured.",
+      "fine_when": "The brand's buttons are pills (Allbirds' measured button radius is fully round).",
+      "check": "Primary button radius against the brand's primary button radius."
+    },
+    {
+      "id": "web-sentence-case-buttons",
+      "family": "web",
+      "description": "Sentence-case, bold, 10 to 12 px rounded buttons replacing the brand's own button grammar, such as UPPERCASE letter-spaced labels.",
+      "why": "Button case and letter spacing are rarely written in a brand brief, so the model's habit fills the gap.",
+      "fine_when": "The brand's buttons are sentence case.",
+      "check": "text-transform and letter-spacing of the primary button against the capture."
+    },
+    {
+      "id": "web-rounded-cards",
+      "family": "web",
+      "description": "Rounded cards with soft shadows around every group of content.",
+      "why": "Cards are the model's default way to group anything, and soft shadows read as polish.",
+      "fine_when": "The brand's own components are rounded cards with shadows.",
+      "check": "Card radius and shadows against shape.card_radius and shape.shadows in the capture."
+    },
+    {
+      "id": "web-emoji-icons",
+      "family": "web",
+      "description": "Emoji used as feature icons or bullet markers.",
+      "why": "Emoji are the cheapest icon the model can produce without assets.",
+      "fine_when": "The brand uses emoji in its own site or social voice.",
+      "check": "Emoji characters in headings, list items or icon slots."
+    },
+    {
+      "id": "web-glass-cards",
+      "family": "web",
+      "description": "Frosted-glass cards (blur, translucent white, thin light border) over a gradient.",
+      "why": "A trend that is heavily over-represented in recent UI examples.",
+      "fine_when": "The brand's product UI uses it and the page is about that product.",
+      "check": "backdrop-filter blur or translucent white surfaces not in the capture."
+    },
+    {
+      "id": "web-empty-logo-row",
+      "family": "web",
+      "description": "A \"Trusted by\" or \"As seen in\" row with grey placeholder logos, invented names or logos the client never supplied.",
+      "why": "The template expects social proof there, so the model fills the slot.",
+      "fine_when": "Never with invented logos. Real logos with permission are fine.",
+      "check": "Logo rows whose names are not in the client's facts or proof list."
+    },
+    {
+      "id": "web-stock-hero",
+      "family": "web",
+      "description": "A generic stock-style or generated hero image (laptop on desk, smiling team, abstract 3D shapes) instead of the real product or the brand's house photography.",
+      "why": "It is what the model can make without the client's photos.",
+      "fine_when": "The brand has no product photos yet and the image is labelled as a planned shot, not shipped.",
+      "check": "Hero image source: is it one of the brand's images or in the house style seen in the screenshots?"
+    },
+    {
+      "id": "web-uniform-sections",
+      "family": "web",
+      "description": "Every section the same height, padding and layout rhythm.",
+      "why": "One spacing rule applied everywhere is the simplest system to generate.",
+      "fine_when": "The brand's pages really are that even.",
+      "check": "Spread of section height_share in the candidate against the brand's sections."
+    },
+    {
+      "id": "web-fade-up-everything",
+      "family": "web",
+      "description": "The same fade-up entrance animation on every block.",
+      "why": "One animation library call applied to every section is an easy way to look 'designed'.",
+      "fine_when": "The brand's site animates that way, or one planned entrance on the first screen.",
+      "check": "Count of elements with the same entrance animation class or keyframes."
+    },
+    {
+      "id": "web-dropped-chrome",
+      "family": "web",
+      "description": "The client's header and footer replaced by a minimal logo bar and a thin footer with a few links.",
+      "why": "Landing-page templates strip navigation to 'focus' the visitor, and the model treats the page as standalone.",
+      "fine_when": "A paid-traffic page where the client chose to remove navigation, recorded in DECISIONS.md, with the footer's legal and contact links kept.",
+      "check": "Nav and footer item overlap with the capture (brand-fidelity-check, chrome)."
+    },
+    {
+      "id": "web-cream-premium",
+      "family": "web",
+      "description": "Cream, ivory or beige backgrounds swapped in to look 'premium', 'artisan' or 'luxury'.",
+      "why": "The model's idea of premium for jewellery, food, wellness and craft. In the Gehna test, one page put 30% of its area in cream against 2.9% on the live site.",
+      "fine_when": "Cream is a measured brand surface at a similar share.",
+      "check": "Area share of near-cream colours against the brand's share."
+    },
+    {
+      "id": "web-accent-promoted",
+      "family": "web",
+      "description": "A minor brand colour (a badge or seasonal accent) promoted to the top bar, the main button or whole bands.",
+      "why": "Colour lists without area shares make every colour look equal, and the model picks the 'prettier', higher-contrast one. In the Gehna test, wine went from about 1% to the top bar and the main button.",
+      "fine_when": "The client asked for it for a campaign and it is in the change list.",
+      "check": "palette area-share drift: an accent growing past twice its measured share."
+    },
+    {
+      "id": "web-signature-element",
+      "family": "web",
+      "description": "An invented 'memorable' signature element (a custom price tag, a novel card shape, a decorative motif) that is not in the brand's component set.",
+      "why": "Design skills tell the model to give every page one memorable thing, which is right for a new brand and wrong for an existing one.",
+      "fine_when": "Mode is new, or the element is built only from the brand's tokens and the plan says why no existing component fits.",
+      "check": "Components on the candidate with no match in the captured page (shape, colour, type)."
+    },
+    {
+      "id": "web-thin-merchandising",
+      "family": "web",
+      "description": "Far fewer images and product modules than the brand's pages, with more white space.",
+      "why": "The model's taste favours calm, sparse pages. Dense merchandising looks 'cluttered' to it even when buyers expect it.",
+      "fine_when": "A deliberate test of a simpler page, recorded with its hypothesis.",
+      "check": "images.per_1000px and image area share against the capture."
+    },
+    {
+      "id": "web-centred-everything",
+      "family": "web",
+      "description": "Every heading and paragraph centred.",
+      "why": "Centring is the template's default for short marketing text.",
+      "fine_when": "The brand centres its own sections.",
+      "check": "text-align of section headings and body against the brand's pages."
+    },
+    {
+      "id": "web-visible-placeholders",
+      "family": "web",
+      "description": "Placeholder chips, dashed boxes, 'to shoot' image slots or 'client to supply' labels inside the page meant for launch.",
+      "why": "The model is honest about gaps but puts them in the page instead of in a hand-off list.",
+      "fine_when": "A review build that is clearly marked, with a clean launch build beside it.",
+      "check": "brand-fidelity-check, placeholders."
+    },
+    {
+      "id": "web-hardcoded-offer",
+      "family": "web",
+      "description": "Sale prices, countdowns and dated offers written straight into the markup.",
+      "why": "The model copies what it saw on the day. In the Gehna test the sale price went stale within a day.",
+      "fine_when": "The offer is held in one dated data block with an end date.",
+      "check": "Prices and offers against the capture date (brand-fidelity-check, facts)."
+    },
+    {
+      "id": "web-bento-grid",
+      "family": "web",
+      "description": "A bento grid of mismatched tiles for features.",
+      "why": "A recent trend in product marketing pages that models now reach for.",
+      "fine_when": "The brand's site uses it.",
+      "check": "Grid sections with tiles of 3 or more different sizes not in the capture."
+    },
+    {
+      "id": "copy-ai-verbs",
+      "family": "copy",
+      "description": "Unlock, elevate, seamless, game-changer, supercharge, effortless, empower, transform, revolutionise, delve, harness.",
+      "why": "These words appear far more often in model output than in human writing about the same subjects.",
+      "fine_when": "The word is in the client's own voice samples.",
+      "check": "Search the text for the list and compare with voice.samples."
+    },
+    {
+      "id": "copy-stock-opener",
+      "family": "copy",
+      "description": "\"In today's fast-paced world\", \"Ever wondered\", \"Tired of\", \"Say goodbye to\", \"Meet X\".",
+      "why": "Stock openers are the most likely first words for a marketing paragraph.",
+      "fine_when": "Almost never. Start with the specific thing.",
+      "check": "The first five words of each section."
+    },
+    {
+      "id": "copy-rule-of-three",
+      "family": "copy",
+      "description": "Lists of exactly three everywhere: three benefits, three adjectives, three steps.",
+      "why": "Three reads as complete and rhythmic, so the model uses it by reflex.",
+      "fine_when": "There really are three things.",
+      "check": "Count lists and adjective triplets; more than two on one page is a flag."
+    },
+    {
+      "id": "copy-headline-formula",
+      "family": "copy",
+      "description": "Formula headlines: \"The smarter way to X\", \"X, without the Y\", \"It's not X. It's Y.\", \"Not just X. Y.\"",
+      "why": "These shapes score well in copywriting examples, so they are the model's default headline.",
+      "fine_when": "The client's best-performing ads use that shape, with evidence.",
+      "check": "Headline shape against the client's own headlines in voice.samples."
+    },
+    {
+      "id": "copy-fake-urgency",
+      "family": "copy",
+      "description": "\"Limited time\", \"Only a few left\", countdowns and \"Don't miss out\" with no real deadline or stock count.",
+      "why": "Urgency is a standard conversion device in templates.",
+      "fine_when": "A real, dated offer or a real stock figure from the capture.",
+      "check": "Each urgency claim traced to a fact with a date."
+    },
+    {
+      "id": "copy-any-competitor",
+      "family": "copy",
+      "description": "Benefits any competitor could claim: high quality, great service, fast shipping, made with love.",
+      "why": "With no specific facts, the model writes the category average.",
+      "fine_when": "Never as the main claim. Replace with the specific fact (\"BIS hallmarked\", \"7-day return and exchange\").",
+      "check": "Could a competitor publish this sentence unchanged? If yes, flag it."
+    },
+    {
+      "id": "copy-invented-proof",
+      "family": "copy",
+      "description": "\"Trusted by thousands\", \"Loved by 10,000+ customers\", star ratings or quotes not in the facts.",
+      "why": "Templates have a proof slot and the model fills it with plausible numbers.",
+      "fine_when": "Never. Use captured numbers with their source and date.",
+      "check": "Every number traced to facts in brand-dna.json or a supplied source."
+    },
+    {
+      "id": "copy-voice-flattening",
+      "family": "copy",
+      "description": "A consultant-style explanatory voice replacing the brand's own register (short and plain, ornate, playful, technical).",
+      "why": "The model's helpful-assistant voice is its average register.",
+      "fine_when": "The brand has no voice yet and the taste brief chose one.",
+      "check": "Sentence length, we/you ratio and word choice against voice.stats and voice.samples."
+    },
+    {
+      "id": "ads-one-look",
+      "family": "ads",
+      "description": "Every concept in a batch shares one look: the same layout, type treatment and colour block.",
+      "why": "The model varies wording, not art direction, unless the axes are named.",
+      "fine_when": "A deliberate test of copy only, with the look held constant on purpose.",
+      "check": "Put the thumbnails side by side; if they differ only in words, flag it."
+    },
+    {
+      "id": "ads-hook-formula",
+      "family": "ads",
+      "description": "The same hook formula reused across variants: \"POV:\", \"Stop scrolling\", \"3 reasons why\", \"I tried X so you don't have to\".",
+      "why": "Hook formulas from creator advice are heavily represented in training data.",
+      "fine_when": "The client's own winning ads use the formula, with results.",
+      "check": "First line of each variant; repeated structure across more than one in five is a flag."
+    },
+    {
+      "id": "ads-product-on-gradient",
+      "family": "ads",
+      "description": "The product cut out and floated on a soft gradient or a plain studio colour.",
+      "why": "It is the easiest product image to generate and needs no scene.",
+      "fine_when": "The brand's own ads use that look.",
+      "check": "Background of each product image against the brand's house photo style."
+    },
+    {
+      "id": "ads-variants-by-surface",
+      "family": "ads",
+      "description": "Variants that differ only in colour, crop or wording instead of in idea, proof, offer or audience.",
+      "why": "Surface variation is cheap and looks like range.",
+      "fine_when": "A planned creative test of one surface variable.",
+      "check": "Name the axis each variant changes. If every axis is colour, crop or wording, flag the batch."
+    },
+    {
+      "id": "audit-fixed-checklist",
+      "family": "audits",
+      "description": "A fixed checklist score out of 100 with no diagnosis of why this account's or page's numbers moved.",
+      "why": "Checklists are easy to complete without understanding the business.",
+      "fine_when": "As a short hygiene pass after the specific diagnosis.",
+      "check": "Does the top finding name a number from this account or page and a cause specific to it?"
+    },
+    {
+      "id": "audit-redesign-instead-of-patch",
+      "family": "audits",
+      "description": "An audit that ends in 'rebuild the page' when its findings are each fixable on the live page.",
+      "why": "A new design feels like a bigger answer, and the model enjoys building.",
+      "fine_when": "The brand or business changed, the page hit a ceiling after tested patches, or traffic is too low to test.",
+      "check": "Each finding mapped to one change on the live page, with evidence and a test."
+    },
+    {
+      "id": "audit-generic-advice",
+      "family": "audits",
+      "description": "\"Add social proof\", \"Improve your call to action\", \"Make it mobile friendly\" with no evidence from this page.",
+      "why": "Best-practice lists are the average answer to 'audit my page'.",
+      "fine_when": "Never without a screenshot, a number or a quote from this page.",
+      "check": "Each recommendation cites what was seen, where, and at which screen size."
+    },
+    {
+      "id": "strategy-template-frame",
+      "family": "strategy",
+      "description": "A SWOT, 4P or three-option frame filled with statements that fit any business in the category.",
+      "why": "Frameworks give structure without needing facts.",
+      "fine_when": "The frame is filled with this business's numbers and named competitors.",
+      "check": "Strike the business name. Could the plan belong to a competitor?"
+    },
+    {
+      "id": "strategy-straw-options",
+      "family": "strategy",
+      "description": "Three options where two are weak on purpose so the third wins.",
+      "why": "The model has already chosen and builds options to justify it.",
+      "fine_when": "Never. Each option should be one a sensible person might pick.",
+      "check": "Write the strongest case for each losing option. If you cannot, the options are straw."
+    }
+  ],
+  "families": [
+    "web",
+    "copy",
+    "ads",
+    "audits",
+    "strategy"
+  ]
+}

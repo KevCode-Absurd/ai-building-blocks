@@ -784,6 +784,105 @@
           "rationale": "The required product_photos input is the actual garment photograph used as image 1, preserving true colour, fabric and fit. The complete method separately requires an authorised pose/scene reference as image 2, real tool access and cost approval; a garment photo or audit report alone is not sufficient to run it."
         }
       ]
+    },
+    "catalogue-items/general/brand-dna-capture/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "method_sha256": "6c6f1c98315a5523454bb0bbfcf953928a535d678ba1d36c9a9bb07df3935196",
+      "inputs": [
+        {
+          "type": "web_page",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "web_page",
+          "quote": "The site's address, plus 1 to 3 more paths that matter for the job",
+          "rationale": "The capture method starts from the live site's address (or a local HTML file) and measures those pages; that is the web_page input."
+        }
+      ]
+    },
+    "catalogue-items/general/brand-fidelity-check/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "method_sha256": "3ff0eda7085df4ed8e5c7ea4818a6143e05fe397d98265f192af72ced57e87a8",
+      "inputs": [
+        {
+          "type": "design_tokens",
+          "required": true
+        },
+        {
+          "type": "web_page",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "design_tokens",
+          "quote": "`context/brand-dna.json` from Brand DNA capture (script or snippet), with its screenshots if you have them.",
+          "rationale": "The capture file holds the brand's measured tokens (colours with shares, fonts per role, radius, buttons) that every check compares against."
+        },
+        {
+          "type": "web_page",
+          "quote": "The candidate page: a local HTML file, or a preview or staging URL.",
+          "rationale": "The page under check is a built page given as a file or URL, which is the web_page type."
+        }
+      ]
+    },
+    "catalogue-items/general/ai-default-patterns/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "method_sha256": "a3ea240a2f3a3e4f097be152f40d83da184ee7a28d330b914f86b42573a845e3",
+      "inputs": [
+        {
+          "type": "copy_draft",
+          "required": false
+        },
+        {
+          "type": "web_page",
+          "required": false
+        }
+      ],
+      "evidence": [
+        {
+          "type": "copy_draft",
+          "quote": "Give it the deliverable, `brand-dna.md` and `patterns.md`.",
+          "rationale": "For a review, the critic reads the finished deliverable, which can be a copy draft, and checks it for the named defaults."
+        },
+        {
+          "type": "web_page",
+          "quote": "Drop any the brand already uses. Check the capture",
+          "rationale": "The brand's live page (through its capture) decides which defaults do not apply; a built page can also be the deliverable under review."
+        }
+      ]
+    },
+    "catalogue-items/general/grounded-job-protocol/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
+      "reviewed_on": "2026-11-09",
+      "method_sha256": "54c7990c2af22b2bc811b6336a02c86d69ead8b09de6df409c118e62a87c6f0c",
+      "inputs": [
+        {
+          "type": "question",
+          "required": true
+        },
+        {
+          "type": "web_page",
+          "required": false
+        }
+      ],
+      "evidence": [
+        {
+          "type": "question",
+          "quote": "Outcome: <what they want to change, in their words>",
+          "rationale": "The job card starts from the client's own request and wanted outcome, which is the question type."
+        },
+        {
+          "type": "web_page",
+          "quote": "The live site with [Brand DNA capture]",
+          "rationale": "When a live site exists, GROUND captures it; the site address is the optional web_page input."
+        }
+      ]
     }
   },
   "handoffs": {

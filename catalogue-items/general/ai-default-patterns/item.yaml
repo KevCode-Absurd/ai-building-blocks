@@ -1,0 +1,22 @@
+slug: ai-default-patterns
+name: AI default patterns
+summary: The looks, layouts and phrases AI falls back to, each with why it reads as default and when it is fine on purpose.
+category: general
+type: skill
+role: check
+job: design
+level: intermediate
+inputs:
+  - {type: copy_draft, required: false}
+  - {type: web_page, required: false}
+outputs:
+  - {type: design_direction, required: false}
+  - {type: audit_report, required: false}
+uses: [brand-dna-capture]
+origin: own
+version: 1.0.0
+added: 2026-11-09
+package_files: all
+credits:
+  - {title: "Improving frontend design through Skills", by: "Anthropic", url: "https://claude.com/resources/articles/improving-frontend-design-through-skills", used: "The idea of distributional convergence and that banning one default moves the model to the next one"}
+  - {title: "Antislop: a framework for eliminating repetitive patterns in language models", by: "Paech et al.", url: "https://arxiv.org/abs/2510.15061", used: "Building the cliché list from data, not taste"}

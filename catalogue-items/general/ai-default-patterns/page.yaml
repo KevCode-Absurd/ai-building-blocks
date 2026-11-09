@@ -1,0 +1,141 @@
+new_slug: ai-default-patterns
+name: "AI default patterns"
+summary: "Give it your brief or draft. You get the AI habits to avoid for your brand, and a check for them."
+job: design-work
+thinking: medium
+thinking_why: "It compares each habit with your brand's real choices before it calls anything a problem."
+
+headline: "Spot the looks and phrases every AI falls back to"
+subhead: A list of 38 habits AI falls back to in pages, copy, ads, audits and plans. Each one says why it looks like AI and when it is fine on purpose. Use it to name what to avoid before work starts, and to check the finished work.
+
+explain: |
+  Left alone, an AI writes the average answer for your category. Pages get the same font, a purple gradient, three rounded cards and "How it works in 3 steps". Copy reaches for the same stock verbs. Ads all share one look.
+
+  Telling your AI "don't use purple" does not fix this. It just moves to the next most common choice. What works is to give it your real brand first, then name the few habits this job is most at risk of, with what to do instead.
+
+  This skill holds the shared list. Each habit has a short name, why it reads as AI, when it is fine (for example, if your buttons really are round), and how to check for it. Before a job, you pick five to eight for your brief. After the job, a fresh chat checks the work for every habit in that kind of work and names where it found each one.
+
+when:
+  - You are writing a brief for a page, ad batch, email or plan and want it to look like your business.
+  - A draft came back looking like every other AI page and you want to say exactly why.
+  - You review AI work for a client and need a fair, specific checklist.
+not_for:
+  - "Choosing a style for a brand-new brand. The list says what to question, not what to pick."
+  - "Grammar or spelling checks."
+
+you_give:
+  - The kind of work, such as a landing page, an ad batch or an audit
+  - Your site capture or brand guide, so habits your brand really uses are not flagged
+  - A draft or finished piece, if you want it checked
+you_get:
+  - Five to eight habits to avoid, each with what to do instead for your brand
+  - For a draft, each habit found, where it is, the evidence and the fix
+  - The habits that were checked and not found
+  - Any checks that could not run
+
+how_to_use:
+  - Open the skill in any chat, or add it to your AI.
+  - Attach your brand capture or brand guide.
+  - Say what you are making. Ask for the habits to avoid, and paste them into your brief.
+  - When the work is done, open a new chat. Give it the work, your brand summary and the list, and ask it to check.
+  - Fix each habit it finds, or write down why you kept it on purpose.
+
+how_it_works:
+  - title: Picks the right habits
+    text: Takes the habits for your kind of work, such as page and copy habits for a landing page.
+  - title: Drops what your brand does
+    text: Checks your capture. If your brand really uses a habit, such as round buttons, it is kept and not flagged.
+  - title: Writes what to do instead
+    text: Each habit to avoid gets one line for your brand, pointing to your real fonts, colours, words or photos.
+  - title: Checks the finished work
+    text: A fresh chat looks for each habit in the work and names where it is, with the evidence and a fix.
+
+output_shape: |
+  DEFAULTS TO AVOID (for the brief)
+  - <id>: <what to do instead, citing your brand capture>
+  (5 to 8 lines; habits your brand really uses are listed as "does not apply")
+
+  REVIEW (for a draft)
+  - <id> | <section, screen size or line> | <evidence> | <fix in your brand's system>
+  Checked and not found: <ids>
+
+  CHECKS MISSED
+  <one line per check that could not run, or none>
+
+example:
+  business: allbirds
+  input: |
+    [the skill]
+
+    We are making a new Allbirds collection landing page for the Dasher NZ.
+    Brand capture: context/brand-dna.md (allbirds.com, 9 Nov 2026).
+    Give me the defaults to avoid for the taste brief.
+  output: |
+    DEFAULTS TO AVOID
+    - web-pill-buttons: does not apply. Allbirds' buttons are fully round; keep them.
+    - web-font-swap: Geograph for headings, body, buttons and menu; buttons and
+      section labels stay UPPERCASE at 12 px.
+    - web-stock-hero: use Allbirds' own product and outdoor photos; photos cover
+      about 60% of the home page, so keep the page image-led.
+    - web-purple-gradient: no gradients; the measured colours are near-black #212121,
+      white and warm grey #ECE9E2.
+    - web-dropped-chrome: keep the full menu and the footer columns (Help, Shop,
+      Company, email sign-up).
+    - copy-ai-verbs: none of the stock AI verbs; Allbirds' own line is "Wildly
+      Comfortable. Super Natural."
+    - copy-any-competitor: lead with materials the site names (wool, tree fiber,
+      sugarcane), not "premium comfort".
+
+    CHECKS MISSED
+    none
+
+tweaks:
+  - what: How many habits
+    how: Five to eight is enough for a brief. More than that and your AI treats it as a list of bans and drifts to the next habit.
+  - what: Your own habits
+    how: If you see the same choice across your AI's work for different clients, add it to the list with all five fields and where you saw it.
+  - what: Kinds of work
+    how: Ask for the copy habits only when you are writing an email, or the audit habits when you are reviewing ad results.
+
+judge:
+  - Every habit to avoid comes with a "do this instead" that points to the brand's real choices.
+  - Habits the brand really uses are marked as not applying, not flagged.
+  - Each finding in a review names where it is and shows the evidence.
+  - The review is done by a chat that did not make the work.
+
+test:
+  - Give it a capture of a brand with round buttons. Round buttons should be marked as not applying.
+  - Check a draft that uses stock AI verbs and a purple gradient. Both should be found with their place on the page.
+  - Ask for defaults for an audit. You should get audit habits, not page habits.
+
+improve:
+  - Keep the list next to your brand capture in your project, so every brief starts from both.
+  - Add habits you see often in your own AI's work, with the evidence.
+  - Pair it with the Grounded job protocol, which tells your AI when to use it.
+
+works_best_with:
+  tools:
+    - {name: "Any chat AI", why: "Reads the list and your brand summary and writes the habits to avoid."}
+    - {name: "A second chat or AI seat", why: "Checks the finished work without having made it."}
+  inputs:
+    - "Your brand capture from Brand DNA capture, or your brand guide"
+    - "The draft or finished work, for a review"
+
+output_sample:
+  input:
+    - What you are making
+    - Your brand capture or brand guide
+    - A draft, for a review (optional)
+  output:
+    - name: Defaults to avoid
+      contains: Five to eight habits, each with what to do instead for your brand.
+    - name: Review
+      contains: Each habit found, with where it is, the evidence and a fix.
+    - name: Checks missed
+      contains: One line for each check that could not run, or none.
+
+terms:
+  - term: Default
+    meaning: The choice an AI makes when nothing tells it otherwise, usually the most common one it has seen.
+  - term: Taste brief
+    meaning: A short note before work starts that says what must stay, what to learn from, and what to avoid.

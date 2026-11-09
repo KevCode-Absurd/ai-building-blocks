@@ -1,0 +1,21 @@
+slug: brand-fidelity-check
+name: Brand fidelity check
+summary: Check a new page against the captured live site. Fonts, colours, buttons, header, footer, placeholders, prices, phone width and the main button.
+category: general
+boards: [ecommerce]
+type: skill
+role: check
+job: page
+level: intermediate
+inputs:
+  - {type: design_tokens, required: true}
+  - {type: web_page, required: true}
+outputs:
+  - {type: audit_report, required: true}
+uses: [brand-dna-capture]
+origin: own
+version: 1.0.0
+added: 2026-11-09
+package_files: all
+credits:
+  - {title: "Original AI Blocks method and scripts", by: "AI Blocks contributors", used: "The eight checks and the side-by-side review. Built from the Gehna landing-page case of 9 Nov 2026."}

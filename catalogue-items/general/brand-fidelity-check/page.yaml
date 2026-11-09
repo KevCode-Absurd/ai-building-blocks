@@ -1,0 +1,166 @@
+new_slug: brand-fidelity-check
+name: "Brand fidelity check"
+summary: "Give it your site capture and a new page. You get a pass or fail on the eight ways pages drift off-brand, with screenshots."
+job: audit-landing-page
+thinking: low
+thinking_why: "The script measures and compares. The judgement is in the fresh review of the screenshots."
+
+headline: "Check a new page still looks like your site before it goes live"
+subhead: Give it the capture of your live site and the new page. It checks fonts, colours and how much of the page each covers, buttons, menu and footer, leftover placeholders, prices, the phone layout and the main button. You get a pass or fail for each, and side-by-side screenshots for a fresh review.
+
+explain: |
+  An AI that builds a page is a poor judge of whether it still looks like your site. It remembers what it meant to do. This check measures what it did.
+
+  It opens the new page at desktop and phone width and reads it the same way your site was captured. Then it compares the two. A page fails if a font was swapped, a new colour covers part of it, or a small accent grew into a big band. It also fails if the button shape changed, the menu or footer lost most of its links, or a placeholder is still showing. Prices and review numbers must be on your site. The page must not scroll sideways on a phone, and the main button must go somewhere.
+
+  It also puts your live page and the new page side by side as pictures. You give those to a fresh chat that did not build the page and ask what a returning customer would notice.
+
+when:
+  - Before you publish a page your AI built or changed for a site that already exists.
+  - When you want proof a redesign kept your fonts, colours, menu and footer.
+  - After a fix, to check the page passes before you hand it over.
+not_for:
+  - "A brand-new brand with no live site to compare with."
+  - "A full accessibility or speed audit. Use a dedicated accessibility checker and PageSpeed for those."
+
+you_give:
+  - The capture of your live site from Brand DNA capture
+  - The new page, as a file on your computer or a preview link
+  - The list of changes you meant to make, if this is an update to an existing page
+you_get:
+  - A pass or fail for each of the eight checks, with the evidence
+  - The colours, fonts and button details side by side for your site and the new page
+  - Side-by-side screenshots of your live page and the new page, desktop and phone
+  - A short prompt for a fresh review of those screenshots
+  - Any checks that could not run
+
+how_to_use:
+  - Capture your live site first with Brand DNA capture.
+  - Add this skill to an AI that can run code, and give it the capture file and the new page.
+  - It runs the check script, which needs Node.js 18 or later and Playwright.
+  - Send each failure back to whoever built the page, then run the check again.
+  - Give only the side-by-side screenshots and the review prompt to a new chat for the fresh review.
+  - No way to run code? Follow the manual checklist in the skill with two browser windows side by side.
+
+how_it_works:
+  - title: Renders the new page
+    text: Opens it at desktop and phone width and measures it with the same snippet that captured your site.
+  - title: Compares type and colour
+    text: Checks each font job and that the files loaded. Flags new colours and any colour whose share of the page jumped or shrank.
+  - title: Compares buttons and chrome
+    text: Checks the main button's shape, case and fill, and how many of your menu and footer links are still there.
+  - title: Hunts placeholders
+    text: Looks for lorem ipsum, TODO, brackets, "to shoot", XX prices and text added by styles, plus stand-in images.
+  - title: Checks facts
+    text: Every price and review number must be on your site, unless the page says its facts are newer.
+  - title: Checks phone and button
+    text: Fails a page that scrolls sideways at 390 px or whose main button is a dead link.
+  - title: Sets up a fresh review
+    text: Saves your page and the new page side by side, with a prompt for a chat that never saw the build.
+
+output_shape: |
+  # Brand fidelity: PASS | FAIL
+  Candidate: <file or link>   Compared with: <live page> (captured <date>)
+
+  ## PASS|FAIL Brand fonts loaded and used for the same roles
+  - <role uses X, the brand uses Y>
+  ## PASS|FAIL|WARN Palette within tolerance, area shares close to the capture
+  ## PASS|FAIL Button radius and style match
+  ## PASS|FAIL Nav and footer present, with item overlap
+  ## PASS|FAIL No placeholder text or stand-in images
+  ## PASS|FAIL|WARN Prices and proof numbers match the capture
+  ## PASS|FAIL Works at 390 px with no horizontal scroll
+  ## PASS|FAIL The primary action is a real link or button
+  ## INFO Section order: brand <...> / candidate <...>
+
+  Side-by-side screenshots and visual-review.md
+  CHECKS MISSED: <one line each, or none>
+
+example:
+  business: gehna
+  input: |
+    [the skill]
+
+    Brand capture: context/brand-dna.json (gehnaindia.com, 9 Nov 2026).
+    New page: redesign/index.html, a redesign of the Filigree Pearl 18K Gold
+    Dangle Earrings product page made in an earlier test.
+  output: |
+    # Brand fidelity: FAIL
+    Compared with: /filigree-pearl-18k-gold-dangle-earrings (captured 9 Nov 2026)
+
+    FAIL Fonts: button text is sentence case, the brand uses UPPERCASE.
+    WARN Palette: charcoal #3E3F43 shrank from 12% to 2.3% of the page
+      (the dark footer is gone).
+    FAIL Buttons: main button corners 10 px, the brand uses 4 px; sentence
+      case, the brand uses UPPERCASE.
+    FAIL Nav and footer: footer keeps 0 of 24 brand links.
+    FAIL Placeholders: "Gehna to supply" chips drawn by the page's styles,
+      for example "length in mm" and "pearl size in mm".
+    FAIL Facts: price 15,207 is not on the site today (the product shows 16,530).
+    PASS Phone width: no sideways scroll at 390 px.
+    PASS Main action: "Add to bag" is a real button.
+    INFO Sections: brand header > product > FAQ > Complete Your Look >
+      You May Also Like > reviews > categories > Customer Favorites > footer.
+      New page drops the category row and adds two bands.
+
+    Side-by-side screenshots: side-by-side-desktop-first.png,
+    side-by-side-mobile-first.png, with visual-review.md.
+
+    CHECKS MISSED
+    none
+
+tweaks:
+  - what: Which live page to compare with
+    how: If you captured several pages, name the one this page replaces or sits beside. Otherwise it picks the page with the same path, or the first one.
+  - what: Colour tolerance
+    how: The default allows small shade differences. Keep it. If you changed a colour on purpose, record why in your decisions file and note it in the report.
+  - what: Newer prices
+    how: If the page uses prices checked after the capture, add a facts date to the page. The check then warns instead of failing, and you confirm the prices by hand.
+
+judge:
+  - Each failure names the exact font, colour, link or line and where it is.
+  - Colour findings give the share of the page for your site and the new page.
+  - Prices and review numbers are compared with the capture and its date.
+  - Screenshots show your live page and the new page side by side at both widths.
+  - The fresh review is done by a chat that did not build the page.
+
+test:
+  - Run it on your own live page against its capture. It should pass every check.
+  - Change the button font on a copy of a page and run it again. The fonts and buttons checks should fail.
+  - Add "TODO" to a copy of the page. The placeholder check should fail and quote the line.
+
+improve:
+  - Capture every page whose prices appear on the new page, so real prices are not flagged.
+  - Keep your list of intended changes next to the page, so the fresh reviewer can tell planned changes from drift.
+  - Run it after every fix, not only at the end.
+
+works_best_with:
+  tools:
+    - {name: "Node.js with Playwright", why: "Runs the check at both screen widths and saves the side-by-side screenshots."}
+    - {name: "A second chat or AI seat", why: "Gives the screenshots a fresh look from someone who did not build the page."}
+  inputs:
+    - "The capture of your live site from Brand DNA capture"
+    - "The list of changes the new page was meant to make"
+
+output_sample:
+  input:
+    - The capture of your live site
+    - The new page, as a file or a preview link
+  prerequisites:
+    - An AI that can run code, to use the scripts that come with this skill (or the manual checklist in any chat)
+    - Brand DNA capture run on your live site
+  output:
+    - name: Fidelity report
+      contains: Pass or fail for each of the eight checks, with the evidence for each.
+    - name: Side-by-side screenshots
+      contains: Your live page and the new page next to each other, at desktop and phone width.
+    - name: Fresh review prompt
+      contains: Questions for a chat that never saw the build, to list every visible difference.
+    - name: Checks missed
+      contains: One line for each check that could not run, or none.
+
+terms:
+  - term: Placeholder
+    meaning: Text or a box that stands in for something missing, such as "TODO" or "photo to shoot". It should never reach a live page.
+  - term: Fresh review
+    meaning: A check by a chat or person who did not make the page and has not seen the plan.

@@ -1,0 +1,168 @@
+new_slug: brand-dna-capture
+name: "Brand DNA capture"
+summary: "Give it your website. You get your real colours, fonts, buttons, page order, voice and prices, measured, for your AI to follow."
+job: brand-file
+thinking: low
+thinking_why: "It measures a page and writes down what it found. The script does the hard part."
+
+headline: "Capture your site's look and facts before your AI designs anything"
+subhead: Give it your website and the pages that matter. It measures the colours and how much of the page each one covers, the fonts for each job, the buttons, the menu and footer, the order of sections, your own words and today's prices. You get a file and screenshots your AI must follow.
+
+explain: |
+  When your AI makes a page or an ad without looking at your site, it uses its own favourite look. You get its fonts, its rounded cards and its cream "premium" bands, and a page your customers would not know as yours.
+
+  This skill measures your live site first. It records each colour with how much of the page it covers, so a small accent stays small. It records the font, size and case for headings, body text, buttons and the menu. It lists your menu and footer links, the order of your sections, how many photos you use, five to ten lines in your own words, and your prices, offers and review counts with the time they were read.
+
+  It works three ways. A script opens the pages at desktop and phone width and saves screenshots. A short piece of code can run in any browser. Or you can do it by hand from screenshots. Every later step has to point back to this file for each choice it makes.
+
+when:
+  - Before your AI designs or rewrites a page for a business that already has a website.
+  - Before ads, emails or copy that must look and sound like your brand.
+  - When an AI-made page came back looking nothing like your site and you want to see why.
+not_for:
+  - "A new brand with no website yet. Use your brand guide and the sites you admire instead."
+  - "Copying a competitor's design. Capture your own site; study theirs as a reference only."
+
+you_give:
+  - Your website address
+  - One to three more pages that matter, such as a product page or the page you want changed
+  - A computer that can run Node.js with Playwright, or any web browser, or your own screenshots
+you_get:
+  - Your colours, each with how much of the page it covers and what it is used for
+  - Your fonts for headings, body text, buttons and menu, and whether each one loaded
+  - Your button shapes, corner sizes, menu, footer columns and section order
+  - Five to ten lines in your own words, and your prices, offers and review counts with the date
+  - Desktop and phone screenshots of each page
+  - A short summary file your AI reads first
+
+how_to_use:
+  - Add the skill to an AI that can run code, or open it in any chat.
+  - Give it your website address and the pages that matter for the job.
+  - If your AI can run code, it runs the capture script. It needs Node.js 18 or later and Playwright.
+  - If not, open each page in your browser, paste the snippet into the console, and save what it returns.
+  - Read the summary it writes. Fix anything that looks wrong, then start the real job from that file.
+
+how_it_works:
+  - title: Opens your real pages
+    text: Loads each page at desktop and phone width, waits for it, closes pop-ups and scrolls so all photos load. It blocks tracking tags and never logs in or clicks buy.
+  - title: Measures colour by area
+    text: Works out how much of the page each colour covers, with photos counted apart, so a badge colour is not mistaken for a main colour.
+  - title: Reads the type and buttons
+    text: Records font, weight, size and case for each job, which font files loaded, button shapes and corner sizes.
+  - title: Maps the page
+    text: Lists the menu, the footer columns and the order of sections with their headings, and counts the photos.
+  - title: Keeps your words and facts
+    text: Saves real lines from your site and today's prices, offers, delivery, returns and review counts, each with the time it was read.
+  - title: Writes the summary
+    text: Drafts a short file with the numbers, and leaves a few lines for your AI to say what must stay and what is missing.
+
+output_shape: |
+  context/brand-dna.json   colours with area share and job, fonts per role, buttons, radius,
+                           menu, footer, sections per page, images, voice lines, dated facts
+  context/screenshots/     <page>-desktop-first, -desktop-full, -mobile-first, -mobile-full
+  context/brand-dna.md     # Brand DNA: <business>
+                           Colour: <hex> <share> <job> ...
+                           Type: headings <...>; body <...>; buttons <...>
+                           Shape: <radius>, primary button <fill, text, corners, case>
+                           Chrome: menu <...>; footer <columns>
+                           Section order: <kind "heading"> > ...
+                           Voice: "<line>" ...   Facts (captured <time>): <...>
+                           Codes to keep / Must reuse / Gaps
+  CHECKS MISSED            <one line per check that did not run, or none>
+
+example:
+  business: gehna
+  input: |
+    [the skill]
+
+    Capture https://www.gehnaindia.com and the product page
+    /filigree-pearl-18k-gold-dangle-earrings. Then write brand-dna.md.
+  output: |
+    # Brand DNA: Gehna
+    Measured from https://www.gehnaindia.com on 9 Nov 2026 (script). Pages: /, one product page.
+
+    Colour (home, by area): white #FFFFFF 42%, charcoal #3E3F43 12% (text and
+    footer), wine #702E3E 13% (reviews band, one button), marigold #F6B74D 0.4%
+    (main buttons, links). Photos cover 31% of the page.
+    Type: headings Nanum Myeongjo, 30 px, very heavy; body Lato 400 14 px;
+    buttons Lato UPPERCASE 12 to 14 px with letter spacing; product title
+    Nanum Myeongjo 800 30 px. Both fonts load from the site.
+    Shape: buttons square (0 to 4 px); category chips round; no shadows.
+    Primary button: marigold fill, UPPERCASE ("ADD TO CART", "SHOP NEW ARRIVALS").
+    Chrome: menu button, logo, search, bag; dark footer with 6 columns
+    (Gold Products, Silver Products, Explore, About, Help, contact).
+    Section order (home): header > category chips > hero banner > Best of Gehna >
+    Why Choose Gehna > New Arrivals > Shop by Gemstone > What Our Customers Say >
+    Visit Us In Store > footer. About 10 images per 1000 px.
+    Voice: "Every piece is BIS certified for purity & authenticity",
+    "Hassle-free 7-day return & exchange policy". Button words: SHOP NEW ARRIVALS.
+    Facts (captured 9 Nov 2026, 06:26 UTC): product page price 16,530 rupees;
+    30,000+ orders delivered; 4.8/5 from 519 Google reviews; 7-day return and exchange.
+
+    Codes to keep: UPPERCASE Lato buttons on marigold; white page with charcoal
+    text; wine only for the reviews band and badges.
+    Must reuse: menu bar, category chips, product cards, dark footer.
+    Gaps: the full menu sits behind the menu button; open it and capture again.
+
+    CHECKS MISSED
+    none
+
+tweaks:
+  - what: Which pages
+    how: Add the pages your job touches, such as one product page, one collection and the cart. Each page gets its own section list and screenshots.
+  - what: Phone only or desktop only
+    how: The script always does both widths. If your buyers are mostly on phones, say so in the summary and read the phone numbers first.
+  - what: A page behind a pop-up
+    how: Close the pop-up and run again, or use the snippet in your own browser after you close it.
+  - what: A local page
+    how: Point the script at an HTML file on your computer instead of an address. It works the same way.
+
+judge:
+  - Every colour in the summary has a share of the page and a job, not just a hex code.
+  - Fonts are named for each job (headings, body, buttons, menu), with whether they loaded.
+  - The menu, footer and section order match what you see on the site.
+  - Voice lines are copied word for word from the site.
+  - Every price, offer and review count has the date and time it was read.
+
+test:
+  - Open your site next to the summary. The biggest colour, the button shape and the footer columns should match what you see.
+  - Find a small accent colour on your site, such as a sale badge. Its share in the file should be small.
+  - Change a price on a test page, capture again and check that the new price and time show up.
+
+improve:
+  - Capture again before any job that uses prices or offers, so the facts are current.
+  - Add your most important product page and your cart to the capture, not just the home page.
+  - Keep the summary short and put it first in your project, so your AI reads it before anything else.
+  - Pair it with the Brand fidelity check, which compares a new page with this capture.
+
+works_best_with:
+  tools:
+    - {name: "Node.js with Playwright", why: "Runs the capture script at both screen widths and saves the screenshots."}
+    - {name: "Claude in Chrome or another browser tool", why: "Runs the snippet on your live pages when the script cannot run."}
+  inputs:
+    - "Your website address and two or three pages that matter for the job"
+    - "Your brand guide, if you have one, to compare with what the site really does"
+
+output_sample:
+  input:
+    - Your website address
+    - One to three more pages that matter for the job
+  prerequisites:
+    - An AI that can run code, to use the scripts that come with this skill (or any browser for the snippet)
+  output:
+    - name: Brand DNA file
+      contains: Colours with their share of the page, fonts per job, buttons, corners, menu, footer, sections, images, your own lines and dated facts.
+    - name: Screenshots
+      contains: The first screen and the full page of each page, at desktop and phone width.
+    - name: Summary
+      contains: A short file with the numbers and the codes to keep, which every later step must point to.
+    - name: Checks missed
+      contains: One line for each check that did not run, or none.
+
+terms:
+  - term: Share of page area
+    meaning: How much of the page a colour covers. A colour can be in the logo and still cover almost none of the page.
+  - term: Snippet
+    meaning: A short piece of code you paste into your browser's console. It reads the page and sends nothing anywhere.
+  - term: Console
+    meaning: The developer tools panel in your browser. In Chrome, right-click the page, choose Inspect, then Console.

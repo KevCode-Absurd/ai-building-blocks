@@ -1,0 +1,21 @@
+slug: brand-dna-capture
+name: Brand DNA capture
+summary: Measure a live site's colours, fonts, buttons, layout, voice and dated prices into a file every later step must cite.
+category: general
+boards: [ecommerce]
+type: skill
+role: source
+job: brand
+level: intermediate
+inputs:
+  - {type: web_page, required: true}
+outputs:
+  - {type: design_tokens, required: true}
+  - {type: store_capture, required: true}
+uses: []
+origin: own
+version: 1.0.0
+added: 2026-11-09
+package_files: all
+credits:
+  - {title: "Original AI Blocks method and scripts", by: "AI Blocks contributors", used: "The capture snippet, the Playwright script and the field guide. Built from the Gehna landing-page case of 9 Nov 2026."}

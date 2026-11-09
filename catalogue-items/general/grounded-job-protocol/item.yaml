@@ -1,0 +1,21 @@
+slug: grounded-job-protocol
+name: Grounded job protocol
+summary: The seven steps every substantial job runs, from framing and capturing the real business to an independent check and a decision record.
+category: general
+type: skill
+role: plan
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: web_page, required: false}
+outputs:
+  - {type: plan, required: true}
+uses: [brand-dna-capture, ai-default-patterns, brand-fidelity-check]
+origin: own
+version: 1.0.0
+added: 2026-11-09
+package_files: all
+credits:
+  - {title: "Innovative testing and website redesigns", by: "CXL", url: "https://cxl.com/blog/website-redesign-higher-conversions-tread-lightly/", used: "Patch mode as the default for a live page"}
+  - {title: "Fresh vs. familiar: how aggressive redesigns hurt users", by: "Nielsen Norman Group", url: "https://www.nngroup.com/articles/fresh-vs-familiar-aggressive-redesign/", used: "Why existing assets are improved before they are replaced"}

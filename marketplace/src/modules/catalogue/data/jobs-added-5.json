@@ -230,7 +230,62 @@
         "note": "YunoJuno's freelancer rate guide lists mobile engineers at an average of $76 an hour, about £463 a day.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/mobile-app-developer"
       }
-    ]
+    ],
+    "family": "code",
+    "context_requirements": [
+      {
+        "id": "existing_code",
+        "label": "The code or repo it must fit",
+        "required": true,
+        "how": "Level 1 (read) access to the repo or the relevant files. Note the framework, versions, naming, style and test tool before writing."
+      },
+      {
+        "id": "environment",
+        "label": "Where it runs",
+        "required": false,
+        "how": "Hosting, runtime and versions, and any limits on packages or browsers."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every package appears in an install command or manifest with a version or range; a 'names to confirm' table lists any function, hook, setting or endpoint the draft relies on from outside packages; table, field, route and file names come from the brief or are marked placeholders; no real key, token…"
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 15,
+        "test": "It does the task asked, end to end, with setup and run steps. Here: A file tree and every file in full, the language, framework and package versions, setup and run commands, tests or a manual test script with expected results, the names to confirm in the docs, and notes on limits and what to change for your setup."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "It runs, handles bad input and failure, and uses only real APIs and packages. For this job: A file tree lists every file and each file is shown in full, with no '...', 'TODO' or 'add your logic here'; numbered steps cover install, configuration with placeholder values and the run command; at least one automated test or a manual test script gives inputs and expected results."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches the client's existing code, versions, naming, style and tools. For this job: Each requirement and edge case in the brief maps to a named function, component, route or block in the draft; the draft states the language, framework and versions, and they match the brief or are labelled as the chosen default where the brief left them open."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "The next person can read, change and test it safely. For this job: Each file opens with a one-line comment on what it does; main blocks have a comment; setup steps are one action each; any term outside the buyer's stack is explained the first time."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, data and limits, not a generic sample."
+      },
+      {
+        "criterion": "The feature handles bad input, failures and empty states safely",
+        "weight": 15,
+        "test": "The code handles invalid or missing input, a failed network, file or device call, and the empty or loading state where there is a screen; user input is checked before use; secrets come from environment variables or a settings store; anything that deletes, sends or charges has a confirm step or test mode."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "api-integration-code",
@@ -425,7 +480,67 @@
         "note": "YunoJuno's freelancer rate guide lists back-end engineers at an average of $61 an hour, about £368 a day.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/backend-developer"
       }
-    ]
+    ],
+    "family": "code",
+    "context_requirements": [
+      {
+        "id": "existing_code",
+        "label": "The code or repo it must fit",
+        "required": true,
+        "how": "Level 1 (read) access to the repo or the relevant files. Note the framework, versions, naming, style and test tool before writing."
+      },
+      {
+        "id": "environment",
+        "label": "Where it runs",
+        "required": false,
+        "how": "Hosting, runtime and versions, and any limits on packages or browsers."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every endpoint, event name, header and field either appears in the brief's payloads or flow, or is listed in a 'names to confirm in the provider's docs' table with the SDK or API version; keys are read from environment variable placeholders; no live key, token, password or card number appears."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the task asked, end to end, with setup and run steps. Here: Complete code for the integration with signature checks, retries, duplicate protection and logging; keys as environment variable placeholders; a local test using the provider's test mode or sample payloads; a table of endpoint and field names to confirm; and a go-live checklist you carry out yourself."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "It runs, handles bad input and failure, and uses only real APIs and packages. For this job: Every file is shown in full with install and run commands and the language version; a local test uses the provider's test mode, a CLI that replays events, or the sample payloads from the brief, with the expected log or result; no '...' or placeholder logic."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches the client's existing code, versions, naming, style and tools."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "The next person can read, change and test it safely. For this job: A short summary of how data flows opens the draft; setup steps are numbered with one action each; each environment variable is listed by name with where to find its value; jargon such as idempotency is explained once."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, data and limits, not a generic sample."
+      },
+      {
+        "criterion": "The code carries out each step of the flow in the brief",
+        "weight": 10,
+        "test": "Each step in the brief's flow maps to a named function or handler; the services and any API or SDK versions in the brief are used and stated; the trigger and the 'done' result match the brief."
+      },
+      {
+        "criterion": "Signatures, retries and duplicates are handled, and nothing goes live by…",
+        "weight": 10,
+        "test": "Webhook code checks the signature or shared secret before acting; a stored event or request id stops the same event running twice; failed calls retry a set number of times, then log and alert; payment code uses test keys and the provider's hosted page or element to collect card details; going live is left to the buyer as a checklist."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "automated-tests-for-code",
@@ -623,7 +738,66 @@
         "note": "Postman's 2025 State of the API report: testing is the most common API activity (81%), ahead of developing (73%) and documenting (58%).",
         "url": "https://www.postman.com/state-of-api/"
       }
-    ]
+    ],
+    "family": "code",
+    "context_requirements": [
+      {
+        "id": "existing_code",
+        "label": "The code or repo it must fit",
+        "required": true,
+        "how": "Level 1 (read) access to the repo or the relevant files. Note the framework, versions, naming, style and test tool before writing."
+      },
+      {
+        "id": "environment",
+        "label": "Where it runs",
+        "required": false,
+        "how": "Hosting, runtime and versions, and any limits on packages or browsers."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the task asked, end to end, with setup and run steps. Here: A table of cases mapped to the behaviour each checks, complete test files for your tool (such as pytest, Jest, Vitest, PHPUnit, Playwright or Cypress), fixtures and mocks, the commands to run them, the expected result, and the gaps that are still not covered. Also: Each test name says the behaviour in plain words; one behaviour…"
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "It runs, handles bad input and failure, and uses only real APIs and packages. For this job: A case table maps each rule or example in the brief to at least one named test; each main function or flow has at least one error case and one edge case (empty, boundary or repeated input); known bugs from the brief have a test labelled as expected to fail until fixed."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches the client's existing code, versions, naming, style and tools."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "The next person can read, change and test it safely. For this job: The draft opens with five lines or fewer on what the tests cover; a 'not covered' list names the remaining gaps; jargon such as fixture or mock is explained once."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, data and limits, not a generic sample."
+      },
+      {
+        "criterion": "Tests call the buyer's real functions, routes and page elements",
+        "weight": 10,
+        "test": "Every function, class, route, selector and file path a test uses appears in the pasted code or brief, or is a marked placeholder; no test asserts behaviour the brief or code does not support; mocks replace only outside services and each mock is named."
+      },
+      {
+        "criterion": "Test files are complete and run with one stated command",
+        "weight": 10,
+        "test": "The test tool and version are named; each test file is complete with imports and setup; install and run commands are given; the expected outcome (tests passing and any expected failures) is stated; browser tests point only at local or staging URLs."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "bug-diagnosis-and-fix",
@@ -819,7 +993,67 @@
         "note": "Stack Overflow's 2025 Developer Survey: more developers distrust the accuracy of AI tools (46%) than trust it (33%).",
         "url": "https://survey.stackoverflow.co/2025/ai"
       }
-    ]
+    ],
+    "family": "code",
+    "context_requirements": [
+      {
+        "id": "existing_code",
+        "label": "The code or repo it must fit",
+        "required": true,
+        "how": "Level 1 (read) access to the repo or the relevant files. Note the framework, versions, naming, style and test tool before writing."
+      },
+      {
+        "id": "environment",
+        "label": "Where it runs",
+        "required": false,
+        "how": "Hosting, runtime and versions, and any limits on packages or browsers."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "The draft quotes the key line of the error or log from the brief and says what it means in plain words; it names the file and line, or function, where the problem starts, as shown in the pasted code or trace."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the task asked, end to end, with setup and run steps. Here: What the error means in plain words, likely causes ranked with the evidence for each, the corrected code in full for each changed function or file with changed lines marked, a test or steps that show the bug and confirm the fix, and what to log or check next if the first fix does not work."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "It runs, handles bad input and failure, and uses only real APIs and packages. For this job: A test or numbered steps with input and expected result would fail before the fix and pass after it; a fallback section says what to log or check next if the fix does not work."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches the client's existing code, versions, naming, style and tools."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "The next person can read, change and test it safely. For this job: A summary of three lines or fewer opens the draft; any step that deletes data, resets a database, clears a cache in production or force-pushes has a backup step first; jargon is explained once."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, data and limits, not a generic sample."
+      },
+      {
+        "criterion": "Likely causes come from the evidence the buyer sent",
+        "weight": 10,
+        "test": "Each likely cause cites a line of the pasted code, log or brief; causes are ranked from most to least likely; a cause that depends on code, settings or versions not in the brief is listed as a question to check; the draft does not claim the fix was run."
+      },
+      {
+        "criterion": "The fix is complete code that drops in",
+        "weight": 10,
+        "test": "Each changed function or file is shown in full with changed lines marked by comments; the language and version are stated; no new library is added unless named with a version and install command; the fix addresses the top-ranked cause."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "id": "refactor-one-file",
@@ -1009,7 +1243,66 @@
         "note": "YunoJuno's freelancer rate guide lists software engineers at an average of $88 an hour, about £531 a day.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/software-engineer"
       }
-    ]
+    ],
+    "family": "code",
+    "context_requirements": [
+      {
+        "id": "existing_code",
+        "label": "The code or repo it must fit",
+        "required": true,
+        "how": "Level 1 (read) access to the repo or the relevant files. Note the framework, versions, naming, style and test tool before writing."
+      },
+      {
+        "id": "environment",
+        "label": "Where it runs",
+        "required": false,
+        "how": "Hosting, runtime and versions, and any limits on packages or browsers."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the task asked, end to end, with setup and run steps. Here: The refactored file or files in full, a table mapping old functions to new ones, tests that pin the current behaviour, the order to apply the change in small commits, and a list of anything that now behaves differently on purpose. Also: Tests, or a script with inputs and expected outputs, are given that should pass on both the…"
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "It runs, handles bad input and failure, and uses only real APIs and packages. For this job: Each new or changed file is shown in full with no '...' or omitted sections; the file tree and imports match; the language and version are stated; no new dependency is added unless named with a version and install command."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches the client's existing code, versions, naming, style and tools."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "The next person can read, change and test it safely. For this job: An old-to-new mapping table is given; long functions are split into named functions; names say what they hold or do; a before-and-after summary uses counts taken from the two versions of the code."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, data and limits, not a generic sample."
+      },
+      {
+        "criterion": "The refactor is the kind chosen and touches only the pasted code",
+        "weight": 10,
+        "test": "The draft states the refactor goal from the brief; every change belongs to that goal; nothing outside the pasted file or module is rewritten; each pain point in the brief is answered or listed as out of scope."
+      },
+      {
+        "criterion": "Behaviour stays the same unless the brief asks otherwise",
+        "weight": 10,
+        "test": "Every public function, export, input and output of the original still exists with the same name and result, or appears in a 'behaviour changes' table with the reason; each 'must not change' item from the brief is confirmed by name."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "id": "database-schema-and-migration",
@@ -1213,7 +1506,57 @@
         "note": "YunoJuno's freelancer rate guide lists back-end engineers at an average of $61 an hour, about £368 a day.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/backend-developer"
       }
-    ]
+    ],
+    "family": "code",
+    "context_requirements": [
+      {
+        "id": "existing_code",
+        "label": "The code or repo it must fit",
+        "required": true,
+        "how": "Level 1 (read) access to the repo or the relevant files. Note the framework, versions, naming, style and test tool before writing."
+      },
+      {
+        "id": "environment",
+        "label": "Where it runs",
+        "required": false,
+        "how": "Hosting, runtime and versions, and any limits on packages or browsers."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every table and column described as existing appears in the brief's schema; new ones are labelled new; each index cites the query or EXPLAIN line it helps; no row counts, timings or speed-ups are claimed beyond what the brief gives."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 30,
+        "test": "It does the task asked, end to end, with setup and run steps. Here: SQL or ORM files in full for your database and version, a text diagram of tables and links, up and down migrations, seed data where asked, an index plan tied to your queries or EXPLAIN output, checks to run before and after, and a backup and rollback step for any change to live data."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "It runs, handles bad input and failure, and uses only real APIs and packages. For this job: Files are complete and use syntax for the named database and version; each migration has an up and a down, or says why it cannot be undone; constraint, index and foreign key names are given; ORM code names the ORM version."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches the client's existing code, versions, naming, style and tools. For this job: Each requirement and data question in the brief maps to a table, column, constraint, index or query in the draft; unique and required rules from the brief appear as constraints."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "The next person can read, change and test it safely. For this job: A text diagram shows tables and links; each table has a one-line purpose; terms such as foreign key or index are explained once in plain words."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, data and limits, not a generic sample. For this job: Any step that drops, renames or rewrites a column or table has a backup step, a check query before and after, and a rollback; for large tables (from the brief's row counts) the draft notes locking and uses a lower-lock method where the database supports one."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "ci-docker-infra-config",
@@ -1410,7 +1753,67 @@
         "note": "YunoJuno's freelancer rate guide lists DevOps engineers at an average of $100 an hour, about £607 a day.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/devops-engineer"
       }
-    ]
+    ],
+    "family": "code",
+    "context_requirements": [
+      {
+        "id": "existing_code",
+        "label": "The code or repo it must fit",
+        "required": true,
+        "how": "Level 1 (read) access to the repo or the relevant files. Note the framework, versions, naming, style and test tool before writing."
+      },
+      {
+        "id": "environment",
+        "label": "Where it runs",
+        "required": false,
+        "how": "Hosting, runtime and versions, and any limits on packages or browsers."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every base image, CI action, provider and resource type is named with a version or tag (no 'latest' unless the brief asks); app names, ports, paths and commands come from the brief or are marked placeholders; secrets are referenced by name only and never given a value."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the task asked, end to end, with setup and run steps. Here: Each config file in full with comments and where it goes, commands to check it locally (such as docker build, a lint step or terraform plan), secrets as named placeholders, what each part may cost or risk, and how to roll back or remove it."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "It runs, handles bad input and failure, and uses only real APIs and packages. For this job: Containers run as a non-root user where the image allows; versions are pinned; no secret is baked into an image, file or log; CI permissions are the least needed; resources that cost money or are public are flagged with the reason; a rollback or remove step is given."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches the client's existing code, versions, naming, style and tools."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "The next person can read, change and test it safely. For this job: Each file has a header comment and each block a short comment; a summary of five lines or fewer opens the draft; terms such as build stage or state file are explained once."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, data and limits, not a generic sample."
+      },
+      {
+        "criterion": "The config does what the brief asks for the target named",
+        "weight": 10,
+        "test": "Each build, test, deploy or serve step in the brief maps to a stage, job, resource or block; the target platform and versions match the brief; any error from the brief is explained and fixed."
+      },
+      {
+        "criterion": "Files are complete and can be checked before anything goes live",
+        "weight": 10,
+        "test": "Each file is shown in full and says where it goes; commands to validate it locally are given (for example docker build, docker compose config, terraform validate and plan, or the linter) with what success looks like; no step changes live infrastructure without a plan or preview step first."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "readme-and-developer-docs",
@@ -1593,7 +1996,66 @@
         "note": "Postman's 2025 State of the API report: 58% of respondents document APIs as part of their work, after testing and developing.",
         "url": "https://www.postman.com/state-of-api/"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: Markdown docs or commented code built from your files: what the project does, how to install, configure and run it, the commands that exist, environment variables by name, folder layout, how to test and deploy, known problems, and open questions where your material is silent."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents. For this job: A README opens with one paragraph on what the project does and for whom; docstrings use the language's usual style (for example Google style for Python, JSDoc, PHPDoc or XML docs for C#) and leave the code itself unchanged; a decision record has context, options, decision and consequences; a WordPress…"
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Sentences are short; each section has one job; jargon is explained once; headings work as a table of contents."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "The docs are the piece chosen, for the reader named",
+        "weight": 10,
+        "test": "The draft is the document type chosen in the brief; it is written for the reader the brief names; every section the brief asks for is present."
+      },
+      {
+        "criterion": "Every command, setting and file named comes from the material",
+        "weight": 10,
+        "test": "Each command, script name, environment variable, port, path and version in the docs appears in the material; anything needed but not shown is marked [to confirm] or listed under open questions; no feature is described that the material does not show; no secret value appears."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "upgrade-or-migration-plan",
@@ -1774,7 +2236,78 @@
         "note": "Node.js release page: most past major versions are end of life, and it says production apps should only use Active LTS or Maintenance LTS releases.",
         "url": "https://nodejs.org/en/about/previous-releases"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook. For this job: Each breaking change either cites a file, line or dependency from the brief or is listed under 'check in your code' with a search term to find it; before-and-after code uses only code from the brief; dates and version facts not in the brief are marked 'confirm in the…"
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: Your current and target versions, the breaking changes that touch your pasted code with before-and-after code, an ordered plan in small steps with a check after each, test and rollback steps, an effort size for each step, the top risks, and what to confirm in the official upgrade guide."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week. For this job: Steps are numbered and each is small enough for one commit or deploy; each ends with a check (tests, build or smoke test); a branch, backup and rollback step comes before production; a jump of more than one major version goes through the versions in between or explains why not."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read. For this job: A summary of five lines or fewer opens the draft with the total effort range; technical terms are explained once; code changes sit under the step they belong to."
+      },
+      {
+        "criterion": "The plan covers the move and versions in the brief",
+        "weight": 6,
+        "test": "The draft states the from and to versions from the brief; every dependency in the pasted file that needs a change is listed with its current version and target version or 'check'."
+      },
+      {
+        "criterion": "Effort and risk are honest",
+        "weight": 6,
+        "test": "Each step has an effort size (small, medium, large); at least three risks are named with a way to reduce each; the plan never promises zero downtime or a fixed finish date."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "id": "regex-and-text-parser",
@@ -1962,7 +2495,66 @@
         "note": "Microsoft added REGEXTEST, REGEXEXTRACT and REGEXREPLACE to Excel, describing regex as commonly used for string searching and text parsing.",
         "url": "https://techcommunity.microsoft.com/blog/microsoft365insiderblog/new-regular-expression-regex-functions-in-excel/4226334"
       }
-    ]
+    ],
+    "family": "code",
+    "context_requirements": [
+      {
+        "id": "existing_code",
+        "label": "The code or repo it must fit",
+        "required": true,
+        "how": "Level 1 (read) access to the repo or the relevant files. Note the framework, versions, naming, style and test tool before writing."
+      },
+      {
+        "id": "environment",
+        "label": "Where it runs",
+        "required": false,
+        "how": "Hosting, runtime and versions, and any limits on packages or browsers."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the task asked, end to end, with setup and run steps. Here: The pattern or parser in your flavour and language, a part-by-part explanation, a test table of strings that should and should not match with the result for each, a complete code snippet that uses it, and the edge cases it will miss."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "It runs, handles bad input and failure, and uses only real APIs and packages. For this job: A test table lists every example from the brief (should and should not match) plus at least five edge cases, each with the expected result; results are consistent with the pattern as written; any example the pattern gets wrong is flagged, not hidden."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches the client's existing code, versions, naming, style and tools. For this job: The draft restates the rule from the brief; each part of the rule maps to a part of the pattern or parser; a fix to an existing pattern says what was wrong with it."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "The next person can read, change and test it safely. For this job: A table or list explains each token or group in plain words; a short note says how to change the pattern if the rule changes."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, data and limits, not a generic sample."
+      },
+      {
+        "criterion": "The pattern works where it will run",
+        "weight": 10,
+        "test": "The draft names the flavour; it uses only syntax that flavour supports and escapes characters as that language needs inside a string; spreadsheet answers use real function names for the named tool; the code snippet is complete with imports and a run command."
+      },
+      {
+        "criterion": "Limits and risks are stated",
+        "weight": 10,
+        "test": "Known misses are listed; nested repeats that can hang on long input are avoided or flagged; validation advice says a pattern alone does not make input safe for SQL or HTML and names the safe method (parameterised queries, escaping)."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "security-hardening-code",
@@ -2135,7 +2727,66 @@
         "note": "OWASP calls its Top 10 (2025 edition) the reference standard for the most critical web application security risks and a standard awareness document for developers.",
         "url": "https://owasp.org/www-project-top-ten/"
       }
-    ]
+    ],
+    "family": "code",
+    "context_requirements": [
+      {
+        "id": "existing_code",
+        "label": "The code or repo it must fit",
+        "required": true,
+        "how": "Level 1 (read) access to the repo or the relevant files. Note the framework, versions, naming, style and test tool before writing."
+      },
+      {
+        "id": "environment",
+        "label": "Where it runs",
+        "required": false,
+        "how": "Hosting, runtime and versions, and any limits on packages or browsers."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the task asked, end to end, with setup and run steps. Here: The code or config in full for your stack, what each change protects against in plain words, tests that show each protection works against your local or staging app, a rollout that starts in report-only or soft mode where possible, and a list of what this does not cover."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "It runs, handles bad input and failure, and uses only real APIs and packages. For this job: Full code or config is given for each change with the language and versions; each change has a test (for example a request that should now be rejected, or a header check) with the expected result, run against local or staging only."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches the client's existing code, versions, naming, style and tools."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "The next person can read, change and test it safely. For this job: Each change says in one or two sentences what it protects against; a 'not covered' list is present; the draft never says the app is secure, compliant or certified."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, data and limits, not a generic sample."
+      },
+      {
+        "criterion": "The changes cover the piece chosen for this app",
+        "weight": 10,
+        "test": "Each change belongs to the piece chosen and touches code or config from the brief; each 'must keep working' item is checked by name; each finding pasted in the brief is fixed or explained."
+      },
+      {
+        "criterion": "Every change points to the buyer's code or findings",
+        "weight": 10,
+        "test": "Each change cites a line, setting or dependency from the pasted material; dependency fixes use package names and versions from the brief and say to confirm the patched version in the advisory; no weakness is claimed that the material does not show."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "accessible-code-fixes",
@@ -2317,7 +2968,67 @@
         "note": "WebAIM Million 2026: 95.9% of the top one million home pages had detectable WCAG 2 failures, led by low-contrast text, missing alt text and missing form labels.",
         "url": "https://webaim.org/projects/million/"
       }
-    ]
+    ],
+    "family": "code",
+    "context_requirements": [
+      {
+        "id": "existing_code",
+        "label": "The code or repo it must fit",
+        "required": true,
+        "how": "Level 1 (read) access to the repo or the relevant files. Note the framework, versions, naming, style and test tool before writing."
+      },
+      {
+        "id": "environment",
+        "label": "Where it runs",
+        "required": false,
+        "how": "Hosting, runtime and versions, and any limits on packages or browsers."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Each change is explained in one plain sentence; jargon such as focus trap is explained once; the draft never says the site is compliant or certified."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the task asked, end to end, with setup and run steps. Here: The fixed code in full, a table of each change with the WCAG 2.2 success criterion it meets, a manual test script for keyboard and screen reader checks, an automated check you can add (such as axe), and anything that needs a design or content decision."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "It runs, handles bad input and failure, and uses only real APIs and packages. For this job: Each change row names the element from the pasted code and a WCAG success criterion by number and name (for example 1.4.3 Contrast (Minimum)); contrast fixes give old and new colour values with the ratio; no issue is listed that is not in the pasted code."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches the client's existing code, versions, naming, style and tools."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "The next person can read, change and test it safely."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, data and limits, not a generic sample. For this job: Each problem in the brief and each issue the draft lists has a fix in the code; the piece chosen in the brief is covered; anything left needs a design or content decision and is listed as such."
+      },
+      {
+        "criterion": "The fixed code is complete and keeps working",
+        "weight": 10,
+        "test": "Fixed files are shown in full with no gaps; existing behaviour, props and class names stay unless the change table says why; native HTML elements are used before ARIA; no overlay widget is suggested."
+      },
+      {
+        "criterion": "The buyer can check each fix",
+        "weight": 10,
+        "test": "A manual test script gives keyboard steps (Tab, Shift+Tab, Enter, Space, Escape and arrow keys where used) and screen reader checks with the expected result; at least one automated check is given with the tool and version."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "id": "ai-feature-code",
@@ -2505,6 +3216,66 @@
         "note": "Stack Overflow's 2025 Developer Survey (49,000+ responses): 84% of developers use or plan to use AI tools in their work.",
         "url": "https://survey.stackoverflow.co/2025/"
       }
-    ]
+    ],
+    "family": "code",
+    "context_requirements": [
+      {
+        "id": "existing_code",
+        "label": "The code or repo it must fit",
+        "required": true,
+        "how": "Level 1 (read) access to the repo or the relevant files. Note the framework, versions, naming, style and test tool before writing."
+      },
+      {
+        "id": "environment",
+        "label": "Where it runs",
+        "required": false,
+        "how": "Hosting, runtime and versions, and any limits on packages or browsers."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "A short summary opens the draft; the cost note uses the brief's volume or a formula with placeholders, not invented prices; how to edit the prompt and rerun the tests is explained in numbered steps."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the task asked, end to end, with setup and run steps. Here: Complete code with the prompt in its own file or constant, the model name as a setting, output checked against a schema, timeouts, retries and a spending cap, logging without personal data, a small test set with expected results and a script to run it, and run steps."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "It runs, handles bad input and failure, and uses only real APIs and packages. For this job: The SDK and its version appear in an install command; calls use that SDK or plain HTTP to an endpoint the brief names, and any method the draft is unsure of is listed in a 'confirm in the SDK docs' table; the model name is read from a setting holding the buyer's model or a placeholder; API keys come from…"
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches the client's existing code, versions, naming, style and tools."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "The next person can read, change and test it safely."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, data and limits, not a generic sample."
+      },
+      {
+        "criterion": "The code does the AI task in the brief",
+        "weight": 10,
+        "test": "The prompt and code cover each input, output and 'must never' rule in the brief; the output format matches what the brief asks for; the piece chosen is delivered."
+      },
+      {
+        "criterion": "Code and tests are complete and runnable",
+        "weight": 10,
+        "test": "Every file is shown in full with run steps; a test set of at least five cases (from the brief's examples where given) has expected results and a script that runs them and reports pass or fail; no '...' or placeholder logic."
+      }
+    ],
+    "mode_default": "extend"
   }
 ]

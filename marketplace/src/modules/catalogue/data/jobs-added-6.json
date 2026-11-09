@@ -205,7 +205,72 @@
         "note": "YunoJuno's freelancer rate guide lists data scientists at an average of $75 an hour, about £455 a day.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/data-scientist"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: Set-up checks (traffic split, test length, mid-test changes); each version's rate with the counts behind it; the lift with a 95% range; a p-value with the working shown; a plain call (ship, keep running, stop or rerun); segment notes with caveats; and the next test to run."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked. For this job: The draft names the method (such as a two-proportion z-test or chi-square), writes the formula, plugs in the brief's numbers and states the p-value and a 95% interval for the difference; with 3 or more versions it applies a named correction for many comparisons."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: The first section gives one call (ship, keep running, stop or rerun) tied to the main metric named in the brief, with the one or two numbers that drive it."
+      },
+      {
+        "criterion": "Every count and rate comes from the pasted results, with the sum shown",
+        "weight": 8,
+        "test": "Each rate is written as numerator over denominator from the brief (for example 212 / 4,980 = 4.26%); no visitor, conversion or revenue figure appears that is not in the brief or derived from it by shown steps."
+      },
+      {
+        "criterion": "Set-up problems and limits are named before the call is trusted",
+        "weight": 8,
+        "test": "The draft checks the actual split against the planned split, the test length against full weeks and any mid-test change in the brief; a before-and-after test is said not to prove cause; segment results are labelled as ideas to test."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "id": "forecast-from-history",
@@ -421,7 +486,73 @@
         "note": "YunoJuno's freelancer rate guide lists data scientists at an average of $75 an hour, about £455 a day.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/data-scientist"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every input figure traces to the brief; each growth rate, seasonal index or adjustment is worked out from the history with the sum shown, or comes from an event the buyer listed; no outside market figures appear."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: A data check; the pattern found (trend, season, one-offs); the method chosen and why; a forecast table by period and series with low, likely and high values; an accuracy test on your own past periods; spreadsheet formulas to roll it forward; and the assumptions to watch."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked. For this job: The draft names the method and why it fits, shows how at least one forecast value was worked out from the history, and reports an accuracy check (such as average miss or MAPE) on held-back past periods with the numbers used."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: The draft says how the low and high values were set, names the two or three assumptions most likely to break, and says plainly when history is too short for a seasonal method (for example under 24 months of monthly data)."
+      },
+      {
+        "criterion": "A forecast table covers every series and period the brief asks for",
+        "weight": 8,
+        "test": "The table has one row per period across the full horizon in the brief, for every series named, with low, likely and high values; any totals add up across series."
+      },
+      {
+        "criterion": "The buyer can roll the forecast forward without help",
+        "weight": 8,
+        "test": "Formulas or code are written out for the tool in the brief (Excel and Google Sheets if none is named), using the layout of the pasted history, with a note on which cells to update each period."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "dashboard-build-sheet",
@@ -633,7 +764,67 @@
         "note": "YunoJuno's freelancer rate guide lists analytics consultants at an average of $68 an hour, about £413 a day.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/analytics-consultant"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "All table and column names used in measures appear in the brief's data layout or are marked placeholders such as [YourDateColumn]; no target, benchmark or sample figure appears unless the buyer gave it."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: Data sources and joins; a field list; every measure or calculated field written in your tool's formula language with a worked check; a chart-by-chart spec with fields, filters and sort; a page layout grid; refresh and access notes; and a test list against source totals. Reviews get ranked fixes."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other. For this job: A test list compares at least three dashboard numbers with a source total; refresh timing and any access rules from the brief are covered; a review ranks its fixes by impact with the corrected measure for each."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Build steps are numbered, one action each, in build order (data, model, measures, visuals, filters, sharing); terms such as relationship, measure or blend are explained once."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "The sheet covers each page, chart and measure the brief needs",
+        "weight": 10,
+        "test": "Every question in the brief's purpose maps to at least one named chart or measure; the page count matches the brief; each chart lists its type, fields, filters and sort."
+      },
+      {
+        "criterion": "Measures are complete and written for the named tool",
+        "weight": 10,
+        "test": "Each measure or calculated field is given in full in the tool's own syntax (DAX for Power BI, Looker Studio calculated fields, Metabase custom expressions or SQL, Tableau calculations, or sheet formulas) with no gaps; at least one measure is checked by hand against the sample rows."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "measurement-and-tracking-plan",
@@ -830,7 +1021,79 @@
         "note": "Google Analytics Help explains how to add UTM parameters to links so owners can see which campaigns send traffic, with best practices and a URL builder.",
         "url": "https://support.google.com/analytics/answer/10917952"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every page, form, tool and existing tag named comes from the brief or is a marked placeholder; the draft never claims to have seen live analytics; no traffic or conversion figures appear unless the buyer pasted them."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: An event table (name, trigger, parameters, where it fires, who builds it) with key events marked; UTM naming rules with a builder sheet layout and filled example links; a plain attribution guide matching each report to a decision; a test checklist; and a gap list from any set-up you paste."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week. For this job: Each success action in the brief has a named event or key event; each channel listed has UTM values or an attribution note; the piece chosen is delivered in full."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read. For this job: Terms such as event, parameter, key event, UTM and attribution model are explained once in plain words; the plan says who builds each part (owner, developer or agency)."
+      },
+      {
+        "criterion": "Each event and link rule can be built exactly as written",
+        "weight": 6,
+        "test": "Every event row has a consistent name (such as snake_case under 40 characters), a trigger, parameters with example values and where it fires; GA4 recommended names (such as purchase, generate_lead, sign_up) are used where they fit; UTM rules give allowed values and at least five filled example links."
+      },
+      {
+        "criterion": "It says how to test the tracking and keeps personal data out",
+        "weight": 6,
+        "test": "A test checklist says how to confirm each event fires (such as GA4 DebugView or Tag Assistant) and what should appear; no event sends names, emails or phone numbers as parameters; consent handling is noted where the brief names a banner."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "metric-definitions-and-data-dictionary",
@@ -1030,7 +1293,67 @@
         "note": "YunoJuno's freelancer rate guide lists data engineers at an average of $91 an hour, about £552 a day.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/data-engineer"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every column, table and system named comes from the brief; where the brief does not settle a rule (such as whether refunds reduce revenue) the draft asks it as a question with a recommended answer instead of deciding silently; no targets or benchmarks are invented."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: KPI tree: the goal split into drivers with the formula linking each level. Metrics: plain meaning, exact formula, window, filters, edge cases, source and owner. Dictionary: each column with type, allowed values, example and owner. Quality rules: each check as a formula or SQL with a pass condition and fix step."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other. For this job: Each metric has a formula on named columns, a time window, filters and how edge cases are handled (refunds, test orders, duplicates, time zones); each quality rule is a sheet formula or SQL check with a pass condition."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Each item has a one-sentence plain meaning with no unexplained jargon; one naming pattern is stated at the top and used throughout."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "The chosen piece is complete for every item in the brief",
+        "weight": 10,
+        "test": "Every metric, term or column the brief lists appears once with all fields filled or marked 'buyer to confirm'; a KPI tree links each driver to its parent with a formula."
+      },
+      {
+        "criterion": "Clashes and gaps are surfaced with a fix",
+        "weight": 10,
+        "test": "Any metric counted two ways in the brief is shown side by side with the difference explained and one definition recommended; the draft lists items with no owner or no source."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "chart-specs-and-review",
@@ -1214,7 +1537,61 @@
         "note": "YunoJuno's page for hiring freelance data visualisation designers says they choose chart types, design dashboards and interactive visuals, and make infographics on a project or contract basis.",
         "url": "https://yunojuno.com/sub-disciplines/data-visualisation-designer"
       }
-    ]
+    ],
+    "family": "other",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 15,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: For each message: the chart type and why, the data it uses, a complete spec (Vega-Lite JSON, Chart.js config or Excel and Sheets steps), a title that states the finding, labels, colours and a short text summary for screen readers. Reviews rank each chart's problems and give a fixed version."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other. For this job: Each Vega-Lite spec is complete JSON with $schema, data, mark and encoding with field types; each Chart.js config has type, data and options; Excel or Sheets steps are numbered with menu names; the library version is stated; there are no '...' gaps."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents. For this job: Every message in the brief has one chart with its type and a one-line reason tied to the comparison (change over time, ranking, part of a whole, relationship or spread); no pie chart has more than 5 parts and no 3D chart is used."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Each chart has a title that states the finding, axes labelled with units, bar axes that start at zero, no more than 6 colours, and a one or two sentence text summary for screen readers."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template. For this job: Every value in the specs or inline tables appears in the brief or comes from a shown sum; field names match the brief's columns; no figures are added to fill gaps or improve the look."
+      },
+      {
+        "criterion": "Charts do not mislead and work for colour-blind readers",
+        "weight": 15,
+        "test": "No truncated bar axis, unflagged dual axis or cherry-picked date range; colours come from a colour-blind safe set or direct labels are used as well as colour; a review lists each problem with why it misleads and the fix."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "id": "worked-analysis-from-data",
@@ -1414,7 +1791,72 @@
         "note": "YunoJuno's freelancer rate guide lists data analysts at an average of $68 an hour, about £410 a day.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/data-analyst"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: A data check with row counts; the standard table for the analysis (cohort grid, price and volume table, price-volume-mix bridge, benchmark gap table, pivot summaries or pattern table); the working for each key figure; a plain answer first; what the data cannot prove; and formulas or SQL to…"
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked. For this job: Each key figure shows its inputs and sum (for example '118 of 410 March customers bought again in month 3 = 28.8%'); table totals reconcile to the counts in the data check; no outside number appears except benchmark figures the buyer pasted, each with its stated source."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide."
+      },
+      {
+        "criterion": "The chosen analysis is delivered as its standard table and answers the question",
+        "weight": 8,
+        "test": "The draft contains the table that analysis needs (for example a cohort grid of start months against months since start, a price-volume-mix bridge that adds up to the total change, or a gap table with one row per pasted benchmark) and opens with a plain answer to the brief's question."
+      },
+      {
+        "criterion": "The data is checked before it is used",
+        "weight": 8,
+        "test": "The draft states the rows and columns read, the date range, missing or odd values and duplicates found, and what was set aside and why, with counts."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "ai-assistant-setup-pack",
@@ -1618,7 +2060,62 @@
         "note": "Contra's page for hiring ChatGPT experts lists a 'Custom OpenAI Assistant with Vector Database' service at $550 among its top services.",
         "url": "https://contra.com/hire/chatgpt-experts"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every fact in the instructions, knowledge chunks and expected test answers traces to the brief's source material; the instructions tell the assistant to say it does not know when the material does not cover a question; no prices, policies or claims are added."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 15,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: Copy-ready instructions (users, tasks, refusals, hand-offs, tone, what to do when unsure) within your tool's limits; your material rewritten as titled, tagged one-topic chunks; conversation starters; an extraction prompt with a valid JSON schema where asked; a 15 to 25 question test set with expected answers; and numbered…"
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other. For this job: The draft states the tool and the limit that matters most (such as instruction length) and stays within it or says to check it; each knowledge chunk has a title, tags and one topic; any JSON schema is valid JSON with types and required fields, and a filled example output matches…"
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents. For this job: The instructions name the users, the tasks it does, what it refuses and when it hands off, matching the brief's purpose and rules; the chosen piece is delivered in full."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Set-up steps are numbered with one action each; the instructions sit in one copy-ready block; terms such as knowledge file, chunk and schema are explained once."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "There is a test set, and the assistant stays within safe limits",
+        "weight": 15,
+        "test": "A test set has at least 15 questions, including at least 3 off-topic or unsafe ones and 2 that need a hand-off, each with the expected answer or behaviour; the instructions bar legal, medical and financial advice, pretending to be a person and sharing personal data."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "ai-workflow-plan",
@@ -1814,7 +2311,79 @@
         "note": "The U.S. Census Bureau reported in May 2026 that less than 20% of firms with four or fewer employees use AI, against 37% of firms with 250 or more.",
         "url": "https://www.census.gov/library/stories/2026/05/ai-use-businesses.html"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Task times, volumes, prices and tool features are taken from the brief or labelled 'estimate' or 'check with vendor'; no saving, price or feature is stated as fact without a source in the brief."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: Your tasks scored for AI fit, time at stake and risk; or one workflow step by step marking AI, tool and person steps, with the full prompt, inputs, outputs and a named human check at each risky point; failure handling; a tool comparison on the same criteria; pilot measures with go, change or stop rules; and what…"
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week. For this job: Each step that sends a message, moves money, changes records or prices, or makes a decision about a person has a named person who checks it and what they look for; the plan lists what data must never go into an AI tool, given the data types in the brief."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read. For this job: Steps are numbered with one action each; every AI prompt is written in full; jargon such as LLM or RAG is avoided or explained once."
+      },
+      {
+        "criterion": "The chosen piece covers all the work in the brief",
+        "weight": 6,
+        "test": "Every task or step in the brief appears in the map or workflow; each AI step names its input, output and tool type; a tool comparison scores every tool listed on the same criteria."
+      },
+      {
+        "criterion": "Success can be measured",
+        "weight": 6,
+        "test": "The draft sets a before measure and a target for time, errors or cost per task, how to record them for 2 to 4 weeks, and go, change or stop rules; a pilot review compares the pasted results with those rules and shows the sums."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "model-or-claim-review",
@@ -2012,7 +2581,73 @@
         "note": "YunoJuno's freelancer rate guide lists machine learning engineers at an average of $62 an hour, about £375 a day.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/machine-learning-engineer"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Accuracy, precision, recall, false alarm or error figures are recalculated from the counts in the brief with the sums shown; where a claim gives no counts, the draft says it cannot be checked and names the data needed; no performance figure is invented."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: A plain answer on whether you can rely on it; how the model or claim works; the figures you pasted recomputed (accuracy, precision, recall, false alarms, base rate) with the sums; what it would do on your real volume and what mistakes would cost; weak points and fairness risks; and the…"
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: The draft opens with a two to four sentence plain answer on whether the buyer can rely on it for the decision in the brief (rely, rely with a check, or do not rely), then explains how it works in plain words."
+      },
+      {
+        "criterion": "The numbers are turned into the buyer's real-world effect",
+        "weight": 8,
+        "test": "The draft works through what the model would do on a batch the size of the buyer's real volume (or 1,000 cases if none is given), using the base rate, and prices the mistakes with the buyer's costs where given."
+      },
+      {
+        "criterion": "A non-technical owner can follow it",
+        "weight": 8,
+        "test": "Each technical term is defined in one plain sentence when first used; there is a short summary the reader can act on."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "id": "sample-dataset",
@@ -2208,6 +2843,66 @@
         "note": "Mockaroo, a popular test data tool, says it lets people generate up to 1,000 rows of realistic test data in CSV, JSON, SQL and Excel formats, with paid plans for larger volumes.",
         "url": "https://www.mockaroo.com/"
       }
-    ]
+    ],
+    "family": "other",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Names are plainly made up; emails use example.com, example.org or example.net; phone numbers use ranges set aside for fiction or are marked fake; no real card, bank or ID numbers appear (only published test card numbers if the brief asks); the data is labelled as sample data at the top."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: A spec table (columns, types, allowed values, rules, links between tables); every made-up row as CSV, JSON or SQL INSERT statements; edge-case rows listed with what each should trigger; check totals; and numbered steps to load it into your tool."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents. For this job: Every column in the brief appears with its stated type and allowed values; the row count matches the brief; keys link correctly across tables; patterns asked for show up in the check totals."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: A short spec table lists each column with its rule; numbered steps say how to load the data in the tool named in the brief."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "The output is complete and loads as given",
+        "weight": 10,
+        "test": "CSV has one header row and the same number of fields on every row, with quotes where needed; JSON parses with no comments or trailing commas; SQL names the database and version and puts CREATE TABLE before the INSERTs; there are no '...' gaps or 'more rows here' notes."
+      },
+      {
+        "criterion": "Edge cases are labelled with what should happen",
+        "weight": 10,
+        "test": "When the data is for testing, at least 10% of rows (or the rows the brief lists) are edge cases such as blanks, wrong formats, duplicates, long text and odd characters, each listed with its row id and expected result; check totals (rows per value, sums) are given."
+      }
+    ],
+    "mode_default": "new"
   }
 ]

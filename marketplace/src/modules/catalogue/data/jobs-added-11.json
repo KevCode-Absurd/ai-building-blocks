@@ -219,7 +219,80 @@
         "note": "Upwork's 2026 fastest-growing skills list, reported by Staffing Industry Analysts, shows e-commerce management up 130%.",
         "url": "https://www.staffingindustry.com/news/global-daily-news/fastest-growing-work-categories-include-coding-and-web-development"
       }
-    ]
+    ],
+    "family": "audit",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "account_access",
+        "label": "Read access to the account, site or data",
+        "required": true,
+        "how": "Level 1 (read) through the client's connector, or an export covering the period. Pull the real snapshot before judging anything."
+      },
+      {
+        "id": "goals",
+        "label": "What success means here",
+        "required": true,
+        "how": "The target the client measures (sales, leads, cost per result, response time, margin), the period, and what changed recently."
+      },
+      {
+        "id": "benchmarks",
+        "label": "Earlier results or a comparison",
+        "required": false,
+        "how": "A previous period, a competitor or a target to compare against, so findings say better or worse than what."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "The diagnosis is made from the client's real data or pages, pulled at level 1 (read), with the period stated.",
+      "Every GTIN, brand, size, colour, material, price and ID in the fix file comes from the brief's rows; missing values are left blank and listed, never guessed; no identifier is made up; sale or shipping details appear only if the brief's data shows them."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: A fix list ranked by how many products each issue blocks, with cause, fix and where to make it; title and attribute rules with before and after rows; a supplemental feed CSV for the rows you paste; and feed rule steps for your feed tool."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today. For this job: Each issue type in the diagnostics or found in the sample rows appears once with the number of items affected, the cause, the fix and where to make it (store data, feed tool or supplemental feed); issues are ranked by items affected."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: Feed terms such as GTIN, MPN and supplemental feed are explained once; steps are numbered; policy points are stated as general guidance with a note to check the channel's current policy; no hype words."
+      },
+      {
+        "criterion": "The fix file is valid and ready to upload",
+        "weight": 8,
+        "test": "The supplemental feed is one CSV code block with a header row of attribute names the named channel accepts (such as id, title, gtin, color, size), one row per product, consistent quoting, and IDs that match the brief's rows exactly."
+      },
+      {
+        "criterion": "Rules carry over to the rest of the feed",
+        "weight": 8,
+        "test": "Title and attribute rules state a pattern (such as Brand + Product type + Key attribute + Size + Colour), give at least 3 before-and-after examples from the brief's rows, and say how to set them up in the named feed tool or store."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "id": "ai-answer-visibility-check",
@@ -428,7 +501,76 @@
         "note": "Pew Research Center found Google users clicked a regular search result in 8% of visits when an AI summary appeared, against 15% when none appeared.",
         "url": "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/"
       }
-    ]
+    ],
+    "family": "audit",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "account_access",
+        "label": "Read access to the account, site or data",
+        "required": true,
+        "how": "Level 1 (read) through the client's connector, or an export covering the period. Pull the real snapshot before judging anything."
+      },
+      {
+        "id": "goals",
+        "label": "What success means here",
+        "required": true,
+        "how": "The target the client measures (sales, leads, cost per result, response time, margin), the period, and what changed recently."
+      },
+      {
+        "id": "benchmarks",
+        "label": "Earlier results or a comparison",
+        "required": false,
+        "how": "A previous period, a competitor or a target to compare against, so findings say better or worse than what."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "The diagnosis is made from the client's real data or pages, pulled at level 1 (read), with the period stated.",
+      "Every statement about what an AI tool says quotes an answer pasted in the brief with its tool and date; with no answers pasted, the draft makes no claim about current visibility; business facts come only from the brief; nothing promises that a tool will name the business.",
+      "The plan uses accurate facts, answer-first pages, structured data and real listings or reviews; it has no fake reviews, paid mentions passed off as independent, hidden text or invented awards; review and listing steps are marked as the buyer's to carry out."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 13,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: Buyer questions to ask each AI tool, a tracking sheet (CSV) and a run guide; a read of any answers you paste; a fact fix list across your site and listings; a plan for answer-first pages AI tools can quote; and, if asked, a map of the sources they cite."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today. For this job: Each fix names the page or listing, the field or sentence to change, the correct value from the brief and the reason (mismatch, missing fact, no direct answer); fixes are ranked."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: Terms such as AI Overviews, citation and schema are explained once; steps are numbered; no hype words."
+      },
+      {
+        "criterion": "The question set covers how buyers really ask",
+        "weight": 12,
+        "test": "The question set has the number of questions in the brief, grouped by intent (best, near me, comparison, price, how to choose), each in a buyer's words; the tracking sheet is a CSV code block with date, tool, question, named or not, position, facts correct and sources cited."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "id": "video-edit-plan-from-transcript",
@@ -640,7 +782,91 @@
         "note": "Upwork's 2026 skills lists, reported by Staffing Industry Analysts, put video editing among the most in-demand design skills and AI video generation and editing as the fastest growing, up 329%.",
         "url": "https://www.staffingindustry.com/news/global-daily-news/fastest-growing-work-categories-include-coding-and-web-development"
       }
-    ]
+    ],
+    "family": "other",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "brand_guide",
+        "label": "Brand guide, if you have one",
+        "required": false,
+        "how": "Fonts, colours, logo rules and tone. Captured facts win where the guide is out of date; say where they differ."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: An edit decision list with in and out timecodes, what to keep, cut or tighten and why; a clip list with in and out points, length, hook text and on-screen text; B-roll, pacing and music cues by timecode; chapters and a description; and an SRT per clip if asked. Built from your timed transcript and notes only."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Sizes, specs, values and facts are right and consistent, so a maker can build it without guessing."
+      },
+      {
+        "criterion": "Fits the brand system",
+        "weight": 20,
+        "test": "It works inside the client's captured brand: fonts, colour proportions, imagery and voice from context/brand-dna.json, or each change is deliberate and stated."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Editing terms such as J-cut or B-roll are explained once; notes are short; no hype words."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "Every timecode comes from the transcript",
+        "weight": 10,
+        "test": "Every in and out point uses timestamps in the brief's transcript, or falls between two of them and is marked approximate; clip lengths are stated and match their in and out points; the draft says it worked from the transcript and notes, not from watching the video."
+      },
+      {
+        "criterion": "Speakers' words and meaning are kept",
+        "weight": 10,
+        "test": "Clips and captions quote the transcript's words; hook text and titles claim nothing the speakers did not say; no planned cut joins phrases in a way that changes a speaker's meaning, such as dropping a 'not' or a condition."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "id": "business-form-design",
@@ -854,7 +1080,67 @@
         "note": "YunoJuno rate data: freelance graphic designers average $57 an hour (about £348 a day).",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/graphic-designer"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No field asks for card numbers, passwords, health, ID or bank details unless the brief gives a reason; legal, consent or terms text appears only as a marked placeholder such as [your approved wording]; names, prices and codes come from the brief."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: The form's purpose, sections and every field with label, type, options, required or optional, check rule and help text. Printable forms come as one complete HTML file with print CSS. Online forms come as a build table for your tool. Redesigns get before and after notes and a short list of how to check the form."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Labels and notes use plain words; any form term such as validation or conditional logic is explained once; no hype words."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "Every piece of information in the brief has a field",
+        "weight": 10,
+        "test": "Each item the brief says to capture maps to a field with label, type, options, required or optional and a check rule; fields are grouped in the order the person fills them in."
+      },
+      {
+        "criterion": "The form works as delivered",
+        "weight": 10,
+        "test": "A printable form is one complete HTML file with CSS in a style block, an @page rule with paper size and margins, writing spaces at least 8 mm tall, and no outside files except a marked logo placeholder; an online form is a build table using only field types the named tool offers."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "product-tech-pack",
@@ -1059,7 +1345,67 @@
         "note": "Upwork's 2026 skills lists, reported by Staffing Industry Analysts, put product and industrial design among the most in-demand design skills.",
         "url": "https://www.staffingindustry.com/news/global-daily-news/fastest-growing-work-categories-include-coding-and-web-development"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every measurement, fabric, composition, weight and supplier comes from the brief or is marked [to confirm]; grading increments are labelled as suggestions to confirm with a pattern maker; no certification, fibre or origin claim appears unless the brief gives it."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: A written flat sketch brief, measurement chart with how to measure and tolerances, grading table, bill of materials with trims, labels and packing, construction notes, colourways, a request-for-quote email and a sample review sheet. Values you have not given are marked [to confirm], never guessed."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Terms such as point of measure, BOM, MOQ and grading are explained once; notes are short; no hype words."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "Every section a factory needs is present",
+        "weight": 10,
+        "test": "For the piece chosen the draft has: a flat sketch brief (front and back described), a measurement chart with points of measure, how to measure and tolerances, a grading table, a bill of materials (item, material, colour, size, placement, quantity), construction notes, colourways, labels and packing, and the quote request."
+      },
+      {
+        "criterion": "Numbers are consistent and usable",
+        "weight": 10,
+        "test": "One unit is stated and used throughout; every point of measure in the grading table appears in the measurement chart with a tolerance; size columns match the brief's size range."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "tour-and-audio-guide-script",
@@ -1261,6 +1607,90 @@
         "note": "O*NET: 62,200 tour guides and escorts were employed in the US in 2025, with faster than average growth expected to 2035; tasks include planning tours and commentary.",
         "url": "https://www.onetonline.org/link/summary/39-7011.00"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "Every date, name, number and story comes from the brief's sources; anything uncertain in the sources is told as uncertain ('said to be'); there are no invented legends, quotes or history; claims about food or drink stay within the brief's facts."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A route and stop list with timings, then for each stop: where to stand, what to point at, the script in a speaking voice, a story from your sources, a question for the group and the walk to the next stop. Audio guides get a numbered track list with lengths. Plus guide notes and a short listing blurb."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Scripts and notes use plain words for the audience named; any specialist term is explained in the script; no hype words."
+      },
+      {
+        "criterion": "Every stop is scripted in order and the tour fits its time",
+        "weight": 6,
+        "test": "The stop count matches the brief; each stop has where to stand, what to look at, the script, timing and the walk to the next stop; stop times plus walking times add up to the total length within 10%."
+      },
+      {
+        "criterion": "Written to be spoken",
+        "weight": 6,
+        "test": "Script lines are short and spoken, at about 130 to 150 words a minute for the time given; each stop opens by pointing at something the group can see; audio tracks state their length and word count."
+      }
+    ],
+    "mode_default": "extend"
   }
 ]

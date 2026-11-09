@@ -217,7 +217,67 @@
         "note": "AITSL's teacher workforce data: 40% of full-time classroom teachers in Australia report spending 10 or more hours a week on lesson planning.",
         "url": "https://www.aitsl.edu.au/resources/in-brief-teacher-duties"
       }
-    ]
+    ],
+    "family": "other",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every curriculum code, exam board point, quotation, date and statistic appears in the brief or is a well-known fact for the subject; no textbook, website or resource is cited that the brief did not give; facts the teacher should confirm are marked [check]."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: The piece you choose, ready to teach: a one-line aim, timed steps saying what the teacher does and what learners do, a check for understanding and support and stretch tasks; or worksheets, practice sets or role-play cards with full answer keys. A materials list and facts to check come at the end."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other. For this job: Step timings for each lesson add up to the minutes in the brief, within 5 minutes; every task says what learners do, what the teacher does and what it needs; every worksheet, practice set or card set has a full answer key or model answers; there are no 'add activity here' gaps."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Learner-facing instructions start with a verb and are mostly under 15 words; the reading level suits the age or language level in the brief; new terms are explained the first time they appear."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "The draft is the piece the buyer chose, for the learners and aim in the brief",
+        "weight": 10,
+        "test": "The aim is stated in one sentence that matches the brief; a lesson plan has a starter, main tasks, a check for understanding and a close; a run of lessons has one plan per lesson asked for; worksheets, practice sets and cards have the number of items the brief asks for, or at least 10 when it gives none."
+      },
+      {
+        "criterion": "Learning is checked, and the lesson works for different levels",
+        "weight": 10,
+        "test": "Each lesson has at least one check for understanding tied to the aim, with what a good answer looks like; there is support for learners who struggle and a stretch task for those who finish early; drills and worksheet questions go from easier to harder."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "quiz-test-and-marking-guide",
@@ -451,7 +511,62 @@
         "note": "Pearson VUE says it delivers more than 19 million certification and licensure exams every year.",
         "url": "https://www.pearsonvue.com/us/en/about/news/highlights/pearson-vues-innovative-solutions-revolutionize-t.html"
       }
-    ]
+    ],
+    "family": "other",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Each question in the key names the section, heading or step of the pasted material it tests; no question tests a fact, rule or figure that is absent from the material; no question is copied from, or said to be from, a real exam paper."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 15,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: Questions from your material in the formats you pick, each tagged to a topic or goal; a learner copy; an answer key with a reason for each answer and why each wrong option is wrong; model answers and mark points for written questions or a level-by-level rubric; a table of topics and marks; and a CSV or GIFT import file if…"
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other. For this job: Each question has an answer in the key with a one-line reason; multiple choice has exactly one correct option unless the item says 'choose two'; each wrong option has a short note on why it is wrong; written questions have a model answer and mark points that add up to the marks…"
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents. For this job: The number of questions equals the brief's count; only the formats asked for are used; a table shows each topic or goal with its question count and marks, and where the brief gives topic weights the counts match them within one question."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Question stems are mostly under 30 words and ask one thing; there are no double negatives; options are similar in length and style; 'all of the above' and 'none of the above' are not used; no question gives away the answer to another."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "It is ready to hand out or import",
+        "weight": 15,
+        "test": "A learner copy without answers comes before the key; marks and a pass mark or grade bands appear when the brief gives them; any import file asked for is complete in a code block, one entry per question, with no missing fields; a rubric has levels with a description and a short example for each."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "study-notes-and-flashcards",
@@ -675,7 +790,67 @@
         "note": "A summary of flashcard research: studies find 40% to 70% of college students use flashcards, and Quizlet reports over 60 million users.",
         "url": "https://studycardsai.com/blog/flashcard-statistics"
       }
-    ]
+    ],
+    "family": "other",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Each fact, definition, formula, date and example appears in or follows directly from the pasted material; anything added from outside is marked [not in your notes]; no card or note contradicts the material."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: The study aid you choose: revision notes with key terms and worked examples; a study guide with self-test questions; a one-page summary or formula sheet; a day-by-day timetable to your exam; a glossary; or a flashcard deck as an import-ready CSV or Quizlet text with tags, plus short import steps."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other. For this job: Each card asks for one fact with an answer under 20 words; lists of more than 3 items are split across cards; notes use short bullets, bold key terms and at least one worked example or self-test question per main topic."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Sentences are mostly under 20 words; technical terms from the material are kept but explained once in plain words; import steps are 5 or fewer."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "The draft is the study aid the buyer chose, sized to the brief",
+        "weight": 10,
+        "test": "Notes and guides use the material's topics as headings in its order; a summary sheet fits on one page (about 500 words or one table); a timetable covers every day from the start date to the exam date given; a deck has the card count asked for within 5%, or about one card per key fact when none is given."
+      },
+      {
+        "criterion": "Files import cleanly and notes have no gaps",
+        "weight": 10,
+        "test": "Any deck is in one code block with a header line or a note naming the fields and the separator; every row has the same number of fields; commas or tabs inside text are quoted or avoided; cloze cards use {{c1::...}} syntax; tags have no spaces; no front or back is empty; notes have no 'see textbook' gaps."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "training-module-content",
@@ -907,7 +1082,67 @@
         "note": "Christy Tucker's instructional design rate guide: experienced freelance instructional designers charge about $60 to $150 an hour, and the average US federal contract ceiling rate is $113 an hour.",
         "url": "https://christytuckerlearning.com/instructional-design-hourly-rates-and-salary/"
       }
-    ]
+    ],
+    "family": "other",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every step, rule, number, product name and policy point appears in the pasted material, in the same order where order matters; anything beyond it is marked [confirm with your team]; safety warnings in the material appear word for word where they apply."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: Learning goals, then the piece you choose, from your material: a screen-by-screen storyboard with on-screen text, narration, visuals and interactions; lesson pages; a staff module with demo steps, practice and a trainer guide; branching scenarios; a sign-off and observation form; or a week-by-week learning path."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: On-screen text blocks are under 60 words; narration is in short sentences written to be read aloud; the module's estimated time is stated and is within the minutes in the brief; jargon from the material is explained the first time."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "The draft is the piece the buyer chose, written in full",
+        "weight": 10,
+        "test": "A storyboard has a numbered row per screen with on-screen text, narration, visual and interaction; lesson pages are finished text; a staff module has demo steps, practice tasks and a trainer guide; scenarios have 3 or more decision points with consequences; a sign-off form has observable steps and a pass line; a learning path covers each week; no 'add content here' gaps."
+      },
+      {
+        "criterion": "Each goal is taught, practised and checked",
+        "weight": 10,
+        "test": "There are 2 to 5 goals that start with an action verb; each goal maps to at least one screen, page or task where learners practise it and to at least one knowledge check question or observed task; the check has an answer key."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "workshop-or-coaching-session-plan",
@@ -1136,7 +1371,79 @@
         "note": "Erickson Coaching's summary of the 2025 ICF Global Coaching Study: a record 122,974 coaches worldwide and about $5.34 billion in annual coaching revenue.",
         "url": "https://www.erickson.edu/resources/the-state-of-the-coaching-profession"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every topic, figure, decision, name and past event in the draft appears in the brief; no participant story, conflict or result is made up; examples the facilitator must supply are marked [add your example]."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook. For this job: The draft opens with the purpose and 2 to 4 outcomes people leave with, matching the brief; each agenda block names the outcome it serves; exercises suit the setting (breakout rooms or board frames online, room layout in person); a coaching programme has one plan per…"
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: A minute-by-minute agenda with outcomes, exercises and breaks; facilitator notes with the words to say and how to run each exercise; materials, room or online board set-up; worksheets written in full; and the close and follow-up."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read. For this job: Instructions are mostly under 20 words; there is an opening with ground rules or a check-in; quieter people get a write-first or pairs option; coaching plans stay on goals and actions and say when to refer someone to a counsellor or other professional."
+      },
+      {
+        "criterion": "Timings add up and a facilitator could run it from the page",
+        "weight": 6,
+        "test": "Block timings for each session add up to its length within 5 minutes, with a break in any session over 90 minutes; each exercise has numbered steps, the instruction to say aloud, timing, group size and what gets captured; materials and set-up are listed; worksheets are written in full."
+      },
+      {
+        "criterion": "Participants spend most of the time doing, not listening",
+        "weight": 6,
+        "test": "At least half of each session's minutes are exercises, discussion, practice or reflection; no talk or presentation block runs longer than 15 minutes without an activity."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "email-or-text-micro-course",
@@ -1339,7 +1646,67 @@
         "note": "eLearning Industry's microlearning statistics: short courses report average completion rates around 80%, against about 20% for long-form modules.",
         "url": "https://elearningindustry.com/microlearning-statistics"
       }
-    ]
+    ],
+    "family": "other",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every fact, number, product feature, offer and example appears in the brief or its material; no testimonial, result or statistic is invented; anything the buyer must add is a [placeholder]."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: A course map with the goal, send days and the one skill each lesson builds; a welcome; every lesson in full with subject line, preview text, a lesson under 350 words, one task and a quick check; and a wrap-up. Text, WhatsApp or chat app lessons fit one message each."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Sentences are mostly under 20 words; there is at most one call to action per lesson; there is no fake urgency, countdown or promise of income or health results; marketing courses note where the unsubscribe or stop wording goes."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "The course has the lessons asked for, one skill each, building to the goal",
+        "weight": 10,
+        "test": "A course map lists every lesson with its one skill and send day; the lesson count equals the brief's; each lesson builds on the one before; the last lesson ties back to the goal in the brief."
+      },
+      {
+        "criterion": "Every lesson is complete and ready to send",
+        "weight": 10,
+        "test": "Each email has a subject line under 60 characters, preview text, the lesson, one task and a quick check or reflection question; each text or chat message fits the limit given, or 320 characters if none; the welcome and wrap-up are included; nothing says 'add lesson here'."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "training-video-script",
@@ -1550,7 +1917,66 @@
         "note": "TechSmith's 2026 video statistics: 83% of people prefer video over audio or text, and only 16% of learners say they watched a video because they were required to.",
         "url": "https://www.techsmith.com/blog/video-statistics/"
       }
-    ]
+    ],
+    "family": "other",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: For each video: the goal; a two-column script with narration beside what is on screen, one step per scene, matched to your procedure or software, with start times; on-screen text and callouts; a list of screens or shots to record; 3 check questions; and an SRT captions file built from the narration when you ask."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents. For this job: Each video states its goal in one sentence that matches the brief; the number of videos matches; a software how-to names the screen and click for each step; a filmed demo names the action and the camera view; the check questions test the goal."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Jargon is explained once; steps start with a verb; there is no sales talk inside instructions; 3 check questions with answers follow each video."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template. For this job: Every step appears in the pasted procedure, in the same order; button, menu, tool and part names are spelled as in the brief; no step, shortcut, setting or warning is added; safety warnings in the material are said and shown before the step they apply to."
+      },
+      {
+        "criterion": "Timings fit and every part is complete, including captions when asked for",
+        "weight": 10,
+        "test": "Each scene has a start time; narration at about 150 words a minute fits the total minutes within 10%; every scene has narration and an on-screen entry; an SRT file, when asked for, is in a code block with numbered cues, HH:MM:SS,mmm --> HH:MM:SS,mmm times in order, no cue over 2 lines of 42 characters, and text matching the narration."
+      },
+      {
+        "criterion": "Easy to follow on screen",
+        "weight": 10,
+        "test": "Each scene shows one step; callouts are under 8 words; narration sentences are mostly under 18 words and speak to the viewer as 'you'; the video says what viewers will learn within its first 15 seconds."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "job-application-pack",
@@ -1780,7 +2206,62 @@
         "note": "The UK National Careers Service publishes guidance on what to put in each section of a CV and why to tailor it to every job.",
         "url": "https://nationalcareers.service.gov.uk/careers-advice/cv-sections"
       }
-    ]
+    ],
+    "family": "other",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every employer, title, date, qualification, tool, figure and achievement appears in the brief; nothing is inflated or added; missing numbers are shown as [add a number] or listed in a gap list; interview answers use only the buyer's stories."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 15,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: The pieces you choose, from your real history only: a CV with a short summary and results-first bullets matched to the job ad; a one-page cover letter; application or selection criteria answers within word limits; a job-search LinkedIn profile; or interview prep with likely questions, answers from your stories and questions…"
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents. For this job: A CV has a contact line with placeholders, a 3 to 4 line summary, roles in reverse date order and bullets that start with a verb; it is 2 pages or less unless the brief says otherwise; there is no photo, age or marital status for US, Canada, UK, Ireland, Australia or New Zealand; a cover letter is…"
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: No phrases such as 'results-driven', 'team player' or 'go-getter'; sentences are mostly under 25 words; a pay script stays polite and honest and mentions no other offer the brief does not give; worries in the brief get an honest line, not a cover-up."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template. For this job: At least half of CV bullets include a result, number or scope from the brief; interview answers follow situation, task, action, result and each is under 250 words; the cover letter names one or two specific results tied to the job's needs."
+      },
+      {
+        "criterion": "The pieces are the ones asked for, aimed at the target job",
+        "weight": 15,
+        "test": "Each piece chosen is present; a tailored CV or cover letter uses at least 5 skills or key words from the pasted job ad, each backed by an item from the buyer's history; interview prep has at least 12 likely questions for the role; application answers follow the questions in order and show word counts within the limits."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "formal-letter-or-complaint",
@@ -2008,7 +2489,92 @@
         "note": "Acas, the UK workplace advice service, offers employees a free resignation letter template to copy or download.",
         "url": "https://www.acas.org.uk/resignation-letter-template"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "The outcome from the brief is stated in the first or second paragraph with a reply date (the brief's, or a [date] placeholder); the letter is addressed to the recipient given; an email or web form version under 200 words and a follow-up letter are included.",
+      "The letter does not say what a law says, name an act or regulation, or threaten legal action unless the brief supplied that wording or asked for it; policies are quoted only from pasted text; a resignation or reference makes no judgment on legal rights such as notice or pay; where money or a…"
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A ready-to-send letter in your voice: subject line, the facts in date order, what you want and by when, the evidence you attach and a calm close. Plus an email or web form version under 200 words, a follow-up letter for when nobody replies, and a list of facts to check before sending."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Sentences are mostly under 20 words; paragraphs are 4 lines or fewer; there are no insults, sarcasm or ALL CAPS; a reference letter gives specific examples from the brief instead of general praise."
+      },
+      {
+        "criterion": "Dates, amounts, names and what was said come only from the brief",
+        "weight": 6,
+        "test": "Every date, amount, reference number, name, quote and event appears in the brief; events are in date order; nothing is exaggerated; details to confirm are marked [check]; no card number, password or ID number appears."
+      },
+      {
+        "criterion": "It is complete and ready to send",
+        "weight": 6,
+        "test": "Subject line, greeting, body, close and sign-off are present; addresses and signatures are [placeholders]; attachments are listed by name; a list of facts to confirm ends the draft."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "personal-speech-or-tribute",
@@ -2240,7 +2806,91 @@
         "note": "Contra's speechwriter hiring page lists people giving wedding toasts, eulogies and retirement tributes among common clients.",
         "url": "https://contra.com/hire/speech-writers"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "Each story, name, place, date, quote and fact appears in the brief; no story, joke about a real person or private detail is invented; anything to confirm is marked [check]; nothing on the avoid list appears."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice. For this job: The opening names the occasion and the speaker's link to the person; the tone chosen is used; a wedding speech ends with a toast, a eulogy with a farewell or reflection, a leaving speech with thanks and good wishes; everyone in 'must include' is named."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A speech in your voice, timed to your minutes: an opening, two or three of your stories, what you want to say, and a toast or close. Plus a delivery version with pause marks and cue lines, a few tips on pace, and a list of names and facts to check. Written tributes come at the length you need."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words."
+      },
+      {
+        "criterion": "It fits the time or word limit",
+        "weight": 6,
+        "test": "The word count and minutes are stated at the top, and at about 130 spoken words a minute the speech is within 10% of the minutes given; a written tribute is within its word limit; speeches include a delivery version with [pause] marks and short cue lines."
+      },
+      {
+        "criterion": "Humour is kind and the speech is safe for everyone in the room",
+        "weight": 6,
+        "test": "There are no jokes about exes, weight, health, money troubles, drinking or sex; any teasing is followed by warmth; nothing would embarrass the person in front of children or older relatives named in the audience; a eulogy is gentle and leaves out cause-of-death detail unless the brief asks for it."
+      }
+    ],
+    "mode_default": "new"
   },
   {
     "id": "recipe-cards-and-recipe-edits",
@@ -2457,7 +3107,67 @@
         "note": "Kristin Donnelly's survey of 50 recipe developers: half charge at least $250 per recipe without a photo, and testers charge about $100 to $150 per test.",
         "url": "https://kristindonnelly.squarespace.com/journal/2022/11/19/what-to-charge-for-recipe-development-and-testing"
       }
-    ]
+    ],
+    "family": "other",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every ingredient, amount, time and temperature appears in the notes or follows from scaling or conversion that is shown; no ingredient is added or swapped without a [suggested] label; no health, nutrition or 'free-from' claim appears unless the brief gives it word for word; unclear amounts are…"
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: Each recipe in a clear layout: name, yield, times, equipment, ingredients in order of use with exact amounts, and numbered steps with times, temperatures and doneness cues; scaled or converted amounts with the maths shown; kitchen versions with portions and plating; or a blog post with headnote, tips and FAQs."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other. For this job: Scaled amounts equal the original times the stated factor, rounded to measurable amounts; conversions use standard factors (such as 1 cup of water is about 240 ml and 180 °C is about 350 °F) and note when weight per cup varies by ingredient; the factor and rounding rule are…"
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Steps start with a verb; sentences are mostly under 20 words; less common terms such as fold or blind bake are explained once; no hype words such as 'perfect' or 'best ever'."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "Each recipe is in the format asked for, with every standard part",
+        "weight": 10,
+        "test": "Each recipe has a name, yield, prep and cook time, equipment, an ingredient list and numbered method; kitchen versions add portion size and plating notes; blog posts add a headnote under 120 words and tips; the recipe count matches the brief."
+      },
+      {
+        "criterion": "A cook can follow the method without guessing",
+        "weight": 10,
+        "test": "Ingredients are listed in the order used; each step has one or two actions and a time or a doneness cue such as colour, texture or temperature; oven temperature and pan size are stated; storage and reheating notes are included when the notes give them."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "book-description-and-author-copy",
@@ -2675,7 +3385,91 @@
         "note": "Writer's Weekly's author services marketplace sells back cover copy for $150 and book descriptions at $3 per book page.",
         "url": "https://marketplace.writersweekly.com/?p=1272"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "Each character, event, setting, topic, review quote, award, sales figure and author credential appears in the brief; 'bestselling' or 'award-winning' is used only if the brief says so; comparable titles are only those the brief lists."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: Copy from your book's facts, at the length each place needs: a back cover blurb of 150 to 200 words; an online description with a hook line and short paragraphs; three taglines; an author bio in three lengths; a series page; or store page extra text."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: No phrases such as 'a rollercoaster ride', 'unputdownable', 'you won't be able to put it down' or 'in a world where'; sentences are mostly under 22 words; questions are used no more than twice."
+      },
+      {
+        "criterion": "Each piece asked for is there, at the right length",
+        "weight": 6,
+        "test": "A back cover blurb is 150 to 200 words; an online description opens with a one-line hook and is 150 to 300 words; there are at least three taglines, each under 15 words; a bio comes in about 25, 75 and 150 words; two versions of the main piece are given."
+      },
+      {
+        "criterion": "It hooks readers of the genre without giving away the ending",
+        "weight": 6,
+        "test": "Nothing listed as secret appears; fiction copy names the main character, the problem and the stakes and stops before the climax; nonfiction copy names the reader's problem and what the book helps them do; the tone matches the genre in the brief."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "freelance-profile-and-bid-replies",
@@ -2885,6 +3679,90 @@
         "note": "MBO Partners' State of Independence research reports a record 74.9 million Americans earning income independently.",
         "url": "https://www.mbopartners.com/state-of-independence/"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "Each client name, project, tool, number, review and price appears in the brief; no badge, rating, certification or years of experience is added; package prices are the buyer's or [your price]."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof. For this job: Each bid's first line refers to a specific detail in that job post; each bid has one proof point from the brief that fits the post, a short first step and one question; bids are under 150 words unless the brief sets another limit; no two bids share the same opening line."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A profile with a headline, an overview that opens with the client's problem, skills and portfolio blurbs; or service listings with a title, description, three packages with clear limits and FAQs; or bid replies, each written for one pasted job post with one matching proof point and a question; or a…"
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Packages state what is not included and how many revisions; there is no promise of rankings, sales or results the brief does not support; nothing asks the client to pay or talk off the platform."
+      },
+      {
+        "criterion": "Each piece asked for is there and fits the platform",
+        "weight": 6,
+        "test": "The piece count matches the brief; a profile has a headline under 70 characters, an overview and a skills list; listings have a title, description, three packages with what is included, delivery time and revisions, and FAQs; each bid reply is matched by name or number to one pasted job post; platform limits given in the brief are met."
+      },
+      {
+        "criterion": "Plain, confident words a busy client can scan fast",
+        "weight": 6,
+        "test": "Sentences are mostly under 20 words; no 'hard-working', 'expert in everything' or similar filler; paragraphs are short; profiles and listings describe the problem in the client's words."
+      }
+    ],
+    "mode_default": "extend"
   }
 ]

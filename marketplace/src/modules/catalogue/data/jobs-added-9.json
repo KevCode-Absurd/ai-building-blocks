@@ -187,6 +187,90 @@
         "note": "UK Cabinet Office guidance (PPN 03/24, 2024): supplier selection asks for organisation details, financial standing, insurance and usually three past contract examples with references.",
         "url": "https://www.gov.uk/government/publications/ppn-0324-standard-selection-questionnaire-sq/annex-a-guidance-on-the-selection-stage-process-including-standard-selection-questions-pcr-2015-html"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "Each registration, code, accreditation, insurance detail, date, staff number and past job appears in the brief; anything buyers usually ask for that the brief lacks is listed as a gap or [placeholder], never filled in; a client is named only where the brief says they agreed."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A one-page capability statement (what you do, core services, why choose you, past work, company facts and contact), or a pre-qualification pack: a document checklist with who holds each item and its status, a company fact sheet, past-work examples in the usual format, and the gaps to close before you apply."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Sentences are short; words such as 'leading', 'best' or 'unrivalled' appear only where the brief proves them; terms from the buyer's form are kept and explained once."
+      },
+      {
+        "criterion": "The draft is the piece chosen, shaped for the buyers named",
+        "weight": 6,
+        "test": "The piece chosen is delivered with its core parts: a statement has what you do, core services, why choose you, past work, company facts and contact; a checklist lists each document with holder and status; a fact sheet is a table; each past-work example has client type, scope, size, dates and result."
+      },
+      {
+        "criterion": "A capability statement fits one page and reads fast",
+        "weight": 6,
+        "test": "A capability statement is 250 to 450 words in labelled blocks; core services are a list of 3 to 8 items; each 'why choose us' point names a fact from the brief; contact details sit together in one block."
+      }
+    ],
+    "mode_default": "extend"
   }
 ]

@@ -190,7 +190,99 @@
         "note": "Copywriting rate page with ranges: blog post $250-800, 4-5 email sequence $500-5,000, ad copy $100-1,000, case study $1,200-2,000, white paper $2,000-10,000, press release $500-1,000, video script under 5 min $500-1,500.",
         "url": "https://talo.com/costs/copywriting-rates"
       }
-    ]
+    ],
+    "family": "ad_creative",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Ads and materials you already run",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "brand_guide",
+        "label": "Brand guide, if you have one",
+        "required": false,
+        "how": "Fonts, colours, logo rules and tone. Captured facts win where the guide is out of date; say where they differ."
+      },
+      {
+        "id": "account_access",
+        "label": "Read access to the ad account",
+        "required": false,
+        "how": "Level 1 (read) through the client's connector, or an export of recent ads and results, to learn what already ran and what worked."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No statistic, price, discount, review, award or guarantee appears unless it is in the brief or the supplied files. Any invented item fails this criterion.",
+      "No guaranteed results, before-and-after claims, lines that call out personal traits (such as 'Are you struggling with...'), all-caps shouting or false urgency."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Strategic idea",
+        "weight": 10,
+        "test": "Each concept rests on one clear reason to act for a named audience, taken from the client's offer and proof. Here: Headlines, descriptions and primary text for the chosen platform, grouped by angle, with character counts and a short note on what each angle tests."
+      },
+      {
+        "criterion": "Range across named axes",
+        "weight": 20,
+        "test": "Concepts differ on named axes (mechanism, proof, structure, visual world, offer), not only in colour, crop, wording or style label. For this job: At least three angles are named, and a reader can tell each apart by its main benefit or hook. No two ads share the same opening claim."
+      },
+      {
+        "criterion": "Brand fidelity",
+        "weight": 15,
+        "test": "It looks and sounds like the client's captured brand: fonts, colours, imagery and voice from context/brand-dna.json."
+      },
+      {
+        "criterion": "Hook and thumb-stop",
+        "weight": 15,
+        "test": "The first line or frame earns attention for this audience without clickbait or fake urgency."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 15,
+        "test": "A competitor could not run it unchanged: it uses this client's own product, facts and proof."
+      },
+      {
+        "criterion": "Platform fit",
+        "weight": 15,
+        "test": "Each piece follows its placement's format, length limits and safe zones, with counts shown. For this job: Google headlines are 30 characters or fewer and descriptions 90 or fewer; Meta and LinkedIn text respects the stated limits. Counts are shown and correct."
+      },
+      {
+        "criterion": "Every ad names the offer and asks for the action the buyer chose",
+        "weight": 10,
+        "test": "Each ad group states the offer or benefit and a call to action that matches the goal field."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "format": "markdown",
@@ -382,7 +474,392 @@
         "note": "Copywriting rate page with ranges: blog post $250-800, 4-5 email sequence $500-5,000, ad copy $100-1,000, case study $1,200-2,000, white paper $2,000-10,000, press release $500-1,000, video script under 5 min $500-1,500.",
         "url": "https://talo.com/costs/copywriting-rates"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No number, review, customer name, award or logo appears unless it is in the brief or the supplied files. Any invented item fails this criterion."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: Headline, subhead, 3 to 7 sections, proof points, FAQ and calls to action, with notes on section order, ready to paste into your page builder."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts. For this job: At least three likely doubts are answered in the sections or the FAQ, including price or effort if known."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose. For this job: No headline or button over 12 words; none of 'unlock', 'revolutionize', 'seamless', 'game-changing' or 'cutting-edge'."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: The headline and subhead together name the product type, the audience and the main benefit."
+      },
+      {
+        "criterion": "Every section leads to the one action the buyer chose",
+        "weight": 10,
+        "test": "There is one primary call to action, repeated at least twice, matching the goal field."
+      }
+    ],
+    "mode_default": "extend"
+  },
+  {
+    "format": "markdown",
+    "id": "landing-page-build",
+    "title": "Landing page built on your site",
+    "area": "design",
+    "summary": "A working landing page built inside your existing site's look: captured nav, footer, fonts and colours, your real copy and facts, tested on phone and desktop.",
+    "deliverable": "A captured brand file (fonts, colours with their share, nav, footer, section patterns, voice samples, live facts), a short build plan that says patch, extend or new and why, and the page itself: a runnable HTML and CSS file on your site's shell, or a block-by-block build for your site builder. Ends with a fidelity and launch check.",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "type": "url",
+        "required": false,
+        "help": "We capture its nav, footer, fonts, colours and voice and build on them. Leave blank only if there is no site yet."
+      },
+      {
+        "id": "mode",
+        "label": "What should we do?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Improve a page I already have",
+          "Add a new page to my site",
+          "A new page for a brand with no site yet"
+        ]
+      },
+      {
+        "id": "offer",
+        "label": "What is the page for?",
+        "type": "longtext",
+        "required": true,
+        "help": "The product, service or offer, and the price if there is one.",
+        "max": 2000
+      },
+      {
+        "id": "goal",
+        "label": "What should visitors do?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Buy",
+          "Book a call",
+          "Sign up",
+          "Join a waitlist",
+          "Request a quote",
+          "Visit or call"
+        ]
+      },
+      {
+        "id": "traffic",
+        "label": "Where do visitors come from?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Paid ads",
+          "Search",
+          "Email or newsletter",
+          "Social posts",
+          "Direct or word of mouth",
+          "A mix"
+        ]
+      },
+      {
+        "id": "audience",
+        "label": "Who is it for, and how much do they already know?",
+        "type": "text",
+        "required": true,
+        "help": "For example: people who know us and want to book; or people who have never heard of us.",
+        "max": 400
+      },
+      {
+        "id": "page_url",
+        "label": "The page to improve, or a page to match",
+        "type": "url",
+        "required": false
+      },
+      {
+        "id": "copy",
+        "label": "Copy, facts and proof we may use",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste copy if you have it. Otherwise we take the words and facts from your site.",
+        "max": 8000
+      },
+      {
+        "id": "platform",
+        "label": "Where will it live?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Plain HTML and CSS",
+          "WordPress",
+          "Shopify",
+          "Squarespace",
+          "Wix",
+          "Webflow",
+          "Other"
+        ]
+      },
+      {
+        "id": "references",
+        "label": "Pages you admire, and one to avoid",
+        "type": "list",
+        "required": false,
+        "max": 4
+      },
+      {
+        "id": "form_service",
+        "label": "Form or checkout to connect",
+        "type": "text",
+        "required": false,
+        "help": "For example Netlify Forms, Formspree, your booking tool or your shop's checkout.",
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "built_on_shell",
+        "text": "The page keeps the site's own nav, footer, fonts and colour proportions unless the plan changes them on purpose.",
+        "weight": 5,
+        "pass_rule": "Nav and footer match the captured site; the brand's fonts are loaded; colours and their share of the page follow context/brand-dna.json; any deliberate change is listed in the plan with its reason.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "real_copy_and_facts",
+        "text": "Copy and facts come from the client's site or brief, with nothing invented and no placeholder that capture could fill.",
+        "weight": 5,
+        "pass_rule": "Every price, offer, review, number and claim traces to the captured site or the brief; no lorem ipsum; any placeholder left is one the site and brief could not fill and is listed.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "structure_from_context",
+        "text": "The section order is chosen from the site's own patterns, the traffic source and the visitor's awareness, not a fixed template.",
+        "weight": 4,
+        "pass_rule": "The plan names the site pattern, traffic source and awareness stage it used and shows how each shaped the order; the page does not default to hero, three cards, steps, testimonials, FAQ unless the plan argues for it.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "launchable",
+        "text": "It works: phone and desktop, keyboard, and the primary action.",
+        "weight": 4,
+        "pass_rule": "The page renders at 390 px and 1440 px without overflow, can be used with a keyboard, and its primary action (form, booking or checkout link) works end to end or is listed as not verified.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "one_job",
+        "text": "The page does one job for its visitor and asks for one action.",
+        "weight": 3,
+        "pass_rule": "There is one primary call to action matching the goal field, and every section supports it.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 249,
+      "min_usd": 149,
+      "max_usd": 699,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a front-end developer. Build a landing page in one HTML file and one CSS file for the offer below. Include a hero with one call to action, proof, details, an FAQ, a final call to action and a footer. Write semantic, accessible HTML, style it mobile first, and use the colours and fonts I give. Use only the facts I give and mark missing copy as [placeholder].",
+    "not_for": [
+      "Whole websites or online shops (one page per job)",
+      "Fake reviews, invented testimonials, logos or results",
+      "Copying another company's site, brand or content",
+      "Publishing to your site without your go-ahead at the access level you set",
+      "Tracking scripts that ignore consent"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "A bakery with a Squarespace site wants a new page for its Christmas cake pre-orders, reached from Instagram posts. It should look like the rest of the site and take orders through the existing shop checkout.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "A physiotherapy clinic wants its 'Book an assessment' page rebuilt so people coming from Google search can book faster. Keep the site's header and footer. Booking runs through its online booking tool.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "A software company's pricing page converts poorly from paid search. Improve the page in place: same nav, fonts and brand, clearer plan comparison and one primary action. Static HTML site.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "A new coffee roaster has no website yet, only an Instagram account and packaging photos. Build a one-page site that takes subscription sign-ups via Formspree and matches the packaging's look.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "landing page",
+      "landing page build",
+      "page build",
+      "html landing page",
+      "one-page site",
+      "build a page",
+      "website page",
+      "sales page build",
+      "squarespace page",
+      "shopify page"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate guide listing mid-level freelance prices by project: blog post $200-500, landing page $800-2,000, 5-7 email sequence $600-1,800, ad copy set $400-1,200, case study or white paper $1,500-4,000, 2-3 minute video script $400-900.",
+        "url": "https://stealthagents.com/blog/cost-of-hiring-a-copywriter-2026"
+      },
+      {
+        "note": "YunoJuno's freelancer rate guide lists front-end engineers at an average of $77 an hour, about £466 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/frontend-developer"
+      }
+    ],
+    "family": "web_page",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "brand_guide",
+        "label": "Brand guide, if you have one",
+        "required": false,
+        "how": "Fonts, colours, logo rules and tone. Captured facts win where the guide is out of date; say where they differ."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "The client's existing nav and footer are kept, unless the plan changes them on purpose and says so.",
+      "The brand's own fonts are loaded; no system or default font replaces them.",
+      "The page works at 390 px and 1440 px wide.",
+      "The primary action works end to end (form, booking or checkout).",
+      "The brand-fidelity check (tools/check-brand-fidelity.mjs, or its manual checklist) passes against context/brand-dna.json.",
+      "Every price, offer, review, number and claim traces to the captured site or the brief; no lorem ipsum; any placeholder left is one the site and brief could not fill and is listed."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job and conversion logic",
+        "weight": 10,
+        "test": "The page does the one job the client named for its traffic source and the visitor's awareness stage, and every section moves the visitor toward the primary action. Here: A captured brand file (fonts, colours with their share, nav, footer, section patterns, voice samples, live facts), a short build plan that says patch, extend or new and why, and the page itself: a runnable HTML and CSS file on…"
+      },
+      {
+        "criterion": "Brand fidelity",
+        "weight": 25,
+        "test": "Side by side with the live site (context/brand-dna.json and screenshots) it reads as the same brand: fonts, colour proportions, radius, buttons, imagery and voice match, or each change is deliberate and stated. For this job: Nav and footer match the captured site; the brand's fonts are loaded; colours and their share of the page follow context/brand-dna.json; any deliberate change is listed in…"
+      },
+      {
+        "criterion": "Launchability",
+        "weight": 20,
+        "test": "It can go live: it works at 390 px and 1440 px, with a keyboard, the primary action works, and it uses real copy and facts. For this job: The page renders at 390 px and 1440 px without overflow, can be used with a keyboard, and its primary action (form, booking or checkout link) works end to end or is listed as not verified."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 15,
+        "test": "A competitor could not publish it unchanged: it is built from this client's own offer, facts, proof and words."
+      },
+      {
+        "criterion": "Distinctiveness vs defaults",
+        "weight": 10,
+        "test": "None of the named AI defaults (tools/ai-default-patterns.md) appears unless the plan chose it on purpose and says why. For this job: The plan names the site pattern, traffic source and awareness stage it used and shows how each shaped the order; the page does not default to hero, three cards, steps, testimonials, FAQ unless the plan argues for it."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time visitor gets what it is, who it is for and what to do next without rereading."
+      },
+      {
+        "criterion": "The page does one job for its visitor and asks for one action",
+        "weight": 10,
+        "test": "There is one primary call to action matching the goal field, and every section supports it."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "format": "markdown",
@@ -559,7 +1036,97 @@
         "note": "Copywriting rate page with ranges: blog post $250-800, 4-5 email sequence $500-5,000, ad copy $100-1,000, case study $1,200-2,000, white paper $2,000-10,000, press release $500-1,000, video script under 5 min $500-1,500.",
         "url": "https://talo.com/costs/copywriting-rates"
       }
-    ]
+    ],
+    "family": "email",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Messages and emails you already send",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "consent_basis",
+        "label": "How people agreed to hear from you",
+        "required": false,
+        "how": "The opt-in or relationship each audience has, so the right opt-out and frequency rules apply."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No discount, price, date, deadline, stock level or testimonial appears unless it is in the brief or the supplied files. Any invented item fails this criterion."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice. For this job: Word count falls inside the chosen range and the tone matches the voice notes; no spam trigger lines like 'ACT NOW!!!' or 'free money'."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: Five subject lines with preview text, the full email body with one clear button, and a short plain-text version."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Five subject lines are given, each under 60 characters, using at least three different approaches, and none promises something the email does not deliver."
+      },
+      {
+        "criterion": "The email has one main action and says it plainly",
+        "weight": 6,
+        "test": "There is one primary call to action matching the brief, shown as a button line and once in the text; no competing links."
+      },
+      {
+        "criterion": "The reader knows the offer, the dates and any limits early",
+        "weight": 6,
+        "test": "The offer and every date or limit in the brief appear in the first two paragraphs and match the brief exactly."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "format": "markdown",
@@ -753,7 +1320,97 @@
         "note": "Copywriting rate page with ranges: blog post $250-800, 4-5 email sequence $500-5,000, ad copy $100-1,000, case study $1,200-2,000, white paper $2,000-10,000, press release $500-1,000, video script under 5 min $500-1,500.",
         "url": "https://talo.com/costs/copywriting-rates"
       }
-    ]
+    ],
+    "family": "email",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Messages and emails you already send",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "consent_basis",
+        "label": "How people agreed to hear from you",
+        "required": false,
+        "how": "The opt-in or relationship each audience has, so the right opt-out and frequency rules apply."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No statistic, price, testimonial, customer name, deadline or result appears unless it is in the brief or the supplied files. Any invented item fails this criterion."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A sequence map with send timing, then every email in full with subject line, preview text, body and one call to action. Also: At least half of the emails give useful advice, a story or a how-to with no sales ask beyond a soft link."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Each email has a stated job in the sequence map, the order makes sense, and the last email asks for the goal action."
+      },
+      {
+        "criterion": "Each email has one idea and one action",
+        "weight": 6,
+        "test": "Every email contains exactly one primary call to action and covers one main idea."
+      },
+      {
+        "criterion": "Send timing and subject lines are given and are sensible",
+        "weight": 6,
+        "test": "The map gives a send delay for each email, and each email has a subject line under 60 characters and preview text."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "format": "markdown",
@@ -925,7 +1582,79 @@
         "note": "Rate guide listing mid-level freelance prices by project: blog post $200-500, landing page $800-2,000, 5-7 email sequence $600-1,800, ad copy set $400-1,200, case study or white paper $1,500-4,000, 2-3 minute video script $400-900.",
         "url": "https://stealthagents.com/blog/cost-of-hiring-a-copywriter-2026"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No market figure, benchmark, conversion rate, competitor fact or result appears unless it is in the brief or the supplied files. Any invented item fails this criterion."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: A written plan with goals, target customer, 3 to 5 chosen channels with reasons, week-by-week actions for 90 days, a budget split, and the numbers to track. Also: Three to six metrics are named with a starting value (from the brief, or marked 'unknown') and a 90-day target tied to the goal."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week. For this job: Total planned spend is at or under the budget, and the weekly workload is realistic for the team size given."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read."
+      },
+      {
+        "criterion": "Each chosen channel has a reason tied to the audience and goal",
+        "weight": 6,
+        "test": "3 to 5 channels are chosen, each with a stated reason, and at least one common channel is ruled out with a reason."
+      },
+      {
+        "criterion": "The plan says what to do each week",
+        "weight": 6,
+        "test": "Actions are listed for each of the 12 or 13 weeks, each with who does it (you, helper, freelancer) and a clear output."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "format": "markdown",
@@ -1104,7 +1833,75 @@
         "note": "Copywriting rate page with ranges: blog post $250-800, 4-5 email sequence $500-5,000, ad copy $100-1,000, case study $1,200-2,000, white paper $2,000-10,000, press release $500-1,000, video script under 5 min $500-1,500.",
         "url": "https://talo.com/costs/copywriting-rates"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every search volume or difficulty figure quoted appears in the supplied data; where no data was given, the plan says so and does not show numbers.",
+      "No search volume, ranking position, traffic estimate, competitor fact or result appears unless it is in the brief or the supplied files. Any invented item fails this criterion."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook. For this job: Each topic names the searcher's goal and a page type (guide, service page, comparison, FAQ) that fits that goal."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 10,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: A plan of 15 to 40 topics, each with a target search phrase, the reader's goal, page type, a short outline, and a priority order, built from the keyword data and site details you supply."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read. For this job: Topics are ranked, the top five have a stated reason, and the plan avoids duplicate pages for the same phrase."
+      },
+      {
+        "criterion": "Topics lead toward what the business sells",
+        "weight": 10,
+        "test": "Each topic states how it connects to the offer or goal, and at least a third of topics are close to buying."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "format": "markdown",
@@ -1272,7 +2069,75 @@
         "note": "SEO audit pricing guide: freelancer or small-agency lite audits cost $500-2,500, small sites under 20 pages about $500-1,000, freelancer hourly rates $50-150.",
         "url": "https://www.eesel.ai/blog/how-much-does-an-seo-audit-cost"
       }
-    ]
+    ],
+    "family": "audit",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "account_access",
+        "label": "Read access to the account, site or data",
+        "required": true,
+        "how": "Level 1 (read) through the client's connector, or an export covering the period. Pull the real snapshot before judging anything."
+      },
+      {
+        "id": "goals",
+        "label": "What success means here",
+        "required": true,
+        "how": "The target the client measures (sales, leads, cost per result, response time, margin), the period, and what changed recently."
+      },
+      {
+        "id": "benchmarks",
+        "label": "Earlier results or a comparison",
+        "required": false,
+        "how": "A previous period, a competitor or a target to compare against, so findings say better or worse than what."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "The diagnosis is made from the client's real data or pages, pulled at level 1 (read), with the period stated.",
+      "No score, ranking, traffic figure, backlink count, speed result or competitor fact appears unless it is in the brief or the supplied files. Any invented item fails this criterion."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 13,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: A report listing the issues found in the material you supply, ranked by impact and effort, with the exact fix for each and a 30-day action list."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked. For this job: Each finding quotes or points to a page, title or data row from the supplied material; the report names what it could not check (speed, backlinks, live rankings) and does not guess at them."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today. For this job: For each issue the report gives the page, the current text or setting, and the replacement text or the exact change."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: Technical terms are explained in a few words on first use; no sentence runs over 25 words in the summary."
+      },
+      {
+        "criterion": "Issues are ranked by impact and effort",
+        "weight": 12,
+        "test": "Issues are grouped as high, medium or low priority with a stated reason, and a 30-day action list orders them."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "format": "markdown",
@@ -1464,7 +2329,79 @@
         "note": "Social media pricing guide: audit $500-2,000, strategy $800-5,000, content calendar about $800 a month, 30 basic posts $800-1,500, copywriting only $15-50 per post, landing page optimisation $500-1,500.",
         "url": "https://socialrails.com/blog/how-to-price-social-media-services"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No offer, price, review, event, statistic or customer name appears unless it is in the brief or the supplied files. Any invented item fails this criterion."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: A 30-day calendar table (date, platform, post type, topic) plus the full caption for each post, hashtags and a short note on what image or clip to use. Also: Every calendar row has a complete caption, a call to action where fitting, hashtags where fitting, and a visual note."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week. For this job: Each item in the dates field appears on the right date, and no unlisted event or holiday is treated as a business event."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read."
+      },
+      {
+        "criterion": "The month has a sensible mix and spread of post types",
+        "weight": 6,
+        "test": "Posts are spread across the month, no more than three promotional posts in a row, and at least three post types (tips, behind the scenes, offers, stories, questions) appear."
+      },
+      {
+        "criterion": "Captions suit each platform",
+        "weight": 6,
+        "test": "Each caption fits its platform's norms and length, and hashtags are used in a count that suits the platform."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "format": "markdown",
@@ -1639,7 +2576,91 @@
         "note": "Social media pricing guide: audit $500-2,000, strategy $800-5,000, content calendar about $800 a month, 30 basic posts $800-1,500, copywriting only $15-50 per post, landing page optimisation $500-1,500.",
         "url": "https://socialrails.com/blog/how-to-price-social-media-services"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No offer, price, review, statistic or customer name appears unless it is in the brief or the supplied files. Any invented item fails this criterion."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice. For this job: Every post ties to the topic given and the tone matches the voice notes; no hashtag spam over 8 tags."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: Ten posts by default, each with caption, hashtags and a suggested image or clip idea, written for the platforms you choose."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Offer or launch posts include a call to action that matches the goal field."
+      },
+      {
+        "criterion": "The posts are different from each other",
+        "weight": 6,
+        "test": "No two posts share the same hook or structure, and at least three formats appear (question, tip, story, offer, list)."
+      },
+      {
+        "criterion": "Captions suit each platform",
+        "weight": 6,
+        "test": "Length, tone and hashtag use match the named platform for each post."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "format": "markdown",
@@ -1813,7 +2834,79 @@
         "note": "Rate guide listing mid-level freelance prices by project: blog post $200-500, landing page $800-2,000, 5-7 email sequence $600-1,800, ad copy set $400-1,200, case study or white paper $1,500-4,000, 2-3 minute video script $400-900.",
         "url": "https://stealthagents.com/blog/cost-of-hiring-a-copywriter-2026"
       }
-    ]
+    ],
+    "family": "strategy",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No statistic, customer quote, award, competitor fact or result appears unless it is in the brief or the supplied files. Any invented item fails this criterion."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook. For this job: The positioning statement names who the customer is, what they need and the main alternative, in a form a stranger could repeat."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: A positioning statement, value proposition, three to five message pillars with proof, a tagline shortlist, an elevator pitch, and example copy for a homepage hero and an email intro. Also: Example hero copy, an elevator pitch of under 40 words and an email intro are included and follow the pillars."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read."
+      },
+      {
+        "criterion": "The difference is something the buyer can actually claim",
+        "weight": 6,
+        "test": "Every claimed difference is supported by the strengths or proof in the brief; claims like 'best' or 'only' appear only if the brief supports them."
+      },
+      {
+        "criterion": "Message pillars each carry proof or an example",
+        "weight": 6,
+        "test": "Three to five pillars, each with a proof point taken from the brief and a plain-word version a customer would say."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "format": "markdown",
@@ -1988,7 +3081,79 @@
         "note": "Social media pricing guide: audit $500-2,000, strategy $800-5,000, content calendar about $800 a month, 30 basic posts $800-1,500, copywriting only $15-50 per post, landing page optimisation $500-1,500.",
         "url": "https://socialrails.com/blog/how-to-price-social-media-services"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No statistic, benchmark, press contact, partner, price or result appears unless it is in the brief or the supplied files. Any invented item fails this criterion."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook. For this job: The assets listed in the brief appear in the plan with a specific use for each."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: A launch plan with goal, audience, key message, a dated task list by week, channel actions, draft announcement copy for the main channels, and the numbers to check afterwards."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week. For this job: Every task is tied to a week or date relative to launch, and total effort and spend are realistic for the team and budget stated."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read."
+      },
+      {
+        "criterion": "Draft announcement copy is included for the main channels",
+        "weight": 6,
+        "test": "At least an email, a social post and a short site or press blurb are drafted and match the key message and the launch date."
+      },
+      {
+        "criterion": "The plan says how to judge the launch",
+        "weight": 6,
+        "test": "Three to five numbers are named with targets that tie to the stated goal, and a review date after launch is set."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "format": "markdown",
@@ -2136,7 +3301,68 @@
         "note": "Social media pricing guide: audit $500-2,000, strategy $800-5,000, content calendar about $800 a month, 30 basic posts $800-1,500, copywriting only $15-50 per post, landing page optimisation $500-1,500.",
         "url": "https://socialrails.com/blog/how-to-price-social-media-services"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No price, feature, revenue, customer count, ad spend or traffic figure appears unless it is in the brief or the supplied files. Any invented item fails this criterion."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 13,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: A report on up to five competitors covering positioning, offers, pricing shown, proof, strengths and weak spots, a comparison table, and five specific moves for you."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked. For this job: Each statement about a competitor's price, feature, claim or message can be matched to the pasted material; items not found are marked 'not shown'."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today. For this job: Five specific moves are given, each linked to a finding and to the stated decision goal."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: A table covers each competitor and the buyer on the same rows (audience, offer, price shown, proof, main message)."
+      },
+      {
+        "criterion": "The report finds real gaps and weak spots",
+        "weight": 12,
+        "test": "At least three gaps or weak spots are named, each tied to a quote or fact from the material."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "format": "markdown",
@@ -2289,7 +3515,74 @@
         "note": "Social media pricing guide: audit $500-2,000, strategy $800-5,000, content calendar about $800 a month, 30 basic posts $800-1,500, copywriting only $15-50 per post, landing page optimisation $500-1,500.",
         "url": "https://socialrails.com/blog/how-to-price-social-media-services"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Details such as goals, frustrations and quotes appear in the supplied material; any assumption is labelled 'assumed' and kept to a short list.",
+      "No age, income, statistic, survey result, quote or named person appears unless it is in the brief or the supplied files. Any invented item fails this criterion."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: Two to four personas, each with goals, frustrations, buying triggers, objections, the words they use, where to reach them, and message ideas, plus a short guide to using them."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: Each persona differs in need or buying trigger, and the pack says which is the main one."
+      },
+      {
+        "criterion": "The personas use real customer wording",
+        "weight": 8,
+        "test": "Each persona includes at least two phrases taken from the supplied material, shown in quotes."
+      },
+      {
+        "criterion": "The pack tells the buyer how to use it",
+        "weight": 8,
+        "test": "Each persona has message ideas and channels, and the pack ends with a short guide matching the use field."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "format": "markdown",
@@ -2466,7 +3759,91 @@
         "note": "Social media pricing guide: audit $500-2,000, strategy $800-5,000, content calendar about $800 a month, 30 basic posts $800-1,500, copywriting only $15-50 per post, landing page optimisation $500-1,500.",
         "url": "https://socialrails.com/blog/how-to-price-social-media-services"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No speaker credential, attendee number, testimonial, bonus or guest appears unless it is in the brief or the supplied files. Any invented item fails this criterion."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: Sign-up page copy, three invite emails, two reminder emails, a follow-up email, and six social posts with dates counted back from the event. Also: Each email and post has a send date or day offset relative to the event date and they do not fall on or after the event unless it is the follow-up."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: The takeaways from the brief are used as concrete reasons in the page and invites, not vague promises."
+      },
+      {
+        "criterion": "Date, time, place and price are right everywhere",
+        "weight": 6,
+        "test": "Every mention of date, time, place, length and price matches the brief; no other time zone or detail is added."
+      },
+      {
+        "criterion": "Every piece in the deliverable is present",
+        "weight": 6,
+        "test": "Sign-up copy, three invites, two reminders, one follow-up and six social posts are all present."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "format": "markdown",
@@ -2651,7 +4028,91 @@
         "note": "Copywriting rate page with ranges: blog post $250-800, 4-5 email sequence $500-5,000, ad copy $100-1,000, case study $1,200-2,000, white paper $2,000-10,000, press release $500-1,000, video script under 5 min $500-1,500.",
         "url": "https://talo.com/costs/copywriting-rates"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No statistic, study, quote, price, law or source appears unless it is in the brief or the supplied files. Any invented item fails this criterion."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof. For this job: It includes concrete steps, examples or numbers from the brief; no paragraph opens with an empty line like 'In today's fast-paced world'."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A 1,000 to 2,000 word article with title, meta description, headings, internal link suggestions and a call to action, ready to publish. Also: The tone matches the audience, internal links use the pages listed (if any), and a call to action matches the goal."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words."
+      },
+      {
+        "criterion": "The article answers the search quickly and completely",
+        "weight": 6,
+        "test": "The main question is answered in the first 150 words and the headings cover the other questions a searcher likely has."
+      },
+      {
+        "criterion": "Title, meta description and headings are set up for search",
+        "weight": 6,
+        "test": "There is a title under 60 characters with the main phrase, a meta description under 160 characters, and clear H2 headings; the main phrase is not stuffed."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "format": "markdown",
@@ -2842,7 +4303,91 @@
         "note": "Copywriting rate page with ranges: blog post $250-800, 4-5 email sequence $500-5,000, ad copy $100-1,000, case study $1,200-2,000, white paper $2,000-10,000, press release $500-1,000, video script under 5 min $500-1,500.",
         "url": "https://talo.com/costs/copywriting-rates"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No statistic, study, quote, law, price or source appears unless it is in the brief or the supplied files. Any invented item fails this criterion."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A 2,500 to 6,000 word guide with title, contents list, chapters, practical steps, a checklist and a closing call to action, ready to design into a PDF. Also: The brief's notes, examples or know-how appear in the text, and the closing call to action matches the purpose."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Word count is within 15 percent of the target, headings are clear, and most sentences are under 25 words."
+      },
+      {
+        "criterion": "The guide takes a beginner from problem to result",
+        "weight": 6,
+        "test": "Chapters cover the whole path the audience needs, in order, and each chapter ends with a clear step or takeaway."
+      },
+      {
+        "criterion": "It gives steps, examples and a checklist the reader can use today",
+        "weight": 6,
+        "test": "Each chapter contains at least one concrete step or example, and a checklist or summary of steps is included."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "format": "markdown",
@@ -3011,7 +4556,97 @@
         "note": "Rate guide listing mid-level freelance prices by project: blog post $200-500, landing page $800-2,000, 5-7 email sequence $600-1,800, ad copy set $400-1,200, case study or white paper $1,500-4,000, 2-3 minute video script $400-900.",
         "url": "https://stealthagents.com/blog/cost-of-hiring-a-copywriter-2026"
       }
-    ]
+    ],
+    "family": "email",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Messages and emails you already send",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "consent_basis",
+        "label": "How people agreed to hear from you",
+        "required": false,
+        "how": "The opt-in or relationship each audience has, so the right opt-out and frequency rules apply."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No statistic, quote, offer, event or customer name appears unless it is in the brief or the supplied files. Any invented item fails this criterion."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice. For this job: Tone follows the voice notes or past issue, and the length falls inside the chosen range."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: Subject line options, preview text, and the full issue with an opening, two to four sections and a clear call to action, in markdown."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Sections have short headings, paragraphs are four sentences or fewer, and links or buttons are clearly labelled."
+      },
+      {
+        "criterion": "Every item from the brief is used and nothing new is added as fact",
+        "weight": 6,
+        "test": "Each item in the brief appears in the issue, and details like dates, prices and names match the brief exactly."
+      },
+      {
+        "criterion": "Subject lines and the opening make people want to read",
+        "weight": 6,
+        "test": "Three subject lines under 60 characters are offered, and the opening gets to the point in two sentences or fewer."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "format": "markdown",
@@ -3187,7 +4822,91 @@
         "note": "Rate guide listing mid-level freelance prices by project: blog post $200-500, landing page $800-2,000, 5-7 email sequence $600-1,800, ad copy set $400-1,200, case study or white paper $1,500-4,000, 2-3 minute video script $400-900.",
         "url": "https://stealthagents.com/blog/cost-of-hiring-a-copywriter-2026"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "All figures, quotes and results match the brief exactly; no new percentage, time saving, dollar figure or quote is added, and quotes are not reworded."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A 600 to 1,200 word case study with headline, snapshot box, challenge, solution, results, pull quotes and call to action, using only the facts you supply. Also: A call to action related to the case appears at the end and matches the cta field if given."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: A snapshot box lists customer, problem, solution and top results in under 80 words, and headings are clear."
+      },
+      {
+        "criterion": "It tells a story: problem, what was done, result",
+        "weight": 6,
+        "test": "The text has a clear challenge, a solution section describing what was done, and a results section; results come after the story and are not buried."
+      },
+      {
+        "criterion": "The customer is the hero and credit is fair",
+        "weight": 6,
+        "test": "The customer's choices and effort are shown, claims about the buyer's product stay within the results given, and approval status is respected (anonymous means no identifying details)."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "format": "markdown",
@@ -3389,7 +5108,91 @@
         "note": "Copywriting rate page with ranges: blog post $250-800, 4-5 email sequence $500-5,000, ad copy $100-1,000, case study $1,200-2,000, white paper $2,000-10,000, press release $500-1,000, video script under 5 min $500-1,500.",
         "url": "https://talo.com/costs/copywriting-rates"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No year founded, team size, qualification, award, client, price or testimonial appears unless it is in the brief or the supplied files. Any invented item fails this criterion."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice. For this job: The about copy uses story and facts from the brief, speaks about the customer's needs, and avoids empty phrases like 'passionate about excellence'."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: Finished copy for each page you choose: headings, body text, buttons, plus page title and meta description, with notes on how to lay each page out."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Every page opens with a heading and line that state the offer or topic and the audience."
+      },
+      {
+        "criterion": "Each page leads to the chosen action",
+        "weight": 6,
+        "test": "Each page has a call to action that matches the goal field and appears at least twice on the home and service pages."
+      },
+      {
+        "criterion": "Each page has a title, meta description and clear headings",
+        "weight": 6,
+        "test": "Each page includes a title under 60 characters, a meta description under 160 characters and H1 and H2 headings."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "format": "markdown",
@@ -3581,7 +5384,91 @@
         "note": "Copywriting rate page with ranges: blog post $250-800, 4-5 email sequence $500-5,000, ad copy $100-1,000, case study $1,200-2,000, white paper $2,000-10,000, press release $500-1,000, video script under 5 min $500-1,500.",
         "url": "https://talo.com/costs/copywriting-rates"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No statistic, customer quote, price, award or result appears unless it is in the brief or the supplied files. Any invented item fails this criterion."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice. For this job: Lines are short, written as speech, with few sentences over 20 words, and no stage directions mixed into spoken lines."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A scene-by-scene script with spoken lines, on-screen text and a simple shot list, timed to the length you pick. Also: Each scene lists a visual or on-screen text, the shot list is present, and the last scene has a call to action matching the goal."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words."
+      },
+      {
+        "criterion": "The first 10 seconds give a reason to keep watching",
+        "weight": 6,
+        "test": "The opening lines name the viewer's problem or promise within the first 25 words."
+      },
+      {
+        "criterion": "The script fits the target length",
+        "weight": 6,
+        "test": "Spoken word count is within 15 percent of 140 words per minute times the chosen minutes."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "format": "markdown",
@@ -3739,7 +5626,91 @@
         "note": "Freelancer listing for podcast show notes: basic notes $60-100 and premium notes $100-150 per episode depending on length, with summary, talking points, quotes and keywords.",
         "url": "https://contra.com/s/ooRY7vcc-podcast-show-notes"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "If timestamps exist in the transcript, each chapter timestamp matches where its topic starts; if none exist, chapters are labelled by order and no times are invented."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: Episode title options, a short and a long summary, bullet takeaways, timestamped chapters, notable quotes, links mentioned and a call to action, from the transcript you paste. Also: Three title options under 70 characters are given, and the summary names the topic and guest early."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words."
+      },
+      {
+        "criterion": "Everything in the notes comes from the transcript",
+        "weight": 6,
+        "test": "Every claim, name, number and quote can be found in the transcript; quotes are word-for-word."
+      },
+      {
+        "criterion": "Takeaways are useful on their own",
+        "weight": 6,
+        "test": "Three to seven takeaways each state a specific idea from the episode, not a vague theme."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "format": "markdown",
@@ -3920,7 +5891,91 @@
         "note": "LinkedIn ghostwriting rate guide: $50-150 per post for generalists, $200-350 for niche writers, $400-500 for proven writers; 4-post starter packages $750-1,200.",
         "url": "https://dev.to/edward_berg_49b842f7dac9e/linkedin-ghostwriting-rates-in-2026-what-to-charge-and-how-to-land-clients-who-actually-pay-it-5f8"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No story, client, number or result appears that is not in the material; anecdotes are not invented or embellished."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice. For this job: Posts are written in first person, follow the voice notes or samples, and avoid hype openers like 'I'm thrilled to announce'."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: Eight posts by default, each with a hook, body and closing line, plus a posting order and one suggested comment to start discussion."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Each post has a first line under 15 words that names the topic or tension, and no two posts open the same way."
+      },
+      {
+        "criterion": "The pack has a mix of post types",
+        "weight": 6,
+        "test": "At least three types are used (story, lesson, opinion, how-to, question) and the posts are scannable with short lines."
+      },
+      {
+        "criterion": "The pack serves the chosen goal",
+        "weight": 6,
+        "test": "Posts connect to the goal field, at most one in four is a direct promotion, and no hashtag stuffing (3 tags or fewer)."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "format": "markdown",
@@ -4080,7 +6135,91 @@
         "note": "Copywriting rate page with ranges: blog post $250-800, 4-5 email sequence $500-5,000, ad copy $100-1,000, case study $1,200-2,000, white paper $2,000-10,000, press release $500-1,000, video script under 5 min $500-1,500.",
         "url": "https://talo.com/costs/copywriting-rates"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "Every date, number, name and claim appears in the brief; the quote uses only words or ideas the buyer supplied and attributes them to the right person."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice. For this job: No superlatives like 'revolutionary', 'world-class' or 'best-in-class' unless backed by a fact in the brief; sentences stay under 30 words."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A 350 to 500 word press release with headline, subhead, dateline, body, a quote, boilerplate and contact block, plus a two-line email pitch."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: A pitch of two or three lines for a journalist is included and names why the story matters to their readers."
+      },
+      {
+        "criterion": "The most newsworthy point is in the headline and first paragraph",
+        "weight": 6,
+        "test": "The headline and first paragraph answer who, what, when, where and why in plain words."
+      },
+      {
+        "criterion": "It follows press release format",
+        "weight": 6,
+        "test": "It includes headline, dateline, body, quote, boilerplate, contact block and an end marker, in that standard order."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "format": "markdown",
@@ -4263,7 +6402,91 @@
         "note": "Rate guide listing mid-level freelance prices by project: blog post $200-500, landing page $800-2,000, 5-7 email sequence $600-1,800, ad copy set $400-1,200, case study or white paper $1,500-4,000, 2-3 minute video script $400-900.",
         "url": "https://stealthagents.com/blog/cost-of-hiring-a-copywriter-2026"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "Statistics, research claims and quotes are traceable to the supplied sources, which are named in the text or a reference list; unsupported points are marked as opinion."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice. For this job: Product mentions are limited to the recommendation and next steps sections, and the language is plain and specific."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A 2,000 to 4,000 word white paper with executive summary, problem, analysis, recommended approach, an example and next steps, with every claim tied to the sources you supply."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: The executive summary states a thesis, each section supports it, and the conclusion returns to it."
+      },
+      {
+        "criterion": "It gives readers something to use",
+        "weight": 6,
+        "test": "A framework, checklist or step list is included that the audience can apply."
+      },
+      {
+        "criterion": "It has the right length and structure",
+        "weight": 6,
+        "test": "Word count is within 15 percent of target and it has an executive summary, headings, and a references or sources list."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "format": "markdown",
@@ -4440,6 +6663,89 @@
         "note": "Rate guide listing mid-level freelance prices by project: blog post $200-500, landing page $800-2,000, 5-7 email sequence $600-1,800, ad copy set $400-1,200, case study or white paper $1,500-4,000, 2-3 minute video script $400-900.",
         "url": "https://stealthagents.com/blog/cost-of-hiring-a-copywriter-2026"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: From your source piece: a newsletter version, five social posts, a LinkedIn article outline, three short quotes or pull-outs, a short video script and a two-week posting plan. Also: Social posts use different points from the source, and no two share the same opening line."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words."
+      },
+      {
+        "criterion": "Every piece stays true to the source",
+        "weight": 6,
+        "test": "Every claim, number and quote in the new pieces appears in the source; nothing is added or exaggerated."
+      },
+      {
+        "criterion": "Each piece suits its channel",
+        "weight": 6,
+        "test": "Length, structure and tone match each chosen channel, and each piece stands alone without needing the source."
+      }
+    ],
+    "mode_default": "extend"
   }
 ]

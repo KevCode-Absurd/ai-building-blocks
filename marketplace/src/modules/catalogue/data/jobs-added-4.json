@@ -245,7 +245,67 @@
         "note": "Airtable's community jobs board holds over 1,000 posts, many from small firms asking for help to design, audit or clean up their bases.",
         "url": "https://community.airtable.com/jobs-board-16"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every name, rate, date, amount and filled-in row comes from the brief; any sample row the draft adds is labelled 'example'; no password, card number or login appears."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: A build sheet tab by tab or table by table: each field with its type and allowed values, formulas with a worked example, links, views and simple automations, naming and update rules, checks, rows filled from your data and a one-page guide on who updates what."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other. For this job: The draft includes who updates what and how often, naming and change rules, and at least two checks (such as required fields, a total that must match, or a date warning); a review or move lists steps in order with a check after each step."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Tab, field and folder names are short and plain; instructions are numbered steps of under 25 words each; terms like rollup or lookup are explained the first time they appear."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "Delivers the piece chosen, built for the tool named, and covers everything the…",
+        "weight": 10,
+        "test": "The draft uses the chosen tool's own terms (tabs and cells for a sheet; tables, fields and views for Airtable; databases and properties for Notion; fields and stages for a CRM; folders for a drive) and every item the brief says to track or fix appears in it."
+      },
+      {
+        "criterion": "Every field has a type and allowed values, and every calculation is written out",
+        "weight": 10,
+        "test": "Each tab or table lists its fields with a type (text, number, date, pick list, link) and the allowed values for pick lists; each calculation shows the exact formula or rollup and one worked example; a folder plan gives an example name for every naming rule."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "draft-review-ranked-fixes",
@@ -454,7 +514,69 @@
         "note": "Editorial Freelancers Association 2026 rate chart: developmental editing of business and marketing writing at $60 to $75 an hour, and manuscript assessment at $40 to $54 an hour.",
         "url": "https://www.the-efa.org/rates/"
       }
-    ]
+    ],
+    "family": "audit",
+    "context_requirements": [
+      {
+        "id": "account_access",
+        "label": "Read access to the account, site or data",
+        "required": true,
+        "how": "Level 1 (read) through the client's connector, or an export covering the period. Pull the real snapshot before judging anything."
+      },
+      {
+        "id": "goals",
+        "label": "What success means here",
+        "required": true,
+        "how": "The target the client measures (sales, leads, cost per result, response time, margin), the period, and what changed recently."
+      },
+      {
+        "id": "benchmarks",
+        "label": "Earlier results or a comparison",
+        "required": false,
+        "how": "A previous period, a competitor or a target to compare against, so findings say better or worse than what."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "The diagnosis is made from the client's real data or pages, pulled at level 1 (read), with the period stated.",
+      "Rewrites use only facts found in the draft or brief; where a fix needs a fact the buyer must supply, the draft shows a placeholder such as [add figure]; no claim is called proven, legal or compliant."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 13,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: A review tied to your text: a verdict on each slide, section, goal or question; gaps, weak claims, risky promises and numbers that do not match, each quoted with its fix and ranked by impact; a check against any rules you paste; rewrites of the weakest parts (the whole text if under 500…"
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked. For this job: Every slide, section, goal or question gets a short verdict (works, weak or missing), and every rule or criterion pasted in the brief is listed as met, partly met or not met with its place in the draft; with no criteria given, the review states what the reader needs and checks against…"
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today. For this job: Each issue names the slide, section or line and quotes it, then gives a concrete fix or new wording; issues are in priority order with a one-line reason tied to the reader, and the top three to five are marked. Advice with no quote does not count."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: Each issue is stated in one or two short sentences without jargon, and the review quotes at least two things that work well, not only problems."
+      },
+      {
+        "criterion": "Ready-to-paste rewrites of the weakest parts, and the questions the reader will…",
+        "weight": 12,
+        "test": "At least three weak parts are rewritten in full (or the whole text if it is under 500 words), and at least five questions the stated reader is likely to ask are listed."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "id": "checklist-scorecard-job-aid",
@@ -674,7 +796,832 @@
         "note": "Contra listing that sells written SOPs, user guides and operation manuals at $100 each, a sign that small firms pay for written procedures.",
         "url": "https://contra.com/s/A6oEvErs-standard-operating-procedures-user-guides-operation-manuals"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every temperature, time limit, product, tool and standard appears in the brief; any step not in the brief is marked 'suggested' so the owner can approve it; no legal or safety rule is stated as required."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 15,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: Checklists by area, stage or day with each item, owner, timing, what good looks like, what to do on a fail and sign-off lines; or a scorecard with weighted criteria, a scoring guide with an example for each score and a follow-up form; or a one-page guide to keep at the station or desk."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents. For this job: Each checklist or scorecard says what to do on a fail (who to tell, what to fix, what to record); any one-page guide or checklist has about 25 items or fewer; a scorecard includes a follow-up action form with dates."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Items are under 15 words each, use everyday words, and explain any term a new starter would not know."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template. For this job: Each item starts with a verb, holds one action and shows who does it and when (time, day or stage); each checklist ends with a sign-off line; for a scorecard, each line has a weight and a scoring guide with an example for each score."
+      },
+      {
+        "criterion": "Covers every area, stage, role or task named in the brief, in the order the…",
+        "weight": 15,
+        "test": "Each area, stage or role in the brief has its own checklist or section, items follow the order of the work described, and nothing the brief lists is missing."
+      }
+    ],
+    "mode_default": "patch"
+  },
+  {
+    "id": "website-or-store-launch-checklist",
+    "title": "Website or online store launch checklist",
+    "summary": "A launch checklist built from your real site or store: domain, pages, forms, checkout, tracking, redirects and first-week checks, each with an owner.",
+    "area": "design",
+    "deliverable": "Tick lists for before launch, launch day and the first week, built from your site or store as it stands: each item with what to check, where, the owner, what good looks like and what to do on a fail, plus a sign-off line.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "site_url",
+        "label": "Your site or store address",
+        "type": "url",
+        "required": true,
+        "help": "The live or staging address. We check the list against what is really there."
+      },
+      {
+        "id": "platform",
+        "label": "Platform",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Squarespace",
+          "Wix",
+          "Webflow",
+          "WordPress",
+          "Shopify",
+          "Other"
+        ]
+      },
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "New website launch",
+          "New online store launch",
+          "Store migration switch-over",
+          "Redesign going live"
+        ]
+      },
+      {
+        "id": "work",
+        "label": "Describe the work, area or role",
+        "type": "longtext",
+        "required": true,
+        "help": "What happens, in what order, who does it and when. Paste your SOP or notes.",
+        "max": 15000
+      },
+      {
+        "id": "count",
+        "label": "How many checklists, guides or scorecards?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 5.",
+        "max": 30
+      },
+      {
+        "id": "standards",
+        "label": "What good looks like",
+        "type": "longtext",
+        "required": false,
+        "help": "Your standards, limits and targets, such as fridges at 5°C or below, or reply within 2 hours.",
+        "max": 4000
+      },
+      {
+        "id": "tools",
+        "label": "Tools, products or systems used",
+        "type": "text",
+        "required": false,
+        "max": 600
+      },
+      {
+        "id": "roles",
+        "label": "Who does it and who signs off",
+        "type": "text",
+        "required": false,
+        "help": "Roles are fine, such as shift lead or manager.",
+        "max": 400
+      },
+      {
+        "id": "fail_actions",
+        "label": "What to do when a check fails",
+        "type": "longtext",
+        "required": false,
+        "help": "Who to tell, what to fix and what to write down.",
+        "max": 2000
+      },
+      {
+        "id": "format",
+        "label": "How will it be used?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Printed on paper",
+          "On a phone or tablet",
+          "In a spreadsheet",
+          "In a checklist app"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "covers_brief",
+        "text": "Covers every area, stage, role or task named in the brief, in the order the work happens.",
+        "weight": 5,
+        "pass_rule": "Each area, stage or role in the brief has its own checklist or section, items follow the order of the work described, and nothing the brief lists is missing.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "tickable_items",
+        "text": "Every item is one action someone can tick, with an owner and a time; scorecards are weighted with a scoring guide.",
+        "weight": 5,
+        "pass_rule": "Each item starts with a verb, holds one action and shows who does it and when (time, day or stage); each checklist ends with a sign-off line; for a scorecard, each line has a weight and a scoring guide with an example for each score.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_steps",
+        "text": "Steps, limits and standards come from the buyer, and anything added is marked as a suggestion.",
+        "weight": 5,
+        "pass_rule": "Every temperature, time limit, product, tool and standard appears in the brief; any step not in the brief is marked 'suggested' so the owner can approve it; no legal or safety rule is stated as required.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "fail_and_format",
+        "text": "It says what to do when a check fails and fits the way it will be used.",
+        "weight": 4,
+        "pass_rule": "Each checklist or scorecard says what to do on a fail (who to tell, what to fix, what to record); any one-page guide or checklist has about 25 items or fewer; a scorecard includes a follow-up action form with dates.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "site_specific",
+        "text": "The checks name this site's real pages, forms, checkout steps and integrations.",
+        "weight": 4,
+        "pass_rule": "Items name the actual pages, forms, payment and shipping settings, apps and tracking found on the site or in the brief, not a generic list; anything that could not be checked is listed as such.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 49,
+      "min_usd": 29,
+      "max_usd": 199,
+      "size": {
+        "field": "count",
+        "unit": "checklist",
+        "included": 5,
+        "per_unit_usd": 8
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a website launch specialist. Build a launch checklist for the site or store below: before launch, launch day and first week. Each item is one action with where to check it, the owner, what good looks like and what to do on a fail. Cover domain and DNS, pages and links, forms, checkout and payments if it sells, page titles and alt text, mobile checks, analytics and consent, redirects and backups. Use the site's real pages and settings; mark anything you could not check.",
+    "not_for": [
+      "Safety-critical, medical or regulated procedures that need an expert to sign them off",
+      "Legal, food safety or health and safety compliance sign-off",
+      "Legal, payroll or tax steps for taking on your first employee",
+      "Scoring named staff for pay, discipline or firing decisions",
+      "Driver route planning or stop order",
+      "Insurance, legal or claims advice for your clients"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "A pottery studio is moving its site to Squarespace and going live next Friday. We need a launch list for the domain switch, the class booking pages, the contact form and analytics. Staging link included.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "A small skincare brand is launching a Shopify store. Launch-day and first-week checks for orders, emails, payments, tax and shipping, and tracking.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "A law firm is switching its WordPress site to Webflow with 40 old URLs. We need checks for redirects, forms going to the right inbox, cookie consent and page titles, with owners for each.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "A clothing shop is migrating from WooCommerce to Shopify. A switch-over checklist with a freeze window, test orders, redirects and the first-week watch list.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "website launch checklist",
+      "go-live checklist",
+      "store launch checklist",
+      "pre-launch checks",
+      "site launch",
+      "shopify launch checklist"
+    ],
+    "demand_sources": [
+      {
+        "note": "UK Food Standards Agency guidance (Safer food, better business) asks small food businesses to write down their safe methods and keep daily records in a diary for inspectors.",
+        "url": "https://www.gov.uk/government/publications/safer-food-better-business-sfbb/safer-food-better-business-sfbb"
+      },
+      {
+        "note": "Contra listing that sells written SOPs, user guides and operation manuals at $100 each, a sign that small firms pay for written procedures.",
+        "url": "https://contra.com/s/A6oEvErs-standard-operating-procedures-user-guides-operation-manuals"
+      }
+    ],
+    "family": "audit",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "account_access",
+        "label": "Read access to the account, site or data",
+        "required": true,
+        "how": "Level 1 (read) through the client's connector, or an export covering the period. Pull the real snapshot before judging anything."
+      },
+      {
+        "id": "goals",
+        "label": "What success means here",
+        "required": true,
+        "how": "The target the client measures (sales, leads, cost per result, response time, margin), the period, and what changed recently."
+      },
+      {
+        "id": "benchmarks",
+        "label": "Earlier results or a comparison",
+        "required": false,
+        "how": "A previous period, a competitor or a target to compare against, so findings say better or worse than what."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "The diagnosis is made from the client's real data or pages, pulled at level 1 (read), with the period stated.",
+      "Every temperature, time limit, product, tool and standard appears in the brief; any step not in the brief is marked 'suggested' so the owner can approve it; no legal or safety rule is stated as required."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: Tick lists for before launch, launch day and the first week, built from your site or store as it stands: each item with what to check, where, the owner, what good looks like and what to do on a fail, plus a sign-off line. Also: Items name the actual pages, forms, payment and shipping…"
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today. For this job: Each item starts with a verb, holds one action and shows who does it and when (time, day or stage); each checklist ends with a sign-off line; for a scorecard, each line has a weight and a scoring guide with an example for each score."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide."
+      },
+      {
+        "criterion": "Covers every area, stage, role or task named in the brief, in the order the…",
+        "weight": 8,
+        "test": "Each area, stage or role in the brief has its own checklist or section, items follow the order of the work described, and nothing the brief lists is missing."
+      },
+      {
+        "criterion": "It says what to do when a check fails and fits the way it will be used",
+        "weight": 8,
+        "test": "Each checklist or scorecard says what to do on a fail (who to tell, what to fix, what to record); any one-page guide or checklist has about 25 items or fewer; a scorecard includes a follow-up action form with dates."
+      }
+    ],
+    "mode_default": "patch"
+  },
+  {
+    "id": "quality-scorecard",
+    "title": "Quality scorecard for calls, support or site visits",
+    "summary": "A weighted scorecard to review calls, support tickets, mystery shops or site visits the same way every time, with a scoring guide and a follow-up form.",
+    "area": "operations",
+    "deliverable": "Weighted criteria grouped by stage, a scoring guide with an example for each score, auto-fail items where your standards need them, a calibration note for reviewers and a follow-up action form with dates.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Call or sales scorecard",
+          "Support quality (QA) scorecard",
+          "Mystery shop or customer experience scorecard",
+          "Site visit or audit scorecard"
+        ]
+      },
+      {
+        "id": "work",
+        "label": "Describe the work, area or role",
+        "type": "longtext",
+        "required": true,
+        "help": "What happens, in what order, who does it and when. Paste your SOP or notes.",
+        "max": 15000
+      },
+      {
+        "id": "count",
+        "label": "How many checklists, guides or scorecards?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 5.",
+        "max": 30
+      },
+      {
+        "id": "standards",
+        "label": "What good looks like",
+        "type": "longtext",
+        "required": false,
+        "help": "Your standards, limits and targets, such as fridges at 5°C or below, or reply within 2 hours.",
+        "max": 4000
+      },
+      {
+        "id": "roles",
+        "label": "Who does it and who signs off",
+        "type": "text",
+        "required": false,
+        "help": "Roles are fine, such as shift lead or manager.",
+        "max": 400
+      },
+      {
+        "id": "fail_actions",
+        "label": "What to do when a check fails",
+        "type": "longtext",
+        "required": false,
+        "help": "Who to tell, what to fix and what to write down.",
+        "max": 2000
+      },
+      {
+        "id": "scoring",
+        "label": "For a scorecard: what to score and what matters most",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      },
+      {
+        "id": "format",
+        "label": "How will it be used?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Printed on paper",
+          "On a phone or tablet",
+          "In a spreadsheet",
+          "In a checklist app"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "covers_brief",
+        "text": "Covers every area, stage, role or task named in the brief, in the order the work happens.",
+        "weight": 5,
+        "pass_rule": "Each area, stage or role in the brief has its own checklist or section, items follow the order of the work described, and nothing the brief lists is missing.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "weighted_and_guided",
+        "text": "Each criterion has a weight and a scoring guide with an example for each score.",
+        "weight": 5,
+        "pass_rule": "Weights add up to 100 or the scale in the brief; every criterion has a guide with a concrete example for each score point drawn from the brief's standards; auto-fail items are marked.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_steps",
+        "text": "Steps, limits and standards come from the buyer, and anything added is marked as a suggestion.",
+        "weight": 5,
+        "pass_rule": "Every temperature, time limit, product, tool and standard appears in the brief; any step not in the brief is marked 'suggested' so the owner can approve it; no legal or safety rule is stated as required.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "calibration",
+        "text": "Two reviewers would score the same call or visit the same way.",
+        "weight": 4,
+        "pass_rule": "Criteria describe observable behaviour, not attitude; the scorecard includes a short calibration step (both score one sample and compare) and a follow-up form with an owner and date.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Short, plain words a new starter can follow.",
+        "weight": 3,
+        "pass_rule": "Items are under 15 words each, use everyday words, and explain any term a new starter would not know.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 49,
+      "min_usd": 29,
+      "max_usd": 199,
+      "size": {
+        "field": "count",
+        "unit": "checklist",
+        "included": 5,
+        "per_unit_usd": 8
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a quality manager. Build a weighted scorecard for the calls, tickets or visits below. Group criteria by stage, give each a weight and a scoring guide with an example for each score, mark any auto-fail items, add a calibration step for reviewers and a follow-up action form with dates. Use only my standards; mark anything you add as 'suggested'.",
+    "not_for": [
+      "Safety-critical, medical or regulated procedures that need an expert to sign them off",
+      "Legal, food safety or health and safety compliance sign-off",
+      "Legal, payroll or tax steps for taking on your first employee",
+      "Scoring named staff for pay, discipline or firing decisions",
+      "Driver route planning or stop order",
+      "Insurance, legal or claims advice for your clients"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "A support team of 9 wants a QA scorecard for email and chat tickets: accuracy, tone, policy, and resolution. We review 5 tickets per agent per week.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "A coffee chain with 6 sites wants a site visit scorecard for area managers: cleanliness, drink quality, service speed and stock, with photos required for any fail.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "A B2B software company wants a discovery call scorecard for its sales reps based on our stages: agenda, pain, impact, decision process and next step. Scores 1 to 4.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "A hotel wants a mystery shop form for check-in, room and breakfast, with weights we choose and a follow-up plan the manager signs.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "qa scorecard",
+      "call scorecard",
+      "mystery shop form",
+      "site audit scorecard",
+      "quality checklist",
+      "support quality review form"
+    ],
+    "demand_sources": [
+      {
+        "note": "UK Food Standards Agency guidance (Safer food, better business) asks small food businesses to write down their safe methods and keep daily records in a diary for inspectors.",
+        "url": "https://www.gov.uk/government/publications/safer-food-better-business-sfbb/safer-food-better-business-sfbb"
+      },
+      {
+        "note": "Contra listing that sells written SOPs, user guides and operation manuals at $100 each, a sign that small firms pay for written procedures.",
+        "url": "https://contra.com/s/A6oEvErs-standard-operating-procedures-user-guides-operation-manuals"
+      }
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every temperature, time limit, product, tool and standard appears in the brief; any step not in the brief is marked 'suggested' so the owner can approve it; no legal or safety rule is stated as required."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: Weighted criteria grouped by stage, a scoring guide with an example for each score, auto-fail items where your standards need them, a calibration note for reviewers and a follow-up action form with dates. Also: Criteria describe observable behaviour, not attitude; the scorecard includes a short calibration step (both score…"
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Items are under 15 words each, use everyday words, and explain any term a new starter would not know."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "Covers every area, stage, role or task named in the brief, in the order the…",
+        "weight": 10,
+        "test": "Each area, stage or role in the brief has its own checklist or section, items follow the order of the work described, and nothing the brief lists is missing."
+      },
+      {
+        "criterion": "Each criterion has a weight and a scoring guide with an example for each score",
+        "weight": 10,
+        "test": "Weights add up to 100 or the scale in the brief; every criterion has a guide with a concrete example for each score point drawn from the brief's standards; auto-fail items are marked."
+      }
+    ],
+    "mode_default": "extend"
+  },
+  {
+    "id": "joiner-and-leaver-checklists",
+    "title": "Joiner and leaver checklists",
+    "summary": "Checklists for new starters, contractors and leavers: accounts, equipment, access, handover and first-day steps, each with an owner and a date.",
+    "area": "people",
+    "deliverable": "Joiner and leaver tick lists by stage (before day one, day one, first week; notice period, last day, after leaving) with each item, owner, timing and system, access removal steps, a handover section and sign-off lines.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "New starter checklist",
+          "Leaver and handover checklist",
+          "Contractor onboarding and offboarding",
+          "IT accounts and equipment for joiners and leavers"
+        ]
+      },
+      {
+        "id": "work",
+        "label": "Describe the work, area or role",
+        "type": "longtext",
+        "required": true,
+        "help": "What happens, in what order, who does it and when. Paste your SOP or notes.",
+        "max": 15000
+      },
+      {
+        "id": "count",
+        "label": "How many checklists, guides or scorecards?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 5.",
+        "max": 30
+      },
+      {
+        "id": "standards",
+        "label": "What good looks like",
+        "type": "longtext",
+        "required": false,
+        "help": "Your standards, limits and targets, such as fridges at 5°C or below, or reply within 2 hours.",
+        "max": 4000
+      },
+      {
+        "id": "tools",
+        "label": "Tools, products or systems used",
+        "type": "text",
+        "required": false,
+        "max": 600
+      },
+      {
+        "id": "roles",
+        "label": "Who does it and who signs off",
+        "type": "text",
+        "required": false,
+        "help": "Roles are fine, such as shift lead or manager.",
+        "max": 400
+      },
+      {
+        "id": "fail_actions",
+        "label": "What to do when a check fails",
+        "type": "longtext",
+        "required": false,
+        "help": "Who to tell, what to fix and what to write down.",
+        "max": 2000
+      },
+      {
+        "id": "format",
+        "label": "How will it be used?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Printed on paper",
+          "On a phone or tablet",
+          "In a spreadsheet",
+          "In a checklist app"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "covers_brief",
+        "text": "Covers every area, stage, role or task named in the brief, in the order the work happens.",
+        "weight": 5,
+        "pass_rule": "Each area, stage or role in the brief has its own checklist or section, items follow the order of the work described, and nothing the brief lists is missing.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "tickable_items",
+        "text": "Every item is one action someone can tick, with an owner and a time; scorecards are weighted with a scoring guide.",
+        "weight": 5,
+        "pass_rule": "Each item starts with a verb, holds one action and shows who does it and when (time, day or stage); each checklist ends with a sign-off line; for a scorecard, each line has a weight and a scoring guide with an example for each score.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_steps",
+        "text": "Steps, limits and standards come from the buyer, and anything added is marked as a suggestion.",
+        "weight": 5,
+        "pass_rule": "Every temperature, time limit, product, tool and standard appears in the brief; any step not in the brief is marked 'suggested' so the owner can approve it; no legal or safety rule is stated as required.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "access_closed",
+        "text": "Every account, key and piece of equipment given at joining is taken back or closed at leaving.",
+        "weight": 5,
+        "pass_rule": "Each system, account, device and key in the brief appears in both the joiner list and the leaver list, with who removes access and by when; shared passwords are changed; nothing asks to send passwords in the checklist.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Short, plain words a new starter can follow.",
+        "weight": 3,
+        "pass_rule": "Items are under 15 words each, use everyday words, and explain any term a new starter would not know.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 49,
+      "min_usd": 29,
+      "max_usd": 199,
+      "size": {
+        "field": "count",
+        "unit": "checklist",
+        "included": 5,
+        "per_unit_usd": 8
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an operations manager. Build joiner and leaver checklists for the roles below, by stage, with each item, owner, timing and system. Match every account, device and key given at joining with its removal at leaving, add a handover section and sign-off lines. Use only my tools and steps; mark anything you add as 'suggested'. Do not state legal or payroll rules as required.",
+    "not_for": [
+      "Safety-critical, medical or regulated procedures that need an expert to sign them off",
+      "Legal, food safety or health and safety compliance sign-off",
+      "Legal, payroll or tax steps for taking on your first employee",
+      "Scoring named staff for pay, discipline or firing decisions",
+      "Driver route planning or stop order",
+      "Insurance, legal or claims advice for your clients"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "An accounting firm of 15 uses Microsoft 365, Xero Practice Manager and a door fob system. We need new starter and leaver IT checklists with who does each step.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "A design studio hires freelancers for 2 to 8 weeks. We need contractor onboarding and offboarding lists covering Figma, Slack, Google Drive and the shared password manager.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "A nursery with 22 staff needs a pre-boarding list from offer to day one, and a first-week list for room leaders. Checks we already do are in the notes.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "A charity wants an exit handover checklist for departing team members: open work, contacts, files, accounts and the handover meeting.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "onboarding checklist",
+      "offboarding checklist",
+      "leaver checklist",
+      "new starter checklist",
+      "joiner leaver",
+      "contractor onboarding",
+      "it onboarding"
+    ],
+    "demand_sources": [
+      {
+        "note": "UK Food Standards Agency guidance (Safer food, better business) asks small food businesses to write down their safe methods and keep daily records in a diary for inspectors.",
+        "url": "https://www.gov.uk/government/publications/safer-food-better-business-sfbb/safer-food-better-business-sfbb"
+      },
+      {
+        "note": "Contra listing that sells written SOPs, user guides and operation manuals at $100 each, a sign that small firms pay for written procedures.",
+        "url": "https://contra.com/s/A6oEvErs-standard-operating-procedures-user-guides-operation-manuals"
+      }
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every temperature, time limit, product, tool and standard appears in the brief; any step not in the brief is marked 'suggested' so the owner can approve it; no legal or safety rule is stated as required."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: Joiner and leaver tick lists by stage (before day one, day one, first week; notice period, last day, after leaving) with each item, owner, timing and system, access removal steps, a handover section and sign-off lines."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Items are under 15 words each, use everyday words, and explain any term a new starter would not know."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template. For this job: Each item starts with a verb, holds one action and shows who does it and when (time, day or stage); each checklist ends with a sign-off line; for a scorecard, each line has a weight and a scoring guide with an example for each score."
+      },
+      {
+        "criterion": "Covers every area, stage, role or task named in the brief, in the order the…",
+        "weight": 10,
+        "test": "Each area, stage or role in the brief has its own checklist or section, items follow the order of the work described, and nothing the brief lists is missing."
+      },
+      {
+        "criterion": "Every account, key and piece of equipment given at joining is taken back or…",
+        "weight": 10,
+        "test": "Each system, account, device and key in the brief appears in both the joiner list and the leaver list, with who removes access and by when; shared passwords are changed; nothing asks to send passwords in the checklist."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "id": "it-security-continuity-plan",
@@ -920,7 +1867,75 @@
         "note": "UK National Cyber Security Centre guide for small organisations on backups, protecting devices and accounts, and spotting scams.",
         "url": "https://www.ncsc.gov.uk/collection/small-business-guide"
       }
-    ]
+    ],
+    "family": "audit",
+    "context_requirements": [
+      {
+        "id": "account_access",
+        "label": "Read access to the account, site or data",
+        "required": true,
+        "how": "Level 1 (read) through the client's connector, or an export covering the period. Pull the real snapshot before judging anything."
+      },
+      {
+        "id": "goals",
+        "label": "What success means here",
+        "required": true,
+        "how": "The target the client measures (sales, leads, cost per result, response time, margin), the period, and what changed recently."
+      },
+      {
+        "id": "benchmarks",
+        "label": "Earlier results or a comparison",
+        "required": false,
+        "how": "A previous period, a competitor or a target to compare against, so findings say better or worse than what."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "The diagnosis is made from the client's real data or pages, pulled at level 1 (read), with the period stated.",
+      "Every system, supplier, contact, cost and past incident comes from the brief; costs not given are left as a blank to fill; no password, card number or login appears in the draft.",
+      "Technical terms are explained in a few words the first time (such as two-step login); the draft does not say the business is compliant, certified or covered by insurance, and tells the owner to check breach reporting duties with a lawyer or regulator."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: Your answers scored against a small-business baseline with the biggest gaps; a 90-day fix or set-up plan with owners and your costs; backup and recovery order; app, plugin and access clean-up; and plans for hacks, outages or a crisis with roles, first-hour steps, contacts, ready messages and…"
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today. For this job: Findings or steps are listed in priority or time order; each has a one-line reason it matters, an owner role from the brief and a time frame (such as week 1 to 2); for a check, the top three gaps are marked."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide."
+      },
+      {
+        "criterion": "Delivers the piece chosen and covers every system, activity or risk named in…",
+        "weight": 8,
+        "test": "The draft matches the chosen option, and every device, account, app, supplier, key activity or risk listed in the brief appears in it at least once."
+      },
+      {
+        "criterion": "Plans work under stress, with first steps, who to call and ready messages…",
+        "weight": 8,
+        "test": "Any response, continuity, recovery or crisis plan starts with numbered first-hour steps and a who-to-call list using roles from the brief; any check, review or clean-up ends with a dated action list; points an IT person must confirm are marked."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "id": "evidence-review-from-sources",
@@ -1139,7 +2154,72 @@
         "note": "Editorial Freelancers Association 2026 rate chart lists research at $47.50 to $60 an hour and fact-checking at $50 to $60 an hour as paid freelance services.",
         "url": "https://www.the-efa.org/rates/"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: Sources grouped by theme with findings compared and conflicts explained; an evidence table or annotated list; a cited report, short answer or one-page brief with the answer first and its limits; a claim-by-claim check with status and the backing passage; or a history with each fact tied to a…"
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked. For this job: Each factual sentence carries a reference to a numbered or named source from the brief, with a page, section or short quote where the source has one; no reference points to a source the brief does not contain."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: No study, statistic, date, name or quote appears that is not in the supplied sources or brief; where the sources do not answer something, the draft says so instead of filling the gap; a heritage story marks each fact as sourced, family story or not confirmed."
+      },
+      {
+        "criterion": "Delivers the chosen piece and answers the buyer's question",
+        "weight": 8,
+        "test": "The draft is in the format chosen (review, table, list, report, answer, brief, fact check or history), stays on the question in the brief, and where the format has an answer it states it in the first section."
+      },
+      {
+        "criterion": "It weighs the evidence: strength, limits and conflicts are shown",
+        "weight": 8,
+        "test": "The draft names at least one limit of the evidence (such as a small sample, old data or a one-sided source); where sources disagree it puts their claims or figures side by side and says which is more reliable and why; a fact check gives each claim a status (supported, partly, not supported, not found)."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "id": "website-audit-fix-list",
@@ -1376,7 +2456,79 @@
         "note": "Google Search Central says it highly recommends site owners achieve good Core Web Vitals for success with Search.",
         "url": "https://developers.google.com/search/docs/appearance/core-web-vitals"
       }
-    ]
+    ],
+    "family": "audit",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "account_access",
+        "label": "Read access to the account, site or data",
+        "required": true,
+        "how": "Level 1 (read) through the client's connector, or an export covering the period. Pull the real snapshot before judging anything."
+      },
+      {
+        "id": "goals",
+        "label": "What success means here",
+        "required": true,
+        "how": "The target the client measures (sales, leads, cost per result, response time, margin), the period, and what changed recently."
+      },
+      {
+        "id": "benchmarks",
+        "label": "Earlier results or a comparison",
+        "required": false,
+        "how": "A previous period, a competitor or a target to compare against, so findings say better or worse than what."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "The diagnosis is made from the client's real data or pages, pulled at level 1 (read), with the period stated."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: Issues found in the code, reports or descriptions you supply, checked against WCAG, Core Web Vitals or your design rules and ranked by who they affect and gain per hour, each with the fix and a way to check it; developer tickets with acceptance criteria; alt text where needed; and a recurring…"
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked. For this job: Each issue quotes the element, line, metric value or report row it comes from; no score, metric, traffic figure or user complaint appears that is not in the brief; the draft says what it could not check without live testing."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today. For this job: Issues are in priority order, each with a severity or expected gain and an effort size (under 1 hour, half a day, or more), and the top five are marked."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: Each issue opens with one plain sentence on who it affects; terms like LCP or ARIA are explained the first time; developer detail sits under that sentence."
+      },
+      {
+        "criterion": "Covers the chosen piece and names the rule or metric behind each issue",
+        "weight": 8,
+        "test": "The draft matches the chosen option; accessibility issues cite the WCAG success criterion number, speed issues cite the metric (LCP, INP, CLS) or report line, and design or navigation issues cite the rule or label they break."
+      },
+      {
+        "criterion": "Each issue has a specific fix and a way to check it is done",
+        "weight": 8,
+        "test": "Every issue gives the change to make, with code, a setting or new wording where it applies, and a check such as 'Tab reaches the button' or 'LCP under 2.5 s in a new Lighthouse run'; tickets have acceptance criteria."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "id": "slide-deck-and-carousel-text",
@@ -1602,7 +2754,91 @@
         "note": "YunoJuno rate data: freelance presentation designers average $65 an hour.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/presentation-designer"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "Every figure, customer name, logo, quote and result comes from the brief; chart notes use only the brief's numbers; missing facts appear as a placeholder like [add monthly revenue], never a made-up figure."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof. For this job: No unexplained jargon and no empty hype such as 'revolutionary', 'game-changing' or 'world-class' unless quoted from the brief; each claim is specific to the business."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: The story order, then for each slide a headline, body text, a visual or chart note and speaker notes. Carousels get a hook slide, body slides, a call to action and a caption. Training decks get practice tasks; rewrites, cuts and industry versions get notes on what moved and why."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: The draft opens with the story order; the slide count matches the brief within one slide; the last content slide states the ask or next step from the brief; versions, cuts and rewrites include a note on what changed and why."
+      },
+      {
+        "criterion": "Every slide is ready to build: headline, body text, visual or chart note, and…",
+        "weight": 6,
+        "test": "Each deck slide has all four parts and each headline states one message in 12 words or fewer; each carousel has a hook slide, body slides, a call-to-action slide and a caption; a training deck has a practice task per section."
+      },
+      {
+        "criterion": "Slide text is short enough to take in at a glance",
+        "weight": 6,
+        "test": "Body text is 40 words or fewer per deck slide and 25 or fewer per carousel slide, in bullets or short lines, with the detail moved to speaker notes or the caption."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "contract-or-regulation-summary",
@@ -1811,7 +3047,73 @@
         "note": "Adobe survey (January 2025) of 274 US small business owners: 62% admitted signing contracts without knowing the details.",
         "url": "https://blog.adobe.com/en/publish/2025/02/04/top-5-takeaways-from-new-contracts-survey-most-people-sign-before-they-read"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "The draft says it is not legal advice, does not tell the buyer whether to sign or borrow, does not state what the law requires beyond the pasted text, and turns unclear or one-sided points into questions for a lawyer or lender."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: A one to two page plain summary (who does what, money, length, ending, risks, anything unusual); a table of dates, payments, duties and deadlines with clause or section numbers; a side-by-side of two versions; a renewal tracker; a duties or tender checklist with a go or no-go view; and ranked…"
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today. For this job: A table lists every date, notice period, renewal and payment found, with the last day to act worked out where the brief gives a start or today's date; ranked questions, most important first, close the draft."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: Each point is one or two short sentences in everyday words; legal terms such as indemnity or covenant are explained in brackets the first time."
+      },
+      {
+        "criterion": "Delivers the chosen piece and covers every part of the document that matters…",
+        "weight": 8,
+        "test": "The draft matches the chosen option; a contract summary covers who does what, money, length, ending, liability and anything unusual; a rule summary covers who it applies to, duties, dates and penalties; a tender checklist lists every must-do, deadline, format rule and scoring criterion."
+      },
+      {
+        "criterion": "Every point is tied to a clause or section and matches the text exactly",
+        "weight": 8,
+        "test": "Each point or table row gives its clause, section or page number, and its figures, dates and duties match the pasted text; nothing is stated that the document does not say."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "store-sales-report",
@@ -2033,7 +3335,73 @@
         "note": "YunoJuno rate data: freelance data analysts average $68 an hour (£410 a day).",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/data-analyst"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every figure comes from, or is calculated from, the exports; a measure the data cannot support (such as conversion with no session data) is marked 'not in your data' rather than estimated; nothing is forecast as certain."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: Key numbers (sales, orders, average order, conversion, returns, fees, net sales, payouts) against the last period, by channel and product; top and bottom sellers; return reasons and their cost; what drove any dip or spike; and three actions. Event reviews add profit and busy hours."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown. For this job: Totals, averages, rates and changes can be recomputed from the pasted data (spot-check three): average order is sales divided by orders, conversion is orders divided by sessions, change is (now minus before) divided by before; each table states its period."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: The draft names the biggest change and the driver the data shows (orders, conversion, order value, a product or a channel), and lists exactly three actions, each tied to a number in the report."
+      },
+      {
+        "criterion": "Covers the chosen report for the stated period and comparison",
+        "weight": 8,
+        "test": "The draft states the period and the comparison, and includes every measure the option needs: share by channel for a channel report, top and bottom sellers for a product report, reasons and cost for a returns review, profit and busy hours for an event review."
+      },
+      {
+        "criterion": "Plain words and tidy tables an owner can read in five minutes",
+        "weight": 8,
+        "test": "A summary of five lines or fewer comes first; tables have clear column names and units; terms like AOV are spelled out the first time."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "hiring-kit-for-one-role",
@@ -2257,7 +3625,78 @@
         "note": "HR outsourcing cost guide: outsourced recruiting usually costs 15% to 30% of first-year pay; this provider charges clients $125 an hour for recruiting help.",
         "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen. For this job: Each part named in the chosen option is present and specific to the role in the brief; a full kit has role outcomes at 30, 90 and 180 days, channels, search terms and a timeline, screening criteria, interview rounds with scripts, a comparison sheet, replies and decline notes, and an offer letter draft."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: Role brief and outcomes at 30, 90 and 180 days; channels, search terms and timeline; job-related screening criteria with evidence; interview rounds with scripts; a finalist comparison sheet from your interview notes; replies and kind decline notes by stage; and an offer letter draft or a check against what you…"
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week. For this job: Every screening criterion and interview question ties to a task or outcome in the brief and states the evidence that counts; none touches age, family, health, religion, nationality or other protected traits; no part ranks candidates or says who to hire."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read. For this job: Short sentences and everyday words; decline notes thank the candidate and give a clear outcome without false promises; the offer letter says it is a draft to check with an employment adviser."
+      },
+      {
+        "criterion": "Pay, terms and candidate facts come only from the brief",
+        "weight": 6,
+        "test": "No salary, benefit, start date, probation length or candidate detail appears unless it is in the brief; gaps are shown as [to confirm]; in an offer check, each mismatch quotes both the letter and the agreed terms."
+      },
+      {
+        "criterion": "Messages and templates are ready to send",
+        "weight": 6,
+        "test": "Each candidate message has a subject line, is under 150 words and has only clearly marked fields such as [first name]; decline notes exist for each stage named in the brief or the option (application, screen, interview)."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "phone-and-chat-scripts",
@@ -2480,7 +3919,91 @@
         "note": "On-hold message provider selling a 4-minute, 500-word custom script and recording for $99 to $149.99, and claiming 90% of callers hang up within 40 seconds of silence.",
         "url": "https://dynamicmediamusic.com/message-on-hold/"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No hour, fee, policy, staff name or promise appears unless it is in the brief; missing facts are shown as [placeholder]; scripts give no medical, legal or financial advice and pass such calls to the right person."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A menu tree with every prompt and route; timed greetings, holiday, closed and voicemail scripts; hold messages; call scripts with branches for top call reasons, transfers and a clean close; front-desk answers from your policies; chat openers, handoffs and sign-offs; a calm payment call script; and a…"
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Each recorded message is timed and under 30 seconds (about 75 words) unless the brief asks for longer; menus offer 5 or fewer options per level and say the option before the number ('For bookings, press 1')."
+      },
+      {
+        "criterion": "Covers the chosen piece and every call reason, department and time named in the…",
+        "weight": 6,
+        "test": "Each call reason, department, opening time and holiday from the brief appears; a phone menu shows every option, where it routes and what happens if the caller presses nothing; a call script has a branch for each top reason."
+      },
+      {
+        "criterion": "Ready to record or use, with clean handoffs and closes",
+        "weight": 6,
+        "test": "Each script ends with a clear close or next step; each handoff says who to transfer to and what to say if no one answers; anything to be recorded has a recording order or file list."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "crm-pipeline-and-win-loss-review",
@@ -2693,7 +4216,68 @@
         "note": "Contra's HubSpot hiring page: freelancers charge $75 to $300 an hour, with sales pipeline set-up, deal stages and sales reports among common jobs.",
         "url": "https://contra.com/hire/hubspot-freelancers"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every deal, reason, quote and number comes from the export or brief; loss reasons are grouped from the notes as written, with short quotes copied exactly; no named rep is scored or ranked."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 13,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: Stage counts, stale deals and slipped dates; conversion and time by stage with the biggest leak; a best, likely and worst forecast with assumptions; the driver behind a drop; loss, win and cancellation reasons grouped with counts, value and short quotes; price versus value evidence; and…"
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked. For this job: Stage counts, conversion and win rates, average deal size and cycle length can be recomputed from the pasted data (spot-check three); each rate shows its count, such as '12 of 40 (30%)'."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today. For this job: At least three actions or playbook changes, each tied to a finding and a number in the draft, with an owner role and a date or week."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: A summary of five lines or fewer comes first; groups of fewer than 20 deals are flagged as weak evidence; the forecast says it is an estimate, not a promise."
+      },
+      {
+        "criterion": "Delivers the chosen analysis for the stated period",
+        "weight": 12,
+        "test": "The draft matches the option chosen: a pipeline review lists stale deals and slipped dates deal by deal; a forecast gives best, likely and worst cases, each with its assumptions; a win, loss or churn review groups reasons with counts and value."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "id": "announcement-or-public-statement",
@@ -2906,7 +4490,90 @@
         "note": "Rosen Group 2025 survey of 1,000 US small business owners: about 78% have no formal crisis communications plan.",
         "url": "https://www.odwyerpr.com/story/public/22839/2025-04-09/pr-firm-news-rosen-group-finds-small-biz-lack-crisis.html"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice. For this job: Short sentences, no jargon, and no spin such as 'exciting news' for a price rise or 'minor issue' for an outage unless the brief says so; any apology is clear and specific."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: The main message: what changed or happened, why, who it affects, what to do and when you will update. Versions for email, social, staff, key accounts and partners. Holding replies, a short FAQ and a fact sheet, all with the same facts. Launches can add a news release and a how-to-join page."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: No cause, number, quote, partner benefit or fix appears that is not in the brief; for an incident, unknowns are stated as not yet known, with the update time; no admission of fault for injury or safety is added."
+      },
+      {
+        "criterion": "Each version says what changed or happened, why, who it affects, what to do…",
+        "weight": 6,
+        "test": "The main message contains all five points using facts from the brief, and each audience ticked in the brief has its own version."
+      },
+      {
+        "criterion": "All versions match: the same dates, numbers and promises everywhere",
+        "weight": 6,
+        "test": "Every date, price, percentage and promise is the same in every version and in the fact sheet; no version promises anything the main message does not."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "shipping-and-delivery-cost-review",
@@ -3121,7 +4788,73 @@
         "note": "Baymard Institute survey of US online shoppers: leaving aside 'just browsing', the top reason for abandoning checkout is extra costs (shipping, tax, fees) being too high, at 40%.",
         "url": "https://baymard.com/lists/cart-abandonment-rate"
       }
-    ]
+    ],
+    "family": "audit",
+    "context_requirements": [
+      {
+        "id": "account_access",
+        "label": "Read access to the account, site or data",
+        "required": true,
+        "how": "Level 1 (read) through the client's connector, or an export covering the period. Pull the real snapshot before judging anything."
+      },
+      {
+        "id": "goals",
+        "label": "What success means here",
+        "required": true,
+        "how": "The target the client measures (sales, leads, cost per result, response time, margin), the period, and what changed recently."
+      },
+      {
+        "id": "benchmarks",
+        "label": "Earlier results or a comparison",
+        "required": false,
+        "how": "A previous period, a competitor or a target to compare against, so findings say better or worse than what."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "The diagnosis is made from the client's real data or pages, pulled at level 1 (read), with the period stated."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: Cost per order or drop by zone, weight, service and box; surcharges found; your order mix priced on each rate card you share; better box sizes; a checkout rate table; local delivery zones with days, fees and cut-offs; a free shipping threshold to test; and savings ranked by money per month."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today. For this job: At least three fixes or savings are listed in order of money saved per month, each with the sum shown and the first step to take."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown. For this job: Cost per order or per drop, averages by zone and weight band, and savings can be recomputed from the pasted data (spot-check three); billed weight uses the size rule given in the brief, or the draft states the rule it assumed."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: A summary of five lines or fewer comes first; tables show units (kg or lb, and the currency); terms like dimensional weight are explained the first time."
+      },
+      {
+        "criterion": "Uses only the buyer's invoices, rate cards and costs",
+        "weight": 8,
+        "test": "No carrier rate, surcharge, fuel price or delivery time appears unless it is in the brief; anything assumed, such as a typical box cost, is labelled 'assumption'; no live or current rates are claimed."
+      },
+      {
+        "criterion": "Delivers the chosen piece in a usable table",
+        "weight": 8,
+        "test": "The draft matches the option: a cost review breaks cost down by zone, weight, service and box; a rate table or zone plan gives each zone or band a price, and a zone plan also gives days, minimum order and cut-off; a threshold gives one figure to test and how to read the result."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "id": "local-promotion-campaign",
@@ -3352,7 +5085,103 @@
         "note": "Nettl Pulse 2026 survey of 223 UK businesses: lack of time is the most common barrier to marketing, named by 25.5%.",
         "url": "https://www.nettl.com/uk/pulse/"
       }
-    ]
+    ],
+    "family": "ad_creative",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Ads and materials you already run",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "brand_guide",
+        "label": "Brand guide, if you have one",
+        "required": false,
+        "how": "Fonts, colours, logo rules and tone. Captured facts win where the guide is out of date; say where they differ."
+      },
+      {
+        "id": "account_access",
+        "label": "Read access to the ad account",
+        "required": false,
+        "how": "Level 1 (read) through the client's connector, or an export of recent ads and results, to learn what already ran and what worked."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "Every price, date, limit, review and claim comes from the brief; no 'only 3 left', 'was' price or countdown appears unless the brief states it is true; texts and emails go only to contacts the brief says opted in."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Strategic idea",
+        "weight": 8,
+        "test": "Each concept rests on one clear reason to act for a named audience, taken from the client's offer and proof. Here: The offer with price and an honest end date (or up to three ideas for slow days, then a full pack for the best); a profit or food cost check; a dated plan; copy for each channel you use (posts, an email or text to regulars, a landing page or menu blurb, a flyer, window or in-venue…"
+      },
+      {
+        "criterion": "Range across named axes",
+        "weight": 20,
+        "test": "Concepts differ on named axes (mechanism, proof, structure, visual world, offer), not only in colour, crop, wording or style label."
+      },
+      {
+        "criterion": "Brand fidelity",
+        "weight": 15,
+        "test": "It looks and sounds like the client's captured brand: fonts, colours, imagery and voice from context/brand-dna.json."
+      },
+      {
+        "criterion": "Hook and thumb-stop",
+        "weight": 15,
+        "test": "The first line or frame earns attention for this audience without clickbait or fake urgency."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 15,
+        "test": "A competitor could not run it unchanged: it uses this client's own product, facts and proof."
+      },
+      {
+        "criterion": "Platform fit",
+        "weight": 15,
+        "test": "Each piece follows its placement's format, length limits and safe zones, with counts shown."
+      },
+      {
+        "criterion": "One clear offer with price, what is included, who it is for and an honest end…",
+        "weight": 6,
+        "test": "The pack states the offer in one line with the normal and offer price from the brief, what is and is not included, and a real end date or limit from the brief; for a quiet-days plan, up to three ideas come first and one is picked with a reason."
+      },
+      {
+        "criterion": "The offer is checked against cost so it does not lose money",
+        "weight": 6,
+        "test": "A short sum shows the cost per sale (food or service cost from the brief), the offer price and the margin left; if costs are missing, the draft says so and shows the break-even sum with [placeholders]."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "comparison-page-copy",
@@ -3556,7 +5385,90 @@
         "note": "Copywriting rate guide: an SEO content page costs $300 to $1,200 and a sales or landing page $3,500 or more.",
         "url": "https://talo.com/costs/copywriting-rates"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: Page copy built on real differences. A fair table where every rival fact has a source and date. Where you win and where you do not, a pick for each type of buyer, an FAQ and a call to action. Battlecards give where you win and lose, honest answers to rival claims and questions to ask."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Short sentences; features are explained by what they do for the buyer; no superlatives such as 'best' or 'fastest' unless backed by a sourced fact in the brief."
+      },
+      {
+        "criterion": "Fair and honest: it says where the buyer's product wins and where it does not",
+        "weight": 6,
+        "test": "The draft names at least two areas where a rival is better or a better fit, as well as where the buyer's product wins, and gives a pick for each buyer type with a reason; no rival is described with insults or guesses."
+      },
+      {
+        "criterion": "Every rival fact has a source and date from the brief",
+        "weight": 6,
+        "test": "Each rival fact or table cell cites a source and date given in the brief; facts with no source are left out or marked 'not confirmed'; no quote appears unless the brief supplies it with permission."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "career-ladder-and-skills-matrix",
@@ -3763,6 +5675,65 @@
         "note": "QuickBooks guide for small businesses: career ladders set the skills, scope and pay range for each level and bring structure to promotions and pay decisions.",
         "url": "https://quickbooks.intuit.com/r/payroll/career-ladders/"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: The skills each role needs with a 1 to 4 scale and clear meanings; levels from entry to senior with scope, skills and examples; promotion criteria with the evidence needed and who decides; a gap report from your ratings; and six-month development plans per person."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: The 1 to 4 scale, or each level, has a plain meaning and at least one example of work that shows it; each step up differs in scope or skill, not just 'more'; promotion criteria name the evidence needed and who decides."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "Delivers the chosen piece for every role and person in scope",
+        "weight": 10,
+        "test": "Each role or job family in the brief appears; a matrix covers every role's skills; a ladder covers every level asked for; a plan exists for each named person in the brief."
+      },
+      {
+        "criterion": "Uses only the buyer's roles and ratings, and stays fair",
+        "weight": 10,
+        "test": "No role, rating, person or pay figure appears unless it is in the brief; no criterion uses age, gender, health or other protected traits, or time served as the only test; nothing says who should be promoted, paid more or let go."
+      }
+    ],
+    "mode_default": "extend"
   }
 ]

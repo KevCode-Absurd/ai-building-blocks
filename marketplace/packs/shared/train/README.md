@@ -7,22 +7,24 @@ The file instructions.md turns the AI you already use into a training coach. The
 ## What the coach does
 
 1. It asks for your permission before it reads anything, and agrees with you exactly what it may read.
-2. It interviews you about how you do the work, one question at a time, and keeps asking follow-up questions until your answers are specific.
-3. It learns how you write from samples you choose, and, if you agree, from your own Claude or ChatGPT history.
-4. It asks about your values, how you push back on clients, and a story that shaped the way you work.
-5. It records two or three of your real workflows step by step, including what you do yourself inside real tools, such as building a draft or making a live change. That way your agent can do those steps at the access level a client grants it, and the coach turns the workflow you repeat most into a skill.
-6. It adds two or three of your past jobs as examples, with every name and identifying detail taken out.
-7. It runs test rounds in which it plays a difficult client, your agent answers, and you compare that answer with what plain AI writes for the same brief. Anything you would never ship becomes a rule in your playbook, and the rounds continue until your agent wins at least four of five tests, judged by you.
-8. It rechecks the facts in the knowledge file, then helps you package your agent and, if you would like, list it on AI Blocks.
+2. It maps the jobs your agent will do, the steps where your judgment matters, and the moments when it should stop and ask you.
+3. It walks you through five to ten real cases from your work, one decision at a time. It asks what you noticed, what you expected, which options you passed on, and what would have changed your call.
+4. It watches you do one real task while you think out loud, so your agent learns what you look at first.
+5. It learns your taste by asking you to compare real work, such as 20 or more pairs of ads or pages, and to say what separates them.
+6. It learns how you write, what you value and how you push back, from samples you choose.
+7. It plays your agent on a case it hasn't seen yet, and you mark every place it goes wrong.
+8. It builds a test set from your own jobs and tests your agent blind against plain AI, with a reviewer tuned to grade the way you do. You see the win rate, the mistakes on each side, and how often your agent gets the same case right every time.
+9. It rechecks the facts in the knowledge file, then helps you package your agent.
 
-Every stage ends with a checkpoint, where you read what the coach has written and either approve it or ask for changes.
+Every stage ends with a checkpoint, where you read what the coach has written and either approve it or ask for changes. After training, a weekly routine of two to three hours turns real mistakes into tested fixes, and a monthly check keeps the test fair.
 
 ## What you need
 
 - **An AI tool.** Claude Code, OpenAI Codex and Cursor work best, because the coach can create and edit the files for you directly. Claude, ChatGPT and Gemini also work, although there the coach gives you each finished file to save yourself.
-- **Samples of your own writing**, such as emails, social posts, reports or proposals that clients have seen.
-- **Two or three past jobs** that you made yourself, or that a client has agreed you may use.
-- **Time.** Plan on 7 to 12 hours altogether, spread over a week or two. That figure is our estimate and depends on how much you share, and you can stop at any stage and continue later.
+- **Real cases from your work.** Jobs where your judgment mattered, including one that went badly. You can take the names out.
+- **Examples to compare.** Your past work, or public work by real businesses, such as their live ads or pages.
+- **Samples of your own writing**, such as emails, reports or proposals that clients have seen.
+- **Time.** Plan on about 12 to 18 hours over two or three weeks. That figure is our estimate. You have a first working agent after about 4 hours, and you can stop at any stage and continue later.
 
 ## Set it up
 
@@ -50,7 +52,7 @@ In Claude, ChatGPT and Gemini, the coach cannot change the files you uploaded, s
 
 ## What you end up with
 
-You finish with your own agent pack, organised the same way as the house packs on AI Blocks. It contains your soul, personality, know-how and playbook, along with the rules your agent learned during testing. It also holds your workflows, at least one new skill, your examples and your test results. Your agent then runs in Claude, ChatGPT, Codex, Gemini and Cursor, exactly as the house packs do. If you choose to, you can upload it in the AI Blocks expert studio, where it is tested and reviewed before it is listed.
+You finish with your own agent pack, organised the same way as the house packs on AI Blocks. Next to your soul, personality and playbook, it holds a scope card, your decision rules with their exceptions, your cases, your taste files, a never-do list and a rubric in your words. It also holds a test set and the results of your blind tests, so you can see where your agent beats plain AI and where it doesn't yet. Your agent runs in Claude, ChatGPT, Codex, Gemini and Cursor, exactly as the house packs do.
 
 ## Your data
 

@@ -1,7 +1,7 @@
 <!-- template: replace this file during training -->
 # Personality: how I talk and write
 
-This file is still a blank template. Your coach fills it in during training, in stage 2 of instructions.md, from writing samples you choose to share. When it is done, the whole file is replaced, including the first line.
+This file is still a blank template. Your coach fills it in during training, in stage 5 of instructions.md, from writing samples you choose to share. When it is done, the whole file is replaced, including the first line.
 
 This file shapes your agent's wording and layout. It never changes the facts. Every line should be backed by your real writing, so if the coach can't find a pattern in your samples, the section stays short.
 

@@ -107,7 +107,6 @@ This is a planning aid, not legal advice. Rest-period and predictive scheduling 
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Employee feedback survey planner](https://useaiblocks.com/skills/employee-survey-designer). It takes the spreadsheet.
 - The [Internal job transfer program planner](https://useaiblocks.com/skills/internal-mobility-program). It takes the spreadsheet.
-- The [Inclusive workplace plan builder](https://useaiblocks.com/skills/inclusive-workplace-plan-builder). It takes the spreadsheet.
 - The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

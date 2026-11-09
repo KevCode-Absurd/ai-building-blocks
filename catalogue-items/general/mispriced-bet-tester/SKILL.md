@@ -63,7 +63,6 @@ One line per bet. What the price says. Your range with the facts behind it. The 
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Investment priority planner](https://useaiblocks.com/skills/lifetime-punch-card-bet-ranker). It takes the audit report.
 - The [Business expertise reviewer](https://useaiblocks.com/skills/circle-of-competence-sorter). It takes the audit report.
-- The [Business track record checker](https://useaiblocks.com/skills/steady-track-record-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

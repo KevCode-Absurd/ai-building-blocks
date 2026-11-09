@@ -223,6 +223,5 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Brand mood board planner](https://useaiblocks.com/skills/brand-stylescape-planner). It takes the brand brain and buyer profile.
 - The [Premium product positioning planner](https://useaiblocks.com/skills/premium-positioning-mapper). It takes the product facts and buyer profile.
 - The [Brand guide builder](https://useaiblocks.com/skills/brand-guide-builder). It takes the brand brain.
-- **Understand your buyers** with the [Buyer profile reviewer](https://useaiblocks.com/skills/avatar-fit-checker). It takes the buyer profile.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

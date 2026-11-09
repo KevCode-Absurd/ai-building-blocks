@@ -15,15 +15,271 @@
  ],
  "items": [
   {
+   "id": "https://useaiblocks.com/skills/ai-default-patterns",
+   "url": "https://useaiblocks.com/skills/ai-default-patterns",
+   "title": "AI default patterns",
+   "summary": "Give it your brief or draft. You get the AI habits to avoid for your brand, and a check for them.",
+   "content_text": "Give it your brief or draft. You get the AI habits to avoid for your brand, and a check for them.",
+   "date_published": "2026-11-09T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Design things people love"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/ai-default-patterns.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/ai-default-patterns/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/ai-default-patterns.md",
+    "json": "https://useaiblocks.com/skills/ai-default-patterns.json",
+    "skill": "https://useaiblocks.com/skills/ai-default-patterns/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/brand-dna-capture",
+   "url": "https://useaiblocks.com/skills/brand-dna-capture",
+   "title": "Brand DNA capture",
+   "summary": "Give it your website. You get your real colours, fonts, buttons, page order, voice and prices, measured, for your AI to follow.",
+   "content_text": "Give it your website. You get your real colours, fonts, buttons, page order, voice and prices, measured, for your AI to follow.",
+   "date_published": "2026-11-09T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Set up your brand file"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/brand-dna-capture.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/brand-dna-capture/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/brand-dna-capture.md",
+    "json": "https://useaiblocks.com/skills/brand-dna-capture.json",
+    "skill": "https://useaiblocks.com/skills/brand-dna-capture/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/brand-fidelity-check",
+   "url": "https://useaiblocks.com/skills/brand-fidelity-check",
+   "title": "Brand fidelity check",
+   "summary": "Give it your site capture and a new page. You get a pass or fail on the eight ways pages drift off-brand, with screenshots.",
+   "content_text": "Give it your site capture and a new page. You get a pass or fail on the eight ways pages drift off-brand, with screenshots.",
+   "date_published": "2026-11-09T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Audit a landing page"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/brand-fidelity-check.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/brand-fidelity-check/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/brand-fidelity-check.md",
+    "json": "https://useaiblocks.com/skills/brand-fidelity-check.json",
+    "skill": "https://useaiblocks.com/skills/brand-fidelity-check/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/expert-agent-blind-test",
+   "url": "https://useaiblocks.com/skills/expert-agent-blind-test",
+   "title": "Expert agent blind test",
+   "summary": "Give it your agent and its test cases. You get a fair blind test against plain AI, with win rate and consistency.",
+   "content_text": "Give it your agent and its test cases. You get a fair blind test against plain AI, with win rate and consistency.",
+   "date_published": "2026-11-09T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Set up AI to work for you"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/expert-agent-blind-test.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/expert-agent-blind-test/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/expert-agent-blind-test.md",
+    "json": "https://useaiblocks.com/skills/expert-agent-blind-test.json",
+    "skill": "https://useaiblocks.com/skills/expert-agent-blind-test/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/expert-agent-eval-builder",
+   "url": "https://useaiblocks.com/skills/expert-agent-eval-builder",
+   "title": "Expert agent eval builder",
+   "summary": "Give it your agent files. You get a rubric in your words, 20 or more test cases and a judge that grades like you.",
+   "content_text": "Give it your agent files. You get a rubric in your words, 20 or more test cases and a judge that grades like you.",
+   "date_published": "2026-11-09T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Set up AI to work for you"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/expert-agent-eval-builder.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/expert-agent-eval-builder/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/expert-agent-eval-builder.md",
+    "json": "https://useaiblocks.com/skills/expert-agent-eval-builder.json",
+    "skill": "https://useaiblocks.com/skills/expert-agent-eval-builder/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/expert-agent-improvement-loop",
+   "url": "https://useaiblocks.com/skills/expert-agent-improvement-loop",
+   "title": "Expert agent improvement loop",
+   "summary": "Bring a week of your agent's mistakes. You get two tested fixes, a new version and a log of ideas you dropped.",
+   "content_text": "Bring a week of your agent's mistakes. You get two tested fixes, a new version and a log of ideas you dropped.",
+   "date_published": "2026-11-09T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Set up AI to work for you"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/expert-agent-improvement-loop.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/expert-agent-improvement-loop/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/expert-agent-improvement-loop.md",
+    "json": "https://useaiblocks.com/skills/expert-agent-improvement-loop.json",
+    "skill": "https://useaiblocks.com/skills/expert-agent-improvement-loop/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/expert-knowledge-interview",
+   "url": "https://useaiblocks.com/skills/expert-knowledge-interview",
+   "title": "Expert knowledge interview",
+   "summary": "Tell it your job and bring real cases. It interviews you and writes your judgment and taste into agent files.",
+   "content_text": "Tell it your job and bring real cases. It interviews you and writes your judgment and taste into agent files.",
+   "date_published": "2026-11-09T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Set up AI to work for you"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/expert-knowledge-interview.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/expert-knowledge-interview/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/expert-knowledge-interview.md",
+    "json": "https://useaiblocks.com/skills/expert-knowledge-interview.json",
+    "skill": "https://useaiblocks.com/skills/expert-knowledge-interview/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/grounded-job-protocol",
+   "url": "https://useaiblocks.com/skills/grounded-job-protocol",
+   "title": "Grounded job protocol",
+   "summary": "Give it any real job. Your AI frames it, studies your actual business first, explores real options, builds in your style and gets checked.",
+   "content_text": "Give it any real job. Your AI frames it, studies your actual business first, explores real options, builds in your style and gets checked.",
+   "date_published": "2026-11-09T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Plan your strategy"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/grounded-job-protocol.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/grounded-job-protocol/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/grounded-job-protocol.md",
+    "json": "https://useaiblocks.com/skills/grounded-job-protocol.json",
+    "skill": "https://useaiblocks.com/skills/grounded-job-protocol/SKILL.md"
+   }
+  },
+  {
    "id": "https://useaiblocks.com/skills/personal-agent-builder",
    "url": "https://useaiblocks.com/skills/personal-agent-builder",
    "title": "Personal agent builder",
    "summary": "Build a personal prompt, skill, agent or collection from real work, tacit judgment, conditional taste and reviewed corrections. Keep an editable private dossier.",
-   "content_text": "Build a personal prompt, skill, agent or collection from real work, tacit judgment, conditional taste and reviewed corrections. Keep an editable private dossier.",
+   "content_text": "Build a personal prompt, skill, agent or collection from real work, tacit judgment, conditional taste and reviewed corrections. Keep an editable private dossier. Updated 2026-11-09.",
    "date_published": "2026-11-08T00:00:00Z",
-   "date_modified": "2026-11-08T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
    "tags": [
-    "new",
+    "updated",
     "skill",
     "Set up AI to work for you"
    ],
@@ -44,6 +300,710 @@
     "markdown": "https://useaiblocks.com/skills/personal-agent-builder.md",
     "json": "https://useaiblocks.com/skills/personal-agent-builder.json",
     "skill": "https://useaiblocks.com/skills/personal-agent-builder/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-recruitment-specialist",
+   "url": "https://useaiblocks.com/agents/agency-recruitment-specialist",
+   "title": "China recruitment planner",
+   "summary": "Plan hiring in China, from job post and Boss Zhipin or Liepin channels to interviews, offer and a labour law check. Give it the role, city and budget.",
+   "content_text": "Plan hiring in China, from job post and Boss Zhipin or Liepin channels to interviews, offer and a labour law check. Give it the role, city and budget. Updated 2026-11-09.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Hire and look after your people"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-recruitment-specialist.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-recruitment-specialist/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-recruitment-specialist.md",
+    "json": "https://useaiblocks.com/agents/agency-recruitment-specialist.json",
+    "skill": "https://useaiblocks.com/skills/agency-recruitment-specialist/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/track-agent-injection-controls-and-retest-evidence",
+   "url": "https://useaiblocks.com/agents/track-agent-injection-controls-and-retest-evidence",
+   "title": "Agent injection evidence review assistant",
+   "summary": "Get safe prompt injection test cases for your AI agent, a control gap list and retest records. Tests run only with the owner's written approval.",
+   "content_text": "Get safe prompt injection test cases for your AI agent, a control gap list and retest records. Tests run only with the owner's written approval. Updated 2026-11-09.",
+   "date_published": "2026-10-25T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Keep your code secure"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/track-agent-injection-controls-and-retest-evidence.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/track-agent-injection-controls-and-retest-evidence/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/track-agent-injection-controls-and-retest-evidence.md",
+    "json": "https://useaiblocks.com/agents/track-agent-injection-controls-and-retest-evidence.json",
+    "skill": "https://useaiblocks.com/skills/track-agent-injection-controls-and-retest-evidence/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/product-page-brand-profile-extractor",
+   "url": "https://useaiblocks.com/skills/product-page-brand-profile-extractor",
+   "title": "Product-page brand analyst",
+   "summary": "Turn one product page into a brand profile: product facts, claims, six colors and visual style, with gaps flagged. Works from a link or pasted text.",
+   "content_text": "Turn one product page into a brand profile: product facts, claims, six colors and visual style, with gaps flagged. Works from a link or pasted text. Updated 2026-11-09.",
+   "date_published": "2026-10-25T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Set up your brand file"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/product-page-brand-profile-extractor.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/product-page-brand-profile-extractor/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/product-page-brand-profile-extractor.md",
+    "json": "https://useaiblocks.com/skills/product-page-brand-profile-extractor.json",
+    "skill": "https://useaiblocks.com/skills/product-page-brand-profile-extractor/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/static-html-landing-page-builder",
+   "url": "https://useaiblocks.com/skills/static-html-landing-page-builder",
+   "title": "Plain HTML landing page builder",
+   "summary": "Share approved copy and layout. Get a responsive HTML page, local files and recorded browser checks.",
+   "content_text": "Share approved copy and layout. Get a responsive HTML page, local files and recorded browser checks. Updated 2026-11-09.",
+   "date_published": "2026-10-22T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Write and build a landing page"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/static-html-landing-page-builder.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/static-html-landing-page-builder/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/static-html-landing-page-builder.md",
+    "json": "https://useaiblocks.com/skills/static-html-landing-page-builder.json",
+    "skill": "https://useaiblocks.com/skills/static-html-landing-page-builder/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/premium-positioning-mapper",
+   "url": "https://useaiblocks.com/skills/premium-positioning-mapper",
+   "title": "Premium product positioning planner",
+   "summary": "Share product facts, buyer groups and costs. Get positioning lines, proof needs and price scenarios to test with real buyers.",
+   "content_text": "Share product facts, buyer groups and costs. Get positioning lines, proof needs and price scenarios to test with real buyers. Updated 2026-11-09.",
+   "date_published": "2026-10-21T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Set up your brand file"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/premium-positioning-mapper.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/premium-positioning-mapper/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/premium-positioning-mapper.md",
+    "json": "https://useaiblocks.com/skills/premium-positioning-mapper.json",
+    "skill": "https://useaiblocks.com/skills/premium-positioning-mapper/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/workflows/set-fair-pay-bands-and-a-pay-and-benefits-plan",
+   "url": "https://useaiblocks.com/workflows/set-fair-pay-bands-and-a-pay-and-benefits-plan",
+   "title": "Salary band and benefits planner",
+   "summary": "Share roles, location, pay data and budget. Get market comparisons, salary bands and a proposed bonus and benefits plan.",
+   "content_text": "Share roles, location, pay data and budget. Get market comparisons, salary bands and a proposed bonus and benefits plan. Updated 2026-11-09.",
+   "date_published": "2026-10-21T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "updated",
+    "workflow",
+    "Hire and look after your people"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/workflows/set-fair-pay-bands-and-a-pay-and-benefits-plan.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/set-fair-pay-bands-and-a-pay-and-benefits-plan/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "workflow",
+    "markdown": "https://useaiblocks.com/workflows/set-fair-pay-bands-and-a-pay-and-benefits-plan.md",
+    "json": "https://useaiblocks.com/workflows/set-fair-pay-bands-and-a-pay-and-benefits-plan.json",
+    "skill": "https://useaiblocks.com/skills/set-fair-pay-bands-and-a-pay-and-benefits-plan/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/store-hero-section-writer",
+   "url": "https://useaiblocks.com/skills/store-hero-section-writer",
+   "title": "Store hero section writer",
+   "summary": "Write the top screen of your store page: five headline options, a subhead, proof, a button and a test plan, all built from your offer and ad.",
+   "content_text": "Write the top screen of your store page: five headline options, a subhead, proof, a button and a test plan, all built from your offer and ad. Updated 2026-11-09.",
+   "date_published": "2026-10-21T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Write and build a landing page"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/store-hero-section-writer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/store-hero-section-writer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/store-hero-section-writer.md",
+    "json": "https://useaiblocks.com/skills/store-hero-section-writer.json",
+    "skill": "https://useaiblocks.com/skills/store-hero-section-writer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/animated-landing-page-builder",
+   "url": "https://useaiblocks.com/skills/animated-landing-page-builder",
+   "title": "Animated landing page builder",
+   "summary": "Answer a few questions about your product. Get a one-page site with 3D motion and scroll effects.",
+   "content_text": "Answer a few questions about your product. Get a one-page site with 3D motion and scroll effects. Updated 2026-11-09.",
+   "date_published": "2026-10-20T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Write and build a landing page"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/animated-landing-page-builder.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/animated-landing-page-builder/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/animated-landing-page-builder.md",
+    "json": "https://useaiblocks.com/skills/animated-landing-page-builder.json",
+    "skill": "https://useaiblocks.com/skills/animated-landing-page-builder/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/mispriced-bet-tester",
+   "url": "https://useaiblocks.com/skills/mispriced-bet-tester",
+   "title": "Bet price and odds reviewer",
+   "summary": "Test your bets against their price. Give each bet a cost and payoff and get a call of near cinch, fair bet or no bet, with the odds.",
+   "content_text": "Test your bets against their price. Give each bet a cost and payoff and get a call of near cinch, fair bet or no bet, with the odds. Updated 2026-11-09.",
+   "date_published": "2026-10-20T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Research investments and business value"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/mispriced-bet-tester.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/mispriced-bet-tester/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/mispriced-bet-tester.md",
+    "json": "https://useaiblocks.com/skills/mispriced-bet-tester.json",
+    "skill": "https://useaiblocks.com/skills/mispriced-bet-tester/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/conversion-landing-page-designer",
+   "url": "https://useaiblocks.com/skills/conversion-landing-page-designer",
+   "title": "Conversion landing page designer",
+   "summary": "Share your offer, audience, and proof for landing page copy, layout, and visual design rules.",
+   "content_text": "Share your offer, audience, and proof for landing page copy, layout, and visual design rules. Updated 2026-11-09.",
+   "date_published": "2026-10-20T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Write and build a landing page"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/conversion-landing-page-designer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/conversion-landing-page-designer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/conversion-landing-page-designer.md",
+    "json": "https://useaiblocks.com/skills/conversion-landing-page-designer.json",
+    "skill": "https://useaiblocks.com/skills/conversion-landing-page-designer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/fair-escape-checker",
+   "url": "https://useaiblocks.com/skills/fair-escape-checker",
+   "title": "Fair escape checker",
+   "summary": "Check if your story's escapes feel fair. Paste your plan and get each way out judged for luck, effort and cost, with fixes for cheats.",
+   "content_text": "Check if your story's escapes feel fair. Paste your plan and get each way out judged for luck, effort and cost, with fixes for cheats. Updated 2026-11-09.",
+   "date_published": "2026-10-20T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Write and tell stories"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/fair-escape-checker.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/fair-escape-checker/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/fair-escape-checker.md",
+    "json": "https://useaiblocks.com/skills/fair-escape-checker.json",
+    "skill": "https://useaiblocks.com/skills/fair-escape-checker/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/interface-designer",
+   "url": "https://useaiblocks.com/skills/interface-designer",
+   "title": "Interface designer",
+   "summary": "Describe your page or app and get a built interface with its own look, picked for your subject and audience, not a stock template.",
+   "content_text": "Describe your page or app and get a built interface with its own look, picked for your subject and audience, not a stock template. Updated 2026-11-09.",
+   "date_published": "2026-10-20T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Build websites and web apps"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/interface-designer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/interface-designer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/interface-designer.md",
+    "json": "https://useaiblocks.com/skills/interface-designer.json",
+    "skill": "https://useaiblocks.com/skills/interface-designer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/premium-interface-designer",
+   "url": "https://useaiblocks.com/skills/premium-interface-designer",
+   "title": "Interface styling and motion designer",
+   "summary": "Share a page brief, brand and project setup. Get interface code with considered type, spacing, depth and motion, plus checks to run.",
+   "content_text": "Share a page brief, brand and project setup. Get interface code with considered type, spacing, depth and motion, plus checks to run. Updated 2026-11-09.",
+   "date_published": "2026-10-20T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Design things people love"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/premium-interface-designer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/premium-interface-designer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/premium-interface-designer.md",
+    "json": "https://useaiblocks.com/skills/premium-interface-designer.json",
+    "skill": "https://useaiblocks.com/skills/premium-interface-designer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/interview-and-research-planner",
+   "url": "https://useaiblocks.com/skills/interview-and-research-planner",
+   "title": "Interview and research planner",
+   "summary": "Share a decision, research question and who you can reach. Get a study plan and interview guide, not findings before research.",
+   "content_text": "Share a decision, research question and who you can reach. Get a study plan and interview guide, not findings before research. Updated 2026-11-09.",
+   "date_published": "2026-10-20T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Understand your customers"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/interview-and-research-planner.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/interview-and-research-planner/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/interview-and-research-planner.md",
+    "json": "https://useaiblocks.com/skills/interview-and-research-planner.json",
+    "skill": "https://useaiblocks.com/skills/interview-and-research-planner/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/yes-ladder-question-writer",
+   "url": "https://useaiblocks.com/skills/yes-ladder-question-writer",
+   "title": "Sales agreement question planner",
+   "summary": "Write a yes ladder of four to seven fair questions that leads from shared ground to your ask, with a plan for each no.",
+   "content_text": "Write a yes ladder of four to seven fair questions that leads from shared ground to your ask, with a plan for each no. Updated 2026-11-09.",
+   "date_published": "2026-10-20T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Sell and negotiate"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/yes-ladder-question-writer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/yes-ladder-question-writer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/yes-ladder-question-writer.md",
+    "json": "https://useaiblocks.com/skills/yes-ladder-question-writer.json",
+    "skill": "https://useaiblocks.com/skills/yes-ladder-question-writer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/shift-schedule-planner",
+   "url": "https://useaiblocks.com/skills/shift-schedule-planner",
+   "title": "Shift schedule planner",
+   "summary": "Plan a fair shift pattern, a weekly schedule and a rotation for nights and weekends, with a swap policy and staff notice. Not legal advice.",
+   "content_text": "Plan a fair shift pattern, a weekly schedule and a rotation for nights and weekends, with a swap policy and staff notice. Not legal advice. Updated 2026-11-09.",
+   "date_published": "2026-10-20T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Hire and look after your people"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/shift-schedule-planner.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/shift-schedule-planner/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/shift-schedule-planner.md",
+    "json": "https://useaiblocks.com/skills/shift-schedule-planner.json",
+    "skill": "https://useaiblocks.com/skills/shift-schedule-planner/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/page-design-gate",
+   "url": "https://useaiblocks.com/skills/page-design-gate",
+   "title": "Web page designer",
+   "summary": "Share a page brief or code. Get design changes and browser findings at two screen sizes.",
+   "content_text": "Share a page brief or code. Get design changes and browser findings at two screen sizes. Updated 2026-11-09.",
+   "date_published": "2026-10-20T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Build websites and web apps"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/page-design-gate.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/page-design-gate/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/page-design-gate.md",
+    "json": "https://useaiblocks.com/skills/page-design-gate.json",
+    "skill": "https://useaiblocks.com/skills/page-design-gate/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/prompts/landing-page-30-point-checker",
+   "url": "https://useaiblocks.com/prompts/landing-page-30-point-checker",
+   "title": "30-point landing page checker",
+   "summary": "Share your page and screenshots. Get a 30-point audit, a score and five fixes to make first.",
+   "content_text": "Share your page and screenshots. Get a 30-point audit, a score and five fixes to make first. Updated 2026-11-09.",
+   "date_published": "2026-10-19T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "updated",
+    "prompt",
+    "Audit a landing page"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/prompts/landing-page-30-point-checker.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/landing-page-30-point-checker/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "prompt",
+    "markdown": "https://useaiblocks.com/prompts/landing-page-30-point-checker.md",
+    "json": "https://useaiblocks.com/prompts/landing-page-30-point-checker.json",
+    "skill": "https://useaiblocks.com/skills/landing-page-30-point-checker/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/ad-matched-landing-page-writer",
+   "url": "https://useaiblocks.com/skills/ad-matched-landing-page-writer",
+   "title": "Ad-matched landing page writer",
+   "summary": "Write landing page copy that picks up where your ad left off. Give it the ad, your facts and reviews. You get a page with the full cost stated.",
+   "content_text": "Write landing page copy that picks up where your ad left off. Give it the ad, your facts and reviews. You get a page with the full cost stated. Updated 2026-11-09.",
+   "date_published": "2026-10-19T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Write and build a landing page"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/ad-matched-landing-page-writer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/ad-matched-landing-page-writer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/ad-matched-landing-page-writer.md",
+    "json": "https://useaiblocks.com/skills/ad-matched-landing-page-writer.json",
+    "skill": "https://useaiblocks.com/skills/ad-matched-landing-page-writer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/landing-page-auditor",
+   "url": "https://useaiblocks.com/skills/landing-page-auditor",
+   "title": "Landing page conversion reviewer",
+   "summary": "Share your page and screenshots. Get conversion problems ranked by impact, with recommended fixes and a score.",
+   "content_text": "Share your page and screenshots. Get conversion problems ranked by impact, with recommended fixes and a score. Updated 2026-11-09.",
+   "date_published": "2026-10-19T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Audit a landing page"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/landing-page-auditor.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/landing-page-auditor/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/landing-page-auditor.md",
+    "json": "https://useaiblocks.com/skills/landing-page-auditor.json",
+    "skill": "https://useaiblocks.com/skills/landing-page-auditor/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/landing-page-design-planner",
+   "url": "https://useaiblocks.com/skills/landing-page-design-planner",
+   "title": "Landing page design planner",
+   "summary": "Plan a landing page design from your copy and brand. Get three different directions, a section plan and a build brief, before anyone builds.",
+   "content_text": "Plan a landing page design from your copy and brand. Get three different directions, a section plan and a build brief, before anyone builds. Updated 2026-11-09.",
+   "date_published": "2026-10-19T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Write and build a landing page"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/landing-page-design-planner.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/landing-page-design-planner/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/landing-page-design-planner.md",
+    "json": "https://useaiblocks.com/skills/landing-page-design-planner.json",
+    "skill": "https://useaiblocks.com/skills/landing-page-design-planner/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/shopify-landing-page-builder",
+   "url": "https://useaiblocks.com/skills/shopify-landing-page-builder",
+   "title": "Shopify landing page builder",
+   "summary": "Turn your finished landing page copy into a Shopify landing page: a section file, a page template with your words in, and install steps.",
+   "content_text": "Turn your finished landing page copy into a Shopify landing page: a section file, a page template with your words in, and install steps. Updated 2026-11-09.",
+   "date_published": "2026-10-19T00:00:00Z",
+   "date_modified": "2026-11-09T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Write and build a landing page"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/shopify-landing-page-builder.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/shopify-landing-page-builder/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/shopify-landing-page-builder.md",
+    "json": "https://useaiblocks.com/skills/shopify-landing-page-builder.json",
+    "skill": "https://useaiblocks.com/skills/shopify-landing-page-builder/SKILL.md"
    }
   },
   {
@@ -76,38 +1036,6 @@
     "markdown": "https://useaiblocks.com/skills/video-ad-production-plan-builder.md",
     "json": "https://useaiblocks.com/skills/video-ad-production-plan-builder.json",
     "skill": "https://useaiblocks.com/skills/video-ad-production-plan-builder/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/static-html-landing-page-builder",
-   "url": "https://useaiblocks.com/skills/static-html-landing-page-builder",
-   "title": "Plain HTML landing page builder",
-   "summary": "Share approved copy and layout. Get a responsive HTML page, local files and recorded browser checks.",
-   "content_text": "Share approved copy and layout. Get a responsive HTML page, local files and recorded browser checks. Updated 2026-11-08.",
-   "date_published": "2026-10-22T00:00:00Z",
-   "date_modified": "2026-11-08T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Write and build a landing page"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/static-html-landing-page-builder.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/static-html-landing-page-builder/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/static-html-landing-page-builder.md",
-    "json": "https://useaiblocks.com/skills/static-html-landing-page-builder.json",
-    "skill": "https://useaiblocks.com/skills/static-html-landing-page-builder/SKILL.md"
    }
   },
   {
@@ -239,38 +1167,6 @@
    }
   },
   {
-   "id": "https://useaiblocks.com/skills/ad-matched-landing-page-writer",
-   "url": "https://useaiblocks.com/skills/ad-matched-landing-page-writer",
-   "title": "Ad-matched landing page writer",
-   "summary": "Write landing page copy that picks up where your ad left off. Give it the ad, your facts and reviews. You get a page with the full cost stated.",
-   "content_text": "Write landing page copy that picks up where your ad left off. Give it the ad, your facts and reviews. You get a page with the full cost stated. Updated 2026-11-08.",
-   "date_published": "2026-10-19T00:00:00Z",
-   "date_modified": "2026-11-08T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Write and build a landing page"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/ad-matched-landing-page-writer.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/ad-matched-landing-page-writer/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/ad-matched-landing-page-writer.md",
-    "json": "https://useaiblocks.com/skills/ad-matched-landing-page-writer.json",
-    "skill": "https://useaiblocks.com/skills/ad-matched-landing-page-writer/SKILL.md"
-   }
-  },
-  {
    "id": "https://useaiblocks.com/skills/website-brand-brain-builder",
    "url": "https://useaiblocks.com/skills/website-brand-brain-builder",
    "title": "Brand profile builder",
@@ -300,70 +1196,6 @@
     "markdown": "https://useaiblocks.com/skills/website-brand-brain-builder.md",
     "json": "https://useaiblocks.com/skills/website-brand-brain-builder.json",
     "skill": "https://useaiblocks.com/skills/website-brand-brain-builder/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/landing-page-design-planner",
-   "url": "https://useaiblocks.com/skills/landing-page-design-planner",
-   "title": "Landing page design planner",
-   "summary": "Plan a landing page design from your copy and brand. Get three different directions, a section plan and a build brief, before anyone builds.",
-   "content_text": "Plan a landing page design from your copy and brand. Get three different directions, a section plan and a build brief, before anyone builds. Updated 2026-11-08.",
-   "date_published": "2026-10-19T00:00:00Z",
-   "date_modified": "2026-11-08T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Write and build a landing page"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/landing-page-design-planner.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/landing-page-design-planner/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/landing-page-design-planner.md",
-    "json": "https://useaiblocks.com/skills/landing-page-design-planner.json",
-    "skill": "https://useaiblocks.com/skills/landing-page-design-planner/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/shopify-landing-page-builder",
-   "url": "https://useaiblocks.com/skills/shopify-landing-page-builder",
-   "title": "Shopify landing page builder",
-   "summary": "Turn your finished landing page copy into a Shopify landing page: a section file, a page template with your words in, and install steps.",
-   "content_text": "Turn your finished landing page copy into a Shopify landing page: a section file, a page template with your words in, and install steps. Updated 2026-11-08.",
-   "date_published": "2026-10-19T00:00:00Z",
-   "date_modified": "2026-11-08T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Write and build a landing page"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/shopify-landing-page-builder.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/shopify-landing-page-builder/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/shopify-landing-page-builder.md",
-    "json": "https://useaiblocks.com/skills/shopify-landing-page-builder.json",
-    "skill": "https://useaiblocks.com/skills/shopify-landing-page-builder/SKILL.md"
    }
   },
   {
@@ -1551,38 +2383,6 @@
    }
   },
   {
-   "id": "https://useaiblocks.com/skills/product-page-brand-profile-extractor",
-   "url": "https://useaiblocks.com/skills/product-page-brand-profile-extractor",
-   "title": "Product-page brand analyst",
-   "summary": "Turn one product page into a brand profile: product facts, claims, six colors and visual style, with gaps flagged. Works from a link or pasted text.",
-   "content_text": "Turn one product page into a brand profile: product facts, claims, six colors and visual style, with gaps flagged. Works from a link or pasted text. Updated 2026-11-04.",
-   "date_published": "2026-10-25T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Set up your brand file"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/product-page-brand-profile-extractor.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/product-page-brand-profile-extractor/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/product-page-brand-profile-extractor.md",
-    "json": "https://useaiblocks.com/skills/product-page-brand-profile-extractor.json",
-    "skill": "https://useaiblocks.com/skills/product-page-brand-profile-extractor/SKILL.md"
-   }
-  },
-  {
    "id": "https://useaiblocks.com/skills/rapid-cut-product-video-prompt",
    "url": "https://useaiblocks.com/skills/rapid-cut-product-video-prompt",
    "title": "Rapid-cut product video prompt writer",
@@ -2412,806 +3212,6 @@
     "markdown": "https://useaiblocks.com/skills/ai-recommendation-gap-finder.md",
     "json": "https://useaiblocks.com/skills/ai-recommendation-gap-finder.json",
     "skill": "https://useaiblocks.com/skills/ai-recommendation-gap-finder/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/ai-recommendation-panel-runner",
-   "url": "https://useaiblocks.com/skills/ai-recommendation-panel-runner",
-   "title": "AI search visibility tester",
-   "summary": "Share your store and shopper questions. Test or collect AI answers, then count brand mentions, links and cited sources in those runs.",
-   "content_text": "Share your store and shopper questions. Test or collect AI answers, then count brand mentions, links and cited sources in those runs. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Get found in search and AI answers"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/ai-recommendation-panel-runner.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/ai-recommendation-panel-runner/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/ai-recommendation-panel-runner.md",
-    "json": "https://useaiblocks.com/skills/ai-recommendation-panel-runner.json",
-    "skill": "https://useaiblocks.com/skills/ai-recommendation-panel-runner/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/brand-facts-accuracy-fixer",
-   "url": "https://useaiblocks.com/skills/brand-facts-accuracy-fixer",
-   "title": "AI store facts checker",
-   "summary": "Share AI answers and your store facts. Get claim checks, correction drafts, likely source pages and a score for the claims checked.",
-   "content_text": "Share AI answers and your store facts. Get claim checks, correction drafts, likely source pages and a score for the claims checked. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Get found in search and AI answers"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/brand-facts-accuracy-fixer.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/brand-facts-accuracy-fixer/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/brand-facts-accuracy-fixer.md",
-    "json": "https://useaiblocks.com/skills/brand-facts-accuracy-fixer.json",
-    "skill": "https://useaiblocks.com/skills/brand-facts-accuracy-fixer/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/ai-traffic-tracking-setup",
-   "url": "https://useaiblocks.com/skills/ai-traffic-tracking-setup",
-   "title": "AI traffic tracking planner",
-   "summary": "Give it your analytics and checkout. Get an AI traffic channel, a post-purchase question and a redirect list.",
-   "content_text": "Give it your analytics and checkout. Get an AI traffic channel, a post-purchase question and a redirect list. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Get found in search and AI answers"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/ai-traffic-tracking-setup.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/ai-traffic-tracking-setup/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/ai-traffic-tracking-setup.md",
-    "json": "https://useaiblocks.com/skills/ai-traffic-tracking-setup.json",
-    "skill": "https://useaiblocks.com/skills/ai-traffic-tracking-setup/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/amazon-brand-registry-planner",
-   "url": "https://useaiblocks.com/skills/amazon-brand-registry-planner",
-   "title": "Amazon brand registry planner",
-   "summary": "Share your brand name and listing. Get a trademark choice, a registry pack and tools to turn on.",
-   "content_text": "Share your brand name and listing. Get a trademark choice, a registry pack and tools to turn on. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Sell on Amazon"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/amazon-brand-registry-planner.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/amazon-brand-registry-planner/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/amazon-brand-registry-planner.md",
-    "json": "https://useaiblocks.com/skills/amazon-brand-registry-planner.json",
-    "skill": "https://useaiblocks.com/skills/amazon-brand-registry-planner/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/amazon-fee-and-margin-checker",
-   "url": "https://useaiblocks.com/skills/amazon-fee-and-margin-checker",
-   "title": "Amazon fee and margin checker",
-   "summary": "Share price, costs, size and fee figures. Get profit per unit, break-even ad cost and a score against the source’s rules.",
-   "content_text": "Share price, costs, size and fee figures. Get profit per unit, break-even ad cost and a score against the source’s rules. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Sell on Amazon"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/amazon-fee-and-margin-checker.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/amazon-fee-and-margin-checker/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/amazon-fee-and-margin-checker.md",
-    "json": "https://useaiblocks.com/skills/amazon-fee-and-margin-checker.json",
-    "skill": "https://useaiblocks.com/skills/amazon-fee-and-margin-checker/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/amazon-inbound-stock-planner",
-   "url": "https://useaiblocks.com/skills/amazon-inbound-stock-planner",
-   "title": "Amazon inbound stock planner",
-   "summary": "Give it sales, lead times and case sizes. Get how much to send, when, and a shipment checklist.",
-   "content_text": "Give it sales, lead times and case sizes. Get how much to send, when, and a shipment checklist. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Sell on Amazon"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/amazon-inbound-stock-planner.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/amazon-inbound-stock-planner/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/amazon-inbound-stock-planner.md",
-    "json": "https://useaiblocks.com/skills/amazon-inbound-stock-planner.json",
-    "skill": "https://useaiblocks.com/skills/amazon-inbound-stock-planner/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/amazon-keyword-picker",
-   "url": "https://useaiblocks.com/skills/amazon-keyword-picker",
-   "title": "Amazon keyword picker",
-   "summary": "Give it your product and a keyword export. Get the phrases for your title, bullets and backend.",
-   "content_text": "Give it your product and a keyword export. Get the phrases for your title, bullets and backend. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Sell on Amazon"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/amazon-keyword-picker.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/amazon-keyword-picker/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/amazon-keyword-picker.md",
-    "json": "https://useaiblocks.com/skills/amazon-keyword-picker.json",
-    "skill": "https://useaiblocks.com/skills/amazon-keyword-picker/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/amazon-launch-week-planner",
-   "url": "https://useaiblocks.com/skills/amazon-launch-week-planner",
-   "title": "Amazon launch week planner",
-   "summary": "Plan your Amazon launch week with a dated pre-launch plan, a launch-day run sheet, a discount with its cost, and honest review steps.",
-   "content_text": "Plan your Amazon launch week with a dated pre-launch plan, a launch-day run sheet, a discount with its cost, and honest review steps. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Sell on Amazon"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/amazon-launch-week-planner.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/amazon-launch-week-planner/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/amazon-launch-week-planner.md",
-    "json": "https://useaiblocks.com/skills/amazon-launch-week-planner.json",
-    "skill": "https://useaiblocks.com/skills/amazon-launch-week-planner/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/prompts/amazon-listing-first-draft-writer",
-   "url": "https://useaiblocks.com/prompts/amazon-listing-first-draft-writer",
-   "title": "Amazon listing first draft writer",
-   "summary": "Write a first Amazon listing from your product facts and search phrases. You get a title, five bullets, a short description and backend keywords.",
-   "content_text": "Write a first Amazon listing from your product facts and search phrases. You get a title, five bullets, a short description and backend keywords. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "prompt",
-    "Sell on Amazon"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/prompts/amazon-listing-first-draft-writer.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/amazon-listing-first-draft-writer/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "prompt",
-    "markdown": "https://useaiblocks.com/prompts/amazon-listing-first-draft-writer.md",
-    "json": "https://useaiblocks.com/prompts/amazon-listing-first-draft-writer.json",
-    "skill": "https://useaiblocks.com/skills/amazon-listing-first-draft-writer/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/amazon-listing-writer",
-   "url": "https://useaiblocks.com/skills/amazon-listing-writer",
-   "title": "Amazon listing writer",
-   "summary": "Write an Amazon listing from your product facts: a title with the main phrase first, five benefit bullets and backend keywords, ready to paste.",
-   "content_text": "Write an Amazon listing from your product facts: a title with the main phrase first, five benefit bullets and backend keywords, ready to paste. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Sell on Amazon"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/amazon-listing-writer.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/amazon-listing-writer/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/amazon-listing-writer.md",
-    "json": "https://useaiblocks.com/skills/amazon-listing-writer.json",
-    "skill": "https://useaiblocks.com/skills/amazon-listing-writer/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/amazon-search-gap-finder",
-   "url": "https://useaiblocks.com/skills/amazon-search-gap-finder",
-   "title": "Amazon product opportunity finder",
-   "summary": "Share an interest, category and any search data. Get ranked product-gap ideas and the evidence needed to test them.",
-   "content_text": "Share an interest, category and any search data. Get ranked product-gap ideas and the evidence needed to test them. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Sell on Amazon"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/amazon-search-gap-finder.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/amazon-search-gap-finder/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/amazon-search-gap-finder.md",
-    "json": "https://useaiblocks.com/skills/amazon-search-gap-finder.json",
-    "skill": "https://useaiblocks.com/skills/amazon-search-gap-finder/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/amazon-product-viability-scorer",
-   "url": "https://useaiblocks.com/skills/amazon-product-viability-scorer",
-   "title": "Amazon product viability scorer",
-   "summary": "Share a product idea and costs. Get a score, the weakest test and a go or no-go.",
-   "content_text": "Share a product idea and costs. Get a score, the weakest test and a go or no-go. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Sell on Amazon"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/amazon-product-viability-scorer.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/amazon-product-viability-scorer/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/amazon-product-viability-scorer.md",
-    "json": "https://useaiblocks.com/skills/amazon-product-viability-scorer.json",
-    "skill": "https://useaiblocks.com/skills/amazon-product-viability-scorer/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/amazon-reimbursement-claim-finder",
-   "url": "https://useaiblocks.com/skills/amazon-reimbursement-claim-finder",
-   "title": "Amazon reimbursement claim finder",
-   "summary": "Find Amazon reimbursement claims you can file. Give it 90 days of shipment and fee reports. You get a readiness score and a list of claims with proof.",
-   "content_text": "Find Amazon reimbursement claims you can file. Give it 90 days of shipment and fee reports. You get a readiness score and a list of claims with proof. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Sell on Amazon"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/amazon-reimbursement-claim-finder.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/amazon-reimbursement-claim-finder/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/amazon-reimbursement-claim-finder.md",
-    "json": "https://useaiblocks.com/skills/amazon-reimbursement-claim-finder.json",
-    "skill": "https://useaiblocks.com/skills/amazon-reimbursement-claim-finder/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/amazon-ppc-launch-builder",
-   "url": "https://useaiblocks.com/skills/amazon-ppc-launch-builder",
-   "title": "Amazon Sponsored Products ad planner",
-   "summary": "Share product profit, keywords and budget. Get three Amazon ad campaign plans with bids, excluded search terms and stop rules.",
-   "content_text": "Share product profit, keywords and budget. Get three Amazon ad campaign plans with bids, excluded search terms and stop rules. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Sell on Amazon"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/amazon-ppc-launch-builder.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/amazon-ppc-launch-builder/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/amazon-ppc-launch-builder.md",
-    "json": "https://useaiblocks.com/skills/amazon-ppc-launch-builder.json",
-    "skill": "https://useaiblocks.com/skills/amazon-ppc-launch-builder/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/prompts/amazon-unit-profit-checker",
-   "url": "https://useaiblocks.com/prompts/amazon-unit-profit-checker",
-   "title": "Amazon unit profit checker",
-   "summary": "Check your Amazon unit profit before you order stock. Paste price, landed cost and fees. You get profit per unit and break-even ad cost.",
-   "content_text": "Check your Amazon unit profit before you order stock. Paste price, landed cost and fees. You get profit per unit and break-even ad cost. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "prompt",
-    "Sell on Amazon"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/prompts/amazon-unit-profit-checker.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/amazon-unit-profit-checker/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "prompt",
-    "markdown": "https://useaiblocks.com/prompts/amazon-unit-profit-checker.md",
-    "json": "https://useaiblocks.com/prompts/amazon-unit-profit-checker.json",
-    "skill": "https://useaiblocks.com/skills/amazon-unit-profit-checker/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/answer-first-page-rewriter",
-   "url": "https://useaiblocks.com/skills/answer-first-page-rewriter",
-   "title": "Answer-first page rewriter",
-   "summary": "Share a blog, guide or FAQ page. Get sections rewritten answer first, with facts still needing a source.",
-   "content_text": "Share a blog, guide or FAQ page. Get sections rewritten answer first, with facts still needing a source. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Get found in search and AI answers"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/answer-first-page-rewriter.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/answer-first-page-rewriter/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/answer-first-page-rewriter.md",
-    "json": "https://useaiblocks.com/skills/answer-first-page-rewriter.json",
-    "skill": "https://useaiblocks.com/skills/answer-first-page-rewriter/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/advertorial-draft-editor",
-   "url": "https://useaiblocks.com/skills/advertorial-draft-editor",
-   "title": "Article-style ad draft editor",
-   "summary": "Share an article-style ad draft and your proof. Get clearer wording, stronger openings, exact proof lines and a change log.",
-   "content_text": "Share an article-style ad draft and your proof. Get clearer wording, stronger openings, exact proof lines and a change log. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Write and build a landing page"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/advertorial-draft-editor.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/advertorial-draft-editor/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/advertorial-draft-editor.md",
-    "json": "https://useaiblocks.com/skills/advertorial-draft-editor.json",
-    "skill": "https://useaiblocks.com/skills/advertorial-draft-editor/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/advertorial-angle-and-format-picker",
-   "url": "https://useaiblocks.com/skills/advertorial-angle-and-format-picker",
-   "title": "Article-style ad planner",
-   "summary": "Share customer problems, product facts, rival ads and budget. Get ranked topics, page formats and a plan to test them.",
-   "content_text": "Share customer problems, product facts, rival ads and budget. Get ranked topics, page formats and a plan to test them. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Plan what ads to test"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/advertorial-angle-and-format-picker.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/advertorial-angle-and-format-picker/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/advertorial-angle-and-format-picker.md",
-    "json": "https://useaiblocks.com/skills/advertorial-angle-and-format-picker.json",
-    "skill": "https://useaiblocks.com/skills/advertorial-angle-and-format-picker/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/advertorial-readiness-checker",
-   "url": "https://useaiblocks.com/skills/advertorial-readiness-checker",
-   "title": "Article-style ad readiness checker",
-   "summary": "Share live ads, spend and break-even results. Get a build-or-wait decision, checklist score and page plan.",
-   "content_text": "Share live ads, spend and break-even results. Get a build-or-wait decision, checklist score and page plan. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Audit a landing page"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/advertorial-readiness-checker.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/advertorial-readiness-checker/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/advertorial-readiness-checker.md",
-    "json": "https://useaiblocks.com/skills/advertorial-readiness-checker.json",
-    "skill": "https://useaiblocks.com/skills/advertorial-readiness-checker/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/advertorial-story-and-belief-checker",
-   "url": "https://useaiblocks.com/skills/advertorial-story-and-belief-checker",
-   "title": "Article-style ad story checker",
-   "summary": "Share an article-style ad draft. Get story breaks, missing reasons to believe, targeted rewrites and a checklist score.",
-   "content_text": "Share an article-style ad draft. Get story breaks, missing reasons to believe, targeted rewrites and a checklist score. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Audit a landing page"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/advertorial-story-and-belief-checker.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/advertorial-story-and-belief-checker/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/advertorial-story-and-belief-checker.md",
-    "json": "https://useaiblocks.com/skills/advertorial-story-and-belief-checker.json",
-    "skill": "https://useaiblocks.com/skills/advertorial-story-and-belief-checker/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/programmatic-direct-mail-planner",
-   "url": "https://useaiblocks.com/skills/programmatic-direct-mail-planner",
-   "title": "Automated direct mail planner",
-   "summary": "Plan programmatic direct mail for your online store. Pick the customers worth mailing, set a test group and check payback per piece.",
-   "content_text": "Plan programmatic direct mail for your online store. Pick the customers worth mailing, set a test group and check payback per piece. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Keep customers coming back"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/programmatic-direct-mail-planner.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/programmatic-direct-mail-planner/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/programmatic-direct-mail-planner.md",
-    "json": "https://useaiblocks.com/skills/programmatic-direct-mail-planner.json",
-    "skill": "https://useaiblocks.com/skills/programmatic-direct-mail-planner/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/best-of-page-writer",
-   "url": "https://useaiblocks.com/skills/best-of-page-writer",
-   "title": "Best-of page writer",
-   "summary": "Write a fair best-of page that includes your product. Give it a buyer question and your rivals' facts. You get a brief, a draft and a proof list.",
-   "content_text": "Write a fair best-of page that includes your product. Give it a buyer question and your rivals' facts. You get a brief, a draft and a proof list. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Get found in search and AI answers"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/best-of-page-writer.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/best-of-page-writer/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/best-of-page-writer.md",
-    "json": "https://useaiblocks.com/skills/best-of-page-writer.json",
-    "skill": "https://useaiblocks.com/skills/best-of-page-writer/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/billing-reminder-and-confirmation-writer",
-   "url": "https://useaiblocks.com/skills/billing-reminder-and-confirmation-writer",
-   "title": "Billing reminder and confirmation writer",
-   "summary": "Share subscription plans, gift timing and email tools. Get billing reminders, order emails, link setup steps and a test plan.",
-   "content_text": "Share subscription plans, gift timing and email tools. Get billing reminders, order emails, link setup steps and a test plan. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Keep customers coming back"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/billing-reminder-and-confirmation-writer.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/billing-reminder-and-confirmation-writer/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/billing-reminder-and-confirmation-writer.md",
-    "json": "https://useaiblocks.com/skills/billing-reminder-and-confirmation-writer.json",
-    "skill": "https://useaiblocks.com/skills/billing-reminder-and-confirmation-writer/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/big-swing-test-picker",
-   "url": "https://useaiblocks.com/skills/big-swing-test-picker",
-   "title": "Bold store experiment planner",
-   "summary": "Share store traffic, orders and page findings. Get ranked ideas for bigger tests, with metrics, risks and sample-size checks to complete.",
-   "content_text": "Share store traffic, orders and page findings. Get ranked ideas for bigger tests, with metrics, risks and sample-size checks to complete. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Test changes to your store"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/big-swing-test-picker.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/big-swing-test-picker/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/big-swing-test-picker.md",
-    "json": "https://useaiblocks.com/skills/big-swing-test-picker.json",
-    "skill": "https://useaiblocks.com/skills/big-swing-test-picker/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/bot-and-ai-agent-access-planner",
-   "url": "https://useaiblocks.com/skills/bot-and-ai-agent-access-planner",
-   "title": "Bot and AI agent access planner",
-   "summary": "Plan which bots and AI agents to allow, check or block on your store. Give it your traffic and flows. You get a policy, limits and alerts.",
-   "content_text": "Plan which bots and AI agents to allow, check or block on your store. Give it your traffic and flows. You get a policy, limits and alerts. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Keep your store safe"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/bot-and-ai-agent-access-planner.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/bot-and-ai-agent-access-planner/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/bot-and-ai-agent-access-planner.md",
-    "json": "https://useaiblocks.com/skills/bot-and-ai-agent-access-planner.json",
-    "skill": "https://useaiblocks.com/skills/bot-and-ai-agent-access-planner/SKILL.md"
    }
   }
  ]

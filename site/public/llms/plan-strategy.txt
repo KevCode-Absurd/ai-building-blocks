@@ -1,6 +1,6 @@
 # Plan your strategy: AI Blocks
 
-> 212 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 213 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [90-day action plan builder](https://useaiblocks.com/skills/90-day-plan-builder): Share an approved decision, owners and start date. Get a 12-week action plan with milestones, check-ins, dependencies and risks.
 - [90-day marketing strategy planner](https://useaiblocks.com/workflows/check-your-strategy-then-turn-it-into-a-90-day-plan): Review the strategy, resolve weak choices and build a marketing plan with weekly actions, owners and check-ins for 90 days.
@@ -86,6 +86,7 @@
 - [Go-to-market positioning planner](https://useaiblocks.com/skills/go-to-market-positioning-planner): Share your product, buyer evidence and rivals. Get a position, messages and launch steps, with gaps to research.
 - [Goal cascade checker](https://useaiblocks.com/skills/goal-cascade-checker): Check that team plans match company goals. Find orphan goals, clashes and gaps in your goal cascade, with a fix for each one.
 - [Goal definition coach](https://useaiblocks.com/skills/goal-sharpener): Turn a fuzzy aim into a clear goal with a number to hit, proof it is done, and a limit on scope. Use it before you start a long AI task.
+- [Grounded job protocol](https://useaiblocks.com/skills/grounded-job-protocol): Give it any real job. Your AI frames it, studies your actual business first, explores real options, builds in your style and gets checked.
 - [Growth bottleneck finder](https://useaiblocks.com/skills/growth-bottleneck-finder): Share store results and planned changes. Get possible growth limits, a work order and the next check to test the leading idea.
 - [Growth channel experiment tracker](https://useaiblocks.com/agents/traction-experiment-keeper): Track channel test plans and mature results. Get a focus, revise, stop or wait decision with a bounded next step.
 - [Growth channel profile builder](https://useaiblocks.com/skills/traction-business-profiler): Turn your product link into a business profile with your buyer, offer, growth goal and missing facts, ready for a small channel test.

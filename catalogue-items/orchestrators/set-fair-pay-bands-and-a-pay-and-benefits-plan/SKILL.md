@@ -86,6 +86,5 @@ Use these instead of the general "After this" list below:
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Pay and benefits package designer](https://useaiblocks.com/skills/pay-benefits-package). It takes the spreadsheet.
 - The [Employee termination risk reviewer](https://useaiblocks.com/skills/termination-risk-checker). It takes the plan.
-- The [Shift schedule planner](https://useaiblocks.com/skills/shift-schedule-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

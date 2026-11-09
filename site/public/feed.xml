@@ -6,16 +6,316 @@
     <description>The newest free AI skills, workflows, prompts, agents and minds on AI Blocks, and the ones that changed most recently.</description>
     <language>en</language>
     <atom:link href="https://useaiblocks.com/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 08 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>AI default patterns</title>
+      <link>https://useaiblocks.com/skills/ai-default-patterns</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/ai-default-patterns</guid>
+      <description>Give it your brief or draft. You get the AI habits to avoid for your brand, and a check for them.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>new</category>
+      <category>skill</category>
+      <category>Design things people love</category>
+    </item>
+    <item>
+      <title>Brand DNA capture</title>
+      <link>https://useaiblocks.com/skills/brand-dna-capture</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/brand-dna-capture</guid>
+      <description>Give it your website. You get your real colours, fonts, buttons, page order, voice and prices, measured, for your AI to follow.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>new</category>
+      <category>skill</category>
+      <category>Set up your brand file</category>
+    </item>
+    <item>
+      <title>Brand fidelity check</title>
+      <link>https://useaiblocks.com/skills/brand-fidelity-check</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/brand-fidelity-check</guid>
+      <description>Give it your site capture and a new page. You get a pass or fail on the eight ways pages drift off-brand, with screenshots.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>new</category>
+      <category>skill</category>
+      <category>Audit a landing page</category>
+    </item>
+    <item>
+      <title>Expert agent blind test</title>
+      <link>https://useaiblocks.com/skills/expert-agent-blind-test</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/expert-agent-blind-test</guid>
+      <description>Give it your agent and its test cases. You get a fair blind test against plain AI, with win rate and consistency.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>new</category>
+      <category>skill</category>
+      <category>Set up AI to work for you</category>
+    </item>
+    <item>
+      <title>Expert agent eval builder</title>
+      <link>https://useaiblocks.com/skills/expert-agent-eval-builder</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/expert-agent-eval-builder</guid>
+      <description>Give it your agent files. You get a rubric in your words, 20 or more test cases and a judge that grades like you.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>new</category>
+      <category>skill</category>
+      <category>Set up AI to work for you</category>
+    </item>
+    <item>
+      <title>Expert agent improvement loop</title>
+      <link>https://useaiblocks.com/skills/expert-agent-improvement-loop</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/expert-agent-improvement-loop</guid>
+      <description>Bring a week of your agent&apos;s mistakes. You get two tested fixes, a new version and a log of ideas you dropped.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>new</category>
+      <category>skill</category>
+      <category>Set up AI to work for you</category>
+    </item>
+    <item>
+      <title>Expert knowledge interview</title>
+      <link>https://useaiblocks.com/skills/expert-knowledge-interview</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/expert-knowledge-interview</guid>
+      <description>Tell it your job and bring real cases. It interviews you and writes your judgment and taste into agent files.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>new</category>
+      <category>skill</category>
+      <category>Set up AI to work for you</category>
+    </item>
+    <item>
+      <title>Grounded job protocol</title>
+      <link>https://useaiblocks.com/skills/grounded-job-protocol</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/grounded-job-protocol</guid>
+      <description>Give it any real job. Your AI frames it, studies your actual business first, explores real options, builds in your style and gets checked.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>new</category>
+      <category>skill</category>
+      <category>Plan your strategy</category>
+    </item>
     <item>
       <title>Personal agent builder</title>
       <link>https://useaiblocks.com/skills/personal-agent-builder</link>
       <guid isPermaLink="true">https://useaiblocks.com/skills/personal-agent-builder</guid>
       <description>Build a personal prompt, skill, agent or collection from real work, tacit judgment, conditional taste and reviewed corrections. Keep an editable private dossier.</description>
-      <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-      <category>new</category>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
       <category>skill</category>
       <category>Set up AI to work for you</category>
+    </item>
+    <item>
+      <title>China recruitment planner</title>
+      <link>https://useaiblocks.com/agents/agency-recruitment-specialist</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-recruitment-specialist</guid>
+      <description>Plan hiring in China, from job post and Boss Zhipin or Liepin channels to interviews, offer and a labour law check. Give it the role, city and budget.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Hire and look after your people</category>
+    </item>
+    <item>
+      <title>Agent injection evidence review assistant</title>
+      <link>https://useaiblocks.com/agents/track-agent-injection-controls-and-retest-evidence</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/track-agent-injection-controls-and-retest-evidence</guid>
+      <description>Get safe prompt injection test cases for your AI agent, a control gap list and retest records. Tests run only with the owner&apos;s written approval.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Keep your code secure</category>
+    </item>
+    <item>
+      <title>Product-page brand analyst</title>
+      <link>https://useaiblocks.com/skills/product-page-brand-profile-extractor</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/product-page-brand-profile-extractor</guid>
+      <description>Turn one product page into a brand profile: product facts, claims, six colors and visual style, with gaps flagged. Works from a link or pasted text.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Set up your brand file</category>
+    </item>
+    <item>
+      <title>Plain HTML landing page builder</title>
+      <link>https://useaiblocks.com/skills/static-html-landing-page-builder</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/static-html-landing-page-builder</guid>
+      <description>Share approved copy and layout. Get a responsive HTML page, local files and recorded browser checks.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Write and build a landing page</category>
+    </item>
+    <item>
+      <title>Premium product positioning planner</title>
+      <link>https://useaiblocks.com/skills/premium-positioning-mapper</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/premium-positioning-mapper</guid>
+      <description>Share product facts, buyer groups and costs. Get positioning lines, proof needs and price scenarios to test with real buyers.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Set up your brand file</category>
+    </item>
+    <item>
+      <title>Salary band and benefits planner</title>
+      <link>https://useaiblocks.com/workflows/set-fair-pay-bands-and-a-pay-and-benefits-plan</link>
+      <guid isPermaLink="true">https://useaiblocks.com/workflows/set-fair-pay-bands-and-a-pay-and-benefits-plan</guid>
+      <description>Share roles, location, pay data and budget. Get market comparisons, salary bands and a proposed bonus and benefits plan.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>workflow</category>
+      <category>Hire and look after your people</category>
+    </item>
+    <item>
+      <title>Store hero section writer</title>
+      <link>https://useaiblocks.com/skills/store-hero-section-writer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/store-hero-section-writer</guid>
+      <description>Write the top screen of your store page: five headline options, a subhead, proof, a button and a test plan, all built from your offer and ad.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Write and build a landing page</category>
+    </item>
+    <item>
+      <title>Animated landing page builder</title>
+      <link>https://useaiblocks.com/skills/animated-landing-page-builder</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/animated-landing-page-builder</guid>
+      <description>Answer a few questions about your product. Get a one-page site with 3D motion and scroll effects.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Write and build a landing page</category>
+    </item>
+    <item>
+      <title>Bet price and odds reviewer</title>
+      <link>https://useaiblocks.com/skills/mispriced-bet-tester</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/mispriced-bet-tester</guid>
+      <description>Test your bets against their price. Give each bet a cost and payoff and get a call of near cinch, fair bet or no bet, with the odds.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Research investments and business value</category>
+    </item>
+    <item>
+      <title>Conversion landing page designer</title>
+      <link>https://useaiblocks.com/skills/conversion-landing-page-designer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/conversion-landing-page-designer</guid>
+      <description>Share your offer, audience, and proof for landing page copy, layout, and visual design rules.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Write and build a landing page</category>
+    </item>
+    <item>
+      <title>Fair escape checker</title>
+      <link>https://useaiblocks.com/skills/fair-escape-checker</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/fair-escape-checker</guid>
+      <description>Check if your story&apos;s escapes feel fair. Paste your plan and get each way out judged for luck, effort and cost, with fixes for cheats.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Write and tell stories</category>
+    </item>
+    <item>
+      <title>Interface designer</title>
+      <link>https://useaiblocks.com/skills/interface-designer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/interface-designer</guid>
+      <description>Describe your page or app and get a built interface with its own look, picked for your subject and audience, not a stock template.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Build websites and web apps</category>
+    </item>
+    <item>
+      <title>Interface styling and motion designer</title>
+      <link>https://useaiblocks.com/skills/premium-interface-designer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/premium-interface-designer</guid>
+      <description>Share a page brief, brand and project setup. Get interface code with considered type, spacing, depth and motion, plus checks to run.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Design things people love</category>
+    </item>
+    <item>
+      <title>Interview and research planner</title>
+      <link>https://useaiblocks.com/skills/interview-and-research-planner</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/interview-and-research-planner</guid>
+      <description>Share a decision, research question and who you can reach. Get a study plan and interview guide, not findings before research.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Understand your customers</category>
+    </item>
+    <item>
+      <title>Sales agreement question planner</title>
+      <link>https://useaiblocks.com/skills/yes-ladder-question-writer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/yes-ladder-question-writer</guid>
+      <description>Write a yes ladder of four to seven fair questions that leads from shared ground to your ask, with a plan for each no.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Sell and negotiate</category>
+    </item>
+    <item>
+      <title>Shift schedule planner</title>
+      <link>https://useaiblocks.com/skills/shift-schedule-planner</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/shift-schedule-planner</guid>
+      <description>Plan a fair shift pattern, a weekly schedule and a rotation for nights and weekends, with a swap policy and staff notice. Not legal advice.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Hire and look after your people</category>
+    </item>
+    <item>
+      <title>Web page designer</title>
+      <link>https://useaiblocks.com/skills/page-design-gate</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/page-design-gate</guid>
+      <description>Share a page brief or code. Get design changes and browser findings at two screen sizes.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Build websites and web apps</category>
+    </item>
+    <item>
+      <title>30-point landing page checker</title>
+      <link>https://useaiblocks.com/prompts/landing-page-30-point-checker</link>
+      <guid isPermaLink="true">https://useaiblocks.com/prompts/landing-page-30-point-checker</guid>
+      <description>Share your page and screenshots. Get a 30-point audit, a score and five fixes to make first.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>prompt</category>
+      <category>Audit a landing page</category>
+    </item>
+    <item>
+      <title>Ad-matched landing page writer</title>
+      <link>https://useaiblocks.com/skills/ad-matched-landing-page-writer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/ad-matched-landing-page-writer</guid>
+      <description>Write landing page copy that picks up where your ad left off. Give it the ad, your facts and reviews. You get a page with the full cost stated.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Write and build a landing page</category>
+    </item>
+    <item>
+      <title>Landing page conversion reviewer</title>
+      <link>https://useaiblocks.com/skills/landing-page-auditor</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/landing-page-auditor</guid>
+      <description>Share your page and screenshots. Get conversion problems ranked by impact, with recommended fixes and a score.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Audit a landing page</category>
+    </item>
+    <item>
+      <title>Landing page design planner</title>
+      <link>https://useaiblocks.com/skills/landing-page-design-planner</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/landing-page-design-planner</guid>
+      <description>Plan a landing page design from your copy and brand. Get three different directions, a section plan and a build brief, before anyone builds.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Write and build a landing page</category>
+    </item>
+    <item>
+      <title>Shopify landing page builder</title>
+      <link>https://useaiblocks.com/skills/shopify-landing-page-builder</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/shopify-landing-page-builder</guid>
+      <description>Turn your finished landing page copy into a Shopify landing page: a section file, a page template with your words in, and install steps.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Write and build a landing page</category>
     </item>
     <item>
       <title>Video ad production plan builder</title>
@@ -26,16 +326,6 @@
       <category>updated</category>
       <category>skill</category>
       <category>Make video ads</category>
-    </item>
-    <item>
-      <title>Plain HTML landing page builder</title>
-      <link>https://useaiblocks.com/skills/static-html-landing-page-builder</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/static-html-landing-page-builder</guid>
-      <description>Share approved copy and layout. Get a responsive HTML page, local files and recorded browser checks.</description>
-      <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Write and build a landing page</category>
     </item>
     <item>
       <title>AI task brief writer</title>
@@ -78,16 +368,6 @@
       <category>Write and build a landing page</category>
     </item>
     <item>
-      <title>Ad-matched landing page writer</title>
-      <link>https://useaiblocks.com/skills/ad-matched-landing-page-writer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/ad-matched-landing-page-writer</guid>
-      <description>Write landing page copy that picks up where your ad left off. Give it the ad, your facts and reviews. You get a page with the full cost stated.</description>
-      <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Write and build a landing page</category>
-    </item>
-    <item>
       <title>Brand profile builder</title>
       <link>https://useaiblocks.com/skills/website-brand-brain-builder</link>
       <guid isPermaLink="true">https://useaiblocks.com/skills/website-brand-brain-builder</guid>
@@ -96,26 +376,6 @@
       <category>updated</category>
       <category>skill</category>
       <category>Set up your brand file</category>
-    </item>
-    <item>
-      <title>Landing page design planner</title>
-      <link>https://useaiblocks.com/skills/landing-page-design-planner</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/landing-page-design-planner</guid>
-      <description>Plan a landing page design from your copy and brand. Get three different directions, a section plan and a build brief, before anyone builds.</description>
-      <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Write and build a landing page</category>
-    </item>
-    <item>
-      <title>Shopify landing page builder</title>
-      <link>https://useaiblocks.com/skills/shopify-landing-page-builder</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/shopify-landing-page-builder</guid>
-      <description>Turn your finished landing page copy into a Shopify landing page: a section file, a page template with your words in, and install steps.</description>
-      <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Write and build a landing page</category>
     </item>
     <item>
       <title>Website design token extractor</title>
@@ -488,16 +748,6 @@
       <category>Make image ads</category>
     </item>
     <item>
-      <title>Product-page brand analyst</title>
-      <link>https://useaiblocks.com/skills/product-page-brand-profile-extractor</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/product-page-brand-profile-extractor</guid>
-      <description>Turn one product page into a brand profile: product facts, claims, six colors and visual style, with gaps flagged. Works from a link or pasted text.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Set up your brand file</category>
-    </item>
-    <item>
       <title>Rapid-cut product video prompt writer</title>
       <link>https://useaiblocks.com/skills/rapid-cut-product-video-prompt</link>
       <guid isPermaLink="true">https://useaiblocks.com/skills/rapid-cut-product-video-prompt</guid>
@@ -756,256 +1006,6 @@
       <category>updated</category>
       <category>skill</category>
       <category>Get found in search and AI answers</category>
-    </item>
-    <item>
-      <title>AI search visibility tester</title>
-      <link>https://useaiblocks.com/skills/ai-recommendation-panel-runner</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/ai-recommendation-panel-runner</guid>
-      <description>Share your store and shopper questions. Test or collect AI answers, then count brand mentions, links and cited sources in those runs.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Get found in search and AI answers</category>
-    </item>
-    <item>
-      <title>AI store facts checker</title>
-      <link>https://useaiblocks.com/skills/brand-facts-accuracy-fixer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/brand-facts-accuracy-fixer</guid>
-      <description>Share AI answers and your store facts. Get claim checks, correction drafts, likely source pages and a score for the claims checked.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Get found in search and AI answers</category>
-    </item>
-    <item>
-      <title>AI traffic tracking planner</title>
-      <link>https://useaiblocks.com/skills/ai-traffic-tracking-setup</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/ai-traffic-tracking-setup</guid>
-      <description>Give it your analytics and checkout. Get an AI traffic channel, a post-purchase question and a redirect list.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Get found in search and AI answers</category>
-    </item>
-    <item>
-      <title>Amazon brand registry planner</title>
-      <link>https://useaiblocks.com/skills/amazon-brand-registry-planner</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/amazon-brand-registry-planner</guid>
-      <description>Share your brand name and listing. Get a trademark choice, a registry pack and tools to turn on.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Sell on Amazon</category>
-    </item>
-    <item>
-      <title>Amazon fee and margin checker</title>
-      <link>https://useaiblocks.com/skills/amazon-fee-and-margin-checker</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/amazon-fee-and-margin-checker</guid>
-      <description>Share price, costs, size and fee figures. Get profit per unit, break-even ad cost and a score against the source’s rules.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Sell on Amazon</category>
-    </item>
-    <item>
-      <title>Amazon inbound stock planner</title>
-      <link>https://useaiblocks.com/skills/amazon-inbound-stock-planner</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/amazon-inbound-stock-planner</guid>
-      <description>Give it sales, lead times and case sizes. Get how much to send, when, and a shipment checklist.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Sell on Amazon</category>
-    </item>
-    <item>
-      <title>Amazon keyword picker</title>
-      <link>https://useaiblocks.com/skills/amazon-keyword-picker</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/amazon-keyword-picker</guid>
-      <description>Give it your product and a keyword export. Get the phrases for your title, bullets and backend.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Sell on Amazon</category>
-    </item>
-    <item>
-      <title>Amazon launch week planner</title>
-      <link>https://useaiblocks.com/skills/amazon-launch-week-planner</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/amazon-launch-week-planner</guid>
-      <description>Plan your Amazon launch week with a dated pre-launch plan, a launch-day run sheet, a discount with its cost, and honest review steps.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Sell on Amazon</category>
-    </item>
-    <item>
-      <title>Amazon listing first draft writer</title>
-      <link>https://useaiblocks.com/prompts/amazon-listing-first-draft-writer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/prompts/amazon-listing-first-draft-writer</guid>
-      <description>Write a first Amazon listing from your product facts and search phrases. You get a title, five bullets, a short description and backend keywords.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>prompt</category>
-      <category>Sell on Amazon</category>
-    </item>
-    <item>
-      <title>Amazon listing writer</title>
-      <link>https://useaiblocks.com/skills/amazon-listing-writer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/amazon-listing-writer</guid>
-      <description>Write an Amazon listing from your product facts: a title with the main phrase first, five benefit bullets and backend keywords, ready to paste.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Sell on Amazon</category>
-    </item>
-    <item>
-      <title>Amazon product opportunity finder</title>
-      <link>https://useaiblocks.com/skills/amazon-search-gap-finder</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/amazon-search-gap-finder</guid>
-      <description>Share an interest, category and any search data. Get ranked product-gap ideas and the evidence needed to test them.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Sell on Amazon</category>
-    </item>
-    <item>
-      <title>Amazon product viability scorer</title>
-      <link>https://useaiblocks.com/skills/amazon-product-viability-scorer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/amazon-product-viability-scorer</guid>
-      <description>Share a product idea and costs. Get a score, the weakest test and a go or no-go.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Sell on Amazon</category>
-    </item>
-    <item>
-      <title>Amazon reimbursement claim finder</title>
-      <link>https://useaiblocks.com/skills/amazon-reimbursement-claim-finder</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/amazon-reimbursement-claim-finder</guid>
-      <description>Find Amazon reimbursement claims you can file. Give it 90 days of shipment and fee reports. You get a readiness score and a list of claims with proof.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Sell on Amazon</category>
-    </item>
-    <item>
-      <title>Amazon Sponsored Products ad planner</title>
-      <link>https://useaiblocks.com/skills/amazon-ppc-launch-builder</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/amazon-ppc-launch-builder</guid>
-      <description>Share product profit, keywords and budget. Get three Amazon ad campaign plans with bids, excluded search terms and stop rules.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Sell on Amazon</category>
-    </item>
-    <item>
-      <title>Amazon unit profit checker</title>
-      <link>https://useaiblocks.com/prompts/amazon-unit-profit-checker</link>
-      <guid isPermaLink="true">https://useaiblocks.com/prompts/amazon-unit-profit-checker</guid>
-      <description>Check your Amazon unit profit before you order stock. Paste price, landed cost and fees. You get profit per unit and break-even ad cost.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>prompt</category>
-      <category>Sell on Amazon</category>
-    </item>
-    <item>
-      <title>Answer-first page rewriter</title>
-      <link>https://useaiblocks.com/skills/answer-first-page-rewriter</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/answer-first-page-rewriter</guid>
-      <description>Share a blog, guide or FAQ page. Get sections rewritten answer first, with facts still needing a source.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Get found in search and AI answers</category>
-    </item>
-    <item>
-      <title>Article-style ad draft editor</title>
-      <link>https://useaiblocks.com/skills/advertorial-draft-editor</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/advertorial-draft-editor</guid>
-      <description>Share an article-style ad draft and your proof. Get clearer wording, stronger openings, exact proof lines and a change log.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Write and build a landing page</category>
-    </item>
-    <item>
-      <title>Article-style ad planner</title>
-      <link>https://useaiblocks.com/skills/advertorial-angle-and-format-picker</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/advertorial-angle-and-format-picker</guid>
-      <description>Share customer problems, product facts, rival ads and budget. Get ranked topics, page formats and a plan to test them.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Plan what ads to test</category>
-    </item>
-    <item>
-      <title>Article-style ad readiness checker</title>
-      <link>https://useaiblocks.com/skills/advertorial-readiness-checker</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/advertorial-readiness-checker</guid>
-      <description>Share live ads, spend and break-even results. Get a build-or-wait decision, checklist score and page plan.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Audit a landing page</category>
-    </item>
-    <item>
-      <title>Article-style ad story checker</title>
-      <link>https://useaiblocks.com/skills/advertorial-story-and-belief-checker</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/advertorial-story-and-belief-checker</guid>
-      <description>Share an article-style ad draft. Get story breaks, missing reasons to believe, targeted rewrites and a checklist score.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Audit a landing page</category>
-    </item>
-    <item>
-      <title>Automated direct mail planner</title>
-      <link>https://useaiblocks.com/skills/programmatic-direct-mail-planner</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/programmatic-direct-mail-planner</guid>
-      <description>Plan programmatic direct mail for your online store. Pick the customers worth mailing, set a test group and check payback per piece.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Keep customers coming back</category>
-    </item>
-    <item>
-      <title>Best-of page writer</title>
-      <link>https://useaiblocks.com/skills/best-of-page-writer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/best-of-page-writer</guid>
-      <description>Write a fair best-of page that includes your product. Give it a buyer question and your rivals&apos; facts. You get a brief, a draft and a proof list.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Get found in search and AI answers</category>
-    </item>
-    <item>
-      <title>Billing reminder and confirmation writer</title>
-      <link>https://useaiblocks.com/skills/billing-reminder-and-confirmation-writer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/billing-reminder-and-confirmation-writer</guid>
-      <description>Share subscription plans, gift timing and email tools. Get billing reminders, order emails, link setup steps and a test plan.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Keep customers coming back</category>
-    </item>
-    <item>
-      <title>Bold store experiment planner</title>
-      <link>https://useaiblocks.com/skills/big-swing-test-picker</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/big-swing-test-picker</guid>
-      <description>Share store traffic, orders and page findings. Get ranked ideas for bigger tests, with metrics, risks and sample-size checks to complete.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Test changes to your store</category>
-    </item>
-    <item>
-      <title>Bot and AI agent access planner</title>
-      <link>https://useaiblocks.com/skills/bot-and-ai-agent-access-planner</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/bot-and-ai-agent-access-planner</guid>
-      <description>Plan which bots and AI agents to allow, check or block on your store. Give it your traffic and flows. You get a policy, limits and alerts.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Keep your store safe</category>
     </item>
   </channel>
 </rss>

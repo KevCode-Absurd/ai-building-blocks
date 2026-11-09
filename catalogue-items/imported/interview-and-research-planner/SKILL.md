@@ -268,7 +268,7 @@ Findings document structure:
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [UX researcher agent](https://useaiblocks.com/skills/agency-design-ux-researcher). It takes the question.
 - The [User research planner](https://useaiblocks.com/skills/user-research-planner). It takes the question.
-- The [Customer discovery interview planner](https://useaiblocks.com/skills/customer-discovery-plan). It takes the question and plan.
+- The [Customer purchase interview script writer](https://useaiblocks.com/skills/buying-story-interview-guide). It takes the question.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

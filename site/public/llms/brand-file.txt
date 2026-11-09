@@ -1,9 +1,10 @@
 # Set up your brand file: AI Blocks
 
-> 49 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 50 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Brand consistency reviewer](https://useaiblocks.com/agents/agency-design-brand-guardian): Get a brand foundation document or a brand consistency check. See your purpose, voice and look in writing, or where your materials drift from them.
 - [Brand direction brainstormer](https://useaiblocks.com/skills/brand-direction-brainstormer): Share your product and buyers. Explore what the brand stands for, possible names, visual styles and story ideas, then narrow the options.
+- [Brand DNA capture](https://useaiblocks.com/skills/brand-dna-capture): Give it your website. You get your real colours, fonts, buttons, page order, voice and prices, measured, for your AI to follow.
 - [Brand family planner](https://useaiblocks.com/skills/brand-family-planner): List your brands and products. Get a clear structure for how they relate and what each one is called.
 - [Brand file and style guide builder](https://useaiblocks.com/workflows/build-a-brand-file-and-style-guide-from-scratch): Turn product and buyer facts into core messages, writing rules, a visual direction and one shared brand guide.
 - [Brand guide builder](https://useaiblocks.com/skills/brand-guide-builder): Turn your brand file into a printable brand guide and a values file to paste into any design tool. Colour pairs are checked so text stays readable.

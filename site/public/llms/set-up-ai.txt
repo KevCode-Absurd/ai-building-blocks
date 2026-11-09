@@ -1,6 +1,6 @@
 # Set up AI to work for you: AI Blocks
 
-> 95 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 99 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ad prompt comparison reviewer](https://useaiblocks.com/skills/old-vs-new-ad-prompt-scorer): Compare old and new ad prompts with a blind test. Paste both sets of ads. Get a keep-or-switch decision and a score out of 100.
 - [Agent action approval reviewer](https://useaiblocks.com/skills/copilot-verify-agent-action): Check an AI agent action before it runs. Get a review of its scope, approval, risks and missing evidence, with a clear result and reason.
@@ -56,6 +56,10 @@
 - [Daily AI tool finder](https://useaiblocks.com/skills/daily-ai-help-discovery-guide): Talk through a daily hassle. Get tool ideas or a next step, with any saved memory handled only by choice.
 - [Deliverable requirements checker](https://useaiblocks.com/skills/request-acceptance-checker): Check finished files against your original request. Get a pass or fail line for every requirement, fixes for small gaps and a README of what is left.
 - [Editable deliverable file writer](https://useaiblocks.com/skills/request-deliverable-drafter): Share the agreed request brief and source facts. Get the named editable files with sources and gaps shown.
+- [Expert agent blind test](https://useaiblocks.com/skills/expert-agent-blind-test): Give it your agent and its test cases. You get a fair blind test against plain AI, with win rate and consistency.
+- [Expert agent eval builder](https://useaiblocks.com/skills/expert-agent-eval-builder): Give it your agent files. You get a rubric in your words, 20 or more test cases and a judge that grades like you.
+- [Expert agent improvement loop](https://useaiblocks.com/skills/expert-agent-improvement-loop): Bring a week of your agent's mistakes. You get two tested fixes, a new version and a log of ideas you dropped.
+- [Expert knowledge interview](https://useaiblocks.com/skills/expert-knowledge-interview): Tell it your job and bring real cases. It interviews you and writes your judgment and taste into agent files.
 - [Focus-friendly reply style designer](https://useaiblocks.com/skills/focus-friendly-answers): Set up focus-friendly answers once. Your AI then gives the next action first, short numbered steps and time estimates in every reply.
 - [Folder guide writer](https://useaiblocks.com/skills/folder-guide-writer): Pick a folder. Get a short CLAUDE.md that tells future AI helpers how that folder works.
 - [Google Ads results reviewer](https://useaiblocks.com/agents/google-results-review-agent): Review your Google Ads results against your targets. Get ranked findings, tracking gaps, proposed changes and a checkpoint for your next review.

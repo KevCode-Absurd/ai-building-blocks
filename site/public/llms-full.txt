@@ -22,11 +22,11 @@ Once connected, ask in plain words:
 ## Key facts
 
 - Browsing, catalogue downloads and manual workflow assembly are free, with no account needed. AI workflow planning requires sign-in and follows the current service limits.
-- 5024 skills, workflows and prompts in 70 jobs, 1064 specialists, 505 minds and 68 mini tools.
+- 5032 skills, workflows and prompts in 70 jobs, 1064 specialists, 505 minds and 68 mini tools.
 - Imported skills keep their open-licence sources and credits (MIT, Apache 2.0, BSD, CC BY, CC BY-SA). Local changes are identified on the page and in the skill file.
 - Minds are AIs built from a person's public work, with their sources listed. They are not the person. Minds that invest teach frameworks only, never buy or sell advice.
 - Skills that scrape websites or need a paid outside account say so on their page.
-- Last changed 2026-11-08. See the [JSON Feed](https://useaiblocks.com/feed.json) or [RSS](https://useaiblocks.com/feed.xml) for what changed.
+- Last changed 2026-11-09. See the [JSON Feed](https://useaiblocks.com/feed.json) or [RSS](https://useaiblocks.com/feed.xml) for what changed.
 
 ## Planning and privacy
 
@@ -97,7 +97,7 @@ Once connected, ask in plain words:
 ## Every job
 
 - [Analyse data and explain the results](https://useaiblocks.com/llms/analyse-data.txt): 29 skills and workflows, such as Dataset analysis and insight reviewer and Statistician agent
-- [Audit a landing page](https://useaiblocks.com/llms/audit-landing-page.txt): 36 skills and workflows, such as A/B test traffic checker and Customer objection coverage checker
+- [Audit a landing page](https://useaiblocks.com/llms/audit-landing-page.txt): 37 skills and workflows, such as A/B test traffic checker and Brand fidelity check
 - [Build a product people want](https://useaiblocks.com/llms/build-product.txt): 66 skills and workflows, such as Feature request screener and Launch scope cutter
 - [Build and ship software](https://useaiblocks.com/llms/build-software.txt): 416 skills and workflows, such as Agent database migration planner and Agent database setup planner
 - [Build websites and web apps](https://useaiblocks.com/llms/build-websites.txt): 66 skills and workflows, such as Font pair shortlist maker and Website page structure planner
@@ -105,7 +105,7 @@ Once connected, ask in plain words:
 - [Check contracts and rules](https://useaiblocks.com/llms/check-contracts.txt): 109 skills and workflows, such as Ad claim sorter and Business insurance needs checker
 - [Connect AI to your tools](https://useaiblocks.com/llms/connect-tools.txt): 42 skills and workflows, such as AI tool set designer and Automation flow sketcher
 - [Design and test physical systems](https://useaiblocks.com/llms/engineer-systems.txt): 16 skills and workflows, such as MATLAB antenna designer and MATLAB antenna system designer
-- [Design things people love](https://useaiblocks.com/llms/design-work.txt): 117 skills and workflows, such as Brand logo planner and Design brief rules writer
+- [Design things people love](https://useaiblocks.com/llms/design-work.txt): 118 skills and workflows, such as AI default patterns and Brand logo planner
 - [Find products worth selling](https://useaiblocks.com/llms/find-products.txt): 15 skills and workflows, such as Category and trend risk checker and Competitor revenue estimator
 - [Get found in search and AI answers](https://useaiblocks.com/llms/get-found-in-search.txt): 101 skills and workflows, such as Customer question keyword finder and Customer FAQ writer
 - [Grow on social](https://useaiblocks.com/llms/grow-social.txt): 119 skills and workflows, such as First customer outreach planner and Founder video series planner
@@ -132,7 +132,7 @@ Once connected, ask in plain words:
 - [Plan projects and team capacity](https://useaiblocks.com/llms/manage-projects.txt): 17 skills and workflows, such as Team capacity and delivery-date planner and Client project kickoff planner
 - [Plan stock, shipping and suppliers](https://useaiblocks.com/llms/plan-supply-chain.txt): 99 skills and workflows, such as Supplier quote comparison planner and Warehouse bid and agreement terms builder
 - [Plan what ads to test](https://useaiblocks.com/llms/plan-ad-tests.txt): 50 skills and workflows, such as Ad test brief writer and Ad variant change auditor
-- [Plan your strategy](https://useaiblocks.com/llms/plan-strategy.txt): 212 skills and workflows, such as Decision priority planner and Big problem splitter
+- [Plan your strategy](https://useaiblocks.com/llms/plan-strategy.txt): 213 skills and workflows, such as Decision priority planner and Big problem splitter
 - [Prepare job applications](https://useaiblocks.com/llms/find-a-job.txt): 13 skills and workflows, such as Job interview work-example coach and Resume and application evidence writer
 - [Prepare tax calculations and reviews](https://useaiblocks.com/llms/manage-tax.txt): 6 skills and workflows, such as Cash tax payment reconciler and Self-assessment tax return checklist
 - [Read your ad results](https://useaiblocks.com/llms/read-ad-results.txt): 61 skills and workflows, such as Ad survey results calculator and Ad results brief writer
@@ -144,8 +144,8 @@ Once connected, ask in plain words:
 - [Run your online store](https://useaiblocks.com/llms/run-your-store.txt): 130 skills and workflows, such as 3PL bill auditor and Live auction show planner
 - [Sell and negotiate](https://useaiblocks.com/llms/sell-and-negotiate.txt): 123 skills and workflows, such as Sales closing question planner and Proposal discussion planner
 - [Sell on Amazon](https://useaiblocks.com/llms/sell-on-amazon.txt): 16 skills and workflows, such as Amazon brand registry planner and Amazon fee and margin checker
-- [Set up AI to work for you](https://useaiblocks.com/llms/set-up-ai.txt): 95 skills and workflows, such as AI coding agent rules writer and AI model training debugger
-- [Set up your brand file](https://useaiblocks.com/llms/brand-file.txt): 49 skills and workflows, such as Brand guide builder and Brand voice one-pager writer
+- [Set up AI to work for you](https://useaiblocks.com/llms/set-up-ai.txt): 99 skills and workflows, such as AI coding agent rules writer and AI model training debugger
+- [Set up your brand file](https://useaiblocks.com/llms/brand-file.txt): 50 skills and workflows, such as Brand DNA capture and Brand guide builder
 - [Set up your online store](https://useaiblocks.com/llms/set-up-store.txt): 20 skills and workflows, such as Etsy shop opening planner and Shopify theme build planner
 - [Set your prices](https://useaiblocks.com/llms/set-prices.txt): 42 skills and workflows, such as Discount consistency checker and Hourly rate calculator
 - [Ship and host your app](https://useaiblocks.com/llms/ship-and-host.txt): 101 skills and workflows, such as Domain and redirect layout planner and Release day rollback planner

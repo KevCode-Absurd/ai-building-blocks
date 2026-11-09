@@ -71,8 +71,8 @@ Use these headings, in this order:
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Hiring interview planner](https://useaiblocks.com/skills/hiring-interview-designer). It takes the job description.
 - The [Hiring search brief writer](https://useaiblocks.com/skills/hiring-search-brief-writer). It takes the job description.
+- The [Hiring interview planner](https://useaiblocks.com/skills/hiring-interview-designer). It takes the job description.
 - The [Interview question set maker](https://useaiblocks.com/prompts/interview-question-set-maker). It takes the job description.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

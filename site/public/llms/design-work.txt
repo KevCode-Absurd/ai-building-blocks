@@ -1,8 +1,9 @@
 # Design things people love: AI Blocks
 
-> 117 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 118 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [AI assistant interface style guide writer](https://useaiblocks.com/skills/ai-assistant-style-guide): Describe your AI product. Get a style guide for a chat-first screen with few controls and clear outcomes.
+- [AI default patterns](https://useaiblocks.com/skills/ai-default-patterns): Give it your brief or draft. You get the AI habits to avoid for your brand, and a check for them.
 - [Apple app design checker](https://useaiblocks.com/skills/apple-app-design-checker): Share an Apple app screen or code and target platforms. Get design findings, reasons and concrete fixes to review.
 - [Apple interface reviewer](https://useaiblocks.com/skills/apple-interface-reviewer): Check your iOS or Mac screen against Apple's design rules, with contrast and tap target checks, a score and a fix list for Liquid Glass too.
 - [Art pipeline planner](https://useaiblocks.com/agents/agency-technical-artist): Plan a game art pipeline with budgets for models, textures and effects, LOD and import rules, and a review routine, for any engine or platform.

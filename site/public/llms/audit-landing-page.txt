@@ -1,12 +1,13 @@
 # Audit a landing page: AI Blocks
 
-> 36 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 37 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [30-point landing page checker](https://useaiblocks.com/prompts/landing-page-30-point-checker): Share your page and screenshots. Get a 30-point audit, a score and five fixes to make first.
 - [A/B test traffic checker](https://useaiblocks.com/skills/ab-test-traffic-checker): Check if your site has enough visitors for an A/B test. Paste visits, orders and revenue to get the weeks needed and a readiness score out of 100.
 - [App store listing optimiser](https://useaiblocks.com/skills/app-store-listing-optimiser): Give it your app listing. Get a scored audit and a rewritten title, keywords, description and screenshots plan.
 - [Article-style ad readiness checker](https://useaiblocks.com/skills/advertorial-readiness-checker): Share live ads, spend and break-even results. Get a build-or-wait decision, checklist score and page plan.
 - [Article-style ad story checker](https://useaiblocks.com/skills/advertorial-story-and-belief-checker): Share an article-style ad draft. Get story breaks, missing reasons to believe, targeted rewrites and a checklist score.
+- [Brand fidelity check](https://useaiblocks.com/skills/brand-fidelity-check): Give it your site capture and a new page. You get a pass or fail on the eight ways pages drift off-brand, with screenshots.
 - [Button and link label reviewer](https://useaiblocks.com/skills/click-choice-clarity-checker): Check your menu and button labels for clarity. Get each choice rated, a score out of 100, and plain rewrites for weak labels.
 - [Collection page fixer](https://useaiblocks.com/skills/collection-page-fixer): Check your collection page for stock gaps and weak top products. Give it a screenshot and stock by size. You get swaps, fixes and a score.
 - [Conversion problem finder](https://useaiblocks.com/skills/conversion-problem-finder): Share a page, goal and evidence. It flags possible friction and ranks tests to check.

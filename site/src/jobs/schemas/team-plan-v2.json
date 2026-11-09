@@ -496,6 +496,38 @@
               "brief_only",
               "swap_family"
             ]
+          },
+          "focus_methods": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "slug": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 120,
+                  "pattern": "^[a-z0-9][a-z0-9-]{0,119}$"
+                },
+                "revision_sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "why": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 300
+                }
+              },
+              "required": [
+                "slug",
+                "revision_sha256",
+                "why"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0,
+            "maxItems": 6,
+            "description": "The top methods to load in full for this seat, ranked, with a one-line reason. The rest of the toolbox is an allowed palette."
           }
         },
         "required": [

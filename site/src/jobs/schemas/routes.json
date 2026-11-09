@@ -168,6 +168,43 @@
             ],
             "additionalProperties": false,
             "description": "Host-reported initial proposal isolation and frozen text hash, required by job-state/2."
+          },
+          "methods": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "slug": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 120,
+                  "pattern": "^[a-z0-9][a-z0-9-]{0,119}$"
+                },
+                "revision_sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "slug",
+                "revision_sha256"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1,
+            "maxItems": 6,
+            "description": "The pinned methods this route actually uses, from its owner's toolbox. Rival routes may share at most 60%."
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "minItems": 0,
+            "maxItems": 10,
+            "description": "The pages, ads, brands or sources this direction learns from. Rival routes may share at most 60%."
           }
         },
         "required": [

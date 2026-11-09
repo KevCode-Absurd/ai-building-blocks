@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import { createHash } from 'node:crypto';
 import {proposeTeam} from '../../../src/jobs/propose-team.mjs';
+import {craftRubric,gatesFor,suggestDeliverableKind} from '../../../src/jobs/grounding.mjs';
 const rows = JSON.parse(fs.readFileSync(new URL('./contracts.json', import.meta.url), 'utf8'));
 const document = schema => structuredClone(rows.find(row => row.schema === schema).valid[0].document);
 export function engineFixture({ tier = 'standard' } = {}) {
@@ -32,6 +33,8 @@ export function engineFixture({ tier = 'standard' } = {}) {
   if(tier==='quick'){council.proposals=council.proposals.filter(p=>p.label!=='C');council.critiques=council.critiques.filter(c=>c.by_seat==='s1'&&c.on!=='C');council.ranking.ballots[0].order=['A','B'];council.ranking.result=['A','B'];council.red_team=[];council.decision.dissent.by_seat='s1';}
   if(tier==='deep')council.red_team.push({...council.red_team[0],pass:2});
   const proposal_contents = Object.fromEntries(council.proposals.map(proposal => [proposal.file, proposal.content]));
+  // Variety on substance: each rival route pins its own method and learns from its own reference.
+  routes.routes.forEach((route, n) => { route.methods = [{ ...pins[n % pins.length] }]; route.references = [`Synthetic contract-test reference ${n}`]; });
   for (const route of routes.routes) {
     const proposal = council.proposals.find(proposal => proposal.ref === route.route_id);
     route.draft_receipt = { context_id: `fixture-isolated-${route.owner_seat}`, path: proposal.file, sha256: createHash('sha256').update(proposal.content).digest('hex'), isolation: 'ISOLATED', saw_other_proposals: false };
@@ -43,7 +46,10 @@ export function engineFixture({ tier = 'standard' } = {}) {
   const production = document('ai-blocks-production/1');
   production.artifacts = spread.slots.map((slot, n) => ({ slot_id: slot.slot_id, kind: card.deliverables[0].kind, path: `deliverables/output-${n}.md`, sha256: 'a'.repeat(64), maker_seat: slot.maker_seat, family: slot.family, modality: slot.modality, items: structuredClone(slot.items), producer_note: 'A source-backed recommendation. All six outputs are delivered.', claims: [], checks: [{ id: 'useful', status: 'PASS' }], budget: { used: 0, allowance: 0 } }));
   const review = document('ai-blocks-review/1');
-  review.items = production.artifacts.map(a => ({ ...structuredClone(review.items[0]), slot_id: a.slot_id }));
+  // Craft criteria and pass/fail gates for the job's deliverable kind (ops_doc for this request).
+  const kind = suggestDeliverableKind(card.request_verbatim).kind;
+  const craft_scores = Object.fromEntries(craftRubric(kind).map(c => [c.id, 9])), gates = gatesFor(kind).map(g => ({ id: g.id, status: 'PASS', evidence: 'Synthetic structural check.' }));
+  review.items = production.artifacts.map(a => ({ ...structuredClone(review.items[0]), slot_id: a.slot_id, craft_scores, gates: structuredClone(gates) }));
   review.critical_checks = [{ id: 'complete', passed: true, quote: 'All six outputs are delivered.' }];
   const delivery = document('ai-blocks-job-delivery/1');
   delivery.coordinator_review={by_seat:'s1',job_match:true,rubric_checks:[{id:'complete',passed:true,notes:'All six outputs meet the request.'}],notes:'The delivered work solves the scoped job.'};

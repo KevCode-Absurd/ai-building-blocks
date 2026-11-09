@@ -59,7 +59,9 @@ for (const { slug, file, newer } of pages) {
   for (const field of new Set(mapItems(p).map((m) => m.field))) errors.push(`${field} has an item that is not plain text (quote lines containing ": ", or run with --fix)`);
   if (why && !saysRunsCode(p)) errors.push(`its skill runs code (${why}) but the page never says it needs an AI that can run code (run with --fix)`);
   if (p.job && !JOBS.includes(p.job)) issues.push(`unknown job "${p.job}"`);
-  if (p.example && p.example.business !== "sprout") issues.push(`example uses "${p.example.business}", not sprout`);
+  // Examples use a real, named business with public facts, never a made-up firm (the same names as marketplace/src/modules/packs/lint.ts).
+  if (p.example && !String(p.example.business ?? "").trim()) issues.push("example names no business; use a real, named business with public facts");
+  else if (p.example && /^(sprout|harbourside pottery|tidewell)$/i.test(String(p.example.business).trim())) issues.push(`example uses the made-up business "${p.example.business}"; use a real, named business with public facts`);
   // The example is test data now (tools/test-blocks.mjs runs its input); the page shows output_shape instead (docs/MINDS-PRD.md §2).
   if (p.example && !String(p.example.input ?? "").trim()) issues.push("empty example input");
   if (words(p.headline) > 18) issues.push(`headline ${words(p.headline)} words`);

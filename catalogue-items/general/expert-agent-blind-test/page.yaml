@@ -1,0 +1,111 @@
+new_slug: expert-agent-blind-test
+name: "Expert agent blind test"
+summary: "Give it your agent and its test cases. You get a fair blind test against plain AI, with win rate and consistency."
+job: set-up-ai
+thinking: high
+thinking_why: "It has to keep the test fair at every step and say plainly how much the result can be trusted."
+
+headline: "Expert agent blind test"
+subhead: "Give your AI your agent, its test cases and its judge, and it runs every case with your agent and with plain AI, labels the answers at random and has a fresh judge grade them. You get the win rate, the serious failures on each side and how often your agent gets each case right every time."
+
+explain: |
+  Most claims that one AI beats another come from tests that aren't fair. One side gets a better brief, the grader knows which answer is which, or the whole test rests on five cases and a three-point gap. A result like that can't tell you whether to trust your agent with a client's work.
+
+  This skill keeps every step fair. Both sides receive the same brief, the same data and the same answers to their questions, and the plain side gets a one-line role so the test measures your knowledge rather than the word "expert". Answers are cleaned of names and labelled A and B at random, then a fresh judge using your rubric grades them twice, with the order swapped. Each case runs three times so you can see how consistent the agent is, and the report states how many wins it takes before luck stops being a likely reason.
+
+when:
+  - "You built an expert agent and want to know if it beats plain AI on your own jobs."
+  - "You changed your agent and want to check that nothing got worse."
+  - "You want numbers you can stand behind before you show the agent to anyone else."
+not_for:
+  - "Building the test cases or the judge. Use the Expert agent eval builder first."
+  - "Comparing two AI models in general, with no expert agent involved."
+  - "Proving your agent is better than human experts. This test compares it with plain AI only."
+
+you_give:
+  - "Your agent's files and its version"
+  - "The eval set, rubric and judge from the Expert agent eval builder"
+  - "The AI model to test on, and ideally a second one from another company to judge"
+  - "Five minutes of your time to pick the better answer blind on five cases"
+you_get:
+  - "A results table by case type, with wins, ties and losses for each side"
+  - "The win rate, hard fails, pass rate on one run and pass rate on every run"
+  - "A plain note on how much the result can be trusted, and each loss with its likely cause"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Share the agent, the eval set, the rubric and the judge, and name the model to test."
+  - "Run the plain side in a new chat with no files, no custom instructions and no memory."
+  - "Pick the better answer yourself on the five cases it shows you, without knowing which is which."
+  - "Take the losses to the Expert agent improvement loop."
+
+how_it_works:
+  - title: "Freezes the setup"
+    text: "Records the agent version, model, settings and date, and changes nothing during the run."
+  - title: "Gives both the same"
+    text: "Same brief, same data and the same scripted client answers for your agent and for plain AI."
+  - title: "Runs each case three times"
+    text: "So the report shows whether the agent gets a case right every time, not only once."
+  - title: "Hides who wrote what"
+    text: "Strips names, labels answers A and B at random, and keeps the key away from the judge."
+  - title: "Judges twice"
+    text: "A fresh judge grades with your rubric, then again with the order swapped. A changed pick counts as a tie."
+  - title: "Reports honestly"
+    text: "Shows results by case type and for kept-back cases, with the case count and the chance line."
+
+output_shape: |
+  BLIND TEST: <agent> v<version> against plain <model>, <date>
+  Judge: <model>, agreement with you <x>% passes, <y>% fails
+  Runs per case: <k>
+
+  | Split | Type | Cases | Agent wins | Ties | Plain wins | Win rate | Hard fails | Pass once | Pass every run |
+
+  HOW MUCH TO TRUST THIS
+  <case count, chance line, judge agreement, anything unfair>
+  LOSSES
+  <case>: <judge's reason>, <likely cause>
+  YOUR SPOT-CHECK
+  <agreed on n of 5>
+  CHECKS MISSED
+  <one line each, or none>
+
+tweaks:
+  - what: "Runs per case"
+    how: "Three runs show consistency. One run is faster, but then the report can't say how reliable the agent is."
+  - what: "The judge's model"
+    how: "A judge from another company is less likely to favour the tested model's style."
+  - what: "Number of cases"
+    how: "With 20 cases, 15 or more wins is unlikely by chance. Fewer cases give a hint, not proof."
+
+judge:
+  - "Both sides got the same brief, data and answers to their questions."
+  - "The judge never saw which answer was which."
+  - "Every number comes with the case count, the model and the date."
+  - "Kept-back cases are reported on their own."
+  - "Crashed or empty runs count as fails."
+
+test:
+  - "Run it once with the same plain AI on both sides. The result should be close to a tie."
+  - "Check that your five blind picks mostly match the judge's."
+  - "Rerun one case and see if the judge gives the same pick."
+
+improve:
+  - "Grow the eval set toward 40 cases before you share any number."
+  - "Rerun the test on each new model you plan to use, and keep the results apart."
+  - "Turn every loss into a past-mistake case once the fix is in."
+
+works_best_with:
+  tools:
+    - {name: "Claude Code or OpenAI Codex", why: "They can run each case three times, shuffle labels with a script and save every answer to a file."}
+    - {name: "A second AI from another company", why: "Using it as the judge cuts the risk that the judge prefers its own style."}
+  inputs:
+    - "A past blind-test report, to compare versions"
+    - "The data files each case needs, in one folder both sides can read"
+
+terms:
+  - term: "Win rate"
+    meaning: "Wins plus half the ties, divided by the number of cases."
+  - term: "pass^k"
+    meaning: "The share of cases where all k runs pass. It shows how often the agent gets a case right every time."
+  - term: "Hard fail"
+    meaning: "An answer that breaks a pass or fail rule, such as an invented number."

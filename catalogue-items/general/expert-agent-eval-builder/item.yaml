@@ -1,0 +1,17 @@
+slug: expert-agent-eval-builder
+name: "Expert agent eval builder"
+summary: "Give it your agent files. You get a rubric in your words, 20 or more test cases and a judge that grades like you."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: document, required: true}
+outputs:
+  - {type: document, required: true}
+uses: []
+next: [expert-agent-blind-test]
+origin: own
+example_pending: true
+version: 1.0.0

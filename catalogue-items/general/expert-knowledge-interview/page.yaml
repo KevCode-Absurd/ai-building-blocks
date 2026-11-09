@@ -1,0 +1,115 @@
+new_slug: expert-knowledge-interview
+name: "Expert knowledge interview"
+summary: "Tell it your job and bring real cases. It interviews you and writes your judgment and taste into agent files."
+job: set-up-ai
+thinking: high
+thinking_why: "It has to follow up on each answer, spot vague ones and avoid putting words in your mouth."
+
+headline: "Expert knowledge interview"
+subhead: "Tell your AI the job you want an agent to do and bring a few real cases from your work, and it interviews you one question at a time. You get a scope card, decision rules with their exceptions, a library of real cases and files that record your taste."
+
+explain: |
+  Ask an expert to write down their process and you mostly get a textbook. That happens because people leave out most of the decisions they make when they describe hard work in general terms. The judgment that makes your work better than average lives in the small calls you make on real jobs, and an AI that only reads a general summary falls back to the same average work anyone could get.
+
+  This skill works from real material instead. Your AI maps the steps where your judgment matters and replays five to ten of your past cases one decision at a time. It watches you do one real task while you think out loud, and it asks you to compare real examples so your taste shows. It never suggests answers, and after every rule you give, it asks for a time the rule failed and when you would choose to break it. Each session ends with your AI explaining your method back to you so you can correct it.
+
+when:
+  - "You want an AI agent that makes the calls you would make on your jobs."
+  - "You keep fixing the same things in AI drafts and want the fixes written down as rules."
+  - "You are a media buyer, copywriter, negotiator, finance lead or other expert, and plain AI gives you average work."
+not_for:
+  - "A personal prompt for one small task. Use the Personal agent builder instead."
+  - "Testing whether the agent is better than plain AI. Use the Expert agent blind test after this."
+  - "Copying another expert's private methods, or client work you have no right to share."
+
+you_give:
+  - "The job you want the agent to do, such as auditing Meta and Google ad accounts"
+  - "Five to ten real cases where your judgment mattered, with private names taken out"
+  - "One real task you can do in 20 to 45 minutes while your AI watches"
+  - "Eight to fifteen pieces of real work to compare, yours or public work by real businesses"
+  - "An existing playbook or agent pack to start from (optional)"
+you_get:
+  - "A scope card that lists the jobs, the steps that need judgment and when the agent should stop and ask"
+  - "Your decision rules, each with its reason, its exception and a real counter-example"
+  - "One file per real case, plus files that capture your taste and the things you would never ship"
+  - "A list of seed cases for testing the agent, and a log of every correction you made"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Say who you are and the job you want an agent for, then pick the first real case to talk through."
+  - "Answer one question at a time. When it asks for a time your rule was wrong, give a real one."
+  - "Correct the read-back at the end of each session, and say which lines are weakest."
+  - "Save the files it gives you into one folder, then build the test with the Expert agent eval builder."
+
+how_it_works:
+  - title: "Maps the job"
+    text: "Breaks your main job into three to six steps, finds the ones that need the most judgment, and lists when the agent should stop and ask."
+  - title: "Replays real cases"
+    text: "Walks through each case one decision at a time, asking what you noticed, what you expected and which options you passed on."
+  - title: "Watches one task"
+    text: "You do a real task and think out loud. It writes down what you look at first, then asks only about the gaps."
+  - title: "Finds your taste"
+    text: "Shows real work three at a time and in pairs, and records how you tell good from weak in your own words."
+  - title: "Reads it back"
+    text: "Restates your method, tries a new case your way, and fixes every place you mark as wrong."
+
+output_shape: |
+  expert/scope-card.md       <jobs, judgment steps, stop-and-ask list, access>
+  expert/decision-rules.md   <If / Then / Because / Unless / Counter-example>
+  expert/cases/C01-<name>.md <one real case, decision by decision>
+  expert/taste/grid.md, pairs.md, references.md
+  expert/never-do.md
+  training/capture-log.md    <every correction you made>
+
+  CAPTURED
+  Cases <n> | Rules <n> | Pairs <n> | Grid constructs <n>
+  SEEDS FOR THE EVAL SET
+  <what-if or stop-and-ask item> (hero, edge, trap or regression)
+  MISSING
+  <what is still needed>
+  CHECKS MISSED
+  <one line each, or none>
+
+tweaks:
+  - what: "Pick hard cases"
+    how: "Cases where a capable junior would have got it wrong teach the agent the most. Include one that went badly."
+  - what: "Use public work for taste"
+    how: "Live ads or pages from real businesses in your field make good examples to compare, with no client permission needed."
+  - what: "Give the counter-example"
+    how: "A rule with a real exception is far more useful than a rule that says always."
+  - what: "Short on time"
+    how: "Do the job map, three cases, 20 pairs and one read-back first. That is about four hours."
+
+judge:
+  - "Every rule has an exception and a counter-example line."
+  - "Each case keeps what you knew at the time apart from the outcome."
+  - "The words in the files are yours, not textbook phrases."
+  - "Nothing private, such as a client name or password, is in any file."
+  - "Gaps are marked as missing, not filled with guesses."
+
+test:
+  - "Read the scope card and ask whether a new hire could tell which jobs are yours and when to call you."
+  - "Ask your AI to work a case you have not used yet with the new files, and mark where it goes wrong."
+  - "Give one of your rules to a colleague and ask whether they could spot the situation it describes."
+
+improve:
+  - "Add a new case every time a job surprises you, and run the four questions on it."
+  - "Add pairs when you reject an AI draft, with one line on why."
+  - "Ask someone in your field to read your never-do list and push back on any line."
+
+works_best_with:
+  tools:
+    - {name: "Claude Code or OpenAI Codex", why: "They can write the files straight into your project folder as the interview goes."}
+    - {name: "Any good chat AI", why: "Claude, ChatGPT or Gemini can run the interview and give you each file to save."}
+  inputs:
+    - "A recording or transcript of you doing one real task"
+    - "Public ads or pages from real businesses in your field"
+    - "Your AI chat history, to see what you correct most often"
+
+terms:
+  - term: "Scope card"
+    meaning: "A one-page list of the jobs an agent does, where judgment matters, and when it should stop and ask."
+  - term: "Repertory grid"
+    meaning: "A way to find your taste by comparing three examples at a time and naming what sets one apart."
+  - term: "Teach-back"
+    meaning: "Your AI explains your method back to you so you can correct it."

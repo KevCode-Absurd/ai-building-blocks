@@ -1,0 +1,19 @@
+slug: expert-agent-improvement-loop
+name: "Expert agent improvement loop"
+summary: "Bring a week of your agent's mistakes. You get two tested fixes, a new version and a log of ideas you dropped."
+category: general
+type: skill
+role: plan
+job: ops
+level: intermediate
+inputs:
+  - {type: feedback_notes, required: true}
+  - {type: document, required: true}
+  - {type: test_report, required: false}
+outputs:
+  - {type: lessons_register, required: true}
+  - {type: test_report, required: false}
+uses: []
+origin: own
+example_pending: true
+version: 1.0.0

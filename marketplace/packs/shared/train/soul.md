@@ -1,7 +1,7 @@
 <!-- template: replace this file during training -->
 # Soul: who I am
 
-This file is still a blank template. Your coach fills it in with you during training, in stage 3 of instructions.md. When it is done, the whole file is replaced, including the first line, and your agent stops treating itself as untrained.
+This file is still a blank template. Your coach fills it in with you during training, in stage 5 of instructions.md. When it is done, the whole file is replaced, including the first line, and your agent stops treating itself as untrained.
 
 Write in the first person and in your own words. Keep every line true. This file shapes how your agent thinks, decides and pushes back. It never adds facts, results or clients.
 

@@ -1,0 +1,111 @@
+new_slug: expert-agent-eval-builder
+name: "Expert agent eval builder"
+summary: "Give it your agent files. You get a rubric in your words, 20 or more test cases and a judge that grades like you."
+job: set-up-ai
+thinking: high
+thinking_why: "It has to write fair test cases and tune a judge until it agrees with your own grades."
+
+headline: "Expert agent eval builder"
+subhead: "Give your AI the files that describe your agent's jobs, cases and taste, and it builds a rubric in your words and a set of test cases from your own work. It then adjusts a judge on your grades until the two of you agree more than 90% of the time."
+
+explain: |
+  You can't tell whether an agent does your job well by reading a few of its answers, because polished drafts can hide weak thinking, and an AI that grades its own work tends to like it. A fair test needs a written quality bar, cases that cover the hard parts of the job, and a grader whose marks match yours.
+
+  This skill builds all three. The rubric combines pass or fail gates, such as no invented numbers, with craft criteria written in your own words and weighted the way you choose. The test set mixes normal jobs, awkward ones, traps where the agent should stop and ask, and mistakes it has already made, and some cases are kept back so nobody tunes the agent to them. Finally, you grade a set of answers yourself, and the judge is revised until it agrees with you on answers it hasn't seen before.
+
+when:
+  - "You built an expert agent and want to know whether it is better than plain AI on your jobs."
+  - "You want a written quality bar that a reviewer or another AI can apply the same way you do."
+  - "You plan to improve your agent every week and need a fixed test to check each change."
+not_for:
+  - "Capturing your judgment in the first place. Use the Expert knowledge interview first."
+  - "Running the test itself. Use the Expert agent blind test with what this makes."
+  - "A grading rubric for a classroom task. Use the Task rubric drafter."
+
+you_give:
+  - "Your agent's files: the jobs it does, your cases, rules, taste picks and never-do list"
+  - "About two hours to approve cases, and an hour to grade 20 to 30 answers yourself"
+  - "Test briefs, scorecards or data exports you may share (optional)"
+you_get:
+  - "A rubric for each job, with pass or fail gates and weighted craft criteria in your words"
+  - "An eval set of 20 or more cases in one format, with about a quarter kept back for a fair test"
+  - "A judge prompt tuned on your grades, with how often it agrees with you"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Share your agent's files, or list the jobs it does if you have nothing written yet."
+  - "Set the weights for the rubric and approve or reject each test case it drafts."
+  - "Write the kept-back cases yourself, or ask a trusted peer, and store them outside the agent's folder."
+  - "Grade the calibration answers blind, then run the Expert agent blind test."
+
+how_it_works:
+  - title: "Writes the rubric"
+    text: "Starts from the standard weights for the kind of work, then swaps in your own criteria and examples of weak, fair and strong work."
+  - title: "Builds the cases"
+    text: "Drafts about 40% normal jobs, 25% awkward ones, 20% traps and 15% past mistakes, across at least three businesses."
+  - title: "Keeps some back"
+    text: "Marks 20% to 30% of cases as held out, so changes to the agent are never tuned to them."
+  - title: "Tunes the judge"
+    text: "You grade 20 to 30 answers. The judge grades the same ones, and your critiques are added until it matches you."
+  - title: "Checks it fresh"
+    text: "Tests the judge on ten answers it hasn't seen and reports agreement on passes and fails separately."
+
+output_shape: |
+  expert/rubric.md      <gates, craft criteria and weights, what 1, 3 and 5 look like>
+  evals/eval-set.md     <index of cases with type and split>
+  evals/cases/E01-<name>.md
+    Type | Split | Job | Source | Added | Depends on
+    Input | If asked | Must include | Must not | Right behaviour
+  evals/judge.md        <judge prompt, worked examples, agreement record>
+
+  EVAL SET
+  Cases <n>: hero <n> | edge <n> | trap <n> | regression <n> | held-out <n>
+  JUDGE
+  Agrees on passes <x>% | on fails <y>% | on pairs <z>% (on <n> fresh answers)
+  READY FOR A BLIND TEST
+  <yes, or what is missing>
+  CHECKS MISSED
+  <one line each, or none>
+
+tweaks:
+  - what: "Real businesses"
+    how: "For ads, pages and copy, build cases on real businesses' public sites and ads, labelled as exercises written for the test."
+  - what: "Trap cases"
+    how: "Add a case with a missing file or a hidden instruction in a document. The right answer is to stop and ask."
+  - what: "Who writes the kept-back cases"
+    how: "A peer in your field makes the fairest held-out cases, because you never saw them while building the agent."
+  - what: "Your pass mark"
+    how: "The default is all gates passed and 70 out of 100 on craft. Raise it for work that goes straight to clients."
+
+judge:
+  - "Every case has must include, must not and the right behaviour written down."
+  - "The mix is close to 40% normal, 25% awkward, 20% traps and 15% past mistakes."
+  - "At least a fifth of the cases are kept back."
+  - "The judge's agreement with you is shown as two numbers, measured on answers it wasn't tuned on."
+  - "No case relies on a fact without the date it was true."
+
+test:
+  - "Give the judge three answers you know are weak and check it fails them for the right reason."
+  - "Swap two answers' order and check the judge's pick stays the same."
+  - "Ask a colleague to grade five answers with the rubric and compare their marks with yours."
+
+improve:
+  - "Add every real mistake your agent makes as a new past-mistake case."
+  - "Write three to five new kept-back cases each month and retire the oldest ones."
+  - "Grade ten fresh answers each month, because your own bar shifts as you see more work."
+
+works_best_with:
+  tools:
+    - {name: "Claude Code or OpenAI Codex", why: "They can write one file per case into your project and keep the index up to date."}
+    - {name: "A second AI from another company", why: "A judge from a different model family is less likely to favour the style of the model being tested."}
+  inputs:
+    - "Your past audits, briefs or drafts with your own notes on them"
+    - "Public ads or pages from real businesses for the test briefs"
+
+terms:
+  - term: "Eval set"
+    meaning: "A fixed set of test cases used to check an agent the same way every time."
+  - term: "Held-out cases"
+    meaning: "Test cases kept apart so nobody tunes the agent to them. They show whether it works on new jobs."
+  - term: "Calibrate"
+    meaning: "Adjust the judge until its grades match yours."

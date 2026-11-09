@@ -13,12 +13,40 @@ The other listed tools serve narrower jobs:
 | A whole business goal | `start_outcome`, `advance_outcome`, `record_outcome_decision`, `record_outcome_experiment` |
 | After a test goes live | `read_back_outcome_experiment` (scheduled read-backs and guardrail alerts; REST `/api/v1/outcome-readbacks`) |
 | Sharing a plan that worked | `prepare_outcome_pattern` (anonymised, owner consent, human review; REST `/api/v1/outcome-patterns`) |
+| A page, ad, copy, email, audit or analysis | `prepare_job_context` first (REST `POST /api/v1/job-context`), then the item, specialist or team job |
+| A team job | `start_job` with `deliverable_kind`, then `advance_job`; `propose_team`, `get_approaches`, `get_job_templates`, `get_job_preferences`, `set_job_preferences` |
 | One item | `search_library`, then `get_skill`, `get_workflow` or `get_item`; `get_resource` for supporting files |
 | One specialist | `find_specialist`, then `prepare_specialist` |
 | A multi-step workflow | `plan_workflow`, then `prepare_workflow` |
 | Hosts that need these names | `search`, `fetch` |
 
-Every tool has a `title`. The server instructions are about 1,800 characters and put the procedure in the first 512 characters. Domain guidance (for example how to read ad results) lives in the outcome method (`METHOD.md`, returned once by `start_outcome`) and in the specialist playbooks, not in the instructions.
+Every tool has a `title`. The public MCP lists 25 tools.
+
+The server instructions (`PUBLIC_MCP_INSTRUCTIONS`) are about 2,200 characters, under 2,500. They put grounding first, because some hosts read only the first 512 characters: for a page, ad, copy, email, audit or analysis, frame the job (client, outcome, `deliverable_kind`, mode), ground it in the client's real assets or data before producing anything (`prepare_job_context`, then capture the live site or pull the account), write a taste brief, diverge on substance, build inside the client's system and check with an independent critic. Routing follows within the first 1,100 characters (`start_outcome` for a goal, then items, specialists, `start_job` with `deliverable_kind` for a team job, and workflows), then the run and authority rules. Domain guidance (for example how to read ad results) lives in the outcome method (`METHOD.md`, returned once by `start_outcome`), in `prepare_job_context` and in the specialist playbooks, not in the instructions.
+
+## Grounding before production
+
+Generic output is treated as a context failure, so produced work runs the Grounded Job Protocol: frame, ground, taste, diverge, build, check, record. The code is `site/src/jobs/grounding.mjs`; `site/src/jobs/README.md` has the job-engine detail.
+
+**`prepare_job_context`** (REST mirror `POST /api/v1/job-context`, same JSON body). Arguments: `request` (required), `deliverable_kind`, `site_url`, `has_existing_asset` and `category`. It returns `schema: "ai-blocks-job-context/1"` with:
+
+- `brief`: under 1,500 characters for the model to act on: the kind and mode, what to capture, the taste questions, the AI defaults to avoid, how to diverge and the check.
+- `annex`: to save as `context/job-context.json`. It holds the protocol steps, `context_requirements`, the capture order and fields, the capture scripts for brand work (pinned `get_resource` paths in the `brand-dna-capture` and `brand-fidelity-check` skills, plus `https://agents.useaiblocks.com/tools/<file>`), the taste-brief sections and questions, `production_gate` with a `report_as` template, the diverge axes, `craft_rubric`, `gates`, and `defaults_to_avoid`. The defaults come from the published `ai-default-patterns/patterns.json`, or the embedded list when that is missing (`defaults_source` says which). `next` gives the `start_job` and `search_library` calls.
+- `model_calls: 0`, `stored_by_service: false`.
+
+**`deliverable_kind`** is one of `web_page`, `ad_creative`, `copy`, `email`, `audit`, `analysis`, `strategy`, `plan`, `code`, `ops_doc`, `other`. The host declares it on `prepare_job_context` and `start_job`; a declared kind always wins. Without one, a guess from the request words is used and marked `kind_source: "suggested"`. Assessment words without a creation verb suggest `audit` or `analysis`, never ad production. The mode defaults to `patch` whenever something exists: `has_existing_asset: false` or "from scratch" wording gives `new`, and a `site_url` with no existing asset gives `extend`.
+
+**`taste_questions` replace dial questions.** A grounded `start_job` returns `brief`, `dials_line` and `taste_questions`. `dials_line` states the dials in one line ("Using a balanced mix, 1 output and a standard review; say if you want otherwise."), and `dial_questions` appear only when `ask_before_start` is `ask_dials`. The up to three SCOPE questions go to taste: position, what must never change, and 2 admired references and 1 to avoid for web, ad, copy and email work. Audits and analysis ask about the decision, what changed and what normal looks like. Strategy, plan and other work have their own sets. A request that names one deliverable, and audit, analysis, strategy, plan, code and ops-doc work, default to one output.
+
+**The production grounding gate.** For jobs started under the grounding policy (`grounding_policy.version` 1), `advance_job` refuses the `produce` event until `grounding` is reported, in the event document or on the job card:
+
+- `web_page`, `ad_creative`, `copy` and `email` need `brand_dna` (path `context/brand-dna.json`, `sha256`, `source`, `captured_at`, and `method` of `capture-brand-dna.mjs`, `brand-dna-snippet.js` or `manual`). They also need `taste_brief` (path `context/taste-brief.md`, `sha256`, at least 1 `brand_codes`, 2 `references_admired`, 1 `reference_avoid` and 1 `defaults_to_avoid`).
+- `audit` and `analysis` need a `data_snapshot` (a path under `context/`, `sha256`, `source` and `captured_at`).
+- Other kinds have no gate.
+
+Only the structure is checked: these are host reports, not proof of capture. Jobs started before the policy replay unchanged. A direct-mode `start_job` result names `prepare_job_context` in `next_action.grounding`.
+
+**`get_skill` `before_you_run`.** A detailed `get_skill` for a creative skill (pages, ads, copy, email, brand) or an assessment skill (audits, analysis) adds `before_you_run`, placed before `instructions`. It holds `{ title: "Before you run this", kind: "create" | "assess", lines, tool, precedence }`. The `lines` are five steps: ground, the taste or interview questions, the defaults to avoid, 2 or 3 directions or hypotheses, and an independent check. `tool` is a `prepare_job_context` call, and `precedence` says the captured context overrides the method's defaults on look and structure, never truth or permission. `next_action` then starts with "Run before_you_run first". Workflows and short views do not carry it.
 
 ## Tools that moved to REST
 

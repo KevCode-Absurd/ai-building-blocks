@@ -6076,34 +6076,28 @@
     "family": "copy",
     "context_requirements": [
       {
-        "id": "site_url",
-        "label": "Your website address",
-        "required": true,
-        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
-      },
-      {
         "id": "existing_assets",
-        "label": "Your current pages, copy or materials",
-        "required": false,
-        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+        "label": "Your draft, notes or past pieces",
+        "required": true,
+        "how": "The material this piece is made from: the draft, the records or notes, and 2 or 3 past pieces in the same voice. Read them all before writing."
       },
       {
         "id": "voice_samples",
-        "label": "Samples of your brand's own words",
+        "label": "Samples of your own words",
         "required": true,
-        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+        "how": "5 to 10 lines the client or speaker wrote or said, copied verbatim into the context file."
       },
       {
-        "id": "competitors",
-        "label": "Competitors",
+        "id": "site_url",
+        "label": "Your website, if the piece speaks for a business",
         "required": false,
-        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+        "how": "Read the live site for facts and voice when the piece speaks for a business or organisation. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and CSS."
       },
       {
         "id": "references",
-        "label": "Work you admire, and work to avoid",
+        "label": "Pieces you admire, and pieces to avoid",
         "required": false,
-        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+        "how": "2 the client admires and 1 to avoid sounding like. Ask once."
       }
     ],
     "gates": [
@@ -6111,7 +6105,7 @@
       "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
       "Access respected: the agent acted only at the access level the client granted for each tool.",
       "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
-      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "Every choice cites the client's own material (draft, notes, past pieces) or a named reference.",
       "No story, customer, statistic, award, quote, credential or result appears that the brief does not give; gaps are marked with placeholders such as [customer name]. Any invented story or figure fails."
     ],
     "craft_rubric": [

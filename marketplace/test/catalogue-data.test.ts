@@ -40,10 +40,11 @@ test("context requirements fit the family", () => {
   for (const jt of allJobTypes()) {
     const req = new Map(jt.context_requirements.map((c: { id: string; required: boolean }) => [c.id, c.required]));
     if (CREATIVE.has(jt.family)) {
-      assert.equal(req.get("site_url"), true, `${jt.id}: creative jobs need the site (or existing assets)`);
-      assert.ok(req.has("existing_assets"), `${jt.id}: creative jobs accept existing assets when there is no site`);
+      // The live site, or (for pieces made from the client's own drafts and records) the existing material.
+      assert.ok(req.get("site_url") === true || req.get("existing_assets") === true, `${jt.id}: creative jobs need the site or existing assets`);
+      assert.ok(req.has("site_url") && req.has("existing_assets"), `${jt.id}: creative jobs name both the site and existing assets`);
       assert.equal(req.get("voice_samples"), true, `${jt.id}: creative jobs need voice samples`);
-      assert.equal(req.get("competitors"), false, `${jt.id}: competitors are recommended, not required`);
+      if (req.has("competitors")) assert.equal(req.get("competitors"), false, `${jt.id}: competitors are recommended, not required`);
     }
     if (jt.family === "audit") assert.equal(req.get("account_access"), true, `${jt.id}: audits need read access to the real data`);
     if (jt.family === "analysis") assert.equal(req.get("data_export"), true, `${jt.id}: analysis needs the data`);

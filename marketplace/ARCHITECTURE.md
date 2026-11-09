@@ -125,14 +125,14 @@ While `HOSTED_JOBS` is off this is the ops-only test path; for everyone else a h
 |---|---|
 | core | `GET /api/health`, `GET /api/config`, `GET /api/me`, `POST /api/beta/redeem` |
 | catalogue | `GET /api/catalogue`, `GET /api/catalogue/:id` |
-| directory | `GET /api/agents?area=&q=&role=`, `GET /api/agents/:id`, `GET /agents/:id/soul.md`. Cards carry `role: { id, name } \| null` and `mega: { variant, team_size } \| null`; the profile adds `team: [{ id, name, job }]` (mega agents, else `[]`). `?role=<id>` lists one job role (400 `unknown_role` for an id not in roles.json) and the list adds `role: { id, name, department, summary }`. Search also matches the role's name (with the name and title) and aliases (with the tagline). |
+| directory | `GET /api/agents?area=&q=&role=`, `GET /api/agents/:id`, `GET /agents/:id/soul.md`. Cards carry `role: { id, name } \| null` and `mega: { variant, team_size } \| null`; the profile adds `team: [{ id, name, job }]` (mega agents, else `[]`). `?role=<id>` lists one job role (400 `unknown_role` for an id not in roles.json) and the list adds `role: { id, name, department, summary }`. Search also matches the role's name (with the name and title) and aliases (with the tagline). `GET /tools/:file` (a capture or check tool, see "Agent packs") and `GET /agents/:id/skills/:skill.txt` (one skill in one text file) read the built packs through `ASSETS`. |
 | intake | `POST /api/requests`, `GET /api/requests/:id`, `POST /api/requests/:id/answers`, `POST /api/requests/:id/quote`, `POST /api/requests/:id/confirm` |
 | delivery | `GET /api/jobs`, `GET /api/jobs/:id`, `POST /api/jobs/:id/accept`, `POST /api/jobs/:id/revise`, `POST /api/jobs/:id/reject`, `GET /api/notifications` |
 | evaluation | `GET /api/review/blind/next`, `POST /api/review/blind/:id`, `GET /api/review/stats` |
 | ops | `GET /api/ops/jobs`, `GET /api/ops/jobs/:id`, `POST /api/ops/jobs/:id/{release,rerun,cancel,assign,note,resolve}`, `GET /api/ops/gate`, `GET/POST /api/ops/beta-codes`, `GET/POST /api/ops/staff`, `POST /api/ops/seed`, `GET /api/ops/agents`, `GET /api/ops/costs` |
 | studio | `/api/studio/*` (expert, including `POST /api/studio/import`), `POST /api/studio/agents/:id/live`, `POST /api/studio/agents/:id/retire` (ops) |
 | experts | `POST /api/experts/apply`, `GET /api/experts/me`, `GET /api/experts/me/dashboard`, `GET /api/experts/agreement`, `GET /api/experts` (ops), `POST /api/experts/:id/review` (ops) |
-| mcp | `POST /mcp`, `GET /.well-known/oauth-authorization-server`, `GET /.well-known/oauth-protected-resource`, `POST /oauth/register`, `GET /oauth/authorize`, `POST /oauth/token`, `POST /api/oauth/approve`. Tools `load_agent` (the core files: AGENTS.md, soul.md, personality.md, playbook.md, access.md, plus the list of the rest) and `get_agent_file` (any path listed in the agent's files.json) read the built pack through the `ASSETS` binding (`mcp/pack-files.ts`); they run no model. The job tools (`hosted: true`) are listed only while `HOSTED_JOBS` is "on", and the server instructions switch with it (`mcpInstructions`). Tool `get_agent` returns `agent.pack: { agent_zip, train_zip, files, guide }` (absolute `APP_ORIGIN` URLs: `/packs/<id>.zip`, `/packs/<id>-train.zip`, `/packs/<id>/files.json`, `/guides/train-your-own-agent`), or `null` for an expert's agent, and names the downloads in its text. |
+| mcp | `POST /mcp`, `GET /.well-known/oauth-authorization-server`, `GET /.well-known/oauth-protected-resource`, `POST /oauth/register`, `GET /oauth/authorize`, `POST /oauth/token`, `POST /api/oauth/approve`. Tools `load_agent` (the core files `CORE_FILES` in `mcp/pack-files.ts`: AGENTS.md, WORK-METHOD.md, context/README.md, soul.md, personality.md, playbook.md, access.md, OUTPUT-POLICY.md, then the list of the rest; with `request`, also the skill or workflow it routes to in full and the matching knowledge.md sections, see "Routing a request") and `get_agent_file` (any path listed in the agent's files.json) read the built pack through the `ASSETS` binding (`mcp/pack-files.ts`); they run no model. The job tools (`hosted: true`) are listed only while `HOSTED_JOBS` is "on", and the server instructions switch with it (`mcpInstructions`). Tool `get_agent` returns `agent.pack: { agent_zip, train_zip, files, guide }` (absolute `APP_ORIGIN` URLs: `/packs/<id>.zip`, `/packs/<id>-train.zip`, `/packs/<id>/files.json`, `/guides/train-your-own-agent`), or `null` for an expert's agent, and names the downloads in its text. |
 
 ## Pages for search engines and AI crawlers
 
@@ -203,25 +203,49 @@ two kinds. Both are under the AI Blocks Agent Pack Licence 1.0 (free to use and 
 | `src/modules/studio/import.ts` | `POST /api/studio/import`: start a studio agent from a trained pack. |
 | `scripts/check-pack-sources.mjs` | Checks every source URL in the role kits; first step of the knowledge refresh. |
 
-**"Download this agent"**: `/packs/<agent-id>.zip`, folder `<agent-id>/`: `README.md`, `AGENTS.md` (entry point),
-`CLAUDE.md` (`@AGENTS.md`), `soul.md` (`soulMarkdown` in directory/soul.ts, also served at `/agents/<id>/soul.md`:
+**"Download this agent"**: `/packs/<agent-id>.zip`, folder `<agent-id>/`: `README.md`, `AGENTS.md` (entry point; it
+sends every job through WORK-METHOD.md first and asks once, five questions at most, for what capture cannot tell),
+`CLAUDE.md` (`@AGENTS.md`), `WORK-METHOD.md` (the Grounded Job Protocol: frame, ground, taste, diverge, build, check,
+record, with the gates and craft weights; from `packs/shared/WORK-METHOD.md`, a required template), `context/README.md`
+(`contextReadme` in build.ts: the `context/` folder layout, then what to capture for each family of the agent's job
+types, from `CAPTURE` in `packs/families.ts`, then the tools; the client's files go in their own project, never in the
+pack), `soul.md` (`soulMarkdown` in directory/soul.ts, also served at `/agents/<id>/soul.md`:
 "# Name, title", then the training template's headings Who I am, How I think, What I care about, My habits, When we
 disagree, Off the clock; a short "Who I am" from the bio when the persona has no soul yet), `personality.md` ("How I
-talk" from the soul's voice, then `profile.style` under the template's headings when present, then `STYLE_RULES` and
-`BANNED_PATTERNS`), `playbook.md` (outcomes, intake questions from the linked job types' spec fields, method, rubric
-criteria, not-for list, handoff), `knowledge.md` (the role kit's knowledge, then "My specialty" from capabilities and
+talk" from the soul's voice, then `profile.style` under the template's headings when present; whose style wins in the
+work is in OUTPUT-POLICY.md), `playbook.md` (what I deliver, what I need first per job: context, then details, the
+method, which job skill holds each job's gates and craft, handoff, and "## Rules I learned" for typed lessons:
+`decision_rule`, `taste_reference`, `never_do`, `exemplar`, `check`), `OUTPUT-POLICY.md`, `QUALITY-METHOD.md` (only
+for hosts using the MCP job tools), `knowledge.md` (the role kit's knowledge, then "My specialty" from capabilities and
 good_at; with no kit yet a plain "coming" note, and pack.json `knowledge.status` is `pending`), `access.md`,
 `skills.md` (every SKILL.md in one file under `## <skill name>`, for chat apps that take one upload),
 `skills/<slug>/SKILL.md` (the role's skills, plus one job skill per linked job type at `skills/<job-type-id>/`, Agent
-Skills frontmatter `name` = folder and `description` up to 1,024 characters, with the spec fields and full rubric;
-when the role kit already has a skill with the job type's name, the role skill keeps it and the job skill becomes
-`skills/<job-type-id>-job/`, with a build note),
-`prompts/*.md`, `workflows/*.md`, `library.md` (links to `https://useaiblocks.com/skills/<slug>`), `sources.md`,
-`LICENSE.md`, `CHANGELOG.md` and `pack.json` (`{ schema: "ai-blocks-agent-pack/1", kind, agent_id, name, title, role,
+Skills frontmatter `name` = folder and `description` up to 1,024 characters; when the role kit already has a skill
+with the job type's name, the role skill keeps it and the job skill becomes `skills/<job-type-id>-job/`, with a build
+note. A job skill has "Get this first" (the job type's `context_requirements`), then the spec fields, "How to run this
+job" (the six WORK-METHOD.md steps as they apply to the job's family), "Gates: pass or fail" (`gates` plus the
+critical rubric items) and "Craft: scored" (`craft_rubric`). When a role kit skill or workflow matches the job
+(`bestRoute` in `packs/route.ts`, score 1.2 or more, or a kit skill named after the job type), the Build step points
+to it for the craft, and the job skill is then the same for every agent in the role (`source: "role"`)),
+`prompts/*.md`, `workflows/*.md`, `library.md` (links to `https://useaiblocks.com/skills/<slug>`; a "coming" note
+while the role kit has no `library.json` rows), `sources.md` (a "coming" note while the role has no sources),
+`tools/` (below), `LICENSE.md`, `CHANGELOG.md` and `pack.json` (`{ schema: "ai-blocks-agent-pack/1", kind, agent_id, name, title, role,
 version, updated, source, license, job_types, knowledge: { status, updated, sources, review_every_days }, files: [{
 path, bytes, sha256 }] }`; a trained pack may add `trained_by` and `based_on: { agent_id, version, source }`). The zip
 (only the zip) also holds byte-identical copies of `skills/` in `.agents/skills/` (Codex, Cursor) and
 `.claude/skills/` (Claude Code), after the pack's files; they are not in pack.json `files`, files.json or the viewer.
+`library.md` and `sources.md` are in every pack of both kinds, because AGENTS.md and README.md name them.
+
+**Tools** (`TOOL_FILES` in build.ts, files.json kind `tool`): `tools/capture-brand-dna.mjs` (captures a live site into
+`context/brand-dna.json` and screenshots; Node and Playwright), `tools/brand-dna-snippet.js` (the same capture, pasted
+into a browser console), `tools/check-brand-fidelity.mjs` (checks a built page against `context/brand-dna.json`) and
+`tools/ai-default-patterns.md` (the named AI defaults to avoid). Only agent packs carry them; the one-file text leaves
+the scripts out. A train pack has no `tools/` (the studio import takes text files only). Wherever a pack lacks a tool,
+`resolveToolRefs` rewrites each `tools/<file>` reference to `<origin>/tools/<file>`. `scripts/build-packs.mjs` takes the
+tools from the library, `catalogue-items/general/{brand-dna-capture,brand-fidelity-check,ai-default-patterns,grounded-job-protocol}/`
+at any depth (the defaults list there is `ai-default-patterns/patterns.md`, carried as `tools/ai-default-patterns.md`),
+else from `packs/shared/tools/<file>`; a tool found in neither is left out with a note. `--tools=<dir>` reads them all
+from one folder instead. The build prints where each tool came from.
 
 **"Train your own"**: `/packs/<agent-id>-train.zip`, folder `<role-id>-agent/` (the title as a slug when the persona
 has no role): the same base without the persona's soul, style, bio or portrait. `soul.md` and `personality.md` are
@@ -230,7 +254,9 @@ template lacks it). The training `AGENTS.md`, `README.md` and `instructions.md` 
 `packs/shared/train/`. `playbook.md` marks each section "Base method: make it yours" and ends with "## Rules I
 learned". `training/interview.md` and `training/test-briefs.md` come from the role kit (fallback: generic questions,
 and one public sample brief per job type, never a hidden one), `training/scorecard.md` from the rubrics,
-`examples/README.md` from `packs/shared/train/examples-README.md`. In this kind `{{name}}` and `{{title}}` are the agent
+`examples/README.md` from `packs/shared/train/examples-README.md`. It also starts with four empty logs the coach fills
+in (`TRAIN_LOGS` in build.ts): `training/capture-log.md`, `training/improve/inbox.md`, `training/improve/graveyard.md`
+and `training/decision-journal.md`. In this kind `{{name}}` and `{{title}}` are the agent
 the pack starts from, and `{{bio}}` and `{{tagline}}` are the role's summary.
 
 **Inputs.** Role kits live in `packs/roles/<role-id>/` (`role.json`, `knowledge.md`, `access.md`, `sources.json`,
@@ -239,10 +265,19 @@ the pack starts from, and `{{bio}}` and `{{tagline}}` are the role's summary.
 their folders, or the build stops. Kit files are copied as they are: their own `{{placeholders}}` are for the person
 using the prompt and are never filled or rejected. Shared templates in `packs/shared/` may use only `{{name}}
 {{title}} {{role_name}} {{tagline}} {{agent_id}} {{role_id}} {{department}} {{version}} {{updated}} {{bio}}
-{{profile_url}} {{pack_url}} {{train_pack_url}} {{guide_url}} {{studio_url}} {{mcp_url}}` and the blocks
+{{profile_url}} {{pack_url}} {{train_pack_url}} {{one_file_url}} {{guide_url}} {{studio_url}} {{mcp_url}} {{not_for_inline}}` and the blocks
 `{{files_table}} {{skills_list}} {{prompts_list}} {{workflows_list}} {{outcomes_list}} {{not_for_list}}
 {{intake_list}}`. Any other `{{...}}` fails the build, naming the template. A missing template falls back to a minimal
 one in build.ts.
+
+**Job type fields for the Grounded Job Protocol** (`catalogue/schema.ts`, optional in the schema; every job type in
+`catalogue/data/` has them): `family` (one of `DELIVERABLE_FAMILIES` in `core/types.ts`: web_page, ad_creative, copy,
+email, audit, analysis, strategy, plan, code, ops_doc, other), `context_requirements` (1 to 10 `{ id, label, required,
+how }`, unique ids), `gates` (1 to 10 pass/fail checks), `craft_rubric` (3 to 10 `{ criterion, weight, test }`, weights
+summing to 100) and `mode_default` (`patch`, `extend` or `new`). The builder reads them through `packs/families.ts`;
+a missing field falls back by family (guessed from the title, then the deliverable, then the area): the family's
+default context list, the non-critical rubric items plus the family's craft weights in WORK-METHOD.md, and mode
+`patch` for web_page, copy and email.
 
 **Versions.** `packs/versions.json` (committed) holds, for every pack (`"<id>"` and `"<id>-train"`), `{ hash, version,
 updated }`. The hash (`packContentHash`) is sha256 over "path TAB sha256" lines of every file of the pack built with a
@@ -253,22 +288,46 @@ packs/versions.json"), so an unchanged pack is byte-identical from build to buil
 After any change to personas, job types, roles, kits or templates: `npm run packs:lock`, then commit the lock.
 
 **Build step.** `npm run build` = `node scripts/mega-team.mjs`, `vite build`, then `node scripts/build-packs.mjs` (also used by `worker:dev` and both
-deploy scripts). `--only=id,id` builds a few. Static assets serve it all; no Worker route is involved. Agent ids may
-not be `roles`, `jobs` or `index`. Public URLs (all under agents.useaiblocks.com):
+deploy scripts). `--only=id,id` builds a few. Static assets serve the packs; the Worker routes `/tools/<file>`
+and `/agents/<id>/skills/<skill>.txt` read from them. Agent ids may not be `roles`, `jobs`, `mega`, `tools` or
+`index`.
+
+**The pack linter** (`src/modules/packs/lint.ts`, `lintPack`) runs on every pack the build makes, agent and train, and
+any finding fails the build. Rules: `missing_file` (a file names a pack file or folder path the pack does not hold;
+lines in an "Optional" section or saying "not in this pack", `examples/`, and the training logs the coach creates are
+exempt), `limit_conflict` (the builder's own files set one limit, such as the number of questions, to two numbers),
+`repeated_paragraph` (a paragraph of 120 characters or more twice in what the agent reads) and `made_up_business`
+(`MADE_UP_BUSINESSES`: Sprout but not Sprout Social, Harbourside Pottery, Tidewell). Findings are grouped by message
+with the packs they hit. `node scripts/build-packs.mjs --lint=report` prints them all and goes on.
+
+Public URLs (all under agents.useaiblocks.com):
 
 | URL | What it is |
 |---|---|
 | `/packs/<id>.zip` | "Download this agent" (folder `<id>/` inside) |
 | `/packs/<id>-train.zip` | "Train your own" (folder `<role-id>-agent/` inside) |
-| `/packs/<id>.txt` | The whole agent in one plain text file for chat apps (`oneFileText` in `packs/build.ts`): a short header, then every file the agent reads, AGENTS.md first, each after a `===== FILE: <path> =====` line. README, CLAUDE.md, CHANGELOG, pack.json and each `skills/*/SKILL.md` (all in skills.md) are left out. `.txt` because every chat app takes it. Made from the agent pack, so it shares its version. |
-| `/packs/<id>/<path>` | The agent's own files of its pack: README, AGENTS, CLAUDE, soul, personality, playbook, knowledge, skills.md, LICENSE, CHANGELOG, pack.json (and access.md while the role has no kit) |
+| `/packs/<id>.txt` | The whole agent in one plain text file for chat apps (`oneFileText` in `packs/build.ts`): a short header, then every file the agent reads, AGENTS.md first, each after a `===== FILE: <path> =====` line. README, CLAUDE.md, CHANGELOG, pack.json, QUALITY-METHOD.md, the tool scripts (linked at `/tools/<file>`) and each `skills/*/SKILL.md` (all in skills.md) are left out. `.txt` because every chat app takes it. Made from the agent pack, so it shares its version. |
+| `/packs/<id>/<path>` | The agent's own files of its pack: README, AGENTS, CLAUDE, WORK-METHOD, context/README, soul, personality, playbook, knowledge, skills.md, LICENSE, CHANGELOG, pack.json (and access.md while the role has no kit) |
 | `/packs/roles/<role-id>/<path>` | Each ready role kit once, its files as they stand (role.json, knowledge.md, access.md, sources.json, library.json, skills/, prompts/, workflows/, training/), plus `sources.md` and `library.md` as the packs carry them |
-| `/packs/jobs/<skill-slug>/SKILL.md` | Each job skill once (`<job-type-id>`, or `<job-type-id>-job` when the role kit has a skill of that name) |
+| `/packs/jobs/<skill-slug>/SKILL.md` | Each job skill once (`<job-type-id>`, or `<job-type-id>-job` when the role kit has a skill of that name). A job skill that points into a role kit is at `/packs/roles/<role-id>/skills/<skill-slug>/SKILL.md` instead. |
+| `/packs/tools/<file>` | Each tool once (static copy) |
+| `/tools/<file>` | The same tool through the Worker (`directory/routes.ts`), `text/markdown` or `text/javascript`. Only names in `TOOL_FILES`; 404 with the list for any other name, or while the tool is not built. Packs and the one-file text link here. |
+| `/agents/<id>/skills/<skill>.txt` | One skill of a live agent with what the agent reads first, in one text file for chat apps (`skillOneFile` in `mcp/pack-files.ts`): the `load_agent` payload with that skill named instead of routed. 404 for an unknown agent or skill. |
 | `/packs/mega/<kit>/<path>` | Each ready mega kit once, its files as they stand (kit.json, orchestrator.md, variants/, channels/, agents/<channel>.md, prompts/, workflows/, training/) |
-| `/packs/<id>/files.json` | `{ schema: "ai-blocks-pack-files/1", agent_id, kind: "agent", role, version, updated, knowledge, zip: { url, bytes, version }, train_zip: { url, bytes, version }, one_file: { url, bytes, version }, files: [{ path, url, bytes, purpose, kind }] }`. `knowledge` = `{ status: "ready" | "pending", updated, sources, review_every_days }` (packs built before 7 Nov 2026 say just `"ready"` or `"pending"`; the UI reads both). `url` is where the file's text is served (under the agent, the role or the job); the UI always uses it. File `kind` = start, identity, work, knowledge, skill, prompt, workflow, training or about. List files in the order given. |
+| `/packs/<id>/files.json` | `{ schema: "ai-blocks-pack-files/1", agent_id, kind: "agent", role, version, updated, knowledge, zip: { url, bytes, version }, train_zip: { url, bytes, version }, one_file: { url, bytes, version }, files: [{ path, url, bytes, purpose, kind }] }`. `knowledge` = `{ status: "ready" | "pending", updated, sources, review_every_days }` (packs built before 7 Nov 2026 say just `"ready"` or `"pending"`; the UI reads both). `url` is where the file's text is served (under the agent, the role or the job); the UI always uses it. File `kind` = start, identity, work, knowledge, skill, prompt, workflow, training, tool, team, channel or about. List files in the order given. `routes` = `[{ path, kind: "job" \| "skill" \| "workflow", name, text }]`: every job skill (name: title and keywords; text: summary and deliverable), role kit skill (name and description) and role kit workflow (title and opening), what `load_agent` routes a request to (packs built before 9 Nov 2026 have none). |
 | `/packs/index.json` | `{ schema: "ai-blocks-pack-index/1", count, packs: [{ id, name, title, role, version, updated, knowledge, files, files_url, agent_zip: { url, bytes, version }, train_zip: { url, bytes, version }, one_file: { url, bytes, version } }] }` |
 | `/agents/<id>/soul.md` | The Worker's soul.md (same text as the pack's) |
 | `/guides/<slug>` | A browser-app page (SPA fallback, no Worker route) that renders `src/ui/content/guides/<slug>.md`, bundled at build time with a Vite `?raw` import (`src/ui/pages/directory/guides.tsx`; a new guide is listed in `GUIDES` there). Slugs: `train-your-own-agent` (the packs' `{{guide_url}}`), `use-an-agent-pack`. `/guides` lists them. |
+
+**Routing a request** (`load_agent` with `request`; `loadPayload` in `mcp/pack-files.ts`, `packs/route.ts`; no model).
+The first payload is the core files, then the skill or workflow the request routes to, in full, then the knowledge.md
+sections most relevant to the request and that skill, all within `MAX_LOAD_CHARS` (58,000 characters; knowledge at most
+`MAX_KNOWLEDGE_CHARS`, 16,000). `bestRoute` scores the request's words against files.json `routes` (name words count
+more than text words, words many candidates share count less, a whole multi-word name in the request adds 1) and needs
+`MIN_ROUTE_SCORE` (0.6); a pack without `routes` is routed over its SKILL.md and workflow files by path and purpose.
+`relevantSections` always ranks the decision rules, quality bar, common mistakes and specialty sections. The result
+carries `routed`, `knowledge_sections` and `chars`; with no match the text says to follow WORK-METHOD.md and playbook.md.
+Everything not returned whole stays listed for `get_agent_file`.
 
 **In the browser app** (`src/ui/pages/directory/packs.ts` for data and pure helpers, `pack-parts.tsx`, `file.tsx`). A
 profile reads `/packs/<id>/files.json` (and `/packs/index.json` only when files.json does not name the zips) and shows

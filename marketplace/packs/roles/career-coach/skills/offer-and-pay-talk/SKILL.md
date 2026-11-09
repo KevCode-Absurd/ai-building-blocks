@@ -95,7 +95,7 @@ Build the case from results since the last review, the size of the job now, and 
 
 ## Example of good output (short)
 
-Made-up person for illustration: an offer for a marketing coordinator job at 58,000 a year; the published range was 55,000 to 64,000.
+Illustrative structure, not a real person: a marketing coordinator offered 58,000 a year, where the published range was 55,000 to 64,000. Copy the shape, never the content: every fact comes from the client's own context.
 
 > **Ask:** 62,000, or 60,000 with a pay review at six months.
 > **Reason:** "The ad's range goes to 64,000, and I'll be running the email programme on my own from day one, which I did at my current job, where I grew our list by 40% in a year."

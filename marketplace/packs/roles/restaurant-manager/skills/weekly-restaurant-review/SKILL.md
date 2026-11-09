@@ -81,7 +81,7 @@ One page:
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Saltmarsh Kitchen, week to Sunday 2 Nov.*
+*Illustrative structure, not a real business: a restaurant, week to Sunday 2 Nov. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Number | This week | Last week | Note |
 > |---|---|---|---|

@@ -89,7 +89,7 @@ Define spend, sale, lead, revenue (before or after refunds and tax), cost per sa
 
 ## Example of good output (short)
 
-*Made-up business: Fenwick & Lowe, an online furniture shop. Figures are invented for illustration.*
+*Illustrative structure, not a real business: an online furniture shop. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Short answer.** You had 131 orders in October (Shopify, after refunds). Google Ads claims 120 and Meta 95: together 215, or 164% of real orders, because both credit the same buyers and Meta also counts people who saw an ad without clicking. GA4 credits 118 orders to tagged channels and 13 to direct. Plan the total budget from Shopify revenue and MER; compare campaigns inside each platform with that platform's own numbers; do not add the platforms together.
 >

@@ -104,11 +104,11 @@ For each chart, a chart card:
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Fernhill Community Pantry", visits by quarter.*
+*Illustrative structure, not a real organisation: a community pantry showing visits by quarter. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Message:** Visits rose every quarter in 2026, from 1,240 to 1,910.
 > **Comparison:** change over time. **Chart:** line, because four points in order show the climb best.
-> **Title:** "Pantry visits rose every quarter in 2026". **Subtitle:** "Visits per quarter, Fernhill Community Pantry, Jan to Dec 2026".
+> **Title:** "Pantry visits rose every quarter in 2026". **Subtitle:** "Visits per quarter, [Charity], Jan to Dec 2026".
 > **Colour:** #12436D on white, about 10:1 against the background.
 >
 > ```json
@@ -127,4 +127,4 @@ For each chart, a chart card:
 > ```
 >
 > **Alt text:** "Line chart: pantry visits rose each quarter of 2026, from 1,240 in Q1 to 1,910 in Q4. Data table below."
-> **Source:** Fernhill visit log, exported 5 January 2027.
+> **Source:** the pantry's visit log, exported 5 January 2027.

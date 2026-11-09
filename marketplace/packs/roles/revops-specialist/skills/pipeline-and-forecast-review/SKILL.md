@@ -90,7 +90,7 @@ End with no more than three actions for the week, ranked by effect and effort, e
 
 ## Example of good output (short)
 
-*Made-up business: Quillon Freight Software, 6 sellers, Q3 review.*
+*Illustrative structure, not a real business: a freight software company with 6 sellers, Q3 review. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Summary.** Closed-won value fell 18% against Q2. Volume and deal size held; win rate fell from 31% to 22%, almost all at the proposal stage. Likely Q4: 410k (best 520k, worst 300k).
 

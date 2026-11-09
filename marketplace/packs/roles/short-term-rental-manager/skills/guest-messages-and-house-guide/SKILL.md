@@ -81,13 +81,13 @@ At level 3, switch on approved templates, send a test to the host's own account 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Heron Cabin, a lakeside cabin in Ontario, Canada.*
+*Illustrative structure, not a real business: a lakeside cabin in Ontario, Canada. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Title:** Lakeside cabin with private dock, wood stove and 2 kayaks
 >
 > **What to know:** The cabin is down 28 steps from the parking area. The road is gravel for the last 3 km. Phone signal is weak; wifi is good.
 >
-> **A week before (email):** "Hi {first name}, your stay at Heron Cabin starts on {arrival date}. The last 3 km are gravel, so allow extra time. Park in the bay marked H and take the steps down to the cabin. Here's the house guide: {guide link}. What time do you expect to arrive?"
+> **A week before (email):** "Hi {first name}, your stay at [Property] starts on {arrival date}. The last 3 km are gravel, so allow extra time. Park in the bay marked H and take the steps down to the cabin. Here's the house guide: {guide link}. What time do you expect to arrive?"
 >
 > **Arrival day (platform scheduled message, 10 am):** "Check-in is from 3 pm. Your door code is {lock code}. The code works from 3 pm today until 11 am on {departure date}."
 >

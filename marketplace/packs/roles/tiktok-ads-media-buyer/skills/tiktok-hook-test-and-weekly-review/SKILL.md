@@ -73,7 +73,7 @@ Add every result and decision to the test log with the date. A good log turns in
 
 ## Example of good output (short)
 
-*Made-up business: Northwick Coffee, a coffee subscription.*
+*Illustrative structure, not a real business: a coffee subscription. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Scale:** "Kettle click". **Stop:** "Office hero".
 >

@@ -78,9 +78,9 @@ File the signed contract, the payment schedule, and every change in writing. Dia
 
 ## Example of good output (short)
 
-*Made-up business: Tallow Lane Conference, a 150-person industry day. Figures are invented for illustration.*
+*Illustrative structure, not a real event: a 150-person industry day. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
-> **Venue contract summary: Harbour Hall (clauses in brackets).**
+> **Venue contract summary: Venue A (clauses in brackets).**
 > - Deposit £3,000 on signing; balance £7,000 due 30 days before (4.1).
 > - Cancellation: 25% of total up to 90 days before, 50% to 30 days, 100% after (9.2).
 > - Food and drink minimum £5,500; final numbers 10 working days before; charged on final numbers or actual, whichever is higher (6.3).

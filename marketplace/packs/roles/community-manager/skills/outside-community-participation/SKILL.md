@@ -57,7 +57,7 @@ Communities can tell an advertiser from a member in one post. The business that 
 
 ## Example of good output (short)
 
-*Trailtrack is a made-up hiking GPS app founded by Mei, used only to show the format. The communities below are described generically, not real ones.*
+*Illustrative structure, not a real business: a hiking GPS app founded by Mei. The communities below are described generically, not real ones. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Map (2 of 6)**
 
@@ -66,8 +66,8 @@ Communities can tell an advertiser from a member in one post. The business that 
 | A large hiking forum | No ads; links only if they answer the question; staff must say who they are | 3: route-planning questions weekly | 3 | 2: allowed with disclosure | Start |
 | A gear-deals group | Deals posts only from approved sellers | 1 | 3 | 1: approved sellers only | Skip |
 
-**Plan:** Mei answers three route-planning questions a week in the hiking forum for 30 days. Links to Trailtrack in at most one answer in five, and only where offline maps are the actual question.
+**Plan:** Mei answers three route-planning questions a week in the hiking forum for 30 days. Links to the app in at most one answer in five, and only where offline maps are the actual question.
 
-**Draft reply:** "For a three-day loop with no signal, download the map tiles before you leave and carry a paper map as backup, because phone batteries die in the cold. Check water sources against the latest trip reports, as the dry-season ones go fast. Disclosure: I'm the founder of Trailtrack, an offline map app. It does offline tiles, but any app that downloads tiles will do the job."
+**Draft reply:** "For a three-day loop with no signal, download the map tiles before you leave and carry a paper map as backup, because phone batteries die in the cold. Check water sources against the latest trip reports, as the dry-season ones go fast. Disclosure: I'm the founder of [Business], an offline map app. It does offline tiles, but any app that downloads tiles will do the job."
 
 **Warning sign:** a moderator asks Mei to stop linking. Action: stop all links in that forum, reply to thank them, and keep answering without links.

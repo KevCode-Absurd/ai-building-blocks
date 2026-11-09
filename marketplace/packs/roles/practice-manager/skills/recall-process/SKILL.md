@@ -81,7 +81,7 @@ With the owner's yes, switch on (level 3). Each month measure, by recall type: p
 
 ## Example of good output (short)
 
-> **Made-up example: Brookside Dental, three dentists, one hygienist, Dentally (not a real practice).**
+> **Illustrative structure, not a real business: a dental practice with three dentists and one hygienist, on Dentally. Copy the shape, never the content: every fact comes from the client's own context.**
 >
 > | Recall type | Interval | Set by |
 > |---|---|---|
@@ -90,6 +90,6 @@ With the owner's yes, switch on (level 3). Each month measure, by recall type: p
 >
 > **Sequence (dentist exam):** stage 1 SMS on the due date, fallback email; stage 2 email 3 weeks later, fallback letter; stage 3 call list 6 weeks after the due date; then off the active list until the next annual review.
 >
-> **Stage 1 text:** "Brookside Dental: your check-up is due. Book online at [link] or reply CALL and we'll ring you. Reply STOP to opt out."
+> **Stage 1 text:** "[Practice]: your check-up is due. Book online at [link] or reply CALL and we'll ring you. Reply STOP to opt out."
 >
 > **Measure:** 120 due in March; 84 booked within 8 weeks (84 / 120 = 70%); 9 opted out; 27 still overdue.

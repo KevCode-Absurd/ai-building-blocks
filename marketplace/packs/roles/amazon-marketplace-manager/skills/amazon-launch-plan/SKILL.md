@@ -60,7 +60,7 @@ Not for: plans that rely on bought, swapped or rewarded reviews, or on promises 
 
 ## Example of good output (short)
 
-*Fernhill Pet Co. is a made-up business used only to show the format. Its numbers are invented.*
+*Illustrative structure, not a real business: a pet brand launching a no-pull dog harness on Amazon. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Access I have:** Seller Central level 1, Amazon Ads level 2 (campaigns built paused).
 
@@ -76,6 +76,6 @@ Not for: plans that rely on bought, swapped or rewarded reviews, or on promises 
 | 5-8 | $29.99 | Coupon off | Add Sponsored Brands if 15+ reviews | Same | Reorder by week 6 (lead time 7 weeks) | Day 60 decision |
 | 9-13 | $29.99 | None | Scale terms under 32% ACOS | Same | New stock lands week 13 | Day 90 decision |
 
-**Stop rule:** if margin after ads is negative at day 60 and conversion is below 8% (Fernhill's own rate on its website), stop ads and review the listing and price.
+**Stop rule:** if margin after ads is negative at day 60 and conversion is below 8% (the brand's own rate on its website), stop ads and review the listing and price.
 
 **Change requests:** coupon start and end dates; launching the paused campaigns; each weekly bid change list; Sponsored Brands launch.

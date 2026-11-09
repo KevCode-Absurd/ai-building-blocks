@@ -81,7 +81,7 @@ How the price will be shown in each market: total price including mandatory fees
 
 ## Example of good output
 
-*Harbour Lane Bookkeeping (a made-up business). Monthly bookkeeping for small firms, now billed at $75 an hour, about 6 hours a client a month ($450).*
+*Illustrative structure, not a real business: a firm offering monthly bookkeeping for small firms, now billed at $75 an hour, about 6 hours a client a month ($450). Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Cost build:** 6 hours × $38 loaded staff cost = $228; software $25; overhead share $60. Cost per client = **$313**. Minimum margin 30%: floor = $313 ÷ 0.70 = **$447**.
 

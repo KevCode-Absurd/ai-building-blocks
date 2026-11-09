@@ -62,15 +62,15 @@ A release is a fact source for reporters, not an advert. The best ones state the
 
 ## Example of good output (short)
 
-*Harbour Lane Bakery is a made-up business used only to show the format. All details are invented for this example.*
+*Illustrative structure, not a real business: a bakery opening a training kitchen. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **News test:** story, for local and trade food outlets. The angle is the town's first commercial kitchen that trains young people out of work, with a named first group of trainees. Missing: one trainee willing to be interviewed, and the funder's approval to be named.
 
 **EMBARGOED UNTIL 09:00 GMT, TUESDAY 3 MARCH [YEAR]**
 
-**Harbour Lane Bakery opens a training kitchen for 12 young people in Porthaven**
+**[Business] opens a training kitchen for 12 young people in Porthaven**
 
-PORTHAVEN, 3 March [YEAR] - Harbour Lane Bakery today opened a training kitchen at its Quay Street site, where 12 local people aged 18 to 24 who are out of work will train as bakers over 16 weeks. Places are paid, and the first group starts on 10 March.
+PORTHAVEN, 3 March [YEAR] - [Business] today opened a training kitchen at its Quay Street site, where 12 local people aged 18 to 24 who are out of work will train as bakers over 16 weeks. Places are paid, and the first group starts on 10 March.
 
 The kitchen was funded by [FUNDER, CHECK: approval to name] and the bakery's own profits. Trainees work alongside the bakery's four bakers and finish with a reference and an interview for any open role.
 
@@ -78,7 +78,7 @@ The kitchen was funded by [FUNDER, CHECK: approval to name] and the bakery's own
 
 **Available for interview:** Mara Quinn; one trainee [CHECK]; photos of the kitchen.
 
-**About Harbour Lane Bakery:** [two sentences supplied by the client]
+**About [Business]:** [two sentences supplied by the client]
 
 **Media contact:** [name, email, phone]
 

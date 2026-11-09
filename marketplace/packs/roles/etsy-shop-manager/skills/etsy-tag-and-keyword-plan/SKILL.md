@@ -64,7 +64,7 @@ Access levels for this skill: reading Stats, Insights and listings is level 1, u
 
 ## Example of good output (short)
 
-*Marigold Paper Co. is a made-up print shop, used only to show the format.*
+*Illustrative structure, not a real business: a print shop. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Phrase | Group | Need | Strength | Source |
 |---|---|---|---|---|

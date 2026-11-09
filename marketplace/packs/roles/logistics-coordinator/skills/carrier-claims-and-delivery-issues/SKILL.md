@@ -73,7 +73,7 @@ Monthly, group cases by carrier, service, route, product and packer. Write packi
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Little Fern Candles, UK seller using two carriers.*
+*Illustrative structure, not a real business: a UK candle seller using two carriers. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Exception:** Order 20871, tracked 48-hour service, last scan "at depot" 6 days ago, value 42 pounds, customer has not written yet.
 > **Customer message (sent from approved template):** "Hi Priya, your candles are taking longer than they should. The courier's last update was on Friday at their depot, and we've asked them to trace it. We'll update you by Thursday, and if it hasn't moved by then we'll send a replacement straight away."

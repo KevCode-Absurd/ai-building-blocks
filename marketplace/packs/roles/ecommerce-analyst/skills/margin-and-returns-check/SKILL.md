@@ -60,7 +60,7 @@ Revenue tells you how busy the store was. Contribution tells you whether each or
 
 ## Example of good output (short)
 
-*Kestrel Run is a made-up running apparel store used only to show the format. Figures are invented. October 2026 orders; cost coverage 96% of net sales.*
+*Illustrative structure, not a real business: a running apparel store. Copy the shape, never the content: every fact comes from the client's own context. October 2026 orders; cost coverage 96% of net sales. Figures only show the shape.*
 
 | Channel | Net revenue | C1 | C2 | C3 | C3 % |
 |---|---|---|---|---|---|

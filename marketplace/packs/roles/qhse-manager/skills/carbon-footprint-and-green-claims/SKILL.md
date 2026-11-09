@@ -95,7 +95,7 @@ Broad claims ("green", "eco-friendly", "sustainable") need the most evidence. Cl
 
 ## Example of good output (short)
 
-*Made-up business: Kestrel Print Co, 18 people, one print works, Leicester, England.*
+*Illustrative structure, not a real business: an 18-person print works in Leicester, England. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Draft for review by a qualified assessor. Check this with local rules before use.**
 >

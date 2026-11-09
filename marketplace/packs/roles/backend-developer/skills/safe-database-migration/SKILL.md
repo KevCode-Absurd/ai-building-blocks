@@ -84,7 +84,7 @@ Show the client the action list: each migration, its class (safe, locking, destr
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Harbour Lane Theatre", renaming `customer_name` to `full_name` on a 2-million-row bookings table.*
+*Illustrative structure, not a real business: a theatre renaming `customer_name` to `full_name` on a 2-million-row bookings table. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Change | Class | Release | Rollback |
 > |---|---|---|---|

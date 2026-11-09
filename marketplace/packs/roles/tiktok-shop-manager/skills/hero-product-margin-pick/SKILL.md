@@ -89,7 +89,7 @@ One line per hero on why, one line per dropped product on what would change the 
 
 ## Example of good output
 
-*Brightwick Home (a made-up business). The fee terms below are made-up example figures, not TikTok's: 9% of the price after discount plus $0.30 per order. Creator commission 15%. Planned discount 20%.*
+*Illustrative structure, not a real business: a home fragrance shop. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape. The fee terms below are example figures, not TikTok's: 9% of the price after discount plus $0.30 per order. Creator commission 15%. Planned discount 20%.*
 
 **Fee basis:** 9% of price after discount + $0.30 per order, from the client's Seller Center screenshot dated 6 Nov [example]. Commission on price after discount.
 

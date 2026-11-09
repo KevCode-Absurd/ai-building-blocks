@@ -91,7 +91,7 @@ The evidence needed to move up, who decides, how often, and how a person asks. M
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Kestrel Lane Plumbing Supplies, customer support team of 14 across three levels.*
+*Illustrative structure, not a real business: a plumbing supplies firm, customer support team of 14 across three levels. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Skill 7:** Handles a delivery dispute end to end (checks the proof of delivery, offers the policy options, logs the outcome).
 > Required: Level 1 role at 2, Level 2 at 3, Level 3 at 4.

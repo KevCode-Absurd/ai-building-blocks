@@ -82,7 +82,7 @@ No promise or hint of returns. No "no competition", "conservative projections" o
 
 ## Example of good output (short)
 
-Made-up company for illustration: Ferncastle Rota, scheduling software for home care agencies.
+Illustrative structure, not a real company: a startup making scheduling software for home care agencies. Copy the shape, never the content: every fact comes from the client's own context.
 
 > **Ask:** 1.2 million on a post-money SAFE to reach 1 million annual recurring revenue by month 20.
 >

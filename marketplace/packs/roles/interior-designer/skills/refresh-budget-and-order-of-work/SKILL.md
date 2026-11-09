@@ -64,7 +64,7 @@ Not for: quotes for building work (ask contractors), tax or grant questions (ask
 
 ## Example of good output (short)
 
-*Harbourside Studio Let is a made-up one-bedroom holiday let in England, used only to show the format. Budget £1,800 including a 10% contingency the owner chose. Changeover window: Monday to Thursday, no bookings. Access I have: Google Sheets level 3 (shopping list only); booking platform level 1.*
+*Illustrative structure, not a real business: a one-bedroom holiday let in England. Copy the shape, never the content: every fact comes from the client's own context. Budget £1,800 including a 10% contingency the owner chose. Changeover window: Monday to Thursday, no bookings. Access I have: Google Sheets level 3 (shopping list only); booking platform level 1.*
 
 | Item | Owned or new | Qty | Estimate | Safety check | Status |
 |---|---|---|---|---|---|

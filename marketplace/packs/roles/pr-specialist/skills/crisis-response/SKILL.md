@@ -61,7 +61,7 @@ This is communications support, not legal advice. Anything with legal, safety, r
 
 ## Example of good output (short)
 
-*Kettlewood Booking is a made-up business used only to show the format. All details are invented for this example.*
+*Illustrative structure, not a real business: an online booking service whose site went down. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Fact log (extract)**
 

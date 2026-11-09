@@ -84,7 +84,7 @@ For each site: what went well, the one fix that matters most, and how it will be
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Lantern Inns", a group of 12 small hotels.*
+*Illustrative structure, not a real business: a group of 12 small hotels. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Standard (from brand book) | Test | Weight | Pass example |
 > |---|---|---|---|

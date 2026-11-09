@@ -89,7 +89,7 @@ Answers and base first, then scores and trends, then themes, then fixes with own
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Copperpot Kitchens", a meal-kit subscription with about 4,000 customers.*
+*Illustrative structure, not a real business: a meal-kit subscription with about 4,000 customers. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Base.** 612 answers to the post-delivery survey in Q3 2026 (19% of 3,210 sent), all by email. Customers who cancelled in their first month are under-represented (4% of answers); a short exit survey is added for Q4.
 >

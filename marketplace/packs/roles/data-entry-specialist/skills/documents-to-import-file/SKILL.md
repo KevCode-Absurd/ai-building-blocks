@@ -90,14 +90,14 @@ Within the agreed batch: take a backup export of the target, load new rows, then
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Larkspur Lane Cafe", 6 supplier invoices for a bills import.*
+*Illustrative structure, not a real business: a cafe with 6 supplier invoices for a bills import. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Batch:** 6 invoices in, 8 rows out (invoice 4 has three lines). 2 exceptions. 1 possible duplicate. Dates DD/MM/YYYY; amounts as written, two decimals; no card or bank numbers present.
 >
 > ```csv
 > ContactName,InvoiceNumber,InvoiceDate,DueDate,Description,Quantity,UnitAmount
-> Hollybrook Dairy,HB-0412,03/11/2026,17/11/2026,Whole milk 2L,24,1.15
-> "Marsh & Sons, Bakers",MS-1180,04/11/2026,,Sourdough loaves,30,2.40
+> Supplier A,A-0412,03/11/2026,17/11/2026,Whole milk 2L,24,1.15
+> "Supplier B, Bakers",B-1180,04/11/2026,,Sourdough loaves,30,2.40
 > ```
 >
 > | Row | Column | Source text | Reason |
@@ -105,4 +105,4 @@ Within the agreed batch: take a backup export of the target, load new rows, then
 > | 2 | DueDate | "Terms: 14 days EOM" | Due date depends on a rule; please confirm the date |
 > | 6 | UnitAmount | "3.?0" | Middle digit unreadable in scan |
 >
-> Possible duplicate: rows 5 and 7, same supplier and invoice number HB-0415. Both kept; please confirm.
+> Possible duplicate: rows 5 and 7, same supplier and invoice number A-0415. Both kept; please confirm.

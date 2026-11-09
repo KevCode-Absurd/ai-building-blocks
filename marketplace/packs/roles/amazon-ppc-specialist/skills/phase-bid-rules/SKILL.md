@@ -74,7 +74,7 @@ One short card per product: phase, limits, campaigns, bidding strategy, step siz
 
 ## Example of good output (short)
 
-*Made-up business: Copperline Kitchen, Amazon US. Figures invented for illustration.*
+*Illustrative structure, not a real business: a kitchen tools seller on Amazon US. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Bamboo cutting board: launch rule card**
 > - Price 29.99, profit before ads 11.40, break-even ACOS 38.0%.

@@ -59,7 +59,7 @@ A template is a set of decisions made once so nobody has to make them again. Bui
 
 ## Example of good output (short)
 
-*Northgate Surveyors is a made-up firm used only to show the format. Its colours #1A3A5F and #E8A33D and the font Lato are taken from its invented brief.*
+*Illustrative structure, not a real business: a surveying firm whose brief gives the colours #1A3A5F and #E8A33D and the font Lato. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Canvas:** 16:9, 13.333 x 7.5 in (PowerPoint default). Margins 0.5 in; 12-column grid.
 

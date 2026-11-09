@@ -56,7 +56,7 @@ Access levels for this skill: the design needs level 1 (column names, a few rows
 
 ## Example of good output (short)
 
-*Brightway Cleaning is a made-up business used only to show the format: 12 cleaners, jobs in one Google Sheet, planning a Glide app.*
+*Illustrative structure, not a real business: a cleaning firm with 12 cleaners, jobs in one Google Sheet, planning a Glide app. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Things found:** Client, Site, Job, Checklist item, Cleaner.
 

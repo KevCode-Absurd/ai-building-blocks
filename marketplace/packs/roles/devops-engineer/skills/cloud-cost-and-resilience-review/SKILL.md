@@ -87,7 +87,7 @@ A one-page summary, the tables, and a date to check the next bill.
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Larkspur Learning", AWS bill up from about 900 to 2,600 a month.*
+*Illustrative structure, not a real business: an online learning business whose AWS bill rose from about 900 to 2,600 a month. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Action | Saving per month | Effort | Risk | How to test |
 > |---|---|---|---|---|

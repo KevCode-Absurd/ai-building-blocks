@@ -77,7 +77,7 @@ Then a short note on the batch mix and a posting order.
 
 ## Example of good output (short)
 
-*Greenhollow Garden Centre is a made-up business used only to show the format: a family-run garden centre with a Saturday plant clinic. One idea, written for Instagram and Threads. All details are invented.*
+*Illustrative structure, not a real business: a family-run garden centre with a Saturday plant clinic; one idea, written for Instagram and Threads. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Point:** most houseplants that die indoors get too much water, not too little.
 

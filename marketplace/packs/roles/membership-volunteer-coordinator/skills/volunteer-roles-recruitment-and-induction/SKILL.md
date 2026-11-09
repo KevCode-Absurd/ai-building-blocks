@@ -60,7 +60,7 @@ Not for: deciding whether a role is eligible for a DBS or other check, approving
 
 ## Example of good output (short)
 
-*Northgate Pantry is a made-up food bank, used only to show the format. Names and details are invented.*
+*Illustrative structure, not a real organisation: a food bank. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Role | Time ask | People risks noted | Check level | Contact |
 |---|---|---|---|---|

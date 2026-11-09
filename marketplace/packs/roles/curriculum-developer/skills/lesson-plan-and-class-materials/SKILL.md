@@ -100,7 +100,7 @@ List materials to print or prepare, and anything to check before teaching ([chec
 
 ## Example
 
-*Made-up example: "Brookfield Middle School" is invented for illustration.*
+*Illustrative structure, not a real organisation: a middle school. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Lesson at a glance:** Grade 4 maths, 26 learners, 45 minutes (40 usable). Aim: Learners can explain why two fractions are equivalent using a fraction strip. Standard: 4.NF.A.1 [teacher's pasted state wording quoted here]. Resources: fraction strips, mini whiteboards.
 **Exit ticket:** "Is 2/3 the same as 4/6? Draw strips and explain in one sentence."

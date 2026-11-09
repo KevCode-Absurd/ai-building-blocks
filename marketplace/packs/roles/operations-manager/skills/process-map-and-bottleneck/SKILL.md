@@ -101,7 +101,7 @@ At the trial's end, compare the measure with the baseline. Standardise what work
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Larkspur Print Studio, five people printing custom posters.*
+*Illustrative structure, not a real business: a print studio, five people printing custom posters. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Constraint: proof approval.** Evidence from your job log for four weeks: 31 jobs waiting at "Proof sent", against 4 or fewer at every other step; average 3.2 days at this step against under 1 day elsewhere; printing sat idle on 6 afternoons waiting for approved jobs.
 > **Why:** Proofs go out as PDFs with no deadline. Why? There is no rule for chasing. Why? Nobody owns approvals once the proof is sent.

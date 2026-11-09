@@ -97,7 +97,7 @@ List two to four likely causes, most likely first, each with one check that prov
 
 ## Example of good output (short)
 
-*Made-up studio for illustration: "Copperkite", 3D runner, Unity 6.3 LTS.*
+*Illustrative structure, not a real business: a game studio making a 3D runner in Unity 6.3 LTS. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Symptom:** dash distance is about twice as long at 144 fps as at 60 fps.
 > **Suspects:** (1) `AddForce(dashForce, ForceMode.Impulse)` called in `Update` while the dash button is held: check by logging calls per second at 60 and 144 fps. (2) Drag set per frame: check the Inspector and `Update`.

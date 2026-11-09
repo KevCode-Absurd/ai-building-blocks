@@ -67,12 +67,12 @@ Not for: API references generated from an OpenAPI file (use api-reference-and-qu
 
 ## Example of good output (short)
 
-*Ledgerlight is a made-up business used only to show the format: a small invoicing web app built with Node.js and PostgreSQL.*
+*Illustrative structure, not a real business: a small invoicing web app built with Node.js and PostgreSQL. Copy the shape, never the content: every fact comes from the client's own context.*
 
 ```markdown
-# Ledgerlight
+# [Product]
 
-Ledgerlight creates and sends invoices for small service firms. This repository holds the web app and its API.
+[Product] creates and sends invoices for small service firms. This repository holds the web app and its API.
 
 ## Quick start
 
@@ -88,7 +88,7 @@ Ledgerlight creates and sends invoices for small service firms. This repository 
 
 | Variable | Required | Example | What it does |
 |---|---|---|---|
-| DATABASE_URL | Yes | postgres://user:pass@localhost:5432/ledgerlight | Database connection |
+| DATABASE_URL | Yes | postgres://user:pass@localhost:5432/[product] | Database connection |
 | MAIL_API_KEY | For sending email | (your test key) | Key for the email service [to confirm: which provider?] |
 ```
 

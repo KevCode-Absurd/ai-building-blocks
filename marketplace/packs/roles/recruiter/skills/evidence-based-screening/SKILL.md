@@ -93,7 +93,7 @@ One short paragraph per finalist: the evidence for and against on each criterion
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Northgate Analytics, a 30-person data consultancy in Manchester, UK, hiring a junior analyst.*
+*Illustrative structure, not a real business: a 30-person data consultancy in Manchester, UK, hiring a junior analyst. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Template: check this with local rules before use. Applies to: Manchester, UK, hybrid.**
 >

@@ -63,9 +63,9 @@ Buyers want three answers fast: can you do it, have you done it, and will you tu
 
 ## Example of good output
 
-*Made-up business for illustration: Hollowmere Grounds Ltd, an 11-person grounds maintenance firm.*
+*Illustrative structure, not a real business: an 11-person grounds maintenance firm. Copy the shape, never the content: every fact comes from the client's own context.*
 
-**Hollowmere Grounds Ltd: capability statement**
+**[Business] Ltd: capability statement**
 
 **What we do.** Grounds maintenance for schools, offices and housing estates within 25 miles of Stafford.
 

@@ -65,7 +65,7 @@ Not for: electrical work in the window, structural fixings, large suspended load
 
 ## Example of good output (short)
 
-*The Reading Nook is a made-up bookshop, used only to show the format. Window 2.4 m wide, 0.9 m deep, 2.1 m high, one step up from the shop floor; October; 12 featured books; props budget £150; owns two wooden crates and a set of plug-in warm white string lights. Access I have: none (photos only).*
+*Illustrative structure, not a real business: a bookshop. Copy the shape, never the content: every fact comes from the client's own context. Window 2.4 m wide, 0.9 m deep, 2.1 m high, one step up from the shop floor; October; 12 featured books; props budget £150; owns two wooden crates and a set of plug-in warm white string lights. Access I have: none (photos only).*
 
 **Idea:** "Autumn reading nook: settle in with a book this October."
 

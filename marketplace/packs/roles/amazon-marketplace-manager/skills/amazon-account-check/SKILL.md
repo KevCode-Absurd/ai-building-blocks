@@ -60,7 +60,7 @@ Amazon accounts leak money and risk quietly: a fee that changed in January, stoc
 
 ## Example of good output (short)
 
-*Brightwater Bottles is a made-up business used only to show the format. Every number is invented.*
+*Illustrative structure, not a real business: an Amazon seller of insulated water bottles. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Access I have:** Seller Central level 1 (downloads only).
 
@@ -68,13 +68,13 @@ Amazon accounts leak money and risk quietly: a fee that changed in January, stoc
 
 | SKU | Units | Contribution after ads | Last month |
 |---|---|---|---|
-| BW-750-BLK | 1,120 | $3,350 | $3,980 |
-| BW-500-SAGE | 410 | $770 | $1,320 |
+| BTL-750-BLK | 1,120 | $3,350 | $3,980 |
+| BTL-500-SAGE | 410 | $770 | $1,320 |
 
 **Ads:** "insulated bottle 500ml" campaign at 58% ACOS against a 29% break-even: lower bids and add 14 non-converting terms as negatives.
 
-**Stock:** BW-500-SAGE at 3.1 weeks of cover; reorder now (lead time 6 weeks) to avoid stock-outs and the low-inventory-level fee.
+**Stock:** BTL-500-SAGE at 3.1 weeks of cover; reorder now (lead time 6 weeks) to avoid stock-outs and the low-inventory-level fee.
 
-**Reimbursements:** 22 units lost in the warehouse on 2 October and reimbursed automatically, but at Amazon's estimated manufacturing cost of $3.10, below Brightwater's $4.40 invoice cost. Action: update manufacturing cost for this SKU. Shipment FBA-EXAMPLE-01 closed 36 units short: reconciliation pack attached (invoice, carrier pallet note).
+**Reimbursements:** 22 units lost in the warehouse on 2 October and reimbursed automatically, but at Amazon's estimated manufacturing cost of $3.10, below the seller's $4.40 invoice cost. Action: update manufacturing cost for this SKU. Shipment FBA-EXAMPLE-01 closed 36 units short: reconciliation pack attached (invoice, carrier pallet note).
 
-**Top three actions for approval:** 1) bid and negative changes on the 500 ml campaign; 2) reorder 900 units of BW-500-SAGE; 3) update manufacturing cost and file the inbound reconciliation.
+**Top three actions for approval:** 1) bid and negative changes on the 500 ml campaign; 2) reorder 900 units of BTL-500-SAGE; 3) update manufacturing cost and file the inbound reconciliation.

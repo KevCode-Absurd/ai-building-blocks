@@ -111,7 +111,7 @@ With web search connected, check the vendor's current help centre for each featu
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Fernhill Plants, an online plant shop with six support staff moving from Gmail to Freshdesk.*
+*Illustrative structure, not a real business: an online plant shop with six support staff moving from Gmail to Freshdesk. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Queue table**
 >

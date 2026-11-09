@@ -93,7 +93,7 @@ Save the prompt with a version number, the test set, the results table and the c
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Tidewater Bikes", a bike shop whose support bot invented a refund policy.*
+*Illustrative structure, not a real business: a bike shop whose support bot invented a refund policy. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Baseline (v1):** 14 of 24 pass. Adversarial 1/4, out of scope 2/4.
 >

@@ -62,7 +62,7 @@ Access levels for this skill: the whole diagnosis runs at level 1 (read exports,
 
 ## Example of good output (short)
 
-*Rotafy is a made-up shift-scheduling app for cafés, used only to show the format. All numbers are invented.*
+*Illustrative structure, not a real business: a shift-scheduling app for cafés. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Goal:** 40 new paying cafés a month by 30 June (now about 17).
 

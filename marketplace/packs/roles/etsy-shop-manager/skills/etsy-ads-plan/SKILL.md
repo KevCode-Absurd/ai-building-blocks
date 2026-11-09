@@ -57,7 +57,7 @@ Access levels for this skill: reading Etsy Ads stats and listing data is level 1
 
 ## Example of good output (short)
 
-*Larkspur Linen is a made-up textile shop, used only to show the format. All figures are made up.*
+*Illustrative structure, not a real business: a linen textile shop. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 | Listing | Price | Margin per order | Break-even ROAS | 30-day ROAS | Call |
 |---|---|---|---|---|---|

@@ -80,7 +80,7 @@ Not for deciding entitlement to extra time or money, valuing disputed changes, o
 
 ## Example
 
-*Made-up business for illustration: Larchfield Homes, a small developer building two houses in Leicestershire, UK.*
+*Illustrative structure, not a real business: a small developer building two houses in Leicestershire, UK. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **RFI-07 (raised 9 Apr; to: structural engineer; date needed: 15 Apr)**
 > Plot 2 kitchen: drawing A-110 rev D shows a 3.6 m opening; S-201 rev B shows a 3.0 m beam. Which is correct? Suggest 3.6 m opening with a beam to the engineer's design. Impact if late: steel order (2-week lead) misses the 4 May install; roof follows.

@@ -79,7 +79,7 @@ At level 2, save the pack as a draft in the agreed folder or as an unsent schedu
 
 ## Example of good output
 
-*Made-up business, for illustration only: "Brightwell Dental", two practices.*
+*Illustrative structure, not a real business: a dental group with two practices. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **October 2026 — data as of 3 Nov, 07:00**
 >

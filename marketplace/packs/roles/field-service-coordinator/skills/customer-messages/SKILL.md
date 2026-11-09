@@ -75,11 +75,11 @@ At level 3, switch on the templates in the tool, send a test to the client's own
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Greenleaf Gardens, two landscaping crews.*
+*Illustrative structure, not a real business: a landscaping business with two crews. Copy the shape, never the content: every fact comes from the client's own context.*
 
-> **Reminder (text, day before, 5 pm, 123 characters before the name fills in):** "Hi {first name}, Greenleaf here. Your hedge trim is tomorrow, 8-10 am. Please leave the side gate open. Reply C to confirm."
+> **Reminder (text, day before, 5 pm, 124 characters before the names fill in):** "Hi {first name}, [Business] here. Your hedge trim is tomorrow, 8-10 am. Please leave the side gate open. Reply C to confirm."
 >
-> **On my way (text):** "Hi {first name}, {technician} from Greenleaf is on the way and should arrive in the 8-10 am window."
+> **On my way (text):** "Hi {first name}, {technician} from [Business] is on the way and should arrive in the 8-10 am window."
 >
 > **Running late (text):** "Sorry {first name}, we're running about an hour behind after a longer job. New window 9-11 am. Reply 2 to move to Friday instead."
 >

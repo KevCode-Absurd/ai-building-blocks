@@ -72,7 +72,7 @@ An incident note: what leaked (type, never value), where, exposure window, when 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Saltmarsh Outfitters", Node app on a private GitHub repository.*
+*Illustrative structure, not a real business: a retailer's Node app on a private GitHub repository. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | # | Type | Location | Exposed since | Power | Status |
 > |---|---|---|---|---|---|

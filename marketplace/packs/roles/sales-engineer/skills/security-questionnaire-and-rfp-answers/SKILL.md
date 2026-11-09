@@ -62,7 +62,7 @@ For the full bid process (bid or no-bid, colour team reviews, public tender rule
 
 ## Example of good output
 
-*Made-up business for illustration: Notebramble, a small SaaS note-taking tool, answering a made-up hospital's questionnaire.*
+*Illustrative structure, not a real business: a small SaaS note-taking tool answering a hospital's questionnaire. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | ID | Question | Status | Answer | Evidence |
 |---|---|---|---|---|

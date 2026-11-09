@@ -62,7 +62,7 @@ Evaluators read dozens of answers against a scoring guide. They give marks for w
 
 ## Example of good output (short)
 
-*Kestrel Data Services is a made-up six-person IT support firm, used only to show the format. The question and policy below are invented.*
+*Illustrative structure, not a real business: a six-person IT support firm. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Q4.2 (15%, max 300 words): Describe how you will protect the authority's personal data.**
 

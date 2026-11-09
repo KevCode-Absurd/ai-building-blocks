@@ -60,7 +60,7 @@ When five people write for one organisation, readers get five voices, three ways
 
 ## Example of good output (short)
 
-*Northfield Food Bank is a made-up charity used only to show the format.*
+*Illustrative structure, not a real organisation: a food bank charity. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Voice:** warm, not gushing; direct, not blunt; hopeful, not cheerful about hardship.
 
@@ -72,7 +72,7 @@ When five people write for one organisation, readers get five voices, three ways
 | food parcel | handout | Avoids charity-giving tone |
 | Tuesday and Friday sessions | opening hours | What guests call them |
 
-**Mechanics (extract):** "Tuesday 4 March, 10am to midday". "Northfield Food Bank" in full the first time, then "the food bank". No "&". Sentence case in headings.
+**Mechanics (extract):** "Tuesday 4 March, 10am to midday". "[Charity]" in full the first time, then "the food bank". No "&". Sentence case in headings.
 
 **Draft check**
 

@@ -93,7 +93,7 @@ Each Monday: replace last week's forecast with actuals, roll one week on, update
 
 ## Example of good output (short)
 
-Made-up business for illustration: Brightwater Joinery, a 9-person fit-out firm.
+Illustrative structure, not a real business: a 9-person fit-out firm. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.
 
 > **Headline:** In the expected case, cash stays above your 20,000 floor all quarter; the low point is 31,400 in week 6 (payroll and VAT in the same week). In the slow-pay case, cash falls to 12,900 in week 6, 7,100 below the floor.
 >

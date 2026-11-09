@@ -97,7 +97,7 @@ Tick every item on the fact list against the rewrite and the Easy Read version. 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Brookside Homes", a small housing association, and its rent arrears letter.*
+*Illustrative structure, not a real business: a small housing association and its rent arrears letter. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Reading grade:** about grade 14 before, about grade 7 after (Flesch-Kincaid).
 >

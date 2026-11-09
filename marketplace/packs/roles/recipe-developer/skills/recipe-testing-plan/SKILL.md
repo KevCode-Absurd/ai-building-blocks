@@ -74,7 +74,7 @@ The client approves the final card against the success criteria. At level 3, rep
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Lark Lane Kitchen, sourdough focaccia for a cafe website.*
+*Illustrative structure, not a real business: a kitchen developing sourdough focaccia for a cafe website. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Success criteria:** 1 tray 30 x 40 cm; deep golden top; open, even crumb; crisp base; ready in under 24 hours including the cold prove.
 >

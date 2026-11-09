@@ -87,7 +87,7 @@ After the season: a rehire list with fair, job-related criteria, a short survey,
 
 ## Example of good output (short)
 
-*Made-up business: Saltmarsh Holiday Park, Norfolk, 18 year-round staff, peak from late May. Figures are invented for illustration.*
+*Illustrative structure, not a real business: a holiday park in Norfolk, 18 year-round staff, peak from late May. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Contractors (6):** 2 missing contracts (web developer, photographer); 1 shared admin password for the booking system (urgent: replace with named accounts); 1 contract expired in January but invoices continue.
 > **Status facts for adviser:** the maintenance contractor works fixed weekday hours, uses park tools and has no end date since 2023. List sent to the adviser; no ruling made.

@@ -83,7 +83,7 @@ Two pages at most per funder. Use the funder's headings in their order. Under ea
 
 ## Example of good output (short)
 
-*Made-up programme for illustration: Larkspur Adult Literacy, 2025 to 2026 year.*
+*Illustrative structure, not a real programme: an adult literacy course, 2025 to 2026 year. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Who took part:** 72 started; 58 finished; 51 answered both surveys. Of the 14 who left, 9 left in the first three weeks, mostly evening shift workers.
 >

@@ -85,7 +85,7 @@ Overdue items, items due in the next 60 days, open actions from reports, and any
 
 ## Example of good output (short)
 
-> **Made-up example: Mill Lane Kitchen, one restaurant site in England, building from 1970 (not a real business).**
+> **Illustrative structure, not a real business: a restaurant with one site in England, in a building from 1970. Copy the shape, never the content: every fact comes from the client's own context.**
 >
 > | Item | Frequency | Source | Competent person | Last | Next | Evidence |
 > |---|---|---|---|---|---|---|

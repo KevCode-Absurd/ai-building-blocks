@@ -88,7 +88,7 @@ If billing changes for existing customers, draft the customer note: what changes
 
 ## Example of good output (short)
 
-Made-up business for illustration: Saltmarsh Studio, a three-person design agency that billed projects in one invoice at the end.
+Illustrative structure, not a real business: a three-person design agency that billed projects in one invoice at the end. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.
 
 > **New schedule for brand projects (fee 12,000.00):**
 >

@@ -70,7 +70,7 @@ For an existing account: which boards to rename, merge, keep or archive. Renamin
 
 ## Example of good output (short)
 
-*Made-up business: Kiln & Table, a ceramics shop selling handmade mugs and plates in the UK. Trends patterns invented for illustration.*
+*Illustrative structure, not a real business: a ceramics shop selling handmade mugs and plates in the UK. Copy the shape, never the content: every fact comes from the client's own context. The Trends patterns only show the shape.*
 
 > | Board name | Main phrase | Pattern (UK) | Climb starts | Feeds from |
 > |---|---|---|---|---|

@@ -84,7 +84,7 @@ Give the overall answer in two or three sentences with a confidence level (high,
 
 ## Example of good output
 
-Made-up business for illustration: Brindle and Co, a 12-person design agency, asks whether a shorter working week changes output in small creative firms.
+Illustrative structure, not a real business: a 12-person design agency asks whether a shorter working week changes output in small creative firms. Copy the shape, never the content: every fact comes from the client's own context.
 
 > **Answer (low confidence).** Across 9 sources kept from 63 found, small firms that cut hours often reported steady output, but most evidence is from volunteer pilots without comparison groups, and none studied agencies under 20 staff. A shorter week may keep output steady in firms like yours; a three-month internal trial with agreed measures would tell you more than further reading.
 >

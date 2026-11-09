@@ -115,7 +115,7 @@ For each sample, write the exact expected JSON by hand (or have a person confirm
 
 ## Example of good output (short)
 
-*Made-up business: Copperleaf Catering, 120 supplier invoices a month.*
+*Illustrative structure, not a real business: a catering firm with 120 supplier invoices a month. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Field | Errors v1 (40 docs) | Cause | Fix | Errors v2 |
 |---|---|---|---|---|

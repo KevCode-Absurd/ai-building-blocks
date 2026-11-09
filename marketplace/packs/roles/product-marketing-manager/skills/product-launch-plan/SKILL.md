@@ -95,9 +95,9 @@ Plan against result for each measure; what the launch caused versus what was alr
 
 ## Example of good output (short)
 
-Made-up business for illustration: Brindle Planner, a printable planner shop launching a $29 freelancer planner, list of 3,200, Instagram 9,000 followers, six weeks out.
+Illustrative structure, not a real business: a printable planner shop launching a $29 freelancer planner, list of 3,200, Instagram 9,000 followers, six weeks out. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.
 
-> **Size:** medium. **One line:** For freelancers who lose track of invoices, the Brindle Freelancer Planner is a printable planner that puts work, invoices and tax dates on one page each week, unlike a general diary.
+> **Size:** medium. **One line:** For freelancers who lose track of invoices, the [Business] Freelancer Planner is a printable planner that puts work, invoices and tax dates on one page each week, unlike a general diary.
 >
 > **First 100:** list 3,200 x 32% open (own last 5 sends) x 10% click x 30% buy, about 31 buyers; existing customers' early-access email, about 40 (assumption: half last year's repeat rate); Instagram, the rest. Gap of about 30: add a partner newsletter swap.
 >

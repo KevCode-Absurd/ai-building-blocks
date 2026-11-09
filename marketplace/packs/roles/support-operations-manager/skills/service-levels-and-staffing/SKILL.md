@@ -101,11 +101,11 @@ With web search connected, check the help desk's current SLA and WFM features be
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Ashdown IT, a seven-person IT support firm with 40 small business clients.*
+*Illustrative structure, not a real business: a seven-person IT support firm with 40 small business clients. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Priority 1, urgent:** a client cannot work at all. Examples: "nobody in the office can log in", "the shared drive is down".
 > First response 30 minutes, updates every hour, workaround target 4 hours, during cover hours 8am to 6pm weekdays.
 >
 > **Staffing check, Monday 9 to 10am:** 6 tickets on average (busiest week 9), 20 minutes handling each. Workload: 2.0 hours on average, 3.0 hours in the busiest week. Three people on, after the team's own 25% shrinkage figure, gives 3 × 0.75 = 2.25 hours of queue time. Gap: in busy weeks a P1 waits behind 0.75 hours of work, so the 30-minute target fails. Options: start one engineer at 8am (adds 0.75 hours), or set the Monday 9 to 10am P1 target at 1 hour. I'd move the start time.
 >
-> **On a miss:** the account manager calls the client the same day. No service credit is listed, because Ashdown's contracts do not include one; ask your lawyer before adding any.
+> **On a miss:** the account manager calls the client the same day. No service credit is listed, because the firm's contracts do not include one; ask your lawyer before adding any.

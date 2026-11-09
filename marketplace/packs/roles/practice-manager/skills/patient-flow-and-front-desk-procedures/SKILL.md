@@ -91,7 +91,7 @@ Read each procedure with the person who will follow it. Run the busiest window o
 
 ## Example of good output (short)
 
-> **Made-up example: Harbour Physio, four physios, two receptionists (not a real practice).**
+> **Illustrative structure, not a real business: a physio practice with four physios and two receptionists. Copy the shape, never the content: every fact comes from the client's own context.**
 >
 > **Busiest ten minutes:** 8:50 to 9:00 on Mondays. From the last four Mondays: 6 arrivals, 2 check-outs and 7 calls on average.
 >

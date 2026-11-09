@@ -95,7 +95,7 @@ Tracking sheet: outlet, contact, angle, date sent, follow-up date, reply, outcom
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Pawsure", a UK pet insurer; the asset is a study of five years of anonymised claims.*
+*Illustrative structure, not a real business: a UK pet insurer; the asset is a study of five years of anonymised claims. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Subject:** Dog claims for eating something toxic peak in April, five years of claims show
 >
@@ -103,9 +103,9 @@ Tracking sheet: outlet, contact, angle, date sent, follow-up date, reply, outcom
 >
 > Your piece last month on spring garden dangers for dogs got me thinking you might find this useful. Our anonymised claims data from 2021 to 2025 shows claims for dogs eating something toxic peak every April, at almost twice the January level.
 >
-> For your readers, that's the month to check the garden and the Easter treats. The full monthly breakdown, the method and a chart are here: pawsure.example/spring-study. Our in-house vet, Dr A. Example, can comment by phone this week.
+> For your readers, that's the month to check the garden and the Easter treats. The full monthly breakdown, the method and a chart are here: [domain]/spring-study. Our in-house vet, Dr A. Example, can comment by phone this week.
 >
 > Happy to send the raw monthly figures or a regional cut if that helps.
 >
 > Best,
-> Jo, Pawsure
+> Jo, [Business]

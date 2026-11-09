@@ -82,7 +82,7 @@ One page:
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Hollybank Cleaning Co, 14 cleaners and two office staff.*
+*Illustrative structure, not a real business: a cleaning company, 14 cleaners and two office staff. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Last week's actions:** Key log at the office: done. Text customers the day before: not done (second week); moved to Priya, who has Friday admin time.
 >

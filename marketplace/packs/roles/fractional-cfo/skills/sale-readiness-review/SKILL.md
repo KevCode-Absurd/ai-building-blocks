@@ -83,7 +83,7 @@ What the business does, customers by type, team, results and strengths, with no 
 
 ## Example of good output (short)
 
-Made-up business for illustration: Tarn Valley IT, 15 people, owner plans to sell in two years.
+Illustrative structure, not a real business: an IT services firm with 15 people, whose owner plans to sell in two years. Copy the shape, never the content: every fact comes from the client's own context.
 
 > | Area | Score | Evidence | Top gap |
 > |---|---|---|---|

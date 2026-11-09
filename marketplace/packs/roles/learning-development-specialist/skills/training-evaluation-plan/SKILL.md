@@ -84,7 +84,7 @@ When data arrives: results by level, against baseline, with group sizes. Say wha
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Quillmoor Home Insurance, 45-minute refund handling session for 30 new support agents.*
+*Illustrative structure, not a real business: a home insurer, 45-minute refund handling session for 30 new support agents. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Level | Measure | Method | When | Owner |
 > |---|---|---|---|---|

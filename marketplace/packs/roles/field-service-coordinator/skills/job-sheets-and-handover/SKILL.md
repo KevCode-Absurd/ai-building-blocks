@@ -74,7 +74,7 @@ At level 3, attach the checklists to job types and set them to add automatically
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Clearwater Window Cleaning, five cleaners.*
+*Illustrative structure, not a real business: a window cleaning business with five cleaners. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Checklist: residential window clean (outside and frames)**
 > 1. Photo of the front of the house on arrival. *(required)*
@@ -84,4 +84,4 @@ At level 3, attach the checklists to job types and set them to add automatically
 > 5. Photo of each elevation when done. *(required)*
 > 6. Text the customer: "All done at [address]. Photos are in your account. Reply if anything is missed and we'll come back within [owner's chosen time]."
 >
-> **Warranty summary (from Clearwater's terms):** If you are not happy with any window, tell us within 48 hours and we will re-clean it free. This does not cover marks caused by rain after the clean, or windows we could not reach safely. **[CHECK]** Terms say "48 hours"; the website says "two days". Make them match.
+> **Warranty summary (from the business's terms):** If you are not happy with any window, tell us within 48 hours and we will re-clean it free. This does not cover marks caused by rain after the clean, or windows we could not reach safely. **[CHECK]** Terms say "48 hours"; the website says "two days". Make them match.

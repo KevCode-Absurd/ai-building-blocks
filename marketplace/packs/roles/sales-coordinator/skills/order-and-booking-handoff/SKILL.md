@@ -78,9 +78,9 @@ Move the CRM deal to its handed-over stage, attach the handoff sheet, and set th
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Brackenridge Supply, a catering equipment wholesaler, confirming a trade order.*
+*Illustrative structure, not a real business: a catering equipment wholesaler confirming a trade order. Copy the shape, never the content: every fact comes from the client's own context.*
 
-> **Order acknowledgment: PO 44718, Harbour Kitchen Group**
+> **Order acknowledgment: PO 44718, [Customer]**
 >
 > Thank you for your order, received 5 November 2026. Here is what we have confirmed:
 >

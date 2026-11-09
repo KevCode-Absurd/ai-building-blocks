@@ -76,7 +76,7 @@ State which option costs less over the period and by how much, the assumptions t
 
 ## Example of good output (short)
 
-> **Made-up example: Kestrel Deliveries, VAN-07, 2019 panel van, 168,000 miles (not a real business).**
+> **Illustrative structure, not a real business: a delivery firm; VAN-07 is a 2019 panel van with 168,000 miles. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.**
 >
 > **History (last 12 months):** four brake jobs, one clutch; repairs 2,140 pounds; downtime 9 days.
 > **Downtime cost:** 9 days × 180 pounds hire = 1,620 pounds.

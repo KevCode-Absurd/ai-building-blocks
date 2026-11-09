@@ -64,7 +64,7 @@ Viewers decide in the opening whether the video is what the title promised. YouT
 
 ## Example of good output (short)
 
-*Harbour Lane Accounting is a made-up business used only to show the format: a two-person bookkeeping firm with a channel for sole traders. All details are invented.*
+*Illustrative structure, not a real business: a two-person bookkeeping firm with a channel for sole traders. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Promise:** "Set up a simple expenses sheet in 10 minutes, so tax time is not a scramble."
 

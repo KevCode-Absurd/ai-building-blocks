@@ -89,7 +89,7 @@ Write it first as a `SELECT` that shows exactly the rows it would touch and a co
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Harbourside Yoga", class credits left per member on PostgreSQL 17.*
+*Illustrative structure, not a real business: a yoga studio counting class credits left per member on PostgreSQL 17. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Result table:** one row per member with a valid pack: member_id, credits_bought, credits_used, credits_left, as of today in Europe/London.
 >

@@ -58,7 +58,7 @@ Not for legal terms, privacy notices or consent wording without the client's leg
 
 ## Example of good output (short)
 
-*Tallyroo is a made-up invoicing app used only to show the format. Voice: plain and calm. Access I have: level 1 (screenshots and a strings export).*
+*Illustrative structure, not a real business: an invoicing app. Voice: plain and calm. Access I have: level 1 (screenshots and a strings export). Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Term list:** use "client" (not "customer" or "contact"); use "invoice" (not "bill"); use "send" (not "dispatch" or "issue").
 

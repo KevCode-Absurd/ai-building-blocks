@@ -99,7 +99,7 @@ Update the plan with what the exercise found. Book the next exercise.
 
 ## Example
 
-*Made-up example: "Millbrook Lettings" is invented for illustration.*
+*Illustrative structure, not a real business: a letting agency. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **If our computers or email are attacked (one page, extract):**
 

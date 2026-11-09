@@ -95,7 +95,7 @@ For each of Apple's nine features (VoiceOver, Voice Control, Larger Text, Dark I
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Northfield Bike Hire", booking screen in Flutter.*
+*Illustrative structure, not a real business: a bike hire firm, booking screen in Flutter. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Element | Problem | Affects | Fix |
 > |---|---|---|---|

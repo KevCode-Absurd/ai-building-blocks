@@ -62,14 +62,14 @@ Not for: legal rulings on whether content is an ad, contract changes, issuing re
 
 ## Example of good output (short)
 
-*Riverside Runners is a made-up running club, used only to show the format. Names and numbers are invented.*
+*Illustrative structure, not a real organisation: a running club. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 | Sponsor | Deliverable | Due | Status | Proof |
 |---|---|---|---|---|
-| Fleetfoot Shoes | Logo on race bibs, spring 10K | 12 April | Done | Bib photo, 640 bibs printed |
-| Fleetfoot Shoes | 3 Instagram posts, labelled "Ad" | Monthly, Apr to Jun | 2 of 3 done | Links; June post missed (photographer ill) |
-| Fleetfoot Shoes | Newsletter feature | 1 May | Done | Report: 1,950 subscribers, 214 clicks |
+| Sponsor A | Logo on race bibs, spring 10K | 12 April | Done | Bib photo, 640 bibs printed |
+| Sponsor A | 3 Instagram posts, labelled "Ad" | Monthly, Apr to Jun | 2 of 3 done | Links; June post missed (photographer ill) |
+| Sponsor A | Newsletter feature | 1 May | Done | Report: 1,950 subscribers, 214 clicks |
 
-**Instagram caption (UK):** "Ad | Our spring 10K finishers in their Fleetfoot trail shoes. Members get 15% off at Fleetfoot's Riverside store until 30 June."
+**Instagram caption (UK):** "Ad | Our spring 10K finishers in their [Sponsor] trail shoes. Members get 15% off at [Sponsor]'s local store until 30 June."
 
 **Make-good draft for the client:** "We missed the June post. We'd like to offer two posts in July, labelled 'Ad', at no extra cost. Shall we go ahead?"

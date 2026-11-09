@@ -61,7 +61,7 @@ Template: check this with local rules or HR before publishing any page about pay
 
 ## Example of good output (short)
 
-*Larkfield Clinics is a made-up group of eight clinics with 350 staff, used only to show the format.*
+*Illustrative structure, not a real business: a group of eight clinics with 350 staff. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Top questions (one month of HR and IT emails):** swap a shift (61), book leave (48), reset my password (44), sick day process (37), where's my payslip (29).
 

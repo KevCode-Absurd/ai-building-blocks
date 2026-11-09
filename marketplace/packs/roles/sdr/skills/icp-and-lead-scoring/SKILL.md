@@ -100,7 +100,7 @@ Rescore when new deals close, when a segment test ends, or on a set date. Compar
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Brightline Payroll, a payroll bureau in Leeds selling to UK small firms.*
+*Illustrative structure, not a real business: a payroll bureau in Leeds selling to UK small firms. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Profile (from 46 won, 31 lost and 9 churned deals, 2024 to 2026):**
 > - Firms with 10 to 49 staff: 33 of 46 wins; 6 of 31 losses. *Strong.*
@@ -117,5 +117,5 @@ Rescore when new deals close, when a segment test ends, or on a set date. Compar
 >
 > | ID | Company | Score | Tier | Reasons | Flags |
 > |---|---|---|---|---|---|
-> | L-014 | Riverside Care Ltd | 70 | A | 32 staff; shift pay; new accountant (client note) | none |
-> | L-022 | The Corner Bakery | — | Out | 3 staff | sole trader? check before any email |
+> | L-014 | Care firm A | 70 | A | 32 staff; shift pay; new accountant (client note) | none |
+> | L-022 | Bakery B | — | Out | 3 staff | sole trader? check before any email |

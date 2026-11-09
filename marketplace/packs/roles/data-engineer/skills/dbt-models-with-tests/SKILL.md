@@ -89,7 +89,7 @@ Merge the reviewed pull request through the client's pipeline and let the produc
 
 ## Example of good output (short)
 
-*Made-up business: Fieldfare Coffee, a coffee subscription firm on BigQuery.*
+*Illustrative structure, not a real business: a coffee subscription firm on BigQuery. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > Grain of `fct_payments`: one row per Stripe charge, refunds as negative rows linked by `charge_id`.
 >

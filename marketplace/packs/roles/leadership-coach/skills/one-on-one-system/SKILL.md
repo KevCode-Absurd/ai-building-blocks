@@ -97,7 +97,7 @@ Short guidance for the manager:
 
 ## Example of good output (short)
 
-*Made-up example: Dana has just become lead of a five-person support team at a fictional software firm, Kestrel Apps.*
+*Illustrative structure, not a real business: Dana has just become lead of a five-person support team at a software firm. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Rhythm:** weekly, 30 minutes, Tuesdays and Wednesdays, booked for eight weeks. Moves allowed; skips only for leave.
 >

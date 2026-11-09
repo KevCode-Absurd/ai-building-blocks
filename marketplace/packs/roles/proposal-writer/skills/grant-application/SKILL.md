@@ -62,15 +62,15 @@ Not for: deciding eligibility in law, tax status or audit questions (point to th
 
 ## Example of good output (short)
 
-*Riverbend Reading Trust is a made-up charity, used only to show the format. The call and figures are invented.*
+*Illustrative structure, not a real organisation: a reading charity. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
-**Go or no-go:** Go. Section 2.1 of the call allows registered charities with income under the stated limit; Riverbend qualifies on its latest filed accounts. The online form needs the trust's account holder to submit; target submission is five working days before the deadline.
+**Go or no-go:** Go. Section 2.1 of the call allows registered charities with income under the stated limit; the charity qualifies on its latest filed accounts. The online form needs the trust's account holder to submit; target submission is five working days before the deadline.
 
 **Criteria map**
 
 | Criterion (weight) | Section | Evidence a reviewer will look for |
 |---|---|---|
-| Need (25%) | 1 | Local reading data with source; waiting list numbers from Riverbend's records |
+| Need (25%) | 1 | Local reading data with source; waiting list numbers from the charity's records |
 | Approach (30%) | 2 | Weekly sessions, trained volunteers, why small groups suit these children |
 | Outcomes (25%) | 3 | Reading age measured at start and end with the same test |
 | Value for money (20%) | 4 | Cost per child from the budget; volunteer time shown separately |

@@ -108,7 +108,7 @@ Add buffer for a rejection round. Put every date in a table with an owner.
 
 ## Example of good output (short)
 
-*Made-up studio for illustration: "Hollow Ember", a co-op dungeon game, Steam, launch Friday 12 March.*
+*Illustrative structure, not a real business: a game studio making a co-op dungeon game for Steam, launching Friday 12 March. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Date | Step | Owner |
 > |---|---|---|
@@ -117,4 +117,4 @@ Add buffer for a rejection round. Put every date in a table with an owner.
 > | Mon 22 Feb | Release build submitted for review | Me (upload), Sam (submit) |
 > | Fri 12 Mar | Default branch set live; release pressed | Sam |
 >
-> **Paid items:** "Ember Chest" sold for gems; gems are bought with money, so this is a paid random item. Odds screen missing: add it before the chest's buy button. Expect PEGI 16 for a submission after June 2026, and ESRB In-Game Purchases (Includes Random Items).
+> **Paid items:** "Mystery Chest" sold for gems; gems are bought with money, so this is a paid random item. Odds screen missing: add it before the chest's buy button. Expect PEGI 16 for a submission after June 2026, and ESRB In-Game Purchases (Includes Random Items).

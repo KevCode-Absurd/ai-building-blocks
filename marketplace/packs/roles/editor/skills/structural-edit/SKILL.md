@@ -88,7 +88,7 @@ List two to four things the writer should keep, with examples. Writers revise be
 
 ## Example of good output (short)
 
-*Made-up example: a 4,000-word report for Fernhill Community Trust, a fictional charity, asking its board to fund a youth mentoring pilot.*
+*Illustrative structure, not a real organisation: a 4,000-word report for a community charity, asking its board to fund a youth mentoring pilot. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Main point (as drafted, page 9):** The board should fund a 12-month mentoring pilot for 40 young people because the trust's current drop-in sessions don't reach the young people who most need support.
 >

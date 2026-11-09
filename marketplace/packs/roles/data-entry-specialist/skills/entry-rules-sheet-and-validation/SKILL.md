@@ -33,7 +33,7 @@ Each rule says what the value is, the layout, an example, and what to do when th
 | Field | Rule | Example | If unsure |
 |---|---|---|---|
 | Invoice date | The date printed as Invoice date, as DD/MM/YYYY | 03/11/2026 | Leave blank, add an exception |
-| Supplier | Exactly as on the approved supplier list | Hollybrook Dairy Ltd | Do not create a new supplier; ask |
+| Supplier | Exactly as on the approved supplier list | Supplier A Ltd | Do not create a new supplier; ask |
 | Amount | As printed, two decimals, no currency sign | 1240.50 | Copy as written; flag a mismatch |
 | Phone | +country code, no spaces | +441632960123 | Copy what is there; flag if short |
 
@@ -87,7 +87,7 @@ Put the rules sheet on its own tab or page, link it from the entry sheet, and da
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Calder Valley Plumbing", three office staff entering job sheets into a shared Google Sheet.*
+*Illustrative structure, not a real business: a plumbing firm with three office staff entering job sheets into a shared Google Sheet. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > Problems found in 200 rows: 31 dates in MM/DD, 14 job codes turned into dates (e.g. "3-Jun" for JUN3), 22 customer names with trailing spaces, 5 rows with no job number.
 >

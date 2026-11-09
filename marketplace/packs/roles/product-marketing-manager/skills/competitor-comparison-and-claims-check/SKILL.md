@@ -88,7 +88,7 @@ Log the action. Set a re-check (rivals' prices and features, at least every revi
 
 ## Example of good output (short)
 
-Made-up business for illustration: Pinecrest Rota, shift-scheduling software for UK cafes, comparing itself with two named rivals.
+Illustrative structure, not a real business: shift-scheduling software for UK cafes, comparing itself with two named rivals. Copy the shape, never the content: every fact comes from the client's own context.
 
 > | Claim | Type | Evidence | Verdict | Fix |
 > |---|---|---|---|---|

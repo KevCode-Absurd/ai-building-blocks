@@ -71,7 +71,7 @@ For each gap, name the exact export or setting that would fill it, for example "
 
 ## Example of good output (short)
 
-*Made-up business: Brookfield Tea Co., an online tea shop. Figures are invented for illustration.*
+*Illustrative structure, not a real business: an online tea shop. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Headline:** Revenue rose, but new customers fell and cost more.
 >

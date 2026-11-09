@@ -78,7 +78,7 @@ One page in plain words: what changes, who owns what, the price per share, and t
 
 ## Example of good output (short)
 
-Made-up company for illustration: two founders with 4,500,000 shares each; 600,000 options granted and 400,000 unallocated; one post-money SAFE of 500,000 at a 5,000,000 cap. The round: 2,000,000 at an 8,000,000 pre-money, with the unallocated pool topped up to 10% of the post-round total inside the pre-money.
+Illustrative structure, not a real company: two founders with 4,500,000 shares each; 600,000 options granted and 400,000 unallocated; one post-money SAFE of 500,000 at a 5,000,000 cap. The round: 2,000,000 at an 8,000,000 pre-money, with the unallocated pool topped up to 10% of the post-round total inside the pre-money. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.
 
 > **SAFE:** 500,000 / 5,000,000 = 10% of the capitalisation before the round, so 1,111,111 shares (10,000,000 existing fully diluted shares, plus the SAFE shares). SAFE price 0.45; round price 0.6535; the cap applies.
 >

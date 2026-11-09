@@ -66,7 +66,7 @@ If there is nothing, book a 30 to 45 minute recorded conversation. Ask about a r
 
 ## Example of good output (short)
 
-*Harbour Lane Joinery is a made-up business used only to show the format. Its owner, "Dev", and the samples T1 to T3 and E1 to E6 are invented for this example.*
+*Illustrative structure, not a real business: a joinery business, with its owner "Dev" and his samples T1 to T3 and E1 to E6. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Summary:** Dev talks like a tradesman explaining a job to a customer he respects: short sentences, concrete nouns, the odd dry joke, and no sales talk. He builds every point from a job he did. He ends with a practical next step, never a slogan.
 

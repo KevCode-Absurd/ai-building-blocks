@@ -98,7 +98,7 @@ With web search connected, check public reviews of the client's own business for
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Tidewater Bikes, an online e-bike shop, October report.*
+*Illustrative structure, not a real business: an online e-bike shop, October report. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Summary.** 1,140 customers contacted us in October, up 9% on September. "Battery won't charge" grew fastest: 96 customers, up from 31, all on the Coast 2 model shipped after 1 October. The biggest risk is returns on that batch. Fixes: a help page on the charger reset (support), a batch check with the supplier (operations), a charger reset card in the box (product). Decision needed: whether to email all Coast 2 buyers before they contact us.
 >

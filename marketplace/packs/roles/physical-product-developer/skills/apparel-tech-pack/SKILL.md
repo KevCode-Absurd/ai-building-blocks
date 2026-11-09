@@ -99,7 +99,7 @@ Measure the sample against the chart, fill the review sheet, then write numbered
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Saltmarsh Supply", a heavyweight hoodie, S to XXL, base size M, units cm.*
+*Illustrative structure, not a real business: a clothing brand's heavyweight hoodie, S to XXL, base size M, units cm. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | POM code | Point of measure | How to measure | M | Tolerance |
 > |---|---|---|---|---|

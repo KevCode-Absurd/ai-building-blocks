@@ -102,14 +102,14 @@ A short recommendation with reasons, the open questions to settle before orderin
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Fernbrook Living", a wooden phone stand. Quotes from two suppliers, US sale, figures supplied by the client.*
+*Illustrative structure, not a real business: a homeware brand's wooden phone stand. Quotes from two suppliers, US sale, figures supplied by the client. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Normalised to 1,000 units, USD, FCA factory, plain kraft box included.**
 >
 > | Line | Supplier A | Supplier B |
 > |---|---|---|
 > | Unit price | $3.10 | $2.60 |
-> | Tooling (A: none; B: $1,200 jig, owned by Fernbrook) | $0.00 | $1.20 ($1,200 / 1,000) |
+> | Tooling (A: none; B: $1,200 jig, owned by the brand) | $0.00 | $1.20 ($1,200 / 1,000) |
 > | Box (B quoted without box; A's box price used as estimate) | included | $0.35 (estimate) |
 > | **Cost per unit before freight and duty** | **$3.10** | **$4.15** |
 >

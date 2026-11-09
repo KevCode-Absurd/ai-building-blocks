@@ -84,7 +84,7 @@ After the talk, log what was agreed, what is still open, and the new notice date
 
 ## Example of good output (short)
 
-*Made-up business: Copperline Studio, a 20-person design agency renewing a project management tool. Figures are invented for illustration.*
+*Illustrative structure, not a real business: a 20-person design agency renewing a project management tool. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Facts:** 20 seats; price rose from $14 to $19 per seat per month at the last renewal; renews 1 June; notice due by 2 May (clause 9.2).
 > **Alternative:** a quote from a rival tool at $15 per seat, plus about two days of migration time.

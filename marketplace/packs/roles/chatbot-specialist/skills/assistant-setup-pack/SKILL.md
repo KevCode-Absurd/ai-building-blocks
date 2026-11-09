@@ -86,10 +86,10 @@ Numbered steps for the client's tool: where to paste the instructions, how to up
 
 ## Example of good output
 
-*Made-up business, for illustration only: "Lakeside Joinery", a 12-person workshop.*
+*Illustrative structure, not a real business: a 12-person joinery workshop. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Instructions (extract):**
-> You are Lakeside Joinery's AI assistant for staff. Say you are an AI assistant in your first reply.
+> You are [Business]'s AI assistant for staff. Say you are an AI assistant in your first reply.
 > Answer only from the attached files: Price list (Oct 2026), Health and safety handbook (v7) and Job sheet guide. Quote prices and measurements exactly.
 > If the files do not answer the question, say "I don't have that in our documents" and suggest asking the workshop manager.
 > Never give medical advice. For any injury, tell the person to follow the first aid steps in the handbook and tell the manager.

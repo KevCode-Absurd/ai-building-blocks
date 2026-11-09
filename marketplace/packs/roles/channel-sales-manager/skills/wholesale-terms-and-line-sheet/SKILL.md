@@ -86,7 +86,7 @@ With web search connected, check how similar brands present wholesale terms on t
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Wick and Wane, hand-poured candles, selling to independent gift shops.*
+*Illustrative structure, not a real business: a maker of hand-poured candles selling to independent gift shops. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Terms summary**
 > - Minimum first order: USD 300. Reorders: USD 150.
@@ -95,5 +95,5 @@ With web search connected, check how similar brands present wholesale terms on t
 > - Damage: send a photo within 7 days of delivery and we replace it.
 > - Recommended retail prices are shown on the line sheet. You set your own prices.
 >
-> **Pitch (89 words)**
-> Hi Sam, I make hand-poured soy candles in Asheville. Gift shops tell us they reorder because customers come back for the same scent. Our 8 oz jar has a recommended retail price of USD 28 and costs you USD 14, so you earn USD 14 a jar. First orders start at USD 300, about 21 jars across four scents, and we replace anything that arrives damaged. Could I send you our line sheet and a sample of our best seller, Cedar and Smoke? Thanks, Jo at Wick and Wane
+> **Pitch (87 words)**
+> Hi Sam, I make hand-poured soy candles in Asheville. Gift shops tell us they reorder because customers come back for the same scent. Our 8 oz jar has a recommended retail price of USD 28 and costs you USD 14, so you earn USD 14 a jar. First orders start at USD 300, about 21 jars across four scents, and we replace anything that arrives damaged. Could I send you our line sheet and a sample of our best seller, Cedar and Smoke? Thanks, Jo at [Business]

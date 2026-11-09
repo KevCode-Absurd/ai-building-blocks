@@ -88,7 +88,7 @@ Compare each result with the owner's targets. List gaps with an owner and a date
 
 ## Example of good output (short)
 
-*Made-up business: Fernhill Accountancy, 9 staff, Google Workspace and a NAS.*
+*Illustrative structure, not a real business: an accountancy firm, 9 staff, Google Workspace and a NAS. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | System | Owner | Data-loss limit | Downtime limit | Last restore test | Result | Gap |
 |---|---|---|---|---|---|---|

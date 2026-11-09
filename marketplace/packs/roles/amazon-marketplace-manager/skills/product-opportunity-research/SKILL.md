@@ -66,9 +66,9 @@ If reviews or costs are missing, stop at the step that needs them and list exact
 
 ## Example of good output (short)
 
-*Kettlewick Outdoor is a made-up business used only to show the format. All reviews, costs and fees below are invented example data, not real Amazon figures.*
+*Illustrative structure, not a real business: an outdoor gear seller weighing a new product for its US Amazon store. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape; they are not real Amazon fees.*
 
-**Question:** Should Kettlewick order 500 collapsible camping kettles for the US store with a $9,000 first-order budget?
+**Question:** Should the seller order 500 collapsible camping kettles for the US store with a $9,000 first-order budget?
 
 **Review themes (240 low-star reviews across four rivals)**
 

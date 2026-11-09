@@ -61,7 +61,7 @@ Not for: slogans, brand campaigns and humour (transcreation), legal, medical or 
 
 ## Example of good output (short)
 
-*Kettle & Kiln is a made-up business used only to show the format: a UK pottery supplies shop putting 400 product descriptions into Spanish for Spain.*
+*Illustrative structure, not a real business: a UK pottery supplies shop putting 400 product descriptions into Spanish for Spain. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Triage:** product descriptions, full post-editing plus native review; customer reviews, MT only, shown with a "translated automatically" note the client chose to add; returns policy, human translation.
 

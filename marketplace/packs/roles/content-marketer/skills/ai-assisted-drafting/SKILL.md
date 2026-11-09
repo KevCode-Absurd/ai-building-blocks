@@ -63,7 +63,7 @@ Not for: producing many near-identical pages at scale. If the request is "200 lo
 
 ## Example of good output (short)
 
-*Copperleaf Tea Co. is a made-up business used only to show the format: a small online tea shop. Details are invented for this example.*
+*Illustrative structure, not a real business: a small online tea shop. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Before (raw AI opening):**
 > In today's fast-paced world, many people are discovering the wonderful benefits of loose-leaf tea. In this article, we will explore everything you need to know about brewing the perfect cup.
@@ -75,7 +75,7 @@ Not for: producing many near-identical pages at scale. If the request is "200 lo
 
 | Claim | Source | Status |
 |---|---|---|
-| Sencha brewed at 70 to 75°C for one minute | Copperleaf's own brewing card, owner confirmed | Verified |
+| Sencha brewed at 70 to 75°C for one minute | The shop's own brewing card, owner confirmed | Verified |
 | "Customers usually tell us the bitterness is gone" | Owner's account of tasting-room feedback; no survey | Kept as the owner's experience, worded as such |
 | "Green tea boosts metabolism by 20%" (added by AI) | No source found | Removed |
 

@@ -81,7 +81,7 @@ Tracking tested, identity linked in Business Center, creative approved, AI discl
 
 ## Example of good output (short)
 
-*Made-up business: Glowpot, refillable lip balm, 9 GBP each.*
+*Illustrative structure, not a real business: a refillable lip balm brand, 9 GBP each. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Break-even:** price 9.00 GBP; product, packing and postage 2.70; payment fees 0.30. Break-even cost per sale 6.00 GBP.
 >

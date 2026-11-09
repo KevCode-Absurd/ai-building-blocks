@@ -63,7 +63,7 @@ Not for: copying another brand's voice (borrow a quality, never the phrasing), o
 
 ## Example of good output (short)
 
-*Larkspur Lettings is a made-up letting agent for student houses, used only to show the format. Lines are invented examples.*
+*Illustrative structure, not a real business: a letting agent for student houses. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Voice in one sentence:** Calm, plain and on the tenant's side, like a good older housemate who knows the rules.
 

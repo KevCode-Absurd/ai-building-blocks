@@ -77,7 +77,7 @@ At level 2, deliver the review and the draft rate table. With the owner's approv
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Kettle and Clay, a ceramics shop shipping about 1,200 parcels a month in the US.*
+*Illustrative structure, not a real business: a ceramics shop shipping about 1,200 parcels a month in the US. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Top finding:** 31% of parcels shipped in the 14 x 12 x 12 inch box (2,016 cubic inches), which is over one cubic foot, so USPS Priority Mail billed them on dimensional weight: 2,016 / 139 = 14.5, rounded up to 15 lb. The mugs inside weighed under 3 lb. Switching two-mug orders to the 10 x 8 x 6 box (with the same padding spec) would have cut last month's bill by the amount in table 3.
 >

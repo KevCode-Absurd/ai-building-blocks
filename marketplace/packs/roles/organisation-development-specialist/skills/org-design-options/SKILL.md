@@ -82,7 +82,7 @@ List where the recommended option changes reporting lines, roles, locations or j
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Fernhollow Software, 140 staff.*
+*Illustrative structure, not a real business: a software firm, 140 staff. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Option B: customer-aligned teams**
 >

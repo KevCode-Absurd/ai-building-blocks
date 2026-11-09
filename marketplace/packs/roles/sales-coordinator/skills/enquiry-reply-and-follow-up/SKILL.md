@@ -87,7 +87,7 @@ Log each reply, hold and follow-up in the CRM with the next step and date. When 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Larkfield Barn, a wedding venue for up to 120 guests.*
+*Illustrative structure, not a real business: a wedding venue for up to 120 guests. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **First reply: wedding enquiry**
 >
@@ -102,7 +102,7 @@ Log each reply, hold and follow-up in the CRM with the next step and date. When 
 > Would you like to see the barn? I have Thursday 19 November at 5 pm or Saturday 21 November at 11 am.
 >
 > Best wishes,
-> Ellie, Larkfield Barn
+> Ellie, [Business]
 >
 > **Hold reminder (day 6):** "Your hold on 12 June ends tomorrow at 5 pm. If you'd like to keep the date, the £1,000 deposit secures it. If you need a few more days, just reply and I'll check with the team."
 >

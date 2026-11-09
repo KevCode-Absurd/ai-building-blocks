@@ -92,13 +92,13 @@ Each template has an owner and a review date. When the policy changes, every tem
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Puddleduck Kids, an online children's raincoat shop in Melbourne, Australia.*
+*Illustrative structure, not a real business: an online children's raincoat shop in Melbourne, Australia. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Where is my order: in transit**
 > *Use when:* tracking shows the parcel moving and it is within the delivery estimate.
 > *Do not use if:* the parcel is past the estimate, tracking has not changed for 5 days, or this is the customer's second contact.
 >
-> Hi [first name], thanks for checking in. Your order [order number] is on its way and should arrive by [estimated date]. You can follow it here: [tracking link]. If it hasn't arrived by then, reply to this email and we'll chase it with the courier for you. Warmly, [agent name] at Puddleduck
+> Hi [first name], thanks for checking in. Your order [order number] is on its way and should arrive by [estimated date]. You can follow it here: [tracking link]. If it hasn't arrived by then, reply to this email and we'll chase it with the courier for you. Warmly, [agent name] at [Business]
 >
 > *Policy line:* "Orders ship within 2 business days; delivery estimates are shown at checkout" (Shipping policy, updated 1 Sept 2026).
 > *Help desk actions:* tag "wismo", status pending.

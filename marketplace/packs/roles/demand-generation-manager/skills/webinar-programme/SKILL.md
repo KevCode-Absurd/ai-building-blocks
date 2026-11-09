@@ -74,7 +74,7 @@ After the session: send follow-ups the same day (at level 3 within approved list
 
 ## Example of good output (short)
 
-*Made-up business: Ledgerline, accounting software for multi-site dental groups. Figures are invented for illustration.*
+*Illustrative structure, not a real business: accounting software for multi-site dental groups. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Next step:** a 30-minute review of the attendee's month-end close, booked from the follow-up.
 >

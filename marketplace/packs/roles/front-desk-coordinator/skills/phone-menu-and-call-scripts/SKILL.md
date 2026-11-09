@@ -100,8 +100,8 @@ Call recording notices (rules differ by state and country), opening hours, the e
 
 ## Example of good output (short)
 
-> **Made-up example: Hillcrest Vets, a two-vet practice (not a real business).**
+> **Illustrative structure, not a real business: a two-vet practice. Copy the shape, never the content: every fact comes from the client's own context.**
 >
-> **Main menu (about 25 seconds):** "Thanks for calling Hillcrest Vets. If your pet needs urgent help, press 1 now to reach the vet on call. To book or change an appointment, press 2. For repeat medicines, press 3. For anything else, or to speak to the team, press 0."
+> **Main menu (about 25 seconds):** "Thanks for calling [Business]. If your pet needs urgent help, press 1 now to reach the vet on call. To book or change an appointment, press 2. For repeat medicines, press 3. For anything else, or to speak to the team, press 0."
 >
-> **Closed:** "Hillcrest Vets is closed. We're open Monday to Friday, 8 till 6, and Saturday, 9 till 12. If your pet needs urgent help, press 1 to reach the vet on call. To book, visit hillcrest vets dot example, or leave your name and number after the tone and we'll call you back from 8 tomorrow."
+> **Closed:** "[Business] is closed. We're open Monday to Friday, 8 till 6, and Saturday, 9 till 12. If your pet needs urgent help, press 1 to reach the vet on call. To book, visit [domain], or leave your name and number after the tone and we'll call you back from 8 tomorrow."

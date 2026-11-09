@@ -62,7 +62,7 @@ Access levels for this skill: planning needs level 1 (booking history, sales by 
 
 ## Example of good output (short)
 
-*Northgate Heating is a made-up heating engineer firm, used only to show the format. Numbers are invented.*
+*Illustrative structure, not a real business: a heating engineer firm. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Demand map:** boiler repairs busy November to February; servicing quiet April to July; installations steady, with a dip in December.
 

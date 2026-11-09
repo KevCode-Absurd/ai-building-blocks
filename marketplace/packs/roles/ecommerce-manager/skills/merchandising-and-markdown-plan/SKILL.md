@@ -67,7 +67,7 @@ Merchandising is choosing what shoppers see first. Done from data, it puts stock
 
 ## Example of good output (short)
 
-*Thistle & Thread is a made-up knitwear shop used only to show the format. Figures are invented for this example. Season ends in 6 weeks.*
+*Illustrative structure, not a real business: a knitwear shop. Copy the shape, never the content: every fact comes from the client's own context. Season ends in 6 weeks. Figures only show the shape.*
 
 | Product | Stock | Sales a week | Weeks of cover | Margin | Group |
 |---|---|---|---|---|---|

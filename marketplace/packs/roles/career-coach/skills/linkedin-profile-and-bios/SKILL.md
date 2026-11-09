@@ -97,7 +97,7 @@ Read it against the person's own writing. Cut anything they would not say.
 
 ## Example of good output (short)
 
-Made-up person for illustration: an HR consultant who sets up HR basics for small charities.
+Illustrative structure, not a real person: an HR consultant who sets up HR basics for small charities. Copy the shape, never the content: every fact comes from the client's own context.
 
 > **Headline options:**
 > 1. HR consultant for small charities | HR basics set up in 30 charities

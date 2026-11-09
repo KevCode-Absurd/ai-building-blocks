@@ -86,7 +86,7 @@ Draft production orders and purchase orders in the tool (level 2) or release and
 
 ## Example of good output (short)
 
-*Made-up business: Oakline Workshop, 12 furniture products, four stations (cutting, joinery, finishing, packing).*
+*Illustrative structure, not a real business: a furniture workshop with 12 products and four stations (cutting, joinery, finishing, packing). Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Bottleneck: finishing.** Weeks 1 to 4 need 312 hours of finishing against 240 available (130% load). Cutting runs at 71%, joinery at 88%.
 >

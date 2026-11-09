@@ -63,7 +63,7 @@ Template: check this with local rules or HR before the update or the answers tou
 
 ## Example of good output (short)
 
-*Northline Logistics is a made-up firm with 900 staff in six depots, used only to show the format.*
+*Illustrative structure, not a real business: a logistics firm with 900 staff in six depots. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Update (extract), in the chief executive's voice:**
 

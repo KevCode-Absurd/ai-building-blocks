@@ -62,7 +62,7 @@ People read these messages tired, on a phone, between other things. This skill w
 
 ## Example of good output (short)
 
-*Riverside Community Church is a made-up community used only to show the format.*
+*Illustrative structure, not a real organisation: a church community. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **This week**
 

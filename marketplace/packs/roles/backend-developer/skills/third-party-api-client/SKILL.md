@@ -85,7 +85,7 @@ At level 2, open a pull request and run against the sandbox. At level 3, after t
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Birchwood Interiors", syncing large Shopify orders to a CRM.*
+*Illustrative structure, not a real business: an interiors business syncing large Shopify orders to a CRM. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Flow.** Shopify `orders/create` webhook → worker → find CRM contact by email → create or update contact → create deal with external ID `shopify-order-<id>`.
 >

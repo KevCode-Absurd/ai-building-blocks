@@ -63,14 +63,14 @@ Then: word count, timed read, voice direction, pronunciation guide, clearance or
 
 ## Example of good output (short)
 
-*Fairway Tyre & Brake is a made-up business used only to show the format: a free brake check and 10% off brake pads until 30 April, on Station Road. 30-second spot, friendly, not shouty.*
+*Illustrative structure, not a real business: a tyre and brake garage on Station Road offering a free brake check and 10% off brake pads until 30 April. 30-second spot, friendly, not shouty. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Time | Voice or sound | Line or cue |
 |---|---|---|
 | 0-3 s | [SFX: brakes squeal, car stops] | |
-| 3-12 s | Voice (warm, local) | That squeal is your brakes asking for help. At Fairway Tyre and Brake on Station Road, we'll check them free, while you wait. |
+| 3-12 s | Voice (warm, local) | That squeal is your brakes asking for help. At [Business] on Station Road, we'll check them free, while you wait. |
 | 12-21 s | Voice | If they need new pads, you'll get ten percent off until the thirtieth of April. No booking needed. |
-| 21-28 s | Voice | Free brake check. Fairway Tyre and Brake, Station Road. |
+| 21-28 s | Voice | Free brake check. [Business], Station Road. |
 | 28-30 s | [MUSIC: short sting] | |
 
-**Timed read:** 27 seconds at a relaxed pace, plus the sting. **Pronunciation:** Fairway as "FAIR-way". **Note:** "while you wait" must be true at busy times; confirm with the client.
+**Timed read:** 27 seconds at a relaxed pace, plus the sting. **Pronunciation:** [Business] spelled out by sound, as the owner says it. **Note:** "while you wait" must be true at busy times; confirm with the client.

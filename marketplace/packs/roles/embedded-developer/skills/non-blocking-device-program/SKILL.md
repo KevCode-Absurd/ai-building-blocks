@@ -88,10 +88,10 @@ At start: program name, version, board, reset reason. During running: one line p
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Cogwheel Cycles", an ESP32 queue counter with a 4-digit display, Arduino core 3.3.x.*
+*Illustrative structure, not a real business: a bike shop with an ESP32 queue counter with a 4-digit display, Arduino core 3.3.x. Copy the shape, never the content: every fact comes from the client's own context.*
 
 ```cpp
-// Queue counter v1.0 for Cogwheel Cycles (made-up example). ESP32, Arduino-ESP32 3.3.x.
+// Queue counter v1.0 for [Business] (illustrative example). ESP32, Arduino-ESP32 3.3.x.
 // Libraries: a TM1637 display library, version pinned in platformio.ini lib_deps.
 const int TAKE_BUTTON_PIN = 25;   // pin table row 1, button to GND, internal pull-up
 const int CALL_BUTTON_PIN = 26;   // pin table row 2

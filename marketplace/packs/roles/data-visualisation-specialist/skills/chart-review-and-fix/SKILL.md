@@ -96,7 +96,7 @@ At level 2, build fixed copies next to the originals and label them. At level 3,
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Lantern Lane Lettings", tenant satisfaction by branch.*
+*Illustrative structure, not a real business: a letting agency charting tenant satisfaction by branch. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Verdict:** fix before the board pack goes out.
 >

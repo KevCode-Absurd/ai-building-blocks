@@ -61,7 +61,7 @@ Comments and messages are where followers become customers, and where small prob
 
 ## Example of good output (short)
 
-*Moss and Ember Candles is a made-up business used only to show the format: an online candle shop. All comments and details are invented.*
+*Illustrative structure, not a real business: an online candle shop. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Comment | Category | Draft reply | Flag |
 |---|---|---|---|

@@ -86,7 +86,7 @@ Budget accessibility checks into design and build, not after. WCAG 2.2 is the cu
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Quarry Lane Veterinary, moving from an old CMS to a new one.*
+*Illustrative structure, not a real business: a veterinary practice moving from an old CMS to a new one. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Old URL | Visits (last 12 months) | Call | New URL | Redirect |
 > |---|---|---|---|---|

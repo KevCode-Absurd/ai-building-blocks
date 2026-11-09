@@ -84,7 +84,7 @@ A run order for the routine: freshness first, then stop rules, then the rest. At
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Harbour Lane Tutors", bookings in PostgreSQL 17.*
+*Illustrative structure, not a real business: a tutoring business with bookings in PostgreSQL 17. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Group | Rule | Check | Severity | Owner | Fails today |
 > |---|---|---|---|---|---|

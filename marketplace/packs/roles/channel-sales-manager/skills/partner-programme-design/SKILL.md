@@ -96,12 +96,12 @@ Every clause that becomes contract language, every price list for competing rese
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Ledgerly, bookkeeping software at USD 50 a month, designing a programme for bookkeepers.*
+*Illustrative structure, not a real business: a bookkeeping software company charging USD 50 a month, designing a programme for bookkeepers. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
-> **Margin working.** Ledgerly keeps USD 41 a month per customer after hosting, support and payment fees. A referral fee of 20% for 24 months pays the bookkeeper USD 240 per customer and leaves Ledgerly USD 31 a month during those two years. Eight referred clients earn a bookkeeper USD 1,920 over the two years of fees (up to USD 960 in the first year if all eight join in January). Worth their time: yes, if onboarding takes them under an hour per client.
+> **Margin working.** The company keeps USD 41 a month per customer after hosting, support and payment fees. A referral fee of 20% for 24 months pays the bookkeeper USD 240 per customer and leaves the company USD 31 a month during those two years. Eight referred clients earn a bookkeeper USD 1,920 over the two years of fees (up to USD 960 in the first year if all eight join in January). Worth their time: yes, if onboarding takes them under an hour per client.
 >
-> **Conflict rule.** The first partner to register a customer with an introduction email gets 90 days of protection. If the customer signs up through Ledgerly's own website first, no partner fee applies unless the partner registered them earlier.
+> **Conflict rule.** The first partner to register a customer with an introduction email gets 90 days of protection. If the customer signs up through the company's own website first, no partner fee applies unless the partner registered them earlier.
 >
-> **Prices.** Bookkeepers who resell set their own price to clients. Ledgerly publishes a recommended price of USD 50 a month and never asks partners to match it.
+> **Prices.** Bookkeepers who resell set their own price to clients. The company publishes a recommended price of USD 50 a month and never asks partners to match it.
 >
 > **For the lawyer:** clawback wording, termination notice, data handover on exit.

@@ -94,7 +94,7 @@ Show the client the action list and limits (which apps and accounts, which actio
 
 ## Example of good output (short)
 
-*Made-up business: Pinewood Physio, web enquiries to HubSpot and Slack, Zapier Professional.*
+*Illustrative structure, not a real business: a physio practice sending web enquiries to HubSpot and Slack with Zapier Professional. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Trigger.** New Typeform response (instant). **Steps.** 1. Formatter: phone to E.164; blank becomes "none". 2. HubSpot: find contact by email. 3. Path A (found): update contact, add note. Path B (not found): create contact. 4. Slack: post to #enquiries. 5. Google Sheets: add log row.
 >

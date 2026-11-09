@@ -57,7 +57,7 @@ Not for: fake reviews, replies posing as guests, rewards for reviews, asking onl
 
 ## Example of good output (short)
 
-*The Fox and Barrel is a made-up pub, used only to show the format. Reviews are invented.*
+*Illustrative structure, not a real business: a pub. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Positive (posted within limits):** "Thanks, Jen. Glad the Sunday lamb and the fire by the window did their job on a wet afternoon. Hope to see you again soon. Tom, landlord."
 

@@ -74,7 +74,7 @@ Apply the required style consistently: author names, capitalisation of titles, i
 
 ## Example of good output
 
-Made-up business for illustration: Tidewell Housing Trust, a 22-reference policy brief partly drafted with an AI tool, Chicago author-date style.
+Illustrative structure, not a real business: a housing trust's 22-reference policy brief, partly drafted with an AI tool, Chicago author-date style. Copy the shape, never the content: every fact comes from the client's own context.
 
 > **Summary.** 22 references: 15 confirmed and correct, 4 confirmed with errors (fixed), 2 not found, 1 retracted.
 >

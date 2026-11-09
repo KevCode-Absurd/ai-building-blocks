@@ -73,7 +73,7 @@ Bank reconciliation and categorising transactions are in the bookkeeper kit; deb
 
 ## Example of good output (short)
 
-Made-up business for illustration: Brightwire Electrical, a three-person firm. Sales £412,000; materials £148,000; owner took £48,000.
+Illustrative structure, not a real business: a three-person electrical firm. Sales £412,000; materials £148,000; owner took £48,000. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.
 
 > **Real revenue:** £412,000 − £148,000 = £264,000.
 >

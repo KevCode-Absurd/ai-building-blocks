@@ -85,7 +85,7 @@ Clear the Locked setting on input cells only, then protect the sheet so formulas
 
 ## Example of good output (short)
 
-*Made-up business: Brightwater Window Cleaning, quoting homes by window count.*
+*Illustrative structure, not a real business: a window cleaning firm quoting homes by window count. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Logic.** Price = MAX(minimum charge, windows × rate for the property type) + conservatory fee if chosen; 10% off for a 4-weekly round.
 >

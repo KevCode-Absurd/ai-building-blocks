@@ -59,7 +59,7 @@ A collection page is where shoppers who know roughly what they want decide which
 
 ## Example of good output (short)
 
-*Ridge & Fell is a made-up outdoor shop used only to show the format. Product facts are invented for this example.*
+*Illustrative structure, not a real business: an outdoor shop. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Page job:** shoppers searching for "women's waterproof walking boots" who haven't chosen a style.
 
@@ -75,6 +75,6 @@ A collection page is where shoppers who know roughly what they want decide which
 - *Are they waterproof or water-resistant?* Every boot in this collection has a waterproof membrane, listed on each product page.
 - *Do you do half sizes?* [confirm]
 
-**SEO title (47 characters):** Women's Waterproof Walking Boots | Ridge & Fell
+**SEO title (35 characters plus the brand name):** Women's Waterproof Walking Boots | [Business]
 
 **Notes for the ecommerce manager:** the "Wide fit" filter is missing from 6 of 24 products; two collections ("Hiking boots" and "Walking boots") target the same search.

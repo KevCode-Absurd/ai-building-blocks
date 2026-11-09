@@ -65,7 +65,7 @@ You also need:
 
 ## Example of good output (short)
 
-*Corner Shop Stories is a made-up show used only to show the format.*
+*Illustrative structure, not a real show: a podcast with a co-host and a guest, released on a main feed. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Item | Status | Note |
 |---|---|---|

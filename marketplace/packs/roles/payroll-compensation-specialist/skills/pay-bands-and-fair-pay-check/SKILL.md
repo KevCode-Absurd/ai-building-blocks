@@ -80,7 +80,7 @@ A plain document managers can use to explain pay: levels, bands, how pay moves, 
 
 ## Example of good output (short)
 
-*Made-up business: Tidewater Design Studio, 25 staff in Ohio. Figures are invented for illustration.*
+*Illustrative structure, not a real business: a design studio, 25 staff in Ohio. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Level 2: Designer.** Owns client deliverables end to end; works to a brief set by a senior.
 > Band: minimum $58,000, midpoint $66,000, maximum $74,000. Width ±12% because the going rate for this role is well known. Source: the client's licensed design salary survey (2026 edition, Midwest, firms under 50 staff), 50th percentile, plus BLS OEWS May 2025 for the Columbus area as a cross-check.

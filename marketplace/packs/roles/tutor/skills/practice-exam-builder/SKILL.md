@@ -83,7 +83,7 @@ Group by domain and difficulty, with the same tags and explanations, so the lear
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Fernhill Software's internal product certification, with five domains from its own study guide.*
+*Illustrative structure, not a real business: a software firm's internal product certification, with five domains from its own study guide. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Blueprint (40 questions):** Setup 20% (8), Billing 25% (10), Reports 20% (8), Users 15% (6), Troubleshooting 20% (8). Difficulty: 10 easy, 20 medium, 10 hard.
 >

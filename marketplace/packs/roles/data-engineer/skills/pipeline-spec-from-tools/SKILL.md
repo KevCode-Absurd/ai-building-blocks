@@ -94,7 +94,7 @@ Destination: [warehouse, region]   Freshness promise: [x]
 
 ## Example of good output (short)
 
-*Made-up business: Harbour & Hearth, an online homeware shop in Ireland.*
+*Illustrative structure, not a real business: an online homeware shop in Ireland. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > Destination: BigQuery, EU multi-region. Freshness promise: orders and payments loaded by 06:00 Irish time daily.
 >

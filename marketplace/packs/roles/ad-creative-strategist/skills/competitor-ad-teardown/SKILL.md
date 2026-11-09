@@ -53,7 +53,7 @@ Rivals' public ads show what a market has already heard. This skill reads them s
 
 ## Example of good output (short)
 
-*Hollow Oak Mattresses is a made-up business used only to show the format: an online mattress seller with a 120-night trial (P1) and a UK workshop it can film (P2). The rivals below are also made up.*
+*Illustrative structure, not a real business: an online mattress seller with a 120-night trial (P1) and a UK workshop it can film (P2); the rivals below are unnamed placeholders too. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Pattern summary (24 ads, 4 rivals, UK, Meta only)**
 

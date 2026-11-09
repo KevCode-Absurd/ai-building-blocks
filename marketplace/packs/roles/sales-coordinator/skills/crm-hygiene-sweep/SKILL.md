@@ -87,7 +87,7 @@ A one-page summary with counts, the top fixes and what needs the client's yes.
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Saltmarsh Travel, a three-person agency with 412 open deals in its CRM.*
+*Illustrative structure, not a real business: a three-person travel agency with 412 open deals in its CRM. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Summary (sweep of 6 Nov 2026)**
 > - 37 suspected duplicate contacts; 29 came from the September brochure-request import, which had no email column mapped.

@@ -61,7 +61,7 @@ Not for: reading test results (use creative-test-plan-and-readout) or full video
 
 ## Example of good output (short)
 
-*Northfield Pantry is a made-up business used only to show the format: a refill shop selling dried foods by weight, with a 4.8 rating from 212 reviews (P1).*
+*Illustrative structure, not a real business: a refill shop selling dried foods by weight, with a 4.8 rating from 212 reviews (P1). Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 | Concept | Angle | Hook | Headline | Proof |
 |---|---|---|---|---|

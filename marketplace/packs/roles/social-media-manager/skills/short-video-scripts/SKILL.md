@@ -65,7 +65,7 @@ Short video now reaches people who do not follow you, on every major platform. T
 
 ## Example of good output (short)
 
-*Brightwell Bikes is a made-up business used only to show the format: a bike repair shop whose mechanic will show his hands but not his face. All details are invented.*
+*Illustrative structure, not a real business: a bike repair shop whose mechanic will show his hands but not his face. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Formats:** myth fix; 30-second fix; what we found inside; customer question.
 

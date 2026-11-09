@@ -88,7 +88,7 @@ Three to five actions, each with an owner and the money it should move. If the g
 
 ## Example of good output (short)
 
-Made-up business for illustration: Northfield Bakehouse, a wholesale bakery.
+Illustrative structure, not a real business: a wholesale bakery. Copy the shape, never the content: every fact comes from the client's own context.
 
 > **October, production cost centre.** Budget assumed 40,000 loaves; actual 46,000.
 >

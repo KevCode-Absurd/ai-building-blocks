@@ -59,7 +59,7 @@ A good spec lets the team build the right thing without a meeting to explain it,
 
 ## Example of good output (short)
 
-*Brightside Physio is a made-up business used only to show the format: customers should be able to reschedule their own bookings in the clinic's web app; five staff handle reschedule calls today.*
+*Illustrative structure, not a real business: a physio clinic whose customers should be able to reschedule their own bookings in the clinic's web app; five staff handle reschedule calls today. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Goal:** fewer reschedule calls. **Success metric:** reschedules done online as a share of all reschedules, per week (target set with the clinic after two weeks of baseline). **Guardrail:** no-show rate does not rise.
 

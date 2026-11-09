@@ -84,7 +84,7 @@ Stock counted, promotions set up and checked, products pinned in order, props re
 
 ## Example of good output
 
-*Fernleaf Skin (a made-up business). 45-minute LIVE, UK, Friday 7 pm. Host: the founder. Goal: 60 orders of the hand cream. Offer: hand cream and lip balm bundle at £14 instead of £17 bought separately, during the LIVE only; prices return to normal at 7:45 pm.*
+*Illustrative structure, not a real business: a skincare brand. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape. 45-minute LIVE, UK, Friday 7 pm. Host: the founder. Goal: 60 orders of the hand cream. Offer: hand cream and lip balm bundle at £14 instead of £17 bought separately, during the LIVE only; prices return to normal at 7:45 pm.*
 
 **Offer check:** Bundle margin after fees £3.10 (above the £2.50 floor). No "was" price used; the saving is shown against the two current prices bought separately. Deadline real: bundle switched off at 7:45 pm.
 

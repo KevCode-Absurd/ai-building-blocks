@@ -108,16 +108,16 @@ Show the action list and limits, get a yes, then enrol only the approved contact
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Clearpath Ads, an agency running paid search for dental clinics.*
+*Illustrative structure, not a real business: an agency running paid search for dental clinics. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Email 1** (day 0)
 > Subject A: new patient bookings at [clinic]
 > Subject B: question about your Invisalign page
 >
-> Hi Dr Shah, I run Clearpath, a small agency that only works with dental clinics. Many clinics with two to five dentists tell us their ads bring calls about check-ups, not the treatments they want to grow. For Elm Street Dental we moved spend to implant searches and their implant consults went from 4 to 11 a month (shared with permission). Would a 15-minute call next week be useful?
+> Hi Dr Shah, I run [Business], a small agency that only works with dental clinics. Many clinics with two to five dentists tell us their ads bring calls about check-ups, not the treatments they want to grow. For [Clinic A] we moved spend to implant searches and their implant consults went from 4 to 11 a month (shared with permission). Would a 15-minute call next week be useful?
 >
-> Priya Nair, Clearpath Ads, 12 Mill Lane, Bristol BS1 4AB. Not relevant? Reply "no thanks" and I won't write again.
+> Priya Nair, [Business], [postal address]. Not relevant? Reply "no thanks" and I won't write again.
 >
 > **Follow-up 2** (day 4): one short note on the three search terms that wasted most budget for clinics last quarter, from our own accounts.
 >
-> **Compliance flags:** two leads are sole traders (UK): removed until consent exists. Postal address and opt-out present. Client to confirm the Elm Street result may be named.
+> **Compliance flags:** two leads are sole traders (UK): removed until consent exists. Postal address and opt-out present. Client to confirm the Clinic A result may be named.

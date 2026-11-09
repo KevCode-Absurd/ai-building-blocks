@@ -89,7 +89,7 @@ Every step is in the SOP, nothing is added, the order matches, warnings come fir
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Wrenfold Corner Deli, closing-down SOP v3 (12 May), new part-time staff trained by shift leads.*
+*Illustrative structure, not a real business: a corner deli, closing-down SOP v3 (12 May), new part-time staff trained by shift leads. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Goal 2:** Clean and close the meat slicer safely and record it on the cleaning sheet.
 >

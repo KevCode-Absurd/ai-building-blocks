@@ -92,7 +92,7 @@ Data check: [rows read, set aside, clean total]
 
 ## Example of good output (short)
 
-*Made-up business: Northgate Climbing, a bouldering gym with monthly memberships; joins January to June 2026, read on 1 October 2026.*
+*Illustrative structure, not a real business: a bouldering gym with monthly memberships; joins January to June 2026, read on 1 October 2026. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > Rules: start = first paid month; active = membership paid that month; criterion = "on" (paid in that exact month); pauses count as active.
 > Data check: 1,212 rows read; 9 test accounts and 4 rows with cancel before join set aside; 1,199 members.

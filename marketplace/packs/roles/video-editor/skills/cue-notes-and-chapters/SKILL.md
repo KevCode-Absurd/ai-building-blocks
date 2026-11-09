@@ -57,12 +57,12 @@ Once the cut is decided, the editor needs to know what to show over it, where to
 
 ## Example of good output (short)
 
-*Northgate Bookkeeping is a made-up firm used only to show the format. Cut length 19:48 at 25 fps. Platform: YouTube. Footage from shot notes: screen recordings of the invoicing app, office B-roll (6 clips).*
+*Illustrative structure, not a real business: a bookkeeping firm's webinar. Copy the shape, never the content: every fact comes from the client's own context. Cut length 19:48 at 25 fps. Platform: YouTube. Footage from shot notes: screen recordings of the invoicing app, office B-roll (6 clips).*
 
 | Time in cut | Type | What | Length | Source | Status |
 |---|---|---|---|---|---|
 | 00:00:00:00 | Music | Intro bed under Dana's opening, out at 00:00:12 | 12 s | YouTube Audio Library | Cleared for YouTube only |
-| 00:00:12:00 | Graphic | Lower third "Dana Price, Northgate Bookkeeping" (34 chars) | 4 s | Brand kit | Ready |
+| 00:00:12:00 | Graphic | Lower third "Dana Price, [Business]" ([count] chars) | 4 s | Brand kit | Ready |
 | 00:02:31:00 | B-roll | Screen recording: new invoice screen | 6 s | Shot notes, clip SR-02 | Ready |
 | 00:04:10:00 | B-roll | Payment reminder email being sent | 5 s | [needs: screen recording of reminder] | Missing |
 

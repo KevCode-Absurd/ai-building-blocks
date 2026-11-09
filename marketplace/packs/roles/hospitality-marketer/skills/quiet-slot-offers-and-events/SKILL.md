@@ -61,7 +61,7 @@ Not for: offers below cost without a reason the owner chooses, deals that encour
 
 ## Example of good output (short)
 
-*Lucca's Trattoria is a made-up restaurant, used only to show the format. Figures are invented.*
+*Illustrative structure, not a real business: an Italian trattoria. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 | Offer (Tuesdays, 5:30 to 8pm) | Price per cover | Food and drink cost per cover | Margin per cover | Verdict |
 |---|---|---|---|---|

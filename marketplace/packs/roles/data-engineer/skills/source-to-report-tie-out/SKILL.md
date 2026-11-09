@@ -89,7 +89,7 @@ The gap, the causes with their amounts, the fix, the new test, and anything stil
 
 ## Example of good output (short)
 
-*Made-up business: Pinecrest Tutoring, an online tutoring firm with Stripe payments and a Postgres reporting database.*
+*Illustrative structure, not a real business: an online tutoring firm with Stripe payments and a Postgres reporting database. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > October revenue: report €48,920; Stripe net volume €46,310 (Europe/Dublin time). Gap €2,610.
 >

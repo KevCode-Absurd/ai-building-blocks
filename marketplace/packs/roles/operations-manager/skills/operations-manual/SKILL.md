@@ -98,7 +98,7 @@ Health and safety rules differ (HSE in the UK, OSHA in the US, the Framework Dir
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Fernhill Bakehouse, one cafe opening a second.*
+*Illustrative structure, not a real business: a bakery with one cafe, opening a second. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Standard 3.2: Opening the counter by 7:00**
 > **Pass:** Display full to the photo plan, labels on every tray, allergen book on the counter, card reader tested with a zero-value test. **Fail:** gaps in the display, missing labels, allergen book in the office.

@@ -82,7 +82,7 @@ If nothing passes step 2, say it plainly and suggest how to create one: a short 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Pawsure", a UK pet insurer with five years of anonymised claims data.*
+*Illustrative structure, not a real business: a UK pet insurer with five years of anonymised claims data. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Verdict:** yes, there is a story. The claims data is unusual and covers the whole UK.
 >

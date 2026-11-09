@@ -79,16 +79,16 @@ Per tier: accounts engaged (several people active, not one), meetings held, oppo
 
 ## Example of good output (short)
 
-*Made-up business: Northgate Freight Systems, freight software for mid-size manufacturers. Figures are invented for illustration.*
+*Illustrative structure, not a real business: freight software for mid-size manufacturers; the target accounts are unnamed placeholders too. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Profile.** Our wins are manufacturers with 200 to 1,000 staff, shipping to three or more countries, running a mid-market ERP. The trigger in 9 of 14 wins was a new warehouse or a lost carrier contract. Losses were mostly firms under 100 staff or with in-house logistics IT.
 >
 > | Account | Fit (0-12) | Signals | Tier | Reason | Sales owner |
 > |---|---|---|---|---|---|
-> | Halden Pumps | 11 | New warehouse announced 2 Oct; 4 visits to pricing page in Oct | 1 | Best fit plus live trigger | Priya |
-> | Corran Plastics | 10 | Attended our September webinar (2 people) | 2 | Export-heavy plastics cluster | Tom |
-> | Elstow Foods | 8 | None | 3 | Fits, no signal yet | Tom |
+> | Account A | 11 | New warehouse announced 2 Oct; 4 visits to pricing page in Oct | 1 | Best fit plus live trigger | Priya |
+> | Account B | 10 | Attended our September webinar (2 people) | 2 | Export-heavy plastics cluster | Tom |
+> | Account C | 8 | None | 3 | Fits, no signal yet | Tom |
 >
-> **Tier 1, weeks 1 to 4:** Priya calls Halden's logistics director about the new site (week 1). Marketing sends a one-page cost model for a second warehouse to the finance lead, who opted in at our webinar (week 2). Halden's people see the "new site" case in the tier 1 and 2 LinkedIn campaign (weeks 1 to 8).
+> **Tier 1, weeks 1 to 4:** Priya calls Account A's logistics director about the new site (week 1). Marketing sends a one-page cost model for a second warehouse to the finance lead, who opted in at our webinar (week 2). Account A's people see the "new site" case in the tier 1 and 2 LinkedIn campaign (weeks 1 to 8).
 >
-> **Measure:** three or more Halden people engaged by week 6, and a discovery meeting booked. Review on the first Monday of each month with Priya.
+> **Measure:** three or more Account A people engaged by week 6, and a discovery meeting booked. Review on the first Monday of each month with Priya.

@@ -63,7 +63,7 @@ A pilot without agreed success criteria does not end in a decision. It drifts, t
 
 ## Example of good output
 
-*Made-up business for illustration: Fieldquill, a field service app, piloting with a made-up 40-engineer heating and cooling contractor for six weeks.*
+*Illustrative structure, not a real business: a field service app, piloting with a 40-engineer heating and cooling contractor for six weeks. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Goal:** Fewer return visits for the 12 North region engineers.
 
@@ -74,9 +74,9 @@ A pilot without agreed success criteria does not end in a decision. It drifts, t
 | Criterion | Baseline | Target | How measured | Who measures | Signed off |
 |---|---|---|---|---|---|
 | Jobs needing a return visit | From last quarter's export, week 1 | Agreed in week 1 by the ops director | Job records, weeks 3 to 6 | Buyer's ops coordinator | Both sponsors |
-| Engineers logging jobs in the app | 0 | 10 of 12 active in week 4 | App usage report | Fieldquill | Both sponsors |
+| Engineers logging jobs in the app | 0 | 10 of 12 active in week 4 | App usage report | Vendor | Both sponsors |
 | Time to find a part number | Timed sample of 20 lookups, week 1 | Agreed in week 1 | Same timed sample, week 5 | Buyer's North supervisor | Both sponsors |
 
 **Decision for each result.** All three met: the buyer moves to a North region purchase on the quoted terms. Two met: two-week extension with a named fix. One or none: stop and record why.
 
-**Data flag:** the job export includes customer names and addresses. Flagged for Fieldquill's lawyer and the buyer's data lead before it is shared; a version with customer details removed is offered instead.
+**Data flag:** the job export includes customer names and addresses. Flagged for the vendor's lawyer and the buyer's data lead before it is shared; a version with customer details removed is offered instead.

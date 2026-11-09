@@ -59,7 +59,7 @@ Not for: chasing debts beyond the agreed reminders, deciding fee changes, interp
 
 ## Example of good output (short)
 
-*Elmfield Tennis Club is a made-up club, used only to show the format. Fees and dates are invented.*
+*Illustrative structure, not a real organisation: a tennis club. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 | Message | Group | Channel | Send | Stop rule |
 |---|---|---|---|---|
@@ -68,8 +68,8 @@ Not for: chasing debts beyond the agreed reminders, deciding fee changes, interp
 | Last call | Not yet renewed | Text | 29 March | Last renewal message |
 | Lapsed note | Not renewed by 7 April | Email | 8 April | No more renewal messages this year |
 
-**Invitation (email):** "Renew by 31 March to keep your court bookings. Adult membership is £120 and junior £45. Renew online in two minutes at [link]. If the fee is hard this year, reply to this email in confidence; we have a small bursary fund. Thanks for being part of Elmfield. Priya, Membership Secretary."
+**Invitation (email):** "Renew by 31 March to keep your court bookings. Adult membership is £120 and junior £45. Renew online in two minutes at [link]. If the fee is hard this year, reply to this email in confidence; we have a small bursary fund. Thanks for being part of [Club]. Priya, Membership Secretary."
 
-**Last call (text):** "Elmfield TC: membership ends 31 March. Renew at [link] to keep booking courts. Reply STOP to opt out of texts."
+**Last call (text):** "[Club]: membership ends 31 March. Renew at [link] to keep booking courts. Reply STOP to opt out of texts."
 
 **Lapsed note (email):** "We're sorry to see you go. If you'd like to come back, you can rejoin any time at [link]. If you have a minute, what made you decide not to renew? Just hit reply." Template: check this with local rules before use.

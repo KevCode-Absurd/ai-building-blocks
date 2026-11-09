@@ -82,7 +82,7 @@ Add a check that would have caught this (an alert, a weekly count comparison, a 
 
 ## Example of good output (short)
 
-*Made-up business: Cove Swim School, Zapier, booking form to Google Sheets.*
+*Illustrative structure, not a real business: a swim school using Zapier to send a booking form to Google Sheets. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **What went wrong.** 9 of 212 runs in October failed at "Create Spreadsheet Row" with "Required field Date is missing". All 9 came from the mobile form, which sends the date as "" when the parent skips the optional second-choice field; the Zap maps the second-choice date into the required Date column by mistake.
 >

@@ -96,7 +96,7 @@ One page: own login, two-step sign-in, no sharing codes, check before refunding 
 
 ## Example
 
-*Made-up example: "Fernleaf Candles" is invented for illustration.*
+*Illustrative structure, not a real business: an online candle shop. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Pattern read:** Between 02:10 and 03:05, 84 orders of a single tea light, 79 declined, 5 paid, 61 different names, emails like "qwx81@...", all from three IP ranges. Normal night: 0 to 2 orders. This is card testing.
 

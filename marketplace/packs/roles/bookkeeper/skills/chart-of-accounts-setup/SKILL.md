@@ -89,7 +89,7 @@ A weekly list (code new lines, attach receipts, send invoices, chase overdue) an
 
 ## Example of good output (short)
 
-Made-up business for illustration: Little Orchard Dog Walks, a company with two vans and four walkers.
+Illustrative structure, not a real business: a dog-walking company with two vans and four walkers. Copy the shape, never the content: every fact comes from the client's own context.
 
 > | Code | Section | Name | Use for | Do not use for | Examples |
 > |---|---|---|---|---|---|

@@ -61,7 +61,7 @@ Not for: public webinars (no single buyer to tailor to) or a demo with no discov
 
 ## Example of good output
 
-*Made-up business for illustration: Scanmoor, warehouse scanning software, demoing to a made-up three-site distributor.*
+*Illustrative structure, not a real business: warehouse scanning software, demoing to a three-site distributor. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **The buyer's three problems**
 1. "We ship the wrong item about twice a week and only find out from the customer." (Ops manager; cost not yet known.)

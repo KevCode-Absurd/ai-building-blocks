@@ -58,7 +58,7 @@ This skill lists what a pack is expected to carry and checks where and how big i
 
 ## Example of good output (short)
 
-*Copperleaf Chai is a made-up business used only to show the format: a 100 g stand-up pouch of loose chai blend, sold in the UK and Ireland.*
+*Illustrative structure, not a real business: a tea brand with a 100 g stand-up pouch of loose chai blend, sold in the UK and Ireland. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Item | Rule | Panel | Minimum size | Status | Who supplies |
 |---|---|---|---|---|---|

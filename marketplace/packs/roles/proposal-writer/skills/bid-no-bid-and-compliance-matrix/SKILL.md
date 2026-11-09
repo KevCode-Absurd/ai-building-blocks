@@ -63,7 +63,7 @@ Not for: legal review of contract terms (flag them for the client's lawyer) or d
 
 ## Example of good output (short)
 
-*Harbourline Cleaning is a made-up business used only to show the format: a 60-person commercial cleaning firm looking at a made-up council tender for 14 buildings.*
+*Illustrative structure, not a real business: a 60-person commercial cleaning firm looking at a council tender for 14 buildings. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Gates**
 
@@ -76,7 +76,7 @@ Not for: legal review of contract terms (flag them for the client's lawyer) or d
 
 **Call:** Bid only if the council confirms in its clarification answer that ISO 14001 "or equivalent" accepts a documented environmental policy. Otherwise, no-bid.
 
-**Reasons:** the 4.4 gate is the only blocker; fit and references are strong; quality carries most of the score, which suits Harbourline's record.
+**Reasons:** the 4.4 gate is the only blocker; fit and references are strong; quality carries most of the score, which suits the firm's record.
 
 **Matrix extract**
 
@@ -85,4 +85,4 @@ Not for: legal review of contract terms (flag them for the client's lawyer) or d
 | R14 | 5.3 | "Describe your approach to mobilisation within 4 weeks" | Scored, 15% | Ops lead | Needs input |
 | R15 | 5.3 | Max 750 words, Arial 11 | Mandatory | Writer | Done |
 
-**Win theme:** Because the council's specification stresses continuity for building users, Harbourline offers the same named supervisor per cluster of buildings, shown by the hospital contracts where supervisors stayed in post through the term.
+**Win theme:** Because the council's specification stresses continuity for building users, the firm offers the same named supervisor per cluster of buildings, shown by the hospital contracts where supervisors stayed in post through the term.

@@ -90,7 +90,7 @@ What to look for, when to step up or down, and one question to ask players. Keep
 
 ## Example of good output (short)
 
-*Made-up club for illustration: Riverside Juniors under-9s football, 16 players, a quarter of a pitch, 10 balls, 20 cones, 60 minutes, 3 adults (one first aider).*
+*Illustrative structure, not a real organisation: a junior football club's under-9s, 16 players, a quarter of a pitch, 10 balls, 20 cones, 60 minutes, 3 adults (one first aider). Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Goal:** pass to a moving teammate with the inside of the foot.
 > **Safety:** 3 adults for 16 players (CPSU minimum 1:8, at least two adults: met). First aider: Coach B, kit by the gate. Suspected head knock: off for the rest of the session, tell the parent, NHS 111.

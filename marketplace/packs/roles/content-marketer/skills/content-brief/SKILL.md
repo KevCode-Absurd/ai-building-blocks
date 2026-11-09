@@ -54,7 +54,7 @@ A single page with these headings: Reader; Question; Intent and what ranks; Angl
 
 ## Example of good output (short)
 
-*Saltmarsh Vet Clinic is a made-up business used only to show the format: a two-vet practice. All details are invented for this example.*
+*Illustrative structure, not a real business: a two-vet practice. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Reader:** a first-time dog owner whose puppy is 8 to 12 weeks old.
 **Question:** "When should my puppy have its vaccinations, and what does it cost?"
@@ -70,7 +70,7 @@ A single page with these headings: Reader; Question; Intent and what ranks; Angl
 **Structure:** Answer first / Schedule and prices (table) / What happens at each visit / Common questions / When to walk your puppy / Book the first visit.
 **Links:** up to the pillar "New puppy guide"; across to "Puppy insurance: what to check"; out to official guidance on vaccinations where the clinic agrees with it.
 **Call to action:** book the first vaccination visit (GA4 key event: booking form submitted).
-**Search title:** Puppy vaccinations: schedule and costs at Saltmarsh Vets
+**Search title:** Puppy vaccinations: schedule and costs at [Business]
 **Distribution:** new-client welcome email; a reception handout version; one social post with the schedule table.
 **Measure and review:** bookings from this page at 30 and 90 days; Search Console clicks for "puppy vaccinations [town]". Review prices every six months.
 **Rules for AI drafting:** use only the schedule, prices and quotes supplied; leave [VET QUOTE] placeholders; flag any medical statement for Dr. Hale to approve.

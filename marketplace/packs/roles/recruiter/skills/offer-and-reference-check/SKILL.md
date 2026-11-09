@@ -101,7 +101,7 @@ Draft the decline notes for the other finalists, to send only after the offer is
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Copperleaf Kitchens, a 22-person kitchen fitting firm in Leeds, UK, hiring a project coordinator.*
+*Illustrative structure, not a real business: a 22-person kitchen fitting firm in Leeds, UK, hiring a project coordinator. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Template: check this with local rules before use. Applies to: Leeds, UK, on site. A qualified employment lawyer or HR adviser should review the final letter.**
 >

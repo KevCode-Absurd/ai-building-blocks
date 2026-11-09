@@ -93,7 +93,7 @@ Act, wait for more data (and how much), or stop. If the data cannot answer the q
 
 ## Example of good output (short)
 
-*Made-up business: Larkspur Studio, a yoga studio. Two subject lines, 1,200 emails each, randomly split.*
+*Illustrative structure, not a real business: a yoga studio. Copy the shape, never the content: every fact comes from the client's own context. Two subject lines, 1,200 emails each, randomly split. Figures only show the shape.*
 
 > **Answer: not settled. B may be better, but the data cannot tell yet. Wait.**
 >

@@ -94,7 +94,7 @@ Formulas for the client's tool and column layout, which cells to update each mon
 
 ## Example of good output (short)
 
-*Made-up business: The Copper Kettle, a café with 36 months of sales history.*
+*Illustrative structure, not a real business: a café with 36 months of sales history. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Method.** Strong season (December is 1.4 times the monthly average), steady growth. I compared trend times seasonal index with seasonal naive on the last 6 months, held back.
 >

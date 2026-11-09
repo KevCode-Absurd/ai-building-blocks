@@ -67,7 +67,7 @@ Not for building AI features into a product, buying tools for the client, or any
 
 ## Example of good output (short)
 
-*Brightwater Lettings is a made-up letting agency used only to show the format: 12 staff, Microsoft 365 with Copilot Chat. Access I have: level 1 (task list and usage report export).*
+*Illustrative structure, not a real business: a letting agency with 12 staff on Microsoft 365 with Copilot Chat. Copy the shape, never the content: every fact comes from the client's own context. Access I have: level 1 (task list and usage report export).*
 
 | Task | Role | Hrs/wk (source) | Fit | Risk | Data | Tool type | Human check |
 |---|---|---|---|---|---|---|---|

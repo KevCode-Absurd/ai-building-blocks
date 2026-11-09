@@ -60,7 +60,7 @@ Not for: deciding what the constitution means, ruling on disputes, changing the 
 
 ## Example of good output (short)
 
-*Elm Park Residents' Association is a made-up group, used only to show the format. Clauses and dates are invented.*
+*Illustrative structure, not a real organisation: a residents' association. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Rule | What the constitution says | Clause |
 |---|---|---|

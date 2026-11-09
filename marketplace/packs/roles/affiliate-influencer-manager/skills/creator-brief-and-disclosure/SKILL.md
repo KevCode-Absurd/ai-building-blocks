@@ -57,7 +57,7 @@ A good brief gives a creator the facts and the freedom to say them in their own 
 
 ## Example of good output (short)
 
-*Northfield Oats is a made-up business used only to show the format: an oat milk brand sending a paid brief to a UK and US cooking creator. All details are invented.*
+*Illustrative structure, not a real business: an oat milk brand sending a paid brief to a UK and US cooking creator. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Story:** "A creamier flat white at home without a barista jug."
 
@@ -67,8 +67,8 @@ A good brief gives a creator the facts and the freedom to say them in their own 
 
 | Platform | Words | Setting |
 |---|---|---|
-| Instagram Reel | "Ad" as the first word of the caption; "Ad for Northfield Oats" on screen in the first seconds | Paid partnership label |
-| YouTube video | Title starts "Ad:" for the UK audience; spoken "This video is sponsored by Northfield Oats" before the mention, with on-screen text | Paid promotion setting |
+| Instagram Reel | "Ad" as the first word of the caption; "Ad for [Business]" on screen in the first seconds | Paid partnership label |
+| YouTube video | Title starts "Ad:" for the UK audience; spoken "This video is sponsored by [Business]" before the mention, with on-screen text | Paid promotion setting |
 | Link in bio or description | "Paid link" next to the link | n/a |
 
 **Post check:** Reel 1: label upfront, setting on, claims fine, code correct: pass. YouTube video: disclosure only in the description: fix before payment.

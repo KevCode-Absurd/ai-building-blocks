@@ -81,7 +81,7 @@ Level 2: build in a new base or private teamspace and test with sample records. 
 
 ## Example of good output (short)
 
-*Made-up organisation: Harbourside Food Bank, volunteers and shifts on Airtable Team.*
+*Illustrative structure, not a real organisation: a food bank running volunteers and shifts on Airtable Team. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Tables.** Volunteers (name, phone, skills: multi-select, DBS checked: checkbox, status: single select). Shifts (date, site: single select, slots: number). Sign-ups (link to Volunteer, link to Shift, attended: checkbox).
 >

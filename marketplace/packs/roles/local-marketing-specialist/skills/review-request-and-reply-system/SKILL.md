@@ -68,13 +68,13 @@ Access levels for this skill: auditing reviews and writing the kit needs level 1
 
 ## Example of good output (short)
 
-*Fernside Dog Grooming is a made-up grooming salon, used only to show the format.*
+*Illustrative structure, not a real business: a dog grooming salon. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Audit:** 23 reviews, 4.8 average, 3 new in the last six months, 4 replied to. The counter card says "Leave us 5 stars and get £5 off your next groom." That is a reward for a review, which Google bans: replace the card this week.
 
 **The ask (at pick-up, every owner):** "Bella was great today. If you have a minute, a Google review really helps other local dog owners find us; the link's on this card and in your text."
 
-**Follow-up text (same evening, to clients who agreed to texts):** "Thanks for bringing Bella in today. If you'd like to leave a review, here's our Google link: [link]. Fernside Grooming."
+**Follow-up text (same evening, to clients who agreed to texts):** "Thanks for bringing Bella in today. If you'd like to leave a review, here's our Google link: [link]. [Business]."
 
 **Reply, 5 stars:** "Thank you, Priya. Bella was a star for her first full groom, and the bandana suits her. See you both in six weeks."
 

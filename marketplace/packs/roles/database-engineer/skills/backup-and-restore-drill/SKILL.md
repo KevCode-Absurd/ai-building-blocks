@@ -75,7 +75,7 @@ Write the fixes: add a globals dump, add file storage backups, move a copy to a 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Pennant Bike Hire", PostgreSQL 17 on a single server.*
+*Illustrative structure, not a real business: a bike hire business running PostgreSQL 17 on a single server. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Check | Result |
 > |---|---|

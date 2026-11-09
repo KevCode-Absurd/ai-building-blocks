@@ -89,7 +89,7 @@ The owner approves each card. Until then, cards are marked "draft". At level 2 o
 
 ## Example of good output
 
-*Made-up business, for illustration only: "Harbour Lane Physio", a three-clinic practice.*
+*Illustrative structure, not a real business: a physiotherapy practice with three clinics. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Goal (to confirm):** 21,000 attended appointments in the year to 31 March 2027. Target given by owner: yes.
 >

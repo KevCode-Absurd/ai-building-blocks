@@ -94,19 +94,19 @@ Send the plan with the batch total, the cash after the run, and the release step
 
 ## Example of good output (short)
 
-Made-up business for illustration: Fernhill Joinery, a 9-person workshop.
+Illustrative structure, not a real business: a 9-person joinery workshop. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.
 
 > **Run of 13 November 2026.** Cash today 41,200.00. Kept back for payroll and VAT 26,500.00. Expected receipts by 13 Nov 6,000.00 (one customer, confirmed). Available 20,700.00. Run total 17,940.00. Cash after run 2,760.00.
 >
 > | Supplier | Invoices | Amount | Due | Reason |
 > |---|---|---|---|---|
-> | Oakline Timber | OT-3391, OT-3402 | 11,480.00 | 10 Nov | Overdue, critical stock |
-> | Brassworks Hardware | BH-882 | 3,920.00 | 15 Nov | Due, takes 2% discount (saves 80.00) |
-> | Sparkfield Electrical | SE-71 | 2,540.00 | 12 Nov | Due before next run |
+> | Supplier A | 3391, 3402 | 11,480.00 | 10 Nov | Overdue, critical stock |
+> | Supplier B | 882 | 3,920.00 | 15 Nov | Due, takes 2% discount (saves 80.00) |
+> | Supplier C | 71 | 2,540.00 | 12 Nov | Due before next run |
 >
-> **Discount, Brassworks:** 2% if paid within 10 days, otherwise 30 days. Yearly cost of skipping = (0.02 / 0.98) x (365 / 20) = about 37%. The client's overdraft costs 9% a year, so take it.
+> **Discount, Supplier B:** 2% if paid within 10 days, otherwise 30 days. Yearly cost of skipping = (0.02 / 0.98) x (365 / 20) = about 37%. The client's overdraft costs 9% a year, so take it.
 >
-> **Waits:** Clearcoat Finishes 2,300.00, due 27 Nov, next run.
+> **Waits:** Supplier D 2,300.00, due 27 Nov, next run.
 >
 > Batch built in BILL, unapproved. Release by the owner after checking the totals above.
 >

@@ -84,11 +84,11 @@ Date, rival, what changed (price, offer, message, new product, ads), source, and
 
 ## Example of good output (short)
 
-Made-up business for illustration: Tidewater Cycles, an e-bike shop comparing itself with three local rivals.
+Illustrative structure, not a real business: an e-bike shop comparing itself with three local rivals. Copy the shape, never the content: every fact comes from the client's own context.
 
 > **Position to own:** "Same-week repairs for any e-bike, wherever you bought it." Proof: 4.8 average on 160 public reviews mentioning repairs; no rival offers repairs for bikes bought elsewhere (pricing and service pages, captured 2 November 2026).
 >
-> | Row | Tidewater | Rival A | Rival B | Online-only brand |
+> | Row | The shop | Rival A | Rival B | Online-only brand |
 > |---|---|---|---|---|
 > | Price, entry e-bike | 1,450 | 1,390 | 1,600 | 1,290 + delivery |
 > | Repairs on other brands | Yes | No ("own-brand only", service page) | Not public | No |

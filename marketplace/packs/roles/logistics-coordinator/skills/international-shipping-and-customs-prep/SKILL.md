@@ -82,8 +82,8 @@ With confirmed data and the client's yes for the shipment, at level 3, create th
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Linden Rugs, a UK seller importing wool rugs from India and selling to EU customers.*
+*Illustrative structure, not a real business: a UK seller importing wool rugs from India and selling to EU customers. Copy the shape, never the content: every fact comes from the client's own context.*
 
-> **Incoterms (imports):** "FCA Jaipur, supplier's warehouse, Incoterms 2020". The supplier loads and clears export; Linden's forwarder carries, insures and clears UK import. Risk passes when the goods are handed to Linden's carrier in Jaipur. Payment terms stay in the purchase contract.
+> **Incoterms (imports):** "FCA Jaipur, supplier's warehouse, Incoterms 2020". The supplier loads and clears export; the seller's forwarder carries, insures and clears UK import. Risk passes when the goods are handed to the seller's carrier in Jaipur. Payment terms stay in the purchase contract.
 > **Fact sheet, rug R-12:** hand-knotted, 100% wool pile, cotton backing, 160 x 230 cm, floor covering. Code on the supplier's invoice: copied from the Indian export paperwork, **not confirmed for UK use**; broker to confirm the UK code.
 > **EU parcels (from 1 Jul 2026):** rugs under 150 euros no longer enter duty-free. Until 1 Jul 2028 a temporary 3 euro customs duty per item applies to these low-value consignments, and from 1 Nov 2026 the 2 euro Union handling fee on small parcels. Rugs over 150 euros pay normal duty as before. **Questions for the broker:** does the handling fee apply per parcel or per item on our route, and who collects it?

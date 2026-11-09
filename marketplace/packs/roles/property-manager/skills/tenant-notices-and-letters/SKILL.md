@@ -76,7 +76,7 @@ At level 2, save the draft and send the landlord a one-line summary and the risk
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Hollis Lettings, eight flats in Leeds, England.*
+*Illustrative structure, not a real business: a letting agent with eight flats in Leeds, England. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Notice of entry for a repair (formal: waiting for landlord's yes)**
 >
@@ -86,13 +86,13 @@ At level 2, save the draft and send the landlord a one-line summary and the risk
 >
 > Flat 3, 14 Carr Road: boiler repair
 >
-> Our heating engineer, Brightwell Gas, needs to replace the pressure valve on your boiler. You reported the fault on 4 November.
+> Our heating engineer, [Contractor], needs to replace the pressure valve on your boiler. You reported the fault on 4 November.
 >
 > We would like to visit on Monday 9 November between 9 am and 12 noon. If that does not suit you, Tuesday 10 November between 1 pm and 4 pm is also free.
 >
 > Please reply by 6 pm on Saturday 7 November to confirm a time. If you are out, the engineer can use the spare key we hold, as set out in clause 7.2 of your tenancy: "The Landlord may enter at reasonable times on at least 24 hours' written notice to carry out repairs."
 >
-> If you have any questions, please call Dan Hollis on the office number.
+> If you have any questions, please call Dan on the office number.
 >
 > **Rule used:** at least 24 hours' notice to enter for repairs, England (GOV.UK, making repairs). Checked 6 Nov 2026.
 > **Send by:** email and text to the numbers on file; keep a copy in the tenancy file.

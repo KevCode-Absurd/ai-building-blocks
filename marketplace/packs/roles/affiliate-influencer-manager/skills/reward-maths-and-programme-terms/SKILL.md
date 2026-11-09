@@ -68,7 +68,7 @@ A programme pays for itself only if the reward fits under what a new customer is
 
 ## Example of good output (short)
 
-*Kettle & Crumb is a made-up business used only to show the format: an online shop selling loose-leaf tea. All numbers are invented.*
+*Illustrative structure, not a real business: an online shop selling loose-leaf tea. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 | Input | Value |
 |---|---|
@@ -87,6 +87,6 @@ A programme pays for itself only if the reward fits under what a new customer is
 | $12 flat per new customer | $12.00 | Fits; predictable |
 | 10% off code plus 15% commission on the discounted order | $4.80 + $6.48 = $11.28 | Fits, but the discount also goes to buyers who would have paid full price |
 
-**Recommendation:** $12 flat per new customer, paid after the 30-day return window, tracking window 30 days, no coupon sites in the first three months, no bidding on "Kettle & Crumb".
+**Recommendation:** $12 flat per new customer, paid after the 30-day return window, tracking window 30 days, no coupon sites in the first three months, no bidding on "[Business]".
 
 *Why this works:* the reward comes from the shop's own margin, every assumption is labelled, and the rules stop paying for refunds and existing customers.

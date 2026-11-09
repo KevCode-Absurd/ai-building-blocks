@@ -91,7 +91,7 @@ After the client approves the wording, list and dates, send to the approved part
 
 ## Example of good output (short)
 
-*Made-up programme for illustration: Larkspur Adult Literacy, week 1 and week 12 survey.*
+*Illustrative structure, not a real programme: an adult literacy course with a week 1 and week 12 survey. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Your code:** first two letters of your town + the day of the month you were born (e.g. LE14).
 >

@@ -86,7 +86,7 @@ Lab slots before the production order; time for a retest if something fails; cer
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Little Fern Co.", a fabric activity book for toddlers, sewn in Portugal, sold online in the UK, EU and US.*
+*Illustrative structure, not a real business: a children's brand's fabric activity book for toddlers, sewn in Portugal, sold online in the UK, EU and US. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Flags.** Children (toddlers), textiles, small parts (buttons and a squeaker), cords (ribbon tags).
 >

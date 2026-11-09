@@ -96,7 +96,7 @@ The plan version, the attachments, the portal or address, the deadline. Ask for 
 
 ## Example of good output (short)
 
-Made-up business for illustration: Crumb and Co, a bakery seeking a £60,000 bank loan to open a second site.
+Illustrative structure, not a real business: a bakery seeking a £60,000 bank loan to open a second site. Copy the shape, never the content: every fact comes from the client's own context.
 
 > **Reader:** high-street bank, small business lending team. **Decision:** lend £60,000 over five years.
 >

@@ -62,7 +62,7 @@ Most "sales crashes" are part data, part real. The job is to separate the two fa
 
 ## Example of good output (short)
 
-*Northgate Outdoor is a made-up camping gear store used only to show the format. All figures are invented.*
+*Illustrative structure, not a real business: a camping gear store. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Claim:** GA4 revenue down 31% (week of 12 Oct against the week before). Store net sales down 6%.
 

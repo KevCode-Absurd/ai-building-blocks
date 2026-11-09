@@ -53,7 +53,7 @@ Most packaging reprints come from a few faults: artwork off the dieline, text to
 
 ## Example of good output (short)
 
-*Northwind Pet Treats is a made-up business used only to show the format: a 150 g kraft stand-up pouch printed digitally. Access I have: printer account level 2; design file level 1.*
+*Illustrative structure, not a real business: a pet treat maker with a 150 g kraft stand-up pouch printed digitally. Access I have: printer account level 2; design file level 1. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Item | Printer rule | Status | Fix |
 |---|---|---|---|

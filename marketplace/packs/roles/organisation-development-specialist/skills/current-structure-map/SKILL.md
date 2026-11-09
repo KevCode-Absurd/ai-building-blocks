@@ -77,7 +77,7 @@ Note where any future change could affect jobs, locations or contract terms, and
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Fernhollow Software, 140 staff (chart shortened; finance, people and operations not shown).*
+*Illustrative structure, not a real business: a software firm, 140 staff (chart shortened; finance, people and operations not shown). Copy the shape, never the content: every fact comes from the client's own context.*
 
 ```mermaid
 flowchart TD

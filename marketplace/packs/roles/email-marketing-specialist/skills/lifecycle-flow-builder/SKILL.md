@@ -69,7 +69,7 @@ A flow is a short series of emails that starts when someone does something: sign
 
 ## Example of good output (short)
 
-*Tidewater Tea Co. is a made-up business used only to show the format: a small online tea shop. Flow: sunset for contacts with no click or order in 9 months. All details are invented.*
+*Illustrative structure, not a real business: a small online tea shop. Flow: sunset for contacts with no click or order in 9 months. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Flow map:** Trigger: no click and no order in 9 months, still subscribed. Exit: clicks "Keep me on the list", orders, or unsubscribes. After email 3 with no action, the platform removes them from marketing sends (suppressed, not deleted, so they are never re-added by accident).
 
@@ -94,6 +94,6 @@ If you'd like to stay, one click does it.
 
 If not, you don't need to do anything. Thanks for reading with us.
 
-Ines, Tidewater Tea Co.
+Ines, [Business]
 
 *Why this works:* it is honest about what happens next, gives one clear action, and actually stops, which protects the client's complaint rate and sender reputation.

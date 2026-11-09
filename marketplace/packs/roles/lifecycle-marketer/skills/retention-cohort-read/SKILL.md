@@ -57,7 +57,7 @@ Most shops know their total sales and not much else about repeat buying. This sk
 
 ## Example of good output (short)
 
-*Larkfield Coffee Roasters is a made-up business used only to show the format. All figures are invented.*
+*Illustrative structure, not a real business: an online coffee roaster. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Definitions:** paid orders, full refunds removed (41 orders), customer = store customer ID, calendar months, Jan to Dec 2026.
 

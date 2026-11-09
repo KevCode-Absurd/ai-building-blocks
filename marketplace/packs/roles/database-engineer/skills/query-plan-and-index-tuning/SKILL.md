@@ -94,7 +94,7 @@ At level 2, build on staging and re-measure. At level 3, after a fresh yes for e
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Copperleaf Tea" order history page on PostgreSQL 18, 4.1 million orders.*
+*Illustrative structure, not a real business: a tea shop's order history page on PostgreSQL 18, with 4.1 million orders. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Finding:** `Seq Scan on orders (actual rows=30 loops=1) Rows Removed by Filter: 4,118,220`. The page reads every order to show one customer's latest 30.
 >

@@ -65,7 +65,7 @@ Not for: online store promotions or email campaigns (see the `ecommerce-manager`
 
 ## Example of good output (short)
 
-*Fern and Fable is a made-up gift shop in a UK market town, used only to show the format. Access I have: Square level 2.*
+*Illustrative structure, not a real business: a gift shop in a UK market town. Access I have: Square level 2. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **February (quiet; half-term week 3; no local events).** Goal: more visits on weekdays.
 

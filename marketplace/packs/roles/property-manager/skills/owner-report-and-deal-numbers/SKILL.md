@@ -72,7 +72,7 @@ Do not use it to value a property, recommend a purchase, advise on a mortgage or
 
 ## Example of good output (short)
 
-*Made-up figures for illustration: a two-bed flat, price 180,000, rent 1,000 a month.*
+*Illustrative structure, not a real property: a two-bed flat, price 180,000, rent 1,000 a month. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 | Input | Value | Source |
 |---|---|---|

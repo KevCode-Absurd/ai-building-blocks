@@ -71,7 +71,7 @@ Do not use it to judge individual staff, accuse anyone of theft, or give tax or 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Copperleaf Cafe, October.*
+*Illustrative structure, not a real business: a cafe, October. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Mains (1,000 sold; equal share 25%; average contribution £8.71)**
 >

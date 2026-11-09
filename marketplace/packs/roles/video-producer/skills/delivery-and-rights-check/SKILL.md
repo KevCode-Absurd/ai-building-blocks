@@ -59,7 +59,7 @@ Most video problems show up after upload: a copyright claim, a muted track, capt
 
 ## Example of good output (short)
 
-*Okafor Physio is a made-up clinic used only to show the format. Access I have: YouTube level 2, Instagram level 1.*
+*Illustrative structure, not a real business: a physiotherapy clinic. Access I have: YouTube level 2, Instagram level 1. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Item | Where | Source | Licence | Allows | Proof | Status |
 |---|---|---|---|---|---|---|
@@ -67,4 +67,4 @@ Most video problems show up after upload: a copyright claim, a muted track, capt
 | Stock clip, runner | 0:12-0:15 | Pexels | Pexels licence | Commercial use, no credit | Download link saved | Cleared; no endorsement implied |
 | Patient on camera | 0:20-0:31 | Filmed in clinic | Consent form | Web and social | Signed form on file | Cleared |
 
-**Blocker:** the Instagram version needs a music track cleared for business use on Meta. **Log:** uploaded "Okafor_16x9_60s_v04" to YouTube as private with SRT captions; not published.
+**Blocker:** the Instagram version needs a music track cleared for business use on Meta. **Log:** uploaded "[Business]_16x9_60s_v04" to YouTube as private with SRT captions; not published.

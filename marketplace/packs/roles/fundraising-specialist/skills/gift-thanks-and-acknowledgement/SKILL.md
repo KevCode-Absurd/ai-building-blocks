@@ -62,7 +62,7 @@ Not for: deciding whether a gift is deductible, whether Gift Aid applies to an u
 
 ## Example of good output (short)
 
-*Riverside Youth Orchestra is a made-up charity, used only to show the format. Names and figures are invented.*
+*Illustrative structure, not a real organisation: a youth orchestra charity. Copy the shape, never the content: every fact comes from the client's own context. Names and figures only show the shape.*
 
 | Gift type | Country | Rule | Wording needed |
 |---|---|---|---|
@@ -71,6 +71,6 @@ Not for: deciding whether a gift is deductible, whether Gift Aid applies to an u
 | £20 online gift from a UK taxpayer | UK | Gift Aid declaration | Declaration with full name, home address and postcode, and agreement to claim |
 | £15 raffle ticket | UK | Not a gift for Gift Aid | No Gift Aid; thank-you only |
 
-**First-gift thank-you (email, sent within two days):** "Dear Sam, thank you for your $300. It pays for a term of cello lessons for one student. In March you'll hear the spring concert they've been working towards. No goods or services were provided in exchange for this contribution. Riverside Youth Orchestra. With thanks, Priya Shah, Director."
+**First-gift thank-you (email, sent within two days):** "Dear Sam, thank you for your $300. It pays for a term of cello lessons for one student. In March you'll hear the spring concert they've been working towards. No goods or services were provided in exchange for this contribution. [Charity]. With thanks, Priya Shah, Director."
 
 **Note for the client:** the $60 dinner value is our estimate from the caterer's per-head price; ask your accountant to confirm before the gala receipts go out.

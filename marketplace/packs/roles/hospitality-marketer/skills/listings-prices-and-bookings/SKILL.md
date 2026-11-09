@@ -63,7 +63,7 @@ Not for: legal rulings on pricing, fees or contracts (point to the regulator's g
 
 ## Example of good output (short)
 
-*The Harbour Inn is a made-up 12-room inn with a restaurant, used only to show the format. Details are invented.*
+*Illustrative structure, not a real business: a 12-room inn with a restaurant. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Listing | Issue | Fix | Level |
 |---|---|---|---|

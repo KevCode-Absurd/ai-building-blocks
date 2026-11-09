@@ -55,7 +55,7 @@ Two questions sit behind most retention work: who are our customers now (RFM), a
 
 ## Example of good output (short)
 
-*Larkspur Coffee Co. is a made-up coffee subscription and shop used only to show the format. Figures are invented. As of 31 Oct 2026; 6,120 customers after cleaning (from 6,488: 211 duplicates merged, 157 test or fully refunded).*
+*Illustrative structure, not a real business: a coffee subscription and shop. Copy the shape, never the content: every fact comes from the client's own context. As of 31 Oct 2026; 6,120 customers after cleaning (from 6,488: 211 duplicates merged, 157 test or fully refunded). Figures only show the shape.*
 
 | Group | Rule | Customers | Share of revenue | AOV | Action |
 |---|---|---|---|---|---|

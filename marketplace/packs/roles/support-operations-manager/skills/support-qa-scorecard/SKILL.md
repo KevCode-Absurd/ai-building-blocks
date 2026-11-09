@@ -102,7 +102,7 @@ With web search connected, check the QA tool's current features and plan before 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Larder Box, a meal kit company with a six-person support team.*
+*Illustrative structure, not a real business: a meal kit company with a six-person support team. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Line: Correct facts and policy (weight 25, critical)**
 > Pass: "You can skip next week's box until Thursday 11:59pm, and you won't be charged." (matches the skip policy)

@@ -82,7 +82,7 @@ Compare each image or clip with the truth sheet. Reject any that changes the pro
 
 ## Example of good output (short)
 
-*Made-up business: Emberwick soy candles, 8 oz amber glass jar, cork lid, plain kraft label with black serif text "EMBERWICK / Fig & Cedar".*
+*Illustrative structure, not a real business: a soy candle maker; 8 oz amber glass jar, cork lid, plain kraft label with black serif text "[BUSINESS] / Fig & Cedar". Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Style block:** Natural-light lifestyle photograph, soft window light from the left, warm neutral palette (cream #F3EDE2, walnut #5B3A29, sage #9CAF88), shallow depth of field, calm and unhurried mood.
 >

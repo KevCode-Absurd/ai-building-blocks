@@ -80,7 +80,7 @@ At level 2, save the quote as a draft and list the open questions for the owner.
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Brookside Plumbing, two plumbers.*
+*Illustrative structure, not a real business: a plumbing business with two plumbers. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Quote 1147: replace kitchen mixer tap and isolation valves**
 > | Task | Materials | Labour | Price |
@@ -91,7 +91,7 @@ At level 2, save the quote as a draft and list the open questions for the owner.
 >
 > **Not included:** the tap itself (you are supplying it), repairs to the worktop or cupboard base if the old fittings are seized, disposal of the old sink.
 > **If we find a problem:** we stop, show you, and send a written change note with the price before doing more.
-> **Valid for:** 30 days (from Brookside's standard terms). **To accept:** reply "yes" or tap Approve in the quote email.
+> **Valid for:** 30 days (from the business's standard terms). **To accept:** reply "yes" or tap Approve in the quote email.
 >
 > **Follow-up, day 3:** "Hi Sam, did the quote for your kitchen tap make sense? Happy to explain any line. We still have Thursday morning free."
 >

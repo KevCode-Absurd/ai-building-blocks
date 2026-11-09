@@ -89,7 +89,7 @@ Every rule, step and term matches the source and its order. Warnings stay word f
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Pellow Energy call centre, 20-minute Rise module "Take a meter reading by phone", SOP v4.*
+*Illustrative structure, not a real business: an energy company's call centre, with a 20-minute Rise module "Take a meter reading by phone", SOP v4. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | # | On-screen text | Narration | Visual | Interaction | Feedback | Build notes |
 > |---|---|---|---|---|---|---|

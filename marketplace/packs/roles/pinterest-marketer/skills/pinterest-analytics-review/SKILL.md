@@ -70,7 +70,7 @@ Each change: what to do, why (the evidence), how to measure it, and when to look
 
 ## Example of good output (short)
 
-*Made-up business: Kiln & Table, a UK ceramics shop. Figures invented for illustration.*
+*Illustrative structure, not a real business: a UK ceramics shop. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Headline:** Outbound clicks fell 31% on the same quarter last year. Most of the drop comes from 11 Christmas Pins published in late November, after the climb had started. The Pinterest tag hasn't sent a Checkout event since the shop changed theme on 2 Sep.
 >

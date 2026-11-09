@@ -89,7 +89,7 @@ For each filing, prepare the answers and documents at level 2, list what the own
 
 ## Example of good output (short)
 
-Made-up business for illustration: Saltmarsh Kitchen, a sole trader in England starting a catering business and hiring a part-time kitchen assistant in March.
+Illustrative structure, not a real business: a sole trader in England starting a catering business and hiring a part-time kitchen assistant in March. Copy the shape, never the content: every fact comes from the client's own context.
 
 > **Mode:** official pages checked live, 6 Nov 2026.
 >

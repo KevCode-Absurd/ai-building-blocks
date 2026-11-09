@@ -57,7 +57,7 @@ Access levels for this skill: the plan and review need level 1 (read the app's s
 
 ## Example of good output (short)
 
-*Ledgerline Accounting is a made-up business used only to show the format: a small accounting firm with a Softr client portal on an Airtable base.*
+*Illustrative structure, not a real business: a small accounting firm with a Softr client portal on an Airtable base. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Role | Can see | Can add | Can change | Must never see |
 |---|---|---|---|---|

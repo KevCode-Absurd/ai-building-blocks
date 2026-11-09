@@ -75,7 +75,7 @@ Do not use it to write or interpret contract terms, settle a dispute or decide p
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Northgate Studio, a six-person design agency. Rate given by the agency: GBP 75 an hour.*
+*Illustrative structure, not a real business: a six-person design agency. Rate given by the agency: GBP 75 an hour. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Change request 3: Spanish version of the site**
 > Hi Marta, thanks for the idea of a Spanish version. It isn't in our current scope (section 4 lists one language), so here is what it would involve:

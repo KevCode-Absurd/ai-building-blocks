@@ -56,7 +56,7 @@ The title and thumbnail are one promise in two parts. The thumbnail shows the pi
 
 ## Example of good output (short)
 
-*Lumen Bike Lights is a made-up business used only to show the format: a small maker of bicycle lights with a channel on riding safely at night. All details are invented.*
+*Illustrative structure, not a real business: a small maker of bicycle lights with a channel on riding safely at night. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Promise:** "See which light setup drivers actually notice at night."
 

@@ -88,7 +88,7 @@ A short action list with owners (fix a missing contract term, shorten a retentio
 
 ## Example of good output (short)
 
-*Made-up business: Orrin Physio, a 12-person clinic group in Leeds with an online booking tool and a newsletter.*
+*Illustrative structure, not a real business: a 12-person clinic group in Leeds with an online booking tool and a newsletter. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Activity | Data categories | Systems | Vendors | Retention | Owner |
 |---|---|---|---|---|---|

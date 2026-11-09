@@ -63,7 +63,7 @@ Not for: tax returns, accounts or payroll (send those to an accountant), or onli
 
 ## Example of good output (short)
 
-*Larkspur Books is a made-up shop, and every figure below is made up, used only to show the format. Data: Square item sales and transactions, 1 Aug to 31 Oct 2026, one location. Access I have: Square level 1.*
+*Illustrative structure, not a real business: a bookshop. Data: Square item sales and transactions, 1 Aug to 31 Oct 2026, one location. Access I have: Square level 1. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Headline:** net sales up 6% on the same months last year; transactions flat; ATV up, so people bought more per visit rather than more people coming in.
 

@@ -59,7 +59,7 @@ Most marketplace launches that fail do so on cost or paperwork, not demand. This
 
 ## Example of good output (short)
 
-*Saltmarsh Skincare is a made-up UK skincare brand used only to show the format. Costs are invented; fees and duties are marked to verify.*
+*Illustrative structure, not a real business: a UK skincare brand. Fees and duties are marked to verify. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 | Option | Price excl. VAT | Landed cost | Fees | Returns | Keep per unit | Verdict |
 |---|---|---|---|---|---|---|

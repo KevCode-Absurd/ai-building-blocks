@@ -70,11 +70,11 @@ Consistent terms are what make a translated product feel cared for. This skill d
 
 ## Example of good output (short)
 
-*Mesa Verde Bookings is a made-up business used only to show the format: a restaurant booking app adding French for France.*
+*Illustrative structure, not a real business: a restaurant booking app adding French for France. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Source | Target (fr-FR) | Part of speech | Context and note | Status |
 |---|---|---|---|---|
-| Mesa Verde | Mesa Verde | name | Brand. Do not translate. | approved |
+| [Brand] | [Brand] | name | Brand. Do not translate. | approved |
 | booking | réservation | noun, feminine | A table booking. The client chose the French word over the English loanword. | approved |
 | party size | nombre de couverts | noun phrase | Restaurant term for number of diners. | approved |
 | order (purchase) | commande | noun, feminine | Food ordered at the table. | approved |

@@ -83,7 +83,7 @@ By creator: orders, returns, contribution after commission and sample cost, post
 
 ## Example of good output
 
-*Brightwick Home (a made-up business). Reed diffuser: contribution on an own-video order $9.59 at 20% off (no commission); client's minimum profit per order $4.00.*
+*Illustrative structure, not a real business: a home fragrance shop. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape. Reed diffuser: contribution on an own-video order $9.59 at 20% off (no commission); client's minimum profit per order $4.00.*
 
 **Commission ceiling:** $9.59 − $4.00 = $5.59, which is 20.6% of the $27.20 price after discount. Suggested offer: 15%, leaving room to reward proven sellers.
 
@@ -97,4 +97,4 @@ By creator: orders, returns, contribution after commission and sample cost, post
 
 **For your fresh yes:** invite @homewithana into a 15% commission offer on the diffuser.
 
-**Brief line on disclosure (US):** "Put 'Ad' in large text on screen in the first seconds and say 'Brightwick sent me this' when you talk about it."
+**Brief line on disclosure (US):** "Put 'Ad' in large text on screen in the first seconds and say '[Business] sent me this' when you talk about it."

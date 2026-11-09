@@ -58,7 +58,7 @@ Not for: researching private wealth, property or family finances; tax advice on 
 
 ## Example of good output (short)
 
-*Elmfield Hospice is a made-up charity, used only to show the format. The prospect and figures are invented.*
+*Illustrative structure, not a real organisation: a hospice charity. Copy the shape, never the content: every fact comes from the client's own context. The prospect and figures only show the shape.*
 
 | Prospect | Giving | Last contact | Cares about (own words) | Next step | Lead | Date |
 |---|---|---|---|---|---|---|

@@ -83,7 +83,7 @@ For associations and networks: list member segments and their needs from the cli
 
 ## Example
 
-*Made-up example: "Riverside Community School" is invented for illustration.*
+*Illustrative structure, not a real organisation: a community school. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Teaching weeks (Year 8 science, 3 lessons a week):** Autumn 14 weeks minus 1 assessment week and 1 trip week = 12; Spring 12 minus 1 = 11; Summer 12 minus 2 exam weeks and 1 activities week = 9. Total 32 teaching weeks; one buffer week per term leaves 29 for units.
 

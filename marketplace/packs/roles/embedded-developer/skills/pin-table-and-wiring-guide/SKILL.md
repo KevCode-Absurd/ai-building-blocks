@@ -97,7 +97,7 @@ If code exists, list every pin it uses and compare with the table. Any mismatch 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Larch Lane Bakery", a fridge temperature logger on a Raspberry Pi 4.*
+*Illustrative structure, not a real business: a bakery with a fridge temperature logger on a Raspberry Pi 4. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Summary.** A Pi 4 reads two waterproof temperature probes and lights a red LED if either fridge goes above the limit set in the program. Powered by the official USB-C supply.
 >

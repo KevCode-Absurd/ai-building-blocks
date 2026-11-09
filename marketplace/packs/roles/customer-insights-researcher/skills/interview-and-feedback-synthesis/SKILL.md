@@ -87,7 +87,7 @@ Answer first. Then theme cards, the decision map, customer words, the fix list, 
 
 ## Example of good output
 
-Made-up business for illustration: Pebblecart, 12 interviews with cancelled subscribers, October 2026.
+Illustrative structure, not a real business: an online grocer that ran 12 interviews with cancelled subscribers in October 2026. Copy the shape, never the content: every fact comes from the client's own context.
 
 > **Answer first.** 1) Most people cancelled when a week went off routine (holiday, illness, guests) and skipping felt harder than stopping. 2) Price came up often but rarely as the trigger. 3) Two people left over substitutions; small numbers, but both were angry.
 >

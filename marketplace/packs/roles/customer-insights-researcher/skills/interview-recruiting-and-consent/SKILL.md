@@ -98,10 +98,10 @@ Keep a recruitment log: invited, screened in, screened out (and why), booked, at
 
 ## Example of good output
 
-Made-up business for illustration: Pebblecart, an online grocer, studying why subscribers cancel.
+Illustrative structure, not a real business: an online grocer studying why subscribers cancel. Copy the shape, never the content: every fact comes from the client's own context.
 
-> **Target:** 12 people in the UK who cancelled a Pebblecart subscription in the last 60 days. Quotas: 6 who subscribed under 3 months, 6 longer; at least 4 outside London. Exclude: anyone working in food retail, delivery or research.
+> **Target:** 12 people in the UK who cancelled a [Business] subscription in the last 60 days. Quotas: 6 who subscribed under 3 months, 6 longer; at least 4 outside London. Exclude: anyone working in food retail, delivery or research.
 >
-> **Outreach (email to cancelled customers, allowed by the privacy notice's research clause):** "We're Pebblecart's research team. We'd like to hear what made you cancel, in a 30-minute video call, recorded only if you agree. This is research, not a sales call: we won't try to win you back. As thanks, you'll receive a £30 gift card you can use at a range of shops (not a Pebblecart voucher) within 7 days of the call. Taking part is up to you. Reply to book, or ignore this email."
+> **Outreach (email to cancelled customers, allowed by the privacy notice's research clause):** "We're [Business]'s research team. We'd like to hear what made you cancel, in a 30-minute video call, recorded only if you agree. This is research, not a sales call: we won't try to win you back. As thanks, you'll receive a £30 gift card you can use at a range of shops (not a [Business] voucher) within 7 days of the call. Taking part is up to you. Reply to book, or ignore this email."
 >
-> **Consent boxes (unticked):** I agree to take part. I agree to the call being recorded (audio and video, deleted after 6 months). I agree to short clips being shown to Pebblecart staff without my name. I'm happy to be contacted about future research.
+> **Consent boxes (unticked):** I agree to take part. I agree to the call being recorded (audio and video, deleted after 6 months). I agree to short clips being shown to [Business] staff without my name. I'm happy to be contacted about future research.

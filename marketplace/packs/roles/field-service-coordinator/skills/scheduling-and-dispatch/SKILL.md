@@ -81,7 +81,7 @@ From the tool's reports: arrivals outside the window, visits moved by the busine
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Northgate Heating, three engineers.*
+*Illustrative structure, not a real business: a heating firm with three engineers. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Tuesday: Ola (gas, boilers)**
 > | # | Window | Job | Area | Parts | Notes |

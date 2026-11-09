@@ -69,7 +69,7 @@ Not for store category and filter design (that has its own patterns), visual des
 
 ## Example of good output (short)
 
-*Riverside Community Choir is a made-up nonprofit used only to show the format. Evidence: site search export (three months) and 40 enquiry emails. Access I have: level 1 (exports).*
+*Illustrative structure, not a real organisation: a community choir run as a nonprofit. Evidence: site search export (three months) and 40 enquiry emails. Access I have: level 1 (exports). Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Top tasks:** 1. Find out how to join (most frequent search term). 2. See concert dates and buy tickets. 3. Check rehearsal times and venue. 4. Donate or sponsor.
 

@@ -60,7 +60,7 @@ A cover has to work twice: as a thumbnail in an online store, and as a printed o
 
 ## Example of good output (short)
 
-*The Lighthouse Ledger by "Mara Quinn" is a made-up book used only to show the format. Its details are invented for this example.*
+*Illustrative structure, not a real book or author: a paperback novel with a lighthouse on the cover, published through KDP. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Book facts:** paperback, KDP, 6 x 9 in, 312 pages, white paper, black and white interior.
 

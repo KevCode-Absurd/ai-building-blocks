@@ -63,9 +63,9 @@ Most communities do not die from a crisis. They fade: a burst of posts at launch
 
 ## Example of good output (short)
 
-*Ledgerly is a made-up bookkeeping app with a Slack community of 640 customers, used only to show the format. Numbers are invented.*
+*Illustrative structure, not a real business: a bookkeeping app with a Slack community of 640 customers. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
-**Purpose:** A place for small-business owners using Ledgerly to get their books done faster, together.
+**Purpose:** A place for small-business owners using [Business] to get their books done faster, together.
 
 **Spaces:** #welcome-and-rules, #introductions, #ask-anything, #month-end (closing the month), #events. Archive #random and #feature-ideas-old (no posts in 90 days).
 

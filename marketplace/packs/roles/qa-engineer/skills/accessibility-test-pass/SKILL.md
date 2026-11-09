@@ -81,7 +81,7 @@ At level 2, add an axe check to existing end-to-end tests for each key state, fa
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Larch Lane Pet Supplies", an online shop; checkout flow on staging.*
+*Illustrative structure, not a real business: an online pet supplies shop; checkout flow on staging. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Summary:** 4 pages, 9 states, axe-core through Playwright with WCAG 2.2 AA tags, keyboard pass, VoiceOver on Safari (macOS). Two findings block checkout for keyboard and screen reader users.
 >

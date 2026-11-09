@@ -92,7 +92,7 @@ Version, date, what changed, what was tested and on which hardware, the rollback
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Brightwater Aquatics", an ESP32 tank monitor sold in the UK and EU, 400 units in the field.*
+*Illustrative structure, not a real business: an aquatics business selling an ESP32 tank monitor in the UK and EU, with 400 units in the field. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Gap.** Single app partition, no rollback; every unit ships with the admin password "admin".
 >

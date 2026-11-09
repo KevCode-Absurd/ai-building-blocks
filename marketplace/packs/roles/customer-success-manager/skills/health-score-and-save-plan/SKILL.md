@@ -82,11 +82,11 @@ One table, sorted red, amber, green, then by value and days to renewal. Add what
 
 ## Example of good output (short)
 
-> **Made-up example: Rotaflow, scheduling software for care homes (not a real business).**
+> **Illustrative structure, not a real business: a scheduling software company serving care homes. Copy the shape, never the content: every fact comes from the client's own context.**
 >
 > | Account | Score | Reasons | Likely cause | Action | Owner, date |
 > |---|---|---|---|---|---|
 > | Home 14 | Red | 2 of 12 managers logged in since 1 Oct; 3 tickets on shift swaps | **Fact:** swap bug reported 4 Oct, fixed 28 Oct. **Guess:** staff went back to paper | 30-minute retraining call, offer to re-import rotas | Priya, 12 Nov |
 > | Home 3 | Amber | Champion Dana left in Sept (email bounce) | **Fact:** new manager not yet met | Intro email to new manager with a 15-minute set-up offer | Priya, 8 Nov |
 >
-> **Draft to Home 14:** "Hi Joe, the shift swap bug your team hit in October is fixed as of 28 October. I can see most managers haven't been back since. Could I take 30 minutes with your team next week to re-import this month's rotas and show the swap screen? If Rotaflow isn't the right fit any more, tell me that too and I'll make leaving simple."
+> **Draft to Home 14:** "Hi Joe, the shift swap bug your team hit in October is fixed as of 28 October. I can see most managers haven't been back since. Could I take 30 minutes with your team next week to re-import this month's rotas and show the swap screen? If [Product] isn't the right fit any more, tell me that too and I'll make leaving simple."

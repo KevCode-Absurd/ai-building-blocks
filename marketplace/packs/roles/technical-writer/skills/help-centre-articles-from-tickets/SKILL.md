@@ -63,7 +63,7 @@ Not for: legal terms written from scratch (a qualified adviser writes those; thi
 
 ## Example of good output (short)
 
-*Pinewick Candles is a made-up business used only to show the format: an online candle shop with 140 tickets last month.*
+*Illustrative structure, not a real business: an online candle shop with 140 tickets last month. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Question map (extract):**
 
@@ -78,7 +78,7 @@ Not for: legal terms written from scratch (a qualified adviser writes those; thi
 >
 > You can change the address until your order is packed, usually within a few hours of ordering [confirm: packing time]. After that, contact us and we will try to redirect it.
 >
-> 1. Open the email with the subject **Your Pinewick order** and select **View order**.
+> 1. Open the email with the subject **Your [Business] order** and select **View order**.
 > 2. Select **Edit delivery address**.
 > 3. Enter the new address and select **Save**.
 >

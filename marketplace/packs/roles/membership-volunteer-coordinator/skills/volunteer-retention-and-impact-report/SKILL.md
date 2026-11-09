@@ -59,7 +59,7 @@ Not for: employment or benefits advice, disciplinary action against paid staff, 
 
 ## Example of good output (short)
 
-*Riverbend Befriending is a made-up charity, used only to show the format. Names and numbers are invented.*
+*Illustrative structure, not a real organisation: a befriending charity. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Drop-off summary:** 31 people joined in the year; 12 were still active in October. Most who stopped did so after their first visit (9) or around month three (7). The month-three group often mentioned new work hours.
 

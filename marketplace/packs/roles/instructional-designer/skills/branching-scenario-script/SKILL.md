@@ -98,7 +98,7 @@ Choices as real buttons reachable by keyboard; no timers on decisions, or a way 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Saltmarsh Outdoor retail, refund without a receipt, policy v2 section 3.*
+*Illustrative structure, not a real business: an outdoor retailer; refund without a receipt, policy v2 section 3. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **S2 (after the customer says "I bought it here last week, I just lost the receipt"):**
 > The customer puts the jacket on the counter. "It's falling apart already. I'm not leaving without my money."

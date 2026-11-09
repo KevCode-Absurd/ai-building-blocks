@@ -96,7 +96,7 @@ One markdown document:
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Harbour Lane Bikes, a 14-person bike shop and repair workshop in Bristol, UK.*
+*Illustrative structure, not a real business: a 14-person bike shop and repair workshop in Bristol, UK. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Template: check this with local rules before use. Applies to: Bristol, UK, on site.**
 >

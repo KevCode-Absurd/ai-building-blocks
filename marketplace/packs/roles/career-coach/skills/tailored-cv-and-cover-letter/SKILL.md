@@ -98,7 +98,7 @@ One answer per question, in order, inside the word limit, each using a STAR exam
 
 ## Example of good output (short)
 
-Made-up person for illustration: a garden centre assistant manager applying for a UK retail store manager job.
+Illustrative structure, not a real person: a garden centre assistant manager applying for a UK retail store manager job. Copy the shape, never the content: every fact comes from the client's own context.
 
 > **Needs and evidence**
 >

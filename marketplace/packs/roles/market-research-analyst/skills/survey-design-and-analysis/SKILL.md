@@ -85,7 +85,7 @@ Answer first, then the tables, then the method box: who was surveyed, how invite
 
 ## Example of good output (short)
 
-Made-up business for illustration: Brightwell Bookkeeping, testing a monthly fixed-fee package for sole traders.
+Illustrative structure, not a real business: a bookkeeping firm testing a monthly fixed-fee package for sole traders. Copy the shape, never the content: every fact comes from the client's own context.
 
 > **Answer.** Among 214 usable respondents (sole traders on the client's newsletter list, 3 to 14 October 2026), the acceptable monthly range was 38 to 61, with most "getting expensive" answers clustering near 55. This is stated preference from an opt-in list, not a random sample, so no margin of error is given.
 >

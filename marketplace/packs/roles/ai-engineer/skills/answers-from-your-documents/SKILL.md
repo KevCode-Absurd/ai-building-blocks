@@ -85,7 +85,7 @@ At level 2, open a pull request with the indexing script, prompt, test set and r
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Brightwater Care", a home-care agency with a 140-page staff handbook.*
+*Illustrative structure, not a real business: a home-care agency with a 140-page staff handbook. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Sizing:** about 90,000 tokens, changes monthly. Starting with the whole handbook in a cached prompt, no retrieval. Revisit if the handbook passes about 200,000 tokens.
 >

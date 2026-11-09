@@ -78,11 +78,11 @@ Read it as the most sceptical reader. Is anything implied that the numbers don't
 
 ## Example
 
-*Made-up business for illustration: Tallyhop, a 22-person software company selling scheduling tools to dental practices in the UK and Ireland. October investor update.*
+*Illustrative structure, not a real business: a 22-person software company selling scheduling tools to dental practices in the UK and Ireland. Copy the shape, never the content: every fact comes from the client's own context. October investor update. Figures only show the shape.*
 
-> **Lowlight first:** we lost Smile Group (11% of recurring revenue) on 18 Oct after their merger; their new owner uses a rival system. Monthly recurring revenue fell from £96k to £88k. Plan: we have paused the second sales hire and moved one engineer onto the integration two prospects asked for.
+> **Lowlight first:** we lost Customer A, a dental group (11% of recurring revenue) on 18 Oct after their merger; their new owner uses a rival system. Monthly recurring revenue fell from £96k to £88k. Plan: we have paused the second sales hire and moved one engineer onto the integration two prospects asked for.
 >
-> **Highlights:** 9 new practices signed (plan: 7). Churn excluding Smile Group: 1.2% [definition unchanged].
+> **Highlights:** 9 new practices signed (plan: 7). Churn excluding Customer A: 1.2% [definition unchanged].
 >
 > | | Oct | Sep | Plan |
 > |---|---|---|---|

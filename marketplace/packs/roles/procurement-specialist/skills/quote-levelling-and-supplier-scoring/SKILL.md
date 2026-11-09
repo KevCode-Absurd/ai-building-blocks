@@ -75,7 +75,7 @@ One page: the recommendation (or a shortlist of two to sample or negotiate with)
 
 ## Example of good output (short)
 
-*Made-up business: Larkspur Dental, three clinics in Ohio choosing a patient booking system. Figures are invented for illustration.*
+*Illustrative structure, not a real business: a group of three dental clinics in Ohio choosing a patient booking system. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Basis:** 3 clinics, 14 users, 3 years, USD.
 >

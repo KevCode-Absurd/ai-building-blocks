@@ -95,7 +95,7 @@ Questions: [numbered list]
 
 ## Example of good output (short)
 
-*Made-up business: Pawtrail, a dog-walking booking app in the UK.*
+*Illustrative structure, not a real business: a dog-walking booking app in the UK. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > Convention: Object Action in Title Case; properties in snake_case.
 >

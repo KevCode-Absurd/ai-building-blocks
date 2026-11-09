@@ -90,13 +90,13 @@ Offer a role-play: the coach plays the person, using each of the three replies. 
 
 ## Example of good output (short)
 
-*Made-up example: Sam manages Leo at a fictional design studio, Brightline Studio. Leo does excellent work but has missed four client deadlines in six weeks.*
+*Illustrative structure, not a real business: Sam manages Leo at a design studio. Leo does excellent work but has missed four client deadlines in six weeks. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Aim:** Leo meets client deadlines or tells me two days ahead if he can't.
 >
-> **Opening (Sam's voice):** "Leo, thanks for making time. Your work on the Harlow rebrand was the best we've done this year, and I want to talk about deadlines, because four have slipped since September and it's starting to cost us with clients."
+> **Opening (Sam's voice):** "Leo, thanks for making time. Your work on the [Client A] rebrand was the best we've done this year, and I want to talk about deadlines, because four have slipped since September and it's starting to cost us with clients."
 >
-> **Core message:** On the Harlow, Fenwick and two Ostrava deliveries (dates listed), files arrived one to three days late. Two clients called me to chase. What was going on for you those weeks?
+> **Core message:** On the [Client A], [Client B] and two [Client C] deliveries (dates listed), files arrived one to three days late. Two clients called me to chase. What was going on for you those weeks?
 >
 > **If Leo defends ("The briefs kept changing"):** "That may be right, and I want to fix that too. On these four, here's what I saw. What would have helped you flag it earlier?"
 >

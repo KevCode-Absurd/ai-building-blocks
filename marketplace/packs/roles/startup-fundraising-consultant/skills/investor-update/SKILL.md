@@ -82,9 +82,9 @@ Show the founder the final update and the recipient list. After the yes, send to
 
 ## Example of good output (short)
 
-Made-up company for illustration: Brindle Health, software for physiotherapy clinics.
+Illustrative structure, not a real company: a startup making software for physiotherapy clinics. Copy the shape, never the content: every fact comes from the client's own context.
 
-> **Subject:** Brindle Health, October: our largest clinic group won't renew; runway 14 months
+> **Subject:** [Business], October: our largest clinic group won't renew; runway 14 months
 >
 > Clinic Group A (9% of revenue) told us it won't renew in December; the reason is our price for small sites. Revenue grew 6% this month from new clinics.
 >
@@ -98,6 +98,6 @@ Made-up company for illustration: Brindle Health, software for physiotherapy cli
 >
 > **Miss:** Clinic Group A will leave; our per-site price is too high for groups of small clinics. Fix: a group price tested with two prospects in November; we'll know by 15 December.
 >
-> **Ask:** an introduction to an operations lead at a clinic group with over 30 sites. *Forwardable:* "Brindle runs bookings and notes for 212 physio clinics; they want to learn how large groups buy."
+> **Ask:** an introduction to an operations lead at a clinic group with over 30 sites. *Forwardable:* "[Business] runs bookings and notes for 212 physio clinics; they want to learn how large groups buy."
 >
 > *Check this with local rules and ask a qualified accountant or lawyer.*

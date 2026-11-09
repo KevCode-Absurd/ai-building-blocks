@@ -93,7 +93,7 @@ Three runs at least: one row, no rows, a full period. Plus the "must never happe
 
 ## Example of good output (short)
 
-*Made-up business: Fernhill Tutoring, weekly attendance summary in Google Sheets (free account).*
+*Illustrative structure, not a real business: a tutoring business; weekly attendance summary in Google Sheets (free account). Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Plan.** 1. Read the Register tab. 2. Count sessions attended per student for last week. 3. Write the counts to the Weekly tab. 4. Email the summary to the owner only. 5. Log the run.
 >

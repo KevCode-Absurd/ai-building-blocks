@@ -67,7 +67,7 @@ Not for fully automatic decisions about people, money or health, and not a promi
 
 ## Example of good output (short)
 
-*Cobble Lane Plumbing is a made-up eight-person business used only to show the format: website enquiries arrive by email and are typed into the job system by hand. Access I have: level 1 (sample emails with names removed).*
+*Illustrative structure, not a real business: an eight-person plumbing business whose website enquiries arrive by email and are typed into the job system by hand. Copy the shape, never the content: every fact comes from the client's own context. Access I have: level 1 (sample emails with names removed).*
 
 1. **Tool:** new enquiry email arrives in the shared inbox; automation picks it up.
 2. **AI (route and extract):** classify as "emergency", "quote request", "existing job" or "other"; extract name, postcode, problem, preferred times into fixed fields; "UNSURE" if no postcode or the type is unclear.

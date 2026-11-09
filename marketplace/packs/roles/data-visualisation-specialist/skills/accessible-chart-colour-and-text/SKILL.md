@@ -92,7 +92,7 @@ One page: each colour with hex code, role, contrast ratios on each background, w
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Saltmarsh Cycles", brand green #3FB27F, navy #1D2B53, coral #FF7A59, charts on white and on a #121212 dark mode.*
+*Illustrative structure, not a real business: a cycling brand with brand green #3FB27F, navy #1D2B53 and coral #FF7A59, charting on white and on a #121212 dark mode. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Colour | Hex | On white | On #121212 | Role |
 > |---|---|---|---|---|

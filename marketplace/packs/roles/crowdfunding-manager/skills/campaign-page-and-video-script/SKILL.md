@@ -58,9 +58,9 @@ A backer decides fast. Kickstarter's own design guide (19 Oct 2026) says many vi
 
 ## Example of good output (short)
 
-*Brightfield Lantern is a made-up product used only to show the format.*
+*Illustrative structure, not a real product: a folding solar camping lantern. Copy the shape, never the content: every fact comes from the client's own context.*
 
-**Title:** Brightfield: the solar lantern that charges your phone at camp
+**Title:** [Product]: the solar lantern that charges your phone at camp
 **Subtitle:** A folding lantern with a full day of light from a morning in the sun. Third working prototype, tested on 14 trips.
 
 **Risks and challenges**

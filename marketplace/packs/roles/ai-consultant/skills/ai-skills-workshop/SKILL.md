@@ -62,7 +62,7 @@ Not for building AI tools, and never with real customer or staff data in practic
 
 ## Example of good output (short)
 
-*Hollin Housing Co-op is a made-up 20-person housing association used only to show the format: staff have Microsoft 365 with Copilot Chat. Access I have: level 1 (task list and the co-op's draft AI rules).*
+*Illustrative structure, not a real business: a 20-person housing co-op whose staff have Microsoft 365 with Copilot Chat. Copy the shape, never the content: every fact comes from the client's own context. Access I have: level 1 (task list and the co-op's draft AI rules).*
 
 **Practice task 2 (round 2, show an example).** Goal: reply to a tenant asking when a repair will happen.
 - **Starting prompt:** "Here is a reply we sent last month that tenants found clear [paste anonymised example]. Write a reply in the same style to this message: [made-up tenant message]. Do not promise a date. Keep it under 120 words."

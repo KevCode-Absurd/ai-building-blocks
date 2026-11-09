@@ -63,19 +63,19 @@ Access levels for this skill: the audit needs only level 1 (screenshots, the pub
 
 ## Example of good output (short)
 
-*Brightwater Plumbing is a made-up two-van plumbing firm, used only to show the format.*
+*Illustrative structure, not a real business: a two-van plumbing firm. Copy the shape, never the content: every fact comes from the client's own context.*
 
-**Snapshot (checked 3 Nov):** name "Brightwater Plumbing Bristol 24hr Emergency Plumber"; primary category "Plumber" plus seven service-type categories; owner's home address visible; no holiday hours; 41 reviews, 4.6 average, 9 replied to; last post in March.
+**Snapshot (checked 3 Nov):** name "[Business] Bristol 24hr Emergency Plumber"; primary category "Plumber" plus seven service-type categories; owner's home address visible; no holiday hours; 41 reviews, 4.6 average, 9 replied to; last post in March.
 
 | Item | Current | Rule | Fix | Risk | Level |
 |---|---|---|---|---|---|
-| Name | Town and service words added | Real-world name only | "Brightwater Plumbing" | High | Fresh yes, then owner or L3 |
+| Name | Town and service words added | Real-world name only | "[Business]" | High | Fresh yes, then owner or L3 |
 | Address | Home address shown | Hide address if customers are not served there | Hide; set 12 postcode areas | High | Fresh yes, then owner or L3 |
 | Categories | 8, mostly services | Few, specific, what the business is | Keep "Plumber"; move the rest to Services | Medium | L3 within limits, or owner |
 | Hours | No holiday hours | Accurate hours, including special hours | Add Christmas and New Year hours | Medium | L3 within limits, or owner |
 | Website link | Home page, untagged | Track profile visits | Boiler service page, tagged | Low | L3 within limits, or owner |
 
-**Rivals:** the two firms above Brightwater in the map pack show 120 and 86 reviews, both reply to most reviews, and both post monthly. One also has a stuffed name; we do not copy it.
+**Rivals:** the two firms above the client in the map pack show 120 and 86 reviews, both reply to most reviews, and both post monthly. One also has a stuffed name; we do not copy it.
 
 **Fix order:** 1. Name and address (owner approves; fix before anything else). 2. Categories and services. 3. Holiday hours. 4. Tagged website link. 5. Review routine (review-request-and-reply-system skill). 6. Weekly post rhythm.
 

@@ -62,7 +62,7 @@ Not for visual style, brand mock-ups or code. The spec says what is on each scre
 
 ## Example of good output (short)
 
-*Fernway Dog Walks is a made-up business used only to show the format: a mobile web flow for rebooking a walk. Access I have: level 1 (brief and two screenshots).*
+*Illustrative structure, not a real business: a dog walking service, with a mobile web flow for rebooking a walk. Access I have: level 1 (brief and two screenshots). Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Screen 3: Choose a time**
 - **Job:** pick a free slot for the same dog and walker.

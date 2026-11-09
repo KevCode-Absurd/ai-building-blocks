@@ -58,7 +58,7 @@ Shoppers find products by the dimensions they care about: use, size, room, fit, 
 
 ## Example of good output (short)
 
-*Oak & Ember Living is a made-up furniture shop used only to show the format. Figures are invented for this example.*
+*Illustrative structure, not a real business: a furniture shop. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Category tree (extract)**
 

@@ -97,7 +97,7 @@ Four to six sentences: why this option fits, the total, what happens next, what 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Northlight Studio, a two-person product photography studio quoting a skincare brand.*
+*Illustrative structure, not a real business: a two-person product photography studio quoting a skincare brand. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Cover note:** Thanks for the brief, Dana. For 24 product shots on white plus 6 styled scenes, I'd recommend the Launch package below: it covers everything you listed for the March site relaunch in one studio day. The total is £3,180 including VAT. If it works for you, the £950 deposit holds 4 March; the quote is valid until 4 December 2026.
 >

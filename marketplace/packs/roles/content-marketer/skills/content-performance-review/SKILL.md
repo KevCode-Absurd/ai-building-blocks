@@ -66,7 +66,7 @@ If GA4 key events are not set up, the first recommendation is to set them up; un
 
 ## Example of good output (short)
 
-*Tallyline is a made-up business used only to show the format: a rota and shift app for independent cafes, with a blog and a monthly newsletter. Figures are invented for this example; the period is one quarter.*
+*Illustrative structure, not a real business: a rota and shift app for independent cafes, with a blog and a monthly newsletter; the period is one quarter. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Headline:** content brought in 41 trial sign-ups this quarter (up from 29), almost all from three guides about staff scheduling rules and rota templates. Newer opinion posts drew visits but no sign-ups.
 

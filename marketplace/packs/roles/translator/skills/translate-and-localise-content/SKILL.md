@@ -69,7 +69,7 @@ Not for: certified, sworn or notarised translations; legal, medical or regulator
 
 ## Example of good output (short)
 
-*Ferrata Bikes is a made-up business used only to show the format: a UK e-bike shop launching a German page for Germany.*
+*Illustrative structure, not a real business: a UK e-bike shop launching a German page for Germany. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Brief block:** de-DE. Reader: commuters in German cities comparing e-bikes. Purpose: book a test ride. Tone: friendly, formal "Sie" (client choice). Constraint: hero headline 40 characters.
 

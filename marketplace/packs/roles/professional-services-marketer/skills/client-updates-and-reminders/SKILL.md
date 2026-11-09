@@ -58,7 +58,7 @@ These are general communications. Dates, rules, rates and cover details come onl
 
 ## Example of good output (short)
 
-*Bramble Cover Agency is a made-up insurance agency, used only to show the format. All details are invented for this example.*
+*Illustrative structure, not a real business: an insurance agency. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Renewal reminder (timing set by the agency):**
 
@@ -72,6 +72,6 @@ Has anything changed this year? For example, building work, a new lodger, or exp
 
 If nothing has changed, you don't need to do anything. Your renewal documents will arrive by [date]. Please check them carefully, because they set out exactly what your policy covers.
 
-[Name], Bramble Cover Agency"
+[Name], [Business]"
 
 **Review list:** "'make sure you're fully covered' removed - [REVIEW] implied promise of cover; replaced with 'check that your cover still fits your home'."

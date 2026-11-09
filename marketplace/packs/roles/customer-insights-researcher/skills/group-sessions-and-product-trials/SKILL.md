@@ -83,7 +83,7 @@ Readout: answer first, themes with counts and quotes (groups and diaries) or res
 
 ## Example of good output
 
-Made-up business for illustration: Brackenridge Kitchen, testing a lower-sugar granola (B) against the current recipe (A).
+Illustrative structure, not a real business: a granola maker testing a lower-sugar granola (B) against the current recipe (A). Copy the shape, never the content: every fact comes from the client's own context.
 
 > **Decision rule (agreed before tasting):** switch to B if overall liking is not lower than A by more than the smallest difference the panel can detect, and fewer than a third of tasters rate B "not sweet enough".
 >

@@ -90,7 +90,7 @@ For each top problem write one prevention rule: a required field at a stage, a p
 
 ## Example of good output (short)
 
-*Made-up business: Fennick Labs, a 20-person software company on HubSpot.*
+*Illustrative structure, not a real business: a 20-person software company on HubSpot. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Summary.** One in five companies looks duplicated, mostly created by the billing sync. Thirty-eight open deals have a close date in the past. Country is free text with 14 spellings.
 

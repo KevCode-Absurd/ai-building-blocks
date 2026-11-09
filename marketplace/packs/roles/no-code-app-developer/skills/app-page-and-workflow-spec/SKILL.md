@@ -54,7 +54,7 @@ Access levels for this skill: writing the spec needs level 1. Building pages and
 
 ## Example of good output (short)
 
-*Northfield Tutors is a made-up business used only to show the format: a tutoring agency building a parent portal in Bubble.*
+*Illustrative structure, not a real business: a tutoring agency building a parent portal in Bubble. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Page card: My lessons (must-have)**
 - Purpose: parents see their child's upcoming and past lessons.

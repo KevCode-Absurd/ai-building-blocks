@@ -38,7 +38,7 @@ Draw it in Mermaid: greeting, intent choice (buttons plus free text), answer, fo
 
 ### 4. Write the bot's words
 
-- **Greeting:** says it is an AI assistant, what it can help with and how to reach a person. Example: "Hi, I'm Fernhill's AI assistant. I can help with orders, delivery and returns. Type 'person' at any time to reach our team."
+- **Greeting:** says it is an AI assistant, what it can help with and how to reach a person. Example: "Hi, I'm [Business]'s AI assistant. I can help with orders, delivery and returns. Type 'person' at any time to reach our team."
 - **Buttons:** short labels people understand ("Track my order", not "Order status enquiry").
 - **Answers:** two or three sentences with a link to the full policy.
 - **Not understood:** own it ("I didn't catch that") and offer choices; on the second miss, offer a person.
@@ -86,7 +86,7 @@ At level 2, build the flow in draft or test mode. At level 3, publish to the agr
 
 ## Example of good output
 
-*Made-up business, for illustration only: "Fernhill Garden Supplies".*
+*Illustrative structure, not a real business: an online garden supplies shop. Copy the shape, never the content: every fact comes from the client's own context.*
 
 ```mermaid
 flowchart TD

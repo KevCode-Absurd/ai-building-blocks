@@ -59,7 +59,7 @@ With web search connected, I read the guest's recent interviews and posts so the
 
 ## Example of good output (short)
 
-*Harbour Lane Bakery Podcast is a made-up show used only to show the format. All details are invented.*
+*Illustrative structure, not a real show: an interview podcast for small bakery owners. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Promise:** After this episode, a small bakery owner will know how to raise prices without losing regulars.
 

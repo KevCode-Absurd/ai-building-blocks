@@ -67,7 +67,7 @@ Not for: drawing the dieline itself, structural engineering, or legal sign-off o
 
 ## Example of good output (short)
 
-*Kettle Hill Preserves is a made-up business used only to show the format: a 340 g glass jar of raspberry jam sold in the US, with a front label and a back label. Access I have: Canva level 1.*
+*Illustrative structure, not a real business: a jam maker with a 340 g glass jar of raspberry jam sold in the US, with a front label and a back label. Access I have: Canva level 1. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Panel map:** A front label 90 x 70 mm (shelf); B back label 90 x 70 mm (in the hand). Jar is a cylinder 85 mm tall, 255 mm round; the front label is the PDP.
 

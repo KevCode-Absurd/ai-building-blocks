@@ -59,7 +59,7 @@ description: Plans and ships changes to a design system safely - picks the versi
 
 ## Example of good output (short)
 
-*Copperline Fitness is a made-up gym booking app used only to show the format. Access I have: level 2 in GitHub and Figma; level 3 for minor and patch releases only.*
+*Illustrative structure, not a real business: a gym booking app. Access I have: level 2 in GitHub and Figma; level 3 for minor and patch releases only. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Version 4.0.0** (major: two removals). Release date set by the client.
 

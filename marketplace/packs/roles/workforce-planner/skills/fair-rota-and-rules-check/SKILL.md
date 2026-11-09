@@ -81,7 +81,7 @@ Any change to a person's hours or shifts after publishing needs the client's fre
 
 ## Example of good output (short)
 
-*Made-up business: Northgate Fitness, one gym in Leeds, 14 staff. Figures are invented for illustration.*
+*Illustrative structure, not a real business: a gym in Leeds with 14 staff. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Week of 9 March:** 412 hours, £5,486 against a £5,600 budget. 1 gap, 2 rule issues.
 >

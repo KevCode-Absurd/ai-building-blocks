@@ -100,13 +100,13 @@ Only with the owner's written authorisation and HR's agreement, using a tool the
 
 ## Example
 
-*Made-up example: "Kestrel Joinery" and its supplier "Oakline Timber" are invented for illustration.*
+*Illustrative structure, not a real business: a joinery firm and its timber supplier. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Example 2 (labelled "practice example"):**
-"Hi, Oakline Timber here. We've moved banks; please use the new details below for this week's invoice. Our phones are down so email only. Thanks, Accounts."
+"Hi, [Supplier] here. We've moved banks; please use the new details below for this week's invoice. Our phones are down so email only. Thanks, Accounts."
 
 **Signs:** changed bank details; pressure to avoid the phone; generic sign-off.
-**Action:** Stop. Call Oakline on the number in your supplier file, not one in the email. Report the email to Sam (07700 900000) using the report button.
+**Action:** Stop. Call the supplier on the number in your supplier file, not one in the email. Report the email to Sam (07700 900000) using the report button.
 
 **Quiz item:** "A text says your parcel can't be delivered and asks for a £1.45 fee. Phish or fine?" **Answer:** Phish. Small fees are a common way to collect card details. Delete it, and if you clicked, tell Sam today.
 

@@ -59,7 +59,7 @@ A slide is a glance medium. Duarte's Glance Test asks whether the audience gets 
 
 ## Example of good output (short)
 
-*Lakeside Bike Hire is a made-up business used only to show the format. Its 18-slide talk for a regional tourism conference, the numbers and the 20-minute slot are invented for this example.*
+*Illustrative structure, not a real business: a bike hire firm giving an 18-slide talk in a 20-minute slot at a regional tourism conference. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Main point:** Small rental firms can win repeat visitors by selling the second day, not the first.
 

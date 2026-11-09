@@ -91,7 +91,7 @@ Note how many metrics and segments were looked at. A single winning segment amon
 
 ## Example of good output (short)
 
-*Made-up business: Fernway Teas, testing a new checkout page. Planned 50/50 split, 14 days, sized to detect a rise from 4.0% to 4.8% (rule of thumb: 16 × 0.04 × 0.96 ÷ 0.008² = 9,600 per group).*
+*Illustrative structure, not a real business: an online tea shop testing a new checkout page. Copy the shape, never the content: every fact comes from the client's own context. Planned 50/50 split, 14 days, sized to detect a rise from 4.0% to 4.8% (rule of thumb: 16 × 0.04 × 0.96 ÷ 0.008² = 9,600 per group). Figures only show the shape.*
 
 > **Verdict: wait. Likely positive, but a zero effect is not ruled out.**
 >

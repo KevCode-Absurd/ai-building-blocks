@@ -76,7 +76,7 @@ For each item: the check-in condition and photo, the check-out condition and pho
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Penrose Property, a two-bed flat in Nottingham, England.*
+*Illustrative structure, not a real business: a letting business with a two-bed flat in Nottingham, England. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Advert:** Two-bedroom first-floor flat on Mapperley Road, 10 minutes' walk to the tram. Gas central heating, new kitchen (2025), separate bathroom with shower over bath, on-street parking with permit. Rent 950 pounds a month. Available from 1 December 2026. Pets considered on request. EPC rating C. Viewings Tuesday and Saturday.
 >

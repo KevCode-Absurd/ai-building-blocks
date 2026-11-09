@@ -82,7 +82,7 @@ End with three lists: **Fix now** (contradicted, or partly supported in a way th
 
 ## Example of good output
 
-Made-up business for illustration: Fernhill Water Filters, a one-page investor summary checked against three supplied reports.
+Illustrative structure, not a real business: a water filter company's one-page investor summary, checked against three supplied reports. Copy the shape, never the content: every fact comes from the client's own context.
 
 > **Summary.** 14 claims checked against the three reports you supplied (web search off). 8 supported, 3 partly supported, 2 not found, 1 contradicted. Biggest risk: claim 6 doubles the market growth rate.
 >

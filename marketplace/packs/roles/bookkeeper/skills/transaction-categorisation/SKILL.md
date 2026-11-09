@@ -92,7 +92,7 @@ One line per question: date, amount, payee, the question, and what evidence woul
 
 ## Example of good output (short)
 
-Made-up business for illustration: Fernhill Copy Studio, a sole trader writing for clients.
+Illustrative structure, not a real business: a sole trader writing copy for clients. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.
 
 > | Date | Payee | Amount | Account | Status | Reason | Receipt |
 > |---|---|---|---|---|---|---|

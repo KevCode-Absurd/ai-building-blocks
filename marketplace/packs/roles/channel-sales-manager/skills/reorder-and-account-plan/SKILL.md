@@ -89,7 +89,7 @@ With web search connected, look at the buyer's public shop or website for what t
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Hollow Oak Pantry, a jam and chutney maker selling to 60 farm shops and delis.*
+*Illustrative structure, not a real business: a jam and chutney maker selling to 60 farm shops and delis. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Buyer | Group | Usual gap | Days since last | Last order | Next action |
 > |---|---|---|---|---|---|
@@ -97,4 +97,4 @@ With web search connected, look at the buyer's public shop or website for what t
 > | F-031 | Active | 35 days | 30 days | GBP 240 | Reorder reminder, 8 Nov |
 >
 > **Reminder to F-031 (active)**
-> Hi Ellie, your last order was six jars each of Damson Jam and Fig Chutney. If you're running low before the Christmas rush, I can send the same again this week. We've also just made a Spiced Pear Chutney that our farm shops are asking about; want two jars to try alongside your order? Reply "same again" and I'll sort it. Mark, Hollow Oak Pantry
+> Hi Ellie, your last order was six jars each of Damson Jam and Fig Chutney. If you're running low before the Christmas rush, I can send the same again this week. We've also just made a Spiced Pear Chutney that our farm shops are asking about; want two jars to try alongside your order? Reply "same again" and I'll sort it. Mark, [Business]

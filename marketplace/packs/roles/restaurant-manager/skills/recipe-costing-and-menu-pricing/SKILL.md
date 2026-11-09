@@ -76,7 +76,7 @@ At level 3, publish the prices the owner approved to the agreed locations and ch
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Harbour Lane Bistro, 40 covers, target food cost 28%, prices include VAT at 20% (owner's figures).*
+*Illustrative structure, not a real business: a 40-cover bistro, target food cost 28%, prices include VAT at 20% (owner's figures). Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Card: Roast hake, new potatoes, samphire, brown shrimp butter (1 portion). Card date 6 Nov.**
 >

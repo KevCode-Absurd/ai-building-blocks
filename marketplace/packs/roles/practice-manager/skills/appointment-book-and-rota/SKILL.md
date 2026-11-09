@@ -91,7 +91,7 @@ Compare gaps, overruns, unused emergency slots, new patient wait and uncovered s
 
 ## Example of good output (short)
 
-> **Made-up example: Linden Vets, two vets, three nurses, two receptionists (not a real practice).**
+> **Illustrative structure, not a real business: a vet practice with two vets, three nurses and two receptionists. Copy the shape, never the content: every fact comes from the client's own context.**
 >
 > **Slot rules (set by the vets):** consult 15 min; vaccination 10 min; two 15-min emergency slots at 8:30 and 14:00, released to routine at 10:00 and 15:30 if unused; 30 min protected admin at 12:30 daily.
 >

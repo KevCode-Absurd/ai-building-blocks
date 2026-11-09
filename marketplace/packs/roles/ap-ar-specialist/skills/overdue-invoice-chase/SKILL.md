@@ -99,17 +99,17 @@ Send only the templates and customers in the approved limits. Log each send, cal
 
 ## Example of good output (short)
 
-Made-up business for illustration: Kittiwake Signs, a sign maker selling to shops and builders.
+Illustrative structure, not a real business: a sign maker selling to shops and builders. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.
 
 > **Overdue 4 November 2026: 23,880.00** (1 to 30 days 9,420.00; 31 to 60 days 8,960.00; over 60 days 5,500.00).
 >
 > | Customer | Invoice | Amount | Days late | Next step | Date |
 > |---|---|---|---|---|---|
-> | Harbourline Builders | KS-1182 | 5,500.00 | 64 | Call; ask for a date; offer two instalments within approved range | 5 Nov |
-> | Corner Pantry | KS-1240 | 1,180.00 | 9 | Reminder (step 2) | 5 Nov |
+> | Customer A | INV-1182 | 5,500.00 | 64 | Call; ask for a date; offer two instalments within approved range | 5 Nov |
+> | Customer B | INV-1240 | 1,180.00 | 9 | Reminder (step 2) | 5 Nov |
 >
-> **Reminder, step 2:** "Hi Priya, a quick note that invoice KS-1240 for 1,180.00 was due on 27 October and is still open. You can pay by the link below, or reply if anything on it needs fixing. Thanks, Sam, Kittiwake Signs, 01632 960 412."
+> **Reminder, step 2:** "Hi Priya, a quick note that invoice INV-1240 for 1,180.00 was due on 27 October and is still open. You can pay by the link below, or reply if anything on it needs fixing. Thanks, Sam, [Business], 01632 960 412."
 >
-> **For the owner:** Harbourline has missed two promised dates. Do you want to hold new orders until a plan is agreed?
+> **For the owner:** Customer A has missed two promised dates. Do you want to hold new orders until a plan is agreed?
 >
 > *General practice, not legal advice: check this with local rules and ask a qualified accountant or solicitor before claiming interest or taking legal steps.*

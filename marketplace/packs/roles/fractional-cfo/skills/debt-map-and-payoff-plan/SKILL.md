@@ -77,7 +77,7 @@ A short, factual plan: the numbers, the cause, the ask (for example a payment ho
 
 ## Example of good output (short)
 
-Made-up business for illustration: Hollin Bakery, two shops.
+Illustrative structure, not a real business: a bakery with two shops. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.
 
 > **Headline:** You owe 96,400 across five debts. Payments are 3,950 a month. Cash covers them every month, but only just in January and February.
 >

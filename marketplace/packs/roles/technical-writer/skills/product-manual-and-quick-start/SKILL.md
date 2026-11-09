@@ -61,7 +61,7 @@ Not for: certifying safety or legal compliance, drawing the illustrations, or pa
 
 ## Example of good output (short)
 
-*Brightfold is a made-up business used only to show the format: a folding laundry rack sold in the UK and Ireland.*
+*Illustrative structure, not a real business: a brand selling a folding laundry rack in the UK and Ireland. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Unfold the rack**
 

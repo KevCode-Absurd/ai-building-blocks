@@ -68,7 +68,7 @@ Week by week: moments climbing, Pins to publish (count and boards), pages to cre
 
 ## Example of good output (short)
 
-*Made-up business: Petal & Twine, a wedding stationery shop in the US. Curves invented for illustration.*
+*Illustrative structure, not a real business: a wedding stationery shop in the US. Copy the shape, never the content: every fact comes from the client's own context. The curves and dates only show the shape.*
 
 > | Moment | Main phrase | Climb starts | Peak | Publish by | Boards |
 > |---|---|---|---|---|---|

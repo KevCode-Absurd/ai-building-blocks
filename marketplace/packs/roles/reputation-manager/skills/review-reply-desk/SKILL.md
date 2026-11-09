@@ -73,7 +73,7 @@ Access levels for this skill: reading reviews is level 1. Drafting replies in a 
 
 ## Example of good output (short)
 
-*Harbour Lane Bistro is a made-up restaurant, used only to show the format.*
+*Illustrative structure, not a real business: a harbourside restaurant. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Ready to post (Google, 5 stars, "The crab linguine was perfect and Mia looked after us"):**
 "Thank you, Daniel. We'll tell the kitchen the linguine landed well, and Mia will be pleased you mentioned her. See you next time you're on the harbour."

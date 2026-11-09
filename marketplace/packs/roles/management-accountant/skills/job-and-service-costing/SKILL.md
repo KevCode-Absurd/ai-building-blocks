@@ -85,7 +85,7 @@ A sheet to track each live job weekly: budget hours and costs, actual to date, f
 
 ## Example of good output (short)
 
-Made-up business for illustration: Ridgeway Joinery, a 9-person fit-out firm.
+Illustrative structure, not a real business: a 9-person fit-out firm. Copy the shape, never the content: every fact comes from the client's own context.
 
 > **Method.** Joiner cost per hour: (38,000 pay + 6,100 employer costs) / 1,610 available hours = 27.39. Overhead rate: 96,600 overhead / 11,500 labour hours = 8.40 per hour. Change either in cell B4 or B7.
 >

@@ -96,7 +96,7 @@ Up and down, in the client's ORM or plain SQL for the named version. Run it up, 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Northgate Climbing Wall", class bookings on PostgreSQL 18.*
+*Illustrative structure, not a real business: a climbing wall with class bookings on PostgreSQL 18. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Rule to constraint**
 >

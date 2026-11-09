@@ -68,15 +68,15 @@ Inbox placement rests on three things: proving who you are (authentication), sen
 
 ## Example of good output (short)
 
-*Northgate Physio is a made-up business used only to show the format: a UK clinic sending about 1,500 marketing emails a week through an email platform. All records and numbers are invented.*
+*Illustrative structure, not a real business: a UK physio clinic sending about 1,500 marketing emails a week through an email platform. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
-**Verdict:** Not a bulk sender at Gmail. Main problem: there is no DMARC record and DKIM is signed with the platform's domain, so the mail cannot pass DMARC; clicks from Outlook.com and Hotmail addresses have halved since March while Gmail clicks held steady. First fix: set up custom DKIM for northgatephysio.example, then publish DMARC at p=none.
+**Verdict:** Not a bulk sender at Gmail. Main problem: there is no DMARC record and DKIM is signed with the platform's domain, so the mail cannot pass DMARC; clicks from Outlook.com and Hotmail addresses have halved since March while Gmail clicks held steady. First fix: set up custom DKIM for [domain], then publish DMARC at p=none.
 
 | Requirement | Provider | Status | Evidence | Fix |
 |---|---|---|---|---|
 | SPF passes | All | Pass | `spf=pass` in Gmail header | None |
 | DKIM aligned with From | All | Fail | `d=platformmail.example` | Add the platform's DKIM CNAMEs for your domain |
-| DMARC record | All | Missing | No TXT at `_dmarc` | Add `v=DMARC1; p=none; rua=mailto:dmarc@northgatephysio.example` |
+| DMARC record | All | Missing | No TXT at `_dmarc` | Add `v=DMARC1; p=none; rua=mailto:dmarc@[domain]` |
 | One-click unsubscribe | Gmail, Yahoo | Pass | Both headers present | None |
 
 **Consent finding:** 300 contacts came from a 2023 open-day sign-in sheet with no marketing wording. UK: individuals need consent or the soft opt-in; neither is shown. Action: do not mail them marketing; invite them through the next open day with clear wording.

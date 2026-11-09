@@ -61,7 +61,7 @@ Forms and workbooks share a job: someone has to read the page and write on it, o
 
 ## Example of good output (short)
 
-*Brightwater Plumbing is a made-up business used only to show the format. Its job sheet fields are invented for this example.*
+*Illustrative structure, not a real business: a plumbing firm with an A4 job sheet for its engineers. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Purpose:** engineers fill in an A4 job sheet on site, by hand, often on a van bonnet; the office types it up the next day. Problems now: job numbers missing, parts written as "misc", customer signature often blank.
 
@@ -69,7 +69,7 @@ Forms and workbooks share a job: someone has to read the page and write on it, o
 
 | Field | Label | Type | Required? | Check rule | Help text | Why asked |
 |---|---|---|---|---|---|---|
-| 1 | Job number | 6 boxes, "BW-" printed | Required | BW- then 4 digits | From the job card | Links to the invoice |
+| 1 | Job number | 6 boxes, "[PREFIX]-" printed | Required | [PREFIX]- then 4 digits | From the job card | Links to the invoice |
 | 2 | Arrival time | Time, 24-hour | Required | Before departure time | | Billing |
 | 7 | Parts used | Table, 8 rows: part, qty, from van or ordered | Required if parts used | Qty is a number | Write the part name, not "misc" | Stock and billing |
 | 12 | Customer signature | Signature box | Required | | Ask before you leave | Proof of completion |

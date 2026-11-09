@@ -99,7 +99,7 @@ Action: ...
 
 ## Example of good output (short)
 
-*Made-up organisation: Riverbend Juniors Swim Club, spring and summer term registers, 214 swimmers.*
+*Illustrative structure, not a real organisation: a junior swim club, with spring and summer term registers for 214 swimmers. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Should we keep the Thursday 6pm squad?**
 >

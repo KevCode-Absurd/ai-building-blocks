@@ -83,7 +83,7 @@ Before broker review or closing: every item received or explained, every signatu
 
 ## Example of good output (short)
 
-*Made-up deal for illustration: a 1962 house at 8 Rowan Street, buyer side, financed.*
+*Illustrative structure, not a real deal: a 1962 house at 8 Rowan Street, buyer side, financed. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Stage | Document | Provided by | Due | Received |
 > |---|---|---|---|---|

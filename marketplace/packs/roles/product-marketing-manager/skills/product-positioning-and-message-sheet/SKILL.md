@@ -96,11 +96,11 @@ Give three questions the client can ask five customers to see whether the core l
 
 ## Example of good output (short)
 
-Made-up business for illustration: Tallyfold, bookkeeping software for UK sole traders who sell on craft marketplaces.
+Illustrative structure, not a real business: bookkeeping software for UK sole traders who sell on craft marketplaces. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.
 
 > **Alternatives (from 14 lost deals and 30 reviews):** a spreadsheet (9 deals), a general accounting app (4), an accountant doing everything at year end (1).
 >
-> **One line:** For marketplace sellers who dread January, Tallyfold is bookkeeping software that matches every marketplace payout to its orders and fees automatically. Unlike a spreadsheet, it is done when the payout lands.
+> **One line:** For marketplace sellers who dread January, [Business] is bookkeeping software that matches every marketplace payout to its orders and fees automatically. Unlike a spreadsheet, it is done when the payout lands.
 >
 > | Pillar | Proof (client data) | Source |
 > |---|---|---|

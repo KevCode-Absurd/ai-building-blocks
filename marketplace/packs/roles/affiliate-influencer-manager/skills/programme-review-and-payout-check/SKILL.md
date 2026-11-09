@@ -56,7 +56,7 @@ A programme that is not checked pays for refunds, existing customers and fraud. 
 
 ## Example of good output (short)
 
-*Pebble & Post is a made-up business used only to show the format: an online stationery shop on an affiliate network, with a 30-day return window. All numbers are invented.*
+*Illustrative structure, not a real business: an online stationery shop on an affiliate network, with a 30-day return window. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Summary (October):** 214 partner orders; 141 from new customers (66%); 19 proposed declines (12 returns, 4 cancellations, 3 self-referrals); cost per new customer $9.80 against a $12 target.
 

@@ -58,7 +58,7 @@ Not for: paid ad testing and media buying (a media buyer handles that), or video
 
 ## Example of good output (short)
 
-*Northgate Physio is a made-up clinic used only to show the format: a five-slide Instagram carousel, "3 desk stretches", at 1080 x 1350 (4:5, sizes checked 6 Nov 2026). Job: save the post. Access I have: Canva level 2, scheduler level 1.*
+*Illustrative structure, not a real business: a physio clinic's five-slide Instagram carousel, "3 desk stretches", at 1080 x 1350 (4:5, sizes checked 6 Nov 2026). Job: save the post. Access I have: Canva level 2, scheduler level 1. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Slide | Text (exact) | Chars | Layout | Colours |
 |---|---|---|---|---|
@@ -72,4 +72,4 @@ Not for: paid ad testing and media buying (a media buyer handles that), or video
 
 **Alt text, slide 1:** "Title graphic: 3 stretches for desk days." **Caption:** the three stretches in full, plus "Save this post for later."
 
-**Log:** created Canva design "DRAFT Northgate desk stretches", five pages; not shared.
+**Log:** created Canva design "DRAFT [Business] desk stretches", five pages; not shared.

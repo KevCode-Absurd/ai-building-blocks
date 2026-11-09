@@ -83,7 +83,7 @@ Can a volunteer see, in one line per week, what to coach? Does each block link t
 
 ## Example of good output (short)
 
-*Made-up club for illustration: Harbourside Netball Club under-11s, 14 players, Saturday mornings, 75 minutes, September to December, festival days in October and December.*
+*Illustrative structure, not a real organisation: a netball club's under-11s, 14 players, Saturday mornings, 75 minutes, September to December, festival days in October and December. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Stage:** mostly Learn to Train, a few newer players still at FUNdamentals level. Keep it game-based; festival results are not recorded.
 >

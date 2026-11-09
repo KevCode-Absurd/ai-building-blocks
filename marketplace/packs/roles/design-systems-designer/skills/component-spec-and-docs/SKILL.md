@@ -64,7 +64,7 @@ Not for the visual polish of a single screen (see the UI designer kit) or for bu
 
 ## Example of good output (short)
 
-*Harbour Lane Pantry is a made-up grocery delivery app used only to show the format. Access I have: level 1 (Figma view link, React props).*
+*Illustrative structure, not a real business: a grocery delivery app. Access I have: level 1 (Figma view link, React props). Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Button.** Status: stable, v2.3. Purpose: start the one main action on a view. Not for navigation; use Link.
 

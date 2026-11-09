@@ -85,13 +85,13 @@ Clause by clause: version A, version B, what changed, and why it matters to the 
 
 ## Example of good output (short)
 
-*Made-up business: Larchwick Coffee Roasters buying a three-year e-commerce platform contract.*
+*Illustrative structure, not a real business: a coffee roaster buying a three-year e-commerce platform contract. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Summary (extract).** The platform hosts the online shop for three years from 1 Dec 2026 (cl. 3.1). It renews for another three years unless either side gives 90 days' written notice (cl. 3.2). Fees can rise once a year by an amount the supplier sets, with 30 days' notice (cl. 6.4). The supplier's liability is capped at fees paid in the previous three months (cl. 14.2).
 
 | Item | Clause | Who | When |
 |---|---|---|---|
-| Last day to give notice of non-renewal | 3.2 | Larchwick | 2 Sep 2029 (90 days before 1 Dec 2029) |
+| Last day to give notice of non-renewal | 3.2 | Roaster | 2 Sep 2029 (90 days before 1 Dec 2029) |
 | Annual fee review | 6.4 | Supplier | Each 1 Dec, 30 days' notice |
 
 **Questions for a qualified lawyer or auditor**

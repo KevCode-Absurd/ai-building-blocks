@@ -70,7 +70,7 @@ For a batch, also give one import-ready table (handle, title, SEO title, meta de
 
 ## Example of good output (short)
 
-*Hollow Lane Preserves is a made-up business used only to show the format. The product facts below are invented for this example.*
+*Illustrative structure, not a real business: a small preserves maker. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Fact sheet (extract)**
 
@@ -88,8 +88,8 @@ For a batch, also give one import-ready table (handle, title, SEO title, meta de
 | Surface | Title | Characters |
 |---|---|---|
 | Product page | Thick-Cut Seville Orange Marmalade | 34 |
-| SEO title | Thick-Cut Seville Orange Marmalade, 340 g - Hollow Lane | 55 |
-| Google feed | Hollow Lane Seville Orange Marmalade, Thick Cut, 340 g Jar | 58 |
+| SEO title | Thick-Cut Seville Orange Marmalade, 340 g - [Business] | 44 plus the brand name |
+| Google feed | [Business] Seville Orange Marmalade, Thick Cut, 340 g Jar | 47 plus the brand name |
 
 **Bullets**
 

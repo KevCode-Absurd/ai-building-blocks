@@ -100,7 +100,7 @@ What leavers and stayers told you (themes and counts), the changes you will make
 
 ## Example of good output (short)
 
-*Made-up business: Brightwater Care, 85 staff, home care visits in two towns, US.*
+*Illustrative structure, not a real business: a home care agency with 85 staff making visits in two towns, US. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Template: check this with local rules before use.**
 >

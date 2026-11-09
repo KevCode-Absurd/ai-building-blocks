@@ -56,7 +56,7 @@ Most communication failures are planning failures: two big asks in one week, a c
 
 ## Example of good output (short)
 
-*St Brendan's Primary is a made-up school used only to show the format.*
+*Illustrative structure, not a real organisation: a primary school. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Calendar (extract)**
 

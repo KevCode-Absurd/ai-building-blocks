@@ -107,11 +107,11 @@ One for each stage: after applying, after screening, after interview, after fina
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Larkfield Dental, a two-surgery dental practice in Columbus, Ohio, hiring a receptionist.*
+*Illustrative structure, not a real business: a two-surgery dental practice in Columbus, Ohio, hiring a receptionist. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Template: check this with local rules before use. Applies to: Columbus, Ohio, on site.**
 >
-> **Front desk coordinator, Larkfield Dental. $19 to $22 an hour, full time, Monday to Friday.**
+> **Front desk coordinator, [Business]. $19 to $22 an hour, full time, Monday to Friday.**
 >
 > You will be the first person our patients meet and the reason their visit runs on time. You will book and confirm about 60 appointments a day, take payments and explain costs before treatment.
 >

@@ -90,7 +90,7 @@ Log what ran, when and the result. Note what to change in the checklist next tim
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Brightwater Physio", moving its booking site to a new host.*
+*Illustrative structure, not a real business: a physio clinic moving its booking site to a new host. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | When | Step | Owner | Check | Stop here if |
 > |---|---|---|---|---|

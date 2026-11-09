@@ -60,7 +60,7 @@ Not for: tax or VAT rulings on sponsorship income, contract drafting, or inventi
 
 ## Example of good output (short)
 
-*Harbourside Food Festival is a made-up event, used only to show the format. All numbers are invented.*
+*Illustrative structure, not a real business: a food festival. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 | Tier | Includes | Price | For sale |
 |---|---|---|---|

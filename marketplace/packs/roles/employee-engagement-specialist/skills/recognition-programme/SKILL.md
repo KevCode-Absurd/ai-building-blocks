@@ -98,7 +98,7 @@ Show what a lean, a standard and a richer version buy, using only the client's f
 
 ## Example of good output (short)
 
-*Made-up business: Northgate Lettings, 38 staff in three offices and on the road, Scotland and England.*
+*Illustrative structure, not a real business: a letting agency with 38 staff in three offices and on the road, Scotland and England. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Template: check this with local rules before use, and ask a qualified accountant about gifts and awards.**
 >

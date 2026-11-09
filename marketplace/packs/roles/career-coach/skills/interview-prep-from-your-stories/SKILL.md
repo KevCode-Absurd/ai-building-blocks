@@ -97,7 +97,7 @@ A script a friend can read: the questions in order, one follow-up for each ("Wha
 
 ## Example of good output (short)
 
-Made-up person for illustration: a nurse going for a unit manager role, worried about questions on managing a poor performer.
+Illustrative structure, not a real person: a nurse going for a unit manager role, worried about questions on managing a poor performer. Copy the shape, never the content: every fact comes from the client's own context.
 
 > **Question:** "Tell me about a time you managed someone who was not meeting the standard."
 > **Story (STAR):** On a 24-bed ward, a newly qualified nurse was missing medication rounds on night shifts (S). As shift lead I had to raise it and protect patients (T). I met her privately, asked what was happening, learned she was struggling with the drug chart system, and set up two buddy shifts and a weekly ten-minute check-in for a month (A). Missed rounds stopped within three weeks, and she later trained two new starters on the system (R). I learned to ask before I assume (learning).

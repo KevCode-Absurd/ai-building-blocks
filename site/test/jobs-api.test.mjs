@@ -19,7 +19,7 @@ test('REST completes a synthetic structural job and serves actual JSON schemas w
   assert.equal(result.phase, 'COMPLETE');
   response = await handlePublicApi(new Request(origin + '/api/v1/schemas/ai-blocks-council/1.json', { headers: { 'cf-connecting-ip': '192.0.2.5' } }), env);
   assert.equal(response.status, 200); assert.equal((await response.json()).properties.schema.const, 'ai-blocks-council/1');
-  assert(PUBLIC_MCP_INSTRUCTIONS.slice(0, 512).includes('start_outcome')); assert(PUBLIC_MCP_INSTRUCTIONS.length < 2500);
+  assert(PUBLIC_MCP_INSTRUCTIONS.slice(0, 512).includes('prepare_job_context')); assert(PUBLIC_MCP_INSTRUCTIONS.slice(0, 1100).includes('start_outcome')); assert(PUBLIC_MCP_INSTRUCTIONS.length < 2500);
 });
 
 test('official MCP SDK discovers small job tools and completes the same protocol', async t => {

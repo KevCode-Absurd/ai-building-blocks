@@ -143,7 +143,8 @@ test('one front door: a small tool list with titles, short instructions, and cle
   const tools = JSON.parse(list).result.tools;
   assert.deepEqual(tools.map(t => t.name), PUBLIC_MCP_LISTED_TOOLS.map(t => t.name));
   assert.equal(tools[0].name, 'start_outcome');
-  assert.ok(Buffer.byteLength(list) < 60_000, `tools/list is ${Buffer.byteLength(list)} bytes`);
+  // 62 KB: prepare_job_context, the grounding front door, adds about 1.3 KB to the 60 KB list.
+  assert.ok(Buffer.byteLength(list) < 62_000, `tools/list is ${Buffer.byteLength(list)} bytes`);
   for (const tool of tools) assert.ok(tool.title, tool.name);
   for (const tool of PUBLIC_MCP_TOOLS) assert.ok(tool.title, tool.name);
   for (const name of ['scope_specialist_request', 'prepare_scoped_specialist_work', 'route_scoped_specialist_work', 'prepare_scoped_specialist_team', 'prepare_recommendation_handoff', 'prepare_specialist_team', 'checkpoint_specialist_team']) {

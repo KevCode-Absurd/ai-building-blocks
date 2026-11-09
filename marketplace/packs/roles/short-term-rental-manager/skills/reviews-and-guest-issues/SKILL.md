@@ -72,7 +72,7 @@ Turn each problem into a fix: a line in the house guide, a turnover checklist it
 
 ## Example of good output (short)
 
-*Made-up business for illustration: The Old Bakery, a one-bed let in Galway, Ireland.*
+*Illustrative structure, not a real business: a one-bed let in Galway, Ireland. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Guest reply (sent at level 3, 7:12 pm):** "Sorry the hot water has gone, Ms Brady. Our plumber, Ciaran, can be there by 8:30 tonight. Until then, the immersion switch by the bathroom door gives hot water in about 40 minutes. I'll message you the moment he's on his way."
 >

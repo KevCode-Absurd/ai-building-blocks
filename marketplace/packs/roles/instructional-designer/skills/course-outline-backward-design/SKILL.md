@@ -89,7 +89,7 @@ Group tickets into topics and count them. The biggest topics become the first le
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Tallyfern Training's four-week course "Excel for bookkeepers", 3 hours a week.*
+*Illustrative structure, not a real business: a training provider's four-week course "Excel for bookkeepers", 3 hours a week. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Result:** By the end, a junior bookkeeper can turn a bank export into a checked monthly summary in Excel, using tables, SUMIFS and a pivot table, in under 30 minutes.
 >

@@ -91,7 +91,7 @@ A ranked table, drafts beside each ticket, escalations, and the short list of de
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Saltmarsh Candle Co, an online candle shop in Portland, Maine, with a 30-day unopened returns policy.*
+*Illustrative structure, not a real business: an online candle shop in Portland, Maine, with a 30-day unopened returns policy. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Ticket | Band | Issue | Path | Check |
 > |---|---|---|---|---|
@@ -100,6 +100,6 @@ A ranked table, drafts beside each ticket, escalations, and the short list of de
 > | #1175 | Then | Can I return an opened candle? | Decline kindly | Policy: unopened only |
 >
 > **Draft, #1175**
-> Hi Jordan, thanks for asking. We can only take back candles that haven't been opened, so we can't accept this one as a return. If the scent isn't right for you, we're happy to help you choose another for next time, and [OWNER: offer 10% off the next order?]. Best, the Saltmarsh team
+> Hi Jordan, thanks for asking. We can only take back candles that haven't been opened, so we can't accept this one as a return. If the scent isn't right for you, we're happy to help you choose another for next time, and [OWNER: offer 10% off the next order?]. Best, the [Business] team
 >
 > **Escalation, #1182:** Customer reports a cracked jar while burning and a small burn mark on a table. Wants a refund and to know if it is safe. Policy does not cover this. Options: full refund ($34); refund plus ask for the jar back for checking with the supplier. Do not give safety advice in the reply; the owner decides wording.

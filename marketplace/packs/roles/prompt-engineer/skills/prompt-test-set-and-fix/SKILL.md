@@ -90,7 +90,7 @@ Give the client the test set, graders, results per version and the change log, s
 
 ## Example of good output (short)
 
-*Made-up business: Tallow & Thyme candle shop, review-reply prompt on Gemini 3.8 Flash, 30 cases including 4 injection cases.*
+*Illustrative structure, not a real business: a candle shop; review-reply prompt on Gemini 3.8 Flash, 30 cases including 4 injection cases. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Version | Change | Pass | Injection cases passed | Main remaining failure |
 |---|---|---|---|---|

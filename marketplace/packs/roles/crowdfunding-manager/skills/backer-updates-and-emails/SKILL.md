@@ -52,7 +52,7 @@ Backers are partners in a project that has not shipped yet. Kickstarter expects 
 
 ## Example of good output (short)
 
-*Kettle Hill Games is a made-up studio used only to show the format. Access I have: Kickstarter level 3 (Manage community and Coordinate fulfilment) for updates and reward statuses; email platform level 2.*
+*Illustrative structure, not a real business: a tabletop game studio. Access I have: Kickstarter level 3 (Manage community and Coordinate fulfilment) for updates and reward statuses; email platform level 2. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Update 9: Our print date has moved to March**
 

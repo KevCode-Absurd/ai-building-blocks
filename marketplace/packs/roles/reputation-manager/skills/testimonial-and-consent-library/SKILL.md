@@ -63,13 +63,13 @@ Access levels for this skill: reading feedback, surveys and reviews is level 1. 
 
 ## Example of good output (short)
 
-*Ledgerline Bookkeeping is a made-up accounting firm, used only to show the format.*
+*Illustrative structure, not a real business: a bookkeeping firm. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Request (email, sent the week after the client's year-end filing):**
 "Hi Amara, now that your year-end is filed, would you be willing to share a few words about working with us? We'd like to use them on our website. Three quick questions are below; answer as briefly as you like. We'll send you the final wording before anything is used, and you can say no at any point."
 
 **Edited quote sent back for approval:**
-"Before Ledgerline, I spent most Sunday evenings on receipts. Now I send a photo and it's done. Our year-end went in three weeks early." Amara Okafor, owner, Okafor Florals.
+"Before [Business], I spent most Sunday evenings on receipts. Now I send a photo and it's done. Our year-end went in three weeks early." Amara Okafor, owner, [client's business].
 "Is this OK to use on our website, with your name and business name, for two years?"
 
 **Consent log**

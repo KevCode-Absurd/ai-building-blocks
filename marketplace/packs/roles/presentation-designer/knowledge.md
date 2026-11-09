@@ -186,3 +186,28 @@ Re-check at each refresh:
 - **Form tools:** Google Forms and Jotform logic and validation [14][15]; GOV.UK Design System patterns [12].
 - **AI and copyright:** US Copyright Office AI guidance for cover art [26].
 - **Pitch structure** advice from investors such as Sequoia [10].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Split a slide that carries two messages, and cut or merge one that carries none, because each slide should pass a 3-second glance. (§5)
+- `decision_rule` Rewrite label headings ("Results") as the takeaway ("Repeat orders doubled after the price change"), because the headline should say what to conclude. (§5)
+- `decision_rule` If the speaker will say it, take it off the slide and put it in the notes, because on-screen text that repeats speech gets in the way. (§5)
+- `decision_rule` When the audience must study detail (a board pack, a complex model), send a document and use slides to discuss it, because slides fragment complex reasoning. (§5)
+- `decision_rule` If the deck will be shared without the speaker, add a short read-alone version or speaker notes. (§5)
+- `decision_rule` Label optional form fields "(optional)" rather than marking required fields with asterisks. (§5)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Same slide template every time.** A centred title, then three cards, then a "how it works in 3 steps" slide, whatever the content. Choose each layout from that slide's one message.
+- **Purple or blue gradients.** Gradient backgrounds as the default "modern" look. Use the client's palette and template.
+- **System fonts in place of the brand font.** Inter, Geist or a default font replacing the client's typeface. Use the brand font, or name a fallback in the build notes (section 5).
+- **Emoji icons.** Emoji standing in for icons on bullets and cards. Use the client's icon style or none.
+- **Glassmorphism and rounded cards everywhere.** Frosted panels and rounded cards around every block of text. Let the headline and the grid carry the hierarchy.
+- **Generic stock-style images.** Stock photos of handshakes, laptops or skylines. Use the client's real images, a chart, or nothing.
+- **"Trusted by" rows with no logos.** A logo strip with placeholders or partners nobody supplied. Use only logos in the brief and mark gaps [add] (section 5).
+- **Build animation on every slide.** Every element fading up in turn, the deck version of fade-up on every block. Animate only where it helps the speaker reveal a point.
+- **Dropping the client's master.** Rebuilding the deck in a fresh template instead of the client's master layouts. Work inside their masters, the way a website keeps the client's nav and footer.

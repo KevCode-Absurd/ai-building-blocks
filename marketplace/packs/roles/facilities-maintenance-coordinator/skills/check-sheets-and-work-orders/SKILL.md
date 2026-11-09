@@ -87,7 +87,7 @@ Open work orders by age and priority, repeat faults per asset, downtime and cost
 
 ## Example of good output (short)
 
-> **Made-up example: Kestrel Deliveries, 14 vans and 3 tippers (not a real business).**
+> **Illustrative structure, not a real business: a delivery firm with 14 vans and 3 tippers. Copy the shape, never the content: every fact comes from the client's own context.**
 >
 > **Van daily walkaround, one page.** Van ID ___ Date ___ Mileage ___ Driver ___
 >
@@ -100,4 +100,4 @@ Open work orders by age and priority, repeat faults per asset, downtime and cost
 >
 > **If any item fails: do not drive. Ring the yard supervisor now.** Nil defects: sign here ___
 >
-> **Work order WO-0412:** VAN-07, "brakes spongy", reported 06:40 by driver, urgent, out of use, assigned to Brightside Garage (approved, cap 400 pounds), fixed 14:10, downtime 7.5 hours, cost 286 pounds, invoice attached, returned to service by garage technician.
+> **Work order WO-0412:** VAN-07, "brakes spongy", reported 06:40 by driver, urgent, out of use, assigned to Garage A (approved, cap 400 pounds), fixed 14:10, downtime 7.5 hours, cost 286 pounds, invoice attached, returned to service by garage technician.

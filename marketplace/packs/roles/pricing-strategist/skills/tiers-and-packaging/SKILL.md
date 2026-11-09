@@ -89,7 +89,7 @@ New buyers only, the new pricing page against the old, a set period, profit per 
 
 ## Example of good output
 
-*Slotwise (a made-up scheduling app). Today: one plan at $39 a month. Cost to serve: $2 per staff calendar a month. Payment fees: 3% (example figure from the client's processor).*
+*Illustrative structure, not a real business: a scheduling app. Today: one plan at $39 a month. Cost to serve: $2 per staff calendar a month. Payment fees: 3% (example figure from the client's processor). Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Value metric:** staff calendars. It grows with the value (more staff booked), buyers can predict it, and cost grows with it.
 

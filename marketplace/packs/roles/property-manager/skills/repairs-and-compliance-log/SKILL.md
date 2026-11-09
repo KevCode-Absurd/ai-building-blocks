@@ -73,13 +73,13 @@ Weekly: open jobs by age and category, jobs over promise, costs this month, cert
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Marlow Homes, five houses in Bristol, England.*
+*Illustrative structure, not a real business: a landlord with five houses in Bristol, England. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | ID | Reported | Unit | Issue | Category | Contractor | Status | Next action |
 |---|---|---|---|---|---|---|---|
-| R-041 | 3 Nov, 19:10 | 22 Ash St | Black mould on bedroom wall, child's room | Urgent (hazard) | Avon Damp Co (approved) | Survey booked 5 Nov, 10-12 | Survey report, then landlord decides on works |
-| R-042 | 4 Nov, 08:30 | 9 Fern Rd | Kitchen tap dripping | Routine | Kerr Plumbing (approved) | Booked 11 Nov, 1-4 pm | Confirm with tenant 10 Nov |
-| R-043 | 5 Nov, 21:45 | 9 Fern Rd | Smell of gas in hall | Emergency | Gas emergency line called by tenant; Brightwell Gas for follow-up | Supply made safe 22:30 | Landlord told 21:50; engineer visit 6 Nov |
+| R-041 | 3 Nov, 19:10 | 22 Ash St | Black mould on bedroom wall, child's room | Urgent (hazard) | Damp contractor (approved) | Survey booked 5 Nov, 10-12 | Survey report, then landlord decides on works |
+| R-042 | 4 Nov, 08:30 | 9 Fern Rd | Kitchen tap dripping | Routine | Plumber (approved) | Booked 11 Nov, 1-4 pm | Confirm with tenant 10 Nov |
+| R-043 | 5 Nov, 21:45 | 9 Fern Rd | Smell of gas in hall | Emergency | Gas emergency line called by tenant; approved gas engineer for follow-up | Supply made safe 22:30 | Landlord told 21:50; engineer visit 6 Nov |
 
 | Property | Duty | Last done | Next due | Source |
 |---|---|---|---|---|

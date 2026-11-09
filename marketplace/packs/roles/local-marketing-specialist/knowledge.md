@@ -238,3 +238,24 @@ Re-check at each refresh:
 - **Review law:** FTC enforcement under the 2024 rule [24], CMA action under the DMCC Act [26][27], and EU guidance [28].
 - **Apple Business** features and country availability [22].
 - **Consumer review surveys,** re-issued yearly; read the original report where possible [30].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When reviews are slow, fix the asking habit first (same words, every customer, a link or QR code) before anything else. (§5)
+- `decision_rule` Fix call handling before switching on Local Services Ads, because missed calls lower LSA ranking and waste leads. (§5)
+- `decision_rule` If the client cannot say where new customers came from, start the lead source tracker this week, before any paid test. (§5)
+- `check` If a quiet-week offer would cut below the job's gross profit, change the offer (add value, set a minimum job size) or drop it. (§5)
+- `taste_reference` Write as the owner speaks to customers; specific beats clever (the street, the job, the time it took), and no "best in town". (§8)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Stock hype words.** Profile descriptions and posts with "Elevate your home", "seamless service" or "game-changer". Write as the owner speaks to customers.
+- **Benefits any competitor could claim.** "Friendly, reliable, quality service" that every business in town also says. Use the street, the job and the time it took, as section 8 asks.
+- **Headline formula clichés.** "Your trusted local experts" or "Looking for a plumber? Look no further." Lead with the service, the area and one specific fact.
+- **Fake urgency.** "Book now, spots filling fast" on a quiet-week offer with no real limit. Give a real end date and a real limit, or none.
+- **Generic stock-style images.** Stock photos of smiling workers or generic houses on service pages and posts. Use the client's real photos of real jobs.
+- **Town-swapped page template.** Service pages built from the same centred hero, three benefit cards and FAQ, with only the town name changed. Build each page around real local detail, or do not publish it (section 5).

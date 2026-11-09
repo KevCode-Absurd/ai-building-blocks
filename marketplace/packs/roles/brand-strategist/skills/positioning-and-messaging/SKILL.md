@@ -62,7 +62,7 @@ Not for: visual identity (see the brand identity designer kit) or ad copy for on
 
 ## Example of good output (short)
 
-*Rotawise is a made-up rota app for small cafe groups, used only to show the format. Quotes are invented examples.*
+*Illustrative structure, not a real business: a rota app for small cafe groups. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Alternatives:** a shared spreadsheet; a big workforce app built for chains; the owner doing rotas by text on Sunday nights.
 
@@ -71,7 +71,7 @@ Not for: visual identity (see the brand identity designer kit) or ad copy for on
 | Spreadsheet | Staff swap shifts in the app, owner approves with one tap | Sunday nights back | Interview C3: "I used to spend two hours every Sunday" |
 | Big workforce app | Set up for two to five sites in an afternoon, no training | Live this week, not next quarter | Average set-up time from onboarding logs [NEED: export] |
 
-**Positioning statement:** For owners of two to five cafes who build rotas themselves, Rotawise is the rota app made for small groups that lets staff swap shifts without endless texts, unlike spreadsheets and chain-sized software, because swaps and approvals happen in one place.
+**Positioning statement:** For owners of two to five cafes who build rotas themselves, [Business] is the rota app made for small groups that lets staff swap shifts without endless texts, unlike spreadsheets and chain-sized software, because swaps and approvals happen in one place.
 
 **One-liner:** Rotas and shift swaps for small cafe groups, sorted on your phone.
 

@@ -101,7 +101,7 @@ Rely on it, use it with a check, or do not rely on it, and why, in three sentenc
 
 ## Example of good output (short)
 
-*Made-up business: Copperleaf Outdoor, an online shop. One month of the fraud app's results, as counted by the client.*
+*Illustrative structure, not a real business: an online outdoor shop. Copy the shape, never the content: every fact comes from the client's own context. One month of the fraud app's results, as counted by the client. Figures only show the shape.*
 
 > **Verdict: do not rely on automatic cancels; use the flags for a manual check.**
 >

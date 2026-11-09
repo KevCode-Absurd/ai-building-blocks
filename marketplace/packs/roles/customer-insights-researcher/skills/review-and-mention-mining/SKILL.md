@@ -91,7 +91,7 @@ Group exact phrases by benefit, doubt and use case, with counts. These feed prod
 
 ## Example of good output
 
-Made-up business for illustration: Hollow Oak Candles, 1,140 reviews from its shop and one marketplace, January to October 2026.
+Illustrative structure, not a real business: a candle maker with 1,140 reviews from its shop and one marketplace, January to October 2026. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.
 
 > **Answer first.** 1) Scent strength is the top praise (31% of positive reviews). 2) "Tunnelling" (wax burning down the middle) is the top complaint and rose after the June wick change: 3% of reviews before (12 of 440), 16% after (109 of 700). 3) Gift buyers love the box but want a note card (42 mentions).
 >

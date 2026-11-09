@@ -67,14 +67,14 @@ A table (or CSV for bulk upload) with: number, board, title, description, overla
 
 ## Example of good output (short)
 
-*Made-up business: Green Fork Kitchen, a vegetarian recipe blog in the US. Pages and photos invented for illustration.*
+*Illustrative structure, not a real business: a vegetarian recipe blog in the US. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Pin 4** | Board: Vegetarian Christmas dinner ideas | Publish: 18 Nov
 > - **Title:** Vegetarian Christmas dinner ideas: mushroom wellington with crispy sage
 > - **Description:** A vegetarian Christmas dinner centrepiece that slices like a roast. This mushroom wellington uses chestnuts, spinach and shop-bought puff pastry, and can be made a day ahead. Serves 6, with tips for a vegan version.
 > - **Overlay:** Make-ahead veggie Christmas main
 > - **Image brief:** 2:3, the wellington sliced on a wooden board, overhead, dark green linen, sage leaves; overlay top third on a cream band; logo bottom right, small.
-> - **Link:** greenforkkitchen.example/mushroom-wellington
+> - **Link:** [domain]/mushroom-wellington
 > - **Disclosure:** no
 >
 > **Pin 5** (same page, new angle) | Board: Make ahead Christmas recipes | Publish: 2 Dec

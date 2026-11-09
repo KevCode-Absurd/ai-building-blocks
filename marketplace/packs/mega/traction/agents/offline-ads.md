@@ -13,7 +13,7 @@ I find out whether an offline placement can bring this business customers at a c
 
 ## What I need from the lead
 
-The lead's standard hand-off brief (business, variant, goal, audience and offer, allowable cost per customer, limits and access), and in particular:
+The lead's standard hand-off brief, and in particular:
 
 - The traction goal, the business type, and where buyers live, work or gather.
 - Gross profit per customer, the response-to-customer rate if known, and the payback period the client accepts.

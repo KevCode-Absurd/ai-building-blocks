@@ -78,7 +78,7 @@ At level 2, apply fixes in a copy or development workspace and rerun the tie-out
 
 ## Example of good output
 
-*Made-up business, for illustration only: "Northgate Hardware", two shops and a web store.*
+*Illustrative structure, not a real business: a hardware retailer with two shops and a web store. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Top finding (wrong number).** October revenue shows £48,210; the accounts show £51,060. The source has 6,402 order rows, the model 6,371. The 31 missing rows are orders with status "Part refunded", which a report-level filter drops; their net value is £2,850, the whole gap. The accounts count them net of the refund. Fix: remove the filter and subtract refund lines in the revenue measure. Effort: 30 minutes. Needs approval: yes, because every past month moves up.
 >

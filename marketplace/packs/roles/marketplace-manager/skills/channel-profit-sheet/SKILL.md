@@ -61,7 +61,7 @@ The same product can make good money on one marketplace and lose money on anothe
 
 ## Example of good output (short)
 
-*Halden Hardware is a made-up tools seller used only to show the format. Prices and costs are invented; fees follow the US rules above as of Nov 2026.*
+*Illustrative structure, not a real business: a tools seller. Fees follow the US rules above as of Nov 2026. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Item: 20-piece screwdriver set. Cost $11.00, fulfilment $6.50, buyer pays $5.99 shipping on eBay, free shipping on Walmart.**
 

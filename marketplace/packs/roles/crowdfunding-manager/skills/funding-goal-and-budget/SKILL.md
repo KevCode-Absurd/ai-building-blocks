@@ -56,7 +56,7 @@ The goal is the least money that delivers the project, not the number that looks
 
 ## Example of good output (short)
 
-*Kettle Hill Games is a made-up studio used only to show the format. Platform: Kickstarter. Access I have: Kickstarter level 1 (analytics), Google Sheets level 2.*
+*Illustrative structure, not a real business: a tabletop game studio. Platform: Kickstarter. Access I have: Kickstarter level 1 (analytics), Google Sheets level 2. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 | Cost line | Amount (USD) | Source |
 |---|---|---|

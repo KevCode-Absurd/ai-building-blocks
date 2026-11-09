@@ -35,7 +35,7 @@ Do not use it to make calls, find phone numbers, or call people on do-not-call l
 
 Name, company and the reason for the call in the first ten seconds, then ask for a short moment. Vendor data from recorded calls found that stating the reason early helps and that opening with "Did I catch you at a bad time?" hurts. Treat that as a starting point to test.
 
-> "Hi Maria, it's Tom from Northgate Cleaning. I'm calling because you've just taken the second floor at Quay House, and offices that expand usually find their cleaning contract no longer fits. Can I take 30 seconds to say why I called, and you tell me if it's worth a proper chat?"
+> "Hi Maria, it's Tom from [Business]. I'm calling because you've just taken the second floor at Quay House, and offices that expand usually find their cleaning contract no longer fits. Can I take 30 seconds to say why I called, and you tell me if it's worth a proper chat?"
 
 ### 2. Two fit questions
 
@@ -109,9 +109,9 @@ Do-not-call screening, call recording consent, calling hours, and any automated 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Northgate Cleaning, an office cleaning firm in Manchester booking site visits for its sales manager.*
+*Illustrative structure, not a real business: an office cleaning firm in Manchester booking site visits for its sales manager. Copy the shape, never the content: every fact comes from the client's own context.*
 
-> **Voicemail 1 (about 20 seconds):** "Hi Maria, Tom from Northgate Cleaning. I'm calling about your move into the second floor at Quay House. We clean six offices in that building, so we know the lifts and access times. I'll send a short email now. My number is 0161 496 0000, that's 0161 496 0000. Thanks."
+> **Voicemail 1 (about 20 seconds):** "Hi Maria, Tom from [Business]. I'm calling about your move into the second floor at Quay House. We clean six offices in that building, so we know the lifts and access times. I'll send a short email now. My number is 0161 496 0000, that's 0161 496 0000. Thanks."
 >
 > **Confirmation (sent during the call):** "Thanks Maria. Confirmed: walk-round at Quay House, Tuesday 18 November, 10:00 to 10:20, with Jo Patel, our operations manager. You'll get a written quote by Friday. To move it, reply with a time that suits."
 >

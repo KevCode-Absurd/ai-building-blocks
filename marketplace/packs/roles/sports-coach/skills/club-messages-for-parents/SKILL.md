@@ -82,7 +82,7 @@ Give the message, the channel, the audience and the send time for approval. At l
 
 ## Example of good output (short)
 
-*Made-up club for illustration: Northfield Swim Club, level 3 group, Thursday sessions.*
+*Illustrative structure, not a real organisation: a swim club, level 3 group, Thursday sessions. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Subject: Thursday swim moves to 5.30 pm from 12 November**
 >
@@ -95,6 +95,6 @@ Give the message, the channel, the audience and the send time for approval. At l
 > Questions about the session: [coach email]. Any worries about a child's welfare: our welfare officer, [name and phone].
 >
 > Thanks,
-> [Head coach], Northfield Swim Club
+> [Head coach], [Club]
 >
 > *Audience: level 3 parents group. Send: Monday 6 pm. Approval: head coach.*

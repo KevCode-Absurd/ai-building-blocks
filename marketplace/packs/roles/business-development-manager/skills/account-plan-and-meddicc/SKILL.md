@@ -72,7 +72,7 @@ A good account plan says who to talk to, about what, and what you still do not k
 
 ## Example of good output
 
-*Made-up business for illustration: Brindlecote Cleaning, reviewing a deal with a made-up property management firm, Quarrow Estates.*
+*Illustrative structure, not a real business: a commercial cleaning firm reviewing a deal with a property management firm. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Letter | What we know | Evidence | Next question |
 |---|---|---|---|

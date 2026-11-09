@@ -98,7 +98,7 @@ Before a certification audit: records built up over time, at least one round of 
 
 ## Example of good output (short)
 
-*Made-up business: Calder Precision, 22 people, CNC machining for food equipment makers, Yorkshire. Goal: ISO 9001:2026 certification.*
+*Illustrative structure, not a real business: a 22-person CNC machining firm in Yorkshire serving food equipment makers. Goal: ISO 9001:2026 certification. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Draft for review by a competent person. Check this with local rules before use.**
 >

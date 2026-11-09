@@ -94,7 +94,7 @@ Date, stage, sample ID, test, measurement, photo, pass or fail, decision. The lo
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Hearth & Hollow", a silicone pan lid that fits three sizes and vents steam. Target retail $24, first batch 1,000, US and UK.*
+*Illustrative structure, not a real business: a kitchenware brand's silicone pan lid that fits three sizes and vents steam. Target retail $24, first batch 1,000, US and UK. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Unknowns.** Lid material grade [to confirm with supplier]; dishwasher-safe claim [owner to decide, then test].
 >

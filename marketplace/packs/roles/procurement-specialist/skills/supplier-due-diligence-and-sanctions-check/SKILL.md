@@ -86,7 +86,7 @@ At level 2, prepare the supplier record marked inactive, with the checks attache
 
 ## Example of good output (short)
 
-*Made-up business: Tallow & Thread, a US homeware brand vetting a cotton towel maker. Names and results are invented for illustration.*
+*Illustrative structure, not a real business: a US homeware brand vetting a cotton towel maker. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Rating: hold.** Identity confirmed; owners not fully declared; cotton origin not traced.
 >

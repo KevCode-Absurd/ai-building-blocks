@@ -59,7 +59,7 @@ Award judges, event organisers, podcast hosts and music bookers all face the sam
 
 ## Example of good output (short)
 
-*Brightwater Physio is a made-up business used only to show the format. All details are invented for this example.*
+*Illustrative structure, not a real business: a physiotherapy clinic. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Shortlist extract**
 

@@ -97,7 +97,7 @@ What to log or check next if the fix does not work, and how to revert the change
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Tidewell Laundry", a pickup and delivery app.*
+*Illustrative structure, not a real business: a pickup and delivery laundry app. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Bug.** Since the deploy on 3 November, pickups booked after 11 pm UK time show the next day's date in the confirmation email.
 >

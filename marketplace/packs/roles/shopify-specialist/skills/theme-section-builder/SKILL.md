@@ -72,11 +72,11 @@ Not for: checkout changes (use checkout extensibility or an app), a whole new th
 
 ## Example of good output (short)
 
-*Fernhill Tea Co. is a made-up business used only to show the format: a small loose-leaf tea shop on a Theme Store theme.*
+*Illustrative structure, not a real business: a small loose-leaf tea shop on a Theme Store theme. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **No-code check:** the theme has no strip of short promises with icons, and the announcement bar holds one line only. A small section is the smallest fix.
 
-**Change request:** add a "Promise strip" section with up to four promises. New file `sections/promise-strip.liquid`. No other files change. Risk: low. Access I have: level 2 (duplicates only, until Friday). I build it on "Copy of Fernhill live"; the owner previews and publishes.
+**Change request:** add a "Promise strip" section with up to four promises. New file `sections/promise-strip.liquid`. No other files change. Risk: low. Access I have: level 2 (duplicates only, until Friday). I build it on "Copy of [Business] live"; the owner previews and publishes.
 
 ```liquid
 {% comment %} sections/promise-strip.liquid {% endcomment %}
@@ -122,4 +122,4 @@ Not for: checkout changes (use checkout extensibility or an app), a whole new th
 {% endschema %}
 ```
 
-**Test:** home page, phone, four promises with long text: items wrap onto two lines, nothing overflows. **Undo:** remove the section in the theme editor, then delete the file. Promise wording must match what Fernhill actually does; the default text is a placeholder for the owner to replace.
+**Test:** home page, phone, four promises with long text: items wrap onto two lines, nothing overflows. **Undo:** remove the section in the theme editor, then delete the file. Promise wording must match what the shop actually does; the default text is a placeholder for the owner to replace.

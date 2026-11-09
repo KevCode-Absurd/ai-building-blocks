@@ -198,3 +198,14 @@ Re-check at every refresh (every 30 days):
 | Form I-9 edition | USCIS [25] | Edition 01/20/25 |
 | US labour market | BLS JOLTS [27] | Sept 2026 data, released 3 Nov 2026 |
 | Other countries | [28][29][30] | Links only; check locally |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Rebuild a job description sent from last time from six-month outcomes first, because criteria you cannot trace to an outcome cannot be scored fairly. (§5)
+- `decision_rule` Replace a years-of-experience requirement with what the person must be able to do, because years predict little. (§5)
+- `decision_rule` With a large pool, screen on must-haves only and record evidence per criterion, because extra criteria at screen stage mostly add noise and bias. (§5)
+- `decision_rule` When more than one person reviews or interviews, fix questions and scoring guides first, and have each person score alone before any discussion. (§5)
+- `decision_rule` When referrals are the main channel, add at least one open channel, because referrals reproduce the current team. (§5)
+- `never_do` Never invent a compliment in outreach; give one real, specific reason from facts the client provided. (§8)

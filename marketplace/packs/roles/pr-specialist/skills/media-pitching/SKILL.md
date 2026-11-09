@@ -61,9 +61,9 @@ A pitch is one story, for one person, about what their audience needs. Reporters
 
 ## Example of good output (short)
 
-*Fieldnote Software is a made-up business used only to show the format. All details are invented for this example.*
+*Illustrative structure, not a real business: a software firm with survey data on farm co-ops. Copy the shape, never the content: every fact comes from the client's own context.*
 
-**List entry:** *Northern Business Weekly* - [reporter name] - small-business tech - wrote last week about farm co-ops moving bookkeeping online - fits because Fieldnote's survey covers 400 co-ops - offer: data under embargo - status: approved by client.
+**List entry:** *Northern Business Weekly* - [reporter name] - small-business tech - wrote last week about farm co-ops moving bookkeeping online - fits because the client's survey covers 400 co-ops - offer: data under embargo - status: approved by client.
 
 **Subject:** EMBARGOED survey: 6 in 10 farm co-ops still close their books on paper
 
@@ -71,7 +71,7 @@ Hi [name],
 
 Your piece on co-ops moving their books online last week stopped at the cost question. We surveyed 400 co-ops in the region last month, and cost was the second reason they stay on paper. The first was trust in who holds the data.
 
-Fieldnote can share the full results under embargo until 09:00 GMT on Thursday, plus an interview with our founder and a co-op manager who switched last year.
+[Business] can share the full results under embargo until 09:00 GMT on Thursday, plus an interview with our founder and a co-op manager who switched last year.
 
 Would you like the data under embargo?
 

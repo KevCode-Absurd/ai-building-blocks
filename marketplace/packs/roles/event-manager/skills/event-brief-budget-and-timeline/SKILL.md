@@ -74,15 +74,15 @@ Add access to the plan from day one: venue route, toilets, seating, hearing supp
 
 ## Example of good output (short)
 
-*Made-up business: Fernhill Studio, a design agency planning a client evening for 80 guests. Figures are invented for illustration.*
+*Illustrative structure, not a real business: a design agency planning a client evening for 80 guests. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Purpose:** thank our 30 biggest clients and show the new service; success is 10 booked follow-up meetings within a month.
 >
 > | Line | Supplier | Amount | Status | Pay by |
 > |---|---|---|---|---|
-> | Venue (6pm to 11pm) | Canal Rooms | £2,400 | Quote, valid to 31 Jan | 30% deposit on signing; balance 14 days before |
-> | Food and drink, 80 | Canal Rooms in-house | £3,600 | Quote; minimum spend £3,000 | With venue balance |
-> | AV: screen and two mics | Brightlight AV | £450 | [ESTIMATE] | On the day |
+> | Venue (6pm to 11pm) | Venue A | £2,400 | Quote, valid to 31 Jan | 30% deposit on signing; balance 14 days before |
+> | Food and drink, 80 | Venue A in-house | £3,600 | Quote; minimum spend £3,000 | With venue balance |
+> | AV: screen and two mics | AV supplier | £450 | [ESTIMATE] | On the day |
 > | Contingency | | £600 | Set by client | |
 >
 > **Timeline:** Week -8: venue signed (client's yes). Week -6: invitations out. Week -2: final numbers to venue. Week -1: run sheet and rehearsal. Day: doors 6:30pm.

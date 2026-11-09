@@ -74,7 +74,7 @@ By money at stake: monthly ad spend on losing products first, then profitable pr
 
 ## Example of good output (short)
 
-*Made-up business: Copperline Kitchen, 6 products on Amazon US. Figures invented for illustration.*
+*Illustrative structure, not a real business: a kitchen tools seller with 6 products on Amazon US. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > | Product | Price | Profit before ads | Break-even ACOS | Actual ACOS | TACOS (vs last month) | Ad orders | Status | Action |
 > |---|---|---|---|---|---|---|---|---|

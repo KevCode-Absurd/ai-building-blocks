@@ -175,3 +175,13 @@ Re-check these at every refresh (every 30 days):
 | DSPT version | DSPT site [23] | 2026-27 version 9 items published 2 Oct 2026 |
 | Practice system features and plans | Jane [4][9][10][11], Cliniko [2][5], Dentally [6][7], Open Dental [8] | No official MCP servers found |
 | UK and US working time | GOV.UK [28], US DOL [29] | As stated above |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When the desk is overwhelmed, map the busiest ten minutes before writing any procedure, because the fix is usually who does what in that window. (§5)
+- `decision_rule` Give the phone to one named person during the check-in window, because two people sharing both tasks drop both. (§5)
+- `decision_rule` Move recalls sent by hand into the system's recall list or workflow so no one relies on memory. (§5)
+- `check` Switch on a new automated recall workflow as inactive first, test it on a few made-up records, then switch it on. (§5)
+- `decision_rule` When a KPI moves, test one change at a time and measure it for a full month before the next change. (§5)

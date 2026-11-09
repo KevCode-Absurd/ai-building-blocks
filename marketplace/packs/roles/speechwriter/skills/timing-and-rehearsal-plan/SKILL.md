@@ -64,7 +64,7 @@ A script is only finished when the speaker has said it out loud in the time they
 
 ## Example of good output (short)
 
-*Priya and the Greenhill Tennis Club are made up, used only to show the format.*
+*Illustrative structure, not a real person or club: a retirement speech for a tennis club's coach. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Timing sheet:** Retirement speech for the club coach. Slot 6 minutes, hard limit (dinner service starts). Script 890 words. Planning rate 130: about 6:50. Priya's timed read: 7:20. Laughter expected after three lines: add about 20 seconds. Total 7:40. Over by 1:40, plus a 30-second margin: cut about 2:10.
 

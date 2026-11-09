@@ -61,7 +61,7 @@ Email HTML is not web HTML. Each inbox strips or ignores different code, and cla
 
 ## Example of good output (short)
 
-*Fernhill Pottery is a made-up business used only to show the format: a studio sending a monthly class newsletter through Mailchimp. All details are invented.*
+*Illustrative structure, not a real business: a pottery studio sending a monthly class newsletter through Mailchimp. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Button (extract)**
 

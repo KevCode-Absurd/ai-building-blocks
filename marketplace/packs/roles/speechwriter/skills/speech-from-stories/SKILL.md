@@ -65,7 +65,7 @@ A personal speech works when the room recognises the person being spoken about. 
 
 ## Example of good output (short)
 
-*Tom, Aisling and the speaker are made up, used only to show the format.*
+*Illustrative structure, not real people: a best man's speech at his brother's wedding. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Header:** Best man speech, Tom and Aisling's wedding. Slot 5 minutes. 560 words. Planned at 130 words a minute: about 4 minutes 20 seconds, leaving time for laughter. Version 2. Replace with your timed read.
 

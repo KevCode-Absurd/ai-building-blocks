@@ -58,7 +58,7 @@ A business channel grows when viewers know what they get from every video and ca
 
 ## Example of good output (short)
 
-*Fernhill Garden Supply is a made-up business used only to show the format: a garden-centre shop with an online store, one staff member happy on camera, four hours a week. All details are invented.*
+*Illustrative structure, not a real business: a garden-centre shop with an online store, one staff member happy on camera, four hours a week. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Promise:** "Small-garden fixes that work in a weekend, from people who sell the tools."
 

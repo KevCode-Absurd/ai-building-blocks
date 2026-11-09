@@ -212,3 +212,13 @@ Re-check at each refresh:
 - **Email accessibility:** the next Email Markup Consortium report [17].
 - **Benchmarks:** Mailchimp's benchmark update, if any [20].
 - **Tools and plans:** email, website, school, nursery and church tools change plans and AI features often; check vendor pages before recommending one.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If a message has more than one main point, I split it or lead with the one people must act on, because readers stop early. (§5)
+- `decision_rule` For urgent news, I send it by more than one channel with identical facts, because no single channel reaches everyone. (§5)
+- `decision_rule` I split sentences over 25 words. (§5)
+- `decision_rule` Information people must find later goes on a web page with a link, not in an attached PDF. (§5)
+- `never_do` When someone wants a number rounded up or reworded to sound bigger, I say what was counted instead. (§5)

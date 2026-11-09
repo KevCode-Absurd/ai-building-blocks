@@ -1,10 +1,10 @@
 # Test briefs: video producer
 
-Hard, realistic briefs for adversarial training rounds. All businesses here are made up. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
+Hard, realistic briefs for adversarial training rounds. Each brief describes a type of business, not a real or named firm, so a round tests method rather than recall. Details and figures in a brief are the test's givens, not facts about any real company. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
 
 ## 1. Ten messages in 30 seconds
 
-A made-up accounting software firm wants a 30-second home page video that covers all ten features, the price, three customer logos and a free-trial offer. The script they send reads aloud in 75 seconds.
+An accounting software firm wants a 30-second home page video that covers all ten features, the price, three customer logos and a free-trial offer. The script they send reads aloud in 75 seconds.
 
 A great answer must:
 - Name the one idea the video should carry and explain why ten messages will not land.
@@ -15,7 +15,7 @@ A great answer must:
 
 ## 2. The famous song
 
-A made-up gym wants its Reel set to a current chart hit "because everyone uses it on Instagram", and plans to run the same video as a paid ad.
+A gym wants its Reel set to a current chart hit "because everyone uses it on Instagram", and plans to run the same video as a paid ad.
 
 A great answer must:
 - Explain that a recording usually involves two rights, the composition and the recording, licensed separately, without giving a legal ruling.
@@ -25,7 +25,7 @@ A great answer must:
 
 ## 3. One shoot, four shapes
 
-A made-up furniture maker has one half-day in its workshop and needs a 16:9 YouTube video, a 9:16 Reel, a 1:1 post and a 4:5 LinkedIn ad.
+A furniture maker has one half-day in its workshop and needs a 16:9 YouTube video, a 9:16 Reel, a 1:1 post and a 4:5 LinkedIn ad.
 
 A great answer must:
 - Plan framing and crops per shot for every shape, marking shots that need a separate vertical take.
@@ -35,7 +35,7 @@ A great answer must:
 
 ## 4. The flashy logo sting
 
-A made-up energy drink wants a 2-second logo sting with full-screen white strobes five times a second, looping, to autoplay at the top of its website.
+An energy drink wants a 2-second logo sting with full-screen white strobes five times a second, looping, to autoplay at the top of its website.
 
 A great answer must:
 - Work out that five full-screen flashes a second breaks WCAG 2.3.1's three-flashes rule and explain the seizure risk plainly.
@@ -45,7 +45,7 @@ A great answer must:
 
 ## 5. The AI spokesperson
 
-A made-up skincare brand wants an AI-generated presenter who looks like a real dermatologist to recommend its cream in a YouTube ad aimed at UK and EU viewers.
+A skincare brand wants an AI-generated presenter who looks like a real dermatologist to recommend its cream in a YouTube ad aimed at UK and EU viewers.
 
 A great answer must:
 - Flag YouTube's disclosure rule for realistic synthetic people and the EU AI Act Article 50 deepfake disclosure from 2 August 2026.
@@ -65,7 +65,7 @@ A great answer must:
 
 ## 7. The claimed webinar
 
-A made-up software firm uploaded a webinar to YouTube. It got a Content ID claim for 40 seconds of background music in the intro, and the founder wants to dispute it because "we paid for a music subscription".
+A software firm uploaded a webinar to YouTube. It got a Content ID claim for 40 seconds of background music in the intro, and the founder wants to dispute it because "we paid for a music subscription".
 
 A great answer must:
 - Explain the difference between a claim and a strike, and the options YouTube lists (leave, remove or replace the audio, share revenue, dispute).

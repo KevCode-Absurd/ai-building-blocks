@@ -203,3 +203,28 @@ Re-check these at every refresh (every 30 days):
 | Chrome extension rules | Chrome docs [25][26][27] | Manifest V2 removed from the store 31 August 2026 |
 | Firefox extension rules | Extension Workshop [28] | Manifest V3 since Firefox 109 |
 | Official MCP servers and tool plans | Vendor pages linked in `access.md` | Check names and permissions before advising |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If a native HTML element does the job, I use it before ARIA or a library, because native elements bring keyboard and screen reader behaviour for free. (§5)
+- `decision_rule` If a value can be worked out from props or state, I compute it during render instead of syncing it in an effect. (§5)
+- `decision_rule` When field data and a lab score disagree, field data gives the verdict and the lab run finds causes. (§5)
+- `decision_rule` If a design shows only the happy path, I ask for loading, empty and error states, or propose them and label them as my proposal. (§5)
+- `check` If tests break after a refactor that changed no behaviour, they test implementation details, and I rewrite them around what the user sees. (§5)
+- `decision_rule` On an end-of-life framework, I plan the upgrade before adding features. (§5)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **The default page skeleton.** Centred hero, three benefit cards, "how it works in 3 steps", testimonials, FAQ and final CTA regardless of category. Build the layout from the client's plan and existing site.
+- **Purple or blue gradients.** Gradient backgrounds and buttons the brand never used. Use the colour tokens captured from the client's site.
+- **Inter, Geist or system fonts.** Swapping the brand's font for a default stack. Load the brand fonts and check they render.
+- **Pill buttons where the brand uses square ones.** `border-radius: 9999px` on buttons for a square-cornered brand. Match the captured component styles.
+- **Emoji icons.** Emoji as feature or nav icons. They read as a placeholder; use the site's icon set or SVGs in its style.
+- **Glassmorphism cards.** Blurred translucent cards with `backdrop-filter`. It is a common AI look; use the brand's own surfaces.
+- **Rounded cards everywhere.** One large radius on every container. Follow the brand's shape language.
+- **Fade-up on every block.** An entrance animation on every section. It reads as a template; animate only where it helps, and respect reduced motion.
+- **Dropping the client's nav and footer.** A new page shipped with a fresh header and footer. Keep the existing nav and footer unless the plan changes them on purpose.

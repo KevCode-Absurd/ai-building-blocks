@@ -59,7 +59,7 @@ A feed problem is a data problem with a channel's name on it. This skill traces 
 
 ## Example of good output (short)
 
-*Fernbrook Outdoor is a made-up clothing shop used only to show the format. Figures are invented for this example.*
+*Illustrative structure, not a real business: an outdoor clothing shop. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Issue summary (extract)**
 
@@ -79,4 +79,4 @@ A feed problem is a data problem with a channel's name on it. This skill traces 
 
 | Before | After |
 |---|---|
-| FB-JKT-2231-NVY-M | Fernbrook Men's Waterproof Hiking Jacket, Taped Seams, Navy, M |
+| JKT-2231-NVY-M | [Brand] Men's Waterproof Hiking Jacket, Taped Seams, Navy, M |

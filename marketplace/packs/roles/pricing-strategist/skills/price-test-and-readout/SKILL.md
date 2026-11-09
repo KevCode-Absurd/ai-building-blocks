@@ -102,7 +102,7 @@ Three lines: units, revenue, profit. Then how sure we can be, and what else chan
 
 ## Example of good output
 
-*Hearthside Oats (a made-up granola maker). The 500 g granola rose from $8.50 to $9.75 on 1 June. Fifteen weeks either side. Two flavours stayed at $8.50. Unit cost $4.10.*
+*Illustrative structure, not a real business: a granola maker. The 500 g granola rose from $8.50 to $9.75 on 1 June. Fifteen weeks either side. Two flavours stayed at $8.50. Unit cost $4.10. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Verdict:** units down 10%, revenue up 4%, profit up 16% a week.
 

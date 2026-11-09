@@ -60,7 +60,7 @@ Not for: drawing the logo, legal trade mark clearance, or copying another brand'
 
 ## Example of good output (short)
 
-*Wrenfold Tea Rooms is a made-up cafe used only to show the format.*
+*Illustrative structure, not a real business: a tea room cafe. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Idea line:** "A proper sit-down tea, made by people who know your name." **Feeling words:** warm, unhurried, local. Warm becomes a rounded serif and copper-brown; unhurried becomes generous spacing and no motion lines; local becomes the town's name in the lockup.
 
@@ -77,7 +77,7 @@ Not for: drawing the logo, legal trade mark clearance, or copying another brand'
 
 | Date | Tool | Term | Goods or services | What the search showed |
 |---|---|---|---|---|
-| [date searched] | UK IPO search, keyword | Wrenfold | Cafe and tea room services | [record each close result: mark, owner, goods, live or dead] |
-| [date searched] | UK IPO search, keyword | Wren Fold | Cafe and tea room services | [as above] |
+| [date searched] | UK IPO search, keyword | [Business] | Cafe and tea room services | [record each close result: mark, owner, goods, live or dead] |
+| [date searched] | UK IPO search, keyword | [Business] split into two words | Cafe and tea room services | [as above] |
 
 *First look only, not clearance: ask a trade mark attorney before filing.*

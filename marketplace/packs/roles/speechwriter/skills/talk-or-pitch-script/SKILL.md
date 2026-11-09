@@ -61,7 +61,7 @@ A business talk is remembered for one story and one point. A pitch is judged on 
 
 ## Example of good output (short)
 
-*Riverside Food Hub is a made-up food bank, used only to show the format.*
+*Illustrative structure, not a real business: a food bank telling its flood story. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Point:** When the flood came, the food bank that knew its neighbours by name got food out first.
 

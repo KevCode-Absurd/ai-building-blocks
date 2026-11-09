@@ -77,7 +77,7 @@ Feed actual progress back into the programme. If the critical path has moved, sa
 
 ## Example
 
-*Made-up business for illustration: Ashdown Build, a four-person builder in Sheffield, UK; single-storey rear extension.*
+*Illustrative structure, not a real business: a four-person builder in Sheffield, UK; single-storey rear extension. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Key dates:** start Mon 2 Mar; weathertight Fri 3 Apr; handover Fri 22 May [ESTIMATE, depends on kitchen delivery].
 >

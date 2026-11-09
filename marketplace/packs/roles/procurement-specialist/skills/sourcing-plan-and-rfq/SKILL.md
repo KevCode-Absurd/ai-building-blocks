@@ -75,7 +75,7 @@ Keep the plan, the brief, the list of who was asked, the date sent and every rep
 
 ## Example of good output (short)
 
-*Made-up business: Fernhill Candle Co., a UK online shop. Figures are invented for illustration.*
+*Illustrative structure, not a real business: a UK online candle shop. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Need:** 3,000 amber glass jars, 200 ml, with bamboo lids, for a spring range. Delivered to Leeds by 15 February.
 > **Must-haves:** food-safe glass certificate, lids fit within 0.5 mm, jars packed in dividers. **Deal-breakers:** no samples, or payment to a personal account.

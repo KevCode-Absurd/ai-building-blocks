@@ -53,7 +53,7 @@ A good clip makes sense to someone who never saw the full video, gets to the poi
 
 ## Example of good output (short)
 
-*The Dock Talk is a made-up podcast used only to show the format. Episode 38, 25 fps, two cameras (A: Mia single, B: guest Ravi single). Planned from the transcript; picture not seen. Platforms: YouTube Shorts and Instagram Reels.*
+*Illustrative structure, not a real show: a business podcast. Copy the shape, never the content: every fact comes from the client's own context. Episode 38, 25 fps, two cameras (A: Mia single, B: guest Ravi single). Planned from the transcript; picture not seen. Platforms: YouTube Shorts and Instagram Reels.*
 
 | Name | In | Out | Length | Hook text | Ratio | Music |
 |---|---|---|---|---|---|---|

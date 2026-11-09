@@ -56,7 +56,7 @@ Most "bad" product photos come from light, not from the camera. This skill fixes
 
 ## Example of good output (short)
 
-*Wild Fern Silver is a made-up business used only to show the format: silver rings shot on a phone at a kitchen table by a north-facing window. Budget: about the price of two foam boards and a fabric diffuser. All details are invented.*
+*Illustrative structure, not a real business: a maker of silver rings, shot on a phone at a kitchen table by a north-facing window. Budget: about the price of two foam boards and a fabric diffuser. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Look:** soft daylight from the left, neutral white, light grey shadow to the right, rings at a three-quarter angle, 15% space around each ring.
 

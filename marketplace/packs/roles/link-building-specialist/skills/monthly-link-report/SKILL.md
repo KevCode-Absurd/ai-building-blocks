@@ -81,7 +81,7 @@ No inflated totals, no counting nofollow or unlinked mentions as followed links,
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Brightwater Tiles", a UK online tile shop, October report.*
+*Illustrative structure, not a real business: a UK online tile shop, October report. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Headline:** 11 new referring domains in October, 7 from the waterproofing guide campaign. Two lost links came from our own URL change and are fixed.
 >

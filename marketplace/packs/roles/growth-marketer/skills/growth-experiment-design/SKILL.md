@@ -62,7 +62,7 @@ Access levels for this skill: designing and reading tests needs level 1. Buildin
 
 ## Example of good output (short)
 
-*Tallyho is a made-up invoicing app for freelancers, used only to show the format. All numbers are invented.*
+*Illustrative structure, not a real business: an invoicing app for freelancers. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Test card: onboarding checklist**
 

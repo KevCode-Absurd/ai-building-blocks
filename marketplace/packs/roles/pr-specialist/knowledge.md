@@ -208,3 +208,25 @@ Re-check at each refresh:
 - **Crisis duties:** data breach rules (EDPB, Information Commission, US state laws) [18][19][26]; recall processes (CPSC, OPSS) [20][21]; CERC updates [3][4].
 - **Measurement standards:** AMEC's Barcelona Principles and AVE guidance [6][7].
 - **Tools and prices:** media databases, wires and podcast tools change plans often; check each vendor's pricing page before advising.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If there is no answer to "why now, and who cares?", do not write a release; suggest an angle, a data story or a different channel, because a release without news wastes the client's credibility with reporters. (§5)
+- `decision_rule` If a pitch would work for any outlet, rewrite it for one, because a generic pitch shows you have not read their work. (§5)
+- `decision_rule` Offer an exclusive to one outlet at a time, and move on only after a clear no or the deadline you stated. (§5)
+- `decision_rule` If an embargo breaks, lift it for everyone at once and tell the other reporters, because fairness keeps relationships. (§5)
+- `decision_rule` If an award entry claim cannot be proved, cut it or use the smaller number that can be. (§5)
+- `taste_reference` A press release is usually one page; 300 to 500 words is this kit's house range, not an industry rule. (§8)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Stock hype words.** Releases and pitches with "Unlock", "Elevate", "Seamless", "Game-changer" or "In today's fast-paced world". Reporters cut them; state the news as plain fact.
+- **Headline formula clichés.** "X announces revolutionary Y" or "X disrupts the industry". Put the real reason to run now in the headline (section 7).
+- **One pitch formula for every reporter.** The same opening and structure sent across the media list. Section 5 already asks for a pitch rewritten for one outlet.
+- **Benefits any competitor could claim.** "Leading provider of innovative solutions" in boilerplate and quotes. Say what the client does, for whom, with a checked number.
+- **Rule-of-three everywhere.** Quotes and paragraphs built as three adjectives or three benefits. Quotes should add meaning, in the speaker's voice (section 7).
+- **Fake urgency.** "Breaking" or "Urgent" in a subject line for news that is not time-bound. Use embargo times and real dates instead.

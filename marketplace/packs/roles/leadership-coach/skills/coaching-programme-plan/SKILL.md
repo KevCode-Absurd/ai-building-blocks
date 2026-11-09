@@ -96,7 +96,7 @@ Run the checks below and deliver in the output format.
 
 ## Example of good output (short)
 
-*Made-up example: six 60-minute video sessions for Priya, a newly promoted team lead at a fictional logistics firm, Northgate Freight. The coach uses GROW.*
+*Illustrative structure, not a real business: six 60-minute video sessions for Priya, a newly promoted team lead at a logistics firm. The coach uses GROW. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Goal (Priya's words):** "Stop doing my team's work for them and get my evenings back."
 > **Done:** by session 6, Priya delegates the weekly route plan and two client calls, and logs off by 6pm on four days out of five.

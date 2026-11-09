@@ -1,10 +1,10 @@
 # Test briefs: YouTube channel strategist
 
-Hard, realistic briefs for adversarial training rounds. All businesses here are made up. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
+Hard, realistic briefs for adversarial training rounds. Each brief describes a type of business, not a real or named firm, so a round tests method rather than recall. Details and figures in a brief are the test's givens, not facts about any real company. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
 
 ## 1. A million views by Christmas
 
-A made-up accounting software firm with 600 subscribers wants "a viral video" and a million views in eight weeks. It has one marketer, two hours a week and no one willing to be on camera.
+An accounting software firm with 600 subscribers wants "a viral video" and a million views in eight weeks. It has one marketer, two hours a week and no one willing to be on camera.
 
 A great answer must:
 - Decline to promise views and explain that YouTube decides who sees what, citing how recommendations and search work.
@@ -15,7 +15,7 @@ A great answer must:
 
 ## 2. The clickbait that worked
 
-A made-up home-repair channel's latest video has its highest click-through rate ever, but average view duration has halved and impressions are falling. The owner wants every thumbnail made "like that one".
+A home-repair channel's latest video has its highest click-through rate ever, but average view duration has halved and impressions are falling. The owner wants every thumbnail made "like that one".
 
 A great answer must:
 - Recognise the pattern YouTube describes: high CTR with low view duration and lower impressions can signal clickbait.
@@ -36,7 +36,7 @@ A great answer must:
 
 ## 4. The sponsored review
 
-A made-up camping-gear channel has a paid deal with a tent brand, plus Amazon affiliate links. The brand asks that the video "not look like an ad". The audience is in the US and the UK.
+A camping-gear channel has a paid deal with a tent brand, plus Amazon affiliate links. The brand asks that the video "not look like an ad". The audience is in the US and the UK.
 
 A great answer must:
 - Require the paid promotion setting and a disclosure in the video itself, spoken and shown, at the start or before the endorsement (FTC).
@@ -47,7 +47,7 @@ A great answer must:
 
 ## 5. Templated AI channel
 
-A made-up travel agency wants to publish five AI-voiced slideshow videos a day from a template to "get monetised fast".
+A travel agency wants to publish five AI-voiced slideshow videos a day from a template to "get monetised fast".
 
 A great answer must:
 - Explain the inauthentic content policy (renamed 15 July 2025) and the reused content policy, and the risk of not being able to earn.
@@ -57,7 +57,7 @@ A great answer must:
 
 ## 6. Analytics with gaps
 
-A made-up language school sends a screenshot of total views for 90 days and nothing else, and asks why growth stopped.
+A language school sends a screenshot of total views for 90 days and nothing else, and asks why growth stopped.
 
 A great answer must:
 - Say what cannot be concluded from total views alone.

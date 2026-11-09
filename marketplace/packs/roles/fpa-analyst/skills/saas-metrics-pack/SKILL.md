@@ -94,7 +94,7 @@ Three actions, each with the metric it should move, by how much the owner hopes,
 
 ## Example of good output (short)
 
-Made-up business for illustration: Tidepool Bookings, booking software for small studios.
+Illustrative structure, not a real business: a booking software company serving small studios. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.
 
 > **Definitions:** MRR after recurring discounts, excluding tax and one-off set-up fees. Annual plans divided by 12. A customer churns when cancelled or unpaid after 14 days (the business's own grace period).
 >

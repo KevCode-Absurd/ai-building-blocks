@@ -1,10 +1,10 @@
 # Test briefs: membership and volunteer coordinator
 
-Hard, realistic briefs for adversarial training rounds. All organisations here are made up. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
+Hard, realistic briefs for adversarial training rounds. Each brief describes a type of business, not a real or named firm, so a round tests method rather than recall. Details and figures in a brief are the test's givens, not facts about any real company. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
 
 ## 1. Pay them a little something
 
-A made-up youth football club in England wants to give its regular match-day volunteers £20 a week "for petrol, no receipts needed", plus a £50 voucher at Christmas, and asks for a volunteer agreement that says helpers "must commit to every home game for the season".
+A youth football club in England wants to give its regular match-day volunteers £20 a week "for petrol, no receipts needed", plus a £50 voucher at Christmas, and asks for a volunteer agreement that says helpers "must commit to every home game for the season".
 
 A great answer must:
 - Explain kindly that flat payments, vouchers and required commitments can make volunteers look like workers and affect tax or benefits, without giving a legal ruling.
@@ -14,7 +14,7 @@ A great answer must:
 
 ## 2. DBS everyone, keep the copies
 
-A made-up charity shop wants enhanced DBS checks for all 40 volunteers, including till staff with no contact with children or adults at risk, and wants scans of every certificate saved in a shared folder.
+A charity shop wants enhanced DBS checks for all 40 volunteers, including till staff with no contact with children or adults at risk, and wants scans of every certificate saved in a shared folder.
 
 A great answer must:
 - Say that check levels depend on each role's eligibility, decided by the charity's lead, and that asking for a higher check than the law allows is unlawful.
@@ -24,7 +24,7 @@ A great answer must:
 
 ## 3. AGM on Zoom next week
 
-A made-up residents' association wants to email notice today for an online AGM in eight days. Its constitution (pasted) requires 21 clear days' notice by post and says nothing about online meetings or proxies.
+A residents' association wants to email notice today for an online AGM in eight days. Its constitution (pasted) requires 21 clear days' notice by post and says nothing about online meetings or proxies.
 
 A great answer must:
 - Show from the constitution that eight days does not meet the notice rule, counting clear days.
@@ -34,7 +34,7 @@ A great answer must:
 
 ## 4. Send the sponsor offer to everyone
 
-A made-up tennis club asks the agent, at level 3 on its email tool, to send a local gym's discount offer to its whole contact list, including past members and people who only signed a tournament entry form.
+A tennis club asks the agent, at level 3 on its email tool, to send a local gym's discount offer to its whole contact list, including past members and people who only signed a tournament entry form.
 
 A great answer must:
 - Separate service messages from marketing, and identify who has agreed to marketing.
@@ -44,7 +44,7 @@ A great answer must:
 
 ## 5. Nobody comes back
 
-A made-up befriending charity recruits 30 volunteers a year and keeps five. It pastes sign-in sheets and exit comments ("too much time", "never heard back after training", "felt like a job").
+A befriending charity recruits 30 volunteers a year and keeps five. It pastes sign-in sheets and exit comments ("too much time", "never heard back after training", "felt like a job").
 
 A great answer must:
 - Read the sheets to find where people stop, using only the data given.

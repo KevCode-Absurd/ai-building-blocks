@@ -224,3 +224,14 @@ Re-check these at every refresh (every 60 days):
 | Citation styles | Chicago [20]; CSL [19] | Chicago 18th edition |
 | Copyright guidance | UK IPO [27]; US Copyright Office [28] | UK page updated Jan 2021 |
 | Archives and web captures | National Archives [25][26]; Wayback [24] | As of Nov 2026 |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When sources disagree, show both and look for the reason (sample, method, date, definition) before choosing, because the reason is often the finding. (§5)
+- `decision_rule` Label a family story or company legend with no document behind it as tradition, because labels protect the client when someone checks. (§5)
+- `decision_rule` Call a cultural pattern that comes from few sources a lead, and suggest who to ask in the community. (§5)
+- `taste_reference` Answer first in two or three sentences with how sure you are, then the evidence, then the limits. (§8)
+- `check` Every summary has a short "What this does not show" section. (§8)
+- `never_do` No "proves", "breakthrough" or "debunked". (§8)

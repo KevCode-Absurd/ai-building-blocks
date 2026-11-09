@@ -92,7 +92,7 @@ For each handoff (marketing to sales, sales to customer success, sales to financ
 
 ## Example of good output (short)
 
-*Made-up business: Larkmoor Studio, a 9-person B2B design agency moving from a spreadsheet to HubSpot.*
+*Illustrative structure, not a real business: a 9-person B2B design agency moving from a spreadsheet to HubSpot. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Stage | Entry rule | Exit rule | Owner | Required fields | Probability |
 |---|---|---|---|---|---|

@@ -97,7 +97,7 @@ Review when something changes, after an incident or near miss, when workers rais
 
 ## Example of good output (short)
 
-*Made-up business: Greenway Grounds, 14-person landscaping firm, Ohio, US.*
+*Illustrative structure, not a real business: a 14-person landscaping firm in Ohio, US. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Draft for review by a competent person. Check this with local rules before use.**
 >

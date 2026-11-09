@@ -21,7 +21,7 @@ Most failed tests were never going to win, because the idea came from taste rath
 - The goal action and its value (order, booking, qualified lead).
 - Analytics for recent whole weeks: visits and conversions by step, device and source. A GA4 exploration export or Viewer seat is enough.
 - Heatmap and recording notes or screenshots, if the tool runs with consent (see the tracking-and-consent-check skill).
-- Screenshots of the page or flow on mobile and desktop.
+- The live page or flow, captured with `node tools/capture-brand-dna.mjs <url> <steps...>` (screenshots at 390 and 1440 px plus the page's fonts, colours, buttons and section order), or the client's screenshots on mobile and desktop.
 - Customer words: reviews, survey answers, support questions (the conversion copywriter kit's voice-of-customer method).
 - Speed data if available (PageSpeed Insights or the site's Core Web Vitals report).
 
@@ -51,6 +51,7 @@ Most failed tests were never going to win, because the idea came from taste rath
 - No benchmark is used as a target; the client's own data is the baseline.
 - Recordings used only where consent rules are met, and no personal data in the report.
 - Copy rewrites, where needed, follow the conversion copywriter kit.
+- Each fix is a change to the live page that keeps its nav, footer, fonts and components unless the fix is about them; built fixes pass `tools/check-brand-fidelity.mjs` against the capture before they go live.
 
 ## Output format
 
@@ -63,7 +64,7 @@ Most failed tests were never going to win, because the idea came from taste rath
 
 ## Example of good output (short)
 
-*Fernway Bike Hire is a made-up bike rental business with an online booking flow, used only to show the format. All numbers are invented.*
+*Illustrative structure, not a real business: a bike rental business with an online booking flow. Figures only show the shape. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Summary:** the biggest leak is the "Your details" step on mobile: 1,140 of 2,010 mobile visitors who reached it left (57%), against 31% on desktop. Recordings show the phone field rejecting numbers with spaces. Fix that today; then test showing the deposit amount on the bike-selection step.
 

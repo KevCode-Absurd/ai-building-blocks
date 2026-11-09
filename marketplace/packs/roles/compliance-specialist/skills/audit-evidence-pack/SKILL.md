@@ -84,9 +84,9 @@ Give the auditor-facing index (control, evidence, location), and a list of quest
 
 ## Example of good output (short)
 
-*Made-up business: Tamsett Scheduling, a 25-person software company asked by a hospital group for a SOC 2 report.*
+*Illustrative structure, not a real business: a 25-person software company asked by a hospital group for a SOC 2 report. Copy the shape, never the content: every fact comes from the client's own context.*
 
-**Ask.** Pellbrook Hospital Group (also made up) needs a SOC 2 report covering the Tamsett scheduling platform before contract renewal in June 2027. Categories: security and availability (to confirm with the CPA firm). Criteria version: to confirm, given the 2027 exposure drafts.
+**Ask.** A hospital group needs a SOC 2 report covering the company's scheduling platform before contract renewal in June 2027. Categories: security and availability (to confirm with the CPA firm). Criteria version: to confirm, given the 2027 exposure drafts.
 
 | Control | Reference | Owner | Frequency | Evidence | Status |
 |---|---|---|---|---|---|

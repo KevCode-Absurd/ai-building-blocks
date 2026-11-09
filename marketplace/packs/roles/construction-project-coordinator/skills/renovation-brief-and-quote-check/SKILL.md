@@ -75,7 +75,7 @@ A short summary: what each quote covers, the gaps, and what to settle before dec
 
 ## Example
 
-*Made-up business for illustration: the Okafor family, kitchen refit in a 1930s semi in Nottingham, UK. Three quotes.*
+*Illustrative structure, not a real household: a kitchen refit in a 1930s semi in Nottingham, UK. Copy the shape, never the content: every fact comes from the client's own context. Three quotes.*
 
 > | Item | Quote A (£8,400) | Quote B (£9,950) | Quote C (£11,200) |
 > |---|---|---|---|

@@ -62,10 +62,10 @@ This is marketing and process design, not advice. What the firm may ask, record 
 
 ## Example of good output (short)
 
-*Corran Tax & Books is a made-up accounting firm, used only to show the format. All details are invented for this example.*
+*Illustrative structure, not a real business: an accounting firm. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Acknowledgement (sent at once):**
-"Thanks for getting in touch with Corran Tax & Books. A member of our team will reply by the end of the next working day. If you have a deadline in the next 7 days, reply with the date and we'll look at your message first. We can't give advice by email before we've agreed to work together, but we'll tell you if we can help and what it would cost. [Privacy line]"
+"Thanks for getting in touch with [Business]. A member of our team will reply by the end of the next working day. If you have a deadline in the next 7 days, reply with the date and we'll look at your message first. We can't give advice by email before we've agreed to work together, but we'll tell you if we can help and what it would cost. [Privacy line]"
 
 **Call script (extract):**
 "Before we start: I can't advise on your tax position today, but I can find out what you need and book you with one of our accountants. Is that OK?

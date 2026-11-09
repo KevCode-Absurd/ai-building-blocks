@@ -67,7 +67,7 @@ A plan decides what to post, where, how often and why, before anyone writes a ca
 
 ## Example of good output (short)
 
-*Copper Kettle Bakery is a made-up business used only to show the format: a neighbourhood bakery with one owner who will film hands and ovens but not her face. All details are invented.*
+*Illustrative structure, not a real business: a neighbourhood bakery with one owner who will film hands and ovens but not her face. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Summary:** goal is more pre-orders for weekend loaves. Platforms: Instagram (local customers already tag the shop) and TikTok (process videos suit the oven); Facebook kept for the events group only. Pillars: process (attract), baking tips (teach), regulars and reviews (prove), pre-orders (sell). Rhythm: two short process videos, one carousel and daily stories a week, filmed in one Thursday-afternoon session.
 

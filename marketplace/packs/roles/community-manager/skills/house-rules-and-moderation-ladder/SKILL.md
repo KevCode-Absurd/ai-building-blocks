@@ -62,7 +62,7 @@ Moderation goes wrong in two ways: rules nobody understands, and actions nobody 
 
 ## Example of good output (short)
 
-*Kiln Club is a made-up pottery community on Circle with 1,200 members, used only to show the format.*
+*Illustrative structure, not a real business: a pottery community on Circle with 1,200 members. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Purpose:** A place for home potters to share work, ask for help and learn from each other.
 

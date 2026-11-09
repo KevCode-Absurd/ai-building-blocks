@@ -58,7 +58,7 @@ LinkedIn posts can run to 3,000 characters, members can save drafts and schedule
 
 ## Example of good output (short)
 
-*Northdale Food Safety is a made-up consultancy used only to show the format. Its founder "Rhona", the source IDs and the numbers are invented for this example.*
+*Illustrative structure, not a real business: a food safety consultancy, with its founder "Rhona" and her source IDs. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Batch plan (extract)**
 

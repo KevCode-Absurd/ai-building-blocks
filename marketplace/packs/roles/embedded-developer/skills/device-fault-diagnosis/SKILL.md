@@ -93,7 +93,7 @@ A test that would fail before and pass after: run the load that caused the brown
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Pebble & Pine Gifts", an ESP32 door chime that drives a 5 V relay for a bell.*
+*Illustrative structure, not a real business: a gift shop with an ESP32 door chime that drives a 5 V relay for a bell. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Fault.** The ESP32 restarts each time the bell relay switches on; the serial log shows a brownout reset at that moment.
 >

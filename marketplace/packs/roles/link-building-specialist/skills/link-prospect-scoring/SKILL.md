@@ -83,7 +83,7 @@ When the list came from a vendor selling placements, add a summary: how many sit
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Brightwater Tiles", a UK online tile shop with a new guide to waterproofing small bathrooms.*
+*Illustrative structure, not a real business: a UK online tile shop with a new guide to waterproofing small bathrooms. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Summary:** 40 sites in; 9 pitch, 7 maybe, 24 skip (14 for seller signs, 6 off-topic, 4 inactive).
 >
@@ -91,6 +91,6 @@ When the list came from a vendor selling placements, add a summary: how many sit
 > |---|---|---|---|---|---|---|---|
 > | A home renovation magazine site | Consumer press | Pass | Pass: dated articles this week, newsletter | Pass: named editors | None | Pitch | Runs small-bathroom features; angle: the five mistakes that cause leaks, with photos |
 > | A plumbers' trade association | Association | Pass | Partial: member news only | Pass | None | Maybe | Has a homeowner resources page; angle: offer the guide as a free resource |
-> | "Best Home Tips Hub" | Blog | Partial | Fail: no comments, thin posts | Fail: no authors | Prices for "do-follow guest posts" | Skip | Sells followed links |
+> | A generic "home tips" blog | Blog | Partial | Fail: no comments, thin posts | Fail: no authors | Prices for "do-follow guest posts" | Skip | Sells followed links |
 >
 > **For approval:** the 9 pitch sites. Contacts: 5 from your media database, 4 from the sites' editor pages.

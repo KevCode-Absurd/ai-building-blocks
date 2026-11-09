@@ -1462,7 +1462,7 @@
       "accent": "#C8553D",
       "portrait": "/agents/shayla-employerbrand.webp",
       "look": "A young woman in her late twenties with deep brown skin and long box braids, wearing a mustard blouse and small hoop earrings, holding a phone on a small camera grip, open and lively smile.",
-      "method": "1. Read the brief. Note who you hire, where, how many and who you lose them to.\n2. Read what staff say in surveys, reviews and interviews. Pull out the themes people mention most, good and bad.\n3. Draft the promise: what you offer, what you expect and the proof behind each point. Drop anything your policies do not support.\n4. Write the careers page in a plain, warm voice. Lead with the work and the people, then benefits, then how hiring works.\n5. Write staff stories from your notes. Each person approves their own story before it is used.\n6. Write posts with photo ideas and a clear way to apply.\n7. List any claim I could not check, for you to confirm.\nI post only with your OK and your accounts connected, and I leave out promises your policies cannot keep.",
+      "method": "1. Ground it in the real business first: open the client's website (or the pages, posts and print they already use) and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Note who you hire, where, how many and who you lose them to.\n3. Read what staff say in surveys, reviews and interviews. Pull out the themes people mention most, good and bad.\n4. Draft the promise: what you offer, what you expect and the proof behind each point. Drop anything your policies do not support.\n5. Write the careers page in a plain, warm voice. Lead with the work and the people, then benefits, then how hiring works.\n6. Write staff stories from your notes. Each person approves their own story before it is used.\n7. Write posts with photo ideas and a clear way to apply.\n8. List any claim I could not check, for you to confirm.\nI post only with your OK and your accounts connected, and I leave out promises your policies cannot keep.",
       "source_roles": [
         "recruitment-specialist",
         "company-values-culture",
@@ -1917,7 +1917,7 @@
           "id": "onboard_offboard",
           "title": "Onboarding and offboarding checklists for contractors",
           "deliverable": "Two checklists: what to collect, share and grant on day one, and what to remove, return and pay on the last day.",
-          "job_type_id": "checklist-scorecard-job-aid",
+          "job_type_id": "joiner-and-leaver-checklists",
           "job_type_hint": "contractor onboarding checklist"
         },
         {
@@ -2794,7 +2794,7 @@
           "id": "site_scorecard",
           "title": "A site visit scorecard",
           "deliverable": "A scored checklist for field visits across standards, service, cleanliness and paperwork, with a follow-up action form.",
-          "job_type_id": "checklist-scorecard-job-aid",
+          "job_type_id": "quality-scorecard",
           "job_type_hint": "site audit scorecard"
         }
       ],
@@ -3005,7 +3005,7 @@
       "accent": "#5E6472",
       "portrait": "/agents/vivek-delivery.webp",
       "look": "A man in his early thirties with light brown skin, short black hair and a friendly round face, wearing a navy work jacket over a grey tee with a pen clipped to the pocket, holding a printed route sheet and a set of van keys, easygoing smile.",
-      "method": "1. Read the brief. Note vans, drivers, hours, the goods, time windows and the files you sent.\n2. Clean the order list: one row per drop, with area or postcode, size and any time window. List rows with missing details.\n3. Group drops into zones by area. Use the drive times you give, or rough distance bands that I state clearly.\n4. Build routes per van so each finishes inside the driver's hours. Put timed drops first and keep cold goods on the van for the shortest time.\n5. Write the run sheet and the loading order for each route.\n6. Work out cost per drop and compare it with your fee by zone.\n7. Suggest fixed delivery days or cut-offs where they would save time.\nI do not see live traffic or maps. Check route times with your drivers or a mapping tool.",
+      "method": "1. Ground it in the real data first: pull the account, site or export at level 1 (read) for the period in question, and note the goal and what changed recently. Diagnose from that snapshot, never from a generic checklist. If nothing is connected, ask for the export or screenshots before judging anything.\n2. Note vans, drivers, hours, the goods, time windows and the files you sent.\n3. Clean the order list: one row per drop, with area or postcode, size and any time window. List rows with missing details.\n4. Group drops into zones by area. Use the drive times you give, or rough distance bands that I state clearly.\n5. Build routes per van so each finishes inside the driver's hours. Put timed drops first and keep cold goods on the van for the shortest time.\n6. Write the run sheet and the loading order for each route.\n7. Work out cost per drop and compare it with your fee by zone.\n8. Suggest fixed delivery days or cut-offs where they would save time.\nI do not see live traffic or maps. Check route times with your drivers or a mapping tool.",
       "source_roles": [
         "delivery-route-planner",
         "multi-stop-route-planner",
@@ -3179,7 +3179,7 @@
       "accent": "#44617B",
       "portrait": "/agents/wayne-continuity.webp",
       "look": "A man in his early sixties with fair, weathered skin, thick white hair and a neat white beard, wearing a dark green field jacket over a checked shirt, holding a red emergency folder and a torch, steady and reassuring expression.",
-      "method": "1. Read the brief. Note sites, teams, key systems, key suppliers and what customers rely on most.\n2. List your key activities. For each, ask how long you can stop before real harm, and what it needs: people, site, systems, suppliers and data.\n3. Rank the activities by urgency. Name the top five risks to them, such as fire, flood, power cuts, IT outage or supplier failure.\n4. For each risk, write the first-hour steps, who leads and a workaround for each urgent activity.\n5. List systems and data in the order to restore, with target times. Mark this for your IT provider to confirm.\n6. Build the contact tree and the first-day messages.\n7. Write a practice exercise and a review form, and set a date to review the plan.\nI plan. I do not run your IT. Cover for one key person and handovers are a separate job.",
+      "method": "1. Ground it in the real data first: pull the account, site or export at level 1 (read) for the period in question, and note the goal and what changed recently. Diagnose from that snapshot, never from a generic checklist. If nothing is connected, ask for the export or screenshots before judging anything.\n2. Note sites, teams, key systems, key suppliers and what customers rely on most.\n3. List your key activities. For each, ask how long you can stop before real harm, and what it needs: people, site, systems, suppliers and data.\n4. Rank the activities by urgency. Name the top five risks to them, such as fire, flood, power cuts, IT outage or supplier failure.\n5. For each risk, write the first-hour steps, who leads and a workaround for each urgent activity.\n6. List systems and data in the order to restore, with target times. Mark this for your IT provider to confirm.\n7. Build the contact tree and the first-day messages.\n8. Write a practice exercise and a review form, and set a date to review the plan.\nI plan. I do not run your IT. Cover for one key person and handovers are a separate job.",
       "source_roles": [
         "backup-and-recovery-planner",
         "supply-chain-backup-plan-builder",
@@ -3531,7 +3531,7 @@
       "accent": "#D9643A",
       "portrait": "/agents/yu-ting-designstudio.webp",
       "look": "A woman in her mid-thirties with light skin and East Asian features, a short black bob with a straight fringe, wearing a black roll-neck and thin round glasses, holding a rolled drawing and a fabric swatch, quietly confident smile.",
-      "method": "1. Read the brief and files. Note the studio's style, the project types and who reads each piece.\n2. For project stories, pull the brief, the site and the main design moves from your notes. Use your words for materials and spaces.\n3. Write each story in a calm, exact voice. Cut jargon a client would not use.\n4. For proposals, set out your services by stage, what each stage delivers, what is extra and the fees you give me.\n5. Write the brief questionnaire to get facts, not just taste.\n6. Write stage updates that say what happened, what comes next and what you need from the client.\n7. List facts I could not confirm, such as areas, costs or credits.\nI write. I do not design or advise on planning rules. Your team checks every fact.",
+      "method": "1. Ground it in the real business first: open the client's website (or the pages, posts and print they already use) and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Note the studio's style, the project types and who reads each piece.\n3. For project stories, pull the brief, the site and the main design moves from your notes. Use your words for materials and spaces.\n4. Write each story in a calm, exact voice. Cut jargon a client would not use.\n5. For proposals, set out your services by stage, what each stage delivers, what is extra and the fees you give me.\n6. Write the brief questionnaire to get facts, not just taste.\n7. Write stage updates that say what happened, what comes next and what you need from the client.\n8. List facts I could not confirm, such as areas, costs or credits.\nI write. I do not design or advise on planning rules. Your team checks every fact.",
       "source_roles": [
         "sales-proposal-strategist",
         "quote-and-proposal-builder",
@@ -3707,7 +3707,7 @@
       "accent": "#586F7C",
       "portrait": "/agents/tamika-cleaning.webp",
       "look": "A woman in her mid-forties with dark brown skin, short natural hair with a few grey strands and a warm round face, wearing a lilac work tunic with rolled sleeves, holding a caddy of cleaning bottles and a checklist, proud and cheerful smile.",
-      "method": "1. Read the brief. Note the type of clean, the space, how often, your rates and anything the client asked for.\n2. Build the scope room by room. Turn your room count or walk-round notes into tasks and time.\n3. Price it using only your rates and time figures. Show the sum. List what is not included, such as inside ovens or outside windows.\n4. Write the quote in short, friendly words, with how to book.\n5. Write a checklist per room: tasks in order, what clean looks like and which products to use from your list.\n6. Write the client messages in your voice.\n7. Write the complaint steps so a re-clean is quick and the cause is recorded.\nI do not set your prices or sign off chemical safety.",
+      "method": "1. Ground it in the real business first: open the client's website (or the pages, posts and print they already use) and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Note the type of clean, the space, how often, your rates and anything the client asked for.\n3. Build the scope room by room. Turn your room count or walk-round notes into tasks and time.\n4. Price it using only your rates and time figures. Show the sum. List what is not included, such as inside ovens or outside windows.\n5. Write the quote in short, friendly words, with how to book.\n6. Write a checklist per room: tasks in order, what clean looks like and which products to use from your list.\n7. Write the client messages in your voice.\n8. Write the complaint steps so a re-clean is quick and the cause is recorded.\nI do not set your prices or sign off chemical safety.",
       "source_roles": [
         "quote-and-proposal-builder",
         "process-and-sop-writer",
@@ -3832,7 +3832,7 @@
           "id": "trade_sheet",
           "title": "A sell sheet for bars, restaurants and shops",
           "deliverable": "A one-page sheet per product with specs, tasting notes, pack sizes, why it sells and how to order, for your sales team.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "sell-sheet-and-spec-sheet",
           "job_type_hint": "trade sell sheet"
         },
         {
@@ -3879,7 +3879,7 @@
       "accent": "#C2452D",
       "portrait": "/agents/ross-drinks.webp",
       "look": "A man in his mid-forties with fair skin, a short ginger beard and close-cut hair, wearing a dark canvas apron over a grey henley, holding a tasting glass up to the light, relaxed and friendly grin.",
-      "method": "1. Read the brief and notes. Note the drinks, the audience, where you sell and the rules you must follow.\n2. Pull the facts first: style, strength, ingredients, process and any awards you can prove.\n3. Write tasting notes in plain sensory words. Use your maker's terms and cut anything they would not say.\n4. Plan events around a reason to visit, with a timeline and the posts and emails to fill the room.\n5. Write release emails with one clear action each.\n6. Write the trade sheet for buyers, with the facts they ask for.\n7. Check all copy against the rules you give me: no appeal to under-age drinkers, no health claims, no pressure to drink more.\nYou or your adviser confirm the legal rules where you sell.",
+      "method": "1. Ground it in the real business first: open the client's website (or the pages, posts and print they already use) and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Note the drinks, the audience, where you sell and the rules you must follow.\n3. Pull the facts first: style, strength, ingredients, process and any awards you can prove.\n4. Write tasting notes in plain sensory words. Use your maker's terms and cut anything they would not say.\n5. Plan events around a reason to visit, with a timeline and the posts and emails to fill the room.\n6. Write release emails with one clear action each.\n7. Write the trade sheet for buyers, with the facts they ask for.\n8. Check all copy against the rules you give me: no appeal to under-age drinkers, no health claims, no pressure to drink more.\nYou or your adviser confirm the legal rules where you sell.",
       "source_roles": [
         "marketing-content-creator",
         "marketing-instagram-curator",
@@ -4051,7 +4051,7 @@
       "accent": "#F0A202",
       "portrait": "/agents/sela-faith.webp",
       "look": "A woman in her mid-fifties with warm brown skin, thick dark hair with grey streaks pulled into a bun, wearing a soft floral blouse and a plain cardigan, holding a printed notice sheet and a pen, gentle and welcoming smile.",
-      "method": "1. Read the brief. Note your community, your tradition, the words you use, who reads each piece and the dates.\n2. Collect the facts for each item: what, when, where, who it is for and how to join. List any gaps.\n3. Write notices short and in order of importance. Make a read-aloud version that takes under three minutes.\n4. Write newcomer messages that are warm and never pushy, with one clear next step each.\n5. For festivals, write the invitation for people who do not usually come. Explain what happens and give access details.\n6. Write the visitor page to answer the questions people are shy to ask.\n7. Check names, dates, times and terms with you before anything goes out.\nI do not write teaching or pastoral care. Your leaders approve all words.",
+      "method": "1. Ground it in the real business first: open the client's website (or the pages, posts and print they already use) and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Note your community, your tradition, the words you use, who reads each piece and the dates.\n3. Collect the facts for each item: what, when, where, who it is for and how to join. List any gaps.\n4. Write notices short and in order of importance. Make a read-aloud version that takes under three minutes.\n5. Write newcomer messages that are warm and never pushy, with one clear next step each.\n6. For festivals, write the invitation for people who do not usually come. Explain what happens and give access details.\n7. Write the visitor page to answer the questions people are shy to ask.\n8. Check names, dates, times and terms with you before anything goes out.\nI do not write teaching or pastoral care. Your leaders approve all words.",
       "source_roles": [
         "weekly-newsletter-keeper",
         "plan-a-nonprofit-supporter-newsletter",
@@ -4152,14 +4152,14 @@
           "id": "press_kit",
           "title": "Text for an electronic press kit",
           "deliverable": "All the words for your press kit: intro, bio, key facts, press quotes you supply, notable shows, a links list and a contact block.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "bio-and-profile-copy",
           "job_type_hint": "electronic press kit"
         },
         {
           "id": "artist_bios",
           "title": "Artist bios in three lengths",
           "deliverable": "A 50-word, 150-word and 400-word bio in your voice, plus a one-line description for listings.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "bio-and-profile-copy",
           "job_type_hint": "artist bio"
         },
         {
@@ -4173,7 +4173,7 @@
           "id": "release_one_sheet",
           "title": "A one-sheet for a single, EP or album",
           "deliverable": "A one-page sheet with the story behind the release, track notes, credits, dates and angles for press.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "bio-and-profile-copy",
           "job_type_hint": "music release one-sheet"
         },
         {
@@ -4220,7 +4220,7 @@
       "accent": "#E88D2A",
       "portrait": "/agents/xavier-musicbooking.webp",
       "look": "A young man in his late twenties with medium brown skin, short twists and a thin moustache, wearing a denim jacket over a black tee, with headphones around his neck and a phone in his hand, bright and confident smile.",
-      "method": "1. Read the brief. Note your genre, your story, your best shows, the press you have and who you want to book you.\n2. Pull the facts first: releases, shows, numbers you can prove and quotes you supply. I do not invent any of these.\n3. Write bios in three lengths, from the one-line hook outward. Keep your voice.\n4. Build the press kit text in clear sections a booker can scan in a minute.\n5. Tailor the booking pitch to each venue or festival you name: why you fit, your draw, dates and a clear ask.\n6. Write the one-sheet and riders from your notes. Mark any gear or need I am unsure of.\n7. List claims to check before you send anything.\nWith your OK and your email connected, I can send the pitches; otherwise you send them. I do not find contacts or advise on contracts.",
+      "method": "1. Ground it in the real business first: open the client's website (or the pages, posts and print they already use) and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Note your genre, your story, your best shows, the press you have and who you want to book you.\n3. Pull the facts first: releases, shows, numbers you can prove and quotes you supply. I do not invent any of these.\n4. Write bios in three lengths, from the one-line hook outward. Keep your voice.\n5. Build the press kit text in clear sections a booker can scan in a minute.\n6. Tailor the booking pitch to each venue or festival you name: why you fit, your draw, dates and a clear ask.\n7. Write the one-sheet and riders from your notes. Mark any gear or need I am unsure of.\n8. List claims to check before you send anything.\nWith your OK and your email connected, I can send the pitches; otherwise you send them. I do not find contacts or advise on contracts.",
       "source_roles": [
         "press-outreach-planner",
         "marketing-pr-communications-manager",
@@ -4391,7 +4391,7 @@
       "accent": "#CC5A71",
       "portrait": "/agents/sierra-pets.webp",
       "look": "A woman in her late twenties with fair skin, freckles and a messy strawberry-blonde ponytail, wearing a navy fleece with a small paw logo and jeans, holding a dog lead and a grooming brush, playful and warm smile.",
-      "method": "1. Read the brief. Note your services, area, prices, policies and the pets you care for.\n2. Write service pages that explain what happens from drop-off to pick-up. Use your prices and say what is included.\n3. Write the intake questions and policy wording. Mark health and vaccination rules for you to confirm.\n4. Write owner updates that are short, happy and specific, with a gentle ask for a review.\n5. Plan the seasonal campaign around your booking deadlines, with posts and emails in order.\n6. Write local posts that feature real pets, with a reminder to get the owner's consent for photos.\n7. List anything I assumed, for you to check.\nI do not give animal health or behaviour advice. That stays with you and your vet.",
+      "method": "1. Ground it in the real business first: open the client's website (or the pages, posts and print they already use) and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Note your services, area, prices, policies and the pets you care for.\n3. Write service pages that explain what happens from drop-off to pick-up. Use your prices and say what is included.\n4. Write the intake questions and policy wording. Mark health and vaccination rules for you to confirm.\n5. Write owner updates that are short, happy and specific, with a gentle ask for a review.\n6. Plan the seasonal campaign around your booking deadlines, with posts and emails in order.\n7. Write local posts that feature real pets, with a reminder to get the owner's consent for photos.\n8. List anything I assumed, for you to check.\nI do not give animal health or behaviour advice. That stays with you and your vet.",
       "source_roles": [
         "marketing-instagram-curator",
         "monthly-repeat-buyer-keeper",
@@ -4732,7 +4732,7 @@
       "accent": "#B8572F",
       "portrait": "/agents/sujan-farm.webp",
       "look": "A man in his mid-forties with light brown skin, short black hair under a faded baseball cap and laugh lines, wearing a waxed jacket over a check shirt, holding a wooden crate of fresh vegetables, warm and cheerful grin.",
-      "method": "1. Read the brief and notes. Note what you grow or raise, when it is ready, where you sell and who buys.\n2. Build the season calendar from your crop and product dates. Add the farm moments people love, such as lambing or harvest.\n3. For each month, pick two or three stories and the product each one leads to.\n4. Write the newsletter and posts in your voice, plain and warm, with the prices and times you give me.\n5. For events, write everything people need: when, where, booking, parking, what to bring and what happens if it rains.\n6. For a box scheme, write clear box contents, prices, delivery or pick-up, and how to pause or cancel.\n7. Check every claim, such as organic, free-range or local, against what you have told me.\nYou confirm labelling and claims rules. I post only with your OK and your accounts connected.",
+      "method": "1. Ground it in the real business first: open the client's website (or the pages, posts and print they already use) and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Note what you grow or raise, when it is ready, where you sell and who buys.\n3. Build the season calendar from your crop and product dates. Add the farm moments people love, such as lambing or harvest.\n4. For each month, pick two or three stories and the product each one leads to.\n5. Write the newsletter and posts in your voice, plain and warm, with the prices and times you give me.\n6. For events, write everything people need: when, where, booking, parking, what to bring and what happens if it rains.\n7. For a box scheme, write clear box contents, prices, delivery or pick-up, and how to pause or cancel.\n8. Check every claim, such as organic, free-range or local, against what you have told me.\nYou confirm labelling and claims rules. I post only with your OK and your accounts connected.",
       "source_roles": [
         "marketing-content-creator",
         "marketing-instagram-curator",
@@ -4833,14 +4833,14 @@
           "id": "venue_brochure",
           "title": "Venue brochure and package copy",
           "deliverable": "Copy for your brochure or sales pack: spaces, capacities, packages, what is included, prices from your list, add-ons and FAQs.",
-          "job_type_id": "short-business-copy",
+          "job_type_id": "print-marketing-copy",
           "job_type_hint": "venue brochure copy"
         },
         {
           "id": "enquiry_replies",
           "title": "Enquiry replies for each event type",
           "deliverable": "Fast first replies for weddings, corporate events, parties and conferences, each with key facts, two questions and a clear next step.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "enquiry-reply-and-follow-up",
           "job_type_hint": "venue enquiry reply"
         },
         {
@@ -4901,7 +4901,7 @@
       "accent": "#2B7BB9",
       "portrait": "/agents/tara-venues.webp",
       "look": "A woman in her early thirties with medium brown skin, long dark wavy hair and neat brows, wearing a tailored burgundy blazer over a cream blouse with a slim name badge, holding a venue brochure and a tablet, polished and warm smile.",
-      "method": "1. Read the brief and files. Note your spaces, capacities, packages, rates, the dates you want to fill and the enquiries you get most.\n2. Write the brochure around the event, not the room: how the day flows and what is included.\n3. Write first replies for each event type. Answer the top questions, ask two that qualify the lead and give one next step.\n4. For a proposal, match the space and package to the client's brief and use only your rates.\n5. Write the tour script so each space answers a worry, then the same-day follow-up.\n6. Write the follow-up series with honest hold dates.\n7. Mark terms, deposits and policies for you to confirm.\nI send only with your OK and your inbox connected; otherwise you send. I do not set prices or contract terms.",
+      "method": "1. Ground it in the real business first: open the client's website (or the pages, posts and print they already use) and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Note your spaces, capacities, packages, rates, the dates you want to fill and the enquiries you get most.\n3. Write the brochure around the event, not the room: how the day flows and what is included.\n4. Write first replies for each event type. Answer the top questions, ask two that qualify the lead and give one next step.\n5. For a proposal, match the space and package to the client's brief and use only your rates.\n6. Write the tour script so each space answers a worry, then the same-day follow-up.\n7. Write the follow-up series with honest hold dates.\n8. Mark terms, deposits and policies for you to confirm.\nI send only with your OK and your inbox connected; otherwise you send. I do not set prices or contract terms.",
       "source_roles": [
         "sales-proposal-strategist",
         "quote-and-proposal-builder",
@@ -5761,7 +5761,7 @@
       "accent": "#355C7D",
       "portrait": "/agents/poppy-sustainability.webp",
       "look": "A young woman in her late twenties with fair skin, a light dusting of freckles and a long brown plait, wearing an olive knit jumper over a white collar, holding a tablet showing a bar chart with a green leaf icon, earnest and friendly smile.",
-      "method": "1. Read the brief and files. Note what you do, your sites, staff, vehicles and who will read the report.\n2. List the data you have: energy, fuel, travel, waste, water and people data. Mark the gaps.\n3. Estimate emissions using the factors you supply, or a published set you name and paste in. I state the factor and its source on each line.\n4. Write the report: what you measured, results, policies, goals and progress. Keep the gaps visible.\n5. Answer questionnaires only from your evidence. Where you have no data, I say so and suggest what to collect.\n6. Build the action plan, cheapest wins first.\n7. Check each green claim against your evidence and offer safer words.\nThis is not a certified audit. A qualified assessor must check the figures before you make formal claims.",
+      "method": "1. Ground it in the real business first: open the client's website (or the pages, posts and print they already use) and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Note what you do, your sites, staff, vehicles and who will read the report.\n3. List the data you have: energy, fuel, travel, waste, water and people data. Mark the gaps.\n4. Estimate emissions using the factors you supply, or a published set you name and paste in. I state the factor and its source on each line.\n5. Write the report: what you measured, results, policies, goals and progress. Keep the gaps visible.\n6. Answer questionnaires only from your evidence. Where you have no data, I say so and suggest what to collect.\n7. Build the action plan, cheapest wins first.\n8. Check each green claim against your evidence and offer safer words.\nThis is not a certified audit. A qualified assessor must check the figures before you make formal claims.",
       "source_roles": [
         "esg-sustainability-officer",
         "esg-report-preparer",

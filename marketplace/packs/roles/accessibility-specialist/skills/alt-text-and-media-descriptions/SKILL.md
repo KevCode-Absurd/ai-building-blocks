@@ -30,7 +30,7 @@ description: Writes text alternatives that give screen reader users the same inf
 
 Use the W3C alt decision tree:
 1. **Contains text?** If the same text is on the page, the image is decorative (empty alt). If the text has a function (an icon), describe the function. If the text appears nowhere else, put the text in the alt.
-2. **Inside a link or button?** Say where it goes or what it does ("Search", "Fernhill Throws home"), not what it looks like.
+2. **Inside a link or button?** Say where it goes or what it does ("Search", "[Business] home"), not what it looks like.
 3. **Adds meaning?** A simple photo or graphic gets a short description of that meaning. A chart or complex graphic gets short alt text plus the full information elsewhere on the page.
 4. **Purely decorative?** Empty alt (`alt=""`), so screen readers skip it.
 5. **Unclear?** Ask the client what the image is for.
@@ -87,14 +87,14 @@ Read every alt text aloud at an even pace. Check the term list. Count characters
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Fernhill Throws", which sells woollen blankets online.*
+*Illustrative structure, not a real business: a shop that sells woollen blankets online. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | File | Job | Alt text | Chars | Notes |
 > |---|---|---|---|---|
 > | moss-throw-sofa.jpg | Informative (product page) | Moss green herringbone throw folded over a grey sofa arm, with a knotted fringe | 80 | Fringe named because the copy sells it |
 > | moss-throw-detail.jpg | Informative | Close-up of the herringbone weave and fringe knots | 50 | |
 > | wave-divider.svg | Decorative | (empty) | 0 | Pattern line between sections |
-> | logo-header.svg | Functional (link) | Fernhill Throws home | 20 | Says where the link goes |
+> | logo-header.svg | Functional (link) | [Business] home | 20 | Says where the link goes |
 > | sales-chart.png | Complex | Line chart: monthly orders, January to October 2026, peaking in October | 70 | Long description below; data table supplied by client |
 >
 > **Please check:** the photo "studio-team.jpg" was described as "three people at a loom". I have not named them; tell me if the caption names them.

@@ -86,7 +86,7 @@ For each event: the action to take, where to look (DebugView, Tag Assistant prev
 
 ## Example of good output (short)
 
-*Made-up business: Larkspur Yarns, a Shopify shop selling knitting kits.*
+*Illustrative structure, not a real business: a Shopify shop selling knitting kits. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Event | Trigger | Parameters (example) | Fires from | Key event |
 |---|---|---|---|---|

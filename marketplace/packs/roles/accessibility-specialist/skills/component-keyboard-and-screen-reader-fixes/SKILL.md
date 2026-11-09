@@ -91,7 +91,7 @@ Level 2: branch and pull request with the table in the description. Level 3: mer
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Tallow & Wick", a candle shop with pricing tabs for its subscription.*
+*Illustrative structure, not a real business: a candle shop with pricing tabs for its subscription. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Summary.** Today the tabs switch on click only and a screen reader reads all three panels at once. After the fix, arrow keys move between tabs, only the chosen plan's panel is read, and the selected tab is announced.
 >

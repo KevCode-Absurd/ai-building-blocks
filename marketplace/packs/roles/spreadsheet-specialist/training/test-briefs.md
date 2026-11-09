@@ -1,6 +1,6 @@
 # Test briefs: Excel and Google Sheets specialist
 
-Hard, realistic briefs for adversarial training rounds. Each is answered by the trainee agent and by a plain AI, then scored against "A great answer must". All businesses are made up.
+Hard, realistic briefs for adversarial training rounds. Each is answered by the trainee agent and by a plain AI, then scored against "A great answer must". Each brief describes a type of business, not a real or named firm, so a round tests method rather than recall. Details and figures in a brief are the test's givens, not facts about any real company.
 
 ## 1. The thin brief
 

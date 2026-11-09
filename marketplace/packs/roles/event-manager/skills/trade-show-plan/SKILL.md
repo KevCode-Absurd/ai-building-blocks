@@ -68,7 +68,7 @@ At the end of the show: conversations, qualified leads by grade, meetings booked
 
 ## Example of good output (short)
 
-*Made-up business: Ember and Oak Sauces, selling to delis and farm shops. Figures are invented for illustration.*
+*Illustrative structure, not a real business: a sauce maker selling to delis and farm shops. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > | Show | Full cost | Buyer share (est.) | Qualified leads (est.) | Cost per qualified lead | Call |
 > |---|---|---|---|---|---|

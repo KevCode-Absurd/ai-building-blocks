@@ -96,7 +96,7 @@ At level 2, build in a copy, development workspace or Power BI Project file and 
 
 ## Example of good output
 
-*Made-up business, for illustration only: "Copperleaf Studios", a yoga studio with two rooms.*
+*Illustrative structure, not a real business: a yoga studio with two rooms. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Question 2:** Which hours sit idle? → Heatmap, hour × weekday, value = Utilisation %.
 >

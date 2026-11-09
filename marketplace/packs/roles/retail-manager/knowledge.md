@@ -213,3 +213,14 @@ Before I hand anything over, I check:
 | Online share of retail | ONS [24], US Census [25] |
 | Break, rest and scheduling rules | GOV.UK [26], European Commission [27], US DOL [28], state labour offices [29] |
 | Street trading rules | GOV.UK and the local council [30] |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Read the till report by hour and day before planning promotions or rotas. (§5)
+- `decision_rule` Give a promotion one goal (visits, basket size or clearance) before writing signs, because the sign, the offer and the measure all follow from it. (§5)
+- `decision_rule` When a line sells slowly and ties up cash, move it or bundle it first, then mark it down in steps, before buying more of anything. (§5)
+- `decision_rule` When a best seller keeps running out, count it more often and reorder from sales rate and supplier lead time, not from the last order size. (§5)
+- `decision_rule` When counted stock is lower than the record, check the paperwork (deliveries, transfers, returns not booked) before assuming theft. (§5)
+- `decision_rule` If an event's break-even needs more sales than past events delivered, renegotiate, cut costs or skip it before paying the fee. (§5)

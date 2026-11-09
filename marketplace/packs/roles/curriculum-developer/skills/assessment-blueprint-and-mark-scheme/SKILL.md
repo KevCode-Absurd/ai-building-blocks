@@ -90,7 +90,7 @@ Answer every item without the key. Any item with two defensible answers is rewri
 
 ## Example
 
-*Made-up example: "Hearth & Crumb Bakery" is invented for illustration.*
+*Illustrative structure, not a real business: a bakery training staff on its oven and cleaning SOP. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Blueprint (agreed):**
 

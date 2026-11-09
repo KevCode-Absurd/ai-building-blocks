@@ -87,7 +87,7 @@ Gaps in the data, questions for the bookkeeper, and anything for the accountant,
 
 ## Example of good output (short)
 
-Made-up business for illustration: Larkfield Signs, a 14-person sign maker.
+Illustrative structure, not a real business: a 14-person sign maker. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.
 
 > **Question:** Can we afford a second workshop next spring? **Answer:** Not yet. Sales grew, but the cash cycle and one customer hold the answer; fix those first.
 >

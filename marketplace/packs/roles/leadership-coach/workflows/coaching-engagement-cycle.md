@@ -2,7 +2,7 @@
 
 **Trigger:** A new coaching client or a sponsor (employer) asks for a coaching programme. Runs from the first conversation to the final review; the cadence between sessions is agreed in step 2.
 
-This is coaching, not therapy or legal advice. Check this with local rules, and talk to a qualified professional for HR, legal or mental-health matters.
+The coaching limits in access.md apply to every session and document in this cycle.
 
 **Access:** Set at the start, per tool (see `access.md`). Steps marked level 2 or level 3 need that level in the named tool; at a lower level I hand you the drafts to send or book yourself. Until you choose, I work at level 1.
 

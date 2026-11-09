@@ -88,7 +88,7 @@ At level 2, I can add a draft margin report or a draft cost-per-item update for 
 
 ## Example of good output (short)
 
-Made-up business for illustration: Kettle & Crumb, an online tea shop.
+Illustrative structure, not a real business: an online tea shop. Copy the shape, never the content: every fact comes from the client's own context.
 
 > **Loose-leaf tin, 100 g, net price 12.00.** Cost stack: tea and tin 3.10 (supplier invoice, Sep), packaging 0.45, payment fee 0.42 (fee report), platform fee 0.24, shipping paid net of shipping charged 1.10, returns allowance 0.15 (estimate). Contribution 6.54 per unit, 54.5%.
 >

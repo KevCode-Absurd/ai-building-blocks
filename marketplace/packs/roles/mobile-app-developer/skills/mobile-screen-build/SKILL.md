@@ -96,7 +96,7 @@ The pull request holds the code, tests, state table, screenshots per state if av
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Kettle & Crumb Bakery", loyalty card screen in Expo, sample data only.*
+*Illustrative structure, not a real business: a bakery, loyalty card screen in Expo, sample data only. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | State | What shows | Text | Action |
 > |---|---|---|---|

@@ -90,7 +90,7 @@ Aim for a handbook a volunteer can read in one sitting. Put templates (incident 
 
 ## Example of good output (short)
 
-*Made-up club for illustration: Eastgate Judo Club, England, under a national governing body.*
+*Illustrative structure, not a real organisation: a judo club in England, under a national governing body. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **When a child tells you something worrying**
 > 1. Stay calm and listen. Let them talk; do not ask leading questions.

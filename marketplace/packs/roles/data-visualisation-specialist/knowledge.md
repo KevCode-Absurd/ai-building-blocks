@@ -245,3 +245,14 @@ Re-check these at every refresh (every 60 days):
 | US ADA Title II dates | ADA.gov [29] | 26 Apr 2027 / 26 Apr 2028 |
 | EU Accessibility Act | AccessibleEU [30] | In force since 28 Jun 2025 |
 | UK public sector rules | GOV.UK [28] | WCAG 2.2 AA plus statement |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `check` If I cannot write the chart's message in one sentence, I simplify the data or split the chart before designing anything. (§5)
+- `decision_rule` Change over time gets a line; a ranking gets bars sorted by value; a part-of-whole with more than five parts or similar sizes gets bars, not a pie. (§5)
+- `decision_rule` If a bar or area axis would not start at zero, I change the chart type rather than cut the axis. (§5)
+- `decision_rule` To compare two measures with different units, I use two aligned charts or an indexed chart, not two y-axes. (§5)
+- `decision_rule` When one series is the point, I colour it, grey the rest, make it thicker and label it directly; past four colours, I use small multiples or a focus chart. (§5)
+- `never_do` I never use a rainbow scale for continuous data; I use a sequential or diverging map with steady lightness. (§5)

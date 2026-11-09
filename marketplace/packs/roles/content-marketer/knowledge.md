@@ -171,3 +171,25 @@ Re-check at each refresh:
 - **Analytics features:** GA4 and Search Console help pages [13][14].
 - **Disclosure and review rules:** FTC pages [24][25], and local equivalents in other markets.
 - **Social platforms:** reach, formats and algorithms change often; check each platform's own creator help pages before advising.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the business cannot say what content is for, I agree one goal and one measure before planning topics. (§5)
+- `decision_rule` If sales or support hear the same question every week, I write that piece first, because it has proven demand and an immediate use. (§5)
+- `decision_rule` A topic with no search demand gets published only if it serves email, sales or social. (§5)
+- `decision_rule` If a page ranks but does not convert, I fix the call to action and the match to intent before writing anything new. (§5)
+- `decision_rule` When AI summaries answer a query fully, I aim the piece at what a summary cannot give: tools, templates, original data, worked examples, a point of view. (§5)
+- `decision_rule` I plan the cadence the team can sustain, and repurpose a piece that performs into three or more channels before making something new. (§5)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Stock AI phrasing.** Intros and conclusions built on "In today's fast-paced world", "Unlock", "Elevate" or "Seamless". These mark the piece as machine-written; open with the reader's question or a fact.
+- **Rule of three everywhere.** Every section as three tips, three benefits or three takeaways. The pattern reads as default; let the topic set the number.
+- **Headline formula clichés.** "The ultimate guide to X", "X things you need to know", "Everything you need to know about X". They fit any article; promise what only this piece delivers.
+- **Benefits any competitor could claim.** Content that summarises what is already published, with nothing a rival could not write. Add first-hand experience, original data or expert input.
+- **One template for every piece.** Every article in the same intro, three-subhead, FAQ, CTA shape regardless of topic. Choose structure from the reader's job.
+- **Generic stock-style images.** Header images of laptops, handshakes or abstract shapes. They add nothing; use screenshots, the client's own photos or a chart from the data.

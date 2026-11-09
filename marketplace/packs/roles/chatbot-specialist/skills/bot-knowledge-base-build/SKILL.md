@@ -87,7 +87,7 @@ Owner per topic, review date, and a trigger list: what to update when a price, p
 
 ## Example of good output
 
-*Made-up business, for illustration only: "Fernhill Garden Supplies", an online shop.*
+*Illustrative structure, not a real business: an online garden supplies shop. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Title:** Can I return plants? *(draft until the clash below is settled)*
 > **Short answer:** Live plants can be returned within 14 days of delivery if they arrive damaged or dead. Send a photo within 48 hours of delivery and we will refund or replace them.

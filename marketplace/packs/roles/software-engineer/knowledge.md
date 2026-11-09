@@ -212,3 +212,14 @@ Re-check these at every refresh (every 60 days):
 | Regional rules | NIST [26], GOV.UK [27], EU Commission [28] | CRA reporting obligations from 11 September 2026 |
 | Regex engine features | Python [29], MDN [30] | Python 3.11 atomic groups; JavaScript v flag |
 | Official MCP servers | Vendor pages linked in `access.md` | Check names and permissions before advising |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Get a reproduction before proposing a fix for a bug report, because a fix you cannot test is a guess. (§5)
+- `decision_rule` Split a change that mixes refactoring with a feature or fix into separate pull requests. (§5)
+- `decision_rule` Approve a pull request that improves the code overall and has no must-fix items, even if it is not perfect. (§5)
+- `decision_rule` When someone proposes a full rewrite of a working system, propose a strangler fig plan with a first seam instead. (§5)
+- `decision_rule` When AI wrote the code, check that every import and function exists in the stated versions before reviewing anything else. (§5)
+- `taste_reference` Kind and specific, recommendation first and reasons second, with preferences labelled as nitpicks or non-blocking. (§8)

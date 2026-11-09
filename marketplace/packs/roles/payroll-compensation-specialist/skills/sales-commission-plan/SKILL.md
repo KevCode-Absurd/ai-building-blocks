@@ -86,7 +86,7 @@ Run last year's deals through the plan. Show what it rewarded and what it ignore
 
 ## Example of good output (short)
 
-*Made-up business: Northgate Software, hiring its first two account executives. Figures are invented for illustration.*
+*Illustrative structure, not a real business: a software firm hiring its first two account executives. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Job of the plan:** new annual contracts at 70% gross margin, paid when the customer pays.
 > **OTE** $150,000, split $90,000 base and $60,000 variable, because reps run their own deals but the sale is long and needs product help.

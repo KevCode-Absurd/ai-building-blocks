@@ -55,7 +55,7 @@ A table or sheet with one row per listing: listing ID, current title, new title,
 
 ## Example of good output (short)
 
-*Fernhill Clay is a made-up pottery shop, used only to show the format.*
+*Illustrative structure, not a real business: a pottery shop. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Current title:** "Mug Handmade Mug Pottery Mug Coffee Mug Gift for Her Unique Ceramic Mug Speckled Mug"
 

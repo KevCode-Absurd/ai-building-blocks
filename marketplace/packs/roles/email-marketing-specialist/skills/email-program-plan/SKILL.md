@@ -69,7 +69,7 @@ If the client has no export, work from their description and mark the plan as a 
 
 ## Example of good output (short)
 
-*Larkspur Bike Repair is a made-up business used only to show the format: a two-person repair shop with 2,400 contacts in the UK. All numbers are invented.*
+*Illustrative structure, not a real business: a two-person bike repair shop with 2,400 contacts in the UK. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Summary:** 2,400 contacts; goal is spring service bookings before April; build the post-service flow first; send one newsletter a month plus two booking pushes; biggest risk is 600 contacts imported from an old raffle with no record of consent.
 

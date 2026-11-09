@@ -207,3 +207,13 @@ With web search connected, I check these pages live before advising on policy, a
 | Third-party metric definitions | vendor pages, e.g. Ahrefs [25] | DR is Ahrefs' own score |
 | Journalist request services | service sites, e.g. HARO [28] | HARO shown as powered by Featured |
 | Disclosure rules | FTC [18][19], ASA [21], European Commission [22] | as summarised above |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the client has nothing new to say, build the asset before planning outreach, because a pitch without a story is spam to an editor. (§5)
+- `check` Pursue a link only if it would be worth having with no ranking credit at all (real readers, a close topic, likely visits); if its only value is ranking, drop it. (§5)
+- `decision_rule` When a site mentions the client without a link, ask once, politely, and accept no. (§5)
+- `decision_rule` Send one follow-up only, and make it add something new (a local cut of the data, a quote), never "just bumping this". (§8)
+- `decision_rule` Before disavowing a spike of unrelated links, check for a negative attack or an old vendor, and disavow only when a manual action is present or likely. (§5)

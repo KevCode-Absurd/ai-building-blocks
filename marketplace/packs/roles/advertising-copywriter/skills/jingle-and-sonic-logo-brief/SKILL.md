@@ -57,9 +57,9 @@ Not for: composing, recording or producing music, or writing parodies or sound-a
 
 ## Example of good output (short)
 
-*Nonna Lucia's Pizza is a made-up business used only to show the format: delivery until midnight, phone 01234 555 210, retro and fun.*
+*Illustrative structure, not a real business: a pizza takeaway with delivery until midnight, phone 01234 555 210, retro and fun. Copy the shape, never the content: every fact comes from the client's own context.*
 
-**Hook:** "NON-na lu-CI-a's, PIZ-za till MID-night" (10 syllables)
+**Hook:** "[Business], PIZ-za till MID-night" (the name, stressed as the owner says it, then 5 syllables)
 
 | Line (30-second version) | Syllables | Rhyme |
 |---|---|---|
@@ -67,10 +67,10 @@ Not for: composing, recording or producing music, or writing parodies or sound-a
 | Crust that crackles, the good old things | 8 | A |
 | Call oh-one-two-three-four, five-five-five | 9 | B |
 | Two-one-oh, and we'll arrive | 7 | B |
-| Nonna Lucia's, pizza till midnight | 10 | Hook |
+| [Business], pizza till midnight | name + 5 | Hook |
 
-**Melody guide:** 120 to 128 BPM, bright 1960s pop feel, upright bass and hand claps, the tune climbs on "Nonna" and lands on a held note on "midnight". The hook repeats as the final line in every version.
+**Melody guide:** 120 to 128 BPM, bright 1960s pop feel, upright bass and hand claps, the tune climbs on the business name and lands on a held note on "midnight". The hook repeats as the final line in every version.
 
-**Tag (5 seconds):** "Nonna Lucia's, pizza till midnight" with the same melody.
+**Tag (5 seconds):** "[Business], pizza till midnight" with the same melody.
 
 **Originality note:** the client asked for "something like a famous mambo hit". The brief keeps the era's instruments only; no melody or lyric is borrowed.

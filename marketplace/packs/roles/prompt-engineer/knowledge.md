@@ -221,3 +221,13 @@ Re-check these at every refresh (every 14 days):
 | OWASP LLM Top 10 | [17][18][19][20] | 2025 edition |
 | EU AI Act transparency | [27][28] | Applies from 2 Aug 2026 |
 | Third-party image and video tools | Each vendor's own docs | Not covered here; check before writing |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Build a test set before changing a prompt, because otherwise nobody can tell whether a change helped. (§5)
+- `decision_rule` Do checks that code can do (schema, sums, dates, enums) in code, rather than asking the model to self-check. (§5)
+- `decision_rule` Make a field that may be missing nullable and tell the model to return null, because a guessed value is worse than a blank one. (§5)
+- `check` Examples are real or realistic, varied, and include at least one hard case. (§7)
+- `taste_reference` Show, do not describe: give the example instead of explaining it. (§8)

@@ -71,7 +71,7 @@ Not for: SDK code generation, security testing, or writing a spec for behaviour 
 
 ## Example of good output (short)
 
-*Parcelpoint is a made-up business used only to show the format: a delivery-tracking API for small shops.*
+*Illustrative structure, not a real business: a delivery-tracking API for small shops. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **GET /v1/shipments/{shipment_id}**
 
@@ -83,8 +83,8 @@ Gets one shipment and its latest tracking status.
 | include | query | string | No | Set to `events` to add the full tracking history. Default: none. |
 
 ```bash
-curl https://api.parcelpoint.example/v1/shipments/shp_123 \
-  -H "Authorization: Bearer $PARCELPOINT_TEST_KEY"
+curl https://api.[domain]/v1/shipments/shp_123 \
+  -H "Authorization: Bearer $TEST_API_KEY"
 ```
 
 **Errors**

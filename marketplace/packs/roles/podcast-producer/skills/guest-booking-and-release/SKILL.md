@@ -61,13 +61,13 @@ Guests make or break an interview show, and a missing release can take an episod
 
 ## Example of good output (short)
 
-*The Workbench Hour is a made-up show and Dana Reyes a made-up guest, used only to show the format.*
+*Illustrative structure, not a real show or guest: a weekly show for owners of small joinery and building firms, pitching a guest who wrote about keeping apprentices. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Pitch**
 
-> Subject: The Workbench Hour: how you fixed apprentice drop-out?
+> Subject: [Show]: how you fixed apprentice drop-out?
 >
-> Hi Dana, I produce The Workbench Hour, a weekly show for owners of small joinery and building firms. Your post about keeping apprentices past their first winter got passed round our listeners. Would you tell that story on the show: what was going wrong, what you changed, and what it cost? It's a 40-minute remote conversation, audio and video, recorded on Riverside. Could any of these work: 12, 14 or 19 March, mornings UK time? You'd get the episode, three clips and a link to your firm in the notes.
+> Hi Dana, I produce [Show], a weekly show for owners of small joinery and building firms. Your post about keeping apprentices past their first winter got passed round our listeners. Would you tell that story on the show: what was going wrong, what you changed, and what it cost? It's a 40-minute remote conversation, audio and video, recorded on Riverside. Could any of these work: 12, 14 or 19 March, mornings UK time? You'd get the episode, three clips and a link to your firm in the notes.
 
 **Release checklist (extract)**
 

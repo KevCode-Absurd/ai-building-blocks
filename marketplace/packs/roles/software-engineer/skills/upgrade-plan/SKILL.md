@@ -88,7 +88,7 @@ For each pasted sample affected by a breaking change, show the old and new code 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Pennant Removals", a booking app on Laravel 10 and PHP 8.1.*
+*Illustrative structure, not a real business: a removals firm's booking app on Laravel 10 and PHP 8.1. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Summary.** Laravel 10 and PHP 8.1 are both past end of life. Target: Laravel 13 on PHP 8.4. Path: PHP 8.2, then Laravel 11, PHP 8.3, Laravel 12, Laravel 13, PHP 8.4. Top risks: an unmaintained PDF package with no Laravel 11 release; no tests on the quote calculator; a custom auth guard using framework internals.
 >

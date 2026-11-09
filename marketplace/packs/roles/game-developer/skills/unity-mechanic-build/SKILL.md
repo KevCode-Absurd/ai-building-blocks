@@ -99,7 +99,7 @@ Numbered, click by click: which prefab gets which component, which layer and tag
 
 ## Example of good output (short)
 
-*Made-up studio for illustration: "Lantern Fox Games", 2D platformer, Unity 6, Input System.*
+*Illustrative structure, not a real business: a game studio making a 2D platformer in Unity 6 with the Input System. Copy the shape, never the content: every fact comes from the client's own context.*
 
 ```csharp
 [CreateAssetMenu(menuName = "Tuning/Jump")]

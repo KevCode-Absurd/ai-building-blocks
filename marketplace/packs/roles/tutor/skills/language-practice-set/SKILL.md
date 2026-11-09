@@ -96,7 +96,7 @@ Instructions in simple words (or the learners' first language if asked); nothing
 
 ## Example of good output (short)
 
-*Made-up class for illustration: adult beginners in Spanish, CEFR A1, ordering in a cafe.*
+*Illustrative structure, not a real class: adult beginners in Spanish, CEFR A1, ordering in a cafe. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Can-do:** order a drink and a snack and ask for the bill.
 >

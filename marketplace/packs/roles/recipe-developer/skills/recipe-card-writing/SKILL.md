@@ -75,7 +75,7 @@ Read it as a cook who has never made it. At level 3, save or publish within the 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Fernhill Bakery, website card, metric and US cups.*
+*Illustrative structure, not a real business: a bakery; website card, metric and US cups. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Brown butter blondies**
 > Makes 16 squares. Prep 20 min, bake 25 to 30 min, cool 1 hour. 20 cm (8 in) square tin, lined.

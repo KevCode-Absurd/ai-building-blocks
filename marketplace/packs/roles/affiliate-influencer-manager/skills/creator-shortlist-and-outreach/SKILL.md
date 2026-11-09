@@ -56,18 +56,18 @@ Small brands win with creators whose audience is the buyer, not with the biggest
 
 ## Example of good output (short)
 
-*Ridgeback Climbing Gym is a made-up business used only to show the format: a bouldering gym in a mid-sized city. All details are invented.*
+*Illustrative structure, not a real business: a bouldering gym in a mid-sized city. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Right creator:** local climbers and outdoor creators within an hour's drive whose followers are mostly nearby; beginner-friendly content; past gym or gear posts labelled clearly.
 
 **Outreach (first message):**
 
-"Hi [name], your video on [real detail: e.g. your first V4 after the shoulder injury] is the most honest climbing content I've seen from round here. We'd love to give you and a friend a free month at Ridgeback, no strings. If you do post about it, we'd just ask you to label it as an ad. Would you like a pass?"
+"Hi [name], your video on [real detail: e.g. your first V4 after the shoulder injury] is the most honest climbing content I've seen from round here. We'd love to give you and a friend a free month at [Business], no strings. If you do post about it, we'd just ask you to label it as an ad. Would you like a pass?"
 
 **Follow-up (one week later):** "Just checking this reached you. The offer stands until the end of the month. No worries if it's not for you."
 
 **Box card line:** "Enjoy this on us. No obligation to post, but if you do, please label it 'Ad' (or use the platform's paid partnership label), because we gave you this for free."
 
-**Partner pitch to a nearby café:** "Our members come to you after a session; your customers ask us about lessons. Joint offer for March: show a Ridgeback day pass at the café for 10% off, show a café receipt at the gym for a free shoe hire. We count codes on both tills and share the numbers on 1 April."
+**Partner pitch to a nearby café:** "Our members come to you after a session; your customers ask us about lessons. Joint offer for March: show a [Business] day pass at the café for 10% off, show a café receipt at the gym for a free shoe hire. We count codes on both tills and share the numbers on 1 April."
 
 *Why this works:* the message is short and specific, the offer is clear, disclosure is built in from the first contact, and the partner pitch says how results are counted.

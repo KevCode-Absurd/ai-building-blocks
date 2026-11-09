@@ -89,7 +89,7 @@ Settings: window [x]; order [x]; entry [open/closed]; counting [people]; exclude
 
 ## Example of good output (short)
 
-*Made-up business: Loomly Lessons, an online music lessons app; sign-ups from 1 to 21 September, read on 29 September.*
+*Illustrative structure, not a real business: an online music lessons app; sign-ups from 1 to 21 September, read on 29 September. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > Settings: 7-day window; in order, other events allowed; closed funnel; unique people; staff and test accounts excluded.
 >

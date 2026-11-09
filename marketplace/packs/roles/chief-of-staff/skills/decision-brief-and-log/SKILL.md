@@ -78,7 +78,7 @@ On the review date, check what happened against what the brief expected. Note wh
 
 ## Example
 
-*Made-up business for illustration: Harbour & Pine, a 14-person furniture maker in Bristol, UK.*
+*Illustrative structure, not a real business: a 14-person furniture maker in Bristol, UK. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Question:** Do we hire a sales lead or an operations lead in January, given cash for one salary for a year?
 > **Door:** one-way (a senior hire). **Decider:** Maya (MD). **Input:** Tom (finance), Priya (workshop). **Informed:** whole team after the decision.

@@ -77,7 +77,7 @@ One page, signed by the marketing and sales leaders:
 
 ## Example of good output (short)
 
-*Made-up business: Cobalt Payroll Cloud, payroll software for firms of 50 to 500 staff. Figures are invented for illustration.*
+*Illustrative structure, not a real business: payroll software for firms of 50 to 500 staff. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Back-test, Q3 (412 leads, 38 became opportunities).**
 >

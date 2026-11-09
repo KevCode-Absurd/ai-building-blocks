@@ -76,7 +76,7 @@ Mark the scaled recipe "untested at this size" until it is made once; list what 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Tidewater Cafe, tomato soup from 4 litres to 20 litres. Factor 5.*
+*Illustrative structure, not a real business: a cafe scaling tomato soup from 4 litres to 20 litres. Factor 5. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Ingredient | Original | x5 | Use | Note |
 > |---|---|---|---|---|

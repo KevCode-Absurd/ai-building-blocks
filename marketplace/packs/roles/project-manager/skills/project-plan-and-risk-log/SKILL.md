@@ -85,7 +85,7 @@ Mark each task done, in progress or not started, re-estimate the remaining work 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Ridgeway Physio, moving its clinic to a new building.*
+*Illustrative structure, not a real business: a physio clinic moving to a new building. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Summary:** Move the clinic to 14 Mill Lane so patients are seen there from Monday 2 February, with no lost appointments, within the agreed budget. The plan fits with about a week of buffer. Biggest risk: the internet line install, which the provider will only date after the lease is signed. Decision needed: sign the lease this week.
 >

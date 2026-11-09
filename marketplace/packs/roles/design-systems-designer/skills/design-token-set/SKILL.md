@@ -61,7 +61,7 @@ Not for choosing a brand look from scratch (see the brand identity designer kit)
 
 ## Example of good output (short)
 
-*Tidewater Tickets is a made-up event ticketing app used only to show the format. Access I have: level 1 (pasted CSS).*
+*Illustrative structure, not a real business: an event ticketing app. Access I have: level 1 (pasted CSS). Copy the shape, never the content: every fact comes from the client's own context.*
 
 Audit: 11 greys in use, merged to 4 primitives. One grey, `#9AA3AF` text on white, measured 2.55:1, replaced by `color.text.muted`.
 

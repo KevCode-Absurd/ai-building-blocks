@@ -216,3 +216,27 @@ Re-check at each refresh:
 - **Accessibility:** W3C Understanding pages, revised often [5][6].
 - **Public brand guidelines** used as examples: Spotify, Mailchimp [3][4].
 - **Font licences:** the OFL FAQ and any commercial foundry terms a client uses [7].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` I ask for the list of places the brand appears before designing, because the smallest and hardest use decides the mark. (§5)
+- `decision_rule` If customers already recognise an asset (a colour, shape or character), I keep or evolve it unless the client has a clear reason to drop it. (§5)
+- `check` I send back any mark that only works in full colour or at large size, because it will be used in one colour and tiny. (§5)
+- `decision_rule` If a logo needs many rules to look right, I simplify the logo rather than add rules. (§5)
+- `decision_rule` If a brand colour fails 4.5:1 as text, I keep it for shapes and backgrounds and pick a darker shade for text. (§5)
+- `never_do` When a client names a living artist or another brand as the style, I describe the qualities they like instead and never ask for a copy. (§5)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Purple or blue gradients.** A purple or blue gradient chosen as the brand colour or background with no link to the brand's story. It reads as an AI default; derive colour from the brand's own assets and category.
+- **Inter, Geist or system fonts.** A default UI typeface picked as the brand font because it is safe. It makes the identity look like everyone else's; choose type for the brand's character and licence it for logo use.
+- **Rounded everything.** Rounded corners and pill shapes on every element of the identity, whether or not the brand is soft. Decide the shape language on purpose from the brand's personality.
+- **Emoji icons.** Emoji used as the icon set in brand guidelines or applications. They read as a placeholder; draw or choose icons in the identity's own style.
+- **Glassmorphism.** Frosted glass panels as a signature brand device. It reads as an AI default; build devices from the brand's own forms.
+- **Generic stock-style imagery.** Photography direction that matches any stock library (smiling teams, laptops, handshakes). Set an art direction only this brand would use.
+- **Cream for "premium".** Cream or off-white backgrounds added to make a brand feel upmarket. It is a stock shortcut; premium should come from the brand's own materials and craft.
+- **Product on a gradient.** Mock-ups that place the logo or product on a soft gradient. They hide how the brand works on real packaging, signage and screens; show it in its hardest real uses.

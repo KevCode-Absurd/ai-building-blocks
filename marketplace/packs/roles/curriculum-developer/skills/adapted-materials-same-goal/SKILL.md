@@ -90,7 +90,7 @@ Alt text for every image (or empty alt for decoration), readable contrast, headi
 
 ## Example
 
-*Made-up example: "Elm Street Adult Learning Centre" is invented for illustration.*
+*Illustrative structure, not a real organisation: an adult learning centre. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Goal (all versions):** Learners can find a departure time and a platform on a bus timetable.
 

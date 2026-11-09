@@ -15,7 +15,7 @@
     "wix studio",
     "website launch checklist"
   ],
-  "updated": "2026-11-07",
+  "updated": "2026-11-09",
   "review_every_days": 30,
   "changelog": [
     {
@@ -25,6 +25,10 @@
     {
       "date": "2026-11-07",
       "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name. Linked the regulator's storage and access guidance."
+    },
+    {
+      "date": "2026-11-09",
+      "note": "Build kit: new skill build-on-existing-site for builder sites; the site build sheet starts from the existing site and picks section order from context; examples name no made-up business."
     }
   ]
 }

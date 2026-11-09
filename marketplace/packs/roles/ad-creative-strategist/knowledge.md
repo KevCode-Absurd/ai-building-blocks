@@ -229,3 +229,25 @@ Re-check at each refresh:
 - **Ad libraries and transparency:** Meta Ad Library rules [17]; DSA enforcement [29].
 - **AI labelling:** EU AI Act guidance and the Code of Practice [30]; platform AI-label rules.
 - **Endorsement and filter rules:** FTC guidance and enforcement [25][26]; ASA rulings and advice [27][28].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When the viewer does not know the problem yet, I open with a situation or story they recognise, because a product-first hook means nothing to them. (§5)
+- `decision_rule` When every rival makes the same claim, I do not make a bigger one; I show a mechanism, a demonstration or a sharper buyer identity. (§5)
+- `decision_rule` When a hook works but the ad loses people in the middle, I keep the hook and rebuild the middle. (§5)
+- `decision_rule` When an ad gets many views and few clicks, I fix the ask and the offer, not the hook. (§5)
+- `decision_rule` When a winning ad starts costing more, I make a new concept or a new hook on the same concept, because the audience has seen it too often. (§5)
+- `decision_rule` On broad targeting, I plan concepts for distinct buyers, because the creative now does much of the targeting. (§5)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Every concept in one look.** Three "different" concepts that share the same style, setting and edit, and differ only in wording or colour. Make concepts differ on named axes: mechanism, proof, structure, visual world or offer.
+- **One hook formula reused.** Every variant opens the same way ("Stop scrolling if...", "POV:", a question). They read as one ad repeated, so vary the hook type, not just its words.
+- **Product on a gradient.** The product floating on a soft purple or blue gradient as the main image. It shows nothing about use or proof; show the product working in a real setting.
+- **Benefits any competitor could claim.** "High quality", "fast results", "loved by thousands" as the core message. If a rival could run the line unchanged, find the mechanism or proof only this client has.
+- **Fake urgency.** Countdowns, "last chance" or "selling out" with no real deadline or stock limit behind them. It reads as a template and breaks trust; use a real reason or none.
+- **Stock AI phrasing.** Scripts and captions built on "Unlock", "Elevate", "Seamless" or "Game-changer". These words mark the ad as machine-written; use the buyer's own words from reviews and research.

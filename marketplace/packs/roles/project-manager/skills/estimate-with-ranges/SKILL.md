@@ -88,7 +88,7 @@ End with the two or three things that would move the estimate most, and the line
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Tidewater Dog Grooming, wanting online booking. Rate given by the client: $90 an hour.*
+*Illustrative structure, not a real business: a dog grooming business wanting online booking. Rate given by the client: $90 an hour. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Feature | Task | Low | Likely | High |
 > |---|---|---|---|---|

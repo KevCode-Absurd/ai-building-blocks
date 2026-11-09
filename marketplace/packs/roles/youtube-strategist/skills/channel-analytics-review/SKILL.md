@@ -56,7 +56,7 @@ Views alone do not say what to do next. This skill reads the channel the way You
 
 ## Example of good output (short)
 
-*Corner Loaf Bakery School is a made-up business used only to show the format: a baking school that sells online courses through a YouTube channel. All numbers are invented.*
+*Illustrative structure, not a real business: a baking school that sells online courses through a YouTube channel. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Headline:** The Sourdough Basics series grew search traffic and brought most course sign-ups. The Kitchen Vlog series drew clicks but viewers left early. Shorts brought new viewers who rarely watched a long video.
 

@@ -88,7 +88,7 @@ After the first month, re-audit: did each meeting decide things, did pre-reads a
 
 ## Example
 
-*Made-up business for illustration: Brightwell Clinics, a group of four physiotherapy clinics in Glasgow, UK, with 40 staff.*
+*Illustrative structure, not a real business: a group of four physiotherapy clinics in Glasgow, UK, with 40 staff. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Audit (founder's diary, per month):**
 >

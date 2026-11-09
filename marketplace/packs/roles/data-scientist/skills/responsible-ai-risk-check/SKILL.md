@@ -80,7 +80,7 @@ Model card (one page): purpose, intended and out-of-scope uses, inputs, owner, p
 
 ## Example of good output (short)
 
-*Made-up business: Brightwell Logistics, 60 staff in the Netherlands and the UK, piloting a vendor's CV-screening tool for warehouse roles.*
+*Illustrative structure, not a real business: a logistics firm with 60 staff in the Netherlands and the UK, piloting a vendor's CV-screening tool for warehouse roles. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Summary: pause automatic rejections; use the tool only to sort, with a person reviewing every rejection, until your legal adviser has reviewed it.** CV sorting is listed as a high-risk use under the EU AI Act.
 >

@@ -57,7 +57,7 @@ For each snippet:
 
 ## Example of good output (short)
 
-*Larkspur Yoga is a made-up business used only to show the format: a yoga studio on Squarespace 7.1, Core plan, that wants the "Book now" button on the Timetable page in its accent colour.*
+*Illustrative structure, not a real business: a yoga studio on Squarespace 7.1, Core plan, that wants the "Book now" button on the Timetable page in its accent colour. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **What it does:** colours one button on one page. Site styles change every primary button, so a page-level snippet is smaller.
 

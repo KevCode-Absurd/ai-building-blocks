@@ -98,7 +98,7 @@ Put the next review date on the register. Each review compares this quarter's an
 
 ## Example
 
-*Made-up example: "Harbour Lane Dental" is invented for illustration.*
+*Illustrative structure, not a real business: a dental practice. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Summary:** Biggest risk: payment-change fraud, because any of three staff can update supplier bank details from an email. Quickest win: two-step sign-in on all six mailboxes this week (free). I need: the name of your IT firm contact and who should own the register.
 

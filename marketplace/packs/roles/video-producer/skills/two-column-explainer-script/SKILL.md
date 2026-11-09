@@ -57,15 +57,15 @@ Not for: video ads built to test hooks on paid social, or long YouTube channel s
 
 ## Example of good output (short)
 
-*Penwick is a made-up invoicing app used only to show the format: a 45-second home page explainer, 16:9, sound on with captions. One idea: "Penwick chases late invoices so you don't have to." Action: start a free trial. Access I have: Canva level 1.*
+*Illustrative structure, not a real business: an invoicing app with a 45-second home page explainer, 16:9, sound on with captions. One idea: "[Business] chases late invoices so you don't have to." Action: start a free trial. Access I have: Canva level 1. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | # | Time | We hear | We see | On-screen text (chars) |
 |---|---|---|---|---|
 | 1 | 00:00-00:06 | You did the work. Three weeks later, you're still waiting to be paid. | A freelancer's desk; a calendar flips; an invoice marked "Sent" sits untouched | "21 days overdue" (15) |
 | 2 | 00:06-00:13 | Chasing feels awkward, so it slips. | The freelancer starts typing a reminder email, deletes it | none |
-| 3 | 00:13-00:24 | Penwick sends polite reminders on the schedule you choose. | Screen recording [needs: reminder schedule screen]; three reminder dates light up | "You pick the dates" (18) |
+| 3 | 00:13-00:24 | [Business] sends polite reminders on the schedule you choose. | Screen recording [needs: reminder schedule screen]; three reminder dates light up | "You pick the dates" (18) |
 | 4 | 00:24-00:35 | When they pay, it marks the invoice paid and tells you. | Phone notification "Invoice paid"; invoice status turns green | "Paid. Marked. Done." (19) |
-| 5 | 00:35-00:45 | Try it free. Let Penwick do the chasing. | Logo end card, trial button, web address | "Start your free trial" (21) |
+| 5 | 00:35-00:45 | Try it free. Let [Business] do the chasing. | Logo end card, trial button, web address | "Start your free trial" (21) |
 
 *Timing: read aloud by the founder, 41 seconds. Line 3 is "[proof needed]" until the client confirms custom reminder dates exist in the current version.*
 

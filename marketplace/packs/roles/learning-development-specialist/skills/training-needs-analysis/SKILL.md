@@ -92,7 +92,7 @@ Name the Level 4 measure and its baseline, the Level 3 behaviour and how it will
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Harrow & Finch Logistics, 410 staff, goal "cut late deliveries".*
+*Illustrative structure, not a real business: a logistics firm, 410 staff, goal "cut late deliveries". Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Gap 2:** Shift supervisors do not re-plan routes when a driver calls in sick. Count: 9 of 14 supervisors (incident log, Jan to Sep, 37 late-delivery incidents tagged "no re-plan"). Training? **Both.** The routing tool has the feature, but only two supervisors were shown it; the sick-call process also has no deadline (non-training, owner: operations manager).
 >

@@ -57,7 +57,7 @@ Access levels for this skill: planning needs level 1 (read the current CMS or sc
 
 ## Example of good output (short)
 
-*Northgate Studio is a made-up business used only to show the format: a four-person design agency on Webflow with case studies, team members and a blog.*
+*Illustrative structure, not a real business: a four-person design agency on Webflow with case studies, team members and a blog. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Collections**
 

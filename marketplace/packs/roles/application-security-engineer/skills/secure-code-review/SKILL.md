@@ -82,9 +82,9 @@ Rank by ease of abuse and impact: anything that exposes other users' data or nee
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Fernhill Physio", Express API for patient bookings.*
+*Illustrative structure, not a real business: a physio clinic's Express API for patient bookings. Copy the shape, never the content: every fact comes from the client's own context.*
 
-> Owner confirmed: Fernhill Physio Ltd. Scope: `api/` folder. Not covered: hosting, the SMS provider, the mobile app.
+> Owner confirmed: [Business]. Scope: `api/` folder. Not covered: hosting, the SMS provider, the mobile app.
 >
 > | ID | Area | Where | Issue | Severity | Fix | Test |
 > |---|---|---|---|---|---|---|

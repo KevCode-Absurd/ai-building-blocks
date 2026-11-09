@@ -13,7 +13,7 @@ I find out whether paying partners a commission can bring this business new cust
 
 ## What I need from the lead
 
-The lead's standard hand-off brief (business, variant, goal, audience and offer, allowable cost per customer, limits and access), and in particular:
+The lead's standard hand-off brief, and in particular:
 
 - Gross profit per customer (or monthly revenue per customer for subscriptions), refund rates and the payback period the client accepts.
 - Who already recommends the product: customers, creators, agencies, consultants, review sites. Names or links if known.

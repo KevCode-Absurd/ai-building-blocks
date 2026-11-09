@@ -60,7 +60,7 @@ For token files and versioned libraries, hand the result to the design systems d
 
 ## Example of good output (short)
 
-*Fernleaf Studio is a made-up yoga studio booking app used only to show the format. Platforms: iOS and web. Access I have: level 1 (screenshots and CSS).*
+*Illustrative structure, not a real business: a yoga studio booking app; platforms: iOS and web; access I have: level 1 (screenshots and CSS). Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Style | Size / line height | Weight | Use |
 |---|---|---|---|

@@ -222,3 +222,13 @@ Re-check at each refresh:
 - **Tool features:** Premiere features [11]; Resolve version and Studio-only list [13][14]; CapCut help and captions [15]-[17]; Descript's MCP abilities and limits [18].
 - **Caption standards:** Netflix's style guide [22], the DCMP Captioning Key [21], W3C pages [19][20].
 - **Accessibility law:** ADA Title II dates [29]; European Accessibility Act guidance [30].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When a clip needs the line before it to make sense, start the clip earlier rather than trimming the context away. (§5)
+- `decision_rule` When a filler or retake cut leaves a jump in the picture, plan cover (a second angle, a punch-in, B-roll) or mark it. (§5)
+- `decision_rule` When captions run faster than the audience's reading speed, split them or hold them longer, and edit words only without changing the meaning. (§5)
+- `check` Each clip makes sense alone, with the point early and a complete ending. (§7)
+- `taste_reference` Short notes, each starting with a timecode; full sentences only for the reason behind a cut. (§8)

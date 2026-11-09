@@ -78,7 +78,7 @@ One page for the owner: the plan, total cost by month, cash low point in each ca
 
 ## Example of good output (short)
 
-*Made-up business: Brightwell Labels, a 12-person print studio in Manchester. Figures are invented for illustration.*
+*Illustrative structure, not a real business: a 12-person print studio in Manchester. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Plan:** two hires: a print operator (March) and an account manager (June). Cost from start dates to December: £52,800. Cash low point £38,000 in August (normal) and £9,000 in September (slow, sales 15% below plan), under the £20,000 floor.
 >

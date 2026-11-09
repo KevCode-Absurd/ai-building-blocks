@@ -83,7 +83,7 @@ At level 3, send the pack to the agreed people on the agreed day and file it wit
 
 ## Example of good output (short)
 
-> **Made-up example: Fernhill Therapy Rooms, five therapists, October (not a real practice).**
+> **Illustrative structure, not a real business: a therapy practice with five therapists, October. Copy the shape, never the content: every fact comes from the client's own context.**
 >
 > **Headline:** Utilisation up after the new template; no-shows flat; recall completion down because follow-up texts were paused for two weeks.
 >

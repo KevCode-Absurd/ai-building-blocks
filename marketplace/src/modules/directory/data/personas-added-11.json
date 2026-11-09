@@ -180,7 +180,7 @@
           "id": "scoring_form",
           "title": "A scoring form with weighted standards",
           "deliverable": "Standards from your service rules, each with a yes or no test, a weight and an example of a pass.",
-          "job_type_id": "checklist-scorecard-job-aid",
+          "job_type_id": "quality-scorecard",
           "job_type_hint": "mystery shop scoring form"
         },
         {

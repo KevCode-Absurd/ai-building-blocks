@@ -81,7 +81,7 @@ Within the agreed limits: update statuses as documents arrive, send approved rem
 
 ## Example of good output (short)
 
-*Made-up deal for illustration: 14 Maple Court, a financed purchase in a US state, closing 15 December 2026.*
+*Illustrative structure, not a real deal: 14 Maple Court, a financed purchase in a US state, closing 15 December 2026. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Due | Item | Clause | Owner | Reminder | Status |
 > |---|---|---|---|---|---|

@@ -58,7 +58,7 @@ The most expensive mistake in product work is building the wrong thing well. Thi
 
 ## Example of good output (short)
 
-*Pawsitter is a made-up business used only to show the format: a founder with a small budget wants an app matching dog sitters with owners in one city.*
+*Illustrative structure, not a real business: a founder with a small budget wants an app matching dog sitters with owners in one city. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Problem:** Owners who travel for work struggle to find a trusted sitter at short notice. Evidence: 9 of 12 owners the founder spoke to in October described a last-minute scramble (founder's notes). Assumption: owners will pay a booking fee.
 

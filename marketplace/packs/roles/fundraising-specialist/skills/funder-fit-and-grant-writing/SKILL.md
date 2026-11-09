@@ -64,7 +64,7 @@ Not for: promising a result, inventing statistics, partners, letters of support 
 
 ## Example of good output (short)
 
-*Hillside Sensory Garden Group is a made-up school parent group, used only to show the format. Funders and rules here are invented.*
+*Illustrative structure, not a real organisation: a school parent group raising money for a sensory garden. Copy the shape, never the content: every fact comes from the client's own context. Funders and rules here only show the shape.*
 
 | Funder | Verdict | Fit | Grant range | Deadline | Reason |
 |---|---|---|---|---|---|

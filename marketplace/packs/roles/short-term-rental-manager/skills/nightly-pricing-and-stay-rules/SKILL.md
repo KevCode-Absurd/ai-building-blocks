@@ -82,7 +82,7 @@ At level 2, hand over the calendar and a settings sheet. At level 3, apply withi
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Saltmarsh Cottage, one two-bed holiday let in Norfolk, England.*
+*Illustrative structure, not a real business: one two-bed holiday let in Norfolk, England. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Rule | Applies to | Setting | Reason and maths |
 |---|---|---|---|

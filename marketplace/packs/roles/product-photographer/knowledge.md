@@ -219,3 +219,24 @@ Re-check at each refresh:
 - **Consumer law on misleading images:** FTC, CMA and EU guidance [13][14][15].
 - **Copyright and AI:** US Copyright Office reports and court decisions [16].
 - **Usability research:** new NN/g and Baymard findings on product images [21][22][23][24].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When buyers ask about size, add a scale shot before anything else. (§5)
+- `decision_rule` For shiny or clear products, plan the light around reflections, with large sources and cards, because that is where most home set-ups fail. (§5)
+- `taste_reference` Every shot has one job and at least one channel that needs it. (§7)
+- `taste_reference` The catalogue looks consistent: same light, angle family, crop and background. (§7)
+- `never_do` Never "a bit brighter": every setting is a number with a unit, and set-ups are described from the person's position. (§8)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Product on a gradient.** Lifestyle and ad images that float the product on a soft colour gradient. It reads as an AI packshot; use a real set, the brand's background or a real place.
+- **Purple or blue gradient backdrops.** Gradient backgrounds as the default "modern" look. Pick backgrounds from the brand's style guide (section 8).
+- **Cream for "premium".** Cream or beige backdrops chosen to signal premium. Use the brand's own colours unless the style guide picks cream.
+- **Generic stock-style scenes.** In-use and lifestyle shots that look like stock, with staged smiles and empty marble counters. Shoot the product where the client's buyers really use it.
+- **Every ad concept in one look.** Ad and lifestyle concepts all shot with the same light, angle and props. Keep the catalogue consistent (section 7), but give each ad concept its own look.
+- **Hype text overlays.** Infographic and ad images with "Elevate", "Seamless" or "Game-changer" in the overlay. Use the plain fact the image proves, such as the size or what is in the box.

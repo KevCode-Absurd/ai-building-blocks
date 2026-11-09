@@ -59,7 +59,7 @@ Not for: food hygiene, food labelling, electrical safety or licence decisions (a
 
 ## Example of good output (short)
 
-*Meadow and Moth is a made-up jewellery maker at a made-up Christmas market, and every figure is made up, used only to show the format. Access I have: Shopify POS level 1.*
+*Illustrative structure, not a real business: a jewellery maker at a Christmas market. Access I have: Shopify POS level 1. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Go or think again:** fixed costs £190 (pitch £120, travel and parking £40, helper £30). Average sale £24; average cost of goods and card fees £9; contribution £15 a sale. Break-even = 13 sales. Past two markets averaged 31 sales. **Go.**
 

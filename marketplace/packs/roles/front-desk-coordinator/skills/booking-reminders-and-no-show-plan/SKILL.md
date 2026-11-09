@@ -40,7 +40,7 @@ Base timing on lead time and preparation, not habit. A common pattern is a confi
 - Two or three short lines: the business name, the service type in general words, date, time, place, one action.
 - Make the action one tap or one reply: "Reply C to confirm, R to rebook" or a link.
 - Use specific, concrete facts rather than vague appeals. In one NHS trial, stating the specific cost of a missed appointment cut missed appointments more than general or empathy wording; test any such line in your own setting.
-- Never put health details in a text, email subject or voicemail: no condition, procedure, test or medicine. "Your appointment at Riverside Dental" is enough.
+- Never put health details in a text, email subject or voicemail: no condition, procedure, test or medicine. "Your appointment at [Business]" is enough.
 - Add opt-out wording where the channel needs it (for example "Reply STOP to stop texts").
 - Keep reminders free of offers. A promotion turns a service message into marketing in the UK and a commercial email in the US.
 
@@ -94,10 +94,10 @@ For check-ups, vaccinations or follow-ups: why it matters in one line (from the 
 
 ## Example of good output (short)
 
-> **Made-up example: Juniper Hair Studio, a two-chair salon (not a real business).**
+> **Illustrative structure, not a real business: a two-chair hair salon. Copy the shape, never the content: every fact comes from the client's own context.**
 >
-> **48 hours before:** "Juniper Hair Studio: see you Thu 14 Nov at 10:30 with Kat. Reply C to confirm or R to rebook. Can't make it? Tell us by 10:30 Wed and there's no charge. Reply STOP to stop texts."
+> **48 hours before:** "[Business]: see you Thu 14 Nov at 10:30 with Kat. Reply C to confirm or R to rebook. Can't make it? Tell us by 10:30 Wed and there's no charge. Reply STOP to stop texts."
 >
-> **Waitlist:** "Juniper Hair Studio: a 3pm slot opened today with Kat. Reply YES in the next hour to take it. First reply gets it."
+> **Waitlist:** "[Business]: a 3pm slot opened today with Kat. Reply YES in the next hour to take it. First reply gets it."
 >
 > **Policy line:** "Cancel or move up to 24 hours before for free. Later than that, or if you don't come, we charge 30% of the booked price, because we kept the chair for you. Example: £15 on a £50 cut."

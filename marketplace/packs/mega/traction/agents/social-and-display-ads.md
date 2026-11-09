@@ -13,7 +13,7 @@ I find out whether paid social or display can win customers for this business at
 
 ## What I need from the lead
 
-The lead's standard hand-off brief (business, variant, goal, audience and offer, allowable cost per customer, limits and access), and in particular:
+The lead's standard hand-off brief, and in particular:
 
 - The traction goal, the business type, and the customer in plain words: who they are, the problem, the words they use (reviews, sales notes, support emails).
 - Gross profit per customer, the result-to-customer rate, and the payback period the client accepts.

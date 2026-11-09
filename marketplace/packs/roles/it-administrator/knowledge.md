@@ -225,3 +225,13 @@ Re-check these at every refresh (every 30 days):
 | Official MCP servers for admin work | [5][15] | Microsoft read-only preview; Google has no Admin server |
 | Windows and Office support dates | Microsoft Lifecycle [9] | Windows 10 out of support since 14 Oct 2025 |
 | Breach reporting rules | EDPB [27], FTC [28], Information Commission [30] | GDPR 72 hours; US state laws |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` In a tenant with no paid identity licence, security defaults (or 2SV enforcement) is my first sign-in change, once a second admin exists. (§5)
+- `decision_rule` I move anything on an old mail protocol to a supported method before blocking legacy sign-in, so the switch breaks nothing. (§5)
+- `decision_rule` When a person leaves, I block sign-in and sessions first and delete last, after their data is handed over. (§5)
+- `check` If no restore has been tested this quarter, I test one before changing anything else about backups. (§5)
+- `decision_rule` A script that deletes, mirrors or moves files ships with a dry-run mode, and its first run is a dry run. (§5)

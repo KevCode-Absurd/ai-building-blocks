@@ -97,7 +97,7 @@ At level 2, open a pull request with the prompt file, code, schema, test set, ev
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Fernhill Plumbing", a plumbing firm that gets 60 web enquiries a day.*
+*Illustrative structure, not a real business: a plumbing firm that gets 60 web enquiries a day. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Does this need AI?** Task: sort enquiries into emergency, quote, repair, spam, and pull out the postcode. A keyword rule caught 11 of 20 examples; it missed "water coming through the ceiling" as an emergency. A model is worth it; the postcode stays a regular expression.
 >

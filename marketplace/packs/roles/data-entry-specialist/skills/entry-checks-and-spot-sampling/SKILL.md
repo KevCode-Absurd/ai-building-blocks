@@ -88,7 +88,7 @@ Correct individual live records within the agreed limit, logging old value, new 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Pembury Physio", 120 paper intake forms keyed by two temps.*
+*Illustrative structure, not a real business: a physio clinic with 120 paper intake forms keyed by two temps. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > Counts: 120 forms, 120 rows: match. No money fields.
 > Sample: 20 random rows (random number column, sorted, top 20) plus 7 rows with handwritten dates.

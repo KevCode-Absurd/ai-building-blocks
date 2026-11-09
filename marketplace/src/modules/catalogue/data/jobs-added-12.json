@@ -211,7 +211,66 @@
         "note": "Upwork marketplace data reported by Staffing Industry Analysts ranks data entry second among the most in-demand admin support skills in 2025.",
         "url": "https://www.staffingindustry.com/news/global-daily-news/fastest-growing-work-categories-include-coding-and-web-development"
       }
-    ]
+    ],
+    "family": "other",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: A CSV in a code block with one row per record and the columns you need; a field map to your import template; an exceptions list of unreadable, missing or doubtful values with the source text; and a short entry rules sheet so staff can do the next batch the same way."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Each name, number, date, amount and code in the CSV appears in the pasted text, changed only by the format rules in the brief; unreadable or missing values are left blank and listed as exceptions; no total, tax figure or code is calculated unless the brief asks and the sum is shown."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "One row per record, with exactly the columns asked for, in order",
+        "weight": 10,
+        "test": "The header row matches the brief's columns or template in order; the row count equals the records pasted minus any duplicates removed, and removed duplicates are listed; the draft states documents in, rows out and exceptions at the top."
+      },
+      {
+        "criterion": "The file imports cleanly",
+        "weight": 10,
+        "test": "The CSV is in one code block; every row has the same number of fields as the header; fields with commas, quotes or line breaks are wrapped in double quotes; dates and numbers use one format throughout, stated above the file; no card number, bank detail or password appears."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "cash-allocation-plan",
@@ -398,6 +457,78 @@
         "note": "The Profit First author's site says over 175,000 companies have put its percentage-based cash allocation system in place.",
         "url": "https://www.mikemichalowicz.com/profit-first/"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Each figure appears in the brief or is worked from it with the sum shown; target percentages are labelled as targets with a one-line reason; no bank, account product, interest rate or fee is named or assumed; anything missing is a [placeholder]."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook. For this job: Each chosen piece is present; the 'today' view shows each share as a percentage of real revenue (sales minus materials and subcontractors) with the sums shown; the worksheet has the allocation dates and a row per account."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: Where your money goes today as shares of real revenue; target shares for profit, owner's pay, tax set-aside and running costs with a quarter-by-quarter step-up; a simple account set-up to discuss with your bank; a twice-monthly allocation worksheet with formulas; a quarterly profit check; and questions for your…"
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read. For this job: The twice-monthly routine has 8 steps or fewer, one action each; sentences are mostly under 20 words; terms such as real revenue are explained once."
+      },
+      {
+        "criterion": "Shares and amounts add up",
+        "weight": 6,
+        "test": "Shares in each plan add up to 100% of real revenue; worksheet formulas or worked examples give amounts that match the shares; the step-up moves each share by no more than 3 points a quarter, from today's level towards the target."
+      },
+      {
+        "criterion": "No tax or investment rulings; the accountant decides tax",
+        "weight": 6,
+        "test": "The tax set-aside uses the accountant's figure from the brief or is marked [confirm with your accountant]; nothing says how much tax is due, which costs are deductible, or what to invest in; the plan ends with questions for the accountant."
+      }
+    ],
+    "mode_default": "extend"
   }
 ]

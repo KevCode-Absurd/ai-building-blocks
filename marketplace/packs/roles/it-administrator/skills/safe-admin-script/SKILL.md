@@ -96,7 +96,7 @@ Give the exact Task Scheduler steps, cron line or systemd timer, the account it 
 
 ## Example of good output (short)
 
-*Made-up business: Greywell Surveyors, Windows 11, PowerShell 7.*
+*Illustrative structure, not a real business: a surveying firm, Windows 11, PowerShell 7. Copy the shape, never the content: every fact comes from the client's own context.*
 
 ```powershell
 <#

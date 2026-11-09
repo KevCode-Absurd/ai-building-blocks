@@ -65,7 +65,7 @@ A paid community sells two things: a result and a sense of belonging. People can
 
 ## Example of good output (short)
 
-*Northlight Painters is a made-up online club for amateur painters, used only to show the format. All numbers are invented.*
+*Illustrative structure, not a real business: an online club for amateur painters. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Promise:** Finish one painting a month, with feedback from a working artist.
 

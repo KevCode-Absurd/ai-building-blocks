@@ -85,7 +85,7 @@ Rank findings: wrong answers first, then answers that will go wrong when data gr
 
 ## Example of good output (short)
 
-*Made-up business: Northgate Print Co., a quote workbook used by three sales staff.*
+*Illustrative structure, not a real business: a print company's quote workbook used by three sales staff. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Summary.** Two findings change quote prices today; one will break next month. Fix finding 1 first.
 >

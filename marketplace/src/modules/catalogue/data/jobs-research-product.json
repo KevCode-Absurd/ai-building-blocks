@@ -169,7 +169,73 @@
         "note": "Lists what freelancers deliver in a competitive analysis: market report, competitor audit, SWOT, positioning plan. Used to size this job.",
         "url": "https://www.wethos.co/blog/competitive-analysis-scope-of-work"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every figure is either in the brief or marked as an estimate with its method (for example buyers x price x share). No named report, survey or URL appears unless the buyer supplied it."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: A 1,500 to 2,500 word report with market overview, buyer segments, trends, risks, opportunities and a list of facts to verify. Sizes are labelled as estimates with the method shown. Also: Any size figure shows inputs and steps, gives a low and high case, and says which inputs are assumptions."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide."
+      },
+      {
+        "criterion": "The report says what it is built from and what it could not check",
+        "weight": 8,
+        "test": "A short section says the work uses the buyer's inputs plus model knowledge with no live web access, and lists at least 3 specific items the buyer should verify."
+      },
+      {
+        "criterion": "The report helps with the decision the buyer named",
+        "weight": 8,
+        "test": "A section titled for the decision gives a clear recommendation or options, each tied to at least two findings above it."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "competitor-analysis",
@@ -334,7 +400,73 @@
         "note": "Freelance and boutique market research projects are quoted at $5,000 to $25,000, with AI reports at $0 to $59. Our desk-research price sits between the two.",
         "url": "https://preuve.ai/blog/how-much-does-market-research-cost"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every competitor price, feature, review count or claim appears in the pasted details or is labelled 'from model knowledge, verify'. No made-up quotes."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: A comparison table and a written analysis of up to 5 competitors, plus positioning gaps, a SWOT and 5 to 8 actions. Built from the details you paste and expert knowledge. Also: A section addresses the goal choice directly and its advice follows from the comparison."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today. For this job: At least 5 actions are listed, each linked to a named gap and stating what to change."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide."
+      },
+      {
+        "criterion": "The report says what it is built from and what it could not check",
+        "weight": 8,
+        "test": "A short section says the work uses the buyer's inputs plus model knowledge with no live web access, and lists at least 3 specific items the buyer should verify."
+      },
+      {
+        "criterion": "Competitors are compared on the same points",
+        "weight": 8,
+        "test": "A table compares every named competitor on the same 6 or more rows, with 'not known' where facts are missing."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "customer-interview-guide",
@@ -491,7 +623,79 @@
         "note": "YunoJuno shows freelance UX designers average $70 an hour. Reviews, briefs and copy of 1 to 3 hours are priced a little under that.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/ux-designer"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No invented customer details, statistics or quotes appear; any example answers are marked as examples."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook. For this job: Estimated minutes per section add up to within 10 percent of the stated length."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: An interview guide with an intro script, 12 to 18 open questions in order, follow-up probes, a note-taking sheet and a short recruiting message. Also: Each main question has at least one probe, and a note sheet with tags for the goal is included."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read."
+      },
+      {
+        "criterion": "Questions are open and not leading",
+        "weight": 6,
+        "test": "At least 90 percent of the main questions begin with how, what, when, tell me about or walk me through, and none suggests the answer."
+      },
+      {
+        "criterion": "Questions ask about real past behaviour, not guesses",
+        "weight": 6,
+        "test": "At least half of the questions ask about a specific past event or last time something happened."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "interview-synthesis",
@@ -652,7 +856,72 @@
         "note": "YunoJuno shows freelance UX designers average $70 an hour. Reviews, briefs and copy of 1 to 3 hours are priced a little under that.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/ux-designer"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: A report with 4 to 8 themes, each with exact quotes from your transcripts and counts, a summary table by participant, surprises, open questions and next steps. Also: The report states the sample size, avoids words like 'all customers' for a small group, and flags where it is guessing."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked. For this job: Each theme lists the participants who raised it and at least one quote; single-person themes are labelled as such."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide."
+      },
+      {
+        "criterion": "Quotes and counts come only from the pasted transcripts",
+        "weight": 8,
+        "test": "Every quote appears word for word in a transcript with the participant label, and every count matches the transcripts."
+      },
+      {
+        "criterion": "Findings answer the research goal",
+        "weight": 8,
+        "test": "A section answers the stated goal in plain words and ranks the findings by how many participants raised them."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "survey-design",
@@ -821,7 +1090,79 @@
         "note": "YunoJuno shows freelance UX designers average $70 an hour. Reviews, briefs and copy of 1 to 3 hours are priced a little under that.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/ux-designer"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No invented benchmark figures, response-rate claims or sources appear; any rules of thumb are labelled as such."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen. For this job: Scales have balanced ends, choice lists include 'other' or 'not sure' where needed, and options do not overlap."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: A complete survey (intro, screener, questions with answer options, thank-you text), notes on why each question is there, a sampling and analysis plan, and a paste-ready version."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read. For this job: No question is double-barrelled, leading or uses jargon the audience would not know; a checker finds none among sampled questions."
+      },
+      {
+        "criterion": "Every question links to the goal or decision",
+        "weight": 6,
+        "test": "A table maps each question to the goal or decision; any question with no link is removed."
+      },
+      {
+        "criterion": "The survey is short enough and the analysis plan is stated",
+        "weight": 6,
+        "test": "Estimated completion time is given and under 7 minutes unless the brief says otherwise, and the plan says how each result will be read."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "survey-results-analysis",
@@ -985,7 +1326,73 @@
         "note": "Freelance and boutique market research projects are quoted at $5,000 to $25,000, with AI reports at $0 to $59. Our desk-research price sits between the two.",
         "url": "https://preuve.ai/blog/how-much-does-market-research-cost"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Counts, percentages and quotes match the CSV; the report shows the base (n) for each result, and no outside benchmark is quoted unless the buyer gave it."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: A report with response summary, key findings with counts and percentages, breakdowns by group, a read of open-text answers, caveats and recommended actions. Also: Themes from free text come with counts and 2 or more verbatim quotes that appear in the CSV."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today. For this job: Each recommendation cites the finding that supports it and none relies on a result the data does not show."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide."
+      },
+      {
+        "criterion": "The report states how far the results can be trusted",
+        "weight": 8,
+        "test": "It gives the number of responses, the response rate if known, and at least 2 limits such as small groups or self-selection."
+      },
+      {
+        "criterion": "Results are broken down by the groups the buyer named",
+        "weight": 8,
+        "test": "Each named group has a table or count, and groups under 10 responses are flagged as too small to compare."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "trend-brief",
@@ -1144,7 +1551,73 @@
         "note": "YunoJuno shows freelance product managers average $77 an hour. A 2 to 3 hour document is priced a little under that.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/product-manager"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every figure is in the brief or marked as a rough estimate; no named study, company announcement or quote is given unless the buyer supplied it."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: A 2 to 4 page brief with 5 to 8 trends, why each matters, what it means for your business, signals to watch, and a list of items to verify. Also: Each trend lists at least 2 observable signals, such as a price change, a rule or a competitor move."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide."
+      },
+      {
+        "criterion": "The report says what it is built from and what it could not check",
+        "weight": 8,
+        "test": "A short section says the work uses the buyer's inputs plus model knowledge with no live web access, and lists at least 3 specific items the buyer should verify."
+      },
+      {
+        "criterion": "Each trend says what it means for this business",
+        "weight": 8,
+        "test": "Every trend has a short 'what this means for you' line that uses details from the brief."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "pricing-research",
@@ -1309,7 +1782,73 @@
         "note": "YunoJuno shows freelance product managers average $77 an hour. A 2 to 3 hour document is priced a little under that.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/product-manager"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every number in tables comes from the brief or is marked 'assumed' with the assumption stated; no competitor price is invented."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: A pricing report with your cost and value picture, 3 pricing options with pros and cons, a recommended price, a comparison with prices you supply, and a test plan. Also: It names what to change, for whom, for how long and what result would count as success."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: A single recommendation is given, tied to the goal field, with the main reason and the condition that would change it."
+      },
+      {
+        "criterion": "The report says what it is built from and what it could not check",
+        "weight": 8,
+        "test": "A short section says the work uses the buyer's inputs plus model knowledge with no live web access, and lists at least 3 specific items the buyer should verify."
+      },
+      {
+        "criterion": "At least three pricing options are compared fairly",
+        "weight": 8,
+        "test": "Three options each show the price or structure, a margin or revenue effect using the brief's numbers, and one risk."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "strategy-memo",
@@ -1467,7 +2006,74 @@
         "note": "YunoJuno shows freelance product managers average $77 an hour. A 2 to 3 hour document is priced a little under that.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/product-manager"
       }
-    ]
+    ],
+    "family": "strategy",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "All figures come from the brief or are marked assumed; no outside study, example company or quote is cited unless supplied."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen. For this job: At least 3 options, including keeping things as they are, each with a benefit, a cost and a risk drawn from the brief."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 10,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: A 2 to 4 page memo with the question, background, options with pros and cons, risks, a recommendation, first steps and open questions."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week. For this job: At least 3 steps with an owner role and a time frame, such as 'this week'."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read. For this job: The first paragraph states the decision, the deadline if known and what a good outcome looks like."
+      },
+      {
+        "criterion": "The memo makes a clear recommendation",
+        "weight": 10,
+        "test": "One option is recommended with the main reason, the biggest risk and a trigger that would change the advice."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "go-to-market-plan",
@@ -1633,7 +2239,79 @@
         "note": "Lists what freelancers deliver in a competitive analysis: market report, competitor audit, SWOT, positioning plan. Used to size this job.",
         "url": "https://www.wethos.co/blog/competitive-analysis-scope-of-work"
       }
-    ]
+    ],
+    "family": "strategy",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Any rate or size is from the brief or labelled an assumption with the reason; no outside study or competitor figure is cited unless supplied."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook. For this job: Each of the three months has dated actions, an owner role and a measure that shows if it worked."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: A plan with target buyers, positioning, offer and price view, channels with priorities, a 90-day action plan, success measures, risks and facts to verify."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week. For this job: Channel costs sum to no more than the budget field, and weekly hours fit the team field."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read."
+      },
+      {
+        "criterion": "The report says what it is built from and what it could not check",
+        "weight": 6,
+        "test": "A short section says the work uses the buyer's inputs plus model knowledge with no live web access, and lists at least 3 specific items the buyer should verify."
+      },
+      {
+        "criterion": "Channels are chosen and ranked, not listed",
+        "weight": 6,
+        "test": "At most 4 channels are chosen with a reason tied to the buyers, and others are marked 'not now'."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "product-requirements-doc",
@@ -1792,7 +2470,79 @@
         "note": "YunoJuno shows freelance product managers average $77 an hour. A 2 to 3 hour document is priced a little under that.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/product-manager"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Baseline numbers, user quotes and system facts appear only if in the brief; other targets are labelled proposed."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook. For this job: Each requirement has an id, a priority (must, should or could) and a way to check it; none uses words like 'fast' or 'easy' without a measure."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: A PRD with problem, goals and non-goals, users, requirements in priority order, user flows in words, success measures, risks, open questions and a launch checklist."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read. For this job: Non-goals and open questions each list at least 3 items drawn from the brief."
+      },
+      {
+        "criterion": "The document starts from the problem, not the solution",
+        "weight": 6,
+        "test": "The problem statement names who has the problem, what happens today and why it matters, before any requirement appears."
+      },
+      {
+        "criterion": "Success measures are defined",
+        "weight": 6,
+        "test": "At least 2 measures give a metric, a target marked proposed, and how it is measured."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "user-stories-acceptance",
@@ -1953,7 +2703,67 @@
         "note": "YunoJuno shows freelance product managers average $77 an hour. A 2 to 3 hour document is priced a little under that.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/product-manager"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every rule or limit in a story is in the brief; anything guessed is placed in an 'assumptions to confirm' list."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: A backlog of user stories grouped into epics, each with an acceptance checklist in Given-When-Then form, edge cases, priority and a rough size note."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other. For this job: Every story has at least 3 criteria in Given-When-Then form with concrete values and no vague words such as 'quickly'."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Each story names a user, an action and a benefit, and can be built in a few days by the wording; no story bundles several features with 'and'."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "Edge cases and errors are covered",
+        "weight": 10,
+        "test": "Each epic includes failure, empty and permission cases, at least 3 per epic."
+      },
+      {
+        "criterion": "The set of stories covers the whole feature without overlap",
+        "weight": 10,
+        "test": "Each part of the feature in the brief maps to at least one story and no two stories repeat the same criteria."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "ux-microcopy",
@@ -2115,7 +2925,90 @@
         "note": "YunoJuno shows freelance UX designers average $70 an hour. Reviews, briefs and copy of 1 to 3 hours are priced a little under that.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/ux-designer"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice. For this job: Terms for the same thing are the same in every screen, and the voice guide matches the tone given."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A table of copy by screen: buttons, labels, hints, error and success messages, empty states and short emails, plus a one-page voice guide and notes on character limits. Also: Copy lengths respect every character limit in the brief, and short forms are given for small spaces."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Every button begins with a verb and names the result; no button reads only 'Submit' or 'OK'."
+      },
+      {
+        "criterion": "Copy does not promise features, prices or outcomes that the brief does not state",
+        "weight": 6,
+        "test": "No feature, number, timeframe or guarantee appears in copy unless it is in the brief; unknowns use [placeholder] tags."
+      },
+      {
+        "criterion": "Error messages say what went wrong and how to fix it",
+        "weight": 6,
+        "test": "Each error has the cause in plain words and a next step, and none blames the user."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "ux-review",
@@ -2281,7 +3174,80 @@
         "note": "YunoJuno shows freelance UX designers average $70 an hour. Reviews, briefs and copy of 1 to 3 hours are priced a little under that.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/ux-designer"
       }
-    ]
+    ],
+    "family": "audit",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "account_access",
+        "label": "Read access to the account, site or data",
+        "required": true,
+        "how": "Level 1 (read) through the client's connector, or an export covering the period. Pull the real snapshot before judging anything."
+      },
+      {
+        "id": "goals",
+        "label": "What success means here",
+        "required": true,
+        "how": "The target the client measures (sales, leads, cost per result, response time, margin), the period, and what changed recently."
+      },
+      {
+        "id": "benchmarks",
+        "label": "Earlier results or a comparison",
+        "required": false,
+        "how": "A previous period, a competitor or a target to compare against, so findings say better or worse than what."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "The diagnosis is made from the client's real data or pages, pulled at level 1 (read), with the period stated.",
+      "Every issue cites an element or text from the brief; no analytics, user complaints or testing results are invented."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: A review with a score table, a ranked list of issues (what, why it matters, fix), quick wins, bigger changes and questions to test with users. Also: It states it has not tested with users or seen analytics, and lists questions to test."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today. For this job: Issues are ordered by severity with a stated reason tied to the user's goal, and the top three are marked."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide."
+      },
+      {
+        "criterion": "Each issue has a specific fix",
+        "weight": 8,
+        "test": "Each issue names what to change, where, and the new wording or layout in a sentence."
+      },
+      {
+        "criterion": "Quick wins are separated from big changes",
+        "weight": 8,
+        "test": "A section lists at least 3 changes that need less than a day of work."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "id": "app-store-listing",
@@ -2445,7 +3411,91 @@
         "note": "YunoJuno shows freelance UX designers average $70 an hour. Reviews, briefs and copy of 1 to 3 hours are priced a little under that.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/ux-designer"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "Every number, rating, award and feature in the listing is in the brief."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: Listing text for one store: title, subtitle or short description, full description, keyword field, promo text, what's new text and 3 screenshot caption ideas, all within character limits. Also: The title and description include the main seed words once or twice and no word is repeated in the keyword field…"
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words."
+      },
+      {
+        "criterion": "All fields respect store limits",
+        "weight": 6,
+        "test": "Apple title is 30 characters or fewer, subtitle 30, keywords 100, promo text 170; Google title 30, short description 80, full description 4,000."
+      },
+      {
+        "criterion": "The first lines state who it is for and the main benefit",
+        "weight": 6,
+        "test": "The subtitle or short description and first sentence of the description name the audience and the main benefit."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "api-documentation",
@@ -2620,7 +3670,66 @@
         "note": "Closest rate page we could open: YunoJuno shows freelance product managers average $77 an hour. We used it as a proxy for API documentation work.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/product-manager"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: A docs set in markdown with overview, authentication, quickstart, one reference page per endpoint group, request and response examples, error list and a changelog stub."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other. For this job: Each error code in the spec has a cause and a fix, and the format of an error body is shown."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents. For this job: Field and endpoint names match the spec exactly and one term is used for each concept throughout."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Each endpoint in the spec has method, path, parameters with types and required flags, a request example and a response example."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "Docs describe only behaviour found in the spec or the buyer's notes",
+        "weight": 10,
+        "test": "Every endpoint, parameter, field, status code and limit appears in the spec or notes; guessed items are marked 'confirm'. Example values are marked as examples."
+      },
+      {
+        "criterion": "The quickstart can be followed in order",
+        "weight": 10,
+        "test": "It goes from getting credentials to a first successful call in 5 steps or fewer, with a copy-paste example for each language chosen."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "release-notes",
@@ -2778,7 +3887,84 @@
         "note": "Closest rate page we could open: YunoJuno shows freelance product managers average $77 an hour. We used it as a proxy for release notes writing.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/product-manager"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "existing_assets",
+        "label": "Your draft, notes or past pieces",
+        "required": true,
+        "how": "The material this piece is made from: the draft, the records or notes, and 2 or 3 past pieces in the same voice. Read them all before writing."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your own words",
+        "required": true,
+        "how": "5 to 10 lines the client or speaker wrote or said, copied verbatim into the context file."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website, if the piece speaks for a business",
+        "required": false,
+        "how": "Read the live site for facts and voice when the piece speaks for a business or organisation. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and CSS."
+      },
+      {
+        "id": "references",
+        "label": "Pieces you admire, and pieces to avoid",
+        "required": false,
+        "how": "2 the client admires and 1 to avoid sounding like. Ask once."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every choice cites the client's own material (draft, notes, past pieces) or a named reference."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: Customer-facing release notes grouped by new, improved and fixed, with a headline summary, a short email version and an internal technical changelog. Also: Items are grouped under new, improved and fixed, and the headline or highlighted items come first."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Any breaking change is in its own section near the top with what changed, who is affected and what to do."
+      },
+      {
+        "criterion": "Notes include only changes in the list",
+        "weight": 6,
+        "test": "Every change in the notes can be matched to a line in the pasted list; no feature, date or benefit is added that was not given."
+      },
+      {
+        "criterion": "Changes are described by what users gain, not by code terms",
+        "weight": 6,
+        "test": "For customer audiences, no internal ticket ids, function names or jargon appear in the main notes, and each item says what the user can now do."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "sql-queries",
@@ -2942,7 +4128,66 @@
         "note": "YunoJuno shows freelance data analysts average $68 an hour. Query and analysis jobs of 1 to 3 hours are priced a little under that.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/data-analyst"
       }
-    ]
+    ],
+    "family": "code",
+    "context_requirements": [
+      {
+        "id": "existing_code",
+        "label": "The code or repo it must fit",
+        "required": true,
+        "how": "Level 1 (read) access to the repo or the relevant files. Note the framework, versions, naming, style and test tool before writing."
+      },
+      {
+        "id": "environment",
+        "label": "Where it runs",
+        "required": false,
+        "how": "Hosting, runtime and versions, and any limits on packages or browsers."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the task asked, end to end, with setup and run steps. Here: SQL for each question, in your database flavour, with a plain-words explanation, assumptions, sample output shape, index hints and checks to confirm the result."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "It runs, handles bad input and failure, and uses only real APIs and packages. For this job: Joins, filters and grouping match the question and business rules; a walk-through on the sample rows (if given) produces the stated result."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches the client's existing code, versions, naming, style and tools."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "The next person can read, change and test it safely. For this job: Each query has a two-sentence explanation, its assumptions and what the output columns mean."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, data and limits, not a generic sample. For this job: Only syntax and functions valid for the chosen dialect are used."
+      },
+      {
+        "criterion": "Queries use only tables and columns in the schema",
+        "weight": 10,
+        "test": "Every table and column named in the SQL exists in the pasted schema; guessed definitions are listed under assumptions."
+      },
+      {
+        "criterion": "Queries are safe to run",
+        "weight": 10,
+        "test": "Every query is read-only unless the brief asks otherwise, and any write comes with a warning and a way to test first."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "csv-data-analysis",
@@ -3108,7 +4353,72 @@
         "note": "YunoJuno shows freelance data analysts average $68 an hour. Query and analysis jobs of 1 to 3 hours are priced a little under that.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/data-analyst"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: A report with data checks, answers to each question with tables, trends and outliers, a short summary, caveats and a reproducible method (formulas or code) you can rerun. Also: The report says what the data cannot show, and uses 'associated with' language unless the data proves cause."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked. For this job: Every figure in the report matches the CSV or follows from it by shown steps; no outside data or benchmark appears unless supplied."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide."
+      },
+      {
+        "criterion": "The report checks the data first",
+        "weight": 8,
+        "test": "It states row and column counts, missing values, duplicates and odd values it found, and says how it handled them."
+      },
+      {
+        "criterion": "Each question is answered directly",
+        "weight": 8,
+        "test": "Each question has a plain-words answer first, then the table or steps that support it."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "kpi-dashboard-spec",
@@ -3272,7 +4582,66 @@
         "note": "YunoJuno shows freelance data analysts average $68 an hour. Query and analysis jobs of 1 to 3 hours are priced a little under that.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/data-analyst"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: A spec with 8 to 15 metrics (definition, formula, source, owner, target field), the questions each answers, a dashboard layout in words, filters, alerts and data gaps. Also: The layout lists at most 6 top-line numbers, then charts in an order that matches the users' questions."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template. For this job: Targets are blank or marked 'to set'; every source field named exists in the brief's list of sources, otherwise marked as needed."
+      },
+      {
+        "criterion": "Each metric supports a named decision",
+        "weight": 10,
+        "test": "Each metric lists the decision or question it serves, and metrics with none are cut."
+      },
+      {
+        "criterion": "Each metric has an exact definition",
+        "weight": 10,
+        "test": "Each metric has a formula, a time window, the source field, and what is included or excluded."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "website-wireframe-brief",
@@ -3455,7 +4824,101 @@
         "note": "YunoJuno shows freelance UX designers average $70 an hour. Reviews, briefs and copy of 1 to 3 hours are priced a little under that.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/ux-designer"
       }
-    ]
+    ],
+    "family": "web_page",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "brand_guide",
+        "label": "Brand guide, if you have one",
+        "required": false,
+        "how": "Fonts, colours, logo rules and tone. Captured facts win where the guide is out of date; say where they differ."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "The client's existing nav and footer are kept, unless the plan changes them on purpose and says so.",
+      "The brand's own fonts are loaded; no system or default font replaces them.",
+      "The page works at 390 px and 1440 px wide.",
+      "The primary action works end to end (form, booking or checkout).",
+      "The brand-fidelity check (tools/check-brand-fidelity.mjs, or its manual checklist) passes against context/brand-dna.json.",
+      "Any proof, price or number on a page comes from the brief; other slots are marked [add: ...]."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job and conversion logic",
+        "weight": 8,
+        "test": "The page does the one job the client named for its traffic source and the visitor's awareness stage, and every section moves the visitor toward the primary action. Here: A site map, a text wireframe for each page (sections in order, content and purpose), navigation, key calls to action, a style direction and a designer brief with questions to settle."
+      },
+      {
+        "criterion": "Brand fidelity",
+        "weight": 25,
+        "test": "Side by side with the live site (context/brand-dna.json and screenshots) it reads as the same brand: fonts, colour proportions, radius, buttons, imagery and voice match, or each change is deliberate and stated."
+      },
+      {
+        "criterion": "Launchability",
+        "weight": 20,
+        "test": "It can go live: it works at 390 px and 1440 px, with a keyboard, the primary action works, and it uses real copy and facts. For this job: The brief names platform limits (if given), required content, mobile behaviour and at least 5 open questions."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 15,
+        "test": "A competitor could not publish it unchanged: it is built from this client's own offer, facts, proof and words."
+      },
+      {
+        "criterion": "Distinctiveness vs defaults",
+        "weight": 10,
+        "test": "None of the named AI defaults (tools/ai-default-patterns.md) appears unless the plan chose it on purpose and says why."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time visitor gets what it is, who it is for and what to do next without rereading."
+      },
+      {
+        "criterion": "Every page leads toward the site goal",
+        "weight": 6,
+        "test": "Each page lists one main action that matches the goal field, and the nav gives that action a clear place."
+      },
+      {
+        "criterion": "Pages are built in a sensible order of sections",
+        "weight": 6,
+        "test": "Each wireframe lists sections top to bottom, each with its purpose and the content it holds; the most important section is within the first two."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "qa-test-plan",
@@ -3607,7 +5070,79 @@
         "note": "Closest rate page we could open: YunoJuno shows freelance product managers average $77 an hour. We used it as a proxy for QA planning work.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/product-manager"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every feature and risk named appears in the brief or is marked 'assumed, confirm'."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook. For this job: Estimated test effort in hours is shown and is not more than the hours the team field allows, or the plan says what to cut."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: A test plan with scope, risks, test types, environments, entry and exit rules, test data needs, a schedule outline, roles and a list of areas to cover."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read. For this job: In-scope and out-of-scope lists, entry criteria and exit criteria (with numbers such as 'no open critical bugs') are all present."
+      },
+      {
+        "criterion": "Testing effort follows risk",
+        "weight": 6,
+        "test": "The plan ranks areas by risk using the brief, and gives more depth to the top 3."
+      },
+      {
+        "criterion": "The plan covers each platform listed",
+        "weight": 6,
+        "test": "Each platform or browser in the brief appears in the environment table with what is tested on it."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "qa-test-cases",
@@ -3783,7 +5318,67 @@
         "note": "Closest rate page we could open: YunoJuno shows freelance product managers average $77 an hour. We used it as a proxy for QA test case writing.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/product-manager"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every case lists the requirement or rule it covers, and every requirement has at least one case."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: A table of test cases with id, title, preconditions, steps, test data, expected result and priority, covering normal use, errors and edge cases, plus a CSV-ready version. Also: Each case has a priority, and a CSV block with the same columns is provided."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other. For this job: Expected results come from the pasted requirements; guessed behaviour is marked 'confirm with product'."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "Errors, limits and edge cases are included",
+        "weight": 10,
+        "test": "For each feature, at least 40 percent of cases are negative, boundary or permission cases."
+      },
+      {
+        "criterion": "A tester can run each case without guessing",
+        "weight": 10,
+        "test": "Each case has preconditions, numbered steps with concrete data and one expected result that can be seen."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "automation-workflow-spec",
@@ -3944,7 +5539,67 @@
         "note": "YunoJuno shows freelance analytics consultants average $68 an hour. Specs of about 2 hours are priced a little under that.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/analytics-consultant"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "It names only triggers and actions that you can reasonably expect in the chosen tool and marks any it is unsure of as 'verify in the tool'; no field is made up."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: A build spec with the goal, trigger, each step with app and action, field mapping tables, filters and branches, error handling, a test plan and an estimate of tasks or operations used per month."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other. For this job: It lists at least 5 test records including a normal one, an empty one and a duplicate, with the expected result for each."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template. For this job: The spec covers missing fields, duplicates and app errors, with what happens and who is told."
+      },
+      {
+        "criterion": "Each step can be built as written",
+        "weight": 10,
+        "test": "Every step names the app, the trigger or action, and the settings, with a mapping table from source field to target field."
+      },
+      {
+        "criterion": "Likely usage and cost are estimated",
+        "weight": 10,
+        "test": "It estimates tasks or operations per run and per month, and states that plan pricing must be checked."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "personas-journey-map",
@@ -4097,6 +5752,72 @@
         "note": "YunoJuno shows freelance UX designers average $70 an hour. Reviews, briefs and copy of 1 to 3 hours are priced a little under that.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/ux-designer"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every fact about a persona comes from the brief; invented names and example quotes are labelled 'example', and no statistics appear unless supplied."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: 3 to 4 personas (goals, needs, pain points, quotes marked as examples) and a journey map in a table with stages, actions, feelings, pain points and ideas, plus facts to confirm."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today. For this job: At least 6 improvement ideas each name the stage and persona and use details from the brief."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: It has 5 to 8 stages in order, each with actions, a pain point and an idea, and marks the 2 moments that matter most."
+      },
+      {
+        "criterion": "The report says what it is built from and what it could not check",
+        "weight": 8,
+        "test": "A short section says the work uses the buyer's inputs plus model knowledge with no live web access, and lists at least 3 specific items the buyer should verify."
+      },
+      {
+        "criterion": "Personas differ in ways that change what you do",
+        "weight": 8,
+        "test": "Each persona has different goals and at least one different need that leads to a different action, shown in the table."
+      }
+    ],
+    "mode_default": "extend"
   }
 ]

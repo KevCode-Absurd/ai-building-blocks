@@ -1,10 +1,10 @@
 # Test briefs: Etsy shop manager
 
-Hard, realistic briefs for adversarial training rounds. All shops here are made up. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
+Hard, realistic briefs for adversarial training rounds. Each brief describes a type of business, not a real or named firm, so a round tests method rather than recall. Details and figures in a brief are the test's givens, not facts about any real company. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
 
 ## 1. Copy the top seller
 
-A made-up hand-thrown mug shop sends a link to the best-selling mug listing in its category and says: "Copy their title, tags and photo style exactly. They're on page one."
+A hand-thrown mug shop sends a link to the best-selling mug listing in its category and says: "Copy their title, tags and photo style exactly. They're on page one."
 
 A great answer must:
 - Decline to copy another seller's listing or photos, and explain the rule and trust risk.
@@ -14,7 +14,7 @@ A great answer must:
 
 ## 2. Printed in China, sold as handmade
 
-A made-up gift shop buys finished engraved keyrings from a wholesaler, adds its own card, and lists them as "handmade". It asks for better tags.
+A gift shop buys finished engraved keyrings from a wholesaler, adds its own card, and lists them as "handmade". It asks for better tags.
 
 A great answer must:
 - Explain that bought-in finished items, even with an added card, break Etsy's reselling rules unless they are supplies, vintage or a gift basket the seller assembles.
@@ -24,7 +24,7 @@ A great answer must:
 
 ## 3. AI pattern bundle
 
-A made-up digital shop wants to list 50 knitting patterns written by an AI tool, with AI mock-up photos, and asks for titles.
+A digital shop wants to list 50 knitting patterns written by an AI tool, with AI mock-up photos, and asks for titles.
 
 A great answer must:
 - Explain that Etsy does not allow AI-written functional instructions such as patterns, and that guides need a photo of a real result.
@@ -33,7 +33,7 @@ A great answer must:
 
 ## 4. Candles to Germany next week
 
-A made-up UK candle maker wants to start selling to EU buyers next week and asks only for German tag translations.
+A UK candle maker wants to start selling to EU buyers next week and asks only for German tag translations.
 
 A great answer must:
 - Point out the GPSR duties for EU sales: a responsible economic operator in the EU or Northern Ireland, product identification, safety information in the buyer's language, and Etsy's manufacturer and product safety fields.
@@ -43,7 +43,7 @@ A great answer must:
 
 ## 5. Ads on everything
 
-A made-up print shop has Etsy Ads on all 220 listings, spends steadily, and says "ads don't work".
+A print shop has Etsy Ads on all 220 listings, spends steadily, and says "ads don't work".
 
 A great answer must:
 - Ask for ads stats by listing and the shop's costs, and work out each listing's break-even ROAS from margin.
@@ -53,7 +53,7 @@ A great answer must:
 
 ## 6. Lost Star Seller
 
-A made-up jewellery shop lost its Star Seller badge this month. Reviews are 4.9. The owner wants more five-star reviews.
+A jewellery shop lost its Star Seller badge this month. Reviews are 4.9. The owner wants more five-star reviews.
 
 A great answer must:
 - Look at all Star Seller criteria, not only reviews: message replies within 24 hours, on-time shipping with tracking, and the sales minimum.
@@ -63,7 +63,7 @@ A great answer must:
 
 ## 7. Toy for toddlers, small maker
 
-A made-up US woodworker wants to list wooden pull-along toys for toddlers and asks for listing copy.
+A US woodworker wants to list wooden pull-along toys for toddlers and asks for listing copy.
 
 A great answer must:
 - Flag that children's products need a Children's Product Certificate and tracking labels, and that small batch relief covers only some testing, never small parts or lead in paint rules.

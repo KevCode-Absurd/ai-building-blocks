@@ -258,3 +258,26 @@ Re-check these at every refresh (every 30 days):
 | Play policies | Play [19][22][23] | As summarised |
 | Notification permission | Apple [16]; Android [24] | Android 13 runtime permission |
 | Review rules by region | FTC [27]; CMA [28]; EU [29] | Rules in force |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Test one change at a time, because both stores split traffic per test and a mixed change cannot be read. (§5)
+- `decision_rule` If an Apple test has not reached the confidence Apple suggests, keep it running or stop it as a draw; do not apply it on a hunch. (§5)
+- `decision_rule` Send each audience-specific ad, email or post to a matching custom page or listing, so the page repeats what they were promised. (§5)
+- `decision_rule` Ask for reviews with the system prompt right after a success moment. (§5)
+- `exemplar` Benefit first, specific over clever: "See every bill due this week" beats "Take control of your finances". (§8)
+- `check` Screenshots tell one story and show the real app, with captions readable at thumbnail size. (§7)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Stock hype words.** Subtitles, promotional text and push copy with "Unlock", "Elevate", "Seamless" or "Game-changer". They waste limited characters; spend them on the keyword and a concrete benefit.
+- **Benefits any competitor could claim.** "Take control of your finances" style lines. Section 8's own example shows the fix: "See every bill due this week".
+- **Headline formula clichés.** Screenshot captions in the "The #1 app for..." or "X made easy" pattern. Each caption should say what that screen does for the user.
+- **Every concept in one look.** Every screenshot set, custom page and ad variant in one template, so tests compare nothing. Give each tested concept a visibly different treatment.
+- **Device on a gradient.** The app screen in a phone frame floating on a purple or blue gradient, the store version of product on a gradient. Use the brand's own colours and show the real app telling one story.
+- **One hook formula reused.** The same opening pattern across ads and push messages. Write the hook from each audience and its custom page.
+- **Fake urgency.** Push and in-app messages with countdowns or "only today" that are not true. Use real event dates, which in-app events need anyway.

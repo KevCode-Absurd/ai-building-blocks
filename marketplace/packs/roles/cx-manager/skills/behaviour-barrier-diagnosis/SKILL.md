@@ -82,7 +82,7 @@ Say for each barrier whether the evidence is strong (data shows the stop and cus
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Brightline Bookkeeping", a firm whose new clients pay their first invoice late.*
+*Illustrative structure, not a real business: a bookkeeping firm whose new clients pay their first invoice late. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Behaviour.** New clients pay their first invoice within 14 days. Now: 41% do (last 6 months, 87 new clients).
 >

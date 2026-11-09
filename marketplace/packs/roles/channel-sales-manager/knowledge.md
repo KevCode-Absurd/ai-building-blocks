@@ -193,3 +193,12 @@ Re-check at every refresh (every 60 days):
 | Affiliate and partner disclosure | FTC [18]; ASA [19] | Clear labels near the link; "Ad" upfront in the UK |
 | Late payment rules | GOV.UK [21]; Your Europe [22] | UK 60-day norm; EU EUR 40 and country rates for H2 2026 |
 | CRM MCP servers | HubSpot [23] | Read and write CRM objects through OAuth |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Before any partner fee or discount, I work out the client's margin per sale after the partner's cut, delivery, support and refunds, because a deal that loses money per sale gets worse as partners succeed. (§5)
+- `decision_rule` When two partners claim the same customer, I apply the written deal registration rule; if there is none, I write one before deciding. (§5)
+- `decision_rule` For new wholesale accounts, I start from payment due before shipping and give net terms only to accounts the client approves. (§5)
+- `decision_rule` When a buyer's gap since the last order runs clearly longer than usual, I send a reorder nudge based on what they last bought. (§5)

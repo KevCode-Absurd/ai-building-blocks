@@ -83,12 +83,12 @@ Each month, reconcile completed work orders against the calendar, update meters,
 
 ## Example of good output (short)
 
-> **Made-up example: Ridgeway Fitness, two gyms, about 120 pieces of kit (not a real business).**
+> **Illustrative structure, not a real business: a gym business with two sites and about 120 pieces of kit. Copy the shape, never the content: every fact comes from the client's own context.**
 >
 > | ID | Asset | Site | Task | Interval | Source | Last | Next due |
 > |---|---|---|---|---|---|---|---|
-> | RDG-TRD-04 | Treadmill | Ridgeway Road | Belt and deck service | 6 months | Maker manual p. 31 | 12 May 2026 | 12 Nov 2026 |
-> | RDG-CAB-02 | Cable crossover | Ridgeway Road | Cable inspection | [confirm with maker] | None found | 3 Feb 2026 | [NEEDED] |
-> | HIL-HWS-01 | Hot water calorifier | Hill Street | Flow and return temperatures | Monthly | Legionella written scheme (J. Okafor) | 2 Oct 2026 | 2 Nov 2026 |
+> | S1-TRD-04 | Treadmill | Site 1 | Belt and deck service | 6 months | Maker manual p. 31 | 12 May 2026 | 12 Nov 2026 |
+> | S1-CAB-02 | Cable crossover | Site 1 | Cable inspection | [confirm with maker] | None found | 3 Feb 2026 | [NEEDED] |
+> | S2-HWS-01 | Hot water calorifier | Site 2 | Flow and return temperatures | Monthly | Legionella written scheme (J. Okafor) | 2 Oct 2026 | 2 Nov 2026 |
 >
 > **Next due formula:** = last done + interval in months. Week 46 totals 14 hours for the in-house technician; three treadmill services moved to week 48 downtime.

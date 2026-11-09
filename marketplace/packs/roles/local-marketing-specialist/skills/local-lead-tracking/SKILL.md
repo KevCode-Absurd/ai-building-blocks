@@ -61,7 +61,7 @@ Access levels for this skill: designing the tracker and reading reports is level
 
 ## Example of good output (short)
 
-*Oakfield Electrical is a made-up two-electrician firm, used only to show the format. Numbers are invented.*
+*Illustrative structure, not a real business: a two-electrician firm. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Lead map:** phone (most enquiries), website form, Local Services Ads (calls and messages), walk-ins: none. Tracking: tracker question for phone and form; LSA Leads page; tagged profile link; a separate tracked number on the October postcard drop.
 

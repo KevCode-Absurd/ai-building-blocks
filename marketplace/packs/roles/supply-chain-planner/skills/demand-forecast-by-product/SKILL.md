@@ -110,7 +110,7 @@ Put the table and formulas in a copy of the planning sheet (level 2) or the live
 
 ## Example of good output (short)
 
-*Made-up business: Ember & Wick, a candle maker with 12 core scents and 34 months of history.*
+*Illustrative structure, not a real business: a candle maker with 12 core scents and 34 months of history. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Stockouts.** Fig & Cedar, Sea Salt and Tobacco ran out for 9 to 16 days in May 2025. Their May demand is rebuilt from in-stock days (Fig & Cedar: 212 units sold in 15 days → 438 for the month) and labelled "rebuilt".
 >

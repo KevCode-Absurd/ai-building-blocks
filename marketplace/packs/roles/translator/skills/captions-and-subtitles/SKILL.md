@@ -59,7 +59,7 @@ Not for: transcribing audio you cannot supply as text, legal or court transcript
 
 ## Example of good output (short)
 
-*Thornbury Lettings is a made-up business used only to show the format: a two-minute explainer video for tenants, subtitled in English and Polish.*
+*Illustrative structure, not a real business: a letting agent's two-minute explainer video for tenants, subtitled in English and Polish. Copy the shape, never the content: every fact comes from the client's own context.*
 
 ```
 1

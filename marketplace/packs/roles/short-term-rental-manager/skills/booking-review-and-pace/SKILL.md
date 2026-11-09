@@ -80,7 +80,7 @@ At level 1 or 2, deliver the review and proposals. At level 3, apply only the ch
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Larchwood Lodges, three cabins in the Lake District, England.*
+*Illustrative structure, not a real business: three cabins in the Lake District, England. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Month (2026) | Available | Sold | Occupancy | ADR (net of fees) | RevPAR |
 |---|---|---|---|---|---|

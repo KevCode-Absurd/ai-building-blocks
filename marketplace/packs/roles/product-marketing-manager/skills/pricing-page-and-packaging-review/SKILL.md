@@ -87,7 +87,7 @@ Rank fixes by risk first (legal and trust), then by buyer confusion, then by rev
 
 ## Example of good output (short)
 
-Made-up business for illustration: Larchway Studio, an online booking tool for yoga studios selling in the UK and Ireland.
+Illustrative structure, not a real business: an online booking tool for yoga studios selling in the UK and Ireland. Copy the shape, never the content: every fact comes from the client's own context.
 
 > | Issue | Market | Risk | Fix | Fresh yes |
 > |---|---|---|---|---|

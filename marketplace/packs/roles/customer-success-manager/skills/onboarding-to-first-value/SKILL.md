@@ -84,16 +84,16 @@ One markdown document:
 
 ## Example of good output (short)
 
-> **Made-up example: Ledgerly, a bookkeeping firm for cafés (not a real business).**
+> **Illustrative structure, not a real business: a bookkeeping firm for cafés. Copy the shape, never the content: every fact comes from the client's own context.**
 >
 > **First win:** the client approves their first monthly profit and loss report, delivered by the 10th of the month after sign-up.
 >
 > | Step | Owner | Day | Done when |
 > |---|---|---|---|
-> | Kick-off call | Ledgerly | 2 | Goal written in the client's words |
-> | Invite Ledgerly as a user in the client's accounting tool | Client | 3 | Invite accepted; no passwords shared |
+> | Kick-off call | Firm | 2 | Goal written in the client's words |
+> | Invite the firm as a user in the client's accounting tool | Client | 3 | Invite accepted; no passwords shared |
 > | Upload last 3 months of supplier bills | Client | 5 | All bills in the shared folder |
-> | Bank feed connected and checked | Ledgerly | 7 | Balances match statements |
+> | Bank feed connected and checked | Firm | 7 | Balances match statements |
 >
 > **Email 2 (sent when the invite is accepted):** "Thanks, we're in. One thing left before we can build your first report: upload the last three months of supplier bills to the folder below. It takes about 15 minutes. Questions? Reply here and Sam will answer the same day."
 >

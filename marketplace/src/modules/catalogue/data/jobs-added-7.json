@@ -217,7 +217,91 @@
         "note": "YunoJuno rate data: freelance UI designers average $69 an hour (about £419 a day).",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/ui-designer"
       }
-    ]
+    ],
+    "family": "other",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "brand_guide",
+        "label": "Brand guide, if you have one",
+        "required": false,
+        "how": "Fonts, colours, logo rules and tone. Captured facts win where the guide is out of date; say where they differ."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: The piece you choose, from your brand facts. Logo briefs give the idea, must-haves, formats and checks for judging drafts. Palettes give hex codes, colour roles, text pairs with contrast ratios and rules. Type pairings name real fonts with weights and sizes."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Sizes, specs, values and facts are right and consistent, so a maker can build it without guessing."
+      },
+      {
+        "criterion": "Fits the brand system",
+        "weight": 20,
+        "test": "It works inside the client's captured brand: fonts, colour proportions, imagery and voice from context/brand-dna.json, or each change is deliberate and stated. For this job: Every colour is a 6-digit hex code with a named role; each text-on-background pair is listed with a contrast ratio and an AA pass or fail, and no failing pair is used for body text; fonts are real named families with weights…"
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Each usage rule is one short sentence a non-designer can follow, such as which colour goes on buttons; design terms such as kerning or tokens are explained the first time; no hype words."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template. For this job: Every keep or avoid rule and every current colour or font named in the brief is honoured; no fact about the business is added; liked brands appear only as qualities; no rival's logo, name or look is copied."
+      },
+      {
+        "criterion": "The draft delivers the piece chosen, for the stated business and uses",
+        "weight": 10,
+        "test": "The draft's sections match the piece chosen in the brief and name the business and uses from the brief; a logo or identity brief covers the idea, must-haves, formats and how drafts will be judged; a refresh brief says what stays and what changes."
+      },
+      {
+        "criterion": "The buyer gets a way to judge and use the work",
+        "weight": 10,
+        "test": "Logo and identity briefs list at least 4 checks for judging drafts (such as works in one colour and at 16 pixels); palettes and type pairings give do and don't examples; token output shows one example of use in code."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "app-screen-wireframe-spec",
@@ -434,7 +518,92 @@
         "note": "YunoJuno rate data: freelance UI designers average $69 an hour (about £419 a day).",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/ui-designer"
       }
-    ]
+    ],
+    "family": "other",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "brand_guide",
+        "label": "Brand guide, if you have one",
+        "required": false,
+        "how": "Fonts, colours, logo rules and tone. Captured facts win where the guide is out of date; say where they differ."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "Prices, limits, fields, plan names and business rules come from the brief; anything missing is a marked open question or placeholder such as [max file size?], never an invented rule; there are no dark patterns such as pre-ticked paid extras or a hidden cancel option."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: A screen list and flow map, then for each screen: its job, layout zones top to bottom, every component with its exact words, the empty, loading, error and success states, what each tap does, and mobile and desktop notes. Component sheets add sizes, spacing and states. Ends with open questions and a build order."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Sizes, specs, values and facts are right and consistent, so a maker can build it without guessing."
+      },
+      {
+        "criterion": "Fits the brand system",
+        "weight": 20,
+        "test": "It works inside the client's captured brand: fonts, colour proportions, imagery and voice from context/brand-dna.json, or each change is deliberate and stated."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Notes use short sentences; buttons start with a verb; design terms such as modal or toast are explained the first time; no hype words."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "Every screen or step in the brief is specified, in flow order",
+        "weight": 10,
+        "test": "Each screen or component named in the brief has its own section, in the order of the flow map; the count matches the brief; each screen section states the screen's one job and what the user does next."
+      },
+      {
+        "criterion": "Each screen can be built without guessing",
+        "weight": 10,
+        "test": "Each screen lists layout zones top to bottom, each component with its exact on-screen words, what each button or link does, and empty, loading, error and success states wherever the screen shows data or takes input; component specs give sizes, spacing and states."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "ai-image-prompt-set",
@@ -670,7 +839,98 @@
         "note": "YunoJuno rate data: freelance prompt engineers average $107 an hour (about £650 a day).",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/prompt-engineer"
       }
-    ]
+    ],
+    "family": "ad_creative",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Ads and materials you already run",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "brand_guide",
+        "label": "Brand guide, if you have one",
+        "required": false,
+        "how": "Fonts, colours, logo rules and tone. Captured facts win where the guide is out of date; say where they differ."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "Product colour, material, shape and label match the brief in every prompt; no living artist, real person, celebrity, trademark or other brand's logo is named; no claim about the product is added.",
+      "The draft tells the buyer to check every product image against the real product before using it in a listing or ad, to label AI images where a platform asks, and keeps out real people, children, medical images and before-and-after claims."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Strategic idea",
+        "weight": 8,
+        "test": "Each concept rests on one clear reason to act for a named audience, taken from the client's offer and proof. Here: A shared style block, then a table of prompts with what each image is for, its aspect ratio, the full prompt in your tool's syntax, what to keep out and the settings. Also: Each tool setting or term (such as stylize, seed or negative prompt) is explained in one line the first time…"
+      },
+      {
+        "criterion": "Range across named axes",
+        "weight": 20,
+        "test": "Concepts differ on named axes (mechanism, proof, structure, visual world, offer), not only in colour, crop, wording or style label."
+      },
+      {
+        "criterion": "Brand fidelity",
+        "weight": 15,
+        "test": "It looks and sounds like the client's captured brand: fonts, colours, imagery and voice from context/brand-dna.json."
+      },
+      {
+        "criterion": "Hook and thumb-stop",
+        "weight": 15,
+        "test": "The first line or frame earns attention for this audience without clickbait or fake urgency."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 15,
+        "test": "A competitor could not run it unchanged: it uses this client's own product, facts and proof."
+      },
+      {
+        "criterion": "Platform fit",
+        "weight": 15,
+        "test": "Each piece follows its placement's format, length limits and safe zones, with counts shown."
+      },
+      {
+        "criterion": "The prompts serve the stated use, tool and sizes",
+        "weight": 6,
+        "test": "The prompt count matches the brief; each row names its use and an aspect ratio from the brief (or a stated default); the syntax fits the tool named, such as --ar and --no for Midjourney or full sentences for ChatGPT image."
+      },
+      {
+        "criterion": "Each prompt is complete and ready to paste",
+        "weight": 6,
+        "test": "Each prompt states subject, setting, composition or camera angle, lighting, style and colour, with no gaps left except marked names; a shared style block or seed and reference note keeps the set consistent; at least 3 fix or edit prompts cover common faults."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "storyboard-and-shot-table",
@@ -896,7 +1156,92 @@
         "note": "YunoJuno rate data: freelance motion graphics designers average $64 an hour (about £385 a day).",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/motion-graphics-designer"
       }
-    ]
+    ],
+    "family": "other",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "brand_guide",
+        "label": "Brand guide, if you have one",
+        "required": false,
+        "how": "Fonts, colours, logo rules and tone. Captured facts win where the guide is out of date; say where they differ."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "Product details, claims, prices, people and places come from the brief; shots that need things the buyer has not listed are marked [needs: ...]; no real person, brand, film character or music is used unless the brief says the buyer has rights to it."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: A shot table with shot number, timecode, length, what we see, camera or motion, on-screen text, voiceover or sound, and the cut to the next shot. Motion pieces add keyframes, timing and easing. AI video shots add a full prompt per shot. Plus a style note, an asset list and a check that the timing adds up."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Sizes, specs, values and facts are right and consistent, so a maker can build it without guessing."
+      },
+      {
+        "criterion": "Fits the brand system",
+        "weight": 20,
+        "test": "It works inside the client's captured brand: fonts, colour proportions, imagery and voice from context/brand-dna.json, or each change is deliberate and stated."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: By the timecodes given, each on-screen text line stays up at least 1 second plus about a third of a second per word; text and key action sit inside safe zones, which are named for vertical video."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "The storyboard follows the brief's script and length",
+        "weight": 10,
+        "test": "Every line of the brief's script or voiceover appears in the audio column, in order; the sum of shot lengths equals the brief's length within 2 seconds; the draft states the aspect ratio and, for motion pieces, the frame rate."
+      },
+      {
+        "criterion": "Every shot can be made without guessing",
+        "weight": 10,
+        "test": "Each row has shot number, timecode, length, what we see, camera or motion, on-screen text (or 'none'), audio and transition; motion rows add keyframe timing and easing; AI video rows add a full prompt with subject, action, camera move, lighting and style; an asset list closes the draft."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "captions-subtitles-and-alt-text",
@@ -1126,7 +1471,67 @@
         "note": "The US Justice Department's web guidance tells businesses to give images text alternatives and to make videos accessible with accurate, synchronised captions.",
         "url": "https://www.ada.gov/resources/web-guidance/"
       }
-    ]
+    ],
+    "family": "other",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Caption text matches the transcript's words in order, with filler removed only if the brief allows; timings come from the brief's timestamps, or the draft states at the top that they are estimated and how; alt text describes only what the brief says each image shows; translations keep the meaning…"
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: Caption and subtitle files as one complete SRT or WebVTT code block, timed from your transcript, with short lines and speaker and sound labels. Alt text comes as a table with one row per image, plus long descriptions for charts. Audio description gives timed lines for gaps in speech. Ends with a list of words to check."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other. For this job: SRT cues are numbered from 1 with HH:MM:SS,mmm --> HH:MM:SS,mmm times; VTT starts with WEBVTT and uses HH:MM:SS.mmm; cues run in order and do not overlap; the whole caption file sits in one code block; alt text is a table with one row per image in the brief."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: No cue has more than 2 lines and lines keep to the chosen length; each cue stays up at least 1 second; speaker changes and key sounds are labelled, such as [music]; alt text is under 125 characters unless a long description was asked for and does not start with 'image of'."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "All of the source is covered",
+        "weight": 10,
+        "test": "The last cue ends within 5 seconds of the last timestamp in the brief; every image listed has a row; decorative images are marked with empty alt text; audio description lines fit the gaps stated in the brief."
+      },
+      {
+        "criterion": "Notes are plain and short",
+        "weight": 10,
+        "test": "Any notes or checklists use plain words; the draft ends with a short list of names or words to check; no hype words."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "audio-script-and-jingle",
@@ -1346,7 +1751,97 @@
         "note": "Contra's voice over hiring page lists freelance voice artists for businesses, with top profiles showing 11 to 12 repeat hires each.",
         "url": "https://contra.com/hire/voice-over-artists"
       }
-    ]
+    ],
+    "family": "ad_creative",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Ads and materials you already run",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "brand_guide",
+        "label": "Brand guide, if you have one",
+        "required": false,
+        "how": "Fonts, colours, logo rules and tone. Captured facts win where the guide is out of date; say where they differ."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "Offer, prices, dates, addresses and claims come from the brief; required lines appear word for word; lyrics are original and do not reuse or parody known songs, slogans or melodies; no sound-alike of a named artist is asked for."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Strategic idea",
+        "weight": 8,
+        "test": "Each concept rests on one clear reason to act for a named audience, taken from the client's offer and proof. Here: Scripts timed to your length with word counts, music and sound cues, voice direction and a pronunciation guide. Jingles get original lyrics with syllable counts, rhyme scheme, tempo and a melody guide in words. Sonic logos get a brief for your composer."
+      },
+      {
+        "criterion": "Range across named axes",
+        "weight": 20,
+        "test": "Concepts differ on named axes (mechanism, proof, structure, visual world, offer), not only in colour, crop, wording or style label."
+      },
+      {
+        "criterion": "Brand fidelity",
+        "weight": 15,
+        "test": "It looks and sounds like the client's captured brand: fonts, colours, imagery and voice from context/brand-dna.json. For this job: Each script has voice direction, music and sound cues in brackets at the right lines, and a pronunciation guide for names; jingle and sonic logo briefs give tempo in BPM, mood, instruments and a melody shape in words; a recording brief closes the draft."
+      },
+      {
+        "criterion": "Hook and thumb-stop",
+        "weight": 15,
+        "test": "The first line or frame earns attention for this audience without clickbait or fake urgency."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 15,
+        "test": "A competitor could not run it unchanged: it uses this client's own product, facts and proof."
+      },
+      {
+        "criterion": "Platform fit",
+        "weight": 15,
+        "test": "Each piece follows its placement's format, length limits and safe zones, with counts shown. For this job: Each script states its length and word count, and the spoken words fit a read rate of 2 to 2.5 words a second, less where music or sound effects take time (for example 60 to 75 words for 30 seconds); jingles give syllable counts per line and the number of bars or beats."
+      },
+      {
+        "criterion": "It is written for the ear",
+        "weight": 6,
+        "test": "Sentences are short; in spots of 30 seconds or more the key message and call to action are each said at least twice; web addresses and phone numbers are written the way they are spoken."
+      },
+      {
+        "criterion": "Plain, honest words",
+        "weight": 6,
+        "test": "No false urgency or claims the brief cannot back; no hype words; any regulated lines (such as finance or health) are flagged for the buyer to check."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "print-layout-spec",
@@ -1597,7 +2092,92 @@
         "note": "Contra's packaging designer page puts basic packaging design projects at $500 to $2,500, and dieline creation or changes at $250 to $1,000.",
         "url": "https://contra.com/hire/packaging-designers"
       }
-    ]
+    ],
+    "family": "other",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "brand_guide",
+        "label": "Brand guide, if you have one",
+        "required": false,
+        "how": "Fonts, colours, logo rules and tone. Captured facts win where the guide is out of date; say where they differ."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "Every line of copy from the brief is placed, and none is reworded unless marked as a suggestion; no new claims, prices, certification marks, recycling or allergen symbols are added; barcodes, legal and required marks are marked spaces for the buyer to supply and check."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: For each piece: trim size, bleed and safe area, colour mode and material; zones in reading order with every line of your copy placed; type sizes for the viewing distance; image and logo spots and marked spaces for barcodes or required marks; build notes for your tool; and a print file checklist."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Sizes, specs, values and facts are right and consistent, so a maker can build it without guessing."
+      },
+      {
+        "criterion": "Fits the brand system",
+        "weight": 20,
+        "test": "It works inside the client's captured brand: fonts, colour proportions, imagery and voice from context/brand-dna.json, or each change is deliberate and stated."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Headline sizes are set for the viewing distance stated, using a stated rule such as about 1 inch of letter height per 10 feet; body text on handheld print is at least 8 pt; any low-contrast text and background pair is flagged."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "Each piece in the brief is covered at the right size",
+        "weight": 10,
+        "test": "Each piece, panel or sign in the brief has its own section; each states the trim size with units, bleed (such as 3 mm or 0.125 in) and safe area; book covers state the spine width from the page count or mark it [check your printer's spine calculator]."
+      },
+      {
+        "criterion": "A designer or printer can build it without guessing",
+        "weight": 10,
+        "test": "Each piece lists zones in reading order with the copy in each, type sizes in points with the largest and smallest stated, colours as hex with CMYK or Pantone noted for print, image and logo positions, and a build note for the named tool; a print checklist covers 300 dpi images, colour mode, bleed, fonts embedded or outlined and file type."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "display-and-space-plan",
@@ -1814,7 +2394,92 @@
         "note": "US Bureau of Labor Statistics: about 97,100 interior designer jobs in 2025, with median pay of $67,190 a year.",
         "url": "https://www.bls.gov/ooh/arts-and-design/interior-designers.htm"
       }
-    ]
+    ],
+    "family": "other",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "brand_guide",
+        "label": "Brand guide, if you have one",
+        "required": false,
+        "how": "Fonts, colours, logo rules and tone. Captured facts win where the guide is out of date; say where they differ."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "Products and props come from the brief; new items appear in a shopping list with quantities and budget lines or [price to check]; the total does not go over the stated budget; no supplier brand is presented as required."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: A layout with measurements as a top-down zone map and a placement table; where each product, prop, fixture and sign goes and at what height; colour and lighting notes; a shopping list within budget; build and take-down steps with times; safety and access checks; and a refresh calendar if asked."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Sizes, specs, values and facts are right and consistent, so a maker can build it without guessing. For this job: The draft checks fire exits, trip hazards, stable stacking, heat from lights and reach heights; nothing blocks an exit or a required sign; any electrical or structural work is marked for a qualified trades person."
+      },
+      {
+        "criterion": "Fits the brand system",
+        "weight": 20,
+        "test": "It works inside the client's captured brand: fonts, colour proportions, imagery and voice from context/brand-dna.json, or each change is deliberate and stated."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Each main choice has a one-line reason tied to the goal, such as best sellers at eye level; display terms are explained; no hype words."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "The plan fits the stated space",
+        "weight": 10,
+        "test": "Every placement gives a position and size that fits within the measurements in the brief; doors, sockets and fixed items from the brief are respected; walkways where the public walks stay at least 90 cm (36 in) wide; where a measurement is missing, the draft says what to measure instead of guessing."
+      },
+      {
+        "criterion": "Someone can set it up from the plan alone",
+        "weight": 10,
+        "test": "The draft includes a top-down zone map in text, a placement table (item, position, height, facing), lighting notes, where sign text goes, and numbered build and take-down steps with time estimates."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "document-and-slide-layout",
@@ -2042,7 +2707,92 @@
         "note": "Contra's infographic designer page says simple infographics typically cost $500 to $1,500, and complex ones $2,000 to $5,000 or more.",
         "url": "https://contra.com/hire/infographic-designers"
       }
-    ]
+    ],
+    "family": "other",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "brand_guide",
+        "label": "Brand guide, if you have one",
+        "required": false,
+        "how": "Fonts, colours, logo rules and tone. Captured facts win where the guide is out of date; say where they differ."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "Text is placed as given or shortened with the cut words moved to notes; every chart uses only numbers from the brief and names its chart type; no invented statistics, partners, audience figures, logos or quotes."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: A style system (page size, grid, type scale, colour roles in hex, image and icon rules), then a layout row for each page or slide: layout type, zones, your text placed, the visual or chart spec and build notes. Infographics add a section flow and reading path. Ends with a build checklist for your tool."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Sizes, specs, values and facts are right and consistent, so a maker can build it without guessing."
+      },
+      {
+        "criterion": "Fits the brand system",
+        "weight": 20,
+        "test": "It works inside the client's captured brand: fonts, colour proportions, imagery and voice from context/brand-dna.json, or each change is deliberate and stated."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Presented slide body text is at least 24 pt and print or PDF body text at least 10 pt; each slide or page carries one main message; text colour pairs are named for contrast; infographics include a reading path and alt text."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "Every page or slide is laid out, in order",
+        "weight": 10,
+        "test": "The page or slide count matches the brief within one; each page or slide has a layout row; all content from the brief is placed or listed as cut with a reason."
+      },
+      {
+        "criterion": "It can be built in the named tool without guessing",
+        "weight": 10,
+        "test": "The draft states page size, margins, grid columns, a type scale in points with font names, and colour roles in hex; each page or slide row gives layout type, zones with content, the visual or chart spec and image notes; a build checklist closes the draft."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "social-graphics-spec",
@@ -2267,7 +3017,97 @@
         "note": "YunoJuno rate data: freelance digital designers average $63 an hour (about £380 a day).",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/digital-designer"
       }
-    ]
+    ],
+    "family": "ad_creative",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Ads and materials you already run",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "brand_guide",
+        "label": "Brand guide, if you have one",
+        "required": false,
+        "how": "Fonts, colours, logo rules and tone. Captured facts win where the guide is out of date; say where they differ."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "Words on each graphic come from the brief or are shortened from it with the change noted; no new claims, prices, results or quotes; images named are ones the buyer has or are marked [stock or AI image: ...]; thumbnails promise nothing the video title or brief does not deliver."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Strategic idea",
+        "weight": 8,
+        "test": "Each concept rests on one clear reason to act for a named audience, taken from the client's offer and proof. Here: For each graphic: the platform size in pixels, safe zones, a layout in words with positions, the exact words with character counts, fonts and sizes, colours in hex, image or photo direction and build notes. Carousels get a hook and a call-to-action slide."
+      },
+      {
+        "criterion": "Range across named axes",
+        "weight": 20,
+        "test": "Concepts differ on named axes (mechanism, proof, structure, visual world, offer), not only in colour, crop, wording or style label."
+      },
+      {
+        "criterion": "Brand fidelity",
+        "weight": 15,
+        "test": "It looks and sounds like the client's captured brand: fonts, colours, imagery and voice from context/brand-dna.json."
+      },
+      {
+        "criterion": "Hook and thumb-stop",
+        "weight": 15,
+        "test": "The first line or frame earns attention for this audience without clickbait or fake urgency."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 15,
+        "test": "A competitor could not run it unchanged: it uses this client's own product, facts and proof."
+      },
+      {
+        "criterion": "Platform fit",
+        "weight": 15,
+        "test": "Each piece follows its placement's format, length limits and safe zones, with counts shown. For this job: Each graphic states its pixel size and aspect ratio for the platform (such as 1080 x 1350 for an Instagram portrait post or 1280 x 720 for a YouTube thumbnail) and its safe zone; the number of graphics matches the brief."
+      },
+      {
+        "criterion": "Each graphic can be built without guessing",
+        "weight": 6,
+        "test": "Each graphic has a layout in words with positions (such as top third or left half), the exact text with a character count, font and size, hex colours and image direction; carousels have a hook slide and a last slide with the call to action; thumbnails give 3 distinct concepts per video with a note on which to test first."
+      },
+      {
+        "criterion": "Readable on a phone at a glance",
+        "weight": 6,
+        "test": "Thumbnail text is 4 words or fewer; carousel slide text is 25 words or fewer; text sits outside platform buttons and overlays; the text and background colours have strong contrast and are named."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "photo-style-and-edit-spec",
@@ -2486,7 +3326,91 @@
         "note": "YunoJuno rate data: freelance photographers average $78 an hour (about £475 a day).",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/photographer"
       }
-    ]
+    ],
+    "family": "other",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "brand_guide",
+        "label": "Brand guide, if you have one",
+        "required": false,
+        "how": "Fonts, colours, logo rules and tone. Captured facts win where the guide is out of date; say where they differ."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: The piece you choose. Style guides give mood, light, colour, backgrounds, angles and do and don't pairs in words. Set-up plans give a kit list within budget, a light layout with distances, exact phone or camera settings and test shots. Edit recipes give a table of slider values."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Sizes, specs, values and facts are right and consistent, so a maker can build it without guessing. For this job: The draft includes test shots or a before-and-after checklist with at least 4 checks, such as colour matches the product in hand, white backgrounds are white, no blown highlights and edges are sharp."
+      },
+      {
+        "criterion": "Fits the brand system",
+        "weight": 20,
+        "test": "It works inside the client's captured brand: fonts, colour proportions, imagery and voice from context/brand-dna.json, or each change is deliberate and stated."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Photo terms such as white balance or diffuser are explained once; steps are numbered and one action each; no hype words."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template. For this job: Kit lists start with the gear named in the brief and stay within the budget, with new items given as types rather than required brands and priced as [check price] if no budget is given; marketplace image rules are stated as general guidance with a note to check the current rules; no claims…"
+      },
+      {
+        "criterion": "The draft delivers the piece chosen, for the stated products and channels",
+        "weight": 10,
+        "test": "The draft's sections match the piece chosen in the brief; it names the products and every channel from the brief; a style guide includes at least 4 do and don't pairs."
+      },
+      {
+        "criterion": "Settings and sizes are given as exact numbers",
+        "weight": 10,
+        "test": "Set-up plans give phone or camera settings as values (such as ISO, shutter speed, white balance in kelvin or a named preset) and light positions with distances; edit recipes give a table of slider names and values in order; spec sheets give pixel sizes, ratios, file type and a file naming pattern."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "id": "illustration-and-artwork-brief",
@@ -2711,6 +3635,91 @@
         "note": "YunoJuno rate data: freelance art directors average $67 an hour (about £409 a day).",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/art-director"
       }
-    ]
+    ],
+    "family": "other",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "brand_guide",
+        "label": "Brand guide, if you have one",
+        "required": false,
+        "how": "Fonts, colours, logo rules and tone. Captured facts win where the guide is out of date; say where they differ."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "The style is described in words with no living artist's name, existing character or other brand's art; subjects, text and characters come from the brief; nothing assumes rights the buyer has not stated."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: The goal, audience and style in words; a numbered list of pieces with subject, scene or pose, composition, colours in hex, sizes and file formats; character sheets with views, expressions and poses; spread-by-spread notes for books; rights questions to agree; rounds from sketch to final; and checks for judging each round."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Sizes, specs, values and facts are right and consistent, so a maker can build it without guessing."
+      },
+      {
+        "criterion": "Fits the brand system",
+        "weight": 20,
+        "test": "It works inside the client's captured brand: fonts, colour proportions, imagery and voice from context/brand-dna.json, or each change is deliberate and stated."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: The draft lists rights questions to agree (where it is used, for how long, edits, exclusivity, source files and credit), names sketch, colour and final rounds, and gives at least 4 checks for judging each round."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "Every piece is listed and numbered",
+        "weight": 10,
+        "test": "The number of pieces matches the brief; each piece has a number, subject and where it is used; picture book briefs cover every spread in the brief."
+      },
+      {
+        "criterion": "An illustrator can quote and draw from it",
+        "weight": 10,
+        "test": "Each piece has subject, scene or pose, composition, colours in hex, final size or ratio and file formats (such as SVG, or PNG at 300 dpi); a character sheet lists turnaround views and at least 4 expressions and 4 poses; icon briefs give the grid, stroke weight and corner rules."
+      }
+    ],
+    "mode_default": "extend"
   }
 ]

@@ -291,3 +291,25 @@ Re-check at each refresh:
 - **Market rules:** SEC [22] and FCA [23] pages.
 - **Health signposting:** the NHS page was due for review in May 2026 [24].
 - **Plain language guides:** Digital.gov is reorganising old PlainLanguage.gov material [2][3].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the brief has no true stories, ask for them before drafting, because a speech without specifics turns into general praise nobody remembers. (§5)
+- `decision_rule` Cut any joke that could embarrass anyone in the room, including children and older relatives, because one bad joke is what the room remembers. (§5)
+- `decision_rule` When a draft runs over time at the speaker's own pace, cut a story or a point rather than asking them to speak faster. (§5)
+- `check` Can you say the point in one sentence, and does the speech land it at the end? (§7)
+- `never_do` No stock phrases ("without further ado", "it goes without saying") unless the speaker really talks that way. (§8)
+- `taste_reference` The tone is the speaker's, not the writer's. (§8)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Stock openers.** "In today's fast-paced world" or another formula opening that could start any speech. Open with a true story from the brief.
+- **Hype words.** "Game-changer", "unlock" or "elevate" in toasts, pitches and remarks. Use the speaker's own words.
+- **Rule-of-three everywhere.** Every point and sentence built as a list of three. Keep a triple only where it lands the point; one in every paragraph sounds like a template.
+- **Praise anyone could give.** "Kind, generous and always there for us", which fits anyone. It is the speech version of benefits any competitor could claim; use specifics from true stories (section 5).
+- **Formula closings.** A closing line that could end any speech. Land the one-sentence point (section 7) in the speaker's words.
+- **Fake urgency in pitches.** "There has never been a better time" or "the window is closing" without proof. State the real reason for now, or leave it out.

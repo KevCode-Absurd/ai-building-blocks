@@ -78,7 +78,7 @@ Keep, cut or retest, by the rule written in step 1. If the result sits inside th
 
 ## Example of good output (short)
 
-*Made-up business: Halden Outdoor, selling camping gear in six regions. Figures are invented for illustration.*
+*Illustrative structure, not a real business: an outdoor shop selling camping gear in six regions. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Test:** Google brand search paused in regions B, D and F for 4 weeks (randomly drawn); A, C and E kept running.
 >

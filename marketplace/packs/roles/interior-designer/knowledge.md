@@ -223,3 +223,10 @@ Before I hand anything over, I check:
 | Lead paint and indoor air guidance | EPA [15][16] |
 | SketchUp and floor plan app plans and features | SketchUp help and pricing [22][23][24][25], Floorplanner [26], RoomSketcher [27] |
 | Asbestos duty guidance | HSE [14] |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When a room feels dark, I add light layers (general, task, accent) and lighter finishes before painting everything white. (§5)
+- `decision_rule` On a tight budget, I reuse, move and repaint before buying, and spend on what customers touch and see first. (§5)

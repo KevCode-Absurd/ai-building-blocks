@@ -92,7 +92,7 @@ A crash at any step leaves either the old file or the new one, never half of eac
 
 ## Example of good output (short)
 
-*Made-up studio for illustration: "Pebblewick", Unity 2022.3 and Unity 6 builds, PC and Android.*
+*Illustrative structure, not a real business: a game studio shipping Unity 2022.3 and Unity 6 builds on PC and Android. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Version | Change | Upgrade step |
 > |---|---|---|

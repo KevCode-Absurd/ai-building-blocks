@@ -210,3 +210,25 @@ Re-check at each refresh:
 - **Search guidance for YMYL content:** Google's people-first content page [2].
 - **Buyer behaviour:** the Legal Services Consumer Panel tracker (each July) [3].
 - **Tools and prices:** practice, intake and scheduling tools change plans often; check each vendor's pricing page before advising.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the firm cannot say who it helps and with what in one sentence, fix that before writing any page, because every later piece depends on it. (§5)
+- `decision_rule` When enquiries arrive and wait, fix response speed before buying more traffic, because a slow reply wastes the enquiries you already have. (§5)
+- `taste_reference` Start each piece with the client's situation in their words. (§7)
+- `check` Would a stressed first-time client understand it on one read? (§7)
+- `never_do` No hype and no fear tactics. (§8)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Template firm site.** Centred hero, three benefit cards, "How it works in 3 steps", testimonials, FAQ and a final CTA, for every firm. Start from the client's situation in their words (section 7) and the order a buyer needs: problem, fees, people, next step.
+- **Generic stock-style images.** Handshakes, gavels, skylines and smiling teams. Use real photos of the real people, with permission.
+- **"Trusted by" rows with no logos.** Client or award logo strips with placeholders. Use only logos the firm may show.
+- **Stock hype words.** "Unlock your potential", "seamless service", "game-changer". This kit's tone is calm, plain and exact (section 8).
+- **Benefits any competitor could claim.** "Client-focused", "experienced team", "tailored solutions". Say who the firm helps and with what, in one sentence (section 5).
+- **Headline formula clichés.** "Your trusted partner in..." Lead with the client's problem and the firm's specific service.
+- **Fake urgency.** "Act now" or deadline pressure that is not real. It sits close to the fear tactics this kit rules out (section 8); use real dates only.

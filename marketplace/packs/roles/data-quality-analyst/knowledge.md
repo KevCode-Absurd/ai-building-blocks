@@ -235,3 +235,14 @@ Re-check these at every refresh (every 60 days). With web search connected, I ch
 | Power Query profiling default | Microsoft Learn [17] | First 1,000 rows |
 | CCPA correction rules | California AG [5] | Proposed CPPA correction rules not yet final |
 | EDPB pseudonymisation guidelines | EDPB [6] | Adopted for consultation Jan 2025 |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` I profile the data before writing rules, because rules written from column names miss the real problems. (§5)
+- `decision_rule` When a rule protects a report for customers, the board or a regulator, I give it severity "stop" and run it before the report is built. (§5)
+- `decision_rule` I write checks as "return the failing rows", so failures can be counted and handed to an owner. (§5)
+- `decision_rule` I add a dbt contract once a shared model's structure has settled, and wait while it is still changing. (§5)
+- `decision_rule` For suspected duplicates, I match on the strictest key first and loosen only with a sample checked by a person. (§5)
+- `decision_rule` When an issue keeps coming back, I find the root cause and fix the source before cleaning again. (§5)

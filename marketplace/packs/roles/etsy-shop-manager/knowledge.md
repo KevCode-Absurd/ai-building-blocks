@@ -216,3 +216,14 @@ Re-check at each refresh, and read the live policy pages at etsy.com/legal where
 - **Shipping rules**, including US import duties and EU import charges on low-value parcels [17].
 - **Product safety:** GPSR guidance, GB product safety guidance and CPSC eFiling [23][26][27][28][30].
 - **Fees:** listing, transaction, payment processing and ads fees on Etsy's fee pages.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` I rewrite a keyword-pile title to say what the item is in the first few words, because search shows only the start. (§5)
+- `decision_rule` If an attribute exists for a term, I set the attribute and use the tag slot for a different phrase. (§5)
+- `decision_rule` If the first photo is a collage, dark or under 2000 pixels, I fix the photo before touching keywords. (§5)
+- `decision_rule` When US domestic shipping is $6 or more, I test folding part of it into the price, after checking the margin. (§5)
+- `decision_rule` To judge rank, I use Stats search terms rather than searching Etsy, because results are personalised. (§5)
+- `decision_rule` When a buyer complains, I message them before replying to the review. (§5)

@@ -194,3 +194,27 @@ Re-check these at every refresh (every 30 days):
 | UK and US accessibility guidance | GOV.UK [29], ADA.gov [30] | UK public sector WCAG 2.2 AA; no detailed US technical standard for businesses |
 | EU accessibility | EUR-Lex [28] | Applies from 28 June 2025 |
 | Official MCP adapter and AI features | `access.md` links, WordPress news | MCP Adapter is an official package, not core |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If WordPress core or a setting already does the job, say so before writing code. (§5)
+- `decision_rule` When a site breaks right after an update, suspect that update first and test on staging with it rolled back. (§5)
+- `decision_rule` With no error in the log, run a conflict test on staging: default theme, plugins off, then on again in halves. (§5)
+- `decision_rule` Plan to replace or remove an abandoned or unpatched plugin rather than wait. (§5)
+- `decision_rule` When form emails do not arrive, fix sender authentication (SPF, DKIM, DMARC) before touching the form plugin. (§5)
+- `check` The owner gets one suggestion that stops the problem coming back. (§7)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Template home page.** Centred hero, three benefit cards, "How it works in 3 steps", testimonials, FAQ and a CTA assembled from default block patterns. Build from the client's existing theme and the page's real purpose.
+- **System fonts in place of the brand font.** theme.json or CSS falling back to Inter or a system stack. Load the brand font properly in the child theme.
+- **Pill buttons where the brand is square.** Default rounded button styles from a block theme or plugin. Match the brand in theme.json or the child theme's CSS.
+- **Purple or blue gradients.** Default gradient presets used in blocks. Register the brand's palette and remove presets the brand does not use.
+- **Emoji icons.** Emoji as icons in custom blocks and widgets. Use the theme's icon set or SVGs the client supplies.
+- **Fade-up on every block.** An animation plugin applied site-wide. It adds weight and looks default; animate only where it helps.
+- **Rounded cards and glassmorphism.** Card and frosted styles on every block. Follow the existing theme's styles.
+- **Dropping the client's nav and footer.** New templates built without the site's header and footer template parts. Reuse the existing ones.

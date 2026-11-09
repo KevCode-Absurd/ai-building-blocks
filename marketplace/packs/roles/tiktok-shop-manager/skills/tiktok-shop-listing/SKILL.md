@@ -97,7 +97,7 @@ Then a summary table for upload: product, title, price, variants, status (ready,
 
 ## Example of good output
 
-*Fernleaf Skin (a made-up business).*
+*Illustrative structure, not a real business: a skincare brand selling a hand cream. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Title:** Hand Cream, Oat and Shea, 75 ml Tube, Fragrance Free
 

@@ -60,7 +60,7 @@ Most small teams do not lack ideas; they lack a short list everyone understands.
 
 ## Example of good output (short)
 
-*Ledgerly is a made-up business used only to show the format: invoicing software with two developers for 12 weeks and 40 backlog items. Goals: raise trial-to-paid conversion; cut "how do I" support tickets.*
+*Illustrative structure, not a real business: invoicing software with two developers for 12 weeks and 40 backlog items. Goals: raise trial-to-paid conversion; cut "how do I" support tickets. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Item | Bet | Value | Effort | Risk | Call |
 |---|---|---|---|---|---|

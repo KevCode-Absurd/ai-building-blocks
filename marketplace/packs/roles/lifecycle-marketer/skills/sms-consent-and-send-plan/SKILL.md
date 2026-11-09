@@ -64,11 +64,11 @@ This is general guidance, not legal advice. For anything that turns on what the 
 
 ## Example of good output (short)
 
-*Copperfin Pet Supply is a made-up business used only to show the format: a Shopify store selling dog treats, with customers in the US and UK. All details are invented.*
+*Illustrative structure, not a real business: a Shopify store selling dog treats, with customers in the US and UK. Copy the shape, never the content: every fact comes from the client's own context.*
 
-**Consent map (checkout box):** "Send me offers by email and text" in one pre-ticked box. **Fix:** split into two unticked boxes. SMS wording: "Text me Copperfin offers and reorder reminders, up to 6 a month. Consent isn't required to buy. Msg and data rates may apply. Reply STOP to stop, HELP for help. Terms and privacy: [links]." UK customers get the same box; the soft opt-in is not used for texts.
+**Consent map (checkout box):** "Send me offers by email and text" in one pre-ticked box. **Fix:** split into two unticked boxes. SMS wording: "Text me [Business] offers and reorder reminders, up to 6 a month. Consent isn't required to buy. Msg and data rates may apply. Reply STOP to stop, HELP for help. Terms and privacy: [links]." UK customers get the same box; the soft opt-in is not used for texts.
 
-**First text (US):** "Copperfin Pet Supply: you're in for treat reminders and offers, up to 6 msgs a month. Msg and data rates may apply. Reply HELP for help, STOP to stop." (150 characters)
+**First text (US):** "[Business]: you're in for treat reminders and offers, up to 6 msgs a month. Msg and data rates may apply. Reply HELP for help, STOP to stop." (130 characters plus the brand name)
 
 **Hours and caps:** US: 10 a.m. to 8 p.m. recipient time, state-level hours on; cap of 3 promotional texts per 24 hours for all US numbers (simpler than per state). UK: 10 a.m. to 8 p.m., no Sundays.
 

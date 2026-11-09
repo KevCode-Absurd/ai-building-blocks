@@ -70,7 +70,7 @@ Opinions about copy are cheap. This skill turns a review into ranked, fixable pr
 
 ## Example of good output (short)
 
-*Marlow Street Dog Grooming is a made-up business used only to show the format: a grooming salon with an online booking page. Numbers are invented for this example: 2,000 visits a month, 4% book.*
+*Illustrative structure, not a real business: a dog grooming salon with an online booking page. Figures only show the shape: 2,000 visits a month, 4% book.*
 
 **Five-second read:** "Some kind of pet business; I'm not sure if they groom, sit or sell food." Headline is "Pampered Pets, Happy Owners."
 
@@ -78,7 +78,7 @@ Opinions about copy are cheap. This skill turns a review into ranked, fixable pr
 
 1. **First screen does not say what it is** (check 1 scored 0).
    Before: *Pampered Pets, Happy Owners*
-   After: **Dog grooming in Marlow Street, booked online in 2 minutes**
+   After: **Dog grooming on [street], booked online in 2 minutes**
    Subhead: Full groom, bath and tidy, or nail trim. Same groomer each visit.
    Why: the reader needs to know it is grooming, where, and how easy booking is.
 2. **Top doubt unanswered** (check 7 scored 0). Reviews say anxious dogs are the main worry. Add beside the button: "Nervous dog? Book a free 10-minute meet first."

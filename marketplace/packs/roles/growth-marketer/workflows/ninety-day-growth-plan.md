@@ -4,7 +4,7 @@
 
 **Cadence:** once per quarter, with the weekly growth review running inside it. About two weeks from intake to an approved plan.
 
-**Access:** steps are marked L1 (read), L2 (read and draft) or L3 (read, write and publish within the client's limits). Until the client grants more, everything runs at L1.
+**Access:** steps are marked L1, L2 or L3 as set out in access.md. Until more is granted, everything runs at L1.
 
 ## Steps
 

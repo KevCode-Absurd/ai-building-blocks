@@ -235,7 +235,1243 @@
         "note": "Copywriting rate guide lists brochure or flyer copy at $300 to $1,500 a project, varying with page count and design work.",
         "url": "https://talo.com/costs/copywriting-rates"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No price, date, capacity, ingredient, award, credential, review, quote, client name or result appears unless it is in the brief. Any invented item fails this criterion."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: Copy written to the format and space you give, panel by panel, side by side or item by item: headline, body, proof, offer and call to action, with image, QR code or reply-tracking notes. Bios come in three lengths. Two headline options and a list of facts to confirm."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Most sentences are under 20 words, there are no empty phrases such as 'world-class' or 'passionate about excellence', and the tone matches any voice notes or sample in the brief."
+      },
+      {
+        "criterion": "Every piece and every item asked for is there, laid out the way the format works",
+        "weight": 6,
+        "test": "The draft has the number of pieces in the brief, labels each panel, side, section or item, and covers every dish, service, room, project or person the brief lists. Missing details are shown as [placeholders], not dropped."
+      },
+      {
+        "criterion": "The copy fits the size and limits given",
+        "weight": 6,
+        "test": "Where the brief gives a word count, character limit, panel count or size, each part stays within it and counts are shown for limited fields. Bios come in about 50, 150 and 400 words unless the brief asks for other lengths."
+      }
+    ],
+    "mode_default": "extend"
+  },
+  {
+    "id": "packaging-copy",
+    "title": "Packaging copy: pack panels and inserts",
+    "summary": "Front, back and side panel copy, insert cards and sticker lines for one product, fitted to the pack and the required label details you give.",
+    "area": "design",
+    "deliverable": "Copy panel by panel (front, back, sides, inserts) with a hierarchy note for each panel, the required label details placed where you list them, character or space counts, two front-of-pack options and a list of facts and claims to confirm.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "piece_type",
+        "label": "Which piece do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Front and back pack copy",
+          "Unboxing insert cards and sticker lines",
+          "Full pack: panels and inserts"
+        ]
+      },
+      {
+        "id": "piece_count",
+        "label": "How many pieces?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one, up to six per job. Each extra flyer, listing, story or product pack is one more. A menu or list of up to 30 items is one piece.",
+        "max": 6
+      },
+      {
+        "id": "size_limits",
+        "label": "Size, panels or character limits",
+        "type": "text",
+        "required": false,
+        "help": "For example: tri-fold, 6 panels; A5 flyer; Instagram bio 150 characters; 250 words.",
+        "max": 300
+      },
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "help": "What you sell, who buys it and where you work.",
+        "max": 2000
+      },
+      {
+        "id": "facts",
+        "label": "The facts, items and prices to use",
+        "type": "longtext",
+        "required": true,
+        "help": "Dishes, services, rooms, products, dates, prices, contact details. Only these will be used.",
+        "max": 8000
+      },
+      {
+        "id": "audience",
+        "label": "Who will read it?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "proof",
+        "label": "Quotes, reviews or awards we may use",
+        "type": "list",
+        "required": false,
+        "help": "Only these will be quoted.",
+        "max": 15
+      },
+      {
+        "id": "current_copy",
+        "label": "Your current version",
+        "type": "longtext",
+        "required": false,
+        "max": 6000
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "piece_complete",
+        "text": "Every piece and every item asked for is there, laid out the way the format works.",
+        "weight": 5,
+        "pass_rule": "The draft has the number of pieces in the brief, labels each panel, side, section or item, and covers every dish, service, room, project or person the brief lists. Missing details are shown as [placeholders], not dropped.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Nothing is made up: every fact, price, name, quote or result comes from the brief.",
+        "weight": 5,
+        "pass_rule": "No price, date, capacity, ingredient, award, credential, review, quote, client name or result appears unless it is in the brief. Any invented item fails this criterion.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "fits_the_space",
+        "text": "The copy fits the size and limits given.",
+        "weight": 4,
+        "pass_rule": "Where the brief gives a word count, character limit, panel count or size, each part stays within it and counts are shown for limited fields. Bios come in about 50, 150 and 400 words unless the brief asks for other lengths.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "claims_and_required",
+        "text": "Required label details are placed and no claim goes beyond what the brief proves.",
+        "weight": 5,
+        "pass_rule": "Every required detail the brief lists (name, net quantity, ingredients or materials, warnings, contact) has a panel and position; no health, eco or safety claim appears unless the brief gives its proof; claims to confirm are listed.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "plain_and_in_voice",
+        "text": "Short, plain sentences in the buyer's voice, with no filler.",
+        "weight": 3,
+        "pass_rule": "Most sentences are under 20 words, there are no empty phrases such as 'world-class' or 'passionate about excellence', and the tone matches any voice notes or sample in the brief.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 69,
+      "min_usd": 39,
+      "max_usd": 299,
+      "size": {
+        "field": "piece_count",
+        "unit": "piece",
+        "included": 1,
+        "per_unit_usd": 35
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a packaging copywriter. Write the pack copy below panel by panel: front, back, sides and inserts. Put the required label details where I list them, keep to the space and show counts, and give two front-of-pack options. Use only my facts and claims and list any claim I need to confirm. You do not sign off legal labelling.",
+    "not_for": [
+      "Design, layout or print-ready files",
+      "Invented reviews, awards, credentials, quotes or prices",
+      "Health, eco, safety or legal claims you cannot prove, or medical, legal or financial advice",
+      "Legal sign-off on food labels, allergens or packaging rules",
+      "Long brochures over 8 pages or whole websites (see the website page copy job)",
+      "Ads or emails (see the paid ads copy set and email jobs)",
+      "Posting to your profiles or listing sites, or logging in to them",
+      "Passwords, logins, card numbers or bank details in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "A small-batch hot sauce maker needs front and back label copy for a 150 ml bottle: name, heat level, story line, ingredients and allergens as given, and a QR code to recipes.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "A candle maker wants an unboxing insert card and two sticker lines for gift orders, in a warm, plain voice.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "A dog treat brand needs a 100 g pouch: front panel, back panel with feeding guide and ingredients from our spec, and a side panel story. Front text must fit 40 x 60 mm.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "A skincare startup wants carton copy for a 50 ml face cream with claims only from our test report, plus an insert with how to use it.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "packaging copy",
+      "label copy",
+      "pack copy",
+      "back of pack",
+      "insert card",
+      "product label text"
+    ],
+    "demand_sources": [
+      {
+        "note": "Talo's brochure cost guide says professional writers charge $200 to $500 to write the copy for a flyer or brochure, since most firms write their own.",
+        "url": "https://talo.com/costs/brochure-design-costs"
+      },
+      {
+        "note": "Copywriting rate guide lists brochure or flyer copy at $300 to $1,500 a project, varying with page count and design work.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No price, date, capacity, ingredient, award, credential, review, quote, client name or result appears unless it is in the brief. Any invented item fails this criterion."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: Copy panel by panel (front, back, sides, inserts) with a hierarchy note for each panel, the required label details placed where you list them, character or space counts, two front-of-pack options and a list of facts and claims to confirm."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts. For this job: Every required detail the brief lists (name, net quantity, ingredients or materials, warnings, contact) has a panel and position; no health, eco or safety claim appears unless the brief gives its proof; claims to confirm are listed."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Most sentences are under 20 words, there are no empty phrases such as 'world-class' or 'passionate about excellence', and the tone matches any voice notes or sample in the brief."
+      },
+      {
+        "criterion": "Every piece and every item asked for is there, laid out the way the format works",
+        "weight": 6,
+        "test": "The draft has the number of pieces in the brief, labels each panel, side, section or item, and covers every dish, service, room, project or person the brief lists. Missing details are shown as [placeholders], not dropped."
+      },
+      {
+        "criterion": "The copy fits the size and limits given",
+        "weight": 6,
+        "test": "Where the brief gives a word count, character limit, panel count or size, each part stays within it and counts are shown for limited fields. Bios come in about 50, 150 and 400 words unless the brief asks for other lengths."
+      }
+    ],
+    "mode_default": "extend"
+  },
+  {
+    "id": "bio-and-profile-copy",
+    "title": "Bio, profile or one-sheet copy",
+    "summary": "Bios in three lengths, LinkedIn or social profiles, speaker, artist or podcast-guest one-sheets, press kit text and founder stories, in your own voice.",
+    "area": "content",
+    "deliverable": "The bio or profile in the lengths and places you need (about 50, 150 and 400 words by default), first and third person where useful, a one-sheet laid out section by section, profile fields within their character limits with counts, two headline or tagline options and a list of facts to confirm.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "piece_type",
+        "label": "Which piece do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Bio in three lengths",
+          "Social media or LinkedIn profile",
+          "Speaker, artist or podcast guest one-sheet",
+          "Press kit text",
+          "Founder or brand story"
+        ]
+      },
+      {
+        "id": "piece_count",
+        "label": "How many pieces?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one, up to six per job. Each extra flyer, listing, story or product pack is one more. A menu or list of up to 30 items is one piece.",
+        "max": 6
+      },
+      {
+        "id": "size_limits",
+        "label": "Size, panels or character limits",
+        "type": "text",
+        "required": false,
+        "help": "For example: tri-fold, 6 panels; A5 flyer; Instagram bio 150 characters; 250 words.",
+        "max": 300
+      },
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "help": "What you sell, who buys it and where you work.",
+        "max": 2000
+      },
+      {
+        "id": "facts",
+        "label": "The facts, items and prices to use",
+        "type": "longtext",
+        "required": true,
+        "help": "Dishes, services, rooms, products, dates, prices, contact details. Only these will be used.",
+        "max": 8000
+      },
+      {
+        "id": "audience",
+        "label": "Who will read it?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "goal",
+        "label": "What should readers do next?",
+        "type": "text",
+        "required": false,
+        "help": "Call, book, visit, order, scan the QR code.",
+        "max": 300
+      },
+      {
+        "id": "proof",
+        "label": "Quotes, reviews or awards we may use",
+        "type": "list",
+        "required": false,
+        "help": "Only these will be quoted.",
+        "max": 15
+      },
+      {
+        "id": "current_copy",
+        "label": "Your current version",
+        "type": "longtext",
+        "required": false,
+        "max": 6000
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "piece_complete",
+        "text": "Every piece and every item asked for is there, laid out the way the format works.",
+        "weight": 5,
+        "pass_rule": "The draft has the number of pieces in the brief, labels each panel, side, section or item, and covers every dish, service, room, project or person the brief lists. Missing details are shown as [placeholders], not dropped.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Nothing is made up: every fact, price, name, quote or result comes from the brief.",
+        "weight": 5,
+        "pass_rule": "No price, date, capacity, ingredient, award, credential, review, quote, client name or result appears unless it is in the brief. Any invented item fails this criterion.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "fits_the_space",
+        "text": "The copy fits the size and limits given.",
+        "weight": 4,
+        "pass_rule": "Where the brief gives a word count, character limit, panel count or size, each part stays within it and counts are shown for limited fields. Bios come in about 50, 150 and 400 words unless the brief asks for other lengths.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "sounds_like_them",
+        "text": "It sounds like the person or brand in the samples, not a generic bio.",
+        "weight": 4,
+        "pass_rule": "Word choice and sentence rhythm follow the voice sample or current copy; at least two details are specific to this person (a named project, place, credential or story from the brief) rather than adjectives any peer could claim.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_and_in_voice",
+        "text": "Short, plain sentences in the buyer's voice, with no filler.",
+        "weight": 3,
+        "pass_rule": "Most sentences are under 20 words, there are no empty phrases such as 'world-class' or 'passionate about excellence', and the tone matches any voice notes or sample in the brief.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 69,
+      "min_usd": 39,
+      "max_usd": 299,
+      "size": {
+        "field": "piece_count",
+        "unit": "piece",
+        "included": 1,
+        "per_unit_usd": 35
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a copywriter who writes bios and profiles. Write the bio, profile or one-sheet below. For bios, give about 50, 150 and 400 words, first and third person if useful. Keep profile fields within their limits and show counts. Lay out one-sheets section by section. Use only my facts, credits and quotes, follow my voice sample, and list facts to confirm.",
+    "not_for": [
+      "Design, layout or print-ready files",
+      "Invented reviews, awards, credentials, quotes or prices",
+      "Health, eco, safety or legal claims you cannot prove, or medical, legal or financial advice",
+      "Legal sign-off on food labels, allergens or packaging rules",
+      "Long brochures over 8 pages or whole websites (see the website page copy job)",
+      "Ads or emails (see the paid ads copy set and email jobs)",
+      "Posting to your profiles or listing sites, or logging in to them",
+      "Passwords, logins, card numbers or bank details in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "A wedding florist wants a bio in three lengths for her website, directories and talks, and an Instagram bio under 150 characters. Her own notes and a sample post are pasted.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "A jazz trio needs an electronic press kit text and artist bios in three lengths for festival bookers. Credits and press quotes listed.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "A finance coach wants a LinkedIn profile rewrite: headline, about section and three featured items. Current profile pasted; she wants to sound less corporate.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "A food scientist who speaks at trade events needs a speaker one-sheet: topics, short bio, past talks and how to book. Only the talks listed.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "bio",
+      "professional bio",
+      "linkedin profile",
+      "speaker one-sheet",
+      "artist bio",
+      "press kit",
+      "founder story",
+      "instagram bio"
+    ],
+    "demand_sources": [
+      {
+        "note": "Talo's brochure cost guide says professional writers charge $200 to $500 to write the copy for a flyer or brochure, since most firms write their own.",
+        "url": "https://talo.com/costs/brochure-design-costs"
+      },
+      {
+        "note": "Copywriting rate guide lists brochure or flyer copy at $300 to $1,500 a project, varying with page count and design work.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No price, date, capacity, ingredient, award, credential, review, quote, client name or result appears unless it is in the brief. Any invented item fails this criterion."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice. For this job: Word choice and sentence rhythm follow the voice sample or current copy; at least two details are specific to this person (a named project, place, credential or story from the brief) rather than adjectives any peer could claim."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: The bio or profile in the lengths and places you need (about 50, 150 and 400 words by default), first and third person where useful, a one-sheet laid out section by section, profile fields within their character limits with counts, two headline or tagline options and a list of facts to confirm."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Most sentences are under 20 words, there are no empty phrases such as 'world-class' or 'passionate about excellence', and the tone matches any voice notes or sample in the brief."
+      },
+      {
+        "criterion": "Every piece and every item asked for is there, laid out the way the format works",
+        "weight": 6,
+        "test": "The draft has the number of pieces in the brief, labels each panel, side, section or item, and covers every dish, service, room, project or person the brief lists. Missing details are shown as [placeholders], not dropped."
+      },
+      {
+        "criterion": "The copy fits the size and limits given",
+        "weight": 6,
+        "test": "Where the brief gives a word count, character limit, panel count or size, each part stays within it and counts are shown for limited fields. Bios come in about 50, 150 and 400 words unless the brief asks for other lengths."
+      }
+    ],
+    "mode_default": "extend"
+  },
+  {
+    "id": "sell-sheet-and-spec-sheet",
+    "title": "Sell sheet, spec sheet or line card",
+    "summary": "One-page sales sheets, trade sell sheets, product spec sheets and line cards for buyers, distributors and stockists.",
+    "area": "sales",
+    "deliverable": "The sheet laid out section by section: who it is for, the offer, key specs or ranges in tables, proof, ordering or trade terms as given and a call to action, with two headline options, layout notes and a list of facts and specs to confirm.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "piece_type",
+        "label": "Which piece do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "One-pager or sell sheet",
+          "Trade or distributor sell sheet",
+          "Product spec sheet",
+          "Line card for a product range"
+        ]
+      },
+      {
+        "id": "piece_count",
+        "label": "How many pieces?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one, up to six per job. Each extra flyer, listing, story or product pack is one more. A menu or list of up to 30 items is one piece.",
+        "max": 6
+      },
+      {
+        "id": "size_limits",
+        "label": "Size, panels or character limits",
+        "type": "text",
+        "required": false,
+        "help": "For example: tri-fold, 6 panels; A5 flyer; Instagram bio 150 characters; 250 words.",
+        "max": 300
+      },
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "help": "What you sell, who buys it and where you work.",
+        "max": 2000
+      },
+      {
+        "id": "facts",
+        "label": "The facts, items and prices to use",
+        "type": "longtext",
+        "required": true,
+        "help": "Dishes, services, rooms, products, dates, prices, contact details. Only these will be used.",
+        "max": 8000
+      },
+      {
+        "id": "audience",
+        "label": "Who will read it?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "goal",
+        "label": "What should readers do next?",
+        "type": "text",
+        "required": false,
+        "help": "Call, book, visit, order, scan the QR code.",
+        "max": 300
+      },
+      {
+        "id": "proof",
+        "label": "Quotes, reviews or awards we may use",
+        "type": "list",
+        "required": false,
+        "help": "Only these will be quoted.",
+        "max": 15
+      },
+      {
+        "id": "current_copy",
+        "label": "Your current version",
+        "type": "longtext",
+        "required": false,
+        "max": 6000
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "piece_complete",
+        "text": "Every piece and every item asked for is there, laid out the way the format works.",
+        "weight": 5,
+        "pass_rule": "The draft has the number of pieces in the brief, labels each panel, side, section or item, and covers every dish, service, room, project or person the brief lists. Missing details are shown as [placeholders], not dropped.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Nothing is made up: every fact, price, name, quote or result comes from the brief.",
+        "weight": 5,
+        "pass_rule": "No price, date, capacity, ingredient, award, credential, review, quote, client name or result appears unless it is in the brief. Any invented item fails this criterion.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "fits_the_space",
+        "text": "The copy fits the size and limits given.",
+        "weight": 4,
+        "pass_rule": "Where the brief gives a word count, character limit, panel count or size, each part stays within it and counts are shown for limited fields. Bios come in about 50, 150 and 400 words unless the brief asks for other lengths.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "buyer_decides",
+        "text": "A trade buyer or prospect can decide from the sheet: what it is, why it sells, specs and how to order.",
+        "weight": 4,
+        "pass_rule": "The sheet states the product and buyer, the main reason to stock or buy in the brief's terms, specs or ranges in a table, and ordering terms or contact exactly as the brief gives them.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_and_in_voice",
+        "text": "Short, plain sentences in the buyer's voice, with no filler.",
+        "weight": 3,
+        "pass_rule": "Most sentences are under 20 words, there are no empty phrases such as 'world-class' or 'passionate about excellence', and the tone matches any voice notes or sample in the brief.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 69,
+      "min_usd": 39,
+      "max_usd": 299,
+      "size": {
+        "field": "piece_count",
+        "unit": "piece",
+        "included": 1,
+        "per_unit_usd": 35
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a sales enablement writer. Write the one-page sheet below, section by section: who it is for, the offer, key specs or ranges in a table, proof, ordering or trade terms and a call to action. Give two headline options and layout notes. Use only my specs, prices, terms and quotes and list anything to confirm.",
+    "not_for": [
+      "Design, layout or print-ready files",
+      "Invented reviews, awards, credentials, quotes or prices",
+      "Health, eco, safety or legal claims you cannot prove, or medical, legal or financial advice",
+      "Legal sign-off on food labels, allergens or packaging rules",
+      "Long brochures over 8 pages or whole websites (see the website page copy job)",
+      "Ads or emails (see the paid ads copy set and email jobs)",
+      "Posting to your profiles or listing sites, or logging in to them",
+      "Passwords, logins, card numbers or bank details in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "A craft gin distillery wants a trade sell sheet for bars and bottle shops: the three gins, serves, case sizes, trade prices as given and how to order.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "A software consultancy wants a one-page sales sheet for its accounting automation service for finance directors.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "A pump manufacturer needs a spec sheet for one pump model: flow rates, materials, dimensions and options from our data table, and a distributor version without prices.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "A ceramics brand wants a line card showing its 24 products by range with codes, sizes and pack quantities for stockists.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "sell sheet",
+      "sales sheet",
+      "one-pager",
+      "spec sheet",
+      "line card",
+      "trade sheet",
+      "distributor sheet"
+    ],
+    "demand_sources": [
+      {
+        "note": "Talo's brochure cost guide says professional writers charge $200 to $500 to write the copy for a flyer or brochure, since most firms write their own.",
+        "url": "https://talo.com/costs/brochure-design-costs"
+      },
+      {
+        "note": "Copywriting rate guide lists brochure or flyer copy at $300 to $1,500 a project, varying with page count and design work.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No price, date, capacity, ingredient, award, credential, review, quote, client name or result appears unless it is in the brief. Any invented item fails this criterion."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: The sheet laid out section by section: who it is for, the offer, key specs or ranges in tables, proof, ordering or trade terms as given and a call to action, with two headline options, layout notes and a list of facts and specs to confirm. Also: The sheet states the product and buyer, the main reason to…"
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Most sentences are under 20 words, there are no empty phrases such as 'world-class' or 'passionate about excellence', and the tone matches any voice notes or sample in the brief."
+      },
+      {
+        "criterion": "Every piece and every item asked for is there, laid out the way the format works",
+        "weight": 6,
+        "test": "The draft has the number of pieces in the brief, labels each panel, side, section or item, and covers every dish, service, room, project or person the brief lists. Missing details are shown as [placeholders], not dropped."
+      },
+      {
+        "criterion": "The copy fits the size and limits given",
+        "weight": 6,
+        "test": "Where the brief gives a word count, character limit, panel count or size, each part stays within it and counts are shown for limited fields. Bios come in about 50, 150 and 400 words unless the brief asks for other lengths."
+      }
+    ],
+    "mode_default": "extend"
+  },
+  {
+    "id": "print-marketing-copy",
+    "title": "Print marketing copy: brochure, flyer, mailer or signs",
+    "summary": "Copy for a brochure, flyer, poster, direct mail postcard or letter, shop signs or vehicle livery, fitted to the format and space you give.",
+    "area": "content",
+    "deliverable": "Copy panel by panel or side by side: headline, body, proof, offer and call to action, with image, QR code and reply-tracking notes; reading order for signs and livery; versions for testing where mail goes to several lists; two headline options and a list of facts to confirm.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "piece_type",
+        "label": "Which piece do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Brochure or venue sales pack",
+          "Flyer, poster or direct mail postcard or letter",
+          "Shop signs: window, A-board, shelf and counter",
+          "Van or vehicle livery"
+        ]
+      },
+      {
+        "id": "piece_count",
+        "label": "How many pieces?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one, up to six per job. Each extra flyer, listing, story or product pack is one more. A menu or list of up to 30 items is one piece.",
+        "max": 6
+      },
+      {
+        "id": "size_limits",
+        "label": "Size, panels or character limits",
+        "type": "text",
+        "required": false,
+        "help": "For example: tri-fold, 6 panels; A5 flyer; Instagram bio 150 characters; 250 words.",
+        "max": 300
+      },
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "help": "What you sell, who buys it and where you work.",
+        "max": 2000
+      },
+      {
+        "id": "facts",
+        "label": "The facts, items and prices to use",
+        "type": "longtext",
+        "required": true,
+        "help": "Dishes, services, rooms, products, dates, prices, contact details. Only these will be used.",
+        "max": 8000
+      },
+      {
+        "id": "audience",
+        "label": "Who will read it?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "goal",
+        "label": "What should readers do next?",
+        "type": "text",
+        "required": false,
+        "help": "Call, book, visit, order, scan the QR code.",
+        "max": 300
+      },
+      {
+        "id": "proof",
+        "label": "Quotes, reviews or awards we may use",
+        "type": "list",
+        "required": false,
+        "help": "Only these will be quoted.",
+        "max": 15
+      },
+      {
+        "id": "current_copy",
+        "label": "Your current version",
+        "type": "longtext",
+        "required": false,
+        "max": 6000
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "piece_complete",
+        "text": "Every piece and every item asked for is there, laid out the way the format works.",
+        "weight": 5,
+        "pass_rule": "The draft has the number of pieces in the brief, labels each panel, side, section or item, and covers every dish, service, room, project or person the brief lists. Missing details are shown as [placeholders], not dropped.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Nothing is made up: every fact, price, name, quote or result comes from the brief.",
+        "weight": 5,
+        "pass_rule": "No price, date, capacity, ingredient, award, credential, review, quote, client name or result appears unless it is in the brief. Any invented item fails this criterion.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "fits_the_space",
+        "text": "The copy fits the size and limits given.",
+        "weight": 4,
+        "pass_rule": "Where the brief gives a word count, character limit, panel count or size, each part stays within it and counts are shown for limited fields. Bios come in about 50, 150 and 400 words unless the brief asks for other lengths.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "read_in_seconds",
+        "text": "The key message and next step land at the distance and speed people meet the piece.",
+        "weight": 4,
+        "pass_rule": "Signs and livery lead with the name, service and one contact in that order and few words; flyers and mailers put the offer and call to action in the headline area; each mailer version has a way to track replies.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_and_in_voice",
+        "text": "Short, plain sentences in the buyer's voice, with no filler.",
+        "weight": 3,
+        "pass_rule": "Most sentences are under 20 words, there are no empty phrases such as 'world-class' or 'passionate about excellence', and the tone matches any voice notes or sample in the brief.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 69,
+      "min_usd": 39,
+      "max_usd": 299,
+      "size": {
+        "field": "piece_count",
+        "unit": "piece",
+        "included": 1,
+        "per_unit_usd": 35
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a print copywriter. Write the brochure, flyer, mailer, signs or livery below, panel by panel or side by side: headline, body, proof, offer and call to action, with image and QR code notes. For signs and vans, keep it to what people read in seconds: name, service, one contact. Give two headline options. Use only my facts and offers; list anything to confirm.",
+    "not_for": [
+      "Design, layout or print-ready files",
+      "Invented reviews, awards, credentials, quotes or prices",
+      "Health, eco, safety or legal claims you cannot prove, or medical, legal or financial advice",
+      "Legal sign-off on food labels, allergens or packaging rules",
+      "Long brochures over 8 pages or whole websites (see the website page copy job)",
+      "Ads or emails (see the paid ads copy set and email jobs)",
+      "Posting to your profiles or listing sites, or logging in to them",
+      "Passwords, logins, card numbers or bank details in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "A plumbing firm needs van livery copy for two vans: name, the three services we do most, phone and web address, readable from 10 metres.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "A community theatre wants an A5 flyer for its spring show with dates, prices and the booking QR code.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "A wedding venue wants a 6-panel tri-fold brochure with its three packages, the rooms and capacities, and how to book a viewing. Facts and prices pasted.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "A window cleaning company wants a direct mail postcard in three versions for three postcodes, each with its own tracking code and the same intro offer.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "brochure copy",
+      "flyer copy",
+      "direct mail",
+      "postcard copy",
+      "shop signage",
+      "van livery",
+      "poster copy"
+    ],
+    "demand_sources": [
+      {
+        "note": "Talo's brochure cost guide says professional writers charge $200 to $500 to write the copy for a flyer or brochure, since most firms write their own.",
+        "url": "https://talo.com/costs/brochure-design-costs"
+      },
+      {
+        "note": "Copywriting rate guide lists brochure or flyer copy at $300 to $1,500 a project, varying with page count and design work.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No price, date, capacity, ingredient, award, credential, review, quote, client name or result appears unless it is in the brief. Any invented item fails this criterion."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: Copy panel by panel or side by side: headline, body, proof, offer and call to action, with image, QR code and reply-tracking notes; reading order for signs and livery; versions for testing where mail goes to several lists; two headline options and a list of facts to confirm."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Most sentences are under 20 words, there are no empty phrases such as 'world-class' or 'passionate about excellence', and the tone matches any voice notes or sample in the brief."
+      },
+      {
+        "criterion": "Every piece and every item asked for is there, laid out the way the format works",
+        "weight": 6,
+        "test": "The draft has the number of pieces in the brief, labels each panel, side, section or item, and covers every dish, service, room, project or person the brief lists. Missing details are shown as [placeholders], not dropped."
+      },
+      {
+        "criterion": "The copy fits the size and limits given",
+        "weight": 6,
+        "test": "Where the brief gives a word count, character limit, panel count or size, each part stays within it and counts are shown for limited fields. Bios come in about 50, 150 and 400 words unless the brief asks for other lengths."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "periodic-kpi-report",
@@ -460,7 +1696,69 @@
         "note": "Fractional CFO guide: a board or lender package with a one-page KPI dashboard and a short narrative is a standard deliverable in a $2,000 to $5,000 a month retainer.",
         "url": "https://beancount.io/blog/2026/08/12/fractional-cfo-services-small-business-guide"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Each number appears in the brief or is a sum, difference, percentage or ratio of numbers in it. Recompute three changes against last period; they match. No target, benchmark or industry average appears unless the brief gives it.",
+      "Each key number has red, amber or green with the rule used (for example below target) and a one or two sentence comment. Causes come from the brief's notes or are labelled as possible causes to check."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 13,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: A one to two page report: a five-line summary; your key numbers against last period and target; a red, amber or green status and a plain comment on each; what moved and why; top risks; and three actions or decisions. Adds a simple forecast, agenda or board questions if you ask."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today. For this job: There are three actions or decisions (or the number asked for), each naming the number it addresses and an owner or next step, plus up to three risks drawn from the figures or notes."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: Opens with a summary of three to five lines; the main text is under about 900 words excluding tables; terms such as MRR, NPS or occupancy are explained on first use."
+      },
+      {
+        "criterion": "It is the report type asked for, for the period and readers named",
+        "weight": 12,
+        "test": "The title names the period and report type; the report covers the numbers the brief marks as key, each shown with this period, last period and target when given; any extras ticked in the brief are included."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "weighted-scorecard",
@@ -677,7 +1975,72 @@
         "note": "Agency service page selling custom lead scoring models that score leads on fit with the ideal customer profile so sales teams know who to call first.",
         "url": "https://www.teknicks.com/services/systems-technology/lead-scoring/"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: The criteria and weights with reasons; must-haves as pass or fail gates; every option or row scored with the reason and missing data flagged; tiers or a ranked list with cut-off rules and deadlines in date order when you give them; a recommended pick, runner-up and a cheap way to check the…"
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown. For this job: Recompute three weighted totals; they match the weights and scores. Tier cut-offs are written as numbers. The pick and any runner-up are the top scorers, or the reason to differ is stated (for one option, a go or no-go against the cut-off), and a cheap check of the pick is given."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: Lists 4 to 8 criteria, each with a weight and a one-line reason tied to the goal; weights add to 100 percent (or the stated total); must-haves from the brief are pass or fail gates, not weights."
+      },
+      {
+        "criterion": "Every option or row is scored and placed, with a reason",
+        "weight": 8,
+        "test": "The number of scored items equals the number in the brief; each has a score per criterion or a total, a short reason (or a reason code with a key for lists over 30 rows), and a tier or rank; rows missing key data are flagged, not guessed. For scoring rules only, the rules are tested on two examples."
+      },
+      {
+        "criterion": "Scores rest only on facts in the brief",
+        "weight": 8,
+        "test": "No fact about an option (size, price, audience, traffic, funding stage, foot traffic, rival) appears unless it is in the brief; where data is missing the score is marked unknown or neutral and the gap is named."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "offer-package-or-programme-design",
@@ -897,7 +2260,79 @@
         "note": "Constant Contact survey of 854 consumer-facing small businesses, reported by Fox Business: 82% said new customers find them through referrals.",
         "url": "https://www.foxbusiness.com/features/survey-small-businesses-say-customer-loyalty-is-key"
       }
-    ]
+    ],
+    "family": "strategy",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every cost, price, fee rate and rival price is from the brief or clearly labelled as an assumption to confirm; no sign-up, conversion or uplift figure is stated as fact or promised."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook. For this job: Names who each tier or option is for using buyer types from the brief, says what each includes and does not include, and links the design to the stated goal."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: Who it is for; what is and is not included; tiers or options with plain names and prices; limits, perks or rewards; rules and payout terms; the maths, with worked examples, showing each tier or reward makes money; a one-page terms summary; and page text or invite messages, launch steps and a test to run."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read. For this job: Includes limits (caps, revisions, usage, payout timing, expiry, who qualifies) and a one-page plain terms summary; nothing is promised as unlimited beyond the capacity the brief gives."
+      },
+      {
+        "criterion": "The maths shows each tier, bundle or reward makes money using the buyer's costs",
+        "weight": 6,
+        "test": "For each tier, bundle, reward or commission the draft shows price, the costs from the brief and the margin. Recompute two lines; they match. For rewards and commissions the cost per new sale is shown, and any option that loses money is flagged."
+      },
+      {
+        "criterion": "Plain names and honest presentation",
+        "weight": 6,
+        "test": "Tier names and page text use plain words; no fake urgency, hidden fees, fake 'was' prices, or rewards that depend mainly on recruiting other recruiters."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "deal-account-or-negotiation-plan",
@@ -1123,7 +2558,79 @@
         "note": "Consulting cost guide: small businesses pay on average $2,500 to $7,500 per consulting project, with boutique firms charging up to $300 an hour.",
         "url": "https://breakthrough3x.com/resources/how-much-do-business-growth-consultants-cost-a-breakdown-by-business-size-and-service-type"
       }
-    ]
+    ],
+    "family": "strategy",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No name, role, price, discount, date, contract term or fact about the other side appears unless the brief gives it; guesses about what someone cares about are labelled 'likely' and tied to a note; any payment schedule adds up to the amount in the brief."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: The situation; who is involved, what each likely cares about, who sways whom and who you have not met; risks; your goal, walk-away point and what you can trade; their likely position; a dated action plan or shared close plan with owners; growth ideas for key accounts; and the messages for each step, with a…"
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week. For this job: Lists next steps in order, each with an owner (name or role from the brief) and a date or week, ending at the outcome in the brief; every date falls before any deadline the brief gives."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read. For this job: States the goal, a walk-away or fallback (from the brief, or marked for the buyer to set), and at least three trades or offers ranked by cost to give and value to the other side, all inside the limits in the brief."
+      },
+      {
+        "criterion": "Messages or talking points are ready to send or say",
+        "weight": 6,
+        "test": "Each step that involves contact has a message or talking points under 150 words for the right person, using the plan's numbers; for counter-offers every term in their message gets a reply."
+      },
+      {
+        "criterion": "Honest tactics and plain words",
+        "weight": 6,
+        "test": "No false deadlines, bluffs about rival offers the brief does not mention, threats or pressure; plain words; for each account in a batch the plan is clearly separated."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "single-channel-growth-plan",
@@ -1346,7 +2853,80 @@
         "note": "PPC set-up cost guide: independent specialists typically charge $800 to $2,500 to set up a campaign, and agencies $2,000 to $5,000.",
         "url": "https://clicksgeek.com/ppc-campaign-setup-cost/"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No cost per click, conversion rate, reach, review count or sales figure is stated as the buyer's or promised; any general benchmark is labelled as a rough starting point; product facts and prices come from the brief.",
+      "No fake engagement, bought or rewarded reviews, spam posting or targeting by sensitive traits; terms such as ROAS, CPA or match type are explained on first use."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: Channel goal and fit; set-up in the channel's own structure (campaigns, ad groups and keywords, audiences, boards, series or a send calendar); budget split; week-by-week or month-by-month actions; content or creative needs; a launch checklist; the numbers to track; and the first tests."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week. For this job: The budget split adds up to the stated monthly budget (recompute it), daily or weekly amounts are shown, and organic tasks fit the hours per week the brief gives."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read."
+      },
+      {
+        "criterion": "The set-up uses the chosen channel's own building blocks",
+        "weight": 6,
+        "test": "The plan covers only the chosen channel and uses its structure: campaigns, ad groups, keywords with match types and negatives for Google search; campaigns, audiences and creative tests for Meta, LinkedIn or TikTok; boards and pin themes for Pinterest; series and upload rhythm for YouTube; a dated send calendar for email."
+      },
+      {
+        "criterion": "Dated actions, a launch checklist, numbers to track and first tests",
+        "weight": 6,
+        "test": "Actions are dated across the full plan length chosen; there is a launch checklist, 3 to 6 numbers to track with when to check them, and at least two tests with the result that means keep or stop."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "rota-schedule-or-calendar",
@@ -1562,7 +3142,66 @@
         "note": "TimeForge survey: the average restaurant, bar or club manager spends 2.64 hours every week making the staff schedule, and more when using spreadsheets.",
         "url": "https://timeforge.com/blog/restaurant-scheduling-statistics-1/"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: A schedule built from your people, demand and rules: shifts with hours and breaks, staff needed by hour, hours booked against capacity, jobs or trades in order with dates, materials and permits to confirm and the critical path, or tasks and deadlines with owners by month. Plus the gaps, clashes and options to fix them."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "The schedule covers all the work or demand in the brief for the whole period",
+        "weight": 10,
+        "test": "Every day, week or month in the period appears; every order, task, deadline or staffing need in the brief is placed; each slot meets the least cover the brief sets, or the gap is listed."
+      },
+      {
+        "criterion": "No one is booked against their availability or the brief's rules",
+        "weight": 10,
+        "test": "Check each person: no shift outside their stated availability, hours per person are totalled and within any limit in the brief, breaks follow the brief's rules, no one is in two places at once, and task order respects stated links between tasks."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "books-and-billing-setup",
@@ -1799,7 +3438,67 @@
         "note": "Contra listing from a certified QuickBooks Online ProAdvisor selling set-up: a custom chart of accounts, starting balances and bank links, from $30 an hour.",
         "url": "https://contra.com/s/UM3ZXWmW-quick-books-online-qbo-setup"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Tax rates, tax codes, registration status and filing dates are left as items to confirm with the accountant unless the brief gives them; no payee, amount, price or term appears unless it is in the brief or marked as an example."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: The pieces you choose, built for your business: accounts with codes, use notes and examples; bank feed rules for regular payees; a software set-up checklist; tracking by service or site; an invoice template with a filled example; payment terms wording; billing schedules and recurring rules with worked examples; and…"
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents. For this job: Account names, tracking categories, rules and examples use the services, sites, payees and billing methods in the brief; accounts for activities the brief does not mention are left out or marked optional."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Steps are numbered and short (most under 25 words); any accounting term such as reconcile, accrual or liability is explained in a few words; routines say how long each step takes."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "Every piece asked for is there, complete and ready to use",
+        "weight": 10,
+        "test": "Each chosen piece has its own heading: accounts have code, name, type, use note and two examples; bank rules have payee, match text and account; the invoice template has every field and a filled example; schedules have dates, amounts and triggers; processes have numbered steps, owner and timing."
+      },
+      {
+        "criterion": "Amounts and dates add up",
+        "weight": 10,
+        "test": "Billing schedules add up to the contract total in the brief; worked examples for part months, upgrades and refunds show the maths and recompute correctly; the invoice example totals add up."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "content-pillars-and-idea-plan",
@@ -2019,7 +3718,78 @@
         "note": "YunoJuno rate data: freelance content strategists average $64 an hour, or about 385 pounds a day.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/content-strategist"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook. For this job: Lists 3 to 5 pillars, each with a one-line purpose that names the audience or goal from the brief; every idea is tagged to one pillar."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: Three to five pillars; a posting rhythm; dated ideas by week with working title, hook, format, pillar, owner and the reason each should work; search phrases, or board names and descriptions, where they matter; and seasonal dates. About 20 to 40 ideas for three months. Longer plans add themes and ideas month by month."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week. For this job: No product, price, event, guest name, customer story, statistic or search volume appears unless it is in the brief; dates are from the brief or fixed public holidays; search phrases not in the brief are marked as ideas to check."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read. For this job: A dated table with week, pillar, format, channel, owner and status columns; plain words; it can be used without finished captions."
+      },
+      {
+        "criterion": "The calendar fits the time frame and the team's time",
+        "weight": 6,
+        "test": "Covers every week of the period asked from the start date (month by month after the first three months); ideas per week match the stated rhythm and the team time in the brief; a three-month plan has at least 20 dated ideas."
+      },
+      {
+        "criterion": "Each idea is specific, with a working title, a hook and a reason",
+        "weight": 6,
+        "test": "Every idea has a working title, a one-line hook and a reason it should work tied to the audience or a search phrase; no two ideas share a title or angle; no fillers such as 'Motivation Monday post'."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "software-scope-priorities-estimate",
@@ -2238,7 +4008,79 @@
         "note": "Guide to software discovery costs for business apps: scoping, user stories and a firm estimate take 3 to 6 weeks and 5 to 12% of the build budget, most often 6,000 to 9,000 euros.",
         "url": "https://kolonell.com/en/blog/discovery-phase-cost-custom-business-app-2026"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No feature, integration, user number, rate, hours worked or deadline appears unless it is in the brief or marked as an assumption; costs use the rate in the brief or are shown in hours only."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: Features split into tasks with low, likely and high hours, assumptions and contingency; or a quote checked line by line; or scope options by budget; or a re-forecast; or a first-version scope with what it must prove; or a backlog or bug list scored and ranked; or a quarterly roadmap and a rule for new requests."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read. For this job: Technical terms are explained in a few words; the draft ends with a short list of what is in, out and later, or the questions to ask the developer before signing."
+      },
+      {
+        "criterion": "Delivers the piece chosen, covering every item in the brief",
+        "weight": 6,
+        "test": "Every feature in the brief is split into tasks for estimates; every line in a quote is reviewed; every backlog item or bug is scored and ranked; a roadmap has 3 to 6 bets, each with goal, reason, effort and what will not be done."
+      },
+      {
+        "criterion": "Estimates are ranges with stated assumptions, not promises",
+        "weight": 6,
+        "test": "Every hour, cost or effort figure has low, likely and high values (or a stated effort scale), the assumptions behind it are listed, a contingency line is included, and the draft says dates and costs are not guaranteed."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "quality-and-safety-paperwork",
@@ -2476,7 +4318,67 @@
         "note": "ISO 9001 cost guide for firms with 1 to 50 staff: documentation costs about $1,500 to $3,000 and optional consultants $1,500 to $20,000.",
         "url": "https://www.9001simplified.com/learn/iso-9001-certification-cost.php"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No tolerance, sample size, legal reporting deadline, regulation name, certificate or past incident appears unless it is in the brief; such items are left as marked blanks or 'to confirm' notes."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: Documents that match how you work: a clause-by-clause gap review, quality policy and manual, audit plan and checklists, nonconformance and corrective action forms, product check plans, risk assessments, inspection checklists, an incident form and log, a safety induction or five toolbox talks."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents. For this job: Each document names processes, tasks, equipment, sites or roles from the brief, with no generic sections for activities the brief does not mention; a gap review lists, for each clause, what the brief says exists and what is missing."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Forms have every field with space to write; checklists have items, what good looks like and the action on a fail; risk assessments have hazard, who is at risk, current controls, extra controls, owner, date and a rating scale; talks have key points, a question and a sign-off sheet."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "Every document is marked as a draft for a competent person to check",
+        "weight": 10,
+        "test": "Each document carries a draft label and a line naming who must review and sign it (for example the safety or quality lead from the brief); nothing claims the business is compliant or certified."
+      },
+      {
+        "criterion": "Plain words a new worker can follow",
+        "weight": 10,
+        "test": "Most sentences are under 20 words, steps are numbered, terms such as nonconformance or corrective action are explained once, and each toolbox talk can be read aloud in about five minutes."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "customer-segments-from-orders",
@@ -2682,7 +4584,73 @@
         "note": "YunoJuno rate data: freelance data analysts average $68 an hour.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/data-analyst"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Segment sizes, revenue shares, order values, churn and repeat rates come from the data or from shown steps; counts across segments add up to the total customers; no outside benchmark appears unless the brief gives one."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: Segment rules with the cut-offs used; a profile of each segment (size, share of revenue, order value, timing, top products); a repeat or churn view by start month; good customers who are slipping, ranked; actions with the revenue at stake; and spreadsheet formulas to score every customer."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today. For this job: Every segment has one or two actions (offer, message theme, service level or stop) within the offers in the brief, and the revenue at stake is worked out from the data; the draft says which segment to act on first."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: Terms such as RFM, cohort and churn are explained; the draft says what the data cannot show (for example why people left) and does not group customers by health, religion, ethnicity or other sensitive traits."
+      },
+      {
+        "criterion": "Segment rules and cut-offs are written so anyone can apply them",
+        "weight": 8,
+        "test": "Each segment has a written rule with number cut-offs (for example last order within 60 days and 3 or more orders) and the date measured from; spreadsheet formulas or code that apply the rules to every row use the export's column names."
+      },
+      {
+        "criterion": "Each segment has a profile, and slipping customers are named by ID",
+        "weight": 8,
+        "test": "Each segment shows size, share of revenue, average order value and typical timing (and top products if the data has them); a list of slipping or at-risk customers gives ID, the signal behind it (such as past spend and last order or activity date), ranked by past spend or risk."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "page-conversion-review",
@@ -2890,7 +4858,80 @@
         "note": "Landing page audit cost guide: a one-off expert teardown costs a few hundred dollars, while retainers with testing run into the thousands.",
         "url": "https://landingdoctors.com/guides/landing-page-audit-cost"
       }
-    ]
+    ],
+    "family": "audit",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "account_access",
+        "label": "Read access to the account, site or data",
+        "required": true,
+        "how": "Level 1 (read) through the client's connector, or an export covering the period. Pull the real snapshot before judging anything."
+      },
+      {
+        "id": "goals",
+        "label": "What success means here",
+        "required": true,
+        "how": "The target the client measures (sales, leads, cost per result, response time, margin), the period, and what changed recently."
+      },
+      {
+        "id": "benchmarks",
+        "label": "Earlier results or a comparison",
+        "required": false,
+        "how": "A previous period, a competitor or a target to compare against, so findings say better or worse than what."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "The diagnosis is made from the client's real data or pages, pulled at level 1 (read), with the period stated.",
+      "No review, rating, customer count, award, guarantee, result or conversion lift appears unless it is in the brief; where proof is missing the draft says what to collect instead."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: A read of your page against your buyer, offer and goal; a match check with the ad, email or positioning that sends people there; what is missing or unclear in each section; up to ten fixes ranked by effort and payback; and three rewritten top screens (headline, subhead, bullets, button and…"
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today. For this job: Each section of the pasted page is named in order with what works, what is missing or unclear, and why it matters for the buyer and goal in the brief."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: When an ad, email or positioning notes are given, their main promise is compared with the page headline and the gaps closed with line-level edits; copy avoids hype words such as 'revolutionary' or 'best-in-class'."
+      },
+      {
+        "criterion": "Fixes are specific and ranked by effort and payback",
+        "weight": 8,
+        "test": "Up to ten fixes, each naming the exact line or section, the change, an effort rating and a payback rating, sorted so low-effort, high-payback fixes come first."
+      },
+      {
+        "criterion": "Three rewritten top screens, each a real alternative",
+        "weight": 8,
+        "test": "Three versions, each with headline, subhead, three bullets or a short paragraph, button text and a proof line, and the visitor mindset it targets; each button matches the goal."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "id": "volunteer-or-recognition-programme",
@@ -3109,7 +5150,78 @@
         "note": "NCVO Time Well Spent 2023: volunteers likely to keep volunteering fell from 80% to 77%, and 26% now say it feels too much like paid work.",
         "url": "https://www.ncvo.org.uk/news-and-insights/news-index/key-findings-from-time-well-spent-2023/"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: The parts you pick: volunteer role descriptions, a recruitment pack, a welcome and induction pack and a yearly thank-and-keep plan; or a recognition programme, a manager guide with twenty message starters, award criteria with a nomination form and fair selection steps, and a budget at three levels."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week. For this job: Each ticked part is present: role descriptions have tasks, time asked, skills, training, who they report to and what they get; recruitment has a web call, social post, flyer text and sign-up reply; induction has welcome letter, first-day checklist, rules, contacts and FAQ; guides have twenty message…"
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read. For this job: Short sentences and no HR jargon; letters and message starters name a specific action or contribution and are under 100 words each; each role description fits on about one page."
+      },
+      {
+        "criterion": "Uses only the organisation's facts",
+        "weight": 6,
+        "test": "No role, number of volunteers, budget figure, policy, safeguarding rule, contact name or award history appears unless it is in the brief; safeguarding and legal points are listed as items to confirm."
+      },
+      {
+        "criterion": "Rules are fair, open and safe",
+        "weight": 6,
+        "test": "Award criteria are behaviours or results anyone in the role could show; nomination and selection involve more than one person; no rule favours or excludes people by protected traits; volunteer roles avoid paid-job words such as 'contract', 'wages' or 'disciplinary'."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "retention-and-winback-plan",
@@ -3324,7 +5436,78 @@
         "note": "Recurly guidance: brands that offer a pause before cancel saw the strongest engagement and loyalty, since many cancellations are only a need for a break.",
         "url": "https://docs.recurly.com/recurly-subscriptions/docs/navigate-retain-subscription-pause-why-it-matters"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook. For this job: Names the points where people leave or go quiet using figures from the brief (counts or rates with the sum shown), or says which data is missing; warning signs use behaviours the brief says it can track."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: Where people leave, from your data; warning signs and actions for quiet customers; a journey from joining or first order to renewal with the message for each step; a cancel flow with pause, skip or swap and an easy exit; win-back, reactivation and referral messages with who to contact first; a follow-up plan for…"
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week. For this job: Each step in the journey or win-back sequence has timing (for example day 30, 60, 90), channel and a message under 120 words with one clear ask; unhappy-customer follow-ups say who replies and how fast."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read. For this job: Lists 3 to 6 numbers to track with how to work each out (for example cancels in the month divided by members at the start of the month); plain words throughout."
+      },
+      {
+        "criterion": "Only the buyer's numbers, offers and reasons",
+        "weight": 6,
+        "test": "No churn rate, cancel reason, discount, offer, customer name or result appears unless it is in the brief; any expected effect is labelled as a guess, not promised."
+      },
+      {
+        "criterion": "Cancel and pause paths are honest and easy",
+        "weight": 6,
+        "test": "Any cancel flow offers pause, skip or swap once and then lets the person cancel in no more than two more steps; there are no guilt-trip lines, hidden buttons or false deadlines; messages go only to people who have not opted out."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "pay-bands-and-commission-plan",
@@ -3546,7 +5729,75 @@
         "note": "Paycor tracker of state pay transparency laws: states including Colorado, New York (4 or more staff) and New Jersey (10 or more) require pay ranges in job ads.",
         "url": "https://www.paycor.com/resource-center/articles/pay-transparency-laws-by-state/"
       }
-    ]
+    ],
+    "family": "strategy",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Each range, salary, rate, quota and payout is from the brief or worked out from it with the steps shown; no market pay figure, benchmark or 'typical' rate appears unless the brief supplies it; missing data is listed.",
+      "Pay differences between similar roles and levels are listed with the size of the gap and a question to answer; the draft does not rule on whether a gap is lawful and uses no protected trait unless the brief supplies it for a fair-pay check."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen. For this job: Recompute: payouts at 50, 100 and 150 percent of quota match the rates when a commission plan or model is asked for; band midpoints match the stated minimum and maximum; total cost equals cost per person times headcount."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 10,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: Levels and pay ranges from the data you give, with rules for moving within a range; a fair-pay check that flags gaps to explain; benefits at three budget levels."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read. For this job: At least two worked examples use numbers from the brief (a rep's quarter, or a move within a band), and terms such as accelerator, clawback or midpoint are explained in a few words."
+      },
+      {
+        "criterion": "The plan has every part it needs",
+        "weight": 10,
+        "test": "Pay bands have levels, minimum, midpoint and maximum and a rule for moving within a range; commission plans state base and variable split, quota, rates, accelerators, any cap, clawbacks and payment timing, each with a reason; benefits show three budget levels with cost per person."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "lead-magnet-funnel-plan",
@@ -3743,7 +5994,74 @@
         "note": "2026 email copywriter rate guide: welcome emails $50 to $150 each, nurture emails $75 to $200, and $400 to $600 for a starter five-email welcome sequence.",
         "url": "https://www.biztoolkit.co/post/freelance-email-copywriter-rates-in-2026-per-email-per-campaign"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No testimonial, result, subscriber count, price, deadline or limited number appears unless it is in the brief; no fake countdowns or 'only 3 left' lines."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook. For this job: Names the free offer, why it fits the buyer's problem from the brief and how it leads to the main offer; when asked to pick one, three ideas are scored on the same criteria before the choice."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 10,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: Three lead magnet ideas scored for fit, with the best one outlined (or written in full if short); a funnel map in words with the goal and exit for each step; sign-up page text; three to five follow-up emails; the first paid step; and for quizzes or workshops, the questions, results and emails or the outline and…"
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week. For this job: The map lists every step in order (page, thank-you step, each email, offer) and gives each a goal, the action wanted and what happens if the person does not act."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read. For this job: Copy uses plain words and short sentences; the sign-up page says what people will get by email; nothing suggests emailing people who did not sign up."
+      },
+      {
+        "criterion": "Page text and emails are written and ready to paste",
+        "weight": 10,
+        "test": "The sign-up page has headline, bullets, form ask and button; there are 3 to 5 follow-up emails, each with subject line, body under 200 words and one call to action; quizzes add questions, result types and a result page and email per result; workshops add a timed outline and reminder emails."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "book-proposal-and-outline",
@@ -3943,6 +6261,84 @@
         "note": "Freelance Writer Search: ASJA members report average fees of $5,000 to $20,000 for book proposals.",
         "url": "https://www.freelancewritersearch.com/working-with-writers/setting-fees.php"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "existing_assets",
+        "label": "Your draft, notes or past pieces",
+        "required": true,
+        "how": "The material this piece is made from: the draft, the records or notes, and 2 or 3 past pieces in the same voice. Read them all before writing."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your own words",
+        "required": true,
+        "how": "5 to 10 lines the client or speaker wrote or said, copied verbatim into the context file."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website, if the piece speaks for a business",
+        "required": false,
+        "how": "Read the live site for facts and voice when the piece speaks for a business or organisation. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and CSS."
+      },
+      {
+        "id": "references",
+        "label": "Pieces you admire, and pieces to avoid",
+        "required": false,
+        "how": "2 the client admires and 1 to avoid sounding like. Ask once."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every choice cites the client's own material (draft, notes, past pieces) or a named reference.",
+      "Every story, client example, statistic, study, quote, comparable title and follower or sales number is from the brief; claims that need a source are marked [source needed]; no sales figures are given for comparable titles unless supplied."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice. For this job: Uses the author's own phrases and stories from the notes, keeps first person if the notes use it, matches any writing sample, and avoids filler such as 'in today's fast-paced world'."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A proposal with overview, the reader, comparable titles you name, your platform, chapter summaries and a marketing plan; or title options, the book's promise and an outline of 10 to 14 chapters with purpose, key points and stories; or a 3,000 to 5,000 word chapter in your voice with claims needing a source…"
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: States the book's promise to the reader in one or two sentences near the start; each chapter or section builds on the one before; no point is repeated across two chapters."
+      },
+      {
+        "criterion": "The document has every part its type needs",
+        "weight": 6,
+        "test": "A proposal has overview, the reader, comparable titles, author platform, a summary for every chapter and a marketing plan (or follows the guidelines in the brief); an outline has title options, the promise and 10 to 14 chapters each with purpose, key points, stories and a link to the next; a chapter is 3,000 to 5,000 words or the length asked."
+      },
+      {
+        "criterion": "Plain, readable prose",
+        "weight": 6,
+        "test": "Most sentences are under 25 words, jargon is explained, and headings make the structure clear at a glance."
+      }
+    ],
+    "mode_default": "new"
   }
 ]

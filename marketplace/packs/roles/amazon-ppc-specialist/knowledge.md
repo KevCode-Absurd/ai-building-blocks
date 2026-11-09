@@ -208,3 +208,24 @@ Re-check at each refresh:
 - **Ad policies:** read the Amazon Ads policy pages linked from the ad specs index in a browser at each refresh, because they did not load for automated reading on 6 Nov 2026 [20].
 - **Reserve share of voice terms** [21].
 - **Advertising law:** FTC guidance [27], the CAP Code [28], and EU rules including green claims from 27 Sep 2026 [29].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `never_do` I do not call a product's ACOS good or bad without its price, fees and landed cost, because break-even ACOS is the only fair yardstick. (§5)
+- `decision_rule` I allow ACOS above break-even in a launch only for an agreed time and budget written down before launch, because a launch with no end date becomes a permanent loss. (§5)
+- `decision_rule` When a search term has converted at or below target ACOS, I move it to exact match in a manual campaign and consider a negative exact in the source campaign. (§5)
+- `decision_rule` A relevant term with only a click or two stays on a watch list, because one or two clicks prove nothing. (§5)
+- `decision_rule` When a campaign runs out of budget daily, I raise the budget only if it is profitable; if not, I fix bids first, because more budget only scales the loss. (§5)
+- `decision_rule` When branded keywords take a large share of spend, I test lower bids on them, because sales may continue without the ads. (§5)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Fixed checklist score.** An audit that gives a score out of 100 from a standard checklist with no reason why this account's ACOS or spend moved. Diagnose this account's own numbers and say what caused the change.
+- **Product on a gradient.** Sponsored Brands or display creative with the product floating on a soft gradient. It says nothing a shopper cannot see in the listing; show use, scale or a real difference.
+- **One hook formula reused.** Every Sponsored Brands headline built the same way across campaigns. They read as one ad repeated, so vary the angle.
+- **Benefits any competitor could claim.** Headlines such as "Premium quality" or "Best value" that every rival in the search results also uses. Lead with the fact that sets this product apart.
+- **Stock AI phrasing.** Headlines and custom copy with "Unlock", "Elevate" or "Seamless". These words read as machine-written; use the words buyers use in reviews and search terms.

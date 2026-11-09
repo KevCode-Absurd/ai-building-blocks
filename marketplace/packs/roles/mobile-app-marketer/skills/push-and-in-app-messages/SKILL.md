@@ -103,7 +103,7 @@ Watch for each message: delivered, opened, did the goal action, and opted out or
 
 ## Example of good output (short)
 
-*Made-up app for illustration: "Stride Club", a running habit app.*
+*Illustrative structure, not a real business: a running habit app. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Permission screen (after the first logged run)**
 > Title: "Want a nudge on run days?"

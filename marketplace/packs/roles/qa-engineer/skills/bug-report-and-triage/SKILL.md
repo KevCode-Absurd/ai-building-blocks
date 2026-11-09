@@ -97,11 +97,11 @@ Compare the fix description or pull request with the report: does it address the
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Fernhill Bookkeeping", an online invoicing tool.*
+*Illustrative structure, not a real business: an online invoicing tool. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Summary:** Invoice page shows a blank body for invoices with more than 50 line items
 >
-> **Environment:** staging.fernhill.test, release 4.12, current Chrome on Windows 11 and Safari on iPhone
+> **Environment:** staging.[domain], release 4.12, current Chrome on Windows 11 and Safari on iPhone
 >
 > **Preconditions:** signed in as test user "qa-owner"; invoice INV-TEST-0051 with 51 line items exists
 >

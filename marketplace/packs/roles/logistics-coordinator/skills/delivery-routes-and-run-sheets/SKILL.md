@@ -77,15 +77,15 @@ At level 3, publish the routes to drivers and send arrival-window messages from 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Harbour Bakehouse, two vans delivering to cafés.*
+*Illustrative structure, not a real business: a bakery with two vans delivering to cafés. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Van 1, Tuesday (driver start 5.00, depot leave 5.30)**
 > | Stop | Window | Customer | Items | Notes | POD |
 > |---|---|---|---|---|---|
-> | 1 | by 6.30 | Quay Café | 40 rolls, 2 trays pastries | Key in lockbox (code in app) | Photo |
-> | 2 | by 7.00 | Station Kiosk | 24 rolls | Hand to staff | Signature |
-> | 3 | 7-8 | Hillside School | 3 trays | Kitchen door at rear | Signature |
+> | 1 | by 6.30 | Café A | 40 rolls, 2 trays pastries | Key in lockbox (code in app) | Photo |
+> | 2 | by 7.00 | Kiosk B | 24 rolls | Hand to staff | Signature |
+> | 3 | 7-8 | School C | 3 trays | Kitchen door at rear | Signature |
 >
-> **Load order:** Hillside trays first (bottom, back), Station Kiosk, Quay Café last on.
+> **Load order:** School C trays first (bottom, back), Kiosk B, Café A last on.
 > **Hours check:** route back at depot 9.10, total duty 4 h 10 min; well within the limits for this van.
-> **Cost per drop:** zone C (Hillside) costs more than the fee charged; suggest Tuesday and Friday only, or a minimum order. Owner to decide.
+> **Cost per drop:** zone C (School C) costs more than the fee charged; suggest Tuesday and Friday only, or a minimum order. Owner to decide.

@@ -85,7 +85,7 @@ Return the files and notes in the output format below.
 
 ## Example of good output (short)
 
-*Made-up example: Harbourline Bikes, a fictional bike repair shop, newsletter intro.*
+*Illustrative structure, not a real business: a bike repair shop's newsletter intro. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Before:** In order to ensure that all of our valued customers are able to take advantage of the opportunity to get their bikes serviced before the spring rush, we are pleased to announce that we will be extending our opening hours on Saturdays, which will now be 8am-6pm, starting from the 1st March.
 >

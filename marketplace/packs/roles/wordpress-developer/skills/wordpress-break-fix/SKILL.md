@@ -109,18 +109,18 @@ One suggestion, such as a staging site, an update routine, removing an abandoned
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Saltmarsh Yoga", a studio site with a class booking plugin.*
+*Illustrative structure, not a real business: a yoga studio site with a class booking plugin. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Bug.** Since the automatic plugin updates on 2 November, the Timetable page shows a critical error for all visitors.
 >
-> **Evidence.** `debug.log`, 2 Nov 03:14: `PHP Fatal error: Uncaught Error: Call to undefined function studio_get_classes() in wp-content/themes/saltmarsh-child/functions.php:88`. The child theme calls a function the booking plugin removed in its new version.
+> **Evidence.** `debug.log`, 2 Nov 03:14: `PHP Fatal error: Uncaught Error: Call to undefined function studio_get_classes() in wp-content/themes/[business]-child/functions.php:88`. The child theme calls a function the booking plugin removed in its new version.
 >
 > **Fix.** On staging, wrap the call in a check and switch to the plugin's documented replacement once confirmed in its changelog. Until then, the guarded version stops the fatal error:
 >
 > ```php
-> // Saltmarsh: guard against the booking plugin removing this helper (2 Nov update).
+> // [Business]: guard against the booking plugin removing this helper (2 Nov update).
 > if ( function_exists( 'studio_get_classes' ) ) {
->     $saltmarsh_classes = studio_get_classes();
+>     $[business]_classes = studio_get_classes();
 > }
 > ```
 >

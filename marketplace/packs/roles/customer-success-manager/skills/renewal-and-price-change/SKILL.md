@@ -83,8 +83,8 @@ Before anything is sent: dates, prices, notice periods, plan names and links.
 
 ## Example of good output (short)
 
-> **Made-up example: Trellis, a garden centre stock app (not a real business).**
+> **Illustrative structure, not a real business: a stock app for garden centres. Copy the shape, never the content: every fact comes from the client's own context.**
 >
-> **Subject:** Your Trellis plan renews on 1 March
+> **Subject:** Your [Product] plan renews on 1 March
 >
-> "Hi Mo, your Trellis Team plan renews on 1 March 2027 for £1,080 for the year, charged to the card ending 4417. Nothing changes in your plan. If you'd like to switch plan or cancel, go to Settings > Billing before 1 March, or reply to this email and I'll do it for you. In the last year your two stores logged 9,400 stock counts in Trellis, and the barcode import you asked for in June went live in September. Thanks for being with us. Alex"
+> "Hi Mo, your [Product] Team plan renews on 1 March 2027 for £1,080 for the year, charged to the card ending 4417. Nothing changes in your plan. If you'd like to switch plan or cancel, go to Settings > Billing before 1 March, or reply to this email and I'll do it for you. In the last year your two stores logged 9,400 stock counts in [Product], and the barcode import you asked for in June went live in September. Thanks for being with us. Alex"

@@ -101,7 +101,7 @@ One question per line with date, amount and payee, sorted by money at stake. Wri
 
 ## Example of good output (short)
 
-Made-up business for illustration: Harbour Lane Pottery, a two-person studio.
+Illustrative structure, not a real business: a two-person pottery studio. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.
 
 > **Business current account (…4417), October 2026.** Statement closing balance 8,412.60. Books before changes 8,327.60. Difference 85.00 (books lower).
 >

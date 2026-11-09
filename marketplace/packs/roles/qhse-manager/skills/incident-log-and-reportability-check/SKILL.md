@@ -114,7 +114,7 @@ Avoid "operator error" as a root cause. Ask why the error was easy to make.
 
 ## Example of good output (short)
 
-*Made-up business: Harbour Fresh Foods, 48 staff, chilled food packing, Bristol, England.*
+*Illustrative structure, not a real business: a chilled food packer, 48 staff, Bristol, England. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Draft for review by a competent person. Check this with local rules before use.**
 >

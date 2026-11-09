@@ -56,7 +56,7 @@ Direct mail is one of the few media where every reply can be traced to a version
 
 ## Example of good output (short)
 
-*Brightpane Window Cleaning is a made-up business used only to show the format. Costs and values below are the made-up client's.*
+*Illustrative structure, not a real business: a window cleaning business. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 | Item | Value |
 |---|---|
@@ -66,6 +66,6 @@ Direct mail is one of the few media where every reply can be traced to a version
 | Share who become regulars, and profit per regular per year | 60%, 120.00 |
 | Break-even with first-year repeat value | 0.42 / (30.00 + 0.6 x 120.00) = 0.41% |
 
-**Versions:** A, "First clean half price" with code BP-A. B, same offer with headline "See your street through clean glass" and code BP-B. C, "Free gutter check with your first clean" with code BP-C. Each goes to matched postcode areas of equal size.
+**Versions:** A, "First clean half price" with code A. B, same offer with headline "See your street through clean glass" and code B. C, "Free gutter check with your first clean" with code C. Each goes to matched postcode areas of equal size.
 
 **Readout rule:** after four weeks, compare response rate and value per version against both break-even rates, and keep the version that clears the first-clean break-even, or the repeat break-even if the client confirms repeat rates.

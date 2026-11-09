@@ -208,3 +208,21 @@ Re-check at each refresh:
 - **FTC:** Made in USA cases, enforcement of the reviews rule, and any Green Guides update [14][18][20].
 - **Food allergen guidance** in the UK, EU and US [28][29][30].
 - **Benchmarks:** Baymard's and Spiegel's pages change without notice [2][3].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When two products read the same, I find the real difference (size, material, use) and lead with it; if there is none, I ask whether both should exist. (§5)
+- `decision_rule` When a title is over the limit, I cut adjectives first, then repeated words, and never the product type or the variant. (§5)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Stock AI phrasing.** Product descriptions with "Elevate your...", "Unlock", "Seamless" or "Game-changer". It reads as machine-written; use the facts from the label and spec sheet.
+- **Rule-of-three bullets.** Every product with three bullets of three adjectives each. Let the product's real features set the number and order.
+- **Headline formula clichés.** Titles and headers like "The X you didn't know you needed" or "Your new favourite X". They fit any product; lead with the product type and the real difference.
+- **Fake urgency.** "Selling fast", "almost gone" or a deadline that does not change the price. It reads as default and can break consumer law; state real stock or dates only.
+- **Benefits any competitor could claim.** "Premium quality", "perfect for everyday use", "made with care". If every listing on the page says it, find the size, material or use that sets this one apart.
+- **"In today's fast-paced world" openers.** Descriptions that start with a general statement before the product. Start with what the product is and does.

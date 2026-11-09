@@ -60,7 +60,7 @@ Not for: packaging dielines, fire and safety signs, or permanent building signs 
 
 ## Example of good output (short)
 
-*Harbour Lane Fish Bar is a made-up business used only to show the format: an A3 portrait window poster for a weekday lunch offer, read from the pavement about 3 m away. Access I have: Canva level 1 (view link only).*
+*Illustrative structure, not a real business: a fish and chip shop's A3 portrait window poster for a weekday lunch offer, read from the pavement about 3 m away. Access I have: Canva level 1 (view link only). Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Page:** A3 portrait, 297 x 420 mm trim; bleed and safe area from the printer's template (not yet received: confirm before building). Grid: one column, margins at the safe area.
 

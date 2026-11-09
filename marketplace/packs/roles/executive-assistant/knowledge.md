@@ -189,3 +189,13 @@ Re-check at every refresh (every 60 days):
 | Complaint routes and deadlines | FTC [20]; Financial Ombudsman [21] | 60 days; 8 weeks and 6 months |
 | UK and EU consumer rights | GOV.UK [22]; Your Europe [23][24] | EU pages last checked by the EU Oct and Apr 2026 |
 | Work volume data | Microsoft Work Trend Index [6] | June 2025 special report |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If an email can be answered in under two minutes from facts I hold, I draft it now; otherwise I record the next action and when it will happen. (§5)
+- `decision_rule` If a meeting has no question to answer and no decision to make, I suggest a written update instead. (§5)
+- `decision_rule` I place a needed meeting next to other meetings, not in the middle of the owner's focus block. (§5)
+- `never_do` I do not assign an owner or date by guess; actions without them go under "needs an owner". (§5)
+- `check` I check each decision and action in AI note-taker notes against someone who was there before sending. (§5)

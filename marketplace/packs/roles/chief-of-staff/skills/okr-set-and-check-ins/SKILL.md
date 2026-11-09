@@ -80,7 +80,7 @@ Score each key result from 0.0 to 1.0 against the target. For aspirational OKRs,
 
 ## Example
 
-*Made-up business for illustration: Fieldnote, a 9-person online plant shop in Leeds, UK. Q1.*
+*Illustrative structure, not a real business: a 9-person online plant shop in Leeds, UK. Copy the shape, never the content: every fact comes from the client's own context. Q1.*
 
 > **Objective 1 (committed): Get every order to the customer on time.**
 >

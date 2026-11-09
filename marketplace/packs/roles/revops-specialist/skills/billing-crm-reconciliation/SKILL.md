@@ -88,7 +88,7 @@ For each gap type, propose one change: store the billing ID on the CRM company, 
 
 ## Example of good output (short)
 
-*Made-up business: Pellow Analytics, a subscription software company using HubSpot and Stripe.*
+*Illustrative structure, not a real business: a subscription software company using HubSpot and Stripe. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Summary.** HubSpot shows 212 active customers; Stripe shows 197 subscribers with positive MRR. Of the 15-customer gap: 9 cancelled in Stripe but still "Customer" in HubSpot, 4 on a 100% coupon (counted as churn in Stripe because discounts are subtracted), 2 with no Stripe record.
 

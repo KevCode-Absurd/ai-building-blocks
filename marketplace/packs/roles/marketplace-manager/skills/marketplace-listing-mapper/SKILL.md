@@ -56,7 +56,7 @@ Each marketplace wants the same product described its own way. Missing required 
 
 ## Example of good output (short)
 
-*Copperline Kitchen is a made-up cookware brand used only to show the format. Data is invented.*
+*Illustrative structure, not a real business: a cookware brand. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Field map, Walmart, category Cookware (extract):**
 
@@ -70,7 +70,7 @@ Each marketplace wants the same product described its own way. Missing required 
 
 **Missing:** 6 products have no GTIN (the 2026 enamel range); colour is blank on all 60.
 
-**Title (eBay):** "Copperline 28 cm Copper Frying Pan, Tin Lined, Cast Iron Handle" (63 characters; check against the limit in the listing form).
+**Title (eBay):** "[Business] 28 cm Copper Frying Pan, Tin Lined, Cast Iron Handle" (63 characters; check against the limit in the listing form).
 
 **Open questions:** confirm colour values for the 60 products (the photos suggest "Copper" for 52, marked to confirm); supply GTINs for the enamel range or confirm they have none.
 

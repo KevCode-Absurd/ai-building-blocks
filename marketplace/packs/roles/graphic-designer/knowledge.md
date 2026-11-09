@@ -211,3 +211,24 @@ Re-check at each refresh:
 - **Food information rules:** FSA, European Commission and FDA pages [26][27][28].
 - **Printer and print-on-demand specs:** Printful's guides and the client's own printer [18][19][20]; postal size rules [17].
 - **Tools:** which design tools have free plans, what they include, and how they export print files. Check the vendor's own pages before recommending one.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the brief has no reading distance or format, I ask before designing, because size and type depend on both. (§5)
+- `decision_rule` If copy is not final, I mark the layout as a draft and size space for the longest likely version. (§5)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Purple or blue gradients.** Backgrounds and fills in purple or blue gradients the brand never used. Work from the client's palette.
+- **Inter, Geist or system fonts.** A default sans swapped in for the brand typeface on posters, menus or social graphics. Use the brand fonts, licensed for the use.
+- **Emoji icons.** Emoji as icons on menus, signs or social graphics. They read as a placeholder; use icons in the brand's style.
+- **Rounded cards everywhere.** Every element in a rounded box, on print and screen alike. Let the brand's shape language decide.
+- **Glassmorphism.** Frosted panels over photos as the default layout device. It reads as an AI default; use the brand's own devices.
+- **Generic stock-style imagery.** Stock-looking photos of people, laptops or food that could be anyone's. Use the client's own photos or a clear art direction.
+- **Product on a gradient.** The product floating on a soft gradient as the hero of every piece. Show it in context, at real scale.
+- **Cream for "premium".** Cream backgrounds swapped in to make a piece feel upmarket. Use the brand's own colours and materials.
+- **Every piece in one template.** Every flyer, post and slide in the same layout regardless of reading distance or format. Design from the format and the distance it is read at.

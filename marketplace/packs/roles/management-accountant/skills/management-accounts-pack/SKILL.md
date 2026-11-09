@@ -95,11 +95,11 @@ Profit, cash, the three things that moved and why, two risks, three actions for 
 
 ## Example of good output (short)
 
-Made-up business for illustration: Larkspur Studio, a 14-person design agency.
+Illustrative structure, not a real business: a 14-person design agency. Copy the shape, never the content: every fact comes from the client's own context.
 
 > **September in one page.** Profit 18,400 against a budget of 22,000 and 15,100 last September. Cash 96,300, down 11,800 because two large clients paid late (debtor days 52, up from 38).
 >
-> **What moved.** (1) Freelancer costs 9,200 over budget: the Harbourside rebrand ran 140 hours over its fixed fee. (2) Revenue 6,000 above budget from the Q4 retainer starting early. (3) Software 1,900 over: annual design-licence renewal posted in one month, should be spread (see prepayments).
+> **What moved.** (1) Freelancer costs 9,200 over budget: one client rebrand ran 140 hours over its fixed fee. (2) Revenue 6,000 above budget from the Q4 retainer starting early. (3) Software 1,900 over: annual design-licence renewal posted in one month, should be spread (see prepayments).
 >
 > **Risks.** Late payers make up 41% of receivables. Fixed-fee overruns two months running.
 >

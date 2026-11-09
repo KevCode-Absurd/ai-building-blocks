@@ -211,3 +211,28 @@ Re-check these at every refresh (every 30 days):
 | EU, UK, US accessibility rules | EUR-Lex [6], GOV.UK [7], ADA.gov [8] | EAA from 28 June 2025 |
 | Cookie rules | EDPB [9], GOV.UK [10][11], ico.org.uk, California AG [12] | UK statistics exception added; regulator now the Information Commission |
 | Builder speed and accessibility data | Web Almanac [29], WebAIM Million [30] | 2025 almanac; 2026 WebAIM report |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When the owner will edit the site alone and wants little setup, suggest Squarespace or the Wix Editor. (§5)
+- `decision_rule` When the site needs a CMS with custom fields and template pages, plan it in Webflow, Framer or Wix, and check the plan's CMS limits first. (§5)
+- `decision_rule` When an agency or several people will build and hand over, prefer a builder with team roles and client access, such as Wix Studio. (§5)
+- `decision_rule` When a feature needs code the builder does not support, link a well-supported third-party tool from the page rather than build a fragile workaround. (§5)
+- `check` Check every section on a phone even when it looks fine on desktop, because builders let phone layouts drift. (§5)
+- `check` Every page has one job and one main action. (§7)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Template home page.** Centred hero, three benefit cards, "How it works in 3 steps", testimonials, FAQ and a final CTA, whatever the business. Build the page list from the client's real visitor tasks (section 7).
+- **Purple or blue gradients.** Gradient backgrounds and buttons in place of the brand's colours. Set colours in the builder's style settings from the brand.
+- **System fonts in place of the brand font.** Inter, Geist or the builder's default font replacing the brand typeface. Upload or select the brand font in the style settings.
+- **Pill buttons where the brand is square.** The builder's rounded button preset left on. Match the brand's button shape.
+- **Emoji icons.** Emoji as feature or contact icons. Use the builder's icon set styled to the brand, or the client's own icons.
+- **"Trusted by" rows with no logos.** Logo strips with placeholders or names the client never supplied. Mark them [add] or leave the section out (section 5).
+- **Generic stock-style hero images.** A stock photo as the hero because the template had one. Use the client's real photos, right-sized and not lazy-loaded (section 5).
+- **Fade-up on every block.** The builder's entrance animation switched on for every section. Animate rarely, and never the top image.
+- **Dropping the client's nav and footer.** A redesign or new page that loses the client's menu and footer content. Keep their navigation, contact details and legal links.

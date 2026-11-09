@@ -234,3 +234,26 @@ Re-check at each refresh:
 - **Launch platforms:** Product Hunt's launch rules [25].
 - **Search guidance for comparison content:** Google Search Central [7].
 - **Positioning and pricing method sources:** April Dunford's site [1][2]; Van Westendorp method notes [4].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the team cannot name the alternative buyers would use instead, find it from lost deals and interviews before writing any message, because value only exists against an alternative. (§5)
+- `decision_rule` When demand for a new product is unclear, run a cheap demand test before the launch budget is spent. (§5)
+- `decision_rule` Before claiming a new category, check whether buyers already search for an existing one and whether the budget can teach a new one. (§5)
+- `check` Re-check rival facts captured more than one review cycle ago before reuse, because rivals change pages and prices. (§5)
+- `check` The core message fits on one line, and the team can repeat it. (§7)
+- `taste_reference` Buyer's words over company words, one idea per line. (§8)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Stock hype words.** Messaging and launch copy with "Unlock", "Elevate", "Seamless" or "Game-changer". Use the buyer's words over company words (section 8).
+- **Benefits any competitor could claim.** Pillars like "easy to use" or "saves time" that the named alternative also claims. Each pillar should state a difference against the alternative, with proof (section 7).
+- **Headline formula clichés.** "The X for Y" or "X, reimagined" as the core line. Write the core line from the positioning, as one line the team can repeat.
+- **Rule-of-three everywhere.** Every proof list, feature list and bullet set in threes by habit. The message sheet has three pillars by design; the lines under them need not come in threes.
+- **Fake urgency.** Launch pages and emails with countdowns or "limited" offers that are not real. Use real dates and real limits.
+- **Template launch page.** Centred hero, three benefit cards, "How it works in 3 steps", testimonials, FAQ and a final CTA, whatever the product. Order the page from what this buyer needs to believe.
+- **"Trusted by" rows with no logos.** A logo strip without real, permitted customers. Use named customers only with permission, or leave the row out.

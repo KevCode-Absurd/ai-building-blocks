@@ -58,7 +58,7 @@ Access levels for this skill: everything here is level 1 (reading reviews and ex
 
 ## Example of good output (short)
 
-*Kestrel Cycle Repairs is a made-up bike shop, used only to show the format.*
+*Illustrative structure, not a real business: a bike repair shop. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Headline:** Repairs promised "by Friday" missed the date 7 times this month (3 last month). Customers keep praising clear explanations of what was wrong (11). One fix: text customers when a part is delayed, the day you know.
 

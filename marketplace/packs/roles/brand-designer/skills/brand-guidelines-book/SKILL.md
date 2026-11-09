@@ -60,7 +60,7 @@ Not for: designing a new logo (use the logo-design-brief skill), trade mark advi
 
 ## Example of good output (short)
 
-*Harbour & Pine Joinery is a made-up firm used only to show the format.*
+*Illustrative structure, not a real business: a joinery firm. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Decision list:** three greens in use. A #2F5D3A (van livery, website), B #2E6B3F (business cards), C #335C38 (Instagram templates). Owner to choose one; the others retire. "[decision needed]"
 

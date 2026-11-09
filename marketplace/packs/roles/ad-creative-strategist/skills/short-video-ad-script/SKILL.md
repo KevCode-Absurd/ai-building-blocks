@@ -57,7 +57,7 @@ A short video ad has to stop the scroll, make sense with the sound off, show the
 
 ## Example of good output (short)
 
-*Copperleaf Bikes is a made-up business used only to show the format: a repair shop offering a same-day puncture fix. Proof P1: "Fixed while I had a coffee" (review, permission given).*
+*Illustrative structure, not a real business: a bike repair shop offering a same-day puncture fix. Proof P1: "Fixed while I had a coffee" (review, permission given). Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Hook options**
 
@@ -71,7 +71,7 @@ A short video ad has to stop the scroll, make sense with the sound off, show the
 
 | Time | We see | We hear | On-screen text |
 |---|---|---|---|
-| 0-3 s | Thorn pulled from tyre, Copperleaf apron in frame | "This is why your tyre keeps going flat." | Flat again? |
+| 0-3 s | Thorn pulled from tyre, the shop's apron in frame | "This is why your tyre keeps going flat." | Flat again? |
 | 3-8 s | Tyre off, patch on, wheel back on, timer in corner | "We find the cause, not just the hole." | We find the cause |
 | 8-12 s | Customer collecting bike, coffee cup in hand | "Fixed while I had a coffee." | Real review, used with permission |
 | 12-15 s | Shop front with sign | "Same-day puncture fix. Book on our site." | Book a same-day fix |

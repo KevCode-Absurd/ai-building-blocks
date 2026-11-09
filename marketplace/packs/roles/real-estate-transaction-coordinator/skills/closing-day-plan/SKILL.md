@@ -80,7 +80,7 @@ Final documents uploaded, checklist complete, keys and codes handed over through
 
 ## Example of good output (short)
 
-*Made-up deal for illustration: 14 Maple Court, US, closing Tuesday 15 December 2026 at 10:00 with a title company.*
+*Illustrative structure, not a real deal: 14 Maple Court, US, closing Tuesday 15 December 2026 at 10:00 with a title company. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | When | Task | Owner | Status |
 > |---|---|---|---|

@@ -90,7 +90,7 @@ With web search connected, check that partners' public pages describe the client
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Brightdesk, scheduling software sold through 25 IT support firms.*
+*Illustrative structure, not a real business: a scheduling software company selling through 25 IT support firms. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Q3 scorecard (extract)**
 >

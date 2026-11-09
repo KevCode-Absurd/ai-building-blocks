@@ -77,7 +77,7 @@ For each top moment: the fix, the owner, the date, and how to tell if it worked 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Northgate Physio", a four-clinic physiotherapy practice, mapping from first enquiry to the second appointment.*
+*Illustrative structure, not a real business: a four-clinic physiotherapy practice, mapping from first enquiry to the second appointment. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Gaps.** No data on people who enquire and never book; no survey after the first appointment.
 >

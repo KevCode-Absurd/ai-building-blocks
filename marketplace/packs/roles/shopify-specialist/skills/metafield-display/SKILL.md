@@ -70,7 +70,7 @@ Not for: data that belongs in variants (size and colour options that change pric
 
 ## Example of good output (short)
 
-*Alder & Loom is a made-up business used only to show the format: a small linen clothing store on an Online Store 2.0 theme.*
+*Illustrative structure, not a real business: a small linen clothing store on an Online Store 2.0 theme. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Field plan**
 

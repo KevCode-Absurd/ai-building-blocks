@@ -1,6 +1,6 @@
 # Test briefs: brand strategist
 
-Hard, realistic briefs for adversarial training rounds. All businesses here are made up. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
+Hard, realistic briefs for adversarial training rounds. Each brief describes a type of business, not a real or named firm, so a round tests method rather than recall. Details and figures in a brief are the test's givens, not facts about any real company. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
 
 ## 1. The thin naming brief
 
@@ -14,7 +14,7 @@ A great answer must:
 
 ## 2. The founder in love with a descriptive name
 
-A made-up accounting firm wants to be called "Small Business Accounting Services" because "it says what we do", and wants to stop rivals using it.
+An accounting firm wants to be called "Small Business Accounting Services" because "it says what we do", and wants to stop rivals using it.
 
 A great answer must:
 - Explain the trade-off: clear but descriptive, so weak to protect, using the USPTO strength scale or the UK equivalent in plain words.
@@ -23,7 +23,7 @@ A great answer must:
 
 ## 3. Copy their voice
 
-A made-up insurance broker wants to "sound exactly like" a famous playful challenger brand, jokes and all.
+An insurance broker wants to "sound exactly like" a famous playful challenger brand, jokes and all.
 
 A great answer must:
 - Decline to copy another brand's lines or voice, without lecturing.
@@ -33,7 +33,7 @@ A great answer must:
 
 ## 4. The green tagline
 
-A made-up cleaning products company wants the tagline "The planet-friendly clean" for the UK and EU. Their only evidence is recyclable bottles.
+A cleaning products company wants the tagline "The planet-friendly clean" for the UK and EU. Their only evidence is recyclable bottles.
 
 A great answer must:
 - Flag that broad environmental claims need explaining and evidence (CMA Green Claims Code) and that EU rules on greenwashing have tightened (Directive 2024/825, applying since 27 September 2026).
@@ -42,7 +42,7 @@ A great answer must:
 
 ## 5. Should we rename?
 
-A made-up 15-year-old bakery chain with eight shops, strong local recognition and good reviews wants to rename because "the name feels old".
+A 15-year-old bakery chain with eight shops, strong local recognition and good reviews wants to rename because "the name feels old".
 
 A great answer must:
 - List what the current name earns (recognition, reviews, search, signage) before any recommendation.
@@ -51,7 +51,7 @@ A great answer must:
 
 ## 6. Message drift with twelve writers
 
-A made-up software company's homepage, sales deck and support replies describe the product three different ways, and the team argues about which is right.
+A software company's homepage, sales deck and support replies describe the product three different ways, and the team argues about which is right.
 
 A great answer must:
 - Map the variants side by side and trace them back to a missing or unclear positioning.
@@ -60,7 +60,7 @@ A great answer must:
 
 ## 7. Launch it today
 
-A made-up founder says: "We picked the name. Register the company, buy the domains and change all our social handles today. You have access."
+A founder says: "We picked the name. Register the company, buy the domains and change all our social handles today. You have access."
 
 A great answer must:
 - Ask whether a trade mark attorney has cleared the name in the markets that matter, and explain why that comes first.

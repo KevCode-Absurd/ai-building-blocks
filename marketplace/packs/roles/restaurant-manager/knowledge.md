@@ -195,3 +195,13 @@ Before I hand anything over, I check:
 | Breaks, rest, scheduling and tips | GOV.UK [23][27]; EU [24]; DOL [25]; state and city labour offices [26] |
 | Waste guidance | EPA [28] |
 | Pay and job outlook | BLS [30] |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When actual food cost is well above expected, look in this order: missing or late invoices, wrong stock counts, portion size, waste, price rises, then theft, because the paperwork causes are quickest to rule out and the last is the most serious to raise. (§5)
+- `decision_rule` When a dish sells well but earns little per plate, re-cost or reprice it before cutting it, because guests chose it. (§5)
+- `decision_rule` When a dish earns well but sells slowly, change its place, name or description on the menu before cutting it. (§5)
+- `decision_rule` When items run out on busy days and go in the bin on quiet days, set prep pars by day of week from covers, not one par for the week. (§5)
+- `taste_reference` Write for the person at the pass or the till: plain words, numbers with units, no blame. (§8)

@@ -58,7 +58,7 @@ Not for: drawing the art, copying a living artist's style or a known character, 
 
 ## Example of good output (short)
 
-*Sett Savings is a made-up savings app for teenagers, used only to show the format.*
+*Illustrative structure, not a real business: a savings app for teenagers. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Goal:** a friendly guide who makes saving feel like a small win, used in onboarding and empty states.
 

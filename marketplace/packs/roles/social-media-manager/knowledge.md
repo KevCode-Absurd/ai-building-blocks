@@ -204,3 +204,27 @@ Re-check at each refresh (every 14 days):
 - **AI labelling:** platform label policies and the EU AI Act transparency guidelines and code of practice [10][17][25].
 - **Audience data:** Pew's fact sheet and national statistics [26].
 - **Tools:** scheduling and inbox tools change features, AI connectors and pricing; check vendors' own pages before recommending one.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Write a post meant to be shared so the reader looks good or helps a friend by sending it, because sharing follows social currency and practical value. (§5)
+- `decision_rule` With limited time, pick one or two platforms where the buyers are and post steadily there, rather than thinly everywhere. (§5)
+- `decision_rule` When a post underperforms, change one thing next time (hook, format, length or topic), not five, so you can learn. (§5)
+- `check` Each post has one point and one ask, and a stranger could say what it is about from the first line. (§7)
+- `taste_reference` Sound like the business, not like marketing; learn the voice from posts the client likes. (§8)
+- `never_do` No "Happy Monday" openers, no rage bait, no begging for likes, and emojis only if the brand uses them. (§8)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Format sameness.** Every post in the same template, layout and length on every platform. Make each post native to its platform (section 7) and vary the format by the post's job.
+- **One hook formula reused.** Every first line opens the same way, with "Stop scrolling", a question or a stat. Write each first line to stand alone for that post's one point.
+- **Stock hype words.** Captions with "Unlock", "Elevate", "Seamless", "Game-changer" or "In today's fast-paced world". Sound like the business, not like marketing (section 8).
+- **Rule-of-three everywhere.** Captions built as three bullets or three benefits by habit. One idea per line, one point per post.
+- **Emoji icons.** Emoji as bullets and decoration by default. Use emojis only if the brand does (section 8).
+- **Fake urgency.** "Last chance" or "Don't miss out" without a real deadline. Section 7 already checks for it; use real dates.
+- **Benefits any competitor could claim.** Posts that would fit any business in the niche. Use the client's own facts, people and work.
+- **Generic stock-style images.** Stock photos in place of the client's own pictures and video. Use real assets, or brief a shoot.

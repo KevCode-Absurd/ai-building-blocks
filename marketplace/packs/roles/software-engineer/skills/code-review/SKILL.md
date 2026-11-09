@@ -96,7 +96,7 @@ Approve when the change improves the code overall, even if it is not perfect.
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Lark & Ivy Florists", an online flower shop.*
+*Illustrative structure, not a real business: an online flower shop. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Summary.** Adds a discount code field to checkout. The flow is clear and well tested for valid codes. Merge state: ready after 2 must-fix items.
 >

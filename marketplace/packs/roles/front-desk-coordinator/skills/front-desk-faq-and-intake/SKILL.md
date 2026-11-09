@@ -79,7 +79,7 @@ A one-page card for the desk: greeting, the five most common answers, the emerge
 
 ## Example of good output (short)
 
-> **Made-up example: Oakfield Dental (not a real business).**
+> **Illustrative structure, not a real business: a dental practice. Copy the shape, never the content: every fact comes from the client's own context.**
 >
 > | Question | Phone answer | Policy line |
 > |---|---|---|

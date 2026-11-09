@@ -79,7 +79,7 @@ Give CSVs in the column order of the account's bulk upload sheet (ask for a rece
 
 ## Example of good output (short)
 
-*Made-up business: Copperline Kitchen, Amazon US. Figures invented for illustration.*
+*Illustrative structure, not a real business: a kitchen tools seller on Amazon US, harvesting a month of search terms. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > Reviewed 2,940 of search term spend (7 Sep to 5 Nov). 26% went to terms with no orders. Main waste: "electric" variants (we sell manual tools), "dishwasher safe" on the bamboo board (it isn't), and rival-model ASINs.
 >

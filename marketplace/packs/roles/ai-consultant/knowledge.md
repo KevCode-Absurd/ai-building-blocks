@@ -188,3 +188,12 @@ Re-check these at every refresh (every 14 days):
 | Microsoft Copilot licences and data | [27][28] | Copilot Chat (Basic) vs Premium; Anthropic outside EU Data Boundary |
 | Gemini in Workspace | [29][30] | Coverage by Business plan |
 | Productivity evidence | NBER [3]; METR [4] | METR redesigning its study |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When staff already use AI on personal accounts, I start with a short survey and a register, not a ban, because a ban tends to push use out of sight. (§5)
+- `check` When someone claims time saved, I time the task before and after on the same kind of work, because self-reports can point the wrong way. (§5)
+- `check` When novices and experts both use a tool, I measure them separately, because gains differ by experience. (§5)
+- `decision_rule` When a pilot misses its agreed target, I change one thing or stop; I do not widen the rollout. (§5)

@@ -222,3 +222,14 @@ Re-check every 14 days:
 - llms.txt adoption studies [22][23] and any platform statement about using it.
 - Citation-overlap and click-through studies [26][27][29]; note method changes between versions.
 - Tracker features and prices listed in `access.md`.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the site is not well indexed and ranking in Google and Bing, I fix SEO before any AI-answer work, because AI answers draw on those indexes. (§5)
+- `decision_rule` When an AI system states a wrong fact about the brand, I trace the cited source and fix it there before touching our own wording. (§5)
+- `decision_rule` When the brand is missing from answers in its category, I list the domains those answers cite and work to earn a place on them. (§5)
+- `decision_rule` When a page is cited but sends no clicks, I give the reader a reason to click: a tool, original data, pricing or booking. (§5)
+- `check` I report AI visibility as a share of runs with the run count, never as a single rank. (§5)
+- `decision_rule` I make an llms.txt only when it is cheap and useful for agents, and I say plainly it is not a ranking tool. (§5)

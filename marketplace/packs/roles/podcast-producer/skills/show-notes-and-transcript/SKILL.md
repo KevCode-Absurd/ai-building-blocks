@@ -63,7 +63,7 @@ Listeners decide in seconds whether to press play, and they skip around once the
 
 ## Example of good output (short)
 
-*Fieldwork is a made-up gardening business podcast, and Priya Shah a made-up guest. All details are invented.*
+*Illustrative structure, not a real show or guest: a gardening business podcast with a nursery owner as guest. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Titles**
 
@@ -71,7 +71,7 @@ Listeners decide in seconds whether to press play, and they skip around once the
 2. How one nursery doubled repeat visits with a planting card
 3. Selling plants people keep alive
 
-**Summary:** Nursery owner Priya Shah explains why most plants sold in spring are dead by summer, and the free planting card that changed how often her customers come back. If you sell anything that needs care after purchase, this one is for you.
+**Summary:** Nursery owner Priya explains why most plants sold in spring are dead by summer, and the free planting card that changed how often her customers come back. If you sell anything that needs care after purchase, this one is for you.
 
 **Chapters** (40-minute episode, so four chapters at most)
 
@@ -82,6 +82,6 @@ Listeners decide in seconds whether to press play, and they skip around once the
 (31:40) Her next steps
 ```
 
-**Disclosure line:** Sponsored by Greenhand Tools. Priya was not paid for her appearance.
+**Disclosure line:** Sponsored by [Sponsor]. Priya was not paid for her appearance.
 
 **Clip 1:** 23:10 to 23:52. Hook: "Nobody buys a plant, they buy the Sunday after." Caption on screen: "What customers really buy".

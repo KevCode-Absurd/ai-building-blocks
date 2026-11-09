@@ -94,18 +94,18 @@ Return the flagged list, then a ranked table, then drafts grouped by call, then 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Fernhill Landscapes, a garden design firm with eight staff in Guildford, UK; the owner is Priya.*
+*Illustrative structure, not a real business: a garden design firm with eight staff in Guildford, UK; the owner is Priya. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Flags**
 > - **Possible fraud:** "Updated bank details for invoice 2231" from a supplier address with one letter changed. Do not reply. Confirm by phone on the number in your accounts system.
 >
 > | Sender | Subject | Call | Why |
 > |---|---|---|---|
-> | Client, Oakfield House | Planting date? | Reply | Asks two questions; site visit Friday |
+> | Client A | Planting date? | Reply | Asks two questions; site visit Friday |
 > | Trade show organiser | Exhibitor offer | Decline | You said no new shows this year |
 > | Nursery supplier | Order 448 delay | Delegate to Tom | Tom runs orders |
 > | Accountant | VAT return reminder | Wait to 1 Dec | Due 7 Dec; papers ready 1 Dec |
 >
-> **Draft to Oakfield House**
+> **Draft to Client A**
 > [Priya: are you happy to commit to the week of 17 March for planting?]
 > Hi Sam, thanks for checking. Yes, the hedging can go in before Easter. We are looking at the week of [17 March], and Tom will confirm the exact day by Friday. The trees need two people on site, so we will come in the van, not the car. Best, Priya

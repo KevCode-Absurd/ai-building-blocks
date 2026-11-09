@@ -66,11 +66,11 @@ AI features fail in ways normal features do not: confident wrong answers, output
 
 ## Example of good output (short)
 
-*Harbourline Ferries is a made-up business used only to show the format: a chatbot on its booking site answering timetable and luggage questions, with users in Ireland and the UK.*
+*Illustrative structure, not a real business: a ferry operator with a chatbot on its booking site answering timetable and luggage questions, with users in Ireland and the UK. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Role:** the ferry firm deploys a vendor's chatbot but places it on its site under its own brand; whether it counts as provider or deployer is for its adviser to confirm. **Never list:** quote fares (the booking engine does that), promise refunds, give medical advice for travel.
 
-**Notice (first message):** "Hi, I'm Harbourline's AI assistant. I can help with timetables and luggage. For bookings and refunds, I'll pass you to our team."
+**Notice (first message):** "Hi, I'm [Business]'s AI assistant. I can help with timetables and luggage. For bookings and refunds, I'll pass you to our team."
 
 | Test case | Expected | Pass rule |
 |---|---|---|

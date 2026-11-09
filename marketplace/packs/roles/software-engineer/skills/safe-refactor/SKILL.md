@@ -89,7 +89,7 @@ One move per commit, with the test command after each. **Level 2:** make the com
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Oakfield Tutors", a tutoring agency with a 700-line `booking.js` written in jQuery.*
+*Illustrative structure, not a real business: a tutoring agency with a 700-line `booking.js` written in jQuery. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Must not change.** DOM ids `#slot-picker`, `#confirm-btn`; the `booking:confirmed` event the analytics script listens for; the POST body sent to `/api/bookings`.
 >

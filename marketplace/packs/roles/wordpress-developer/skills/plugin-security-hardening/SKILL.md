@@ -86,12 +86,12 @@ Rank findings: must fix (data change or exposure without a capability check, SQL
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Willow Street Books", a bookshop with a custom "reserve a book" plugin.*
+*Illustrative structure, not a real business: a bookshop with a custom "reserve a book" plugin. Copy the shape, never the content: every fact comes from the client's own context.*
 
-> **Summary.** Any visitor, even logged out, can delete reservations: the `wp_ajax_nopriv_wsbk_delete` handler has no nonce and no capability check. Two admin screens print customer names without escaping.
+> **Summary.** Any visitor, even logged out, can delete reservations: the `wp_ajax_nopriv_[business]_delete` handler has no nonce and no capability check. Two admin screens print customer names without escaping.
 >
 > | ID | File:line | Rule | Severity | Fix | Test |
 > |---|---|---|---|---|---|
-> | F1 | `includes/ajax.php:41` | Who may do this? | Must fix | Remove the nopriv hook; add `check_ajax_referer( 'wsbk_delete' )` and `current_user_can( 'manage_options' )` | Logged out: request returns `-1`. Subscriber: 403. Admin: works. |
+> | F1 | `includes/ajax.php:41` | Who may do this? | Must fix | Remove the nopriv hook; add `check_ajax_referer( '[business]_delete' )` and `current_user_can( 'manage_options' )` | Logged out: request returns `-1`. Subscriber: 403. Admin: works. |
 > | F2 | `admin/list.php:77` | Is the output safe? | Must fix | `echo esc_html( $reservation->name );` | Save a name containing `<b>` and confirm it shows as text |
 > | F3 | `includes/db.php:19` | Is the SQL prepared? | Must fix | `$wpdb->prepare( "SELECT * FROM {$table} WHERE id = %d", $id )` | Request with `id=1 OR 1=1` returns one row or none |

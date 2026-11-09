@@ -57,11 +57,11 @@ A guide only works if new copy is checked against it. This skill reads drafts li
 
 ## Example of good output (short)
 
-*Harbour Bean Roasters is a made-up coffee roaster whose guide says "warm, plain, a little dry". The draft is invented.*
+*Illustrative structure, not a real business: a coffee roaster whose guide says "warm, plain, a little dry". Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Line | Mark | Reason | Rewrite |
 |---|---|---|---|
-| "We are thrilled to announce our most sustainable blend ever!" | Fail | "Sustainable" with no evidence or explanation; exclamation breaks "dry" | "Our new Harbour Blend uses beans from two farms we buy from directly. Here's what that means." |
+| "We are thrilled to announce our most sustainable blend ever!" | Fail | "Sustainable" with no evidence or explanation; exclamation breaks "dry" | "Our new [Business] Blend uses beans from two farms we buy from directly. Here's what that means." |
 | "Utilising our world-class roasting expertise, we deliver an unparalleled cup." | Fix | Jargon and an unprovable superlative | "We roast in small batches every Tuesday, so it's fresh when it reaches you." |
 | "Order by Sunday and it ships Monday." | Pass | Plain and specific | — |
 

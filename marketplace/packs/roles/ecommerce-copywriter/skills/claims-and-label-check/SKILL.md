@@ -59,7 +59,7 @@ Most product copy trouble comes from a few words: "Made in USA", "eco-friendly",
 
 ## Example of good output (short)
 
-*Pine Hollow Home is a made-up business used only to show the format. It sells cotton throws to the US and the EU.*
+*Illustrative structure, not a real business: a home goods business selling cotton throws to the US and the EU. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Summary:** 6 claims checked: 2 kept, 2 narrowed, 1 cut, 1 held.
 

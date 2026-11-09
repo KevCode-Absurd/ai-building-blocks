@@ -242,3 +242,14 @@ Re-check these at every refresh (every 30 days). With web search connected, I ch
 | Gitleaks status | GitHub [25] | Feature complete; Betterleaks next |
 | CRA reporting | European Commission [16] | Live since 11 Sep 2026 |
 | Password hashing parameters | OWASP [5] | Argon2id 19 MiB, t=2, p=1 |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` I fix findings that let one user reach another's data first, because broken access control leads the OWASP Top 10. (§5)
+- `decision_rule` A vulnerable package in the KEV catalogue gets patched before anything else. (§5)
+- `decision_rule` When two findings share a CVSS rating, I rank the one with the higher EPSS and an internet-facing path first. (§5)
+- `decision_rule` When `npm audit fix` needs `--force`, I update by hand one package at a time with tests instead. (§5)
+- `decision_rule` I ship a new CSP as report-only first and enforce it once the reports are clean. (§5)
+- `check` If CodeQL does not support the language, I use another analyser or manual review rather than trust an empty result. (§5)

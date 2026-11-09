@@ -63,7 +63,7 @@ A speech that only works for people who can see the slides and hear every word l
 
 ## Example of good output (short)
 
-*Harbour Lane Credit Union is made up, used only to show the format.*
+*Illustrative structure, not a real business: a credit union's annual members' meeting. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Access plan:** Annual members' meeting, hybrid, 80 in the room and about 200 online, recorded. Organiser has booked a CART captioner shown on a second screen and on the stream, and a BSL interpreter. PowerPoint live subtitles as a backup if the captioner's link fails.
 
@@ -77,6 +77,6 @@ A speech that only works for people who can see the slides and hear every word l
 |---|---|---|
 | Siobhán Ní Bhriain | shiv-AWN nee VREE-in | Chair, speaks second |
 | CU | "credit union" | Spoken in full; slide shows "CU" |
-| Harbour Lane | as written | Our name; not "Harbor" |
+| [Business] | as written | Our name; flag any spelling a captioner could get wrong |
 
 **Send by:** Friday, with the final script and slides as a Word file and a PDF.

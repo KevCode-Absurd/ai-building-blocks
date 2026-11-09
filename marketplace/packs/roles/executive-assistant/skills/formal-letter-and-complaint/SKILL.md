@@ -88,7 +88,7 @@ Read the letter as the person receiving it: can they see what happened, what is 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Tilly's Bakehouse, a café in Bath, UK, writing to an equipment supplier about a faulty oven.*
+*Illustrative structure, not a real business: a café in Bath, UK, writing to an equipment supplier about a faulty oven. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Ref: Order 55821, combination oven, delivered 2 October 2026**
 >
@@ -105,6 +105,6 @@ Read the letter as the person receiving it: can they see what happened, what is 
 > Please reply in writing by 20 November.
 >
 > Yours faithfully,
-> Tilly Moran, Tilly's Bakehouse
+> Tilly Moran, [Business]
 >
 > *Before sending: check your rights with an advice service, as this involves money.*

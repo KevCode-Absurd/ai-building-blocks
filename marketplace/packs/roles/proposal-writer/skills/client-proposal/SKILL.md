@@ -66,7 +66,7 @@ Not for: formal RFPs and public tenders with scoring rules (use the tender-and-r
 
 ## Example of good output (short)
 
-*Fennel and Rye Kitchens is a made-up restaurant group, and Northpoint Studio a made-up web agency, used only to show the format. Prices are invented and stand in for the agency's own price list.*
+*Illustrative structure, not a real business: a web agency writing a proposal for a restaurant group. Prices stand in for the agency's own price list. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Summary.** You told us your four sites "all look different online" and that bookings "go everywhere: phone, email and two apps". You need one site with one booking system before the spring menu launch on 3 March. We propose a single site with a page per location and one booking flow, live by 24 February.
 

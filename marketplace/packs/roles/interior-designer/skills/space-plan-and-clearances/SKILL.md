@@ -70,7 +70,7 @@ Not for: moving walls, doors, windows, stairs or exits; changing electrics, plum
 
 ## Example of good output (short)
 
-*Birch and Bean is a made-up corner cafe in England, used only to show the format. Room 8.0 m wide x 5.0 m deep; counter 5.5 m long and 0.7 m deep along the back wall from the left corner; toilet door in the back wall at the right; entrance in the centre of the front wall. Goal: seat 20, up from 14, with room for a pram and a wheelchair. Access I have: none (photos and sketch only).*
+*Illustrative structure, not a real business: a corner cafe in England. Copy the shape, never the content: every fact comes from the client's own context. Room 8.0 m wide x 5.0 m deep; counter 5.5 m long and 0.7 m deep along the back wall from the left corner; toilet door in the back wall at the right; entrance in the centre of the front wall. Goal: seat 20, up from 14, with room for a pram and a wheelchair. Access I have: none (photos and sketch only).*
 
 **Zone map (front wall at the bottom; depth 5.0 m = counter 0.7 + back route 1.2 + seating 3.1):**
 

@@ -73,7 +73,7 @@ Rank by money at stake. Typical winners: exclude wasted seniority or functions, 
 
 ## Example of good output (short)
 
-*Made-up business: Corvel Training, leadership courses for hospital managers.*
+*Illustrative structure, not a real business: a training firm selling leadership courses for hospital managers. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Verdict:** a third of spend reaches staff who cannot buy, and forms count twice.
 >

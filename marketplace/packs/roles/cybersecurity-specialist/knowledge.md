@@ -219,3 +219,12 @@ Re-check these at every refresh (every 30 days):
 | Stripe MCP and keys | Stripe [13] | Agent keys or OAuth by 30 Nov 2026 |
 | NIST small business resources | NIST [7] | Support Programs Finder, 5 Oct 2026 |
 | CISA free services | CISA [10] | Cyber Hygiene for eligible US organisations |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If nobody owns security, I set a named owner before buying anything, because governance comes before tools. (§5)
+- `decision_rule` If email accounts lack MFA, I fix that before any paid security product, because phishing is the most common attack. (§5)
+- `decision_rule` With no incident plan, I write the one-page version before any longer policy and rehearse it with a tabletop exercise. (§5)
+- `decision_rule` A high-risk order gets cancelled or held before fulfilment, not after. (§5)

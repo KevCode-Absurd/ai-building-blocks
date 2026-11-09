@@ -33,7 +33,7 @@ Can a core block, pattern, custom field, menu or setting do it? If yes, say so a
 ### 2. Plan the plugin
 
 - One main file with the plugin header (name, description, version, requires at least, requires PHP, licence, text domain).
-- A unique prefix of at least four letters for every function, class, option, transient, hook name and post type key, for example `hlbike_` for a made-up "Harbour Lane Bikes".
+- A unique prefix of at least four letters for every function, class, option, transient, hook name and post type key, for example `[business]_`, built from a short form of the business name.
 - Only the files the feature needs: `includes/`, `admin/`, `public/`, `blocks/`, `languages/`, `uninstall.php`.
 - Exit at the top of every PHP file if `ABSPATH` is not defined.
 
@@ -100,13 +100,13 @@ Run the checks below. Run Plugin Check (`wp plugin check <plugin>`) on staging w
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Harbour Lane Bikes", replacing a large directory plugin used only for a shop locations list.*
+*Illustrative structure, not a real business: a bike shop replacing a large directory plugin used only for a shop locations list. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **What it does.** Adds a "Locations" content type with address, phone and opening hours, and a "Locations list" block. Core blocks could not hold structured opening hours for reuse on several pages.
 >
 > ```
-> hlbike-locations/
->   hlbike-locations.php
+> [business]-locations/
+>   [business]-locations.php
 >   includes/post-type.php
 >   includes/meta.php
 >   blocks/locations-list/block.json
@@ -115,6 +115,6 @@ Run the checks below. Run Plugin Check (`wp plugin check <plugin>`) on staging w
 >   languages/
 > ```
 >
-> **Safety notes.** Meta saved with `sanitize_text_field()` after `check_admin_referer( 'hlbike_save_location', 'hlbike_location_nonce' )` and `current_user_can( 'edit_post', $post_id )`. Block output escaped with `esc_html()` in `render.php`.
+> **Safety notes.** Meta saved with `sanitize_text_field()` after `check_admin_referer( '[business]_save_location', '[business]_location_nonce' )` and `current_user_can( 'edit_post', $post_id )`. Block output escaped with `esc_html()` in `render.php`.
 >
 > **Uninstall.** Keeps locations unless "Delete data on uninstall" is ticked in Settings > Locations.

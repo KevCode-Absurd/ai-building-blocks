@@ -73,7 +73,7 @@ Level 2: pull request, apply to staging, run the tests, and watch reports and lo
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Tidewater Lettings", Django 5.1 tenant portal.*
+*Illustrative structure, not a real business: a letting agency's Django 5.1 tenant portal. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > Not covered: the hosting provider's network settings and the payment provider's hosted page.
 >

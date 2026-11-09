@@ -56,7 +56,7 @@ An accessible message is one more people can read: on a phone, with a screen rea
 
 ## Example of good output (short)
 
-*Little Acorns Nursery is a made-up nursery used only to show the format.*
+*Illustrative structure, not a real business: a nursery. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Item | Standard | Result | Fix |
 |---|---|---|---|

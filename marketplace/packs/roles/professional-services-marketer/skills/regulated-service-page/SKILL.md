@@ -65,7 +65,7 @@ This skill writes marketing. It does not decide what a profession's rules allow.
 
 ## Example of good output (short)
 
-*Lindqvist & Okafor is a made-up two-solicitor firm in England, used only to show the format. All details are invented for this example.*
+*Illustrative structure, not a real business: a two-solicitor firm in England. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Positioning:** "We help families in Northshire sort out a loved one's estate when there is no dispute, so they can get on with grieving."
 

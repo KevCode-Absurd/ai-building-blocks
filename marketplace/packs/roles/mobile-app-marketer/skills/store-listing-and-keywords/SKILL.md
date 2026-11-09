@@ -101,7 +101,7 @@ Run the checks below. Fix before handing over.
 
 ## Example of good output (short)
 
-*Made-up app for illustration: "Tallyleaf", a bill reminder app.*
+*Illustrative structure, not a real business: a bill reminder app. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Keyword map (extract)**
 >
@@ -114,7 +114,7 @@ Run the checks below. Fix before handing over.
 >
 > | Field | Limit | Text | Count |
 > |---|---|---|---|
-> | App Store name | 30 | Tallyleaf: Bill Reminder | 24 |
+> | App Store name | 30 | [App]: Bill Reminder | name + 15 |
 > | Subtitle | 30 | Avoid late fees on every bill | 29 |
 > | Play short description | 80 | See every bill due this week and get a nudge before late fees hit. | 66 |
 >

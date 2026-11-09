@@ -95,7 +95,7 @@ List known problems in plain words with planned fix dates, third-party content t
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Harbour Lane Dental", a three-clinic dental group with an online booking flow.*
+*Illustrative structure, not a real business: a three-clinic dental group with an online booking flow. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Summary.** Keyboard users cannot choose a time slot; the date fields have no labels; error messages show as red borders only; the chat button covers the "Confirm booking" button when it has focus on phones; the clinic photos have file names as alt text.
 >

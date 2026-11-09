@@ -95,7 +95,7 @@ What support exists, how to ask for it, who sees what, and how adjustments are a
 
 ## Example of good output (short)
 
-*Made-up business: Ridgeway Logistics, 120 staff, two depots and 40 drivers, England.*
+*Illustrative structure, not a real business: a logistics firm with 120 staff, two depots and 40 drivers, England. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Template: check this with local rules before use. This is not medical advice; talk to a qualified professional about health.**
 >

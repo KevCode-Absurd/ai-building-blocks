@@ -84,7 +84,7 @@ Before the first send, show the founder the list of recipients and templates and
 
 ## Example of good output (short)
 
-Made-up company for illustration: Pellucid Freight, raising 1.5 million at seed for B2B logistics software. Investors are coded; this is not a real list. Weights as in step 1; "partly" scores half; location and help columns not shown.
+Illustrative structure, not a real company: a startup raising 1.5 million at seed for B2B logistics software. Investors are coded; this is not a real list. Weights as in step 1; "partly" scores half; location and help columns not shown. Copy the shape, never the content: every fact comes from the client's own context.
 
 > | Investor | Stage | Cheque fits | Sector | Leads | Score | Unknowns | Tier |
 > |---|---|---|---|---|---|---|---|

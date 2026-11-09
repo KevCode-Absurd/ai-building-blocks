@@ -92,7 +92,7 @@ Balance sheet balances (if built), cash in the model ties to the cash flow, ever
 
 ## Example of good output (short)
 
-Made-up business for illustration: Larkspur Studio, a five-person design agency.
+Illustrative structure, not a real business: a five-person design agency. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.
 
 > **Summary:** The plan reaches 612,000 revenue and 48,000 profit next year. Cash dips to 22,000 in March in the plan case (annual insurance plus the new designer's first month), above your 15,000 floor. In the cautious case it falls to 3,000 in March.
 >

@@ -60,7 +60,7 @@ Access levels for this skill: the check itself needs only level 1 (read: screens
 
 ## Example of good output (short)
 
-*Brightwater Candles is a made-up business used only to show the format: a UK candle maker launching on Shopify and selling to the UK and Ireland.*
+*Illustrative structure, not a real business: a UK candle maker launching on Shopify and selling to the UK and Ireland. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Verdict:** go after fixes. Two issues block or lose orders; the rest are small.
 

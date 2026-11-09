@@ -94,14 +94,14 @@ For every received order, record order date, confirmation date, ship date and re
 
 ## Example of good output (short)
 
-*Made-up business: Tallow Lane, a soap maker ordering through Odoo. Level 3 for Odoo purchasing: three approved suppliers, $12,000 budget to 30 November, no single order over $5,000.*
+*Illustrative structure, not a real business: a soap maker ordering through Odoo. Level 3 for Odoo purchasing: three approved suppliers, $12,000 budget to 30 November, no single order over $5,000. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Placed today (level 3).**
 > | Time | Supplier | Order | Lines | Total | Budget left |
 > |---|---|---|---|---|---|
-> | 09:12 | North Oils | P00418 | Shea butter 200 kg, olive oil 150 L | $3,940 | $8,060 |
-> | 09:20 | Box & Band | P00419 | Gift box 2,000 (cases of 250) | $1,180 | $6,880 |
+> | 09:12 | Supplier A | P00418 | Shea butter 200 kg, olive oil 150 L | $3,940 | $8,060 |
+> | 09:20 | Supplier B | P00419 | Gift box 2,000 (cases of 250) | $1,180 | $6,880 |
 >
-> **Held for you.** Coastal Lye replied with new bank details for the balance. I have not changed anything or placed their order. Please confirm the change with them by phone on a number you already hold.
+> **Held for you.** Supplier C replied with new bank details for the balance. I have not changed anything or placed their order. Please confirm the change with them by phone on a number you already hold.
 >
-> **Lead times (last 6 orders).** North Oils: 18 days average, spread 3 days, all on time and in full. Box & Band: 26 days average, spread 9 days, 2 of 6 late. The reorder plan now uses 26 ± 9 days for boxes.
+> **Lead times (last 6 orders).** Supplier A: 18 days average, spread 3 days, all on time and in full. Supplier B: 26 days average, spread 9 days, 2 of 6 late. The reorder plan now uses 26 ± 9 days for boxes.

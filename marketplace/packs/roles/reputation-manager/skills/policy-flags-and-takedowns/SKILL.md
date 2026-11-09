@@ -66,7 +66,7 @@ Access levels for this skill: reviewing and building the evidence pack is level 
 
 ## Example of good output (short)
 
-*Northgate Physio is a made-up clinic, used only to show the format.*
+*Illustrative structure, not a real business: a physiotherapy clinic. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Triage**
 

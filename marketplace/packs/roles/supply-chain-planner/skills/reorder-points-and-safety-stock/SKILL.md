@@ -99,7 +99,7 @@ Write the reorder points, min/max or safety stock into a copy of the settings (l
 
 ## Example of good output (short)
 
-*Made-up business: Harbour & Pine, a homeware importer. Inputs are the client's figures.*
+*Illustrative structure, not a real business: a homeware importer. Inputs are the client's figures. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Linen throw.** Average demand 12 a day (standard deviation 5). Lead time from the last nine purchase orders: average 42 days, standard deviation 7. You chose a 95% cycle service level, so z = NORM.S.INV(0.95) = 1.645.
 >

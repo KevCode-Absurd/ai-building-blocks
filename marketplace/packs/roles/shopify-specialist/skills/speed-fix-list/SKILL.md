@@ -59,7 +59,7 @@ Access levels for this skill: finding and ranking fixes needs only level 1 (read
 
 ## Example of good output (short)
 
-*Copperleaf Kitchenware is a made-up business used only to show the format: a cookware store on a Theme Store theme, mostly mobile traffic.*
+*Illustrative structure, not a real business: a cookware store on a Theme Store theme, mostly mobile traffic. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Baseline (mobile, last 30 days):** product pages LCP in the poor range, INP good, CLS moderate. Collection pages good on all three. Product pages carry most sessions and orders in the owner's report.
 

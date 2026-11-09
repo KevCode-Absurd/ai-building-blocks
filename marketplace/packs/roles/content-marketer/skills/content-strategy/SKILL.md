@@ -60,7 +60,7 @@ If there is no data at all, start from customer questions and the team's own kno
 
 ## Example of good output (short)
 
-*Brindle and Moss Garden Design is a made-up business used only to show the format: a two-person garden design studio. All research details are invented for this example.*
+*Illustrative structure, not a real business: a two-person garden design studio. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Goal and content's job:** content will help win 8 more design consultations a month by answering the questions homeowners ask before they call, measured by consultation requests from content pages (a GA4 key event).
 

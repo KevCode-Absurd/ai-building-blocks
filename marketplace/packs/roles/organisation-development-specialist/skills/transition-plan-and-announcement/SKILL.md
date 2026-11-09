@@ -76,7 +76,7 @@ Name what success looks like (faster decisions, clear ownership, team health hol
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Harrowgate Home Services, merging two customer service teams of 40 and 25 after buying a competitor.*
+*Illustrative structure, not a real business: a home services firm merging two customer service teams of 40 and 25 after buying a competitor. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Checkpoint | Official source | Who confirms | Earliest date |
 > |---|---|---|---|

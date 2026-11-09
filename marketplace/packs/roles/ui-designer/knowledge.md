@@ -220,3 +220,28 @@ Re-check these at every refresh (every 30 days):
 | Figma Dev Mode and variables | Figma Help Center [25][26] | Checked 6 Nov 2026 |
 | Browser support for colour scheme | MDN [30] | Baseline since January 2020 |
 | Google's expressive research | Google Design [20] | No date shown on page |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When two things compete for first look on a screen, make one smaller or quieter, because hierarchy needs a clear first item. (§5)
+- `decision_rule` Cut a view back to three text sizes unless the content needs more. (§5)
+- `decision_rule` When a brand colour fails 4.5:1 for text, keep it for large text or fills and use a darker shade of the same hue for small text, stating the change. (§5)
+- `decision_rule` In dark mode, aim higher than the minimum contrast for small text. (§5)
+- `check` Every screen has a clear first item and one main action. (§7)
+- `never_do` No "make it pop": every change says why. (§8)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Purple or blue gradients.** Gradient fills on headers, buttons and cards in place of the brand's colour roles. Map the brand's colours to roles (section 8).
+- **System fonts in place of the brand font.** Inter, Geist or a system font replacing the brand typeface in the type scale. Build the scale on the brand font, except where the platform guidance says to start from system styles (section 5).
+- **Pill buttons where the brand is square.** Fully rounded buttons by default. Set radius from the brand's foundations.
+- **Emoji icons.** Emoji in place of an icon set. Use one icon set that fits the brand and meets 3:1.
+- **Glassmorphism.** Frosted, translucent cards behind content. It reads as default and often fails contrast; keep translucency to where the platform guidance allows it (section 5).
+- **Rounded cards everywhere.** Every group of content boxed in a rounded card with a shadow. Use spacing and type for grouping, and cards only where they help.
+- **Every section the same height.** Even, repeating blocks down the screen. Let the content and the screen's one main action set the rhythm.
+- **Fade-up on every block.** Entry animation on every element. Animate only state changes that help the user.
+- **Cream for "premium".** Cream backgrounds swapped in for a premium feel. Keep the brand's surface colours.

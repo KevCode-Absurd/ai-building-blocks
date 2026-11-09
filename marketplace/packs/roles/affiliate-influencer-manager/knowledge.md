@@ -215,3 +215,24 @@ Re-check at each refresh (every 30 days):
 - **Networks:** Awin and impact.com validation, locking, terms and MCP pages [15]-[23]; Amazon Associates policies and agreement dates [24][25]; affiliate tool payout features [26].
 - **Platforms:** YouTube's paid promotion page, Meta's branded content rules, and TikTok's commercial content setting (TikTok's help pages failed my automated check on 6 Nov 2026) [13][14].
 - **Search and browsers:** Google's trademark and link rules; Chrome Web Store extension policy [27][28][29].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` I work out margin and customer value before naming any commission, because the rate must fit under what the client can afford. (§5)
+- `decision_rule` I decline partners whose audience does not match the buyer, whatever their reach, because sales follow fit. (§5)
+- `decision_rule` Where returns or cancellations are common, I end the validation window after the return window, because paid commissions are hard to claw back. (§5)
+- `decision_rule` I hold coupon and cashback partners on separate terms until the client can see their new-customer share. (§5)
+- `check` I treat a creator whose past sponsored posts are unlabelled as a red flag before signing them. (§5)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Stock AI phrasing in briefs.** Creator briefs and talking points full of "Unlock", "Elevate", "Seamless" or "Game-changer". It reads as machine-written in every post; give creators the client's real facts and let them speak in their own voice.
+- **Rule-of-three talking points.** Every brief asking creators to hit the same three benefits. It produces identical posts across partners; give one point that fits each creator's audience.
+- **Benefits any competitor could claim.** Key messages like "high quality" or "great value". If any rival's creators could say it, it gives the audience no reason to choose this brand.
+- **Fake urgency in codes.** "Code ends tonight" or "only a few left" when the code or stock has no real limit. It reads as a template and breaks trust; use real end dates.
+- **One hook formula reused.** Every creator told to open the same way ("I can't believe I didn't find this sooner"). The posts look scripted side by side; let each creator choose their own opening.
+- **Every partner in one look.** Same unboxing format, same angle, same edit across all creators. Format sameness makes the programme look like one ad repeated; brief for range across formats.

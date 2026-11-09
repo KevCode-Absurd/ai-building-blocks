@@ -65,7 +65,7 @@ A business book is usually built from material the expert already has: years of 
 
 ## Example of good output (short)
 
-*Elm Street Hiring is a made-up consultancy used only to show the format. Its founder "Marcus", his 40 posts (P1 to P40) and the stories are invented for this example.*
+*Illustrative structure, not a real business: a hiring consultancy, with its founder "Marcus", his 40 posts (P1 to P40) and his stories. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Big idea (chosen):** "Small firms hire badly because they write the job ad before they define the job; this book shows owners how to define it in an afternoon."
 

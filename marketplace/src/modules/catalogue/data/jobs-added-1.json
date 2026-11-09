@@ -225,7 +225,1563 @@
         "note": "University of Kentucky pilot: of 577 patients sent a text reminder 24 hours ahead, 39% confirmed and 82% of those came; the author estimated a 1:6 return.",
         "url": "https://uknowledge.uky.edu/dnp_etds/82"
       }
-    ]
+    ],
+    "family": "email",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Messages and emails you already send",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "consent_basis",
+        "label": "How people agreed to hear from you",
+        "required": false,
+        "how": "The opt-in or relationship each audience has, so the right opt-out and frequency rules apply."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No price, fee, deposit, date, time, discount, address, staff name, review or result appears unless the brief gives it; unknown details are fill-in fields in square brackets such as [date] or [link]. Any invented item fails.",
+      "Marketing texts and emails carry opt-out wording; no false urgency; review asks go to all customers, not only happy ones, and offer no reward; no message shares private health, legal or money details or gives that kind of advice."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A message map with the trigger, audience, timing, channel, link and stop rule for each message. Every message in your voice and within channel limits, with fill-in fields and opt-out wording where needed. Two versions of the key messages."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Texts are 160 characters or fewer, or within the limit in the brief, with counts shown; sentences are under 20 words; no all-caps or jargon; each message asks for one action at most."
+      },
+      {
+        "criterion": "Every moment the brief asks for has a message, in the chosen journey, channels…",
+        "weight": 6,
+        "test": "Each moment or trigger named in the brief has at least one message; the number of messages matches the count asked for; every message names one of the channels chosen in the brief."
+      },
+      {
+        "criterion": "The map and every message are finished and ready to load into a tool",
+        "weight": 6,
+        "test": "Each message is final text, not notes; the map gives trigger, audience, timing, channel and stop rule for every message; key messages have two versions; fill-in fields are marked the same way throughout."
+      }
+    ],
+    "mode_default": "extend"
+  },
+  {
+    "id": "review-request-messages",
+    "title": "Review and testimonial request messages",
+    "summary": "Messages that ask every customer for an honest review or testimonial at the right moment, in your voice and within each platform's rules.",
+    "area": "customer-support",
+    "deliverable": "A request map with the moment, channel, link and stop rule for each ask; every message in your voice within channel limits; two versions of the first ask; a spoken counter script, a short question list for testimonials, a consent line and a tracker layout.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "journey",
+        "label": "Which journey do you need messages for?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Review requests after a visit, job or order",
+          "Testimonial or case quote requests",
+          "Both"
+        ]
+      },
+      {
+        "id": "message_count",
+        "label": "How many messages?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 10. Two versions of the same message count as one.",
+        "max": 60
+      },
+      {
+        "id": "channels",
+        "label": "Which channels?",
+        "type": "multichoice",
+        "required": true,
+        "options": [
+          "Text (SMS)",
+          "Email",
+          "WhatsApp",
+          "App push",
+          "In-app banner or pop-up",
+          "Website banner or auto-reply",
+          "Printed card",
+          "In person (spoken script)"
+        ]
+      },
+      {
+        "id": "business",
+        "label": "Your business and customers",
+        "type": "longtext",
+        "required": true,
+        "help": "What you do, who your customers are and how they book or buy.",
+        "max": 1500
+      },
+      {
+        "id": "moments",
+        "label": "Moments to cover",
+        "type": "list",
+        "required": false,
+        "help": "For example 48 hours before, 2 hours before, after a no-show. Leave blank and we will suggest them.",
+        "max": 20
+      },
+      {
+        "id": "facts",
+        "label": "Facts, policies and offers to use",
+        "type": "longtext",
+        "required": true,
+        "help": "Prices, deposits, opening hours, links, cancellation rules, offers and dates. Only these will be used.",
+        "max": 5000
+      },
+      {
+        "id": "voice",
+        "label": "Your voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a message you have sent before.",
+        "max": 800
+      },
+      {
+        "id": "limits",
+        "label": "Length limits",
+        "type": "text",
+        "required": false,
+        "help": "For example one text (160 characters) or your app's push limits.",
+        "max": 300
+      },
+      {
+        "id": "consent",
+        "label": "How customers agreed to hear from you",
+        "type": "text",
+        "required": false,
+        "help": "For example a ticked box at booking. It helps us add the right opt-out wording.",
+        "max": 300
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "covers_journey",
+        "text": "Every moment the brief asks for has a message, in the chosen journey, channels and count.",
+        "weight": 4,
+        "pass_rule": "Each moment or trigger named in the brief has at least one message; the number of messages matches the count asked for; every message names one of the channels chosen in the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Every price, date, policy, name, link and offer comes from the brief.",
+        "weight": 5,
+        "pass_rule": "No price, fee, deposit, date, time, discount, address, staff name, review or result appears unless the brief gives it; unknown details are fill-in fields in square brackets such as [date] or [link]. Any invented item fails.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "ready_to_use",
+        "text": "The map and every message are finished and ready to load into a tool.",
+        "weight": 4,
+        "pass_rule": "Each message is final text, not notes; the map gives trigger, audience, timing, channel and stop rule for every message; key messages have two versions; fill-in fields are marked the same way throughout.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_and_short",
+        "text": "Messages are short, plain and in the buyer's voice, with one clear next step.",
+        "weight": 3,
+        "pass_rule": "Texts are 160 characters or fewer, or within the limit in the brief, with counts shown; sentences are under 20 words; no all-caps or jargon; each message asks for one action at most.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "review_rules",
+        "text": "Every ask follows review platform and consumer rules: no gating, no rewards, no scripted praise.",
+        "weight": 5,
+        "pass_rule": "Asks go to every customer, not only happy ones; no discount, entry or gift is tied to a review; no wording tells people what to say or star rating to give; testimonial use has a consent line.",
+        "critical": true,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 249,
+      "size": {
+        "field": "message_count",
+        "unit": "message",
+        "included": 10,
+        "per_unit_usd": 6
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a customer messaging specialist. Write review or testimonial request messages for the business below. Give a table first: moment, channel, link, who gets it and when the asks stop. Then write each message in my voice within the channel's limits, with two versions of the first ask, a short spoken script for the counter and a consent line for testimonials. Ask every customer, never only happy ones; offer no rewards; do not tell people what to write. Use only the facts and links I give.",
+    "not_for": [
+      "Marketing campaigns or newsletters (see the email sequence jobs)",
+      "Messages to people who did not agree to hear from you",
+      "Review gating, paying for reviews or fake reviews",
+      "Medical, legal or financial advice inside the messages",
+      "Legal notices such as eviction, debt or formal rent demands",
+      "Setting up or sending the messages in your tools",
+      "Passwords, card numbers or patient records in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "A two-chair barber shop wants a text that goes out the evening after each appointment asking for a Google review, plus a line staff can say at the till. Booking is through Square. Friendly and short, no emojis.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "A kitchen fitting firm finishes about six jobs a month. We want an email and a follow-up text a week after sign-off asking for a review, and a request for a short testimonial with photo permission for the website.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "An online tea shop on Shopify wants a review request email 10 days after delivery and one reminder 7 days later, stopping if the customer has already reviewed. Reviews go to our product pages. 4 messages, two versions of the first.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "A physiotherapy clinic wants testimonial requests for patients who finished a course of treatment. No health details in the message, explicit consent to publish, first name and initial only. Email only, 3 messages.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "review request",
+      "ask for reviews",
+      "google review text",
+      "testimonial request",
+      "review email",
+      "review follow-up",
+      "customer feedback request"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno's freelancer rate guide lists copywriters at an average of $67 an hour, about £408 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/copywriter"
+      },
+      {
+        "note": "University of Kentucky pilot: of 577 patients sent a text reminder 24 hours ahead, 39% confirmed and 82% of those came; the author estimated a 1:6 return.",
+        "url": "https://uknowledge.uky.edu/dnp_etds/82"
+      }
+    ],
+    "family": "email",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Review requests you already send",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "consent_basis",
+        "label": "How people agreed to hear from you",
+        "required": false,
+        "how": "The opt-in or relationship each audience has, so the right opt-out and frequency rules apply."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No price, fee, deposit, date, time, discount, address, staff name, review or result appears unless the brief gives it; unknown details are fill-in fields in square brackets such as [date] or [link]. Any invented item fails."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A request map with the moment, channel, link and stop rule for each ask; every message in your voice within channel limits; two versions of the first ask; a spoken counter script, a short question list for testimonials, a consent line and a tracker layout."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts. For this job: Asks go to every customer, not only happy ones; no discount, entry or gift is tied to a review; no wording tells people what to say or star rating to give; testimonial use has a consent line."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Texts are 160 characters or fewer, or within the limit in the brief, with counts shown; sentences are under 20 words; no all-caps or jargon; each message asks for one action at most."
+      },
+      {
+        "criterion": "Every moment the brief asks for has a message, in the chosen journey, channels…",
+        "weight": 6,
+        "test": "Each moment or trigger named in the brief has at least one message; the number of messages matches the count asked for; every message names one of the channels chosen in the brief."
+      },
+      {
+        "criterion": "The map and every message are finished and ready to load into a tool",
+        "weight": 6,
+        "test": "Each message is final text, not notes; the map gives trigger, audience, timing, channel and stop rule for every message; key messages have two versions; fill-in fields are marked the same way throughout."
+      }
+    ],
+    "mode_default": "patch"
+  },
+  {
+    "id": "reminder-and-recall-messages",
+    "title": "Reminder, recall and renewal messages",
+    "summary": "Appointment reminders, recalls, service-due notes, renewals and reorder reminders that cut no-shows and lapses, in your voice and within channel limits.",
+    "area": "customer-support",
+    "deliverable": "A timing map with trigger, audience, channel, link and stop rule for each reminder; every message in your voice within channel limits, with fill-in fields; two versions of the key reminder; a no-show or lapse follow-up and opt-out wording where needed.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "journey",
+        "label": "Which journey do you need messages for?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Bookings, reminders and no-shows",
+          "Rebooking, recall or service due",
+          "Renewal or reorder reminders",
+          "Deadline reminders for clients"
+        ]
+      },
+      {
+        "id": "message_count",
+        "label": "How many messages?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 10. Two versions of the same message count as one.",
+        "max": 60
+      },
+      {
+        "id": "channels",
+        "label": "Which channels?",
+        "type": "multichoice",
+        "required": true,
+        "options": [
+          "Text (SMS)",
+          "Email",
+          "WhatsApp",
+          "App push",
+          "In-app banner or pop-up",
+          "Website banner or auto-reply",
+          "Printed card",
+          "In person (spoken script)"
+        ]
+      },
+      {
+        "id": "business",
+        "label": "Your business and customers",
+        "type": "longtext",
+        "required": true,
+        "help": "What you do, who your customers are and how they book or buy.",
+        "max": 1500
+      },
+      {
+        "id": "moments",
+        "label": "Moments to cover",
+        "type": "list",
+        "required": false,
+        "help": "For example 48 hours before, 2 hours before, after a no-show. Leave blank and we will suggest them.",
+        "max": 20
+      },
+      {
+        "id": "facts",
+        "label": "Facts, policies and offers to use",
+        "type": "longtext",
+        "required": true,
+        "help": "Prices, deposits, opening hours, links, cancellation rules, offers and dates. Only these will be used.",
+        "max": 5000
+      },
+      {
+        "id": "voice",
+        "label": "Your voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a message you have sent before.",
+        "max": 800
+      },
+      {
+        "id": "limits",
+        "label": "Length limits",
+        "type": "text",
+        "required": false,
+        "help": "For example one text (160 characters) or your app's push limits.",
+        "max": 300
+      },
+      {
+        "id": "consent",
+        "label": "How customers agreed to hear from you",
+        "type": "text",
+        "required": false,
+        "help": "For example a ticked box at booking. It helps us add the right opt-out wording.",
+        "max": 300
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "covers_journey",
+        "text": "Every moment the brief asks for has a message, in the chosen journey, channels and count.",
+        "weight": 4,
+        "pass_rule": "Each moment or trigger named in the brief has at least one message; the number of messages matches the count asked for; every message names one of the channels chosen in the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Every price, date, policy, name, link and offer comes from the brief.",
+        "weight": 5,
+        "pass_rule": "No price, fee, deposit, date, time, discount, address, staff name, review or result appears unless the brief gives it; unknown details are fill-in fields in square brackets such as [date] or [link]. Any invented item fails.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "ready_to_use",
+        "text": "The map and every message are finished and ready to load into a tool.",
+        "weight": 4,
+        "pass_rule": "Each message is final text, not notes; the map gives trigger, audience, timing, channel and stop rule for every message; key messages have two versions; fill-in fields are marked the same way throughout.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_and_short",
+        "text": "Messages are short, plain and in the buyer's voice, with one clear next step.",
+        "weight": 3,
+        "pass_rule": "Texts are 160 characters or fewer, or within the limit in the brief, with counts shown; sentences are under 20 words; no all-caps or jargon; each message asks for one action at most.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "timing_and_stop",
+        "text": "Each reminder fires at a sensible moment for this business and stops when the customer acts.",
+        "weight": 4,
+        "pass_rule": "Every message has a trigger and send time tied to the booking, due date or renewal date in the brief; each series has a stop rule (booked, renewed, ordered or opted out); the cancellation or deposit rule is stated only as the brief gives it.",
+        "critical": true,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 249,
+      "size": {
+        "field": "message_count",
+        "unit": "message",
+        "included": 10,
+        "per_unit_usd": 6
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a customer messaging specialist. Write reminder messages for the booking, recall, renewal or reorder journey below. Start with a timing map: message, trigger, send time, channel, link and stop rule. Then write each reminder in my voice within the channel's limits, with counts for texts, two versions of the key reminder and a follow-up for no-shows or lapses. Add opt-out wording to marketing messages. Use only the dates, fees and policies I give; mark anything missing as [fill-in].",
+    "not_for": [
+      "Marketing campaigns or newsletters (see the email sequence jobs)",
+      "Messages to people who did not agree to hear from you",
+      "Review gating, paying for reviews or fake reviews",
+      "Medical, legal or financial advice inside the messages",
+      "Legal notices such as eviction, debt or formal rent demands",
+      "Setting up or sending the messages in your tools",
+      "Passwords, card numbers or patient records in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "A dental practice with two sites wants recall texts and emails for patients due a check-up: due next month, due now, and overdue by six weeks. Booking link and phone from our site. No clinical advice.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "A garage that does servicing and MOTs wants reminders a month and a week before each car's MOT date, and a nudge two weeks after if they have not booked. Text and email.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "A salon wants a rebooking flow: a text 5 weeks after a colour appointment, a reminder 48 hours before any booking, and a no-show message that restates our 24-hour cancellation rule and £10 fee. 6 messages.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "A coffee subscription shop wants reorder reminders timed to bag size: 250 g bags at 12 days, 1 kg at 40 days, with a skip link. Email and SMS, two versions of the first reminder.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "appointment reminders",
+      "sms reminders",
+      "no-show messages",
+      "recall messages",
+      "renewal reminders",
+      "reorder emails",
+      "service due reminders",
+      "booking reminders"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno's freelancer rate guide lists copywriters at an average of $67 an hour, about £408 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/copywriter"
+      },
+      {
+        "note": "University of Kentucky pilot: of 577 patients sent a text reminder 24 hours ahead, 39% confirmed and 82% of those came; the author estimated a 1:6 return.",
+        "url": "https://uknowledge.uky.edu/dnp_etds/82"
+      }
+    ],
+    "family": "email",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Reminders and booking messages you already send",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "consent_basis",
+        "label": "How people agreed to hear from you",
+        "required": false,
+        "how": "The opt-in or relationship each audience has, so the right opt-out and frequency rules apply."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No price, fee, deposit, date, time, discount, address, staff name, review or result appears unless the brief gives it; unknown details are fill-in fields in square brackets such as [date] or [link]. Any invented item fails."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof. For this job: Every message has a trigger and send time tied to the booking, due date or renewal date in the brief; each series has a stop rule (booked, renewed, ordered or opted out); the cancellation or deposit rule is stated only as the brief gives it."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A timing map with trigger, audience, channel, link and stop rule for each reminder; every message in your voice within channel limits, with fill-in fields; two versions of the key reminder; a no-show or lapse follow-up and opt-out wording where needed."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Texts are 160 characters or fewer, or within the limit in the brief, with counts shown; sentences are under 20 words; no all-caps or jargon; each message asks for one action at most."
+      },
+      {
+        "criterion": "Every moment the brief asks for has a message, in the chosen journey, channels…",
+        "weight": 6,
+        "test": "Each moment or trigger named in the brief has at least one message; the number of messages matches the count asked for; every message names one of the channels chosen in the brief."
+      },
+      {
+        "criterion": "The map and every message are finished and ready to load into a tool",
+        "weight": 6,
+        "test": "Each message is final text, not notes; the map gives trigger, audience, timing, channel and stop rule for every message; key messages have two versions; fill-in fields are marked the same way throughout."
+      }
+    ],
+    "mode_default": "extend"
+  },
+  {
+    "id": "enquiry-reply-and-follow-up",
+    "title": "Enquiry replies and follow-ups",
+    "summary": "First replies and follow-ups for web forms, calls, chats, DMs and event leads, so every enquiry gets a fast, useful answer and a clear next step.",
+    "area": "customer-support",
+    "deliverable": "A reply map by enquiry type and channel with the reply time and next step; a first reply, two follow-ups and a polite close for each type, in your voice; fill-in fields for details you add per lead; a hand-off note for the person who takes over.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "journey",
+        "label": "Which journey do you need messages for?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Enquiry replies and follow-ups",
+          "Follow-up after an event or job",
+          "Comment-to-DM or chat lead capture",
+          "Lead hand-off to a salesperson"
+        ]
+      },
+      {
+        "id": "message_count",
+        "label": "How many messages?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 10. Two versions of the same message count as one.",
+        "max": 60
+      },
+      {
+        "id": "channels",
+        "label": "Which channels?",
+        "type": "multichoice",
+        "required": true,
+        "options": [
+          "Text (SMS)",
+          "Email",
+          "WhatsApp",
+          "App push",
+          "In-app banner or pop-up",
+          "Website banner or auto-reply",
+          "Printed card",
+          "In person (spoken script)"
+        ]
+      },
+      {
+        "id": "business",
+        "label": "Your business and customers",
+        "type": "longtext",
+        "required": true,
+        "help": "What you do, who your customers are and how they book or buy.",
+        "max": 1500
+      },
+      {
+        "id": "moments",
+        "label": "Moments to cover",
+        "type": "list",
+        "required": false,
+        "help": "For example 48 hours before, 2 hours before, after a no-show. Leave blank and we will suggest them.",
+        "max": 20
+      },
+      {
+        "id": "facts",
+        "label": "Facts, policies and offers to use",
+        "type": "longtext",
+        "required": true,
+        "help": "Prices, deposits, opening hours, links, cancellation rules, offers and dates. Only these will be used.",
+        "max": 5000
+      },
+      {
+        "id": "voice",
+        "label": "Your voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a message you have sent before.",
+        "max": 800
+      },
+      {
+        "id": "limits",
+        "label": "Length limits",
+        "type": "text",
+        "required": false,
+        "help": "For example one text (160 characters) or your app's push limits.",
+        "max": 300
+      },
+      {
+        "id": "consent",
+        "label": "How customers agreed to hear from you",
+        "type": "text",
+        "required": false,
+        "help": "For example a ticked box at booking. It helps us add the right opt-out wording.",
+        "max": 300
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "covers_journey",
+        "text": "Every moment the brief asks for has a message, in the chosen journey, channels and count.",
+        "weight": 4,
+        "pass_rule": "Each moment or trigger named in the brief has at least one message; the number of messages matches the count asked for; every message names one of the channels chosen in the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Every price, date, policy, name, link and offer comes from the brief.",
+        "weight": 5,
+        "pass_rule": "No price, fee, deposit, date, time, discount, address, staff name, review or result appears unless the brief gives it; unknown details are fill-in fields in square brackets such as [date] or [link]. Any invented item fails.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "ready_to_use",
+        "text": "The map and every message are finished and ready to load into a tool.",
+        "weight": 4,
+        "pass_rule": "Each message is final text, not notes; the map gives trigger, audience, timing, channel and stop rule for every message; key messages have two versions; fill-in fields are marked the same way throughout.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_and_short",
+        "text": "Messages are short, plain and in the buyer's voice, with one clear next step.",
+        "weight": 3,
+        "pass_rule": "Texts are 160 characters or fewer, or within the limit in the brief, with counts shown; sentences are under 20 words; no all-caps or jargon; each message asks for one action at most.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "answers_and_next_step",
+        "text": "Each reply answers what this kind of enquirer asks first and offers one clear next step.",
+        "weight": 4,
+        "pass_rule": "For each enquiry type, the first reply answers the top question the brief gives (availability, price range, process) using only the brief's facts, and ends with one next step such as a call slot or booking link; follow-ups add something new rather than repeat the ask.",
+        "critical": true,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 249,
+      "size": {
+        "field": "message_count",
+        "unit": "message",
+        "included": 10,
+        "per_unit_usd": 6
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a sales coordinator who answers enquiries for small businesses. For each enquiry type and channel below, write a first reply, two follow-ups and a polite close, in my voice and within channel limits. Start with a reply map: enquiry type, channel, reply within, next step and when to stop. Answer the questions people ask first, using only my facts and prices, and end each message with one clear next step. Mark per-lead details as [fill-in].",
+    "not_for": [
+      "Marketing campaigns or newsletters (see the email sequence jobs)",
+      "Messages to people who did not agree to hear from you",
+      "Review gating, paying for reviews or fake reviews",
+      "Medical, legal or financial advice inside the messages",
+      "Legal notices such as eviction, debt or formal rent demands",
+      "Setting up or sending the messages in your tools",
+      "Passwords, card numbers or patient records in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "A wedding venue gets enquiries through its website form and Instagram DMs. We want a first reply with our three packages and how to book a viewing, then follow-ups at 3 and 10 days. Warm, not pushy.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "A family photographer wants replies for newborn, family and event enquiries: what is included, how booking works and a link to the calendar. Email only, one follow-up each.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "A commercial cleaning firm wants first replies for web form, missed call and live chat enquiries, a follow-up after the site visit, and a hand-off note template for the account manager. 8 messages.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "A software company runs webinars and wants follow-up emails for attendees and no-shows: recording link, one useful resource, and a demo offer on day 4. Two versions of the first email.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "enquiry reply",
+      "inquiry response",
+      "lead follow-up",
+      "first reply template",
+      "web form reply",
+      "event follow-up",
+      "dm reply",
+      "lead hand-off"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno's freelancer rate guide lists copywriters at an average of $67 an hour, about £408 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/copywriter"
+      },
+      {
+        "note": "University of Kentucky pilot: of 577 patients sent a text reminder 24 hours ahead, 39% confirmed and 82% of those came; the author estimated a 1:6 return.",
+        "url": "https://uknowledge.uky.edu/dnp_etds/82"
+      }
+    ],
+    "family": "email",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Replies you already send to enquiries",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "consent_basis",
+        "label": "How people agreed to hear from you",
+        "required": false,
+        "how": "The opt-in or relationship each audience has, so the right opt-out and frequency rules apply."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No price, fee, deposit, date, time, discount, address, staff name, review or result appears unless the brief gives it; unknown details are fill-in fields in square brackets such as [date] or [link]. Any invented item fails."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A reply map by enquiry type and channel with the reply time and next step; a first reply, two follow-ups and a polite close for each type, in your voice; fill-in fields for details you add per lead; a hand-off note for the person who takes over."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Texts are 160 characters or fewer, or within the limit in the brief, with counts shown; sentences are under 20 words; no all-caps or jargon; each message asks for one action at most."
+      },
+      {
+        "criterion": "Every moment the brief asks for has a message, in the chosen journey, channels…",
+        "weight": 6,
+        "test": "Each moment or trigger named in the brief has at least one message; the number of messages matches the count asked for; every message names one of the channels chosen in the brief."
+      },
+      {
+        "criterion": "The map and every message are finished and ready to load into a tool",
+        "weight": 6,
+        "test": "Each message is final text, not notes; the map gives trigger, audience, timing, channel and stop rule for every message; key messages have two versions; fill-in fields are marked the same way throughout."
+      }
+    ],
+    "mode_default": "extend"
+  },
+  {
+    "id": "order-and-delivery-messages",
+    "title": "Order, delivery and delay messages",
+    "summary": "Order confirmations, dispatch notes and honest messages for delays, lost parcels and damage, so customers know what is happening before they ask.",
+    "area": "customer-support",
+    "deliverable": "A message map with trigger, channel, timing and stop rule for each order event; every message in your voice within channel limits, with fill-in fields for order details; clear options and next steps for delays, losses and damage; two versions of the delay message.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "journey",
+        "label": "Which journey do you need messages for?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Orders, delivery and delays",
+          "Trade or wholesale order confirmations",
+          "Lost, late or damaged orders"
+        ]
+      },
+      {
+        "id": "message_count",
+        "label": "How many messages?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 10. Two versions of the same message count as one.",
+        "max": 60
+      },
+      {
+        "id": "channels",
+        "label": "Which channels?",
+        "type": "multichoice",
+        "required": true,
+        "options": [
+          "Text (SMS)",
+          "Email",
+          "WhatsApp",
+          "App push",
+          "In-app banner or pop-up",
+          "Website banner or auto-reply",
+          "Printed card",
+          "In person (spoken script)"
+        ]
+      },
+      {
+        "id": "business",
+        "label": "Your business and customers",
+        "type": "longtext",
+        "required": true,
+        "help": "What you do, who your customers are and how they book or buy.",
+        "max": 1500
+      },
+      {
+        "id": "moments",
+        "label": "Moments to cover",
+        "type": "list",
+        "required": false,
+        "help": "For example 48 hours before, 2 hours before, after a no-show. Leave blank and we will suggest them.",
+        "max": 20
+      },
+      {
+        "id": "facts",
+        "label": "Facts, policies and offers to use",
+        "type": "longtext",
+        "required": true,
+        "help": "Prices, deposits, opening hours, links, cancellation rules, offers and dates. Only these will be used.",
+        "max": 5000
+      },
+      {
+        "id": "voice",
+        "label": "Your voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a message you have sent before.",
+        "max": 800
+      },
+      {
+        "id": "limits",
+        "label": "Length limits",
+        "type": "text",
+        "required": false,
+        "help": "For example one text (160 characters) or your app's push limits.",
+        "max": 300
+      },
+      {
+        "id": "consent",
+        "label": "How customers agreed to hear from you",
+        "type": "text",
+        "required": false,
+        "help": "For example a ticked box at booking. It helps us add the right opt-out wording.",
+        "max": 300
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "covers_journey",
+        "text": "Every moment the brief asks for has a message, in the chosen journey, channels and count.",
+        "weight": 4,
+        "pass_rule": "Each moment or trigger named in the brief has at least one message; the number of messages matches the count asked for; every message names one of the channels chosen in the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Every price, date, policy, name, link and offer comes from the brief.",
+        "weight": 5,
+        "pass_rule": "No price, fee, deposit, date, time, discount, address, staff name, review or result appears unless the brief gives it; unknown details are fill-in fields in square brackets such as [date] or [link]. Any invented item fails.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "ready_to_use",
+        "text": "The map and every message are finished and ready to load into a tool.",
+        "weight": 4,
+        "pass_rule": "Each message is final text, not notes; the map gives trigger, audience, timing, channel and stop rule for every message; key messages have two versions; fill-in fields are marked the same way throughout.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_and_short",
+        "text": "Messages are short, plain and in the buyer's voice, with one clear next step.",
+        "weight": 3,
+        "pass_rule": "Texts are 160 characters or fewer, or within the limit in the brief, with counts shown; sentences are under 20 words; no all-caps or jargon; each message asks for one action at most.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "honest_options",
+        "text": "Problem messages are honest about what happened and give real options from the policy.",
+        "weight": 4,
+        "pass_rule": "Delay, loss and damage messages say what is known, what happens next and by when, and offer only the refund, replacement or claim options the brief's policy gives; no blame on the customer and no promise the brief does not support.",
+        "critical": true,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 249,
+      "size": {
+        "field": "message_count",
+        "unit": "message",
+        "included": 10,
+        "per_unit_usd": 6
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a customer service writer for an online shop. Write the order and delivery messages below: confirmation, dispatch, delay, lost and damaged. Start with a map of trigger, channel, timing and stop rule. Write each message in my voice within channel limits, with fill-in fields for order details, and give two versions of the delay message. Be honest about problems and offer only the options my policy gives.",
+    "not_for": [
+      "Marketing campaigns or newsletters (see the email sequence jobs)",
+      "Messages to people who did not agree to hear from you",
+      "Review gating, paying for reviews or fake reviews",
+      "Medical, legal or financial advice inside the messages",
+      "Legal notices such as eviction, debt or formal rent demands",
+      "Setting up or sending the messages in your tools",
+      "Passwords, card numbers or patient records in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "A bakery that posts cakes across the UK wants order emails: confirmation, dispatched with tracking, delayed by the courier, and arrived with storage tips. Orders before 2pm ship the same day, Monday to Thursday.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "A furniture maker wants messages for made-to-order pieces: order confirmed with lead time, build started, delivery slot booking, and a delay message that explains the new date.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "A wholesale supplier wants trade order acknowledgements and confirmations by email, with order number, delivery window and how to change the order before cut-off. 4 templates.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "An online plant shop wants messages for parcels that are late, lost or arrive damaged, each with our replacement policy (photo within 48 hours), and a WhatsApp version of each. 6 messages.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "order confirmation email",
+      "shipping update",
+      "delivery delay message",
+      "lost parcel email",
+      "damaged order reply",
+      "dispatch email",
+      "order emails"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno's freelancer rate guide lists copywriters at an average of $67 an hour, about £408 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/copywriter"
+      },
+      {
+        "note": "University of Kentucky pilot: of 577 patients sent a text reminder 24 hours ahead, 39% confirmed and 82% of those came; the author estimated a 1:6 return.",
+        "url": "https://uknowledge.uky.edu/dnp_etds/82"
+      }
+    ],
+    "family": "email",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Order and delivery messages you already send",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "consent_basis",
+        "label": "How people agreed to hear from you",
+        "required": false,
+        "how": "The opt-in or relationship each audience has, so the right opt-out and frequency rules apply."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No price, fee, deposit, date, time, discount, address, staff name, review or result appears unless the brief gives it; unknown details are fill-in fields in square brackets such as [date] or [link]. Any invented item fails.",
+      "Delay, loss and damage messages say what is known, what happens next and by when, and offer only the refund, replacement or claim options the brief's policy gives; no blame on the customer and no promise the brief does not support."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A message map with trigger, channel, timing and stop rule for each order event; every message in your voice within channel limits, with fill-in fields for order details; clear options and next steps for delays, losses and damage; two versions of the delay message."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Texts are 160 characters or fewer, or within the limit in the brief, with counts shown; sentences are under 20 words; no all-caps or jargon; each message asks for one action at most."
+      },
+      {
+        "criterion": "Every moment the brief asks for has a message, in the chosen journey, channels…",
+        "weight": 6,
+        "test": "Each moment or trigger named in the brief has at least one message; the number of messages matches the count asked for; every message names one of the channels chosen in the brief."
+      },
+      {
+        "criterion": "The map and every message are finished and ready to load into a tool",
+        "weight": 6,
+        "test": "Each message is final text, not notes; the map gives trigger, audience, timing, channel and stop rule for every message; key messages have two versions; fill-in fields are marked the same way throughout."
+      }
+    ],
+    "mode_default": "extend"
+  },
+  {
+    "id": "app-push-and-in-app-messages",
+    "title": "App push and in-app messages",
+    "summary": "Push notifications, in-app banners, pop-ups and tooltips for onboarding, re-engagement and streaks, each tied to the screen it opens and within platform limits.",
+    "area": "marketing",
+    "deliverable": "A lifecycle map with trigger, audience, timing, screen opened, frequency cap and stop rule for each message; every push and in-app message within title and body limits with counts; two versions of the key messages; quiet hours and opt-out notes.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "journey",
+        "label": "Which journey do you need messages for?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Onboarding in the first week",
+          "Re-engagement for quiet users",
+          "Streaks and habits",
+          "Feature announcements in the app"
+        ]
+      },
+      {
+        "id": "message_count",
+        "label": "How many messages?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 10. Two versions of the same message count as one.",
+        "max": 60
+      },
+      {
+        "id": "business",
+        "label": "Your business and customers",
+        "type": "longtext",
+        "required": true,
+        "help": "What you do, who your customers are and how they book or buy.",
+        "max": 1500
+      },
+      {
+        "id": "moments",
+        "label": "Moments to cover",
+        "type": "list",
+        "required": false,
+        "help": "For example 48 hours before, 2 hours before, after a no-show. Leave blank and we will suggest them.",
+        "max": 20
+      },
+      {
+        "id": "facts",
+        "label": "Facts, policies and offers to use",
+        "type": "longtext",
+        "required": true,
+        "help": "Prices, deposits, opening hours, links, cancellation rules, offers and dates. Only these will be used.",
+        "max": 5000
+      },
+      {
+        "id": "voice",
+        "label": "Your voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a message you have sent before.",
+        "max": 800
+      },
+      {
+        "id": "limits",
+        "label": "Length limits",
+        "type": "text",
+        "required": false,
+        "help": "For example one text (160 characters) or your app's push limits.",
+        "max": 300
+      },
+      {
+        "id": "consent",
+        "label": "How customers agreed to hear from you",
+        "type": "text",
+        "required": false,
+        "help": "For example a ticked box at booking. It helps us add the right opt-out wording.",
+        "max": 300
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "covers_journey",
+        "text": "Every moment the brief asks for has a message, in the chosen journey, channels and count.",
+        "weight": 4,
+        "pass_rule": "Each moment or trigger named in the brief has at least one message; the number of messages matches the count asked for; every message names one of the channels chosen in the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Every price, date, policy, name, link and offer comes from the brief.",
+        "weight": 5,
+        "pass_rule": "No price, fee, deposit, date, time, discount, address, staff name, review or result appears unless the brief gives it; unknown details are fill-in fields in square brackets such as [date] or [link]. Any invented item fails.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "ready_to_use",
+        "text": "The map and every message are finished and ready to load into a tool.",
+        "weight": 4,
+        "pass_rule": "Each message is final text, not notes; the map gives trigger, audience, timing, channel and stop rule for every message; key messages have two versions; fill-in fields are marked the same way throughout.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "within_limits",
+        "text": "Every push and in-app message fits its title and body limits and names the screen it opens.",
+        "weight": 4,
+        "pass_rule": "Titles and bodies are within the limits in the brief (or 40 and 110 characters if none are given), counts are shown, and each message names one screen or deep link from the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "frequency_and_consent",
+        "text": "Messages respect push permission, quiet hours and a frequency cap.",
+        "weight": 5,
+        "pass_rule": "The map sets a frequency cap and quiet hours, only users who allowed push get push, and each series stops when the user does the action or turns messages off.",
+        "critical": true,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 249,
+      "size": {
+        "field": "message_count",
+        "unit": "message",
+        "included": 10,
+        "per_unit_usd": 6
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a mobile app marketer. Write push notifications and in-app messages for the journey below. Start with a lifecycle map: message, trigger, audience, timing, screen it opens, frequency cap and stop rule. Then write each message within the title and body limits, showing counts, with two versions of the key messages. Respect quiet hours and push permission. Use only the features and screens I name.",
+    "not_for": [
+      "Marketing campaigns or newsletters (see the email sequence jobs)",
+      "Messages to people who did not agree to hear from you",
+      "Review gating, paying for reviews or fake reviews",
+      "Medical, legal or financial advice inside the messages",
+      "Legal notices such as eviction, debt or formal rent demands",
+      "Setting up or sending the messages in your tools",
+      "Passwords, card numbers or patient records in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "A running app wants 8 onboarding pushes for week one and 6 for users who have not logged a run in 10 days. Push titles max 40 characters, body max 110. Each opens Home, Log Run or Plans.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "A budgeting app wants in-app tooltips for its three main screens and a banner announcing bill reminders. Plain, calm tone, no exclamation marks.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "A language learning app wants streak messages: day 3, day 7, a streak at risk at 8pm local time, and a streak lost message that is kind. Two versions of each. Quiet hours 9pm to 8am.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "A food delivery app wants re-engagement pushes for users quiet for 30 days, max one a week, stopping after three. Offers only as given: free delivery on the next order over £15.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "push notifications",
+      "in-app messages",
+      "app onboarding messages",
+      "re-engagement push",
+      "push copy",
+      "in-app banner",
+      "app tooltips"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno's freelancer rate guide lists copywriters at an average of $67 an hour, about £408 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/copywriter"
+      },
+      {
+        "note": "University of Kentucky pilot: of 577 patients sent a text reminder 24 hours ahead, 39% confirmed and 82% of those came; the author estimated a 1:6 return.",
+        "url": "https://uknowledge.uky.edu/dnp_etds/82"
+      }
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Push and in-app messages you already send",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No price, fee, deposit, date, time, discount, address, staff name, review or result appears unless the brief gives it; unknown details are fill-in fields in square brackets such as [date] or [link]. Any invented item fails.",
+      "The map sets a frequency cap and quiet hours, only users who allowed push get push, and each series stops when the user does the action or turns messages off."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A lifecycle map with trigger, audience, timing, screen opened, frequency cap and stop rule for each message; every push and in-app message within title and body limits with counts; two versions of the key messages; quiet hours and opt-out notes."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words."
+      },
+      {
+        "criterion": "Every moment the brief asks for has a message, in the chosen journey, channels…",
+        "weight": 6,
+        "test": "Each moment or trigger named in the brief has at least one message; the number of messages matches the count asked for; every message names one of the channels chosen in the brief."
+      },
+      {
+        "criterion": "The map and every message are finished and ready to load into a tool",
+        "weight": 6,
+        "test": "Each message is final text, not notes; the map gives trigger, audience, timing, channel and stop rule for every message; key messages have two versions; fill-in fields are marked the same way throughout."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "code-for-one-task",
@@ -433,7 +1989,67 @@
         "note": "YunoJuno's freelancer rate guide lists software engineers at an average of $88 an hour, about £531 a day.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/software-engineer"
       }
-    ]
+    ],
+    "family": "code",
+    "context_requirements": [
+      {
+        "id": "existing_code",
+        "label": "The code or repo it must fit",
+        "required": true,
+        "how": "Level 1 (read) access to the repo or the relevant files. Note the framework, versions, naming, style and test tool before writing."
+      },
+      {
+        "id": "environment",
+        "label": "Where it runs",
+        "required": false,
+        "how": "Hosting, runtime and versions, and any limits on packages or browsers."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every sheet, column, file, field, table, URL or setting name comes from the brief or is a clearly marked placeholder such as YOUR_SHEET_NAME; no real key, token or password appears; secrets are read from a placeholder or a settings store."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the task asked, end to end, with setup and run steps. Here: Commented code for your platform, where it goes, step-by-step setup and permissions, and a test with sample data or on a copy. Risky changes get a dry run and a way to undo. Fixes explain the likely cause and show the corrected code or settings."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "It runs, handles bad input and failure, and uses only real APIs and packages. For this job: Full code or exact setting values with no '...' gaps or 'add your logic here'; it says which file or place each piece goes; setup and permission steps are numbered; a test with sample data or on a copy gives the expected result."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches the client's existing code, versions, naming, style and tools."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "The next person can read, change and test it safely. For this job: Each main block of code has a comment; setup steps are one action each; any technical term is explained the first time; no step says only 'configure as needed'."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, data and limits, not a generic sample."
+      },
+      {
+        "criterion": "The code does each thing the brief asks, on the platform named",
+        "weight": 10,
+        "test": "Each requirement in the brief maps to a named function, block or setting in the draft; the draft states the platform and version it targets and they match the brief; for fixes, the error from the brief is explained and the changed lines are marked."
+      },
+      {
+        "criterion": "Risky changes are safe to try and easy to undo",
+        "weight": 10,
+        "test": "Any code that deletes, overwrites, sends messages or changes live data has a dry run, a backup step or a test on a copy first, plus how to undo or switch it off; read-only code says it is read-only."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "notes-to-minutes-and-updates",
@@ -633,7 +2249,67 @@
         "note": "YunoJuno's freelancer rate guide lists project managers at an average of $64 an hour, about £388 a day.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/project-manager"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No decision, action, owner, date, number, attendee or quote appears that the notes do not contain; gaps are marked [to confirm]; nothing the notes record as discussion is written up as a decision. Any invented item fails."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: The document you choose, true to your notes: an agenda with timings and papers; minutes with attendance, decisions and actions; an action log with owners, dates and status; an update with done, next, blocked and decisions needed; or a report or blameless review with timeline, causes and actions."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Agenda: timed items, each with a lead and an aim or paper. Minutes: attendance, decisions and actions. Action log: owner, due date and status per item. Update: done, next, blocked and decisions needed. Report, case summary or review: timeline or progress, issues or causes, and next steps."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "Every action and open item can be followed up",
+        "weight": 10,
+        "test": "Each action has an owner and due date from the notes, or is flagged 'no owner' or 'no date'; items past their date are marked overdue where the notes give dates; the document is finished text, ready to send or file."
+      },
+      {
+        "criterion": "Written in plain words for the readers named in the brief",
+        "weight": 10,
+        "test": "Sentences are short; acronyms are spelled out once; the most important decision or status is in the first three lines; an update or report fits on about one page."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "financial-model-with-scenarios",
@@ -845,7 +2521,73 @@
         "note": "A fractional CFO guide puts small-business retainers at $2,000 to $5,000 a month and lists a driver-based operating model and what-if questions on price and volume as core work.",
         "url": "https://beancount.io/blog/2026/08/12/fractional-cfo-services-small-business-guide"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "An inputs table lists each input with its source, 'from brief' or 'assumption' with a reason, and how sure it is; no rate, price, growth figure, valuation or cost is used in the workings unless it is in that table. Any unlisted input fails."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: An inputs table with the source of each figure and how sure it is; monthly or yearly workings; best, base and worst (or your own) cases side by side; key results such as profit, cash low point, runway, yield, interest or ownership; every formula written out; and a plain summary with ranked…"
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown. For this job: Recompute at least three rows: totals add up; each period opens with the last period's closing figure; loan balances fall by the principal paid; ownership after a round totals 100%; results in the summary match the tables."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: A summary of ten lines or fewer gives the key result for each case and at least three questions for an accountant, lender or lawyer, ranked by how much they could change the result; no sentence says to buy, borrow, invest or accept terms; results are called estimates."
+      },
+      {
+        "criterion": "The model is the type chosen, with the cases, time span and results the brief…",
+        "weight": 8,
+        "test": "The number of cases matches the brief (three if none given); cases sit side by side with the results listed in the brief, or profit and cash low point if none are listed; the time span matches the brief; an updated forecast marks what changed."
+      },
+      {
+        "criterion": "The workings are complete enough to rebuild in a spreadsheet",
+        "weight": 8,
+        "test": "Period-by-period workings cover the full time span with no 'and so on' gaps; every formula is written out, for example 'Closing cash = opening cash + money in - money out'; each case uses the same layout."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "batch-reply-drafts",
@@ -1049,7 +2791,93 @@
         "note": "Google's Business Profile help explains how owners reply to reviews and says helpful, positive replies show customers you are responsive.",
         "url": "https://support.google.com/business/answer/3474050"
       }
-    ]
+    ],
+    "family": "email",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Messages and emails you already send",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "consent_basis",
+        "label": "How people agreed to hear from you",
+        "required": false,
+        "how": "The opt-in or relationship each audience has, so the right opt-out and frequency rules apply."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No refund, discount, free item, date, staff name, cause or fix appears unless the brief's policies, offers or the item itself gives it; items that need an offer outside policy go on the hold list instead of getting a promise. Any invented promise fails.",
+      "No public reply shares order, health, address or account details or confirms someone was a patient or client; no reply asks a reviewer to change or remove a review or offers a reward for it; private matters move to a named private channel."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice. For this job: Public review replies are under 120 words; no blame, sarcasm or arguing; plain words; the same stock sentence is not used in more than three replies."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A reply per item that answers its points, follows your policy, gives a next step and promises nothing you have not approved; an urgency order for inboxes; public and private versions for bad reviews; and a hold list of items that need your decision, with the reason for each."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Each reply is final text with a sign-off; risky items (legal threats, safety, health, abuse, refunds outside policy) are marked HOLD with the reason and the decision needed; inbox batches are ordered by urgency; bad reviews have a public and a private version."
+      },
+      {
+        "criterion": "There is one reply for every item, and each answers that item's own points",
+        "weight": 10,
+        "test": "The number of replies equals the number of items, in the same order and numbering; each reply mentions at least one specific detail from its item; no two replies share the same body text."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "one-page-rules-or-policy",
@@ -1265,7 +3093,63 @@
         "note": "The SBA's cybersecurity guide tells small businesses to give each employee a separate account, limit access to what each person needs and train staff to spot phishing.",
         "url": "https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No spending limit, discount, fee, deposit, response time, notice period, job title, tool or law appears unless the brief gives it; gaps are shown as [to decide] for the owner. Any invented term fails.",
+      "No rule treats people differently by age, sex, race, religion, disability, pregnancy or another protected trait; the sheet does not claim to meet a law or be legally binding; customer terms and contractor sheets carry a line to check them with a lawyer."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 15,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: Who it applies to; the rules as short do's and don'ts or a table, each with its reason; limits and approvers; how to ask for an exception; what happens when a rule is broken; a review date; and a short summary for staff or customers (for a community, a welcome post and joining message)."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents. For this job: It has who it applies to, the rules, limits and approvers, how to ask for an exception, what happens if a rule is broken, a review date and a two-to-four line summary; the main body is under 600 words per sheet."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Each rule is one sentence under 25 words that starts with an action word such as Do, Never, Ask or Tell; no legal phrases like 'hereinafter' or 'notwithstanding'; each rule has a short reason."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "The sheet covers the topic and every point the brief lists",
+        "weight": 15,
+        "test": "Each 'must cover' point and each limit or approver in the brief appears as a rule or table row; the sheet says who it applies to, matching the readers in the brief."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "technical-design-document",
@@ -1472,7 +3356,66 @@
         "note": "YunoJuno's freelancer rate guide lists solution architects at an average of $105 an hour, about £636 a day.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/solution-architect"
       }
-    ]
+    ],
+    "family": "code",
+    "context_requirements": [
+      {
+        "id": "existing_code",
+        "label": "The code or repo it must fit",
+        "required": true,
+        "how": "Level 1 (read) access to the repo or the relevant files. Note the framework, versions, naming, style and test tool before writing."
+      },
+      {
+        "id": "environment",
+        "label": "Where it runs",
+        "required": false,
+        "how": "Hosting, runtime and versions, and any limits on packages or browsers."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the task asked, end to end, with setup and run steps. Here: Goals, options compared on cost, skills, risk and fit, the chosen design, data model, interfaces and a build order; or a review with strengths, weak points and a ranked fix list (API reviews add test cases); or a guide to folders, main flows, data and fragile parts, with a first-week plan."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "It runs, handles bad input and failure, and uses only real APIs and packages."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches the client's existing code, versions, naming, style and tools."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "The next person can read, change and test it safely. For this job: The first section restates the decision or question from the brief; the type's core parts are present: design (goals, options, chosen design, data model, interfaces, risks, build order); review (strengths, weak points, ranked fixes); guide (folders, main flows, data, fragile parts); comparison (two to four options)."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, data and limits, not a generic sample. For this job: Each recommendation or fix names the file, component or endpoint it touches, an effort size (small, medium, large) and its place in the order; a design has a build order of at least three steps; a comparison ends with a pick and why, tied to the brief's limits."
+      },
+      {
+        "criterion": "Everything said about the current system comes from the material supplied",
+        "weight": 10,
+        "test": "Every file, table, endpoint, service, version and number described as existing appears in the brief or material; new parts are labelled 'proposed'; unknowns are listed as open questions. Any component described as existing but absent from the material fails."
+      },
+      {
+        "criterion": "Clear headings and plain words a manager can follow",
+        "weight": 10,
+        "test": "A summary of five lines or fewer opens the document; each technical term is explained once; diagrams are given as simple text diagrams or plain descriptions; headings follow the parts of the chosen type."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "code-review-with-fixes",
@@ -1667,7 +3610,63 @@
         "note": "YunoJuno's freelancer rate guide lists software engineers at an average of $88 an hour, about £531 a day.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/software-engineer"
       }
-    ]
+    ],
+    "family": "code",
+    "context_requirements": [
+      {
+        "id": "existing_code",
+        "label": "The code or repo it must fit",
+        "required": true,
+        "how": "Level 1 (read) access to the repo or the relevant files. Note the framework, versions, naming, style and test tool before writing."
+      },
+      {
+        "id": "environment",
+        "label": "Where it runs",
+        "required": false,
+        "how": "Hosting, runtime and versions, and any limits on packages or browsers."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Each finding quotes or names a line, cell, function or step that appears in the pasted material; no finding cites code, files or settings that are not in the brief; suspected issues outside the paste are listed as questions. Any made-up finding fails.",
+      "The review states whether it found exposed secrets, unchecked input, missing permission checks, silent failures and destructive steps without a backup; any real secret is flagged to be replaced and not repeated in full; no exploit code or attack steps are given."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 15,
+        "test": "It does the task asked, end to end, with setup and run steps. Here: Findings tied to exact lines, cells or steps (bugs, security gaps, misplaced secrets, weak error handling, made-up functions, slow parts, silent failures), each with severity and the fix; tests that prove the fixes; and, as needed, a safe refactor order, replies to review comments or a rollback plan."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "It runs, handles bad input and failure, and uses only real APIs and packages. For this job: Each must-fix finding has corrected code or a precise change, plus a test (input and expected result) that would catch the problem; findings have a severity (high, medium, low) and are sorted by it."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches the client's existing code, versions, naming, style and tools."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "The next person can read, change and test it safely. For this job: A summary of the top three issues opens the review; each finding states the problem, why it matters and the fix in three sentences or fewer; jargon is explained the first time."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, data and limits, not a generic sample."
+      },
+      {
+        "criterion": "The review covers the pasted code and every concern in the brief",
+        "weight": 15,
+        "test": "Findings refer to the pasted code by line, cell, function or step; each concern and reviewer comment in the brief gets an answer; a refactor plan gives ordered steps; a fix check compares the fix with the bug report; an automation check adds a rollback plan."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "id": "operations-manual-or-role-guide",
@@ -1867,7 +3866,67 @@
         "note": "A Contra freelancer offers standard operating procedures, user guides and operations manuals at $100 per document with one revision, plus a $500-a-month document management service.",
         "url": "https://contra.com/s/A6oEvErs-standard-operating-procedures-user-guides-operation-manuals"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No step, standard, supplier, contact, tool, time or number appears unless the brief gives it; missing details are marked [owner to fill in]; nothing is called a legal or safety requirement unless the brief says so. Any invented step fails."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: A manual outline or finished chapters with steps, standards and checks; brand and service standards with pass and fail examples; an SOP library plan; or a role guide, cover plan or handover pack with recurring tasks, open work, contacts, calendar, where files live, cover and key-person risks."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Steps are numbered, one action each and under 25 words; headings are clear; words special to the business are explained once."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "The draft is the piece chosen, with that piece's parts",
+        "weight": 10,
+        "test": "Outline: chapter list with what each must cover. Chapters: steps, standards and checks. Standards: rules with pass and fail examples. Library plan: list, order, owner, review date, folders and naming rules. Role, cover or handover: recurring tasks, open work, contacts, calendar, file locations and cover."
+      },
+      {
+        "criterion": "No passwords or login details appear anywhere",
+        "weight": 10,
+        "test": "No password, PIN, door code, key, token or full account number appears; logins are described only by where they are kept, for example 'in the password manager, ask the owner'."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "release-and-incident-runbook",
@@ -2065,7 +4124,67 @@
         "note": "YunoJuno's freelancer rate guide lists DevOps engineers at an average of $100 an hour, about £607 a day.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/devops-engineer"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No server, service, tool, command, version or person appears that the brief does not give, except marked placeholders such as <APP_NAME>; no real secret or key appears; unknowns are listed as questions. Any invented system fails."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: Before, during and after steps with owners, timings, checks and stop rules; the rollback trigger and exact rollback steps; smoke and regression checks ranked by risk; a launch security checklist where asked; who to call, by role; and how to tell users."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents. For this job: Steps name the tools, hosts, environments and roles from the brief; the type's parts are present: before, during and after steps (deploy, go-live, update), trigger and steps (rollback), symptoms, checks, fixes and escalation (incident), or checks ranked by risk (checklists)."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: One action per step, under 25 words; technical terms are explained once; checklists use tick boxes; an opening line says when to use the runbook."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "Every risky step has a check, a stop rule and a way back",
+        "weight": 10,
+        "test": "Each step that changes code, data, DNS or settings has a check that shows it worked and a stop or go rule; a backup is confirmed before the first change; deploy, go-live, update and rollback runbooks give a rollback trigger and ordered rollback steps, including the database where relevant."
+      },
+      {
+        "criterion": "Someone under pressure can follow it step by step",
+        "weight": 10,
+        "test": "Steps are numbered with an owner role and a time or order; each has an expected result; who to call is listed by role; how and when to tell users is included."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "event-plan-and-run-sheet",
@@ -2276,7 +4395,74 @@
         "note": "YunoJuno's freelancer rate guide lists events managers at an average of $62 an hour, about £375 a day.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/events-manager"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No supplier, venue detail, price, budget amount, attendance figure or person appears that the brief does not give; estimates such as stock counts show the brief figures they are worked from; gaps are marked [to confirm]. Any invented item fails."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook. For this job: Date, place, times, audience and goal match the brief; every extra part ticked in the brief has its own section; the run sheet runs from set-up to pack-down."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 10,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: A plan with the goal, budget lines, a countdown with owners, and supplier, stock and kit lists. Layout notes, a staff rota, risks with backups and how to count results. A minute-by-minute run sheet from set-up to pack-down. Any extras you tick, such as a booth opener or a stock and float sheet."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week. For this job: Budget lines add up to no more than the budget when one is given; a countdown timeline has owners and dates; supplier and kit lists are included; at least three risks each have a backup; two or more ways to count results are named."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read. For this job: Tables and checklists with lines under 20 words; no jargon; the run sheet can be printed and followed on the day without the rest of the plan."
+      },
+      {
+        "criterion": "The run sheet is minute-by-minute, with owners",
+        "weight": 10,
+        "test": "Run sheet rows have a clock time, task, owner and notes; times are in order with no gap over 30 minutes while the event is open; set-up and pack-down are included."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "brand-name-tagline-voice",
@@ -2482,7 +4668,92 @@
         "note": "YunoJuno's freelancer rate guide lists copywriters at an average of $67 an hour, about £408 a day.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/copywriter"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No product fact, award, customer count, result or promise appears in a rationale, tagline, brief or example unless the brief gives it; voice traits and rewrites are built from the buyer's own samples. Any invented claim fails.",
+      "No name or tagline copies or closely echoes a rival named in the brief; the draft never says a name is available, cleared or safe to trademark; taglines do not claim 'best', 'number one' or guaranteed results unless the brief proves it."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: Names: 40 ideas across five styles cut to a shortlist of 8, each with meaning, risks and the checks to run. Taglines: 20 options by angle with the top five explained. Voice: traits with do and don't examples, words to use and avoid, and rewrites of your copy. Or a one-file brand brief."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Explanations are one or two plain sentences; each shortlisted name has a say-it-aloud and spelling note; the guide avoids jargon such as 'synergy' or 'best-in-class'."
+      },
+      {
+        "criterion": "The draft is the piece chosen, in the amounts promised",
+        "weight": 6,
+        "test": "Names: at least 40 ideas across five named styles, cut to a shortlist of 8. Taglines: at least 20 across four or more angles, with the top five explained. Screening: every name the brief lists is checked. Voice guide: three to five traits, each with do and don't examples. Brand brief: facts, buyers, products, claims and tone."
+      },
+      {
+        "criterion": "Each option comes with what the buyer needs to choose",
+        "weight": 6,
+        "test": "Each shortlisted name and top tagline has its meaning, its fit with the positioning and at least one risk; name drafts list the checks still to run (trademark, domain, social handles) as checks, not results; voice guides include words to use and avoid."
+      }
+    ],
+    "mode_default": "new"
   },
   {
     "id": "shoot-brief-and-shot-list",
@@ -2695,7 +4966,93 @@
         "note": "YunoJuno's freelancer rate guide lists art directors at an average of $67 an hour, about £409 a day.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/art-director"
       }
-    ]
+    ],
+    "family": "other",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "brand_guide",
+        "label": "Brand guide, if you have one",
+        "required": false,
+        "how": "Fonts, colours, logo rules and tone. Captured facts win where the guide is out of date; say where they differ."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No product feature, claim, price, model, location or result appears that the brief does not give; script lines and on-screen text state only facts in the brief; gaps are marked [to confirm]. Any invented claim fails.",
+      "Every shot or scene says what it is for (main image, detail, lifestyle, ad hook); sizes are given per channel; creator briefs include paid-partnership wording such as #ad; nothing asks to copy another brand's shoot."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: Goal and look; must-have shots by product and angle with purpose, background, props and crop; a scene list or storyboard with on-screen text and timing; a shoot day schedule and packing list; sizes per channel; and short script lines where needed."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Sizes, specs, values and facts are right and consistent, so a maker can build it without guessing."
+      },
+      {
+        "criterion": "Fits the brand system",
+        "weight": 20,
+        "test": "It works inside the client's captured brand: fonts, colour proportions, imagery and voice from context/brand-dna.json, or each change is deliberate and stated."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: The shot list is a numbered table; each description is under 20 words; photo terms such as 'flat lay' or 'B-roll' are explained once."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "Every product or video in the brief has its shots or scenes",
+        "weight": 10,
+        "test": "Each product or video named in the brief appears with at least two shots or scenes; every must-have shot in the brief is included; each shot is tagged to a channel chosen in the brief."
+      },
+      {
+        "criterion": "A crew could shoot from it without more questions",
+        "weight": 10,
+        "test": "Each shot lists the angle or shot size, background, props and crop or ratio; a day schedule gives time blocks and set changes; a packing or prop list is included; video scenes give length and on-screen text."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "business-sale-numbers-review",
@@ -2899,7 +5256,73 @@
         "note": "SMB.co says a quality of earnings review for a small business can cost $10,000 to $30,000, depending on size and complexity.",
         "url": "https://smb.co/blog/what-is-a-quality-of-earnings-qofe-report-and-do-you-need-one"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Each add-back or adjustment names the line and amount from the brief and the evidence needed to prove it, such as an invoice or payroll record; no revenue, margin, debt or customer figure appears that the brief does not contain; estimates show how they were worked out. Any invented figure fails."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: The parts you pick: a draft add-back and adjusted profit schedule with the evidence needed; a red-flag report (customer concentration, falling margin, debts, cash gaps); a document or request list; a scored readiness review; a cash estimate for after the purchase; and a month-by-month fix…"
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown. For this job: For each year, reported profit plus the listed add-backs equals the adjusted profit shown; customer shares are worked from the sales given; each red flag quotes the figures behind it; readiness scores use the scale stated in the draft."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: Terms such as add-back, working capital and customer concentration are explained once; the draft gives no business value, multiple or price advice; it says adjusted profit is a draft for an accountant to check."
+      },
+      {
+        "criterion": "Every part picked in the brief is delivered, for the right side of the deal",
+        "weight": 8,
+        "test": "Each part picked in the brief has its own section; seller drafts focus on preparing the business and buyer drafts on checking it; the years covered match the figures given."
+      },
+      {
+        "criterion": "Lists and plans are ready to use",
+        "weight": 8,
+        "test": "Request or document lists are numbered and grouped by area, with what is held, what is missing and who owns it; red flags are ranked; a fix plan gives month, owner and action; the draft ends with questions for the accountant, lawyer or broker."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "id": "ad-creative-concept-batch",
@@ -3115,7 +5538,93 @@
         "note": "YunoJuno's freelancer rate guide lists art directors at an average of $67 an hour, about £409 a day.",
         "url": "https://www.yunojuno.com/freelancer-rates-job-role/art-director"
       }
-    ]
+    ],
+    "family": "ad_creative",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Ads and materials you already run",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "brand_guide",
+        "label": "Brand guide, if you have one",
+        "required": false,
+        "how": "Fonts, colours, logo rules and tone. Captured facts win where the guide is out of date; say where they differ."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "No price, discount, deadline, statistic, review quote, award, guarantee or result appears unless the brief gives it; offer ads use only the deal in the brief and show it fits the margin given. Any invented item fails.",
+      "No false scarcity or fake countdowns, no before-and-after body claims, no lines that call out personal traits such as 'Are you overweight?', no fake reviews and no copying of a rival's ad; regulated offers carry a note to get a compliance check."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Strategic idea",
+        "weight": 10,
+        "test": "Each concept rests on one clear reason to act for a named audience, taken from the client's offer and proof. Here: Each concept with the angle, hook, picture or scene idea, headline, supporting line, on-screen text, offer, call to action, layout notes and sizes, plus a note on what it tests. Remixes of a winning ad change one thing each; test briefs are ranked by likely payback."
+      },
+      {
+        "criterion": "Range across named axes",
+        "weight": 20,
+        "test": "Concepts differ on named axes (mechanism, proof, structure, visual world, offer), not only in colour, crop, wording or style label. For this job: Headlines and on-screen text are under 10 words each; no two concepts share the same angle and hook; each concept has a one-line note on what it tests."
+      },
+      {
+        "criterion": "Brand fidelity",
+        "weight": 15,
+        "test": "It looks and sounds like the client's captured brand: fonts, colours, imagery and voice from context/brand-dna.json."
+      },
+      {
+        "criterion": "Hook and thumb-stop",
+        "weight": 15,
+        "test": "The first line or frame earns attention for this audience without clickbait or fake urgency."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 15,
+        "test": "A competitor could not run it unchanged: it uses this client's own product, facts and proof."
+      },
+      {
+        "criterion": "Platform fit",
+        "weight": 15,
+        "test": "Each piece follows its placement's format, length limits and safe zones, with counts shown. For this job: The number of concepts equals the count in the brief (8 if none given); each is labelled with platform and format; remixes each change exactly one named element of the winning ad; test briefs are ranked with a reason for the order."
+      },
+      {
+        "criterion": "A designer or editor could make each concept without asking",
+        "weight": 10,
+        "test": "Each concept has angle, hook, picture or scene idea, headline, supporting line, on-screen text, call to action and sizes or ratios; video concepts give the first three seconds and the scene order; shoppable briefs say when to pin the product."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "accountant-records-pack",
@@ -3308,7 +5817,66 @@
         "note": "GOV.UK says sole traders and business partners must keep records of business income and expenses for their tax returns.",
         "url": "https://www.gov.uk/self-employed-records"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: A sheet of every transaction or expense with date, payee, amount, category and a receipt flag; totals by group; a document checklist with where to find each item; missing receipts and answers; and a ranked list of questions for your accountant with the figures behind each."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents. For this job: Where records are pasted, five spot-checked lines match the brief on date, payee and amount; group totals add up to the sheet total; the sheet total equals the sum of the pasted lines; nothing is added that the records do not show. Any mismatch fails."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Categories use plain names or the accountant's own names from the brief; a summary of five lines or fewer gives totals and the number of open items; accounting terms are explained once."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "The pack is the type chosen and covers the whole period",
+        "weight": 10,
+        "test": "Every line in the pasted records for the period is in the sheet or listed as left out with a reason; a year-end pack has the sheet, totals, checklist, missing items and questions; a trip or project report is grouped by day or category with totals."
+      },
+      {
+        "criterion": "The pack sorts and asks; it does not decide tax",
+        "weight": 10,
+        "test": "No line is labelled deductible, allowable, claimable or tax-free; mixed personal use, equipment, loans and transfers go to the questions list instead of being decided; the draft says it is not tax advice."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "talk-pitch-or-demo-script",
@@ -3504,7 +6072,85 @@
         "note": "Contra's speech writer listings include a fundraising speech service at $375 and a writer and ghostwriter at $38 an hour.",
         "url": "https://contra.com/hire/speech-writers"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "existing_assets",
+        "label": "Your draft, notes or past pieces",
+        "required": true,
+        "how": "The material this piece is made from: the draft, the records or notes, and 2 or 3 past pieces in the same voice. Read them all before writing."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your own words",
+        "required": true,
+        "how": "5 to 10 lines the client or speaker wrote or said, copied verbatim into the context file."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website, if the piece speaks for a business",
+        "required": false,
+        "how": "Read the live site for facts and voice when the piece speaks for a business or organisation. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and CSS."
+      },
+      {
+        "id": "references",
+        "label": "Pieces you admire, and pieces to avoid",
+        "required": false,
+        "how": "2 the client admires and 1 to avoid sounding like. Ask once."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every choice cites the client's own material (draft, notes, past pieces) or a named reference.",
+      "No story, customer, statistic, award, quote, credential or result appears that the brief does not give; gaps are marked with placeholders such as [customer name]. Any invented story or figure fails."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice. For this job: Most sentences are under 20 words; plain words and contractions; no sentence lists more than three items; stage directions are in brackets, apart from the spoken lines."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: An opening, story, key points and close timed to your length; speaker notes; answers to the questions you will most likely face; and for demos and tours, the order of what to show or click, talking points and a same-day follow-up message."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts. For this job: No promised results, false urgency or claims the brief does not support; the close asks for the action named in the brief; a demo opens with the buyer's problems from the brief before showing features."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words."
+      },
+      {
+        "criterion": "The script is the type and length the brief asks for",
+        "weight": 6,
+        "test": "The draft shows its word count and the timing per section; at about 140 spoken words a minute the total is within 15% of the length in the brief; pitches give both a 60-second and a 3-minute version; demos and tours give the order of what to show or click."
+      },
+      {
+        "criterion": "Ready to rehearse from start to finish",
+        "weight": 6,
+        "test": "The draft has a spoken opening, main points, a close with a call to action, and speaker notes; talks, pitches and live demos answer at least five likely questions (three for remarks); demos and tours add a same-day follow-up message."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "email-deliverability-fix",
@@ -3702,6 +6348,78 @@
         "note": "Yahoo's sender requirements ask bulk senders for SPF and DKIM, a DMARC policy of at least p=none, one-click unsubscribe honoured within 2 days and a spam rate below 0.3%.",
         "url": "https://senders.yahooinc.com/best-practices/"
       }
-    ]
+    ],
+    "family": "audit",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "account_access",
+        "label": "Read access to the account, site or data",
+        "required": true,
+        "how": "Level 1 (read) through the client's connector, or an export covering the period. Pull the real snapshot before judging anything."
+      },
+      {
+        "id": "goals",
+        "label": "What success means here",
+        "required": true,
+        "how": "The target the client measures (sales, leads, cost per result, response time, margin), the period, and what changed recently."
+      },
+      {
+        "id": "benchmarks",
+        "label": "Earlier results or a comparison",
+        "required": false,
+        "how": "A previous period, a competitor or a target to compare against, so findings say better or worse than what."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "The diagnosis is made from the client's real data or pages, pulled at level 1 (read), with the period stated."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: Your SPF, DKIM, DMARC and return-path records checked from what you paste, with the corrected record for each; a DMARC rollout plan; a warm-up schedule; a read of your last 60 days of results with a pause-and-restart plan; list cleaning and sunset rules; and a consent checklist."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today. For this job: Each domain keeps one SPF record and the draft counts its DNS lookups against the limit of 10; DMARC starts at p=none with a report address, with steps and timing to move to quarantine and reject; warm-up volumes rise in steps with a slow-down rule; no advice to buy lists, rotate domains or hide…"
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: SPF, DKIM, DMARC, bounce rate and complaint rate are each explained in one plain sentence; a summary of the top three fixes comes first; steps are one action each."
+      },
+      {
+        "criterion": "The plan covers the focus chosen, for each domain in the brief",
+        "weight": 8,
+        "test": "Each domain has the sections for the chosen focus: record checks and fixes; a day-by-day warm-up table; a read of the results with a pause-and-restart plan; or cleaning rules and a sunset flow. A full check has all four plus a consent checklist."
+      },
+      {
+        "criterion": "Record checks and results use only what the buyer pasted",
+        "weight": 8,
+        "test": "Each record verdict quotes the pasted record; each fix shows the full corrected record with the buyer's own domain and platform, with placeholders only for values the brief lacks, such as a DKIM key; rates and volumes quoted match the brief; records not pasted are marked 'not provided'."
+      }
+    ],
+    "mode_default": "patch"
   }
 ]

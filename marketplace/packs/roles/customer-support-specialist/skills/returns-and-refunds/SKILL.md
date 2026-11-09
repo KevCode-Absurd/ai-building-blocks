@@ -87,7 +87,7 @@ Group returns by reason and by product. Where costs are given, work out the cost
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Wren & Thread, an online clothing shop in Brighton, UK, selling to UK customers, with a 30-day change-of-mind policy.*
+*Illustrative structure, not a real business: an online clothing shop in Brighton, UK, selling to UK customers, with a 30-day change-of-mind policy. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Template: check this with local rules before use. Applies to: UK customers.**
 >

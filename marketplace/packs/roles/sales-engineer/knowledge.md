@@ -213,3 +213,14 @@ Re-check at every refresh (every 30 days):
 | HubSpot CPQ and MCP | HubSpot docs [23][24][25] | CPQ page 12 Oct 2026; "Revenue Hub" naming |
 | Salesforce connectors | GitHub notice [26]; Salesforce Help | DX MCP end of life 2 Nov 2026 |
 | RFP benchmarks | Loopio report [21] | 2026 edition |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Run discovery before building the demo, because a demo of the wrong things trains the buyer to say no. (§5)
+- `decision_rule` When the buyer asks for a feature tour, offer a short tour after the problems, because value shown first is what they remember. (§5)
+- `decision_rule` Do not start a pilot without signed success criteria; offer a scoping call instead, because there will be no agreed way to decide. (§5)
+- `decision_rule` Log scope added mid-pilot as a change, agree whether the end date moves, and get both sponsors to approve. (§5)
+- `never_do` Never round a questionnaire gap up to yes. (§5)
+- `never_do` No "out of the box", "plug and play" or "fully compliant" unless proved. (§8)

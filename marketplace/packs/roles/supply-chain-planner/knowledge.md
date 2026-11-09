@@ -215,3 +215,14 @@ Re-check these at every refresh (every 30 days):
 | Business Central planning and MCP server | Microsoft Learn [12][13][15] | MCP page dated 2 Oct 2026 |
 | Odoo reordering and lead times | Odoo 19 docs [16][17] | Version 19.0 |
 | Shopify purchase orders | Shopify Help [18] | Draft, Ordered, then transfer to receive |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If a method cannot beat naive or seasonal naive on held-back periods for a product, use the benchmark for that product. (§5)
+- `decision_rule` When someone wants to change the forecast, ask what information the model lacks, record the reason and size, and check it after the period ends. (§5)
+- `check` When asked for "95% availability", ask whether that means cycles without a stockout or units served from stock. (§5)
+- `decision_rule` If one supplier is the only source of a best seller, name a backup and its lead time. (§5)
+- `decision_rule` If cash would fall under the floor, stage deliveries or split the order before cutting best sellers. (§5)
+- `taste_reference` Units first, then money, with one product worked through step by step so the owner can check the logic. (§8)

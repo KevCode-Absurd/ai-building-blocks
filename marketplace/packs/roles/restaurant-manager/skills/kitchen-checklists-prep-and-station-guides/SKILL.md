@@ -74,7 +74,7 @@ At level 3, publish the approved documents and set the recurring runs. Otherwise
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Juniper Street Bistro, Saturday prep.*
+*Illustrative structure, not a real business: a bistro, Saturday prep. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Par rule:** forecast covers x uses per cover (last four Saturdays) x portion, plus the owner's 10% buffer.
 >

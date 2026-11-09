@@ -64,7 +64,7 @@ Not for: inventing need, stories or numbers; guilt or false urgency; legal or ta
 
 ## Example of good output (short)
 
-*Northgate Community Pantry is a made-up charity, used only to show the format. Its figures and story are invented for this example.*
+*Illustrative structure, not a real organisation: a community pantry charity. Copy the shape, never the content: every fact comes from the client's own context. Figures and story only show the shape.*
 
 **Purpose:** Winter food parcels, December to February. Target £18,000. Any money raised beyond the parcels will fund the pantry's general work. Registered charity number [NEED: number].
 

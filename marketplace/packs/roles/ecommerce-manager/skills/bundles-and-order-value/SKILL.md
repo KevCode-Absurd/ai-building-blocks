@@ -56,7 +56,7 @@ The easy way to raise average order value is a deeper discount, and it usually c
 
 ## Example of good output (short)
 
-*Brewhouse Lane Coffee is a made-up roaster used only to show the format. Figures are invented for this example.*
+*Illustrative structure, not a real business: a coffee roaster. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Pairs (extract):** beans + paper filters appear together in 22% of orders containing beans; beans + grinder in 3%.
 

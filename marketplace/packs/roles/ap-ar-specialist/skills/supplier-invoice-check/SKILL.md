@@ -101,15 +101,15 @@ Rank holds and asks by amount at risk. Give each a one-line reason and the perso
 
 ## Example of good output (short)
 
-Made-up business for illustration: Larchmont Bakery Supplies, a wholesale bakery with 14 staff.
+Illustrative structure, not a real business: a wholesale bakery with 14 staff. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.
 
 > **Bill batch for run of 12 November 2026: 23 invoices, 18,640.20 total.** Approve 19 (14,105.70), hold 3 (4,212.50), ask 1 (322.00).
 >
 > | Supplier | Invoice | Amount | Status | Reason | Clears it |
 > |---|---|---|---|---|---|
-> | Millstone Flour Co | MF-20931 | 2,980.00 | Hold | Invoice shows new bank account (…7781); email from millstone-fIour.com (capital I, not l) | Owner calls Millstone on number on file |
-> | Brightpack Ltd | 4471-A | 864.50 | Hold | Same amount and date as 4471, paid 3 Nov; possible duplicate | Brightpack statement |
-> | Coldline Services | CL-118 | 368.00 | Hold | Price per visit up from 240.00 with no new contract | Operations manager |
-> | Ovenworks | OW-552 | 322.00 | Ask | No sign-off that the repair was done | Head baker |
+> | Supplier A | 20931 | 2,980.00 | Hold | Invoice shows new bank account (…7781); email from a lookalike of Supplier A's domain (capital I in place of l) | Owner calls Supplier A on number on file |
+> | Supplier B | 4471-A | 864.50 | Hold | Same amount and date as 4471, paid 3 Nov; possible duplicate | Supplier B statement |
+> | Supplier C | 118 | 368.00 | Hold | Price per visit up from 240.00 with no new contract | Operations manager |
+> | Supplier D | 552 | 322.00 | Ask | No sign-off that the repair was done | Head baker |
 >
 > *General practice, not tax or legal advice: check this with local rules and ask a qualified accountant about tax lines.*

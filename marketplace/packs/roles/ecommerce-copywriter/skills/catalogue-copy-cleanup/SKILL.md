@@ -56,7 +56,7 @@ Catalogues decay. Products arrive from suppliers with their text, someone runs a
 
 ## Example of good output (short)
 
-*Copper Kettle Kitchenware is a made-up shop used only to show the format. Figures are invented for this example.*
+*Illustrative structure, not a real business: an online kitchenware shop. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Health summary:** 640 products, 1,912 variants. 212 descriptions match another product's text word for word (33%). 148 Google feed titles put the variant past character 70. 391 images have empty alt text. 14 products say "non-toxic" with no evidence on file.
 
@@ -73,6 +73,6 @@ Catalogues decay. Products arrive from suppliers with their text, someone runs a
 |---|---|---|---|---|
 | Copper stovetop kettle | "Non-toxic" claim, no evidence | High | Hold claim; send to claims check | 1 |
 | Enamel casserole, 24 cm | Same description as 26 cm and 28 cm sizes | High | Rewrite from fact sheet; lead with capacity and serving size | 2 |
-| Steel saucepan set | Feed title 168 characters, variant at the end | Medium | "Copper Kettle Steel Saucepan Set, 3 Pieces, 16/18/20 cm" | 3 |
+| Steel saucepan set | Feed title 168 characters, variant at the end | Medium | "[Business] Steel Saucepan Set, 3 Pieces, 16/18/20 cm" | 3 |
 
 **Rule (extract):** Title pattern for cookware: Brand + item + key spec + size. Capacity in litres with a space ("1.5 l"). Never "non-toxic", "chemical-free" or "eco" without the evidence in the claims log.

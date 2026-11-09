@@ -58,13 +58,13 @@ Not for: finding or buying contact details, emailing people without a lawful bas
 
 ## Example of good output (short)
 
-*Trades Talk is a made-up podcast for trades business owners, used only to show the format. Names and numbers are invented.*
+*Illustrative structure, not a real business: a podcast for trades business owners. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 | Company | Fit | Budget signs | Warmth | Total | Reason |
 |---|---|---|---|---|---|
-| Northline Van Hire | 3 | 2 | 3 | 8 | Rents vans to sole traders; host met the founder at a trade show |
-| Clearbooks Accounting | 3 | 3 | 1 | 7 | Sells to small trades firms; runs podcast ads elsewhere; no contact yet |
+| Prospect A (van hire) | 3 | 2 | 3 | 8 | Rents vans to sole traders; host met the founder at a trade show |
+| Prospect B (accounting) | 3 | 3 | 1 | 7 | Sells to small trades firms; runs podcast ads elsewhere; no contact yet |
 
-**Pitch (to Northline):** "Subject: Your vans, in front of trades owners every week. Hi Sam, good to meet you at the trade show. Trades Talk gets about 6,000 downloads an episode (host stats to the IAB standard, September 2026), and 7 in 10 listeners who answered our survey run their own trades business. An idea: a monthly 'van of the month' segment where a listener tells us how they use theirs. Could we take 15 minutes next week to see if it fits? Priya, producer, Trades Talk."
+**Pitch (to Prospect A):** "Subject: Your vans, in front of trades owners every week. Hi Sam, good to meet you at the trade show. [Podcast] gets about 6,000 downloads an episode (host stats to the IAB standard, September 2026), and 7 in 10 listeners who answered our survey run their own trades business. An idea: a monthly 'van of the month' segment where a listener tells us how they use theirs. Could we take 15 minutes next week to see if it fits? Priya, producer, [Podcast]."
 
 **Deliverables schedule extract:** "Mid-roll host read, 60 seconds, episodes 41 to 52, labelled as an ad at the start of the read; proof: episode timestamp and host download report; make-good: one extra read per missed episode."

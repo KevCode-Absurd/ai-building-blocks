@@ -1,6 +1,6 @@
 # Weekly growth review
 
-**Cadence:** every week, same day. Thirty to sixty minutes of meeting, plus about two hours of preparation. Growth leads using the Traction pack spread the same loop across the week with `workflows/weekly-traction-rhythm.md`.
+**Cadence:** every week, same day. Thirty to sixty minutes of meeting, plus about two hours of preparation. Growth leads using the Traction pack spread the same loop across the week with the weekly traction rhythm workflow (not in this pack).
 
 **Trigger:** at least one growth test is live, or the scoreboard has been agreed.
 

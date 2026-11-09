@@ -83,7 +83,7 @@ Tag tested, conversions linked to ad sets, form tested with a test lead, CRM syn
 
 ## Example of good output (short)
 
-*Made-up business: Ledgerline, managed IT for law firms with 20 to 100 staff.*
+*Illustrative structure, not a real business: a managed IT provider for law firms with 20 to 100 staff. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Deal maths.** First-year deal 40,000 USD. Close rate from qualified lead 20%, so a qualified lead is worth 8,000 USD of first-year revenue. You chose to spend up to 10% of that, so the target is 800 USD per qualified lead. Budget 4,000 USD a month buys about five at target. That is enough to learn, not to judge, in month one.
 >

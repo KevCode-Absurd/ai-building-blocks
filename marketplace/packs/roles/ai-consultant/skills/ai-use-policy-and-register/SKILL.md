@@ -70,7 +70,7 @@ This skill writes practical rules and a register. It does not decide whether a u
 
 ## Example of good output (short)
 
-*Fenwick & Rowe is a made-up eight-person accountancy practice in England used only to show the format. Access I have: level 1 (tool list and two admin screenshots).*
+*Illustrative structure, not a real business: an eight-person accountancy practice in England. Copy the shape, never the content: every fact comes from the client's own context. Access I have: level 1 (tool list and two admin screenshots).*
 
 > **Our AI rules (version 1, 6 Nov 2026, review 6 May 2027). This is practical guidance, not legal advice. Check data protection and AI rules with a qualified adviser.**
 > - Use Copilot Chat signed in with your work account. *Your work account keeps prompts inside our Microsoft 365 contract.*

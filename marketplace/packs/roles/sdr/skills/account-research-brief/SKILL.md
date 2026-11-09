@@ -90,7 +90,7 @@ Use the same headings for every account, cut to half a page each, and end with a
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Harbourside Freight, a regional logistics firm, meeting a seller of shift-scheduling software.*
+*Illustrative structure, not a real business: a regional logistics firm, meeting a seller of shift-scheduling software. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Goal:** agree a pilot conversation with the COO.
 >

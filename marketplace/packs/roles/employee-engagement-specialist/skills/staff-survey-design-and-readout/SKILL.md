@@ -92,7 +92,7 @@ Not for: investigating a complaint about a named person, checking who said what,
 
 ## Example of good output (short)
 
-*Made-up business: Larkfield Bakeries, 64 staff across a production site and three shops, England.*
+*Illustrative structure, not a real business: a bakery business with 64 staff across a production site and three shops, England. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Template: check this with local rules before use, including privacy notices for staff data.**
 >

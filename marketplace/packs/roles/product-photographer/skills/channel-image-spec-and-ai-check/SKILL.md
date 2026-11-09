@@ -65,14 +65,14 @@ Each channel has its own image rules, and they change. AI tools now make it easy
 
 ## Example of good output (short)
 
-*Ember & Ash Sauce Co. is a made-up business used only to show the format: five hot sauces in 150 ml bottles, sold on Shopify, Amazon and Google Shopping. All details are invented.*
+*Illustrative structure, not a real business: a hot sauce maker with five sauces in 150 ml bottles, sold on Shopify, Amazon and Google Shopping. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | File | Channel and slot | Issue | Edit type | Verdict | Fix |
 |---|---|---|---|---|---|
-| EA-HAB150_main_01.jpg | Amazon main | Background RGB 247,247,247, not pure white | Digital capture | Fix | Set background to 255,255,255 on a copy; keep the master |
-| EA-HAB150_scene_04.jpg | Shopify gallery | AI-generated wooden table and chillies; bottle label slightly warped | Edited using generative AI | Fix | Regenerate keeping the original bottle pixels; check the label against the real bottle |
-| EA-HAB150_scene_04.jpg | Google lifestyle | AI metadata removed by the export preset | Edited using generative AI | Fix | Re-export with metadata kept; new image URL |
-| EA-CHI150_main_01.jpg | Google main | "Best seller" badge in the corner | Digital capture | Fix | Remove the badge on a copy; promotional overlays are not allowed |
-| EA-CHI150_detail_03.jpg | All | Sauce colour pushed redder than the real sauce | Digital capture, saturation +35 | Do not use | Re-edit from the master with saturation at 0 |
+| [business]-HAB150_main_01.jpg | Amazon main | Background RGB 247,247,247, not pure white | Digital capture | Fix | Set background to 255,255,255 on a copy; keep the master |
+| [business]-HAB150_scene_04.jpg | Shopify gallery | AI-generated wooden table and chillies; bottle label slightly warped | Edited using generative AI | Fix | Regenerate keeping the original bottle pixels; check the label against the real bottle |
+| [business]-HAB150_scene_04.jpg | Google lifestyle | AI metadata removed by the export preset | Edited using generative AI | Fix | Re-export with metadata kept; new image URL |
+| [business]-CHI150_main_01.jpg | Google main | "Best seller" badge in the corner | Digital capture | Fix | Remove the badge on a copy; promotional overlays are not allowed |
+| [business]-CHI150_detail_03.jpg | All | Sauce colour pushed redder than the real sauce | Digital capture, saturation +35 | Do not use | Re-edit from the master with saturation at 0 |
 
 **Alt text example:** "150 ml bottle of Habanero Ash hot sauce with a black label, standing on a white background."

@@ -225,3 +225,13 @@ Re-check these at every refresh (every 30 days):
 | Accessibility Nutrition Labels | Apple [9] | Voluntary, required later |
 | React Native, Expo, Flutter versions | [23][24][25] | RN 0.88, SDK 58, Flutter 3.47 |
 | EU and UK rules | [8][29][30] | DSA trader status; EAA; UK code 2023 |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Write the loading, empty, error, offline and success states before coding a screen that loads data, because the missing state is where most bug reports come from. (§5)
+- `decision_rule` When data matters with no signal (bookings, a loyalty card, a job list), read from a local store first and refresh in the background. (§5)
+- `decision_rule` Keep writes that must be confirmed (payment, booking) online only, with a clear failure message; write a person's own notes or checklists locally and sync later. (§5)
+- `decision_rule` When a crash appears without an app change, check third-party SDKs and server responses first. (§5)
+- `taste_reference` Sketch the screen as a text component tree before code, and explain in concrete terms: "If the signal drops, people still see their last 20 jobs." (§8)

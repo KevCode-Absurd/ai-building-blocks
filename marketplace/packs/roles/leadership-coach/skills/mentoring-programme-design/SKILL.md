@@ -93,7 +93,7 @@ Announcement, sign-up form text with a privacy notice, matching confirmation, an
 
 ## Example of good output (short)
 
-*Made-up example: Calder Engineering, a fictional 600-person firm, wants mentoring for early-career engineers.*
+*Illustrative structure, not a real business: a 600-person engineering firm wants mentoring for early-career engineers. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Purpose:** Help engineers in their first two years build the judgment to run a small project on their own.
 >

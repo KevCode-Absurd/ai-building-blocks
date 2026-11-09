@@ -98,7 +98,7 @@ Header with job, model ID, version, date, owner and pass rate; the prompt; the c
 
 ## Example of good output (short)
 
-*Made-up business: Brightwater Plumbing, reply assistant for booking emails, Claude Sonnet 5.5, checked 6 Nov 2026.*
+*Illustrative structure, not a real business: a plumbing firm; reply assistant for booking emails, Claude Sonnet 5.5, checked 6 Nov 2026. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Job card.** Draft a reply to each booking email. A good reply confirms the job type, offers the next two free slots from `{{calendar}}`, and asks for anything missing (address, photo of the problem). Target: 18 of 20 test emails need no edits.
 >

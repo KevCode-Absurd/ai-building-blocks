@@ -59,7 +59,7 @@ Not for: trade mark clearance or filing (a trade mark attorney does that), logo 
 
 ## Example of good output (short)
 
-*Kōwhai Kitchen is a made-up fresh dog food delivery business in Auckland, used only to show the format. Search notes are examples of the format, not real results.*
+*Illustrative structure, not a real business: a fresh dog food delivery business in Auckland. Search notes are examples of the format, not real results. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Brief (extract):** warm, honest, a bit playful; must work on a van, on a phone call and as an app name; English and te reo Māori considered; avoid "paws" and "pet" (every rival uses them).
 

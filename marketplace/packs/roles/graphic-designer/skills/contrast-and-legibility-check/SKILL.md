@@ -60,7 +60,7 @@ People skip what they cannot read. This check finds the text that is too faint, 
 
 ## Example of good output (short)
 
-*Copper Kettle Tearoom is a made-up business used only to show the format: a table menu, read at arm's length in warm, dim light. Access I have: level 1 (exported PDF).*
+*Illustrative structure, not a real business: a tearoom's table menu, read at arm's length in warm, dim light. Access I have: level 1 (exported PDF). Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Summary:** fix needed. Three failures: one that affects allergen information, two in the main menu.
 

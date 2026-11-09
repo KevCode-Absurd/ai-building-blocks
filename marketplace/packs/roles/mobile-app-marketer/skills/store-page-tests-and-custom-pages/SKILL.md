@@ -102,7 +102,7 @@ Map each page to one audience and one source: "Ad group: night-shift nurses, App
 
 ## Example of good output (short)
 
-*Made-up app for illustration: "Nightowl Rest", a sleep app for shift workers.*
+*Illustrative structure, not a real business: a sleep app for shift workers. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Test card**
 > Hypothesis: a first screenshot showing "Sleep after a night shift" will beat the logo frame for page visitors, because 22 of 80 reviews mention night shifts.

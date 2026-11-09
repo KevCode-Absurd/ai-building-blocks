@@ -60,7 +60,7 @@ Not for: writing the script from nothing (use the two-column script skill first)
 
 ## Example of good output (short)
 
-*Hearth & Crumb is a made-up bakery used only to show the format: a 20-second Reel for a new sourdough, 9:16, filmed on a phone, 30 fps. Key: WS wide, MS medium, CU close-up, ECU extreme close-up. Access I have: none yet, so level 1.*
+*Illustrative structure, not a real business: a bakery with a 20-second Reel for a new sourdough, 9:16, filmed on a phone, 30 fps. Key: WS wide, MS medium, CU close-up, ECU extreme close-up. Access I have: none yet, so level 1. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | # | Time | Length | We see | Size and move | On-screen text (chars) | Audio |
 |---|---|---|---|---|---|---|

@@ -83,7 +83,7 @@ Baseline weeks, the measure (contribution, not units), the comparison products, 
 
 ## Example of good output
 
-*Fernleaf Skin (a made-up business). Contribution margin 62%. Black Friday options. Sells in the UK in pounds and in Ireland through a euro store.*
+*Illustrative structure, not a real business: a skincare brand that sells in the UK in pounds and in Ireland through a euro store. Contribution margin 62%. Black Friday options. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 | Discount | Break-even lift | Sum |
 |---|---|---|

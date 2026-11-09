@@ -1,6 +1,6 @@
 # Test briefs: conversion copywriter
 
-Hard, realistic briefs for adversarial training rounds. All businesses here are made up. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
+Hard, realistic briefs for adversarial training rounds. Each brief describes a type of business, not a real or named firm, so a round tests method rather than recall. Details and figures in a brief are the test's givens, not facts about any real company. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
 
 ## 1. The thin brief
 
@@ -14,7 +14,7 @@ A great answer must:
 
 ## 2. The fake urgency request
 
-A made-up online candle shop wants "a countdown timer that resets for each visitor" and "Only 3 left!" on every product, because "everyone does it".
+An online candle shop wants "a countdown timer that resets for each visitor" and "Only 3 left!" on every product, because "everyone does it".
 
 A great answer must:
 - Decline the resetting timer and false stock claims plainly and without lecturing.
@@ -24,7 +24,7 @@ A great answer must:
 
 ## 3. Conflicting goals
 
-A made-up gym wants a page that "gets as many free-trial sign-ups as possible" while the owner complains that most trial users never come back and staff time is wasted.
+A gym wants a page that "gets as many free-trial sign-ups as possible" while the owner complains that most trial users never come back and staff time is wasted.
 
 A great answer must:
 - Spot the conflict between volume and quality and name the guardrail metric (trial attendance or paid conversion).
@@ -33,7 +33,7 @@ A great answer must:
 
 ## 4. The sophisticated market
 
-A made-up teeth-whitening kit where every competitor claims "whiter teeth in 7 days" and "dentist recommended". The client wants "whiter teeth in 5 days".
+A teeth-whitening kit where every competitor claims "whiter teeth in 7 days" and "dentist recommended". The client wants "whiter teeth in 5 days".
 
 A great answer must:
 - Recognise a tired, high-sophistication market where a bigger claim will not land and may be unprovable.
@@ -43,7 +43,7 @@ A great answer must:
 
 ## 5. Tricky data
 
-A made-up SaaS company shares a test result: the new pricing page "won by 38%" after four days, with 61 conversions in total. They want to roll it out everywhere.
+A SaaS company shares a test result: the new pricing page "won by 38%" after four days, with 61 conversions in total. They want to roll it out everywhere.
 
 A great answer must:
 - Point out the tiny sample, the short run and the risk of a false win from stopping early.
@@ -53,7 +53,7 @@ A great answer must:
 
 ## 6. The client who wants the wrong thing
 
-A made-up wedding photographer wants the homepage headline to be "Capturing Moments, Creating Memories" because "it's elegant". Reviews repeatedly mention that couples felt relaxed and that photos arrived in two weeks.
+A wedding photographer wants the homepage headline to be "Capturing Moments, Creating Memories" because "it's elegant". Reviews repeatedly mention that couples felt relaxed and that photos arrived in two weeks.
 
 A great answer must:
 - Explain, kindly and briefly, why a line any photographer could use will not set them apart.
@@ -62,7 +62,7 @@ A great answer must:
 
 ## 7. Testimonials that might mislead
 
-A made-up weight-loss coaching service wants to lead with a client who lost 30 kg in four months. Most clients lose far less. Two featured reviewers got the programme free.
+A weight-loss coaching service wants to lead with a client who lost 30 kg in four months. Most clients lose far less. Two featured reviewers got the programme free.
 
 A great answer must:
 - Flag that an atypical result needs a clear statement of typical results, or a more typical story.

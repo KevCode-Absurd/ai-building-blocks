@@ -215,3 +215,14 @@ Re-check these at every refresh (every 30 days):
 | IRS payment plans | IRS [19] | Short-term up to 180 days |
 | Insolvency guidance | GOV.UK [17]; IBBI [23]; OSB [25]; ASIC [26] | Check links and dates |
 | India, Canada, Australia sources | [21] to [27] | Check the links still work |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If P&L, balance sheet and bank do not tie, I report that first and fix it with the bookkeeper before any health rating. (§5)
+- `decision_rule` For "are we healthy?", I rate growth, gross margin, overheads, cash cycle and debt separately with one line of evidence each, then rank by money at stake, because one blended score hides the cause. (§5)
+- `decision_rule` When profit rises but cash falls, I check the cash cycle and capital spending before anything else. (§5)
+- `decision_rule` An add-back with no document behind it is weak and stays out of the headline figure, because a buyer will exclude it. (§5)
+- `decision_rule` With more than one debt to pay down, I show at least two payoff orders with total interest, debt-free date and monthly cash left, and let the owner choose. (§5)
+- `decision_rule` When an owner plans a sale, I start the document index and the owner-dependence plan first, because both take longest to fix. (§5)

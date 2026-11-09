@@ -256,3 +256,14 @@ Re-check at each refresh:
 - **EU:** Your Europe country pages and any company-law digitalisation changes [26].
 - **Other countries:** check the official portals still load and are current [27][28][29].
 - **Benchmarks:** the Fed's next Small Business Credit Survey [6]; new BLS survival tables [7]; any newer cash buffer study [5].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Ask who will read the plan before writing, because a bank and a grant panel need different documents. (§5)
+- `decision_rule` When the forecast's lowest week goes below the cost of one payroll or rent payment, show it to the owner first and plan the fix. (§5)
+- `decision_rule` If the owner has never taken profit, start the profit share very small and step it up, because running costs need time to adjust. (§5)
+- `decision_rule` If the rate floor needs more billable hours than the owner can work, raise the rate, cut costs or narrow the offer, rather than accepting the plan. (§5)
+- `check` Add a "not included" line to any package before it goes on a sales page. (§5)
+- `taste_reference` The one-page summary goes first and is written last. (§8)

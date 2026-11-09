@@ -88,7 +88,7 @@ Compare it with a real run of the task. List gaps, unclear steps, steps nobody d
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Brightwater Bike Repairs, a four-person workshop.*
+*Illustrative structure, not a real business: a four-person bike repair workshop. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **SOP: Book in a repair**
 > **Purpose:** Every bike that comes in is logged, quoted and tagged so it is never lost or fixed without approval.

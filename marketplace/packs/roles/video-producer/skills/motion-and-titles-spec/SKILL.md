@@ -58,13 +58,13 @@ Not for: 3D or character animation, or copying a known logo animation.
 
 ## Example of good output (short)
 
-*Fernhill Cycles is a made-up bike shop used only to show the format: a 3-second end sting, 1920 x 1080, 25 fps (75 frames), built in After Effects by the client's editor. Access I have: level 1.*
+*Illustrative structure, not a real business: a bike shop with a 3-second end sting, 1920 x 1080, 25 fps (75 frames), built in After Effects by the client's editor. Access I have: level 1. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Time (s) | Frame | Layer | Property | From | To | Easing | Reason |
 |---|---|---|---|---|---|---|---|
 | 0.00 | 0 | Wheel symbol | Scale | 0% | 100% | Ease out | The symbol arrives first and lands softly |
 | 0.00-0.80 | 0-20 | Wheel symbol | Rotation | -90° | 0° | Ease out | One turn of the wheel, no spin loop |
 | 0.80-1.40 | 20-35 | Wordmark | Opacity and position | 0%, 20 px right | 100%, 0 px | Ease in-out | The name follows the wheel |
-| 1.40-3.00 | 35-75 | All | Hold | | | | 40 frames hold so "Fernhill Cycles" (15 characters) is readable |
+| 1.40-3.00 | 35-75 | All | Hold | | | | 40 frames hold so "[Business]" (15 characters here) is readable |
 
 *Text check: 15 characters need at least 0.75 s fully visible; the hold gives 1.6 s. Sound: one bell ring at frame 20 [needs: licensed sound effect]. No flashes. Export: MP4, H.264, 1920 x 1080, 25 fps, plus a version with alpha for overlays, format to confirm with the editor.*

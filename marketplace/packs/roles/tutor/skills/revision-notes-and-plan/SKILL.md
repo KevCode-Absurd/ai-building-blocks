@@ -92,7 +92,7 @@ Every fact matches the notes. Headings follow the course order. Nothing is longe
 
 ## Example of good output (short)
 
-*Made-up learner for illustration: Sam, a GCSE History student revising the Cold War, who mixes up the two Berlin crises.*
+*Illustrative structure, not a real person: Sam, a GCSE History student revising the Cold War, who mixes up the two Berlin crises. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Topic 4: Berlin, 1948 to 1949 and 1958 to 1961**
 > - **Berlin Blockade** (June 1948 to May 1949): the Soviet Union cut road, rail and canal links to West Berlin.

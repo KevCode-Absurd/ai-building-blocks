@@ -88,7 +88,7 @@ Enter only the changes that are approved and confirmed into the unsubmitted pay 
 
 ## Example of good output (short)
 
-*Made-up business: Orchard Lane Bakery, 23 staff, monthly payroll in England. Figures are invented for illustration.*
+*Illustrative structure, not a real business: a bakery, 23 staff, monthly payroll in England. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Summary:** October payroll, 23 people, gross £48,610 (September £46,980, +£1,630, +3.5%). 5 items to confirm, £3,046 at stake.
 >

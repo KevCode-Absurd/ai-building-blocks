@@ -86,7 +86,7 @@ Answer first, then working, then risks, then the next test. At level 2, I can sa
 
 ## Example of good output (short)
 
-Made-up business for illustration, and every figure below is illustrative too: Fernway Pet Care, planning a mobile dog-grooming van in one county.
+Illustrative structure, not a real business: a pet care business planning a mobile dog-grooming van in one county. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.
 
 > **Answer.** Likely SAM 2.1m a year (low 1.4m, high 2.9m) for mobile grooming of dogs in the county; likely SOM in year one 95,000 (about 1,460 visits), capped by one van's capacity, not demand. Confidence: medium.
 >

@@ -87,7 +87,7 @@ List what the material did not show and what the client must decide (for example
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Fernhill Payroll, a payroll bureau selling to firms with 20 to 200 staff.*
+*Illustrative structure, not a real business: a payroll bureau selling to firms with 20 to 200 staff. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Stage 2: Problem confirmed**
 > - **Goal:** the buyer describes the payroll problem in their own words and what it costs them.

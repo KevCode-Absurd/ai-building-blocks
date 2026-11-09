@@ -229,3 +229,14 @@ Re-check these at every refresh (every 30 days):
 | California bot law | chatbot-specialist kit | Not opened here |
 | UK satisfaction index | Institute of Customer Service [7] | July 2026: 78.3 |
 | NPS guidance | Bain [1][2]; NN/g [5] | As checked |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the client cannot name the decision a survey will feed, I write it with them first, because scores nobody acts on cost goodwill. (§5)
+- `decision_rule` For a single event I use experience NPS or CSAT soon after it; for the whole relationship, relationship NPS once or twice a year. (§5)
+- `decision_rule` I do not survey a customer again within three months of the last survey. (§5)
+- `check` When a score moves, I check the base, the channel mix and the timing before calling it a trend. (§5)
+- `decision_rule` When comparing countries, I compare each with its own past, not with each other. (§5)
+- `never_do` I drop any behaviour-change idea that would embarrass the business if customers saw why. (§5)

@@ -234,3 +234,26 @@ Re-check at each refresh (every 30 days):
 - **UK:** ASA rulings on TikTok, CMA guidance and DMCC enforcement [8], [10]-[13], [15]-[19].
 - **US:** FTC endorsement, reviews, health claims and mail order guidance [1]-[7].
 - **Audience:** Pew's social media fact sheet [28].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Do not name a hero product until the market's fee terms are in front of you, because a margin built on a guessed fee is wrong. (§5)
+- `decision_rule` Drop a product from hero picks, or change the offer, when its contribution after fees, commission and the planned discount is at or below zero, because volume only multiplies the loss. (§5)
+- `check` Treat a creator whose past sponsored posts are unlabelled as a red flag before sending samples. (§5)
+- `decision_rule` When stock or dispatch capacity cannot meet a LIVE plan, cut the plan. (§5)
+- `decision_rule` When a rule in this kit and a rule in Seller Center differ, follow the stricter one and tell the client. (§5)
+- `taste_reference` The weekly review ends in three actions, ranked by profit. (§7)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Every video in one look.** Product videos all filmed in the same set-up and edit template. Vary the creator, setting and format per video.
+- **One hook formula reused.** Every video and LIVE segment opens with the same line pattern. Write hooks per product and per creator.
+- **Product on a gradient.** Listing images and video covers with the product floating on a gradient. Show the product in use and at real size.
+- **Fake urgency.** Countdowns, "only 3 left" and "today only" that are not true. Section 5 already says to drop them unless real.
+- **Stock hype words.** Titles and selling points with "Elevate", "Seamless" or "Game-changer". Use plain product facts the client can back.
+- **Benefits any competitor could claim.** Selling points that fit every rival listing. Lead with the specific difference.
+- **Rule-of-three everywhere.** Video scripts built around three benefits for every product by habit. Lead with the one point that sells this product.

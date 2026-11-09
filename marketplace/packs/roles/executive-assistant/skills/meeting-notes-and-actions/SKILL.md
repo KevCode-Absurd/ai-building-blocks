@@ -39,7 +39,7 @@ A decision is something the group agreed, with the reason if one was given. Writ
 
 ### 3. Pull out actions
 
-Each action needs a verb, one owner and one date: "Tom: send the revised quote to Oakfield by Thu 12 Nov." If the owner or the date is missing, put the action under "needs an owner or date" and do not guess. Two owners means no owner: ask who leads.
+Each action needs a verb, one owner and one date: "Tom: send the revised quote to [Client] by Thu 12 Nov." If the owner or the date is missing, put the action under "needs an owner or date" and do not guess. Two owners means no owner: ask who leads.
 
 ### 4. List open questions and parked topics
 
@@ -84,7 +84,7 @@ Each item as a question to answer, with a time, an owner and any pre-read. Put d
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Brightwater Physio, a three-clinic physiotherapy practice in Leeds, UK; weekly managers' meeting.*
+*Illustrative structure, not a real business: a three-clinic physiotherapy practice in Leeds, UK; weekly managers' meeting. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Managers' meeting, Tue 3 Nov. Attendees: Asha, Ben, Carys.**
 > **Aim:** decide winter opening hours and fix the booking backlog.

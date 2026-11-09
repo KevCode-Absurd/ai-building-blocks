@@ -54,7 +54,7 @@ Access levels for this skill: the whole skill runs at level 1 (read: the brief, 
 
 ## Example of good output (short)
 
-*Parkside Physio Group is a made-up business used only to show the format: four clinics want a portal where patients book, see treatment notes and pay.*
+*Illustrative structure, not a real business: a group of four physio clinics that wants a portal where patients book, see treatment notes and pay. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Verdict:** not yet. Treatment notes are health data, so a compliance review comes first and must confirm which platforms will sign the agreements the clinics need. Payments should use the payment provider's hosted checkout, not card fields in the app.
 

@@ -204,3 +204,26 @@ Re-check these at every refresh (every 30 days):
 | Checkout abandonment data | Baymard [29] | Updated 28 Oct 2026 |
 | Figma MCP and AI features | Figma Help Center [30] | Canvas writing in beta, free during beta |
 | Research tool plans | Vendor pricing pages in `access.md` | Checked 6 Nov 2026 |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When the client asks "what do users think?", ask what users need to do and test that, because people are poor at predicting their own behaviour. (§5)
+- `decision_rule` Split the budget for one large study into small rounds with fixes between, because later rounds check the fixes and find deeper problems. (§5)
+- `decision_rule` When the team argues about the menu, run a tree test on the options instead of voting. (§5)
+- `decision_rule` When a screen has two main actions, split the screen or make one clearly secondary, and write down why. (§5)
+- `decision_rule` Write a field's error message in the same pass as its label, using the same words as the question. (§5)
+- `check` Label findings from a review "likely problems" and plan a test; for findings from sessions, say how many people hit each one. (§5)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Template page structure.** Centred hero, three benefit cards, "How it works in 3 steps", testimonials, FAQ and a CTA as the default wireframe. Structure each page from the visitor task it serves (section 8).
+- **Every section the same height.** Wireframes built from even, repeating zones. Size zones by what the user needs first.
+- **Dropping the client's nav and footer.** New flows drawn without the product's real navigation. Keep the client's navigation and show where each screen sits in it.
+- **"Trusted by" rows with no logos.** Social proof blocks added by default with placeholder logos. Add proof only where the user needs it, with real content.
+- **Stock hype words in microcopy.** Buttons and headings like "Unlock your potential" or "A seamless experience". Put verbs first on buttons and keep words plain (sections 7 and 8).
+- **Fake urgency.** Countdown timers or "only 2 left" in flows. Section 5 treats a fake countdown as a deceptive pattern; propose an honest version.
+- **Emoji icons.** Emoji as icons in specs. Name the client's icon set, or describe what each icon means.

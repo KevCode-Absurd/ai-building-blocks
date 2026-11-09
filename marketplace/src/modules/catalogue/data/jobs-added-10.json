@@ -208,6 +208,66 @@
         "note": "eLearning Industry's guide says branching scenarios give learners practical experience and can be built on a tight budget with templates and freelancers.",
         "url": "https://elearningindustry.com/top-tips-creating-branching-scenarios-budget"
       }
-    ]
+    ],
+    "family": "other",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every step, rule or policy point that makes a choice right or wrong appears in the brief's material or situation; anything added is marked [confirm with your team]; no legal, medical or HR rulings are given as fact."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: Learning goals; a cast and setting; a script of numbered scenes with 3 to 6 decision points, 2 to 4 choices each, a consequence and feedback for every choice and an ending for every path; a Mermaid map of all paths; a score or debrief guide; and build notes for Twine, Rise, Storyline or live role-play."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other. For this job: Each scenario has 3 to 6 decision points with 2 to 4 choices each; every choice leads to a named scene or ending; no path stops without an ending; scene and choice ids in the script match the Mermaid map exactly."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Each choice shows what the other person says or does next and a one to three sentence feedback note naming the skill or rule involved; wrong choices are tempting mistakes from the brief or common practice, not silly options."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "Lines sound like real speech and screens are short",
+        "weight": 10,
+        "test": "Dialogue lines are under 40 words and written as people talk; each scene is under 120 words; the stated play time fits the length in the brief; terms such as node or passage are explained once."
+      },
+      {
+        "criterion": "It can be built in the named tool and debriefed afterwards",
+        "weight": 10,
+        "test": "Build notes match the tool in the brief (valid Twee passage syntax for Twine, slide and trigger notes for Storyline, block notes for Rise, or facilitator cues for live role-play); a score or debrief guide lists the 3 to 5 points to discuss."
+      }
+    ],
+    "mode_default": "extend"
   }
 ]

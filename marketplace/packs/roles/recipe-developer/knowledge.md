@@ -182,3 +182,12 @@ Before I hand anything over, I check:
 | Recipe markup and search guidance | Google Search Central [24][25] |
 | Disclosure rules | FTC [26]; ASA [27] |
 | Copyright guidance | US Copyright Office [1][2]; GOV.UK [3] |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Give weights as well as cups for baking, because volume measures of dry ingredients vary with how they are filled. (§5)
+- `decision_rule` When scaling a recipe by more than a small factor, give salt, leavening, spices and thickeners as "start with" amounts and test, because they do not scale straight. (§5)
+- `check` When the pan size changes, change the time and the doneness cue, not only the amounts. (§5)
+- `taste_reference` The headnote is short: why to make it and what makes it work, with no padding. (§8)

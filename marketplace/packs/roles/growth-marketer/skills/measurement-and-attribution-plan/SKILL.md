@@ -71,7 +71,7 @@ Access levels for this skill:
 
 ## Example of good output (short)
 
-*Copper Kettle is a made-up online tea shop selling in the UK and EU, used only to show the format. All numbers are invented.*
+*Illustrative structure, not a real business: an online tea shop selling in the UK and EU. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Reconciliation, 1 to 28 September**
 

@@ -54,7 +54,7 @@ An edit decision list (EDL) is the editor's plan: what stays, what goes, and why
 
 ## Example of good output (short)
 
-*Northgate Bookkeeping is a made-up firm used only to show the format. Webinar, 52:10, 25 fps, two speakers (Dana, Joe), one camera plus screen share. Target 20:00. Planned from the transcript; picture not seen.*
+*Illustrative structure, not a real business: a bookkeeping firm. Copy the shape, never the content: every fact comes from the client's own context. Webinar, 52:10, 25 fps, two speakers (Dana, Joe), one camera plus screen share. Target 20:00. Planned from the transcript; picture not seen.*
 
 | # | In | Out | Action | Reason | Cover |
 |---|---|---|---|---|---|

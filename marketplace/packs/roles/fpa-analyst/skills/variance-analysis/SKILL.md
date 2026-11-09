@@ -98,7 +98,7 @@ Write the formulas once in words and with the owner's column names, so the bridg
 
 ## Example of good output (short)
 
-Made-up business for illustration: Cedar & Spoke, a bike shop with two product lines.
+Illustrative structure, not a real business: a bike shop with two product lines. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.
 
 > **Headline:** October revenue rose 7,700 against last October (44,000 to 51,700). Mix added 6,900 as buyers moved to e-bikes, volume added 1,100 (one more bike sold), and price took away 300 because e-bike discounts outweighed the road bike price rise.
 >

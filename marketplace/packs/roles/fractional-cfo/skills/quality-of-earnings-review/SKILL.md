@@ -87,7 +87,7 @@ Numbered, grouped by area, ranked by what could change the price. On the sell si
 
 ## Example of good output (short)
 
-Made-up business for illustration: Ridgeway Pet Supplies, one shop and a web store, being bought.
+Illustrative structure, not a real business: a pet supplies business with one shop and a web store, being bought. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.
 
 > **Headline:** Reported EBITDA last year 112,000. Adjusted EBITDA 114,300 on strong and medium lines (the owner takes no salary, so a market manager cost comes off). The broker's figure of 135,300 also counts a weak 21,000 line, shown separately.
 >

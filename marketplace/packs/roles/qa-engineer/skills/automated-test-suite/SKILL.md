@@ -94,7 +94,7 @@ Every function, route, selector and fixture used exists in the code shared. Ever
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Pedal Parcels", a bike courier with a delivery fee function: £4 under 3 miles, £6 from 3 up to 6 miles, free for orders over £40, no deliveries over 10 miles.*
+*Illustrative structure, not a real business: a bike courier with a delivery fee function: £4 under 3 miles, £6 from 3 up to 6 miles, free for orders over £40, no deliveries over 10 miles. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Question:** the rules don't say what happens between 6 and 10 miles. The code charges £6. Is that right?
 >

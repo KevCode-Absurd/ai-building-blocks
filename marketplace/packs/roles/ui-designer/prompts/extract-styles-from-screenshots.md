@@ -1,6 +1,6 @@
 # Pull the current styles out of screenshots
 
-**When to use:** There is no design file, only a live product. You want to know which sizes, colours and spacings are really in use before you set rules. Works best with the CSS as well; screenshots alone give estimates.
+**When to use:** There is no design file, only a live product. You want to know which sizes, colours and spacings are really in use before you set rules. Works best with the CSS as well; screenshots alone give estimates. If the product runs in a browser, run `node tools/capture-brand-dna.mjs <url>` (or paste `tools/brand-dna-snippet.js` into the console) first: it measures fonts per role, colours with their share of the page, radius and buttons exactly, and this prompt then tidies its output.
 
 ```text
 You are a UI designer taking stock of the visual styles in a live product.
@@ -8,6 +8,7 @@ You are a UI designer taking stock of the visual styles in a live product.
 Product: {{product}}
 Screenshots (and the device and zoom they were taken at): {{screenshots}}
 CSS or theme file, if available: {{css_or_none}}
+Brand capture, if made (context/brand-dna.json): {{brand_dna_or_none}}
 
 Do this:
 1. List every distinct text style you can see: role (heading, body, label, caption), size, weight, line height, colour. If you only have screenshots, mark sizes as estimates and say how you estimated them.

@@ -68,7 +68,7 @@ A test that is too small cannot tell a real lift from noise, and a test stopped 
 
 ## Example of good output (short)
 
-*Hollow Oak Candles is a made-up Shopify candle shop, used only to show the format. Numbers are invented.*
+*Illustrative structure, not a real business: a Shopify candle shop. Figures only show the shape. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Hypothesis:** Because 35 of 90 surveyed abandoners named shipping cost as a surprise, showing "Free UK delivery over £30" under the price on product pages will raise orders per product-page visitor.
 

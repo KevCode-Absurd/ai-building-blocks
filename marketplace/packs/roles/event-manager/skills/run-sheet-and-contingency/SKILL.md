@@ -76,7 +76,7 @@ Who collects what, supplier collection times, lost property, venue sign-off, and
 
 ## Example of good output (short)
 
-*Made-up business: Riverside Makers Market, a one-day craft fair for 40 stallholders. Times are invented for illustration.*
+*Illustrative structure, not a real event: a one-day craft fair for 40 stallholders. Copy the shape, never the content: every fact comes from the client's own context. Times only show the shape.*
 
 > | Time | What | Where | Owner | Cue | Backup |
 > |---|---|---|---|---|---|

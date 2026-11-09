@@ -64,7 +64,7 @@ This is general guidance, not legal advice. Subscription and auto-renewal rules 
 
 ## Example of good output (short)
 
-*Hollowbrook Tea Club is a made-up business used only to show the format: a monthly tea box sold to UK and US customers. All figures are invented.*
+*Illustrative structure, not a real business: a monthly tea box sold to UK and US customers. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Offer maths (monthly box):** price £18 at 10% subscriber discount = £16.20; goods £5.40, packaging £0.90, shipping £3.20, fees £0.55; contribution £6.15 per box. Kept for 3, 5 or 8 boxes: £18.45, £30.75 or £49.20 per subscriber. First box at half price costs £8.10 once, earned back in the second box.
 

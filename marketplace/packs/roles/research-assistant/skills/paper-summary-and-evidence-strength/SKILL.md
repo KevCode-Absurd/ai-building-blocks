@@ -93,7 +93,7 @@ One entry per paper using the same fields, then a short paragraph on how they fi
 
 ## Example of good output
 
-Made-up business for illustration: Larkspur Consulting asks for a summary of a made-up report, "Four-Day Week Pilot, 2026", for its leadership team.
+Illustrative structure, not a real business or report: a consultancy asks for a summary of a report, "Four-Day Week Pilot, 2026", for its leadership team. Copy the shape, never the content: every fact comes from the client's own context.
 
 > **Answer.** In this pilot, 38 UK firms that cut to a four-day week reported similar revenue over six months, and staff reported less burnout. Firms chose to take part and there was no comparison group, so this shows what happened in these firms, not that the four-day week caused it.
 >

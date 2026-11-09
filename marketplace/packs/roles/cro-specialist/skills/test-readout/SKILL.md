@@ -70,7 +70,7 @@ The readout is where good tests are wasted: a broken split goes unchecked, a seg
 
 ## Example of good output (short)
 
-*Hollow Oak Candles is a made-up shop, used only to show the format. Counts are invented.*
+*Illustrative structure, not a real business: an online candle shop. Figures only show the shape. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Call: ship the delivery-threshold message.** Orders per visitor rose by 0.44 points (95% interval +0.08 to +0.80 points), p = 0.016, and guardrails held.
 

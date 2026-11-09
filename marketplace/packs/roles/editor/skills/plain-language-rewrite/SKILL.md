@@ -85,7 +85,7 @@ Return the rewrite, the coverage table, the terms list, the before and after sco
 
 ## Example of good output (short)
 
-*Made-up example: Greenway Storage, a fictional self-storage firm, late payment clause.*
+*Illustrative structure, not a real business: a self-storage firm's late payment clause. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Original (61 words):** In the event that the Customer fails to remit payment of any sum due under this Agreement within fourteen (14) days of the due date, the Company reserves the right, without prejudice to any other rights or remedies, to deny access to the Unit and to levy a late payment charge as set out in the Schedule of Fees appended hereto.
 >

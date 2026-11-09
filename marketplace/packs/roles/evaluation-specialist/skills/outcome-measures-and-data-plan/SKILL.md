@@ -86,13 +86,13 @@ Monthly monitoring check, a mid-point outcome look if the programme is long, and
 
 ## Example of good output (short)
 
-*Made-up programme for illustration: Larkspur Adult Literacy, 12-week evening course, about 70 learners a year.*
+*Illustrative structure, not a real programme: a 12-week evening adult literacy course with about 70 learners a year. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Proportionality:** small, low-risk, similar courses are well studied. Good monitoring plus matched before-and-after surveys is enough; no comparison group.
 >
 > | Outcome | Measure | Source | When | Who | Baseline |
 > |---|---|---|---|---|---|
-> | Learners read everyday texts with more confidence | 5 confidence questions, 1 to 5 scale | Matched survey, code LL-001 etc. | Week 1 and week 12 | Tutor hands out; coordinator enters | Week 1 survey |
+> | Learners read everyday texts with more confidence | 5 confidence questions, 1 to 5 scale | Matched survey, code L-001 etc. | Week 1 and week 12 | Tutor hands out; coordinator enters | Week 1 survey |
 > | Learners use reading outside class | "In the last week, did you read a letter, label or message on your own?" | Same survey | Week 1, week 12 | As above | Week 1 survey |
 >
 > **Design note:** this plan can show what changed between week 1 and week 12 for learners who answered both. It can't show how much was due to the course rather than other help.

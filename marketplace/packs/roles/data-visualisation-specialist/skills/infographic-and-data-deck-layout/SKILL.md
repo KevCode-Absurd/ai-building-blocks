@@ -90,7 +90,7 @@ At level 1, a layout sheet a designer can follow in Canva, Figma, Illustrator or
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Brookfield Food Bank", one-page annual summary.*
+*Illustrative structure, not a real organisation: a food bank making a one-page annual summary. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Main message:** "We gave out 18% more food parcels in 2026 on the same budget."
 >
@@ -100,7 +100,7 @@ At level 1, a layout sheet a designer can follow in Canva, Figma, Illustrator or
 > | 2 Context | 20% | Parcels per month, Jan to Dec 2026 | Line, start and end labelled |
 > | 3 Breakdown | 30% | Parcels by referral source, sorted | Four bars, labels on bars, one colour |
 > | 4 What it means | 15% | Two sentences on volunteer hours | Text with one icon |
-> | 5 Ask | 15% | "Volunteer on Saturdays: brookfield.example/help" | Button-style box |
+> | 5 Ask | 15% | "Volunteer on Saturdays: [domain]/help" | Button-style box |
 >
-> **Source line:** "Brookfield Food Bank parcel log and accounts, Jan to Dec 2026."
-> **Alt text:** "Infographic: Brookfield Food Bank gave out 12,480 parcels in 2026, 18% more than 2025, on the same budget. Full figures in the text below."
+> **Source line:** "[Charity] parcel log and accounts, Jan to Dec 2026."
+> **Alt text:** "Infographic: [Charity] gave out 12,480 parcels in 2026, 18% more than 2025, on the same budget. Full figures in the text below."

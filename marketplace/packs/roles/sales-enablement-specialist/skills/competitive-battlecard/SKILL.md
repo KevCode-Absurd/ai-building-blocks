@@ -88,14 +88,14 @@ Every card shows when it was checked and when it will be checked again.
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Quillstone, a small booking software company, against a made-up larger rival, Bookwell.*
+*Illustrative structure, not a real business: a small booking software company, against a larger rival (Rival A). Copy the shape, never the content: every fact comes from the client's own context.*
 
-> **Bookwell battlecard (checked 6 Nov 2026; review 6 Dec 2026)**
+> **Rival A battlecard (checked 6 Nov 2026; review 6 Dec 2026)**
 >
-> **Why buyers chose (last 9 months, 23 deals; some gave two reasons):** chose us: setup help (9), phone support (6); chose Bookwell: marketplace listing (8), lower entry price (5).
+> **Why buyers chose (last 9 months, 23 deals; some gave two reasons):** chose us: setup help (9), phone support (6); chose Rival A: marketplace listing (8), lower entry price (5).
 >
 > **Where we win:** first-month setup done for the client; phone support on every plan; group bookings.
-> **Where we lose:** Bookwell's marketplace brings new customers; its entry plan costs less; it has more integrations.
+> **Where we lose:** Rival A's marketplace brings new customers; its entry plan costs less; it has more integrations.
 >
 > **Their claim:** "All-in-one platform." **Fair answer:** "It covers a lot. Ask them which parts are extra on the entry plan; their pricing page lists add-ons (checked 6 Nov)."
 >

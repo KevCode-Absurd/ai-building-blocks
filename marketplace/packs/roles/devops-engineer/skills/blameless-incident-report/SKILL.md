@@ -90,7 +90,7 @@ The report is reviewed by someone senior who was not in the incident, then share
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Copperleaf Tickets", checkout down on a Tuesday evening.*
+*Illustrative structure, not a real business: a ticketing business whose checkout went down on a Tuesday evening. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Time (UTC) | What happened | Source |
 > |---|---|---|

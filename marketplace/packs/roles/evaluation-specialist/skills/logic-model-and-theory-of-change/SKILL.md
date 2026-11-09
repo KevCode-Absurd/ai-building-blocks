@@ -88,7 +88,7 @@ Left-to-right table: inputs, activities, outputs, short-term, medium-term, long-
 
 ## Example of good output (short)
 
-*Made-up programme for illustration: Brightwell Youth Trust, weekly mentoring for 80 young people aged 13 to 16.*
+*Illustrative structure, not a real organisation: a youth trust running weekly mentoring for 80 young people aged 13 to 16. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Inputs | Activities | Outputs | Short-term | Medium-term | Long-term |
 > |---|---|---|---|---|---|

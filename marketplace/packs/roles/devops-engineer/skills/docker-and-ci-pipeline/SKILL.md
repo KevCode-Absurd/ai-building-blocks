@@ -92,7 +92,7 @@ Run the pipeline on a branch and on staging. Before the first production deploy,
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Harrow Lane Allotments", Flask booking app on a VPS.*
+*Illustrative structure, not a real organisation: an allotment society running a Flask booking app on a VPS. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Secret | Used by | Set in | Set by |
 > |---|---|---|---|
@@ -115,4 +115,4 @@ Run the pipeline on a branch and on staging. Before the first production deploy,
 >       - uses: actions/checkout@<full-commit-sha>  # v4, pinned by SHA: confirm
 > ```
 >
-> **Rollback:** run the `redeploy` job with the previous image tag (`ghcr.io/harrow/booking:<last-good-sha>`); it takes the same path as a normal deploy.
+> **Rollback:** run the `redeploy` job with the previous image tag (`ghcr.io/[business]/booking:<last-good-sha>`); it takes the same path as a normal deploy.

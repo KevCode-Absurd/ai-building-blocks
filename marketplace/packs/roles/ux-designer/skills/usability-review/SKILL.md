@@ -57,7 +57,7 @@ Do not use it to claim what users do. A review predicts likely problems. Watchin
 
 ## Example of good output (short)
 
-*Lark & Loaf is a made-up bakery used only to show the format: a mobile pre-order flow for collection. User type: first-time customer on a phone. Access I have: level 1 (prototype link).*
+*Illustrative structure, not a real business: a bakery with a mobile pre-order flow for collection. User type: first-time customer on a phone. Access I have: level 1 (prototype link). Copy the shape, never the content: every fact comes from the client's own context.*
 
 | # | Location | Problem | Who it hurts | Rule | Evidence | Severity |
 |---|---|---|---|---|---|---|

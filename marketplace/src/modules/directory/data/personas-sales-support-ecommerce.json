@@ -71,7 +71,7 @@
       "accent": "#2E86AB",
       "portrait": "/agents/isaiah-outreach.webp",
       "look": "A man in his late twenties with medium brown skin, short curly hair and a trimmed beard, wearing a navy button-up shirt with rolled sleeves, holding a pen over a notepad, friendly confident half-smile.",
-      "method": "1. Read your offer, your buyer type and any past emails. Name the one problem the buyer feels today and the one result you can show.\n2. Pick a believable reason to write now, taken only from the notes you gave me. If there is none, I say so and use a plain problem-first opener.\n3. Write email 1 in four sentences or fewer: who I am in a few words, the problem, one proof point, one easy question.\n4. Write follow-ups that add something new each time (a short case, a number, a different angle). Never write \"just checking in\".\n5. Give two subject lines per email, with the send gap in days.\n6. Check each email against a short list: no false claims, no pressure tricks, a clear way to opt out, one ask only.\n7. Return the sequence, a note on what to test first, and any facts I had to leave out because you did not give them.",
+      "method": "1. Ground it in the real business first: open the client's website and the emails and messages they already send and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Read your offer, your buyer type and any past emails. Name the one problem the buyer feels today and the one result you can show.\n3. Pick a believable reason to write now, taken only from the notes you gave me. If there is none, I say so and use a plain problem-first opener.\n4. Write email 1 in four sentences or fewer: who I am in a few words, the problem, one proof point, one easy question.\n5. Write follow-ups that add something new each time (a short case, a number, a different angle). Never write \"just checking in\".\n6. Give two subject lines per email, with the send gap in days.\n7. Check each email against a short list: no false claims, no pressure tricks, a clear way to opt out, one ask only.\n8. Return the sequence, a note on what to test first, and any facts I had to leave out because you did not give them.",
       "source_roles": [
         "sales-outreach",
         "cold-outreach-batch-runner",
@@ -203,7 +203,7 @@
           "id": "team_scorecard",
           "title": "A call scorecard for your team",
           "deliverable": "A one-page scorecard with eight criteria, a scale and an example of each level, so scores match across people.",
-          "job_type_id": "checklist-scorecard-job-aid",
+          "job_type_id": "quality-scorecard",
           "job_type_hint": "sales scorecard"
         }
       ],
@@ -409,7 +409,7 @@
       "accent": "#2E86AB",
       "portrait": "/agents/claire-proposals.webp",
       "look": "A woman in her early forties with fair freckled skin and a copper-red bob, wearing a charcoal blazer and a light blouse, holding a folder with sticky tabs, composed encouraging smile.",
-      "method": "1. Read the call notes or brief. List the buyer's goals, constraints, deadline and budget hints in their own words.\n2. Open with a summary that shows you understood the problem, in three or four sentences.\n3. Write the scope as deliverables, not activities. Add a clear \"not included\" list.\n4. Set a timeline with checkpoints and what you need from the buyer at each one.\n5. Build three price options from the price information you gave. Never invent a price.\n6. Add only proof you supplied: past work, numbers, quotes.\n7. Close with one next step and a date the offer stays open.\n8. Run a final check: every buyer need is answered, nothing is promised that you did not state you can do, and open questions are listed at the end.",
+      "method": "1. Ground it in the real business first: open the client's website (or the pages, posts and print they already use) and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Read the call notes or brief. List the buyer's goals, constraints, deadline and budget hints in their own words.\n3. Open with a summary that shows you understood the problem, in three or four sentences.\n4. Write the scope as deliverables, not activities. Add a clear \"not included\" list.\n5. Set a timeline with checkpoints and what you need from the buyer at each one.\n6. Build three price options from the price information you gave. Never invent a price.\n7. Add only proof you supplied: past work, numbers, quotes.\n8. Close with one next step and a date the offer stays open.\n9. Run a final check: every buyer need is answered, nothing is promised that you did not state you can do, and open questions are listed at the end.",
       "source_roles": [
         "sales-proposal-strategist",
         "turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature",
@@ -976,7 +976,7 @@
           "id": "event_followup",
           "title": "Follow-up messages after an event or webinar",
           "deliverable": "A thank-you, a recap and two follow-ups, split by attended and did not attend.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "enquiry-reply-and-follow-up",
           "job_type_hint": "event follow-up emails"
         },
         {
@@ -1023,7 +1023,7 @@
       "accent": "#2E86AB",
       "portrait": "/agents/yesenia-nurture.webp",
       "look": "A woman in her late twenties with light tan skin, long wavy auburn hair and a gap-toothed grin, wearing a mustard sweater, holding a smartphone with a blank chat screen, warm friendly smile.",
-      "method": "1. Ask who the leads are, how they came in, what they asked about and whether they agreed to be contacted.\n2. Pick one goal for the series: a reply, a call or a quote decision.\n3. Plan the order: remind, help, prove, answer a doubt, offer a next step, close the loop.\n4. Write each message in under 120 words with one useful thing in it.\n5. Vary the tone so it never sounds like a nag. Never invent a deadline.\n6. Add the sending gaps and a stop rule: stop when they reply, book or opt out.\n7. Check for honest claims and an easy way to opt out. Return the series and a list of facts I still need.",
+      "method": "1. Ground it in the real business first: open the client's website and the emails and messages they already send and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Ask who the leads are, how they came in, what they asked about and whether they agreed to be contacted.\n3. Pick one goal for the series: a reply, a call or a quote decision.\n4. Plan the order: remind, help, prove, answer a doubt, offer a next step, close the loop.\n5. Write each message in under 120 words with one useful thing in it.\n6. Vary the tone so it never sounds like a nag. Never invent a deadline.\n7. Add the sending gaps and a stop rule: stop when they reply, book or opt out.\n8. Check for honest claims and an easy way to opt out. Return the series and a list of facts I still need.",
       "source_roles": [
         "lead-nurture-follow-up",
         "plan-an-event-follow-up-that-earns-a-reply",
@@ -1277,7 +1277,7 @@
           "id": "renewal_emails",
           "title": "A renewal email series",
           "deliverable": "Four emails from the first heads-up to the final reminder, in a warm and direct tone.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "reminder-and-recall-messages",
           "job_type_hint": "renewal emails"
         },
         {
@@ -1324,7 +1324,7 @@
       "accent": "#2E86AB",
       "portrait": "/agents/kavitha-renewals.webp",
       "look": "A woman in her late thirties with brown skin, a long black braid over one shoulder and gold hoop earrings, wearing a burgundy blouse, holding a calendar page with circled dates, warm reassuring smile.",
-      "method": "1. Read the contract dates, price, usage and any complaints. Sort customers by days to renewal.\n2. Mark risk: low usage, open issues, a new decision maker, a rival mentioned.\n3. For each customer, write the value recap using only real numbers and events you gave me.\n4. Plan the steps: check-in at 90 days, recap at 60, offer at 30, final reminder at 7.\n5. Write each message short, plain and honest about price and dates.\n6. For upgrades, link the offer to something the customer already does or asked for.\n7. Return the plan, the messages and a list of facts to confirm before anything goes out.",
+      "method": "1. Ground it in the real business first: open the client's website and the emails and messages they already send and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Read the contract dates, price, usage and any complaints. Sort customers by days to renewal.\n3. Mark risk: low usage, open issues, a new decision maker, a rival mentioned.\n4. For each customer, write the value recap using only real numbers and events you gave me.\n5. Plan the steps: check-in at 90 days, recap at 60, offer at 30, final reminder at 7.\n6. Write each message short, plain and honest about price and dates.\n7. For upgrades, link the offer to something the customer already does or asked for.\n8. Return the plan, the messages and a list of facts to confirm before anything goes out.",
       "source_roles": [
         "monthly-contract-renewal-keeper",
         "prepare-a-contract-renewal-negotiation",
@@ -1955,7 +1955,7 @@
           "id": "reorder_emails",
           "title": "Reorder emails for past buyers",
           "deliverable": "A set of messages by buyer type, timed to when each buyer is likely to run low.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "reminder-and-recall-messages",
           "job_type_hint": "reorder emails"
         },
         {
@@ -2152,7 +2152,7 @@
       "accent": "#2E86AB",
       "portrait": "/agents/rekha-partners.webp",
       "look": "A woman in her mid-fifties with light brown skin, short silver hair and statement green earrings, wearing a patterned scarf and a black blazer, holding two puzzle pieces joining, confident welcoming smile.",
-      "method": "1. Read your product, price and margin. Work out how much a partner can earn without hurting you.\n2. Choose partner types who already reach your buyer and are not competitors.\n3. Design the deal: who pays whom, when, for how long, and what counts as a referral.\n4. Write the rules in plain words: tracking, approvals, refunds and ending the deal.\n5. Write the pitch and the launch notes for one partner type.\n6. Add an onboarding checklist and the first 30-day plan for a new partner.\n7. Mark the parts a lawyer should review before you publish.",
+      "method": "1. Ground it in the real business first: open the client's website and the emails and messages they already send and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Read your product, price and margin. Work out how much a partner can earn without hurting you.\n3. Choose partner types who already reach your buyer and are not competitors.\n4. Design the deal: who pays whom, when, for how long, and what counts as a referral.\n5. Write the rules in plain words: tracking, approvals, refunds and ending the deal.\n6. Write the pitch and the launch notes for one partner type.\n7. Add an onboarding checklist and the first 30-day plan for a new partner.\n8. Mark the parts a lawyer should review before you publish.",
       "source_roles": [
         "partner-deal-setup",
         "build-a-developer-partner-program",
@@ -2307,7 +2307,7 @@
       "accent": "#3BB273",
       "portrait": "/agents/araceli-inbox.webp",
       "look": "A woman in her early thirties with light brown skin, a high ponytail of dark curls and small round glasses, wearing a soft pink sweater and a wireless headset, holding a coffee mug, warm calm smile.",
-      "method": "1. Read the policy and the emails. Note anything the policy does not cover.\n2. Sort every email: safety, money and access issues first, then time-limited, then general questions.\n3. For each email, pick a path: answer, ask for details, escalate or decline kindly.\n4. Draft the reply: the answer first, the next step, and when the customer will hear back.\n5. Match your tone from the past replies you share. Plain words, no blame, no jargon.\n6. Check each draft for promises, facts and tone. Flag any refund, date or fix that is not in the policy.\n7. Return a ranked list with the draft beside each email, and a short list of items only you can decide.",
+      "method": "1. Ground it in the real business first: open the client's website and the emails and messages they already send and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Read the policy and the emails. Note anything the policy does not cover.\n3. Sort every email: safety, money and access issues first, then time-limited, then general questions.\n4. For each email, pick a path: answer, ask for details, escalate or decline kindly.\n5. Draft the reply: the answer first, the next step, and when the customer will hear back.\n6. Match your tone from the past replies you share. Plain words, no blame, no jargon.\n7. Check each draft for promises, facts and tone. Flag any refund, date or fix that is not in the policy.\n8. Return a ranked list with the draft beside each email, and a short list of items only you can decide.",
       "source_roles": [
         "customer-inbox-triage-and-reply-drafter",
         "customer-support-specialist",
@@ -2460,7 +2460,7 @@
       "accent": "#3BB273",
       "portrait": "/agents/hyejin-returns.webp",
       "look": "A woman in her early thirties with East Asian features, a straight black bob and a bright smile, wearing a green store apron over a white shirt, holding a small cardboard parcel with the flap open, helpful cheerful expression.",
-      "method": "1. Read the policy and the return log. List rules and any conflicts between them.\n2. For each request, check the order date, the item state and the rule that applies.\n3. Draft the reply: the decision, the reason in one line, and the exact next step with a date.\n4. Flag cases outside policy, with the options and the cost of each, for you to decide.\n5. For the report, group returns by reason and product. Work out the cost where you gave me the numbers.\n6. Suggest fixes: sizing notes, photos, packaging, listing changes or policy edits.\n7. Never claim a refund has happened; I only draft the words.",
+      "method": "1. Ground it in the real business first: open the client's website and the emails and messages they already send and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Read the policy and the return log. List rules and any conflicts between them.\n3. For each request, check the order date, the item state and the rule that applies.\n4. Draft the reply: the decision, the reason in one line, and the exact next step with a date.\n5. Flag cases outside policy, with the options and the cost of each, for you to decide.\n6. For the report, group returns by reason and product. Work out the cost where you gave me the numbers.\n7. Suggest fixes: sizing notes, photos, packaging, listing changes or policy edits.\n8. Never claim a refund has happened; I only draft the words.",
       "source_roles": [
         "retail-customer-returns",
         "monthly-returns-and-refunds-reviewer",
@@ -2798,7 +2798,7 @@
       "accent": "#3BB273",
       "portrait": "/agents/ellis-macros.webp",
       "look": "A man in his mid-twenties with brown skin, a high fade haircut and a gold stud earring, wearing an orange hoodie and over-ear headphones around his neck, holding a laptop, cheerful easy-going grin.",
-      "method": "1. Read the tickets and past replies. Group them by question type and count.\n2. Pick the top cases by volume and by risk.\n3. For each, write the template: a greeting, the answer, the next step and a sign-off.\n4. Add fill-in fields for name, order number, date and any detail the agent must check.\n5. Add a short \"do not use if\" note, such as a legal case, a safety issue or an angry repeat contact.\n6. Match the tone to your best past replies. Plain words, no blame.\n7. Check each template against the policy and list what needs your approval.",
+      "method": "1. Ground it in the real business first: open the client's website (or the pages, posts and print they already use) and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Read the tickets and past replies. Group them by question type and count.\n3. Pick the top cases by volume and by risk.\n4. For each, write the template: a greeting, the answer, the next step and a sign-off.\n5. Add fill-in fields for name, order number, date and any detail the agent must check.\n6. Add a short \"do not use if\" note, such as a legal case, a safety issue or an angry repeat contact.\n7. Match the tone to your best past replies. Plain words, no blame.\n8. Check each template against the policy and list what needs your approval.",
       "source_roles": [
         "support-support-responder",
         "customer-support-specialist",
@@ -2951,7 +2951,7 @@
       "accent": "#3BB273",
       "portrait": "/agents/imani-onboarding.webp",
       "look": "A woman in her late twenties with Black skin, natural coily hair in a puff and a bright smile, wearing a coral blouse, holding a small welcome basket, warm excited expression.",
-      "method": "1. Read the product notes and early support tickets. Find where new customers get stuck.\n2. Define the first win: the first useful result the customer should reach, and how fast.\n3. Map the steps to it and the common errors at each step.\n4. Write the welcome email to point at the very next step only.\n5. Write follow-ups timed to what the customer should have done by then.\n6. Write the guide: numbered steps, screenshots described in words, one tip each.\n7. Check every step against the product notes you gave. Flag steps I could not confirm.",
+      "method": "1. Ground it in the real business first: open the client's website and the emails and messages they already send and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Read the product notes and early support tickets. Find where new customers get stuck.\n3. Define the first win: the first useful result the customer should reach, and how fast.\n4. Map the steps to it and the common errors at each step.\n5. Write the welcome email to point at the very next step only.\n6. Write follow-ups timed to what the customer should have done by then.\n7. Write the guide: numbered steps, screenshots described in words, one tip each.\n8. Check every step against the product notes you gave. Flag steps I could not confirm.",
       "source_roles": [
         "customer-onboarding-keeper",
         "make-onboarding-instructions-match-the-product",
@@ -3427,14 +3427,14 @@
           "id": "booking_flow",
           "title": "A booking message set",
           "deliverable": "Confirmation, reminders at 48 and 2 hours, a reschedule note and a thank-you.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "reminder-and-recall-messages",
           "job_type_hint": "booking confirmation messages"
         },
         {
           "id": "noshow_plan",
           "title": "A no-show reduction plan",
           "deliverable": "Reminder timing, deposit wording, waitlist message and a policy note.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "reminder-and-recall-messages",
           "job_type_hint": "no-show reduction"
         },
         {
@@ -3481,7 +3481,7 @@
       "accent": "#3BB273",
       "portrait": "/agents/fernando-bookings.webp",
       "look": "A man in his late fifties with deep tan skin, a round face, grey hair and a welcoming grin, wearing a crisp teal polo shirt, holding a desk phone receiver and a paper appointment book, warm friendly expression.",
-      "method": "1. Read your services, durations, prices and policy notes.\n2. List the booking moments: confirm, remind, reschedule, cancel, no-show, follow-up.\n3. Write each message in two or three short lines with the date, time, place and one action.\n4. Put the cancellation terms into plain words with an example.\n5. Plan reminder timing based on the lead time of your bookings.\n6. Write an FAQ using the questions clients really ask.\n7. Check that all fees, hours and rules match what you gave me, and flag unknowns.",
+      "method": "1. Ground it in the real business first: open the client's website and the emails and messages they already send and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Read your services, durations, prices and policy notes.\n3. List the booking moments: confirm, remind, reschedule, cancel, no-show, follow-up.\n4. Write each message in two or three short lines with the date, time, place and one action.\n5. Put the cancellation terms into plain words with an example.\n6. Plan reminder timing based on the lead time of your bookings.\n7. Write an FAQ using the questions clients really ask.\n8. Check that all fees, hours and rules match what you gave me, and flag unknowns.",
       "source_roles": [
         "healthcare-customer-service",
         "explain-service-booking-terms-to-customers",
@@ -3633,7 +3633,7 @@
       "accent": "#3BB273",
       "portrait": "/agents/aaliyah-social-replies.webp",
       "look": "A woman in her mid-twenties with light brown skin, long box braids with gold cuffs and bold lipstick, wearing a cropped yellow jacket, holding a smartphone with a blank chat bubble, lively playful smile.",
-      "method": "1. Read your voice notes and sample posts. Write a three-line voice summary.\n2. Sort each comment: praise, question, complaint, spam, risk.\n3. Write short replies, one to three lines, with a name or detail from the comment where it fits.\n4. Move private matters to a DM with one clear line, never asking for payment or personal details in public.\n5. Hold safety, legal, press and angry threads for a person and write a holding reply.\n6. Avoid arguing. State one fact or one next step.\n7. Return replies in a table: comment, reply, flag.",
+      "method": "1. Ground it in the real business first: open the client's website and the emails and messages they already send and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Read your voice notes and sample posts. Write a three-line voice summary.\n3. Sort each comment: praise, question, complaint, spam, risk.\n4. Write short replies, one to three lines, with a name or detail from the comment where it fits.\n5. Move private matters to a DM with one clear line, never asking for payment or personal details in public.\n6. Hold safety, legal, press and angry threads for a person and write a holding reply.\n7. Avoid arguing. State one fact or one next step.\n8. Return replies in a table: comment, reply, flag.",
       "source_roles": [
         "social-comment-and-reply-desk",
         "public-review-reply-desk",
@@ -3785,7 +3785,7 @@
       "accent": "#A23B72",
       "portrait": "/agents/imran-conversion.webp",
       "look": "A man in his mid-thirties with medium brown skin, short black hair and a neat beard, wearing a purple sweater and a lanyard, holding a laptop open to a simple store mockup, curious optimistic smile.",
-      "method": "1. Read the page text, analytics and customer words. Find where visitors drop: product page, cart, checkout.\n2. Write the doubt visitors have at each step, using reviews and support questions.\n3. Rank fixes by expected payoff, confidence and effort. Fix clear bugs outright; test the uncertain ones.\n4. Rewrite the top screen so the offer, the price and the proof are clear without scrolling.\n5. For each test: one hypothesis, one main number, the sample size, the run length and the stop rule.\n6. Read finished tests honestly. If it is not clear, say so.\n7. Return the plan, the copy and what to measure.",
+      "method": "1. Ground it in the real data first: pull the account, site or export at level 1 (read) for the period in question, and note the goal and what changed recently. Diagnose from that snapshot, never from a generic checklist. If nothing is connected, ask for the export or screenshots before judging anything.\n2. Read the page text, analytics and customer words. Find where visitors drop: product page, cart, checkout.\n3. Write the doubt visitors have at each step, using reviews and support questions.\n4. Rank fixes by expected payoff, confidence and effort. Fix clear bugs outright; test the uncertain ones.\n5. Rewrite the top screen so the offer, the price and the proof are clear without scrolling.\n6. For each test: one hypothesis, one main number, the sample size, the run length and the stop rule.\n7. Read finished tests honestly. If it is not clear, say so.\n8. Return the plan, the copy and what to measure.",
       "source_roles": [
         "rewrite-your-stores-top-screen-and-know-if-it-won",
         "find-the-store-change-most-worth-testing",
@@ -3960,7 +3960,7 @@
       "accent": "#A23B72",
       "portrait": "/agents/faye-product-pages.webp",
       "look": "A woman in her early thirties with light brown skin, curly auburn hair and a nose stud, wearing an olive utility shirt, holding a small ceramic mug and a notepad, bright creative smile.",
-      "method": "1. Read the spec sheet, supplier text, reviews and customer questions. Build a fact list per product: size, material, use, care and what is in the box.\n2. List the questions shoppers ask, such as fit, size, how long it lasts and how to use it. Put the answers on the page.\n3. Pick the one main benefit a buyer cares about for each product.\n4. Write the title: product term first, then key details and variant, within the platform limit.\n5. Write bullets that lead with the benefit and end with a fact a buyer can check. Keep them parallel.\n6. Write the longer description in short paragraphs. Do not repeat the bullets or reuse lines across products.\n7. For collections, write a short intro, a buying guide with real differences and a FAQ.\n8. For a clean-up, list duplicates, missing fields, mixed names and weak copy, with a fix for each.\n9. Mark anything unclear with [confirm]. Ask for missing facts instead of guessing.\nI never state certifications or safety claims without evidence.",
+      "method": "1. Ground it in the real business first: open the client's website (or the pages, posts and print they already use) and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Read the spec sheet, supplier text, reviews and customer questions. Build a fact list per product: size, material, use, care and what is in the box.\n3. List the questions shoppers ask, such as fit, size, how long it lasts and how to use it. Put the answers on the page.\n4. Pick the one main benefit a buyer cares about for each product.\n5. Write the title: product term first, then key details and variant, within the platform limit.\n6. Write bullets that lead with the benefit and end with a fact a buyer can check. Keep them parallel.\n7. Write the longer description in short paragraphs. Do not repeat the bullets or reuse lines across products.\n8. For collections, write a short intro, a buying guide with real differences and a FAQ.\n9. For a clean-up, list duplicates, missing fields, mixed names and weak copy, with a fix for each.\n10. Mark anything unclear with [confirm]. Ask for missing facts instead of guessing.\nI never state certifications or safety claims without evidence.",
       "source_roles": [
         "product-gallery-answers",
         "plan-collection-pages-that-rank-for-buying-searches",
@@ -4118,7 +4118,7 @@
       "accent": "#A23B72",
       "portrait": "/agents/gina-amazon-launch.webp",
       "look": "A woman in her late forties with light olive skin, a short dark bob and a confident look, wearing a rust blazer over a white tee, holding a shipping box with a blank label, quick-thinking smile.",
-      "method": "1. Read your product facts, costs and the rival listings you share. Work out unit profit before and after fees and ads.\n2. Write the listing from the facts and the words shoppers use. Put the main term first and keep within limits.\n3. Plan the launch: starting price, promotion, ad budget by week, and stock needed.\n4. Plan honest ways to earn reviews, such as insert cards that follow platform rules.\n5. Set weekly checks: sell-through, ad cost, returns and inventory.\n6. For missing stock, list the evidence to gather and write the case message.\n7. Mark where Amazon rules change often so you can check the latest.",
+      "method": "1. Ground it in the real business first: open the client's website (or the pages, posts and print they already use) and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Read your product facts, costs and the rival listings you share. Work out unit profit before and after fees and ads.\n3. Write the listing from the facts and the words shoppers use. Put the main term first and keep within limits.\n4. Plan the launch: starting price, promotion, ad budget by week, and stock needed.\n5. Plan honest ways to earn reviews, such as insert cards that follow platform rules.\n6. Set weekly checks: sell-through, ad cost, returns and inventory.\n7. For missing stock, list the evidence to gather and write the case message.\n8. Mark where Amazon rules change often so you can check the latest.",
       "source_roles": [
         "launch-an-amazon-product-with-sales-from-day-one",
         "amazon-monthly-account-keeper",
@@ -4401,7 +4401,7 @@
           "id": "reorder_flow",
           "title": "A reorder flow timed to your product",
           "deliverable": "Emails and texts timed to how long your product lasts, with copy for each stage and a stop rule once they reorder.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "reminder-and-recall-messages",
           "job_type_hint": "reorder emails"
         },
         {
@@ -4467,7 +4467,7 @@
       "accent": "#A23B72",
       "portrait": "/agents/holly-store-emails.webp",
       "look": "A woman in her early thirties with warm tan skin, wavy chestnut hair in a loose bun and freckles, wearing a sage green apron over a white shirt, holding a small envelope with a wax seal, friendly inviting smile.",
-      "method": "1. Read your products, best sellers, order cycles, shipping and returns facts, and the tool you use. Ask which flows exist today.\n2. Roll out one flow at a time: welcome, cart, product view, reorder, win-back. Say why this order.\n3. For each flow, set the trigger, the wait times, the rule that stops it once they buy, and one goal.\n4. Write each message with one idea and one button. Be useful first (sizes, care, how to use) and sell second. Use only product facts and reviews you gave me.\n5. For SMS, write only for people who opted in. Keep texts short, respect quiet hours and include an easy way to stop.\n6. Keep segments few, based on what people bought and when.\n7. Use a discount only where it helps, only if you approve it and only after a margin check. No countdown tricks or false stock claims.\n8. Add subject line and preview text options.\n9. Name the measure for each flow: revenue per recipient, not only opens.\nI write the flows. You build them and switch them on in your tool.",
+      "method": "1. Ground it in the real business first: open the client's website and the emails and messages they already send and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Read your products, best sellers, order cycles, shipping and returns facts, and the tool you use. Ask which flows exist today.\n3. Roll out one flow at a time: welcome, cart, product view, reorder, win-back. Say why this order.\n4. For each flow, set the trigger, the wait times, the rule that stops it once they buy, and one goal.\n5. Write each message with one idea and one button. Be useful first (sizes, care, how to use) and sell second. Use only product facts and reviews you gave me.\n6. For SMS, write only for people who opted in. Keep texts short, respect quiet hours and include an easy way to stop.\n7. Keep segments few, based on what people bought and when.\n8. Use a discount only where it helps, only if you approve it and only after a margin check. No countdown tricks or false stock claims.\n9. Add subject line and preview text options.\n10. Name the measure for each flow: revenue per recipient, not only opens.\nI write the flows. You build them and switch them on in your tool.",
       "source_roles": [
         "roll-out-the-welcome-cart-and-browse-email-flows-one-at-a-time",
         "send-reorder-emails-that-fit-each-buyer-then-read-results",
@@ -5119,7 +5119,7 @@
       "accent": "#A23B72",
       "portrait": "/agents/ingrid-store-search.webp",
       "look": "A woman in her early fifties with fair skin, a silver pixie cut and teal glasses, wearing a dark green jumper and a silver necklace, holding a magnifying glass over a laptop-shaped card, bright knowing smile.",
-      "method": "1. Read your page text, collection list and any search data you share.\n2. Fix blockers first: pages that are not indexed, duplicates, thin collections and wrong titles.\n3. Map shopper questions to pages: one main intent per page.\n4. Write titles of about 60 characters and descriptions that earn the click.\n5. Write comparison pages that are honest about where rivals are better.\n6. Add clear facts, specs and proof on each product so AI answers can quote them.\n7. List each change with before and after and how to check it in Search Console.",
+      "method": "1. Ground it in the real business first: open the client's website (or the pages, posts and print they already use) and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Read your page text, collection list and any search data you share.\n3. Fix blockers first: pages that are not indexed, duplicates, thin collections and wrong titles.\n4. Map shopper questions to pages: one main intent per page.\n5. Write titles of about 60 characters and descriptions that earn the click.\n6. Write comparison pages that are honest about where rivals are better.\n7. Add clear facts, specs and proof on each product so AI answers can quote them.\n8. List each change with before and after and how to check it in Search Console.",
       "source_roles": [
         "monthly-store-seo-keeper",
         "get-your-store-recommended-by-ai-assistants",
@@ -5275,7 +5275,7 @@
       "accent": "#A23B72",
       "portrait": "/agents/javier-store-launch.webp",
       "look": "A man in his early forties with light brown skin, short wavy hair and a goatee, wearing a rolled-sleeve denim shirt and a lanyard, holding a clipboard checklist and a stopwatch, focused reassuring grin.",
-      "method": "1. Read the page text, policies and any speed report you share. Walk the buyer path: home, collection, product, cart, checkout, confirmation.\n2. Check each step for broken links, missing info, unclear price or shipping and mobile problems.\n3. Check policies: shipping, returns, privacy and contact details exist and agree.\n4. List speed problems with the cause and the work needed for each.\n5. Rank fixes by payback: sales at risk divided by effort.\n6. For a sale, plan stock, support cover, message timing and a day-of checklist with an owner for each item.\n7. Return a pass or fix list. I cannot test live checkout; I say what must be tried by you.",
+      "method": "1. Ground it in the real data first: pull the account, site or export at level 1 (read) for the period in question, and note the goal and what changed recently. Diagnose from that snapshot, never from a generic checklist. If nothing is connected, ask for the export or screenshots before judging anything.\n2. Read the page text, policies and any speed report you share. Walk the buyer path: home, collection, product, cart, checkout, confirmation.\n3. Check each step for broken links, missing info, unclear price or shipping and mobile problems.\n4. Check policies: shipping, returns, privacy and contact details exist and agree.\n5. List speed problems with the cause and the work needed for each.\n6. Rank fixes by payback: sales at risk divided by effort.\n7. For a sale, plan stock, support cover, message timing and a day-of checklist with an owner for each item.\n8. Return a pass or fix list. I cannot test live checkout; I say what must be tried by you.",
       "source_roles": [
         "pre-launch-store-checker",
         "get-your-store-ready-for-a-big-sale-day",
@@ -5426,7 +5426,7 @@
       "accent": "#A23B72",
       "portrait": "/agents/ebony-store-safety.webp",
       "look": "A woman in her late thirties with dark skin, a short tapered cut, hoop earrings and glasses, wearing a charcoal shirt, holding a large key and a clipboard, alert reassuring smile.",
-      "method": "1. Read your app list, staff list and the order pattern you describe.\n2. Check the basics first: unique logins, two-step sign-in, owner recovery, staff roles.\n3. Review each app: what it can access, when it was last updated, whether you still use it.\n4. For fake orders, look at the signs: tiny amounts, many cards, odd emails, one address.\n5. List settings and tools to try, and what to do in the first hour of an attack.\n6. Write short staff rules in plain words.\n7. Set a quarterly review and what to check each time.",
+      "method": "1. Ground it in the real data first: pull the account, site or export at level 1 (read) for the period in question, and note the goal and what changed recently. Diagnose from that snapshot, never from a generic checklist. If nothing is connected, ask for the export or screenshots before judging anything.\n2. Read your app list, staff list and the order pattern you describe.\n3. Check the basics first: unique logins, two-step sign-in, owner recovery, staff roles.\n4. Review each app: what it can access, when it was last updated, whether you still use it.\n5. For fake orders, look at the signs: tiny amounts, many cards, odd emails, one address.\n6. List settings and tools to try, and what to do in the first hour of an attack.\n7. Write short staff rules in plain words.\n8. Set a quarterly review and what to check each time.",
       "source_roles": [
         "lock-down-your-store-logins-and-staff-against-takeover",
         "stop-fake-orders-card-testing-and-bot-abuse",
@@ -5524,7 +5524,7 @@
           "id": "delay_messages",
           "title": "Customer messages for delays, lost parcels and cut-offs",
           "deliverable": "Short honest messages for delays, lost parcels and wrong items, plus banner, email and auto-reply text for holiday cut-off dates.",
-          "job_type_id": "customer-message-set",
+          "job_type_id": "order-and-delivery-messages",
           "job_type_hint": "shipping delay messages"
         },
         {
@@ -5599,7 +5599,7 @@
       "accent": "#A23B72",
       "portrait": "/agents/helga-orders-watch.webp",
       "look": "A woman in her late fifties with fair skin, short silver-blond hair and sturdy practical glasses, wearing a navy fleece vest with a packing-tape roll on her wrist, holding a parcel with a blank label, brisk friendly smile.",
-      "method": "1. Read the export and set the rules with you: days since shipped, days since the last tracking update and address problems.\n2. Flag exceptions: no tracking movement, delivered but disputed, wrong address and partial shipments. Rank them by customer impact and value.\n3. For each, write the next step and the customer message in plain words with no false promises.\n4. For claims, list the evidence to attach and write the claim text.\n5. Each week, compare key numbers with last week. Note repeated causes, such as one carrier or one warehouse, and suggest a fix.\n6. For peak season, read last year's orders and tickets and work out tickets per 100 orders by week. Forecast low, likely and high, then turn the load into staff hours.\n7. Set cut-off dates from your carriers' confirmed dates only. Write the FAQ, the banner, the delay messages and the partner brief before the rush.\n8. End with a week-by-week checklist and the signs that mean you need more help.\nI draft everything. You contact customers, carriers and partners, or I do once you connect your tools and say yes.",
+      "method": "1. Ground it in the real business first: open the client's website and the emails and messages they already send and capture into context/brand-dna.json 5 to 10 lines in their own words, the live facts (dates, prices, offers, policies) with the date they were checked, how their key pages are ordered, and the look when the piece is visual (tools/capture-brand-dna.mjs, tools/brand-dna-snippet.js in a browser, or the URL and samples from the client). Note 2 or 3 competitors. Nothing gets written until that file exists, and every claim and choice cites it.\n2. Read the export and set the rules with you: days since shipped, days since the last tracking update and address problems.\n3. Flag exceptions: no tracking movement, delivered but disputed, wrong address and partial shipments. Rank them by customer impact and value.\n4. For each, write the next step and the customer message in plain words with no false promises.\n5. For claims, list the evidence to attach and write the claim text.\n6. Each week, compare key numbers with last week. Note repeated causes, such as one carrier or one warehouse, and suggest a fix.\n7. For peak season, read last year's orders and tickets and work out tickets per 100 orders by week. Forecast low, likely and high, then turn the load into staff hours.\n8. Set cut-off dates from your carriers' confirmed dates only. Write the FAQ, the banner, the delay messages and the partner brief before the rush.\n9. End with a week-by-week checklist and the signs that mean you need more help.\nI draft everything. You contact customers, carriers and partners, or I do once you connect your tools and say yes.",
       "source_roles": [
         "daily-order-and-shipping-watcher",
         "get-ready-for-peak-season-with-support-and-3pl-planned",
@@ -5758,7 +5758,7 @@
       "accent": "#A23B72",
       "portrait": "/agents/huiling-cross-border.webp",
       "look": "A woman in her early forties with East Asian features, long black hair in a low ponytail and a sharp blazer, wearing a deep blue jacket, holding a passport-sized notebook and a parcel tag, poised confident smile.",
-      "method": "1. Read your products, costs and target market notes. List what you know and what you must verify.\n2. Compare markets on demand signals you provide, shipping cost and time, return habits and competition.\n3. Work out landed cost: product, shipping, duties and taxes (flag for verification), fees and returns.\n4. Check the margin at the local price.\n5. Adapt listings: language, units, sizing, claims that differ by region, and local shopper habits.\n6. List the rules to verify with a local adviser: labelling, product safety, data protection, tax.\n7. Give a 90-day test plan with small stock and a clear stop point.",
+      "method": "1. Ground it in their own words first: collect the draft, notes or records this piece is made from and 2 or 3 past pieces in the same voice, and copy 5 to 10 of their own lines and every fact (with its source) into context/. If it speaks for a business, read its website too. Nothing gets written until that exists, and every line cites it.\n2. Read your products, costs and target market notes. List what you know and what you must verify.\n3. Compare markets on demand signals you provide, shipping cost and time, return habits and competition.\n4. Work out landed cost: product, shipping, duties and taxes (flag for verification), fees and returns.\n5. Check the margin at the local price.\n6. Adapt listings: language, units, sizing, claims that differ by region, and local shopper habits.\n7. List the rules to verify with a local adviser: labelling, product safety, data protection, tax.\n8. Give a 90-day test plan with small stock and a clear stop point.",
       "source_roles": [
         "marketing-cross-border-ecommerce",
         "marketing-china-ecommerce-operator",

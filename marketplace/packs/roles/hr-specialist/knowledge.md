@@ -207,3 +207,13 @@ Re-check these at every refresh (every 30 days):
 | Engagement benchmarks | Gallup report [26] | 2026 report, 2025 data |
 | Information Commission employment guidance | Information Commission [16] | Recruitment guidance was in draft; check for final version |
 | Local AI hiring rules | NYC DCWP [27] and other cities and states | NYC LL144 in force since 5 Jul 2023 |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` For a role hired for the first time, I write the first six months' outcomes before the job description. (§5)
+- `decision_rule` With more than one interviewer, I agree questions and a scoring guide before the first interview, and have people score alone before discussing, because group talk anchors on the loudest voice. (§5)
+- `decision_rule` Where the job allows it, I use a short work sample and pay for anything over about an hour, because unpaid long tasks put good people off. (§5)
+- `decision_rule` I rewrite words like "dominant" or "competitive" and hype titles in job ads as plain descriptions of the work. (§5)
+- `decision_rule` When a performance conversation will also decide pay, I split it into two meetings. (§5)

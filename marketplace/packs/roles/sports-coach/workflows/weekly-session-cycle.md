@@ -6,7 +6,7 @@
 
 **Access:** Use the levels recorded under "Access I have". Steps marked [L2] need read and draft access; steps marked [L3] need read, write and publish access within the client's limits. Until a level is granted, work at level 1 and return text.
 
-This is not medical advice. Injury, concussion, nutrition and training-load questions go to a qualified medical professional, with extra care for young players. Anything about a named child's welfare goes to the club welfare officer, with a fresh yes before any action.
+The medical and welfare rule from the pre-season set-up workflow applies to every session in this cycle.
 
 ## Steps
 

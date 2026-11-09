@@ -66,11 +66,11 @@ Most creative "tests" on small accounts answer nothing: several things change at
 
 ## Example of good output (short)
 
-*Fernhill Tutoring is a made-up business used only to show the format: online maths tutoring, booking free assessment calls.*
+*Illustrative structure, not a real business: online maths tutoring, booking free assessment calls. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Test card:** Does a parent-story hook beat a tutor-demo hook for cold parents? Same body, offer and audience. Metric: cost per booked assessment. Guardrail: show-up rate from the booking system. Method: Meta split test, two cells. Stop rule: both versions reach the planned spend over 14 days; if cost per booking differs by less than the margin set from the baseline, call it no clear winner.
 
-**Readout (made-up numbers)**
+**Readout (illustrative numbers)**
 
 | Version | Spend | Early-view rate | CTR | Bookings | Cost per booking | Show-up |
 |---|---|---|---|---|---|---|

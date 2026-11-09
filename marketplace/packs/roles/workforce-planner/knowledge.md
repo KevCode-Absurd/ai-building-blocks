@@ -230,3 +230,14 @@ Re-check at every refresh (every 30 days):
 | UK IR35 guidance | GOV.UK [17] | Updated 26 Feb 2026 |
 | EU working time and predictable work | Commission [18][19] | National law decides |
 | India, Canada, Australia official pages | [28][29][30] | Check for new rules |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When the history holds only one example of the season, use it plus the most recent weeks and the client's own view of the peak, and give a wide range. (§5)
+- `decision_rule` Treat sales in a short-staffed or sold-out period as a floor, not the true demand. (§5)
+- `decision_rule` With no service rule from the client, ask for one; do not borrow a ratio from elsewhere. (§5)
+- `decision_rule` When a rota cannot cover the forecast inside the budget, show the gap and the options (fewer open hours, a cheaper skill mix, more budget) rather than cutting cover silently. (§5)
+- `decision_rule` Treat overtime that keeps recurring in the same slots as a staffing gap, not a scheduling quirk. (§5)
+- `check` If the plan only works in the normal case, show the slow-sales case and when to pause hiring. (§5)

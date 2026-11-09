@@ -80,7 +80,7 @@ Ask sales for the two or three facts that separate a real prospect from a tyre-k
 
 ## Example of good output (short)
 
-*Made-up business: Fernway Analytics, a reporting tool for mid-size logistics firms.*
+*Illustrative structure, not a real business: a reporting tool for mid-size logistics firms. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Field | Type | Why |
 > |---|---|---|

@@ -150,7 +150,72 @@
         "note": "Fractional CFO pricing guide: $2,000 to $5,000 a month for small businesses, with a 13-week cash forecast and monthly reporting package described as standard deliverables.",
         "url": "https://beancount.io/blog/2026/08/12/fractional-cfo-services-small-business-guide"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: A table of every transaction with a category, a short reason for unclear ones, category totals that match the CSV, and a list of lines to check with your accountant. Also: Vague lines (cash withdrawals, transfers, unknown payees) are marked unclear with one sentence on why and a question to…"
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today. For this job: Every row in the output matches a row in the CSV by date, description and amount; no extra rows or changed amounts."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: The output row count equals the CSV row count; no row has an empty category."
+      },
+      {
+        "criterion": "Category totals add up to the CSV totals",
+        "weight": 8,
+        "test": "The sum of category totals for money in and money out equals the sums of the CSV columns, and the draft shows both sums."
+      },
+      {
+        "criterion": "Categories suit this kind of business and use the buyer's own list when given",
+        "weight": 8,
+        "test": "If a category list is given, every category used comes from it; otherwise the categories are common small-business ones that fit the business type."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "monthly-financial-summary",
@@ -315,7 +380,68 @@
         "note": "Fractional CFO pricing guide: $2,000 to $5,000 a month for small businesses, with a 13-week cash forecast and monthly reporting package described as standard deliverables.",
         "url": "https://beancount.io/blog/2026/08/12/fractional-cfo-services-small-business-guide"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Each number in the summary appears in the brief or is a stated calculation from it; no outside benchmarks or made-up causes presented as fact."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 13,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: A one to two page summary with a results table, month-on-month and budget comparisons, the three biggest changes explained, cash position, and questions to raise with your accountant."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today. For this job: At least three biggest movements are listed; any cause given is in the brief or marked as a question to confirm."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown. For this job: Spot-check every table: sums, differences and percent changes recompute correctly from the brief figures to within rounding."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: The opening gives profit or loss, cash movement and one-line verdict in under 60 words, without jargon."
+      },
+      {
+        "criterion": "It ends with clear questions or watch items for the owner and accountant",
+        "weight": 12,
+        "test": "A short list of 3 to 6 items, each tied to a number in the summary."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "thirteen-week-cash-flow-forecast",
@@ -476,7 +602,73 @@
         "note": "Fractional CFO pricing guide: $2,000 to $5,000 a month for small businesses, with a 13-week cash forecast and monthly reporting package described as standard deliverables.",
         "url": "https://beancount.io/blog/2026/08/12/fractional-cfo-services-small-business-guide"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Each receipt and payment line traces to the brief; anything assumed is labelled as an assumption with its reason."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: A 13-week table of opening cash, receipts, payments and closing cash, the assumptions behind each line, the weeks that look tight, and options to close any gap."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today. For this job: At least two options (chase invoice X, delay payment Y) name a real line from the brief and its effect on the low week."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: Any week where closing cash is below the minimum, or below zero if none given, is flagged with the size of the gap."
+      },
+      {
+        "criterion": "Opening plus receipts minus payments equals closing cash every week, and each…",
+        "weight": 8,
+        "test": "Recompute all 13 weeks; closing cash and carry-forward match, and totals of rows equal totals of columns."
+      },
+      {
+        "criterion": "The table covers exactly 13 consecutive weeks from the start date",
+        "weight": 8,
+        "test": "13 columns or rows with correct week-start dates, no gaps."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "annual-budget-plan",
@@ -636,7 +828,79 @@
         "note": "Fractional CFO pricing guide: $2,000 to $5,000 a month for small businesses, with a 13-week cash forecast and monthly reporting package described as standard deliverables.",
         "url": "https://beancount.io/blog/2026/08/12/fractional-cfo-services-small-business-guide"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Each line's base value matches the brief; each increase or decrease is labelled with its reason and a number from the brief."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: A 12-month budget table of income and costs, the assumptions behind each line, a summary of profit by quarter, and a simple way to compare actuals to budget each month. Also: Monthly income pattern follows the history or seasonality note, not a flat split, unless the brief shows a flat pattern."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read. For this job: Includes an actual and variance column layout or a short monthly review checklist."
+      },
+      {
+        "criterion": "Monthly, quarterly and yearly totals add up",
+        "weight": 6,
+        "test": "Recompute every column and row total, plus profit as income minus costs; all match."
+      },
+      {
+        "criterion": "Each major line shows how it was built",
+        "weight": 6,
+        "test": "Each line above 10% of total income or costs has a one-line assumption stated beside it."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "pricing-model",
@@ -800,7 +1064,72 @@
         "note": "Fractional CFO pricing guide: $2,000 to $5,000 a month for small businesses, with a 13-week cash forecast and monthly reporting package described as standard deliverables.",
         "url": "https://beancount.io/blog/2026/08/12/fractional-cfo-services-small-business-guide"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: A cost breakdown, margin and break-even table for each price option, a recommended option with reasons, and notes on what to test first. Also: A short test plan with what to change, how long, and what result would count as a win."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked. For this job: Every competitor price or market figure matches the brief; unknowns are listed as things to check."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown. For this job: Recompute margin percent, profit per unit and break-even volume for each option from the brief costs; all match within rounding."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide."
+      },
+      {
+        "criterion": "Two or three price options differ in a way the owner can understand",
+        "weight": 8,
+        "test": "Each option has a clear idea behind it (for example, cost-plus, value-based, tiered) and a different price."
+      },
+      {
+        "criterion": "One option is recommended with reasons tied to the buyer's goal",
+        "weight": 8,
+        "test": "The recommendation names the goal and two reasons using figures from the model."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "investor-update",
@@ -964,7 +1293,84 @@
         "note": "Fractional CFO pricing guide: $2,000 to $5,000 a month for small businesses, with a 13-week cash forecast and monthly reporting package described as standard deliverables.",
         "url": "https://beancount.io/blog/2026/08/12/fractional-cfo-services-small-business-guide"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "existing_assets",
+        "label": "Your draft, notes or past pieces",
+        "required": true,
+        "how": "The material this piece is made from: the draft, the records or notes, and 2 or 3 past pieces in the same voice. Read them all before writing."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your own words",
+        "required": true,
+        "how": "5 to 10 lines the client or speaker wrote or said, copied verbatim into the context file."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website, if the piece speaks for a business",
+        "required": false,
+        "how": "Read the live site for facts and voice when the piece speaks for a business or organisation. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and CSS."
+      },
+      {
+        "id": "references",
+        "label": "Pieces you admire, and pieces to avoid",
+        "required": false,
+        "how": "2 the client admires and 1 to avoid sounding like. Ask once."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every choice cites the client's own material (draft, notes, past pieces) or a named reference."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice. For this job: Every number, name and claim in the update matches the brief; nothing is rounded up or implied."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof. For this job: Each ask names who or what is needed and by when; no vague asks like 'any help'."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A one to two page update with headline results, key numbers table, wins, problems, cash and runway, and specific asks, ready to paste into an email."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Each problem in the brief is named in its own line or section with what is being done; none is missing."
+      },
+      {
+        "criterion": "Comparisons, growth rates and runway are calculated correctly",
+        "weight": 6,
+        "test": "Recompute every percent change and any runway or burn figure from the brief; all match within rounding."
+      },
+      {
+        "criterion": "The first three lines give the main result and the main worry",
+        "weight": 6,
+        "test": "The opening states one result with a number and one concern in under 70 words."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "financial-model-writeup",
@@ -1122,7 +1528,72 @@
         "note": "Fractional CFO pricing guide: $2,000 to $5,000 a month for small businesses, with a 13-week cash forecast and monthly reporting package described as standard deliverables.",
         "url": "https://beancount.io/blog/2026/08/12/fractional-cfo-services-small-business-guide"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: A guide to the model with assumptions table, how the numbers flow, results in plain words, sensitivity notes, known limits and open questions to settle with your accountant. Also: A table of at least the five assumptions with biggest effect, each with value and what it drives."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: No undefined jargon; each key result has one plain sentence on what it means."
+      },
+      {
+        "criterion": "Every assumption and result quoted comes from the pasted model",
+        "weight": 8,
+        "test": "Each number in the write-up matches a cell or line in the pasted model; no outside market data added as fact."
+      },
+      {
+        "criterion": "It checks the model's own arithmetic and reports any breaks",
+        "weight": 8,
+        "test": "The draft recomputes at least the totals, profit lines and any balance or cash roll-forward, and states each break with the location."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "collections-email-sequence",
@@ -1295,7 +1766,85 @@
         "note": "Fractional CFO pricing guide: $2,000 to $5,000 a month for small businesses, with a 13-week cash forecast and monthly reporting package described as standard deliverables.",
         "url": "https://beancount.io/blog/2026/08/12/fractional-cfo-services-small-business-guide"
       }
-    ]
+    ],
+    "family": "email",
+    "context_requirements": [
+      {
+        "id": "existing_assets",
+        "label": "Your draft, notes or past pieces",
+        "required": true,
+        "how": "The material this piece is made from: the draft, the records or notes, and 2 or 3 past pieces in the same voice. Read them all before writing."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your own words",
+        "required": true,
+        "how": "5 to 10 lines the client or speaker wrote or said, copied verbatim into the context file."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website, if the piece speaks for a business",
+        "required": false,
+        "how": "Read the live site for facts and voice when the piece speaks for a business or organisation. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and CSS."
+      },
+      {
+        "id": "references",
+        "label": "Pieces you admire, and pieces to avoid",
+        "required": false,
+        "how": "2 the client admires and 1 to avoid sounding like. Ask once."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every choice cites the client's own material (draft, notes, past pieces) or a named reference.",
+      "Every fee, interest rate, date and consequence named in the emails is in the brief; no references to laws, courts or credit reporting unless the brief states them."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice. For this job: Email 1 is courteous and assumes an oversight; the last is clear about next steps; no insults, shaming or threats."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: Four to six emails with subject lines and send timing, a short phone script, and a plain checklist for when to stop and ask a professional."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: Every email names a placeholder for invoice number, amount and due date, and one clear action."
+      },
+      {
+        "criterion": "Send timing is given for each email",
+        "weight": 6,
+        "test": "Each email shows the days relative to the due date."
+      },
+      {
+        "criterion": "It says when to stop emailing and get professional help",
+        "weight": 6,
+        "test": "A checklist names points such as dispute, bankruptcy notice or amounts above a size, and points the reader to a lawyer or collections professional."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "expense-policy",
@@ -1459,7 +2008,67 @@
         "note": "HR cost guide: custom employee handbooks up to $5,000 (average $1,250 to draft), HR consultant hourly rates of $100 to $175.",
         "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every limit, rate and deadline in the policy is in the brief or shown as a placeholder for the owner to set."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: A two to four page policy with covered and not-covered items, limits, approval steps, receipt rules, a claim form outline and a one-page staff summary."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: A numbered process shows who does what, in what time, and what happens if a claim is rejected."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template. For this job: A short note says rules on tax treatment and mileage rates vary by country and should be confirmed; no tax rules asserted."
+      },
+      {
+        "criterion": "Every expense type the buyer chose has a rule",
+        "weight": 10,
+        "test": "Each selected expense type has covered items, a limit or placeholder, and proof needed."
+      },
+      {
+        "criterion": "A one-page summary staff can read quickly is included",
+        "weight": 10,
+        "test": "A short summary of 10 or fewer bullet points in plain words appears at the end."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "job-description",
@@ -1630,7 +2239,90 @@
         "note": "HR cost guide: custom employee handbooks up to $5,000 (average $1,250 to draft), HR consultant hourly rates of $100 to $175.",
         "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Your current pages, copy or materials",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof. For this job: Each duty starts with a verb, matches the brief and shows how the week will look; no filler like 'other duties' as the main item."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A role summary, responsibilities, must-have and nice-to-have skills, pay and benefits section from your details, and a short job ad version for posting. Also: An ad of 150 to 250 words opens with the role and why it matters, and has one way to apply."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: No more than 6 must-haves; degree or years of experience appear only if the brief states they are needed."
+      },
+      {
+        "criterion": "No pay, benefit, qualification or company fact appears that is not in the brief",
+        "weight": 6,
+        "test": "Every salary, benefit, tool and company claim matches the brief; if no pay was given the draft leaves a placeholder."
+      },
+      {
+        "criterion": "Wording does not exclude people for reasons such as age, sex, race or disability",
+        "weight": 6,
+        "test": "No phrases like 'young', 'digital native', 'recent graduate', 'native speaker' or gendered job titles; requirements relate to the work."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "interview-kit-scorecard",
@@ -1793,7 +2485,67 @@
         "note": "HR cost guide: custom employee handbooks up to $5,000 (average $1,250 to draft), HR consultant hourly rates of $100 to $175.",
         "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No skill, tool, qualification or company fact appears that is not in the brief or clearly derived from its duties."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: Role success criteria, 8 to 12 structured questions with what good and weak answers look like, a 1 to 5 scorecard, follow-up probes and a short note on fair interviewing."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents. For this job: Each listed priority is tested by at least one question, and the scorecard weights match them."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Every question lists what a 1, 3 and 5 answer looks like in concrete terms drawn from the role."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "No question asks about protected traits or family plans, and scoring does not…",
+        "weight": 10,
+        "test": "No question or scoring note refers to age, sex, race, religion, health, disability, pregnancy, marital status or family plans; the kit includes the same questions for every candidate."
+      },
+      {
+        "criterion": "The kit fits the interview length",
+        "weight": 10,
+        "test": "Number of questions times a realistic time per question fits within the stated minutes, with time for the candidate's questions."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "onboarding-plan",
@@ -1961,7 +2713,79 @@
         "note": "HR cost guide: custom employee handbooks up to $5,000 (average $1,250 to draft), HR consultant hourly rates of $100 to $175.",
         "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No tool, person, policy or target appears that is not in the brief; unknowns appear as clear placeholders for the manager."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook. For this job: Remote or hybrid plans include video meet-ups and how to reach people; on-site plans include a desk and a building tour step."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: A day-one checklist, week-one schedule, 30-60-90 day goals, who to meet, a manager checklist and check-in questions. Also: Includes dated manager tasks (before day one, week one, each month) and at least five check-in questions."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read."
+      },
+      {
+        "criterion": "Goals build over 30, 60 and 90 days",
+        "weight": 6,
+        "test": "Each phase has 3 to 5 goals, each with a way to check it is done, and goals get harder in order."
+      },
+      {
+        "criterion": "The first day and week are planned in detail",
+        "weight": 6,
+        "test": "Day one lists tasks, people and setup in time order; week one has a daily outline."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "handbook-section",
@@ -2133,7 +2957,63 @@
         "note": "HR cost guide: custom employee handbooks up to $5,000 (average $1,250 to draft), HR consultant hourly rates of $100 to $175.",
         "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No day count, notice period, pay rate or legal requirement is stated unless in the brief; choices not made are listed as decisions needed.",
+      "A note says the draft is not legal advice, names the country or region, and lists topics where law usually sets minimums to check; it asserts no specific law."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 15,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: One handbook section of 400 to 900 words in plain language, a short summary box for staff, a list of choices you must make, and flags where local law may apply."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Average sentence under 20 words, no legal Latin or jargon, with examples of how rules work."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template. For this job: A list of decisions needed, each with options, appears at the end."
+      },
+      {
+        "criterion": "A short summary box for staff is included",
+        "weight": 15,
+        "test": "A box of five or fewer bullets summarises the key rules."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "performance-review-template",
@@ -2298,7 +3178,67 @@
         "note": "HR cost guide: custom employee handbooks up to $5,000 (average $1,250 to draft), HR consultant hourly rates of $100 to $175.",
         "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No value, competency, pay rule or tool is named that is not in the brief or clearly generic."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: A review form with rating levels defined in words, self-review and manager questions, a goal-setting section, a manager guide and a meeting agenda. Also: Includes a section for goals with measures, training needed, and dates."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other. For this job: A guide covers evidence gathering, avoiding recent-event bias and giving written examples, in at least five steps."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "Each rating level is defined by what the person does",
+        "weight": 10,
+        "test": "Every competency has a description for each rating level that refers to observable work, not traits like 'positive attitude'."
+      },
+      {
+        "criterion": "Questions avoid bias and personal traits",
+        "weight": 10,
+        "test": "No question or rating text refers to age, sex, race, health, family or personality traits; all roles get the same structure."
+      }
+    ],
+    "mode_default": "patch"
   },
   {
     "id": "recruiting-outreach-messages",
@@ -2454,7 +3394,98 @@
         "note": "HR cost guide: custom employee handbooks up to $5,000 (average $1,250 to draft), HR consultant hourly rates of $100 to $175.",
         "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
       }
-    ]
+    ],
+    "family": "email",
+    "context_requirements": [
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": true,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "existing_assets",
+        "label": "Messages and emails you already send",
+        "required": false,
+        "how": "Required when there is no live site: what the client already publishes (files, screenshots or links). Note what must stay the same."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your brand's own words",
+        "required": true,
+        "how": "Copy 5 to 10 lines verbatim from the site, posts or emails into the context file. Ask for 2 or 3 pieces only if capture finds none."
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find. Note what each does that this client should keep clear of or answer."
+      },
+      {
+        "id": "references",
+        "label": "Work you admire, and work to avoid",
+        "required": false,
+        "how": "2 pieces the client admires and 1 to avoid looking like. Ask once, in the taste brief."
+      },
+      {
+        "id": "consent_basis",
+        "label": "How people agreed to hear from you",
+        "required": false,
+        "how": "The opt-in or relationship each audience has, so the right opt-out and frequency rules apply."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every design or copy choice cites a captured fact from context/brand-dna.json or a named reference.",
+      "Every claim about the role, pay or company matches the brief; messages use placeholders for the candidate's name and details, never made-up facts about them.",
+      "At least two concrete reasons from the brief; no vague claims like 'exciting opportunity' as the main reason."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: A first message, two follow-ups, a reply to common questions, a referral request and two subject lines, all in your voice and ready to send."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words. For this job: First message under 120 words, has a placeholder for one personal detail, and one clear and easy next step."
+      },
+      {
+        "criterion": "Messages do not target or exclude people by protected traits",
+        "weight": 6,
+        "test": "No wording suggests age, sex, race or similar preferences."
+      },
+      {
+        "criterion": "Follow-ups add something new and stop politely",
+        "weight": 6,
+        "test": "Each follow-up gives new information and the last is a polite close; the draft sets timing between messages."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "training-plan-course-outline",
@@ -2623,7 +3654,79 @@
         "note": "HR cost guide: custom employee handbooks up to $5,000 (average $1,250 to draft), HR consultant hourly rates of $100 to $175.",
         "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No made-up statistics, laws, product features or sources; anything uncertain is marked for the trainer to check."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook. For this job: The sum of module times is at or under the total time given, with breaks included."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: Learning goals, a module-by-module outline with timings, exercises, a short quiz or task for each module, materials list and ways to measure whether it worked. Also: Includes before-and-after checks and one on-the-job measure tied to the goal."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read."
+      },
+      {
+        "criterion": "Each module has goals that can be tested",
+        "weight": 6,
+        "test": "Every module has 1 to 3 goals that start with a verb like 'explain', 'complete' or 'build' and a matching exercise or check."
+      },
+      {
+        "criterion": "People practise, not only listen",
+        "weight": 6,
+        "test": "At least half of each module's time is exercises, discussion or practice."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "values-culture-document",
@@ -2775,7 +3878,67 @@
         "note": "HR cost guide: custom employee handbooks up to $5,000 (average $1,250 to draft), HR consultant hourly rates of $100 to $175.",
         "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Each value links to a story or statement in the brief; no culture claims, awards or survey results are invented."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: Four to six values with a one-line meaning, real behaviours, examples of what it is not, how to use them in hiring and reviews, and a one-page summary. Also: A summary of under 200 words lists each value with its one-line meaning."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template. For this job: Not more than one value is a generic word (such as 'integrity') unless it is tied to a company example."
+      },
+      {
+        "criterion": "Each value has behaviours someone can see",
+        "weight": 10,
+        "test": "Every value has at least three behaviours described as actions, plus one 'this is not' example."
+      },
+      {
+        "criterion": "Advice for hiring uses the values fairly",
+        "weight": 10,
+        "test": "Hiring guidance uses behaviours and questions, avoids 'culture fit' based on background, and warns against excluding by protected traits."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "standard-operating-procedure",
@@ -2937,7 +4100,67 @@
         "note": "Freelance SOP and operation manual listing: $100 per SOP, one revision, one week; process flowchart available with it.",
         "url": "https://contra.com/s/A6oEvErs-standard-operating-procedures-user-guides-operation-manuals"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No step, system, deadline, person or rule appears that is not in the brief; missing details appear as marked questions."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: A one to three page SOP with purpose, who does it, tools needed, numbered steps, checks, common mistakes, what to do when things go wrong and a version box."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Steps are numbered, start with a verb, hold one action each, and name the tool or screen where relevant."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template. For this job: A box with owner, version, date and review date appears at the top or end."
+      },
+      {
+        "criterion": "It includes checks and what to do when something goes wrong",
+        "weight": 10,
+        "test": "At least three checkpoints or 'done when' lines and an exceptions list with who to ask."
+      },
+      {
+        "criterion": "Steps are in the order they happen, with no jumps",
+        "weight": 10,
+        "test": "Following the steps in order gets from the stated start to the stated finish without needing facts that are not in the document."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "process-map-steps",
@@ -3088,7 +4311,62 @@
         "note": "Freelance SOP and operation manual listing: $100 per SOP, one revision, one week; process flowchart available with it.",
         "url": "https://contra.com/s/A6oEvErs-standard-operating-procedures-user-guides-operation-manuals"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every step, role, system and duration appears in the brief; unknowns are marked as questions."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 15,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: A step table with owner, action, input, output and time, decision points, handoffs, a text flow diagram, and three places to improve."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other. For this job: Three ideas, each naming the step, the problem in the brief and the change proposed."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: The flow diagram lists the same steps in the same order as the table and shows loops and branches."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template. For this job: Each step lists one owner; each change of owner is marked as a handoff with what is passed on."
+      },
+      {
+        "criterion": "Decision points and their outcomes are shown",
+        "weight": 15,
+        "test": "Each yes/no or choice point lists the options and which step follows each; no dead ends."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "vendor-comparison",
@@ -3254,7 +4532,72 @@
         "note": "HR cost guide: custom employee handbooks up to $5,000 (average $1,250 to draft), HR consultant hourly rates of $100 to $175.",
         "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
       }
-    ]
+    ],
+    "family": "analysis",
+    "context_requirements": [
+      {
+        "id": "data_export",
+        "label": "The data to analyse",
+        "required": true,
+        "how": "The export, sheet or connector at level 1 (read), with the date range and what each column means. Profile it before any finding."
+      },
+      {
+        "id": "question",
+        "label": "The decision it must inform",
+        "required": true,
+        "how": "The one question or decision the analysis serves, and who reads it."
+      },
+      {
+        "id": "business_facts",
+        "label": "Context about the business",
+        "required": false,
+        "how": "What it sells, to whom, and anything that explains the numbers (price changes, launches, seasonality)."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Diagnosis specific to this account or data",
+        "weight": 9,
+        "test": "It explains why this client's numbers or pages look the way they do, not a generic checklist score. Here: A comparison table of price, terms and features, true total cost over the contract, scoring against your needs, risks and questions for each vendor, and a recommendation. Also: Each vendor has at least two questions based on gaps or unclear terms in its own quote."
+      },
+      {
+        "criterion": "Evidence quality",
+        "weight": 20,
+        "test": "Each finding cites the data, page or screenshot it came from, with dates and the period checked."
+      },
+      {
+        "criterion": "Prioritised actions with expected impact",
+        "weight": 20,
+        "test": "Fixes are ranked by expected impact and effort, each specific enough to act on today."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 20,
+        "test": "Numbers, sums and platform facts are right and the working is shown. For this job: Recompute each vendor's total cost from the quote lines including one-off fees, recurring fees and stated discounts; all match."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "An owner who is not a specialist can follow the findings and decide. For this job: One option is recommended, with two reasons from the comparison and one condition to confirm first."
+      },
+      {
+        "criterion": "Prices, features and terms come from the quotes; nothing is guessed",
+        "weight": 8,
+        "test": "Every price, feature, date and term matches the pasted quotes; missing items are marked 'not stated'."
+      },
+      {
+        "criterion": "Each vendor is checked against every must-have",
+        "weight": 8,
+        "test": "A grid shows meets, partly or not stated for each must-have and vendor."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "meeting-notes-to-action-plan",
@@ -3405,7 +4748,67 @@
         "note": "Freelance SOP and operation manual listing: $100 per SOP, one revision, one week; process flowchart available with it.",
         "url": "https://contra.com/s/A6oEvErs-standard-operating-procedures-user-guides-operation-manuals"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every decision, owner and due date is in the notes or follows the buyer's default rule; unclear items appear as open questions, not as decisions."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: A short summary, list of decisions, an action table with owner and due date, open questions, risks, and a ready-to-send follow-up message. Also: A message under 200 words lists decisions and actions with owners and dates and is ready to send."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Each action row has owner, verb-led task and date; items missing an owner or date are marked 'needs owner' or 'needs date'."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "All decisions and actions in the notes appear",
+        "weight": 10,
+        "test": "A check of the notes finds no decision or commitment missing from the output."
+      },
+      {
+        "criterion": "Unresolved points are listed apart from decisions",
+        "weight": 10,
+        "test": "Open questions and disagreements are in their own list with who needs to answer."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "project-plan",
@@ -3570,7 +4973,79 @@
         "note": "HR cost guide: custom employee handbooks up to $5,000 (average $1,250 to draft), HR consultant hourly rates of $100 to $175.",
         "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
       }
-    ]
+    ],
+    "family": "plan",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No person, date, cost or tool appears that is not in the brief; unknowns are marked as assumptions."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: Goal and scope, a phase and task table with owners and dates, dependencies, a milestone list, risks with fixes, a budget view if given, and a weekly status template."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week. For this job: No task ends after the deadline; dependent tasks start after their predecessors; fixed dates in the brief are respected."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read. For this job: A weekly status template with progress, blockers and next steps appears."
+      },
+      {
+        "criterion": "Every task has one owner from the team list",
+        "weight": 6,
+        "test": "Each task names one person or role from the brief; no task lacks an owner."
+      },
+      {
+        "criterion": "Risks are listed with a response",
+        "weight": 6,
+        "test": "At least five risks, each with likelihood, effect and a named action; known risks in the brief appear."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "okr-set",
@@ -3730,7 +5205,79 @@
         "note": "HR cost guide: custom employee handbooks up to $5,000 (average $1,250 to draft), HR consultant hourly rates of $100 to $175.",
         "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
       }
-    ]
+    ],
+    "family": "strategy",
+    "context_requirements": [
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": true,
+        "how": "What it sells, to whom, prices, channels, team, size and current results. Take what you can from the live site; ask for the rest."
+      },
+      {
+        "id": "goals",
+        "label": "Goals and limits",
+        "required": true,
+        "how": "The outcome wanted, by when, the budget and time available, and what must not change."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website address",
+        "required": false,
+        "how": "Open the live site and capture fonts, colours with their share, nav, footer, section order, voice and live facts with dates. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and…"
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors or alternatives",
+        "required": false,
+        "how": "2 or 3 the client names, or that you find, with what each offers and charges where public."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every start value is in the brief; where none was given the key result starts with 'measure baseline' instead of a made-up number."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Grounded in this business",
+        "weight": 25,
+        "test": "It starts from this business's own facts, customers, numbers and goals, captured or supplied, not a generic playbook."
+      },
+      {
+        "criterion": "Options considered with trade-offs",
+        "weight": 20,
+        "test": "At least two real options are compared on named trade-offs before one is chosen."
+      },
+      {
+        "criterion": "Decision quality",
+        "weight": 8,
+        "test": "The recommendation follows from the evidence and says what would change it. Here: Three to five objectives, two to four measurable key results each with a start and target, initiatives, owners, a check-in rhythm and a scoring guide. Also: Includes weekly check-in questions and a scoring guide from 0 to 1."
+      },
+      {
+        "criterion": "Actionability",
+        "weight": 20,
+        "test": "Owners, dates, budgets and first steps are concrete enough to start this week. For this job: Each key result has a metric, start value, target value and end date, and is not an activity such as 'launch' or 'improve'."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "A busy owner gets the answer and the reasons in one read."
+      },
+      {
+        "criterion": "The set is small and ties to the stated priorities",
+        "weight": 6,
+        "test": "Three to five objectives, each linked to a priority from the brief, with no more than four key results each."
+      },
+      {
+        "criterion": "Targets stretch but are believable given the numbers",
+        "weight": 6,
+        "test": "Targets are within a stated range of recent trend or have a reason given in a sentence."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "rfp-draft",
@@ -3897,7 +5444,68 @@
         "note": "Grant writer fee guide: $500 to $1,500 for a simple proposal, $1,500 to $5,000 for a standard one, $50 to $125 an hour.",
         "url": "https://www.grantwatch.com/grantnews/how-much-do-grant-writers-charge/"
       }
-    ]
+    ],
+    "family": "ops_doc",
+    "context_requirements": [
+      {
+        "id": "current_process",
+        "label": "How it is done today",
+        "required": true,
+        "how": "The current documents, steps, tools and who does what. Ask for the files or a walk-through before drafting."
+      },
+      {
+        "id": "business_facts",
+        "label": "Facts about the business",
+        "required": false,
+        "how": "The business, team and tools, so the document uses their own names and words."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "No date, budget, contract term, law or standard appears unless in the brief; those items are marked as placeholders to confirm.",
+      "A note says contract terms and any public procurement rules must be checked; no specific legal text is asserted as required."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Job done",
+        "weight": 10,
+        "test": "It does the job asked, end to end, for the people who will use it. Here: An RFP with background, scope, requirements, questions for vendors, response format, timeline, scoring method and terms placeholders, ready for you to check."
+      },
+      {
+        "criterion": "Correctness",
+        "weight": 25,
+        "test": "Steps, rules, figures and names are right, match the client's own facts and never contradict each other."
+      },
+      {
+        "criterion": "Fits existing system",
+        "weight": 20,
+        "test": "It matches how the client already works: their tools, roles, words and documents."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 15,
+        "test": "Someone new to the task can follow it without asking. For this job: Each requirement says what is needed in a way a vendor could answer yes or no, and must-haves are labelled."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 10,
+        "test": "It is written for this client's real names, tools, data and limits, not a generic template."
+      },
+      {
+        "criterion": "Scoring weights are stated and add up to 100",
+        "weight": 10,
+        "test": "A scoring table shows criteria, weights and a scale; weights sum to 100 percent."
+      },
+      {
+        "criterion": "Vendors know exactly how and when to respond",
+        "weight": 10,
+        "test": "Includes a response format, a question deadline, a submission date and contact placeholder."
+      }
+    ],
+    "mode_default": "extend"
   },
   {
     "id": "grant-application-draft",
@@ -4057,6 +5665,84 @@
         "note": "Grant writer fee guide: $500 to $1,500 for a simple proposal, $1,500 to $5,000 for a standard one, $50 to $125 an hour.",
         "url": "https://www.grantwatch.com/grantnews/how-much-do-grant-writers-charge/"
       }
-    ]
+    ],
+    "family": "copy",
+    "context_requirements": [
+      {
+        "id": "existing_assets",
+        "label": "Your draft, notes or past pieces",
+        "required": true,
+        "how": "The material this piece is made from: the draft, the records or notes, and 2 or 3 past pieces in the same voice. Read them all before writing."
+      },
+      {
+        "id": "voice_samples",
+        "label": "Samples of your own words",
+        "required": true,
+        "how": "5 to 10 lines the client or speaker wrote or said, copied verbatim into the context file."
+      },
+      {
+        "id": "site_url",
+        "label": "Your website, if the piece speaks for a business",
+        "required": false,
+        "how": "Read the live site for facts and voice when the piece speaks for a business or organisation. Run tools/capture-brand-dna.mjs (or tools/brand-dna-snippet.js in a browser) into context/brand-dna.json and context/screenshots/; if neither runs, ask for screenshots and CSS."
+      },
+      {
+        "id": "references",
+        "label": "Pieces you admire, and pieces to avoid",
+        "required": false,
+        "how": "2 the client admires and 1 to avoid sounding like. Ask once."
+      }
+    ],
+    "gates": [
+      "Facts trace to a source: every fact, price, quote and claim comes from the brief, the captured context or a cited source.",
+      "No invented numbers: every figure is supplied, captured, or calculated with the working shown.",
+      "Access respected: the agent acted only at the access level the client granted for each tool.",
+      "No fillable placeholders: nothing is left blank or bracketed that the brief or the captured context could have filled.",
+      "Every choice cites the client's own material (draft, notes, past pieces) or a named reference.",
+      "Every number, outcome, partner name and quote matches the brief; evidence gaps are marked 'add evidence' instead of filled."
+    ],
+    "craft_rubric": [
+      {
+        "criterion": "Voice fidelity",
+        "weight": 25,
+        "test": "It sounds like the client's own captured voice samples, not a generic brand voice."
+      },
+      {
+        "criterion": "Specificity",
+        "weight": 20,
+        "test": "A competitor could not publish it unchanged: it uses this client's own facts, offer and proof."
+      },
+      {
+        "criterion": "Job done",
+        "weight": 8,
+        "test": "It does the job the client asked for, for the named reader, with one clear next step. Here: Answers to each funder question within word limits, a needs statement, outcomes, a budget narrative and a checklist of evidence and attachments to gather. Also: Each scoring criterion in the brief is addressed by a named part of the answers."
+      },
+      {
+        "criterion": "Proof and claims grounded",
+        "weight": 15,
+        "test": "Every claim is backed by proof the client supplied or that was captured, and placed where the reader doubts. For this job: Includes missing evidence, attachments and sign-offs with due dates before the deadline."
+      },
+      {
+        "criterion": "Distinctiveness",
+        "weight": 10,
+        "test": "None of the named copy defaults (Unlock, Elevate, Seamless, rule-of-three lists, headline formulas, fake urgency) appears unless chosen on purpose."
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10,
+        "test": "A first-time reader understands it in one pass; plain, specific words."
+      },
+      {
+        "criterion": "Every funder question is answered within its word limit",
+        "weight": 6,
+        "test": "Each question has an answer, and no answer exceeds its stated limit."
+      },
+      {
+        "criterion": "The budget narrative matches the budget and the numbers add up",
+        "weight": 6,
+        "test": "Totals and percentages in the narrative recompute from the pasted budget; costs are explained line by line."
+      }
+    ],
+    "mode_default": "extend"
   }
 ]

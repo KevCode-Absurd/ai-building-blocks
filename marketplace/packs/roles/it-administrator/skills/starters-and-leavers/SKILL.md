@@ -85,7 +85,7 @@ Follow the vendor's order. Block first; delete last.
 
 ## Example of good output (short)
 
-*Made-up business: Northgate Joinery, 12 staff, Google Workspace and Xero.*
+*Illustrative structure, not a real business: a joinery firm, 12 staff, Google Workspace and Xero. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | # | Step | System | Owner | Due | Done |
 |---|---|---|---|---|---|

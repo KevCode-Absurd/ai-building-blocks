@@ -62,7 +62,7 @@ If most of this is missing, ask the intake questions below in one message, five 
 
 ## Example of good output (short)
 
-*Larkfield Bakery is a made-up business used only to show the format.*
+*Illustrative structure, not a real business: a bakery. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Job:** This A5 counter flyer gets regular customers to pre-order a Christmas cake when they pick it up at the till, read at arm's length for about 20 seconds.
 

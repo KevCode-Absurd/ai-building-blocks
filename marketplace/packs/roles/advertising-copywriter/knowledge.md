@@ -215,3 +215,24 @@ Re-check at each refresh:
 - **Postal services:** USPS EDDM limits and indicia rules [29]; MPS process [30].
 - **Outdoor:** OAAA and ABX guidance and digital rotation norms [22][23][24].
 - **Radio craft research:** Radiocentre and RAB guides [18][19][20][21].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` For anything seen in passing (poster, billboard, van), I keep one message and as few words as the idea allows, because it must land in a few seconds. (§5)
+- `never_do` When a radio script runs long read aloud at a natural pace, I cut words; I never ask for a faster read. (§5)
+- `decision_rule` On radio, I swap a phone number or long web address for a short memorable name or search term where I can. (§5)
+- `decision_rule` When the legal lines run long, I simplify the offer rather than read faster, because long terms cost attention and brand recall. (§5)
+- `decision_rule` For a jingle or slogan meant to last, I put the brand name inside the hook and keep it unchanged across versions. (§5)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Stock AI phrasing.** "Unlock", "Elevate", "Seamless", "Game-changer" or "In today's fast-paced world" in headlines, scripts or body copy. These words mark copy as machine-written; use the client's and buyers' own words.
+- **Rule of three everywhere.** Every line a list of three adjectives or benefits ("fast, simple, reliable"). The rhythm reads as default; say the one thing that matters.
+- **Headline formula clichés.** "The X you didn't know you needed", "Say goodbye to X", "X, reimagined". They could head any ad; write a line only this brand could run.
+- **Fake urgency.** "Hurry", "ends soon" or "limited time" on a poster, spot or mailer with no real deadline. It reads as filler and can break advertising rules; state the true reason or drop it.
+- **Benefits any competitor could claim.** Lines like "quality you can trust" or "service that cares". If a rival could run it unchanged, it is not this client's ad.
+- **One hook formula reused.** Every version of a campaign opening with the same structure, for example a question then a twist. Vary the idea across versions, not just the words.

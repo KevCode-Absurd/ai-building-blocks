@@ -80,7 +80,7 @@ Decision rights drift. Set a date to review the table with leaders, and a simple
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Quarrybrook Retail Group, 220 staff.*
+*Illustrative structure, not a real business: a retail group, 220 staff. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Decision | Limit | Recommend | Agree | Input | Decide | Perform |
 > |---|---|---|---|---|---|---|

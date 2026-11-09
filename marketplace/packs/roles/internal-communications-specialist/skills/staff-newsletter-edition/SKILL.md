@@ -62,7 +62,7 @@ Template: check this with local rules or HR before any item about pay, contracts
 
 ## Example of good output (short)
 
-*Brightwater Care is a made-up care provider with 600 staff across 14 homes, used only to show the format.*
+*Illustrative structure, not a real business: a care provider with 600 staff across 14 homes. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Lead: Pay day moves to the 25th from April**
 

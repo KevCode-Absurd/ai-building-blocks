@@ -93,7 +93,7 @@ Access needed: [level per step]
 
 ## Example of good output (short)
 
-*Made-up business: Loomly Lessons, an online music lessons app.*
+*Illustrative structure, not a real business: an online music lessons app. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Hypothesis.** If new users see the next three free trial slots on the teacher page, more will book a trial, because replays show people leaving the calendar screen.
 >

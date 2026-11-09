@@ -228,3 +228,13 @@ Re-check these at every refresh (every 60 days):
 | Mobile rollout rules | Apple [29], Google Play [30] | 7-day phased; staged halt |
 | NIS2 and UK NIS updates | [27][28] | NIS2 transposed Oct 2024; UK updates planned |
 | SEC incident disclosure | SEC [26] | Item 1.05, four business days |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When a step is done by hand, I write it down exactly first, then automate those steps and no more. (§5)
+- `decision_rule` I roll out config and content changes in stages too, not only code. (§5)
+- `decision_rule` A risky feature ships behind a toggle with an owner and an expiry date. (§5)
+- `decision_rule` I declare an incident when a problem needs a second team, is visible to customers or is unsolved after an hour. (§5)
+- `decision_rule` If costs cannot be split by project, I activate tags before arguing about who spends what. (§5)

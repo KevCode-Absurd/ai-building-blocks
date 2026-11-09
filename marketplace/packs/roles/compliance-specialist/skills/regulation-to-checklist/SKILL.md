@@ -81,7 +81,7 @@ Turn every unclear point, every fact-dependent threshold and every penalty into 
 
 ## Example of good output (short)
 
-*Made-up business: Tallow Hiring Ltd, a 40-person UK recruitment firm using an AI tool to sort CVs for EU clients.*
+*Illustrative structure, not a real business: a 40-person UK recruitment firm using an AI tool to sort CVs for EU clients. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Rule:** EU AI Act, articles on high-risk systems and Article 4 (consolidated text as published on the Commission's AI Act Service Desk, read 6 Nov 2026). Annexes other than Annex III not provided.
 
@@ -91,7 +91,7 @@ Turn every unclear point, every fact-dependent threshold and every penalty into 
 | List every AI tool used in hiring and what it decides | Annex III (employment uses) | To confirm | Before 2 Dec 2027 | AI use register | Ops lead | Open |
 
 **Questions for a qualified lawyer or auditor**
-1. Is Tallow a deployer of a high-risk system under Annex III (employment uses) when the tool ranks candidates for EU clients, given Tallow is based in the UK?
-2. Which duties fall on Tallow and which on the tool's provider?
+1. Is the firm a deployer of a high-risk system under Annex III (employment uses) when the tool ranks candidates for EU clients, given the firm is based in the UK?
+2. Which duties fall on the firm and which on the tool's provider?
 
 *This is a working document, not legal advice.*

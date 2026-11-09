@@ -67,7 +67,7 @@ If an input is missing, use a clearly labelled assumption and show how the answe
 
 ## Example of good output (short)
 
-*Hearth and Kiln is a made-up online pottery supplies shop, used only to show the format. All numbers are invented.*
+*Illustrative structure, not a real business: an online pottery supplies shop. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Per order (last 6 months, from the order export):** average order 60.00; discounts −3.00; goods −22.00; shipping and packing −8.00; payment fees −2.00. **Contribution margin 25.00 (41.7%).** Break-even return on ad spend = 1 ÷ 0.417 = **2.4**.
 

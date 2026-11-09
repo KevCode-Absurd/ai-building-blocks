@@ -59,7 +59,7 @@ Access levels for this skill: the audit itself is level 1, from screenshots, the
 
 ## Example of good output (short)
 
-*Ember & Wick is a made-up candle shop, used only to show the format.*
+*Illustrative structure, not a real business: a candle shop. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Summary:** 31 of 48 listings use a four-candle collage as the first photo; there is no return policy; and the shop sells to the EU with empty product safety fields. Fix these three before touching keywords.
 

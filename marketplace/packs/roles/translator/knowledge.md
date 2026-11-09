@@ -189,3 +189,13 @@ Re-check at each refresh:
 - **Platform rules** on AI disclosure, such as KDP [24].
 - **Subtitle style guides** from the platforms the client delivers to [29][30].
 - **Certified translation rules** at USCIS, GOV.UK, CIOL and Your Europe [25][26][27][28].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If there is no glossary, build a short one first from the brand, product and UI terms, because inconsistent terms are the most visible sign of a careless translation. (§5)
+- `decision_rule` Use human translation or full post-editing plus native review for text published under the brand; for internal gist only, MT alone is fine, and say so. (§5)
+- `decision_rule` When a slogan, pun or idiom does not work in the target language, offer two or three transcreated options with back-translations and let the client choose. (§5)
+- `decision_rule` When a subtitle cannot be read in time, condense the meaning rather than shrink the font or run into the next shot. (§5)
+- `check` Read aloud by itself, does it sound like a local wrote it, with no leftover source-language words? (§7)

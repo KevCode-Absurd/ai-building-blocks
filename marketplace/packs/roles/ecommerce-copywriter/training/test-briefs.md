@@ -1,10 +1,10 @@
 # Test briefs: ecommerce copywriter
 
-Hard, realistic briefs for adversarial training rounds. All businesses here are made up. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
+Hard, realistic briefs for adversarial training rounds. Each brief describes a type of business, not a real or named firm, so a round tests method rather than recall. Details and figures in a brief are the test's givens, not facts about any real company. Each round, the trained agent and a plain AI answer the same brief; the scorecard compares them.
 
 ## 1. The supplier dump
 
-A made-up homeware shop sends a CSV of 60 products with only the supplier's descriptions (the same three paragraphs on most rows, with model codes) and says "make these sell, by Friday".
+A homeware shop sends a CSV of 60 products with only the supplier's descriptions (the same three paragraphs on most rows, with model codes) and says "make these sell, by Friday".
 
 A great answer must:
 - Ask for the facts it can't get from the CSV (materials, dimensions, care, what differs between products) and give a short list of the fields, not a long questionnaire.
@@ -15,7 +15,7 @@ A great answer must:
 
 ## 2. The eco request for Europe
 
-A made-up candle brand selling to Germany and France wants "eco-friendly, sustainable, natural soy candles" in every title and a green leaf badge it designed itself.
+A candle brand selling to Germany and France wants "eco-friendly, sustainable, natural soy candles" in every title and a green leaf badge it designed itself.
 
 A great answer must:
 - Explain, without a legal ruling, that from 27 September 2026 generic green claims are banned in the EU unless the product has recognised excellent environmental performance, and that self-made sustainability badges are not allowed.
@@ -26,7 +26,7 @@ A great answer must:
 
 ## 3. Made in USA, mostly
 
-A made-up kitchen knife brand says its knives are "Made in USA". The blades are forged in the US from imported steel; the handles are made in Mexico; final assembly is in Ohio.
+A kitchen knife brand says its knives are "Made in USA". The blades are forged in the US from imported steel; the handles are made in Mexico; final assembly is in Ohio.
 
 A great answer must:
 - Ask for the share of cost or content made in the US, rather than deciding on the spot.
@@ -37,7 +37,7 @@ A great answer must:
 
 ## 4. The bakery gift box rush
 
-A made-up bakery wants a Christmas gift box page today. It gives the box contents, a photo of each product's label, and says "say they're nut-free, kids love them".
+A bakery wants a Christmas gift box page today. It gives the box contents, a photo of each product's label, and says "say they're nut-free, kids love them".
 
 A great answer must:
 - Copy ingredients and allergens from the labels exactly, with allergens emphasised.
@@ -48,7 +48,7 @@ A great answer must:
 
 ## 5. The review boast and the sale banner
 
-A made-up skincare shop's product page says "Loved by 10,000+ customers" (it has 380 reviews) and "48-hour flash sale, 40% off" (the same price has run for six weeks). The client wants the copy "punchier".
+A skincare shop's product page says "Loved by 10,000+ customers" (it has 380 reviews) and "48-hour flash sale, 40% off" (the same price has run for six weeks). The client wants the copy "punchier".
 
 A great answer must:
 - Flag both claims plainly and explain the risk in a line or two (FTC rules on reviews; UK ban on false time-limited offers, with the Wayfair fine as an example; EU 30-day prior price).
@@ -59,7 +59,7 @@ A great answer must:
 
 ## 6. Twelve socks that look the same
 
-A made-up sock shop has 12 merino socks that differ only in height, cushioning and colour. All descriptions are the same paragraph. Search traffic goes to the wrong product.
+A sock shop has 12 merino socks that differ only in height, cushioning and colour. All descriptions are the same paragraph. Search traffic goes to the wrong product.
 
 A great answer must:
 - Build a comparison of the real differences and lead each product with its own difference.

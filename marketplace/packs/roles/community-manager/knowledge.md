@@ -227,3 +227,24 @@ Re-check at each refresh (every 30 days):
 - **UK subscriptions:** start date of the subscription contracts regime [26].
 - **Industry data:** the next CMX report [23].
 - **Tools:** community platforms change plans, AI features and connectors often; check vendors' own pages before recommending one.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the client cannot say in one line what the community is for, I write that line before any rule, prompt or channel, because every later choice tests against it. (§5)
+- `decision_rule` I reply by name to every new member's first post, because an ignored first post gives no reason to post again. (§5)
+- `decision_rule` Between hiding and deleting, I hide; between deactivating and deleting, I deactivate, because both can be undone. (§5)
+- `decision_rule` When a paid community loses members after the first month, I look at time to first win before changing the price. (§5)
+- `decision_rule` When a friend of the owner breaks a rule, I apply the same step as for anyone else, or change the rule for everyone. (§5)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Stock AI phrasing.** Posts, welcome messages and prompts full of "Unlock", "Elevate", "Seamless" or "Game-changer". These read as machine-written; write as the community's own people speak.
+- **Rule of three everywhere.** Every announcement or prompt as a three-point list. It makes every post feel the same; say one thing and ask one question.
+- **Headline formula hooks.** Openers like "Let's talk about X" or "Hot take:" on every post. They read as a template; start from what members actually asked or did.
+- **Fake urgency.** "Last chance to join" or "spots filling fast" for events or memberships with no real limit. It reads as default and breaks trust; state real limits only.
+- **Benefits any competitor could claim.** Describing the community as "supportive", "engaged" or "a place to connect". Every community says it; describe what members get here that they cannot get elsewhere.
+- **Format sameness.** The same post template, length and emoji bullets every day. It reads as a template; vary format with the purpose of each post.

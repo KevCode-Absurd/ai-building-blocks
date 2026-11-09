@@ -58,7 +58,7 @@ On a marketplace, how you treat buyers is measured, and the measures decide whet
 
 ## Example of good output (short)
 
-*Ember & Wick is a made-up candle shop on eBay and Etsy used only to show the format. Figures are invented.*
+*Illustrative structure, not a real business: a candle shop on eBay and Etsy. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Deadline:** eBay return request #2 (item not as described: "melted"), opened Monday; respond by Thursday (3 business days).
 

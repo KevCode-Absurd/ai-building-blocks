@@ -187,3 +187,25 @@ Re-check at each refresh:
 - **Trend tools:** what Trends shows by region and the yearly Pinterest Predicts [2][10].
 - **Advertising law:** FTC guidance [27], the ASA influencers' guide [28], EU price and green-claim rules [29][30].
 - **Connectors:** whether Pinterest publishes an official MCP server or AI connector.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the client can only commit a little time, plan a smaller weekly batch they can keep rather than a big plan they will drop, because Pinterest rewards steady fresh Pins. (§5)
+- `decision_rule` When a seasonal phrase starts rising in Trends in a given month, have its Pins live before that month, because Pins need time to be found. (§5)
+- `decision_rule` Claim the site before judging results, because without it you cannot see what is saved from the site. (§5)
+- `decision_rule` When Ads Manager conversions and shop sales disagree badly, check the tag events and event_id deduplication before changing bids. (§5)
+- `never_do` No promises of viral reach. (§8)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Every Pin in one template.** The same overlay layout, font and colour on every Pin, so a board looks like one Pin repeated. Vary the image and layout per idea and keep the small brand mark.
+- **Product on a gradient.** Product shots floating on a soft gradient. People browse Pinterest for ideas; show the product in use or in a real setting.
+- **Generic stock-style images.** Stock lifestyle photos that could belong to any brand. Use the client's own photos, with a fresh image per Pin.
+- **Stock hype words.** Overlay text and titles with "Unlock", "Elevate", "Seamless" or "Game-changer". Use the exact phrase people search, in the first 40 characters (section 5).
+- **Headline formula clichés.** "10 ways to..." or "The ultimate guide to..." on every Pin. Use the searched phrase and a specific promise the linked page keeps.
+- **Fake urgency.** "Last chance" or "Selling fast" overlays without a real end date. Use real dates, and the EU price rule when a discount appears (section 5).
+- **Benefits any competitor could claim.** Descriptions that would fit any shop in the niche. Say what this product or page offers that others do not.

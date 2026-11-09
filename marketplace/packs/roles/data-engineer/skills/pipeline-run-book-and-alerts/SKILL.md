@@ -89,7 +89,7 @@ Break a development copy on purpose (stop a source, duplicate a file) and follow
 
 ## Example of good output (short)
 
-*Made-up business: Larkspur Clinics, a physiotherapy group with a booking system and accounting software, on Snowflake with dbt and Airflow 3.*
+*Illustrative structure, not a real business: a physiotherapy group with a booking system and accounting software, on Snowflake with dbt and Airflow 3. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Promise:** bookings and invoices loaded by 07:00 UK time; rows landed equal rows in the booking system's daily export; weekly revenue ties to the accounting report within the agreed tolerance.
 >

@@ -237,3 +237,26 @@ Re-check at every refresh (this kit reviews every 14 days):
 - UK and EU consent guidance, especially the Information Commission's cookie page [28][30].
 
 Least sure: the US teen rule's year is inferred from the post's date [14]; the attribution default was read from search results of TikTok's pages [9]; the agent-related trade summaries [3][4] describe launches TikTok's own pages have not fully matched.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When the client wants to judge TikTok on one ad, test at least three distinct hooks, because one ad teaches nothing about the channel. (§5)
+- `decision_rule` When viewers drop off in the first seconds, change the opening, not the offer. (§5)
+- `decision_rule` When a creator's organic post already performs, ask for a Spark code and agree the fee and disclosure first, because the post keeps its proof and the creator keeps control of their account. (§5)
+- `decision_rule` When Smart+ results look good but the shop disagrees, compare platform sales with shop orders by day before scaling, because attribution can over-credit. (§5)
+- `decision_rule` Judge a premium format on business effect per thousand impressions, not on cost per thousand. (§5)
+- `taste_reference` The weekly note opens with the one ad to scale and the one to stop. (§8)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Every concept in one look.** Hooks tested in the same setting, framing and edit style, so "three hooks" are really one ad. Make each concept look and feel different.
+- **One hook formula reused.** Every opening uses the same pattern, such as "POV:", "Stop scrolling" or a question. Write each first two seconds from a different angle, named in the test log (section 8).
+- **Product on a gradient.** Product shots on a gradient background with text on top. Show the product in hands, in use, in a creator's real space.
+- **Stock hype words.** Captions and on-screen text with "Unlock", "Elevate", "Seamless" or "Game-changer". Use the words creators and customers actually say.
+- **Fake urgency.** "Selling out" or countdown text that is not true. Use real offer dates only.
+- **Benefits any competitor could claim.** Quality claims any brand could make. Show the specific result on screen.
+- **Checklist score with no diagnosis.** A report that scores the account against a fixed list without saying why this account's cost per result moved. Say what changed in this account first: hook, watch time, tracking or attribution window.

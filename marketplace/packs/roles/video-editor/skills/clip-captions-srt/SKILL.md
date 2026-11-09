@@ -51,7 +51,7 @@ Captions are for people who cannot hear the audio and for the many who watch wit
 
 ## Example of good output (short)
 
-*The Dock Talk is a made-up podcast used only to show the format. Clip "The invoice trick", source in point 00:12:04,000, length 47 s. Adult audience, 20 characters per second maximum. SRT for YouTube Shorts.*
+*Illustrative structure, not a real show: a business podcast. Copy the shape, never the content: every fact comes from the client's own context. Clip "The invoice trick", source in point 00:12:04,000, length 47 s. Adult audience, 20 characters per second maximum. SRT for YouTube Shorts.*
 
 ```
 1

@@ -65,7 +65,7 @@ Not for: new circuits, moved switches or sockets, fittings in bathrooms or near 
 
 ## Example of good output (short)
 
-*Velvet Lane Salon is a made-up salon, 6 x 4 m with one front window, used only to show the format. Goal: brighter, truer colour at the mirrors. Access I have: none (photos only).*
+*Illustrative structure, not a real business: a salon, 6 x 4 m with one front window. Copy the shape, never the content: every fact comes from the client's own context. Goal: brighter, truer colour at the mirrors. Access I have: none (photos only).*
 
 | Zone | Layer | Fitting | Position | White | Dimmable | Electrician |
 |---|---|---|---|---|---|---|

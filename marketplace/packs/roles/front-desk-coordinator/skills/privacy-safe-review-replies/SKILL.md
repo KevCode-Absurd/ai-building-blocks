@@ -85,10 +85,10 @@ Write a small set of reply templates by type, each with: when to use, when not t
 
 ## Example of good output (short)
 
-> **Made-up example: Brightside Physio (not a real business).**
+> **Illustrative structure, not a real business: a physio clinic. Copy the shape, never the content: every fact comes from the client's own context.**
 >
 > **Review (2 stars):** "Waited 40 minutes and my knee still hurts after three sessions with Tom."
 >
-> **Reply (held for the owner because it mentions care and a staff member; draft):** "Thank you for taking the time to write this. We aim for every appointment to start on time and for everyone to feel listened to, and we're sorry this falls short of what you expected. Please call our practice manager, Rachel, on 01632 960 000 or email hello@brightside.example, and she will get back to you within one working day. Practice manager, Brightside Physio"
+> **Reply (held for the owner because it mentions care and a staff member; draft):** "Thank you for taking the time to write this. We aim for every appointment to start on time and for everyone to feel listened to, and we're sorry this falls short of what you expected. Please call our practice manager, Rachel, on 01632 960 000 or email hello@[domain], and she will get back to you within one working day. Practice manager, [Business]"
 >
 > **Not this:** "Sorry your knee is still sore, Tom's notes say you missed your exercises." (Confirms a patient, discloses care details, argues in public.)

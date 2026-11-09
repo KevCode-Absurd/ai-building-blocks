@@ -61,13 +61,13 @@ Not for: legal sign-off, health or medical claims, or claims the client cannot b
 
 ## Example of good output (short)
 
-*Larch & Loom Candles is a made-up business used only to show the format: a 200 g soy candle in a 70 x 70 x 90 mm box, sold in UK shops and online.*
+*Illustrative structure, not a real business: a candle maker with a 200 g soy candle in a 70 x 70 x 90 mm box, sold in UK shops and online. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Front (panel A, 70 x 90 mm)**
 
 | ID | Zone | Copy | Chars | Budget |
 |---|---|---|---|---|
-| F1 | Top | LARCH & LOOM | 12 | 14 |
+| F1 | Top | [BUSINESS] | [count] | 14 |
 | F2 | Centre | Fig & Cedar | 11 | 16 |
 | F3 | Centre | Scented soy candle | 18 | 22 |
 | F4 | Lower | 45-hour burn | 12 | 16 |

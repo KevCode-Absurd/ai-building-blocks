@@ -78,7 +78,7 @@ Within the confirmed limits: send approved templates to parties on the file, at 
 
 ## Example of good output (short)
 
-*Made-up deal for illustration: first-time buyers Priya and Tom, 22 Linden Way, England.*
+*Illustrative structure, not a real deal: first-time buyers Priya and Tom, 22 Linden Way, England. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Subject: 22 Linden Way, your weekly update**
 >

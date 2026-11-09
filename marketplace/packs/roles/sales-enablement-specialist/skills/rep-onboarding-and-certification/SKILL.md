@@ -91,7 +91,7 @@ Turn the same goals into daily 10-minute huddles: one skill, one short role-play
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Tidewater Solar, a home solar installer hiring three new sales advisers.*
+*Illustrative structure, not a real business: a home solar installer hiring three new sales advisers. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Certification goal 2:** Before talking about price, the adviser asks about the last 12 months of energy bills, roof direction and how long the family plans to stay in the home.
 >

@@ -61,7 +61,7 @@ Most founders' first drafts fail the same way: a list of beliefs with no scene, 
 
 ## Example of good output (short)
 
-*Fenwick Lettings is a made-up business used only to show the format. Its founder "Ama", the story S3 and the numbers are invented for this example.*
+*Illustrative structure, not a real business: a lettings agency, with its founder "Ama" and her story S3. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Point:** Small landlords lose more money to slow repairs than to empty months.
 

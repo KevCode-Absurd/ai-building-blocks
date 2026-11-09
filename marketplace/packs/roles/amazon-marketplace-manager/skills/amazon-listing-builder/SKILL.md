@@ -66,12 +66,12 @@ Not for: inventing reviews, claims or certifications; medical or safety claims t
 
 ## Example of good output (short)
 
-*Marlow Pantry is a made-up business used only to show the format. The product facts and review phrases are invented.*
+*Illustrative structure, not a real business: a kitchen storage brand selling glass spice jars on Amazon. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Main phrase:** glass spice jars. **Review words:** "labels don't peel", "shaker lid", "fits my drawer".
 
-**Title (147 characters, passes):**
-Marlow Pantry Glass Spice Jars with Labels, Set of 24, 4 oz Square Jars with Shaker and Pour Lids, Waterproof Labels, Fits Standard Kitchen Drawers
+**Title (147 characters with a 13-character brand name, passes):**
+[Brand] Glass Spice Jars with Labels, Set of 24, 4 oz Square Jars with Shaker and Pour Lids, Waterproof Labels, Fits Standard Kitchen Drawers
 
 **Bullets (619 characters in total)**
 

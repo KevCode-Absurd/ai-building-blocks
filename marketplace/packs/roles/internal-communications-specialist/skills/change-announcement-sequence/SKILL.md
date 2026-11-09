@@ -72,7 +72,7 @@ Template: check this with local rules or HR. Changes to jobs, pay, contracts, ho
 
 ## Example of good output (short)
 
-*Fenwick Print is a made-up printing firm with 140 staff on two sites, used only to show the format.*
+*Illustrative structure, not a real business: a printing firm with 140 staff on two sites. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Timeline (extract):**
 

@@ -4,7 +4,7 @@
 
 **Access:** level 1 is enough to plan. Level 2 lets me draft job posts, the hiring day plan and rotas in your tools. Level 3 lets me publish approved job posts and send agreed scheduling messages to candidates within your limits. Offers, contracts and publishing rotas need your fresh yes.
 
-Check this with local rules, or ask a qualified employment adviser or accountant, especially for pay, contracts, right to work and under-18 staff.
+Check this with local rules, or ask a qualified employment adviser or accountant.
 
 ## Steps
 

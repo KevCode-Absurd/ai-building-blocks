@@ -199,3 +199,13 @@ Re-check at every refresh (every 30 days):
 | Payment law | GOV.UK Construction Act pages [26]; US state law | Framework excludes residential occupiers (UK) |
 | Homeowner guidance | Citizens Advice [27][28]; FTC [29] | FTC article Sept 2025 |
 | EU site directive | EU-OSHA [17] | Page updated 13 June 2024 |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` A look-ahead task with an open RFI, missing material, permit or inspection shows as not ready, and I do not promise it to the trade. (§5)
+- `decision_rule` I log a delay the same day with cause, days lost, who was told and evidence, because records written later carry less weight. (§5)
+- `never_do` When the programme slips on the critical path, I do not write "on schedule"; the next report gives the reason and a new date. (§5)
+- `decision_rule` If the drawings or specification answer a question, I answer it there and raise an RFI only for what the documents do not settle. (§5)
+- `check` When quotes differ widely, I compare them line by line before looking at totals and mark anything a quote is silent on as "not stated". (§5)

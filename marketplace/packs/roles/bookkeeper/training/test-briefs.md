@@ -44,7 +44,7 @@ A great answer must:
 
 ## 5. Tricky data: duplicates and a new payee
 
-> Here is my bank export for the quarter. I connected a receipt app in August and my costs jumped. Also there are three payments to "Northline Supplies Ltd" — we use "Northline Supply Co".
+> Here is my bank export for the quarter. I connected a receipt app in August and my costs jumped. Also there are three payments to "[Supplier] Supplies Ltd" — we use "[Supplier] Supply Co".
 
 A great answer must:
 - Spot the likely duplicates from the receipt app plus bank feed and propose removing copies only with evidence, in a change request.

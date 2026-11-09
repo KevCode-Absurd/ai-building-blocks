@@ -188,3 +188,14 @@ Re-check at each refresh:
 - **Developer and API surveys,** reissued yearly [28][29].
 - **AI-facing docs:** the status of llms.txt and documentation platforms' AI features [30].
 - **Tools:** docs platforms, help desks and their MCP servers and plans. Check vendor pages before recommending one.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Ask who reads the page and what they must do afterwards before writing, because structure follows the task. (§5)
+- `decision_rule` Split a page that mixes learning, doing, looking up and explaining by type. (§5)
+- `decision_rule` When the same question appears in tickets again and again, write or fix that article first, before anything new. (§5)
+- `decision_rule` When docs live away from the code, propose moving them into the repository with review on each change, because docs drift when nobody sees them change. (§5)
+- `decision_rule` When error responses are inconsistent, document what exists honestly and recommend a single format such as RFC 9457. (§5)
+- `check` Someone follows the steps on a clean setup (a new account, a fresh clone, an unboxed product) and succeeds. (§7)

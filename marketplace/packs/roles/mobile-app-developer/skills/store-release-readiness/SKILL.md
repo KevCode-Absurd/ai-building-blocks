@@ -93,7 +93,7 @@ Go through the guidelines that catch small apps: working demo account and live b
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Fenwick Plumbing", engineer job app in Flutter.*
+*Illustrative structure, not a real business: a plumbing firm, engineer job app in Flutter. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Rule | Required | Found | Action |
 > |---|---|---|---|

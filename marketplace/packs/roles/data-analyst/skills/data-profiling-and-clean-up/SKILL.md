@@ -95,7 +95,7 @@ Say what happens if a column is added, renamed or missing, or the file is empty,
 
 ## Example of good output (short)
 
-*Made-up business: Larkspur Garden Supplies, a US garden shop with two tills exported monthly as CSV.*
+*Illustrative structure, not a real business: a US garden shop with two tills exported monthly as CSV. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Profile highlights.** 4,212 rows. "Date" mixes 04/03/2026 and 2026-04-03. "ZIP" lost leading zeros on 37 rows. Three totals rows at the end. "Category" has 19 spellings for 7 categories.
 >

@@ -218,3 +218,24 @@ Re-check at each refresh:
 - **US subscriptions:** the FTC's negative option rulemaking (FTC-2026-0265) and state auto-renewal laws [25][26].
 - **Unfair practices guidance:** CMA207 and EU consumer pages on urgency and pricing [29][30].
 - **Shopify Subscriptions:** customer portal actions and reminder timing [28].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Time the reorder flow per product from the real gap between first and second orders, not one fixed day for every product. (§5)
+- `decision_rule` When attributed revenue is the only proof a flow works, set up a holdout before adding more discount to it, because attributed revenue alone does not show the flow caused the sale. (§5)
+- `check` Before agreeing a discount, work out the margin after the discount, after shipping and, for subscriptions, after it repeats. (§5)
+- `check` Cost a proposed loyalty perk per member and test it on a sample against a holdout before rolling it out. (§5)
+- `taste_reference` One idea and one action per message, in the client's voice; texts stay short, name the business and say why the person is getting them. (§8)
+
+## 12. Defaults to avoid
+
+An AI model with no context falls back on these choices, so they make work look like everyone else's. Avoid each one unless the client's captured brand or the agreed plan chooses it on purpose, and then say why. The full shared list is in tools/ai-default-patterns.md.
+
+- **Stock hype words.** Subject lines, preview text and texts that lean on "Unlock", "Elevate", "Seamless" or "Game-changer". They read as machine copy in a crowded inbox; use the client's own words for the product and the offer.
+- **One subject-line formula for every flow.** The same question hook or "Don't miss" pattern across welcome, cart, reorder and win-back. Reused formulas make flows feel templated; write each from that flow's one goal.
+- **Fake urgency.** "Last chance", countdowns and low-stock lines that are not true on the send day. Besides the legal risk in section 5, it is the default AI move; use a real date or no deadline.
+- **Benefits any competitor could claim.** "Quality you can trust" or "made with care". Name what only this brand does, from the client's captured facts.
+- **Rule-of-three everywhere.** Every email body built as three benefits or three bullets by habit. It reads as a template; this kit's rule is one idea and one action per message.
+- **Generic template look.** A system font in place of the brand font, a stock-style header image and rounded cards around every block. Build from the client's own email template and brand assets instead.

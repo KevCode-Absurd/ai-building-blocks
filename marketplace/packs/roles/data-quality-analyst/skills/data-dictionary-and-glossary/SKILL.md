@@ -91,7 +91,7 @@ Markdown tables, plus CSV for a sheet or Notion, plus dbt YAML descriptions if t
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Brightwater Food Bank", Airtable export of visits.*
+*Illustrative structure, not a real organisation: a food bank with an Airtable export of visits. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **visits** — One row is one household's visit to one site on one day. 18,204 rows.
 >

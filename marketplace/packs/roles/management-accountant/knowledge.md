@@ -203,3 +203,13 @@ Re-check these at every refresh (every 60 days):
 | Shopify profit reports | Shopify Help Center [23] | Cost per item; fees not mentioned |
 | Fraud and utilisation benchmarks | ACFE [10]; SPI Research [21] | 2026 editions |
 | India, Canada, Australia sources | [27][28][29][30] | Check the links still work |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Before cutting a product that looks weak on margin percentage, rank by total contribution and check which fixed costs would really go, because a low-margin, high-volume line can carry the business. (§5)
+- `decision_rule` Split a labour overspend into rate and efficiency before anyone is asked why, because a pay rise and slow work need different fixes. (§5)
+- `decision_rule` Where overhead is spread on one volume measure, test a time-based driver on the largest cost pools first. (§5)
+- `taste_reference` Page one first: profit, cash, the three things that moved and why, two risks and three actions, then the tables, with the same columns every month. (§8)
+- `never_do` Never write findings as blame: "this client pays 82 an hour in practice", not "the team wasted time". (§8)

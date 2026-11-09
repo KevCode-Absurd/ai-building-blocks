@@ -65,13 +65,13 @@ For reseller programmes, distributor margins and vendor partner incentives, use 
 
 ## Example of good output
 
-*Made-up business for illustration: Keystep Locksmiths, proposing a referral partnership with a made-up commercial cleaning firm, Glenmarsh Clean.*
+*Illustrative structure, not a real business: a locksmith proposing a referral partnership with a commercial cleaning firm. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Goal.** Six introductions to facilities managers in the next two quarters.
 
-**Why together.** Glenmarsh cleans 40 offices a week and hears about broken locks and lost keys first; Keystep fixes them same day. Neither competes for the other's work.
+**Why together.** The cleaning firm cleans 40 offices a week and hears about broken locks and lost keys first; the locksmith fixes them same day. Neither competes for the other's work.
 
-**Who does what.** Glenmarsh mentions Keystep when a site reports a lock or access problem and passes the contact with permission. Keystep quotes and delivers, and tells Glenmarsh the outcome.
+**Who does what.** The cleaning firm mentions the locksmith when a site reports a lock or access problem and passes the contact with permission. The locksmith quotes and delivers, and tells the cleaning firm the outcome.
 
 **Customer ownership.** Each firm keeps its own customers; neither solicits the other's services.
 

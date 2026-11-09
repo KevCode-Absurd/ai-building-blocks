@@ -112,7 +112,7 @@ Split multi-fact cards, fix answers that disagree with the notes, merge duplicat
 
 ## Example of good output (short)
 
-*Made-up learner for illustration: a first-year physiotherapy student revising the bones of the wrist from lecture 5.*
+*Illustrative structure, not a real person: a first-year physiotherapy student revising the bones of the wrist from lecture 5. Copy the shape, never the content: every fact comes from the client's own context.*
 
 ```
 #separator:Tab

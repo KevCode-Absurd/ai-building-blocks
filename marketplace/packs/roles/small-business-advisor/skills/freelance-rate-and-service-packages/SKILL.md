@@ -81,7 +81,7 @@ Map the steps: enquiry reply, discovery call, proposal, contract and deposit, ki
 
 ## Example of good output (short)
 
-Made-up person for illustration: a UX designer leaving a job, needing 70,000 a year before tax.
+Illustrative structure, not a real person: a UX designer leaving a job, needing 70,000 a year before tax. Copy the shape, never the content: every fact comes from the client's own context.
 
 > **Working weeks:** 52 − 6 (holidays) − 2 (public holidays) − 1 (sickness) − 1 (training) = 42.
 > **Billable hours:** 42 × 4 days × 7 hours × 70% billable = 823 hours (70% is an estimate; track it for three months).

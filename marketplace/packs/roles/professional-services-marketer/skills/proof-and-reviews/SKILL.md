@@ -58,7 +58,7 @@ This skill follows general consumer rules and points to profession rules. It doe
 
 ## Example of good output (short)
 
-*Fernhollow Studio is a made-up architecture practice, used only to show the format. All details are invented for this example.*
+*Illustrative structure, not a real business: an architecture practice. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Review request (to every client at handover):**
 "Thank you for working with us on [project]. If you have a minute, we'd be grateful for an honest review of your experience, good or bad: [link]. It helps other people decide whether we're right for them. There's no obligation."

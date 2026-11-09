@@ -92,7 +92,7 @@ At level 2, open a pull request with the contract, code, migration if any, tests
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Copperleaf Pottery Studio", which sells 8 seats per class.*
+*Illustrative structure, not a real business: a pottery studio that sells 8 seats per class. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Method | Path | Who | Codes |
 > |---|---|---|---|

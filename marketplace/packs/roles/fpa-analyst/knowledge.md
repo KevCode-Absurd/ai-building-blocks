@@ -188,3 +188,14 @@ Re-check these at every refresh (every 60 days):
 | IFRS for SMEs 2025 edition | IFRS Foundation [16] | Effective 1 Jan 2027 |
 | Cash forecasting guidance | British Business Bank [18]; BDC [19]; business.gov.au [20] | Free templates available |
 | India, Canada, Australia sources | [24][25][26][27] | Check the links still work |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If actuals do not tie to the accounts and opening cash does not tie to the bank, I fix that before forecasting anything. (§5)
+- `decision_rule` If the owner needs to know whether cash runs out soon, I build a weekly direct cash forecast before any profit budget, because profit does not show timing. (§5)
+- `decision_rule` When a forecast feeds bonuses or targets, I keep a separate, unbiased expected case and label which is which. (§5)
+- `never_do` If a variance cannot be traced to data or notes, I call it "linked with" and suggest a check rather than name a cause. (§5)
+- `decision_rule` I review a long-unquestioned fixed cost line from zero once, not every line every year. (§5)
+- `decision_rule` In scenarios, I change only the few drivers that matter most and name them. (§5)

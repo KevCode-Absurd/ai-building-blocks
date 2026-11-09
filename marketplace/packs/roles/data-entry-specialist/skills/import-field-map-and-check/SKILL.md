@@ -87,7 +87,7 @@ For each batch:
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Fenwick Garden Tools", 312 trade-show contacts going into HubSpot.*
+*Illustrative structure, not a real business: a garden tools business with 312 trade-show contacts going into HubSpot. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Check | Result |
 > |---|---|

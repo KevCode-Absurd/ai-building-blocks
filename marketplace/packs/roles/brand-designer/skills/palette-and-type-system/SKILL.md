@@ -57,7 +57,7 @@ Not for: logo drawing, or print production specs for a single piece.
 
 ## Example of good output (short)
 
-*Wrenfold Tea Rooms is a made-up cafe used only to show the format. Ratios below are illustrative; in a real job each is measured in a contrast checker and recorded exactly.*
+*Illustrative structure, not a real business: a tea room cafe. Ratios below are illustrative; in a real job each is measured in a contrast checker and recorded exactly. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Name | Role | Hex | Use |
 |---|---|---|---|

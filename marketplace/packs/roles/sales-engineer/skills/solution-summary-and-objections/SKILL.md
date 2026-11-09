@@ -66,15 +66,15 @@ The buyer's IT lead needs to see how the product fits what they already run, and
 
 ## Example of good output
 
-*Made-up business for illustration: Bookwhistle, appointment software, for a made-up chain of physiotherapy clinics.*
+*Illustrative structure, not a real business: appointment software for a chain of physiotherapy clinics. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Data flows**
 
 ```
-Clinic website --(booking form, live)--> Bookwhistle
-Bookwhistle --(nightly CSV, one way)--> Clinic accounts system   [configured]
-Bookwhistle --(SMS reminders, via provider)--> Patients            [existing]
-Patient records system <--(two-way sync)--> Bookwhistle            [PROPOSED: not built]
+Clinic website --(booking form, live)--> [Business]
+[Business] --(nightly CSV, one way)--> Clinic accounts system    [configured]
+[Business] --(SMS reminders, via provider)--> Patients             [existing]
+Patient records system <--(two-way sync)--> [Business]             [PROPOSED: not built]
 ```
 
 **Objection sheet**

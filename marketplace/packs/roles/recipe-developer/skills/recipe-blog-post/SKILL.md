@@ -83,7 +83,7 @@ At level 3, publish or schedule in the agreed category and log it. Otherwise han
 
 ## Example of good output (short)
 
-*Made-up business for illustration: The Copper Pan, a home baking blog. Search phrase: "cardamom buns recipe".*
+*Illustrative structure, not a real business: a home baking blog. Search phrase: "cardamom buns recipe". Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Disclosure:** none (no sponsor, no affiliate links).
 > **Title:** Soft cardamom buns with a knotted twist

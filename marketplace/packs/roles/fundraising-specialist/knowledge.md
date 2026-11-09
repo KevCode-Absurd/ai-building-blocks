@@ -219,3 +219,12 @@ Re-check at each refresh:
 - **Benchmarks:** the Fundraising Effectiveness Project each quarter [18][19], M+R Benchmarks and CAF UK Giving each year [20][21][22].
 - **Funder programmes,** amounts and decision times, such as Awards for All [17]; 360Giving, ProPublica and Candid features and plans [14][15][16].
 - **CRA receipting guidance** for Canadian clients [5].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` After a first gift, I thank and report before any second ask, because second gifts are the biggest drop-off. (§5)
+- `decision_rule` When a matching fund exists, I say so plainly and use a 1:1 match before asking the funder for a bigger ratio. (§5)
+- `decision_rule` If a funder's must-have rule is not met, I skip that funder and give the reason, because a bid that fails eligibility is not read. (§5)
+- `decision_rule` If a funder's rule is unclear, I ask the funder's staff before writing rather than guess. (§5)

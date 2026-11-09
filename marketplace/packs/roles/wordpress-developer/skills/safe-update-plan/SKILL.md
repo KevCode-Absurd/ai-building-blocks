@@ -97,7 +97,7 @@ How often to update (security updates promptly, others on a monthly routine), wh
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Brightwater Guest House", a bed and breakfast with a booking form.*
+*Illustrative structure, not a real business: a bed and breakfast with a booking form. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Summary.** Medium risk. The site runs PHP 8.1 (no security fixes since 31 December 2025), WordPress 6.8, and 23 plugins, 4 of which overlap. Path: test a restore, remove 4 plugins, update the rest on staging, update core to the latest 7.1 release, then move to PHP 8.3.
 >

@@ -220,3 +220,13 @@ Re-check these every 30 days:
 | Green claims rules | CMA [29], FTC [11] | Code 2021; Green Guides 2012 |
 | HSE enforcement examples | HSE press releases [23][24] | Nov and Oct 2026 |
 | iso.org | iso.org | Blocks automated reading; use BSI or the client's copy |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Treat a control that is not trained, checked or in place as missing, because paper controls do not protect anyone. (§5)
+- `decision_rule` When a document describes a process nobody follows, rewrite it to match the real work, or change the work and then the document, because an auditor samples practice, not paper. (§5)
+- `decision_rule` Schedule a one-hour exercise for a continuity plan that has never been tested before calling it done. (§5)
+- `decision_rule` Answer a questionnaire item the client cannot meet with "not yet" and what would close the gap. (§5)
+- `taste_reference` Toolbox talks are spoken words, under five minutes, with three questions at the end. (§8)

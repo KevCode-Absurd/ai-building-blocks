@@ -91,7 +91,7 @@ Do not use sentiment or emotion scores about the rep. In the EU, the AI Act list
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Brightmoor Analytics, a reporting tool for small retailers; discovery call by a rep named Ana.*
+*Illustrative structure, not a real business: a reporting tool for small retailers; discovery call by a rep named Ana. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Consent check:** client confirms both parties were in Texas and the buyer heard the recording notice at the start (on the recording at 00:04). Ana's employment notice covers call review. Proceeding.
 >

@@ -76,7 +76,7 @@ Name each creator ad in the test log with the hook name, so results compare clea
 
 ## Example of good output (short)
 
-*Made-up business: Climbworks, an indoor climbing gym.*
+*Illustrative structure, not a real business: an indoor climbing gym. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Angle:** "First time climbing? You don't need to be strong."
 > **Hooks (first two seconds):**
@@ -85,5 +85,5 @@ Name each creator ad in the test log with the hook name, so results compare clea
 > 3. "Things nobody tells you about your first climb"
 >
 > **Say:** taster session includes shoes and an instructor (client confirmed). **Don't say:** "anyone can climb the hardest wall in a week"; no weight-loss claims.
-> **Disclosure:** say "This is an ad for Climbworks" in the first five seconds and keep "Ad" on screen; switch on TikTok's commercial content setting.
+> **Disclosure:** say "This is an ad for [Business]" in the first five seconds and keep "Ad" on screen; switch on TikTok's commercial content setting.
 > **Agreement:** run as a Spark Ad for 60 days in the UK; no edits without the creator's OK. Fee proposal for your approval: flat fee per post, paid by you.

@@ -146,7 +146,7 @@ Thirty to sixty minutes, same day each week, one owner:
 4. **Next tests:** the top of the ICE-ranked backlog, sized and assigned.
 5. **Approvals and access:** drafts to publish, any level 3 action list, any spend change.
 
-The Traction pack's `workflows/weekly-traction-rhythm.md` spreads the same loop across the week for the growth leads.
+The Traction pack's weekly traction rhythm workflow (not in this pack) spreads the same loop across the week for the growth leads.
 
 ### 3.10 Tools, access and AI
 
@@ -261,3 +261,14 @@ Re-check at each refresh:
 - **Open-source MMM tools:** new versions and features of Meridian and Robyn [27][28].
 - **Product analytics features:** retention reports and AI connectors in Mixpanel, Amplitude and PostHog [15].
 - **The Traction pack:** its channel facts are reviewed every 14 days; read its `channels/` files for channel details.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the goal is not a number with a date, I set one before choosing any channel. (§5)
+- `decision_rule` If new users are not retained, I fix activation and retention before buying traffic, because paid growth into a leaky funnel buys churn. (§5)
+- `decision_rule` If a channel's cost per customer rises week after week at the same spend, I suspect decay and start testing the next channel. (§5)
+- `decision_rule` When ad platforms claim more conversions than the backend, I plan budgets from the backend and test lift before scaling. (§5)
+- `check` A channel test that brings only a handful of customers is unclear, and I say what volume would settle it. (§5)
+- `decision_rule` If no channel works yet, I win the first customers by hand before automating anything. (§5)

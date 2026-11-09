@@ -217,3 +217,14 @@ Re-check at every refresh (every 30 days):
 | Producer prices | [25] | Sept 2026; next release 13 Nov 2026 |
 | Ofgem business contract rules | [27] | Checked 6 Nov 2026 |
 | Accounting MCP server tools | [29][30] | Checked 6 Nov 2026 |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Write the need down before contacting any supplier, because quotes are only as good as the question. (§5)
+- `decision_rule` Treat one quote far below the others as a question about scope or quality before treating it as a saving. (§5)
+- `check` Mark an item missing from a quote "unknown" and ask, rather than scoring it as free. (§5)
+- `decision_rule` If the client has no real alternative, do not threaten to walk away; improve the alternative first or negotiate on value. (§5)
+- `decision_rule` For a contract that renews automatically, put the notice date in the calendar and start talks well before it. (§5)
+- `check` Agree the scoring weights before quotes arrive. (§7)

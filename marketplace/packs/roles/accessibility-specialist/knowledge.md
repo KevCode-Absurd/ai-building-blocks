@@ -230,3 +230,11 @@ Re-check these at every refresh (every 30 days):
 | Failure rates | WebAIM Million [14] | 2026 report |
 | Screen reader use | WebAIM survey [15] | Survey #10, 2023 to 2024 |
 | Document guidance | GOV.UK [19][20] | Updated Oct 2025 and Jun 2026 |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When a key task fails for keyboard or screen reader users, I fix that before anything cosmetic, because it stops people completely. (§5)
+- `decision_rule` When a brand colour fails contrast, I offer the nearest passing shade with both ratios and let the brand owner decide, rather than picking for them. (§5)
+- `decision_rule` For a document people are meant to read, I recommend HTML over PDF; if the PDF must stay, I fix and tag the source file first. (§5)

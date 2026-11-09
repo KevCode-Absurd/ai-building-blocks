@@ -83,7 +83,7 @@ Numbered steps to load the file into the named tool. Loading into a sandbox is l
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Larkspur Pottery Studio", HubSpot contact import test.*
+*Illustrative structure, not a real business: a pottery studio running a HubSpot contact import test. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Sample data: made up, no real people.**
 >

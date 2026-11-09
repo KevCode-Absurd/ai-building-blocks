@@ -66,7 +66,7 @@ Not for: allergen or health claims the kitchen or maker cannot verify, label and
 
 ## Example of good output (short)
 
-*The Copper Kettle Café and Stonegate Brewing are made up, used only to show the format. Dishes, allergens and drinks are invented.*
+*Illustrative structure, not a real business: a café that serves beer from a local brewery. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | Dish | Menu line | Price | Allergens (kitchen matrix, 2 Nov) |
 |---|---|---|---|
@@ -75,6 +75,6 @@ Not for: allergen or health claims the kitchen or maker cannot verify, label and
 
 **Notice (UK, on every menu page):** "Please ask our team about allergens before you order. We can show you the full list for every dish."
 
-**Tasting note, Stonegate Hazy Pale, 5.2% ABV:** "Soft and cloudy. Mango and orange peel on the nose, a little bread and oats in the mouth, and a dry, gently bitter finish. Pour cold into a tulip glass. Good with fish tacos or a sharp cheddar."
+**Tasting note, [Brewery] Hazy Pale, 5.2% ABV:** "Soft and cloudy. Mango and orange peel on the nose, a little bread and oats in the mouth, and a dry, gently bitter finish. Pour cold into a tulip glass. Good with fish tacos or a sharp cheddar."
 
 **Removed:** "smooth and healthy" (health claim; not allowed in UK alcohol ads).

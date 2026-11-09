@@ -89,7 +89,7 @@ Which environment, which browsers and devices, which accounts, how data is reset
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Copper Kettle Bistro", a restaurant with an online booking form (date, time, party size, allergies, confirmation email).*
+*Illustrative structure, not a real business: a restaurant with an online booking form (date, time, party size, allergies, confirmation email). Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Top risks:** (1) double bookings when two people book the last table at once; (2) allergy notes lost between the form and the kitchen email; (3) bookings for past dates or closed days accepted.
 >

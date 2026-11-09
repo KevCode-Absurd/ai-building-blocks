@@ -223,3 +223,11 @@ Re-check these every 30 days:
 | Crisis and help lines | NHS [21], 988 [22], NIMHANS [23], 988.ca [25], healthdirect [28] | As listed in section 3 |
 | HSE stress guidance | HSE [15][16] | Updated Jan 2025 |
 | India and Australia workplace sites | labour.gov.in, meity.gov.in, fairwork.gov.au | Not readable by automated tools on 6 Nov 2026 |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If the client has not said what decision a question will inform, I drop the question, because every unused question costs trust. (§5)
+- `decision_rule` If a wellbeing plan is mostly apps and talks, I add work-design actions on the six stress areas first. (§5)
+- `never_do` If there is no budget for an action, I say so in the read-out instead of promising it. (§5)

@@ -93,11 +93,11 @@ Every date in the report must match the programme and the delay log. If they dif
 
 ## Example
 
-*Made-up business for illustration: Kestrel Interiors, a shop fit-out contractor in Manchester, UK; café fit-out.*
+*Illustrative structure, not a real business: a shop fit-out contractor in Manchester, UK; café fit-out. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Daily report 014, Wed 11 Mar. Author: site manager (notes), compiled by coordinator.**
 > **Weather:** rain from 10:00 (site observation); internal work only, no stoppage.
-> **On site:** Kestrel joiners 3; Patel Electrical 2; Northline Plastering 2 (left 13:00).
+> **On site:** in-house joiners 3; electrical subcontractor 2; plastering subcontractor 2 (left 13:00).
 > **Work done:** counter carcass fixed (task 22); first-fix power to back wall complete (task 18).
 > **Deliveries:** none. Plasterboard due 08:00 did not arrive.
 > **Visitors:** none. **Safety:** extension lead across fire exit moved 09:15 (reported to site manager).

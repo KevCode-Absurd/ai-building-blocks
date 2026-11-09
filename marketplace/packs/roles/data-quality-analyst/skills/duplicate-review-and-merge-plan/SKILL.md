@@ -88,7 +88,7 @@ Recommend the prevention: unique-value properties, a required email, validation 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Copperfield Garden Rooms", 6,840 HubSpot contacts.*
+*Illustrative structure, not a real business: a garden rooms business with 6,840 HubSpot contacts. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Match rule | Pairs | Sample checked | Wrong in sample | Use? |
 > |---|---|---|---|---|

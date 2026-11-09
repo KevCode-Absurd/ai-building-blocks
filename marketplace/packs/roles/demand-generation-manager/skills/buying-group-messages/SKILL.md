@@ -72,7 +72,7 @@ For each country in scope, confirm the email and message steps are allowed for t
 
 ## Example of good output (short)
 
-*Made-up business: Brightward Safety, a safety training platform for hospitals. Figures are invented for illustration.*
+*Illustrative structure, not a real business: a safety training platform for hospitals. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > | Role | Pain (evidence) | Proof | Ask | Channel |
 > |---|---|---|---|---|
@@ -81,4 +81,4 @@ For each country in scope, confirm the email and message steps are allowed for t
 > | Finance director (budget) | Agency cover costs while staff train [TO CONFIRM] | Cost model with the trust's own staff numbers and stated assumptions | 30-minute cost review | Account owner email after the demo |
 > | IT security (can block) | Single sign-on and data location questions (lost deal, March) | Security pack and data processing terms | Call with our engineer | Sent by sales when a proposal is requested |
 >
-> **Head of nursing, email:** "Most of your mandatory training happens on shift, and it shows on the rota. Wards using Brightward run the same modules in short blocks that fit between handovers. Sister Ellis at a 600-bed trust can tell you how her ward did it. Would a 20-minute call with her next week help?"
+> **Head of nursing, email:** "Most of your mandatory training happens on shift, and it shows on the rota. Wards using [Business] run the same modules in short blocks that fit between handovers. Sister Ellis at a 600-bed trust can tell you how her ward did it. Would a 20-minute call with her next week help?"

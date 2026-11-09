@@ -85,7 +85,7 @@ List each rule from the author guidelines the author pasted (word limit, abstrac
 
 ## Example of good output (short)
 
-*Made-up example: a pre-submission review of a fictional 12-page study of staff turnover in eight small dental clinics.*
+*Illustrative structure, not a real study: a pre-submission review of a 12-page study of staff turnover in eight small dental clinics. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Summary:** The study asks why staff leave small dental clinics. It surveyed 64 staff in eight clinics and interviewed 12 who had left. It concludes that unpredictable rotas, not pay, drive turnover.
 >

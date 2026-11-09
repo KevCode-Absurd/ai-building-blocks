@@ -57,7 +57,7 @@ Not for judging the brand direction (see the brand identity designer kit) or the
 
 ## Example of good output (short)
 
-*Northfold Studio is a made-up booking app for photo studios, used only to show the format. Access I have: level 1 (CSS files and 24 screenshots).*
+*Illustrative structure, not a real business: a booking app for photo studios. Access I have: level 1 (CSS files and 24 screenshots). Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Summary.** 14 greys, 9 font sizes and 6 button styles in use. Proposal: 5 greys, 6 sizes, 3 button variants (primary, secondary, quiet) in two sizes.
 

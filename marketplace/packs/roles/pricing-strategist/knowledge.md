@@ -220,3 +220,13 @@ Re-check at each refresh (every 30 days):
 - **Cases:** the ACCC's Microsoft 365 case [16].
 - **Tools:** Stripe and Shopify pricing features [18]-[20]; Slack's billing policy [17].
 - **Other countries:** the three official sources still load [24]-[26].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` Build the cost floor before naming any price, because a price below cost loses more with every sale. (§5)
+- `decision_rule` With no buyer evidence, write the questions and say the price is provisional. (§5)
+- `decision_rule` When a sales team discounts to close, replace open discounts with rules that trade price for something (term, prepayment, volume). (§5)
+- `check` Adjust or leave out any rival price that is not on the same basis. (§5)
+- `taste_reference` Tier design is three columns, each with a one-line pitch, and the default marked; every price is a proposal until the client approves it. (§8)

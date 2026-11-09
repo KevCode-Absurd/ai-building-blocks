@@ -74,7 +74,7 @@ By role: staff needed per hour (rota) or per week (season), total hours, and the
 
 ## Example of good output (short)
 
-*Made-up business: Juniper Lane Café, one site in Bristol, open 7am to 4pm. Figures are invented for illustration.*
+*Illustrative structure, not a real business: a café, one site in Bristol, open 7am to 4pm. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Driver:** covers per hour (12 clean weeks; two short-staffed Saturdays treated as floors). **Rule:** one server per 18 covers an hour, one barista per 30 drinks an hour, at least two staff on site at all times.
 >

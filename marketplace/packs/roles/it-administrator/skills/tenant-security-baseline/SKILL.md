@@ -99,7 +99,7 @@ Show the change list and limits, get a yes, then apply in the agreed order. Afte
 
 ## Example of good output (short)
 
-*Made-up business: Larkspur Dental Studio, 18 staff, Microsoft 365 Business Standard.*
+*Illustrative structure, not a real business: a dental studio, 18 staff, Microsoft 365 Business Standard. Copy the shape, never the content: every fact comes from the client's own context.*
 
 | ID | Action | Reason | Staff impact | Undo | Level | Fresh yes |
 |---|---|---|---|---|---|---|

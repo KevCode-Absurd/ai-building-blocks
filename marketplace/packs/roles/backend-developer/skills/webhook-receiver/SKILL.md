@@ -86,7 +86,7 @@ At level 2, open a pull request and test against the sandbox endpoint. At level 
 
 ## Example of good output (short)
 
-*Made-up business for illustration: "Saltmarsh Yoga", which sells class passes through Stripe Checkout.*
+*Illustrative structure, not a real business: a yoga studio that sells class passes through Stripe Checkout. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Flow.** Stripe → POST /webhooks/stripe (verify, store `evt_...`, 200) → queue → worker: fetch the Checkout Session, mark the pass paid, queue one confirmation email → email provider.
 >

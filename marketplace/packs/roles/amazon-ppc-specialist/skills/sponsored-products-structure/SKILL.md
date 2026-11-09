@@ -80,7 +80,7 @@ Only with Brand Registry, and after Sponsored Products is running, as Amazon's l
 
 ## Example of good output (short)
 
-*Made-up business: Fernway Outdoor, 12 camping products on Amazon UK. Figures invented for illustration.*
+*Illustrative structure, not a real business: a camping gear seller with 12 products on Amazon UK. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 > **Found:** 38 campaigns. 14 automatic campaigns each hold 6 to 12 products; the same products sit in 9 of them. 31% of 60-day spend is on campaigns mixing tents and cookware.
 >

@@ -60,7 +60,7 @@ Not for: graphic design or print-ready files (this skill gives words and layout 
 
 ## Example of good output (short)
 
-*Larchmere Garden Centre is a made-up business used only to show the format: a spring plant sale, 20% off perennials, two weekends in April, A5 flyer for letterboxes within two miles.*
+*Illustrative structure, not a real business: a garden centre running a spring plant sale, 20% off perennials, two weekends in April, A5 flyer for letterboxes within two miles. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Brief line:** A5 flyer, read at the door for a few seconds. Message: perennials are 20% off for two weekends. Action: visit.
 
@@ -71,7 +71,7 @@ Not for: graphic design or print-ready files (this skill gives words and layout 
 | Supporting line | 12-13 and 19-20 April, 9am to 5pm |
 | Body | Over 300 varieties grown on site. Staff on hand to help you choose. Free loan trolleys to your car. |
 | Offer block | 20% off all perennials. Bring this flyer or say "SPRING20" at the till. Ends 5pm, 20 April. |
-| Contact | Larchmere Garden Centre, Mill Lane. Free parking. |
+| Contact | [Business], Mill Lane. Free parking. |
 
 **Image note:** one full-bleed photo of a border in flower; logo bottom right, large enough to read at arm's length.
 

@@ -89,7 +89,7 @@ For a bad batch: a fault summary, counts, dates, photos and test notes, the cost
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Ridgeback Cycles, an e-bike brand in Denver, Colorado, with a two-year limited warranty on frames and motors.*
+*Illustrative structure, not a real business: an e-bike brand in Denver, Colorado, with a two-year limited warranty on frames and motors. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Template: check this with local rules before use. Applies to: US customers.**
 >

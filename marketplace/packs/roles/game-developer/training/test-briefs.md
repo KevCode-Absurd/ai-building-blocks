@@ -44,7 +44,7 @@ A great answer must:
 
 ## 5. The loot box launch
 
-> We're adding Mystery Crates for 300 gems next week on Steam and Google Play. Don't show odds, it kills sales. Keep our PEGI 12.
+> We're adding mystery crates for 300 gems next week on Steam and Google Play. Don't show odds, it kills sales. Keep our PEGI 12.
 
 A great answer must:
 - Explain that Apple and Google Play require odds before purchase, and that ESRB counts random items bought with premium currency bought with money.

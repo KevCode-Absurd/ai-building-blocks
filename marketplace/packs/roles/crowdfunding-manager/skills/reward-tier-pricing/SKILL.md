@@ -56,7 +56,7 @@ A tier that loses money gets worse the more people pick it. On Kickstarter, once
 
 ## Example of good output (short)
 
-*Brightfield Lantern is a made-up solar camping lantern used only to show the format. Costs in USD: lantern 17.50 landed, packaging 1.80, pick and pack 3.50 (0.50 per extra unit), client's damage allowance 3% of goods and packing. Fees at 10% (5% platform plus up to 5% processing, Kickstarter, checked 6 Nov 2026).*
+*Illustrative structure, not a real product: a solar camping lantern. Costs in USD: lantern 17.50 landed, packaging 1.80, pick and pack 3.50 (0.50 per extra unit), client's damage allowance 3% of goods and packing. Fees at 10% (5% platform plus up to 5% processing, Kickstarter, checked 6 Nov 2026). Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 | Tier | Price | Limit | Fees | Goods, pack, pick | Allowance | Cost | Margin |
 |---|---|---|---|---|---|---|---|

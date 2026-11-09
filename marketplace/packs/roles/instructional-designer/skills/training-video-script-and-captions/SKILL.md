@@ -102,7 +102,7 @@ If the video uses a synthetic voice or an AI avatar, say so on screen and in the
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Brackenridge Physio front desk, "Reschedule an appointment", screen recording, voiceover only.*
+*Illustrative structure, not a real business: a physio clinic's front desk, with the video "Reschedule an appointment", a screen recording with voiceover only. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > | Time | Narration | On screen |
 > |---|---|---|

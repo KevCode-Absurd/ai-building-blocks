@@ -195,3 +195,13 @@ Before I hand anything over, I check:
 | Drivers' hours | GOV.UK [23], European Commission [24], FMCSA |
 | Shipping platform AI connectors | Shippo [28]; other vendors' developer pages |
 | Returns data | NRF yearly report [30] |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When shipping costs look high, match carrier invoice lines to orders before changing carriers, because surcharges and billed weight above actual weight can explain the gap. (§5)
+- `decision_rule` If many parcels bill on dimensional weight, test smaller boxes before negotiating rates. (§5)
+- `decision_rule` Plan stock from sell-through, not from the size of the last big order. (§5)
+- `decision_rule` For goods imported often where classification is unclear, suggest the client applies for a binding ruling rather than guessing. (§5)
+- `taste_reference` Claim letters set out the facts in date order with no threats; customer messages say what we know, what we are doing and when they will hear next. (§8)

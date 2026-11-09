@@ -220,3 +220,13 @@ Re-check these at every refresh (every 30 days):
 | PEGI criteria | PEGI [24] | June 2026 in-game purchase rules |
 | Store loot box rules | Apple [26]; Google [27] | Odds before purchase |
 | UK, EU and US action | [28][29][30] | No UK gambling law change; EU report 2023 |
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When a followed object jitters, I try Interpolate before changing the timestep, because the timestep change costs CPU everywhere. (§5)
+- `decision_rule` For fast objects passing through walls, I turn on continuous collision detection for those objects only. (§5)
+- `decision_rule` Numbers designers need to tune go in a ScriptableObject or serialized field, and I say where they live. (§5)
+- `check` When the save format changes, I bump the version, write an upgrade step and test loading every old version we shipped. (§5)
+- `decision_rule` If the brief gives no feel numbers, I pick starting values, say so and show where to tune them. (§5)

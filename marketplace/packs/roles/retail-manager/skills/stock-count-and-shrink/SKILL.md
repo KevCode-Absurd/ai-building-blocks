@@ -63,7 +63,7 @@ Not for: valuing stock for accounts or tax (ask a qualified accountant), or inve
 
 ## Example of good output (short)
 
-*Copper Kettle Kitchenware is a made-up shop, and every figure is made up, used only to show the format. System: Square for Retail Plus. Access I have: Square level 2 (set up counts, no approvals).*
+*Illustrative structure, not a real business: a kitchenware shop. System: Square for Retail Plus. Access I have: Square level 2 (set up counts, no approvals). Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Count plan:** full count, Sunday 9:00 to 13:00, shop closed. Zones: front tables (Ana), wall bays 1 to 4 (Tom), back room (Ana and Tom together). Recount any line over £20 at cost variance. Two special orders set aside, not counted.
 

@@ -98,7 +98,7 @@ Track saves by reason and offer, cancellations completed, complaints and dispute
 
 ## Example of good output (short)
 
-> **Made-up example: Northside Climbing, a bouldering gym with monthly memberships (not a real business).**
+> **Illustrative structure, not a real business: a bouldering gym with monthly memberships. Copy the shape, never the content: every fact comes from the client's own context.**
 >
 > **Cancel screen, reason "I don't have time right now":**
 > "You can pause your membership for one, two or three months for £5 a month and keep your locker and member price. [Pause instead] [Cancel my membership]"

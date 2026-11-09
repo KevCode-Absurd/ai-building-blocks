@@ -211,3 +211,14 @@ Re-check at each refresh:
 - **AI shopping and seller tools:** Alexa for Shopping, Seller Assistant and the Selling Partner plugin, and the Amazon Ads MCP server, which are all new and changing [20][21][22][23].
 - **Product safety rules:** GPSR guidance and Amazon's EU compliance pages [29]; US marketplace rules such as INFORM [27].
 - **Amazon's own claims and reports:** the yearly Small Business Empowerment Report [24] and Marketplace Pulse research [23].
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` If unit profit after all fees and a realistic ad cost per sale is negative or near zero, I do not launch or reorder, because ads and returns only make it worse. (§5)
+- `decision_rule` When an idea rests on one article, one viral video or one tool estimate, I call it a rumour and test small. (§5)
+- `decision_rule` If the main complaint in rival reviews cannot be fixed by the supplier at a cost the price can carry, I drop the idea, because the gap is not real for us. (§5)
+- `decision_rule` If ACOS stays above the product's margin for a full month after launch learning, I cut bids or pause the term. (§5)
+- `decision_rule` When stock cover falls towards four weeks of sales, I reorder or slow sales, because low-stock fees and stock-outs both cost money. (§5)
+- `check` I run listing experiments to completion rather than reading early results, because early leads often reverse. (§5)

@@ -86,7 +86,7 @@ Name the next test or build step and its cost.
 
 ## Example of good output (short)
 
-Made-up business for illustration: Quayside Meal Prep, testing weekly ready meals for shift workers at one hospital.
+Illustrative structure, not a real business: a meal prep business testing weekly ready meals for shift workers at one hospital. Copy the shape, never the content: every fact comes from the client's own context.
 
 > **Riskiest assumption:** night-shift staff will pay 45 a week for five meals delivered to the staff entrance.
 >

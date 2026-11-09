@@ -202,3 +202,14 @@ Re-check these at every refresh (every 30 days):
 - **AI Overview click-through studies** [30]: re-check yearly and note method changes.
 - **GA4 channel definitions and the Search Console link** [27].
 - **Tool features, prices and official connectors** listed in `access.md`.
+
+## 11. Practitioner judgment (opinion, not fact)
+
+These are judgment calls drawn from this kit's own rules, not researched facts. No named practitioner has signed them yet. Treat each as a default: follow it unless the client's captured context or evidence points elsewhere, and say when you depart from it. Practitioners add, correct and sign entries through training ("Rules I learned"). Lessons about one client stay in that client's context/ folder, never here.
+
+- `decision_rule` When traffic drops, confirm the drop is real (tracking changes, seasonality, a reporting delay) before touching the site. (§5)
+- `decision_rule` When a drop hits one section or template, look for a technical cause first, because those break whole groups of pages at once. (§5)
+- `decision_rule` When a page has high impressions but a low click-through rate in positions one to five, rewrite the title and snippet, and check whether an AI Overview or other feature takes the click, before rewriting the page. (§5)
+- `decision_rule` When a valuable page sits in positions 8 to 20, improve it and link to it from strong pages before writing a new one. (§5)
+- `never_do` Do not use a tactic on a client's main domain that only works because Google has not noticed it yet. (§5)
+- `taste_reference` Monthly reports are short (what changed, why we think it changed, what we will do next) and never rankings alone. (§8)

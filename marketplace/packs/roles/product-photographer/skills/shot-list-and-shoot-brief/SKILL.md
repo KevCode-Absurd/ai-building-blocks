@@ -60,7 +60,7 @@ A shoot day is expensive and short. The images that matter are decided before it
 
 ## Example of good output (short)
 
-*Northgate Packs is a made-up business used only to show the format: eight backpacks, one studio day, sold on Shopify and Amazon. All details are invented.*
+*Illustrative structure, not a real business: a backpack brand with eight backpacks, one studio day, sold on Shopify and Amazon. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Buyer questions from reviews:** "Does a 16-inch laptop fit?" (14 mentions), "How many pockets inside?" (9), "Is the grey more blue or green?" (6).
 

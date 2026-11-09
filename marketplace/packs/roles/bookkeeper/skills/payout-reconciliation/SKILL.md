@@ -88,7 +88,7 @@ One table per channel: gross sales, discounts, refunds, each fee type, chargebac
 
 ## Example of good output (short)
 
-Made-up business for illustration: Saltmarsh Candle Co., selling on its own shop and one marketplace.
+Illustrative structure, not a real business: a candle maker selling on its own shop and one marketplace. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.
 
 > **Own shop (card payments), October 2026**
 >

@@ -65,7 +65,7 @@ If last year's data is missing, report against last week and the 4-week average,
 
 ## Example of good output (short)
 
-*Fernhill Pantry is a made-up online tea shop used only to show the format. All figures are invented.*
+*Illustrative structure, not a real business: an online tea shop. Copy the shape, never the content: every fact comes from the client's own context. Figures only show the shape.*
 
 **Data check:** 27 Oct to 2 Nov 2026, Europe/London, GBP. Store orders 412; GA4 purchases 371 (90% of store orders, in line with the last 8 weeks). No breaks this week. £640 of refunds relate to October orders.
 

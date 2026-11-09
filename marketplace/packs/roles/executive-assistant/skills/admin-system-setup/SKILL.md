@@ -36,7 +36,7 @@ No more than three levels. Top level by area of the business (for example Client
 
 ### 2. Set the naming rule
 
-One pattern for every file: date written year-month-day first, then a short description, then a version or status, for example `2026-11-06 Oakfield quote v2`. Dates first means files sort in time order. No "final", "new" or "latest" in names; use v1, v2 and "signed".
+One pattern for every file: date written year-month-day first, then a short description, then a version or status, for example `2026-11-06 [Client] quote v2`. Dates first means files sort in time order. No "final", "new" or "latest" in names; use v1, v2 and "signed".
 
 ### 3. Map the old to the new
 
@@ -86,7 +86,7 @@ How the folders work, the naming rule with three examples, where the admin calen
 
 ## Example of good output (short)
 
-*Made-up business for illustration: Kestrel Print Co, a six-person print shop in Toledo, Ohio.*
+*Illustrative structure, not a real business: a six-person print shop in Toledo, Ohio. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Folder tree**
 > - `Clients/2026/` client quotes, orders and proofs, one folder per client.
@@ -94,10 +94,10 @@ How the folders work, the naming rule with three examples, where the admin calen
 > - `Finance/2026/` invoices, receipts, bank statements. Accountant has read access.
 > - `Staff (restricted)/` contracts and reviews; owner and manager only.
 >
-> **Naming:** `2026-11-06 Lakeside menu proof v2`, `2026-10-31 Paper supplier contract signed`
+> **Naming:** `2026-11-06 [Client] menu proof v2`, `2026-10-31 Paper supplier contract signed`
 >
 > | Item | Due | Lead time | Owner | Proof | Note |
 > |---|---|---|---|---|---|
 > | Business insurance renewal | 1 Feb | 6 weeks | Dana | Company/Insurance | Get two quotes first |
-> | Press service contract | 15 Mar | 4 weeks | Luis | Suppliers/PressCo | Check call-out response times |
+> | Press service contract | 15 Mar | 4 weeks | Luis | Suppliers/[Supplier] | Check call-out response times |
 > | Quarterly tax filings | Per accountant | 3 weeks | Dana | Finance/Tax | Confirm dates with your accountant |

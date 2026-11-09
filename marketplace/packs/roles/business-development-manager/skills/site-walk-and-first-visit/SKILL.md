@@ -59,7 +59,7 @@ Service contracts are often lost, or won at a loss, on the quote: a missed area,
 
 ## Example of good output
 
-*Made-up business for illustration: Brindlecote Cleaning, visiting a made-up four-storey office managed by Quarrow Estates.*
+*Illustrative structure, not a real business: a commercial cleaning firm visiting a four-storey office run by a property management firm. Copy the shape, never the content: every fact comes from the client's own context.*
 
 **Question sheet (extract)**
 

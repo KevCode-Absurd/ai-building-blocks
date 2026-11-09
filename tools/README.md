@@ -4,8 +4,6 @@
 
 | Tool | Job |
 |---|---|
-| `inspect-native-delivery.mjs` | Checks actual local raster files and bounded offline page interactions under an explicitly authorized root; preflights actual host capabilities. No model calls, generation, arbitrary builds or semantic approval. Portable setup: `docs/NATIVE-DELIVERY-ADAPTER.md`; website download: `/packs/native-delivery-toolkit.zip` |
-| `verify-delivery-evidence.mjs` | Verifies declared file bytes and hashes, rejecting traversal and symlink/junction escape. Matching bytes do not establish factual or aesthetic quality |
 | `lint-pages.mjs` | Checks every block page against `docs/PAGE-FORMAT.md` and `docs/WRITING.md` |
 | `reading-level.mjs` | Reading grade of every block page, one page, or any text (`--text`, `--file`). We keep it at grade 10 or below |
 | `readability.mjs` | The grade formula (Flesch-Kincaid) the two above and the site's tests share |

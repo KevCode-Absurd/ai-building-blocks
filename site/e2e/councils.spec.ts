@@ -68,13 +68,3 @@ test('council delivery standard follows native page intent and general-task cont
  await request.fill('Create image-only landing-page mockups for design review');await expect(standard).toContainText('A design reference to review.');
  await request.fill('Improve our existing onboarding process');await expect(standard).toContainText('preserve what works');await expect(standard).toContainText('mechanisms, evidence and tradeoffs');
 });
-
-test('execution record stays local, shows reported failures and preserves the previous record on invalid input',async({page})=>{
- await setup(page);await open(page);const sent:string[]=[];page.on('request',request=>{if(request.postData())sent.push(request.postData()!);});
- const record={schema:'ai-blocks-job-state/2',base:{request:'PRIVATE_RUN_RECORD_SENTINEL',quality_policy:{version:2}},history:[{event:'produce',document:{source_trace:{context:[{id:'baseline',ref:'private/current.md',status:'INSPECTED',observation:'Reviewed current design'}],methods:[{slug:'site-builder',reason:'Preserves the current theme',execution:{status:'BLOCKED',reason:'Build tool unavailable'},resources:[]}]},artifacts:[]}}]};
- await page.getByLabel('Open execution record',{exact:true}).setInputFiles({name:'state.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(record))});
- const view=page.getByTestId('council-run-record');await expect(view).toContainText('PRIVATE_RUN_RECORD_SENTINEL');await expect(view).toContainText('site-builder · BLOCKED');await expect(view).toContainText('not independently verified');
- expect(sent.join('\n')).not.toContain('PRIVATE_RUN_RECORD_SENTINEL');expect(await page.evaluate(()=>JSON.stringify({...localStorage,...sessionStorage}))).not.toContain('PRIVATE_RUN_RECORD_SENTINEL');
- await page.getByLabel('Open execution record',{exact:true}).setInputFiles({name:'broken.json',mimeType:'application/json',buffer:Buffer.from('{bad')});await expect(page.getByRole('alert')).toContainText('previous record is retained');await expect(view).toContainText('PRIVATE_RUN_RECORD_SENTINEL');
- await page.getByRole('button',{name:'Clear execution record',exact:true}).click();await expect(view).toHaveCount(0);
-});

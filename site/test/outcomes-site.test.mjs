@@ -7,7 +7,6 @@ import { MCP_URL, OUTCOME_PATHS, jobStatus, looksLikeSecret, outcomeMessage, rea
 import { EXAMPLE, SEO, START, STATUS } from '../src/outcomes-site/outcome-copy.ts';
 import { OUTCOME_URLS, outcomePage } from '../scripts/lib/outcome-pages.mjs';
 import { grade } from '../../tools/readability.mjs';
-import {LEGACY_EXECUTION_QUALITY_POLICY} from '../src/jobs/execution-quality.mjs';
 
 const read = (file) => fs.readFileSync(new URL(file, import.meta.url), 'utf8');
 const copy = (v) => JSON.parse(JSON.stringify(v));
@@ -64,9 +63,6 @@ test('where a job stands: the sample waits on the owner\'s choice', () => {
 
 test('where a job stands: each phase, a review, live actions, blocked data and a finished round', () => {
   let e = startEngagement({ request: example.request, started: '2026-11-02', id: 'phase-test' });
-  // This status-view fixture deliberately fabricates settled states below;
-  // it is not a current-policy source/execution recording.
-  e.quality_policy={...LEGACY_EXECUTION_QUALITY_POLICY};
   assert.match(jobStatus(e).waiting[0].title, /Answer your AI's questions/);
   e = advanceEngagement(e, { type: 'brief', brief: example.brief });
   assert.equal(jobStatus(e).phaseLabel, 'Researching and planning');

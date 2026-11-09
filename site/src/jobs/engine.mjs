@@ -6,13 +6,11 @@ import { dialQuestions } from './dial-questions.mjs';
 import { jobMethod, deliveryTemplates } from './method.mjs';
 import { assembleRubric, scoreReview } from './rubric.mjs';
 import { refuseSecrets } from '../outcomes/engagement.mjs';
-import { buildExecutionPlan, EXECUTION_QUALITY_POLICY, supportedExecutionQualityPolicy, validateExploration, validateProductionQuality } from './execution-quality.mjs';
-import {validateAlternativeDecision} from './alternative-decision.mjs';
-import {preflightNativeExecution} from './native-execution.mjs';
+import { buildExecutionPlan, EXECUTION_QUALITY_POLICY, validateExploration, validateProductionQuality } from './execution-quality.mjs';
 import {validateWorkContext} from './work-context.mjs';
 
 export const JOB_STATE_SCHEMA = 'ai-blocks-job-state/2';
-export const JOB_EVENTS = ['scope', 'staff', 'diverge', 'council', 'produce', 'review', 'revise', 'deliver', 'feedback', 'set_preferences', 'refresh_capabilities', 'block', 'reopen'];
+export const JOB_EVENTS = ['scope', 'staff', 'diverge', 'council', 'produce', 'review', 'revise', 'deliver', 'feedback', 'set_preferences', 'block', 'reopen'];
 export const TIER_SETTINGS = Object.freeze({ quick: { seats: [3, 4], council_rounds: 0, loops: 0, token_multiple: [1.5, 2] }, standard: { seats: [5, 7], council_rounds: 1, loops: 1, token_multiple: [2.5, 4] }, deep: { seats: [8, 12], council_rounds: 2, loops: 2, token_multiple: [5, 8] } });
 const encoder = new TextEncoder(), HASH = /^[a-f0-9]{64}$/;
 const object = v => v !== null && typeof v === 'object' && !Array.isArray(v);
@@ -29,11 +27,6 @@ const visualJobs = new Set(['make-image-ads', 'make-images', 'make-video-ads', '
 const visualRequest = request => (/\blanding[ -]?pages?\b/i.test(request) && /\b(?:design|redesign|build|visual|mockups?|prototypes?)\b/i.test(request)) || (/\b(?:ad|ads|advertising)\b/i.test(request) && /\b(?:creatives?|images?|videos?|visuals?)\b/i.test(request));
 const nonempty = x => typeof x === 'string' && !!x.trim();
 const nonemptyList = x => Array.isArray(x) && x.length > 0 && x.every(nonempty);
-function nativePreflight(base,card,at,tools){
-  const result=preflightNativeExecution({plan:buildExecutionPlan({request:base.request,job:base.job_type.job,card}),tools:tools??base.host_capabilities.native_tools??[],allow_paid:base.host_capabilities.allow_paid_native===true,now:Date.parse(at)});
-  if(result.status==='BLOCKED')throw new JobValidationError(result.errors.map(error=>({path:`host_capabilities.native_tools.${error.path}`,message:error.message})));
-  return result;
-}
 function checkVisualSpec(spec) {
   if (!object(spec) || !nonemptyList(spec.references) || !nonemptyList(spec.fonts) || !nonemptyList(spec.colors) || !nonempty(spec.logo) || !nonemptyList(spec.formats) || !nonempty(spec.format_rationale) || !nonempty(spec.required_renderer)) fail('document.visual_spec', 'Specify visual references, fonts, colors, logo, distinct format directions and rationale, and the required renderer. Mark unknown brand elements explicitly; do not invent them.');
 }
@@ -98,17 +91,11 @@ async function applyEvent(view, entry, base, catalogue) {
   if (event === 'block') { if (!document.reason?.trim()) fail('document.reason', 'Explain what is blocked.'); if (view.phase === 'BLOCKED') fail('event', 'This job is already blocked.'); return { ...view, blocked_phase: view.phase, phase: 'BLOCKED', block: document.reason }; }
   if (event === 'reopen') { if (view.phase !== 'BLOCKED' || !document.reason?.trim()) fail('event', 'Only a blocked job can reopen, with a reason.'); const result = { ...view, phase: view.blocked_phase }; delete result.blocked_phase; delete result.block; return result; }
   if (event === 'set_preferences') { if (!object(document.answers)) fail('document.answers', 'Send the explicit preference values.'); const updated = updatePreferences(view.preferences ?? base.preferences, { job: base.job_type.job, answers: document.answers, explicit: true, job_id: base.job_id, at: entry.at }); if (!updated.ok) throw new JobValidationError(updated.errors); return { ...view, preferences: updated.preferences, preferences_changed: true }; }
-  if(event==='refresh_capabilities'){
-    if(!base.quality_policy?.source_trace||!Array.isArray(document.native_tools)||!nonempty(document.reason)||document.native_tools.length>30)fail('document.native_tools','A current-policy job may refresh at most 30 host tool declarations with an actual reason and current availability receipts.');
-    if(view.phase==='COMPLETE')fail('event','A completed run cannot change its execution evidence.');
-    const native_preflight=nativePreflight(base,view.card,entry.at,document.native_tools);
-    return {...view,native_tools:document.native_tools,native_preflight};
-  }
   const expectedEvent = { SCOPE: 'scope', STAFF: 'staff', DIVERGE: 'diverge', DELIBERATE: 'council', PRODUCE: 'produce', REVIEW: 'review', DELIVER: 'deliver', LEARN: 'feedback' };
   if (event !== 'revise' && event !== expectedEvent[view.phase]) fail('event', `The ${view.phase} phase expects ${expectedEvent[view.phase] ?? 'no work event'}.`);
   if (event === 'scope') {
     check(stageSchema.scope, document, context);
-    if(base.quality_policy?.version>=1){const work=validateWorkContext(document.work_context,{request:base.request,acceptance:document.acceptance});if(!work.ok)throw new JobValidationError(work.errors);}
+    if(base.quality_policy?.version===1){const work=validateWorkContext(document.work_context,{request:base.request});if(!work.ok)throw new JobValidationError(work.errors);}
     const brain=document.brand_brain;
     if(!brain||!['AVAILABLE','BUILT'].includes(brain.status)||!brain.business?.trim()||!pathSafe(brain.path)||!HASH.test(brain.sha256??'')||brain.read_by_coordinator!==true||!document.context_sources.some(source=>source.ref===brain.path))fail('document.brand_brain','Load and read the existing brand brain, or build a verified one first. Record its business, safe path, SHA-256 and matching context source before staffing.');
     if (visualJobs.has(base.job_type.job) || visualRequest(base.request) || document.visual_spec !== undefined) checkVisualSpec(document.visual_spec);
@@ -133,7 +120,7 @@ async function applyEvent(view, entry, base, catalogue) {
     if (spread) check('ai-blocks-spread/1', spread, context);
     if (!routes || (view.card.output_shape === 'many_artifacts' && !spread)) fail('document', 'Send a route board and a spread for multi-output work.');
     if (view.card.output_shape === 'many_artifacts' && spread.slots.length !== view.card.deliverables.reduce((n, d) => n + d.count, 0)) fail('document.spread.slots', 'The spread count must match the scoped deliverables.');
-    if (base.quality_policy?.version >= 1) {
+    if (base.quality_policy?.version === 1) {
       const explored = await validateExploration({ routes, spread, proposal_contents: document.proposal_contents, team: view.team, policy: base.quality_policy, host: base.host_capabilities, card: view.card });
       if (!explored.ok) throw new JobValidationError(explored.errors);
     }
@@ -148,23 +135,19 @@ async function applyEvent(view, entry, base, catalogue) {
     for(const proposal of document.proposals){
       const pinned=view.proposal_contents?.[proposal.file]??view.proposal_contents?.[proposal.label];
       if(typeof pinned==='string'&&proposal.content!==undefined&&proposal.content!==pinned)fail('document.proposals.content','A proposal cannot change the original blind text while being critiqued. Record later changes in revisions.');
-      if (base.quality_policy?.version >= 1) {
+      if (base.quality_policy?.version === 1) {
         const route = view.routes.routes.find(route => route.route_id === proposal.ref);
         if (route?.draft_receipt?.path !== proposal.file || !nonempty(proposal.content) || proposal.content !== view.proposal_contents?.[proposal.file]) fail('document.proposals', 'Consider the exact frozen draft text and receipt path. Keep later changes in revisions, not the original proposal.');
       }
     }
-    const decision=validateAlternativeDecision(document.alternative_decision,{routes:view.routes,card:view.card,council:document,required:base.quality_policy?.alternative_decision===true});
-    if(!decision.ok)throw new JobValidationError(decision.errors);
     if (document.status === 'CONSENSUS_UNTESTED' && (document.red_team?.length ?? 0) < 2) fail('document.red_team', 'A winner without substantive criticism needs a second red-team pass.');
     if (base.tier === 'deep' && !([1,2].every(pass=>document.red_team?.some(r=>r.pass===pass)))) fail('document.red_team', 'Deep tier requires two red-team rounds.');
-    const native_preflight=base.quality_policy?.version>=2?nativePreflight(base,view.card,entry.at,view.native_tools):undefined;
-    return { ...view, phase: 'PRODUCE', council: document,...(native_preflight?{native_preflight}:{}) };
+    return { ...view, phase: 'PRODUCE', council: document };
   }
   if (event === 'produce') {
-    if(base.quality_policy?.version>=2)nativePreflight(base,view.card,entry.at,view.native_tools);
     productionCheck(document, view, base, context);
-    if (base.quality_policy?.version >= 1) {
-      const quality = validateProductionQuality({ document, card: view.card, team: view.team, catalogue,require_trace:base.quality_policy.source_trace===true,plan: buildExecutionPlan({ request: base.request, job: base.job_type.job, card: view.card, tier: base.tier, host: base.host_capabilities }) });
+    if (base.quality_policy?.version === 1) {
+      const quality = validateProductionQuality({ document, card: view.card, team: view.team, plan: buildExecutionPlan({ request: base.request, job: base.job_type.job, card: view.card, tier: base.tier, host: base.host_capabilities }) });
       if (!quality.ok) throw new JobValidationError(quality.errors);
     }
     return { ...view, phase: 'REVIEW', production: document, evidence: document.evidence, reviews: [] };
@@ -225,7 +208,7 @@ async function replay(state, catalogue) {
   if (!object(state) || ![JOB_STATE_SCHEMA, 'ai-blocks-job-state/1'].includes(state.schema) || !object(state.base) || !Array.isArray(state.history) || state.history.length > 60) fail('state', 'Send the complete job-state document from the previous result.');
   bounded(state);
   const base = state.base;
-  if (state.schema === JOB_STATE_SCHEMA && !supportedExecutionQualityPolicy(base.quality_policy)) fail('state.base.quality_policy', 'Current jobs require a complete supported execution-quality policy. Do not remove or weaken its gates.');
+  if (state.schema === JOB_STATE_SCHEMA && canonicalJobJSON(base.quality_policy) !== canonicalJobJSON(EXECUTION_QUALITY_POLICY)) fail('state.base.quality_policy', 'Current jobs require the complete execution-quality policy. Do not remove or weaken its gates.');
   if (!/^job_[a-z0-9_-]{1,70}$/.test(base.job_id ?? '') || !TIER_SETTINGS[base.tier] || typeof base.request !== 'string' || !base.request.trim() || base.request.length > 4000 || !object(base.job_type) || !object(base.host_capabilities)) fail('state.base', 'The job identity, request, type and tier must be complete.');
   let view = { phase: 'SCOPE', loops: 0 };
   for (const entry of state.history) { if (!object(entry) || typeof entry.at !== 'string') fail('state.history', 'Invalid recorded event.'); view = await applyEvent(view, entry, base, catalogue); }
@@ -252,7 +235,6 @@ async function describe(state, view, catalogue, initial = false) {
   const warnings = [];
   if (base.host_profile !== 'parallel') warnings.push('A single-context host cannot prove independent review. State the actual isolation used.');
   if (!base.quality_policy) warnings.push('This legacy job predates execution-quality gates. Start a new job to use frozen draft and artifact-quality validation.');
-  else if(base.quality_policy.version<EXECUTION_QUALITY_POLICY.version)warnings.push('This legacy policy has frozen-draft and artifact checks but predates pinned source-use traces and acceptance decision matrices. Start a new job for those gates.');
   if(view.production?.artifacts?.some(a=>a.budget?.used===null))warnings.push('The host did not expose some producer tool-call totals; their allowance use is not verified.');
   if (view.needs_revision) warnings.push('The review failed. Unresolved work cannot be described as passing.');
   if (view.preferences_changed) warnings.push('Preference files are proposals for the authorized host to save; no account write ran on this public service.');

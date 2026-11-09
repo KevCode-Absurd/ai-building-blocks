@@ -6,7 +6,7 @@ import { AREAS } from "../../core/types.ts";
 import { getRole } from "./roles.ts";
 import { getPersona, listPersonas, searchPersonas } from "./service.ts";
 import { agentCard, agentProfile, areaCounts, browseOrder, pickFeatured, relatedAgents, soulMarkdown } from "./views.ts";
-import {executionPlan,checkExecutionDelivery,validHostTools} from './execution.ts';
+import {executionPlan,checkExecutionDelivery} from './execution.ts';
 
 /** Public, short-lived: browsers keep it a minute, shared caches five, then refresh in the background. */
 const PUBLIC_CACHE = { "cache-control": "public, max-age=60, s-maxage=300, stale-while-revalidate=600" };
@@ -45,12 +45,11 @@ export const routes: Route[] = [
   {
     method:'POST',path:'/api/execution-plan',handler:async ctx=>{
       const input=await ctx.body<Record<string,unknown>>();
-      if(!input||typeof input!=='object'||Array.isArray(input)||Object.keys(input).some(key=>!['request','tier','host_tools'].includes(key)))return fail(400,'invalid_input','Send request, optional tier and actual host_tools inventory.');
+      if(!input||typeof input!=='object'||Array.isArray(input)||Object.keys(input).some(key=>!['request','tier'].includes(key)))return fail(400,'invalid_input','Send request and optional quick, standard or deep tier.');
       const request=str(input.request,'request',{max:4000});
       const tier=input.tier??'standard';
       if(tier!=='quick'&&tier!=='standard'&&tier!=='deep')return fail(400,'invalid_input','tier must be quick, standard or deep.');
-      if(input.host_tools!==undefined&&!validHostTools(input.host_tools))return fail(400,'invalid_input','host_tools must be a bounded actual tool inventory; it cannot contain commands or spending authorization.');
-      return json(executionPlan(request,tier,input.host_tools as Record<string,unknown>[]|undefined));
+      return json(executionPlan(request,tier));
     },
   },
   {

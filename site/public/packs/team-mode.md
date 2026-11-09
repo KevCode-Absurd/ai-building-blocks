@@ -19,16 +19,6 @@ With MCP, call `start_job` with the person's request and your actual host capabi
 
 Without MCP, follow the steps below and keep the files locally in `jobs/<job-id>/`. Mark checks as local host checks. Do not invent a server validation or digest.
 
-## Source use, alternatives and native tools
-
-For current execution policy v2, keep a `source_trace` with inspected context, inference and missing evidence separated. For each selected AI Blocks method, record its task-fit reason, exact revision and complete instruction/supporting-resource read receipts. Reading instructions is distinct from executing them; execution receipts identify every current output that claims the method. Unused toolbox options need not be loaded. Preserve private source bytes in the authorized project.
-
-At the council decision, compare every frozen route against the same acceptance criteria in `alternative_decision`. State strengths, tradeoffs, winning conditions and a discriminating test. Keep the strongest alternative and actual dissent. A hybrid must name a compatible contribution from every selected route; selecting everything is not a substitute for making a decision. Known critical failures block selection. Unknown evidence stays unknown.
-
-Before makers start native production, report recently checked actual tools in `host_capabilities.native_tools`. Missing source editing/build/browser/review or raster generation/inspection capabilities block the relevant work. A tool name in a skill is not an executor. Paid tools require separate actual authority; a plan or input file cannot grant it. Use `refresh_capabilities` with refreshed `native_tools` and a reason during a long job, preserving history. The optional local checker at https://useaiblocks.com/packs/native-delivery-toolkit.zip performs byte, raster and bounded offline page-interaction checks; it does not generate images, run project builds or judge brand fidelity.
-
-Save the returned complete `state.json`. The council page can display that record locally to inspect reported sources, methods, alternatives and checks. The viewer does not upload the file or independently verify execution or acceptance.
-
 ## Discover and execute visual methods
 
 Choose task methods from AI Blocks. Other authorized sources can supply brand facts, product evidence, current platform requirements and visual references; they do not replace the method. If a required method is missing, record the gap and add it before claiming the work is complete.
@@ -144,20 +134,14 @@ For standard and deep tiers, run all six steps:
 
 1. Brief each seat with the same job card, evidence and rubric.
 2. Have owners write independent proposals in separate files before reading rival proposals.
-3. Get at least two critiques of each proposal from seats that did not write it. Each critique names the strongest point, quotes the real part inspected and links any concern to the accepted criteria and source/check evidence, or states that no material flaw was found. Say what would change the critic's mind. The red team attacks the favourite and argues for the weakest option.
+3. Get at least two critiques of each proposal from seats that did not write it. Each critique names the strongest point, quotes a real line, explains its flaw and says what would change the critic's mind. The red team attacks the favourite and argues for the weakest option.
 4. Have owners revise or defend their proposals in a short note.
 5. Relabel proposals A, B, C and rank them against the rubric. A seat never ranks its own proposal. Record ballots and the Borda result.
 6. Have the coordinator choose and explain. Record the strongest dissent in the dissenter's own words, when an alternative would win, options worth keeping and ideas killed with reasons.
 
-If no critique finds a substantive flaw in the winner, record `CONSENSUS_UNTESTED` and run the required second red-team pass before production. That pass may also find no material flaw; record this truthfully, retain the status and never invent defects or force edits. Missing quotes do not count as critiques. Dissent is required unless eligible ballots are unanimous and both red-team passes occurred.
+If no critique finds a substantive flaw in the winner, record `CONSENSUS_UNTESTED` and run a second red-team pass before production. Missing quotes do not count as critiques. Dissent is required unless eligible ballots are unanimous and both red-team passes occurred.
 
 Write `COUNCIL.json` and short decision notes. These are minutes about the work, not transcripts of private reasoning.
-
-## Preserve useful work
-
-When an inspected CURRENT baseline or first working native draft is already available, retain its exact files and SHA-256 as the incumbent. No extra prototype or stage is required. Explicit exploration, variants, rewrite/redesign and supported craft improvements remain valid reasons to change work; keeping it unchanged is an option, not a mandate. Complete independent review; if the incumbent meets the accepted job, keeping it unchanged is legitimate. For a no-change IMPROVE result, use the explicit work-context retention contract and keep all native and acceptance gates.
-
-Approved invariants are binding; existing wording, hierarchy and process details are not automatically invariants. Changes need an accepted requested direction or an observed problem/craft improvement with task-relevant evidence. An untested concern remains a hypothesis. Do not regenerate the whole deliverable to combine council ideas; reject or revert regressions against the incumbent. Add daily fields, steps or recurring reviews only for a supported failure or accepted requirement; keep optional analysis outside the required daily handoff. These are host-reported judgments, not semantic proof or user acceptance.
 
 ## 5. Produce in separate pipelines
 
@@ -165,7 +149,7 @@ Each maker loads and follows the assigned methods in full, including their own c
 
 Check actual host tools before promising media. If a tool is missing, agree on a family swap or deliver a clearly marked production-ready brief. A brief is not a rendered asset.
 
-Keep artifacts local. For each output, record its path, SHA-256, family, media, maker, methods and revisions, claims, checks and producer note. Tool allowances, team capacities and revision limits are maxima, not spending or editing quotas. Explicit requested output counts and required independent review remain binding.
+Keep artifacts local. For each output, record its path, SHA-256, family, media, maker, methods and revisions, claims, checks and producer note. If less than 60% of its tool allowance was needed, say why. Tool allowances are caps, not targets to spend for their own sake.
 
 The task lead checks whether the expert work fits the job before final review. Record who checked it, the result and the notes. Do not hide a failed check by renaming a file.
 
@@ -188,7 +172,7 @@ Give the judge only the job card, rubric, artifacts and producer notes. Exclude 
 
 Keep these weights for focused jobs, but judge range within the chosen family. Brand fit means shared tokens and voice; it does not mean one repeated format.
 
-Also check the job's acceptance criteria and the methods' own checks. Every score needs a quote from the artifact or its producer note. Critical criteria must all pass. The overall pass threshold is 75%. Mark each output PASS, REVISE or CUT. Full review may retain current work unchanged. A revision identifies the current artifact/hash, accepted criterion, observed source/check evidence and smallest bounded delta; preserve unaffected parts, rerun affected checks and compare with the saved incumbent before adoption.
+Also check the job's acceptance criteria and the methods' own checks. Every score needs a quote from the artifact or its producer note. Critical criteria must all pass. The overall pass threshold is 75%. Mark each output PASS, REVISE or CUT. A revision needs clear notes for its maker.
 
 Use no revision loop in quick, at most one in standard, and at most two in deep. If unresolved work remains, deliver honest flags, or mark the job blocked if a critical constraint prevents a usable delivery. Do not claim an unfinished output is ready.
 

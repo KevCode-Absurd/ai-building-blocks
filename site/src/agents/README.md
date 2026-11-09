@@ -1,6 +1,6 @@
 # Expert-agent preparation: first implementation slice
 
-This module lets a host prepare a private, task-scoped agent using supplied records. It includes a transport-neutral MCP tool adapter and an offline directory exporter. These pure helpers do not store anything themselves. The separate authenticated service composes private persistence into the existing personal/company MCP and REST router when enabled; see [STORAGE.md](STORAGE.md) for migration and rollout requirements.
+This module lets a host prepare a private, task-scoped agent using supplied records. It includes a transport-neutral MCP tool adapter and an offline directory exporter. It is not registered on the production MCP server and adds no runtime route or database migration.
 
 It reuses the existing specialist worker files and `abb-manifest/1` integrity manifest. The original worker and workflow-integrity helpers are dependencies, not alternative implementations.
 
@@ -74,10 +74,10 @@ Development cases are visible to the expert. Hidden publication tests must live 
 
 [CAPTURE.md](CAPTURE.md) describes the interview/work-review flow, evidence, inactive proposals, exact preview review and parent-linked candidate revisions. The pure functions live in `expert-agent-capture.mjs`; they do not persist data or run a model. Add `site/test/expert-agent-capture.test.mjs` to the check command above to cover this flow.
 
-## Authenticated private storage
+## Authenticated storage preview
 
-[STORAGE.md](STORAGE.md) describes private profile/agent/capture records, write consent, current membership, author ownership, optimistic concurrency, exact approved revisions, export and all-history deletion. These server modules add persistence around the pure preparation/capture code. The production router composes their tools additively when `EXPERT_AGENTS_ENABLED=true` and the database has migrations 0011 and 0012. Code readiness is separate from deployment; verify the actual enabled environment before claiming storage is available. The older isolated preview entry remains useful for separate-environment tests.
+[STORAGE.md](STORAGE.md) describes the separate authenticated preview entry, private profile/agent/capture records, write consent, current membership, author ownership, optimistic concurrency and atomic reviewed revisions. These server modules add persistence around the pure preparation/capture code. They are not registered by the production worker or enabled in production configuration.
 
 Run all `site/test/expert-agent-*.test.mjs` checks, the dedicated `site/tsconfig.expert-agent.json` TypeScript check, and `site/scripts/demo-expert-agent-capture.mjs` for the synthetic local walkthrough. The demo makes no model calls.
 
-Exact private JSON export and approved worker preparation are supported. Complete evidence-bearing method-source bundles, real host acceptance trials and durable practice reports remain separate work. Publication, marketplace hiring and commercial execution require their own evidence and integrations.
+Next work adds complete evidence-bearing private exports, remote preview and real host trials, durable practice reports and retention controls. Publication, marketplace hiring and commercial execution follow separate evidence and integration work.

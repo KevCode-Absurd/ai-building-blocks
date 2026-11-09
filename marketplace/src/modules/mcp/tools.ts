@@ -23,7 +23,7 @@ import { personaTeam, TEAM_SEAT_TYPES } from "../directory/team.ts";
 import { parseSeat, parseTeam, trimmedSeatPack, SeatInputError } from "./team-seats.ts";
 import type { SeatRequest } from "../directory/team.ts";
 import { CORE_FILES, PackUnavailable, readPackFile, readPackIndex, type PackIndex, type PackIndexFile } from "./pack-files.ts";
-import {executionPlan,checkExecutionDelivery,qualityMethodMarkdown,validHostTools,hostToolsSchema} from '../directory/execution.ts';
+import {executionPlan,checkExecutionDelivery,qualityMethodMarkdown} from '../directory/execution.ts';
 import {outputPolicyMarkdown} from '../runner/output-policy.ts';
 
 type Args = Record<string, unknown>;
@@ -286,12 +286,11 @@ export const TOOLS: ToolDef[] = [
   {
     name:'get_execution_plan',title:'Plan delivery in your AI',scope:'marketplace:read',costly:false,
     description:'Turn the original request into the shared task, context, exploration and artifact-verification contract. Retrieves AI Blocks entry points; executes no work and grants no action authority.',
-    inputSchema:schema({request:{type:'string',minLength:1,maxLength:4000},tier:{type:'string',enum:['quick','standard','deep']},host_tools:hostToolsSchema},['request']),annotations:read('Plan delivery in your AI'),
+    inputSchema:schema({request:{type:'string',minLength:1,maxLength:4000},tier:{type:'string',enum:['quick','standard','deep']}},['request']),annotations:read('Plan delivery in your AI'),
     async run(_c,args){
       const request=text(args,'request',{max:4000})!,tier=args.tier??'standard';
       if(tier!=='quick'&&tier!=='standard'&&tier!=='deep')return no('tier must be quick, standard or deep.');
-      if(args.host_tools!==undefined&&!validHostTools(args.host_tools))return no('host_tools must be a bounded actual tool inventory, without commands or spending authorization.');
-      const plan=executionPlan(request,tier,args.host_tools as Record<string,unknown>[]|undefined);
+      const plan=executionPlan(request,tier);
       return {text:`Scope the task against the original request and actual context. Follow the shared execution plan, retrieve the relevant methods from AI Blocks and run the specialists in your own AI. Checks remain host-reported; AI Blocks runs nothing.\n\n${JSON.stringify(plan)}`,data:plan};
     },
   },

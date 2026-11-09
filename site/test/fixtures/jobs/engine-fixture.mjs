@@ -2,7 +2,6 @@
 import fs from 'node:fs';
 import { createHash } from 'node:crypto';
 import {proposeTeam} from '../../../src/jobs/propose-team.mjs';
-import {sourceTraceForCatalogue,alternativeDecision} from './source-trace-fixture.mjs';
 const rows = JSON.parse(fs.readFileSync(new URL('./contracts.json', import.meta.url), 'utf8'));
 const document = schema => structuredClone(rows.find(row => row.schema === schema).valid[0].document);
 export function engineFixture({ tier = 'standard' } = {}) {
@@ -19,7 +18,7 @@ export function engineFixture({ tier = 'standard' } = {}) {
   const roles = team.seats.map(s => ({ id: s.role_id, name: s.role_id, summary: 'Write documents for business owners', department: 'operations', seat_suitability: s.seat_types, families: s.families, lenses: [s.lens], core: pins, extended: pins, resources: pins.map(p => ({ slug: p.slug, revision: p.revision_sha256 })), deliverables: ['documents'] }));
   if(tier==='deep')for(const id of ['role-9','role-10'])roles.push({...structuredClone(roles.find(r=>r.id==='role-2')),id,name:id});
   const approaches = { schema: 'ai-blocks-approach-index/1', jobs: { 'write-documents': { output_shape_default: 'many_artifacts', default_volume: 6, families: pins.map((p, n) => ({ id: `family-${n}`, name: `Document kind ${n}`, what_it_looks_like: 'A distinct synthetic test format', when_it_wins: 'For contract tests', modality: ['text'], tools_needed: [], items: [p.slug], pickers: [], checks: [], tool_guides: [], lead_roles: [], personas: [], lenses: [] })), lenses: [] } } };
-  const context = { roles: { roles }, items, manifest: { resources: Object.fromEntries(items.map(i => [i.slug, { revision_sha256: i.revision_sha256,instruction:{path:`${i.slug}/SKILL.md`,sha256:'a'.repeat(64),bytes:10},files:[],reference_validation:{status:'PASS'} }])) }, approaches, personas: [] };
+  const context = { roles: { roles }, items, manifest: { resources: Object.fromEntries(items.map(i => [i.slug, { revision_sha256: i.revision_sha256 }])) }, approaches, personas: [] };
   team.proposal_id=proposeTeam({task:card.request_verbatim,job:'write-documents',job_card:card,tier,host_capabilities:{parallel_agents:true,max_parallel:4,tools:['text'],models:['fixture-model']}},context).proposal_id;
   team.amendments=[{change:'Use the cross-schema test roster.',reason:'Exercise the same known seats across all fixture documents.'}];
   const council = document('ai-blocks-council/1');
@@ -43,8 +42,6 @@ export function engineFixture({ tier = 'standard' } = {}) {
   for (const [index, slot] of spread.slots.entries()) slot.concept = { audience: 'Business owners in the synthetic contract test', promise: promises[index], proof: proofs[index], composition: compositions[index], visual_world: 'A consistent synthetic test brand' };
   const production = document('ai-blocks-production/1');
   production.artifacts = spread.slots.map((slot, n) => ({ slot_id: slot.slot_id, kind: card.deliverables[0].kind, path: `deliverables/output-${n}.md`, sha256: 'a'.repeat(64), maker_seat: slot.maker_seat, family: slot.family, modality: slot.modality, items: structuredClone(slot.items), producer_note: 'A source-backed recommendation. All six outputs are delivered.', claims: [], checks: [{ id: 'useful', status: 'PASS' }], budget: { used: 0, allowance: 0 } }));
-  production.source_trace=sourceTraceForCatalogue({methods:pins,context,context_sources:card.context_sources,artifacts:production.artifacts});
-  council.alternative_decision=alternativeDecision({routes,card,council});
   const review = document('ai-blocks-review/1');
   review.items = production.artifacts.map(a => ({ ...structuredClone(review.items[0]), slot_id: a.slot_id }));
   review.critical_checks = [{ id: 'complete', passed: true, quote: 'All six outputs are delivered.' }];

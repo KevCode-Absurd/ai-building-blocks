@@ -1,7 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { buildNativeDeliveryToolkit } from './build-native-delivery-toolkit.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const source = path.join(root, 'src/jobs/pack/TEAM-MODE.md');
@@ -15,4 +14,3 @@ for (const required of ['general coordinator', 'task-specific lead', 'working gr
 fs.mkdirSync(path.dirname(output), { recursive: true });
 if (!fs.existsSync(output) || fs.readFileSync(output, 'utf8') !== content) fs.writeFileSync(output, content);
 console.log(JSON.stringify({ status: 'PASS', model_calls: 0, bytes, output: 'public/packs/team-mode.md', fresh_chat_validation: 'NOT_RUN' }));
-console.log(JSON.stringify(buildNativeDeliveryToolkit()));

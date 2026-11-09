@@ -4,10 +4,7 @@ const array = value => Array.isArray(value) ? value : [];
 const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
 const present = value => typeof value === 'string' && !!value.trim();
 const hash = value => /^[a-f0-9]{64}$/.test(value ?? '');
-const safePath = value => present(value) && value.length <= 240 && !/^(?:[a-z]+:|[/\\])|[\\\u0000-\u001f?#%]/i.test(value) && value.split('/').every(part=>part&&part!=='.'&&part!=='..'&&!/[. ]$/.test(part)&&!/[<>:"|*]/.test(part));
 const str = maxLength => ({type:'string',minLength:1,maxLength});
-const digest = {type:'string',pattern:'^[a-f0-9]{64}$'};
-const record = properties => ({type:'object',additionalProperties:false,required:Object.keys(properties),properties});
 export const WORK_CONTEXT_SCHEMA = {
   $schema:'https://json-schema.org/draft/2020-12/schema',
   $id:'https://useaiblocks.com/api/v1/schemas/ai-blocks-work-context/1.json',title:'ai-blocks-work-context/1',
@@ -17,11 +14,6 @@ export const WORK_CONTEXT_SCHEMA = {
     sources:{type:'array',maxItems:30,items:{type:'object',additionalProperties:false,required:['id','ref','sha256','observed_at','role','currentness','freshness_basis','observations','receipt'],properties:{id:str(120),ref:str(1000),sha256:{type:'string',pattern:'^[a-f0-9]{64}$'},observed_at:str(40),role:{enum:['BASELINE','REFERENCE']},currentness:{enum:['CURRENT','STALE','UNKNOWN']},freshness_basis:str(2000),observations:{type:'array',minItems:1,maxItems:20,items:str(2000)},receipt:str(240)}}},
     preserve:{type:'array',maxItems:50,items:{type:'object',additionalProperties:false,required:['rule','source_id'],properties:{rule:str(2000),source_id:str(120)}}},
     changes:{type:'array',maxItems:30,items:{type:'object',additionalProperties:false,required:['problem','source_ids','proposed_change','expected_effect','verification'],properties:{problem:str(2000),source_ids:{type:'array',minItems:1,maxItems:30,items:str(120)},proposed_change:str(2000),expected_effect:str(2000),verification:str(2000)}}},
-    retention:record({
-      reason:str(2000),request_review:record({observation:str(4000),receipt:str(240)}),
-      artifacts:{type:'array',minItems:1,maxItems:1000,items:record({path:str(240),sha256:digest,source_id:str(120)})},
-      criteria:{type:'array',minItems:1,maxItems:1000,items:record({id:str(120),artifact_path:str(240),artifact_sha256:digest,status:{enum:['PASS','FAIL','NOT_RUN']},observation:str(2000),receipt:str(240)})},
-    }),
     comparison:{type:'object',additionalProperties:false,required:['method','pass_condition','unmeasured'],properties:{method:str(2000),pass_condition:str(2000),unmeasured:{type:'array',maxItems:30,items:str(1000)},results:{type:'array',maxItems:1000,items:{type:'object',additionalProperties:false,required:['criterion','baseline_observation','result_observation','status','receipt','artifact_sha256'],properties:{criterion:str(2000),baseline_observation:str(2000),result_observation:str(2000),status:{enum:['PASS','FAIL','NOT_RUN']},receipt:str(240),artifact_sha256:{type:'string',pattern:'^[a-f0-9]{64}$'}}}}}},
   },
 };
@@ -43,13 +35,13 @@ export function inferWorkMode(request='') {
 export function workContextRequirements(request='') {
   const mode=inferWorkMode(request);
   return {mode_candidate:mode,required:mode!=='CREATE',
-    principle:'Observe the authoritative current state before changing it. Reuse the working system; propose the smallest justified change, or explicitly retain reviewed current native artifacts unchanged when accepted criteria are satisfied. Retention cannot bypass unmet required edits or checks. A static brand file or a selected method is not proof of current-state understanding.',
-    fields:['sources with dated observations, snapshot hashes, currentness and freshness basis','what must be preserved and its source','source-backed problem → proposed change → expected effect → verification, or explicit retention with zero changes, request-review evidence, CURRENT baseline mappings and exact artifact path/hashes','baseline-to-result comparison and what remains unmeasured; production retention also covers actual accepted criterion IDs and current artifacts with PASS observations'],
+    principle:'Observe the authoritative current state before changing it. Reuse the working system; propose the smallest justified change. A static brand file or a selected method is not proof of current-state understanding.',
+    fields:['sources with dated observations, snapshot hashes, currentness and freshness basis','what must be preserved and its source','problem → proposed change → expected effect → verification','baseline-to-result comparison and what remains unmeasured'],
     source_conflicts:'Resolve conflicts between memory, guides and current primary sources explicitly. Do not silently choose the convenient version.',
     assurance:'HOST_REPORTED_CONTEXT; verify referenced local bytes separately; semantic fitness and improvement require artifact inspection and outcome evidence.'};
 }
 
-export function validateWorkContext(context,{request='',required=inferWorkMode(request)!=='CREATE',production=false,artifacts=[],acceptance=[]}={}) {
+export function validateWorkContext(context,{request='',required=inferWorkMode(request)!=='CREATE',production=false,artifacts=[]}={}) {
   const errors=[],add=(path,message)=>errors.push({path,message});
   if (context===undefined) return {ok:!required,errors:required?[{path:'work_context',message:'Inspect the current work before changing or assessing it. Supply the baseline, preservation rules and comparison contract.'}]:[],assurance:'HOST_REPORTED_CONTEXT'};
   // This validator is also called outside the public JSON Schema validator.
@@ -84,43 +76,7 @@ export function validateWorkContext(context,{request='',required=inferWorkMode(r
   for (const rule of array(context.preserve)) if (!present(rule.rule)||!ids.has(rule.source_id)) add('work_context.preserve','Tie each preservation rule to an inspected source.');
   if (context.mode==='IMPROVE'&&!array(context.preserve).length) add('work_context.preserve','State what already works and must remain: behaviour, structure, identity, evidence or other task-specific invariants.');
   for (const change of array(context.changes)) if (!['problem','proposed_change','expected_effect','verification'].every(key=>present(change[key]))||!array(change.source_ids).length||change.source_ids.some(id=>!ids.has(id))||(context.mode==='IMPROVE'&&!change.source_ids.some(id=>sources.some(source=>source.id===id&&source.role==='BASELINE'&&source.currentness==='CURRENT')))) add('work_context.changes','Ground each proposed change in the inspected current baseline, with its expected effect and a repeatable verification.');
-  if (context.mode==='IMPROVE'&&!array(context.changes).length&&!context.retention) add('work_context.changes','Explain the diagnosed problem and smallest justified change, or provide the bounded current-artifact retention record.');
-  if (context.retention) {
-    const retention=context.retention, mappings=retention.artifacts, observations=retention.criteria;
-    if(context.mode!=='IMPROVE'||context.changes.length) add('work_context.retention','Retention is only for an IMPROVE review that keeps the inspected current artifacts unchanged; do not combine it with proposed changes.');
-    const mapped=new Map();
-    for(const [index,mapping] of mappings.entries()) {
-      const at=`work_context.retention.artifacts[${index}]`, source=sources.find(source=>source.id===mapping.source_id), key=mapping.path.toLowerCase();
-      if(!safePath(mapping.path)||mapped.has(key))add(at,'Use unique, safe artifact paths without case collisions.');
-      mapped.set(key,mapping);
-      if(!source||source.role!=='BASELINE'||source.currentness!=='CURRENT'||source.sha256!==mapping.sha256)add(at,'Map every unchanged artifact to an inspected CURRENT BASELINE source with exactly the same SHA-256.');
-    }
-    const accepted=array(acceptance), acceptedIds=new Set(accepted.map(criterion=>criterion?.id));
-    if(production&&(!accepted.length||accepted.some(criterion=>!present(criterion?.id))||acceptedIds.size!==accepted.length))add('work_context.retention.criteria','Production retention requires the actual complete accepted criteria with unique IDs.');
-    const seen=new Set(), coveredCriteria=new Set(), coveredArtifacts=new Set();
-    for(const [index,result] of observations.entries()) {
-      const at=`work_context.retention.criteria[${index}]`, mapping=mapped.get(result.artifact_path.toLowerCase()), identity=JSON.stringify([result.id,result.artifact_path.toLowerCase()]);
-      if(seen.has(identity))add(at,'Do not repeat a criterion/artifact observation.');
-      seen.add(identity);
-      if(!safePath(result.artifact_path)||!mapping||mapping.path!==result.artifact_path||mapping.sha256!==result.artifact_sha256)add(at,'Bind each criterion observation to an exact retained artifact path and SHA-256.');
-      if(accepted.length&&!acceptedIds.has(result.id))add(`${at}.id`,'Use an actual accepted criterion ID, not a new or unknown review criterion.');
-      if(production&&result.status!=='PASS')add(`${at}.status`,'A failed or unrun accepted criterion blocks production retention; do not use unchanged delivery to bypass a required edit.');
-      coveredCriteria.add(result.id);coveredArtifacts.add(result.artifact_path);
-    }
-    if(accepted.some(criterion=>!coveredCriteria.has(criterion?.id)))add('work_context.retention.criteria','Observe every accepted criterion before retaining the work.');
-    if(mappings.some(mapping=>!coveredArtifacts.has(mapping.path)))add('work_context.retention.criteria','Include accepted-criterion observations for every retained artifact.');
-    if(production) {
-      const outputs=array(artifacts), outputPaths=new Set();
-      for(const artifact of outputs) {
-        const key=typeof artifact?.path==='string'?artifact.path.toLowerCase():'';
-        if(!safePath(artifact?.path)||outputPaths.has(key))add('work_context.retention.artifacts','Actual production paths must be safe and unique without case collisions.');
-        outputPaths.add(key);
-        const mapping=mapped.get(key);
-        if(!mapping||mapping.path!==artifact?.path||mapping.sha256!==artifact?.sha256)add('work_context.retention.artifacts','The retained and actual production artifact path/SHA-256 sets must be exactly equal; changed or extra files cannot be retained.');
-      }
-      if(outputs.length!==mappings.length||mappings.some(mapping=>!outputs.some(artifact=>artifact?.path===mapping.path&&artifact?.sha256===mapping.sha256)))add('work_context.retention.artifacts','Cover the exact complete actual artifact set, including every copied asset; a subset cannot establish unchanged delivery.');
-    }
-  }
+  if (context.mode==='IMPROVE'&&!array(context.changes).length) add('work_context.changes','Explain the diagnosed problem and smallest justified change before rebuilding anything.');
   if (!present(context.comparison?.method)||!present(context.comparison?.pass_condition)||!Array.isArray(context.comparison?.unmeasured)) add('work_context.comparison','Specify the baseline-to-result comparison and pass condition; keep unmeasured business outcomes explicit.');
   if(production&&context.mode!=='CREATE') {
     const results=array(context.comparison.results), outputs=array(artifacts);

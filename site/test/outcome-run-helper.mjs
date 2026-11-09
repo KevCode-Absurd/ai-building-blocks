@@ -2,7 +2,6 @@
 import { localResolver } from '../src/outcomes/evals/local-catalogue.mjs';
 import { callOutcomeTool } from '../src/outcomes/outcome-mcp.mjs';
 import example from '../src/outcomes/examples/rising-cpa.mjs';
-import {sourceTrace,syntheticNativeTools} from './fixtures/jobs/source-trace-fixture.mjs';
 
 export const TOOL = { resolve: localResolver(), today: '2026-11-02' };
 export const call = (name, input, opts = TOOL) => callOutcomeTool(name, input, opts);
@@ -10,9 +9,7 @@ export const step = (r, event) => call('advance_outcome', { engagement: r.engage
 export const rec = (r, name, field, value) => call(name, { engagement: r.engagement, engagement_sha256: r.engagement_sha256, [field]: value });
 export async function complete(r, stageId) {
   const def = r.engagement.plan.stages.find(s => s.id === stageId);
-  const outputs=def.outputs.map(o=>({id:o.id,path:o.path,sha256:'a'.repeat(64)}));
-  const requirements=def.uses.length?(await TOOL.resolve({roles:[],items:def.uses,source_inventory:true})).source_requirements:null;
-  return step(r, { type: 'complete', stage_id: stageId, outputs,native_tools:syntheticNativeTools(),...(requirements?{source_trace:sourceTrace({requirements,artifacts:outputs})}:{}),checks: def.checks.map(c => ({ id: c.id, result: 'PASS' })) });
+  return step(r, { type: 'complete', stage_id: stageId, outputs: def.outputs.map(o => ({ id: o.id })), checks: def.checks.map(c => ({ id: c.id, result: 'PASS' })) });
 }
 export const REGISTER = { action: 'register', id: 'x1', hypothesis_id: 'h-underserved-segment', card_id: 'r2', change: 'Three new concepts aimed at women 45-54', metric: 'Purchase CPA', baseline: 1450, target: 1100, window: { start: '2026-11-10', end: '2026-11-24' }, min_volume: 50, guardrails: ['Purchases per week stay above 80'] };
 

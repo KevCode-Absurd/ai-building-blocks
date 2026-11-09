@@ -79,15 +79,8 @@ async function readVerifiedFile(root,relative,maxBytes,{collect=false,onRead=()=
     const after=await handle.stat();
     const final=await inspectPath(root,relative);
     if(bytes!==opened.size||after.size!==opened.size||after.mtimeMs!==opened.mtimeMs||after.ctimeMs!==opened.ctimeMs||final.info.dev!==opened.dev||final.info.ino!==opened.ino||final.real!==before.real)throw Object.assign(Error('The evidence file changed during verification.'),{evidenceCode:'FILE_CHANGED'});
-    return {bytes,sha256:hasher.digest('hex'),...(collect?{content:Buffer.concat(chunks).toString('utf8'),data:Buffer.concat(chunks)}:{})};
+    return {bytes,sha256:hasher.digest('hex'),...(collect?{content:Buffer.concat(chunks).toString('utf8')}:{})};
   } finally {await handle.close();}
-}
-
-/** Read explicitly selected evidence bytes using the same bounded, no-link
- * checks as the verifier. Callers must not print private content by default. */
-export async function readLocalEvidenceBytes({root,file,max_bytes=FILE_EVIDENCE_LIMITS.max_file_bytes}={}) {
-  if(!Number.isSafeInteger(max_bytes)||max_bytes<1||max_bytes>FILE_EVIDENCE_LIMITS.max_file_bytes)throw Error('Invalid evidence byte limit.');
-  return readVerifiedFile(await rootDirectory(root),file,max_bytes,{collect:true});
 }
 
 function manifestRows(manifest,limits) {

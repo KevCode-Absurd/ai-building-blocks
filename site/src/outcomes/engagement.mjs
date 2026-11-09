@@ -4,9 +4,7 @@ import { canonicalTeamJSON } from '../teams/team-contract.mjs';
 import { STAGE_KINDS, fail, text, validateBrief, validatePlan, validateResearch, planMarkdown, researchMarkdown, hypothesesMarkdown } from './plan-contract.mjs';
 import { METHOD, methodMarkdown } from './method.mjs';
 import { nearest, checkSchema } from './schema-check.mjs';
-import { buildExecutionPlan, EXECUTION_QUALITY_POLICY, supportedExecutionQualityPolicy, validateProductionQuality } from '../jobs/execution-quality.mjs';
-import {validateSourceTrace} from '../jobs/source-trace.mjs';
-import {preflightNativeExecution} from '../jobs/native-execution.mjs';
+import { buildExecutionPlan, EXECUTION_QUALITY_POLICY, validateProductionQuality } from '../jobs/execution-quality.mjs';
 import {LANDING_PAGE_DELIVERY_SCHEMA} from '../jobs/landing-page-delivery.mjs';
 import {VISUAL_DELIVERY_SCHEMA, validateVisualDelivery} from '../jobs/visual-delivery.mjs';
 import {validateArtifactManifest} from '../jobs/artifact-manifest.mjs';
@@ -41,7 +39,7 @@ export function checkEngagement(input) {
   const e = object(input, 'Engagement');
   keys(e, ['schema', 'id', 'request', 'started', 'phase', 'round', 'autonomy', 'brief', 'research', 'plan', 'plan_version', 'plan_check', 'plan_changes', 'data', 'stages', 'records', 'history', 'quality_policy'], 'Engagement');
   if (![ENGAGEMENT_SCHEMA, LEGACY_ENGAGEMENT_SCHEMA].includes(e.schema)) fail('Unknown engagement schema.');
-  if (e.schema === ENGAGEMENT_SCHEMA && !supportedExecutionQualityPolicy(e.quality_policy)) fail('The current outcome engagement requires a complete supported execution quality policy. Start a new engagement rather than removing quality gates.');
+  if (e.schema === ENGAGEMENT_SCHEMA && !same(e.quality_policy, EXECUTION_QUALITY_POLICY)) fail('The current outcome engagement requires its unchanged execution quality policy. Start a new engagement rather than removing quality gates.');
   if (encoder.encode(JSON.stringify(e)).length > 200000) fail('The engagement exceeds 200 KB. Keep evidence in files and reference their paths.');
   refuseSecrets(e);
   if (!ID.test(e.id ?? '')) fail('Engagement id is invalid.');
@@ -141,14 +139,10 @@ export function stageDeliveryRequirements(e, def) {
 
 function checkStageDelivery(e, def, record) {
   const requirement = stageDeliveryRequirements(e, def);
-  if(record.source_trace||e.quality_policy?.source_trace&&def.uses.length){
-    const result=validateSourceTrace(record.source_trace,{methods:def.uses,artifacts:record.production_artifacts??record.outputs,production:true,required:e.quality_policy?.source_trace===true&&def.uses.length>0});
-    if(!result.ok)fail(`Stage ${def.id} source trace: ${result.errors.map(error=>`${error.path}: ${error.message}`).join('; ')}`);
-  }
   if(e.schema===ENGAGEMENT_SCHEMA&&(requirement.work_context_required||record.work_context!==undefined)){
     const issues=checkSchema(WORK_CONTEXT_SCHEMA,record.work_context);
     if(issues.length)fail(`Stage ${def.id} work_context: ${issues.map(error=>`${error.path}: ${error.message}`).join('; ')}`);
-    const work=validateWorkContext(record.work_context,{request:e.request,required:requirement.work_context_required===true,production:true,artifacts:record.production_artifacts,acceptance:(e.brief?.done??[]).map((criterion,index)=>({id:'done-'+index,criterion}))});
+    const work=validateWorkContext(record.work_context,{request:e.request,required:requirement.work_context_required===true,production:true,artifacts:record.production_artifacts});
     if(!work.ok)fail(`Stage ${def.id} current-work comparison: ${work.errors.map(error=>`${error.path}: ${error.message}`).join('; ')}`);
   }
   const counted=e.schema===ENGAGEMENT_SCHEMA&&def.outputs.some(output=>output.count!==undefined);
@@ -197,7 +191,7 @@ function installPlan(e, research, plan, check) {
 /** The fields each event type takes besides type and at. The advance_outcome input schema is built from this. */
 export const EVENT_FIELDS = {
   brief: ['brief'], plan: ['research', 'plan'], approve_plan: ['decision', 'by', 'note'],
-  data: ['data_id', 'status', 'note'], start: ['stage_id','native_tools'], complete: ['stage_id', 'outputs', 'checks', 'summary', 'production_artifacts', 'landing_page_delivery', 'visual_delivery','work_context','source_trace','native_tools'], approve: ['stage_id', 'decision', 'by', 'note'],
+  data: ['data_id', 'status', 'note'], start: ['stage_id'], complete: ['stage_id', 'outputs', 'checks', 'summary', 'production_artifacts', 'landing_page_delivery', 'visual_delivery','work_context'], approve: ['stage_id', 'decision', 'by', 'note'],
   skip: ['stage_id', 'reason'], block: ['stage_id', 'reason'], reopen: ['stage_id'], autonomy: ['level', 'by', 'note'], next_round: ['note'],
 };
 const PHASE_OF = { brief: PHASES, plan: ['RESEARCH', 'PLAN_REVIEW', 'RUN'], approve_plan: ['PLAN_REVIEW'], autonomy: PHASES };
@@ -234,16 +228,7 @@ export function advanceEngagement(input, event, { planCheck } = {}) {
       if (!['AVAILABLE', 'MISSING'].includes(event.status)) fail('Data status must be AVAILABLE or MISSING.');
       d.status = event.status; const n = optionalText(event.note, 'Data note', 1000); if (n) d.note = n; else delete d.note; break;
     }
-    case 'start': {
-      const [s,def] = stage(); need(s, ['READY'], 'start');
-      if(e.quality_policy?.version>=2&&def.kind==='production'){
-        const requirement=stageDeliveryRequirements(e,def);
-        const preflight=preflightNativeExecution({plan:{landing_pages:{requested:requirement.required,delivery_mode:requirement.delivery_mode},images:{required:requirement.image_required}},tools:event.native_tools??[]});
-        if(preflight.status==='BLOCKED')fail(`Stage ${s.id} native preflight: ${preflight.errors.map(error=>error.message).join('; ')}`);
-        s.native_tools=clone(event.native_tools??[]);s.native_preflight=preflight;
-      }
-      s.state = 'IN_PROGRESS'; break;
-    }
+    case 'start': { const [s] = stage(); need(s, ['READY'], 'start'); s.state = 'IN_PROGRESS'; break; }
     case 'complete': {
       const [s, def] = stage(); need(s, ['READY', 'IN_PROGRESS'], 'complete');
       if (def.kind === 'intake') fail('Intake completes itself once the brief is accepted.');
@@ -266,19 +251,12 @@ export function advanceEngagement(input, event, { planCheck } = {}) {
       if (def.kind === 'decision' && !e.records.decisions.some(d => d.stage_id === s.id && d.round === e.round)) fail('Record the owner\'s decision with record_outcome_decision first.');
       if (def.kind === 'execution' && !Object.values(e.records.experiments).some(x => x.round === e.round)) fail('Register at least one experiment with record_outcome_experiment before launch is complete.');
       if (def.kind === 'learning' && Object.values(e.records.experiments).some(x => x.round === e.round && x.state !== 'CLOSED')) fail('Close every experiment from this round first.');
-      if(e.quality_policy?.version>=2&&def.kind==='production'){
-        const requirement=stageDeliveryRequirements(e,def);
-        const preflight=preflightNativeExecution({plan:{landing_pages:{requested:requirement.required,delivery_mode:requirement.delivery_mode},images:{required:requirement.image_required}},tools:event.native_tools??s.native_tools??[]});
-        if(preflight.status==='BLOCKED')fail(`Stage ${s.id} native preflight: ${preflight.errors.map(error=>error.message).join('; ')}`);
-        s.native_tools=clone(event.native_tools??s.native_tools??[]);s.native_preflight=preflight;
-      }
-      checkStageDelivery(e, def, {outputs, production_artifacts: event.production_artifacts, landing_page_delivery: event.landing_page_delivery,visual_delivery:event.visual_delivery,work_context:event.work_context,source_trace:event.source_trace});
+      checkStageDelivery(e, def, {outputs, production_artifacts: event.production_artifacts, landing_page_delivery: event.landing_page_delivery,visual_delivery:event.visual_delivery,work_context:event.work_context});
       s.outputs = outputs; s.checks = checks; note = optionalText(event.summary, 'Summary', 2000);
       if (event.production_artifacts !== undefined) s.production_artifacts = clone(event.production_artifacts);
       if (event.landing_page_delivery !== undefined) s.landing_page_delivery = clone(event.landing_page_delivery);
       if (event.visual_delivery !== undefined) s.visual_delivery = clone(event.visual_delivery);
       if (event.work_context !== undefined) s.work_context = clone(event.work_context);
-      if (event.source_trace !== undefined) s.source_trace = clone(event.source_trace);
       if (note) s.summary = note;
       s.state = gateFor(def, e) === 'none' ? 'DONE' : 'AWAITING_APPROVAL'; break;
     }
@@ -333,8 +311,6 @@ export function stageInstruction(e, def) {
     steps.length ? `This carries out the expert steps: ${steps.map(x => `${x.name} (${x.why})`).join('; ')}. RESEARCH.md has the sources.` : '',
     `Read first: BRIEF.md${inputs.length ? `, ${inputs.join(', ')}` : ''}.`, load,
     def.uses.length ? `Retrieve these items before using them, with get_item: ${def.uses.join(', ')}. Use only what this stage needs.` : '',
-    e.quality_policy?.source_trace&&def.uses.length?'Before completion include source_trace (ai-blocks-source-trace/1): selected full AI Blocks instruction/supporting-resource byte hashes, revisions, complete retrieval receipts and why each method fits; separate INSPECTED context from INFERRED/MISSING, and selected/read methods from actual EXECUTED work with current output hashes. The live API checks these against the catalogue inventory; a summary or all_read flag is insufficient.':'',
-    e.quality_policy?.version>=2&&def.kind==='production'?'Before starting native production, pass native_tools with actual callable tool IDs, capabilities, available:true, billing:LOCAL|INCLUDED|PAID, checked_at within one hour and availability_receipt. The platform permits no paid tool by default. Refresh these reports at completion if they expire. Missing capabilities block this branch; a renderer name or skill is not an executor.':'',
     data.length ? `Data: ${data.map(d => `${d.name} (${d.status})`).join('; ')}.` : '', ...(s.limits ?? []).map(l => `Limit: ${l}`),
     caps.length ? `Access: ${caps.map(c => `${c.name} (${c.access} via ${c.via}${c.access === 'live' ? '; only with the owner\'s approval of each action' : ''}${c.via === 'api_key' ? '; ask the owner for the key now, keep it in the environment or secret store, never in files' : ''})`).join('; ')}.` : '',
     def.kind === 'diagnosis' ? 'Test every hypothesis in hypotheses.md and add any the data suggests.' : '',
@@ -343,9 +319,9 @@ export function stageInstruction(e, def) {
     `Write: ${def.outputs.map(o => `${o.path} (${o.name})`).join('; ')}.`,
     deliveryRequirements.required ? 'Launch readiness: inspect and reuse the existing site, deliver editable source, and test the real primary action, links/assets, phone and desktop layouts, keyboard access and brand content. Include production_artifacts with output IDs, paths, current SHA-256 and modality interactive, plus landing_page_delivery with current-source receipts. A PNG or a high review score cannot replace these checks. This is a host-reported readiness record, not server verification or deployment authority.' : '',
     deliveryRequirements.image_required ? 'Image delivery: include production_artifacts matching the rendered image output IDs, paths and SHA-256 values, and visual_delivery with renderer receipt, reviewer_id separate from every maker_id, source references and current-hash checks for brand, product_fidelity, claims_copy and format. For a varied batch, compare every image to another real image and record substantive observed differences. All review statements remain host reports, not proof of user acceptance.' : '',
-    deliveryRequirements.work_context_required ? 'Existing-work delivery: read the authoritative current baseline and supply work_context (GET /api/v1/schemas/ai-blocks-work-context/1.json), with dated source hashes and freshness basis, preservation rules, and source-backed changes OR explicit retention with changes:[] for reviewed unchanged current native artifacts. Retention needs request-review evidence, CURRENT baseline-to-artifact mappings with identical hashes, the exact complete actual artifact path/hash set and PASS observations covering these actual accepted criteria: '+JSON.stringify((e.brief?.done??[]).map((criterion,index)=>({id:'done-'+index,criterion})))+'. Supply observed comparison.results covering every current production_artifact hash in either case. Unmet requested edits, failed/unrun required checks, unknown or stale baselines, planned checks and a high score cannot establish a passing improvement or retention. Keep unmeasured outcomes explicit. This remains host-reported evidence, not independent verification or owner approval.' : '',
+    deliveryRequirements.work_context_required ? 'Existing-work delivery: read the authoritative current baseline and supply work_context (GET /api/v1/schemas/ai-blocks-work-context/1.json), with dated source hashes and freshness basis, preservation rules, source-backed change hypotheses and observed comparison.results covering every current production_artifact hash. Unknown or stale baselines, planned checks and a high score cannot establish an improvement. Keep unmeasured outcomes explicit. This remains host-reported evidence, not independent verification.' : '',
     `Check before reporting: ${def.checks.map(c => `${c.id}: ${c.name}${c.required ? '' : ' (optional)'}`).join('; ')}.`,
-    def.reviewers.length ? `Then have ${def.reviewers.map(r => `"${r}"`).join(', ')} review the actual output against accepted criteria (prepare_specialist). Make evidence-backed targeted repairs for material findings and rerun affected checks; no material issue found is a valid review outcome, not a reason to rewrite passing work.` : '',
+    def.reviewers.length ? `Then have ${def.reviewers.map(r => `"${r}"`).join(', ')} review the output (prepare_specialist) and fix what they find.` : '',
     `Owner-reported numbers stay reports until checked. Don't invent data, results or approvals. When done, call advance_outcome with {"type":"complete","stage_id":"${def.id}","outputs":[...],"checks":[...]}.`,
   ].filter(Boolean).join('\n');
   return { stage_id: def.id, kind: def.kind, name: def.name, state: s.state, owner: def.owner, support: def.support, reviewers: def.reviewers, uses: def.uses, inputs, data, capabilities: caps, outputs: def.outputs, checks: def.checks, delivery_requirements: deliveryRequirements, gate: gateFor(def, e), ...(jobHandoff ? {job_handoff:jobHandoff} : {}), ...(def.optional_when ? { optional_when: def.optional_when } : {}), ...(s.limits ? { limits: s.limits } : {}), prompt };
@@ -390,7 +366,7 @@ export async function describeEngagement(e, { initial = false } = {}) {
   const fullExecutionPlan = buildExecutionPlan({ request: e.request, card: e.brief ? { job_to_be_done: e.brief.outcome, acceptance: (e.brief.done ?? []).map((criterion, index) => ({ id: 'done-' + index, criterion, threshold: 'Must pass', critical: true })) } : undefined });
   const files = { 'engagement.json': JSON.stringify(e, null, 2) + '\n', 'ENGAGEMENT.md': statusMarkdown(e), ...(e.brief ? { 'BRIEF.md': briefMarkdown(e) } : {}) };
   if (initial) Object.assign(files, { 'METHOD.md': methodMarkdown(), 'decisions.jsonl': '', 'experiments.jsonl': '', 'LEARNINGS.md': '# Learnings\n\nOne line per learning: date, scope (engagement, business or platform), the rule, and the decision or experiment it came from.\n' });
-  const execution_plan = { schema: fullExecutionPlan.schema, task_type: fullExecutionPlan.task_type, landing_pages: {requested:fullExecutionPlan.landing_pages.requested, delivery_mode:fullExecutionPlan.landing_pages.delivery_mode, existing_site_required:fullExecutionPlan.landing_pages.existing_site_required}, scope_required: !e.brief, file: 'EXECUTION-PLAN.json' };
+  const execution_plan = { schema: fullExecutionPlan.schema, task_type: fullExecutionPlan.task_type, landing_pages: {requested:fullExecutionPlan.landing_pages.requested, delivery_mode:fullExecutionPlan.landing_pages.delivery_mode, existing_site_required:fullExecutionPlan.landing_pages.existing_site_required}, scope_required: !e.brief, file: 'EXECUTION-PLAN.json', assurance: 'HOST_REPORTED_NOT_INDEPENDENTLY_VERIFIED' };
   // Progressive disclosure: the full role/context contract travels once scope is known.
   files['EXECUTION-PLAN.json'] = JSON.stringify(e.brief ? fullExecutionPlan : execution_plan, null, 2) + '\n';
   const base = { schema: 'ai-blocks-outcome-step/1', folder: `outcomes/${e.id}/`, execution_plan, engagement: e, engagement_sha256: await engagementDigest(e), review: { host_reported: true, independently_verified: false, grants_execution_authority: false, quality_assurance: e.schema === ENGAGEMENT_SCHEMA ? 'HOST_REPORTED_QUALITY_GATES' : 'LEGACY_STRUCTURAL_ONLY' } };
@@ -399,7 +375,6 @@ export async function describeEngagement(e, { initial = false } = {}) {
   if (e.phase === 'RESEARCH') return { ...base, state: 'NEEDS_PLAN', next: `${e.plan_changes ? `The owner asked for changes to plan v${e.plan_version}: ${e.plan_changes}. ` : ''}Research relevant facts and constraints, choose task methods from the AI Blocks catalogue, write RESEARCH.md, and compose the plan from our catalogue, then call advance_outcome with {"type":"plan","research":{...},"plan":{...}}. METHOD.md has the rules.`, research_protocol: METHOD.research_protocol, composition_rules: METHOD.composition_rules, files };
   Object.assign(files, { 'PLAN.md': planMarkdown(e.brief, e.research, p, { version: e.plan_version, warnings: e.plan_check.warnings }), 'RESEARCH.md': researchMarkdown(e.research), 'hypotheses.md': hypothesesMarkdown(p), 'DATA-REQUESTS.md': dataRequestsMarkdown(e) });
   const warnings = [...e.plan_check.warnings, ...(e.plan_check.catalogue_checked ? [] : ['Specialists and items were not checked against the live catalogue on this call.'])];
-  if(e.quality_policy&&e.quality_policy.version<EXECUTION_QUALITY_POLICY.version)warnings.push('This legacy policy predates source-use traces and native tool preflight. Start a new engagement for those gates.');
   if (e.phase === 'PLAN_REVIEW') return { ...base, state: 'AWAITING_PLAN_APPROVAL', next: 'Show the owner PLAN.md and anything under "Worth knowing". Report their actual answer with {"type":"approve_plan","by":"owner","decision":"APPROVED"} or CHANGES_REQUESTED with their note.', warnings, files };
 
   const by = s => e.stages.filter(x => x.state === s).map(x => p.stages.find(d => d.id === x.id));

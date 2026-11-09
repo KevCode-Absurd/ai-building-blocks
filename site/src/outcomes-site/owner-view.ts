@@ -2,7 +2,6 @@
 // and where a job stands from its engagement.json. Pure functions over the orchestrator's own code (src/outcomes),
 // shared by the pages, the prerendered HTML and the tests. Nothing here calls a model, the network or storage.
 import { advanceEngagement, checkEngagement, describeEngagement, gateFor, startEngagement } from "../outcomes/engagement.mjs";
-import {LEGACY_EXECUTION_QUALITY_POLICY} from '../jobs/execution-quality.mjs';
 import { planWarnings, validateBrief, validatePlan, validateResearch } from "../outcomes/plan-contract.mjs";
 import example from "../outcomes/examples/rising-cpa.mjs";
 
@@ -186,9 +185,7 @@ const SAMPLE_DAY = "2026-11-02";
 /** The worked example as a job part way through: the plan approved, the checks and diagnosis done, the owner's choice next.
  * Built by the orchestrator's own moves, so it is a real engagement.json. Stage results are made up for the sample. */
 export function sampleEngagement() {
-  // This illustrative November 2 history has no real tool/read receipts. Keep
-  // its original guarantees rather than inventing evidence for current gates.
-  let e = {...startEngagement({ request: example.request, started: SAMPLE_DAY, id: "20261102-ad-costs-sample" }),quality_policy:{...LEGACY_EXECUTION_QUALITY_POLICY}};
+  let e = startEngagement({ request: example.request, started: SAMPLE_DAY, id: "20261102-ad-costs-sample" });
   const brief = validateBrief(example.brief), research = validateResearch(example.research) as Research, plan = validatePlan(example.plan, { research, brief }) as Plan;
   const move = (event: Record<string, unknown>, opts?: Record<string, unknown>) => { e = advanceEngagement(e, event, opts); };
   move({ type: "brief", brief: example.brief, at: SAMPLE_DAY });

@@ -11,7 +11,6 @@ test('actual fresh image production accepts one complete inspection format and r
  for(const family of f.context.approaches.jobs['write-documents'].families)family.modality=['image'];
  f.card.dials.modalities.value=['image'];for(const slot of f.spread.slots)slot.modality='image';
  f.production.artifacts.forEach((artifact,index)=>{artifact.modality='image';artifact.path=`ads/image-${index}.png`;artifact.sha256=String(index+1).repeat(64);});
- for(const method of f.production.source_trace.methods)method.execution.artifacts=f.production.artifacts.map(artifact=>({path:artifact.path,sha256:artifact.sha256}));
  f.production.visual_delivery=visualDelivery(f.production.artifacts);
  let r=await startJob(f.input,f.context);for(const event of f.events.slice(0,4))r=await send(r,event,f.context);
  const missing=structuredClone(f.production);delete missing.visual_delivery;await assert.rejects(()=>send(r,{event:'produce',document:missing},f.context),/visual_review|visual_delivery/);

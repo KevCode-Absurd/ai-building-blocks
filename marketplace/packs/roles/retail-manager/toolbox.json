@@ -1,0 +1,282 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "retail-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "till-readout",
+      "task": "Read a till or POS export and write a sales readout",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/till-report-readout", "use": "build", "when": "When the owner sends a till export and wants best lines, dead hours and basket size on one page" },
+        { "ref": "library:data-analyst", "type": "skill", "use": "build", "when": "When the owner asks a question the standard readout does not answer, such as a trend or a link" },
+        { "ref": "library:growth-lever-audit", "type": "skill", "use": "brief", "when": "When the numbers are in, to size whether more buyers, bigger baskets or more repeat visits pays most" },
+        { "ref": "library:sales-drop-cause-finder", "type": "prompt", "use": "check", "when": "When sales fell against last month, to find which number moved and what to check next" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before the readout goes to the owner, to catch broken formulas and totals that do not add up" },
+        { "ref": "library:sam-walton", "type": "mind", "use": "think", "when": "When the report says what sold but nobody has asked staff and customers why" }
+      ]
+    },
+    {
+      "id": "weekly-trading-review",
+      "task": "Run the Monday trading review",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/weekly-trading-review", "use": "build", "when": "Every Monday, before deliveries and the rota are fixed, to turn last week into this week's actions" },
+        { "ref": "kit:skills/till-report-readout", "use": "build", "when": "When the review needs last week's sales, margin and busy hours from the till export" },
+        { "ref": "library:weekly-stock-and-cash-reorder-watcher", "type": "agent", "use": "build", "when": "When the review must also say what to reorder and whether the cash is there to pay for it" },
+        { "ref": "library:store-pl-builder", "type": "skill", "use": "check", "when": "Once a month, to put sales and costs in four buckets and see which line to fix first" }
+      ]
+    },
+    {
+      "id": "promo-calendar",
+      "task": "Build a 12-month promotions calendar",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/promotion-calendar-and-signs", "use": "build", "when": "When the shop needs a year of promotions tied to its busy and quiet weeks, each with one goal" },
+        { "ref": "library:promotion-and-stock-planner", "type": "skill", "use": "build", "when": "When past deals exist, to size the lift of each promotion and the extra stock to hold" },
+        { "ref": "library:promotion-idea-planner", "type": "skill", "use": "explore", "when": "When every idea is a price cut, to get gift, bundle and pre-order promotions to compare" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the owner must choose between a few big events and a steady monthly rhythm" },
+        { "ref": "library:agency-support-legal-compliance-checker", "type": "agent", "use": "check", "when": "When a promotion is a prize draw, a competition or a claim that local rules may limit" }
+      ]
+    },
+    {
+      "id": "plan-one-sale",
+      "task": "Plan one sale or offer and check the margin",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:discount-and-price-change-checker", "type": "agent", "use": "build", "when": "Before a sale, to find the deepest discount the margin allows and the wording to use" },
+        { "ref": "library:bundle-and-quantity-break-builder", "type": "skill", "use": "explore", "when": "When a multi-buy or bundle might lift the basket more than a straight price cut" },
+        { "ref": "library:honest-urgency-planner", "type": "skill", "use": "build", "when": "When the offer needs a real end date or stock limit and the words to state it truthfully" },
+        { "ref": "library:discount-sanity-checker", "type": "prompt", "use": "check", "when": "When several offers run at once, to catch discounts that clash or confuse at the till" },
+        { "ref": "library:alex-hormozi", "type": "mind", "use": "think", "when": "When the only lever anyone suggests is a bigger discount" }
+      ]
+    },
+    {
+      "id": "sign-copy",
+      "task": "Write window and in-store sign copy",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/promotion-calendar-and-signs", "use": "build", "when": "When a promotion is agreed and you need the window line, shelf cards and till sign for it" },
+        { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When the window line is flat, to get five short headlines that each take a different angle" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "When the owner wants to see three different looks for the sign set at real size before printing" },
+        { "ref": "library:sale-price-wording-picker", "type": "prompt", "use": "build", "when": "When a sign shows a full price and a sale price and you want the clearest honest form" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a line could hang in any shop, to test it and get a true rewrite a passer-by can picture" },
+        { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When the sign is laid out, to see what the eye hits first from the pavement and what to cut" },
+        { "ref": "library:canva", "type": "tool", "use": "build", "when": "When the owner will print the signs themselves and needs a template they can reuse" }
+      ]
+    },
+    {
+      "id": "price-claim-check",
+      "task": "Check price claims, sale signs and returns notices",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/price-and-returns-sign-check", "use": "check", "when": "Before printing a was/now price, a last-few sign, a green claim or a returns notice" },
+        { "ref": "library:honest-persuasion-editor", "type": "skill", "use": "check", "when": "When a sign leans on scarcity or a deadline, to see which claims are true and rewrite the rest" },
+        { "ref": "library:agency-support-legal-compliance-checker", "type": "agent", "use": "check", "when": "When you are unsure which consumer rules apply where the shop trades, to list them and the gaps" },
+        { "ref": "library:returns-policy-designer", "type": "skill", "use": "build", "when": "When the returns notice is unclear because the shop has never set its refund rules" }
+      ]
+    },
+    {
+      "id": "in-store-event",
+      "task": "Plan an in-store event and its run sheet",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/in-store-event-plan", "use": "build", "when": "When the shop wants a late opening, workshop, signing or tasting to fill a quiet day" },
+        { "ref": "library:traction-offline-events", "type": "skill", "use": "brief", "when": "Before committing, to set the event up as a small test with costs, measures and a decision rule" },
+        { "ref": "library:taster-event-planner", "type": "skill", "use": "explore", "when": "When the event is a tasting, to plan the day, a taster card and how to read the result" },
+        { "ref": "library:event-ticket-pricer", "type": "skill", "use": "build", "when": "When the workshop or class is ticketed and needs a price and early-bird terms" },
+        { "ref": "library:make-a-readable-event-poster", "type": "workflow", "use": "build", "when": "When the event needs a poster for the window with checked text and an export checklist" },
+        { "ref": "library:plan-an-event-follow-up-that-earns-a-reply", "type": "workflow", "use": "build", "when": "After the event, to follow up with people who came and keep each promise made on the night" }
+      ]
+    },
+    {
+      "id": "staff-selling",
+      "task": "Write a staff selling guide and five-minute briefing",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/staff-selling-briefing", "use": "build", "when": "When staff wait at the till while people browse, add-on sales are low or a new person starts" },
+        { "ref": "library:sales-opener-trio-writer", "type": "prompt", "use": "explore", "when": "When staff freeze on the first line, to get a ten-word opener, two spares and a way to test them" },
+        { "ref": "library:objection-answer-sheet-writer", "type": "skill", "use": "build", "when": "When customers raise the same doubts about price or quality and staff need an answer for each" },
+        { "ref": "library:estee-lauder", "type": "mind", "use": "think", "when": "When staff describe products instead of letting the customer hold, try or taste them" }
+      ]
+    },
+    {
+      "id": "weekly-rota",
+      "task": "Build next week's rota from the busy hours",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/weekly-rota-from-busy-hours", "use": "build", "when": "When you need next week's rota with cover following the busy hours and breaks checked" },
+        { "ref": "library:shift-schedule-builder", "type": "skill", "use": "explore", "when": "When you want two or three rota options, each with a cover and wage cost check, before you publish" },
+        { "ref": "library:shift-schedule-planner", "type": "skill", "use": "build", "when": "When weekends and late nights fall on the same people and you need a fair rotation and swap rule" },
+        { "ref": "library:pay-and-hours-rules-answerer", "type": "skill", "use": "check", "when": "When a shift pattern raises a break, overtime or rest question for the place you trade" }
+      ]
+    },
+    {
+      "id": "stock-count",
+      "task": "Plan and run a stock count and work out shrink",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/stock-count-and-shrink", "use": "build", "when": "When a full or cycle count is due and you need count sheets, the reconcile and shrink by cause" },
+        { "ref": "kit:workflows/stock-count-cycle", "use": "brief", "when": "When setting the year's rhythm: one or two full counts with rolling cycle counts in between" },
+        { "ref": "library:stock-count-program-planner", "type": "skill", "use": "build", "when": "When you need a rolling schedule of what gets counted when and who counts it" },
+        { "ref": "library:warehouse-count-discrepancy-review-assistant", "type": "agent", "use": "check", "when": "When the count and the record disagree, to split timing, unit and counting errors before blaming theft" },
+        { "ref": "library:resale-store-daily-procedure-planner", "type": "skill", "use": "build", "when": "When shrink is high and the shop needs opening, closing, cash and stock-loss routines written down" }
+      ]
+    },
+    {
+      "id": "reorder-and-buying",
+      "task": "Plan reorders and a seasonal stock buy",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:stock-and-reorder-planner", "type": "skill", "use": "build", "when": "When you need reorder points, safety stock and an ABC ranking from stock and sales numbers" },
+        { "ref": "library:seasonal-buy-planner", "type": "skill", "use": "build", "when": "Before a season, to decide how much to buy early, how much to hold back and when to mark down" },
+        { "ref": "library:one-time-stock-quantity-picker", "type": "skill", "use": "build", "when": "When an item sells once, such as Christmas cards, and you must pick one order quantity" },
+        { "ref": "library:plan-the-cash-for-your-next-stock-order", "type": "workflow", "use": "check", "when": "Before placing a big order, to see true unit costs and whether the cash covers it" },
+        { "ref": "library:weekly-stock-and-cash-reorder-watcher", "type": "agent", "use": "build", "when": "When reordering should become a weekly routine from the stock and sales export" }
+      ]
+    },
+    {
+      "id": "clear-slow-stock",
+      "task": "Clear slow stock with a markdown plan",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:stock-age-report-builder", "type": "skill", "use": "brief", "when": "Before marking anything down, to sort stock by how long it has sat unsold" },
+        { "ref": "library:clearance-discount-planner", "type": "skill", "use": "build", "when": "When slow lines must go, to set when and how deep to cut so they sell out" },
+        { "ref": "library:promotion-idea-planner", "type": "skill", "use": "explore", "when": "When a gift-with-purchase or bundle could shift the stock without a red sticker" },
+        { "ref": "library:retail-markdown-stock-reconciler", "type": "skill", "use": "check", "when": "After the markdown, to check units sold, units left and cash recovered against what the stock cost" }
+      ]
+    },
+    {
+      "id": "pop-up-plan",
+      "task": "Plan a pop-up or market stall: break-even, stock and float",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/pop-up-and-market-plan", "use": "build", "when": "When a market, fair or pop-up is booked or offered and you need the sums, stock list and float" },
+        { "ref": "kit:workflows/pop-up-from-booking-to-review", "use": "brief", "when": "When you want every step from the booking decision to the review after the event in order" },
+        { "ref": "library:one-time-stock-quantity-picker", "type": "skill", "use": "build", "when": "When you cannot restock mid-event and must choose how much of each line to bring" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When there are two ways to run the stall, such as few hero lines or the full range, to compare both" }
+      ]
+    },
+    {
+      "id": "stall-layout",
+      "task": "Plan a stall or shop-floor layout and display",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/pop-up-and-market-plan", "use": "build", "when": "When you need the stall plan: table, height, price signs and where the customer stands and pays" },
+        { "ref": "library:shelf-layout-planner", "type": "skill", "use": "build", "when": "When shelf space is tight and best sellers and high-margin lines should get the best positions" },
+        { "ref": "library:wayfinding-sign-planner", "type": "skill", "use": "build", "when": "When first-time visitors cannot find a section, the till or the fitting room" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "When the stall banner and price cards need a look, to compare three directions at real size" },
+        { "ref": "kit:prompts/price-and-returns-sign-check", "use": "check", "when": "Before the price cards are printed, to check every price and claim on them" }
+      ]
+    },
+    {
+      "id": "market-application",
+      "task": "Write a market or craft fair application",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/market-application", "use": "build", "when": "When applying for a pitch and the organiser asks who you are, what you sell and why you fit" },
+        { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When the one-line description of the stall is dull, to try five angles on it" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When the description sounds like every other maker, to get a true, picturable rewrite" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to read the application as the organiser choosing between fifty stalls" }
+      ]
+    },
+    {
+      "id": "post-event-review",
+      "task": "Review sales after a pop-up, market or event",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/pop-up-from-booking-to-review", "use": "build", "when": "After the event, to compare takings with the break-even and decide whether to book again" },
+        { "ref": "kit:skills/till-report-readout", "use": "build", "when": "When the event sales came through the till or card reader and need reading by line and hour" }
+      ]
+    },
+    {
+      "id": "pricing",
+      "task": "Set shelf prices and how they are shown",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:price-position-planner", "type": "skill", "use": "build", "when": "When prices must be set against costs and nearby rivals, with a rule for answering their discounts" },
+        { "ref": "library:price-ending-picker", "type": "prompt", "use": "build", "when": "When choosing between a round price and one just below it for a given product" },
+        { "ref": "library:store-pl-builder", "type": "skill", "use": "check", "when": "After a price change, to see what it did to margin across the shop" }
+      ]
+    },
+    {
+      "id": "loyalty",
+      "task": "Design a loyalty or best-customer programme",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:build-a-vip-program-for-your-best-customers", "type": "workflow", "use": "build", "when": "When the shop has purchase history and wants a best-customer profile, perks and personal touches" },
+        { "ref": "library:loyalty-and-vip-program-designer", "type": "skill", "use": "explore", "when": "When you want tier designs with perks that are not discounts, plus a test" },
+        { "ref": "library:loyalty-claim-checker", "type": "skill", "use": "check", "when": "Before launch, to test what the scheme costs against who it really reaches" }
+      ]
+    },
+    {
+      "id": "local-marketing",
+      "task": "Plan local marketing: listing, reviews, email and text",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:find-your-business-growth-channel", "type": "workflow", "use": "brief", "when": "When the owner does not know where new customers could come from, to compare channels and pick tests" },
+        { "ref": "library:local-search-listing-manager", "type": "skill", "use": "check", "when": "When the shop is hard to find on maps, to audit the listing and plan fixes and more reviews" },
+        { "ref": "library:review-request-and-reply-planner", "type": "skill", "use": "build", "when": "When the shop needs a routine for asking happy customers for reviews and answering bad ones" },
+        { "ref": "library:prepare-a-useful-customer-newsletter-issue", "type": "workflow", "use": "build", "when": "When the shop has an email list and wants an issue made from shop news and customer questions" },
+        { "ref": "library:plan-a-sale-across-email-and-sms", "type": "workflow", "use": "build", "when": "When a sale should be announced to the list by email and text with a send calendar" }
+      ]
+    },
+    {
+      "id": "counter-complaints",
+      "task": "Handle returns and complaints at the counter",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:agency-retail-customer-returns", "type": "agent", "use": "build", "when": "When a return arrives, to check it against the policy, work out the refund and draft a kind reply" },
+        { "ref": "library:returns-policy-designer", "type": "skill", "use": "build", "when": "When the shop has no clear returns rules and staff decide each case on the spot" },
+        { "ref": "library:angry-customer-reply-writer", "type": "prompt", "use": "build", "when": "When an angry message arrives and the reply must fix what it can and promise nothing false" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before a complaint reply goes out, to check every promise in it can be kept" }
+      ]
+    },
+    {
+      "id": "shop-procedures",
+      "task": "Write opening, closing and cash-up procedures",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:resale-store-daily-procedure-planner", "type": "skill", "use": "build", "when": "When the till is often out and the shop needs opening, closing and cash check steps for review" },
+        { "ref": "library:operations-manual-writer", "type": "skill", "use": "build", "when": "When the owner's standards live in their head and each role needs a job card" },
+        { "ref": "library:shop-system-playbook", "type": "workflow", "use": "build", "when": "When a second site or a manager is coming and a stranger must be able to run the shop from the manual" },
+        { "ref": "library:ray-kroc", "type": "mind", "use": "think", "when": "When the shop runs differently depending on who opened up that morning" }
+      ]
+    },
+    {
+      "id": "supplier-terms",
+      "task": "Compare supplier quotes and ask for better terms",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:supplier-quote-comparer", "type": "skill", "use": "build", "when": "When two or more suppliers quote, to see price, minimum order, lead time and risk side by side" },
+        { "ref": "library:supplier-partner-terms-planner", "type": "skill", "use": "build", "when": "When the shop wants longer payment terms or sale-or-return and needs a fair ask" },
+        { "ref": "library:negotiate-from-the-weaker-side-and-still-get-fair-terms", "type": "workflow", "use": "brief", "when": "When the supplier is far bigger than the shop and the owner dreads the call" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any sign, guide or application is printed or sent, to catch typos and mixed-up names" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a sign or post states a number, an origin or an award you cannot trace to the shop's records" }
+  ],
+  "helpers": [
+    { "role": "graphic-designer", "when": "When signs, posters, price cards or a stall banner must be laid out and made print-ready" },
+    { "role": "local-marketing-specialist", "when": "When the job is being found locally: map listing, reviews and neighbourhood promotion" },
+    { "role": "social-media-manager", "when": "When the promotion or event needs a posting plan, not only signs in the window" },
+    { "role": "event-manager", "when": "When an event has ticketing, suppliers or licences beyond a simple in-store evening" },
+    { "role": "bookkeeper", "when": "When the stock value, cash-up or till totals must tie to the books for the accountant" },
+    { "role": "pricing-strategist", "when": "When prices across the whole range need rethinking, not one sale" }
+  ],
+  "gaps": [
+    "No library item reads a physical shop's till export from Square, Shopify POS or Lightspeed; the fits read online store data",
+    "No library item plans a window display or shop-floor visual merchandising beyond shelf facings",
+    "No library item plans a market stall layout: table, height, price signs and customer flow",
+    "No library item works out a cash float, a cash-up routine or a till variance for a shop or stall",
+    "No library item writes a market, craft fair or pop-up space application",
+    "No library item checks was/now prices, last-few signs and returns notices against consumer rules by country",
+    "No library item writes a shop-floor selling guide with greetings, add-on prompts and role-plays",
+    "No library item splits shrink into theft, damage, admin error and supplier short delivery for a small shop",
+    "No library item checks a rota against local rules on breaks, rest, young workers and shift notice",
+    "No library item works out break-even for a market pitch from fees, travel, staff and stock cost",
+    "No library item measures footfall and the share of visitors who buy in a physical shop"
+  ]
+}

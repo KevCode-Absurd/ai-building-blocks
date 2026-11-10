@@ -1,0 +1,283 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "sales-coordinator",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "first-replies",
+      "task": "Write first replies to enquiries by type",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/enquiry-reply-and-follow-up", "use": "build", "when": "When an enquiry arrives and the reply must give the answer, one or two questions and a next step" },
+        { "ref": "kit:prompts/first-reply-by-enquiry-type", "use": "build", "when": "When the same kinds of enquiry keep coming and you want one reply per type to reuse" },
+        { "ref": "library:new-inquiry-reply-drafter", "type": "skill", "use": "explore", "when": "When you want a second draft that qualifies the enquiry and offers real meeting times" },
+        { "ref": "library:customer-inbox-triage-and-reply-drafter", "type": "agent", "use": "build", "when": "When the inbox is full and each new email needs ranking and a checked draft to approve" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When replies go unopened, to try several subject lines that stay clear" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "Before a reply template is saved, to cut it and get a send or fix verdict" },
+        { "ref": "library:robert-collier", "type": "mind", "use": "think", "when": "When the reply opens with the business and its history instead of what the buyer asked" }
+      ]
+    },
+    {
+      "id": "follow-ups",
+      "task": "Write hold reminders and quote follow-ups",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/hold-and-quote-follow-ups", "use": "build", "when": "When a buyer holds a date or has a quote and then goes quiet" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before writing the series, to compare three plans for it, each with its first email" },
+        { "ref": "library:follow-up-email-sequence-writer", "type": "prompt", "use": "build", "when": "When one follow-up must become four, each with a new reason, one ask and a stop rule" },
+        { "ref": "library:stalled-deal-indecision-checker", "type": "skill", "use": "brief", "when": "Before chasing, to judge whether the buyer doubts you, is still comparing or fears choosing" },
+        { "ref": "library:get-a-quiet-deal-moving-again-without-pressure", "type": "workflow", "use": "build", "when": "When a big booking has stalled and you want easy-yes questions and a calm message" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "Before the series is loaded, to check each email is short and has one ask" }
+      ]
+    },
+    {
+      "id": "quote-or-proposal",
+      "task": "Build a quote or proposal with up to three options",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/quote-and-proposal-builder", "use": "build", "when": "When you have the buyer's brief and the rate card and need options, inclusions and the total" },
+        { "ref": "library:quote-and-proposal-builder", "type": "skill", "use": "build", "when": "When the quote must go into the client's own branded template from call notes or photos" },
+        { "ref": "library:pricing-model-designer", "type": "skill", "use": "explore", "when": "When the buyer should see good, better and best versions with a reason for each price" },
+        { "ref": "library:turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature", "type": "workflow", "use": "brief", "when": "When you start from a call and want the follow-up, costing, margin check and dates in order" },
+        { "ref": "library:mutual-action-plan-builder", "type": "skill", "use": "build", "when": "When the buyer needs a dated list of steps from yes to signed, to share with them" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to read the quote as the buyer and list what they would still have to ask" }
+      ]
+    },
+    {
+      "id": "quote-check",
+      "task": "Check a quote's maths, fees and terms before it goes",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/quote-total-price-check", "use": "check", "when": "When a quote or package page is ready and needs a second look at sums, fees and missing details" },
+        { "ref": "library:check-a-catering-order-before-service", "type": "workflow", "use": "check", "when": "When the quote includes catering, to match the order to the quote and event details" },
+        { "ref": "library:explain-service-booking-terms-to-customers", "type": "workflow", "use": "build", "when": "When the booking terms confuse buyers and need a plain-words version beside the quote" },
+        { "ref": "library:contract-and-term-sheet-reviewer", "type": "skill", "use": "check", "when": "When a supplier's or buyer's terms are attached and a clause looks risky" }
+      ]
+    },
+    {
+      "id": "enquiry-to-booking",
+      "task": "Set up the enquiry-to-booking process",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/enquiry-to-confirmed-booking", "use": "build", "when": "When enquiries wait too long, replies vary by sender, holds lapse or quotes go out wrong" },
+        { "ref": "library:booking-page-designer", "type": "skill", "use": "build", "when": "When calls or viewings should be booked online with qualifying questions and prep emails" },
+        { "ref": "library:lead-nurture-follow-up", "type": "workflow", "use": "build", "when": "When people enquire months ahead and need useful information before they are ready" },
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When the steps and who does each must be written so a new person can follow them" }
+      ]
+    },
+    {
+      "id": "handoff",
+      "task": "Hand a confirmed sale to the delivery team",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/order-and-booking-handoff", "use": "build", "when": "When a sale is confirmed and the delivery team needs everything that was sold and promised" },
+        { "ref": "kit:prompts/handoff-sheet-from-thread", "use": "build", "when": "When the details sit in a long email thread and must become one handoff sheet" },
+        { "ref": "kit:workflows/confirmed-sale-to-delivery", "use": "brief", "when": "When a buyer signs, pays a deposit or sends a purchase order and the steps after must not slip" },
+        { "ref": "library:handover-note-writer", "type": "prompt", "use": "build", "when": "When a colleague takes over your open bookings and needs a note to run from on day one" },
+        { "ref": "library:prepare-a-hotel-group-booking-handover", "type": "workflow", "use": "build", "when": "When the sale is a hotel group booking with deposits, rates and requests to check" },
+        { "ref": "library:check-capacity-before-promising-a-delivery-date", "type": "workflow", "use": "check", "when": "Before confirming a date to the buyer, to see whether the team has the hours" }
+      ]
+    },
+    {
+      "id": "order-and-delay-messages",
+      "task": "Write order, backorder, delay and substitution messages",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/backorder-and-delay-options", "use": "build", "when": "When a trade order line is out of stock, late or needs a substitute and the buyer needs options" },
+        { "ref": "library:delivery-update-flow-builder", "type": "skill", "use": "build", "when": "When buyers keep asking where their order is and need a set of updates and a delay script" },
+        { "ref": "library:shipment-problem-handler", "type": "skill", "use": "build", "when": "When freight is late, lost or damaged and you need next steps and the customer message" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "When planning the full set from acknowledgement to dispatch, to compare three ways to run it" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before a delay message goes, to check every new date and promise in it can be kept" }
+      ]
+    },
+    {
+      "id": "crm-hygiene",
+      "task": "Run the weekly CRM hygiene sweep",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/crm-hygiene-sweep", "use": "build", "when": "When you need duplicates, deals with no next step and stuck deals listed with fixes" },
+        { "ref": "kit:workflows/weekly-crm-hygiene", "use": "brief", "when": "When the pipeline report cannot be trusted or a busy season or price change is coming" },
+        { "ref": "library:crm-hygiene-auditor", "type": "skill", "use": "check", "when": "When you want a second pass for missing fields, stale dates and stage mismatches" },
+        { "ref": "library:deal-notes-and-crm-updater", "type": "skill", "use": "build", "when": "When emails and calls have not been logged and deals need updating from them" },
+        { "ref": "library:weekly-sales-pipeline-reviewer", "type": "agent", "use": "build", "when": "When the owner wants what changed this week and which bookings to act on today" }
+      ]
+    },
+    {
+      "id": "packages-page",
+      "task": "Write packages, pricing page and brochure copy",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:pricing-model-designer", "type": "skill", "use": "brief", "when": "Before writing, to set the tiers, what each includes and the price points" },
+        { "ref": "library:offer-designer", "type": "skill", "use": "build", "when": "When each package needs a name, value framing and payment terms" },
+        { "ref": "library:conversion-page-writer", "type": "skill", "use": "build", "when": "When the packages page needs a hero, value points, proof and answers to doubts" },
+        { "ref": "library:make-three-first-screens", "type": "skill", "use": "explore", "when": "When the client should see three different openings for the page as real screens" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a package line could describe any venue or studio, to get a true, picturable rewrite" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the page goes live, to confirm a buyer can enquire or book from it today" }
+      ]
+    },
+    {
+      "id": "listing-description",
+      "task": "Write a listing description for a property or space",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the listing headline is flat, to compare several honest angles on the same home" },
+        { "ref": "library:memorable-message-writer", "type": "skill", "use": "build", "when": "When the description is a list of rooms and needs one simple, concrete idea to lead with" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a line such as \"stunning and spacious\" could fit any listing" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before publishing, so sizes, distances and school or transport claims each have a source" },
+        { "ref": "library:elmer-wheeler", "type": "mind", "use": "think", "when": "When the listing names features and never shows what living there is like" }
+      ]
+    },
+    {
+      "id": "viewings-and-tours",
+      "task": "Plan open-house invitations, tours and their follow-up",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/enquiry-reply-and-follow-up", "use": "build", "when": "When viewing or tour requests need a reply that books the slot and says what to bring" },
+        { "ref": "library:event-marketing-planner", "type": "skill", "use": "brief", "when": "When an open house or showcase needs a plan to fill it and follow up after" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the invitation needs several subject lines to choose from" },
+        { "ref": "library:plan-an-event-follow-up-that-earns-a-reply", "type": "workflow", "use": "build", "when": "After the open house or tour, to follow up by what each visitor asked about" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "Before the invitation is sent, to cut it and check the date, place and ask are clear" }
+      ]
+    },
+    {
+      "id": "itinerary-and-trip-quote",
+      "task": "Write a day-by-day itinerary and trip quote cover note",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:personal-trip-guide-builder", "type": "skill", "use": "build", "when": "When you have dates, needs and budget and need daily stops, breaks and alternatives with sources" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the traveller could go two ways, such as slow and few stops or fast and many, with costs" },
+        { "ref": "kit:skills/quote-and-proposal-builder", "use": "build", "when": "When the itinerary needs a quote that states what is and is not included" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before sending, so opening times, transfer times and entry rules each have a dated source" }
+      ]
+    },
+    {
+      "id": "event-day-timeline",
+      "task": "Write an event-day timeline or run sheet for your part",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/order-and-booking-handoff", "use": "brief", "when": "When the timeline must start from what was sold: times, numbers, rooms and extras" },
+        { "ref": "library:prepare-a-community-event-access-plan", "type": "workflow", "use": "build", "when": "When you need a run sheet from arrival to exit, who does what and what the venue must confirm" },
+        { "ref": "library:check-a-catering-order-before-service", "type": "workflow", "use": "check", "when": "When food is part of the day, to check the order against the timeline and guest numbers" }
+      ]
+    },
+    {
+      "id": "client-updates",
+      "task": "Write a weekly client update or minutes from notes",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:weekly-status-update-writer", "type": "prompt", "use": "build", "when": "When a seller or client is owed a weekly note on what was done, what is stuck and what is next" },
+        { "ref": "library:meeting-minutes-writer", "type": "skill", "use": "build", "when": "When rough notes from a client meeting must become decisions and actions with owners" },
+        { "ref": "library:call-follow-up-drafter", "type": "skill", "use": "build", "when": "When a call just ended and you need the follow-up email and the CRM updates to approve" },
+        { "ref": "library:client-project-communication-plan", "type": "skill", "use": "brief", "when": "When a client complains they never hear from you and update dates need agreeing" }
+      ]
+    },
+    {
+      "id": "thanks-reviews-referrals",
+      "task": "Write thank-you, review and referral requests",
+      "kind": "email",
+      "items": [
+        { "ref": "library:post-sale-follow-up-planner", "type": "skill", "use": "build", "when": "After delivery, to write the thank-you and plan when to stay in touch and ask for a referral" },
+        { "ref": "library:testimonial-request-writer", "type": "skill", "use": "build", "when": "When you want a testimonial and the client needs three easy questions to answer" },
+        { "ref": "library:review-request-and-reply-planner", "type": "skill", "use": "build", "when": "When public reviews matter and you need when to ask, the wording and how to answer a bad one" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the request needs a few subject lines to pick from" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "Before the request goes, to check it is short and asks for one thing" },
+        { "ref": "library:joe-girard", "type": "mind", "use": "think", "when": "When contact stops the day the invoice is paid" }
+      ]
+    },
+    {
+      "id": "client-prep-guide",
+      "task": "Write a client prep guide, FAQ or welcome pack",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:faq-page-from-questions-writer", "type": "prompt", "use": "build", "when": "When clients ask the same questions before every booking and the answers should be on one page" },
+        { "ref": "library:hard-questions-faq-writer", "type": "skill", "use": "explore", "when": "When you want the awkward questions clients will ask found and answered before they ask" },
+        { "ref": "library:creative-shoot-briefer", "type": "skill", "use": "build", "when": "When the guide is for a shoot and the client needs to know what to bring and expect" },
+        { "ref": "library:explain-service-booking-terms-to-customers", "type": "workflow", "use": "build", "when": "When the pack must explain deposit, cancellation and change terms in plain words" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the guide is drafted, to read it as a first-time client and list what is still unclear" }
+      ]
+    },
+    {
+      "id": "canned-replies",
+      "task": "Build a set of canned replies and macros",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/first-reply-by-enquiry-type", "use": "build", "when": "When the set should start with one first reply for each enquiry type" },
+        { "ref": "library:inbox-rules-interviewer", "type": "skill", "use": "brief", "when": "Before writing, to capture the team's senders, reply voice and rules in one saved guide" },
+        { "ref": "library:human-sounding-reply-writer", "type": "skill", "use": "build", "when": "When saved replies sound like a form letter and buyers can tell" },
+        { "ref": "library:new-inquiry-reply-drafter", "type": "skill", "use": "explore", "when": "When you want a differently built version of a reply to compare before saving it" },
+        { "ref": "library:draft-brand-voice-checker", "type": "skill", "use": "check", "when": "When the set is drafted, to find where replies drift from the business's voice" }
+      ]
+    },
+    {
+      "id": "hard-messages",
+      "task": "Write hard replies: a no, a complaint, a price rise",
+      "kind": "email",
+      "items": [
+        { "ref": "library:hard-no-planner", "type": "skill", "use": "build", "when": "When you must turn down a date, a discount or extra work and keep the buyer's trust" },
+        { "ref": "library:client-scope-decision-review-assistant", "type": "agent", "use": "brief", "when": "When a client asks for more than they booked, to compare the request with what was agreed" },
+        { "ref": "library:angry-customer-reply-writer", "type": "prompt", "use": "build", "when": "When an angry message arrives and the reply must fix what it can and promise nothing false" },
+        { "ref": "library:agency-hospitality-guest-services", "type": "agent", "use": "explore", "when": "When the complaint is from a hotel or venue guest and you want a second reply with a fair fix" },
+        { "ref": "library:price-rise-letter-writer", "type": "prompt", "use": "build", "when": "When rates go up and booked or regular clients need a letter that keeps most of them" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before a complaint reply goes, to check each promise and the tone" }
+      ]
+    },
+    {
+      "id": "payment-reminders",
+      "task": "Write deposit and payment reminders",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/hold-and-quote-follow-ups", "use": "build", "when": "When a held date lapses unless the deposit arrives and the buyer needs a clear reminder" },
+        { "ref": "library:payment-reminder-letter-writer", "type": "skill", "use": "build", "when": "When a balance is overdue and the reminder must keep the customer's goodwill" },
+        { "ref": "library:uk-late-payment-chaser", "type": "skill", "use": "build", "when": "When a UK trade invoice is late and you want the legal interest and fee worked out" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "When setting the reminder series, to compare three ways to pace and word it" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before reminders go, to check any date, hold or consequence stated is one you will keep" }
+      ]
+    },
+    {
+      "id": "order-desk-procedure",
+      "task": "Write the order desk procedure from quote to dispatch",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/confirmed-sale-to-delivery", "use": "brief", "when": "When the procedure should follow the steps from confirmed order to delivery" },
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When you need a flowchart, who does what and the written steps with the edge cases" },
+        { "ref": "library:agency-project-management-studio-operations", "type": "agent", "use": "build", "when": "When a small studio needs its procedures, owners, tools and suppliers in one operating plan" }
+      ]
+    },
+    {
+      "id": "intake-forms",
+      "task": "Design an enquiry, brief or trade account form",
+      "kind": "other",
+      "items": [
+        { "ref": "library:questionnaire-writer", "type": "skill", "use": "build", "when": "When you need the questions that get what the buyer knows and you do not" },
+        { "ref": "library:multi-step-form-designer", "type": "skill", "use": "build", "when": "When the form is long, such as a trade account application, and needs stages and conditions" },
+        { "ref": "library:booking-page-designer", "type": "skill", "use": "explore", "when": "When a booking page with a few questions might replace the form altogether" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before anything goes to a buyer, to catch typos and a name or date written two ways" },
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "When a message states a price, a date, a capacity or a rule, so each has a source" },
+    { "ref": "library:draft-brand-voice-checker", "type": "skill", "use": "check", "when": "When a reply must sound like the business and you have its voice guide" }
+  ],
+  "helpers": [
+    { "role": "event-manager", "when": "When the booking needs a full event plan, suppliers and a run sheet for the whole day" },
+    { "role": "proposal-writer", "when": "When the buyer wants a long formal proposal or sends a tender" },
+    { "role": "customer-support-specialist", "when": "When complaints and after-sale questions need a help centre and macros of their own" },
+    { "role": "real-estate-transaction-coordinator", "when": "When a property sale moves from offer to closing and the paperwork must be tracked" },
+    { "role": "logistics-coordinator", "when": "When a trade order has freight, customs or carrier problems behind the delay" },
+    { "role": "revops-specialist", "when": "When the CRM needs new stages, fields or automations, not a weekly tidy" }
+  ],
+  "gaps": [
+    "No library item writes a property listing description or checks it against fair housing and listing rules",
+    "No library item writes an open-house invitation pack or a venue tour script",
+    "No library item writes a wedding-day or event-day timeline for one supplier's part",
+    "No library item writes a travel quote with inclusions, supplier terms and package travel rules, or a destination guide",
+    "No library item writes trade order acknowledgements, confirmations, backorder or substitution messages",
+    "No library item builds a trade account opening form or a welcome pack for new trade accounts",
+    "No library item checks a quote's maths: line totals, mandatory fees, tax and deposit",
+    "No library item manages date holds: who holds what, when each lapses and who to chase",
+    "No library item builds a canned reply or macro set by enquiry type",
+    "No library item writes a client prep guide for a shoot, a wedding or a venue hire",
+    "No library item writes a weekly update from an agent to a property seller"
+  ]
+}

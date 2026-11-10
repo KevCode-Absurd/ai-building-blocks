@@ -1,0 +1,274 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "sales-enablement-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "sales-playbook",
+      "task": "Build a sales playbook from what the best sellers do",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/sales-playbook-builder", "use": "build", "when": "When a team needs one short playbook: buyer, stages with exit rules, plays and talk tracks" },
+        { "ref": "library:win-and-loss-pattern-finder", "type": "skill", "use": "brief", "when": "Before writing, to see from closed deals where the team wins, loses and at which stage" },
+        { "ref": "library:customer-interview-synthesizer", "type": "skill", "use": "brief", "when": "When you have the best rep's call transcripts and need the patterns that repeat across them" },
+        { "ref": "library:deal-health-reviewer", "type": "skill", "use": "build", "when": "When the playbook needs a qualification guide, to see which gaps a healthy deal never has" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the playbook is drafted, to have a fresh reader go through it as a new rep on day three" },
+        { "ref": "library:neil-rackham", "type": "mind", "use": "think", "when": "When the playbook tells reps what to say and never what to ask" }
+      ]
+    },
+    {
+      "id": "call-coaching",
+      "task": "Coach sales calls from transcripts and score them",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/call-coaching-from-recordings", "use": "build", "when": "When you have a call transcript recorded with consent and need coaching notes and a score" },
+        { "ref": "kit:workflows/weekly-call-coaching-cycle", "use": "brief", "when": "When coaching should happen every week and managers score calls differently" },
+        { "ref": "library:turn-a-recorded-call-into-notes-a-follow-up-and-coaching", "type": "workflow", "use": "build", "when": "When one recording must give notes, a follow-up email and coaching points in one run" },
+        { "ref": "library:meeting-coaching-analyst", "type": "skill", "use": "check", "when": "When you want talk time, interruptions and habits counted from the transcript" },
+        { "ref": "library:anders-ericsson", "type": "mind", "use": "think", "when": "When coaching is a list of ten faults instead of one weak part and a drill for it" }
+      ]
+    },
+    {
+      "id": "battlecard",
+      "task": "Build a battlecard against one named rival",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/competitive-battlecard", "use": "build", "when": "When reps keep meeting one rival and need an honest page on where you win and lose" },
+        { "ref": "library:competitor-messaging-comparer", "type": "skill", "use": "brief", "when": "Before the card, to compare what the rival's public pages claim with your own" },
+        { "ref": "library:sales-battlecard-builder", "type": "skill", "use": "explore", "when": "When you want a second card with reply scripts and win themes to compare" },
+        { "ref": "library:rival-weakness-message-finder", "type": "skill", "use": "build", "when": "When you need the one strength of yours that is also the rival's weak point" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before reps use the card, so every claim about the rival has a dated public source" }
+      ]
+    },
+    {
+      "id": "discovery-plan",
+      "task": "Write a discovery call plan and question bank",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/discovery-call-plan", "use": "build", "when": "Before a first or second call, to plan listening more, pitching less and a clear next step" },
+        { "ref": "library:sales-call-question-planner", "type": "skill", "use": "build", "when": "When you need a bank of questions for one buyer type, grouped by what each uncovers" },
+        { "ref": "library:agency-sales-discovery-coach", "type": "agent", "use": "explore", "when": "When you want a second plan with buyer questions and follow-ups to compare" },
+        { "ref": "library:sales-call-prep-assistant", "type": "agent", "use": "build", "when": "When the plan should build on the notes from the last call with this buyer" },
+        { "ref": "library:neil-rackham", "type": "mind", "use": "think", "when": "When the questions find the problem but never what it costs the buyer" }
+      ]
+    },
+    {
+      "id": "objection-guide",
+      "task": "Write an objection handling guide",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:objection-answer-sheet-writer", "type": "skill", "use": "build", "when": "When you have the doubts buyers raise and need an answer with proof for each" },
+        { "ref": "library:hardest-objections-answer-writer", "type": "skill", "use": "explore", "when": "When you want the toughest objections found and answered a second way, with gaps admitted" },
+        { "ref": "library:live-objection-responder", "type": "skill", "use": "build", "when": "When a rep pastes what a buyer just said and needs what it means and a reply" },
+        { "ref": "library:honest-persuasion-editor", "type": "skill", "use": "check", "when": "When the answers are drafted, to find any that lean on pressure or a claim that is not true" }
+      ]
+    },
+    {
+      "id": "deal-win-plan",
+      "task": "Write a win plan and close plan for one live deal",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/deal-win-plan", "use": "build", "when": "When one deal matters a lot and you need who decides, what could block it and this week's moves" },
+        { "ref": "library:deal-stakeholder-mapper", "type": "skill", "use": "brief", "when": "Before the plan, to map the people, their influence and mood, and who is missing" },
+        { "ref": "library:mutual-action-plan-builder", "type": "skill", "use": "build", "when": "When the buyer should share a dated plan from today to signature" },
+        { "ref": "library:win-a-deal-against-a-named-rival", "type": "workflow", "use": "build", "when": "When a known rival is in the deal and the plan must answer them directly" },
+        { "ref": "library:deal-health-reviewer", "type": "skill", "use": "check", "when": "When the plan is drafted, to score the deal and list the qualification gaps left" }
+      ]
+    },
+    {
+      "id": "stalled-deal-rescue",
+      "task": "Write a rescue plan for a stalled deal",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:stalled-deal-indecision-checker", "type": "skill", "use": "brief", "when": "First, to tell whether the buyer doubts you, is stuck researching or fears a mistake" },
+        { "ref": "library:stalled-deal-revival-desk", "type": "agent", "use": "build", "when": "When you want the likely reason, a firm recommendation and the follow-up to send" },
+        { "ref": "library:get-a-quiet-deal-moving-again-without-pressure", "type": "workflow", "use": "build", "when": "When the deal needs safety nets and easy-yes questions, not another chase email" }
+      ]
+    },
+    {
+      "id": "negotiation-plan",
+      "task": "Prepare a negotiation plan and price conversation",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/negotiation-plan", "use": "build", "when": "Before a price or contract talk, to set what you want, what you can trade and where you walk" },
+        { "ref": "library:negotiation-call-prep-planner", "type": "skill", "use": "build", "when": "When you need opening lines, questions to ask and what to listen for on the call" },
+        { "ref": "library:weak-position-negotiation", "type": "skill", "use": "build", "when": "When the other side is far bigger and you need the order to move in" },
+        { "ref": "library:how-question-counter-writer", "type": "prompt", "use": "build", "when": "When a demand or low offer arrives and you want questions that push back without a flat no" },
+        { "ref": "library:agency-specialized-strategy-duel-agent", "type": "agent", "use": "check", "when": "Before the real talk, to rehearse it round by round and see where the plan gives way" },
+        { "ref": "library:chris-voss", "type": "mind", "use": "think", "when": "When the plan is all your arguments and nothing about how the other side sees it" }
+      ]
+    },
+    {
+      "id": "sales-deck",
+      "task": "Build a sales deck from the buyer's problem",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/sales-deck-from-the-buyers-problem", "use": "build", "when": "When the deck is a list of features and needs to run from problem to proof to a next step" },
+        { "ref": "library:pitch-arc-planner", "type": "skill", "use": "brief", "when": "Before the slides, to outline how belief builds and where the decision is asked for" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "When the deck has no look, to compare three slide directions made at real size" },
+        { "ref": "library:editable-slide-deck-builder", "type": "skill", "use": "build", "when": "When the client needs a real PowerPoint file with editable text, tables and charts" },
+        { "ref": "library:story-shape-mapper", "type": "skill", "use": "check", "when": "When the deck is drafted, to find the flat stretches where the buyer stops listening" },
+        { "ref": "library:pitch-deck-checker-10-20-30", "type": "skill", "use": "check", "when": "Before the meeting, to check slide count, talk time and type size against the slot" },
+        { "ref": "library:nancy-duarte", "type": "mind", "use": "think", "when": "When the deck is about the seller and the buyer is never the one who changes" }
+      ]
+    },
+    {
+      "id": "sell-sheet",
+      "task": "Write a one-page sell sheet for one product or service",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/spec-sheet-and-sell-sheet", "use": "build", "when": "When product data exists and a buyer needs one page they can understand and pass on" },
+        { "ref": "library:customer-one-pager-deck", "type": "skill", "use": "build", "when": "When the page is a leave-behind for one account and must use no made-up numbers" },
+        { "ref": "library:value-proposition-builder", "type": "skill", "use": "brief", "when": "Before writing, to fix what the buyer gains, one incentive and proof from a similar customer" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "When the sheet needs a layout, to compare three directions at real page size" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a line on the sheet could be about any supplier" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before print, to read the sheet as a distributor's buyer with thirty seconds to spare" }
+      ]
+    },
+    {
+      "id": "spec-sheet",
+      "task": "Write a spec sheet, line card or application note",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/spec-sheet-and-sell-sheet", "use": "build", "when": "When engineers need a sheet they can quote from, with tables and options from your data" },
+        { "ref": "library:product-vocabulary-sheet-builder", "type": "skill", "use": "brief", "when": "When the source is a manual, to pull its own terms and phrases before you write" },
+        { "ref": "library:page-grid-and-type-planner", "type": "skill", "use": "build", "when": "When the sheet template needs a grid, a short type list and room for dense tables" },
+        { "ref": "library:portfolio-case-study-writer", "type": "skill", "use": "build", "when": "When an application note should tell how one customer used the product and what resulted" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before release, so every rating, tolerance and standard traces to a test report or data file" }
+      ]
+    },
+    {
+      "id": "four-forces-review",
+      "task": "Review won and lost deals with the four forces",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/four-forces-deal-review", "use": "build", "when": "When deals are lost to doing nothing and you want pushes, pulls, worries and habits mapped" },
+        { "ref": "library:buying-story-interview-guide", "type": "skill", "use": "brief", "when": "When you need a script to interview recent buyers from first thought to first use" },
+        { "ref": "library:switch-story-mapper", "type": "skill", "use": "build", "when": "When interview notes are in and each buying story needs its forces marked" },
+        { "ref": "library:switch-friction-remover", "type": "skill", "use": "build", "when": "When the worries and habits are known and each needs a fix and one small change to test" },
+        { "ref": "library:clayton-christensen", "type": "mind", "use": "think", "when": "When the review lists features buyers liked and misses what they were struggling with" }
+      ]
+    },
+    {
+      "id": "rep-onboarding",
+      "task": "Build a 30-day rep onboarding and certification plan",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/rep-onboarding-and-certification", "use": "build", "when": "When new reps start and need week-by-week sessions and goals a manager can hear on a call" },
+        { "ref": "kit:workflows/new-rep-onboarding-30-days", "use": "brief", "when": "When a hire is confirmed, or a playbook exists that nobody practises" },
+        { "ref": "library:training-program-builder", "type": "skill", "use": "build", "when": "When the plan must start from ranked skill gaps with a learning objective for each" },
+        { "ref": "library:check-training-transfer-after-a-course", "type": "workflow", "use": "check", "when": "After the 30 days, to compare real calls with what was taught and list the gaps" }
+      ]
+    },
+    {
+      "id": "practice-and-quizzes",
+      "task": "Write role-plays, recall quizzes and practice drills",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/rep-onboarding-and-certification", "use": "build", "when": "When the drills must match the certification goals in the onboarding plan" },
+        { "ref": "library:recall-quiz-writer", "type": "prompt", "use": "build", "when": "When reps should recall product and process facts in short quizzes at three levels" },
+        { "ref": "library:teach-back-practice-partner", "type": "skill", "use": "build", "when": "When a rep should explain the product to a curious beginner and find what they cannot explain" },
+        { "ref": "library:agency-specialized-strategy-duel-agent", "type": "agent", "use": "build", "when": "When a rep needs to rehearse a hard conversation against an opponent, scored round by round" }
+      ]
+    },
+    {
+      "id": "product-cheat-sheets",
+      "task": "Write product knowledge cheat sheets and pitches",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:product-vocabulary-sheet-builder", "type": "skill", "use": "build", "when": "When reps need the product's own terms and phrases on one sorted sheet" },
+        { "ref": "library:value-statement-writer", "type": "skill", "use": "build", "when": "When the value proposition needs a version reps can say on a call" },
+        { "ref": "library:elevator-pitch-writer", "type": "skill", "use": "explore", "when": "When reps need 10, 30 and 60 second pitches and an opening question to try" }
+      ]
+    },
+    {
+      "id": "scripts",
+      "task": "Write a call script or demo script",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/discovery-call-plan", "use": "brief", "when": "When the script is for a first call and should be built around questions, not a monologue" },
+        { "ref": "library:cold-call-script-writer", "type": "skill", "use": "build", "when": "When reps need an opener, fit questions, replies to brush-offs and a voicemail" },
+        { "ref": "library:counter-demo-script-writer", "type": "skill", "use": "build", "when": "When the product is shown in person and the buyer should see the result for themselves" },
+        { "ref": "library:sales-collateral-writer", "type": "skill", "use": "explore", "when": "When you want a second demo script or one-pager for this buyer to compare" },
+        { "ref": "library:honest-persuasion-editor", "type": "skill", "use": "check", "when": "When the script is drafted, to cut lines that pressure the buyer or overclaim" }
+      ]
+    },
+    {
+      "id": "call-notes-and-follow-up",
+      "task": "Turn a call into clean notes and a follow-up email",
+      "kind": "email",
+      "items": [
+        { "ref": "library:call-follow-up-drafter", "type": "skill", "use": "build", "when": "When a call just ended and you need the follow-up, a team summary and CRM updates to approve" },
+        { "ref": "library:turn-a-recorded-call-into-notes-a-follow-up-and-coaching", "type": "workflow", "use": "build", "when": "When you start from the recording and want notes, the email and coaching together" },
+        { "ref": "library:no-question-email-rewriter", "type": "prompt", "use": "explore", "when": "When the follow-up pushes for a yes, to try a version where a no still moves things on" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "Before the rep sends it, to cut the email and check it has one clear next step" }
+      ]
+    },
+    {
+      "id": "refresh",
+      "task": "Refresh the playbook and battlecards each quarter",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/playbook-and-battlecard-refresh", "use": "build", "when": "When a quarter ends, win rates against a rival drop or reps stop using the playbook" },
+        { "ref": "library:quarterly-battle-card-keeper", "type": "agent", "use": "build", "when": "When each rival's card should be refreshed from the quarter's won and lost deals" },
+        { "ref": "library:monthly-lost-deal-reviewer", "type": "agent", "use": "brief", "when": "When you need last month's real loss reasons and the objection answers to add" },
+        { "ref": "library:marketing-evidence-expiry-reviewer", "type": "skill", "use": "check", "when": "When cards and decks quote dated numbers or prices that may have gone stale" }
+      ]
+    },
+    {
+      "id": "comparison-page",
+      "task": "Write an honest comparison page against a rival",
+      "kind": "web_page",
+      "items": [
+        { "ref": "kit:skills/competitive-battlecard", "use": "brief", "when": "When the public page should start from the same honest win and lose points as the card" },
+        { "ref": "library:alternative-page-writer", "type": "skill", "use": "build", "when": "When buyers search for an alternative to the rival and need a fair page" },
+        { "ref": "library:comparison-table-designer", "type": "skill", "use": "build", "when": "When the page needs a table that helps people choose, with a fair default pick" },
+        { "ref": "library:make-three-first-screens", "type": "skill", "use": "explore", "when": "When you want to see three different openings for the page as real screens" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before publishing, so each statement about the rival has a dated source" }
+      ]
+    },
+    {
+      "id": "interview-synthesis",
+      "task": "Synthesise buyer or rep interviews into findings",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:customer-interview-synthesizer", "type": "skill", "use": "build", "when": "When several interviews are in and you need the patterns and what each means" },
+        { "ref": "library:research-theme-synthesizer", "type": "skill", "use": "check", "when": "When you must show how often each theme came up, with the quotes behind it" }
+      ]
+    },
+    {
+      "id": "buyer-business-case",
+      "task": "Build a business case the buyer can take to finance",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:opportunity-size-estimator", "type": "skill", "use": "build", "when": "When the buyer needs a low, base and high estimate of the gain with every assumption listed" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the buyer could start small or go all in, to show both with money and dates" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before the workbook goes to the buyer, to catch broken formulas and wrong totals" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before any sales content ships, so each fact has a dated source, a rewrite or is cut" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before reps or buyers see a document, to catch typos and product names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "presentation-designer", "when": "When a deck, sell sheet or spec sheet must be laid out to a finished design standard" },
+    { "role": "product-marketing-manager", "when": "When positioning and messaging are unsettled and the sales content depends on them" },
+    { "role": "instructional-designer", "when": "When onboarding needs full lessons, e-learning or branching practice written out" },
+    { "role": "revops-specialist", "when": "When stages, win-loss data or pipeline numbers must come from the CRM first" },
+    { "role": "technical-writer", "when": "When spec sheets and application notes need deep technical accuracy across a range" },
+    { "role": "pricing-strategist", "when": "When the negotiation shows the price model or discount rules are the real problem" }
+  ],
+  "gaps": [
+    "No library item builds a sales playbook with stages, plays and talk tracks from a team's best sellers",
+    "No library item builds a call scorecard or scores a sales call against agreed criteria",
+    "No library item writes sales role-play scenarios with scoring or a branching call practice script",
+    "No library item writes a spec sheet, line card or application note from product data",
+    "No library item builds a 30-day sales onboarding plan with certification a manager can check on a call",
+    "No library item writes a sales deck story from the buyer's problem; only a general pitch outline exists",
+    "No library item builds a list of concessions and trades with what each costs and earns",
+    "No library item adapts sales training for retail shop-floor staff",
+    "No library item checks call recording consent rules by country or state",
+    "No library item measures whether reps use the playbook, cards and decks"
+  ]
+}

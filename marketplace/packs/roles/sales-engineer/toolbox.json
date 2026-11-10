@@ -1,0 +1,264 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "sales-engineer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "demo-script",
+      "task": "Write a tailored demo script from discovery notes",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/discovery-to-demo-script", "use": "build", "when": "When discovery notes exist and the demo must answer this buyer's problems in their order" },
+        { "ref": "kit:workflows/demo-to-pilot-decision", "use": "brief", "when": "When the deal reaches technical evaluation and the demo is the first of several steps" },
+        { "ref": "library:pitch-arc-planner", "type": "skill", "use": "brief", "when": "Before scripting, to outline how belief builds and where you ask for the next step" },
+        { "ref": "library:counter-demo-script-writer", "type": "skill", "use": "explore", "when": "When you want a second shape to try: explain briefly, then let the buyer see the result themselves" },
+        { "ref": "library:story-shape-mapper", "type": "skill", "use": "check", "when": "When the script is drafted, to find the flat stretches where the room stops watching" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before the demo, to read the script as the buyer's IT lead with their notes in hand" },
+        { "ref": "library:richard-feynman", "type": "mind", "use": "think", "when": "When a step only makes sense if you already know the product" }
+      ]
+    },
+    {
+      "id": "discovery-gap-check",
+      "task": "Check discovery is good enough before building a demo",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/discovery-gap-check", "use": "check", "when": "When a demo is booked and you want to know if you can tailor it or must ask more first" },
+        { "ref": "library:sales-call-question-planner", "type": "skill", "use": "build", "when": "When gaps are found and you need the questions to send or ask before the demo" },
+        { "ref": "library:deal-stakeholder-mapper", "type": "skill", "use": "brief", "when": "When you do not know who will be in the room or who signs off the technical choice" },
+        { "ref": "library:sales-call-prep-assistant", "type": "agent", "use": "build", "when": "When there is one more call before the demo and it should build on the last call's notes" },
+        { "ref": "library:neil-rackham", "type": "mind", "use": "think", "when": "When the notes list what the buyer wants and nothing on what the problem costs them" }
+      ]
+    },
+    {
+      "id": "demo-follow-up",
+      "task": "Write the same-day demo follow-up email",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/demo-follow-up-email", "use": "build", "when": "Straight after a demo, to recap what they saw against their problems and lock the next step" },
+        { "ref": "library:call-follow-up-drafter", "type": "skill", "use": "build", "when": "When you have the transcript and also need the team summary and CRM updates" },
+        { "ref": "library:mutual-action-plan-builder", "type": "skill", "use": "build", "when": "When the email should carry a dated plan from here to a decision" },
+        { "ref": "library:no-question-email-rewriter", "type": "prompt", "use": "explore", "when": "When you want a version where the buyer can say no and the deal still moves" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "Before sending, to cut it and check open questions each have an owner" }
+      ]
+    },
+    {
+      "id": "pilot-plan",
+      "task": "Write a pilot or proof-of-concept plan with success measures",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/pilot-success-plan", "use": "build", "when": "When the buyer wants a pilot and it must end in a clear yes or no on agreed measures" },
+        { "ref": "library:proof-of-concept-plan", "type": "skill", "use": "brief", "when": "Before the plan, to score the buyer's requirements for gaps and set out the trial" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the pilot could be narrow and fast or broad and slow, to show both with cost and dates" },
+        { "ref": "library:one-change-experiment-planner", "type": "skill", "use": "build", "when": "When one success measure needs a clean test that says what each result means" },
+        { "ref": "library:strongest-objection-finder", "type": "prompt", "use": "check", "when": "When the plan looks sound, to hear the best case that the pilot will prove nothing" }
+      ]
+    },
+    {
+      "id": "pilot-tracking",
+      "task": "Track a running pilot and the promises made in it",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/pilot-success-plan", "use": "brief", "when": "When weekly check-ins must report against the measures agreed at the start" },
+        { "ref": "library:track-promises-made-to-pilot-customers", "type": "workflow", "use": "build", "when": "When things were promised on calls and you need each one listed with an owner and proof" },
+        { "ref": "library:pilot-customer-promise-review-assistant", "type": "agent", "use": "check", "when": "Each week, to spot promises that clash and those not yet proved delivered" },
+        { "ref": "library:weekly-status-update-writer", "type": "prompt", "use": "build", "when": "When the buyer's sponsor needs a one-page weekly note on progress and blockers" }
+      ]
+    },
+    {
+      "id": "pilot-readout",
+      "task": "Write the end-of-pilot readout and decision memo",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/pilot-readout", "use": "build", "when": "When the pilot has ended and the sponsor needs a short memo to forward to the approver" },
+        { "ref": "library:prepare-an-ai-pilot-go-decision", "type": "workflow", "use": "build", "when": "When the pilot was of an AI feature and results must be read against a baseline" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "explore", "when": "When you want a second one-page version with the answer and numbers first, to compare" },
+        { "ref": "library:opportunity-size-estimator", "type": "skill", "use": "build", "when": "When pilot results must be scaled to a low, base and high yearly figure with assumptions" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the memo goes, so each result traces to pilot data with a date" }
+      ]
+    },
+    {
+      "id": "solution-summary",
+      "task": "Write a solution design summary for the buyer's team",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/solution-summary-and-objections", "use": "build", "when": "When the buyer's IT team needs what will be set up, how it connects and what they must do" },
+        { "ref": "library:system-design-planner", "type": "skill", "use": "brief", "when": "When there is more than one way to fit their systems and the trade-offs must be shown" },
+        { "ref": "library:mermaid-chart-writer", "type": "skill", "use": "build", "when": "When the summary needs a data flow or system diagram the buyer can paste into their docs" },
+        { "ref": "library:data-jargon-translator", "type": "skill", "use": "build", "when": "When the summary will also be read by the business sponsor and the terms lose them" },
+        { "ref": "library:technical-doc-proofreader", "type": "skill", "use": "check", "when": "Before it goes, to catch term clashes, typos and jargon" }
+      ]
+    },
+    {
+      "id": "technical-objections",
+      "task": "Answer technical objections honestly",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/technical-objection-answer", "use": "build", "when": "When a buyer raises one objection and the rep needs a true answer fast" },
+        { "ref": "kit:skills/solution-summary-and-objections", "use": "build", "when": "When you need the full sheet of likely objections with an honest answer to each" },
+        { "ref": "library:hardest-objections-answer-writer", "type": "skill", "use": "explore", "when": "When you want the toughest objections found and answered a second way, with limits admitted" },
+        { "ref": "library:live-objection-responder", "type": "skill", "use": "build", "when": "When you paste what the buyer said and need what sits behind it and proof to use" },
+        { "ref": "library:honest-persuasion-editor", "type": "skill", "use": "check", "when": "Before an answer is reused, to find any line that claims more than the product does" }
+      ]
+    },
+    {
+      "id": "security-questionnaire",
+      "task": "Answer a security or vendor questionnaire from evidence",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/security-questionnaire-and-rfp-answers", "use": "build", "when": "When a questionnaire arrives and every answer must come from the seller's own evidence" },
+        { "ref": "library:prepare-a-vendor-security-questionnaire-response", "type": "workflow", "use": "build", "when": "When you need a sourced draft, an evidence index and the questions others must answer" },
+        { "ref": "library:agency-security-compliance-auditor", "type": "agent", "use": "check", "when": "Before saying a standard is met, to see the gaps against it and what proof an auditor wants" },
+        { "ref": "library:compliance-checklist", "type": "skill", "use": "brief", "when": "When the buyer asks about a framework and you need its evidence list with gaps ranked" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before sending, so every yes points to a dated policy, report or record" },
+        { "ref": "library:bruce-schneier", "type": "mind", "use": "think", "when": "When an answer names a control but not what it protects or what it leaves open" }
+      ]
+    },
+    {
+      "id": "security-review",
+      "task": "Run a security review from request to buyer approval",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/security-review-request-reply", "use": "build", "when": "When a buyer asks for your security documents or sends a form with a deadline" },
+        { "ref": "kit:workflows/security-review-from-request-to-approval", "use": "brief", "when": "When the review will take several rounds and each step needs an owner" },
+        { "ref": "library:prepare-evidence-for-a-compliance-review", "type": "workflow", "use": "build", "when": "When you must gather the evidence pack: an index, a gap list and who supplies what by when" },
+        { "ref": "library:compliance-evidence-request-assistant", "type": "agent", "use": "check", "when": "When some evidence has expired or is missing and each owner needs a request" },
+        { "ref": "library:soc-2-readiness-checker", "type": "skill", "use": "check", "when": "When the buyer asks for a SOC 2 report the seller does not yet have" }
+      ]
+    },
+    {
+      "id": "rfp-technical-sections",
+      "task": "Write the technical sections of an RFP response",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/security-questionnaire-and-rfp-answers", "use": "build", "when": "When the RFP has technical questions that must be answered from what the product does today" },
+        { "ref": "library:rfp-response-builder", "type": "skill", "use": "brief", "when": "Before writing, to sort requirements into must-have and scored and see where you are weak" },
+        { "ref": "library:agency-sales-proposal-strategist", "type": "agent", "use": "explore", "when": "When you want a second outline showing which win theme each technical section carries" },
+        { "ref": "library:ten-percent-cutter", "type": "skill", "use": "build", "when": "When an answer is over the word limit" },
+        { "ref": "library:claim-and-proof-matcher", "type": "skill", "use": "check", "when": "Before the answers go to the bid lead, to see which claims lack proof or go too far" }
+      ]
+    },
+    {
+      "id": "fit-gap-and-comparison",
+      "task": "Score requirement fit and compare with a rival",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:proof-of-concept-plan", "type": "skill", "use": "build", "when": "When the buyer sends a requirement list and you need a gap score and a rival feature table" },
+        { "ref": "library:competitor-product-analyst", "type": "skill", "use": "build", "when": "When you have facts on a rival and need their features and limits set against yours" },
+        { "ref": "library:comparison-table-designer", "type": "skill", "use": "build", "when": "When the buyer asks for a side-by-side they can show their team" },
+        { "ref": "library:quarterly-battle-card-keeper", "type": "agent", "use": "check", "when": "When the technical card on a rival may be out of date after their last release" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before a comparison leaves, so each statement about the rival has a dated public source" }
+      ]
+    },
+    {
+      "id": "integration-and-sizing",
+      "task": "Answer integration, migration and sizing questions",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:system-design-planner", "type": "skill", "use": "build", "when": "When the buyer asks how the product fits their stack and you must show options and trade-offs" },
+        { "ref": "library:technical-capacity-cost-planner", "type": "skill", "use": "build", "when": "When they ask if it will handle their volume and what still needs a load test" },
+        { "ref": "library:zero-downtime-migration-planner", "type": "skill", "use": "build", "when": "When they ask how their data moves across without a break in service" },
+        { "ref": "library:agency-security-architect", "type": "agent", "use": "check", "when": "When the design crosses the buyer's network and the trust boundaries need drawing" }
+      ]
+    },
+    {
+      "id": "privacy-answers",
+      "task": "Answer privacy and data handling questions",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/security-questionnaire-and-rfp-answers", "use": "build", "when": "When the privacy questions sit inside a wider questionnaire" },
+        { "ref": "library:agency-data-privacy-officer", "type": "agent", "use": "brief", "when": "When a buyer asks how customer data is used and you need the duties and proof that apply" },
+        { "ref": "library:dpa-review", "type": "skill", "use": "check", "when": "When the buyer sends a data processing agreement and you need each term checked first" },
+        { "ref": "library:ai-vendor-terms-checker", "type": "skill", "use": "check", "when": "When the buyer asks about AI features, to see how your own terms read on training and liability" }
+      ]
+    },
+    {
+      "id": "explain-to-non-technical",
+      "task": "Explain the technology to non-technical buyers",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:technical-topic-explainer", "type": "skill", "use": "build", "when": "When a concept needs an everyday comparison, with where the comparison breaks down" },
+        { "ref": "library:word-picture-explainer", "type": "skill", "use": "explore", "when": "When words alone are not landing, to plan a diagram that pairs with them" },
+        { "ref": "library:interactive-visual-builder", "type": "skill", "use": "build", "when": "When a small visual with sliders would let the buyer see the effect for themselves" },
+        { "ref": "library:data-jargon-translator", "type": "skill", "use": "check", "when": "When the explanation is written, to find jargon the finance lead will not know" },
+        { "ref": "library:richard-feynman", "type": "mind", "use": "think", "when": "When you cannot explain it without the product's own vocabulary" }
+      ]
+    },
+    {
+      "id": "demo-assets",
+      "task": "Prepare demo data and a recorded walkthrough",
+      "kind": "other",
+      "items": [
+        { "ref": "library:sample-data-file-maker", "type": "skill", "use": "build", "when": "When the demo needs realistic fake data shaped like the buyer's industry" },
+        { "ref": "library:test-data-seeder", "type": "skill", "use": "build", "when": "When the demo environment must be reloaded with the same data before every run" },
+        { "ref": "library:product-demo-video-maker", "type": "skill", "use": "build", "when": "When people who missed the demo need a short walkthrough video or GIF" },
+        { "ref": "library:descript", "type": "tool", "use": "build", "when": "When a recorded demo needs trimming and captions before it is shared" }
+      ]
+    },
+    {
+      "id": "technical-win-plan",
+      "task": "Plan the technical evaluation for one deal",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/demo-to-pilot-decision", "use": "build", "when": "When a qualified deal needs its demo, pilot and decision steps set out with owners" },
+        { "ref": "library:deal-health-reviewer", "type": "skill", "use": "check", "when": "When you need the deal's risks ranked and the gaps on the technical side named" },
+        { "ref": "library:mutual-action-plan-builder", "type": "skill", "use": "build", "when": "When the buyer's team should share a dated plan to their decision" },
+        { "ref": "library:win-a-deal-against-a-named-rival", "type": "workflow", "use": "build", "when": "When a rival is also in evaluation and the plan must answer them" }
+      ]
+    },
+    {
+      "id": "buyer-business-case",
+      "task": "Build the numbers for the buyer's business case",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:opportunity-size-estimator", "type": "skill", "use": "build", "when": "When the gain must be shown as low, base and high with each assumption listed" },
+        { "ref": "library:business-investment-analyst", "type": "skill", "use": "build", "when": "When the buyer's finance team will ask for payback, return and risk" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before the workbook goes to the buyer, to catch broken formulas and wrong totals" }
+      ]
+    },
+    {
+      "id": "handover-after-win",
+      "task": "Hand the deal over to the delivery team after the win",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/solution-summary-and-objections", "use": "brief", "when": "When the handover should start from the solution summary the buyer already agreed" },
+        { "ref": "library:handover-note-writer", "type": "prompt", "use": "build", "when": "When the delivery lead needs a note they can run from on day one" },
+        { "ref": "library:copilot-gtm-enterprise-onboarding", "type": "skill", "use": "build", "when": "When the signed customer needs onboarding stages, owners and checks to first value" },
+        { "ref": "library:track-promises-made-to-pilot-customers", "type": "workflow", "use": "check", "when": "Before handing over, to list every promise made in the sale so none is lost" }
+      ]
+    },
+    {
+      "id": "answer-bank",
+      "task": "Keep a technical answer bank up to date",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/security-questionnaire-and-rfp-answers", "use": "build", "when": "When answers from the last questionnaire should be saved with their evidence for reuse" },
+        { "ref": "library:marketing-evidence-expiry-reviewer", "type": "skill", "use": "check", "when": "When stored answers cite reports, versions or certificates that may have run out" },
+        { "ref": "library:documentation-system-planner", "type": "skill", "use": "brief", "when": "When nobody knows where answers live or who keeps them fresh" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before anything technical goes to a buyer, so each claim has a dated source or is cut" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a document leaves, to catch typos and a feature named two ways" }
+  ],
+  "helpers": [
+    { "role": "cybersecurity-specialist", "when": "When a questionnaire exposes a real control gap that must be fixed before you can answer" },
+    { "role": "compliance-specialist", "when": "When the buyer needs audit evidence or a framework mapping the seller has not prepared" },
+    { "role": "proposal-writer", "when": "When the technical answers sit inside a full tender with a compliance matrix and deadlines" },
+    { "role": "system-architect", "when": "When the buyer's integration needs a real design, not a summary" },
+    { "role": "technical-writer", "when": "When the buyer needs set-up guides or API documents as part of the evaluation" },
+    { "role": "customer-success-manager", "when": "When the pilot is won and onboarding and adoption must be planned" }
+  ],
+  "gaps": [
+    "No library item turns discovery notes into a tailored demo script; only general demo scripts exist",
+    "No library item checks discovery notes for what is missing before a demo is built",
+    "No library item writes an end-of-pilot readout and decision memo for a pilot that is not about AI",
+    "No library item answers standard forms such as the CSA CAIQ or the SIG by question id from an evidence library",
+    "No library item builds a trust pack: which security documents to send, in what order and under what terms",
+    "No library item answers a buyer's AI questionnaire on models, training data and human review",
+    "No library item writes a solution design summary for a buyer's IT team",
+    "No library item scopes implementation effort so the quote matches the solution",
+    "No library item plans a demo environment: reset steps, fallbacks when a feature fails, and a dry run",
+    "No library item makes two or three clearly different demo storylines to compare"
+  ]
+}

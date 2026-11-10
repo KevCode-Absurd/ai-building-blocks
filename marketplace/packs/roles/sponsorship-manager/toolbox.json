@@ -1,0 +1,236 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "sponsorship-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "inventory-and-tiers",
+      "task": "List sponsor assets, value them and package tiers",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/inventory-and-tiers", "use": "build", "when": "Before pitching anyone, to list every asset with a real audience number and package a few tiers" },
+        { "ref": "kit:skills/sponsorship-inventory-tiers-and-deck", "use": "build", "when": "When the inventory, the prices and the tiers must be worked through and written up together" },
+        { "ref": "library:nonprofit-sponsor-package-planner", "type": "skill", "use": "explore", "when": "When the client is a charity or club event, to get a second set of tiers and benefits to compare" },
+        { "ref": "library:three-tier-price-ladder-drafter", "type": "prompt", "use": "explore", "when": "When you want three tiers drafted from costs, with a reason the middle one should win" },
+        { "ref": "library:build-a-clear-sponsorship-decision-brief", "type": "workflow", "use": "check", "when": "When the tiers are drafted, to run them as a sponsor would: cost, audience fit and what a trial looks like" },
+        { "ref": "library:commodity-trap-checker", "type": "skill", "use": "check", "when": "When the package is logo placement only and a sponsor will compare it on price alone" }
+      ]
+    },
+    {
+      "id": "sponsorship-deck",
+      "task": "Write the sponsorship deck",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/sponsorship-inventory-tiers-and-deck", "use": "build", "when": "When the tiers are set and the deck must carry audience, packages, proof and the ask" },
+        { "ref": "library:pitch-arc-planner", "type": "skill", "use": "brief", "when": "Before the slides, to outline how belief builds and where the sponsor is asked to decide" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "When the deck has no look yet, to compare three slide directions made at real size" },
+        { "ref": "library:editable-slide-deck-builder", "type": "skill", "use": "build", "when": "When the client needs a real PowerPoint file they can edit for each sponsor" },
+        { "ref": "library:pitch-deck-checker-10-20-30", "type": "skill", "use": "check", "when": "When the deck is drafted, to check slide count, talk time and type size" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before it goes out, to read the deck as a marketing manager who gets ten of these a week" },
+        { "ref": "library:nancy-duarte", "type": "mind", "use": "think", "when": "When the deck is about the event and never about what changes for the sponsor" }
+      ]
+    },
+    {
+      "id": "audience-numbers",
+      "task": "Build the audience numbers a sponsor can trust",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/sponsorship-inventory-tiers-and-deck", "use": "build", "when": "When each asset needs a number from the client's own counts, not a guess" },
+        { "ref": "library:ideal-customer-profiler", "type": "skill", "use": "build", "when": "When there is survey or sign-up data and you need a profile of who the audience is" },
+        { "ref": "library:market-size-and-survey-planner", "type": "skill", "use": "brief", "when": "When no audience data exists and a short survey must be planned with a fair sample" },
+        { "ref": "library:social-proof-placer", "type": "skill", "use": "build", "when": "When you have past sponsor results and quotes and must pick which to show and where" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before any number goes in a deck, so it has a source, a date and a method" }
+      ]
+    },
+    {
+      "id": "prospect-scoring",
+      "task": "Score and rank a sponsor prospect list",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/prospect-scoring-sheet", "use": "build", "when": "When you have a list of businesses you know and want who to call first, with reasons" },
+        { "ref": "kit:skills/sponsor-prospecting-pitch-and-proposal", "use": "build", "when": "When scoring should lead straight into ranked calls and tailored pitches" },
+        { "ref": "library:lead-prioritizer", "type": "skill", "use": "explore", "when": "When you want a second ranking by fit and recent contact to compare with your scores" },
+        { "ref": "library:prospect-list-builder", "type": "skill", "use": "build", "when": "When the client's own contact list is short and needs more companies that fit" },
+        { "ref": "library:organization-dossier-researcher", "type": "skill", "use": "brief", "when": "When a top prospect needs a sourced file on what it sponsors now and who decides" },
+        { "ref": "library:perplexity", "type": "tool", "use": "brief", "when": "When you need to see which brands sponsor similar events or shows, with links" }
+      ]
+    },
+    {
+      "id": "pitch-emails",
+      "task": "Write the pitch email, follow-ups and forwardable note",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/pitch-email-and-follow-ups", "use": "build", "when": "For each top prospect, to get a short tailored pitch, two follow-ups and a note they can forward" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before writing, to compare three plans for the pitch and its follow-ups" },
+        { "ref": "library:own-voice-outreach-writer", "type": "skill", "use": "build", "when": "When the pitch should sound like the founder and tie to something specific about the company" },
+        { "ref": "library:follow-up-email-sequence-writer", "type": "prompt", "use": "build", "when": "When a prospect is quiet and each follow-up needs a new reason and a stop rule" },
+        { "ref": "library:write-a-short-pitch-and-fix-it-after-every-no", "type": "workflow", "use": "build", "when": "When the first replies are no, to rework the pitch from each objection" },
+        { "ref": "library:cold-email-pre-send-checker", "type": "skill", "use": "check", "when": "Before sending, to test what the pitch claims and tighten it" }
+      ]
+    },
+    {
+      "id": "one-sponsor-proposal",
+      "task": "Write a proposal for one sponsor",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/one-sponsor-proposal", "use": "build", "when": "When a prospect says send me something and needs two pages built around their goals" },
+        { "ref": "kit:skills/sponsor-prospecting-pitch-and-proposal", "use": "build", "when": "When the proposal follows a scored list and a pitch and should carry the same reasons" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the sponsor could take one big asset or many small ones, to show both with money and dates" },
+        { "ref": "library:turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature", "type": "workflow", "use": "brief", "when": "When you start from a call with the sponsor and want follow-up, costing and dates in order" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to read it as the sponsor and list what they would still have to ask" }
+      ]
+    },
+    {
+      "id": "sponsor-meeting",
+      "task": "Prepare a sponsor meeting and the questions to ask",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:first-impression-plan", "type": "workflow", "use": "build", "when": "Before a first meeting, to get a brief on the person, a plan and a note to send after" },
+        { "ref": "library:sales-call-question-planner", "type": "skill", "use": "build", "when": "When you need the questions that find what the sponsor wants to achieve and how they measure it" },
+        { "ref": "library:objection-answer-sheet-writer", "type": "skill", "use": "build", "when": "When sponsors raise the same doubts, such as reach or proof, and you need an answer for each" },
+        { "ref": "library:robert-cialdini", "type": "mind", "use": "think", "when": "When the meeting plan leans on pressure instead of real proof and honest limits" }
+      ]
+    },
+    {
+      "id": "negotiation",
+      "task": "Negotiate price, exclusivity and terms",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:negotiation-prep-coach", "type": "skill", "use": "build", "when": "When a sponsor asks for a lower price and you need an opening, questions and a fallback" },
+        { "ref": "library:weak-position-negotiation", "type": "skill", "use": "build", "when": "When the sponsor is a big brand and the client is a small club or show" },
+        { "ref": "library:hard-no-planner", "type": "skill", "use": "build", "when": "When you must refuse a demand such as category exclusivity for free and keep the relationship" },
+        { "ref": "library:chris-voss", "type": "mind", "use": "think", "when": "When the client is ready to drop the price before asking what the sponsor needs" }
+      ]
+    },
+    {
+      "id": "agreement-and-invoice",
+      "task": "Draft the deliverables schedule, agreement and invoice",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/one-sponsor-proposal", "use": "build", "when": "When the deliverables schedule should be lifted from the proposal for the contract" },
+        { "ref": "library:contract-and-proposal-drafter", "type": "skill", "use": "build", "when": "When a simple agreement is needed for a lawyer to check" },
+        { "ref": "library:contract-risk-reviewer", "type": "skill", "use": "check", "when": "When the sponsor sends their own contract, to rate the clauses that could hurt the client" },
+        { "ref": "library:invoice-maker", "type": "skill", "use": "build", "when": "When the deal is signed and the first payment needs an invoice with checked totals" }
+      ]
+    },
+    {
+      "id": "fulfilment-tracker",
+      "task": "Set up and run the sponsor fulfilment tracker",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/sponsor-fulfilment-disclosure-and-renewal", "use": "build", "when": "When a sponsor signs and every promise needs a due date, an owner and proof" },
+        { "ref": "kit:workflows/sponsor-fulfilment-and-renewal", "use": "brief", "when": "When you want the steps from signed contract to renewal ask in order" },
+        { "ref": "library:track-promises-made-to-pilot-customers", "type": "workflow", "use": "build", "when": "When promises were also made on calls and emails and must be added to the register" },
+        { "ref": "library:executive-action-register", "type": "skill", "use": "build", "when": "When open actions sit across meeting notes and threads and need one list with owners" },
+        { "ref": "library:prepare-an-engagement-closeout-evidence-pack", "type": "workflow", "use": "check", "when": "At the end, to check each deliverable against proof it was delivered and accepted" }
+      ]
+    },
+    {
+      "id": "label-check",
+      "task": "Check sponsored content labels and sponsor claims",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/sponsored-content-label-check", "use": "check", "when": "Before a paid read, video, post or newsletter slot goes out, to check the label and its place" },
+        { "ref": "library:ad-and-page-policy-checker", "type": "skill", "use": "check", "when": "When the sponsor's copy may break a platform's ad rules, to flag risky lines" },
+        { "ref": "library:claim-and-proof-matcher", "type": "skill", "use": "check", "when": "When the sponsor's message makes claims, to see which are backed and which go too far" },
+        { "ref": "library:agency-support-legal-compliance-checker", "type": "agent", "use": "check", "when": "When you are unsure which advertising rules apply in the countries the audience is in" }
+      ]
+    },
+    {
+      "id": "sponsor-slot-copy",
+      "task": "Write the sponsor's read, post or newsletter slot",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:make-ad-concept-spread", "type": "skill", "use": "explore", "when": "When the sponsor wants ideas for the placement, to get nine or more and the best ones made" },
+        { "ref": "library:fact-based-ad-copy-writer", "type": "prompt", "use": "build", "when": "When the slot should rest on one real fact about the sponsor, with a source for every line" },
+        { "ref": "library:campaign-email-writer", "type": "skill", "use": "build", "when": "When the slot is a block in a newsletter and needs copy by section" },
+        { "ref": "kit:prompts/sponsored-content-label-check", "use": "check", "when": "Before it runs, to check the ad label and the sponsor's claims" }
+      ]
+    },
+    {
+      "id": "wrap-report",
+      "task": "Write the season wrap-up report for a sponsor",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/season-wrap-report", "use": "build", "when": "At the end of a season or event, to show every promise with its proof before the renewal ask" },
+        { "ref": "library:marketing-performance-report", "type": "skill", "use": "build", "when": "When you have reach and click numbers and need trends, wins and misses written up" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "explore", "when": "When you want a second one-page opening with the result and numbers first, to compare" },
+        { "ref": "library:portfolio-case-study-writer", "type": "skill", "use": "build", "when": "When a good result should also become a short case study for next season's deck" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the report goes, so each number traces to a screenshot, export or count" }
+      ]
+    },
+    {
+      "id": "renewal",
+      "task": "Plan the renewal ask and keep sponsors warm",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/sponsor-fulfilment-disclosure-and-renewal", "use": "build", "when": "When the wrap report is done and the renewal conversation needs its timing and offer" },
+        { "ref": "library:monthly-renewal-watcher", "type": "agent", "use": "build", "when": "When there are several sponsors and you want renewals due in 90 days flagged with a call plan" },
+        { "ref": "library:honest-appreciation-note-writer", "type": "skill", "use": "build", "when": "When a sponsor should get a thank-you with one specific, true appreciation and no ask" },
+        { "ref": "library:price-rise-letter-writer", "type": "prompt", "use": "build", "when": "When next season's rate is higher and the sponsor needs a letter that explains why" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "When the renewal will take several messages, to compare three ways to pace them" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "Before the renewal email goes, to cut it and check it asks for one thing" },
+        { "ref": "library:joe-girard", "type": "mind", "use": "think", "when": "When the sponsor only hears from the client when money is due" }
+      ]
+    },
+    {
+      "id": "sales-season-plan",
+      "task": "Plan the sponsorship sales season",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/sponsorship-sales-season", "use": "build", "when": "When there is a date by which sponsors must be signed and the weeks before it need planning" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the season could chase one headline sponsor or many small ones, to compare both" },
+        { "ref": "library:prospecting-block-planner", "type": "skill", "use": "build", "when": "When calls keep slipping and the week needs a protected block and a reason to call each lead" },
+        { "ref": "library:weekly-sales-pipeline-reviewer", "type": "agent", "use": "check", "when": "Each week of the season, to see what moved and which sponsors to act on today" }
+      ]
+    },
+    {
+      "id": "activation",
+      "task": "Plan sponsor activations and the launch announcement",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:partner-campaign-planner", "type": "skill", "use": "explore", "when": "When the sponsor wants more than a logo, to get joint campaign ideas and a plan" },
+        { "ref": "library:prepare-a-partner-launch-announcement-pack", "type": "workflow", "use": "build", "when": "When the partnership is announced and both sides must say the same thing" },
+        { "ref": "library:event-marketing-planner", "type": "skill", "use": "build", "when": "When the activation is at an event and needs a plan to draw people and follow up" },
+        { "ref": "library:dietrich-mateschitz", "type": "mind", "use": "think", "when": "When the activation is a banner and the sponsor has no real part in what the audience does" }
+      ]
+    },
+    {
+      "id": "nonprofit-sponsorship",
+      "task": "Plan sponsorship income for a charity or club",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/sponsorship-inventory-tiers-and-deck", "use": "build", "when": "When a charity or club needs its assets listed and tiers that fit local businesses" },
+        { "ref": "library:nonprofit-sponsor-package-planner", "type": "skill", "use": "build", "when": "When the event, audience and benefits are known and you need tiers, pitch copy and a promise list" },
+        { "ref": "library:nonprofit-fundraising-event-planner", "type": "skill", "use": "brief", "when": "When sponsorship is one income line in an event budget with other income to plan" },
+        { "ref": "library:nonprofit-earned-income-planner", "type": "skill", "use": "check", "when": "When the board asks if sponsorship income is worth the risk and effort" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before any audience number or result reaches a sponsor, so it has a dated source" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a deck, proposal or report goes, to catch typos and a sponsor name spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "presentation-designer", "when": "When the sponsorship deck or wrap report must be laid out to a finished standard" },
+    { "role": "event-manager", "when": "When sponsor promises depend on the event plan: stands, signage, stage time and run sheet" },
+    { "role": "fundraising-specialist", "when": "When a charity's sponsorship sits beside grants and donor appeals in one income plan" },
+    { "role": "podcast-producer", "when": "When sponsor reads must be scripted, recorded and placed in episodes" },
+    { "role": "compliance-specialist", "when": "When ad labelling or charity tax treatment needs a firm answer" },
+    { "role": "sdr", "when": "When the prospect list is long and needs research and outreach at volume" }
+  ],
+  "gaps": [
+    "No library item lists the sponsorable assets of an event, club, podcast or newsletter and values each one",
+    "No library item prices podcast reads or newsletter slots from downloads and open numbers",
+    "No library item builds a media kit or an audience numbers page with a method note",
+    "No library item writes a sponsorship deck; only general pitch and slide items exist",
+    "No library item scores local businesses as sponsor prospects on fit, signs of budget and warmth",
+    "No library item checks sponsored content labels against UK, US and EU rules by platform",
+    "No library item writes a sponsorship agreement's deliverables schedule or weighs an exclusivity clause",
+    "No library item builds a sponsor fulfilment tracker with proof such as screenshots and photos",
+    "No library item writes an end-of-season sponsor report that pairs each promise with its proof",
+    "No library item covers charity tax lines between sponsorship and advertising income",
+    "No library item writes a host-read sponsor script for a podcast",
+    "No library item gives sponsor activation ideas for events, clubs or shows"
+  ]
+}

@@ -1,0 +1,275 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "revops-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "crm-audit",
+      "task": "Audit a CRM export and write the fix list",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/crm-data-audit", "use": "build", "when": "When the team does not trust the CRM and you need each problem counted and a change list written" },
+        { "ref": "library:crm-hygiene-auditor", "type": "skill", "use": "check", "when": "When you want a second pass over deals for missing fields, stale dates and stage mismatches" },
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "build", "when": "When the export is large and you need gaps, duplicates and odd values found with rules to catch them" },
+        { "ref": "library:data-quality-scorecard-maker", "type": "skill", "use": "check", "when": "When the owner wants one score to track month by month as the data gets cleaner" },
+        { "ref": "library:lead-source-field-checker", "type": "skill", "use": "check", "when": "When marketing cannot tie leads to campaigns and you suspect the source fields" }
+      ]
+    },
+    {
+      "id": "weekly-pipeline-review",
+      "task": "Run the weekly pipeline review with deals at risk",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/weekly-revenue-review", "use": "build", "when": "Every week before the sales meeting, to turn the export into what changed and what to act on" },
+        { "ref": "kit:skills/pipeline-and-forecast-review", "use": "build", "when": "When you need stage conversion, time in stage and at-risk deals from this week's export" },
+        { "ref": "library:weekly-sales-pipeline-reviewer", "type": "agent", "use": "build", "when": "When the review should run the same way each week and end in a fix list to approve" },
+        { "ref": "library:team-pipeline-roll-up-writer", "type": "skill", "use": "build", "when": "When the manager wants the view by rep and stage with coaching points" },
+        { "ref": "library:deal-watch-digest-writer", "type": "skill", "use": "check", "when": "When you need a short alert list of quiet deals, slipping close dates and renewals" },
+        { "ref": "library:stalled-deal-revival-desk", "type": "agent", "use": "build", "when": "When one flagged deal has gone quiet and the rep needs the likely reason and a message to send" }
+      ]
+    },
+    {
+      "id": "forecast",
+      "task": "Build a sales forecast with best, likely and worst cases",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/pipeline-and-forecast-review", "use": "build", "when": "When the owner asks what will close this quarter and needs a range, not one number" },
+        { "ref": "library:agency-sales-pipeline-analyst", "type": "agent", "use": "explore", "when": "When you want a second forecast built as commit, best case and upside to compare" },
+        { "ref": "library:pipeline-and-forecast-checker", "type": "skill", "use": "check", "when": "When the forecast is drafted, to test pipeline cover against quota and past forecast accuracy" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before the forecast workbook is shared, to catch broken formulas and totals that do not tie" },
+        { "ref": "library:david-spiegelhalter", "type": "mind", "use": "think", "when": "When a range must be explained to people who want a single figure" }
+      ]
+    },
+    {
+      "id": "drop-off-analysis",
+      "task": "Find where deals drop out and which number moved",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/pipeline-and-forecast-review", "use": "build", "when": "When sales fell and you must say whether volume, win rate, deal size or cycle length changed" },
+        { "ref": "library:pipeline-stage-health-reviewer", "type": "skill", "use": "build", "when": "When you need cover, ageing and conversion stage by stage to find the weak one" },
+        { "ref": "library:conversion-funnel-analyst", "type": "skill", "use": "build", "when": "When you have stage-change history and want conversion and time between each step" },
+        { "ref": "library:process-bottleneck-finder", "type": "skill", "use": "brief", "when": "When deals wait on an internal step, such as legal or pricing sign-off, to map who holds them up" },
+        { "ref": "library:data-analyst", "type": "skill", "use": "check", "when": "When a pattern looks real and you want it tested before it goes in the report" }
+      ]
+    },
+    {
+      "id": "stage-design",
+      "task": "Design or repair pipeline stages with entry and exit rules",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/pipeline-stage-design", "use": "build", "when": "When stages mean different things to different reps or deals sit in the wrong stage" },
+        { "ref": "library:pipeline-stage-health-reviewer", "type": "skill", "use": "brief", "when": "Before redesigning, to see which current stages deals skip, stall in or fall out of" },
+        { "ref": "library:lead-handoff-designer", "type": "skill", "use": "explore", "when": "When you want a second stage and handoff model to compare with your own" },
+        { "ref": "library:metric-definition-writer", "type": "skill", "use": "build", "when": "When win rate or stage conversion needs one written definition everyone reports from" }
+      ]
+    },
+    {
+      "id": "lifecycle-and-handoff",
+      "task": "Define lifecycle stages and the lead handoff rules",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/pipeline-stage-design", "use": "build", "when": "When marketing and sales disagree on what a lead is and when it passes across" },
+        { "ref": "library:lead-handoff-designer", "type": "skill", "use": "build", "when": "When you need scoring, stages and the handoff from marketing to sales in one written model" },
+        { "ref": "library:lead-owner-router", "type": "skill", "use": "build", "when": "When new leads sit unassigned and you need routing rules and a handoff note per lead" },
+        { "ref": "library:mark-roberge", "type": "mind", "use": "think", "when": "When the handoff rule rewards lead volume and nobody checks whether those leads become customers" }
+      ]
+    },
+    {
+      "id": "lead-scoring",
+      "task": "Build lead scoring rules from past leads",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/lead-scoring-rules", "use": "build", "when": "When sales says the leads are poor and you have a year of leads with their outcomes" },
+        { "ref": "library:lead-prioritizer", "type": "skill", "use": "build", "when": "When the rules are agreed and the current list needs scoring into ranked tiers" },
+        { "ref": "library:lead-grader", "type": "skill", "use": "explore", "when": "When you want a simpler grade to compare with the points model before choosing" },
+        { "ref": "library:data-analyst", "type": "skill", "use": "check", "when": "When you must test whether a trait really separates won leads from lost ones" }
+      ]
+    },
+    {
+      "id": "win-loss-review",
+      "task": "Review why deals are won and lost",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/win-loss-review", "use": "build", "when": "When you have a quarter of closed deals with notes and want reasons and playbook changes" },
+        { "ref": "library:win-and-loss-pattern-finder", "type": "skill", "use": "build", "when": "When you need loss stage, common objections and deal traits counted across closed deals" },
+        { "ref": "library:deal-win-reason-finder", "type": "prompt", "use": "build", "when": "When the question is why you really win, to find it and the message built on it" },
+        { "ref": "library:monthly-lost-deal-reviewer", "type": "agent", "use": "build", "when": "When lost deals should be reviewed every month, with objection answers to add" },
+        { "ref": "library:buying-story-interview-guide", "type": "skill", "use": "brief", "when": "When CRM loss reasons are thin and you need a script for asking recent buyers what happened" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the report goes out, so each finding points to the deals and notes behind it" }
+      ]
+    },
+    {
+      "id": "churn-reasons",
+      "task": "Report on cancellation reasons and churn",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/win-loss-review", "use": "build", "when": "When you have cancellations with notes and want the stated and real reasons grouped" },
+        { "ref": "library:subscription-churn-watcher", "type": "agent", "use": "build", "when": "When churn should be watched each month from the billing export" },
+        { "ref": "library:retention-cohort-analyst", "type": "skill", "use": "build", "when": "When you need to see which sign-up months keep customers and which lose them early" },
+        { "ref": "library:customer-health-and-churn-scorer", "type": "skill", "use": "build", "when": "When the owner wants live accounts scored for risk, not only a look back" },
+        { "ref": "library:cancel-reason-save-planner", "type": "prompt", "use": "build", "when": "When the reasons are known and each needs a save offer or a fix" }
+      ]
+    },
+    {
+      "id": "automation-spec",
+      "task": "Write an automation workflow spec a builder can follow",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/automation-workflow-spec", "use": "build", "when": "When the team wants lead routing, reminders or a closed-won handoff built and needs the spec" },
+        { "ref": "library:agency-automation-governance-architect", "type": "agent", "use": "brief", "when": "Before specifying, to decide if the step should be automated at all and what the fallback is" },
+        { "ref": "library:automation-flow-sketcher", "type": "prompt", "use": "explore", "when": "When you want a quick second layout of the steps for Zapier or Make, with what can break" },
+        { "ref": "library:no-code-automation-planner", "type": "skill", "use": "build", "when": "When the build will be no-code and you need the right setup and when to move to code" },
+        { "ref": "library:check-a-new-automation-before-relying-on-it", "type": "workflow", "use": "check", "when": "Before go-live, to find double runs, missing approvals and silent failures, with a test list" },
+        { "ref": "library:zapier", "type": "tool", "use": "build", "when": "When the CRM's own workflows cannot reach the other app in the chain" }
+      ]
+    },
+    {
+      "id": "automation-audit",
+      "task": "Audit existing automations and nurture flows",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/automation-workflow-spec", "use": "build", "when": "When an old workflow must be rewritten so its trigger, steps and exit are on paper" },
+        { "ref": "library:check-a-new-automation-before-relying-on-it", "type": "workflow", "use": "check", "when": "When you review each live workflow for double sends, loops and steps with no owner" },
+        { "ref": "library:lead-nurture-follow-up", "type": "workflow", "use": "build", "when": "When the nurture flow only pushes for a meeting and needs useful content first" },
+        { "ref": "library:agency-automation-governance-architect", "type": "agent", "use": "check", "when": "When deciding which of dozens of old workflows to keep, merge or switch off" }
+      ]
+    },
+    {
+      "id": "crm-setup",
+      "task": "Set up or rebuild a CRM around how the team sells",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/crm-setup-or-rebuild", "use": "build", "when": "When a team moves from spreadsheets, switches CRM or rebuilds one nobody opens" },
+        { "ref": "library:agency-testing-tool-evaluator", "type": "agent", "use": "explore", "when": "When the CRM is not yet chosen, to compare options on criteria, cost and a trial plan" },
+        { "ref": "library:business-data-move-runbook", "type": "skill", "use": "build", "when": "When data moves from the old tool and you need field maps, checks and a way back" },
+        { "ref": "library:change-rollout-planner", "type": "skill", "use": "build", "when": "When reps resisted the last tool and the launch needs messages and a plan for pushback" },
+        { "ref": "library:business-tool-launch-checklist", "type": "skill", "use": "check", "when": "Before go-live, to list launch checks, open blockers and who decided what" }
+      ]
+    },
+    {
+      "id": "clean-and-import",
+      "task": "Clean a messy list and prepare the import sheet",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/crm-data-audit", "use": "build", "when": "When a contact export must be deduplicated and tidied with every change listed" },
+        { "ref": "library:data-file-clean-up-loop", "type": "agent", "use": "build", "when": "When the file is messy and must be fixed and re-checked until it passes your rules" },
+        { "ref": "library:business-data-move-runbook", "type": "skill", "use": "build", "when": "When each old column needs mapping to a CRM field before the import" },
+        { "ref": "library:data-quality-scorecard-maker", "type": "skill", "use": "check", "when": "After the clean-up, to prove blanks and duplicates are gone before anyone imports" }
+      ]
+    },
+    {
+      "id": "territory-and-quota",
+      "task": "Split territories and set quotas with the maths shown",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/territory-and-quota-plan", "use": "build", "when": "At annual planning, a new hire or when reps doubt their number, from account and sales history" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When there are two fair ways to cut the map, to put both on a page with the numbers and pick one" },
+        { "ref": "library:headcount-plan-builder", "type": "skill", "use": "build", "when": "When the quota total needs more reps and you must say which roles to hire in what order" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "Before reps see the quota workbook, to find formula errors and broken links" }
+      ]
+    },
+    {
+      "id": "pay-plan-check",
+      "task": "Check the sales pay plan and discount rules",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:sales-pay-plan-checker", "type": "skill", "use": "check", "when": "When you suspect the commission plan pays for deals that churn, to see what it rewards" },
+        { "ref": "library:sales-team-hiring-pay", "type": "workflow", "use": "build", "when": "When hiring reps, to get a scorecard, a pay plan check and one early sign of customer success" },
+        { "ref": "library:discount-policy-designer", "type": "skill", "use": "build", "when": "When discounts are given ad hoc and you need a matrix with approval limits" },
+        { "ref": "library:deal-desk-reviewer", "type": "skill", "use": "check", "when": "When one deal carries a big discount or changed terms and needs a margin and risk verdict" }
+      ]
+    },
+    {
+      "id": "dashboards",
+      "task": "Write a dashboard build sheet with every measure defined",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:kpi-dashboard-designer", "type": "skill", "use": "build", "when": "When each role needs its own view and you must pick the measures by the decisions they make" },
+        { "ref": "library:metric-definition-writer", "type": "skill", "use": "build", "when": "When each measure needs its formula, filters and source written once" },
+        { "ref": "library:align-recurring-report-metric-definitions", "type": "workflow", "use": "check", "when": "When two reports show different numbers for the same measure" },
+        { "ref": "library:report-definition-drift-review-assistant", "type": "agent", "use": "check", "when": "When a number jumped and you suspect its definition changed, not the business" },
+        { "ref": "library:plain-words-sql-writer", "type": "skill", "use": "build", "when": "When a measure must be pulled from a database and nobody on the team writes SQL" },
+        { "ref": "library:sql-query-launch-reviewer", "type": "skill", "use": "check", "when": "Before a query feeds a dashboard, to catch joins that double count" }
+      ]
+    },
+    {
+      "id": "billing-reconciliation",
+      "task": "Reconcile CRM deals against billing records",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/billing-crm-reconciliation", "use": "build", "when": "When closed-won deals, subscriptions and invoices disagree and you need each mismatch listed" },
+        { "ref": "library:agency-engineering-payments-billing-engineer", "type": "agent", "use": "brief", "when": "When mismatches come from how the systems sync and you need the webhook and matching checks" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "When the reconciliation is a workbook, to check the lookups and tie-out totals" },
+        { "ref": "library:sql-query-launch-reviewer", "type": "skill", "use": "check", "when": "When the match is done with a query, to catch rows dropped or counted twice" }
+      ]
+    },
+    {
+      "id": "monthly-close",
+      "task": "Run the monthly billing and churn close",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/monthly-billing-and-churn-close", "use": "build", "when": "In the first working days of the month, before finance closes or the board update goes out" },
+        { "ref": "kit:skills/billing-crm-reconciliation", "use": "check", "when": "When recurring revenue in the CRM and in billing must agree before anyone reports it" },
+        { "ref": "library:saas-metrics-coach", "type": "skill", "use": "build", "when": "When recurring revenue, churn and payback need reading with what to fix first" },
+        { "ref": "library:subscription-unit-economics", "type": "skill", "use": "build", "when": "When the owner asks what a customer is worth against what it costs to win one" },
+        { "ref": "library:executive-update-drafter", "type": "skill", "use": "build", "when": "When the close must become a short update for the owner or the board" },
+        { "ref": "library:hard-questions-board-prep-coach", "type": "skill", "use": "check", "when": "Before the update goes out, to drill the numbers a board member will push on" }
+      ]
+    },
+    {
+      "id": "refund-queue",
+      "task": "Sort and check the refund and billing change queue",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/refund-and-billing-change-queue", "use": "build", "when": "When refund, credit, plan change and dispute requests pile up and each needs sorting and checking" },
+        { "ref": "library:refund-request-reply-writer", "type": "prompt", "use": "build", "when": "When a decision is made and the customer needs a clear yes, partial or no" },
+        { "ref": "library:churn-reducer", "type": "skill", "use": "brief", "when": "When many requests are cancellations and a save offer or failed-payment plan would cut them" }
+      ]
+    },
+    {
+      "id": "attribution",
+      "task": "Agree how marketing and sales credit revenue",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:attribution-model-chooser", "type": "skill", "use": "build", "when": "When two teams report different revenue for the same campaign and need one model" },
+        { "ref": "library:campaign-attribution-analyst", "type": "skill", "use": "build", "when": "When you have campaign data and need credit by channel and where leads drop off" },
+        { "ref": "library:lead-source-field-checker", "type": "skill", "use": "check", "when": "Before trusting any attribution report, to check the source fields can carry it" }
+      ]
+    },
+    {
+      "id": "renewals",
+      "task": "Track renewals and accounts at risk",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:renewal-watch-planner", "type": "skill", "use": "build", "when": "When you need upcoming renewals listed with timing, risk and room to raise the price" },
+        { "ref": "library:customer-health-and-churn-scorer", "type": "skill", "use": "build", "when": "When renewals should be ranked by health so the team calls the shaky ones first" },
+        { "ref": "kit:prompts/automation-workflow-spec", "use": "build", "when": "When renewal reminders should fire on their own and the builder needs the spec" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before any workbook leaves, to find wrong totals and say the key figures in plain words" },
+    { "ref": "library:metric-definition-writer", "type": "skill", "use": "brief", "when": "Whenever a report quotes a rate or a total, so its formula and source are written down" }
+  ],
+  "helpers": [
+    { "role": "automation-specialist", "when": "When the spec is agreed and someone must build and test the automation" },
+    { "role": "bi-analyst", "when": "When dashboards need building in a BI tool with a proper data model" },
+    { "role": "data-quality-analyst", "when": "When the clean-up needs standing rules, owners and monitoring, not one pass" },
+    { "role": "fpa-analyst", "when": "When the forecast must tie to the budget, cash plan or board pack" },
+    { "role": "sales-enablement-specialist", "when": "When win-loss findings must become playbook changes, battlecards and coaching" },
+    { "role": "lifecycle-marketer", "when": "When nurture and renewal emails need writing, not only the trigger logic" }
+  ],
+  "gaps": [
+    "No library item splits territories from an account list or checks the split for balance",
+    "No library item sets quotas from sales history and rep capacity, or builds the quota workbook",
+    "No library item derives lead scoring points from past leads and back-tests the threshold",
+    "No library item reconciles CRM closed-won deals against subscriptions and invoices in a billing tool",
+    "No library item builds the monthly recurring revenue movement: new, expansion, contraction and churn",
+    "No library item writes a CRM field and naming plan with required fields and picklist values",
+    "No library item finds and merges duplicate contacts and companies in HubSpot or Salesforce exports",
+    "No library item audits a HubSpot or Salesforce account's live workflows for overlap and conflicts",
+    "No library item specifies CRM views and dashboards by role inside the CRM itself",
+    "No library item triages a queue of refund, credit and plan change requests",
+    "No library item tracks forecast accuracy quarter by quarter or reviews quota attainment"
+  ]
+}

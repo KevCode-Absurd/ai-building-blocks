@@ -1,0 +1,277 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "sdr",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "cold-email-sequence",
+      "task": "Write a cold email sequence for one buyer type",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/cold-email-sequence", "use": "build", "when": "When you know the buyer type and need a short first email and follow-ups that each add something" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before writing, to compare three plans for the series, each with its first email" },
+        { "ref": "library:outbound-email-sequence-writer", "type": "skill", "use": "explore", "when": "When you want a second full sequence with different timing and touches to set beside yours" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When each email needs two or more subject lines to test" },
+        { "ref": "library:cold-email-pre-send-checker", "type": "skill", "use": "check", "when": "Before the sequence is loaded, to test claims, check the legal basics and tighten each email" },
+        { "ref": "library:jill-konrath", "type": "mind", "use": "think", "when": "When the first email explains the product and never gives a busy buyer a reason to change" }
+      ]
+    },
+    {
+      "id": "first-lines",
+      "task": "Write personal first lines for a short list of leads",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/personalised-first-lines", "use": "build", "when": "When you have up to 25 leads with a note on each and want one true opening line per person" },
+        { "ref": "library:own-voice-outreach-writer", "type": "skill", "use": "build", "when": "When the whole email should sound like the sender and tie to something specific about each lead" },
+        { "ref": "library:account-based-outreach-drafter", "type": "skill", "use": "explore", "when": "When one account matters and you want an email, call opener and LinkedIn note from real signals" },
+        { "ref": "library:cold-outreach-batch-runner", "type": "agent", "use": "build", "when": "When batches go out every week and each should learn from the last batch's results" },
+        { "ref": "library:cold-email-claim-checker", "type": "prompt", "use": "check", "when": "Before sending, to test each line about the lead against their own page text" }
+      ]
+    },
+    {
+      "id": "account-research",
+      "task": "Write a one-page pre-meeting account brief",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/account-research-brief", "use": "build", "when": "When notes, filings, job posts and pages are gathered and need sorting into facts, signals and guesses" },
+        { "ref": "library:organization-dossier-researcher", "type": "skill", "use": "brief", "when": "When little is gathered yet and you need a sourced research file on the company first" },
+        { "ref": "library:company-tear-sheet", "type": "skill", "use": "build", "when": "When the account is a listed company and the seller wants its numbers on one page" },
+        { "ref": "library:upcoming-events-calendar-builder", "type": "skill", "use": "build", "when": "When talking points should tie to dated events such as results days or conferences" },
+        { "ref": "library:perplexity", "type": "tool", "use": "brief", "when": "When you need recent news on the account with source links to check" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the brief goes to the seller, so each fact has a dated source and guesses are marked" }
+      ]
+    },
+    {
+      "id": "icp",
+      "task": "Build an ideal customer profile from past deals",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/icp-and-lead-scoring", "use": "build", "when": "When the client has won, lost and churned deals and says they sell to everyone" },
+        { "ref": "library:best-customer-finder", "type": "skill", "use": "brief", "when": "When you have what each customer paid and how long they stayed, to find the top fifth" },
+        { "ref": "library:win-and-loss-pattern-finder", "type": "skill", "use": "brief", "when": "When closed deals should show which traits go with wins and which with losses" },
+        { "ref": "library:ideal-buyer-profiler", "type": "skill", "use": "build", "when": "When the profile needs the person as well as the company: pains, goals and what they tried" },
+        { "ref": "library:strongest-objection-finder", "type": "prompt", "use": "check", "when": "When the profile feels settled, to hear the best case that it describes the wrong buyer" }
+      ]
+    },
+    {
+      "id": "lead-scoring",
+      "task": "Score and tier a lead list",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/icp-and-lead-scoring", "use": "build", "when": "When the profile is agreed and a pasted list needs scores, red flags and tier cut-offs" },
+        { "ref": "library:lead-prioritizer", "type": "skill", "use": "build", "when": "When leads have activity as well as fit and both should count toward the tier" },
+        { "ref": "library:account-tier-ranker", "type": "skill", "use": "explore", "when": "When you want a second ranking by account, with reasons, to compare with your tiers" },
+        { "ref": "library:lead-grader", "type": "skill", "use": "build", "when": "When the team wants a simple grade a rep can apply in seconds" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before the scored sheet goes back, to catch broken formulas and rows scored twice" }
+      ]
+    },
+    {
+      "id": "prospect-list",
+      "task": "Build and clean a prospect list",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:build-a-prospect-list-rank-it-and-send-first-messages", "type": "workflow", "use": "build", "when": "When you start from the profile and want a list, a ranking and checked first messages" },
+        { "ref": "library:prospect-list-builder", "type": "skill", "use": "build", "when": "When you need accounts that fit, with the reason each one is on the list" },
+        { "ref": "library:crm-record-filler", "type": "skill", "use": "build", "when": "When records lack company size, role or contact details needed for routing and outreach" },
+        { "ref": "library:customer-email-list-checker", "type": "skill", "use": "check", "when": "Before any send, to flag bad, role-based and throwaway addresses" },
+        { "ref": "library:clay", "type": "tool", "use": "build", "when": "When contact details must be pulled from several sources into one list" },
+        { "ref": "library:apollo", "type": "tool", "use": "build", "when": "When you need contacts by role and company and will email from the same account" }
+      ]
+    },
+    {
+      "id": "outbound-campaign",
+      "task": "Plan an outbound campaign from profile to held meetings",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/outbound-campaign-to-booked-meetings", "use": "build", "when": "When the client wants more meetings, opens a new segment or has too few early deals" },
+        { "ref": "library:agency-sales-outbound-strategist", "type": "agent", "use": "brief", "when": "When you need who to target, which buying signals to watch and a multi-channel order of touches" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the choice is few accounts worked deeply or many worked lightly, to see both with numbers" },
+        { "ref": "library:outbound-sales-team-planner", "type": "skill", "use": "build", "when": "When more than one person is involved and roles and lead flow must be set" },
+        { "ref": "library:aaron-ross", "type": "mind", "use": "think", "when": "When the same person is asked to prospect, close and look after accounts" }
+      ]
+    },
+    {
+      "id": "cold-call-script",
+      "task": "Write a cold call script with gatekeeper and voicemail lines",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/call-script-and-booking", "use": "build", "when": "When you need a one-page script: opener, two fit questions, the ask and replies to brush-offs" },
+        { "ref": "library:cold-call-script-writer", "type": "skill", "use": "explore", "when": "When you want a second script with its own opener and voicemail to compare" },
+        { "ref": "library:sales-opener-trio-writer", "type": "prompt", "use": "explore", "when": "When reps freeze on the first line, to get a ten-word opener, two spares and a test" },
+        { "ref": "library:live-objection-responder", "type": "skill", "use": "build", "when": "When a brush-off keeps coming up and you need what it means and a reply" },
+        { "ref": "library:honest-persuasion-editor", "type": "skill", "use": "check", "when": "When the script is drafted, to cut lines that pressure or pretend a prior relationship" },
+        { "ref": "library:jeb-blount", "type": "mind", "use": "think", "when": "When the script is fine and the real problem is that calls do not get made" }
+      ]
+    },
+    {
+      "id": "calling-session",
+      "task": "Plan a calling session and the booking confirmations",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/call-script-and-booking", "use": "build", "when": "When the session needs its script, the meeting ask and what to send once a slot is agreed" },
+        { "ref": "library:prospecting-block-planner", "type": "skill", "use": "build", "when": "When you need a protected call block, a quick research batch and one reason to call each lead" },
+        { "ref": "library:booking-page-designer", "type": "skill", "use": "build", "when": "When booked meetings should go through a page with prep emails and reminders" },
+        { "ref": "library:practice-session-minute-planner", "type": "prompt", "use": "build", "when": "When the team should rehearse the opener before the block, planned minute by minute" }
+      ]
+    },
+    {
+      "id": "linkedin-messages",
+      "task": "Write LinkedIn connection and follow-up messages",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/personalised-first-lines", "use": "build", "when": "When each connection note should open with something true about that person" },
+        { "ref": "library:linkedin-outreach-plan", "type": "skill", "use": "build", "when": "When you need who to comment on, connection notes and a plan, all sent by hand" },
+        { "ref": "library:message-stickiness-rewriter", "type": "prompt", "use": "explore", "when": "When the note is forgettable, to get three versions of the same line to choose from" },
+        { "ref": "library:cold-email-pre-send-checker", "type": "skill", "use": "check", "when": "Before sending, to test what the note claims about the person and tighten it" }
+      ]
+    },
+    {
+      "id": "reply-handling",
+      "task": "Write replies to the answers outreach gets back",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/reply-handling-scripts", "use": "build", "when": "When replies such as not now, send info or wrong person get a different answer each time" },
+        { "ref": "library:objection-answer-sheet-writer", "type": "skill", "use": "build", "when": "When the doubts repeat and you want one answer with proof for each" },
+        { "ref": "library:agency-sales-outreach", "type": "agent", "use": "explore", "when": "When you want a second set of replies to likely objections for one prospect" },
+        { "ref": "library:no-question-email-rewriter", "type": "prompt", "use": "build", "when": "When a reply pushes for yes and should let a no move things on instead" },
+        { "ref": "library:honest-persuasion-editor", "type": "skill", "use": "check", "when": "Before the scripts are saved, to find any line that presses or overclaims" }
+      ]
+    },
+    {
+      "id": "inbound-replies",
+      "task": "Write first replies and routing rules for inbound enquiries",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/inbound-first-replies", "use": "build", "when": "When enquiries by form, missed call, chat or demo request wait hours for an answer" },
+        { "ref": "kit:workflows/inbound-lead-response", "use": "brief", "when": "When setting up the daily routine, or a new enquiry source is added" },
+        { "ref": "library:new-inquiry-reply-drafter", "type": "skill", "use": "explore", "when": "When you want a second draft that qualifies the enquiry and offers real meeting times" },
+        { "ref": "library:lead-owner-router", "type": "skill", "use": "build", "when": "When leads sit unassigned and need an owner by rule and a handoff note" },
+        { "ref": "library:who-to-call-first-ranker", "type": "skill", "use": "build", "when": "When several enquiries arrive at once and must be ranked by fit and urgency" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "Before a template is saved, to cut it and check it has one next step" }
+      ]
+    },
+    {
+      "id": "qualification",
+      "task": "Write qualification questions and a call-back script",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/call-script-and-booking", "use": "build", "when": "When new enquiries need a call-back script with fit questions and a booked next step" },
+        { "ref": "library:sales-call-question-planner", "type": "skill", "use": "build", "when": "When you need the few questions that show whether this enquiry is worth a meeting" },
+        { "ref": "library:cold-call-script-writer", "type": "skill", "use": "explore", "when": "When you want a second way to open the call-back to compare" },
+        { "ref": "library:commitment-ask-planner", "type": "skill", "use": "check", "when": "After a round of calls, to see which leads made a real commitment and what to ask next" },
+        { "ref": "library:neil-rackham", "type": "mind", "use": "think", "when": "When the questions tick boxes for the seller and uncover nothing about the buyer's problem" }
+      ]
+    },
+    {
+      "id": "quiet-leads",
+      "task": "Write a follow-up series for enquiries that go quiet",
+      "kind": "email",
+      "items": [
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before writing, to compare three plans for the two weeks of follow-up" },
+        { "ref": "library:follow-up-email-sequence-writer", "type": "prompt", "use": "build", "when": "When one email must become four, each with a new reason, one ask and a stop rule" },
+        { "ref": "library:lead-nurture-follow-up", "type": "workflow", "use": "build", "when": "When quiet leads should get useful information first and the ask second" },
+        { "ref": "library:stalled-deal-indecision-checker", "type": "skill", "use": "brief", "when": "When a warm lead stopped replying and you want to know which kind of stall it is" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "Before the series is loaded, to check each email is short with one ask" }
+      ]
+    },
+    {
+      "id": "meeting-handoff",
+      "task": "Write the hand-off note from SDR to closer",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/meeting-handoff-note", "use": "build", "when": "When a meeting is booked and the closer needs why the buyer said yes, in their own words" },
+        { "ref": "kit:skills/account-research-brief", "use": "build", "when": "When the closer also needs a one-page brief on the account before the meeting" },
+        { "ref": "library:deal-stakeholder-mapper", "type": "skill", "use": "build", "when": "When several people at the account are involved and the closer needs who matters" },
+        { "ref": "library:deal-notes-and-crm-updater", "type": "skill", "use": "build", "when": "When the emails and calls behind the booking are not yet in the CRM" }
+      ]
+    },
+    {
+      "id": "outreach-rules",
+      "task": "Check outreach rules before a campaign goes live",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/outreach-rules-check", "use": "check", "when": "Before a new sequence, calling block or text campaign, or when contacting a new country" },
+        { "ref": "library:permission-email-audit", "type": "skill", "use": "check", "when": "When you must show which contacts gave real permission and where each address came from" },
+        { "ref": "library:agency-support-legal-compliance-checker", "type": "agent", "use": "check", "when": "When you are unsure which marketing and privacy rules apply where the buyers are" },
+        { "ref": "library:cold-email-pre-send-checker", "type": "skill", "use": "check", "when": "When each email should also pass the basics: who you are, why them and how to opt out" }
+      ]
+    },
+    {
+      "id": "deliverability",
+      "task": "Set up sending so cold email reaches the inbox",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:inbox-delivery-fixer", "type": "skill", "use": "build", "when": "When emails land in spam and the sending domain's records need setting up" },
+        { "ref": "library:cold-email-writer", "type": "skill", "use": "brief", "when": "When you need the sending setup that goes with the sequence: volumes, gaps and inboxes" },
+        { "ref": "library:customer-email-list-checker", "type": "skill", "use": "check", "when": "Before each batch, to remove addresses that will bounce and hurt the sender's standing" }
+      ]
+    },
+    {
+      "id": "results-and-tests",
+      "task": "Review outreach results and plan the next test",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/outbound-campaign-to-booked-meetings", "use": "check", "when": "When a campaign has run and you compare meetings held with the plan" },
+        { "ref": "library:split-run-test-planner", "type": "skill", "use": "build", "when": "When two openers or offers should be tested fairly with one change and a winner rule" },
+        { "ref": "library:lead-offer-tuner", "type": "skill", "use": "build", "when": "When replies are few or weak and the offer itself needs three changes to try" },
+        { "ref": "library:cold-outreach-batch-runner", "type": "agent", "use": "build", "when": "When the next batch should be written from what the last one earned" }
+      ]
+    },
+    {
+      "id": "offer-and-message",
+      "task": "Sharpen the reason to reply",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:lead-offer-planner", "type": "skill", "use": "build", "when": "When there is nothing useful to offer a cold buyer except a meeting" },
+        { "ref": "library:value-proposition-builder", "type": "skill", "use": "build", "when": "When the outreach needs what the buyer gains and proof from a similar customer" },
+        { "ref": "library:why-first-message-writer", "type": "skill", "use": "explore", "when": "When you want a version of the message that leads with the belief, then how, then what" },
+        { "ref": "library:commodity-trap-checker", "type": "skill", "use": "check", "when": "When the message could come from any rival, to see if buyers will only compare on price" }
+      ]
+    },
+    {
+      "id": "event-follow-up",
+      "task": "Follow up leads from a trade show or event",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/personalised-first-lines", "use": "build", "when": "When you have a note on each person you met and want an opening line for each" },
+        { "ref": "library:plan-an-event-follow-up-that-earns-a-reply", "type": "workflow", "use": "build", "when": "When attendee notes must become follow-ups grouped by what each person asked for" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "When the follow-up will run to several emails and you want three ways to plan it" },
+        { "ref": "library:cold-email-pre-send-checker", "type": "skill", "use": "check", "when": "Before sending, to check each claim about the conversation and tighten the email" }
+      ]
+    },
+    {
+      "id": "stakeholder-map",
+      "task": "Map the stakeholders in one target account",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/account-research-brief", "use": "brief", "when": "When the map should start from sourced facts on who holds which role" },
+        { "ref": "library:deal-stakeholder-mapper", "type": "skill", "use": "build", "when": "When you need the people, their influence and mood, and who is missing" },
+        { "ref": "library:prepare-an-enterprise-account-plan", "type": "workflow", "use": "build", "when": "When the account is large and needs a full plan around the map" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "When any message or brief states a fact about a prospect, so it has a dated source" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before templates are loaded, to catch typos and a name or company spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "revops-specialist", "when": "When routing, scoring or stages must be built into the CRM, not kept on a sheet" },
+    { "role": "email-marketing-specialist", "when": "When sending set-up, list health or inbox placement is the real problem" },
+    { "role": "sales-enablement-specialist", "when": "When reps need battlecards, call coaching or a playbook behind the scripts" },
+    { "role": "demand-generation-manager", "when": "When outbound needs content, ads or events working alongside it" },
+    { "role": "compliance-specialist", "when": "When outreach enters a new country or uses calls and texts with strict consent rules" },
+    { "role": "market-research-analyst", "when": "When the ideal customer profile needs outside market data, not only past deals" }
+  ],
+  "gaps": [
+    "No library item checks outreach against email, call and text rules by country, including do-not-call lists",
+    "No library item writes gatekeeper lines or a set of voicemail drops as its own piece",
+    "No library item writes meeting confirmations, reminders and a no-show recovery message",
+    "No library item writes the hand-off note from the person who booked the meeting to the closer",
+    "No library item sets speed-to-lead targets and routing rules by enquiry source",
+    "No library item reads outbound results by step: reply rate, positive replies, meetings booked and held",
+    "No library item writes first replies for web chat, missed calls and call-backs",
+    "No library item plans a team calling session with dial, connect and booking targets",
+    "No library item plans text or WhatsApp outreach to leads with consent checks",
+    "No library item plans how fast to raise cold email volume on a new sending domain"
+  ]
+}

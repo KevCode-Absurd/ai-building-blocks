@@ -1,0 +1,299 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "proposal-writer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "commercial-proposal",
+      "task": "Write a commercial proposal for one deal",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/client-proposal", "use": "build", "when": "When you have call notes, the buyer's brief and the price list and need the full proposal" },
+        { "ref": "library:turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature", "type": "workflow", "use": "brief", "when": "When you start from a sales call and want the follow-up, costing, margin check and dates in order" },
+        { "ref": "library:pricing-model-designer", "type": "skill", "use": "explore", "when": "When the buyer should choose between good, better and best options instead of one price" },
+        { "ref": "library:commodity-trap-checker", "type": "skill", "use": "check", "when": "When the buyer will line your offer up against cheaper ones, to see if it reads as the same thing" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to have a fresh reader go through it as the buyer and list what they would ask" },
+        { "ref": "library:barbara-minto", "type": "mind", "use": "think", "when": "When the proposal tells your story first and the buyer's question is answered on page four" }
+      ]
+    },
+    {
+      "id": "tender-answers",
+      "task": "Draft answers to tender and RFP questions",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/tender-and-rfp-answers", "use": "build", "when": "When the questions are listed and you must answer each from the client's own facts" },
+        { "ref": "library:rfp-response-builder", "type": "skill", "use": "brief", "when": "Before drafting, to sort requirements into must-have and scored and see where proof is thin" },
+        { "ref": "library:agency-sales-proposal-strategist", "type": "agent", "use": "explore", "when": "When you want a second outline that shows which win theme each section should carry" },
+        { "ref": "library:ten-percent-cutter", "type": "skill", "use": "build", "when": "When an answer is over the word limit and must lose words without losing a scored point" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before sign-off, so every number, certificate and client name in an answer has a dated source" },
+        { "ref": "library:william-zinsser", "type": "mind", "use": "think", "when": "When answers are padded and the marker has to dig for the point that earns the score" }
+      ]
+    },
+    {
+      "id": "bid-no-bid",
+      "task": "Decide whether to bid, with a scored bid or no-bid sheet",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/bid-no-bid-and-compliance-matrix", "use": "build", "when": "When a tender pack arrives and the client must decide if it is worth the writing time" },
+        { "ref": "library:rfp-response-builder", "type": "skill", "use": "check", "when": "When you want a second fit score and win-chance estimate from the buyer's own requirements" },
+        { "ref": "library:grant-and-bid-response-writer", "type": "skill", "use": "brief", "when": "When the client faces many small bids a week and needs fast go or no-go calls on each" },
+        { "ref": "library:strongest-objection-finder", "type": "prompt", "use": "check", "when": "When the team already wants to bid, to hear the three best reasons not to" }
+      ]
+    },
+    {
+      "id": "compliance-matrix",
+      "task": "Build a requirements and compliance matrix from the pack",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/bid-no-bid-and-compliance-matrix", "use": "build", "when": "When you must list every instruction and requirement with where it is answered and by whom" },
+        { "ref": "kit:workflows/tender-from-notice-to-submission", "use": "brief", "when": "When the matrix is the first step of a full bid and you need the later steps lined up" },
+        { "ref": "library:project-requirement-tracker", "type": "skill", "use": "build", "when": "When the requirements need owners and sign-off tracked through to the final check" },
+        { "ref": "library:summarizer", "type": "skill", "use": "brief", "when": "When the pack runs to hundreds of pages and you need each document cut to what matters first" }
+      ]
+    },
+    {
+      "id": "win-themes",
+      "task": "Agree win themes and the proof for each",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/win-themes-and-proof", "use": "build", "when": "After the bid decision and before writing, to fix two to five reasons the buyer should pick you" },
+        { "ref": "library:deal-win-reason-finder", "type": "prompt", "use": "brief", "when": "When the client cannot say why they win, to find it in notes on past won and lost deals" },
+        { "ref": "library:win-a-deal-against-a-named-rival", "type": "workflow", "use": "brief", "when": "When you know the incumbent or main rival and the themes must beat that one firm" },
+        { "ref": "library:social-proof-placer", "type": "skill", "use": "build", "when": "When you have testimonials and case studies and must pick which backs each theme and where" },
+        { "ref": "library:hardest-objections-answer-writer", "type": "skill", "use": "check", "when": "When the themes are drafted, to test them against the toughest doubts an evaluator would raise" },
+        { "ref": "library:gary-bencivenga", "type": "mind", "use": "think", "when": "When a theme is a boast with no proof a sceptical buyer would believe" }
+      ]
+    },
+    {
+      "id": "executive-summary",
+      "task": "Write the executive summary a decision maker reads first",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/executive-summary", "use": "build", "when": "When the answers are drafted and you need the one or two pages that carry the whole case" },
+        { "ref": "library:agency-sales-proposal-strategist", "type": "agent", "use": "explore", "when": "When you want a second five-part summary draft to compare with your own" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When the source is a long technical answer set and you need the answer and the numbers up front" },
+        { "ref": "library:overstuffed-draft-cutter", "type": "skill", "use": "check", "when": "When the summary tries to say everything, to name the one idea and cut what fights it" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When you have two or three summary drafts and want a fresh reader to pick one" },
+        { "ref": "library:barbara-minto", "type": "mind", "use": "think", "when": "When the summary needs the answer first and the reasons grouped under it" }
+      ]
+    },
+    {
+      "id": "security-questionnaire",
+      "task": "Answer a security or vendor questionnaire",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/tender-and-rfp-answers", "use": "build", "when": "When a buyer sends a questionnaire and each answer must come from the client's real controls" },
+        { "ref": "library:prepare-a-vendor-security-questionnaire-response", "type": "workflow", "use": "build", "when": "When you need a sourced draft, an evidence index and a list of questions the team must answer" },
+        { "ref": "library:agency-security-compliance-auditor", "type": "agent", "use": "check", "when": "Before claiming a standard is met, to see the gaps against SOC 2 or ISO 27001" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before sending, so every yes in the form points to a policy or record with a date" }
+      ]
+    },
+    {
+      "id": "grant-plan",
+      "task": "Plan a grant bid: funder fit, outcomes, measures and budget",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/grant-application", "use": "brief", "when": "When a funder's call is open and you must plan the application against its own criteria" },
+        { "ref": "library:nonprofit-grant-funder-researcher", "type": "skill", "use": "brief", "when": "When the client has a programme but no funder yet, to shortlist funders with fit and dates" },
+        { "ref": "library:nonprofit-program-outcome-planner", "type": "skill", "use": "build", "when": "When the funder asks how activities lead to change and nothing is mapped" },
+        { "ref": "library:nonprofit-program-measurement-planner", "type": "skill", "use": "build", "when": "When the form asks how results will be measured and reported, and by whom" },
+        { "ref": "library:nonprofit-operating-budget-planner", "type": "skill", "use": "build", "when": "When the budget page needs programme costs and shared costs split in a way a funder accepts" }
+      ]
+    },
+    {
+      "id": "grant-draft",
+      "task": "Draft a grant application or letter of inquiry",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/grant-application", "use": "build", "when": "When the plan is agreed and each section must be written to the funder's headings and limits" },
+        { "ref": "library:nonprofit-grant-proposal-writer", "type": "skill", "use": "explore", "when": "When you want a second draft built straight from the funder rules, programme facts and budget" },
+        { "ref": "library:agency-grant-writer", "type": "agent", "use": "build", "when": "When the funder wants a short letter of inquiry first, with a list of claims to prove" },
+        { "ref": "library:research-grant-proposal-coach", "type": "skill", "use": "check", "when": "When it is a research grant, to critique aims and check the agency's rules" },
+        { "ref": "library:ten-percent-cutter", "type": "skill", "use": "build", "when": "When a section is over the character limit in the funder's portal" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before submission, to have a fresh reader score the draft as the funder's assessor would" }
+      ]
+    },
+    {
+      "id": "freelance-bid-replies",
+      "task": "Write short replies to freelance job posts",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/freelance-bid-reply", "use": "build", "when": "When you paste a job post from a marketplace and need a short reply that shows fit fast" },
+        { "ref": "library:capability-pitch-letter-writer", "type": "skill", "use": "explore", "when": "When you want a different shape to try: a numbered offer that ends in a proof you will run" },
+        { "ref": "library:human-sounding-reply-writer", "type": "skill", "use": "build", "when": "When the replies read like a template and the client skims past them" },
+        { "ref": "library:ten-percent-cutter", "type": "skill", "use": "build", "when": "When a bid runs long and the client will only read the first three lines" },
+        { "ref": "library:claim-and-proof-matcher", "type": "skill", "use": "check", "when": "Before sending, to see which lines in the reply the freelancer cannot back with past work" }
+      ]
+    },
+    {
+      "id": "freelance-profile",
+      "task": "Write a freelance profile, portfolio blurbs and gig listings",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/freelance-profile-and-packages", "use": "build", "when": "When a marketplace profile is new or undersells the freelancer and needs a headline and overview" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the profile headline is flat, to compare several honest angles" },
+        { "ref": "library:portfolio-case-study-writer", "type": "skill", "use": "build", "when": "When past projects are only notes and each needs a short write-up of role, work and result" },
+        { "ref": "library:testimonial-request-writer", "type": "skill", "use": "build", "when": "When the freelancer has no reviews yet and must ask past clients for a few lines" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the profile is drafted, to read it as a client who has ten other profiles open" }
+      ]
+    },
+    {
+      "id": "packages-and-price",
+      "task": "Design service packages and the price section",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/freelance-profile-and-packages", "use": "build", "when": "When a freelancer needs three service packages with clear limits for a gig listing" },
+        { "ref": "library:pricing-model-designer", "type": "skill", "use": "explore", "when": "When you need good, better and best tiers with a reason for each price point" },
+        { "ref": "library:offer-designer", "type": "skill", "use": "build", "when": "When the offer needs value framing, payment terms and a name, not only a number" },
+        { "ref": "library:value-ladder-planner", "type": "skill", "use": "brief", "when": "When a small first job should lead to bigger work and you need the steps planned" },
+        { "ref": "library:guarantee-designer", "type": "skill", "use": "build", "when": "When the buyer fears the risk and a guarantee the client can afford would settle it" },
+        { "ref": "library:alex-hormozi", "type": "mind", "use": "think", "when": "When the packages differ only by hours and none makes the result feel more certain" }
+      ]
+    },
+    {
+      "id": "freelance-quote",
+      "task": "Price and quote a freelance project",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:prepare-your-first-freelance-project-quote", "type": "workflow", "use": "build", "when": "When a project brief arrives and you need scope, price assumptions and contract risks in one quote" },
+        { "ref": "library:hourly-rate-calculator", "type": "skill", "use": "brief", "when": "Before quoting, to turn target pay, costs and billable hours into an hourly and day rate" },
+        { "ref": "library:client-fee-and-cap-setter", "type": "skill", "use": "build", "when": "When you need a fee, billing terms and a limit on how much one client can take up" },
+        { "ref": "library:quarterly-client-rate-reviewer", "type": "agent", "use": "check", "when": "When past invoices exist, to see each client's real rate before you quote the next job" }
+      ]
+    },
+    {
+      "id": "scope-and-sow",
+      "task": "Write the scope, exclusions and statement of work",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/client-proposal", "use": "build", "when": "When the proposal needs what is in, what is out and what the buyer must supply, in plain words" },
+        { "ref": "library:contract-and-proposal-drafter", "type": "skill", "use": "build", "when": "When the buyer wants a separate statement of work with the usual clauses for the country" },
+        { "ref": "library:client-scope-decision-review-assistant", "type": "agent", "use": "check", "when": "When the buyer asks for extras after the proposal, to compare the request with the agreed scope" },
+        { "ref": "library:contract-risk-reviewer", "type": "skill", "use": "check", "when": "Before sending terms, to rate the clauses that could cost the client later" }
+      ]
+    },
+    {
+      "id": "terms-summary",
+      "task": "Summarise tender terms or a contract in plain words",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:contract-plain-summary", "type": "skill", "use": "build", "when": "When the client needs a two-minute read of the contract terms before deciding to bid" },
+        { "ref": "library:contract-and-term-sheet-reviewer", "type": "skill", "use": "check", "when": "When the buyer's terms look one-sided, to flag risky clauses and when to call a lawyer" },
+        { "ref": "library:review-a-contract-and-get-edits-and-a-plain-summary", "type": "workflow", "use": "build", "when": "When the client may ask for changes and needs clause edits plus a summary for their lawyer" }
+      ]
+    },
+    {
+      "id": "delivery-plan-section",
+      "task": "Write the delivery plan, timeline and risk section",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/tender-and-rfp-answers", "use": "build", "when": "When the buyer scores a method or delivery answer and it must match what the client can do" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When there are two real ways to deliver, to put both on a page with money and dates and pick one" },
+        { "ref": "library:agency-project-management-project-shepherd", "type": "agent", "use": "build", "when": "When the answer needs a plan with owners, dependencies and a risk list across several teams" },
+        { "ref": "library:project-risk-portfolio", "type": "skill", "use": "build", "when": "When the buyer asks for a risk register with scores and what you will do about each risk" }
+      ]
+    },
+    {
+      "id": "bid-calendar",
+      "task": "Plan the bid: calendar, owners and review points",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/tender-from-notice-to-submission", "use": "build", "when": "When a bid is a go and every step from questions deadline to upload needs a date and an owner" },
+        { "ref": "library:agency-project-management-project-shepherd", "type": "agent", "use": "build", "when": "When several people supply answers and you need a weekly status and a chase list" }
+      ]
+    },
+    {
+      "id": "review-draft",
+      "task": "Check a draft proposal against the buyer's brief",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/bid-no-bid-and-compliance-matrix", "use": "check", "when": "When the draft is done, to tick every requirement in the matrix against where it is answered" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When you want a fresh reader to go through the draft as the buyer with only the brief in hand" },
+        { "ref": "library:claim-and-proof-matcher", "type": "skill", "use": "check", "when": "When the draft makes claims, to see which are backed, which go too far and how to fix them" },
+        { "ref": "library:hardest-objections-answer-writer", "type": "skill", "use": "check", "when": "When the draft reads well to you, to find the objections it has not answered" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "build", "when": "When the draft is full of in-house terms the buyer's panel will not know" }
+      ]
+    },
+    {
+      "id": "answer-bank",
+      "task": "Build and maintain a reusable answer bank",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/weekly-opportunity-watch-and-answer-bank", "use": "build", "when": "Monthly, to add new answers, retire old ones and note which results each answer has earned" },
+        { "ref": "library:website-brand-brain-builder", "type": "skill", "use": "brief", "when": "When starting from nothing, to pull the client's services, customers and approved claims with sources" },
+        { "ref": "library:marketing-evidence-expiry-reviewer", "type": "skill", "use": "check", "when": "When stored answers quote dated numbers or certificates that may have run out" },
+        { "ref": "library:portfolio-case-study-writer", "type": "skill", "use": "build", "when": "When the bank needs short case studies written from project notes and results" },
+        { "ref": "library:turn-a-customer-interview-into-a-case-outline", "type": "workflow", "use": "build", "when": "When a customer has agreed to talk and you need a case outline and what they must approve" }
+      ]
+    },
+    {
+      "id": "opportunity-watch",
+      "task": "Find and screen tenders and grants worth chasing",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/weekly-opportunity-watch-and-answer-bank", "use": "build", "when": "Weekly, to scan the client's notice sources and screen what is new against the bid sheet" },
+        { "ref": "library:grant-and-bid-response-writer", "type": "skill", "use": "build", "when": "When you need a shortlist of open grants and bids with a go or no-go reason for each" },
+        { "ref": "library:nonprofit-grant-funder-researcher", "type": "skill", "use": "build", "when": "When the client is a nonprofit and needs funders matched to one programme and place" },
+        { "ref": "library:perplexity", "type": "tool", "use": "brief", "when": "When you must look up a buyer or funder and want answers with source links to check" }
+      ]
+    },
+    {
+      "id": "shortlist-presentation",
+      "task": "Write a shortlist presentation or demo script",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:pitch-arc-planner", "type": "skill", "use": "brief", "when": "When the buyer invites you to present and you need an outline that ends in a clear decision" },
+        { "ref": "library:sales-collateral-writer", "type": "skill", "use": "build", "when": "When you need the deck outline, a one-pager or a demo script for this one buyer" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the panel should see two shapes of the offer side by side, with money and dates" },
+        { "ref": "library:objection-answer-sheet-writer", "type": "skill", "use": "build", "when": "When the panel will ask hard questions and the presenters need an answer with proof for each" },
+        { "ref": "library:pitch-deck-checker-10-20-30", "type": "skill", "use": "check", "when": "When the deck is drafted, to check slide count, talk time and type size against the slot" }
+      ]
+    },
+    {
+      "id": "follow-up-and-negotiation",
+      "task": "Follow up a sent proposal and prepare the price talk",
+      "kind": "email",
+      "items": [
+        { "ref": "library:follow-up-email-sequence-writer", "type": "prompt", "use": "build", "when": "When a proposal has gone quiet and each follow-up needs a new reason and a stop rule" },
+        { "ref": "library:stalled-deal-indecision-checker", "type": "skill", "use": "brief", "when": "Before chasing, to work out if the buyer doubts you, is still comparing or fears a mistake" },
+        { "ref": "library:negotiation-prep-coach", "type": "skill", "use": "build", "when": "When the buyer asks for a lower price and the client needs an opening, questions and a fallback" },
+        { "ref": "library:chris-voss", "type": "mind", "use": "think", "when": "When the buyer pushes on price and the client is about to give way without asking anything back" }
+      ]
+    },
+    {
+      "id": "debrief",
+      "task": "Debrief a win or loss and update the bid sheet",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/debrief-and-lessons", "use": "build", "when": "After a result, to turn the buyer's scores and feedback into fixes for answers and the bid sheet" },
+        { "ref": "library:monthly-lost-deal-reviewer", "type": "agent", "use": "build", "when": "When several bids were lost in a month and you want the real reasons across them" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before any bid leaves, so each fact has a dated source, a rewrite or is cut" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before upload, to catch typos and a buyer or product name spelt two ways" },
+    { "ref": "library:plain-english-editor", "type": "skill", "use": "build", "when": "When any section reads like a brochure and needs plain words a marker can score" }
+  ],
+  "helpers": [
+    { "role": "pricing-strategist", "when": "When the price model, discounts or tiers need real work before they go in a bid" },
+    { "role": "sales-engineer", "when": "When the buyer wants a demo, a pilot plan or deep technical and security answers" },
+    { "role": "fundraising-specialist", "when": "When the grant is part of a wider funding plan with funder research and reporting" },
+    { "role": "cybersecurity-specialist", "when": "When a security questionnaire shows real control gaps that must be fixed, not worded" },
+    { "role": "presentation-designer", "when": "When the proposal or shortlist deck must be laid out to a design standard" },
+    { "role": "editor", "when": "When a long bid from many authors needs one voice and a final proofread" }
+  ],
+  "gaps": [
+    "No library item covers public tender rules by country: UK Procurement Act notices, US federal solicitations or EU forms",
+    "No library item scores a draft answer against the buyer's published marking scheme and weights",
+    "No library item writes social value, sustainability or equality answers for a tender",
+    "No library item writes freelance marketplace profiles, gig listings or bid replies; only the kit prompts cover them",
+    "No library item stores, versions and retires past answers as an answer bank",
+    "No library item builds a bid calendar with owners and review rounds; a general project agent stands in",
+    "No library item writes team CVs and bios to a bid's format",
+    "No library item prices a tender: a price schedule, day rates and the margin at each discount",
+    "No library item checks a submission against portal rules: file names, formats, page limits and signatures",
+    "No library item makes two or three clearly different proposal structures or cover pages to compare",
+    "No library item watches tender and grant notice sites for a client's keywords"
+  ]
+}

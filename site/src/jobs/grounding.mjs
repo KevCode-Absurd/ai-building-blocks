@@ -2,8 +2,8 @@
 // Deterministic and model-free. One source for prepare_job_context, the start_job questions,
 // the production gate, the craft rubric and the get_skill preamble. Nothing here stores client data:
 // capture files live in the user's project under context/.
-// The shared lists (WORD_BUDGETS, PROVEN_LEVERS, CANDIDATE_AXES, CANDIDATES, COMPLETENESS, CONTEXT_LEVELS, CONTEXT_NEED
-// and the craft weights) are also in marketplace/src/modules/packs/families.ts; test/jobs-grounding.test.mjs fails
+// The shared lists (WORD_BUDGETS, PROVEN_LEVERS, CANDIDATE_AXES, CANDIDATES, CRAFT_METHODS, COMPLETENESS, CONTEXT_LEVELS,
+// CONTEXT_NEED and the craft weights) are also in marketplace/src/modules/packs/families.ts; test/jobs-grounding.test.mjs fails
 // when the two copies differ.
 
 import { intakeQuestions } from './intake-questions.mjs';
@@ -161,6 +161,29 @@ export const CANDIDATES = Object.freeze({
   other: 'When the approach is open, two short versions of the part that decides the outcome.',
 });
 export const candidatesFor = kind => CANDIDATES[kind] ?? CANDIDATES.other;
+/**
+ * The craft skill for a step, by its plain name: [slug, name]. Every agent's toolbox carries these, so the method names
+ * them and never sends anyone to search. The address is where the same skill lives in the library.
+ */
+export const SKILL_ADDRESS = 'https://useaiblocks.com/skills/';
+export const CRAFT_METHODS = Object.freeze({
+  candidates: Object.freeze({
+    web_page: ['make-three-first-screens', 'Make three first screens'],
+    ad_creative: ['make-ad-concept-spread', 'Make an ad concept spread'],
+    email: ['three-series-arcs', 'Three series arcs'],
+    strategy: ['two-plan-shapes', 'Two plan shapes'],
+    plan: ['two-plan-shapes', 'Two plan shapes'],
+  }),
+  look: ['make-design-directions', 'Make three design directions'],
+  choose: ['outside-chooser', 'Outside chooser'],
+  check: ['clients-eye-check', 'Client\'s-eye check'],
+  truth: ['claim-source-trace', 'Claim source trace'],
+  buyer: ['buyer-can-act-check', 'Buyer can act check'],
+});
+/** A craft skill as the method names it: its plain name, where the toolbox copy came from, and no instruction to search. */
+export const craftMethod = row => row ? { name: row[1], slug: row[0], address: SKILL_ADDRESS + row[0], where: 'Your toolbox has it.' } : null;
+/** The craft skill that makes this kind's candidates, or null when the kind has none. */
+export const candidateMethod = kind => craftMethod(CRAFT_METHODS.candidates[kind]);
 /**
  * Format completeness by kind: what the maker ticks before hand-over. The same blind test marked down ads with no
  * description or price, emails with no product, and plans whose totals did not add up.
@@ -353,6 +376,8 @@ export const CAPTURE_TOOLS = Object.freeze([
   { file: 'capture-brand-dna.mjs', skill: 'brand-dna-capture', path: 'scripts/capture-brand-dna.mjs', use: 'First choice. Node + Playwright against the live site URL; writes context/brand-dna.json and context/screenshots/.' },
   { file: 'brand-dna-snippet.js', skill: 'brand-dna-capture', path: 'scripts/brand-dna-snippet.js', use: 'Second choice. Paste into any browser tool or devtools console on the live site; save its JSON as context/brand-dna.json.' },
   { file: 'check-brand-fidelity.mjs', skill: 'brand-fidelity-check', path: 'scripts/check-brand-fidelity.mjs', use: 'CHECK step for web pages: compares the built page with context/brand-dna.json.' },
+  // The agents app does not serve this one yet, so it has no agents.useaiblocks.com address.
+  { file: 'compare-candidates.mjs', skill: 'make-three-first-screens', path: 'scripts/compare-candidates.mjs', agents_app: false, use: 'CANDIDATES step, for work a buyer sees: puts 2 to 4 candidates (HTML, a URL, SVG or images) side by side under the labels A, B, C, so a fresh reviewer can look and choose. Use --shuffle, and keep compare.key.json from the reviewer until they have picked.' },
 ]);
 export const MARKETPLACE_TOOLS_BASE = 'https://agents.useaiblocks.com/tools/';
 export const GJP_SKILLS = Object.freeze({ protocol: 'grounded-job-protocol', capture: 'brand-dna-capture', fidelity: 'brand-fidelity-check', defaults: 'ai-default-patterns' });
@@ -560,8 +585,9 @@ const short = (value, max) => value.length <= max ? value : value.slice(0, max -
 /** The questions to ask once, in one message: the one list for this kind of job (intake-questions.mjs). Each row is
  *  { id, question, default }, plus `why` when the list gives one. A question the request already answers is dropped. */
 const askQuestions = (kind, family, request) => intakeQuestions({ deliverableKind: kind, family, request }).map(row => ({ id: row.id, question: row.question, default: row.default, ...(row.why ? { why: row.why } : {}) }));
-/** Room kept in the brief for the AVOID line, so a long question list can never push it out. */
-const AVOID_RESERVE = 140;
+/** Room kept in the brief for the AVOID line, so a long question list can never push it out: its opening words plus one
+ *  default at full length. */
+const AVOID_RESERVE = 150;
 /** prepare_job_context: a short brief for the model plus a structured annex. The brief names the annex parts to open. */
 export function prepareJobContext(input = {}, context = {}) {
   const request = String(input.request ?? '').trim();
@@ -571,11 +597,12 @@ export function prepareJobContext(input = {}, context = {}) {
   const patterns = normalizePatterns(context.patterns), defaults = defaultsFor(kind, patterns);
   const questions = askQuestions(kind, family, request).map(q => ({ ...q })), rubric = craftRubric(kind), gates = gatesFor(kind), need = groundingRequirement(kind), levers = leversFor(kind);
   const complete = completenessFor(kind), spec = specSheet({ request, kind, mode, kindSource: resolved.source }), selling = BRAND_KINDS.includes(kind);
-  const audit = family === 'audit_analysis';
+  const audit = family === 'audit_analysis', method = candidateMethod(kind);
   const steps = GJP_STEPS.map(step => ({ ...step, do: audit && AUDIT_STEP_OVERRIDES[step.id] ? AUDIT_STEP_OVERRIDES[step.id] : step.do }));
   const scripts = CAPTURE_TOOLS.filter(t => BRAND_KINDS.includes(kind) || (t.skill === 'brand-dna-capture' && family === 'strategy_plan')).map(tool => {
     const resolvedTool = list(context.scripts).find(s => s.file === tool.file);
-    return { ...tool, get_skill: { slug: tool.skill, response_format: 'detailed' }, get_resource: { slug: resolvedTool?.slug ?? tool.skill, path: resolvedTool?.path ?? tool.path, revision_sha256: resolvedTool?.revision_sha256 ?? null }, resource_url: resolvedTool?.resource_url ?? null, marketplace_url: MARKETPLACE_TOOLS_BASE + tool.file, status: resolvedTool ? 'PUBLISHED' : 'CHECK_GET_SKILL' };
+    const { agents_app, ...row } = tool;
+    return { ...row, get_skill: { slug: tool.skill, response_format: 'detailed' }, get_resource: { slug: resolvedTool?.slug ?? tool.skill, path: resolvedTool?.path ?? tool.path, revision_sha256: resolvedTool?.revision_sha256 ?? null }, resource_url: resolvedTool?.resource_url ?? null, marketplace_url: tool.agents_app === false ? null : MARKETPLACE_TOOLS_BASE + tool.file, status: resolvedTool ? 'PUBLISHED' : 'CHECK_GET_SKILL' };
   });
   const ground = need.data_snapshot ? 'GROUND what the tests need: pull the real account or data at read level into context/ (for example context/data-snapshot.json) with source and date range.'
     : need.brand_dna ? `GROUND what the tests need: ${siteUrl ? `capture ${short(siteUrl, 120)}` : 'get the live site URL and capture it'} into context/brand-dna.json. Check what is sold is live, in stock, at that price and link.`
@@ -592,7 +619,7 @@ export function prepareJobContext(input = {}, context = {}) {
     'TRUTH: every fact a reader sees needs a dated source; cut what has none, never flag it.',
   ];
   const tail = [
-    `CANDIDATES: ${candidatesFor(kind)}${selling ? ` Differ on two of: ${CANDIDATE_AXES.join(', ')}.` : ''} A fresh reviewer picks.`,
+    `CANDIDATES: ${candidatesFor(kind)}${selling ? ` Differ on two of: ${CANDIDATE_AXES.join(', ')}.` : ''} A fresh reviewer picks.${method ? ` Your toolbox has "${method.name}".` : ''}`,
     `BUILD: ${build}${ticks.length ? ` Tick ${ticks.join(' and ')}.` : ''}`,
     'CHECK: a fresh reviewer with only the brief, the work and the facts answers each test and marks each claim sourced or not. Fix, cut, stop.',
     `HAND-OVER: the work first, opened by 3 to 5 lines. ${WORD_BUDGETS[kind] ?? WORD_BUDGETS.other} Nothing internal; detail in an appendix, never in a file the client does not have.`,
@@ -626,9 +653,10 @@ export function prepareJobContext(input = {}, context = {}) {
       artifacts: { spec_sheet: 'context/spec.md', facts: 'context/facts.md', ...(need.brand_dna ? { brand_dna: 'context/brand-dna.json', screenshots: 'context/screenshots/' } : {}), ...(need.data_snapshot ? { data_snapshot: 'context/data-snapshot.json' } : {}), ...(need.taste_brief ? { taste_brief: 'context/taste-brief.md' } : {}), working_notes: 'DECISIONS.md' },
       taste_brief: { path: 'context/taste-brief.md', required_before_production: need.taste_brief, sections: [...TASTE_BRIEF_SECTIONS], fill_from: 'The capture, the answers to annex.questions and the references you find. Ask nothing more.' },
       production_gate: { requires: need, report_as: need.data_snapshot ? { grounding: { data_snapshot: { path: 'context/data-snapshot.json', sha256: '<sha256>', source: '<account or connector>', captured_at: '<ISO date>' } } } : need.brand_dna ? { grounding: { brand_dna: { path: 'context/brand-dna.json', sha256: '<sha256>', source: siteUrl ?? '<site URL>', captured_at: '<ISO date>', method: 'capture-brand-dna.mjs' }, taste_brief: { path: 'context/taste-brief.md', sha256: '<sha256>', brand_codes: ['<code>'], references_admired: ['<ref>', '<ref>'], reference_avoid: ['<ref>'], defaults_to_avoid: defaults.slice(0, 3).map(d => d.id), conventions_break: [] } } } : null, note: 'start_job and advance_job check this structure before PRODUCE. It is a host report, not proof of capture.' },
-      buyer_can_act: selling ? { check: 'Before you build, confirm the thing being sold is live, in stock in the sizes or variants that matter, at the stated price, at the link you will use.', if_not: 'Make the call yourself, build for the option that works, and say so in the first line of the hand-over.' } : null,
-      candidates: { make: candidatesFor(kind), as: 'Real work, not descriptions.', axes: selling ? [...CANDIDATE_AXES] : [], differ_on_at_least: selling ? 2 : null, reject: 'Candidates that differ only in colour, crop, wording or style label.', patch_mode: mode.mode === 'patch' ? 'Each candidate is the live asset as you would change it, with its ranked edits and their evidence.' : null },
-      reviewer: { who: REVIEWER.who, choose: { ...REVIEWER.choose }, clients_eye: { ...REVIEWER.clients_eye } },
+      truth: { rule: 'Every fact a reader sees needs a dated source. Cut what has none, or rewrite it to what the source says. Never flag it and leave it in.', method: craftMethod(CRAFT_METHODS.truth) },
+      buyer_can_act: selling ? { check: 'Before you build, confirm the thing being sold is live, in stock in the sizes or variants that matter, at the stated price, at the link you will use.', if_not: 'Make the call yourself, build for the option that works, and say so in the first line of the hand-over.', method: craftMethod(CRAFT_METHODS.buyer) } : null,
+      candidates: { make: candidatesFor(kind), ...(method ? { method } : {}), ...(['web_page', 'ad_creative'].includes(kind) ? { when_the_look_is_open: craftMethod(CRAFT_METHODS.look) } : {}), ...(selling ? { compare_with: 'compare-candidates.mjs (annex.capture.tools): puts the candidates side by side under blind labels for the reviewer.' } : {}), as: 'Real work, not descriptions.', axes: selling ? [...CANDIDATE_AXES] : [], differ_on_at_least: selling ? 2 : null, reject: 'Candidates that differ only in colour, crop, wording or style label.', patch_mode: mode.mode === 'patch' ? 'Each candidate is the live asset as you would change it, with its ranked edits and their evidence.' : null },
+      reviewer: { who: REVIEWER.who, choose: { ...REVIEWER.choose, method: craftMethod(CRAFT_METHODS.choose) }, clients_eye: { ...REVIEWER.clients_eye, method: craftMethod(CRAFT_METHODS.check) } },
       craft_floor: [...CRAFT_RULES],
       completeness: complete,
       craft_rubric: rubric, gates,

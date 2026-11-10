@@ -123,7 +123,7 @@ export const CAPTURE: Record<DeliverableFamily, string[]> = {
 /**
  * The shared method lists. site/src/jobs/grounding.mjs holds the same lists under the same names, and
  * site/test/jobs-grounding.test.mjs fails when the two copies differ: WORD_BUDGETS, PROVEN_LEVERS, CANDIDATE_AXES,
- * CANDIDATES, COMPLETENESS, CONTEXT_LEVELS, CONTEXT_NEED and the craft weights.
+ * CANDIDATES, CRAFT_METHODS, COMPLETENESS, CONTEXT_LEVELS, CONTEXT_NEED and the craft weights.
  */
 
 /** What candidates must differ on: at least two of these. A new colour, crop or wording is not a candidate. */
@@ -146,6 +146,33 @@ export const CANDIDATES: Record<DeliverableFamily, string> = {
   ops_doc: "When the process is open, two outlines of the steps, with what each costs the team.",
   other: "When the approach is open, two short versions of the part that decides the outcome.",
 };
+
+/**
+ * The craft skill for a step, by its plain name: [slug, name]. Every agent's toolbox carries these, so the method names
+ * them and never sends anyone to search. The address is where the same skill lives in the library. The same list is in
+ * site/src/jobs/grounding.mjs.
+ */
+export const SKILL_ADDRESS = "https://useaiblocks.com/skills/";
+export const CRAFT_METHODS = {
+  candidates: {
+    web_page: ["make-three-first-screens", "Make three first screens"],
+    ad_creative: ["make-ad-concept-spread", "Make an ad concept spread"],
+    email: ["three-series-arcs", "Three series arcs"],
+    strategy: ["two-plan-shapes", "Two plan shapes"],
+    plan: ["two-plan-shapes", "Two plan shapes"],
+  } as Partial<Record<DeliverableFamily, [slug: string, name: string]>>,
+  look: ["make-design-directions", "Make three design directions"],
+  choose: ["outside-chooser", "Outside chooser"],
+  check: ["clients-eye-check", "Client's-eye check"],
+  truth: ["claim-source-trace", "Claim source trace"],
+  buyer: ["buyer-can-act-check", "Buyer can act check"],
+};
+
+/** "Use \"Make three first screens\": your toolbox has it (address)." for a family whose candidates have a craft skill, else "". */
+export function candidateMethodLine(family: DeliverableFamily): string {
+  const row = CRAFT_METHODS.candidates[family];
+  return row ? ` Use "${row[1]}": your toolbox has it (${SKILL_ADDRESS}${row[0]}).` : "";
+}
 
 /**
  * Format completeness by family: what the maker ticks before hand-over. The same blind test marked down ads with no
@@ -307,7 +334,8 @@ const SLICES: Record<DeliverableFamily, { taste: string; diverge: string; build:
   },
 };
 
-export function familySlice(family: DeliverableFamily) { return SLICES[family]; }
+/** The family's stage slice. Its candidates line names the craft skill that makes them, where one exists. */
+export function familySlice(family: DeliverableFamily) { const slice = SLICES[family]; return { ...slice, diverge: slice.diverge + candidateMethodLine(family) }; }
 
 /**
  * Word budgets for the hand-over, by family (the same as site/src/jobs/grounding.mjs WORD_BUDGETS). The 9 Nov 2026

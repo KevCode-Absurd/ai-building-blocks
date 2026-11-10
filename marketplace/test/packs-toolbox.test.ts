@@ -308,21 +308,24 @@ test("each agent's own kind of work comes first; a generalist keeps the curator'
 
 test("a long toolbox keeps every task, trims each to its best few items and moves the rest to More", async () => {
   const base = fixture("graphic-designer");
-  // 24 tasks of 7 items: far past the word budget.
-  const tasks = Array.from({ length: 24 }, (_, i) => ({ ...base.tasks[i % 2], id: `task-${i + 1}`, task: `${base.tasks[i % 2].task} ${i + 1}` }));
+  // 24 tasks, the fixture's 8 three times over: far past the word budget.
+  const tasks = Array.from({ length: 24 }, (_, i) => ({ ...base.tasks[i % 8], id: `task-${i + 1}`, task: `${base.tasks[i % 8].task} ${i + 1}` }));
   const pack = await build("lloyd-print-layout", { kit: kitOf("graphic-designer", { ...base, tasks }) });
   const md = file(pack, "toolbox.md")!;
   for (const t of tasks) assert.ok(md.includes(`### ${t.task}\n`), t.task);
   const main = md.slice(0, md.indexOf("\n## More"));
   assert.ok(md.includes("\n## More\n"), "the rest are listed under More");
-  // Each task keeps its best 4, with something to build with, something to explore and something to check with.
+  // The agent's own tasks keep every item. Each other task keeps its best 4: something to build with, something
+  // to explore and something to check with.
   const section = (title: string) => main.slice(main.indexOf(`### ${title}\n`)).split("\n### ")[0].split("\n## ")[0];
+  const mine = new Set(pack.toolbox!.summary.tasks.filter(t => t.mine).map(t => t.id));
+  assert.ok(mine.size > 0 && mine.size < tasks.length);
   for (const t of tasks) {
     const part = section(t.task);
-    assert.equal((part.match(/^- /gm) ?? []).length, 4, t.task);
-    for (const use of ["build", "explore", "check"]) assert.match(part, new RegExp(`\\(${use}, `), `${t.task}: ${use}`);
+    assert.equal((part.match(/^- /gm) ?? []).length, mine.has(t.id) ? t.items.length : Math.min(4, t.items.length), t.task);
+    for (const use of ["build", "explore", "check"] as const) if (t.items.some(i => i.use === use)) assert.match(part, new RegExp(`\\(${use}, `), `${t.task}: ${use}`);
   }
-  // 24 tasks of 4 still run past the budget: the pack builds, and the linter says the list needs trimming.
+  // 24 tasks of up to 4 still run past the budget: the pack builds, and the linter says the list needs trimming.
   assert.ok(wordCount(main) > TOOLBOX_WORD_BUDGET);
   assert.ok(lintNotes(pack).some(n => n.rule === "toolbox_long"));
   assert.match(md, /## More\n\nMore items for the tasks above\. Open one when the first choices do not fit\.\n\n- /);

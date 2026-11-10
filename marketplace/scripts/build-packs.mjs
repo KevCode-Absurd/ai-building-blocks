@@ -438,7 +438,14 @@ const mb = n => (n / 1024 / 1024).toFixed(1);
 for (const w of [...warnings, ...buildNotes]) console.warn(`build-packs: note: ${w}`);
 // Roles with no toolbox yet come as one line, not one per role.
 const withoutToolbox = [...lintNoteSet].filter(([, rule]) => rule === "no_toolbox").map(([m]) => m.split(":")[0]).sort();
-for (const [message, rule] of lintNoteSet) if (rule !== "no_toolbox") console.warn(`build-packs: note: ${message}`);
+for (const [message, rule] of lintNoteSet) if (rule === "toolbox_left_out") console.warn(`build-packs: note: ${message}`);
+// A long toolbox.md comes as one line per role, with its longest agent.
+const longest = new Map();
+for (const [message, rule] of lintNoteSet) {
+  const m = rule === "toolbox_long" ? /^([^:]+): toolbox\.md is (\d+) words/.exec(message) : null;
+  if (m && Number(m[2]) > (longest.get(m[1])?.words ?? 0)) longest.set(m[1], { words: Number(m[2]), message });
+}
+for (const { message } of longest.values()) console.warn(`build-packs: note: ${message}`);
 if (withoutToolbox.length) console.warn(`build-packs: note: ${withoutToolbox.length} role(s) have no toolbox.json yet, so their toolbox.md is the plain list of the pack's skills: ${withoutToolbox.slice(0, 12).join(", ")}${withoutToolbox.length > 12 ? `, and ${withoutToolbox.length - 12} more` : ""}`);
 const sharedCount = prefix => [...shared.keys()].filter(u => u.startsWith(prefix)).length;
 console.log(`build-packs: ${index.length} agents: ${index.length * 2} zips (${mb(zipBytes)} MB), browsable copies ${mb(browseBytes)} MB (shared: ${sharedCount("/packs/roles/")} role files, ${sharedCount("/packs/jobs/")} job skills, ${sharedCount("/packs/mega/")} mega kit files); ${fileCount} files in ${path.relative(ROOT, OUT) || "."}`);

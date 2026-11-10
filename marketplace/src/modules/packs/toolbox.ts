@@ -506,12 +506,13 @@ function keepBest<T extends { use: ToolboxUse }>(items: T[], cap: number): { kep
 }
 
 /**
- * How many items a task keeps in the main list, tried in order until toolbox.md fits its word budget: [the agent's
- * own tasks, the other tasks]. No task goes below its best 4: past that, the file runs a little long (the linter
- * notes it) rather than hiding the "when" of items the agent needs to choose well.
+ * How many items a task keeps in the main list when toolbox.md runs past its word budget. The agent's own tasks keep
+ * every item; each other task keeps its best 4 and the rest move to "More". No task goes below 4: past that, the file
+ * runs long (the linter notes it) rather than hiding the "when" of items the agent needs to choose well. A full
+ * toolbox of 23 tasks comes to about 2,300 words this way.
  */
 export const TASK_ITEMS_FLOOR = 4;
-const CAPS: [number, number][] = [[99, 99], [99, TASK_ITEMS_FLOOR], [TASK_ITEMS_FLOOR, TASK_ITEMS_FLOOR]];
+const CAPS: [number, number][] = [[99, 99], [99, TASK_ITEMS_FLOOR]];
 
 /**
  * toolbox.md and the item files for one pack. Tasks that match what this agent is hired for come first; when the

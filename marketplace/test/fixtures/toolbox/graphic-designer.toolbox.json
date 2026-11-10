@@ -1,0 +1,115 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "graphic-designer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "social-carousel",
+      "task": "Make a carousel or a set of social posts",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:skills/social-graphics-spec", "use": "build", "when": "When you need exact sizes, type and safe areas for each post" },
+        { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "Before you settle a layout, to get three hand-made alternatives" },
+        { "ref": "library:story-carousel-ad-writer", "type": "skill", "use": "brief", "when": "When the slides must tell one story from first frame to last" },
+        { "ref": "library:reusable-reel-cover-recipe-builder", "type": "skill", "use": "build", "when": "When a series needs covers that look like one family" },
+        { "ref": "kit:skills/contrast-and-legibility-check", "use": "check", "when": "Before hand-over, to test every slide reads on a phone" },
+        { "ref": "library:david-carson", "type": "mind", "use": "think", "when": "When every option looks like a template" },
+        { "ref": "kit:workflows/monthly-social-graphics-batch", "use": "build", "when": "When the job is a month of posts, not one set" }
+      ]
+    },
+    {
+      "id": "event-poster",
+      "task": "Design a poster or flyer for an event or an offer",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:skills/design-brief-and-copy-deck", "use": "brief", "when": "First, to fix the one message, the reader and every word on the piece" },
+        { "ref": "library:one-symbol-concept-finder", "type": "skill", "use": "explore", "when": "When the poster needs one idea a passer-by gets in a second" },
+        { "ref": "library:type-led-poster-planner", "type": "skill", "use": "explore", "when": "When there are no usable photos and type must carry it" },
+        { "ref": "library:make-a-readable-event-poster", "type": "workflow", "use": "build", "when": "When you want a guided run from source files to a checked layout" },
+        { "ref": "kit:skills/print-layout-spec", "use": "build", "when": "When the layout must become a spec a printer can follow" },
+        { "ref": "library:plain-page-type-checker", "type": "skill", "use": "check", "when": "Before hand-over, to test type size and spacing at reading distance" },
+        { "ref": "library:paula-scher", "type": "mind", "use": "think", "when": "When the type is correct but the poster has no voice" }
+      ]
+    },
+    {
+      "id": "print-ready-file",
+      "task": "Get a layout ready for the printer",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/print-layout-spec", "use": "build", "when": "When you set bleed, trim, safe area, colour mode and paper" },
+        { "ref": "kit:prompts/printer-file-preflight", "use": "check", "when": "Before a file goes to print, to catch what printers reject" },
+        { "ref": "kit:workflows/brief-to-print-ready", "use": "build", "when": "When one job runs from brief to a print-ready hand-over" },
+        { "ref": "kit:prompts/handoff-build-notes", "use": "build", "when": "When someone else will build the file from your spec" }
+      ]
+    },
+    {
+      "id": "menu-layout",
+      "task": "Lay out a menu or a price list",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/menu-layout-plan", "use": "build", "when": "When you plan sections, order and prices for a menu" },
+        { "ref": "library:page-grid-and-type-planner", "type": "skill", "use": "brief", "when": "Before layout, to set the grid, a short type list and white space" },
+        { "ref": "library:font-pair-shortlist-maker", "type": "prompt", "use": "explore", "when": "When you need a few font pairs to compare, not one guess" },
+        { "ref": "library:plain-page-type-checker", "type": "skill", "use": "check", "when": "Before hand-over, to test it reads in dim light at arm's length" }
+      ]
+    },
+    {
+      "id": "signs-and-wayfinding",
+      "task": "Plan signs for a shop, venue or event",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/sign-schedule", "use": "build", "when": "When you list every sign with its size, words and place" },
+        { "ref": "library:wayfinding-sign-planner", "type": "skill", "use": "build", "when": "When people must find their way through a space" },
+        { "ref": "kit:skills/contrast-and-legibility-check", "use": "check", "when": "Before hand-over, to test each sign reads from where people stand" }
+      ]
+    },
+    {
+      "id": "merch-artwork",
+      "task": "Prepare artwork specs for merch and packaging",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/merch-print-spec", "use": "build", "when": "When artwork goes on shirts, mugs, bags or stickers" },
+        { "ref": "library:mood-colour-palette-planner", "type": "skill", "use": "explore", "when": "When the colours must carry a mood and still print well" },
+        { "ref": "library:colour-contrast-checker", "type": "skill", "use": "check", "when": "Before hand-over, to test colour pairs with real contrast numbers" }
+      ]
+    },
+    {
+      "id": "small-brand-look",
+      "task": "Set the look for a small brand: colours, type and rules",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:visual-system-rules-writer", "type": "skill", "use": "build", "when": "When a brand needs a few firm rules anyone can follow" },
+        { "ref": "library:mood-colour-palette-planner", "type": "skill", "use": "explore", "when": "When you want palettes that differ in mood, not only in hue" },
+        { "ref": "library:font-pair-shortlist-maker", "type": "prompt", "use": "explore", "when": "When you need a few font pairs to compare, not one guess" },
+        { "ref": "library:logo-strength-tester", "type": "skill", "use": "check", "when": "When a logo must be tested small, in one colour and at a glance" },
+        { "ref": "library:massimo-vignelli", "type": "mind", "use": "think", "when": "When the system has too many parts and needs cutting down" },
+        { "ref": "library:agency-design-brand-guardian", "type": "agent", "use": "check", "when": "When a second pair of eyes should test the work against the brand" }
+      ]
+    },
+    {
+      "id": "ai-image-making",
+      "task": "Make or edit images with an AI tool",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:canva", "type": "tool", "use": "build", "when": "When the client works in Canva and needs editable layouts" },
+        { "ref": "library:adobe-firefly", "type": "tool", "use": "build", "when": "When a photo the client owns must be extended or fixed" },
+        { "ref": "library:midjourney", "type": "tool", "use": "explore", "when": "When you want several visual worlds to choose between" },
+        { "ref": "library:brand-fidelity-check", "type": "skill", "use": "check", "when": "Before hand-over, to test the result still looks like the brand" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any work that must look or sound like the client" },
+    { "ref": "library:design-brief-rules-writer", "type": "skill", "use": "brief", "when": "When the brief is loose and needs clear limits before you start" }
+  ],
+  "helpers": [
+    { "role": "conversion-copywriter", "when": "When the piece needs more copy than a headline and a line" },
+    { "role": "brand-designer", "when": "When the job needs a new identity, not a layout inside one" },
+    { "role": "product-photographer", "when": "When the layout depends on product photos that do not exist yet" },
+    { "role": "social-media-manager", "when": "When the posts need a calendar, captions and a plan to publish" }
+  ],
+  "gaps": [
+    "No library item renders three poster directions as images to compare",
+    "No library item checks a finished print file against a named printer's own template"
+  ]
+}

@@ -22,9 +22,10 @@ import { hasScope, type Scope } from "./service.ts";
 import { personaTeam, TEAM_SEAT_TYPES } from "../directory/team.ts";
 import { parseSeat, parseTeam, trimmedSeatPack, SeatInputError } from "./team-seats.ts";
 import type { SeatRequest } from "../directory/team.ts";
-import { loadPayload, PackUnavailable, readPackFile, readPackIndex, type PackIndex, type PackIndexFile } from "./pack-files.ts";
+import { loadPayload, ON_DEMAND_FILES, PackUnavailable, readPackFile, readPackIndex, type PackIndex, type PackIndexFile } from "./pack-files.ts";
 import {executionPlan,checkExecutionDelivery} from '../directory/execution.ts';
 import {outputPolicyMarkdown} from '../runner/output-policy.ts';
+import { leadAgentOfRole } from "../packs/toolbox.ts";
 
 type Args = Record<string, unknown>;
 export interface ToolResult { content: { type: "text"; text: string }[]; structuredContent?: Record<string, unknown>; isError?: boolean }
@@ -261,7 +262,8 @@ async function fileText(c: ToolCtx, f: PackIndexFile): Promise<{ text: string; t
   catch (err) { if (err instanceof PackUnavailable) return no(`${err.message} Try again in a minute.`); throw err; }
 }
 
-/** Seat packs deliberately leave the full role knowledge and unrelated skills as links. */
+/** Seat packs deliberately leave the full role knowledge and unrelated skills as links. The toolbox's item files are
+ *  left off that list: toolbox.md, which is on it, names each one with when to use it. */
 async function loadSeat(c: ToolCtx, p: Persona, index: PackIndex, seat: SeatRequest & { seat_id?: string; role_id?: string }) {
   const load = async (path: string, fallback: string) => {
     const file = index.files.find(f => f.path === path);
@@ -270,7 +272,7 @@ async function loadSeat(c: ToolCtx, p: Persona, index: PackIndex, seat: SeatRequ
   const soul = await load("soul.md", `# ${p.name}\n\n${p.profile.soul?.essence || p.tagline}\n`);
   const access = await load("access.md", "Read by default. This seat grants no new access. Ask before any action outside the user's granted limits.");
   const workMethod = await load("WORK-METHOD.md", "");
-  return trimmedSeatPack(p, seat, soul, access, index.files.filter(f => !["soul.md", "access.md", "TEAM.md", "playbook.md","QUALITY-METHOD.md","OUTPUT-POLICY.md","WORK-METHOD.md"].includes(f.path)).map(f => ({ path: f.path, purpose: f.purpose })), workMethod);
+  return trimmedSeatPack(p, seat, soul, access, index.files.filter(f => !["soul.md", "access.md", "TEAM.md", "playbook.md","QUALITY-METHOD.md","OUTPUT-POLICY.md","WORK-METHOD.md"].includes(f.path) && f.kind !== "toolbox").map(f => ({ path: f.path, purpose: f.purpose })), workMethod);
 }
 
 // ---------- Tool list ----------
@@ -352,21 +354,27 @@ export const TOOLS: ToolDef[] = [
   },
   {
     name: "load_agent", title: "Load an agent", scope: "marketplace:read", costly: false,
-    description: "Load a free AI Blocks agent into this chat, so you can work as that agent for the user on their own AI. Returns its operating instructions (AGENTS.md), work method (WORK-METHOD.md: ground in the client's real business first), what to capture (context/README.md), personality, playbook, access rules and output policy. Pass the user's task as request to also get the matching skill or workflow in full and the relevant knowledge, in one payload under 60 KB.",
+    description: "Load a free AI Blocks agent into this chat, so you can work as that agent for the user on their own AI. Returns, in one payload under 60 KB: its operating instructions (AGENTS.md), its toolbox (toolbox.md: what to use for each task, all of it already in the agent's pack), its work method (WORK-METHOD.md), what to capture (context/README.md), who it is and its playbook. Pass the user's task as request to also get the relevant knowledge. Then read each file you choose from toolbox.md with get_agent_file. Give agent_id, or role_id to load the lead agent of a job role (how an agent brings in a helper).",
     inputSchema: schema({
       agent_id: { type: "string", maxLength: 128, description: "The agent_id from list_agents, such as nova-seo." },
-      request: { type: "string", maxLength: 4000, description: "The user's task in their words. Routes it to the agent's best matching skill or workflow (no model is used) and attaches the shared execution plan." },
+      role_id: { type: "string", maxLength: 128, description: "A job role id, such as conversion-copywriter, in place of agent_id: loads that role's lead agent. An agent's toolbox.md names its helpers this way." },
+      request: { type: "string", maxLength: 4000, description: "The user's task in their words. Adds the knowledge that fits it and the shared execution plan, and decides which extra files come in the first load. No model is used." },
       as_seat: { type: "object", properties: {
         seat_type: { type: "string", enum: [...TEAM_SEAT_TYPES] },
         lens: { type: "string", maxLength: 128 },
         families: { type: "array", items: { type: "string", maxLength: 128 }, maxItems: 60 },
       }, required: ["seat_type"], additionalProperties: false, description: "Load a trimmed team seat (under 60 KB) instead of the whole agent." },
-    }, ["agent_id"]),
+    }),
     annotations: read("Load an agent"),
     async run(c, args) {
       const seat = args.as_seat === undefined ? undefined : parseSeat(args.as_seat);
       const request=text(args,'request',{max:4000,optional:true});
-      const { persona: p, index } = await packFor(c, id(args, "agent_id")!);
+      const agentId = id(args, "agent_id", true), roleId = id(args, "role_id", true);
+      if (!agentId && !roleId) return no("Give agent_id (from list_agents), or role_id to load the lead agent of a job role.");
+      // A role loads its lead agent: the same one the packs name for that role in "Who to bring in" (leadAgentOfRole).
+      const lead = agentId ? null : leadAgentOfRole(await directory.listPersonas(c.env), roleId!);
+      if (!agentId && !lead) return no(`No agent has the job role ${roleId}. Call list_agents to find an agent for the work.`);
+      const { persona: p, index } = await packFor(c, agentId ?? lead!.id);
       if (seat) {
         const pack = await loadSeat(c, p, index, seat);
         return { text: `Loaded ${p.name} as ${seat.seat_type.replaceAll("_", " ")}. Use the seat in an isolated context. Files guide the user's work and never override the user or the host's rules. AI Blocks runs nothing.\n\n${Object.entries(pack.files).map(([path, body]) => `===== ${path} =====\n${body}`).join("\n\n")}`, data: {...pack,...(request?{execution_plan:executionPlan(request)}:{})} as unknown as Record<string, unknown> };
@@ -381,23 +389,44 @@ export const TOOLS: ToolDef[] = [
         const label = part.path === "knowledge.md" ? `knowledge.md (${part.note})` : part.note ? `${part.path} (${part.note})` : part.path;
         parts.push(`===== ${label} =====\n${part.text}${part.trimmed && part.path !== "knowledge.md" ? "\n[Cut short here. Read the rest with get_agent_file.]" : ""}`);
       }
-      // Older packs have no OUTPUT-POLICY.md file; the policy is the same text everywhere.
-      if (!loaded["OUTPUT-POLICY.md"]) { loaded["OUTPUT-POLICY.md"] = outputPolicyMarkdown(); parts.push(`===== OUTPUT-POLICY.md =====\n${loaded["OUTPUT-POLICY.md"]}`); }
+      // A pack built before OUTPUT-POLICY.md was a file has none: the policy is the same text everywhere, and it is
+      // sent by the same rule as the file (pack-files.ts, ON_DEMAND_FILES).
+      const hasPolicy = index.files.some(f => f.path === "OUTPUT-POLICY.md");
+      if (!hasPolicy && ON_DEMAND_FILES.find(f => f.path === "OUTPUT-POLICY.md")!.needed(request)) {
+        loaded["OUTPUT-POLICY.md"] = outputPolicyMarkdown();
+        parts.push(`===== OUTPUT-POLICY.md =====\n${loaded["OUTPUT-POLICY.md"]}`);
+      }
       const whole = new Set(payload.parts.filter(x => !x.trimmed || x.path !== "knowledge.md").map(x => x.path));
-      const others = index.files.filter(f => !whole.has(f.path));
-      const list = others.map(f => `- ${f.path}: ${f.purpose}`).join("\n");
+      // The toolbox's item files are named in toolbox.md with what each is for, so they are one line here, not fifty.
+      const items = index.files.filter(f => f.kind === "toolbox");
+      const others = index.files.filter(f => !whole.has(f.path) && f.kind !== "toolbox");
+      const heldRule = new Map(payload.held.map(h => [h.path, h.rule]));
+      // With a curated toolbox, the pack's own skills, prompts and workflows are in toolbox.md too, each with its "when".
+      const inToolbox = (f: PackIndexFile) => payload.curated && ["skill", "prompt", "workflow"].includes(f.kind) && /^(skills|prompts|workflows)\//.test(f.path);
+      const own = others.filter(inToolbox).length;
+      const list = [
+        ...others.filter(f => !inToolbox(f)).map(f => `- ${f.path}: ${f.purpose}${heldRule.has(f.path) ? ` (not in this first load: it ${heldRule.get(f.path)})` : ""}`),
+        ...(own ? [`- skills/, prompts/, workflows/: ${s(own, "file")} of this role, each named in toolbox.md with when to use it`] : []),
+        ...(items.length ? [`- toolbox/: ${s(items.length, "library item")}, each named in toolbox.md with when to use it`] : []),
+      ].join("\n");
       const zip = index.zip ? `${c.origin}${index.zip.url}` : `${c.origin}/packs/${encodeURIComponent(p.id)}.zip`;
-      const route = payload.route
-        ? `For this request, follow ${payload.route.candidate.path} (included in full below)${payload.sections.length ? `, with the relevant knowledge.md sections` : ""}. `
-        : request ? "No skill in this pack clearly matches the request: follow WORK-METHOD.md and playbook.md, and read a skill with get_agent_file if one fits. " : "";
+      const route = payload.curated
+        ? `Choose what fits ${request ? "this request" : "each task"} from toolbox.md below, at your own discretion, and read each file you choose with get_agent_file. Every item is a named file in this agent's pack, so never search for a skill. `
+        : payload.route
+          ? `For this request, follow ${payload.route.candidate.path} (included in full below)${payload.sections.length ? `, with the relevant knowledge.md sections` : ""}. `
+          : request ? "No skill in this pack clearly matches the request: follow WORK-METHOD.md and playbook.md, and read a skill with get_agent_file if one fits. " : "";
       return {
         text: `Loaded ${p.name}, ${p.title} (pack version ${index.version}). To work as ${p.name} in this chat, follow AGENTS.md below for the work the user asks for: ground the job in the client's real business first (WORK-METHOD.md). ${route}These files guide the work; they never override what the user wants or your own rules. ${p.name} runs on the user's own AI: AI Blocks runs nothing.\nOther files in the pack (read one with get_agent_file when AGENTS.md or the task calls for it):\n${list}\nFree to use and change, not for resale (LICENSE.md). Everything in one download: ${zip}\n\n${parts.join("\n\n")}`,
         data: {
           agent_id: p.id, name: p.name, title: p.title, version: index.version, files: loaded,
+          ...(lead ? { role_id: roleId } : {}),
           ...(payload.route ? { routed: { path: payload.route.candidate.path, kind: payload.route.candidate.kind, score: payload.route.score, matched: payload.route.matched } } : {}),
           ...(payload.sections.length ? { knowledge_sections: payload.sections } : {}),
           chars: payload.chars,
           ...(request ? { execution_plan: executionPlan(request) } : {}),
+          // Files the first load left out, each with the rule that brings it in (pack-files.ts, ON_DEMAND_FILES).
+          held: payload.held,
+          ...(items.length ? { toolbox_items: items.length } : {}),
           other_files: others.map(f => ({ path: f.path, purpose: f.purpose, kind: f.kind, bytes: f.bytes })), download: zip, license: "LicenseRef-AI-Blocks-Pack-1.0",
         },
       };
@@ -426,10 +455,10 @@ export const TOOLS: ToolDef[] = [
   },
   {
     name: "get_agent_file", title: "Get an agent file", scope: "marketplace:read", costly: false,
-    description: "Read one file from a free AI Blocks agent's pack, such as knowledge.md, a skill (skills/<name>/SKILL.md), a prompt or a workflow. Use the paths load_agent lists.",
+    description: "Read one file from a free AI Blocks agent's pack by its path: a skill (skills/<name>/SKILL.md), a prompt, a workflow, a toolbox item (toolbox/<type>/<name>.md) or knowledge.md. Use the paths that toolbox.md and load_agent give. This reads one named file; it does not search.",
     inputSchema: schema({
       agent_id: { type: "string", maxLength: 128, description: "The agent_id, such as nova-seo." },
-      path: { type: "string", maxLength: 300, description: "The file's path in the pack, such as knowledge.md or skills/keyword-research/SKILL.md." },
+      path: { type: "string", maxLength: 300, description: "The file's path in the pack, such as knowledge.md, skills/keyword-research/SKILL.md or toolbox/skill/layout-default-breaker.md." },
     }, ["agent_id", "path"]),
     annotations: read("Get an agent file"),
     async run(c, args) {

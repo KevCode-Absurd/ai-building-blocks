@@ -16,7 +16,7 @@ This is version {{version}} of the pack, last updated on {{updated}}, and {{name
 
 {{files_table}}
 
-Your AI reads AGENTS.md first, because it explains who the agent is, which file to open for each task, and which rules it must always keep. CLAUDE.md contains a single line that tells Claude Code to load AGENTS.md automatically.
+Your AI reads AGENTS.md first, because it explains who the agent is, how it starts a job and which rules it must always keep. It reads toolbox.md next: a list of what to use for each task in this role, so the agent picks its own tools and never has to search for one. CLAUDE.md contains a single line that tells Claude Code to load AGENTS.md automatically.
 
 ## Use it in your AI
 
@@ -24,7 +24,7 @@ The quickest start in ChatGPT, Claude or Gemini is the one-file version at {{one
 
 To use the whole folder instead, unzip the pack first, then choose your tool from the sections below. Each section ends with a first message that you can copy and paste, after replacing the part in square brackets with a sentence or two about your own job.
 
-If your tool limits how many files you can add, start with WORK-METHOD.md, context/README.md, soul.md, personality.md, playbook.md, knowledge.md and access.md, because together they hold the agent's method, character and expertise. After that, add the skills you expect to use most often.
+If your tool limits how many files you can add, start with toolbox.md, WORK-METHOD.md, context/README.md, soul.md, personality.md, playbook.md, knowledge.md and access.md, because together they hold the agent's method, character and expertise. After that, add the skills and the toolbox files for the tasks you expect to give it most often.
 
 ### Claude (claude.ai or the Claude app)
 
@@ -107,9 +107,9 @@ You can also load {{name}} straight into your own AI by adding this address as a
 
 Once you are connected, ask your AI something like "Load {{name}} from AI Blocks and work as {{name}}", then describe your job.
 
-## Find more in the library
+## The toolbox
 
-library.md lists related skills, prompts and workflows from the free AI Blocks library at https://useaiblocks.com, with a link to each one and a short note on why it is relevant.
+toolbox.md lists the tasks this role is hired for and, for each one, which skill, prompt, workflow, thinking lens or helper agent to use and when. Where the pack has a toolbox folder, it holds the full text of every item on that list that comes from the free AI Blocks library at https://useaiblocks.com, and each file starts with a link to its page there. The agent chooses from the list and opens only what it needs.
 
 ## Train your own
 

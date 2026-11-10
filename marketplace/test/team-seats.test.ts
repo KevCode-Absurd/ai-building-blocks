@@ -57,7 +57,13 @@ test("every seat pack grounds the job first with the work method", () => {
   const own = trimmedSeatPack(NOVA, { seat_type: "maker" }, "", "", [], "# Work method: the Grounded Job Protocol. Full text.");
   assert.match(own.files["WORK-METHOD.md"], /Full text/);
   const role = trimmedSeatPack(null, { seat_type: "maker", role_id: "test-maker" }, "", "", []);
-  assert.match(role.files["WORK-METHOD.md"], /Ground: capture the real business/);
+  // The outline follows the work method's steps: a spec sheet, grounding, real candidates, a fresh check, the hand-over.
+  const outline = role.files["WORK-METHOD.md"];
+  assert.match(outline, /0\. Frame: write context\/spec\.md/);
+  assert.match(outline, /1\. Ground: capture only what the acceptance tests depend on/);
+  assert.match(outline, /3\. Diverge: make about 3 real candidates[^\n]+a fresh reviewer picks/);
+  assert.match(outline, /6\. Hand over the work first, opened by 3 to 5 lines/);
+  assert.doesNotMatch(outline, /job-card|2 or 3 directions/);
 });
 
 test("neutral coordinator works without falsely assigning a specialist persona", () => {

@@ -146,7 +146,7 @@ test("agent pack: files in order, soul and personality from the persona, one job
   const pack = await build();
   assert.equal(pack.folder, "nova-seo");
   assert.deepEqual(pack.files.map(f => f.path), [
-    "README.md", "AGENTS.md", "CLAUDE.md", "WORK-METHOD.md", "context/README.md", "soul.md", "personality.md", "playbook.md", "TEAM.md", "knowledge.md", "access.md", "QUALITY-METHOD.md", "OUTPUT-POLICY.md",
+    "README.md", "AGENTS.md", "CLAUDE.md", "toolbox.md", "WORK-METHOD.md", "context/README.md", "soul.md", "personality.md", "playbook.md", "TEAM.md", "knowledge.md", "access.md", "QUALITY-METHOD.md", "OUTPUT-POLICY.md",
     "skills.md", "skills/landing-page-copy/SKILL.md", "skills/seo-blog-post/SKILL.md", "library.md", "sources.md", "LICENSE.md", "CHANGELOG.md", "pack.json",
   ]);
   const file = (p: string) => pack.files.find(f => f.path === p)!.content;
@@ -161,7 +161,9 @@ test("agent pack: files in order, soul and personality from the persona, one job
   assert.doesNotMatch(file("personality.md"), /## Neutral presentation fallback|## Factual integrity/);
   assert.match(file("personality.md"), /\(OUTPUT-POLICY\.md\)/);
   assert.match(file("playbook.md"), /## How I work\n\n1\. Read the brief/);
-  assert.match(file("playbook.md"), /These are my Build steps\. Ground, Taste and Diverge come before them/);
+  assert.match(file("playbook.md"), /These are my Build steps\. The spec sheet, grounding and real candidates come before them, and a fresh reviewer's check comes after/);
+  assert.match(file("playbook.md"), /## Handoff\n\nI hand back the work itself first, opened by 3 to 5 lines/);
+  assert.doesNotMatch(file("playbook.md"), /and DECISIONS\.md for anything bigger/, "working notes are never handed to the client");
   assert.match(file("playbook.md"), /### Landing page copy\n\n- Context: .+\n- Details: What are you selling; Who is it for/);
   assert.match(file("playbook.md"), /Landing page copy: `skills\/landing-page-copy\/SKILL\.md`/);
   // "Rules I learned" is there, typed, with how to add one.

@@ -80,7 +80,8 @@ test("?role= lists the agents in that role across areas, with the role's name an
   assert.equal(inArea.body.total, 2, "total counts the role across areas, like the All chip");
 
   const searched = await t.api("GET", "/api/agents?role=seo-specialist&q=store");
-  assert.deepEqual(searched.body.agents.map((a: any) => a.id), ["ivo-store-search"]);
+  // The role's toolbox tasks are searched too, so a role-mate can match; the agent whose own text matches leads.
+  assert.equal(searched.body.agents[0].id, "ivo-store-search");
 
   const unknown = await t.api("GET", "/api/agents?role=astronaut");
   assert.equal(unknown.status, 400);

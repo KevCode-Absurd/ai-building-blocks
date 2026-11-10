@@ -30,6 +30,8 @@ test('the team method is short, and the record detail is a reference opened only
     // Receipt and hash detail lives in the reference, not in what every lead reads.
     assert.doesNotMatch(method, /sha256|SHA-256|usage_status|saw_other_proposals|Borda|verify-delivery-evidence/);
     assert.doesNotMatch(method, /brand brain/i);
+    // A working figure is for planning numbers only; an unknown fact is never filled with one.
+    assert.match(method, /A working figure is only for a planning number the client will tune, with the sum shown\./); assert.doesNotMatch(method, /Where a number is unknown/);
   }
   const records = jobRecords();
   for (const phrase of ['Open this only when advance_job refuses a record', 'saw_other_proposals', 'usage_status', 'brand_brain', 'required for page, ad, copy and email jobs only', 'coordinator_review', 'Execution quality contract']) assert.ok(records.includes(phrase), phrase);

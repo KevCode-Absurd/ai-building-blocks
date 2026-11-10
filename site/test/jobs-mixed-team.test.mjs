@@ -117,8 +117,8 @@ test('start_job says who makes what for mixed work, and the proposed team passes
   const request = MIXED[0][0], f = engineFixture();
   const started = await startJob({ request, host_capabilities: f.input.host_capabilities }, context);
   assert.equal(started.mode, 'team'); assert.equal(started.phase, 'SCOPE');
-  assert.match(started.mode_reason, /^This needs different kinds of work \(a page, ads and emails\), so one lead runs a small team of helpers\. Ad landing page designer leads and makes a page\. Design specialist makes 6 ads and Email writer makes 5 emails\. Finished work reviewer chooses between the candidates and checks the finished work as the client would and Claim and source checker traces each claim to its source\.$/);
-  assert.ok(started.team.note.includes('Design specialist makes 6 ads and Email writer makes 5 emails.')); assert.equal(started.team.lead.makes, 'a page');
+  assert.match(started.mode_reason, /^This needs different kinds of work \(a page, ads and emails\), so one lead runs a small team of helpers\. Ad landing page designer leads and makes a page\. Design specialist makes 6 ads\. Email writer makes 5 emails\. Finished work reviewer chooses between the candidates and checks the finished work as the client would\. Claim and source checker traces each claim to its source\.$/);
+  assert.ok(started.team.note.includes('Design specialist makes 6 ads. Email writer makes 5 emails.')); assert.equal(started.team.lead.makes, 'a page');
   assert.deepEqual(started.team.helpers.map(helper => [helper.role_id, helper.seat_type]), [['design-specialist', 'maker'], ['email-writer', 'maker'], ['work-reviewer', 'judge'], ['claim-checker', 'fact_checker']]);
   assert.equal(started.estimate.seats, 6);
   // Scope, then accept the proposal: the engine's own validators take the small team and keep its work rows.

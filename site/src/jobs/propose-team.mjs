@@ -226,7 +226,6 @@ export const HELPER_JOBS=Object.freeze({
 });
 /** What the one reviewer of a mixed-work team does. */
 export const REVIEWER_JOB='Independent reviewer. Chooses between the candidates, then reads the finished work as the client would. A fresh context each time; never sees the makers\' reasoning.';
-const sentence=parts=>parts.length<2?parts.join(''):parts.slice(0,-1).join(', ')+' and '+parts.at(-1);
 /** The short view of a proposal: one lead who owns the deliverable, and the helpers it may call. The coordinator seat is
  *  the orchestrator (the person's own AI), so it is not listed as a helper. For mixed work it says who makes what. */
 export function teamBrief(proposal,context={}) {
@@ -238,7 +237,8 @@ export function teamBrief(proposal,context={}) {
  const job=seat=>made.has(seat.seat_id)?`Makes ${made.get(seat.seat_id)}.`:work.length&&seat.seat_type==='judge'&&seat.seat_types.includes('red_team')?REVIEWER_JOB+(seat.seat_types.includes('fact_checker')?' Also checks each claim against its source.':''):HELPER_JOBS[seat.seat_type]??'Helps the lead.';
  // Who makes what, in one sentence: the lead first, then each other maker, then who checks.
  const makers=helpers.filter(seat=>made.has(seat.seat_id)),checks=helpers.filter(seat=>!made.has(seat.seat_id)&&seat.seat_type!=='maker');
- const makes=work.length?`${name(lead)} leads and makes ${made.get(lead.seat_id)??'the main deliverable'}. ${sentence(makers.map(seat=>`${name(seat)} makes ${made.get(seat.seat_id)}`))}. ${sentence(checks.map(seat=>seat.seat_type==='judge'?`${name(seat)} chooses between the candidates and checks the finished work as the client would`:seat.seat_type==='fact_checker'?`${name(seat)} traces each claim to its source`:`${name(seat)} helps review`))}.`:null;
+ // One short sentence per seat: role names often hold an "and" of their own.
+ const makes=work.length?[`${name(lead)} leads and makes ${made.get(lead.seat_id)??'the main deliverable'}.`,...makers.map(seat=>`${name(seat)} makes ${made.get(seat.seat_id)}.`),...checks.map(seat=>seat.seat_type==='judge'?`${name(seat)} chooses between the candidates and checks the finished work as the client would.`:seat.seat_type==='fact_checker'?`${name(seat)} traces each claim to its source.`:`${name(seat)} helps review.`)].join(' '):null;
  return {
   lead:{...row(lead),owns:'The deliverable, from first draft to hand-over.',...(made.has(lead.seat_id)?{makes:made.get(lead.seat_id)}:{})},
   helpers:helpers.map(seat=>({...row(seat),seat_type:seat.seat_type,job:job(seat),...(made.has(seat.seat_id)?{makes:made.get(seat.seat_id)}:{})})),

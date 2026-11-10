@@ -439,3 +439,22 @@ test('the method names the craft skill for each step as a toolbox item with its 
   }
   assert.ok(fs.existsSync(new URL('../../catalogue-items/general/make-three-first-screens/scripts/compare-candidates.mjs', import.meta.url)));
 });
+
+test('the public page for the method describes the same seven steps as its skill, in the new words', async () => {
+  const YAML = (await import('yaml')).default;
+  const read = name => fs.readFileSync(new URL(`../../catalogue-items/general/grounded-job-protocol/${name}`, import.meta.url), 'utf8');
+  const raw = read('page.yaml'), page = YAML.parse(raw), item = YAML.parse(read('item.yaml')), skill = read('SKILL.md');
+  // The old method is gone from the page: no job card, no menu of options for the person, no decisions file as a deliverable.
+  assert.doesNotMatch(raw + read('item.yaml'), /job card|five-line|Pick one of the options|decisions file|decision record|two or three (?:real )?options|taste questions/i);
+  for (const phrase of ['spec sheet', 'five to seven tests', 'about three real versions', 'a fresh reviewer picks one', 'You are not asked to choose', 'Any claim without a source is removed', 'finished work first']) assert.ok(raw.includes(phrase), phrase);
+  // One page step for each numbered step of the skill, in the same order.
+  const headings = [...skill.matchAll(/^## \d\. ([A-Z ]+)/gm)].map(match => match[1].trim());
+  assert.equal(headings.length, 7); assert.equal(page.how_it_works.length, 7);
+  assert.deepEqual(page.how_it_works.map(step => step.title), ['Writes the spec sheet', 'Captures what the job needs', 'Writes a taste brief', 'Makes real candidates', 'Builds to a craft floor', 'Gets a client\'s-eye check', 'Hands over the work first']);
+  // What the page promises is what the skill hands back: the work first, then CHECKS MISSED; working files stay with the AI.
+  assert.match(page.output_shape, /^OPENING LINES \(3 to 5\)/); assert.match(page.output_shape, /CHECKS MISSED/); assert.match(page.output_shape, /WORKING FILES \(your AI keeps these; they are not part of the hand-over\)/);
+  assert.match(page.you_get[0], /^The finished work first/); assert.equal(page.you_get.length, 4); assert.ok(page.summary.split(/\s+/).length <= 18);
+  assert.match(item.summary, /spec sheet/); assert.equal(page.example.business, 'gehna'); assert.match(page.example.output, /^SPEC SHEET/);
+  // The tools line on the page is the one the skill's "Before you start" section repeats.
+  for (const tool of page.works_best_with.tools) assert.ok(skill.includes(`**${tool.name}:** ${tool.why}`), tool.name);
+});

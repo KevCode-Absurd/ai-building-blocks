@@ -128,6 +128,13 @@ const isDir = p => statSync(p, { throwIfNoEntry: false })?.isDirectory() ?? fals
  *  needs a handful of keys, and one broken block should not lose the item. */
 export function pickKeys(text, keys) {
   const out = {};
+  // Some files are one single-line mapping ({"slug": ..., "summary": ...}); no key starts a line there, so read it whole.
+  if (/^\s*\{/.test(text)) {
+    try {
+      const v = yaml().parse(text);
+      if (v && typeof v === "object") return Object.fromEntries(Object.entries(v).filter(([k]) => keys.has(k)));
+    } catch { /* fall through to the line reader */ }
+  }
   let key = null, buf = [];
   const flush = () => {
     if (!key || !keys.has(key)) return;

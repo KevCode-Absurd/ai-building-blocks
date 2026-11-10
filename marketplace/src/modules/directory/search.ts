@@ -208,13 +208,20 @@ function tasksOf(roleId: string | undefined): Part[] {
   return parts;
 }
 
+/**
+ * The roster in memory is read again from the database every minute (service.ts), as new objects with the same
+ * text. Reading 500 agents into words takes about a tenth of a second, so what was read is also kept by agent id,
+ * with the text it was read from: an agent whose text has not changed is not read again.
+ */
+const docsById = new Map<string, { text: string; tasks: Part[]; doc: Doc }>();
+const MAX_KEPT = 5_000;
+
 function docOf(p: Persona): Doc {
   const hit = docs.get(p);
   if (hit) return hit;
   const role = getRole(p.role);
   const profile = p.profile ?? ({} as Persona["profile"]);
   const outcomes = profile.outcomes ?? [];
-  const nature = workLine(outcomes)?.nature ?? "make";
   const raw: RawPart[] = [
     { kind: "title", text: [p.name, p.title, role?.name ?? ""].join(GAP), nature: null },
     { kind: "alias", text: (role?.aliases ?? []).join(GAP), nature: null },
@@ -227,16 +234,22 @@ function docOf(p: Persona): Doc {
     const job = getJobType(o.job_type_id);
     if (job) raw.push({ kind: "job", text: [job.title, ...(job.keywords ?? [])].join(GAP), nature: kind });
   }
-  const parts = [...readParts(raw), ...tasksOf(p.role)];
+  const tasks = tasksOf(p.role);
+  const text = raw.map(r => `${r.kind}:${r.nature ?? ""}:${r.text}`).join("\n");
+  const kept = docsById.get(p.id);
+  if (kept && kept.text === text && kept.tasks === tasks) { docs.set(p, kept.doc); return kept.doc; }
+  const parts = [...readParts(raw), ...tasks];
   const all = new Set<string>();
   for (const x of parts) for (const w of x.words) all.add(w);
-  const doc = { parts, all, nature };
+  const doc = { parts, all, nature: workLine(outcomes)?.nature ?? "make" };
   docs.set(p, doc);
+  if (docsById.size >= MAX_KEPT) docsById.clear();
+  docsById.set(p.id, { text, tasks, doc });
   return doc;
 }
 
 /** Tests only: forget what was read from each agent (after swapping the roles or the toolbox data under the same personas). */
-export function forgetSearchDocs(list: Persona[]): void { for (const p of list) docs.delete(p); }
+export function forgetSearchDocs(list: Persona[]): void { for (const p of list) { docs.delete(p); docsById.delete(p.id); } }
 
 // ---------- Ranking ----------
 

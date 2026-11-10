@@ -2,7 +2,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { prepareJobContext, suggestDeliverableKind, resolveDeliverableKind, resolveMode, normalizePatterns, defaultsFor, validateGrounding, substanceOverlap, skillPreamble, skillPreambleKind, craftRubric, gatesFor, CRAFT_RUBRICS, tasteQuestions, EMBEDDED_DEFAULT_PATTERNS } from '../src/jobs/grounding.mjs';
+import * as grounding from '../src/jobs/grounding.mjs';
+import { prepareJobContext, suggestDeliverableKind, resolveDeliverableKind, resolveMode, normalizePatterns, defaultsFor, validateGrounding, substanceOverlap, skillPreamble, skillPreambleKind, craftRubric, gatesFor, CRAFT_RUBRICS, tasteQuestions, EMBEDDED_DEFAULT_PATTERNS, DELIVERABLE_KINDS, CANDIDATES, CANDIDATE_AXES, COMPLETENESS, completenessFor, contextNeed, requestedCount } from '../src/jobs/grounding.mjs';
 import { buildExecutionPlan } from '../src/jobs/execution-quality.mjs';
 import { resolveDials, namesOneDeliverable } from '../src/jobs/dials.mjs';
 import { assembleRubric, scoreReview } from '../src/jobs/rubric.mjs';
@@ -23,7 +24,9 @@ test('prepare_job_context returns a short brief and a structured annex for each 
   const page = prepareJobContext({ request: 'Build a landing page for my jewellery brand', site_url: 'https://www.tanishq.co.in' });
   assert.equal(page.schema, 'ai-blocks-job-context/1'); assert.equal(page.model_calls, 0); assert.equal(page.stored_by_service, false);
   assert.ok(page.brief.length <= 1500, `brief is ${page.brief.length}`);
-  for (const word of ['GROUND', 'https://www.tanishq.co.in', 'context/brand-dna.json', 'TASTE', 'price point', 'admire', 'AVOID', 'DIVERGE', 'CHECK']) assert.ok(page.brief.includes(word), word);
+  for (const word of ['SPEC', 'annex.spec_sheet', 'GROUND', 'https://www.tanishq.co.in', 'context/brand-dna.json', 'TRUTH', 'ASK once', 'price point', 'admire', 'AVOID', 'CANDIDATES', 'BUILD', 'CHECK', 'HAND-OVER']) assert.ok(page.brief.includes(word), word);
+  assert.deepEqual(page.brief.split('\n').map(line => line.split(/[: ]/)[0]), ['Job', 'SPEC', 'GROUND', 'TRUTH', 'ASK', 'AVOID', 'CANDIDATES', 'BUILD', 'CHECK', 'HAND-OVER']);
+  assert.equal(page.annex.questions.length, 3);
   const a = page.annex;
   assert.equal(a.deliverable_kind, 'web_page'); assert.equal(a.kind_source, 'suggested'); assert.equal(a.family, 'web_page');
   assert.equal(a.mode_default.mode, 'extend');
@@ -38,7 +41,7 @@ test('prepare_job_context returns a short brief and a structured annex for each 
   assert.deepEqual(a.production_gate.requires, { brand_dna: true, data_snapshot: false, taste_brief: true });
   const audit = prepareJobContext({ request: 'audit my Meta ad account' });
   assert.equal(audit.annex.deliverable_kind, 'audit'); assert.equal(audit.annex.mode_default.mode, 'patch');
-  assert.match(audit.brief, /read level/); assert.match(audit.brief, /hypotheses/); assert.doesNotMatch(audit.brief, /brand-dna/);
+  assert.match(audit.brief, /read level/); assert.match(audit.brief, /Three competing explanations/); assert.doesNotMatch(audit.brief, /brand-dna/);
   assert.deepEqual(audit.annex.production_gate.requires, { brand_dna: false, data_snapshot: true, taste_brief: false });
   assert.deepEqual(audit.annex.defaults_to_avoid.map(d => d.id), ['audit-fixed-checklist']);
   const declared = prepareJobContext({ request: 'Help with our homepage', deliverable_kind: 'copy', has_existing_asset: true });
@@ -150,13 +153,22 @@ test('production is refused until grounding is reported for brand and audit jobs
   await assert.rejects(() => send(started, { event: 'scope', document: bad.card }, bad.context), /grounding\.brand_dna/);
 });
 
-test('the rubric adds per-family craft criteria with the spec weights, and gates never average away', () => {
-  for (const [family, rows] of Object.entries(CRAFT_RUBRICS)) assert.equal(rows.reduce((n, c) => n + c.weight, 0), 100, family);
+test('the rubric is job-first in every family, with an own-material criterion, and gates never average away', () => {
+  for (const [family, rows] of Object.entries(CRAFT_RUBRICS)) {
+    assert.equal(rows.reduce((n, c) => n + c.weight, 0), 100, family);
+    // The job leads with the largest weight, alone; nothing ties it.
+    assert.match(rows[0].criterion, /^Does the job/, family); assert.equal(rows[0].weight, 30, family);
+    assert.ok(rows.slice(1).every(c => c.weight < rows[0].weight), family);
+    assert.ok(rows.some(c => c.id === 'own_material' && c.weight === 10 && /\bgeneric\b/.test(c.test)), family);
+    assert.equal(new Set(rows.map(c => c.id)).size, rows.length, family);
+  }
   const web = craftRubric('web_page');
-  assert.deepEqual(Object.fromEntries(web.map(c => [c.id, c.weight])), { job_conversion: 20, brand_fidelity: 25, launchability: 20, specificity: 15, distinctiveness: 10, clarity: 10 });
-  assert.ok(craftRubric('email').some(c => c.id === 'brand_fidelity' && c.weight === 25) && craftRubric('copy').some(c => c.id === 'distinctiveness'));
-  assert.ok(craftRubric('audit').some(c => c.id === 'diagnosis' && c.weight === 25));
-  assert.equal(gatesFor('web_page').length, 11); assert.equal(gatesFor('audit').length, 6); assert.equal(gatesFor('analysis').length, 5);
+  assert.deepEqual(Object.fromEntries(web.map(c => [c.id, c.weight])), { job_conversion: 30, brand_fidelity: 20, launchability: 15, own_material: 10, specificity: 10, clarity: 10, distinctiveness: 5 });
+  assert.deepEqual(Object.fromEntries(craftRubric('email').map(c => [c.id, c.weight])), { job_done: 30, brand_fidelity: 20, specificity: 15, clarity: 15, own_material: 10, distinctiveness: 10 });
+  assert.deepEqual(craftRubric('copy'), craftRubric('email'));
+  assert.ok(craftRubric('audit').some(c => c.id === 'job_decision' && c.weight === 30) && craftRubric('plan').some(c => c.id === 'actionability' && c.weight === 25));
+  assert.ok(!craftRubric('strategy').some(c => /options/i.test(c.criterion)), 'a menu of options is not rewarded');
+  assert.equal(gatesFor('web_page').length, 14); assert.equal(gatesFor('audit').length, 7); assert.equal(gatesFor('analysis').length, 6);
   // Every kind gets the hand-over budget; conversion work also gets the proven-levers gate.
   for (const kind of ['web_page', 'ad_creative', 'copy', 'email', 'audit', 'analysis', 'strategy', 'plan', 'code', 'ops_doc', 'other']) {
     assert.ok(gatesFor(kind).some(g => g.id === 'hand_over_budget'), kind);
@@ -224,10 +236,11 @@ test('get_skill preamble qualifies creative, page, ad, copy, email, audit and an
   assert.equal(skillPreambleKind({ slug: 'docker-compose-setter', task: 'ship-and-host' }), null);
   const create = skillPreamble({ slug: 'store-hero-section-writer', task: 'write-landing-page' });
   assert.equal(create.title, 'Before you run this'); assert.equal(create.lines.length, 5);
-  for (const pattern of [/GROUND/, /taste questions/, /defaults you will avoid/, /2 or 3 directions/, /independent pass/]) assert.ok(create.lines.some(line => pattern.test(line)), String(pattern));
+  for (const pattern of [/^SPEC: .*5 to 7 acceptance tests/, /^GROUND .*live, in stock and at that price/, /^CANDIDATES: make about 3 real candidates/, /add no new facts.*defaults you will avoid/, /^CHECK with a fresh reviewer .*Remove unsourced claims/]) assert.ok(create.lines.some(line => pattern.test(line)), String(pattern));
   assert.equal(create.tool.name, 'prepare_job_context');
   const assess = skillPreamble({ slug: 'ad-account-audit', task: 'read-ad-results' });
-  assert.ok(assess.lines.some(line => /real account or data/.test(line)) && assess.lines.some(line => /competing hypotheses/.test(line)));
+  assert.equal(assess.lines.length, 5);
+  assert.ok(assess.lines.some(line => /real account or data/.test(line)) && assess.lines.some(line => /three competing explanations/.test(line)));
   assert.equal(skillPreamble({ slug: 'docker-compose-setter', task: 'ship-and-host' }), null);
 });
 
@@ -277,4 +290,83 @@ test('REST mirrors prepare_job_context at POST /api/v1/job-context', async () =>
   assert.equal(response.status, 200, JSON.stringify(body)); assert.equal(body.schema, 'ai-blocks-job-context/1'); assert.equal(body.annex.kind_source, 'declared');
   const bad = await handlePublicApi(new Request('https://example.test/api/v1/job-context', { method: 'POST', headers: { 'content-type': 'application/json', 'cf-connecting-ip': '192.0.2.9' }, body: JSON.stringify({ request: 'x', deliverable_kind: 'poster' }) }), env);
   assert.equal(bad.status, 400);
+});
+
+test('the spec sheet comes back pre-filled from the request, with job-specific acceptance tests per family', () => {
+  const ads = prepareJobContext({ request: 'Make 6 image ads for our Tree Runner shoes', deliverable_kind: 'ad_creative', site_url: 'https://www.allbirds.com' }).annex;
+  const s = ads.spec_sheet;
+  assert.equal(s.path, 'context/spec.md'); assert.equal(s.job.text, ''); assert.match(s.job.prompt, /who must do what after seeing this/i);
+  assert.deepEqual(s.deliverables.map(d => [d.kind, d.count, d.in_client_words]), [['ad_creative', 6, 'Make 6 image ads for our Tree Runner shoes']]);
+  assert.ok(s.decisions.length >= 2); assert.match(s.decision_rule, /Never hand back a menu/);
+  assert.deepEqual(s.context_needed.levels, ['none', 'facts', 'voice', 'look', 'full']); assert.equal(s.context_needed.level, 'full');
+  assert.match(s.assumptions[0], /^Mode: extend\./);
+  for (const kind of DELIVERABLE_KINDS) {
+    const tests = prepareJobContext({ request: 'x', deliverable_kind: kind }).annex.spec_sheet.acceptance_tests, count = type => tests.filter(t => t.type === type).length;
+    assert.ok(tests.length >= 5 && tests.length <= 7, `${kind}: ${tests.length} tests`);
+    assert.ok(count('job') >= 2 && count('ready') >= 1 && count('truth') >= 1 && count('clear') >= 1, kind);
+    assert.equal(new Set(tests.map(t => t.id)).size, tests.length, kind);
+  }
+  assert.deepEqual([requestedCount('a 5-email welcome series'), requestedCount('Build a landing page for my jewellery brand'), requestedCount('Write three subject lines'), requestedCount('audit my Meta ad account'), requestedCount('Plan our content for 2026')], [5, 1, 3, null, null]);
+  assert.match(prepareJobContext({ request: 'x', deliverable_kind: 'email' }).annex.spec_sheet.acceptance_tests[0].test, /every email show a product/);
+  assert.equal(prepareJobContext({ request: 'Help us' }).annex.spec_sheet.assumptions.length, 2, 'a guessed kind is listed as an assumption');
+});
+
+test('brand context is asked for by slice: strategy, plans, code and operations work never demand a capture', () => {
+  assert.deepEqual(Object.fromEntries(DELIVERABLE_KINDS.map(kind => [kind, contextNeed(kind).level])), { web_page: 'full', ad_creative: 'full', copy: 'voice', email: 'voice', audit: 'facts', analysis: 'none', strategy: 'facts', plan: 'facts', code: 'none', ops_doc: 'none', other: 'none' });
+  for (const kind of ['strategy', 'plan', 'code', 'ops_doc', 'other']) {
+    const r = prepareJobContext({ request: 'x', deliverable_kind: kind });
+    assert.deepEqual(r.annex.production_gate.requires, { brand_dna: false, data_snapshot: false, taste_brief: false }, kind);
+    assert.doesNotMatch(r.brief, /brand-dna|taste-brief|brand brain/, kind);
+    assert.doesNotMatch(JSON.stringify(r.annex.context_requirements), /brand brain/, kind);
+    assert.equal(r.annex.artifacts.taste_brief, undefined, kind);
+  }
+  assert.equal(contextNeed('code').brand_file, false); assert.equal(contextNeed('plan').brand_file, true);
+  assert.match(prepareJobContext({ request: 'x', deliverable_kind: 'plan' }).annex.brand_context.take, /^Facts only/);
+});
+
+test('candidates are real work chosen by someone else, and the checks put truth first', () => {
+  const page = prepareJobContext({ request: 'Build a landing page', deliverable_kind: 'web_page' });
+  assert.match(page.brief, /CANDIDATES: Three first screens, made in full/); assert.match(page.brief, /Differ on two of: promise, proof, structure, buyer moment, offer, visual world\./);
+  assert.match(page.brief, /A fresh reviewer picks\./); assert.match(page.brief, /reframe true facts, add none/); assert.match(page.brief, /cut what has none, never flag it/);
+  assert.match(page.brief, /Check what is sold is live, in stock, at that price and link\./);
+  const a = page.annex;
+  assert.equal(a.candidates.make, CANDIDATES.web_page); assert.equal(a.candidates.differ_on_at_least, 2); assert.deepEqual(a.candidates.axes, [...CANDIDATE_AXES]);
+  assert.match(a.reviewer.who, /SAME-CONTEXT/); assert.match(a.reviewer.choose.rounds, /One extra round at most/);
+  // The client's-eye reviewer sees only the brief, the work and the captured facts, and lists every claim as sourced or not.
+  assert.equal(a.reviewer.clients_eye.gets.length, 3); assert.match(a.reviewer.clients_eye.gets[2], /captured facts/);
+  assert.equal(a.reviewer.clients_eye.answers.length, 5); assert.ok(a.reviewer.clients_eye.answers.some(q => /sourced or not/.test(q)));
+  assert.match(a.reviewer.clients_eye.then, /Never leave one in with a flag or a footnote/);
+  assert.ok(a.craft_floor.some(line => /New framing of true facts, never new facts/.test(line)) && a.craft_floor.some(line => /never as a revenue forecast/.test(line)));
+  assert.match(a.buyer_can_act.if_not, /say so in the first line/); assert.equal(prepareJobContext({ request: 'x', deliverable_kind: 'plan' }).annex.buyer_can_act, null);
+  assert.ok(a.hand_over.never_in_the_deliverable.some(x => /agent or persona names/.test(x)));
+  for (const kind of DELIVERABLE_KINDS) {
+    const r = prepareJobContext({ request: 'x', deliverable_kind: kind });
+    assert.ok(r.brief.includes(`CANDIDATES: ${CANDIDATES[kind]}`), kind);
+    assert.deepEqual(r.annex.completeness, completenessFor(kind), kind);
+    assert.equal(/annex\.completeness/.test(r.brief), Boolean(COMPLETENESS[kind]), kind);
+    const ids = gatesFor(kind).map(g => g.id);
+    for (const id of ['acceptance_tests_pass', 'facts_trace_to_source', 'no_invented_numbers']) assert.ok(ids.includes(id), `${kind}: ${id}`);
+    assert.equal(ids.includes('format_complete'), Boolean(COMPLETENESS[kind]), kind);
+    assert.equal(ids.includes('buyer_can_act'), ['web_page', 'ad_creative', 'copy', 'email'].includes(kind), kind);
+  }
+  assert.match(gatesFor('copy').find(g => g.id === 'facts_trace_to_source').gate, /never flagged and left in/);
+  assert.match(gatesFor('ad_creative').find(g => g.id === 'format_complete').gate, /the brand and the price named for a cold audience; the landing URL\.$/);
+  assert.match(gatesFor('plan').find(g => g.id === 'hand_over_budget').gate, /agent names, file names, access levels or method words/);
+});
+
+test('the shared method lists are identical in the library and the agents app', async () => {
+  const packs = await import('../../marketplace/src/modules/packs/families.ts');
+  for (const name of ['WORD_BUDGETS', 'PROVEN_LEVERS', 'CANDIDATE_AXES', 'CANDIDATES', 'COMPLETENESS', 'CONTEXT_LEVELS', 'CONTEXT_NEED']) {
+    assert.ok(packs[name] && grounding[name], name);
+    assert.deepEqual(JSON.parse(JSON.stringify(packs[name])), JSON.parse(JSON.stringify(grounding[name])), name);
+  }
+  assert.deepEqual(Object.keys(packs.CANDIDATES), [...DELIVERABLE_KINDS]);
+  // The craft table: the same criteria and weights, group by group.
+  const groups = [...new Set(DELIVERABLE_KINDS.map(kind => packs.RUBRIC_GROUP[kind]))];
+  assert.deepEqual(groups.map(group => packs.CRAFT_WEIGHTS[group]), Object.values(CRAFT_RUBRICS).map(rows => rows.map(c => [c.criterion, c.weight])));
+  for (const kind of DELIVERABLE_KINDS) {
+    assert.deepEqual(packs.CRAFT_WEIGHTS[packs.RUBRIC_GROUP[kind]], craftRubric(kind).map(c => [c.criterion, c.weight]), kind);
+    assert.ok(packs.familySlice(kind).diverge.startsWith(CANDIDATES[kind]), kind);
+    assert.deepEqual(packs.contextNeed(kind), { level: contextNeed(kind).level, take: contextNeed(kind).take }, kind);
+  }
 });

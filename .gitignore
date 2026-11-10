@@ -53,6 +53,7 @@ site/.copyable-build/
 !/tools/baseline-content.mjs
 !/tools/release.mjs
 !/tools/qa/
+!/tools/evals/
 !/tools/package.json
 !/tools/package-lock.json
 !/tools/.gitkeep

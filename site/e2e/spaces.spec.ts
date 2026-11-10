@@ -112,7 +112,7 @@ test("a public item shows on From people, and a private one never does", async (
   const card = page.getByTestId("public-item").filter({ hasText: `Shown ${stamp}` });
   await expect(card).toContainText(`from Public test ${stamp}`);
   await expect(page.getByTestId("people-page")).not.toContainText(`Hidden ${stamp}`);
-  await expect(page.getByTestId("people-page")).toContainText("aren't checked or tested by us");
+  await expect(page.getByTestId("people-page")).toContainText("We don't check these");
   await card.getByTestId("public-open").click();
   const opened = page.getByTestId("space-item").filter({ hasText: `Shown ${stamp}` });
   await opened.getByTestId("item-open").click();
@@ -129,7 +129,7 @@ test("kits from this browser and workflows from the builder go into the space an
   await page.getByTestId("bring-in-go").click();
   const kit = page.locator("[data-testid=space-item][data-kind=kit]");
   await expect(kit).toContainText("Launch kit");
-  await expect(kit).toContainText("Meta ads compliance checker");
+  await expect(kit).toContainText("Meta ad policy checker");
   await expect(page.getByTestId("bring-in")).toHaveCount(0);
   // Open it in the builder, then save it from there as a workflow.
   await kit.getByTestId("item-builder").click();
@@ -146,20 +146,19 @@ test("every skill says what to have first, links the steps before it, and offers
   await page.goto("/prompts/fact-based-ad-copy-writer");
   const before = page.locator("#before");
   await expect(before).toContainText("Recommended steps before this one");
-  await expect(before).toContainText("It runs on its own");
-  await expect(before.getByTestId("chain").getByRole("link", { name: "Brand profile builder" })).toHaveAttribute("href", "/skills/website-brand-brain-builder");
+  await expect(before).toContainText("Required material");
+  await expect(page.getByRole("region", { name: "Before and after this prompt" }).getByRole("link", { name: "Brand file builder" })).toHaveAttribute("href", "/skills/website-brand-brain-builder");
   await expect(before.getByTestId("brain-files")).toContainText("facts.json");
   const next = page.getByTestId("next");
-  await expect(next).toContainText("Check it before it goes live");
-  await next.getByRole("link", { name: /Meta ads compliance checker/ }).click();
+  await next.getByRole("link", { name: /Meta ad policy checker/ }).click();
   await expect(page).toHaveURL(/\/skills\/meta-ads-compliance-checker$/);
   // The skill file itself carries the same, with full links, and asks what's next at the end.
   const file = await (await page.request.get("/skills/fact-based-ad-copy-writer/SKILL.md")).text();
   expect(file).toContain("## Before you start");
   expect(file).toContain("https://useaiblocks.com/skills/website-brand-brain-builder");
   expect(file).toContain("**Look first.**");
-  expect(file).toContain("shall I go ahead with what you've given me?");
-  expect(file).toContain("This skill runs on its own");
+  expect(file).toContain("**Check what's missing.**");
+  expect(file).toContain("a brand file is a `context/brand-file/` folder");
   expect(file).toContain("## After this");
   expect(file).toContain("suggest what they could do next");
 });

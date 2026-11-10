@@ -927,6 +927,10 @@ test("load_agent on a pack with a curated toolbox sends toolbox.md right after A
   assert.match(text, /Choose what fits this request from toolbox\.md below, at your own discretion, and read each file you choose with get_agent_file\./);
   assert.match(text, /never search for a skill/);
   assert.match(text, /- toolbox\/: 2 library items, each named in toolbox\.md with when to use it/);
+  // The role's own skills are in toolbox.md too, so the file list names them in one line; the data still lists each.
+  assert.match(text, /- skills\/, prompts\/, workflows\/: 1 file of this role, each named in toolbox\.md with when to use it/);
+  assert.doesNotMatch(text.split("===== AGENTS.md =====")[0], /- skills\/keyword-research\/SKILL\.md:/);
+  assert.ok(data.other_files.some((f: { path: string }) => f.path === "skills/keyword-research/SKILL.md"));
   assert.doesNotMatch(text, /For this request, follow/);
   assert.ok(!assets.asked.includes("/packs/roles/seo-specialist/skills/keyword-research/SKILL.md"), "the skill is read only when the agent asks for it");
   // The agent opens what it chose by name: a role skill, or a library item stored once for every pack.

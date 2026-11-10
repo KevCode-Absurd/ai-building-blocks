@@ -401,9 +401,13 @@ export const TOOLS: ToolDef[] = [
       const items = index.files.filter(f => f.kind === "toolbox");
       const others = index.files.filter(f => !whole.has(f.path) && f.kind !== "toolbox");
       const heldRule = new Map(payload.held.map(h => [h.path, h.rule]));
+      // With a curated toolbox, the pack's own skills, prompts and workflows are in toolbox.md too, each with its "when".
+      const inToolbox = (f: PackIndexFile) => payload.curated && ["skill", "prompt", "workflow"].includes(f.kind) && /^(skills|prompts|workflows)\//.test(f.path);
+      const own = others.filter(inToolbox).length;
       const list = [
-        ...others.map(f => `- ${f.path}: ${f.purpose}${heldRule.has(f.path) ? ` (not in this first load: it ${heldRule.get(f.path)})` : ""}`),
-        ...(items.length ? [`- toolbox/: ${items.length} library items, each named in toolbox.md with when to use it`] : []),
+        ...others.filter(f => !inToolbox(f)).map(f => `- ${f.path}: ${f.purpose}${heldRule.has(f.path) ? ` (not in this first load: it ${heldRule.get(f.path)})` : ""}`),
+        ...(own ? [`- skills/, prompts/, workflows/: ${s(own, "file")} of this role, each named in toolbox.md with when to use it`] : []),
+        ...(items.length ? [`- toolbox/: ${s(items.length, "library item")}, each named in toolbox.md with when to use it`] : []),
       ].join("\n");
       const zip = index.zip ? `${c.origin}${index.zip.url}` : `${c.origin}/packs/${encodeURIComponent(p.id)}.zip`;
       const route = payload.curated

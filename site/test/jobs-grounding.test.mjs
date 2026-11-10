@@ -167,7 +167,7 @@ test('the rubric adds per-family craft criteria with the spec weights, and gates
     assert.deepEqual(ctx.annex.hand_over.detail_goes_to, ['an appendix inside the deliverable'], kind);
     assert.match(ctx.brief, /never in a file the client does not have/, kind);
   }
-  assert.match(prepareJobContext({ request: 'x', deliverable_kind: 'plan' }).annex.hand_over.word_budget, /4,000 words/);
+  assert.match(prepareJobContext({ request: 'x', deliverable_kind: 'plan' }).annex.hand_over.word_budget, /10,000 words/);
   assert.ok(prepareJobContext({ request: 'Improve our product page', deliverable_kind: 'web_page' }).annex.proven_levers.some(l => /reviews and ratings/.test(l)));
   assert.match(prepareJobContext({ request: 'Improve our product page', deliverable_kind: 'web_page' }).brief, /AVOID unless chosen on purpose/, 'the defaults to avoid still fit in the brief');
   const legacy = assembleRubric({}); assert.equal(legacy.craft, undefined);

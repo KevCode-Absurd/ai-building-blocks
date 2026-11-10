@@ -136,8 +136,8 @@ Use a separate critic: a fresh chat, or another seat. Give it the deliverable, `
   - Page: a hand-over note of up to 150 words, and page copy no longer than the live page plus 20%.
   - Ads: up to 150 words per concept.
   - Email: up to 200 words of body per email.
-  - Audit or analysis: the top 3 fixes or the answer on the first screen, and up to 1,500 words.
-  - Strategy or plan: a summary of up to 250 words, and up to 4,000 words that keep the specifics someone needs to act.
+  - Audit or analysis: the top 3 fixes or the answer on the first screen, and up to 10,000 words.
+  - Strategy or plan: a summary of up to 250 words, and up to 10,000 words that keep the specifics someone needs to act.
   - Code: a note of up to 150 words.
 - Pages, ads, copy, email and audits also: every proven lever was checked, and each missing one was added or skipped with a reason (step 3).
 - web_page also: the existing nav and footer are kept unless the change is on purpose; brand fonts are loaded; the page works at 390 px and 1440 px; the primary action works. Run [Brand fidelity check](https://useaiblocks.com/skills/brand-fidelity-check) (`check-brand-fidelity.mjs`, or its manual checklist) and its fresh-context side-by-side review.

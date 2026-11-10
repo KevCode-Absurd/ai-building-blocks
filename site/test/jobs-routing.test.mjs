@@ -136,6 +136,8 @@ test('a single landing page goes to one lead: no seats, no state, no team method
   assert.deepEqual(r.files, []); assert.equal(r.state, undefined); assert.equal(r.team, undefined); assert.equal(Object.keys(r)[1], 'brief');
   // The request already names the traffic source, so that question is not asked again.
   assert.deepEqual(r.questions.map(q => q.id), ['one_action', 'proof', 'offer', 'keep']); assert.equal(r.next_action.questions_allowed, 4);
+  // The brief still carries the older TASTE line, so the reply says which questions to ask.
+  assert.match(r.questions_note, /you decide/); assert.match(r.questions_note, /instead of any TASTE questions in the brief/);
   assert.ok(r.rubric.criteria.length && r.rubric.gates.length); assert.equal(r.rubric.criteria.reduce((sum, c) => sum + c.weight, 0), 100);
   assert.match(r.next_action.instruction, /One lead does this job/); assert.doesNotMatch(JSON.stringify(r), /JOB-METHOD|state_digest|draft_receipt/);
   assert.ok(count(r) < 1200, `a single job start is ${count(r)} words`);

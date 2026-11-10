@@ -4,12 +4,12 @@ import { routeJob } from './router.mjs';
 import { resolveDials, localPreferences, updatePreferences } from './dials.mjs';
 import { dialQuestions } from './dial-questions.mjs';
 import { jobMethod, deliveryTemplates, SINGLE_LEAD_METHOD } from './method.mjs';
-import { assembleRubric, scoreReview } from './rubric.mjs';
+import { assembleRubric, scoreReview, CRAFT_PASS, CRAFT_FLOOR } from './rubric.mjs';
 import { refuseSecrets } from '../outcomes/engagement.mjs';
 import { buildExecutionPlan, EXECUTION_QUALITY_POLICY, validateExploration, validateProductionQuality } from './execution-quality.mjs';
 import {validateWorkContext} from './work-context.mjs';
 import { GROUNDING_POLICY, BRAND_KINDS, DATA_KINDS, resolveDeliverableKind, resolveMode, dialsLine, validateGrounding, substanceOverlap, prepareJobContext, craftRubric, gatesFor } from './grounding.mjs';
-import { intakeQuestions, INTAKE_ASK } from './intake-questions.mjs';
+import { intakeQuestions, INTAKE_NOTE } from './intake-questions.mjs';
 import { VARIETY_CONFIG } from './variety-config.mjs';
 
 export const JOB_STATE_SCHEMA = 'ai-blocks-job-state/2';
@@ -270,6 +270,7 @@ async function describe(state, view, catalogue, initial = false) {
   if (view.phase === 'DELIVER') files.push(...deliveryTemplates({ hasSpread: Boolean(view.spread) }));
   if (view.preferences_changed) files.push(...localPreferences(view.preferences).files);
   const warnings = [];
+  if (initial && grounded(base) && !team) warnings.push('The catalogue could not propose a lead and helpers for this request. Name the seats yourself at the staff step.');
   if (base.host_profile !== 'parallel') warnings.push('A single-context host cannot prove independent review. State the actual isolation used.');
   if (!base.quality_policy) warnings.push('This legacy job predates execution-quality gates. Start a new job to use frozen draft and artifact-quality validation.');
   if(view.production?.artifacts?.some(a=>a.budget?.used===null))warnings.push('The host did not expose some producer tool-call totals; their allowance use is not verified.');
@@ -278,8 +279,8 @@ async function describe(state, view, catalogue, initial = false) {
   // The full plan is in EXECUTION-PLAN.json; the top level carries a short summary.
   const plan_summary = { ...planSummary(execution_plan), file: 'EXECUTION-PLAN.json' };
   // Up to four questions chosen for this kind of job, each with a default. Dials are stated in one line, not asked.
-  const intro = initial ? (grounded(base) ? { brief: grounding.brief, ...(team ? { team } : {}), questions: intakeQuestions({ deliverableKind: base.deliverable.kind, request: base.request }), questions_note: INTAKE_ASK, dials_line: dialsLine(base.dials), ...(base.dial_questions?.length ? { dial_questions: base.dial_questions } : {}) } : { dials: base.dials, dial_questions: base.dial_questions }) : {};
-  return { schema: 'ai-blocks-job/1', ...(intro.brief ? { brief: intro.brief } : {}), execution_plan: plan_summary, job_id: base.job_id, mode: base.mode, mode_reason: base.mode_reason, job_type: base.job_type, tier: base.tier, estimate: { seats: preview?.ok ? preview.seats.length : settings.seats[1], council_rounds: settings.council_rounds, token_multiple: settings.token_multiple, source: 'estimated' }, host_profile: base.host_profile, phase: view.phase, ok: true, errors: [], warnings, state, state_digest: await jobStateDigest(state), next_action: nextAction(view, base), files, ...Object.fromEntries(Object.entries(intro).filter(([key]) => key !== 'brief')), ...(proposal ? { proposal } : {}), ...(view.rubric ? { rubric: view.rubric } : {}), ...(view.review_score ? { review_score: view.review_score } : {}), ...(view.preferences_changed ? { preference_update: localPreferences(view.preferences) } : {}), model_calls: 0, hosted_execution: false, stored_by_service: false, assurance: 'HOST_REPORTED_NOT_INDEPENDENTLY_VERIFIED' };
+  const intro = initial ? (grounded(base) ? { brief: grounding.brief, ...(team ? { team } : {}), questions: intakeQuestions({ deliverableKind: base.deliverable.kind, request: base.request }), questions_note: INTAKE_NOTE, dials_line: dialsLine(base.dials), ...(base.dial_questions?.length ? { dial_questions: base.dial_questions } : {}) } : { dials: base.dials, dial_questions: base.dial_questions }) : {};
+  return { schema: 'ai-blocks-job/1', ...(intro.brief ? { brief: intro.brief } : {}), execution_plan: plan_summary, job_id: base.job_id, mode: base.mode, mode_reason: base.mode_reason, job_type: base.job_type, tier: base.tier, estimate: { seats: preview?.ok ? preview.seats.length : view.team?.seats?.length ?? settings.seats[1], council_rounds: settings.council_rounds, token_multiple: settings.token_multiple, source: 'estimated' }, host_profile: base.host_profile, phase: view.phase, ok: true, errors: [], warnings, state, state_digest: await jobStateDigest(state), next_action: nextAction(view, base), files, ...Object.fromEntries(Object.entries(intro).filter(([key]) => key !== 'brief')), ...(proposal ? { proposal } : {}), ...(view.rubric ? { rubric: view.rubric } : {}), ...(view.review_score ? { review_score: view.review_score } : {}), ...(view.preferences_changed ? { preference_update: localPreferences(view.preferences) } : {}), model_calls: 0, hosted_execution: false, stored_by_service: false, assurance: 'HOST_REPORTED_NOT_INDEPENDENTLY_VERIFIED' };
 }
 
 /** A job one lead can do. No seats, no state and no record keeping: the brief, the questions, the lead and the rubric. */
@@ -295,8 +296,8 @@ function singleLeadJob(input, routed, catalogue) {
     estimate: { seats: 1, council_rounds: 0, token_multiple: [1, 1], source: 'estimated' }, host_profile: input.host_profile ?? (host.parallel_agents && host.max_parallel >= 2 ? 'parallel' : 'sequential'), phase: 'ROUTE',
     deliverable: { kind, source: deliverable.source },
     lead: lead ? { ...lead, load, ...(lead.persona_id ? { agent: { tool: 'load_agent', server: 'https://agents.useaiblocks.com/mcp', args: { id: lead.persona_id } } } : {}) } : null,
-    questions, questions_note: INTAKE_ASK,
-    rubric: { criteria: craftRubric(kind), gates: gatesFor(kind), pass: 'Every gate passes, and the weighted criteria score at least 70% with none under 5 out of 10.' },
+    questions, questions_note: INTAKE_NOTE,
+    rubric: { criteria: craftRubric(kind), gates: gatesFor(kind), pass: `Every gate passes, and the weighted criteria score at least ${Math.round(CRAFT_PASS * 100)}% with none under ${CRAFT_FLOOR} out of 10.` },
     next_action: { event: null, ...load, instruction: SINGLE_LEAD_METHOD + (lead ? '' : '\nNo lead matched this request in the catalogue: pick one with find_specialist.') + (routed.ask ? '\nFirst ask: ' + routed.question : ''), questions_allowed: questions.length, ...(routed.ask ? { question: routed.question } : {}),
       // The full spec, capture steps and annex. Skip it when it was already called for this request.
       context: { tool: 'prepare_job_context', args: contextArgs } },

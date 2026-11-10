@@ -90,6 +90,9 @@ export const MAX_INTAKE_QUESTIONS = 4;
 export const INTAKE_KINDS = Object.freeze(Object.keys(QUESTIONS));
 /** How to put the questions to the client. One message, never a form per question. */
 export const INTAKE_ASK = 'Ask these in one short message. Each has a default: if the client skips one or says "you decide", use its default and say so in one line.';
+/** The brief from grounding.mjs still lists its own TASTE questions. Until it is built from intakeQuestions, the reply
+ *  that carries both says which set to ask. Drop this note once the brief no longer has a TASTE line. */
+export const INTAKE_NOTE = `${INTAKE_ASK} Ask these instead of any TASTE questions in the brief.`;
 
 /**
  * The questions to ask before this job starts.

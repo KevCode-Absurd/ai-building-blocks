@@ -6,7 +6,7 @@ import { jobMethod, jobRecords, deliveryTemplates } from './method.mjs';
 import { JOB_SCHEMAS } from './contracts.mjs';
 import { checkSchema } from '../outcomes/schema-check.mjs';
 import { prepareJobContext, DELIVERABLE_KINDS } from './grounding.mjs';
-import { intakeQuestions, INTAKE_ASK } from './intake-questions.mjs';
+import { intakeQuestions, INTAKE_NOTE } from './intake-questions.mjs';
 import { routeJob } from './router.mjs';
 
 const text = maxLength => ({ type: 'string', minLength: 1, maxLength });
@@ -37,8 +37,7 @@ function jobContext(input, context) {
   return {
     schema, brief,
     questions: intakeQuestions({ deliverableKind: rest.annex.deliverable_kind, family: rest.annex.family, request: input.request }),
-    // Until the brief itself carries these questions, they take the place of any TASTE questions it lists.
-    questions_note: `${INTAKE_ASK} Ask these instead of any TASTE questions in the brief.`,
+    questions_note: INTAKE_NOTE,
     route: { mode: routed.mode, reason: routed.mode_reason, next },
     ...rest,
   };

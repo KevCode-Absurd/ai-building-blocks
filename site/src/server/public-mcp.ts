@@ -173,8 +173,8 @@ export const PUBLIC_MCP_TOOLS: Tool[] = [
   }
 ];
 
-/** Tools that stay on REST but are no longer listed on the public MCP, with what to use instead. start_outcome is the
- *  single front door there; these scoping and team tools carried 13-14 KB schemas each. */
+/** Tools that stay on REST but are no longer listed on the public MCP, with what to use instead. These scoping and
+ *  team tools carried 13-14 KB schemas each; a business goal goes through start_outcome. */
 const TEAM_REST: Record<string, string> = { prepare_specialist_team: '/api/v1/specialist-team-preparations', checkpoint_specialist_team: '/api/v1/specialist-team-checkpoints' };
 export const RETIRED_MCP_TOOLS: Record<string, { rest: string; instead: string }> = Object.fromEntries([
   ...Object.entries(SCOPE_REST_OPERATIONS as Record<string, string>).map(([rest, name]) => [name, { rest, instead: 'For a business goal or problem, use start_outcome: it pins down the outcome, then plans and checks the work.' }]),
@@ -243,7 +243,8 @@ const SkillsGetRequestSchema = z.object({ method: z.literal('skills/get'), param
 // Skills results must say they are complete and how long they stay fresh; catalogue data is public.
 const CACHE = { resultType: 'complete', ttlMs: 300_000, cacheScope: 'public' } as const;
 /** Server version, kept in step with the server card (public-api.ts) and docs/public-mcp/README.md.
- *  3.0.0: start_outcome is the front door; scoping and team tools moved to REST only; argument problems are tool errors. */
+ *  3.0.0: scoping and team tools moved to REST only; argument problems are tool errors. prepare_job_context is the first
+ *  call for a piece of work and start_outcome for a goal with no deliverable (instructions and descriptions only). */
 export const PUBLIC_MCP_VERSION = '3.0.0';
 
 function libraryError(error: unknown): never {

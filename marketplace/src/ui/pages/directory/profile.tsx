@@ -3,12 +3,13 @@
 import { useEffect, useState } from "preact/hooks";
 import { Button, Notice, Page, Spinner, useLoad } from "../../components.tsx";
 import { api, ApiError, peekBoot } from "../../lib/api.ts";
-import { Link } from "../../lib/router.tsx";
-import { AgentCard, HowHiringWorks, Portrait, type AgentCardData, type AgentOutcome, type AgentProfile } from "./parts.tsx";
+import { Link, useHistoryState } from "../../lib/router.tsx";
+import { AgentCard, HowHiringWorks, Portrait, WorkLine, type AgentCardData, type AgentOutcome, type AgentProfile } from "./parts.tsx";
 import { SOUL_SECTIONS, splitVoice } from "../../../modules/directory/soul.ts";
 import { agentTitle } from "../../../modules/directory/titles.ts";
+import { groupByNature, lowerFirst, TASKS_SHOWN } from "../../../modules/directory/work.ts";
 import { PackContents, PackDownloads } from "./pack-parts.tsx";
-import { loadPack, viewerHref, type PackFile, type PackInfo } from "./packs.ts";
+import { fileNames, loadPack, viewerHref, type PackFile, type PackInfo } from "./packs.ts";
 
 interface ProfileResponse { agent: AgentProfile; related: AgentCardData[] }
 
@@ -56,6 +57,8 @@ function Profile(props: { agent: AgentProfile; related: AgentCardData[] }) {
           <h1>{a.name}</h1>
           <p class="dir-profile-title">{a.title}</p>
           {a.role && <p class="dir-profile-role">Job role: <Link href={`/agents?${new URLSearchParams({ role: a.role.id })}`}>{a.role.name}</Link></p>}
+          {a.does && <WorkLine does={a.does} class="dir-profile-does" />}
+          {a.does_not && <p class="dir-profile-not"><b>Not for:</b> {lowerFirst(a.does_not)}</p>}
           <p class="lede">{a.tagline}</p>
           {a.bio && <p class="dir-profile-bio">{a.bio}</p>}
           <div class="dir-profile-actions">
@@ -74,6 +77,10 @@ function Profile(props: { agent: AgentProfile; related: AgentCardData[] }) {
           {a.outcomes.map(o => <OutcomeCard agent={a} outcome={o} files={files} />)}
         </div>
       </section>
+
+      {a.tasks.length > 0 && <CanDo agent={a} />}
+
+      {a.brings.length > 0 && <Brings agent={a} files={files} />}
 
       {a.team.length > 0 && <ChannelTeam agent={a} />}
 
@@ -147,7 +154,79 @@ function PackInside(props: { agent: AgentProfile; pack: PackInfo }) {
         <span class="dir-files-total">{pack.files.length} files{pack.version ? ` · version ${pack.version}` : ""}</span>
       </div>
       <p class="muted">Every file in {a.name}'s download. Open one to read it here.</p>
-      <PackContents agentId={a.id} files={pack.files} />
+      <PackContents agentId={a.id} files={pack.files} names={fileNames(a)} />
+    </section>
+  );
+}
+
+/**
+ * "What I can do": the tasks this job role is hired for, in plain words, grouped by what they are (things I make,
+ * plan, or check). The tasks closest to this agent's own outcomes come first. The first few show at once; "Show
+ * all" opens the rest, and the choice stays with this history entry, so going back returns to the same place.
+ */
+function CanDo(props: { agent: AgentProfile }) {
+  const a = props.agent;
+  const [all, setAll] = useHistoryState("tasks-all", false);
+  const more = a.tasks.length - TASKS_SHOWN;
+  const groups = groupByNature(all || more <= 0 ? a.tasks : a.tasks.slice(0, TASKS_SHOWN));
+  return (
+    <section class="dir-section dir-can" id="dir-can" aria-labelledby="dir-can-title">
+      <div class="dir-section-head">
+        <h2 id="dir-can-title">What I can do</h2>
+        <span class="dir-files-total">{a.tasks.length} tasks</span>
+      </div>
+      <p class="muted">{a.role ? `The jobs people bring to a ${lowerFirst(a.role.name)}.` : "The jobs people bring me."} Ask for any of them in your own words.</p>
+      <div class="dir-can-groups" id="dir-can-list">
+        {groups.map(g => (
+          <div class="dir-can-group">
+            <h3>{g.heading}</h3>
+            <ul class="dir-list dir-list-yes">{g.tasks.map(t => <li>{t.task}</li>)}</ul>
+          </div>
+        ))}
+      </div>
+      {more > 0 && (
+        <p class="dir-can-more">
+          <button type="button" class="btn btn-secondary btn-sm" aria-expanded={all} aria-controls="dir-can-list" onClick={() => setAll(!all)}>
+            {all ? "Show fewer tasks" : `Show all ${a.tasks.length} tasks`}
+          </button>
+        </p>
+      )}
+    </section>
+  );
+}
+
+/**
+ * "What I bring": how many skills, prompts, workflows, tools, thinking lenses and helper agents the agent works
+ * with, then each one by its plain name. The agent's own files open in the file viewer (when the download holds
+ * them), library items open on the AI Blocks library, and helper agents open that job role's agents here.
+ */
+function Brings(props: { agent: AgentProfile; files: PackFile[] }) {
+  const a = props.agent;
+  const inPack = new Set(props.files.map(f => f.path));
+  return (
+    <section class="dir-section dir-bring" id="dir-bring" aria-labelledby="dir-bring-title">
+      <h2 id="dir-bring-title">What I bring</h2>
+      <p class="muted">What I work with, by name. I pick what fits your job.</p>
+      <ul class="dir-bring-counts" aria-label="What I bring, by kind">
+        {a.brings.map(g => <li><b>{g.items.length}</b> {g.items.length === 1 ? g.one : g.label.toLowerCase()}</li>)}
+      </ul>
+      <div class="dir-bring-groups">
+        {a.brings.map(g => (
+          <details class="dir-bring-group" open={g.items.length <= 12}>
+            <summary><span class="dir-bring-label">{g.label}</span> <span class="dir-files-n">{g.items.length}</span></summary>
+            <ul>
+              {g.items.map(item => (
+                <li>
+                  {item.file && inPack.has(item.file) ? <Link href={viewerHref(a.id, item.file)}>{item.name}</Link>
+                    : item.href && item.href.startsWith("/") ? <Link href={item.href}>{item.name}</Link>
+                    : item.href ? <a href={item.href} target="_blank" rel="noopener">{item.name}</a>
+                    : item.name}
+                </li>
+              ))}
+            </ul>
+          </details>
+        ))}
+      </div>
     </section>
   );
 }
@@ -175,15 +254,20 @@ function ChannelTeam(props: { agent: AgentProfile }) {
   );
 }
 
-/** One outcome. When the pack has the matching job skill, a link opens it: how the agent does this job. */
+/**
+ * One outcome. "See how I do this" opens the skill that does it: the one the profile data names (outcome.how, matched
+ * by what the outcome is, not by its job type alone), and only when the download really holds that file. A job
+ * type's own skill sits in a "-job" folder when the role kit has a skill of the same name.
+ */
 function OutcomeCard(props: { agent: AgentProfile; outcome: AgentOutcome; files: PackFile[] }) {
   const { agent: a, outcome: o } = props;
-  const skill = o.job ? props.files.find(f => f.path === `skills/${o.job!.id}/SKILL.md` || f.path === `skills/${o.job!.id}-job/SKILL.md`) : undefined;
+  const how = o.how;
+  const skill = how ? props.files.find(f => f.path === how.path) ?? props.files.find(f => f.path === how.path.replace(/\/SKILL\.md$/, "-job/SKILL.md")) : undefined;
   return (
     <article class="dir-outcome">
       <h3>{o.title}</h3>
       <p class="dir-outcome-get"><span class="dir-outcome-label">You get</span> {o.deliverable}</p>
-      {skill && <Link href={viewerHref(a.id, skill.path)} class="dir-card-more">See how I do this</Link>}
+      {skill && how && <Link href={viewerHref(a.id, skill.path)} class="dir-card-more" aria-label={`See how I do this: ${how.name}`}>See how I do this</Link>}
     </article>
   );
 }

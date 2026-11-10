@@ -8,9 +8,10 @@
 import type { Env } from "./env.ts";
 import { AREAS } from "./core/types.ts";
 import { getRole, listRoles } from "./modules/directory/roles.ts";
-import { listPersonas } from "./modules/directory/service.ts";
+import { listPersonas, searchPersonas } from "./modules/directory/service.ts";
 import { agentPayload, featuredPayload, HOME_FEATURED } from "./modules/directory/routes.ts";
-import { areaLabel } from "./modules/directory/views.ts";
+import { areaLabel, type AgentProfile } from "./modules/directory/views.ts";
+import { groupByNature, lowerFirst, workLine, workLineText } from "./modules/directory/work.ts";
 import { AGENTS_TITLE, agentTitle, CONNECT_TITLE, GUIDES_TITLE, roleTitle, SITE_SUFFIX } from "./modules/directory/titles.ts";
 import type { Persona } from "./core/types.ts";
 import { publicProfile, publicProfileSlugs, recordShareVisit, type PublicProfile } from "./modules/experts/profiles.ts";
@@ -86,8 +87,33 @@ function frame(inner: string): string {
   return `<div class="seo-page"><header><a href="/">AI Blocks agents</a> <nav><a href="/agents">Agents</a> <a href="/connect">Connect your AI</a> <a href="/guides">Guides</a> <a href="${LIBRARY}">AI Blocks library</a></nav></header><main class="page">${inner}</main></div>`;
 }
 
+/** "Makes: landing page copy and homepage copy", the same line the cards show under an agent's title. "" when the agent lists no outcomes. */
+function doesLine(p: Persona): string {
+  const line = workLine(p.profile?.outcomes, p.profile?.not_for);
+  return line ? workLineText(line) : "";
+}
+
 function agentLine(p: Persona): string {
-  return `<li><a href="/agents/${esc(p.id)}">${esc(p.name)}, ${esc(p.title)}</a>: ${esc(p.tagline)}</li>`;
+  const does = doesLine(p);
+  return `<li><a href="/agents/${esc(p.id)}">${esc(p.name)}, ${esc(p.title)}</a>: ${esc(p.tagline)}${does ? ` ${esc(does)}.` : ""}</li>`;
+}
+
+/** The home page's "What do you need done?" box as a plain form: it works with no script and leads to /agents?q=. */
+const SEARCH_FORM = `<form action="/agents" method="get" role="search"><label for="seo-q">What do you need done?</label> <input id="seo-q" name="q" type="search" maxlength="120" placeholder="A landing page for my shop"> <button type="submit">Find an agent</button></form>`;
+
+/** "What I can do" and "What I bring" for the page the Worker sends: the same tasks, counts, names and links the app shows. */
+function toolboxHtml(a: AgentProfile): string {
+  const tasks = a.tasks.length
+    ? `<h2>What ${esc(a.name)} can do</h2>${groupByNature(a.tasks).map(g => `<h3>${esc(g.heading)}</h3><ul>${g.tasks.map(t => `<li>${esc(t.task)}</li>`).join("")}</ul>`).join("")}`
+    : "";
+  const item = (i: AgentProfile["brings"][number]["items"][number]) => {
+    const href = i.file ? `/agents/${a.id}/files/${i.file}` : i.href;
+    return `<li>${href ? `<a href="${esc(href)}">${esc(i.name)}</a>` : esc(i.name)}</li>`;
+  };
+  const brings = a.brings.length
+    ? `<h2>What ${esc(a.name)} brings</h2>${a.brings.map(g => `<h3>${esc(g.label)}: ${g.items.length}</h3><ul>${g.items.map(item).join("")}</ul>`).join("")}`
+    : "";
+  return tasks + brings;
 }
 
 function agentsByArea(list: Persona[]): string {
@@ -115,7 +141,7 @@ async function homePage(env: Env): Promise<PageView> {
       { "@context": "https://schema.org", "@type": "WebSite", name: "AI Blocks agents", url: `${origin}/`, publisher: { "@type": "Organization", name: SITE, url: LIBRARY, logo: `${origin}/icon-512.png` },
         potentialAction: { "@type": "SearchAction", target: `${origin}/agents?q={search_term_string}`, "query-input": "required name=search_term_string" } },
     ],
-    body: `<h1>Hire an AI agent. It works in your own AI.</h1><p>${count} named AI agents, each hired for a job role: SEO, sales, bookkeeping, support and more. Every agent is free. Download one, or connect your AI and load it there. It works on your own AI plan.</p><p><a href="/agents">Meet the agents</a> · <a href="/connect">Connect your AI</a> · <a href="/guides">Read the guides</a></p>`,
+    body: `<h1>Hire an AI agent. It works in your own AI.</h1><p>${count} named AI agents, each hired for a job role: SEO, sales, bookkeeping, support and more. Every agent is free. Download one, or connect your AI and load it there. It works on your own AI plan.</p>${SEARCH_FORM}<p><a href="/agents">Meet the agents</a> · <a href="/connect">Connect your AI</a> · <a href="/guides">Read the guides</a></p>`,
     boot: { [`/api/agents?featured=${HOME_FEATURED}`]: featuredPayload(everyone, HOME_FEATURED) },
   };
 }
@@ -124,6 +150,18 @@ async function agentsPage(env: Env, url: URL): Promise<PageView> {
   const everyone = await listPersonas(env);
   const role = getRole(url.searchParams.get("role")?.trim());
   const filtered = url.searchParams.has("q") || url.searchParams.has("area");
+  // A search (the home page's box, or a link someone shared): the same agents in the same order the app shows, never indexed.
+  const q = (url.searchParams.get("q") ?? "").trim().slice(0, 120);
+  if (q && !role) {
+    const area = url.searchParams.get("area")?.trim() ?? "";
+    const found = searchPersonas(everyone, q).filter(p => !area || p.area === area);
+    return {
+      status: 200, index: false, path: "/agents",
+      title: AGENTS_TITLE,
+      description: clip(`${everyone.length} named AI agents for marketing, sales, finance, operations and more. Each one is free to download or load into your own AI.`, 160),
+      body: `<h1>AI agents for "${esc(q)}"</h1>${SEARCH_FORM}<p>${found.length} agent${found.length === 1 ? "" : "s"}, best match first. Each line says whether the agent makes the thing, plans it or reviews it.</p><ul>${found.slice(0, 40).map(agentLine).join("")}</ul><p><a href="/agents">See every agent</a></p>`,
+    };
+  }
   if (role) {
     const inRole = everyone.filter(p => p.role === role.id);
     return {
@@ -149,6 +187,10 @@ async function agentPage(env: Env, id: string): Promise<PageView> {
   const path = `/agents/${a.id}`;
   const house = a.kind === "house";
   const outcomes = a.outcomes.map(o => `<li><strong>${esc(o.title)}</strong>: ${esc(o.deliverable)}</li>`).join("");
+  const list = (items: string[]) => items.map(x => `<li>${esc(x)}</li>`).join("");
+  const things = a.does?.things ?? [];
+  const does = a.does ? `<p><strong>${esc(a.does.label)}${things.length ? ":" : ""}</strong> ${esc(things.length <= 1 ? things.join("") : `${things.slice(0, -1).join(", ")} and ${things[things.length - 1]}`)}${a.does_not ? `. <strong>Not for:</strong> ${esc(lowerFirst(a.does_not))}` : ""}</p>` : "";
+  const fit = `${a.good_at.length ? `<h2>Good at</h2><ul>${list(a.good_at)}</ul>` : ""}${a.not_for.length ? `<h2>Not for</h2><ul>${list(a.not_for)}</ul>` : ""}`;
   return {
     status: 200, index: house, path,
     title: agentTitle(a.name, a.title),
@@ -165,7 +207,7 @@ async function agentPage(env: Env, id: string): Promise<PageView> {
         { "@type": "ListItem", position: a.role ? 3 : 2, name: `${a.name}, ${a.title}`, item: `${origin}${path}` },
       ] },
     ],
-    body: `<p><a href="/agents">All agents</a></p><img src="${esc(a.portrait)}" alt="${esc(`${a.name}, ${a.title}`)}" width="160" height="160"><h1>${esc(a.name)}</h1><p>${esc(a.title)}${a.role ? ` · Job role: <a href="/agents?role=${esc(encodeURIComponent(a.role.id))}">${esc(a.role.name)}</a>` : ""}</p><p>${esc(a.tagline)}</p>${a.bio ? `<p>${esc(a.bio)}</p>` : ""}<h2>What ${esc(a.name)} delivers</h2><ul>${outcomes}</ul>${house ? `<h2>Get ${esc(a.name)}, free</h2><p>Download ${esc(a.name)}'s pack from this page, or <a href="/connect">connect your AI</a> and ask it to load ${esc(a.name)}. Read the personality in <a href="${esc(path)}/soul.md">soul.md</a>.</p>` : ""}`,
+    body: `<p><a href="/agents">All agents</a></p><img src="${esc(a.portrait)}" alt="${esc(`${a.name}, ${a.title}`)}" width="160" height="160"><h1>${esc(a.name)}</h1><p>${esc(a.title)}${a.role ? ` · Job role: <a href="/agents?role=${esc(encodeURIComponent(a.role.id))}">${esc(a.role.name)}</a>` : ""}</p>${does}<p>${esc(a.tagline)}</p>${a.bio ? `<p>${esc(a.bio)}</p>` : ""}<h2>What ${esc(a.name)} delivers</h2><ul>${outcomes}</ul>${toolboxHtml(a)}${fit}${house ? `<h2>Get ${esc(a.name)}, free</h2><p><a href="/packs/${esc(a.id)}.txt">Download ${esc(a.name)} as one text file</a> for a chat app, or <a href="/packs/${esc(a.id)}.zip">download the folder</a> for a coding app. Or <a href="/connect">connect your AI</a> and ask it to load ${esc(a.name)}. Read the personality in <a href="${esc(path)}/soul.md">soul.md</a>.</p>` : ""}`,
     boot: { [`/api/agents/${a.id}`]: payload },
   };
 }
@@ -377,7 +419,7 @@ export async function llmsTxt(env: Env): Promise<Response> {
     "",
     "## Agents",
     "",
-    ...everyone.map(p => `- [${p.name}, ${p.title}](${origin}/agents/${p.id}): ${p.tagline}`),
+    ...everyone.map(p => { const does = doesLine(p); return `- [${p.name}, ${p.title}](${origin}/agents/${p.id}): ${p.tagline}${does ? ` ${does}.` : ""}`; }),
     "",
   ];
   return text(lines.join("\n"), "text/plain");

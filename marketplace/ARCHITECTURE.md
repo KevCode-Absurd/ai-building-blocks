@@ -125,7 +125,7 @@ While `HOSTED_JOBS` is off this is the ops-only test path; for everyone else a h
 |---|---|
 | core | `GET /api/health`, `GET /api/config`, `GET /api/me`, `POST /api/beta/redeem` |
 | catalogue | `GET /api/catalogue`, `GET /api/catalogue/:id` |
-| directory | `GET /api/agents?area=&q=&role=`, `GET /api/agents/:id`, `GET /agents/:id/soul.md`. Cards carry `role: { id, name } \| null` and `mega: { variant, team_size } \| null`; the profile adds `team: [{ id, name, job }]` (mega agents, else `[]`). `?role=<id>` lists one job role (400 `unknown_role` for an id not in roles.json) and the list adds `role: { id, name, department, summary }`. Search also matches the role's name (with the name and title) and aliases (with the tagline). `GET /tools/:file` (a capture or check tool, see "Agent packs") and `GET /agents/:id/skills/:skill.txt` (one skill in one text file) read the built packs through `ASSETS`. |
+| directory | `GET /api/agents?area=&q=&role=`, `GET /api/agents/:id`, `GET /agents/:id/soul.md`. Cards carry `role: { id, name } \| null` and `mega: { variant, team_size } \| null`; the profile adds `team: [{ id, name, job }]` (mega agents, else `[]`). `?role=<id>` lists one job role (400 `unknown_role` for an id not in roles.json) and the list adds `role: { id, name, department, summary }`. `?q=` takes a plain request ("I need a landing page for my shop") or a few words; see "Search, the work line and the toolbox on a profile". Cards carry `does: { nature, label, things } | null`; the profile adds `does_not`, `tasks: [{ id, task, nature }]`, `brings: [{ type, label, one, items: [{ name, href, file }] }]` and, on each outcome, `how: { path, name } | null`. `GET /tools/:file` (a capture or check tool, see "Agent packs") and `GET /agents/:id/skills/:skill.txt` (one skill in one text file) read the built packs through `ASSETS`. |
 | intake | `POST /api/requests`, `GET /api/requests/:id`, `POST /api/requests/:id/answers`, `POST /api/requests/:id/quote`, `POST /api/requests/:id/confirm` |
 | delivery | `GET /api/jobs`, `GET /api/jobs/:id`, `POST /api/jobs/:id/accept`, `POST /api/jobs/:id/revise`, `POST /api/jobs/:id/reject`, `GET /api/notifications` |
 | evaluation | `GET /api/review/blind/next`, `POST /api/review/blind/:id`, `GET /api/review/stats` |
@@ -168,11 +168,38 @@ Search engines: Google reads `/sitemap.xml` through Search Console (property `sc
   draws at full height at once. Change the address with `replaceAddress`, never `history.replaceState(null)`, or the
   entry forgets what it holds.
 
+## Search, the work line and the toolbox on a profile
+
+- **Search** (`directory/search.ts`; `service.ts` `searchPersonas` and `listPersonas` call it, so `GET /api/agents?q=`,
+  the plain `/agents?q=` page and the MCP tool `list_agents` rank the same way). A request is cut to the words that
+  carry it, each matched in any form (`stem`) and through a short list of stand-ins. Searched, strongest first:
+  name, title and role name; role aliases; outcome titles and hints; tagline; the role's toolbox task names; the job
+  types behind the outcomes; then bio, capabilities and deliverables, which add to a score but never make a match.
+  "Not for" lines are never searched. An agent matches when it covers 60% of the request's weight (rare words weigh
+  more; words after "for my" and the person in "hire a developer" weigh little). Each match is scaled by what the
+  work is: when the thing itself is asked for and some agent makes it, a review of it counts about half, so makers
+  come before auditors; "audit my landing page" turns that round. Agents within 5% of each other go in `sort` order.
+- **The work line** (`directory/work.ts`, no imports, shared with the browser app). `workLine(outcomes, not_for)`
+  reads each outcome's title as a made thing, a plan or a review and gives "Makes: ...", "Plans and briefs: ..." or
+  "Reviews and advises: ..." with up to three things named, plus the agent's own "Not for" line when it says the
+  agent does not make the finished thing. Cards and profiles show it under the title; `pages.ts` and `llms.txt`
+  say the same. Nothing rewrites persona text.
+- **The toolbox on a profile** (`directory/toolbox.ts`, `views.ts`). `scripts/role-toolbox.mjs` (run first by `npm
+  run build`; `--check` exits 1 when stale) writes `directory/data/role-toolbox.json` from every role kit (its
+  skills, prompts and workflows, named by each file's first heading) and its `toolbox.json` (tasks, library items,
+  helper roles), naming library items from `catalogue-items/` and keying them by their page path on useaiblocks.com
+  (the library site's `kindPath` rule; items with no page are listed under `unpaged` and never linked). The Worker
+  imports that file; the browser app never does. The profile shows "What I can do" (the role's tasks, the agent's own
+  first, `TASKS_SHOWN` before "Show all", grouped as made, planned or reviewed) and "What I bring" (counts are the
+  list lengths). `outcomeSkill` picks the skill behind "See how I do this" by what the outcome is, not by its job
+  type alone. A role with no `toolbox.json` shows its kit's own files and no task list.
+  `test/directory-toolbox.test.ts` fails while the committed data file is stale: run `node scripts/role-toolbox.mjs`.
+
 ## UI map
 
 | Owner | Pages |
 |---|---|
-| core | `/` home, `/invite` |
+| core | `/` home (with "What do you need done?", a search box that leads to `/agents?q=`), `/invite` |
 | directory | `/agents` (`?role=<id>`: the role's name and summary as the heading, the area chips kept), `/agents/:id` (role link, "My channel team" for mega agents, "Use this agent in your own AI" and "What's inside"), `/agents/:id/files/<path…>` (file viewer), `/guides`, `/guides/:slug` (all public) |
 | intake | `/new`, `/requests/:id` (buyer) |
 | delivery | `/jobs`, `/jobs/:id` (buyer) |
@@ -326,7 +353,7 @@ the day's date. The build reads the lock and stops when it is stale ("Run npm ru
 packs/versions.json"), so an unchanged pack is byte-identical from build to build and a deploy never re-uploads it.
 After any change to personas, job types, roles, kits or templates: `npm run packs:lock`, then commit the lock.
 
-**Build step.** `npm run build` = `node scripts/mega-team.mjs`, `vite build`, then `node scripts/build-packs.mjs` (also used by `worker:dev` and both
+**Build step.** `npm run build` = `node scripts/mega-team.mjs`, `node scripts/role-toolbox.mjs`, `vite build`, then `node scripts/build-packs.mjs` (also used by `worker:dev` and both
 deploy scripts). `--only=id,id` builds a few. Static assets serve the packs; the Worker routes `/tools/<file>`
 and `/agents/<id>/skills/<skill>.txt` read from them. Agent ids may not be `roles`, `jobs`, `mega`, `tools` or
 `index`.

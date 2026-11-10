@@ -73,10 +73,10 @@ export function AgentsPage(props: { query: URLSearchParams }) {
 
       <form class="dir-search" role="search" onSubmit={e => e.preventDefault()}>
         <label class="dir-search-box">
-          <span class="dir-visually-hidden">Search agents</span>
+          <span class="dir-visually-hidden">Say what you need, or search by job role</span>
           <svg class="dir-search-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2" /><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="square" /></svg>
           <input class="input dir-search-input" type="search" value={q} maxLength={120} autoComplete="off" enterKeyHint="search"
-            placeholder="Try SEO plan, cash flow or job description" onInput={e => setQ((e.target as HTMLInputElement).value)} />
+            placeholder="Say what you need, like a landing page for my shop" onInput={e => setQ((e.target as HTMLInputElement).value)} />
         </label>
       </form>
 
@@ -118,7 +118,7 @@ export function AgentsPage(props: { query: URLSearchParams }) {
           action={<div class="dir-empty-actions">
             {(search || area || role) && <Button kind="secondary" onClick={showAll}>Show all agents</Button>}
           </div>}>
-          Try fewer words, or pick another area.
+          Say the thing you want made or fixed, like "welcome emails" or "bookkeeping". Or pick another area.
         </Empty>
       ) : null}
 
@@ -137,8 +137,9 @@ export function AgentsPage(props: { query: URLSearchParams }) {
 
 function resultLine(n: number, search: string, areaName?: string, roleName?: string): string {
   const who = `${n} ${roleName ? `${roleName} ` : ""}agent${n === 1 ? "" : "s"}`;
-  if (search && areaName) return `${who} in ${areaName} for "${search}"`;
-  if (search) return `${who} for "${search}"`;
+  // With a search the best matches come first; each card says whether the agent makes the thing or reviews it.
+  if (search && areaName) return `${who} in ${areaName} for "${search}", best match first`;
+  if (search) return `${who} for "${search}", best match first`;
   if (areaName) return `${who} in ${areaName}`;
   return who;
 }

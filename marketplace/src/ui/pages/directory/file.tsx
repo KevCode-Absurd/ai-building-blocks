@@ -6,7 +6,7 @@ import { api, ApiError } from "../../lib/api.ts";
 import { Link } from "../../lib/router.tsx";
 import type { AgentProfile } from "./parts.tsx";
 import { PackContents, SafeMarkdown } from "./pack-parts.tsx";
-import { fetchPackText, fileFormat, formatBytes, kindLabel, loadPack, packFileHref, prettyJson, safePackPath, splitFrontmatter, type PackFile, type PackInfo } from "./packs.ts";
+import { fetchPackText, fileFormat, fileNames, formatBytes, kindLabel, loadPack, packFileHref, plainFileName, prettyJson, safePackPath, splitFrontmatter, tidyPurpose, type PackFile, type PackInfo } from "./packs.ts";
 
 type Viewer =
   | { kind: "no-agent" }
@@ -54,7 +54,7 @@ export function AgentFilePage(props: { params: Record<string, string> }) {
   if (v.kind === "no-file") return (
     <Page title="We could not find that file" intro={`It is not in ${v.agent.name}'s download. Pick a file from the list.`}>
       <div class="row dir-file-missing-actions"><Button href={back}>Back to {v.agent.name}</Button></div>
-      <PackContents agentId={id} files={v.pack.files} />
+      <PackContents agentId={id} files={v.pack.files} names={fileNames(v.agent)} />
     </Page>
   );
   return <FileView id={id} agent={v.agent} pack={v.pack} file={v.file} text={v.text} />;
@@ -62,7 +62,9 @@ export function AgentFilePage(props: { params: Record<string, string> }) {
 
 function FileView(props: { id: string; agent: AgentProfile; pack: PackInfo; file: PackFile; text: string }) {
   const { id, agent: a, pack, file, text } = props;
-  useEffect(() => { document.title = `${file.path} · ${a.name}, ${a.title} · AI Blocks`; }, [file.path, a.id]);
+  // The file by its plain name; where it sits in the download is one small line under it.
+  const names = fileNames(a), name = plainFileName(file.path, names);
+  useEffect(() => { document.title = `${name} · ${a.name}, ${a.title} · AI Blocks`; }, [file.path, a.id]);
   const format = fileFormat(file.path);
   const md = format === "markdown" ? splitFrontmatter(text) : null;
   const size = formatBytes(file.bytes);
@@ -73,8 +75,9 @@ function FileView(props: { id: string; agent: AgentProfile; pack: PackInfo; file
         <article class="dir-file-main" aria-labelledby="dir-file-title">
           <header class="dir-file-head">
             <p class="eyebrow">{a.name}'s download · {kindLabel(file.kind)}</p>
-            <h1 id="dir-file-title" class="dir-file-title">{file.path}</h1>
-            {file.purpose && <p class="dir-file-lede">{file.purpose}</p>}
+            <h1 id="dir-file-title" class="dir-file-title">{name}</h1>
+            {file.purpose && <p class="dir-file-lede">{tidyPurpose(file.purpose)}</p>}
+            <p class="dir-file-where">In the download as <code>{file.path}</code></p>
             <div class="dir-file-actions">
               <a class="btn btn-primary" href={pack.agentZip.path} download>Download this agent</a>
               <a class="btn btn-line btn-sm" href={packFileHref(id, file)} download={file.path.split("/").pop()}>Save this file{size ? ` (${size})` : ""}</a>
@@ -91,7 +94,7 @@ function FileView(props: { id: string; agent: AgentProfile; pack: PackInfo; file
         </article>
         <aside class="dir-file-side" aria-labelledby="dir-file-side-title">
           <h2 id="dir-file-side-title">Every file in the download</h2>
-          <PackContents agentId={id} files={pack.files} current={file.path} compact />
+          <PackContents agentId={id} files={pack.files} current={file.path} compact names={names} />
         </aside>
       </div>
     </main>

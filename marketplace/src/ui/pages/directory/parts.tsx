@@ -75,6 +75,17 @@ export function Portrait(props: { name: string; src: string; accent: string; siz
   );
 }
 
+/**
+ * What kind of work the agent does, in one line under its title: "Makes: landing page copy, homepage copy and
+ * service page copy", or "Reviews and advises: ..." for an agent that audits. Worked out from the agent's outcomes
+ * (modules/directory/work.ts), so a title that sounds like a maker cannot hide an agent that only reviews.
+ */
+export function WorkLine(props: { does: NonNullable<AgentCardData["does"]>; class?: string }) {
+  const { label, things } = props.does;
+  const listed = things.length <= 1 ? things.join("") : `${things.slice(0, -1).join(", ")} and ${things[things.length - 1]}`;
+  return <p class={`dir-does dir-does-${props.does.nature} ${props.class ?? ""}`}><b>{label}{listed ? ":" : ""}</b>{listed ? ` ${listed}` : ""}</p>;
+}
+
 /** An agent card for the browse grid, the profile's related list and the home page. */
 export function AgentCard(props: { agent: AgentCardData; compact?: boolean; headingLevel?: 2 | 3 }) {
   const a = props.agent;
@@ -90,6 +101,7 @@ export function AgentCard(props: { agent: AgentCardData; compact?: boolean; head
         <H class="dir-card-name"><Link href={profile}>{a.name}</Link></H>
         <p class="dir-card-title">{a.title}</p>
         {a.mega && <p class="dir-card-team">Leads a team of {a.mega.team_size}</p>}
+        {a.does && <WorkLine does={a.does} class="dir-card-does" />}
       </div>
       <p class="dir-card-tagline">{a.tagline}</p>
       {!props.compact && a.outcomes.length > 0 && (

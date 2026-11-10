@@ -4,7 +4,7 @@ import { useMemo, useState } from "preact/hooks";
 import { marked } from "marked";
 import DOMPurify from "dompurify";
 import { Link, navigate } from "../../lib/router.tsx";
-import { formatBytes, groupPackFiles, isAppPath, isStartApp, knowledgeLine, startGuides, viewerHref, type PackFile, type PackInfo, type StartApp } from "./packs.ts";
+import { formatBytes, groupPackFiles, isAppPath, isStartApp, knowledgeLine, plainFileName, startGuides, tidyPurpose, viewerHref, type PackFile, type PackInfo, type StartApp } from "./packs.ts";
 
 /** Tags a pack file never needs. Media would load from other sites; forms and styles could dress up as the page. */
 const FORBID_TAGS = ["img", "picture", "source", "video", "audio", "track", "iframe", "frame", "object", "embed", "style", "link", "meta", "base", "form", "input", "button", "textarea", "select", "svg", "math"];
@@ -140,20 +140,24 @@ export function PackDownloads(props: { agentId: string; name: string; title: str
   );
 }
 
-/** The pack's files, grouped by kind with plain labels, each linked to its viewer page. */
-export function PackContents(props: { agentId: string; files: PackFile[]; current?: string; compact?: boolean }) {
+/**
+ * The pack's files, grouped by kind with plain labels, each named in plain words and linked to its viewer page.
+ * `names` holds the names the profile knows (the agent's own skills, prompts and workflows), keyed by file path.
+ * The number beside a group counts its things: "every skill in one file" is not one more skill.
+ */
+export function PackContents(props: { agentId: string; files: PackFile[]; current?: string; compact?: boolean; names?: Record<string, string> | null }) {
   const groups = groupPackFiles(props.files);
   return (
     <div class={`dir-files${props.compact ? " dir-files-compact" : ""}`}>
       {groups.map(g => (
         <section class="dir-files-group" aria-label={g.label}>
-          <h3>{g.label} <span class="dir-files-n">{g.files.length}</span></h3>
+          <h3>{g.label} <span class="dir-files-n">{g.count}</span></h3>
           <ul>
             {g.files.map(f => (
               <li>
                 <Link href={viewerHref(props.agentId, f.path)} class="dir-file-link" aria-current={props.current === f.path ? "page" : undefined}>
-                  <span class="dir-file-name">{f.path}</span>
-                  {!props.compact && f.purpose && <span class="dir-file-purpose">{f.purpose}</span>}
+                  <span class="dir-file-name">{plainFileName(f.path, props.names)}</span>
+                  {!props.compact && f.purpose && <span class="dir-file-purpose">{tidyPurpose(f.purpose)}</span>}
                 </Link>
               </li>
             ))}

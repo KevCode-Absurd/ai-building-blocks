@@ -62,19 +62,103 @@ export function kindLabel(kind: string): string {
   return FILE_KINDS.find(k => k.kind === kind)?.label ?? OTHER_LABEL;
 }
 
+/** Files that only repeat other files in one piece (every skill in one file, for chat apps). Listed last in their
+ *  group and never counted: six skills and skills.md are six skills, not seven. */
+export function isBundleFile(path: string): boolean {
+  return path === "skills.md";
+}
+
 /**
  * Files grouped by kind: known kinds in FILE_KINDS order, then any other kind in the order it first appears.
- * Inside a group, files keep the order files.json gives them.
+ * Inside a group, files keep the order files.json gives them, with a bundle file (isBundleFile) last. `count` is
+ * how many things the group holds, leaving bundle files out.
  */
-export function groupPackFiles(files: PackFile[]): { kind: string; label: string; files: PackFile[] }[] {
+export function groupPackFiles(files: PackFile[]): { kind: string; label: string; files: PackFile[]; count: number }[] {
   const groups = new Map<string, PackFile[]>();
   for (const f of files) {
     const list = groups.get(f.kind);
     if (list) list.push(f); else groups.set(f.kind, [f]);
   }
-  const known = FILE_KINDS.filter(k => groups.has(k.kind)).map(k => ({ kind: k.kind, label: k.label, files: groups.get(k.kind)! }));
-  const other = [...groups.keys()].filter(k => !FILE_KINDS.some(x => x.kind === k)).map(k => ({ kind: k, label: OTHER_LABEL, files: groups.get(k)! }));
+  const group = (kind: string, label: string) => {
+    const all = groups.get(kind)!;
+    const own = all.filter(f => !isBundleFile(f.path));
+    return { kind, label, files: [...own, ...all.filter(f => isBundleFile(f.path))], count: own.length };
+  };
+  const known = FILE_KINDS.filter(k => groups.has(k.kind)).map(k => group(k.kind, k.label));
+  const other = [...groups.keys()].filter(k => !FILE_KINDS.some(x => x.kind === k)).map(k => group(k, OTHER_LABEL));
   return [...known, ...other];
+}
+
+/** Plain names for the files every pack has. A visitor reads these on the profile, not file paths. */
+const FILE_NAMES: Record<string, string> = {
+  "README.md": "Read me first",
+  "AGENTS.md": "Instructions for your AI",
+  "CLAUDE.md": "Instructions for Claude Code",
+  "WORK-METHOD.md": "How every job is done",
+  "context/README.md": "What to capture about your business",
+  "soul.md": "Personality",
+  "personality.md": "How I talk and write",
+  "playbook.md": "Playbook",
+  "traction-playbook.md": "Traction playbook",
+  "TEAM.md": "Who I work with",
+  "knowledge.md": "What I know",
+  "access.md": "What I may touch",
+  "QUALITY-METHOD.md": "Quality checks",
+  "OUTPUT-POLICY.md": "Whose style wins",
+  "toolbox.md": "Toolbox: when to use what",
+  "skills.md": "Every skill in one file",
+  "library.md": "Related items in the library",
+  "sources.md": "Sources",
+  "LICENSE.md": "Licence",
+  "CHANGELOG.md": "What changed",
+  "pack.json": "Pack details",
+  "tools/capture-brand-dna.mjs": "Brand capture tool",
+  "tools/brand-dna-snippet.js": "Brand capture snippet for a browser",
+  "tools/check-brand-fidelity.mjs": "Brand match checker",
+  "tools/ai-default-patterns.md": "AI habits to avoid",
+};
+
+/** Short forms that keep their capitals when a file name is turned into words. */
+const UPPER = new Set(["seo", "ai", "cro", "kpi", "faq", "ga4", "roi", "crm", "ugc", "html", "css", "sql", "api", "pdf", "hr", "vat", "b2b", "saas", "sms", "ux", "ui", "pr", "sop", "okr", "qa", "cac", "nps", "ppc", "aeo", "geo", "utm", "csv"]);
+
+/** "keyword-intent-map" -> "Keyword intent map"; "seo-content-brief" -> "SEO content brief". */
+export function wordsFromSlug(slug: string): string {
+  const words = slug.replace(/\.[A-Za-z0-9]+$/, "").split(/[-_\s]+/).filter(Boolean).map(w => (UPPER.has(w.toLowerCase()) ? w.toUpperCase() : w.toLowerCase()));
+  if (!words.length) return slug;
+  if (!UPPER.has(words[0].toLowerCase())) words[0] = words[0].charAt(0).toUpperCase() + words[0].slice(1);
+  return words.join(" ");
+}
+
+/**
+ * A file's name in plain words. `names` holds names we know (the agent's own skills, prompts and workflows, from its
+ * profile), keyed by path. Then the files every pack has, then the folder a skill sits in or the file's own name.
+ */
+export function plainFileName(path: string, names?: Record<string, string> | null): string {
+  const known = names?.[path] ?? FILE_NAMES[path];
+  if (known) return known;
+  const parts = path.split("/");
+  const last = parts[parts.length - 1];
+  if (/^SKILL\.md$/i.test(last) && parts.length >= 2) return wordsFromSlug(parts[parts.length - 2]);
+  return wordsFromSlug(last);
+}
+
+/**
+ * The names an agent's profile knows for its own files (its skills, prompts and workflows, and the skill behind each
+ * outcome), keyed by file path, for plainFileName.
+ */
+export function fileNames(profile: { brings: { items: { name: string; file: string | null }[] }[]; outcomes: { how: { path: string; name: string } | null }[] }): Record<string, string> {
+  const names: Record<string, string> = {};
+  for (const g of profile.brings ?? []) for (const item of g.items) if (item.file) names[item.file] = item.name;
+  for (const o of profile.outcomes ?? []) if (o.how && !names[o.how.path]) names[o.how.path] = o.how.name;
+  return names;
+}
+
+/** A purpose line that was cut mid-sentence ("... behaviour from…") ends at its last whole sentence instead, when it has one. */
+export function tidyPurpose(purpose: string): string {
+  const text = purpose.trim();
+  if (!/(?:…|\.\.\.)$/.test(text)) return text;
+  const end = Math.max(text.lastIndexOf(". "), text.lastIndexOf("; "));
+  return end > 20 ? `${text.slice(0, end)}.` : text;
 }
 
 const SEGMENT = /^[A-Za-z0-9_][A-Za-z0-9._ -]*$/;

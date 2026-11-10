@@ -122,8 +122,10 @@ test("list filters by area and searches name, title, tagline and outcome titles"
   assert.deepEqual(await ids({ q: "Paid ADS" }), ["leo-ads"]);               // title, any case
   assert.deepEqual(await ids({ q: "people already searching" }), ["nova-seo"]); // tagline, every word
   assert.deepEqual(await ids({ q: "newsletter" }), ["ada-content"]);         // outcome title
-  // Leo has "landing pages" in his tagline, Nova only in an outcome title: the stronger match comes first.
-  assert.deepEqual(await ids({ q: "landing page" }), ["leo-ads", "nova-seo"]);
+  // Both have a landing page outcome, so they match about as well, and the more useful agent (lower sort) comes first.
+  assert.deepEqual(await ids({ q: "landing page" }), ["nova-seo", "leo-ads"]);
+  // A plain request finds the same agents as the two words that carry it (search.ts; more in directory-search.test.ts).
+  assert.deepEqual(await ids({ q: "I need a landing page for my shop" }), ["nova-seo", "leo-ads"]);
   assert.deepEqual(await ids({ q: "landing", area: "content" }), []);
   assert.deepEqual(await ids({ q: "nothing like this" }), []);
 });
@@ -138,7 +140,8 @@ test("sort orders every list (browsing everyone takes turns by area), ties go by
   assert.deepEqual(await ids("/api/agents"), ["leo-ads", "ada-content", "nova-seo", "bea-content"]);
   assert.deepEqual(await ids("/api/agents?area=content"), ["ada-content", "bea-content"]);
   assert.deepEqual(await ids("/api/agents?area=marketing"), ["leo-ads", "nova-seo"]);
-  assert.deepEqual(await ids("/api/agents?q=seo"), ["nova-seo"]);
+  // Nova is the SEO strategist; Ada and Bea match through the job type behind an outcome ("SEO blog post"), so they follow.
+  assert.deepEqual(await ids("/api/agents?q=seo"), ["nova-seo", "ada-content", "bea-content"]);
   // "article" is in Ada's and Bea's taglines but only in one of Nova's outcomes, so Nova comes last despite a lower sort.
   assert.deepEqual(await ids("/api/agents?q=article"), ["ada-content", "bea-content", "nova-seo"]);
   // "writer" is in Leo's and Ada's titles (strong), so both beat anyone matching it elsewhere; sort orders the group.
@@ -162,7 +165,7 @@ test("GET /api/agents returns public cards with three outcomes, a turnaround and
   assert.equal(res.body.total, 3);
   assert.deepEqual(res.body.areas, [{ id: "marketing", label: "Marketing", count: 2 }, { id: "content", label: "Content", count: 1 }]);
   const nova = res.body.agents.find((a: any) => a.id === "nova-seo");
-  assert.deepEqual(Object.keys(nova).sort(), ["accent", "area", "area_label", "id", "kind", "mega", "name", "outcomes", "portrait", "ready_in_hours", "role", "tagline", "title"]);
+  assert.deepEqual(Object.keys(nova).sort(), ["accent", "area", "area_label", "does", "id", "kind", "mega", "name", "outcomes", "portrait", "ready_in_hours", "role", "tagline", "title"]);
   assert.deepEqual(nova.outcomes, ["An article that ranks for one search", "A landing page that converts search visitors"]);
   assert.equal(nova.ready_in_hours, 24); // the quickest job type behind an outcome
   // Hiring is free: no price, in any form, in the list.
@@ -184,7 +187,7 @@ test("an outcome with no job type has no job, and an agent with none has no turn
   const card = (await t.api("GET", "/api/agents")).body.agents[0];
   assert.equal(card.ready_in_hours, null);
   const prof = (await t.api("GET", "/api/agents/ada-content")).body.agent;
-  assert.deepEqual(prof.outcomes, [{ id: "newsletter", title: "A monthly newsletter issue", deliverable: "One newsletter issue with a subject line and three short sections.", job_type_id: null, job: null }]);
+  assert.deepEqual(prof.outcomes, [{ id: "newsletter", title: "A monthly newsletter issue", deliverable: "One newsletter issue with a subject line and three short sections.", job_type_id: null, job: null, how: null }]);
 });
 
 test("GET /api/agents/:id hides method and source_roles, joins job types, and never shows a price", async () => {

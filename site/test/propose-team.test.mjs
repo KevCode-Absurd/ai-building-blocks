@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {proposeTeam,getApproaches,buildOrgChart} from '../src/jobs/propose-team.mjs';
+import {proposeTeam,getApproaches,buildOrgChart,pickLead,teamBrief,HELPER_JOBS} from '../src/jobs/propose-team.mjs';
 import {rerankDiverse,rankSpecialists} from '../src/roles/specialist-matching.mjs';
 
 const revision='b'.repeat(64);
@@ -50,4 +50,23 @@ test('approaches and org chart are generic deterministic read-only views',()=>{
  assert.equal(getApproaches(approaches,{job:'write-emails'}).families.length,2);assert.equal(getApproaches(approaches,{job:'missing'}).coverage.status,'UNKNOWN_JOB');
  const chart=buildOrgChart(context);assert.equal(chart.model_calls,0);assert(chart.departments.some(department=>department.roles.some(role=>role.id==='writer')));assert(!JSON.stringify(chart).includes('department_head'));
  assert.equal(proposeTeam({},context).ok,false);assert.equal(proposeTeam({...input,tier:'huge'},context).ok,false);
+});
+test('a team is one named lead who owns the deliverable, plus the helpers it may call',()=>{
+ const proposal=proposeTeam(input,context),brief=teamBrief(proposal,context);
+ assert.equal(brief.lead.seat_id,proposal.lead_seat_id);const leadSeat=proposal.seats.find(seat=>seat.seat_id===proposal.lead_seat_id);assert.equal(brief.lead.role_id,leadSeat.role_id);assert.equal(brief.lead.name,roles.find(role=>role.id===leadSeat.role_id).name);assert.equal(brief.lead.persona_id,'persona-'+leadSeat.role_id);assert.match(brief.lead.owns,/deliverable/);
+ // The coordinator is the person's own AI, so it is not a helper; every other seat is, with its job in plain words.
+ assert.equal(brief.helpers.length,proposal.seats.length-2);assert.equal(brief.orchestrator_seat_id,proposal.coordinator_seat_id);
+ assert(brief.helpers.every(helper=>helper.seat_type!=='coordinator'&&helper.seat_id!==brief.lead.seat_id&&helper.job===HELPER_JOBS[helper.seat_type]));
+ assert.deepEqual([...new Set(brief.helpers.map(helper=>helper.seat_type))].sort(),['critic','fact_checker','judge','maker','red_team']);
+ assert.match(brief.note,/lead decides/);assert(!JSON.stringify(brief).includes('revision_sha256'));
+ assert.equal(teamBrief(proposeTeam({},context),context),null);
+});
+test('a single-lead job gets the maker whose job and words fit the request',()=>{
+ const writing=pickLead({task:'Write customer launch messages',job:'write-emails'},context);
+ assert.equal(writing.role_id,'writer');assert.equal(writing.name,'Writer');assert.equal(writing.persona_id,'persona-writer');assert.match(writing.owns,/deliverable/);assert(writing.alternatives.length<=2);
+ assert.equal(pickLead({task:'Design visual launch messages',job:'make-images'},context).role_id,'designer');
+ assert.deepEqual(pickLead({task:'Write customer launch messages',job:'write-emails'},context),writing);
+ // Reviewers, checkers and the coordinator never lead; no fit means no lead rather than a guess.
+ for(const task of ['Write customer launch messages','Check claims in launch messages','Scope a job and agree a rubric'])assert(!['general-coordinator','checker','judge','critic','skeptic'].includes(pickLead({task},context)?.role_id));
+ assert.equal(pickLead({task:'zzzz qqqq'},context),null);assert.equal(pickLead({task:'Write messages'},{}),null);assert.equal(pickLead({},context),null);
 });

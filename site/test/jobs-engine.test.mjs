@@ -92,14 +92,45 @@ test('option reruns resolve against actual validated source records', async () =
   await assert.rejects(() => startJob({ ...f.input, from_option: 'missing', option_source: { state: result.state, state_digest: result.state_digest } }, f.context), /does not exist/);
 });
 
-test('a missing or unread brand brain blocks staffing', async () => {
-  const f = engineFixture(), result = await startJob(f.input, f.context), missing = structuredClone(f.card);
-  delete missing.brand_brain;
-  await assert.rejects(() => send(result, { event: 'scope', document: missing }, f.context), /brand_brain/);
-  const unread = structuredClone(f.card); unread.brand_brain.read_by_coordinator = false;
-  await assert.rejects(() => send(result, { event: 'scope', document: unread }, f.context), /read_by_coordinator|brand_brain/);
-  const detached = structuredClone(f.card); detached.context_sources = [];
-  await assert.rejects(() => send(result, { event: 'scope', document: detached }, f.context), /matching context source/);
+const template = result => JSON.parse(result.files.find(file => file.path === 'templates/JOB-CARD.json').content);
+test('a missing or unread brand file blocks staffing for page, ad, copy and email jobs', async () => {
+  for (const deliverable_kind of ['web_page', 'ad_creative', 'copy', 'email']) {
+    const f = engineFixture(), result = await startJob({ ...f.input, deliverable_kind }, f.context), missing = structuredClone(f.card);
+    assert.ok(template(result).brand_brain, deliverable_kind);
+    delete missing.brand_brain;
+    await assert.rejects(() => send(result, { event: 'scope', document: missing }, f.context), /brand_brain: A page, ad, copy or email job needs the brand file/);
+    const unread = structuredClone(f.card); unread.brand_brain.read_by_coordinator = false;
+    await assert.rejects(() => send(result, { event: 'scope', document: unread }, f.context), /read_by_coordinator|brand_brain/);
+    const detached = structuredClone(f.card); detached.context_sources = [];
+    await assert.rejects(() => send(result, { event: 'scope', document: detached }, f.context), /matching context source/);
+    assert.equal((await send(result, f.events[0], f.context)).phase, 'STAFF');
+  }
+});
+
+test('audit, analysis, strategy, plan, code and document jobs are staffed without a brand file', async () => {
+  for (const deliverable_kind of ['audit', 'analysis', 'strategy', 'plan', 'code', 'ops_doc', 'other']) {
+    const f = engineFixture(), result = await startJob({ ...f.input, deliverable_kind }, f.context), bare = structuredClone(f.card);
+    assert.equal(template(result).brand_brain, undefined, deliverable_kind);
+    assert.doesNotMatch(result.next_action.instruction, /brand (?:file|brain)/, deliverable_kind);
+    delete bare.brand_brain; bare.context_sources = [];
+    assert.equal((await send(result, { event: 'scope', document: bare }, f.context)).phase, 'STAFF', deliverable_kind);
+    // A brand file that is supplied anyway is still accepted.
+    assert.equal((await send(result, f.events[0], f.context)).phase, 'STAFF', deliverable_kind);
+  }
+  // Audits and analysis need their data snapshot before production instead.
+  const f = engineFixture(); let result = await startJob({ ...f.input, deliverable_kind: 'audit' }, f.context);
+  for (const entry of f.events.slice(0, 4)) result = await send(result, entry, f.context);
+  await assert.rejects(() => send(result, f.events[4], f.context), /data snapshot/);
+});
+
+test('the kind on the job card decides, and a job with no kind keeps the old brand rule', async () => {
+  const f = engineFixture(), result = await startJob({ ...f.input, deliverable_kind: 'plan' }, f.context), email = structuredClone(f.card);
+  email.deliverable_kind = 'email'; delete email.brand_brain;
+  await assert.rejects(() => send(result, { event: 'scope', document: email }, f.context), /brand_brain/);
+  // A state from before kinds were declared has no deliverable: it still asks for the brand brain.
+  const legacy = structuredClone(result.state); delete legacy.base.deliverable; delete legacy.base.grounding_policy; delete legacy.base.mode_default;
+  const bare = structuredClone(f.card); delete bare.brand_brain; delete bare.deliverable_kind;
+  await assert.rejects(async () => advanceJob({ job_id: result.job_id, state: legacy, state_digest: await jobStateDigest(legacy), event: 'scope', document: bare }, f.context), /brand_brain/);
 });
 
 test('separate jobs may declare safe delivery metadata roots without accepting another job’s files',async()=>{

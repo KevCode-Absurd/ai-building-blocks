@@ -1,7 +1,7 @@
 // Deterministic staffing only. The host runs the seats; no hosted model work.
 import {classifyJob} from './router.mjs';
 import {rankRoles,rerankDiverse} from '../roles/specialist-matching.mjs';
-import {discoverStudioFormats,isStaticAdRequest} from './studio-discovery.mjs';
+import {discoverStudioFormats} from './studio-discovery.mjs';
 import {buildExecutionPlan} from './execution-quality.mjs';
 import {overlapShare} from './grounding.mjs';
 import {VARIETY_CONFIG} from './variety-config.mjs';
@@ -22,8 +22,8 @@ export function getApproaches(index={},query={},context={}) {
  if(typeof query==='string')query={job:query};
  const jobs=index.jobs??{},named=text(query.job);
  if(named)return {schema:'ai-blocks-approach-result/1',job:named,...(jobs[named]??{families:[],lenses:[],coverage:{status:'UNKNOWN_JOB'}}),...(named==='make-image-ads'?{studio:discoverStudioFormats(context)}:{}),model_calls:0};
- const request=query.task??query.request,classification=classifyJob(request,index);
- if(isStaticAdRequest(request)&&jobs['make-image-ads']){if(classification.job&&classification.job!=='make-image-ads')classification.alternatives=[classification.job,...classification.alternatives.filter(x=>x!==classification.job&&x!=='make-image-ads')].slice(0,3);classification.job='make-image-ads';}
+ // classifyJob reads plain "make ads" requests as still images and respects a declared deliverable kind.
+ const request=query.task??query.request,classification=classifyJob(request,index,{deliverable_kind:query.deliverable_kind});
  const entry=classification.job?jobs[classification.job]:null;
  return {schema:'ai-blocks-approach-result/1',job:classification.job,...(entry??{families:[],lenses:[],coverage:{status:'NO_MATCH'}}),...(classification.job==='make-image-ads'?{studio:discoverStudioFormats(context)}:{}),alternatives:classification.alternatives,model_calls:0};
 }
@@ -59,7 +59,7 @@ export function proposeTeam(input={},context={}) {
  if(!config)errors.push({path:'tier',message:'Choose quick, standard or deep.'});
  if(!roles.length)errors.push({path:'roles',message:'No role inventory is available.'});
  if(errors.length)return {schema:'ai-blocks-team-proposal/1',ok:false,errors,warnings,seats:[],model_calls:0};
- const approachResult=getApproaches(context.approaches??{},{job:text(input.job??input.job_card?.job_type?.job),task},context);
+ const approachResult=getApproaches(context.approaches??{},{job:text(input.job??input.job_card?.job_type?.job),task,deliverable_kind:input.deliverable_kind??input.job_card?.deliverable_kind},context);
  const executionPlan=buildExecutionPlan({request:task,job:approachResult.job,card:input.job_card,tier,host:input.host_capabilities});
  const launchable=executionPlan.landing_pages.delivery_mode==='LAUNCHABLE_SITE';
  const implementationFamily=array(context.approaches?.jobs?.['write-landing-page']?.families).find(family=>family.id==='built-experiences');
@@ -167,6 +167,49 @@ export function proposeTeam(input={},context={}) {
  }
  const proposal={schema:'ai-blocks-team-proposal/1',ok:errors.length===0,job:approachResult.job,tier,goal:task,coordinator_seat_id:coordinator?.seat_id??null,lead_seat_id:lead?.seat_id??null,seats,...(launchable?{landing_page_execution:executionPlan.landing_pages}:{}),...(approachResult.studio?{studio_discovery:approachResult.studio}:{}),working_groups:[{id:'production',lead_seat_id:lead?.seat_id??null,members:makers.map(seat=>seat.seat_id),reports_to:coordinator?.seat_id??null},{id:'independent-review',lead_seat_id:judges[0]?.seat_id??null,members:seats.filter(seat=>['judge','fact_checker','critic'].includes(seat.seat_type)).map(seat=>seat.seat_id),reports_to:coordinator?.seat_id??null}],estimate:{seats:seats.length,council_rounds:config.council_rounds,token_multiple:config.token_multiple,source:'estimated'},errors,warnings,model_calls:0,verification:'HOST_REPORTED_NOT_INDEPENDENTLY_VERIFIED'};
  return {...proposal,proposal_id:'tp_'+identity(proposal)};
+}
+
+/** What each kind of helper is for, in plain words. The lead decides how much of each to use. */
+export const HELPER_JOBS=Object.freeze({
+ maker:'Makes part of the work, and a rival first version.',
+ red_team:'Attacks the favourite idea before it is built.',
+ fact_checker:'Checks each claim against its source.',
+ judge:'Fresh reviewer. Scores the finished work against the rubric without seeing the drafts.',
+ critic:'Reads the work as the client would and names the weakest part.',
+});
+/** The short view of a proposal: one lead who owns the deliverable, and the helpers it may call. The coordinator seat is
+ *  the orchestrator (the person's own AI), so it is not listed as a helper. */
+export function teamBrief(proposal,context={}) {
+ if(!proposal?.ok||!proposal.lead_seat_id)return null;
+ const names=new Map(normalRoles(context.roles).map(role=>[role.id,role.name])),lead=proposal.seats.find(seat=>seat.seat_id===proposal.lead_seat_id);
+ const row=seat=>({seat_id:seat.seat_id,role_id:seat.role_id,name:names.get(seat.role_id)??seat.role_id,...(seat.persona_id?{persona_id:seat.persona_id}:{})});
+ return {
+  lead:{...row(lead),owns:'The deliverable, from first draft to hand-over.'},
+  helpers:proposal.seats.filter(seat=>seat.seat_id!==lead.seat_id&&seat.seat_type!=='coordinator').map(seat=>({...row(seat),seat_type:seat.seat_type,job:HELPER_JOBS[seat.seat_type]??'Helps the lead.'})),
+  orchestrator_seat_id:proposal.coordinator_seat_id,
+  note:'Proposed. The lead decides which helper does what. Confirm or change the seats at the staff step.',
+ };
+}
+
+/** One lead for a job that needs no team: the best-matching maker for this request and job type.
+ *  Returns null when the catalogue has no role that fits, so the caller can fall back to find_specialist. */
+export function pickLead(input={},context={}) {
+ if(!input||typeof input!=='object'||Array.isArray(input))input={};
+ if(!context||typeof context!=='object'||Array.isArray(context))context={};
+ const task=text(input.task??input.request),roles=normalRoles(context.roles);
+ if(!task||!roles.length)return null;
+ const job=text(input.job)||getApproaches(context.approaches??{},{task,deliverable_kind:input.deliverable_kind},context).job;
+ const plan=buildExecutionPlan({request:task,job,tier:'quick',host:input.host_capabilities,deliverable_kind:input.deliverable_kind});
+ const scores=new Map(rankRoles({roles},task).map(row=>[row.role.id,row.score])),score=role=>scores.get(role.id)??0;
+ // The same first choices a team's production lead gets for built pages and image ads.
+ const prefer=plan.landing_pages.delivery_mode==='LAUNCHABLE_SITE'?['ad-landing-page','design-specialist']:job==='make-image-ads'?['design-specialist']:[];
+ const place=role=>{const at=prefer.indexOf(role.id);return at<0?prefer.length:at;};
+ const makers=roles.filter(role=>role.id!=='general-coordinator'&&(!array(role.seat_suitability).length||array(role.seat_suitability).includes('maker'))&&(place(role)<prefer.length||(job&&role.job===job)||score(role)>0));
+ makers.sort((a,b)=>place(a)-place(b)||Number(Boolean(job)&&b.job===job)-Number(Boolean(job)&&a.job===job)||score(b)-score(a)||a.id.localeCompare(b.id));
+ const lead=makers[0];
+ if(!lead)return null;
+ const persona=selectPersona(personaRows(context.personas),lead,'maker',array(lead.lenses)[0],new Set());
+ return {role_id:lead.id,name:lead.name??lead.id,...(text(lead.summary)?{does:text(lead.summary)}:{}),persona_id:persona?.id??null,owns:'The deliverable, from first draft to hand-over.',alternatives:makers.slice(1,3).map(role=>role.id)};
 }
 
 export function buildOrgChart({roles=[],personas=[]}={}) {

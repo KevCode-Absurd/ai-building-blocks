@@ -101,14 +101,15 @@ test('a request naming one deliverable defaults to one output, not the approach 
   assert.equal(validateJobDocument('ai-blocks-job-card/1', f.card).errors.filter(e => e.path.startsWith('dials.volume')).length, 0);
 });
 
-test('start_job states the dials in one line and spends the questions on taste and position', async () => {
+test('start_job states the dials in one line and spends the questions on what this kind of job needs', async () => {
   const f = engineFixture();
   const r = await startJob({ ...f.input, request: 'Write a welcome email for our jewellery store', deliverable_kind: 'email' }, f.context);
   assert.equal(r.phase, 'SCOPE'); assert.equal(r.dials, undefined); assert.equal(r.dial_questions, undefined);
   assert.match(r.dials_line, /^Using a balanced mix, 1 output and a (standard|quick|deep) review; say if you want otherwise\.$/);
-  assert.deepEqual(r.taste_questions.map(q => q.id), ['position', 'never_change', 'references']);
+  // Q1: up to four intake questions for the job type (intake-questions.mjs), each with a default; no fixed taste set.
+  assert.deepEqual(r.questions.map(q => q.id), ['offer_rules', 'reader_action', 'sender']); assert.ok(r.questions.every(q => q.default)); assert.equal(r.taste_questions, undefined);
   assert.ok(r.brief.length <= 1500); assert.equal(Object.keys(r)[1], 'brief');
-  assert.match(r.next_action.instruction, /taste_questions/); assert.match(r.next_action.instruction, /context\/brand-dna\.json/);
+  assert.match(r.next_action.instruction, /Ask the questions in one message/); assert.match(r.next_action.instruction, /context\/brand-dna\.json/);
   assert.equal(r.state.base.deliverable.kind, 'email'); assert.equal(r.state.base.deliverable.source, 'declared'); assert.equal(r.state.base.brief, undefined);
   const card = JSON.parse(r.files.find(file => file.path === 'templates/JOB-CARD.json').content);
   assert.equal(card.deliverable_kind, 'email'); assert.ok(card.grounding.brand_dna && card.grounding.taste_brief);

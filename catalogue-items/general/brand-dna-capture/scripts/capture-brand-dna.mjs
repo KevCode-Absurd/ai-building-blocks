@@ -1,9 +1,11 @@
 #!/usr/bin/env node
-// capture-brand-dna.mjs (AI Blocks, brand-dna-capture) - version 1.0.0
+// capture-brand-dna.mjs (AI Blocks, brand-dna-capture) - version 1.1.0
 //
 // Opens a live site (or a local HTML file) in a real browser at 1440 and 390 px, runs brand-dna-snippet.js on
-// each page, saves screenshots, and writes one merged file:
-//   context/brand-dna.json         the measured brand DNA (merged brand + one entry per page with its sections)
+// each page, saves screenshots, and merges what it measured into the files already there. It never overwrites:
+//   context/brand-dna.json         the raw capture: one entry per page with its own date, and the merged brand
+//   context/brand-file/            the brand file built from it (needs brand-file.mjs beside this script)
+//   context/brand-file/history/    the capture this run replaced, and changes.md: what is different since last time
 //   context/screenshots/*.png      <page>-desktop-first, -desktop-full, -mobile-first, -mobile-full
 //   context/brand-dna.md           a short measured summary, only if the file does not exist yet
 //   context/brand-dna.receipt.json path, sha256, source, date and method of the capture, for the job record
@@ -14,6 +16,9 @@
 //   node capture-brand-dna.mjs ./site/index.html about.html
 // Options:
 //   --paths a,b        extra paths, comma separated (same as listing them after the URL)
+//   --competitor <url> also read a competitor's page: its look and headline lines only, into references.md
+//   --admire <url>     the same for a site the client admires; --avoid <url> for one to stay away from (3 in all)
+//   --replace          start the capture again instead of merging (the old one is still kept in history/)
 //   --out <dir>        output folder (default: ./context)
 //   --channel <name>   browser to use: chrome, msedge or chromium (default: try bundled Chromium, then Chrome, then Edge)
 //   --playwright <dir> where the playwright package is, if it is not installed in this folder
@@ -31,7 +36,7 @@ import { createHash } from 'node:crypto';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
-const VERSION = '1.0.0';
+const VERSION = '1.1.0';
 const BLOCK = /googletagmanager|google-analytics|analytics\.google|doubleclick|facebook\.net|connect\.facebook|clarity\.ms|hotjar|klaviyo|tiktok\.com\/i18n|analytics\.tiktok|snap\.licdn|bat\.bing|criteo|taboola|outbrain|segment\.(?:io|com)|mixpanel|fullstory|mouseflow|luckyorange|intercomcdn|gorgias\.chat|tidio|zopim|freshchat|crisp\.chat/i;
 const VIEWPORTS = [
   { name: 'desktop', width: 1440, height: 900, mobile: false },
@@ -39,7 +44,7 @@ const VIEWPORTS = [
 ];
 
 function parseArgs(argv) {
-  const o = { positional: [], out: 'context', wait: 2500, block: true, full: true, channel: null, playwright: null, overwriteMd: false };
+  const o = { positional: [], out: 'context', wait: 2500, block: true, full: true, channel: null, playwright: null, overwriteMd: false, refs: [], replace: false };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === '--help' || a === '-h') o.help = true;
@@ -51,13 +56,17 @@ function parseArgs(argv) {
     else if (a === '--no-block') o.block = false;
     else if (a === '--no-full') o.full = false;
     else if (a === '--overwrite-md') o.overwriteMd = true;
+    else if (a === '--replace') o.replace = true;
+    else if (a === '--competitor' || a === '--admire' || a === '--avoid') o.refs.push({ kind: a.slice(2), url: argv[++i] });
     else if (a.startsWith('--')) throw new Error(`Unknown option ${a}. Run with --help.`);
     else o.positional.push(a);
   }
+  if (o.refs.some((r) => !r.url)) throw new Error('--competitor, --admire and --avoid each need a URL.');
+  if (o.refs.length > 3) throw new Error('Capture at most 3 competitor or reference sites in one run.');
   return o;
 }
 
-const HELP = fs.readFileSync(fileURLToPath(import.meta.url), 'utf8').split('\n').filter((l) => l.startsWith('//')).slice(0, 26).map((l) => l.replace(/^\/\/ ?/, '')).join('\n');
+const HELP = fs.readFileSync(fileURLToPath(import.meta.url), 'utf8').split('\n').filter((l) => l.startsWith('//')).slice(0, 30).map((l) => l.replace(/^\/\/ ?/, '')).join('\n');
 
 /** Find the playwright package: --playwright, this folder, the script's folder, then NODE_PATH. */
 export function loadPlaywright(hint) {
@@ -202,7 +211,7 @@ export async function runSnippet(page, snippetText) {
 }
 
 export async function capturePage(browser, url, { snippet, outDir, shotsDir, wait, block, full, label }) {
-  const slug = label || pageSlug(url), result = { path: (() => { try { const u = new URL(url); return u.protocol === 'file:' ? path.basename(fileURLToPath(u)) : u.pathname; } catch { return url; } })(), url, slug, screenshots: {}, pixel_palette: {} };
+  const slug = label || pageSlug(url), result = { captured_at: new Date().toISOString(), path: (() => { try { const u = new URL(url); return u.protocol === 'file:' ? path.basename(fileURLToPath(u)) : u.pathname; } catch { return url; } })(), url, slug, screenshots: {}, pixel_palette: {} };
   for (const vp of VIEWPORTS) {
     const ctx = await newContext(browser, vp, block), page = await ctx.newPage();
     try {
@@ -249,7 +258,7 @@ export function mergeBrand(pages, meta) {
   for (const p of ok) for (const s of p.desktop.buttons.styles) { const k = [s.bg, s.color, s.radius, s.transform, s.border].join('|'); const e = styles.get(k) || { ...s, count: 0, pages: [] , examples: [] }; e.count += s.count; e.pages.push(p.path); for (const x of s.examples) if (e.examples.length < 6 && !e.examples.includes(x)) e.examples.push(x); styles.set(k, e); }
   const mergedStyles = [...styles.values()].sort((a, b) => (b.primary ? 1 : 0) - (a.primary ? 1 : 0) || b.count - a.count).slice(0, 10);
   const facts = { captured_at: meta.captured_at, prices: [], offers: [], shipping: [], guarantees: [], reviews: [], structured: [] };
-  for (const p of ok) for (const k of Object.keys(facts)) if (Array.isArray(facts[k])) for (const v of p.desktop.facts[k] || []) { const item = typeof v === 'string' ? { text: v, page: p.path } : { ...v, page: p.path }; if (facts[k].length < 40 && !facts[k].some((x) => (x.text || JSON.stringify(x)) === (item.text || JSON.stringify(item)))) facts[k].push(item); }
+  for (const p of ok) for (const k of Object.keys(facts)) if (Array.isArray(facts[k])) for (const v of p.desktop.facts[k] || []) { const at = p.captured_at || meta.captured_at, item = typeof v === 'string' ? { text: v, page: p.path, captured_at: at } : { ...v, page: p.path, captured_at: at }; if (facts[k].length < 40 && !facts[k].some((x) => (x.text || JSON.stringify(x)) === (item.text || JSON.stringify(item)))) facts[k].push(item); }
   const headlines = [...new Set(ok.flatMap((p) => p.desktop.voice.samples.filter((s) => s.kind === 'headline').map((s) => s.text)))];
   const bodyLines = [...new Set(ok.flatMap((p) => p.desktop.voice.samples.filter((s) => s.kind !== 'headline').map((s) => s.text)))];
   const samples = [...headlines.slice(0, 5).map((text) => ({ kind: 'headline', text })), ...bodyLines.slice(0, 5).map((text) => ({ kind: 'body', text }))];
@@ -272,14 +281,64 @@ export function mergeBrand(pages, meta) {
 }
 
 const pct = (n) => `${Math.round((n || 0) * 1000) / 10}%`;
+const siteHost = (u) => { try { const x = new URL(u); return /^https?:$/.test(x.protocol) ? x.hostname.replace(/^www\./, '') : null; } catch { return null; } };
+
+/**
+ * Merge a new run into the capture on file. A page read again replaces its old entry; a page not read this time is
+ * kept with its own date; a page that failed this time keeps its last good capture. The brand is then merged from
+ * all of them, so the first page ever captured (usually home) still leads.
+ */
+export function mergeCapture(prev, next) {
+  if (!prev || !Array.isArray(prev.pages)) return next;
+  const ok = (p) => p.desktop && !p.desktop.error, notes = [...(next.notes || [])];
+  const fresh = new Map(next.pages.map((p) => [p.url, p]));
+  // A page that has never loaded is not carried forward.
+  const pages = prev.pages.filter((p) => ok(p) || fresh.has(p.url)).map((p) => ({ ...p, captured_at: p.captured_at || prev.captured_at })).map((p) => {
+    const n = fresh.get(p.url); if (!n) return p;
+    fresh.delete(p.url);
+    if (ok(n) || !ok(p)) return n;
+    notes.push(`${p.path}: this run failed, so the capture from ${String(p.captured_at).slice(0, 10)} is kept`);
+    return p;
+  });
+  pages.push(...fresh.values());
+  const references = [...new Map([...(prev.references || []), ...(next.references || [])].map((r) => [r.url, r])).values()];
+  const out = { ...next, source: prev.source || next.source, first_captured_at: prev.first_captured_at || prev.captured_at, runs: (prev.runs || 1) + 1, notes, pages, references };
+  out.brand = mergeBrand(pages, out);
+  return out;
+}
+
+/** A competitor or reference site: its look and headline lines only. No prices or offers are kept from it. */
+export async function captureReference(browser, ref, { snippet, outDir, shotsDir, wait, block }) {
+  const vp = VIEWPORTS[0], ctx = await newContext(browser, vp, block), page = await ctx.newPage(), out = { url: ref.url, kind: ref.kind, captured_at: new Date().toISOString() };
+  try {
+    await preparePage(page, ref.url, { wait });
+    const shot = path.join(shotsDir, `ref-${(siteHost(ref.url) || 'site').replace(/[^a-z0-9]+/gi, '-')}-desktop-first.png`);
+    await page.screenshot({ path: shot });
+    const dna = await runSnippet(page, snippet), r = dna.type.roles, role = (k) => (r[k] ? [r[k].family, r[k].weight, r[k].size].filter(Boolean).join(' ') : undefined), b = dna.buttons.styles.find((s) => s.primary) || dna.buttons.styles[0];
+    Object.assign(out, { title: dna.page.title, screenshot: path.relative(outDir, shot).split(path.sep).join('/'),
+      look: { palette: dna.palette.slice(0, 5).map((c) => ({ hex: c.hex, area_share: c.area_share })), h1: role('h1'), body: role('body'), button: b ? [b.bg || 'no fill', `radius ${b.radius}`, b.transform !== 'none' && b.transform].filter(Boolean).join(', ') : undefined },
+      headlines: (dna.voice.headlines || []).slice(0, 5) });
+    console.log(`  ok  ${ref.kind.padEnd(10)} ${ref.url}  (look and ${out.headlines.length} headline lines only)`);
+  } catch (e) { out.error = String(e.message || e).split('\n')[0]; console.log(`  fail ${ref.kind.padEnd(10)} ${ref.url}  ${out.error}`); } finally { await ctx.close(); }
+  return out;
+}
+
+/** brand-file.mjs, when it sits beside this script or in ./tools. It builds the brand file and works out what changed. */
+export async function loadBrandFile() {
+  for (const d of [HERE, path.join(process.cwd(), 'tools')]) {
+    const f = path.join(d, 'brand-file.mjs');
+    if (fs.existsSync(f)) { try { const m = await import(pathToFileURL(f).href); if (m.syncBrandFile) return m; } catch { /* try the next place */ } }
+  }
+  return null;
+}
 
 /** A short, measured summary a model can read first. Judgement lines are left for the model to write. */
 export function summaryMarkdown(out) {
-  const b = out.brand; if (!b) return '# Brand DNA\n\nThe capture failed. See context/brand-dna.json for the errors.\n';
+  const b = out.brand; if (!b) return '# Brand capture\n\nThe capture failed. See context/brand-dna.json for the errors.\n';
   const r = b.type.roles, role = (k) => (r[k] ? `${r[k].family} ${r[k].weight}, ${r[k].size}${r[k].transform && r[k].transform !== 'none' ? ', ' + r[k].transform : ''} (${r[k].font_loaded})` : 'not found');
   const p = b.buttons.primary, ps = b.buttons.styles[0];
   const lines = [
-    `# Brand DNA: ${out.pages[0]?.title || out.source}`,
+    `# Brand capture: ${out.pages[0]?.title || out.source}`,
     '',
     `Measured from ${out.source} on ${out.captured_at.slice(0, 10)} by capture-brand-dna.mjs ${VERSION} (${out.pages.length} page${out.pages.length === 1 ? '' : 's'}, 1440 and 390 px). Full data: context/brand-dna.json. Screenshots: context/screenshots/.`,
     '',
@@ -329,22 +388,43 @@ export async function main(argv = process.argv.slice(2)) {
   if (!pw) { console.error(playwrightHelp()); return 2; }
   let snippet; try { snippet = readSnippet().text; } catch (e) { console.error(e.message); return 2; }
   let urls; try { urls = resolveTargets(target, o.positional.filter((p) => p !== target)); } catch (e) { console.error(e.message); return 2; }
-  const outDir = path.resolve(o.out), shotsDir = path.join(outDir, 'screenshots');
+  const outDir = path.resolve(o.out), shotsDir = path.join(outDir, 'screenshots'), jsonFile = path.join(outDir, 'brand-dna.json');
+  let prev = null; try { prev = JSON.parse(fs.readFileSync(jsonFile, 'utf8')); } catch { /* first capture */ }
+  if (prev && !o.replace && siteHost(prev.source) && siteHost(urls[0]) && siteHost(prev.source) !== siteHost(urls[0])) {
+    console.error(`${path.relative(process.cwd(), jsonFile) || jsonFile} holds ${siteHost(prev.source)}, and a brand file is for one business.\nFor a competitor or reference, add --competitor ${urls[0]} to a capture of ${siteHost(prev.source)}.\nFor another business, use --out <another folder>. To start again here, add --replace (the old capture is kept in history).`);
+    return 2;
+  }
   fs.mkdirSync(shotsDir, { recursive: true });
   const { browser, channel } = await launchBrowser(pw, o.channel).catch((e) => { console.error(e.message); return {}; });
   if (!browser) return 2;
   console.log(`Capturing ${urls.length} page(s) with ${channel}${o.block ? ', analytics tags blocked' : ''}:`);
-  const captured_at = new Date().toISOString(), pages = [], used = new Set();
+  const captured_at = new Date().toISOString(), pages = [], references = [], used = new Set();
   try {
     for (const url of urls) {
       let label = pageSlug(url); while (used.has(label)) label += '-2'; used.add(label);
       pages.push(await capturePage(browser, url, { snippet, outDir, shotsDir, wait: o.wait, block: o.block, full: o.full, label }));
     }
+    for (const ref of o.refs) references.push(await captureReference(browser, { ...ref, url: /^https?:\/\//i.test(ref.url) ? ref.url : 'https://' + ref.url }, { snippet, outDir, shotsDir, wait: o.wait, block: o.block }));
   } finally { await browser.close(); }
-  const out = { schema: 'ai-blocks-brand-dna/1', tool: `capture-brand-dna.mjs ${VERSION}`, method: 'script', source: urls[0], captured_at, browser: channel, viewports: VIEWPORTS.map((v) => `${v.width}x${v.height}`), notes: [], brand: null, pages };
-  out.brand = mergeBrand(pages, out);
+  let out = { schema: 'ai-blocks-brand-dna/1', tool: `capture-brand-dna.mjs ${VERSION}`, method: 'script', source: urls[0], captured_at, browser: channel, viewports: VIEWPORTS.map((v) => `${v.width}x${v.height}`), notes: [], brand: null, pages, references: references.filter((r) => !r.error) };
   for (const pg of pages) for (const vp of ['desktop', 'mobile']) for (const n of pg[vp]?.notes || []) out.notes.push(`${pg.path} ${vp}: ${n}`);
-  const jsonFile = path.join(outDir, 'brand-dna.json');
+  for (const r of references) if (r.error) out.notes.push(`${r.kind} ${r.url}: ${r.error}`);
+  // Never overwrite: keep the capture this run replaces, then merge the new pages into it.
+  const historyDir = path.join(outDir, 'brand-file', 'history');
+  if (prev) {
+    fs.mkdirSync(historyDir, { recursive: true });
+    fs.copyFileSync(jsonFile, path.join(historyDir, `${String(prev.captured_at || captured_at).slice(0, 16).replace(/[-:]/g, '').replace('T', '-')}-brand-dna.json`));
+  }
+  out = prev && !o.replace ? mergeCapture(prev, out) : { ...out, brand: mergeBrand(pages, out) };
+  // The brand file: facts, offers, look, voice and references, each line with its source and date, and what changed.
+  const bf = await loadBrandFile();
+  if (bf) {
+    if (prev && !fs.existsSync(path.join(outDir, 'brand-file', 'offers.json'))) bf.syncBrandFile(outDir, { dna: prev, now: new Date(prev.captured_at || captured_at) });
+    const synced = bf.syncBrandFile(outDir, { dna: out, now: new Date(captured_at) });
+    out.changes = prev ? synced.changes.slice(0, 20).map((c) => c.text) : [];
+    out.changes_since = prev ? prev.captured_at || null : null;
+    out.brand_file = synced.dir;
+  } else out.notes.push('brand-file.mjs is not beside this script, so the brand file was not updated and the changes since last time were not worked out. Put it there and run: node brand-file.mjs migrate');
   fs.writeFileSync(jsonFile, JSON.stringify(out, null, 1));
   const mdFile = path.join(outDir, 'brand-dna.md');
   if (!fs.existsSync(mdFile) || o.overwriteMd) fs.writeFileSync(mdFile, summaryMarkdown(out));
@@ -353,7 +433,11 @@ export async function main(argv = process.argv.slice(2)) {
     source: out.source, pages: pages.map((p) => p.path), captured_at, method: 'script', tool: out.tool, screenshots: path.relative(process.cwd(), shotsDir).split(path.sep).join('/') };
   fs.writeFileSync(path.join(outDir, 'brand-dna.receipt.json'), JSON.stringify(receipt, null, 1));
   const failed = pages.filter((p) => !p.desktop || p.desktop.error).length;
-  console.log(`\nWrote ${path.relative(process.cwd(), jsonFile) || jsonFile} and ${pages.length * 4} screenshots in ${path.relative(process.cwd(), shotsDir) || shotsDir}.`);
+  console.log(`\n${prev && !o.replace ? `Merged ${pages.length} page(s) into` : 'Wrote'} ${path.relative(process.cwd(), jsonFile) || jsonFile} (${out.pages.length} page(s) in all) and ${pages.length * 4} screenshots in ${path.relative(process.cwd(), shotsDir) || shotsDir}.`);
+  if (prev) console.log(`The capture from ${String(prev.captured_at).slice(0, 10)} is kept in ${path.relative(process.cwd(), historyDir) || historyDir}.`);
+  if (out.brand_file) console.log(`Brand file updated: ${out.brand_file}. Check it with: node ${path.relative(process.cwd(), path.join(HERE, 'brand-file.mjs')).split(path.sep).join('/')} status`);
+  if (out.changes?.length) console.log('Changed since last time:\n- ' + out.changes.join('\n- '));
+  else if (prev && bf) console.log('Changed since last time: nothing.');
   console.log(`Receipt: path ${receipt.path} | sha256 ${receipt.sha256} | source ${receipt.source} | date ${captured_at} | method script`);
   if (out.notes.length) console.log('Notes:\n- ' + out.notes.join('\n- '));
   if (failed) console.log(`${failed} page(s) failed. Check the URL, or capture them by hand with the snippet.`);

@@ -1,7 +1,7 @@
 /*
  * brand-dna-snippet.js (AI Blocks, brand-dna-capture) - version 1.0.0
  *
- * Measures the page that is open in the browser and returns its brand DNA as one JSON object:
+ * Measures the page that is open in the browser and returns what it measured as one JSON object:
  * colours by share of page area, fonts per role and the font files that loaded, radius, shadows,
  * button and link styles, nav and footer, the ordered sections, image density, verbatim voice lines,
  * and live facts (prices, offers, shipping, guarantees, review counts) with a capture timestamp.

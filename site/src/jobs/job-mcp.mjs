@@ -6,7 +6,7 @@ import { jobMethod, jobRecords, deliveryTemplates } from './method.mjs';
 import { JOB_SCHEMAS } from './contracts.mjs';
 import { checkSchema } from '../outcomes/schema-check.mjs';
 import { prepareJobContext, DELIVERABLE_KINDS } from './grounding.mjs';
-import { intakeQuestions, INTAKE_NOTE } from './intake-questions.mjs';
+import { INTAKE_ASK } from './intake-questions.mjs';
 import { routeJob } from './router.mjs';
 
 const text = maxLength => ({ type: 'string', minLength: 1, maxLength });
@@ -36,8 +36,9 @@ function jobContext(input, context) {
     : { tool: 'start_job', arguments: args, why: routed.mode === 'team' ? 'Names the lead and helpers and opens the team record.' : 'Names the lead to load for this job.' };
   return {
     schema, brief,
-    questions: intakeQuestions({ deliverableKind: rest.annex.deliverable_kind, family: rest.annex.family, request: input.request }),
-    questions_note: INTAKE_NOTE,
+    // One list: the same questions the brief's ASK line and annex.questions carry.
+    questions: rest.annex.questions,
+    questions_note: INTAKE_ASK,
     route: { mode: routed.mode, reason: routed.mode_reason, next },
     ...rest,
   };

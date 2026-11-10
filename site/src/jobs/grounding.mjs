@@ -6,6 +6,8 @@
 // and the craft weights) are also in marketplace/src/modules/packs/families.ts; test/jobs-grounding.test.mjs fails
 // when the two copies differ.
 
+import { intakeQuestions } from './intake-questions.mjs';
+
 const list = value => Array.isArray(value) ? value : [];
 const text = value => typeof value === 'string' && value.trim().length > 0;
 const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
@@ -382,33 +384,7 @@ export function contextRequirements(kind, { siteUrl, hasExistingAsset } = {}) {
   ];
 }
 
-/** The taste and position interview. This is where the question budget goes; format dials are silent defaults. */
-export const TASTE_QUESTIONS = Object.freeze({
-  brand: [
-    { id: 'position', question: 'Who buys this, at what price point, and for what occasion or moment?', why: 'Sets the register: luxury, everyday, gift, urgent fix.' },
-    { id: 'never_change', question: 'What must never change: type, colours, logo use, words, claims or layout?', why: 'These become brand codes to keep.' },
-    { id: 'references', question: 'Name 2 brands or pages you admire and 1 you would hate to look like.', why: 'Anchors taste outside the model\'s average.' },
-  ],
-  audit_analysis: [
-    { id: 'decision', question: 'What decision will this inform, and by when?', why: 'An audit is for a decision, not a score.' },
-    { id: 'what_changed', question: 'What changed recently: spend, creative, tracking, offer, season or site?', why: 'Seeds the competing hypotheses.' },
-    { id: 'normal', question: 'Which metric matters most, and what is normal for it?', why: 'Sets the baseline to diagnose against.' },
-  ],
-  strategy_plan: [
-    { id: 'position', question: 'Who is the best customer, what do they pay, and who do they compare you with?', why: 'Grounds the plan in this business.' },
-    { id: 'never_change', question: 'What must not change: brand, price, channel or team limits?', why: 'Hard constraints for every option.' },
-    { id: 'success', question: 'What result, by when, would make this worth doing?', why: 'The success measure for the job card.' },
-  ],
-  code_ops_other: [
-    { id: 'system', question: 'Where does this live (repo, platform, stack), and what must keep working?', why: 'Build inside the existing system.' },
-    { id: 'done', question: 'How will you check that it works?', why: 'Becomes the acceptance check.' },
-    { id: 'limits', question: 'What must not change?', why: 'Constraints the build keeps.' },
-  ],
-});
-export function tasteQuestions(kind) {
-  const family = familyOf(kind);
-  return (BRAND_KINDS.includes(kind) ? TASTE_QUESTIONS.brand : TASTE_QUESTIONS[family] ?? TASTE_QUESTIONS.code_ops_other).map(q => ({ ...q }));
-}
+/** What the taste brief holds. The maker fills it from the capture, the answers and references it finds; it asks nothing more. */
 export const TASTE_BRIEF_SECTIONS = Object.freeze(['Brand codes to keep (type, colour and its proportions, imagery, pacing, voice)', 'Category conventions to keep, and which to break', 'References: 2 the client admires, 1 to avoid looking like', 'Defaults to avoid, named by id from the AI-default list']);
 
 /** A guess from the request words. It is a suggestion only; the host declares deliverable_kind. */
@@ -573,8 +549,9 @@ export const REVIEWER = Object.freeze({
 });
 
 const short = (value, max) => value.length <= max ? value : value.slice(0, max - 1).trimEnd() + '…';
-/** The questions to ask once, in one message. Each row is { id, question, why } and may carry a default. */
-const askQuestions = (kind, family, request) => tasteQuestions(kind);
+/** The questions to ask once, in one message: the one list for this kind of job (intake-questions.mjs). Each row is
+ *  { id, question, default }, plus `why` when the list gives one. A question the request already answers is dropped. */
+const askQuestions = (kind, family, request) => intakeQuestions({ deliverableKind: kind, family, request }).map(row => ({ id: row.id, question: row.question, default: row.default, ...(row.why ? { why: row.why } : {}) }));
 /** Room kept in the brief for the AVOID line, so a long question list can never push it out. */
 const AVOID_RESERVE = 140;
 /** prepare_job_context: a short brief for the model plus a structured annex. The brief names the annex parts to open. */
@@ -615,7 +592,7 @@ export function prepareJobContext(input = {}, context = {}) {
   // Under 1,500 characters: the fixed lines first, then room kept for AVOID, then as many questions as fit in full.
   let room = 1500 - [...head, ...tail].join('\n').length - 2;
   const askEnd = need.taste_brief ? ' Write context/taste-brief.md.' : '', quoted = questions.map(q => `"${q.question}"`);
-  const askWith = n => !quoted.length ? '' : n === 0 ? `ASK once: the questions in annex.questions.${askEnd}` : `ASK once: ${quoted.slice(0, n).join(' ')}${n < quoted.length ? ` (+${quoted.length - n} in annex.questions)` : ''}${askEnd}`;
+  const askWith = n => !quoted.length ? '' : n === 0 ? `ASK once: the questions in annex.questions, each with its default.${askEnd}` : `ASK once (defaults in annex.questions): ${quoted.slice(0, n).join(' ')}${n < quoted.length ? ` (+${quoted.length - n} more)` : ''}${askEnd}`;
   let fit = quoted.length;
   while (fit > 0 && askWith(fit).length > room - (defaults.length ? AVOID_RESERVE : 0)) fit--;
   const askLine = askWith(fit);
@@ -639,7 +616,7 @@ export function prepareJobContext(input = {}, context = {}) {
       context_requirements: contextRequirements(kind, { siteUrl, hasExistingAsset: input.has_existing_asset }),
       capture: { order: ['capture-brand-dna.mjs (Node + Playwright)', 'brand-dna-snippet.js (browser console)', 'ask for URL, screenshots and CSS'], fields: need.brand_dna ? [...BRAND_DNA_FIELDS] : [], tools: scripts, skills: Object.values(GJP_SKILLS).map(slug => ({ slug, get_skill: { slug, response_format: 'detailed' } })) },
       artifacts: { spec_sheet: 'context/spec.md', facts: 'context/facts.md', ...(need.brand_dna ? { brand_dna: 'context/brand-dna.json', screenshots: 'context/screenshots/' } : {}), ...(need.data_snapshot ? { data_snapshot: 'context/data-snapshot.json' } : {}), ...(need.taste_brief ? { taste_brief: 'context/taste-brief.md' } : {}), working_notes: 'DECISIONS.md' },
-      taste_brief: { path: 'context/taste-brief.md', required_before_production: need.taste_brief, sections: [...TASTE_BRIEF_SECTIONS], questions },
+      taste_brief: { path: 'context/taste-brief.md', required_before_production: need.taste_brief, sections: [...TASTE_BRIEF_SECTIONS], fill_from: 'The capture, the answers to annex.questions and the references you find. Ask nothing more.' },
       production_gate: { requires: need, report_as: need.data_snapshot ? { grounding: { data_snapshot: { path: 'context/data-snapshot.json', sha256: '<sha256>', source: '<account or connector>', captured_at: '<ISO date>' } } } : need.brand_dna ? { grounding: { brand_dna: { path: 'context/brand-dna.json', sha256: '<sha256>', source: siteUrl ?? '<site URL>', captured_at: '<ISO date>', method: 'capture-brand-dna.mjs' }, taste_brief: { path: 'context/taste-brief.md', sha256: '<sha256>', brand_codes: ['<code>'], references_admired: ['<ref>', '<ref>'], reference_avoid: ['<ref>'], defaults_to_avoid: defaults.slice(0, 3).map(d => d.id), conventions_break: [] } } } : null, note: 'start_job and advance_job check this structure before PRODUCE. It is a host report, not proof of capture.' },
       buyer_can_act: selling ? { check: 'Before you build, confirm the thing being sold is live, in stock in the sizes or variants that matter, at the stated price, at the link you will use.', if_not: 'Make the call yourself, build for the option that works, and say so in the first line of the hand-over.' } : null,
       candidates: { make: candidatesFor(kind), as: 'Real work, not descriptions.', axes: selling ? [...CANDIDATE_AXES] : [], differ_on_at_least: selling ? 2 : null, reject: 'Candidates that differ only in colour, crop, wording or style label.', patch_mode: mode.mode === 'patch' ? 'Each candidate is the live asset as you would change it, with its ranked edits and their evidence.' : null },

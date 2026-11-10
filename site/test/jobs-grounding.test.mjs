@@ -3,7 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import * as grounding from '../src/jobs/grounding.mjs';
-import { prepareJobContext, suggestDeliverableKind, resolveDeliverableKind, resolveMode, normalizePatterns, defaultsFor, validateGrounding, substanceOverlap, skillPreamble, skillPreambleKind, craftRubric, gatesFor, CRAFT_RUBRICS, tasteQuestions, EMBEDDED_DEFAULT_PATTERNS, DELIVERABLE_KINDS, CANDIDATES, CANDIDATE_AXES, COMPLETENESS, completenessFor, contextNeed, requestedCount } from '../src/jobs/grounding.mjs';
+import { prepareJobContext, suggestDeliverableKind, resolveDeliverableKind, resolveMode, normalizePatterns, defaultsFor, validateGrounding, substanceOverlap, skillPreamble, skillPreambleKind, craftRubric, gatesFor, CRAFT_RUBRICS, EMBEDDED_DEFAULT_PATTERNS, DELIVERABLE_KINDS, CANDIDATES, CANDIDATE_AXES, COMPLETENESS, completenessFor, contextNeed, requestedCount } from '../src/jobs/grounding.mjs';
 import { buildExecutionPlan } from '../src/jobs/execution-quality.mjs';
 import { resolveDials, namesOneDeliverable } from '../src/jobs/dials.mjs';
 import { assembleRubric, scoreReview } from '../src/jobs/rubric.mjs';
@@ -11,6 +11,7 @@ import { startJob, advanceJob } from '../src/jobs/engine.mjs';
 import { jobMcpTools, callJobTool, JOB_REST_OPERATIONS } from '../src/jobs/job-mcp.mjs';
 import { proposeTeam } from '../src/jobs/propose-team.mjs';
 import { validateJobDocument } from '../src/jobs/contracts.mjs';
+import { intakeQuestions, INTAKE_ASK } from '../src/jobs/intake-questions.mjs';
 import { engineFixture } from './fixtures/jobs/engine-fixture.mjs';
 
 const send = (previous, entry, context) => advanceJob({ job_id: previous.job_id, state: previous.state, state_digest: previous.state_digest, ...entry }, context);
@@ -24,9 +25,12 @@ test('prepare_job_context returns a short brief and a structured annex for each 
   const page = prepareJobContext({ request: 'Build a landing page for my jewellery brand', site_url: 'https://www.tanishq.co.in' });
   assert.equal(page.schema, 'ai-blocks-job-context/1'); assert.equal(page.model_calls, 0); assert.equal(page.stored_by_service, false);
   assert.ok(page.brief.length <= 1500, `brief is ${page.brief.length}`);
-  for (const word of ['SPEC', 'annex.spec_sheet', 'GROUND', 'https://www.tanishq.co.in', 'context/brand-dna.json', 'TRUTH', 'ASK once', 'price point', 'admire', 'AVOID', 'CANDIDATES', 'BUILD', 'CHECK', 'HAND-OVER']) assert.ok(page.brief.includes(word), word);
+  for (const word of ['SPEC', 'annex.spec_sheet', 'GROUND', 'https://www.tanishq.co.in', 'context/brand-dna.json', 'TRUTH', 'ASK once', 'defaults in annex.questions', 'Where will visitors come from', 'the one thing a visitor should do', 'AVOID', 'CANDIDATES', 'BUILD', 'CHECK', 'HAND-OVER']) assert.ok(page.brief.includes(word), word);
   assert.deepEqual(page.brief.split('\n').map(line => line.split(/[: ]/)[0]), ['Job', 'SPEC', 'GROUND', 'TRUTH', 'ASK', 'AVOID', 'CANDIDATES', 'BUILD', 'CHECK', 'HAND-OVER']);
-  assert.equal(page.annex.questions.length, 3);
+  // One question list: the job's intake questions, each with its default. The old fixed taste set is gone.
+  assert.deepEqual(page.annex.questions, intakeQuestions({ deliverableKind: 'web_page', request: 'Build a landing page for my jewellery brand' }));
+  assert.deepEqual(page.annex.questions.map(q => q.id), ['traffic_source', 'one_action', 'proof', 'offer']); assert.ok(page.annex.questions.every(q => q.default));
+  assert.doesNotMatch(page.brief, /price point|admire|TASTE/);
   const a = page.annex;
   assert.equal(a.deliverable_kind, 'web_page'); assert.equal(a.kind_source, 'suggested'); assert.equal(a.family, 'web_page');
   assert.equal(a.mode_default.mode, 'extend');
@@ -34,7 +38,7 @@ test('prepare_job_context returns a short brief and a structured annex for each 
   assert.ok(a.context_requirements.some(r => r.id === 'brand_dna' && r.required));
   assert.deepEqual(a.capture.tools.map(t => t.file), ['capture-brand-dna.mjs', 'brand-dna-snippet.js', 'check-brand-fidelity.mjs']);
   for (const tool of a.capture.tools) { assert.equal(tool.get_skill.response_format, 'detailed'); assert.match(tool.marketplace_url, /^https:\/\/agents\.useaiblocks\.com\/tools\//); assert.equal(tool.status, 'CHECK_GET_SKILL'); }
-  assert.equal(a.taste_brief.questions.length, 3); assert.equal(a.taste_brief.path, 'context/taste-brief.md');
+  assert.equal(a.taste_brief.questions, undefined); assert.match(a.taste_brief.fill_from, /Ask nothing more/); assert.equal(a.taste_brief.path, 'context/taste-brief.md');
   assert.equal(a.craft_rubric.reduce((n, c) => n + c.weight, 0), 100);
   assert.ok(a.gates.some(g => g.id === 'primary_action_works'));
   assert.ok(a.defaults_to_avoid.some(d => d.id === 'web-template-stack')); assert.equal(a.defaults_source, 'embedded:DESIGN.md AI-default list');
@@ -275,8 +279,22 @@ test('the catalogue service reads patterns.json and script URLs from the publish
   assert.equal((await service.callTool('prepare_job_context', { request: 'audit my Meta ad account' })).annex.deliverable_kind, 'audit');
 });
 
-test('taste questions replace dial questions for every family', () => {
-  for (const kind of ['web_page', 'audit', 'strategy', 'code']) { const q = tasteQuestions(kind); assert.equal(q.length, 3); assert.ok(q.every(row => row.question.length > 10 && row.why.length > 0)); }
+test('one question list: the brief, the annex, the front door and start_job all ask the same intake questions', async () => {
+  assert.equal(grounding.tasteQuestions, undefined); assert.equal(grounding.TASTE_QUESTIONS, undefined);
+  for (const [request, kind] of [['Build a landing page for my jewellery brand', 'web_page'], ['Make 6 image ads for our candles', 'ad_creative'], ['Write a welcome email', 'email'], ['audit my Meta ad account', 'audit'], ['Plan our Q1 launch', 'plan'], ['Fix the checkout bug in our Shopify theme', 'code']]) {
+    const expected = intakeQuestions({ deliverableKind: kind, request });
+    const context = prepareJobContext({ request, deliverable_kind: kind });
+    assert.deepEqual(context.annex.questions, expected, kind); assert.ok(expected.length >= 1 && expected.length <= 4, kind);
+    // The brief quotes the first questions in full and counts the rest; it never invents a second set.
+    const asked = [...context.brief.split('\n').find(line => line.startsWith('ASK once')).matchAll(/"([^"]+)"/g)].map(m => m[1]);
+    assert.ok(asked.length >= 1 && asked.every((question, n) => question === expected[n].question), kind);
+    const door = await callJobTool('prepare_job_context', { request, deliverable_kind: kind });
+    assert.deepEqual(door.questions, expected, kind); assert.equal(door.questions_note, INTAKE_ASK);
+    const f = engineFixture(), single = await startJob({ request, deliverable_kind: kind }, f.context), team = await startJob({ ...f.input, request, deliverable_kind: kind, mode: 'team' }, f.context);
+    assert.deepEqual(single.questions, expected, kind); assert.deepEqual(team.questions, expected, kind);
+    for (const reply of [single, team]) { assert.equal(reply.questions_note, INTAKE_ASK); assert.doesNotMatch(JSON.stringify(reply), /TASTE questions|taste questions/); }
+  }
+  assert.doesNotMatch(INTAKE_ASK, /TASTE/);
   assert.equal(resolveMode({ request: 'Improve our product page', kind: 'web_page' }).mode, 'patch');
   assert.equal(resolveMode({ request: 'Make a page', kind: 'web_page', has_existing_asset: false }).mode, 'new');
   assert.equal(resolveMode({ request: 'Make a page', kind: 'web_page' }).confirm, true);

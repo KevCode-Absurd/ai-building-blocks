@@ -6,7 +6,17 @@
     <description>The newest free AI skills, workflows, prompts, agents and minds on AI Blocks, and the ones that changed most recently.</description>
     <language>en</language>
     <atom:link href="https://useaiblocks.com/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 09 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Grounded job protocol</title>
+      <link>https://useaiblocks.com/skills/grounded-job-protocol</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/grounded-job-protocol</guid>
+      <description>Give it any real job. Your AI frames it, studies your actual business first, explores real options, builds in your style and gets checked.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Plan your strategy</category>
+    </item>
     <item>
       <title>AI default patterns</title>
       <link>https://useaiblocks.com/skills/ai-default-patterns</link>
@@ -76,16 +86,6 @@
       <category>new</category>
       <category>skill</category>
       <category>Set up AI to work for you</category>
-    </item>
-    <item>
-      <title>Grounded job protocol</title>
-      <link>https://useaiblocks.com/skills/grounded-job-protocol</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/grounded-job-protocol</guid>
-      <description>Give it any real job. Your AI frames it, studies your actual business first, explores real options, builds in your style and gets checked.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-      <category>new</category>
-      <category>skill</category>
-      <category>Plan your strategy</category>
     </item>
     <item>
       <title>Personal agent builder</title>

@@ -102,6 +102,11 @@ Pick the defaults from [AI default patterns](https://useaiblocks.com/skills/ai-d
 
 ## 3. DIVERGE: real alternatives
 
+- First, check the proven levers for this kind of work against the live asset, and mark each one present, missing or not applicable. Add the missing ones from real data, or give the reason you skip one. For audits, rank adding them among the fixes.
+  - Pages: reviews and ratings near the decision; price, saving and payment options; delivery date and shipping cost; returns and guarantee; stock, size or fit help; real proof and trust marks; one clear primary action on the first mobile screen.
+  - Ads: a hook in the first line and first second; real proof; the offer or price when it helps; the product in use; one clear call to action.
+  - Copy: a specific promise first; proof next to each claim; the main objection answered; one next step.
+  - Email: a subject line with a reason to open; one main action with a direct link; real proof; a true reason to buy now; footer, unsubscribe and an exit rule for buyers.
 - Make 2 or 3 directions (for audits and analysis: competing hypotheses). Plan them first in one pass, then draft each separately.
 - Each direction differs on at least one named axis: **mechanism or promise**, **proof**, **structure**, **visual world or art direction**, **offer**.
 - Each cites the reference it learns from and says how it departs from the category default.
@@ -127,6 +132,14 @@ Use a separate critic: a fresh chat, or another seat. Give it the deliverable, `
 - No invented numbers.
 - Access respected: read, draft or publish-within-limits, as granted.
 - No fillable placeholders.
+- The hand-over fits. A one-screen summary comes first: what changed, why, and what to check. The deliverable stays inside its word budget, and detail goes to `DECISIONS.md` or an appendix. The budgets:
+  - Page: a hand-over note of up to 150 words, and page copy no longer than the live page plus 20%.
+  - Ads: up to 150 words per concept.
+  - Email: up to 200 words of body per email.
+  - Audit or analysis: the top 3 fixes or the answer on the first screen, and up to 1,500 words.
+  - Strategy or plan: a summary of up to 250 words, and up to 2,500 words.
+  - Code: a note of up to 150 words.
+- Pages, ads, copy, email and audits also: every proven lever was checked, and each missing one was added or skipped with a reason (step 3).
 - web_page also: the existing nav and footer are kept unless the change is on purpose; brand fonts are loaded; the page works at 390 px and 1440 px; the primary action works. Run [Brand fidelity check](https://useaiblocks.com/skills/brand-fidelity-check) (`check-brand-fidelity.mjs`, or its manual checklist) and its fresh-context side-by-side review.
 
 **Craft rubric (score 0 to 10 per criterion, weight as shown):**

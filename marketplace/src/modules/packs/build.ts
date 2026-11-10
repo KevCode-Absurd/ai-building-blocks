@@ -17,7 +17,7 @@ import { AGENT_MIRROR, LIBRARY_ORIGIN, ORIGIN, PACK_LICENSE, PACK_SCHEMA, SKILL_
 import { teamMarkdown } from "../directory/team.ts";
 import { qualityMethodMarkdown } from "../directory/execution.ts";
 import { outputPolicyMarkdown } from "../runner/output-policy.ts";
-import { CAPTURE, FAMILY_LABELS, RUBRIC_GROUP, contextRequirements, familyOf, familySlice } from "./families.ts";
+import { CAPTURE, FAMILY_LABELS, RUBRIC_GROUP, contextRequirements, familyGates, familyOf, familySlice } from "./families.ts";
 import { bestRoute, type RouteCandidate } from "./route.ts";
 import { agentFrontmatter, megaSources, teamListMarkdown, type MegaKit } from "./mega.ts";
 
@@ -594,6 +594,7 @@ function jobSkill(jt: JobType, kind: PackKind, slug: string = jt.id, pointer: Me
   const gates = [
     ...(jt.gates ?? []),
     ...jt.rubric.filter(c => c.critical).map(c => `${c.text} (${c.pass_rule.replace(/\.$/, "")}.)`),
+    ...familyGates(family),
   ];
   const craft = jt.craft_rubric?.length
     ? ["| Criterion | Weight | How to test it |", "|---|---|---|", ...jt.craft_rubric.map(c => `| ${cell(c.criterion)} | ${c.weight} | ${cell(c.test)} |`)]

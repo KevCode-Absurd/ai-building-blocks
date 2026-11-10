@@ -41,7 +41,9 @@ Spend your questions here, not on format: their position, price point and occasi
 
 ## 3. Diverge: explore on substance
 
-Make 2 or 3 directions, or for audits and analysis 2 or 3 competing hypotheses. They must differ on named axes:
+First, check the proven levers for this kind of work against the live asset, and mark each one present, missing or not applicable. Each job skill lists them, for example reviews near the decision, a delivery date, or the returns terms. Add the missing ones from real data, or give the reason you skip one. For audits, rank adding them among the fixes.
+
+Then make 2 or 3 directions, or for audits and analysis 2 or 3 competing hypotheses. They must differ on named axes:
 
 - mechanism or promise;
 - proof;
@@ -67,6 +69,8 @@ Check in a fresh context or another seat, or at least as a separate step after t
 - No invented numbers.
 - Access was respected.
 - No placeholder is left that the capture could have filled.
+- The hand-over fits. A one-screen summary comes first: what changed, why, and what to check. The deliverable stays inside the word budget in its job skill, and detail goes to `DECISIONS.md` or an appendix.
+- Pages, ads, copy, email and audits also: every proven lever was checked, and each missing one was added or skipped with a reason (step 3).
 - Web pages also: the existing nav and footer are kept unless changed on purpose, the brand fonts load, the page works at 390 px and 1440 px, the primary action works, and `tools/check-brand-fidelity.mjs` (or its checklist) passes.
 
 **Craft.** Score each criterion out of its weight. Every family tests specificity (could a competitor publish this unchanged?), fidelity (is it recognisably this brand?), distinctiveness (does it avoid the named defaults?) and whether it does the job. A job type's own craft rubric, when its skill has one, replaces this table.

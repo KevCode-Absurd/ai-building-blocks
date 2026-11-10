@@ -192,6 +192,45 @@ const SLICES: Record<DeliverableFamily, { taste: string; diverge: string; build:
 
 export function familySlice(family: DeliverableFamily) { return SLICES[family]; }
 
+/**
+ * Word budgets for the hand-over, by family (the same as site/src/jobs/grounding.mjs WORD_BUDGETS). The 9 Nov 2026
+ * blind test found grounded work scored lower on clarity than plain model output because it ran long.
+ */
+export const WORD_BUDGETS: Record<DeliverableFamily, string> = {
+  web_page: "Hand-over note up to 150 words. Page copy no longer than the live page plus 20%, unless the change says why.",
+  ad_creative: "Up to 150 words per concept. The hook fits the placement's visible text (about 125 characters on Meta).",
+  copy: "The length the job card names; with none, no longer than the copy it replaces.",
+  email: "Body up to 200 words per email, unless the brand's own past emails run longer.",
+  audit: "The top 3 fixes on the first screen, and up to 1,500 words in all. Evidence tables go in an appendix.",
+  analysis: "The answer and how sure it is on the first screen, and up to 1,500 words in all. Working goes in an appendix.",
+  strategy: "A summary up to 250 words first, and up to 2,500 words in all.",
+  plan: "A summary up to 250 words first, and up to 2,500 words in all. Schedules go in tables.",
+  code: "A hand-over note up to 150 words: what changed, how to run it, what to check.",
+  ops_doc: "Steps a new person can follow in one read, none longer than 40 words.",
+  other: "A summary up to 150 words first.",
+};
+
+/**
+ * Proven conversion levers by family (the same as grounding.mjs PROVEN_LEVERS). The blind test also found plain
+ * output sometimes added a strong lever (star ratings) that grounded work left out, so the job checks for them.
+ */
+export const PROVEN_LEVERS: Partial<Record<DeliverableFamily, string[]>> = {
+  web_page: ["reviews and ratings near the decision", "price, saving and payment options where people choose", "delivery date and shipping cost", "returns and guarantee terms", "stock, size or fit help", "real customer proof and trust marks", "one clear primary action on the first mobile screen"],
+  ad_creative: ["a hook in the first line and the first second", "real proof: reviews, numbers or press", "the offer or price, when it helps", "the product in use", "one clear call to action"],
+  copy: ["a specific promise in the first line", "real proof next to each claim", "the buyer's main objection, answered", "one clear next step"],
+  email: ["a subject line that gives a reason to open", "one main call to action with a direct link", "real proof: reviews or numbers", "a reason to buy now that is true (offer, guarantee or best-sellers)", "footer, unsubscribe and an exit rule for buyers"],
+  audit: ["the proven levers for the page, ad or email being audited (the same lists as those jobs), each marked present or missing"],
+};
+
+/** The family gates every job skill of the family carries: the hand-over budget, and the proven levers when it has them. */
+export function familyGates(family: DeliverableFamily): string[] {
+  const levers = PROVEN_LEVERS[family];
+  return [
+    `The hand-over fits: a one-screen summary first (what changed, why, what to check). ${WORD_BUDGETS[family]} Detail goes to DECISIONS.md or an appendix.`,
+    ...(levers ? [`Proven levers checked on the live asset, each marked present, missing or not applicable: ${levers.join("; ")}. Each missing one is added from real data, or skipped with a reason.`] : []),
+  ];
+}
+
 const hasField = (jt: JobType, re: RegExp) => jt.spec_fields.some(f => f.type === "url" || re.test(`${f.id} ${f.label}`));
 
 /**

@@ -102,3 +102,17 @@ test("a job type's own gates and craft rubric render as pass/fail gates and a we
   assert.match(skill, /\| Brand fidelity \| 60 \| Fonts and colours match brand-dna\.json\. \|/);
   assert.match(skill, /Default mode: patch/);
 });
+
+test("every job skill carries the hand-over word budget; conversion jobs also check the proven levers", async () => {
+  const { familyGates, WORD_BUDGETS, PROVEN_LEVERS } = await import("../src/modules/packs/families.ts");
+  for (const family of Object.keys(WORD_BUDGETS) as (keyof typeof WORD_BUDGETS)[]) {
+    const gates = familyGates(family);
+    assert.match(gates[0], /one-screen summary first/, family);
+    assert.equal(gates.some(g => /^Proven levers checked/.test(g)), Boolean(PROVEN_LEVERS[family]), family);
+  }
+  const pack = await build();
+  const skills = pack.files.filter(f => /^skills\/[^/]+\/SKILL\.md$/.test(f.path) && /## Gates: pass or fail/.test(f.content));
+  assert.ok(skills.length > 0);
+  for (const s of skills) assert.match(s.content, /The hand-over fits: a one-screen summary first/, s.path);
+  assert.match(file(pack, "WORK-METHOD.md")!, /check the proven levers/);
+});

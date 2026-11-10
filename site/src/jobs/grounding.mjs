@@ -87,7 +87,39 @@ export const COMMON_GATES = Object.freeze([
   { id: 'no_invented_numbers', gate: 'No invented numbers.' },
   { id: 'access_respected', gate: 'Access respected: read, draft, or publish within the agreed limits.' },
   { id: 'no_fillable_placeholders', gate: 'No placeholder that capture could have filled.' },
+  { id: 'hand_over_budget', gate: 'Hand-over fits: a one-screen summary comes first (what changed, why, what to check), and the deliverable stays inside its word budget. Detail goes to DECISIONS.md or an appendix.' },
 ]);
+/**
+ * Word budgets by deliverable kind. The 9 Nov 2026 blind test found grounded work scored lower on clarity than plain
+ * model output because it ran long; the budget keeps the evidence and moves it out of the way.
+ */
+export const WORD_BUDGETS = Object.freeze({
+  web_page: 'Hand-over note up to 150 words. Page copy no longer than the live page plus 20%, unless the change says why.',
+  ad_creative: 'Up to 150 words per concept. The hook fits the placement\'s visible text (about 125 characters on Meta).',
+  copy: 'The length the job card names; with none, no longer than the copy it replaces.',
+  email: 'Body up to 200 words per email, unless the brand\'s own past emails run longer.',
+  audit: 'The top 3 fixes on the first screen, and up to 1,500 words in all. Evidence tables go in an appendix.',
+  analysis: 'The answer and how sure it is on the first screen, and up to 1,500 words in all. Working goes in an appendix.',
+  strategy: 'A summary up to 250 words first, and up to 2,500 words in all.',
+  plan: 'A summary up to 250 words first, and up to 2,500 words in all. Schedules go in tables.',
+  code: 'A hand-over note up to 150 words: what changed, how to run it, what to check.',
+  ops_doc: 'Steps a new person can follow in one read, none longer than 40 words.',
+  other: 'A summary up to 150 words first.',
+});
+/**
+ * Proven conversion levers by kind. Before building, mark each one present, missing or not applicable on the live
+ * asset; add the missing ones from real data. The same blind test found plain output sometimes added a strong lever
+ * (star ratings) that grounded work left out.
+ */
+export const PROVEN_LEVERS = Object.freeze({
+  web_page: ['reviews and ratings near the decision', 'price, saving and payment options where people choose', 'delivery date and shipping cost', 'returns and guarantee terms', 'stock, size or fit help', 'real customer proof and trust marks', 'one clear primary action on the first mobile screen'],
+  ad_creative: ['a hook in the first line and the first second', 'real proof: reviews, numbers or press', 'the offer or price, when it helps', 'the product in use', 'one clear call to action'],
+  copy: ['a specific promise in the first line', 'real proof next to each claim', 'the buyer\'s main objection, answered', 'one clear next step'],
+  email: ['a subject line that gives a reason to open', 'one main call to action with a direct link', 'real proof: reviews or numbers', 'a reason to buy now that is true (offer, guarantee or best-sellers)', 'footer, unsubscribe and an exit rule for buyers'],
+  audit: ['the proven levers for the page, ad or email being audited (the same lists as those jobs), each marked present or missing'],
+});
+export const LEVER_GATE = Object.freeze({ id: 'proven_levers_checked', gate: 'Proven levers checked: each lever for this kind of work is marked present, missing or not applicable on the live asset, and each missing one is added from real data or skipped with a reason.' });
+export const leversFor = kind => [...(PROVEN_LEVERS[kind] ?? [])];
 export const WEB_GATES = Object.freeze([
   { id: 'nav_footer_kept', gate: 'The existing nav and footer are kept, unless the change is on purpose.' },
   { id: 'brand_fonts_loaded', gate: 'Brand fonts are loaded.' },
@@ -95,7 +127,7 @@ export const WEB_GATES = Object.freeze([
   { id: 'primary_action_works', gate: 'The primary action works.' },
   { id: 'brand_fidelity_lint', gate: 'check-brand-fidelity.mjs (or its manual checklist) passes against context/brand-dna.json.' },
 ]);
-export const gatesFor = kind => [...COMMON_GATES, ...(familyOf(kind) === 'web_page' ? WEB_GATES : [])].map(g => ({ ...g }));
+export const gatesFor = kind => [...COMMON_GATES, ...(PROVEN_LEVERS[kind] ? [LEVER_GATE] : []), ...(familyOf(kind) === 'web_page' ? WEB_GATES : [])].map(g => ({ ...g }));
 export const craftRubric = kind => CRAFT_RUBRICS[familyOf(kind)].map(c => ({ ...c }));
 
 /** The AI-default list from the spec, embedded as a fallback for catalogue-items/general/ai-default-patterns/patterns.json. */
@@ -354,7 +386,7 @@ export function prepareJobContext(input = {}, context = {}) {
   const siteUrl = typeof input.site_url === 'string' && /^https?:\/\/[^\s]+$/i.test(input.site_url) ? input.site_url : undefined;
   const mode = resolveMode({ request, site_url: siteUrl, has_existing_asset: input.has_existing_asset, kind });
   const patterns = normalizePatterns(context.patterns), defaults = defaultsFor(kind, patterns);
-  const questions = tasteQuestions(kind), rubric = craftRubric(kind), gates = gatesFor(kind), need = groundingRequirement(kind);
+  const questions = tasteQuestions(kind), rubric = craftRubric(kind), gates = gatesFor(kind), need = groundingRequirement(kind), levers = leversFor(kind);
   const audit = family === 'audit_analysis';
   const steps = GJP_STEPS.map(step => ({ ...step, do: audit && AUDIT_STEP_OVERRIDES[step.id] ? AUDIT_STEP_OVERRIDES[step.id] : step.do }));
   const scripts = CAPTURE_TOOLS.filter(t => BRAND_KINDS.includes(kind) || (t.skill === 'brand-dna-capture' && family === 'strategy_plan')).map(tool => {
@@ -374,7 +406,10 @@ export function prepareJobContext(input = {}, context = {}) {
       : family === 'strategy_plan' ? 'DIVERGE: 2 or 3 real options with what each costs and wins; choose one and record the strongest dissent.'
       : family === 'code_ops_other' ? 'DIVERGE: when the approach is not obvious, compare 2 approaches that differ in mechanism or trade-off, not wording.'
       : 'DIVERGE: 2 or 3 directions that differ on mechanism, proof, structure, visual world or offer, each citing its reference.',
+    ...(!levers.length ? [] : audit ? ['LEVERS: mark which proven levers the audited page, ad or email lacks (annex.proven_levers) and rank adding them among the fixes.']
+      : [`LEVERS: before building, mark each of the ${levers.length} proven levers in annex.proven_levers present or missing on the live asset; add missing ones from real data.`]),
     `CHECK: a fresh critic runs ${gates.length} pass/fail gates, then scores ${rubric.slice().sort((x, y) => y.weight - x.weight).slice(0, 3).map(c => `${c.criterion.toLowerCase()} ${c.weight}`).join(', ')}.`,
+    `HAND-OVER: a one-screen summary first (what changed, why, what to check). ${WORD_BUDGETS[kind] ?? WORD_BUDGETS.other}`,
     need.brand_dna || need.data_snapshot ? `Report grounding (${need.data_snapshot ? 'data_snapshot' : 'brand_dna and taste_brief'}) before production. Client context overrides method defaults on look and structure, never truth or permission.` : 'Client context overrides method defaults on structure, never truth or permission.',
   ];
   // The defaults get whatever room is left under 1,500 characters: descriptions, not ids, so the model knows what to avoid.
@@ -397,6 +432,8 @@ export function prepareJobContext(input = {}, context = {}) {
       production_gate: { requires: need, report_as: need.data_snapshot ? { grounding: { data_snapshot: { path: 'context/data-snapshot.json', sha256: '<sha256>', source: '<account or connector>', captured_at: '<ISO date>' } } } : need.brand_dna ? { grounding: { brand_dna: { path: 'context/brand-dna.json', sha256: '<sha256>', source: siteUrl ?? '<site URL>', captured_at: '<ISO date>', method: 'capture-brand-dna.mjs' }, taste_brief: { path: 'context/taste-brief.md', sha256: '<sha256>', brand_codes: ['<code>'], references_admired: ['<ref>', '<ref>'], reference_avoid: ['<ref>'], defaults_to_avoid: defaults.slice(0, 3).map(d => d.id), conventions_break: [] } } } : null, note: 'start_job and advance_job check this structure before PRODUCE. It is a host report, not proof of capture.' },
       diverge: { axes: audit ? ['hypothesis', 'evidence', 'expected_effect'] : ['mechanism_or_promise', 'proof', 'structure', 'visual_world', 'offer'], count: [2, 3], reject: 'Directions that differ only in colour, crop, wording or style label.', patch_mode: mode.mode === 'patch' ? 'Directions are alternative change-sets to the live asset: ranked edits, each with its evidence.' : null },
       craft_rubric: rubric, gates,
+      hand_over: { summary_first: 'A one-screen summary: what changed, why, and what to check first.', word_budget: WORD_BUDGETS[kind] ?? WORD_BUDGETS.other, detail_goes_to: ['DECISIONS.md', 'an appendix'] },
+      proven_levers: levers,
       defaults_to_avoid: defaults, defaults_source: patterns.length ? `catalogue:${GJP_SKILLS.defaults}/patterns.json` : 'embedded:DESIGN.md AI-default list',
       next: { team: { tool: 'start_job', arguments: { request, deliverable_kind: kind, ...(siteUrl ? { site_url: siteUrl } : {}), ...(typeof input.has_existing_asset === 'boolean' ? { has_existing_asset: input.has_existing_asset } : {}) } }, single_skill: { tool: 'search_library', arguments: { query: request.slice(0, 300) } } },
     },

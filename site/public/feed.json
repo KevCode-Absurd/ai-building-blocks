@@ -15,6 +15,38 @@
  ],
  "items": [
   {
+   "id": "https://useaiblocks.com/skills/grounded-job-protocol",
+   "url": "https://useaiblocks.com/skills/grounded-job-protocol",
+   "title": "Grounded job protocol",
+   "summary": "Give it any real job. Your AI frames it, studies your actual business first, explores real options, builds in your style and gets checked.",
+   "content_text": "Give it any real job. Your AI frames it, studies your actual business first, explores real options, builds in your style and gets checked. Updated 2026-11-10.",
+   "date_published": "2026-11-09T00:00:00Z",
+   "date_modified": "2026-11-10T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Plan your strategy"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/grounded-job-protocol.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/grounded-job-protocol/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/grounded-job-protocol.md",
+    "json": "https://useaiblocks.com/skills/grounded-job-protocol.json",
+    "skill": "https://useaiblocks.com/skills/grounded-job-protocol/SKILL.md"
+   }
+  },
+  {
    "id": "https://useaiblocks.com/skills/ai-default-patterns",
    "url": "https://useaiblocks.com/skills/ai-default-patterns",
    "title": "AI default patterns",
@@ -236,38 +268,6 @@
     "markdown": "https://useaiblocks.com/skills/expert-knowledge-interview.md",
     "json": "https://useaiblocks.com/skills/expert-knowledge-interview.json",
     "skill": "https://useaiblocks.com/skills/expert-knowledge-interview/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/grounded-job-protocol",
-   "url": "https://useaiblocks.com/skills/grounded-job-protocol",
-   "title": "Grounded job protocol",
-   "summary": "Give it any real job. Your AI frames it, studies your actual business first, explores real options, builds in your style and gets checked.",
-   "content_text": "Give it any real job. Your AI frames it, studies your actual business first, explores real options, builds in your style and gets checked.",
-   "date_published": "2026-11-09T00:00:00Z",
-   "date_modified": "2026-11-09T00:00:00Z",
-   "tags": [
-    "new",
-    "skill",
-    "Plan your strategy"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/grounded-job-protocol.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/grounded-job-protocol/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/grounded-job-protocol.md",
-    "json": "https://useaiblocks.com/skills/grounded-job-protocol.json",
-    "skill": "https://useaiblocks.com/skills/grounded-job-protocol/SKILL.md"
    }
   },
   {

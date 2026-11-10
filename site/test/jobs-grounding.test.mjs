@@ -156,7 +156,15 @@ test('the rubric adds per-family craft criteria with the spec weights, and gates
   assert.deepEqual(Object.fromEntries(web.map(c => [c.id, c.weight])), { job_conversion: 20, brand_fidelity: 25, launchability: 20, specificity: 15, distinctiveness: 10, clarity: 10 });
   assert.ok(craftRubric('email').some(c => c.id === 'brand_fidelity' && c.weight === 25) && craftRubric('copy').some(c => c.id === 'distinctiveness'));
   assert.ok(craftRubric('audit').some(c => c.id === 'diagnosis' && c.weight === 25));
-  assert.equal(gatesFor('web_page').length, 9); assert.equal(gatesFor('audit').length, 4);
+  assert.equal(gatesFor('web_page').length, 11); assert.equal(gatesFor('audit').length, 6); assert.equal(gatesFor('analysis').length, 5);
+  // Every kind gets the hand-over budget; conversion work also gets the proven-levers gate.
+  for (const kind of ['web_page', 'ad_creative', 'copy', 'email', 'audit', 'analysis', 'strategy', 'plan', 'code', 'ops_doc', 'other']) {
+    assert.ok(gatesFor(kind).some(g => g.id === 'hand_over_budget'), kind);
+    assert.equal(gatesFor(kind).some(g => g.id === 'proven_levers_checked'), ['web_page', 'ad_creative', 'copy', 'email', 'audit'].includes(kind), kind);
+    assert.ok(prepareJobContext({ request: 'x', deliverable_kind: kind }).annex.hand_over.word_budget.length > 20, kind);
+  }
+  assert.ok(prepareJobContext({ request: 'Improve our product page', deliverable_kind: 'web_page' }).annex.proven_levers.some(l => /reviews and ratings/.test(l)));
+  assert.match(prepareJobContext({ request: 'Improve our product page', deliverable_kind: 'web_page' }).brief, /AVOID unless chosen on purpose/, 'the defaults to avoid still fit in the brief');
   const legacy = assembleRubric({}); assert.equal(legacy.craft, undefined);
   const rubric = assembleRubric({}, [], { kind: 'web_page' }); assert.equal(rubric.craft.family, 'web_page');
   assert.equal(validateJobDocument('ai-blocks-rubric/1', rubric).ok, true);

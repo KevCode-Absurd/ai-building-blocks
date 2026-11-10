@@ -1,7 +1,10 @@
-// The Grounded Job Protocol (GJP) as data: frame, ground, taste, diverge, build, check, record.
+// The work method as data: spec sheet, ground, taste, real candidates, build, client's-eye check, hand-over.
 // Deterministic and model-free. One source for prepare_job_context, the start_job questions,
 // the production gate, the craft rubric and the get_skill preamble. Nothing here stores client data:
 // capture files live in the user's project under context/.
+// The shared lists (WORD_BUDGETS, PROVEN_LEVERS, CANDIDATE_AXES, CANDIDATES, COMPLETENESS, CONTEXT_LEVELS, CONTEXT_NEED
+// and the craft weights) are also in marketplace/src/modules/packs/families.ts; test/jobs-grounding.test.mjs fails
+// when the two copies differ.
 
 const list = value => Array.isArray(value) ? value : [];
 const text = value => typeof value === 'string' && value.trim().length > 0;
@@ -17,77 +20,91 @@ export const familyOf = kind => FAMILY_BY_KIND[kind] ?? 'code_ops_other';
 export const BRAND_KINDS = Object.freeze(['web_page', 'ad_creative', 'copy', 'email']);
 export const DATA_KINDS = Object.freeze(['audit', 'analysis']);
 
-/** The protocol in the order a host should run it. The first lines of the MCP instructions say the same. */
+/** The method in the order a host should run it. The ids are stable; the 10 Nov 2026 blind test rewrote what each step asks. */
 export const GJP_STEPS = Object.freeze([
-  { id: 'frame', name: 'Frame', do: 'Write the job card: client, outcome, deliverable_kind, success measure and mode (patch the existing asset by default).' },
-  { id: 'ground', name: 'Ground', do: 'Capture the real thing before producing anything: the live site into context/brand-dna.json and context/screenshots/, or the real account or data snapshot for audits.' },
-  { id: 'taste', name: 'Taste brief', do: 'Write context/taste-brief.md: brand codes to keep, category conventions to keep and break, 2 admired references and 1 to avoid, and the named defaults to avoid.' },
-  { id: 'diverge', name: 'Diverge on substance', do: 'Make 2 or 3 directions that differ on named axes (mechanism, proof, structure, visual world, offer), each citing its reference. Colour, crop or wording alone is not a direction.' },
-  { id: 'build', name: 'Build inside the client system', do: 'Keep the captured nav, footer, fonts, colour proportions and components unless the plan changes them on purpose. Use real copy and facts.' },
-  { id: 'check', name: 'Independent check', do: 'A separate critic pass runs the pass/fail gates and scores the craft rubric, then compares the work with the best reference. Refine once.' },
-  { id: 'record', name: 'Record', do: 'Write DECISIONS.md: considered, chosen and why, strongest dissent, what to test next.' },
+  { id: 'frame', name: 'Spec sheet', do: 'Write the one-screen spec sheet: who must do what after seeing this, the deliverables with counts in the client\'s words, 5 to 7 acceptance tests, the decisions you must take, your assumptions, the mode (patch what exists by default) and the brand context this job needs.' },
+  { id: 'ground', name: 'Ground what the job needs', do: 'Capture only what the acceptance tests depend on: the live site into context/brand-dna.json and context/screenshots/, or the real account or data for audits. Every fact gets a source and a date. Check the thing being sold is live, in stock, at the stated price and at the link you will use.' },
+  { id: 'taste', name: 'Taste and tools', do: 'For work a buyer sees, write context/taste-brief.md: brand codes to keep, 2 admired references and 1 to avoid, and the named defaults to avoid. When you were given a toolbox, pick from it at your own discretion and open only what you pick.' },
+  { id: 'diverge', name: 'Real candidates, someone else chooses', do: 'Make about 3 candidates of the part that decides the outcome, as real work, differing on at least two of promise, proof, structure, buyer moment, offer and visual world. A fresh reviewer answers each acceptance test per candidate, picks one and names what to take from the others. One extra round at most.' },
+  { id: 'build', name: 'Build to the craft floor', do: 'Give true facts a new framing and add no new facts. Every piece earns its place commercially. Decide; never hand over a menu. Working figures only for planning numbers the client will tune, with the sum shown. Finish the format\'s completeness list.' },
+  { id: 'check', name: 'Client\'s-eye check', do: 'A fresh reviewer gets only the brief, the deliverable and the captured facts. They answer each acceptance test with the proving line, mark every claim sourced or not, and name the weakest piece, what the client would have to ask, and what can be cut. Remove unsourced claims, fix, cut, stop.' },
+  { id: 'record', name: 'Hand over', do: 'The work first, opened by 3 to 5 lines: what this is, the main decision and why, what to check before use. Nothing internal reaches the client. Keep working notes in DECISIONS.md.' },
 ]);
 const AUDIT_STEP_OVERRIDES = Object.freeze({
-  ground: 'Pull the real account or data snapshot through the client connector at read level into context/ (for example context/data-snapshot.json), with its source and date.',
-  taste: 'Write the decision this informs, what changed recently and what normal looks like for the key metric. Name the defaults to avoid.',
-  diverge: 'Write 2 or 3 competing hypotheses for why the numbers moved, each with the evidence that would confirm or kill it. A fixed checklist score is not a diagnosis.',
-  build: 'Diagnose this account or data specifically, then rank actions by expected impact.',
+  ground: 'Pull the real account or data snapshot through the client connector at read level into context/ (for example context/data-snapshot.json), with its source and date. Pull only what the acceptance tests depend on.',
+  taste: 'Write the decision this informs, what changed recently and what normal looks like for the key metric. When you were given a toolbox, pick from it at your own discretion and open only what you pick.',
+  diverge: 'Write three competing explanations of the main problem, each with the evidence for it and what would rule it out. A fresh reviewer picks the one the evidence supports. A fixed checklist score is not a diagnosis.',
+  build: 'Diagnose this account or data specifically, then rank actions by expected impact. Recommend the first fix; never hand over a menu.',
 });
 
-/** CRAFT-RUBRICS from the spec. Weights sum to 100 per family; gates are pass/fail and never averaged away. */
+/**
+ * Craft rubrics. Weights sum to 100 per family; gates are pass/fail and never averaged away. In every family the job
+ * carries the largest weight: blind judges score "does it do the job for the buyer or the decision" first, and the old
+ * weights put brand or voice fidelity above it. "Own material" is the scoreable stand-in for "better than a plain
+ * model would produce". Truth is a gate, not a score. Criterion names and weights match CRAFT_WEIGHTS in families.ts.
+ */
+const OWN_MATERIAL = Object.freeze({ id: 'own_material', criterion: 'Own material', weight: 10, test: 'At least one idea, proof or angle came from this business\'s real material and would not appear in a generic answer.' });
 export const CRAFT_RUBRICS = Object.freeze({
   web_page: [
-    { id: 'job_conversion', criterion: 'Job and conversion logic', weight: 20, test: 'The page does the job the client asked for, with one clear primary action and an argument a buyer can follow.' },
-    { id: 'brand_fidelity', criterion: 'Brand fidelity', weight: 25, test: 'Recognisably this brand: captured fonts, colour proportions, components, nav, footer and voice samples are used, each choice citing context/brand-dna.json.' },
-    { id: 'launchability', criterion: 'Launchability', weight: 20, test: 'Ships as working source on the client stack: loads the brand fonts, works at 390 px and 1440 px, primary action works, no fillable placeholders.' },
-    { id: 'specificity', criterion: 'Specificity', weight: 15, test: 'A competitor could not publish it unchanged: real products, prices, offers and proof from capture.' },
-    { id: 'distinctiveness', criterion: 'Distinctiveness against the named defaults', weight: 10, test: 'Avoids every default named in the taste brief, or departs from it on purpose with a reason.' },
+    { id: 'job_conversion', criterion: 'Does the job for the buyer', weight: 30, test: 'The buyer the page is for gets a reason to act and one clear action they can take today, with an argument they can follow. Every acceptance test on the spec sheet passes.' },
+    { id: 'brand_fidelity', criterion: 'Brand fidelity', weight: 20, test: 'Recognisably this brand: captured fonts, colour proportions, components, nav, footer and voice samples are used, each choice citing context/brand-dna.json.' },
+    { id: 'launchability', criterion: 'Launchability', weight: 15, test: 'Ships as working source on the client stack: loads the brand fonts, works at 390 px and 1440 px, primary action works, no fillable placeholders.' },
+    { ...OWN_MATERIAL },
+    { id: 'specificity', criterion: 'Specificity', weight: 10, test: 'A competitor could not publish it unchanged: real products, prices, offers and proof from capture.' },
     { id: 'clarity', criterion: 'Clarity', weight: 10, test: 'A first-time visitor understands the offer and next step in one screen.' },
+    { id: 'distinctiveness', criterion: 'Distinctiveness vs defaults', weight: 5, test: 'Avoids every default named in the taste brief, or departs from it on purpose with a reason.' },
   ],
   ad_creative: [
-    { id: 'strategic_idea', criterion: 'Strategic idea', weight: 20, test: 'Each concept has an idea about the buyer, not just a look.' },
-    { id: 'range', criterion: 'Range across named axes', weight: 20, test: 'Concepts differ on mechanism, proof, structure, visual world or offer, and none uses a named ad default (one look for all, a reused hook, product on a gradient).' },
+    { id: 'job_buyer', criterion: 'Does the job for the buyer', weight: 30, test: 'Each ad gives the named buyer a reason to act: the brand, product and price or offer are clear to someone who has never heard of them, and what is advertised can be bought today. Every acceptance test on the spec sheet passes.' },
+    { id: 'range', criterion: 'Range across named axes', weight: 15, test: 'Concepts differ on at least two of promise, proof, structure, buyer moment, offer and visual world, and none uses a named ad default (one look for all, a reused hook, product on a gradient).' },
     { id: 'brand_fidelity', criterion: 'Brand fidelity', weight: 15, test: 'Recognisably this brand: captured colours, type, product and voice.' },
-    { id: 'hook', criterion: 'Hook and thumb-stop', weight: 15, test: 'The first second earns attention for this buyer on this placement.' },
-    { id: 'specificity', criterion: 'Specificity', weight: 15, test: 'Uses real products, offers and proof; a competitor could not run it unchanged.' },
-    { id: 'platform_fit', criterion: 'Platform fit', weight: 15, test: 'Native to the placement, its safe zones and specs.' },
+    { id: 'strategic_idea', criterion: 'Strategic idea', weight: 10, test: 'Each concept has an idea about the buyer, not just a look.' },
+    { id: 'hook', criterion: 'Hook and thumb-stop', weight: 10, test: 'The first second earns attention for this buyer on this placement.' },
+    { id: 'platform_fit', criterion: 'Platform fit', weight: 10, test: 'Native to the placement, its safe areas and specs; a designer can build it without asking anything.' },
+    { ...OWN_MATERIAL },
   ],
   copy_email: [
-    { id: 'brand_fidelity', criterion: 'Voice fidelity', weight: 25, test: 'Sounds like the captured voice samples, not a generic brand.' },
-    { id: 'specificity', criterion: 'Specificity', weight: 20, test: 'A competitor could not send or publish it unchanged.' },
-    { id: 'job_done', criterion: 'Job done', weight: 20, test: 'Does the job the client asked for.' },
-    { id: 'grounded_claims', criterion: 'Proof and claims grounded', weight: 15, test: 'Every claim, price and offer traces to a dated source.' },
-    { id: 'distinctiveness', criterion: 'Distinctiveness against the named defaults', weight: 10, test: 'None of the named copy defaults (unlock, elevate, seamless, rule-of-three lists, fake urgency, generic benefits) unless chosen on purpose.' },
-    { id: 'clarity', criterion: 'Clarity', weight: 10, test: 'One reading is enough to know what to do next.' },
+    { id: 'job_done', criterion: 'Does the job for the buyer', weight: 30, test: 'The named reader gets a reason to act and one clear next step; in an email series every email shows a product and makes one ask. Every acceptance test on the spec sheet passes.' },
+    { id: 'brand_fidelity', criterion: 'Voice fidelity', weight: 20, test: 'Sounds like the captured voice samples, not a generic brand.' },
+    { id: 'specificity', criterion: 'Specificity', weight: 15, test: 'A competitor could not send or publish it unchanged.' },
+    { id: 'clarity', criterion: 'Clarity', weight: 15, test: 'One reading is enough to know what to do next.' },
+    { ...OWN_MATERIAL },
+    { id: 'distinctiveness', criterion: 'Distinctiveness vs defaults', weight: 10, test: 'None of the named copy defaults (unlock, elevate, seamless, rule-of-three lists, fake urgency, generic benefits) unless chosen on purpose.' },
   ],
   audit_analysis: [
-    { id: 'diagnosis', criterion: 'Diagnosis specific to this account or data', weight: 25, test: 'Explains why this metric moved for this client, not a checklist score.' },
+    { id: 'job_decision', criterion: 'Does the job for the decision', weight: 30, test: 'The owner can decide and act today: it explains why this metric moved for this client, not a checklist score, and names the first fix with its expected effect. Every acceptance test on the spec sheet passes.' },
     { id: 'evidence', criterion: 'Evidence quality', weight: 20, test: 'Each finding cites the pulled data with its date range.' },
-    { id: 'prioritised_actions', criterion: 'Prioritised actions with expected impact', weight: 20, test: 'Actions are ranked, each with its expected effect and how to check it.' },
-    { id: 'correctness', criterion: 'Correctness', weight: 20, test: 'Numbers and calculations are right; no invented figures.' },
-    { id: 'clarity', criterion: 'Clarity', weight: 15, test: 'The owner knows the first thing to do.' },
+    { id: 'prioritised_actions', criterion: 'Prioritised actions with expected impact', weight: 15, test: 'Actions are ranked, each with its expected effect and how to check it.' },
+    { id: 'correctness', criterion: 'Correctness', weight: 15, test: 'Numbers and calculations are right; no invented figures.' },
+    { ...OWN_MATERIAL, test: 'At least one finding came from this account\'s own data and would not appear in a generic audit.' },
+    { id: 'clarity', criterion: 'Clarity', weight: 10, test: 'The owner knows the first thing to do.' },
   ],
   strategy_plan: [
-    { id: 'grounded', criterion: 'Grounded in this business', weight: 25, test: 'Uses this business\'s real customers, numbers and constraints.' },
-    { id: 'options', criterion: 'Options considered with trade-offs', weight: 20, test: 'Real alternatives with what each costs and wins.' },
-    { id: 'decision_quality', criterion: 'Decision quality', weight: 20, test: 'The choice follows from the evidence and names its strongest dissent.' },
-    { id: 'actionability', criterion: 'Actionability', weight: 20, test: 'Next steps have owners, dates and measures.' },
+    { id: 'job_decision', criterion: 'Does the job for the decision', weight: 30, test: 'One recommendation the client can approve today: it follows from the evidence, the runner-up gets one line, and no menu of options is handed over. Every acceptance test on the spec sheet passes.' },
+    { id: 'actionability', criterion: 'Actionability', weight: 25, test: 'Next steps have owners, dates and measures; totals add up with the sum shown; no placeholder blocks the plan.' },
+    { id: 'grounded', criterion: 'Grounded in this business', weight: 20, test: 'Uses this business\'s real customers, numbers and constraints.' },
     { id: 'clarity', criterion: 'Clarity', weight: 15, test: 'Readable in one pass.' },
+    { ...OWN_MATERIAL },
   ],
   code_ops_other: [
-    { id: 'job_done', criterion: 'Job done', weight: 30, test: 'Does the job the client asked for.' },
+    { id: 'job_done', criterion: 'Does the job', weight: 30, test: 'Does what was asked on the real system or for the real team. Every acceptance test on the spec sheet passes.' },
     { id: 'correctness', criterion: 'Correctness', weight: 25, test: 'Runs or reads correctly; checks pass.' },
     { id: 'fits_system', criterion: 'Fits the existing system', weight: 20, test: 'Follows the existing code, tools and conventions.' },
     { id: 'clarity', criterion: 'Clarity', weight: 15, test: 'Someone else can use or maintain it.' },
-    { id: 'specificity', criterion: 'Specificity', weight: 10, test: 'Written for this system, not a generic template.' },
+    { ...OWN_MATERIAL, test: 'At least one choice came from this team\'s real code, tools or way of working, not a generic template.' },
   ],
 });
+/**
+ * Gates for every job. The 10 Nov 2026 blind test: work that did the job better lost on truth because flagged,
+ * unsourced claims stayed in the copy. So an unsourced claim is removed, and the acceptance tests are a gate.
+ */
 export const COMMON_GATES = Object.freeze([
-  { id: 'facts_trace_to_source', gate: 'Facts trace to a source.' },
-  { id: 'no_invented_numbers', gate: 'No invented numbers.' },
+  { id: 'acceptance_tests_pass', gate: 'Every acceptance test on the spec sheet passes, each with the line that proves it, answered by a reviewer who did not make the work.' },
+  { id: 'facts_trace_to_source', gate: 'Every fact a buyer or the client will read (prices, counts, ratings, policies, names, delivery times, quotes, product properties) traces to a dated captured source. An unsourced claim is cut or rewritten to what the source says; it is never flagged and left in.' },
+  { id: 'no_invented_numbers', gate: 'No invented numbers. A working figure is allowed only for planning numbers the client will tune (budgets, targets, test sizes), with the sum shown; never in anything a buyer reads, and never as a revenue forecast.' },
   { id: 'access_respected', gate: 'Access respected: read, draft, or publish within the agreed limits.' },
-  { id: 'no_fillable_placeholders', gate: 'No placeholder that capture could have filled.' },
-  { id: 'hand_over_budget', gate: 'Hand-over fits: a one-screen summary first that answers the brief (what you delivered, why, what to check first; nothing the brief did not ask for), and the deliverable stays inside its word budget. Easy to scan: short sentences, headings that state the point, tables for comparisons. It stands on its own: supporting detail goes in an appendix inside it, never in a file the client does not have, such as DECISIONS.md or knowledge.md.' },
+  { id: 'no_fillable_placeholders', gate: 'No placeholder that capture could have filled, and none that blocks the client from using the work.' },
+  { id: 'hand_over_budget', gate: 'Hand-over fits: the work first, opened by 3 to 5 lines (what this is, the main decision and why, what to check before use), inside its word budget. One recommendation, never a menu. Nothing internal: no process sections, lever checklists, agent names, file names, access levels or method words. Supporting detail goes in an appendix inside the deliverable, never in a file the client does not have, such as DECISIONS.md or knowledge.md.' },
 ]);
 /**
  * Word budgets by deliverable kind. The 9 Nov 2026 blind test found grounded work scored lower on clarity than plain
@@ -97,7 +114,7 @@ export const COMMON_GATES = Object.freeze([
 export const WORD_BUDGETS = Object.freeze({
   web_page: 'Hand-over note up to 150 words. Page copy no longer than the live page plus 20%, unless the change says why.',
   ad_creative: 'Up to 150 words per concept. The hook fits the placement\'s visible text (about 125 characters on Meta).',
-  copy: 'The length the job card names; with none, no longer than the copy it replaces.',
+  copy: 'The length the spec sheet names; with none, no longer than the copy it replaces.',
   email: 'Body up to 200 words per email, unless the brand\'s own past emails run longer.',
   audit: 'The top 3 fixes on the first screen, and up to 10,000 words in all. Evidence tables go in an appendix.',
   analysis: 'The answer and how sure it is on the first screen, and up to 10,000 words in all. Working goes in an appendix.',
@@ -119,8 +136,58 @@ export const PROVEN_LEVERS = Object.freeze({
   email: ['a subject line that gives a reason to open', 'one main call to action with a direct link', 'real proof: reviews or numbers', 'a reason to buy now that is true (offer, guarantee or best-sellers)', 'footer, unsubscribe and an exit rule for buyers'],
   audit: ['the proven levers for the page, ad or email being audited (the same lists as those jobs), each marked present or missing'],
 });
-export const LEVER_GATE = Object.freeze({ id: 'proven_levers_checked', gate: 'Proven levers checked: each lever for this kind of work is marked present, missing or not applicable on the live asset, and each missing one is added from real data or skipped with a reason.' });
+export const LEVER_GATE = Object.freeze({ id: 'proven_levers_checked', gate: 'Proven levers checked: each lever for this kind of work is marked present, missing or not applicable on the live asset, and each missing one is added from real data or skipped with a reason. The marks stay in the working notes, not in the deliverable.' });
 export const leversFor = kind => [...(PROVEN_LEVERS[kind] ?? [])];
+
+/** What candidates must differ on: at least two of these. A new colour, crop or wording is not a candidate. */
+export const CANDIDATE_AXES = Object.freeze(['promise', 'proof', 'structure', 'buyer moment', 'offer', 'visual world']);
+/**
+ * Real candidates by kind: the part that decides the outcome, made as real work before the build. The 10 Nov 2026
+ * blind test found described directions came out the same as a plain model's; made candidates did not.
+ */
+export const CANDIDATES = Object.freeze({
+  web_page: 'Three first screens, made in full: headline, proof and the one action.',
+  ad_creative: 'At least 9 one-line concepts across different promises, proofs and formats, then the strongest written up in full.',
+  copy: 'Three openings, each written in full: the headline and the first paragraph.',
+  email: 'Three series arcs, each with email 1 written in full. For one email: three subject lines, each with its opening.',
+  audit: 'Three competing explanations of the main problem, each with the evidence for it and what would rule it out.',
+  analysis: 'Three competing explanations, each tested against the data, with what would rule it out.',
+  strategy: 'Two differently shaped one-page plans, each with what it costs and what it wins.',
+  plan: 'Two differently shaped one-page plans, each with its totals.',
+  code: 'When the design is open, two approaches taken far enough to compare: the interface and the trade-off.',
+  ops_doc: 'When the process is open, two outlines of the steps, with what each costs the team.',
+  other: 'When the approach is open, two short versions of the part that decides the outcome.',
+});
+export const candidatesFor = kind => CANDIDATES[kind] ?? CANDIDATES.other;
+/**
+ * Format completeness by kind: what the maker ticks before hand-over. The same blind test marked down ads with no
+ * description or price, emails with no product, and plans whose totals did not add up.
+ */
+export const COMPLETENESS = Object.freeze({
+  web_page: ['one primary action', 'proof beside the claim it supports', 'works on a 390 px phone screen', 'loads fast, with sized images'],
+  ad_creative: ['every field the platform needs, including the description', 'character counts inside the platform limits', 'text and logo inside the placement\'s safe areas', 'the brand and the price named for a cold audience', 'the landing URL'],
+  email: ['a subject line', 'preview text', 'one product and one ask in every email', 'working links', 'an exit rule', 'merge tags that match the email tool'],
+  plan: ['totals that add up', 'dated steps', 'an owner for each step', 'cut, keep and scale rules', 'break-even shown'],
+});
+export const completenessFor = kind => [...(COMPLETENESS[kind] ?? [])];
+/** How much brand context a job takes from the brand file. A job takes its slice, never the whole file. */
+export const CONTEXT_LEVELS = Object.freeze({
+  none: 'No brand context: work from the system, files or data.',
+  facts: 'Facts only: the offer, prices, customers and numbers, each with its source and date.',
+  voice: 'Facts and voice: the facts, plus 5 to 10 real lines in the brand\'s own words.',
+  look: 'Facts and look: the facts, plus colours, type, components and screenshots.',
+  full: 'Full: facts, voice and look.',
+});
+/** The default slice by kind. Strategy, plans, code and operations work never demand a brand capture. */
+export const CONTEXT_NEED = Object.freeze({ web_page: 'full', ad_creative: 'full', copy: 'voice', email: 'voice', audit: 'facts', analysis: 'none', strategy: 'facts', plan: 'facts', code: 'none', ops_doc: 'none', other: 'none' });
+/** The slice a job of this kind takes. `brand_file` is false when the job needs no brand context at all. */
+export function contextNeed(kind) {
+  const level = CONTEXT_NEED[kind] ?? 'none';
+  return { level, take: CONTEXT_LEVELS[level], brand_file: level !== 'none' };
+}
+
+export const BUYER_GATE = Object.freeze({ id: 'buyer_can_act', gate: 'Where something is sold, the buyer can act today: it is live, in stock in the sizes or variants that matter, at the stated price, at the link used.' });
+export const completenessGate = kind => ({ id: 'format_complete', gate: `Format complete: ${completenessFor(kind).join('; ')}.` });
 export const WEB_GATES = Object.freeze([
   { id: 'nav_footer_kept', gate: 'The existing nav and footer are kept, unless the change is on purpose.' },
   { id: 'brand_fonts_loaded', gate: 'Brand fonts are loaded.' },
@@ -128,8 +195,104 @@ export const WEB_GATES = Object.freeze([
   { id: 'primary_action_works', gate: 'The primary action works.' },
   { id: 'brand_fidelity_lint', gate: 'check-brand-fidelity.mjs (or its manual checklist) passes against context/brand-dna.json.' },
 ]);
-export const gatesFor = kind => [...COMMON_GATES, ...(PROVEN_LEVERS[kind] ? [LEVER_GATE] : []), ...(familyOf(kind) === 'web_page' ? WEB_GATES : [])].map(g => ({ ...g }));
+export const gatesFor = kind => [...COMMON_GATES, ...(BRAND_KINDS.includes(kind) ? [BUYER_GATE] : []), ...(PROVEN_LEVERS[kind] ? [LEVER_GATE] : []), ...(COMPLETENESS[kind] ? [completenessGate(kind)] : []), ...(familyOf(kind) === 'web_page' ? WEB_GATES : [])].map(g => ({ ...g }));
 export const craftRubric = kind => CRAFT_RUBRICS[familyOf(kind)].map(c => ({ ...c }));
+
+/**
+ * Suggested acceptance tests by family: the questions the client would ask of the finished work. Each family has at
+ * least two on the commercial job, one on readiness, one on truth and one on clarity. The maker rewrites them for the
+ * job at hand and keeps 5 to 7.
+ */
+const TRUTH_TEST = 'Does every price, count, rating, policy, name and product claim match a dated source?';
+export const ACCEPTANCE_TESTS = Object.freeze({
+  web_page: [
+    { type: 'job', test: 'Would the buyer this page is for understand the offer and want it within the first screen?' },
+    { type: 'job', test: 'Does every section give a reason to take the one action, with proof where a buyer would doubt?' },
+    { type: 'ready', test: 'Can the client publish this today on their own stack without asking anything?' },
+    { type: 'truth', test: TRUTH_TEST },
+    { type: 'clear', test: 'After five seconds, can a first-time visitor say what is sold and what to do next?' },
+  ],
+  ad_creative: [
+    { type: 'job', test: 'Would the named buyer stop on each ad and know the brand, the product and the price or offer without clicking?' },
+    { type: 'job', test: 'Does each ad make a different argument, so the set tests something real?' },
+    { type: 'job', test: 'Is every product advertised live and in stock at its landing URL?' },
+    { type: 'ready', test: 'Can a designer or media buyer make and launch each ad without asking anything?' },
+    { type: 'truth', test: TRUTH_TEST },
+    { type: 'clear', test: 'Is each ad one idea, readable in two seconds on a phone?' },
+  ],
+  copy: [
+    { type: 'job', test: 'Does the first line give this reader a reason to keep reading?' },
+    { type: 'job', test: 'Does it answer the main objection and lead to one next step?' },
+    { type: 'ready', test: 'Can it be published as it stands, at the length asked for?' },
+    { type: 'truth', test: TRUTH_TEST },
+    { type: 'clear', test: 'Is one reading enough to know what to do next?' },
+  ],
+  email: [
+    { type: 'job', test: 'Does every email show a product and give one reason to click?' },
+    { type: 'job', test: 'Does each email do a different job in moving this reader to the goal?' },
+    { type: 'ready', test: 'Can the client load these into their email tool today: subject, preview text, links, merge tags and exit rule?' },
+    { type: 'truth', test: TRUTH_TEST },
+    { type: 'clear', test: 'Is the one ask clear from the subject line and the first two lines?' },
+  ],
+  audit_analysis: [
+    { type: 'job', test: 'Does it say why the number moved for this account, and rule out the next most likely cause?' },
+    { type: 'job', test: 'Does it name the first fix, what it should move and how to check?' },
+    { type: 'ready', test: 'Could the owner start the first fix today without asking anything?' },
+    { type: 'truth', test: 'Can every figure be recomputed from the dated snapshot?' },
+    { type: 'clear', test: 'Are the top three fixes, or the answer, on the first screen?' },
+  ],
+  strategy_plan: [
+    { type: 'job', test: 'Does it make one recommendation the client can approve or reject today?' },
+    { type: 'job', test: 'Do the numbers add up with the sum shown, and is break-even or the success measure stated?' },
+    { type: 'ready', test: 'Does every step have an owner and a date, with no placeholder that blocks the plan?' },
+    { type: 'truth', test: 'Does each claim about the business or market trace to a dated source, with planning figures marked as working figures?' },
+    { type: 'clear', test: 'Can the decision and the first three moves be read on one screen?' },
+  ],
+  code_ops_other: [
+    { type: 'job', test: 'Does it do what was asked, on the real system or for the real team?' },
+    { type: 'job', test: 'Does everything that worked before still work?' },
+    { type: 'ready', test: 'Can someone else run or follow it today from the hand-over alone?' },
+    { type: 'truth', test: 'Was every run, test or rule it claims actually run, or checked against its source?' },
+    { type: 'clear', test: 'Would a new person understand what changed and what to do next?' },
+  ],
+});
+export const acceptanceTests = kind => (ACCEPTANCE_TESTS[kind] ?? ACCEPTANCE_TESTS[familyOf(kind)]).map((row, n) => ({ id: `t${n + 1}`, ...row }));
+/** The decisions the maker takes without handing them back. One recommendation; the runner-up gets one line. */
+const DECISIONS = Object.freeze({
+  web_page: ['the one action the page asks for', 'which proof leads', 'what to cut from the live page'],
+  ad_creative: ['which product or variant to advertise (in stock)', 'which promise leads the set', 'which placements'],
+  copy: ['the promise in the first line', 'which proof to use', 'the one next step'],
+  email: ['the arc of the series', 'the product in each email', 'the offer, inside the client\'s rules'],
+  audit_analysis: ['the most likely cause', 'the first fix'],
+  strategy_plan: ['the recommended option', 'how the budget or effort is split', 'the cut, keep and scale rules'],
+  code_ops_other: ['the approach', 'what must not change'],
+});
+export const decisionsFor = kind => [...(DECISIONS[kind] ?? DECISIONS[familyOf(kind)])];
+const NUMBER_WORDS = Object.freeze({ one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, twelve: 12 });
+const COUNTED = '(?:ads?|creatives?|concepts?|emails?|pages?|posts?|headlines?|subject lines?|scripts?|carousels?|slides?|articles?|variants?|versions?|images?|videos?|documents?|templates?|reports?|plans?)';
+/** The count the request names for its deliverable ("6 image ads", "a 5-email series"), else null. A guess the maker confirms. */
+export function requestedCount(request = '') {
+  const m = new RegExp(`\\b(\\d{1,3}|${Object.keys(NUMBER_WORDS).join('|')}|an?)[\\s-]+(?:[a-z-]+\\s+){0,2}?${COUNTED}\\b`, 'i').exec(String(request ?? ''));
+  if (!m) return null;
+  const word = m[1].toLowerCase();
+  return /^\d+$/.test(word) ? Number(word) : NUMBER_WORDS[word] ?? 1;
+}
+/** The one-screen spec sheet, pre-filled from the request. Blank strings are for the maker to fill before any work. */
+export function specSheet({ request = '', kind, mode, kindSource = 'declared' } = {}) {
+  const need = contextNeed(kind), count = requestedCount(request);
+  return {
+    path: 'context/spec.md',
+    fill: 'One screen. Fill every blank before you make anything. Decide what the client did not say and list it under assumptions.',
+    job: { text: '', prompt: 'Who must do what after seeing this (buy, sign up, reply, approve a budget)? One sentence.' },
+    deliverables: [{ kind, count, in_client_words: String(request).slice(0, 600), prompt: count === null ? 'State the exact count and format in the client\'s words.' : 'Confirm the count and format in the client\'s words.' }],
+    acceptance_tests: acceptanceTests(kind),
+    acceptance_rule: 'Keep 5 to 7. Rewrite each for this job. At least two on the commercial job, one on readiness, one on truth and one on clarity.',
+    decisions: decisionsFor(kind),
+    decision_rule: 'Take each decision yourself. One recommendation, with the runner-up in one line. Never hand back a menu.',
+    assumptions: [`Mode: ${mode?.mode ?? 'patch'}. ${mode?.reason ?? ''}`.trim(), ...(kindSource === 'suggested' ? [`Kind of work: ${kind}, guessed from the request.`] : [])],
+    context_needed: { ...need, levels: Object.keys(CONTEXT_LEVELS), rule: 'Take this slice of the brand file, or capture it, and no more. Raise the level only when an acceptance test depends on it.' },
+  };
+}
 
 /** The AI-default list from the spec, embedded as a fallback for catalogue-items/general/ai-default-patterns/patterns.json. */
 export const EMBEDDED_DEFAULT_PATTERNS = Object.freeze([
@@ -209,7 +372,7 @@ export function contextRequirements(kind, { siteUrl, hasExistingAsset } = {}) {
     { id: 'success_metric', label: 'The metric that matters and its normal range', required: true, how: 'Ask, then check it against the snapshot.' },
   ];
   if (family === 'strategy_plan') return [
-    { id: 'business_facts', label: 'Real customers, prices, numbers and limits', required: true, how: 'Use the brand brain and the live site; ask for what is missing.' },
+    { id: 'business_facts', label: 'Real customers, prices, numbers and limits', required: true, how: 'Take the facts from the brand file if there is one, else from the live site; ask for what is missing. No brand capture is needed.' },
     { id: 'competitors', label: '2 or 3 competitors the client is compared with', required: true, how: 'Ask the client to name them, or find them.' },
     { id: 'site_url', label: 'The live site', required: false, how: siteUrl ? `Use ${siteUrl}.` : 'Ask for it.' },
   ];
@@ -364,76 +527,127 @@ export function skillPreamble(item = {}) {
   const kind = skillPreambleKind(item);
   if (!kind) return null;
   const lines = kind === 'assess' ? [
-    'GROUND: pull the real account or data at read level into context/ first (or call prepare_job_context with deliverable_kind audit or analysis).',
-    'Ask the 3 interview questions: the decision this informs, what changed recently, and what normal looks like.',
-    'Name the defaults you will avoid, starting with a fixed checklist score that does not explain why this metric moved.',
-    'Write 2 or 3 competing hypotheses, each with the evidence that would confirm or kill it, before scoring anything.',
-    'Check with an independent pass: a fresh context or another seat runs the gates (facts trace, no invented numbers, access respected).',
+    'SPEC: write one screen first (or call prepare_job_context with deliverable_kind audit or analysis): the decision this informs, and 5 to 7 acceptance tests the owner would ask of the finished work.',
+    'GROUND: pull the real account or data at read level into context/ before you form any view, with its source and date range.',
+    'CANDIDATES: write three competing explanations of the main problem, each with the evidence for it and what would rule it out. A fixed checklist score is not a diagnosis.',
+    'BUILD: diagnose this account, rank the fixes by expected impact and recommend the first one. Never hand over a menu.',
+    'CHECK with a fresh reviewer who sees only the brief, the work and the snapshot: each acceptance test pass or fail, every figure recomputed. Remove what has no source.',
   ] : [
-    'GROUND: capture the client\'s live site into context/brand-dna.json and context/screenshots/ first (or call prepare_job_context).',
-    'Answer the taste questions: position and price point, what must never change, 2 admired references and 1 to avoid.',
-    'Name the AI defaults you will avoid (prepare_job_context lists them); this skill\'s fixed structures are options, not rules.',
-    'Make 2 or 3 directions that differ on named axes (mechanism, proof, structure, visual world, offer), each citing its reference.',
-    'Check with an independent pass in a fresh context: gates pass or fail, then craft scores for fidelity and distinctiveness.',
+    'SPEC: write one screen first (or call prepare_job_context): who must do what after seeing this, the deliverables with counts, and 5 to 7 acceptance tests the client would ask of the finished work.',
+    'GROUND what those tests need: capture the client\'s live site into context/brand-dna.json and give every fact a buyer will read a dated source. Check the thing being sold is live, in stock and at that price at the link you use.',
+    'CANDIDATES: make about 3 real candidates of the part that decides the outcome, differing on two of promise, proof, structure, buyer moment, offer and visual world. This skill\'s fixed structures are options, not rules.',
+    'BUILD: give true facts a new framing and add no new facts. Decide; never hand over a menu. Name the AI defaults you will avoid (prepare_job_context lists them).',
+    'CHECK with a fresh reviewer who sees only the brief, the work and the captured facts: each acceptance test pass or fail, every claim sourced or not. Remove unsourced claims. Hand over the work first, with nothing internal in it.',
   ];
   return { title: 'Before you run this', kind, lines, tool: { name: 'prepare_job_context', arguments: { request: '<the user\'s request>', deliverable_kind: kind === 'assess' ? 'audit' : '<web_page|ad_creative|copy|email>' } }, precedence: 'The client\'s captured context and taste brief override this method\'s defaults on look and structure; they never override truth or permission rules.' };
 }
 
+/** The craft floor: what the build must clear whatever the kind of work. */
+export const CRAFT_RULES = Object.freeze([
+  'New framing of true facts, never new facts. Write the persuasion yourself: page lines are facts to use, not copy to paste.',
+  'Every piece earns its place commercially and shows the product where a buyer expects it.',
+  'Decide. One recommendation, with the runner-up in one line. Never hand the client a menu.',
+  'Be specific where the client will act: real product names, prices, dates and set-up steps, each from a source.',
+  'A working figure is allowed only for planning numbers the client will tune (budgets, targets, test sizes), with the sum shown. Never for anything a buyer reads, and never as a revenue forecast.',
+  'Match the voice by ear: put 5 real lines from the brand beside 5 of yours.',
+]);
+/** The two outside reviews: someone else chooses the candidate, and someone else checks the finished work. */
+export const REVIEWER = Object.freeze({
+  who: 'A fresh reviewer who has not seen your reasoning: a new sub-agent where the host can start one, else a separate pass you label SAME-CONTEXT in your notes.',
+  choose: {
+    gets: ['the brief', 'the spec sheet', 'the candidates, unlabelled'],
+    answers: ['Each acceptance test, for each candidate: pass or fail.', 'Which one to build.', 'What to take from the others.', 'What would make a buyer ignore the pick.'],
+    rounds: 'One extra round at most, and only when no candidate passes the commercial-job tests.',
+  },
+  clients_eye: {
+    gets: ['the client\'s brief', 'the finished deliverable', 'the captured facts (context/facts.md, the capture or the data snapshot)'],
+    answers: [
+      'Each acceptance test: pass or fail, with the line that proves it.',
+      'Every claim a buyer or the client will read (prices, counts, ratings, policies, names, delivery times, quotes, product properties): sourced or not.',
+      'Which piece is weakest, and why a buyer would skip it.',
+      'What the client would have to ask before using this.',
+      'What can be cut without loss.',
+    ],
+    then: 'Remove every unsourced claim, or rewrite it to what the source says. Never leave one in with a flag or a footnote. Fix what failed, cut what can go, then stop.',
+  },
+});
+
 const short = (value, max) => value.length <= max ? value : value.slice(0, max - 1).trimEnd() + '…';
-/** prepare_job_context: a short brief for the model plus a structured annex the host saves without reading. */
+/** The questions to ask once, in one message. Each row is { id, question, why } and may carry a default. */
+const askQuestions = (kind, family, request) => tasteQuestions(kind);
+/** Room kept in the brief for the AVOID line, so a long question list can never push it out. */
+const AVOID_RESERVE = 140;
+/** prepare_job_context: a short brief for the model plus a structured annex. The brief names the annex parts to open. */
 export function prepareJobContext(input = {}, context = {}) {
   const request = String(input.request ?? '').trim();
   const resolved = resolveDeliverableKind(input.deliverable_kind, request), kind = resolved.kind, family = familyOf(kind);
   const siteUrl = typeof input.site_url === 'string' && /^https?:\/\/[^\s]+$/i.test(input.site_url) ? input.site_url : undefined;
   const mode = resolveMode({ request, site_url: siteUrl, has_existing_asset: input.has_existing_asset, kind });
   const patterns = normalizePatterns(context.patterns), defaults = defaultsFor(kind, patterns);
-  const questions = tasteQuestions(kind), rubric = craftRubric(kind), gates = gatesFor(kind), need = groundingRequirement(kind), levers = leversFor(kind);
+  const questions = askQuestions(kind, family, request).map(q => ({ ...q })), rubric = craftRubric(kind), gates = gatesFor(kind), need = groundingRequirement(kind), levers = leversFor(kind);
+  const complete = completenessFor(kind), spec = specSheet({ request, kind, mode, kindSource: resolved.source }), selling = BRAND_KINDS.includes(kind);
   const audit = family === 'audit_analysis';
   const steps = GJP_STEPS.map(step => ({ ...step, do: audit && AUDIT_STEP_OVERRIDES[step.id] ? AUDIT_STEP_OVERRIDES[step.id] : step.do }));
   const scripts = CAPTURE_TOOLS.filter(t => BRAND_KINDS.includes(kind) || (t.skill === 'brand-dna-capture' && family === 'strategy_plan')).map(tool => {
     const resolvedTool = list(context.scripts).find(s => s.file === tool.file);
     return { ...tool, get_skill: { slug: tool.skill, response_format: 'detailed' }, get_resource: { slug: resolvedTool?.slug ?? tool.skill, path: resolvedTool?.path ?? tool.path, revision_sha256: resolvedTool?.revision_sha256 ?? null }, resource_url: resolvedTool?.resource_url ?? null, marketplace_url: MARKETPLACE_TOOLS_BASE + tool.file, status: resolvedTool ? 'PUBLISHED' : 'CHECK_GET_SKILL' };
   });
-  const captureLine = need.data_snapshot ? 'GROUND: pull the real account or data at read level into context/ (for example context/data-snapshot.json) with source and date range.'
-    : need.brand_dna ? `GROUND: ${siteUrl ? `capture ${siteUrl}` : 'get the live site URL and capture it'} into context/brand-dna.json and context/screenshots/ (capture-brand-dna.mjs, else brand-dna-snippet.js, else ask for screenshots and CSS).`
-    : 'GROUND: open the real business facts, system or files this job changes before producing anything.';
-  const lead = [
+  const ground = need.data_snapshot ? 'GROUND what the tests need: pull the real account or data at read level into context/ (for example context/data-snapshot.json) with source and date range.'
+    : need.brand_dna ? `GROUND what the tests need: ${siteUrl ? `capture ${short(siteUrl, 120)}` : 'get the live site URL and capture it'} into context/brand-dna.json. Check what is sold is live, in stock, at that price and link.`
+    : 'GROUND what the tests need: open the real facts, system or files this job changes.';
+  const ticks = [...(complete.length ? ['annex.completeness'] : []), ...(levers.length ? ['annex.proven_levers'] : [])];
+  const build = selling ? 'reframe true facts, add none. Decide; hand over no menu.'
+    : audit ? 'diagnose this account or data, rank the fixes and recommend the first. Hand over no menu.'
+    : family === 'strategy_plan' ? 'one recommendation, the runner-up in a line, no menu. Working figures only for numbers the client will tune, with the sum shown; no blanks.'
+    : 'fit the existing system. Decide the approach yourself; hand over no menu.';
+  const head = [
     `Job: ${kind}${resolved.source === 'suggested' ? ' (suggested; declare deliverable_kind if wrong)' : ''}. Mode: ${mode.mode}${mode.confirm ? ' (confirm it)' : ''}.`,
-    captureLine,
-    `TASTE: ask ${questions.map(q => `"${q.question}"`).join(' ')}${need.taste_brief ? ' Write context/taste-brief.md.' : ''}`,
+    'SPEC: first fill annex.spec_sheet: the job, deliverables, 5 to 7 acceptance tests, decisions.',
+    ground,
+    'TRUTH: every fact a reader sees needs a dated source; cut what has none, never flag it.',
   ];
   const tail = [
-    audit ? 'DIVERGE: 2 or 3 competing hypotheses, each with the evidence that would kill it.'
-      : family === 'strategy_plan' ? 'DIVERGE: 2 or 3 real options with what each costs and wins; choose one and record the strongest dissent.'
-      : family === 'code_ops_other' ? 'DIVERGE: when the approach is not obvious, compare 2 approaches that differ in mechanism or trade-off, not wording.'
-      : 'DIVERGE: 2 or 3 directions that differ on mechanism, proof, structure, visual world or offer, each citing its reference.',
-    ...(!levers.length ? [] : audit ? ['LEVERS: mark which proven levers the audited page, ad or email lacks (annex.proven_levers) and rank adding them among the fixes.']
-      : [`LEVERS: before building, mark each of the ${levers.length} proven levers in annex.proven_levers present or missing on the live asset; add missing ones from real data.`]),
-    `CHECK: a fresh critic runs ${gates.length} pass/fail gates, then scores ${rubric.slice().sort((x, y) => y.weight - x.weight).slice(0, 3).map(c => `${c.criterion.toLowerCase()} ${c.weight}`).join(', ')}.`,
-    `HAND-OVER: one-screen summary first, on the brief only. ${WORD_BUDGETS[kind] ?? WORD_BUDGETS.other} Detail in an appendix, never in a file the client does not have.`,
-    need.brand_dna || need.data_snapshot ? `Report grounding (${need.data_snapshot ? 'data_snapshot' : 'brand_dna and taste_brief'}) before production. Client context overrides method defaults on look and structure, never truth or permission.` : 'Client context overrides method defaults on structure, never truth or permission.',
+    `CANDIDATES: ${candidatesFor(kind)}${selling ? ` Differ on two of: ${CANDIDATE_AXES.join(', ')}.` : ''} A fresh reviewer picks.`,
+    `BUILD: ${build}${ticks.length ? ` Tick ${ticks.join(' and ')}.` : ''}`,
+    'CHECK: a fresh reviewer with only the brief, the work and the facts answers each test and marks each claim sourced or not. Fix, cut, stop.',
+    `HAND-OVER: the work first, opened by 3 to 5 lines. ${WORD_BUDGETS[kind] ?? WORD_BUDGETS.other} Nothing internal; detail in an appendix, never in a file the client does not have.`,
   ];
-  // The defaults get whatever room is left under 1,500 characters: descriptions, not ids, so the model knows what to avoid.
-  let room = 1500 - [...lead, ...tail].join('\n').length - 60, avoid = [];
-  for (const d of defaults) { const piece = short(d.description.replace(/\.$/, ''), 120); if (piece.length + 2 > room) break; avoid.push(piece); room -= piece.length + 2; }
+  // Under 1,500 characters: the fixed lines first, then room kept for AVOID, then as many questions as fit in full.
+  let room = 1500 - [...head, ...tail].join('\n').length - 2;
+  const askEnd = need.taste_brief ? ' Write context/taste-brief.md.' : '', quoted = questions.map(q => `"${q.question}"`);
+  const askWith = n => !quoted.length ? '' : n === 0 ? `ASK once: the questions in annex.questions.${askEnd}` : `ASK once: ${quoted.slice(0, n).join(' ')}${n < quoted.length ? ` (+${quoted.length - n} in annex.questions)` : ''}${askEnd}`;
+  let fit = quoted.length;
+  while (fit > 0 && askWith(fit).length > room - (defaults.length ? AVOID_RESERVE : 0)) fit--;
+  const askLine = askWith(fit);
+  // The defaults get what is left: descriptions, not ids, so the model knows what to avoid.
+  room -= askLine.length + 50;
+  const avoid = [];
+  for (const d of defaults) { const piece = short(d.description.replace(/\.$/, ''), 90); if (piece.length + 2 > room) break; avoid.push(piece); room -= piece.length + 2; }
   const defaultsLine = avoid.length ? `AVOID unless chosen on purpose: ${avoid.join('; ')}${avoid.length < defaults.length ? ` (+${defaults.length - avoid.length} in annex)` : ''}.` : '';
-  let brief = [...lead, defaultsLine, ...tail].filter(Boolean).join('\n');
+  let brief = [...head, askLine, defaultsLine, ...tail].filter(Boolean).join('\n');
   if (brief.length > 1500) brief = short(brief, 1500);
   return {
     schema: 'ai-blocks-job-context/1', brief,
     annex: {
-      read: 'Save this annex as context/job-context.json. The brief above is what to act on.',
+      read: 'Act on the brief. Open the annex parts it names (spec_sheet, questions, completeness, proven_levers) and reviewer before each review. Save the whole annex as context/job-context.json.',
       request_verbatim: request, deliverable_kind: kind, kind_source: resolved.source, suggestion: resolved.suggestion, family,
       mode_default: mode, site_url: siteUrl ?? null, category: typeof input.category === 'string' ? input.category.slice(0, 80) : null,
+      spec_sheet: spec,
+      questions,
+      brand_context: contextNeed(kind),
       protocol: steps,
       context_requirements: contextRequirements(kind, { siteUrl, hasExistingAsset: input.has_existing_asset }),
       capture: { order: ['capture-brand-dna.mjs (Node + Playwright)', 'brand-dna-snippet.js (browser console)', 'ask for URL, screenshots and CSS'], fields: need.brand_dna ? [...BRAND_DNA_FIELDS] : [], tools: scripts, skills: Object.values(GJP_SKILLS).map(slug => ({ slug, get_skill: { slug, response_format: 'detailed' } })) },
-      artifacts: { ...(need.brand_dna ? { brand_dna: 'context/brand-dna.json', screenshots: 'context/screenshots/' } : {}), ...(need.data_snapshot ? { data_snapshot: 'context/data-snapshot.json' } : {}), taste_brief: 'context/taste-brief.md', decisions: 'DECISIONS.md' },
+      artifacts: { spec_sheet: 'context/spec.md', facts: 'context/facts.md', ...(need.brand_dna ? { brand_dna: 'context/brand-dna.json', screenshots: 'context/screenshots/' } : {}), ...(need.data_snapshot ? { data_snapshot: 'context/data-snapshot.json' } : {}), ...(need.taste_brief ? { taste_brief: 'context/taste-brief.md' } : {}), working_notes: 'DECISIONS.md' },
       taste_brief: { path: 'context/taste-brief.md', required_before_production: need.taste_brief, sections: [...TASTE_BRIEF_SECTIONS], questions },
       production_gate: { requires: need, report_as: need.data_snapshot ? { grounding: { data_snapshot: { path: 'context/data-snapshot.json', sha256: '<sha256>', source: '<account or connector>', captured_at: '<ISO date>' } } } : need.brand_dna ? { grounding: { brand_dna: { path: 'context/brand-dna.json', sha256: '<sha256>', source: siteUrl ?? '<site URL>', captured_at: '<ISO date>', method: 'capture-brand-dna.mjs' }, taste_brief: { path: 'context/taste-brief.md', sha256: '<sha256>', brand_codes: ['<code>'], references_admired: ['<ref>', '<ref>'], reference_avoid: ['<ref>'], defaults_to_avoid: defaults.slice(0, 3).map(d => d.id), conventions_break: [] } } } : null, note: 'start_job and advance_job check this structure before PRODUCE. It is a host report, not proof of capture.' },
-      diverge: { axes: audit ? ['hypothesis', 'evidence', 'expected_effect'] : ['mechanism_or_promise', 'proof', 'structure', 'visual_world', 'offer'], count: [2, 3], reject: 'Directions that differ only in colour, crop, wording or style label.', patch_mode: mode.mode === 'patch' ? 'Directions are alternative change-sets to the live asset: ranked edits, each with its evidence.' : null },
+      buyer_can_act: selling ? { check: 'Before you build, confirm the thing being sold is live, in stock in the sizes or variants that matter, at the stated price, at the link you will use.', if_not: 'Make the call yourself, build for the option that works, and say so in the first line of the hand-over.' } : null,
+      candidates: { make: candidatesFor(kind), as: 'Real work, not descriptions.', axes: selling ? [...CANDIDATE_AXES] : [], differ_on_at_least: selling ? 2 : null, reject: 'Candidates that differ only in colour, crop, wording or style label.', patch_mode: mode.mode === 'patch' ? 'Each candidate is the live asset as you would change it, with its ranked edits and their evidence.' : null },
+      reviewer: { who: REVIEWER.who, choose: { ...REVIEWER.choose }, clients_eye: { ...REVIEWER.clients_eye } },
+      craft_floor: [...CRAFT_RULES],
+      completeness: complete,
       craft_rubric: rubric, gates,
-      hand_over: { summary_first: 'A one-screen summary that answers the brief: what you delivered, why, and what to check first. Nothing the brief did not ask for.', word_budget: WORD_BUDGETS[kind] ?? WORD_BUDGETS.other, readable: 'Easy to scan: short sentences, headings that state the point, tables for comparisons.', detail_goes_to: ['an appendix inside the deliverable'], never_point_to: ['DECISIONS.md', 'knowledge.md', 'other working files'] },
+      hand_over: { opening: 'The work comes first, in the format asked for. Open with 3 to 5 lines: what this is, the main decision you made and why, and what to check before use.', word_budget: WORD_BUDGETS[kind] ?? WORD_BUDGETS.other, readable: 'Headings state the point. Sentences are short. Tables are for comparisons only.', detail_goes_to: ['an appendix inside the deliverable'], never_in_the_deliverable: ['process sections', 'lever checklists', 'rejected candidates', 'agent or persona names', 'file names such as knowledge.md or DECISIONS.md', 'access levels', 'method vocabulary'], never_point_to: ['DECISIONS.md', 'knowledge.md', 'other working files'] },
       proven_levers: levers,
       defaults_to_avoid: defaults, defaults_source: patterns.length ? `catalogue:${GJP_SKILLS.defaults}/patterns.json` : 'embedded:DESIGN.md AI-default list',
       next: { team: { tool: 'start_job', arguments: { request, deliverable_kind: kind, ...(siteUrl ? { site_url: siteUrl } : {}), ...(typeof input.has_existing_asset === 'boolean' ? { has_existing_asset: input.has_existing_asset } : {}) } }, single_skill: { tool: 'search_library', arguments: { query: request.slice(0, 300) } } },

@@ -394,7 +394,10 @@ export function suggestDeliverableKind(request = '') {
   const assess = /\b(?:audit|review|diagnos\w*|analy[sz]\w*|assess\w*|health[ -]?check|check (?:my|our|the)|benchmark|why (?:is|are|did|has|have)|what went wrong|investigate|evaluate|report on)\b/i.test(words);
   const kind = (k, basis) => ({ kind: k, basis, source: 'suggested' });
   if (assess && !create) return /\b(?:analy[sz]\w*|why (?:is|are|did|has|have)|investigate|report on|benchmark)\b/i.test(words) && !/\baudit\b/i.test(words) ? kind('analysis', 'assessment words without a creation verb') : kind('audit', 'assessment words without a creation verb');
-  if (/\b(?:copy|copywriting|headlines?|taglines?|wording|captions?|product descriptions?|blog posts?|articles?)\b/i.test(words) && !/\b(?:build|code|implement|redesign|launchable|working)\b/i.test(words)) return kind('copy', 'copy words');
+  // A job description is a document for a team, whatever "ad" or "posting" follows the word job.
+  if (/\bjob (?:descriptions?|adverts?|ads?|postings?|specs?)\b/i.test(words)) return kind('ops_doc', 'document words');
+  // Words to be read or spoken are copy, including a script for a video about an app.
+  if (/\b(?:copy|copywriting|headlines?|taglines?|wording|captions?|product descriptions?|blog posts?|articles?|press releases?|case stud(?:y|ies)|white ?papers?|(?:social(?: media)?|linkedin|instagram|facebook|twitter|tiktok) posts?|speech(?:es)?|(?:video|ad|explainer|podcast|sales|call|youtube) scripts?|proposals?)\b/i.test(words) && !/\b(?:build|code|implement|redesign|launchable|working)\b/i.test(words)) return kind('copy', 'copy words');
   if (/\b(?:landing[ -]?pages?|web ?pages?|websites?|home ?page|product pages?|sales pages?|site)\b/i.test(words)) return kind('web_page', 'page or site words');
   if (/\b(?:emails?|newsletters?|drip|welcome series|flows? in klaviyo)\b/i.test(words)) return kind('email', 'email words');
   if (/\b(?:ads?|creatives?|advertising|advertisements?|ugc|thumb-?stop)\b/i.test(words)) return kind('ad_creative', 'ad words with a creation verb');

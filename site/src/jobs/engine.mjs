@@ -305,8 +305,9 @@ async function describe(state, view, catalogue, initial = false) {
 function singleLeadJob(input, routed, catalogue) {
   const host = input.host_capabilities ?? {}, deliverable = resolveDeliverableKind(input.deliverable_kind, input.request), kind = deliverable.kind;
   const context = prepareJobContext({ request: input.request, deliverable_kind: deliverable.source === 'declared' ? kind : undefined, site_url: input.site_url ?? undefined, has_existing_asset: input.has_existing_asset ?? undefined }, catalogue.grounding ?? {});
-  const lead = pickLead({ task: input.request, job: routed.job_type.job, deliverable_kind: deliverable.source === 'declared' ? kind : undefined, host_capabilities: host }, catalogue);
-  const load = lead ? { tool: 'prepare_specialist', args: { role_id: lead.role_id } } : { tool: 'find_specialist', args: { task: input.request } };
+  // When the job type is only a guess, no lead is named: one question first, then start_job again.
+  const lead = routed.unsure ? null : pickLead({ task: input.request, job: routed.job_type.job, deliverable_kind: deliverable.source === 'declared' ? kind : undefined, host_capabilities: host }, catalogue);
+  const load = lead ? { tool: 'prepare_specialist', args: { role_id: lead.role_id } } : routed.unsure ? { tool: 'start_job', args: { request: '<the request, with the answer added>' } } : { tool: 'find_specialist', args: { task: input.request } };
   const questions = context.annex.questions;
   const contextArgs = { request: input.request, deliverable_kind: kind, ...(input.site_url ? { site_url: input.site_url } : {}), ...(typeof input.has_existing_asset === 'boolean' ? { has_existing_asset: input.has_existing_asset } : {}) };
   return {
@@ -316,7 +317,7 @@ function singleLeadJob(input, routed, catalogue) {
     lead: lead ? { ...lead, load, ...(lead.persona_id ? { agent: { tool: 'load_agent', server: 'https://agents.useaiblocks.com/mcp', args: { id: lead.persona_id } } } : {}) } : null,
     questions, questions_note: INTAKE_ASK,
     rubric: { criteria: craftRubric(kind), gates: gatesFor(kind), pass: `Every gate passes, and the weighted criteria score at least ${Math.round(CRAFT_PASS * 100)}% with none under ${CRAFT_FLOOR} out of 10.` },
-    next_action: { event: null, ...load, instruction: SINGLE_LEAD_METHOD + (lead ? '' : '\nNo lead matched this request in the catalogue: pick one with find_specialist.') + (routed.ask ? '\nFirst ask: ' + routed.question : ''), questions_allowed: questions.length, ...(routed.ask ? { question: routed.question } : {}),
+    next_action: { event: null, ...load, instruction: routed.unsure ? `Ask this one question before anything else: ${routed.question}\nThen call start_job again with the answer added to the request. Do not pick a lead or start work on a guess.` : SINGLE_LEAD_METHOD + (lead ? '' : '\nNo lead matched this request in the catalogue: pick one with find_specialist.') + (routed.ask ? '\nFirst ask: ' + routed.question : ''), questions_allowed: questions.length, ...(routed.ask ? { question: routed.question } : {}),
       // The full spec, capture steps and annex. Skip it when it was already called for this request.
       context: { tool: 'prepare_job_context', args: contextArgs } },
     files: [], model_calls: 0, stored_by_service: false, hosted_execution: false,

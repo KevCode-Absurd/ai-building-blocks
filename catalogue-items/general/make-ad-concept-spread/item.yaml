@@ -1,0 +1,22 @@
+slug: make-ad-concept-spread
+name: "Make an ad concept spread"
+summary: "Give it your ad brief and product facts. You get nine or more ideas, the best ones made, and one lead ad."
+category: general
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: store_capture, required: true}
+  - {type: design_tokens, required: false}
+  - {type: product_photos, required: false}
+outputs:
+  - {type: static_ads, required: true}
+  - {type: ad_copy, required: true}
+uses: [buyer-can-act-check, make-three-first-screens, outside-chooser]
+origin: own
+version: 1.0.0
+added: 2026-11-10
+credits:
+  - {title: "Original AI Blocks method", by: "AI Blocks contributors", used: "The concept table, the spread rules, the two ways to make a visual and the hand-off to an outside chooser. Built from the blind tests of 10 Nov 2026."}

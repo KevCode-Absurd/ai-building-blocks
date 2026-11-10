@@ -1,0 +1,187 @@
+new_slug: three-series-arcs
+name: "Three series arcs"
+summary: "Give it your email brief and facts. You get three plans for the series, each with its first email, and one chosen."
+job: write-emails
+thinking: high
+thinking_why: "It must plan three series that differ in substance and write a full first email for each."
+
+headline: "Try three shapes for your email series before you write it"
+subhead: Give it your brief for an email series, your facts and a few lines in your own voice. It plans three different arcs for the series and writes the first email of each in full. A fresh reviewer picks one, and that series is written out.
+
+explain: |
+  An email series works or fails on its arc. The arc is what each email is for, and why the reader opens the next one. Ask an AI for a welcome series and you get the stock one. It has a thank you, a story, some proof, an offer and a last call. Every business gets the same five.
+
+  This skill plans three arcs that differ in real ways. One may lead with a different promise. One may put the ask in a different place or use fewer emails. Each pair must differ on at least two things. For each arc you get a small table and the first email written in full. The choice is then made on real writing.
+
+  Every email shows one product and makes one ask. An email that only says thank you is cut or merged. A reviewer who did not write them picks an arc against your tests. Then the whole series is written, with subject lines, preview text, links and a rule for who leaves the series and when.
+
+when:
+  - You need a welcome, trial, launch or win-back series.
+  - Your last series read like everyone else's.
+  - You want to choose the plan before paying for all the writing.
+  - You are planning a run of posts or messages that build on each other.
+
+not_for:
+  - One email. Write it, then use the Client's-eye check.
+  - Subject lines alone. Use a subject line writer.
+  - Setting up the flow in your email tool. This gives you the words and the timing.
+
+you_give:
+  - Your brief, with who gets the series, what starts it and how many emails
+  - Your facts, such as products, prices, offers and policies, each with source and date
+  - Five real lines from your own emails or site
+  - Rules for your list, such as how often you email and the sender name (optional)
+you_get:
+  - Three arcs, each with its idea in one line and a table of emails
+  - The first email of each arc, written in full
+  - One chosen arc, the runner-up in a line, and the reason
+  - The full series, with subject, preview, body, product, ask and link for each email
+  - The exit rule and the merge tags used
+
+how_to_use:
+  - Open the skill in your AI and give it your brief, facts and voice lines.
+  - It checks the products and links are live, then plans three arcs.
+  - It writes the first email of each arc.
+  - A fresh reviewer picks one arc against your tests.
+  - It writes the rest of the chosen series and ticks the format list for each email.
+
+how_it_works:
+  - title: Checks the buyer can act
+    text: Confirms the products and links the emails point to are live and in stock.
+  - title: Plans three arcs
+    text: Varies at least two of promise, proof, structure, buyer moment, offer and format between each pair.
+  - title: Lays out each arc
+    text: Lists each email with its timing, its job, the product shown and the one ask.
+  - title: Writes the first email of each
+    text: Writes subject, preview and body in your voice, using only facts that have a source.
+  - title: Hands the choice to someone else
+    text: Uses the Outside chooser on the three arcs and their first emails.
+  - title: Writes the chosen series
+    text: Completes every email and adds the exit rule and merge tags.
+
+output_shape: |
+  SERIES
+  Arc: <its idea in one line> | Runner-up: <one line>
+  Why: <the chooser's reason> | Chosen by: <fresh reviewer | second chat | SAME-CONTEXT>
+  Exit rule: <who leaves, when> | Merge tags: <list>
+
+  MESSAGE <n> | <day or trigger>
+  Subject: <...>   Preview: <...>
+  <body>
+  Product: <name, link> | Ask: <the one action>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+example:
+  business: plausible
+  input: |
+    [the skill]
+
+    A 3-email series for people who start the Plausible Analytics free trial.
+    The job: they add the script, then subscribe before the trial ends.
+    Facts: read from https://plausible.io/ on 10 Nov 2026.
+    Plan the three arcs and write email 1 of the first arc.
+  output: |
+    FACTS USED (plausible.io, read 10 Nov 2026): "Sign up for 30-day free
+    trial. No credit card required." | "Our script is 54 times smaller than
+    Google Analytics." | "No need for cookie banners or GDPR consent" |
+    "Made and hosted in the EU" | button "View live demo".
+
+    Arc A, your first number. Promise: see your own visitors today.
+    Proof: the product at work. Moment: signed up, script not added yet.
+    1 | Day 0 | Get the script on the site | The trial | Add the script
+    2 | Day 2 | Look at the first two days of visits | The dashboard | Open your dashboard
+    3 | Day 25 | Decide before the trial ends | The paid plan | Subscribe
+
+    Arc B, the switch. Promise: you can drop the cookie banner.
+    Proof: the site's privacy lines. Moment: still running Google Analytics.
+    1 | Day 0 | Run both tools side by side | The trial | Add the script
+    2 | Day 7 | Remove the old tag and the banner | The trial | Remove Google Analytics
+    3 | Day 23 | Keep the simpler setup | The paid plan | Subscribe
+
+    Arc C, the faster site. Promise: a lighter page. Proof: the script size.
+    Moment: a developer who cares about speed.
+    1 | Day 0 | Add the script and note page weight | The trial | Add the script
+    2 | Day 5 | Compare page weight before and after | The trial | Check your page weight
+    3 | Day 24 | Keep the lighter script | The paid plan | Subscribe
+
+    A and B differ on promise, proof and buyer moment. C differs from both
+    on promise and proof.
+
+    ARC A, EMAIL 1 | Day 0
+    Subject: One step left: add the script
+    Preview: Then you can watch your own visitors arrive.
+    Your 30-day trial has started, and no credit card was needed. The next
+    step is yours. Add the Plausible script to your site, so it can start
+    counting your visitors. The script is 54 times smaller than Google
+    Analytics, so your pages stay fast. Want to see where this is going
+    first? Open the live demo.
+    Product: your Plausible trial | Ask: add the script
+
+    (The example stops here. Email 1 of arcs B and C, the chooser's reply
+    and the full series are not shown.)
+
+tweaks:
+  - what: How many emails
+    how: Say the number, or let each arc choose its own. A shorter arc is a real option.
+  - what: Timing limits
+    how: Say how often you may email. The tables keep to it.
+  - what: Offers
+    how: Say if a discount is allowed and its limits. With none given, the series has no discount.
+  - what: The sender
+    how: Give the name your emails really come from. Without one, emails are signed from the brand.
+
+judge:
+  - The three arcs differ in substance, not only in tone or order.
+  - Every email shows one product and makes one ask.
+  - The first email of each arc was written before one was chosen.
+  - Every fact, name and offer has a source and a date.
+  - The series has an exit rule.
+
+test:
+  - Read only the "job" column of each arc. The three stories should be different.
+  - Pick any email and ask what the reader can buy or do. There should be one answer.
+  - Check the sender name and any offer against your own records.
+
+improve:
+  - Add past series and their open and click rates, so weak arcs are not repeated.
+  - Add your merge tags and your email tool, so the series is ready to load.
+  - Add more voice lines from emails that did well.
+  - Pair it with the Claim source trace before you send.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning arcs and writing emails needs no special tool."}
+    - {name: "An AI that can start a second agent", why: "Lets a fresh reviewer choose the arc without seeing the writer's reasons."}
+  inputs:
+    - "Five real lines in your voice"
+    - "Your products and offers with dates"
+    - "Results from past series"
+
+terms:
+  - term: Arc
+    meaning: The path of a series. What each email is for, and why the next one gets opened.
+  - term: Exit rule
+    meaning: Who stops getting the series, and when. For example, a reader who buys.
+  - term: Merge tag
+    meaning: A placeholder your email tool fills in, such as the reader's first name.
+  - term: Preview text
+    meaning: The short line shown after the subject in an inbox.
+
+output_sample:
+  input:
+    - Your series brief
+    - Your facts with sources and dates
+    - Five lines in your voice
+  prerequisites:
+    - An AI that can start a second agent or a second chat, for the fresh reviewer
+  output:
+    - name: Three arcs
+      contains: Each arc's idea, its table of emails and its first email in full.
+    - name: The choice
+      contains: The chosen arc, the runner-up, the reason and who chose.
+    - name: The series
+      contains: Every email with subject, preview, body, product, ask and link.
+    - name: Exit rule and merge tags
+      contains: Who leaves the series and when, and the tags to set up.

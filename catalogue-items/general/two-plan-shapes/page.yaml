@@ -1,0 +1,189 @@
+new_slug: two-plan-shapes
+name: "Two plan shapes"
+summary: "Give it your question, budget and numbers. You get two differently shaped one-page plans with money and dates, and one pick."
+job: plan-strategy
+thinking: high
+thinking_why: "It must find two plans that place different bets, cost each one and make the totals add up."
+
+headline: "Compare two real plans before you commit to one"
+subhead: Give it the decision you face, your budget, your time span and your real numbers. It writes two one-page plans that place different bets, each with a money table and dated steps. A fresh reviewer picks one. You get one recommendation and the other plan in a line.
+
+explain: |
+  Ask an AI for a plan and you get the balanced one. It has a bit of everything in the usual order. It looks sensible, and it hides what was traded away, because no other plan was ever written.
+
+  This skill writes two plans that differ in shape. One might put most of the money on a single bet while the other spreads it. One might prove a thing first while the other runs everything at once. The same plan at two budgets does not count. Each plan fits on one page. Each shows where the money goes, with a total that adds up. It lists the steps with dates and owners. It gives the rule for when to cut or scale each line, and the break-even sum.
+
+  Where a planning number is unknown, the plan uses a working figure, shows how it was worked out and labels it. It never passes one off as a fact, and it never forecasts revenue. A reviewer who did not write the plans picks one. You get that plan in full.
+
+when:
+  - You need a marketing, budget, launch or 90-day plan.
+  - A plan you were given looked fine and you could not see what it gave up.
+  - You have a fixed budget and more ideas than money.
+  - You want to see the trade-off before you decide.
+
+not_for:
+  - A detailed channel plan once the direction is set. Use a channel or campaign planner.
+  - A financial forecast. This skill shows spend and break-even, not predicted revenue.
+  - A decision with no numbers at all. Pull the numbers first.
+
+you_give:
+  - The decision the plan serves, in a sentence
+  - Your total budget and time span
+  - Your real numbers, such as spend, sales and margins, each with its source and date
+  - Limits, such as who can do the work and dates that are fixed (optional)
+you_get:
+  - Two one-page plans that place different bets
+  - A money table for each, with a total that adds up
+  - Dated steps with owners, and a cut, keep or scale rule for each line of spend
+  - One recommended plan in full, and the other plan in a line
+  - A list of the numbers used, each with its source or marked as a working figure
+
+how_to_use:
+  - Open the skill in your AI. Give it the decision, the budget, the time span and your numbers.
+  - It pulls the numbers the plan turns on and names two shapes.
+  - It writes each plan on one page with money, dates and rules.
+  - A fresh reviewer picks one against your tests.
+  - It writes out the chosen plan in full and checks every total.
+
+how_it_works:
+  - title: Pulls the numbers first
+    text: Reads your account, export or site before forming a view, and marks unknown numbers.
+  - title: Names two shapes
+    text: Makes the plans differ on at least two of the bet, the split of money, the order and what is left out.
+  - title: Writes each plan on one page
+    text: Gives the bet, a money table, dated steps, rules and the break-even sum.
+  - title: Labels working figures
+    text: Shows how each unknown planning number was worked out and never treats it as a fact.
+  - title: Hands the choice to someone else
+    text: Uses the Outside chooser on the two pages.
+  - title: Recommends one
+    text: Writes the chosen plan in full and gives the other one line.
+
+output_shape: |
+  PLAN
+  Recommendation: <the bet, in one sentence>
+  Why this one: <the chooser's reason> | Chosen by: <fresh reviewer | second chat | SAME-CONTEXT>
+  The other plan: <one line, and when it would be better>
+
+  MONEY
+  <line> | <amount> | <share> | <cut, keep or scale rule>
+  Total: <sum> of <budget>
+
+  DATES
+  <date> | <step> | <owner>
+
+  BREAK-EVEN
+  <the sum>
+
+  NUMBERS USED
+  <number> | <source, date> or working figure, to tune: <how it was worked out>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+example:
+  business: plausible
+  input: |
+    [the skill]
+
+    Plan 90 days of marketing for Plausible Analytics, aimed at site owners
+    who want to leave Google Analytics. No budget or account data is given:
+    use a working total of $9,000 and say so. Public facts only, read from
+    https://plausible.io/ on 10 Nov 2026. Show the two shapes with their
+    money tables.
+  output: |
+    FIRST LINE: no budget or account data was given. Both plans use a working
+    total of $9,000, to tune. Every amount below is a working figure.
+
+    FACTS USED (plausible.io, read 10 Nov 2026): the menu has "vs Google
+    Analytics" and "Migrate from GA4" pages; the site offers "View live
+    demo"; "Sign up for 30-day free trial. No credit card required."
+
+    PLAN A, one door
+    Bet: people already searching for a way off Google Analytics.
+    Money (working figures, to tune)
+    Rewrite the two existing pages | $1,500 | 17%
+    Six step-by-step moving guides, $900 each | $5,400 | 60%
+    One short demo video for those pages | $2,100 | 23%
+    Total: $1,500 + $5,400 + $2,100 = $9,000 of $9,000
+    Order: both pages in weeks 1 to 2, guides two a month, video in month 2.
+    Leaves out: anyone who is not yet looking to switch.
+
+    PLAN B, borrowed audiences
+    Bet: site owners who are not searching yet, reached through writers
+    they already trust.
+    Money (working figures, to tune)
+    Three newsletter placements, $1,800 each | $5,400 | 60%
+    One guest article a month, $600 each | $1,800 | 20%
+    One landing page for these readers | $1,800 | 20%
+    Total: $5,400 + $1,800 + $1,800 = $9,000 of $9,000
+    Order: landing page first, one placement a month, review after each.
+    Leaves out: the search pages, which stay as they are.
+
+    The two differ on the bet, the split and what is left out.
+    Break-even is not shown: it needs the margin on a subscription, which
+    was not given. It is listed as the first number to supply.
+
+    (The example stops here. The dated steps, the rules, the chooser's reply
+    and the full plan are not shown.)
+
+tweaks:
+  - what: The two shapes
+    how: Name a pair you want compared, such as one big bet against several small ones.
+  - what: Time span
+    how: Say 30, 60 or 90 days, or your own dates. The steps are dated to fit.
+  - what: Who does the work
+    how: Name the people or roles. Each step gets an owner.
+  - what: Currency and totals
+    how: Give your budget in your own currency. Every table adds up to it.
+
+judge:
+  - The two plans place different bets, and are not one plan at two sizes.
+  - Each money table adds up to the budget, with the sum shown.
+  - Every step has a date and an owner.
+  - Every working figure is labelled and shows how it was worked out.
+  - You are given one recommendation, not a menu.
+
+test:
+  - Add up each money table yourself. It should match the budget.
+  - Ask what each plan chooses not to do. Each should have a clear answer.
+  - Find a number that is not yours. It should be marked as a working figure.
+
+improve:
+  - Add your margins and past results, so working figures can be replaced with real ones.
+  - Add your own rules for when to cut or scale a line of spend.
+  - Add the tests every plan must pass in your business.
+  - Pair it with the Client's-eye check on the full plan.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing and costing two plans needs no special tool."}
+    - {name: "An AI connected to your ad or sales account", why: "Pulls the real numbers, so fewer working figures are needed."}
+  inputs:
+    - "Your budget and time span"
+    - "An export of spend and sales"
+    - "Your margin on a sale"
+
+terms:
+  - term: Shape
+    meaning: Where a plan places its bet. Two plans with different shapes spend the same money in different ways.
+  - term: Working figure
+    meaning: A planning number put in when the real one is unknown. It shows its sum and is yours to change.
+  - term: Break-even
+    meaning: The sales needed to earn back what the plan spends.
+
+output_sample:
+  input:
+    - The decision, your budget and your time span
+    - Your real numbers with sources and dates
+  prerequisites:
+    - An AI that can start a second agent or a second chat, for the fresh reviewer
+  output:
+    - name: Two one-page plans
+      contains: Each with its bet, a money table that adds up, dated steps, rules and break-even.
+    - name: The recommendation
+      contains: The chosen plan in full, the reason, who chose, and the other plan in a line.
+    - name: Numbers used
+      contains: Each number with its source and date, or marked as a working figure.
+    - name: Checks missed
+      contains: One line for each check that did not run, or none.

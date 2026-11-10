@@ -1,0 +1,181 @@
+new_slug: make-design-directions
+name: "Make three design directions"
+summary: "Give it your design brief and brand file. You get three different directions made at real size, with one chosen."
+job: design-work
+thinking: high
+thinking_why: "It must plan three layouts that differ in structure, draw each one and judge them side by side."
+
+headline: "See three real design directions before you finish one"
+subhead: Give it your brief for a poster, carousel, cover or pack front, with your brand file and the real words. It makes three directions at the real size, each built on a different layout, type scale or use of colour. A fresh reviewer picks one, and that one is finished.
+
+explain: |
+  A design direction written as a paragraph tells you little. You have to see it. And when an AI offers three directions, they are often one layout in three colours.
+
+  This skill makes three directions you can look at. Each is a real file at the real size, with your real words. Each pair must differ on at least two of five things. These are the grid, the jump between large and small type, and how much each colour covers. The other two are the kind of image and what you read first. A colour swap alone does not count. All three use your fonts and colours.
+
+  A script puts the three side by side, once large and once at phone size. You can see if the main message still reads when it is small. A reviewer who did not make them picks one against your tests. Then the chosen direction is finished in every size and frame you asked for.
+
+when:
+  - You need a poster, a social carousel, a cover or the front of a pack.
+  - The options you get back all look alike.
+  - You want to choose a direction by looking, not by reading a description.
+  - You will hand the work to a designer or printer and want a clear direction first.
+
+not_for:
+  - A new logo or a full brand identity. Use a logo or brand kit skill.
+  - Web pages. Use Make three first screens.
+  - Final print files with bleed and colour profiles. A designer or printer prepares those.
+
+you_give:
+  - Your brief, with what the piece is, its real size and where people will see it
+  - The real words that must appear, such as the headline, date or price
+  - Your brand file or brand guide, for fonts and colours
+  - Real photos or artwork (optional)
+you_get:
+  - Three directions as SVG or HTML files at the real size
+  - A line for each direction on its grid, type, colour, image and reading order
+  - Two pictures that show the three side by side, large and at phone size
+  - One chosen direction, finished in every frame and size you asked for
+  - Notes for a designer or printer, with fonts, colours and photos still needed
+
+how_to_use:
+  - Add the skill to an AI that can run code and open files.
+  - Give it your brief, the real words and your brand file.
+  - It plans three directions and makes each one at the real size.
+  - It runs the compare script from Make three first screens. The script needs Node.js 18 or later and Playwright for the pictures.
+  - A fresh reviewer picks one. It then builds the rest of the frames in that direction.
+
+how_it_works:
+  - title: Fixes the size and the key fact
+    text: Writes the real size and the one thing a viewer must take away in two seconds.
+  - title: Plans on five visual axes
+    text: Sets the grid, type scale, colour shares, imagery and reading order for each direction.
+  - title: Names a reference
+    text: Ties each direction to one real piece it learns from.
+  - title: Stays inside your brand
+    text: Uses your fonts and colours in all three, and says so if a font would not load.
+  - title: Makes each one at real size
+    text: Draws one file for each direction with the real words.
+  - title: Compares side by side
+    text: Shows the three together, large and at phone size, with neutral labels.
+  - title: Hands the choice to someone else
+    text: Uses the Outside chooser, then finishes the chosen direction.
+
+output_shape: |
+  DESIGN DIRECTION
+  Chosen: <its idea in one line>
+  Grid | Type scale | Colour proportion | Imagery | Hierarchy
+  Learns from: <the named reference, what it borrows>
+  Runner-up: <one line>
+  Why: <the chooser's reason> | Chosen by: <fresh reviewer | second chat | SAME-CONTEXT>
+  Files: <the finished frames, the three directions, the two compare sheets>
+  For the designer or printer: <fonts, colour values, image sources, shots still needed>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+example:
+  business: allbirds
+  input: |
+    [the skill]
+
+    Instagram carousel cover for the Allbirds Men's Tree Runner NZ, 1080 by
+    1350. It must say the shoe is machine washable. Brand capture:
+    allbirds.com, 10 Nov 2026. Plan the three directions first.
+  output: |
+    SIZE AND KEY FACT
+    1080 by 1350 px. Key fact: you can machine wash this shoe.
+    Brand (allbirds.com, captured 10 Nov 2026): Geograph for headings, body
+    and buttons;
+    near-black #212121, white #FFFFFF, warm grey #ECE9E2; labels and buttons
+    UPPERCASE at small sizes; fully round buttons; photos cover about 60%
+    of the home page.
+
+    Direction 1, the shoe alone
+    Grid: one cut-out shoe fills the frame, caption strip along the bottom.
+    Type scale: 64 px line over 28 px line, a small jump.
+    Colour: warm grey 85, near-black 10, white 5. Imagery: cut-out product.
+    Hierarchy: shoe, then "MACHINE WASHABLE", then the name.
+
+    Direction 2, the care label
+    Grid: one left-hand column, set like the care label inside a shoe.
+    Type scale: 150 px headline over a 34 px list, a large jump.
+    Colour: near-black 90, white 10. Imagery: none, type only.
+    Hierarchy: "MACHINE WASHABLE", then the three care steps from the
+    product page (remove the insoles, hand wash those, air dry), then the name.
+
+    Direction 3, in the wash
+    Grid: full-frame photo, one round white tag bottom left.
+    Type scale: 44 px in the tag only.
+    Colour: photo 90, white 8, near-black 2. Imagery: the shoes going into
+    a washing machine. This photo does not exist yet: SHOT NEEDED.
+    Hierarchy: the scene, then the tag, then the name.
+
+    Each pair differs on grid, type scale, colour proportion and imagery.
+
+    (The example stops here. The three files, the compare sheets and the
+    chooser's reply are not shown.)
+
+tweaks:
+  - what: The real size
+    how: Give the size in pixels or the print size. Each direction is made at that shape.
+  - what: How far it may go
+    how: Say if colours must stay in their usual shares or may shift for this piece.
+  - what: Photos you have
+    how: Attach them or link them. Directions that need a photo you lack are marked.
+  - what: Sets and series
+    how: For a carousel, it makes the cover and one inside frame for each direction first.
+
+judge:
+  - Each pair of directions differs on at least two of grid, type scale, colour share, imagery and reading order.
+  - No two differ only in colour.
+  - The key fact reads at phone size in each one.
+  - The fonts and colours are yours.
+  - Someone other than the maker chose, or the choice is marked SAME-CONTEXT.
+
+test:
+  - Turn the pictures grey in your head. You should still see three different layouts.
+  - Look at the phone picture from arm's length. The key fact should still read.
+  - Check each font against your brand file.
+
+improve:
+  - Add two pieces you admire and one you do not, so each direction has a real reference.
+  - Add the sizes you use most, such as feed, story and A3.
+  - Add rules for your logo, such as its smallest size and clear space.
+  - Pair it with the Colour contrast checker on the chosen direction.
+
+works_best_with:
+  tools:
+    - {name: "A coding assistant that can run code", why: "Draws the SVG or HTML files and runs the compare script."}
+    - {name: "Node.js with Playwright", why: "Makes the side-by-side pictures, large and at phone size."}
+  inputs:
+    - "Your brand file or brand guide"
+    - "The real words for the piece"
+    - "Photos or artwork you already have"
+
+terms:
+  - term: Grid
+    meaning: The hidden lines that decide where things sit on the piece.
+  - term: Type scale
+    meaning: The sizes of the text, and how big the jump is from the largest to the smallest.
+  - term: Colour proportion
+    meaning: How much of the piece each colour covers.
+  - term: Hierarchy
+    meaning: What the eye reads first, second and third.
+
+output_sample:
+  input:
+    - Your design brief with the real size
+    - The real words that must appear
+    - Your brand file or brand guide
+  prerequisites:
+    - An AI that can run code, to run the compare script that comes with Make three first screens
+  output:
+    - name: Three directions
+      contains: Three files at the real size, each with its grid, type scale, colour shares, imagery and reading order.
+    - name: Compare sheets
+      contains: The three side by side, large and at phone size, labelled A, B and C.
+    - name: The chosen direction
+      contains: The finished frames, the runner-up, the reason and who chose.
+    - name: Notes for the designer or printer
+      contains: Fonts, colour values, image sources and photos still needed.

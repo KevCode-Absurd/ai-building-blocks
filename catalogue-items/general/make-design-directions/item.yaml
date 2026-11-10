@@ -1,0 +1,19 @@
+slug: make-design-directions
+name: "Make three design directions"
+summary: "Give it your design brief and brand file. You get three different directions made at real size, with one chosen."
+category: general
+type: skill
+role: make
+job: design
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: design_tokens, required: false}
+outputs:
+  - {type: design_direction, required: true}
+uses: [make-three-first-screens, outside-chooser]
+origin: own
+version: 1.0.0
+added: 2026-11-10
+credits:
+  - {title: "Original AI Blocks method", by: "AI Blocks contributors", used: "The five visual axes, the fields each direction must state, the real-size build and the hand-off to an outside chooser."}

@@ -1432,6 +1432,132 @@
           "rationale": "The captured facts are dated evidence read from the live site; every screen may use only these, so they are the required store capture."
         }
       ]
+    },
+    "catalogue-items/general/make-ad-concept-spread/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, Q6 craft skills)",
+      "reviewed_on": "2026-11-10",
+      "method_sha256": "ff61d4f89d97b8043076a37e62a1f3acd6ed7862d4834fccc70c30ae908b909d",
+      "inputs": [
+        {
+          "type": "brief",
+          "required": true
+        },
+        {
+          "type": "design_tokens",
+          "required": false
+        },
+        {
+          "type": "product_photos",
+          "required": false
+        },
+        {
+          "type": "store_capture",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "brief",
+          "quote": "the buyer, the placements, how many ads, and the acceptance tests",
+          "rationale": "The ad brief and spec sheet name the buyer, placements and count; the concept table and written ads are built from that brief."
+        },
+        {
+          "type": "design_tokens",
+          "quote": "fonts, colours with their share, logo use and voice lines",
+          "rationale": "The brand file gives the fonts and colours used for on-image words and mock-ups. Optional because it applies only when the brand has a site."
+        },
+        {
+          "type": "product_photos",
+          "quote": "the reference for every visual",
+          "rationale": "Real product photos are the reference for each image or mock-up. Optional: without them the method draws labelled boxes and lists the shots needed."
+        },
+        {
+          "type": "store_capture",
+          "quote": "product facts, prices, offers and proof, each with its source and date",
+          "rationale": "Every proof in the concept table must be a captured, dated fact from the product page or feed; that capture is required."
+        }
+      ]
+    },
+    "catalogue-items/general/make-design-directions/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, Q6 craft skills)",
+      "reviewed_on": "2026-11-10",
+      "method_sha256": "0486b27483671cbde58e51303d077a4e114c48c4d389be2d535e598e6269a38c",
+      "inputs": [
+        {
+          "type": "brief",
+          "required": true
+        },
+        {
+          "type": "design_tokens",
+          "required": false
+        }
+      ],
+      "evidence": [
+        {
+          "type": "brief",
+          "quote": "what the piece is, its real size, where it will be seen and from how far, the words that must appear",
+          "rationale": "The design brief fixes the piece, its real size and the words; the three directions are planned and made from it."
+        },
+        {
+          "type": "design_tokens",
+          "quote": "fonts for each role, colours with their share, logo rules and image style",
+          "rationale": "The brand file or brand guide supplies the fonts and colours all three directions must use. Optional because it applies only when the brand exists."
+        }
+      ]
+    },
+    "catalogue-items/general/three-series-arcs/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, Q6 craft skills)",
+      "reviewed_on": "2026-11-10",
+      "method_sha256": "f207c0f4ee5d07a69a5ca09b095d34a07a76725dc5899f6bacc1ce53ebe9b783",
+      "inputs": [
+        {
+          "type": "brief",
+          "required": true
+        },
+        {
+          "type": "store_capture",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "brief",
+          "quote": "who is on the list, what puts them in the series (signed up, started a trial, bought, went quiet), how many messages",
+          "rationale": "The series brief names the list, the trigger and the number of messages; the three arcs are planned from it."
+        },
+        {
+          "type": "store_capture",
+          "quote": "products, prices, offers, policies and proof, each with its source and date",
+          "rationale": "Every message may use only captured, dated facts about products and offers; that saved evidence is required."
+        }
+      ]
+    },
+    "catalogue-items/general/two-plan-shapes/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, Q6 craft skills)",
+      "reviewed_on": "2026-11-10",
+      "method_sha256": "5753c4715c44d69464f4e8c18609af3d70489b5f29f837e4edfe55ae530503d7",
+      "inputs": [
+        {
+          "type": "performance_sheet",
+          "required": false
+        },
+        {
+          "type": "question",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "performance_sheet",
+          "quote": "what the business spends, sells and earns today, from its own account, export or site",
+          "rationale": "An account or store export supplies the real numbers the plans turn on. Optional: where none is given the method uses labelled working figures."
+        },
+        {
+          "type": "question",
+          "quote": "the decision the plan serves, the total budget, the time span, and the acceptance tests",
+          "rationale": "The plan answers a stated decision with a budget and time span; that is a plain question, not a creative brief."
+        }
+      ]
     }
   },
   "handoffs": {

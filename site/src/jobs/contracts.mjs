@@ -48,6 +48,15 @@ const jobIndexOf = c => {
   const implementation = launchable && list(index.jobs?.['write-landing-page']?.families).find(family => family.id === 'built-experiences');
   return primary && implementation && !list(primary.families).some(family => family.id === implementation.id) ? { ...primary, families: [...list(primary.families), implementation] } : primary;
 };
+/** The method palette a team works from. A mixed-work team adds the families of each maker's own job to the primary job's. */
+const paletteOf = (c, work = teamOf(c).work) => {
+  const primary = jobIndexOf(c), extra = list(work).flatMap(row => list(indexOf(c).jobs?.[row?.job]?.families));
+  if (!extra.length) return primary;
+  const seen = new Set();
+  return { ...(primary ?? {}), families: [...list(primary?.families), ...extra].filter(family => family?.id && !seen.has(family.id) && seen.add(family.id)) };
+};
+/** A judge who sits outside the council. The reviewer of a mixed-work team is a judge who also holds the red-team seat. */
+const pureJudge = seat => hasSeatType(seat, 'judge') && !hasSeatType(seat, 'red_team');
 const normalize = v => String(v ?? '').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
 const same = (a, b) => canonicalJobJSON(a) === canonicalJobJSON(b);
 export function canonicalJobJSON(value) {
@@ -169,7 +178,14 @@ function cardChecks(d, c, add, warn) {
 }
 function teamChecks(d, c, add) {
   const seats = list(d.seats), tier = d.tier ?? tierOf(c), config = tierConfig(tier), seatById = new Map(seats.map(s => [s?.seat_id, s]));
-  if (seats.length < config.min_seats || seats.length > config.max_seats) add('seats', `${tier} needs ${config.min_seats}–${config.max_seats} seats.`);
+  // Mixed work: one maker per kind of work, one independent reviewer, and a fact checker when the work carries claims.
+  // That team is as small as the work allows, so its size follows the kinds of work, not the tier's usual bench.
+  const work = list(d.work), mixed = work.length > 1;
+  const minSeats = mixed ? Math.min(config.min_seats, work.length + 2) : config.min_seats, maxSeats = mixed ? Math.max(config.max_seats, work.length + 3) : config.max_seats;
+  if (seats.length < minSeats || seats.length > maxSeats) add('seats', `${tier} needs ${minSeats}–${maxSeats} seats.`);
+  unique(work, 'kind', 'work', add); unique(work, 'maker_seat', 'work', add);
+  work.forEach((row, idx) => { if (!hasSeatType(seatById.get(row?.maker_seat), 'maker')) add(`work[${idx}].maker_seat`, 'must name a maker seat.'); });
+  if (mixed && d.lead_seat_id && work[0]?.maker_seat !== d.lead_seat_id) add('work', 'the first row is the lead: its maker makes the primary deliverable.');
   unique(seats, 'seat_id', 'seats', add); unique(d.working_groups, 'id', 'working_groups', add);
   if (seats.filter(s => hasSeatType(s, 'coordinator')).length !== 1) add('seats', 'needs exactly one coordinator.');
   for (const type of ['maker', 'judge', ...(tier === 'quick' ? [] : ['red_team', 'fact_checker'])]) if (!seats.some(s => hasSeatType(s, type))) add('seats', `needs a ${type} seat.`);
@@ -179,13 +195,15 @@ function teamChecks(d, c, add) {
     const types = typesOf(seat), p = `seats[${idx}]`;
     if (seat?.seat_types && !seat.seat_types.includes(seat.seat_type)) add(`${p}.seat_types`, 'must include the primary seat_type.');
     if (types.has('maker') && ['coordinator', 'judge', 'fact_checker'].some(t => types.has(t))) add(`${p}.seat_type`, 'coordinator, judge and fact checker cannot also be makers.');
-    if (types.has('judge') && ['coordinator', 'strategist', 'critic', 'red_team', 'mind'].some(t => types.has(t))) add(`${p}.seat_types`, 'the judge must stay out of the council.');
+    // In a mixed-work team one reviewer holds both outside checks: it chooses between the candidates (red team) and later
+    // reads the finished work as the client would (judge), each in a fresh context. It never makes, coordinates or writes a route.
+    if (types.has('judge') && ['coordinator', 'strategist', 'critic', 'mind', ...(mixed ? [] : ['red_team'])].some(t => types.has(t))) add(`${p}.seat_types`, 'the judge must stay out of the council.');
     if (types.has('strategist')) { if (lenses.has(seat.lens)) add(`${p}.lens`, 'strategists must have distinct lenses.'); lenses.add(seat.lens); }
     const roles = c.roles?.roles ?? c.roles, row = recordFor(roles, seat.role_id), profile = recordFor(c.roles?.profiles, seat.role_id), role = row || profile ? { ...row, ...profile } : null;
     if (roles && !role) add(`${p}.role_id`, 'does not exist in the role inventory.');
-    const families = list(jobIndexOf(c)?.families).filter(f => list(seat.families).includes(f.id));
+    const families = list(paletteOf(c, work)?.families).filter(f => list(seat.families).includes(f.id)), seatJob = work.find(row => row?.maker_seat === seat?.seat_id)?.job ?? c.job;
     const roleItems = [...list(role?.toolbox), ...list(role?.core), ...list(role?.extended), ...list(role?.resources)].map(x => typeof x === 'string' ? x : x?.slug);
-    const studio = c.job === 'make-image-ads' && (types.has('maker') || seat.role_id==='media-buyer') ? discoverStudioFormats(c) : null;
+    const studio = (c.job === 'make-image-ads' || seatJob === 'make-image-ads') && (types.has('maker') || seat.role_id==='media-buyer') ? discoverStudioFormats(c) : null;
     const studioItems = studio ? [...studio.visual_worlds,...studio.image_variants].map(x=>x.method).concat(studio.formats.filter(x=>x.medium==='image').flatMap(x=>x.related_methods)).filter(x=>x.status==='AVAILABLE').map(x=>x.slug) : [];
     const allowed = families.length || role ? new Set([...families.flatMap(f => [...list(f.items), ...list(f.pickers), ...list(f.checks), ...list(f.tool_guides), ...list(f.supporting_items)]), ...roleItems, ...studioItems]) : undefined;
     unique(seat?.toolbox, 'slug', `${p}.toolbox`, add);
@@ -218,7 +236,9 @@ export function routeTextSimilarity(a, b) {
 }
 function routesChecks(d, c, add) {
   const routes = list(d.routes), config = tierConfig(tierOf(c)), seats = list(teamOf(c).seats), facts = list((c.evidence ?? c.ledger)?.claims ?? cardOf(c).facts);
-  if (routes.length < config.min_routes || routes.length > config.max_routes) add('routes', `needs ${config.min_routes}–${config.max_routes} routes for this tier.`);
+  // In mixed work each maker writes the candidates for its own piece, so the count follows the kinds of work.
+  const pieces = list(teamOf(c).work).length, minRoutes = pieces > 1 ? Math.min(config.min_routes, pieces) : config.min_routes, maxRoutes = pieces > 1 ? Math.max(config.max_routes, pieces) : config.max_routes;
+  if (routes.length < minRoutes || routes.length > maxRoutes) add('routes', `needs ${minRoutes}–${maxRoutes} routes for this tier.`);
   unique(routes, 'route_id', 'routes', add); unique(routes, 'owner_seat', 'routes', add);
   const lenses = new Set();
   routes.forEach((route, idx) => {
@@ -233,7 +253,7 @@ function routesChecks(d, c, add) {
   if (mix && mix.preset !== 'focused' && tierOf(c) !== 'quick') for (const type of ['new', 'outlier']) if (mix[type] > 0 && !routes.some(r => r?.mix === type)) add('routes', `needs at least one ${type} route.`);
 }
 function spreadChecks(d, c, add) {
-  const slots = list(d.slots), N = slots.length, card = cardOf(c), mix = card.dials?.variety_mix ?? d.variety_mix ?? {}, families = new Map(), makers = new Set(), methods = new Set(), modalities = new Set(), seats = list(teamOf(c).seats), job = jobIndexOf(c);
+  const slots = list(d.slots), N = slots.length, card = cardOf(c), mix = card.dials?.variety_mix ?? d.variety_mix ?? {}, families = new Map(), makers = new Set(), methods = new Set(), modalities = new Set(), seats = list(teamOf(c).seats), job = paletteOf(c);
   mixChecks(d.variety_mix, 'variety_mix', add);
   if (card.dials?.variety_mix && ['proven', 'new', 'outlier'].some(k => d.variety_mix?.[k] !== mix[k])) add('variety_mix', 'must match the resolved job-card mix.');
   unique(slots, 'slot_id', 'slots', add);
@@ -281,7 +301,7 @@ function councilChecks(d, c, add, warn) {
     const p = proposals.find(p => p?.label === critique?.on), path = `critiques[${idx}]`, body = bodyFor(p);
     if (!p) { add(`${path}.on`, 'must name an existing proposal.'); return; }
     if (p.owner_seat === critique.by_seat) add(`${path}.by_seat`, 'cannot critique its own proposal.');
-    if (team.length && !team.some(s => s?.seat_id === critique.by_seat && !hasSeatType(s, 'judge'))) add(`${path}.by_seat`, 'must name a council seat other than the independent judge.');
+    if (team.length && !team.some(s => s?.seat_id === critique.by_seat && !pureJudge(s))) add(`${path}.by_seat`, 'must name a council seat other than the independent judge.');
     const quote = critique.flaw_quote?.replace(/^["“]|["”]$/g, '');
     if (!present(quote)) add(`${path}.flaw_quote`, 'must quote the proposal.');
     else if (typeof body === 'string' && !body.includes(quote)) add(`${path}.flaw_quote`, 'does not appear in the proposal file.');
@@ -294,7 +314,7 @@ function councilChecks(d, c, add, warn) {
     const path = `ranking.ballots[${idx}]`, own = proposals.filter(p => p?.owner_seat === ballot?.by_seat).map(p => p.label), expected = [...labels].filter(l => !own.includes(l));
     if (list(ballot?.order).some(l => own.includes(l))) add(`${path}.order`, 'cannot rank its own proposal.');
     if (list(ballot?.order).length !== expected.length || expected.some(l => !list(ballot?.order).includes(l))) add(`${path}.order`, 'must rank each non-owned proposal exactly once.');
-    if (team.length && !team.some(s => s?.seat_id === ballot?.by_seat && !hasSeatType(s, 'judge'))) add(`${path}.by_seat`, 'must name a council seat other than the independent judge.');
+    if (team.length && !team.some(s => s?.seat_id === ballot?.by_seat && !pureJudge(s))) add(`${path}.by_seat`, 'must name a council seat other than the independent judge.');
     list(ballot?.order).forEach((label, rank) => { if (!labels.has(label)) add(`${path}.order`, `unknown proposal ${label}.`); else scores.set(label, scores.get(label) + Math.max(0, expected.length - rank)); });
   });
   const result = list(d.ranking?.result);
@@ -310,7 +330,7 @@ function councilChecks(d, c, add, warn) {
   if (full && !challenged && !(passes.has(1) && passes.has(2))) add('red_team', 'untested consensus needs both red-team passes before production.');
   if (full && !(unanimous && passes.has(1) && passes.has(2)) && !present(d.decision?.dissent?.verbatim)) add('decision.dissent', 'record the strongest dissent verbatim.');
   const dissenter = d.decision?.dissent?.by_seat;
-  if (dissenter && team.length && !team.some(s => s?.seat_id === dissenter && !hasSeatType(s, 'judge'))) add('decision.dissent.by_seat', 'must name a council seat other than the independent judge.');
+  if (dissenter && team.length && !team.some(s => s?.seat_id === dissenter && !pureJudge(s))) add('decision.dissent.by_seat', 'must name a council seat other than the independent judge.');
 }
 function evidenceChecks(d, c, add) {
   unique(d.claims, 'id', 'claims', add);

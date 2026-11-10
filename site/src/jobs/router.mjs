@@ -107,6 +107,8 @@ const NAMED_DELIVERABLES=[
  [/\bcompetitor (?:analysis|research|teardowns?|reviews?)\b/,['study-competitors','understand-customers']],
  [/\bseo\b|\bkeyword (?:plans?|research)\b/,['get-found-in-search']],
  [/\bpric(?:e|ing) (?:audits?|reviews?|plans?|strateg(?:y|ies))\b/,['set-prices']],
+ // "Audit our store" in plain words means: where does it lose buyers. A security or speed audit says so.
+ [/\b(?:audit|review) (?:of )?(?:our|my|the|your|this) (?:online )?(?:store|shop|website|site)\b(?! (?:security|speed|apps?))|\b(?:store|shop|website|site) audits?\b/,['audit-landing-page','speed-up-store']],
  [/\bcold (?:e-?mails?|outreach)\b|\boutreach e-?mails?\b/,['write-emails','sell-and-negotiate']],
 ];
 /** The words that name the deliverable, as text: from the first action verb to where the setting starts. */
@@ -141,7 +143,8 @@ export function classifyJob(request, approaches = {}, { deliverable_kind } = {})
  const parts=deliverableWords(request),place=w=>!parts?1:parts.head.has(w)?HEAD_WEIGHT:CONTEXT_WEIGHT;
  // A creation request should favour production over an audit that mentions the same output.
  // This is a retrieval hint; the lead still checks the candidate against the real output.
- const intent=[...query].find(w=>ACTIONS.has(w));
+ // A request with no verb that names a deliverable ("a landing page and a video script") is a request to make it.
+ const intent=[...query].find(w=>ACTIONS.has(w))??(requestedWork(request).kinds.length?'make':undefined);
  const affinity=d=>{
   if(!intent)return 1;
   const actions=[...d.title].filter(w=>ACTIONS.has(w));

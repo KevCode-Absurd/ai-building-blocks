@@ -649,6 +649,59 @@
       },
       "minItems": 0,
       "maxItems": 30
+    },
+    "work": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 8,
+      "description": "Mixed work only: one row per kind of work the request names, with the maker seat that makes it. The first row is the lead.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "job": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9-]{0,119}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "maker_seat": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 1000
+          },
+          "lead": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "kind",
+          "label",
+          "maker_seat"
+        ],
+        "additionalProperties": false
+      }
     }
   },
   "required": [

@@ -194,7 +194,7 @@ causal chain, the ruled-out hypotheses, and the command→output table.
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Incident learning report writer](https://useaiblocks.com/skills/copilot-incident-postmortem). It takes the incident record and audit report.
 - The [Slow code fixer](https://useaiblocks.com/skills/slow-code-fixer). It takes the audit report.
-- The [Incident postmortem writer](https://useaiblocks.com/skills/incident-postmortem-writer). It takes the incident record.
+- The [Incident review writer](https://useaiblocks.com/skills/incident-postmortem-writer). It takes the incident record.
 - The [Security incident response planner](https://useaiblocks.com/skills/security-incident-triager). It takes the incident record.
 - The [On-call handoff writer](https://useaiblocks.com/skills/on-call-handoff-writer). It takes the incident record.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

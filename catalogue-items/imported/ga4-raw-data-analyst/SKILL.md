@@ -168,7 +168,7 @@ The model evaluation status and exactly three planned group objectives are maint
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Read your ad results** with the [Marketing attribution analyst](https://useaiblocks.com/skills/attribution-model-chooser). It takes the results.
+- **Read your ad results** with the [Marketing channel credit analyst](https://useaiblocks.com/skills/attribution-model-chooser). It takes the results.
 - The [Conversion funnel analyst](https://useaiblocks.com/skills/conversion-funnel-analyst).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

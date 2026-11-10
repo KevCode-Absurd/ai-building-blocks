@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Your page** with the [Store quiz funnel builder](https://useaiblocks.com/skills/store-quiz-funnel-builder). Bring a store capture (optional). It uses your brand brain and offer.
+1. **Your page** with the [Store quiz funnel builder](https://useaiblocks.com/skills/store-quiz-funnel-builder). Bring a store capture (optional). It uses your brand file and offer.
 2. This one.
 
 How to start:

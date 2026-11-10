@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Your page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). Bring customer words (optional), an objection map (optional), a draft (optional). It uses your brand brain and offer and ad copy.
+1. **Your page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). Bring customer words (optional), an objection map (optional), a draft (optional). It uses your brand file and offer and ad copy.
 2. This one.
 
 How to start:

@@ -184,6 +184,7 @@ The script also drafts `context/brand-dna.md`, a measured summary of the raw cap
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check the landing page** with the [Brand fidelity check](https://useaiblocks.com/skills/brand-fidelity-check). It takes the design tokens.
+- **Write the landing page** with the [Make three first screens](https://useaiblocks.com/skills/make-three-first-screens). It takes the design tokens and store capture.
 - The [Store brand consistency reviewer](https://useaiblocks.com/skills/store-brand-signal-auditor). It takes the store capture.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

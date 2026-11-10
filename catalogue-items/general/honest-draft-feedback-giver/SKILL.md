@@ -65,6 +65,7 @@ What the maker loves. One sentence on the whole. What is working, with a few wor
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Reader feedback sorter](https://useaiblocks.com/skills/reader-feedback-sorter). It takes the notes.
 - The [Draft feedback editor](https://useaiblocks.com/skills/good-note-sharpener). It takes the notes.
+- The [Long-form draft editor](https://useaiblocks.com/skills/long-form-draft-editor). It takes the notes.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

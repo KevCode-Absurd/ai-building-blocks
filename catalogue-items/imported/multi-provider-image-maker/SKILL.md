@@ -25,7 +25,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **An image prompt** (yours): a render-ready image prompt plus the reference roles it uses.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **An image prompt** with the [Marketing image maker](https://useaiblocks.com/skills/marketing-image-maker). Bring a brief. It uses your brand brain.
+1. **An image prompt** with the [Marketing image maker](https://useaiblocks.com/skills/marketing-image-maker). Bring a brief. It uses your brand file.
 2. This one.
 
 How to start:

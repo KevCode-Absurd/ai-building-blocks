@@ -229,7 +229,6 @@ After the four (or compressed) sections are delivered:
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Weekly work review planner](https://useaiblocks.com/skills/weekly-review-guide). It takes the plan.
 - The [Weekly task focus planner](https://useaiblocks.com/skills/weekly-review-keeper). It takes the plan.
-- The [Task list manager](https://useaiblocks.com/skills/task-list-keeper). It takes the plan.
 - The [Handover note writer](https://useaiblocks.com/prompts/handover-note-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

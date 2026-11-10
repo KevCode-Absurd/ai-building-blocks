@@ -23,9 +23,13 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 - **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **An audit report** with the [Company procedure checker](https://useaiblocks.com/skills/sop-and-runbook-checker). Bring a document, a plan (optional).
+2. This one.
+
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, an audit report, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, an audit report, a document. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 <!-- /needs -->
 
@@ -96,8 +100,8 @@ Ask the user for: the commands or notes they use today, the systems involved, an
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Incident postmortem writer](https://useaiblocks.com/skills/incident-postmortem-writer).
-- The [Runbook writer](https://useaiblocks.com/skills/runbook-writer).
+- The [Incident review writer](https://useaiblocks.com/skills/incident-postmortem-writer).
+- The [Service operations guide writer](https://useaiblocks.com/skills/runbook-writer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -118,3 +122,5 @@ If **~~ITSM** is connected:
 1. **Be painfully specific** — "Run the script" is not a step. "Run `python sync.py --prod --dry-run` from the ops server" is.
 2. **Include failure modes** — What can go wrong at each step and what to do about it.
 3. **Test the runbook** — Have someone unfamiliar with the process follow it. Fix where they get stuck.
+
+Changed by AI Blocks (2026-11-10): refreshed the generated Before you start and After this guidance from catalogue metadata.

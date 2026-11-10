@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Unmet customer need researcher** with the [Unmet customer need researcher](https://useaiblocks.com/skills/job-hunting-spot-finder). Bring your question, customer words (optional), your notes (optional), customer needs (optional). It uses your brand brain.
+1. **Unmet customer need researcher** with the [Unmet customer need researcher](https://useaiblocks.com/skills/job-hunting-spot-finder). Bring your question, customer words (optional), your notes (optional), customer needs (optional). It uses your brand file.
 2. This one.
 
 How to start:

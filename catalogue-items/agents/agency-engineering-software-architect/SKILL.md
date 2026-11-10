@@ -78,7 +78,7 @@ A text sketch of the parts and their links is welcome. Keep it plain text.
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Software developer from specifications](https://useaiblocks.com/skills/spec-builder). It takes the document.
+- The [Decision record writer](https://useaiblocks.com/skills/decision-record-writer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

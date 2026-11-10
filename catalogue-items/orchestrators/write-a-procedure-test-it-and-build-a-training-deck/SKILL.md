@@ -72,8 +72,8 @@ Pause here: Fix the gaps in the procedure. Then ask someone who has never done t
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [PowerPoint deck change reviewer](https://useaiblocks.com/skills/powerpoint-deck-change-reviewer). It takes the slide deck.
 - The [India finance slide reviewer](https://useaiblocks.com/skills/finance-deck-quality-checker). It takes the slide deck.
-- The [Recurring task procedure writer](https://useaiblocks.com/skills/repeat-task-step-guide-writer). It takes the document.
 - The [PowerPoint audience handout builder](https://useaiblocks.com/skills/powerpoint-audience-handout-builder). It takes the slide deck.
+- The [Recurring task procedure writer](https://useaiblocks.com/skills/repeat-task-step-guide-writer). It takes the document.
 - The [Resale store daily procedure planner](https://useaiblocks.com/skills/resale-store-daily-procedure-planner). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

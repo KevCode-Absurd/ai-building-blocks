@@ -263,6 +263,6 @@ Let's go."
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the lesson plan and draft.
 - The [Lesson barrier spotter](https://useaiblocks.com/skills/lesson-barrier-spotter). It takes the lesson plan.
-- The [Lesson opener planner](https://useaiblocks.com/prompts/lesson-opener-planner). It takes the lesson plan.
+- The [Accessible lesson auditor](https://useaiblocks.com/skills/accessible-lesson-auditor). It takes the lesson plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

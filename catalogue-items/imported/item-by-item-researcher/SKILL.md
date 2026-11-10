@@ -158,7 +158,6 @@ After all complete, output:
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Research results report builder](https://useaiblocks.com/skills/research-results-report-builder). It takes the shortlist.
-- The [Zotero library manager](https://useaiblocks.com/skills/zotero-library-manager). It takes the shortlist.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

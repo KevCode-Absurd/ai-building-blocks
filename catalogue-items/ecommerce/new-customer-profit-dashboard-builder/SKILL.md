@@ -98,7 +98,7 @@ Save the metric definitions to the person's brand file so every report uses them
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [CAC payback checker](https://useaiblocks.com/skills/cac-payback-checker). It takes the spreadsheet.
+- The [Customer cost payback checker](https://useaiblocks.com/skills/cac-payback-checker). It takes the spreadsheet.
 - The [Break-even ad cost calculator](https://useaiblocks.com/prompts/break-even-ad-target-finder). It takes the spreadsheet.
 - The [Customer acquisition profitability reviewer](https://useaiblocks.com/skills/ltgp-to-cac-checker). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

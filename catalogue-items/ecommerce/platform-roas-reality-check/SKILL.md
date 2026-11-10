@@ -111,8 +111,8 @@ MISSING: <what you did not give>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Ad channel budget reviewer](https://useaiblocks.com/skills/monthly-channel-budget-reviewer).
 - The [Meta campaign growth planner](https://useaiblocks.com/skills/meta-scaling-campaign-planner). It takes the audit report.
+- The [Ad channel budget reviewer](https://useaiblocks.com/skills/monthly-channel-budget-reviewer).
 - The [Meta campaign purpose checker](https://useaiblocks.com/skills/meta-campaign-purpose-checker). It takes the audit report.
 - The [Cost per customer calculator](https://useaiblocks.com/skills/cost-per-customer-calculator). It takes the audit report.
 - The [Analytics events and tracking gap review](https://useaiblocks.com/skills/monthly-tracking-health-keeper).

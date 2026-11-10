@@ -79,8 +79,8 @@ Finish with the assumptions made and `CHECKS MISSED:` listing any check that cou
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Card payment security checker](https://useaiblocks.com/skills/card-payment-security-checker). It takes the audit report.
 - The [Trade compliance checklist builder](https://useaiblocks.com/skills/trade-compliance-checklist). It takes the audit report.
+- The [Card payment security checker](https://useaiblocks.com/skills/card-payment-security-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

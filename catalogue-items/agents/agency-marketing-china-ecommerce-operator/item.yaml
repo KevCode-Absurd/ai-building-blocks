@@ -41,3 +41,7 @@ credits:
     url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-china-ecommerce-operator.md
     used: Original agent profile, preserved in references/source-agent.md; AI Blocks
       adds setup and review instructions.
+  - title: AI Blocks catalogue guidance
+    by: AI Blocks
+    url: https://useaiblocks.com
+    used: We added Before you start and After this sections that link to other AI Blocks steps. We refreshed those generated sections from the catalogue inputs and next-step links.

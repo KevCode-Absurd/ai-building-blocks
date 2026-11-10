@@ -200,7 +200,7 @@ The query does not fetch customer emails, so the CSV has no email column. Custom
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Understand your buyers** with the [Customer cancellation risk finder](https://useaiblocks.com/skills/churn-risk-finder).
-- **Shape the product** with the [Subscription churn prevention planner](https://useaiblocks.com/skills/churn-reducer).
+- **Shape the product** with the [Subscription cancellation prevention planner](https://useaiblocks.com/skills/churn-reducer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

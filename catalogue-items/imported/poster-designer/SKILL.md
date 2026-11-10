@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A design direction** (yours): the page's type, colours and layout rules.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A design direction** with the [Type-led poster planner](https://useaiblocks.com/skills/type-led-poster-planner). Bring a brief. It uses your brand brain.
+1. **A design direction** with the [Type-led poster planner](https://useaiblocks.com/skills/type-led-poster-planner). Bring a brief. It uses your brand file.
 2. This one.
 
 How to start:
@@ -193,11 +193,12 @@ Take a second pass. Go back to the code and refine/polish further to make this a
 
 To create additional pages when requested, create more creative pages along the same lines as the design philosophy but distinctly different as well. Bundle those pages in the same .pdf or many .pngs. Treat the first page as just a single page in a whole coffee table book waiting to be filled. Make the next pages unique twists and memories of the original. Have them almost tell a story in a very tasteful way. Exercise full creative freedom.
 
-Changed by AI Blocks (2026-10-28): added numbered steps, a plain quality bar and a font fallback rule earlier; today made the font rule one rule (two or three fonts from ./canvas-fonts).
-
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Colour contrast checker](https://useaiblocks.com/skills/colour-contrast-checker). It takes the image.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+Changed by AI Blocks (2026-10-28): added numbered steps, a plain quality bar and a font fallback rule earlier; today made the font rule one rule (two or three fonts from ./canvas-fonts).
+Changed by AI Blocks (2026-11-10): refreshed the generated Before you start and After this guidance from catalogue metadata.

@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **An audit report** with the [Discount margin and ad-cost checker](https://useaiblocks.com/skills/discount-impact-checker). Bring your results (optional). It uses your brand brain and offer.
+1. **An audit report** with the [Discount margin and ad-cost checker](https://useaiblocks.com/skills/discount-impact-checker). Bring your results (optional). It uses your brand file and offer.
 2. This one.
 
 How to start:

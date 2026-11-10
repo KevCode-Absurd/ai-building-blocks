@@ -35,7 +35,7 @@ credits:
   - title: nonprofit-needs-assessment skill
     by: Nonprofit Skills
     url: https://github.com/sector-skills/nonprofit-skills/tree/7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8/nonprofit-skills-library/skills/programs-impact/nonprofit-needs-assessment
-    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps. We refreshed those generated sections from the catalogue inputs and next-step links.
   - title: Original author
     by: Brendon Connelly
     url: https://brendonconnelly.com

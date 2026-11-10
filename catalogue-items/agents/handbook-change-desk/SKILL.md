@@ -79,8 +79,8 @@ You never do these yourself. You list them for approval:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Company procedure checker](https://useaiblocks.com/skills/sop-and-runbook-checker). It takes the document and plan.
 - The [Data catalog entry writer](https://useaiblocks.com/skills/data-catalog-entry-writer). It takes the policy and document.
-- The [Policy change reviewer](https://useaiblocks.com/skills/rule-change-policy-keeper). It takes the policy and document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

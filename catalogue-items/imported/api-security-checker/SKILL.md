@@ -221,10 +221,9 @@ clean security posture from passing structural checks or from a risk metadata la
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Code change security reviewer](https://useaiblocks.com/prompts/diff-security-skimmer). It takes the code change.
-- The [MCP server security reviewer](https://useaiblocks.com/skills/mcp-server-hardener). It takes the code change.
 - The [Code security warning checker](https://useaiblocks.com/skills/insecure-code-catcher). It takes the code change.
+- The [MCP server security reviewer](https://useaiblocks.com/skills/mcp-server-hardener). It takes the code change.
 - The [Code change test coverage reviewer](https://useaiblocks.com/skills/test-gap-finder). It takes the code change.
-- The [API test suite builder](https://useaiblocks.com/skills/api-test-suite-builder). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

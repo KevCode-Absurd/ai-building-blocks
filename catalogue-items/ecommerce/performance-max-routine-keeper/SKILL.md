@@ -22,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A plan** with the [Performance Max launch planner](https://useaiblocks.com/skills/performance-max-launch-planner). Bring your results. It uses your brand brain.
+1. **A plan** with the [Performance Max launch planner](https://useaiblocks.com/skills/performance-max-launch-planner). Bring your results. It uses your brand file.
 2. This one.
 
 How to start:

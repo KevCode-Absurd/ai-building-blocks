@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Competitors** (yours): the brands buyers compare you with.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A plan** with the [Customer search question mapper](https://useaiblocks.com/skills/shopper-question-and-fan-out-mapper). Bring customer words (optional), a search query report (optional). It uses your brand brain.
+1. **A plan** with the [Customer search question mapper](https://useaiblocks.com/skills/shopper-question-and-fan-out-mapper). Bring customer words (optional), a search query report (optional). It uses your brand file.
 2. This one.
 
 How to start:

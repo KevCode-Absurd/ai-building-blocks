@@ -250,6 +250,5 @@ This task is designed for novice learners, and the modifications above are appro
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Lesson barrier spotter](https://useaiblocks.com/skills/lesson-barrier-spotter). It takes the audit report.
 - The [English learner task support planner](https://useaiblocks.com/skills/ell-task-scaffolds). It takes the audit report.
-- The [Learning option planner](https://useaiblocks.com/skills/learning-options-designer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

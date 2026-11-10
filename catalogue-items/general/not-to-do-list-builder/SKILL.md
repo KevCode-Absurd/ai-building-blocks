@@ -67,9 +67,9 @@ Where the time went, with false emergencies marked. The 80/20 check, with any re
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the plan.
 - The [Business metric quality reviewer](https://useaiblocks.com/skills/vanity-metric-fixer). It takes the plan.
 - The [Weekly time audit planner](https://useaiblocks.com/skills/weekly-time-audit-planner). It takes the plan.
+- The [Habit plan builder](https://useaiblocks.com/skills/habit-plan-builder).
 - The [Weekly task focus planner](https://useaiblocks.com/skills/weekly-review-keeper). It takes the plan.
 - **Plan your strategy** with the [Weekly big task sorter](https://useaiblocks.com/skills/weekly-big-task-sorter). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

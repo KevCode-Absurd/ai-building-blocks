@@ -170,7 +170,7 @@ See `references/user-story-templates.md` for complete template library.
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [In-app tour designer](https://useaiblocks.com/skills/in-app-tour-designer). It takes the plan.
 - The [Product feature review planner](https://useaiblocks.com/skills/review-a-feature-and-plan-its-future). It takes the product spec.
-- The [QA test scenario writer](https://useaiblocks.com/skills/qa-test-scenario-writer). It takes the product spec.
+- The [Test scenario writer](https://useaiblocks.com/skills/qa-test-scenario-writer). It takes the product spec.
 - The [Playwright test writer](https://useaiblocks.com/skills/browser-test-writer). It takes the product spec.
 - The [Product funnel steps and experiment review](https://useaiblocks.com/skills/weekly-product-funnel-watcher). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

@@ -173,7 +173,7 @@ SDK v2 and the 2026-07-28 revision changed many SDK v1 patterns. Do not copy SDK
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [TypeScript MCP server builder](https://useaiblocks.com/skills/copilot-typescript-mcp-server-generator). It takes the codebase.
-- The [API to MCP server builder](https://useaiblocks.com/skills/api-to-mcp-server-builder). It takes the codebase.
 - The [C# MCP server builder](https://useaiblocks.com/skills/copilot-dotnet-mcp-builder). It takes the codebase.
+- The [API to MCP server builder](https://useaiblocks.com/skills/api-to-mcp-server-builder). It takes the codebase.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

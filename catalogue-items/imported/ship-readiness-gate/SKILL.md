@@ -209,6 +209,6 @@ This skill does not:
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Software release verification coordinator](https://useaiblocks.com/skills/release-manager).
 - The [Release safety planner](https://useaiblocks.com/skills/safe-release-planner). It takes the audit report.
-- The [Incident learning report writer](https://useaiblocks.com/skills/copilot-incident-postmortem). It takes the audit report.
+- The [Vercel publisher](https://useaiblocks.com/skills/vercel-publisher).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

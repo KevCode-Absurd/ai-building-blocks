@@ -67,8 +67,8 @@ The decision size. The aptitude check. The learning time. The helper checks. The
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Second-opinion reviewer](https://useaiblocks.com/skills/second-opinion-reviewer). It takes the plan.
+- The [Outside chooser](https://useaiblocks.com/skills/outside-chooser). It takes the plan.
 - The [Plan assumptions and evidence tracker](https://useaiblocks.com/skills/monthly-belief-evidence-keeper).
-- The [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

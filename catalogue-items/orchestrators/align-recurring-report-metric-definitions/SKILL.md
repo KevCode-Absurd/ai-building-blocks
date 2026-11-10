@@ -102,6 +102,6 @@ Nothing outside your working files has changed. Offer one next step and say they
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Report definition change reviewer](https://useaiblocks.com/skills/report-definition-drift-review-assistant). It takes the spreadsheet.
 - The [Metric mismatch tracer](https://useaiblocks.com/skills/metric-mismatch-tracer). It takes the spreadsheet.
-- The [Recurring KPI report maker](https://useaiblocks.com/skills/recurring-kpi-report-maker). It takes the spreadsheet.
+- The [Recurring report maker](https://useaiblocks.com/skills/recurring-kpi-report-maker). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

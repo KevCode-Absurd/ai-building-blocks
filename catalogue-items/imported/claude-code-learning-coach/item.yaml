@@ -38,3 +38,7 @@ credits:
     used: Adapted primary instructions with self-contained lesson paths and scoring
       limits. Original instructions, selected references, ten lessons and MIT
       license retained as byte-exact source files.
+  - title: AI Blocks catalogue guidance
+    by: AI Blocks
+    url: https://useaiblocks.com
+    used: We added Before you start and After this sections that link to other AI Blocks steps. We refreshed those generated sections from the catalogue inputs and next-step links.

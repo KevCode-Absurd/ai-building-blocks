@@ -22,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **An objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **An objection map** with the [Unanswered customer question finder](https://useaiblocks.com/skills/customer-question-finder). Bring customer words, your page. It uses your brand brain.
+1. **An objection map** with the [Unanswered customer question finder](https://useaiblocks.com/skills/customer-question-finder). Bring customer words, your page. It uses your brand file.
 2. This one.
 
 How to start:

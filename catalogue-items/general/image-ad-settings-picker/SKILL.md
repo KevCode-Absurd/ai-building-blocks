@@ -20,8 +20,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your image ads** (yours): the image ads, attached as pictures.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. **Your image ads** with the [Buyer research image ad maker](https://useaiblocks.com/workflows/scroll-stopping-image-ads). Bring customer words, product photos, your results (optional). It uses your brand brain.
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand file.
+2. **Your image ads** with the [Buyer research image ad maker](https://useaiblocks.com/workflows/scroll-stopping-image-ads). Bring customer words, product photos, your results (optional). It uses your brand file.
 3. This one.
 
 How to start:

@@ -7,6 +7,26 @@ description: "Use before you write a plan or strategy (a marketing plan, a budge
 
 A model asked for a plan writes the balanced one: a bit of everything, in the usual order. The client cannot see what was traded away, because no other plan was ever on the table. This skill puts two real plans on one page each, with the money and dates showing, and has someone else choose.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Any good chat AI:** Writing and costing two plans needs no special tool.
+- **An AI connected to your ad or sales account:** Pulls the real numbers, so fewer working figures are needed.
+<!-- /needs -->
+
 ## What you need
 
 - **The question and the spec sheet** (required): the decision the plan serves, the total budget, the time span, and the acceptance tests. No spec sheet? Write the job in one sentence and 5 to 7 tests first.
@@ -69,6 +89,13 @@ CHECKS MISSED
 - Every step has a date and an owner.
 - Every working figure is labelled and shows its sum. None is a revenue forecast.
 - The hand-over recommends one plan and gives the other a single line.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Waste and by-product finder](https://useaiblocks.com/skills/waste-and-by-product-finder). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

@@ -72,6 +72,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Meeting pre-read writer](https://useaiblocks.com/skills/meeting-pre-read-writer). It takes the document.
 - The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the document.
 - The [Notes wiki builder](https://useaiblocks.com/skills/notes-wiki-builder). It takes the document.
+- The [Company procedure checker](https://useaiblocks.com/skills/sop-and-runbook-checker). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

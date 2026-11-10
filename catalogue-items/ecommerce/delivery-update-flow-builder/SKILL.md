@@ -18,8 +18,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **An email flow** (yours): an email/SMS flow: trigger, timing, messages, segments.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **An email flow** with the [Post-purchase flow builder](https://useaiblocks.com/skills/post-purchase-flow-builder). It uses your brand brain.
-2. **An email flow** with the [Reorder and second-order planner](https://useaiblocks.com/skills/reorder-and-second-order-planner). Bring your results (optional). It uses your brand brain and offer.
+1. **An email flow** with the [Post-purchase flow builder](https://useaiblocks.com/skills/post-purchase-flow-builder). It uses your brand file.
+2. **An email flow** with the [Reorder and second-order planner](https://useaiblocks.com/skills/reorder-and-second-order-planner). Bring your results (optional). It uses your brand file and offer.
 3. This one.
 
 How to start:
@@ -111,7 +111,7 @@ When WISMO is under 5 percent, build the [Post-purchase flow builder](https://us
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Customer email journey planner](https://useaiblocks.com/skills/customer-stage-flow-mapper). It takes the email flow.
 - The [Repeat purchase improvement reviewer](https://useaiblocks.com/skills/monthly-repeat-buyer-keeper).
-- The [Subscription churn auditor](https://useaiblocks.com/skills/subscription-churn-audit). It takes the email flow.
+- The [Subscription cancellation auditor](https://useaiblocks.com/skills/subscription-churn-audit). It takes the email flow.
 - The [Email automation gaps and trigger reviewer](https://useaiblocks.com/skills/email-flow-gap-checker). It takes the email flow.
 - The [Automated direct mail planner](https://useaiblocks.com/skills/programmatic-direct-mail-planner). It takes the email flow.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

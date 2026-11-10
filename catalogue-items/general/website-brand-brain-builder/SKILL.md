@@ -121,12 +121,12 @@ An earlier version of this skill made eight files. `node brand-file.mjs migrate 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Understand your buyers** with the [Customer buying reasons finder](https://useaiblocks.com/skills/customer-buying-reasons-finder). It takes the brand brain.
-- **Write the ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the brand brain.
-- **Make video ads** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). It takes the brand brain.
-- **Make an offer people want** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It takes the brand brain.
-- **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the brand brain.
-- **Fill the gaps in your brand brain** with the [Founder interview planner](https://useaiblocks.com/skills/founder-interview-planner). It takes the brand brain.
+- **Understand your buyers** with the [Customer buying reasons finder](https://useaiblocks.com/skills/customer-buying-reasons-finder). It takes the brand file.
+- **Write the ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the brand file.
+- **Make video ads** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). It takes the brand file.
+- **Make an offer people want** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It takes the brand file.
+- **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the brand file.
+- **Fill the gaps in your brand file** with the [Founder interview planner](https://useaiblocks.com/skills/founder-interview-planner). It takes the brand file.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

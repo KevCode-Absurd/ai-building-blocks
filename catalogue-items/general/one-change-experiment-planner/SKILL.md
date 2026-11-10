@@ -64,8 +64,8 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Experiment plan and results reviewer](https://useaiblocks.com/skills/experiment-readout-desk). It takes the plan.
 - The [Store test evidence reviewer](https://useaiblocks.com/skills/store-test-verdict-maker). It takes the plan.
 - The [Business idea tests and evidence tracker](https://useaiblocks.com/skills/idea-validation-analyst).
-- The [Trial and learning log planner](https://useaiblocks.com/skills/trial-log-planner). It takes the plan.
 - **Check the landing page** with the [A/B test traffic checker](https://useaiblocks.com/skills/ab-test-traffic-checker). It takes the plan.
+- **Shape the product** with the [Product funnel steps and experiment review](https://useaiblocks.com/skills/weekly-product-funnel-watcher). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

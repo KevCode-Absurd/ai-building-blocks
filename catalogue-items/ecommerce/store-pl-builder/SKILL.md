@@ -94,7 +94,7 @@ Reference ranges, if asked for: one speaker's unchecked view for large brands, n
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Break-even ROAS and CPA calculator](https://useaiblocks.com/skills/break-even-roas-and-cpa-calculator).
+- The [Break-even ad spend calculator](https://useaiblocks.com/skills/break-even-roas-and-cpa-calculator).
 - The [Store profit per visitor calculator](https://useaiblocks.com/skills/store-profit-per-visitor-calculator).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

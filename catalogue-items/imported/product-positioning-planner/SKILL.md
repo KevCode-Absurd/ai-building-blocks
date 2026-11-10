@@ -321,7 +321,7 @@ Read only what you need for the current phase.
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Fill the gaps in your brand brain** with the [Brand messaging builder](https://useaiblocks.com/skills/brand-messaging-builder).
+- **Fill the gaps in your brand file** with the [Brand messaging builder](https://useaiblocks.com/skills/brand-messaging-builder).
 - **Study competitor ads** with the [Competitor messaging analyst](https://useaiblocks.com/skills/competitor-messaging-comparer).
 - **Understand your buyers** with the [Customer interview coach](https://useaiblocks.com/skills/customer-interview-coach).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

@@ -94,7 +94,6 @@ This skill mentions `find-your-level` and `weak-area-tracker`. In this catalogue
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Study gap tracker](https://useaiblocks.com/skills/study-gap-tracker). It takes the document.
-- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the plan.
+- The [Study revision coach](https://useaiblocks.com/skills/study-revision-coach). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

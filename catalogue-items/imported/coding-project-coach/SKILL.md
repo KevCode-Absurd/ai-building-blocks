@@ -70,8 +70,6 @@ How to start:
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Study gap tracker](https://useaiblocks.com/skills/study-gap-tracker). It takes the document.
-- The [Learning session handover writer](https://useaiblocks.com/skills/learning-session-handoff). It takes the document.
-- The [Project-based unit brief writer](https://useaiblocks.com/skills/project-based-unit-brief-writer). It takes the plan.
+- The [Topic learning roadmap planner](https://useaiblocks.com/skills/topic-learning-roadmap).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -83,7 +83,7 @@ The design is done only when:
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [RAG pipeline implementation planner](https://useaiblocks.com/skills/agency-engineering-rag-pipeline-engineer). It takes the plan.
+- The [AI document search planner](https://useaiblocks.com/skills/agency-engineering-rag-pipeline-engineer). It takes the plan.
 - The [Data pipeline builder](https://useaiblocks.com/skills/data-pipeline-builder). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

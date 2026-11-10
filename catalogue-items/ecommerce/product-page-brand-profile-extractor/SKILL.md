@@ -220,8 +220,8 @@ Give the requested deliverables, evidence used, assumptions, missing inputs, and
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Brand mood board planner](https://useaiblocks.com/skills/brand-stylescape-planner). It takes the brand brain and buyer profile.
+- The [Brand mood board planner](https://useaiblocks.com/skills/brand-stylescape-planner). It takes the brand file and buyer profile.
 - The [Premium product positioning planner](https://useaiblocks.com/skills/premium-positioning-mapper). It takes the product facts and buyer profile.
-- The [Brand guide builder](https://useaiblocks.com/skills/brand-guide-builder). It takes the brand brain.
+- The [Brand guide builder](https://useaiblocks.com/skills/brand-guide-builder). It takes the brand file.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

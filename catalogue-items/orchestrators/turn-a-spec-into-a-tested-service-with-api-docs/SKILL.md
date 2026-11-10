@@ -87,10 +87,10 @@ Use these instead of the general "After this" list below:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [API design reviewer](https://useaiblocks.com/skills/api-design-reviewer). It takes the API spec and codebase.
 - The [OpenAPI app builder](https://useaiblocks.com/skills/build-an-app-from-an-openapi-spec). It takes the API spec.
 - The [Code documentation writer](https://useaiblocks.com/skills/code-documentation-writer). It takes the codebase.
-- The [Expo API route builder](https://useaiblocks.com/skills/expo-api-route-builder). It takes the codebase.
-- The [API design reviewer](https://useaiblocks.com/skills/api-design-reviewer). It takes the API spec and codebase.
 - The [API test planner](https://useaiblocks.com/skills/agency-testing-api-tester). It takes the API spec.
+- The [Software developer from specifications](https://useaiblocks.com/skills/spec-builder). It takes the codebase.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

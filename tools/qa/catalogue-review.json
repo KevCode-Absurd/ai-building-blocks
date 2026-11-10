@@ -1247,7 +1247,7 @@
     "catalogue-items/general/outside-chooser/item.yaml": {
       "reviewed_by": "AI Blocks source review (Claude, Q6 craft skills)",
       "reviewed_on": "2026-11-10",
-      "method_sha256": "241bd7ae418caee3132ab6ad17a0227fe8a2dcc047c0c14d4ed43a9ccf96eee1",
+      "method_sha256": "ea3d1424ba4529dbec1948891768b9eb6ea417fd50c43ff8546ab458c1c5f3ba",
       "inputs": [
         {
           "type": "brief",
@@ -1310,7 +1310,7 @@
     "catalogue-items/general/clients-eye-check/item.yaml": {
       "reviewed_by": "AI Blocks source review (Claude, Q6 craft skills)",
       "reviewed_on": "2026-11-10",
-      "method_sha256": "6c81445649db2c5408402c4658060ab8130e95b3239fa6f140a85034ee2feba9",
+      "method_sha256": "7203f242a7b9690792fdbc2d6c9baf3da8cca78c284c90db555d9cd0a163705f",
       "inputs": [
         {
           "type": "brief",
@@ -1346,7 +1346,7 @@
     "catalogue-items/general/claim-source-trace/item.yaml": {
       "reviewed_by": "AI Blocks source review (Claude, Q6 craft skills)",
       "reviewed_on": "2026-11-10",
-      "method_sha256": "8e9a78c7eafac824de9e318ceb7f45331bd95ba10a1bc6ac17fdec28013813dd",
+      "method_sha256": "a809dc53aae0a441e722afe76b127ff2240139f0644fade99b4df9da8df86d73",
       "inputs": [
         {
           "type": "copy_draft",
@@ -1373,7 +1373,7 @@
     "catalogue-items/general/buyer-can-act-check/item.yaml": {
       "reviewed_by": "AI Blocks source review (Claude, Q6 craft skills)",
       "reviewed_on": "2026-11-10",
-      "method_sha256": "22e16b3c5afe592e9d2d982655ff1a871ace44a3c082fa25758e33b932e90ae2",
+      "method_sha256": "a980ae6a0a627928ba07faa9ee0faf1b24db9428cf6a0f56eb05b060fedcea26",
       "inputs": [
         {
           "type": "brief",
@@ -1400,7 +1400,7 @@
     "catalogue-items/general/make-three-first-screens/item.yaml": {
       "reviewed_by": "AI Blocks source review (Claude, Q6 craft skills)",
       "reviewed_on": "2026-11-10",
-      "method_sha256": "ea4e08c15ded676afcfda1b42e84c4a48dec031ec67f2e4b87d4755f2a65dccd",
+      "method_sha256": "f1475ba5917907ab0fc03eb9c8b368dd6ab02f6cdd7da266765f75e8d5555c23",
       "inputs": [
         {
           "type": "brief",
@@ -1436,7 +1436,7 @@
     "catalogue-items/general/make-ad-concept-spread/item.yaml": {
       "reviewed_by": "AI Blocks source review (Claude, Q6 craft skills)",
       "reviewed_on": "2026-11-10",
-      "method_sha256": "ff61d4f89d97b8043076a37e62a1f3acd6ed7862d4834fccc70c30ae908b909d",
+      "method_sha256": "7744db0f7979eb1e9500363f5aa695d38ea47c32b7c32b0f49455218fcee5342",
       "inputs": [
         {
           "type": "brief",
@@ -1481,7 +1481,7 @@
     "catalogue-items/general/make-design-directions/item.yaml": {
       "reviewed_by": "AI Blocks source review (Claude, Q6 craft skills)",
       "reviewed_on": "2026-11-10",
-      "method_sha256": "0486b27483671cbde58e51303d077a4e114c48c4d389be2d535e598e6269a38c",
+      "method_sha256": "eb5d7564ed3676e68c6b2b18829b235e86fe718ccf42abef2d2f0aacd9fbb7a3",
       "inputs": [
         {
           "type": "brief",
@@ -1508,7 +1508,7 @@
     "catalogue-items/general/three-series-arcs/item.yaml": {
       "reviewed_by": "AI Blocks source review (Claude, Q6 craft skills)",
       "reviewed_on": "2026-11-10",
-      "method_sha256": "f207c0f4ee5d07a69a5ca09b095d34a07a76725dc5899f6bacc1ce53ebe9b783",
+      "method_sha256": "1265bd7aeb81ca088f5a6b18fab08ba2bb1be519195db92524f53b8352c7fd32",
       "inputs": [
         {
           "type": "brief",
@@ -1535,7 +1535,7 @@
     "catalogue-items/general/two-plan-shapes/item.yaml": {
       "reviewed_by": "AI Blocks source review (Claude, Q6 craft skills)",
       "reviewed_on": "2026-11-10",
-      "method_sha256": "5753c4715c44d69464f4e8c18609af3d70489b5f29f837e4edfe55ae530503d7",
+      "method_sha256": "136cd4af9b4ffb22be14219b7bc833b311e3603777044cf3700f6ca4cbc49ece",
       "inputs": [
         {
           "type": "performance_sheet",

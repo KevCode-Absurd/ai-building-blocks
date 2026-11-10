@@ -489,6 +489,6 @@ python scripts/pir_generator.py --incident assets/sample_incident_pir_data.json 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Build it** with the [Incident runbook writer](https://useaiblocks.com/skills/incident-runbook-writer).
-- The [Incident postmortem writer](https://useaiblocks.com/skills/incident-postmortem-writer). It takes the incident record.
+- The [Incident review writer](https://useaiblocks.com/skills/incident-postmortem-writer). It takes the incident record.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

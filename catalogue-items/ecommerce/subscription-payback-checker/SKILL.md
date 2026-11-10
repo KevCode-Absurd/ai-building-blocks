@@ -18,8 +18,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
-2. **Your offer** with the [Subscription offer designer](https://useaiblocks.com/skills/subscription-offer-designer). Bring your results (optional). It uses your brand brain.
+1. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand file.
+2. **Your offer** with the [Subscription offer designer](https://useaiblocks.com/skills/subscription-offer-designer). Bring your results (optional). It uses your brand file.
 3. This one.
 
 How to start:
@@ -96,7 +96,7 @@ MISSING: <cohort data | margin | cash | CAC>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Subscription offer designer](https://useaiblocks.com/skills/subscription-offer-designer).
-- The [Subscription churn auditor](https://useaiblocks.com/skills/subscription-churn-audit).
+- The [Subscription cancellation auditor](https://useaiblocks.com/skills/subscription-churn-audit).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -78,8 +78,8 @@ The prices found and the top third. The fees compared. The chosen fee with its r
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Job exit plan writer](https://useaiblocks.com/skills/job-exit-plan-writer). It takes the plan.
-- The [Decision evidence planner](https://useaiblocks.com/skills/decision-evidence-bar-setter). It takes the plan.
 - **Make an offer people want** with the [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). It takes the offer and plan.
+- The [Decision evidence planner](https://useaiblocks.com/skills/decision-evidence-bar-setter). It takes the plan.
 - **Grow on social** with the [First customer outreach planner](https://useaiblocks.com/skills/first-customers-by-hand-planner). It takes the offer.
 - The [Client fee and work-hour reviewer](https://useaiblocks.com/skills/quarterly-client-rate-reviewer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

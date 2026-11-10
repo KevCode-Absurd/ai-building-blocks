@@ -87,7 +87,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Logo strength tester](https://useaiblocks.com/skills/logo-strength-tester). It takes the design direction.
 - The [Page design standards checker](https://useaiblocks.com/skills/page-design-standards-checker). It takes the design tokens.
 - The [Design handoff completeness reviewer](https://useaiblocks.com/skills/design-handoff-completeness-assistant). It takes the document.
-- **Fill the gaps in your brand brain** with the [Brand style guide writer](https://useaiblocks.com/skills/brand-style-guide-writer). It takes the design direction.
+- **Fill the gaps in your brand file** with the [Brand style guide writer](https://useaiblocks.com/skills/brand-style-guide-writer). It takes the design direction.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

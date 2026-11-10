@@ -9,6 +9,24 @@ Makers add small facts without noticing: a founder's name under an email, a disp
 
 To score how well persuasive claims match their proof, use [Claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher). This skill is the gate before hand-over.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A draft** (yours): the ad, page, email or script you want checked or improved.
+- **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a draft, a store capture. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Any good chat AI:** Matching copy to sources needs careful reading, not special tools.
+- **An AI that can open web pages:** Reads a missing fact from your live page on the day.
+<!-- /needs -->
+
 ## What you need
 
 - **The draft** (required): the copy, page, ad set, email series or plan, complete, with subject lines, button words, image text, footers and sign-offs.
@@ -70,6 +88,13 @@ The trace is for your record and a reviewer. The client gets the clean work. If 
 - No line in the draft carries a flag, a footnote or "to confirm".
 - Prices, stock, offers and deadlines were read today.
 - The copy still reads well where lines were cut.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Decide what to do** with the [Client's-eye check](https://useaiblocks.com/skills/clients-eye-check). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

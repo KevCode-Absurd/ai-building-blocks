@@ -23,7 +23,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A plan** with the [Google Shopping margin-tier planner](https://useaiblocks.com/skills/margin-tier-shopping-builder). Bring your results. It uses your brand brain.
+1. **A plan** with the [Google Shopping margin-tier planner](https://useaiblocks.com/skills/margin-tier-shopping-builder). Bring your results. It uses your brand file.
 2. **A plan** with the [Search term sorter](https://useaiblocks.com/skills/search-term-sorter). Bring a search query report.
 3. This one.
 

@@ -100,7 +100,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Incident learning report writer](https://useaiblocks.com/skills/copilot-incident-postmortem). It takes the incident record and plan and document.
 - The [CloudWatch incident evidence collector](https://useaiblocks.com/skills/copilot-aws-cloudwatch-investigation). It takes the incident record.
 - The [Outage incident leader](https://useaiblocks.com/skills/outage-incident-leader). It takes the incident record.
-- The [Incident postmortem writer](https://useaiblocks.com/skills/incident-postmortem-writer). It takes the incident record.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

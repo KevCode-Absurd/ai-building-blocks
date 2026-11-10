@@ -75,13 +75,9 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **An audit report** with the [Accessible lesson auditor](https://useaiblocks.com/skills/accessible-lesson-auditor). Bring your lesson plan.
-2. This one.
-
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your lesson plan, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your lesson plan, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 <!-- /needs -->
 

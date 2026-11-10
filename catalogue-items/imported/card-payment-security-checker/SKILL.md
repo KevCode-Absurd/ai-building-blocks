@@ -270,7 +270,7 @@ Outputs from this skill are informational guidance based on PCI DSS v4.0.1 (PCI 
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Compliance auditor agent](https://useaiblocks.com/skills/agency-security-compliance-auditor). It takes the audit report.
 - The [Privacy impact assessment writer](https://useaiblocks.com/skills/privacy-impact-assessment-writer). It takes the audit report.
+- The [Compliance auditor agent](https://useaiblocks.com/skills/agency-security-compliance-auditor). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

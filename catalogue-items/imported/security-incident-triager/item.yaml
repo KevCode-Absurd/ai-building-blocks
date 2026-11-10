@@ -30,3 +30,7 @@ credits:
     by: Alireza Rezvani
     url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/incident-response
     used: Used under the MIT licence. We gave it a plain name, marked the deadline and penalty table as unverified, and added a hand-off line at the end.
+  - title: AI Blocks catalogue guidance
+    by: AI Blocks
+    url: https://useaiblocks.com
+    used: We added Before you start and After this sections that link to other AI Blocks steps. We refreshed those generated sections from the catalogue inputs and next-step links.

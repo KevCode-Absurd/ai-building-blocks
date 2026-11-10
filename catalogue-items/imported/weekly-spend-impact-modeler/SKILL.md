@@ -145,6 +145,6 @@ as testable hypotheses tied to the available evidence, never universal platform 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Read your ad results** with the [Ad spend analyst](https://useaiblocks.com/skills/ad-spend-analyst).
-- The [Incrementality test planner](https://useaiblocks.com/skills/incrementality-test-planner).
+- The [Ad lift test planner](https://useaiblocks.com/skills/incrementality-test-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -78,6 +78,7 @@ End with a HAND-BACK SUMMARY: each saved file, each step run or skipped and why,
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Company procedure checker](https://useaiblocks.com/skills/sop-and-runbook-checker). It takes the document.
 - The [Recurring task procedure writer](https://useaiblocks.com/skills/repeat-task-step-guide-writer). It takes the document.
 - The [Resale store daily procedure planner](https://useaiblocks.com/skills/resale-store-daily-procedure-planner). It takes the document.
 - The [Clinic referral handover reviewer](https://useaiblocks.com/skills/referral-administration-evidence-review-assistant). It takes the document.

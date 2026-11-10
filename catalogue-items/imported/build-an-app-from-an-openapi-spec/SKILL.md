@@ -123,7 +123,7 @@ After generation:
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Software developer from specifications](https://useaiblocks.com/skills/spec-builder). It takes the document and codebase.
 - The [API spec writer](https://useaiblocks.com/skills/api-spec-writer). It takes the codebase.
-- The [REST API designer](https://useaiblocks.com/skills/rest-api-designer). It takes the codebase.
+- The [Feature requirements writer](https://useaiblocks.com/skills/spec-writer). It takes the codebase.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -51,7 +51,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Late invoice and cash forecast reviewer](https://useaiblocks.com/skills/weekly-invoice-and-cash-chaser).
 - The [Spreadsheet checker](https://useaiblocks.com/skills/spreadsheet-checker). It takes the audit report.
 - The [Handover note writer](https://useaiblocks.com/prompts/handover-note-writer). It takes the audit report.
-- The [Process and SOP writer](https://useaiblocks.com/skills/process-and-sop-writer). It takes the audit report.
+- The [Process and procedure writer](https://useaiblocks.com/skills/process-and-sop-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

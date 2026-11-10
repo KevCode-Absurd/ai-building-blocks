@@ -257,7 +257,6 @@ Overall: passing teach-back. Score: 3/3/2. The only revision I'd suggest is a on
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Direct teaching lesson builder](https://useaiblocks.com/skills/direct-teaching-lesson-builder). It takes the notes.
-- The [Written feedback checker](https://useaiblocks.com/skills/written-feedback-checker). It takes the notes.
 - The [Worked-example practice ladder builder](https://useaiblocks.com/skills/worked-example-practice). It takes the notes.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

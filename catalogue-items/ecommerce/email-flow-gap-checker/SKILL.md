@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your data** (yours): the data files, with their format and where they came from.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **An email flow** with the [Browse abandonment email flow builder](https://useaiblocks.com/skills/browse-abandonment-flow-builder). It uses your brand brain and offer.
+1. **An email flow** with the [Browse abandonment email flow builder](https://useaiblocks.com/skills/browse-abandonment-flow-builder). It uses your brand file and offer.
 2. This one.
 
 How to start:

@@ -280,7 +280,7 @@ When in doubt about whether a brief is ready, ask: are all 12 fields populated, 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Search blog post writer](https://useaiblocks.com/skills/search-blog-post-writer). It takes the brief.
-- The [Internal link mapper](https://useaiblocks.com/skills/internal-link-mapper). It takes the brief.
 - The [Content hub planner](https://useaiblocks.com/skills/content-hub-planner). It takes the brief.
+- The [Internal link mapper](https://useaiblocks.com/skills/internal-link-mapper). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

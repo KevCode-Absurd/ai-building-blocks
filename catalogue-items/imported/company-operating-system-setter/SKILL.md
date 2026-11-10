@@ -254,5 +254,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the plan.
 - The [Meeting minutes writer](https://useaiblocks.com/skills/meeting-minutes-writer). It takes the plan.
 - The [Meeting pre-read writer](https://useaiblocks.com/skills/meeting-pre-read-writer). It takes the plan.
+- The [Company procedure checker](https://useaiblocks.com/skills/sop-and-runbook-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

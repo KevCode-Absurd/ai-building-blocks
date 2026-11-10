@@ -231,7 +231,6 @@ One more question: now that you've thought about it, what's your own understandi
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Nonprofit grant funder researcher](https://useaiblocks.com/skills/nonprofit-grant-funder-researcher). It takes the question.
-- The [Research project runner](https://useaiblocks.com/skills/research-project-runner). It takes the question.
 - The [DiffDock molecular pose modeller](https://useaiblocks.com/skills/drug-docking-pose-ranker). It takes the question.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

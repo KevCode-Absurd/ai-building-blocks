@@ -29,7 +29,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your lead list** (yours): your leads or open deals, exported from your CRM or a sheet.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Your lead list** with the [Prospect account researcher](https://useaiblocks.com/skills/prospect-list-builder). It uses your brand brain.
+1. **Your lead list** with the [Prospect account researcher](https://useaiblocks.com/skills/prospect-list-builder). It uses your brand file.
 2. This one.
 
 How to start:
@@ -167,3 +167,5 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Follow-up email sequence writer](https://useaiblocks.com/prompts/follow-up-email-sequence-writer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+Changed by AI Blocks (2026-11-10): refreshed the generated Before you start and After this guidance from catalogue metadata.

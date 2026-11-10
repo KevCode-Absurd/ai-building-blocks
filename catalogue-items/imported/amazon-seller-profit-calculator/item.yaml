@@ -30,7 +30,7 @@ credits:
   - title: profit-margin-calculator-amazon skill
     by: Nexscope AI
     url: https://github.com/nexscope-ai/eCommerce-Skills/tree/main/profit-margin-calculator/profit-margin-calculator-amazon
-    used: Copied under the MIT licence. We gave it a plain name and fixed the break-even and target-margin price formulas so they use the same cost model as the profit breakdown (referral fee as a share of the new price, full return cost), with a worked example and a note to check Amazon's current fee schedule. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the MIT licence. We gave it a plain name and fixed the break-even and target-margin price formulas so they use the same cost model as the profit breakdown (referral fee as a share of the new price, full return cost), with a worked example and a note to check Amazon's current fee schedule. We added Before you start and After this sections that link to other AI Blocks steps. We refreshed those generated sections from the catalogue inputs and next-step links.
   - title: Original author
     by: Nexscope AI
     url: https://github.com/nexscope-ai/eCommerce-Skills

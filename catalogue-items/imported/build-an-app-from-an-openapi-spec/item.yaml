@@ -35,3 +35,7 @@ credits:
     by: github
     url: https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/openapi-to-application-code
     used: Original instructions and supporting files, with attribution and the MIT licence. Display copy describes the task.
+  - title: AI Blocks catalogue guidance
+    by: AI Blocks
+    url: https://useaiblocks.com
+    used: We added Before you start and After this sections that link to other AI Blocks steps. We refreshed those generated sections from the catalogue inputs and next-step links.

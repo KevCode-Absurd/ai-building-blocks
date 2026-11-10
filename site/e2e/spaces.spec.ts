@@ -148,7 +148,7 @@ test("every skill says what to have first, links the steps before it, and offers
   await expect(before).toContainText("Recommended steps before this one");
   await expect(before).toContainText("It runs on its own");
   await expect(before.getByTestId("chain").getByRole("link", { name: "Brand profile builder" })).toHaveAttribute("href", "/skills/website-brand-brain-builder");
-  await expect(before.getByTestId("brain-files")).toContainText("proof-and-claims.md");
+  await expect(before.getByTestId("brain-files")).toContainText("facts.json");
   const next = page.getByTestId("next");
   await expect(next).toContainText("Check it before it goes live");
   await next.getByRole("link", { name: /Meta ads compliance checker/ }).click();

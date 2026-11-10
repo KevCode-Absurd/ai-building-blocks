@@ -91,8 +91,8 @@ Nothing here contacts a customer or starts a repair. A person does that.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Company procedure checker](https://useaiblocks.com/skills/sop-and-runbook-checker). It takes the document and plan.
 - The [Recurring task procedure writer](https://useaiblocks.com/skills/repeat-task-step-guide-writer). It takes the document.
 - The [Clinical report draft checker](https://useaiblocks.com/skills/clinical-report-draft-checker). It takes the document.
-- The [Donated goods intake planner](https://useaiblocks.com/skills/donated-goods-intake-planner). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

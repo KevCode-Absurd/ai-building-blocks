@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **An audit report** with the [Google Ads brand traffic splitter](https://useaiblocks.com/skills/brand-and-non-brand-splitter). Bring your results, a search query report, an audit report (optional). It uses your brand brain.
+1. **An audit report** with the [Google Ads brand traffic splitter](https://useaiblocks.com/skills/brand-and-non-brand-splitter). Bring your results, a search query report, an audit report (optional). It uses your brand file.
 2. This one.
 
 How to start:

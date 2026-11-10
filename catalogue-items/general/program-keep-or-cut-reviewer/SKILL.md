@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A plan** with the [Product range reviewer](https://useaiblocks.com/skills/product-line-cutter). Bring your results (optional), your question (optional). It uses your brand brain.
+1. **A plan** with the [Product range reviewer](https://useaiblocks.com/skills/product-line-cutter). Bring your results (optional), your question (optional). It uses your brand file.
 2. This one.
 
 How to start:

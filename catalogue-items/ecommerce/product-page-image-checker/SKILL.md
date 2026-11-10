@@ -17,8 +17,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A gallery plan** with the [Product page gallery planner](https://useaiblocks.com/skills/product-page-gallery-planner). Bring product photos, customer words (optional). It uses your brand brain and product truth sheet.
+1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **A gallery plan** with the [Product page gallery planner](https://useaiblocks.com/skills/product-page-gallery-planner). Bring product photos, customer words (optional). It uses your brand file and product truth sheet.
 3. This one.
 
 How to start:

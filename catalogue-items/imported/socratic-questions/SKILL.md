@@ -277,8 +277,8 @@ For each question:
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Teach-back learning coach](https://useaiblocks.com/skills/teach-back-practice-partner). It takes the question.
-- The [Learning gap diagnosis coach](https://useaiblocks.com/skills/stuck-point-diagnosis-coach). It takes the question.
 - The [Historical context lesson builder](https://useaiblocks.com/skills/historical-context-lesson). It takes the question.
+- The [Emotional skills lesson sequence](https://useaiblocks.com/skills/emotional-skills-lesson-sequence). It takes the question.
+- The [Course scope and sequence planner](https://useaiblocks.com/skills/course-scope-sequence). It takes the question.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

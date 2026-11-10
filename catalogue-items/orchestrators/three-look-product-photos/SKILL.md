@@ -28,7 +28,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A product truth sheet**, made by the [Product image spec writer](https://useaiblocks.com/skills/product-image-spec-writer): what the product really looks like, read from photos, so pictures stay accurate.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A product truth sheet** with the [Product image spec writer](https://useaiblocks.com/skills/product-image-spec-writer). Bring product photos. It uses your brand brain.
+1. **A product truth sheet** with the [Product image spec writer](https://useaiblocks.com/skills/product-image-spec-writer). Bring product photos. It uses your brand file.
 2. This one.
 
 How to start:

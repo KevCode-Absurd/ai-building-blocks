@@ -254,7 +254,5 @@ Wait — I divided them the wrong way round didn't I.
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Step-by-step hint writer](https://useaiblocks.com/skills/step-by-step-hint-writer). It takes the notes.
-- The [Written feedback checker](https://useaiblocks.com/skills/written-feedback-checker). It takes the notes.
-- The [Direct teaching lesson builder](https://useaiblocks.com/skills/direct-teaching-lesson-builder). It takes the notes.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

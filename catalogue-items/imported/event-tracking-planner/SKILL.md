@@ -344,7 +344,7 @@ When the team disagrees on whether to add an event, the question is not "could t
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Analytics events and tracking gap review](https://useaiblocks.com/skills/monthly-tracking-health-keeper). It takes the spreadsheet.
 - The [Retention heatmap maker](https://useaiblocks.com/skills/retention-heatmap-maker). It takes the spreadsheet.
-- The [Retention cohort analyst](https://useaiblocks.com/skills/retention-cohort-analyst). It takes the spreadsheet.
+- The [Sign-up group retention analyst](https://useaiblocks.com/skills/retention-cohort-analyst). It takes the spreadsheet.
 - **Shape the product** with the [Product funnel steps and experiment review](https://useaiblocks.com/skills/weekly-product-funnel-watcher). It takes the spreadsheet and plan.
 - **Decide what to do** with the [Business metric quality reviewer](https://useaiblocks.com/skills/vanity-metric-fixer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

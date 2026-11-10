@@ -281,8 +281,8 @@ A DR plan document includes:
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Runbook writer](https://useaiblocks.com/skills/runbook-writer).
-- The [Site go-live runbook writer](https://useaiblocks.com/skills/site-go-live-runbook-writer).
+- The [Service operations guide writer](https://useaiblocks.com/skills/runbook-writer).
+- The [Website launch day plan writer](https://useaiblocks.com/skills/site-go-live-runbook-writer).
 - The [Outage incident leader](https://useaiblocks.com/skills/outage-incident-leader).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

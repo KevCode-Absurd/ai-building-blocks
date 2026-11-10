@@ -29,4 +29,4 @@ credits:
   - title: file-organizer skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/file-organizer
-    used: Copied under the CC BY-4.0 licence. We gave it a plain name, added a backup step and a move log, and made the quick-command slots ask for one untested command per system. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the CC BY-4.0 licence. We gave it a plain name, added a backup step and a move log, and made the quick-command slots ask for one untested command per system. We added Before you start and After this sections that link to other AI Blocks steps. We refreshed those generated sections from the catalogue inputs and next-step links.

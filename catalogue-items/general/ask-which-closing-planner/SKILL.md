@@ -26,7 +26,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Objection answer sheet writer** with the [Objection answer sheet writer](https://useaiblocks.com/skills/objection-answer-sheet-writer). Bring an objection map (optional), customer words (optional), your lessons (optional). It uses your brand brain and buying reasons.
+1. **Objection answer sheet writer** with the [Objection answer sheet writer](https://useaiblocks.com/skills/objection-answer-sheet-writer). Bring an objection map (optional), customer words (optional), your lessons (optional). It uses your brand file and buying reasons.
 2. This one.
 
 How to start:

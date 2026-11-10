@@ -92,6 +92,5 @@ python3 scripts/runbook_generator.py payments-api --owner platform --output docs
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Incident learning report writer](https://useaiblocks.com/skills/copilot-incident-postmortem). It takes the document.
-- The [Infrastructure maintenance planner](https://useaiblocks.com/skills/agency-support-infrastructure-maintainer). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

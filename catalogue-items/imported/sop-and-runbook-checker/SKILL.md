@@ -24,8 +24,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A document** with the [On-call runbook writer](https://useaiblocks.com/skills/on-call-runbook-writer). Bring your question.
-2. **A document** with the [Process and SOP writer](https://useaiblocks.com/skills/process-and-sop-writer). Bring your question, an audit report (optional), a plan (optional), a document (optional).
+1. **A plan** with the [Company wiki planner](https://useaiblocks.com/skills/company-wiki-planner). Bring your question.
+2. **A document** with the [On-call fix guide writer](https://useaiblocks.com/skills/on-call-runbook-writer). Bring your question.
 3. This one.
 
 How to start:
@@ -152,8 +152,8 @@ After all 7 are locked, invoke `kb_ingester.py` → `runbook_validator.py` → `
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Process and procedure writer](https://useaiblocks.com/skills/process-and-sop-writer). It takes the audit report.
 - The [Process guide revision reviewer](https://useaiblocks.com/skills/process-doc-freshness-keeper). It takes the audit report.
-- The [Process and SOP writer](https://useaiblocks.com/skills/process-and-sop-writer). It takes the audit report.
 - The [Recurring task procedure writer](https://useaiblocks.com/skills/repeat-task-step-guide-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

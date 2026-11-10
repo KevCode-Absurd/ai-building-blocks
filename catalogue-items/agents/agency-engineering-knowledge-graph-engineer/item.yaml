@@ -42,3 +42,7 @@ credits:
     used: Original agent profile, preserved in references/source-agent.md; AI Blocks
       adds setup and review instructions. On 2026-10-28 we matched the SKILL.md input
       note to the sample documents and questions this agent takes.
+  - title: AI Blocks catalogue guidance
+    by: AI Blocks
+    url: https://useaiblocks.com
+    used: We added Before you start and After this sections that link to other AI Blocks steps. We refreshed those generated sections from the catalogue inputs and next-step links.

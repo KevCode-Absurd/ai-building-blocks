@@ -15,13 +15,45 @@ export interface PackIndex {
   files: PackIndexFile[];
   /** What a request can be routed to (packs built from 9 Nov 2026). Older packs: built from the skill files' purposes. */
   routes?: RouteCandidate[];
+  /**
+   * The curated toolbox in short (packs/toolbox.ts, ToolboxSummary), when the role has a toolbox.json. With one,
+   * toolbox.md says what to use when and the agent picks for itself, so no skill is routed by keyword.
+   */
+  toolbox?: { tasks?: unknown[]; counts?: Record<string, number> } | null;
 }
 
 /**
- * The files load_agent returns in one go, in reading order: the entry point, the work method, what to capture, who
- * the agent is, how it works, what it may touch, and the output policy. Files a pack lacks are skipped.
+ * The files load_agent returns in one go, in reading order: the entry point, the toolbox (what to use when), the
+ * work method, what to capture, who the agent is and how it works. Files a pack lacks are skipped.
  */
-export const CORE_FILES = ["AGENTS.md", "WORK-METHOD.md", "context/README.md", "soul.md", "personality.md", "playbook.md", "access.md", "OUTPUT-POLICY.md"] as const;
+export const CORE_FILES = ["AGENTS.md", "toolbox.md", "WORK-METHOD.md", "context/README.md", "soul.md", "playbook.md"] as const;
+
+/** A request that means working inside the user's own tools or accounts. */
+const ACCESS_WORDS = /\b(access|accounts?|connect\w*|log ?ins?|sign ?ins?|permissions?|publish\w*|schedul\w+|upload\w*|install\w*|deploy\w*|go(?:es|ing)? live|launch\w*|integrat\w+|api|exports?|dashboards?|ads manager|search console|analytics|crm|inbox|shopify|wordpress|klaviyo|mailchimp|hubspot|quickbooks|xero|stripe|send (?:it|them|out)|post (?:it|them))\b/i;
+/** A request for something built, published or sent in its real format, not only written in the chat. */
+const NATIVE_WORDS = /\b(build|built|launch\w*|publish\w*|deploy\w*|ship|send|print\w*|export\w*|ready to (?:use|send|publish|post|print)|files?|pdf|pptx?|docx?|xlsx?|csv|html|figma|canva|web ?sites?|web ?pages?|landing pages?|apps?|code|scripts?|spreadsheets?|decks?|slides?|videos?|images?)\b/i;
+
+/**
+ * Files the first load leaves out unless the request needs them, so less is read before any work starts. The rule
+ * for each is stated to the AI, and every one stays a get_agent_file away. A one-file text for chat apps
+ * (skillOneFile) carries them all, because a chat cannot fetch a file later.
+ */
+export const ON_DEMAND_FILES: { path: string; after: string; rule: string; needed(request: string | undefined): boolean }[] = [
+  { path: "personality.md", after: "soul.md", rule: "comes when you load the agent with no request, to talk as it", needed: r => !r },
+  { path: "access.md", after: "playbook.md", rule: "comes when the request means working in the user's tools or accounts", needed: r => !!r && ACCESS_WORDS.test(r) },
+  { path: "OUTPUT-POLICY.md", after: "access.md", rule: "comes when the request asks for something built, published or sent in its real format", needed: r => !!r && NATIVE_WORDS.test(r) },
+];
+/** The first-load files in reading order, for a request (or none), or all of them (`full`). */
+export function firstLoadFiles(request: string | undefined, full = false): { paths: string[]; held: { path: string; rule: string }[] } {
+  const paths: string[] = [...CORE_FILES];
+  const held: { path: string; rule: string }[] = [];
+  for (const f of ON_DEMAND_FILES) {
+    if (!full && !f.needed(request)) { held.push({ path: f.path, rule: f.rule }); continue; }
+    const at = paths.indexOf(f.after);
+    if (at < 0) paths.push(f.path); else paths.splice(at + 1, 0, f.path);
+  }
+  return { paths, held };
+}
 /** Longest file text a tool returns. Role knowledge stays under about 4,500 words, so this only trims outliers. */
 export const MAX_FILE_CHARS = 60_000;
 /** The whole first payload of load_agent: core files, the routed skill and the knowledge sections. */
@@ -39,6 +71,7 @@ export async function skillOneFile(env: Env, index: PackIndex, name: string, tit
   const path = `skills/${skill}/SKILL.md`;
   if (!index.files.some(f => f.path === path)) return null;
   const payload = await loadPayload(env, index, undefined, path);
+  // A chat app cannot fetch a file later, so this text carries every first-load file (loadPayload, named skill).
   const origin = env.APP_ORIGIN.replace(/\/+$/, "");
   const head = [
     `# ${name}, ${title}: ${skill}, in one file`,
@@ -84,19 +117,31 @@ export function packRoutes(index: PackIndex): RouteCandidate[] {
 }
 
 export interface LoadPart { path: string; text: string; trimmed: boolean; note?: string }
-export interface LoadPayload { parts: LoadPart[]; route: RouteMatch | null; sections: string[]; chars: number }
+export interface LoadPayload {
+  parts: LoadPart[]; route: RouteMatch | null; sections: string[]; chars: number;
+  /** Files of the pack left out of this load, each with the rule that brings it in (ON_DEMAND_FILES). */
+  held: { path: string; rule: string }[];
+  /** The pack has a curated toolbox: the agent picks from toolbox.md, so nothing was routed. */
+  curated: boolean;
+}
 
 /**
- * The first payload of load_agent, deterministic and bounded by MAX_LOAD_CHARS: the core files; then, for a request,
- * the skill or workflow it routes to (route.ts, no model) in full; then the knowledge.md sections most relevant to the
- * request and that skill. Everything else stays listed for get_agent_file.
+ * The first payload of load_agent, deterministic and bounded by MAX_LOAD_CHARS: the core files (toolbox.md right
+ * after AGENTS.md), plus the on-demand files the request needs; then the knowledge.md sections most relevant to the
+ * request. A pack with a curated toolbox gets no routed skill: the agent chooses from toolbox.md and opens each
+ * chosen file by name with get_agent_file. A pack without one (its role has no toolbox.json yet) still gets the
+ * skill or workflow the request routes to (route.ts, no model) in full. Everything else stays listed for
+ * get_agent_file.
  */
 export async function loadPayload(env: Env, index: PackIndex, request?: string, skillPath?: string): Promise<LoadPayload> {
   const parts: LoadPart[] = [];
   let chars = 0;
   const left = () => MAX_LOAD_CHARS - chars;
   const add = (path: string, text: string, trimmed: boolean, note?: string) => { parts.push({ path, text, trimmed, ...(note ? { note } : {}) }); chars += text.length; };
-  for (const path of CORE_FILES) {
+  const curated = !!index.toolbox;
+  const first = firstLoadFiles(request, !!skillPath);
+  const held = first.held.filter(h => index.files.some(x => x.path === h.path));
+  for (const path of first.paths) {
     const f = index.files.find(x => x.path === path);
     if (!f) continue;
     const { text, trimmed } = await readPackFile(env, f, Math.max(2_000, Math.min(MAX_FILE_CHARS, left() - 8_000)));
@@ -104,7 +149,7 @@ export async function loadPayload(env: Env, index: PackIndex, request?: string, 
   }
   // A named skill (the job-specific one-file text) wins over routing.
   const named = skillPath ? packRoutes(index).find(r => r.path === skillPath) : undefined;
-  const route = named ? { candidate: named, score: 0, matched: [] } : request ? bestRoute(request, packRoutes(index)) : null;
+  const route = named ? { candidate: named, score: 0, matched: [] } : request && !curated ? bestRoute(request, packRoutes(index)) : null;
   if (route) {
     const f = index.files.find(x => x.path === route.candidate.path)!;
     const { text, trimmed } = await readPackFile(env, f, Math.max(4_000, left() - 4_000));
@@ -120,5 +165,5 @@ export async function loadPayload(env: Env, index: PackIndex, request?: string, 
       add("knowledge.md", picked.map(s => s.text).join("\n\n"), true, `sections: ${sections.join("; ")}`);
     }
   }
-  return { parts, route, sections, chars };
+  return { parts, route, sections, chars, held, curated };
 }

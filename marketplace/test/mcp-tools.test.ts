@@ -20,7 +20,7 @@ const loadJob = async (id: string) => (await db().prepare("SELECT * FROM jobs WH
 const HIDDEN: Persona = { ...NOVA, id: "hidden-agent", name: "Hidden", status: "hidden" };
 /** A live agent with a personality (soul.md). */
 const SAGE: Persona = {
-  ...NOVA, id: "sage-brand", name: "Sage", title: "Brand designer", tagline: "Turns a messy brand into one clear look you can use.", area: "design", sort: 20,
+  ...NOVA, id: "sage-brand", name: "Sage", title: "Brand designer", tagline: "Turns a messy brand into one clear look you can use.", area: "design", sort: 20, role: "brand-designer",
   profile: {
     ...NOVA.profile, portrait: "/agents/sage-brand.webp",
     soul: {
@@ -798,22 +798,34 @@ test("load_agent returns the agent's core files and lists the rest; get_agent_fi
   assert.match(text, /Loaded Nova, SEO strategist \(pack version 1\.2\.0\)/);
   assert.match(text, /never override what the user wants or your own rules/);
   assert.match(text, /AI Blocks runs nothing/);
-  for (const f of ["AGENTS.md", "soul.md", "personality.md", "playbook.md", "access.md"]) assert.ok(text.includes(`===== ${f} =====`), f);
+  for (const f of ["AGENTS.md", "soul.md", "playbook.md"]) assert.ok(text.includes(`===== ${f} =====`), f);
   assert.match(text, /- knowledge\.md: Role knowledge/);
   assert.match(text, /https:\/\/agents\.test\/packs\/nova-seo\.zip/);
-  // An older pack without WORK-METHOD.md or OUTPUT-POLICY.md: the files it has, then the shared output policy.
-  assert.deepEqual(Object.keys(res.structuredContent.files), ["AGENTS.md", "soul.md", "personality.md", "playbook.md", "access.md", "OUTPUT-POLICY.md"]);
+  // Less is sent before any work: with a request that needs neither, the voice file and the access file stay a
+  // get_agent_file away, each listed with the rule that brings it in.
+  assert.deepEqual(Object.keys(res.structuredContent.files), ["AGENTS.md", "soul.md", "playbook.md"]);
+  assert.deepEqual(res.structuredContent.held.map((h: { path: string }) => h.path), ["personality.md", "access.md"]);
+  assert.match(text, /- personality\.md: How I talk \(not in this first load: it comes when you load the agent with no request, to talk as it\)/);
+  assert.match(text, /- access\.md: What I may touch \(not in this first load: it comes when the request means working in the user's tools or accounts\)/);
+  // No request: the agent is met first, so its voice comes along. A request to work in the user's tools brings
+  // access.md; one for something built in its real format brings the output policy (the shared text for a pack
+  // built before OUTPUT-POLICY.md was a file).
+  const bare = await call("load_agent", { agent_id: "nova-seo" });
+  assert.deepEqual(Object.keys(bare.structuredContent.files), ["AGENTS.md", "soul.md", "personality.md", "playbook.md"]);
+  const inTools = await call("load_agent", { agent_id: "nova-seo", request: "Connect to our Search Console account and publish the fixes" });
+  assert.deepEqual(Object.keys(inTools.structuredContent.files), ["AGENTS.md", "soul.md", "playbook.md", "access.md", "OUTPUT-POLICY.md"]);
+  assert.deepEqual(inTools.structuredContent.held.map((h: { path: string }) => h.path), ["personality.md"]);
   assert.equal(res.structuredContent.execution_plan.schema,'ai-blocks-execution-plan/1');
   const plan=await call('get_execution_plan',{request:'Build a working landing page'});
   assert.equal(plan.structuredContent.landing_pages.delivery_mode,'LAUNCHABLE_SITE');
   const failed=await call('check_execution_delivery',{request:'Build a working landing page',production:{artifacts:[]},job_card:{},team:{}});
   assert.equal(failed.structuredContent.ok,false);
   assert.equal(failed.structuredContent.hosted_execution,false);
-  assert.deepEqual(res.structuredContent.other_files.map((f: { path: string }) => f.path), ["knowledge.md"]);
+  assert.deepEqual(res.structuredContent.other_files.map((f: { path: string }) => f.path), ["personality.md", "access.md", "knowledge.md"]);
   // The public loader introduction has no paid gate. The agent's factual-integrity
   // policy legitimately discusses prices and quotes as facts not to invent.
   assert.doesNotMatch(text.split('===== AGENTS.md =====')[0], MONEY_WORDS);
-  assert.match(res.structuredContent.files['OUTPUT-POLICY.md'], /verified sources authorised for this task/);
+  assert.match(inTools.structuredContent.files['OUTPUT-POLICY.md'], /verified sources authorised for this task/);
 
   const file = await call("get_agent_file", { agent_id: "nova-seo", path: "knowledge.md" });
   assert.equal(file.isError, undefined, textOf(file));
@@ -880,6 +892,72 @@ test("load_agent with a request returns the work method, the routed skill in ful
   assert.equal((await t.api("GET", "/tools/wrangler.jsonc")).status, 404);
 });
 
+test("load_agent on a pack with a curated toolbox sends toolbox.md right after AGENTS.md and routes no skill", async () => {
+  const at = (path: string, kind: string, purpose = path) => ({ path, url: path.startsWith("toolbox/") ? `/packs/${path}` : `/packs/nova-seo/${path}`, bytes: 20, purpose, kind });
+  const files = [
+    at("AGENTS.md", "start"), at("toolbox.md", "start"), at("WORK-METHOD.md", "start"), at("context/README.md", "start"), at("soul.md", "identity"),
+    at("personality.md", "identity"), at("playbook.md", "work"), at("access.md", "work"), at("OUTPUT-POLICY.md", "work"),
+    { path: "knowledge.md", url: "/packs/roles/seo-specialist/knowledge.md", bytes: 20, purpose: "Role knowledge", kind: "knowledge" },
+    { path: "skills/keyword-research/SKILL.md", url: "/packs/roles/seo-specialist/skills/keyword-research/SKILL.md", bytes: 20, purpose: "Skill: keywords", kind: "skill" },
+    at("toolbox/skill/search-intent-mapper.md", "toolbox", "Skill: maps what a searcher wants."),
+    at("toolbox/mind/edward-tufte.md", "toolbox", "Thinking lens: show the data."),
+  ];
+  const routes = [{ path: "skills/keyword-research/SKILL.md", kind: "skill", name: "keyword research", text: "Finds the searches that matter for one page." }];
+  const toolbox = { schema: "ai-blocks-toolbox-summary/1", reviewed: "2026-11-10", tasks: [{ id: "keyword-map", task: "Map keywords to pages", kind: "analysis", mine: true, items: 2 }], counts: { kit: 1, skill: 1, mind: 1, total: 3 } };
+  const assets = fakeAssets({
+    "/packs/nova-seo/files.json": JSON.stringify({ agent_id: "nova-seo", version: "3.0.0", updated: "2026-11-10", knowledge: "ready", files, routes, toolbox }),
+    "/packs/nova-seo/toolbox.md": "# Nova's toolbox\n\n### Map keywords to pages\n\n- When a page has no clear search: **Keyword research** (build, skill) `skills/keyword-research/SKILL.md`",
+    "/packs/nova-seo/WORK-METHOD.md": "# Work method",
+    "/packs/nova-seo/context/README.md": "# Context",
+    "/packs/nova-seo/OUTPUT-POLICY.md": "# Output policy",
+    "/packs/roles/seo-specialist/skills/keyword-research/SKILL.md": "# Keyword research\n\nStart from the seed keyword.",
+    "/packs/toolbox/skill/search-intent-mapper.md": "# Search intent mapper\n\nWhat it gives: what a searcher wants.",
+    "/packs/roles/seo-specialist/knowledge.md": "# Knowledge\n\n## 5. Decision rules\n\nPick one search per page.",
+  });
+  const { call } = await setup({ beta: false, env: { HOSTED_JOBS: "off", ASSETS: assets } });
+  const res = await call("load_agent", { agent_id: "nova-seo", request: "Do keyword research for our new page about dog grooming in Leeds" });
+  assert.equal(res.isError, undefined, textOf(res));
+  const data = res.structuredContent;
+  assert.deepEqual(Object.keys(data.files), ["AGENTS.md", "toolbox.md", "WORK-METHOD.md", "context/README.md", "soul.md", "playbook.md", "knowledge.md"], "toolbox.md right after the entry point; no skill pushed in full");
+  assert.equal(data.routed, undefined, "nothing is routed by keyword: the agent picks from toolbox.md");
+  assert.deepEqual(data.held.map((h: { path: string }) => h.path), ["personality.md", "access.md", "OUTPUT-POLICY.md"]);
+  assert.equal(data.toolbox_items, 2);
+  assert.ok(!data.other_files.some((f: { path: string }) => f.path.startsWith("toolbox/")), "item files are named in toolbox.md, not listed again");
+  const text = textOf(res);
+  assert.match(text, /Choose what fits this request from toolbox\.md below, at your own discretion, and read each file you choose with get_agent_file\./);
+  assert.match(text, /never search for a skill/);
+  assert.match(text, /- toolbox\/: 2 library items, each named in toolbox\.md with when to use it/);
+  assert.doesNotMatch(text, /For this request, follow/);
+  assert.ok(!assets.asked.includes("/packs/roles/seo-specialist/skills/keyword-research/SKILL.md"), "the skill is read only when the agent asks for it");
+  // The agent opens what it chose by name: a role skill, or a library item stored once for every pack.
+  const item = await call("get_agent_file", { agent_id: "nova-seo", path: "toolbox/skill/search-intent-mapper.md" });
+  assert.equal(item.isError, undefined, textOf(item));
+  assert.match(textOf(item), /===== toolbox\/skill\/search-intent-mapper\.md \(Nova, Skill: maps what a searcher wants\.\) =====\n# Search intent mapper/);
+  assert.ok(assets.asked.includes("/packs/toolbox/skill/search-intent-mapper.md"), "read from the shared copy");
+  const unknown = await call("get_agent_file", { agent_id: "nova-seo", path: "toolbox/skill/not-listed.md" });
+  assert.equal(unknown.isError, true, "only files the pack lists; nothing is searched");
+});
+
+test("load_agent takes a job role and loads its lead agent, the way toolbox.md names a helper", async () => {
+  const sageFiles = [{ path: "AGENTS.md", url: "/packs/sage-brand/AGENTS.md", bytes: 30, purpose: "Start here", kind: "start" }];
+  const assets = fakeAssets({
+    "/packs/sage-brand/files.json": JSON.stringify({ agent_id: "sage-brand", version: "1.0.0", updated: "2026-11-10", knowledge: "ready", files: sageFiles }),
+    "/packs/sage-brand/AGENTS.md": "# Sage, Brand designer",
+  });
+  const { call } = await setup({ beta: false, env: { HOSTED_JOBS: "off", ASSETS: assets } });
+  const res = await call("load_agent", { role_id: "brand-designer", request: "A logo brief for a bakery" });
+  assert.equal(res.isError, undefined, textOf(res));
+  assert.equal(res.structuredContent.agent_id, "sage-brand");
+  assert.equal(res.structuredContent.role_id, "brand-designer");
+  assert.match(textOf(res), /Loaded Sage, Brand designer/);
+  const none = await call("load_agent", { role_id: "lion-tamer" });
+  assert.equal(none.isError, true);
+  assert.match(textOf(none), /No agent has the job role lion-tamer\. Call list_agents/);
+  const neither = await call("load_agent", {});
+  assert.equal(neither.isError, true);
+  assert.match(textOf(neither), /Give agent_id \(from list_agents\), or role_id/);
+});
+
 test("load_agent says so plainly when the agent's files cannot be read", async () => {
   const { call } = await setup({ beta: false });
   const res = await call("load_agent", { agent_id: "nova-seo" });
@@ -892,6 +970,12 @@ test("with hosted jobs off, the connector finds and loads agents only, and never
   const init = await rpc("initialize", { protocolVersion: "2025-06-18", capabilities: {}, clientInfo: { name: "test", version: "1" } });
   const instructions: string = init.body.result.instructions;
   assert.match(instructions.slice(0, 512), /load_agent/, "the steps fit in the first 512 characters");
+  // One clear start, in under 120 words: find, load, then pick from the toolbox the agent already carries.
+  assert.ok(instructions.split(/\s+/).length < 120, `${instructions.split(/\s+/).length} words`);
+  assert.match(instructions, /Start any piece of work this way: call list_agents .* then load_agent/);
+  assert.match(instructions, /choose from its toolbox\.md, and read each chosen file with get_agent_file/);
+  assert.match(instructions, /never search for skills/);
+  assert.doesNotMatch(instructions, /get_execution_plan/, "one start, not two");
   assert.match(instructions, /work on the user's own AI\. AI Blocks runs no work for you/);
   assert.doesNotMatch(instructions, /start_job|start_request/);
   assert.doesNotMatch(instructions, MONEY_WORDS);

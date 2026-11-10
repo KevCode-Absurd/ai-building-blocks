@@ -1,0 +1,17 @@
+{
+  "note": "Titles only, for the three prototype jobs the fixture verdicts came from. These are not the jobs in the main jobs.json, even where an id is the same.",
+  "jobs": [
+    {
+      "id": "J4",
+      "title": "Prototype: Allbirds, 5 Meta ad concepts"
+    },
+    {
+      "id": "J6",
+      "title": "Prototype: Gehna, 30-day Meta ads plan"
+    },
+    {
+      "id": "J7",
+      "title": "Prototype: Gehna, 3-email welcome series"
+    }
+  ]
+}

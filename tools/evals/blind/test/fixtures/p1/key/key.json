@@ -1,0 +1,8 @@
+{
+  "note": "FAKE key for tests only. The 12 verdicts are real judge output from the prototype run, but these arm names are made up: each one just repeats its code letter. Nothing here says which arm made which file.",
+  "jobs": {
+    "J4": { "X": "arm-x", "Y": "arm-y", "Z": "arm-z" },
+    "J6": { "X": "arm-x", "Y": "arm-y", "Z": "arm-z" },
+    "J7": { "X": "arm-x", "Y": "arm-y", "Z": "arm-z" }
+  }
+}

@@ -37,3 +37,29 @@ test('the team method is short, and the record detail is a reference opened only
   assert.deepEqual(templates.files.slice(0, 2).map(file => file.path), ['JOB-METHOD.md', 'JOB-RECORDS.md']);
   assert.ok(words(SINGLE_LEAD_METHOD) < 200); assert.match(SINGLE_LEAD_METHOD, /does not search the library/); assert.match(SINGLE_LEAD_METHOD, /fresh reviewer/i);
 });
+
+test('nothing tells an AI to search the library before it builds', async () => {
+  const { prepareJobContext, skillPreamble, NO_SEARCH } = await import('../src/jobs/grounding.mjs');
+  const { buildExecutionPlan, executionQualityMethod } = await import('../src/jobs/execution-quality.mjs');
+  const { PUBLIC_MCP_INSTRUCTIONS } = await import('../src/server/public-mcp.ts');
+  assert.equal(NO_SEARCH, 'Use what the lead already carries; search_library is for when a person asks to browse.');
+  for (const kind of ['web_page', 'ad_creative', 'email', 'audit', 'plan', 'code']) {
+    const next = prepareJobContext({ request: 'Help with our launch', deliverable_kind: kind }).annex.next;
+    // Single mode goes to the lead start_job names, never to a library search.
+    assert.equal(next.single.tool, 'start_job', kind); assert.equal(next.single_skill, undefined, kind); assert.ok(next.single.then.endsWith(NO_SEARCH), kind);
+    assert.doesNotMatch(JSON.stringify(next), /"tool":"search_library"/, kind);
+  }
+  const door = await callJobTool('prepare_job_context', { request: 'Write a 3-email welcome series' });
+  assert.equal(door.route.mode, 'single'); assert.equal(door.route.next.tool, 'start_job'); assert.equal(door.route.next.then, NO_SEARCH);
+  for (const item of [{ slug: 'store-hero-section-writer', task: 'write-landing-page' }, { slug: 'ad-account-audit', task: 'read-ad-results' }]) {
+    const preamble = skillPreamble(item), text = preamble.lines.join('\n');
+    assert.match(text, /search_library is for when a person asks to browse/); assert.match(text, /spec sheet/); assert.match(text, /each has a default/);
+    assert.doesNotMatch(text + preamble.precedence, /taste questions|taste brief/i);
+  }
+  const plan = buildExecutionPlan({ request: 'Build a landing page for our store' });
+  assert.ok(plan.retrieval.steps.some(step => /nothing searches the library during the job/.test(step)));
+  assert.doesNotMatch(JSON.stringify(plan.retrieval) + executionQualityMethod(), /Discover the (?:job|whole)|browse alternate names|brand or project brain/);
+  assert.match(executionQualityMethod(), /Do not search the library during the job/);
+  // The public instructions keep search for browsing, and say a job does not need one.
+  assert.match(PUBLIC_MCP_INSTRUCTIONS, /A job needs no search: its lead carries the toolbox\. To browse or fetch one item: search_library/);
+});

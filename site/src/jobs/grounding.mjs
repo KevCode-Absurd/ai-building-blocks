@@ -503,19 +503,19 @@ export function skillPreamble(item = {}) {
   const kind = skillPreambleKind(item);
   if (!kind) return null;
   const lines = kind === 'assess' ? [
-    'SPEC: write one screen first (or call prepare_job_context with deliverable_kind audit or analysis): the decision this informs, and 5 to 7 acceptance tests the owner would ask of the finished work.',
+    'SPEC: write the one-screen spec sheet first (prepare_job_context with deliverable_kind audit or analysis returns it pre-filled): the decision this informs, and 5 to 7 acceptance tests the owner would ask of the finished work. Ask its questions in one message; each has a default.',
     'GROUND: pull the real account or data at read level into context/ before you form any view, with its source and date range.',
     'CANDIDATES: write three competing explanations of the main problem, each with the evidence for it and what would rule it out. A fixed checklist score is not a diagnosis.',
-    'BUILD: diagnose this account, rank the fixes by expected impact and recommend the first one. Never hand over a menu.',
+    `BUILD: diagnose this account, rank the fixes by expected impact and recommend the first one. Never hand over a menu. ${TOOLBOX_ONLY}`,
     'CHECK with a fresh reviewer who sees only the brief, the work and the snapshot: each acceptance test pass or fail, every figure recomputed. Remove what has no source.',
   ] : [
-    'SPEC: write one screen first (or call prepare_job_context): who must do what after seeing this, the deliverables with counts, and 5 to 7 acceptance tests the client would ask of the finished work.',
+    'SPEC: write the one-screen spec sheet first (prepare_job_context returns it pre-filled): who must do what after seeing this, the deliverables with counts, and 5 to 7 acceptance tests the client would ask of the finished work. Ask its questions in one message; each has a default.',
     'GROUND what those tests need: capture the client\'s live site into context/brand-dna.json and give every fact a buyer will read a dated source. Check the thing being sold is live, in stock and at that price at the link you use.',
     'CANDIDATES: make about 3 real candidates of the part that decides the outcome, differing on two of promise, proof, structure, buyer moment, offer and visual world. This skill\'s fixed structures are options, not rules.',
-    'BUILD: give true facts a new framing and add no new facts. Decide; never hand over a menu. Name the AI defaults you will avoid (prepare_job_context lists them).',
+    `BUILD: give true facts a new framing and add no new facts. Decide; never hand over a menu. Name the AI defaults you will avoid (prepare_job_context lists them). ${TOOLBOX_ONLY}`,
     'CHECK with a fresh reviewer who sees only the brief, the work and the captured facts: each acceptance test pass or fail, every claim sourced or not. Remove unsourced claims. Hand over the work first, with nothing internal in it.',
   ];
-  return { title: 'Before you run this', kind, lines, tool: { name: 'prepare_job_context', arguments: { request: '<the user\'s request>', deliverable_kind: kind === 'assess' ? 'audit' : '<web_page|ad_creative|copy|email>' } }, precedence: 'The client\'s captured context and taste brief override this method\'s defaults on look and structure; they never override truth or permission rules.' };
+  return { title: 'Before you run this', kind, lines, tool: { name: 'prepare_job_context', arguments: { request: '<the user\'s request>', deliverable_kind: kind === 'assess' ? 'audit' : '<web_page|ad_creative|copy|email>' } }, precedence: 'The spec sheet and the client\'s captured context override this method\'s defaults on look and structure; they never override truth or permission rules.' };
 }
 
 /** The craft floor: what the build must clear whatever the kind of work. */
@@ -547,6 +547,11 @@ export const REVIEWER = Object.freeze({
     then: 'Remove every unsourced claim, or rewrite it to what the source says. Never leave one in with a flag or a footnote. Fix what failed, cut what can go, then stop.',
   },
 });
+
+/** Nothing searches the library at job time: every lead arrives with its toolbox. */
+export const NO_SEARCH = 'Use what the lead already carries; search_library is for when a person asks to browse.';
+/** The same rule, said to whoever is running one skill. */
+const TOOLBOX_ONLY = 'Work from this skill and the toolbox you already carry; search_library is for when a person asks to browse.';
 
 const short = (value, max) => value.length <= max ? value : value.slice(0, max - 1).trimEnd() + '…';
 /** The questions to ask once, in one message: the one list for this kind of job (intake-questions.mjs). Each row is
@@ -627,7 +632,7 @@ export function prepareJobContext(input = {}, context = {}) {
       hand_over: { opening: 'The work comes first, in the format asked for. Open with 3 to 5 lines: what this is, the main decision you made and why, and what to check before use.', word_budget: WORD_BUDGETS[kind] ?? WORD_BUDGETS.other, readable: 'Headings state the point. Sentences are short. Tables are for comparisons only.', detail_goes_to: ['an appendix inside the deliverable'], never_in_the_deliverable: ['process sections', 'lever checklists', 'rejected candidates', 'agent or persona names', 'file names such as knowledge.md or DECISIONS.md', 'access levels', 'method vocabulary'], never_point_to: ['DECISIONS.md', 'knowledge.md', 'other working files'] },
       proven_levers: levers,
       defaults_to_avoid: defaults, defaults_source: patterns.length ? `catalogue:${GJP_SKILLS.defaults}/patterns.json` : 'embedded:DESIGN.md AI-default list',
-      next: { team: { tool: 'start_job', arguments: { request, deliverable_kind: kind, ...(siteUrl ? { site_url: siteUrl } : {}), ...(typeof input.has_existing_asset === 'boolean' ? { has_existing_asset: input.has_existing_asset } : {}) } }, single_skill: { tool: 'search_library', arguments: { query: request.slice(0, 300) } } },
+      next: { team: { tool: 'start_job', arguments: { request, deliverable_kind: kind, ...(siteUrl ? { site_url: siteUrl } : {}), ...(typeof input.has_existing_asset === 'boolean' ? { has_existing_asset: input.has_existing_asset } : {}) } }, single: { tool: 'start_job', arguments: { request, deliverable_kind: kind, ...(siteUrl ? { site_url: siteUrl } : {}), ...(typeof input.has_existing_asset === 'boolean' ? { has_existing_asset: input.has_existing_asset } : {}) }, then: `Load the lead it names with its next_action.tool. ${NO_SEARCH}` } },
     },
     model_calls: 0, stored_by_service: false,
   };

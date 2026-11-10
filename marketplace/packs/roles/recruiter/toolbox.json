@@ -1,0 +1,289 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "recruiter",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "role-brief-and-search-plan",
+      "task": "Turn a rough request into a role brief and search plan",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/fill-one-role", "use": "brief", "when": "When the client decides to fill a role and you need every step to an accepted offer" },
+        { "ref": "kit:skills/role-brief-and-search-plan", "use": "build", "when": "When a manager's rough ask must become a one-page brief and a dated search plan" },
+        { "ref": "library:hiring-market-researcher", "type": "skill", "use": "brief", "when": "Before agreeing pay and timing, to see pay ranges, talent supply and how hard the hire is" },
+        { "ref": "library:hiring-search-brief-writer", "type": "skill", "use": "build", "when": "When the search needs its channels, timeline and risks written for the hiring manager" },
+        { "ref": "library:hire-mistake-checklist-builder", "type": "prompt", "use": "check", "when": "When this client has hired badly before, to build the mistakes to rule out this time" }
+      ]
+    },
+    {
+      "id": "role-scorecard",
+      "task": "Write a role scorecard with mission and outcomes",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/role-brief-and-search-plan", "use": "build", "when": "When the role needs a mission, six-month outcomes, must-haves and learnables on one page" },
+        { "ref": "library:problem-first-job-description-writer", "type": "prompt", "use": "explore", "when": "When the scorecard is a list of duties, to try one built on the problem the hire must solve" },
+        { "ref": "library:sales-hiring-scorecard-builder", "type": "skill", "use": "build", "when": "When the hire is a salesperson and traits must fit how this firm sells" },
+        { "ref": "library:patty-mccord", "type": "mind", "use": "think", "when": "When the scorecard describes the last person in the job, not the work now needed" }
+      ]
+    },
+    {
+      "id": "job-post",
+      "task": "Write an honest job post in short and long versions",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/job-post-and-outreach", "use": "build", "when": "When the brief is agreed and you need the post in two lengths with the same facts" },
+        { "ref": "library:plain-job-post-drafter", "type": "prompt", "use": "build", "when": "When you need a quick clear post with only the real requirements" },
+        { "ref": "library:problem-first-job-description-writer", "type": "prompt", "use": "explore", "when": "Before settling the post, to try a version that opens with the problem to solve" },
+        { "ref": "library:inclusive-job-post-writer", "type": "skill", "use": "check", "when": "When an existing post needs biased or bloated wording found and fixed" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before publishing, to read the post as a good candidate and list what would stop them applying" },
+        { "ref": "library:david-abbott", "type": "mind", "use": "think", "when": "When the post oversells and an honest admission about the job would build more trust" }
+      ]
+    },
+    {
+      "id": "job-ad-campaign",
+      "task": "Plan where the job ad runs and test versions",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:job-ad-campaign-planner", "type": "skill", "use": "build", "when": "When the role needs ad copy, a posting calendar and a test plan across channels" },
+        { "ref": "library:make-ad-concept-spread", "type": "skill", "use": "explore", "when": "When the role is hard to fill and you want many ad ideas made, with one lead ad chosen" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the ad title is just the job title and you want several angles" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before spending on ads, to test that a candidate can really apply from the link today" }
+      ]
+    },
+    {
+      "id": "sourcing",
+      "task": "Source candidates and build a long list",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:ideal-candidate-profiler", "type": "skill", "use": "brief", "when": "Before searching, to picture who fits, where they spend time and what would move them" },
+        { "ref": "library:candidate-sourcing-planner", "type": "skill", "use": "build", "when": "When you need the best places to look, target companies and a week-by-week plan" },
+        { "ref": "library:find-the-right-candidates-and-write-messages-they-answer", "type": "workflow", "use": "build", "when": "When you want profile, search plan and first messages in one guided run" },
+        { "ref": "library:apollo", "type": "tool", "use": "build", "when": "When you need work contacts by role and company to build the long list" }
+      ]
+    },
+    {
+      "id": "candidate-outreach",
+      "task": "Write first messages to people who have not applied",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/candidate-outreach-set", "use": "build", "when": "When you have a short list of people whose public work fits the role" },
+        { "ref": "kit:skills/job-post-and-outreach", "use": "build", "when": "When messages, two follow-ups and answers to common questions must match the post" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before writing, to compare three shapes for the first message and its follow-ups" },
+        { "ref": "library:candidate-outreach-drafter", "type": "skill", "use": "build", "when": "When one named person needs a personal first message and reply templates" },
+        { "ref": "library:linkedin-outreach-plan", "type": "skill", "use": "build", "when": "When the approach is on LinkedIn and needs connection notes you send yourself" },
+        { "ref": "library:cold-email-claim-checker", "type": "prompt", "use": "check", "when": "Before sending, to test each claim in the message against what is really true of the job" },
+        { "ref": "library:robert-cialdini", "type": "mind", "use": "think", "when": "When messages sound like spam and need real proof and an easy, honest ask" }
+      ]
+    },
+    {
+      "id": "screening",
+      "task": "Set screening criteria and sort applications on evidence",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/evidence-based-screening", "use": "build", "when": "When criteria and what counts as evidence must be fixed before anyone reads a CV" },
+        { "ref": "library:applicant-shortlist-builder", "type": "skill", "use": "build", "when": "When you have the job and a pile of resumes and need a shortlist scored only on job needs" },
+        { "ref": "library:hiring-pipeline-runner", "type": "agent", "use": "build", "when": "When applications come in batches and each batch must be scored the same way" },
+        { "ref": "library:daniel-kahneman", "type": "mind", "use": "think", "when": "When a strong first impression is deciding the sort before the evidence does" }
+      ]
+    },
+    {
+      "id": "interview-kit",
+      "task": "Build a structured interview kit with a scorecard",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/evidence-based-screening", "use": "build", "when": "When questions and a 1 to 4 scale must follow from the screening criteria" },
+        { "ref": "library:interview-process-planner", "type": "skill", "use": "brief", "when": "When the stages, who runs each and what each one checks are not yet set" },
+        { "ref": "library:interview-question-set-maker", "type": "prompt", "use": "build", "when": "When you need set questions with answer signs for one role quickly" },
+        { "ref": "library:structured-interview-guide", "type": "skill", "use": "build", "when": "When interviewers need signs of a strong and a weak answer for each question" },
+        { "ref": "library:interview-scorecard-builder", "type": "skill", "use": "build", "when": "When each stage needs its own scorecard, a phone screen script and a rating guide" },
+        { "ref": "library:work-sample-test-designer", "type": "skill", "use": "build", "when": "When candidates should show the work, with a scoring guide and fairness checks" }
+      ]
+    },
+    {
+      "id": "compare-and-decide",
+      "task": "Compare finalists and record the hiring decision",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:run-fair-interviews-and-choose-on-evidence", "type": "workflow", "use": "brief", "when": "When you want the interviews, work test, comparison and replies in one guided run" },
+        { "ref": "library:candidate-comparison-table-builder", "type": "prompt", "use": "build", "when": "When interview notes on several people need a side-by-side on the agreed criteria" },
+        { "ref": "library:fair-candidate-comparer", "type": "skill", "use": "check", "when": "When you have notes or transcripts and want the comparison tested for bias" },
+        { "ref": "library:decision-bias-pileup-checker", "type": "skill", "use": "check", "when": "When the panel is rushing to close, to see the pressures bending the choice" },
+        { "ref": "library:daniel-kahneman", "type": "mind", "use": "think", "when": "When the debrief turns into stories, to score each criterion apart before any overall view" }
+      ]
+    },
+    {
+      "id": "reference-check",
+      "task": "Write reference questions and a call script",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/offer-and-reference-check", "use": "build", "when": "When you need job-related questions with what to listen for in each answer" },
+        { "ref": "library:reference-check-question-writer", "type": "skill", "use": "build", "when": "When you also need a call script and a sheet to record the answers" }
+      ]
+    },
+    {
+      "id": "offer",
+      "task": "Draft the offer, check it and plan the offer call",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/offer-and-reference-check", "use": "build", "when": "When terms are agreed and the letter must say exactly what was meant" },
+        { "ref": "library:offer-letter-drafter", "type": "skill", "use": "build", "when": "When you need a letter, pay package and talking points from a role and level" },
+        { "ref": "library:job-offer-planner", "type": "skill", "use": "build", "when": "When the candidate may ask for more and you need a package, a plan and call scripts" },
+        { "ref": "library:offer-letter-check", "type": "skill", "use": "check", "when": "Before sending, to flag risky terms and non-compete limits for the place of work" },
+        { "ref": "library:chris-voss", "type": "mind", "use": "think", "when": "When the offer call may stall, to sum up their side and ask calm questions first" }
+      ]
+    },
+    {
+      "id": "updates-and-declines",
+      "task": "Write candidate updates and kind declines for each stage",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/decline-and-update-messages", "use": "build", "when": "When candidates are waiting to hear, or each stage needs a quick, kind and final decline" },
+        { "ref": "library:candidate-reply-drafter", "type": "prompt", "use": "build", "when": "When one candidate needs a reply that fits exactly where they are in the process" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to read the decline as the candidate who just spent four hours on a task" }
+      ]
+    },
+    {
+      "id": "candidate-experience-review",
+      "task": "Review the candidate experience from apply to offer",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:candidate-experience-improver", "type": "skill", "use": "build", "when": "When you need the candidate path mapped, with friction points and a message per stage" },
+        { "ref": "library:hiring-quality-reviewer", "type": "skill", "use": "build", "when": "After a hire, to survey the manager and candidates and look back at what worked" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "When applications are low, to test whether the apply link and form work today" }
+      ]
+    },
+    {
+      "id": "funnel-report",
+      "task": "Write the weekly hiring progress report",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/weekly-pipeline-review", "use": "brief", "when": "Every week a role is open, to run the 30-minute review in the same order" },
+        { "ref": "kit:prompts/hiring-funnel-report", "use": "build", "when": "When the manager needs where candidates are, where they drop out and what to change" },
+        { "ref": "library:hiring-progress-reporter", "type": "skill", "use": "build", "when": "When you have pipeline numbers and want a clear update or chart page for leaders" },
+        { "ref": "library:hr-metrics-and-report-builder", "type": "skill", "use": "brief", "when": "When time to hire and source measures need defining before anyone reports them" }
+      ]
+    },
+    {
+      "id": "careers-page",
+      "task": "Write a careers page that tells the truth",
+      "kind": "web_page",
+      "items": [
+        { "ref": "kit:prompts/careers-page-draft", "use": "build", "when": "When the page must be built from what staff say and what the policies really give" },
+        { "ref": "library:research-theme-synthesizer", "type": "skill", "use": "brief", "when": "When you have staff interviews or survey comments and need the themes with quotes" },
+        { "ref": "library:make-three-first-screens", "type": "skill", "use": "explore", "when": "Before writing the full page, to see three different first screens as real pages" },
+        { "ref": "library:conversion-page-writer", "type": "skill", "use": "build", "when": "When the page needs a clear top, proof, answers to doubts and one apply button" },
+        { "ref": "library:honest-persuasion-editor", "type": "skill", "use": "check", "when": "When the page is drafted, to see which claims are true and which are dressing" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before it goes live, to tie each perk and promise to a policy or a named staff quote" }
+      ]
+    },
+    {
+      "id": "staff-stories-and-posts",
+      "task": "Write staff stories and posts that show the team at work",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:linkedin-post-writer", "type": "skill", "use": "build", "when": "When a staff story or a day at work should become a post or a carousel script" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When each story needs an opening line and the first try is a job title" },
+        { "ref": "library:company-story-aligner", "type": "skill", "use": "check", "when": "When what you tell candidates and what staff hear may not match" },
+        { "ref": "library:annette-simmons", "type": "mind", "use": "think", "when": "When a story is praise with no moment in it that a reader could picture" }
+      ]
+    },
+    {
+      "id": "hiring-process-setup",
+      "task": "Set up a repeatable hiring process and choose an ATS",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:interview-process-planner", "type": "skill", "use": "build", "when": "When stages and owners from post to offer need fixing for the firm's common roles" },
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When the process must be written down with who does what and the edge cases" },
+        { "ref": "library:compare-hr-software-before-buying", "type": "workflow", "use": "build", "when": "When the firm is moving off spreadsheets and must compare tracking systems on the same tasks" },
+        { "ref": "kit:workflows/fill-one-role", "use": "check", "when": "When the new process is drafted, to walk one real role through it end to end" }
+      ]
+    },
+    {
+      "id": "hiring-manager-guide",
+      "task": "Write a hiring manager guide and train interviewers",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:structured-interview-guide", "type": "skill", "use": "build", "when": "When managers need the questions and answer signs in one guide they can hold" },
+        { "ref": "library:interview-scorecard-builder", "type": "skill", "use": "build", "when": "When the guide needs a rating scale with an example for each score" },
+        { "ref": "library:build-a-practical-manager-training-session", "type": "workflow", "use": "build", "when": "When interviewers need a short session with practice, not a document to read" }
+      ]
+    },
+    {
+      "id": "agency-candidate-summary",
+      "task": "Write a one-page candidate summary for a client",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/agency-candidate-summary", "use": "build", "when": "When an agency sends a shortlist and each summary must be built only from CV and notes" },
+        { "ref": "library:fair-candidate-comparer", "type": "skill", "use": "check", "when": "When several summaries go together, to check each person is judged on the same evidence" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before sending, to tie every line about the candidate to the CV or interview notes" }
+      ]
+    },
+    {
+      "id": "agency-client-update",
+      "task": "Write the weekly hiring update for a client",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/hiring-funnel-report", "use": "build", "when": "When the client needs the week's numbers and what you will change next" },
+        { "ref": "library:hiring-progress-reporter", "type": "skill", "use": "build", "when": "When the update should include a clear chart of the pipeline" },
+        { "ref": "library:executive-update-drafter", "type": "skill", "use": "explore", "when": "When the news is bad, to try a version pitched for the person who must hear it" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "Before sending, to cut recruiter terms the client would not use" }
+      ]
+    },
+    {
+      "id": "ai-hiring-tool-check",
+      "task": "Check an AI tool before it screens or ranks candidates",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/ai-hiring-tool-questions", "use": "build", "when": "When an ATS or vendor offers AI screening and you need the questions before switching it on" },
+        { "ref": "library:hr-ai-tool-vendor-checker", "type": "skill", "use": "build", "when": "When the tool needs a test for accuracy and bias and a small pilot with pass rules" },
+        { "ref": "library:hr-ai-use-policy-writer", "type": "skill", "use": "build", "when": "When the firm will use AI in hiring and needs a use policy and a notice to candidates" }
+      ]
+    },
+    {
+      "id": "hiring-plan",
+      "task": "Plan the year's hiring and what it will cost",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:headcount-plan-builder", "type": "skill", "use": "build", "when": "When growth goals and a budget must become a role-by-role plan in priority order" },
+        { "ref": "library:plan-a-year-of-hiring-and-what-it-will-cost", "type": "workflow", "use": "build", "when": "When you have headcount history and need a forecast and a monthly cost budget" },
+        { "ref": "library:headcount-business-case-builder", "type": "skill", "use": "build", "when": "When finance wants the full yearly cost of one role and hire versus contractor" }
+      ]
+    },
+    {
+      "id": "handoff-to-onboarding",
+      "task": "Hand an accepted hire over to onboarding",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:new-hire-first-week-planner", "type": "prompt", "use": "build", "when": "When the offer is accepted and the manager needs a first week planned by half day" },
+        { "ref": "library:get-a-new-hire-to-full-speed-in-90-days", "type": "workflow", "use": "build", "when": "When the client wants 90-day goals and one-on-ones set before day one" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:grounded-job-protocol", "type": "skill", "use": "brief", "when": "At the start of any sizeable job, to capture the real firm, the real role and what was agreed" },
+    { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "Before anything reaches a candidate, to cut jargon and inflated wording" },
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Whenever the work states pay, benefits, market figures or legal steps, to give each a source" }
+  ],
+  "helpers": [
+    { "role": "hr-specialist", "when": "When the hire needs a contract, a policy answer or a full onboarding plan" },
+    { "role": "payroll-compensation-specialist", "when": "When the pay range or offer package needs market data and a band check" },
+    { "role": "workforce-planner", "when": "When the question is how many people to hire and when, not how to fill one role" },
+    { "role": "conversion-copywriter", "when": "When the careers page needs full page copy tested against the apply rate" },
+    { "role": "linkedin-ads-specialist", "when": "When job ads need paid reach and targeting on LinkedIn" },
+    { "role": "social-media-manager", "when": "When employer brand posts need a calendar and a steady run" }
+  ],
+  "gaps": [
+    "No library item writes search strings for job boards, LinkedIn or the open web",
+    "No library item builds a career-history interview guide that walks through each past job",
+    "No library item sets up an applicant tracking system: stages, email templates and scorecards",
+    "No library item writes an employee value promise or a careers page from staff interviews",
+    "No library item plans staff story interviews with consent for employer brand use",
+    "No library item writes an agency's candidate summary or client update beyond the kit prompts",
+    "No library item designs an employee referral scheme; the referral item is for customers",
+    "No library item writes a hiring manager guide or trains interviewers in scoring",
+    "No library item builds a time-to-hire and source-of-hire report template",
+    "No library item makes clearly different versions of a decline note or candidate summary to choose between",
+    "No library item writes a warning notice about job scams that use the firm's name",
+    "The library has no tool guide for LinkedIn Recruiter, a job board or an applicant tracking system"
+  ]
+}

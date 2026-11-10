@@ -1,0 +1,291 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "hr-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "hiring-kit",
+      "task": "Build a structured hiring kit for one role",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/hire-and-onboard-one-role", "use": "brief", "when": "When the owner decides to fill a role and you need the steps from outcomes to day 90 in order" },
+        { "ref": "kit:skills/structured-hiring-kit", "use": "build", "when": "When one role needs outcomes, a job description, set questions, a work sample and a scorecard" },
+        { "ref": "library:hire-mistake-checklist-builder", "type": "prompt", "use": "check", "when": "Before an offer, to rule out the hiring mistakes this business has made before" },
+        { "ref": "library:daniel-kahneman", "type": "mind", "use": "think", "when": "When a panel trusts gut feel, to score each criterion apart and compare with past hires" }
+      ]
+    },
+    {
+      "id": "job-description-and-ad",
+      "task": "Write a job description and a fair job ad",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:problem-first-job-description-writer", "type": "prompt", "use": "explore", "when": "When the usual duties list is dull, to try a version built on the problem the hire must solve" },
+        { "ref": "library:inclusive-job-post-writer", "type": "skill", "use": "build", "when": "When you need a clear post with only the real requirements and no biased or bloated wording" },
+        { "ref": "kit:prompts/inclusive-job-ad-rewrite", "use": "check", "when": "When a draft or old ad exists and you want it clearer and fairer without changing the job" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before posting, to have a fresh reader go through the ad as a candidate and list what puts them off" }
+      ]
+    },
+    {
+      "id": "interviews-and-choice",
+      "task": "Run fair interviews and choose on evidence",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:run-fair-interviews-and-choose-on-evidence", "type": "workflow", "use": "build", "when": "When you want one guided run from interview plan and work test to a fair comparison and replies" },
+        { "ref": "library:structured-interview-guide", "type": "skill", "use": "build", "when": "When interviewers need set questions with signs of a strong and a weak answer" },
+        { "ref": "library:fair-candidate-comparer", "type": "skill", "use": "check", "when": "When you have notes or transcripts and want the comparison tested for bias before the decision" },
+        { "ref": "library:reference-check-question-writer", "type": "skill", "use": "build", "when": "When a finalist's references are due and you need fair questions, a call script and a record sheet" },
+        { "ref": "library:candidate-reply-drafter", "type": "prompt", "use": "build", "when": "When a candidate needs a clear next-step note or a kind rejection" }
+      ]
+    },
+    {
+      "id": "offer-letter",
+      "task": "Draft and check an offer letter",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:offer-letter-drafter", "type": "skill", "use": "build", "when": "When a candidate is chosen and you need the letter, the pay package and talking points" },
+        { "ref": "library:offer-letter-check", "type": "skill", "use": "check", "when": "Before sending, to flag risky terms and non-compete limits for the place of work" }
+      ]
+    },
+    {
+      "id": "onboarding-plan",
+      "task": "Plan a new hire's first 90 days",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/onboarding-plan", "use": "build", "when": "When one person is joining and you need pre-start, day one, week one and 30-60-90 day goals" },
+        { "ref": "library:new-hire-first-week-planner", "type": "prompt", "use": "build", "when": "When the first week needs a half-day schedule with one small real task and who they meet" },
+        { "ref": "library:get-a-new-hire-to-full-speed-in-90-days", "type": "workflow", "use": "brief", "when": "When the manager wants a guided run with one-on-ones and a look back at day 90" },
+        { "ref": "library:new-hire-onboarding-keeper", "type": "agent", "use": "check", "when": "Each week after the start date, to check progress against the plan and what to fix" }
+      ]
+    },
+    {
+      "id": "write-policy",
+      "task": "Write one workplace policy in plain words",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/policy-template", "use": "build", "when": "When the team needs one policy as a template with a fixed structure and points for a lawyer" },
+        { "ref": "library:hr-policy-drafter", "type": "skill", "use": "build", "when": "When the policy also needs a manager guide and a rollout plan" },
+        { "ref": "library:remote-work-policy-writer", "type": "skill", "use": "build", "when": "When the policy is about home or remote working and the choices are not yet made" },
+        { "ref": "library:attendance-policy-writer", "type": "skill", "use": "build", "when": "When the rules are about shifts, lateness, overtime and absence" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the draft reads like a contract and staff will not get through it" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "When the policy leans on a law or official guidance, to tie each point to a dated source" },
+        { "ref": "library:patty-mccord", "type": "mind", "use": "think", "when": "When a rule is being added for one bad case and clear expectations might do the job" }
+      ]
+    },
+    {
+      "id": "handbook",
+      "task": "Draft or update an employee handbook",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:policy-handbook-writer", "type": "skill", "use": "build", "when": "When the firm needs handbook sections for its country and size, with a list for a lawyer" },
+        { "ref": "library:handbook-change-desk", "type": "agent", "use": "brief", "when": "When someone asks for a new rule, to find what problem it solves and what it touches" },
+        { "ref": "library:handbook-change-checker", "type": "skill", "use": "check", "when": "Before a change goes in, to find the other policies it breaks" },
+        { "ref": "library:rule-change-policy-comparer", "type": "skill", "use": "check", "when": "When an outside rule has changed and you need to know which policies it touches" }
+      ]
+    },
+    {
+      "id": "policy-rollout",
+      "task": "Announce a policy change with a one-page summary and FAQ",
+      "kind": "email",
+      "items": [
+        { "ref": "library:make-a-new-policy-understandable-to-staff", "type": "workflow", "use": "build", "when": "When a policy is approved and staff need a plain explanation, an announcement and a rollout list" },
+        { "ref": "library:staff-announcement-writer", "type": "skill", "use": "build", "when": "When the news needs manager talking points, a FAQ and an order for who hears first" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to have a fresh reader go through it as a staff member and list what is unclear" },
+        { "ref": "library:review-staff-adoption-of-a-policy-change", "type": "workflow", "use": "check", "when": "Some weeks after launch, to see whether staff follow the policy and what gets in the way" }
+      ]
+    },
+    {
+      "id": "policy-gap-review",
+      "task": "Review policies and HR practice for gaps",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:hr-compliance-audit-planner", "type": "skill", "use": "build", "when": "When one HR area needs a checklist, a file sample, ranked findings and a fix plan" },
+        { "ref": "library:people-risk-register-builder", "type": "skill", "use": "build", "when": "When the owner wants people risks ranked, each with an owner and a response step" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before you send findings, to tie every rule you quote to a dated official source" }
+      ]
+    },
+    {
+      "id": "performance-review",
+      "task": "Draft fair performance reviews from evidence",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/performance-review", "use": "build", "when": "When a manager has notes and goals and needs a fair review with pay talk kept apart" },
+        { "ref": "library:performance-review-helper", "type": "skill", "use": "build", "when": "When a staff member needs a self-assessment or a manager needs a rating-meeting prep sheet" },
+        { "ref": "library:quarterly-performance-review-keeper", "type": "agent", "use": "build", "when": "When reviews run every quarter and each should be drafted from that quarter's goals and notes" },
+        { "ref": "library:kim-scott", "type": "mind", "use": "think", "when": "When a review is kind but vague and the person will not know what to change" }
+      ]
+    },
+    {
+      "id": "review-cycle",
+      "task": "Set up a review cycle with forms, goals and one-on-ones",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:review-cycle-form-builder", "type": "skill", "use": "build", "when": "When the team needs review forms, goal templates and a guide for a fair rating meeting" },
+        { "ref": "library:one-on-one-meeting-planner", "type": "skill", "use": "build", "when": "When managers need a regular one-on-one with agenda rules, timing and follow-up" },
+        { "ref": "library:career-ladder-plan", "type": "skill", "use": "build", "when": "When people ask how to move up and the firm has no written levels or growth plans" },
+        { "ref": "kit:workflows/quarterly-people-review", "use": "check", "when": "Every quarter, to check goals, reviews, pay, policies and records are still on track" }
+      ]
+    },
+    {
+      "id": "hard-conversation",
+      "task": "Prepare a hard conversation with a staff member",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:plan-a-difficult-feedback-conversation", "type": "workflow", "use": "build", "when": "When a manager must raise one behaviour and needs an opening built on facts and one clear ask" },
+        { "ref": "library:conflict-mediation-guide", "type": "skill", "use": "build", "when": "When two people are in conflict and you need likely causes, ground rules and what to say" },
+        { "ref": "library:workplace-investigation-guide", "type": "skill", "use": "build", "when": "When a formal complaint comes in and you need a plan, an evidence log and a draft memo" },
+        { "ref": "library:kim-scott", "type": "mind", "use": "think", "when": "When the script dodges the real message or lands as a personal attack" }
+      ]
+    },
+    {
+      "id": "pulse-survey",
+      "task": "Run a staff pulse survey and act on the results",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/pulse-survey-design", "use": "build", "when": "When you want a short survey with the follow-up planned before it goes out" },
+        { "ref": "library:employee-survey-designer", "type": "skill", "use": "build", "when": "When you also need a focus group guide, a way to read results and a manager guide" },
+        { "ref": "library:survey-answer-truth-checker", "type": "prompt", "use": "check", "when": "When results are in, to see which answers you can trust and which questions misled" },
+        { "ref": "library:turn-employee-feedback-into-owned-actions", "type": "workflow", "use": "build", "when": "When feedback is collected and each theme needs an owner, a date and a reply to staff" },
+        { "ref": "library:employee-feedback-action-review-assistant", "type": "agent", "use": "check", "when": "Each month after, to see which agreed actions are done, overdue or blocked" }
+      ]
+    },
+    {
+      "id": "pay-bands",
+      "task": "Build pay bands and a simple pay and benefits plan",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/pay-band-builder", "use": "build", "when": "When a handful of roles need pay ranges that are written down and easy to explain" },
+        { "ref": "library:set-fair-pay-bands-and-a-pay-and-benefits-plan", "type": "workflow", "use": "brief", "when": "When pay, bonus and benefits all need setting together in one guided run" },
+        { "ref": "library:pay-and-benefits-plan-builder", "type": "skill", "use": "build", "when": "When the owner needs grades, a bonus formula and a benefits list set against the budget" },
+        { "ref": "library:pay-benchmark-and-equity-modeler", "type": "skill", "use": "check", "when": "When current pay must be tested against the market and outliers found" }
+      ]
+    },
+    {
+      "id": "hr-records",
+      "task": "Map HR records and set retention and access rules",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/hr-records-retention-schedule", "use": "build", "when": "When staff records sit across email, drives and apps and nobody knows what to delete when" },
+        { "ref": "library:review-employee-data-access-before-a-change", "type": "workflow", "use": "check", "when": "Before a new tool or a role change, to check who can see which staff data" }
+      ]
+    },
+    {
+      "id": "offboarding",
+      "task": "Plan a calm exit and handover for someone leaving",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/offboarding-checklist", "use": "build", "when": "When someone has resigned or a contract is ending and nothing must be missed" },
+        { "ref": "library:offboarding-plan-builder", "type": "skill", "use": "build", "when": "When you need exit interview questions and a handover plan tied to the leave date" },
+        { "ref": "library:handover-note-writer", "type": "prompt", "use": "build", "when": "When the leaver must write a note the next person can run from on day one" },
+        { "ref": "library:let-someone-go-fairly-and-tell-the-team-well", "type": "workflow", "use": "build", "when": "When the firm is ending the job and needs a fair exit plan, risk flags and the team message" },
+        { "ref": "library:ben-horowitz", "type": "mind", "use": "think", "when": "When the owner keeps putting off a hard exit and the team already knows" }
+      ]
+    },
+    {
+      "id": "absence-cover",
+      "task": "Plan absence cover and cut key-person risk",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:prepare-a-team-absence-handover", "type": "workflow", "use": "build", "when": "When one person is going on leave and you need a cover map and task-by-task notes" },
+        { "ref": "library:plan-coverage-for-a-critical-role", "type": "workflow", "use": "build", "when": "When one role has no backup and each critical task needs a trained second person" },
+        { "ref": "library:hand-over-founder-dependent-operations", "type": "workflow", "use": "build", "when": "When too much work lives in the founder's head and deputies need handover notes" }
+      ]
+    },
+    {
+      "id": "first-hire",
+      "task": "Set up for a first employee or a hire in another country",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:first-employee-payroll-setup-planner", "type": "skill", "use": "build", "when": "When a founder is making a first hire and needs dated set-up tasks and accountant questions" },
+        { "ref": "library:new-country-hiring-planner", "type": "skill", "use": "build", "when": "When the hire lives abroad and you must weigh your own entity against an employer of record" },
+        { "ref": "library:contractor-program-setup-guide", "type": "skill", "use": "check", "when": "When it is unclear if the person is a contractor or an employee and the risk needs a first check" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the checklist goes out, to tie each legal step to a dated official source" }
+      ]
+    },
+    {
+      "id": "role-guide",
+      "task": "Write a role guide or handover pack for one job",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When a job's routine work needs writing down with who does what and the edge cases" },
+        { "ref": "library:handover-note-writer", "type": "prompt", "use": "build", "when": "When the pack must cover open work, contacts and what to do first" }
+      ]
+    },
+    {
+      "id": "people-ops-kit",
+      "task": "Set up a people-ops starter kit and people report",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:employee-experience-map-builder", "type": "skill", "use": "brief", "when": "When you need to see the staff journey from first week to exit, with pain points and fixes" },
+        { "ref": "library:people-risk-register-builder", "type": "skill", "use": "build", "when": "When gaps in contracts, records or cover need ranking with owners" },
+        { "ref": "library:hr-metrics-and-report-builder", "type": "skill", "use": "build", "when": "When the owner wants a few people measures defined and a monthly report they will read" },
+        { "ref": "library:headcount-and-turnover-reporter", "type": "skill", "use": "build", "when": "When you have a staff spreadsheet and need headcount and turnover trends for leaders" },
+        { "ref": "kit:workflows/quarterly-people-review", "use": "check", "when": "Every three months, to run the whole kit against what changed" }
+      ]
+    },
+    {
+      "id": "staff-questions",
+      "task": "Answer staff questions from the company's own rules",
+      "kind": "other",
+      "items": [
+        { "ref": "library:company-policy-explainer", "type": "skill", "use": "build", "when": "When someone asks about leave, travel or expenses and the answer must match the handbook" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before you reply, to check each line of the answer points to a rule the firm really has" }
+      ]
+    },
+    {
+      "id": "wellbeing-and-adjustments",
+      "task": "Plan wellbeing support, adjustments and return to work",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:employee-wellbeing-program", "type": "skill", "use": "build", "when": "When the team needs a wellbeing plan, a manager guide and return-to-work steps" },
+        { "ref": "library:prepare-a-workplace-accommodation-conversation", "type": "workflow", "use": "build", "when": "When someone asks for an adjustment and the manager needs a guide, options and a review plan" },
+        { "ref": "library:attendance-policy-writer", "type": "skill", "use": "brief", "when": "When absence rules are unwritten and people are treated differently" }
+      ]
+    },
+    {
+      "id": "internship",
+      "task": "Plan an internship with real work and fair selection",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:plan-an-internship-learning-review", "type": "workflow", "use": "build", "when": "When a first-time host needs a supervised learning plan and review questions for the supervisor" },
+        { "ref": "kit:skills/structured-hiring-kit", "use": "build", "when": "When interns must be chosen on a short task and a scorecard, not on who they know" },
+        { "ref": "library:inclusive-job-post-writer", "type": "skill", "use": "build", "when": "When the intern post should ask only for what a student could really have" },
+        { "ref": "library:one-on-one-meeting-planner", "type": "skill", "use": "build", "when": "When the supervisor needs a weekly check-in format with follow-up" }
+      ]
+    },
+    {
+      "id": "find-and-screen",
+      "task": "Find candidates and screen applications fairly",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:find-the-right-candidates-and-write-messages-they-answer", "type": "workflow", "use": "build", "when": "When no one is applying and you need a fit profile, a search plan and first messages" },
+        { "ref": "library:hiring-pipeline-runner", "type": "agent", "use": "check", "when": "When resumes come in batches and each must be scored the same way against the guide" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:grounded-job-protocol", "type": "skill", "use": "brief", "when": "At the start of any sizeable job, to capture the real business, its rules and its country first" },
+    { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "Before anything goes to staff, to cut legal and HR wording down to plain words" },
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Whenever the work states what the law requires, to give each point a dated source or cut it" }
+  ],
+  "helpers": [
+    { "role": "recruiter", "when": "When the job needs sourcing, outreach and a managed candidate pipeline, not just the hiring kit" },
+    { "role": "payroll-compensation-specialist", "when": "When pay bands need market data, payroll set-up or a pay equity check" },
+    { "role": "internal-communications-specialist", "when": "When a change affects the whole company and needs a full message plan" },
+    { "role": "employee-engagement-specialist", "when": "When survey results need deeper reading and a programme of actions" },
+    { "role": "learning-development-specialist", "when": "When onboarding or a policy needs real training built, not just a checklist" },
+    { "role": "compliance-specialist", "when": "When a policy area is regulated and needs a control check beyond HR practice" }
+  ],
+  "gaps": [
+    "No library item writes a reference letter for a former employee or other formal HR letters such as a written warning or probation outcome",
+    "No library item builds a performance improvement plan or a probation review",
+    "No library item checks several performance reviews against each other for consistent ratings and wording",
+    "No library item writes a remote team working agreement; the only team agreement item is for student projects",
+    "Internship work is thin: one learning-plan workflow, nothing for school outreach emails, a supervisor guide or an end-of-internship review",
+    "No library item builds an HR records map or retention schedule beyond the kit prompt",
+    "No library item checks right-to-work or visa steps for a hire",
+    "No library item makes two or three clearly different versions of a staff announcement or job ad to choose between",
+    "No library item writes a role guide for one job; the procedure writer covers tasks, not the whole role",
+    "No library item tracks mandatory training or builds a training record",
+    "The library has no tool guide for an HR system, a survey tool or an applicant tracker"
+  ]
+}

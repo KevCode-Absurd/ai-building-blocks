@@ -1,0 +1,278 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "membership-volunteer-coordinator",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "volunteer-role-description",
+      "task": "Write volunteer role descriptions for a programme",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/volunteer-role-description", "use": "build", "when": "When one task needs a one-page role that sets expectations without reading like a job contract" },
+        { "ref": "kit:skills/volunteer-roles-recruitment-and-induction", "use": "build", "when": "When the group's whole task list must become a set of roles with check points marked" },
+        { "ref": "library:nonprofit-volunteer-program-planner", "type": "skill", "use": "brief", "when": "When roles, screening, training and shifts are all unclear and need sorting first" }
+      ]
+    },
+    {
+      "id": "call-for-volunteers",
+      "task": "Write a call for volunteers and the sign-up reply",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/call-for-volunteers-and-reply", "use": "build", "when": "When you need website text, a social post, flyer text and the reply, all saying the same thing" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the call opens with 'volunteers needed' and you want several stronger first lines" },
+        { "ref": "library:social-post-writer", "type": "skill", "use": "build", "when": "When the call must be reworked for each social platform the group uses" },
+        { "ref": "library:type-led-poster-planner", "type": "skill", "use": "explore", "when": "When the call goes on a noticeboard and must read from across the room without photos" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before posting, to read the call as a stranger and see if time, place and next step are clear" },
+        { "ref": "library:robert-cialdini", "type": "mind", "use": "think", "when": "When the ask leans on guilt and needs real proof and an honest, small first step" }
+      ]
+    },
+    {
+      "id": "volunteer-induction",
+      "task": "Build a volunteer welcome and induction pack",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/volunteer-sign-up-to-second-shift", "use": "brief", "when": "When a person signs up and you need every step from reply to their second shift" },
+        { "ref": "kit:skills/volunteer-roles-recruitment-and-induction", "use": "build", "when": "When new volunteers need a welcome pack with safeguarding and check points marked" },
+        { "ref": "library:build-a-volunteer-induction-checklist", "type": "workflow", "use": "build", "when": "When the group has its own procedures and needs an induction list, practice plan and supervision gaps" },
+        { "ref": "library:practice-session-minute-planner", "type": "prompt", "use": "build", "when": "When the induction is a live session and needs planning minute by minute" },
+        { "ref": "library:volunteer-induction-evidence-review-assistant", "type": "agent", "use": "check", "when": "After inductions run, to check what each volunteer has really been shown and signed off" }
+      ]
+    },
+    {
+      "id": "screening-and-safeguarding",
+      "task": "Set screening and safeguarding steps for each role",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:nonprofit-volunteer-program-planner", "type": "skill", "use": "build", "when": "When each role needs its screening steps and training written beside it" },
+        { "ref": "kit:skills/volunteer-roles-recruitment-and-induction", "use": "build", "when": "When roles near children or adults at risk must have their checks marked in the pack" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the pack goes out, to tie each check you name to a dated official source" }
+      ]
+    },
+    {
+      "id": "volunteer-rota",
+      "task": "Plan a volunteer rota and cover for no-shows",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:shift-schedule-builder", "type": "skill", "use": "build", "when": "When busy hours and each person's limits are known and you want cover checked per option" },
+        { "ref": "library:shift-schedule-planner", "type": "skill", "use": "build", "when": "When the rota needs a fair pattern for weekends and a simple swap rule" },
+        { "ref": "library:nonprofit-retail-coverage-planner", "type": "skill", "use": "build", "when": "When a charity shop mixes paid staff and volunteers and needs trained roles and backup cover" }
+      ]
+    },
+    {
+      "id": "thanks-and-retention",
+      "task": "Plan how to thank and keep volunteers through the year",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/volunteer-retention-and-impact-report", "use": "build", "when": "When you need the year's thank-you moments, check-ins and a short exit question" },
+        { "ref": "library:honest-appreciation-note-writer", "type": "skill", "use": "build", "when": "When one person deserves a short note with one true, specific thank-you and no ask" },
+        { "ref": "library:agency-organizational-psychologist", "type": "agent", "use": "brief", "when": "When volunteers go quiet or drift away and you need the likely reasons in order" },
+        { "ref": "library:alfie-kohn", "type": "mind", "use": "think", "when": "When the plan is badges and prizes and may crowd out why people came" },
+        { "ref": "library:wangari-maathai", "type": "mind", "use": "think", "when": "When the programme starts well and fades, to tie the work to daily local needs" }
+      ]
+    },
+    {
+      "id": "hours-and-impact-report",
+      "task": "Turn sign-in sheets into an hours and impact report",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/volunteer-retention-and-impact-report", "use": "build", "when": "When you have sign-in sheets and need hours, people and what the work made possible" },
+        { "ref": "library:excel-monthly-rollup-builder", "type": "skill", "use": "build", "when": "When dated sign-in records need a monthly summary with counts you can trace back" },
+        { "ref": "library:nonprofit-program-measurement-planner", "type": "skill", "use": "brief", "when": "When nobody has agreed what to count, who tracks it and when" },
+        { "ref": "library:nonprofit-ethical-impact-story-writer", "type": "skill", "use": "build", "when": "When the report needs one real story told with consent and checked facts" },
+        { "ref": "library:data-story-writer", "type": "skill", "use": "build", "when": "When the numbers are ready and need a point, the proof and a next step for trustees" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before it goes to funders, to tie every number and claim to a record" }
+      ]
+    },
+    {
+      "id": "hard-volunteer-conversation",
+      "task": "Prepare a hard conversation with a volunteer or member",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:plan-a-difficult-feedback-conversation", "type": "workflow", "use": "build", "when": "When someone's behaviour must be raised and you need an opening built on facts" },
+        { "ref": "library:conflict-mediation-guide", "type": "skill", "use": "build", "when": "When two members or volunteers have fallen out and you need ground rules and what to say" }
+      ]
+    },
+    {
+      "id": "member-welcome",
+      "task": "Write the welcome messages for new members",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/member-welcome-and-renewal-messages", "use": "build", "when": "When the club needs its full member message set with timing and channel" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before writing, to compare three plans for the welcome series, each with its first email" },
+        { "ref": "library:customer-onboarding-planner", "type": "skill", "use": "brief", "when": "When you need the first weeks staged, with a clear first thing each member should do" },
+        { "ref": "library:email-sequence-writer", "type": "skill", "use": "build", "when": "When the series needs full emails with subject lines and send timing" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When an email is drafted, to get cuts, subject fixes and a score before sending" }
+      ]
+    },
+    {
+      "id": "renewal-season",
+      "task": "Run renewal season with reminders and a last call",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:workflows/renewal-season", "use": "brief", "when": "Six to eight weeks before the deadline, to set the steps, dates and who does what" },
+        { "ref": "kit:prompts/renewal-message-set", "use": "build", "when": "When you need the invitation, reminders, failed payment note, last call and lapsed note" },
+        { "ref": "library:follow-up-email-sequence-writer", "type": "prompt", "use": "build", "when": "When reminders repeat themselves and each needs a new reason and a stop rule" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When renewal emails go unopened and you want subject lines in several angles" },
+        { "ref": "library:churn-reducer", "type": "skill", "use": "brief", "when": "When members leave at renewal and you need a plan for failed payments and reasons to stay" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the first send, to test that a member can really renew and pay from the link today" }
+      ]
+    },
+    {
+      "id": "lapsed-members",
+      "task": "Write to lapsed members and learn why they left",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/member-welcome-and-renewal-messages", "use": "build", "when": "When a lapsed-member note is needed that is warm and asks one question" },
+        { "ref": "library:nonprofit-donor-thank-you-and-renewal-planner", "type": "skill", "use": "brief", "when": "When members also give, to plan thank-yous and a route back for those who lapsed" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "When one note is not enough, to compare three shapes for a short win-back series" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "Before sending, to cut anything that reads as a guilt trip" }
+      ]
+    },
+    {
+      "id": "join-page-and-offer",
+      "task": "Write the join page, membership tiers and sign-up form",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:membership-plan-pricer", "type": "skill", "use": "brief", "when": "When the club is unsure about tiers, prices or a pay-per-visit option" },
+        { "ref": "library:make-three-first-screens", "type": "skill", "use": "explore", "when": "When the join page is being redone, to see three different first screens as real pages" },
+        { "ref": "library:web-form-designer", "type": "skill", "use": "build", "when": "When the sign-up form needs its fields, error messages and spam protection set" },
+        { "ref": "library:make-a-long-form-easier-to-finish", "type": "workflow", "use": "check", "when": "When people start the join form and give up part way" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before sharing the link, to test that a new person can join and pay today" },
+        { "ref": "library:community-growth-planner", "type": "skill", "use": "brief", "when": "When the group wants more members and needs a plan to grow and turn members into advocates" }
+      ]
+    },
+    {
+      "id": "agm-pack",
+      "task": "Prepare an AGM notice, agenda and papers",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/agm-cycle", "use": "brief", "when": "When the committee sets a date and you need every step and deadline up to the minutes" },
+        { "ref": "kit:prompts/agm-notice-and-agenda", "use": "build", "when": "When you need a notice and agenda that follow the group's own constitution" },
+        { "ref": "kit:skills/agm-papers-minutes-and-club-rules", "use": "build", "when": "When the pack needs papers, nominations and a proxy form where the rules allow" },
+        { "ref": "library:nonprofit-board-meeting-and-role-planner", "type": "skill", "use": "brief", "when": "When officer roles and committee duties are unclear before the elections" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the notice goes out, to tie each date and voting rule to a clause in the constitution" },
+        { "ref": "library:nancy-kline", "type": "mind", "use": "think", "when": "When meetings are run by the loudest voices and members stop coming" }
+      ]
+    },
+    {
+      "id": "minutes",
+      "task": "Write minutes from rough notes or a transcript",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/minutes-from-notes", "use": "build", "when": "After a committee meeting or AGM, to record decisions, votes and actions" },
+        { "ref": "library:board-minutes-drafter", "type": "skill", "use": "build", "when": "When a charity board needs minutes in a formal layout that follows the agenda" },
+        { "ref": "library:rough-notes-to-minutes-writer", "type": "prompt", "use": "build", "when": "When an informal meeting just needs short minutes with owners and dates" },
+        { "ref": "library:weekly-meeting-actions-keeper", "type": "agent", "use": "check", "when": "Before the next meeting, to check last time's actions and build the agenda from what is open" },
+        { "ref": "library:run-a-meeting-worth-holding-from-agenda-to-action-items", "type": "workflow", "use": "brief", "when": "When committee meetings drift and need a pre-read and a clear reason to meet" }
+      ]
+    },
+    {
+      "id": "club-rules",
+      "task": "Write club rules or a code of conduct on one page",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/agm-papers-minutes-and-club-rules", "use": "build", "when": "When the club needs plain rules that match its constitution" },
+        { "ref": "library:make-a-new-policy-understandable-to-staff", "type": "workflow", "use": "build", "when": "When a rule has changed and members or volunteers need it explained with a short notice" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the rules read like a legal document and members will not get through them" }
+      ]
+    },
+    {
+      "id": "member-newsletter",
+      "task": "Write a member newsletter issue",
+      "kind": "email",
+      "items": [
+        { "ref": "library:plan-a-nonprofit-supporter-newsletter", "type": "skill", "use": "brief", "when": "When the newsletter has no fixed sections, reader groups or schedule yet" },
+        { "ref": "library:weekly-newsletter-keeper", "type": "agent", "use": "build", "when": "When notes arrive each week or month and the issue should be drafted and checked the same way" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "Before sending, to get subject lines in several angles" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When the issue is drafted, to get cuts and a score before it goes out" }
+      ]
+    },
+    {
+      "id": "welcome-pack",
+      "task": "Write a new member welcome pack",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/member-welcome-and-renewal-messages", "use": "build", "when": "When the pack must match what the welcome messages promise" },
+        { "ref": "library:faq-page-from-questions-writer", "type": "prompt", "use": "build", "when": "When new members ask the same things and the pack needs a questions section" },
+        { "ref": "library:canva", "type": "tool", "use": "build", "when": "When the club will lay out and update the pack itself" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before it is sent, to read the pack as a brand-new member and list what is missing" }
+      ]
+    },
+    {
+      "id": "member-survey",
+      "task": "Run a member or volunteer survey and brief the committee",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:check-a-marketing-survey-before-sending-it", "type": "workflow", "use": "check", "when": "When questions are drafted, to remove leading wording and plan a small pretest" },
+        { "ref": "library:survey-answer-truth-checker", "type": "prompt", "use": "check", "when": "When results are in, to see which answers can be trusted" },
+        { "ref": "library:prepare-a-survey-findings-briefing", "type": "workflow", "use": "build", "when": "When the committee needs a findings table with honest caveats about who answered" }
+      ]
+    },
+    {
+      "id": "member-data-and-consent",
+      "task": "Handle member data, consent and data requests",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:privacy-policy-drafter", "type": "skill", "use": "build", "when": "When the club collects member details and has no privacy wording to show them" },
+        { "ref": "library:data-request-reply-drafter", "type": "skill", "use": "build", "when": "When a member asks for a copy of their data or to be removed" }
+      ]
+    },
+    {
+      "id": "volunteer-or-member-event",
+      "task": "Plan a volunteer day or member event",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:prepare-a-community-event-access-plan", "type": "workflow", "use": "build", "when": "When the event needs step-free access planned from arrival to exit, with venue questions" },
+        { "ref": "library:event-marketing-planner", "type": "skill", "use": "build", "when": "When the event must fill places and have a follow-up for those who came" },
+        { "ref": "library:make-a-readable-event-poster", "type": "workflow", "use": "build", "when": "When you have the details and need a poster layout and an export checklist" }
+      ]
+    },
+    {
+      "id": "committee-recruitment-and-handover",
+      "task": "Recruit committee members and hand over officer roles",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:nonprofit-board-recruitment-planner", "type": "skill", "use": "build", "when": "When seats are open and you need the skills wanted, a plan and welcome steps" },
+        { "ref": "library:nonprofit-leadership-handover-planner", "type": "skill", "use": "build", "when": "When a chair, secretary or lead is stepping down and cover is needed" },
+        { "ref": "library:handover-note-writer", "type": "prompt", "use": "build", "when": "When the outgoing officer must leave a note the next person can run from" }
+      ]
+    },
+    {
+      "id": "membership-report",
+      "task": "Report membership and renewal numbers to the committee",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:recurring-kpi-report-maker", "type": "skill", "use": "build", "when": "When the same member numbers are needed each month in a report you can rerun" },
+        { "ref": "library:nonprofit-executive-board-report-writer", "type": "skill", "use": "build", "when": "When the report must ask the committee for clear decisions, not just show figures" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the meeting, to tie each figure to the member list it came from" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:grounded-job-protocol", "type": "skill", "use": "brief", "when": "At the start of any sizeable job, to capture the real group, its constitution and its tools" },
+    { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "Before anything goes to members or volunteers, to cut it to plain, friendly words" },
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Whenever the work states a rule, a date or a legal duty, to give it a source or cut it" }
+  ],
+  "helpers": [
+    { "role": "fundraising-specialist", "when": "When the job turns into an appeal, a grant bid or donor care" },
+    { "role": "event-manager", "when": "When a volunteer day or AGM needs a venue, a run sheet and suppliers" },
+    { "role": "graphic-designer", "when": "When the call for volunteers or welcome pack needs a designed flyer or layout" },
+    { "role": "social-media-manager", "when": "When a recruitment drive needs a run of posts, not one" },
+    { "role": "email-marketing-specialist", "when": "When renewal messages need list set-up, automation and results tracking" },
+    { "role": "bookkeeper", "when": "When subscriptions, the treasurer's report or the club accounts need sorting" }
+  ],
+  "gaps": [
+    "No library item builds a volunteer rota from people's availability; the shift items are written for paid staff",
+    "No library item covers safeguarding or tracks background checks and their renewal dates",
+    "No library item writes a club constitution, club rules or a code of conduct",
+    "No library item covers AGM steps such as notice periods, nominations, proxies and votes beyond the kit",
+    "No library item writes member renewal messages; the nearest items are for donors and shop customers",
+    "No library item designs a member or volunteer survey; the survey designer is for employees",
+    "No library item turns sign-in sheets into a volunteer hours report or plans a year of thank-yous beyond the kit skill",
+    "No library item writes a welcome pack or makes different versions of one to compare",
+    "No library item writes a treasurer's report or a simple club accounts summary",
+    "No library item checks the line between a volunteer and a worker",
+    "No library item makes clearly different versions of a hard conversation plan or a member newsletter layout",
+    "The library has no tool guide for a membership database or a mailing tool"
+  ]
+}

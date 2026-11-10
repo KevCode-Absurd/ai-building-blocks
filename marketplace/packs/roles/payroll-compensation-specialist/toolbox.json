@@ -1,0 +1,274 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "payroll-compensation-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "payroll-precheck",
+      "task": "Check this period's payroll inputs before the run",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/pay-period-precheck-cycle", "use": "brief", "when": "Every pay period, to run the steps from change cut-off to the client pressing run" },
+        { "ref": "kit:skills/payroll-input-precheck", "use": "build", "when": "When this period's inputs must be checked person by person against last period" },
+        { "ref": "library:check-payroll-inputs-before-the-cut-off", "type": "workflow", "use": "build", "when": "When several source files feed payroll and you need an exception list tied back to each" },
+        { "ref": "library:excel-table-join-reconciler", "type": "skill", "use": "check", "when": "When two exports should list the same people, to find unmatched rows and duplicate keys" },
+        { "ref": "library:unusual-transaction-finder", "type": "skill", "use": "check", "when": "When the run is large, to flag odd amounts with a short reason for each" },
+        { "ref": "library:variance-commentary", "type": "skill", "use": "build", "when": "When totals moved since last period and each line past the limit needs a written reason" }
+      ]
+    },
+    {
+      "id": "timesheet-check",
+      "task": "Check timesheets against hours, overtime and break rules",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/timesheet-overtime-check", "use": "build", "when": "Before payroll, to test every timesheet against the client's own written rules" },
+        { "ref": "library:payroll-timesheet-checker", "type": "skill", "use": "build", "when": "When raw timesheets need hours totalled by person and every oddity flagged for approval" },
+        { "ref": "library:messy-spreadsheet-cleaner", "type": "skill", "use": "brief", "when": "When the export has text numbers, mixed dates or duplicates that would break the check" },
+        { "ref": "library:pay-and-hours-rules-answerer", "type": "skill", "use": "check", "when": "When a flagged entry turns on an overtime or break rule and you need the rule with its source" }
+      ]
+    },
+    {
+      "id": "payroll-change-log",
+      "task": "Build the change log of starters, leavers and pay changes",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/payroll-change-log", "use": "build", "when": "Before each cut-off, to list every change with who approved it and when it starts" },
+        { "ref": "library:excel-input-form-builder", "type": "skill", "use": "build", "when": "When changes arrive by chat and email and managers need one form with set fields" },
+        { "ref": "library:excel-table-join-reconciler", "type": "skill", "use": "check", "when": "When the log must be matched to the staff list to catch a missing leaver or a double entry" }
+      ]
+    },
+    {
+      "id": "payroll-to-books",
+      "task": "Reconcile payroll totals to the bank and the ledger",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:account-reconciler", "type": "skill", "use": "build", "when": "When net pay on the register must match what left the bank, with gaps sorted by type" },
+        { "ref": "library:journal-entry-preparer", "type": "skill", "use": "build", "when": "When the payroll journal or an accrual needs debits, credits and support for review" },
+        { "ref": "library:accrual-schedule-drafter", "type": "skill", "use": "build", "when": "When holiday pay or bonuses earned but unpaid need an accrual schedule" },
+        { "ref": "library:agency-finance-bookkeeper-controller", "type": "agent", "use": "check", "when": "At month end, to find payroll accounts that do not reconcile and odd entries" }
+      ]
+    },
+    {
+      "id": "pay-rules-answers",
+      "task": "Answer staff pay questions from the firm's own policies",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/pay-rules-answers", "use": "build", "when": "When staff keep asking about overtime, leave pay, sick pay or payday" },
+        { "ref": "library:company-policy-explainer", "type": "skill", "use": "build", "when": "When the answer must come from the handbook in plain words" },
+        { "ref": "library:pay-and-hours-rules-answerer", "type": "skill", "use": "check", "when": "When the policy is silent and you need the outside rule with its source to flag for review" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before replying, to check each line points to a written policy or a dated official source" }
+      ]
+    },
+    {
+      "id": "pay-bands",
+      "task": "Build pay bands the business can explain",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/pay-bands-and-fair-pay-check", "use": "build", "when": "When roles need levels, midpoints from dated market data and written movement rules" },
+        { "ref": "library:set-fair-pay-bands-and-a-pay-and-benefits-plan", "type": "workflow", "use": "brief", "when": "When bands, bonus and benefits are all being set together in one run" },
+        { "ref": "library:hiring-market-researcher", "type": "skill", "use": "brief", "when": "When you need public pay ranges for a role and place before setting a midpoint" },
+        { "ref": "library:pay-band-builder", "type": "skill", "use": "build", "when": "When you hold market data for one role and need a range with a method leaders can follow" },
+        { "ref": "library:career-ladder-plan", "type": "skill", "use": "brief", "when": "When the firm has no job levels yet and bands need something to hang on" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before sharing, to tie every market figure to a named and dated source" }
+      ]
+    },
+    {
+      "id": "fair-pay-check",
+      "task": "Run a fair-pay check across similar roles",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/pay-bands-and-fair-pay-check", "use": "build", "when": "When each person must be placed in a band and gaps between like roles explained" },
+        { "ref": "library:dataset-profiler", "type": "skill", "use": "brief", "when": "When you first get the pay file, to see missing values and odd entries before any maths" },
+        { "ref": "library:pay-benchmark-and-equity-modeler", "type": "skill", "use": "build", "when": "When current pay must be set against market ranges and outliers listed" },
+        { "ref": "library:statistics-helper", "type": "skill", "use": "check", "when": "When you need to know if a gap between groups is real or just a small sample" },
+        { "ref": "library:regression-and-forecast-modeller", "type": "skill", "use": "check", "when": "When the team is large enough to test a pay gap after level, tenure and place" },
+        { "ref": "library:adam-smith", "type": "mind", "use": "think", "when": "When a gap has a reason on paper and you must ask whether the rule itself is fair" }
+      ]
+    },
+    {
+      "id": "annual-pay-review",
+      "task": "Run the annual pay review",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/annual-pay-review", "use": "brief", "when": "Eight to ten weeks before new pay starts, to set the steps, data and sign-offs" },
+        { "ref": "library:people-cost-budget-builder", "type": "skill", "use": "build", "when": "When the review budget must be shown by team and month for finance" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the budget is fixed, to compare two ways to split it with money and dates" },
+        { "ref": "library:prepare-a-fair-promotion-discussion", "type": "workflow", "use": "build", "when": "When a raise depends on a promotion and the evidence must be matched to the criteria" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "Before leaders see the review sheet, to find formula errors and totals that do not tie" }
+      ]
+    },
+    {
+      "id": "pay-raise-case",
+      "task": "Build a fair one-page case for a pay raise",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/pay-raise-case", "use": "build", "when": "When an employee or manager needs a case built from results, scope and named market data" },
+        { "ref": "library:pay-raise-case-builder", "type": "skill", "use": "build", "when": "When the person also needs a script and replies to the likely answers" },
+        { "ref": "library:negotiation-prep-coach", "type": "skill", "use": "brief", "when": "When the talk may get tense and they need an opening, questions and a fallback" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before it is handed over, to tie each result and market figure to a source" }
+      ]
+    },
+    {
+      "id": "benefits-options",
+      "task": "Cost a benefits plan at three budget levels",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/benefits-options-three-budgets", "use": "build", "when": "When the owner wants options with cost per person and in total before talking to a broker" },
+        { "ref": "library:pay-and-benefits-plan-builder", "type": "skill", "use": "build", "when": "When benefits must sit in one plan with pay grades and a bonus formula" },
+        { "ref": "library:hr-vendor-selection-planner", "type": "skill", "use": "build", "when": "When a benefits or payroll provider must be chosen on weighted criteria" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before the costing goes to the owner, to find broken formulas and wrong totals" }
+      ]
+    },
+    {
+      "id": "total-pay-statement",
+      "task": "Write a total pay statement staff can follow",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:pay-benefits-package", "type": "skill", "use": "build", "when": "When staff should see pay, bonus and benefits in one statement outline" },
+        { "ref": "library:small-working-example-explainer", "type": "skill", "use": "build", "when": "When a figure needs one small traced example so people can check their own" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before it goes out, to read the statement as an employee and list what they cannot follow" }
+      ]
+    },
+    {
+      "id": "commission-plan-design",
+      "task": "Design a sales commission plan for one role",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/sales-commission-plan", "use": "build", "when": "When one sales role needs on-target pay, quota from real capacity, rates and deal rules" },
+        { "ref": "library:sales-team-hiring-pay", "type": "workflow", "use": "brief", "when": "When the plan is being set along with who to hire and what early success looks like" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before settling the split, to compare two differently shaped plans with the money shown" },
+        { "ref": "library:incentive-checker", "type": "skill", "use": "check", "when": "When the draft is ready, to see who is rewarded for what and where it pulls the wrong way" },
+        { "ref": "library:knock-on-effects-tracer", "type": "prompt", "use": "check", "when": "Before launch, to trace what reps will do next and three signs to watch" },
+        { "ref": "library:mark-roberge", "type": "mind", "use": "think", "when": "When the plan pays on signing and ignores whether customers stay" },
+        { "ref": "library:charlie-munger", "type": "mind", "use": "think", "when": "When you need to turn the plan upside down and ask how a rep would game it" }
+      ]
+    },
+    {
+      "id": "commission-payout-model",
+      "task": "Model commission payouts in three scenarios",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/sales-commission-plan", "use": "build", "when": "When payouts at low, target and high results must be shown with the maths" },
+        { "ref": "library:agency-sales-pipeline-analyst", "type": "agent", "use": "brief", "when": "When quota looks like a guess and you need to see what the pipeline can really support" },
+        { "ref": "library:agency-finance-financial-analyst", "type": "agent", "use": "check", "when": "When the model is built, to have the figures recalculated and the key assumption named" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "Before sharing the workbook, to list formula errors and broken links" },
+        { "ref": "library:julius", "type": "tool", "use": "build", "when": "When you have past deal data and want quick tables and charts of who would have earned what" }
+      ]
+    },
+    {
+      "id": "commission-plan-document",
+      "task": "Write the commission plan document reps can read",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/commission-plan-document", "use": "build", "when": "When the plan is agreed and each rep must be able to check it against their payslip" },
+        { "ref": "library:small-working-example-explainer", "type": "skill", "use": "build", "when": "When a rule needs one worked deal with traced numbers" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the document reads like a contract and reps will skip it" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before reps sign, to read it as a rep and list every place two readings are possible" }
+      ]
+    },
+    {
+      "id": "commission-plan-review",
+      "task": "Review a commission plan that is not working",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:sales-pay-plan-checker", "type": "skill", "use": "build", "when": "When you have the plan and churn by rep and need what it rewards, ignores and one change to test" },
+        { "ref": "library:plan-bias-check", "type": "workflow", "use": "check", "when": "When the people who wrote the plan also gain from it" },
+        { "ref": "library:incentive-checker", "type": "skill", "use": "check", "when": "When sales, support and finance are paid to want different things" },
+        { "ref": "library:daniel-pink", "type": "mind", "use": "think", "when": "When more commission is the only fix on the table and the real issue may be elsewhere" }
+      ]
+    },
+    {
+      "id": "bonus-and-recognition",
+      "task": "Design a team bonus or recognition plan",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:recognition-plan-designer", "type": "skill", "use": "build", "when": "When the firm wants a reward anyone can win by reaching a set level" },
+        { "ref": "library:pay-and-benefits-plan-builder", "type": "skill", "use": "build", "when": "When a bonus needs a payout formula and its cost against budget" },
+        { "ref": "library:incentive-checker", "type": "skill", "use": "check", "when": "Before launch, to see what the bonus really rewards" },
+        { "ref": "library:mary-kay-ash", "type": "mind", "use": "think", "when": "When the plan is all money and no moment of being seen" }
+      ]
+    },
+    {
+      "id": "offer-package",
+      "task": "Build an offer package inside the pay bands",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:job-offer-planner", "type": "skill", "use": "build", "when": "When a candidate has asked for more and you need a package and a negotiation plan" },
+        { "ref": "library:pay-benchmark-and-equity-modeler", "type": "skill", "use": "build", "when": "When the offer includes share options and the grant needs modelling" },
+        { "ref": "library:offer-letter-check", "type": "skill", "use": "check", "when": "Before the letter goes, to flag risky pay terms for the place of work" }
+      ]
+    },
+    {
+      "id": "payroll-setup",
+      "task": "Set up payroll for a first hire or a new provider",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:first-employee-payroll-setup-planner", "type": "skill", "use": "build", "when": "When a first hire is starting and the owner needs dated tasks and accountant questions" },
+        { "ref": "library:compare-hr-software-before-buying", "type": "workflow", "use": "build", "when": "When payroll software is being chosen and vendors must be compared on the same tasks" },
+        { "ref": "library:employee-or-contractor-checker", "type": "skill", "use": "check", "when": "Before someone is added to payroll or paid by invoice, to flag the status risk" },
+        { "ref": "library:review-employee-data-access-before-a-change", "type": "workflow", "use": "check", "when": "Before a system switch, to check who will see pay data" }
+      ]
+    },
+    {
+      "id": "pay-run-procedure",
+      "task": "Write the payroll calendar and pay-run procedure",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/pay-period-precheck-cycle", "use": "build", "when": "When the cut-off, checks and sign-offs need fixed days in every period" },
+        { "ref": "library:month-end-close-planner", "type": "skill", "use": "build", "when": "When the pay run must fit the close, with dated tasks, owners and blockers" },
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When only one person knows how payroll is run and it must be written down" },
+        { "ref": "library:excel-handover-guide-writer", "type": "skill", "use": "build", "when": "When a payroll workbook is passed on and the next owner needs inputs, steps and risks" }
+      ]
+    },
+    {
+      "id": "pay-change-message",
+      "task": "Explain a pay change or review outcome to staff",
+      "kind": "email",
+      "items": [
+        { "ref": "library:change-announcement", "type": "skill", "use": "build", "when": "When a new pay structure needs an announcement, FAQ and manager talking points" },
+        { "ref": "library:make-a-new-policy-understandable-to-staff", "type": "workflow", "use": "build", "when": "When an approved pay policy must be explained in plain words with a rollout list" },
+        { "ref": "library:hard-questions-faq-writer", "type": "skill", "use": "check", "when": "Before sending, to list the hard questions staff will ask about their own pay" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to read it as someone who got less than they hoped" }
+      ]
+    },
+    {
+      "id": "contractor-payments",
+      "task": "Check contractor status and the monthly contractor list",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:employee-or-contractor-checker", "type": "skill", "use": "build", "when": "When someone works like staff but is paid by invoice" },
+        { "ref": "library:monthly-contractor-roster-keeper", "type": "agent", "use": "check", "when": "Each month, to see who to keep, whose terms to fix and which agreements to redo" },
+        { "ref": "library:contractor-program-setup-guide", "type": "skill", "use": "build", "when": "When the firm uses many contractors and needs an onboarding list and a vendor plan" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:grounded-job-protocol", "type": "skill", "use": "brief", "when": "At the start of any sizeable job, to capture the real firm, its country and its written pay rules" },
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Whenever the work states a legal rate, threshold or market figure, to give it a dated source" },
+    { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before any workbook leaves your hands, to find broken formulas and wrong totals" },
+    { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "Before anything goes to staff, to make sure they can follow why they are paid what they are" }
+  ],
+  "helpers": [
+    { "role": "bookkeeper", "when": "When payroll must be posted, reconciled to the bank and closed in the books" },
+    { "role": "hr-specialist", "when": "When a pay question turns into a contract, policy or performance matter" },
+    { "role": "spreadsheet-specialist", "when": "When the pay model or pre-check needs a robust workbook with locked formulas" },
+    { "role": "revops-specialist", "when": "When commission needs clean deal data, quota history and CRM rules for split deals" },
+    { "role": "fpa-analyst", "when": "When pay bands or a review must fit the yearly budget and forecast" },
+    { "role": "compliance-specialist", "when": "When a pay reporting or transparency rule applies and needs a control check" }
+  ],
+  "gaps": [
+    "No library item checks gross-to-net pay or a payslip line by line; the pre-check items stop at the inputs",
+    "No library item reconciles the payroll register to the bank payment file and to tax and pension payments",
+    "No library item designs a commission plan with on-target pay, quota from capacity, accelerators and caps; the library only checks plans",
+    "No library item builds a commission payout model with scenarios in a spreadsheet",
+    "No library item costs benefits options per person at different budget levels",
+    "No library item runs an annual pay review with a merit grid and budget split",
+    "No library item levels jobs by scope for a small firm; the career ladder item is about growth talks",
+    "No library item prepares pay gap or pay transparency reporting",
+    "No library item handles a pay error: working out the correction and writing to the employee",
+    "No library item builds a payroll calendar with year-end and filing dates by country",
+    "No library item writes a full total pay statement or makes different layouts of one to compare",
+    "No library item makes different versions of a pay change message to choose between",
+    "The library has no tool guide for payroll software or for Excel on its own"
+  ]
+}

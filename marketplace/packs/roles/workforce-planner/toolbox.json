@@ -1,0 +1,280 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "workforce-planner",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "staffing-levels",
+      "task": "Work out staff needed by hour from demand data",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/staffing-levels-from-demand", "use": "build", "when": "When you have sales, covers, footfall or tickets and need staff by role for each hour or day" },
+        { "ref": "library:dataset-profiler", "type": "skill", "use": "brief", "when": "When the demand export first arrives, to spot gaps, closed days and odd entries" },
+        { "ref": "library:demand-forecast-planner", "type": "skill", "use": "build", "when": "When next month's demand must be forecast from past sales, with a way to track the miss" },
+        { "ref": "library:ops-capacity-planner", "type": "skill", "use": "build", "when": "When demand and team size are known and you need staffing levels and overload risk" },
+        { "ref": "library:support-capacity-planner", "type": "skill", "use": "build", "when": "When the team is a support desk and staffing follows ticket volume" },
+        { "ref": "library:philip-tetlock", "type": "mind", "use": "think", "when": "When the forecast is one number, to give it a range, a base rate and a date to check it" }
+      ]
+    },
+    {
+      "id": "weekly-rota",
+      "task": "Build a fair weekly rota",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/weekly-rota-cycle", "use": "brief", "when": "Every week or fortnight, to run the steps so the rota posts on time" },
+        { "ref": "kit:skills/fair-rota-and-rules-check", "use": "build", "when": "When needs, contracts, availability and skills are in and hard shifts must be filled first" },
+        { "ref": "library:shift-schedule-builder", "type": "skill", "use": "explore", "when": "When you want two or three rota options, each with a cover and cost check, before choosing" },
+        { "ref": "library:shift-schedule-planner", "type": "skill", "use": "build", "when": "When the team needs a repeating pattern that rotates nights and weekends fairly" },
+        { "ref": "library:optimization-model-builder", "type": "skill", "use": "build", "when": "When limits clash and you need a model to find the best fit within hours and budget" },
+        { "ref": "library:herb-kelleher", "type": "mind", "use": "think", "when": "When the cheapest rota wins and nobody asks what it does to the people on it" }
+      ]
+    },
+    {
+      "id": "rota-precheck",
+      "task": "Check a draft rota before it is published",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/rota-precheck-before-publishing", "use": "build", "when": "When a manager has built next week's rota and it needs checking against rules and wage cost" },
+        { "ref": "library:pay-and-hours-rules-answerer", "type": "skill", "use": "check", "when": "When a shift may break a rest, break or overtime rule and you need the rule with its source" },
+        { "ref": "library:check-production-shift-staffing-commitments", "type": "workflow", "use": "check", "when": "When a shift needs qualified people for set work and you must see if it has enough" },
+        { "ref": "library:weekly-team-coverage-review-assistant", "type": "agent", "use": "check", "when": "When approved leave is in the diary, to spot critical work left with no cover" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "When the check quotes a scheduling law, to tie it to a dated official source" }
+      ]
+    },
+    {
+      "id": "rota-rules-sheet",
+      "task": "Write a rota rules sheet for the team",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/rota-rules-sheet", "use": "build", "when": "When staff keep asking when the rota comes out and how to swap or book time off" },
+        { "ref": "library:attendance-policy-writer", "type": "skill", "use": "build", "when": "When lateness, overtime and absence rules are not written down either" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "Before it goes on the wall, to cut the sheet to words every shift worker would use" }
+      ]
+    },
+    {
+      "id": "late-change-cost",
+      "task": "Cost a late change to a posted rota",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/schedule-change-cost-check", "use": "build", "when": "When a manager wants to add, cut or move shifts after the rota was posted" },
+        { "ref": "library:pay-and-hours-rules-answerer", "type": "skill", "use": "check", "when": "When the change may trigger extra pay or a rest rule and you need the rule with its source" },
+        { "ref": "library:knock-on-effects-tracer", "type": "prompt", "use": "check", "when": "When the change looks cheap, to trace what it does to fairness and next week's cover" }
+      ]
+    },
+    {
+      "id": "rota-template",
+      "task": "Build a reusable rota template in a spreadsheet",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/fair-rota-and-rules-check", "use": "brief", "when": "Before building, to fix which rules and fairness counts the sheet must show" },
+        { "ref": "library:excel-input-form-builder", "type": "skill", "use": "build", "when": "When managers need dropdowns and validation so shifts are entered the same way each week" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "Before handing it over, to find formula errors and totals that do not tie" }
+      ]
+    },
+    {
+      "id": "headcount-plan",
+      "task": "Build a 12-month hiring plan with full monthly cost",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/headcount-plan-and-cost", "use": "build", "when": "When each planned role needs pay, employer costs, kit and ramp time by month" },
+        { "ref": "library:plan-a-year-of-hiring-and-what-it-will-cost", "type": "workflow", "use": "brief", "when": "When you have headcount history and want forecast, role plan and budget in one run" },
+        { "ref": "library:headcount-forecast-builder", "type": "skill", "use": "build", "when": "When leavers must be counted in, to see hires needed with a low and high range" },
+        { "ref": "library:headcount-plan-builder", "type": "skill", "use": "build", "when": "When growth goals and a budget must become a role-by-role order to hire in" },
+        { "ref": "library:people-cost-budget-builder", "type": "skill", "use": "build", "when": "When finance needs the plan as a budget by team and month" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the budget cannot carry it all, to compare two differently shaped plans with dates" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before the plan goes to the owner, to find broken formulas and wrong totals" }
+      ]
+    },
+    {
+      "id": "cost-of-one-hire",
+      "task": "Work out the full cost of one hire",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/cost-of-one-hire", "use": "build", "when": "When the owner is weighing one role and wants the monthly and first-year cost, not just salary" },
+        { "ref": "library:headcount-business-case-builder", "type": "skill", "use": "build", "when": "When finance wants hire set against contractor, with a payback estimate" },
+        { "ref": "library:key-hire-gap-finder", "type": "skill", "use": "brief", "when": "When it is unclear which single hire would unblock growth" },
+        { "ref": "library:hiring-market-researcher", "type": "skill", "use": "brief", "when": "When the salary line is a guess and you need public pay ranges for the role and place" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before sharing, to tie each tax and benefit rate to a source the accountant can confirm" }
+      ]
+    },
+    {
+      "id": "plan-stress-test",
+      "task": "Test a hiring plan against slow sales",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:headcount-scenario-planner", "type": "skill", "use": "build", "when": "When the plan needs base, best and worst cases and signals that say switch" },
+        { "ref": "library:cash-forecast-builder", "type": "skill", "use": "build", "when": "When you must see if wages can be paid over the next 30, 60 and 90 days" },
+        { "ref": "library:prepare-a-seasonal-cash-buffer", "type": "workflow", "use": "build", "when": "When sales dip each year and the plan needs a dated downside case and actions" },
+        { "ref": "library:plan-pre-mortem-runner", "type": "skill", "use": "check", "when": "Before the plan is signed off, to imagine it failed and find the hidden assumptions" },
+        { "ref": "library:morgan-housel", "type": "mind", "use": "think", "when": "When the plan only works if everything goes right, to ask how much room for error it has" }
+      ]
+    },
+    {
+      "id": "team-capacity",
+      "task": "Build a team capacity view",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:team-capacity-planner", "type": "skill", "use": "build", "when": "When you need workload against people, who is overloaded and whether more can be taken on" },
+        { "ref": "library:check-capacity-before-promising-a-delivery-date", "type": "workflow", "use": "check", "when": "When sales wants a date and you must see if the team can really meet it" },
+        { "ref": "library:service-utilization-margin-builder", "type": "skill", "use": "build", "when": "When a service team's paid hours must be turned into utilisation and margin" },
+        { "ref": "library:taiichi-ohno", "type": "mind", "use": "think", "when": "When the answer is always more people, to look first for waiting and rework" }
+      ]
+    },
+    {
+      "id": "contractor-roster",
+      "task": "Set up and keep a contractor roster and tracker",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/contractors-and-seasonal-staff", "use": "build", "when": "When freelancers need one roster with rates, dates, documents, access and spend" },
+        { "ref": "library:contractor-program-setup-guide", "type": "skill", "use": "build", "when": "When the firm uses many contractors and needs an onboarding list and a vendor plan" },
+        { "ref": "library:employee-or-contractor-checker", "type": "skill", "use": "check", "when": "When someone on the roster works like staff, to flag the status risk" },
+        { "ref": "library:monthly-contractor-roster-keeper", "type": "agent", "use": "check", "when": "Each month, to see who to keep, whose terms to fix and which agreements to redo" }
+      ]
+    },
+    {
+      "id": "contractor-brief",
+      "task": "Write a brief for a freelance or contractor job",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/contractor-brief", "use": "build", "when": "Before work starts, to set scope, deliverables, deadline, rate and who approves" },
+        { "ref": "library:results-agreement-writer", "type": "skill", "use": "build", "when": "When the job is judged on results and both sides need limits, help and review dates agreed" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to read the brief as the freelancer and list what they would have to ask" }
+      ]
+    },
+    {
+      "id": "contractor-on-and-offboarding",
+      "task": "Write contractor onboarding and offboarding checklists",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/contractors-and-seasonal-staff", "use": "build", "when": "When each contractor needs the same start and finish steps, with access listed" },
+        { "ref": "library:offboarding-plan-builder", "type": "skill", "use": "build", "when": "When a contract ends and you need a checklist and handover tied to the end date" },
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When the steps must be written with who does what and the edge cases" }
+      ]
+    },
+    {
+      "id": "contractor-policy",
+      "task": "Write a one-page policy for using contractors",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:hr-policy-drafter", "type": "skill", "use": "build", "when": "When managers hire freelancers their own way and one plain rule sheet is needed" },
+        { "ref": "library:employee-or-contractor-checker", "type": "skill", "use": "brief", "when": "Before writing, to learn which working patterns raise status risk" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the policy is drafted, to cut it to one page managers will read" }
+      ]
+    },
+    {
+      "id": "quarterly-review",
+      "task": "Review headcount and contractor spend each quarter",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/quarterly-headcount-and-contractor-review", "use": "build", "when": "In the two weeks after quarter end, to compare plan with actual and reset the next quarter" },
+        { "ref": "library:quarterly-headcount-plan-keeper", "type": "agent", "use": "check", "when": "When each quarter's numbers arrive, to check the plan and name the budget gap" },
+        { "ref": "library:headcount-and-turnover-reporter", "type": "skill", "use": "build", "when": "When leaders need headcount and leaver trends from the staff spreadsheet" },
+        { "ref": "library:variance-commentary", "type": "skill", "use": "build", "when": "When wage or contractor spend moved and each line past the limit needs a reason" }
+      ]
+    },
+    {
+      "id": "seasonal-staffing-plan",
+      "task": "Plan seasonal staffing from last year's numbers",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/peak-season-staffing", "use": "brief", "when": "As soon as peak dates are known, to work back from the first busy day" },
+        { "ref": "kit:prompts/seasonal-staffing-plan", "use": "build", "when": "When there is still time to hire and train and you have last year's numbers" },
+        { "ref": "kit:skills/contractors-and-seasonal-staff", "use": "build", "when": "When seasonal and agency staff need tracking beside the core team" },
+        { "ref": "library:demand-forecast-planner", "type": "skill", "use": "build", "when": "When this year's peak must be forecast before you set numbers to hire" },
+        { "ref": "library:get-ready-for-peak-season-with-support-and-3pl-planned", "type": "workflow", "use": "build", "when": "When an online shop's peak also needs support hire dates and warehouse terms" },
+        { "ref": "library:plan-pre-mortem-runner", "type": "skill", "use": "check", "when": "Before committing, to imagine the peak went badly and find why" }
+      ]
+    },
+    {
+      "id": "seasonal-job-posts",
+      "task": "Write seasonal job posts and candidate messages",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:plain-job-post-drafter", "type": "prompt", "use": "build", "when": "When you need a short clear post with dates, hours, pay and only the real requirements" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the post must stand out among other seasonal jobs and needs several opening lines" },
+        { "ref": "library:candidate-reply-drafter", "type": "prompt", "use": "build", "when": "When dozens of applicants need a clear next step or a kind no" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before posting, to read it as a student or temp worker and see if dates and pay are clear" }
+      ]
+    },
+    {
+      "id": "hiring-day",
+      "task": "Plan a hiring day with a fast, fair scorecard",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:interview-scorecard-builder", "type": "skill", "use": "build", "when": "When many people are seen in one day and each needs the same short scorecard" },
+        { "ref": "library:work-sample-test-designer", "type": "skill", "use": "build", "when": "When a ten-minute task would show more than an interview" },
+        { "ref": "library:applicant-shortlist-builder", "type": "skill", "use": "build", "when": "When applications must be cut to an invite list scored only on job needs" },
+        { "ref": "library:hiring-pipeline-runner", "type": "agent", "use": "check", "when": "When applications arrive in batches and each must be scored the same way" }
+      ]
+    },
+    {
+      "id": "seasonal-onboarding",
+      "task": "Build a two-day onboarding kit for seasonal staff",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:new-hire-plan-builder", "type": "skill", "use": "build", "when": "When each starter needs a pre-start list and a first-days plan" },
+        { "ref": "library:practice-session-minute-planner", "type": "prompt", "use": "build", "when": "When training is a live session and must be planned minute by minute" },
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When the tills, stock or safety steps need writing as task cards" },
+        { "ref": "library:new-hire-onboarding-keeper", "type": "agent", "use": "check", "when": "In the first weeks, to check who has finished training and what to fix" }
+      ]
+    },
+    {
+      "id": "end-of-season",
+      "task": "Run the end-of-season survey and rehire list",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/contractors-and-seasonal-staff", "use": "build", "when": "When the season ends and you need who to ask back and what each was good at" },
+        { "ref": "library:employee-survey-designer", "type": "skill", "use": "build", "when": "When leavers should be asked a few questions and the answers read for themes" },
+        { "ref": "library:hiring-quality-reviewer", "type": "skill", "use": "check", "when": "When you want to look back at which hiring steps found the people who stayed" }
+      ]
+    },
+    {
+      "id": "absence-and-disruption-cover",
+      "task": "Plan cover for absence, leave or a disruption",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:plan-workforce-disruption-coverage-before-announcing", "type": "workflow", "use": "build", "when": "When a strike, storm or closure is coming and essential services must stay covered" },
+        { "ref": "library:plan-coverage-for-a-critical-role", "type": "workflow", "use": "build", "when": "When one role has no backup and each critical task needs a trained second person" },
+        { "ref": "library:prepare-a-team-absence-handover", "type": "workflow", "use": "build", "when": "When one person's leave needs a cover map and task-by-task notes" }
+      ]
+    },
+    {
+      "id": "wage-cost-report",
+      "task": "Report wage cost against sales and budget",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:excel-monthly-rollup-builder", "type": "skill", "use": "build", "when": "When dated shift and sales records need a monthly summary with traceable totals" },
+        { "ref": "library:variance-commentary", "type": "skill", "use": "build", "when": "When wage cost moved against last period and each line needs a written reason" },
+        { "ref": "library:julius", "type": "tool", "use": "build", "when": "When you want quick charts of hours and sales by day from an upload" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:grounded-job-protocol", "type": "skill", "use": "brief", "when": "At the start of any sizeable job, to capture the real firm, its contracts, rules and budget" },
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Whenever the work states a legal rule or a cost rate, to give it a dated source or cut it" },
+    { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before any rota or cost sheet leaves your hands, to find broken formulas and wrong totals" }
+  ],
+  "helpers": [
+    { "role": "recruiter", "when": "When the plan says hire and the roles need posts, sourcing and screening" },
+    { "role": "payroll-compensation-specialist", "when": "When rota hours feed payroll or pay rates and overtime need checking" },
+    { "role": "hr-specialist", "when": "When a rota rule, contract term or contractor status needs a policy answer" },
+    { "role": "fpa-analyst", "when": "When the headcount plan must tie into the company budget and forecast" },
+    { "role": "spreadsheet-specialist", "when": "When the rota or cost model needs a robust workbook the client can keep using" },
+    { "role": "operations-manager", "when": "When staffing depends on changing how the work itself is done" }
+  ],
+  "gaps": [
+    "No library item checks a rota against rest, break and advance-notice rules by country; the rules item answers one question at a time",
+    "No library item costs a late schedule change, with any extra pay owed",
+    "No library item turns shop or cafe sales by hour into staff needed by role; the capacity planner is general",
+    "No library item builds a reusable rota spreadsheet with fairness counts for late and weekend shifts",
+    "No library item builds a seasonal staffing plan from last year's numbers or a rehire list",
+    "No library item plans a high-volume hiring day with slots, stations and same-day offers",
+    "No library item builds a one or two day onboarding kit for temporary staff",
+    "No library item writes a contractor brief or reviews contractor spend against quality",
+    "No library item lists and removes a contractor's system access when the work ends",
+    "No library item works out the full monthly cost of a hire with employer taxes for a named country",
+    "No library item reports wage cost as a share of sales or builds a skills and cross-training matrix",
+    "No library item makes clearly different versions of a seasonal job post to choose between",
+    "The library has no tool guide for rota or scheduling software"
+  ]
+}

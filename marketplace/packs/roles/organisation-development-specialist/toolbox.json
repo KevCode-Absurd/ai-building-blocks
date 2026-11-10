@@ -1,0 +1,274 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "organisation-development-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "structure-interviews",
+      "task": "Interview leaders and staff to diagnose the structure",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/structure-interview-guide", "use": "build", "when": "Before mapping anything, to get the questions that show where work and decisions get stuck" },
+        { "ref": "library:interview-and-research-planner", "type": "skill", "use": "brief", "when": "When you must choose who to interview and how the notes will be pulled together" },
+        { "ref": "library:research-theme-synthesizer", "type": "skill", "use": "build", "when": "When interviews are done and you need themes ranked by how often they come up, with quotes" },
+        { "ref": "library:power-and-fear-map-builder", "type": "skill", "use": "brief", "when": "When the chart does not explain who really holds power or what each leader fears losing" },
+        { "ref": "library:agency-organizational-psychologist", "type": "agent", "use": "check", "when": "When people go quiet in interviews, to test your reading of why against the evidence" }
+      ]
+    },
+    {
+      "id": "current-structure-map",
+      "task": "Map the current structure as it really works",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/current-structure-map", "use": "build", "when": "When you have the chart, headcount and notes and need spans, layers and pain points drawn" },
+        { "ref": "library:org-structure-map", "type": "skill", "use": "build", "when": "When the client has goals and a team list but no usable chart to start from" },
+        { "ref": "library:mermaid-chart-writer", "type": "skill", "use": "build", "when": "When the chart must be drawn as a diagram the client can paste into their own documents" },
+        { "ref": "library:headcount-and-turnover-reporter", "type": "skill", "use": "brief", "when": "When you get a staff spreadsheet and need headcount and leaver trends by team first" },
+        { "ref": "library:process-bottleneck-finder", "type": "skill", "use": "build", "when": "When the pain is a slow process across teams and you need the one stage holding it up" }
+      ]
+    },
+    {
+      "id": "span-and-layer-check",
+      "task": "Check spans of control and management layers",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/span-and-layer-check", "use": "build", "when": "When managers seem overloaded or under-used, or before adding or removing a layer" },
+        { "ref": "library:manager-output-coach", "type": "skill", "use": "brief", "when": "When a wide span is blamed and the real issue may be how the manager spends their week" },
+        { "ref": "library:andy-grove", "type": "mind", "use": "think", "when": "When judging if a span is too wide, to ask what each manager's time really produces" }
+      ]
+    },
+    {
+      "id": "design-criteria",
+      "task": "Set design criteria from the strategy",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:real-strategy-checker", "type": "skill", "use": "check", "when": "Before designing, to test whether the strategy is clear enough to design a structure for" },
+        { "ref": "library:goal-cascade-checker", "type": "skill", "use": "brief", "when": "When company goals and team plans exist, to find goals no team owns and work in silos" },
+        { "ref": "library:peter-drucker", "type": "mind", "use": "think", "when": "When criteria are a wish list, to start from the results the firm must produce and for whom" }
+      ]
+    },
+    {
+      "id": "org-design-options",
+      "task": "Design two or three org chart options with trade-offs",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:workflows/redesign-from-diagnosis-to-review", "use": "brief", "when": "When leaders say the structure slows them down and you need every step to the review" },
+        { "ref": "kit:skills/org-design-options", "use": "build", "when": "When the current map and criteria are agreed and each option needs its costs and risks" },
+        { "ref": "library:team-layout-planner", "type": "skill", "use": "explore", "when": "When you want one option built around fast flow of work and clear hand-offs between teams" },
+        { "ref": "library:company-operating-system-setter", "type": "skill", "use": "explore", "when": "When a smaller firm may need an accountability chart and a running rhythm more than new boxes" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the options are drawn, to have a fresh reader pick one and say what to borrow" },
+        { "ref": "library:plan-pre-mortem-runner", "type": "skill", "use": "check", "when": "Before leaders choose, to imagine the option failed in a year and find why" },
+        { "ref": "library:donella-meadows", "type": "mind", "use": "think", "when": "When every option moves boxes but leaves the same goals, rules and feedback in place" }
+      ]
+    },
+    {
+      "id": "cost-the-options",
+      "task": "Cost each option and its headcount",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:headcount-scenario-planner", "type": "skill", "use": "build", "when": "When each option changes hiring and you need base, best and worst cases with costs" },
+        { "ref": "library:people-cost-budget-builder", "type": "skill", "use": "build", "when": "When finance needs the chosen option as a budget by team and month" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When budget is tight, to compare two differently shaped plans with money and dates" }
+      ]
+    },
+    {
+      "id": "decision-rights",
+      "task": "Write a decision rights table for key decisions",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/decision-rights-table", "use": "build", "when": "When the same decisions keep stalling and each needs one named decider" },
+        { "ref": "library:set-product-decision-rights", "type": "skill", "use": "build", "when": "When product decisions are the ones in dispute and need facts required and an escalation path" },
+        { "ref": "library:fast-decision-evidence", "type": "workflow", "use": "brief", "when": "When a decision is debated for weeks, to sort how reversible it is and how much proof is enough" },
+        { "ref": "library:david-marquet", "type": "mind", "use": "think", "when": "When every decision still climbs to the top and should sit where the knowledge is" }
+      ]
+    },
+    {
+      "id": "founder-delegation",
+      "task": "Move decisions and work off the founder",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:founder-leadership-coach", "type": "skill", "use": "brief", "when": "When the founder decides everything and needs to see what only they should do" },
+        { "ref": "library:hand-off-the-work-only-you-do-and-keep-it-handed-off", "type": "workflow", "use": "build", "when": "When work is being handed over and each hand-off needs a one-page agreement" },
+        { "ref": "library:hand-over-founder-dependent-operations", "type": "workflow", "use": "build", "when": "When daily operations depend on the founder and deputies need notes with gaps marked" },
+        { "ref": "library:results-agreement-writer", "type": "skill", "use": "build", "when": "When a leader takes on a new area and results, limits and review dates must be agreed" }
+      ]
+    },
+    {
+      "id": "role-profiles",
+      "task": "Write role profiles for new or changed roles",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/role-profile-writer", "use": "build", "when": "When a redesign creates or changes a role and its purpose and decisions must be written" },
+        { "ref": "library:problem-first-job-description-writer", "type": "prompt", "use": "explore", "when": "When the profile reads as a task list, to try one built on the problem the role solves" },
+        { "ref": "library:career-ladder-plan", "type": "skill", "use": "brief", "when": "When new roles need levels so people can see where they sit and how to grow" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sharing, to read the profile as the person in the role and list what is unclear" }
+      ]
+    },
+    {
+      "id": "change-impact",
+      "task": "Assess the impact of a chosen design on people",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/change-impact-assessment", "use": "build", "when": "After leaders choose a design and before any plan is shared" },
+        { "ref": "library:stakeholder-map-builder", "type": "skill", "use": "brief", "when": "When you need each affected group placed by power and interest, with how to talk to them" },
+        { "ref": "library:knock-on-effects-tracer", "type": "prompt", "use": "build", "when": "When a change to reporting lines or bonuses may cause effects nobody planned for" },
+        { "ref": "library:people-risk-register-builder", "type": "skill", "use": "build", "when": "When the risks to people and the firm need ranking with owners" },
+        { "ref": "library:hidden-assumption-auditor", "type": "skill", "use": "check", "when": "When the design rests on things nobody has tested, such as who will accept a new role" }
+      ]
+    },
+    {
+      "id": "transition-plan",
+      "task": "Build a phased transition plan with checkpoints",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/transition-plan-and-announcement", "use": "build", "when": "When a structure is approved and you need phases with legal checkpoints placed first" },
+        { "ref": "library:change-rollout-planner", "type": "skill", "use": "build", "when": "When the plan needs message templates and a way to handle pushback" },
+        { "ref": "library:agency-change-management-consultant", "type": "agent", "use": "brief", "when": "When the people side needs its own message plan and adoption checks" },
+        { "ref": "library:90-day-plan-builder", "type": "skill", "use": "build", "when": "When the first phase needs twelve weeks of actions with owners and check-ins" },
+        { "ref": "library:plan-coverage-for-a-critical-role", "type": "workflow", "use": "build", "when": "When a key role changes hands mid-transition and its tasks must stay covered" },
+        { "ref": "library:plan-pre-mortem-runner", "type": "skill", "use": "check", "when": "Before the plan is shared, to find the hidden assumptions that could sink it" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "When the plan names consultation or notice steps, to tie each to a dated official source" }
+      ]
+    },
+    {
+      "id": "staff-announcement",
+      "task": "Write the staff announcement and FAQ for the change",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/staff-announcement-and-faq", "use": "build", "when": "When the change is ready to share and the legal steps and timing are confirmed" },
+        { "ref": "library:org-change-announcement-writer", "type": "skill", "use": "build", "when": "When leaders also need manager talking points and a town hall script" },
+        { "ref": "library:announce-a-change-of-direction-and-bring-the-team-with-you", "type": "workflow", "use": "explore", "when": "When the change follows a new direction, to try a memo-first route with listening talks" },
+        { "ref": "library:hard-questions-faq-writer", "type": "skill", "use": "check", "when": "When the FAQ is drafted, to list the hard questions staff will ask and grade each answer" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to read it as someone whose manager or role has just changed" }
+      ]
+    },
+    {
+      "id": "role-removal",
+      "task": "Plan a restructure that removes roles",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:layoff-plan-writer", "type": "skill", "use": "build", "when": "When roles will go and you need a decision check, a manager script and the company note" },
+        { "ref": "library:plan-workforce-disruption-coverage-before-announcing", "type": "workflow", "use": "brief", "when": "Before anything is said, to check essential work stays covered" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before sharing, to tie each legal step to a source for HR or a lawyer to confirm" }
+      ]
+    },
+    {
+      "id": "team-health-check",
+      "task": "Run a team health check session",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/team-health-check-session", "use": "build", "when": "Before and a few months after a change, or each quarter for a team that wants to improve" },
+        { "ref": "library:employee-survey-designer", "type": "skill", "use": "build", "when": "When the team is too big for one room and needs a short survey and a focus group guide" },
+        { "ref": "library:sprint-retro-facilitator", "type": "skill", "use": "build", "when": "When you have the team's comments and need what went well, what did not and owned actions" },
+        { "ref": "library:amy-edmondson", "type": "mind", "use": "think", "when": "When scores look fine but nobody raises problems in the room" },
+        { "ref": "library:patrick-lencioni", "type": "mind", "use": "think", "when": "When a leadership team avoids conflict and nobody holds anyone to account" }
+      ]
+    },
+    {
+      "id": "quarterly-review",
+      "task": "Review team health and decisions each quarter",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/quarterly-team-health-and-decision-review", "use": "build", "when": "Every quarter after a redesign, to check health scores and whether decisions sit where agreed" },
+        { "ref": "library:employee-feedback-action-review-assistant", "type": "agent", "use": "check", "when": "When actions were agreed last quarter, to see which are done, overdue or blocked" },
+        { "ref": "library:quarterly-headcount-plan-keeper", "type": "agent", "use": "check", "when": "When the new structure had a headcount plan, to compare it with what happened" }
+      ]
+    },
+    {
+      "id": "merger-integration",
+      "task": "Plan how two teams or companies come together",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:agency-ma-integration-manager", "type": "agent", "use": "build", "when": "When a deal has closed and you need a Day 1 list, workstream owners and the first 100 days" },
+        { "ref": "kit:skills/current-structure-map", "use": "build", "when": "When both sides need mapping the same way before any merged option is drawn" },
+        { "ref": "library:team-layout-planner", "type": "skill", "use": "explore", "when": "When merged teams overlap, to try a layout by flow of work, not by old company" },
+        { "ref": "library:stakeholder-map-builder", "type": "skill", "use": "brief", "when": "When you must see who on each side can block or carry the merger" }
+      ]
+    },
+    {
+      "id": "operating-rhythm",
+      "task": "Set the meeting rhythm and governance after a redesign",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:process-and-meeting-cull-planner", "type": "skill", "use": "build", "when": "When old meetings, approvals and reports survive the change and each needs a keep or drop call" },
+        { "ref": "library:company-operating-system-setter", "type": "skill", "use": "build", "when": "When the firm needs a scorecard, a meeting rhythm and 90-day goals to run the new structure" },
+        { "ref": "library:one-on-one-meeting-planner", "type": "skill", "use": "build", "when": "When new reporting lines start and each manager needs a one-on-one format" }
+      ]
+    },
+    {
+      "id": "handoffs-between-teams",
+      "task": "Map hand-offs between teams and fix the slow point",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:process-bottleneck-finder", "type": "skill", "use": "build", "when": "When work crosses several teams and you need a swim-lane map with the slowest stage named" },
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When the fixed hand-off needs writing down with who does what and the edge cases" },
+        { "ref": "library:donella-meadows", "type": "mind", "use": "think", "when": "When fixing one hand-off just moves the queue somewhere else" }
+      ]
+    },
+    {
+      "id": "new-leader-transition",
+      "task": "Help a new leader take over a team",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:take-over-a-team-as-its-new-leader", "type": "workflow", "use": "build", "when": "When a leader is appointed and needs a first message, a listening tour and agreed results" },
+        { "ref": "library:new-leader-first-message-writer", "type": "skill", "use": "build", "when": "When only the first note is needed: who they are, why they are here and what happens next" }
+      ]
+    },
+    {
+      "id": "succession-and-managers",
+      "task": "Plan succession and check manager capability",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:succession-plan-builder", "type": "skill", "use": "build", "when": "When key roles need a named successor and what each must learn to be ready" },
+        { "ref": "library:manager-quality-review-planner", "type": "skill", "use": "check", "when": "When the new structure needs more managers and you must see who is ready" },
+        { "ref": "library:leadership-program-designer", "type": "skill", "use": "build", "when": "When gaps are clear and new managers need a programme with coaching" }
+      ]
+    },
+    {
+      "id": "values-and-culture",
+      "task": "Write values as behaviours and a culture code",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:company-values-culture", "type": "skill", "use": "build", "when": "When values are words on a wall and need writing as things people do, with a health check" },
+        { "ref": "library:team-culture-memo-writer", "type": "skill", "use": "build", "when": "When one leader wants how their team works set down in a short memo" },
+        { "ref": "library:patrick-lencioni", "type": "mind", "use": "think", "when": "When the values list is long and none of them costs the firm anything to keep" }
+      ]
+    },
+    {
+      "id": "recommendation-memo",
+      "task": "Write the recommendation memo for leaders",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:narrative-decision-memo-writer", "type": "skill", "use": "build", "when": "When leaders must choose and need the options, risks, missing facts and a review plan in prose" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When the board wants one page with the answer first and the decision needed" },
+        { "ref": "library:hardest-objections-answer-writer", "type": "skill", "use": "check", "when": "Before the meeting, to find the toughest objections and answer them fairly" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:grounded-job-protocol", "type": "skill", "use": "brief", "when": "At the start of any sizeable job, to capture the real firm, its headcount and its strategy first" },
+    { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "Before anything goes to leaders or staff, to cut consultant words down to plain ones" },
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Whenever the work quotes a number, a benchmark or a legal step, to give it a source or cut it" }
+  ],
+  "helpers": [
+    { "role": "hr-specialist", "when": "When the change touches contracts, consultation steps, policies or individual exits" },
+    { "role": "workforce-planner", "when": "When each option needs headcount, cost and hiring timing worked through" },
+    { "role": "internal-communications-specialist", "when": "When the announcement needs a full message set, manager pack and pulse check" },
+    { "role": "payroll-compensation-specialist", "when": "When changed roles need new grades or pay bands" },
+    { "role": "leadership-coach", "when": "When a leader must change how they delegate for the design to work" },
+    { "role": "project-manager", "when": "When the transition runs across many teams and needs tracking week by week" }
+  ],
+  "gaps": [
+    "No library item runs a team health check session or tracks team health scores over time",
+    "No library item writes a role profile with purpose, accountabilities and decisions; the nearest items write job ads",
+    "No library item assesses change impact role by role or group by group",
+    "No library item counts spans and layers from a staff export or compares them with benchmarks",
+    "No library item writes a structure interview guide; the research planner is built for product research",
+    "No library item lists consultation and notice steps by country for a restructure",
+    "No library item reviews whether decision rights are being followed or keeps a decision log",
+    "No library item plans a design workshop with leaders, with an agenda and exercises",
+    "No library item builds a job architecture or grading structure",
+    "No library item makes different versions of a team health session or a new leader's first message to choose between",
+    "The library has no tool guide for an org chart or diagram tool"
+  ]
+}

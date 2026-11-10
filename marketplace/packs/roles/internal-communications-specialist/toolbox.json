@@ -1,0 +1,284 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "internal-communications-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "newsletter-edition",
+      "task": "Build a staff newsletter edition",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/staff-newsletter-edition", "use": "build", "when": "When you have the month's news, leaders' notes and site updates and need the full edition" },
+        { "ref": "library:weekly-newsletter-keeper", "type": "agent", "use": "build", "when": "When the newsletter runs every week and each issue should be drafted, edited and scored the same way" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "Before sending, to get subject lines in several angles that earn the open and stay clear" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the lead story needs a headline and the first try reads like a notice board" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When you have two or three lead stories or subject lines and want a fresh reader to pick" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When the edition is drafted, to get cuts, a pacing map and a score before it goes out" },
+        { "ref": "library:roy-peter-clark", "type": "mind", "use": "think", "when": "When an item has no focus and the reader cannot tell why it matters to them" }
+      ]
+    },
+    {
+      "id": "leadership-update",
+      "task": "Write a leadership update in the leader's own voice",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/leadership-update-from-notes", "use": "build", "when": "When a leader hands you rough notes and the update must sound like them and explain why" },
+        { "ref": "kit:skills/leadership-update-and-town-hall", "use": "build", "when": "When the update and the town hall script are needed together from the same notes" },
+        { "ref": "library:executive-update-drafter", "type": "skill", "use": "build", "when": "When the update carries bad news and must be pitched to one named audience" },
+        { "ref": "library:brand-voice-reviewer", "type": "agent", "use": "check", "when": "Before each update goes out, to check it against the leader's voice and track repeat slips" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to have a fresh reader go through it as a staff member and list what rings false" },
+        { "ref": "library:george-orwell", "type": "mind", "use": "think", "when": "When the draft hides the real news behind vague labels and padding" }
+      ]
+    },
+    {
+      "id": "leader-voice",
+      "task": "Capture a leader's voice so drafts sound like them",
+      "kind": "other",
+      "items": [
+        { "ref": "library:write-a-voice-guide-from-your-documents-and-check-copy", "type": "workflow", "use": "build", "when": "When you have the leader's past emails and talks and want a voice guide and a checked draft" },
+        { "ref": "library:brand-voice-guide-builder", "type": "skill", "use": "build", "when": "When the best source is call transcripts and you need rules, examples and open questions" },
+        { "ref": "library:otter", "type": "tool", "use": "brief", "when": "When the leader would rather talk than write, to get a transcript you can draft from" }
+      ]
+    },
+    {
+      "id": "town-hall",
+      "task": "Write a town hall script and question bank",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:workflows/quarterly-town-hall", "use": "brief", "when": "When a town hall is on the calendar and you need the steps from agenda to follow-up" },
+        { "ref": "kit:skills/leadership-update-and-town-hall", "use": "build", "when": "When you need a timed script with honest answers, including what is not yet known" },
+        { "ref": "kit:prompts/town-hall-question-bank", "use": "build", "when": "When leaders need answers ready for the questions staff will really ask, hardest first" },
+        { "ref": "library:hostile-room-speech-planner", "type": "skill", "use": "explore", "when": "When the room is angry, to try a version that agrees first and then turns step by step" },
+        { "ref": "library:read-aloud-speech-shaper", "type": "skill", "use": "build", "when": "When the script reads well on paper but must be heard, with a line people repeat" },
+        { "ref": "library:hardest-objections-answer-writer", "type": "skill", "use": "check", "when": "When the answers are drafted, to test them against the toughest pushback and admit the limits" },
+        { "ref": "library:annette-simmons", "type": "mind", "use": "think", "when": "When the talk is all numbers and needs one true incident people will remember" }
+      ]
+    },
+    {
+      "id": "town-hall-follow-up",
+      "task": "Write up a town hall with answers and actions",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:meeting-minutes-writer", "type": "skill", "use": "build", "when": "When you have rough notes and need decisions, actions with owners and open questions" },
+        { "ref": "library:otter", "type": "tool", "use": "build", "when": "When the session was recorded and you need the questions asked word for word" },
+        { "ref": "kit:prompts/three-question-pulse-check", "use": "check", "when": "A week or two later, to see whether staff understood and know where to ask" }
+      ]
+    },
+    {
+      "id": "big-news-sequence",
+      "task": "Plan and write the full message set for big news",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:workflows/big-news-announcement", "use": "brief", "when": "When a decision staff will feel is coming and you need who hears what, in what order" },
+        { "ref": "kit:skills/change-announcement-sequence", "use": "build", "when": "When you write the manager briefing, the message to affected staff and the all-staff note" },
+        { "ref": "library:stakeholder-map-builder", "type": "skill", "use": "brief", "when": "Before drafting, to sort the affected groups and how to talk to each" },
+        { "ref": "library:org-change-announcement-writer", "type": "skill", "use": "build", "when": "When the leader also needs a town hall script and answers to the hard questions" },
+        { "ref": "library:announce-a-change-of-direction-and-bring-the-team-with-you", "type": "workflow", "use": "explore", "when": "When the change is a new direction, to try a memo-first route with listening talks" },
+        { "ref": "library:company-story-aligner", "type": "skill", "use": "check", "when": "When each audience has its own version, to find where the versions contradict each other" },
+        { "ref": "library:satya-nadella", "type": "mind", "use": "think", "when": "When the message lists what changes but not who it helps or what protects trust" }
+      ]
+    },
+    {
+      "id": "manager-briefing",
+      "task": "Write a manager briefing pack before an announcement",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/manager-briefing-pack", "use": "build", "when": "When managers will be asked about the news and must hear it first" },
+        { "ref": "library:staff-announcement-writer", "type": "skill", "use": "build", "when": "When you need talking points, a FAQ and a rollout order alongside the announcement" },
+        { "ref": "library:hard-questions-faq-writer", "type": "skill", "use": "check", "when": "When the pack is drafted, to list the hard questions teams will ask and grade each answer" }
+      ]
+    },
+    {
+      "id": "layoff-or-restructure",
+      "task": "Write messages for a restructure or job losses",
+      "kind": "email",
+      "items": [
+        { "ref": "library:layoff-plan-writer", "type": "skill", "use": "build", "when": "When cuts are decided and you need a decision check, a manager script and the company note" },
+        { "ref": "library:plan-workforce-disruption-coverage-before-announcing", "type": "workflow", "use": "brief", "when": "Before anything is announced, to check services stay covered and who escalates" },
+        { "ref": "library:change-announcement", "type": "skill", "use": "build", "when": "When you need the announcement, FAQ and a send plan for a re-org" },
+        { "ref": "kit:skills/change-announcement-sequence", "use": "build", "when": "When affected staff must hear in person before the all-staff message" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to read each message as someone who may lose their job" },
+        { "ref": "library:mary-barra", "type": "mind", "use": "think", "when": "When the draft starts with the company and not with the people affected" }
+      ]
+    },
+    {
+      "id": "chat-announcement",
+      "task": "Write a short announcement for Slack or Teams",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/chat-channel-announcement", "use": "build", "when": "When staff should be able to act on a chat post without opening anything else" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the first line decides if anyone reads on, to get several opening angles" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "Before posting, to cut the post to plain words and one action" }
+      ]
+    },
+    {
+      "id": "policy-explainer",
+      "task": "Explain a new policy to staff with a FAQ",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:make-a-new-policy-understandable-to-staff", "type": "workflow", "use": "build", "when": "When a policy is approved and staff need a plain explanation and a rollout list" },
+        { "ref": "library:faq-page-from-questions-writer", "type": "prompt", "use": "explore", "when": "When staff keep asking the same things, to try the explainer as questions and answers" },
+        { "ref": "library:hard-questions-faq-writer", "type": "skill", "use": "build", "when": "When the FAQ avoids the awkward questions staff will ask anyway" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before sending, to check every line matches the approved policy text" }
+      ]
+    },
+    {
+      "id": "intranet-map",
+      "task": "Rebuild an intranet page map around staff tasks",
+      "kind": "web_page",
+      "items": [
+        { "ref": "kit:skills/intranet-page-map-and-copy", "use": "build", "when": "When the intranet follows the org chart and staff cannot find answers" },
+        { "ref": "library:page-keep-or-cut-auditor", "type": "skill", "use": "brief", "when": "When you have the page list and must mark each keep, update, merge or delete" },
+        { "ref": "library:site-map-planner", "type": "skill", "use": "build", "when": "When the new structure needs a hierarchy, navigation and a link plan written out" },
+        { "ref": "library:make-three-first-screens", "type": "skill", "use": "explore", "when": "When the home page is being redone, to see three different first screens as real pages" },
+        { "ref": "library:click-choice-clarity-checker", "type": "skill", "use": "check", "when": "When the menu labels are drafted, to score each choice and rewrite the unclear ones" },
+        { "ref": "library:guru", "type": "tool", "use": "build", "when": "When staff should get checked answers inside Slack or Teams instead of opening the intranet" },
+        { "ref": "library:notion-ai", "type": "tool", "use": "build", "when": "When the intranet lives in Notion and pages are drafted and kept there" }
+      ]
+    },
+    {
+      "id": "intranet-page-rewrite",
+      "task": "Rewrite an intranet page around the staff question",
+      "kind": "web_page",
+      "items": [
+        { "ref": "kit:prompts/intranet-page-rewrite", "use": "build", "when": "When a page is long or out of date and staff still email to ask the same thing" },
+        { "ref": "library:faq-page-from-questions-writer", "type": "prompt", "use": "explore", "when": "When you hold the real questions staff send, to try the page as questions and answers" },
+        { "ref": "library:plain-words-interface-rewriter", "type": "skill", "use": "build", "when": "When a form or process page uses the department's words, not the words staff say" },
+        { "ref": "library:help-article-writer", "type": "skill", "use": "build", "when": "When the page is a how-to and should be searchable with clear steps" },
+        { "ref": "library:notion-wiki-writer", "type": "skill", "use": "build", "when": "When the answer sits in a chat thread and must become a linked wiki page" },
+        { "ref": "library:sop-and-runbook-checker", "type": "skill", "use": "check", "when": "When you review a set of pages, to find stale ones and pages with no owner" }
+      ]
+    },
+    {
+      "id": "comms-calendar",
+      "task": "Plan the internal comms calendar and monthly cycle",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/monthly-internal-comms-cycle", "use": "build", "when": "At the start of each month, to set what goes out, on which channel and who signs it off" },
+        { "ref": "library:campaign-brief-calendar", "type": "skill", "use": "build", "when": "When one internal campaign needs a brief with audience, messages, channels and a weekly plan" },
+        { "ref": "library:stakeholder-map-builder", "type": "skill", "use": "brief", "when": "When you need to see which groups hear too much and which hear nothing" }
+      ]
+    },
+    {
+      "id": "tool-rollout-comms",
+      "task": "Plan the messages for a new tool or process rollout",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:change-rollout-planner", "type": "skill", "use": "build", "when": "When a tool switch needs a rollout plan, message templates and a plan for pushback" },
+        { "ref": "library:agency-change-management-consultant", "type": "agent", "use": "brief", "when": "When the people side needs a stakeholder map, a message plan and adoption checks" },
+        { "ref": "library:business-tool-launch-checklist", "type": "skill", "use": "check", "when": "Before launch day, to list open blockers and record the go or no-go decision" }
+      ]
+    },
+    {
+      "id": "pulse-check",
+      "task": "Run a pulse check after big news and reply to staff",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/three-question-pulse-check", "use": "build", "when": "One to two weeks after an announcement, to test whether staff understood it" },
+        { "ref": "library:employee-survey-designer", "type": "skill", "use": "build", "when": "When three questions are not enough and you need a focus group guide and a way to read results" },
+        { "ref": "library:turn-employee-feedback-into-owned-actions", "type": "workflow", "use": "build", "when": "When comments are in and each theme needs an owner and a reply to staff" },
+        { "ref": "library:employee-feedback-action-review-assistant", "type": "agent", "use": "check", "when": "Each month after, to draft the staff update on what was done and what is overdue" }
+      ]
+    },
+    {
+      "id": "message-landed-report",
+      "task": "Report whether messages landed and what to change",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:review-staff-adoption-of-a-policy-change", "type": "workflow", "use": "build", "when": "When you must show if staff follow a change and name what gets in the way" },
+        { "ref": "library:survey-answer-truth-checker", "type": "prompt", "use": "check", "when": "When survey results are in, to see which answers you can trust" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When leaders need one page with the answer first and the decision needed" },
+        { "ref": "library:barbara-minto", "type": "mind", "use": "think", "when": "When the report lists activity and never answers the question leaders asked" }
+      ]
+    },
+    {
+      "id": "crisis-update",
+      "task": "Write staff updates during a crisis or incident",
+      "kind": "email",
+      "items": [
+        { "ref": "library:workforce-crisis-playbook-writer", "type": "skill", "use": "build", "when": "When something has gone wrong and you need a first-hour staff message and a 24-hour list" },
+        { "ref": "library:internal-update-writer", "type": "skill", "use": "build", "when": "When the facts are known and you need a clear incident note in a set format" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before each update, to separate what is confirmed from what is still a guess" },
+        { "ref": "library:mary-barra", "type": "mind", "use": "think", "when": "When the update must start with affected people, known facts and named owners" }
+      ]
+    },
+    {
+      "id": "culture-or-priority-memo",
+      "task": "Write a culture, values or priority memo",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:team-culture-memo-writer", "type": "skill", "use": "build", "when": "When a leader wants how the team should work written down in one short memo" },
+        { "ref": "library:top-priority-shift-memo-writer", "type": "skill", "use": "build", "when": "When the top priority has changed and each area needs one stop and one start" },
+        { "ref": "library:hardest-objections-answer-writer", "type": "skill", "use": "check", "when": "When the memo is drafted, to find the pushback it will get and answer it fairly" },
+        { "ref": "library:george-orwell", "type": "mind", "use": "think", "when": "When the values read like a poster and say nothing a person could act on" }
+      ]
+    },
+    {
+      "id": "people-story",
+      "task": "Write a people story or team spotlight",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/staff-newsletter-edition", "use": "build", "when": "When the story will run in the newsletter and must fit its length and tone" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the story needs a headline that is about the person, not their job title" },
+        { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "Before it runs, to fix names, titles and slips while keeping the person's own words" },
+        { "ref": "library:annette-simmons", "type": "mind", "use": "think", "when": "When the profile is a list of duties and needs one moment that shows who they are" }
+      ]
+    },
+    {
+      "id": "edit-a-draft",
+      "task": "Edit and proof a leader's or colleague's draft",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "build", "when": "When a draft is full of management words and each cut should be explained to its author" },
+        { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "When the text must come back corrected in the writer's voice with a log of changes" },
+        { "ref": "library:roy-peter-clark", "type": "mind", "use": "think", "when": "When the draft has good material in the wrong order" }
+      ]
+    },
+    {
+      "id": "town-hall-slides",
+      "task": "Draft the slides for a town hall or leadership update",
+      "kind": "other",
+      "items": [
+        { "ref": "library:markdown-slide-deck-maker", "type": "skill", "use": "build", "when": "When the script is agreed and you need simple slides with speaker notes fast" },
+        { "ref": "library:gamma", "type": "tool", "use": "build", "when": "When the leader's team wants a deck draft they can edit themselves" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before the session, to view the deck as someone at the back of the room would" }
+      ]
+    },
+    {
+      "id": "multi-site-versions",
+      "task": "Adapt one message for sites, shifts and languages",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:translator", "type": "skill", "use": "build", "when": "When part of the workforce reads another language and the tone must stay natural" },
+        { "ref": "library:company-story-aligner", "type": "skill", "use": "check", "when": "When each site gets its own version, to make sure no two versions disagree" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "Before translating, to cut idioms and head-office terms that do not travel" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:grounded-job-protocol", "type": "skill", "use": "brief", "when": "At the start of any sizeable job, to capture the real firm, its sites and its channels first" },
+    { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "Before anything reaches staff, to cut it to plain words they would say themselves" },
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Whenever a message states dates, numbers or decisions, to tie each to an approved source" }
+  ],
+  "helpers": [
+    { "role": "speechwriter", "when": "When a leader needs a full keynote or a hard speech, not a short script" },
+    { "role": "presentation-designer", "when": "When the town hall needs designed slides, not a quick draft" },
+    { "role": "hr-specialist", "when": "When the news changes a policy, a contract term or someone's job" },
+    { "role": "employee-engagement-specialist", "when": "When a pulse check shows a deeper problem that needs a proper survey and action plan" },
+    { "role": "organisation-development-specialist", "when": "When the announcement depends on a restructure that is not yet designed" },
+    { "role": "video-producer", "when": "When the leader's message should go out as a short video" }
+  ],
+  "gaps": [
+    "No library item builds an internal comms calendar or a channel plan that says which channel does which job",
+    "No library item writes a staff newsletter; the newsletter items are for customers or donors",
+    "No library item makes two or three clearly different versions of a leadership update, crisis update or restructure message to choose between",
+    "No library item plans the interview for a staff profile or writes a people story with consent",
+    "No library item reports internal comms reach, such as open and read rates by site or team",
+    "No library item plans how to reach frontline staff who have no work email or desk",
+    "No library item writes a script for a short leader video message",
+    "No library item makes different slide directions for a town hall deck",
+    "No library item sets intranet page owners and review dates beyond the kit skill",
+    "No library item plans a staff recognition programme or shout-out format",
+    "The library has no tool guide for Slack, Teams, SharePoint or a staff comms platform"
+  ]
+}

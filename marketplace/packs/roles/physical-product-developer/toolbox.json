@@ -1,0 +1,267 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "physical-product-developer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "requirements-document",
+      "task": "Write a requirements document with a test for every line",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/idea-to-factory-ready", "use": "brief", "when": "When a client brings an idea, a sketch or a handmade sample and wants a factory order" },
+        { "ref": "kit:skills/product-requirements-and-prototype-plan", "use": "build", "when": "When each requirement needs a measurable target, a test method and an owner" },
+        { "ref": "library:goal-sharpener", "type": "skill", "use": "build", "when": "When a requirement says 'durable' or 'light' and needs a number and a finish line" },
+        { "ref": "library:design-review-panel", "type": "skill", "use": "check", "when": "When the document is drafted, to have reviewers hunt for hidden assumptions and failure points" },
+        { "ref": "library:dieter-rams", "type": "mind", "use": "think", "when": "When the list keeps growing and you must ask which features the product can do without" }
+      ]
+    },
+    {
+      "id": "idea-check",
+      "task": "Check a product idea against real buyer complaints",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:find-a-product-idea-in-buyer-complaints-and-score-it", "type": "workflow", "use": "build", "when": "When the idea is loose and you want the complaints that sell and a score for the gap" },
+        { "ref": "library:review-insight-finder", "type": "skill", "use": "brief", "when": "When you have rival product reviews and need complaints ranked with real quotes" },
+        { "ref": "library:competitor-product-analyst", "type": "skill", "use": "brief", "when": "When rival products must be set beside the idea on price, features and gaps" },
+        { "ref": "library:pretotype-experiment-designer", "type": "skill", "use": "build", "when": "Before paying for tooling, to test demand with a pre-order or page and a clear pass mark" },
+        { "ref": "library:don-norman", "type": "mind", "use": "think", "when": "When the design suits the maker and you must ask how a real person will hold and use it" }
+      ]
+    },
+    {
+      "id": "prototype-plan",
+      "task": "Plan prototypes in stages and what each must prove",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/product-requirements-and-prototype-plan", "use": "build", "when": "When looks-like, works-like and pre-production samples each need a purpose and a test" },
+        { "ref": "library:assumption-test-ranker", "type": "skill", "use": "brief", "when": "Before building anything, to rank which unknowns each prototype must settle first" },
+        { "ref": "library:five-day-idea-test-planner", "type": "skill", "use": "explore", "when": "When a rough mock-up could be tested with real users in a week before any costly sample" },
+        { "ref": "library:usability-test-runner", "type": "skill", "use": "build", "when": "When people will handle the prototype and you need tasks, notes and a findings summary" },
+        { "ref": "library:check-a-prototype-before-user-testing", "type": "workflow", "use": "check", "when": "Before a test session, to find blockers and word the tasks neutrally" },
+        { "ref": "library:soichiro-honda", "type": "mind", "use": "think", "when": "When a prototype fails, to study the actual failure before planning the next test" }
+      ]
+    },
+    {
+      "id": "design-direction",
+      "task": "Brief the look of the product and make concept images",
+      "kind": "other",
+      "items": [
+        { "ref": "library:product-brand-sheet-planner", "type": "workflow", "use": "brief", "when": "When the product and brand direction need one visual sheet plan and image prompts" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "Before settling a look, to see three clearly different directions with one chosen" },
+        { "ref": "library:image-maker-and-editor", "type": "skill", "use": "build", "when": "When the client needs to see the idea as pictures, or a variant of an existing photo" },
+        { "ref": "library:krea", "type": "tool", "use": "build", "when": "When concept images need sharpening or trying across several image models" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When there are two to four directions, to have a fresh reviewer pick one and say what to borrow" }
+      ]
+    },
+    {
+      "id": "apparel-tech-pack",
+      "task": "Write a garment tech pack a factory can quote from",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/apparel-tech-pack", "use": "build", "when": "When a garment needs callouts, points of measure, tolerances, materials and construction" },
+        { "ref": "library:product-tech-pack-writer", "type": "skill", "use": "build", "when": "When you start from product photos and ideas and need exact measures written out" },
+        { "ref": "library:fabric-swap-sample-maker", "type": "skill", "use": "explore", "when": "Before fixing the fabric, to see the same garment shape pictured in other swatches" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to read the pack as the factory and list every place they would have to guess" }
+      ]
+    },
+    {
+      "id": "bill-of-materials",
+      "task": "Build a bill of materials with parts, trims and labels",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/apparel-tech-pack", "use": "build", "when": "When a garment's fabrics, trims, labels and packaging must be listed with placement" },
+        { "ref": "library:product-bill-of-materials-builder", "type": "skill", "use": "build", "when": "When you have a product and a quote and need a cost sheet by part with each maker" },
+        { "ref": "library:electronics-parts-sourcing", "type": "skill", "use": "check", "when": "When the product has electronics, to find parts that could stall the build and second sources" }
+      ]
+    },
+    {
+      "id": "dfm-check",
+      "task": "Run design-for-manufacture questions before quoting",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/dfm-questions-before-quote", "use": "build", "when": "When the design is close to final and costly or hard-to-make features must be caught" },
+        { "ref": "library:failure-first-plan-check", "type": "skill", "use": "check", "when": "When the design looks done, to list the ways it could fail in making or in use" },
+        { "ref": "library:ingvar-kamprad", "type": "mind", "use": "think", "when": "When the cost target is missed, to question each costly step and try a cheaper way" }
+      ]
+    },
+    {
+      "id": "materials-and-sourcing-claims",
+      "task": "Choose materials and check sourcing claims",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:responsible-sourcing-checker", "type": "skill", "use": "check", "when": "When suppliers' ethics and environment claims need a questionnaire and a gap list" },
+        { "ref": "library:fabric-swap-sample-maker", "type": "skill", "use": "explore", "when": "When two or three fabrics are in play and the client needs to see each on the garment" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before a material claim goes in the spec, to tie it to a test report or supplier document" },
+        { "ref": "library:yvon-chouinard", "type": "mind", "use": "think", "when": "When the cheaper material wins by default and nobody has asked how long the product will last" }
+      ]
+    },
+    {
+      "id": "find-and-vet-factories",
+      "task": "Shortlist and vet manufacturers",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:sourcing-plan-builder", "type": "skill", "use": "brief", "when": "When you need a supplier list, scoring rules and negotiation levers before contacting anyone" },
+        { "ref": "library:factory-shortlist-vetter", "type": "skill", "use": "check", "when": "When factories have answered and each must be scored, with red flags and a pick" },
+        { "ref": "library:agency-supply-chain-strategist", "type": "agent", "use": "build", "when": "When buying from Chinese factories and you need supplier checks, total cost and an order split" },
+        { "ref": "library:co-packer-picker", "type": "skill", "use": "build", "when": "When the product is made or packed by a co-packer and the deal must be managed" }
+      ]
+    },
+    {
+      "id": "rfq-pack",
+      "task": "Build a request-for-quote pack for manufacturers",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/rfq-pack-and-quote-comparison", "use": "build", "when": "When the spec is ready and factories need quantities, packaging, delivery term and questions" },
+        { "ref": "library:supplier-quote-request-writer", "type": "skill", "use": "build", "when": "When buyer complaints should shape the request and it must be written in maker terms" },
+        { "ref": "library:nda-drafter", "type": "skill", "use": "build", "when": "Before sharing drawings, to get a draft confidentiality agreement for a lawyer to check" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to read the pack as a factory sales rep and list what they cannot price" }
+      ]
+    },
+    {
+      "id": "quote-comparison",
+      "task": "Compare factory quotes on the same basis",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/rfq-pack-and-quote-comparison", "use": "build", "when": "When quotes come back and must be laid side by side with gaps listed" },
+        { "ref": "library:compare-supplier-prices-on-the-same-basis", "type": "workflow", "use": "build", "when": "When quotes differ in units, currency and delivery terms and need one basis" },
+        { "ref": "library:supplier-quote-table-builder", "type": "prompt", "use": "build", "when": "When you need one quick table, the cash each quote needs and a go or walk call" },
+        { "ref": "library:supplier-quote-comparer", "type": "skill", "use": "check", "when": "When deposits are large and each supplier needs a deposit-safety score and terms check" }
+      ]
+    },
+    {
+      "id": "cost-per-unit",
+      "task": "Work out cost per unit at three order sizes",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/cost-per-unit-at-three-quantities", "use": "build", "when": "When quotes have different minimums, tooling and terms and need one cost basis" },
+        { "ref": "library:landed-cost-calculator", "type": "skill", "use": "build", "when": "When freight must be added to get cost per sellable unit and margin" },
+        { "ref": "library:import-export-paperwork", "type": "skill", "use": "brief", "when": "When duty depends on a tariff code and you need the code options and the papers" },
+        { "ref": "library:order-quantity-calculator", "type": "skill", "use": "build", "when": "When price breaks tempt a bigger order and holding cost must be weighed" },
+        { "ref": "library:wholesale-margin-checker", "type": "skill", "use": "check", "when": "When the product will sell through retailers, to test margin after their cut and promos" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before the cost sheet goes to the client, to find broken formulas and wrong totals" }
+      ]
+    },
+    {
+      "id": "negotiate-terms",
+      "task": "Prepare to negotiate price breaks, minimums and terms",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:factory-price-break-negotiator", "type": "skill", "use": "build", "when": "When you have the parts list and volume plan and need asks, give-backs and a fallback" },
+        { "ref": "library:supplier-payment-terms-planner", "type": "skill", "use": "build", "when": "When the deposit strains cash and you need terms to ask for" },
+        { "ref": "library:negotiation-call-prep-planner", "type": "skill", "use": "brief", "when": "Before the call, to get opening lines, questions and what to listen for" }
+      ]
+    },
+    {
+      "id": "sample-review",
+      "task": "Review a factory sample and write clear comments",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/sample-round-to-approval", "use": "brief", "when": "When a sample arrives and you need the steps from measuring to approve or reject" },
+        { "ref": "kit:prompts/factory-sample-comments", "use": "build", "when": "When a sample does not match the spec and the factory needs measurable comments" },
+        { "ref": "library:sample-approval-gatekeeper", "type": "skill", "use": "check", "when": "When each line of the tech pack needs a pass or fail against the sample" },
+        { "ref": "library:product-sample-approval-loop", "type": "agent", "use": "check", "when": "When samples come in rounds and you want go or hold each time, with a stop at three" },
+        { "ref": "library:soichiro-honda", "type": "mind", "use": "think", "when": "When a fault repeats, to look at the real part in hand before blaming the factory" }
+      ]
+    },
+    {
+      "id": "safety-and-labelling",
+      "task": "Prepare safety and labelling questions for a test lab",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/safety-and-labelling-question-list", "use": "build", "when": "When a lab or adviser must decide which US, UK and EU rules apply to this product" },
+        { "ref": "library:trade-compliance-checklist", "type": "skill", "use": "brief", "when": "When the product crosses borders and you need the rules that apply and who owns each" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the list goes to the lab, to tie each rule you name to a dated official source" }
+      ]
+    },
+    {
+      "id": "timeline-to-first-batch",
+      "task": "Plan the timeline to the first batch",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/timeline-to-first-batch", "use": "build", "when": "When you know what is being made and by whom and need dates for samples, lab and shipping" },
+        { "ref": "library:launch-critical-path-builder", "type": "skill", "use": "build", "when": "When a launch date is fixed and every step from samples to warehouse needs an owner" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When choosing between a small pilot run and a full first order, to compare both with money and dates" },
+        { "ref": "library:plan-pre-mortem-runner", "type": "skill", "use": "check", "when": "Before promising a date, to imagine the batch arrived late and find why" }
+      ]
+    },
+    {
+      "id": "supplier-update",
+      "task": "Ask a supplier for a status, date or document",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/routine-supplier-update", "use": "build", "when": "When you need a status, a date, a missing answer or a document from a current supplier" },
+        { "ref": "library:tense-email-softener", "type": "prompt", "use": "build", "when": "When a delay has made you angry and the email must still make them want to help" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "Before sending to a reader whose first language is not English, to cut idioms and long sentences" }
+      ]
+    },
+    {
+      "id": "inspection-and-quality",
+      "task": "Brief a pre-shipment inspection and handle defects",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:pre-shipment-inspection-brief-writer", "type": "skill", "use": "build", "when": "Before the balance is paid, to give the inspector a brief, a pass rule and release terms" },
+        { "ref": "library:quality-control-plan-builder", "type": "skill", "use": "build", "when": "When defect data exists and you need the biggest causes ranked and a plan to cut them" },
+        { "ref": "library:prepare-a-supplier-corrective-action-review", "type": "workflow", "use": "check", "when": "When the factory replies to a defect report and its fix must be tested against your evidence" },
+        { "ref": "library:supplier-correction-evidence-review-assistant", "type": "agent", "use": "check", "when": "When corrective actions come in over several rounds and each needs checking against the standard" },
+        { "ref": "library:taiichi-ohno", "type": "mind", "use": "think", "when": "When the same defect returns, to ask why five times before adding another inspection" }
+      ]
+    },
+    {
+      "id": "first-order-and-freight",
+      "task": "Place the first order and get it shipped",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:get-a-product-made-right-from-tech-pack-to-inspected-shipment", "type": "workflow", "use": "brief", "when": "When you want the whole run from tech pack and vetted factory to inspected shipment in order" },
+        { "ref": "library:compare-freight-quotes-with-all-charges", "type": "workflow", "use": "build", "when": "When forwarders quote differently and every charge must be counted on the same shipment" },
+        { "ref": "library:import-export-paperwork", "type": "skill", "use": "build", "when": "When customs will ask for papers and you need the list for this route" }
+      ]
+    },
+    {
+      "id": "protect-the-design",
+      "task": "Decide what to protect before sharing the design",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:share-or-protect-brief", "type": "skill", "use": "brief", "when": "When the client is unsure what to keep secret, license or share openly" },
+        { "ref": "library:nda-drafter", "type": "skill", "use": "build", "when": "When a factory or designer will see drawings and a confidentiality draft is needed" },
+        { "ref": "library:nda-quick-checker", "type": "skill", "use": "check", "when": "When the factory sends its own NDA and you need the odd clauses flagged" }
+      ]
+    },
+    {
+      "id": "packaging-brief",
+      "task": "Write the packaging brief for a designer",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:packaging-brief-writer", "type": "skill", "use": "build", "when": "When the product is nearly final and a designer needs materials, sizes and the unboxing" },
+        { "ref": "library:sensory-unboxing-planner", "type": "skill", "use": "explore", "when": "When the pack could do more, to try sense cues with their costs before fixing the brief" },
+        { "ref": "kit:skills/safety-and-labelling-question-list", "use": "check", "when": "Before the brief goes out, to list the marks and warnings the pack may have to carry" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:grounded-job-protocol", "type": "skill", "use": "brief", "when": "At the start of any sizeable job, to capture the real product, its buyer and its cost target" },
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Whenever the work states a rule, a test standard or a supplier fact, to give it a dated source" },
+    { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before any document goes to a factory, to read it as they would and find what they must guess" }
+  ],
+  "helpers": [
+    { "role": "packaging-designer", "when": "When the product needs a pack designed, with dielines and print-ready files" },
+    { "role": "procurement-specialist", "when": "When supplier terms, contracts and purchase orders need a buyer's eye" },
+    { "role": "supply-chain-planner", "when": "When order sizes, lead times and stock cover need planning beyond the first batch" },
+    { "role": "logistics-coordinator", "when": "When the batch needs freight booked, customs papers and delivery to a warehouse" },
+    { "role": "pricing-strategist", "when": "When cost of goods is known and the selling price and margin must be set" },
+    { "role": "compliance-specialist", "when": "When safety, marking or import rules need a control check before launch" }
+  ],
+  "gaps": [
+    "No library item writes requirements for a physical product with a target and test method per line; the requirements items are for software",
+    "No library item plans staged prototypes for physical goods; the prototype items are for screens and apps",
+    "No library item writes an industrial design brief or makes flat sketches and drawings with callouts",
+    "No library item builds a size chart and grading table, or a print and embroidery placement spec",
+    "No library item checks a design for manufacture by process, such as moulding, sheet metal or cut-and-sew, or sets tolerances",
+    "No library item helps choose materials, such as fabrics or plastics, against cost and use",
+    "No library item lists product safety and marking rules by region or briefs a test lab beyond the kit skill",
+    "No library item writes product instructions, a care label or warning text",
+    "No library item covers first steps for a patent or design registration",
+    "No library item keeps a spec change log so the factory always works from the latest version",
+    "No library item checks a manufacturing agreement or purchase order terms",
+    "No library item makes different versions of a tech pack layout or a supplier email to choose between",
+    "The library has no tool guide for CAD or tech pack software"
+  ]
+}

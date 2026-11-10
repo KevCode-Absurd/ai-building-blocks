@@ -1,0 +1,278 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "mobile-app-marketer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "store-listing",
+      "task": "Write a full App Store and Google Play listing",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/store-listing-and-keywords", "use": "build", "when": "When you have the current listing, recent reviews and rival apps and need every field written" },
+        { "ref": "library:agency-marketing-app-store-optimizer", "type": "agent", "use": "explore", "when": "When you want a second take on title, description and screenshot plan to compare" },
+        { "ref": "library:message-stickiness-rewriter", "type": "prompt", "use": "explore", "when": "When the subtitle or short description is flat, to get three versions to choose from" },
+        { "ref": "library:app-store-listing-optimiser", "type": "skill", "use": "check", "when": "When the listing is drafted, to get a scored audit and what to rewrite" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a line could describe any app, to get a true, picturable rewrite" }
+      ]
+    },
+    {
+      "id": "keyword-plan",
+      "task": "Build an app store keyword plan",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/review-mining-for-keywords", "use": "build", "when": "Before rewriting a listing, to find the words real users use and map them by theme" },
+        { "ref": "kit:skills/store-listing-and-keywords", "use": "build", "when": "When the keyword map must be turned into name, subtitle and keyword field" },
+        { "ref": "library:star-rating-review-miner", "type": "skill", "use": "brief", "when": "When reviews are sorted by stars, to pull what each rating group praises and blames" },
+        { "ref": "library:product-review-mining", "type": "workflow", "use": "brief", "when": "When you want the app's own phrases sorted and the one want users share" },
+        { "ref": "library:competitor-product-analyst", "type": "skill", "use": "brief", "when": "When you need rival apps set against yours, with the gaps to act on" }
+      ]
+    },
+    {
+      "id": "screenshots",
+      "task": "Plan screenshot captions and a preview video",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:prompts/screenshot-caption-story", "use": "build", "when": "When screenshots need captions and a frame order that tell one story, plus a video outline" },
+        { "ref": "library:app-screenshot-maker", "type": "skill", "use": "build", "when": "When the app runs locally and you need sharp captures to build the frames from" },
+        { "ref": "library:product-demo-video-maker", "type": "skill", "use": "build", "when": "When screenshots should become a short walk-through video or GIF" },
+        { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When the first caption is weak, to get five short lines that each take a new angle" },
+        { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When a frame is drafted, to see where the eye lands and what to cut" }
+      ]
+    },
+    {
+      "id": "listing-tests",
+      "task": "Plan store page tests and custom pages",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/listing-refresh-and-test-cycle", "use": "build", "when": "For a stale listing, a new feature, a new country or good ratings with few installs" },
+        { "ref": "kit:skills/store-page-tests-and-custom-pages", "use": "build", "when": "When you need one-change tests and audience pages planned for both stores" },
+        { "ref": "library:one-change-experiment-planner", "type": "skill", "use": "build", "when": "When a test idea is vague, to cut it to one change and what each result would mean" },
+        { "ref": "library:experiment-readout-desk", "type": "agent", "use": "check", "when": "When each test needs a readiness check before and an honest verdict after" },
+        { "ref": "library:test-result-trust-checker", "type": "prompt", "use": "check", "when": "When a store test ends, to decide whether to trust it and state the lift as a range" }
+      ]
+    },
+    {
+      "id": "localise",
+      "task": "Localise a listing for a new country",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/store-listing-and-keywords", "use": "build", "when": "When the keyword map must be rebuilt in the words that country's users search" },
+        { "ref": "library:translator", "type": "skill", "use": "build", "when": "When listing text needs a natural translation with local tone and steady terms" },
+        { "ref": "library:app-translation-setup-helper", "type": "skill", "use": "brief", "when": "When the app itself still has hard-coded text and the listing would promise too much" }
+      ]
+    },
+    {
+      "id": "release-notes",
+      "task": "Write release notes and What's New text",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:feature-launch-planner", "type": "skill", "use": "brief", "when": "When a feature ships, to set the message, the rollout steps and the support prep" },
+        { "ref": "library:app-store-release-notes-writer", "type": "skill", "use": "build", "when": "When you have the real changes and need plain notes users can read" },
+        { "ref": "library:message-stickiness-rewriter", "type": "prompt", "use": "explore", "when": "When the first line is dull, to get three versions worth reading" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When the notes say bug fixes and improvements, to make them say what changed" }
+      ]
+    },
+    {
+      "id": "in-app-event",
+      "task": "Write an in-app event card",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/in-app-event-card", "use": "build", "when": "When something real and timed happens in the app and the store can feature it" },
+        { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When the event name is flat, to get five short options" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When the card is vague about what the user gets, to make it specific" }
+      ]
+    },
+    {
+      "id": "apple-ads",
+      "task": "Plan Apple Ads search campaigns",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/apple-ads-search-campaign-plan", "use": "build", "when": "Before launch or a restructure, to plan keyword groups and custom page ad variations" },
+        { "ref": "library:ad-test-budget-calculator", "type": "skill", "use": "build", "when": "When you must say how much spend a keyword test needs before it shows a winner" },
+        { "ref": "library:break-even-roas-and-cpa-calculator", "type": "skill", "use": "check", "when": "When setting bids, to work out the most an install or subscriber can cost" }
+      ]
+    },
+    {
+      "id": "paid-installs",
+      "task": "Plan paid install campaigns on social",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:agency-paid-media-paid-social-strategist", "type": "agent", "use": "build", "when": "When choosing between Meta and TikTok and you need the funnel, audiences and budget" },
+        { "ref": "library:launch-tiktok-ads-and-read-your-first-test", "type": "workflow", "use": "build", "when": "When TikTok is the first channel and you need set-up fixes and a first test read" },
+        { "ref": "library:meta-ad-copywriter", "type": "skill", "use": "build", "when": "When install ads need primary text, hooks and creator scripts to test" },
+        { "ref": "library:video-ad-script-type-picker", "type": "skill", "use": "explore", "when": "When you want four script types for a demo video, each with its opening" },
+        { "ref": "library:creative-test-reader", "type": "skill", "use": "check", "when": "When results are in by ad, to call keep, leave or replace" }
+      ]
+    },
+    {
+      "id": "message-map",
+      "task": "Build a lifecycle message map",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/lifecycle-message-launch", "use": "build", "when": "For a new app with no plan, users going quiet in week one, or people turning pushes off" },
+        { "ref": "kit:skills/push-and-in-app-messages", "use": "build", "when": "When you need each moment mapped: trigger, audience, timing, cap, goal and stop rule" },
+        { "ref": "library:habit-loop-designer", "type": "skill", "use": "brief", "when": "Before the map, to find the loop that brings users back and its weak steps" },
+        { "ref": "library:event-tracking-planner", "type": "skill", "use": "brief", "when": "When messages need triggers and the app does not record the right events yet" },
+        { "ref": "library:andrew-chen", "type": "mind", "use": "think", "when": "When the plan pushes everyone the same way and ignores who returns on their own" }
+      ]
+    },
+    {
+      "id": "push-set",
+      "task": "Write a set of push notifications",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/push-and-in-app-messages", "use": "build", "when": "When the map is agreed and each push needs copy in two versions" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When a push title is flat, to try several short angles" },
+        { "ref": "library:honest-persuasion-editor", "type": "skill", "use": "check", "when": "Before a set goes live, to catch nagging or false urgency and get a clean version" }
+      ]
+    },
+    {
+      "id": "in-app-messages",
+      "task": "Write in-app banners, pop-ups and tooltips",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/push-and-in-app-messages", "use": "build", "when": "When the message belongs inside the app at the moment of use" },
+        { "ref": "library:in-app-tour-designer", "type": "skill", "use": "build", "when": "When new users must learn a few things and need a short tour with triggers" },
+        { "ref": "library:interface-microcopy-writer", "type": "skill", "use": "build", "when": "When buttons, empty states and toasts need a friendly, clear voice" },
+        { "ref": "library:message-stickiness-rewriter", "type": "prompt", "use": "explore", "when": "When a banner line is forgettable, to get three versions" },
+        { "ref": "library:honest-persuasion-editor", "type": "skill", "use": "check", "when": "When a pop-up pushes an upgrade, to check each lever is true" }
+      ]
+    },
+    {
+      "id": "permission-screen",
+      "task": "Write the notification permission screen",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/notification-permission-screen", "use": "build", "when": "Before the system prompt, to write the pre-prompt screen and pick the moment to show it" },
+        { "ref": "library:first-run-wizard-designer", "type": "skill", "use": "brief", "when": "When you must decide where the ask sits in the first minutes" },
+        { "ref": "library:message-stickiness-rewriter", "type": "prompt", "use": "explore", "when": "When the ask is bland, to get three ways to say what the user gains" },
+        { "ref": "library:honest-persuasion-editor", "type": "skill", "use": "check", "when": "Before shipping, to check the screen promises only what notifications will deliver" }
+      ]
+    },
+    {
+      "id": "re-engagement",
+      "task": "Write a re-engagement series for quiet users",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/re-engagement-series", "use": "build", "when": "When users have gone quiet and need real reasons to return, with a clear stop" },
+        { "ref": "library:retention-problem-fixer", "type": "skill", "use": "brief", "when": "Before writing, to find why users drop off so the series answers it" },
+        { "ref": "library:email-sequence-writer", "type": "skill", "use": "build", "when": "When quiet users cannot be reached by push and the series must run by email" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the first message is drafted, to try several openings" },
+        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before the email version sends, to score it and cut what drags" }
+      ]
+    },
+    {
+      "id": "onboarding",
+      "task": "Improve first-run onboarding and activation",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:app-stickiness-guide", "type": "skill", "use": "brief", "when": "When you need the first run, the habit loop and one metric looked at together" },
+        { "ref": "library:onboarding-improver", "type": "skill", "use": "build", "when": "When the path to first value is slow and needs a checklist, empty states and emails" },
+        { "ref": "library:first-run-wizard-designer", "type": "skill", "use": "build", "when": "When the first minutes need steps with skip options and drop-off checks" },
+        { "ref": "library:make-onboarding-instructions-match-the-product", "type": "workflow", "use": "check", "when": "When the onboarding text no longer matches the screens users see" },
+        { "ref": "library:customer-onboarding-keeper", "type": "agent", "use": "check", "when": "Each week, to see where new users stall in the first 30 days" },
+        { "ref": "library:sean-ellis", "type": "mind", "use": "think", "when": "When nobody has asked which users would truly miss the app and why" }
+      ]
+    },
+    {
+      "id": "retention-read",
+      "task": "Read retention and find where users drop",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:set-up-product-tracking-and-build-a-retention-dashboard", "type": "workflow", "use": "build", "when": "When there is no event plan and no retention view yet" },
+        { "ref": "library:retention-cohort-analyst", "type": "skill", "use": "build", "when": "When you have activity data and need retention curves by sign-up group" },
+        { "ref": "library:retention-heatmap-maker", "type": "skill", "use": "build", "when": "When the owner needs retention shown as a simple colour grid" },
+        { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before sharing the read, to check the method, the sums and any bias" }
+      ]
+    },
+    {
+      "id": "reviews",
+      "task": "Reply to app reviews and triage low ratings",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:low-star-review-triager", "type": "skill", "use": "brief", "when": "When one to three star reviews pile up, to rank the risks and what to fix first" },
+        { "ref": "library:review-reason-spotter", "type": "prompt", "use": "brief", "when": "Before replying, to see the real reason behind each review" },
+        { "ref": "library:public-review-reply-drafter", "type": "skill", "use": "build", "when": "When each review needs a specific reply with risky ones flagged" },
+        { "ref": "library:public-review-reply-desk", "type": "agent", "use": "check", "when": "When the batch is large, to check every reply and flag repeat complaints" }
+      ]
+    },
+    {
+      "id": "paywall",
+      "task": "Design the paywall and upgrade prompts",
+      "kind": "other",
+      "items": [
+        { "ref": "library:willingness-to-pay-pricing", "type": "skill", "use": "brief", "when": "When the price itself is in doubt, to plan a survey before designing the screen" },
+        { "ref": "library:paywall-designer", "type": "skill", "use": "build", "when": "When you know the plans and need upgrade screens, trigger moments and copy" },
+        { "ref": "library:free-to-paid-flow-designer", "type": "skill", "use": "explore", "when": "When you want a second design of the upgrade moments to compare" },
+        { "ref": "library:churn-reducer", "type": "skill", "use": "build", "when": "When subscribers cancel, to plan the cancel flow and save offers" },
+        { "ref": "library:honest-persuasion-editor", "type": "skill", "use": "check", "when": "Before shipping the paywall, to check its urgency and claims are true" }
+      ]
+    },
+    {
+      "id": "referral-growth",
+      "task": "Plan referral and growth loops",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:growth-loop-designer", "type": "skill", "use": "build", "when": "When you need the loops that fit the app ranked, and how to start the first" },
+        { "ref": "library:referral-program-designer", "type": "skill", "use": "build", "when": "When users should invite friends and you need the reward and the flow" },
+        { "ref": "library:network-launch-planner", "type": "skill", "use": "brief", "when": "When the app only works with many users and must win one small group first" }
+      ]
+    },
+    {
+      "id": "app-launch",
+      "task": "Plan an app or feature launch",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:product-launch-planner", "type": "skill", "use": "build", "when": "When a launch needs timing, channels and announcement copy" },
+        { "ref": "library:directory-listing-planner", "type": "skill", "use": "build", "when": "When the app should be listed on launch sites and directories, with text to submit" },
+        { "ref": "library:press-outreach-planner", "type": "skill", "use": "build", "when": "When the launch is real news and needs a media list and pitch emails" },
+        { "ref": "library:agency-engineering-mobile-release-engineer", "type": "agent", "use": "check", "when": "Before launch day, to check signing, the go or no-go list and a staged rollout" }
+      ]
+    },
+    {
+      "id": "feedback",
+      "task": "Turn reviews and surveys into fixes",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:agency-product-feedback-synthesizer", "type": "agent", "use": "build", "when": "When reviews, tickets and survey answers must become ranked themes with quotes" },
+        { "ref": "library:feedback-theme-finder", "type": "skill", "use": "build", "when": "When you have ratings and open comments and need themes and trends" }
+      ]
+    },
+    {
+      "id": "app-landing-page",
+      "task": "Write the app landing page",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:conversion-page-writer", "type": "skill", "use": "build", "when": "When ads and press send people to a page that must earn the install" },
+        { "ref": "library:top-of-page-headline-writer", "type": "prompt", "use": "explore", "when": "When the page opening is weak, to get five headlines with a pick" },
+        { "ref": "library:leaky-funnel-fixer", "type": "skill", "use": "check", "when": "When the page is live, to rank where visitors leak and what to test" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before a listing or ad states a ranking, a user count or an award, to check it traces" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before store text is submitted, to catch typos and feature names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "mobile-app-developer", "when": "When deep links, the permission prompt or message triggers must be built into the app" },
+    { "role": "ux-designer", "when": "When onboarding or the paywall needs a redesigned flow, not only new words" },
+    { "role": "product-analyst", "when": "When retention and funnel questions need event data analysed properly" },
+    { "role": "translator", "when": "When a listing or message set must be localised by a native speaker" },
+    { "role": "tiktok-ads-media-buyer", "when": "When paid installs on TikTok need a buyer to run and tune them" },
+    { "role": "graphic-designer", "when": "When screenshots, the icon or the feature graphic must be designed" }
+  ],
+  "gaps": [
+    "No library item writes push notifications to length limits with deep link, timing and frequency cap; only the kit does",
+    "No library item writes a notification permission pre-prompt or picks the moment to ask",
+    "No library item does app store keyword research with volume and difficulty, or packs the Apple keyword field",
+    "No library item plans Apple product page tests, Google Play listing experiments or custom product pages; only the kit does",
+    "No library item plans Apple Ads search campaigns or Google App campaigns; only the kit prompt covers Apple",
+    "No library item writes an in-app event card or a promotional text line for the stores",
+    "No library item orders screenshot frames or storyboards a preview video to store specs; the screenshot item only captures",
+    "No library item decides when to show the rating prompt",
+    "No library item covers install attribution: SKAdNetwork, deferred deep links and matching ad spend to installs",
+    "No library item localises a store listing with keywords per country; only general translation exists",
+    "No library item checks a listing against the stores' metadata rules before submission",
+    "No library item drafts two differently toned replies to one hard app review"
+  ]
+}

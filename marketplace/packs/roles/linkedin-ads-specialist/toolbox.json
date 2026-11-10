@@ -1,0 +1,269 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "linkedin-ads-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "intake",
+      "task": "Take in a new B2B client before touching the account",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/account-intake", "use": "build", "when": "In the first talk with a new client, to collect the facts every later choice depends on" },
+        { "ref": "library:ideal-buyer-profiler", "type": "skill", "use": "brief", "when": "When the client says everyone is a buyer, to pin down one buyer with pains and goals" },
+        { "ref": "library:best-customer-finder", "type": "skill", "use": "brief", "when": "When the client has a customer list, to find the top fifth and what they share" },
+        { "ref": "library:april-dunford", "type": "mind", "use": "think", "when": "When the client cannot say why a buyer should pick them over the real alternatives" }
+      ]
+    },
+    {
+      "id": "campaign-plan",
+      "task": "Plan a LinkedIn campaign sized to deal value",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/linkedin-campaign-plan", "use": "build", "when": "When the offer and buyer are known and you need objective, audience, formats and budget" },
+        { "ref": "library:agency-paid-media-paid-social-strategist", "type": "agent", "use": "brief", "when": "When LinkedIn is one of several paid social channels and you need the funnel across them" },
+        { "ref": "library:paid-campaign-builder", "type": "skill", "use": "build", "when": "When you need campaign structure, targeting and bids written out for the build" },
+        { "ref": "library:mark-ritson", "type": "mind", "use": "think", "when": "When the plan jumps to tactics before the target and the goal are chosen" }
+      ]
+    },
+    {
+      "id": "budget",
+      "task": "Set budget and target lead cost from deal size",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/budget-from-deal-size", "use": "build", "when": "Before setting or defending a budget, to derive lead cost targets from the client's numbers" },
+        { "ref": "library:ad-test-budget-calculator", "type": "skill", "use": "build", "when": "When you must say how much spend a test needs before it can show a winner" },
+        { "ref": "library:lead-cost-and-friction-planner", "type": "skill", "use": "check", "when": "When leads are cheap but weak, to work out cost per qualified lead and what friction to add" },
+        { "ref": "library:cost-per-funnel-stage-reporter", "type": "skill", "use": "check", "when": "When CRM stages and spend are both to hand, to see the true cost of each stage" }
+      ]
+    },
+    {
+      "id": "audiences",
+      "task": "Build audiences from job titles and company lists",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/linkedin-campaign-plan", "use": "build", "when": "When you need the targeting set: titles, seniority, company size and exclusions" },
+        { "ref": "library:ideal-customer-profiler", "type": "skill", "use": "brief", "when": "When customer data exists, to profile the best accounts before choosing filters" },
+        { "ref": "library:prospect-list-builder", "type": "skill", "use": "build", "when": "When the campaign needs a named account list with the reason each one fits" }
+      ]
+    },
+    {
+      "id": "ad-copy",
+      "task": "Write ad copy in three LinkedIn formats",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:prompts/ad-copy-three-formats", "use": "build", "when": "When one offer and one buyer need a single image ad, a document ad and a conversation ad" },
+        { "ref": "library:one-buyer-ad-copy", "type": "workflow", "use": "brief", "when": "When you have customer words and facts and want the buyer brief and first lines first" },
+        { "ref": "library:ad-angle-multiplier", "type": "skill", "use": "explore", "when": "When one idea works, to get ten or more different angles with a test order" },
+        { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When the headline is flat, to get five short ones that each take a new angle" },
+        { "ref": "library:ad-first-line-writer-and-scorer", "type": "skill", "use": "check", "when": "When the intro text is drafted, to score the first line and get fixes" },
+        { "ref": "library:ad-and-page-policy-checker", "type": "skill", "use": "check", "when": "Before upload, to flag lines that risk rejection and get safer rewrites" },
+        { "ref": "library:phyllis-k-robinson", "type": "mind", "use": "think", "when": "When the copy reads like a brochure and should sound like one person talking" }
+      ]
+    },
+    {
+      "id": "image-ads",
+      "task": "Plan single image ads",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:single-image-ad-planner", "type": "skill", "use": "build", "when": "When you have the facts and need the layout, image words and feed copy for one ad" },
+        { "ref": "library:theme-based-ad-layout-blueprint-maker", "type": "skill", "use": "explore", "when": "When you want three or four layouts with text zones to compare" },
+        { "ref": "library:customer-quote-image-ad", "type": "skill", "use": "build", "when": "When a client quote is the strongest proof and should carry the ad" },
+        { "ref": "library:static-ad-critic", "type": "skill", "use": "check", "when": "When the ad is drafted, to score it against its landing page and get fixes" },
+        { "ref": "library:canva", "type": "tool", "use": "build", "when": "When the client's team will make the images from a template" }
+      ]
+    },
+    {
+      "id": "document-ads",
+      "task": "Plan a document ad or carousel",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:carousel-ad-writer", "type": "skill", "use": "build", "when": "When one selling idea must unfold over a few cards that each earn the next swipe" },
+        { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When the cover page needs a title, to try five angles before choosing" },
+        { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When the pages are laid out, to trace where the eye goes and what to cut" }
+      ]
+    },
+    {
+      "id": "thought-leader-ads",
+      "task": "Draft thought leader posts to sponsor",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:business-buyer-trust-builder", "type": "skill", "use": "brief", "when": "When buyers are slow and careful, to plan what the founder should say to earn trust" },
+        { "ref": "library:linkedin-post-writer", "type": "skill", "use": "build", "when": "When a founder story or view must become a post the founder publishes" },
+        { "ref": "library:message-stickiness-rewriter", "type": "prompt", "use": "explore", "when": "When the opening line is forgettable, to get three versions to choose from" },
+        { "ref": "library:ai-written-text-detector", "type": "skill", "use": "check", "when": "Before the founder posts, to catch wording that reads as machine-written" }
+      ]
+    },
+    {
+      "id": "video-ads",
+      "task": "Script a short B2B video ad",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:video-ad-script-type-picker", "type": "skill", "use": "explore", "when": "When you have the buyer and proof and want four script types, each with its opening" },
+        { "ref": "library:conversational-ad-script", "type": "skill", "use": "build", "when": "When the script should sound like a person talking and use only the buyer's words and facts" },
+        { "ref": "library:video-ad-script-line-checker", "type": "skill", "use": "check", "when": "When the script is drafted, to find each weak line and get a fix" }
+      ]
+    },
+    {
+      "id": "lead-form",
+      "task": "Design a lead gen form and the follow-up",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/linkedin-lead-gen-form-and-follow-up", "use": "build", "when": "When you need the form fields, wording and a plan for sales to call within a day" },
+        { "ref": "library:lead-handoff-designer", "type": "skill", "use": "build", "when": "When marketing and sales disagree on what a good lead is and who acts on it" },
+        { "ref": "library:lead-nurture-follow-up", "type": "workflow", "use": "build", "when": "When form leads are not ready to talk and need follow-up emails first" },
+        { "ref": "library:better-leads-from-ads", "type": "workflow", "use": "check", "when": "When the form has results, to decide what to raise or cut and get a better form" }
+      ]
+    },
+    {
+      "id": "landing-page",
+      "task": "Write the landing page behind the ads",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:conversion-page-writer", "type": "skill", "use": "build", "when": "When the campaign sends clicks to a page and it needs proof, answers and one ask" },
+        { "ref": "library:top-of-page-headline-writer", "type": "prompt", "use": "explore", "when": "When the page opening must match the ad, to get five headlines with a pick" },
+        { "ref": "library:turn-a-static-ad-into-a-sale-with-a-matching-page", "type": "workflow", "use": "build", "when": "When the ad exists and the page must carry the same promise through" },
+        { "ref": "library:page-design-gate", "type": "skill", "use": "check", "when": "When the page is built, to check it in a real browser at phone and desktop width" }
+      ]
+    },
+    {
+      "id": "lead-offer",
+      "task": "Choose the offer or lead magnet to promote",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:lead-offer-planner", "type": "skill", "use": "build", "when": "When the buyer has a costly problem and you need a useful thing to offer for a reply" },
+        { "ref": "library:lead-magnet-planner", "type": "skill", "use": "explore", "when": "When several lead magnets are possible, to list them and pick the best" },
+        { "ref": "library:webinar-promotion-planner", "type": "skill", "use": "build", "when": "When the offer is a webinar, to plan how to fill it, run it and follow up" },
+        { "ref": "library:lead-offer-tuner", "type": "skill", "use": "check", "when": "When an offer is live, to get three changes that raise replies or cut weak ones" },
+        { "ref": "library:agency-sales-offer-lead-gen-strategist", "type": "agent", "use": "check", "when": "When the offer feels weak, to test it on four levers and get a stronger one" },
+        { "ref": "library:alex-hormozi", "type": "mind", "use": "think", "when": "When the offer asks for a demo and gives the buyer nothing first" }
+      ]
+    },
+    {
+      "id": "tracking",
+      "task": "Set up the tag, conversions and the CRM link",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/linkedin-account-and-tracking-review", "use": "check", "when": "When you must confirm the tag fires and conversions match what the CRM records" },
+        { "ref": "library:conversion-tracking-fixer", "type": "skill", "use": "build", "when": "When what counts as a lead is agreed and tracking must be set up or repaired" },
+        { "ref": "library:campaign-link-tracker", "type": "skill", "use": "build", "when": "When every ad link needs tags that the CRM and analytics can match" },
+        { "ref": "library:monthly-tracking-health-keeper", "type": "agent", "use": "check", "when": "Each month, to catch broken tracking and double counts before they skew reports" }
+      ]
+    },
+    {
+      "id": "account-review",
+      "task": "Review a LinkedIn ads account from its exports",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/linkedin-account-and-tracking-review", "use": "build", "when": "When you have Campaign Manager and demographics exports plus CRM data" },
+        { "ref": "library:linkedin-ads-account-auditor", "type": "skill", "use": "check", "when": "When you want a second scored pass on tag, audiences, forms and creative" },
+        { "ref": "library:six-pattern-ad-performance-diagnoser", "type": "skill", "use": "check", "when": "When results changed and you need the likely cause with how sure you can be" }
+      ]
+    },
+    {
+      "id": "demographics-waste",
+      "task": "Find waste in a demographics export",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/demographics-waste-read", "use": "build", "when": "After pasting a demographics export, to see which titles and companies take money for nothing" },
+        { "ref": "library:ad-spend-analyst", "type": "skill", "use": "check", "when": "When you want wasted spend and standout campaigns named from the same exports" },
+        { "ref": "library:cost-per-funnel-stage-reporter", "type": "skill", "use": "check", "when": "When you need to prove which segments reach qualified lead, not only form fill" }
+      ]
+    },
+    {
+      "id": "launch",
+      "task": "Launch a new campaign",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/campaign-launch", "use": "build", "when": "For a new campaign, a new offer or a rebuild after a review" },
+        { "ref": "kit:prompts/change-request-for-approval", "use": "build", "when": "When the launch needs the client's yes on budget, audience or the one-time action list" },
+        { "ref": "library:ad-and-page-policy-checker", "type": "skill", "use": "check", "when": "Before anything goes live, to check ads and page against the ad rules" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before the plan is sent, to have it read as the client would and list what is unclear" }
+      ]
+    },
+    {
+      "id": "weekly",
+      "task": "Run the weekly optimisation routine",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/weekly-optimisation-routine", "use": "build", "when": "Once a week on the same day, plus a deeper monthly look at pipeline" },
+        { "ref": "library:ad-fatigue-watcher", "type": "agent", "use": "check", "when": "When ads have run for weeks, to catch tired ones early and brief replacements" },
+        { "ref": "library:creative-test-reader", "type": "skill", "use": "check", "when": "When results are in by ad, to call keep, leave or replace and spot false winners" },
+        { "ref": "kit:prompts/change-request-for-approval", "use": "build", "when": "When the week's changes need the client's yes before you make them" },
+        { "ref": "library:weekly-sales-pipeline-reviewer", "type": "agent", "use": "check", "when": "In the monthly look, to see what the leads became in the sales pipeline" }
+      ]
+    },
+    {
+      "id": "creative-testing",
+      "task": "Plan creative tests a small budget can prove",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:ad-creative-variation-planner", "type": "skill", "use": "build", "when": "When you need hooks, format picks and a variation plan for the next round" },
+        { "ref": "library:ad-sameness-checker", "type": "skill", "use": "check", "when": "When the live ads feel alike, to group them by idea and score the sameness" },
+        { "ref": "library:experiment-result-analyst", "type": "skill", "use": "check", "when": "When a test ends, to see if the difference is real at this volume" }
+      ]
+    },
+    {
+      "id": "report",
+      "task": "Report results and pipeline to the client",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:ad-results-report-writer", "type": "skill", "use": "build", "when": "When you have two periods of totals and need the one-line answer and three actions" },
+        { "ref": "library:cost-per-funnel-stage-reporter", "type": "skill", "use": "build", "when": "When the report should show cost per qualified lead and per deal, not per click" },
+        { "ref": "library:attribution-model-chooser", "type": "skill", "use": "brief", "when": "When LinkedIn and the CRM disagree on what the ads produced" },
+        { "ref": "library:incrementality-test-planner", "type": "skill", "use": "check", "when": "When the client doubts the ads add anything, to plan a lift test sized to them" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to read the report as the client and list what they would question" }
+      ]
+    },
+    {
+      "id": "retargeting",
+      "task": "Plan retargeting for a long sales cycle",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:retargeting-ad-sequence-planner", "type": "skill", "use": "build", "when": "When visitors do not convert, to order the ads they see next" },
+        { "ref": "library:retargeting-objection-ad-planner", "type": "skill", "use": "explore", "when": "When you know the reasons people leave, to get one ad per objection and a test order" }
+      ]
+    },
+    {
+      "id": "competitor-ads",
+      "task": "Study competitors' ads and find the gaps",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:competitor-ad-teardown-writer", "type": "skill", "use": "build", "when": "When you name the rivals and want their public ads and pages read, proof apart from guesses" },
+        { "ref": "library:competitor-ad-gap-finder", "type": "skill", "use": "build", "when": "When you have pasted rival ads and want the gaps turned into briefs" }
+      ]
+    },
+    {
+      "id": "abm",
+      "task": "Run an account list campaign with sales",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:prospect-list-builder", "type": "skill", "use": "build", "when": "When sales and marketing need one agreed list of target accounts" },
+        { "ref": "library:account-based-outreach-drafter", "type": "skill", "use": "build", "when": "When sales will follow the ads with an email, call and message per account" },
+        { "ref": "library:lead-handoff-designer", "type": "skill", "use": "build", "when": "When you must set who acts when a target account engages" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before any ad or report states a number or client result, to check it can be traced" }
+  ],
+  "helpers": [
+    { "role": "demand-generation-manager", "when": "When LinkedIn is one part of a wider B2B funnel that needs planning end to end" },
+    { "role": "revops-specialist", "when": "When leads must flow into the CRM with stages, routing and offline conversions" },
+    { "role": "conversion-copywriter", "when": "When the landing page or lead magnet needs writing in full" },
+    { "role": "graphic-designer", "when": "When image ads or a document ad need designing, not only planning" },
+    { "role": "sdr", "when": "When form leads need calling and qualifying within a day" },
+    { "role": "marketing-analyst", "when": "When pipeline credit across channels needs a proper attribution study" }
+  ],
+  "gaps": [
+    "No library item builds LinkedIn targeting: titles against functions and seniority, company lists, exclusions and audience size",
+    "No library item writes a LinkedIn document ad or conversation ad to the format limits; only the kit prompt does",
+    "No library item designs a LinkedIn Lead Gen Form inside its field and character limits, or drafts two form versions to test",
+    "No library item sets up the LinkedIn Insight Tag, Conversions API or offline conversion uploads; tracking items cover Google and Meta",
+    "No library item reads a demographics export for waste by title, seniority and company; only the kit prompt does",
+    "No library item keeps a LinkedIn account weekly the way the Google, Meta and TikTok keepers do",
+    "No library item picks which founder posts to sponsor as thought leader ads or sets up the permissions",
+    "No library item covers LinkedIn bidding, frequency and audience penetration choices",
+    "No library item writes a client change request for approval; only the kit prompt does",
+    "No library item plans an account list campaign that ties ad stages to sales touches by account tier"
+  ]
+}

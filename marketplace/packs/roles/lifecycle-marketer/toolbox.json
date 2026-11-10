@@ -1,0 +1,267 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "lifecycle-marketer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "welcome-flow",
+      "task": "Build a welcome flow for new subscribers",
+      "kind": "email",
+      "items": [
+        { "ref": "library:welcome-flow-builder", "type": "skill", "use": "build", "when": "When a shop has an offer, best sellers and a story and needs the flow's timing, filters and outlines" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When each welcome email is drafted, to compare subject lines in several angles" },
+        { "ref": "library:signup-popup-builder", "type": "skill", "use": "brief", "when": "When few people join the list, to fix the popup that feeds the flow" },
+        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before the flow goes live, to score each email and get a ship or fix verdict" }
+      ]
+    },
+    {
+      "id": "cart-browse-flows",
+      "task": "Build abandoned cart and browse flows",
+      "kind": "email",
+      "items": [
+        { "ref": "library:roll-out-the-welcome-cart-and-browse-email-flows-one-at-a-time", "type": "workflow", "use": "brief", "when": "When the shop has no flows yet and needs a safe order to switch them on" },
+        { "ref": "library:cart-recovery-flow-builder", "type": "skill", "use": "build", "when": "When you know margin and shipping terms and need cart and checkout recovery emails with timing" },
+        { "ref": "library:browse-abandonment-flow-builder", "type": "skill", "use": "build", "when": "When shoppers view products and leave, to get a browse flow that holds any discount to the end" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the first cart email is drafted, to try several openings against each other" },
+        { "ref": "library:email-sequence-auditor", "type": "skill", "use": "check", "when": "When a flow has numbers, to mark what to protect and what to fix" }
+      ]
+    },
+    {
+      "id": "reorder-flow",
+      "task": "Build a reorder flow timed to how long the product lasts",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/reorder-timing-from-orders", "use": "brief", "when": "Before building, to set the reminder day from real order gaps, not one fixed day" },
+        { "ref": "library:reorder-and-second-order-planner", "type": "skill", "use": "build", "when": "When you know how long each product lasts and need reorder and refill messages" },
+        { "ref": "library:send-reorder-emails-that-fit-each-buyer-then-read-results", "type": "workflow", "use": "build", "when": "When buyers differ by type and you want timed emails per type, then a read of results" },
+        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before the reminders go live, to score each one and fix the weak one" }
+      ]
+    },
+    {
+      "id": "second-order",
+      "task": "Plan how first orders become repeat buyers",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:repeat-order-bottleneck-finder", "type": "skill", "use": "brief", "when": "Before any fix, to find the one stage where first-time buyers stop" },
+        { "ref": "library:post-purchase-flow-builder", "type": "skill", "use": "build", "when": "When delivery times are known and you need the thank-you, how-to, add-on and review emails" },
+        { "ref": "library:bought-together-pair-finder", "type": "skill", "use": "brief", "when": "When the second-order email needs a product to suggest, from what buyers pair together" },
+        { "ref": "library:unboxing-insert-and-gift-planner", "type": "skill", "use": "build", "when": "When the parcel itself should earn the next order, with a costed insert and gift rule" },
+        { "ref": "library:review-request-and-reply-planner", "type": "skill", "use": "build", "when": "When the flow should ask for a review at the right moment and in the right words" }
+      ]
+    },
+    {
+      "id": "win-back",
+      "task": "Win back lapsed buyers without a big discount",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/win-back-without-a-big-discount", "use": "build", "when": "When a pile of one-time buyers must come back without training everyone to wait for a code" },
+        { "ref": "library:win-back-flow-builder", "type": "skill", "use": "build", "when": "When you know the usual gap between orders and need a flow timed to it" },
+        { "ref": "library:win-back-lapsed-buyers-and-clean-out-the-rest", "type": "workflow", "use": "build", "when": "When win-back and list cleaning should run together, with a read of results" },
+        { "ref": "library:customer-churn-risk-scorer", "type": "skill", "use": "brief", "when": "When you need to know which repeat buyers are overdue before you write to anyone" },
+        { "ref": "library:promotion-idea-planner", "type": "skill", "use": "explore", "when": "When the hook should be a gift, bundle or early access, not money off" },
+        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before the win-back run starts, to score each email and cut what drags" }
+      ]
+    },
+    {
+      "id": "campaign-month",
+      "task": "Plan a month of campaign emails that sell without discounts",
+      "kind": "email",
+      "items": [
+        { "ref": "library:plan-a-month-of-campaign-emails-that-sell-without-discounts", "type": "workflow", "use": "build", "when": "When the shop needs a topic bank, a month calendar and written emails in one run" },
+        { "ref": "library:campaign-email-writer", "type": "skill", "use": "build", "when": "When one campaign needs writing block by block from product facts" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When a campaign is written, to pick from subject lines in several angles" },
+        { "ref": "library:email-layout-brief-writer", "type": "skill", "use": "build", "when": "When a designer will build the email and needs a section-by-section brief" },
+        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before each send, to get cuts, a score and a ship or fix verdict" },
+        { "ref": "library:robert-collier", "type": "mind", "use": "think", "when": "When the emails talk about the shop and should start from what the reader wants" }
+      ]
+    },
+    {
+      "id": "sale-plan",
+      "task": "Plan a sale across email and SMS",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/sale-plan-email-and-sms", "use": "build", "when": "Before a sale weekend or launch, to set who gets what, how often and what the offer costs" },
+        { "ref": "library:plan-a-sale-across-email-and-sms", "type": "workflow", "use": "build", "when": "When the plan is agreed and you need the send calendar, emails and checked texts" },
+        { "ref": "library:email-segment-builder", "type": "skill", "use": "brief", "when": "When the sale needs engaged, buyer and exclusion groups defined with clear rules" },
+        { "ref": "library:discount-and-price-change-checker", "type": "agent", "use": "check", "when": "Before the offer is set, to find the deepest discount the margin allows" }
+      ]
+    },
+    {
+      "id": "sms-launch",
+      "task": "Launch or restart the SMS channel",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/sms-channel-launch", "use": "build", "when": "When a shop starts texting, moves platform or restarts after opt-outs and complaints" },
+        { "ref": "kit:skills/sms-consent-and-send-plan", "use": "build", "when": "When consent wording, quiet hours and send frequency must be set or checked" },
+        { "ref": "library:marketing-consent-auditor", "type": "skill", "use": "check", "when": "Before the first send, to see who agreed to texts and who did not" },
+        { "ref": "library:sms-send-planner", "type": "skill", "use": "build", "when": "When the channel is live and needs a month of texts and a frequency test" }
+      ]
+    },
+    {
+      "id": "text-pack",
+      "task": "Write and check a pack of marketing texts",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:text-message-campaign-writer", "type": "skill", "use": "build", "when": "When you need texts for welcome, cart, win-back or a promo with consent rules built in" },
+        { "ref": "kit:prompts/text-message-pack-check", "use": "check", "when": "Just before a batch or new text flow goes live, to catch consent, timing and wording faults" },
+        { "ref": "library:sms-send-checker", "type": "skill", "use": "check", "when": "When one text is ready, to check its cost, length and rule flags" }
+      ]
+    },
+    {
+      "id": "subscription-offer",
+      "task": "Design a subscription offer the shop can afford",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/subscription-offer-and-cancel-path", "use": "build", "when": "When a shop wants a subscription and needs the offer, the perks and an honest way out" },
+        { "ref": "library:subscription-offer-designer", "type": "skill", "use": "build", "when": "When you have price, margin and cash and need the offer and the most to pay per subscriber" },
+        { "ref": "library:launch-a-subscription-offer-you-can-afford-to-fund", "type": "workflow", "use": "build", "when": "When the launch needs the offer, its payback time and the cancel flow in one run" },
+        { "ref": "library:subscription-payback-checker", "type": "skill", "use": "check", "when": "Before launch, to test whether the offer pays back in time for the cash on hand" },
+        { "ref": "library:subscription-page-take-rate-checker", "type": "skill", "use": "check", "when": "When the offer is live, to score how well the product page sells the subscription" },
+        { "ref": "library:billing-reminder-and-confirmation-writer", "type": "skill", "use": "build", "when": "When subscribers need clear billing reminders and order confirmations before each charge" }
+      ]
+    },
+    {
+      "id": "churn-audit",
+      "task": "Audit where buyers and subscribers stop",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/retention-cohort-read", "use": "build", "when": "When you have an order or subscriber export and need to see where customers stop buying" },
+        { "ref": "library:data-quality-scorecard-maker", "type": "skill", "use": "check", "when": "Before reading an export, to catch blanks, duplicates and stale rows that would skew it" },
+        { "ref": "library:customer-cohort-reader", "type": "skill", "use": "build", "when": "When you need repeat rate and revenue for each first-purchase month" },
+        { "ref": "library:subscription-churn-audit", "type": "skill", "use": "check", "when": "When the business is subscription, to score where subscribers leave" },
+        { "ref": "library:store-ltv-payback-reader", "type": "skill", "use": "check", "when": "When the owner asks if repeat orders pay back the cost of winning a customer" }
+      ]
+    },
+    {
+      "id": "cancel-path",
+      "task": "Build an honest cancel, pause and skip path",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/subscription-offer-and-cancel-path", "use": "build", "when": "When the cancel route must be easy to find and offer pause or skip without tricks" },
+        { "ref": "library:subscription-cancel-flow-builder", "type": "skill", "use": "build", "when": "When you know the cancel reasons and portal options and need one save per reason" },
+        { "ref": "library:churn-reducer", "type": "skill", "use": "explore", "when": "When you want a second design with save offers and failed-payment recovery to compare" }
+      ]
+    },
+    {
+      "id": "cancel-reasons",
+      "task": "Read cancel reasons and choose one fix",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/cancel-reason-read", "use": "build", "when": "Once a month, to turn cancel reasons into one fair save per reason and one product fix" },
+        { "ref": "library:cancel-reason-save-planner", "type": "prompt", "use": "build", "when": "When you must match saves to what the subscription tool can really do" },
+        { "ref": "library:post-purchase-survey-builder", "type": "skill", "use": "brief", "when": "When nobody collects reasons yet and you need the survey questions first" },
+        { "ref": "library:subscription-churn-watcher", "type": "agent", "use": "check", "when": "Each month, to see if last month's fix worked and where subscribers leave now" }
+      ]
+    },
+    {
+      "id": "monthly-fix",
+      "task": "Run the monthly retention fix",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/monthly-retention-fix", "use": "build", "when": "In the first week of each month, for a shop with a few months of order history" },
+        { "ref": "library:monthly-repeat-buyer-keeper", "type": "agent", "use": "build", "when": "When the monthly run should find the weakest repeat stage and fix it" },
+        { "ref": "library:monthly-email-flow-keeper", "type": "agent", "use": "build", "when": "When the weakest flow should be found and rebuilt each month with its copy checked" },
+        { "ref": "library:email-and-sms-performance-reader", "type": "skill", "use": "check", "when": "When last month's numbers are in, to see what broke and what to repeat" }
+      ]
+    },
+    {
+      "id": "loyalty-vip",
+      "task": "Design a loyalty, VIP or referral programme",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:loyalty-and-vip-program-designer", "type": "skill", "use": "build", "when": "When you have spend tiers and margins and want perks that are not discounts" },
+        { "ref": "library:build-a-vip-program-for-your-best-customers", "type": "workflow", "use": "build", "when": "When the best customers should get a named programme and personal touches" },
+        { "ref": "library:referral-program-designer", "type": "skill", "use": "explore", "when": "When a refer-a-friend reward may do more than points and you want it planned" },
+        { "ref": "library:loyalty-claim-checker", "type": "skill", "use": "check", "when": "Before launch, to test the programme's sums against its cost and who it reaches" },
+        { "ref": "library:byron-sharp", "type": "mind", "use": "think", "when": "When the plan only rewards heavy buyers and ignores the many who buy once a year" }
+      ]
+    },
+    {
+      "id": "segments",
+      "task": "Segment the list by value, recency and stage",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:customer-segment-builder", "type": "skill", "use": "build", "when": "When you need every customer scored on recency, frequency and spend and put in a group" },
+        { "ref": "library:email-segment-builder", "type": "skill", "use": "build", "when": "When the groups must become send and exclusion rules in the email tool" },
+        { "ref": "library:customer-stage-flow-mapper", "type": "skill", "use": "build", "when": "When one flow treats new, returning and loyal buyers the same and needs splitting" }
+      ]
+    },
+    {
+      "id": "deliverability",
+      "task": "Fix deliverability and clean the list",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:email-setup-health-checker", "type": "skill", "use": "check", "when": "When opens fall, to score the sending set-up and DNS records and list the fixes" },
+        { "ref": "library:inbox-delivery-fixer", "type": "skill", "use": "build", "when": "When SPF, DKIM or DMARC are missing or wrong on the sending domain" },
+        { "ref": "library:fix-inbox-placement-and-win-back-your-opens", "type": "workflow", "use": "build", "when": "When emails land in spam and you have 60 days of results to work from" },
+        { "ref": "library:sunset-flow-and-list-cleaner", "type": "skill", "use": "build", "when": "When the list holds people who never open, to set a sunset flow and a monthly clean" }
+      ]
+    },
+    {
+      "id": "flow-audit",
+      "task": "Audit the existing flows and find what is missing",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:email-flow-gap-checker", "type": "skill", "use": "check", "when": "When you inherit an account, to find missing steps and rules that clash" },
+        { "ref": "library:email-sequence-auditor", "type": "skill", "use": "check", "when": "When one flow has numbers, to sort it into protect, watch and fix" },
+        { "ref": "library:monthly-email-flow-keeper", "type": "agent", "use": "build", "when": "When the audit names the weakest flow and it needs a rebuild" }
+      ]
+    },
+    {
+      "id": "measure",
+      "task": "Measure what retention work really adds",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:holdout-test-planner", "type": "skill", "use": "build", "when": "When the platform's revenue figure is doubted, to design a holdout and how to read it" },
+        { "ref": "library:email-test-planner", "type": "skill", "use": "build", "when": "When there are many ideas to test, to rank them with sample sizes and win rules" },
+        { "ref": "library:experiment-result-analyst", "type": "skill", "use": "check", "when": "When a test has ended, to see if the difference is real before acting on it" },
+        { "ref": "library:utm-revenue-reader", "type": "skill", "use": "check", "when": "When you want orders by campaign from the shop's own order lines, not the email tool" },
+        { "ref": "library:les-binet", "type": "mind", "use": "think", "when": "When flows take credit for sales that would have happened anyway" }
+      ]
+    },
+    {
+      "id": "list-growth",
+      "task": "Grow the list with a popup or quiz",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:signup-popup-builder", "type": "skill", "use": "build", "when": "When you need desktop and mobile popup specs, copy and tests for the offer" },
+        { "ref": "library:quiz-funnel-builder", "type": "skill", "use": "explore", "when": "When a quiz may beat a discount popup and should sort people into the right flow" },
+        { "ref": "library:email-test-planner", "type": "skill", "use": "check", "when": "When two popup versions run, to set the sample size and the rule for a winner" }
+      ]
+    },
+    {
+      "id": "email-build",
+      "task": "Turn approved copy into an email layout or HTML",
+      "kind": "other",
+      "items": [
+        { "ref": "library:email-layout-brief-writer", "type": "skill", "use": "build", "when": "When a designer builds the email and needs each section briefed" },
+        { "ref": "library:marketing-email-html-builder", "type": "workflow", "use": "explore", "when": "When you want two HTML designs with previews to choose between" },
+        { "ref": "library:klaviyo", "type": "tool", "use": "build", "when": "When the shop sends from Klaviyo and you need to know what its flows and blocks can do" },
+        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before the built email is scheduled, to score it and catch what to cut" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-voice-editor", "type": "skill", "use": "check", "when": "Before any email or text goes out, to fix off-voice words without touching claims" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When copy states a number, a result or a guarantee you cannot trace to the shop" }
+  ],
+  "helpers": [
+    { "role": "email-marketing-specialist", "when": "When the job is newsletters, platform set-up or a deliverability problem that needs deep work" },
+    { "role": "ecommerce-analyst", "when": "When repeat rate, lifetime value or cohorts must be modelled from raw order data" },
+    { "role": "shopify-specialist", "when": "When a subscription app, checkout change or customer tag must be set up in the store" },
+    { "role": "conversion-copywriter", "when": "When a flow needs long-form selling copy or a landing page behind it" },
+    { "role": "customer-insights-researcher", "when": "When cancel reasons are thin and customers must be interviewed about why they left" },
+    { "role": "pricing-strategist", "when": "When the subscription price, discount depth or tiers need a proper pricing study" }
+  ],
+  "gaps": [
+    "No library item writes a failed payment recovery run on its own; it sits inside two churn items",
+    "No library item checks a cancel path against click-to-cancel and auto-renewal rules by region",
+    "No library item builds a back-in-stock, price-drop or birthday flow",
+    "No library item designs a preference centre or an unsubscribe page with frequency choices",
+    "No library item covers SMS consent set-up by region, sender registration and quiet hours; only the kit does",
+    "No library item writes several clearly different versions of one text or flow email to test side by side",
+    "No library item plans a move between email platforms: flows, suppression lists and warm-up",
+    "No library item reads a flow's true added revenue from a platform export with a holdout group",
+    "No library item covers push or in-app messages for shops with an app"
+  ]
+}

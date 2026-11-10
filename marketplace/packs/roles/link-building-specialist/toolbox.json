@@ -1,0 +1,263 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "link-building-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "asset-ideas",
+      "task": "Find link-worthy asset ideas for a niche",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/link-worthy-asset-plan", "use": "build", "when": "When a business has data, know-how or a local angle and needs three to five ideas editors would cover" },
+        { "ref": "library:product-angle-finder", "type": "skill", "use": "explore", "when": "When the product seems dull, to get product and story angles ranked by effort" },
+        { "ref": "library:free-tool-idea-planner", "type": "skill", "use": "explore", "when": "When a calculator or small tool may earn more links than an article" },
+        { "ref": "library:recent-topic-pulse-researcher", "type": "skill", "use": "brief", "when": "Before choosing an idea, to see what the niche has argued about in recent weeks" }
+      ]
+    },
+    {
+      "id": "headline-test",
+      "task": "Test an asset headline before anyone builds it",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/headline-test-for-an-asset", "use": "check", "when": "Before building a study, tool or guide, to judge whether an editor would cover it" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the working headline is weak, to get several honest angles to test" },
+        { "ref": "library:keyed-headline-test-planner", "type": "skill", "use": "build", "when": "When you can run a small test, to sort the headlines and set the rule for a winner" },
+        { "ref": "library:ira-glass", "type": "mind", "use": "think", "when": "When the headline states a topic and you need to find what actually happened and why it matters" }
+      ]
+    },
+    {
+      "id": "data-study",
+      "task": "Build a data study or survey story for the press",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:check-a-marketing-survey-before-sending-it", "type": "workflow", "use": "check", "when": "Before a survey goes out, to fix leading questions and plan a pretest" },
+        { "ref": "library:data-analyst", "type": "skill", "use": "build", "when": "When the client has a dataset and you need the trends and comparisons worth a headline" },
+        { "ref": "library:insight-brief-writer", "type": "skill", "use": "build", "when": "When the analysis is done, to rank the findings by how strong and sure each one is" },
+        { "ref": "library:data-chart-drawer", "type": "skill", "use": "build", "when": "When a finding needs one clean chart a journalist can lift" },
+        { "ref": "library:method-explainer", "type": "skill", "use": "build", "when": "When the study needs a plain how-we-did-this note with its limits" },
+        { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before any number goes in a pitch, to check the method, the sums and any bias" },
+        { "ref": "library:tim-harford", "type": "mind", "use": "think", "when": "When a striking number needs slowing down: what it counts and what it is compared with" }
+      ]
+    },
+    {
+      "id": "build-asset",
+      "task": "Write the asset page: guide, statistics page or tool",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:long-form-piece-structurer", "type": "skill", "use": "brief", "when": "When the asset is a guide or report, to set an outline that avoids padding" },
+        { "ref": "library:online-calculator-designer", "type": "skill", "use": "build", "when": "When the asset is a calculator, to design one that gives a real answer" },
+        { "ref": "library:infographic-maker", "type": "skill", "use": "build", "when": "When the findings need a single shareable graphic with a layout that fits them" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the page title is not settled, to compare several angles" },
+        { "ref": "library:ai-search-visibility-optimiser", "type": "skill", "use": "build", "when": "When the page should also be cited by AI answers, to get the edits that help" },
+        { "ref": "library:study-claim-checker", "type": "skill", "use": "check", "when": "Before publishing, to test each statistic for weak evidence and bias" }
+      ]
+    },
+    {
+      "id": "prospect-scoring",
+      "task": "Set target rules and score a prospect list",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/link-prospect-scoring", "use": "build", "when": "When you have a pasted list of sites or a gap export and need pitch, maybe and skip" },
+        { "ref": "library:ai-citation-source-finder", "type": "skill", "use": "brief", "when": "When you want to add the sites AI tools keep citing for the buyer's questions" },
+        { "ref": "library:rand-fishkin", "type": "mind", "use": "think", "when": "When the list chases authority scores and you should ask where the audience really reads" }
+      ]
+    },
+    {
+      "id": "prospect-list",
+      "task": "Build a prospect and media list",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:store-link-gap-planner", "type": "skill", "use": "build", "when": "When you know the rivals, to get the link gap, a monthly quota and earned-link targets" },
+        { "ref": "library:backlink-builder", "type": "skill", "use": "build", "when": "When you start from the site alone and need places that could link or mention it" },
+        { "ref": "library:press-outreach-planner", "type": "skill", "use": "build", "when": "When the campaign has news, to get a media list and a press kit outline" },
+        { "ref": "library:guide-outreach-list-planner", "type": "skill", "use": "build", "when": "When the asset is a guide, to plan who to contact and a personal note for each type" },
+        { "ref": "library:apollo", "type": "tool", "use": "build", "when": "When you have the site and the role and need the right person's work email" }
+      ]
+    },
+    {
+      "id": "pitch-pack",
+      "task": "Write a pitch email pack for one campaign",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/outreach-pitch-and-follow-up", "use": "build", "when": "When the list is approved and you need the main pitch, two angle versions and one follow-up" },
+        { "ref": "library:agency-marketing-pr-communications-manager", "type": "agent", "use": "explore", "when": "When the story could go several ways, to get key messages and media pitch angles" },
+        { "ref": "library:own-voice-outreach-writer", "type": "skill", "use": "build", "when": "When each email must sound like the sender and point to something specific on the site" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the pitch is written, to compare subject lines an editor would open" },
+        { "ref": "library:cold-email-pre-send-checker", "type": "skill", "use": "check", "when": "Before sending, to test each claim, check the legal basics and tighten the email" }
+      ]
+    },
+    {
+      "id": "digital-pr-campaign",
+      "task": "Run a digital PR campaign from idea to coverage",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/digital-pr-campaign", "use": "build", "when": "When the client wants links to a page that matters or has data worth sharing" },
+        { "ref": "library:link-and-pr-outreach-planner", "type": "skill", "use": "brief", "when": "When there is no plan yet, to set the mix of PR, mentions and listings" },
+        { "ref": "library:publicity-first-launch-planner", "type": "skill", "use": "explore", "when": "When the campaign rides a launch, to find the one idea the press could own" },
+        { "ref": "library:marketing-content-drafter", "type": "skill", "use": "build", "when": "When the campaign needs a press release with headline options" },
+        { "ref": "library:hard-questions-faq-writer", "type": "skill", "use": "check", "when": "Before the release goes out, to answer the hard questions a reporter will ask" }
+      ]
+    },
+    {
+      "id": "journalist-requests",
+      "task": "Answer journalist requests for expert comment",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/journalist-request-answer", "use": "build", "when": "When a reporter asks for sources on a topic the business truly knows" },
+        { "ref": "library:journalist-query-answer-writer", "type": "skill", "use": "build", "when": "When many requests arrive, to rank which to answer and keep a win-rate sheet" },
+        { "ref": "library:message-stickiness-rewriter", "type": "prompt", "use": "explore", "when": "When the quote is correct but flat, to get three versions worth printing" },
+        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before the answer is sent, to check every fact the expert states" }
+      ]
+    },
+    {
+      "id": "unlinked-mentions",
+      "task": "Reclaim unlinked mentions",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:workflows/mention-and-broken-link-reclaim", "use": "build", "when": "Every week or two, alongside campaigns, to work through mentions and dead links" },
+        { "ref": "kit:prompts/unlinked-mention-request", "use": "build", "when": "When a page names the business without a link and you want to ask politely once" },
+        { "ref": "library:brand-mention-tracker", "type": "skill", "use": "brief", "when": "When you need the places that name the brand gathered into one list first" },
+        { "ref": "library:cold-email-pre-send-checker", "type": "skill", "use": "check", "when": "Before the request goes, to keep it short, true and easy to say yes to" }
+      ]
+    },
+    {
+      "id": "broken-links",
+      "task": "Pitch a replacement for a broken link",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/broken-link-replacement-pitch", "use": "build", "when": "When a relevant page links to a dead resource and your page truly covers the same thing" },
+        { "ref": "kit:workflows/mention-and-broken-link-reclaim", "use": "brief", "when": "When broken link work should run on a steady rhythm, not as a one-off" },
+        { "ref": "library:cold-email-pre-send-checker", "type": "skill", "use": "check", "when": "Before sending, to check the claim that your page matches what the dead one covered" }
+      ]
+    },
+    {
+      "id": "backlink-audit",
+      "task": "Audit the backlink profile and judge the risk",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/backlink-profile-risk-check", "use": "check", "when": "When bad links are suspected and you want a calm read before anyone touches disavow" },
+        { "ref": "library:backlink-profile-auditor", "type": "skill", "use": "build", "when": "When a backlink tool is connected, to get anchor spread, toxic links and lost links" },
+        { "ref": "library:search-console-traffic-drop-diagnoser", "type": "skill", "use": "check", "when": "When rankings fell, to see which pages lost clicks before blaming links" },
+        { "ref": "library:seo-and-ai-search-agency-vetter", "type": "skill", "use": "check", "when": "When an agency promises links, to read its proposal for red flags" }
+      ]
+    },
+    {
+      "id": "competitor-gap",
+      "task": "Compare links with rivals and find the gap",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:rival-seo-comparer", "type": "skill", "use": "build", "when": "When you need search overlap, content depth and backlinks side by side" },
+        { "ref": "library:store-link-gap-planner", "type": "skill", "use": "build", "when": "When the gap must become a monthly target and a pitch list" },
+        { "ref": "library:competitor-site-audit", "type": "skill", "use": "brief", "when": "When you need to know what the leading sites do that earns them links" }
+      ]
+    },
+    {
+      "id": "monthly-report",
+      "task": "Write the monthly link report",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/monthly-link-review", "use": "build", "when": "In the first week of each month, to review links won, lost and still in play" },
+        { "ref": "kit:skills/monthly-link-report", "use": "build", "when": "When you have the tool export, the tracking sheet and Search Console reports to hand" },
+        { "ref": "library:organic-search-report-builder", "type": "skill", "use": "build", "when": "When the report should show non-brand clicks against the last period" },
+        { "ref": "library:monthly-search-console-keeper", "type": "agent", "use": "check", "when": "When the month's Search Console export is in, to see which pages to push next" },
+        { "ref": "library:seo-change-tracker", "type": "skill", "use": "check", "when": "When you need a saved baseline so later slips in rankings or pages are noticed" }
+      ]
+    },
+    {
+      "id": "paid-placement",
+      "task": "Check a paid placement or guest post offer",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/paid-placement-check", "use": "check", "when": "When someone offers a sponsored article, link insertion or listing for money or product" },
+        { "ref": "library:build-a-clear-sponsorship-decision-brief", "type": "workflow", "use": "build", "when": "When a sponsorship may be worth it for the audience and you need the cost and fit compared" }
+      ]
+    },
+    {
+      "id": "guest-article",
+      "task": "Write a guest article or expert byline",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:long-form-piece-structurer", "type": "skill", "use": "brief", "when": "When the editor has agreed a topic, to outline the piece before writing" },
+        { "ref": "library:blog-post-writer", "type": "skill", "use": "build", "when": "When the outline is set and the article needs a draft with a strong opening" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the editor wants title choices, to offer several angles" },
+        { "ref": "library:ai-written-text-detector", "type": "skill", "use": "check", "when": "Before sending to an editor, to find wording that reads as machine-written" }
+      ]
+    },
+    {
+      "id": "local-links",
+      "task": "Earn local links, listings and sponsorship mentions",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:directory-listing-planner", "type": "skill", "use": "build", "when": "When the business is missing from directories that matter, with listing text to submit" },
+        { "ref": "library:local-search-listing-manager", "type": "skill", "use": "check", "when": "When name, address and phone differ across listings and need a fix list" },
+        { "ref": "library:partner-campaign-planner", "type": "skill", "use": "build", "when": "When a nearby business or group could run a joint piece that earns a mention" },
+        { "ref": "library:build-a-clear-sponsorship-decision-brief", "type": "workflow", "use": "check", "when": "When a local sponsorship is on offer, to weigh cost against audience fit" }
+      ]
+    },
+    {
+      "id": "podcast-partner-pitch",
+      "task": "Pitch podcasts, newsletters and partners",
+      "kind": "email",
+      "items": [
+        { "ref": "library:personal-brand-planner", "type": "skill", "use": "brief", "when": "When the founder is the guest, to settle what they should be known for" },
+        { "ref": "library:own-voice-outreach-writer", "type": "skill", "use": "build", "when": "When each host needs a personal note tied to a recent episode or issue" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the note is drafted, to try several subject lines" },
+        { "ref": "library:cold-email-pre-send-checker", "type": "skill", "use": "check", "when": "Before sending, to test the claims and cut the note down" }
+      ]
+    },
+    {
+      "id": "internal-links",
+      "task": "Point internal links at the pages that earn links",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:internal-link-mapper", "type": "skill", "use": "build", "when": "When earned links land on one page and should pass on to the pages that sell" },
+        { "ref": "library:content-hub-planner", "type": "skill", "use": "build", "when": "When assets sit alone and need a hub with pillar and supporting pages" },
+        { "ref": "library:search-console-quick-win-finder", "type": "skill", "use": "brief", "when": "When you must choose which pages to push this month" }
+      ]
+    },
+    {
+      "id": "ai-citations",
+      "task": "Win mentions on the sites AI answers cite",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:ai-citation-source-finder", "type": "skill", "use": "build", "when": "When you have five buyer questions and want the cited sites ranked with who to contact" },
+        { "ref": "library:agency-marketing-ai-citation-strategist", "type": "agent", "use": "check", "when": "When you need to know if the main AI tools name the client or a rival" },
+        { "ref": "library:ai-search-visibility-optimiser", "type": "skill", "use": "build", "when": "When the client's own page should be the one that gets cited" }
+      ]
+    },
+    {
+      "id": "outreach-ops",
+      "task": "Set up outreach sending and batches",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:cold-outreach-batch-runner", "type": "agent", "use": "build", "when": "When outreach runs in batches and each should learn from the last one's results" },
+        { "ref": "library:email-setup-health-checker", "type": "skill", "use": "check", "when": "Before the first batch, to score the sending set-up and DNS records" },
+        { "ref": "library:inbox-delivery-fixer", "type": "skill", "use": "build", "when": "When pitches land in spam and the sending domain needs fixing" },
+        { "ref": "library:perplexity", "type": "tool", "use": "brief", "when": "When you need to read a target site and its recent pieces with sources to cite" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before any pitch, release or asset goes out, to check each claim against trusted sources" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before an email or article is sent to an editor, to catch typos and names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "pr-specialist", "when": "When the story needs press relationships, an embargo or a spokesperson prepared" },
+    { "role": "seo-specialist", "when": "When link targets depend on a keyword plan, a technical fix or a ranking drop" },
+    { "role": "content-marketer", "when": "When the asset is a long guide or report that needs writing in full" },
+    { "role": "data-analyst", "when": "When the study needs a large dataset cleaned and analysed" },
+    { "role": "data-visualisation-specialist", "when": "When the findings need charts or an interactive graphic editors can embed" },
+    { "role": "aeo-geo-specialist", "when": "When the goal is to be named in AI answers, not only to earn links" }
+  ],
+  "gaps": [
+    "No library item scores a site as a link target: real readers, editorial standards and signs of link selling; only the kit does",
+    "No library item finds unlinked mentions or dead outbound links on target pages; the mention tracker gathers reviews and mentions only",
+    "No library item reads the Search Console Links and Manual Actions reports or decides whether a disavow file is needed",
+    "No library item turns a backlink tool export into links won, links lost and what each is worth",
+    "No library item builds an outreach tracking sheet or reads reply and win rates by campaign",
+    "No library item plans reactive PR: watching the news and pitching expert comment within hours",
+    "No library item pitches a guest article or a podcast guest slot, or checks a site's contributor rules",
+    "No library item checks a paid link for the right link attributes and disclosure; only the kit prompt does",
+    "No library item plans a press data study from public data with regional cuts and a ranked findings table"
+  ]
+}

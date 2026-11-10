@@ -1,0 +1,279 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "marketing-analyst",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "weekly-report",
+      "task": "Write the weekly marketing report",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/weekly-report-cycle", "use": "build", "when": "Every week on the same day, to gather exports, check them and send one page" },
+        { "ref": "kit:skills/weekly-marketing-report", "use": "build", "when": "When GA4, ad and store exports are in and the owner needs one page read in two minutes" },
+        { "ref": "library:define-your-metrics-once-and-write-a-weekly-update-anyone-gets", "type": "workflow", "use": "build", "when": "When the first report is due and the numbers have never been defined" },
+        { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before the report goes out, to check the method, the sums and any bias" },
+        { "ref": "library:data-jargon-translator", "type": "skill", "use": "check", "when": "When the draft is full of analyst terms, to rewrite it in plain business words" },
+        { "ref": "library:cole-nussbaumer-knaflic", "type": "mind", "use": "think", "when": "When the page shows every number and the reader cannot tell what to do" }
+      ]
+    },
+    {
+      "id": "metric-dictionary",
+      "task": "Agree one set of marketing numbers",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/metric-dictionary", "use": "build", "when": "When team and agency count spend, leads or sales differently and meetings start with a row" },
+        { "ref": "library:metric-definition-writer", "type": "skill", "use": "build", "when": "When one metric needs a single written definition the whole team can reuse" },
+        { "ref": "library:align-recurring-report-metric-definitions", "type": "workflow", "use": "check", "when": "When two reports show different figures for the same thing and you need the difference table" },
+        { "ref": "library:report-definition-drift-review-assistant", "type": "agent", "use": "check", "when": "When a number changed meaning over time and you must find where" },
+        { "ref": "library:vanity-metric-fixer", "type": "skill", "use": "check", "when": "When the list is full of numbers that look good and explain nothing" }
+      ]
+    },
+    {
+      "id": "ga4-tracking-plan",
+      "task": "Write a GA4 event and key event plan",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/ga4-tracking-plan", "use": "build", "when": "When a developer or agency must build tracking from the plan without a meeting" },
+        { "ref": "library:tracking-plan-builder", "type": "skill", "use": "build", "when": "When you start from what must be measured and need events, names and tags" },
+        { "ref": "library:shopify-google-conversion-tracking-builder", "type": "skill", "use": "build", "when": "When the site is a Shopify store and purchase tracking needs a build checklist" },
+        { "ref": "library:ga4-store-setup-checker", "type": "skill", "use": "check", "when": "When the plan is drafted, to catch missing day-one settings and store events" }
+      ]
+    },
+    {
+      "id": "tracking-audit",
+      "task": "Check the current tracking set-up and verify a launch",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/tracking-launch-and-verify", "use": "build", "when": "For a new site or flow, an audit that found problems, or before a big campaign" },
+        { "ref": "library:set-up-tracking-you-can-trust-before-you-scale", "type": "workflow", "use": "build", "when": "When GA4, Meta and campaign links all need fixing before spend goes up" },
+        { "ref": "library:conversion-tracking-fixer", "type": "skill", "use": "build", "when": "When what counts as a sale or lead is agreed and the tags need repair" },
+        { "ref": "library:google-ads-purchase-tracking-checker", "type": "skill", "use": "check", "when": "When Google Ads may count a purchase twice, to get a pass or fail and the fix" },
+        { "ref": "library:monthly-tracking-health-keeper", "type": "agent", "use": "check", "when": "Each month, to catch broken tracking and double counts before they reach a report" }
+      ]
+    },
+    {
+      "id": "utm-rules",
+      "task": "Clean up UTM links and write the rules",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/utm-cleanup", "use": "build", "when": "When links are spelt many ways and traffic lands in Unassigned or not set" },
+        { "ref": "library:campaign-link-tracker", "type": "skill", "use": "build", "when": "When each campaign needs tagged links and rules the store can match" },
+        { "ref": "library:traffic-channel-classifier", "type": "skill", "use": "check", "when": "When visits and orders must be sorted into the same channels whatever tool they came from" },
+        { "ref": "library:utm-revenue-reader", "type": "skill", "use": "check", "when": "When you want revenue by campaign from the store's own order lines" }
+      ]
+    },
+    {
+      "id": "which-number",
+      "task": "Explain why GA4, ad platforms and the store disagree",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/which-number-to-trust", "use": "build", "when": "When every tool reports a different sales total and the owner asks which to believe" },
+        { "ref": "library:conversion-reconciliation", "type": "skill", "use": "build", "when": "When you need the platforms side by side with the reason for each gap" },
+        { "ref": "library:ad-dashboard-reader", "type": "skill", "use": "check", "when": "When ad numbers are pasted in, to explain each metric and reconcile the platforms" }
+      ]
+    },
+    {
+      "id": "tracking-gap",
+      "task": "Size the gap between GA4 and real sales by region",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/tracking-gap-sizer", "use": "build", "when": "When GA4 shows fewer sales than the store and the business sells into several regions" },
+        { "ref": "library:ga4-raw-data-analyst", "type": "skill", "use": "build", "when": "When the GA4 export is in BigQuery and you need counts that match or explain the screen" },
+        { "ref": "library:excel-table-join-reconciler", "type": "skill", "use": "check", "when": "When GA4 orders and store orders must be matched row by row to find what is missing" }
+      ]
+    },
+    {
+      "id": "attribution-guide",
+      "task": "Explain how each channel gets credit",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:attribution-model-chooser", "type": "skill", "use": "build", "when": "When reports conflict and you must pick a model and a way to settle disputes" },
+        { "ref": "library:post-purchase-survey-reader", "type": "skill", "use": "check", "when": "When survey answers can show which channels the platforms over-credit" },
+        { "ref": "library:method-explainer", "type": "skill", "use": "build", "when": "When the owner needs a plain how-this-was-worked-out note with its limits" },
+        { "ref": "library:les-binet", "type": "mind", "use": "think", "when": "When last-click makes short-term channels look good and brand work look useless" }
+      ]
+    },
+    {
+      "id": "channel-review",
+      "task": "Give a fair read of channel results",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:marketing-results-reporter", "type": "skill", "use": "build", "when": "When you have the numbers and need trends, funnel drop-offs and next steps" },
+        { "ref": "library:cac-by-source", "type": "skill", "use": "build", "when": "When you need the cost to win one new customer from each traffic source" },
+        { "ref": "library:monthly-channel-budget-reviewer", "type": "agent", "use": "check", "when": "Each month, to check returns against store totals and spot fading channels" }
+      ]
+    },
+    {
+      "id": "lift-test-plan",
+      "task": "Plan a holdout or regional lift test",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/quarterly-lift-test", "use": "build", "when": "Once a quarter on the channel most in doubt, or before a big budget decision" },
+        { "ref": "kit:skills/geo-holdout-lift-test", "use": "build", "when": "When you need the regions, length, noise check and decision rule set before the test" },
+        { "ref": "library:holdout-test-planner", "type": "skill", "use": "build", "when": "When the doubt is about one channel or change and a simple holdout will answer it" },
+        { "ref": "library:incrementality-test-planner", "type": "skill", "use": "build", "when": "When you know spend and regions and need a lift test sized to them" },
+        { "ref": "library:analysis-assumptions-logger", "type": "skill", "use": "check", "when": "Before the test starts, to log each assumption and what would change the answer" }
+      ]
+    },
+    {
+      "id": "test-readout",
+      "task": "Read out a lift test or an A/B test",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/geo-holdout-lift-test", "use": "check", "when": "When the test has ended and the result must be read against the rule set beforehand" },
+        { "ref": "library:experiment-readout-desk", "type": "agent", "use": "build", "when": "When each test needs a readiness check before and an honest verdict after" },
+        { "ref": "library:test-result-trust-checker", "type": "prompt", "use": "check", "when": "When the numbers are in, to decide whether to trust them and state the lift as a range" },
+        { "ref": "library:david-spiegelhalter", "type": "mind", "use": "think", "when": "When a lift figure needs its uncertainty explained in a way the owner can use" }
+      ]
+    },
+    {
+      "id": "ab-test-plan",
+      "task": "Plan an A/B test the traffic can prove",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:experiment-designer", "type": "skill", "use": "build", "when": "When a change needs a clear hypothesis, a test plan and a way to read the result" },
+        { "ref": "library:sample-size-planner", "type": "skill", "use": "check", "when": "Before the test, to work out how many visitors or orders it needs" },
+        { "ref": "library:ab-test-traffic-checker", "type": "skill", "use": "check", "when": "When traffic is low, to see how many weeks the test would take and whether to run it" }
+      ]
+    },
+    {
+      "id": "cac-limit",
+      "task": "Work out the customer cost limit",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/customer-cost-limit", "use": "build", "when": "Before raising or cutting spend, to set the most to pay for a new customer from margins" },
+        { "ref": "library:set-your-cac-limit-and-test-what-ads-really-add", "type": "workflow", "use": "build", "when": "When the limit should come with a truer return figure and a lift test" },
+        { "ref": "library:cac-payback-checker", "type": "skill", "use": "check", "when": "When you have cohort profit, to check the ratio and get a scale or fix call" },
+        { "ref": "library:store-ltv-payback-reader", "type": "skill", "use": "check", "when": "When repeat buying matters, to read lifetime value and true payback by cohort" }
+      ]
+    },
+    {
+      "id": "dashboard",
+      "task": "Write a build sheet for a one-page dashboard",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/data-studio-ga4-page", "use": "build", "when": "When the owner wants one page on top of GA4 and store data and someone else will build it" },
+        { "ref": "library:kpi-dashboard-designer", "type": "skill", "use": "brief", "when": "Before the build sheet, to settle who reads it and what they decide from it" },
+        { "ref": "library:dashboard-builder", "type": "skill", "use": "build", "when": "When a self-contained page with charts and filters will do instead of a hosted tool" },
+        { "ref": "library:data-chart-drawer", "type": "skill", "use": "build", "when": "When one number needs a clean chart of the right type" }
+      ]
+    },
+    {
+      "id": "mmm-check",
+      "task": "Judge whether a media mix model is worth it",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/mmm-readiness-check", "use": "check", "when": "When a model is proposed or delivered and you must judge if the data can support it" },
+        { "ref": "library:weekly-spend-impact-modeler", "type": "skill", "use": "build", "when": "When a simple model of what each channel adds will do, with honest limits" },
+        { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "When a vendor's model arrives, to check its method and sums before anyone acts" }
+      ]
+    },
+    {
+      "id": "budget-split",
+      "task": "Recommend how to split budget across channels",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:channel-budget-mix-planner", "type": "skill", "use": "build", "when": "When you have spend by channel and margin and need a target split with caps" },
+        { "ref": "library:marketing-budget-scenarios", "type": "skill", "use": "explore", "when": "When a new budget is proposed, to compare low and high forecasts with diminishing returns" },
+        { "ref": "library:monthly-channel-budget-reviewer", "type": "agent", "use": "check", "when": "When the split is live, to check each month where the next pound should go" }
+      ]
+    },
+    {
+      "id": "funnel-analysis",
+      "task": "Find where the funnel leaks",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:conversion-funnel-analyst", "type": "skill", "use": "build", "when": "When you have an event log and steps and need conversion and drop-off per step" },
+        { "ref": "library:cost-per-funnel-stage-reporter", "type": "skill", "use": "build", "when": "When CRM stages and spend are known and you need the true cost of each stage" },
+        { "ref": "library:store-funnel-benchmark-checker", "type": "skill", "use": "check", "when": "When you have GA4 funnel and device numbers and want the step that leaks most" },
+        { "ref": "library:lead-source-field-checker", "type": "skill", "use": "check", "when": "Before trusting lead reports, to see if the source field is good enough" }
+      ]
+    },
+    {
+      "id": "metric-drop",
+      "task": "Explain a sudden drop or spike",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:metric-drop-investigator", "type": "skill", "use": "build", "when": "When a number moved, to confirm it, split it by group and rank the main driver" },
+        { "ref": "library:traffic-drop-investigator", "type": "skill", "use": "build", "when": "When the drop is in search traffic and you need likely causes ranked" },
+        { "ref": "library:research-hypothesis-builder", "type": "skill", "use": "brief", "when": "Before blaming one cause, to list rival explanations and how to test each" }
+      ]
+    },
+    {
+      "id": "forecast",
+      "task": "Forecast results and set targets",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:trend-and-forecast-analyst", "type": "skill", "use": "build", "when": "When you have numbers over time and need trend, seasons, odd spikes and a forecast table" },
+        { "ref": "library:analysis-assumptions-logger", "type": "skill", "use": "check", "when": "When the forecast is drafted, to log what it assumes and what could change it" },
+        { "ref": "library:philip-tetlock", "type": "mind", "use": "think", "when": "When a target is vague and should be a dated forecast checked against a base rate" }
+      ]
+    },
+    {
+      "id": "data-prep",
+      "task": "Clean and join exports before analysis",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:data-cleaner", "type": "skill", "use": "build", "when": "When an export has blanks, duplicates, wrong types and outliers" },
+        { "ref": "library:excel-table-join-reconciler", "type": "skill", "use": "check", "when": "When two exports are joined, to list unmatched rows and duplicate keys" },
+        { "ref": "library:data-quality-scorecard-maker", "type": "skill", "use": "check", "when": "When a dataset feeds a regular report and needs standing checks" },
+        { "ref": "library:ad-data-quality-checker", "type": "skill", "use": "check", "when": "When ad and sales data sit in BigQuery, to find spend gaps and double counts first" }
+      ]
+    },
+    {
+      "id": "survey-attribution",
+      "task": "Read a how-did-you-hear survey",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:post-purchase-survey-reader", "type": "skill", "use": "build", "when": "When you have survey answers and channel spend and want over-credited channels named" },
+        { "ref": "library:survey-answer-truth-checker", "type": "prompt", "use": "check", "when": "When the survey answers look too neat, to score how far to trust them" },
+        { "ref": "library:ai-traffic-tracking-setup", "type": "skill", "use": "build", "when": "When buyers may arrive from AI answers and nothing records it yet" }
+      ]
+    },
+    {
+      "id": "findings-writeup",
+      "task": "Write up findings an owner can act on",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:insight-brief-writer", "type": "skill", "use": "build", "when": "When the analysis is done, to rank the findings by impact and how sure each is" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When a long analysis needs one page with the answer first" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to read the write-up as the owner would and list what is unclear" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "When the numbers live in a workbook, to find broken formulas and wrong totals" }
+      ]
+    },
+    {
+      "id": "brand-measures",
+      "task": "Set up brand and long-term measures",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:brand-health-metrics-planner", "type": "skill", "use": "build", "when": "When the owner asks if brand work is doing anything and nothing tracks it" },
+        { "ref": "library:marketing-scorecard-builder", "type": "skill", "use": "build", "when": "When short-term and long-term measures should sit on one scorecard" },
+        { "ref": "library:les-binet", "type": "mind", "use": "think", "when": "When every measure is short-term and the plan starves what builds future demand" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before any analysis is shared, to check the method, the sums and any bias" },
+    { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before a workbook leaves your hands, to find broken formulas and wrong totals" },
+    { "ref": "library:data-jargon-translator", "type": "skill", "use": "check", "when": "Before anything goes to an owner, to replace analyst terms with plain words" }
+  ],
+  "helpers": [
+    { "role": "bi-analyst", "when": "When the dashboard must be built and kept running, not only specified" },
+    { "role": "data-engineer", "when": "When exports must become a pipeline or a warehouse table that refreshes" },
+    { "role": "data-scientist", "when": "When a media mix model or a synthetic-control test needs real modelling" },
+    { "role": "shopify-specialist", "when": "When tags, pixels or the data layer must be changed inside the store" },
+    { "role": "google-ads-media-buyer", "when": "When the read of results should turn into bid, budget and campaign changes" },
+    { "role": "cro-specialist", "when": "When the funnel leak is found and the page needs tests to fix it" }
+  ],
+  "gaps": [
+    "No library item audits a Google Tag Manager container or writes a data layer spec",
+    "No library item covers consent mode and cookie banners: what they hide from GA4 and how to size it by region",
+    "No library item writes a Looker Studio or Data Studio build sheet; the dashboard items make their own pages",
+    "No library item builds a media mix model or reviews one a vendor has delivered",
+    "No library item designs a regional test with matched regions, a noise check or synthetic control; only the kit does",
+    "No library item audits a live GA4 property beyond store set-up: cross-domain, filters, retention and key events",
+    "No library item covers server-side tagging for Google or importing offline and phone sales",
+    "No library item checks a weekly report's totals against the store or CRM backend; only the kit does",
+    "No library item tracks share of search or benchmarks traffic against named rivals"
+  ]
+}

@@ -1,0 +1,295 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "local-marketing-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "local-90-day-plan",
+      "task": "Build a 90-day local marketing plan",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/local-90-day-plan", "use": "build", "when": "For a new local client, or an owner who says they do not know what is working" },
+        { "ref": "library:one-goal-marketing-plan-builder", "type": "skill", "use": "brief", "when": "When the owner wants everything at once, to cut the plan to one goal for the quarter" },
+        { "ref": "library:traction-channel-ranker", "type": "skill", "use": "explore", "when": "When the channel choice is open, to compare them all and shortlist small tests" },
+        { "ref": "library:jay-abraham", "type": "mind", "use": "think", "when": "When the plan only chases new customers and ignores job size and repeat visits" }
+      ]
+    },
+    {
+      "id": "profile-audit",
+      "task": "Audit a Google Business Profile against local rivals",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/business-profile-audit", "use": "build", "when": "When you need the profile checked against Google's guidelines and three nearby rivals" },
+        { "ref": "library:local-search-listing-manager", "type": "skill", "use": "check", "when": "When you want a second ranked fix list and where name, address and phone differ" },
+        { "ref": "library:competitor-profile-writer", "type": "skill", "use": "brief", "when": "When you need each rival's site, prices and pitch gathered before comparing" },
+        { "ref": "library:directory-listing-planner", "type": "skill", "use": "build", "when": "When the business is missing from directories that matter and needs listing text" }
+      ]
+    },
+    {
+      "id": "profile-text",
+      "task": "Write the profile description, services and first posts",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/profile-description-and-services", "use": "build", "when": "When the owner has supplied the facts and the profile text must fit Google's limits" },
+        { "ref": "library:message-stickiness-rewriter", "type": "prompt", "use": "explore", "when": "When the opening line sounds like every rival, to get three versions to choose from" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a line is vague, to test it and get a true, picturable rewrite" }
+      ]
+    },
+    {
+      "id": "service-area-pages",
+      "task": "Write service and area pages",
+      "kind": "web_page",
+      "items": [
+        { "ref": "kit:prompts/service-area-page", "use": "build", "when": "When one main service, or a service in one area, needs a page built from real local facts" },
+        { "ref": "library:conversion-page-writer", "type": "skill", "use": "build", "when": "When the page must also turn visitors into calls with proof and answers to doubts" },
+        { "ref": "library:top-of-page-headline-writer", "type": "prompt", "use": "explore", "when": "When the page opening is weak, to get five headlines with a pick" },
+        { "ref": "library:price-display-planner", "type": "skill", "use": "build", "when": "When the page should show prices and you must decide how and where" },
+        { "ref": "library:faq-page-from-questions-writer", "type": "prompt", "use": "build", "when": "When customers ask the same things by phone and the page should answer them" },
+        { "ref": "library:sales-copy-reviewer", "type": "skill", "use": "check", "when": "When the page is drafted, to find and fix its weakest parts" }
+      ]
+    },
+    {
+      "id": "review-requests",
+      "task": "Set up an honest review request habit",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/review-request-kit", "use": "build", "when": "When you need the spoken ask, the follow-up message and the counter or van card" },
+        { "ref": "kit:skills/review-request-and-reply-system", "use": "build", "when": "When every customer should be asked the same way, with no rewards or filters" },
+        { "ref": "library:review-request-and-reply-planner", "type": "skill", "use": "brief", "when": "When the owner is unsure of the best moment to ask and how to word it" }
+      ]
+    },
+    {
+      "id": "review-replies",
+      "task": "Reply to a batch of Google reviews",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/review-replies", "use": "build", "when": "When a batch of reviews needs specific, human replies, including the hard ones" },
+        { "ref": "kit:skills/review-request-and-reply-system", "use": "build", "when": "When you need reply templates by review type that staff can reuse" },
+        { "ref": "library:review-reason-spotter", "type": "prompt", "use": "brief", "when": "Before replying, to see the real reason behind each review" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before a reply to a complaint is posted, to check each promise and the tone" },
+        { "ref": "library:public-review-reply-desk", "type": "agent", "use": "check", "when": "When the batch is large, to check every reply and flag repeat complaints" }
+      ]
+    },
+    {
+      "id": "quote-follow-ups",
+      "task": "Follow up quotes already sent",
+      "kind": "email",
+      "items": [
+        { "ref": "library:get-a-quiet-deal-moving-again-without-pressure", "type": "workflow", "use": "build", "when": "When a quote has gone quiet, to find why and get calm replies and easy-yes questions" },
+        { "ref": "library:new-inquiry-reply-drafter", "type": "skill", "use": "build", "when": "When new enquiries wait, to qualify each and draft a reply the owner sends" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the follow-up is written, to try several subject lines" },
+        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before sending, to score the message and cut what drags" }
+      ]
+    },
+    {
+      "id": "seasonal-calendar",
+      "task": "Build a 12-month seasonal offer calendar",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/seasonal-offer-calendar", "use": "build", "when": "When you know the busy and quiet months and need the job and offer for each season" },
+        { "ref": "kit:workflows/seasonal-campaign-cycle", "use": "build", "when": "Six to eight weeks before a marked season, or when the diary shows gaps" },
+        { "ref": "library:campaign-brief-calendar", "type": "skill", "use": "build", "when": "When one season's push needs a brief and a weekly calendar others can follow" },
+        { "ref": "library:promotion-idea-planner", "type": "skill", "use": "explore", "when": "When the season needs an offer that is not a price cut" }
+      ]
+    },
+    {
+      "id": "quiet-week-offer",
+      "task": "Fill a quiet week with an offer that still pays",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/quiet-week-offer", "use": "build", "when": "When the diary has gaps in the next two to six weeks and the offer must not lose money" },
+        { "ref": "library:promotion-idea-planner", "type": "skill", "use": "explore", "when": "When you want a gift or bundle idea to set beside a plain discount" },
+        { "ref": "library:discount-and-price-change-checker", "type": "agent", "use": "check", "when": "Before the offer goes out, to find the deepest discount the margin allows" },
+        { "ref": "library:offer-checklist-reviewer", "type": "skill", "use": "check", "when": "When the offer is drafted, to score it and get three changes to test first" },
+        { "ref": "library:text-message-campaign-writer", "type": "skill", "use": "build", "when": "When the offer goes to past customers by text and needs consent rules built in" },
+        { "ref": "library:alex-hormozi", "type": "mind", "use": "think", "when": "When the offer is a thin discount and needs more value at the same cost" }
+      ]
+    },
+    {
+      "id": "local-ads",
+      "task": "Check Local Services Ads and small local ads",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/local-services-ads-check", "use": "check", "when": "Before switching on Local Services Ads, or when their leads feel dear or poor" },
+        { "ref": "library:traction-search-engine-marketing", "type": "skill", "use": "build", "when": "When the owner wants to try search ads, to plan one small test with costs and rules" },
+        { "ref": "library:meta-ad-copywriter", "type": "skill", "use": "build", "when": "When the owner boosts an offer nearby and needs ad text and hooks to test" }
+      ]
+    },
+    {
+      "id": "lead-tracking",
+      "task": "Set up lead tracking the owner will keep up",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/local-lead-tracking", "use": "build", "when": "When the owner cannot say which channel books jobs or what a booked job costs" },
+        { "ref": "library:campaign-link-tracker", "type": "skill", "use": "build", "when": "When profile, ad and post links need tags so visits can be told apart" },
+        { "ref": "library:lead-source-field-checker", "type": "skill", "use": "check", "when": "When leads sit in a CRM, to see if the source field is good enough to trust" }
+      ]
+    },
+    {
+      "id": "weekly-routine",
+      "task": "Run the weekly local routine",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/weekly-local-routine", "use": "build", "when": "Each week in 15 to 30 minutes of the owner's time, plus a longer monthly check" },
+        { "ref": "library:weekly-social-content-planner", "type": "agent", "use": "build", "when": "When this week's posts should follow what worked last week" },
+        { "ref": "library:marketing-performance-report", "type": "skill", "use": "check", "when": "In the monthly check, to turn the numbers into trends, wins and what to change" }
+      ]
+    },
+    {
+      "id": "social-month",
+      "task": "Plan a month of local posts and job photos",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:content-pillar-finder", "type": "skill", "use": "brief", "when": "When the owner does not know what to post, to find three to five subjects they know first-hand" },
+        { "ref": "library:standing-social-calendar-maker", "type": "skill", "use": "build", "when": "When you need a rolling calendar with captions in the owner's voice" },
+        { "ref": "library:short-video-hook-writer", "type": "skill", "use": "explore", "when": "When a short video needs an opening, to get ten hooks with a first shot" },
+        { "ref": "library:canva", "type": "tool", "use": "build", "when": "When staff will make the post graphics themselves from a template" }
+      ]
+    },
+    {
+      "id": "intro-offer",
+      "task": "Design a trial or intro offer for first-timers",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:front-end-offer-picker", "type": "skill", "use": "explore", "when": "When you must choose between a free, discounted or premium first step" },
+        { "ref": "library:offer-designer", "type": "skill", "use": "build", "when": "When the intro offer needs framing, a name, a guarantee and terms" },
+        { "ref": "library:guarantee-designer", "type": "skill", "use": "build", "when": "When nervous first-timers need a promise the business can afford to keep" },
+        { "ref": "library:offer-checklist-reviewer", "type": "skill", "use": "check", "when": "When the offer is drafted, to score it and get three changes to test" },
+        { "ref": "library:estee-lauder", "type": "mind", "use": "think", "when": "When people must try the service before they believe in it" }
+      ]
+    },
+    {
+      "id": "service-menu",
+      "task": "Write a service menu or class descriptions",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:buyer-wants-finder", "type": "skill", "use": "brief", "when": "Before writing, to choose the one want each service should lead with" },
+        { "ref": "library:price-display-planner", "type": "skill", "use": "build", "when": "When the menu shows prices and add-ons and you must decide how" },
+        { "ref": "library:message-stickiness-rewriter", "type": "prompt", "use": "explore", "when": "When a service line is flat, to get three versions to pick from" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a description could be any salon or studio, to get a true, picturable line" }
+      ]
+    },
+    {
+      "id": "client-messages",
+      "task": "Write reminder, rebooking and aftercare messages",
+      "kind": "email",
+      "items": [
+        { "ref": "library:text-message-campaign-writer", "type": "skill", "use": "build", "when": "When reminders and rebooking nudges go by text or WhatsApp" },
+        { "ref": "library:booking-page-designer", "type": "skill", "use": "build", "when": "When the booking flow itself needs prep notes and a follow-up after the visit" },
+        { "ref": "library:explain-appointment-no-show-patterns", "type": "workflow", "use": "brief", "when": "When no-shows are the problem and you need the pattern before writing reminders" },
+        { "ref": "library:sms-send-checker", "type": "skill", "use": "check", "when": "Before texts go live, to check cost, length and the rules they must meet" }
+      ]
+    },
+    {
+      "id": "win-back",
+      "task": "Win back lapsed clients and members",
+      "kind": "email",
+      "items": [
+        { "ref": "library:best-customer-finder", "type": "skill", "use": "brief", "when": "When you have a client list, to see who was worth most before you write to anyone" },
+        { "ref": "library:win-back-flow-builder", "type": "skill", "use": "build", "when": "When you know the usual gap between visits and need messages timed to it" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the first message is drafted, to try several openings" },
+        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before the run starts, to score each message and fix the weak one" }
+      ]
+    },
+    {
+      "id": "welcome-pack",
+      "task": "Write a new-client welcome pack",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:customer-onboarding-planner", "type": "skill", "use": "build", "when": "When a new client needs the first steps, what to bring and what happens next" },
+        { "ref": "library:faq-page-from-questions-writer", "type": "prompt", "use": "build", "when": "When the pack should answer the questions every new client asks" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the pack is drafted, to read it as a new client and list what is unclear" }
+      ]
+    },
+    {
+      "id": "loyalty-referral",
+      "task": "Plan a loyalty perk, challenge or referral scheme",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:loyalty-and-vip-program-designer", "type": "skill", "use": "build", "when": "When regulars deserve perks that are not discounts, with a small test first" },
+        { "ref": "library:referral-program-designer", "type": "skill", "use": "build", "when": "When happy clients should bring a friend and you need the reward and the flow" }
+      ]
+    },
+    {
+      "id": "newsletter",
+      "task": "Write a local newsletter",
+      "kind": "email",
+      "items": [
+        { "ref": "library:prepare-a-useful-customer-newsletter-issue", "type": "workflow", "use": "build", "when": "When the business has news and customer questions and needs one useful issue" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the issue is drafted, to compare subject lines" },
+        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before the send, to get cuts, a score and a ship or fix verdict" }
+      ]
+    },
+    {
+      "id": "event-open-day",
+      "task": "Promote an open day or local event",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:traction-offline-events", "type": "skill", "use": "brief", "when": "When the owner wants to try an event, to plan it as a small test with costs" },
+        { "ref": "library:make-a-readable-event-poster", "type": "workflow", "use": "build", "when": "When the event needs a poster for the window and the notice board" },
+        { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When the event line is flat, to get five short headlines" },
+        { "ref": "library:partner-campaign-planner", "type": "skill", "use": "build", "when": "When a nearby business or club could share the event and the audience" }
+      ]
+    },
+    {
+      "id": "box-or-membership",
+      "task": "Launch a box scheme or membership",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:subscription-offer-designer", "type": "skill", "use": "build", "when": "When you have price, margin and cash and need the offer worked out" },
+        { "ref": "library:launch-a-subscription-and-keep-your-subscribers", "type": "workflow", "use": "build", "when": "When the launch needs the offer, billing emails and a way to keep people" },
+        { "ref": "library:membership-plan-pricer", "type": "skill", "use": "build", "when": "When a studio or shop needs tier prices and reasons to move up" },
+        { "ref": "library:subscription-payback-checker", "type": "skill", "use": "check", "when": "Before launch, to test that the scheme pays back in time" }
+      ]
+    },
+    {
+      "id": "story-about",
+      "task": "Write the business story and About page",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:brand-origin-story-writer", "type": "skill", "use": "build", "when": "When the owner can tell how and why they started and the page should sound human" },
+        { "ref": "library:message-stickiness-rewriter", "type": "prompt", "use": "explore", "when": "When the opening line is forgettable, to get three versions" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When the story is full of general claims, to get lines a reader can picture" }
+      ]
+    },
+    {
+      "id": "offline",
+      "task": "Plan flyers, door drops and local print ads",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:traction-offline-ads", "type": "skill", "use": "brief", "when": "When the owner wants print or local radio, to plan one small test with decision rules" },
+        { "ref": "library:direct-response-copywriter", "type": "skill", "use": "build", "when": "When the flyer needs a headline, an offer and one clear call to action" },
+        { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When the main line is flat, to get five headlines that each take a new angle" },
+        { "ref": "library:direct-mail-package-reviewer", "type": "skill", "use": "check", "when": "When the piece is a mailer, to review the envelope line, offer, copy and look" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-voice-guide-builder", "type": "skill", "use": "brief", "when": "Before the first job for an owner, to turn their own messages into voice rules" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When copy states a number, an award or a guarantee you cannot trace to the owner" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before anything is printed or posted, to catch typos and names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "seo-specialist", "when": "When local rankings depend on site structure, technical fixes or a content plan" },
+    { "role": "google-ads-media-buyer", "when": "When search ads or Local Services Ads need building and managing, not only checking" },
+    { "role": "reputation-manager", "when": "When a fake review wave or a public dispute needs a case built for the platform" },
+    { "role": "website-designer", "when": "When service pages need designing and building, not only writing" },
+    { "role": "graphic-designer", "when": "When flyers, van signs or counter cards must be laid out for print" },
+    { "role": "social-media-manager", "when": "When the owner wants posting, replies and community run week to week" }
+  ],
+  "gaps": [
+    "No library item audits a Google Business Profile against Google's own guidelines or writes its posts and Q&A; only the kit does",
+    "No library item writes service, treatment or class descriptions, or lays out a service menu with prices",
+    "No library item writes appointment reminder, rebooking, no-show or aftercare messages",
+    "No library item writes a follow-up run for a trade quote that has gone unanswered",
+    "No library item builds a trial offer pack for a gym or studio, or plans a member challenge",
+    "No library item gives before and after job post templates or a photo checklist for technicians",
+    "No library item covers Local Services Ads or a small search campaign for one service area; only the kit prompt does",
+    "No library item sets up call tracking or a front-desk lead source sheet; only the kit does",
+    "No library item plans a door drop or flyer run: streets, quantity, cost and the response needed to pay back",
+    "No library item writes an area page from real local facts while avoiding thin copies",
+    "No library item writes a new-client welcome pack with rules, for example for a groomer or kennel",
+    "No library item builds an open day pack or a seasonal what-is-ready calendar for a farm shop",
+    "No library item drafts two differently toned replies to one hard review for the owner to choose between"
+  ]
+}

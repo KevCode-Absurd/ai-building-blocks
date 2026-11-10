@@ -1,0 +1,277 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "meta-media-buyer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "intake",
+      "task": "Take in a new client before touching the account",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/account-intake", "use": "build", "when": "In the first talk with a new client, to collect the facts every later choice depends on" },
+        { "ref": "library:break-even-roas-and-cpa-calculator", "type": "skill", "use": "build", "when": "When price and margin are known, to set the return and cost per sale the ads must beat" }
+      ]
+    },
+    {
+      "id": "account-audit",
+      "task": "Audit a Meta ad account",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/meta-account-audit", "use": "build", "when": "When you have the exports and want the account read the way a senior buyer would" },
+        { "ref": "library:meta-ads-30-check-account-auditor", "type": "skill", "use": "check", "when": "When you want thirty weighted checks across tracking, creative, structure and audiences" },
+        { "ref": "library:meta-campaign-purpose-checker", "type": "skill", "use": "check", "when": "When there are too many campaigns, to call each one keep or cut with its set-up errors" },
+        { "ref": "library:platform-roas-reality-check", "type": "skill", "use": "check", "when": "When Meta's reported return looks too good against what the store banked" }
+      ]
+    },
+    {
+      "id": "signal-health",
+      "task": "Check the pixel and Conversions API signal",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/meta-signal-health-check", "use": "build", "when": "Before any spend decision, to check Meta gets clean and complete conversion data" },
+        { "ref": "library:meta-pixel-capi-fix", "type": "skill", "use": "build", "when": "When events are missing or match quality is low and you need step-by-step fixes" },
+        { "ref": "library:meta-server-tracking-checker", "type": "skill", "use": "check", "when": "When choosing a server route, to check it and rule out double counting" },
+        { "ref": "library:monthly-tracking-health-keeper", "type": "agent", "use": "check", "when": "Each month, to catch broken tracking before it skews the results read" }
+      ]
+    },
+    {
+      "id": "month-plan",
+      "task": "Plan a month of Meta ads from the margin",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:plan-a-month-of-meta-ads-with-the-right-number-of-new-ads-and-budget", "type": "workflow", "use": "build", "when": "When you have spend, results and reviews and need an ad quota, budget split and test rules" },
+        { "ref": "library:meta-account-structure-planner", "type": "skill", "use": "build", "when": "When the campaign and ad set layout must be set with budgets and targets" },
+        { "ref": "library:break-even-roas-and-cpa-calculator", "type": "skill", "use": "check", "when": "When the budget is proposed, to test it against the break-even return" }
+      ]
+    },
+    {
+      "id": "campaign-launch",
+      "task": "Launch a campaign or rebuild a messy account",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/campaign-launch", "use": "build", "when": "For a new campaign, product, offer or market, or when rebuilding a messy account" },
+        { "ref": "kit:prompts/change-request-for-approval", "use": "build", "when": "When the launch changes a live account and needs the client's yes" },
+        { "ref": "library:clean-up-your-meta-account-and-rebuild-it-to-scale", "type": "workflow", "use": "build", "when": "When old campaigns must be kept or cut and a simpler layout built" },
+        { "ref": "library:meta-test-campaign-planner", "type": "skill", "use": "build", "when": "When new concepts need a test campaign with ad pack names and scale rules" },
+        { "ref": "library:pre-launch-ad-check-and-fix-loop", "type": "agent", "use": "check", "when": "When an ad is finished, to check and fix it until it is ready to run" }
+      ]
+    },
+    {
+      "id": "creative-briefs",
+      "task": "Write creative briefs from winners and customer words",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:prompts/creative-brief-from-winners", "use": "build", "when": "When the account needs new concepts and you have past results plus real customer language" },
+        { "ref": "library:winning-ad-dna-mapper", "type": "skill", "use": "brief", "when": "Before briefing, to split each winner into message and look and find what to swap" },
+        { "ref": "library:seven-bucket-ad-concept-brainstormer", "type": "skill", "use": "explore", "when": "When you need concepts in seven different groups with the best eight ranked" },
+        { "ref": "library:funnel-stage-creative-brief-builder", "type": "skill", "use": "build", "when": "When each brief must fit a funnel stage and be ready for production" },
+        { "ref": "library:creative-evidence-review-agent", "type": "agent", "use": "check", "when": "When creative comes back, to check it against the brief and the product facts" },
+        { "ref": "library:luke-sullivan", "type": "mind", "use": "think", "when": "When every concept is a feature list and none has a true tension in it" }
+      ]
+    },
+    {
+      "id": "creative-test",
+      "task": "Plan and read creative tests",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/meta-creative-test-plan", "use": "build", "when": "When new concepts need a fair test and winners must be chosen on evidence" },
+        { "ref": "library:meta-concept-diversity-test-planner", "type": "skill", "use": "build", "when": "When the ads are all one type, to sort them, spot gaps and get three test plans" },
+        { "ref": "library:ad-test-sprint-runner", "type": "agent", "use": "build", "when": "When tests run in sprints and each should carry forward what the last one showed" },
+        { "ref": "library:creative-test-reader", "type": "skill", "use": "check", "when": "When results are in by ad set, to call keep, leave or replace and spot false winners" },
+        { "ref": "library:creative-hit-rate-planner", "type": "skill", "use": "check", "when": "When you want the hit rate and which concepts clear the profit line" }
+      ]
+    },
+    {
+      "id": "ad-copy",
+      "task": "Write an ad copy set",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:meta-ad-copywriter", "type": "skill", "use": "build", "when": "When the offer and buyer are known and you need primary text, hooks and scripts to test" },
+        { "ref": "library:five-tactic-ad-hook-writer", "type": "skill", "use": "explore", "when": "When the opening is flat, to get hooks by five tactics ranked by buyer fit and proof" },
+        { "ref": "library:ad-angle-multiplier", "type": "skill", "use": "explore", "when": "When one idea works, to get ten or more different angles with a test order" },
+        { "ref": "library:meta-ads-compliance-checker", "type": "skill", "use": "check", "when": "Before upload, to score the ad against Meta's rules and get a compliant rewrite" },
+        { "ref": "library:gary-bencivenga", "type": "mind", "use": "think", "when": "When the copy makes a big promise and the proof under it is thin" }
+      ]
+    },
+    {
+      "id": "image-ads",
+      "task": "Plan static image ads",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:twelve-pattern-static-ad-brief-maker", "type": "skill", "use": "explore", "when": "When you want to choose from twelve static patterns by buyer stage and proof" },
+        { "ref": "library:scroll-stopping-image-ads", "type": "workflow", "use": "build", "when": "When you have brand facts, customer evidence and product photos and need varied concepts" },
+        { "ref": "library:review-quote-ad-card-planner", "type": "prompt", "use": "build", "when": "When review lines should become quote cards with the words kept exact" },
+        { "ref": "library:static-ad-critic", "type": "skill", "use": "check", "when": "When an ad is drafted, to score it against its page and get fixes" }
+      ]
+    },
+    {
+      "id": "video-ads",
+      "task": "Script video and creator ads",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:video-ad-script-type-picker", "type": "skill", "use": "explore", "when": "When you have the buyer and proof and want four script types, each with its opening" },
+        { "ref": "library:quote-video-ad-script", "type": "skill", "use": "build", "when": "When the script should be built from real customer quotes with a source for every line" },
+        { "ref": "library:customer-content-planner", "type": "skill", "use": "brief", "when": "When customers or creators will film, to plan the brief and how their posts are reused" },
+        { "ref": "library:video-ad-script-line-checker", "type": "skill", "use": "check", "when": "When the script is drafted, to find each weak line and get a fix" }
+      ]
+    },
+    {
+      "id": "retargeting",
+      "task": "Plan retargeting for visitors who did not buy",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:win-back-visitors-who-did-not-buy-on-meta", "type": "workflow", "use": "build", "when": "When you have reviews and store results and want one ad per objection in sequence" },
+        { "ref": "library:retargeting-ad-sequence-planner", "type": "skill", "use": "build", "when": "When you know why visitors leave and need the ads ordered, ending with a cross-sell" },
+        { "ref": "library:retargeting-objection-ad-planner", "type": "skill", "use": "explore", "when": "When there are several exit reasons, to get one ad for each and a test order" }
+      ]
+    },
+    {
+      "id": "catalogue",
+      "task": "Set up catalogue and sales campaigns for a store",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:meta-account-structure-planner", "type": "skill", "use": "build", "when": "When the store's products and margins must shape the campaign and ad set layout" },
+        { "ref": "library:sku-ad-money-planner", "type": "skill", "use": "brief", "when": "Before choosing what to push, to grade each product and set its ad target" }
+      ]
+    },
+    {
+      "id": "lead-campaign",
+      "task": "Plan a lead campaign and the hand-off",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:better-leads-from-ads", "type": "workflow", "use": "build", "when": "When leads are cheap but poor, to get raise-or-cut fixes and a better form" },
+        { "ref": "library:lead-cost-and-friction-planner", "type": "skill", "use": "build", "when": "When you must decide which question to add next to filter time-wasters" },
+        { "ref": "library:lead-handoff-designer", "type": "skill", "use": "build", "when": "When leads go cold because nobody owns the first call" },
+        { "ref": "library:new-inquiry-reply-drafter", "type": "skill", "use": "build", "when": "When new leads wait, to qualify each and draft the first reply the owner sends" },
+        { "ref": "library:cost-per-funnel-stage-reporter", "type": "skill", "use": "check", "when": "When you need cost per booked job, not cost per form fill" }
+      ]
+    },
+    {
+      "id": "weekly",
+      "task": "Run the weekly optimisation routine",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/weekly-optimisation-routine", "use": "build", "when": "Once a week on the same day, so the weekend is in the data" },
+        { "ref": "kit:prompts/weekly-results-read", "use": "build", "when": "With the latest export, to get a short note the owner can act on in five minutes" },
+        { "ref": "library:meta-manage-ads-on-a-daily-basis-planner", "type": "skill", "use": "build", "when": "When each ad needs marking keep, watch, refresh or pause with the proof" },
+        { "ref": "library:meta-ads-weekly-account-keeper", "type": "agent", "use": "check", "when": "When you want a true-return check and a scale-or-hold call on the week" },
+        { "ref": "kit:prompts/change-request-for-approval", "use": "build", "when": "When the week's changes need the client's yes before you make them" }
+      ]
+    },
+    {
+      "id": "fatigue",
+      "task": "Spot creative fatigue and refresh winners",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:ad-fatigue-watcher", "type": "agent", "use": "check", "when": "Twice a week, to catch tired ads early and get a brief for each replacement" },
+        { "ref": "library:fatigued-ad-reviver", "type": "skill", "use": "build", "when": "When a winner is fading, to find the cause and get ranked revival moves" },
+        { "ref": "library:winning-ad-variant-writer", "type": "skill", "use": "build", "when": "When a winner should be extended to other customer groups in the same voice" },
+        { "ref": "library:ad-sameness-checker", "type": "skill", "use": "check", "when": "When the live ads feel alike, to group them by idea and score the sameness" }
+      ]
+    },
+    {
+      "id": "scale",
+      "task": "Decide when and how to scale spend",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:meta-scaling-campaign-planner", "type": "skill", "use": "build", "when": "When winners, margins and cash are known and you need a spend ladder" },
+        { "ref": "library:campaign-budget-scenario-planner", "type": "skill", "use": "explore", "when": "When several budget moves are possible, to compare three plans and their risks" },
+        { "ref": "library:platform-roas-reality-check", "type": "skill", "use": "check", "when": "Before raising spend, to test the reported return against real sales" }
+      ]
+    },
+    {
+      "id": "delivery",
+      "task": "Diagnose delivery problems and result drops",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:meta-delivery-troubleshooter", "type": "skill", "use": "build", "when": "When ads will not spend or leave learning, to find the failing step and what to change" },
+        { "ref": "library:six-pattern-ad-performance-diagnoser", "type": "skill", "use": "check", "when": "When results changed, to test six possible causes and say how sure you are" }
+      ]
+    },
+    {
+      "id": "policy",
+      "task": "Check policy and Special Ad Categories",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/policy-and-special-category-check", "use": "check", "when": "Before launching in a sensitive area, or after an ad is rejected" },
+        { "ref": "library:meta-ads-compliance-checker", "type": "skill", "use": "check", "when": "When one ad needs each problem named with its fix and a rewrite" },
+        { "ref": "library:pre-launch-ad-check-and-fix-loop", "type": "agent", "use": "build", "when": "When a rejected ad must be fixed and re-checked until it passes" }
+      ]
+    },
+    {
+      "id": "lift-test",
+      "task": "Plan a lift test on Meta",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/lift-test-plan", "use": "build", "when": "When the owner asks if Meta ads really drive sales, or before a big budget move" },
+        { "ref": "kit:workflows/quarterly-audit-and-lift-review", "use": "build", "when": "Every three months, and after a big change in strategy, site or tracking" },
+        { "ref": "library:incrementality-test-planner", "type": "skill", "use": "build", "when": "When you know spend and regions and need a lift test sized to them" },
+        { "ref": "library:test-result-trust-checker", "type": "prompt", "use": "check", "when": "When the test has ended, to decide whether to trust it and state the lift as a range" },
+        { "ref": "library:les-binet", "type": "mind", "use": "think", "when": "When the account takes credit for buyers who would have come anyway" }
+      ]
+    },
+    {
+      "id": "landing-page",
+      "task": "Match the landing page to the ad",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:ad-matched-landing-page-writer", "type": "skill", "use": "build", "when": "When the ad is set and the page must pick up exactly where it left off" },
+        { "ref": "library:ad-landing-page", "type": "workflow", "use": "explore", "when": "When you want page copy with three design directions and a scored review" },
+        { "ref": "library:ad-and-page-match-checker", "type": "skill", "use": "check", "when": "When ad and page both exist, to score the match and rank the mismatches" }
+      ]
+    },
+    {
+      "id": "competitor",
+      "task": "Study rivals in the Ad Library",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:facebook-ad-library-collector", "type": "skill", "use": "brief", "when": "When you need a rival's live ads gathered from the public library" },
+        { "ref": "library:competitor-ad-swipe-file-builder", "type": "skill", "use": "build", "when": "When pasted ads should be sorted into types with what to study in each" },
+        { "ref": "library:competitor-ad-gap-finder", "type": "skill", "use": "build", "when": "When you want the gaps rivals leave turned into briefs" }
+      ]
+    },
+    {
+      "id": "report",
+      "task": "Report results and true return to the owner",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:ad-results-report-writer", "type": "skill", "use": "build", "when": "When you have two periods of totals and need the one-line answer and three actions" },
+        { "ref": "library:conversion-reconciliation", "type": "skill", "use": "check", "when": "When Meta, Google and GA4 disagree and the report must say why" },
+        { "ref": "library:meta-results-review-agent", "type": "agent", "use": "check", "when": "When dated results and targets are to hand, to rank findings and name evidence gaps" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to read the report as the owner would and list what is unclear" }
+      ]
+    },
+    {
+      "id": "offer-test",
+      "task": "Test offers without wrecking the margin",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:offer-test-planner", "type": "skill", "use": "build", "when": "When there are several offers and buyer types, to set separate tests and a read-out rule" },
+        { "ref": "library:discount-and-price-change-checker", "type": "agent", "use": "check", "when": "Before an offer runs, to find the deepest discount the margin allows" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before any ad or report states a number, a result or a customer claim, to check it traces" }
+  ],
+  "helpers": [
+    { "role": "ad-creative-strategist", "when": "When the account needs a full concept pipeline, not a handful of briefs" },
+    { "role": "video-editor", "when": "When scripts must become finished video ads in every placement size" },
+    { "role": "graphic-designer", "when": "When image ads must be designed, not only planned" },
+    { "role": "marketing-analyst", "when": "When the lift test or the gap between platform and store numbers needs deeper work" },
+    { "role": "shopify-specialist", "when": "When the pixel, catalogue feed or checkout events must be fixed inside the store" },
+    { "role": "conversion-copywriter", "when": "When the landing page needs writing in full" }
+  ],
+  "gaps": [
+    "No library item sets up a Meta catalogue: feed health, product sets and catalogue or Advantage+ ads",
+    "No library item covers Advantage+ sales campaign settings such as the existing customer cap and audience controls",
+    "No library item builds a Meta lead form with filtering questions and higher-intent settings",
+    "No library item writes first messages for new leads or reviews cost per booked job for a local firm",
+    "No library item covers Special Ad Categories for housing, credit and jobs; only the kit prompt does",
+    "No library item sets up a Meta Conversion Lift study or an A/B test in Experiments",
+    "No library item plans click-to-message ads for WhatsApp or Messenger",
+    "No library item plans audiences: exclusions, lookalikes against broad, and radius targeting for a local firm",
+    "No library item handles ad comments: what to hide, what to answer and how",
+    "No library item writes a client change request or sets a naming convention for campaigns and ads; only the kit covers the first"
+  ]
+}

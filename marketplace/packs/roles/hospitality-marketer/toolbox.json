@@ -1,0 +1,303 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "hospitality-marketer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "quiet-night-plan",
+      "task": "Plan offers and events that fill the quietest nights",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/quiet-slot-offers-and-events", "use": "build", "when": "When the same night, day or season is empty and you need offers and events that still make money" },
+        { "ref": "kit:prompts/quiet-night-offer", "use": "explore", "when": "When you want three offers side by side, each with its food or drink cost checked" },
+        { "ref": "library:promotion-idea-planner", "type": "skill", "use": "explore", "when": "When the owner reaches for a plain price cut, to get gift, bundle and pre-order ideas instead" },
+        { "ref": "library:restaurant-portion-cost-builder", "type": "skill", "use": "check", "when": "Before an offer goes out, to work out the real cost per portion and what each cover leaves" },
+        { "ref": "library:discount-and-price-change-checker", "type": "agent", "use": "check", "when": "When a discount is planned, to find the deepest cut the margin allows and the wording to use" },
+        { "ref": "library:alex-hormozi", "type": "mind", "use": "think", "when": "When the offer is a thin discount and needs more value for the guest at the same cost" }
+      ]
+    },
+    {
+      "id": "menu-descriptions",
+      "task": "Write menu descriptions for a new or seasonal menu",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/menu-descriptions", "use": "build", "when": "When the kitchen's notes are in and you need short dish lines with allergen lines from its records" },
+        { "ref": "kit:skills/menu-and-drinks-copy", "use": "build", "when": "When the menu also needs header lines, section notes and a drinks list in the same voice" },
+        { "ref": "library:message-stickiness-rewriter", "type": "prompt", "use": "explore", "when": "When a header or signature dish line is flat, to get three versions a guest would remember" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a dish line could be on any menu, to test it and get a true, picturable rewrite" },
+        { "ref": "library:m-f-k-fisher", "type": "mind", "use": "think", "when": "When the words list ingredients but say nothing of how the dish feels to eat" }
+      ]
+    },
+    {
+      "id": "review-replies",
+      "task": "Reply to a batch of guest reviews",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/review-reply-batch", "use": "build", "when": "Each week, to reply to new reviews in the owner's voice with risky ones held for a yes" },
+        { "ref": "kit:skills/guest-review-replies", "use": "build", "when": "When reviews span Google and booking sites, or one may break the platform's rules" },
+        { "ref": "library:agency-hospitality-guest-services", "type": "agent", "use": "build", "when": "When a guest complaint needs a warm reply, a fair fix and a note for the manager" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before a reply to a complaint is posted, to check every promise and the tone" },
+        { "ref": "library:public-review-reply-desk", "type": "agent", "use": "check", "when": "When the batch is large, to check each reply and flag complaints that keep coming back" }
+      ]
+    },
+    {
+      "id": "event-promo",
+      "task": "Promote one event from first post to last call",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/event-promo-pack", "use": "build", "when": "When one event has a date and you need every post, email, listing and reminder for it" },
+        { "ref": "kit:workflows/event-or-launch-countdown", "use": "brief", "when": "When the date is set and you need what goes out each week up to the night" },
+        { "ref": "library:event-ticket-pricer", "type": "skill", "use": "brief", "when": "When the event is ticketed and needs a price, early-bird terms and how to show seats left" },
+        { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When the event line is flat, to get five short headlines that each take a new angle" },
+        { "ref": "library:make-a-readable-event-poster", "type": "workflow", "use": "build", "when": "When the event needs a poster for the door, the bar and the window" },
+        { "ref": "library:sales-copy-reviewer", "type": "skill", "use": "check", "when": "When the pack is drafted, to find its weakest lines and fix the booking ask" }
+      ]
+    },
+    {
+      "id": "menu-or-release-launch",
+      "task": "Launch a new menu, dish or drinks release",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/event-or-launch-countdown", "use": "build", "when": "When the launch date is set and the owner needs the week-by-week countdown" },
+        { "ref": "library:store-urgency-and-drop-planner", "type": "skill", "use": "build", "when": "When the release is limited, to plan early access and deadlines that are true" },
+        { "ref": "library:campaign-brief-calendar", "type": "skill", "use": "build", "when": "When several people work on the launch and need one brief and a weekly calendar" }
+      ]
+    },
+    {
+      "id": "social-month",
+      "task": "Plan and write a month of local social posts",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:content-calendar-builder", "type": "skill", "use": "brief", "when": "When there is no post plan, to get topics from what guests really say and ask" },
+        { "ref": "library:standing-social-calendar-maker", "type": "skill", "use": "build", "when": "When you need a rolling calendar with captions in the venue's voice, ready to approve" },
+        { "ref": "library:short-video-hook-writer", "type": "skill", "use": "explore", "when": "When a Reel needs an opening, to get ten hooks checked for length and first shot" },
+        { "ref": "library:customer-content-planner", "type": "skill", "use": "build", "when": "When guests already post photos, to plan how to earn more and reuse them with consent" },
+        { "ref": "library:weekly-social-content-planner", "type": "agent", "use": "check", "when": "When last week's numbers are in, to plan next week from what worked" },
+        { "ref": "library:canva", "type": "tool", "use": "build", "when": "When the owner's team will make the post graphics themselves from templates" },
+        { "ref": "library:gary-vaynerchuk", "type": "mind", "use": "think", "when": "When every post asks for a booking and none gives the follower anything first" }
+      ]
+    },
+    {
+      "id": "tasting-notes",
+      "task": "Write tasting notes and product copy for a drinks release",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/tasting-notes-and-trade-sheet", "use": "build", "when": "When the maker's notes are in and you need tasting notes, a short story and a trade sheet" },
+        { "ref": "kit:skills/menu-and-drinks-copy", "use": "build", "when": "When the notes must match the taproom board, the label and the shop page" },
+        { "ref": "library:process-fact-finder", "type": "skill", "use": "brief", "when": "Before writing, to pull true facts from maker and supplier notes that rivals never state" },
+        { "ref": "library:product-description-writer", "type": "skill", "use": "build", "when": "When the release sells online and needs a shop description with the right claims and units" },
+        { "ref": "library:message-stickiness-rewriter", "type": "prompt", "use": "explore", "when": "When the one-line note is forgettable, to get three versions to choose from" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a note is all adjectives, to test it and get a line a drinker can picture" }
+      ]
+    },
+    {
+      "id": "trade-pitch",
+      "task": "Pitch a drink to bars, restaurants and shops",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/tasting-notes-and-trade-sheet", "use": "build", "when": "When a buyer needs one page with the notes, the story, sizes and trade terms" },
+        { "ref": "library:retail-buyer-approach-planner", "type": "skill", "use": "brief", "when": "When you target one shop or chain and need the order of steps to reach its buyer" },
+        { "ref": "library:prospect-outreach-drafter", "type": "skill", "use": "build", "when": "When you need a short personal first email to a named bar or shop buyer" },
+        { "ref": "library:wholesale-margin-checker", "type": "skill", "use": "check", "when": "Before quoting a trade price, to see the margin per unit after the stockist's cut and freight" }
+      ]
+    },
+    {
+      "id": "release-emails",
+      "task": "Write a release email series for a club or list",
+      "kind": "email",
+      "items": [
+        { "ref": "library:launch-email-sequence-planner", "type": "skill", "use": "brief", "when": "When a release has a close date and you need the run of emails planned to the last call" },
+        { "ref": "library:campaign-email-writer", "type": "skill", "use": "build", "when": "When the plan is set and each email needs writing block by block from the release facts" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When an email is written, to get subject lines in several angles to pick from" },
+        { "ref": "library:store-urgency-and-drop-planner", "type": "skill", "use": "build", "when": "When club members get first access, to set the early window and deadlines truthfully" },
+        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before each send, to get cuts, a score and a ship or fix verdict" }
+      ]
+    },
+    {
+      "id": "guest-newsletter",
+      "task": "Write a guest newsletter or a text to the list",
+      "kind": "email",
+      "items": [
+        { "ref": "library:prepare-a-useful-customer-newsletter-issue", "type": "workflow", "use": "build", "when": "When the venue has news and guest questions and needs one useful issue in its voice" },
+        { "ref": "library:text-message-campaign-writer", "type": "skill", "use": "build", "when": "When the message goes by SMS or WhatsApp and needs consent rules built in" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the issue is drafted, to compare subject lines in several angles" },
+        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before the send, to get cuts, a score and a ship or fix verdict on the draft" },
+        { "ref": "library:sms-send-checker", "type": "skill", "use": "check", "when": "Before a text goes out, to check its cost and the rules it must meet" },
+        { "ref": "library:permission-email-audit", "type": "skill", "use": "check", "when": "When the list came from bookings or wifi sign-ins and you doubt who agreed to marketing" }
+      ]
+    },
+    {
+      "id": "win-back",
+      "task": "Win back guests who have stopped coming",
+      "kind": "email",
+      "items": [
+        { "ref": "library:win-back-flow-builder", "type": "skill", "use": "build", "when": "When you know how often regulars return, to time a win-back run to that gap" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the first win-back email is drafted, to try several openings" },
+        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before the run goes live, to score each email and fix the weak one" }
+      ]
+    },
+    {
+      "id": "listings-bookings",
+      "task": "Fix how the venue shows on Google and booking sites",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/listings-prices-and-bookings", "use": "build", "when": "When menus, hours, prices or booking links differ between Google, booking sites and the site" },
+        { "ref": "library:local-search-listing-manager", "type": "skill", "use": "check", "when": "When you need a ranked fix list for the Google profile and where name and address differ" },
+        { "ref": "library:schema-markup-writer", "type": "skill", "use": "build", "when": "When the site needs markup so search shows the menu, hours, events or price range" }
+      ]
+    },
+    {
+      "id": "price-fees-check",
+      "task": "Check prices, fees and offer wording before publishing",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/total-price-and-fees-check", "use": "check", "when": "Before room rates, menus, tickets or ads go out, to check fees and charges are shown properly" },
+        { "ref": "library:discount-sanity-checker", "type": "prompt", "use": "check", "when": "When several offers run at once, to find clashes and settle one true offer line" },
+        { "ref": "library:ad-and-page-policy-checker", "type": "skill", "use": "check", "when": "When an ad, page or email makes a drinks or price claim, to flag risky lines with safer ones" }
+      ]
+    },
+    {
+      "id": "menu-price-rollout",
+      "task": "Roll out a menu, price or hours change everywhere",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/menu-or-price-change-rollout", "use": "build", "when": "When a menu, price, fee or opening hours change and every place it shows must match" },
+        { "ref": "library:campaign-change-impact-mapper", "type": "skill", "use": "brief", "when": "When one fact changes, to list every post, page and email that still shows the old one" },
+        { "ref": "library:price-rise-letter-writer", "type": "prompt", "use": "build", "when": "When regulars or club members should hear about a price rise from the owner first" }
+      ]
+    },
+    {
+      "id": "weekly-routine",
+      "task": "Run the weekly venue marketing routine",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/weekly-venue-marketing-routine", "use": "build", "when": "Each week, to cover posts, reviews, listings and offers in about half an hour of the owner's time" },
+        { "ref": "library:weekly-social-content-planner", "type": "agent", "use": "build", "when": "When this week's posts should follow what worked last week" }
+      ]
+    },
+    {
+      "id": "get-more-reviews",
+      "task": "Get more guest reviews without breaking the rules",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/guest-review-replies", "use": "brief", "when": "When you need to know what each review platform allows before asking guests" },
+        { "ref": "library:review-request-and-reply-planner", "type": "skill", "use": "build", "when": "When you need the moment to ask, the words to use and how to handle a bad review" },
+        { "ref": "library:review-insight-finder", "type": "skill", "use": "check", "when": "When reviews pile up, to rank praise and complaints with guests' own words" }
+      ]
+    },
+    {
+      "id": "loyalty-club",
+      "task": "Design a loyalty scheme, wine club or membership",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:loyalty-and-vip-program-designer", "type": "skill", "use": "build", "when": "When regulars deserve perks that are not discounts, with a small test first" },
+        { "ref": "library:membership-plan-pricer", "type": "skill", "use": "build", "when": "When a club or membership needs tier prices and reasons to move up" },
+        { "ref": "library:loyalty-claim-checker", "type": "skill", "use": "check", "when": "Before launch, to test the scheme's sums against what it costs and who it reaches" },
+        { "ref": "library:byron-sharp", "type": "mind", "use": "think", "when": "When the plan rewards guests who already come and does nothing to reach new ones" }
+      ]
+    },
+    {
+      "id": "private-hire",
+      "task": "Sell private hire, group bookings and catering",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:conversion-page-writer", "type": "skill", "use": "build", "when": "When the venue needs a private hire or group page with proof, answers and one clear ask" },
+        { "ref": "library:top-of-page-headline-writer", "type": "prompt", "use": "explore", "when": "When that page needs an opening, to get five headlines with a pick" },
+        { "ref": "library:new-inquiry-reply-drafter", "type": "skill", "use": "build", "when": "When enquiries arrive, to qualify each one and draft a reply the owner sends" },
+        { "ref": "library:prospect-outreach-drafter", "type": "skill", "use": "build", "when": "When you write to local firms and planners who may book a party or a room" },
+        { "ref": "library:sales-copy-reviewer", "type": "skill", "use": "check", "when": "When the page or pack is drafted, to find and fix its weakest parts" }
+      ]
+    },
+    {
+      "id": "press-partners-creators",
+      "task": "Win local press, partners and creators",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:press-outreach-planner", "type": "skill", "use": "build", "when": "When there is real news, to get a media list, pitch emails and a press kit outline" },
+        { "ref": "library:partner-campaign-planner", "type": "skill", "use": "build", "when": "When a nearby business could share an event or offer and you need the pitch" },
+        { "ref": "library:influencer-gifting-planner", "type": "skill", "use": "build", "when": "When you invite creators in, to plan the invite, tracking and which posts to reuse" },
+        { "ref": "library:creator-audience-checker", "type": "skill", "use": "check", "when": "Before a free meal is offered, to check a creator's followers live near the venue" }
+      ]
+    },
+    {
+      "id": "local-ads",
+      "task": "Write a small local ad for an offer or event",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:meta-ad-copywriter", "type": "skill", "use": "build", "when": "When the owner boosts an offer or event and needs ad text and hooks to test" },
+        { "ref": "library:image-ad-copy-writer", "type": "skill", "use": "explore", "when": "When the ad is an image, to get its words in two or three versions to compare" },
+        { "ref": "library:meta-ads-compliance-checker", "type": "skill", "use": "check", "when": "Before an ad that shows alcohol or a price goes live, to check it against the ad rules" }
+      ]
+    },
+    {
+      "id": "photos-video-plan",
+      "task": "Plan food and drink photos and short videos",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:product-shot-list-writer", "type": "prompt", "use": "build", "when": "When a photographer comes in, to list each shot and where it will be used" },
+        { "ref": "library:short-video-hook-writer", "type": "skill", "use": "explore", "when": "When you plan Reels, to get opening lines and first shots to film" }
+      ]
+    },
+    {
+      "id": "hotel-direct-bookings",
+      "task": "Grow direct bookings for a hotel or rooms",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/listings-prices-and-bookings", "use": "build", "when": "When rates, free booking links and room details differ between Google and booking sites" },
+        { "ref": "library:hotel-channel-revenue-reconciler", "type": "skill", "use": "check", "when": "When you need room nights and net revenue by channel after agent commission" },
+        { "ref": "library:hotel-room-pricing-planner", "type": "skill", "use": "brief", "when": "When the owner asks what to charge and which channel mix fills rooms at the best rate" },
+        { "ref": "library:conversion-page-writer", "type": "skill", "use": "build", "when": "When a room package or book-direct page needs proof, answers and one ask" }
+      ]
+    },
+    {
+      "id": "seasonal-calendar",
+      "task": "Plan the year's seasonal campaigns and gift vouchers",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:campaign-brief-calendar", "type": "skill", "use": "build", "when": "When a season such as Christmas or Mother's Day needs a brief and a weekly calendar" },
+        { "ref": "library:promotion-idea-planner", "type": "skill", "use": "explore", "when": "When the season needs an offer that is not a price cut, such as a gift or bundle" },
+        { "ref": "library:plan-a-sale-across-email-and-sms", "type": "workflow", "use": "build", "when": "When one seasonal offer runs across email and text and needs a send calendar" }
+      ]
+    },
+    {
+      "id": "monthly-report",
+      "task": "Report the month's results to the owner",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/weekly-venue-marketing-routine", "use": "brief", "when": "In the first week of the month, for the look-back on what filled seats and what did not" },
+        { "ref": "library:marketing-performance-report", "type": "skill", "use": "build", "when": "When the numbers are gathered and the owner needs trends, wins, misses and next steps" },
+        { "ref": "library:email-and-sms-performance-reader", "type": "skill", "use": "check", "when": "When email and text numbers are in, to see what broke and what to repeat" },
+        { "ref": "library:review-insight-finder", "type": "skill", "use": "brief", "when": "When the report should show what guests praised and complained about that month" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-voice-guide-builder", "type": "skill", "use": "brief", "when": "Before the first job for a venue, to turn its menus, posts and replies into voice rules" },
+    { "ref": "library:brand-voice-editor", "type": "skill", "use": "check", "when": "Before copy goes out, to fix off-voice words without touching the facts" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When copy states an award, an origin or a number you cannot trace to the venue" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a menu, sheet or email is printed or sent, to catch typos and names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "restaurant-manager", "when": "When an offer or event depends on dish costs, staffing or what the kitchen can serve" },
+    { "role": "graphic-designer", "when": "When the menu, poster or sell sheet must be laid out and made ready for print" },
+    { "role": "local-marketing-specialist", "when": "When the venue needs local search, listings and citations fixed beyond its Google profile" },
+    { "role": "reputation-manager", "when": "When a review dispute, a fake review wave or a public complaint needs a case built" },
+    { "role": "channel-sales-manager", "when": "When a drinks maker needs a stockist plan, trade terms and distributor outreach" },
+    { "role": "event-manager", "when": "When an event needs a run sheet, suppliers and on-the-night roles, not only promotion" }
+  ],
+  "gaps": [
+    "No library item writes menu descriptions, menu header lines or tasting notes; only the kit covers them",
+    "No library item does menu engineering: which dishes to feature, where to place them and how to show prices, from sales mix",
+    "No library item checks allergen and calorie lines against the kitchen's records",
+    "No library item checks alcohol promotion rules: age gating, happy hour limits and responsible drinking wording",
+    "No library item covers Google Business Profile for restaurants and hotels: menu editor, reserve links and hotel free booking links; the listing item is built for trades",
+    "No library item audits a booking site or delivery app listing, or checks rate parity between direct and agent prices",
+    "No library item lays out a trade sell sheet or line card for bars and shops",
+    "No library item builds a private hire or group booking pack with capacities, menus and minimum spend",
+    "No library item plans a gift voucher campaign or a birthday and anniversary message run for guests",
+    "No library item checks that mandatory fees and service charges are shown in the total price; only the kit prompt does",
+    "No library item gives two differently toned replies to one hard review for the owner to choose between",
+    "No library item covers wine club or taproom programmes: allocation releases, club shipment emails and weekday visit drivers",
+    "No library item reads booking data such as covers by night, no-shows and spend per head to find the quiet slots"
+  ]
+}

@@ -26,7 +26,7 @@ export default function MindsRoute(props: Props) {
       {mine ? <><Link to="/minds" className="mind-back">All minds <ArrowIcon size={12} /></Link><h1 className="bp-h1">My minds</h1><p className="bp-sub">Create a mind in your own voice, or import one to use across your workflows.</p></> : <>
         <nav className="crumbs" aria-label="Breadcrumb"><Link to="/">Home</Link><span aria-hidden="true">›</span><span aria-current="page">Minds</span></nav>
         <h1 className="bp-h1">Borrow a great mind</h1>
-        <nav className="mind-browse-links" aria-label="Mind tools"><a href="#mind-results" onClick={() => { reset.current(); setSearch({q: ""}); }}>All minds</a><Link to="/minds?view=my">My minds <ArrowIcon size={12} /></Link><Link to="/skills/advisory-council">Build an advisory council <ArrowIcon size={12} /></Link></nav>
+        <nav className="mind-browse-links" aria-label="Mind tools"><a href="#mind-results" onClick={() => { reset.current(); setSearch({q: ""}); }}>All minds</a><Link to="/minds?view=my">My minds <ArrowIcon size={12} /></Link><Link to="/skills/advisory-council">Build an advisory council <ArrowIcon size={12} /></Link><a href="/which-one" data-testid="minds-which-one">What is a mind?</a></nav>
       </>}
     </header>
     {props.error && props.c && <div className="wrap"><p className="small" role="alert">{props.error}</p><button className="btn btn-line" onClick={props.retry}>Try again</button></div>}

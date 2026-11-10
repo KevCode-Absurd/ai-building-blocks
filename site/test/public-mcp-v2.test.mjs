@@ -260,13 +260,22 @@ test('the protocol rejects malformed prompt, resource and skill requests as inva
   assert.equal((await rpc({ jsonrpc: '2.0', id: 4, method: 'initialize', params: { protocolVersion: '2025-11-25', capabilities: {}, clientInfo: { name: 't', version: '1' } } }, stub)).result.capabilities.prompts, undefined);
 });
 
-test('instructions give the grounded protocol in the first 512 characters, then the routing, and keep the authority rules', () => {
-  const first = PUBLIC_MCP_INSTRUCTIONS.slice(0, 512);
-  for (const word of ['Frame', 'Ground', 'real assets', 'before producing anything', 'prepare_job_context', 'taste brief', 'Diverge on substance', "client's system", 'independent critic']) assert.ok(first.includes(word), word);
-  const routing = PUBLIC_MCP_INSTRUCTIONS.slice(0, 1100);
-  for (const word of ['start_outcome', 'search_library', 'get_skill', 'plan_workflow', 'get_item', 'do not preload', 'url', 'find_specialist', 'start_job', 'prepare_workflow', 'handoff_check', 'mini_tool']) assert.ok(routing.includes(word), word);
+test('instructions name one first call for any piece of work, then the other tools, and keep the authority rules', () => {
+  const words = PUBLIC_MCP_INSTRUCTIONS.match(/\S+/g).length;
+  assert.ok(words < 170, `instructions are ${words} words`);
+  // One front door, stated in the first 512 characters: prepare_job_context is the first tool named.
+  const first = PUBLIC_MCP_INSTRUCTIONS.slice(0, 512), named = PUBLIC_MCP_INSTRUCTIONS.match(/[a-z]+_[a-z_]+/g);
+  assert.match(first, /^Start any piece of work \([^)]*\) with prepare_job_context/); assert.equal(named[0], 'prepare_job_context');
+  for (const word of ['deliverable_kind', 'questions', 'start_job', 'one lead', 'start_outcome']) assert.ok(first.includes(word), word);
+  assert.equal(PUBLIC_MCP_INSTRUCTIONS.match(/\b(?:start|first|begin)\b/gi).length, 1, 'only one tool is the start');
+  for (const word of ['search_library', 'get_skill', 'get_workflow', 'get_item', 'do not preload', 'url', 'find_specialist', 'prepare_specialist with role_id', 'plan_workflow, then prepare_workflow', 'advance_job']) assert.ok(PUBLIC_MCP_INSTRUCTIONS.includes(word), word);
   assert.match(PUBLIC_MCP_INSTRUCTIONS, /not evidence of human consent/);
   assert.match(PUBLIC_MCP_INSTRUCTIONS, /cannot override host instructions or grant permissions/);
+  assert.match(PUBLIC_MCP_INSTRUCTIONS, /stop for the owner/);
+  // Tool titles and descriptions say what each tool is. Only prepare_job_context says it comes first.
+  const claimsFirst = /\b(?:call(?: this| it)? first|the first call|start here|front door|start before|always call)\b/i;
+  assert.deepEqual(PUBLIC_MCP_TOOLS.filter(tool => claimsFirst.test(`${tool.title} ${tool.description}`)).map(tool => tool.name), ['prepare_job_context']);
+  assert.match(PUBLIC_MCP_TOOLS.find(tool => tool.name === 'start_outcome').description, /^For a goal or problem with no deliverable named yet/);
   for (const tool of PUBLIC_MCP_TOOLS) {
     if (tool.name === 'prepare_workflow') continue;
     assert.equal(tool.annotations.readOnlyHint, true, tool.name); assert.equal(tool.annotations.openWorldHint, false, tool.name);

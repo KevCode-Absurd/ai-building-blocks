@@ -4,7 +4,9 @@ Version **3.0.0** (`PUBLIC_MCP_VERSION` in `site/src/server/public-mcp.ts`, also
 
 ## One front door
 
-For any business goal or problem, the host calls `start_outcome` with the owner's own words and follows the `next` step each result returns. The outcome orchestrator pins the outcome down with one batch of questions, has the host research how experts do the job, composes a plan from catalogue specialists and items, checks it, and stops for the owner's approval. `docs/public-mcp/outcome-delivery.md` and `site/src/outcomes/README.md` describe the method.
+For any piece of work (a page, ad, email, copy, audit, analysis, plan or code), the host calls `prepare_job_context` first. It returns the brief, up to 4 questions for that kind of job (each with a default), and `route`: one lead or a team, with the reason. `start_job` then names the lead. Only `prepare_job_context` says it comes first; every other tool description says what the tool is.
+
+For a business goal or problem with no deliverable named yet, the host calls `start_outcome` with the owner's own words and follows the `next` step each result returns. The outcome orchestrator pins the outcome down with one batch of questions, has the host research how experts do the job, composes a plan from catalogue specialists and items, checks it, and stops for the owner's approval. `docs/public-mcp/outcome-delivery.md` and `site/src/outcomes/README.md` describe the method.
 
 The other listed tools serve narrower jobs:
 
@@ -13,8 +15,9 @@ The other listed tools serve narrower jobs:
 | A whole business goal | `start_outcome`, `advance_outcome`, `record_outcome_decision`, `record_outcome_experiment` |
 | After a test goes live | `read_back_outcome_experiment` (scheduled read-backs and guardrail alerts; REST `/api/v1/outcome-readbacks`) |
 | Sharing a plan that worked | `prepare_outcome_pattern` (anonymised, owner consent, human review; REST `/api/v1/outcome-patterns`) |
-| A page, ad, copy, email, audit or analysis | `prepare_job_context` first (REST `POST /api/v1/job-context`), then the item, specialist or team job |
-| A team job | `start_job` with `deliverable_kind`, then `advance_job`; `propose_team`, `get_approaches`, `get_job_templates`, `get_job_preferences`, `set_job_preferences` |
+| Any piece of work | `prepare_job_context` first (REST `POST /api/v1/job-context`), then `start_job` |
+| Who does the job | `start_job` with `deliverable_kind`: one lead by default (`mode: single`), or a lead with helpers (`mode: team`) for mixed kinds of work, more than 12 pieces, or when asked |
+| Team records | `advance_job`; `propose_team`, `get_approaches`, `get_job_templates` (the short team method, plus `JOB-RECORDS.md`, the field reference to open only when a record is refused), `get_job_preferences`, `set_job_preferences` |
 | One item | `search_library`, then `get_skill`, `get_workflow` or `get_item`; `get_resource` for supporting files |
 | One specialist | `find_specialist`, then `prepare_specialist` |
 | A multi-step workflow | `plan_workflow`, then `prepare_workflow` |
@@ -22,7 +25,7 @@ The other listed tools serve narrower jobs:
 
 Every tool has a `title`. The public MCP lists 25 tools.
 
-The server instructions (`PUBLIC_MCP_INSTRUCTIONS`) are about 2,200 characters, under 2,500. They put grounding first, because some hosts read only the first 512 characters: for a page, ad, copy, email, audit or analysis, frame the job (client, outcome, `deliverable_kind`, mode), ground it in the client's real assets or data before producing anything (`prepare_job_context`, then capture the live site or pull the account), write a taste brief, diverge on substance, build inside the client's system and check with an independent critic. Routing follows within the first 1,100 characters (`start_outcome` for a goal, then items, specialists, `start_job` with `deliverable_kind` for a team job, and workflows), then the run and authority rules. Domain guidance (for example how to read ad results) lives in the outcome method (`METHOD.md`, returned once by `start_outcome`), in `prepare_job_context` and in the specialist playbooks, not in the instructions.
+The server instructions (`PUBLIC_MCP_INSTRUCTIONS`) are under 170 words in three paragraphs. The first fits in 512 characters, because some hosts read no more: start any piece of work with `prepare_job_context`, then `start_job` names who does it, and a goal with no deliverable goes to `start_outcome`. The second names the other tools for what they are (one item, a specialist, a chain of steps, team records). The third holds the run and authority rules. Domain guidance (for example how to read ad results) lives in the outcome method (`METHOD.md`, returned once by `start_outcome`), in `prepare_job_context` and in the specialist playbooks, not in the instructions.
 
 ## Grounding before production
 
@@ -36,7 +39,7 @@ Generic output is treated as a context failure, so produced work runs the Ground
 
 **`deliverable_kind`** is one of `web_page`, `ad_creative`, `copy`, `email`, `audit`, `analysis`, `strategy`, `plan`, `code`, `ops_doc`, `other`. The host declares it on `prepare_job_context` and `start_job`; a declared kind always wins. Without one, a guess from the request words is used and marked `kind_source: "suggested"`. Assessment words without a creation verb suggest `audit` or `analysis`, never ad production. The mode defaults to `patch` whenever something exists: `has_existing_asset: false` or "from scratch" wording gives `new`, and a `site_url` with no existing asset gives `extend`.
 
-**`taste_questions` replace dial questions.** A grounded `start_job` returns `brief`, `dials_line` and `taste_questions`. `dials_line` states the dials in one line ("Using a balanced mix, 1 output and a standard review; say if you want otherwise."), and `dial_questions` appear only when `ask_before_start` is `ask_dials`. The up to three SCOPE questions go to taste: position, what must never change, and 2 admired references and 1 to avoid for web, ad, copy and email work. Audits and analysis ask about the decision, what changed and what normal looks like. Strategy, plan and other work have their own sets. A request that names one deliverable, and audit, analysis, strategy, plan, code and ops-doc work, default to one output.
+**`questions` fit the job.** `prepare_job_context` and `start_job` return `questions`: up to 4 for that kind of job, each `{ id, question, default }`, from `site/src/jobs/intake-questions.mjs`. They ask only what cannot be read from the site or files (ads: offer, audience, placements, what has been tried; pages: traffic source, the one action, proof; emails: list and trigger, offer rules; audits: goal metric, access). A question the request already answers is dropped, and "you decide" uses the defaults. `dials_line` states the dials in one line ("Using a balanced mix, 1 output and a standard review; say if you want otherwise."), and `dial_questions` appear only when `ask_before_start` is `ask_dials`. A request that names one deliverable, and audit, analysis, strategy, plan, code and ops-doc work, default to one output.
 
 **The production grounding gate.** For jobs started under the grounding policy (`grounding_policy.version` 1), `advance_job` refuses the `produce` event until `grounding` is reported, in the event document or on the job card:
 

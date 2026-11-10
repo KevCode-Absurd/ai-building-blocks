@@ -28,6 +28,10 @@ import { normalizeSkillHtml } from "../src/lib/skill-html.mjs";
 import { similarHtml, skipWhenItems } from "./lib/similar-html.mjs";
 import { BRAND, describe, fitTitle, itemSeo, lowerFirst, mindTitle, pageTitle, titleLadder, trimDescription } from "../src/lib/seo-meta.mjs";
 import { outcomePage } from "./lib/outcome-pages.mjs";
+import { FORMAT_PAGE_URLS, formatIntro, formatLinks, formatPages } from "./lib/format-pages.mjs";
+import { factsLine, itemTopHtml, otherWaysHtml } from "./lib/item-top.mjs";
+import { agentsSection, loadItemAgents } from "./lib/item-agents.mjs";
+import { FORMATS, TOOL_FORMAT, formatOfKind } from "../src/lib/formats.mjs";
 
 const DIST = process.env.PRERENDER_DIST || "dist";
 const SITE = "https://useaiblocks.com";
@@ -77,6 +81,8 @@ const aiTools = JSON.parse(fs.readFileSync("public/data/ai-tools.json", "utf8"))
 const roleIndex = JSON.parse(fs.readFileSync("public/data/roles-index.json", "utf8"));
 // Specialists who use each item, and the agency agent pages that are the same job as a role page (canonical: the role).
 const roleLinks = loadRoleLinks();
+// Named agents (agents.useaiblocks.com) that carry each item in their toolbox; empty until toolboxes exist.
+const itemAgentLinks = loadItemAgents();
 const sameJobAgents = sameJobAgentPages(roleSeeds(cat.blocks), cat.blocks);
 const { TRACTION_CHANNELS: tractionChannels, tractionSlug } = await import("../../tools/lib/traction-channels.mjs");
 const bySlug = Object.fromEntries(cat.blocks.map((b) => [b.slug, b]));
@@ -116,7 +122,7 @@ function fitAndExample(page, slug) {
   const outs = (Array.isArray(os?.output) ? os.output : []).filter((o) => o && typeof o.name === "string" && o.name.trim() && typeof o.contains === "string" && o.contains.trim());
   const ins = strs(os?.input), pre = strs(os?.prerequisites);
   const hasSample = ins.length > 0 && outs.length > 0;
-  const sampleHtml = hasSample ? `<div id="sample"><h3>What goes in</h3>${list(ins.map(esc))}${pre.length ? `<h4>Before you start</h4>${list(pre.map(esc))}` : ""}<h3>What comes out</h3>${list(outs.map((o) => `<b>${esc(o.name)}</b>: ${esc(o.contains)}`))}</div>` : "";
+  const sampleHtml = hasSample ? `<div id="sample">${pre.length ? `<h3>Before you start</h3>${list(pre.map(esc))}` : ""}<h3>What comes out</h3>${list(outs.map((o) => `<b>${esc(o.name)}</b>: ${esc(o.contains)}`))}</div>` : "";
   return { fitHtml, sampleHtml, hasSample };
 }
 
@@ -133,7 +139,7 @@ const WEBSITE = { "@type": "WebSite", "@id": `${SITE}/#site`, name: "AI Blocks",
   potentialAction: { "@type": "SearchAction", target: { "@type": "EntryPoint", urlTemplate: `${SITE}/?q={search_term_string}` }, "query-input": "required name=search_term_string" } };
 
 // The same links on every plain page, so no page is more than a few clicks from the rest.
-const NAV = [["/roles", "Hire an AI specialist"], ["/jobs", "All skills by job"], ["/minds", "Minds"], ["/tools", "Tools"], ["/ai-tools", "AI tool guides"], ["/how-it-works", "How it works"], ["/blog", "Blog"], ["/train-your-own-ai-agent", "Train your own AI agent"], ["/teams", "Plan an AI team"], ["/apps", "Apps"], ["/api-and-mcp", "Connect your AI"], ["/api-and-mcp#api", "Documentation"], ["/industries", "AI help by business"], ["/how-we-test", "How we test"]];
+const NAV = [["/roles", "Hire an AI specialist"], ["/jobs", "All skills by job"], ...formatLinks(), ["/minds", "Minds"], ["/tools", "Tools"], ["/ai-tools", "AI tool guides"], ["/how-it-works", "How it works"], ["/blog", "Blog"], ["/train-your-own-ai-agent", "Train your own AI agent"], ["/teams", "Plan an AI team"], ["/apps", "Apps"], ["/api-and-mcp", "Connect your AI"], ["/api-and-mcp#api", "Documentation"], ["/industries", "AI help by business"], ["/how-we-test", "How we test"]];
 const header = `<header class="small" data-prerendered-nav><a href="/"><b>AI Blocks</b></a><nav aria-label="Main navigation"><a href="/#library">Find a task</a> · <a href="/roles">Hire an AI specialist</a> · <a href="/compose">Build a workflow</a> · <a href="/tools">Tools</a> · <a href="/minds">Minds</a> · <a href="/space">Team space</a> · <a href="/account" data-testid="account-link">My work</a></nav></header>`;
 // Plain pages (job hubs, business boards, How we test) use the app's header and footer, drawn without the app (lib/site-chrome.mjs).
 const GLOBE = ["..###..", ".#+#+#.", "#+#+#+#", "##+#+##", "#+#+#+#", ".#+#+#.", "..###.."];
@@ -279,6 +285,7 @@ const itemList = (entries) => ({ "@type": "ItemList", numberOfItems: entries.len
 function pageFor(url) {
   const outcome = outcomePage(url, { itemHref: (s) => (bySlug[s] && hasPage(bySlug[s]) ? hrefOf(bySlug[s]) : null), roleHref: (id) => (roleIndex.roles.some((r) => r.id === id) ? `/roles/${id}` : null) });
   if (outcome) return outcome;
+  if (formatByUrl.has(url)) return formatByUrl.get(url);
   if (url.startsWith("/minds/page/")) { const page = mindDirectory(url, directoryMinds); return page ? {...page, plain: true, hub: true, collection: true, crumbs: [["Minds", "/minds"]]} : null; }
   if(url==="/teams")return {title:"Plan your AI team",documentTitle:"Plan an AI specialist team with checked handoffs | AI Blocks",h1:"Plan your AI team",desc:"Plan a team of AI specialists around your task. Review context, methods, handoffs and checks, then save, download and share the workflow with your AI.",content:`<h1>Plan your AI team</h1><p>A coordinator checks the context, offers routes and chooses the smallest useful specialist team. Review the exact plan before production.</p><h2>Start with the right context</h2><p>Reuse your brand brain, brief, assets and project files, or build missing context from verified sources. Load only the relevant current facts and preferences.</p><h2>Review the team and handoffs</h2><p>Choose roles, method revisions, real inputs and outputs, dependencies, tools, permissions and acceptance checks. Edits need fresh review.</p><h2>Save, reuse and share</h2><p>Sign in to save versioned personal or company workflows. Retrieve accepted edits, export complete source files and review a sanitized template before creating a revocable link. Private memory and run data are excluded from sharing.</p><h2>Execute with your connected AI</h2><p>Your AI carries out authorized work with its real tools, checks handoff artifacts and records actual results. A prepared plan does not run a worker, connect an account or activate a schedule.</p><p><a href="/roles">Browse all specialists</a> · <a href="/api-and-mcp">Connect through API and MCP</a></p>`,main:{"@type":"CreativeWork",name:"AI specialist team planner",description:"Review and prepare a contextual team plan for your AI",isAccessibleForFree:true}};
   if (url === "/roles" || url.startsWith("/roles/")) return rolePage(url, roleIndex, id => JSON.parse(fs.readFileSync(`public/data/roles/${id}.json`, "utf8")));
@@ -343,8 +350,8 @@ function pageFor(url) {
     const [t, d] = STATIC[url];
     let extra = "";
     // The mind directory links every profile through bounded pages; tools retain their complete list.
-    if (url === "/minds") extra = mindDirectory(url, directoryMinds)?.body ?? "";
-    if (url === "/tools") extra = `<p><a href="/ai-tools">Read the AI tool guides</a>: find the right AI product for the job.</p>` + list([`<a href="/tools/growth-channel-planner">Growth channel planner</a>: Prepare a business brief and compare 19 growth channels.`, ...[...BROWSER_TOOLS, ...TOOLS].map((x) => `<a href="/tools/${x.slug}">${esc(x.name)}</a>: ${esc(x.summary)}`)]);
+    if (url === "/minds") extra = formatIntro(formatOfKind("mind")) + (mindDirectory(url, directoryMinds)?.body ?? "");
+    if (url === "/tools") extra = formatIntro(TOOL_FORMAT) + `<p><a href="/ai-tools">Read the AI tool guides</a>: find the right AI product for the job.</p>` + list([`<a href="/tools/growth-channel-planner">Growth channel planner</a>: Prepare a business brief and compare 19 growth channels.`, ...[...BROWSER_TOOLS, ...TOOLS].map((x) => `<a href="/tools/${x.slug}">${esc(x.name)}</a>: ${esc(x.summary)}`)]);
     const [documentTitle, seoDesc] = SEO_PAGES[url] ?? [];
     if (url === "/how-it-works") extra = howItWorksBody();
     // The heading the app shows (src/HowItWorks.tsx), so the page does not change heading when the app opens.
@@ -393,11 +400,13 @@ function pageFor(url) {
       title: b.name, modified: page.added, documentTitle: mindTitle({ name: b.name, identity: b.identity, area: AREAS[b.area] ?? b.area ?? "" }), h1: b.name, crumbs: [["Minds", "/minds"]],
       desc: describe({ summary: b.summary, more: [`An AI built from public sources about ${b.name}.`], tail: ["Free to use in Claude, ChatGPT or Gemini.", "Free to use in your AI.", "Free AI mind."] }).text,
       body: [
-        `<p class="bp-identity">${esc(b.identity || "")}</p>`, `<p class="small">${esc(disclose)}${page.added ? ` Updated ${niceDate(page.added)}.` : ""}</p>`,
+        `<p class="bp-identity">${esc(b.identity || "")}</p>`,
         // The subhead goes where the app puts it (p.bp-sub), so the page reads the same before and after the app opens.
-        ...(text(page.subhead) ? [`<p class="bp-sub">${esc(text(page.subhead))}</p>`, `<p>${esc(b.summary)}</p>`] : [`<p class="bp-sub">${esc(b.summary)}</p>`]),
+        `<p class="bp-sub">${esc(text(page.subhead) || b.summary)}</p>`,
+        `<p class="small">${factsLine({ kind: "mind", tested: page.tested?.result === "pass", updated: page.added ? niceDate(page.added) : "" }).map(esc).join(" · ")}</p>`, `<p class="small">${esc(disclose)}</p>`,
+        itemTopHtml({ kind: "mind", block: b, page, slug, hasFiles: !!b.hasFiles, name: b.name }),
         (page.hire?.jobs ?? []).length || mindFit.fitHtml || mindFit.sampleHtml ? `<section id="get"><h2>What you get</h2>${(page.hire?.jobs ?? []).length && !mindFit.hasSample ? `<p>What you can hire ${esc(b.name)} for.</p>${list(page.hire.jobs.slice(0, 5).map((j) => esc(j.title)))}` : ""}${mindFit.sampleHtml}${mindFit.fitHtml}</section>` : "",
-        `<section id="task-start"><h2>Run it</h2><p>Add ${esc(b.name)} to Claude, ChatGPT or Gemini once, then ask for it by name in any chat. Copy and download buttons are on the page.</p></section>`,
+        otherWaysHtml({ kind: "mind", hasFiles: !!b.hasFiles }),
         factCheckHtml(page.fact_checks, esc),
       `<details id="details"><summary><h2>Details</h2></summary>${[
           ideas.length ? `<h3>Big ideas</h3>${list(ideas.map((i) => `<b>${esc(i.title)}</b>: ${esc(words(text(i.text), 40))}`))}` : "",
@@ -419,10 +428,11 @@ function pageFor(url) {
   const isCoordinator = isFlow && b.execution === "coordinator" && !(b.steps ?? []).length;
   const coordinatorFiles = (page.files ?? []).includes("workflow-state.json") ? "SKILL.md and workflow-state.json" : "SKILL.md and the included supporting files";
   const noun = b.type === "agent" ? "AI agent" : isFlow ? "AI workflow" : b.type === "prompt" ? "AI prompt" : "AI skill";
-  const give = (Array.isArray(page.you_give) && page.you_give.length ? page.you_give : (page.plan?.needed ?? []).map((n) => n.what ? `${n.label}: ${n.what}` : n.label)).concat((page.plan?.helps ?? []).map((n) => `${n.label} (optional)`)).slice(0, 8);
+  const kindKey = b.type === "agent" ? "agent" : isFlow ? "workflow" : b.type === "prompt" ? "prompt" : "skill";
+  const itemNoun = formatOfKind(kindKey).noun;
   const get = Array.isArray(page.you_get) && page.you_get.length ? page.you_get : (b.outputs ?? []).map((o) => portName(o).replace(/^./, (c) => c.toUpperCase()));
   const steps = isFlow ? (b.steps ?? []).map((x) => bySlug[Array.isArray(x) ? x[0] : x]).filter(Boolean) : [];
-  const facts = ["Free", "No account", ...(src.licence ? [`${src.licence.replace(/-/g, " ")} licence`] : []), `Made by ${by ?? "AI Blocks"}`, ...(b.level ? [`Level: ${b.level}`] : []), ...(b.thinking ? [`Thinking: ${b.thinking}`] : []), ...(page.tested?.result === "pass" ? ["Safety checked"] : []), ...(page.added ? [`Updated ${niceDate(page.added)}`] : [])];
+  const facts = factsLine({ kind: kindKey, licence: src.licence ?? "", by: by ?? "", level: b.level, tested: page.tested?.result === "pass", updated: page.added ? niceDate(page.added) : "" });
   // Links out: four others in the same job (picked by the page's name, so each page links to a different four),
   // the workflows that use it, its twin, and the job's hub.
   const peers = (byTask[b.task] ?? []).filter((x) => x !== b);
@@ -437,14 +447,12 @@ function pageFor(url) {
   const kindLine = isCoordinator ? `It follows ${coordinatorFiles}, preserving the required inputs, evidence and checkpoints.` : isFlow ? "It guides your AI through several skills in order, passing each step's output to the next." : "Give the instructions to an AI assistant that supports the required files and tools, then review its output.";
   const subhead = text(page.subhead);
   const lead = subhead ? `${subhead}${isCoordinator ? ` ${kindLine}` : ""}` : `${b.name} is a free ${noun}${job ? ` for the job "${job}"` : ""}. ${kindLine}`;
-  const kindKey = b.type === "agent" ? "agent" : isFlow ? "workflow" : b.type === "prompt" ? "prompt" : "skill";
   const seo = itemSeo({ block: b, page, job, kind: kindKey, steps: steps.map((x) => x.name) });
   const usage = catalogueUsageHowTo({ name: b.name, pageUrl: SITE + url, steps: page.how_to_use });
   const neighbours = skillNeighbours(b.slug, page.plan, bySlug);
   const neighbourList = (rows) => list(rows.map(row => `<a href="${esc(row.url.replace(/^https:\/\/useaiblocks\.com/, ""))}">${esc(row.name)}</a><p class="small">${esc(row.note)}</p>`));
-  const neighbourView = !isFlow && page.plan ? `<section id="next" class="bp-next skill-neighbours"><h2>Before and after this skill</h2><p>Choose the steps you need. Bring your own material when you have it.</p><div class="skill-neighbours-grid"><div class="skill-neighbours-card"><h3>Before</h3>${neighbours.before.length ? neighbourList(neighbours.before) : "<p>Bring the material listed under Fill it in.</p>"}</div><span aria-hidden="true">→</span><div class="skill-neighbours-card"><h3>This skill</h3><p><b>${esc(b.name)}</b></p><a href="/#build">Open builder</a></div><span aria-hidden="true">→</span><div class="skill-neighbours-card"><h3>After</h3>${neighbours.after.length ? neighbourList(neighbours.after) : "<p>Use the result on its own, or choose another skill in the builder.</p>"}</div></div></section>` : "";
+  const neighbourView = !isFlow && page.plan ? `<section id="next" class="bp-next skill-neighbours"><h2>Before and after this ${itemNoun}</h2><p>Choose the steps you need. Bring your own material when you have it.</p><div class="skill-neighbours-grid"><div class="skill-neighbours-card"><h3>Before</h3>${neighbours.before.length ? neighbourList(neighbours.before) : "<p>Bring what the top of this page lists.</p>"}</div><span aria-hidden="true">→</span><div class="skill-neighbours-card"><h3>This ${itemNoun}</h3><p><b>${esc(b.name)}</b></p><a href="/#build">Open builder</a></div><span aria-hidden="true">→</span><div class="skill-neighbours-card"><h3>After</h3>${neighbours.after.length ? neighbourList(neighbours.after) : "<p>Use the result on its own, or choose another skill in the builder.</p>"}</div></div></section>` : "";
   const rowText = value => typeof value === "string" ? value : Object.entries(value ?? {}).map(([, part]) => typeof part === "string" ? part : "").filter(Boolean).join(". ");
-  const requiresFiles = !!b.hasFiles || b.type === "agent";
   const nextSteps = page.plan?.next ?? [];
   const reference = [
     ["what", "How the task works", list((page.how_it_works ?? []).map(value => esc(rowText(value))))],
@@ -458,21 +466,22 @@ function pageFor(url) {
   return {
     title: b.name, documentTitle: seo.title, modified: page.added,
     desc: seo.description.text, h1: b.headline || b.name,
-    crumbs: job ? [[job, jobHref(b.task)]] : [],
+    crumbs: [[formatOfKind(kindKey).plural, formatOfKind(kindKey).path], ...(job ? [[job, jobHref(b.task)]] : [])],
     body: [
       // The subhead goes where the app puts it (p.bp-sub), so the page reads the same before and after the app opens.
-      ...(subhead ? [`<p class="bp-sub">${esc(subhead)}</p>`, `<p>${esc(b.summary)}${isCoordinator ? ` ${esc(kindLine)}` : ""}</p>`] : [`<p class="bp-sub">${esc(b.summary)}</p>`, `<p>${esc(lead)}</p>`]), `<p class="small">${facts.map(esc).join(" · ")}</p>`, ...(Array.isArray(page.boards) && page.boards.length ? [`<p class="small">For: ${page.boards.filter((x) => BOARD_NAMES[x]).map((x) => `<a href="${boardHref(x)}">${esc(BOARD_NAMES[x])}</a>`).join(", ")}</p>`] : []),
-      // Three parts first (what you get, fill it in, run it), then what to do next, then everything else under one Details.
+      ...(subhead ? [`<p class="bp-sub">${esc(subhead)}</p>`, ...(isCoordinator ? [`<p>${esc(kindLine)}</p>`] : [])] : [`<p class="bp-sub">${esc(b.summary)}</p>`, `<p>${esc(lead)}</p>`]), `<p class="small">${facts.map(esc).join(" · ")}</p>`, ...(Array.isArray(page.boards) && page.boards.length ? [`<p class="small">For: ${page.boards.filter((x) => BOARD_NAMES[x]).map((x) => `<a href="${boardHref(x)}">${esc(BOARD_NAMES[x])}</a>`).join(", ")}</p>`] : []),
+      // At a glance first (what you give it, what you get back, how long, Download and how to use it), then what you
+      // get in full, the other ways to use it, what to do next, and everything else under one Details.
+      itemTopHtml({ kind: kindKey, block: b, page, slug, steps: steps.length, hasFiles: !!b.hasFiles, pack: isFlow || b.type === "agent" }),
       page.output_shape || get.length || fitHtml || sampleHtml ? `<section id="get"><h2>What you get</h2>${sampleHtml}${page.output_shape ? (hasSample ? `<details><summary>See the full layout</summary><p class="small">Every run hands it back in this order. Your details fill each gap.</p><pre>${esc(page.output_shape)}</pre></details>` : `<p class="small">Every run hands it back in this order. Your details fill each gap.</p><pre>${esc(page.output_shape)}</pre>`) : hasSample ? "" : list(get.map(esc))}${fitHtml}</section>` : "",
-      give.length ? `<section id="task-start"><h2>Fill it in</h2><p>${isFlow ? "Gather these first. You add them in your AI after you download." : "Add what this task works from, then copy the request."}</p>${list(give.map(esc))}</section>` : "",
-      `<section id="${give.length ? "run" : "task-start"}"><h2>Run it</h2><p>${isCoordinator ? `Download the complete workflow pack. Give it to your AI, then ask it to read ${coordinatorFiles} and follow the governing instructions and checkpoints.` : isFlow ? "Get the plan and all the skill files. Give the complete pack to your AI, then ask it to follow HANDOFF.md." : requiresFiles ? "Download the complete instructions and supporting files. Add them to Claude, ChatGPT or Gemini once, then ask for it by name in any chat. Pasting the instructions into a chat works too." : "Add your task details in the form when the page opens. Copy the complete request into your AI. Or add the skill to Claude, ChatGPT or Gemini once and ask for it by name. Your AI does the work."}</p>${!isFlow ? `<p><a href="/skills/${esc(slug)}${b.hasFiles ? ".zip" : "/SKILL.md"}" download>${b.hasFiles ? "Download all files" : "Download the instructions"}</a></p>` : ""}</section>`,
+      otherWaysHtml({ kind: kindKey, hasFiles: !!b.hasFiles, pack: isFlow || b.type === "agent", coordinatorFiles: isCoordinator ? coordinatorFiles : "" }),
       neighbourView || (nextSteps.length ? `<section id="next"><h2>What to do next</h2>${list(nextSteps.map((x) => `<a href="${esc(String(x.url).replace(/^https:\/\/useaiblocks\.com/, ""))}">${esc(x.name)}</a>: ${esc(x.label)}`))}</section>` : ""),
       factCheckHtml(page.fact_checks, esc),
+      agentsSection(itemAgentLinks.get(slug)),
       specialistsSection(roleLinks.get(slug)),
       `<details id="details"><summary><h2>Details</h2></summary>${[
         by && src.url ? `<p class="small">From ${esc(by)}. <a href="${esc(src.url)}" rel="noopener">See the original on GitHub</a>; shared under its licence, with a plain name for this library.</p>` : "",
         explain ? `<section id="explain"><h3>What it does</h3><p>${esc(words(explain, 150))}</p></section>` : "",
-        give.length || get.length ? `<section id="io"><h3>What goes in and out</h3>${give.length ? `<h4>You give it</h4>${list(give.map(esc))}` : ""}${get.length ? `<h4>You get</h4>${list(get.map(esc))}` : ""}</section>` : "",
         when.length > 3 ? `<h3>Use it when</h3>${list(when.slice(0, 5).map(esc))}` : "",
         steps.length ? `<h3>Steps</h3><ol>${steps.map((s) => `<li>${link(s)}: ${esc(s.summary)}</li>`).join("")}</ol>` : "",
         flows.length ? `<h3>Workflows that use it</h3>${list(flows.map(link))}` : "",
@@ -663,6 +672,16 @@ for (const u of thinUrls) if (!urls.includes(u)) urls.push(u);
 for (const u of sameJobAgents.keys()) if (!urls.includes(u)) urls.push(u);
 let wrote = 0;
 const titles = new Map(), problems = [];
+// The format pages (/skills, /prompts, /workflows, /agents) and /which-one (scripts/lib/format-pages.mjs). Each opens
+// with the items the home page already features (read from its source, as the starter index does), then the most used.
+const slugList = (source) => [...source.matchAll(/"([a-z0-9][a-z0-9-]+)"/g)].map((m) => m[1]);
+const homePicks = (name) => slugList(grab("src/HomeSections.tsx").match(new RegExp(`const ${name} = \\[([^\\]]*)\\]`))?.[1] ?? "");
+const starterPicks = [...grab("src/lib/task-discovery.ts").matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]);
+const formats = formatPages({ blocks: cat.blocks, taskNames: TASK_NAMES, jobExists: (t) => !!byTask[t], tools: ALL_TOOLS.map((t) => ({ slug: t.slug, name: t.name ?? t.short, summary: t.summary })), toolExample: "ai-time-saved",
+  picks: { skill: starterPicks, prompt: starterPicks, workflow: homePicks("FLOW_PICKS"), mind: homePicks("MIND_PICKS") } });
+const formatByUrl = new Map(formats.pages.map((p) => [p.url, p]));
+problems.push(...formats.problems);
+for (const u of FORMAT_PAGE_URLS) if (!urls.includes(u)) urls.push(u);
 
 // The home page: the main sections and every job, so a crawler reaches the whole library in two steps.
 const tasks = Object.entries(byTask).sort((a, b) => b[1].length - a[1].length);
@@ -785,6 +804,8 @@ const trust = await trustPages({ cat, readPage, roles: roleIndex, tools: trustTo
 problems.push(...trust.problems, ...brokenLinks(trust.pages, { cat, roles: roleIndex, tools: trustTools, sitePaths: [...urls, ...hubUrls, ...Object.keys(BOARD_NAMES).map(playbookHref)] }).map((l) => `guide page link goes nowhere: ${l}`));
 for (const pg of trust.pages) write(pg.url, render(pg.url, pg, { plain: true }));
 guidesSitemap(trust.pages, DIST);
+// A link on a format page that goes nowhere fails the build too.
+problems.push(...brokenLinks(formats.pages, { cat, roles: roleIndex, tools: trustTools, sitePaths: [...urls, ...hubUrls, ...tasks.map(([t]) => jobHref(t))] }).map((l) => `format page link goes nowhere: ${l}`));
 
 for (const url of urls) {
   // Job hubs and their pagination are rendered by the dedicated loop above.
@@ -809,7 +830,7 @@ write("/people", render("/people", { title: "Skills and workflows from people", 
 write("/shared-space-shell", render("/shared-space-shell", { title: "Shared space", desc: "Read a shared collection of AI skills and workflows.", h1: "Shared space", body: "" }, { noindex: true }));
 // A real 404: Cloudflare Pages answers unknown addresses with it (and a 404 status) instead of the home page.
 fs.writeFileSync(path.join(DIST, "404.html"), render("/404", { title: "Page not found", desc: "This page doesn't exist. Find the skill you need by job.", h1: "This page doesn't exist",
-  body: `<p class="bp-sub">The address may have a typo, or the page may have moved. Start from a job:</p>${list(tasks.map(([t]) => `<a href="${jobHref(t)}">${esc(TASK_NAMES[t] ?? t)}</a>`))}` }, { plain: true, noindex: true }));
+  body: `<p class="bp-sub">The address may have a typo, or the page may have moved. Pick a format, or start from a job.</p><p>${[...FORMATS, TOOL_FORMAT].map((x) => `<a href="${x.path}">${x.plural}</a>`).join(" · ")} · <a href="/which-one">Which one do I need?</a></p>${list(tasks.map(([t]) => `<a href="${jobHref(t)}">${esc(TASK_NAMES[t] ?? t)}</a>`))}` }, { plain: true, noindex: true }));
 // The hub addresses go into their own sitemap, read by build-index's sitemap index, each with its items' newest date.
 jobsSitemap(hubUrls);
 console.log(`prerender: ${wrote} pages (${thinUrls.size} imported without the Tested label), ${hubUrls.length} job hubs, a 404 page${problems.length ? `\n  ${problems.slice(0, 20).join("\n  ")}` : ""}`);

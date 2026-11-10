@@ -23,6 +23,7 @@ import { loadSiblings } from "./lib/similar-items.mjs";
 import { pagePath } from "./lib/crawl-files.mjs";
 import { boardsOf, readFixes } from "./lib/board-map.mjs";
 import { guardrails, safetyMarkdown, scanDay } from "../../tools/lib/safety-guardrails.mjs";
+import { FORMAT_PAGE_URLS } from "./lib/format-pages.mjs";
 await acquireBuildLock(".index-build.lock");
 
 // CATALOGUE_ROOT points the build at another folder (tools/make-fake-catalogue.mjs makes one for load tests).
@@ -476,7 +477,8 @@ const kindPath = (b) => (b.type === "mind" ? "minds" : b.type === "agent" ? "age
 const { TOOLS } = await import("../../mini-tools/index.mjs");
 const roles = roleSeeds(blocks);
 const roleUrls = roles.length ? ["/roles", ...Array.from({length:Math.ceil(roles.length/24)-1},(_,i)=>`/roles/page/${i+2}`), ...roles.map(r=>`/roles/${r.id}`)] : [];
-const urls = ["/", "/teams", "/compose", "/how-it-works", "/minds", ...roleUrls, "/from-a-source", "/community", "/tools", ...[...BROWSER_TOOLS, ...TOOLS].map((t) => `/tools/${t.slug}`), "/apps", "/api-and-mcp", "/me-md", "/train-your-own-ai-agent", ...INFO_PAGES.map(page => page.path), ...blocks.filter((b) => b.headline).map((b) => `/${kindPath(b)}/${b.slug}`)];
+// The format pages (/skills, /prompts, /workflows, /agents) and /which-one are built by scripts/lib/format-pages.mjs.
+const urls = ["/", "/teams", "/compose", "/how-it-works", "/minds", ...FORMAT_PAGE_URLS, ...roleUrls, "/from-a-source", "/community", "/tools", ...[...BROWSER_TOOLS, ...TOOLS].map((t) => `/tools/${t.slug}`), "/apps", "/api-and-mcp", "/me-md", "/train-your-own-ai-agent", ...INFO_PAGES.map(page => page.path), ...blocks.filter((b) => b.headline).map((b) => `/${kindPath(b)}/${b.slug}`)];
 urls.push("/get-it-done", "/get-it-done/example", "/get-it-done/status"); // the outcome orchestrator's owner pages (src/outcomes-site)
 // One sitemap per kind of page, under a sitemap index, so Search Console shows how each kind is indexed.
 // sitemap-jobs.xml (the job hubs) is written by scripts/prerender.mjs, with the same dates as jobHubDates below.

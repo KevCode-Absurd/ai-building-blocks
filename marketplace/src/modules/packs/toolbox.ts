@@ -100,7 +100,7 @@ export function yamlLite(text: string): YamlValue {
   if (/^﻿?\s*[{[]/.test(text)) {
     try { return JSON.parse(text.replace(/^﻿/, "")) as YamlValue; } catch { return yamlValue(text.replace(/^﻿/, "").replace(/\s*\n\s*/g, " ")); }
   }
-  const lines =text.replace(/^\uFEFF/, "").replace(/\r\n?/g, "\n").split("\n")
+  const lines = text.replace(/^\uFEFF/, "").replace(/\r\n?/g, "\n").split("\n")
     .filter(l => l.trim() && !l.trim().startsWith("#") && l.trim() !== "---")
     .map(l => ({ indent: l.length - l.trimStart().length, text: l.trim() }));
   const isItem = (t: string) => t === "-" || t.startsWith("- ");
@@ -207,6 +207,23 @@ export function resolveItemFiles(text: string, files: Iterable<string>, base: st
   }).join("");
 }
 
+/**
+ * Points an item's own script at the pack's copy when the same file ships in the pack's tools/ folder: the library
+ * says `node scripts/capture-brand-dna.mjs`, the pack holds tools/capture-brand-dna.mjs. `tools` maps the path inside
+ * the item's folder to the file name under tools/. Returns the text and the tools it now names.
+ */
+export function resolvePackTools(text: string, tools: Record<string, string>): { text: string; named: string[] } {
+  const named = new Set<string>();
+  if (!Object.keys(tools).length) return { text, named: [] };
+  const out = text.replace(PATH_TOKEN, (m, token: string) => {
+    const name = tools[token.replace(/^\.\//, "")];
+    if (!name) return m;
+    named.add(name);
+    return `tools/${name}`;
+  });
+  return { text: out, named: [...named] };
+}
+
 export interface LibrarySource {
   slug: string;
   type: Exclude<LibraryType, "tool">;
@@ -218,6 +235,8 @@ export interface LibrarySource {
   files?: string[];
   /** A workflow's step skills (item.yaml `uses`), so each can be found by name. */
   uses?: string[];
+  /** The item's own files that also ship in a pack's tools/ folder: path in the item's folder -> file name under tools/. */
+  packTools?: Record<string, string>;
 }
 
 /**
@@ -233,8 +252,11 @@ export function renderLibraryItem(src: LibrarySource): LibraryItem {
   body = body.replace(/^<!--\s*\/?(?:needs|next)\b[^\n]*-->\n?/gm, "");
   // The header carries the name, so the file's own first heading goes.
   body = body.replace(/^\s*#\s+[^\n]*\n/, "");
-  body = resolveItemFiles(body, src.files ?? [], raw);
+  // Scripts that also ship in the pack's tools/ folder run from there; the item's other files point at the library.
+  const tools = resolvePackTools(body, src.packTools ?? {});
+  body = resolveItemFiles(tools.text, (src.files ?? []).filter(f => !(src.packTools ?? {})[f]), raw);
   const notes: string[] = [];
+  if (tools.named.length) notes.push(`This item's tools are in your pack's tools/ folder (${tools.named.map(n => `tools/${n}`).join(", ")}). If your pack has no tools/ folder, get ${tools.named.map(n => `${ORIGIN}/tools/${n}`).join(" and ")} into one first.`);
   if ((src.files ?? []).length && body.includes(`${raw}/`)) notes.push(`This item's extra files are in the library: each is linked where it is named, and ${raw}.zip holds them all.`);
   const uses = (src.uses ?? []).filter(s => /^[a-z0-9][a-z0-9-]*$/.test(s) && s !== src.slug);
   if (uses.length) {

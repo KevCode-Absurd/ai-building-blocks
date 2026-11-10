@@ -25,7 +25,7 @@ const CATALOGUE = path.join(ROOT, "..", "catalogue-items");
 const read = (...p: string[]) => readFileSync(path.join(...p), "utf8");
 const shared = (p: string) => read(ROOT, "packs", "shared", p);
 const TEMPLATES = Object.fromEntries(["AGENTS.md", "WORK-METHOD.md", "README.md", "LICENSE.md", "train/AGENTS.md", "train/README.md", "train/instructions.md", "train/soul.md", "train/personality.md"].map(p => [p, shared(p)]));
-const TOOLS = { "capture-brand-dna.mjs": "// capture\nexport {};\n", "brand-dna-snippet.js": "// snippet\n", "check-brand-fidelity.mjs": "// check\nexport {};\n", "ai-default-patterns.md": "# AI default patterns\n\n- **web-template-stack**: the average landing page.\n" };
+const TOOLS = { "capture-brand-dna.mjs": "// capture\nexport {};\n", "brand-dna-snippet.js": "// snippet\n", "check-brand-fidelity.mjs": "// check\nexport {};\n", "ai-default-patterns.md": "# AI default patterns\n\n- **web-template-stack**: the average landing page.\n", "compare-candidates.mjs": "// compare\nexport {};\n" };
 
 const fixture = (role: string): ToolboxJson => JSON.parse(read(ROOT, "test", "fixtures", "toolbox", `${role}.toolbox.json`));
 
@@ -146,6 +146,16 @@ test("a library item ships with a three-line header and without the parts only t
   const fixed = resolveItemFiles("Read references/grid.md first. Run `python scripts/check.py page.html`. Update the README.md.", ["references/grid.md", "scripts/check.py", "README.md"], "https://useaiblocks.com/skills/x");
   assert.equal(fixed, "Read https://useaiblocks.com/skills/x/references/grid.md first. Run `python scripts/check.py page.html` (get https://useaiblocks.com/skills/x/scripts/check.py first). Update the README.md.");
   assert.equal(resolveItemFiles(fixed, ["references/grid.md", "scripts/check.py"], "https://useaiblocks.com/skills/x"), fixed, "safe to run twice");
+  // A script that also ships in the pack's tools/ folder runs from there, in commands and in prose.
+  const own = renderLibraryItem({
+    slug: "make-three-first-screens", type: "skill", name: "Make three first screens", summary: "Three real first screens.",
+    main: "---\nname: make-three-first-screens\n---\n\n# Make three first screens\n\n```\nnode scripts/compare-candidates.mjs a.html b.html --out compare\n```\n\nThe sheet comes from scripts/compare-candidates.mjs. Read references/axes.md first.\n",
+    files: ["scripts/compare-candidates.mjs", "references/axes.md"], packTools: { "scripts/compare-candidates.mjs": "compare-candidates.mjs" },
+  });
+  assert.match(own.text, /\nnode tools\/compare-candidates\.mjs a\.html b\.html --out compare\n/);
+  assert.match(own.text, /The sheet comes from tools\/compare-candidates\.mjs\. Read https:\/\/useaiblocks\.com\/skills\/make-three-first-screens\/references\/axes\.md first\./);
+  assert.doesNotMatch(own.text, /scripts\/compare-candidates/);
+  assert.match(own.text, /This item's tools are in your pack's tools\/ folder \(tools\/compare-candidates\.mjs\)\. If your pack has no tools\/ folder, get https:\/\/agents\.useaiblocks\.com\/tools\/compare-candidates\.mjs into one first\./);
   // An AI tool guide is written out from its YAML.
   const guide = renderToolGuide("adobe-firefly", read(CATALOGUE, "ai-tools", "adobe-firefly.yaml"));
   assert.match(guide.text, /^# Adobe Firefly\n\nWhat it gives: Make images, video and audio from a prompt/);
@@ -400,7 +410,7 @@ test("intake fits the role: only brand-facing work is asked about brands, and on
   assert.doesNotMatch(agents, /brands they admire|the website/);
   // The brand-capture tools: in the designer's pack, not in the bookkeeper's. The list of AI defaults to avoid
   // covers copy, audits and plans too, so every pack keeps it.
-  assert.equal(riley.files.filter(f => f.path.startsWith("tools/")).length, 4);
+  assert.deepEqual(riley.files.filter(f => f.path.startsWith("tools/")).map(f => f.path), ["tools/capture-brand-dna.mjs", "tools/brand-dna-snippet.js", "tools/check-brand-fidelity.mjs", "tools/ai-default-patterns.md", "tools/compare-candidates.mjs"]);
   assert.deepEqual(russell.files.filter(f => f.path.startsWith("tools/")).map(f => f.path), ["tools/ai-default-patterns.md"]);
   assert.doesNotMatch(file(russell, "context/README.md")!, /brand-dna|capture-brand|check-brand-fidelity/);
   assert.match(file(russell, "context/README.md")!, /## Tools\n\n- `tools\/ai-default-patterns\.md`/);

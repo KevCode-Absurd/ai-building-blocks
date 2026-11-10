@@ -17,7 +17,7 @@ import { AGENT_MIRROR, LIBRARY_ORIGIN, ORIGIN, PACK_LICENSE, PACK_SCHEMA, SKILL_
 import { teamMarkdown } from "../directory/team.ts";
 import { qualityMethodMarkdown } from "../directory/execution.ts";
 import { outputPolicyMarkdown } from "../runner/output-policy.ts";
-import { CAPTURE, FAMILY_LABELS, RUBRIC_GROUP, contextRequirements, familyGates, familyOf, familySlice } from "./families.ts";
+import { CAPTURE, FAMILY_LABELS, contextRequirements, craftWeightsLine, familyGates, familyOf, familySlice, jobFirstCraft } from "./families.ts";
 import { bestRoute, type RouteCandidate } from "./route.ts";
 import { agentFrontmatter, megaSources, teamListMarkdown, type MegaKit } from "./mega.ts";
 import {
@@ -97,6 +97,7 @@ export const TOOL_FILES: { name: string; purpose: string }[] = [
   { name: "brand-dna-snippet.js", purpose: "The same capture, pasted into any browser console." },
   { name: "check-brand-fidelity.mjs", purpose: "Checks a built page against context/brand-dna.json." },
   { name: "ai-default-patterns.md", purpose: "The named AI defaults to avoid unless chosen on purpose." },
+  { name: "compare-candidates.mjs", purpose: "Puts 2 to 4 candidates side by side at desktop and phone width, labelled A to D, for an outside pick (Node; Playwright for the PNG sheets)." },
 ];
 
 /**
@@ -106,8 +107,8 @@ export const TOOL_FILES: { name: string; purpose: string }[] = [
  * or it is a sales role whose jobs are copy or email.
  */
 const BRAND_DEPARTMENTS = new Set(["marketing", "content", "design", "ecommerce"]);
-/** The tools that capture or check a brand. The list of AI defaults to avoid is for every kind of work, so every pack carries it. */
-export const BRAND_TOOLS = new Set(["capture-brand-dna.mjs", "brand-dna-snippet.js", "check-brand-fidelity.mjs"]);
+/** The tools that capture, check or compare work a buyer sees. The list of AI defaults to avoid is for every kind of work, so every pack carries it. */
+export const BRAND_TOOLS = new Set(["capture-brand-dna.mjs", "brand-dna-snippet.js", "check-brand-fidelity.mjs", "compare-candidates.mjs"]);
 export function brandFacing(department: string, families: DeliverableFamily[]): boolean {
   if (BRAND_DEPARTMENTS.has(department)) return true;
   if (families.some(f => f === "web_page" || f === "ad_creative")) return true;
@@ -322,15 +323,15 @@ For each task, find what to use in toolbox.md, choose at your own discretion and
 Pack version {{version}}, updated {{updated}}. Profile: {{profile_url}}
 `,
   // Only the outline: the full method is packs/shared/WORK-METHOD.md, which always wins when it exists.
-  "WORK-METHOD.md": `# Work method: the Grounded Job Protocol
+  "WORK-METHOD.md": `# Work method
 
-0. Frame: write context/job-card.md (client, outcome, deliverable kind, success measure, mode: patch whenever something exists).
-1. Ground: capture the real business into context/ before you make anything (context/README.md). Every choice cites it.
-2. Taste: write context/taste-brief.md: brand codes to keep, references, defaults to avoid.
-3. Diverge: 2 or 3 directions that differ on substance, not colour or wording.
-4. Build inside the client's system, with their real facts.
-5. Check in a separate pass: gates pass or fail, then craft.
-6. Record DECISIONS.md, and propose typed lessons for "Rules I learned" in playbook.md.
+0. Frame: write context/spec.md, one screen: the job (who must do what after seeing this), the deliverables, 5 to 7 acceptance tests, mode (patch whenever something exists) and the brand context the job needs.
+1. Ground: capture only what the acceptance tests depend on into context/, each fact with its source and date. Check the buyer can act today.
+2. Taste and tools: for work a buyer sees, note the brand codes to keep and the defaults to avoid. Pick what fits from toolbox.md.
+3. Diverge: make about 3 real candidates of the part that decides the outcome; a fresh reviewer picks.
+4. Build: new framing of true facts, never new facts. Decide, be specific, finish the format.
+5. Check: a fresh reviewer gets the brief, the deliverable and the facts, and tests each acceptance test and each claim. Gates pass or fail.
+6. Hand over the work first, opened by 3 to 5 lines; nothing internal reaches the client. Keep working notes in DECISIONS.md.
 `,
   // Only a pointer: the licence text itself lives in packs/shared/LICENSE.md, which always wins when it exists.
   "LICENSE.md": `# Licence
@@ -541,14 +542,14 @@ function contextReadme(jts: JobType[], tools: Set<string>, origin: string, brand
     "## The folder",
     "",
     bullets([
-      "`context/job-card.md`: client, outcome, deliverable kind, success measure, mode and access (step 0).",
+      "`context/spec.md`: the spec sheet, one screen: the job, deliverables, acceptance tests, mode and the brand context the job needs (step 0).",
       ...(capture ? ["`context/brand-dna.json` and `context/screenshots/`: the captured site (step 1)."] : []),
       "`context/voice.md`: verbatim voice samples, with customer words marked as theirs.",
       "`context/facts.md`: live facts, each with its source and the date you captured it.",
       "`context/references.md`: competitors and references, and what each does better.",
       "`context/data/`: dated snapshots of accounts or data, pulled at level 1.",
       "`context/taste-brief.md`: the taste brief (step 2).",
-      "`DECISIONS.md`, next to the deliverable: what was considered, chosen and dropped (step 6).",
+      "`DECISIONS.md`: your working notes on what was considered, chosen and dropped (step 6). The client never needs it to use the work.",
     ]),
     "",
     "## What to capture for my work",
@@ -684,11 +685,13 @@ function jobSkill(jt: JobType, kind: PackKind, slug: string = jt.id, pointer: Me
     ...jt.rubric.filter(c => c.critical).map(c => `${c.text} (${c.pass_rule.replace(/\.$/, "")}.)`),
     ...familyGates(family),
   ];
+  // A job type's own craft rubric is made job-first (the job row leads at 30, "Own material" follows); without one,
+  // the family's weights are given in a line, since WORK-METHOD.md states only the two rows every family shares.
   const craft = jt.craft_rubric?.length
-    ? ["| Criterion | Weight | How to test it |", "|---|---|---|", ...jt.craft_rubric.map(c => `| ${cell(c.criterion)} | ${c.weight} | ${cell(c.test)} |`)]
+    ? ["| Criterion | Weight | How to test it |", "|---|---|---|", ...jobFirstCraft(jt.craft_rubric, family).map(c => `| ${cell(c.criterion)} | ${c.weight} | ${cell(c.test)} |`)]
     : [
         ...jt.rubric.filter(c => !c.critical).map(c => `- ${c.text} (weight ${c.weight}). ${c.pass_rule}`),
-        `- Then score specificity, fidelity, distinctiveness and job done with the ${RUBRIC_GROUP[family]} weights in WORK-METHOD.md, step 5.`,
+        `- Then score the craft out of 100 with these weights: ${craftWeightsLine(family)}.`,
       ];
   return [
     "---",
@@ -718,10 +721,10 @@ function jobSkill(jt: JobType, kind: PackKind, slug: string = jt.id, pointer: Me
     "",
     `1. **Ground.** Capture into \`context/\` first (\`context/README.md\`, ${FAMILY_LABELS[family]}): ${required.length ? required.join("; ") : "what exists now"}. Nothing is produced before that file exists.`,
     `2. **Taste.** ${slice.taste}`,
-    `3. **Diverge.** ${slice.diverge}`,
+    `3. **Diverge: real candidates, and someone else chooses.** ${slice.diverge} A fresh reviewer who has not seen your reasoning picks one and names what to take from the others.`,
     `4. **Build** ${lowerFirst(jt.deliverable)}. ${pointer ? `Follow \`${pointer.path}\` (${pointer.title}) step by step for the craft. ` : ""}${slice.build}`,
     `5. **Check, in a separate pass.** ${slice.check} Then the gates and craft below.`,
-    "6. **Record.** Write DECISIONS.md: what you considered, chose and dropped, and what to test next.",
+    "6. **Hand over.** The work comes first, opened by 3 to 5 lines: what this is, the main decision and why, what to check before use. Nothing internal reaches the client.",
     "",
     "## Gates: pass or fail",
     "",
@@ -869,21 +872,21 @@ function playbookMarkdown(persona: Persona, jts: JobType[], kind: PackKind, role
   out.push(...section("What I deliver"));
   out.push(bullets(persona.profile.outcomes.map(o => `**${o.title}**: ${o.deliverable}${o.job_type_id && titles.has(o.job_type_id) ? ` (job: ${titles.get(o.job_type_id)})` : ""}`)), "");
   out.push(...section("Before I start: what I need"));
-  out.push("I ground every job first: I capture what exists into context/ (WORK-METHOD.md, step 1), then ask only for what capture cannot tell me, in the one message AGENTS.md describes.", "");
+  out.push("I ground every job first: I capture what the job depends on into context/ (WORK-METHOD.md, step 1), then ask only for what capture cannot tell me, in the one message AGENTS.md describes.", "");
   if (jts.length) {
     for (const jt of jts) out.push(`### ${jt.title}`, "", bullets(intakeLines(jt)), "");
   } else {
     out.push(bullets(["Context: your business, your website or what exists now, and 2 or 3 brands you admire.", "Details: the one result you want, who it is for, and when you need it."]), "");
   }
   out.push(...section("How I work"), persona.profile.method.trim(), "");
-  out.push("These are my Build steps. Ground, Taste and Diverge come before them, and a separate Check comes after (WORK-METHOD.md).", "");
+  out.push("These are my Build steps. The spec sheet, grounding and real candidates come before them, and a fresh reviewer's check comes after (WORK-METHOD.md).", "");
   if (jts.length) {
     out.push(...section("How my work is checked"));
     out.push("Each job's skill holds its gates, which pass or fail, and its craft scores:", "");
     out.push(bullets(jts.map(jt => `${jt.title}: \`${skillPaths.get(jt.id) ?? `skills/${jt.id}/SKILL.md`}\``)), "");
   }
   // What is not my work is in AGENTS.md ("Rules"), once.
-  out.push(...section("Handoff"), "I hand back the work itself first, then the short note AGENTS.md describes, and DECISIONS.md for anything bigger than a quick answer. I say what to check before you publish or send it.", "");
+  out.push(...section("Handoff"), "I hand back the work itself first, opened by 3 to 5 lines: what it is, the main decision and why, and what to check before you publish or send it. My working notes stay with me; nothing in the work depends on them.", "");
   out.push(...rulesSection(train));
   return out.join("\n");
 }

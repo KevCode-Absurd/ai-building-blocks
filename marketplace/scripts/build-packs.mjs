@@ -154,6 +154,23 @@ for (const folder of existsSync(megaDir) ? readdirSync(megaDir).sort() : []) {
   megaFilesAsTheyStand.set(folder, files);
 }
 
+// ---------- Capture and check tools ----------
+// The library owns them (catalogue-items/general/<skill>/, any depth); --tools=<dir> reads them from one folder
+// instead. packs/shared/tools/ holds fallbacks for files the library does not have yet. A tool found nowhere is
+// left out, and the packs link to its public address (/tools/<file>) instead. The library names the defaults list
+// ai-default-patterns/patterns.md; packs carry it as tools/ai-default-patterns.md.
+const LIBRARY = path.resolve(ROOT, "..", "catalogue-items", "general");
+const TOOL_HOMES = ["brand-dna-capture", "brand-fidelity-check", "ai-default-patterns", "grounded-job-protocol", "make-three-first-screens"];
+const tools = {};
+const toolFrom = {};
+for (const { name } of TOOL_FILES) {
+  const dirs = args.tools ? [path.resolve(ROOT, args.tools)] : TOOL_HOMES.map(h => path.join(LIBRARY, h));
+  const found = dirs.flatMap(d => walk(d).filter(r => r.split("/").pop() === name || (name === "ai-default-patterns.md" && r === "patterns.md" && path.basename(d) === "ai-default-patterns")).map(r => path.join(d, r)))[0];
+  if (found) { tools[name] = readFileSync(found, "utf8"); toolFrom[name] = path.relative(path.resolve(ROOT, ".."), found).replace(/\\/g, "/"); }
+  else if (templates[`tools/${name}`]?.trim()) { tools[name] = templates[`tools/${name}`]; toolFrom[name] = `marketplace/packs/shared/tools/${name} (fallback)`; }
+  else warnings.push(`tool ${name} is not in the library yet (${TOOL_HOMES.join(", ")}), so packs link to /tools/${name} instead of carrying it`);
+}
+
 // ---------- Toolboxes and the library items they name ----------
 // Each item is read once from ../catalogue-items and rendered once (toolbox.ts), so every pack that carries it holds
 // the same text and the browsable copy is one file: /packs/toolbox/<type>/<slug>.md.
@@ -204,10 +221,18 @@ function readLibraryItem(slug, type) {
       const meta = yamlLite(readIf(path.join(dir, "item.yaml")) ?? "") ?? {};
       const actual = meta.type === "agent" || meta.type === "prompt" ? meta.type : meta.type === "workflow" || meta.type === "routine" || meta.category === "orchestrator" ? "workflow" : "skill";
       const files = walk(dir).filter(f => !["SKILL.md", "item.yaml", "page.yaml"].includes(f));
-      return { item: renderLibraryItem({ slug, type: actual, name: meta.name || slug, summary: meta.summary || "", main: readFileSync(path.join(dir, "SKILL.md"), "utf8"), files, uses: Array.isArray(meta.uses) ? meta.uses.filter(u => typeof u === "string") : [] }) };
+      return { item: renderLibraryItem({ slug, type: actual, name: meta.name || slug, summary: meta.summary || "", main: readFileSync(path.join(dir, "SKILL.md"), "utf8"), files, uses: Array.isArray(meta.uses) ? meta.uses.filter(u => typeof u === "string") : [], packTools: packToolsOf[slug] ?? {} }) };
     }
   }
   return { skip: "is not in the library (catalogue-items)" };
+}
+
+// A library item's own script that also ships in every brand-facing pack's tools/ folder (the capture, check and
+// compare tools come from the library): item slug -> { path in the item's folder: file name under tools/ }.
+const packToolsOf = {};
+for (const [name, from] of Object.entries(toolFrom)) {
+  const m = /^catalogue-items\/[^/]+\/([^/]+)\/(.+)$/.exec(from);
+  if (m) (packToolsOf[m[1]] ??= {})[m[2]] = name;
 }
 
 const library = {};       // slug -> the rendered item
@@ -227,23 +252,6 @@ for (const [roleId, toolbox] of toolboxes) {
 }
 for (const slug of Object.keys(library)) if (!library[slug]) delete library[slug];
 warnings.push(...libraryNotes, ...typeNotes);
-
-// ---------- Capture and check tools ----------
-// The library owns them (catalogue-items/general/<skill>/, any depth); --tools=<dir> reads them from one folder
-// instead. packs/shared/tools/ holds fallbacks for files the library does not have yet. A tool found nowhere is
-// left out, and the packs link to its public address (/tools/<file>) instead. The library names the defaults list
-// ai-default-patterns/patterns.md; packs carry it as tools/ai-default-patterns.md.
-const LIBRARY = path.resolve(ROOT, "..", "catalogue-items", "general");
-const TOOL_HOMES = ["brand-dna-capture", "brand-fidelity-check", "ai-default-patterns", "grounded-job-protocol"];
-const tools = {};
-const toolFrom = {};
-for (const { name } of TOOL_FILES) {
-  const dirs = args.tools ? [path.resolve(ROOT, args.tools)] : TOOL_HOMES.map(h => path.join(LIBRARY, h));
-  const found = dirs.flatMap(d => walk(d).filter(r => r.split("/").pop() === name || (name === "ai-default-patterns.md" && r === "patterns.md" && path.basename(d) === "ai-default-patterns")).map(r => path.join(d, r)))[0];
-  if (found) { tools[name] = readFileSync(found, "utf8"); toolFrom[name] = path.relative(path.resolve(ROOT, ".."), found).replace(/\\/g, "/"); }
-  else if (templates[`tools/${name}`]?.trim()) { tools[name] = templates[`tools/${name}`]; toolFrom[name] = `marketplace/packs/shared/tools/${name} (fallback)`; }
-  else warnings.push(`tool ${name} is not in the library yet (${TOOL_HOMES.join(", ")}), so packs link to /tools/${name} instead of carrying it`);
-}
 
 // ---------- Personas ----------
 

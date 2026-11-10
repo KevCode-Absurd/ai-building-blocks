@@ -38,7 +38,7 @@ const LIBRARY = "https://useaiblocks.com";
 const APP_ONLY = [
   /^\/sign-in$/, /^\/invite$/, /^\/jobs(\/[^/]+)?$/, /^\/notifications$/, /^\/ops(\/.*)?$/, /^\/review$/,
   /^\/experts\/apply$/, /^\/expert$/, /^\/new$/, /^\/requests\/[^/]+$/, /^\/studio(\/agents\/[^/]+)?$/,
-  /^\/experts\/invite\/[^/]+$/,
+  /^\/experts\/invite\/[^/]+$/, /^\/job-posts(\/new|\/[^/]+)?$/,
 ];
 
 const isProduction = (env: Env) => env.APP_ENV === "production";
@@ -338,7 +338,7 @@ const text = (body: string, type: string) => new Response(body, { status: 200, h
 export function robotsTxt(env: Env): Response {
   if (!isProduction(env)) return text("# Not the live site: nothing here should be indexed.\nUser-agent: *\nDisallow: /\n", "text/plain");
   const origin = originOf(env);
-  const blocked = ["/api/", "/oauth/", "/mcp", "/ops", "/studio", "/jobs", "/requests/", "/review", "/new", "/invite", "/notifications", "/sign-in", "/expert$", "/experts/apply", "/experts/invite/", "/e/", "/*.zip$"];
+  const blocked = ["/api/", "/oauth/", "/mcp", "/ops", "/studio", "/jobs", "/requests/", "/review", "/new", "/invite", "/notifications", "/sign-in", "/expert$", "/experts/apply", "/experts/invite/", "/e/", "/job-posts", "/*.zip$"];
   // The public pages load these while they draw, so a crawler that runs the app needs them (the longer rule wins).
   const allowed = ["/api/agents", "/api/config", "/api/expert-profiles/"];
   return text(`User-agent: *\n${blocked.map(p => `Disallow: ${p}`).join("\n")}\n${allowed.map(p => `Allow: ${p}`).join("\n")}\nAllow: /\n\nSitemap: ${origin}/sitemap.xml\n`, "text/plain");

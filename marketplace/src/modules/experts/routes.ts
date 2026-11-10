@@ -12,6 +12,9 @@ import {
   acceptAgreement, ensureAllProfiles, ensureProfile, myProfile, onboardingChecklist, publicProfile, recordAgentUse, saveProfile,
   usedAgents, usedCookie,
 } from "./profiles.ts";
+import {
+  closePost, createPost, deletePost, expirePosts, getPost, hidePost, matchingPosts, myPosts, opsPosts, pickReply, replyToPost, sendPostDigests,
+} from "./posts.ts";
 
 const STATUSES = ["all", "applied", "approved", "rejected", "paused"] as const;
 
@@ -164,10 +167,84 @@ export const routes: Route[] = [
       return json({ ok: true }, 200, headers);
     },
   },
+
+  // ---------- Job posts ----------
+
+  {
+    method: "POST", path: "/api/job-posts", handler: async ctx => {
+      const a = await account(ctx);
+      const body = await ctx.body<Record<string, unknown>>();
+      return json({ post: await createPost(ctx.env, { ...body, userId: a.user.id }) }, 201);
+    },
+  },
+  {
+    method: "GET", path: "/api/job-posts", handler: async ctx => {
+      const a = await account(ctx);
+      return json(await myPosts(ctx.env, a.user.id));
+    },
+  },
+  {
+    method: "GET", path: "/api/experts/me/posts", handler: async ctx => {
+      const a = await requireApprovedExpert(ctx);
+      return json(await matchingPosts(ctx.env, a.expert));
+    },
+  },
+  {
+    method: "GET", path: "/api/job-posts/:id", handler: async ctx => {
+      const a = await account(ctx);
+      return json(await getPost(ctx.env, { postId: ctx.params.id!, userId: a.user.id, ops: a.ops, expert: a.expert }));
+    },
+  },
+  {
+    method: "DELETE", path: "/api/job-posts/:id", handler: async ctx => {
+      const a = await account(ctx);
+      await deletePost(ctx.env, { userId: a.user.id, postId: ctx.params.id! });
+      return json({ ok: true });
+    },
+  },
+  {
+    method: "POST", path: "/api/job-posts/:id/replies", handler: async ctx => {
+      const a = await requireApprovedExpert(ctx);
+      const body = await ctx.body<{ note?: unknown }>();
+      return json({ reply: await replyToPost(ctx.env, { expert: a.expert, actor: a.user.id, postId: ctx.params.id!, note: body.note }) }, 201);
+    },
+  },
+  {
+    method: "POST", path: "/api/job-posts/:id/pick", handler: async ctx => {
+      const a = await account(ctx);
+      const body = await ctx.body<{ reply_id?: unknown }>();
+      return json({ post: await pickReply(ctx.env, { userId: a.user.id, postId: ctx.params.id!, replyId: body.reply_id }) });
+    },
+  },
+  {
+    method: "POST", path: "/api/job-posts/:id/close", handler: async ctx => {
+      const a = await account(ctx);
+      return json({ post: await closePost(ctx.env, { userId: a.user.id, postId: ctx.params.id! }) });
+    },
+  },
+  {
+    method: "GET", path: "/api/ops/job-posts", handler: async ctx => {
+      await requireOps(ctx);
+      const status = ctx.url.searchParams.get("status") || "all";
+      if (!["all", "open", "picked", "closed", "deleted", "expired", "hidden"].includes(status)) fail(400, "invalid_input", "status must be one of: all, open, picked, closed, deleted, expired, hidden.");
+      return json(await opsPosts(ctx.env, { status }));
+    },
+  },
+  {
+    method: "POST", path: "/api/ops/job-posts/:id/hide", handler: async ctx => {
+      const a = await requireOps(ctx);
+      const body = await ctx.body<{ hidden?: unknown; note?: unknown }>();
+      if (typeof body.hidden !== "boolean") fail(400, "invalid_input", "hidden must be true or false.");
+      const note = str(body.note, "note", { optional: true, max: 500 });
+      return json({ post: await hidePost(ctx.env, { postId: ctx.params.id!, actor: a.user.id, hidden: body.hidden as boolean, note }) });
+    },
+  },
 ];
 
 /** Work the 15-minute cron runs for this module. */
 export const scheduled: ((env: Env) => Promise<void>)[] = [
   syncAllExpertPersonas,
   ensureAllProfiles,
+  async env => { await expirePosts(env); },
+  async env => { await sendPostDigests(env); },
 ];

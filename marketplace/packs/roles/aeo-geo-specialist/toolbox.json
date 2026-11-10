@@ -1,0 +1,273 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "aeo-geo-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "visibility-audit",
+      "task": "Measure how often AI answers name and cite the brand",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/ai-answer-visibility-audit", "use": "build", "when": "When you need a baseline of mentions, links and citations across AI engines for a fixed prompt set" },
+        { "ref": "kit:prompts/ai-answer-coder", "use": "build", "when": "After you run the prompt set on an engine, to code each answer the same way" },
+        { "ref": "library:ai-recommendation-panel-runner", "type": "skill", "use": "build", "when": "When the client is a store and you need who AI names, the sources cited and a score" },
+        { "ref": "library:agency-marketing-ai-citation-strategist", "type": "agent", "use": "explore", "when": "When you want a second read of who the engines name, you or a rival, to compare with yours" },
+        { "ref": "library:perplexity", "type": "tool", "use": "build", "when": "When you run the prompt set on an engine that shows its source links" },
+        { "ref": "library:chatgpt", "type": "tool", "use": "build", "when": "When you run the prompt set on the assistant most buyers ask first" },
+        { "ref": "library:gemini", "type": "tool", "use": "build", "when": "When you need Google's assistant in the baseline next to AI Overviews" }
+      ]
+    },
+    {
+      "id": "prompt-set",
+      "task": "Build the buyer prompt set and tracking sheet",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/buyer-prompt-set-builder", "use": "build", "when": "Before any measurement, to fix the real buyer questions you will ask every time" },
+        { "ref": "library:shopper-question-and-fan-out-mapper", "type": "skill", "use": "build", "when": "When you need the questions shoppers ask AI, grouped by topic with likely follow-ups" },
+        { "ref": "library:customer-question-keyword-finder", "type": "prompt", "use": "brief", "when": "When you have reviews, tickets and comments and want the questions in buyers' own words" },
+        { "ref": "library:keyword-research-planner", "type": "skill", "use": "brief", "when": "When there is search data and you want the question searches to seed the set" }
+      ]
+    },
+    {
+      "id": "fortnightly-check",
+      "task": "Run the regular AI citation check",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/fortnightly-ai-citation-check", "use": "build", "when": "Every two weeks on the same weekday, after a baseline exists" },
+        { "ref": "kit:prompts/ai-answer-coder", "use": "build", "when": "For each new batch of answers, so this round is coded like the last" },
+        { "ref": "library:ai-answer-visibility-tracker", "type": "agent", "use": "build", "when": "When the check runs monthly and should report share of mentions against last time" },
+        { "ref": "library:david-spiegelhalter", "type": "mind", "use": "think", "when": "When a small prompt set moves and you must say what is real change and what is noise" }
+      ]
+    },
+    {
+      "id": "answer-readout",
+      "task": "Read out a set of AI answers the client collected",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/ai-answer-coder", "use": "build", "when": "When the client sends raw answers and you must tag mentions, links, rivals and errors" },
+        { "ref": "library:ai-recommendation-gap-finder", "type": "skill", "use": "build", "when": "When coded results are in and you need the gaps marked fix, build or influence" },
+        { "ref": "library:ai-answer-fact-checker", "type": "skill", "use": "check", "when": "When an answer states facts about the brand or a rival, to check each against public sources" }
+      ]
+    },
+    {
+      "id": "crawler-access",
+      "task": "Review AI crawler access and write robots.txt rules",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/ai-crawler-access-review", "use": "build", "when": "When you must check whether AI crawlers can reach the site and whether that is the owner's choice" },
+        { "ref": "kit:prompts/ai-robots-txt-draft", "use": "build", "when": "When the owner has decided which AI uses to allow and needs matching rules" },
+        { "ref": "library:ai-crawler-access-editor", "type": "skill", "use": "build", "when": "When the allow list is agreed and the live file must be updated" },
+        { "ref": "library:bot-and-ai-agent-access-planner", "type": "skill", "use": "brief", "when": "When logins, checkout or a firewall are involved and you must decide which bots get in" },
+        { "ref": "library:agency-marketing-aeo-foundations", "type": "agent", "use": "check", "when": "When rules are drafted, to score whether AI crawlers can find and read the site" },
+        { "ref": "library:technical-seo-auditor", "type": "skill", "use": "check", "when": "When pages are missing from answers and crawling, indexing or rendering may be the cause" }
+      ]
+    },
+    {
+      "id": "llms-txt",
+      "task": "Draft an llms.txt file with honest caveats",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/llms-txt-draft", "use": "build", "when": "When a client wants the file, or has docs that coding agents and AI tools might read" },
+        { "ref": "library:llms-txt-writer", "type": "skill", "use": "explore", "when": "When you want a second draft from the live site to compare page choices" },
+        { "ref": "library:ai-guide-file-publisher", "type": "skill", "use": "build", "when": "When the client is a store and the file should cover brand, products and policies" },
+        { "ref": "library:documentation-checker", "type": "skill", "use": "check", "when": "When the file points at docs, to find claims in them that are false or out of date" }
+      ]
+    },
+    {
+      "id": "brand-facts",
+      "task": "Fix the facts AI repeats about the brand",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/brand-facts-and-entity-audit", "use": "build", "when": "When AI answers get facts wrong or miss them and you need the sources and the fixes" },
+        { "ref": "kit:prompts/brand-fact-sheet", "use": "build", "when": "When the site never states its basic facts and needs a fact sheet and About page draft" },
+        { "ref": "library:brand-facts-accuracy-fixer", "type": "skill", "use": "build", "when": "When you have what AI says about a store and need each wrong fact with its fix" },
+        { "ref": "library:ai-brand-mention-scanner", "type": "skill", "use": "brief", "when": "When you need to see where the brand is mentioned online before tracing a wrong fact" },
+        { "ref": "library:ai-answer-fact-checker", "type": "skill", "use": "check", "when": "After fixes, to recheck fresh answers claim by claim against public sources" }
+      ]
+    },
+    {
+      "id": "entity-markup",
+      "task": "Add organisation and page markup",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/brand-facts-and-entity-audit", "use": "brief", "when": "When markup must match the canonical facts page and the profiles it links to" },
+        { "ref": "library:brand-identity-markup-adder", "type": "skill", "use": "build", "when": "When AI needs to confirm the business is real and you must add organisation markup" },
+        { "ref": "library:schema-markup-writer", "type": "skill", "use": "build", "when": "When a page type such as FAQ, product or service needs checked markup to paste" }
+      ]
+    },
+    {
+      "id": "local-facts",
+      "task": "Fix local listings and facts for a local firm",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:local-search-listing-manager", "type": "skill", "use": "build", "when": "When a local firm needs a listing audit and fixes after a move or a number change" },
+        { "ref": "kit:skills/brand-facts-and-entity-audit", "use": "build", "when": "When name, address, phone and hours differ across the sources AI reads" },
+        { "ref": "library:review-request-and-reply-planner", "type": "skill", "use": "build", "when": "When AI names a rival for its reviews and the firm needs a way to ask for and answer them" },
+        { "ref": "library:directory-listing-planner", "type": "skill", "use": "build", "when": "When the firm is missing from the directories AI answers cite" }
+      ]
+    },
+    {
+      "id": "page-rewrite",
+      "task": "Rewrite a key page so AI can quote it",
+      "kind": "web_page",
+      "items": [
+        { "ref": "kit:skills/citation-ready-page-rewrite", "use": "build", "when": "When an existing page must be easier for answer engines and people to find and quote" },
+        { "ref": "library:answer-first-page-rewriter", "type": "skill", "use": "build", "when": "When a guide or FAQ buries its answers and each section should lead with one" },
+        { "ref": "library:ai-search-visibility-optimiser", "type": "skill", "use": "explore", "when": "When you want a second set of edits for the same page to compare before you commit" },
+        { "ref": "library:ai-citation-scorer", "type": "skill", "use": "check", "when": "When the rewrite is drafted, to score each passage on how easily it can be quoted" },
+        { "ref": "library:unsupported-claim-spotter", "type": "skill", "use": "check", "when": "Before publishing, to find claims that need a source and a date" },
+        { "ref": "library:barbara-minto", "type": "mind", "use": "think", "when": "When a page wanders and should state the reader's question, then the answer, then reasons" }
+      ]
+    },
+    {
+      "id": "answer-pages",
+      "task": "Write answer-first service and FAQ pages",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:faq-page-from-questions-writer", "type": "prompt", "use": "build", "when": "When you have real customer questions and the firm's answers and need an FAQ page" },
+        { "ref": "kit:skills/citation-ready-page-rewrite", "use": "build", "when": "When thin service pages must be rebuilt to answer one question each" },
+        { "ref": "library:check-a-clinic-service-information-page", "type": "workflow", "use": "check", "when": "When the firm is a clinic and every answer must match approved service facts" },
+        { "ref": "library:ai-citation-scorer", "type": "skill", "use": "check", "when": "When pages are drafted, to check each answer can be lifted out and still make sense" },
+        { "ref": "library:schema-markup-writer", "type": "skill", "use": "build", "when": "When the finished FAQ or service page needs markup" }
+      ]
+    },
+    {
+      "id": "comparison-pages",
+      "task": "Plan and write comparison, alternatives and best-of pages",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:comparison-page-set-planner", "type": "skill", "use": "brief", "when": "When you must choose which best-of, alternative and versus pages the category needs" },
+        { "ref": "library:publish-comparison-and-best-of-pages-that-shoppers-and-ai-quote", "type": "workflow", "use": "build", "when": "When you have rivals and product facts and want a page plan and a fair best-of page" },
+        { "ref": "library:alternative-page-writer", "type": "skill", "use": "build", "when": "When one rival needs a fair alternative or versus page" },
+        { "ref": "library:best-of-page-writer", "type": "skill", "use": "explore", "when": "When the buyer question is \"best X for Y\", to try a best-of page with real numbers" },
+        { "ref": "library:comparison-table-designer", "type": "skill", "use": "build", "when": "When the page needs a table that helps people choose" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "Before a page that names rivals goes live, to sort each claim into fine, needs proof or cut" }
+      ]
+    },
+    {
+      "id": "product-pages",
+      "task": "Make store product pages ready for AI shopping answers",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:ai-ready-product-page-editor", "type": "skill", "use": "build", "when": "When a product page needs its facts, spec table, FAQs and markup list for AI tools" },
+        { "ref": "library:ai-shortlist-readiness-checker", "type": "skill", "use": "check", "when": "When pages are edited, to check they can be found, matched and chosen, with a score" },
+        { "ref": "library:get-your-store-recommended-by-ai-assistants", "type": "workflow", "use": "explore", "when": "When you want a full run from baseline to page fixes, to compare with your plan" }
+      ]
+    },
+    {
+      "id": "cited-sources",
+      "task": "Map the pages AI cites in the category",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:ai-citation-source-finder", "type": "skill", "use": "build", "when": "When you have five buyer questions and need the sites AI keeps citing, ranked" },
+        { "ref": "library:get-your-store-named-on-the-pages-ai-quotes", "type": "workflow", "use": "build", "when": "When you need the sources cited instead of the client and a plan to get onto them" },
+        { "ref": "kit:skills/ai-answer-visibility-audit", "use": "brief", "when": "When the cited-domains table from the audit is the starting list" }
+      ]
+    },
+    {
+      "id": "earned-outreach",
+      "task": "Get named on the sources AI already cites",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/earned-source-outreach", "use": "build", "when": "Monthly, fed by the cited-domains table and the regular checks" },
+        { "ref": "library:link-and-pr-outreach-planner", "type": "skill", "use": "build", "when": "When you need one plan for links, digital PR and brand mentions" },
+        { "ref": "library:reddit-answer-planner", "type": "skill", "use": "build", "when": "When cited threads are on Reddit, to choose which to answer and what to say" },
+        { "ref": "library:journalist-query-answer-writer", "type": "skill", "use": "build", "when": "When journalist requests fit the client's expertise and need ranked picks and answers" },
+        { "ref": "library:press-outreach-planner", "type": "skill", "use": "build", "when": "When the client has real news and needs a media list and pitch emails" },
+        { "ref": "library:directory-listing-planner", "type": "skill", "use": "build", "when": "When the cited sources are directories and listings the client can simply join" }
+      ]
+    },
+    {
+      "id": "referral-tracking",
+      "task": "Set up tracking for visits and sales from AI tools",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/ai-referral-tracking-setup", "use": "build", "when": "At the start of an engagement, or when a client asks how much business AI brings" },
+        { "ref": "library:ai-traffic-tracking-setup", "type": "skill", "use": "build", "when": "When analytics needs an AI channel and a post-purchase question to catch unseen visits" },
+        { "ref": "library:tracking-plan-builder", "type": "skill", "use": "build", "when": "When events, names and tags must be written down for whoever sets them up" },
+        { "ref": "library:traffic-channel-classifier", "type": "skill", "use": "check", "when": "When visits and orders must be sorted into the same channels every month" }
+      ]
+    },
+    {
+      "id": "vendor-claim-check",
+      "task": "Check an AEO or GEO vendor's claims",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/aeo-vendor-claim-check", "use": "check", "when": "When a client has a proposal, demo or sales email promising AI search results" },
+        { "ref": "library:seo-and-ai-search-agency-vetter", "type": "skill", "use": "check", "when": "When it is an agency proposal and the client needs red flags and questions to send" },
+        { "ref": "library:study-claim-checker", "type": "skill", "use": "check", "when": "When the pitch leans on a study or statistic, to grade the evidence behind it" },
+        { "ref": "library:carl-bergstrom", "type": "mind", "use": "think", "when": "When a number looks impressive and you must ask how it was selected and measured" }
+      ]
+    },
+    {
+      "id": "rival-read",
+      "task": "Read how rivals present themselves to AI and buyers",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:competitor-messaging-comparer", "type": "skill", "use": "build", "when": "When you need rivals' messages and positioning side by side with content gaps" },
+        { "ref": "library:competitor-site-audit", "type": "skill", "use": "build", "when": "When you need what leading sites in the market do well and badly" },
+        { "ref": "library:ai-recommendation-panel-runner", "type": "skill", "use": "brief", "when": "When you need who AI names for the same questions, to see which rivals win and why" }
+      ]
+    },
+    {
+      "id": "visibility-plan",
+      "task": "Write an AI search visibility plan",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/ai-answer-visibility-audit", "use": "brief", "when": "Before the plan, so every action traces to a measured gap" },
+        { "ref": "library:ai-search-platform-checker", "type": "skill", "use": "build", "when": "When you need a score and fix list for each engine, not one blended view" },
+        { "ref": "library:ai-search-visibility-audit", "type": "skill", "use": "build", "when": "When you need what blocks the site in both Google and AI answers, with fixes" },
+        { "ref": "library:category-search-plan-builder", "type": "skill", "use": "build", "when": "When one category needs a 90-day plan of what to publish, where and in what order" },
+        { "ref": "library:rand-fishkin", "type": "mind", "use": "think", "when": "When the plan is all on-site work and ignores where the audience already reads and asks" }
+      ]
+    },
+    {
+      "id": "freshness",
+      "task": "Keep cited pages current and dated",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:content-gap-and-decay-finder", "type": "skill", "use": "build", "when": "When the client has Ahrefs and you need outdated and decaying pages listed" },
+        { "ref": "library:old-content-refresher", "type": "skill", "use": "build", "when": "When you must decide which posts to update, merge or delete and how deep to go" },
+        { "ref": "library:seo-change-tracker", "type": "skill", "use": "check", "when": "After changes, to save the site's state and get warned when tags or pages slip" },
+        { "ref": "kit:workflows/fortnightly-ai-citation-check", "use": "check", "when": "After a refresh, to see in the next round whether the page is cited again" }
+      ]
+    },
+    {
+      "id": "agent-readiness",
+      "task": "Check whether AI agents can use the site",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:agency-marketing-agentic-search-optimizer", "type": "agent", "use": "check", "when": "When you must test if an AI browsing agent can book, buy or sign up on the site" },
+        { "ref": "library:bot-and-ai-agent-access-planner", "type": "skill", "use": "build", "when": "When agents are blocked at login or checkout and you must decide what to allow" },
+        { "ref": "library:internal-link-mapper", "type": "skill", "use": "build", "when": "When key pages are orphans that neither crawlers nor agents reach" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a page or report states a number or fact you cannot trace to the client or a source" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any page or report goes out, to catch typos and names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "seo-specialist", "when": "When rankings, crawling or site structure are the real problem under the AI gaps" },
+    { "role": "link-building-specialist", "when": "When earned-source work turns into a steady link and mention campaign" },
+    { "role": "pr-specialist", "when": "When the brand needs press coverage to be cited at all" },
+    { "role": "content-marketer", "when": "When the plan calls for a run of new guides and original data pieces" },
+    { "role": "marketing-analyst", "when": "When AI referral numbers must be tied to revenue and other channels" },
+    { "role": "local-marketing-specialist", "when": "When a local firm needs listings, reviews and local pages kept up each month" }
+  ],
+  "gaps": [
+    "No library item builds a buyer prompt set and tracking sheet for B2B or local services; the one found is for stores",
+    "No library item codes a batch of AI answers for mentions, links, rivals and errors; only the kit prompt does",
+    "No library item tracks Google AI Overviews or AI Mode on their own",
+    "No library item reads server logs to show which AI crawlers really visited",
+    "No library item covers Wikipedia, Wikidata or knowledge panel work for a brand",
+    "No library item checks name, address and phone consistency across listings for a local firm",
+    "No library item writes local service pages; the page writers found are for stores, SaaS or landing pages",
+    "No library item gives clearly different versions of a fact sheet or About page to compare",
+    "No library item plans a pricing page that states prices and limits clearly enough to be quoted",
+    "No library item plans an original data study or statistics page built to be cited",
+    "No library item reports AI visibility month on month with honest notes on sample size",
+    "No library item tests whether an llms.txt file is read or makes any difference",
+    "No library item checks page markup against the visible page before it ships"
+  ]
+}

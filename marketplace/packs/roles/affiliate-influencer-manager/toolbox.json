@@ -1,0 +1,264 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "affiliate-influencer-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "creator-shortlist",
+      "task": "Find and shortlist creators who fit the brand",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/creator-shortlist-and-outreach", "use": "build", "when": "When a small brand needs the right creators found, scored for fit and ranked" },
+        { "ref": "library:influencer-shortlist-builder", "type": "skill", "use": "build", "when": "When you have a niche and need a first list with follower counts, engagement and fit notes" },
+        { "ref": "library:creator-audience-checker", "type": "skill", "use": "check", "when": "When a creator looks good, to check who their audience is and whether it matches the buyer" },
+        { "ref": "library:creator-profile-teardown-writer", "type": "skill", "use": "brief", "when": "When you need one account's positioning, themes and top posts before you approach them" },
+        { "ref": "library:creator-scouting-team-planner", "type": "skill", "use": "build", "when": "When finding creators must become a weekly routine with roles and a method" }
+      ]
+    },
+    {
+      "id": "creator-outreach",
+      "task": "Write outreach messages creators say yes to",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/creator-outreach-message", "use": "build", "when": "When you have a creator in mind and need a first message and one follow-up in your voice" },
+        { "ref": "kit:skills/creator-shortlist-and-outreach", "use": "brief", "when": "When the message must use the fit notes and offer agreed in the shortlist" },
+        { "ref": "library:stranger-first-message-writer", "type": "skill", "use": "explore", "when": "When you want a different opening that a stranger can answer in one line, to compare" },
+        { "ref": "library:tiktok-creator-outreach-planner", "type": "skill", "use": "build", "when": "When the creators are on TikTok and you need what to offer and how to track replies" },
+        { "ref": "library:one-ask-email-tightener", "type": "prompt", "use": "check", "when": "Before sending, to cut the message to one clear ask the creator can act on" }
+      ]
+    },
+    {
+      "id": "creator-brief",
+      "task": "Write a creator content brief with disclosure wording",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/creator-brief-and-disclosure", "use": "build", "when": "When a creator or affiliate needs a one-page brief with claims, rights and disclosure wording" },
+        { "ref": "library:creator-filming-brief-writer", "type": "skill", "use": "build", "when": "When a script is approved and the creator needs a filming brief, shoot order and file names" },
+        { "ref": "library:five-part-creator-ad-script-writer", "type": "skill", "use": "explore", "when": "When the creator wants a suggested script, to offer five timed parts they can make their own" },
+        { "ref": "library:ad-recall-risk-checker", "type": "skill", "use": "check", "when": "Before the brief goes out, to check viewers will remember the brand and not only the creator" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When the brief lists claims creators may make, to sort each into fine, needs proof or cut" }
+      ]
+    },
+    {
+      "id": "gifting-plan",
+      "task": "Plan product gifting to creators",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:influencer-gifting-planner", "type": "skill", "use": "build", "when": "When you have a product and budget and need the box card, a tracking table and which posts to ask for" },
+        { "ref": "library:creator-gifting-brief", "type": "workflow", "use": "build", "when": "When gifts go out with a phone-video script and a filming brief in the box" },
+        { "ref": "library:creator-ad-roster-builder", "type": "skill", "use": "build", "when": "When gifting should feed a paid roster, with roster size and a pay rule" },
+        { "ref": "library:unboxing-insert-and-gift-planner", "type": "skill", "use": "build", "when": "When the parcel needs an insert card and note with the cost checked against margin" },
+        { "ref": "kit:prompts/commission-ceiling-check", "use": "check", "when": "Before the plan is agreed, to check the cost per gift against what a sale earns" },
+        { "ref": "library:estee-lauder", "type": "mind", "use": "think", "when": "When gifting is spray and pray and should put the sample in the right hands with a reason to try it" }
+      ]
+    },
+    {
+      "id": "creator-pay",
+      "task": "Set a fair fee or commission for a creator",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:creator-pay-planner", "type": "skill", "use": "build", "when": "When a creator asks for a fee and you need a fair flat fee or a floor-plus-commission offer" },
+        { "ref": "kit:prompts/commission-ceiling-check", "use": "check", "when": "Before you offer any fee or rate, or when a partner asks for a higher one" },
+        { "ref": "library:online-store-profit-calculator", "type": "skill", "use": "brief", "when": "When the margin per sale is not known and the ceiling would be a guess" },
+        { "ref": "library:chris-voss", "type": "mind", "use": "think", "when": "When a creator pushes back on the rate and you need to hear their side before you counter" }
+      ]
+    },
+    {
+      "id": "disclosure-check",
+      "task": "Check partner posts for labels, claims and links",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/partner-post-disclosure-check", "use": "check", "when": "When creators or affiliates have posted or sent drafts, before you pay or reuse the content" },
+        { "ref": "kit:skills/creator-brief-and-disclosure", "use": "brief", "when": "When you need the disclosure wording the post should have carried for that platform" },
+        { "ref": "library:ad-and-page-policy-checker", "type": "skill", "use": "check", "when": "When a post will run as a paid ad and must pass platform policy line by line" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When a post makes health, money or results claims the brand cannot prove" }
+      ]
+    },
+    {
+      "id": "affiliate-programme",
+      "task": "Design an affiliate programme the business can afford",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/reward-maths-and-programme-terms", "use": "build", "when": "When you need commission, cookie window, payout rules and terms a small business can afford" },
+        { "ref": "kit:workflows/launch-a-partner-programme", "use": "brief", "when": "When a business starts or restarts a programme and needs the steps in order" },
+        { "ref": "library:referral-program-designer", "type": "skill", "use": "explore", "when": "When you want a second design for rewards and flow to compare with yours" },
+        { "ref": "library:traction-affiliate-programs", "type": "skill", "use": "build", "when": "When the programme should start as one small test with costs and decision rules" },
+        { "ref": "library:partner-deal-setup", "type": "workflow", "use": "build", "when": "When one big partner needs the profit sum and fair terms written out for them" },
+        { "ref": "library:incentive-checker", "type": "skill", "use": "check", "when": "When terms are drafted, to see what partners are really rewarded for and where it pulls wrong" },
+        { "ref": "library:charlie-munger", "type": "mind", "use": "think", "when": "When a reward looks generous, to ask how a partner could earn it without bringing a real sale" }
+      ]
+    },
+    {
+      "id": "commission-ceiling",
+      "task": "Work out the most a sale can pay a partner",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/commission-ceiling-check", "use": "build", "when": "Before you offer any commission, fee or referral reward" },
+        { "ref": "library:online-store-profit-calculator", "type": "skill", "use": "build", "when": "When the client is a shop and you need margin per sale after costs" },
+        { "ref": "library:subscription-unit-economics", "type": "skill", "use": "build", "when": "When the product is a subscription and the ceiling depends on how long customers stay" },
+        { "ref": "library:store-ltv-payback-reader", "type": "skill", "use": "build", "when": "When repeat orders should count and you need lifetime value and payback by cohort" },
+        { "ref": "library:discount-impact-checker", "type": "skill", "use": "check", "when": "When the partner also gets a discount code, to see what the code does to the margin" }
+      ]
+    },
+    {
+      "id": "refer-a-friend",
+      "task": "Design a customer refer-a-friend scheme",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/refer-a-friend-scheme", "use": "build", "when": "When happy customers should bring friends, with rewards you can afford and rules against abuse" },
+        { "ref": "kit:skills/reward-maths-and-programme-terms", "use": "build", "when": "When the reward sizes and terms must be checked against margin" },
+        { "ref": "library:word-of-mouth-planner", "type": "skill", "use": "explore", "when": "When you want other ways to get customers talking, scored, before you settle on a reward" },
+        { "ref": "library:traction-viral-marketing", "type": "skill", "use": "build", "when": "When the scheme should start as a small test with measures and a stop rule" },
+        { "ref": "library:stop-fake-orders-card-testing-and-bot-abuse", "type": "workflow", "use": "check", "when": "When self-referrals and fake orders are a risk and you need fraud rules and a review routine" },
+        { "ref": "library:jonah-berger", "type": "mind", "use": "think", "when": "When the scheme pays people to share but gives them nothing worth saying" }
+      ]
+    },
+    {
+      "id": "partner-kit",
+      "task": "Write the affiliate partner kit",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/affiliate-partner-kit", "use": "build", "when": "When terms are settled and partners need a welcome pack that helps them write and disclose well" },
+        { "ref": "kit:skills/creator-brief-and-disclosure", "use": "build", "when": "When the kit needs approved claims and disclosure wording for each platform" },
+        { "ref": "library:campaign-link-tracker", "type": "skill", "use": "build", "when": "When each partner needs tagged links and codes that match in the store's reports" },
+        { "ref": "library:dull-update-email-rewriter", "type": "prompt", "use": "explore", "when": "When the welcome email is flat, to get a version that leads with what the partner gains" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "Before the kit goes out, to check every claim partners are told they may use" }
+      ]
+    },
+    {
+      "id": "recruit-affiliates",
+      "task": "Recruit affiliates and content partners",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/creator-shortlist-and-outreach", "use": "build", "when": "When you need a ranked list of sites, newsletters and creators worth inviting" },
+        { "ref": "library:prospect-list-builder", "type": "skill", "use": "build", "when": "When partners are businesses and you need a qualified list with the reason for each" },
+        { "ref": "library:own-voice-outreach-writer", "type": "skill", "use": "build", "when": "When each invite and follow-up must sound like the owner and be tied to the partner" },
+        { "ref": "kit:prompts/creator-outreach-message", "use": "explore", "when": "When you want a shorter first message to test against the long invite" }
+      ]
+    },
+    {
+      "id": "programme-review",
+      "task": "Review a programme from its export",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/programme-review-and-payout-check", "use": "build", "when": "When you have a network, tool or store export and need what each partner really brought" },
+        { "ref": "kit:workflows/monthly-programme-run", "use": "brief", "when": "Monthly, timed to finish before the network's validation or lock date" },
+        { "ref": "library:discount-code-comparer", "type": "skill", "use": "build", "when": "When partners use codes and you need redemptions and revenue side by side" },
+        { "ref": "library:discount-payoff-calculator", "type": "skill", "use": "check", "when": "When a code looks busy, to see its real return against the margin given away" },
+        { "ref": "library:utm-revenue-reader", "type": "skill", "use": "build", "when": "When partners use tagged links and you need revenue and orders by source" },
+        { "ref": "library:post-purchase-survey-reader", "type": "skill", "use": "check", "when": "When the export and what customers say disagree, to find over-credited partners" }
+      ]
+    },
+    {
+      "id": "payout-check",
+      "task": "Check payouts before they are approved",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/programme-review-and-payout-check", "use": "check", "when": "When commissions are due and returns, self-purchases and duplicates must come out first" },
+        { "ref": "kit:workflows/monthly-programme-run", "use": "build", "when": "When the check is one step in the month's run before the lock date" },
+        { "ref": "library:payout-reconciler", "type": "skill", "use": "check", "when": "When each payout must be matched to the orders that funded it, with gaps flagged" },
+        { "ref": "library:old-discount-code-cleaner", "type": "skill", "use": "build", "when": "When partners who left still have live codes that should be switched off" }
+      ]
+    },
+    {
+      "id": "tracking-setup",
+      "task": "Set up links, codes and tracking for partners",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:campaign-link-tracker", "type": "skill", "use": "build", "when": "When you need tagged links, match rules and a naming plan before partners go live" },
+        { "ref": "library:tracking-plan-builder", "type": "skill", "use": "build", "when": "When events, names and tags must be written down for whoever sets them up" },
+        { "ref": "library:attribution-model-chooser", "type": "skill", "use": "brief", "when": "When partner sales overlap with ads and email and you must agree how credit is split" }
+      ]
+    },
+    {
+      "id": "partnership-pitch",
+      "task": "Pitch a partnership to another business",
+      "kind": "email",
+      "items": [
+        { "ref": "library:partner-campaign-planner", "type": "skill", "use": "build", "when": "When you need partner ideas and a joint campaign plan with a pitch you can send" },
+        { "ref": "library:traction-business-development", "type": "skill", "use": "brief", "when": "When you must first test whether partnerships are worth the time, with costs and measures" },
+        { "ref": "library:partner-deal-setup", "type": "workflow", "use": "build", "when": "When the partner is interested and needs the profit sum and terms in writing" },
+        { "ref": "library:stranger-first-message-writer", "type": "skill", "use": "explore", "when": "When you want a short cold opening to compare with the full pitch" },
+        { "ref": "library:one-ask-email-tightener", "type": "prompt", "use": "check", "when": "Before sending, to cut the pitch to one clear ask" },
+        { "ref": "library:jay-abraham", "type": "mind", "use": "think", "when": "When you are pitching what you want and should start from who already has your buyers" }
+      ]
+    },
+    {
+      "id": "sponsorship-decision",
+      "task": "Decide whether a paid sponsorship is worth it",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:build-a-clear-sponsorship-decision-brief", "type": "workflow", "use": "build", "when": "When a creator, newsletter or podcast quotes a price and you need cost, fit and a decision" },
+        { "ref": "library:creator-audience-checker", "type": "skill", "use": "check", "when": "Before paying, to check the audience is who the seller says it is" },
+        { "ref": "library:creator-pay-planner", "type": "skill", "use": "brief", "when": "When you need a fair number to counter with" }
+      ]
+    },
+    {
+      "id": "creator-content-ads",
+      "task": "Turn creator content into paid ads",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:turn-your-best-organic-posts-and-creator-videos-into-meta-ads", "type": "workflow", "use": "build", "when": "When creator videos have views and you want ranked posts and checked scripts for ads" },
+        { "ref": "library:tiktok-spark-ad-picker", "type": "skill", "use": "build", "when": "When posts are on TikTok and you must choose which to boost as partnered ads" },
+        { "ref": "kit:skills/creator-brief-and-disclosure", "use": "check", "when": "Before any reuse, to confirm the brief gave usage rights for paid ads and for how long" }
+      ]
+    },
+    {
+      "id": "tiktok-shop-affiliates",
+      "task": "Run affiliates on TikTok Shop",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:tiktok-shop-affiliate-planner", "type": "skill", "use": "build", "when": "When you need commission set-up, a creator outreach plan and sample rules for the shop" },
+        { "ref": "library:tiktok-shop-results-reader", "type": "skill", "use": "check", "when": "When you need to see which creators, videos and live shows made sales" },
+        { "ref": "kit:prompts/commission-ceiling-check", "use": "check", "when": "Before setting open and targeted rates, to keep them under what a sale can pay" }
+      ]
+    },
+    {
+      "id": "creator-programme",
+      "task": "Plan a creator programme from scratch",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:workflows/launch-a-partner-programme", "use": "build", "when": "When a business wants a creator programme, an affiliate programme or both" },
+        { "ref": "library:creator-partnership-planner", "type": "skill", "use": "build", "when": "When you need one plan to find creators, set deals, brief them and track results" },
+        { "ref": "library:customer-content-planner", "type": "skill", "use": "explore", "when": "When customers might post for you, to compare that route with paid creators" },
+        { "ref": "library:clipper-program-planner", "type": "skill", "use": "explore", "when": "When long videos exist and paying people per clip could beat paying per post" },
+        { "ref": "library:opus-clip", "type": "tool", "use": "build", "when": "When long recordings must be cut into captioned clips for partners to post" }
+      ]
+    },
+    {
+      "id": "creator-agreement",
+      "task": "Review a creator or affiliate agreement",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:contract-risk-reviewer", "type": "skill", "use": "check", "when": "When a creator or network sends a contract and you need key clauses and risks rated" },
+        { "ref": "kit:skills/creator-brief-and-disclosure", "use": "brief", "when": "When usage rights, review steps and timelines in the brief must match the agreement" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any brief or kit that must look and sound like the client" },
+    { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When anything partners will repeat states a result or number you cannot trace to proof" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a brief, kit or terms go to partners, to catch typos and names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "ad-creative-strategist", "when": "When creator videos need scripts, hooks and a test plan as paid ads" },
+    { "role": "meta-media-buyer", "when": "When partnered content must be run and budgeted in an ad account" },
+    { "role": "tiktok-shop-manager", "when": "When the programme runs inside TikTok Shop with listings and live shows" },
+    { "role": "bookkeeper", "when": "When payouts must be posted and reconciled in the books" },
+    { "role": "compliance-specialist", "when": "When disclosure, tax forms or contract terms need a rules check" },
+    { "role": "marketing-analyst", "when": "When partner sales must be untangled from ads and email" }
+  ],
+  "gaps": [
+    "No library item writes disclosure wording by platform and country or checks a post's label; only the kit covers it",
+    "No library item writes affiliate programme terms: cookie window, payout rules, banned methods and ending the deal",
+    "No library item reviews an affiliate network export for returns, self-purchases and coupon-site poaching",
+    "No library item writes a creator agreement or usage-rights terms; the contract reviewers found are general",
+    "No library item checks a creator for fake followers or bought engagement",
+    "No library item gives a rate card or benchmark for creator fees by platform and audience size",
+    "No library item writes a partner welcome kit or a monthly partner newsletter",
+    "No library item recruits affiliates such as review sites, newsletters and coupon partners",
+    "No library item checks a refer-a-friend scheme for abuse before launch",
+    "No library item tests whether partner sales would have happened anyway",
+    "No library item gives clearly different creator briefs or gifting plans to compare"
+  ]
+}

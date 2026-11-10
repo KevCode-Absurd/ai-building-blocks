@@ -1,0 +1,298 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "conversion-copywriter",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "landing-page",
+      "task": "Write or rewrite a landing page for one action",
+      "kind": "web_page",
+      "items": [
+        { "ref": "kit:workflows/research-to-landing-page", "use": "brief", "when": "When a client needs a new page, or a page gets visits but too few sign-ups or sales" },
+        { "ref": "kit:prompts/awareness-and-sophistication-read", "use": "brief", "when": "Before any writing, to decide where the page should start for this reader" },
+        { "ref": "library:page-type-and-layout-planner", "type": "skill", "use": "brief", "when": "When several ads or buyer groups feed the page, to pick the page type and section order" },
+        { "ref": "kit:skills/landing-page-copy", "use": "build", "when": "When the research is in and you need the full page written for one action" },
+        { "ref": "library:ad-matched-landing-page-writer", "type": "skill", "use": "build", "when": "When the traffic comes from one ad and the page must pick up where the ad left off" },
+        { "ref": "kit:prompts/headline-and-lead-options", "use": "explore", "when": "When you want several headlines and openings, each with a reason it fits this reader" },
+        { "ref": "library:landing-page-auditor", "type": "skill", "use": "check", "when": "When the page is drafted or live, to rank the conversion problems and get fixes" }
+      ]
+    },
+    {
+      "id": "website-pages",
+      "task": "Write homepage, service and about page copy",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:page-copywriter", "type": "skill", "use": "build", "when": "When you need a homepage or service page with headline, sections and buttons" },
+        { "ref": "library:brand-origin-story-writer", "type": "skill", "use": "build", "when": "When the about page reads like a CV and should tell how and why the business started" },
+        { "ref": "library:top-of-page-headline-writer", "type": "prompt", "use": "explore", "when": "When the top of a page is vague, to get five headlines with a subhead, button and proof" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a line could sit on any rival's site, to test it and get a true, picturable rewrite" },
+        { "ref": "library:joanna-wiebe", "type": "mind", "use": "think", "when": "When the page sounds like the company wrote it and should use the customer's own words" }
+      ]
+    },
+    {
+      "id": "voice-of-customer",
+      "task": "Mine reviews, tickets and calls for customers' own words",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/voice-of-customer-mining", "use": "build", "when": "When you have reviews, survey answers, call notes or tickets and need a sorted word bank" },
+        { "ref": "library:customer-research-analyst", "type": "skill", "use": "build", "when": "When the raw material is long interviews or surveys and you need patterns and buyer types" },
+        { "ref": "library:switch-story-mapper", "type": "skill", "use": "build", "when": "When you have notes from recent buyers, to map what pushed, pulled and held them back" }
+      ]
+    },
+    {
+      "id": "buyer-research-plan",
+      "task": "Plan interviews and surveys to learn why people buy",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:buying-story-interview-guide", "type": "skill", "use": "build", "when": "When you can talk to five to eight recent buyers and need a script from first thought to use" },
+        { "ref": "library:post-purchase-survey-builder", "type": "skill", "use": "build", "when": "When a store can ask buyers right after checkout what nearly stopped them" },
+        { "ref": "kit:skills/voice-of-customer-mining", "use": "build", "when": "When the answers come back and must be sorted into wants, worries and exact phrases" }
+      ]
+    },
+    {
+      "id": "headlines-leads",
+      "task": "Write headline and opening options",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:market-stage-reader", "type": "skill", "use": "brief", "when": "Before headlines, to learn what buyers already know and which claims are worn out" },
+        { "ref": "kit:prompts/headline-and-lead-options", "use": "explore", "when": "When you need options tied to a formula and a reason, not a list of clever lines" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When you want more angles on the same promise, without clickbait" },
+        { "ref": "library:headline-test", "type": "workflow", "use": "check", "when": "When there are several good headlines and a small keyed test should pick the winner" }
+      ]
+    },
+    {
+      "id": "sales-page",
+      "task": "Write a long-form sales page or sales letter",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:sales-letter-outline", "type": "workflow", "use": "brief", "when": "Before drafting, to sort the research, pick the feeling to write to and outline the letter" },
+        { "ref": "library:big-idea-and-mechanism-builder", "type": "skill", "use": "explore", "when": "When the product sounds like every rival, to find a big idea and a named reason it works" },
+        { "ref": "library:direct-response-copywriter", "type": "skill", "use": "build", "when": "When the outline is agreed and you need the full sales page drafted" },
+        { "ref": "kit:prompts/objection-and-proof-map", "use": "brief", "when": "Before the body, to pair each doubt the letter must answer with its proof" },
+        { "ref": "library:gary-halbert", "type": "mind", "use": "think", "when": "When the letter reads like a brochure and should sound like one person writing to another" },
+        { "ref": "library:sales-copy-reviewer", "type": "skill", "use": "check", "when": "When the draft is done, for a direct-response critique of the weakest parts" }
+      ]
+    },
+    {
+      "id": "sales-email-sequence",
+      "task": "Write a welcome, nurture or follow-up email sequence",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/sales-email-sequence", "use": "build", "when": "When you need a short sequence from new subscriber, enquiry or trial to first purchase" },
+        { "ref": "library:write-a-welcome-email-sequence-that-teaches-then-sells", "type": "workflow", "use": "build", "when": "When the list is new and five emails should teach first, then sell, with a review built in" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When you want subject lines in several angles for each email to test" },
+        { "ref": "library:email-sequence-auditor", "type": "skill", "use": "check", "when": "When a sequence is live with numbers, to see which emails to protect and which to fix" }
+      ]
+    },
+    {
+      "id": "launch-emails",
+      "task": "Write launch or promotional emails for one offer",
+      "kind": "email",
+      "items": [
+        { "ref": "library:launch-email-sequence-planner", "type": "skill", "use": "brief", "when": "When there is a launch with a close date and you need the full run of emails planned" },
+        { "ref": "library:honest-urgency-planner", "type": "skill", "use": "brief", "when": "When the offer needs a deadline or limit that is real, and the lines to say it" },
+        { "ref": "library:campaign-email-writer", "type": "skill", "use": "build", "when": "When you need one promotional email written block by block with subject lines" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the email is written and you want subject lines that take different angles" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When an email is drafted, to get cuts, a pacing map and a ship or fix verdict" }
+      ]
+    },
+    {
+      "id": "copy-review",
+      "task": "Review existing copy and rank what to fix",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/copy-review-and-test-plan", "use": "check", "when": "When a page, email or ad underperforms and you need ranked problems, rewrites and a test plan" },
+        { "ref": "library:marketing-copy-sweeper", "type": "skill", "use": "check", "when": "When the copy is sound but loose, to tighten it in set passes for clarity, proof and asks" },
+        { "ref": "library:honest-persuasion-editor", "type": "skill", "use": "check", "when": "When the copy leans on pressure, to see which levers are true and which are fake" },
+        { "ref": "library:landing-page-auditor", "type": "skill", "use": "check", "when": "When the piece is a page and you have screenshots, to score it and rank the fixes" },
+        { "ref": "library:eugene-schwartz", "type": "mind", "use": "think", "when": "When the copy is well written but starts in the wrong place for what the buyer knows" }
+      ]
+    },
+    {
+      "id": "objections-faq",
+      "task": "Map objections and write the FAQ or doubt section",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/objection-and-proof-map", "use": "brief", "when": "When people show interest but hesitate, to pair each doubt with the proof that answers it" },
+        { "ref": "library:objection-answer-sheet-writer", "type": "skill", "use": "build", "when": "When you have the list of doubts and need a written answer with proof for each" },
+        { "ref": "library:social-proof-placer", "type": "skill", "use": "build", "when": "When you have testimonials and numbers and must choose which to show beside which doubt" },
+        { "ref": "library:hardest-objections-answer-writer", "type": "skill", "use": "check", "when": "When the answers feel too easy, to face the toughest objections and admit real limits" },
+        { "ref": "library:gary-bencivenga", "type": "mind", "use": "think", "when": "When the promise is big and the reader will not believe it without stronger proof" }
+      ]
+    },
+    {
+      "id": "offer-guarantee",
+      "task": "Sharpen the offer and word the guarantee",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/offer-and-risk-reversal", "use": "build", "when": "When the copy is fine but the deal is weak or feels risky to the buyer" },
+        { "ref": "library:offer-designer", "type": "skill", "use": "build", "when": "When the offer needs rebuilding: value, bonuses, guarantee, name and payment terms" },
+        { "ref": "library:guarantee-designer", "type": "skill", "use": "build", "when": "When you must pick a guarantee the client can afford, with the refund sums worked out" },
+        { "ref": "library:honest-urgency-planner", "type": "skill", "use": "build", "when": "When the offer has no reason to act now and needs a limit that is true" },
+        { "ref": "library:offer-checklist-reviewer", "type": "skill", "use": "check", "when": "When the offer is drafted, to score it and get three changes to test first" }
+      ]
+    },
+    {
+      "id": "claim-check",
+      "task": "Check claims, reviews and urgency before copy ships",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/claim-and-review-check", "use": "check", "when": "Before any copy ships, to catch unproven claims, misleading reviews and false urgency" },
+        { "ref": "library:claim-and-proof-matcher", "type": "skill", "use": "check", "when": "When you hold the evidence, to see which claims it supports and which go too far" },
+        { "ref": "library:ad-and-page-policy-checker", "type": "skill", "use": "check", "when": "When the copy runs as an ad or feeds one, to flag ad platform policy risks line by line" }
+      ]
+    },
+    {
+      "id": "copy-test",
+      "task": "Plan a copy test and read the result",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/copy-test-cycle", "use": "build", "when": "When one change is ready to test and you need the cycle from hypothesis to decision" },
+        { "ref": "library:ab-test-traffic-checker", "type": "skill", "use": "check", "when": "Before a test, to see whether the page has enough visits and how many weeks it needs" },
+        { "ref": "library:a-b-test-verdict-maker", "type": "skill", "use": "check", "when": "When the test has run, to check the split and get a ship or keep call with ranges" }
+      ]
+    },
+    {
+      "id": "optin-page",
+      "task": "Pick a lead magnet and write its opt-in page",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:lead-magnet-planner", "type": "skill", "use": "explore", "when": "When the client has no free offer yet, to compare ideas and pick the best one" },
+        { "ref": "library:conversion-page-writer", "type": "skill", "use": "build", "when": "When the magnet is chosen and you need the short signup page written" },
+        { "ref": "library:coupon-and-form-fixer", "type": "skill", "use": "check", "when": "When the form asks too much, to cut it to what you need and sell the offer" },
+        { "ref": "library:landing-page-auditor", "type": "skill", "use": "check", "when": "When the opt-in page is drafted, to rank what would stop a visitor signing up" }
+      ]
+    },
+    {
+      "id": "funnel-map",
+      "task": "Map a lead funnel from first click to first sale",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:funnel-flow-planner", "type": "skill", "use": "build", "when": "When you need the path from page to free offer to emails to sale on one page" },
+        { "ref": "kit:skills/sales-email-sequence", "use": "build", "when": "When the map is agreed and the emails between sign-up and sale need writing" },
+        { "ref": "library:leaky-funnel-fixer", "type": "skill", "use": "check", "when": "When a funnel is live, to rank where people drop out and what to test first" }
+      ]
+    },
+    {
+      "id": "quiz-funnel",
+      "task": "Write a quiz funnel with results and follow-ups",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:quiz-funnel-builder", "type": "skill", "use": "build", "when": "When a quiz should sort people, capture the lead and point each to the right offer" },
+        { "ref": "kit:skills/sales-email-sequence", "use": "build", "when": "When each quiz result needs its own short follow-up emails" },
+        { "ref": "kit:prompts/headline-and-lead-options", "use": "explore", "when": "When the quiz needs several titles and opening lines to choose from" }
+      ]
+    },
+    {
+      "id": "advertorial",
+      "task": "Write an advertorial for cold traffic",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:advertorial-angle-and-format-picker", "type": "skill", "use": "explore", "when": "Before writing, to rank angles and pick a format for each kind of cold reader" },
+        { "ref": "library:store-advertorial-writer", "type": "skill", "use": "build", "when": "When the angle and facts are set and you need the full piece, labelled as an ad" },
+        { "ref": "library:advertorial-story-and-belief-checker", "type": "skill", "use": "check", "when": "When the story may turn pitchy too soon, to mark each spot and score it" }
+      ]
+    },
+    {
+      "id": "ad-copy",
+      "task": "Write ad copy that matches the page it leads to",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:ad-opening-line-batch-writer", "type": "prompt", "use": "explore", "when": "When you need ten different opening lines, each with the line that follows" },
+        { "ref": "library:meta-ad-copywriter", "type": "skill", "use": "build", "when": "When the client needs Facebook and Instagram ad text and hooks ready to test" },
+        { "ref": "library:ad-and-page-match-checker", "type": "skill", "use": "check", "when": "When the ad and page exist, to score how well they match and list the gaps" }
+      ]
+    },
+    {
+      "id": "product-page",
+      "task": "Write a product page that answers buyers' doubts",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:product-page-section-planner", "type": "skill", "use": "brief", "when": "Before writing, to choose the sections that answer this product's main doubts" },
+        { "ref": "kit:skills/landing-page-copy", "use": "build", "when": "When the product page works as a sales page for one product and one action" },
+        { "ref": "library:top-of-page-headline-writer", "type": "prompt", "use": "explore", "when": "When the product's first screen needs five headlines with a subhead and button" },
+        { "ref": "library:product-page-auditor", "type": "skill", "use": "check", "when": "When the page is live, to rank changes to proof, buttons, options and price" }
+      ]
+    },
+    {
+      "id": "message-value-prop",
+      "task": "Set the value proposition and core message",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:positioning-idea-generator", "type": "skill", "use": "explore", "when": "When you want several ways to stand apart, each with a statement and a reason" },
+        { "ref": "library:value-proposition-builder", "type": "skill", "use": "build", "when": "When you need one value proposition built from the offer and customer facts" },
+        { "ref": "kit:prompts/awareness-and-sophistication-read", "use": "brief", "when": "Before you choose, to read how much buyers know and how tired the market's claims are" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When the message is one line, to test whether it is true, specific and easy to picture" }
+      ]
+    },
+    {
+      "id": "comparison-page",
+      "task": "Write a comparison, alternative or pricing page",
+      "kind": "web_page",
+      "items": [
+        { "ref": "kit:prompts/objection-and-proof-map", "use": "brief", "when": "Before the page, to list the doubts it must answer beside each plan or rival" },
+        { "ref": "library:alternative-page-writer", "type": "skill", "use": "build", "when": "When buyers search for a rival and you need a fair page that still makes the case" },
+        { "ref": "kit:prompts/headline-and-lead-options", "use": "explore", "when": "When the page needs several ways to open that do not attack the rival" },
+        { "ref": "library:claim-and-proof-matcher", "type": "skill", "use": "check", "when": "When the page makes claims about a rival, to check each one against evidence" }
+      ]
+    },
+    {
+      "id": "video-sales-script",
+      "task": "Script a video sales letter or long video ad",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:vsl-ad-scripter", "type": "skill", "use": "build", "when": "When the offer needs a seven-part sales video script with hooks and short cuts" },
+        { "ref": "kit:prompts/headline-and-lead-options", "use": "explore", "when": "When the first fifteen seconds need several openings to choose from" },
+        { "ref": "library:video-ad-bridge-checker", "type": "skill", "use": "check", "when": "When the script is drafted, to find where it sells too early and tighten it" }
+      ]
+    },
+    {
+      "id": "proof-assets",
+      "task": "Gather testimonials and outline a case study",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:testimonial-request-writer", "type": "skill", "use": "build", "when": "When the client has happy customers but no quotes, to ask with three easy questions" },
+        { "ref": "library:turn-a-customer-interview-into-a-case-outline", "type": "workflow", "use": "build", "when": "When you have one customer interview and need a case outline and approval list" },
+        { "ref": "library:social-proof-placer", "type": "skill", "use": "brief", "when": "When you must decide which proof the pages still lack before you ask for it" },
+        { "ref": "kit:prompts/claim-and-review-check", "use": "check", "when": "Before a quote or result is published, to check it is real, typical and approved" }
+      ]
+    },
+    {
+      "id": "edit-voice",
+      "task": "Tighten a draft and match the client's voice",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:brand-voice-guide-builder", "type": "skill", "use": "brief", "when": "When the client has no voice rules, to build them from their own documents and calls" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "build", "when": "When the draft uses long or insider words, to get it back plain with each cut explained" },
+        { "ref": "library:ten-percent-cutter", "type": "skill", "use": "build", "when": "When the copy runs long and must lose a tenth without losing the point" },
+        { "ref": "library:marketing-copy-sweeper", "type": "skill", "use": "check", "when": "When the draft is close, for set passes on clarity, voice, proof and calls to action" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:copy-foundation-docs-builder", "type": "skill", "use": "brief", "when": "At the start of a new client, to build a research doc, buyer sheet and offer brief to reuse" },
+    { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "Before any copy goes to the client, to fix each line that sounds machine-written" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When the copy states a number or fact you cannot trace to the client's own material" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before delivery, to catch typos and product names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "cro-specialist", "when": "When the test needs tracking set up, traffic split or results read from analytics" },
+    { "role": "customer-insights-researcher", "when": "When the job needs real interviews or a survey run, not only mining what exists" },
+    { "role": "email-marketing-specialist", "when": "When the emails must be built as flows with segments, timing and inbox checks" },
+    { "role": "website-designer", "when": "When the page needs layout, images and a build, not only the words" },
+    { "role": "advertising-copywriter", "when": "When the job is a full ad campaign across formats, not ads for one page" },
+    { "role": "pricing-strategist", "when": "When the weak point is the price or the plan structure, not how it is worded" }
+  ],
+  "gaps": [
+    "No library item writes a thank-you or confirmation page that sets up the next step after sign-up or purchase",
+    "No library item writes pricing page copy: plan names, who each plan is for and the lines beside each price",
+    "No library item checks a quiz funnel's questions and result pages before launch, or offers different quiz concepts",
+    "No library item gives clearly different openings for a video sales letter; only the kit's headline prompt covers it",
+    "No library item writes a full customer case study from interview notes; the library stops at an outline",
+    "No library item scores reading level for sales copy and marks the lines that are too hard",
+    "No library item writes webinar registration page copy or a webinar pitch script",
+    "No library item writes checkout and order form copy: trust lines, order summary and button words",
+    "No library item offers different whole-page concepts for a homepage or service page; only headline options exist",
+    "The 70-item limit left out good fits: comment mining, cart and win-back email copy, popups and comparison tables"
+  ]
+}

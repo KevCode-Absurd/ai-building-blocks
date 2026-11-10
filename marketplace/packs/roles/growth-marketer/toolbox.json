@@ -1,0 +1,247 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "growth-marketer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "growth-model",
+      "task": "Turn a vague goal into a growth model",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/goal-to-growth-model", "use": "build", "when": "At the start of any growth job, to get one dated goal and the funnel steps behind it" },
+        { "ref": "kit:skills/funnel-and-retention-diagnosis", "use": "build", "when": "When you have the numbers and need the step that limits growth found" },
+        { "ref": "library:growth-engine-finder", "type": "skill", "use": "brief", "when": "When it is unclear how customers arrive, to name the engine and its key rate" },
+        { "ref": "library:input-metric-picker", "type": "skill", "use": "build", "when": "When the goal is a result nobody controls, to pick the inputs the team can move" }
+      ]
+    },
+    {
+      "id": "unit-economics",
+      "task": "Work out unit economics and the CAC limit",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/unit-economics-and-cac-limit", "use": "build", "when": "Before any test, to get margin, cost to win a customer, payback and the most you can pay" },
+        { "ref": "library:customer-value-spend-limit", "type": "skill", "use": "check", "when": "When you have sales by customer type and source, to check what a customer is worth" },
+        { "ref": "library:cac-payback-checker", "type": "skill", "use": "check", "when": "When cohort profit is known, to get profit to cost ratios and a scale-or-fix call" },
+        { "ref": "library:set-your-cac-limit-and-test-what-ads-really-add", "type": "workflow", "use": "build", "when": "When paid ads are in the mix and you must test what they really add" }
+      ]
+    },
+    {
+      "id": "channel-ranking",
+      "task": "Rank all 19 channels and pick three to test",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:traction-business-profiler", "type": "skill", "use": "brief", "when": "Before ranking, to set down the buyer, offer, goal and the facts still missing" },
+        { "ref": "library:traction-channel-ranker", "type": "skill", "use": "build", "when": "When you need all 19 channels compared and a short list of small tests" },
+        { "ref": "library:find-your-business-growth-channel", "type": "workflow", "use": "build", "when": "When it is a shop or local service and you want a guided run to three small tests" },
+        { "ref": "library:launch-channel-picker", "type": "skill", "use": "check", "when": "When you want a second opinion on the best way to reach these buyers first" }
+      ]
+    },
+    {
+      "id": "channel-tests-online",
+      "task": "Design a cheap test for an online channel",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/growth-experiment-design", "use": "build", "when": "When a channel idea must become a test that ends in a decision" },
+        { "ref": "library:traction-search-engine-marketing", "type": "skill", "use": "build", "when": "When the test is search ads, to set its cost, measures and decision rules" },
+        { "ref": "library:traction-social-and-display-ads", "type": "skill", "use": "build", "when": "When the test is social or display ads" },
+        { "ref": "library:traction-search-engine-optimization", "type": "skill", "use": "build", "when": "When the test is ranking in search for what buyers look up" },
+        { "ref": "library:traction-content-marketing", "type": "skill", "use": "build", "when": "When the test is articles, guides or video that buyers find useful" },
+        { "ref": "library:traction-email-marketing", "type": "skill", "use": "build", "when": "When the test is email to people who already signed up or bought" },
+        { "ref": "library:traction-existing-platforms", "type": "skill", "use": "build", "when": "When the test is a marketplace, app store or social platform buyers already use" }
+      ]
+    },
+    {
+      "id": "channel-tests-relationship",
+      "task": "Design a cheap test for a sales or partner channel",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/experiment-card-and-sizing", "use": "check", "when": "Before the test goes live, to check it can give a decision and write the card" },
+        { "ref": "library:traction-sales", "type": "skill", "use": "build", "when": "When the test is direct outreach and sales calls" },
+        { "ref": "library:traction-business-development", "type": "skill", "use": "build", "when": "When the test is a partnership with a firm that already has the buyers" },
+        { "ref": "library:traction-affiliate-programs", "type": "skill", "use": "build", "when": "When the test is paying others a share for each sale they bring" },
+        { "ref": "library:traction-community-building", "type": "skill", "use": "build", "when": "When the test is a group or forum of buyers who help each other" },
+        { "ref": "library:traction-viral-marketing", "type": "skill", "use": "build", "when": "When the test is customers inviting other customers" },
+        { "ref": "library:traction-public-relations", "type": "skill", "use": "build", "when": "When the test is press coverage in outlets buyers read" }
+      ]
+    },
+    {
+      "id": "channel-tests-offline",
+      "task": "Design a cheap test for an offline or niche channel",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:traction-trade-shows", "type": "skill", "use": "build", "when": "When the test is a stand or visit at a trade show" },
+        { "ref": "library:traction-offline-events", "type": "skill", "use": "build", "when": "When the test is a small event, meet-up or open day for buyers" },
+        { "ref": "library:traction-speaking-engagements", "type": "skill", "use": "build", "when": "When the test is a talk to a room of likely buyers" },
+        { "ref": "library:traction-offline-ads", "type": "skill", "use": "build", "when": "When the test is flyers, local radio, print or outdoor ads in one area" },
+        { "ref": "library:traction-targeting-blogs", "type": "skill", "use": "build", "when": "When the test is a niche blog or newsletter the buyers already read" },
+        { "ref": "library:traction-unconventional-pr", "type": "skill", "use": "build", "when": "When the test is a stunt or a customer gesture worth talking about" },
+        { "ref": "library:traction-engineering-as-marketing", "type": "skill", "use": "build", "when": "When the test is a free tool or calculator that brings in leads" }
+      ]
+    },
+    {
+      "id": "experiment-design",
+      "task": "Design an experiment and size it",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/growth-experiment-design", "use": "build", "when": "When a growth idea needs a hypothesis, a metric, a pass mark and a stop rule" },
+        { "ref": "kit:prompts/experiment-card-and-sizing", "use": "build", "when": "Before any page, email, offer or price test, to write the card the client approves" },
+        { "ref": "library:growth-idea-ranker", "type": "skill", "use": "brief", "when": "When there are too many ideas, to score each and pick the first three to test" },
+        { "ref": "library:ab-test-traffic-checker", "type": "skill", "use": "check", "when": "When the test is a split test, to see if there is enough traffic to get an answer" },
+        { "ref": "library:experiment-readout-desk", "type": "agent", "use": "check", "when": "When tests start and end often and each needs a readiness check and an honest verdict" },
+        { "ref": "library:eric-ries", "type": "mind", "use": "think", "when": "When a plan is full of guesses, to find the riskiest one and test it first" }
+      ]
+    },
+    {
+      "id": "funnel-tracker",
+      "task": "Build a funnel or lead source tracker",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/funnel-and-retention-diagnosis", "use": "build", "when": "When you need each funnel step counted and the weakest step named" },
+        { "ref": "library:cohort-funnel-reader", "type": "skill", "use": "build", "when": "When you have signup or order cohorts and need the funnel read group by group" },
+        { "ref": "library:lead-source-field-checker", "type": "skill", "use": "check", "when": "When a local firm cannot tell which marketing brings leads, to check its records" },
+        { "ref": "library:weekly-product-funnel-watcher", "type": "agent", "use": "check", "when": "When the funnel should be watched every week so a drop is caught early" }
+      ]
+    },
+    {
+      "id": "weekly-review",
+      "task": "Run the weekly growth review",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/weekly-growth-review", "use": "build", "when": "Every week, same day, to review live tests and decide keep, change or stop" },
+        { "ref": "kit:prompts/weekly-growth-review-memo", "use": "build", "when": "Before the growth meeting, to turn the week's exports into a one-page memo" },
+        { "ref": "library:traction-experiment-reviewer", "type": "skill", "use": "check", "when": "When a channel test has results, for a focus, revise, stop or wait decision" },
+        { "ref": "library:traction-experiment-keeper", "type": "agent", "use": "build", "when": "When channel tests run for weeks and need a dated decision log" }
+      ]
+    },
+    {
+      "id": "ninety-day-plan",
+      "task": "Write the 90-day plan for the winning channel",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/ninety-day-growth-plan", "use": "build", "when": "When a channel has won, or a plan has grown too big to follow" },
+        { "ref": "library:90-day-plan-builder", "type": "skill", "use": "build", "when": "When the decision is made and needs twelve weeks of owners, check-ins and risks" },
+        { "ref": "library:plan-pre-mortem-runner", "type": "skill", "use": "check", "when": "When the plan is written, to imagine it failed and find the weak assumptions" }
+      ]
+    },
+    {
+      "id": "customer-interviews",
+      "task": "Interview customers and build a buyer profile",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/customer-interview-guide", "use": "build", "when": "Before choosing a segment or channel, when nobody can say why people buy" },
+        { "ref": "library:interview-customers-and-map-what-they-hire-you-to-do", "type": "workflow", "use": "build", "when": "When you want questions first, then a profile, jobs and path from your notes" },
+        { "ref": "library:build-a-buyer-profile-from-interviews-and-reviews", "type": "workflow", "use": "build", "when": "When there are orders and reviews to draw on as well as interviews" }
+      ]
+    },
+    {
+      "id": "first-customers",
+      "task": "Plan how to win the first ten customers",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:first-customer-group-picker", "type": "skill", "use": "explore", "when": "When several groups might want it, to compare them and pick one to talk to first" },
+        { "ref": "library:beachhead-market-picker", "type": "skill", "use": "build", "when": "When there are early users, to choose one starting segment and the path beyond it" },
+        { "ref": "library:first-customers-by-hand-planner", "type": "skill", "use": "build", "when": "When the first customers must be won one by one, with what to learn from each" },
+        { "ref": "library:offer-designer", "type": "skill", "use": "build", "when": "When early customers need a pilot offer with clear terms and a reason to say yes" }
+      ]
+    },
+    {
+      "id": "marketing-plan",
+      "task": "Cut a sprawling marketing plan to one goal",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:one-goal-marketing-plan-builder", "type": "skill", "use": "build", "when": "When the plan has many tactics, to get one numbered goal and a test calendar" },
+        { "ref": "library:check-your-strategy-then-turn-it-into-a-90-day-plan", "type": "workflow", "use": "check", "when": "When you review an existing plan, to find what is hollow before rebuilding it" },
+        { "ref": "library:mark-ritson", "type": "mind", "use": "think", "when": "When the plan starts with tactics before a target and a goal are chosen" }
+      ]
+    },
+    {
+      "id": "budget-split",
+      "task": "Split the marketing budget across channels",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:channel-budget-mix-planner", "type": "skill", "use": "build", "when": "When you have spend by channel and margin, for a target split and caps" },
+        { "ref": "library:channel-decay-checker", "type": "skill", "use": "check", "when": "When a channel that worked is fading, to see why and what to refresh" },
+        { "ref": "library:monthly-channel-budget-reviewer", "type": "agent", "use": "check", "when": "When the split should be reviewed monthly against the store's own totals" },
+        { "ref": "kit:skills/unit-economics-and-cac-limit", "use": "check", "when": "Before adding budget, to confirm each channel stays under the cost limit" }
+      ]
+    },
+    {
+      "id": "measurement",
+      "task": "Set up measurement and settle channel credit",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/measurement-and-attribution-plan", "use": "build", "when": "When the team needs numbers it can trust and a check on what each channel added" },
+        { "ref": "kit:workflows/monthly-measurement-check", "use": "check", "when": "Monthly, and after any change to the site, checkout, consent banner or ad set-up" },
+        { "ref": "kit:prompts/attribution-reconciliation", "use": "check", "when": "When platforms each claim credit and the totals do not add up" },
+        { "ref": "library:tracking-plan-builder", "type": "skill", "use": "build", "when": "When events and names are missing, to write the tracking plan" },
+        { "ref": "library:conversion-reconciliation", "type": "skill", "use": "check", "when": "When ad platforms and analytics report different conversions, to explain each gap" },
+        { "ref": "library:incrementality-test-planner", "type": "skill", "use": "build", "when": "When a channel's real effect is in doubt, to size a lift test" }
+      ]
+    },
+    {
+      "id": "retention-activation",
+      "task": "Find the activation moment and fix retention",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/activation-moment-finder", "use": "build", "when": "When many people sign up or order once but few stay" },
+        { "ref": "library:retention-cohort-analyst", "type": "skill", "use": "build", "when": "When you have activity data, to get retention curves by signup group" },
+        { "ref": "library:retention-problem-fixer", "type": "skill", "use": "build", "when": "When you know where users drop off and need the cause and fixes" },
+        { "ref": "library:churn-reducer", "type": "skill", "use": "build", "when": "When people cancel, for a cancel flow, save offers and failed-payment recovery" },
+        { "ref": "library:subscription-churn-watcher", "type": "agent", "use": "check", "when": "When churn should be watched every month and its causes tracked" }
+      ]
+    },
+    {
+      "id": "fit-check",
+      "task": "Check product-market fit before scaling",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:product-market-fit-checker", "type": "skill", "use": "check", "when": "When growth stalls, to score fit and name the one thing to change first" },
+        { "ref": "library:product-miss-growth-tests", "type": "workflow", "use": "build", "when": "When you can survey users, to run the would-you-miss-it test and rank growth tests" }
+      ]
+    },
+    {
+      "id": "saas-growth",
+      "task": "Plan self-serve growth, pricing tiers and a feature launch",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:plan-self-serve-saas-growth", "type": "workflow", "use": "build", "when": "When a software product sells without sales calls and needs tests and onboarding" },
+        { "ref": "library:price-your-software-in-tiers-people-pick-then-test-it", "type": "workflow", "use": "build", "when": "When the pricing page and tiers need setting and a safe test" },
+        { "ref": "library:launch-a-feature-through-a-beta-and-read-the-numbers", "type": "workflow", "use": "build", "when": "When a feature should launch through a beta with measures set first" },
+        { "ref": "library:growth-loop-designer", "type": "skill", "use": "explore", "when": "When you want the growth loops that fit the product compared and ranked" }
+      ]
+    },
+    {
+      "id": "lead-magnet-webinar",
+      "task": "Plan a lead magnet, webinar or challenge",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:lead-magnet-planner", "type": "skill", "use": "explore", "when": "When a coach or consultant needs a free offer, to compare ideas and pick one" },
+        { "ref": "library:webinar-promotion-planner", "type": "skill", "use": "build", "when": "When the pick is a webinar, to plan promoting it, running it and following up" },
+        { "ref": "kit:skills/growth-experiment-design", "use": "check", "when": "Before building it, to set the pass mark that says whether it worked" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:metric-mismatch-tracer", "type": "skill", "use": "check", "when": "Before you quote a number, when two reports disagree on it" },
+    { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "Before a plan or memo goes to the owner, to put it in plain words" }
+  ],
+  "helpers": [
+    { "role": "marketing-analyst", "when": "When channel credit or cohort questions need the data pulled and tested" },
+    { "role": "cro-specialist", "when": "When the limiting step is a page or checkout and needs research and A/B tests" },
+    { "role": "meta-media-buyer", "when": "When a Meta ads test wins and needs running at real spend" },
+    { "role": "google-ads-media-buyer", "when": "When a search ads test wins and needs a proper account build" },
+    { "role": "content-marketer", "when": "When content or search wins and needs a steady flow of articles" },
+    { "role": "lifecycle-marketer", "when": "When retention is the limit and needs email, offers and loyalty built out" }
+  ],
+  "gaps": [
+    "No library item builds a growth model from a dated goal back through each funnel step; only the kit prompt does",
+    "No library item finds the activation moment from user data; only the kit prompt does",
+    "No library item writes the weekly growth memo with a call on every live test; only the kit prompt does",
+    "No library item builds a lead source tracker a front desk can fill in for a local business",
+    "No library item designs a pilot offer for early customers with terms, price and what you ask in return",
+    "No library item plans a paid challenge or a coaching launch as a channel test",
+    "No library item gives the scripts for a channel test: the pitch, the post and the ask",
+    "No library item compares two differently shaped 90-day plans for the same channel",
+    "No tool guides exist for analytics and product data tools such as GA4, Mixpanel or Amplitude"
+  ]
+}

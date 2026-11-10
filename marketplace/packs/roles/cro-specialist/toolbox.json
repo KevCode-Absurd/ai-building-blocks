@@ -1,0 +1,283 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "cro-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "page-teardown",
+      "task": "Tear down a landing page and rank the fixes",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/conversion-research-audit", "use": "check", "when": "When a page gets traffic but few sign-ups, to find where and why visitors leave" },
+        { "ref": "library:landing-page-auditor", "type": "skill", "use": "check", "when": "When you have the page and screenshots, to rank conversion problems by impact with a score" },
+        { "ref": "library:conversion-problem-finder", "type": "skill", "use": "check", "when": "When you want each problem turned into a test worth running, with its reason" },
+        { "ref": "library:decision-friction-auditor", "type": "skill", "use": "check", "when": "When the page asks for too many choices, to find where layout, defaults or order stop people" },
+        { "ref": "kit:prompts/ranked-fix-list", "use": "build", "when": "When the findings pile up, to sort them into fix now, test and leave alone" },
+        { "ref": "library:landing-page-fix-loop", "type": "agent", "use": "build", "when": "When the client wants the failing parts rewritten and re-checked until the page passes" },
+        { "ref": "library:peep-laja", "type": "mind", "use": "think", "when": "When the list is full of opinions and should start from buyer evidence and clarity" }
+      ]
+    },
+    {
+      "id": "top-screen-rewrite",
+      "task": "Rewrite the top screen of a page or store",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:top-of-page-headline-writer", "type": "prompt", "use": "explore", "when": "When the first screen is vague, to get five headlines with a subhead, button and proof" },
+        { "ref": "library:store-hero-section-writer", "type": "skill", "use": "build", "when": "When it is a store's top screen and you want the copy plus a plan to test it" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a line could sit on any rival's page, to test it and get a true, specific rewrite" },
+        { "ref": "library:ad-and-page-match-checker", "type": "skill", "use": "check", "when": "When visitors arrive from an ad, to check the new top screen still keeps the ad's promise" }
+      ]
+    },
+    {
+      "id": "message-match",
+      "task": "Check the match between an ad and its page",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:ad-and-page-match-checker", "type": "skill", "use": "check", "when": "When you have the ad and the page, to score the match and rank each mismatch" },
+        { "ref": "library:ad-awareness-stage-checker", "type": "skill", "use": "check", "when": "When the ad speaks to people who know less or more than the page assumes" },
+        { "ref": "library:ad-matched-landing-page-writer", "type": "skill", "use": "build", "when": "When the mismatch is large and the page should be rewritten to continue the ad" }
+      ]
+    },
+    {
+      "id": "product-page-audit",
+      "task": "Audit a product page and list what to change",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:product-page-auditor", "type": "skill", "use": "check", "when": "When you have the live page, to rank changes to options, proof, buttons and price" },
+        { "ref": "library:product-page-screenshot-auditor", "type": "skill", "use": "check", "when": "When you only have screenshots, to see what blocks shoppers and what to test" },
+        { "ref": "library:product-page-doubt-mapper", "type": "prompt", "use": "build", "when": "When you know what buyers doubt, to tie each page section to real proof" },
+        { "ref": "library:store-social-proof-placer", "type": "skill", "use": "build", "when": "When reviews exist but sit in the wrong place, to choose which proof goes where" }
+      ]
+    },
+    {
+      "id": "funnel-dropoff",
+      "task": "Find where the funnel leaks by step, device and source",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/conversion-research-audit", "use": "build", "when": "When you have funnel numbers and need the full read by device and traffic source" },
+        { "ref": "library:sales-funnel-drop-off-finder", "type": "skill", "use": "check", "when": "When you have step counts and screenshots, to name the worst step and its fixes" },
+        { "ref": "library:store-page-conversion-reader", "type": "skill", "use": "build", "when": "When the data is GA4 exports, to get conversion by channel and page and the worst drop" },
+        { "ref": "library:conversion-funnel-analyst", "type": "skill", "use": "build", "when": "When you have a raw event log, to get conversion per step and time to convert" },
+        { "ref": "library:store-funnel-benchmark-checker", "type": "skill", "use": "check", "when": "When the client asks if their rates are normal, to compare each step and find the leak" }
+      ]
+    },
+    {
+      "id": "conversion-drop",
+      "task": "Diagnose a sudden drop in conversion rate",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:store-sales-drop-splitter", "type": "skill", "use": "build", "when": "When sales fell, to split the drop into visits, conversion and order value" },
+        { "ref": "library:metric-mismatch-tracer", "type": "skill", "use": "check", "when": "When two tools disagree on the same number, to find the step where they split" },
+        { "ref": "library:weekly-product-funnel-watcher", "type": "agent", "use": "check", "when": "When the client wants the funnel watched each week so the next drop is caught early" }
+      ]
+    },
+    {
+      "id": "heatmaps-recordings",
+      "task": "Read heatmaps and session recordings",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/consent-and-recording-check", "use": "check", "when": "Before a recording tool is switched on, to see what fires before consent" },
+        { "ref": "library:heatmap-and-recording-reader", "type": "skill", "use": "build", "when": "When you have heatmap and recording notes, to name the friction and a test for each" },
+        { "ref": "library:find-where-your-page-loses-buyers-and-prove-the-fix", "type": "workflow", "use": "build", "when": "When you want a guided run from heatmaps and funnel numbers to a verdict on the first fix" }
+      ]
+    },
+    {
+      "id": "checkout-audit",
+      "task": "Audit the cart and checkout",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:checkout-page-auditor", "type": "skill", "use": "check", "when": "When shoppers leave at checkout, to rank fixes for guest checkout, fields and surprise costs" },
+        { "ref": "library:payments-and-checkout-settings-checker", "type": "skill", "use": "check", "when": "When the leak may be in settings: payment methods, wallets, taxes or shipping rules" },
+        { "ref": "library:abandoned-checkout-reader", "type": "skill", "use": "build", "when": "When you need abandoned checkouts counted by cart value and hour before you judge" },
+        { "ref": "library:store-friction-checker", "type": "skill", "use": "check", "when": "When you have screenshots of the store's pages, to get a ranked list of what to cut" }
+      ]
+    },
+    {
+      "id": "forms-signup",
+      "task": "Fix a lead form, signup or booking flow",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:web-form-designer", "type": "skill", "use": "build", "when": "When a form loses people, to set fields, error messages and a plan to raise completions" },
+        { "ref": "library:make-a-long-form-easier-to-finish", "type": "workflow", "use": "build", "when": "When a long form must stay, to shorten the field list, restage it and script a test" },
+        { "ref": "library:signup-flow-improver", "type": "skill", "use": "build", "when": "When a software signup has too many steps, to cut fields and clear up the copy" },
+        { "ref": "library:booking-page-designer", "type": "skill", "use": "build", "when": "When the goal is a booked call or appointment, to plan times, questions and follow-up" },
+        { "ref": "library:don-norman", "type": "mind", "use": "think", "when": "When people make the same mistake on a form, to check cues, feedback and recovery" }
+      ]
+    },
+    {
+      "id": "usability-review",
+      "task": "Review usability and plan a small user test",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:usability-heuristic-reviewer", "type": "skill", "use": "check", "when": "When you need a fast expert pass on a page or form, scored, with ranked fixes" },
+        { "ref": "library:small-usability-test-planner", "type": "skill", "use": "build", "when": "When three people and one morning can show what the numbers cannot" },
+        { "ref": "library:accessibility-checker", "type": "skill", "use": "check", "when": "When the page may shut out keyboard or screen reader users, to rank the problems" },
+        { "ref": "library:steve-krug", "type": "mind", "use": "think", "when": "When the team argues over taste and should watch real people try the task" }
+      ]
+    },
+    {
+      "id": "visitor-surveys",
+      "task": "Run on-site surveys and read what buyers say",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:shopper-doubt-survey-planner", "type": "skill", "use": "build", "when": "When you need two on-site surveys and a tally of the doubts that stop buyers" },
+        { "ref": "library:customer-research-analyst", "type": "skill", "use": "build", "when": "When survey answers and tickets are in, to find the patterns and the buyers' words" },
+        { "ref": "library:survey-answer-truth-checker", "type": "prompt", "use": "check", "when": "When survey results look too neat, to score how far each answer can be trusted" }
+      ]
+    },
+    {
+      "id": "research-sprint",
+      "task": "Plan a conversion research sprint for a new client",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/research-sprint", "use": "build", "when": "When a new client, a drop or a redesign needs evidence before anyone tests" },
+        { "ref": "library:conversion-research-planner", "type": "skill", "use": "brief", "when": "Before the sprint, to set the order that finds where, what and why" },
+        { "ref": "library:competitor-site-audit", "type": "skill", "use": "brief", "when": "When you need the bar leading sites in the market set for this kind of page" },
+        { "ref": "library:website-fix-backlog-builder", "type": "skill", "use": "build", "when": "When the whole site is in scope, to rank fixes for conversion, message and speed" }
+      ]
+    },
+    {
+      "id": "rank-tests",
+      "task": "Rank test ideas into a backlog",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/ranked-fix-list", "use": "build", "when": "When findings and ideas must become fix now, test and park" },
+        { "ref": "library:test-idea-ranker", "type": "skill", "use": "build", "when": "When research is done, to write each idea as a hypothesis ranked by evidence and profit" },
+        { "ref": "library:store-test-program-runner", "type": "agent", "use": "build", "when": "When a store wants one test at a time ranked, planned, read and followed by the next" }
+      ]
+    },
+    {
+      "id": "test-design",
+      "task": "Design an A/B test with sample size and run time",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/experiment-cycle", "use": "brief", "when": "When a ranked item is marked test and the page has enough traffic to run it" },
+        { "ref": "kit:skills/test-design-and-sample-size", "use": "build", "when": "Before launch, to fix the hypothesis, main metric, guardrails and sample per version" },
+        { "ref": "kit:prompts/sample-size-and-run-time", "use": "check", "when": "Before any test, to see how many visitors it needs and whether it is worth running" },
+        { "ref": "library:one-change-experiment-planner", "type": "skill", "use": "build", "when": "When the idea bundles several changes and must be cut to one clean change" },
+        { "ref": "library:ab-test-traffic-checker", "type": "skill", "use": "check", "when": "When you have visits, orders and revenue, to get weeks needed and a readiness score" }
+      ]
+    },
+    {
+      "id": "low-traffic-check",
+      "task": "Plan a check when traffic is too low for an A/B test",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/sample-size-and-run-time", "use": "check", "when": "When you suspect the page is too quiet, to show the run time in weeks" },
+        { "ref": "library:cross-over-copy-test-planner", "type": "skill", "use": "build", "when": "When traffic cannot be split, to swap two versions halfway and compare" },
+        { "ref": "library:holdout-test-planner", "type": "skill", "use": "build", "when": "When a change goes to nearly everyone, to hold a small group back and compare" },
+        { "ref": "library:small-usability-test-planner", "type": "skill", "use": "build", "when": "When numbers will never be enough, to learn from watching a few real people" }
+      ]
+    },
+    {
+      "id": "test-readout",
+      "task": "Read a finished A/B test and make the call",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/test-readout", "use": "build", "when": "When a test has ended, to get ship, keep running, stop or rerun with every sum shown" },
+        { "ref": "kit:prompts/test-readout-from-counts", "use": "build", "when": "When all you have is counts from the testing tool or store and need a quick call" },
+        { "ref": "library:a-b-test-verdict-maker", "type": "skill", "use": "check", "when": "When you want a second read: split check, ranges and a ship call" },
+        { "ref": "library:store-test-verdict-maker", "type": "skill", "use": "check", "when": "When it is a store test with dates, to check it ran long enough and can be trusted" },
+        { "ref": "library:experiment-readout-desk", "type": "agent", "use": "check", "when": "When the same client runs tests often and each lesson should be saved" }
+      ]
+    },
+    {
+      "id": "running-or-multi-test",
+      "task": "Check a running test or one with several versions",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/test-readout", "use": "check", "when": "When someone wants to stop early, to check the split and say why it is too young" },
+        { "ref": "library:experiment-result-analyst", "type": "skill", "use": "check", "when": "When there are three to five versions, to pick the right test and say if it is real" },
+        { "ref": "library:a-b-test-verdict-maker", "type": "skill", "use": "check", "when": "When traffic looks uneven between versions, to test whether the split is broken" }
+      ]
+    },
+    {
+      "id": "before-after",
+      "task": "Read a before-and-after change honestly",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/before-and-after-honest-read", "use": "build", "when": "When a change went live with no test and someone asks whether it worked" },
+        { "ref": "library:recover-a-copy-test-after-a-midrun-change", "type": "workflow", "use": "check", "when": "When the offer or tracking changed mid-run, to say what can still be compared" },
+        { "ref": "library:holdout-test-planner", "type": "skill", "use": "build", "when": "When the client wants a better check next time than comparing two months" }
+      ]
+    },
+    {
+      "id": "tracking-consent",
+      "task": "Check tracking, events and consent before measuring",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/tracking-and-consent-check", "use": "check", "when": "Before any measuring, to list every tag and what it collects before consent by region" },
+        { "ref": "kit:prompts/consent-and-recording-check", "use": "check", "when": "When the site serves EU or UK visitors and a testing or recording tool is planned" },
+        { "ref": "library:tracking-plan-builder", "type": "skill", "use": "build", "when": "When events are missing or misnamed, to write the plan of events, names and tags" },
+        { "ref": "library:conversion-tracking-fixer", "type": "skill", "use": "build", "when": "When sales or leads are not counted right across analytics and ad platforms" },
+        { "ref": "library:ga4-store-setup-checker", "type": "skill", "use": "check", "when": "When a store's analytics is new or doubted, to find missing settings and events" },
+        { "ref": "library:conversion-reconciliation", "type": "skill", "use": "check", "when": "When ad platforms and analytics report different conversions, to explain each gap" }
+      ]
+    },
+    {
+      "id": "speed-mobile",
+      "task": "Check page speed and the mobile experience",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:page-speed-fixer", "type": "skill", "use": "build", "when": "When you have a speed report, to get the fixes in ordered batches" },
+        { "ref": "library:speed-budget-and-sale-check", "type": "skill", "use": "check", "when": "Before a sale or launch, to set a speed budget and a pre-sale checklist" },
+        { "ref": "library:usability-heuristic-reviewer", "type": "skill", "use": "check", "when": "When the phone version is the weak one, to score it and rank the breaks" }
+      ]
+    },
+    {
+      "id": "offer-and-order-value",
+      "task": "Plan offer, price and order value tests",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:price-test-planner", "type": "skill", "use": "build", "when": "When the price itself is in doubt, to pick a price to try and a test you can undo" },
+        { "ref": "library:cart-and-checkout-upsell-planner", "type": "skill", "use": "build", "when": "When order value is the goal, to rank cart and checkout offers by profit added" },
+        { "ref": "library:offer-profit-per-session-checker", "type": "skill", "use": "check", "when": "When offers were tried, to compare profit per visitor, not conversion rate alone" }
+      ]
+    },
+    {
+      "id": "trust-and-proof",
+      "task": "Find trust gaps and place proof where doubt is",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:trust-barrier-fixer", "type": "skill", "use": "build", "when": "When visitors do not believe the page, to name the doubts and the proof that settles each" },
+        { "ref": "library:store-social-proof-placer", "type": "skill", "use": "build", "when": "When you have reviews and numbers, to decide which to show and where" },
+        { "ref": "library:honest-persuasion-editor", "type": "skill", "use": "check", "when": "When the page uses urgency or scarcity, to see which levers are true and which are fake" }
+      ]
+    },
+    {
+      "id": "popups-capture",
+      "task": "Plan popups and lead capture that do not annoy",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:popup-optimiser", "type": "skill", "use": "build", "when": "When the client wants more signups, to set the popup type, timing and words" },
+        { "ref": "library:signup-popup-builder", "type": "skill", "use": "build", "when": "When it is a store offer, to get desktop and mobile specs, copy and tests" },
+        { "ref": "library:top-of-page-headline-writer", "type": "prompt", "use": "explore", "when": "When the popup's one line is flat, to get five headlines to choose from" },
+        { "ref": "library:honest-persuasion-editor", "type": "skill", "use": "check", "when": "Before launch, to check the popup does not trick or shame the visitor" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:metric-mismatch-tracer", "type": "skill", "use": "check", "when": "Before you quote a rate, when two reports give different numbers for it" },
+    { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "Before a readout goes to the client, to put statistics into plain words" }
+  ],
+  "helpers": [
+    { "role": "conversion-copywriter", "when": "When a fix is a rewrite of a whole page or email, not one screen" },
+    { "role": "ux-designer", "when": "When a fix needs a new flow or layout designed, not a list of changes" },
+    { "role": "shopify-specialist", "when": "When the winning change must be built into a Shopify theme or checkout" },
+    { "role": "frontend-developer", "when": "When a test version needs code, or the testing tool must be installed" },
+    { "role": "marketing-analyst", "when": "When the question is which channel or campaign to trust, not which page" },
+    { "role": "customer-insights-researcher", "when": "When the why needs real interviews, not surveys and recordings" }
+  ],
+  "gaps": [
+    "No library item reads a test with three to five versions and corrects for the extra comparisons",
+    "No library item checks a running test for a broken traffic split or early peeking as its main job",
+    "No library item reads a before-and-after change with seasonality and trend allowed for; only the kit prompt does",
+    "No library item checks cookie consent banners and what tags fire before consent, by region; only the kit covers it",
+    "No library item covers on-site search, filters and category pages as a conversion problem",
+    "No library item writes the client report for a research sprint or a quarter of tests",
+    "No library item keeps a log of past tests and lessons across clients that is not tied to one store",
+    "No library item offers clearly different popup or top-screen layouts to compare, only different words",
+    "No library item covers personalising a page by visitor segment or source and testing it fairly",
+    "No tool guides exist for analytics, testing or heatmap tools such as GA4, Hotjar, Clarity or VWO"
+  ]
+}

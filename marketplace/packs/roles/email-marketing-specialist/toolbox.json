@@ -1,0 +1,301 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "email-marketing-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "email-plan",
+      "task": "Build a 90-day email plan",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/email-program-plan", "use": "build", "when": "When you have the list export, past results and goals and need a 90-day plan" },
+        { "ref": "library:email-flow-gap-checker", "type": "skill", "use": "check", "when": "Before planning, to see which automated flows are missing or clash" },
+        { "ref": "library:email-cadence-planner", "type": "skill", "use": "build", "when": "When you must decide how often to send, with a story and an offer for each week" },
+        { "ref": "library:seth-godin", "type": "mind", "use": "think", "when": "When the plan treats the list as a target, not people who gave permission" }
+      ]
+    },
+    {
+      "id": "monthly-cycle",
+      "task": "Plan the month's sends and topics",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/monthly-email-cycle", "use": "build", "when": "In the last week of the month, to plan, write and review the month ahead" },
+        { "ref": "library:email-campaign-calendar-planner", "type": "skill", "use": "build", "when": "When sends must fit real dates and team capacity, with audiences and owners" },
+        { "ref": "library:email-topic-bank-builder", "type": "skill", "use": "explore", "when": "When ideas have run dry, to get topics and a hundred one-point email ideas" },
+        { "ref": "library:plan-a-month-of-campaign-emails-that-sell-without-discounts", "type": "workflow", "use": "build", "when": "When the client wants a month that sells without leaning on discounts" }
+      ]
+    },
+    {
+      "id": "newsletter-issue",
+      "task": "Write a newsletter issue",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/newsletter-issue", "use": "build", "when": "When you have this period's news, a tip or story and one thing to ask for" },
+        { "ref": "library:prepare-a-useful-customer-newsletter-issue", "type": "workflow", "use": "build", "when": "When the issue should start from customer questions and store news" },
+        { "ref": "library:story-email-writer", "type": "skill", "use": "explore", "when": "When the issue needs a personal story, to get three different drafts" },
+        { "ref": "kit:prompts/subject-lines-and-preview", "use": "explore", "when": "When the issue is written and needs subject lines and preview text to choose from" },
+        { "ref": "library:weekly-newsletter-keeper", "type": "agent", "use": "check", "when": "When the newsletter goes out weekly and each issue should be checked against the voice" },
+        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before sending, to get counts, cuts and a ship or fix verdict" },
+        { "ref": "library:ann-handley", "type": "mind", "use": "think", "when": "When the issue reads like company news and should start from the reader's concern" }
+      ]
+    },
+    {
+      "id": "campaign-email",
+      "task": "Write a campaign or promotional email",
+      "kind": "email",
+      "items": [
+        { "ref": "library:campaign-email-writer", "type": "skill", "use": "build", "when": "When you have a campaign goal and product facts and need the email block by block" },
+        { "ref": "library:plan-a-sale-across-email-and-sms", "type": "workflow", "use": "build", "when": "When the campaign is a sale that runs over several emails and texts" },
+        { "ref": "library:honest-urgency-planner", "type": "skill", "use": "brief", "when": "When the offer needs a deadline or limit that is real, and the lines to say it" },
+        { "ref": "kit:prompts/subject-lines-and-preview", "use": "explore", "when": "When the email is written and needs honest subject lines to choose from" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When the email is drafted, to get cuts, a pacing map and a verdict" }
+      ]
+    },
+    {
+      "id": "subject-lines",
+      "task": "Write and test subject lines and preview text",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/subject-lines-and-preview", "use": "build", "when": "When one send needs subject lines, preview text and a plan to test them" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When you want twenty options across several angles" },
+        { "ref": "library:email-test-planner", "type": "skill", "use": "check", "when": "When you want to test them properly, with sample sizes and win rules" }
+      ]
+    },
+    {
+      "id": "welcome-series",
+      "task": "Plan and write a welcome series",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/lifecycle-flow-builder", "use": "build", "when": "When you need the trigger, filters, timing, exit rules and the emails themselves" },
+        { "ref": "library:welcome-flow-builder", "type": "skill", "use": "build", "when": "When it is a store welcome with an offer, best sellers and a brand story" },
+        { "ref": "library:write-a-welcome-email-sequence-that-teaches-then-sells", "type": "workflow", "use": "build", "when": "When the series should teach first and sell later, with a review built in" },
+        { "ref": "kit:prompts/subject-lines-and-preview", "use": "explore", "when": "When each welcome email needs subject lines to choose from" },
+        { "ref": "library:email-sequence-auditor", "type": "skill", "use": "check", "when": "When the series has numbers, to see which emails to protect and which to fix" }
+      ]
+    },
+    {
+      "id": "lead-nurture",
+      "task": "Write a lead nurture series for one lead type",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/lifecycle-flow-builder", "use": "build", "when": "When a lead type needs a six-message series with timing and exit rules" },
+        { "ref": "library:lead-magnet-planner", "type": "skill", "use": "explore", "when": "When the series needs a free offer to start it, to compare ideas and pick one" },
+        { "ref": "library:email-sequence-arc-planner", "type": "skill", "use": "brief", "when": "Before writing, to give each message one job that sets up the next" },
+        { "ref": "library:lead-nurture-follow-up", "type": "workflow", "use": "build", "when": "When stalled leads should get useful information before any ask" },
+        { "ref": "library:email-sequence-auditor", "type": "skill", "use": "check", "when": "When the series is live, to see where leads stop reading" }
+      ]
+    },
+    {
+      "id": "quote-follow-up",
+      "task": "Follow up after a quote, enquiry or event",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/follow-up-after-quote-or-event", "use": "build", "when": "When a warm lead went quiet and needs a short series that helps first and stops" },
+        { "ref": "library:follow-up-email-sequence-writer", "type": "prompt", "use": "explore", "when": "When you want a second version of the series to compare tone and length" },
+        { "ref": "library:plan-an-event-follow-up-that-earns-a-reply", "type": "workflow", "use": "build", "when": "When follow-ups come after a show or webinar and promises must be tracked" },
+        { "ref": "library:one-ask-email-tightener", "type": "prompt", "use": "check", "when": "Before each message goes, to cut it to one clear ask" }
+      ]
+    },
+    {
+      "id": "cart-browse-flows",
+      "task": "Build cart and browse abandonment flows",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/lifecycle-flow-builder", "use": "build", "when": "When the flow needs triggers, filters and exit rules written for the client's tool" },
+        { "ref": "library:cart-recovery-flow-builder", "type": "skill", "use": "build", "when": "When shoppers leave a cart or checkout, with timing and a rule for discount codes" },
+        { "ref": "library:browse-abandonment-flow-builder", "type": "skill", "use": "build", "when": "When visitors look at products and leave, for a flow that offers a discount last" },
+        { "ref": "library:roll-out-the-welcome-cart-and-browse-email-flows-one-at-a-time", "type": "workflow", "use": "build", "when": "When a store has no flows and they should go live one at a time, safely" },
+        { "ref": "kit:prompts/subject-lines-and-preview", "use": "explore", "when": "When each flow email needs subject lines to choose from" },
+        { "ref": "library:email-flow-gap-checker", "type": "skill", "use": "check", "when": "When flows are live, to find missing steps and rules that clash" }
+      ]
+    },
+    {
+      "id": "post-purchase",
+      "task": "Write post-purchase, review and reorder emails",
+      "kind": "email",
+      "items": [
+        { "ref": "library:post-purchase-flow-builder", "type": "skill", "use": "build", "when": "When buyers need thank-you, how-to, add-on and check-in emails after an order" },
+        { "ref": "library:new-customer-onboarding-sequence-writer", "type": "skill", "use": "build", "when": "When the product needs teaching, for a 14-day plan after the first order" },
+        { "ref": "library:review-request-and-reply-planner", "type": "skill", "use": "build", "when": "When you must decide when to ask for a review and how to word it" },
+        { "ref": "library:send-reorder-emails-that-fit-each-buyer-then-read-results", "type": "workflow", "use": "build", "when": "When products run out on a schedule and reminders should be timed to each buyer" },
+        { "ref": "kit:skills/lifecycle-flow-builder", "use": "check", "when": "When the emails are drafted, to check triggers, timing and exit rules" }
+      ]
+    },
+    {
+      "id": "winback-sunset",
+      "task": "Win back lapsed contacts and sunset the rest",
+      "kind": "email",
+      "items": [
+        { "ref": "library:win-back-lapsed-buyers-and-clean-out-the-rest", "type": "workflow", "use": "build", "when": "When you have order history and want a win-back flow and a clean list together" },
+        { "ref": "library:win-back-flow-builder", "type": "skill", "use": "build", "when": "When the flow should be timed to how buyers really reorder" },
+        { "ref": "library:sunset-flow-and-list-cleaner", "type": "skill", "use": "build", "when": "When non-openers hurt sending, for a three-email goodbye and a monthly routine" },
+        { "ref": "kit:prompts/subject-lines-and-preview", "use": "explore", "when": "When the win-back email needs subject lines that get a second look" },
+        { "ref": "library:email-sequence-auditor", "type": "skill", "use": "check", "when": "When the flow has run, to see which emails earn their place" }
+      ]
+    },
+    {
+      "id": "launch-sequence",
+      "task": "Write a launch email sequence",
+      "kind": "email",
+      "items": [
+        { "ref": "library:launch-email-sequence-planner", "type": "skill", "use": "build", "when": "When a launch has a close date and needs the full run of emails with resends" },
+        { "ref": "library:honest-urgency-planner", "type": "skill", "use": "check", "when": "When writing the closing emails, to keep every deadline and limit true" },
+        { "ref": "kit:prompts/subject-lines-and-preview", "use": "explore", "when": "When each launch email needs subject lines to choose from" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When a launch email is drafted, to get cuts and a ship or fix verdict" }
+      ]
+    },
+    {
+      "id": "segmentation",
+      "task": "Build a list segmentation plan",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/email-program-plan", "use": "brief", "when": "When segments must follow the plan's goals and the size of the list" },
+        { "ref": "library:email-segment-builder", "type": "skill", "use": "build", "when": "When you need engaged, buyer and exclusion groups written as clear rules" },
+        { "ref": "library:customer-segment-builder", "type": "skill", "use": "build", "when": "When you have an order export, to group customers by recency, frequency and spend" },
+        { "ref": "library:dynamic-email-block-planner", "type": "skill", "use": "build", "when": "When one email should show different blocks to different groups" }
+      ]
+    },
+    {
+      "id": "list-growth",
+      "task": "Grow the list with forms, popups and clear consent",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/signup-form-consent-check", "use": "check", "when": "Before a form, checkout opt-in or lead magnet goes live, to check the wording" },
+        { "ref": "library:signup-popup-builder", "type": "skill", "use": "build", "when": "When a store needs a popup, with desktop and mobile specs, copy and tests" },
+        { "ref": "library:lead-magnet-planner", "type": "skill", "use": "explore", "when": "When the form needs a reason to sign up, to compare free offers" },
+        { "ref": "library:permission-email-audit", "type": "skill", "use": "check", "when": "When the list came from mixed sources, to see who gave real permission" },
+        { "ref": "library:marketing-consent-auditor", "type": "skill", "use": "check", "when": "When you must show who agreed to email and SMS and who did not" }
+      ]
+    },
+    {
+      "id": "deliverability-check",
+      "task": "Check domain set-up, sender rules and consent",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/deliverability-and-consent-check", "use": "check", "when": "When you have DNS records, headers and results to check against the sender rules" },
+        { "ref": "kit:prompts/dns-and-header-read", "use": "check", "when": "When mail bounces or lands in spam and you want the records and headers read" },
+        { "ref": "library:email-setup-health-checker", "type": "skill", "use": "check", "when": "When you want a second scored read of the settings and DNS with exact fixes" },
+        { "ref": "library:inbox-delivery-fixer", "type": "skill", "use": "build", "when": "When SPF, DKIM or DMARC is missing and needs setting up step by step" }
+      ]
+    },
+    {
+      "id": "inbox-recovery",
+      "task": "Recover inbox placement after a drop",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/inbox-placement-recovery", "use": "build", "when": "When clicks fall sharply, customers report spam or bounces show block codes" },
+        { "ref": "library:inbox-placement-recovery-planner", "type": "skill", "use": "check", "when": "When you have open rates and engaged counts, to score the damage and plan recovery" },
+        { "ref": "library:fix-inbox-placement-and-win-back-your-opens", "type": "workflow", "use": "build", "when": "When you want a guided run to a recovery plan, an engaged list and a sunset flow" }
+      ]
+    },
+    {
+      "id": "platform-move",
+      "task": "Move platform or sending domain and warm it up",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/platform-or-domain-move", "use": "build", "when": "When the client switches platform, adds a sending subdomain or changes the From" },
+        { "ref": "kit:prompts/dns-and-header-read", "use": "check", "when": "After the move, to confirm the records and headers on a real message" },
+        { "ref": "library:customer-email-list-checker", "type": "skill", "use": "check", "when": "Before importing the list, to flag bad, role-based and throwaway addresses" },
+        { "ref": "library:klaviyo", "type": "tool", "use": "brief", "when": "When the move is to Klaviyo and you must know what its flows and data can do" }
+      ]
+    },
+    {
+      "id": "list-hygiene",
+      "task": "Set list hygiene rules and a sunset policy",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/deliverability-and-consent-check", "use": "brief", "when": "When the rules must follow how contacts were collected and what they agreed to" },
+        { "ref": "library:sunset-flow-and-list-cleaner", "type": "skill", "use": "build", "when": "When you need the engagement rule and the monthly routine written down" },
+        { "ref": "library:customer-email-list-checker", "type": "skill", "use": "check", "when": "When you must find risky addresses before they hurt the sender reputation" }
+      ]
+    },
+    {
+      "id": "html-template",
+      "task": "Build a responsive HTML email template",
+      "kind": "code",
+      "items": [
+        { "ref": "library:email-layout-brief-writer", "type": "skill", "use": "brief", "when": "Before coding, to turn the copy and goal into a section-by-section layout" },
+        { "ref": "library:marketing-email-html-builder", "type": "workflow", "use": "explore", "when": "When you want two HTML designs with previews to choose between" },
+        { "ref": "kit:skills/html-email-build-and-qa", "use": "build", "when": "When the template must render in Gmail, Outlook, Apple Mail and Yahoo and on phones" },
+        { "ref": "library:email-design-checker", "type": "skill", "use": "check", "when": "When a design is ready, to score layout, links and file weight" }
+      ]
+    },
+    {
+      "id": "transactional-emails",
+      "task": "Build transactional email templates",
+      "kind": "code",
+      "items": [
+        { "ref": "library:transactional-email-builder", "type": "skill", "use": "build", "when": "When an app or store needs coded receipts, resets and notices with a sending setup" },
+        { "ref": "library:billing-reminder-and-confirmation-writer", "type": "skill", "use": "build", "when": "When subscriptions need renewal reminders and order confirmations written" },
+        { "ref": "kit:skills/html-email-build-and-qa", "use": "check", "when": "When the templates are coded, to test them across inboxes and screen readers" }
+      ]
+    },
+    {
+      "id": "fix-rendering",
+      "task": "Fix an email that breaks, with a dark mode and access pass",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/html-email-build-and-qa", "use": "build", "when": "When an email breaks in Outlook or on phones and you need the cause and the fix" },
+        { "ref": "library:colour-contrast-checker", "type": "skill", "use": "check", "when": "When text is hard to read in dark mode, to check each colour pair" },
+        { "ref": "library:email-design-checker", "type": "skill", "use": "check", "when": "After the fix, to re-score layout, links and weight" }
+      ]
+    },
+    {
+      "id": "results-read",
+      "task": "Read email results and say what to change",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/results-read-clicks-first", "use": "build", "when": "Monthly or after a drop, to read clicks, orders and complaints, not opens" },
+        { "ref": "library:email-and-sms-performance-reader", "type": "skill", "use": "check", "when": "When you want a second scored read of last month's numbers" },
+        { "ref": "library:utm-revenue-reader", "type": "skill", "use": "build", "when": "When you need revenue and orders by campaign from the store's own order links" },
+        { "ref": "library:holdout-test-planner", "type": "skill", "use": "build", "when": "When the client asks what email really earns, to hold a group back and compare" },
+        { "ref": "library:monthly-email-flow-keeper", "type": "agent", "use": "build", "when": "When flows should be reviewed monthly and the weakest one rebuilt" }
+      ]
+    },
+    {
+      "id": "email-tests",
+      "task": "Plan email tests and read them",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:email-test-planner", "type": "skill", "use": "build", "when": "When you need a ranked queue of tests with sample sizes and win rules" },
+        { "ref": "library:a-b-test-verdict-maker", "type": "skill", "use": "check", "when": "When a test has run, to check the split and say whether the result is real" },
+        { "ref": "kit:prompts/subject-lines-and-preview", "use": "build", "when": "When the test is on subject lines and needs a plan over the next few sends" }
+      ]
+    },
+    {
+      "id": "sms",
+      "task": "Write SMS to run beside email",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:text-message-campaign-writer", "type": "skill", "use": "build", "when": "When texts should cover welcome, cart, win-back and promos, with consent rules" },
+        { "ref": "library:sms-send-checker", "type": "skill", "use": "check", "when": "Before a text goes, to check its cost, rule flags and score" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:write-a-voice-guide-from-your-documents-and-check-copy", "type": "workflow", "use": "brief", "when": "At the start of a client, to build a voice guide from their own documents" },
+    { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "Before any email goes for approval, to fix lines that sound machine-written" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When an email states a number, date or result you cannot trace to the client" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before every send, to catch typos, wrong names and product terms spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "lifecycle-marketer", "when": "When the job is retention across email, SMS, loyalty and offers, not email alone" },
+    { "role": "conversion-copywriter", "when": "When the emails lead to a sales or landing page that also needs writing" },
+    { "role": "graphic-designer", "when": "When the template needs a visual design, banners or product images" },
+    { "role": "ecommerce-analyst", "when": "When segments or results need cohort and repeat-purchase analysis from order data" },
+    { "role": "it-administrator", "when": "When DNS records must be changed and nobody on the client side knows how" },
+    { "role": "compliance-specialist", "when": "When consent rules across regions need a formal review" }
+  ],
+  "gaps": [
+    "No library item plans a warm-up schedule for a new sending domain or IP, day by day",
+    "No library item plans a move between email platforms: what to export, rebuild and test, and in what order",
+    "No library item fixes an email that breaks in Outlook or on phones; only the kit skill covers it",
+    "No library item checks an HTML email for dark mode and screen readers; the library has only a colour check",
+    "No library item checks sign-up form consent wording by region; only the kit prompt does",
+    "No library item reads DNS records and message headers together; the two library checks need pasted settings",
+    "No library item refreshes a tired newsletter: new format options, sections and a reader survey",
+    "No library item offers clearly different SMS versions to compare",
+    "No library item builds a preference centre or unsubscribe page",
+    "Tool guides cover Klaviyo only; nothing for Mailchimp, Brevo, ConvertKit or inbox testing tools"
+  ]
+}

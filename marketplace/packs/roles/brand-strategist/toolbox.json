@@ -1,0 +1,257 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "brand-strategist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "voice-guide",
+      "task": "Write a brand voice guide from the client's own writing",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/voice-guide", "use": "build", "when": "When the client has writing they like and needs a short guide the whole team can follow" },
+        { "ref": "library:brand-materials-finder", "type": "skill", "use": "brief", "when": "Before you start, to find the style guides, decks and call notes the client already has" },
+        { "ref": "library:brand-voice-guide-builder", "type": "skill", "use": "build", "when": "When the best source is documents or call transcripts and you need rules with examples" },
+        { "ref": "library:brand-voice-one-pager-writer", "type": "prompt", "use": "explore", "when": "When you want a one-page version with tone sliders and word lists to compare with the full guide" },
+        { "ref": "library:write-a-voice-guide-from-your-documents-and-check-copy", "type": "workflow", "use": "build", "when": "When the client wants the guide, new copy in that voice and a check in one run" },
+        { "ref": "library:brand-voice-reviewer", "type": "agent", "use": "check", "when": "When the guide is drafted, to run real drafts through it and see if it catches what it should" },
+        { "ref": "library:william-zinsser", "type": "mind", "use": "think", "when": "When the guide is all adjectives and should say what to cut and what to keep in a sentence" }
+      ]
+    },
+    {
+      "id": "voice-check",
+      "task": "Check draft copy against the voice guide",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/voice-and-message-check", "use": "check", "when": "When you have draft copy and the client's voice guide and messaging to check it against" },
+        { "ref": "library:draft-brand-voice-checker", "type": "skill", "use": "check", "when": "When you want each deviation ranked by how serious it is" },
+        { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "When the draft came from an AI tool and reads like one" },
+        { "ref": "library:brand-voice-rewriter", "type": "skill", "use": "build", "when": "When the check fails and the copy must be rewritten in the brand's voice" }
+      ]
+    },
+    {
+      "id": "touchpoint-alignment",
+      "task": "Check the message is the same across touchpoints",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/voice-and-message-check", "use": "check", "when": "When site, emails, packaging and ads must be read against one voice and one message" },
+        { "ref": "library:make-every-touchpoint-say-the-same-thing", "type": "workflow", "use": "build", "when": "When the touchpoints disagree and each needs bringing into line" },
+        { "ref": "library:store-brand-signal-auditor", "type": "skill", "use": "check", "when": "When the client is a store and you want a score for what each touchpoint says" }
+      ]
+    },
+    {
+      "id": "brand-file",
+      "task": "Build a brand fact file any writer or AI tool can use",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/brand-fact-file", "use": "build", "when": "When the client wants one file: who they are, what they sell, to whom, what they may claim" },
+        { "ref": "library:brand-file-from-website", "type": "workflow", "use": "build", "when": "When the website is the best source and a founder interview must fill its gaps" },
+        { "ref": "library:founder-interview-planner", "type": "skill", "use": "brief", "when": "When facts are missing and you need a ranked list of questions for the founder" },
+        { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "When colours, fonts, voice and dated prices must be measured from the live site" },
+        { "ref": "library:brand-guide-builder", "type": "skill", "use": "build", "when": "When the file is agreed and the client wants a printable guide and a values file for AI tools" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "Before the file is shared, to check every claim it says writers may make" }
+      ]
+    },
+    {
+      "id": "buyer-evidence",
+      "task": "Gather buyer evidence before positioning",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:customer-research-analyst", "type": "skill", "use": "build", "when": "When you have interviews, surveys or tickets and need patterns and the words buyers use" },
+        { "ref": "library:customer-interview-questions", "type": "skill", "use": "build", "when": "When interviews are still to run and draft questions lead the witness" },
+        { "ref": "library:build-a-buyer-profile-from-interviews-and-reviews", "type": "workflow", "use": "build", "when": "When orders and reviews exist and you need a buyer profile built on the job they hire for" },
+        { "ref": "library:brand-discovery-researcher", "type": "skill", "use": "brief", "when": "When you know little yet and need who it is for, who the rivals are and where it could stand" }
+      ]
+    },
+    {
+      "id": "competitor-message-map",
+      "task": "Map what every rival already says",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/competitor-message-map", "use": "build", "when": "Before positioning, naming or a tagline, to see what rivals say so you stop saying the same" },
+        { "ref": "library:competitor-messaging-comparer", "type": "skill", "use": "build", "when": "When you need rivals' messages and positioning side by side with the gaps" },
+        { "ref": "library:owned-word-mapper", "type": "skill", "use": "build", "when": "When you need the word each rival owns and the words nobody can claim" },
+        { "ref": "library:competitor-white-space-mapper", "type": "skill", "use": "explore", "when": "When you want a grid of what buyers value against who is strong, to find open ground" },
+        { "ref": "library:jack-trout", "type": "mind", "use": "think", "when": "When the client wants to say what the leader says, only louder" }
+      ]
+    },
+    {
+      "id": "positioning",
+      "task": "Build positioning from evidence",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/positioning-and-messaging", "use": "build", "when": "When you have buyer evidence and rival messages and need a position and the reasons for it" },
+        { "ref": "kit:workflows/position-name-and-voice", "use": "brief", "when": "When a new business or a reset needs position, name and voice decided in order" },
+        { "ref": "library:positioning-idea-generator", "type": "skill", "use": "explore", "when": "When you need several ways to stand apart, each with a statement, before choosing one" },
+        { "ref": "library:positioning-statement-writer", "type": "skill", "use": "build", "when": "When one direction is picked and it needs a statement with one claim and its proof" },
+        { "ref": "library:one-word-positioning", "type": "workflow", "use": "explore", "when": "When the position should come down to one word to own and an honest line to set it up" },
+        { "ref": "library:april-dunford", "type": "mind", "use": "think", "when": "When the position starts from the product and should start from what buyers would use instead" }
+      ]
+    },
+    {
+      "id": "messaging-framework",
+      "task": "Write the messaging framework",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/positioning-and-messaging", "use": "build", "when": "When the position is set and each audience needs its message and proof" },
+        { "ref": "library:brand-messaging-builder", "type": "skill", "use": "build", "when": "When you have brand facts and need key messages and proof points per audience" },
+        { "ref": "library:value-proposition-builder", "type": "skill", "use": "build", "when": "When the core promise needs stating: what they gain, for whom and why believe it" },
+        { "ref": "library:customer-as-hero-message-planner", "type": "skill", "use": "explore", "when": "When you want a version with the customer as the hero, to compare with the feature-led one" },
+        { "ref": "library:memorable-message-writer", "type": "skill", "use": "check", "when": "When a message is true but forgettable, to test it for simple, concrete and believable" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "Before sign-off, to sort every claim into fine, needs proof or cut" }
+      ]
+    },
+    {
+      "id": "naming",
+      "task": "Create a naming shortlist for a business or product",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/name-generation-and-screening", "use": "build", "when": "When a business, product, plan or range needs names created and screened with reasons" },
+        { "ref": "library:name-and-position-a-new-brand", "type": "workflow", "use": "build", "when": "When the name and the position must be decided together for a new brand" },
+        { "ref": "library:store-name-generator", "type": "skill", "use": "explore", "when": "When you want a long raw list cut to fifteen with a first clearance check" },
+        { "ref": "library:brand-name-finder", "type": "skill", "use": "explore", "when": "When you want name ideas from a different brief, or honest scores on names you already have" },
+        { "ref": "library:product-name-brainstormer", "type": "skill", "use": "explore", "when": "When it is a product or a rename and you want five options with why each fits" },
+        { "ref": "library:store-name-tester", "type": "skill", "use": "check", "when": "When the shortlist is ready, to score each name and get a keep, fix or drop call" }
+      ]
+    },
+    {
+      "id": "name-screening",
+      "task": "Screen the top names before the client commits",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/name-generation-and-screening", "use": "check", "when": "When two to five names need checking for meaning, sound, spelling and conflicts" },
+        { "ref": "library:trademark-name-first-check", "type": "skill", "use": "check", "when": "When a name is a favourite, to flag similar marks and risk factors before a lawyer looks" },
+        { "ref": "library:store-name-tester", "type": "skill", "use": "check", "when": "When each name needs a score and a keep, fix or drop call" },
+        { "ref": "kit:prompts/message-test-plan", "use": "build", "when": "When the client wants buyers, not the office, to choose between the last few names" }
+      ]
+    },
+    {
+      "id": "tagline-set",
+      "task": "Write a tagline set from different angles",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/tagline-set", "use": "build", "when": "When the client needs a tagline for signs, site, packaging or ads, with options and checks" },
+        { "ref": "library:ownable-word-picker", "type": "skill", "use": "brief", "when": "Before writing, to pick the one word the line should help the brand own" },
+        { "ref": "library:fresh-line-rewriter", "type": "skill", "use": "explore", "when": "When the claim is true but rivals say it too, to get fresh ways to say the same thing" },
+        { "ref": "library:message-stickiness-rewriter", "type": "prompt", "use": "explore", "when": "When a line is right but dull, to get three versions people will repeat" },
+        { "ref": "library:company-mantra-writer", "type": "skill", "use": "explore", "when": "When the line is for staff as much as buyers, to try two-to-four word mantras" },
+        { "ref": "library:tagline-tester", "type": "skill", "use": "check", "when": "When you have candidates, to score each on ten tests and see where it is weak" },
+        { "ref": "library:dan-wieden", "type": "mind", "use": "think", "when": "When every line is clever and none sounds like something a person would say" }
+      ]
+    },
+    {
+      "id": "message-test",
+      "task": "Plan a test of names, taglines or one-liners",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/message-test-plan", "use": "build", "when": "When you have two to four options and want to know if buyers understand them" },
+        { "ref": "library:brand-ladder-survey-builder", "type": "skill", "use": "build", "when": "When you need a short buyer survey that shows where the brand ranks against rivals" },
+        { "ref": "library:check-a-marketing-survey-before-sending-it", "type": "workflow", "use": "check", "when": "Before the survey goes out, to remove leading questions and plan a pretest" },
+        { "ref": "library:survey-answer-truth-checker", "type": "prompt", "use": "check", "when": "When results are in, to find the answers that cannot be trusted" }
+      ]
+    },
+    {
+      "id": "naming-system",
+      "task": "Set a naming system for a product range",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/product-naming-system", "use": "build", "when": "When product, plan or feature names no longer make sense together, or a new range is coming" },
+        { "ref": "library:store-brand-architecture-planner", "type": "skill", "use": "build", "when": "When there are several stores or ranges and you need a structure and a naming rule" },
+        { "ref": "library:brand-name-stretch-checker", "type": "skill", "use": "check", "when": "When the client wants to put the brand name on a new product, to score how far it stretches" },
+        { "ref": "library:category-name-writer", "type": "skill", "use": "build", "when": "When the product creates a new kind of thing and the kind itself needs a plain name" }
+      ]
+    },
+    {
+      "id": "rename-or-reset",
+      "task": "Decide and plan a rename or message reset",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/position-name-and-voice", "use": "build", "when": "When an existing brand is weighing a rename or a full message reset" },
+        { "ref": "library:store-rebrand-planner", "type": "skill", "use": "check", "when": "Before committing, to score keep against rename and see the phases if you go ahead" },
+        { "ref": "library:position-name-launch", "type": "workflow", "use": "build", "when": "When a new product needs a position, a name check and a launch with press" },
+        { "ref": "library:brand-launch-planner", "type": "skill", "use": "build", "when": "When the change is agreed and each channel needs its message and steps for the day" },
+        { "ref": "library:byron-sharp", "type": "mind", "use": "think", "when": "When a rename would throw away the name, colours or phrases buyers already know the brand by" }
+      ]
+    },
+    {
+      "id": "quarterly-review",
+      "task": "Run the quarterly voice and message review",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/quarterly-voice-and-message-review", "use": "build", "when": "Every quarter, and after a big launch, a new agency or a new AI writing tool" },
+        { "ref": "kit:skills/voice-and-message-check", "use": "check", "when": "When this quarter's live copy must be sampled and checked against the guide" },
+        { "ref": "library:brand-health-metrics-planner", "type": "skill", "use": "brief", "when": "When the review should also track numbers, to choose what to measure and how to collect it" },
+        { "ref": "library:brand-voice-reviewer", "type": "agent", "use": "check", "when": "Between reviews, to check each draft before it goes out" }
+      ]
+    },
+    {
+      "id": "brand-story",
+      "task": "Write the brand story, About page or manifesto",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:brand-origin-story-writer", "type": "skill", "use": "build", "when": "When the founder's story should become an origin story and an About page that sound like them" },
+        { "ref": "library:brand-manifesto-writer", "type": "skill", "use": "explore", "when": "When the brand stands against something and a manifesto might say it better than a story" },
+        { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "When the draft is finished, to fix lines that sound machine-made" },
+        { "ref": "kit:skills/voice-and-message-check", "use": "check", "when": "Before it is published, to check the piece against the voice guide and messages" }
+      ]
+    },
+    {
+      "id": "pitch-lines",
+      "task": "Write the one-liner and short pitch",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:elevator-pitch-writer", "type": "skill", "use": "build", "when": "When the client needs 10, 30 and 60 second versions of what they do" },
+        { "ref": "library:one-line-position-writer", "type": "prompt", "use": "build", "when": "When the pitch must be one plain line built on the word the brand owns" },
+        { "ref": "library:rival-free-pitch-rewriter", "type": "skill", "use": "explore", "when": "When the pitch only makes sense by naming a rival, to get versions that stand alone" },
+        { "ref": "library:tagline-tester", "type": "skill", "use": "check", "when": "When the one-liner will be used as a strapline, to score it on the same ten tests" }
+      ]
+    },
+    {
+      "id": "strategy-document",
+      "task": "Write up the brand strategy for sign-off",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:brand-strategy-report-writer", "type": "skill", "use": "build", "when": "When the answers are gathered and the client wants one full strategy report" },
+        { "ref": "library:brand-direction-brainstormer", "type": "skill", "use": "explore", "when": "When the client is early and wants names, angles and mood directions to react to" },
+        { "ref": "library:agency-design-brand-guardian", "type": "agent", "use": "check", "when": "When the report is drafted, to check purpose, voice and promises agree with each other" },
+        { "ref": "kit:prompts/brand-fact-file", "use": "build", "when": "When the strategy must also ship as a short file writers will really open" }
+      ]
+    },
+    {
+      "id": "voice-for-tools",
+      "task": "Set the voice up for product copy and AI writing tools",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/voice-guide", "use": "brief", "when": "When the guide exists and must be turned into rules a tool can follow" },
+        { "ref": "library:brand-voice-rules-writer", "type": "skill", "use": "build", "when": "When you need tone, word choices and writing rules any writer or tool can apply" },
+        { "ref": "library:interface-microcopy-writer", "type": "skill", "use": "build", "when": "When buttons, errors and empty states must sound like the brand too" },
+        { "ref": "library:jasper", "type": "tool", "use": "build", "when": "When the client's team writes in a shared tool and the voice should be saved in it" },
+        { "ref": "library:brand-voice-reviewer", "type": "agent", "use": "check", "when": "When the tool is set up, to test its output against the guide" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a strategy, name reason or story states a fact you cannot trace to the client or a source" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any guide, shortlist or report goes out, to catch typos and terms spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "brand-designer", "when": "When the strategy needs a logo, colours and type, not only words" },
+    { "role": "customer-insights-researcher", "when": "When there is no buyer evidence and interviews must be run first" },
+    { "role": "market-research-analyst", "when": "When the category, its size or its rivals are not yet understood" },
+    { "role": "conversion-copywriter", "when": "When the new message must be written into pages that sell" },
+    { "role": "product-marketing-manager", "when": "When positioning is for one product launch with sales and pricing attached" },
+    { "role": "pr-specialist", "when": "When a rename or relaunch needs press" }
+  ],
+  "gaps": [
+    "No library item writes a tagline set from several angles; only the kit prompt does",
+    "No library item checks a name for domain and social handle availability",
+    "No library item checks how a name sounds said aloud, spelt over the phone or read in other languages",
+    "No library item screens a name against registers; the first check found only flags similar marks",
+    "No library item plans a quick buyer test of names or taglines, such as a five-second or recall test",
+    "No library item sets naming rules for plans, features and versions; the one found is for stores and ranges",
+    "No library item gives clearly different voice directions to compare before the guide is written",
+    "No library item writes tone by situation, such as apology, bad news and celebration, for a service business",
+    "No library item writes a brand purpose, mission and values set for customers; those found are for staff culture",
+    "No library item runs a brand workshop with the client's team",
+    "No library item checks a positioning statement against the buyer evidence it claims to rest on"
+  ]
+}

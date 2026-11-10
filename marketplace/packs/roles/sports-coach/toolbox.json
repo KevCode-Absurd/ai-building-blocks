@@ -1,0 +1,283 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "sports-coach",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "session-plan",
+      "task": "Build a timed session plan for one squad",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/session-plan-builder", "use": "build", "when": "When you know the sport, ages, numbers, space and kit and need a timed plan with coaching points" },
+        { "ref": "kit:workflows/weekly-session-cycle", "use": "brief", "when": "Each week in season, to move from last session's notes to this week's plan and messages" },
+        { "ref": "library:practice-session-minute-planner", "type": "prompt", "use": "explore", "when": "When you want a second plan built around one skill and one thing to fix, to compare" },
+        { "ref": "library:direct-teaching-lesson-builder", "type": "skill", "use": "build", "when": "When a new skill needs showing first, then practice together, then practice alone" },
+        { "ref": "library:check-a-lesson-before-teaching-it", "type": "workflow", "use": "check", "when": "Before the session, to cut overload, spot barriers and add quick checks of who has got it" },
+        { "ref": "library:john-wooden", "type": "mind", "use": "think", "when": "When the plan has no clear standard for effort and detail that players can control" }
+      ]
+    },
+    {
+      "id": "drill-levels",
+      "task": "Make a drill easier and harder for a mixed group",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/drill-easier-and-harder", "use": "build", "when": "When a drill is too hard for some, too easy for others, or players are queuing" },
+        { "ref": "library:task-adapter-learners", "type": "skill", "use": "build", "when": "When one player needs the same drill changed for them without changing what it teaches" },
+        { "ref": "library:skill-progression-map-builder", "type": "skill", "use": "brief", "when": "When you need the steps from first basics to mastery, to see where a player is stuck" },
+        { "ref": "library:mixed-age-group-task-designer", "type": "skill", "use": "build", "when": "When older and younger players train together and both must gain from one task" }
+      ]
+    },
+    {
+      "id": "drill-to-game",
+      "task": "Turn a drill into a game players want to play",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/session-plan-builder", "use": "build", "when": "When the game must fit the session's theme, space and numbers" },
+        { "ref": "library:task-engagement-tuner", "type": "skill", "use": "build", "when": "When a drill is dull or stressful, to change the challenge, the goal and the feedback" },
+        { "ref": "library:group-work-task-planner", "type": "skill", "use": "build", "when": "When a few players dominate small groups, to give roles that share the work" },
+        { "ref": "library:viola-spolin", "type": "mind", "use": "think", "when": "When players wait for instructions, to set one shared problem and let the game teach" }
+      ]
+    },
+    {
+      "id": "teach-technique",
+      "task": "Break down and teach one technique",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:skill-breakdown-teaching-planner", "type": "prompt", "use": "build", "when": "When a technique needs cutting into a few steps, each with a common mistake and a self-check" },
+        { "ref": "library:think-aloud-script-writer", "type": "skill", "use": "build", "when": "When you demonstrate, to script what you say aloud so players hear how to decide, not only see" },
+        { "ref": "library:understanding-check-questions", "type": "skill", "use": "check", "when": "During the session, to ask one quick question that shows who has it and who needs more" },
+        { "ref": "library:anders-ericsson", "type": "mind", "use": "think", "when": "When a player has stopped improving and needs one repeatable task with fast feedback" }
+      ]
+    },
+    {
+      "id": "backup-session",
+      "task": "Plan a backup session for bad weather or a small space",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/backup-session-for-bad-weather", "use": "build", "when": "When the pitch is closed, you are in a small hall, or numbers or helpers changed late" },
+        { "ref": "kit:skills/session-plan-builder", "use": "build", "when": "When the backup must still follow this week's theme with timings and safety points" },
+        { "ref": "library:practice-session-minute-planner", "type": "prompt", "use": "explore", "when": "When you have ten minutes to re-plan and need a tight minute-by-minute option" }
+      ]
+    },
+    {
+      "id": "season-plan",
+      "task": "Write a season plan with weekly themes and progressions",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/season-plan-and-progress-sheet", "use": "build", "when": "When you have the squad, weekly slots and season dates and need a week-by-week plan" },
+        { "ref": "kit:workflows/pre-season-setup", "use": "brief", "when": "Before a season, term or new age group, to go from squad brief to first session in order" },
+        { "ref": "library:course-scope-sequence", "type": "skill", "use": "build", "when": "When several age groups need a plan where each year builds on the last" },
+        { "ref": "library:skill-progression-map-builder", "type": "skill", "use": "brief", "when": "Before ordering the weeks, to see which skills must come before which" },
+        { "ref": "library:mixed-practice-unit-planner", "type": "skill", "use": "check", "when": "When the plan teaches each skill once, to bring earlier themes back through the season" }
+      ]
+    },
+    {
+      "id": "progress-sheet",
+      "task": "Set up a player progress sheet with fair levels",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/season-plan-and-progress-sheet", "use": "build", "when": "When you need one sheet per squad with the skills to watch and a simple scale" },
+        { "ref": "library:task-rubric-drafter", "type": "prompt", "use": "build", "when": "When \"good\" for a skill needs clear wording at each level so two coaches agree" },
+        { "ref": "library:success-criteria-writer", "type": "skill", "use": "build", "when": "When a broad aim such as \"better passing\" must become things a coach can see" },
+        { "ref": "library:single-point-rubric-builder", "type": "skill", "use": "explore", "when": "When a full scale is too heavy for a volunteer, to try one standard with room for notes" }
+      ]
+    },
+    {
+      "id": "player-notes",
+      "task": "Write end-of-block notes for players and parents",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/end-of-block-player-notes", "use": "build", "when": "At the end of a block or season, to turn the progress sheet into a short note per player" },
+        { "ref": "library:prepare-feedback-students-can-act-on", "type": "workflow", "use": "build", "when": "When your draft comments are vague and each player needs one clear thing to work on" },
+        { "ref": "library:written-feedback-checker", "type": "skill", "use": "check", "when": "Before the notes go out, to check each is specific, useful and fair" },
+        { "ref": "library:carol-dweck", "type": "mind", "use": "think", "when": "When a note labels a child as talented or weak and should name effort and strategy" }
+      ]
+    },
+    {
+      "id": "parent-messages",
+      "task": "Write club messages to parents and players",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/club-messages-for-parents", "use": "build", "when": "For start of season, changes, cancellations, kit, consent and end-of-season messages" },
+        { "ref": "library:dull-update-email-rewriter", "type": "prompt", "use": "explore", "when": "When a notice is flat, to get a version that puts what parents need first" },
+        { "ref": "library:text-difficulty-checker", "type": "skill", "use": "check", "when": "When families read at mixed levels, to check the message is short and plain enough" },
+        { "ref": "library:translator", "type": "skill", "use": "build", "when": "When some families read another language and need the same message in it" }
+      ]
+    },
+    {
+      "id": "hard-parent-talk",
+      "task": "Handle a complaint or hard talk with a parent",
+      "kind": "email",
+      "items": [
+        { "ref": "library:listen-first-talk-planner", "type": "skill", "use": "brief", "when": "Before a face-to-face talk, to plan how to listen first and say your side once" },
+        { "ref": "library:angry-customer-reply-writer", "type": "prompt", "use": "build", "when": "When an angry message arrives and you need a calm reply that promises only what you can do" },
+        { "ref": "library:tense-email-softener", "type": "prompt", "use": "explore", "when": "When your own draft is sharp, to get a version the parent will want to help with" },
+        { "ref": "library:angry-customer-reply-checker", "type": "skill", "use": "check", "when": "Before you send a reply, to check promises, facts and tone" },
+        { "ref": "library:conflict-mediation-guide", "type": "skill", "use": "brief", "when": "When two families or a parent and a coach are in dispute and need ground rules" }
+      ]
+    },
+    {
+      "id": "player-feedback",
+      "task": "Give a player feedback that changes behaviour",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:feedback-conversation-planner", "type": "skill", "use": "build", "when": "When you must raise effort, attitude or behaviour with one player and want the words" },
+        { "ref": "library:if-then-habit-plan-writer", "type": "skill", "use": "build", "when": "When a player means well but does not follow through, to agree simple if-then plans" },
+        { "ref": "library:haim-ginott", "type": "mind", "use": "think", "when": "When you are about to label a child and should describe what you saw and set a limit" },
+        { "ref": "library:carol-dweck", "type": "mind", "use": "think", "when": "When a player gives up after a setback and needs a next strategy, not a verdict" }
+      ]
+    },
+    {
+      "id": "player-goals",
+      "task": "Set goals with a player and keep them motivated",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:goal-sharpener", "type": "skill", "use": "build", "when": "When a player's aim is fuzzy and needs a number and a finish line" },
+        { "ref": "library:student-goal-routine", "type": "skill", "use": "build", "when": "When the squad should set and review their own goals each block" },
+        { "ref": "library:low-motivation-task-redesigner", "type": "skill", "use": "build", "when": "When players resist one part of training, to rebuild it around choice and progress" },
+        { "ref": "library:anders-ericsson", "type": "mind", "use": "think", "when": "When goals are about results and should be about what to practise this week" }
+      ]
+    },
+    {
+      "id": "volunteer-handbook",
+      "task": "Write a volunteer coach handbook",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/volunteer-coach-handbook", "use": "build", "when": "When the club has policies and contacts and coaches need one short guide to follow" },
+        { "ref": "library:nonprofit-volunteer-program-planner", "type": "skill", "use": "brief", "when": "When volunteer roles, screening and training are not yet agreed by the club" },
+        { "ref": "library:operations-manual-writer", "type": "skill", "use": "build", "when": "When each role, such as coach, helper and team manager, needs a one-page job card" },
+        { "ref": "library:make-a-new-policy-understandable-to-staff", "type": "workflow", "use": "build", "when": "When a club policy is written in formal words and coaches need it in plain ones" },
+        { "ref": "library:text-difficulty-checker", "type": "skill", "use": "check", "when": "Before it is printed, to check a busy volunteer can read it in one sitting" }
+      ]
+    },
+    {
+      "id": "volunteer-induction",
+      "task": "Induct and support new volunteer coaches",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:build-a-volunteer-induction-checklist", "type": "workflow", "use": "build", "when": "When a new coach starts and needs an induction, a practice plan and named supervision" },
+        { "ref": "library:volunteer-induction-evidence-review-assistant", "type": "agent", "use": "check", "when": "When inductions are done, to see whose checks or supervised sessions are still missing" },
+        { "ref": "kit:workflows/pre-season-setup", "use": "brief", "when": "When a new volunteer takes over a squad and needs the first weeks laid out" },
+        { "ref": "library:lesson-observation-form-builder", "type": "skill", "use": "build", "when": "When you watch a new coach's session and need look-fors and a sheet to record facts" },
+        { "ref": "library:teaching-coach-guide", "type": "skill", "use": "build", "when": "After watching a session, to plan a short talk that ends in one small next step" }
+      ]
+    },
+    {
+      "id": "head-injury",
+      "task": "Write head-injury steps for parents and coaches",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/head-injury-steps-for-parents", "use": "build", "when": "At the start of a season, or when the club adopts a concussion policy" },
+        { "ref": "library:make-a-new-policy-understandable-to-staff", "type": "workflow", "use": "build", "when": "When the governing body's policy is long and coaches need what changes for them" },
+        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before it goes out, to check every time limit and rule against the source you were given" }
+      ]
+    },
+    {
+      "id": "welfare-note",
+      "task": "Write a factual welfare concern note",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/welfare-concern-note", "use": "build", "when": "When you saw or heard something worrying and must pass it to the welfare officer today" },
+        { "ref": "kit:skills/volunteer-coach-handbook", "use": "brief", "when": "To confirm who the welfare officer is and the route the club says to use" }
+      ]
+    },
+    {
+      "id": "inclusion",
+      "task": "Adapt a session for players with access needs",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:adapt-a-lesson-for-different-access-needs", "type": "workflow", "use": "build", "when": "When a player has a disability or support need and the session must work for them too" },
+        { "ref": "library:lesson-barrier-spotter", "type": "skill", "use": "check", "when": "When a plan is drafted, to find what will shut some players out and what design can fix" },
+        { "ref": "library:task-adapter-learners", "type": "skill", "use": "build", "when": "When one drill needs changing for one player with the aim kept the same" },
+        { "ref": "kit:prompts/drill-easier-and-harder", "use": "build", "when": "When the same change can help by giving every drill an easier and a harder level" }
+      ]
+    },
+    {
+      "id": "fitness-basics",
+      "task": "Plan basic fitness work for an adult beginner group",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:beginner-workout-planner", "type": "skill", "use": "build", "when": "When adult beginners want a simple four-week plan with warm-ups and rest days" },
+        { "ref": "kit:skills/session-plan-builder", "use": "build", "when": "When fitness work must sit inside a normal session with timings and safety points" }
+      ]
+    },
+    {
+      "id": "match-day",
+      "task": "Prepare match day: team talk and match messages",
+      "kind": "other",
+      "items": [
+        { "ref": "library:read-aloud-speech-shaper", "type": "skill", "use": "build", "when": "When you have notes for a team talk and need it short and shaped to be heard" },
+        { "ref": "kit:skills/club-messages-for-parents", "use": "build", "when": "When parents need the time, place, kit and lift details for a match or event" },
+        { "ref": "library:john-wooden", "type": "mind", "use": "think", "when": "When the talk is about winning and should be about effort and what players control" }
+      ]
+    },
+    {
+      "id": "club-event",
+      "task": "Plan a tournament, trial or open day",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:prepare-a-community-event-access-plan", "type": "workflow", "use": "brief", "when": "When visitors with access needs will come and you need routes and who does what" },
+        { "ref": "library:make-a-readable-event-poster", "type": "workflow", "use": "build", "when": "When the event needs a poster with checked details and an export list" },
+        { "ref": "library:type-led-poster-planner", "type": "skill", "use": "explore", "when": "When there are no good photos, to try a type-only poster that reads from far away" },
+        { "ref": "kit:skills/club-messages-for-parents", "use": "build", "when": "When families need the event details, what to bring and how to sign up" }
+      ]
+    },
+    {
+      "id": "recruit-and-promote",
+      "task": "Write posts to recruit players and volunteers",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:social-post-writer", "type": "skill", "use": "build", "when": "When the club needs clear posts for a new season, a trial or a call for helpers" },
+        { "ref": "library:dull-update-email-rewriter", "type": "prompt", "use": "explore", "when": "When the call for volunteers is flat, to lead with what the helper gains" },
+        { "ref": "library:canva", "type": "tool", "use": "build", "when": "When a volunteer will make the graphic from a template and reuse it" },
+        { "ref": "library:honest-appreciation-note-writer", "type": "skill", "use": "build", "when": "When a volunteer or sponsor should be thanked with one specific, true line" }
+      ]
+    },
+    {
+      "id": "funding",
+      "task": "Ask for a grant, a sponsor or set fees",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:nonprofit-grant-funder-researcher", "type": "skill", "use": "brief", "when": "When the club needs kit or pitch money and does not know which funders fit" },
+        { "ref": "library:nonprofit-grant-proposal-writer", "type": "skill", "use": "build", "when": "When a funder's form is open and you need a draft matched to their questions" },
+        { "ref": "library:nonprofit-sponsor-package-planner", "type": "skill", "use": "build", "when": "When a local business might sponsor the kit and you need tiers and pitch words" },
+        { "ref": "library:membership-plan-pricer", "type": "skill", "use": "build", "when": "When the club must set or change fees and wants fair tiers" }
+      ]
+    },
+    {
+      "id": "family-feedback",
+      "task": "Read parent and player feedback at season end",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:survey-answer-truth-checker", "type": "prompt", "use": "check", "when": "Before you act on a survey, to find the answers that cannot be trusted" },
+        { "ref": "library:research-theme-synthesizer", "type": "skill", "use": "build", "when": "When you have survey answers and messages and need themes ranked with quotes" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any message or handout goes out, to catch typos and names spelt two ways" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a document states a safety rule, ratio or time limit you cannot trace to the source" }
+  ],
+  "helpers": [
+    { "role": "membership-volunteer-coordinator", "when": "When the job is recruiting, rostering and keeping volunteers, not coaching them" },
+    { "role": "graphic-designer", "when": "When posters, kit graphics or social templates must look finished" },
+    { "role": "social-media-manager", "when": "When the club wants a posting plan for the season, not one post" },
+    { "role": "fundraising-specialist", "when": "When a grant bid or fundraising drive is the main job" },
+    { "role": "event-manager", "when": "When a tournament or camp needs a full run sheet, suppliers and a budget" },
+    { "role": "sponsorship-manager", "when": "When the club is selling sponsor packages to several businesses" }
+  ],
+  "gaps": [
+    "The library has no sport-specific items; session plans, drills and season plans rest on the kit and on classroom teaching skills",
+    "No library item holds drills or small-sided games by sport, age and skill",
+    "No library item plans age-appropriate warm-ups, conditioning or training load for children",
+    "No library item covers match day: fair playing time, selection, substitutions or a half-time talk",
+    "No library item covers safeguarding: welfare concern notes, supervision ratios or photo consent",
+    "No library item covers concussion or injury steps, a session risk assessment or an emergency action plan",
+    "No library item builds a player progress tracker or an attendance register",
+    "No library item gives clearly different versions of one club message to compare, or checks a club message for missing details",
+    "No library item plans tournament fixtures, a holiday camp or a volunteer rota",
+    "No library item writes a short parent or player survey",
+    "No library item covers video review of a player's technique",
+    "No library item checks a recruitment post, a grant bid or a sponsor pitch for a club before it goes out"
+  ]
+}

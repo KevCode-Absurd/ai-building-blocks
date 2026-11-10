@@ -1,0 +1,271 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "ad-creative-strategist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "concept-batch",
+      "task": "Come up with a batch of clearly different ad concepts",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:skills/ad-concepts-and-hooks", "use": "build", "when": "When you have an offer, a buyer and a proof list and need a batch of concepts with hooks and copy" },
+        { "ref": "library:creative-brief-writer", "type": "skill", "use": "brief", "when": "When all you have is reviews and product facts and need one problem, one angle and a proof list" },
+        { "ref": "library:seven-bucket-ad-concept-brainstormer", "type": "skill", "use": "explore", "when": "When ideas all come from one place, to draw concepts from seven groups and rank the best eight" },
+        { "ref": "library:ad-concept-matrix-builder", "type": "skill", "use": "explore", "when": "When you want a wide grid of buyer types, angles and offers set out in test order" },
+        { "ref": "library:ad-sameness-checker", "type": "skill", "use": "check", "when": "When a batch is drafted, to find concepts that are the same idea in different words" },
+        { "ref": "library:luke-sullivan", "type": "mind", "use": "think", "when": "When every concept is a feature list and none has a simple idea a stranger would repeat" }
+      ]
+    },
+    {
+      "id": "buyer-and-angle",
+      "task": "Pin down the buyer, awareness stage and angle",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:ad-angle-planner", "type": "skill", "use": "build", "when": "Before writing, to set how the ad opens, argues and asks for one named buyer" },
+        { "ref": "library:persona-stage-theme-matrix-planner", "type": "skill", "use": "explore", "when": "When you need to see which buyer, stage and theme cells have no ad yet and pick the next ten" },
+        { "ref": "library:customer-research-analyst", "type": "skill", "use": "brief", "when": "When you have interviews, surveys or tickets and need the words buyers really use" },
+        { "ref": "library:big-idea-and-mechanism-builder", "type": "skill", "use": "build", "when": "When the product works for a reason buyers have not heard and it needs a name and a story" },
+        { "ref": "library:eugene-schwartz", "type": "mind", "use": "think", "when": "When the ad explains too much or too little for what this buyer already knows and wants" }
+      ]
+    },
+    {
+      "id": "hook-bank",
+      "task": "Write a hook bank for one offer",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:prompts/hook-bank", "use": "build", "when": "When you need fresh openings, or want to test hooks on a video or image that already works" },
+        { "ref": "library:five-tactic-ad-hook-writer", "type": "skill", "use": "explore", "when": "When hooks all use one trick, to get openings from five tactics ranked by fit and proof" },
+        { "ref": "library:short-video-hook-writer", "type": "skill", "use": "build", "when": "When the hooks are for video and must be checked for length and reading level" },
+        { "ref": "library:video-hook-scorer", "type": "skill", "use": "check", "when": "When you have a list of video hooks and must pick the few worth filming" }
+      ]
+    },
+    {
+      "id": "copy-variations",
+      "task": "Write ten ad copy variations for one offer",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:skills/ad-concepts-and-hooks", "use": "build", "when": "When each variation needs its own angle and copy inside the platform's limits" },
+        { "ref": "library:one-buyer-ad-copy", "type": "workflow", "use": "build", "when": "When you have reviews and facts and want a buyer brief, first lines and full copy in one run" },
+        { "ref": "library:awareness-stage-ad-framework-chooser", "type": "skill", "use": "brief", "when": "Before writing, to choose a copy structure that fits what the buyer already knows" },
+        { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When the main line is flat, to get five short headlines that each take a new angle" },
+        { "ref": "library:ad-first-line-writer-and-scorer", "type": "skill", "use": "check", "when": "When first lines are drafted, to score each out of 100 and fix the weak ones" },
+        { "ref": "library:john-caples", "type": "mind", "use": "think", "when": "When you cannot say which variation is being tested against which, or why" }
+      ]
+    },
+    {
+      "id": "concrete-rewrite",
+      "task": "Rewrite a vague ad into a concrete one",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:make-vague-ad-copy-concrete-with-a-clear-ask", "type": "workflow", "use": "build", "when": "When a draft sounds like every other ad and needs concrete lines and one clear ask" },
+        { "ref": "library:ad-pull-diagnoser", "type": "skill", "use": "brief", "when": "When an ad gets few replies and you need the likely causes ranked before rewriting" },
+        { "ref": "library:flaw-first-ad-writer", "type": "skill", "use": "explore", "when": "When the honest version might win, to try an ad that names a real weakness first" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a line is rewritten, to test it is specific, true and easy to picture" },
+        { "ref": "library:david-ogilvy", "type": "mind", "use": "think", "when": "When the copy is adjectives and should be facts the buyer can check" }
+      ]
+    },
+    {
+      "id": "review-ads",
+      "task": "Build ads from real customer reviews",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:review-ad-copy", "type": "workflow", "use": "build", "when": "When you have reviews and a brand file and want a buyer brief, an angle and checked copy" },
+        { "ref": "library:customer-quote-image-ad", "type": "skill", "use": "build", "when": "When one review line is strong enough to be the whole image ad" },
+        { "ref": "library:quote-video-ad-script", "type": "skill", "use": "explore", "when": "When the reviews would work better spoken, to get a video script with a source for every line" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "Before a quote runs, to sort each claim into fine, needs proof or cut" }
+      ]
+    },
+    {
+      "id": "static-concepts",
+      "task": "Write a weekly batch of image ad concepts for a designer",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:prompts/static-ad-concepts", "use": "build", "when": "When a designer needs a batch of image ads they can build without a meeting" },
+        { "ref": "library:twelve-pattern-static-ad-brief-maker", "type": "skill", "use": "explore", "when": "When you need different ad patterns picked by buyer stage and proof, each with copy and layout" },
+        { "ref": "library:theme-based-ad-layout-blueprint-maker", "type": "skill", "use": "explore", "when": "When you need three or four layouts with text zones and product placement to compare" },
+        { "ref": "library:carousel-ad-writer", "type": "skill", "use": "explore", "when": "When the idea needs more than one frame, to try it as a two to six card carousel" },
+        { "ref": "library:image-ad-copy-writer", "type": "skill", "use": "build", "when": "When a concept is picked and needs every word on and around the picture" },
+        { "ref": "library:static-ad-critic", "type": "skill", "use": "check", "when": "When an ad is mocked up, to score it against its page and get fixes and two rewrites" }
+      ]
+    },
+    {
+      "id": "offer-first-ads",
+      "task": "Write ads that put the offer first",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:hidden-offer-finder", "type": "prompt", "use": "brief", "when": "When prices and deals are scattered, to find clashes and new offers worth leading with" },
+        { "ref": "library:three-way-offer-image-ad-planner", "type": "skill", "use": "explore", "when": "When the offer is set, to get three different offer image ads in two sizes" },
+        { "ref": "kit:prompts/static-ad-concepts", "use": "build", "when": "When the chosen offer ads must go to a designer as a clear brief" },
+        { "ref": "library:static-ad-critic", "type": "skill", "use": "check", "when": "When the offer ad is drafted, to check the offer is the first thing read" }
+      ]
+    },
+    {
+      "id": "video-script",
+      "task": "Write a short video ad script with a shot list",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:skills/short-video-ad-script", "use": "build", "when": "When you need hooks, a two-column script, on-screen text and a shot list for one ad" },
+        { "ref": "library:video-ad-script-type-picker", "type": "skill", "use": "explore", "when": "Before writing, to see four different kinds of script for this buyer and pick one" },
+        { "ref": "library:five-part-creator-ad-script-writer", "type": "skill", "use": "build", "when": "When a creator will speak it and it needs five timed parts from hook to call to action" },
+        { "ref": "library:video-ad-shot-list-maker", "type": "skill", "use": "build", "when": "When the script is approved and the editor needs timed shots and an edit list" },
+        { "ref": "library:video-ad-script-line-checker", "type": "skill", "use": "check", "when": "When the script is drafted, to find each weak line with a fix and a score" },
+        { "ref": "library:sound-off-commercial-checker", "type": "skill", "use": "check", "when": "Before filming, to check the ad still sells with the sound off" }
+      ]
+    },
+    {
+      "id": "tighten-script",
+      "task": "Tighten a draft video script before filming",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:tighten-a-video-ad-script-before-you-film-it", "type": "workflow", "use": "build", "when": "When a client's draft runs long and needs cutting, a sound-off check and a viewer test" },
+        { "ref": "kit:skills/short-video-ad-script", "use": "explore", "when": "When the opening is the problem, to write several new hooks for the same body" },
+        { "ref": "library:video-ad-script-line-checker", "type": "skill", "use": "check", "when": "After the cut, to confirm every line left earns its seconds" }
+      ]
+    },
+    {
+      "id": "founder-shoot",
+      "task": "Plan a one-afternoon founder ad shoot",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:shoot-a-batch-of-founder-ads-in-one-afternoon", "type": "workflow", "use": "build", "when": "When a founder will film themselves and needs checked scripts and a plan for one afternoon" },
+        { "ref": "library:founder-ad-shoot-planner", "type": "skill", "use": "build", "when": "When you have hooks and stories and need a hook-by-body grid and a shoot list" },
+        { "ref": "library:video-ad-production-plan-builder", "type": "skill", "use": "build", "when": "When the shoot needs kit, locations, roles and timings written down" },
+        { "ref": "kit:skills/short-video-ad-script", "use": "brief", "when": "When each ad to be filmed still needs its script and on-screen text" }
+      ]
+    },
+    {
+      "id": "creator-brief",
+      "task": "Brief creators to film ads",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:creator-filming-brief-writer", "type": "skill", "use": "build", "when": "When a script is approved and a creator needs a filming brief, shoot order and file names" },
+        { "ref": "kit:skills/short-video-ad-script", "use": "explore", "when": "When creators should get two or three hooks to try, not one fixed opening" },
+        { "ref": "library:ad-recall-risk-checker", "type": "skill", "use": "check", "when": "Before the brief goes out, to check viewers will remember the brand and not only the creator" }
+      ]
+    },
+    {
+      "id": "competitor-teardown",
+      "task": "Tear down rival ads and report the gaps",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/competitor-ad-teardown", "use": "build", "when": "When you have rivals' public ads and need a tagged table of offers, angles, hooks and proof" },
+        { "ref": "kit:workflows/competitor-angle-refresh", "use": "brief", "when": "Monthly, or quarterly in slow markets, to rerun the teardown and refresh angles" },
+        { "ref": "library:facebook-ad-library-collector", "type": "skill", "use": "brief", "when": "When you only have rival names and need their live ads pulled from the public library" },
+        { "ref": "library:ad-library-teardown-counter", "type": "skill", "use": "build", "when": "When you have an export and need counts by format, age and awareness stage" },
+        { "ref": "library:competitor-ad-theme-and-gap-mapper", "type": "skill", "use": "build", "when": "When rival ads must be grouped by theme to rank the gaps nobody is filling" }
+      ]
+    },
+    {
+      "id": "rival-test-briefs",
+      "task": "Turn rival ads into ranked test briefs",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:turn-rival-ads-into-ranked-test-briefs", "type": "workflow", "use": "build", "when": "When the client wants test briefs this week from a rival's library ads" },
+        { "ref": "library:competitor-ad-gap-finder", "type": "skill", "use": "explore", "when": "When you want the gaps scored and a brief for each, to choose which to test first" },
+        { "ref": "library:rival-gap-message-writer", "type": "prompt", "use": "build", "when": "When the client has a proven strength that rivals never state and it should lead the ad" },
+        { "ref": "kit:prompts/ad-policy-precheck", "use": "check", "when": "Before a brief that names or compares a rival goes out, to catch claims you cannot stand behind" }
+      ]
+    },
+    {
+      "id": "test-plan",
+      "task": "Plan a fair creative test",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/creative-test-plan-and-readout", "use": "build", "when": "When you need one question, one change, a budget per version and a stop rule set in advance" },
+        { "ref": "library:meta-setup-of-new-ad-campaigns-with-new-creatives-planner", "type": "skill", "use": "build", "when": "When the test runs on Meta and needs campaign set-up, ad names and checks" },
+        { "ref": "library:creative-volume-planner", "type": "skill", "use": "brief", "when": "When you must work out how many new ads a month the spend and hit rate call for" },
+        { "ref": "library:ad-test-sprint-runner", "type": "agent", "use": "build", "when": "When tests run in rounds and each round should be planned from the last result" },
+        { "ref": "library:john-caples", "type": "mind", "use": "think", "when": "When a test changes three things at once and could not tell you why it won" }
+      ]
+    },
+    {
+      "id": "results-readout",
+      "task": "Read creative test results from an export",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/creative-results-readout", "use": "build", "when": "When a test has ended, or the client asks which ads are working" },
+        { "ref": "kit:skills/creative-test-plan-and-readout", "use": "build", "when": "When results must be read in order from attention to hold to click to sale" },
+        { "ref": "library:creative-test-reader", "type": "skill", "use": "check", "when": "When a winner is called, to test for false winners and get keep, leave or replace calls" },
+        { "ref": "library:video-hook-and-hold-matrix-reviewer", "type": "skill", "use": "build", "when": "When the ads are video and you need each placed by hook and hold with a fix" },
+        { "ref": "library:ad-performance-diagnoser", "type": "skill", "use": "brief", "when": "When a whole campaign is weak and you must find the main bottleneck first" }
+      ]
+    },
+    {
+      "id": "winner-remix",
+      "task": "Plan remixes of a winning or tiring ad",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:prompts/winner-remix-plan", "use": "build", "when": "When one ad is clearly beating the rest, or it is starting to fatigue" },
+        { "ref": "library:ad-angle-multiplier", "type": "skill", "use": "explore", "when": "When one idea wins, to get ten to fifteen new angles on it with hooks and a test order" },
+        { "ref": "library:fatigued-ad-reviver", "type": "skill", "use": "build", "when": "When a winner fades, to find the cause and get ranked revival moves and new hooks" },
+        { "ref": "library:image-ad-remake-planner", "type": "skill", "use": "explore", "when": "When the best ad should be tried as a carousel or new still with every word unchanged" },
+        { "ref": "library:ad-fatigue-watcher", "type": "agent", "use": "check", "when": "Twice a week, to catch tired ads early and get a brief for each" }
+      ]
+    },
+    {
+      "id": "policy-precheck",
+      "task": "Check ads against platform rules and claims",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/ad-policy-precheck", "use": "check", "when": "Before any batch goes to an ad account, to catch lines and images likely to be rejected" },
+        { "ref": "library:ad-and-page-policy-checker", "type": "skill", "use": "check", "when": "When you need risks flagged line by line with safer rewrites" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When the copy makes claims and each must be sorted into fine, needs proof or cut" },
+        { "ref": "library:creative-evidence-review-agent", "type": "agent", "use": "check", "when": "When finished creative must be checked against the brief and the product facts" }
+      ]
+    },
+    {
+      "id": "weekly-sprint",
+      "task": "Run the weekly creative sprint",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/weekly-creative-sprint", "use": "build", "when": "Weekly on a fixed day, to go from last week's results to this week's briefs" },
+        { "ref": "library:creative-sprint-readiness-reviewer", "type": "skill", "use": "check", "when": "Before briefs, before images and before launch, to stop a sprint that is not ready" },
+        { "ref": "library:creative-volume-planner", "type": "skill", "use": "brief", "when": "When the weekly quota of new ads is a guess and should come from spend and hit rate" }
+      ]
+    },
+    {
+      "id": "ad-images",
+      "task": "Make ad images with an AI image tool",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:ad-image-generation-and-edit-planner", "type": "skill", "use": "build", "when": "When you have a product photo and need settings and a prompt for each image in a batch" },
+        { "ref": "library:theme-based-ad-layout-blueprint-maker", "type": "skill", "use": "explore", "when": "Before generating, to compare layouts so the batch is not one picture four times" },
+        { "ref": "library:ideogram", "type": "tool", "use": "build", "when": "When the image must carry readable words from the prompt" },
+        { "ref": "library:static-ad-critic", "type": "skill", "use": "check", "when": "When images are back, to score each against its page before any go live" }
+      ]
+    },
+    {
+      "id": "ad-to-page",
+      "task": "Check the ad and its landing page keep one promise",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:ad-and-page-match-checker", "type": "skill", "use": "check", "when": "When an ad is ready, to score how well the page picks up its promise and rank mismatches" },
+        { "ref": "kit:prompts/ad-policy-precheck", "use": "check", "when": "When the page makes claims the ad repeats, to catch ones likely to be rejected" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any ad that must look or sound like the client: colours, fonts and voice from the live site" },
+    { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When copy states a number, result or comparison you cannot trace to the client's proof" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a batch goes to a designer or an ad account, to catch typos and names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "meta-media-buyer", "when": "When the ads need campaign set-up, budgets and audiences, not only creative" },
+    { "role": "graphic-designer", "when": "When static concepts must be built into finished image files" },
+    { "role": "video-editor", "when": "When filmed clips need cutting, captions and exports for each placement" },
+    { "role": "conversion-copywriter", "when": "When the landing page behind the ad needs rewriting to match it" },
+    { "role": "google-ads-media-buyer", "when": "When the job is search ads with keywords and ad groups" },
+    { "role": "customer-insights-researcher", "when": "When there are no reviews or interviews to build angles from and research must come first" }
+  ],
+  "gaps": [
+    "No library item writes Google responsive search ad headlines and descriptions to character limits",
+    "No library item writes LinkedIn or B2B lead ad copy",
+    "No library item sets an ad naming convention so results can be read by concept, hook and format",
+    "No library item reads a creative export across platforms; the readers found are for Meta, TikTok or YouTube alone",
+    "No library item checks a creator brief for disclosure rules and usage rights",
+    "No library item offers clearly different creator briefs or shoot plans to compare",
+    "No library item turns one winning video into cut-downs for each placement and length",
+    "No library item checks AI-made ad images for wrong product details, warped text or look-alike faces",
+    "No library item scores a batch of static concepts before a designer builds them; the critic needs a finished ad"
+  ]
+}

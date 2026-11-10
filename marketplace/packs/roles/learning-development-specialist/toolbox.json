@@ -1,0 +1,299 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "learning-development-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "sop-to-training",
+      "task": "Turn one procedure into on-the-job training",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/sop-to-on-the-job-training", "use": "build", "when": "When there is a written procedure and a shift lead must teach it and sign people off" },
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "brief", "when": "When the job lives in someone's head and must be written down before you can teach it" },
+        { "ref": "library:skill-breakdown-teaching-planner", "type": "prompt", "use": "build", "when": "When a skill needs breaking into a few steps, each with a common mistake and a self-check" },
+        { "ref": "library:worked-example-practice", "type": "skill", "use": "build", "when": "When learners must move from watching a full example to doing the procedure alone" },
+        { "ref": "library:write-a-procedure-test-it-and-build-a-training-deck", "type": "workflow", "use": "build", "when": "When you start from a spoken description and need the procedure, a gap check and a deck in one run" },
+        { "ref": "library:overloaded-lesson-checker", "type": "skill", "use": "check", "when": "When the module is drafted, to find where it asks learners to hold too much at once" }
+      ]
+    },
+    {
+      "id": "session-plan",
+      "task": "Plan a training session with timings and practice",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/launch-and-evaluate-one-programme", "use": "brief", "when": "When a manager asks for training on one task and you need the steps from request to proof it worked" },
+        { "ref": "library:training-program-builder", "type": "skill", "use": "build", "when": "When you have a skills gap and need objectives, a session outline and a coaching plan for after" },
+        { "ref": "library:practice-session-minute-planner", "type": "prompt", "use": "build", "when": "When you know the skill, group and time and need the session planned minute by minute" },
+        { "ref": "library:agency-corporate-training-designer", "type": "agent", "use": "explore", "when": "When you want a second design that starts from the work problem, to compare with your outline" },
+        { "ref": "library:check-a-lesson-before-teaching-it", "type": "workflow", "use": "check", "when": "Before the session runs, to cut overload, fix barriers and add quick checks of who has got it" },
+        { "ref": "library:anders-ericsson", "type": "mind", "use": "think", "when": "When the session is all talk and needs one repeatable task, a clear standard and fast feedback" }
+      ]
+    },
+    {
+      "id": "training-or-not",
+      "task": "Decide whether a request is really a training problem",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/is-it-a-training-problem", "use": "build", "when": "When a manager asks for training on something and you doubt that skill is the cause" },
+        { "ref": "library:root-cause-finder", "type": "skill", "use": "brief", "when": "When the same error keeps coming back and you need a chain of whys checked against facts" },
+        { "ref": "library:five-whys-session-planner", "type": "skill", "use": "brief", "when": "When the cause must be found with the team in a room, without it turning into blame" }
+      ]
+    },
+    {
+      "id": "onboarding-path",
+      "task": "Build a week-by-week onboarding path for one role",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/onboarding-learning-path", "use": "build", "when": "When you hire the same role again and again and want new starters doing the job alone sooner" },
+        { "ref": "library:new-hire-first-week-planner", "type": "prompt", "use": "build", "when": "When week one needs a day-by-day plan with one small real task and who they meet" },
+        { "ref": "library:30-60-90-day-onboarding-planner", "type": "skill", "use": "build", "when": "When each new hire needs clear goals for day 30, 60 and 90" },
+        { "ref": "library:build-a-volunteer-induction-checklist", "type": "workflow", "use": "build", "when": "When the starters are volunteers and you need an induction, a practice plan and supervision gaps" },
+        { "ref": "library:new-hire-onboarding-keeper", "type": "agent", "use": "check", "when": "Each week after the start date, to check progress against the path and say what to fix" }
+      ]
+    },
+    {
+      "id": "workshop-plan",
+      "task": "Plan a workshop with an agenda and facilitator guide",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/workshop-agenda-and-facilitator-guide", "use": "build", "when": "When a workshop must end with a decision, a plan or a practised skill, in a room or online" },
+        { "ref": "library:community-workshop-guide-builder", "type": "skill", "use": "build", "when": "When the workshop is for a charity or community group and needs activities, worksheets and host notes" },
+        { "ref": "library:prepare-a-webinar-people-can-follow", "type": "workflow", "use": "build", "when": "When the session is online and one-to-many, to get a teaching outline and a slide brief" },
+        { "ref": "library:nancy-kline", "type": "mind", "use": "think", "when": "When a leadership team talks over each other and quiet people never get to think aloud" }
+      ]
+    },
+    {
+      "id": "workshop-write-up",
+      "task": "Write up a workshop or meeting from rough notes",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:rough-notes-to-minutes-writer", "type": "prompt", "use": "build", "when": "When you have typed or photographed notes and need decisions, owners and dates on one page" },
+        { "ref": "library:audio-meeting-notes-writer", "type": "skill", "use": "build", "when": "When the session was recorded and you need a transcript, a summary and notes" }
+      ]
+    },
+    {
+      "id": "job-aid",
+      "task": "Write a one-page job aid, handout or reference card",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:training-handout-writer", "type": "prompt", "use": "build", "when": "When you have session notes or slides and need one page people can use at the station a month on" },
+        { "ref": "library:word-picture-explainer", "type": "skill", "use": "build", "when": "When a step is easier shown than told, to plan the diagram that sits beside the words" },
+        { "ref": "library:overloaded-lesson-checker", "type": "skill", "use": "check", "when": "When the page is drafted, to find where it is too crowded to use mid-task" }
+      ]
+    },
+    {
+      "id": "knowledge-check",
+      "task": "Write a quiz or knowledge check with an answer key",
+      "kind": "other",
+      "items": [
+        { "ref": "library:retrieval-quiz-writer", "type": "skill", "use": "build", "when": "When you need short recall questions at easy, medium and hard levels on one topic" },
+        { "ref": "library:build-a-lesson-from-explanation-to-practice-and-a-quiz", "type": "workflow", "use": "build", "when": "When the quiz should come with the explanation, worked examples and practice it tests" },
+        { "ref": "library:marking-rubric-writer", "type": "skill", "use": "build", "when": "When answers are written or practical and markers need a description of each level" },
+        { "ref": "library:assessment-fairness-check", "type": "skill", "use": "check", "when": "Before anyone sits it, to check the quiz tests the stated goals and marks fairly" },
+        { "ref": "library:peter-c-brown", "type": "mind", "use": "think", "when": "When the check is a tick-box at the end and should be recall that makes the learning stick" }
+      ]
+    },
+    {
+      "id": "competency-sign-off",
+      "task": "Build a competency sign-off checklist and observation form",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/sop-to-on-the-job-training", "use": "build", "when": "When the sign-off must match the goals and steps of one procedure" },
+        { "ref": "library:success-criteria-writer", "type": "skill", "use": "build", "when": "When \"can do the job\" is vague and must become things an observer can see and tick" },
+        { "ref": "library:lesson-observation-form-builder", "type": "skill", "use": "build", "when": "When someone will watch the task or the trainer and needs look-fors and a sheet to record facts" }
+      ]
+    },
+    {
+      "id": "practice-tasks",
+      "task": "Design practice tasks and role-plays for one skill",
+      "kind": "other",
+      "items": [
+        { "ref": "library:turn-a-worked-example-into-independent-practice", "type": "workflow", "use": "build", "when": "When you have one good example and need staged practice that takes the help away bit by bit" },
+        { "ref": "library:skill-transfer-challenge-writer", "type": "skill", "use": "build", "when": "When people pass the drill and you need new cases that test the skill on real, messier work" },
+        { "ref": "library:build-a-practical-manager-training-session", "type": "workflow", "use": "build", "when": "When the skill is a people skill and you need a practice activity with evidence to collect" },
+        { "ref": "library:anders-ericsson", "type": "mind", "use": "think", "when": "When practice is just repetition and needs a target a little past what people can do now" }
+      ]
+    },
+    {
+      "id": "training-deck",
+      "task": "Build a training deck from a procedure or session plan",
+      "kind": "other",
+      "items": [
+        { "ref": "library:presentation-builder", "type": "skill", "use": "build", "when": "When you have an outline or document and need a clean deck for the room" },
+        { "ref": "library:editable-slide-deck-builder", "type": "skill", "use": "build", "when": "When the client's trainers must edit the slides in PowerPoint afterwards" },
+        { "ref": "library:gamma", "type": "tool", "use": "explore", "when": "When you want two or three draft decks from the same outline to compare before you commit" },
+        { "ref": "library:overloaded-lesson-checker", "type": "skill", "use": "check", "when": "When slides are drafted, to find the ones that carry too much text or too many ideas" },
+        { "ref": "library:prepare-a-powerpoint-deck-for-presenting-and-sharing", "type": "workflow", "use": "check", "when": "Before the deck goes out, to check speaker notes, links and that it reads without you" }
+      ]
+    },
+    {
+      "id": "skills-matrix",
+      "task": "Build a skills matrix and read the gap report",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/skills-matrix-and-career-ladder", "use": "build", "when": "When a team needs its skills listed, rated by self and manager, and the thin spots shown" },
+        { "ref": "library:role-skills-framework-builder", "type": "skill", "use": "brief", "when": "When no one has written what good looks like at each level for the roles in the matrix" }
+      ]
+    },
+    {
+      "id": "career-ladder",
+      "task": "Write a career ladder and promotion criteria",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/skills-matrix-and-career-ladder", "use": "build", "when": "When the ladder must be built from the same skills and levels the team is already rated on" },
+        { "ref": "library:career-ladder-plan", "type": "skill", "use": "build", "when": "When one job family needs levels, growth plans and a guide for managers' career talks" },
+        { "ref": "library:prepare-a-fair-promotion-discussion", "type": "workflow", "use": "check", "when": "When a real promotion case is due, to match the person's evidence to the criteria and list gaps" },
+        { "ref": "library:review-cycle-form-builder", "type": "skill", "use": "build", "when": "When the ladder must feed review forms, goal templates and a fair rating meeting" }
+      ]
+    },
+    {
+      "id": "development-plans",
+      "task": "Write development plans for named people",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:career-ladder-plan", "type": "skill", "use": "build", "when": "When each person's plan should point at the next level on their ladder" },
+        { "ref": "library:mentoring-program-builder", "type": "skill", "use": "build", "when": "When growth depends on pairing people up and you need matching rules and talk guides" },
+        { "ref": "library:carol-dweck", "type": "mind", "use": "think", "when": "When a plan reads as a verdict on the person and should name strategies to try next" }
+      ]
+    },
+    {
+      "id": "needs-analysis",
+      "task": "Run a training needs analysis from surveys and reviews",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/training-needs-analysis", "use": "build", "when": "When you have goals, survey exports, review themes and error data and need counted skill gaps" },
+        { "ref": "library:employee-survey-designer", "type": "skill", "use": "brief", "when": "When there is no data yet and you need survey questions and a focus group guide" },
+        { "ref": "library:survey-answer-truth-checker", "type": "prompt", "use": "check", "when": "Before you count the answers, to find questions whose results cannot be trusted" },
+        { "ref": "library:prepare-a-survey-findings-briefing", "type": "workflow", "use": "build", "when": "When leaders want the survey findings in a briefing with honest caveats on who answered" },
+        { "ref": "kit:prompts/is-it-a-training-problem", "use": "check", "when": "For each gap on the list, to drop the ones training will not fix" }
+      ]
+    },
+    {
+      "id": "annual-plan-budget",
+      "task": "Write the annual learning plan, calendar and budget",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/annual-learning-plan-cycle", "use": "build", "when": "When next year's goals or budget are set, or a board asks what training should buy" },
+        { "ref": "kit:skills/training-needs-analysis", "use": "brief", "when": "Before the plan, so every line traces to a counted gap and not a course catalogue" },
+        { "ref": "library:department-budget-planner", "type": "skill", "use": "build", "when": "When you need the training spend phased by month and team, with a way to report variance" },
+        { "ref": "library:prepare-a-board-decision-brief", "type": "workflow", "use": "build", "when": "When the plan goes to a board and must ask for a clear decision with the evidence mapped" }
+      ]
+    },
+    {
+      "id": "provider-comparison",
+      "task": "Compare training providers or learning tools",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:vendor-comparison-writer", "type": "skill", "use": "build", "when": "When you hold two or three provider quotes and need cost, risks and a clear pick" },
+        { "ref": "library:supplier-scorer", "type": "skill", "use": "build", "when": "When several providers must be scored against weighted needs so the choice can be defended" }
+      ]
+    },
+    {
+      "id": "evaluation",
+      "task": "Plan and run the evaluation of a training programme",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/training-evaluation-plan", "use": "build", "when": "Before a programme launches, to fix the expected result, its baseline and what to measure when" },
+        { "ref": "kit:workflows/launch-and-evaluate-one-programme", "use": "build", "when": "When one programme must be followed from launch to a go, fix or stop call" },
+        { "ref": "library:check-training-transfer-after-a-course", "type": "workflow", "use": "check", "when": "Some weeks after a course, to compare real work with the skills taught" },
+        { "ref": "library:employee-survey-designer", "type": "skill", "use": "build", "when": "When you need the reaction and follow-up questions for learners and their managers" }
+      ]
+    },
+    {
+      "id": "follow-up-practice",
+      "task": "Plan follow-up so skills stick after the session",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:revision-schedule-planner", "type": "skill", "use": "build", "when": "When topics must come back at widening gaps over the weeks after training" },
+        { "ref": "library:retrieval-quiz-writer", "type": "skill", "use": "build", "when": "When each follow-up needs a two-minute recall quiz, not a re-read of the slides" },
+        { "ref": "library:weekly-one-on-one-prep-keeper", "type": "agent", "use": "build", "when": "When managers should raise the new skill in weekly one-on-ones with praise and one thing to fix" },
+        { "ref": "library:peter-c-brown", "type": "mind", "use": "think", "when": "When the plan is one big session and nothing after, to spread it out and add recall" }
+      ]
+    },
+    {
+      "id": "apprentice-programme",
+      "task": "Set up an apprentice skills log, weekly plan and mentor guide",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/apprentice-skills-log-and-weekly-plan", "use": "build", "when": "When you take on an apprentice or trainee and need a year-one log, weekly plan and mentor guide" },
+        { "ref": "library:skill-breakdown-teaching-planner", "type": "prompt", "use": "build", "when": "When a senior person is good at the job but cannot explain it in steps a beginner can follow" },
+        { "ref": "library:mentoring-program-builder", "type": "skill", "use": "build", "when": "When mentors need a six-month plan and guides for their talks with the apprentice" },
+        { "ref": "library:success-criteria-writer", "type": "skill", "use": "check", "when": "When sign-off levels are vague, to make each one something the mentor can see" }
+      ]
+    },
+    {
+      "id": "software-rollout",
+      "task": "Build a training pack for a new software system",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/software-rollout-training-pack", "use": "build", "when": "When staff must use a new till, booking, CRM or accounts system in week one" },
+        { "ref": "library:business-tool-launch-checklist", "type": "skill", "use": "check", "when": "Before go-live, to list open blockers and record a go or no-go call" },
+        { "ref": "library:agency-change-management-consultant", "type": "agent", "use": "brief", "when": "When staff are nervous or resistant and you need a stakeholder map and message plan" },
+        { "ref": "library:help-article-writer", "type": "skill", "use": "build", "when": "When the same how-do-I questions keep coming and need short searchable answers" },
+        { "ref": "library:change-announcement", "type": "skill", "use": "build", "when": "When the switch needs an announcement, FAQ and manager talking points" },
+        { "ref": "library:review-staff-adoption-of-a-policy-change", "type": "workflow", "use": "check", "when": "A few weeks after go-live, to see who is using the new way and what is in the way" }
+      ]
+    },
+    {
+      "id": "how-to-video",
+      "task": "Script short how-to videos",
+      "kind": "other",
+      "items": [
+        { "ref": "library:narrated-video-maker", "type": "skill", "use": "build", "when": "When a written guide should become narrated slides and a voice-over video" },
+        { "ref": "library:skill-breakdown-teaching-planner", "type": "prompt", "use": "brief", "when": "Before scripting, to cut the task into the few steps one short video can carry" },
+        { "ref": "library:synthesia", "type": "tool", "use": "build", "when": "When nobody wants to be on camera and a presenter video must be made from the script" },
+        { "ref": "library:descript", "type": "tool", "use": "build", "when": "When a screen recording needs trimming, captions and mistakes cut by editing the text" }
+      ]
+    },
+    {
+      "id": "manager-training",
+      "task": "Design manager and leadership training",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:build-a-practical-manager-training-session", "type": "workflow", "use": "build", "when": "When managers need one practical session with a practice activity, not a slide talk" },
+        { "ref": "library:leadership-program-designer", "type": "skill", "use": "build", "when": "When the job is a whole programme with a 360 form and a coaching guide" },
+        { "ref": "library:ask-for-feedback-then-give-it", "type": "workflow", "use": "build", "when": "When the skill to teach is feedback and managers need a script to ask for it and give it" },
+        { "ref": "library:kim-scott", "type": "mind", "use": "think", "when": "When managers avoid hard feedback or give it harshly and need a way to be clear and kind" }
+      ]
+    },
+    {
+      "id": "required-training",
+      "task": "Roll out required training on a policy or safety rule",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:make-a-new-policy-understandable-to-staff", "type": "workflow", "use": "build", "when": "When an approved policy must be explained to staff in plain words with what changes for them" },
+        { "ref": "library:staff-announcement-writer", "type": "skill", "use": "build", "when": "When staff must be told the training is due, with talking points for their managers" },
+        { "ref": "library:retrieval-quiz-writer", "type": "skill", "use": "check", "when": "When you need proof people understood the rule, not only that they attended" },
+        { "ref": "library:process-doc-freshness-keeper", "type": "agent", "use": "check", "when": "On a schedule, to catch training that still teaches an old version of the policy" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any training document goes out, to catch typos and terms spelt two ways" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When training states a rule, number or legal duty you cannot trace to the client's own source" }
+  ],
+  "helpers": [
+    { "role": "instructional-designer", "when": "When the job is a full e-learning course with storyboards and branching scenarios" },
+    { "role": "technical-writer", "when": "When the procedure or system guide does not exist yet and must be written first" },
+    { "role": "hr-specialist", "when": "When promotion, pay or performance rules sit behind the ladder or the development plans" },
+    { "role": "presentation-designer", "when": "When the deck or handout must look finished and on brand, not only be clear" },
+    { "role": "internal-communications-specialist", "when": "When a rollout needs a staff message plan beyond one announcement" },
+    { "role": "video-producer", "when": "When how-to videos need filming, editing and captions, not only scripts" }
+  ],
+  "gaps": [
+    "No library item builds a skills matrix or rating sheet; only the kit skill covers it",
+    "No library item writes an individual development plan for a named person from their ratings",
+    "No library item writes a one-page job aid or quick reference card for a station or a software screen",
+    "No library item writes role-play scripts with a customer brief, an observer sheet and debrief questions",
+    "No library item plans a workshop run sheet and kit list, or an online whiteboard layout",
+    "No library item gives clearly different workshop designs to compare for one goal",
+    "No library item writes a how-to or screen-recording video script with captions for staff training",
+    "No library item writes an end-of-course reaction form or a manager follow-up form",
+    "No library item works out what a training programme returned against its cost",
+    "No library item covers apprentices: a skills log, off-the-job hours or a progress report for the provider",
+    "No library item tracks required training: who is due, who is overdue and what proof is held",
+    "No library item writes a full e-learning lesson or short microlearning units from source material",
+    "No library item interviews an expert to capture how they do a job for training; the one found writes AI agent files",
+    "No library item builds a training calendar for the year from the plan"
+  ]
+}

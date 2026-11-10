@@ -1,0 +1,284 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "google-ads-media-buyer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "weekly-optimisation",
+      "task": "Run the weekly check and write the results note",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/weekly-optimisation-routine", "use": "build", "when": "Once a week, same day, to work through the account in a fixed order" },
+        { "ref": "kit:prompts/weekly-results-read", "use": "build", "when": "When you have fresh exports and need a short note the owner can act on" },
+        { "ref": "library:google-ads-weekly-account-keeper", "type": "agent", "use": "check", "when": "When you want waste cut, a scale-or-hold call and a change list to approve each week" },
+        { "ref": "library:google-ads-report-auditor", "type": "skill", "use": "check", "when": "When you have one export and a target, to see which changes are worth making" }
+      ]
+    },
+    {
+      "id": "search-terms",
+      "task": "Review search terms and build the negatives list",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/search-terms-cleanup", "use": "build", "when": "When you need three lists to approve: keywords to add, negatives to add, terms to watch" },
+        { "ref": "kit:prompts/search-terms-review", "use": "build", "when": "Weekly or fortnightly, with a search terms export, for a quick review" },
+        { "ref": "library:search-term-sorter", "type": "skill", "use": "check", "when": "When you want a second sort with where each term goes and a waste score" },
+        { "ref": "library:agency-paid-media-search-query-analyst", "type": "agent", "use": "check", "when": "When waste is large, to get negatives by level and the pattern behind them" },
+        { "ref": "library:turn-converting-searches-into-search-campaigns-and-matching-pages", "type": "workflow", "use": "build", "when": "When winning searches deserve their own ad groups and pages" }
+      ]
+    },
+    {
+      "id": "account-audit",
+      "task": "Audit a Google Ads account",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/google-ads-account-audit", "use": "check", "when": "When you take over an account and need a senior buyer's audit" },
+        { "ref": "library:google-ads-account-auditor", "type": "skill", "use": "check", "when": "When you have the exports, for a second audit of tracking, terms, Shopping and bids" },
+        { "ref": "library:google-ads-store-account-auditor", "type": "skill", "use": "check", "when": "When it is a store, to find brand leakage and get a 90-day fix order" },
+        { "ref": "library:brand-and-non-brand-splitter", "type": "skill", "use": "check", "when": "When brand searches flatter the results, to find the true non-brand return" },
+        { "ref": "library:ad-spend-analyst", "type": "skill", "use": "check", "when": "When you need wasted spend and standout campaigns named from the exports" },
+        { "ref": "library:microsoft-ads-account-auditor", "type": "skill", "use": "check", "when": "When the client also runs Microsoft Ads imported from Google" }
+      ]
+    },
+    {
+      "id": "tracking-check",
+      "task": "Check and fix conversion tracking",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/google-conversion-tracking-check", "use": "check", "when": "Before any optimising, to check Google counts the right conversions once, with values" },
+        { "ref": "library:google-ads-purchase-tracking-checker", "type": "skill", "use": "check", "when": "When you have the conversion actions, for a pass or fail on double counting" },
+        { "ref": "library:agency-paid-media-tracking-specialist", "type": "agent", "use": "build", "when": "When tracking needs a plan across analytics and ad platforms with a test for each event" },
+        { "ref": "library:shopify-google-conversion-tracking-builder", "type": "skill", "use": "build", "when": "When the store is on Shopify and needs purchase tracking and enhanced conversions built" },
+        { "ref": "library:conversion-reconciliation", "type": "skill", "use": "check", "when": "When Google Ads, analytics and the store report different conversions" },
+        { "ref": "library:monthly-tracking-health-keeper", "type": "agent", "use": "check", "when": "When tracking should be re-checked every month for breaks and double counts" }
+      ]
+    },
+    {
+      "id": "call-form-tracking",
+      "task": "Set up call and form tracking for local leads",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/google-conversion-tracking-check", "use": "check", "when": "When calls and forms are the conversions and you must check each is counted once" },
+        { "ref": "library:conversion-tracking-fixer", "type": "skill", "use": "build", "when": "When calls or forms are not tracked, to set up or repair what counts as a lead" },
+        { "ref": "library:lead-to-ad-matcher", "type": "skill", "use": "build", "when": "When you have a lead export, to link each lead to the campaign and ad behind it" },
+        { "ref": "library:lead-cost-and-friction-planner", "type": "skill", "use": "check", "when": "When leads are cheap but poor, to work out cost per qualified lead" }
+      ]
+    },
+    {
+      "id": "intake-targets",
+      "task": "Take in a new client and set break-even targets",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/account-intake", "use": "brief", "when": "In the first conversation with a new client, before touching the account" },
+        { "ref": "library:break-even-roas-and-cpa-calculator", "type": "skill", "use": "build", "when": "When you have price and margin, to set break-even return and cost per sale" },
+        { "ref": "library:per-order-profit-calculator", "type": "prompt", "use": "check", "when": "When the margin is a guess, to work out profit per order from every cost" },
+        { "ref": "library:claude-hopkins", "type": "mind", "use": "think", "when": "When targets are vague, to track cost per customer and test small before scaling" }
+      ]
+    },
+    {
+      "id": "search-campaign-plan",
+      "task": "Plan and launch a search campaign",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/campaign-launch", "use": "build", "when": "When a new account, campaign type or market needs the launch checklist" },
+        { "ref": "library:google-ads-campaign-structure-planner", "type": "skill", "use": "brief", "when": "Before building, to get the fewest campaigns that work, each with a reason" },
+        { "ref": "library:search-intent-keyword-mapper", "type": "skill", "use": "brief", "when": "When you need keywords sorted by intent and grouped into themes" },
+        { "ref": "library:non-brand-search-campaign-builder", "type": "skill", "use": "build", "when": "When you have products and search terms and need ad groups, keywords and ads" },
+        { "ref": "library:problem-aware-search-campaign-builder", "type": "skill", "use": "explore", "when": "When buyers search the problem, not the product, to try a problem-led campaign" },
+        { "ref": "library:branded-campaigns-builder", "type": "skill", "use": "build", "when": "When the brand name needs its own Search and Shopping campaigns kept apart" },
+        { "ref": "library:agency-paid-media-ppc-strategist", "type": "agent", "use": "check", "when": "When the plan is drafted, for a second view on structure, bids and budget split" }
+      ]
+    },
+    {
+      "id": "local-campaign",
+      "task": "Build a local search campaign for a service firm",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:non-brand-search-campaign-builder", "type": "skill", "use": "build", "when": "When each service and area needs its own ad group, keywords and ads" },
+        { "ref": "kit:skills/search-terms-cleanup", "use": "build", "when": "When the firm pays for calls about jobs it does not do and needs a negatives list" },
+        { "ref": "kit:prompts/responsive-search-ad-writer", "use": "build", "when": "When each service and area needs search ad text" },
+        { "ref": "library:local-search-listing-manager", "type": "skill", "use": "check", "when": "When the business listing is weak and holds back local and call results" }
+      ]
+    },
+    {
+      "id": "search-ads",
+      "task": "Write responsive search ads",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:prompts/responsive-search-ad-writer", "use": "build", "when": "When an ad group is new, Ad Strength is poor or a fresh angle needs testing" },
+        { "ref": "library:typed-headline-batch-writer", "type": "skill", "use": "explore", "when": "When you want twenty or more headlines sorted by type to pick from" },
+        { "ref": "library:ad-headline-writer", "type": "skill", "use": "build", "when": "When each headline must fit the character limit, with one to test first" },
+        { "ref": "library:fact-based-ad-copy-writer", "type": "prompt", "use": "build", "when": "When every line must rest on a real fact with its source" },
+        { "ref": "library:ad-and-page-match-checker", "type": "skill", "use": "check", "when": "When the ads are written, to score how well they match the landing page" },
+        { "ref": "library:ad-and-page-policy-checker", "type": "skill", "use": "check", "when": "Before upload, to flag policy risks line by line with safer rewrites" }
+      ]
+    },
+    {
+      "id": "bidding",
+      "task": "Choose and set the bid strategy",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/smart-bidding-strategy", "use": "build", "when": "When each campaign needs the right strategy for its volume, values and budget" },
+        { "ref": "library:google-bid-strategy-chooser", "type": "skill", "use": "check", "when": "When you have results and targets, to confirm the strategy and check for a ROAS spiral" },
+        { "ref": "library:find-your-honest-google-roas-and-decide-whether-to-raise-spend", "type": "workflow", "use": "build", "when": "When the client asks to raise spend, to find the real return first" }
+      ]
+    },
+    {
+      "id": "budget",
+      "task": "Set budgets and pacing across campaigns",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:campaign-budget-scenario-planner", "type": "skill", "use": "explore", "when": "When you want three budget plans compared before changing anything" },
+        { "ref": "library:sale-season-pacing-sheet-builder", "type": "skill", "use": "build", "when": "When a sale is coming, for a pacing sheet with scale, hold and cut rules" },
+        { "ref": "library:meta-and-google-budget-comparison-reviewer", "type": "skill", "use": "check", "when": "When budget moves between Meta and Google, to compare on matched dates and sales" },
+        { "ref": "kit:prompts/change-request-for-approval", "use": "build", "when": "When the budget change needs the client's yes before it goes live" }
+      ]
+    },
+    {
+      "id": "shopping-structure",
+      "task": "Structure Shopping campaigns by margin",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:margin-tier-shopping-builder", "type": "skill", "use": "build", "when": "When you have margin and return by product, to tier them with a target each" },
+        { "ref": "library:bestseller-shopping-campaign-builder", "type": "skill", "use": "build", "when": "When best sellers should have their own campaign and brand negatives" },
+        { "ref": "library:build-shopping-by-margin-tune-it-weekly-and-fix-titles", "type": "workflow", "use": "build", "when": "When you want a guided run from tiers to weekly tuning and title fixes" },
+        { "ref": "kit:workflows/campaign-launch", "use": "check", "when": "Before the new structure goes live, to run the launch checklist" }
+      ]
+    },
+    {
+      "id": "pmax-build",
+      "task": "Build Performance Max campaigns and asset groups",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:performance-max-launch-planner", "type": "skill", "use": "build", "when": "When you have catalogue, budget and break-even numbers, for a fit verdict and a build" },
+        { "ref": "library:feed-only-performance-max-builder", "type": "skill", "use": "explore", "when": "When a feed-only version might waste less, to compare it with a full build" },
+        { "ref": "library:launch-performance-max-keep-it-clean-and-know-when-to-scale", "type": "workflow", "use": "build", "when": "When you want a guided launch with rules for when to scale" },
+        { "ref": "kit:prompts/responsive-search-ad-writer", "use": "build", "when": "When asset groups need headlines and descriptions for each category" }
+      ]
+    },
+    {
+      "id": "pmax-review",
+      "task": "Review Performance Max each month",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/performance-max-review", "use": "build", "when": "Monthly, or when a campaign takes budget without clear results" },
+        { "ref": "library:performance-max-routine-keeper", "type": "skill", "use": "check", "when": "When you have the exports, for this week's checks, exclusions and a budget move" },
+        { "ref": "library:brand-and-non-brand-splitter", "type": "skill", "use": "check", "when": "When Performance Max may be taking credit for brand searches" }
+      ]
+    },
+    {
+      "id": "product-performance",
+      "task": "Review product performance and cut budget eaters",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:shopping-campaign-tuner", "type": "skill", "use": "build", "when": "When you have a weekly Shopping export, to see which products to cut, fix or fund" },
+        { "ref": "library:sku-ad-money-planner", "type": "skill", "use": "build", "when": "When stock days and costs matter, to grade each product and set its ad target" },
+        { "ref": "kit:prompts/change-request-for-approval", "use": "build", "when": "When exclusions and budget moves need the client's approval" }
+      ]
+    },
+    {
+      "id": "merchant-center",
+      "task": "Fix Merchant Center diagnostics and feed titles",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:merchant-center-feed-health-checker", "type": "skill", "use": "check", "when": "When you have the diagnostics, to rank problems by lost sales" },
+        { "ref": "library:merchant-center-suspension-checker", "type": "skill", "use": "check", "when": "When a suspension is possible, to rank each gap by risk" },
+        { "ref": "library:shopping-feed-title-writer", "type": "skill", "use": "build", "when": "When titles miss what people search, to rewrite titles and descriptions" }
+      ]
+    },
+    {
+      "id": "landing-page-check",
+      "task": "Check the landing page behind the ads",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:ad-and-page-match-checker", "type": "skill", "use": "check", "when": "When click costs are high or leads are poor, to score the match between ad and page" },
+        { "ref": "library:landing-page-auditor", "type": "skill", "use": "check", "when": "When the page gets clicks but few leads, to rank the conversion problems" }
+      ]
+    },
+    {
+      "id": "monthly-review",
+      "task": "Run the monthly account review and report",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/monthly-account-review", "use": "build", "when": "Once a month, and after any big change to the site, tracking or platform" },
+        { "ref": "library:google-results-review-agent", "type": "agent", "use": "check", "when": "When you want results reviewed against targets with ranked findings" },
+        { "ref": "library:marketing-performance-report", "type": "skill", "use": "build", "when": "When the owner needs a report with trends, wins, misses and next steps" },
+        { "ref": "library:lead-cost-and-friction-planner", "type": "skill", "use": "build", "when": "When the review is for a lead business, to report cost per qualified lead" }
+      ]
+    },
+    {
+      "id": "performance-dip",
+      "task": "Find why results dropped",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:google-ads-dip-investigator", "type": "skill", "use": "build", "when": "When results fell, to weigh recent changes and get a fix-or-wait call" },
+        { "ref": "library:six-pattern-ad-performance-diagnoser", "type": "skill", "use": "check", "when": "When the cause is unclear, to test six possible causes against local baselines" },
+        { "ref": "kit:skills/google-conversion-tracking-check", "use": "check", "when": "Before blaming the ads, to rule out a tracking break" }
+      ]
+    },
+    {
+      "id": "change-requests",
+      "task": "Write change requests for client approval",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/change-request-for-approval", "use": "build", "when": "Whenever a change to the live account needs the client's yes" },
+        { "ref": "library:google-ads-scale-gate-checker", "type": "skill", "use": "check", "when": "Before asking to raise spend, to see whether the account passes five gates" }
+      ]
+    },
+    {
+      "id": "remarketing-video",
+      "task": "Add remarketing, Demand Gen and YouTube",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:google-ads-audience-builder", "type": "skill", "use": "build", "when": "When you have site traffic and a customer list, to plan lists and exclusions" },
+        { "ref": "library:google-remarketing-campaign-builder", "type": "skill", "use": "build", "when": "When past visitors need their own campaigns with budgets and caps" },
+        { "ref": "library:demand-gen-cold-campaign-builder", "type": "skill", "use": "build", "when": "When video winners exist and Demand Gen should reach cold traffic" },
+        { "ref": "library:add-youtube-and-demand-gen-as-a-cold-channel-and-read-if-it-pays", "type": "workflow", "use": "check", "when": "When you must show whether the new channel pays" },
+        { "ref": "library:youtube-ad-results-reader", "type": "skill", "use": "check", "when": "When YouTube ads have run, for a scale, keep or pause call per ad" }
+      ]
+    },
+    {
+      "id": "experiments",
+      "task": "Plan experiments and prove what the ads add",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:incrementality-test-planner", "type": "skill", "use": "build", "when": "When the client doubts the ads add sales, to size a lift test by region" },
+        { "ref": "library:holdout-test-planner", "type": "skill", "use": "build", "when": "When one campaign type is in doubt, to hold it back and compare" },
+        { "ref": "library:a-b-test-verdict-maker", "type": "skill", "use": "check", "when": "When an ad or page test has run, to check the split and say if the result is real" },
+        { "ref": "library:les-binet", "type": "mind", "use": "think", "when": "When every sale is credited to the last click, to ask what the ads really caused" }
+      ]
+    },
+    {
+      "id": "competitor-read",
+      "task": "Read competitors' ads and search share",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:competitor-ad-teardown-writer", "type": "skill", "use": "build", "when": "When you need rivals' public ads and pages set out, with proof kept apart from guesses" },
+        { "ref": "library:share-of-search-tracker-planner", "type": "prompt", "use": "build", "when": "When you want a monthly tracker of brand searches against rivals" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:metric-mismatch-tracer", "type": "skill", "use": "check", "when": "Before you quote a number, when Google Ads and the store or analytics disagree" },
+    { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "Before a note or report goes to the owner, to put account terms into plain words" }
+  ],
+  "helpers": [
+    { "role": "cro-specialist", "when": "When the ads are sound and the landing page is what loses the lead or sale" },
+    { "role": "shopify-specialist", "when": "When feed, tags or checkout tracking must be changed inside the store" },
+    { "role": "marketing-analyst", "when": "When the question is credit across channels, not inside Google Ads" },
+    { "role": "meta-media-buyer", "when": "When budget is shared with Meta and both accounts need one plan" },
+    { "role": "local-marketing-specialist", "when": "When a local firm needs its listing, reviews and local pages fixed first" },
+    { "role": "ad-creative-strategist", "when": "When Performance Max, Demand Gen or YouTube need images and video made" }
+  ],
+  "gaps": [
+    "No library item sets up Local Services Ads or writes lead dispute notes",
+    "No library item writes call ads or plans call tracking: numbers, call length rules and recordings",
+    "No library item writes Performance Max asset groups: headlines, images, video and audience signals per category",
+    "No library item writes responsive search ads with pins and Ad Strength in mind; only the kit prompt does",
+    "No library item plans location targeting, radius and bid changes by area for a local firm",
+    "No library item imports offline sales or lead quality back into Google Ads",
+    "No library item writes a change request for approval or keeps a change log; only the kit prompt does",
+    "No library item checks consent mode and how consent choices change what Google Ads counts",
+    "No library item reads auction insights or plans sitelinks, callouts and other ad assets",
+    "No tool guides exist for Google Ads, Merchant Center, Tag Manager or call tracking tools"
+  ]
+}

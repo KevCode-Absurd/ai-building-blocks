@@ -1,0 +1,286 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "community-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "launch-plan",
+      "task": "Plan a community launch or relaunch",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/community-launch-and-weekly-rhythm", "use": "build", "when": "When a community is starting or restarting and needs a purpose, spaces, welcome flow and first weeks" },
+        { "ref": "library:community-growth-planner", "type": "skill", "use": "explore", "when": "When you want a second plan for starting, growing and turning members into advocates, to compare" },
+        { "ref": "library:traction-community-building", "type": "skill", "use": "brief", "when": "When the owner is unsure a community is worth it and wants a small test with costs and measures" },
+        { "ref": "library:developer-community-builder", "type": "skill", "use": "build", "when": "When the members are developers and need channels, onboarding and events that suit them" },
+        { "ref": "library:launch-teaser-to-preview-planner", "type": "skill", "use": "build", "when": "When the launch needs a teaser, a preview for first members and an opening day" },
+        { "ref": "library:sahil-lavingia", "type": "mind", "use": "think", "when": "When the plan starts with a platform and should start with a few real people who already talk" }
+      ]
+    },
+    {
+      "id": "weekly-rhythm",
+      "task": "Set the weekly rhythm and write the posts",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/community-launch-and-weekly-rhythm", "use": "build", "when": "When the community needs repeating weekly formats with the posts written for each" },
+        { "ref": "kit:workflows/weekly-community-cycle", "use": "brief", "when": "Each week, to run the reply pass, the posts and the monthly read in order" },
+        { "ref": "library:content-pillar-finder", "type": "skill", "use": "brief", "when": "When the owner does not know what to talk about, to find three to five subjects they can keep up" },
+        { "ref": "library:content-calendar-builder", "type": "skill", "use": "explore", "when": "When you want topics drawn from members' own words set out as a calendar, to compare" },
+        { "ref": "library:weekly-community-keeper", "type": "agent", "use": "build", "when": "When each week's posts and questions should feed a plan for the next week" },
+        { "ref": "library:post-flop-reason-finder", "type": "prompt", "use": "check", "when": "When a prompt got no replies, to see whether it was unseen, skipped or ignored" }
+      ]
+    },
+    {
+      "id": "reply-batch",
+      "task": "Reply to a batch of community posts and flag problems",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/reply-and-flag-batch", "use": "build", "when": "Daily or a few times a week, to draft replies that get members talking to each other" },
+        { "ref": "library:social-comment-and-reply-desk", "type": "agent", "use": "build", "when": "When the posts worth a reply are picked and each needs an answer that adds something" },
+        { "ref": "library:customer-reply-drafter", "type": "skill", "use": "explore", "when": "When a member's situation is delicate and you want a second draft in a different tone" },
+        { "ref": "library:turn-repeat-customer-questions-into-help-pages-people-understand", "type": "workflow", "use": "build", "when": "When the same questions come up every week and should become a pinned help page" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before a reply to a complaint is posted, to check every promise, the facts and the tone" }
+      ]
+    },
+    {
+      "id": "welcome-and-rules",
+      "task": "Write the welcome message and house rules",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/house-rules-and-moderation-ladder", "use": "build", "when": "When the community needs rules, each with a reason and an example, that members will read" },
+        { "ref": "kit:skills/community-launch-and-weekly-rhythm", "use": "build", "when": "When new members need a welcome and one small first task" },
+        { "ref": "library:customer-onboarding-planner", "type": "skill", "use": "build", "when": "When joining has several steps and members need phased messages and milestones" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the rules are drafted, to put them in plain words without changing what they mean" },
+        { "ref": "library:whitney-wolfe-herd", "type": "mind", "use": "think", "when": "When rules are written for the loudest members and should ask who does not feel safe to post" }
+      ]
+    },
+    {
+      "id": "moderation-playbook",
+      "task": "Write the moderation playbook: warn, hide, remove, ban",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/house-rules-and-moderation-ladder", "use": "build", "when": "When moderators need a ladder for each kind of problem and a route for serious harm" },
+        { "ref": "kit:workflows/moderation-incident", "use": "brief", "when": "When the playbook must match the steps moderators follow in a live incident" },
+        { "ref": "library:conflict-mediation-guide", "type": "skill", "use": "build", "when": "When two members are in a running dispute and moderators need a mediation plan" },
+        { "ref": "library:crisis-response-planner", "type": "skill", "use": "build", "when": "When the worst cases need a first-days plan: who to tell, what to say and what to fix" },
+        { "ref": "library:thomas-gordon", "type": "mind", "use": "think", "when": "When moderators step in on everything, to ask who owns the problem before choosing a step" }
+      ]
+    },
+    {
+      "id": "heated-thread",
+      "task": "Calm a heated thread without silencing people",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/heated-thread-cool-down", "use": "build", "when": "When a thread is turning into an argument or a pile-on and you must decide what to do" },
+        { "ref": "library:disagreement-calming-line-writer", "type": "skill", "use": "explore", "when": "When you want short lines for the point people will push back on, to choose from" },
+        { "ref": "library:angry-customer-reply-writer", "type": "prompt", "use": "build", "when": "When one member is furious and needs a reply that names the feeling and promises only what is true" },
+        { "ref": "library:tense-email-softener", "type": "prompt", "use": "check", "when": "When your own reply sounds sharp, to get a version the member will want to work with" },
+        { "ref": "library:carl-rogers", "type": "mind", "use": "think", "when": "When you are about to correct someone and should first show you heard them accurately" }
+      ]
+    },
+    {
+      "id": "removal-notice",
+      "task": "Write removal notices and appeal replies",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/removal-notice-and-appeal", "use": "build", "when": "After hiding, removing or restricting a post or account, and later when the member appeals" },
+        { "ref": "kit:skills/house-rules-and-moderation-ladder", "use": "brief", "when": "When you need the exact rule and step the notice must quote" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "Before sending, to make sure the notice is plain and says how to appeal" }
+      ]
+    },
+    {
+      "id": "moderation-incident",
+      "task": "Handle a moderation incident from report to review",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/moderation-incident", "use": "build", "when": "When a report or flag may be a spam wave, raid, harassment, pile-on or posted personal data" },
+        { "ref": "library:crisis-response-planner", "type": "skill", "use": "build", "when": "When the incident is public and members need to hear what happened and what changes" },
+        { "ref": "library:turn-an-incident-into-a-safer-procedure", "type": "workflow", "use": "check", "when": "After it is over, to turn the timeline into a blameless review and a safer rule or step" }
+      ]
+    },
+    {
+      "id": "reply-templates",
+      "task": "Write reply templates for common situations",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/house-rules-and-moderation-ladder", "use": "build", "when": "When templates for reminders, removals and appeals must match the rules" },
+        { "ref": "kit:prompts/reply-and-flag-batch", "use": "brief", "when": "When recent batches show which situations come up most and need a saved reply" },
+        { "ref": "library:customer-reply-drafter", "type": "skill", "use": "explore", "when": "When a situation needs two or three tones to choose from before one is saved" },
+        { "ref": "library:brand-voice-reviewer", "type": "agent", "use": "check", "when": "When the set is drafted, to check every template sounds like the community's voice" }
+      ]
+    },
+    {
+      "id": "moderator-team",
+      "task": "Set up a moderator rota and induct volunteers",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:shift-schedule-planner", "type": "skill", "use": "build", "when": "When volunteer moderators need a fair rota that covers evenings and weekends" },
+        { "ref": "library:build-a-volunteer-induction-checklist", "type": "workflow", "use": "build", "when": "When new volunteer moderators need an induction, practice and named supervision" },
+        { "ref": "kit:skills/house-rules-and-moderation-ladder", "use": "brief", "when": "When the induction must teach the ladder and the serious-harm route" }
+      ]
+    },
+    {
+      "id": "health-report",
+      "task": "Write the monthly community health report",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/community-health-report", "use": "build", "when": "At the start of each month, to read last month's numbers and choose one or two changes" },
+        { "ref": "kit:workflows/weekly-community-cycle", "use": "brief", "when": "When the monthly read is one step of the regular cycle" },
+        { "ref": "library:retention-cohort-analyst", "type": "skill", "use": "build", "when": "When you have join and activity dates and need to see which groups stay active" },
+        { "ref": "library:community-evidence-researcher", "type": "skill", "use": "build", "when": "When posts and comments must be read for counted themes, with sources" },
+        { "ref": "library:survey-answer-truth-checker", "type": "prompt", "use": "check", "when": "When the report leans on a member survey, to find answers that cannot be trusted" }
+      ]
+    },
+    {
+      "id": "outside-map",
+      "task": "Map outside communities and read their rules",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/outside-community-participation", "use": "build", "when": "When a business wants to take part in communities it does not own and needs a map and rules" },
+        { "ref": "kit:prompts/outside-community-rules-read", "use": "check", "when": "Before anyone posts in a subreddit, server, group or forum you do not own" },
+        { "ref": "library:reddit-thread-collector", "type": "skill", "use": "brief", "when": "When you need a subreddit's real posts and comments in a table to study first" },
+        { "ref": "library:recent-topic-pulse-researcher", "type": "skill", "use": "brief", "when": "When you need what Reddit, Hacker News and the web are saying about the topic this month" }
+      ]
+    },
+    {
+      "id": "participation-plan",
+      "task": "Write a 30-day participation plan and value-first drafts",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/outside-community-participation", "use": "build", "when": "When you need a month of honest participation with post and reply drafts" },
+        { "ref": "library:reddit-answer-planner", "type": "skill", "use": "build", "when": "When there are known threads in the category and you must choose which to answer and how" },
+        { "ref": "library:agency-marketing-reddit-community-builder", "type": "agent", "use": "explore", "when": "When you want a second Reddit plan with post ideas to compare with yours" },
+        { "ref": "kit:prompts/outside-community-rules-read", "use": "check", "when": "Before each draft is posted, to check it against that community's rules on self-promotion" },
+        { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "When a draft reads like marketing or a machine and would be called out" }
+      ]
+    },
+    {
+      "id": "ama-plan",
+      "task": "Plan an AMA and prepare for hard questions",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/outside-community-participation", "use": "build", "when": "When an AMA is in someone else's community and must fit its rules and habits" },
+        { "ref": "kit:prompts/outside-community-rules-read", "use": "check", "when": "Before proposing the AMA, to confirm the community allows it and how to ask" },
+        { "ref": "library:hard-questions-faq-writer", "type": "skill", "use": "build", "when": "When you need the hardest questions people will ask, with honest answers drafted and graded" }
+      ]
+    },
+    {
+      "id": "membership-offer",
+      "task": "Design a paid membership offer with levels",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/membership-offer-and-retention", "use": "build", "when": "When you need the member promise, one to three levels and the break-even member count" },
+        { "ref": "library:membership-plan-pricer", "type": "skill", "use": "build", "when": "When the levels need prices and a call on flat fee or pay per use" },
+        { "ref": "library:three-tier-price-ladder-drafter", "type": "prompt", "use": "explore", "when": "When you want a second three-level ladder with what each includes, to compare" },
+        { "ref": "library:offer-designer", "type": "skill", "use": "build", "when": "When the promise needs value framing, a guarantee and a name" },
+        { "ref": "library:subscription-unit-economics", "type": "skill", "use": "check", "when": "When there is member data, to check payback and how long members stay against the price" }
+      ]
+    },
+    {
+      "id": "membership-launch",
+      "task": "Plan the membership launch and its messages",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:workflows/membership-launch", "use": "build", "when": "When the client wants to start charging, or turn a free group into a paid one" },
+        { "ref": "library:launch-email-sequence-planner", "type": "skill", "use": "build", "when": "When there is a list and a close date and you need the launch emails planned" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "When you want three different plans for the email series before writing one" },
+        { "ref": "library:conversion-page-writer", "type": "skill", "use": "build", "when": "When the membership needs a joining page with promise, proof and price" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "Before launch, to sort every promise to members into fine, needs proof or cut" }
+      ]
+    },
+    {
+      "id": "member-journey",
+      "task": "Map the member journey from joining to renewal",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/membership-offer-and-retention", "use": "build", "when": "When you need the path from joining to a first win to renewal" },
+        { "ref": "library:customer-success-plan-writer", "type": "skill", "use": "build", "when": "When you know why members cancel and need a plan to get them to a result" },
+        { "ref": "library:new-customer-onboarding-sequence-writer", "type": "skill", "use": "build", "when": "When the first two weeks need emails and texts that lead to the first win" },
+        { "ref": "library:onboarding-improver", "type": "skill", "use": "explore", "when": "When the first visit is confusing and you want a faster path to first value" },
+        { "ref": "library:customer-onboarding-keeper", "type": "agent", "use": "check", "when": "Each week, to see where new members stall in their first 30 days" }
+      ]
+    },
+    {
+      "id": "retention-plan",
+      "task": "Cut cancellations and keep members",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/membership-offer-and-retention", "use": "build", "when": "When members leave after month two and you need actions for each stage" },
+        { "ref": "library:subscription-churn-audit", "type": "skill", "use": "brief", "when": "When you have cancel data and need the main reasons and where they happen" },
+        { "ref": "library:churn-reducer", "type": "skill", "use": "build", "when": "When you need a cancel flow, save offers and a failed-payment plan" },
+        { "ref": "library:subscription-cancel-flow-builder", "type": "skill", "use": "build", "when": "When the cancel page should offer one fitting save per reason" },
+        { "ref": "library:subscription-churn-watcher", "type": "agent", "use": "check", "when": "On a schedule, to catch a rise in cancellations early" },
+        { "ref": "library:andrew-chen", "type": "mind", "use": "think", "when": "When the plan chases new joins and the real leak is members who stop coming back" }
+      ]
+    },
+    {
+      "id": "quiet-member-nudge",
+      "task": "Nudge quiet members back with a personal message",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/quiet-member-nudge", "use": "build", "when": "When members, especially paid ones, have stopped visiting or posting" },
+        { "ref": "library:weekly-customer-health-watcher", "type": "agent", "use": "brief", "when": "When you need a weekly list of who is slipping and who is up for renewal" },
+        { "ref": "library:customer-health-and-churn-scorer", "type": "skill", "use": "brief", "when": "When there are too many quiet members to message and you must rank by risk" },
+        { "ref": "library:one-ask-email-tightener", "type": "prompt", "use": "check", "when": "Before sending, to cut each nudge to one small thing the member can do" }
+      ]
+    },
+    {
+      "id": "events-and-benefits",
+      "task": "Plan member events and a benefits calendar",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/membership-offer-and-retention", "use": "brief", "when": "When the 90-day calendar must deliver what each level was promised" },
+        { "ref": "library:event-marketing-planner", "type": "skill", "use": "build", "when": "When a member event needs a plan to fill seats and follow up" },
+        { "ref": "library:prepare-a-webinar-people-can-follow", "type": "workflow", "use": "build", "when": "When the benefit is a live session and it needs a teaching outline and slide brief" },
+        { "ref": "library:plan-an-event-follow-up-that-earns-a-reply", "type": "workflow", "use": "build", "when": "After an event, to follow up with each member by what they asked" }
+      ]
+    },
+    {
+      "id": "member-feedback",
+      "task": "Gather and read member feedback",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:community-evidence-researcher", "type": "skill", "use": "build", "when": "When feedback is spread across posts and comments and needs counting by theme" },
+        { "ref": "library:weekly-product-feedback-triager", "type": "agent", "use": "build", "when": "When members' requests for the product must be counted and ruled yes, later or no each week" },
+        { "ref": "library:customer-research-analyst", "type": "skill", "use": "build", "when": "When you have interviews or survey answers and need patterns in members' own words" },
+        { "ref": "library:check-a-marketing-survey-before-sending-it", "type": "workflow", "use": "check", "when": "Before a member survey goes out, to remove leading questions and plan a pretest" }
+      ]
+    },
+    {
+      "id": "recognition",
+      "task": "Recognise top contributors and build advocates",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:recognition-plan-designer", "type": "skill", "use": "build", "when": "When contributors should earn recognition by reaching a clear level, not by being picked" },
+        { "ref": "library:loyalty-and-vip-program-designer", "type": "skill", "use": "explore", "when": "When paid members could get perks that are not discounts, to compare with status alone" },
+        { "ref": "library:honest-appreciation-note-writer", "type": "skill", "use": "build", "when": "When one member did something worth a short, specific thank-you" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before rules, notices or launch messages go out, to catch typos and names spelt two ways" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a post or reply states a fact about the product or a member you cannot trace to a source" }
+  ],
+  "helpers": [
+    { "role": "customer-support-specialist", "when": "When threads are really support tickets that need fixing, not conversation" },
+    { "role": "lifecycle-marketer", "when": "When renewal, win-back and billing emails need building as automated flows" },
+    { "role": "email-marketing-specialist", "when": "When the launch needs a full email campaign and list work" },
+    { "role": "event-manager", "when": "When a member event is in person or needs suppliers and a run sheet" },
+    { "role": "pricing-strategist", "when": "When membership prices and levels need testing against costs and rivals" },
+    { "role": "social-media-manager", "when": "When the community's posts must tie into the brand's public social plan" }
+  ],
+  "gaps": [
+    "No library item writes house rules, a moderation ladder, removal notices or appeal replies; only the kit covers moderation",
+    "No library item covers a spam wave, raid, harassment or posted personal data, or when to report to the platform or police",
+    "No library item sets up Discord, Slack, Facebook group or forum spaces, roles and permissions",
+    "No library item writes discussion prompts, polls or a challenge series for a community",
+    "No library item writes a set of saved replies for the twenty most common community situations",
+    "No library item builds a moderator handover log; the rota item found is for staff shifts",
+    "No library item reads community numbers such as active members, first posts and reply times into a health report",
+    "No library item reads the rules of a subreddit, server or group and says what is allowed",
+    "No library item plans an AMA: timing, host, question collection and follow-up",
+    "No library item writes a membership joining page or a 90-day benefits calendar; the page writers found are for products",
+    "No library item writes a member newsletter or weekly digest",
+    "No library item gives clearly different welcome messages, removal notices or nudges to compare",
+    "No library item checks a welcome message, a nudge or house rules before they go out"
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "crowdfunding-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "campaign-plan",
+      "task": "Plan the campaign from pre-launch to the final day",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/campaign-pre-launch-to-final-day", "use": "build", "when": "When a creator decides to crowdfund and has, or can get, written quotes" },
+        { "ref": "library:campaign-brief-calendar", "type": "skill", "use": "build", "when": "When the plan needs one brief with goal, audience, messages and a weekly calendar" },
+        { "ref": "library:launch-critical-path-builder", "type": "skill", "use": "build", "when": "When dates depend on samples, making and freight, to date every step with an owner" },
+        { "ref": "library:plan-pre-mortem-runner", "type": "skill", "use": "check", "when": "When the plan looks finished, to imagine it failed and find the hidden assumptions" }
+      ]
+    },
+    {
+      "id": "platform-choice",
+      "task": "Choose the platform and check the reward model",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/platform-choice-check", "use": "build", "when": "Before any page work, when the creator is choosing between Kickstarter and Indiegogo" },
+        { "ref": "kit:prompts/reward-or-investment-check", "use": "check", "when": "When the creator wants to offer profit share, equity or calls backers investors" }
+      ]
+    },
+    {
+      "id": "demand-check",
+      "task": "Test demand before committing to a campaign",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:check-real-demand-for-your-idea-then-run-one-cheap-test", "type": "workflow", "use": "build", "when": "When nobody has proved people want it, to find what could kill it and run one cheap test" },
+        { "ref": "library:product-demand-researcher", "type": "skill", "use": "brief", "when": "When you need what people already post about the problem, with links" },
+        { "ref": "library:pretotype-experiment-designer", "type": "skill", "use": "build", "when": "When a sign-up page or deposit test should have a clear pass mark before launch" },
+        { "ref": "library:idea-validation-analyst", "type": "agent", "use": "check", "when": "When the creator is sure of the idea and needs it tested against evidence" },
+        { "ref": "library:say-do-gap-checker", "type": "skill", "use": "check", "when": "When survey answers say people would back it, to test how far to trust them" }
+      ]
+    },
+    {
+      "id": "funding-goal",
+      "task": "Set the funding goal from real costs",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/funding-goal-and-budget", "use": "build", "when": "When you have quotes and need a goal where raising exactly 100% still delivers" },
+        { "ref": "library:product-bill-of-materials-builder", "type": "skill", "use": "build", "when": "When the making cost is one lump, to split it by part and maker" },
+        { "ref": "library:landed-cost-calculator", "type": "skill", "use": "build", "when": "When you have a quote and freight, to get the cost per sellable unit and margin" },
+        { "ref": "library:cost-per-sellable-unit-finder", "type": "prompt", "use": "check", "when": "When a factory quote arrives, for a quick cost per unit and a go or no-go" },
+        { "ref": "library:scott-galloway", "type": "mind", "use": "think", "when": "When the goal was picked to look reachable, to check the full costs behind it" }
+      ]
+    },
+    {
+      "id": "maker-quotes",
+      "task": "Get and compare maker quotes for the first run",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:supplier-quote-request-writer", "type": "skill", "use": "build", "when": "When no written quote exists, to ask makers in their own terms" },
+        { "ref": "library:compare-supplier-prices-on-the-same-basis", "type": "workflow", "use": "check", "when": "When quotes use different units, currencies or delivery terms, to line them up" },
+        { "ref": "library:factory-price-break-negotiator", "type": "skill", "use": "build", "when": "When the run size is set, to plan what to ask for and what to give back" },
+        { "ref": "library:one-time-stock-quantity-picker", "type": "skill", "use": "build", "when": "When you must decide how many extra units to make beyond the pledges" }
+      ]
+    },
+    {
+      "id": "reward-tiers",
+      "task": "Design and price reward tiers and add-ons",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/reward-tier-pricing", "use": "build", "when": "When you need five to eight tiers, each checked for profit after fees and shipping" },
+        { "ref": "library:willingness-to-pay-survey", "type": "skill", "use": "brief", "when": "Before pricing, to ask the pre-launch list what they would really pay" },
+        { "ref": "library:bundle-tier-layout-planner", "type": "skill", "use": "explore", "when": "When you want to compare tier layouts and how the savings are worded" },
+        { "ref": "library:price-display-planner", "type": "skill", "use": "build", "when": "When you must decide the price digits and how add-ons are priced and shown" },
+        { "ref": "library:product-margin-checker", "type": "skill", "use": "check", "when": "When a tier is priced, to check the true margin with every cost counted" }
+      ]
+    },
+    {
+      "id": "shipping-tax",
+      "task": "Work out shipping, duties and tax for each destination",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:shipping-rate-planner", "type": "skill", "use": "build", "when": "When you know parcel sizes and countries, to set zones and rates to charge" },
+        { "ref": "library:import-export-paperwork", "type": "skill", "use": "build", "when": "When rewards cross borders, to find tariff codes, duty options and customs papers" },
+        { "ref": "library:compare-freight-quotes-with-all-charges", "type": "workflow", "use": "check", "when": "When freight quotes arrive, to compare them with every charge counted" },
+        { "ref": "kit:skills/reward-tier-pricing", "use": "check", "when": "When shipping costs change, to re-check that each tier still makes money" }
+      ]
+    },
+    {
+      "id": "stretch-goals",
+      "task": "Plan stretch goals and add-ons that still make money",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/funding-goal-and-budget", "use": "check", "when": "Before promising a stretch goal, to see what it adds to cost at each funding level" },
+        { "ref": "kit:skills/reward-tier-pricing", "use": "build", "when": "When an add-on or upgraded tier needs its price and margin checked" },
+        { "ref": "library:product-margin-checker", "type": "skill", "use": "check", "when": "When a stretch goal upgrades every unit, to see the margin left after it" }
+      ]
+    },
+    {
+      "id": "campaign-page",
+      "task": "Write the campaign page",
+      "kind": "web_page",
+      "items": [
+        { "ref": "kit:skills/campaign-page-and-video-script", "use": "build", "when": "When you need the page written in the order backers read it" },
+        { "ref": "library:big-idea-and-mechanism-builder", "type": "skill", "use": "explore", "when": "When the product sounds like others on the platform, to find one idea to lead with" },
+        { "ref": "library:top-of-page-headline-writer", "type": "prompt", "use": "explore", "when": "When the title and first line are flat, to get five options with a subhead" },
+        { "ref": "kit:prompts/risks-and-challenges-section", "use": "build", "when": "When the risks section says only that the team has experience" },
+        { "ref": "library:landing-page-auditor", "type": "skill", "use": "check", "when": "When the page is drafted, to rank what would stop a visitor pledging" },
+        { "ref": "library:claim-and-proof-matcher", "type": "skill", "use": "check", "when": "Before launch, to check each claim about the product against what you can show" },
+        { "ref": "library:joseph-sugarman", "type": "mind", "use": "think", "when": "When the page lists features and should tell a story and admit the drawback" }
+      ]
+    },
+    {
+      "id": "campaign-video",
+      "task": "Script the campaign video",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/campaign-page-and-video-script", "use": "build", "when": "When you need the video script timed to match the page" },
+        { "ref": "library:founder-ad-script-builder", "type": "skill", "use": "explore", "when": "When the creator will speak to camera, to get a script with several openings" },
+        { "ref": "library:video-ad-shot-list-maker", "type": "skill", "use": "build", "when": "When the script is agreed and the shoot needs timed shots and an edit list" },
+        { "ref": "library:tighten-a-video-ad-script-before-you-film-it", "type": "workflow", "use": "check", "when": "Before filming, to tighten the script and check it works with the sound off" }
+      ]
+    },
+    {
+      "id": "page-visuals",
+      "task": "Brief the photos, GIFs and page graphics",
+      "kind": "other",
+      "items": [
+        { "ref": "library:product-shoot-brief-writer", "type": "skill", "use": "build", "when": "When a photographer needs a shot list with the reason for each shot" },
+        { "ref": "library:product-demo-video-maker", "type": "skill", "use": "build", "when": "When the page needs a short GIF or clip that shows the product working" },
+        { "ref": "library:marketing-image-maker", "type": "skill", "use": "build", "when": "When the page needs a header or tier graphic, to get a prompt and exact size" }
+      ]
+    },
+    {
+      "id": "prelaunch-list",
+      "task": "Build the pre-launch list",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/pre-launch-list-plan", "use": "build", "when": "Six to ten weeks out, to plan list growth with weekly sign-up targets" },
+        { "ref": "library:launch-teaser-to-preview-planner", "type": "skill", "use": "build", "when": "When you need the teaser, the preview and the sign-up page planned in order" },
+        { "ref": "library:conversion-page-writer", "type": "skill", "use": "build", "when": "When the sign-up page itself needs writing for one action" },
+        { "ref": "library:referral-program-designer", "type": "skill", "use": "build", "when": "When sign-ups should bring friends, to set the reward and the flow" },
+        { "ref": "library:landing-page-auditor", "type": "skill", "use": "check", "when": "When the sign-up page is live and too few visitors join the list" }
+      ]
+    },
+    {
+      "id": "prelaunch-ads",
+      "task": "Run small ads to grow the list and test the message",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:ad-creative-variation-planner", "type": "skill", "use": "explore", "when": "When you need several hooks and formats to test before launch day" },
+        { "ref": "library:meta-ad-copywriter", "type": "skill", "use": "build", "when": "When the ads need Facebook and Instagram text and hooks ready to run" },
+        { "ref": "library:meta-setup-of-new-ad-campaigns-with-new-creatives-planner", "type": "skill", "use": "build", "when": "When you set up the test: how to name each ad, cap spend and decide" },
+        { "ref": "library:break-even-ad-target-finder", "type": "prompt", "use": "check", "when": "Before spending, to know the most you can pay for a backer and still deliver" }
+      ]
+    },
+    {
+      "id": "launch-emails",
+      "task": "Write pre-launch and launch-day emails",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/backer-updates-and-emails", "use": "build", "when": "When you need the emails to the creator's own list from teaser to launch day" },
+        { "ref": "library:launch-email-sequence-planner", "type": "skill", "use": "brief", "when": "When the campaign has a fixed close date and the whole run of emails needs planning" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When each email needs subject lines in several angles to choose from" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When an email is drafted, to get cuts, a pacing check and a ship or fix verdict" }
+      ]
+    },
+    {
+      "id": "press-creators",
+      "task": "Pitch press, reviewers and creators",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:press-outreach-planner", "type": "skill", "use": "build", "when": "When the launch is news, to get a media list, pitch emails and a press kit outline" },
+        { "ref": "library:publicity-first-launch-planner", "type": "skill", "use": "brief", "when": "When the budget is small, to plan press before ads and the one idea to own" },
+        { "ref": "library:creator-partnership-planner", "type": "skill", "use": "build", "when": "When reviewers or creators should get a prototype, to find, brief and track them" }
+      ]
+    },
+    {
+      "id": "backer-updates",
+      "task": "Write campaign updates and answer backers",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/backer-updates-and-emails", "use": "build", "when": "When you need the schedule and words for updates from launch to delivery" },
+        { "ref": "library:multi-platform-post-planner", "type": "skill", "use": "build", "when": "When each update also needs posts made for each social platform" },
+        { "ref": "library:customer-reply-drafter", "type": "skill", "use": "build", "when": "When comments and messages pile up and each needs a reply in the right tone" },
+        { "ref": "library:community-growth-planner", "type": "skill", "use": "brief", "when": "When backers gather in a group or forum and need a plan to keep them involved" }
+      ]
+    },
+    {
+      "id": "stalled-campaign",
+      "task": "Rescue a campaign that has stalled mid-run",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/stalled-campaign-rescue", "use": "build", "when": "When pledges have flattened and the creator wants a plan for the days left" },
+        { "ref": "library:partner-campaign-planner", "type": "skill", "use": "build", "when": "When another creator or brand could share the campaign with their audience" },
+        { "ref": "library:promotion-idea-planner", "type": "skill", "use": "explore", "when": "When the middle weeks need a new reason to pledge that is not a price cut" }
+      ]
+    },
+    {
+      "id": "final-push",
+      "task": "Plan the final 48 hours",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/final-48-hours-push", "use": "build", "when": "Three to four days before the deadline, to plan the last emails, updates and posts" },
+        { "ref": "library:honest-urgency-planner", "type": "skill", "use": "check", "when": "When writing last-chance lines, to keep every limit and deadline true" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the reminder email needs several subject lines to pick from" }
+      ]
+    },
+    {
+      "id": "after-funding",
+      "task": "Run the pledge manager and fulfilment after funding",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/after-funding-to-delivery", "use": "build", "when": "When the campaign ends funded and the work moves to surveys, making and shipping" },
+        { "ref": "library:product-sample-approval-loop", "type": "agent", "use": "check", "when": "When factory samples arrive, to get go or hold and the fixes to send back" },
+        { "ref": "library:pre-shipment-inspection-brief-writer", "type": "skill", "use": "build", "when": "Before the final payment, to brief an inspector and set a pass rule" },
+        { "ref": "library:3pl-bid-and-agreement-builder", "type": "skill", "use": "build", "when": "When a warehouse will pack and ship rewards, to request prices and set terms" },
+        { "ref": "library:inbound-shipment-tracker-builder", "type": "skill", "use": "build", "when": "When stock is on the water, to track it and warn the warehouse" }
+      ]
+    },
+    {
+      "id": "delay-updates",
+      "task": "Tell backers about a delay or problem",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:bad-news-update-writer", "type": "skill", "use": "build", "when": "When a date slips, to state the loss, the numbers and the next step plainly" },
+        { "ref": "library:apology-email-writer", "type": "skill", "use": "build", "when": "When the mistake was yours, to own it and state the fix in a short email" },
+        { "ref": "library:delivery-update-flow-builder", "type": "skill", "use": "build", "when": "When rewards are shipping, to plan tracking updates and a delay script" },
+        { "ref": "library:refund-request-reply-writer", "type": "prompt", "use": "build", "when": "When a backer asks for a refund, to reply with a clear yes, partial or no" },
+        { "ref": "kit:skills/backer-updates-and-emails", "use": "check", "when": "When the update is drafted, to check it fits the update schedule and tone so far" }
+      ]
+    },
+    {
+      "id": "late-pledges",
+      "task": "Move to late pledges and a pre-order store",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/after-funding-to-delivery", "use": "brief", "when": "When the campaign has closed and late backers still want to order" },
+        { "ref": "library:pre-launch-store-checker", "type": "agent", "use": "check", "when": "Before the pre-order store opens, to check it is ready to take orders" },
+        { "ref": "library:post-purchase-flow-builder", "type": "skill", "use": "build", "when": "When late buyers need thank-you, add-on and delivery emails" }
+      ]
+    },
+    {
+      "id": "campaign-review",
+      "task": "Review a finished campaign",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:campaign-attribution-analyst", "type": "skill", "use": "build", "when": "When you have pledge sources, to see which channels brought backers and at what cost" },
+        { "ref": "library:lessons-learned-note-writer", "type": "prompt", "use": "build", "when": "When the campaign is over, for a one-page note on what to repeat and change" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a page or update states a number, date or award you cannot trace to the creator" },
+    { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "Before anything is published, to fix lines that sound machine-written" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a page or update goes live, to catch typos and tier names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "video-producer", "when": "When the campaign video needs shooting and editing, not only a script" },
+    { "role": "product-photographer", "when": "When the page needs product photos and GIFs made, not only briefed" },
+    { "role": "meta-media-buyer", "when": "When ads run at real spend and need daily budget and creative decisions" },
+    { "role": "pr-specialist", "when": "When press outreach is a main channel and needs a media list worked daily" },
+    { "role": "physical-product-developer", "when": "When the product is not yet ready to quote: samples, tooling, safety tests" },
+    { "role": "logistics-coordinator", "when": "When rewards ship to many countries and need freight, customs and a warehouse" }
+  ],
+  "gaps": [
+    "No library item is about crowdfunding at all; every library item here is borrowed from launches, stores or supply",
+    "No library item sets a funding goal from costs, fees and a failure margin; only the kit skill does",
+    "No library item prices reward tiers with platform fees, early-bird limits and shipping by destination",
+    "No library item plans stretch goals or add-ons and tests what each does to cost per backer",
+    "No library item writes a Kickstarter or Indiegogo page, or checks one against the platform's rules",
+    "No library item writes backer updates or plans their schedule; only the kit skill does",
+    "No library item covers pledge managers, backer surveys, address collection or tax and VAT on rewards",
+    "No library item offers different campaign page or video concepts to compare, or checks page images and GIFs",
+    "No library item reads live campaign numbers day by day to say whether the campaign is on track to fund",
+    "No library item finds and pitches crowdfunding press, newsletters or cross-promotion with other campaigns"
+  ]
+}

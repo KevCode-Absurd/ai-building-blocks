@@ -1,0 +1,281 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "fundraising-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "appeal-campaign",
+      "task": "Plan a fundraising appeal campaign",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/appeal-campaign-cycle", "use": "brief", "when": "When the client sets an appeal date, to run the cycle from story to thank-yous" },
+        { "ref": "kit:skills/appeal-campaign", "use": "build", "when": "When you have one consented story and real cost figures and need the whole appeal" },
+        { "ref": "library:nonprofit-annual-appeal-planner", "type": "skill", "use": "build", "when": "When you have donor groups and giving history, to set gift amounts and a schedule" },
+        { "ref": "library:customer-segment-builder", "type": "skill", "use": "brief", "when": "When all you have is a gift export, to group donors by how recently and often they gave" }
+      ]
+    },
+    {
+      "id": "appeal-letter",
+      "task": "Write an appeal letter or email",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:nonprofit-ethical-impact-story-writer", "type": "skill", "use": "brief", "when": "Before writing, to shape the story with checked facts, consent and a way to withdraw" },
+        { "ref": "kit:prompts/appeal-letter", "use": "build", "when": "When you need one appeal as a letter, an email or both, with two openings to test" },
+        { "ref": "library:story-email-writer", "type": "skill", "use": "explore", "when": "When the appeal goes by email, to get three different personal drafts of the story" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the email needs subject lines in several angles to choose from" },
+        { "ref": "library:direct-mail-package-reviewer", "type": "skill", "use": "check", "when": "When it goes by post, to review the envelope line, the ask, the letter and the look" },
+        { "ref": "library:honest-persuasion-editor", "type": "skill", "use": "check", "when": "When the draft leans on guilt or urgency, to see which levers are true" },
+        { "ref": "library:robert-collier", "type": "mind", "use": "think", "when": "When the letter talks about the charity and should start from what the reader cares about" }
+      ]
+    },
+    {
+      "id": "donation-page",
+      "task": "Write a donation page",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:nonprofit-donation-page-writer", "type": "skill", "use": "build", "when": "When the giving page needs real gift amounts, checked claims and a repeat-gift choice" },
+        { "ref": "library:top-of-page-headline-writer", "type": "prompt", "use": "explore", "when": "When the top of the page is flat, to get five headlines with a subhead and button" },
+        { "ref": "library:landing-page-auditor", "type": "skill", "use": "check", "when": "When the page is drafted, to rank what would stop a visitor giving" },
+        { "ref": "library:claim-and-proof-matcher", "type": "skill", "use": "check", "when": "Before launch, to check every impact claim against the group's own records" }
+      ]
+    },
+    {
+      "id": "thank-yous",
+      "task": "Write thank-yous for each donor group",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/thank-you-set", "use": "build", "when": "When one generic thank-you should become a short set for each kind of donor" },
+        { "ref": "kit:skills/gift-thanks-and-acknowledgement", "use": "build", "when": "When the thank-you must carry the right legal acknowledgment wording" },
+        { "ref": "library:honest-appreciation-note-writer", "type": "skill", "use": "build", "when": "When one donor deserves a personal note with one specific, true appreciation" },
+        { "ref": "library:nonprofit-donor-thank-you-and-renewal-planner", "type": "skill", "use": "brief", "when": "When you must plan who gets thanked how, and when the next message follows" }
+      ]
+    },
+    {
+      "id": "receipts-declarations",
+      "task": "Check receipts, acknowledgments and Gift Aid wording",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/receipt-and-declaration-check", "use": "check", "when": "Before a gala, auction or year-end mailing, to check wording against official guidance" },
+        { "ref": "kit:skills/gift-thanks-and-acknowledgement", "use": "build", "when": "When the wording fails the check and needs rewriting by gift type" },
+        { "ref": "library:donated-goods-intake-planner", "type": "skill", "use": "build", "when": "When gifts are goods or auction items and need acceptance rules and receipt wording" }
+      ]
+    },
+    {
+      "id": "donor-care",
+      "task": "Plan donor care until the next ask",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/monthly-donor-care-routine", "use": "build", "when": "When the client can give twenty minutes a week and wants a monthly review" },
+        { "ref": "library:nonprofit-donor-relationship-planner", "type": "skill", "use": "build", "when": "When donor records need clear stages, next steps, owners and review dates" },
+        { "ref": "library:nonprofit-donor-thank-you-and-renewal-planner", "type": "skill", "use": "build", "when": "When lapsed donors need a plan to renew and new donors need a welcome" },
+        { "ref": "library:email-sequence-writer", "type": "skill", "use": "build", "when": "When first-time donors should get a short welcome series by email" },
+        { "ref": "library:questionnaire-writer", "type": "skill", "use": "build", "when": "When you want to ask supporters why they give and what they want to hear" }
+      ]
+    },
+    {
+      "id": "supporter-newsletter",
+      "task": "Write a supporter newsletter or impact update",
+      "kind": "email",
+      "items": [
+        { "ref": "library:plan-a-nonprofit-supporter-newsletter", "type": "skill", "use": "brief", "when": "When the newsletter needs sections, reader groups and a schedule between appeals" },
+        { "ref": "library:prepare-a-useful-customer-newsletter-issue", "type": "workflow", "use": "build", "when": "When you have supporter questions and news and need the issue drafted" },
+        { "ref": "library:nonprofit-ethical-impact-story-writer", "type": "skill", "use": "build", "when": "When the issue carries a story about a person the group helped" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the issue needs subject lines in several angles" },
+        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before sending, to get cuts and a ship or fix verdict" }
+      ]
+    },
+    {
+      "id": "impact-report",
+      "task": "Write an impact story or annual report",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:nonprofit-annual-report-planner", "type": "skill", "use": "build", "when": "When a yearly report needs a plan and every fact, number and name checked" },
+        { "ref": "library:nonprofit-ethical-impact-story-writer", "type": "skill", "use": "build", "when": "When the report needs stories that respect each person and have clear consent" },
+        { "ref": "library:nonprofit-program-measurement-planner", "type": "skill", "use": "brief", "when": "When the numbers are thin, to set what to measure and the rules for reporting it" },
+        { "ref": "library:annette-simmons", "type": "mind", "use": "think", "when": "When the report lists outputs and needs one true incident that shows the change" }
+      ]
+    },
+    {
+      "id": "fundraising-event",
+      "task": "Plan a fundraising event pack",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:nonprofit-fundraising-event-planner", "type": "skill", "use": "build", "when": "When you need the event budget, income scenarios, auction tracker and day schedule" },
+        { "ref": "library:nonprofit-sponsor-package-planner", "type": "skill", "use": "build", "when": "When the event needs sponsor tiers, pitch copy and a list of promises to keep" },
+        { "ref": "kit:prompts/receipt-and-declaration-check", "use": "check", "when": "Before the event, to check ticket, auction and donation receipts are worded right" },
+        { "ref": "library:plan-an-event-follow-up-that-earns-a-reply", "type": "workflow", "use": "build", "when": "After the event, to follow up each guest by what they asked or pledged" }
+      ]
+    },
+    {
+      "id": "team-fundraising",
+      "task": "Plan a team or peer-to-peer fundraiser",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:nonprofit-team-fundraising-planner", "type": "skill", "use": "build", "when": "When supporters raise money in teams and captains need tools and tracking" },
+        { "ref": "kit:prompts/thank-you-set", "use": "build", "when": "When fundraisers and their sponsors each need their own thank-you" },
+        { "ref": "kit:skills/appeal-campaign", "use": "brief", "when": "When the team fundraiser is part of a wider appeal and must share its story and costs" }
+      ]
+    },
+    {
+      "id": "funder-research",
+      "task": "Find and rank funders worth a bid",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/funder-fit-and-grant-writing", "use": "build", "when": "When you need trusts, foundations, lottery and council funders ranked by real fit" },
+        { "ref": "library:nonprofit-grant-funder-researcher", "type": "skill", "use": "build", "when": "When you have the programme, place and need and want a shortlist with grant dates" },
+        { "ref": "library:grant-and-bid-response-writer", "type": "skill", "use": "check", "when": "When a funder looks promising, for a go or no-go call before any writing" },
+        { "ref": "library:organization-dossier-researcher", "type": "skill", "use": "brief", "when": "When one funder matters, to build a sourced file on what it funds and who decides" }
+      ]
+    },
+    {
+      "id": "eligibility-check",
+      "task": "Check eligibility against a funder's guidelines",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/funder-eligibility-check", "use": "check", "when": "Before writing any bid, to test every rule in the guidelines against your facts" },
+        { "ref": "library:rfp-response-builder", "type": "skill", "use": "check", "when": "When the guidelines are long, to sort requirements into must-haves and score the fit" }
+      ]
+    },
+    {
+      "id": "funding-calendar",
+      "task": "Build a 12-month funding calendar",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/grant-pipeline-calendar", "use": "build", "when": "Once a year for the full review, then monthly to keep the calendar current" },
+        { "ref": "kit:skills/funder-fit-and-grant-writing", "use": "build", "when": "When ranked funders need deadlines, amounts and prep time on one calendar" }
+      ]
+    },
+    {
+      "id": "grant-application",
+      "task": "Write a grant application",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/funder-fit-and-grant-writing", "use": "build", "when": "When the funder is chosen and each question needs an answer from the group's facts" },
+        { "ref": "library:nonprofit-grant-proposal-writer", "type": "skill", "use": "build", "when": "When you have funder rules, programme facts and budget and need the required sections" },
+        { "ref": "library:agency-grant-writer", "type": "agent", "use": "build", "when": "When the funder wants a letter of inquiry first, with a list of claims to prove" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When answers are over the word limit or full of sector jargon" },
+        { "ref": "library:hardest-objections-answer-writer", "type": "skill", "use": "check", "when": "Before submitting, to face the hardest questions an assessor would ask" }
+      ]
+    },
+    {
+      "id": "needs-and-outcomes",
+      "task": "Write the needs statement, outcomes and measures",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:community-needs-research-planner", "type": "skill", "use": "brief", "when": "When the need is asserted, not shown, to plan the research and map other providers" },
+        { "ref": "library:nonprofit-program-outcome-planner", "type": "skill", "use": "build", "when": "When the bid needs a clear map from activities to outcomes, with assumptions" },
+        { "ref": "library:nonprofit-program-measurement-planner", "type": "skill", "use": "build", "when": "When the funder asks how you will measure, to set measures, dates and owners" },
+        { "ref": "library:fact-cross-checker", "type": "skill", "use": "check", "when": "When the statement cites statistics, to check each against sources and note conflicts" }
+      ]
+    },
+    {
+      "id": "grant-budget",
+      "task": "Build the budget table and budget narrative",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/funder-fit-and-grant-writing", "use": "build", "when": "When the application needs a budget table that matches the answers" },
+        { "ref": "library:nonprofit-operating-budget-planner", "type": "skill", "use": "brief", "when": "When shared costs must be split fairly across programmes before you cost the bid" },
+        { "ref": "kit:prompts/funder-eligibility-check", "use": "check", "when": "When the budget is drafted, to check it against what the funder will and will not pay for" }
+      ]
+    },
+    {
+      "id": "funder-report",
+      "task": "Write a progress or final report to a funder",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/funder-report", "use": "build", "when": "When a report is due, to turn your records into an honest report in the funder's template" },
+        { "ref": "library:prepare-a-grant-spending-evidence-pack", "type": "workflow", "use": "build", "when": "When the report needs spending reconciled to the grant, with gaps named" },
+        { "ref": "library:grant-spending-evidence-review-assistant", "type": "agent", "use": "check", "when": "When the spending table is drafted and needs its evidence checked line by line" },
+        { "ref": "library:budget-variance-explainer", "type": "skill", "use": "build", "when": "When spending differs from the budget and the funder needs a plain reason" }
+      ]
+    },
+    {
+      "id": "restricted-funds",
+      "task": "Track restricted grant money against free cash",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:grant-restrictions-cash-reconciler", "type": "skill", "use": "check", "when": "When you must split bank cash into restricted grant money and money free to spend" },
+        { "ref": "library:hand-over-a-restricted-fund-program", "type": "workflow", "use": "build", "when": "When a new person takes over a restricted fund and needs its rules and records" }
+      ]
+    },
+    {
+      "id": "major-gift-plan",
+      "task": "Plan cultivation for top prospects",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/major-gift-cultivation-and-ask", "use": "build", "when": "When loyal supporters could give more, using only your records and what they shared" },
+        { "ref": "library:nonprofit-donor-relationship-planner", "type": "skill", "use": "build", "when": "When each prospect needs a stage, a next step, an owner and a review date" },
+        { "ref": "library:nonprofit-capital-campaign-planner", "type": "skill", "use": "build", "when": "When the goal is large, to test it with a gift table built on real prospects" }
+      ]
+    },
+    {
+      "id": "ask-meeting",
+      "task": "Prepare an ask meeting with a prep sheet and script",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/major-gift-cultivation-and-ask", "use": "build", "when": "When a prospect is ready and you need the prep sheet, the ask and the follow-up" },
+        { "ref": "library:get-them-talking-plan", "type": "skill", "use": "brief", "when": "Before the meeting, to plan a warm start and questions the donor enjoys answering" },
+        { "ref": "library:listen-first-talk-planner", "type": "skill", "use": "build", "when": "When the ask feels hard, to plan to listen first, say it once and agree a next step" },
+        { "ref": "library:contact-memory-card-writer", "type": "skill", "use": "build", "when": "After the meeting, to keep a one-page card of facts, promises and the next contact" },
+        { "ref": "library:dale-carnegie", "type": "mind", "use": "think", "when": "When the script is all about the charity's need and not the donor's interests" }
+      ]
+    },
+    {
+      "id": "corporate-partnership",
+      "task": "Write a corporate partnership or sponsorship proposal",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:nonprofit-sponsor-package-planner", "type": "skill", "use": "build", "when": "When you need tiers, benefits and pitch copy a company can say yes to" },
+        { "ref": "library:partner-campaign-planner", "type": "skill", "use": "explore", "when": "When you want several partnership ideas before choosing what to propose" },
+        { "ref": "library:sales-proposal-writer", "type": "skill", "use": "build", "when": "When the company asked for a written proposal with value, cost, timeline and proof" },
+        { "ref": "library:build-a-clear-sponsorship-decision-brief", "type": "workflow", "use": "check", "when": "When the proposal is drafted, to read it as the sponsor would weigh cost and fit" }
+      ]
+    },
+    {
+      "id": "prospect-briefs",
+      "task": "Brief on companies and trusts you could approach",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:organization-dossier-researcher", "type": "skill", "use": "build", "when": "When you need a sourced file on a company or trust before you approach it" },
+        { "ref": "library:company-tear-sheet", "type": "skill", "use": "build", "when": "When a one-page summary of a company's finances and business is enough" },
+        { "ref": "kit:skills/major-gift-cultivation-and-ask", "use": "check", "when": "When the brief is about a person, to keep to your own records and what they shared" }
+      ]
+    },
+    {
+      "id": "fundraising-strategy",
+      "task": "Set the fundraising plan and report to the board",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:nonprofit-strategy-cycle-planner", "type": "skill", "use": "build", "when": "When the group needs a few funded priorities chosen from real evidence" },
+        { "ref": "library:nonprofit-earned-income-planner", "type": "skill", "use": "explore", "when": "When grants and gifts are not enough, to test income ideas with break-even sums" },
+        { "ref": "library:nonprofit-executive-dashboard-planner", "type": "skill", "use": "build", "when": "When staff and board need clear fundraising measures, owners and actions" },
+        { "ref": "library:nonprofit-executive-board-report-writer", "type": "skill", "use": "build", "when": "When the board must decide something and needs results, risks and next steps" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When an appeal, bid or report states a number or result you cannot trace to the records" },
+    { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "Before anything goes to a donor or funder, to fix lines that sound machine-written" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before sending, to catch typos and funder, donor and project names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "evaluation-specialist", "when": "When a funder wants an evaluation plan or evidence of outcomes beyond simple counts" },
+    { "role": "bookkeeper", "when": "When restricted fund spending must be traced in the books before a report" },
+    { "role": "event-manager", "when": "When a gala or community event needs a venue, suppliers and a run sheet" },
+    { "role": "email-marketing-specialist", "when": "When the appeal runs as an email series with segments and inbox checks" },
+    { "role": "sponsorship-manager", "when": "When corporate sponsorship is a programme of its own with renewals and reporting" },
+    { "role": "graphic-designer", "when": "When the appeal, report or event needs layout and print files" }
+  ],
+  "gaps": [
+    "No library item writes a fundraising appeal letter; only the kit prompt and skill do",
+    "No library item checks a funder's eligibility rules line by line, or scores a draft answer against scoring criteria",
+    "No library item builds a grant budget table with a narrative, or checks that the two match",
+    "No library item writes a funder progress or final report from programme records",
+    "No library item plans major gift cultivation or writes an ask script; only the kit skill does",
+    "No library item covers Gift Aid, tax receipts or acknowledgment wording by country",
+    "No library item plans a regular giving or monthly giving programme, or a legacy giving ask",
+    "No library item gives clearly different versions of a grant answer or a thank-you to compare",
+    "No library item builds a logic model or theory of change in a funder's format",
+    "No library item analyses donor data for retention, upgrade and lapse rates"
+  ]
+}

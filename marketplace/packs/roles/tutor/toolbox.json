@@ -1,0 +1,302 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "tutor",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "revision-notes",
+      "task": "Turn course material into revision notes",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/revision-notes-and-plan", "use": "build", "when": "When a learner has lecture notes, slides or chapters that are too long to revise from" },
+        { "ref": "library:bullet-note-maker", "type": "skill", "use": "build", "when": "When the source is messy and needs tidy nested bullets before anything else" },
+        { "ref": "library:deep-reading-guide", "type": "skill", "use": "brief", "when": "When a chapter is dense, to map its claims and evidence before you shorten it" },
+        { "ref": "library:study-note-diagrams", "type": "skill", "use": "build", "when": "When one idea is clearer as a diagram or table placed beside the words" },
+        { "ref": "library:notebooklm", "type": "tool", "use": "check", "when": "When you need to ask the learner's own files where a point comes from before you keep it" }
+      ]
+    },
+    {
+      "id": "one-page-summary",
+      "task": "Make a one-page summary, formula sheet or glossary",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/revision-notes-and-plan", "use": "build", "when": "When the notes exist and the learner wants one page of key terms and formulas for a topic" },
+        { "ref": "library:vocabulary-tier-sorter", "type": "skill", "use": "build", "when": "When a glossary is needed, to sort the words into everyday, course and subject terms" },
+        { "ref": "library:concept-contrast-task", "type": "skill", "use": "build", "when": "When two terms keep getting mixed up and need side-by-side examples" },
+        { "ref": "library:units-and-error-margin-checker", "type": "skill", "use": "check", "when": "When the sheet has formulas or worked numbers, to check units and rounding" },
+        { "ref": "library:study-note-diagrams", "type": "skill", "use": "explore", "when": "When you want to try the page as a diagram or table and compare it with bullets" }
+      ]
+    },
+    {
+      "id": "revision-timetable",
+      "task": "Build a revision timetable to the exam date",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/exam-countdown", "use": "brief", "when": "When there is a fixed exam date and a pile of material, to order the work from now to exam day" },
+        { "ref": "kit:skills/revision-notes-and-plan", "use": "build", "when": "When the notes are done and you need the day-by-day plan that goes with them" },
+        { "ref": "library:exam-study-roadmap-builder", "type": "skill", "use": "brief", "when": "When you have the syllabus or past papers and must rank what to study first" },
+        { "ref": "library:revision-schedule-planner", "type": "skill", "use": "build", "when": "When topics and dates are known and each topic must come back at widening gaps" },
+        { "ref": "library:choose-a-study-plan-you-can-keep", "type": "workflow", "use": "explore", "when": "When the learner has few hours, to compare plans and pick one they will keep" },
+        { "ref": "library:mixed-practice-unit-planner", "type": "skill", "use": "check", "when": "When the plan does one topic per block, to mix related topics for stronger recall" },
+        { "ref": "library:benedict-carey", "type": "mind", "use": "think", "when": "When the plan is long cramming blocks and should fit the learner's real week" }
+      ]
+    },
+    {
+      "id": "flashcards",
+      "task": "Build a flashcard deck from the learner's notes",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/flashcard-deck-builder", "use": "build", "when": "When you need one-fact cards, cloze cards or vocabulary cards as a file that imports cleanly" },
+        { "ref": "library:flashcard-maker", "type": "skill", "use": "explore", "when": "When you want a quick second set of question-and-answer cards to compare wording" },
+        { "ref": "library:study-review-scheduler", "type": "skill", "use": "build", "when": "When the learner has no card app and needs a recall session with next review dates" },
+        { "ref": "library:henry-roediger", "type": "mind", "use": "think", "when": "When cards ask the learner to recognise an answer and should make them recall it" },
+        { "ref": "kit:prompts/deck-clean-up", "use": "check", "when": "After building a deck, to catch two-fact cards, duplicates and answers that disagree with the notes" }
+      ]
+    },
+    {
+      "id": "deck-clean-up",
+      "task": "Check and clean up an existing deck",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/deck-clean-up", "use": "check", "when": "When an Anki or Quizlet deck has two-fact cards, wrong answers, duplicates or import errors" },
+        { "ref": "kit:skills/flashcard-deck-builder", "use": "build", "when": "When bad cards must be rewritten to one fact each and tagged by chapter" }
+      ]
+    },
+    {
+      "id": "self-test",
+      "task": "Write self-test questions with answers",
+      "kind": "other",
+      "items": [
+        { "ref": "library:recall-quiz-writer", "type": "prompt", "use": "build", "when": "When you have lesson notes and need a short recall quiz at three levels, with answers" },
+        { "ref": "library:self-explanation-question-writer", "type": "skill", "use": "build", "when": "When the learner can recite a fact but cannot say why it is true" },
+        { "ref": "library:real-knowledge-tester", "type": "skill", "use": "check", "when": "When the learner feels ready, to test them with hard questions and mark each answer" },
+        { "ref": "library:assessment-fairness-check", "type": "skill", "use": "check", "when": "Before the learner sits it, to check the questions test the stated goals and mark fairly" },
+        { "ref": "library:why-and-how-question-writer", "type": "skill", "use": "explore", "when": "When every question is \"what is\" and you want a set that asks why and how" }
+      ]
+    },
+    {
+      "id": "practice-exam",
+      "task": "Build a full practice exam with explanations",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/practice-exam-builder", "use": "build", "when": "When you have the study guide and exam outline and need a weighted exam with reasons" },
+        { "ref": "kit:workflows/exam-countdown", "use": "brief", "when": "When the exam is one step in the run to exam day and must be timed with the plan" },
+        { "ref": "library:practice-problem-set-writer", "type": "skill", "use": "build", "when": "When a domain needs extra problems that rise in difficulty and vary just enough" },
+        { "ref": "library:units-and-error-margin-checker", "type": "skill", "use": "check", "when": "When answers are calculations, to check units and that the key is right" },
+        { "ref": "library:assessment-fairness-check", "type": "skill", "use": "check", "when": "Before release, to check each question tests the outline and has one best answer" },
+        { "ref": "library:daniel-willingham", "type": "mind", "use": "think", "when": "When questions test trivia and should test what the learner must think about" }
+      ]
+    },
+    {
+      "id": "scenario-questions",
+      "task": "Write scenario questions and a question bank by topic",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/practice-exam-builder", "use": "build", "when": "When the exam uses scenarios and each question must trace to the study guide" },
+        { "ref": "library:skill-transfer-challenge-writer", "type": "skill", "use": "build", "when": "When the learner passes plain questions and needs new cases that test the same rule" },
+        { "ref": "library:flawed-example-writer", "type": "skill", "use": "explore", "when": "When a common mistake should be built into an example for the learner to find" },
+        { "ref": "library:assessment-fairness-check", "type": "skill", "use": "check", "when": "Before the bank is used, to find questions with two right answers or unfair wording" }
+      ]
+    },
+    {
+      "id": "plan-from-scores",
+      "task": "Turn practice scores into a study plan",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/study-plan-from-practice-scores", "use": "build", "when": "When a learner has taken a practice exam and has a fixed exam date" },
+        { "ref": "library:student-mistake-analyser", "type": "skill", "use": "brief", "when": "When you have the wrong answers and need the likely cause behind each kind" },
+        { "ref": "library:build-a-practice-plan-from-common-mistakes", "type": "workflow", "use": "build", "when": "When the same errors repeat and need targeted practice and a later recall check" },
+        { "ref": "library:study-plan-progress-review-assistant", "type": "agent", "use": "check", "when": "At each review, to compare progress with the plan and adjust the practice" }
+      ]
+    },
+    {
+      "id": "hint-ladder",
+      "task": "Help a stuck learner without giving the answer",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/hint-ladder", "use": "build", "when": "When a learner is stuck on a practice problem and asks for the answer" },
+        { "ref": "library:stuck-point-diagnosis-coach", "type": "skill", "use": "brief", "when": "Before any hint, to work out why they are stuck so the help aims at the real gap" },
+        { "ref": "library:step-by-step-hint-writer", "type": "skill", "use": "build", "when": "When a problem type comes up often and needs a set of hints from nudge to full step" },
+        { "ref": "library:get-a-stuck-learner-moving-again", "type": "workflow", "use": "build", "when": "When you have the learner's work and need a diagnosis, hints and easier tasks to climb" },
+        { "ref": "library:explain-it-first-tutor", "type": "skill", "use": "explore", "when": "When hints stall, to try having the learner explain what they tried and build on that" },
+        { "ref": "library:teach-back-practice-partner", "type": "skill", "use": "check", "when": "After they solve it, to have them teach the step back and show it has stuck" }
+      ]
+    },
+    {
+      "id": "explain-idea",
+      "task": "Explain a hard idea so it sticks",
+      "kind": "other",
+      "items": [
+        { "ref": "library:hard-topic-teaching-guide", "type": "skill", "use": "brief", "when": "Before explaining, to see the usual mistakes on this topic and the examples that clear them" },
+        { "ref": "library:technical-topic-explainer", "type": "skill", "use": "build", "when": "When the learner knows another field and an everyday analogy with its limits would help" },
+        { "ref": "library:small-working-example-explainer", "type": "skill", "use": "build", "when": "When a mechanism is best shown with the smallest example that works, traced step by step" },
+        { "ref": "library:explain-it-first-tutor", "type": "skill", "use": "explore", "when": "When you want the learner to explain first and then build on what they said" },
+        { "ref": "library:teach-back-practice-partner", "type": "skill", "use": "check", "when": "After explaining, to have the learner teach it back and see the gaps" },
+        { "ref": "library:richard-feynman", "type": "mind", "use": "think", "when": "When the explanation leans on jargon and should use plain words and a real example" }
+      ]
+    },
+    {
+      "id": "worked-examples",
+      "task": "Move a learner from worked examples to solving alone",
+      "kind": "other",
+      "items": [
+        { "ref": "library:worked-example-practice", "type": "skill", "use": "build", "when": "When a procedure needs a run from fully worked examples to solving alone" },
+        { "ref": "library:turn-a-worked-example-into-independent-practice", "type": "workflow", "use": "build", "when": "When you have one good example and need staged problems that take the help away" },
+        { "ref": "library:example-to-solo-practice-planner", "type": "skill", "use": "brief", "when": "When the learner follows examples but freezes alone, to plan the path between" },
+        { "ref": "library:practice-problem-set-writer", "type": "skill", "use": "build", "when": "When they are ready for a mixed set that gets harder a little at a time" },
+        { "ref": "library:flawed-example-writer", "type": "skill", "use": "explore", "when": "When you want practice built on finding a planted mistake, as a change from solving" },
+        { "ref": "library:understanding-check-questions", "type": "skill", "use": "check", "when": "Before taking the help away, to ask one question that shows they follow the method" }
+      ]
+    },
+    {
+      "id": "integrity-check",
+      "task": "Check a request before helping with marked work",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/integrity-check-before-helping", "use": "check", "when": "When a learner asks for help with an essay, coursework, take-home test or project" },
+        { "ref": "library:assignment-ai-boundaries", "type": "skill", "use": "brief", "when": "When you need to say which parts of an assignment help is fair for and which it would ruin" }
+      ]
+    },
+    {
+      "id": "draft-feedback",
+      "task": "Give feedback on a draft without writing it",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/integrity-check-before-helping", "use": "check", "when": "Before reading the draft, to confirm what help the course allows" },
+        { "ref": "library:student-work-gap-finder", "type": "skill", "use": "build", "when": "When you have the draft and the criteria and need what is missing and why" },
+        { "ref": "library:argument-writing-scaffold-maker", "type": "skill", "use": "build", "when": "When the learner cannot structure an argument and needs a frame to fill in themselves" },
+        { "ref": "library:written-feedback-checker", "type": "skill", "use": "check", "when": "Before you send feedback, to check it is specific and leaves the work to the learner" }
+      ]
+    },
+    {
+      "id": "language-practice-set",
+      "task": "Write a language practice set for one topic and level",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/language-practice-set", "use": "build", "when": "When you need words, a dialogue, drills and a speaking task for one topic at one level" },
+        { "ref": "kit:workflows/weekly-language-lesson-prep", "use": "brief", "when": "Each week, to prepare fresh practice for the lesson and short practice between classes" },
+        { "ref": "library:ell-sentence-frames", "type": "skill", "use": "build", "when": "When learners need sentence starters at two or three levels to get speaking" },
+        { "ref": "library:spanish-and-turkish-writing-tutor", "type": "skill", "use": "build", "when": "When the language is Spanish or Turkish and a learner's paragraph needs corrections and drills" },
+        { "ref": "library:task-language-demand-checker", "type": "skill", "use": "check", "when": "When the set is drafted, to find words and sentence types above the stated level" }
+      ]
+    },
+    {
+      "id": "role-play-cards",
+      "task": "Write role-play and conversation cards",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/role-play-cards", "use": "build", "when": "When a class needs speaking practice for a real situation with a goal for each person" },
+        { "ref": "kit:skills/language-practice-set", "use": "brief", "when": "When the cards must reuse the words and phrases from this week's practice set" },
+        { "ref": "library:ell-sentence-frames", "type": "skill", "use": "build", "when": "When weaker speakers need starter phrases printed on their card" },
+        { "ref": "library:task-language-demand-checker", "type": "skill", "use": "check", "when": "Before class, to find words and sentence types on the cards that are above the level" }
+      ]
+    },
+    {
+      "id": "vocabulary-and-listening",
+      "task": "Make vocabulary decks and listening practice",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/flashcard-deck-builder", "use": "build", "when": "When a word list must become two-way vocabulary cards with example sentences" },
+        { "ref": "library:vocabulary-tier-sorter", "type": "skill", "use": "brief", "when": "When a text has too many new words, to choose which are worth a card" },
+        { "ref": "library:make-an-educational-narration-with-a-text-companion", "type": "workflow", "use": "build", "when": "When learners need to hear the dialogue, with a checked script and a text to follow" },
+        { "ref": "library:elevenlabs", "type": "tool", "use": "build", "when": "When you need the dialogue spoken in a natural voice for listening practice" },
+        { "ref": "kit:prompts/deck-clean-up", "use": "check", "when": "Before the deck is shared, to catch duplicate words and cards that test two things" }
+      ]
+    },
+    {
+      "id": "level-check",
+      "task": "Check a learner's level or progress",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:adaptive-tutor", "type": "skill", "use": "build", "when": "When a new learner starts a topic and you need a quick level check before lessons" },
+        { "ref": "library:understanding-check-questions", "type": "skill", "use": "build", "when": "When one question should show who has the point and who needs more help" },
+        { "ref": "library:confidence-check-coach", "type": "skill", "use": "check", "when": "When a learner is over- or under-confident, to compare how sure they felt with how they did" }
+      ]
+    },
+    {
+      "id": "daily-practice",
+      "task": "Set up daily practice by text or email",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:workflows/weekly-language-lesson-prep", "use": "build", "when": "When learners need a few minutes of practice each day between classes" },
+        { "ref": "library:revision-schedule-planner", "type": "skill", "use": "brief", "when": "When each day's message should bring back earlier words at the right gap" },
+        { "ref": "library:recall-quiz-writer", "type": "prompt", "use": "build", "when": "When each message needs two or three recall questions with answers the next day" },
+        { "ref": "library:text-difficulty-checker", "type": "skill", "use": "check", "when": "Before the messages are set up, to check each one is short and at the learner's reading level" }
+      ]
+    },
+    {
+      "id": "tutoring-session",
+      "task": "Plan a tutoring session on one topic",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:build-a-lesson-from-explanation-to-practice-and-a-quiz", "type": "workflow", "use": "build", "when": "When you know the topic and learner and need an explanation, practice and a quiz" },
+        { "ref": "library:direct-teaching-lesson-builder", "type": "skill", "use": "build", "when": "When a skill is new and should go from you showing it to them doing it alone" },
+        { "ref": "library:check-a-lesson-before-teaching-it", "type": "workflow", "use": "check", "when": "Before the session, to cut overload and add checks of understanding" },
+        { "ref": "library:learning-session-handoff", "type": "skill", "use": "build", "when": "After the session, to update the learner's profile and note where to resume" }
+      ]
+    },
+    {
+      "id": "study-methods",
+      "task": "Coach study methods and habits",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:study-strategy-picker", "type": "skill", "use": "build", "when": "When a learner rereads and highlights, to choose methods that fit the material and goal" },
+        { "ref": "library:recall-first-study-tutor", "type": "skill", "use": "build", "when": "When the learner should write what they remember first and only then fill the gaps" },
+        { "ref": "library:if-then-habit-plan-writer", "type": "skill", "use": "build", "when": "When a learner plans to revise and does not, to set if-then plans and an obstacle check" },
+        { "ref": "library:john-dunlosky", "type": "mind", "use": "think", "when": "When a method feels good now but does not show up in results a week later" },
+        { "ref": "library:carol-dweck", "type": "mind", "use": "think", "when": "When a learner says they are just bad at it and needs a next strategy" }
+      ]
+    },
+    {
+      "id": "adapt-for-learner",
+      "task": "Adapt material for a learner's needs or English level",
+      "kind": "other",
+      "items": [
+        { "ref": "library:adapt-a-lesson-for-different-access-needs", "type": "workflow", "use": "build", "when": "When a learner has an access need and the same material must work for them" },
+        { "ref": "library:task-adapter-learners", "type": "skill", "use": "build", "when": "When one task needs changing for one learner with the goal kept the same" },
+        { "ref": "library:ell-task-scaffolds", "type": "skill", "use": "build", "when": "When the learner is still learning English and needs language help without easier thinking" },
+        { "ref": "library:write-a-thinking-task-english-learners-can-do", "type": "workflow", "use": "build", "when": "When an English learner needs a task that still asks for real thinking" },
+        { "ref": "library:text-difficulty-checker", "type": "skill", "use": "check", "when": "Before you hand it over, to check the text is not harder than the learner can read" },
+        { "ref": "library:learning-options-designer", "type": "skill", "use": "explore", "when": "When you want several ways to present the content and let the learner show what they know" }
+      ]
+    },
+    {
+      "id": "hard-reading",
+      "task": "Guide a learner through a hard text or paper",
+      "kind": "other",
+      "items": [
+        { "ref": "library:reading-strategy-picker", "type": "skill", "use": "brief", "when": "When a set text is hard, to choose the reading strategies that fit its hard parts" },
+        { "ref": "library:research-paper-reading-guide", "type": "skill", "use": "build", "when": "When the text is a research paper and they need its main idea and what to read closely" },
+        { "ref": "library:source-note-summariser", "type": "prompt", "use": "build", "when": "When they must take notes on an article or chapter: claims, evidence and gaps" },
+        { "ref": "library:deep-reading-guide", "type": "skill", "use": "check", "when": "After reading, to test recall of the claims and evidence" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any notes, deck or exam goes to the learner, to catch typos and terms spelt two ways" },
+    { "ref": "library:assignment-ai-boundaries", "type": "skill", "use": "brief", "when": "Whenever the work might be marked, to stay on the right side of what help is fair" }
+  ],
+  "helpers": [
+    { "role": "curriculum-developer", "when": "When a school or provider needs a whole course or scheme of work, not practice for one learner" },
+    { "role": "instructional-designer", "when": "When practice must become an online course with modules and tracking" },
+    { "role": "translator", "when": "When materials or parent messages must be in a second language and checked by a specialist" },
+    { "role": "editor", "when": "When a learner's own finished writing needs a proofread within what their course allows" },
+    { "role": "career-coach", "when": "When the goal is a job interview or career move, not an exam" }
+  ],
+  "gaps": [
+    "No library item builds Anki or Quizlet decks or cloze cards; only the kit skill does",
+    "No library item checks an existing flashcard deck for two-fact cards, duplicates or wrong answers",
+    "No library item builds a certification practice exam weighted by domain with a reason for every answer",
+    "No library item writes multiple-choice questions with wrong options built from common mistakes",
+    "No library item checks revision notes or answers against the learner's own course material",
+    "No library item writes language drills, dialogues or role-play cards by CEFR level",
+    "No library item runs a language placement or progress check",
+    "No library item covers pronunciation or speaking feedback",
+    "No library item writes daily practice messages by text or email",
+    "No library item writes a progress report for a parent or a training provider",
+    "No library item covers exam technique: timing, command words and what to do on the day",
+    "No library item covers safeguarding and children's data for tutors who work with under-18s",
+    "No library item gives clearly different versions of revision notes, practice sets, role-play cards or exam questions to compare",
+    "No library item checks a language practice set for wrong answers or unnatural phrases in the target language"
+  ]
+}

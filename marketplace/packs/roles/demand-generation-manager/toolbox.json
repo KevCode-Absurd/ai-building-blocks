@@ -1,0 +1,263 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "demand-generation-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "icp",
+      "task": "Build the ideal customer profile from won and lost deals",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/icp-from-won-deals", "use": "build", "when": "Before choosing accounts, or when sales and marketing disagree on the best customers" },
+        { "ref": "library:win-and-loss-pattern-finder", "type": "skill", "use": "build", "when": "When you have closed deals, to see loss stages, common objections and deal traits" },
+        { "ref": "library:deal-win-reason-finder", "type": "prompt", "use": "check", "when": "When the profile is drafted, to test it against why deals were really won" }
+      ]
+    },
+    {
+      "id": "target-account-list",
+      "task": "Build a target account list in three tiers",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/abm-account-tiers-and-plays", "use": "build", "when": "When you have won and lost deals and a candidate list to score on fit and intent" },
+        { "ref": "library:prospect-list-builder", "type": "skill", "use": "build", "when": "When the candidate list is thin, to find more accounts with the reason each fits" },
+        { "ref": "library:account-tier-ranker", "type": "skill", "use": "check", "when": "When you want a second scoring of each account on fit and activity, with reasons" },
+        { "ref": "library:crm-record-filler", "type": "skill", "use": "build", "when": "When account records lack size, sector or contacts and cannot be scored" },
+        { "ref": "library:clay", "type": "tool", "use": "build", "when": "When the list needs emails, roles and company details added from many sources" }
+      ]
+    },
+    {
+      "id": "abm-plays",
+      "task": "Plan the plays for each account tier",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/abm-account-tiers-and-plays", "use": "build", "when": "When tiers are agreed and each needs its plays, owners and budget" },
+        { "ref": "kit:workflows/quarterly-abm-cycle", "use": "brief", "when": "Two weeks before the quarter, to run the cycle from list refresh to review" },
+        { "ref": "library:campaign-brief-calendar", "type": "skill", "use": "build", "when": "When a play needs one brief with goal, audience, messages and a weekly calendar" },
+        { "ref": "library:mark-ritson", "type": "mind", "use": "think", "when": "When the plan jumps to tactics before the target and the goal are chosen" }
+      ]
+    },
+    {
+      "id": "buying-group-messages",
+      "task": "Write messages for each role in the buying group",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/buying-group-messages", "use": "build", "when": "When you need the pain, proof and ask for each person who uses, pays or can block" },
+        { "ref": "library:buyer-trigger-and-proof-mapper", "type": "skill", "use": "brief", "when": "Before writing, to map what starts the search and what proof each buyer needs" },
+        { "ref": "library:copilot-gtm-enterprise-account-planning", "type": "skill", "use": "brief", "when": "When the deal is complex, to name the buyer roles and the risks around each" },
+        { "ref": "library:hardest-objections-answer-writer", "type": "skill", "use": "check", "when": "When a message is drafted, to face the toughest objection that role would raise" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a line sounds like any vendor, to test it and get a specific rewrite" }
+      ]
+    },
+    {
+      "id": "tier-one-account-plan",
+      "task": "Plan a one-to-one play for a top account",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:account-plan-builder", "type": "skill", "use": "build", "when": "When one account matters enough for its own plan of people, goals and next steps" },
+        { "ref": "library:account-based-outreach-drafter", "type": "skill", "use": "build", "when": "When you need the email, call script and LinkedIn message built from real signals" },
+        { "ref": "library:expansion-whitespace-finder", "type": "skill", "use": "brief", "when": "When the top account is already a customer, to see what else they could buy" }
+      ]
+    },
+    {
+      "id": "linkedin-abm",
+      "task": "Brief a LinkedIn campaign for target accounts",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:prompts/linkedin-abm-campaign-brief", "use": "build", "when": "When the target list is agreed and tier 2 or 3 accounts need a LinkedIn campaign" },
+        { "ref": "library:ad-creative-variation-planner", "type": "skill", "use": "explore", "when": "When you want several hooks and formats per buying role before picking" },
+        { "ref": "library:linkedin-ads-account-auditor", "type": "skill", "use": "check", "when": "When the campaign has run, to check audiences, lead forms, creative, bids and budgets" }
+      ]
+    },
+    {
+      "id": "outbound-sequence",
+      "task": "Write an outbound sequence with sales and check consent",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/b2b-outreach-consent-check", "use": "check", "when": "Before any cold email or LinkedIn sequence, to check the rules in each country" },
+        { "ref": "library:outbound-email-sequence-writer", "type": "skill", "use": "build", "when": "When sales needs a multi-step sequence with timing and personal touches" },
+        { "ref": "library:agency-sales-outbound-strategist", "type": "agent", "use": "brief", "when": "When you must decide who to target, which signals to watch and which channels to mix" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When each step needs subject lines in several angles to test" },
+        { "ref": "library:cold-email-claim-checker", "type": "prompt", "use": "check", "when": "Before sending, to test each claim against the prospect's own page" },
+        { "ref": "library:jill-konrath", "type": "mind", "use": "think", "when": "When the message is long and should show one business result to a busy buyer" }
+      ]
+    },
+    {
+      "id": "lead-scoring",
+      "task": "Set lead scoring and the handoff to sales",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/lead-scoring-and-sales-handoff", "use": "build", "when": "When you have won and lost leads and need fit points, engagement points and a handoff" },
+        { "ref": "library:lead-handoff-designer", "type": "skill", "use": "build", "when": "When stages and handoff rules between marketing and sales are not written down" },
+        { "ref": "library:lead-grader", "type": "skill", "use": "check", "when": "When you want to test the rule on real leads and see who it ranks first" },
+        { "ref": "library:lead-owner-router", "type": "skill", "use": "build", "when": "When new leads sit unowned, to decide who gets each and write the handoff note" }
+      ]
+    },
+    {
+      "id": "inbound-replies",
+      "task": "Reply to enquiries and follow up fast",
+      "kind": "email",
+      "items": [
+        { "ref": "library:who-to-call-first-ranker", "type": "skill", "use": "brief", "when": "When a batch of leads arrives, to rank them by fit and urgency with talking points" },
+        { "ref": "library:new-inquiry-reply-drafter", "type": "skill", "use": "build", "when": "When each enquiry needs a qualified reply with real meeting times" },
+        { "ref": "library:follow-up-email-sequence-writer", "type": "prompt", "use": "build", "when": "When a lead went quiet after the first reply and needs a few polite nudges" },
+        { "ref": "library:one-ask-email-tightener", "type": "prompt", "use": "check", "when": "Before a reply goes, to cut it to one clear ask" }
+      ]
+    },
+    {
+      "id": "webinar-plan",
+      "task": "Plan a webinar with outline and run sheet",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/webinar-programme", "use": "build", "when": "When a webinar is agreed, to plan it backwards from the one next step for attendees" },
+        { "ref": "kit:workflows/webinar-countdown", "use": "brief", "when": "Six weeks out, to run the countdown from topic to follow-up" },
+        { "ref": "library:prepare-a-webinar-people-can-follow", "type": "workflow", "use": "build", "when": "When the session must teach one clear result and needs an outline and slide brief" },
+        { "ref": "library:webinar-promotion-planner", "type": "skill", "use": "build", "when": "When you need the plan to promote it across channels and partners" },
+        { "ref": "library:nancy-duarte", "type": "mind", "use": "think", "when": "When the talk rambles and needs one story and one request" }
+      ]
+    },
+    {
+      "id": "webinar-invitations",
+      "task": "Write the registration page and invitation sequence",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/webinar-invitation-sequence", "use": "build", "when": "When the date and next step are set and invitations and reminders need writing" },
+        { "ref": "library:conversion-page-writer", "type": "skill", "use": "build", "when": "When the registration page needs writing for one action" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When each invitation needs subject lines in several angles" },
+        { "ref": "library:x-and-linkedin-post-pair-writer", "type": "prompt", "use": "build", "when": "When speakers and staff need posts to share the registration link" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When an invitation is drafted, to get cuts and a ship or fix verdict" }
+      ]
+    },
+    {
+      "id": "webinar-follow-up",
+      "task": "Follow up attendees, no-shows and engaged accounts",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/attendee-and-no-show-follow-up", "use": "build", "when": "Right after the event, when you have attendee lists, poll answers and questions" },
+        { "ref": "library:plan-an-event-follow-up-that-earns-a-reply", "type": "workflow", "use": "build", "when": "When follow-ups should be grouped by what each person asked for, with promises tracked" },
+        { "ref": "library:content-repurposer", "type": "skill", "use": "build", "when": "When the recording should become posts, emails and clips for those who missed it" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the follow-up needs different subject lines for attendees and no-shows" },
+        { "ref": "library:one-ask-email-tightener", "type": "prompt", "use": "check", "when": "Before the follow-up goes, to cut it to one next step" }
+      ]
+    },
+    {
+      "id": "events",
+      "task": "Plan a trade show or field event for pipeline",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:event-marketing-planner", "type": "skill", "use": "build", "when": "When an event must fill seats and turn attendees into pipeline" },
+        { "ref": "library:traction-trade-shows", "type": "skill", "use": "check", "when": "Before paying for a stand, to set the test, its cost and the rule for going again" },
+        { "ref": "kit:prompts/b2b-outreach-consent-check", "use": "check", "when": "Before emailing badge scans or a list from the organiser" }
+      ]
+    },
+    {
+      "id": "event-report",
+      "task": "Write an event recap and results report",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:marketing-results-reporter", "type": "skill", "use": "build", "when": "When you have the numbers and need trends, drop-offs and next steps in one report" },
+        { "ref": "library:lead-cost-and-friction-planner", "type": "skill", "use": "check", "when": "When you must show cost per qualified lead, not cost per registration" },
+        { "ref": "library:lessons-learned-note-writer", "type": "prompt", "use": "build", "when": "When the team needs one page on what to repeat and what to change next time" }
+      ]
+    },
+    {
+      "id": "lead-offer",
+      "task": "Plan a gated offer and its landing page",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:lead-magnet-planner", "type": "skill", "use": "explore", "when": "When there is no offer yet, to compare ideas and pick the one worth an email address" },
+        { "ref": "library:lead-offer-planner", "type": "skill", "use": "build", "when": "When buyers have a costly problem and useful information should start the talk" },
+        { "ref": "library:business-buyer-trust-builder", "type": "skill", "use": "brief", "when": "When buyers are slow and careful, to plan what earns their trust first" },
+        { "ref": "library:conversion-page-writer", "type": "skill", "use": "build", "when": "When the offer is chosen and its page needs writing" },
+        { "ref": "library:landing-page-auditor", "type": "skill", "use": "check", "when": "When the page is drafted, to rank what would stop a visitor filling the form" }
+      ]
+    },
+    {
+      "id": "nurture",
+      "task": "Write a nurture sequence for leads not ready to buy",
+      "kind": "email",
+      "items": [
+        { "ref": "library:lead-nurture-follow-up", "type": "workflow", "use": "build", "when": "When stalled leads should get useful information first, then a follow-up" },
+        { "ref": "library:email-sequence-writer", "type": "skill", "use": "build", "when": "When you need the full sequence with timing, subject lines and emails" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When each email needs several subject lines to choose from" },
+        { "ref": "library:email-sequence-auditor", "type": "skill", "use": "check", "when": "When the sequence has numbers, to see which emails to keep and which to fix" }
+      ]
+    },
+    {
+      "id": "pipeline-review",
+      "task": "Run the monthly pipeline review with sales",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/monthly-pipeline-review", "use": "build", "when": "First Monday of the month, with the marketing and sales leaders" },
+        { "ref": "library:pipeline-stage-health-reviewer", "type": "skill", "use": "build", "when": "When you need coverage, ageing and conversion stage by stage" },
+        { "ref": "library:weekly-sales-pipeline-reviewer", "type": "agent", "use": "check", "when": "When the pipeline should be watched weekly between the monthly reviews" },
+        { "ref": "library:metric-mismatch-tracer", "type": "skill", "use": "check", "when": "When marketing and sales reports show different numbers for the same thing" }
+      ]
+    },
+    {
+      "id": "abm-report",
+      "task": "Write the monthly ABM progress report",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/abm-progress-report", "use": "build", "when": "Monthly, from CRM and ad exports, for marketing and sales leaders" },
+        { "ref": "library:marketing-scorecard-builder", "type": "skill", "use": "brief", "when": "When nobody agrees what to track, to set short-term and long-term measures" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When leaders want one page with the answer first and the decision needed" }
+      ]
+    },
+    {
+      "id": "budget-attribution",
+      "task": "Split the budget and choose how to credit channels",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:attribution-model-chooser", "type": "skill", "use": "build", "when": "When reports conflict, to pick a model and a way to settle them" },
+        { "ref": "library:marketing-budget-scenarios", "type": "skill", "use": "build", "when": "When a new budget is proposed, to forecast low and high cases by channel" },
+        { "ref": "library:brand-sales-budget-split", "type": "workflow", "use": "build", "when": "When all spend goes to lead capture and the brand share needs deciding" },
+        { "ref": "kit:workflows/quarterly-abm-cycle", "use": "brief", "when": "When the budget is set per quarter and must follow the account tiers" },
+        { "ref": "library:bob-hoffman", "type": "mind", "use": "think", "when": "When a dashboard claims credit, to ask what the numbers mean and who benefits" }
+      ]
+    },
+    {
+      "id": "sales-enablement",
+      "task": "Give sales the proof and collateral for target accounts",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:sales-battlecard-builder", "type": "skill", "use": "build", "when": "When a rival shows up in most deals and sales needs comparisons and replies" },
+        { "ref": "library:sales-collateral-writer", "type": "skill", "use": "build", "when": "When a play needs a one-pager, objection sheet or demo script" },
+        { "ref": "library:turn-a-customer-interview-into-a-case-outline", "type": "workflow", "use": "build", "when": "When a customer agreed to talk and you need a case outline and approval list" },
+        { "ref": "kit:skills/buying-group-messages", "use": "check", "when": "When collateral is drafted, to check it speaks to each role in the buying group" }
+      ]
+    },
+    {
+      "id": "partner-campaign",
+      "task": "Plan a joint campaign with a partner",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:partner-campaign-planner", "type": "skill", "use": "build", "when": "When a partner serves the same accounts and a joint campaign could reach them" },
+        { "ref": "library:prepare-a-partner-launch-announcement-pack", "type": "workflow", "use": "build", "when": "When both sides need a shared message brief, drafts and an approval tracker" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a message or report states a number or customer result you cannot trace" },
+    { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "Before any email, post or page goes out, to fix lines that sound machine-written" }
+  ],
+  "helpers": [
+    { "role": "linkedin-ads-specialist", "when": "When the LinkedIn campaign needs building, bidding and weekly changes in the account" },
+    { "role": "sdr", "when": "When a play needs daily calls and personal outreach to named contacts" },
+    { "role": "revops-specialist", "when": "When scoring, routing or reports need building in the CRM" },
+    { "role": "event-manager", "when": "When an in-person event needs a venue, suppliers and a run sheet" },
+    { "role": "content-marketer", "when": "When a play needs a report, guide or article written as the offer" },
+    { "role": "marketing-analyst", "when": "When channel credit or budget questions need the data pulled and tested" }
+  ],
+  "gaps": [
+    "No library item builds an ABM plan: tiers, plays per tier and budget per account; only the kit skill does",
+    "No library item maps a buying group and writes a message per role, or offers different angles per role",
+    "No library item works back from a revenue target to pipeline, opportunities and leads needed",
+    "No library item writes a webinar run sheet or host script, or checks a webinar outline before the day",
+    "No library item writes an event recap that ties attendees to accounts and pipeline",
+    "No library item plans a small executive dinner or roundtable for top accounts",
+    "No library item reads intent signals or website visits by account and says who to contact now",
+    "No library item checks B2B cold outreach rules by country; only the kit prompt does",
+    "No library item writes a gated report or white paper for B2B buyers",
+    "No library item sets a service agreement between marketing and sales with response times and feedback"
+  ]
+}

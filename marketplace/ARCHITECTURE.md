@@ -304,14 +304,26 @@ path, bytes, sha256 }] }`; a trained pack may add `trained_by` and `based_on: { 
 
 **Tools** (`TOOL_FILES` in build.ts, files.json kind `tool`): `tools/capture-brand-dna.mjs` (captures a live site into
 `context/brand-dna.json` and screenshots; Node and Playwright), `tools/brand-dna-snippet.js` (the same capture, pasted
-into a browser console), `tools/check-brand-fidelity.mjs` (checks a built page against `context/brand-dna.json`) and
-`tools/ai-default-patterns.md` (the named AI defaults to avoid). Only agent packs carry them; the one-file text leaves
+into a browser console), `tools/check-brand-fidelity.mjs` (checks a built page against `context/brand-dna.json`),
+`tools/ai-default-patterns.md` (the named AI defaults to avoid), `tools/compare-candidates.mjs` (candidates side by
+side for an outside pick) and `tools/brand-file.mjs` (checks the living `context/brand-file/` folder with
+`status --for <kind>`, so a job refreshes only the stale parts). The list in build.ts is the source of truth. Only agent packs carry them; the one-file text leaves
 the scripts out. A train pack has no `tools/` (the studio import takes text files only). Wherever a pack lacks a tool,
 `resolveToolRefs` rewrites each `tools/<file>` reference to `<origin>/tools/<file>`. `scripts/build-packs.mjs` takes the
 tools from the library, `catalogue-items/general/{brand-dna-capture,brand-fidelity-check,ai-default-patterns,grounded-job-protocol}/`
 at any depth (the defaults list there is `ai-default-patterns/patterns.md`, carried as `tools/ai-default-patterns.md`),
 else from `packs/shared/tools/<file>`; a tool found in neither is left out with a note. `--tools=<dir>` reads them all
 from one folder instead. The build prints where each tool came from.
+
+**Toolbox** (`src/modules/packs/toolbox.ts`, `scripts/build-packs.mjs`). A role kit with a curated `toolbox.json`
+(schema `ai-blocks-toolbox/1`: tasks, and per task the kit files and library items to use, each with a "when") gives
+every agent in the role a `toolbox.md`, read right after AGENTS.md: the "when this, use that" list, kept under
+`TOOLBOX_WORD_BUDGET` words. Each library item it names is read once from `catalogue-items/` and rendered once, so every
+pack holds the same text under `toolbox/<type>/<slug>.md`, and the browsable copy is stored once at
+`dist/packs/toolbox/<type>/<slug>.md` (with `dist/packs/toolbox-index.json`, library slug to the roles that carry it).
+Nothing is searched at job time: the agent opens only the files it chose. A role with no `toolbox.json` gets a
+`toolbox.md` that is the plain list of the pack's skills. The shared WORK-METHOD.md tells the agent to write
+`context/spec.md` first and to check the brand file before capturing anything again.
 
 **"Train your own"**: `/packs/<agent-id>-train.zip`, folder `<role-id>-agent/` (the title as a slug when the persona
 has no role): the same base without the persona's soul, style, bio or portrait. `soul.md` and `personality.md` are

@@ -17,7 +17,8 @@ import { AGENT_MIRROR, LIBRARY_ORIGIN, ORIGIN, PACK_LICENSE, PACK_SCHEMA, SKILL_
 import { teamMarkdown } from "../directory/team.ts";
 import { qualityMethodMarkdown } from "../directory/execution.ts";
 import { outputPolicyMarkdown } from "../runner/output-policy.ts";
-import { CAPTURE, FAMILY_LABELS, contextRequirements, craftWeightsLine, familyGates, familyOf, familySlice, jobFirstCraft } from "./families.ts";
+import { CAPTURE, FAMILY_LABELS, contextNeed, contextRequirements, craftWeightsLine, familyGates, familyOf, familySlice, jobFirstCraft } from "./families.ts";
+import { brandFileLine } from "./brand-file.ts";
 import { bestRoute, type RouteCandidate } from "./route.ts";
 import { agentFrontmatter, megaSources, teamListMarkdown, type MegaKit } from "./mega.ts";
 import {
@@ -97,6 +98,7 @@ export const TOOL_FILES: { name: string; purpose: string }[] = [
   { name: "brand-dna-snippet.js", purpose: "The same capture, pasted into any browser console." },
   { name: "check-brand-fidelity.mjs", purpose: "Checks a built page against context/brand-dna.json." },
   { name: "ai-default-patterns.md", purpose: "The named AI defaults to avoid unless chosen on purpose." },
+  { name: "brand-file.mjs", purpose: "Keeps the client's living brand file in context/brand-file/: status says what is stale, slice takes only what a job needs, learn records what the client kept or killed." },
   { name: "compare-candidates.mjs", purpose: "Puts 2 to 4 candidates side by side at desktop and phone width, labelled A to D, for an outside pick (Node; Playwright for the PNG sheets)." },
 ];
 
@@ -108,7 +110,7 @@ export const TOOL_FILES: { name: string; purpose: string }[] = [
  */
 const BRAND_DEPARTMENTS = new Set(["marketing", "content", "design", "ecommerce"]);
 /** The tools that capture, check or compare work a buyer sees. The list of AI defaults to avoid is for every kind of work, so every pack carries it. */
-export const BRAND_TOOLS = new Set(["capture-brand-dna.mjs", "brand-dna-snippet.js", "check-brand-fidelity.mjs", "compare-candidates.mjs"]);
+export const BRAND_TOOLS = new Set(["capture-brand-dna.mjs", "brand-dna-snippet.js", "check-brand-fidelity.mjs", "brand-file.mjs", "compare-candidates.mjs"]);
 export function brandFacing(department: string, families: DeliverableFamily[]): boolean {
   if (BRAND_DEPARTMENTS.has(department)) return true;
   if (families.some(f => f === "web_page" || f === "ad_creative")) return true;
@@ -543,7 +545,10 @@ function contextReadme(jts: JobType[], tools: Set<string>, origin: string, brand
     "",
     bullets([
       "`context/spec.md`: the spec sheet, one screen: the job, deliverables, acceptance tests, mode and the brand context the job needs (step 0).",
-      ...(capture ? ["`context/brand-dna.json` and `context/screenshots/`: the captured site (step 1)."] : []),
+      ...(capture ? [
+        "`context/brand-file/`: the brand file, kept across jobs for this client. Run `node tools/brand-file.mjs status --for <kind>` first: a first job builds it, later jobs refresh only stale parts and take a slice (step 1).",
+        "`context/brand-dna.json` and `context/screenshots/`: the captured site (step 1).",
+      ] : []),
       "`context/voice.md`: verbatim voice samples, with customer words marked as theirs.",
       "`context/facts.md`: live facts, each with its source and the date you captured it.",
       "`context/references.md`: competitors and references, and what each does better.",
@@ -719,7 +724,7 @@ function jobSkill(jt: JobType, kind: PackKind, slug: string = jt.id, pointer: Me
     "",
     kind === "agent" ? `The steps of WORK-METHOD.md, as they apply to ${jt.title.toLowerCase()}:` : `The steps of WORK-METHOD.md, as they apply to ${jt.title.toLowerCase()}. Make them yours in playbook.md:`,
     "",
-    `1. **Ground.** Capture into \`context/\` first (\`context/README.md\`, ${FAMILY_LABELS[family]}): ${required.length ? required.join("; ") : "what exists now"}. Nothing is produced before that file exists.`,
+    `1. **Ground.** Capture into \`context/\` first (\`context/README.md\`, ${FAMILY_LABELS[family]}): ${required.length ? required.join("; ") : "what exists now"}. Nothing is produced before that file exists.${contextNeed(family).level === "none" ? "" : ` ${brandFileLine(contextNeed(family).level)}`}`,
     `2. **Taste.** ${slice.taste}`,
     `3. **Diverge: real candidates, and someone else chooses.** ${slice.diverge} A fresh reviewer who has not seen your reasoning picks one and names what to take from the others.`,
     `4. **Build** ${lowerFirst(jt.deliverable)}. ${pointer ? `Follow \`${pointer.path}\` (${pointer.title}) step by step for the craft. ` : ""}${slice.build}`,

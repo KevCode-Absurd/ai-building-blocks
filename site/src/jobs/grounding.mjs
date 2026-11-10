@@ -7,6 +7,7 @@
 // when the two copies differ.
 
 import { intakeQuestions } from './intake-questions.mjs';
+import { brandFileStep } from './brand-file.mjs';
 
 const list = value => Array.isArray(value) ? value : [];
 const text = value => typeof value === 'string' && value.trim().length > 0;
@@ -376,8 +377,8 @@ export const CAPTURE_TOOLS = Object.freeze([
   { file: 'capture-brand-dna.mjs', skill: 'brand-dna-capture', path: 'scripts/capture-brand-dna.mjs', use: 'First choice. Node + Playwright against the live site URL; writes context/brand-dna.json and context/screenshots/.' },
   { file: 'brand-dna-snippet.js', skill: 'brand-dna-capture', path: 'scripts/brand-dna-snippet.js', use: 'Second choice. Paste into any browser tool or devtools console on the live site; save its JSON as context/brand-dna.json.' },
   { file: 'check-brand-fidelity.mjs', skill: 'brand-fidelity-check', path: 'scripts/check-brand-fidelity.mjs', use: 'CHECK step for web pages: compares the built page with context/brand-dna.json.' },
-  // The agents app does not serve this one yet, so it has no agents.useaiblocks.com address.
-  { file: 'compare-candidates.mjs', skill: 'make-three-first-screens', path: 'scripts/compare-candidates.mjs', agents_app: false, use: 'CANDIDATES step, for work a buyer sees: puts 2 to 4 candidates (HTML, a URL, SVG or images) side by side under the labels A, B, C, so a fresh reviewer can look and choose. Use --shuffle, and keep compare.key.json from the reviewer until they have picked.' },
+  { file: 'brand-file.mjs', skill: 'brand-dna-capture', path: 'scripts/brand-file.mjs', use: 'GROUND step, before any capture: status --for <kind> says whether the client\'s brand file exists and what is stale; slice <level> --out context/facts.md takes only what the job needs; learn records what the client kept or killed.' },
+  { file: 'compare-candidates.mjs', skill: 'make-three-first-screens', path: 'scripts/compare-candidates.mjs', use: 'CANDIDATES step, for work a buyer sees: puts 2 to 4 candidates (HTML, a URL, SVG or images) side by side under the labels A, B, C, so a fresh reviewer can look and choose. Use --shuffle, and keep compare.key.json from the reviewer until they have picked.' },
 ]);
 export const MARKETPLACE_TOOLS_BASE = 'https://agents.useaiblocks.com/tools/';
 export const GJP_SKILLS = Object.freeze({ protocol: 'grounded-job-protocol', capture: 'brand-dna-capture', fidelity: 'brand-fidelity-check', defaults: 'ai-default-patterns' });
@@ -641,12 +642,12 @@ export function prepareJobContext(input = {}, context = {}) {
   return {
     schema: 'ai-blocks-job-context/1', brief,
     annex: {
-      read: 'Act on the brief. Open the annex parts it names (spec_sheet, questions, completeness, proven_levers) and reviewer before each review. Save the whole annex as context/job-context.json.',
+      read: 'Act on the brief. Open the annex parts it names (spec_sheet, questions, completeness, proven_levers, brand_context) and reviewer before each review. Save the whole annex as context/job-context.json.',
       request_verbatim: request, deliverable_kind: kind, kind_source: resolved.source, suggestion: resolved.suggestion, family,
       mode_default: mode, site_url: siteUrl ?? null, category: typeof input.category === 'string' ? input.category.slice(0, 80) : null,
       spec_sheet: spec,
       questions,
-      brand_context: contextNeed(kind),
+      brand_context: { ...contextNeed(kind), next: brandFileStep({ kind, status: input.brand_file_status && typeof input.brand_file_status === 'object' ? input.brand_file_status : null }) },
       protocol: steps,
       context_requirements: contextRequirements(kind, { siteUrl, hasExistingAsset: input.has_existing_asset }),
       capture: { order: ['capture-brand-dna.mjs (Node + Playwright)', 'brand-dna-snippet.js (browser console)', 'ask for URL, screenshots and CSS'], fields: need.brand_dna ? [...BRAND_DNA_FIELDS] : [], tools: scripts, skills: Object.values(GJP_SKILLS).map(slug => ({ slug, get_skill: { slug, response_format: 'detailed' } })) },

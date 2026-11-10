@@ -37,11 +37,12 @@ test('prepare_job_context returns a short brief and a structured annex for each 
   assert.deepEqual(a.protocol.map(s => s.id), ['frame', 'ground', 'taste', 'diverge', 'build', 'check', 'record']);
   assert.ok(a.context_requirements.some(r => r.id === 'brand_dna' && r.required));
   // Work a buyer sees also gets the tool that puts candidates side by side for the reviewer.
-  assert.deepEqual(a.capture.tools.map(t => t.file), ['capture-brand-dna.mjs', 'brand-dna-snippet.js', 'check-brand-fidelity.mjs', 'compare-candidates.mjs']);
+  assert.deepEqual(a.capture.tools.map(t => t.file), ['capture-brand-dna.mjs', 'brand-dna-snippet.js', 'check-brand-fidelity.mjs', 'brand-file.mjs', 'compare-candidates.mjs']);
   for (const tool of a.capture.tools) { assert.equal(tool.get_skill.response_format, 'detailed'); assert.equal(tool.status, 'CHECK_GET_SKILL'); assert.equal(tool.agents_app, undefined); }
   // The agents app serves the three capture and check tools; the compare tool comes from its library skill.
-  for (const tool of a.capture.tools.slice(0, 3)) assert.match(tool.marketplace_url, /^https:\/\/agents\.useaiblocks\.com\/tools\//);
-  const compare = a.capture.tools[3]; assert.equal(compare.marketplace_url, null); assert.deepEqual(compare.get_skill, { slug: 'make-three-first-screens', response_format: 'detailed' }); assert.equal(compare.get_resource.path, 'scripts/compare-candidates.mjs'); assert.match(compare.use, /side by side/);
+  // Every pack now carries all five tools, so each has an agents.useaiblocks.com address.
+  for (const tool of a.capture.tools) assert.equal(tool.marketplace_url, `https://agents.useaiblocks.com/tools/${tool.file}`);
+  const compare = a.capture.tools[4]; assert.deepEqual(compare.get_skill, { slug: 'make-three-first-screens', response_format: 'detailed' }); assert.equal(compare.get_resource.path, 'scripts/compare-candidates.mjs'); assert.match(compare.use, /side by side/);
   assert.match(a.candidates.compare_with, /^compare-candidates\.mjs/);
   assert.equal(a.taste_brief.questions, undefined); assert.match(a.taste_brief.fill_from, /Ask nothing more/); assert.equal(a.taste_brief.path, 'context/taste-brief.md');
   assert.equal(a.craft_rubric.reduce((n, c) => n + c.weight, 0), 100);

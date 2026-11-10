@@ -230,7 +230,7 @@ test("a curated pack: toolbox.md says what to use when, carries every listed ite
   for (const t of fixture("graphic-designer").tasks) assert.ok(toolbox.includes(`### ${t.task}`), `every task is there: ${t.task}`);
   // Where the job's gates are, and the items for every job.
   assert.match(toolbox, /## Your jobs\n\n[^\n]+\n\n- [^\n]+ `skills\/social-graphics-spec-job\/SKILL\.md`/);
-  assert.match(toolbox, /## On every job\n\n- Before any work that must look or sound like the client: \*\*Brand DNA capture\*\* \(brief, skill\) `toolbox\/skill\/brand-dna-capture\.md`/);
+  assert.match(toolbox, /## On every job\n\n- Before any work that must look or sound like the client: \*\*Brand file capture\*\* \(brief, skill\) `toolbox\/skill\/brand-dna-capture\.md`/);
   // It ends with the helpers: the role, how to load it, and its pack.
   const who = toolbox.slice(toolbox.indexOf("## Who to bring in"));
   assert.ok(toolbox.trimEnd().endsWith(who.trimEnd()) && who.length > 100, "Who to bring in is the last section");

@@ -44,7 +44,7 @@ in one, put a workaround in your module and say so in your report.
 | delivery | `src/modules/delivery/*`, **`src/core/email.ts` (sendEmail)**, `src/ui/pages/delivery/*`, `migrations/0005_*.sql`, `test/delivery*.test.ts` | release, buyer job pages, accept / revise / reject, auto-accept, email |
 | ops | `src/modules/ops/*`, `src/ui/pages/ops/*`, `migrations/0006_*.sql`, `test/ops*.test.ts` | ops console, gate numbers, beta codes, staff, costs |
 | studio | `src/modules/studio/*`, `src/ui/pages/studio/*`, `migrations/0007_*.sql`, `test/studio*.test.ts` | expert studio: interview, examples, markup, compile, test bench, publish, go live |
-| experts | `src/modules/experts/*`, `src/ui/pages/experts/*`, `migrations/0008_*.sql`, `test/experts*.test.ts` | applications, agreement, review, expert dashboard, expert personas |
+| experts | `src/modules/experts/*`, `src/ui/pages/experts/*`, `migrations/0008_*.sql`, `migrations/0020_expert_invites.sql`, `0021_expert_profiles.sql`, `0022_job_posts.sql`, `test/experts*.test.ts` | applications, agreement, review, expert dashboard, expert personas, founding invites, public profiles and share links, job posts |
 | mcp | `src/modules/mcp/*`, `src/ui/pages/mcp/*`, `migrations/0009_*.sql`, `test/mcp*.test.ts` | MCP server + OAuth for buyers' own AI tools, connect page |
 
 Payments are not built. `jobs.payment_status` stays `not_required`.
@@ -131,7 +131,7 @@ While `HOSTED_JOBS` is off this is the ops-only test path; for everyone else a h
 | evaluation | `GET /api/review/blind/next`, `POST /api/review/blind/:id`, `GET /api/review/stats` |
 | ops | `GET /api/ops/jobs`, `GET /api/ops/jobs/:id`, `POST /api/ops/jobs/:id/{release,rerun,cancel,assign,note,resolve}`, `GET /api/ops/gate`, `GET/POST /api/ops/beta-codes`, `GET/POST /api/ops/staff`, `POST /api/ops/seed`, `GET /api/ops/agents`, `GET /api/ops/costs` |
 | studio | `/api/studio/*` (expert, including `POST /api/studio/import`), `POST /api/studio/agents/:id/live`, `POST /api/studio/agents/:id/retire` (ops) |
-| experts | `POST /api/experts/apply`, `GET /api/experts/me`, `GET /api/experts/me/dashboard`, `GET /api/experts/agreement`, `GET /api/experts` (ops), `POST /api/experts/:id/review` (ops) |
+| experts | `POST /api/experts/apply` (optional `invite_token`), `GET /api/experts/me`, `GET /api/experts/me/dashboard`, `GET /api/experts/agreement`, `GET /api/experts` (ops), `POST /api/experts/:id/review` (ops). Invites: `GET /api/experts/invites/:token` (public; first visit marks it opened), `GET/POST /api/ops/invites`, `POST /api/ops/invites/:id/{revoke,email}` (ops). Profiles: `GET /api/expert-profiles/:slug` (public, 404 without a live agent), `GET/POST /api/experts/me/profile`, `GET /api/experts/me/checklist`, `POST /api/experts/me/agreement` (approved expert), `POST /api/share/agent-use` (public). Job posts: `POST/GET /api/job-posts` (signed in; your own), `GET/DELETE /api/job-posts/:id`, `POST /api/job-posts/:id/{pick,close}` (owner), `POST /api/job-posts/:id/replies` and `GET /api/experts/me/posts` (matching approved expert), `GET /api/ops/job-posts`, `POST /api/ops/job-posts/:id/hide` (ops). Outside /api: `GET /e/:slug` (share link, 302) |
 | mcp | `POST /mcp`, `GET /.well-known/oauth-authorization-server`, `GET /.well-known/oauth-protected-resource`, `POST /oauth/register`, `GET /oauth/authorize`, `POST /oauth/token`, `POST /api/oauth/approve`. Tools `load_agent` (the core files `CORE_FILES` in `mcp/pack-files.ts`: AGENTS.md, WORK-METHOD.md, context/README.md, soul.md, personality.md, playbook.md, access.md, OUTPUT-POLICY.md, then the list of the rest; with `request`, also the skill or workflow it routes to in full and the matching knowledge.md sections, see "Routing a request") and `get_agent_file` (any path listed in the agent's files.json) read the built pack through the `ASSETS` binding (`mcp/pack-files.ts`); they run no model. The job tools (`hosted: true`) are listed only while `HOSTED_JOBS` is "on", and the server instructions switch with it (`mcpInstructions`). Tool `get_agent` returns `agent.pack: { agent_zip, train_zip, files, guide }` (absolute `APP_ORIGIN` URLs: `/packs/<id>.zip`, `/packs/<id>-train.zip`, `/packs/<id>/files.json`, `/guides/train-your-own-agent`), or `null` for an expert's agent, and names the downloads in its text. |
 
 ## Pages for search engines and AI crawlers
@@ -177,14 +177,53 @@ Search engines: Google reads `/sitemap.xml` through Search Console (property `sc
 | intake | `/new`, `/requests/:id` (buyer) |
 | delivery | `/jobs`, `/jobs/:id` (buyer) |
 | evaluation | `/review` (reviewer) |
-| ops | `/ops`, `/ops/jobs/:id`, `/ops/agents`, `/ops/experts`, `/ops/beta`, `/ops/costs` (ops) |
+| ops | `/ops`, `/ops/jobs/:id`, `/ops/agents`, `/ops/experts`, `/ops/beta`, `/ops/costs` (ops); `/ops/invites` and `/ops/job-posts` are drawn by the experts module |
 | studio | `/studio` (with "Upload a trained pack"), `/studio/agents/:id` (expert) |
-| experts | `/experts/apply` (signed-in), `/expert` (signed-in: status, then dashboard once approved) |
+| experts | `/experts/apply` (signed-in; `?invite=<token>` fills it in from the invite), `/experts/invite/:token` (public, noindex), `/experts/:slug` (public profile, indexed), `/expert` (signed-in: status, then dashboard once approved: setup checklist, agents, jobs from businesses, public page and share link, agreement), `/job-posts`, `/job-posts/new`, `/job-posts/:id` (signed-in), `/ops/invites`, `/ops/job-posts` (ops) |
 | mcp | `/connect` (public), `/oauth/consent` (signed-in) |
 
 Header links (`nav`): Agents, Describe a job and My jobs (only with `me.hostedJobs`), Review (reviewers), Studio
-(experts), Ops (ops); account menu: Expert dashboard, Connect your AI, Apply as an expert. Pages with `access: "buyer"`
+(experts), Ops (ops); account menu: Expert dashboard, Connect your AI, Apply as an expert, Post a job for experts. Pages with `access: "buyer"`
 show "Our agents work in your own AI" to anyone without `me.hostedJobs`. `/connect` also lists the public API. The footer's Agents column adds Guides (`/guides`).
+
+## Expert invites, profiles and job posts
+
+All in `src/modules/experts/` (`invites.ts`, `profiles.ts`, `posts.ts`); no model calls, no prices.
+
+- **Founding invites** (migration 0020: `expert_invites`, `experts.invite_id`). Ops make an invite (name, optional
+  email, areas, jobs, private note) and get `/experts/invite/<token>` (24 random bytes, URL-safe; it only opens the
+  invite page and fills in the application). Email goes out only from "Send invite email" (`notify` with `toEmail`).
+  Status is derived: revoked, else the expert's review (approved, rejected, paused), applied, opened (first call to
+  `GET /api/experts/invites/:token`), created. An application with `invite_token` is tied to the invite in the same
+  batch (one expert per invite), shows `invited`, and sorts first among waiting applications. Revoking works until
+  someone applies.
+- **Public profiles** (migration 0021: `expert_profiles`). A row per approved expert (made on approval, by the cron and
+  on first use); `slug` comes from the name once and never changes (`apply`, `invite` and a few others are reserved).
+  `/experts/<slug>` is public only while the expert is approved and has a live expert agent on a live persona, else a
+  real 404. `pages.ts` gives it head tags (ProfilePage + Person, BreadcrumbList), crawler copy, boot data
+  (`/api/expert-profiles/<slug>`) and a sitemap entry; robots.txt allows `/api/expert-profiles/` and blocks
+  `/experts/apply`, `/experts/invite/`, `/e/` and `/job-posts`. Experts edit `headline` (140) and `bio` (40 to 800)
+  from the dashboard; until then the application headline and persona bio stand in.
+- **Share links and attribution.** `/e/<slug>` (handled in `app.ts`) and `?via=<slug>` on any page set the
+  first-party cookie `aib_via=<slug>` (HttpOnly, SameSite=Lax, 90 days) when the browser has none: first touch wins.
+  Each follow counts in `expert_profiles.link_visits` (not bots, not again for a browser that already holds that
+  code). On a person's first sign-in here, `ensureAccount` sets `users.referred_by_expert` from the cookie (the only
+  thing stored about a visitor; not copied into events). `POST /api/share/agent-use { agent }` adds to
+  `link_downloads` when the cookie (or the account's referrer) is that agent's expert, once per agent per browser
+  (`aib_via_used` cookie). Experts' agents have no download yet, so nothing calls it today; call it from the download
+  buttons when expert packs ship. The dashboard shows visits, sign-ups (`COUNT(users)`) and downloads.
+- **Setup checklist** (`onboardingChecklist`): agreement (current version accepted), profile (headline and bio saved),
+  studio interview, past work, marked-up drafts, test bench (`expertStudioProgress` in studio/service.ts, any of the
+  expert's agents), go live (a live agent), share (at least one visit). Nothing is ticked by hand.
+- **Job posts** (migration 0022: `job_posts`, `job_post_replies`, `expert_post_digests`). A signed-in person posts
+  title, plain-text brief (40 to 3000), area, optional job type and https website, and when they need it; no budget.
+  Text that looks like a password or key is refused. Limits: 3 posts a day, 5 open. Approved experts whose areas or
+  jobs match see open, visible posts (not who posted) and reply once (600 characters). Only the owner and ops see the
+  replies, with each expert's profile link while it is public. Picking a reply closes the post and emails both sides
+  the other's checked email (`notify`). The owner can close or delete (title, brief, website and reply notes are
+  cleared at once); the cron clears every post's text when `expires_at` (60 days) passes and marks open ones expired,
+  and sends each matching expert one digest of new posts at most every 24 hours. Ops can hide a post with a note the
+  owner sees.
 
 ## Agent packs
 

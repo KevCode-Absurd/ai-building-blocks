@@ -14,7 +14,7 @@
 //
 // Usage:
 //   node brand-file.mjs status [--for <kind>] [--json]
-//   node brand-file.mjs slice <none|facts|voice|look|full> [--for <kind>]
+//   node brand-file.mjs slice <none|facts|voice|look|full> [--for <kind>] [--out <file>]
 //   node brand-file.mjs learn --job <name> --kept "<...>" --killed "<...>" --more "<...>"
 //   node brand-file.mjs migrate [--from <old brand folder>]
 // Options:
@@ -353,7 +353,7 @@ function nextSteps({ all, ctx, need, kind, parts, stale, unsynced }) {
   if (read.length && !slow.length) out.push(`Read ${read.length} older fact${read.length === 1 ? '' : 's'} again at the source: ${capture} ${[...new Set(read.map((s) => s.source))].slice(0, 4).join(' ')}`);
   if (told.length) out.push(`Confirm ${told.length} fact${told.length === 1 ? '' : 's'} with no date or an old one with the client, then set captured_at in ${slash(path.join(FOLDER, 'facts.json'))}. Until then they are not facts.`);
   if (needed.some((p) => p.id === 'facts' && p.state === 'missing')) out.push(`facts.json is missing: ${capture} <site url>, or write it by hand with a source and date on every line.`);
-  out.push(`${out.length ? 'Then take' : 'Take'} only your slice: node ${toolPath('brand-file.mjs')} slice ${need}${kind ? ` --for ${kind}` : ''}`);
+  out.push(`${out.length ? 'Then take' : 'Take'} only your slice: node ${toolPath('brand-file.mjs')} slice ${need}${kind ? ` --for ${kind}` : ''} --out ${slash(path.relative(process.cwd(), path.join(ctx, 'facts.md')) || 'facts.md')}`);
   return out;
 }
 function statusText(s) {
@@ -593,7 +593,7 @@ function parseArgs(argv) {
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === '--help' || a === '-h') o.help = true; else if (a === '--json') o.json = true;
-    else if (['--dir', '--for', '--today', '--job', '--kept', '--killed', '--more', '--from'].includes(a)) { if (argv[i + 1] === undefined) throw new Error(`${a} needs a value.`); o[a.slice(2)] = argv[++i]; }
+    else if (['--dir', '--for', '--today', '--job', '--kept', '--killed', '--more', '--from', '--out'].includes(a)) { if (argv[i + 1] === undefined) throw new Error(`${a} needs a value.`); o[a.slice(2)] = argv[++i]; }
     else if (a.startsWith('--')) throw new Error(`Unknown option ${a}. Run with --help.`);
     else o._.push(a);
   }
@@ -616,7 +616,12 @@ export function main(argv = process.argv.slice(2), print = console.log) {
     if (cmd === 'slice') {
       const level = o._[1] || (o.for ? SLICE_BY_KIND[o.for] : null);
       if (!level) { console.error(`Say which slice: ${SLICES.join(', ')}. Or give --for <kind> and the right one is chosen.`); return 2; }
-      const r = sliceText(ctx, level, { now, kind: o.for || null }); print(r.text); return r.ok ? 0 : 1;
+      const r = sliceText(ctx, level, { now, kind: o.for || null });
+      if (!o.out || !r.ok) { print(r.text); return r.ok ? 0 : 1; }
+      // --out writes the slice as UTF-8 itself, so a shell redirect cannot change its encoding.
+      fs.mkdirSync(path.dirname(path.resolve(o.out)), { recursive: true }); fs.writeFileSync(path.resolve(o.out), `${r.text}\n`);
+      print(`Wrote the ${level} slice to ${slash(o.out)} (${r.words ?? words(r.text)} words). Read that file, not the whole brand file.`);
+      return 0;
     }
     if (cmd === 'learn') { const r = learn(ctx, { job: o.job, kept: o.kept, killed: o.killed, more: o.more, now }); print(`Added to ${r.file}:\n## ${r.entry.title}\n${r.entry.lines.join('\n')}`); return 0; }
     if (cmd === 'migrate') {

@@ -788,7 +788,7 @@
     "catalogue-items/general/brand-dna-capture/item.yaml": {
       "reviewed_by": "AI Blocks source review (Claude, brand file workstream)",
       "reviewed_on": "2026-11-10",
-      "method_sha256": "d892379577d784e3e9bed420d08f5573fe59e975029cf457719126f4705e4198",
+      "method_sha256": "50306fdc517fd79be47cfa9a03415ba612ec001ad6aa46960fe3e1c793e24240",
       "inputs": [
         {
           "type": "web_page",

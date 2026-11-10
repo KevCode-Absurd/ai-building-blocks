@@ -101,12 +101,12 @@ Ask for the URL, full-page screenshots at desktop and phone width, and the CSS o
 ## 3. Take your slice, not the whole file
 
 ```
-node scripts/brand-file.mjs slice <none|facts|voice|look|full> --for <kind>
+node scripts/brand-file.mjs slice <none|facts|voice|look|full> --for <kind> --out context/facts.md
 ```
 
 Leave the level out and `--for <kind>` picks it: pages and ads take `full`; copy and emails take `voice`; audits, strategy and plans take `facts`. A slice is at most about 600 words (1,500 for `full`), newest first.
 
-- Save it as `context/facts.md`. It is all the brand context the job reads.
+- `--out` saves it as `context/facts.md`. That file is all the brand context the job reads.
 - Lines under `RECHECK BEFORE USE` are stale. Read them again at their source, or leave them out.
 - Lines under `NOT CONFIRMED` are never used as fact.
 - `WHAT WORKED BEFORE` comes first. Keep what the client kept and leave out what they killed.

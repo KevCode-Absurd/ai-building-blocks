@@ -76,7 +76,7 @@ export function brandFileStep({ kind, status = null, tools = 'tools' } = {}) {
   const slice = `${tool} slice ${level} --for ${kind}`;
   if (level === 'none') return { level, state: 'not_needed', lines: [`This ${kind ?? 'other'} job needs no brand file. Skip capture and work from the system, files or data.`] };
   const worked = `Before the spec, read ${BRAND_FILE.worked} if it exists: keep what the client kept, leave out what they killed.`;
-  const take = `Take only your slice: ${slice}. It is all the brand context you read. Lines under RECHECK are not facts until you read them again at the source.`;
+  const take = `Take only your slice: ${slice} --out context/facts.md. It is all the brand context you read. Lines under RECHECK are not facts until you read them again at the source.`;
   const learn = `At hand-over, record what the client kept, killed or asked for more of: ${tool} learn --job "<job>" --kept "<...>" --killed "<...>" --more "<...>"`;
   const buildWith = `${capture} <site url> <1 to 3 pages that matter>`;
   const build = `First job for this client: build the brand file once with ${buildWith}. Later jobs reuse and update it.`;

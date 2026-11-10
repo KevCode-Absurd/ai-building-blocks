@@ -65,7 +65,7 @@ test('the first job for a client builds the brand file once; later jobs reuse it
   const step = brandFileStep({ kind: 'email', status: { exists: false } });
   assert.equal(step.state, 'build');
   assert.match(step.lines[0], /^First job for this client: build the brand file once with node tools\/capture-brand-dna\.mjs <site url> <1 to 3 pages that matter>\. Later jobs reuse and update it\.$/);
-  assert.match(step.lines[1], /Take only your slice: node tools\/brand-file\.mjs slice voice --for email\./);
+  assert.match(step.lines[1], /Take only your slice: node tools\/brand-file\.mjs slice voice --for email --out context\/facts\.md\./);
   assert.match(step.lines.at(-1), /^At hand-over, record what the client kept, killed or asked for more of: node tools\/brand-file\.mjs learn --job /);
 });
 
@@ -73,7 +73,7 @@ test('a fresh brand file means: read what worked, take the slice, record what th
   const step = brandFileStep({ kind: 'ad_creative', status: { exists: true, stale: [], missing: [] } });
   assert.equal(step.state, 'ready'); assert.equal(step.lines.length, 3);
   assert.match(step.lines[0], /^Before the spec, read context\/brand-file\/worked\.md if it exists: keep what the client kept, leave out what they killed\.$/);
-  assert.match(step.lines[1], /^The brand file is fresh for this job\. Take only your slice: node tools\/brand-file\.mjs slice full --for ad_creative\. It is all the brand context you read\. Lines under RECHECK are not facts/);
+  assert.match(step.lines[1], /^The brand file is fresh for this job\. Take only your slice: node tools\/brand-file\.mjs slice full --for ad_creative --out context\/facts\.md\. It is all the brand context you read\. Lines under RECHECK are not facts/);
   assert.doesNotMatch(step.lines.join('\n'), /capture-brand-dna/);
 });
 
@@ -84,7 +84,7 @@ test('a stale brand file is refreshed only where it is stale, prices and stock f
   assert.equal(page.lines[1], 'Refresh only what is stale (offers, look); leave the rest of the brand file as it is.');
   assert.equal(page.lines[2], 'First refresh prices, offers, stock and shipping: node tools/capture-brand-dna.mjs https://www.allbirds.com/products/mens-tree-runners. Nothing that sells is written before this.');
   assert.equal(page.lines[3], 'Refresh the look: node tools/capture-brand-dna.mjs <site url>');
-  assert.match(page.lines[4], /^Take only your slice: node tools\/brand-file\.mjs slice full --for web_page\./);
+  assert.match(page.lines[4], /^Take only your slice: node tools\/brand-file\.mjs slice full --for web_page --out context\/facts\.md\./);
   // An email takes facts and voice: a stale look is not its problem.
   const email = brandFileStep({ kind: 'email', status });
   assert.equal(email.lines[1], 'Refresh only what is stale (offers); leave the rest of the brand file as it is.');

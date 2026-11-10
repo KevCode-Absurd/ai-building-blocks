@@ -341,7 +341,11 @@ test('a banned claim is kept on file, never handed over as a fact, and shown as 
 test('a job saves its slice as context/facts.md; that file is never read back in as a source', () => {
   const { ctx } = built();
   const before = [read(ctx, 'facts.json'), read(ctx, 'offers.json')];
-  fs.writeFileSync(path.join(ctx, 'facts.md'), bf.sliceText(ctx, 'facts', { now: at('2026-11-01') }).text);
+  const out = path.join(ctx, 'facts.md'), saved = run(ctx, 'slice', 'facts', '--out', out, '--today', '2026-11-01');
+  assert.equal(saved.code, 0); assert.match(saved.text, /^Wrote the facts slice to .*facts\.md \(\d+ words\)\. Read that file, not the whole brand file\.$/);
+  assert.equal(fs.readFileSync(out, 'utf8'), `${bf.sliceText(ctx, 'facts', { now: at('2026-11-01') }).text}\n`);
+  // status names the same command, so the job can copy it.
+  assert.match(run(ctx, 'status', '--for', 'plan', '--today', '2026-11-01').text, /Take only your slice: node .*brand-file\.mjs slice facts --for plan --out .*facts\.md/);
   const r = run(ctx, 'migrate', '--today', '2026-11-01');
   assert.equal(r.code, 0); assert.doesNotMatch(r.text, /context\/facts\.md ->/);
   assert.deepEqual([read(ctx, 'facts.json'), read(ctx, 'offers.json')], before);

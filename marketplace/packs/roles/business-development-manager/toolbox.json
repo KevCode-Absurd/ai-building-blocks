@@ -1,0 +1,272 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "business-development-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "capability-statement",
+      "task": "Write a one-page capability statement",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/capability-statement-and-prequal-pack", "use": "build", "when": "When a firm needs one page on what it does, why choose it and past work, from its records" },
+        { "ref": "library:value-statement-writer", "type": "skill", "use": "explore", "when": "When the why-choose-us lines are flat, to see the value said several ways" },
+        { "ref": "library:capability-pitch-letter-writer", "type": "skill", "use": "explore", "when": "When the buyer prefers a letter, to try the same capability as a short pitch letter" },
+        { "ref": "kit:prompts/why-choose-us-proof-check", "use": "check", "when": "Before it goes out, to find every claim with no fact behind it and rewrite it" },
+        { "ref": "library:claim-and-proof-matcher", "type": "skill", "use": "check", "when": "When the firm has supplied evidence, to see which claims go further than it allows" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the page is laid out, to read it as a facilities buyer with two minutes to spare" }
+      ]
+    },
+    {
+      "id": "intro-emails",
+      "task": "Write an intro email sequence to target buyers",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/intro-email-sequence-to-facilities-buyers", "use": "build", "when": "When you want a short sequence to facilities, property or office managers" },
+        { "ref": "library:cold-email-writer", "type": "skill", "use": "build", "when": "When the buyer is another kind of business and you need emails, follow-ups and a send setup" },
+        { "ref": "library:account-based-outreach-drafter", "type": "skill", "use": "explore", "when": "When one account matters, to get an email, a call script and a message from real signals" },
+        { "ref": "library:stranger-first-message-writer", "type": "skill", "use": "explore", "when": "When the first line sounds like a pitch, to try an opener a stranger would answer" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the email is written and needs subject lines from several angles" },
+        { "ref": "library:cold-email-pre-send-checker", "type": "skill", "use": "check", "when": "Before sending, to test each claim, check the legal basics and tighten the email" },
+        { "ref": "library:cold-outreach-batch-runner", "type": "agent", "use": "build", "when": "When emails go out in batches and each batch should learn from the last one's replies" }
+      ]
+    },
+    {
+      "id": "account-briefs",
+      "task": "Write briefs and plans for target accounts",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/account-plan-and-meddicc", "use": "build", "when": "When a target account needs a brief and a plan from public pages and the client's notes" },
+        { "ref": "library:organization-dossier-researcher", "type": "skill", "use": "brief", "when": "When you know only the company name and need a sourced file on it" },
+        { "ref": "library:account-plan-builder", "type": "skill", "use": "build", "when": "When the account is known and needs goals, key people, risks and next steps written" },
+        { "ref": "library:prepare-an-enterprise-account-plan", "type": "workflow", "use": "build", "when": "When the account is large and buyer roles and deal risks need mapping in one run" },
+        { "ref": "library:deal-stakeholder-mapper", "type": "skill", "use": "check", "when": "When the plan names one contact, to map who else decides and who is missing" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the brief is used in outreach, to date and source each fact about the account" }
+      ]
+    },
+    {
+      "id": "prequal-pack",
+      "task": "Build a supplier pre-qualification pack and gap list",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/capability-statement-and-prequal-pack", "use": "build", "when": "When the firm needs its policies, insurances and references gathered into one pack" },
+        { "ref": "kit:prompts/prequal-gap-list", "use": "check", "when": "When a buyer has sent the list of documents a supplier must provide" },
+        { "ref": "library:rfp-response-builder", "type": "skill", "use": "build", "when": "When the buyer sent a questionnaire, to sort must-haves and draft the answers" },
+        { "ref": "library:uk-cyber-essentials-checker", "type": "skill", "use": "check", "when": "When a UK buyer asks for Cyber Essentials and the firm has not applied yet" }
+      ]
+    },
+    {
+      "id": "first-visit",
+      "task": "Prepare a first meeting or site walk",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/site-walk-and-first-visit", "use": "build", "when": "When a commercial buyer has agreed to meet and you need questions and what to measure" },
+        { "ref": "library:sales-call-question-planner", "type": "skill", "use": "build", "when": "When you need the order of questions from their situation to what a fix is worth" },
+        { "ref": "library:problem-cost-question-writer", "type": "prompt", "use": "build", "when": "When the buyer shrugs at the problem, to ask what it costs them each month" },
+        { "ref": "library:sales-call-prep-assistant", "type": "agent", "use": "brief", "when": "When there were earlier calls, to get a one-page plan built on the last notes" },
+        { "ref": "library:neil-rackham", "type": "mind", "use": "think", "when": "When the plan is a presentation and should be questions about their problem" }
+      ]
+    },
+    {
+      "id": "quote-scope",
+      "task": "Turn a site walk into a quote scope and proposal",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/site-walk-and-first-visit", "use": "build", "when": "When visit notes must become an accurate scope with what is in and out" },
+        { "ref": "library:quote-and-proposal-builder", "type": "skill", "use": "build", "when": "When you have call notes and photos and need a costed quote in the firm's template" },
+        { "ref": "library:turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature", "type": "workflow", "use": "build", "when": "When the proposal needs a margin check and a dated plan to signature" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the buyer could take a small start or a full contract, to price both shapes" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before it is sent, to read the quote as the buyer and list what they would have to ask" }
+      ]
+    },
+    {
+      "id": "meddicc-review",
+      "task": "Review a live deal with MEDDICC",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/meddicc-deal-review", "use": "check", "when": "When a deal has gone quiet or its close date keeps slipping" },
+        { "ref": "kit:skills/account-plan-and-meddicc", "use": "build", "when": "When the review must update the account plan with the gaps found" },
+        { "ref": "library:deal-health-reviewer", "type": "skill", "use": "check", "when": "When you want a health score, ranked risks and next actions for one deal" },
+        { "ref": "library:stalled-deal-indecision-checker", "type": "skill", "use": "check", "when": "When the buyer likes you but will not decide, to find the doubt behind the delay" },
+        { "ref": "library:stalled-deal-revival-desk", "type": "agent", "use": "build", "when": "When the deal is silent, to get a firm recommendation and the follow-up to send" },
+        { "ref": "library:matthew-dixon", "type": "mind", "use": "think", "when": "When the deal is stuck on fear of a wrong choice, not on preference for a rival" }
+      ]
+    },
+    {
+      "id": "target-list",
+      "task": "Build a target account list",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/new-commercial-accounts-campaign", "use": "brief", "when": "When the firm is moving to a new kind of customer and the list is step one" },
+        { "ref": "library:prospect-list-builder", "type": "skill", "use": "build", "when": "When you can describe the ideal customer and need accounts with a reason for each" },
+        { "ref": "library:clay", "type": "tool", "use": "build", "when": "When the list needs contacts and company details added from many sources" },
+        { "ref": "library:account-tier-ranker", "type": "skill", "use": "check", "when": "When the list is long, to score fit and activity and sort it into tiers" }
+      ]
+    },
+    {
+      "id": "accounts-campaign",
+      "task": "Plan a new commercial accounts campaign",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/new-commercial-accounts-campaign", "use": "build", "when": "When a firm decides to win a new kind of customer or the pipeline has run dry" },
+        { "ref": "library:outbound-sales-team-planner", "type": "skill", "use": "build", "when": "When outreach must become a repeatable weekly process with roles and a lead flow" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the budget could go to outreach or to partners, to see both plans with dates" },
+        { "ref": "library:plan-pre-mortem-runner", "type": "skill", "use": "check", "when": "Before the campaign starts, to name why it could fail in six months" }
+      ]
+    },
+    {
+      "id": "partnership-proposal",
+      "task": "Plan and write a partnership proposal",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/partnership-proposal", "use": "build", "when": "When the route is a referral partner, a joint bid, subcontracting or co-marketing" },
+        { "ref": "library:copilot-gtm-partnership-architecture", "type": "skill", "use": "brief", "when": "Before writing, to set partner types, incentives and how shared revenue is tested" },
+        { "ref": "library:partner-campaign-planner", "type": "skill", "use": "explore", "when": "When you have no partner in mind, to get several partner ideas and a joint plan" },
+        { "ref": "library:traction-business-development", "type": "skill", "use": "build", "when": "When the partnership should start as one small test with costs and decision rules" },
+        { "ref": "library:win-win-deal", "type": "workflow", "use": "build", "when": "When terms are open, to find what a win is for each side and write the agreement" },
+        { "ref": "library:partner-deal-evaluator", "type": "skill", "use": "check", "when": "When a partner has approached the firm, to get a sign or pass call and terms to ask for" }
+      ]
+    },
+    {
+      "id": "partner-intro",
+      "task": "Write a first approach to a potential partner",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/partner-intro-email", "use": "build", "when": "When a partner is picked and needs a short first email with a reason to reply" },
+        { "ref": "library:stranger-first-message-writer", "type": "skill", "use": "explore", "when": "When you have never met them, to try an opener built on what they care about" },
+        { "ref": "library:cold-email-pre-send-checker", "type": "skill", "use": "check", "when": "Before sending, to test each claim about the partner and tighten the email" },
+        { "ref": "library:robert-cialdini", "type": "mind", "use": "think", "when": "When the email asks for a favour and offers the partner nothing first" }
+      ]
+    },
+    {
+      "id": "approved-supplier-route",
+      "task": "Plan the route onto an approved supplier list",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/approved-supplier-list-and-partner-route", "use": "build", "when": "When a target buyer only buys from an approved list or a framework" },
+        { "ref": "kit:prompts/prequal-gap-list", "use": "check", "when": "When the list's entry rules are known and the firm's documents must be checked against them" },
+        { "ref": "library:grant-and-bid-response-writer", "type": "skill", "use": "brief", "when": "When you need to find open bids worth chasing and a go or no-go on each" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the firm could apply alone or under a partner, to compare both routes with dates" }
+      ]
+    },
+    {
+      "id": "bid-answers",
+      "task": "Answer a tender or RFP question set",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:rfp-response-builder", "type": "skill", "use": "brief", "when": "When the tender arrives, to sort requirements by must-have and score the fit" },
+        { "ref": "library:agency-sales-proposal-strategist", "type": "agent", "use": "explore", "when": "Before drafting, to choose win themes and a one-page summary to build around" },
+        { "ref": "library:sales-proposal-writer", "type": "skill", "use": "build", "when": "When the answers need value, price, timeline and proof for this buyer" },
+        { "ref": "kit:prompts/why-choose-us-proof-check", "use": "check", "when": "Before submission, to remove every bid claim that has no fact behind it" }
+      ]
+    },
+    {
+      "id": "calls-and-linkedin",
+      "task": "Plan cold calls and LinkedIn approaches",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:cold-call-script-writer", "type": "skill", "use": "build", "when": "When the buyer answers the phone and you need an opener, questions and brush-off replies" },
+        { "ref": "library:ten-second-opener-writer", "type": "skill", "use": "explore", "when": "When you want three short, honest opening questions to try on the first calls" },
+        { "ref": "library:linkedin-outreach-plan", "type": "skill", "use": "build", "when": "When the buyers are on LinkedIn and you need who to follow, notes and a plan" },
+        { "ref": "library:elevator-pitch-writer", "type": "skill", "use": "build", "when": "When asked what the firm does, to have 10, 30 and 60 second answers ready" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When you have two or three openers, to let a fresh reviewer pick one as the buyer" }
+      ]
+    },
+    {
+      "id": "negotiation",
+      "task": "Prepare a negotiation on price and terms",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:negotiation-prep-coach", "type": "skill", "use": "build", "when": "When terms are on the table and you need an opening, questions and a fallback" },
+        { "ref": "library:weak-position-negotiation", "type": "skill", "use": "build", "when": "When the buyer holds the power, to set your terms, their needs and the order to move" },
+        { "ref": "library:contract-and-term-sheet-reviewer", "type": "skill", "use": "check", "when": "When the buyer sends their contract, to flag risky terms before a lawyer sees it" },
+        { "ref": "library:chris-voss", "type": "mind", "use": "think", "when": "When the buyer says the price is too high and you are about to offer a discount" }
+      ]
+    },
+    {
+      "id": "objections-and-incumbents",
+      "task": "Answer objections and comparisons with the incumbent",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:live-objection-responder", "type": "skill", "use": "build", "when": "When the buyer has said something specific, to see what it means and how to reply" },
+        { "ref": "library:sales-battlecard-builder", "type": "skill", "use": "build", "when": "When one rival holds the contract, to prepare comparisons and reply scripts" },
+        { "ref": "kit:prompts/why-choose-us-proof-check", "use": "check", "when": "Before a comparison is sent, to check each point against a fact the firm can show" }
+      ]
+    },
+    {
+      "id": "after-meeting",
+      "task": "Follow up a meeting and keep the deal moving",
+      "kind": "email",
+      "items": [
+        { "ref": "library:call-follow-up-drafter", "type": "skill", "use": "build", "when": "When you have notes from the meeting and need a follow-up email and CRM updates" },
+        { "ref": "library:mutual-action-plan-builder", "type": "skill", "use": "build", "when": "When the buyer is keen, to share a dated plan of steps on both sides to signature" },
+        { "ref": "library:deal-notes-and-crm-updater", "type": "skill", "use": "build", "when": "When emails, calls and meetings must be written back to the deal record" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before the follow-up goes, to check it promises only what was agreed in the room" }
+      ]
+    },
+    {
+      "id": "past-work-proof",
+      "task": "Turn past work into case studies and proof",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:testimonial-request-writer", "type": "skill", "use": "build", "when": "When a happy client has never been asked, to send a short request with three questions" },
+        { "ref": "library:turn-a-customer-interview-into-a-case-outline", "type": "workflow", "use": "build", "when": "When you have one client interview and need a case outline and its evidence gaps" },
+        { "ref": "library:customer-one-pager-deck", "type": "skill", "use": "build", "when": "When account notes must become a leave-behind with no made-up numbers" },
+        { "ref": "kit:prompts/why-choose-us-proof-check", "use": "check", "when": "Before a case study is used, to check each result against the client's records" }
+      ]
+    },
+    {
+      "id": "pipeline-review",
+      "task": "Review the pipeline and forecast",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:weekly-sales-pipeline-reviewer", "type": "agent", "use": "build", "when": "Each week, to see what changed and which deals to act on today" },
+        { "ref": "library:pipeline-and-forecast-checker", "type": "skill", "use": "check", "when": "When you have deals and a target, to check cover and how accurate the forecast is" },
+        { "ref": "library:crm-hygiene-auditor", "type": "skill", "use": "check", "when": "When the numbers look off, to list missing fields, stale dates and wrong stages" }
+      ]
+    },
+    {
+      "id": "win-loss",
+      "task": "Find why deals are won and lost",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:deal-win-reason-finder", "type": "prompt", "use": "build", "when": "When you have notes on won and lost deals and want the real reason you win" },
+        { "ref": "library:win-and-loss-pattern-finder", "type": "skill", "use": "build", "when": "When closed deals sit in the CRM and you need loss stages and common objections" },
+        { "ref": "library:monthly-lost-deal-reviewer", "type": "agent", "use": "build", "when": "Each month, to turn last month's losses into a revised pitch" }
+      ]
+    },
+    {
+      "id": "event-follow-up",
+      "task": "Work a trade event and follow up the contacts",
+      "kind": "email",
+      "items": [
+        { "ref": "library:elevator-pitch-writer", "type": "skill", "use": "build", "when": "Before the event, to prepare short answers and an opening question" },
+        { "ref": "library:plan-an-event-follow-up-that-earns-a-reply", "type": "workflow", "use": "build", "when": "After the event, to group contacts by what each asked for and draft the follow-ups" },
+        { "ref": "library:cold-email-pre-send-checker", "type": "skill", "use": "check", "when": "Before the follow-ups go, to check each one refers to what was really said" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before any statement, bid or email leaves, to tie each fact to the firm's own records" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before anything goes to a buyer, to catch typos and a buyer's name spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "proposal-writer", "when": "When the opening turns into a full tender or a long written bid" },
+    { "role": "sdr", "when": "When outreach must run daily at volume, not as one sequence" },
+    { "role": "pricing-strategist", "when": "When the quote needs a pricing model for a recurring contract, not a single price" },
+    { "role": "compliance-specialist", "when": "When the pack lacks policies, certificates or insurance the buyer requires" },
+    { "role": "market-research-analyst", "when": "When the firm must first choose which sector or region to enter" },
+    { "role": "graphic-designer", "when": "When the capability statement needs a designed layout for print or PDF" }
+  ],
+  "gaps": [
+    "No library item writes a one-page capability statement; the nearest writes a pitch letter",
+    "No library item builds a pre-qualification pack or checks a firm against a buyer's document list",
+    "No library item covers supplier accreditation schemes such as SafeContractor, CHAS or Constructionline",
+    "No library item prepares a site walk question sheet or turns site measurements into a quote scope",
+    "No library item writes a teaming, joint bid or subcontract proposal to a larger prime",
+    "No library item runs a MEDDICC review as its main job",
+    "No library item prices a recurring service contract from hours, sites and margin",
+    "No library item plans how to displace an incumbent supplier, including the switch-over plan",
+    "No library item finds frameworks and approved lists for a small firm's trade and region",
+    "No library item offers clearly different capability statement layouts to compare"
+  ]
+}

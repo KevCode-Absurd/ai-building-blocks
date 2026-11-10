@@ -1,0 +1,285 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "market-research-analyst",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "market-sizing",
+      "task": "Size a market top-down and bottom-up",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/market-sizing", "use": "build", "when": "When a market needs sizing two ways with every number tagged given, sourced, derived or guessed" },
+        { "ref": "library:perplexity", "type": "tool", "use": "brief", "when": "When you need published totals and want each one with a source link you can open" },
+        { "ref": "library:size-a-market-and-separate-facts-from-guesses", "type": "workflow", "use": "build", "when": "When you want a guided bottom-up estimate with a range and every number labelled" },
+        { "ref": "library:market-size-estimator", "type": "skill", "use": "explore", "when": "When you want a second estimate built another way to compare against the first" },
+        { "ref": "library:market-boundary-checker", "type": "skill", "use": "check", "when": "When the total looks huge, to test whether the market is drawn too wide" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the estimate is shared, to give each input a dated source or mark it a guess" }
+      ]
+    },
+    {
+      "id": "competitor-comparison",
+      "task": "Compare 3 to 6 rivals on the same rows",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/competitor-research", "use": "build", "when": "When rivals must be compared on offer, price, buyer, proof, message and weak points" },
+        { "ref": "library:competitor-profile-writer", "type": "skill", "use": "brief", "when": "When you have rival links and need a first profile of each from their public pages" },
+        { "ref": "library:competitor-product-analyst", "type": "skill", "use": "build", "when": "When you hold facts on one rival and need them set against the client's product" },
+        { "ref": "library:rival-store-comparer", "type": "skill", "use": "build", "when": "When the rivals are online stores and channels, prices and messages need a side-by-side" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before delivery, to check each rival price and claim has a dated public source" }
+      ]
+    },
+    {
+      "id": "idea-risks-and-test",
+      "task": "Rank the risks in an idea and pick one cheap test",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/idea-validation-test", "use": "build", "when": "When an idea must be tested for whether anyone will pay before money is spent building" },
+        { "ref": "library:leap-of-faith-assumption-finder", "type": "skill", "use": "brief", "when": "Before choosing a test, to find the few guesses the idea stands on and rank them" },
+        { "ref": "library:pretotype-experiment-designer", "type": "skill", "use": "explore", "when": "When you want several cheap test types to compare, each with a pass mark" },
+        { "ref": "library:smallest-test-picker", "type": "skill", "use": "build", "when": "When the riskiest guess is known and you need the cheapest valid test and a fail line" },
+        { "ref": "library:idea-validation-analyst", "type": "agent", "use": "build", "when": "When the test will run over weeks and someone must read the result and call it" },
+        { "ref": "library:peter-thiel", "type": "mind", "use": "think", "when": "When the idea has no clear edge and the founder says the market is everyone" }
+      ]
+    },
+    {
+      "id": "demand-check",
+      "task": "Check demand from the evidence already in hand",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/idea-validation-test", "use": "build", "when": "When the client has sign-ups, quotes or pre-orders and asks if that is real demand" },
+        { "ref": "library:product-demand-researcher", "type": "skill", "use": "brief", "when": "When you need the pains, objections and buying signals people post, with links" },
+        { "ref": "library:startup-idea-tester", "type": "skill", "use": "build", "when": "When you want a quick score for real problem, who needs it badly and the cheapest check" },
+        { "ref": "library:say-do-gap-checker", "type": "skill", "use": "check", "when": "When the evidence is what people said, to weigh it against what they actually did" },
+        { "ref": "library:idea-market-test", "type": "workflow", "use": "check", "when": "When demand looks real, to test market size and staying power and get a go or stop call" }
+      ]
+    },
+    {
+      "id": "positioning-gaps",
+      "task": "Map the gaps rivals leave open",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:competitor-white-space-mapper", "type": "skill", "use": "build", "when": "When you know what buyers value and need a grid of where no rival is strong" },
+        { "ref": "library:positioning-grid-builder", "type": "skill", "use": "explore", "when": "When you want rivals plotted on two axes to find a corner the client can own" },
+        { "ref": "library:crowded-category-white-space-finder", "type": "skill", "use": "explore", "when": "When the category is crowded, to look for gaps in price, reach, taste or buyer" },
+        { "ref": "library:competitor-messaging-comparer", "type": "skill", "use": "build", "when": "When the gap may be in what rivals say, to compare messages from their public pages" },
+        { "ref": "library:jack-trout", "type": "mind", "use": "think", "when": "When the gap report lists ten openings and the client needs the one idea to own" }
+      ]
+    },
+    {
+      "id": "survey",
+      "task": "Design a short survey for one decision and analyse it",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/survey-design-and-analysis", "use": "build", "when": "When one decision needs a neutral survey, a sample plan and a read of the answers" },
+        { "ref": "library:market-size-and-survey-planner", "type": "skill", "use": "brief", "when": "Before writing questions, to set the sample size for each segment you want to compare" },
+        { "ref": "library:check-a-marketing-survey-before-sending-it", "type": "workflow", "use": "check", "when": "When the draft exists, to get a bias review, a shorter list and a pretest plan" },
+        { "ref": "library:prepare-a-survey-findings-briefing", "type": "workflow", "use": "build", "when": "When answers are in and you need a checked findings table with honest caveats" },
+        { "ref": "library:survey-answer-truth-checker", "type": "prompt", "use": "check", "when": "Before a result is reported, to score how far each question's answers can be trusted" }
+      ]
+    },
+    {
+      "id": "segment-map",
+      "task": "Map segments and pick the first one to win",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/segment-map-and-target-pick", "use": "build", "when": "When the product tries to please everyone and you need groups that buy differently" },
+        { "ref": "library:buyer-identity-segment-finder", "type": "skill", "use": "build", "when": "When you have reviews and survey answers, to group buyers by how they describe themselves" },
+        { "ref": "library:behaviour-group-finder", "type": "skill", "use": "build", "when": "When you have customer data, to find natural groups by what people actually do" },
+        { "ref": "library:ideal-customer-profiler", "type": "skill", "use": "build", "when": "When each segment needs a profile card built from survey or customer data" },
+        { "ref": "library:first-market-picker", "type": "skill", "use": "explore", "when": "When there are several possible first markets, to rank small ones and name one to own" },
+        { "ref": "library:beachhead-market-picker", "type": "skill", "use": "build", "when": "When one starting segment must be chosen with a path from there to the mainstream" }
+      ]
+    },
+    {
+      "id": "market-snapshot",
+      "task": "Write a short market snapshot for one idea",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:market-research-report-writer", "type": "skill", "use": "build", "when": "When the client needs a sourced report where sizing shows its assumptions" },
+        { "ref": "library:agency-product-trend-researcher", "type": "agent", "use": "build", "when": "When the idea rides a trend and you must judge if it is real and at what stage" },
+        { "ref": "library:category-and-trend-risk-checker", "type": "skill", "use": "check", "when": "Before the snapshot recommends entry, to score size, trend risk and fit" }
+      ]
+    },
+    {
+      "id": "interview-guide",
+      "task": "Write a customer interview guide that gets the truth",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/customer-interview-guide", "use": "build", "when": "Before talking to past or possible buyers, to ask what they did, not what they think" },
+        { "ref": "library:customer-interview-questions", "type": "skill", "use": "check", "when": "When draft questions exist, to fix the ones that pitch the idea or ask about the future" },
+        { "ref": "library:interview-fact-sorter", "type": "prompt", "use": "build", "when": "After each talk, to tell facts from praise and ideas and get the next question" },
+        { "ref": "library:customer-interview-program-keeper", "type": "agent", "use": "build", "when": "When interviews run in rounds and the patterns should build from round to round" }
+      ]
+    },
+    {
+      "id": "pricing-comparison",
+      "task": "Compare rival prices and draw the takeaways",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/competitor-research", "use": "build", "when": "When rival prices, packs and terms must be laid on the same rows from public material" },
+        { "ref": "library:agency-specialized-pricing-analyst", "type": "agent", "use": "build", "when": "When the comparison must end in a recommended price from costs, rivals and value" },
+        { "ref": "library:competitor-product-analyst", "type": "skill", "use": "build", "when": "When a price gap needs explaining by what each rival includes" }
+      ]
+    },
+    {
+      "id": "wtp-survey",
+      "task": "Run a willingness-to-pay survey and read the price range",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/survey-design-and-analysis", "use": "build", "when": "When the price questions need a sample, screening and consent wording around them" },
+        { "ref": "library:willingness-to-pay-survey", "type": "skill", "use": "build", "when": "When you need the price questions to send this week and a way to read a best price" },
+        { "ref": "library:pricing-model-designer", "type": "skill", "use": "build", "when": "When price survey data is in and you need price points and good, better, best tiers" },
+        { "ref": "library:survey-answer-truth-checker", "type": "prompt", "use": "check", "when": "Before quoting a range, to check the sample and questions can carry it" }
+      ]
+    },
+    {
+      "id": "price-test",
+      "task": "Plan a price test for a site or sales calls",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:price-test-planner", "type": "skill", "use": "build", "when": "When you have costs and sales data and need a price to try with three outcome cases" },
+        { "ref": "library:price-test-keeper", "type": "agent", "use": "build", "when": "When the test will run for weeks and needs reading and a next price set" },
+        { "ref": "library:price-rise-readiness-checker", "type": "prompt", "use": "check", "when": "When the test is a price rise, to score readiness from what buyers already say" }
+      ]
+    },
+    {
+      "id": "competitor-teardown",
+      "task": "Tear down one rival's funnel, ads and offer",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/competitor-research", "use": "build", "when": "When one rival needs a deep read of offer, proof, message and what customers say" },
+        { "ref": "library:competitor-funnel-review", "type": "skill", "use": "build", "when": "When you can subscribe and buy, to note how the rival follows up and upsells" },
+        { "ref": "library:competitor-ad-teardown-writer", "type": "skill", "use": "build", "when": "When their public ads and landing pages should be read, with proof kept apart from guesses" }
+      ]
+    },
+    {
+      "id": "competitor-watch",
+      "task": "Run the monthly market and competitor watch",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/monthly-market-and-competitor-watch", "use": "build", "when": "In the first week of each month, to log what changed and what it means" },
+        { "ref": "library:monthly-competitor-watcher", "type": "agent", "use": "build", "when": "When you have this month's rival ads and pages and need changes since last month" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the log is sent, to date and source each change it reports" }
+      ]
+    },
+    {
+      "id": "plan-stress-test",
+      "task": "Stress-test a business plan before money is committed",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:stress-test-a-business-plan-before-you-commit-money", "type": "workflow", "use": "build", "when": "When a full plan exists and needs the strongest case against it and a pre-mortem" },
+        { "ref": "library:assumption-stress-test", "type": "skill", "use": "check", "when": "When you have the plan's key bets, to find which break first and what to test" },
+        { "ref": "library:bad-year-plan-stress-tester", "type": "prompt", "use": "check", "when": "When the plan has a budget, to run three bad-year tests and find its breaking point" },
+        { "ref": "library:nassim-taleb", "type": "mind", "use": "think", "when": "When the plan looks fine on average and nobody has asked what could ruin it" }
+      ]
+    },
+    {
+      "id": "market-entry-sprint",
+      "task": "Run a market entry research sprint to a decision",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:workflows/market-entry-research-sprint", "use": "brief", "when": "When money rides on a new product, segment, country, site or price change" },
+        { "ref": "library:five-forces-industry-checker", "type": "skill", "use": "build", "when": "When you must judge where profit comes from in the industry before entering" },
+        { "ref": "library:size-up-an-industry-before-you-enter-it", "type": "workflow", "use": "build", "when": "When you want forces, a counter-position and a first market in one guided run" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When there are two ways in, to put both entry plans on a page with money and dates" },
+        { "ref": "library:narrative-decision-memo-writer", "type": "skill", "use": "build", "when": "When the sprint must end in a memo with the choice, risks and missing facts" },
+        { "ref": "library:michael-porter", "type": "mind", "use": "think", "when": "When the entry case rests on a growing market and ignores who holds the power in it" }
+      ]
+    },
+    {
+      "id": "location-scorecard",
+      "task": "Compare candidate locations with a weighted scorecard",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/location-scorecard", "use": "build", "when": "When choosing a site between a few options and you want a fair comparison you can adjust" },
+        { "ref": "library:second-location-check", "type": "skill", "use": "check", "when": "When the site is a second branch, to test whether the business runs without the owner" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the scores are close, to have a fresh reviewer pick one against the brief" }
+      ]
+    },
+    {
+      "id": "territory-plan",
+      "task": "Plan a service area or split sales territories",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/location-scorecard", "use": "build", "when": "When areas or territories must be compared on customers, travel and size" },
+        { "ref": "library:agency-data-consolidation-agent", "type": "agent", "use": "brief", "when": "Before the split, to turn messy sales rows into one report by territory and rep" }
+      ]
+    },
+    {
+      "id": "real-estate-pricing-case",
+      "task": "Turn comparable sales into a pricing case for a seller",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/comparable-sales-pricing-case", "use": "build", "when": "When an agent has sold data and needs a market analysis for a listing presentation" },
+        { "ref": "library:presentation-builder", "type": "skill", "use": "build", "when": "When the pricing case must become slides for the seller meeting" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before the meeting, to read the case as a seller who thinks the home is worth more" }
+      ]
+    },
+    {
+      "id": "export-country-pick",
+      "task": "Choose the next export country",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/export-market-scorecard", "use": "build", "when": "When there are three candidate countries and you want them compared on the same criteria" },
+        { "ref": "library:new-country-expansion-planner", "type": "skill", "use": "build", "when": "When you need a market pick, entry route, localisation list and rules to check" },
+        { "ref": "library:overseas-market-planner", "type": "skill", "use": "build", "when": "When the seller is an online store and shipping and tax costs drive the ranking" },
+        { "ref": "library:market-expansion-sequencer", "type": "skill", "use": "explore", "when": "When the question is the order of markets, to rank them nearest first with a move sign" },
+        { "ref": "library:landed-cost-calculator", "type": "skill", "use": "check", "when": "Before a country is picked, to check the margin after freight and duty" },
+        { "ref": "library:us-export-rules-checker", "type": "skill", "use": "check", "when": "When the goods ship from the US, to see if a licence or exception applies" }
+      ]
+    },
+    {
+      "id": "distributor-brief",
+      "task": "Write a distributor search brief and entry route options",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/export-market-scorecard", "use": "brief", "when": "When the country is picked and the brief must state why and on which criteria" },
+        { "ref": "library:new-country-expansion-planner", "type": "skill", "use": "build", "when": "When the choice is between a distributor, an agent and selling direct" }
+      ]
+    },
+    {
+      "id": "sources-and-facts",
+      "task": "Find and check sources for market facts",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:unsupported-claim-spotter", "type": "skill", "use": "check", "when": "When a draft is written, to list every claim that needs a source and the kind to find" },
+        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When figures came from the web, to check each against trusted sources with a confidence" },
+        { "ref": "library:agency-research-synthesist", "type": "agent", "use": "build", "when": "When you hold many reports that disagree and need what is well backed and what is disputed" }
+      ]
+    },
+    {
+      "id": "ethics-check",
+      "task": "Check a research plan for ethics and privacy",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/research-ethics-check", "use": "check", "when": "Before fieldwork on any survey, interview round, competitor review or smoke test" },
+        { "ref": "library:new-data-use-screener", "type": "skill", "use": "check", "when": "When the study collects personal data, to see if it needs a fuller privacy review" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before any report leaves, to give each number a dated source or mark it as a guess" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a report is shared, to catch typos and one segment or rival named two ways" }
+  ],
+  "helpers": [
+    { "role": "customer-insights-researcher", "when": "When the answer needs a full interview round, focus group or review mining of customers" },
+    { "role": "pricing-strategist", "when": "When research must become a price list, tiers and a rollout plan" },
+    { "role": "data-analyst", "when": "When survey or sales data needs statistics, weighting or joining across files" },
+    { "role": "product-marketing-manager", "when": "When the gap report must become positioning, messaging and a launch plan" },
+    { "role": "fractional-cfo", "when": "When the market case needs a financial model, payback and funding needs" },
+    { "role": "data-visualisation-specialist", "when": "When the findings need designed charts or a map, not tables" }
+  ],
+  "gaps": [
+    "No library item compares candidate sites on catchment, footfall, rent and rivals nearby",
+    "No library item plans a service area, balances sales territories or writes a map brief for a cartographer",
+    "No library item builds a comparative market analysis from comparable home sales",
+    "No library item writes a monthly neighbourhood market update or an area comparison sheet for buyers",
+    "No library item writes a distributor search brief, distributor questions or an export readiness checklist",
+    "No library item analyses Van Westendorp or Gabor-Granger answers into an acceptable price range",
+    "No library item ranks features or packages by value with MaxDiff or a simple conjoint",
+    "No library item checks a research plan for consent, privacy and fair competitor research before fieldwork",
+    "No library item writes segment profile cards or a needs-by-segment matrix as its main job",
+    "No library item pulls official statistics such as census or trade data with source notes for sizing",
+    "No library item keeps a competitor change log that covers prices, hiring and reviews, not only ads and pages"
+  ]
+}

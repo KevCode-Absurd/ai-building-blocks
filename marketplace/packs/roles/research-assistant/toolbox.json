@@ -1,0 +1,272 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "research-assistant",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "fact-check-draft",
+      "task": "Fact-check a draft claim by claim before it is published",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/pre-publication-fact-check", "use": "brief", "when": "When a draft with facts, numbers, rankings or quotes is ready to publish or send" },
+        { "ref": "kit:skills/claim-and-source-check", "use": "check", "when": "When each claim in an article, deck or report must be checked against its source" },
+        { "ref": "library:unsupported-claim-spotter", "type": "skill", "use": "brief", "when": "First, to list every claim that needs a source, ranked by risk" },
+        { "ref": "library:fact-vs-opinion-sorter", "type": "prompt", "use": "brief", "when": "When the draft persuades, to sort each line into fact, inference or opinion" },
+        { "ref": "library:fact-cross-checker", "type": "skill", "use": "check", "when": "When one claim matters a lot, to build an evidence table with conflicts and gaps" },
+        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When the writer gave no sources, to check each claim against trusted ones" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "When the writer gave sources, to tie each fact to one or mark it for rewrite or cut" }
+      ]
+    },
+    {
+      "id": "literature-review",
+      "task": "Write a literature review on one question",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/evidence-review-sprint", "use": "brief", "when": "When a decision waits on what the studies say and the review needs a plan" },
+        { "ref": "kit:skills/literature-search-and-review", "use": "build", "when": "When one question must be answered from a body of studies" },
+        { "ref": "library:scholarly-database-searcher", "type": "skill", "use": "brief", "when": "When the papers are not yet in hand and must be found in free databases" },
+        { "ref": "library:literature-reviewer", "type": "skill", "use": "build", "when": "When you need sources chosen by clear rules and their findings pulled together" },
+        { "ref": "library:systematic-review-writer", "type": "skill", "use": "build", "when": "When the client needs a search others can repeat, with screening shown step by step" },
+        { "ref": "library:research-literature-comparison", "type": "skill", "use": "check", "when": "When the review is drafted, to map shared findings, conflicts and open questions" },
+        { "ref": "library:charles-darwin", "type": "mind", "use": "think", "when": "When the review is tidy because the studies that do not fit were left out" }
+      ]
+    },
+    {
+      "id": "paper-summary",
+      "task": "Summarise one paper in plain words with its limits",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/paper-summary-and-evidence-strength", "use": "build", "when": "When a business reader needs the question, method, findings and strength of one paper" },
+        { "ref": "library:pdf-converter", "type": "skill", "use": "brief", "when": "When the paper is a PDF with tables that must be read exactly" },
+        { "ref": "library:research-paper-summarizer", "type": "skill", "use": "build", "when": "When you want key findings and plain summaries for several papers at once" },
+        { "ref": "library:technical-topic-explainer", "type": "skill", "use": "build", "when": "When one concept blocks the reader and needs an everyday analogy with its limits" },
+        { "ref": "library:study-claim-checker", "type": "skill", "use": "check", "when": "Before the summary goes out, to grade the study's design, bias and statistics" },
+        { "ref": "library:richard-feynman", "type": "mind", "use": "think", "when": "When the summary repeats the paper's jargon and you could not explain it to a friend" }
+      ]
+    },
+    {
+      "id": "cited-answer",
+      "task": "Write a short cited answer to one question",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/cited-answer-from-sources", "use": "build", "when": "When there is one question and a set of sources or web search to answer it from" },
+        { "ref": "library:perplexity", "type": "tool", "use": "brief", "when": "When you need a first pass on the web with source links you can open and check" },
+        { "ref": "library:source-based-researcher", "type": "skill", "use": "build", "when": "When the answer must come from primary sources and be saved with them" },
+        { "ref": "library:public-database-fact-finder", "type": "skill", "use": "build", "when": "When the fact sits in a public database and must be pulled the same way each time" },
+        { "ref": "library:cited-research-assistant", "type": "agent", "use": "check", "when": "When every claim must carry a source or be marked unsourced after repeated checks" }
+      ]
+    },
+    {
+      "id": "evidence-table",
+      "task": "Build an evidence table from a set of sources",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/evidence-table", "use": "build", "when": "When several papers or reports must sit side by side with the same fields" },
+        { "ref": "library:paper-claim-evidence-finder", "type": "skill", "use": "build", "when": "When each row needs the claim, the numbers and the limits taken from the full paper" },
+        { "ref": "library:manuscript-evidence-gatherer", "type": "skill", "use": "brief", "when": "When the table needs more sources, to gather current and competing findings on the topic" }
+      ]
+    },
+    {
+      "id": "study-check",
+      "task": "Check the strengths and limits of one study",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/paper-summary-and-evidence-strength", "use": "build", "when": "When a writer or marketer wants to use a study and asks how strong it is" },
+        { "ref": "library:study-headline-claim-checker", "type": "prompt", "use": "check", "when": "When all you have is a news item, to see what the study behind it really shows" },
+        { "ref": "library:review-a-paper-and-write-a-fair-peer-review", "type": "workflow", "use": "build", "when": "When the full paper is in hand and needs a claim check and a methods review" },
+        { "ref": "library:agency-academic-statistician", "type": "agent", "use": "check", "when": "When the result rests on a test or a small sample you are unsure how to read" },
+        { "ref": "library:carl-bergstrom", "type": "mind", "use": "think", "when": "When an impressive number may come from who was selected or how the chart is scaled" },
+        { "ref": "library:david-spiegelhalter", "type": "mind", "use": "think", "when": "When a relative risk needs putting into numbers people can picture" }
+      ]
+    },
+    {
+      "id": "conflicting-findings",
+      "task": "Explain why sources disagree and which to trust",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/conflicting-findings-explainer", "use": "build", "when": "When two reports give different answers or numbers on the same question" },
+        { "ref": "library:compare-conflicting-research-findings", "type": "workflow", "use": "build", "when": "When the sources are full papers and you need a claims table and a disagreement map" },
+        { "ref": "library:research-contradiction-review-assistant", "type": "agent", "use": "build", "when": "When the same set of papers will be compared again as new ones arrive" },
+        { "ref": "library:agency-research-synthesist", "type": "agent", "use": "build", "when": "When the pile is mixed articles and reports and you need what is backed and what is disputed" }
+      ]
+    },
+    {
+      "id": "cited-report",
+      "task": "Research a question and write a cited report",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:research-question-outliner", "type": "prompt", "use": "brief", "when": "Before searching, to split the question into sub-questions and sources to find" },
+        { "ref": "library:research-a-question-and-write-a-cited-report", "type": "workflow", "use": "build", "when": "When you want one guided run from outline to sources to a checked report" },
+        { "ref": "library:cited-research-report-writer", "type": "skill", "use": "build", "when": "When each claim in the report must be checked against the exact source quote" },
+        { "ref": "library:recent-topic-pulse-researcher", "type": "skill", "use": "build", "when": "When the topic is recent and the evidence is what people are saying this month" },
+        { "ref": "kit:skills/claim-and-source-check", "use": "check", "when": "When the report is drafted, to check it claim by claim as you would anyone's draft" }
+      ]
+    },
+    {
+      "id": "citation-check",
+      "task": "Check and format a reference list",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/citation-and-reference-check", "use": "check", "when": "When every citation must be real, correct and say what the text claims" },
+        { "ref": "library:check-manuscript-reference-consistency", "type": "workflow", "use": "check", "when": "When in-text citations must match the reference list and the cited papers" },
+        { "ref": "library:bibliography-revision-review-assistant", "type": "agent", "use": "check", "when": "When the list is revised more than once and mismatches and duplicates keep returning" },
+        { "ref": "library:zotero-library-manager", "type": "skill", "use": "build", "when": "When the references live in Zotero and need tidying or export as citations" }
+      ]
+    },
+    {
+      "id": "claims-against-evidence",
+      "task": "Check health, product or ad claims against the evidence",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/claim-and-source-check", "use": "check", "when": "When a product page or deck makes claims that must each trace to a source" },
+        { "ref": "library:agency-healthcare-clinical-evidence-agent", "type": "agent", "use": "check", "when": "When the claims are about health, to sort each as validated, directional or unsupported" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When ad or page copy needs each claim marked fine, needs proof or cut" },
+        { "ref": "library:claim-and-proof-matcher", "type": "skill", "use": "check", "when": "When the client has supplied evidence, to see which claims go further than it allows" },
+        { "ref": "library:persuasive-claim-truth-checker", "type": "skill", "use": "check", "when": "When the piece is a pitch or post and the missing context matters as much as the facts" }
+      ]
+    },
+    {
+      "id": "source-quality",
+      "task": "Review the quality of a set of sources",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/claim-and-source-check", "use": "check", "when": "When you must say which sources can carry a claim and which cannot" },
+        { "ref": "library:organization-dossier-researcher", "type": "skill", "use": "brief", "when": "When you do not know who is behind a source, to research the publisher or author" },
+        { "ref": "library:fact-vs-opinion-sorter", "type": "prompt", "use": "check", "when": "When a source mixes reporting with argument, to separate what it shows from what it urges" },
+        { "ref": "library:carl-sagan", "type": "mind", "use": "think", "when": "When a source is persuasive and you have not yet asked how it could be wrong" }
+      ]
+    },
+    {
+      "id": "reading-notes",
+      "task": "Write reading notes or an annotated source list",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:source-note-summariser", "type": "prompt", "use": "build", "when": "For each source, to get its claims, evidence, gaps and the lines worth keeping" },
+        { "ref": "library:research-paper-reading-guide", "type": "skill", "use": "brief", "when": "When a paper is dense, to find its main idea and the sections to read closely" },
+        { "ref": "library:turn-saved-reading-into-notes-you-can-use", "type": "workflow", "use": "build", "when": "When a folder of saved reading must become linked notes and a sourced answer" },
+        { "ref": "kit:prompts/evidence-table", "use": "build", "when": "When the notes should end as one table the client can scan" }
+      ]
+    },
+    {
+      "id": "journal-club",
+      "task": "Prepare a journal club or team briefing on one paper",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/journal-club-briefing", "use": "build", "when": "When one paper must be explained to a team or board in 10 to 20 minutes" },
+        { "ref": "library:notebooklm", "type": "tool", "use": "brief", "when": "When you want to question the paper and your notes before writing the briefing" },
+        { "ref": "library:prepare-a-source-checked-research-talk", "type": "workflow", "use": "build", "when": "When slides and speaker notes must show figures that trace to the paper's tables" },
+        { "ref": "library:conference-talk-slide-maker", "type": "skill", "use": "build", "when": "When the briefing is a formal talk and needs slides, notes and a script" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before the session, to read the briefing as the team would and list what they must ask" }
+      ]
+    },
+    {
+      "id": "retraction-watch",
+      "task": "Run the monthly source and retraction watch",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/monthly-source-and-retraction-watch", "use": "build", "when": "Monthly, for a client whose published content cites studies, statistics or reports" },
+        { "ref": "library:research-topic-watcher", "type": "agent", "use": "build", "when": "When a topic should be watched for new papers that change what the content says" },
+        { "ref": "kit:skills/citation-and-reference-check", "use": "check", "when": "When a cited source has moved, changed or been withdrawn and the reference must be fixed" }
+      ]
+    },
+    {
+      "id": "cultural-brief",
+      "task": "Write a cultural brief for a new market or community",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/cultural-brief-from-notes", "use": "build", "when": "When the client will serve a community new to them and has notes and sources" },
+        { "ref": "library:community-needs-research-planner", "type": "skill", "use": "brief", "when": "When the notes are thin, to plan what to learn and map who already serves the community" },
+        { "ref": "library:agency-specialized-cultural-intelligence-strategist", "type": "agent", "use": "check", "when": "When the offer is drafted, to review cultural fit and who it may shut out" },
+        { "ref": "library:hidden-assumption-auditor", "type": "skill", "use": "check", "when": "When the offer was built for another market, to surface the assumptions baked into it" }
+      ]
+    },
+    {
+      "id": "field-study",
+      "task": "Plan a small field study and review field notes",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:interview-and-research-planner", "type": "skill", "use": "build", "when": "When you need who to meet, a guide and how the notes will be read afterwards" },
+        { "ref": "library:research-theme-synthesizer", "type": "skill", "use": "build", "when": "When field notes are in, to rank themes by how often they come up, with quotes" },
+        { "ref": "library:hidden-belief-mapper", "type": "skill", "use": "check", "when": "When the notes describe behaviour, to map the beliefs behind it and test each on evidence" },
+        { "ref": "kit:prompts/cultural-brief-from-notes", "use": "build", "when": "When the reviewed notes must become a brief the client can act on" }
+      ]
+    },
+    {
+      "id": "business-history",
+      "task": "Research the history of a business, trade or place",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/history-timeline-from-documents", "use": "build", "when": "When old invoices, letters and photos must become a checked history" },
+        { "ref": "library:scanned-pdf-text-reader", "type": "skill", "use": "brief", "when": "When the documents are scans and the text must be read with page positions" },
+        { "ref": "library:extract-a-scanned-document-and-verify-key-facts", "type": "workflow", "use": "check", "when": "When names, dates and sums from a scan must be checked against the page" },
+        { "ref": "library:brand-origin-story-writer", "type": "skill", "use": "build", "when": "When the checked timeline should become a heritage story or an about page" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the story is published, to mark each family legend that has no document behind it" }
+      ]
+    },
+    {
+      "id": "industry-background",
+      "task": "Write a short background on an industry or craft",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:research-outline-builder", "type": "skill", "use": "brief", "when": "Before writing, to list what to cover and the questions to answer for each part" },
+        { "ref": "library:sector-landscape-report-writer", "type": "skill", "use": "build", "when": "When the background must cover size, main players and how the trade is changing" },
+        { "ref": "kit:prompts/cited-answer-from-sources", "use": "build", "when": "When the client wants one page with every statement tied to a source" }
+      ]
+    },
+    {
+      "id": "research-plan",
+      "task": "Write a research plan for one question",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/evidence-review-sprint", "use": "build", "when": "When the plan is a time-boxed review with a decision at the end" },
+        { "ref": "library:research-question-outliner", "type": "prompt", "use": "brief", "when": "When the question is broad and needs sub-questions and what a good answer looks like" },
+        { "ref": "library:research-hypothesis-builder", "type": "skill", "use": "build", "when": "When the client has an observation, to turn it into testable guesses and rival explanations" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When time is short, to compare a quick scan and a fuller review with cost and dates" }
+      ]
+    },
+    {
+      "id": "share-findings",
+      "task": "Turn findings into a summary and slide text",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:make-a-research-report-easier-to-share", "type": "workflow", "use": "build", "when": "When a finished report needs a summary, a slide brief and a fact-check list" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When the reader has one page of time and needs the answer first" },
+        { "ref": "library:data-jargon-translator", "type": "skill", "use": "check", "when": "When the findings use research terms the named reader will not know" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before it is sent, to check nothing in the short version says more than the report does" }
+      ]
+    },
+    {
+      "id": "records-lookup",
+      "task": "Look up a fact in a public database or patent record",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:public-database-fact-finder", "type": "skill", "use": "build", "when": "When you know the database and need the figure with its source and date" },
+        { "ref": "library:patent-prior-art-searcher", "type": "skill", "use": "build", "when": "When the question is whether an idea is already patented or who holds patents in a field" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before any answer or report leaves, to tie each fact to a dated source or cut it" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before delivery, to catch typos, misspelt author names and one term used two ways" }
+  ],
+  "helpers": [
+    { "role": "editor", "when": "When the checked draft needs rewriting for flow and style, not only for facts" },
+    { "role": "market-research-analyst", "when": "When the question is market size, rivals or demand, not what studies say" },
+    { "role": "customer-insights-researcher", "when": "When the answer needs new interviews or surveys, not desk research" },
+    { "role": "data-analyst", "when": "When the sources include raw data that must be analysed, not only read" },
+    { "role": "presentation-designer", "when": "When the briefing needs designed slides, not slide text and notes" },
+    { "role": "translator", "when": "When key sources are in a language the client cannot read" }
+  ],
+  "gaps": [
+    "No library item checks whether a cited paper has been retracted, corrected or superseded",
+    "No library item grades a source on publisher, method, date and conflicts of interest",
+    "No library item formats a reference list in a named style such as APA, Harvard or Vancouver",
+    "No library item writes an annotated bibliography as its main job",
+    "No library item checks a quote and its attribution against the original",
+    "No library item writes a cultural brief for a community or plans an ethnographic field study",
+    "No library item builds a business or local history timeline from old documents or tests a family legend",
+    "No library item offers two or three ways to structure a journal club briefing to compare",
+    "No mind in the library is built on a historian or an anthropologist",
+    "No tool guide covers academic search tools such as Elicit, Consensus or Scite"
+  ]
+}

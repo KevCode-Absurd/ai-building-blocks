@@ -1,0 +1,290 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "channel-sales-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "wholesale-pitch",
+      "task": "Write a wholesale pitch email to shops and distributors",
+      "kind": "email",
+      "items": [
+        { "ref": "library:retail-buyer-approach-planner", "type": "skill", "use": "brief", "when": "Before writing, to plan how to reach this retailer's buyer and what keeps the shelf" },
+        { "ref": "kit:skills/wholesale-terms-and-line-sheet", "use": "build", "when": "When the pitch must carry the terms and line sheet a shop needs to say yes" },
+        { "ref": "library:cold-email-writer", "type": "skill", "use": "build", "when": "When you need the first email, the follow-ups and a sending setup" },
+        { "ref": "library:stranger-first-message-writer", "type": "skill", "use": "explore", "when": "When the opener reads like a pitch, to try one a busy shop owner would answer" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the email is written and needs subject lines from several angles" },
+        { "ref": "library:free-sample-offer-planner", "type": "skill", "use": "build", "when": "When samples would help, to set who gets one, how to claim it and what it costs" },
+        { "ref": "library:cold-email-pre-send-checker", "type": "skill", "use": "check", "when": "Before sending, to test each claim, check the legal basics and tighten the email" }
+      ]
+    },
+    {
+      "id": "line-sheet",
+      "task": "Write a line sheet a busy buyer can read in a minute",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/wholesale-terms-and-line-sheet", "use": "build", "when": "When products, wholesale prices, pack sizes and lead times must fit one clear sheet" },
+        { "ref": "library:product-margin-checker", "type": "skill", "use": "brief", "when": "Before listing prices, to check which products earn enough to offer at wholesale" },
+        { "ref": "library:process-fact-finder", "type": "skill", "use": "build", "when": "When each product needs one true fact a shop can repeat to its customers" },
+        { "ref": "kit:prompts/resale-price-wording-check", "use": "check", "when": "Before the sheet is sent, to catch wording that tells shops what they must charge" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the sheet goes out, to check each item is in stock at the price on the order page" }
+      ]
+    },
+    {
+      "id": "wholesale-terms",
+      "task": "Write a plain wholesale terms summary",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/wholesale-terms-and-line-sheet", "use": "build", "when": "When minimum order, payment, shipping, returns and lead times must fit one page" },
+        { "ref": "library:landed-cost-calculator", "type": "skill", "use": "brief", "when": "Before setting prices, to know the true cost per sellable unit" },
+        { "ref": "library:wholesale-margin-checker", "type": "skill", "use": "check", "when": "When terms are drafted, to check margin per unit after the retailer's cut and freight" },
+        { "ref": "library:discount-policy-designer", "type": "skill", "use": "build", "when": "When volume breaks and exceptions need a matrix and approval limits" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before it is sent, to read the page as a shop owner and list what they would still ask" }
+      ]
+    },
+    {
+      "id": "reorder-messages",
+      "task": "Group buyers and send reorder messages",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/reorder-and-account-plan", "use": "build", "when": "When order history must be grouped into new, active, slowing and lapsed buyers" },
+        { "ref": "library:reorder-and-second-order-planner", "type": "skill", "use": "build", "when": "When you know how long stock lasts and need reorder messages with timing" },
+        { "ref": "library:send-reorder-emails-that-fit-each-buyer-then-read-results", "type": "workflow", "use": "build", "when": "When you want the emails split by buyer type and a read of results afterwards" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When reorder emails go unopened, to try subject lines from several angles" },
+        { "ref": "library:monthly-repeat-buyer-keeper", "type": "agent", "use": "check", "when": "Each month, to score repeat health from the order export and name one stage to fix" }
+      ]
+    },
+    {
+      "id": "partner-programme-design",
+      "task": "Design a referral or reseller partner programme",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:workflows/partner-programme-launch", "use": "brief", "when": "When the client wants to start or rebuild a referral, reseller or distributor programme" },
+        { "ref": "kit:skills/partner-programme-design", "use": "build", "when": "When partner types, the deal for each and the rules must come from the real margin" },
+        { "ref": "library:copilot-gtm-partnership-architecture", "type": "skill", "use": "brief", "when": "Before the design, to set out partner types, incentives and how shared revenue is tested" },
+        { "ref": "library:referral-program-designer", "type": "skill", "use": "build", "when": "When the programme is referral or affiliate and needs rewards, a flow and a launch plan" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When referral and reseller are both possible, to see each with money and dates" },
+        { "ref": "library:partner-profit-tester", "type": "skill", "use": "check", "when": "Before terms are fixed, to see what the partner keeps at forecast and at weaker sales" },
+        { "ref": "library:charlie-munger", "type": "mind", "use": "think", "when": "When the reward pays for sign-ups and the business needs customers who stay" }
+      ]
+    },
+    {
+      "id": "recruitment-pitch",
+      "task": "Write a pitch to recruit partners",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/partner-recruitment-pitch", "use": "build", "when": "When the deal is worked out and one type of partner needs an invitation" },
+        { "ref": "library:partner-campaign-planner", "type": "skill", "use": "explore", "when": "When you are unsure which partners to invite, to get several ideas with a pitch for each" },
+        { "ref": "library:stranger-first-message-writer", "type": "skill", "use": "explore", "when": "When you have never met them, to try an opener built on what they gain" },
+        { "ref": "library:cold-email-pre-send-checker", "type": "skill", "use": "check", "when": "Before sending, to test every earnings claim and tighten the email" },
+        { "ref": "library:robert-cialdini", "type": "mind", "use": "think", "when": "When the pitch lists your benefits and gives the partner no proof others have earned" }
+      ]
+    },
+    {
+      "id": "stockist-welcome-pack",
+      "task": "Write a stockist welcome pack",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/stockist-welcome-pack", "use": "build", "when": "When a shop has placed its first order and should sell through and reorder" },
+        { "ref": "library:customer-onboarding-planner", "type": "skill", "use": "brief", "when": "When the first 30 days need steps, milestones and who contacts the shop when" },
+        { "ref": "library:faq-page-from-questions-writer", "type": "prompt", "use": "build", "when": "When shops keep asking the same things, to turn real questions into the pack's FAQ" },
+        { "ref": "kit:prompts/resale-price-wording-check", "use": "check", "when": "Before the pack goes out, to check any line about shelf prices or promotions" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the pack is drafted, to read it as shop staff who have never seen the product" }
+      ]
+    },
+    {
+      "id": "launch-pack",
+      "task": "Write the partner programme launch pack",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/partner-launch-pack", "use": "build", "when": "When the programme is approved and needs the announcement, how-to-join page and FAQ" },
+        { "ref": "library:prepare-a-partner-launch-announcement-pack", "type": "workflow", "use": "build", "when": "When the launch is shared with a partner and each audience needs its own draft" },
+        { "ref": "library:hard-questions-faq-writer", "type": "skill", "use": "build", "when": "When the FAQ must answer the awkward questions partners and staff will ask" },
+        { "ref": "library:product-launch-planner", "type": "skill", "use": "brief", "when": "When the launch needs timing and channels as well as the copy" },
+        { "ref": "kit:prompts/resale-price-wording-check", "use": "check", "when": "Before the page goes live, to check the programme rules do not fix resale prices" }
+      ]
+    },
+    {
+      "id": "onboarding-and-scorecard",
+      "task": "Onboard partners and score their performance",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/partner-onboarding-and-scorecard", "use": "build", "when": "When new partners need a first-30-day plan and the programme needs a fair scorecard" },
+        { "ref": "library:sales-battlecard-builder", "type": "skill", "use": "build", "when": "When partners must sell against a rival and need comparisons and reply scripts" },
+        { "ref": "library:sales-collateral-writer", "type": "skill", "use": "build", "when": "When partners need a one-pager, an objection sheet or a demo script to use" },
+        { "ref": "library:incentive-checker", "type": "skill", "use": "check", "when": "When the scorecard is drafted, to see what it rewards and where it pulls the wrong way" }
+      ]
+    },
+    {
+      "id": "win-back",
+      "task": "Win back lapsed wholesale buyers",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/reorder-and-account-plan", "use": "brief", "when": "When you must find who has gone quiet by each buyer's own gap between orders" },
+        { "ref": "library:win-back-flow-builder", "type": "skill", "use": "build", "when": "When you know the order gaps and the discount room and need the messages" },
+        { "ref": "library:win-back-lapsed-buyers-and-clean-out-the-rest", "type": "workflow", "use": "build", "when": "When the whole order history needs sorting into who to win back and who to drop" },
+        { "ref": "library:discount-and-price-change-checker", "type": "agent", "use": "check", "when": "Before a win-back offer goes out, to check the deepest discount the margin allows" }
+      ]
+    },
+    {
+      "id": "account-plans",
+      "task": "Write account plans for the biggest buyers",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/reorder-and-account-plan", "use": "build", "when": "When a key buyer needs a plan from its order history and what it has not yet stocked" },
+        { "ref": "library:account-plan-builder", "type": "skill", "use": "build", "when": "When the plan needs goals, key people, risks and next steps written out" },
+        { "ref": "library:qbr-prep-brief-writer", "type": "skill", "use": "build", "when": "Before a review meeting, to get a health read, value delivered and an agenda" },
+        { "ref": "library:customer-concentration-risk", "type": "skill", "use": "check", "when": "When one buyer is a large share of sales, to set limits and a plan if they leave" }
+      ]
+    },
+    {
+      "id": "partner-deal-summary",
+      "task": "Write a one-page partner deal summary for the lawyer",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/partner-deal-summary", "use": "build", "when": "When the commercial deal is agreed and must be written plainly for a lawyer" },
+        { "ref": "library:partner-deal-setup", "type": "workflow", "use": "build", "when": "When the deal is not yet settled and needs the partner's profit sum and fair terms" },
+        { "ref": "library:partner-deal-terms-writer", "type": "skill", "use": "build", "when": "When you have the offer and the partner's numbers and need a one-page term sheet" },
+        { "ref": "library:contract-and-term-sheet-reviewer", "type": "skill", "use": "check", "when": "When the partner sends their own contract, to flag risky terms before the lawyer" }
+      ]
+    },
+    {
+      "id": "deal-registration-conflict",
+      "task": "Settle a deal registration conflict",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/deal-registration-conflict", "use": "build", "when": "When two partners, or a partner and your own team, claim the same customer" },
+        { "ref": "library:win-win-deal", "type": "workflow", "use": "explore", "when": "When the rules do not settle it, to look for a split both sides can accept" },
+        { "ref": "library:hard-no-planner", "type": "skill", "use": "build", "when": "When one side must be told no, to say it with the real reason and keep the trust" }
+      ]
+    },
+    {
+      "id": "resale-price-wording",
+      "task": "Check wording that touches resale prices",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/resale-price-wording-check", "use": "check", "when": "Before any line sheet, terms page, partner email or fund rule is sent" },
+        { "ref": "library:marketing-plan-law-checker", "type": "skill", "use": "check", "when": "When a whole partner marketing plan needs reading for rules it may break" },
+        { "ref": "library:quick-legal-sanity-checker", "type": "skill", "use": "check", "when": "When one line is in doubt, to get fine, needs a look or hold with a reason" }
+      ]
+    },
+    {
+      "id": "monthly-channel-review",
+      "task": "Run the monthly channel review",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/monthly-channel-review", "use": "build", "when": "In the first week of each month, for reorders, partner activity and payouts" },
+        { "ref": "kit:skills/partner-onboarding-and-scorecard", "use": "check", "when": "When each partner's sales and active status must be scored against the programme rules" },
+        { "ref": "library:recurring-kpi-report-maker", "type": "skill", "use": "build", "when": "When the same channel numbers must be pulled and reported each month" },
+        { "ref": "library:program-keep-or-cut-reviewer", "type": "skill", "use": "check", "when": "Each quarter, to mark each partner type or programme keep, cut or double down" }
+      ]
+    },
+    {
+      "id": "channel-mix",
+      "task": "Decide which channels and partner types to use",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/partner-programme-design", "use": "brief", "when": "When the choice of partner type depends on the margin each one leaves" },
+        { "ref": "library:channel-cost-and-roi-comparer", "type": "skill", "use": "build", "when": "When you have direct and partner sales costs and need cost to serve and return by channel" },
+        { "ref": "library:direct-selling-model-check", "type": "skill", "use": "check", "when": "When the client wonders if selling direct would beat wholesale on their margins" }
+      ]
+    },
+    {
+      "id": "stockist-target-list",
+      "task": "Build a list of shops and distributors to approach",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:prospect-list-builder", "type": "skill", "use": "build", "when": "When you can describe the ideal stockist and need accounts with a reason for each" },
+        { "ref": "library:clay", "type": "tool", "use": "build", "when": "When the list needs buyer names and contact details added from many sources" },
+        { "ref": "library:account-tier-ranker", "type": "skill", "use": "check", "when": "When the list is long, to score fit and sort it into tiers to approach first" }
+      ]
+    },
+    {
+      "id": "retail-buyer-meeting",
+      "task": "Prepare a pitch meeting with a retail buyer",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:retail-buyer-approach-planner", "type": "skill", "use": "build", "when": "When a retailer's buyer has agreed to meet and you need the case for the shelf" },
+        { "ref": "library:customer-one-pager-deck", "type": "skill", "use": "build", "when": "When the buyer needs a leave-behind with no made-up numbers" },
+        { "ref": "library:weak-position-negotiation", "type": "skill", "use": "build", "when": "When the retailer holds the power, to set your terms and the order to move in" },
+        { "ref": "library:wholesale-margin-checker", "type": "skill", "use": "check", "when": "Before agreeing promotions or listing fees, to see the margin left per unit" },
+        { "ref": "library:sam-walton", "type": "mind", "use": "think", "when": "When the pitch is about your brand and should be about what the shop sells per shelf" },
+        { "ref": "library:chris-voss", "type": "mind", "use": "think", "when": "When the buyer asks for a deeper discount and you need calm questions, not a concession" }
+      ]
+    },
+    {
+      "id": "evaluate-partner",
+      "task": "Evaluate a partner or distributor who approached you",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:partner-deal-evaluator", "type": "skill", "use": "check", "when": "When a partner proposes a deal, to get a sign or pass call and terms to ask for" },
+        { "ref": "library:long-term-partner-screener", "type": "skill", "use": "check", "when": "Before signing, to check the people for ability, energy and honesty" },
+        { "ref": "library:partner-profit-tester", "type": "skill", "use": "check", "when": "When their numbers look generous, to test what each side keeps if sales fall short" }
+      ]
+    },
+    {
+      "id": "joint-campaign",
+      "task": "Plan a joint campaign with a partner",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:partner-campaign-planner", "type": "skill", "use": "build", "when": "When a partner is on board and you need a joint plan and what each side does" },
+        { "ref": "library:event-marketing-planner", "type": "skill", "use": "build", "when": "When the campaign is a shared event and seats, follow-up and leads must be planned" },
+        { "ref": "kit:prompts/resale-price-wording-check", "use": "check", "when": "When a marketing fund has rules, to check they do not tie support to resale prices" }
+      ]
+    },
+    {
+      "id": "trade-show",
+      "task": "Plan a trade show and follow up the leads",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:traction-trade-shows", "type": "skill", "use": "brief", "when": "Before booking, to plan the show as a test with costs, measures and decision rules" },
+        { "ref": "library:elevator-pitch-writer", "type": "skill", "use": "build", "when": "When stand staff need 10, 30 and 60 second answers and an opening question" },
+        { "ref": "library:plan-an-event-follow-up-that-earns-a-reply", "type": "workflow", "use": "build", "when": "After the show, to group buyers by what each asked for and draft the follow-ups" }
+      ]
+    },
+    {
+      "id": "wholesale-forecast",
+      "task": "Forecast wholesale demand and allocate stock",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:demand-forecast-planner", "type": "skill", "use": "build", "when": "When you have past wholesale orders and need a forecast and a way to track its error" },
+        { "ref": "library:store-stock-allocator", "type": "skill", "use": "build", "when": "When a new buy must be split across stockists by what each one sells" }
+      ]
+    },
+    {
+      "id": "trade-payments",
+      "task": "Chase overdue trade invoices",
+      "kind": "email",
+      "items": [
+        { "ref": "library:unpaid-invoice-chaser", "type": "skill", "use": "build", "when": "When several shops are late, to get a reminder for each, gentle or firm" },
+        { "ref": "library:payment-reminder-letter-writer", "type": "skill", "use": "explore", "when": "When one account matters, to try a reminder that starts from your history with them" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before reminders go, to check the amounts and dates match the invoices" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before any terms, pitch or pack leaves, to tie each price and fact to the client's records" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before anything goes to a buyer or partner, to catch typos and one term used two ways" }
+  ],
+  "helpers": [
+    { "role": "pricing-strategist", "when": "When wholesale, distributor and shelf prices must be set as one ladder from the margin" },
+    { "role": "graphic-designer", "when": "When the line sheet or welcome pack needs a designed layout for print or PDF" },
+    { "role": "supply-chain-planner", "when": "When wholesale orders outrun stock and lead times need planning" },
+    { "role": "ap-ar-specialist", "when": "When trade credit, statements and late payers need a proper process" },
+    { "role": "business-development-manager", "when": "When the target is a large account that needs an account plan and a first visit" },
+    { "role": "compliance-specialist", "when": "When programme rules or distributor terms raise competition or consumer law questions" }
+  ],
+  "gaps": [
+    "No library item writes a line sheet or a wholesale terms summary; only the kit covers them",
+    "No library item writes a stockist welcome pack with display, staff notes and reorder steps",
+    "No library item finds stockists by region and shop type or covers wholesale marketplaces such as Faire",
+    "No library item sets deal registration rules or settles a registration conflict",
+    "No library item calculates partner commissions and payouts each month",
+    "No library item builds a partner scorecard or a partner's first-30-day plan",
+    "No library item checks resale price wording against competition law",
+    "No library item drafts distributor terms such as exclusivity, territory and minimum volumes",
+    "No library item builds partner training or a short certification",
+    "No library item offers different line sheet layouts or welcome pack versions to compare",
+    "No tool guide covers partner management or wholesale ordering platforms",
+    "No mind in the library is built on a channel or wholesale thinker"
+  ]
+}

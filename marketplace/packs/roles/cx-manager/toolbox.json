@@ -1,0 +1,279 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "cx-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "journey-map",
+      "task": "Map the current customer journey from real evidence",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/customer-path-map-and-service-blueprint", "use": "build", "when": "When you have reviews, tickets, comments and notes and need each stage and step mapped" },
+        { "ref": "library:user-persona-and-path-mapper", "type": "skill", "use": "brief", "when": "When research notes exist but nobody has said whose journey this is" },
+        { "ref": "library:customer-path-mapper", "type": "skill", "use": "build", "when": "When you want a quick stage-by-stage draft with feelings and pain points to correct" },
+        { "ref": "library:job-experience-mapper", "type": "skill", "use": "explore", "when": "When the map follows your departments, to redraw it around the customer's worries" },
+        { "ref": "library:brian-chesky", "type": "mind", "use": "think", "when": "When the map is tidy boxes and nobody has walked each step as a customer" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the map is shared, to tie each pain point to a review, ticket or number" }
+      ]
+    },
+    {
+      "id": "nps-analysis",
+      "task": "Analyse NPS results and find the reason behind a score change",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/survey-programme-and-closing-the-loop", "use": "build", "when": "When scores and comments are in and you need drivers, fixes and owners" },
+        { "ref": "library:customer-feedback-report-from-survey-tools", "type": "skill", "use": "brief", "when": "When answers sit in a connected survey tool and you need themes and quotes for a period" },
+        { "ref": "library:feedback-pile-sorter", "type": "skill", "use": "build", "when": "When score comments must be read with tickets and calls to get one ranked signal" },
+        { "ref": "library:numbers-drop-explainer", "type": "prompt", "use": "build", "when": "When the score fell, to rank likely causes from the before and after numbers" },
+        { "ref": "library:prepare-a-survey-findings-briefing", "type": "workflow", "use": "build", "when": "When leaders need a findings table with honest caveats on who answered" },
+        { "ref": "library:survey-answer-truth-checker", "type": "prompt", "use": "check", "when": "Before you report a score, to check how far the questions and sample can be trusted" }
+      ]
+    },
+    {
+      "id": "survey-programme",
+      "task": "Plan an NPS, satisfaction and effort survey programme",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/survey-programme-and-closing-the-loop", "use": "build", "when": "When you need the questions, the moments to ask and rules on who is asked how often" },
+        { "ref": "library:post-purchase-survey-builder", "type": "skill", "use": "build", "when": "When the moment is just after an order and the business is an online store" },
+        { "ref": "library:questionnaire-writer", "type": "skill", "use": "build", "when": "When a one-off deeper survey is needed beside the regular score" },
+        { "ref": "library:check-a-marketing-survey-before-sending-it", "type": "workflow", "use": "check", "when": "Before launch, to get a bias review, a shorter question list and a pretest plan" },
+        { "ref": "library:matthew-dixon", "type": "mind", "use": "think", "when": "When the plan chases delight and nobody measures how hard it is to get help" }
+      ]
+    },
+    {
+      "id": "close-the-loop",
+      "task": "Follow up unhappy customers and log what was fixed",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/close-the-loop-follow-up", "use": "build", "when": "When customers scored you low and asked to be contacted" },
+        { "ref": "library:get-a-stuck-customer-issue-unstuck-and-close-the-loop", "type": "workflow", "use": "build", "when": "When one issue has been stuck for weeks and needs facts, an escalation and a reply" },
+        { "ref": "library:customer-reply-drafter", "type": "skill", "use": "build", "when": "When each follow-up needs a reply in the right tone and notes on what to check first" },
+        { "ref": "library:support-reply-tone-editor", "type": "skill", "use": "explore", "when": "When the first draft sounds cold or defensive, to see it in two other tones" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before sending, to check every promise in the reply is one you can keep" }
+      ]
+    },
+    {
+      "id": "touchpoint-inventory",
+      "task": "Build a touchpoint inventory and audit",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/touchpoint-inventory", "use": "build", "when": "Before mapping or redesign, or when customers get too many messages or mixed ones" },
+        { "ref": "library:make-every-touchpoint-say-the-same-thing", "type": "workflow", "use": "check", "when": "When the list is built, to rank where the touchpoints disagree with each other" },
+        { "ref": "library:store-brand-signal-auditor", "type": "skill", "use": "check", "when": "When you can share the site, emails, pack and ads, to score what each one says" }
+      ]
+    },
+    {
+      "id": "service-blueprint",
+      "task": "Draw a service blueprint for one journey",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/customer-path-map-and-service-blueprint", "use": "build", "when": "When the path is mapped and you need the staff, systems and hand-offs behind each step" },
+        { "ref": "library:customer-path-blueprint-maker", "type": "skill", "use": "build", "when": "When you want each step listed with touchpoints, friction and the systems behind it" },
+        { "ref": "library:process-bottleneck-finder", "type": "skill", "use": "check", "when": "When customers wait at a hand-off, to find the one stage holding everything up" }
+      ]
+    },
+    {
+      "id": "journey-fixes",
+      "task": "Rank journey fixes and write the future journey with owners",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/quarterly-cx-programme-cycle", "use": "brief", "when": "Each quarter, to move from scores and maps to a short list of fixes with owners" },
+        { "ref": "kit:skills/customer-path-map-and-service-blueprint", "use": "build", "when": "When the current map is agreed and the fixes need ranking by evidence and effort" },
+        { "ref": "library:decision-friction-auditor", "type": "skill", "use": "build", "when": "When one page or flow loses people, to find where layout, defaults or order stop them" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When budget allows one of two fix programmes, to see both with cost and dates" },
+        { "ref": "library:plan-pre-mortem-runner", "type": "skill", "use": "check", "when": "Before owners sign up, to name why the fix plan could fail" }
+      ]
+    },
+    {
+      "id": "quarterly-report",
+      "task": "Write the quarterly customer experience report",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/quarterly-cx-report", "use": "build", "when": "At quarter end, to give leaders one honest page on how customers feel and why" },
+        { "ref": "kit:workflows/quarterly-cx-programme-cycle", "use": "brief", "when": "When the report must follow the quarter's surveys, fixes and reviews in order" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When the analysis is long and leaders need the answer first with the impact in numbers" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before it goes to leaders, to check each score and count against its source" }
+      ]
+    },
+    {
+      "id": "behaviour-diagnosis",
+      "task": "Diagnose why customers delay, drop off or ignore a message",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/behaviour-barrier-diagnosis", "use": "build", "when": "When customers do not act and you need the barrier named and a small honest change" },
+        { "ref": "library:retention-problem-fixer", "type": "skill", "use": "build", "when": "When users sign up and drift away, to find the cause in the first steps and habits" },
+        { "ref": "library:hard-to-use-thing-diagnoser", "type": "skill", "use": "build", "when": "When people keep getting one form or step wrong, to see what in the design misleads" },
+        { "ref": "library:switch-friction-remover", "type": "skill", "use": "build", "when": "When prospects stay with the old way, to rank the habits and worries holding them" },
+        { "ref": "library:bj-fogg", "type": "mind", "use": "think", "when": "When the fix is more reminders, to ask if the action is too hard or the prompt badly timed" },
+        { "ref": "library:don-norman", "type": "mind", "use": "think", "when": "When staff blame the customer for an error the design invites" }
+      ]
+    },
+    {
+      "id": "nudges-and-test",
+      "task": "Design small, honest nudges and a test plan",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/behaviour-barrier-diagnosis", "use": "brief", "when": "Before any nudge, to be sure which barrier it is meant to remove" },
+        { "ref": "library:agency-product-behavioral-nudge-engine", "type": "agent", "use": "build", "when": "When you need a set of messages, each with one small step and the best timing" },
+        { "ref": "library:buyer-psychology-advisor", "type": "skill", "use": "explore", "when": "When you want several honest changes to compare, each tied to a known mental model" },
+        { "ref": "library:experiment-designer", "type": "skill", "use": "build", "when": "When one change is picked and needs a hypothesis, sample size and reading plan" },
+        { "ref": "library:daniel-kahneman", "type": "mind", "use": "think", "when": "When the team is sure a nudge will work, to ask what past cases actually showed" }
+      ]
+    },
+    {
+      "id": "complaint-reply",
+      "task": "Draft a reply to a formal complaint",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/formal-complaint-reply-draft", "use": "build", "when": "When a formal complaint needs a clear, fair, complete reply for a person to approve" },
+        { "ref": "library:refund-request-reply-writer", "type": "prompt", "use": "build", "when": "When the complaint asks for money back and the answer is yes, partial or no" },
+        { "ref": "library:angry-customer-reply-writer", "type": "prompt", "use": "explore", "when": "When the customer is furious, to try a version that names the feeling first" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before approval, to check each promise, the tone and any admission in the draft" }
+      ]
+    },
+    {
+      "id": "complaint-root-causes",
+      "task": "Check complaint deadlines and find root causes",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/complaint-handling-and-learning", "use": "brief", "when": "When complaints need a daily, weekly and monthly routine with clear owners" },
+        { "ref": "kit:prompts/complaint-deadlines-and-root-causes", "use": "build", "when": "When you hold a complaint log and need what is near its deadline and what keeps causing them" },
+        { "ref": "library:support-issue-cause-investigator", "type": "skill", "use": "build", "when": "When several complaints look related, to find the shared pattern and a fix plan" },
+        { "ref": "library:root-cause-finder", "type": "skill", "use": "check", "when": "When a cause is proposed, to test the chain of whys against the facts" }
+      ]
+    },
+    {
+      "id": "mystery-shop-design",
+      "task": "Design a mystery shopping programme and scoring form",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/mystery-shopping-programme", "use": "build", "when": "When a multi-site business needs fair scenarios, a weighted form and a shopper briefing" },
+        { "ref": "library:standards-sheet-writer", "type": "skill", "use": "brief", "when": "When there are no written standards to score against, to draft checkable ones first" },
+        { "ref": "library:competitor-funnel-review", "type": "skill", "use": "explore", "when": "When rivals should be shopped too, to plan buying from each and noting the follow-up" }
+      ]
+    },
+    {
+      "id": "mystery-shop-results",
+      "task": "Report mystery shop results across sites with coaching notes",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/mystery-shopping-programme", "use": "build", "when": "When scores are in and you need a fair comparison of sites and notes for each manager" },
+        { "ref": "library:statistics-helper", "type": "skill", "use": "check", "when": "When sites differ by a few points, to see if the gap is real or just a few visits" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When the group owner needs one page across all sites with the answer first" }
+      ]
+    },
+    {
+      "id": "quality-scorecard",
+      "task": "Build a quality scorecard for calls, support or site visits",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/mystery-shopping-programme", "use": "build", "when": "When you need weighted standards and a scoring form staff will see as fair" },
+        { "ref": "library:standards-sheet-writer", "type": "skill", "use": "brief", "when": "When each standard must be something a reviewer can check as done or not done" },
+        { "ref": "library:turn-a-recorded-call-into-notes-a-follow-up-and-coaching", "type": "workflow", "use": "build", "when": "When you have a call recording and want notes and coaching on how it went" }
+      ]
+    },
+    {
+      "id": "ai-disclosure",
+      "task": "Check how a chatbot or AI agent tells customers it is AI",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/ai-disclosure-check", "use": "check", "when": "Before launch or at review of any AI that talks to customers by chat, email or voice" },
+        { "ref": "library:support-chatbot-conversation-review", "type": "skill", "use": "check", "when": "When you have recent bot chats, to find missed questions and wrong answers" },
+        { "ref": "library:review-support-bot-errors-with-retest-cases", "type": "agent", "use": "check", "when": "When wrong answers are found, to propose fixes and cases to retest" },
+        { "ref": "library:eu-ai-act-readiness-checker", "type": "skill", "use": "check", "when": "When the bot serves EU customers, for a first read of the duties that apply" }
+      ]
+    },
+    {
+      "id": "retention-winback",
+      "task": "Write a retention and win-back plan",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:retention-cohort-analyst", "type": "skill", "use": "brief", "when": "Before the plan, to see when each sign-up group stops coming back" },
+        { "ref": "library:customer-health-and-churn-scorer", "type": "skill", "use": "brief", "when": "When you have account data and need to know who is at risk now" },
+        { "ref": "library:churn-reducer", "type": "skill", "use": "build", "when": "When you know why people leave and need a cancel flow and save offers" },
+        { "ref": "library:cancel-reason-save-planner", "type": "prompt", "use": "build", "when": "When you have cancel reasons and need one honest save per reason with numbers to track" },
+        { "ref": "library:win-back-flow-builder", "type": "skill", "use": "build", "when": "When lapsed buyers should be asked back, timed to how they really reorder" }
+      ]
+    },
+    {
+      "id": "welcome-and-onboarding",
+      "task": "Write a customer guide, welcome pack or onboarding plan",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:customer-onboarding-planner", "type": "skill", "use": "build", "when": "When new customers need phased steps, milestones, owners and email templates" },
+        { "ref": "library:new-customer-onboarding-sequence-writer", "type": "skill", "use": "build", "when": "When the welcome is a 14-day run of emails and texts on how to use the product" },
+        { "ref": "library:customer-onboarding-keeper", "type": "agent", "use": "check", "when": "Each week, to see where the new cohort stalls in its first 30 days" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the guide uses internal terms, to put it in words a new customer knows" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before it is sent, to read the pack as a new customer and list what they still must ask" }
+      ]
+    },
+    {
+      "id": "behaviour-research-summary",
+      "task": "Summarise the research on one customer behaviour",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:literature-reviewer", "type": "skill", "use": "build", "when": "When you need sources chosen by clear rules and their findings pulled together" },
+        { "ref": "library:cited-research-assistant", "type": "agent", "use": "build", "when": "When every claim in the summary must carry a source or be marked unsourced" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the summary is used to justify a change, to check each study says what you say" }
+      ]
+    },
+    {
+      "id": "personas",
+      "task": "Build personas from research notes",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:customer-research-analyst", "type": "skill", "use": "build", "when": "When interviews, surveys or tickets are in and you need personas from the patterns" },
+        { "ref": "library:user-persona-and-path-mapper", "type": "skill", "use": "build", "when": "When each persona needs its own path and a test plan to go with it" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before delivery, to check each trait traces to evidence and none is invented" }
+      ]
+    },
+    {
+      "id": "kpi-report",
+      "task": "Build the weekly or monthly CX numbers report",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:input-metric-picker", "type": "skill", "use": "brief", "when": "When the report lists only scores, to find the inputs the team can control" },
+        { "ref": "library:kpi-dashboard-designer", "type": "skill", "use": "build", "when": "When you know who reads it and what they decide, to pick metrics and a layout" },
+        { "ref": "library:recurring-kpi-report-maker", "type": "skill", "use": "build", "when": "When the same report must be rerun each period from the same sources" },
+        { "ref": "library:align-recurring-report-metric-definitions", "type": "workflow", "use": "check", "when": "When two teams report different numbers for the same score, to reconcile the definitions" }
+      ]
+    },
+    {
+      "id": "service-standards",
+      "task": "Write service standards and the procedure behind them",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:standards-sheet-writer", "type": "skill", "use": "build", "when": "When the service feels different each time and needs one page of checkable standards" },
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When staff need the steps, who does what and the edge cases written down" },
+        { "ref": "library:tony-hsieh", "type": "mind", "use": "think", "when": "When the standards read like a script and leave staff no room to help" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before any map or report leaves, to tie each score, count and quote to a dated source" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a report or customer letter is shared, to catch typos and one stage named two ways" }
+  ],
+  "helpers": [
+    { "role": "customer-insights-researcher", "when": "When the map or diagnosis needs new interviews, a focus group or review mining first" },
+    { "role": "support-operations-manager", "when": "When the fix is in the support queue, its targets, macros or staffing" },
+    { "role": "ux-designer", "when": "When the stuck step is a screen, form or flow that needs redesign and a usability test" },
+    { "role": "data-analyst", "when": "When score drivers need proper statistics or data joined from several systems" },
+    { "role": "lifecycle-marketer", "when": "When the retention plan must become live email and message flows" },
+    { "role": "chatbot-specialist", "when": "When the AI check finds the bot itself needs rebuilding, not only its disclosure" }
+  ],
+  "gaps": [
+    "No library item writes mystery shopping scenarios, a shopper briefing pack or a weighted scoring form",
+    "No library item compares scores across sites fairly and writes coaching notes for each site",
+    "No library item builds a touchpoint inventory across channels; the one workflow checks message consistency for stores",
+    "No library item sets survey programme rules: who is asked, at which moment and how often",
+    "No library item tracks close-the-loop cases from low score to fix and outcome",
+    "No library item checks a nudge for dark patterns or for harm to vulnerable customers",
+    "No library item runs a complaint log with deadlines set by a regulator or a code of practice",
+    "No library item checks how an AI chat or voice bot discloses that it is AI",
+    "No library item builds a quality scorecard for calls or support tickets with calibration between reviewers",
+    "No library item draws a service blueprint as a diagram with front-stage and back-stage lanes",
+    "No library item offers clearly different versions of a welcome pack or a complaint reply to compare",
+    "No library item applies a named behaviour model such as COM-B or EAST to a customer problem"
+  ]
+}

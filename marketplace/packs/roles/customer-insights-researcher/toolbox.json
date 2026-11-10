@@ -1,0 +1,299 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "customer-insights-researcher",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "interview-synthesis",
+      "task": "Synthesise 5 to 15 interviews into themes, quotes and actions",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/interview-and-feedback-synthesis", "use": "build", "when": "When you have transcripts or notes and need coded passages, counted themes and exact quotes" },
+        { "ref": "library:otter", "type": "tool", "use": "brief", "when": "When the calls are still recordings and you need transcripts with who said what" },
+        { "ref": "library:interview-transcript-trimmer", "type": "skill", "use": "brief", "when": "When transcripts are very long, to cut each to the few passages worth coding" },
+        { "ref": "library:research-theme-synthesizer", "type": "skill", "use": "build", "when": "When you want a second pass that ranks themes by how often they come up, with quotes" },
+        { "ref": "library:insight-brief-writer", "type": "skill", "use": "build", "when": "When themes are found and the team needs the top insights ranked, each with an action" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the readout goes out, to tie every finding and quote to a named transcript" }
+      ]
+    },
+    {
+      "id": "interview-guide",
+      "task": "Write an interview guide for one research goal",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/customer-interview-round", "use": "brief", "when": "When a decision depends on why customers act as they do and you need the whole round planned" },
+        { "ref": "kit:prompts/discussion-guide", "use": "build", "when": "When you or a moderator will run the calls and need a timed guide built on past stories" },
+        { "ref": "library:buying-story-interview-guide", "type": "skill", "use": "explore", "when": "When the goal is why people bought, to try a timeline script from first thought to purchase" },
+        { "ref": "library:customer-interview-coach", "type": "skill", "use": "check", "when": "When the guide is drafted, to catch questions that invite polite lies and rewrite them" },
+        { "ref": "library:rob-fitzpatrick", "type": "mind", "use": "think", "when": "When questions ask what people would do, not what they did last time" }
+      ]
+    },
+    {
+      "id": "review-themes",
+      "task": "Mine reviews for what buyers praise and hate",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/review-and-mention-mining", "use": "build", "when": "When you have an export of reviews and need counted themes, mood, causes and actions" },
+        { "ref": "library:fake-review-spotter", "type": "skill", "use": "check", "when": "Before counting anything, to flag reviews that look bought or fake and set them aside" },
+        { "ref": "library:review-insight-finder", "type": "skill", "use": "build", "when": "When you want complaints, praise and requests ranked by frequency with real quotes" },
+        { "ref": "library:review-reason-spotter", "type": "prompt", "use": "build", "when": "When the question is why people buy, to rank buying reasons in customers' exact words" }
+      ]
+    },
+    {
+      "id": "survey-design",
+      "task": "Write or review a survey for one goal",
+      "kind": "other",
+      "items": [
+        { "ref": "library:questionnaire-writer", "type": "skill", "use": "build", "when": "When you know who must answer and need questions aimed at what only they know" },
+        { "ref": "library:must-have-survey-planner", "type": "skill", "use": "explore", "when": "When the goal is product fit, to try the short how-would-you-feel-without-it survey" },
+        { "ref": "library:willingness-to-pay-survey", "type": "skill", "use": "build", "when": "When the survey must find a price, to add the two questions that give a price range" },
+        { "ref": "library:sample-size-planner", "type": "skill", "use": "brief", "when": "Before sending, to work out how many answers you need to see the difference you care about" },
+        { "ref": "library:check-a-marketing-survey-before-sending-it", "type": "workflow", "use": "check", "when": "When a draft exists, to get a bias review, a shorter question list and a pretest plan" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When questions use the company's words, to put them in words a customer would use" }
+      ]
+    },
+    {
+      "id": "survey-results",
+      "task": "Analyse survey results and write a findings brief",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:prepare-a-survey-findings-briefing", "type": "workflow", "use": "build", "when": "When results are in and you need a checked findings table with honest sampling caveats" },
+        { "ref": "library:julius", "type": "tool", "use": "build", "when": "When you have the raw export and need tables and charts by asking in plain words" },
+        { "ref": "library:statistics-helper", "type": "skill", "use": "build", "when": "When you need trends, outliers and the right test for a difference between groups" },
+        { "ref": "library:survey-answer-truth-checker", "type": "prompt", "use": "check", "when": "Before you report a number, to score how far each question's answers can be trusted" },
+        { "ref": "library:agency-academic-statistician", "type": "agent", "use": "check", "when": "When the sample is small, for an honest read of what it can and cannot show" },
+        { "ref": "library:tim-harford", "type": "mind", "use": "think", "when": "When one striking percentage is about to become the headline" }
+      ]
+    },
+    {
+      "id": "recruiting",
+      "task": "Recruit participants with a screener and outreach",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/interview-recruiting-and-consent", "use": "build", "when": "When a study needs quotas, stop rules, incentive terms and a schedule" },
+        { "ref": "kit:prompts/screener-and-outreach", "use": "build", "when": "When you need a screener that filters fairly and messages that say honestly what is asked" },
+        { "ref": "library:customer-interview-request", "type": "skill", "use": "build", "when": "When you must reach strangers, to get a warm intro note, a cold message and an opening line" },
+        { "ref": "library:buyer-research-plan-with-survey", "type": "skill", "use": "brief", "when": "When you have a customer list and a reward budget and need a call plan around them" }
+      ]
+    },
+    {
+      "id": "consent",
+      "task": "Draft a consent form and privacy notice for a study",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/consent-form-and-privacy-notice", "use": "build", "when": "Before any interview, group, diary or trial, to write plain consent text and a short notice" },
+        { "ref": "kit:skills/interview-recruiting-and-consent", "use": "brief", "when": "When you must decide what is recorded, who sees it and when it is deleted" },
+        { "ref": "library:new-data-use-screener", "type": "skill", "use": "check", "when": "When the study records customers or minors, to see if it needs a fuller privacy review" }
+      ]
+    },
+    {
+      "id": "customer-words",
+      "task": "Turn research into buyer words and a fix list",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/customer-words-and-fix-list", "use": "build", "when": "When research is finished and the team needs words to use and fixes to make on Monday" },
+        { "ref": "library:customer-buying-reasons-finder", "type": "skill", "use": "build", "when": "When you have reviews or support emails and need buying reasons in exact words" },
+        { "ref": "library:customer-quote-finder", "type": "skill", "use": "build", "when": "When a writer asks for real quotes on one topic, each tied to who said it" },
+        { "ref": "library:review-ad-copy", "type": "workflow", "use": "build", "when": "When the client wants the buyer words carried straight into fact-based ad copy" },
+        { "ref": "library:joanna-wiebe", "type": "mind", "use": "think", "when": "When the swipe file drifts into the company's phrasing and away from the buyer's" }
+      ]
+    },
+    {
+      "id": "bad-review-causes",
+      "task": "Find the cause of bad reviews, returns or a rating drop",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/review-and-mention-mining", "use": "build", "when": "When a rating fell and you need to see what changed in the reviews around that date" },
+        { "ref": "library:return-reason-finder", "type": "skill", "use": "build", "when": "When returns are the signal, to count reasons by product and spot listings that mislead" },
+        { "ref": "library:numbers-drop-explainer", "type": "prompt", "use": "check", "when": "When you have before and after numbers, to rank likely causes by the evidence" }
+      ]
+    },
+    {
+      "id": "nps-survey",
+      "task": "Build and read a short NPS or satisfaction survey",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/feedback-survey-and-nps", "use": "build", "when": "When you want a short, regular survey after a purchase or support contact, with a why" },
+        { "ref": "library:customer-feedback-report-from-survey-tools", "type": "skill", "use": "build", "when": "When answers sit in a connected survey tool and you need themes and quotes for a date range" },
+        { "ref": "library:feedback-pile-sorter", "type": "skill", "use": "build", "when": "When score comments must be read with tickets and calls to get one ranked signal" },
+        { "ref": "library:survey-answer-truth-checker", "type": "prompt", "use": "check", "when": "Before you report the score, to check the questions and the response base hold up" }
+      ]
+    },
+    {
+      "id": "buyer-profile",
+      "task": "Build a buyer profile or persona pack from evidence",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:build-a-buyer-profile-from-interviews-and-reviews", "type": "workflow", "use": "build", "when": "When you have orders and reviews and want interviews, a profile and a brief for writers" },
+        { "ref": "library:customer-research-analyst", "type": "skill", "use": "build", "when": "When the interviews and tickets are done and you need personas from the patterns" },
+        { "ref": "library:buyer-identity-segment-finder", "type": "skill", "use": "explore", "when": "When one profile feels wrong, to split buyers by how they describe themselves" },
+        { "ref": "kit:skills/interview-and-feedback-synthesis", "use": "brief", "when": "When the evidence is still raw and must be coded before any persona is written" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before delivery, to check each persona trait traces to evidence a client can see" }
+      ]
+    },
+    {
+      "id": "jobs-map",
+      "task": "Map the jobs customers hire the product for",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:interview-customers-and-map-what-they-hire-you-to-do", "type": "workflow", "use": "build", "when": "When you want one run from interview questions to a jobs map and buyer profile" },
+        { "ref": "library:customer-job-mapper", "type": "skill", "use": "build", "when": "When you need the practical, emotional and social jobs written out for one buyer" },
+        { "ref": "library:customer-job-interview-planner", "type": "skill", "use": "brief", "when": "When you can watch buyers or catch people who just switched, to plan those contacts" },
+        { "ref": "library:clayton-christensen", "type": "mind", "use": "think", "when": "When the map lists product features and not the situation that made someone look" }
+      ]
+    },
+    {
+      "id": "social-listening",
+      "task": "Write listening queries and read a mentions export",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/social-listening-query-set", "use": "build", "when": "When you use a listening tool or platform search and need queries that catch real mentions" },
+        { "ref": "kit:skills/review-and-mention-mining", "use": "build", "when": "When you have the mentions export and need themes, mood and what drove a spike" },
+        { "ref": "library:audience-hangout-finder", "type": "skill", "use": "brief", "when": "Before writing queries, to map the sites, shows and communities this buyer uses" },
+        { "ref": "library:social-listening-brief-writer", "type": "skill", "use": "build", "when": "When there is no export yet and you need what people say on a topic, grouped by theme" },
+        { "ref": "library:comment-mining-analyst", "type": "skill", "use": "build", "when": "When the source is post comments, to pull what people ask, complain about and want" },
+        { "ref": "library:community-evidence-researcher", "type": "skill", "use": "check", "when": "When themes are drafted, to count them and say what this sample can and cannot show" }
+      ]
+    },
+    {
+      "id": "voc-report",
+      "task": "Write the monthly voice-of-customer report",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/monthly-voice-of-customer-report", "use": "build", "when": "In the first week of each month, to report what customers said the month before" },
+        { "ref": "library:monthly-customer-voice-keeper", "type": "agent", "use": "build", "when": "When new reviews arrive monthly and you need new buyer words and new doubts tracked" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When the report is long and the owner needs one page with the answer first" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before it is sent, to check every count and quote against this month's source files" }
+      ]
+    },
+    {
+      "id": "focus-group",
+      "task": "Design and read a focus group or workshop",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/group-sessions-and-product-trials", "use": "build", "when": "When customers must react together and you need the session design and the reading plan" },
+        { "ref": "kit:prompts/discussion-guide", "use": "build", "when": "When the moderator needs a timed guide with probes and group exercises" },
+        { "ref": "kit:workflows/product-trial-or-group-study", "use": "brief", "when": "When the study must choose between versions and needs steps from recruit to readout" },
+        { "ref": "library:research-theme-synthesizer", "type": "skill", "use": "build", "when": "After the sessions, to rank themes across the group transcripts with quotes" }
+      ]
+    },
+    {
+      "id": "taste-test",
+      "task": "Design a taste test or product trial and read the scores",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/product-trial-or-group-study", "use": "brief", "when": "When you must choose between recipes, packs or versions with real buyers" },
+        { "ref": "kit:skills/group-sessions-and-product-trials", "use": "build", "when": "When you need a blind, paired or ranking design with scoring sheets and a decision rule" },
+        { "ref": "library:taster-event-planner", "type": "skill", "use": "explore", "when": "When a one-day public tasting is possible, to plan it with a taster card and a rule" },
+        { "ref": "library:experiment-result-analyst", "type": "skill", "use": "check", "when": "When the scores are in, to pick the right test and say if the difference is real" }
+      ]
+    },
+    {
+      "id": "diary-study",
+      "task": "Plan a diary study or online community task",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/group-sessions-and-product-trials", "use": "build", "when": "When behaviour over days matters and you need daily tasks, prompts and a reading plan" },
+        { "ref": "kit:prompts/screener-and-outreach", "use": "build", "when": "When diarists must be recruited and told plainly what each day asks of them" }
+      ]
+    },
+    {
+      "id": "research-plan",
+      "task": "Choose the method and write a research plan for one question",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:user-research-planner", "type": "skill", "use": "brief", "when": "When the client has a question but no method, to pick one and plan how to store findings" },
+        { "ref": "library:interview-and-research-planner", "type": "skill", "use": "build", "when": "When interviews are the method and you need recruiting, guide and synthesis steps in one plan" },
+        { "ref": "library:research-hypothesis-builder", "type": "skill", "use": "brief", "when": "When the client has a hunch, to turn it into testable guesses and rival explanations" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When budget is tight, to compare two study shapes with cost and dates and pick one" },
+        { "ref": "kit:workflows/customer-interview-round", "use": "build", "when": "When the plan is agreed and the round must run from recruit to readout" }
+      ]
+    },
+    {
+      "id": "founder-conversations",
+      "task": "Sort founder call notes into facts, praise and fluff",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:customer-discovery-plan", "type": "skill", "use": "brief", "when": "Before the calls, to list the founder's guesses and who can test each one" },
+        { "ref": "library:customer-interview-notes", "type": "skill", "use": "build", "when": "When raw call notes need facts, compliments and feature ideas told apart" },
+        { "ref": "library:idea-evidence-review", "type": "skill", "use": "check", "when": "After a round of talks, to weigh beliefs against notes and call keep going, change or stop" }
+      ]
+    },
+    {
+      "id": "product-ideas",
+      "task": "Score product ideas from buyer complaints",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:find-a-product-idea-in-buyer-complaints-and-score-it", "type": "workflow", "use": "build", "when": "When you have a category and want the complaints that point to a gap, with a score" },
+        { "ref": "library:product-demand-researcher", "type": "skill", "use": "build", "when": "When an idea exists, to collect the pains, objections and buying signals people post" },
+        { "ref": "library:turn-user-complaints-into-design-questions", "type": "workflow", "use": "build", "when": "When complaints should become ranked design questions and a small research plan" }
+      ]
+    },
+    {
+      "id": "rival-reviews",
+      "task": "Compare your reviews with rivals' reviews",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/review-and-mention-mining", "use": "build", "when": "When you have both review sets and need the same themes counted for each brand" },
+        { "ref": "library:brand-mention-tracker", "type": "skill", "use": "brief", "when": "When rival reviews are not collected yet and you need ratings from many sites in one report" },
+        { "ref": "library:amazon-product-edge-finder", "type": "skill", "use": "build", "when": "When the rivals sell on Amazon, to find their weak spots and your best selling points" }
+      ]
+    },
+    {
+      "id": "review-requests",
+      "task": "Plan how to earn more honest reviews",
+      "kind": "email",
+      "items": [
+        { "ref": "library:review-request-and-reply-planner", "type": "skill", "use": "build", "when": "When you need the moment to ask, the wording and how to answer a bad review" },
+        { "ref": "library:testimonial-request-writer", "type": "skill", "use": "build", "when": "When a service client needs a short ask with three easy questions and a follow-up" },
+        { "ref": "library:reply-to-your-reviews-safely-and-plan-how-to-get-more", "type": "workflow", "use": "build", "when": "When the client also needs safe replies to the reviews they already have" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before the messages go out, to read them as a customer and catch any pressure or bribe" }
+      ]
+    },
+    {
+      "id": "experiment-readout",
+      "task": "Read out an A/B test or experiment result",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:test-result-trust-checker", "type": "prompt", "use": "check", "when": "Before reading the lift, to decide whether the finished test can be trusted" },
+        { "ref": "library:a-b-test-verdict-maker", "type": "skill", "use": "build", "when": "When you have the test data and need a split check, ranges and a clear call" },
+        { "ref": "library:experiment-result-analyst", "type": "skill", "use": "build", "when": "When the client needs the result and what it means explained in plain words" }
+      ]
+    },
+    {
+      "id": "decision-note",
+      "task": "Write a decision note or strategy memo from the findings",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:narrative-decision-memo-writer", "type": "skill", "use": "build", "when": "When findings must end in a choice, with options, risks, missing facts and a review date" },
+        { "ref": "library:make-a-research-report-easier-to-share", "type": "workflow", "use": "build", "when": "When a finished report needs a summary, a slide brief and a fact-check list" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before it goes to the client, to list what they would have to ask before acting on it" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before any readout leaves, to tie each count, quote and claim to a dated source" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a guide, survey or report is shared, to catch typos and one theme named two ways" }
+  ],
+  "helpers": [
+    { "role": "market-research-analyst", "when": "When the question is about market size, rivals or trends, not about your own customers" },
+    { "role": "data-analyst", "when": "When survey or panel data needs weighting, cross-tabs or tests beyond a simple read" },
+    { "role": "conversion-copywriter", "when": "When the buyer words must become page, ad or email copy" },
+    { "role": "product-manager", "when": "When findings must turn into a scope, a priority call or a roadmap change" },
+    { "role": "ux-designer", "when": "When the study is a usability test of a screen or prototype" },
+    { "role": "reputation-manager", "when": "When the job moves from reading reviews to replying to them and running the review programme" }
+  ],
+  "gaps": [
+    "No library item writes a focus group discussion guide or moderator script with timed sections and group exercises",
+    "No library item designs a diary study or an online community task plan",
+    "No library item designs blind, paired or ranking taste tests with scoring sheets, or analyses panel scores",
+    "No library item writes a recruitment screener with quotas and stop rules, or sets incentive terms",
+    "No library item drafts a participant consent form or a research privacy notice",
+    "No library item codes interview or open survey text against a codebook and counts the codes",
+    "No library item builds or reads an NPS, satisfaction or effort survey as its main job",
+    "No library item writes search queries for social listening tools such as Brandwatch or Talkwalker",
+    "No library item briefs a concept board or runs a concept, name or pack test with buyers",
+    "No library item cleans a survey export or builds cross-tabs by segment",
+    "No library item offers different review request messages to compare before sending"
+  ]
+}

@@ -1,0 +1,263 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "evaluation-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "logic-model",
+      "task": "Build a logic model and theory of change",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:workflows/programme-year-evaluation-cycle", "use": "brief", "when": "When a new programme or funding year starts and the whole evaluation year needs planning" },
+        { "ref": "kit:skills/logic-model-and-theory-of-change", "use": "build", "when": "When a programme needs one page from long-term change back to activities and inputs" },
+        { "ref": "library:nonprofit-program-outcome-planner", "type": "skill", "use": "build", "when": "When you want a second draft of the activity-to-outcome map with its evidence gaps listed" },
+        { "ref": "library:second-order-effects-tracer", "type": "skill", "use": "check", "when": "When a link in the chain looks too easy, to trace what each step really causes next" },
+        { "ref": "library:plan-pre-mortem-runner", "type": "skill", "use": "check", "when": "Before the model is agreed, to imagine the programme failed and name the weak assumptions" }
+      ]
+    },
+    {
+      "id": "evaluation-scope",
+      "task": "Scope the evaluation and set its questions",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/evaluation-scope-and-questions", "use": "build", "when": "At the start of any evaluation, before measures or surveys are written" },
+        { "ref": "library:research-question-outliner", "type": "prompt", "use": "brief", "when": "When the funder's question is broad, to split it into sub-questions and sources" },
+        { "ref": "library:user-research-planner", "type": "skill", "use": "brief", "when": "When you must choose between surveys, interviews and records for each question" },
+        { "ref": "library:study-design-and-randomizer", "type": "skill", "use": "build", "when": "When a comparison group or a waiting list is possible and needs a fair design" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When budget is small, to compare a light and a fuller evaluation with cost and dates" }
+      ]
+    },
+    {
+      "id": "outcome-measures",
+      "task": "Choose outcome measures and write the data collection plan",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/outcome-measures-and-data-plan", "use": "build", "when": "When the logic model is agreed and the team needs a few measures they can really collect" },
+        { "ref": "library:nonprofit-program-measurement-planner", "type": "skill", "use": "build", "when": "When you have goals and existing records and need tracking dates, owners and report rules" },
+        { "ref": "library:input-metric-picker", "type": "skill", "use": "check", "when": "When the measures are all end results, to add the inputs the team controls week to week" },
+        { "ref": "library:metric-definition-writer", "type": "skill", "use": "build", "when": "When a measure needs one agreed definition so two sites count it the same way" }
+      ]
+    },
+    {
+      "id": "before-after-survey",
+      "task": "Write matched before-and-after surveys",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/before-and-after-survey", "use": "build", "when": "When each outcome needs plain questions with the same wording, order and scale each time" },
+        { "ref": "library:sample-size-planner", "type": "skill", "use": "brief", "when": "Before writing, to see how many matched pairs you need to detect the change you hope for" },
+        { "ref": "library:questionnaire-writer", "type": "skill", "use": "build", "when": "When a staff or partner questionnaire is needed beside the participant survey" },
+        { "ref": "library:check-a-marketing-survey-before-sending-it", "type": "workflow", "use": "check", "when": "When the draft exists, to get a bias review, a shorter list and a pretest plan" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When participants are young or read little English, to simplify each question" }
+      ]
+    },
+    {
+      "id": "consent-page",
+      "task": "Write the survey consent and privacy page",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/survey-consent-and-privacy-page", "use": "build", "when": "Before any programme survey, interview or focus group goes out" },
+        { "ref": "library:new-data-use-screener", "type": "skill", "use": "check", "when": "When you start collecting something new, to see if it needs a full privacy review" },
+        { "ref": "library:privacy-impact-assessment-writer", "type": "skill", "use": "build", "when": "When the data covers children or health, to write the assessment with conditions and owners" }
+      ]
+    },
+    {
+      "id": "survey-round",
+      "task": "Run a survey round and check what came back",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/survey-round", "use": "build", "when": "At each collection point in the plan: before, after and any follow-up" },
+        { "ref": "kit:skills/before-and-after-survey", "use": "brief", "when": "When staff need the participant code and the rules for pairing answers explained" },
+        { "ref": "library:dataset-profiler", "type": "skill", "use": "check", "when": "When the returns arrive, to see missing values, odd entries and unusable columns" },
+        { "ref": "library:messy-spreadsheet-cleaner", "type": "skill", "use": "build", "when": "When answers were typed by hand and dates, numbers and spacing are inconsistent" }
+      ]
+    },
+    {
+      "id": "clean-records",
+      "task": "Clean and match attendance and survey records",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:data-cleaner", "type": "skill", "use": "build", "when": "When records have duplicates, blanks and wrong types that would skew the counts" },
+        { "ref": "library:spreadsheet-checker", "type": "skill", "use": "check", "when": "When the workbook has formulas, to reconcile totals and keep the formatting intact" },
+        { "ref": "library:data-file-clean-up-loop", "type": "agent", "use": "build", "when": "When the same messy export arrives each term and the cleaning rules should be saved" }
+      ]
+    },
+    {
+      "id": "analyse-data",
+      "task": "Analyse matched survey and outcome data",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/evaluation-report-and-funder-summary", "use": "build", "when": "When you have attendance, matched answers and outcome records to read outcome by outcome" },
+        { "ref": "library:julius", "type": "tool", "use": "build", "when": "When you need tables and charts from the export by asking in plain words" },
+        { "ref": "library:statistics-helper", "type": "skill", "use": "build", "when": "When you need the right test for a before and after change, explained plainly" },
+        { "ref": "library:prepare-a-survey-findings-briefing", "type": "workflow", "use": "build", "when": "When results must become a checked findings table with honest caveats on who answered" },
+        { "ref": "library:survey-answer-truth-checker", "type": "prompt", "use": "check", "when": "Before a result is reported, to score how far each question's answers can be trusted" },
+        { "ref": "library:agency-academic-statistician", "type": "agent", "use": "check", "when": "When the group is small, for an honest read of what the numbers can support" },
+        { "ref": "library:david-spiegelhalter", "type": "mind", "use": "think", "when": "When a change of a few points is about to be called an impact" }
+      ]
+    },
+    {
+      "id": "data-limits",
+      "task": "State what the data can and cannot show",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/what-this-data-cant-show", "use": "check", "when": "Before any report, funder update or board paper goes out" },
+        { "ref": "library:research-hypothesis-builder", "type": "skill", "use": "build", "when": "When a change is found, to list the rival explanations besides the programme" },
+        { "ref": "library:study-claim-checker", "type": "skill", "use": "check", "when": "When a draft claims the programme caused a change, to grade the evidence behind it" },
+        { "ref": "library:carl-sagan", "type": "mind", "use": "think", "when": "When everyone wants the result to be true and nobody has tried to explain it another way" }
+      ]
+    },
+    {
+      "id": "evaluation-report",
+      "task": "Write the evaluation report, outcome by outcome",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/evaluation-report-and-funder-summary", "use": "build", "when": "When the analysis is done and each outcome needs its numbers, limits and what was learned" },
+        { "ref": "kit:workflows/programme-year-evaluation-cycle", "use": "brief", "when": "When the report closes the year and must feed next year's plan" },
+        { "ref": "library:data-chart-drawer", "type": "skill", "use": "build", "when": "When an outcome needs one clean chart drawn from the programme's own data" },
+        { "ref": "library:agency-engineering-data-visualization-engineer", "type": "agent", "use": "check", "when": "When charts are drafted, to check the chart type and axes do not overstate the change" },
+        { "ref": "library:data-jargon-translator", "type": "skill", "use": "check", "when": "When the findings read like a statistics paper and trustees must understand them" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before sign-off, to tie every figure in the report to the data file it came from" },
+        { "ref": "library:tim-harford", "type": "mind", "use": "think", "when": "When a headline number needs its comparison and what it actually counts spelled out" }
+      ]
+    },
+    {
+      "id": "funder-summary",
+      "task": "Write a funder impact summary",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/evaluation-report-and-funder-summary", "use": "build", "when": "When the full report exists and a funder needs two honest pages" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When the funder reads one page, to put the answer first with the numbers behind it" },
+        { "ref": "library:infographic-maker", "type": "skill", "use": "explore", "when": "When the funder wants a visual one-pager, to try the summary as an infographic" },
+        { "ref": "library:hans-rosling", "type": "mind", "use": "think", "when": "When the summary quotes averages and hides how results were spread across people" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to read it as the funder and list every claim they would question" }
+      ]
+    },
+    {
+      "id": "funder-headings",
+      "task": "Map outcomes to each funder's headings",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/funder-outcome-headings-map", "use": "build", "when": "When several funders ask for different outcome headings and reports" },
+        { "ref": "library:align-recurring-report-metric-definitions", "type": "workflow", "use": "check", "when": "When two funders define the same measure differently, to reconcile with worked examples" },
+        { "ref": "library:nonprofit-grant-proposal-writer", "type": "skill", "use": "build", "when": "When the map feeds a new bid and the evaluation section must match the funder's rules" }
+      ]
+    },
+    {
+      "id": "participant-story",
+      "task": "Write a participant story from case notes",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/participant-story-from-notes", "use": "build", "when": "When a report needs one or two real stories that show how change happened" },
+        { "ref": "library:case-first-story-builder", "type": "skill", "use": "explore", "when": "When several cases could be told, to pick the one to build on and its surprise" },
+        { "ref": "library:nonprofit-ethical-impact-story-writer", "type": "skill", "use": "build", "when": "When the story names a person, to write it with consent and a way to withdraw" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before it is published, to check each detail of the story against the case notes" }
+      ]
+    },
+    {
+      "id": "monitoring-report",
+      "task": "Build the monthly monitoring report and dashboard",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:excel-monthly-rollup-builder", "type": "skill", "use": "build", "when": "When you have dated session records and need monthly counts and rates you can trace" },
+        { "ref": "library:recurring-kpi-report-maker", "type": "skill", "use": "build", "when": "When the same report must be rerun each month from the same sources" },
+        { "ref": "library:nonprofit-executive-dashboard-planner", "type": "skill", "use": "build", "when": "When staff and the board need two views of the measures, with owners and action points" }
+      ]
+    },
+    {
+      "id": "data-dictionary",
+      "task": "Write metric definitions and a data dictionary",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/outcome-measures-and-data-plan", "use": "brief", "when": "When the dictionary must list each measure's source, collector and timing" },
+        { "ref": "library:metric-definition-writer", "type": "skill", "use": "build", "when": "When each measure needs one written definition the whole team reuses" },
+        { "ref": "library:definition-tester", "type": "skill", "use": "check", "when": "When a measure rests on a word like engaged or completed, to test it on hard cases" }
+      ]
+    },
+    {
+      "id": "interview-evidence",
+      "task": "Gather and read interview evidence from participants",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:interview-and-research-planner", "type": "skill", "use": "build", "when": "When numbers cannot explain why change happened and you need a small interview plan" },
+        { "ref": "library:research-theme-synthesizer", "type": "skill", "use": "build", "when": "When interviews are done, to rank themes by how often they come up, with quotes" },
+        { "ref": "kit:prompts/survey-consent-and-privacy-page", "use": "check", "when": "Before any participant is interviewed or recorded" }
+      ]
+    },
+    {
+      "id": "evidence-review",
+      "task": "Review outside evidence that a programme model works",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:literature-reviewer", "type": "skill", "use": "build", "when": "When a funder asks what the research says, to review sources chosen by clear rules" },
+        { "ref": "library:cited-research-assistant", "type": "agent", "use": "build", "when": "When every claim in the review must carry a source or be marked unsourced" },
+        { "ref": "library:wellbeing-learning-link", "type": "skill", "use": "build", "when": "When a school wellbeing programme needs the evidence linking it to academic results" },
+        { "ref": "library:study-claim-checker", "type": "skill", "use": "check", "when": "When one study carries the case, to grade its design, bias and statistics" }
+      ]
+    },
+    {
+      "id": "board-learning",
+      "task": "Write a board paper on what to keep, change or stop",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:lessons-learned-note-writer", "type": "prompt", "use": "build", "when": "When the year is over and the team needs one page on what to repeat and what to change" },
+        { "ref": "library:nonprofit-executive-board-report-writer", "type": "skill", "use": "build", "when": "When trustees must make a decision and need results, risks and next steps" },
+        { "ref": "library:nonprofit-program-expansion-planner", "type": "skill", "use": "build", "when": "When results are good and the board asks if the programme is ready to grow" },
+        { "ref": "kit:prompts/what-this-data-cant-show", "use": "check", "when": "Before the paper goes to trustees, to state plainly what the evidence does not cover" }
+      ]
+    },
+    {
+      "id": "needs-baseline",
+      "task": "Plan a needs assessment or baseline",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:community-needs-research-planner", "type": "skill", "use": "build", "when": "When a new service needs a research plan, a map of other providers and gaps to check" },
+        { "ref": "library:classroom-action-research", "type": "skill", "use": "build", "when": "When a teacher wants to collect evidence on one question in their own classroom" },
+        { "ref": "kit:prompts/evaluation-scope-and-questions", "use": "brief", "when": "When the baseline must answer the same questions the final evaluation will ask" }
+      ]
+    },
+    {
+      "id": "training-transfer",
+      "task": "Check whether a course changed what people do",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:check-training-transfer-after-a-course", "type": "workflow", "use": "build", "when": "When a course has ended, to compare real work afterwards with the skills taught" },
+        { "ref": "kit:skills/before-and-after-survey", "use": "build", "when": "When learners should be asked the same questions before the course and after it" }
+      ]
+    },
+    {
+      "id": "annual-report-numbers",
+      "task": "Check the numbers in an annual or impact report",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:nonprofit-annual-report-planner", "type": "skill", "use": "build", "when": "When the yearly report is planned and facts, numbers and names need checking before print" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "When the draft is laid out, to give every number a dated source or cut it" },
+        { "ref": "kit:prompts/what-this-data-cant-show", "use": "check", "when": "When the report's headline claims more than the data can support" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before any report or summary leaves, to tie each figure and quote to a dated source" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a survey or report is shared, to catch typos and one outcome named two ways" }
+  ],
+  "helpers": [
+    { "role": "fundraising-specialist", "when": "When the findings must become a grant application or a report in a funder's own form" },
+    { "role": "data-analyst", "when": "When the data needs joining across systems or statistics beyond a before and after read" },
+    { "role": "customer-insights-researcher", "when": "When the evaluation needs focus groups or a full interview round with participants" },
+    { "role": "data-visualisation-specialist", "when": "When the report or dashboard needs designed charts, not one quick chart" },
+    { "role": "compliance-specialist", "when": "When data on children, health or vulnerable adults raises privacy or safeguarding duties" }
+  ],
+  "gaps": [
+    "The library is thin for this role: about 50 good fits, most of them general research and data items",
+    "Only one library item builds a logic model, and none offers two or three theory of change shapes to compare",
+    "No library item writes matched before-and-after surveys with participant codes or picks validated scales",
+    "No library item analyses paired before-and-after answers or reports effect sizes for small groups",
+    "No library item writes a consent and privacy page for surveys of children or vulnerable adults",
+    "No library item maps one set of outcomes to several funders' headings and report dates",
+    "No library item estimates cost per outcome or social return on investment",
+    "No library item designs an attendance and outputs tracker for sessions and participants",
+    "No library item removes names and identifying details from case notes before a story is written",
+    "No library item plans a focus group with programme participants or young people",
+    "No library item writes the monitoring and evaluation section of a grant proposal",
+    "No mind in the library is built on an evaluation thinker such as Michael Quinn Patton or Carol Weiss"
+  ]
+}

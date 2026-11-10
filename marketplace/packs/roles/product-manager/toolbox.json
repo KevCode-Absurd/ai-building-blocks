@@ -1,0 +1,279 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "product-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "problem-brief",
+      "task": "Turn customer notes into a one-page problem brief",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/problem-brief-from-notes", "use": "build", "when": "When you have interview notes, tickets or reviews and need one page before anyone designs" },
+        { "ref": "library:customer-interview-synthesizer", "type": "skill", "use": "brief", "when": "When the notes are long, to pull the patterns out before you write the brief" },
+        { "ref": "library:jobs-to-be-done-framer", "type": "skill", "use": "brief", "when": "When the problem reads like a feature wish, to find the job and the struggling moment" },
+        { "ref": "library:clayton-christensen", "type": "mind", "use": "think", "when": "When nobody can say what the customer used before and why they would switch" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the brief goes out, to tie every stated fact to a note, ticket or number" }
+      ]
+    },
+    {
+      "id": "first-version-scope",
+      "task": "Cut an idea to a small first version and size it",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/discovery-and-first-version-scope", "use": "build", "when": "When an idea or a pile of feedback needs a problem brief and a first-version scope" },
+        { "ref": "kit:workflows/idea-to-build-ready-spec", "use": "brief", "when": "When a founder asks what to build first and you need the steps from idea to spec" },
+        { "ref": "library:lean-product-shaping-coach", "type": "skill", "use": "build", "when": "When the scope keeps growing, to shape a six-week bet and list what to say no to" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When there are two honest ways to cut the scope, to see both with cost and dates" },
+        { "ref": "library:ai-assisted-work-estimator", "type": "skill", "use": "build", "when": "When the client asks how long the first version takes and the team builds with AI agents" },
+        { "ref": "library:plan-pre-mortem-runner", "type": "skill", "use": "check", "when": "Before the scope is agreed, to find the hidden guesses that would sink it" }
+      ]
+    },
+    {
+      "id": "prd",
+      "task": "Write a product requirements document for one feature",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/prd-and-user-stories", "use": "build", "when": "When the problem is agreed and the team needs a PRD with goals, scope and open questions" },
+        { "ref": "library:user-flow-mapper", "type": "skill", "use": "build", "when": "When the PRD needs the user's path drawn, with choices, error states and drop-off points" },
+        { "ref": "library:idea-four-risks-check", "type": "workflow", "use": "check", "when": "Before sign-off, to rate value, ease of use, build and business risk for the feature" },
+        { "ref": "library:marty-cagan", "type": "mind", "use": "think", "when": "When the PRD lists features to ship but never says which risk each one tests" }
+      ]
+    },
+    {
+      "id": "user-stories",
+      "task": "Write user stories with acceptance criteria",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/prd-and-user-stories", "use": "build", "when": "When the PRD is agreed and the team needs stories they can build and test from" },
+        { "ref": "library:user-story-writer", "type": "skill", "use": "build", "when": "When there is only a feature idea and you need stories with criteria and a sprint plan" },
+        { "ref": "library:job-story-writer", "type": "skill", "use": "explore", "when": "When user stories read like a wish list, to try the when, I want, so I can format" },
+        { "ref": "library:qa-test-scenario-writer", "type": "skill", "use": "check", "when": "When stories are written, to turn each into test steps and see which cannot be tested" }
+      ]
+    },
+    {
+      "id": "prioritise-backlog",
+      "task": "Prioritise a long backlog or request list",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/prioritise-and-roadmap", "use": "build", "when": "When a long list must become a short plan with each item scored and the scoring shown" },
+        { "ref": "library:priority-method-picker", "type": "skill", "use": "brief", "when": "Before scoring, to pick the ranking method that suits this backlog and this team" },
+        { "ref": "library:feature-priority-scorer", "type": "skill", "use": "build", "when": "When you need every feature scored for reach, impact, confidence and effort, then ranked" },
+        { "ref": "library:agency-product-sprint-prioritizer", "type": "agent", "use": "build", "when": "When the question is what fits next sprint given the team's real capacity" },
+        { "ref": "library:steve-jobs", "type": "mind", "use": "think", "when": "When everything scores about the same and the list needs a hard cut to one main job" }
+      ]
+    },
+    {
+      "id": "quarterly-roadmap",
+      "task": "Build a one-quarter roadmap tied to goals",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/quarterly-roadmap-cycle", "use": "brief", "when": "Before each quarter, to run planning, the request screen and the monthly update in order" },
+        { "ref": "kit:skills/prioritise-and-roadmap", "use": "build", "when": "When goals are set and each roadmap item must be written as a bet with a reason" },
+        { "ref": "library:okr-writer", "type": "skill", "use": "brief", "when": "When the quarter has no clear goals yet and the roadmap needs measurable results to aim at" },
+        { "ref": "library:opportunity-solution-tree", "type": "skill", "use": "brief", "when": "When you have an outcome but no clear route, to map opportunities, ideas and tests" },
+        { "ref": "library:build-an-outcome-based-roadmap-and-write-the-update", "type": "workflow", "use": "build", "when": "When the roadmap should be results to reach, not a feature list, with an update to send" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the quarter could go two ways, to put both plans on a page with dates and a pick" },
+        { "ref": "library:plan-pre-mortem-runner", "type": "skill", "use": "check", "when": "Before the roadmap is shared, to imagine it failed and name the reasons now" }
+      ]
+    },
+    {
+      "id": "request-screen",
+      "task": "Screen a feature request and reply with a reason",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/feature-request-screen", "use": "build", "when": "When a request arrives from a customer, sales or the founder and needs a clear answer" },
+        { "ref": "library:feature-request-screener", "type": "skill", "use": "build", "when": "When several requests arrive at once, to rule on each and show the full cost of a yes" },
+        { "ref": "library:set-a-six-week-product-bet-and-screen-requests-against-it", "type": "workflow", "use": "brief", "when": "When there is no rule to screen against, to set the current bet first" },
+        { "ref": "library:feature-request-no-writer", "type": "prompt", "use": "build", "when": "When the answer is no, to write a reply the customer accepts with the real reason" }
+      ]
+    },
+    {
+      "id": "customer-discovery",
+      "task": "Plan and run customer discovery interviews",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:customer-discovery-plan", "type": "skill", "use": "build", "when": "When you have an idea and need your guesses, who to talk to and questions that test them" },
+        { "ref": "library:customer-interview-coach", "type": "skill", "use": "check", "when": "When the questions invite polite praise, to rewrite them so answers are about real past acts" },
+        { "ref": "library:customer-interview-request", "type": "skill", "use": "build", "when": "When you must ask strangers or customers for a call and need the message to send" }
+      ]
+    },
+    {
+      "id": "demand-test",
+      "task": "Test demand for an idea before building it",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:leap-of-faith-assumption-finder", "type": "skill", "use": "brief", "when": "Before any test, to find the few guesses the plan stands on and rank the riskiest" },
+        { "ref": "library:mvp-experiment-planner", "type": "skill", "use": "build", "when": "When you know the riskiest guess and need the smallest test with a pivot or keep rule" },
+        { "ref": "library:pretotype-experiment-designer", "type": "skill", "use": "explore", "when": "When you want several cheap test types to compare, such as a landing page or pre-order" },
+        { "ref": "library:eric-ries", "type": "mind", "use": "think", "when": "When the team wants to build more before learning what customers actually do" }
+      ]
+    },
+    {
+      "id": "prototype-plan",
+      "task": "Plan a prototype and what to fake by hand",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:agency-engineering-rapid-prototyper", "type": "agent", "use": "build", "when": "When you need one thing to test, three to five features, a build schedule and pass marks" },
+        { "ref": "library:lovable", "type": "tool", "use": "build", "when": "When a clickable web app made by chat is enough to put in front of five users" },
+        { "ref": "library:check-a-prototype-before-user-testing", "type": "workflow", "use": "check", "when": "Before sessions start, to find test blockers and word the tasks neutrally" }
+      ]
+    },
+    {
+      "id": "success-metrics",
+      "task": "Set success and guardrail metrics for a feature",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/success-metrics-plan", "use": "build", "when": "Before building or launching, to agree how you will know it worked and what must not drop" },
+        { "ref": "library:north-star-metric-picker", "type": "skill", "use": "brief", "when": "When the product has no single number to steer by and feature goals do not add up" },
+        { "ref": "library:event-tracking-planner", "type": "skill", "use": "build", "when": "When the metric cannot be measured yet and engineers need an event list and names" },
+        { "ref": "library:customer-progress-measure-picker", "type": "skill", "use": "check", "when": "When the metrics count clicks, to check they measure the customer's progress" }
+      ]
+    },
+    {
+      "id": "experiment-design",
+      "task": "Design an A/B test or a feature-flag rollout",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:product-experiment-designer", "type": "skill", "use": "build", "when": "When you have a change to test and need a hypothesis, sample size and reading plan" },
+        { "ref": "library:ab-test-traffic-checker", "type": "skill", "use": "check", "when": "Before you commit to a test, to see if the traffic can prove anything and in how many weeks" },
+        { "ref": "library:sean-ellis", "type": "mind", "use": "think", "when": "When tests are many and small, to choose the one change tied to what users would miss" }
+      ]
+    },
+    {
+      "id": "experiment-readout",
+      "task": "Read out a finished experiment and make the call",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/experiment-readout", "use": "build", "when": "When a test or rollout has finished and you need a readout that ends in a decision" },
+        { "ref": "library:test-result-trust-checker", "type": "prompt", "use": "check", "when": "Before reading the lift, to decide whether the test's numbers can be trusted at all" },
+        { "ref": "library:a-b-test-verdict-maker", "type": "skill", "use": "check", "when": "When you have the raw test data and need a split check, ranges and a ship call" },
+        { "ref": "library:two-version-result-reader", "type": "prompt", "use": "build", "when": "When the owner needs the result of two versions explained in plain words" }
+      ]
+    },
+    {
+      "id": "launch-plan",
+      "task": "Plan and check a small release",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/release-and-readout", "use": "brief", "when": "When a feature is built and accepted and a launch date is agreed" },
+        { "ref": "kit:prompts/launch-checklist", "use": "check", "when": "In the week before release, to find gaps in support, tracking, payments and rollback" },
+        { "ref": "library:product-launch-planner", "type": "skill", "use": "build", "when": "When the release needs timing, channels and announcement copy in one plan" },
+        { "ref": "library:smaller-product-launch", "type": "workflow", "use": "explore", "when": "When the date is fixed and the scope is not, to see the launch at half the size" },
+        { "ref": "library:launch-checklist-runner", "type": "skill", "use": "check", "when": "When the release needs a staged rollout and a rollback plan written down" }
+      ]
+    },
+    {
+      "id": "stakeholder-update",
+      "task": "Write a roadmap update for stakeholders",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/roadmap-stakeholder-update", "use": "build", "when": "Monthly or at cycle end, to say what was done, what is next, what changed and why" },
+        { "ref": "library:roadmap-update-writer", "type": "skill", "use": "explore", "when": "When the same update must be told three ways, for executives, engineers and customers" },
+        { "ref": "library:executive-update-drafter", "type": "skill", "use": "build", "when": "When the update carries bad news, such as a slipped date or a cut feature" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before sending, to check each number and date in the update against its source" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the update goes to a board or client, to read it as they would and list what they must ask" }
+      ]
+    },
+    {
+      "id": "release-notes",
+      "task": "Write release notes and help content for a release",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:changelog-entry-writer", "type": "skill", "use": "build", "when": "When engineers hand you a list of merged changes and you need a clean changelog entry" },
+        { "ref": "library:roadmap-update-writer", "type": "skill", "use": "explore", "when": "When the notes must be written for customers, not engineers, in more than one version" },
+        { "ref": "library:help-article-writer", "type": "skill", "use": "build", "when": "When support will get questions on day one and needs a help article and FAQ ready" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the notes are full of internal names, to put them in words customers use" }
+      ]
+    },
+    {
+      "id": "ai-feature",
+      "task": "Plan and check an AI feature before it ships",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/ai-feature-responsible-launch", "use": "build", "when": "When a chatbot, summariser or recommender needs rules, failure tests and human review" },
+        { "ref": "library:ai-answer-testing-planner", "type": "skill", "use": "check", "when": "When you need a test plan with scores and human review to catch weak answers" },
+        { "ref": "library:privacy-impact-assessment-writer", "type": "skill", "use": "check", "when": "When the feature uses personal data, to write the assessment with conditions and owners" },
+        { "ref": "library:prepare-an-ai-pilot-go-decision", "type": "workflow", "use": "check", "when": "When the pilot has run, to compare results with the baseline and make a go or stop call" }
+      ]
+    },
+    {
+      "id": "feedback-triage",
+      "task": "Triage a pile of product feedback",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:feedback-pile-sorter", "type": "skill", "use": "build", "when": "When feedback sits in tickets, scores and calls, to get one ranked signal of need" },
+        { "ref": "library:weekly-product-feedback-triager", "type": "agent", "use": "build", "when": "When feedback arrives every week and each request needs counting and a ruling" },
+        { "ref": "kit:prompts/problem-brief-from-notes", "use": "build", "when": "When one theme keeps coming up and deserves its own problem brief" }
+      ]
+    },
+    {
+      "id": "competitor-compare",
+      "task": "Compare rivals' features, pricing and position",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:competitor-product-analyst", "type": "skill", "use": "build", "when": "When you have facts on one rival and need their features and pricing set against yours" },
+        { "ref": "library:competitor-battle-card-builder", "type": "skill", "use": "build", "when": "When you need a feature grid across several rivals for the team" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before sharing, to give every rival price and feature a dated source or cut it" }
+      ]
+    },
+    {
+      "id": "product-strategy",
+      "task": "Write a product strategy and vision",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:product-strategy-canvas-writer", "type": "skill", "use": "build", "when": "When the team needs vision, customers, trade-offs and metrics on one canvas" },
+        { "ref": "library:positioning-idea-generator", "type": "skill", "use": "explore", "when": "When the product could stand for several things, to compare ways to stand apart" },
+        { "ref": "library:real-strategy-checker", "type": "skill", "use": "check", "when": "When the strategy is drafted, to find where it is a goal list with no diagnosis" }
+      ]
+    },
+    {
+      "id": "activation-drop-off",
+      "task": "Find where new users drop off and plan the fix",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:new-user-drop-off-finder", "type": "skill", "use": "build", "when": "When you have visit, sign-up and day-30 numbers and need the biggest leak named" },
+        { "ref": "library:onboarding-improver", "type": "skill", "use": "build", "when": "When the leak is in the first session, to plan a faster path to first value" }
+      ]
+    },
+    {
+      "id": "feature-review",
+      "task": "Review a live feature and keep, fix or retire it",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:review-a-feature-and-plan-its-future", "type": "skill", "use": "build", "when": "When a feature has been live a while and you must decide to keep, improve or retire it" },
+        { "ref": "library:product-metrics-review-writer", "type": "skill", "use": "check", "when": "When you have the numbers, to show trends against targets and what moved" }
+      ]
+    },
+    {
+      "id": "minutes-and-decisions",
+      "task": "Turn meeting notes into minutes and a decision record",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:meeting-minutes-writer", "type": "skill", "use": "build", "when": "When you have rough notes and need decisions, actions with owners and open questions" },
+        { "ref": "library:narrative-decision-memo-writer", "type": "skill", "use": "build", "when": "When a product choice needs a memo with options, risks, missing facts and a review date" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before any document leaves, to tie each number and customer claim to a dated source" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a spec or update is shared, to catch typos and one feature named two ways" },
+    { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When you have made two or more options, to let a fresh reviewer pick one against the brief" }
+  ],
+  "helpers": [
+    { "role": "ux-designer", "when": "When the feature needs flows, wireframes or a usability test, not only a written spec" },
+    { "role": "product-analyst", "when": "When the decision rests on usage data, cohorts or a test that needs proper analysis" },
+    { "role": "customer-insights-researcher", "when": "When the problem needs a real interview or survey study before any scope is set" },
+    { "role": "software-engineer", "when": "When scope or estimate depends on how the system is built and what is hard to change" },
+    { "role": "product-marketing-manager", "when": "When the launch needs positioning, messaging and sales material beyond a checklist" },
+    { "role": "pricing-strategist", "when": "When the feature changes plans, tiers or what customers pay" }
+  ],
+  "gaps": [
+    "No library item writes a post-launch review that compares a release with its success metrics plan",
+    "No library item writes customer-facing release notes from a PRD; the changelog items start from code commits",
+    "No library item makes two or three clearly different first-version scopes for one idea to compare side by side",
+    "No library item checks a PRD for missing parts such as non-goals, guardrail metrics and open questions",
+    "No library item plans dependencies between teams for a roadmap or shows what blocks what",
+    "No library item runs a Kano or opportunity-score survey to rank features by customer need",
+    "No library item estimates software effort and cost from a written scope for a team that does not use AI agents"
+  ]
+}

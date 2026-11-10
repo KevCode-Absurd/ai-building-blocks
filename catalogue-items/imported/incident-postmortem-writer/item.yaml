@@ -1,6 +1,6 @@
 slug: incident-postmortem-writer
-name: Incident postmortem writer
-summary: Give it the facts of an outage. Get a blameless postmortem with timeline, causes and follow-up actions.
+name: Incident review writer
+summary: Give it the facts of an outage. Get a blame-free review with a timeline, causes and follow-up actions.
 category: general
 boards: []
 type: skill

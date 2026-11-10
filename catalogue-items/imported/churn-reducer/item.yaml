@@ -1,6 +1,6 @@
 slug: churn-reducer
-name: Churn reducer
-summary: Describe your product and why people leave. Get a cancel flow, save offers and a failed-payment recovery plan.
+name: Subscription cancellation prevention planner
+summary: Share your billing setup and why people cancel. Get a cancel flow, offers to keep them and a failed-payment recovery plan.
 category: general
 boards: []
 type: skill

@@ -99,7 +99,7 @@ export const INSIDER_TERMS = [
   ["agentic", "AI that takes steps by itself"], ["multi-agent", "several AIs working together"], ["subagent", "a helper AI"], ["sub-agent", "a helper AI"], ["embedding", "numbers that stand for meaning"], ["embeddings", "numbers that stand for meaning"],
   ["vector database", "a store for searching by meaning"], ["fine-tuning", "training a model on your examples"], ["fine-tune", "train a model on your examples"], ["prompt engineering", "writing instructions for an AI"],
   ["context window", "how much an AI can read at once"], ["token budget", "how much an AI can read at once"], ["guardrails", "safety rules"], ["evals", "tests for AI output"],
-  ["backlog", "the list of work waiting"], ["scrum", "a way of running work in short rounds"], ["kanban", "a board of work in columns"], ["retrospective", "a look back at what went well and badly"],
+  ["product backlog", "the list of work waiting"], ["sprint backlog", "the list of work waiting"], ["scrum", "a way of running work in short rounds"], ["kanban", "a board of work in columns"], ["retrospective", "a look back at what went well and badly"],
   ["postmortem", "a review of what went wrong"], ["post-mortem", "a review of what went wrong"], ["runbook", "written steps for a known problem"], ["idempotent", "safe to run twice"],
   ["refactor", "tidy code without changing what it does"], ["refactoring", "tidying code without changing what it does"], ["linting", "automatic code style checks"], ["monorepo", "one code store for many projects"],
   ["microservices", "an app split into small services"], ["observability", "seeing what a system is doing"], ["telemetry", "usage and health data"], ["middleware", "code that sits between two systems"],
@@ -176,9 +176,13 @@ export function acronymsIn(text) {
 /** True when the text itself says what the shorthand means: a bracket beside it, or the spelled-out words nearby. */
 export function explainedInField(term, text) {
   const t = String(text ?? ""), e = escape(term);
-  if (new RegExp(`${e}s?\\s*\\((?!s\\))[^)]{3,}\\)`, "i").test(t)) return true;         // KPI (the numbers you track)
-  if (new RegExp(`\\([^)]*\\b${e}s?\\)`, "i").test(t)) return true;                       // key performance indicators (KPIs)
-  if (new RegExp(`${e}s?,? (?:or|meaning|which means|that is|short for|stands for|is)\\b`, "i").test(t) && /^[A-Z0-9&/]+$/.test(term)) return true;
+  // "KPI (the numbers you track)", and "a REST API plan (a standard way for software to use yours)".
+  if (new RegExp(`(?<![A-Za-z0-9])${e}s?(?:\\s+[\\w.-]+){0,2}\\s*\\((?!s\\))[^)]{3,}\\)`, "i").test(t)) return true;
+  // The plain words first, the shorthand in brackets: "key performance indicators (KPIs)", "your sender records (SPF, DKIM and DMARC)".
+  if (new RegExp(`[a-z]\\s*\\([^)]*(?<![A-Za-z0-9])${e}s?(?![A-Za-z0-9])[^)]*\\)`, "i").test(t)) return true;
+  // Named as an example of a plain thing: "a security standard such as SOC 2 or ISO 27001".
+  if (new RegExp(`\\b(?:such as|called|known as|named)\\b[^.;:()]{0,70}(?<![A-Za-z0-9])${e}(?![A-Za-z0-9])`, "i").test(t)) return true;
+  if (new RegExp(`${e}s?,? (?:meaning|which means|that is|short for|stands for)\\b`, "i").test(t)) return true;
   // Spelled out: a run of words whose first letters make the acronym ("search engine optimisation" for SEO).
   const letters = term.replace(/[^A-Za-z]/g, "").toLowerCase();
   if (letters.length >= 2 && /^[A-Z0-9&/]+$/.test(term)) {

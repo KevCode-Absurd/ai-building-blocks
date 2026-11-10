@@ -1,7 +1,7 @@
-name: Evidence Collector agent
-summary: Check a website against its spec and get a QA report with screenshots, pass or fail results and a clear FAILED, NOT DETERMINED or READY call.
-headline: Evidence Collector agent
-subhead: Give it the spec and a link to your site, or screenshots you took. It checks each requirement and each button, form and menu against what the screenshots show. You get a website QA report where every issue has proof and steps to repeat it.
+name: Website spec and screenshot checker
+summary: Share a website and its spec. Get a test report with screenshots, pass or fail results and a clear failed, not determined or ready call.
+headline: Website spec and screenshot checker
+subhead: Give it the spec and a link to your site, or screenshots you took. It checks each requirement and each button, form and menu against what the screenshots show. You get a website test report where every issue has proof and steps to repeat it.
 job: test-and-fix-code
 thinking: high
 thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.

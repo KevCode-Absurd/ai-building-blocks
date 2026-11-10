@@ -1,6 +1,6 @@
 slug: api-contract-tester
 name: API contract tester
-summary: Give it an API and its users. Get tests that catch breaking changes between the two before they ship.
+summary: Share the API contract (the rules for how apps talk to your service), the change and affected apps. Get compatibility checks, local tests and gaps.
 category: general
 boards: []
 type: skill

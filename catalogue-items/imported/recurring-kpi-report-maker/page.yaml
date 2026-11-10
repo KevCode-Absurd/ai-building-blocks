@@ -1,11 +1,11 @@
 thinking: medium
 thinking_why: It defines metrics clearly and builds a repeatable sheet.
 new_slug: recurring-kpi-report-maker
-name: Recurring KPI report maker
-summary: Build a recurring KPI report from one plain sentence. You get a chat summary, an Excel workbook, and a saved report you can rerun.
+name: Recurring report maker
+summary: Describe a report and connect its data. Get checked numbers, a workbook and a saved report definition to rerun.
 job: track-numbers
-headline: Recurring KPI report maker
-subhead: Describe a report once in your own words and get the numbers pulled, a chat summary and an Excel workbook. The report definition is saved, so you can rerun it next week with one phrase.
+headline: Recurring report maker
+subhead: Describe the report and connect a data source or upload a file. The skill confirms the report spec, pulls and checks the numbers, then gives you a summary, workbook and saved definition to rerun.
 explain: |
   Describe a report once in your own words and get the numbers pulled, a chat summary and an Excel workbook. The report definition is saved, so you can rerun it next week with one phrase.
 

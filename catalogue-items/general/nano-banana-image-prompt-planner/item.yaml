@@ -1,6 +1,6 @@
 slug: nano-banana-image-prompt-planner
-name: Nano Banana image and edit prompt planner
-summary: Describe an image or edit. Get matching plain-language and JSON prompts with clear reference roles and changes.
+name: Nano Banana image prompt planner
+summary: Describe an image or edit. Get matching Nano Banana prompts in plain words and JSON (a structured format), with a role for each reference image.
 category: general
 type: skill
 role: make

@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It follows set steps but needs your setup details.
 new_slug: inbox-delivery-fixer
 name: Inbox delivery fixer
-summary: Fix emails landing in spam. Give it your sending domain and get SPF, DKIM and DMARC records plus a plan to improve email deliverability.
+summary: Share your sending domain. Get checks on your email sender records (SPF, DKIM and DMARC) and a staged repair plan.
 job: write-emails
 headline: Inbox delivery fixer
-subhead: A setup and repair plan so your emails reach the inbox, not the spam folder. You get the exact records to add for SPF, DKIM and DMARC, plus a way to watch your sender reputation.
+subhead: It checks the three records that prove your email is really from you (SPF, DKIM and DMARC). You get the settings to change at your domain host and steps to review. Good setup cannot promise inbox delivery.
 explain: |
   A setup and repair plan so your emails reach the inbox, not the spam folder. You get the exact records to add for SPF, DKIM and DMARC, plus a way to watch your sender reputation.
 

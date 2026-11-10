@@ -1,7 +1,7 @@
-name: RAG Pipeline Engineer agent
-summary: "Plan a RAG pipeline that finds the right passages in your documents: chunking, search setup and a question set to score each change."
-headline: RAG Pipeline Engineer agent
-subhead: RAG means your AI looks up passages in your own documents, then answers from them. Describe your documents and the questions people ask. It plans how to split, index and search them, and how to test each change. You get a build plan and a score sheet.
+name: AI document search planner
+summary: "Plan an AI that answers from your own documents. Get how to split and search them, plus a question set to score each change."
+headline: AI document search planner
+subhead: "Describe your documents and the questions people ask. It plans a setup where your AI looks up passages in your own documents and answers from them (often called RAG): how to split, index and search them, and how to test each change. You get a build plan and a score sheet."
 job: build-software
 thinking: high
 thinking_why: The role compares choices and checks evidence. Use a model that

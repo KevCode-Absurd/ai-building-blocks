@@ -1,11 +1,11 @@
 thinking: medium
 thinking_why: The steps are standard but order and risk calls depend on your setup.
 new_slug: site-go-live-runbook-writer
-name: Site go-live runbook writer
-summary: Write a site go-live runbook with launch checks, DNS cutover steps, post-launch watching and a rollback plan. Give it your scope, window and team.
+name: Website launch day plan writer
+summary: Share your launch scope, time and team. Get launch checks, steps to point your web address at the new site, and a rollback plan.
 job: ship-and-host
-headline: Site go-live runbook writer
-subhead: A launch day runbook the whole team can follow, with checks before launch, DNS cutover steps, watching after launch and a rollback plan. It stops launch day from running on memory and chat messages.
+headline: Website launch day plan writer
+subhead: A launch day plan the whole team can follow, with checks before launch, steps to point your web address at the new site, watching after launch and a rollback plan. It stops launch day from running on memory and chat messages.
 explain: |
   A launch day runbook the whole team can follow, with checks before launch, DNS cutover steps, watching after launch and a rollback plan. It stops launch day from running on memory and chat messages.
 

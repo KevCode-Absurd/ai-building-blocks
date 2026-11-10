@@ -1,6 +1,6 @@
 slug: cac-payback-checker
-name: "CAC payback checker"
-summary: "Give it CAC, margins and cohort profit. Get profit to CAC ratios, a scale-or-fix call, scored out of 100."
+name: Customer cost payback checker
+summary: Share ad spend, margins and customer profit. Get a score and a scale, hold or fix call on what customers cost to win.
 category: ecommerce
 boards: [ecommerce]
 type: skill

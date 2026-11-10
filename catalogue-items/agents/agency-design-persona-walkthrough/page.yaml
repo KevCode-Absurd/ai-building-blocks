@@ -1,6 +1,6 @@
-name: Persona Walkthrough Specialist agent
-summary: Get a persona walkthrough of your web page. See what a visitor thinks at each scroll, where they doubt or leave, and the fixes ranked.
-headline: Persona Walkthrough Specialist agent
+name: Simulated user walkthrough reviewer
+summary: Share your web page and a visitor profile. See what that visitor thinks at each scroll, where they doubt or leave, and the fixes ranked.
+headline: Simulated user walkthrough reviewer
 subhead: Give it your page and a short profile of one visitor. It reads the page as that person, one screen at a time, and writes what they think in their own words. You get scores, the moment they nearly left, and fixes ranked by effort.
 job: audit-landing-page
 thinking: high

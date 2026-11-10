@@ -1,6 +1,6 @@
 slug: wcag-accessibility-fixer
-name: WCAG accessibility fixer
-summary: Point it at your site code. Get WCAG 2.2 problems found, fixed and checked again.
+name: WCAG accessibility reviewer
+summary: Share site code or pages and a target level of WCAG (the web accessibility standard). It checks chosen issues and suggests fixes to retest.
 category: general
 boards: []
 type: skill

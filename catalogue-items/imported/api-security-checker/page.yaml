@@ -2,10 +2,10 @@ thinking: high
 thinking_why: Access rules fail in subtle ways that need careful reading.
 new_slug: api-security-checker
 name: API security checker
-summary: Check your API routes for sign-in, access and input gaps before you ship. Get a fix and a test for each gap in your API security review.
+summary: Share your API routes (the addresses other software calls). Get a check of sign-in, access rules and input, with fixes for each gap.
 job: secure-code
 headline: API security checker
-subhead: A check of your API routes from the moment a request arrives to the data it returns, with a fix for every gap it finds.
+subhead: Share routes, user and tenant rules, token details, data models and the approved test scope. It checks caller identity, object access, input, storage, rate limits and returned data. Get reproduced issues, focused fixes and the tests actually run. It keeps existing sign-in tools and marks untested paths. Snippets need app-specific setup; a parser test is not a full security audit.
 explain: |
   A check of your API routes from the moment a request arrives to the data it returns, with a fix for every gap it finds. It focuses on who the caller is, what they may touch and what they are allowed to send.
 

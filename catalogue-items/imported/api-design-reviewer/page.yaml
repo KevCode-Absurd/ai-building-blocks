@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It lints against rules and then judges design.
 new_slug: api-design-reviewer
 name: API design reviewer
-summary: Check your API spec before it ships. Get a graded scorecard, breaking changes and fixes for naming and errors in your API design review.
+summary: Give it your API spec (how other software uses yours). Get a scorecard, flagged breaking changes and fixes for naming and errors.
 job: test-and-fix-code
 headline: API design reviewer
-subhead: Give it your API spec file. It checks names, errors and URL shape, and flags changes that would break clients. You get a graded scorecard and a list of fixes.
+subhead: Share the current API spec (the description of how other software uses yours) and an earlier version for change checks. It runs the bundled naming, breaking-change and score tools, then reviews their findings and proposes fixes. Get tool reports, a design grade and open issues. The grade follows this skill's rules; it does not prove runtime security or client compatibility. Missing tools or specs prevent full sign-off.
 explain: |
   A scorecard for your API design, with a list of breaking changes and fixes for naming, errors and structure. It works best before an API ships, or before you plan a second version.
 

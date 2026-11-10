@@ -1,6 +1,6 @@
 slug: api-retry-handler
 name: API retry handler
-summary: Name the API. Get safe code for waiting, retrying and backing off when it says slow down.
+summary: Share the rules and failed replies of an API (a service your code calls). Get retry code with capped attempts that respects wait times.
 category: general
 boards: []
 type: skill

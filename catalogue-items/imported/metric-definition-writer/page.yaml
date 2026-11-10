@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: The format is strict, but the definition needs your business rules.
 new_slug: metric-definition-writer
 name: Metric definition writer
-summary: Write one agreed metric definition as checked YAML. Give it the calculation and who uses it. You get a checked YAML file for dbt that your teams can share.
+summary: Share a metric and how it is worked out. Get one agreed definition as a structured file, check results and questions for the data owner.
 job: document-work
 headline: Metric definition writer
-subhead: Give it a metric name, how it is calculated and who uses it. You get a filled YAML definition for dbt, a validation report and notes on edge cases, so two teams work from one written definition.
+subhead: Share the formula or query, data sources, reporting level and edge cases. It drafts a structured definition, checks required fields and references, and adapts it to your chosen data tool. You get a structured file (YAML) and check results when the tools run. The data owner still needs to approve the meaning; a valid file does not settle business disagreements.
 explain: |
   One agreed definition for a metric, written as YAML that a tool can check and your team can reuse. It gives your teams one written definition to check against when two teams run different queries for the same number.
 

@@ -2,10 +2,10 @@ thinking: low
 thinking_why: It maps page content to set markup types.
 new_slug: structured-data-writer
 name: Structured data writer
-summary: Write JSON-LD structured data for a page, with a checklist to test it in Google's Rich Results Test before you publish.
+summary: Give it visible page facts and page type. Get matching structured data (JSON-LD code that labels a page for search engines) to validate before use.
 job: build-websites
 headline: Structured data writer
-subhead: Give your AI a page and it writes JSON-LD, a block of code that tells search engines what the page is. It uses only facts shown on the page. You then test it in Google's Rich Results Test before you publish.
+subhead: Share visible page content, page type and any existing structured data. It picks a fitting type, drafts the code (JSON-LD, which labels a page for search engines) and checks it against the facts you gave. Validate before use; search engines decide special listings, and FAQ markup does not promise them.
 explain: |
   Search-engine markup for your page, written as JSON-LD you can paste in and test. It helps search engines understand what a page is, so it can qualify for rich results like star ratings, prices, FAQ answers or event dates.
 

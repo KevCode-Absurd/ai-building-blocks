@@ -1,6 +1,6 @@
 slug: metric-definition-writer
 name: Metric definition writer
-summary: Tell it how a metric is worked out. Get one agreed definition as checked YAML your team can reuse.
+summary: Share a metric and how it is worked out. Get one agreed definition as a structured file, check results and questions for the data owner.
 category: general
 boards: []
 type: skill

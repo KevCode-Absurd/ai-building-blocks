@@ -1,12 +1,12 @@
 new_slug: cac-payback-checker
-name: "CAC payback checker"
-summary: "Check your CAC payback: give it ad spend, margins and cohort profit. Get profit to CAC ratios, a scale, hold or fix call and a score out of 100."
+name: Customer cost payback checker
+summary: Share ad spend, margins and customer profit. Get a score and a scale, hold or fix call on what customers cost to win.
 job: track-numbers
 thinking: high
 thinking_why: "It mixes several time windows and two rule sets that disagree, so a stronger model keeps them apart and avoids false calls."
 
-headline: "CAC payback checker"
-subhead: Give it your CAC, order margins and the gross profit your customers bring in over 30, 90 and 180 days. It checks the first order, rates the profit to CAC ratio on each window, sets a target, ceiling and floor CAC, and calls scale, hold or fix. You get a score out of 100.
+headline: Customer cost payback checker
+subhead: Give it what you pay to win a customer, your order margins and the gross profit customers bring in over 30, 90 and 180 days. It rates profit against that cost for each period, sets a target, a ceiling and a floor, and calls scale, hold or fix. You get a score out of 100.
 
 explain: |
   CAC is what you pay to win a customer: total ad spend divided by new customers. Payback asks whether the profit from that customer covers the cost, and how fast. Two checks answer different questions. The first order check asks if each new customer is paid back at once. The window ratio (lifetime gross profit divided by CAC over 30, 90 or 180 days) asks how quickly.

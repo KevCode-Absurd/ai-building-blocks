@@ -1,6 +1,6 @@
-name: API Tester agent
-summary: Turn your API spec into a test plan with edge cases, auth checks and failure cases, plus starter test code to run on a test server.
-headline: API Tester agent
+name: API test planner
+summary: Share your API spec (how other software talks to yours). Get a test plan with edge cases, sign-in checks, failure cases and starter test code.
+headline: API test planner
 subhead: Paste your endpoint list or OpenAPI spec, how login works and a sample request and reply. It writes the test cases, the expected results and the failure checks, and gives starter code to run against a test environment you control.
 job: test-and-fix-code
 thinking: high

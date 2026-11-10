@@ -1,6 +1,6 @@
 slug: structured-data-writer
 name: Structured data writer
-summary: Give it a page. Get working JSON-LD markup for rich results, tested and ready to paste.
+summary: Give it visible page facts and page type. Get matching structured data (JSON-LD code that labels a page for search engines) to validate before use.
 category: general
 boards: []
 type: skill

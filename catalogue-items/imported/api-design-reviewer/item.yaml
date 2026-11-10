@@ -1,6 +1,6 @@
 slug: api-design-reviewer
 name: API design reviewer
-summary: Give it your API spec. Get a scorecard, flagged breaking changes and fixes for naming and errors.
+summary: Give it your API spec (how other software uses yours). Get a scorecard, flagged breaking changes and fixes for naming and errors.
 category: general
 boards: []
 type: skill

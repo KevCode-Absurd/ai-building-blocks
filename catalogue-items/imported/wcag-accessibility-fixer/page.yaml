@@ -1,11 +1,11 @@
 thinking: medium
 thinking_why: It scans with set rules, then fixes and rechecks.
 new_slug: wcag-accessibility-fixer
-name: WCAG accessibility fixer
-summary: Find and fix WCAG 2.2 accessibility problems in your website code, then scan again to check the fixes. Works with React, Vue, Angular and plain HTML.
+name: WCAG accessibility reviewer
+summary: Share site code or pages and a target level of WCAG (the web accessibility standard). It checks chosen issues and suggests fixes to retest.
 job: build-websites
-headline: WCAG accessibility fixer
-subhead: Give it your website code. It finds accessibility problems against WCAG 2.2 levels A and AA, fixes them, and scans again. The scan is pattern-based, so a clean result does not prove your site is compliant.
+headline: WCAG accessibility reviewer
+subhead: Provide code or a page, target level and test setup. It checks for patterns that people with disabilities can use, proposes changes and lists follow-up tests. Automated checks do not prove a site fully meets WCAG (the web accessibility standard).
 explain: |
   A website with its accessibility problems found, fixed and checked again, against WCAG 2.2 levels A and AA. That makes it usable for people with screen readers, keyboards or low vision, and lowers your legal risk.
 

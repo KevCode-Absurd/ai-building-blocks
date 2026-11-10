@@ -1,12 +1,12 @@
 new_slug: holdout-test-planner
 name: "Holdout test planner"
-summary: "Plan a holdout test to see if retargeting, email or a channel adds sales. Get the split, run time, read-out table and budget rule."
+summary: Name the channel or email you doubt. Get a holdout test (one group goes without, to compare), with the split, run time and budget rule.
 job: read-ad-results
 thinking: medium
 thinking_why: "It picks a design from clear rules and sets up a table, so a mid-size model works. Check the size sums."
 
 headline: "Holdout test planner"
-subhead: Name the channel, email, popup or program you doubt, and give your store size. It picks a holdout design, sets the split and run time, builds the table for reading the result, and writes the budget rule before the test starts.
+subhead: Name the channel, email, popup or program you doubt, and give your store size. It designs a test where one group goes without it, sets the split and run time, builds the table for reading the result, and writes the budget rule before the test starts.
 
 explain: |
   Ad platforms and email tools report sales they were credited with, not sales they caused. Retargeting is the classic case. People who already visited your store are likely to buy anyway, so the report looks great. A holdout shows the truth: keep a random group from seeing the thing, and compare.

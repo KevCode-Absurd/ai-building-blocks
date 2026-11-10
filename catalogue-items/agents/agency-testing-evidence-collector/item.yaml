@@ -1,6 +1,6 @@
 slug: agency-testing-evidence-collector
-name: Evidence Collector agent
-summary: "Check a website against its spec and get a QA report with screenshots, pass or fail results and a clear FAILED, NOT DETERMINED or READY call."
+name: Website spec and screenshot checker
+summary: Share a website and its spec. Get a test report with screenshots, pass or fail results and a clear failed, not determined or ready call.
 category: agent
 boards: []
 type: agent

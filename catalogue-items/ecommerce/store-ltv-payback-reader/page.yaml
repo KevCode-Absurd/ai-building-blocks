@@ -1,12 +1,12 @@
 new_slug: store-ltv-payback-reader
-name: "Store LTV and payback reader"
-summary: "Find your store's LTV and real CAC payback month from first-order cohorts by month. Get repeat rate, LTV and a score out of 100."
+name: Customer value and payback reviewer
+summary: Share first orders grouped by month. Get repeat rate, customer lifetime value, the month your cost to win them pays back and a score.
 job: track-numbers
 thinking: high
 thinking_why: "It reads a cohort table and several formulas that are easy to misapply, so a stronger model avoids wrong payback dates."
 
-headline: "Store LTV and payback reader"
-subhead: Give it your customers grouped by the month of their first order, with later orders and your margin and CAC. It works out retention, lifetime value per customer by month, and the real month your CAC pays back. You get a score out of 100.
+headline: Customer value and payback reviewer
+subhead: Give it your customers grouped by the month of their first order, with later orders, your margin and what you pay to win a customer. It works out how many keep buying, lifetime value by month and the real month that cost pays back. You get a score out of 100.
 
 explain: |
   Lifetime value (LTV) is the profit one customer brings you over their time with the store. Most stores work out payback by dividing CAC by one month's gross profit. That ignores customers who stop buying. In the lecture this skill draws on, the paper estimate came out much shorter than the real cohort payback. That is one lecture's claim, so check it against your own cohorts.

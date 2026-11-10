@@ -1,11 +1,11 @@
 thinking: medium
 thinking_why: It scores with set rules but needs sensible cutoffs.
 new_slug: customer-churn-risk-scorer
-name: Customer churn risk scorer
-summary: Find Shopify customers who are drifting away. Score each repeat buyer 0 to 100 by how overdue their next order is against their own buying rhythm.
+name: Shopify customer loss risk scorer
+summary: Run it on your Shopify orders. Get each repeat customer scored 0 to 100 for how overdue their next order is.
 job: run-your-store
-headline: Customer churn risk scorer
-subhead: Customers rarely say they are leaving. They just stop ordering. This reads your Shopify orders and scores each repeat customer from 0 to 100, based on how late their next order is compared with their usual rhythm.
+headline: Shopify customer loss risk scorer
+subhead: Customers rarely announce they are leaving. They just stop buying. This reads your Shopify orders and scores every repeat customer from 0 to 100 for the risk of losing them, based on how overdue they are. It needs a signed-in Shopify command-line session with the listed read permissions.
 explain: |
   A fixed rule like "no order in 90 days" treats every customer the same. Someone who buys every month is gone at 90 days. Someone who buys twice a year is not. This scorer uses each customer's own gap between orders.
 

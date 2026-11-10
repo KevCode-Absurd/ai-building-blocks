@@ -1,11 +1,11 @@
 thinking: medium
 thinking_why: It compares your setup with a fixed function list.
 new_slug: cybersecurity-profile-builder
-name: Cybersecurity profile builder
-summary: Build a NIST CSF profile from your security today and your goals. You get gaps, an implementation tier and a step by step plan.
+name: NIST cybersecurity profile builder
+summary: Say how you handle security now and your goals. Get a profile against the NIST framework (a US security standard), with gaps and steps.
 job: secure-code
-headline: Cybersecurity profile builder
-subhead: A written picture of where your security stands now, where you want it to be, and the steps between. It follows the NIST Cybersecurity Framework, a widely used framework from NIST.
+headline: NIST cybersecurity profile builder
+subhead: Share what you do now, where you want to be and the proof you have. It maps them to version 2.0 of the NIST Cybersecurity Framework (a US security standard) and compares the two. You get a list of gaps and what to do first. Missing proof stays unknown. This is not a certification.
 explain: |
   A written picture of where your security stands now, where you want it to be, and the steps between. It follows the NIST Cybersecurity Framework, a widely used framework from NIST.
 

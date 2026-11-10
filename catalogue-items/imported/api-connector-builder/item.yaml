@@ -1,6 +1,6 @@
 slug: api-connector-builder
 name: API connector builder
-summary: Name the service you need to reach. Get working code with sign-in, error handling and retries.
+summary: Name the service you need to reach. Get working code that calls its API (its door for other software), with sign-in, error handling and retries.
 category: general
 boards: []
 type: skill

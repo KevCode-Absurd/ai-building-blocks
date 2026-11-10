@@ -1,11 +1,11 @@
 thinking: medium
 thinking_why: It follows a process checklist and ties each step to your records.
 new_slug: business-data-move-runbook
-name: Business data move runbook
-summary: Plan a business data move from one tool to another. Get a field map, test import checks, a switch day checklist and a way back.
+name: Business data migration planner
+summary: Plan a business data move with field maps, test imports, final switch checks and a recovery plan.
 job: work-with-files
-headline: Business data move runbook
-subhead: Share the old and new tools, records and deadline. It plans a test move and the final switch, then checks how to keep new work if you move back. Get a runbook, checks and a recovery plan.
+headline: Business data migration planner
+subhead: Share the old and new tools, records and deadline. It plans a test move and the final switch, then checks how to keep new work if you move back. Get a step-by-step plan, checks and a recovery plan.
 not_for:
   - You are moving a few shared docs, like a Notion workspace. Copy them by hand and skip the runbook.
   - You need someone to run the move inside live systems. Hire an implementation partner or ask your tool vendor.

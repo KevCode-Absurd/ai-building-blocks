@@ -1,11 +1,11 @@
 thinking: medium
 thinking_why: It checks each step against a fixed list, then writes fixes.
 new_slug: sop-and-runbook-checker
-name: SOP and runbook checker
-summary: Check your SOPs and runbooks for missing owners, stale pages and gaps. Get a ranked cleanup list and draft SOPs to fill what's missing.
+name: Company procedure checker
+summary: Share your written procedures or a wiki export. Get missing owners, stale pages and gaps ranked, plus draft procedures to fill what's missing.
 job: document-work
-headline: SOP and runbook checker
-subhead: A list of the weak spots in your company procedures, with new SOPs written to fill the gaps. Give it your SOPs or a wiki export.
+headline: Company procedure checker
+subhead: A list of the weak spots in your company procedures, with new ones written to fill the gaps. Give it your written procedures or a wiki export. You get a ranked cleanup list.
 explain: |
   A list of the weak spots in your company procedures, with new SOPs written to fill the gaps. Give it your SOPs or a wiki export. It checks each one against the 5W2H questions: who, what, when, where, why, how and how much.
 

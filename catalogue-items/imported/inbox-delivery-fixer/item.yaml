@@ -1,6 +1,6 @@
 slug: inbox-delivery-fixer
 name: Inbox delivery fixer
-summary: Name your sending domain. Get SPF, DKIM and DMARC set up and a plan to stop emails landing in spam.
+summary: Share your sending domain. Get checks on your email sender records (SPF, DKIM and DMARC) and a staged repair plan.
 category: general
 boards: []
 type: skill

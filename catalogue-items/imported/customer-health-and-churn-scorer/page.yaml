@@ -1,11 +1,11 @@
 thinking: medium
 thinking_why: It scores with set formulas, then you read what they mean.
 new_slug: customer-health-and-churn-scorer
-name: Customer health and churn scorer
-summary: Score customer health, spot churn risk and find upsell chances for each SaaS account. Give it your customer data file and get ranked lists.
+name: Customer health and loss risk scorer
+summary: Share account data. Get a health score, a risk-of-leaving tier and signs of growth for each customer.
 job: understand-customers
-headline: Customer health and churn scorer
-subhead: Which accounts are healthy, which are about to leave and which are ready to grow? Give it your customer data and you get a health score, a churn risk and an upsell score for each account.
+headline: Customer health and loss risk scorer
+subhead: Share customer data. It scores each account's health, groups customers by how likely they are to leave and marks signs of possible growth for you to review.
 explain: |
   Which accounts are healthy, which are about to leave and which are ready to grow? Give it your customer data and you get a health score, a churn risk and an upsell score for each account.
 

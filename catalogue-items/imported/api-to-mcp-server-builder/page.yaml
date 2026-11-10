@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It maps an API to tools using a set method.
 new_slug: api-to-mcp-server-builder
 name: API to MCP server builder
-summary: Turn your OpenAPI spec into an MCP server in Python or TypeScript, so your AI can call your API as tools. Includes a check for common errors.
+summary: Share your API spec (what other software can ask yours to do). Get starter code for an MCP server (a connector AI assistants use).
 job: connect-tools
 headline: API to MCP server builder
-subhead: An MCP server that lets your AI use a real API, built from the API's own spec instead of hand-written wrappers. Give it an OpenAPI file and you get a server in Python or TypeScript that exposes each action as a tool.
+subhead: Share an OpenAPI spec and choose Python or TypeScript. It turns each action in your API (the way other software connects to yours) into a tool for MCP (a standard that lets AI assistants use software), creates a starter server and checks tool definitions. Get code, an input manifest and setup notes. Add real API calls, sign-in and runtime controls before use; the generated handlers start as stubs. Validation and live integration are separate checks.
 explain: |
   An MCP server that lets your AI use a real API, built from the API's own spec instead of hand-written wrappers. Give it an OpenAPI file and you get a server in Python or TypeScript that exposes each action as a tool.
 

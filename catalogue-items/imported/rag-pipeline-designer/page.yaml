@@ -1,11 +1,11 @@
 thinking: high
 thinking_why: Many linked choices affect answer quality.
 new_slug: rag-pipeline-designer
-name: RAG pipeline designer
-summary: Design a RAG pipeline from your own documents. Get chunking, embedding and vector database choices, plus retrieval scores that test the design.
+name: AI document search designer
+summary: Share your documents and test questions. Get a design for an AI that answers from them, with search scores to guide tuning.
 job: build-software
-headline: RAG pipeline designer
-subhead: A design for retrieving answers from your documents, backed by numbers from your own files rather than guesses. You get chunking, embedding and vector database choices, plus a test that shows how well retrieval works.
+headline: AI document search designer
+subhead: Give it documents, usage needs and questions with known answers. It measures retrieval, then uses scores to guide chunking and search choices.
 explain: |
   A design for retrieving answers from your documents, backed by numbers from your own files rather than guesses. You get chunking, embedding and vector database choices, plus a test that shows how well retrieval works.
 

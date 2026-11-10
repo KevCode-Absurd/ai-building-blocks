@@ -1,6 +1,6 @@
 slug: runbook-writer
-name: Runbook writer
-summary: Name a service. Get runbooks for deploy, incidents, maintenance and rollback, ready to edit.
+name: Service operations guide writer
+summary: Name your service. Get a guide to fill in, with sections for release, incidents, upkeep and rollback, as a text file you can edit.
 category: general
 boards: []
 type: skill

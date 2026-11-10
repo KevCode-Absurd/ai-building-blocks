@@ -1,6 +1,6 @@
 slug: code-refactor-planner
 name: Code refactor planner
-summary: Give it messy code. Get named refactoring moves to apply in small safe steps, without changing what it does.
+summary: Share code and tests. Get a refactor plan (small tidy-ups that keep the code doing the same thing).
 category: general
 boards: []
 type: skill

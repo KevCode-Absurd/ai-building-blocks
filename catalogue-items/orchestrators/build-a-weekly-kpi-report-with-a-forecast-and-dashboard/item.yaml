@@ -1,6 +1,6 @@
 slug: build-a-weekly-kpi-report-with-a-forecast-and-dashboard
-name: "Build a weekly KPI report with a forecast and dashboard"
-summary: "Describe the numbers you need each week. Get a report you can rerun, a trend and forecast, and a shareable dashboard."
+name: "Weekly metrics report and dashboard builder"
+summary: "Define the numbers to track each week. Build a report and forecast, then show both on one dashboard."
 category: orchestrator
 type: workflow
 role: orchestrate

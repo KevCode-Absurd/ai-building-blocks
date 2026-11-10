@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: It follows set patterns but depends on the other service.
 new_slug: api-connector-builder
 name: API connector builder
-summary: Name the service you need to reach and get working API connector code with sign-in, error handling and safe retries, ready to run.
+summary: Name the service you need to reach. Get working code that calls its API (its door for other software), with sign-in, error handling and retries.
 job: connect-tools
 headline: API connector builder
 subhead: Working code that talks to an outside service, with sign-in, error handling and retries already in it. Name the service you want to reach and describe what you need from it, and you get a connector you can run.

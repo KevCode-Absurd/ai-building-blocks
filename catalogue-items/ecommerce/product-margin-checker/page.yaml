@@ -1,12 +1,12 @@
 new_slug: product-margin-checker
 name: "Product margin checker"
-summary: "Check your product margin before you set ad targets. Give it a price and every cost. Get gross margin, break-even ROAS and CAC, and a score."
+summary: Give it a price and every cost. Get your true margin, the ad return and customer cost where you break even, and a score.
 job: track-numbers
 thinking: medium
 thinking_why: "It is careful arithmetic across many cost lines, and a mid-size model does that well if it shows its sums."
 
 headline: "Product margin checker"
-subhead: Give it a product's price and every cost, from the factory to the customer's door. It separates product margin, gross margin and contribution margin, then works out your break-even ROAS and break-even CAC. You get a go or no-go call and a score out of 100.
+subhead: Give it a product's price and every cost, from the factory to the customer's door. It separates three kinds of margin, then works out the lowest ad return and the highest cost per new customer you can afford. You get a go or no-go call and a score out of 100.
 
 explain: |
   Most owners quote "margin" as price minus what the factory charged. That is product margin, and it is the wrong number for setting ad targets. A $100 tee with a $30 unit cost looks like a 70% margin. Add freight, shipping to the customer, pick and pack, payment fees and an allowance for returns and discounts, and the same tee can be a 24% margin. Ads priced against 70% will lose money on every sale.

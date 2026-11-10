@@ -2510,6 +2510,12 @@ sku-ad-money-planner:
   name: Product ad budget planner
   reason: Replace a stacked label or specialist shorthand with the familiar job;
     keep the original scope.
+  summary: Give it stock days, costs and ad spend for each product. Get a stock
+    grade, an ad return target and a clearance plan for each.
+  subhead: Give it stock, days of stock, price, cost and ad spend for each
+    product. It grades stock A to D, sets an ad return target per grade, shows
+    which product earns most per sale, sorts products into four roles, and plans
+    a clearance sale for slow stock.
 sold-out-proof-line-writer:
   name: Sales evidence copy writer
   reason: Replace a stacked label or specialist shorthand with the familiar job;
@@ -2557,6 +2563,12 @@ store-ltv-payback-reader:
   reason: Uses a specific job role for the described output.
   aliases:
     - Customer value and payback review
+  summary: Share first orders grouped by month. Get repeat rate, customer lifetime
+    value, the month your cost to win them pays back and a score.
+  subhead: Give it your customers grouped by the month of their first order, with
+    later orders, your margin and what you pay to win a customer. It works out
+    how many keep buying, lifetime value by month and the real month that cost
+    pays back. You get a score out of 100.
 store-page-conversion-reader:
   name: Store page conversion analyst
   reason: Use a plain role instead of a goal, process label or output list; retain
@@ -6059,18 +6071,19 @@ animation-reviewer:
     against its motion standards. It does not apply fixes. Visual behaviour may
     still need browser, slow-motion and real-device checks before release.
 api-contract-tester:
-  summary: Share the API contract, change and affected apps. Get compatibility
-    checks, local tests and gaps that still need live proof.
+  summary: Share the API contract (the rules for how apps talk to your service),
+    the change and affected apps. Get compatibility checks, local tests and
+    gaps.
   reason: Keep technical job name. Current copy guarantees detection before anyone
     sees breakage; expose actual contracts/runtime-parser checks and limited
     consumer/mock coverage without reducing real test execution.
   name: API contract tester
-  subhead: Share the API rules, changed code and apps that use it. It checks
-    required fields, types, errors and supported version pairs, then builds
-    small local tests for both sides. Get a change assessment, test results,
-    failures and coverage gaps. Passing a mock does not prove the live service
-    matches; unknown clients stay untested. It does not deploy or migrate
-    anything.
+  subhead: Share the API rules (how apps talk to your service), changed code and
+    the apps that use it. It checks required fields, types, errors and supported
+    version pairs, then builds small local tests for both sides. Get a change
+    assessment, test results, failures and coverage gaps. Passing a mock does
+    not prove the live service matches; unknown clients stay untested. It does
+    not deploy or migrate anything.
 api-rate-limit-adder:
   summary: Share your routes and request limits. Get shared rate-limit code using
     Upstash Redis, with choices explained for each route.
@@ -6085,8 +6098,8 @@ api-rate-limit-adder:
     IDs and outage handling; the default timeout can let requests through. Rate
     limits do not replace sign-in.
 api-security-checker:
-  summary: Share your API routes. Get a check of sign-in, access rules and input,
-    with fixes for each gap.
+  summary: Share your API routes (the addresses other software calls). Get a check
+    of sign-in, access rules and input, with fixes for each gap.
   reason: Keep clear name/card. Current intro hides required identity/data/proxy
     context and actual evidence limits; add preserved identity provider, scope
     and reproduced-versus-untested boundaries.
@@ -6330,14 +6343,14 @@ code-ownership-analyst:
     is the only owner.
   reason: Tighten the existing card wording without changing the job or adding a claim.
 code-refactor-planner:
-  summary: Share code and tests. Get small refactoring steps that keep behavior
-    the same.
+  summary: Share code and tests. Get a refactor plan (small tidy-ups that keep the
+    code doing the same thing).
   reason: Removes certainty that tests pass; source says run existing tests before
     and after each small change.
   name: Code refactor planner
-  subhead: Share code and your test command. It spots code smells, names a
-    refactor for each and orders the steps. Run tests before and after each
-    change to check behavior.
+  subhead: Share code and your test command. It finds weak spots in the code,
+    names a tidy-up for each and orders the steps. Run tests before and after
+    each change to check the code still does the same thing.
 code-security-scanner:
   name: Code security scanner
   summary: Share authorized source code and scan scope. Get ranked security
@@ -6955,16 +6968,16 @@ memorable-message-writer:
   reason: Explains the six-trait method in plain language without promising
     audience recall.
 metric-definition-writer:
-  summary: Share a metric, calculation and business use. Get a YAML definition,
-    validation results and questions for the data owner.
+  summary: Share a metric and how it is worked out. Get one agreed definition as a
+    structured file, check results and questions for the data owner.
   reason: Oldagreeddefinitionandendargumentsclaimoverstatesformatvalidationandassumesorganisationalagreement.
     PreserveYAML/scaffoldingandframeworkscopewhilemakingownerreviewexplicit.
   name: Metric definition writer
   subhead: Share the formula or query, data sources, reporting level and edge
     cases. It drafts a structured definition, checks required fields and
-    references, and adapts it to the chosen data framework. You get YAML and
-    validation results when the tools run. The data owner still needs to approve
-    the meaning; a valid file does not settle business disagreements.
+    references, and adapts it to your chosen data tool. You get a structured
+    file (YAML) and check results when the tools run. The data owner still needs
+    to approve the meaning; a valid file does not settle business disagreements.
 microsoft-ads-account-auditor:
   summary: Share your Microsoft Ads exports. Get a checked audit of tracking,
     keywords, Google imports, audiences, bids and budgets.
@@ -7911,6 +7924,11 @@ copywriting-framework-writer:
   name: Marketing copy structure writer
   reason: Replace an abstract label with a familiar job name; preserve the
     existing stated tool and scope.
+  summary: Describe your offer. Get marketing copy in a proven structure such as
+    AIDA, PAS or BAB, with tone options and A/B variants to test.
+  subhead: Marketing copy written in a proven structure such as AIDA, PAS or BAB,
+    in the tone you pick, with A/B variants and stronger calls to action. You
+    see the same offer in different shapes and choose the best.
 role-skills-framework-builder:
   name: Job skills and level planner
   reason: Replace an abstract label with a familiar job name; preserve the
@@ -9154,8 +9172,8 @@ docs-backed-coder:
     prove code correctness.
 domain-and-dns-planner:
   name: Domain and DNS planner
-  summary: Share your domain list and service needs. Get DNS records, redirect
-    maps, and renewal plans.
+  summary: Share your domain list and service needs. Get DNS records (the settings
+    that point each web address), redirect maps and renewal plans.
   subhead: Bring domain status, roles, providers, and linked service needs. It
     groups domains by role and reviews current settings. It picks main addresses
     and maps permanent redirects. Get record standards, unused-domain plans, and
@@ -16506,13 +16524,13 @@ turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature:
     - Sales-call proposal, margin and next-step planner
 turn-a-spec-into-a-tested-service-with-api-docs:
   name: API service and test builder
-  summary: Share the service spec, code environment and limits. Get a starter
-    project, service code, route tests and API docs, with actual run results.
+  summary: Share the service spec and limits. Get a starter project, service code,
+    route tests and docs for its API (how other software uses it).
   subhead: It sets up the project, builds the service, checks route coverage and
-    writes the API spec from the code. You get files and failed or blocked
-    checks. Test files are not passing test results. Missing tools or
-    dependencies limit execution, and a starter service is not automatically
-    ready for production.
+    writes the spec for its API (the way other software uses it) from the code.
+    You get files and failed or blocked checks. Test files are not passing test
+    results. Missing tools or dependencies limit execution, and a starter
+    service is not automatically ready for production.
   reason: Uses a short, scoped job title without claiming an outcome.
   aliases:
     - Service starter, API test and documentation builder
@@ -16542,8 +16560,9 @@ turn-a-worked-example-into-independent-practice:
     - Worked-example practice sequence and understanding-check builder
 turn-an-api-into-a-safe-mcp-server-others-can-install:
   name: API-to-MCP server release builder
-  summary: Share the API spec, access rules and hosting limits. Get server code,
-    OAuth sign-in, security findings and a release path after fixes.
+  summary: Share your API spec (how other software connects to yours). Get an MCP
+    server (a connector AI assistants can use), with sign-in and security
+    findings.
   subhead: It builds the server, pauses for startup checks, adds sign-in and
     reviews the final code. Required fixes and another real run come before
     packaging or hosting. You get files, results and open risks. A review does
@@ -19368,14 +19387,14 @@ fix-a-static-ad-then-clear-it-to-run:
     - Image ad critique, rewrite and launch review
 fix-api-security-gaps-with-tests-and-a-clear-pull-request:
   name: API security repair reviewer
-  summary: Review API sign-in, access and input checks, make fixes and review the
-    tests and change risk before writing the pull request.
-  subhead: Share the API code, intended access rules and testing setup. It finds
-    route-level security gaps and writes fixes, then identifies missing
-    regression checks. You add and run tests and resolve failures before it
-    reviews risk and writes the pull request. You get four step files with
-    changes and evidence. Unrun tests remain visible; a scoped review is not a
-    guarantee the API has no other weaknesses.
+  summary: Share your API code (the part other software connects to). Get sign-in,
+    access and input gaps fixed, tests reviewed and a pull request written.
+  subhead: Share the API code (the part of your software that others connect to),
+    intended access rules and testing setup. It finds security gaps route by
+    route and writes fixes, then lists missing tests. You add and run tests and
+    resolve failures before it reviews risk and writes the pull request. You get
+    four step files with changes and evidence. Unrun tests remain visible; a
+    scoped review is not a guarantee the API has no other weaknesses.
   reason: Replace a task phrase or vague label with a plain role; retain the
     specific domain and tool.
   aliases:
@@ -21459,14 +21478,15 @@ ai-answer-testing-planner:
     and regression methods;state the illustrative code/dependency limit.
 ai-app-guardrails-builder:
   name: NeMo Guardrails safety rule builder
-  summary: Describe your app’s limits. Get NeMo Guardrails rules and test cases
-    for inputs, outputs, private data and unsupported claims.
-  subhead: Share the app’s policies, examples, model setup and data limits. It
-    maps checks to input, output and retrieval flows, then connects the
-    detectors and verification services those rules need. Get NeMo Guardrails
-    configuration, integration guidance and test cases. A compatible runtime and
-    approved models are required. The rules can miss problems or block valid
-    requests, so they need testing.
+  summary: Describe your app's limits. Get rules for NeMo Guardrails (NVIDIA's
+    safety rules tool for AI apps), with test cases for inputs, outputs and
+    private data.
+  subhead: Share the app's policies, examples, model setup and data limits. It
+    maps checks to what users send in, what the app sends back and what it looks
+    up, then connects the detectors those rules need. Get a setup for NeMo
+    Guardrails (NVIDIA's safety rules tool for AI apps), integration guidance
+    and test cases. A compatible runtime and approved models are required. The
+    rules can miss problems or block valid requests, so they need testing.
   reason: Remove guarantees that rules block all jailbreaks,made-up facts and
     private-data leaks. Name NeMo Guardrails,its runtime/integration
     requirements and the source’s own false-positive/missed-error limits.
@@ -22166,26 +22186,27 @@ anti-ai-slop-copy-editor:
     non-authorship boundary and no-new-claims rule explicit.
 api-design-reviewer:
   name: API design reviewer
-  summary: Give it your API spec. Get a scorecard, flagged breaking changes and
-    fixes for naming and errors.
-  subhead: Share the current API spec and an earlier version for change checks. It
-    runs the bundled naming, breaking-change and score tools, then reviews their
-    findings and proposes fixes. Get tool reports, a design grade and open
-    issues. The grade follows this skill’s rules; it does not prove runtime
-    security or client compatibility. Missing tools or specs prevent full
-    sign-off.
+  summary: Give it your API spec (how other software uses yours). Get a scorecard,
+    flagged breaking changes and fixes for naming and errors.
+  subhead: Share the current API spec (the description of how other software uses
+    yours) and an earlier version for change checks. It runs the bundled naming,
+    breaking-change and score tools, then reviews their findings and proposes
+    fixes. Get tool reports, a design grade and open issues. The grade follows
+    this skill's rules; it does not prove runtime security or client
+    compatibility. Missing tools or specs prevent full sign-off.
   reason: Clear name/card retained. Source explicitly requires three tool outputs
     before sign-off; make needed old/new specs, tool process and own-grade
     limits visible instead of generic score promise.
 api-retry-handler:
   name: API retry handler
-  summary: Share API rules and failed responses. Get bounded retry code that
-    respects wait times and checks whether an action can be repeated.
-  subhead: Share the API docs, request types and time limits. It sorts retryable
-    failures, reads wait headers and adds capped attempts with random backoff.
-    Writes need a documented way to avoid repeating an action. Get code and
-    checks for limits and failures. A retry-wait budget does not stop a hung
-    call; add a network timeout. Distributed limits need shared state.
+  summary: Share the rules and failed replies of an API (a service your code
+    calls). Get retry code with capped attempts that respects wait times.
+  subhead: Share the docs for the API (the service your code calls), request types
+    and time limits. It sorts failures worth retrying, reads wait headers and
+    adds capped attempts with random waits between them. Writes need a
+    documented way to avoid repeating an action. Get code and checks for limits
+    and failures. A retry-wait budget does not stop a hung call; add a network
+    timeout. Limits shared across servers need shared state.
   reason: Keep exact technical job. Replace no-crash/no-duplicate/safe guarantee
     with replay conditions, header/budget process and single-call timeout
     boundary explicit in source.
@@ -22218,14 +22239,15 @@ api-test-suite-builder:
     generated-versus-run boundary without narrowing test generation.
 api-to-mcp-server-builder:
   name: API to MCP server builder
-  summary: Share an OpenAPI spec. Get tool definitions and starter server code in
-    Python or TypeScript, with checks and next build steps.
-  subhead: Share an OpenAPI spec and choose Python or TypeScript. It maps API
-    actions into MCP tools that AI assistants can call, creates a starter server
-    and checks tool definitions. Get code, an input manifest and setup notes.
-    Add real API calls, sign-in and runtime controls before use; the generated
-    handlers start as stubs. Validation and live integration are separate
-    checks.
+  summary: Share your API spec (what other software can ask yours to do). Get
+    starter code for an MCP server (a connector AI assistants use).
+  subhead: Share an OpenAPI spec and choose Python or TypeScript. It turns each
+    action in your API (the way other software connects to yours) into a tool
+    for MCP (a standard that lets AI assistants use software), creates a starter
+    server and checks tool definitions. Get code, an input manifest and setup
+    notes. Add real API calls, sign-in and runtime controls before use; the
+    generated handlers start as stubs. Validation and live integration are
+    separate checks.
   reason: Keep recognisable technical job and explain MCP. Original copy implies a
     working API wrapper directly from spec; actual generator emits todo handlers
     and method requires endpoint-specific runtime logic.
@@ -22436,7 +22458,7 @@ assumption-stress-test:
     downside, sensitivity and hedge process rather than only a break-it
     metaphor.
 attribution-model-chooser:
-  name: Marketing attribution analyst
+  name: Marketing channel credit analyst
   summary: Share sales and channel data. Get a credit model, an explanation of
     report gaps or code to link visits with sales.
   subhead: Share the business, sales cycle, channel reports and conversion
@@ -22448,6 +22470,7 @@ attribution-model-chooser:
   reason: Uses a short role for the stated work.
   aliases:
     - Marketing attribution guide and builder
+    - Marketing attribution analyst
 audience-profile-analyst:
   name: Apify social audience analyst
   summary: Share a social account and research goal. With Apify access, collect
@@ -23203,7 +23226,7 @@ branded-video-captions:
     media access/editor, preserving real clip/font verification and blocked
     checks.
 break-even-roas-and-cpa-calculator:
-  name: Break-even ROAS and CPA calculator
+  name: Break-even ad spend calculator
   summary: Share order value, costs and ad figures. Get ad-cost limits, a matching
     cost check and clear gaps before choosing a test.
   subhead: Share average order value and the margin left before ads. Add matching
@@ -23215,6 +23238,8 @@ break-even-roas-and-cpa-calculator:
   reason: Repin root-approved own repair after complete revised primary/page read
     and follow-up fragments; remove obsolete hold wording while preserving
     original failed case and limited verification.
+  aliases:
+    - Break-even ROAS and CPA calculator
 breaking-change-reviewer:
   name: Breaking change reviewer
   summary: Share a planned change and usage evidence. Get affected groups,
@@ -23712,17 +23737,20 @@ developer-quickstart-writer:
   reason: Remove assured minute-level success and align firstvalue with the
     detailedguide’suseful-result definition, notmerelyanyAPIresponse.
 diagram-maker:
-  name: Dark-theme SVG diagram maker
-  summary: Describe a system, process or idea. Get a dark-theme SVG diagram and,
-    with the conversion tool, a PNG copy.
+  name: Dark-theme diagram maker
+  summary: Describe a system, process or idea. Get a dark-theme diagram as an SVG
+    file (an image that stays sharp at any size).
   subhead: Bring the parts, links or steps to show. It chooses a diagram type,
-    plans the layout and writes one SVG file with local styles. It checks
-    spacing and can make a high-resolution PNG with the required tool. Fonts may
-    use a remote import or system fallback, so appearance can vary. Unrendered
-    files still need a visual check.
+    plans the layout and writes one SVG file (an image that stays sharp at any
+    size) with local styles. It checks spacing and can make a high-resolution
+    PNG with the required tool. Fonts may use a remote import or system
+    fallback, so appearance can vary. Unrendered files still need a visual
+    check.
   reason: Keep actual SVG/PNG capability but remove everywhere-identical and
     all-fonts-embedded claims; primary explicitly allows GoogleFonts
     import/systemfallback.
+  aliases:
+    - Dark-theme SVG diagram maker
 dialpad-and-leexi-call-summarizer:
   name: Dialpad and Leexi call summarizer
   summary: Choose a call. Get main points, decisions, promises and next steps from
@@ -27562,7 +27590,7 @@ business-data-move-runbook:
     checks and a recovery plan.
   subhead: Share the old and new tools, records and deadline. It plans a test move
     and the final switch, then checks how to keep new work if you move back. Get
-    a runbook, checks and a recovery plan.
+    a step-by-step plan, checks and a recovery plan.
   reason: Names the stated work as a concise job role.
   aliases:
     - Business data move runbook
@@ -27920,15 +27948,17 @@ customer-call-prep-writer:
     access to Common Room account and contact signals."
   reason: Names the required Common Room connection that supplies the account research.
 customer-churn-risk-scorer:
-  name: Customer churn risk scorer
-  summary: Run it on your customers. Get each one scored for churn risk from how
-    often they buy and how long since.
+  name: Shopify customer loss risk scorer
+  summary: Run it on your Shopify orders. Get each repeat customer scored 0 to 100
+    for how overdue their next order is.
   subhead: Customers rarely announce they are leaving. They just stop buying. This
-    reads your Shopify orders and scores every repeat customer for churn risk,
-    from 0 to 100, based on how overdue they are. Requires an authenticated
-    Shopify CLI session with the listed read scopes.
+    reads your Shopify orders and scores every repeat customer from 0 to 100 for
+    the risk of losing them, based on how overdue they are. It needs a signed-in
+    Shopify command-line session with the listed read permissions.
   reason: Clarifies that this workflow reads live Shopify data and requires an
     authenticated session/scopes.
+  aliases:
+    - Customer churn risk scorer
 customer-cohort-reader:
   name: Shopify repeat purchase checker
   summary: Connect Shopify. Compare repeat purchases and sales by the month each
@@ -28151,15 +28181,16 @@ customer-path-mapper:
   reason: Clarifies actual input, process and output with source-specific access
     or validation limits.
 customer-segment-builder:
-  name: Customer RFM segment builder
-  summary: Run read-only recency, frequency and spend scoring on Shopify
-    customers. Get RFM scores, named customer segments and an optional tag
-    preview.
+  name: Shopify customer segment builder
+  summary: Score Shopify customers, read-only, by how recently, how often and how
+    much they buy. Get named customer groups and an optional tag preview.
   subhead: Not all customers deserve the same email. This scores each Shopify
     customer on how recently they bought, how often, and how much they spent,
     then sorts them into groups from Champions to Lost.
   reason: The intro is clarified to name the actual inputs, process or output
     without claiming unverified work.
+  aliases:
+    - Customer RFM segment builder
 customer-tag-bulk-updater:
   name: Customer tag bulk updater
   summary: Pick customers and tags. Get tags added or removed across the whole
@@ -28632,14 +28663,17 @@ requirements-question-asker:
   aliases:
     - Requirements question asker
 retention-cohort-analyst:
-  name: Retention cohort analyst
+  name: Sign-up group retention analyst
   summary: Give it user activity data. Get retention curves by sign-up group,
     feature adoption trends and what they suggest.
   subhead: Share user activity with sign-up groups and time periods. It checks the
-    data, calculates retention and feature use by cohort, then charts changes
-    and suggests follow-up questions. It reports patterns, not causes.
+    data, works out retention and feature use for each sign-up group, then
+    charts changes and suggests follow-up questions. It reports patterns, not
+    causes.
   reason: The current intro says what the charts show but omits cohort
     calculations and data checks.
+  aliases:
+    - Retention cohort analyst
 retention-heatmap-maker:
   name: Retention heatmap maker
   summary: Give it signup and activity dates. Get retention by group over time, as
@@ -29405,15 +29439,18 @@ subscription-payback-checker:
   reason: The copy omitted the month-3/month-6 cohort prerequisite that gates
     scoring; the revision states required data and the no-score condition.
 subscription-unit-economics:
-  name: India subscription unit economics analyst
-  summary: Share Indian subscription data. Get cohort, retention, LTV-to-CAC and
-    payback analysis in Indian fiscal years and lakh or crore.
-  subhead: Share Indian customer, revenue, margin and acquisition data. It builds
-    an ARR bridge and cohort view, checks retention and payback, and uses
-    April-to-March years with lakh or crore values.
+  name: India subscription customer value analyst
+  summary: Share Indian subscription data. See how long customers stay, what each
+    is worth against the cost to win them, and when that cost pays back.
+  subhead: Share Indian customer, revenue, margin and marketing spend data. It
+    shows how recurring income changed, groups customers by the month they
+    joined, and checks how long they stay and when they pay back their cost. It
+    uses April-to-March years with lakh or crore values.
   reason: The source is explicitly India-only, but the current copy hid that
     market scope and its fiscal-year/unit rules; the revision makes them
     visible.
+  aliases:
+    - India subscription unit economics analyst
 team-capacity-planner:
   name: Team capacity planner
   summary: Give it your team and projects. Get workload against people, who is
@@ -29914,13 +29951,13 @@ wordless-video-ad-opening-writer:
     from frame plans. Keeps the source’s staged approval process.
 schema-markup-writer:
   name: Schema markup writer
-  summary: Share your page type and visible content. Get JSON-LD markup,
-    missing-field checks and steps to test it before publishing.
-  subhead: Provide the page details, URLs and supported facts such as product
-    price or article author. It fills structured-data templates and checks
-    fields, formats and unresolved placeholders. Get draft JSON-LD and testing
-    steps. Passing a local format check does not establish search-engine
-    eligibility or guarantee rich results.
+  summary: Share your page type and content. Get schema markup (code that tells
+    search engines what a page is about), field checks and test steps.
+  subhead: Provide the page details, links and facts you can back up, such as
+    product price or article author. It fills in schema markup (code that labels
+    a page for search engines), then checks fields and formats. You get draft
+    code and testing steps. Passing a format check does not guarantee special
+    search listings.
   reason: Removes ready-to-paste and checked implications that can overstate local
     validation. Names truthful visible content, missing inputs and external
     testing as the actual method boundary.
@@ -29934,14 +29971,16 @@ tiktok-research-collector:
   reason: Current intro calls itself a web collector but omits the paid access and
     result flow. Revised to state the required input, collection and output.
 incident-postmortem-writer:
-  name: Incident postmortem writer
-  summary: Give it the facts of an outage. Get a blameless postmortem with
+  name: Incident review writer
+  summary: Give it the facts of an outage. Get a blame-free review with a
     timeline, causes and follow-up actions.
   subhead: Give it incident notes, times and impact. It builds a timeline, checks
     causes against evidence, and drafts actions with owners. Open facts stay
     open.
   reason: Current introduction misses source-backed inputs, process, output or
     safeguards; revised for clarity.
+  aliases:
+    - Incident postmortem writer
 repricing-rules-designer:
   name: Repricing rules designer
   summary: Give it your margins and stock. Get safe automatic price rules, test
@@ -30490,12 +30529,13 @@ hyperliquid-market-data-reader:
   reason: Corrects website collection and qualifies available/live fields.
 structured-data-writer:
   name: Structured data writer
-  summary: Give it visible page facts and page type. Get matching JSON-LD to
-    validate; markup does not promise a rich result.
-  subhead: Share visible page content, page type and existing JSON-LD. It selects
-    fitting schema, drafts JSON-LD and checks it against supplied facts.
-    Validate before use; search engines decide rich results, and FAQ markup does
-    not promise them.
+  summary: Give it visible page facts and page type. Get matching structured data
+    (JSON-LD code that labels a page for search engines) to validate before use.
+  subhead: Share visible page content, page type and any existing structured data.
+    It picks a fitting type, drafts the code (JSON-LD, which labels a page for
+    search engines) and checks it against the facts you gave. Validate before
+    use; search engines decide special listings, and FAQ markup does not promise
+    them.
   reason: Removes tested/ready and FAQ result promises.
 famous-engineer-code-reviewer:
   name: Engineering principle code reviewer
@@ -30973,10 +31013,11 @@ web-form-designer:
     details clear.
 inbox-delivery-fixer:
   name: Inbox delivery fixer
-  summary: Share your sending domain. Get SPF, DKIM and DMARC checks plus a staged
-    repair plan.
-  subhead: It checks SPF, DKIM and DMARC, then gives DNS and review steps. Good
-    setup cannot promise inbox delivery.
+  summary: Share your sending domain. Get checks on your email sender records
+    (SPF, DKIM and DMARC) and a staged repair plan.
+  subhead: It checks the three records that prove your email is really from you
+    (SPF, DKIM and DMARC). You get the settings to change at your domain host
+    and steps to review. Good setup cannot promise inbox delivery.
   reason: Simplified the flagged sentence while keeping the task and key technical
     details clear.
 understanding-check-questions:
@@ -31075,8 +31116,8 @@ idea-to-business-guide:
     - Idea to business guide
 lead-magnet-planner:
   name: Lead magnet planner
-  summary: Describe your buyer, business and goal. Get lead magnet ideas, a
-    recommended pick, a signup page and follow-up emails.
+  summary: Describe your buyer, business and goal. Get lead magnet ideas (free
+    items people sign up for), a top pick, a signup page and follow-up emails.
   subhead: Share your business, buyer, content and goal. The skill matches offer
     ideas to the buyer’s needs, then drafts a signup page and follow-up email
     plan.
@@ -31331,7 +31372,7 @@ content-topic-planner:
     though audience evidence depends on the information supplied. The revision
     states the inputs and deliverables without promising reader demand.
 recurring-kpi-report-maker:
-  name: Recurring KPI report maker
+  name: Recurring report maker
   summary: Describe a report and connect its data. Get checked numbers, a workbook
     and a saved report definition to rerun.
   subhead: Describe the report and connect a data source or upload a file. The
@@ -31340,6 +31381,8 @@ recurring-kpi-report-maker:
   reason: The current copy does not say the user must connect a data source or
     upload a file, which the page requires. Revised copy adds that input and
     describes spec confirmation and number checks.
+  aliases:
+    - Recurring KPI report maker
 failure-drill-planner:
   name: Failure drill planner
   summary: Name a system and fault. Get a bounded drill plan with limits, checks
@@ -31899,14 +31942,17 @@ image-maker-and-editor:
   reason: Copy was clarified to state the source-supported task, process, output
     and limits.
 cybersecurity-profile-builder:
-  name: NIST CSF profile builder
-  summary: Describe current security practices and goals. It maps evidence to NIST
-    CSF 2.0 outcomes, identifies gaps and suggests actions for review.
-  subhead: Share current practices, target outcomes and available evidence. It
-    maps them to CSF 2.0, compares current and target profiles, then drafts
-    priorities. Missing evidence stays unknown; this is not a certification.
+  name: NIST cybersecurity profile builder
+  summary: Say how you handle security now and your goals. Get a profile against
+    the NIST framework (a US security standard), with gaps and steps.
+  subhead: Share what you do now, where you want to be and the proof you have. It
+    maps them to version 2.0 of the NIST Cybersecurity Framework (a US security
+    standard) and compares the two. You get a list of gaps and what to do first.
+    Missing proof stays unknown. This is not a certification.
   reason: Copy was clarified to state the source-supported task, process, output
     and limits.
+  aliases:
+    - NIST CSF profile builder
 referral-program-designer:
   name: Referral program designer
   summary: Share your product and budget. Get a referral plan with reward costs
@@ -32059,11 +32105,13 @@ conversion-problem-finder:
     and limits.
 wcag-accessibility-fixer:
   name: WCAG accessibility reviewer
-  summary: Share site code or pages and target WCAG level. It checks selected
-    issues and suggests fixes; retest results depend on tools and manual review.
-  subhead: Provide code or a page, target level and test environment. It checks
-    accessible patterns, proposes changes and lists follow-up tests. Automated
-    checks do not prove full WCAG conformance.
+  summary: Share site code or pages and a target level of WCAG (the web
+    accessibility standard). It checks chosen issues and suggests fixes to
+    retest.
+  subhead: Provide code or a page, target level and test setup. It checks for
+    patterns that people with disabilities can use, proposes changes and lists
+    follow-up tests. Automated checks do not prove a site fully meets WCAG (the
+    web accessibility standard).
   reason: Uses a short, scoped job title without claiming an outcome.
   aliases:
     - WCAG accessibility review helper
@@ -32765,13 +32813,16 @@ proof-of-concept-plan:
   reason: Revised wording to name supported inputs and outputs and remove unclear
     or overconfident claims.
 customer-health-and-churn-scorer:
-  name: Customer health and churn scorer
-  summary: Share account data. Get health scores, churn-risk tiers and expansion
-    signals for each customer.
-  subhead: Share customer data. Get health scores, churn risk groups and signs of
-    possible growth to review.
+  name: Customer health and loss risk scorer
+  summary: Share account data. Get a health score, a risk-of-leaving tier and
+    signs of growth for each customer.
+  subhead: Share customer data. It scores each account's health, groups customers
+    by how likely they are to leave and marks signs of possible growth for you
+    to review.
   reason: Revised wording to name supported inputs and outputs and remove unclear
     or overconfident claims.
+  aliases:
+    - Customer health and churn scorer
 vietnam-data-privacy-checker:
   name: Vietnam data privacy checker
   summary: Describe data about people in Vietnam. Get a first duty and transfer
@@ -32820,11 +32871,12 @@ robot-arm-modeler:
     bounded output more clearly.
 scanned-pdf-text-reader:
   name: Scanned PDF text reader
-  summary: Give it PDFs, Office files, or scans. Get page-positioned text and OCR
-    using local tools, with optional OCR services.
-  subhead: Share a PDF, Office file, or scan. LiteParse extracts layout text and
-    bounding boxes, using OCR when needed. Processing is local by default;
-    optional HTTP OCR sends images to your chosen server.
+  summary: Give it PDFs, Office files or scans. Get text with page positions,
+    using OCR (reading text from images) on your own computer.
+  subhead: Share a PDF, Office file or scan. LiteParse pulls out the text and
+    where it sits on the page, using OCR (reading text from images) when needed.
+    It runs on your computer by default; an optional online OCR service sends
+    images to the server you choose.
   reason: Copy was revised to state the task inputs, documented process, and
     bounded output more clearly.
 rented-gpu-server-setup-helper:
@@ -32992,14 +33044,16 @@ ship-readiness-gate:
   aliases:
     - Ship readiness gate
 rag-pipeline-designer:
-  name: RAG pipeline designer
-  summary: Share your documents and test questions. Get a RAG design and retrieval
-    scores to guide tuning.
+  name: AI document search designer
+  summary: Share your documents and test questions. Get a design for an AI that
+    answers from them, with search scores to guide tuning.
   subhead: Give it documents, usage needs and questions with known answers. It
     measures retrieval, then uses scores to guide chunking and search choices.
   reason: Source requires running corpus-based chunking and evaluation against
     queries with known answers. Current copy says backed by numbers but omits
     those inputs; edit names them.
+  aliases:
+    - RAG pipeline designer
 job-post-writer:
   name: Job post writer
   summary: Share a role, level, team, and first-year goal. Get a clear job
@@ -35321,6 +35375,13 @@ accessibility-checker:
   aliases:
     - Accessibility checker
   reason: Uses a short role for the stated work.
+  summary: Check a page or code against WCAG 2.2 (the web accessibility standard).
+    Get ranked problems, where each one is, and fixes if you ask.
+  subhead: Point it at a web address or code folder and say whether you want a
+    report or fixes. It audits the live page where it can, otherwise the code,
+    and ranks every finding against WCAG 2.2 (the web accessibility standard).
+    You get the ranked list, the place of each problem, fixes if asked and a
+    note on what automated checks miss.
 agency-academic-geographer:
   name: Geography analyst
   aliases:
@@ -35361,6 +35422,8 @@ agency-design-persona-walkthrough:
   aliases:
     - Persona Walkthrough Specialist agent
   reason: Names the described task instead of a broad persona.
+  summary: Share your web page and a visitor profile. See what that visitor thinks
+    at each scroll, where they doubt or leave, and the fixes ranked.
 agency-design-ux-architect:
   name: Web page structure designer
   aliases:
@@ -35447,10 +35510,17 @@ agency-engineering-platform-engineer:
     - Platform Engineer agent
   reason: Names the described task instead of a broad persona.
 agency-engineering-rag-pipeline-engineer:
-  name: RAG pipeline implementation planner
+  name: AI document search planner
   aliases:
     - RAG Pipeline Engineer agent
+    - RAG pipeline implementation planner
   reason: Names the described task instead of a broad persona.
+  summary: Plan an AI that answers from your own documents. Get how to split and
+    search them, plus a question set to score each change.
+  subhead: "Describe your documents and the questions people ask. It plans a setup
+    where your AI looks up passages in your own documents and answers from them
+    (often called RAG): how to split, index and search them, and how to test
+    each change. You get a build plan and a score sheet."
 agency-engineering-rust-refactoring-specialist:
   name: Rust refactoring planner
   aliases:
@@ -35763,6 +35833,8 @@ agency-testing-api-tester:
   aliases:
     - API Tester agent
   reason: Names the described task instead of a broad persona.
+  summary: Share your API spec (how other software talks to yours). Get a test
+    plan with edge cases, sign-in checks, failure cases and starter test code.
 agency-testing-reality-checker:
   name: Release acceptance evidence reviewer
   aliases:
@@ -36149,6 +36221,12 @@ agency-engineering-api-platform-engineer:
   aliases:
     - API Platform Engineer agent
   reason: Keeps the specific role and platform in sentence case.
+  summary: Describe your API (how other software connects to yours). Get its
+    rules, changes that would break users, and a plan for versions and limits.
+  subhead: Describe the API (the way outside developers connect to your software),
+    or paste your spec. It drafts the rules, flags changes that break existing
+    users, and plans versions, limits, errors and code kits for developers. You
+    get a written plan.
 agency-engineering-backend-architect:
   name: Backend architect agent
   aliases:
@@ -36474,6 +36552,12 @@ agency-security-compliance-auditor:
   aliases:
     - Compliance Auditor agent
   reason: Keeps the specific role and platform in sentence case.
+  summary: Check your security setup against a standard such as SOC 2, ISO 27001
+    or HIPAA. Get a gap table, proof list and fix order.
+  subhead: Name the security standard you are aiming for, such as SOC 2, and
+    describe how your team handles logins, access, changes and incidents. It
+    checks each rule the way an auditor would. You get a gap table, a proof list
+    and a fix order.
 agency-security-secrets-credential-engineer:
   name: Credential storage and rotation reviewer
   aliases:
@@ -36531,10 +36615,17 @@ agency-terminal-integration-specialist:
     - Terminal Integration Specialist agent
   reason: Uses a clear job role while preserving the stated scope.
 agency-testing-evidence-collector:
-  name: Visual QA evidence collector
+  name: Website spec and screenshot checker
   aliases:
     - Evidence Collector agent
+    - Visual QA evidence collector
   reason: Uses a clear job role while preserving the stated scope.
+  summary: Share a website and its spec. Get a test report with screenshots, pass
+    or fail results and a clear failed, not determined or ready call.
+  subhead: Give it the spec and a link to your site, or screenshots you took. It
+    checks each requirement and each button, form and menu against what the
+    screenshots show. You get a website test report where every issue has proof
+    and steps to repeat it.
 agency-testing-test-automation-engineer:
   name: Test automation engineer agent
   aliases:
@@ -36606,10 +36697,13 @@ cease-and-desist-letter-helper:
     - Cease-and-desist letter helper
   reason: Names the specific job naturally without changing its scope.
 churn-reducer:
-  name: Subscription churn prevention planner
+  name: Subscription cancellation prevention planner
   aliases:
     - Churn reducer
+    - Subscription churn prevention planner
   reason: Names the specific job naturally without changing its scope.
+  summary: Share your billing setup and why people cancel. Get a cancel flow,
+    offers to keep them and a failed-payment recovery plan.
 clipper-program-planner:
   name: Paid video clipping program planner
   aliases:
@@ -36928,10 +37022,13 @@ student-coding-project-review:
     - Student coding project review
   reason: Names the concrete role with shorter, familiar wording.
 subscription-churn-audit:
-  name: Subscription churn auditor
+  name: Subscription cancellation auditor
   aliases:
     - Subscription churn audit
+    - Subscription churn auditor
   reason: Names the concrete role with shorter, familiar wording.
+  summary: Share your cancel data. Find where and why subscribers cancel. Get a
+    score out of 100 and your top three fixes.
 success-criteria-writer:
   name: Learning success criteria writer
   aliases:
@@ -38143,3 +38240,124 @@ ai-tool-picker:
 shopify-duplicate-page-fixer:
   aliases:
     - Shopify duplicate content SEO fixer
+process-and-sop-writer:
+  name: Process and procedure writer
+  summary: Give it a process name or old notes. Get a written procedure with
+    steps, a flow, exceptions and a table of who does what.
+  reason: "Plain names review: say what the item is and what you get, with no
+    unexplained shorthand."
+  aliases:
+    - Process and SOP writer
+saas-metrics-coach:
+  name: Subscription software metrics coach
+  summary: Share your revenue and customer numbers. Get recurring income, lost
+    customers, cost per new customer and customer value rated healthy, watch or
+    critical.
+  reason: "Plain names review: say what the item is and what you get, with no
+    unexplained shorthand."
+  aliases:
+    - SaaS metrics coach
+cac-payback-checker:
+  name: Customer cost payback checker
+  summary: Share ad spend, margins and customer profit. Get a score and a scale,
+    hold or fix call on what customers cost to win.
+  subhead: Give it what you pay to win a customer, your order margins and the
+    gross profit customers bring in over 30, 90 and 180 days. It rates profit
+    against that cost for each period, sets a target, a ceiling and a floor, and
+    calls scale, hold or fix. You get a score out of 100.
+  reason: "Plain names review: say what the item is and what you get, with no
+    unexplained shorthand."
+  aliases:
+    - CAC payback checker
+site-go-live-runbook-writer:
+  name: Website launch day plan writer
+  summary: Share your launch scope, time and team. Get launch checks, steps to
+    point your web address at the new site, and a rollback plan.
+  subhead: A launch day plan the whole team can follow, with checks before launch,
+    steps to point your web address at the new site, watching after launch and a
+    rollback plan. It stops launch day from running on memory and chat messages.
+  reason: "Plain names review: say what the item is and what you get, with no
+    unexplained shorthand."
+  aliases:
+    - Site go-live runbook writer
+sop-and-runbook-checker:
+  name: Company procedure checker
+  summary: Share your written procedures or a wiki export. Get missing owners,
+    stale pages and gaps ranked, plus draft procedures to fill what's missing.
+  subhead: A list of the weak spots in your company procedures, with new ones
+    written to fill the gaps. Give it your written procedures or a wiki export.
+    You get a ranked cleanup list.
+  reason: "Plain names review: say what the item is and what you get, with no
+    unexplained shorthand."
+  aliases:
+    - SOP and runbook checker
+value-proposition-builder:
+  name: Value pitch builder
+  summary: Share your offer and customer facts. Get a pitch that says what they
+    gain, one incentive and proof from a similar customer.
+  reason: "Plain names review: say what the item is and what you get, with no
+    unexplained shorthand."
+  aliases:
+    - Value proposition builder
+incrementality-test-planner:
+  name: Ad lift test planner
+  summary: Share your ad spend and sales by region. Get a test of the sales your
+    ads really caused, with a cut, hold or scale rule.
+  reason: "Plain names review: say what the item is and what you get, with no
+    unexplained shorthand."
+  aliases:
+    - Incrementality test planner
+campaign-attribution-analyst:
+  name: Campaign sales credit analyst
+  summary: Share campaign data as a file. Find which channels earn credit for
+    sales, where buyers drop out and what each campaign returned.
+  subhead: Give it your customer paths to purchase, funnel stage counts and
+    campaign spend as JSON (a structured data file). Three small scripts spread
+    sales credit across channels in several ways, find the biggest drop and work
+    out returns. You get credit by channel, drop-off by stage, return per
+    campaign and suggestions.
+  reason: "Plain names review: say what the item is and what you get, with no
+    unexplained shorthand."
+  aliases:
+    - Campaign attribution analyst
+on-call-runbook-writer:
+  name: On-call fix guide writer
+  summary: Describe a service or process. Get numbered steps, checks, rollback and
+    who to call, so anyone on call can fix it fast.
+  subhead: A guide that a tired person can follow at 3am without asking anyone.
+    You describe a service or a process and get plain, numbered steps with the
+    checks and fixes written out.
+  reason: "Plain names review: say what the item is and what you get, with no
+    unexplained shorthand."
+  aliases:
+    - On-call runbook writer
+nano-banana-image-prompt-planner:
+  name: Nano Banana image prompt planner
+  summary: Describe an image or edit. Get matching Nano Banana prompts in plain
+    words and JSON (a structured format), with a role for each reference image.
+  subhead: Describe an image or edit. Get matching prompts in plain words and in
+    JSON (a structured format), with clear reference roles and changes. Bring
+    the brief and any files you want it to use.
+  reason: "Plain names review: say what the item is and what you get, with no
+    unexplained shorthand."
+  aliases:
+    - Nano Banana image and edit prompt planner
+qa-test-scenario-writer:
+  name: Test scenario writer
+  summary: Paste your user stories. Get test scenarios with starting state,
+    numbered steps and the result to expect, plus edge cases to try.
+  reason: "Plain names review: say what the item is and what you get, with no
+    unexplained shorthand."
+  aliases:
+    - QA test scenario writer
+runbook-writer:
+  name: Service operations guide writer
+  summary: Name your service. Get a guide to fill in, with sections for release,
+    incidents, upkeep and rollback, as a text file you can edit.
+  subhead: On-call people need clear steps at 3 a.m., and this builds them before
+    launch. Name a service and get a guide with sections for release, incidents,
+    upkeep and rollback, ready to fill in.
+  reason: "Plain names review: say what the item is and what you get, with no
+    unexplained shorthand."
+  aliases:
+    - Runbook writer

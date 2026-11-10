@@ -1,6 +1,6 @@
 slug: api-security-checker
 name: API security checker
-summary: Point it at your API routes. Get a check of sign-in, access rules and input, with fixes for each gap.
+summary: Share your API routes (the addresses other software calls). Get a check of sign-in, access rules and input, with fixes for each gap.
 category: general
 boards: []
 type: skill

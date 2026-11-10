@@ -1,11 +1,11 @@
 new_slug: value-proposition-builder
-name: "Value proposition builder"
-summary: "Write a value proposition from your offer and customer facts: what they gain, one incentive and proof from a similar customer."
+name: "Value pitch builder"
+summary: "Share your offer and customer facts. Get a pitch that says what they gain, one incentive and proof from a similar customer."
 job: make-offer
 thinking: medium
 thinking_why: "It chooses which facts become value and proof, and refuses claims without evidence, but the structure is fixed."
 
-headline: "Value proposition builder"
+headline: "Value pitch builder"
 subhead: Give it your offer, what you know about the customer and any proof you can use. It writes your value pitch in five and a half parts. These are three values, an incentive, the customer's gain, proof, and a half step for what you give after the sale. You get what the customer gains, one incentive, what you keep giving after the sale and proof from a similar customer.
 
 explain: |

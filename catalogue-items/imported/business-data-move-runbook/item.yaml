@@ -1,6 +1,6 @@
 slug: business-data-move-runbook
-name: Business data move runbook
-summary: Share the old and new tools. Get a data-move plan with field maps, checks and a rollback path.
+name: Business data migration planner
+summary: Plan a business data move with field maps, test imports, final switch checks and a recovery plan.
 category: general
 boards: []
 type: skill

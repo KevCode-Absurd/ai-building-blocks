@@ -2,10 +2,10 @@ thinking: low
 thinking_why: It runs a parser and returns text with little judgement.
 new_slug: scanned-pdf-text-reader
 name: Scanned PDF text reader
-summary: Turn scanned PDFs, Office files and images into text with page positions. Runs on your computer, with OCR for scans. A PDF text reader that keeps layout.
+summary: Give it PDFs, Office files or scans. Get text with page positions, using OCR (reading text from images) on your own computer.
 job: work-with-files
 headline: Scanned PDF text reader
-subhead: Give it PDFs, Office files or scanned images. It reads the text and keeps the position of each line on the page. Files stay on your computer unless you set up an HTTP OCR server. The first time you use a language, its OCR files download from GitHub.
+subhead: Share a PDF, Office file or scan. LiteParse pulls out the text and where it sits on the page, using OCR (reading text from images) when needed. It runs on your computer by default; an optional online OCR service sends images to the server you choose.
 explain: |
   Text out of PDFs, Office files and scanned images, with the position of every line on the page, processed on your own computer. The first time you use a language, its OCR files download from GitHub. If you set up an HTTP OCR server, it receives your page images.
 

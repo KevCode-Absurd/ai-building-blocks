@@ -1,7 +1,7 @@
-name: API Platform Engineer agent
-summary: "Get a plan for a public or partner API with contract rules, a breaking-change list, a versioning policy, rate limits and an SDK plan."
-headline: API Platform Engineer agent
-subhead: "Describe the API that outside developers will use, or paste your spec. It drafts the rules, flags changes that break existing users, and plans versions, limits, errors and SDKs. You get a written plan."
+name: API platform engineer agent
+summary: Describe your API (how other software connects to yours). Get its rules, changes that would break users, and a plan for versions and limits.
+headline: API platform engineer agent
+subhead: Describe the API (the way outside developers connect to your software), or paste your spec. It drafts the rules, flags changes that break existing users, and plans versions, limits, errors and code kits for developers. You get a written plan.
 job: build-software
 thinking: high
 thinking_why: It compares each change against what existing users depend on, and works through versioning and deprecation steps. Use a model that can follow rules exactly and say when it is unsure.

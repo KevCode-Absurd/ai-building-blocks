@@ -232,6 +232,17 @@ async function stepStatus(env: Env, agent: AgentRow, studio: StudioRow | null, j
   ];
 }
 
+/** Which studio steps an expert has done on at least one of their agents (the expert dashboard's onboarding list). */
+export async function expertStudioProgress(env: Env, expertId: string): Promise<Record<StepId, boolean>> {
+  const done = Object.fromEntries(STEP_IDS.map(id => [id, false])) as Record<StepId, boolean>;
+  const agents = await all<AgentRow>(env.DB, "SELECT * FROM agents WHERE kind = 'expert' AND expert_id = ? ORDER BY created_at LIMIT 50", expertId);
+  for (const agent of agents) {
+    const studio = await first<StudioRow>(env.DB, "SELECT * FROM studio_agents WHERE agent_id = ?", agent.id);
+    for (const step of await stepStatus(env, agent, studio, getJobType(agent.job_type_id))) if (step.done) done[step.id] = true;
+  }
+  return done;
+}
+
 export async function listMyAgents(env: Env, expert: ExpertRow): Promise<{ agents: AgentSummary[]; jobTypes: { id: string; title: string; summary: string; taken: boolean }[] }> {
   const agents = await all<AgentRow>(env.DB, "SELECT * FROM agents WHERE expert_id = ? AND kind = 'expert' ORDER BY created_at DESC", expert.id);
   const studios = new Map((await all<StudioRow>(env.DB, "SELECT * FROM studio_agents WHERE expert_id = ?", expert.id)).map(s => [s.agent_id, s]));

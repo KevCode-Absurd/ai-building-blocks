@@ -1,13 +1,17 @@
 // API routes for the experts module. Paths and owners are listed in ARCHITECTURE.md.
 import { fail, json, oneOf, str, type Route } from "../../core/http.ts";
 import type { Env } from "../../env.ts";
-import { account, requireApprovedExpert, requireOps } from "../../core/access.ts";
+import { account, ensureAccount, requireApprovedExpert, requireOps } from "../../core/access.ts";
 import { AREAS } from "../../core/types.ts";
 import {
   AGREEMENT_VERSION, REVIEW_TIME, agreement, applyAsExpert, expertDashboard, expertView, foundingSpots, getExpertForUser,
   listApplications, reviewApplication, syncAllExpertPersonas, syncExpertPersona, type ExpertApplication,
 } from "./service.ts";
 import { createInvite, emailInvite, listInvites, openInvite, revokeInvite } from "./invites.ts";
+import {
+  acceptAgreement, ensureAllProfiles, ensureProfile, myProfile, onboardingChecklist, publicProfile, recordAgentUse, saveProfile,
+  usedAgents, usedCookie,
+} from "./profiles.ts";
 
 const STATUSES = ["all", "applied", "approved", "rejected", "paused"] as const;
 
@@ -67,6 +71,7 @@ export const routes: Route[] = [
       const decision = oneOf(body.decision, "decision", ["approve", "reject", "pause"] as const);
       const note = str(body.note, "note", { optional: true, max: 2000 });
       const row = await reviewApplication(ctx.env, { expertId: ctx.params.id!, decision, note, actor: a.user.id });
+      if (row.status === "approved") await ensureProfile(ctx.env, row).catch(err => console.error("experts.ensure_profile_failed", err instanceof Error ? err.message : String(err)));
       return json({ expert: expertView(row) });
     },
   },
@@ -106,9 +111,63 @@ export const routes: Route[] = [
       return json(await emailInvite(ctx.env, { id: ctx.params.id!, actor: a.user.id, foundingLeft: founding.left }));
     },
   },
+
+  // ---------- Public profiles, share links, onboarding ----------
+
+  {
+    method: "GET", path: "/api/expert-profiles/:slug", handler: async ctx => {
+      const profile = await publicProfile(ctx.env, ctx.params.slug!);
+      if (!profile) fail(404, "profile_not_found", "There is no expert page at this address.");
+      return json({ profile });
+    },
+  },
+  {
+    method: "GET", path: "/api/experts/me/profile", handler: async ctx => {
+      const a = await requireApprovedExpert(ctx);
+      return json({ profile: await myProfile(ctx.env, a.expert) });
+    },
+  },
+  {
+    method: "POST", path: "/api/experts/me/profile", handler: async ctx => {
+      const a = await requireApprovedExpert(ctx);
+      const body = await ctx.body<{ headline?: unknown; bio?: unknown }>();
+      return json({ profile: await saveProfile(ctx.env, { expert: a.expert, actor: a.user.id, headline: body.headline, bio: body.bio }) });
+    },
+  },
+  {
+    method: "GET", path: "/api/experts/me/checklist", handler: async ctx => {
+      const a = await requireApprovedExpert(ctx);
+      return json({ checklist: await onboardingChecklist(ctx.env, a.expert) });
+    },
+  },
+  {
+    method: "POST", path: "/api/experts/me/agreement", handler: async ctx => {
+      const a = await requireApprovedExpert(ctx);
+      const body = await ctx.body<{ version?: unknown }>();
+      await acceptAgreement(ctx.env, { expert: a.expert, actor: a.user.id, version: body.version });
+      return json({ ok: true, version: AGREEMENT_VERSION });
+    },
+  },
+  // A download or load of an expert's agent, counted for the expert whose share link brought this browser here.
+  // Public; counts each agent once per browser. Answers the same whether or not it counted.
+  {
+    method: "POST", path: "/api/share/agent-use", handler: async ctx => {
+      const body = await ctx.body<{ agent?: unknown }>();
+      const personaId = str(body.agent, "agent", { max: 80 });
+      const seen = usedAgents(ctx.req);
+      const headers: Record<string, string> = {};
+      if (!seen.includes(personaId)) {
+        const user = await ctx.maybeUser();
+        const referredBy = user ? (await ensureAccount(ctx.env, user)).user.referred_by_expert ?? null : null;
+        if (await recordAgentUse(ctx.env, { req: ctx.req, personaId, referredBy })) headers["set-cookie"] = usedCookie(ctx.env, [...seen, personaId]);
+      }
+      return json({ ok: true }, 200, headers);
+    },
+  },
 ];
 
 /** Work the 15-minute cron runs for this module. */
 export const scheduled: ((env: Env) => Promise<void>)[] = [
   syncAllExpertPersonas,
+  ensureAllProfiles,
 ];

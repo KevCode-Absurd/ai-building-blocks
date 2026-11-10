@@ -85,7 +85,8 @@
         { "ref": "library:speed-budget-and-sale-check", "type": "skill", "use": "check", "when": "When you need a speed budget, a test routine and a pre-sale checklist for the date" },
         { "ref": "library:get-your-store-ready-for-a-big-sale-day", "type": "workflow", "use": "build", "when": "When heavy sliders, pop-ups and apps should be cut from the home and collection pages first" },
         { "ref": "library:stop-fake-orders-card-testing-and-bot-abuse", "type": "workflow", "use": "check", "when": "When a drop may draw bots or card testing and the store needs fraud rules ready" },
-        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When the plan covers the happy path only and nobody has asked what happens when a step fails" }
+        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When the plan covers the happy path only and nobody has asked what happens when a step fails" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "In the days before the sale, to confirm each sale product is live, in stock and at the promised price" }
       ]
     },
     {
@@ -136,8 +137,10 @@
         { "ref": "library:landing-page-design-planner", "type": "skill", "use": "explore", "when": "When you have copy, colours and fonts and want three designs before any code" },
         { "ref": "library:shopify-landing-page-builder", "type": "skill", "use": "build", "when": "When the copy is approved and you need Shopify files with it loaded in and install steps" },
         { "ref": "library:shopify-page-rebuild", "type": "workflow", "use": "build", "when": "When the owner shows a page they like and wants their own version as Shopify files" },
+        { "ref": "library:make-three-first-screens", "type": "skill", "use": "explore", "when": "Before the full page is built, to make three different first screens in the store's own look and compare them" },
         { "ref": "library:page-design-gate", "type": "skill", "use": "check", "when": "When the page is built, to check it in a real browser at phone and desktop width" },
-        { "ref": "library:product-page-auditor", "type": "skill", "use": "check", "when": "When it is a product page, to get ranked changes to variants, proof, buttons and price" }
+        { "ref": "library:product-page-auditor", "type": "skill", "use": "check", "when": "When it is a product page, to get ranked changes to variants, proof, buttons and price" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the three first screens are side by side, so a fresh reviewer picks the one to build out" }
       ]
     },
     {

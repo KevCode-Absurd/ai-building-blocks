@@ -32,11 +32,9 @@
       "kind": "strategy",
       "items": [
         { "ref": "kit:skills/keyword-intent-map", "use": "build", "when": "When searches need grouping by intent, scoring and assigning one group to each page" },
-        { "ref": "library:customer-question-keyword-finder", "type": "prompt", "use": "brief", "when": "Before any keyword tool, to start from the questions customers really ask" },
         { "ref": "library:search-intent-keyword-mapper", "type": "skill", "use": "explore", "when": "When you want a second grouping of the same topic by intent to compare" },
         { "ref": "library:store-keyword-map-builder", "type": "skill", "use": "build", "when": "When the site is a shop and each collection and product needs its own topic" },
-        { "ref": "library:rival-seo-comparer", "type": "skill", "use": "check", "when": "When you must judge the chance of winning a group against the sites that rank now" },
-        { "ref": "library:neil-patel", "type": "mind", "use": "think", "when": "When the list is built from search volume alone, to go back to what buyers want to know" }
+        { "ref": "library:rival-seo-comparer", "type": "skill", "use": "check", "when": "When you must judge the chance of winning a group against the sites that rank now" }
       ]
     },
     {
@@ -164,7 +162,8 @@
         { "ref": "kit:skills/keyword-intent-map", "use": "brief", "when": "When the plan needs the few searches worth chasing, scored by value and effort" },
         { "ref": "library:search-console-quick-win-finder", "type": "skill", "use": "build", "when": "When the first month should be pages already close to page one" },
         { "ref": "library:rival-seo-comparer", "type": "skill", "use": "brief", "when": "When you need search overlap and content depth against named rivals" },
-        { "ref": "library:rand-fishkin", "type": "mind", "use": "think", "when": "When the plan assumes search is the channel, to check where the audience really goes" }
+        { "ref": "library:rand-fishkin", "type": "mind", "use": "think", "when": "When the plan assumes search is the channel, to check where the audience really goes" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the 90 days are planned, to compare two plans that spend the hours on different bets" }
       ]
     },
     {
@@ -187,7 +186,8 @@
         { "ref": "library:collection-page-seo-builder", "type": "skill", "use": "build", "when": "When one collection needs its title, heading, URL, copy and FAQ written" },
         { "ref": "library:product-page-seo-builder", "type": "skill", "use": "build", "when": "When one product page needs layout, copy, image names and markup for a target term" },
         { "ref": "library:search-title-and-snippet-writer", "type": "prompt", "use": "explore", "when": "When each collection needs three title options to pick from" },
-        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When collection copy reads like filler, to test it and get a true, specific rewrite" }
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When collection copy reads like filler, to test it and get a true, specific rewrite" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before writing, to confirm the products each page leads with are in stock at the price shown" }
       ]
     },
     {

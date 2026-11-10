@@ -158,7 +158,9 @@
         { "ref": "library:retention-problem-fixer", "type": "skill", "use": "brief", "when": "Before writing, to find why users drop off so the series answers it" },
         { "ref": "library:email-sequence-writer", "type": "skill", "use": "build", "when": "When quiet users cannot be reached by push and the series must run by email" },
         { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the first message is drafted, to try several openings" },
-        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before the email version sends, to score it and cut what drags" }
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before the series is written, to plan three different arcs for quiet users and draft each first message" },
+        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before the email version sends, to score it and cut what drags" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the three arcs are drafted, so someone who did not write them picks one to finish" }
       ]
     },
     {
@@ -245,7 +247,9 @@
       "items": [
         { "ref": "library:conversion-page-writer", "type": "skill", "use": "build", "when": "When ads and press send people to a page that must earn the install" },
         { "ref": "library:top-of-page-headline-writer", "type": "prompt", "use": "explore", "when": "When the page opening is weak, to get five headlines with a pick" },
-        { "ref": "library:leaky-funnel-fixer", "type": "skill", "use": "check", "when": "When the page is live, to rank where visitors leak and what to test" }
+        { "ref": "library:make-three-first-screens", "type": "skill", "use": "explore", "when": "Before the page is written in full, to build three different first screens and compare them on a phone" },
+        { "ref": "library:leaky-funnel-fixer", "type": "skill", "use": "check", "when": "When the page is live, to rank where visitors leak and what to test" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the three first screens are side by side, so a fresh reviewer picks the one to build out" }
       ]
     }
   ],

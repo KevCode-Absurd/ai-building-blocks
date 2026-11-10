@@ -171,7 +171,7 @@
       "task": "Pin current behaviour with tests before a refactor",
       "kind": "code",
       "items": [
-        { "ref": "library:untested-code-change-guide", "type": "skill", "use": "build", "when": "When the code has no tests, to add them in safe steps before anything is changed" },
+        { "ref": "library:test-suite-writer", "type": "skill", "use": "build", "when": "When the code has no tests, to write tests that record what it does today before the refactor" },
         { "ref": "kit:skills/automated-test-suite", "use": "build", "when": "When you write tests that record what the code does today, odd cases included" },
         { "ref": "library:kent-beck", "type": "mind", "use": "think", "when": "When the refactor is one big step, to split tidying from behaviour change" }
       ]

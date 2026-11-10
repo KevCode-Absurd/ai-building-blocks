@@ -13,7 +13,8 @@
         { "ref": "library:one-line-position-writer", "type": "prompt", "use": "explore", "when": "When the position will not fit in one sentence, to draft and compare short versions" },
         { "ref": "library:map-your-rivals-and-write-a-message-they-cannot-answer", "type": "workflow", "use": "build", "when": "When everyone in the market sounds alike and the message must be one rivals cannot copy" },
         { "ref": "library:usp-claim-checker", "type": "skill", "use": "check", "when": "When the main claim is drafted, to test it is specific, true and not already a rival's" },
-        { "ref": "library:april-dunford", "type": "mind", "use": "think", "when": "When the position starts from features, to start again from what buyers would use instead" }
+        { "ref": "library:april-dunford", "type": "mind", "use": "think", "when": "When the position starts from features, to start again from what buyers would use instead" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When two or three positions are written up, so someone outside the work picks the one to build on" }
       ]
     },
     {
@@ -116,8 +117,10 @@
         { "ref": "kit:workflows/launch-from-demand-test-to-week-after", "use": "brief", "when": "When a product, feature or relaunch has a target date and needs the whole run in order" },
         { "ref": "kit:skills/product-launch-plan", "use": "build", "when": "When a small team needs the plan from an optional demand test to the review two weeks after" },
         { "ref": "library:smaller-product-launch", "type": "workflow", "use": "explore", "when": "When the date is fixed and the plan is too big, to see a half-scope version" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the launch plan is fixed, to compare two plans that put the budget and the weeks in different places" },
         { "ref": "library:go-or-no-go-launch-checker", "type": "skill", "use": "check", "when": "A few days before launch, to get a clear go or no-go with the blockers listed" },
-        { "ref": "library:pieter-levels", "type": "mind", "use": "think", "when": "When the plan is heavy for a small team, to cut it to what a solo maker would ship" }
+        { "ref": "library:pieter-levels", "type": "mind", "use": "think", "when": "When the plan is heavy for a small team, to cut it to what a solo maker would ship" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the two launch plans are on a page each, so a reviewer who has not seen your notes picks one" }
       ]
     },
     {
@@ -202,7 +205,8 @@
         { "ref": "library:product-name-brainstormer", "type": "skill", "use": "explore", "when": "When a launch or rename needs name ideas, each with the reason it fits" },
         { "ref": "library:owned-word-mapper", "type": "skill", "use": "brief", "when": "Before naming, to see which words rivals own and which are free" },
         { "ref": "library:message-stickiness-rewriter", "type": "prompt", "use": "explore", "when": "When a tagline is flat, to get three versions people will remember" },
-        { "ref": "library:tagline-tester", "type": "skill", "use": "check", "when": "When a tagline is chosen, to score it against ten tests and get sharper versions" }
+        { "ref": "library:tagline-tester", "type": "skill", "use": "check", "when": "When a tagline is chosen, to score it against ten tests and get sharper versions" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the shortlist is down to a few names or lines, so a fresh reviewer picks one against the brief" }
       ]
     },
     {

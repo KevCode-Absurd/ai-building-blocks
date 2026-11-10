@@ -44,7 +44,6 @@
       "task": "Split a messy script into clear parts",
       "kind": "code",
       "items": [
-        { "ref": "library:untested-code-change-guide", "type": "skill", "use": "brief", "when": "When the script has no tests and needs a safety net before it is split" },
         { "ref": "kit:prompts/monobehaviour-split", "use": "build", "when": "When one script does input, movement, health, UI and sound and must become small parts" },
         { "ref": "library:function-purity-refactor-planner", "type": "skill", "use": "build", "when": "When game rules hide in scene code and should become plain functions you can test" },
         { "ref": "library:code-refactor-planner", "type": "skill", "use": "build", "when": "When the split needs named, small moves that keep behaviour the same" },

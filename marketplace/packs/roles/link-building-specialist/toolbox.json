@@ -49,7 +49,8 @@
         { "ref": "library:infographic-maker", "type": "skill", "use": "build", "when": "When the findings need a single shareable graphic with a layout that fits them" },
         { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the page title is not settled, to compare several angles" },
         { "ref": "library:ai-search-visibility-optimiser", "type": "skill", "use": "build", "when": "When the page should also be cited by AI answers, to get the edits that help" },
-        { "ref": "library:study-claim-checker", "type": "skill", "use": "check", "when": "Before publishing, to test each statistic for weak evidence and bias" }
+        { "ref": "library:study-claim-checker", "type": "skill", "use": "check", "when": "Before publishing, to test each statistic for weak evidence and bias" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the page is pitched, to trace every statistic on it to a dated source a journalist could check" }
       ]
     },
     {

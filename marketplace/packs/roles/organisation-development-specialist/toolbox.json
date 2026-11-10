@@ -112,8 +112,7 @@
         { "ref": "kit:prompts/change-impact-assessment", "use": "build", "when": "After leaders choose a design and before any plan is shared" },
         { "ref": "library:stakeholder-map-builder", "type": "skill", "use": "brief", "when": "When you need each affected group placed by power and interest, with how to talk to them" },
         { "ref": "library:knock-on-effects-tracer", "type": "prompt", "use": "build", "when": "When a change to reporting lines or bonuses may cause effects nobody planned for" },
-        { "ref": "library:people-risk-register-builder", "type": "skill", "use": "build", "when": "When the risks to people and the firm need ranking with owners" },
-        { "ref": "library:hidden-assumption-auditor", "type": "skill", "use": "check", "when": "When the design rests on things nobody has tested, such as who will accept a new role" }
+        { "ref": "library:people-risk-register-builder", "type": "skill", "use": "build", "when": "When the risks to people and the firm need ranking with owners" }
       ]
     },
     {

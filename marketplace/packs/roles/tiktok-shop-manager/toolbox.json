@@ -13,7 +13,8 @@
         { "ref": "library:tiktok-shop-launch-planner", "type": "skill", "use": "explore", "when": "When you want a second week-by-week plan from the client's starting point to compare" },
         { "ref": "library:tiktok-shop-brand-builder", "type": "skill", "use": "brief", "when": "When the shop has no clear voice, content pillars or story yet" },
         { "ref": "library:start-your-stores-organic-social-from-zero", "type": "workflow", "use": "brief", "when": "When the brand has never posted and needs its first formats and routine" },
-        { "ref": "library:gary-vaynerchuk", "type": "mind", "use": "think", "when": "When the plan asks viewers to buy from day one and gives them nothing worth watching first" }
+        { "ref": "library:gary-vaynerchuk", "type": "mind", "use": "think", "when": "When the plan asks viewers to buy from day one and gives them nothing worth watching first" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the 30 days are planned in detail, to compare two plans that split budget and effort differently" }
       ]
     },
     {
@@ -46,8 +47,6 @@
       "items": [
         { "ref": "kit:skills/tiktok-shop-listing", "use": "build", "when": "When up to ten products need a title, selling points, description, sizes and image order" },
         { "ref": "library:tiktok-shop-listing-writer", "type": "skill", "use": "explore", "when": "When you want a second title and description built for TikTok Shop search to compare" },
-        { "ref": "library:main-product-image-designer", "type": "skill", "use": "build", "when": "When the first image needs the selling points laid on a real product photo" },
-        { "ref": "library:main-image-a-b-test-planner", "type": "skill", "use": "explore", "when": "When the main image should be tested in versions that each change one thing" },
         { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a selling point is vague, to test it and get a true, picturable rewrite" },
         { "ref": "kit:prompts/claims-price-and-disclosure-check", "use": "check", "when": "Before a listing goes out, to catch unproven claims and false was-prices" }
       ]
@@ -74,6 +73,7 @@
         { "ref": "kit:prompts/shoppable-video-briefs", "use": "build", "when": "After hero products are picked, to plan ten videos with hook, proof shot and price moment" },
         { "ref": "library:short-video-format-picker", "type": "skill", "use": "explore", "when": "When you need a format for the product and who is on camera, with ten opening ideas" },
         { "ref": "library:short-video-hook-writer", "type": "skill", "use": "explore", "when": "When a brief needs ten hooks checked for length and first shot" },
+        { "ref": "library:make-ad-concept-spread", "type": "skill", "use": "explore", "when": "Before writing the briefs, to spread nine or more one-line video ideas across promises, proofs and formats" },
         { "ref": "library:video-hook-scorer", "type": "skill", "use": "check", "when": "When hooks are drafted, to score each for the viewer and get rewrites" },
         { "ref": "library:sound-off-commercial-checker", "type": "skill", "use": "check", "when": "When a script is done, to check it still sells with the sound off" },
         { "ref": "library:mrbeast", "type": "mind", "use": "think", "when": "When the opening seconds do not pay off what the cover and first line promise" }
@@ -200,7 +200,8 @@
         { "ref": "library:tiktok-shop-ad-planner", "type": "skill", "use": "build", "when": "When the shop has a budget and needs a plan for shopping ads, video ads and bids" },
         { "ref": "library:gmv-max-campaign-setup-planner", "type": "skill", "use": "build", "when": "When top products and a target cost per order are known and the campaign needs its settings" },
         { "ref": "library:tiktok-spark-ad-picker", "type": "skill", "use": "explore", "when": "When organic or creator posts have results and you must pick which to boost" },
-        { "ref": "library:tiktok-ad-test-reader", "type": "skill", "use": "check", "when": "When test numbers are in and each ad needs a keep, fix or kill call" }
+        { "ref": "library:tiktok-ad-test-reader", "type": "skill", "use": "check", "when": "When test numbers are in and each ad needs a keep, fix or kill call" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before ad money is spent, to confirm the product is in stock at the stated price in the shop today" }
       ]
     },
     {
@@ -231,7 +232,6 @@
       "kind": "strategy",
       "items": [
         { "ref": "library:tiktok-shop-expansion", "type": "skill", "use": "build", "when": "When the seller wants to know which markets to enter first, with shipping and rules" },
-        { "ref": "library:overseas-listing-localizer", "type": "skill", "use": "build", "when": "When listings need local language, sizes and required labels" },
         { "ref": "kit:prompts/tiktok-rules-snapshot", "use": "check", "when": "When the new market's fees and rules must be captured before any margin is quoted" }
       ]
     }
@@ -256,6 +256,7 @@
     "No library item plans TikTok Shop's own promotion tools: flash deals, vouchers and free shipping offers",
     "No library item sets rules for judging creator sample requests; only the kit skill covers it",
     "No library item writes captions, hashtags and sound choices for shoppable videos as a set of options",
-    "No library item plans stock and dispatch for a sudden viral spike on one product"
+    "No library item plans stock and dispatch for a sudden viral spike on one product",
+    "No English library item lays selling points on a main image, plans main image tests or localises listings for another country; those that exist are written in Chinese"
   ]
 }

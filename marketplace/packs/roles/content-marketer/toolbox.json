@@ -36,7 +36,8 @@
         { "ref": "kit:skills/content-strategy", "use": "build", "when": "When a small business needs one page: goal, reader, topics, channels and measures" },
         { "ref": "library:content-channel-planner", "type": "skill", "use": "build", "when": "When you must decide where each kind of piece goes and which channels to drop" },
         { "ref": "library:zero-click-content-planner", "type": "prompt", "use": "explore", "when": "When readers get the answer without clicking, to plan content that works without the visit" },
-        { "ref": "library:rand-fishkin", "type": "mind", "use": "think", "when": "When the plan chases search volume and ignores where the audience really spends time" }
+        { "ref": "library:rand-fishkin", "type": "mind", "use": "think", "when": "When the plan chases search volume and ignores where the audience really spends time" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the strategy is written up, to put two different bets for the time and budget side by side" }
       ]
     },
     {
@@ -55,7 +56,6 @@
       "kind": "plan",
       "items": [
         { "ref": "kit:prompts/customer-question-topic-finder", "use": "build", "when": "Before any keyword tool, to turn sales and support questions into a topic list" },
-        { "ref": "library:customer-question-keyword-finder", "type": "prompt", "use": "build", "when": "When you have reviews, tickets and comments, to find how people would search for each" },
         { "ref": "library:help-article-from-ticket-writer", "type": "prompt", "use": "build", "when": "When a ticket shows a gap, to turn it into a help article that answers it once" }
       ]
     },
@@ -113,7 +113,8 @@
         { "ref": "library:long-form-piece-structurer", "type": "skill", "use": "build", "when": "When you need the case study's sections in an order that holds a reader" },
         { "ref": "library:case-first-story-builder", "type": "skill", "use": "explore", "when": "When the story could open several ways, to find the surprise to lead with" },
         { "ref": "library:ira-glass", "type": "mind", "use": "think", "when": "When the case reads like a press release and needs what happened and what it meant" },
-        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before the customer signs off, to check every result and number against its source" }
+        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before the customer signs off, to check every result and number against its source" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the customer signs off, to trace every number, name and quote to the interview or their data" }
       ]
     },
     {
@@ -126,6 +127,7 @@
         { "ref": "library:best-of-page-writer", "type": "skill", "use": "build", "when": "When buyers search for the best in a category and you need a fair list with real numbers" },
         { "ref": "library:comparison-table-designer", "type": "skill", "use": "build", "when": "When the page needs a table that helps people choose" },
         { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the page title must be fair and still win the click" },
+        { "ref": "library:make-three-first-screens", "type": "skill", "use": "explore", "when": "Before the page is written in full, to build three first screens that open the comparison differently" },
         { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "Before publishing, to sort every claim about a rival as fine, needs proof or cut" }
       ]
     },
@@ -263,7 +265,8 @@
     { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any work for a client with a live site, to capture their voice, facts and prices" },
     { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a piece states facts or numbers, to check each against a trusted source" },
     { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "Before anything ships, to fix lines that read as machine written" },
-    { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "Last step before sign-off, to catch slips with a log of every change" }
+    { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "Last step before sign-off, to catch slips with a log of every change" },
+    { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before a piece is handed over, so a fresh reader checks it against the brief as the client would" }
   ],
   "helpers": [
     { "role": "seo-specialist", "when": "When the job needs technical SEO, a site audit or keyword data beyond one article" },

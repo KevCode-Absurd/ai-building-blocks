@@ -183,6 +183,7 @@
       "items": [
         { "ref": "library:thumbnail-and-title-planner", "type": "skill", "use": "explore", "when": "When a video needs several title and thumbnail pairs to test against each other" },
         { "ref": "library:reusable-reel-cover-recipe-builder", "type": "skill", "use": "build", "when": "When short clips need a cover style that repeats across the feed" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "Before the thumbnail is finished, to build three at real size that differ in layout, type and image" },
         { "ref": "library:headline-cover-test-ranker", "type": "skill", "use": "check", "when": "When there is a list of titles, to read each alone and keep the best three" },
         { "ref": "library:youtube-title-thumbnail-check", "type": "skill", "use": "check", "when": "Before upload, to check title length and that the thumbnail does not repeat it" }
       ]

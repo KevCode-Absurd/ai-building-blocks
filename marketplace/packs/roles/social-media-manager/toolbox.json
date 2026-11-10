@@ -60,6 +60,7 @@
         { "ref": "library:story-carousel-ad-writer", "type": "skill", "use": "build", "when": "When a carousel tells a story and each card needs its picture and words planned" },
         { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "When every slide looks like a stock template, to get three hand-made layouts" },
         { "ref": "library:canva", "type": "tool", "use": "build", "when": "When the owner's team will build the slides from a template" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "Before the pack is finished, to build three cover-and-inside looks at real size and compare them" },
         { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When slides are drafted, to see where the eye lands first and what to cut" }
       ]
     },
@@ -206,7 +207,8 @@
       "items": [
         { "ref": "library:tiktok-starter-campaign-builder", "type": "skill", "use": "build", "when": "When the owner wants a first TikTok campaign with budgets and a four-week plan" },
         { "ref": "library:tiktok-spark-ad-picker", "type": "skill", "use": "build", "when": "When organic posts have results and you must pick which to put money behind" },
-        { "ref": "kit:prompts/disclosure-and-claims-check", "use": "check", "when": "Before a post is boosted, to check claims and labels hold up as an ad" }
+        { "ref": "kit:prompts/disclosure-and-claims-check", "use": "check", "when": "Before a post is boosted, to check claims and labels hold up as an ad" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before a post is boosted, to confirm the product and link it points to are live and in stock" }
       ]
     },
     {
@@ -215,7 +217,6 @@
       "kind": "plan",
       "items": [
         { "ref": "library:customer-content-planner", "type": "skill", "use": "build", "when": "When you want customers posting their own photos and videos, with a brief to give them" },
-        { "ref": "library:influencer-gifting-planner", "type": "skill", "use": "build", "when": "When products go out as gifts and you must track which posts follow" },
         { "ref": "library:creator-gifting-brief", "type": "workflow", "use": "build", "when": "When creators need a gifting plan, a phone-video script and a filming brief" },
         { "ref": "kit:prompts/disclosure-and-claims-check", "use": "check", "when": "Before a gifted or paid post goes up, to check it is labelled the way the rules ask" }
       ]
@@ -229,6 +230,7 @@
         { "ref": "library:customer-quote-image-ad", "type": "skill", "use": "build", "when": "When a post is built around a customer's own words" },
         { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "When every graphic looks like the same template, to get three other layouts" },
         { "ref": "library:canva", "type": "tool", "use": "build", "when": "When the owner will reuse the designs from a shared template" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "Before a set of images is made, to try three layouts at the real post size that differ in more than colour" },
         { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When an image carries text, to check the eye finds the main line first" }
       ]
     },
@@ -258,7 +260,8 @@
   "always": [
     { "ref": "library:brand-voice-rules-writer", "type": "skill", "use": "brief", "when": "At the start with a new client, to set the voice every post and reply follows" },
     { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a post states a number, result or fact you cannot trace to the business" },
-    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a batch is scheduled, to catch typos and names spelt two ways" }
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a batch is scheduled, to catch typos and names spelt two ways" },
+    { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before a batch is scheduled, so a fresh reader checks it against the brief as the client would" }
   ],
   "helpers": [
     { "role": "graphic-designer", "when": "When the job needs finished templates and image files, not only words" },

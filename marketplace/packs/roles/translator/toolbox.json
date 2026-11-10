@@ -79,8 +79,8 @@
       "items": [
         { "ref": "library:keyword-researcher", "type": "skill", "use": "brief", "when": "Before translating titles, to find the words local shoppers really search for" },
         { "ref": "kit:skills/translate-and-localise-content", "use": "build", "when": "When listings must be adapted with local terms, sizes and spelling, not word for word" },
-        { "ref": "library:overseas-listing-localizer", "type": "skill", "use": "explore", "when": "When images carry text too, to get a second version with local sizes and required labels" },
-        { "ref": "kit:prompts/locale-format-check", "use": "check", "when": "Before the listings go live, to check prices, units, sizes and returns wording" }
+        { "ref": "kit:prompts/locale-format-check", "use": "check", "when": "Before the listings go live, to check prices, units, sizes and returns wording" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before listings go live abroad, to confirm the link, price and currency work for a buyer in that country" }
       ]
     },
     {
@@ -159,7 +159,8 @@
         { "ref": "kit:skills/translate-and-localise-content", "use": "build", "when": "When wordplay will not survive and the line must be rebuilt in the new language" },
         { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When the literal headline falls flat, to get five fresh angles to adapt from" },
         { "ref": "library:tagline-score-card", "type": "prompt", "use": "check", "when": "When you have a candidate line, to score it and see four rewrites" },
-        { "ref": "library:agency-specialized-cultural-intelligence-strategist", "type": "agent", "use": "check", "when": "When a joke, colour or symbol may mean something else in the new market" }
+        { "ref": "library:agency-specialized-cultural-intelligence-strategist", "type": "agent", "use": "check", "when": "When a joke, colour or symbol may mean something else in the new market" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When several adapted lines are ready, so a reader who has not seen your reasons picks one" }
       ]
     },
     {
@@ -251,6 +252,7 @@
     "No library item finds which translated pages went stale after the source changed",
     "No library item writes audio description for video, or alt text outside shop product images",
     "No tool guide covers a translation engine or a translation memory tool, and no thinking lens is built on a translator",
-    "Language-pair help is patchy: one Spanish and English agent and a three-language parity check, nothing for other pairs"
+    "Language-pair help is patchy: one Spanish and English agent and a three-language parity check, nothing for other pairs",
+    "No English library item localises a listing's images, sizes and required labels for another country; the one that exists is written in Chinese"
   ]
 }

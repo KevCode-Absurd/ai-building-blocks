@@ -24,7 +24,8 @@
         { "ref": "library:store-product-data-collector", "type": "skill", "use": "explore", "when": "When you want to see how top rival listings word titles and price the same item" },
         { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a description could fit any seller, to test it and get a true, picturable rewrite" },
         { "ref": "kit:prompts/listing-gap-check", "use": "check", "when": "When the listings are drafted, to catch missing details before they are uploaded" },
-        { "ref": "library:claude-hopkins", "type": "mind", "use": "think", "when": "When a listing leans on praise words and needs facts a buyer can check" }
+        { "ref": "library:claude-hopkins", "type": "mind", "use": "think", "when": "When a listing leans on praise words and needs facts a buyer can check" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the batch is uploaded, to trace each size, material, price and delivery line to the product data" }
       ]
     },
     {
@@ -45,8 +46,7 @@
       "kind": "audit",
       "items": [
         { "ref": "kit:prompts/listing-gap-check", "use": "check", "when": "When a listing export shows errors, low quality scores or missing details" },
-        { "ref": "kit:skills/marketplace-listing-mapper", "use": "build", "when": "When hundreds of listings miss fields and you need the gaps grouped by cause" },
-        { "ref": "library:marketplace-photo-rule-checker", "type": "skill", "use": "check", "when": "When listings are held back for images, to get a pass or reject on each photo" }
+        { "ref": "kit:skills/marketplace-listing-mapper", "use": "build", "when": "When hundreds of listings miss fields and you need the gaps grouped by cause" }
       ]
     },
     {
@@ -58,7 +58,7 @@
         { "ref": "library:make-matching-photos-for-a-product-sheet-and-check-them", "type": "workflow", "use": "build", "when": "When a whole sheet of products needs one matching photo each, with faults reported" },
         { "ref": "library:turn-a-clothing-flat-lay-into-marketplace-ready-photos", "type": "workflow", "use": "build", "when": "When a clothing seller has only phone flat lays and needs clean, rule-safe photos" },
         { "ref": "library:product-photo-set-maker", "type": "agent", "use": "explore", "when": "When one real product needs a fuller set of angles to choose from, checked frame by frame" },
-        { "ref": "library:marketplace-photo-rule-checker", "type": "skill", "use": "check", "when": "Before upload, to check each photo against the platform's background and size rules" }
+        { "ref": "library:product-page-image-checker", "type": "skill", "use": "check", "when": "Before upload, to get a pass or fail and one fix for each photo; it does not cover each platform's own rules" }
       ]
     },
     {
@@ -113,10 +113,10 @@
       "task": "Localise listings for another country",
       "kind": "copy",
       "items": [
-        { "ref": "library:overseas-listing-localizer", "type": "skill", "use": "build", "when": "When listings need local language, sizes, units and required labels for another country" },
         { "ref": "library:translator", "type": "skill", "use": "explore", "when": "When a title or key line should be tried in two or three natural local wordings" },
         { "ref": "library:check-a-translated-interface-still-makes-sense", "type": "workflow", "use": "check", "when": "When you have the original and translated text side by side and need a meaning check" },
-        { "ref": "kit:skills/marketplace-listing-mapper", "use": "check", "when": "When the local marketplace has its own required fields the home listing never needed" }
+        { "ref": "kit:skills/marketplace-listing-mapper", "use": "check", "when": "When the local marketplace has its own required fields the home listing never needed" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the listings go live, to confirm price, currency, stock and link work for a buyer in that country" }
       ]
     },
     {
@@ -295,6 +295,7 @@
     "No library item plans marketplace ads such as eBay promoted listings or Walmart sponsored products",
     "No library item gives two or three listing title patterns per marketplace to compare before a batch is written",
     "No library item keeps stock in step across several marketplaces or sets buffer stock to stop overselling",
-    "No library item writes listings for used or refurbished goods with condition notes"
+    "No library item writes listings for used or refurbished goods with condition notes",
+    "No English library item checks photos against each marketplace's image rules or localises a listing's sizes, units and labels; those that exist are written in Chinese"
   ]
 }

@@ -13,7 +13,8 @@
         { "ref": "library:traction-community-building", "type": "skill", "use": "brief", "when": "When the owner is unsure a community is worth it and wants a small test with costs and measures" },
         { "ref": "library:developer-community-builder", "type": "skill", "use": "build", "when": "When the members are developers and need channels, onboarding and events that suit them" },
         { "ref": "library:launch-teaser-to-preview-planner", "type": "skill", "use": "build", "when": "When the launch needs a teaser, a preview for first members and an opening day" },
-        { "ref": "library:sahil-lavingia", "type": "mind", "use": "think", "when": "When the plan starts with a platform and should start with a few real people who already talk" }
+        { "ref": "library:sahil-lavingia", "type": "mind", "use": "think", "when": "When the plan starts with a platform and should start with a few real people who already talk" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the launch plan is fixed, to compare two plans that place the team's time and budget differently" }
       ]
     },
     {
@@ -184,7 +185,9 @@
         { "ref": "library:launch-email-sequence-planner", "type": "skill", "use": "build", "when": "When there is a list and a close date and you need the launch emails planned" },
         { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "When you want three different plans for the email series before writing one" },
         { "ref": "library:conversion-page-writer", "type": "skill", "use": "build", "when": "When the membership needs a joining page with promise, proof and price" },
-        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "Before launch, to sort every promise to members into fine, needs proof or cut" }
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "Before launch, to sort every promise to members into fine, needs proof or cut" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before launch messages are written, to confirm the join link works and the price and levels are live" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the three launch plans are drafted, so a fresh reviewer picks the one to write in full" }
       ]
     },
     {

@@ -25,7 +25,8 @@
         { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "build", "when": "When a line sounds like any product, to make it short, true and easy to picture" },
         { "ref": "library:ten-percent-cutter", "type": "skill", "use": "build", "when": "When the copy will not fit the panel and must lose words without losing the point" },
         { "ref": "library:clear-before-clever-copy-checker", "type": "prompt", "use": "check", "when": "When a line is witty, to test a shopper gets what the product is before the joke" },
-        { "ref": "library:elmer-wheeler", "type": "mind", "use": "think", "when": "When the front names features and not the one benefit a shopper would pick it up for" }
+        { "ref": "library:elmer-wheeler", "type": "mind", "use": "think", "when": "When the front names features and not the one benefit a shopper would pick it up for" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before copy goes to print, to trace each weight, ingredient, origin and award line to the product sheet" }
       ]
     },
     {
@@ -36,6 +37,7 @@
         { "ref": "library:one-symbol-concept-finder", "type": "skill", "use": "brief", "when": "Before any layout, to find the one idea, one feeling and one symbol the front should carry" },
         { "ref": "library:brand-stylescape-planner", "type": "skill", "use": "explore", "when": "When the pack look is undecided, to compare three mood board directions and merge a pick" },
         { "ref": "library:midjourney-four-direction-prompt-writer", "type": "skill", "use": "explore", "when": "When a direction needs a picture, to try one pack idea as four different treatments" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "When the brief is set, to build three front panels at real size that differ in grid, type and imagery" },
         { "ref": "kit:prompts/front-panel-thumbnail-test", "use": "check", "when": "When there are several fronts, to compare them beside the packs they will sit next to" },
         { "ref": "library:pack-and-thumbnail-glance-tester", "type": "skill", "use": "check", "when": "When a front is drafted, to test what a shopper takes in at a glance and at thumbnail size" },
         { "ref": "library:raymond-loewy", "type": "mind", "use": "think", "when": "When a redesign risks being so new that current buyers no longer spot the product" }
@@ -127,7 +129,9 @@
         { "ref": "kit:skills/panel-map-and-layout-spec", "use": "build", "when": "When a jar label, bottle wrap or sticker needs zones, sizes and safe areas written out" },
         { "ref": "library:font-pair-shortlist-maker", "type": "prompt", "use": "explore", "when": "When the maker has no brand fonts, to compare three pairs with sizes" },
         { "ref": "library:page-grid-and-type-planner", "type": "skill", "use": "build", "when": "When the label is small and crowded and needs a strict grid" },
-        { "ref": "library:plain-page-type-checker", "type": "skill", "use": "check", "when": "When the label is drafted, to check the smallest text at arm's length" }
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "Before the label is final, to see three real-size layouts with the real words side by side" },
+        { "ref": "library:plain-page-type-checker", "type": "skill", "use": "check", "when": "When the label is drafted, to check the smallest text at arm's length" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the three label layouts are made, so someone who did not design them picks one" }
       ]
     },
     {
@@ -192,7 +196,7 @@
         { "ref": "library:product-image-spec-writer", "type": "skill", "use": "brief", "when": "Before any image, to write the pack's true details and the lines that lock them" },
         { "ref": "library:marketing-image-maker", "type": "skill", "use": "build", "when": "When a direction needs a picture and you want a prompt, the exact size and a file plan" },
         { "ref": "library:image-maker-and-editor", "type": "skill", "use": "build", "when": "When a flat design must be placed on a pack shape or cut out cleanly" },
-        { "ref": "library:ai-product-photo-inspector", "type": "skill", "use": "check", "when": "When a mockup comes back, to check the label text and shape were not changed" },
+        { "ref": "library:product-page-image-checker", "type": "skill", "use": "check", "when": "When a mockup comes back, to get a pass or fail and one fix for each image against what was planned" },
         { "ref": "library:recraft", "type": "tool", "use": "build", "when": "When you need a vector draft of a label or icon that can be scaled" },
         { "ref": "library:adobe-firefly", "type": "tool", "use": "build", "when": "When a photo the client owns must be extended or cleaned up for the mockup" }
       ]
@@ -213,7 +217,6 @@
       "kind": "other",
       "items": [
         { "ref": "kit:skills/required-label-details-check", "use": "build", "when": "When the pack enters a new market and the required details differ" },
-        { "ref": "library:overseas-listing-localizer", "type": "skill", "use": "build", "when": "When images and copy need local language, sizes and required labels for each country" },
         { "ref": "library:translator", "type": "skill", "use": "build", "when": "When panel text must be translated in a natural tone with consistent terms" }
       ]
     },
@@ -235,7 +238,9 @@
       "items": [
         { "ref": "kit:skills/panel-map-and-layout-spec", "use": "build", "when": "When a sleeve or gift box needs its own panel map on top of the standard pack" },
         { "ref": "library:promotion-idea-planner", "type": "skill", "use": "explore", "when": "When the season needs an idea, to compare gift, bundle and pre-order options" },
-        { "ref": "library:cart-bundle-and-gift-planner", "type": "skill", "use": "brief", "when": "When the set must hold margin, to fix what goes in it before any design" }
+        { "ref": "library:cart-bundle-and-gift-planner", "type": "skill", "use": "brief", "when": "When the set must hold margin, to fix what goes in it before any design" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "Before the sleeve or gift set is drawn up, to build three fronts that differ in structure, not just colour" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the three fronts are side by side, so a fresh reviewer picks the one to finish" }
       ]
     },
     {
@@ -252,7 +257,8 @@
   ],
   "always": [
     { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any pack work for a brand with a live site: colours, fonts and voice" },
-    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When the pack states a number, award or claim you cannot trace to the maker" }
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When the pack states a number, award or claim you cannot trace to the maker" },
+    { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before artwork or copy goes to the client, so a fresh reader checks it against the brief as they would" }
   ],
   "helpers": [
     { "role": "brand-designer", "when": "When the brand has no logo, palette or type to build the pack from" },
@@ -272,6 +278,7 @@
     "No library item chooses a pack format or plans a shipping box and its protection",
     "No library item builds a layout or colour-coding system across a range of variants",
     "No library item covers retailer and Amazon packaging rules such as shelf-ready packs and warehouse labels",
-    "No library item makes a mockup from a dieline, and no tool guide covers Illustrator or pack mockup tools"
+    "No library item makes a mockup from a dieline, and no tool guide covers Illustrator or pack mockup tools",
+    "No English library item adapts pack images and copy to another country's sizes and required labels; the one that exists is written in Chinese"
   ]
 }

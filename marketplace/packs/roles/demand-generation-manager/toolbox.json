@@ -124,7 +124,9 @@
         { "ref": "library:conversion-page-writer", "type": "skill", "use": "build", "when": "When the registration page needs writing for one action" },
         { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When each invitation needs subject lines in several angles" },
         { "ref": "library:x-and-linkedin-post-pair-writer", "type": "prompt", "use": "build", "when": "When speakers and staff need posts to share the registration link" },
-        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When an invitation is drafted, to get cuts and a ship or fix verdict" }
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before the invitations are written, to plan three different runs of messages up to the day" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When an invitation is drafted, to get cuts and a ship or fix verdict" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before any invite is sent, to confirm the registration page works and the date and time are right" }
       ]
     },
     {
@@ -168,7 +170,9 @@
         { "ref": "library:lead-offer-planner", "type": "skill", "use": "build", "when": "When buyers have a costly problem and useful information should start the talk" },
         { "ref": "library:business-buyer-trust-builder", "type": "skill", "use": "brief", "when": "When buyers are slow and careful, to plan what earns their trust first" },
         { "ref": "library:conversion-page-writer", "type": "skill", "use": "build", "when": "When the offer is chosen and its page needs writing" },
-        { "ref": "library:landing-page-auditor", "type": "skill", "use": "check", "when": "When the page is drafted, to rank what would stop a visitor filling the form" }
+        { "ref": "library:make-three-first-screens", "type": "skill", "use": "explore", "when": "Before the landing page is built out, to make three different first screens and compare them on a phone" },
+        { "ref": "library:landing-page-auditor", "type": "skill", "use": "check", "when": "When the page is drafted, to rank what would stop a visitor filling the form" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the three first screens are side by side, so someone who did not make them picks one" }
       ]
     },
     {
@@ -179,7 +183,9 @@
         { "ref": "library:lead-nurture-follow-up", "type": "workflow", "use": "build", "when": "When stalled leads should get useful information first, then a follow-up" },
         { "ref": "library:email-sequence-writer", "type": "skill", "use": "build", "when": "When you need the full sequence with timing, subject lines and emails" },
         { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When each email needs several subject lines to choose from" },
-        { "ref": "library:email-sequence-auditor", "type": "skill", "use": "check", "when": "When the sequence has numbers, to see which emails to keep and which to fix" }
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before the sequence is written, to plan three different arcs for these leads and draft each first email" },
+        { "ref": "library:email-sequence-auditor", "type": "skill", "use": "check", "when": "When the sequence has numbers, to see which emails to keep and which to fix" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the three arcs and their first emails are drafted, so a fresh reviewer picks one to write in full" }
       ]
     },
     {
@@ -212,7 +218,8 @@
         { "ref": "library:marketing-budget-scenarios", "type": "skill", "use": "build", "when": "When a new budget is proposed, to forecast low and high cases by channel" },
         { "ref": "library:brand-sales-budget-split", "type": "workflow", "use": "build", "when": "When all spend goes to lead capture and the brand share needs deciding" },
         { "ref": "kit:workflows/quarterly-abm-cycle", "use": "brief", "when": "When the budget is set per quarter and must follow the account tiers" },
-        { "ref": "library:bob-hoffman", "type": "mind", "use": "think", "when": "When a dashboard claims credit, to ask what the numbers mean and who benefits" }
+        { "ref": "library:bob-hoffman", "type": "mind", "use": "think", "when": "When a dashboard claims credit, to ask what the numbers mean and who benefits" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the split is agreed, to put two differently shaped budgets on a page each, with totals that add up" }
       ]
     },
     {

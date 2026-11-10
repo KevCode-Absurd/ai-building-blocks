@@ -79,7 +79,6 @@
       "kind": "code",
       "items": [
         { "ref": "library:test-list-writer", "type": "skill", "use": "brief", "when": "Before writing tests, to list each state and action to cover, smallest first" },
-        { "ref": "library:untested-code-change-guide", "type": "skill", "use": "brief", "when": "When a screen has no tests and must be made safe to change" },
         { "ref": "kit:skills/mobile-screen-build", "use": "build", "when": "When tests are written with the screen, one for each state in the table" },
         { "ref": "library:test-failure-repair-loop", "type": "agent", "use": "build", "when": "When the suite is red and you want capped rounds of fixes until green or stopped" },
         { "ref": "library:kent-beck", "type": "mind", "use": "think", "when": "When a screen seems too tangled to test, to take one small case at a time" }
@@ -245,7 +244,7 @@
       "items": [
         { "ref": "library:agency-engineering-mobile-app-builder", "type": "agent", "use": "build", "when": "When a small business wants an app and needs a build plan with device checks" },
         { "ref": "library:react-app-structure-planner", "type": "skill", "use": "build", "when": "When a React Native project needs a folder layout and rules for what imports what" },
-        { "ref": "library:prototype-to-production-guide", "type": "skill", "use": "check", "when": "When a working prototype must become an app real users can rely on" }
+        { "ref": "library:shipped-app-gap-finder", "type": "skill", "use": "check", "when": "When a working prototype exists, to find gaps in data rules, secrets and payments before real users rely on it" }
       ]
     }
   ],

@@ -169,7 +169,8 @@
         { "ref": "library:review-quote-ad-card-planner", "type": "prompt", "use": "explore", "when": "When review lines should become quote cards, to plan several with pictures and text" },
         { "ref": "library:review-ad-copy", "type": "workflow", "use": "build", "when": "When reviews should drive an ad, to get an angle and copy built from buyers' words" },
         { "ref": "library:structured-data-writer", "type": "skill", "use": "build", "when": "When ratings should show in search results and the page needs working markup" },
-        { "ref": "kit:skills/testimonial-and-consent-library", "use": "check", "when": "Before a quote is published, to confirm consent covers this use and the edit is fair" }
+        { "ref": "kit:skills/testimonial-and-consent-library", "use": "check", "when": "Before a quote is published, to confirm consent covers this use and the edit is fair" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before a review is reused, to trace the quote, the name and any star rating to the original review" }
       ]
     },
     {
@@ -179,7 +180,9 @@
       "items": [
         { "ref": "library:turn-a-customer-interview-into-a-case-outline", "type": "workflow", "use": "build", "when": "When one customer interview should become a case outline with the evidence gaps listed" },
         { "ref": "library:buying-story-interview-guide", "type": "skill", "use": "brief", "when": "Before the call, to plan questions that follow the customer's own timeline" },
-        { "ref": "kit:prompts/testimonial-request", "use": "build", "when": "When the customer has no time for a call and will answer three written questions" }
+        { "ref": "kit:prompts/testimonial-request", "use": "build", "when": "When the customer has no time for a call and will answer three written questions" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the story is published, to trace each result and quote to the interview and the customer's sign-off" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the story is finished, so a fresh reader checks it against the brief as a doubtful buyer would" }
       ]
     },
     {

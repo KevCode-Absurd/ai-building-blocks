@@ -11,6 +11,7 @@
         { "ref": "library:welcome-flow-builder", "type": "skill", "use": "build", "when": "When a shop has an offer, best sellers and a story and needs the flow's timing, filters and outlines" },
         { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When each welcome email is drafted, to compare subject lines in several angles" },
         { "ref": "library:signup-popup-builder", "type": "skill", "use": "brief", "when": "When few people join the list, to fix the popup that feeds the flow" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before the flow is built, to plan three different arcs for new subscribers and draft each first email" },
         { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before the flow goes live, to score each email and get a ship or fix verdict" }
       ]
     },
@@ -59,6 +60,7 @@
         { "ref": "library:win-back-lapsed-buyers-and-clean-out-the-rest", "type": "workflow", "use": "build", "when": "When win-back and list cleaning should run together, with a read of results" },
         { "ref": "library:customer-churn-risk-scorer", "type": "skill", "use": "brief", "when": "When you need to know which repeat buyers are overdue before you write to anyone" },
         { "ref": "library:promotion-idea-planner", "type": "skill", "use": "explore", "when": "When the hook should be a gift, bundle or early access, not money off" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before writing the win-back emails, to compare three approaches that do not lean on a discount" },
         { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before the win-back run starts, to score each email and cut what drags" }
       ]
     },

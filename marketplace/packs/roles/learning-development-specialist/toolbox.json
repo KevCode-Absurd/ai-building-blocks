@@ -176,7 +176,8 @@
         { "ref": "kit:workflows/annual-learning-plan-cycle", "use": "build", "when": "When next year's goals or budget are set, or a board asks what training should buy" },
         { "ref": "kit:skills/training-needs-analysis", "use": "brief", "when": "Before the plan, so every line traces to a counted gap and not a course catalogue" },
         { "ref": "library:department-budget-planner", "type": "skill", "use": "build", "when": "When you need the training spend phased by month and team, with a way to report variance" },
-        { "ref": "library:prepare-a-board-decision-brief", "type": "workflow", "use": "build", "when": "When the plan goes to a board and must ask for a clear decision with the evidence mapped" }
+        { "ref": "library:prepare-a-board-decision-brief", "type": "workflow", "use": "build", "when": "When the plan goes to a board and must ask for a clear decision with the evidence mapped" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the annual plan is written, to compare two ways to split the training budget and the days" }
       ]
     },
     {

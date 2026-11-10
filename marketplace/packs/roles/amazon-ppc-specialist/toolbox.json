@@ -95,7 +95,9 @@
         { "ref": "library:amazon-ppc-launch-builder", "type": "skill", "use": "build", "when": "When you have keywords and a daily budget and need the first campaigns with bids" },
         { "ref": "library:amazon-launch-week-planner", "type": "skill", "use": "brief", "when": "When ads must line up with the days before and after go-live" },
         { "ref": "kit:skills/phase-bid-rules", "use": "build", "when": "When the launch needs a set time and budget at a higher ACOS, then a hand-over to growth" },
-        { "ref": "kit:prompts/break-even-acos-table", "use": "check", "when": "Before the launch budget is set, to check what the product can afford to lose" }
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the launch budget is set, to compare two plans that split the spend and the weeks differently" },
+        { "ref": "kit:prompts/break-even-acos-table", "use": "check", "when": "Before the launch budget is set, to check what the product can afford to lose" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before any ad is built, to confirm the listing is live, in stock and at the price the plan assumes" }
       ]
     },
     {
@@ -127,6 +129,7 @@
         { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When the headline is open, to get five short lines that each take a new angle" },
         { "ref": "library:ad-headline-writer", "type": "skill", "use": "build", "when": "When you need plain headlines with character counts and the one to test first" },
         { "ref": "library:video-ad-script-angle-chooser", "type": "prompt", "use": "explore", "when": "When a video is planned, to see four kinds of script before one is written" },
+        { "ref": "library:make-ad-concept-spread", "type": "skill", "use": "explore", "when": "Before writing the headlines in full, to spread nine or more one-line concepts across promises and formats" },
         { "ref": "library:sound-off-commercial-checker", "type": "skill", "use": "check", "when": "When the video will play muted in search results, to check it still sells" },
         { "ref": "kit:prompts/sponsored-brands-claims-check", "use": "check", "when": "Before submitting a headline, image or video script, to catch claims that need proof" },
         { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When the copy has many claims, to sort each as fine, needs proof or cut" }
@@ -163,7 +166,8 @@
         { "ref": "library:sale-season-pacing-sheet-builder", "type": "skill", "use": "build", "when": "When you have last year's sale data and need scale, hold and cut rules by day" },
         { "ref": "library:marketing-budget-scenarios", "type": "skill", "use": "explore", "when": "When the budget is not fixed, to see low and high cases with diminishing returns" },
         { "ref": "kit:skills/phase-bid-rules", "use": "build", "when": "When the event needs its own bid rules and a date to return to normal" },
-        { "ref": "kit:prompts/break-even-acos-table", "use": "check", "when": "When prices drop for the sale, to redo break-even ACOS at the sale price" }
+        { "ref": "kit:prompts/break-even-acos-table", "use": "check", "when": "When prices drop for the sale, to redo break-even ACOS at the sale price" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the event budget is fixed, to confirm the deal price and stock a shopper will find on the day" }
       ]
     },
     {
@@ -206,7 +210,6 @@
       "kind": "audit",
       "items": [
         { "ref": "library:amazon-product-edge-finder", "type": "skill", "use": "check", "when": "When clicks do not convert, to compare the listing with rivals and rank the fixes" },
-        { "ref": "library:marketplace-photo-rule-checker", "type": "skill", "use": "check", "when": "When images may be holding conversion back or risk a rejection" },
         { "ref": "library:review-insight-finder", "type": "skill", "use": "brief", "when": "When reviews may explain a weak conversion rate, to rank the complaints" },
         { "ref": "kit:skills/break-even-acos-review", "use": "check", "when": "When the listing cannot be fixed yet, to decide if ads should run on it at all" }
       ]
@@ -244,6 +247,7 @@
     "No library item splits ad sales from organic sales to work out TACOS from Amazon business reports",
     "No library item audits an Amazon Ads account; the account auditors cover Google, Meta, TikTok and LinkedIn",
     "No library item reads Amazon Marketing Cloud or new-to-brand numbers",
-    "The library has fewer than 50 good fits for Amazon ads; most paid media items are built for Google and Meta"
+    "The library has fewer than 50 good fits for Amazon ads; most paid media items are built for Google and Meta",
+    "No English library item checks listing photos against Amazon's image rules; the one that exists is written in Chinese"
   ]
 }

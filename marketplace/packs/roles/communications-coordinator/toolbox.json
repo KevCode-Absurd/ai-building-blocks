@@ -49,7 +49,9 @@
         { "ref": "library:email-sequence-arc-planner", "type": "skill", "use": "brief", "when": "Before writing, to plan what each message does so one builds on the last" },
         { "ref": "kit:prompts/welcome-and-follow-up-set", "use": "build", "when": "When a new family, member or visitor should get a warm welcome and one clear next step" },
         { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the first message must be opened, to compare several subject lines" },
-        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When the set is drafted, to check length, pace and the one ask in each message" }
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before writing the set, to plan three different orders for the messages and draft each first one" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When the set is drafted, to check length, pace and the one ask in each message" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the three welcome plans are drafted, so someone who did not write them picks one" }
       ]
     },
     {
@@ -265,7 +267,8 @@
     { "ref": "library:brand-voice-reviewer", "type": "agent", "use": "check", "when": "When a draft is done, to check it against the organisation's voice and fix what drifts" },
     { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a message gives dates, names, numbers or rules, to check each against its source" },
     { "ref": "library:ai-default-patterns", "type": "skill", "use": "check", "when": "Before delivery, to catch stock phrases that make a message read as machine written" },
-    { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "Last step before sign-off, to catch slips with a log of every change" }
+    { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "Last step before sign-off, to catch slips with a log of every change" },
+    { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before a message goes out, so a fresh reader checks it against the brief as a parent or member would" }
   ],
   "helpers": [
     { "role": "graphic-designer", "when": "When a poster, invitation or sign needs a real layout and print-ready files" },

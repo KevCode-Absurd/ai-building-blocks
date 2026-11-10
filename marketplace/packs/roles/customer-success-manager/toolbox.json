@@ -49,6 +49,7 @@
         { "ref": "kit:skills/onboarding-to-first-value", "use": "brief", "when": "Before writing, to fix the first result each email should move the customer towards" },
         { "ref": "library:new-customer-onboarding-sequence-writer", "type": "skill", "use": "build", "when": "When you need a 14-day email and text plan and a map of the first 100 days" },
         { "ref": "library:email-sequence-writer", "type": "skill", "use": "explore", "when": "When you want a second series with different timing and subject lines to compare" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before writing the series, to plan three different onboarding orders and draft each first email" },
         { "ref": "library:make-onboarding-instructions-match-the-product", "type": "workflow", "use": "check", "when": "When the emails give setup steps, to check each against the real product" },
         { "ref": "library:one-ask-email-tightener", "type": "prompt", "use": "check", "when": "Before sending, to cut each email to one action the customer can take" }
       ]
@@ -125,6 +126,7 @@
         { "ref": "kit:skills/renewal-and-price-change", "use": "build", "when": "When notices must state the date, amount and how to cancel, with a value recap" },
         { "ref": "library:billing-reminder-and-confirmation-writer", "type": "skill", "use": "build", "when": "When the renewal is an automatic charge and needs a reminder and a confirmation" },
         { "ref": "library:email-sequence-writer", "type": "skill", "use": "explore", "when": "When you want a second series with different timing and subject lines to compare" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before the renewal emails are written, to compare three orders for the reminders and the ask" },
         { "ref": "library:discount-and-price-change-checker", "type": "agent", "use": "check", "when": "When the emails quote a price or discount, to check every figure agrees" },
         { "ref": "library:one-ask-email-tightener", "type": "prompt", "use": "check", "when": "Before sending, to make sure each notice asks for one clear action" }
       ]
@@ -148,6 +150,7 @@
         { "ref": "kit:skills/fair-cancel-flow-and-win-back", "use": "build", "when": "When members have left and you need honest messages matched to why each one went" },
         { "ref": "library:win-back-flow-builder", "type": "skill", "use": "build", "when": "When timing should follow how long buyers usually wait before they order again" },
         { "ref": "library:text-message-campaign-writer", "type": "skill", "use": "explore", "when": "When text or WhatsApp may work better than email, with consent rules kept" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "When win-back needs several messages, to plan three different approaches and draft each opener" },
         { "ref": "library:one-ask-email-tightener", "type": "prompt", "use": "check", "when": "Before sending, to cut each message to one offer and one way back" }
       ]
     },

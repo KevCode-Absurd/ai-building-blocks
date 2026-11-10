@@ -152,7 +152,8 @@
         { "ref": "kit:prompts/client-service-level-schedule", "use": "build", "when": "When clients must be told response times, what is in scope and what happens on a miss" },
         { "ref": "library:agency-engineering-it-service-manager", "type": "agent", "use": "explore", "when": "When the firm is IT support and you want a second set of priorities to compare" },
         { "ref": "library:contract-risk-reviewer", "type": "skill", "use": "check", "when": "When the schedule joins a contract, to rate the duties and risks it creates" },
-        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When clients argue about what urgent means and every term must be plain" }
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When clients argue about what urgent means and every term must be plain" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before the schedule goes to the client, so a fresh reader lists what they could not act on without asking" }
       ]
     },
     {

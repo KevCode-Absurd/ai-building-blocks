@@ -48,7 +48,8 @@
         { "ref": "library:plan-a-sale-across-email-and-sms", "type": "workflow", "use": "build", "when": "When the campaign is a sale that runs over several emails and texts" },
         { "ref": "library:honest-urgency-planner", "type": "skill", "use": "brief", "when": "When the offer needs a deadline or limit that is real, and the lines to say it" },
         { "ref": "kit:prompts/subject-lines-and-preview", "use": "explore", "when": "When the email is written and needs honest subject lines to choose from" },
-        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When the email is drafted, to get cuts, a pacing map and a verdict" }
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When the email is drafted, to get cuts, a pacing map and a verdict" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the email is written, to confirm the offer, price, stock and link a reader will meet today" }
       ]
     },
     {
@@ -70,7 +71,9 @@
         { "ref": "library:welcome-flow-builder", "type": "skill", "use": "build", "when": "When it is a store welcome with an offer, best sellers and a brand story" },
         { "ref": "library:write-a-welcome-email-sequence-that-teaches-then-sells", "type": "workflow", "use": "build", "when": "When the series should teach first and sell later, with a review built in" },
         { "ref": "kit:prompts/subject-lines-and-preview", "use": "explore", "when": "When each welcome email needs subject lines to choose from" },
-        { "ref": "library:email-sequence-auditor", "type": "skill", "use": "check", "when": "When the series has numbers, to see which emails to protect and which to fix" }
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before writing the series, to plan three different arcs for new subscribers and draft each first email" },
+        { "ref": "library:email-sequence-auditor", "type": "skill", "use": "check", "when": "When the series has numbers, to see which emails to protect and which to fix" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the three arcs are drafted, so a fresh reviewer picks the one to write in full" }
       ]
     },
     {
@@ -82,6 +85,7 @@
         { "ref": "library:lead-magnet-planner", "type": "skill", "use": "explore", "when": "When the series needs a free offer to start it, to compare ideas and pick one" },
         { "ref": "library:email-sequence-arc-planner", "type": "skill", "use": "brief", "when": "Before writing, to give each message one job that sets up the next" },
         { "ref": "library:lead-nurture-follow-up", "type": "workflow", "use": "build", "when": "When stalled leads should get useful information before any ask" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before the nurture emails are written, to compare three orders for the proof, the teaching and the ask" },
         { "ref": "library:email-sequence-auditor", "type": "skill", "use": "check", "when": "When the series is live, to see where leads stop reading" }
       ]
     },
@@ -130,6 +134,7 @@
         { "ref": "library:win-back-flow-builder", "type": "skill", "use": "build", "when": "When the flow should be timed to how buyers really reorder" },
         { "ref": "library:sunset-flow-and-list-cleaner", "type": "skill", "use": "build", "when": "When non-openers hurt sending, for a three-email goodbye and a monthly routine" },
         { "ref": "kit:prompts/subject-lines-and-preview", "use": "explore", "when": "When the win-back email needs subject lines that get a second look" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before the win-back emails are written, to plan three different approaches and draft each opener" },
         { "ref": "library:email-sequence-auditor", "type": "skill", "use": "check", "when": "When the flow has run, to see which emails earn their place" }
       ]
     },
@@ -139,9 +144,12 @@
       "kind": "email",
       "items": [
         { "ref": "library:launch-email-sequence-planner", "type": "skill", "use": "build", "when": "When a launch has a close date and needs the full run of emails with resends" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before the launch emails are written, to plan three different runs from teaser to last call" },
         { "ref": "library:honest-urgency-planner", "type": "skill", "use": "check", "when": "When writing the closing emails, to keep every deadline and limit true" },
         { "ref": "kit:prompts/subject-lines-and-preview", "use": "explore", "when": "When each launch email needs subject lines to choose from" },
-        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When a launch email is drafted, to get cuts and a ship or fix verdict" }
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When a launch email is drafted, to get cuts and a ship or fix verdict" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the three launch arcs and first emails exist, so someone who did not write them picks one" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the sequence is built, to confirm the product is live, in stock and at the launch price" }
       ]
     },
     {
@@ -276,7 +284,8 @@
     { "ref": "library:write-a-voice-guide-from-your-documents-and-check-copy", "type": "workflow", "use": "brief", "when": "At the start of a client, to build a voice guide from their own documents" },
     { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "Before any email goes for approval, to fix lines that sound machine-written" },
     { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When an email states a number, date or result you cannot trace to the client" },
-    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before every send, to catch typos, wrong names and product terms spelt two ways" }
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before every send, to catch typos, wrong names and product terms spelt two ways" },
+    { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before any email or series is handed over, so a fresh reader checks it against the brief as the client would" }
   ],
   "helpers": [
     { "role": "lifecycle-marketer", "when": "When the job is retention across email, SMS, loyalty and offers, not email alone" },

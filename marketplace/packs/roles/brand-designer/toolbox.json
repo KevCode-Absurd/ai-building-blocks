@@ -87,7 +87,8 @@
         { "ref": "library:brand-stylescape-planner", "type": "skill", "use": "explore", "when": "When you need three distinct mood boards with photo, type and colour choices" },
         { "ref": "library:midjourney-four-direction-prompt-writer", "type": "skill", "use": "explore", "when": "When a direction needs pictures, to try one idea as four different treatments" },
         { "ref": "library:midjourney", "type": "tool", "use": "explore", "when": "When you want to explore looks fast and then reuse the style the client chose" },
-        { "ref": "library:agency-design-inclusive-visuals-specialist", "type": "agent", "use": "check", "when": "When the boards show people, to check for stereotypes and faces that all look alike" }
+        { "ref": "library:agency-design-inclusive-visuals-specialist", "type": "agent", "use": "check", "when": "When the boards show people, to check for stereotypes and faces that all look alike" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the directions are on one sheet, so a fresh reviewer names the one to recommend and why" }
       ]
     },
     {
@@ -208,6 +209,7 @@
       "items": [
         { "ref": "kit:skills/brand-guidelines-book", "use": "build", "when": "When the book must include specs for signature, letterhead and cards" },
         { "ref": "library:page-grid-and-type-planner", "type": "skill", "use": "build", "when": "When the letterhead carries text and needs a grid, a short type list and white space" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "Before the card and letterhead are final, to build three layouts at real size that differ in more than colour" },
         { "ref": "library:plain-page-type-checker", "type": "skill", "use": "check", "when": "When the pieces are drafted, to check small type and spacing where they are read" }
       ]
     },
@@ -251,7 +253,6 @@
       "kind": "ops_doc",
       "items": [
         { "ref": "library:ad-photography-style-chooser", "type": "skill", "use": "explore", "when": "When the photo style is open, to compare styles and pick a main one, a test one and one to avoid" },
-        { "ref": "library:store-photo-style-locker", "type": "skill", "use": "build", "when": "When the style is chosen, to fix models, light and layout in one file" },
         { "ref": "library:creative-shoot-briefer", "type": "skill", "use": "build", "when": "When a photographer needs the rules as a brief for a real shoot" },
         { "ref": "library:agency-design-inclusive-visuals-specialist", "type": "agent", "use": "check", "when": "When the rules cover people, to check who is shown and how" }
       ]
@@ -268,7 +269,8 @@
   ],
   "always": [
     { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any work on a brand that already has a live site: colours, fonts and voice" },
-    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any brief or brand book goes out, to catch typos and names spelt two ways" }
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any brief or brand book goes out, to catch typos and names spelt two ways" },
+    { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before any brand piece goes to the client, so a fresh reviewer checks it against the brief they gave" }
   ],
   "helpers": [
     { "role": "brand-strategist", "when": "When the brand has no position or audience agreed and the look has nothing to stand on" },
@@ -288,6 +290,7 @@
     "No library item covers brand motion: logo animation and movement rules",
     "No library item checks font licences or image rights before a brand book is published",
     "No library item plans a brand pattern, graphic device or illustration style as a system",
-    "No tool guide covers Figma or Adobe Illustrator"
+    "No tool guide covers Figma or Adobe Illustrator",
+    "No English library item keeps one photo style file that every image prompt reuses; the one that exists is written in Chinese"
   ]
 }

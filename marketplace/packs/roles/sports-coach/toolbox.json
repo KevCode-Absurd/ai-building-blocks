@@ -230,7 +230,9 @@
         { "ref": "library:social-post-writer", "type": "skill", "use": "build", "when": "When the club needs clear posts for a new season, a trial or a call for helpers" },
         { "ref": "library:dull-update-email-rewriter", "type": "prompt", "use": "explore", "when": "When the call for volunteers is flat, to lead with what the helper gains" },
         { "ref": "library:canva", "type": "tool", "use": "build", "when": "When a volunteer will make the graphic from a template and reuse it" },
-        { "ref": "library:honest-appreciation-note-writer", "type": "skill", "use": "build", "when": "When a volunteer or sponsor should be thanked with one specific, true line" }
+        { "ref": "library:honest-appreciation-note-writer", "type": "skill", "use": "build", "when": "When a volunteer or sponsor should be thanked with one specific, true line" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before the posts go up, so a fresh reader checks they say who, where, when and how to join" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before posting, to confirm the sign-up link works and the trial dates and places are still open" }
       ]
     },
     {
@@ -241,7 +243,8 @@
         { "ref": "library:nonprofit-grant-funder-researcher", "type": "skill", "use": "brief", "when": "When the club needs kit or pitch money and does not know which funders fit" },
         { "ref": "library:nonprofit-grant-proposal-writer", "type": "skill", "use": "build", "when": "When a funder's form is open and you need a draft matched to their questions" },
         { "ref": "library:nonprofit-sponsor-package-planner", "type": "skill", "use": "build", "when": "When a local business might sponsor the kit and you need tiers and pitch words" },
-        { "ref": "library:membership-plan-pricer", "type": "skill", "use": "build", "when": "When the club must set or change fees and wants fair tiers" }
+        { "ref": "library:membership-plan-pricer", "type": "skill", "use": "build", "when": "When the club must set or change fees and wants fair tiers" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before the bid or sponsor pack is sent, so a fresh reader in the funder's seat lists what they would ask" }
       ]
     },
     {

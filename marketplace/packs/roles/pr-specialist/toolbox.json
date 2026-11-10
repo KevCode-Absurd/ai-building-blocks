@@ -13,7 +13,8 @@
         { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the headline is flat, to get several factual angles and pick the plainest strong one" },
         { "ref": "library:ten-percent-cutter", "type": "skill", "use": "build", "when": "When the release runs long, to cut it and keep a log of what went" },
         { "ref": "library:hard-questions-faq-writer", "type": "skill", "use": "check", "when": "When the release is drafted, to list the hard questions it raises and answer them first" },
-        { "ref": "library:george-orwell", "type": "mind", "use": "think", "when": "When the draft is full of 'delighted' and 'leading', to put it in plain exact words" }
+        { "ref": "library:george-orwell", "type": "mind", "use": "think", "when": "When the draft is full of 'delighted' and 'leading', to put it in plain exact words" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the release goes out, to trace every figure, date, name and quote to a source the client holds" }
       ]
     },
     {
@@ -86,7 +87,8 @@
         { "ref": "kit:prompts/holding-statement", "use": "build", "when": "When you must say something true and useful before all the facts are known" },
         { "ref": "library:fact-vs-opinion-sorter", "type": "prompt", "use": "check", "when": "When the statement mixes facts with guesses, to mark every line that is not confirmed" },
         { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "When the statement makes promises, to check each one can be kept" },
-        { "ref": "library:george-orwell", "type": "mind", "use": "think", "when": "When the statement hides behind 'an issue was identified', to say plainly what happened" }
+        { "ref": "library:george-orwell", "type": "mind", "use": "think", "when": "When the statement hides behind 'an issue was identified', to say plainly what happened" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the statement is issued, to keep only facts with a confirmed source and cut the rest" }
       ]
     },
     {
@@ -155,7 +157,9 @@
         { "ref": "kit:skills/awards-talks-and-podcasts", "use": "brief", "when": "When you must choose the category and line up evidence against each criterion first" },
         { "ref": "library:turn-a-customer-interview-into-a-case-outline", "type": "workflow", "use": "brief", "when": "When the entry rests on a customer result, to outline the case and list evidence gaps" },
         { "ref": "library:overstuffed-draft-cutter", "type": "skill", "use": "build", "when": "When the entry is over the word limit, to name the main point and cut what fights it" },
-        { "ref": "library:annette-simmons", "type": "mind", "use": "think", "when": "When the entry is a list of numbers, to find one true incident that makes judges care" }
+        { "ref": "library:annette-simmons", "type": "mind", "use": "think", "when": "When the entry is a list of numbers, to find one true incident that makes judges care" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the entry is submitted, to match each result and number claimed to evidence the judges could ask for" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the entry is drafted, so a fresh reader scores it against the category criteria as a judge would" }
       ]
     },
     {

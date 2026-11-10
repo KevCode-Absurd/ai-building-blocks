@@ -71,7 +71,8 @@
         { "ref": "library:long-form-post-repurposer", "type": "skill", "use": "build", "when": "When one strong passage should become a post that stands alone" },
         { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the episode email needs a subject line, to compare several angles" },
         { "ref": "library:video-hook-scorer", "type": "skill", "use": "check", "when": "When clips are chosen, to score each opening and rewrite the weak ones" },
-        { "ref": "library:opus-clip", "type": "tool", "use": "build", "when": "When the client wants captioned short clips cut from the recording for review" }
+        { "ref": "library:opus-clip", "type": "tool", "use": "build", "when": "When the client wants captioned short clips cut from the recording for review" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the promo kit is finished, so a fresh reader checks it against the brief as the host would" }
       ]
     },
     {
@@ -137,7 +138,8 @@
         { "ref": "library:agency-marketing-global-podcast-strategist", "type": "agent", "use": "build", "when": "When the show needs its positioning and a first-season plan for the main platforms" },
         { "ref": "library:podcast-pilot-brief-builder", "type": "skill", "use": "build", "when": "When the idea needs testing as one pilot before a full season" },
         { "ref": "library:product-name-brainstormer", "type": "skill", "use": "explore", "when": "When the show has no name yet, to compare five name ideas and why each fits listeners" },
-        { "ref": "library:launch-teaser-to-preview-planner", "type": "skill", "use": "build", "when": "When there is a launch date, to plan the teaser, the preview and launch day" }
+        { "ref": "library:launch-teaser-to-preview-planner", "type": "skill", "use": "build", "when": "When there is a launch date, to plan the teaser, the preview and launch day" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the launch plan is set, to compare two plans that spend the time and budget differently" }
       ]
     },
     {
@@ -148,7 +150,8 @@
         { "ref": "kit:prompts/sponsor-read-with-disclosure", "use": "build", "when": "When an episode carries a sponsor and the host reads the message" },
         { "ref": "library:ad-opening-line-batch-writer", "type": "prompt", "use": "explore", "when": "When the read needs a way in, to get ten openings the host could say naturally" },
         { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "Before recording, to fix lines that trip when spoken" },
-        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "Before the sponsor signs off, to sort each claim as fine, needs proof or cut" }
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "Before the sponsor signs off, to sort each claim as fine, needs proof or cut" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the read is recorded, to confirm the sponsor's link, code and offer work for a listener today" }
       ]
     },
     {
@@ -180,7 +183,8 @@
         { "ref": "library:rough-text-to-article-tidier", "type": "prompt", "use": "build", "when": "When the transcript should become a tidy article with a title, summary and headings" },
         { "ref": "library:content-repurposer", "type": "skill", "use": "build", "when": "When one episode should feed a series of emails, posts and clips" },
         { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the article needs its own title, to compare several angles" },
-        { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "When the article is drafted, to fix lines that read as machine written" }
+        { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "When the article is drafted, to fix lines that read as machine written" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before the article is handed over, so a fresh reader says what a new listener could not follow" }
       ]
     },
     {
@@ -203,7 +207,8 @@
         { "ref": "library:elevenlabs-spoken-script-writer", "type": "skill", "use": "build", "when": "When the script needs clear speakers, pacing and a set length" },
         { "ref": "library:ad-opening-line-batch-writer", "type": "prompt", "use": "explore", "when": "When the trailer's first ten seconds are weak, to compare openings" },
         { "ref": "library:roman-mars", "type": "mind", "use": "think", "when": "When a solo episode explains something, to start from one ordinary thing and ask why" },
-        { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "Before recording, to catch every line that reads well but speaks badly" }
+        { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "Before recording, to catch every line that reads well but speaks badly" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the script is final, so a fresh reviewer checks it against the brief before anyone records" }
       ]
     },
     {

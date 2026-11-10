@@ -120,7 +120,9 @@
       "items": [
         { "ref": "kit:workflows/ninety-day-growth-plan", "use": "build", "when": "When a channel has won, or a plan has grown too big to follow" },
         { "ref": "library:90-day-plan-builder", "type": "skill", "use": "build", "when": "When the decision is made and needs twelve weeks of owners, check-ins and risks" },
-        { "ref": "library:plan-pre-mortem-runner", "type": "skill", "use": "check", "when": "When the plan is written, to imagine it failed and find the weak assumptions" }
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the 90 days are written up, to compare two plans that bet the time and money differently" },
+        { "ref": "library:plan-pre-mortem-runner", "type": "skill", "use": "check", "when": "When the plan is written, to imagine it failed and find the weak assumptions" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the two plans are on a page each, so a reviewer who has not seen your notes picks one" }
       ]
     },
     {
@@ -150,6 +152,7 @@
       "kind": "strategy",
       "items": [
         { "ref": "library:one-goal-marketing-plan-builder", "type": "skill", "use": "build", "when": "When the plan has many tactics, to get one numbered goal and a test calendar" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When cutting the plan down, to set two focused versions side by side and recommend one" },
         { "ref": "library:check-your-strategy-then-turn-it-into-a-90-day-plan", "type": "workflow", "use": "check", "when": "When you review an existing plan, to find what is hollow before rebuilding it" },
         { "ref": "library:mark-ritson", "type": "mind", "use": "think", "when": "When the plan starts with tactics before a target and a goal are chosen" }
       ]
@@ -160,6 +163,7 @@
       "kind": "strategy",
       "items": [
         { "ref": "library:channel-budget-mix-planner", "type": "skill", "use": "build", "when": "When you have spend by channel and margin, for a target split and caps" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the split is set, to put two differently shaped budgets on a page each, with the totals shown" },
         { "ref": "library:channel-decay-checker", "type": "skill", "use": "check", "when": "When a channel that worked is fading, to see why and what to refresh" },
         { "ref": "library:monthly-channel-budget-reviewer", "type": "agent", "use": "check", "when": "When the split should be reviewed monthly against the store's own totals" },
         { "ref": "kit:skills/unit-economics-and-cac-limit", "use": "check", "when": "Before adding budget, to confirm each channel stays under the cost limit" }
@@ -241,7 +245,6 @@
     "No library item designs a pilot offer for early customers with terms, price and what you ask in return",
     "No library item plans a paid challenge or a coaching launch as a channel test",
     "No library item gives the scripts for a channel test: the pitch, the post and the ask",
-    "No library item compares two differently shaped 90-day plans for the same channel",
     "No tool guides exist for analytics and product data tools such as GA4, Mixpanel or Amplitude"
   ]
 }

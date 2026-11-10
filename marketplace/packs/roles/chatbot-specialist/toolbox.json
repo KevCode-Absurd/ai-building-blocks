@@ -47,7 +47,8 @@
         { "ref": "library:help-article-writer", "type": "skill", "use": "build", "when": "When a topic needs a full help article behind the short bot answer" },
         { "ref": "library:answer-first-page-rewriter", "type": "skill", "use": "build", "when": "When source pages bury the answer, to rewrite each section answer first" },
         { "ref": "library:customer-question-finder", "type": "skill", "use": "check", "when": "When entries are drafted, to find customer doubts they still leave unanswered" },
-        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When an entry states a price, time or promise you cannot trace to the client's own text" }
+        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When an entry states a price, time or promise you cannot trace to the client's own text" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "When entries are drafted, to match every policy and price in them to its source page and date" }
       ]
     },
     {
@@ -87,7 +88,8 @@
       "items": [
         { "ref": "kit:skills/bot-knowledge-base-build", "use": "build", "when": "When the top five questions each need a short approved answer and a detail line" },
         { "ref": "library:refund-request-reply-writer", "type": "prompt", "use": "build", "when": "When refund answers must lead with the decision and follow the written policy" },
-        { "ref": "library:angry-customer-reply-checker", "type": "skill", "use": "check", "when": "When an answer goes to upset customers, to check promises, facts and tone" }
+        { "ref": "library:angry-customer-reply-checker", "type": "skill", "use": "check", "when": "When an answer goes to upset customers, to check promises, facts and tone" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before answers are approved, to trace each price, time limit and policy line to the live policy page" }
       ]
     },
     {
@@ -220,7 +222,8 @@
         { "ref": "kit:skills/conversation-flow-and-handover", "use": "build", "when": "When the DM flow needs buttons, fallbacks and a point where a person takes over" },
         { "ref": "library:whatsapp-marketing-planner", "type": "skill", "use": "build", "when": "When the channel is WhatsApp and needs automatic replies and support flows set up" },
         { "ref": "library:quiz-and-recommender-designer", "type": "skill", "use": "explore", "when": "When the flow should sort people with a few questions before it asks for details" },
-        { "ref": "library:text-message-campaign-writer", "type": "skill", "use": "check", "when": "When messages follow up later, to check the consent rules for texts and WhatsApp" }
+        { "ref": "library:text-message-campaign-writer", "type": "skill", "use": "check", "when": "When messages follow up later, to check the consent rules for texts and WhatsApp" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the flow goes live, to confirm the link it sends people to works and the offer is still on" }
       ]
     },
     {

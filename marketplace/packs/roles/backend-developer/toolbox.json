@@ -245,7 +245,7 @@
       "kind": "code",
       "items": [
         { "ref": "library:agency-engineering-code-reviewer", "type": "agent", "use": "check", "when": "When a change needs a ranked review of bugs, security, tests and clarity" },
-        { "ref": "library:untested-code-change-guide", "type": "skill", "use": "brief", "when": "When the code has no tests and must be changed without breaking it" },
+        { "ref": "library:test-suite-writer", "type": "skill", "use": "brief", "when": "When the code has no tests, to write tests that pin what it does before anything is changed" },
         { "ref": "library:code-refactor-planner", "type": "skill", "use": "build", "when": "When a messy module needs named, small moves that keep its behaviour the same" },
         { "ref": "library:linus-torvalds", "type": "mind", "use": "think", "when": "When reviewing a change, to ask first what it breaks for people already using the code" }
       ]

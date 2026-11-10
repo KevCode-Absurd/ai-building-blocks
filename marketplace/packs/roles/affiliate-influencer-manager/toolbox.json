@@ -44,7 +44,6 @@
       "task": "Plan product gifting to creators",
       "kind": "plan",
       "items": [
-        { "ref": "library:influencer-gifting-planner", "type": "skill", "use": "build", "when": "When you have a product and budget and need the box card, a tracking table and which posts to ask for" },
         { "ref": "library:creator-gifting-brief", "type": "workflow", "use": "build", "when": "When gifts go out with a phone-video script and a filming brief in the box" },
         { "ref": "library:creator-ad-roster-builder", "type": "skill", "use": "build", "when": "When gifting should feed a paid roster, with roster size and a pay rule" },
         { "ref": "library:unboxing-insert-and-gift-planner", "type": "skill", "use": "build", "when": "When the parcel needs an insert card and note with the cost checked against margin" },
@@ -200,7 +199,8 @@
       "items": [
         { "ref": "library:turn-your-best-organic-posts-and-creator-videos-into-meta-ads", "type": "workflow", "use": "build", "when": "When creator videos have views and you want ranked posts and checked scripts for ads" },
         { "ref": "library:tiktok-spark-ad-picker", "type": "skill", "use": "build", "when": "When posts are on TikTok and you must choose which to boost as partnered ads" },
-        { "ref": "kit:skills/creator-brief-and-disclosure", "use": "check", "when": "Before any reuse, to confirm the brief gave usage rights for paid ads and for how long" }
+        { "ref": "kit:skills/creator-brief-and-disclosure", "use": "check", "when": "Before any reuse, to confirm the brief gave usage rights for paid ads and for how long" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before creator videos run as ads, to confirm the product they show is in stock at the price they say" }
       ]
     },
     {
@@ -222,7 +222,8 @@
         { "ref": "library:creator-partnership-planner", "type": "skill", "use": "build", "when": "When you need one plan to find creators, set deals, brief them and track results" },
         { "ref": "library:customer-content-planner", "type": "skill", "use": "explore", "when": "When customers might post for you, to compare that route with paid creators" },
         { "ref": "library:clipper-program-planner", "type": "skill", "use": "explore", "when": "When long videos exist and paying people per clip could beat paying per post" },
-        { "ref": "library:opus-clip", "type": "tool", "use": "build", "when": "When long recordings must be cut into captioned clips for partners to post" }
+        { "ref": "library:opus-clip", "type": "tool", "use": "build", "when": "When long recordings must be cut into captioned clips for partners to post" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the programme is set, to compare two plans that split the budget between gifting, fees and commission" }
       ]
     },
     {

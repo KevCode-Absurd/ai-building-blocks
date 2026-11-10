@@ -160,7 +160,8 @@
         { "ref": "kit:prompts/price-rise-letter", "use": "build", "when": "When the rise is approved and customers and key accounts each need their notice" },
         { "ref": "library:price-rise-letter-writer", "type": "prompt", "use": "explore", "when": "When you want a second draft with a different opening to compare against the first" },
         { "ref": "library:objection-answer-sheet-writer", "type": "skill", "use": "build", "when": "When staff will take calls about the rise and need an answer for each doubt" },
-        { "ref": "library:persuasive-claim-truth-checker", "type": "skill", "use": "check", "when": "Before sending, to check each reason given for the rise is true and not missing context" }
+        { "ref": "library:persuasive-claim-truth-checker", "type": "skill", "use": "check", "when": "Before sending, to check each reason given for the rise is true and not missing context" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before the notice is sent, so a fresh reader takes the customer's seat and lists what they would ask" }
       ]
     },
     {
@@ -206,7 +207,9 @@
         { "ref": "library:buyer-psychology-advisor", "type": "skill", "use": "explore", "when": "Before rewriting, to get several honest angles on why visitors hesitate" },
         { "ref": "library:price-presentation-planner", "type": "skill", "use": "build", "when": "When the page shows several plans and needs their order and anchor laid out" },
         { "ref": "library:objection-answer-sheet-writer", "type": "skill", "use": "build", "when": "When the page needs an FAQ that answers each price doubt buyers raise" },
-        { "ref": "kit:prompts/price-display-check", "use": "check", "when": "Before the page goes live, to check savings, fees, deadlines and free claims" }
+        { "ref": "kit:prompts/price-display-check", "use": "check", "when": "Before the page goes live, to check savings, fees, deadlines and free claims" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before writing, to confirm each plan, price and trial term on the page is live and as the brief says" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the copy is done, so a fresh reader in the hesitating buyer's seat says what still stops them" }
       ]
     },
     {

@@ -12,7 +12,8 @@
         { "ref": "library:business-model-canvas-builder", "type": "skill", "use": "brief", "when": "Before writing, to get the business on nine blocks and see gaps between customers and costs" },
         { "ref": "library:market-research-report-writer", "type": "skill", "use": "build", "when": "When the market section needs sourced facts and sizing that shows its assumptions" },
         { "ref": "library:startup-financial-model-builder", "type": "skill", "use": "build", "when": "When the plan needs three years of revenue, costs and cash with scenarios" },
-        { "ref": "library:unsupported-claim-spotter", "type": "skill", "use": "check", "when": "When the draft is done, to find every claim a lender or panel would want a source for" }
+        { "ref": "library:unsupported-claim-spotter", "type": "skill", "use": "check", "when": "When the draft is done, to find every claim a lender or panel would want a source for" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the plan goes to a lender, to trace every figure and market fact to the owner's records or a source" }
       ]
     },
     {
@@ -35,7 +36,8 @@
         { "ref": "kit:skills/business-plan-for-lenders-and-grants", "use": "build", "when": "When the plan must be re-cut for a lender with funding request, use of funds and repayment" },
         { "ref": "library:cash-forecast-builder", "type": "skill", "use": "build", "when": "When the lender asks how the next 90 days of cash look and what the risks are" },
         { "ref": "library:bad-year-break-even-tester", "type": "skill", "use": "check", "when": "Before applying, to test whether the loan can still be repaid in a bad year" },
-        { "ref": "library:agency-loan-officer-assistant", "type": "agent", "use": "check", "when": "Before the file goes in, to list missing documents, expiry dates and open questions" }
+        { "ref": "library:agency-loan-officer-assistant", "type": "agent", "use": "check", "when": "Before the file goes in, to list missing documents, expiry dates and open questions" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the application is sent, to match each number in it to the accounts and the date they were read" }
       ]
     },
     {
@@ -237,7 +239,8 @@
       "items": [
         { "ref": "library:first-customers-by-hand-planner", "type": "skill", "use": "build", "when": "When the business is new and the first customers must be won one by one" },
         { "ref": "library:one-page-marketing-plan-builder", "type": "skill", "use": "build", "when": "When the plan needs a simple marketing page from stranger to loyal customer" },
-        { "ref": "library:first-customer-group-picker", "type": "skill", "use": "explore", "when": "When the owner targets everyone, to compare groups and choose where to start" }
+        { "ref": "library:first-customer-group-picker", "type": "skill", "use": "explore", "when": "When the owner targets everyone, to compare groups and choose where to start" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the owner commits, to compare two plans that spend their hours and money in different places" }
       ]
     },
     {

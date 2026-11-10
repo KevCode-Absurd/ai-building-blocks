@@ -54,8 +54,6 @@
       "kind": "ops_doc",
       "items": [
         { "ref": "kit:skills/photo-style-and-edit-recipe", "use": "build", "when": "When every photo needs the same true-to-life edit, step by step, in the seller's own app" },
-        { "ref": "library:product-photo-retoucher", "type": "skill", "use": "build", "when": "When a phone photo has wrinkles, dust or a messy edge and an AI tool will clean it" },
-        { "ref": "library:ai-product-photo-inspector", "type": "skill", "use": "check", "when": "After an AI clean-up, to check the product's shape, label and colour did not change" },
         { "ref": "library:product-page-image-checker", "type": "skill", "use": "check", "when": "When the edited set is done, to list each fault with one fix and a score" }
       ]
     },
@@ -65,7 +63,6 @@
       "kind": "ops_doc",
       "items": [
         { "ref": "kit:skills/channel-image-spec-and-ai-check", "use": "build", "when": "When images go to Amazon, Shopify, Google or Etsy and each needs its size, ratio and background" },
-        { "ref": "library:marketplace-photo-rule-checker", "type": "skill", "use": "check", "when": "Before upload, to get a pass or reject for each photo against the platform's rules" },
         { "ref": "library:store-image-prep-checker", "type": "skill", "use": "check", "when": "When files are exported, to see what to resize or rename before they go live" },
         { "ref": "library:merchant-center-feed-health-checker", "type": "skill", "use": "brief", "when": "When Google has flagged products, to see which image problems cost the most sales" }
       ]
@@ -91,7 +88,6 @@
         { "ref": "library:product-page-gallery-planner", "type": "skill", "use": "build", "when": "When you have photos and facts and need an eight-image plan with a gaps list" },
         { "ref": "library:eight-picture-product-page-planner", "type": "prompt", "use": "build", "when": "When the seller wants a fast plan for the eight pictures from what they already have" },
         { "ref": "library:photo-product-gallery", "type": "workflow", "use": "build", "when": "When real photos exist and each gallery image should answer one shopper question" },
-        { "ref": "library:main-image-a-b-test-planner", "type": "skill", "use": "explore", "when": "When the first image is in doubt, to make versions that each change one thing" },
         { "ref": "library:scott-mccloud", "type": "mind", "use": "think", "when": "When the images are fine one by one but the set tells no story in order" },
         { "ref": "library:product-page-image-checker", "type": "skill", "use": "check", "when": "When the set is made, to score it against the plan and list the fixes" }
       ]
@@ -102,10 +98,8 @@
       "kind": "other",
       "items": [
         { "ref": "kit:skills/channel-image-spec-and-ai-check", "use": "brief", "when": "Before the shoot, to set Amazon's white background, fill, size and file rules" },
-        { "ref": "library:main-image-a-b-test-planner", "type": "skill", "use": "explore", "when": "When the main image must win the click, to plan test versions and a review sheet" },
         { "ref": "library:infographic-maker", "type": "skill", "use": "build", "when": "When a secondary image must show size, parts or benefits with labels" },
-        { "ref": "library:pack-and-thumbnail-glance-tester", "type": "skill", "use": "check", "when": "When the image is seen as a small thumbnail, to score what reads in three seconds" },
-        { "ref": "library:marketplace-photo-rule-checker", "type": "skill", "use": "check", "when": "Before upload, to catch photos Amazon would reject and get fixed copies" }
+        { "ref": "library:pack-and-thumbnail-glance-tester", "type": "skill", "use": "check", "when": "When the image is seen as a small thumbnail, to score what reads in three seconds" }
       ]
     },
     {
@@ -115,10 +109,8 @@
       "items": [
         { "ref": "library:product-image-spec-writer", "type": "skill", "use": "brief", "when": "Before any AI edit, to write down what the real product looks like so it cannot drift" },
         { "ref": "kit:prompts/ai-background-edit-brief", "use": "brief", "when": "Before using an AI editor, to say what may change and what must stay exactly as shot" },
-        { "ref": "library:product-background-swapper", "type": "skill", "use": "build", "when": "When a white-background photo must sit in a real-looking scene with matching light" },
         { "ref": "library:reference-product-photos", "type": "skill", "use": "explore", "when": "When the seller has a photo they like, to get ranked pictures in that style" },
         { "ref": "library:adobe-firefly", "type": "tool", "use": "build", "when": "When you must extend or clean up a real photo the seller already owns" },
-        { "ref": "library:ai-product-photo-inspector", "type": "skill", "use": "check", "when": "When the AI image is back, to rate the risk and get lines to add before a retry" },
         { "ref": "kit:skills/channel-image-spec-and-ai-check", "use": "check", "when": "Before upload, to check the edited image against each channel's rules on AI images" }
       ]
     },
@@ -132,7 +124,6 @@
         { "ref": "library:phone-product-photoshoot", "type": "workflow", "use": "build", "when": "When phone photos are all there is and you need 8 to 12 images, each with a job" },
         { "ref": "library:product-photo-set-maker", "type": "agent", "use": "build", "when": "When the set must be checked frame by frame and every failed frame redone" },
         { "ref": "library:nano-banana", "type": "tool", "use": "build", "when": "When you edit or combine real photos with plain requests and need the product kept" },
-        { "ref": "library:ai-product-photo-inspector", "type": "skill", "use": "check", "when": "When a frame looks right at a glance, to run eight checks for changed product details" },
         { "ref": "library:ai-image-fix-rules", "type": "skill", "use": "check", "when": "When the seller sends feedback, to turn each fix into a rule for every later image" }
       ]
     },
@@ -142,12 +133,7 @@
       "kind": "other",
       "items": [
         { "ref": "library:turn-a-clothing-flat-lay-into-marketplace-ready-photos", "type": "workflow", "use": "build", "when": "When you have a phone photo of a garment and need clean, worn-shape and close-up shots" },
-        { "ref": "library:ghost-mannequin-photo-maker", "type": "skill", "use": "build", "when": "When a flat lay should look worn but the seller has no model" },
-        { "ref": "library:virtual-try-on-photo-maker", "type": "skill", "use": "explore", "when": "When the seller wants to see the garment on a person before paying for a model" },
-        { "ref": "library:accessory-try-on-photo-maker", "type": "skill", "use": "explore", "when": "When a shoe, bag, watch or necklace needs to be shown on a person for scale" },
-        { "ref": "library:fabric-close-up-maker", "type": "skill", "use": "build", "when": "When the page needs close-ups of fabric, stitching and weave" },
-        { "ref": "library:human-representation-reviewer", "type": "skill", "use": "check", "when": "When images show people, to check they look real and are shown fairly" },
-        { "ref": "library:marketplace-photo-rule-checker", "type": "skill", "use": "check", "when": "Before upload, to check each garment photo against the marketplace's rules" }
+        { "ref": "library:human-representation-reviewer", "type": "skill", "use": "check", "when": "When images show people, to check they look real and are shown fairly" }
       ]
     },
     {
@@ -156,9 +142,7 @@
       "kind": "ops_doc",
       "items": [
         { "ref": "kit:skills/photo-style-and-edit-recipe", "use": "brief", "when": "Before a batch, to fix the one look every product photo must share" },
-        { "ref": "library:store-photo-style-locker", "type": "skill", "use": "build", "when": "When AI makes many photos, to keep one style file that every prompt reuses" },
         { "ref": "library:make-matching-photos-for-a-product-sheet-and-check-them", "type": "workflow", "use": "build", "when": "When a sheet of products needs one matching photo each, with a faults report" },
-        { "ref": "library:product-photo-batch-maker", "type": "skill", "use": "build", "when": "When a spreadsheet of products needs matching photos made within a cost limit" },
         { "ref": "library:missing-product-image-finder", "type": "skill", "use": "check", "when": "After the batch, to find any product or variant still short of images" }
       ]
     },
@@ -213,7 +197,7 @@
         { "ref": "library:marketing-video-producer", "type": "skill", "use": "brief", "when": "When it is unclear what kind of video fits, to pick the tool, script and shot plan" },
         { "ref": "library:phone-style-video-ad", "type": "workflow", "use": "explore", "when": "When a phone-filmed creator look may beat a studio look, to get a script and filming brief" },
         { "ref": "library:video-ad-shot-list-maker", "type": "skill", "use": "build", "when": "When the script is agreed and you need timed shots and an edit list" },
-        { "ref": "library:product-photo-to-clip-maker", "type": "skill", "use": "build", "when": "When there is no footage and a main photo must become a few seconds of listing video" },
+        { "ref": "library:captioned-product-reel", "type": "workflow", "use": "build", "when": "When there is no footage, to turn product photos into a short reel with captions that fit" },
         { "ref": "library:video-ad-edit-planner", "type": "skill", "use": "check", "when": "When clips are filmed, to check they cover the script and plan the cut and captions" }
       ]
     },
@@ -223,12 +207,10 @@
       "kind": "ad_creative",
       "items": [
         { "ref": "library:product-image-spec-writer", "type": "skill", "use": "brief", "when": "Before any new scene, to lock the product details every image must keep" },
-        { "ref": "library:product-photo-set-builder", "type": "skill", "use": "explore", "when": "When one product photo must become a set of new angles and scenes to choose from" },
         { "ref": "library:flash-product-photos", "type": "skill", "use": "explore", "when": "When the brand wants a candid snapshot feel from one real occasion" },
-        { "ref": "library:social-post-photo-maker", "type": "skill", "use": "build", "when": "When an outfit photo needs new scenes and poses for social posts" },
         { "ref": "library:accurate-product-image-ad-maker", "type": "prompt", "use": "build", "when": "When the image is for an ad and the real product must stay exact" },
         { "ref": "library:george-lois", "type": "mind", "use": "think", "when": "When the image is pretty but says nothing, to join one picture to one line" },
-        { "ref": "library:ai-product-photo-inspector", "type": "skill", "use": "check", "when": "Before posting, to check the product in each scene still matches the real one" }
+        { "ref": "library:product-page-image-checker", "type": "skill", "use": "check", "when": "Before posting, to get a pass or fail on each image and one fix where the product no longer matches" }
       ]
     },
     {
@@ -236,7 +218,6 @@
       "task": "Test which main image wins the click",
       "kind": "analysis",
       "items": [
-        { "ref": "library:main-image-a-b-test-planner", "type": "skill", "use": "explore", "when": "When you want test versions that each change one thing, with a review sheet" },
         { "ref": "library:ab-test-traffic-checker", "type": "skill", "use": "brief", "when": "Before the test, to see if the listing has enough visits and how many weeks it needs" },
         { "ref": "library:pack-and-thumbnail-glance-tester", "type": "skill", "use": "check", "when": "Before spending traffic, to drop versions that do not read at thumbnail size" },
         { "ref": "library:a-b-test-verdict-maker", "type": "skill", "use": "check", "when": "When results are in, to check the split and call a winner with a confidence range" }
@@ -276,6 +257,8 @@
     "No library item gives image rules for Etsy, Google Merchant Center or TikTok Shop one by one; one general rule checker covers all",
     "No library item covers hard-to-shoot products such as food, jewellery, glass and other shiny items",
     "No library item specs a 360 spin or sets listing video sizes and lengths per channel",
-    "No library item checks where retouching crosses the line into a misleading photo, or when an AI image must be labelled"
+    "No library item checks where retouching crosses the line into a misleading photo, or when an AI image must be labelled",
+    "No English library item checks photos against marketplace image rules, plans main image test versions or keeps one style file for a catalogue; those that exist are written in Chinese",
+    "No English library item makes try-on, ghost mannequin, fabric close-up, background-swap or retouched photos on its own; those that exist are written in Chinese"
   ]
 }

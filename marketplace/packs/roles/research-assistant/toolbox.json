@@ -176,8 +176,7 @@
       "items": [
         { "ref": "kit:prompts/cultural-brief-from-notes", "use": "build", "when": "When the client will serve a community new to them and has notes and sources" },
         { "ref": "library:community-needs-research-planner", "type": "skill", "use": "brief", "when": "When the notes are thin, to plan what to learn and map who already serves the community" },
-        { "ref": "library:agency-specialized-cultural-intelligence-strategist", "type": "agent", "use": "check", "when": "When the offer is drafted, to review cultural fit and who it may shut out" },
-        { "ref": "library:hidden-assumption-auditor", "type": "skill", "use": "check", "when": "When the offer was built for another market, to surface the assumptions baked into it" }
+        { "ref": "library:agency-specialized-cultural-intelligence-strategist", "type": "agent", "use": "check", "when": "When the offer is drafted, to review cultural fit and who it may shut out" }
       ]
     },
     {

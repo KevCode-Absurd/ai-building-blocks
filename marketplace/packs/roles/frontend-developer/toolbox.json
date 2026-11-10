@@ -23,8 +23,10 @@
         { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any code, to measure the live site's colours, fonts, buttons and layout into a file" },
         { "ref": "library:landing-page-design-planner", "type": "skill", "use": "explore", "when": "When copy, colours and fonts are known and the client should compare three on-brand designs" },
         { "ref": "kit:skills/build-on-existing-site", "use": "build", "when": "When the page must look like part of the site they have, not a fresh template" },
+        { "ref": "library:make-three-first-screens", "type": "skill", "use": "explore", "when": "Before building the whole page, to make three first screens in the site's own fonts and colours" },
         { "ref": "library:brand-fidelity-check", "type": "skill", "use": "check", "when": "When the page is built, to check fonts, colours, buttons, header and footer against the live site" },
-        { "ref": "library:page-design-standards-checker", "type": "skill", "use": "check", "when": "Before handover, to check contrast, spacing, hierarchy and the phone view" }
+        { "ref": "library:page-design-standards-checker", "type": "skill", "use": "check", "when": "Before handover, to check contrast, spacing, hierarchy and the phone view" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the three first screens are on one sheet, so someone who did not build them picks one" }
       ]
     },
     {
@@ -36,6 +38,7 @@
         { "ref": "kit:prompts/one-file-landing-page", "use": "build", "when": "When a founder needs a landing, waitlist or event page this week on a free static host" },
         { "ref": "library:static-html-landing-page-builder", "type": "skill", "use": "build", "when": "When copy and layout are already checked and need turning into plain HTML with a working form" },
         { "ref": "library:web-form-designer", "type": "skill", "use": "build", "when": "When the sign-up form needs its fields, error messages and spam protection planned" },
+        { "ref": "library:make-three-first-screens", "type": "skill", "use": "explore", "when": "Before the rest of the page is coded, to build three different first screens as real HTML and compare them" },
         { "ref": "library:ai-look-design-reviewer", "type": "skill", "use": "check", "when": "When the page looks machine-made, to score it and rank what to change" },
         { "ref": "library:steve-krug", "type": "mind", "use": "think", "when": "When the page asks visitors to think, to make the one next step obvious" }
       ]
@@ -113,7 +116,7 @@
       "task": "Move an old component to hooks or the Composition API",
       "kind": "code",
       "items": [
-        { "ref": "library:untested-code-change-guide", "type": "skill", "use": "brief", "when": "When the old component has no tests and needs a safety net before it changes" },
+        { "ref": "library:test-suite-writer", "type": "skill", "use": "brief", "when": "When the old component has no tests, to write tests that pin its behaviour before it changes" },
         { "ref": "kit:prompts/modernise-a-component", "use": "build", "when": "When a class or Options API component must move to modern style with the same behaviour" },
         { "ref": "library:copilot-react18-lifecycle-patterns", "type": "skill", "use": "build", "when": "When React class components still use the old lifecycle methods" },
         { "ref": "library:copilot-react19-source-patterns", "type": "skill", "use": "build", "when": "When the app is moving to React 19 and roots, refs and default props must change" }

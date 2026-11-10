@@ -86,7 +86,9 @@
         { "ref": "library:linkedin-post-writer", "type": "skill", "use": "explore", "when": "When the set is for LinkedIn, to try a different carousel script and opening slide" },
         { "ref": "library:figures-to-plain-pictures-writer", "type": "prompt", "use": "build", "when": "When a figure means little alone, to turn it into a comparison people can picture" },
         { "ref": "library:canva", "type": "tool", "use": "build", "when": "When the client's team will build and reuse the slides themselves" },
-        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before posting, to check each figure on a slide against its source" }
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "Before finishing the slides, to build three different looks at real size, each with a cover and one inside frame" },
+        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before posting, to check each figure on a slide against its source" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the three looks are side by side, so a fresh reviewer picks the one to finish" }
       ]
     },
     {
@@ -178,7 +180,8 @@
         { "ref": "kit:workflows/chart-from-brief-to-published", "use": "build", "when": "When a report needs a consistent set of charts taken from brief to print" },
         { "ref": "library:figures-to-plain-pictures-writer", "type": "prompt", "use": "explore", "when": "When key figures should also be shown as comparisons readers can picture" },
         { "ref": "library:unsupported-claim-spotter", "type": "skill", "use": "check", "when": "When captions state claims, to find each one that needs a source" },
-        { "ref": "library:nonprofit-annual-report-planner", "type": "skill", "use": "check", "when": "When the client is a charity, to check facts, numbers and names before print" }
+        { "ref": "library:nonprofit-annual-report-planner", "type": "skill", "use": "check", "when": "When the client is a charity, to check facts, numbers and names before print" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the charts go in the report, to trace every figure and label to the data file it came from" }
       ]
     },
     {
@@ -275,7 +278,7 @@
     "No library item tests a chart palette for colour-blind readers and greyscale; the contrast checker is for interface colours",
     "No library item writes alt text or a long description for a chart; the alt text items are for product photos",
     "No library item plans a data carousel for Instagram or LinkedIn; the carousel writers are for ads",
-    "No library item renders three clearly different chart or infographic directions as images to compare",
+    "No library item renders three clearly different chart directions as images to compare",
     "No library item writes a chart style guide: palette, type, labels, number formats and when to use each chart",
     "No library item writes the headline and annotations that say what a chart shows",
     "No library item decides when a table beats a chart, or designs a readable table"

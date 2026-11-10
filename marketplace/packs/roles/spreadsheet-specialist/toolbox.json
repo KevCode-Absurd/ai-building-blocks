@@ -116,8 +116,7 @@
       "kind": "code",
       "items": [
         { "ref": "kit:prompts/clean-up-a-recorded-macro", "use": "build", "when": "When a recorded macro worked once and now skips rows, errors or takes forever" },
-        { "ref": "library:code-refactor-planner", "type": "skill", "use": "build", "when": "When the recording is long, to plan small safe changes that do not alter what it does" },
-        { "ref": "library:untested-code-change-guide", "type": "skill", "use": "check", "when": "When nobody knows what the macro should produce, to pin its output before you change it" }
+        { "ref": "library:code-refactor-planner", "type": "skill", "use": "build", "when": "When the recording is long, to plan small safe changes that do not alter what it does" }
       ]
     },
     {

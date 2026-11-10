@@ -38,7 +38,8 @@
         { "ref": "library:expert-and-newcomer-writing", "type": "workflow", "use": "explore", "when": "When the piece has two audiences, to try a version experts respect and newcomers follow" },
         { "ref": "library:plain-words-contract-summary", "type": "prompt", "use": "build", "when": "When the text is a contract and the reader needs what each side owes in two minutes" },
         { "ref": "library:george-orwell", "type": "mind", "use": "think", "when": "When long words and passive sentences hide who does what" },
-        { "ref": "library:text-difficulty-checker", "type": "skill", "use": "check", "when": "When the rewrite is done, to check how hard it still is for the reader named" }
+        { "ref": "library:text-difficulty-checker", "type": "skill", "use": "check", "when": "When the rewrite is done, to check how hard it still is for the reader named" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the rewrite is done, so a fresh reader in the named reader's seat says what they would still ask" }
       ]
     },
     {
@@ -85,7 +86,8 @@
         { "ref": "kit:prompts/claim-and-source-flag-list", "use": "build", "when": "Before publishing, to list every claim about numbers, research, health, money or law" },
         { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When the flagged claims must be checked against trusted sources" },
         { "ref": "library:study-claim-checker", "type": "skill", "use": "check", "when": "When a claim rests on one study, to see its biases, weak statistics and evidence grade" },
-        { "ref": "library:citation-and-bibtex-fixer", "type": "skill", "use": "build", "when": "When the reference list is messy, to get clean, checked references" }
+        { "ref": "library:citation-and-bibtex-fixer", "type": "skill", "use": "build", "when": "When the reference list is messy, to get clean, checked references" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "When the author has supplied sources, to match each claim to one and mark it keep, rewrite or cut" }
       ]
     },
     {

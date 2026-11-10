@@ -57,7 +57,8 @@
       "items": [
         { "ref": "kit:prompts/hook-and-close-options", "use": "explore", "when": "When a post or intro is written but the first lines are weak or the ending begs" },
         { "ref": "library:linkedin-hook-post-writer", "type": "skill", "use": "explore", "when": "When you want to see the same idea opened in a different pattern" },
-        { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "When the hook sounds like every other post, to fix the machine-made lines" }
+        { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "When the hook sounds like every other post, to fix the machine-made lines" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When several first lines or endings are drafted, so a reader who did not write them picks one" }
       ]
     },
     {
@@ -193,7 +194,8 @@
         { "ref": "library:launch-teaser-to-preview-planner", "type": "skill", "use": "build", "when": "When there is a date, to plan the teaser, the preview and launch day" },
         { "ref": "library:launch-email-sequence-planner", "type": "skill", "use": "build", "when": "When the author has a list, to plan the launch emails up to the close date" },
         { "ref": "library:price-a-course-or-ebook-and-write-its-launch-emails", "type": "workflow", "use": "build", "when": "When the book is self-published and needs a price and honest launch wording" },
-        { "ref": "library:press-outreach-planner", "type": "skill", "use": "build", "when": "When the book needs reviewers and podcasts: a list, pitches and a press kit outline" }
+        { "ref": "library:press-outreach-planner", "type": "skill", "use": "build", "when": "When the book needs reviewers and podcasts: a list, pitches and a press kit outline" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the launch plan is fixed, to compare two plans that put the time and money in different places" }
       ]
     },
     {
@@ -246,14 +248,16 @@
       "items": [
         { "ref": "library:annual-letter", "type": "workflow", "use": "build", "when": "When you have the year's numbers and need principles, metrics and a plain letter" },
         { "ref": "library:company-story-aligner", "type": "skill", "use": "check", "when": "When staff, owners and investors each get a version, to find where they contradict" },
-        { "ref": "library:hard-questions-board-prep-coach", "type": "skill", "use": "check", "when": "Before it goes out, to list the toughest questions readers will ask" }
+        { "ref": "library:hard-questions-board-prep-coach", "type": "skill", "use": "check", "when": "Before it goes out, to list the toughest questions readers will ask" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the letter is sent, to trace every figure, date and name to the accounts or the client's notes" }
       ]
     }
   ],
   "always": [
     { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a piece states facts, names or numbers under the client's name, to check each one" },
     { "ref": "library:ai-default-patterns", "type": "skill", "use": "check", "when": "Before any draft goes for approval, to catch phrases that read as machine written" },
-    { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "Last step before sending, to catch slips with a log of every change" }
+    { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "Last step before sending, to catch slips with a log of every change" },
+    { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before a piece goes to the client, so a fresh reader checks it against the brief with no back story" }
   ],
   "helpers": [
     { "role": "editor", "when": "When a long draft needs a structural edit or a final proofread by fresh eyes" },

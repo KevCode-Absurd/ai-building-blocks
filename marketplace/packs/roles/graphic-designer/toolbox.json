@@ -12,7 +12,9 @@
         { "ref": "kit:skills/print-layout-spec", "use": "build", "when": "When the brief and copy are approved and you need size, grid, type and bleed written out" },
         { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "Before you settle a layout, to get three hand-made alternatives to the template look" },
         { "ref": "library:page-grid-and-type-planner", "type": "skill", "use": "build", "when": "When the piece carries a lot of text and needs a grid, a short type list and white space" },
-        { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When a layout is drafted, to see where the eye lands first, what to move and what to cut" }
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "Before the layout is final, to see three real-size versions with the real words side by side" },
+        { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When a layout is drafted, to see where the eye lands first, what to move and what to cut" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the three flyer layouts are on one sheet, so someone who did not design them picks one" }
       ]
     },
     {
@@ -24,6 +26,7 @@
         { "ref": "library:story-carousel-ad-writer", "type": "skill", "use": "brief", "when": "When the client has no slide text yet and needs each card's words and picture planned" },
         { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "Before you settle a slide layout, to get three hand-made alternatives" },
         { "ref": "library:david-carson", "type": "mind", "use": "think", "when": "When every slide looks like a stock template and nothing would stop a thumb" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "Before all slides are made, to build a cover and one inside frame for three different directions" },
         { "ref": "kit:skills/contrast-and-legibility-check", "use": "check", "when": "Before posting, to check the words read on a phone and sit inside the safe area" },
         { "ref": "library:canva", "type": "tool", "use": "build", "when": "When the client's team will build and reuse the slides themselves" }
       ]
@@ -38,6 +41,7 @@
         { "ref": "library:type-led-poster-planner", "type": "skill", "use": "explore", "when": "When there are no usable photos, to try a type-only poster that reads from far away" },
         { "ref": "library:poster-designer", "type": "skill", "use": "explore", "when": "When the client wants to see a finished art-style poster fast and it carries few words" },
         { "ref": "library:saul-bass", "type": "mind", "use": "think", "when": "When the poster is a collage of everything and needs one bold symbol" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "Before finishing one poster, to build three at real size that differ in grid, type scale and imagery" },
         { "ref": "kit:skills/contrast-and-legibility-check", "use": "check", "when": "Before sign-off, to check type size for the viewing distance and the colour contrast" }
       ]
     },
@@ -73,7 +77,9 @@
         { "ref": "kit:skills/print-layout-spec", "use": "build", "when": "When the menu plan is agreed and the printer needs exact size, type and bleed" },
         { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "build", "when": "When dish descriptions are vague, to make each one short, true and easy to picture" },
         { "ref": "library:josef-muller-brockmann", "type": "mind", "use": "think", "when": "When a crowded menu needs a strict grid so names, notes and prices line up" },
-        { "ref": "library:plain-page-type-checker", "type": "skill", "use": "check", "when": "When the menu is drafted, to check type size, spacing and line length where it is read" }
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "Before the menu is laid out in full, to build one page in three structures with the real dishes and prices" },
+        { "ref": "library:plain-page-type-checker", "type": "skill", "use": "check", "when": "When the menu is drafted, to check type size, spacing and line length where it is read" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the menu goes to print, to trace every price, dish name and allergen note to the owner's list" }
       ]
     },
     {
@@ -85,7 +91,9 @@
         { "ref": "kit:prompts/sign-schedule", "use": "build", "when": "When you need one schedule of every sign, its words, size and place for the printer" },
         { "ref": "library:prepare-a-community-event-access-plan", "type": "workflow", "use": "brief", "when": "When guests have access needs, to plan step-free routes and what the venue must confirm" },
         { "ref": "library:erik-spiekermann", "type": "mind", "use": "think", "when": "When signs must be read at a glance by people who are walking and unsure" },
-        { "ref": "kit:skills/contrast-and-legibility-check", "use": "check", "when": "Before printing, to check letter height for the reading distance and the contrast" }
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "Before the sign set is made, to build one key sign in three different styles to compare" },
+        { "ref": "kit:skills/contrast-and-legibility-check", "use": "check", "when": "Before printing, to check letter height for the reading distance and the contrast" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the three sign styles are on one sheet, so someone outside the job picks the style for the set" }
       ]
     },
     {
@@ -96,7 +104,9 @@
         { "ref": "library:one-symbol-concept-finder", "type": "skill", "use": "brief", "when": "Before layout, to cut the message to one line a passer-by takes in" },
         { "ref": "kit:skills/print-layout-spec", "use": "build", "when": "When you need the large-format size, safe area, type sizes and file set-up written out" },
         { "ref": "library:type-led-poster-planner", "type": "skill", "use": "explore", "when": "When the sign is read from across a street, to try a type-only version" },
-        { "ref": "kit:skills/contrast-and-legibility-check", "use": "check", "when": "Before sign-off, to check the main line reads from the real viewing distance" }
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "Before the artwork is built, to try three layouts at the print shape and check what reads from a distance" },
+        { "ref": "kit:skills/contrast-and-legibility-check", "use": "check", "when": "Before sign-off, to check the main line reads from the real viewing distance" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the three sign layouts are side by side, so a fresh reviewer picks the one to finish" }
       ]
     },
     {
@@ -151,7 +161,8 @@
         { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When the main line is flat, to get five short headlines that each take a new angle" },
         { "ref": "library:ten-percent-cutter", "type": "skill", "use": "build", "when": "When the copy will not fit the layout and must lose words without losing the point" },
         { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a line sounds like any business, to test it and get a true, picturable rewrite" },
-        { "ref": "library:direct-mail-package-reviewer", "type": "skill", "use": "check", "when": "When the piece is a mailer, to review the envelope line, offer, letter and look" }
+        { "ref": "library:direct-mail-package-reviewer", "type": "skill", "use": "check", "when": "When the piece is a mailer, to review the envelope line, offer, letter and look" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the words go into artwork, to trace each date, price, address and offer to what the client sent" }
       ]
     },
     {
@@ -163,6 +174,7 @@
         { "ref": "library:theme-based-ad-layout-blueprint-maker", "type": "skill", "use": "explore", "when": "When you need three or four layouts with text zones and product placement to compare" },
         { "ref": "library:image-ad-copy-writer", "type": "skill", "use": "build", "when": "When the ad needs every word on and around the picture, in two or three versions" },
         { "ref": "library:customer-quote-image-ad", "type": "skill", "use": "build", "when": "When the ad or post is built around a customer's own words" },
+        { "ref": "library:make-ad-concept-spread", "type": "skill", "use": "explore", "when": "Before designing the set, to write nine or more one-line concepts and mock up the strongest at real size" },
         { "ref": "library:static-ad-critic", "type": "skill", "use": "check", "when": "When an ad is drafted, to score it against its page and get fixes" }
       ]
     },
@@ -174,6 +186,7 @@
         { "ref": "library:reusable-reel-cover-recipe-builder", "type": "skill", "use": "build", "when": "When the client wants one repeatable cover style with their portrait, title and colours" },
         { "ref": "kit:skills/social-graphics-spec", "use": "build", "when": "When you need cover sizes and the area the app's buttons and captions will hide" },
         { "ref": "library:thumbnail-and-title-planner", "type": "skill", "use": "explore", "when": "When a video needs several title and thumbnail pairs to test against each other" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "Before the templates are fixed, to build three cover looks at the real size and compare them on a phone" },
         { "ref": "library:youtube-title-thumbnail-check", "type": "skill", "use": "check", "when": "Before upload, to check the title length and that the thumbnail does not repeat it" }
       ]
     },
@@ -245,7 +258,9 @@
       "items": [
         { "ref": "kit:skills/design-brief-and-copy-deck", "use": "brief", "when": "Before layout, to put name, service, phone and web in the order drivers read them" },
         { "ref": "kit:skills/print-layout-spec", "use": "build", "when": "When you need a panel-by-panel spec the wrap printer and installer can follow" },
-        { "ref": "kit:skills/contrast-and-legibility-check", "use": "check", "when": "Before sign-off, to check the phone number reads from a car's length away" }
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "Before the wrap is drawn up, to mock up three livery directions on the side view and compare them" },
+        { "ref": "kit:skills/contrast-and-legibility-check", "use": "check", "when": "Before sign-off, to check the phone number reads from a car's length away" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the three liveries are side by side, so a fresh reviewer picks one against the brief" }
       ]
     },
     {
@@ -273,7 +288,8 @@
   "always": [
     { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any work that must match the client's live site: colours, fonts and voice" },
     { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any file goes to print or post, to catch typos and names spelt two ways" },
-    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When the copy states a number, award or claim you cannot trace to the client" }
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When the copy states a number, award or claim you cannot trace to the client" },
+    { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before any piece goes to the client, so a fresh reviewer checks it against the brief with no back story" }
   ],
   "helpers": [
     { "role": "advertising-copywriter", "when": "When the piece needs more copy than a headline and a line" },
@@ -287,8 +303,7 @@
     "No library item lays out a flyer, brochure or multi-page booklet; only the kit's print layout spec covers it",
     "No library item plans a restaurant or salon menu: sections, dish order and how prices are shown",
     "No library item covers large-format print such as banners, roll-up stands, exhibition stands or window graphics",
-    "No library item covers vehicle wraps: panel templates, door and window breaks, or three livery directions to compare",
-    "No library item offers different sign styles to compare for one event",
+    "No library item covers vehicle wraps: panel templates or door and window breaks",
     "No library item checks a print PDF for bleed, colour mode, embedded fonts and image resolution",
     "No library item specs artwork for shirts, totes or caps, or plans a first merch range",
     "No library item covers Pinterest pin layouts or a social template kit a client's team can reuse",

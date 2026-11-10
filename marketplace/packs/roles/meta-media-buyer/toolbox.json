@@ -41,7 +41,8 @@
       "items": [
         { "ref": "library:plan-a-month-of-meta-ads-with-the-right-number-of-new-ads-and-budget", "type": "workflow", "use": "build", "when": "When you have spend, results and reviews and need an ad quota, budget split and test rules" },
         { "ref": "library:meta-account-structure-planner", "type": "skill", "use": "build", "when": "When the campaign and ad set layout must be set with budgets and targets" },
-        { "ref": "library:break-even-roas-and-cpa-calculator", "type": "skill", "use": "check", "when": "When the budget is proposed, to test it against the break-even return" }
+        { "ref": "library:break-even-roas-and-cpa-calculator", "type": "skill", "use": "check", "when": "When the budget is proposed, to test it against the break-even return" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the month's budget is set, to confirm the products to be advertised are in stock at the stated price" }
       ]
     },
     {
@@ -90,7 +91,8 @@
         { "ref": "library:five-tactic-ad-hook-writer", "type": "skill", "use": "explore", "when": "When the opening is flat, to get hooks by five tactics ranked by buyer fit and proof" },
         { "ref": "library:ad-angle-multiplier", "type": "skill", "use": "explore", "when": "When one idea works, to get ten or more different angles with a test order" },
         { "ref": "library:meta-ads-compliance-checker", "type": "skill", "use": "check", "when": "Before upload, to score the ad against Meta's rules and get a compliant rewrite" },
-        { "ref": "library:gary-bencivenga", "type": "mind", "use": "think", "when": "When the copy makes a big promise and the proof under it is thin" }
+        { "ref": "library:gary-bencivenga", "type": "mind", "use": "think", "when": "When the copy makes a big promise and the proof under it is thin" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before copy is written, to confirm the price, offer and landing link the ads will name work today" }
       ]
     },
     {
@@ -217,7 +219,8 @@
       "items": [
         { "ref": "library:ad-matched-landing-page-writer", "type": "skill", "use": "build", "when": "When the ad is set and the page must pick up exactly where it left off" },
         { "ref": "library:ad-landing-page", "type": "workflow", "use": "explore", "when": "When you want page copy with three design directions and a scored review" },
-        { "ref": "library:ad-and-page-match-checker", "type": "skill", "use": "check", "when": "When ad and page both exist, to score the match and rank the mismatches" }
+        { "ref": "library:ad-and-page-match-checker", "type": "skill", "use": "check", "when": "When ad and page both exist, to score the match and rank the mismatches" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before matching the page to the ad, to confirm the product on it can be bought in the sizes shown" }
       ]
     },
     {

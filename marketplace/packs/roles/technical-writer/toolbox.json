@@ -272,7 +272,8 @@
   "always": [
     { "ref": "library:technical-doc-proofreader", "type": "skill", "use": "check", "when": "Before any doc is published, to list typos, term clashes and jargon without rewriting it" },
     { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When a page is for customers and reads like it was written for the team" },
-    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a page states a limit, date, price or standard you cannot trace to the client's files" }
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a page states a limit, date, price or standard you cannot trace to the client's files" },
+    { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before a doc is published, so a fresh reader with only the brief lists what they would still have to ask" }
   ],
   "helpers": [
     { "role": "software-engineer", "when": "When code samples or setup steps must be run and fixed, not only written down" },

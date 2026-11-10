@@ -27,7 +27,8 @@
         { "ref": "library:agency-sales-discovery-coach", "type": "agent", "use": "build", "when": "When the expert hates selling and needs a calm plan of questions for the first call" },
         { "ref": "library:sales-call-prep-assistant", "type": "agent", "use": "brief", "when": "Before each booked call, to prepare from what is known about the person" },
         { "ref": "library:three-tier-price-ladder-drafter", "type": "prompt", "use": "explore", "when": "When the offer has no clear packages, to draft three levels and compare them" },
-        { "ref": "library:landing-page-fix-loop", "type": "agent", "use": "check", "when": "When the page is drafted, to audit it, rewrite what fails and check again" }
+        { "ref": "library:landing-page-fix-loop", "type": "agent", "use": "check", "when": "When the page is drafted, to audit it, rewrite what fails and check again" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the page goes live, to confirm the booking link shows open call slots and the fees shown still hold" }
       ]
     },
     {
@@ -85,6 +86,7 @@
         { "ref": "library:email-sequence-writer", "type": "skill", "use": "build", "when": "When the welcome runs over several emails and needs timing and subject lines" },
         { "ref": "library:prepare-a-clear-client-project-kickoff", "type": "workflow", "use": "brief", "when": "When the work starts with a kickoff and needs a one-page brief first" },
         { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When clients miss the emails, to try subject lines from several angles" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before the sequence is written, to plan three different arcs for a new client's first weeks" },
         { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "Before the sequence is loaded, to get cuts, subject fixes and a score for each email" }
       ]
     },
@@ -156,7 +158,8 @@
         { "ref": "library:portfolio-case-study-writer", "type": "skill", "use": "build", "when": "When a studio has project notes and needs a write-up of the brief, choices and result" },
         { "ref": "library:turn-a-customer-interview-into-a-case-outline", "type": "workflow", "use": "brief", "when": "When a client interview should become a case story and you need the evidence gaps" },
         { "ref": "library:social-proof-placer", "type": "skill", "use": "build", "when": "When you must choose which story or quote answers which doubt, and where it goes" },
-        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a write-up says 'stunning' and 'bespoke', to make each line true and specific" }
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a write-up says 'stunning' and 'bespoke', to make each line true and specific" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before a story is published, to trace each result, date and client name to the file and the consent given" }
       ]
     },
     {
@@ -168,6 +171,7 @@
         { "ref": "library:niche-readiness-checker", "type": "skill", "use": "brief", "when": "Before the plan, to test whether the expert's niche is clear enough to market" },
         { "ref": "library:one-page-marketing-plan-builder", "type": "skill", "use": "explore", "when": "When you want a second plan on one page to compare, from stranger to loyal client" },
         { "ref": "library:linkedin-content-strategy", "type": "skill", "use": "build", "when": "When LinkedIn is the main channel and needs topics and a rhythm the expert can keep" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the 90 days are set, to compare two plans that use the expert's hours and budget differently" },
         { "ref": "library:marketing-decision-coach", "type": "skill", "use": "check", "when": "When the plan includes a move you doubt, to get a straight verdict with reasons" }
       ]
     },
@@ -179,6 +183,7 @@
         { "ref": "kit:workflows/firm-marketing-foundations", "use": "build", "when": "When a firm's website, intake and proof have grown up piece by piece" },
         { "ref": "library:message-first-website-guide", "type": "skill", "use": "brief", "when": "When the site needs replanning from the message down, before any design" },
         { "ref": "library:local-search-listing-manager", "type": "skill", "use": "build", "when": "When the firm serves an area and its map listing and local search need fixing" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before work is ordered, to compare two plans that put the firm's first 90 days of spend in different places" },
         { "ref": "library:landing-page-auditor", "type": "skill", "use": "check", "when": "When key pages exist, to rank what stops visitors from getting in touch" }
       ]
     },
@@ -190,6 +195,7 @@
         { "ref": "library:word-of-mouth-planner", "type": "skill", "use": "explore", "when": "When referrals happen by luck, to get scored ideas for making clients talk" },
         { "ref": "library:email-sequence-writer", "type": "skill", "use": "build", "when": "When past clients have gone quiet and need a short, useful run of emails" },
         { "ref": "library:elevator-pitch-writer", "type": "skill", "use": "build", "when": "When referrers cannot say what the firm does, to give them a line to pass on" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before the pack is written, to compare three ways to order the messages to past clients" },
         { "ref": "kit:prompts/claims-check", "use": "check", "when": "When the pack offers a thank-you or reward, to check the profession allows it" },
         { "ref": "library:joe-girard", "type": "mind", "use": "think", "when": "When the firm forgets clients after the invoice, to plan steady follow-up" }
       ]
@@ -203,7 +209,8 @@
         { "ref": "library:free-giveaway-designer", "type": "skill", "use": "explore", "when": "When the free piece must lead to the paid service, to design it backwards from that" },
         { "ref": "library:prepare-a-webinar-people-can-follow", "type": "workflow", "use": "build", "when": "When the workshop is online and must teach one clear result" },
         { "ref": "library:webinar-promotion-planner", "type": "skill", "use": "build", "when": "When seats need filling and attendees need a follow-up" },
-        { "ref": "kit:prompts/claims-check", "use": "check", "when": "Before the sign-up page goes live, to check it gives information, not advice or promises" }
+        { "ref": "kit:prompts/claims-check", "use": "check", "when": "Before the sign-up page goes live, to check it gives information, not advice or promises" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before promoting, to confirm the sign-up page works and the workshop date is still ahead" }
       ]
     },
     {

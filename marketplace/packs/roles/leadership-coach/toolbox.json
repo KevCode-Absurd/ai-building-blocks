@@ -162,7 +162,8 @@
         { "ref": "kit:workflows/mentoring-programme-launch-and-review", "use": "brief", "when": "When the scheme is ready and launch, sign-up and reminders must go out in order" },
         { "ref": "library:staff-announcement-writer", "type": "skill", "use": "build", "when": "When staff need a clear announcement with manager talking points and an FAQ" },
         { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before drafting, to compare three ways the invite series could run" },
-        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before the invite goes out, to score it and get subject line options" }
+        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before the invite goes out, to score it and get subject line options" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the messages go out, to confirm the sign-up link works and places are still open" }
       ]
     },
     {

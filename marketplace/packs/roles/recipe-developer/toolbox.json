@@ -71,7 +71,6 @@
       "task": "Write a recipe blog post around a tested recipe",
       "kind": "copy",
       "items": [
-        { "ref": "library:customer-question-keyword-finder", "type": "prompt", "use": "brief", "when": "Before writing, to find the questions readers ask and how they search for them" },
         { "ref": "kit:prompts/recipe-blog-post", "use": "build", "when": "When the recipe is tested and you want a post that helps readers make it, with no padding" },
         { "ref": "kit:skills/recipe-blog-post", "use": "build", "when": "When the post needs a headnote, disclosure, the card, tips, swaps and reader questions" },
         { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the title is plain, to compare several honest angles" },
@@ -109,7 +108,7 @@
       "items": [
         { "ref": "library:content-pillar-finder", "type": "skill", "use": "brief", "when": "When the blog covers everything, to find the few subjects the cook can own" },
         { "ref": "library:search-intent-keyword-mapper", "type": "skill", "use": "build", "when": "When you have a topic, to group searches by what the reader wants" },
-        { "ref": "library:customer-question-keyword-finder", "type": "prompt", "use": "build", "when": "When you have comments and emails, to turn reader questions into post ideas" },
+        { "ref": "library:keyword-research-planner", "type": "skill", "use": "build", "when": "When you know the topics, to get a ranked list of the question searches readers type" },
         { "ref": "library:store-blog-plan-builder", "type": "skill", "use": "build", "when": "When a bakery or food shop sells online and posts should lift its product pages" }
       ]
     },
@@ -122,7 +121,8 @@
         { "ref": "kit:prompts/cookbook-proposal-outline", "use": "build", "when": "When you want to pitch a cookbook to an agent or publisher, or plan one to self-publish" },
         { "ref": "library:book-writing-project-coach", "type": "skill", "use": "build", "when": "When the author needs an outline and a writing plan for their stage" },
         { "ref": "library:long-form-piece-structurer", "type": "skill", "use": "build", "when": "When a chapter's recipes and essays need a clear order" },
-        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the book needs a title, to compare several angles" }
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the book needs a title, to compare several angles" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before the proposal goes to an agent or publisher, so a fresh reader lists what they would still ask" }
       ]
     },
     {
@@ -175,7 +175,8 @@
         { "ref": "library:social-post-writer", "type": "skill", "use": "build", "when": "When one recipe needs clear posts for each platform" },
         { "ref": "library:weekly-newsletter-keeper", "type": "agent", "use": "build", "when": "When a recipe newsletter runs every week and should match past issues" },
         { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "Before sending, to compare subject lines from several angles" },
-        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When the issue is drafted, to get cuts and a ship or fix call" }
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When the issue is drafted, to get cuts and a ship or fix call" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before the posts and newsletter are scheduled, so a fresh reader checks them against the brief" }
       ]
     },
     {
@@ -184,7 +185,8 @@
       "kind": "copy",
       "items": [
         { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "build", "when": "When a description is vague, to make it short, true and easy to picture" },
-        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When the menu says local, homemade or free-from, to check each claim can be backed" }
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When the menu says local, homemade or free-from, to check each claim can be backed" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the menu wording is done, so a fresh reader checks it against the brief as the owner would" }
       ]
     },
     {

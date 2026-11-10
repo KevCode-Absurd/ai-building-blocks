@@ -49,6 +49,7 @@
         { "ref": "kit:skills/deck-layout-plan", "use": "build", "when": "When the founder has the content and needs a layout where each slide makes one point" },
         { "ref": "library:prepare-a-funding-pitch-evidence-appendix", "type": "workflow", "use": "build", "when": "When every claim needs a dated source in a backup section" },
         { "ref": "library:editable-slide-deck-builder", "type": "skill", "use": "build", "when": "When the deck must be a PowerPoint file with real editable text, tables and charts" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "Before the deck is built, to make three looks for the key slides that differ in grid, type and imagery" },
         { "ref": "library:pitch-deck-checker-10-20-30", "type": "skill", "use": "check", "when": "Before it is sent, to score slide count, length and type size and get a cut list" },
         { "ref": "library:guy-kawasaki", "type": "mind", "use": "think", "when": "When the deck has thirty slides and the purpose is not clear by slide two" }
       ]
@@ -61,6 +62,7 @@
         { "ref": "kit:skills/deck-layout-plan", "use": "build", "when": "When the sales story is known and each slide needs its layout and headline" },
         { "ref": "library:audit-to-sales-presentation-planner", "type": "skill", "use": "build", "when": "When the deck follows an audit, to turn findings into a ten-slide story with proof" },
         { "ref": "library:customer-one-pager-deck", "type": "skill", "use": "explore", "when": "When the buyer may want a one-pager or leave-behind in place of a full deck" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "When the look is open, to build three versions of the opening slides at real size and compare them" },
         { "ref": "library:finance-deck-quality-checker", "type": "skill", "use": "check", "when": "Before it goes to a client, to find number mismatches, weak wording and format slips" }
       ]
     },
@@ -227,6 +229,7 @@
       "kind": "other",
       "items": [
         { "ref": "kit:workflows/print-ready-cover-or-printable", "use": "brief", "when": "When a self-published book needs a cover that a printer or print-on-demand service will accept" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "Before the cover is finished, to make three front covers at real size that differ in more than colour" },
         { "ref": "kit:prompts/cover-size-check", "use": "check", "when": "Before the artist starts or after a printer rejects a file, to work out spine width and wrap size" },
         { "ref": "kit:skills/book-cover-layout-and-brief", "use": "build", "when": "When you need type zones, sizes and the full wrap laid out on the printer's template" },
         { "ref": "library:one-symbol-concept-finder", "type": "skill", "use": "brief", "when": "Before layout, to find the one idea, one feeling and one symbol the cover should carry" },
@@ -266,6 +269,7 @@
         { "ref": "library:agency-marketing-carousel-growth-engine", "type": "agent", "use": "brief", "when": "When the launch needs a carousel, to plan the hook and the slide order" },
         { "ref": "library:marketing-image-maker", "type": "skill", "use": "build", "when": "When a post needs a picture and you want a prompt, the exact size and a file plan" },
         { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "Before you settle the post layout, to get three hand-made alternatives" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "Before the set is made, to build three looks for the first graphic at the real post size" },
         { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When a graphic is drafted, to check the title is what the eye lands on first" }
       ]
     },
@@ -301,7 +305,7 @@
     "No library item designs a printable paper form such as a job sheet or inspection form; form items are for web forms",
     "No library item lays out a workbook or worksheet with fill-in space",
     "No library item builds slide masters, or covers Google Slides or Keynote; the deck items are for PowerPoint",
-    "No library item shows one deck in two or three visual directions as real slides to compare",
+    "No library item shows one deck in two or three visual directions as editable slide files; the design directions skill makes pictures to compare",
     "No library item checks a PDF for tags, reading order and alternative text",
     "No library item checks a print file for bleed, embedded fonts and image resolution",
     "No library item sets a matching look across a book series"

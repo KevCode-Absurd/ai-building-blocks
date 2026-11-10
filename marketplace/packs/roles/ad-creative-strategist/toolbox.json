@@ -12,6 +12,7 @@
         { "ref": "library:creative-brief-writer", "type": "skill", "use": "brief", "when": "When all you have is reviews and product facts and need one problem, one angle and a proof list" },
         { "ref": "library:seven-bucket-ad-concept-brainstormer", "type": "skill", "use": "explore", "when": "When ideas all come from one place, to draw concepts from seven groups and rank the best eight" },
         { "ref": "library:ad-concept-matrix-builder", "type": "skill", "use": "explore", "when": "When you want a wide grid of buyer types, angles and offers set out in test order" },
+        { "ref": "library:make-ad-concept-spread", "type": "skill", "use": "explore", "when": "When a new batch is due, to write nine or more one-line concepts and make the strongest ones to look at" },
         { "ref": "library:ad-sameness-checker", "type": "skill", "use": "check", "when": "When a batch is drafted, to find concepts that are the same idea in different words" },
         { "ref": "library:luke-sullivan", "type": "mind", "use": "think", "when": "When every concept is a feature list and none has a simple idea a stranger would repeat" }
       ]
@@ -85,6 +86,7 @@
         { "ref": "library:theme-based-ad-layout-blueprint-maker", "type": "skill", "use": "explore", "when": "When you need three or four layouts with text zones and product placement to compare" },
         { "ref": "library:carousel-ad-writer", "type": "skill", "use": "explore", "when": "When the idea needs more than one frame, to try it as a two to six card carousel" },
         { "ref": "library:image-ad-copy-writer", "type": "skill", "use": "build", "when": "When a concept is picked and needs every word on and around the picture" },
+        { "ref": "library:make-ad-concept-spread", "type": "skill", "use": "explore", "when": "Before the designer starts, to turn the strongest concepts into real-size mock-ups to compare" },
         { "ref": "library:static-ad-critic", "type": "skill", "use": "check", "when": "When an ad is mocked up, to score it against its page and get fixes and two rewrites" }
       ]
     },
@@ -231,6 +233,7 @@
         { "ref": "library:ad-image-generation-and-edit-planner", "type": "skill", "use": "build", "when": "When you have a product photo and need settings and a prompt for each image in a batch" },
         { "ref": "library:theme-based-ad-layout-blueprint-maker", "type": "skill", "use": "explore", "when": "Before generating, to compare layouts so the batch is not one picture four times" },
         { "ref": "library:ideogram", "type": "tool", "use": "build", "when": "When the image must carry readable words from the prompt" },
+        { "ref": "library:make-ad-concept-spread", "type": "skill", "use": "explore", "when": "When images are being made, to build each ad at the placement's real size and compare them side by side" },
         { "ref": "library:static-ad-critic", "type": "skill", "use": "check", "when": "When images are back, to score each against its page before any go live" }
       ]
     },

@@ -80,7 +80,8 @@
         { "ref": "kit:prompts/recall-and-reactivation-messages", "use": "build", "when": "When check-ups or vaccinations are due, or clients have not booked for a long time" },
         { "ref": "library:text-message-campaign-writer", "type": "skill", "use": "explore", "when": "When texts may work better than email, to try a short flow with consent rules kept" },
         { "ref": "library:one-ask-email-tightener", "type": "prompt", "use": "check", "when": "Before sending, to cut each message to one action: book, call or reply" },
-        { "ref": "library:sms-send-checker", "type": "skill", "use": "check", "when": "Before a recall text goes to the whole list, to check cost and rule flags" }
+        { "ref": "library:sms-send-checker", "type": "skill", "use": "check", "when": "Before a recall text goes to the whole list, to check cost and rule flags" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before recall messages go out, to confirm the booking link works and there are open slots to book" }
       ]
     },
     {
@@ -148,7 +149,9 @@
         { "ref": "library:booking-page-designer", "type": "skill", "use": "build", "when": "When the page should end in a booking flow with open times and a prep note" },
         { "ref": "library:answer-first-page-rewriter", "type": "skill", "use": "explore", "when": "When the page opens with the practice's story, to compare a version that answers first" },
         { "ref": "kit:prompts/patient-page-claims-check", "use": "check", "when": "Before the page is published, to flag promises and claims the rules do not allow" },
-        { "ref": "library:check-a-clinic-service-information-page", "type": "workflow", "use": "check", "when": "When the page lists services, to check each line against the approved facts" }
+        { "ref": "library:check-a-clinic-service-information-page", "type": "workflow", "use": "check", "when": "When the page lists services, to check each line against the approved facts" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the page is written, to confirm the booking link, prices and open slots a visitor will find today" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the page is finished, so a fresh reader in the new patient's seat lists what they would still ask" }
       ]
     },
     {

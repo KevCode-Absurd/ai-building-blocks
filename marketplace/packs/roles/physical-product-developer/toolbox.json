@@ -59,7 +59,6 @@
       "items": [
         { "ref": "kit:skills/apparel-tech-pack", "use": "build", "when": "When a garment needs callouts, points of measure, tolerances, materials and construction" },
         { "ref": "library:product-tech-pack-writer", "type": "skill", "use": "build", "when": "When you start from product photos and ideas and need exact measures written out" },
-        { "ref": "library:fabric-swap-sample-maker", "type": "skill", "use": "explore", "when": "Before fixing the fabric, to see the same garment shape pictured in other swatches" },
         { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to read the pack as the factory and list every place they would have to guess" }
       ]
     },
@@ -89,7 +88,6 @@
       "kind": "analysis",
       "items": [
         { "ref": "library:responsible-sourcing-checker", "type": "skill", "use": "check", "when": "When suppliers' ethics and environment claims need a questionnaire and a gap list" },
-        { "ref": "library:fabric-swap-sample-maker", "type": "skill", "use": "explore", "when": "When two or three fabrics are in play and the client needs to see each on the garment" },
         { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before a material claim goes in the spec, to tie it to a test report or supplier document" },
         { "ref": "library:yvon-chouinard", "type": "mind", "use": "think", "when": "When the cheaper material wins by default and nobody has asked how long the product will last" }
       ]

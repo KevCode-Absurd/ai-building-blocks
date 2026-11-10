@@ -61,7 +61,8 @@
         { "ref": "kit:skills/collection-page-copy", "use": "build", "when": "When you need the intro, a buying guide from real product differences and an FAQ" },
         { "ref": "library:collection-page-seo-builder", "type": "skill", "use": "build", "when": "When the page needs its title, heading, address and copy set for one keyword" },
         { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the page heading and intro line need several angles to choose from" },
-        { "ref": "library:collection-page-fixer", "type": "skill", "use": "check", "when": "When the page is live, to check which products to feature and what to fix" }
+        { "ref": "library:collection-page-fixer", "type": "skill", "use": "check", "when": "When the page is live, to check which products to feature and what to fix" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before writing, to confirm the products the page leads with are in stock at the stated price today" }
       ]
     },
     {
@@ -81,8 +82,7 @@
       "kind": "copy",
       "items": [
         { "ref": "library:product-listing-writer", "type": "skill", "use": "build", "when": "When you need a title, bullets and description built for one marketplace's rules" },
-        { "ref": "library:etsy-listing-seo-scorer", "type": "skill", "use": "check", "when": "When it is an Etsy listing, to score it and get a better title and tags" },
-        { "ref": "library:overseas-listing-localizer", "type": "skill", "use": "build", "when": "When the listing will sell in another country and needs local language, sizes and terms" }
+        { "ref": "library:etsy-listing-seo-scorer", "type": "skill", "use": "check", "when": "When it is an Etsy listing, to score it and get a better title and tags" }
       ]
     },
     {
@@ -223,7 +223,8 @@
       "items": [
         { "ref": "library:discount-wording-planner", "type": "skill", "use": "build", "when": "When a discount is planned, to choose percent or amount and the banner words" },
         { "ref": "library:sale-price-wording-picker", "type": "prompt", "use": "explore", "when": "When you have the full and sale price, to compare ways to show the saving" },
-        { "ref": "library:discount-and-price-change-checker", "type": "agent", "use": "check", "when": "Before the sale goes live, to check the discount against margin and the rules" }
+        { "ref": "library:discount-and-price-change-checker", "type": "agent", "use": "check", "when": "Before the sale goes live, to check the discount against margin and the rules" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the wording is final, to confirm the sale price, code and end date are live on the store today" }
       ]
     },
     {
@@ -233,7 +234,10 @@
       "items": [
         { "ref": "library:campaign-email-writer", "type": "skill", "use": "build", "when": "When a new range or season needs email copy by block from the product facts" },
         { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "Before sending, to compare subject lines from several angles" },
-        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "When the email is drafted, to get cuts and a ship or fix score" }
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "When the launch needs more than one email, to plan three different orders and draft each first email" },
+        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "When the email is drafted, to get cuts and a ship or fix score" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the three launch plans are drafted, so a fresh reviewer picks the one to write in full" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before any email is written, to confirm the new product is live, in stock and at the stated price" }
       ]
     }
   ],
@@ -241,7 +245,9 @@
     { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any work for a store with a live site, to capture its voice, facts and prices" },
     { "ref": "library:brand-voice-editor", "type": "skill", "use": "check", "when": "When a batch is drafted, to fix off-brand words without touching the claims" },
     { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "Before delivery, to fix lines that read as machine written" },
-    { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "Last step before upload, to catch slips with a log of every change" }
+    { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "Last step before upload, to catch slips with a log of every change" },
+    { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before hand-over, so a fresh reader checks the copy against the brief as the shop owner would" },
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before copy goes live, to trace each price, size, material and policy line to the fact sheet or cut it" }
   ],
   "helpers": [
     { "role": "shopify-specialist", "when": "When copy must be loaded into the store, or themes, fields and feeds need set-up" },
@@ -260,6 +266,7 @@
     "No library item writes a size guide or care label copy",
     "No library item writes transactional order and dispatch emails; the nearest ones plan flows and timing",
     "No library item turns shopper questions into photo captions; the gallery workflow plans images, not words",
-    "No library item finds duplicate or supplier-pasted descriptions across a catalogue export"
+    "No library item finds duplicate or supplier-pasted descriptions across a catalogue export",
+    "No English library item localises a listing's sizes, units and required labels for another country; the one that exists is written in Chinese"
   ]
 }

@@ -36,7 +36,8 @@
       "items": [
         { "ref": "kit:prompts/teaser-deck-from-full-deck", "use": "build", "when": "When a full deck exists and first contact needs five slides, with what to hold back" },
         { "ref": "library:elevator-pitch-writer", "type": "skill", "use": "explore", "when": "When the opening line is weak, to compare 10, 30 and 60 second versions" },
-        { "ref": "library:finance-deck-quality-checker", "type": "skill", "use": "check", "when": "Before sending, to check the teaser's numbers still match the full deck" }
+        { "ref": "library:finance-deck-quality-checker", "type": "skill", "use": "check", "when": "Before sending, to check the teaser's numbers still match the full deck" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the teaser is sent, to check each number and logo on it against the full deck's sources" }
       ]
     },
     {
@@ -59,7 +60,8 @@
         { "ref": "kit:workflows/fundraising-round-plan", "use": "build", "when": "When the founder decides to raise, or runway is shorter than a raise usually takes" },
         { "ref": "library:startup-runway-forecaster", "type": "skill", "use": "brief", "when": "Before setting dates, to know the month cash runs out at current burn" },
         { "ref": "library:forecast-your-startup-runway-and-prepare-a-finance-pack", "type": "workflow", "use": "build", "when": "When the round size must come from a model with a cash-out date and ranges" },
-        { "ref": "library:early-stage-valuation-estimator", "type": "skill", "use": "brief", "when": "When the founder needs a value range to set expectations before talking terms" }
+        { "ref": "library:early-stage-valuation-estimator", "type": "skill", "use": "brief", "when": "When the founder needs a value range to set expectations before talking terms" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the round plan is fixed, to compare two plans that use the runway and the founder's time differently" }
       ]
     },
     {
@@ -202,7 +204,8 @@
         { "ref": "kit:skills/investor-update", "use": "build", "when": "When you have the KPI sheet, P&L and notes and need a short, honest update with asks" },
         { "ref": "library:copilot-gtm-board-and-investor-communication", "type": "skill", "use": "explore", "when": "When the story could be framed more than one way, to get a second version to compare" },
         { "ref": "library:bad-news-update-writer", "type": "skill", "use": "build", "when": "When the month went badly and the loss, the numbers and the plan must be said straight" },
-        { "ref": "library:company-story-aligner", "type": "skill", "use": "check", "when": "Before sending, to find where the update contradicts the deck or the last update" }
+        { "ref": "library:company-story-aligner", "type": "skill", "use": "check", "when": "Before sending, to find where the update contradicts the deck or the last update" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the update goes out, to trace every metric, date and customer name to the company's own records" }
       ]
     },
     {

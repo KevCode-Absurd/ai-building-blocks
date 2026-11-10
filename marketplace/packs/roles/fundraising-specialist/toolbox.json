@@ -11,7 +11,8 @@
         { "ref": "kit:workflows/appeal-campaign-cycle", "use": "brief", "when": "When the client sets an appeal date, to run the cycle from story to thank-yous" },
         { "ref": "kit:skills/appeal-campaign", "use": "build", "when": "When you have one consented story and real cost figures and need the whole appeal" },
         { "ref": "library:nonprofit-annual-appeal-planner", "type": "skill", "use": "build", "when": "When you have donor groups and giving history, to set gift amounts and a schedule" },
-        { "ref": "library:customer-segment-builder", "type": "skill", "use": "brief", "when": "When all you have is a gift export, to group donors by how recently and often they gave" }
+        { "ref": "library:customer-segment-builder", "type": "skill", "use": "brief", "when": "When all you have is a gift export, to group donors by how recently and often they gave" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the campaign plan is fixed, to compare two plans that spend the budget and the weeks differently" }
       ]
     },
     {
@@ -35,8 +36,10 @@
       "items": [
         { "ref": "library:nonprofit-donation-page-writer", "type": "skill", "use": "build", "when": "When the giving page needs real gift amounts, checked claims and a repeat-gift choice" },
         { "ref": "library:top-of-page-headline-writer", "type": "prompt", "use": "explore", "when": "When the top of the page is flat, to get five headlines with a subhead and button" },
+        { "ref": "library:make-three-first-screens", "type": "skill", "use": "explore", "when": "Before the page is written in full, to build three different first screens and compare them on a phone" },
         { "ref": "library:landing-page-auditor", "type": "skill", "use": "check", "when": "When the page is drafted, to rank what would stop a visitor giving" },
-        { "ref": "library:claim-and-proof-matcher", "type": "skill", "use": "check", "when": "Before launch, to check every impact claim against the group's own records" }
+        { "ref": "library:claim-and-proof-matcher", "type": "skill", "use": "check", "when": "Before launch, to check every impact claim against the group's own records" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the page goes live, to confirm the donate button, amounts and form work for a giver today" }
       ]
     },
     {
@@ -92,7 +95,8 @@
         { "ref": "library:nonprofit-annual-report-planner", "type": "skill", "use": "build", "when": "When a yearly report needs a plan and every fact, number and name checked" },
         { "ref": "library:nonprofit-ethical-impact-story-writer", "type": "skill", "use": "build", "when": "When the report needs stories that respect each person and have clear consent" },
         { "ref": "library:nonprofit-program-measurement-planner", "type": "skill", "use": "brief", "when": "When the numbers are thin, to set what to measure and the rules for reporting it" },
-        { "ref": "library:annette-simmons", "type": "mind", "use": "think", "when": "When the report lists outputs and needs one true incident that shows the change" }
+        { "ref": "library:annette-simmons", "type": "mind", "use": "think", "when": "When the report lists outputs and needs one true incident that shows the change" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the report is published, to trace every figure, name and quote to the charity's own records" }
       ]
     },
     {
@@ -154,7 +158,8 @@
         { "ref": "library:nonprofit-grant-proposal-writer", "type": "skill", "use": "build", "when": "When you have funder rules, programme facts and budget and need the required sections" },
         { "ref": "library:agency-grant-writer", "type": "agent", "use": "build", "when": "When the funder wants a letter of inquiry first, with a list of claims to prove" },
         { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When answers are over the word limit or full of sector jargon" },
-        { "ref": "library:hardest-objections-answer-writer", "type": "skill", "use": "check", "when": "Before submitting, to face the hardest questions an assessor would ask" }
+        { "ref": "library:hardest-objections-answer-writer", "type": "skill", "use": "check", "when": "Before submitting, to face the hardest questions an assessor would ask" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the bid is sent, to trace each number, outcome and date in it to a record the funder could ask for" }
       ]
     },
     {
@@ -256,7 +261,8 @@
   "always": [
     { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When an appeal, bid or report states a number or result you cannot trace to the records" },
     { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "Before anything goes to a donor or funder, to fix lines that sound machine-written" },
-    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before sending, to catch typos and funder, donor and project names spelt two ways" }
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before sending, to catch typos and funder, donor and project names spelt two ways" },
+    { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before an appeal, page or proposal is handed over, so a fresh reader checks it as the donor or funder would" }
   ],
   "helpers": [
     { "role": "evaluation-specialist", "when": "When a funder wants an evaluation plan or evidence of outcomes beyond simple counts" },

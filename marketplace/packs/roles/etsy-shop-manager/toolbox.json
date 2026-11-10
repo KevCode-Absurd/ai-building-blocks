@@ -10,7 +10,6 @@
       "items": [
         { "ref": "kit:prompts/listing-rewrite-batch", "use": "build", "when": "When up to 15 listings need new titles, tags, attributes and description openings in one go" },
         { "ref": "kit:skills/etsy-listing-rewrite", "use": "build", "when": "When one listing needs the full rewrite: title, 13 tags, attributes and a description buyers read" },
-        { "ref": "library:customer-question-keyword-finder", "type": "prompt", "use": "brief", "when": "Before you write, to pull the questions and words buyers use from reviews and messages" },
         { "ref": "library:product-listing-writer", "type": "skill", "use": "explore", "when": "When you want a second draft of title and description from the same facts to compare" },
         { "ref": "library:etsy-listing-seo-scorer", "type": "skill", "use": "check", "when": "When a listing is drafted, to score it and get a ranked list of title and tag fixes" },
         { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a description could fit any shop, to test it and get a true, picturable rewrite" },
@@ -89,10 +88,8 @@
       "items": [
         { "ref": "library:product-page-gallery-planner", "type": "skill", "use": "brief", "when": "When you have the product photos and facts and need a plan where each image answers a doubt" },
         { "ref": "library:phone-product-photoshoot", "type": "workflow", "use": "build", "when": "When the owner shoots on a phone and needs 8 to 12 photos, each with a job and its own light" },
-        { "ref": "library:product-background-swapper", "type": "skill", "use": "explore", "when": "When a plain-background photo could be tried in a few scenes; check Etsy's AI rules first" },
         { "ref": "library:product-photo-set-maker", "type": "agent", "use": "build", "when": "When a full set is needed from photos of one real product, with failed frames redone" },
         { "ref": "library:product-page-image-checker", "type": "skill", "use": "check", "when": "When the set is done, to list every fault with one fix each and a score" },
-        { "ref": "library:marketplace-photo-rule-checker", "type": "skill", "use": "check", "when": "Before upload, to get a pass or reject on each photo against the platform's rules" },
         { "ref": "library:ansel-adams", "type": "mind", "use": "think", "when": "When the first photo is flat and you must decide what it should show and where the light falls" }
       ]
     },
@@ -228,7 +225,8 @@
       "items": [
         { "ref": "library:content-calendar-builder", "type": "skill", "use": "build", "when": "When the owner wants a calendar of post topics drawn from real buyer words" },
         { "ref": "library:social-post-planner", "type": "skill", "use": "build", "when": "When the calendar is agreed and the posts must be written for each platform" },
-        { "ref": "library:email-cadence-planner", "type": "skill", "use": "build", "when": "When the owner has a small list of past buyers and wants a weekly email plan" }
+        { "ref": "library:email-cadence-planner", "type": "skill", "use": "build", "when": "When the owner has a small list of past buyers and wants a weekly email plan" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before choosing channels, to compare two plans that spend the seller's hours and money differently" }
       ]
     },
     {
@@ -265,7 +263,8 @@
   ],
   "always": [
     { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any listing or policy text goes live, to catch typos and names spelt two ways" },
-    { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When a listing claims handmade, organic, safe or a result, to sort each claim and reword it" }
+    { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When a listing claims handmade, organic, safe or a result, to sort each claim and reword it" },
+    { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before listings or shop pages go to the seller, so a fresh reader checks them against what was asked" }
   ],
   "helpers": [
     { "role": "product-photographer", "when": "When the listings need a real photo set planned and shot, not a check of existing photos" },
@@ -288,6 +287,7 @@
     "No library item sets up variations and personalisation fields for made-to-order items",
     "No library item plans Etsy sales and coupons, such as thank-you or abandoned basket offers",
     "No library item gives a gift season calendar for when Etsy buyers start searching for each occasion",
-    "No library item writes vintage item descriptions with age, condition and flaws"
+    "No library item writes vintage item descriptions with age, condition and flaws",
+    "No English library item checks photos against a marketplace's image rules or swaps a product's background; those that exist are written in Chinese"
   ]
 }

@@ -50,7 +50,8 @@
         { "ref": "library:event-ticket-pricer", "type": "skill", "use": "brief", "when": "When the event is ticketed and needs a price, early-bird terms and how to show seats left" },
         { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When the event line is flat, to get five short headlines that each take a new angle" },
         { "ref": "library:make-a-readable-event-poster", "type": "workflow", "use": "build", "when": "When the event needs a poster for the door, the bar and the window" },
-        { "ref": "library:sales-copy-reviewer", "type": "skill", "use": "check", "when": "When the pack is drafted, to find its weakest lines and fix the booking ask" }
+        { "ref": "library:sales-copy-reviewer", "type": "skill", "use": "check", "when": "When the pack is drafted, to find its weakest lines and fix the booking ask" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the first post, to confirm the booking link works and tickets or tables are still open for the date" }
       ]
     },
     {
@@ -110,7 +111,8 @@
         { "ref": "library:campaign-email-writer", "type": "skill", "use": "build", "when": "When the plan is set and each email needs writing block by block from the release facts" },
         { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When an email is written, to get subject lines in several angles to pick from" },
         { "ref": "library:store-urgency-and-drop-planner", "type": "skill", "use": "build", "when": "When club members get first access, to set the early window and deadlines truthfully" },
-        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before each send, to get cuts, a score and a ship or fix verdict" }
+        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before each send, to get cuts, a score and a ship or fix verdict" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the series is written, to confirm the release is on sale at the stated price with stock to sell" }
       ]
     },
     {
@@ -205,7 +207,8 @@
         { "ref": "library:top-of-page-headline-writer", "type": "prompt", "use": "explore", "when": "When that page needs an opening, to get five headlines with a pick" },
         { "ref": "library:new-inquiry-reply-drafter", "type": "skill", "use": "build", "when": "When enquiries arrive, to qualify each one and draft a reply the owner sends" },
         { "ref": "library:prospect-outreach-drafter", "type": "skill", "use": "build", "when": "When you write to local firms and planners who may book a party or a room" },
-        { "ref": "library:sales-copy-reviewer", "type": "skill", "use": "check", "when": "When the page or pack is drafted, to find and fix its weakest parts" }
+        { "ref": "library:sales-copy-reviewer", "type": "skill", "use": "check", "when": "When the page or pack is drafted, to find and fix its weakest parts" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the page goes live, to confirm the enquiry form works and the dates and prices shown still hold" }
       ]
     },
     {
@@ -215,7 +218,7 @@
       "items": [
         { "ref": "library:press-outreach-planner", "type": "skill", "use": "build", "when": "When there is real news, to get a media list, pitch emails and a press kit outline" },
         { "ref": "library:partner-campaign-planner", "type": "skill", "use": "build", "when": "When a nearby business could share an event or offer and you need the pitch" },
-        { "ref": "library:influencer-gifting-planner", "type": "skill", "use": "build", "when": "When you invite creators in, to plan the invite, tracking and which posts to reuse" },
+        { "ref": "library:creator-partnership-planner", "type": "skill", "use": "build", "when": "When you invite creators in, to plan how to find them, what to offer, the brief and how to track results" },
         { "ref": "library:creator-audience-checker", "type": "skill", "use": "check", "when": "Before a free meal is offered, to check a creator's followers live near the venue" }
       ]
     },
@@ -226,7 +229,8 @@
       "items": [
         { "ref": "library:meta-ad-copywriter", "type": "skill", "use": "build", "when": "When the owner boosts an offer or event and needs ad text and hooks to test" },
         { "ref": "library:image-ad-copy-writer", "type": "skill", "use": "explore", "when": "When the ad is an image, to get its words in two or three versions to compare" },
-        { "ref": "library:meta-ads-compliance-checker", "type": "skill", "use": "check", "when": "Before an ad that shows alcohol or a price goes live, to check it against the ad rules" }
+        { "ref": "library:meta-ads-compliance-checker", "type": "skill", "use": "check", "when": "Before an ad that shows alcohol or a price goes live, to check it against the ad rules" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the ad runs, to confirm the offer is live and the booking page it points to has open slots" }
       ]
     },
     {

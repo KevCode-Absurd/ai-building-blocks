@@ -130,6 +130,7 @@
         { "ref": "library:page-grid-and-type-planner", "type": "skill", "use": "build", "when": "When a sign or price list carries a lot of text and needs a grid and a short type list" },
         { "ref": "library:type-led-poster-planner", "type": "skill", "use": "explore", "when": "When the sign has no picture, to try a type-only version that reads from far away" },
         { "ref": "library:make-a-readable-event-poster", "type": "workflow", "use": "build", "when": "When the sign is for an event and you want a guided run to a layout and export checklist" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "Before the signs are printed, to build three real-size layouts with the real words and compare them" },
         { "ref": "library:plain-page-type-checker", "type": "skill", "use": "check", "when": "When a sign is drafted, to check type size, spacing and line length where it is read" }
       ]
     },
@@ -161,6 +162,7 @@
       "items": [
         { "ref": "kit:skills/refresh-budget-and-order-of-work", "use": "build", "when": "When the plans are approved and you need a costed list that reuses owned items first" },
         { "ref": "library:budget-and-space-picker-knapsack", "type": "skill", "use": "build", "when": "When the wish list is over budget, to pick the set of items worth most within the limit" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the owner commits, to show two ways to split the budget and order the work, with totals that add up" },
         { "ref": "library:supplier-quote-comparer", "type": "skill", "use": "check", "when": "When you have two or more quotes for the same items, to compare price, lead time and risk" },
         { "ref": "library:big-purchase-pause-check", "type": "prompt", "use": "check", "when": "Before one large buy such as a counter or sofa, to see the real cost and a small test first" },
         { "ref": "library:outside-view-timeline-estimator", "type": "prompt", "use": "check", "when": "When the owner has a reopening date, to correct the estimate by how such jobs really go" }

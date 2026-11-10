@@ -81,6 +81,7 @@
         { "ref": "kit:skills/sales-email-sequence", "use": "build", "when": "When you need a short sequence from new subscriber, enquiry or trial to first purchase" },
         { "ref": "library:write-a-welcome-email-sequence-that-teaches-then-sells", "type": "workflow", "use": "build", "when": "When the list is new and five emails should teach first, then sell, with a review built in" },
         { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When you want subject lines in several angles for each email to test" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before the sequence is written, to plan three different arcs and draft the first email of each" },
         { "ref": "library:email-sequence-auditor", "type": "skill", "use": "check", "when": "When a sequence is live with numbers, to see which emails to protect and which to fix" }
       ]
     },
@@ -93,6 +94,7 @@
         { "ref": "library:honest-urgency-planner", "type": "skill", "use": "brief", "when": "When the offer needs a deadline or limit that is real, and the lines to say it" },
         { "ref": "library:campaign-email-writer", "type": "skill", "use": "build", "when": "When you need one promotional email written block by block with subject lines" },
         { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the email is written and you want subject lines that take different angles" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before the launch emails are written, to compare three runs that differ in promise, proof and timing" },
         { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When an email is drafted, to get cuts, a pacing map and a ship or fix verdict" }
       ]
     },

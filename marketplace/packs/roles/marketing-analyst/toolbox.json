@@ -175,6 +175,7 @@
       "items": [
         { "ref": "library:channel-budget-mix-planner", "type": "skill", "use": "build", "when": "When you have spend by channel and margin and need a target split with caps" },
         { "ref": "library:marketing-budget-scenarios", "type": "skill", "use": "explore", "when": "When a new budget is proposed, to compare low and high forecasts with diminishing returns" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before recommending a split, to put two differently shaped budgets on a page each and name one" },
         { "ref": "library:monthly-channel-budget-reviewer", "type": "agent", "use": "check", "when": "When the split is live, to check each month where the next pound should go" }
       ]
     },

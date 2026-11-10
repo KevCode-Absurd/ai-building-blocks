@@ -60,6 +60,7 @@
         { "ref": "kit:skills/finance-health-check", "use": "brief", "when": "Before you set priorities, to know which of the five areas is red and why" },
         { "ref": "library:cash-lever-ranker", "type": "skill", "use": "explore", "when": "When cash is the red area, to see six levers ranked before you pick three priorities" },
         { "ref": "library:90-day-plan-builder", "type": "skill", "use": "build", "when": "When the priorities are chosen and each needs an owner, weekly check-ins and risks" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the 90 days are set, to compare two plans that put the cash and the owner's time in different places" },
         { "ref": "library:failure-first-plan-check", "type": "skill", "use": "check", "when": "When the plan is drafted, to list the ways it could fail and change it first" }
       ]
     },
@@ -227,7 +228,8 @@
         { "ref": "library:anonymous-company-teaser-writer", "type": "skill", "use": "explore", "when": "When the business must not be named yet and buyers need a one-page reason to ask for more" },
         { "ref": "library:company-tear-sheet", "type": "skill", "use": "explore", "when": "When the broker wants a named one-page sheet with financials, ratios and a summary" },
         { "ref": "library:sale-memorandum-drafter", "type": "skill", "use": "build", "when": "When interest is real and the broker needs the longer sale document drafted" },
-        { "ref": "library:company-story-aligner", "type": "skill", "use": "check", "when": "Before it goes out, to find where the profile contradicts what staff or lenders were told" }
+        { "ref": "library:company-story-aligner", "type": "skill", "use": "check", "when": "Before it goes out, to find where the profile contradicts what staff or lenders were told" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the profile goes to a broker, to trace every figure, date and customer name to the accounts" }
       ]
     },
     {
@@ -248,7 +250,8 @@
         { "ref": "library:prepare-a-board-decision-brief", "type": "workflow", "use": "build", "when": "When decisions are due and the board needs an evidence map and a clear update" },
         { "ref": "library:board-deck-builder", "type": "skill", "use": "build", "when": "When the update is a deck and the story, numbers and bad news need placing" },
         { "ref": "library:hard-questions-board-prep-coach", "type": "skill", "use": "check", "when": "When the update is drafted, to face the toughest questions before the room asks them" },
-        { "ref": "library:company-story-aligner", "type": "skill", "use": "check", "when": "When lender, board and staff each hear a different version of the numbers" }
+        { "ref": "library:company-story-aligner", "type": "skill", "use": "check", "when": "When lender, board and staff each hear a different version of the numbers" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the update is sent, to trace each number in it to the books and the date it was read" }
       ]
     },
     {

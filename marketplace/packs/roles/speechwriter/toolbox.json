@@ -53,7 +53,8 @@
         { "ref": "library:elevator-pitch-writer", "type": "skill", "use": "explore", "when": "When the speaker needs 10, 30 and 60 second versions and an opening question to compare" },
         { "ref": "library:rival-free-pitch-rewriter", "type": "skill", "use": "explore", "when": "When the pitch leans on a rival's name, to try versions built on what only they do" },
         { "ref": "library:sales-opener-trio-writer", "type": "prompt", "use": "explore", "when": "When the first ten words are weak, to get three openers and a way to test them" },
-        { "ref": "library:hardest-objections-answer-writer", "type": "skill", "use": "check", "when": "When the pitch is drafted, to find the toughest objections and where it overclaims" }
+        { "ref": "library:hardest-objections-answer-writer", "type": "skill", "use": "check", "when": "When the pitch is drafted, to find the toughest objections and where it overclaims" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When two or three versions of the pitch exist, so someone who did not write them picks the one to use" }
       ]
     },
     {
@@ -295,7 +296,8 @@
   ],
   "always": [
     { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before any speech with a number, date, award or quoted fact goes to the speaker" },
-    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before the delivery copy is printed, to catch names and titles spelt two ways" }
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before the delivery copy is printed, to catch names and titles spelt two ways" },
+    { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before the final text goes to the speaker, so a fresh reader checks it against what they asked for" }
   ],
   "helpers": [
     { "role": "presentation-designer", "when": "When the talk needs a designed slide deck, not only notes and a slide plan" },

@@ -96,7 +96,8 @@
         { "ref": "library:non-brand-search-campaign-builder", "type": "skill", "use": "build", "when": "When each service and area needs its own ad group, keywords and ads" },
         { "ref": "kit:skills/search-terms-cleanup", "use": "build", "when": "When the firm pays for calls about jobs it does not do and needs a negatives list" },
         { "ref": "kit:prompts/responsive-search-ad-writer", "use": "build", "when": "When each service and area needs search ad text" },
-        { "ref": "library:local-search-listing-manager", "type": "skill", "use": "check", "when": "When the business listing is weak and holds back local and call results" }
+        { "ref": "library:local-search-listing-manager", "type": "skill", "use": "check", "when": "When the business listing is weak and holds back local and call results" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before launch, to confirm the booking or call page works and the service is offered in the target area" }
       ]
     },
     {
@@ -109,7 +110,8 @@
         { "ref": "library:ad-headline-writer", "type": "skill", "use": "build", "when": "When each headline must fit the character limit, with one to test first" },
         { "ref": "library:fact-based-ad-copy-writer", "type": "prompt", "use": "build", "when": "When every line must rest on a real fact with its source" },
         { "ref": "library:ad-and-page-match-checker", "type": "skill", "use": "check", "when": "When the ads are written, to score how well they match the landing page" },
-        { "ref": "library:ad-and-page-policy-checker", "type": "skill", "use": "check", "when": "Before upload, to flag policy risks line by line with safer rewrites" }
+        { "ref": "library:ad-and-page-policy-checker", "type": "skill", "use": "check", "when": "Before upload, to flag policy risks line by line with safer rewrites" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the ads are written, to confirm the landing page loads and shows the price and offer the ads name" }
       ]
     },
     {
@@ -141,7 +143,8 @@
         { "ref": "library:margin-tier-shopping-builder", "type": "skill", "use": "build", "when": "When you have margin and return by product, to tier them with a target each" },
         { "ref": "library:bestseller-shopping-campaign-builder", "type": "skill", "use": "build", "when": "When best sellers should have their own campaign and brand negatives" },
         { "ref": "library:build-shopping-by-margin-tune-it-weekly-and-fix-titles", "type": "workflow", "use": "build", "when": "When you want a guided run from tiers to weekly tuning and title fixes" },
-        { "ref": "kit:workflows/campaign-launch", "use": "check", "when": "Before the new structure goes live, to run the launch checklist" }
+        { "ref": "kit:workflows/campaign-launch", "use": "check", "when": "Before the new structure goes live, to run the launch checklist" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before budget goes to a product group, to confirm its products are in stock at the feed price" }
       ]
     },
     {
@@ -152,7 +155,8 @@
         { "ref": "library:performance-max-launch-planner", "type": "skill", "use": "build", "when": "When you have catalogue, budget and break-even numbers, for a fit verdict and a build" },
         { "ref": "library:feed-only-performance-max-builder", "type": "skill", "use": "explore", "when": "When a feed-only version might waste less, to compare it with a full build" },
         { "ref": "library:launch-performance-max-keep-it-clean-and-know-when-to-scale", "type": "workflow", "use": "build", "when": "When you want a guided launch with rules for when to scale" },
-        { "ref": "kit:prompts/responsive-search-ad-writer", "use": "build", "when": "When asset groups need headlines and descriptions for each category" }
+        { "ref": "kit:prompts/responsive-search-ad-writer", "use": "build", "when": "When asset groups need headlines and descriptions for each category" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the asset groups go live, to confirm the products and landing pages they point to work today" }
       ]
     },
     {

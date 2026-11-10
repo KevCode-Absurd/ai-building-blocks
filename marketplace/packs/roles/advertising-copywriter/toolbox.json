@@ -272,7 +272,8 @@
     { "ref": "library:brand-voice-editor", "type": "skill", "use": "check", "when": "When a draft is done, to fix off-brand words without touching the claims" },
     { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When copy states facts or numbers, to check each against a trusted source" },
     { "ref": "library:ai-default-patterns", "type": "skill", "use": "check", "when": "Before delivery, to catch stock phrases that make copy read as machine written" },
-    { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "Last step before sign-off, to catch spelling and grammar slips with a log of changes" }
+    { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "Last step before sign-off, to catch spelling and grammar slips with a log of changes" },
+    { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before hand-over, so a fresh reader takes the client's seat and lists what fails the brief" }
   ],
   "helpers": [
     { "role": "graphic-designer", "when": "When the copy needs a print layout, a poster design or printer-ready files" },

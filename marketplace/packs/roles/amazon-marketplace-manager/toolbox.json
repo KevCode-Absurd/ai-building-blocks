@@ -24,7 +24,6 @@
       "items": [
         { "ref": "kit:prompts/listing-rule-check", "use": "check", "when": "When a listing is flagged or suppressed, or before any edit goes live" },
         { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When the copy makes health, safety or best-in-class claims that need proof" },
-        { "ref": "library:marketplace-photo-rule-checker", "type": "skill", "use": "check", "when": "When the images may be the cause, to get a pass or reject for each photo" },
         { "ref": "library:ad-claim-proof-gap-finder", "type": "prompt", "use": "check", "when": "When you hold the proof, to pair each claim with it and see the gaps" }
       ]
     },
@@ -99,7 +98,8 @@
         { "ref": "library:launch-an-amazon-product-with-sales-from-day-one", "type": "workflow", "use": "build", "when": "When listing, launch ads, stock and launch week must be planned in one run" },
         { "ref": "library:amazon-launch-week-planner", "type": "skill", "use": "build", "when": "When you need the days before and after go-live planned for early sales and reviews" },
         { "ref": "library:amazon-ppc-launch-builder", "type": "skill", "use": "build", "when": "When the launch needs its first auto, keyword and competitor campaigns with bids" },
-        { "ref": "library:jeff-bezos", "type": "mind", "use": "think", "when": "When the plan is built around the seller's hopes, to restart from what the customer needs" }
+        { "ref": "library:jeff-bezos", "type": "mind", "use": "think", "when": "When the plan is built around the seller's hopes, to restart from what the customer needs" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the 90 days are fixed, to compare two plans that split the launch budget and the weeks differently" }
       ]
     },
     {
@@ -198,9 +198,7 @@
       "kind": "other",
       "items": [
         { "ref": "library:product-page-gallery-planner", "type": "skill", "use": "build", "when": "When you have photos and facts and need an eight-image plan with a gaps list" },
-        { "ref": "library:main-image-a-b-test-planner", "type": "skill", "use": "explore", "when": "When the main image must win the click, to plan versions that change one thing each" },
-        { "ref": "library:pack-and-thumbnail-glance-tester", "type": "skill", "use": "check", "when": "When the image is seen as a small thumbnail, to score what reads in three seconds" },
-        { "ref": "library:marketplace-photo-rule-checker", "type": "skill", "use": "check", "when": "Before upload, to catch photos Amazon would reject" }
+        { "ref": "library:pack-and-thumbnail-glance-tester", "type": "skill", "use": "check", "when": "When the image is seen as a small thumbnail, to score what reads in three seconds" }
       ]
     },
     {
@@ -258,6 +256,7 @@
     "No library item plans Amazon coupons, Lightning Deals, Prime Day or Subscribe and Save offers by name",
     "No library item answers customer questions on a listing or plans the question and answer section",
     "No library item covers Walmart, eBay or other marketplaces when the client asks to copy a listing across",
-    "No library item tracks keyword rank and buy box share week by week"
+    "No library item tracks keyword rank and buy box share week by week",
+    "No English library item checks photos against Amazon's image rules or plans main image test versions; the two that exist are written in Chinese"
   ]
 }

@@ -11,6 +11,7 @@
         { "ref": "kit:workflows/campaign-pre-launch-to-final-day", "use": "build", "when": "When a creator decides to crowdfund and has, or can get, written quotes" },
         { "ref": "library:campaign-brief-calendar", "type": "skill", "use": "build", "when": "When the plan needs one brief with goal, audience, messages and a weekly calendar" },
         { "ref": "library:launch-critical-path-builder", "type": "skill", "use": "build", "when": "When dates depend on samples, making and freight, to date every step with an owner" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the campaign plan is fixed, to compare two plans that spend the budget and the days differently" },
         { "ref": "library:plan-pre-mortem-runner", "type": "skill", "use": "check", "when": "When the plan looks finished, to imagine it failed and find the hidden assumptions" }
       ]
     },
@@ -157,6 +158,7 @@
         { "ref": "kit:skills/backer-updates-and-emails", "use": "build", "when": "When you need the emails to the creator's own list from teaser to launch day" },
         { "ref": "library:launch-email-sequence-planner", "type": "skill", "use": "brief", "when": "When the campaign has a fixed close date and the whole run of emails needs planning" },
         { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When each email needs subject lines in several angles to choose from" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before writing the emails, to plan three different runs from pre-launch to launch day and draft each opener" },
         { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When an email is drafted, to get cuts, a pacing check and a ship or fix verdict" }
       ]
     },

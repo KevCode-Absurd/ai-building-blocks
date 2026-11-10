@@ -24,8 +24,10 @@
       "items": [
         { "ref": "library:top-of-page-headline-writer", "type": "prompt", "use": "explore", "when": "When the first screen is vague, to get five headlines with a subhead, button and proof" },
         { "ref": "library:store-hero-section-writer", "type": "skill", "use": "build", "when": "When it is a store's top screen and you want the copy plus a plan to test it" },
+        { "ref": "library:make-three-first-screens", "type": "skill", "use": "explore", "when": "Before settling the rewrite, to build three different top screens in the site's own look and compare them" },
         { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a line could sit on any rival's page, to test it and get a true, specific rewrite" },
-        { "ref": "library:ad-and-page-match-checker", "type": "skill", "use": "check", "when": "When visitors arrive from an ad, to check the new top screen still keeps the ad's promise" }
+        { "ref": "library:ad-and-page-match-checker", "type": "skill", "use": "check", "when": "When visitors arrive from an ad, to check the new top screen still keeps the ad's promise" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the three top screens are on one sheet, so a fresh reviewer picks the one to ship or test" }
       ]
     },
     {
@@ -276,7 +278,7 @@
     "No library item covers on-site search, filters and category pages as a conversion problem",
     "No library item writes the client report for a research sprint or a quarter of tests",
     "No library item keeps a log of past tests and lessons across clients that is not tied to one store",
-    "No library item offers clearly different popup or top-screen layouts to compare, only different words",
+    "No library item offers clearly different popup layouts to compare, only different words",
     "No library item covers personalising a page by visitor segment or source and testing it fairly",
     "No tool guides exist for analytics, testing or heatmap tools such as GA4, Hotjar, Clarity or VWO"
   ]

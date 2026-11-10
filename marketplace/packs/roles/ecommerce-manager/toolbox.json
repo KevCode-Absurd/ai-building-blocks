@@ -168,7 +168,8 @@
       "items": [
         { "ref": "library:collection-page-seo-builder", "type": "skill", "use": "build", "when": "When a collection needs its title, heading, two-part intro and questions for one search term" },
         { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the intro's first line is flat, to get several honest angles to choose from" },
-        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When an intro could describe any shop, to test it and get a true, picturable rewrite" }
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When an intro could describe any shop, to test it and get a true, picturable rewrite" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before writing, to confirm the featured ranges are in stock in the sizes most shoppers need" }
       ]
     },
     {
@@ -213,7 +214,9 @@
         { "ref": "library:product-launch-planner", "type": "skill", "use": "build", "when": "When a new product has a date and needs timing, channels and announcement copy" },
         { "ref": "library:launch-teaser-to-preview-planner", "type": "skill", "use": "explore", "when": "When you want a teaser and preview route with a sign-up page before launch day" },
         { "ref": "library:launch-email-sequence-planner", "type": "skill", "use": "build", "when": "When the launch runs to a close date and the list needs a planned run of emails" },
-        { "ref": "library:pre-launch-store-checker", "type": "agent", "use": "check", "when": "Before go-live, to check the store, re-check after each fix and get a clear go or no-go" }
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the launch plan is fixed, to compare two plans that place the budget and the weeks differently" },
+        { "ref": "library:pre-launch-store-checker", "type": "agent", "use": "check", "when": "Before go-live, to check the store, re-check after each fix and get a clear go or no-go" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before launch work starts, to confirm the product page is live, in stock and at the planned price" }
       ]
     },
     {

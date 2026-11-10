@@ -24,7 +24,6 @@
       "items": [
         { "ref": "kit:prompts/buyer-prompt-set-builder", "use": "build", "when": "Before any measurement, to fix the real buyer questions you will ask every time" },
         { "ref": "library:shopper-question-and-fan-out-mapper", "type": "skill", "use": "build", "when": "When you need the questions shoppers ask AI, grouped by topic with likely follow-ups" },
-        { "ref": "library:customer-question-keyword-finder", "type": "prompt", "use": "brief", "when": "When you have reviews, tickets and comments and want the questions in buyers' own words" },
         { "ref": "library:keyword-research-planner", "type": "skill", "use": "brief", "when": "When there is search data and you want the question searches to seed the set" }
       ]
     },
@@ -128,7 +127,8 @@
         { "ref": "kit:skills/citation-ready-page-rewrite", "use": "build", "when": "When thin service pages must be rebuilt to answer one question each" },
         { "ref": "library:check-a-clinic-service-information-page", "type": "workflow", "use": "check", "when": "When the firm is a clinic and every answer must match approved service facts" },
         { "ref": "library:ai-citation-scorer", "type": "skill", "use": "check", "when": "When pages are drafted, to check each answer can be lifted out and still make sense" },
-        { "ref": "library:schema-markup-writer", "type": "skill", "use": "build", "when": "When the finished FAQ or service page needs markup" }
+        { "ref": "library:schema-markup-writer", "type": "skill", "use": "build", "when": "When the finished FAQ or service page needs markup" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the pages go live, to trace every price, time, figure and name on them to a dated source" }
       ]
     },
     {
@@ -141,7 +141,8 @@
         { "ref": "library:alternative-page-writer", "type": "skill", "use": "build", "when": "When one rival needs a fair alternative or versus page" },
         { "ref": "library:best-of-page-writer", "type": "skill", "use": "explore", "when": "When the buyer question is \"best X for Y\", to try a best-of page with real numbers" },
         { "ref": "library:comparison-table-designer", "type": "skill", "use": "build", "when": "When the page needs a table that helps people choose" },
-        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "Before a page that names rivals goes live, to sort each claim into fine, needs proof or cut" }
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "Before a page that names rivals goes live, to sort each claim into fine, needs proof or cut" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before publishing, to trace each claim about a rival's price or features to the rival's own page" }
       ]
     },
     {
@@ -151,7 +152,8 @@
       "items": [
         { "ref": "library:ai-ready-product-page-editor", "type": "skill", "use": "build", "when": "When a product page needs its facts, spec table, FAQs and markup list for AI tools" },
         { "ref": "library:ai-shortlist-readiness-checker", "type": "skill", "use": "check", "when": "When pages are edited, to check they can be found, matched and chosen, with a score" },
-        { "ref": "library:get-your-store-recommended-by-ai-assistants", "type": "workflow", "use": "explore", "when": "When you want a full run from baseline to page fixes, to compare with your plan" }
+        { "ref": "library:get-your-store-recommended-by-ai-assistants", "type": "workflow", "use": "explore", "when": "When you want a full run from baseline to page fixes, to compare with your plan" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before editing, to confirm each product is live and in stock at the price the page and feed state" }
       ]
     },
     {

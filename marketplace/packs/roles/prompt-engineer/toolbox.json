@@ -181,8 +181,8 @@
         { "ref": "kit:prompts/product-image-prompt-set", "use": "build", "when": "When a shop needs lifestyle images of a real product that all look consistent and true" },
         { "ref": "kit:skills/image-and-video-prompt-set", "use": "build", "when": "When the set spans scenes, sizes and tools and the product must look right in every one" },
         { "ref": "library:product-image-spec-writer", "type": "skill", "use": "brief", "when": "Before any prompt, to write the product's true details and the lines that lock them" },
-        { "ref": "library:product-photo-set-builder", "type": "skill", "use": "explore", "when": "When one product photo should become a range of new angles and scenes to choose from" },
-        { "ref": "library:ai-product-photo-inspector", "type": "skill", "use": "check", "when": "When images come back, to rate the risk and get lines to add before you retry" },
+        { "ref": "library:three-look-product-photos", "type": "workflow", "use": "explore", "when": "When the client has only phone photos, to see the product in three different looks before the prompts are fixed" },
+        { "ref": "library:product-page-image-checker", "type": "skill", "use": "check", "when": "When images come back, to get a pass or fail on each and one fix to add before you retry" },
         { "ref": "library:nano-banana", "type": "tool", "use": "build", "when": "When the real product photo must be placed into scenes by plain edit requests" }
       ]
     },
@@ -192,7 +192,6 @@
       "kind": "ad_creative",
       "items": [
         { "ref": "kit:skills/image-and-video-prompt-set", "use": "build", "when": "When a series of site and social images must share one look" },
-        { "ref": "library:store-photo-style-locker", "type": "skill", "use": "brief", "when": "Before the set, to fix models, light and layout in one style file" },
         { "ref": "library:brand-to-image-prompt-compiler", "type": "skill", "use": "build", "when": "When brand, scene, product, text and avoid rules must be combined into one prompt" },
         { "ref": "library:midjourney-four-direction-prompt-writer", "type": "skill", "use": "explore", "when": "When one image idea should be tried as four different treatments" },
         { "ref": "library:marketing-image-maker", "type": "skill", "use": "build", "when": "When each image needs its exact size and a file plan as well as a prompt" },
@@ -241,7 +240,6 @@
       "task": "Fix hands, labels and odd colours in AI images",
       "kind": "audit",
       "items": [
-        { "ref": "library:ai-product-photo-inspector", "type": "skill", "use": "check", "when": "When an image looks off, to run eight checks and rate the risk of using it" },
         { "ref": "library:ai-image-fix-rules", "type": "skill", "use": "build", "when": "When feedback is in, to turn each fix into a rule with a prompt line and a check line" },
         { "ref": "library:nano-banana-image-prompt-planner", "type": "skill", "use": "build", "when": "When the image needs an edit, to write the change with clear roles for each reference" },
         { "ref": "library:skin-realism-image-prompt-checker", "type": "skill", "use": "check", "when": "When skin or hands look fake, to get focused fixes that keep the face and light" },

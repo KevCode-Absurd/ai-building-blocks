@@ -22,7 +22,9 @@
         { "ref": "kit:skills/linkedin-campaign-plan", "use": "build", "when": "When the offer and buyer are known and you need objective, audience, formats and budget" },
         { "ref": "library:agency-paid-media-paid-social-strategist", "type": "agent", "use": "brief", "when": "When LinkedIn is one of several paid social channels and you need the funnel across them" },
         { "ref": "library:paid-campaign-builder", "type": "skill", "use": "build", "when": "When you need campaign structure, targeting and bids written out for the build" },
-        { "ref": "library:mark-ritson", "type": "mind", "use": "think", "when": "When the plan jumps to tactics before the target and the goal are chosen" }
+        { "ref": "library:mark-ritson", "type": "mind", "use": "think", "when": "When the plan jumps to tactics before the target and the goal are chosen" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the plan is agreed, to compare two plans that split the budget and the weeks differently" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before any budget is set, to confirm the offer and the page the ads point to are live and work today" }
       ]
     },
     {
@@ -68,6 +70,7 @@
         { "ref": "library:single-image-ad-planner", "type": "skill", "use": "build", "when": "When you have the facts and need the layout, image words and feed copy for one ad" },
         { "ref": "library:theme-based-ad-layout-blueprint-maker", "type": "skill", "use": "explore", "when": "When you want three or four layouts with text zones to compare" },
         { "ref": "library:customer-quote-image-ad", "type": "skill", "use": "build", "when": "When a client quote is the strongest proof and should carry the ad" },
+        { "ref": "library:make-ad-concept-spread", "type": "skill", "use": "explore", "when": "Before the images are briefed, to spread nine or more one-line concepts and mock up the strongest" },
         { "ref": "library:static-ad-critic", "type": "skill", "use": "check", "when": "When the ad is drafted, to score it against its landing page and get fixes" },
         { "ref": "library:canva", "type": "tool", "use": "build", "when": "When the client's team will make the images from a template" }
       ]
@@ -79,6 +82,7 @@
       "items": [
         { "ref": "library:carousel-ad-writer", "type": "skill", "use": "build", "when": "When one selling idea must unfold over a few cards that each earn the next swipe" },
         { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When the cover page needs a title, to try five angles before choosing" },
+        { "ref": "library:make-ad-concept-spread", "type": "skill", "use": "explore", "when": "Before the slides are written, to test several different ideas for the document and pick the lead" },
         { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When the pages are laid out, to trace where the eye goes and what to cut" }
       ]
     },
@@ -122,7 +126,9 @@
         { "ref": "library:conversion-page-writer", "type": "skill", "use": "build", "when": "When the campaign sends clicks to a page and it needs proof, answers and one ask" },
         { "ref": "library:top-of-page-headline-writer", "type": "prompt", "use": "explore", "when": "When the page opening must match the ad, to get five headlines with a pick" },
         { "ref": "library:turn-a-static-ad-into-a-sale-with-a-matching-page", "type": "workflow", "use": "build", "when": "When the ad exists and the page must carry the same promise through" },
-        { "ref": "library:page-design-gate", "type": "skill", "use": "check", "when": "When the page is built, to check it in a real browser at phone and desktop width" }
+        { "ref": "library:make-three-first-screens", "type": "skill", "use": "explore", "when": "Before the page is written in full, to build three different first screens that match the ads" },
+        { "ref": "library:page-design-gate", "type": "skill", "use": "check", "when": "When the page is built, to check it in a real browser at phone and desktop width" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the page is built, to confirm the form, demo booking or download it leads to works today" }
       ]
     },
     {

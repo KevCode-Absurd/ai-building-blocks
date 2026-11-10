@@ -26,7 +26,8 @@
         { "ref": "library:break-even-roas-and-cpa-calculator", "type": "skill", "use": "brief", "when": "Before any budget is set, to work out the cost per order the margin can bear" },
         { "ref": "library:ad-test-budget-calculator", "type": "skill", "use": "build", "when": "When you need the test budget, the days to run and the keep or cut rule" },
         { "ref": "library:creative-volume-planner", "type": "skill", "use": "build", "when": "When the plan must say how many new videos are needed each week" },
-        { "ref": "library:claude-hopkins", "type": "mind", "use": "think", "when": "When the plan bets big on a guess, to shrink it to a small test that proves the claim" }
+        { "ref": "library:claude-hopkins", "type": "mind", "use": "think", "when": "When the plan bets big on a guess, to shrink it to a small test that proves the claim" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the plan is agreed, to compare two plans that split the budget between testing and scaling differently" }
       ]
     },
     {
@@ -120,6 +121,7 @@
         { "ref": "library:ad-angle-multiplier", "type": "skill", "use": "explore", "when": "When one idea works and you want 10 to 15 other angles on it with hooks" },
         { "ref": "library:ad-concept-matrix-builder", "type": "skill", "use": "brief", "when": "When you have reviews, to map personas, angles and offers in the order to test" },
         { "ref": "library:untried-ad-idea-finder", "type": "skill", "use": "explore", "when": "When the account repeats itself, to map gaps and get five ideas not yet tried" },
+        { "ref": "library:make-ad-concept-spread", "type": "skill", "use": "explore", "when": "When a new batch is due, to write nine or more one-line concepts across promises, proofs and formats" },
         { "ref": "kit:prompts/hook-test-matrix", "use": "check", "when": "When concepts are chosen, to check each test changes one thing and has a kill rule" },
         { "ref": "library:luke-sullivan", "type": "mind", "use": "think", "when": "When every concept is a feature list, to find one true, simple idea" }
       ]
@@ -145,7 +147,8 @@
         { "ref": "kit:prompts/change-request-for-approval", "use": "build", "when": "When a budget rise or a new campaign needs the client's yes first" },
         { "ref": "library:creative-test-reader", "type": "skill", "use": "check", "when": "Before scaling, to check the winner is real and not a small-sample fluke" },
         { "ref": "library:incrementality-test-planner", "type": "skill", "use": "build", "when": "When spend is large enough to ask whether TikTok sales would have happened anyway" },
-        { "ref": "library:nassim-taleb", "type": "mind", "use": "think", "when": "When the plan doubles spend at once, to ask what a bad week would cost" }
+        { "ref": "library:nassim-taleb", "type": "mind", "use": "think", "when": "When the plan doubles spend at once, to ask what a bad week would cost" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before spend is raised, to confirm the winning product still has stock and the same price" }
       ]
     },
     {
@@ -207,7 +210,8 @@
       "items": [
         { "ref": "library:tiktok-shop-ad-planner", "type": "skill", "use": "build", "when": "When the client sells in TikTok Shop and needs shopping ads, video ads and bids planned" },
         { "ref": "library:gmv-max-campaign-setup-planner", "type": "skill", "use": "build", "when": "When the shop moves to automated shop campaigns and needs settings and a return target" },
-        { "ref": "library:tiktok-shop-results-reader", "type": "skill", "use": "check", "when": "When results are in, to see which videos, creators and ads really made sales" }
+        { "ref": "library:tiktok-shop-results-reader", "type": "skill", "use": "check", "when": "When results are in, to see which videos, creators and ads really made sales" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before shop ads are set up, to confirm the products are in stock in the shop at the stated price" }
       ]
     },
     {

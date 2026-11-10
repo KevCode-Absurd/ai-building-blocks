@@ -260,7 +260,7 @@
       "task": "Decide whether to rewrite, refactor or retire an old system",
       "kind": "strategy",
       "items": [
-        { "ref": "library:old-code-paydown-guide", "type": "skill", "use": "build", "when": "When the old codebase stays, to plan making it readable and bounded step by step" },
+        { "ref": "library:tech-debt-prioritiser", "type": "skill", "use": "brief", "when": "Before deciding, to rank the debt that slows the team and see what each fix would cost" },
         { "ref": "library:careful-rewrite-guard", "type": "skill", "use": "check", "when": "When a part seems too rotten to patch, to justify a rebuild and keep what worked" },
         { "ref": "library:migration-planner", "type": "skill", "use": "build", "when": "When the old system is retired, to plan moving users without breaking them" },
         { "ref": "kit:skills/architecture-decision-record", "use": "build", "when": "When the call is made, to record the options and why this one won" }

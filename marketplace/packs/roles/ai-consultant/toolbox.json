@@ -61,6 +61,7 @@
       "items": [
         { "ref": "kit:workflows/first-ai-rollout", "use": "brief", "when": "When a team starts with AI, or has licences nobody uses, to run the steps in order" },
         { "ref": "kit:skills/ai-task-map-and-pilot", "use": "build", "when": "When two or three tasks are chosen and the pilot needs a baseline, a check and stop rules" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the pilot plan is fixed, to compare two plans that bet the 30 days and the budget differently" },
         { "ref": "library:ai-fit-problem-checker", "type": "skill", "use": "check", "when": "Before the pilot starts, to confirm the task passes and to set a first small test" },
         { "ref": "library:gerd-gigerenzer", "type": "mind", "use": "think", "when": "When the success rules are a long scorecard and one simple rule would decide it better" }
       ]
@@ -243,6 +244,7 @@
       "items": [
         { "ref": "library:ai-fit-problem-checker", "type": "skill", "use": "brief", "when": "Before any spend, to check the problem is one AI can really help with" },
         { "ref": "library:ai-build-or-buy-advisor", "type": "skill", "use": "build", "when": "When the owner is choosing between a ready tool, an API and a custom build" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the choice is close, to lay out two plans with the money and dates showing and recommend one" },
         { "ref": "library:assess-ai-workflow-value", "type": "skill", "use": "check", "when": "When there are early results, to weigh them against cost and harm before spending more" },
         { "ref": "library:gerd-gigerenzer", "type": "mind", "use": "think", "when": "When the forecast is uncertain and a simple rule of thumb beats a detailed model" }
       ]

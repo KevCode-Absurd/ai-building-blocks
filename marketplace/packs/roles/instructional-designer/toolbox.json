@@ -131,7 +131,8 @@
         { "ref": "library:launch-email-sequence-planner", "type": "skill", "use": "build", "when": "When the course opens on a date and needs a launch plan through to the close" },
         { "ref": "library:price-a-course-or-ebook-and-write-its-launch-emails", "type": "workflow", "use": "build", "when": "When the price is not set and the launch emails depend on it" },
         { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before drafting, to compare three different shapes for the series" },
-        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "Before each email is scheduled, to get cuts and a verdict" }
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "Before each email is scheduled, to get cuts and a verdict" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the launch emails are written, to confirm the sign-up link, price and start date work today" }
       ]
     },
     {
@@ -144,7 +145,8 @@
         { "ref": "library:proof-sales-copy", "type": "workflow", "use": "explore", "when": "When you have learner reviews, to get a buyer brief and two openings to compare" },
         { "ref": "library:conversion-page-writer", "type": "skill", "use": "build", "when": "When the offer is set and the page needs hero, value points, proof and a call to act" },
         { "ref": "library:sales-copy-reviewer", "type": "skill", "use": "check", "when": "When the page is drafted, to find the weakest parts and fix them" },
-        { "ref": "library:persuasive-claim-truth-checker", "type": "skill", "use": "check", "when": "Before publishing, to check every promised outcome is true and has context" }
+        { "ref": "library:persuasive-claim-truth-checker", "type": "skill", "use": "check", "when": "Before publishing, to check every promised outcome is true and has context" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before writing the page, to confirm enrolment is open, the price is as stated and the dates are still ahead" }
       ]
     },
     {

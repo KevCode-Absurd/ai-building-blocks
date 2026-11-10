@@ -59,7 +59,6 @@
       "items": [
         { "ref": "kit:skills/safe-refactor", "use": "build", "when": "When one long or tangled file must be cleaned up with tests first and behaviour kept" },
         { "ref": "library:code-refactor-planner", "type": "skill", "use": "brief", "when": "Before editing, to name the refactoring moves and put them in small safe steps" },
-        { "ref": "library:untested-code-change-guide", "type": "skill", "use": "build", "when": "When the file has no tests, to add a safety net before any line moves" },
         { "ref": "library:ai-code-change-steps", "type": "workflow", "use": "build", "when": "When an AI helper will do the edits, to split the change into small tested steps with rules" },
         { "ref": "library:readable-code-reviewer", "type": "skill", "use": "check", "when": "When the clean-up is done, to check names, function size and error handling" },
         { "ref": "library:kent-beck", "type": "mind", "use": "think", "when": "When tidying and behaviour change are mixed in one step and should be split" }
@@ -71,7 +70,6 @@
       "kind": "code",
       "items": [
         { "ref": "library:test-suite-writer", "type": "skill", "use": "build", "when": "When the code has no tests, to cover units, linked parts and the main user tasks" },
-        { "ref": "library:untested-code-change-guide", "type": "skill", "use": "brief", "when": "When the code is hard to test as written, to find the safe places to start" },
         { "ref": "library:change-test-prover", "type": "skill", "use": "check", "when": "When the code is Python, to prove the new tests fail if the change is broken" },
         { "ref": "library:test-failure-repair-loop", "type": "agent", "use": "build", "when": "When the suite is red after a change, to fix and re-check in capped rounds" },
         { "ref": "kit:skills/bug-diagnosis-and-fix", "use": "build", "when": "When a bug is fixed, to leave a regression test that fails on the old code" }
@@ -162,7 +160,6 @@
         { "ref": "kit:workflows/codebase-health-check", "use": "check", "when": "When a new owner inherits a codebase, a key developer leaves, or every three months" },
         { "ref": "library:tech-debt-prioritiser", "type": "skill", "use": "check", "when": "When you need the debt that slows the team ranked, with cost and small fixes" },
         { "ref": "library:codebase-architecture-reviewer", "type": "skill", "use": "check", "when": "When the structure itself is in doubt, to list design improvements and pick one" },
-        { "ref": "library:old-code-paydown-guide", "type": "skill", "use": "build", "when": "When the codebase is large and old, to plan making it readable and bounded step by step" },
         { "ref": "library:monthly-tech-debt-keeper", "type": "agent", "use": "check", "when": "After the first check, to find new debt each month and confirm last month's clean-up" },
         { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When the risk notes list bugs but not what happens when a part fails" }
       ]

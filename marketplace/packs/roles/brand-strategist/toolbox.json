@@ -84,7 +84,8 @@
         { "ref": "library:positioning-idea-generator", "type": "skill", "use": "explore", "when": "When you need several ways to stand apart, each with a statement, before choosing one" },
         { "ref": "library:positioning-statement-writer", "type": "skill", "use": "build", "when": "When one direction is picked and it needs a statement with one claim and its proof" },
         { "ref": "library:one-word-positioning", "type": "workflow", "use": "explore", "when": "When the position should come down to one word to own and an honest line to set it up" },
-        { "ref": "library:april-dunford", "type": "mind", "use": "think", "when": "When the position starts from the product and should start from what buyers would use instead" }
+        { "ref": "library:april-dunford", "type": "mind", "use": "think", "when": "When the position starts from the product and should start from what buyers would use instead" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When two or three positions are written up, so a reviewer who has not seen your reasoning picks one" }
       ]
     },
     {
@@ -110,7 +111,8 @@
         { "ref": "library:store-name-generator", "type": "skill", "use": "explore", "when": "When you want a long raw list cut to fifteen with a first clearance check" },
         { "ref": "library:brand-name-finder", "type": "skill", "use": "explore", "when": "When you want name ideas from a different brief, or honest scores on names you already have" },
         { "ref": "library:product-name-brainstormer", "type": "skill", "use": "explore", "when": "When it is a product or a rename and you want five options with why each fits" },
-        { "ref": "library:store-name-tester", "type": "skill", "use": "check", "when": "When the shortlist is ready, to score each name and get a keep, fix or drop call" }
+        { "ref": "library:store-name-tester", "type": "skill", "use": "check", "when": "When the shortlist is ready, to score each name and get a keep, fix or drop call" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When the shortlist is down to a few screened names, so a fresh reviewer picks one against the brief" }
       ]
     },
     {
@@ -191,7 +193,8 @@
         { "ref": "library:brand-origin-story-writer", "type": "skill", "use": "build", "when": "When the founder's story should become an origin story and an About page that sound like them" },
         { "ref": "library:brand-manifesto-writer", "type": "skill", "use": "explore", "when": "When the brand stands against something and a manifesto might say it better than a story" },
         { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "When the draft is finished, to fix lines that sound machine-made" },
-        { "ref": "kit:skills/voice-and-message-check", "use": "check", "when": "Before it is published, to check the piece against the voice guide and messages" }
+        { "ref": "kit:skills/voice-and-message-check", "use": "check", "when": "Before it is published, to check the piece against the voice guide and messages" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the story is finished, so a fresh reader checks it against the brief and flags unsourced claims" }
       ]
     },
     {
@@ -202,7 +205,8 @@
         { "ref": "library:elevator-pitch-writer", "type": "skill", "use": "build", "when": "When the client needs 10, 30 and 60 second versions of what they do" },
         { "ref": "library:one-line-position-writer", "type": "prompt", "use": "build", "when": "When the pitch must be one plain line built on the word the brand owns" },
         { "ref": "library:rival-free-pitch-rewriter", "type": "skill", "use": "explore", "when": "When the pitch only makes sense by naming a rival, to get versions that stand alone" },
-        { "ref": "library:tagline-tester", "type": "skill", "use": "check", "when": "When the one-liner will be used as a strapline, to score it on the same ten tests" }
+        { "ref": "library:tagline-tester", "type": "skill", "use": "check", "when": "When the one-liner will be used as a strapline, to score it on the same ten tests" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When a few one-liners are drafted, so someone who did not write them picks the one to lead with" }
       ]
     },
     {

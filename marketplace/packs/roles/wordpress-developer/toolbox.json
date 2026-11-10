@@ -125,7 +125,7 @@
       "items": [
         { "ref": "kit:prompts/php-version-readiness", "use": "build", "when": "When the host moves to a newer PHP or the site runs an end-of-life version" },
         { "ref": "library:major-upgrade-planner", "type": "skill", "use": "build", "when": "When the move needs stages, with what breaks checked and tested at each step" },
-        { "ref": "library:untested-code-change-guide", "type": "skill", "use": "build", "when": "When the custom code has no tests, to add a safety net before changing it" }
+        { "ref": "library:test-suite-writer", "type": "skill", "use": "build", "when": "When the custom code has no tests, to write tests that pin its behaviour before the PHP change" }
       ]
     },
     {

@@ -50,7 +50,7 @@
       "items": [
         { "ref": "library:design-style-analyst", "type": "skill", "use": "brief", "when": "When the client shares sites they like, to turn them into a look you can name and reuse" },
         { "ref": "library:landing-page-design-planner", "type": "skill", "use": "explore", "when": "When the copy is ready, to get three on-brand designs for a key page and a build brief" },
-        { "ref": "library:standout-website-designer", "type": "skill", "use": "explore", "when": "When one option should be bold, with motion and layout that push past the template" },
+        { "ref": "library:make-three-first-screens", "type": "skill", "use": "explore", "when": "Before a direction is chosen, to build three different first screens in the client's look and compare them" },
         { "ref": "library:website-art-director", "type": "skill", "use": "build", "when": "When the client must see a real page in the chosen look before the builder work starts" },
         { "ref": "library:neville-brody", "type": "mind", "use": "think", "when": "When every option is the template with new colours" },
         { "ref": "library:page-design-standards-checker", "type": "skill", "use": "check", "when": "When a direction is drafted, to check it still reads well on a phone" }
@@ -99,6 +99,7 @@
         { "ref": "library:landing-page-design-planner", "type": "skill", "use": "explore", "when": "When the copy is done, to compare three on-brand designs before building" },
         { "ref": "kit:skills/build-on-existing-site", "use": "build", "when": "When the page goes into the client's builder and must match their site" },
         { "ref": "library:static-html-landing-page-builder", "type": "skill", "use": "build", "when": "When there is no builder and the page must ship as plain HTML with a working form" },
+        { "ref": "library:make-three-first-screens", "type": "skill", "use": "explore", "when": "Before the full page is built, to make three first screens that differ in promise, proof or structure" },
         { "ref": "library:landing-page-auditor", "type": "skill", "use": "check", "when": "When the page is built, to rank conversion problems by impact with fixes" }
       ]
     },
@@ -261,7 +262,7 @@
     "No library item plans CMS collections, fields and template pages for a builder site; only the kit skill does",
     "No library item writes custom CSS or code-injection snippets for a site builder",
     "No library item checks a cookie banner: whether tags wait for consent and whether refusing is as easy as accepting",
-    "No library item shows two or three home page directions as pictures or inside the builder for a client to choose from",
+    "No library item shows two or three home page directions inside the client's builder; the first screens skill makes them as plain HTML",
     "No library item plans a service firm's home page section by section; the layout planners are built for stores and ads",
     "No library item writes a handover guide that teaches a client to edit their own site",
     "No library item sets image sizes, crops and focal points for each block of a builder template"

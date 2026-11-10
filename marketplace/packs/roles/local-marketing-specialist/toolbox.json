@@ -11,7 +11,8 @@
         { "ref": "kit:workflows/local-90-day-plan", "use": "build", "when": "For a new local client, or an owner who says they do not know what is working" },
         { "ref": "library:one-goal-marketing-plan-builder", "type": "skill", "use": "brief", "when": "When the owner wants everything at once, to cut the plan to one goal for the quarter" },
         { "ref": "library:traction-channel-ranker", "type": "skill", "use": "explore", "when": "When the channel choice is open, to compare them all and shortlist small tests" },
-        { "ref": "library:jay-abraham", "type": "mind", "use": "think", "when": "When the plan only chases new customers and ignores job size and repeat visits" }
+        { "ref": "library:jay-abraham", "type": "mind", "use": "think", "when": "When the plan only chases new customers and ignores job size and repeat visits" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "Before the 90 days are fixed, to compare two plans that put the owner's money and hours in different places" }
       ]
     },
     {
@@ -45,7 +46,8 @@
         { "ref": "library:top-of-page-headline-writer", "type": "prompt", "use": "explore", "when": "When the page opening is weak, to get five headlines with a pick" },
         { "ref": "library:price-display-planner", "type": "skill", "use": "build", "when": "When the page should show prices and you must decide how and where" },
         { "ref": "library:faq-page-from-questions-writer", "type": "prompt", "use": "build", "when": "When customers ask the same things by phone and the page should answer them" },
-        { "ref": "library:sales-copy-reviewer", "type": "skill", "use": "check", "when": "When the page is drafted, to find and fix its weakest parts" }
+        { "ref": "library:sales-copy-reviewer", "type": "skill", "use": "check", "when": "When the page is drafted, to find and fix its weakest parts" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before each page is written, to confirm the service is offered in that area at the price shown" }
       ]
     },
     {
@@ -102,7 +104,8 @@
         { "ref": "library:discount-and-price-change-checker", "type": "agent", "use": "check", "when": "Before the offer goes out, to find the deepest discount the margin allows" },
         { "ref": "library:offer-checklist-reviewer", "type": "skill", "use": "check", "when": "When the offer is drafted, to score it and get three changes to test first" },
         { "ref": "library:text-message-campaign-writer", "type": "skill", "use": "build", "when": "When the offer goes to past customers by text and needs consent rules built in" },
-        { "ref": "library:alex-hormozi", "type": "mind", "use": "think", "when": "When the offer is a thin discount and needs more value at the same cost" }
+        { "ref": "library:alex-hormozi", "type": "mind", "use": "think", "when": "When the offer is a thin discount and needs more value at the same cost" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the offer goes out, to confirm the booking page shows open slots that week at the offer price" }
       ]
     },
     {
@@ -166,7 +169,8 @@
         { "ref": "library:buyer-wants-finder", "type": "skill", "use": "brief", "when": "Before writing, to choose the one want each service should lead with" },
         { "ref": "library:price-display-planner", "type": "skill", "use": "build", "when": "When the menu shows prices and add-ons and you must decide how" },
         { "ref": "library:message-stickiness-rewriter", "type": "prompt", "use": "explore", "when": "When a service line is flat, to get three versions to pick from" },
-        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a description could be any salon or studio, to get a true, picturable line" }
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a description could be any salon or studio, to get a true, picturable line" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the menu is printed or posted, to trace each price, length and inclusion to the owner's list" }
       ]
     },
     {
@@ -177,7 +181,8 @@
         { "ref": "library:text-message-campaign-writer", "type": "skill", "use": "build", "when": "When reminders and rebooking nudges go by text or WhatsApp" },
         { "ref": "library:booking-page-designer", "type": "skill", "use": "build", "when": "When the booking flow itself needs prep notes and a follow-up after the visit" },
         { "ref": "library:explain-appointment-no-show-patterns", "type": "workflow", "use": "brief", "when": "When no-shows are the problem and you need the pattern before writing reminders" },
-        { "ref": "library:sms-send-checker", "type": "skill", "use": "check", "when": "Before texts go live, to check cost, length and the rules they must meet" }
+        { "ref": "library:sms-send-checker", "type": "skill", "use": "check", "when": "Before texts go live, to check cost, length and the rules they must meet" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before reminders and rebooking messages are sent, to confirm the booking link works on a phone" }
       ]
     },
     {
@@ -228,7 +233,8 @@
         { "ref": "library:traction-offline-events", "type": "skill", "use": "brief", "when": "When the owner wants to try an event, to plan it as a small test with costs" },
         { "ref": "library:make-a-readable-event-poster", "type": "workflow", "use": "build", "when": "When the event needs a poster for the window and the notice board" },
         { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When the event line is flat, to get five short headlines" },
-        { "ref": "library:partner-campaign-planner", "type": "skill", "use": "build", "when": "When a nearby business or club could share the event and the audience" }
+        { "ref": "library:partner-campaign-planner", "type": "skill", "use": "build", "when": "When a nearby business or club could share the event and the audience" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before promoting, to confirm the date, place and sign-up link are right and still open" }
       ]
     },
     {

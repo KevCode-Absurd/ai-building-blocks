@@ -111,6 +111,7 @@ site/.copyable-build/
 !/tools/clarify-library-copy.mjs
 !/tools/audit-audience-coverage.mjs
 !/tools/audit-everyday-workflows.mjs
+!/tools/check-plain-names.mjs
 !/tools/usability-release-lib.mjs
 !/tools/check-ui-refinement-live.mjs
 !/tools/finalize-mcp-production.mjs

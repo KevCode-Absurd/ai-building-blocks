@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import "./item-main-action.css";
 
-/** The main action, right under the opening. On a phone, a slim copy of it stays at the bottom of the screen
- *  once the original scrolls away, until the "Other ways" section is on screen. */
-export default function ItemMainAction({ render, note, moreId = "run" }: { render: (compact: boolean) => ReactNode; note?: ReactNode; moreId?: string }) {
+/** The main action, right under the opening: the button, one line on how to use it (`lead`), the brief (what you
+ *  give it, what you get back, how long) and then the steps for each AI (`note`). On a phone, a slim copy of the
+ *  button stays at the bottom of the screen once the original scrolls away, until "Other ways" is on screen. */
+export default function ItemMainAction({ render, lead, brief, note, moreId = "run" }: { render: (compact: boolean) => ReactNode; lead?: ReactNode; brief?: ReactNode; note?: ReactNode; moreId?: string }) {
   const top = useRef<HTMLElement>(null);
   const [past, setPast] = useState(false);
   const [moreInView, setMoreInView] = useState(false);
@@ -22,7 +23,9 @@ export default function ItemMainAction({ render, note, moreId = "run" }: { rende
         {render(false)}
         <a className="btn btn-ghost btn-sm" href={`#${moreId}`} data-testid="more-ways-link">Other ways <span aria-hidden="true">↓</span></a>
       </div>
-      {note && <div className="small item-main-action-note">{note}</div>}
+      {lead && <p className="item-main-action-lead" data-testid="main-action-lead">{lead}</p>}
+      {brief}
+      {note &&<div className="small item-main-action-note">{note}</div>}
     </section>
     <div className="item-sticky-action" hidden={!sticky} data-testid="sticky-action" role="region" aria-label="Main action">{sticky && render(true)}</div>
   </>;

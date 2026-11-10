@@ -14,3 +14,19 @@
   .item-sticky-action .task-copy-fallback{position:absolute;left:0;right:0;bottom:calc(100% + 6px);padding:12px;background:var(--bg);border-top:1px solid var(--line-2)}
   .item-main-action-row>.btn-primary{flex:1 1 auto}
 }
+/* One line on how to use it, then the brief: what you give it, what you get back and how long (lib/item-brief.mjs). */
+.item-main-action-lead{margin:12px 0 0;max-width:62ch;color:var(--text-2)}
+.item-brief{margin:18px 0 6px;max-width:760px;padding:16px 18px;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+.item-brief dl{display:grid;gap:12px;margin:0}
+.item-brief dl>div{display:grid;grid-template-columns:8.5rem minmax(0,1fr);gap:4px 16px}
+.item-brief dt{font:500 12.5px var(--mono);color:var(--muted);padding-top:2px}
+.item-brief dd{margin:0;min-width:0;font-size:15px;line-height:1.5;overflow-wrap:anywhere}
+.item-brief dd ul,.item-brief dd .task-materials{margin:0;padding-left:1.1rem}
+.item-brief dd li+li{margin-top:2px}
+.item-brief dd>a{display:inline-block;margin-top:6px;text-decoration:underline;text-underline-offset:3px}
+.item-brief .task-better,.item-brief .biz-note{margin:12px 0 0}
+.upload-steps-gloss{margin:8px 0 0;color:var(--muted)}
+@media(max-width:600px){
+  .item-brief{padding:14px}
+  .item-brief dl>div{grid-template-columns:1fr}
+}

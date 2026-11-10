@@ -38,6 +38,9 @@ import ItemMainAction from "./ItemMainAction";
 import ItemVotes from "./ItemVotes";
 import { announceReady } from "./StartupReady";
 import SimilarItems, { SkipLine, type NotForLink, type SiblingRow } from "./SimilarItems";
+import AgentsForItem from "./AgentsForItem";
+import { itemBrief, plainWords, promptFileName, promptFileText, shortGloss } from "./lib/item-brief.mjs";
+import { formatOfKind } from "./lib/formats.mjs";
 
 // A list item that YAML read as a small map ("Check: this") still shows as text.
 const txt = (x: unknown): string => (typeof x === "string" ? x : x && typeof x === "object" ? Object.entries(x as Record<string, unknown>).map(([k, v]) => (v == null ? k : `${k}: ${txt(v)}`)).join(" ") : String(x ?? ""));
@@ -317,10 +320,12 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
   const p = page ?? null;
   const give = p?.you_give?.length ? p.you_give : b.inputs.map((x) => x.type.replace(/_/g, " "));
   const get = p?.you_get?.length ? p.you_get : b.outputs.map((x) => x.type.replace(/_/g, " "));
+  const local = (url: string) => url.replace(/^https:\/\/useaiblocks\.com/, "");
+  // A prompt with no extra files is one message: it downloads as a text file and needs no install steps.
+  const promptFile = kindOf(b) === "prompt" && !b.hasFiles;
   const fileTask = !!b.hasFiles || !!renders || !!paidService(b);
   const textTask = !isFlow && !fileTask;
   const required = [...new Set([...b.inputs.filter(x => x.required).map(x => c.portTypes[x.type] || x.type.replace(/_/g, " ")), ...(p?.plan?.needed.filter(x => x.required).map(x => x.label) ?? [])])];
-  const bring = p?.you_give?.length ? p.you_give : required;
   const usefulChecks = p?.judge?.slice(0, 3) ?? [];
   const starter = TASK_STARTERS.find(task => task.slug === b.slug);
   const workflowFlow = (): Flow => {
@@ -336,6 +341,12 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
     setDownloading(true); setDownloadError(""); trackUxEvent("pack_download_requested");
     try {
       const packBusiness = getBusiness();
+      if (promptFile) {
+        // A prompt is one message: it downloads as one text file with "prompt" in its name, not as a skill ZIP.
+        download(new Blob([promptFileText(withBusiness(skill, packBusiness, [b]))], { type: "text/markdown" }), promptFileName(b.slug));
+        setTransferred(true); toast("Prompt downloaded. Paste it into a chat, add your details and send.");
+        return;
+      }
       const {buildHandoffZip,buildSkillZip} = await import("./lib/handoff");
       const result = isFlow ? await buildHandoffZip(c, workflowFlow(), packBusiness) : { blob: await buildSkillZip(b.slug, skill, b.hasFiles, packBusiness, b), filename: `${b.slug}.zip` };
       if (currentTransfer.current !== scope) return;
@@ -388,11 +399,20 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
   const betterWith = [...(p?.plan?.needed.filter(x => !x.required) ?? []), ...(p?.plan?.helps ?? [])];
   const betterTools = p?.works_best_with?.tools ?? [];
   const hasCopyable = b.type === "skill" && !!p?.copyable;
-  const hasFill = textTask || bring.length > 0 || betterWith.length > 0 || betterTools.length > 0 || hasCopyable;
   const noun = kind.name.toLowerCase();
+  const fmt = formatOfKind(kind.id);
+  // The top block lists what you give it once, with what you get back and how long it takes (lib/item-brief.mjs).
+  // A task you fill in on this page keeps its form below; every other page needs no second list.
+  const brief = itemBrief({ kind: kind.id, block: b, page: p, steps: isFlow ? b.steps.length : 0 });
+  const hasFill = textTask;
+  const better = (betterWith.length > 0 || betterTools.length > 0) && (
+    <p className="small task-better" data-testid="better-with"><b>Better with: </b>
+      {[...betterWith.slice(0, 3).map(i => <span key={i.key}>{i.maker ? <Link to={local(i.maker.url)}>{plainWords(i.label)}</Link> : plainWords(i.label)}{i.what ? ` (${shortGloss(i.what)})` : ""}</span>), ...betterTools.map(t => <span key={t.name} title={t.why}>{t.name}</span>)]
+        .flatMap((el, i) => i ? ["; ", el] : [el])}.
+    </p>
+  );
   let part = 0;
   const num = () => <span className="bp-n" aria-hidden="true">{++part}</span>;
-  const local = (url: string) => url.replace(/^https:\/\/useaiblocks\.com/, "");
   const jump: [string, string][] = ([
     ["what", isMind ? "Who they are" : "What it does", showExplanation || showWhenDetail || (!isFlow && has(p?.how_it_works))],
     ["hire", `Hire ${mindName}`, has(p?.hire?.jobs)],
@@ -400,10 +420,9 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
     ["flows", isMind ? "Their workflows" : "Part of these workflows", inFlows.length > 0],
     ["ideas", "Big ideas", has(p?.ideas)],
     ["seats", "On a council", has(p?.seats)],
-    ["io", "What goes in and out", give.length > 0 || get.length > 0],
     ["before", "Before you start", !!p?.plan && (has(p.plan.needed) || has(p.plan.helps))],
     ["steps", isAgent ? "What it runs" : "The steps", isFlow],
-    ["install", "Other ways to add it", !isFlow || isAgent],
+    ["install", "Other ways to add it", (!isFlow || isAgent) && !promptFile],
     ["helped", "Who can help", has(b.minds)],
     ["make", renders ? makeTitle(renders) : "", !!renders],
     ["use", "How to use it", has(p?.how_to_use)],
@@ -413,7 +432,7 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
     ["improve", "Make it fit your work", has(p?.improve)],
     ["source", "Where it came from", b.origin === "imported" && !!b.source],
     ["thinking", "Thinking it needs", !!b.thinking],
-    ["file", isAgent ? "The agent file" : isFlow ? "The workflow file" : "The skill file", true],
+    ["file", promptFile ? "The full prompt" : `The ${noun} file`, true],
   ] as [string, string, boolean][]).filter(([, , show]) => show).map(([id, label]) => [id, label]);
 
   const Root = embedded ? "div" : "main";
@@ -430,28 +449,34 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
         {page === undefined && <p className="small" role="status">Loading…</p>}
         {loadError && <p role="alert">The instructions could not load. Your draft is kept. <button className="link-btn" onClick={() => { trackUxEvent("task_retried"); setReload(n => n + 1); }}>Try again</button></p>}
 
-        {/* The main action sits right under the opening: download it (or save it for later), then the steps to upload
-            it to your AI. Every other way to use it is in "Other ways" (#run). */}
+        {/* The main action sits right under the opening: download it (or save it for later), one line on how to use it,
+            then what you give it, what you get back and how long, then the steps for your AI. The inputs are listed
+            here and nowhere else. Every other way to use it is in "Other ways" (#run). */}
         <ItemMainAction moreId="run" render={compact => {
           const main = <button className="btn btn-primary" disabled={!skill || downloading} onClick={() => void downloadTask()} data-testid={compact ? "sticky-download" : "download-task"}>{downloading ? "Preparing download…" : `Download ${noun}`}</button>;
           return compact ? main : <>{main}<SaveButton slug={b.slug} title={b.name} toast={toast} /></>;
         }}
-          note={<><UploadSteps noun={noun} hasFiles={!!b.hasFiles} pack={isFlow} />{downloadError && <p role="alert">{downloadError} <button className="link-btn" onClick={() => void downloadTask()}>Try again</button></p>}{bring.length > 0 && <p>Your AI will ask for <a href="#task-start">what to bring</a>.</p>}</>} />
+          lead={isMind ? `Then add the file to your AI once and ask for ${mindName} by name.` : fmt.next}
+          brief={page !== undefined && (
+            <div className="item-brief" id={textTask ? "brief" : "task-start"} data-testid="item-brief">
+              <dl>
+                {brief.give.length > 0 && <div><dt>You give it</dt><dd><ul className="task-materials">{brief.give.map((x, i) => <li key={i}>{x}</li>)}</ul></dd></div>}
+                {brief.get.length > 0 && <div><dt>You get back</dt><dd><ul data-testid="brief-get">{brief.get.map((x, i) => <li key={i}>{x}</li>)}</ul>{brief.more > 0 && hasGet && <a href="#get" className="small">See everything you get</a>}</dd></div>}
+                <div><dt>How long</dt><dd data-testid="brief-time">{brief.time}</dd></div>
+              </dl>
+              {!textTask && better}
+              {!textTask && <BusinessNote />}
+            </div>
+          )}
+          note={<><UploadSteps noun={noun} hasFiles={!!b.hasFiles} pack={isFlow} promptFile={promptFile} />{downloadError && <p role="alert">{downloadError} <button className="link-btn" onClick={() => void downloadTask()}>Try again</button></p>}</>} />
         <ItemVotes slug={b.slug} noun={noun} />
 
         {hasFill && (
           <section className="bp-part task-start" id="task-start" data-testid="task-start" aria-labelledby="fill-h">
             <h2 className="bp-h2" id="fill-h">{num()}Fill it in</h2>
-            <p className="bp-note">{textTask ? "Add what this task works from, then copy the request. Your details are optional but make the result yours." : bring.length > 0 ? "Gather these first. You add them in your AI after you download." : "Add these for a better result."}</p>
-            {bring.length > 0 && !textTask && <div><b>What to bring</b><ul className="task-materials">{bring.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></div>}
-            {textTask && <Composer key={`composer-${b.slug}`} slug={b.slug} task={b} skill={skill} give={required.length ? give.filter(x => !/\boptional\b/i.test(txt(x))) : []} toast={toast} example={p?.example?.input || starter?.example} exampleLabel={!p?.example?.input ? starter?.exampleLabel : undefined} onTransfer={() => setTransferred(true)} />}
-            {(betterWith.length > 0 || betterTools.length > 0) && (
-              <p className="small task-better" data-testid="better-with"><b>Better with: </b>
-                {[...betterWith.map(i => i.maker ? <Link key={i.key} to={local(i.maker.url)}>{i.label}</Link> : <span key={i.key}>{i.label}</span>), ...betterTools.map(t => <span key={t.name} title={t.why}>{t.name}</span>)]
-                  .flatMap((el, i) => i ? [", ", el] : [el])}.
-              </p>
-            )}
-            {!textTask && <BusinessNote />}
+            <p className="bp-note">Add what this task works from, then copy the request. Your details are optional but make the result yours.</p>
+            <Composer key={`composer-${b.slug}`} slug={b.slug} task={b} skill={skill} give={required.length ? give.filter(x => !/\boptional\b/i.test(txt(x))) : []} toast={toast} example={p?.example?.input || starter?.example} exampleLabel={!p?.example?.input ? starter?.exampleLabel : undefined} onTransfer={() => setTransferred(true)} />
+            {better}
           </section>
         )}
 
@@ -469,9 +494,7 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
             {renders && <MakeNote kind={renders} />}
             {sample && (
               <div className="bp-sample" data-testid="output-sample">
-                <h3 className="bp-h3">What goes in</h3>
-                <ul className="bp-getlist">{sample.input.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul>
-                {sample.prerequisites.length > 0 && <><h4 className="bp-sample-h">Before you start</h4><ul className="bp-getlist">{sample.prerequisites.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></>}
+                {sample.prerequisites.length > 0 && <><h3 className="bp-h3">Before you start</h3><ul className="bp-getlist">{sample.prerequisites.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></>}
                 <h3 className="bp-h3">What comes out</h3>
                 <ul className="bp-sample-out" data-testid="you-get">
                   {(showAllSample ? sample.output : sample.output.slice(0, 6)).map((o, i) => <li key={i}><b className={/^[\w\-./]+\.\w{2,5}$/.test(o.name.trim()) ? "mono" : undefined}>{o.name}</b><span>{txt(o.contains)}</span></li>)}
@@ -536,16 +559,16 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
                 </>}
                 <button className="link-btn" onClick={() => openTailor(b.name)}>Get help adapting this task</button>
               </div>
-              {!hasFill && <BusinessNote />}{isFlow && <ExecutionPrompt name={b.name} flow={workflowFlow()} catalogue={c} />}
+              {isFlow && <ExecutionPrompt name={b.name} flow={workflowFlow()} catalogue={c} />}
             </div>
           </details>
           {transferred && <div className="task-result-check" data-testid="task-result-check"><h3>Check the result in your AI</h3>{usefulChecks.length ? <ul>{usefulChecks.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul> : <p>Check that it uses your facts and gives you the result you asked for. Ask your AI to fix anything missing.</p>}<p className="small">Once you've tried it, <a href="#item-votes" data-testid="task-vote-link">say if it worked</a>. This site can't see work done in your AI, so your answer is how others find out.</p></div>}
         </section>
 
-        {!isFlow && !isMind && p?.plan ? <SkillNeighbours block={b} plan={p.plan} c={c} onAdd={slugs => toBuilder(slugs)} /> : has(p?.plan?.next) && (
+        {!isFlow && !isMind && p?.plan ? <SkillNeighbours block={b} plan={p.plan} c={c} noun={noun} onAdd={slugs => toBuilder(slugs)} /> : has(p?.plan?.next) && (
           <section className="bp-next" id="next" aria-labelledby="next-h">
             <h2 className="bp-h2" id="next-h">What to do next</h2>
-            <p className="bp-note">When it's done, the skill asks what you want to do next and offers these. You can also ask for something else.</p>
+            <p className="bp-note">When it's done, the {noun} asks what you want to do next and offers these. You can also ask for something else.</p>
             <Next plan={p!.plan!} />
           </section>
         )}
@@ -559,6 +582,7 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
             <p className="small"><a href="/how-we-check-safety">How we check items for safety</a>, and what a scan can't promise.</p>
           </section>
         )}
+        <AgentsForItem slug={b.slug} />
         {!isMind && <SpecialistsForItem slug={b.slug} />}
 
         <DetailsPanel watch={p}>
@@ -627,15 +651,6 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
             </DetailSection>
           )}
 
-          {(give.length > 0 || get.length > 0) && (
-            <DetailSection id="io" title="What you give it, what you get">
-              <div className="give-get">
-                {give.length > 0 && <div><h4>You give it</h4><ul>{give.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></div>}
-                {get.length > 0 && <div><h4>You get</h4><ul>{get.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></div>}
-              </div>
-            </DetailSection>
-          )}
-
           {p?.plan && (has(p.plan.needed) || has(p.plan.helps)) && (
             <DetailSection id="before" title="Before you start" lead="Check what is required for this task. Extra material can help when it is relevant.">
               <Before plan={p.plan} />
@@ -663,20 +678,20 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
             </DetailSection>
           )}
 
-          {(!isFlow || isAgent) && (
+          {(!isFlow || isAgent) && !promptFile && (
             <DetailSection id="install" title={isFlow ? "Get the complete pack" : "Other ways to add it to your AI"} lead={isFlow ? undefined : "Download the files and follow the steps for a chat, a coding assistant or a saved AI project."}>
               {isFlow ? <><p>The pack includes the complete selected skills, their supporting files and the execution rules. Give the whole folder to your AI and start with START_HERE.txt.</p><button className="btn btn-primary" onClick={handoff}>{isAgent ? "Get the complete agent pack" : "Download the workflow"}</button></> : <Install b={b} skill={skill} toast={toast} onPrepared={() => setTransferred(true)} />}
             </DetailSection>
           )}
 
           {has(b.minds) && (
-            <DetailSection id="helped" title="Who can help with this" lead="This skill comes from these people's work. In the builder, put one on the step to have it done their way, or download them together from their page.">
+            <DetailSection id="helped" title="Who can help with this" lead={`This ${noun} comes from these people's work. In the builder, put one on the step to have it done their way, or download them together from their page.`}>
               <HelpedBy c={c} b={b} />
             </DetailSection>
           )}
 
           {!isMind && inFlows.length > 0 && (
-            <DetailSection id="flows" title="Part of these workflows" lead="This skill is a step in these workflows. Each one runs several skills in order, so the whole job gets done in one run.">
+            <DetailSection id="flows" title="Part of these workflows" lead={`This ${noun} is a step in these workflows. Each one runs several skills in order, so the whole job gets done in one run.`}>
               <WorkflowList c={c} flows={inFlows} testid="in-workflows" />
             </DetailSection>
           )}
@@ -734,7 +749,7 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
           )}
 
           {has(p?.improve) && (
-            <DetailSection id="improve" title="Make it fit your work" lead="The skill is a plain text file. Change it once and every run after that fits you better.">
+            <DetailSection id="improve" title="Make it fit your work" lead={`The ${noun} is a plain text file. Change it once and every run after that fits you better.`}>
               <ul className="plain-list">{p!.improve.map((j, i) => <li key={i}>{txt(j)}</li>)}</ul>
             </DetailSection>
           )}
@@ -765,9 +780,9 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
             </DetailSection>
           )}
 
-          <DetailSection id="file" title={isAgent ? "The agent file" : isFlow ? "The workflow file" : "The skill file"} lead={`This is what your AI follows. It's saved as ${b.slug}/SKILL.md, the name Claude, Claude Code and our workflows call it by.`}>
+          <DetailSection id="file" title={promptFile ? "The full prompt" : `The ${noun} file`} lead={promptFile ? "This is everything your AI reads when you paste the prompt." : `This is what your AI follows. It's saved as ${b.slug}/SKILL.md, the name Claude, Claude Code and our workflows call it by.`}>
             <details className="skill-file" open={!p}>
-              <summary>Read the full {isAgent ? "agent" : isFlow ? "workflow" : "skill"}</summary>
+              <summary>Read the full {noun}</summary>
               {p ? <div className="prose" dangerouslySetInnerHTML={{ __html: normalizeSkillHtml(p.html.skill, b.slug, p.files ?? []) }} /> : skill ? <pre className="prose">{skill}</pre> : <p className="small">Loading…</p>}
             </details>
           </DetailSection>

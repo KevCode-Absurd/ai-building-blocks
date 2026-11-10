@@ -132,12 +132,12 @@ Use a separate critic: a fresh chat, or another seat. Give it the deliverable, `
 - No invented numbers.
 - Access respected: read, draft or publish-within-limits, as granted.
 - No fillable placeholders.
-- The hand-over fits. A one-screen summary comes first: what changed, why, and what to check. The deliverable stays inside its word budget, and detail goes to `DECISIONS.md` or an appendix. The budgets:
+- The hand-over fits. It opens with a one-screen summary that answers the brief (what you delivered, why, what to check first; nothing the brief did not ask for). The deliverable stays inside its word budget. Easy to scan: short sentences, headings that state the point, tables for comparisons. It stands on its own: supporting detail goes in an appendix inside it, never in a file the client does not have, such as DECISIONS.md or knowledge.md. The budgets:
   - Page: a hand-over note of up to 150 words, and page copy no longer than the live page plus 20%.
   - Ads: up to 150 words per concept.
   - Email: up to 200 words of body per email.
   - Audit or analysis: the top 3 fixes or the answer on the first screen, and up to 1,500 words.
-  - Strategy or plan: a summary of up to 250 words, and up to 2,500 words.
+  - Strategy or plan: a summary of up to 250 words, and up to 4,000 words that keep the specifics someone needs to act.
   - Code: a note of up to 150 words.
 - Pages, ads, copy, email and audits also: every proven lever was checked, and each missing one was added or skipped with a reason (step 3).
 - web_page also: the existing nav and footer are kept unless the change is on purpose; brand fonts are loaded; the page works at 390 px and 1440 px; the primary action works. Run [Brand fidelity check](https://useaiblocks.com/skills/brand-fidelity-check) (`check-brand-fidelity.mjs`, or its manual checklist) and its fresh-context side-by-side review.

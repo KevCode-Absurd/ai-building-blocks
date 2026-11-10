@@ -115,4 +115,7 @@ test("every job skill carries the hand-over word budget; conversion jobs also ch
   assert.ok(skills.length > 0);
   for (const s of skills) assert.match(s.content, /The hand-over fits: a one-screen summary first/, s.path);
   assert.match(file(pack, "WORK-METHOD.md")!, /check the proven levers/);
+  // 10 Nov rerun: the deliverable stands on its own, and plans keep the detail someone needs to act.
+  for (const family of Object.keys(WORD_BUDGETS) as (keyof typeof WORD_BUDGETS)[]) assert.match(familyGates(family)[0], /never in a file the client does not have/, family);
+  assert.match(WORD_BUDGETS.plan, /4,000 words/);
 });

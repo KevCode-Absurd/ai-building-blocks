@@ -69,7 +69,7 @@ Check in a fresh context or another seat, or at least as a separate step after t
 - No invented numbers.
 - Access was respected.
 - No placeholder is left that the capture could have filled.
-- The hand-over fits. A one-screen summary comes first: what changed, why, and what to check. The deliverable stays inside the word budget in its job skill, and detail goes to `DECISIONS.md` or an appendix.
+- The hand-over fits. It opens with a one-screen summary that answers the brief (what you delivered, why, what to check first; nothing the brief did not ask for). The deliverable stays inside its word budget in its job skill. Easy to scan: short sentences, headings that state the point, tables for comparisons. It stands on its own: supporting detail goes in an appendix inside it, never in a file the client does not have, such as DECISIONS.md or knowledge.md.
 - Pages, ads, copy, email and audits also: every proven lever was checked, and each missing one was added or skipped with a reason (step 3).
 - Web pages also: the existing nav and footer are kept unless changed on purpose, the brand fonts load, the page works at 390 px and 1440 px, the primary action works, and `tools/check-brand-fidelity.mjs` (or its checklist) passes.
 
@@ -88,6 +88,6 @@ Then compare the work with the best reference: what does the reference do that t
 
 ## 6. Record and learn
 
-Write `DECISIONS.md` next to the deliverable: what you considered, what you chose and why, the strongest dissent, and what to test next.
+Write `DECISIONS.md` next to the deliverable: what you considered, what you chose and why, the strongest dissent, and what to test next. It is your working record for the next job; the client reads the deliverable, so nothing in the deliverable depends on it.
 
 When a lesson would help with every client, propose it for "Rules I learned" in playbook.md, typed as one of `decision_rule`, `taste_reference`, `never_do`, `exemplar` or `check`. A lesson about one client stays in that client's `context/`. It never becomes a general rule, so one client's taste does not flatten the next.

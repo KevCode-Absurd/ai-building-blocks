@@ -194,7 +194,8 @@ export function familySlice(family: DeliverableFamily) { return SLICES[family]; 
 
 /**
  * Word budgets for the hand-over, by family (the same as site/src/jobs/grounding.mjs WORD_BUDGETS). The 9 Nov 2026
- * blind test found grounded work scored lower on clarity than plain model output because it ran long.
+ * blind test found grounded work scored lower on clarity than plain model output because it ran long. The 10 Nov rerun
+ * found a tight plan budget cut detail the client needed and sent readers to working files they never get.
  */
 export const WORD_BUDGETS: Record<DeliverableFamily, string> = {
   web_page: "Hand-over note up to 150 words. Page copy no longer than the live page plus 20%, unless the change says why.",
@@ -203,8 +204,8 @@ export const WORD_BUDGETS: Record<DeliverableFamily, string> = {
   email: "Body up to 200 words per email, unless the brand's own past emails run longer.",
   audit: "The top 3 fixes on the first screen, and up to 1,500 words in all. Evidence tables go in an appendix.",
   analysis: "The answer and how sure it is on the first screen, and up to 1,500 words in all. Working goes in an appendix.",
-  strategy: "A summary up to 250 words first, and up to 2,500 words in all.",
-  plan: "A summary up to 250 words first, and up to 2,500 words in all. Schedules go in tables.",
+  strategy: "A summary up to 250 words first, and up to 4,000 words in all. Keep the specifics someone needs to act: concepts, angles, audiences, numbers.",
+  plan: "A summary up to 250 words first, and up to 4,000 words in all. Keep the specifics someone needs to act: concepts, angles, audiences, numbers. Schedules go in tables.",
   code: "A hand-over note up to 150 words: what changed, how to run it, what to check.",
   ops_doc: "Steps a new person can follow in one read, none longer than 40 words.",
   other: "A summary up to 150 words first.",
@@ -226,7 +227,7 @@ export const PROVEN_LEVERS: Partial<Record<DeliverableFamily, string[]>> = {
 export function familyGates(family: DeliverableFamily): string[] {
   const levers = PROVEN_LEVERS[family];
   return [
-    `The hand-over fits: a one-screen summary first (what changed, why, what to check). ${WORD_BUDGETS[family]} Detail goes to DECISIONS.md or an appendix.`,
+    `The hand-over fits: a one-screen summary first that answers the brief (what you delivered, why, what to check first; nothing the brief did not ask for). ${WORD_BUDGETS[family]} Easy to scan: short sentences, headings that state the point, tables for comparisons. It stands on its own: supporting detail goes in an appendix inside it, never in a file the client does not have, such as DECISIONS.md or knowledge.md.`,
     ...(levers ? [`Proven levers checked on the live asset, each marked present, missing or not applicable: ${levers.join("; ")}. Each missing one is added from real data, or skipped with a reason.`] : []),
   ];
 }

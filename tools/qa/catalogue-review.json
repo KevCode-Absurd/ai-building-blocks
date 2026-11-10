@@ -860,7 +860,7 @@
     "catalogue-items/general/grounded-job-protocol/item.yaml": {
       "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
       "reviewed_on": "2026-11-10",
-      "method_sha256": "b2a349e0cf51ca5533b06b6383e41f1ec3656c66437e01b7aa02dc6d7119198b",
+      "method_sha256": "63bd8b1b262c292dad09832e235eef828ee7ac84515c335fc933962e06796dc5",
       "inputs": [
         {
           "type": "question",

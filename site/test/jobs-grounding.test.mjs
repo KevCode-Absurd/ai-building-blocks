@@ -161,8 +161,13 @@ test('the rubric adds per-family craft criteria with the spec weights, and gates
   for (const kind of ['web_page', 'ad_creative', 'copy', 'email', 'audit', 'analysis', 'strategy', 'plan', 'code', 'ops_doc', 'other']) {
     assert.ok(gatesFor(kind).some(g => g.id === 'hand_over_budget'), kind);
     assert.equal(gatesFor(kind).some(g => g.id === 'proven_levers_checked'), ['web_page', 'ad_creative', 'copy', 'email', 'audit'].includes(kind), kind);
-    assert.ok(prepareJobContext({ request: 'x', deliverable_kind: kind }).annex.hand_over.word_budget.length > 20, kind);
+    const ctx = prepareJobContext({ request: 'x', deliverable_kind: kind });
+    assert.ok(ctx.annex.hand_over.word_budget.length > 20, kind);
+    // 10 Nov rerun: the hand-over stands on its own and never sends the client to working files.
+    assert.deepEqual(ctx.annex.hand_over.detail_goes_to, ['an appendix inside the deliverable'], kind);
+    assert.match(ctx.brief, /never in a file the client does not have/, kind);
   }
+  assert.match(prepareJobContext({ request: 'x', deliverable_kind: 'plan' }).annex.hand_over.word_budget, /4,000 words/);
   assert.ok(prepareJobContext({ request: 'Improve our product page', deliverable_kind: 'web_page' }).annex.proven_levers.some(l => /reviews and ratings/.test(l)));
   assert.match(prepareJobContext({ request: 'Improve our product page', deliverable_kind: 'web_page' }).brief, /AVOID unless chosen on purpose/, 'the defaults to avoid still fit in the brief');
   const legacy = assembleRubric({}); assert.equal(legacy.craft, undefined);

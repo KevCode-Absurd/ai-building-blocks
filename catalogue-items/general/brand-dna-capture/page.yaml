@@ -1,138 +1,146 @@
 new_slug: brand-dna-capture
-name: "Brand DNA capture"
-summary: "Give it your website. You get your real colours, fonts, buttons, page order, voice and prices, measured, for your AI to follow."
+name: "Brand file capture"
+summary: "Give it your website. You get a brand file your AI keeps current: prices, look, voice and facts, each with its source and date."
 job: brand-file
 thinking: low
-thinking_why: "It measures a page and writes down what it found. The script does the hard part."
+thinking_why: "It measures a page and writes down what it found. The scripts do the hard part."
 
-headline: "Capture your site's look and facts before your AI designs anything"
-subhead: Give it your website and the pages that matter. It measures the colours and how much of the page each one covers, the fonts for each job, the buttons, the menu and footer, the order of sections, your own words and today's prices. You get a file and screenshots your AI must follow.
+headline: "Capture your site into a brand file your AI keeps up to date"
+subhead: Give it your website and the pages that matter. It measures your colours, fonts, buttons and page order, and saves your own words, prices, offers and stock with the date each was read. Later runs add to the file, say what changed, and tell your AI which parts are too old to trust.
 
 explain: |
-  When your AI makes a page or an ad without looking at your site, it uses its own favourite look. You get its fonts, its rounded cards and its cream "premium" bands, and a page your customers would not know as yours.
+  When your AI makes a page or an ad without looking at your site, it uses its own favourite look and facts it half remembers. You get its fonts and its rounded cards, and sometimes last month's price.
 
-  This skill measures your live site first. It records each colour with how much of the page it covers, so a small accent stays small. It records the font, size and case for headings, body text, buttons and the menu. It lists your menu and footer links, the order of your sections, how many photos you use, five to ten lines in your own words, and your prices, offers and review counts with the time they were read.
+  This skill measures your live site and saves the result as your brand file, a folder in your own project. It holds your prices, offers and stock, your lasting facts, your look, real lines in your own words, the sites you admire and avoid, and what you kept or dropped on past jobs. Every line has where it was read and when.
 
-  It works three ways. A script opens the pages at desktop and phone width and saves screenshots. A short piece of code can run in any browser. Or you can do it by hand from screenshots. Every later step has to point back to this file for each choice it makes.
+  The brand file stays current. A new capture adds to it and never wipes it. It lists what changed, such as a new price or an offer that ended. Prices, offers and stock count as old after 7 days, and the look and voice after 90 days. Each job takes only the part it needs, and a job that needs none of it skips the capture.
 
 when:
   - Before your AI designs or rewrites a page for a business that already has a website.
-  - Before ads, emails or copy that must look and sound like your brand.
+  - Before ads, emails or copy that must use today's prices and sound like your brand.
+  - When your prices, offers or stock have changed since the last job.
   - When an AI-made page came back looking nothing like your site and you want to see why.
 not_for:
-  - "A new brand with no website yet. Use your brand guide and the sites you admire instead."
-  - "Copying a competitor's design. Capture your own site; study theirs as a reference only."
+  - "A new brand with no website yet. Write the brand file by hand from your brand guide and the sites you admire."
+  - "Copying a competitor's design. It keeps a competitor's look and headlines as a reference only, never their prices."
+  - "Code, operations or data jobs. They need no brand file, and the tool says so."
 
 you_give:
   - Your website address
   - One to three more pages that matter, such as a product page or the page you want changed
+  - Up to three sites you admire, avoid or compete with (optional)
   - A computer that can run Node.js with Playwright, or any web browser, or your own screenshots
 you_get:
-  - Your colours, each with how much of the page it covers and what it is used for
-  - Your fonts for headings, body text, buttons and menu, and whether each one loaded
-  - Your button shapes, corner sizes, menu, footer columns and section order
-  - Five to ten lines in your own words, and your prices, offers and review counts with the date
+  - Your prices, offers, stock and shipping lines, each with its page and the date it was read
+  - Your colours with how much of the page each covers, your fonts, buttons, menu, footer and section order
+  - Real lines in your own words, with where each came from
+  - A list of what changed since the last capture
+  - A one-screen index that says what is fresh, what is old and what is missing
+  - A short slice for each job, so your AI reads only what that job needs
   - Desktop and phone screenshots of each page
-  - A short summary file your AI reads first
 
 how_to_use:
   - Add the skill to an AI that can run code, or open it in any chat.
   - Give it your website address and the pages that matter for the job.
-  - If your AI can run code, it runs the capture script. It needs Node.js 18 or later and Playwright.
+  - If your AI can run code, it checks the brand file first, then captures only what is missing or old. It needs Node.js 18 or later and Playwright.
   - If not, open each page in your browser, paste the snippet into the console, and save what it returns.
-  - Read the summary it writes. Fix anything that looks wrong, then start the real job from that file.
+  - Read the index it writes. Fix anything that looks wrong, then start the real job from the slice.
+  - After the job, tell it what you kept and what you dropped. It saves that for next time.
 
 how_it_works:
+  - title: Checks before it captures
+    text: Looks at what the brand file already holds and how old each part is. It captures only what this job needs and what has gone stale.
   - title: Opens your real pages
     text: Loads each page at desktop and phone width, waits for it, closes pop-ups and scrolls so all photos load. It blocks tracking tags and never logs in or clicks buy.
-  - title: Measures colour by area
-    text: Works out how much of the page each colour covers, with photos counted apart, so a badge colour is not mistaken for a main colour.
-  - title: Reads the type and buttons
-    text: Records font, weight, size and case for each job, which font files loaded, button shapes and corner sizes.
-  - title: Maps the page
-    text: Lists the menu, the footer columns and the order of sections with their headings, and counts the photos.
-  - title: Keeps your words and facts
-    text: Saves real lines from your site and today's prices, offers, delivery, returns and review counts, each with the time it was read.
-  - title: Writes the summary
-    text: Drafts a short file with the numbers, and leaves a few lines for your AI to say what must stay and what is missing.
+  - title: Measures the look
+    text: Works out how much of the page each colour covers, with photos counted apart. Records font, size and case for each job, button shapes, the menu, the footer and the order of sections.
+  - title: Keeps your words and live facts
+    text: Saves real lines from your site and today's prices, offers, stock, delivery and review counts, each with its page and the time it was read.
+  - title: Adds to the file and says what changed
+    text: A new run never wipes the old one. It keeps the earlier version and lists each change, such as a new price, an ended offer or a product now out of stock.
+  - title: Hands each job its slice
+    text: Prints only the part a job needs, newest first. Old lines are listed apart for a recheck and are never passed on as facts.
 
 output_shape: |
-  context/brand-dna.json   colours with area share and job, fonts per role, buttons, radius,
-                           menu, footer, sections per page, images, voice lines, dated facts
+  context/brand-file/
+    index.md        what is here, how fresh each part is, what is missing
+    offers.json     prices, promotions, stock, shipping (fresh for 7 days)
+    facts.json      lasting facts, each with source and date (fresh for 90 days)
+    look.json       colours with area share, fonts, buttons, menu, footer, sections
+    voice.md        real lines, each with its source and date
+    references.md   admired, avoided and competitors
+    worked.md       what you kept, dropped or asked for more of
+    history/        earlier versions, and changes.md
+  context/brand-dna.json   the raw capture the brand file is built from
   context/screenshots/     <page>-desktop-first, -desktop-full, -mobile-first, -mobile-full
-  context/brand-dna.md     # Brand DNA: <business>
-                           Colour: <hex> <share> <job> ...
-                           Type: headings <...>; body <...>; buttons <...>
-                           Shape: <radius>, primary button <fill, text, corners, case>
-                           Chrome: menu <...>; footer <columns>
-                           Section order: <kind "heading"> > ...
-                           Voice: "<line>" ...   Facts (captured <time>): <...>
-                           Codes to keep / Must reuse / Gaps
   CHECKS MISSED            <one line per check that did not run, or none>
 
 example:
-  business: gehna
+  business: allbirds
   input: |
     [the skill]
 
-    Capture https://www.gehnaindia.com and the product page
-    /filigree-pearl-18k-gold-dangle-earrings. Then write brand-dna.md.
+    Capture https://www.allbirds.com and the product page
+    /products/mens-tree-runners. Then show me the status and the facts slice.
   output: |
-    # Brand DNA: Gehna
-    Measured from https://www.gehnaindia.com on 9 Nov 2026 (script). Pages: /, one product page.
+    Brand file: allbirds.com (context/brand-file) as of 2026-11-10
 
-    Colour (home, by area): white #FFFFFF 42%, charcoal #3E3F43 12% (text and
-    footer), wine #702E3E 13% (reviews band, one button), marigold #F6B74D 0.4%
-    (main buttons, links). Photos cover 31% of the page.
-    Type: headings Nanum Myeongjo, 30 px, very heavy; body Lato 400 14 px;
-    buttons Lato UPPERCASE 12 to 14 px with letter spacing; product title
-    Nanum Myeongjo 800 30 px. Both fonts load from the site.
-    Shape: buttons square (0 to 4 px); category chips round; no shadows.
-    Primary button: marigold fill, UPPERCASE ("ADD TO CART", "SHOP NEW ARRIVALS").
-    Chrome: menu button, logo, search, bag; dark footer with 6 columns
-    (Gold Products, Silver Products, Explore, About, Help, contact).
-    Section order (home): header > category chips > hero banner > Best of Gehna >
-    Why Choose Gehna > New Arrivals > Shop by Gemstone > What Our Customers Say >
-    Visit Us In Store > footer. About 10 images per 1000 px.
-    Voice: "Every piece is BIS certified for purity & authenticity",
-    "Hassle-free 7-day return & exchange policy". Button words: SHOP NEW ARRIVALS.
-    Facts (captured 9 Nov 2026, 06:26 UTC): product page price 16,530 rupees;
-    30,000+ orders delivered; 4.8/5 from 519 Google reviews; 7-day return and exchange.
+    part       file           state  newest      age  notes
+    offers     offers.json    fresh  2026-11-10  0d   42 lines, fresh for 7 days
+    facts      facts.json     fresh  2026-11-10  0d   5 lines, fresh for 90 days
+    look       look.json      fresh  2026-11-10  0d   5 colours, fresh for 90 days
+    voice      voice.md       fresh  2026-11-10  0d   19 lines, fresh for 90 days
+    Result: READY
 
-    Codes to keep: UPPERCASE Lato buttons on marigold; white page with charcoal
-    text; wine only for the reviews band and badges.
-    Must reuse: menu bar, category chips, product cards, dark footer.
-    Gaps: the full menu sits behind the menu button; open it and capture again.
+    BRAND FILE SLICE: facts | allbirds.com | read 2026-11-10
+    LIVE OFFERS: prices, promotions, stock, shipping (fresh for 7 days)
+    - price: Men's Tree Runner: USD 70
+      (allbirds.com/products/mens-tree-runners, 2026-11-10)
+    - stock: Men's Tree Runner: in stock
+      (allbirds.com/products/mens-tree-runners, 2026-11-10)
+    - offer: Black Friday Early Access. Up to 70% off select styles.
+      (allbirds.com, 2026-11-10)
+    - shipping: Free ground shipping on orders over $100
+      (allbirds.com, 2026-11-10)
+
+    Look: primary button white fill, #212121 text, fully round, UPPERCASE
+    ("SHOP MEN"); headings, body and buttons in Geograph.
+    Changed since last time: New page read, 30 lines added
+    (allbirds.com/products/mens-tree-runners).
 
     CHECKS MISSED
     none
 
 tweaks:
   - what: Which pages
-    how: Add the pages your job touches, such as one product page, one collection and the cart. Each page gets its own section list and screenshots.
-  - what: Phone only or desktop only
-    how: The script always does both widths. If your buyers are mostly on phones, say so in the summary and read the phone numbers first.
+    how: Add the pages your job touches, such as one product page, one collection and the cart. Each page keeps its own date, so you can refresh one without the others.
+  - what: Only the prices
+    how: Capture just the pages with prices when they are the only old part. The rest of the brand file stays as it is.
+  - what: Sites you admire or compete with
+    how: Name up to three. It keeps their look and headline lines in your references, and leaves their prices out.
   - what: A page behind a pop-up
     how: Close the pop-up and run again, or use the snippet in your own browser after you close it.
   - what: A local page
     how: Point the script at an HTML file on your computer instead of an address. It works the same way.
 
 judge:
-  - Every colour in the summary has a share of the page and a job, not just a hex code.
+  - Every price, offer and stock line has its page and the date it was read.
+  - Every colour has a share of the page and a job, not just a hex code.
   - Fonts are named for each job (headings, body, buttons, menu), with whether they loaded.
-  - The menu, footer and section order match what you see on the site.
   - Voice lines are copied word for word from the site.
-  - Every price, offer and review count has the date and time it was read.
+  - A second capture adds to the brand file and lists what changed. Nothing from the first one is lost.
+  - Lines older than their limit are listed for a recheck, not used.
 
 test:
-  - Open your site next to the summary. The biggest colour, the button shape and the footer columns should match what you see.
-  - Find a small accent colour on your site, such as a sale badge. Its share in the file should be small.
-  - Change a price on a test page, capture again and check that the new price and time show up.
+  - Open your site next to the look slice. The biggest colour, the button shape and the footer columns should match what you see.
+  - Change a price on a test page and capture again. The change list should show the old and the new price.
+  - Ask for the status eight days after a capture. Prices and offers should show as stale.
+  - Ask for a slice for a code job. It should say no brand file is needed.
 
 improve:
-  - Capture again before any job that uses prices or offers, so the facts are current.
+  - Capture your pricing and best-selling product pages each week, so offers and stock stay fresh.
   - Add your most important product page and your cart to the capture, not just the home page.
-  - Keep the summary short and put it first in your project, so your AI reads it before anything else.
+  - After each job, record what you kept and dropped, so the next job starts from it.
   - Pair it with the Brand fidelity check, which compares a new page with this capture.
 
 works_best_with:
@@ -150,16 +158,26 @@ output_sample:
   prerequisites:
     - An AI that can run code, to use the scripts that come with this skill (or any browser for the snippet)
   output:
-    - name: Brand DNA file
-      contains: Colours with their share of the page, fonts per job, buttons, corners, menu, footer, sections, images, your own lines and dated facts.
+    - name: Brand file
+      contains: Offers, facts, look, voice, references and what worked, each line with its source and date.
+    - name: Index
+      contains: One screen that says what is here, how fresh each part is and what is missing.
+    - name: Change list
+      contains: What this capture found different from the last one, such as a new price or an ended offer.
+    - name: Slice for the job
+      contains: Only the part the next job needs, with old lines set apart for a recheck.
     - name: Screenshots
       contains: The first screen and the full page of each page, at desktop and phone width.
-    - name: Summary
-      contains: A short file with the numbers and the codes to keep, which every later step must point to.
     - name: Checks missed
       contains: One line for each check that did not run, or none.
 
 terms:
+  - term: Brand file
+    meaning: One folder in your own project with your prices, facts, look, voice, references and what worked, which your AI reads before it works for you.
+  - term: Slice
+    meaning: The short part of the brand file one job needs, such as the facts and voice for an email.
+  - term: Stale
+    meaning: Too old to trust. Prices, offers and stock are stale after 7 days, and the look and voice after 90 days.
   - term: Share of page area
     meaning: How much of the page a colour covers. A colour can be in the logo and still cover almost none of the page.
   - term: Snippet

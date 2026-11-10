@@ -5,6 +5,7 @@ import {discoverStudioFormats} from './studio-discovery.mjs';
 import {buildExecutionPlan} from './execution-quality.mjs';
 import {overlapShare} from './grounding.mjs';
 import {VARIETY_CONFIG} from './variety-config.mjs';
+import {agentLoad,leadAgentFor} from './lead-agents.mjs';
 const array=value=>Array.isArray(value)?value:[];
 const unique=values=>[...new Set(values)];
 const text=value=>typeof value==='string'?value.trim():'';
@@ -165,6 +166,9 @@ export function proposeTeam(input={},context={}) {
   if(requested)maker.budget.max_generations=Math.max(maker.budget.max_generations,Math.ceil(requested/Math.max(1,makers.length)));
  }
  const lead=(work.length?makers.find(seat=>seat.seat_id===work[0].maker_seat):null)??(launchable&&['ad-landing-page','design-specialist'].includes(makers[0]?.role_id)?makers[0]:null)??[...makers].sort((a,b)=>(ranked.find(row=>row.role.id===b.role_id)?.score??0)-(ranked.find(row=>row.role.id===a.role_id)?.score??0)||a.role_id.localeCompare(b.role_id))[0]??null;
+ // The lead seat's agent comes from the curated table for this job type, when it names one no other seat holds.
+ // With mixed work the lead makes the first piece, which is the routed job's own kind of work.
+ if(lead){const picked=leadAgentFor(approachResult.job,task,{personas:personas.map(row=>row.id)});if(picked&&!seats.some(seat=>seat!==lead&&seat.persona_id===picked.id)){if(lead.persona_id)usedPersonas.delete(lead.persona_id);lead.persona_id=picked.id;usedPersonas.add(picked.id);}}
  if(lead)lead.responsibilities.unshift(work.length?'Own the whole deliverable from first draft to hand-over: brief the other makers, join their work and check it before review':'Lead production for this request and coordinate makers');
  const judges=[];
  // A mixed-work team keeps the review bench as small as the work allows: one independent reviewer who chooses between
@@ -240,7 +244,7 @@ export function teamBrief(proposal,context={}) {
  // One short sentence per seat: role names often hold an "and" of their own.
  const makes=work.length?[`${name(lead)} leads and makes ${made.get(lead.seat_id)??'the main deliverable'}.`,...makers.map(seat=>`${name(seat)} makes ${made.get(seat.seat_id)}.`),...checks.map(seat=>seat.seat_type==='judge'?`${name(seat)} chooses between the candidates and checks the finished work as the client would.`:seat.seat_type==='fact_checker'?`${name(seat)} traces each claim to its source.`:`${name(seat)} helps review.`)].join(' '):null;
  return {
-  lead:{...row(lead),owns:'The deliverable, from first draft to hand-over.',...(made.has(lead.seat_id)?{makes:made.get(lead.seat_id)}:{})},
+  lead:{...row(lead),owns:'The deliverable, from first draft to hand-over.',...(made.has(lead.seat_id)?{makes:made.get(lead.seat_id)}:{}),...(lead.persona_id?{agent:agentLoad(lead.persona_id)}:{})},
   helpers:helpers.map(seat=>({...row(seat),seat_type:seat.seat_type,job:job(seat),...(made.has(seat.seat_id)?{makes:made.get(seat.seat_id)}:{})})),
   orchestrator_seat_id:proposal.coordinator_seat_id,
   ...(makes?{makes}:{}),
@@ -263,10 +267,16 @@ export function pickLead(input={},context={}) {
  const place=role=>{const at=prefer.indexOf(role.id);return at<0?prefer.length:at;};
  const makers=roles.filter(role=>role.id!=='general-coordinator'&&(!array(role.seat_suitability).length||array(role.seat_suitability).includes('maker'))&&(place(role)<prefer.length||(job&&role.job===job)||score(role)>0));
  makers.sort((a,b)=>place(a)-place(b)||Number(Boolean(job)&&b.job===job)-Number(Boolean(job)&&a.job===job)||score(b)-score(a)||a.id.localeCompare(b.id));
- const lead=makers[0];
+ let lead=makers[0];
  if(!lead)return null;
- const persona=selectPersona(personaRows(context.personas),lead,'maker',array(lead.lenses)[0],new Set());
- return {role_id:lead.id,name:lead.name??lead.id,...(text(lead.summary)?{does:text(lead.summary)}:{}),persona_id:persona?.id??null,owns:'The deliverable, from first draft to hand-over.',alternatives:makers.slice(1,3).map(role=>role.id)};
+ // The lead agent comes from the curated table for this job type (lead-agents.json) when it names one; its pack carries
+ // the toolbox for this work. The lead role becomes the first maker role that agent holds, so the two names agree.
+ const rows=personaRows(context.personas),picked=rows.length?leadAgentFor(job,task,{personas:rows.map(row=>row.id)}):null;
+ const pickedRow=picked?rows.find(row=>row.id===picked.id):null;
+ const pickedRoles=array((pickedRow?.team??pickedRow?.facets??pickedRow)?.roles);
+ if(pickedRow)lead=makers.find(role=>pickedRoles.includes(role.id))??lead;
+ const persona=pickedRow??selectPersona(rows,lead,'maker',array(lead.lenses)[0],new Set());
+ return {role_id:lead.id,name:lead.name??lead.id,...(text(lead.summary)?{does:text(lead.summary)}:{}),persona_id:persona?.id??null,owns:'The deliverable, from first draft to hand-over.',alternatives:makers.filter(role=>role!==lead).slice(0,2).map(role=>role.id)};
 }
 
 export function buildOrgChart({roles=[],personas=[]}={}) {

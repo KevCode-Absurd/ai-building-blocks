@@ -422,9 +422,13 @@ export function suggestDeliverableKind(request = '') {
   if (assess && !create) return /\b(?:analy[sz]\w*|why (?:is|are|did|has|have)|investigate|report on|benchmark)\b/i.test(words) && !/\baudit\b/i.test(words) ? kind('analysis', 'assessment words without a creation verb') : kind('audit', 'assessment words without a creation verb');
   // A job description is a document for a team, whatever "ad" or "posting" follows the word job.
   if (/\bjob (?:descriptions?|adverts?|ads?|postings?|specs?)\b/i.test(words)) return kind('ops_doc', 'document words');
+  // An email series or newsletter is email work even when it asks for the "body copy" of each email.
+  // Mixed work (a page or ads as well) falls through to the rules below.
+  if (/\b(?:emails?|newsletters?)\b/i.test(words) && /\b(?:series|sequences?|subject lines?|preview text|welcome|drip|flows?|newsletters?)\b/i.test(words)
+    && !/\b(?:landing[ -]?pages?|web ?pages?|websites?|ads?|creatives?)\b/i.test(words)) return kind('email', 'email words');
   // Words to be read or spoken are copy, including a script for a video about an app.
   if (/\b(?:copy|copywriting|headlines?|taglines?|wording|captions?|product descriptions?|blog posts?|articles?|press releases?|case stud(?:y|ies)|white ?papers?|(?:social(?: media)?|linkedin|instagram|facebook|twitter|tiktok) posts?|speech(?:es)?|(?:video|ad|explainer|podcast|sales|call|youtube) scripts?|proposals?)\b/i.test(words) && !/\b(?:build|code|implement|redesign|launchable|working)\b/i.test(words)) return kind('copy', 'copy words');
-  if (/\b(?:landing[ -]?pages?|web ?pages?|websites?|home ?page|product pages?|sales pages?|site)\b/i.test(words)) return kind('web_page', 'page or site words');
+  if (/\b(?:landing[ -]?pages?|web ?pages?|websites?|home ?page|(?:product|sales|pricing|sign[ -]?up|checkout|about|contact|collection|category) pages?|site)\b/i.test(words)) return kind('web_page', 'page or site words');
   if (/\b(?:emails?|newsletters?|drip|welcome series|flows? in klaviyo)\b/i.test(words)) return kind('email', 'email words');
   if (/\b(?:ads?|creatives?|advertising|advertisements?|ugc|thumb-?stop)\b/i.test(words)) return kind('ad_creative', 'ad words with a creation verb');
   if (/\b(?:strategy|positioning|go[ -]to[ -]market|pricing model|brand platform)\b/i.test(words)) return kind('strategy', 'strategy words');

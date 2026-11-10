@@ -1,0 +1,1633 @@
+{
+  "schema": "ai-blocks-lead-agents/1",
+  "note": "Lead agent per job type, curated 2026-11-10 from the agents' titles and role toolboxes. The router picks the first variant whose words appear in the request, else the setting match, else default.",
+  "jobs": {
+    "analyse-data": {
+      "default": "valeria-data-analysis",
+      "settings": {
+        "store": "intan-storereports",
+        "software": "jaya-product-analytics",
+        "nonprofit": "heidi-clubdata"
+      },
+      "variants": [
+        {
+          "words": [
+            "statistics",
+            "statistical",
+            "regression",
+            "bayesian",
+            "significance",
+            "anova"
+          ],
+          "agent": "kenneth-statistics"
+        },
+        {
+          "words": [
+            "forecast",
+            "forecasts",
+            "forecasting"
+          ],
+          "agent": "frank-salesforecast"
+        }
+      ],
+      "why": "Data analyst toolbox cleans exports and takes a question to a checked answer; statistician and forecaster for those asks."
+    },
+    "audit-landing-page": {
+      "default": "dawei-landing-pages",
+      "settings": {
+        "store": "imran-conversion"
+      },
+      "why": "Landing page CRO specialist; toolbox opens with tearing down a landing page and ranking fixes."
+    },
+    "brand-file": {
+      "default": "ayumi-brand-voice",
+      "variants": [
+        {
+          "words": [
+            "logo",
+            "colours",
+            "colors",
+            "fonts",
+            "palette",
+            "visual identity"
+          ],
+          "agent": "renata-brand-identity"
+        },
+        {
+          "words": [
+            "naming",
+            "rename",
+            "tagline",
+            "taglines",
+            "name ideas"
+          ],
+          "agent": "anahera-brand-naming"
+        }
+      ],
+      "why": "Brand strategist toolbox builds the voice guide and a brand fact file any writer or AI can use."
+    },
+    "build-product": {
+      "default": "neha-product-management",
+      "settings": {
+        "store": "takeshi-product-development"
+      },
+      "variants": [
+        {
+          "words": [
+            "roadmap"
+          ],
+          "agent": "leon-roadmap-planning"
+        },
+        {
+          "words": [
+            "physical",
+            "prototype",
+            "manufacturing",
+            "manufacturer"
+          ],
+          "agent": "takeshi-product-development"
+        }
+      ],
+      "why": "Product manager toolbox covers problem briefs, first version scope, PRDs, onboarding and roadmap; physical goods go to the product developer."
+    },
+    "build-software": {
+      "default": "dmitri-api-endpoints",
+      "variants": [
+        {
+          "words": [
+            "agent",
+            "agents",
+            "rag",
+            "llm",
+            "chatbot",
+            "ai feature"
+          ],
+          "agent": "amira-ai-features"
+        },
+        {
+          "words": [
+            "mobile",
+            "ios",
+            "android",
+            "flutter",
+            "react native"
+          ],
+          "agent": "chidi-mobile-screens"
+        },
+        {
+          "words": [
+            "game",
+            "unity",
+            "godot"
+          ],
+          "agent": "chloe-unity-scripts"
+        },
+        {
+          "words": [
+            "etl",
+            "data pipeline",
+            "dbt",
+            "airflow"
+          ],
+          "agent": "ilya-data-pipelines"
+        }
+      ],
+      "why": "Backend developer ships endpoints and integrations from brief to production; AI, mobile, game and pipeline builders for those asks."
+    },
+    "build-websites": {
+      "default": "leandro-frontend-build",
+      "variants": [
+        {
+          "words": [
+            "shopify",
+            "liquid"
+          ],
+          "agent": "nabin-shopifytheme"
+        },
+        {
+          "words": [
+            "wordpress",
+            "woocommerce"
+          ],
+          "agent": "carys-wp-plugins"
+        },
+        {
+          "words": [
+            "squarespace",
+            "wix",
+            "webflow"
+          ],
+          "agent": "eloise-site-builders"
+        },
+        {
+          "words": [
+            "bubble",
+            "glide",
+            "softr",
+            "no code"
+          ],
+          "agent": "hayden-no-code-apps"
+        }
+      ],
+      "why": "Front-end web developer builds pages and components that work on every screen; platform builders for named platforms."
+    },
+    "check-ads": {
+      "default": "bruno-ad-copy",
+      "why": "Ad creative strategist toolbox checks ads against platform rules and claims, and ad-to-page promise match."
+    },
+    "check-contracts": {
+      "default": "armando-contracts",
+      "variants": [
+        {
+          "words": [
+            "privacy",
+            "gdpr",
+            "ccpa",
+            "dpa"
+          ],
+          "agent": "farid-data-privacy"
+        },
+        {
+          "words": [
+            "regulation",
+            "regulations",
+            "regulatory",
+            "compliance",
+            "compliant"
+          ],
+          "agent": "lesley-regsummary"
+        }
+      ],
+      "why": "Contract analyst in the compliance toolbox; privacy and regulatory specialists share that toolbox."
+    },
+    "connect-tools": {
+      "default": "amira-ai-features",
+      "variants": [
+        {
+          "words": [
+            "mcp"
+          ],
+          "agent": "amira-ai-features"
+        },
+        {
+          "words": [
+            "zapier",
+            "n8n",
+            "automation",
+            "automate",
+            "no code"
+          ],
+          "agent": "catalina-nocode-automation"
+        },
+        {
+          "words": [
+            "webhook",
+            "webhooks",
+            "api",
+            "stripe"
+          ],
+          "agent": "diego-integrations"
+        }
+      ],
+      "why": "AI engineer toolbox builds and checks MCP servers and tool-using agents; no-code and API integration builders for those asks."
+    },
+    "design-work": {
+      "default": "renata-brand-identity",
+      "settings": {
+        "software": "chae-won-ui-design"
+      },
+      "variants": [
+        {
+          "words": [
+            "app",
+            "screen",
+            "screens",
+            "dashboard",
+            "ui",
+            "interface"
+          ],
+          "agent": "chae-won-ui-design"
+        },
+        {
+          "words": [
+            "poster",
+            "flyer",
+            "brochure",
+            "leaflet",
+            "print"
+          ],
+          "agent": "lloyd-print-layout"
+        },
+        {
+          "words": [
+            "infographic",
+            "diagram"
+          ],
+          "agent": "linh-infographics"
+        },
+        {
+          "words": [
+            "motion",
+            "animation",
+            "animated"
+          ],
+          "agent": "ryo-motion"
+        },
+        {
+          "words": [
+            "packaging",
+            "label",
+            "labels"
+          ],
+          "agent": "noor-packaging-layout"
+        }
+      ],
+      "why": "Brand designer covers logos, palette, type and identity; UI, print, infographic, motion and packaging designers for those asks."
+    },
+    "document-work": {
+      "default": "faisal-sops",
+      "settings": {
+        "software": "eleanor-dev-docs"
+      },
+      "variants": [
+        {
+          "words": [
+            "api"
+          ],
+          "agent": "marlon-api-docs"
+        },
+        {
+          "words": [
+            "manual",
+            "manuals",
+            "user guide"
+          ],
+          "agent": "lowri-manuals"
+        }
+      ],
+      "why": "SOP and process documentation specialist; operations toolbox writes SOPs, manuals and handovers."
+    },
+    "engineer-systems": {
+      "default": null,
+      "variants": [
+        {
+          "words": [
+            "circuit",
+            "arduino",
+            "raspberry",
+            "esp32",
+            "firmware",
+            "microcontroller",
+            "sensor"
+          ],
+          "agent": "clive-maker-projects"
+        }
+      ],
+      "why": "No house agent designs antennas, RF parts or PCB layouts; the embedded developer only checks small circuits and firmware."
+    },
+    "find-a-job": {
+      "default": "steven-resumes",
+      "variants": [
+        {
+          "words": [
+            "interview",
+            "interviews"
+          ],
+          "agent": "zainab-interview-prep"
+        },
+        {
+          "words": [
+            "linkedin"
+          ],
+          "agent": "tessa-profiles"
+        }
+      ],
+      "why": "Resume writer in the career coach toolbox; interview prep and profile writers for those asks."
+    },
+    "find-products": {
+      "default": "hassan-product-research",
+      "why": "Ecommerce product research analyst; toolbox judges and ranks niche and product ideas."
+    },
+    "get-found-in-search": {
+      "default": "danielle-seo",
+      "settings": {
+        "store": "ingrid-store-search",
+        "local": "courtney-local-seo"
+      },
+      "variants": [
+        {
+          "words": [
+            "chatgpt",
+            "perplexity",
+            "aeo",
+            "geo",
+            "llms",
+            "ai answers",
+            "ai search",
+            "ai overviews"
+          ],
+          "agent": "bakary-ai-search"
+        },
+        {
+          "words": [
+            "technical seo",
+            "indexing",
+            "indexed",
+            "crawl",
+            "schema",
+            "structured data",
+            "core web vitals"
+          ],
+          "agent": "chaminda-technical-seo"
+        }
+      ],
+      "why": "SEO strategist; store, local, AI-answer and technical SEO specialists where the request says so."
+    },
+    "grow-social": {
+      "default": "ximena-social-media",
+      "variants": [
+        {
+          "words": [
+            "instagram"
+          ],
+          "agent": "abena-instagram"
+        },
+        {
+          "words": [
+            "tiktok",
+            "reels",
+            "shorts",
+            "short form"
+          ],
+          "agent": "emilio-short-video"
+        },
+        {
+          "words": [
+            "youtube"
+          ],
+          "agent": "brianna-youtube-growth"
+        },
+        {
+          "words": [
+            "linkedin"
+          ],
+          "agent": "cormac-linkedin"
+        },
+        {
+          "words": [
+            "pinterest"
+          ],
+          "agent": "chanida-pinterest"
+        },
+        {
+          "words": [
+            "reddit"
+          ],
+          "agent": "mateo-reddit-communities"
+        },
+        {
+          "words": [
+            "influencer",
+            "influencers",
+            "creator",
+            "creators",
+            "ugc"
+          ],
+          "agent": "chelsea-creator-partnerships"
+        }
+      ],
+      "why": "Social media manager plans calendars and writes posts; one variant per platform specialist because the job splits by platform."
+    },
+    "health-and-fitness": {
+      "default": "declan-coaching-sessions",
+      "why": "Personal job; the sports coach toolbox plans basic fitness work for adult beginners, the closest fit."
+    },
+    "help-customers": {
+      "default": "araceli-inbox",
+      "variants": [
+        {
+          "words": [
+            "refund",
+            "refunds",
+            "returns"
+          ],
+          "agent": "hyejin-returns"
+        },
+        {
+          "words": [
+            "reviews",
+            "bad review",
+            "negative review",
+            "trustpilot",
+            "yelp"
+          ],
+          "agent": "brenda-reputation"
+        },
+        {
+          "words": [
+            "help centre",
+            "help center",
+            "faq",
+            "faqs",
+            "knowledge base",
+            "help articles"
+          ],
+          "agent": "ankit-help-docs"
+        },
+        {
+          "words": [
+            "whatsapp"
+          ],
+          "agent": "adaeze-whatsapp-support"
+        }
+      ],
+      "why": "Customer support specialist drafts replies, triage and templates; returns, reviews, help-centre and WhatsApp specialists for those asks."
+    },
+    "hire-people": {
+      "default": "anjali-recruiter",
+      "variants": [
+        {
+          "words": [
+            "onboarding"
+          ],
+          "agent": "paige-onboarding"
+        },
+        {
+          "words": [
+            "handbook",
+            "policy",
+            "policies"
+          ],
+          "agent": "nazmul-handbook"
+        },
+        {
+          "words": [
+            "salary",
+            "salaries",
+            "pay bands",
+            "compensation"
+          ],
+          "agent": "nneka-paybands"
+        }
+      ],
+      "why": "Recruiter plans a hire from role brief to checked offer; onboarding, policy and pay specialists for those asks."
+    },
+    "keep-customers": {
+      "default": "goran-customer-success",
+      "settings": {
+        "store": "holly-store-emails"
+      },
+      "variants": [
+        {
+          "words": [
+            "cancel",
+            "cancellation",
+            "cancellations",
+            "cancelling",
+            "canceling",
+            "churn"
+          ],
+          "agent": "mercedes-cancel-save"
+        }
+      ],
+      "why": "Customer success toolbox covers onboarding, save plans, win-backs and referrals; stores get the lifecycle email marketer."
+    },
+    "launch-and-scale-ads": {
+      "default": "bianca-meta-ads",
+      "settings": {
+        "store": "brett-meta-store-ads",
+        "local": "efrain-meta-lead-ads"
+      },
+      "variants": [
+        {
+          "words": [
+            "tiktok"
+          ],
+          "agent": "skye-tiktok-ads"
+        }
+      ],
+      "why": "Launching and scaling campaigns is media buying; Meta buyer by default, TikTok buyer when named."
+    },
+    "lead-people": {
+      "default": "quincy-managercoach",
+      "variants": [
+        {
+          "words": [
+            "okr",
+            "okrs"
+          ],
+          "agent": "tamsin-okrs"
+        },
+        {
+          "words": [
+            "performance review",
+            "performance reviews",
+            "appraisal",
+            "appraisals"
+          ],
+          "agent": "yolanda-performance"
+        },
+        {
+          "words": [
+            "culture",
+            "values"
+          ],
+          "agent": "naledi-culture"
+        }
+      ],
+      "why": "Management coach toolbox covers one-on-ones, hard feedback, conflict, delegation and change."
+    },
+    "make-image-ads": {
+      "default": "brittany-image-ads",
+      "variants": [
+        {
+          "words": [
+            "carousel",
+            "carousels"
+          ],
+          "agent": "riley-carousels"
+        }
+      ],
+      "why": "Static ad creative strategist writes image ad concepts and layouts; the social media designer makes carousels."
+    },
+    "make-images": {
+      "default": "lavanya-ai-images",
+      "variants": [
+        {
+          "words": [
+            "thumbnail",
+            "thumbnails"
+          ],
+          "agent": "miles-thumbnails"
+        }
+      ],
+      "why": "AI image prompt engineer; toolbox writes scene, brand and character image prompts and fixes AI image faults."
+    },
+    "make-offer": {
+      "default": "delphine-offers",
+      "why": "Offer strategist in the pricing toolbox: package ladders, guarantees, honest urgency and margins."
+    },
+    "make-skills": {
+      "default": "ishaan-customgpt",
+      "why": "Writes instructions, knowledge files and tests for an assistant, which is the shape of a skill."
+    },
+    "make-video-ads": {
+      "default": "bryony-video-ads",
+      "variants": [
+        {
+          "words": [
+            "footage",
+            "recording",
+            "recordings"
+          ],
+          "agent": "tevita-video-edits"
+        },
+        {
+          "words": [
+            "jingle",
+            "jingles"
+          ],
+          "agent": "marsha-jingles"
+        },
+        {
+          "words": [
+            "animated",
+            "animation",
+            "explainer"
+          ],
+          "agent": "bongani-explainer-videos"
+        }
+      ],
+      "why": "Video ad scriptwriter; the editor cuts existing footage, and jingle and animated explainer writers for those asks."
+    },
+    "manage-accounting": {
+      "default": "ruben-monthend",
+      "settings": {
+        "store": "pedro-payouts",
+        "nonprofit": "orla-nonprofit"
+      },
+      "variants": [
+        {
+          "words": [
+            "receipts",
+            "expenses",
+            "expense"
+          ],
+          "agent": "marisol-expenses"
+        },
+        {
+          "words": [
+            "bookkeeping",
+            "categorise",
+            "categorize"
+          ],
+          "agent": "russell-bookkeeping"
+        }
+      ],
+      "why": "Management accountant runs the month-end close and reconciliations; ecommerce and nonprofit accountants for those settings."
+    },
+    "manage-it": {
+      "default": "arnel-officeit",
+      "variants": [
+        {
+          "words": [
+            "continuity",
+            "disaster"
+          ],
+          "agent": "wayne-continuity"
+        }
+      ],
+      "why": "IT administrator plans backups, proves restores and sets up help desk rules; continuity manager for disaster plans."
+    },
+    "manage-personal-finances": {
+      "default": null,
+      "why": "Personal budgeting job; every finance agent is built for business books, so none fits."
+    },
+    "manage-projects": {
+      "default": "whitney-projects",
+      "variants": [
+        {
+          "words": [
+            "construction",
+            "renovation"
+          ],
+          "agent": "vince-construction"
+        },
+        {
+          "words": [
+            "website",
+            "redesign"
+          ],
+          "agent": "itzel-redesign"
+        }
+      ],
+      "why": "Project manager toolbox makes plans, status updates, change requests and six-week capacity plans."
+    },
+    "manage-tax": {
+      "default": "ramesh-taxprep",
+      "why": "Year-end records bookkeeper prepares tax set-asides, sales tax figures and the accountant pack; no tax adviser agent exists."
+    },
+    "money-and-investing": {
+      "default": "vernon-cfo",
+      "variants": [
+        {
+          "words": [
+            "acquisition",
+            "acquire",
+            "acquiring",
+            "diligence",
+            "buy a business",
+            "buying a business"
+          ],
+          "agent": "nasir-diligence"
+        },
+        {
+          "words": [
+            "rental",
+            "property",
+            "real estate",
+            "buy to let"
+          ],
+          "agent": "tesfaye-propertydeals"
+        },
+        {
+          "words": [
+            "exit",
+            "sell my business",
+            "selling my business"
+          ],
+          "agent": "weiming-businesssale"
+        }
+      ],
+      "why": "Fractional CFO toolbox estimates value ranges, weighs big money decisions and explains loans."
+    },
+    "organise-work": {
+      "default": "haruka-admin",
+      "variants": [
+        {
+          "words": [
+            "minutes"
+          ],
+          "agent": "zachary-meetings"
+        },
+        {
+          "words": [
+            "notion",
+            "airtable"
+          ],
+          "agent": "keeley-workspaces"
+        }
+      ],
+      "why": "Executive assistant toolbox runs inbox, agendas, minutes, action trackers and the week plan."
+    },
+    "plan-ad-tests": {
+      "default": "bruno-ad-copy",
+      "why": "Ad creative strategist toolbox plans fair creative tests and turns rival ads into ranked test briefs."
+    },
+    "plan-budgets-and-cash": {
+      "default": "nicole-fpa",
+      "settings": {
+        "nonprofit": "orla-nonprofit"
+      },
+      "variants": [
+        {
+          "words": [
+            "cashflow",
+            "cash flow",
+            "runway"
+          ],
+          "agent": "nadia-cashflow"
+        },
+        {
+          "words": [
+            "financial model",
+            "three year",
+            "projections"
+          ],
+          "agent": "aditya-financemodel"
+        }
+      ],
+      "why": "Budget and forecast analyst in the FP&A toolbox; cash flow and startup model specialists for those asks."
+    },
+    "plan-strategy": {
+      "default": "mehdi-traction-general",
+      "settings": {
+        "store": "camille-traction-ecommerce",
+        "software": "rhys-traction-saas",
+        "local": "bonnie-traction-local"
+      },
+      "variants": [
+        {
+          "words": [
+            "positioning"
+          ],
+          "agent": "arshad-positioning"
+        },
+        {
+          "words": [
+            "coach",
+            "coaches",
+            "coaching",
+            "courses",
+            "online course"
+          ],
+          "agent": "delia-traction-coaching"
+        }
+      ],
+      "why": "Growth leads turn a vague goal into a growth model, pick channels and write the 90-day plan; one per kind of business."
+    },
+    "plan-supply-chain": {
+      "default": "hideki-stock-planner",
+      "variants": [
+        {
+          "words": [
+            "supplier",
+            "suppliers",
+            "sourcing",
+            "manufacturer"
+          ],
+          "agent": "huong-sourcing"
+        },
+        {
+          "words": [
+            "shipping",
+            "freight",
+            "carrier",
+            "carriers",
+            "courier"
+          ],
+          "agent": "kyle-shippingcosts"
+        },
+        {
+          "words": [
+            "warehouse",
+            "picking",
+            "packing"
+          ],
+          "agent": "dominic-warehouse-ops"
+        },
+        {
+          "words": [
+            "production",
+            "manufacturing"
+          ],
+          "agent": "waleed-manufacturing"
+        }
+      ],
+      "why": "Inventory planner sets reorder points and stock buys; sourcing, shipping, warehouse and production planners for those asks."
+    },
+    "product-photos": {
+      "default": "lwazi-photo-style",
+      "variants": [
+        {
+          "words": [
+            "shot list",
+            "shoot",
+            "photoshoot"
+          ],
+          "agent": "kioko-shotlists"
+        }
+      ],
+      "why": "Product photographer toolbox plans image sets, AI scene changes and channel-ready files."
+    },
+    "protect-your-store": {
+      "default": "ebony-store-safety",
+      "why": "Ecommerce security and fraud specialist."
+    },
+    "raise-funding": {
+      "default": "saule-captable",
+      "settings": {
+        "nonprofit": "devi-grant-writer"
+      },
+      "variants": [
+        {
+          "words": [
+            "deck",
+            "pitch"
+          ],
+          "agent": "kunal-pitch-decks"
+        },
+        {
+          "words": [
+            "crowdfunding",
+            "kickstarter",
+            "indiegogo"
+          ],
+          "agent": "gemma-crowdfunding"
+        },
+        {
+          "words": [
+            "grant",
+            "grants"
+          ],
+          "agent": "devi-grant-writer"
+        },
+        {
+          "words": [
+            "loan",
+            "loans",
+            "debt"
+          ],
+          "agent": "regina-debtplan"
+        },
+        {
+          "words": [
+            "investors",
+            "investor",
+            "vc",
+            "vcs",
+            "angels"
+          ],
+          "agent": "jerome-investoroutreach"
+        }
+      ],
+      "why": "Cap table analyst models rounds, SAFEs and conversions; deck, crowdfunding, grant, loan and investor outreach specialists for those asks."
+    },
+    "read-ad-results": {
+      "default": "bogdan-marketing-reports",
+      "variants": [
+        {
+          "words": [
+            "attribution",
+            "incrementality",
+            "lift test"
+          ],
+          "agent": "kendra-attribution"
+        }
+      ],
+      "why": "Marketing performance analyst writes the results read-out and says what to change; attribution analyst for credit questions."
+    },
+    "research-topics": {
+      "default": "lawrence-literature-review",
+      "variants": [
+        {
+          "words": [
+            "market",
+            "market size",
+            "tam"
+          ],
+          "agent": "keisha-market-research"
+        },
+        {
+          "words": [
+            "history",
+            "historical"
+          ],
+          "agent": "julian-history-research"
+        },
+        {
+          "words": [
+            "fact check",
+            "verify",
+            "claims"
+          ],
+          "agent": "lubna-source-checker"
+        }
+      ],
+      "why": "Research assistant toolbox writes cited reports, literature reviews and evidence tables."
+    },
+    "run-google-ads": {
+      "default": "nikhil-google-ads",
+      "settings": {
+        "store": "darren-shopping-ads",
+        "local": "wyatt-local-google-ads"
+      },
+      "variants": [
+        {
+          "words": [
+            "shopping",
+            "pmax",
+            "performance max",
+            "merchant center",
+            "feed"
+          ],
+          "agent": "darren-shopping-ads"
+        }
+      ],
+      "why": "Google Ads media buyer; Shopping and PMax buyer for stores, local lead gen buyer for local services."
+    },
+    "run-your-store": {
+      "default": "imelda-merchandising",
+      "variants": [
+        {
+          "words": [
+            "etsy"
+          ],
+          "agent": "ligaya-etsy"
+        },
+        {
+          "words": [
+            "fulfilment",
+            "fulfillment",
+            "dispatch",
+            "late orders"
+          ],
+          "agent": "helga-orders-watch"
+        },
+        {
+          "words": [
+            "stock",
+            "inventory",
+            "reorder"
+          ],
+          "agent": "hideki-stock-planner"
+        }
+      ],
+      "why": "Ecommerce merchandiser runs the weekly trading review, ranges, promotions and slow stock; fulfilment and stock planners for those asks."
+    },
+    "secure-code": {
+      "default": "delroy-secure-code",
+      "why": "Application security engineer reviews and fixes code, secrets and sign-in gaps."
+    },
+    "sell-and-negotiate": {
+      "default": "felicia-discovery",
+      "variants": [
+        {
+          "words": [
+            "negotiate",
+            "negotiation",
+            "negotiating"
+          ],
+          "agent": "hector-negotiation"
+        },
+        {
+          "words": [
+            "cold",
+            "outreach",
+            "prospecting",
+            "prospects"
+          ],
+          "agent": "isaiah-outreach"
+        },
+        {
+          "words": [
+            "proposal",
+            "proposals",
+            "rfp",
+            "tender"
+          ],
+          "agent": "claire-proposals"
+        }
+      ],
+      "why": "Sales coach toolbox covers discovery, objections, close plans and stalled deals; negotiation, outbound and proposal specialists for those asks."
+    },
+    "sell-on-amazon": {
+      "default": "gina-amazon-launch",
+      "variants": [
+        {
+          "words": [
+            "ppc",
+            "sponsored",
+            "acos",
+            "ads"
+          ],
+          "agent": "khoa-amazon-ppc"
+        }
+      ],
+      "why": "Amazon account manager writes listings and launch plans; PPC specialist for ads."
+    },
+    "set-prices": {
+      "default": "olu-pricing",
+      "settings": {
+        "software": "osman-subscriptionpricing"
+      },
+      "why": "Pricing strategist sets prices and packages from costs, rivals and buyers; SaaS pricing strategist for software."
+    },
+    "set-up-ai": {
+      "default": "ishaan-customgpt",
+      "variants": [
+        {
+          "words": [
+            "workflow",
+            "workflows",
+            "automate",
+            "automation"
+          ],
+          "agent": "glenn-aiworkflow"
+        },
+        {
+          "words": [
+            "policy",
+            "governance"
+          ],
+          "agent": "keith-airules"
+        },
+        {
+          "words": [
+            "training",
+            "workshop"
+          ],
+          "agent": "jun-ai-skills"
+        }
+      ],
+      "why": "Sets up custom GPTs and Claude Projects with instructions, knowledge files and tests; workflow, governance and training specialists for those asks."
+    },
+    "set-up-store": {
+      "default": "javier-store-launch",
+      "variants": [
+        {
+          "words": [
+            "etsy"
+          ],
+          "agent": "ligaya-etsy"
+        },
+        {
+          "words": [
+            "amazon"
+          ],
+          "agent": "gina-amazon-launch"
+        },
+        {
+          "words": [
+            "tiktok shop"
+          ],
+          "agent": "jaylen-tiktokshop"
+        },
+        {
+          "words": [
+            "migrate",
+            "migrating",
+            "migration",
+            "replatform"
+          ],
+          "agent": "nikolai-store-migration"
+        }
+      ],
+      "why": "Shopify launch specialist plans pages, payments, shipping, tax and the pre-launch check; marketplace and migration specialists for those asks."
+    },
+    "ship-and-host": {
+      "default": "anton-docker-ci",
+      "variants": [
+        {
+          "words": [
+            "cloud bill",
+            "cloud cost",
+            "cloud costs",
+            "cost savings"
+          ],
+          "agent": "arturo-cloud-costs"
+        },
+        {
+          "words": [
+            "architecture"
+          ],
+          "agent": "asel-system-architect"
+        }
+      ],
+      "why": "DevOps engineer builds CI, Docker, deploys and go-live runbooks."
+    },
+    "speak-and-persuade": {
+      "default": "bassam-talks-pitches",
+      "variants": [
+        {
+          "words": [
+            "wedding",
+            "eulogy",
+            "toast",
+            "funeral",
+            "best man",
+            "retirement"
+          ],
+          "agent": "wiremu-speeches"
+        },
+        {
+          "words": [
+            "slides",
+            "slide deck"
+          ],
+          "agent": "rory-slide-design"
+        }
+      ],
+      "why": "Business speechwriter writes talks and pitches around one story and one ask."
+    },
+    "speed-up-store": {
+      "default": "ernesto-page-speed",
+      "why": "Web performance specialist; toolbox includes speed clean-ups for Shopify and WordPress."
+    },
+    "study-and-practice": {
+      "default": "sophie-study-notes",
+      "variants": [
+        {
+          "words": [
+            "flashcards",
+            "flashcard",
+            "anki"
+          ],
+          "agent": "xin-flashcards"
+        },
+        {
+          "words": [
+            "spanish",
+            "french",
+            "german",
+            "italian",
+            "japanese",
+            "mandarin",
+            "korean",
+            "portuguese",
+            "vocabulary",
+            "language learning"
+          ],
+          "agent": "yadira-language-practice"
+        }
+      ],
+      "why": "Tutor turns material into revision notes, self-tests and a plan to the exam."
+    },
+    "study-competitors": {
+      "default": "anders-competitor-ads",
+      "variants": [
+        {
+          "words": [
+            "positioning",
+            "pricing"
+          ],
+          "agent": "kojo-competitor-analysis"
+        }
+      ],
+      "why": "Competitor ad research analyst tears down rival ads into ranked test ideas; job is research so an analyst leads."
+    },
+    "teach-and-train": {
+      "default": "sharon-lesson-plans",
+      "variants": [
+        {
+          "words": [
+            "staff",
+            "employees",
+            "employee",
+            "workplace"
+          ],
+          "agent": "oksana-training"
+        },
+        {
+          "words": [
+            "online course",
+            "courses",
+            "course outline"
+          ],
+          "agent": "darya-courses"
+        }
+      ],
+      "why": "Curriculum developer writes lesson plans, worked examples, worksheets and quizzes; staff training and online course designers for those asks."
+    },
+    "test-an-idea": {
+      "default": "lewis-idea-validation",
+      "variants": [
+        {
+          "words": [
+            "interview",
+            "interviews",
+            "customer discovery"
+          ],
+          "agent": "jonah-customer-discovery"
+        }
+      ],
+      "why": "Idea validation analyst ranks the riskiest assumption and picks one cheap test; job is research so an analyst leads."
+    },
+    "test-and-fix-code": {
+      "default": "earl-debugger",
+      "variants": [
+        {
+          "words": [
+            "refactor",
+            "refactoring",
+            "legacy"
+          ],
+          "agent": "bart-legacy-refactor"
+        },
+        {
+          "words": [
+            "review",
+            "pull request",
+            "pr"
+          ],
+          "agent": "darius-code-review"
+        },
+        {
+          "words": [
+            "unit tests",
+            "e2e",
+            "playwright",
+            "cypress",
+            "jest",
+            "pytest",
+            "test suite"
+          ],
+          "agent": "dagny-test-writer"
+        }
+      ],
+      "why": "Application support engineer diagnoses errors and hands back a tested fix; refactor, review and test automation specialists for those asks."
+    },
+    "test-store-changes": {
+      "default": "imran-conversion",
+      "variants": [
+        {
+          "words": [
+            "significance",
+            "statistically",
+            "sample size"
+          ],
+          "agent": "harriet-abtests"
+        }
+      ],
+      "why": "Shopify CRO specialist ranks and designs store tests; experimentation analyst reads whether a test really won."
+    },
+    "think-and-decide": {
+      "default": "ugo-chiefofstaff",
+      "why": "Chief of staff toolbox writes decision briefs, pre-mortems and cuts priorities to three."
+    },
+    "think-with-minds": {
+      "default": null,
+      "why": "The job convenes library minds as a council; no house agent leads it."
+    },
+    "track-numbers": {
+      "default": "shalini-kpireports",
+      "settings": {
+        "store": "intan-storereports",
+        "software": "nisha-saasmetrics"
+      },
+      "variants": [
+        {
+          "words": [
+            "ga4",
+            "utm",
+            "utms",
+            "pixel",
+            "event tracking",
+            "conversion tracking"
+          ],
+          "agent": "felix-ga4"
+        },
+        {
+          "words": [
+            "dashboard",
+            "dashboards"
+          ],
+          "agent": "gustavo-dashboards"
+        }
+      ],
+      "why": "KPI and board reporting analyst picks the numbers and builds the report; tracking and dashboard builders for those asks."
+    },
+    "understand-customers": {
+      "default": "mauricio-customer-interviews",
+      "variants": [
+        {
+          "words": [
+            "survey",
+            "surveys",
+            "questionnaire"
+          ],
+          "agent": "megan-survey-design"
+        },
+        {
+          "words": [
+            "reviews",
+            "review mining"
+          ],
+          "agent": "kimberly-review-mining"
+        },
+        {
+          "words": [
+            "segments",
+            "segmentation",
+            "personas"
+          ],
+          "agent": "desmond-segments"
+        }
+      ],
+      "why": "Customer researcher plans and synthesises interviews; job is research so a researcher leads."
+    },
+    "work-with-audio": {
+      "default": "aroha-podcast",
+      "variants": [
+        {
+          "words": [
+            "subtitles",
+            "subtitle",
+            "captions",
+            "srt",
+            "vtt"
+          ],
+          "agent": "phoebe-captions"
+        },
+        {
+          "words": [
+            "jingle",
+            "jingles",
+            "music"
+          ],
+          "agent": "marsha-jingles"
+        },
+        {
+          "words": [
+            "dub",
+            "dubbing",
+            "dubbed"
+          ],
+          "agent": "behrouz-translation"
+        }
+      ],
+      "why": "Podcast producer toolbox covers transcripts, edit plans, show notes, scripts and clips."
+    },
+    "work-with-files": {
+      "default": "rory-slide-design",
+      "variants": [
+        {
+          "words": [
+            "spreadsheet",
+            "excel",
+            "sheets",
+            "workbook",
+            "xlsx"
+          ],
+          "agent": "lee-spreadsheet-help"
+        },
+        {
+          "words": [
+            "form",
+            "forms"
+          ],
+          "agent": "ramona-business-forms"
+        },
+        {
+          "words": [
+            "chart",
+            "charts",
+            "graph",
+            "graphs"
+          ],
+          "agent": "katya-charts"
+        }
+      ],
+      "why": "Presentation designer toolbox builds editable decks, document layouts and templates; spreadsheet, forms and chart specialists for those asks."
+    },
+    "write-ad-copy": {
+      "default": "bruno-ad-copy",
+      "variants": [
+        {
+          "words": [
+            "radio"
+          ],
+          "agent": "malik-audio-ads"
+        },
+        {
+          "words": [
+            "print",
+            "flyer",
+            "brochure",
+            "billboard",
+            "poster"
+          ],
+          "agent": "citlali-print-copy"
+        },
+        {
+          "words": [
+            "direct mail",
+            "postcard",
+            "mailer"
+          ],
+          "agent": "roberta-direct-mail"
+        }
+      ],
+      "why": "Direct response ad copywriter writes hooks, variations and offer-first ads; offline ad copywriters for radio, print and mail."
+    },
+    "write-and-tell-stories": {
+      "default": "astrid-ghostwriter",
+      "variants": [
+        {
+          "words": [
+            "book",
+            "chapter",
+            "novel"
+          ],
+          "agent": "gillian-business-books"
+        },
+        {
+          "words": [
+            "edit",
+            "proofread",
+            "proofreading"
+          ],
+          "agent": "beverley-editor"
+        }
+      ],
+      "why": "Ghostwriter toolbox writes founder stories, opinion pieces and chapters in the client's voice; no fiction writer exists."
+    },
+    "write-emails": {
+      "default": "candice-email-marketing",
+      "settings": {
+        "store": "holly-store-emails",
+        "nonprofit": "brigid-nonprofit-campaigns"
+      },
+      "variants": [
+        {
+          "words": [
+            "newsletter issue",
+            "newsletter edition",
+            "weekly newsletter",
+            "monthly newsletter"
+          ],
+          "agent": "chiara-newsletter"
+        },
+        {
+          "words": [
+            "cold",
+            "outreach",
+            "prospecting",
+            "prospects"
+          ],
+          "agent": "isaiah-outreach"
+        },
+        {
+          "words": [
+            "deliverability",
+            "spam",
+            "dmarc",
+            "dkim",
+            "spf",
+            "inbox placement"
+          ],
+          "agent": "dawit-deliverability"
+        },
+        {
+          "words": [
+            "html",
+            "mjml"
+          ],
+          "agent": "minji-emailhtml"
+        }
+      ],
+      "why": "Email marketing specialist plans and writes campaigns and sequences; store, nonprofit, newsletter, cold, deliverability and HTML specialists where named."
+    },
+    "write-landing-page": {
+      "default": "bao-website-copy",
+      "why": "Conversion copywriter toolbox opens with writing a landing page for one action."
+    }
+  },
+  "setting_words": {
+    "nonprofit": [
+      "nonprofit",
+      "nonprofits",
+      "non profit",
+      "charity",
+      "charities",
+      "ngo",
+      "donor",
+      "donors",
+      "donation",
+      "donations",
+      "fundraising",
+      "fundraiser",
+      "volunteers"
+    ],
+    "local": [
+      "local",
+      "salon",
+      "spa",
+      "barber",
+      "barbershop",
+      "hairdresser",
+      "plumber",
+      "plumbing",
+      "electrician",
+      "roofer",
+      "roofing",
+      "hvac",
+      "dentist",
+      "dental",
+      "clinic",
+      "physio",
+      "chiropractor",
+      "vet",
+      "gym",
+      "restaurant",
+      "cafe",
+      "bakery",
+      "florist",
+      "landscaping",
+      "mechanic",
+      "garage",
+      "realtor",
+      "tradesperson",
+      "takeaway",
+      "yoga",
+      "pilates"
+    ],
+    "store": [
+      "store",
+      "online shop",
+      "webshop",
+      "ecommerce",
+      "e commerce",
+      "dtc",
+      "d2c",
+      "shopify",
+      "woocommerce",
+      "bigcommerce",
+      "etsy",
+      "jewellery",
+      "jewelry",
+      "apparel",
+      "clothing",
+      "fashion",
+      "skincare",
+      "cosmetics",
+      "candles",
+      "shoes",
+      "sneakers",
+      "supplements",
+      "sku",
+      "skus",
+      "aov"
+    ],
+    "software": [
+      "saas",
+      "software",
+      "app",
+      "apps",
+      "mrr",
+      "arr",
+      "ios",
+      "android"
+    ]
+  }
+}

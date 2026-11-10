@@ -5,8 +5,8 @@ export const SINGLE_LEAD_METHOD = [
   'One lead does this job. You are the orchestrator.',
   '1 Ask the `questions` in one message. Each has a default, so "you decide" is an answer.',
   '2 Write the spec sheet (`next_action.context` pre-fills it): the job in one sentence, deliverables with counts, 5 to 7 acceptance tests.',
-  '3 Load the lead with `next_action.tool`. Hand it the answers, the spec sheet and the brief. It uses the toolbox it carries and does not search the library.',
-  '4 The lead grounds the job in the client\'s real site, files or data, makes about three real candidates of the part that decides the outcome, and builds the best in full.',
+  '3 Load the lead with `next_action` (or its `pack.one_file`). Hand it the answers, the spec sheet and the brief. It works from its toolbox.md and does not search the library.',
+  '4 The lead grounds the job in the client\'s real site, files or data, makes about three candidates of the part that decides the outcome and builds the best.',
   '5 A fresh reviewer who has not seen the drafts checks the work against `rubric`: a new sub-agent, or a separate pass labelled SAME-CONTEXT. Every gate must pass.',
   '6 The lead hands back. Check each acceptance test and each gate against the work yourself. Any fail: send it back once, naming the failed tests. Hand over the work first, opened by 3 to 5 lines: what this is, the main decision and why, what to check before use.',
   'Nothing here permits sending, spending, publishing or deleting. Those stop for the owner.',
@@ -34,7 +34,7 @@ One lead owns the deliverable. Helpers work for the lead. You, the orchestrator,
 ## Who does what
 
 - **Orchestrator (you, the coordinator seat).** Understand the request. Ask the \`questions\` in one message; each has a default, so "you decide" is a full answer. Write the spec sheet. Hand over to the lead. At the end, check the finished work against each acceptance test yourself. You never make the work.
-- **Team lead (\`team.lead\`).** Owns the deliverable from first draft to hand-over. Decides which helper does what, briefs them, joins their work and checks it before review.
+- **Team lead (\`team.lead\`).** Load it with \`team.lead.agent\` (or its \`pack.one_file\`); its pack carries its toolbox. Owns the deliverable from first draft to hand-over. Decides which helper does what, briefs them, joins their work and checks it before review.
 - **Helpers (\`team.helpers\`).** Each has one job, written beside its name. A maker never reviews. A reviewer never makes. In mixed work (\`team.makes\`) each maker makes its own kind of piece, and one reviewer both chooses between the candidates and reads the finished work, in a fresh context each time.
 - **Fresh reviewer (the judge).** Sees only the request, the spec sheet, the rubric and the finished work. Never the drafts or the debate.
 

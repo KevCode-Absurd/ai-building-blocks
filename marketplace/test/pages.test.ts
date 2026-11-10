@@ -193,3 +193,27 @@ test("the home page has a search form that works without scripts, and a search p
   // Each line says what the agent does, so nobody has to open a profile to learn it only audits.
   assert.match(html, /(Makes|Plans and briefs|Reviews and advises): /);
 });
+
+test("public pages are kept at the edge for a few minutes, and share links and misses are not", async () => {
+  const store = new Map<string, Response>();
+  const fake = { match: async (k: Request) => store.get(k.url)?.clone(), put: async (k: Request, r: Response) => { store.set(k.url, r); } };
+  (globalThis as any).caches = { default: fake };
+  try {
+    const t = await testEnv(PROD);
+    const first = await t.api("GET", "/agents");
+    assert.equal(first.status, 200);
+    assert.equal(first.res.headers.get("x-edge-cache"), "miss");
+    await t.settle();
+    const [key, kept] = [...store.entries()][0]!;
+    assert.match(key, /\/agents\?__shell=[a-z0-9]+$/, "the key carries the shell fingerprint");
+    assert.equal(kept.headers.get("cache-control"), "public, max-age=300");
+    const second = await t.api("GET", "/agents");
+    assert.equal(second.res.headers.get("x-edge-cache"), "hit");
+    assert.equal(second.res.headers.get("cache-control"), "public, max-age=0, must-revalidate", "browsers still check every time");
+    assert.equal(second.body, first.body);
+    await t.api("GET", "/agents/no-such-agent-here");
+    await t.api("GET", `/agents/${agent.id}?via=someone`);
+    await t.settle();
+    assert.equal(store.size, 1, "a 404 and a share link are never stored");
+  } finally { delete (globalThis as any).caches; }
+});

@@ -305,6 +305,15 @@ async function shell(env: Env, url: URL): Promise<string | null> {
 /** Tests only. */
 export function clearShellCache(): void { shellCache = null; }
 
+/** A short fingerprint of the built shell. It changes with every deploy that changes the app's asset names. */
+export async function shellVersion(env: Env, url: URL): Promise<string | null> {
+  const html = await shell(env, url);
+  if (html === null) return null;
+  let h = 0x811c9dc5;
+  for (let i = 0; i < html.length; i++) { h ^= html.charCodeAt(i); h = Math.imul(h, 0x01000193); }
+  return (h >>> 0).toString(36);
+}
+
 /** The head tags for one page. */
 export function headTags(env: Env, view: PageView): string {
   const origin = originOf(env);

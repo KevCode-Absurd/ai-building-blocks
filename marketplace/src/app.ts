@@ -4,7 +4,7 @@ import { compile, dispatch, errorResponse } from "./core/http.ts";
 import { coreRoutes } from "./core/routes.ts";
 import { moduleRoutes, scheduledTasks } from "./modules/index.ts";
 import "./modules/fakes.ts";
-import { llmsTxt, pageResponse, robotsTxt, sitemapXml } from "./pages.ts";
+import { llmsTxt, pageResponse, robotsTxt, shellVersion, sitemapXml } from "./pages.ts";
 import { shareRedirect } from "./modules/experts/profiles.ts";
 
 const compiled = compile([...coreRoutes, ...moduleRoutes]);
@@ -30,12 +30,43 @@ export async function handleFetch(req: Request, env: Env, exec: ExecutionContext
     if (share) return (await shareRedirect(env, req, share[1]!)) ?? errorResponse(404, "not_found", "There is no expert at this address.");
     // A page (no file extension): its own head tags and plain content, and a real 404 for unknown addresses.
     if (!/\.[A-Za-z0-9]+$/.test(url.pathname)) {
-      const page = await pageResponse(req, env);
+      const page = await cachedPage(req, env, exec, url);
       if (page) return page;
     }
   }
   if (env.ASSETS) return env.ASSETS.fetch(req);
   return errorResponse(404, "not_found", "There is nothing at this address.");
+}
+
+/** How long a public page is kept at the edge. Agents and profiles change rarely, and each deploy starts a fresh copy. */
+const EDGE_PAGE_SECONDS = 300;
+
+/**
+ * A page from this data centre's cache when there is a fresh copy, else built and kept there.
+ * Pages are the same for every visitor (sign-in state loads in the browser), so only a share link (?via=, which
+ * sets a cookie) and non-200 answers skip the cache. The key carries the shell's fingerprint, so a deploy never
+ * serves old HTML that points at asset files that are gone.
+ */
+async function cachedPage(req: Request, env: Env, exec: ExecutionContext, url: URL): Promise<Response | null> {
+  const cache = (globalThis as { caches?: { default?: Cache } }).caches?.default;
+  if (!cache || req.method !== "GET" || url.searchParams.has("via")) return pageResponse(req, env);
+  const version = await shellVersion(env, url);
+  if (!version) return pageResponse(req, env);
+  const key = new Request(`${url.origin}${url.pathname}${url.search}${url.search ? "&" : "?"}__shell=${version}`, { method: "GET" });
+  const hit = await cache.match(key).catch(() => undefined);
+  if (hit) {
+    const out = new Response(hit.body, hit);
+    out.headers.set("cache-control", "public, max-age=0, must-revalidate");
+    out.headers.set("x-edge-cache", "hit");
+    return out;
+  }
+  const page = await pageResponse(req, env);
+  if (!page || page.status !== 200 || page.headers.has("set-cookie")) return page;
+  const copy = new Response(page.clone().body, page);
+  copy.headers.set("cache-control", `public, max-age=${EDGE_PAGE_SECONDS}`);
+  exec.waitUntil(cache.put(key, copy).catch(() => undefined));
+  page.headers.set("x-edge-cache", "miss");
+  return page;
 }
 
 export async function handleScheduled(env: Env): Promise<void> {

@@ -1,0 +1,174 @@
+new_slug: make-ad-concept-spread
+name: "Make an ad concept spread"
+summary: "Give it your ad brief and product facts. You get nine or more ideas, the best ones made, and one lead ad."
+job: make-image-ads
+thinking: high
+thinking_why: "It must find ideas that differ in promise and proof, write them in full and make the visuals."
+
+headline: "Get nine ad ideas, then see the best ones made"
+subhead: Give it your ad brief, your product facts and your brand file. It writes at least nine one-line ad ideas that differ in what they promise, how they prove it and their format. It writes the strongest in full and makes each visual. A fresh reviewer picks the lead ad.
+
+explain: |
+  Ask an AI for five ads and you often get one idea written five ways. You then pay to test five versions of the same bet, and learn little.
+
+  This skill starts wide. It writes at least nine ideas on one line each. They must cover at least three different promises, three kinds of proof and three formats. Each proof is a real fact from your product page, with its date. Then it writes the strongest ideas in full, with every field the ad platform asks for.
+
+  It also makes the picture. If your AI has an image tool, it makes a real image from your product photos. If not, it builds a layout mock-up at the real size. The mock-up has the real words in your fonts and a clear note for each photo still needed. A designer can build from that. A script puts the ads side by side at phone size, and a fresh reviewer picks the lead.
+
+when:
+  - You need a set of ads for Meta, TikTok or another social feed.
+  - Your last ad set was the same idea in different words.
+  - You want something a designer can build from today.
+  - You are about to test ads and want each one to be a real test.
+
+not_for:
+  - One finished ad that needs checking. Use the Pre-launch ad checker.
+  - Search ads with text only. This skill is for ads with a picture or video.
+  - Campaign setup, budgets and audiences. Use a campaign planner.
+
+you_give:
+  - Your ad brief, with the buyer, the placements and how many ads
+  - Your product facts, such as price, materials and proof, with source and date
+  - Your brand file, for fonts, colours and voice
+  - Real product photos (optional)
+you_get:
+  - A table of nine or more one-line ad ideas
+  - The strongest ideas written in full, with character counts
+  - A visual for each, as a real image or a layout mock-up at the real size
+  - Two pictures that show the ads side by side, at desktop and phone size
+  - One lead ad, the runner-up, and ideas to test next
+
+how_to_use:
+  - Add the skill to an AI that can run code. An image tool helps but is not needed.
+  - Give it your brief, your product facts and your brand file.
+  - It checks the product is in stock and at the stated price, then writes the idea table.
+  - It writes the strongest ideas in full and makes each visual.
+  - It runs the compare script from Make three first screens. The script needs Node.js 18 or later and Playwright for the pictures.
+  - A fresh reviewer picks the lead ad. You get the full set with one recommendation.
+
+how_it_works:
+  - title: Checks the buyer can act
+    text: Confirms the product is live, in stock and at the stated price before any ad is written.
+  - title: Spreads the ideas
+    text: Writes nine or more one-line ideas across different promises, proofs and formats.
+  - title: Picks what to write up
+    text: Takes the strongest ideas that still cover different promises.
+  - title: Writes each ad in full
+    text: Fills every field the platform needs and counts the characters.
+  - title: Makes each visual
+    text: Makes a real image with an image tool, or a layout mock-up at the real size without one.
+  - title: Compares at phone size
+    text: Puts the ads side by side with neutral labels, so weak or look-alike ads stand out.
+  - title: Hands the choice to someone else
+    text: Uses the Outside chooser to pick the lead ad and name any ad to replace.
+
+output_shape: |
+  AD SET
+  Lead ad: <name it by what it promises> | Runner-up: <one line>
+  Why: <the chooser's reason> | Chosen by: <fresh reviewer | second chat | SAME-CONTEXT>
+
+  AD <n>
+  Promise | Proof (source, date) | Format, placement and ratio
+  Primary text (<count>) | Headline (<count>) | Description (<count>) | Button | Link
+  On-image words | Visual: <file> (<image | mock-up>)
+
+  NEXT TO TEST
+  <the unused one-line concepts worth a later round>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+example:
+  business: allbirds
+  input: |
+    [the skill]
+
+    3 Meta feed ads for the Allbirds Men's Tree Runner NZ, cold audience, US.
+    Facts: the product page and product feed on allbirds.com, read 10 Nov 2026.
+    Show me the one-line concepts first.
+  output: |
+    BUYER CHECK (10 Nov 2026): Men's Tree Runner NZ, Natural Black (Blizzard
+    Sole), $100, 9 of 14 sizes in stock. Can act.
+
+    # | Promise | Proof (allbirds.com, 10 Nov 2026) | Format | The ad in one line
+    1 | One shoe for the whole trip | Page: "the ultimate travel companion" | Single image | One pair in the carry-on. Tree Runner NZ, $100.
+    2 | They wash clean | Page: "Yes, they're machine washable." | Short demo video | Muddy on Sunday. Into the wash. Air dry. Back on.
+    3 | Cool feet | Page: "Breezy tree knit made from eucalyptus fiber" | Close-up image | A breezy knit made from eucalyptus fiber. Your feet can tell.
+    4 | Soft underfoot | Sugarcane-based SweetFoam, memory foam insole | Carousel, layer by layer | What is under your foot: sugarcane foam, then memory foam.
+    5 | Made from plants | Tree fiber, sugarcane, laces from recycled bottles | Text only, like a label | Ingredients: tree fiber, sugarcane, merino wool, recycled bottles.
+    6 | The classic, updated | Page: "The latest iteration of our fan-fave Tree Runner" | Then and now | Ten years on, the Tree Runner got an update.
+    7 | One pair, four uses | Page: best for traveling, walking, commuting, everyday | Carousel, four scenes | Travel. Walk. Commute. Everyday. One pair, $100.
+    8 | Light on your feet | Weight 8.9 oz in men's size 9 | Image on a kitchen scale | 8.9 oz. That is the whole shoe.
+    9 | Soft inside | Merino-wool blend lining | Person to camera | The inside is lined with a merino wool blend.
+
+    Promises: 9. Proofs: 9. Formats: 6.
+    Written up next: 2, 7 and 8. They cover three promises and three formats.
+
+    (The example stops here. The three written ads, their visuals, the
+    compare sheets and the chooser's reply are not shown.)
+
+tweaks:
+  - what: How many ads
+    how: Say the number you need. The idea table stays at nine or more, so there is always a next round.
+  - what: Placements
+    how: Name them, such as feed, stories or reels. Each visual is made at that size.
+  - what: Formats you can make
+    how: Say if you cannot shoot video or new photos. The ideas will use formats you can produce.
+  - what: What must appear
+    how: Name anything every ad needs, such as the price or a legal line.
+
+judge:
+  - The idea table has at least three different promises, proofs and formats.
+  - No two written ads make the same promise.
+  - Every ad names the brand and the price and has a landing link.
+  - Every proof has a source and a date.
+  - Each visual exists as a file at the real size, and a mock-up is called a mock-up.
+
+test:
+  - Cover the product name in each idea. If a rival could run it unchanged, it should not be on the list.
+  - Look at the phone picture. You should be able to read the words on each ad.
+  - Ask where one fact in an ad came from. There should be a source and a date.
+
+improve:
+  - Add your past ads and their results, so new ideas do not repeat what failed.
+  - Add the formats your team can make each month.
+  - Add your approved claims, so every proof comes from that list.
+  - Pair it with the Claim source trace before launch.
+
+works_best_with:
+  tools:
+    - {name: "A coding assistant that can run code", why: "Builds the mock-ups and runs the compare script."}
+    - {name: "An image tool", why: "Makes real images from your product photos. Without one you get layout mock-ups."}
+    - {name: "Node.js with Playwright", why: "Makes the side-by-side pictures at desktop and phone size."}
+  inputs:
+    - "Real product photos"
+    - "Your product page, for facts with dates"
+    - "Past ads and how they did"
+
+terms:
+  - term: Concept
+    meaning: One ad idea, with what it promises, how it proves it and its format.
+  - term: Mock-up
+    meaning: A layout at the real size that shows where the words and photo go. A designer builds the final ad from it.
+  - term: Cold audience
+    meaning: People who have never heard of your brand.
+
+output_sample:
+  input:
+    - Your ad brief
+    - Your product facts with sources and dates
+    - Your brand file
+  prerequisites:
+    - An AI that can run code, to run the compare script that comes with Make three first screens
+    - An image tool, if you want real images and not mock-ups
+  output:
+    - name: Idea table
+      contains: Nine or more one-line ad ideas across different promises, proofs and formats.
+    - name: Written ads
+      contains: Each ad in full, with character counts, the brand, the price and the link.
+    - name: Visuals
+      contains: A real image or a layout mock-up for each ad, at the real size.
+    - name: The choice
+      contains: The lead ad, the runner-up and who chose.
+    - name: Next to test
+      contains: The unused ideas worth a later round.

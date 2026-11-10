@@ -1,0 +1,190 @@
+new_slug: clients-eye-check
+name: "Client's-eye check"
+summary: "Give it your brief, the finished work and your facts. A fresh reviewer reads it as your client and lists fixes."
+job: think-and-decide
+thinking: medium
+thinking_why: "The reviewer must read as the client, test each line against the brief and the facts, and list fixes."
+
+headline: "Have your work read the way your client will read it"
+subhead: Give it the brief, the finished work and your facts. A fresh reviewer who has not seen how the work was made reads it as the client. It answers five questions, marks every claim as sourced or not, and returns a fix list. Your AI fixes, cuts and stops.
+
+explain: |
+  Whoever made a piece of work reads it with the whole job in their head. Gaps fill themselves in. The client has only the brief and what lands in front of them. So work that feels done to its maker can still leave the client with questions.
+
+  This check puts a reader in the client's seat. The reviewer gets four things and nothing else. These are the brief, the tests the work must pass, the finished work and your facts with their sources. It does not get the notes or the versions that lost.
+
+  It answers five questions. Does the work pass each test, with the line that proves it? Which piece is weakest? What would the client have to ask before using it? What could be cut? Which claims have no source? It also lists leftovers, such as a blank to fill in or a note about method. Your AI then fixes each item, removes every claim with no source, and stops after one round.
+
+when:
+  - Just before you hand over a page, ad set, email series, plan or any written work.
+  - After a long job, when the maker can no longer see the work fresh.
+  - When work must be right first time, with no back and forth.
+  - When past work came back with "what does this mean?" from the client.
+
+not_for:
+  - Choosing between several versions. Use the Outside chooser.
+  - A draft that is still changing. Finish it first.
+  - A legal review. Ask a qualified reviewer.
+
+you_give:
+  - The brief, in the client's own words
+  - Five to seven tests the work must pass
+  - The finished work, as the client will get it
+  - Your facts, with sources and dates
+you_get:
+  - Pass or fail for each test, with the line that proves it
+  - The weakest piece, and why a buyer would skip it
+  - Each thing the client would have to ask before using the work
+  - What can be cut
+  - Every claim marked as sourced or not, and a numbered fix list
+
+how_to_use:
+  - Add the skill to your AI. One that can start a second agent works best.
+  - Give it the brief, the tests, the finished work and your facts.
+  - It writes the packet and starts a fresh reviewer, or gives you the packet to paste into a new chat.
+  - Read the fix list. Your AI fixes each item and removes any claim with no source.
+  - It stops after one round, unless a test about the main job failed.
+
+how_it_works:
+  - title: Freezes the work
+    text: Checks the final version, not a draft.
+  - title: Writes the packet
+    text: Puts the brief, the tests, the work and the facts in one fixed message.
+  - title: Starts a fresh reviewer
+    text: Uses a new agent, a second chat, or a labelled same-context pass, in that order.
+  - title: Asks five questions
+    text: Tests passed, weakest piece, what the client would ask, what to cut and which claims have no source.
+  - title: Fixes, cuts and stops
+    text: Applies the fix list, removes unsourced claims and leftovers, and does one round only.
+
+output_shape: |
+  CLIENT'S-EYE CHECK
+  Run as: <new sub-agent | second chat | SAME-CONTEXT>
+  Tests: <n passed of n> | Failed and fixed: <which>
+  Weakest piece: <what it was, what changed>
+  Cut: <what went>
+  Claims: <n listed, n sourced, n rewritten, n cut>
+  Leftovers removed: <what>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+example:
+  business: plausible
+  input: |
+    [the skill]
+
+    Brief: the first email for people who start the Plausible Analytics
+    free trial. It should get them to add the script.
+    Tests: 1. Does it say the one thing to do next? 2. Could I send it
+    today with no edits? 3. Is every fact on plausible.io today? 4. Is it
+    clear on one read?
+    The email:
+    "Subject: Welcome aboard!
+    Thanks so much for signing up. Join 25,000+ teams who trust us. Set-up
+    takes two minutes. Add the script from [link] or explore the demo or
+    read our guides. Your trial lasts 30 days."
+    Facts: plausible.io, read 10 Nov 2026: "Sign up for 30-day free trial.
+    No credit card required." | "Paying subscribers 22k" | "trusted by
+    thousands of organizations" | button "View live demo".
+    You cannot start a second agent here.
+  output: |
+    Run as: SAME-CONTEXT. No second agent or second chat was available.
+
+    1. TESTS
+    1 | fail | "Add the script from [link] or explore the demo or read our
+        guides": three things to do, none of them first
+    2 | fail | "[link]": a blank the client must fill
+    3 | fail | "Join 25,000+ teams" and "Set-up takes two minutes" are not
+        in the facts
+    4 | pass | the sentences are short and plain
+
+    2. WEAKEST PIECE
+    The subject line. "Welcome aboard!" gives no reason to open.
+
+    3. I WOULD HAVE TO ASK
+    Which link goes in "[link]"? Is 25,000 right? Who is this from?
+
+    4. CAN BE CUT
+    "Thanks so much for signing up."
+
+    5. CLAIMS
+    "25,000+ teams" | no source. The facts say "Paying subscribers 22k".
+    "Set-up takes two minutes" | no source.
+    "Your trial lasts 30 days" | sourced: "30-day free trial".
+
+    LEFTOVERS
+    "[link]" is a blank. "or explore the demo or read our guides" is a list
+    of options with no recommendation.
+
+    FIX LIST
+    1. Make "add the script" the only ask, with the real link.
+    2. Remove "25,000+ teams", or rewrite it to what the site says.
+    3. Remove "Set-up takes two minutes".
+    4. Write a subject line that names the next step.
+    5. Cut the thank-you line.
+
+tweaks:
+  - what: Your tests
+    how: Give your own tests. The reviewer answers only those.
+  - what: Who reviews
+    how: Ask for the packet if you want a colleague or another AI to do the reading.
+  - what: Long work
+    how: For a long plan, name the part that decides the result. That part is read in full.
+  - what: Rounds
+    how: One round is the default. Ask for a second only if a test about the main job failed.
+
+judge:
+  - The reviewer saw only the brief, the tests, the work and the facts.
+  - Every test has pass or fail and a quoted line.
+  - Every claim in the work is on the list, marked as sourced or not.
+  - The fix list is numbered, most important first.
+  - A same-context review is labelled as one.
+
+test:
+  - Leave a blank such as "[link]" in a draft on purpose. It should be listed under leftovers.
+  - Add a number that is not in your facts. It should come back as no source.
+  - Check the final work. No claim marked no source should still be in it.
+
+improve:
+  - Add the questions your clients ask most, so the reviewer looks for them.
+  - Add your house tests, such as "no jargon" or "price shown".
+  - Keep each fix list, so you learn what your work misses most often.
+  - Pair it with the Claim source trace, which deals with each claim that has no source.
+
+works_best_with:
+  tools:
+    - {name: "An AI that can start a second agent", why: "The reviewer starts clean and reads only what the client would get."}
+    - {name: "A second chat window", why: "Works when your AI cannot start an agent. You paste the packet in and the reply back."}
+  inputs:
+    - "The brief in the client's own words"
+    - "Your facts file or brand file, with dates"
+
+terms:
+  - term: Deliverable
+    meaning: The finished work you hand to the client.
+  - term: Acceptance test
+    meaning: A question the finished work must pass, such as "could I send it today with no edits?"
+  - term: Leftover
+    meaning: Anything in the work that is not for the client, such as a blank to fill or a note about method.
+  - term: SAME-CONTEXT
+    meaning: A label that says the same AI made and checked the work, so the check is weaker.
+
+output_sample:
+  input:
+    - The brief and five to seven tests
+    - The finished work
+    - Your facts with sources and dates
+  prerequisites:
+    - An AI that can start a second agent, or a second chat you can paste into
+  output:
+    - name: Tests
+      contains: Pass or fail for each test, with the line that proves it.
+    - name: Weakest piece
+      contains: Which piece a buyer would skip, and why.
+    - name: I would have to ask
+      contains: Each thing the client could not use without asking first.
+    - name: Claims
+      contains: Every claim marked as sourced, with where, or as no source.
+    - name: Fix list
+      contains: Numbered fixes, most important first.

@@ -1,0 +1,181 @@
+new_slug: buyer-can-act-check
+name: "Buyer can act check"
+summary: "Give it what you sell and the link. You learn if a buyer can get it today, and what to do if not."
+job: check-ads
+thinking: low
+thinking_why: "It opens one page, reads stock and price, and makes one clear call."
+
+headline: "Check a buyer can get it today before you build the ads"
+subhead: Give it what you are selling, the price in your brief and the link buyers will land on. It opens the page as a buyer would. It checks the product is live, in stock in the sizes that matter and at that price. If not, it picks the option that works and tells you first.
+
+explain: |
+  A brief is written days or weeks before the work is made. In that time stock sells, prices change and links break. Ads built on an old brief can send people to a shoe with no sizes left, or to a price that is no longer true.
+
+  This check looks before anything is built. It opens the page your buyer will land on, today. It reads which sizes, colours, plans or dates are open. It reads the price and any offer, and when the offer ends. Many stores also publish a product feed that lists each size as in stock or not, and it reads that too.
+
+  You get one verdict. If a buyer can act, the work goes ahead as briefed. If not, your AI does not stop and ask. It picks the option that works, such as the colour or model that is in stock. It builds for that and says so in the first line of what it hands you.
+
+when:
+  - Before ads, a landing page, emails or a plan that sends people to buy or sign up.
+  - When your brief is more than a day or two old.
+  - During a sale, when stock and prices move fast.
+  - When ads did well on clicks and badly on sales, and you want to know why.
+
+not_for:
+  - Checking a finished ad for mistakes. Use the Pre-launch ad checker.
+  - A full check of a new store before launch. Use the Store go-live checker.
+  - Placing a test order. This check only looks. It never buys or logs in.
+
+you_give:
+  - What you are selling, and to whom
+  - The price or offer in your brief
+  - The link buyers will land on
+  - The sizes, colours, plans or cities that matter most (optional)
+you_get:
+  - One verdict, which is can act, compromised or not checked
+  - Stock for each size or option, with counts
+  - The price and offer on the page today, next to the brief
+  - The call your AI made if something was wrong, and how to switch back
+  - One first line for the hand-over, with the date
+
+how_to_use:
+  - Add the skill to an AI that can open web pages.
+  - Give it the product, the price and the link from your brief.
+  - It opens the page and reads stock, price and offer. It notes the date and time.
+  - Read the verdict. If it says compromised, read the call it made and why.
+  - Run it again just before launch if stock was low or a sale is on.
+
+how_it_works:
+  - title: Writes down what the brief assumes
+    text: Lists the product, the options the work will show, the price, the offer and the link.
+  - title: Opens the link as a buyer
+    text: Checks the page loads, is the right product and is the store for the buyer's country.
+  - title: Reads the options that matter
+    text: Marks each size, colour, plan or date as open or not, and counts them.
+  - title: Reads the price and offer
+    text: Compares the page with the brief and notes terms a buyer will meet, such as final sale.
+  - title: Gives one verdict
+    text: Says can act, compromised or not checked.
+  - title: Makes the call
+    text: If compromised, picks the option that works, builds for it and says so first.
+
+output_shape: |
+  BUYER CAN ACT CHECK
+  Checked: <date and time> | Link: <address> | How: <browser | product feed | page text>
+  Verdict: <CAN ACT | COMPROMISED | NOT CHECKED>
+
+  Live: <yes or no, what loads>
+  Stock: <variant: in stock or sold out, with counts>
+  Price: <on the page> | In the brief: <price>
+  Offer: <live or not, end date, terms a buyer meets>
+
+  THE CALL
+  <what the brief asked for; what you found; what you built for; how to switch back>
+
+  FIRST LINE FOR THE HAND-OVER
+  "<one sentence the client reads first>"
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+example:
+  business: allbirds
+  input: |
+    [the skill]
+
+    Brief: 5 Meta ads for the Allbirds Men's Tree Runner, cold audience, US,
+    $100. Landing page: https://www.allbirds.com/products/mens-tree-runners
+  output: |
+    BUYER CAN ACT CHECK
+    Checked: 10 Nov 2026, 14:14 UTC | Link: allbirds.com/products/mens-tree-runners
+    How: the store's public product feed for the Men's Tree Runner collection
+    Verdict: COMPROMISED
+
+    Live: yes. The Men's Tree Runner loads on the US store.
+    Stock: 7 men's sizes per colour, 8 to 14.
+    - Jet Black (Black Sole): 3 of 7 in stock (8, 9, 10)
+    - Mist (White Sole): 2 of 7 (8, 9)
+    - Navy Night (White Sole): 1 of 7 (10)
+    - Wheat (Beige Sole): 1 of 7 (9)
+    - Jet Black (White Sole): 1 of 7 (8)
+    - Kaikoura White: 0 of 7
+    Sizes 11 to 14 are sold out in every colour.
+    Price: $100 in three colours, $70 (was $100) in three | In the brief: $100
+    Offer: the $70 colours are marked final sale.
+
+    THE CALL
+    The brief asked for the Men's Tree Runner. No colour has more than 3 of
+    its 7 sizes, and no colour has a size above 10. A cold audience includes
+    every shoe size, so most clicks would end at "sold out". I built for the
+    Men's Tree Runner NZ in Natural Black (Blizzard Sole): $100, and 9 of 14
+    sizes in stock from 8.5 to 13 (same feed, same time). To switch back,
+    restock sizes 11 to 14 first.
+
+    FIRST LINE FOR THE HAND-OVER
+    "These ads sell the Tree Runner NZ, not the original Tree Runner: on
+    10 Nov the original had no size above 10 in any colour."
+
+    CHECKS MISSED
+    The checkout was not opened, so delivery cost was not checked.
+
+tweaks:
+  - what: Which options matter
+    how: Name your best-selling sizes, colours or plans. The check weighs those first.
+  - what: Country
+    how: Say where your buyers are. It checks the store, currency and delivery for that place.
+  - what: When to look again
+    how: Ask it to repeat the check on launch day. Stock moves fastest during a sale.
+  - what: Who decides
+    how: By default it makes the call and tells you. Say so if you want it to stop and ask when stock is short.
+
+judge:
+  - The page was opened today, and the time is written down.
+  - Each size or option the work shows is marked in stock or sold out.
+  - The price comes from the page, not from the brief or from memory.
+  - There is one verdict.
+  - If something was wrong, there is a decision and it is the first thing you read.
+
+test:
+  - Open the link yourself and pick a size it marked sold out. The page should agree.
+  - Give it a link to a product you know is sold out. It should say compromised and choose something else.
+  - Give it a link it cannot open. It should say not checked, and never say in stock.
+
+improve:
+  - Add your best-selling sizes or plans, so it knows which ones matter.
+  - Add a rule for how low stock can be before you want a different product advertised.
+  - Add the countries you ship to.
+  - Pair it with Make an ad concept spread or Make three first screens, which run it as their first step.
+
+works_best_with:
+  tools:
+    - {name: "An AI with a browser tool", why: "Opens the page as a buyer would and reads the size picker."}
+    - {name: "An AI that can fetch web pages", why: "Reads a store's public product feed, which lists each size as in stock or not."}
+  inputs:
+    - "The exact link your ads or emails will use"
+    - "Your best-selling sizes, colours or plans"
+
+terms:
+  - term: Variant
+    meaning: One version of a product, such as a size, a colour or a plan level.
+  - term: Product feed
+    meaning: A public list a store publishes with each product, its price and whether each size is in stock.
+  - term: Compromised
+    meaning: A buyer who clicks is likely to hit sold out, another price or a dead page.
+
+output_sample:
+  input:
+    - What you are selling and the price in your brief
+    - The link buyers will land on
+  prerequisites:
+    - An AI that can open web pages
+  output:
+    - name: Verdict
+      contains: Can act, compromised or not checked, with the date and time.
+    - name: Stock, price and offer
+      contains: Each size or option counted, the price on the page and any offer terms.
+    - name: The call
+      contains: What was built for if the brief's choice did not work, and how to switch back.
+    - name: First line for the hand-over
+      contains: One sentence that tells you the call before anything else.
+    - name: Checks missed
+      contains: One line for each check that did not run, or none.

@@ -1,0 +1,21 @@
+slug: make-three-first-screens
+name: "Make three first screens"
+summary: "Give it your page brief and brand file. You get three different first screens as real pages, with one chosen."
+category: general
+type: skill
+role: make
+job: page
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: store_capture, required: true}
+  - {type: design_tokens, required: false}
+outputs:
+  - {type: web_page, required: true}
+uses: [brand-dna-capture, buyer-can-act-check, outside-chooser]
+origin: own
+version: 1.0.0
+added: 2026-11-10
+package_files: all
+credits:
+  - {title: "Original AI Blocks method", by: "AI Blocks contributors", used: "The six axes, the build rules, the compare script and the hand-off to an outside chooser. Built from the blind tests of 10 Nov 2026."}

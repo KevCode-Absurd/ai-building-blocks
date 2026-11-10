@@ -1243,6 +1243,321 @@
           "rationale": "Failed eval cases from a blind test report are one optional source of failures; real-use evidence alone can drive the loop."
         }
       ]
+    },
+    "catalogue-items/general/outside-chooser/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, Q6 craft skills)",
+      "reviewed_on": "2026-11-10",
+      "method_sha256": "241bd7ae418caee3132ab6ad17a0227fe8a2dcc047c0c14d4ed43a9ccf96eee1",
+      "inputs": [
+        {
+          "type": "brief",
+          "required": true
+        },
+        {
+          "type": "design_direction",
+          "required": false
+        },
+        {
+          "type": "email_flow",
+          "required": false
+        },
+        {
+          "type": "plan",
+          "required": false
+        },
+        {
+          "type": "static_ads",
+          "required": false
+        },
+        {
+          "type": "web_page",
+          "required": false
+        }
+      ],
+      "evidence": [
+        {
+          "type": "brief",
+          "quote": "the client's request in their own words, the job in one sentence, and the 5 to 7 acceptance tests",
+          "rationale": "The reviewer judges every candidate against the client request and its acceptance tests, so the brief is required."
+        },
+        {
+          "type": "design_direction",
+          "quote": "For first screens of a web page, ad images and design directions, that means the two compare sheets.",
+          "rationale": "Candidate design directions are one kind of made work the chooser accepts, shown as compare sheets. Optional: only one kind is present per run."
+        },
+        {
+          "type": "email_flow",
+          "quote": "For email arcs and plans, it means the text itself.",
+          "rationale": "Candidate email arcs are accepted as text under neutral headings. Optional: only one kind of candidate is present per run."
+        },
+        {
+          "type": "plan",
+          "quote": "For email arcs and plans, it means the text itself.",
+          "rationale": "Candidate one-page plans are accepted as text under neutral headings. Optional: only one kind of candidate is present per run."
+        },
+        {
+          "type": "static_ads",
+          "quote": "For first screens of a web page, ad images and design directions, that means the two compare sheets.",
+          "rationale": "Candidate ad images are one kind of made work the chooser accepts, shown as compare sheets. Optional: only one kind is present per run."
+        },
+        {
+          "type": "web_page",
+          "quote": "For first screens of a web page, ad images and design directions, that means the two compare sheets.",
+          "rationale": "Candidate first screens of a web page are one kind of made work the chooser accepts, shown as compare sheets. Optional: only one kind is present per run."
+        }
+      ]
+    },
+    "catalogue-items/general/clients-eye-check/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, Q6 craft skills)",
+      "reviewed_on": "2026-11-10",
+      "method_sha256": "6c81445649db2c5408402c4658060ab8130e95b3239fa6f140a85034ee2feba9",
+      "inputs": [
+        {
+          "type": "brief",
+          "required": true
+        },
+        {
+          "type": "copy_draft",
+          "required": true
+        },
+        {
+          "type": "store_capture",
+          "required": false
+        }
+      ],
+      "evidence": [
+        {
+          "type": "brief",
+          "quote": "the client's request in their own words and the 5 to 7 tests from the spec sheet",
+          "rationale": "The reviewer reads as the client, so it needs the client request and the acceptance tests; the brief is required."
+        },
+        {
+          "type": "copy_draft",
+          "quote": "the page, ad set, email series, plan or copy, exactly as the client will get it",
+          "rationale": "The finished deliverable is the work the check reads; the type covers any copy, page or plan a check pass works on. Required."
+        },
+        {
+          "type": "store_capture",
+          "quote": "the facts file or brand file, with sources and dates",
+          "rationale": "Captured, dated facts let the reviewer mark each claim sourced or not. Optional: without them every claim is marked source not seen."
+        }
+      ]
+    },
+    "catalogue-items/general/claim-source-trace/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, Q6 craft skills)",
+      "reviewed_on": "2026-11-10",
+      "method_sha256": "8e9a78c7eafac824de9e318ceb7f45331bd95ba10a1bc6ac17fdec28013813dd",
+      "inputs": [
+        {
+          "type": "copy_draft",
+          "required": true
+        },
+        {
+          "type": "store_capture",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "copy_draft",
+          "quote": "the copy, page, ad set, email series or plan, complete, with subject lines, button words, image text, footers and sign-offs",
+          "rationale": "The draft is the work whose facts are listed and traced; the trace cannot run without it."
+        },
+        {
+          "type": "store_capture",
+          "quote": "the facts file, brand file, product feed, screenshots or account export, each with where it came from and the date it was read",
+          "rationale": "Dated captured sources are what each fact is traced to; with none, the method says to capture first, so they are required."
+        }
+      ]
+    },
+    "catalogue-items/general/buyer-can-act-check/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, Q6 craft skills)",
+      "reviewed_on": "2026-11-10",
+      "method_sha256": "22e16b3c5afe592e9d2d982655ff1a871ace44a3c082fa25758e33b932e90ae2",
+      "inputs": [
+        {
+          "type": "brief",
+          "required": true
+        },
+        {
+          "type": "web_page",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "brief",
+          "quote": "what is being sold, to whom and where, and the price or offer it states",
+          "rationale": "The brief states the product, buyer and price that the check compares with the live page."
+        },
+        {
+          "type": "web_page",
+          "quote": "the product, sign-up or booking page",
+          "rationale": "The link the buyer lands on is the live page the check opens to read stock, price and offer; required."
+        }
+      ]
+    },
+    "catalogue-items/general/make-three-first-screens/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, Q6 craft skills)",
+      "reviewed_on": "2026-11-10",
+      "method_sha256": "ea4e08c15ded676afcfda1b42e84c4a48dec031ec67f2e4b87d4755f2a65dccd",
+      "inputs": [
+        {
+          "type": "brief",
+          "required": true
+        },
+        {
+          "type": "design_tokens",
+          "required": false
+        },
+        {
+          "type": "store_capture",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "brief",
+          "quote": "who must do what after seeing this page, and the acceptance tests the finished page must pass",
+          "rationale": "The method starts from the page brief and its spec sheet, which state the job and the tests; that request is the brief input."
+        },
+        {
+          "type": "design_tokens",
+          "quote": "It holds the fonts for each role, colours with their share of the page, button style and header.",
+          "rationale": "The brand file from Brand DNA capture supplies fonts, colour shares and button style as tokens. Optional because a new brand has no site to capture."
+        },
+        {
+          "type": "store_capture",
+          "quote": "prices, offers, proof and policies, each with its source and date",
+          "rationale": "The captured facts are dated evidence read from the live site; every screen may use only these, so they are the required store capture."
+        }
+      ]
+    },
+    "catalogue-items/general/make-ad-concept-spread/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, Q6 craft skills)",
+      "reviewed_on": "2026-11-10",
+      "method_sha256": "ff61d4f89d97b8043076a37e62a1f3acd6ed7862d4834fccc70c30ae908b909d",
+      "inputs": [
+        {
+          "type": "brief",
+          "required": true
+        },
+        {
+          "type": "design_tokens",
+          "required": false
+        },
+        {
+          "type": "product_photos",
+          "required": false
+        },
+        {
+          "type": "store_capture",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "brief",
+          "quote": "the buyer, the placements, how many ads, and the acceptance tests",
+          "rationale": "The ad brief and spec sheet name the buyer, placements and count; the concept table and written ads are built from that brief."
+        },
+        {
+          "type": "design_tokens",
+          "quote": "fonts, colours with their share, logo use and voice lines",
+          "rationale": "The brand file gives the fonts and colours used for on-image words and mock-ups. Optional because it applies only when the brand has a site."
+        },
+        {
+          "type": "product_photos",
+          "quote": "the reference for every visual",
+          "rationale": "Real product photos are the reference for each image or mock-up. Optional: without them the method draws labelled boxes and lists the shots needed."
+        },
+        {
+          "type": "store_capture",
+          "quote": "product facts, prices, offers and proof, each with its source and date",
+          "rationale": "Every proof in the concept table must be a captured, dated fact from the product page or feed; that capture is required."
+        }
+      ]
+    },
+    "catalogue-items/general/make-design-directions/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, Q6 craft skills)",
+      "reviewed_on": "2026-11-10",
+      "method_sha256": "0486b27483671cbde58e51303d077a4e114c48c4d389be2d535e598e6269a38c",
+      "inputs": [
+        {
+          "type": "brief",
+          "required": true
+        },
+        {
+          "type": "design_tokens",
+          "required": false
+        }
+      ],
+      "evidence": [
+        {
+          "type": "brief",
+          "quote": "what the piece is, its real size, where it will be seen and from how far, the words that must appear",
+          "rationale": "The design brief fixes the piece, its real size and the words; the three directions are planned and made from it."
+        },
+        {
+          "type": "design_tokens",
+          "quote": "fonts for each role, colours with their share, logo rules and image style",
+          "rationale": "The brand file or brand guide supplies the fonts and colours all three directions must use. Optional because it applies only when the brand exists."
+        }
+      ]
+    },
+    "catalogue-items/general/three-series-arcs/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, Q6 craft skills)",
+      "reviewed_on": "2026-11-10",
+      "method_sha256": "f207c0f4ee5d07a69a5ca09b095d34a07a76725dc5899f6bacc1ce53ebe9b783",
+      "inputs": [
+        {
+          "type": "brief",
+          "required": true
+        },
+        {
+          "type": "store_capture",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "brief",
+          "quote": "who is on the list, what puts them in the series (signed up, started a trial, bought, went quiet), how many messages",
+          "rationale": "The series brief names the list, the trigger and the number of messages; the three arcs are planned from it."
+        },
+        {
+          "type": "store_capture",
+          "quote": "products, prices, offers, policies and proof, each with its source and date",
+          "rationale": "Every message may use only captured, dated facts about products and offers; that saved evidence is required."
+        }
+      ]
+    },
+    "catalogue-items/general/two-plan-shapes/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, Q6 craft skills)",
+      "reviewed_on": "2026-11-10",
+      "method_sha256": "5753c4715c44d69464f4e8c18609af3d70489b5f29f837e4edfe55ae530503d7",
+      "inputs": [
+        {
+          "type": "performance_sheet",
+          "required": false
+        },
+        {
+          "type": "question",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "performance_sheet",
+          "quote": "what the business spends, sells and earns today, from its own account, export or site",
+          "rationale": "An account or store export supplies the real numbers the plans turn on. Optional: where none is given the method uses labelled working figures."
+        },
+        {
+          "type": "question",
+          "quote": "the decision the plan serves, the total budget, the time span, and the acceptance tests",
+          "rationale": "The plan answers a stated decision with a budget and time span; that is a plain question, not a creative brief."
+        }
+      ]
     }
   },
   "handoffs": {

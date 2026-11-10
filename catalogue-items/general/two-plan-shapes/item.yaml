@@ -1,0 +1,19 @@
+slug: two-plan-shapes
+name: "Two plan shapes"
+summary: "Give it your question, budget and numbers. You get two differently shaped one-page plans with money and dates, and one pick."
+category: general
+type: skill
+role: plan
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan, required: true}
+uses: [outside-chooser]
+origin: own
+version: 1.0.0
+added: 2026-11-10
+credits:
+  - {title: "Original AI Blocks method", by: "AI Blocks contributors", used: "The four ways two plans differ in shape, the one-page parts, the working-figure rule and the hand-off to an outside chooser."}

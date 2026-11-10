@@ -1,0 +1,178 @@
+new_slug: make-three-first-screens
+name: "Make three first screens"
+summary: "Give it your page brief and brand file. You get three different first screens as real pages, with one chosen."
+job: write-landing-page
+thinking: high
+thinking_why: "It must plan three screens that differ in substance, build each one, and judge the side-by-side sheets."
+
+headline: "See three first screens for your page before you pick one"
+subhead: Give it your page brief, your brand file and your facts. It builds three different first screens as real pages in your own fonts, colours and buttons. It puts them side by side at desktop and phone width. A fresh reviewer picks one, and that one becomes your page.
+
+explain: |
+  The first screen of a page does most of the work. Many visitors never scroll. When you ask an AI for a page, it writes one first screen and builds the rest under it. You never see what else was possible.
+
+  This skill makes three first screens you can look at. Each one changes at least two real things. That could be the promise in the headline, the proof beside it or the layout. A new headline on the same layout does not count. All three keep your fonts, colours and buttons, so each still looks like your site.
+
+  A script that comes with the skill puts the three side by side. It makes one picture at desktop width and one at phone width, and labels them A, B and C. Then a reviewer who did not make them chooses, using the tests your page has to pass. You get one recommendation and the runner-up in a line.
+
+when:
+  - You are building a landing page, home page or product page and the first screen matters most.
+  - Your AI keeps giving you the same kind of hero section.
+  - You want to see real options before a page is built, not read about them.
+  - You are sending paid traffic to a page and cannot afford a weak first screen.
+
+not_for:
+  - A page that is live and tested, where you want small fixes. Use the Brand fidelity check or a page audit.
+  - A new logo or brand look. This skill stays inside the look you already have.
+  - Ads or posters. Use Make an ad concept spread or Make three design directions.
+
+you_give:
+  - Your brief, with who the page is for and the one thing they should do
+  - Your brand file, or your website so it can be captured first
+  - Your facts, such as prices, offers, proof and policies, each with its source and date
+  - Where visitors come from, such as an ad or an email (optional)
+you_get:
+  - Three first screens as real HTML files, each in your own look
+  - One line for each screen that says what it changes
+  - Two pictures that show the three side by side, at desktop and phone width
+  - One chosen screen, the runner-up in a line, and the reason
+  - A note on what was borrowed from the other two
+
+how_to_use:
+  - Add the skill to an AI that can run code and open files. A coding assistant works best.
+  - Give it your brief, your brand file and your facts. If you have no brand file, give it your website.
+  - It checks that what you sell is live and in stock, then plans three screens that differ on at least two things.
+  - It builds the three pages and runs the compare script that comes with the skill. The script needs Node.js 18 or later and Playwright for the pictures.
+  - Look at the two pictures yourself if you like. A fresh reviewer picks one against your tests.
+  - It builds the chosen screen into the full page.
+
+how_it_works:
+  - title: Checks the buyer can act
+    text: Confirms the thing the page sells is live, in stock and at the stated price today.
+  - title: Plans on named axes
+    text: Picks at least two things to change for each screen from promise, proof, structure, buyer moment, offer and visual world.
+  - title: Stays inside your brand
+    text: Keeps your header, fonts, colour shares and button style in all three.
+  - title: Builds real pages
+    text: Makes one HTML file for each screen, using only facts that have a source.
+  - title: Compares side by side
+    text: Runs the compare script to make one desktop sheet and one phone sheet with neutral labels.
+  - title: Hands the choice to someone else
+    text: Uses the Outside chooser, so the maker does not pick its own favourite.
+  - title: Builds the winner
+    text: Turns the chosen screen into the full page and moves in the best parts of the others.
+
+output_shape: |
+  FIRST SCREENS
+  Chosen: <what it leads with, in one line>
+  Runner-up: <one line>
+  Why: <the chooser's reason, as a buyer would put it>
+  Chosen by: <fresh reviewer | second chat | SAME-CONTEXT>
+  Taken from the others: <what moved into the chosen screen, or nothing>
+  Files: <the three screens and the two compare sheets>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+example:
+  business: plausible
+  input: |
+    [the skill]
+
+    Build a sign-up landing page for Plausible Analytics. Visitors clicked an
+    ad about leaving Google Analytics. The one action is "Start free trial".
+    Facts: read from https://plausible.io/ on 10 Nov 2026.
+    Plan the three first screens before you build.
+  output: |
+    THREE SCREENS, PLANNED (facts from plausible.io, read 10 Nov 2026)
+
+    Screen 1. Promise: analytics you can read on one page. Proof: the product
+    at work, a real dashboard, with the site's own button "View live demo".
+    Structure: headline over a full-width dashboard picture. Buyer moment:
+    worn out by a complex tool. Source line: "Google Analytics is overkill
+    for most site owners."
+
+    Screen 2. Promise: drop the cookie banner. Proof: "No need for cookie
+    banners or GDPR consent" and "Made and hosted in the EU, powered by
+    European-owned infrastructure." Structure: split screen, the claim on the
+    left, the same web page with and without a banner on the right. Buyer
+    moment: has just been told to sort out consent.
+
+    Screen 3. Promise: a faster site. Proof: "Our script is 54 times smaller
+    than Google Analytics. Every visitor that loads your site downloads 135KB
+    less JavaScript." Structure: the number first, set very large, then
+    the names from the site: Stripe, Mozilla, MongoDB, Harvard University
+    and Sentry. Buyer moment: a developer checking page speed.
+
+    Every pair differs on promise, proof, structure and buyer moment.
+    Same in all three: the site's header, its fonts and colours, the button
+    "Start free trial", and under it "Sign up for 30-day free trial. No
+    credit card required."
+
+    (The example stops here. The three HTML files, the compare sheets and the
+    chooser's reply are not shown.)
+
+tweaks:
+  - what: Where visitors come from
+    how: Say which ad, email or search they clicked. Each screen is then built to carry on from it.
+  - what: What may change
+    how: Say if the header, the offer or the main button must stay as they are. The screens will vary other things.
+  - what: How many screens
+    how: Three is the default. Ask for two if time is short. The compare script takes up to four.
+  - what: Who chooses
+    how: If you want to choose yourself, ask for the two pictures and the reviewer's notes. You still get one recommendation.
+
+judge:
+  - Each pair of screens differs on at least two named things, not only the headline.
+  - All three look like your site, with your fonts, colours and buttons.
+  - Every fact on every screen has a source and a date.
+  - The main button shows without scrolling on a phone.
+  - Someone other than the maker chose, or the choice is marked SAME-CONTEXT.
+
+test:
+  - Cover the logo. Each screen should still read as your brand, and no two should read as the same screen.
+  - Open the phone picture. You should see the main button on all three without scrolling.
+  - Pick any number on a screen and ask where it came from. There should be a source and a date.
+
+improve:
+  - Add the tests your pages must always pass, so the reviewer uses your own bar.
+  - Add your best past pages as references, with what worked on each.
+  - Keep your brand file fresh, so prices and offers on the screens are current.
+  - Pair it with the Client's-eye check on the finished page.
+
+works_best_with:
+  tools:
+    - {name: "A coding assistant that can run code", why: "Builds the three pages, runs the compare script and opens the pictures."}
+    - {name: "Node.js with Playwright", why: "Makes the desktop and phone comparison pictures. Without it you still get one page that shows the three in frames."}
+  inputs:
+    - "Your brand file, or your website to capture"
+    - "Your facts with sources and dates"
+    - "The ad or email your visitors click"
+
+terms:
+  - term: First screen
+    meaning: What a visitor sees before they scroll.
+  - term: Axis
+    meaning: One thing a screen can change, such as the promise, the proof or the layout.
+  - term: Brand file
+    meaning: Your saved brand details, such as fonts, colours, buttons and your own words.
+  - term: SAME-CONTEXT
+    meaning: A label that says the same AI made and chose the options, so the choice is weaker.
+
+output_sample:
+  input:
+    - Your page brief
+    - Your brand file or website
+    - Your facts with sources and dates
+  prerequisites:
+    - An AI that can run code, to use the scripts that come with this skill
+    - Node.js 18 or later, and Playwright for the comparison pictures
+  output:
+    - name: Three first screens
+      contains: Three HTML files in your own look, each changing at least two named things.
+    - name: Compare sheets
+      contains: One picture at desktop width and one at phone width, with the screens labelled A, B and C.
+    - name: The choice
+      contains: The chosen screen, the runner-up, the reason and who chose.
+    - name: Checks missed
+      contains: One line for each check that did not run, or none.

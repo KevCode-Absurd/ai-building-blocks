@@ -1,0 +1,19 @@
+slug: buyer-can-act-check
+name: "Buyer can act check"
+summary: "Give it what you sell and the link. You learn if a buyer can get it today, and what to do if not."
+category: general
+type: skill
+role: check
+job: offer
+level: beginner
+inputs:
+  - {type: brief, required: true}
+  - {type: web_page, required: true}
+outputs:
+  - {type: audit_report, required: true}
+uses: []
+origin: own
+version: 1.0.0
+added: 2026-11-10
+credits:
+  - {title: "Original AI Blocks method", by: "AI Blocks contributors", used: "The live, stock, price and link checks, the three verdicts and the rule to decide and say it first. Built from the blind tests of 10 Nov 2026."}

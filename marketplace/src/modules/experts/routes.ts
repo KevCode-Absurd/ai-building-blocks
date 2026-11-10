@@ -7,6 +7,7 @@ import {
   AGREEMENT_VERSION, REVIEW_TIME, agreement, applyAsExpert, expertDashboard, expertView, foundingSpots, getExpertForUser,
   listApplications, reviewApplication, syncAllExpertPersonas, syncExpertPersona, type ExpertApplication,
 } from "./service.ts";
+import { createInvite, emailInvite, listInvites, openInvite, revokeInvite } from "./invites.ts";
 
 const STATUSES = ["all", "applied", "approved", "rejected", "paused"] as const;
 
@@ -19,7 +20,7 @@ export const routes: Route[] = [
       const a = await account(ctx);
       const body = await ctx.body<Record<string, unknown>>();
       const application = (body.application && typeof body.application === "object" ? body.application : body) as unknown as ExpertApplication;
-      const row = await applyAsExpert(ctx.env, { userId: a.user.id, application });
+      const row = await applyAsExpert(ctx.env, { userId: a.user.id, application, inviteToken: body.invite_token });
       return json({ expert: expertView(row), review_time: REVIEW_TIME }, 201);
     },
   },
@@ -69,7 +70,45 @@ export const routes: Route[] = [
       return json({ expert: expertView(row) });
     },
   },
+
+  // ---------- Founding invites ----------
+
+  // The invited person's page: public (the token is the key). The first visit marks the invite opened.
+  {
+    method: "GET", path: "/api/experts/invites/:token", handler: async ctx => {
+      const invite = await openInvite(ctx.env, ctx.params.token!);
+      return json({ invite, founding: await foundingSpots(ctx.env), review_time: REVIEW_TIME });
+    },
+  },
+  {
+    method: "GET", path: "/api/ops/invites", handler: async ctx => {
+      await requireOps(ctx);
+      return json({ ...(await listInvites(ctx.env)), founding: await foundingSpots(ctx.env) });
+    },
+  },
+  {
+    method: "POST", path: "/api/ops/invites", handler: async ctx => {
+      const a = await requireOps(ctx);
+      const body = await ctx.body<Record<string, unknown>>();
+      return json({ invite: await createInvite(ctx.env, { ...body, actor: a.user.id }) }, 201);
+    },
+  },
+  {
+    method: "POST", path: "/api/ops/invites/:id/revoke", handler: async ctx => {
+      const a = await requireOps(ctx);
+      return json({ invite: await revokeInvite(ctx.env, { id: ctx.params.id!, actor: a.user.id }) });
+    },
+  },
+  {
+    method: "POST", path: "/api/ops/invites/:id/email", handler: async ctx => {
+      const a = await requireOps(ctx);
+      const founding = await foundingSpots(ctx.env);
+      return json(await emailInvite(ctx.env, { id: ctx.params.id!, actor: a.user.id, foundingLeft: founding.left }));
+    },
+  },
 ];
 
 /** Work the 15-minute cron runs for this module. */
-export const scheduled: ((env: Env) => Promise<void>)[] = [syncAllExpertPersonas];
+export const scheduled: ((env: Env) => Promise<void>)[] = [
+  syncAllExpertPersonas,
+];

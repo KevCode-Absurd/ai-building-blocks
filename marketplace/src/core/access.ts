@@ -11,6 +11,8 @@ export interface ExpertRow {
   id: string; user_id: string; status: "applied" | "approved" | "rejected" | "paused"; display_name: string; headline: string;
   areas: string; job_types: string; application: string; founding: number; agreement_version: string | null; agreement_accepted_at: string | null;
   review_note: string; reviewed_by: string | null; reviewed_at: string | null; created_at: string; updated_at: string;
+  /** The founding invite this application came from (migration 0020). */
+  invite_id?: string | null;
 }
 
 export interface Account {

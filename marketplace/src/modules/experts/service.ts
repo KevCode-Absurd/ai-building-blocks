@@ -14,6 +14,7 @@ import { winRates } from "../evaluation/service.ts";
 import { learnableDecisionIds } from "../delivery/consent.ts";
 import { foundingAgreement, type Agreement } from "./agreement.ts";
 import { parseApplication, type ValidApplication } from "./schema.ts";
+import { claimInviteStatements, inviteForApplication } from "./invites.ts";
 
 /** The founding-expert agreement version experts accept. The text is a draft until counsel replaces it. */
 export const AGREEMENT_VERSION = "founding-draft-2";
@@ -115,6 +116,8 @@ export interface ExpertView {
   job_types: string[];
   application: StoredApplication | null;
   founding: boolean;
+  /** The application came from a founding invite (ops sort these first). */
+  invited: boolean;
   rate: number;
   agreement: { version: string | null; accepted_at: string | null; current_version: string; current: boolean };
   note: string;
@@ -136,6 +139,7 @@ export function expertView(row: ExpertRow): ExpertView {
     job_types: parseJson<string[]>(row.job_types, []),
     application: application && Object.keys(application).length ? application : null,
     founding: !!row.founding,
+    invited: !!row.invite_id,
     rate: rateFor(row),
     agreement: { version: row.agreement_version, accepted_at: row.agreement_accepted_at, current_version: AGREEMENT_VERSION, current: row.agreement_version === AGREEMENT_VERSION },
     note: row.review_note,
@@ -167,18 +171,26 @@ function assertCanApply(existing: ExpertRow, now: string): void {
   if (at && at > now) fail(409, "reapply_too_soon", `You can apply again from ${longDate(at)}.`);
 }
 
-export async function applyAsExpert(env: Env, input: { userId: string; application: ExpertApplication }): Promise<ExpertRow> {
+export async function applyAsExpert(env: Env, input: { userId: string; application: ExpertApplication; inviteToken?: unknown }): Promise<ExpertRow> {
   const app = parseApplication(input.application);
   const db = env.DB, now = nowIso();
   const existing = await getExpertForUser(env, input.userId);
   if (existing) assertCanApply(existing, now);
+  // A founding invite: checked before anything is saved, tied to the expert in the same batch. An expert who already
+  // came through one invite keeps it.
+  let inviteId: string | null = null;
+  if (input.inviteToken !== undefined && input.inviteToken !== null && input.inviteToken !== "") {
+    inviteId = await inviteForApplication(env, input.inviteToken, existing?.id ?? null);
+    if (existing?.invite_id && existing.invite_id !== inviteId) inviteId = null;
+  }
   const attempt = existing ? (parseJson<Partial<StoredApplication>>(existing.application, {}).attempt ?? 1) + 1 : 1;
   const stored: StoredApplication = { ...app, attempt, submitted_at: now };
   const id = existing?.id ?? newId("exp");
   const event: EventInput = {
     actor: input.userId, actorKind: "user", entity: "expert", entityId: id, type: "expert.applied",
-    data: { areas: app.areas, job_types: app.job_types, agreement_version: AGREEMENT_VERSION, attempt },
+    data: { areas: app.areas, job_types: app.job_types, agreement_version: AGREEMENT_VERSION, attempt, ...(inviteId ? { invite_id: inviteId } : {}) },
   };
+  const claim = inviteId ? claimInviteStatements(db, { inviteId, expertId: id, actor: input.userId, at: now }) : [];
   const fields = [app.display_name, app.headline, JSON.stringify(app.areas), JSON.stringify(app.job_types), JSON.stringify(stored), AGREEMENT_VERSION, now];
 
   if (!existing) {
@@ -186,6 +198,7 @@ export async function applyAsExpert(env: Env, input: { userId: string; applicati
       db.prepare(`INSERT INTO experts (id, user_id, status, display_name, headline, areas, job_types, application, founding, agreement_version, agreement_accepted_at, review_note, created_at, updated_at)
         VALUES (?, ?, 'applied', ?, ?, ?, ?, ?, 0, ?, ?, '', ?, ?) ON CONFLICT(user_id) DO NOTHING`).bind(id, input.userId, ...fields, now, now),
       eventWhen(db, event, now, "SELECT 1 FROM experts WHERE id = ?", id),
+      ...claim,
     ]);
     if (!res[0]?.meta?.changes) fail(409, "already_applied", `You have already applied. We will email you within ${REVIEW_TIME}.`);
   } else {
@@ -193,6 +206,7 @@ export async function applyAsExpert(env: Env, input: { userId: string; applicati
       db.prepare(`UPDATE experts SET status = 'applied', display_name = ?, headline = ?, areas = ?, job_types = ?, application = ?, agreement_version = ?, agreement_accepted_at = ?,
         review_note = '', reviewed_by = NULL, reviewed_at = NULL, updated_at = ? WHERE id = ? AND status = 'rejected' AND updated_at = ?`).bind(...fields, now, id, existing.updated_at),
       eventWhen(db, event, now, "SELECT 1 FROM experts WHERE id = ? AND status = 'applied' AND updated_at = ?", id, now),
+      ...claim,
     ]);
     if (!res[0]?.meta?.changes) fail(409, "application_changed", "Your application changed while you were sending it. Reload the page and try again.");
   }
@@ -200,8 +214,8 @@ export async function applyAsExpert(env: Env, input: { userId: string; applicati
   const row = (await first<ExpertRow>(db, "SELECT * FROM experts WHERE id = ?", id))!;
   await safely("notify_ops", () => notifyOps(env, {
     kind: "expert.applied",
-    subject: `New expert application: ${app.display_name}`,
-    text: `${app.display_name} applied as an expert${attempt > 1 ? ` (application ${attempt})` : ""}.\n${app.headline}\nAreas: ${app.areas.join(", ")}\nJobs: ${app.job_types.join(", ")}\nCountry: ${app.country}\nReview it in the ops console.`,
+    subject: `New ${row.invite_id ? "invited " : ""}expert application: ${app.display_name}`,
+    text: `${app.display_name} applied as an expert${row.invite_id ? " from a founding invite" : ""}${attempt > 1 ? ` (application ${attempt})` : ""}.\n${app.headline}\nAreas: ${app.areas.join(", ")}\nJobs: ${app.job_types.join(", ")}\nCountry: ${app.country}\nReview it in the ops console.`,
     link: `/ops/experts?status=applied&expert=${id}`,
   }));
   await safely("notify_applicant", () => notify(env, {
@@ -427,7 +441,7 @@ export async function listApplications(env: Env, filter: { status?: string; area
        (SELECT COUNT(*) FROM agents a WHERE a.expert_id = e.id AND a.status = 'live') AS agents_live
      FROM experts e LEFT JOIN users u ON u.id = e.user_id
      ${where.length ? `WHERE ${where.join(" AND ")}` : ""}
-     ORDER BY (e.status = 'applied') DESC, CASE WHEN e.status = 'applied' THEN e.updated_at END ASC, e.updated_at DESC
+     ORDER BY (e.status = 'applied') DESC, (e.status = 'applied' AND e.invite_id IS NOT NULL) DESC, CASE WHEN e.status = 'applied' THEN e.updated_at END ASC, e.updated_at DESC
      LIMIT ${limit}`, ...params);
   const counts = await all<{ status: string; n: number }>(env.DB, "SELECT status, COUNT(*) AS n FROM experts GROUP BY status");
   const experts: OpsExpertView[] = rows.map(r => ({

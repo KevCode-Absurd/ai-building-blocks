@@ -328,7 +328,7 @@ function ToolsIndex() {
       <nav className="crumbs" aria-label="Breadcrumb"><Link to="/">Home</Link><span aria-hidden="true">›</span><span aria-current="page">Tools</span></nav>
       <h1 className="bp-h1">Work out the numbers. Get the small jobs done.</h1>
       <p className="bp-sub">Tools for design, money, hiring, everyday work and life. Clean text, compare options, convert data or plan your budget. Your input stays in your browser.</p>
-      <p className="bp-note tools-more" data-testid="tools-more">Choosing an AI product instead? <Link to="/ai-tools" data-testid="tools-ai-guides">Read the AI tool guides</Link>. Planning growth? <Link to="/tools/growth-channel-planner">Compare 19 growth channels</Link>.</p>
+      <p className="bp-note tools-more" data-testid="tools-more">Choosing an AI product instead? <Link to="/ai-tools" data-testid="tools-ai-guides">Read the AI tool guides</Link>. Planning growth? <Link to="/tools/growth-channel-planner">Compare 19 growth channels</Link>. Need written work instead? <a href="/which-one" data-testid="tools-which-one">See skills, prompts and workflows</a>.</p>
     </header>
     <div className="wrap mt-index">
       <label className="search tools-search"><SearchIcon /><span className="visually-hidden">Find a tool</span><input value={q} onChange={e => setQ(e.target.value)} placeholder="Search for a tool or a job to get done" data-testid="tools-search" /></label>

@@ -15,3 +15,6 @@
 .share-item{display:inline-flex;align-items:center;gap:8px}
 .share-btn{min-height:44px;font:500 13px var(--mono);color:var(--muted)}
 .share-btn:hover{color:var(--text)}
+/* The format label and the trail (Skills › the job) share one line above the heading. */
+.bp-kicker .crumbs{margin:0}
+.bp-kicker .crumbs a{color:inherit}

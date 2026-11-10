@@ -167,3 +167,23 @@ a.bz-step[aria-current="step"] .bz-step-n, a.bz-step[aria-current="step"] .bz-st
   .bz-pn-next { grid-column: 2; }
   .bz-step { padding: 12px 14px; }
 }
+
+/* Format pages (scripts/lib/format-pages.mjs): the row of formats, the three steps and the compare table. */
+.fmt-bar b[aria-current="page"] { cursor: default; }
+.fmt-steps li { grid-template-columns: minmax(0, 1fr); }
+.fmt-jobs a { font-size: 13.5px; }
+.fmt-table { width: 100%; border-collapse: collapse; font-size: 14.5px; line-height: 1.5; }
+.fmt-table th, .fmt-table td { padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.fmt-table thead th { font: 500 12px var(--mono); color: var(--faint); border-bottom-color: var(--line-2); }
+.fmt-table tbody th { min-width: 8.5rem; font-weight: 600; font-size: 16px; }
+.fmt-table tbody th a, .fmt-table td a { text-decoration: underline; text-decoration-color: var(--line-2); text-underline-offset: 3px; }
+.fmt-table tbody th a:hover, .fmt-table td a:hover { text-decoration-color: currentColor; }
+.fmt-count, .fmt-table td > span { display: block; margin-top: 4px; font-size: 13px; font-weight: 400; color: var(--muted); }
+@media (max-width: 760px) {
+  .fmt-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .fmt-table, .fmt-table tbody, .fmt-table tr, .fmt-table th, .fmt-table td { display: block; }
+  .fmt-table tr { padding: 16px 0; border-bottom: 1px solid var(--line); }
+  .fmt-table th, .fmt-table td { padding: 0; border: 0; }
+  .fmt-table td { margin-top: 10px; }
+  .fmt-table td::before { content: attr(data-label); display: block; font: 500 11.5px var(--mono); color: var(--faint); }
+}

@@ -30,11 +30,21 @@ test('the main button downloads the item, and the upload steps sit right under i
   await page.goto('/prompts/rough-notes-to-minutes-writer');
   const main = page.getByTestId('main-action');
   await expect(main.getByTestId('download-task')).toHaveText('Download prompt');
-  await expect(main.getByTestId('upload-steps')).toContainText('Then upload it to your AI');
-  await main.getByTestId('upload-chatgpt').click();
-  await expect(main.getByTestId('upload-steps')).toContainText("ChatGPT project's Sources");
+  // A prompt is one message: one line on how to use it, the brief, then three steps that fit any AI.
+  await expect(main.getByTestId('main-action-lead')).toContainText('open a new chat');
+  await expect(main.getByTestId('item-brief')).toContainText('You give it');
+  await expect(main.getByTestId('brief-time')).toHaveText('One message and one reply.');
+  await expect(main.getByTestId('upload-steps')).toContainText('Then use it in your AI');
+  await expect(main.getByTestId('upload-steps')).toContainText('paste the prompt in');
+  await expect(main.getByTestId('upload-chatgpt')).toHaveCount(0);
   await expect(page.getByText('Run in my AI')).toHaveCount(0);
-  await Promise.all([page.waitForEvent('download'), main.getByTestId('download-task').click()]);
+  // It downloads as a prompt file, not as SKILL.md or a skill ZIP.
+  const [file] = await Promise.all([page.waitForEvent('download'), main.getByTestId('download-task').click()]);
+  expect(file.suggestedFilename()).toBe('rough-notes-to-minutes-writer-prompt.md');
+  // The page says what it is and links up to every prompt.
+  await expect(page.getByTestId('format-label')).toHaveText('Prompt');
+  await expect(page.getByRole('navigation', { name: 'Breadcrumb' }).getByTestId('format-link')).toHaveAttribute('href', '/prompts');
+  await expect(page.getByRole('heading', { name: 'Before and after this prompt' })).toBeVisible();
   // Copying is still one tap away under Other ways.
   await page.getByTestId('more-ways-link').click();
   await expect(page.getByTestId('task-primary')).toContainText('Other ways to use it');
@@ -46,6 +56,9 @@ test('Save sits beside Download, Claude Code has its own steps, and extras wait 
   const main = page.getByTestId('main-action');
   await expect(main.getByTestId('save-item')).toBeVisible();
   await expect(page.getByTestId('save-item')).toHaveCount(1);
+  await expect(main.getByTestId('upload-steps')).toContainText('Then upload it to your AI');
+  await main.getByTestId('upload-chatgpt').click();
+  await expect(main.getByTestId('upload-steps')).toContainText("ChatGPT project's Sources");
   await main.getByTestId('upload-claude-code').click();
   await expect(main.getByTestId('upload-steps')).toContainText('.claude/skills');
   await expect(page.getByTestId('pull-from-ai')).toBeHidden();

@@ -3,6 +3,7 @@
 import type { ReactNode } from "react";
 import type { Plan, PlanItem } from "./lib/data";
 import { Link } from "./lib/router";
+import { plainWords } from "./lib/item-brief.mjs";
 
 const local = (url: string) => url.replace(/^https:\/\/useaiblocks\.com/, "");
 
@@ -10,7 +11,7 @@ function Item({ i }: { i: PlanItem }) {
   const part = i.parts.length && i.maker?.slug === "website-brand-brain-builder" ? ` (its ${i.parts.join(" and ")} part)` : "";
   return (
     <li data-testid="need" data-key={i.key}>
-      <b>{i.label}</b>{part}{i.maker ? <> · made by the <Link to={local(i.maker.url)}>{i.maker.name}</Link></> : <span className="small"> · yours</span>}
+      <b>{plainWords(i.label)}</b>{part}{i.maker ? <> · made by the <Link to={local(i.maker.url)}>{i.maker.name}</Link></> : <span className="small"> · yours</span>}
       <span className="need-what">{i.what.replace(/^./, (c) => c.toUpperCase())}.</span>
     </li>
   );
@@ -38,7 +39,7 @@ export function Before({ plan }: { plan: Plan }) {
       )}
       {required.length > 0 && <><h3 className="with-h">Required material</h3><ul className="needs">{required.map(i => <Item key={i.key} i={i} />)}</ul></>}
       {optional.length > 0 && <details><summary>Improve the result (optional)</summary><ul className="needs">{optional.map(i => <Item key={i.key} i={i} />)}</ul></details>}
-      {brain && <p className="bp-note" data-testid="brain-files">From your brand brain it reads {brain.files.map((f, n) => <span key={f}>{n ? ", " : ""}<code>{f}</code></span>)}.</p>}
+      {brain && <p className="bp-note" data-testid="brain-files">From your brand file it reads {brain.files.map((f, n) => <span key={f}>{n ? ", " : ""}<code>{f}</code></span>)}.</p>}
       <p className="bp-note">Give your AI the required material when you run the task. It should ask about missing facts and mark gaps. Optional extras can wait.</p>
     </>
   );

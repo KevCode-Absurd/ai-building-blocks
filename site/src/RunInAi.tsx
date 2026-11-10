@@ -8,10 +8,19 @@ const NAMES: Record<Ai, string> = { claude: "Claude", "claude-code": "Claude Cod
 const KEY = "abb:run-ai";
 
 /** What to do after the main Download button: upload the file to ChatGPT, Claude or Gemini. Shown under the button,
- *  so nobody has to guess. A workflow or agent pack is a folder of files with START_HERE.txt and HANDOFF.md. */
-export function UploadSteps({ noun, hasFiles, pack }: { noun: string; hasFiles: boolean; pack: boolean }) {
+ *  so nobody has to guess. A workflow or agent pack is a folder of files with START_HERE.txt and HANDOFF.md.
+ *  A prompt with no extra files (`promptFile`) is one text file: the same three steps work in every AI. */
+export function UploadSteps({ noun, hasFiles, pack, promptFile = false }: { noun: string; hasFiles: boolean; pack: boolean; promptFile?: boolean }) {
   const [ai, setAi] = useState<Ai>(() => { try { const v = localStorage.getItem(KEY); return AIS.find(x => x === v) ?? "claude"; } catch { return "claude"; } });
   const pick = (a: Ai) => { setAi(a); try { localStorage.setItem(KEY, a); } catch { /* the choice lasts for this visit */ } };
+  if (promptFile) return (
+    <div className="upload-steps" data-testid="upload-steps">
+      <p className="upload-steps-h">Then use it in your AI:</p>
+      <ol className="num-list" aria-label="Use the prompt in your AI">
+        {["Open a new chat in Claude, ChatGPT or Gemini.", "Attach the file you downloaded, or paste the prompt in.", "Add your details under it and send."].map((s, i) => <li key={i}><span className="n">{i + 1}</span><span>{s}</span></li>)}
+      </ol>
+    </div>
+  );
   const steps: Record<Ai, ReactNode[]> = pack ? {
     claude: [<>Unzip the download.</>, <>In Claude, start a new project and add all the files to it.</>, <>Start a chat in that project and say: <b>Read START_HERE.txt and follow HANDOFF.md</b>.</>],
     "claude-code": [<>Unzip the download into your project folder.</>, <>Start Claude Code in that folder.</>, <>Say: <b>Read START_HERE.txt and follow HANDOFF.md</b>.</>],
@@ -21,7 +30,7 @@ export function UploadSteps({ noun, hasFiles, pack }: { noun: string; hasFiles: 
     claude: [<>In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill.</>, <>Upload the ZIP you downloaded and turn the {noun} on.</>, <>In any chat, ask for it by name.</>],
     "claude-code": [<>Unzip the download into <code>.claude/skills</code> in your project, or into <code>~/.claude/skills</code> to use it in every project.</>, <>Start Claude Code, or restart it if it was open.</>, <>Ask for the {noun} by name.</>],
     chatgpt: [<>Unzip the download.</>, <>Add the files to a ChatGPT project's Sources.</>, <>Start a chat in that project and ask it to use the {noun}.</>],
-    gemini: [<>Unzip the download.</>, <>In Gemini, open Gems and choose New Gem. Paste in the text of SKILL.md{hasFiles ? " and add the other files as its knowledge" : ""}.</>, <>Save the Gem and start your chats with it.</>],
+    gemini: [<>Unzip the download.</>, <>In Gemini, open Gems and choose New Gem. Paste in the text of SKILL.md, the instruction file in the download{hasFiles ? ", and add the other files as its knowledge" : ""}.</>, <>Save the Gem and start your chats with it.</>],
   };
   return (
     <div className="upload-steps" data-testid="upload-steps">
@@ -32,6 +41,7 @@ export function UploadSteps({ noun, hasFiles, pack }: { noun: string; hasFiles: 
       <ol className="num-list" aria-label={`Upload it to ${NAMES[ai]}`}>
         {steps[ai].map((s, i) => <li key={`${ai}${i}`}><span className="n">{i + 1}</span><span>{s}</span></li>)}
       </ol>
+      {pack && <p className="upload-steps-gloss">START_HERE.txt and HANDOFF.md are two files in the download. They hold the plan your AI follows.</p>}
     </div>
   );
 }

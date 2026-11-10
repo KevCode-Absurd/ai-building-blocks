@@ -25,7 +25,7 @@ test('the team method is short, and the record detail is a reference opened only
   for (const profile of ['parallel', 'sequential', 'pack']) for (const tier of ['quick', 'standard', 'deep']) {
     const method = jobMethod(profile, tier);
     assert.ok(words(method) < 900, `${profile}/${tier} is ${words(method)} words`);
-    for (const phrase of ['One lead owns the deliverable', 'team.lead', 'team.helpers', 'Fresh reviewer', 'Do not search the library', 'draft_receipt', 'JOB-RECORDS.md', 'Do not read it unless a check fails']) assert.ok(method.includes(phrase), phrase);
+    for (const phrase of ['One lead owns the deliverable', 'team.lead', 'team.helpers', 'Fresh reviewer', 'Do not search the library', 'draft_receipt', 'JOB-RECORDS.md', 'Do not read it unless a check fails', 'the spec sheet', 'your final check, then hand over', 'send it back once with `revise`, naming the failed tests in `failed_tests`']) assert.ok(method.includes(phrase), phrase);
     for (const event of ['scope', 'staff', 'diverge', 'council', 'produce', 'review', 'deliver', 'feedback']) assert.ok(method.includes(`\`${event}\``), event);
     // Receipt and hash detail lives in the reference, not in what every lead reads.
     assert.doesNotMatch(method, /sha256|SHA-256|usage_status|saw_other_proposals|Borda|verify-delivery-evidence/);
@@ -36,6 +36,9 @@ test('the team method is short, and the record detail is a reference opened only
   const templates = await callJobTool('get_job_templates', { tier: 'standard' });
   assert.deepEqual(templates.files.slice(0, 2).map(file => file.path), ['JOB-METHOD.md', 'JOB-RECORDS.md']);
   assert.ok(words(SINGLE_LEAD_METHOD) < 200); assert.match(SINGLE_LEAD_METHOD, /does not search the library/); assert.match(SINGLE_LEAD_METHOD, /fresh reviewer/i);
+  // The orchestrator writes the spec sheet before the lead starts and checks the work against it at the end.
+  assert.match(SINGLE_LEAD_METHOD, /2 Write the spec sheet/); assert.match(SINGLE_LEAD_METHOD, /Check each acceptance test and each gate against the work yourself. Any fail: send it back once, naming the failed tests./);
+  assert.match(records, /failed_tests/); assert.match(records, /the spec sheet/);
 });
 
 test('nothing tells an AI to search the library before it builds', async () => {

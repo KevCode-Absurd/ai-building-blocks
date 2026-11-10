@@ -158,3 +158,51 @@ test('single-kind jobs reject unrelated or missing artifact kinds before review'
  const absent=structuredClone(f.production);for(const artifact of absent.artifacts)delete artifact.kind;await assert.rejects(()=>send(result,{event:'produce',document:absent},f.context),/kind/);
  assert.equal((await send(result,{event:'produce',document:f.production},f.context)).phase,'REVIEW');
 });
+
+test('the scope step is the spec sheet, and it names a brand file or taste brief only for kinds that need one', async () => {
+  const { validateJobDocument } = await import('../src/jobs/contracts.mjs');
+  const slices = { web_page: /brand file \(its facts, voice and look\)/, ad_creative: /brand file \(its facts, voice and look\)/, copy: /brand file \(its facts and voice\)/, email: /brand file \(its facts and voice\)/ };
+  for (const deliverable_kind of ['web_page', 'ad_creative', 'copy', 'email', 'audit', 'analysis', 'strategy', 'plan', 'code', 'ops_doc', 'other']) {
+    const f = engineFixture(), result = await startJob({ ...f.input, deliverable_kind }, f.context), scope = result.next_action.instruction, card = template(result);
+    assert.match(scope, /Write the spec sheet in templates\/JOB-CARD\.json/, deliverable_kind); assert.match(scope, /acceptance_tests/, deliverable_kind); assert.match(scope, /Your final check reads from them/, deliverable_kind);
+    assert.doesNotMatch(scope, /job card|brand brain/i, deliverable_kind);
+    if (slices[deliverable_kind]) { assert.match(scope, slices[deliverable_kind], deliverable_kind); assert.match(scope, /context\/taste-brief\.md/, deliverable_kind); assert.ok(card.brand_brain && card.grounding.taste_brief, deliverable_kind); }
+    else { assert.doesNotMatch(scope + result.classification_review?.instruction, /brand (?:file|brain)|taste/i, deliverable_kind); assert.equal(card.brand_brain, undefined, deliverable_kind); assert.equal(card.grounding?.taste_brief, undefined, deliverable_kind); }
+    assert.equal(/deliverables with counts, grounding,/.test(scope), ['web_page', 'ad_creative', 'copy', 'email', 'audit', 'analysis'].includes(deliverable_kind), deliverable_kind);
+    // The template starts from the suggested acceptance tests, as rows the job-card schema accepts.
+    assert.ok(card.acceptance.length >= 5 && card.acceptance.length <= 7, deliverable_kind); assert.ok(card.acceptance.some(row => row.critical) && card.acceptance.every(row => row.id && row.criterion.endsWith('?') && /pass/i.test(row.threshold)), deliverable_kind);
+    assert.deepEqual(validateJobDocument('ai-blocks-job-card/1', { ...f.card, acceptance: card.acceptance }).errors.filter(error => error.path.startsWith('acceptance')), [], deliverable_kind);
+    // Production is told to report grounding only when the kind has some.
+    let at = result; for (const entry of f.events.slice(0, 4)) at = await send(at, entry, f.context);
+    const produce = at.next_action.instruction; assert.equal(at.phase, 'PRODUCE');
+    if (slices[deliverable_kind]) assert.match(produce, /Report grounding \(brand_dna and taste_brief\) unless the spec sheet holds it/, deliverable_kind);
+    else if (['audit', 'analysis'].includes(deliverable_kind)) { assert.match(produce, /Report grounding \(data_snapshot\)/, deliverable_kind); assert.doesNotMatch(produce, /brand_dna|taste_brief/, deliverable_kind); }
+    else assert.doesNotMatch(produce, /grounding|brand_dna|taste_brief|data_snapshot/, deliverable_kind);
+  }
+  // The job-type guess is checked against the brand file only when the kind has one.
+  const f = engineFixture(), { job, job_reason, ...unnamed } = f.input;
+  assert.match((await startJob({ ...unnamed, deliverable_kind: 'web_page' }, f.context)).classification_review.instruction, /actual output and the brand file\./);
+  assert.match((await startJob({ ...unnamed, deliverable_kind: 'plan' }, f.context)).classification_review.instruction, /^Check this guess against the actual output\. /);
+});
+
+test('the orchestrator makes the final check: it hands over, or sends the work back once with the failed tests named', async () => {
+  const f = engineFixture(); let result = await startJob(f.input, f.context);
+  for (const entry of f.events.slice(0, 6)) result = await send(result, entry, f.context);
+  assert.equal(result.phase, 'DELIVER'); assert.equal(result.next_action.alternative_event, 'revise');
+  assert.match(result.next_action.instruction, /The lead has handed back\. Now you, the orchestrator, check each acceptance test and each rubric gate against the deliverable yourself/);
+  assert.match(result.next_action.instruction, /send it back to the lead once with revise, naming the failed tests in failed_tests/);
+  const back = { slot_ids: ['d0'], reason: 'The first output does not show the product a buyer expects.' };
+  await assert.rejects(() => send(result, { event: 'revise', document: back }, f.context), /failed_tests: Name each acceptance test or gate that failed/);
+  await assert.rejects(() => send(result, { event: 'revise', document: { ...back, failed_tests: ['not-a-test'] } }, f.context), /failed_tests/);
+  await assert.rejects(() => send(result, { event: 'revise', document: { failed_tests: ['complete'], slot_ids: ['missing'], reason: 'x' } }, f.context), /real slots/);
+  // An acceptance test or a rubric gate can be named. The send-back does not use up a review round.
+  let sent = await send(result, { event: 'revise', document: { ...back, failed_tests: ['complete', 'facts_trace_to_source'] } }, f.context);
+  assert.equal(sent.phase, 'PRODUCE'); assert.equal(sent.state.history.at(-1).document.failed_tests.length, 2);
+  sent = await send(sent, f.events[4], f.context); sent = await send(sent, f.events[5], f.context);
+  assert.equal(sent.phase, 'DELIVER'); assert.equal(sent.next_action.alternative_event, undefined);
+  assert.match(sent.next_action.instruction, /already sent this back once, so deliver with flags/);
+  await assert.rejects(() => send(sent, { event: 'revise', document: { ...back, failed_tests: ['complete'] } }, f.context), /sends work back once/);
+  assert.equal((await send(sent, f.events[6], f.context)).phase, 'LEARN');
+  // Handing over without a send-back still works.
+  assert.equal((await send(result, f.events[6], f.context)).phase, 'LEARN');
+});

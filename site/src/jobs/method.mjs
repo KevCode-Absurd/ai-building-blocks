@@ -3,11 +3,12 @@ import { executionQualityMethod } from './execution-quality.mjs';
 /** How a job with one lead runs. Sent in start_job for single mode; there is no record keeping to learn. */
 export const SINGLE_LEAD_METHOD = [
   'One lead does this job. You are the orchestrator.',
-  '1 Ask the `questions` in one short message. Each has a default, so "you decide" is a full answer.',
-  '2 Load the lead with `next_action.tool`. Hand it the request, the answers and the brief. Its toolbox comes with it: it opens what fits and does not search the library.',
-  '3 The lead grounds the job in the client\'s real site, files or data. Then it makes about three real candidates of the part that decides the outcome, and builds the best one in full.',
-  '4 A fresh reviewer who has not seen the drafts checks the work against `rubric`. Use a new sub-agent if you can start one. If not, do a separate pass and label it SAME-CONTEXT. Every gate must pass.',
-  '5 You check the finished work against the request. Hand over the work first, opened by 3 to 5 lines: what this is, the main decision and why, what to check before use.',
+  '1 Ask the `questions` in one message. Each has a default, so "you decide" is an answer.',
+  '2 Write the spec sheet (`next_action.context` pre-fills it): the job in one sentence, deliverables with counts, 5 to 7 acceptance tests.',
+  '3 Load the lead with `next_action.tool`. Hand it the answers, the spec sheet and the brief. It uses the toolbox it carries and does not search the library.',
+  '4 The lead grounds the job in the client\'s real site, files or data, makes about three real candidates of the part that decides the outcome, and builds the best in full.',
+  '5 A fresh reviewer who has not seen the drafts checks the work against `rubric`: a new sub-agent, or a separate pass labelled SAME-CONTEXT. Every gate must pass.',
+  '6 The lead hands back. Check each acceptance test and each gate against the work yourself. Any fail: send it back once, naming the failed tests. Hand over the work first, opened by 3 to 5 lines: what this is, the main decision and why, what to check before use.',
   'Nothing here permits sending, spending, publishing or deleting. Those stop for the owner.',
 ].join('\n');
 
@@ -32,7 +33,7 @@ One lead owns the deliverable. Helpers work for the lead. You, the orchestrator,
 
 ## Who does what
 
-- **Orchestrator (you, the coordinator seat).** Understand the request. Ask the \`questions\` in one message; each has a default, so "you decide" is a full answer. Write the spec sheet. Hand over to the lead. At the end, check the finished work against the spec. You never make the work.
+- **Orchestrator (you, the coordinator seat).** Understand the request. Ask the \`questions\` in one message; each has a default, so "you decide" is a full answer. Write the spec sheet. Hand over to the lead. At the end, check the finished work against each acceptance test yourself. You never make the work.
 - **Team lead (\`team.lead\`).** Owns the deliverable from first draft to hand-over. Decides which helper does what, briefs them, joins their work and checks it before review.
 - **Helpers (\`team.helpers\`).** Each has one job, written beside its name. A maker never reviews. A reviewer never makes.
 - **Fresh reviewer (the judge).** Sees only the request, the spec sheet, the rubric and the finished work. Never the drafts or the debate.
@@ -45,13 +46,13 @@ ${isolationLine(profile)}
 
 Send one \`advance_job\` event per step. Send \`state\` and \`state_digest\` exactly as last returned; save them, and every returned file, in \`jobs/<job_id>/\`.
 
-1. **\`scope\`: the spec sheet.** Fill \`templates/JOB-CARD.json\`. Give the job in one sentence: who must do what after seeing this. List the deliverables with counts, in the client's words. Add 5 to 7 acceptance checks the client would ask, the hard rules, and what you assumed. Keep \`request_verbatim\` unchanged. Ground only what this job needs, as the brief says. If the job changes or reviews existing work, add \`work_context\`: what you inspected, when, and what must stay. Check the suggested job type; if another fits, restart with \`job\` and \`job_reason\`.
+1. **\`scope\`: the spec sheet.** Fill \`templates/JOB-CARD.json\`. Give the job in one sentence: who must do what after seeing this. List the deliverables with counts, in the client's words. Add 5 to 7 acceptance tests the client would ask (\`acceptance\`; the template starts from the suggested ones, so rewrite each), the hard rules, and what you assumed. Keep \`request_verbatim\` unchanged. Ground only what this job needs, as the brief says. If the job changes or reviews existing work, add \`work_context\`: what you inspected, when, and what must stay. Check the suggested job type; if another fits, restart with \`job\` and \`job_reason\`.
 2. **\`staff\`: the team.** Send \`accept_proposal: true\`, or your own seat list with a one-line reason for each change. The lead must be a maker: not you, not the reviewer.
 3. **\`diverge\`: real candidates.** Each maker writes a first version alone, before seeing the others. Candidates must differ in substance: promise, proof, structure, buyer moment or offer. A new colour, crop or headline is not a new candidate. Each route names its \`methods\`, its \`references\` and a \`draft_receipt\`. More than one output also needs a \`spread\`.
 4. **\`council\`: someone else chooses.** ${council}
-5. **\`produce\`: build it in full.** The lead builds the chosen candidate with the helpers. Write the persuasion yourself: page lines are facts, not copy to paste. Use real names, prices and dates. Where a number is unknown, give a working figure and say what to check. The fact checker traces every claim. Report \`grounding\` here if the job card does not hold it. The lead signs off in \`lead_review\`.
+5. **\`produce\`: build it in full.** The lead builds the chosen candidate with the helpers. Write the persuasion yourself: page lines are facts, not copy to paste. Use real names, prices and dates. Where a number is unknown, give a working figure and say what to check. The fact checker traces every claim. Report \`grounding\` here if the brief asks for it and the spec sheet does not hold it. The lead signs off in \`lead_review\`.
 6. **\`review\`: the fresh reviewer.** The judge scores each output against \`RUBRIC.json\`, with a quote for each score. It marks every gate PASS or FAIL and answers each critical acceptance check. A failed gate is never averaged away. ${loops}
-7. **\`deliver\`: hand over.** You check the work against the spec and each acceptance check (\`coordinator_review\`). The work comes first, opened by 3 to 5 lines: what this is, the main decision and why, what to check before use. No process sections. Never point the client at working files. If a check failed, say so and deliver with flags.
+7. **\`deliver\`: your final check, then hand over.** The lead hands back. Check each acceptance test and each rubric gate against the work yourself (\`coordinator_review\`, one row each). Any fail: send it back once with \`revise\`, naming the failed tests in \`failed_tests\`. If it still fails, say so and deliver with flags. The work comes first, opened by 3 to 5 lines: what this is, the main decision and why, what to check before use. No process sections. Never point the client at working files.
 8. **\`feedback\`.** Ask what to keep, kill or make more like, and send it.
 
 ## Rules that hold all the way through
@@ -79,7 +80,8 @@ Open this only when advance_job refuses a record. The error names the field; fin
 ## Every event
 Send the complete \`state\` and \`state_digest\` from the latest result, unchanged, with each advance_job event. The digest detects edits; the server replays the whole history and checks phase order and structure. Keep artifacts local and send their SHA-256 hashes. Paths are safe relative paths.
 
-## scope (ai-blocks-job-card/1)
+## scope (ai-blocks-job-card/1): the spec sheet
+- \`acceptance\` holds the acceptance tests: id, criterion, a measurable threshold and critical. The orchestrator's final check reads from them.
 - \`request_verbatim\` equals the original request. \`dials.depth.value\` equals the tier from start_job.
 - \`brand_brain\` (the brand file) is required for page, ad, copy and email jobs only: status AVAILABLE or BUILT, business, path, sha256, read_by_coordinator: true, and a \`context_sources\` entry whose ref is the same path. Audits and analysis need a data snapshot instead (see grounding). Strategy, plan, code and document jobs need neither.
 - \`grounding\`, when reported here: for page, ad, copy and email jobs \`brand_dna\` {path context/brand-dna.json, sha256, source, captured_at, method} and \`taste_brief\` {path context/taste-brief.md, sha256, brand_codes, references_admired (2), reference_avoid (1), defaults_to_avoid}; for audits and analysis \`data_snapshot\` {path under context/, sha256, source, captured_at}. Production is refused until grounding is reported at scope or produce.
@@ -107,7 +109,7 @@ ${tier === 'quick' ? 'Quick tier: separate proposals and a chair decision; recor
 One item per produced output: standard \`scores\`, \`craft_scores\` for RUBRIC.json craft.criteria, and \`gates\` with PASS, FAIL or NOT_RUN and evidence. \`critical_checks\` answers each critical acceptance check with a quote. \`loop\` is the current pass number. ${tier === 'quick' ? 'Quick tier has no revision loop.' : tier === 'deep' ? 'Deep tier allows two revision loops and needs two distinct judges.' : 'Standard tier allows one revision loop.'}
 
 ## deliver (ai-blocks-job-delivery/1)
-\`coordinator_review\`: by_seat (the coordinator), job_match, notes and a rubric_checks entry per acceptance check. Include every delivery template file with its hash, and the exact reviewed artifact revisions. A failed review or final check needs \`flags\` and status DELIVERED_WITH_FLAGS.
+\`coordinator_review\`: by_seat (the coordinator), job_match, notes and a rubric_checks entry per acceptance test (add one per rubric gate). Include every delivery template file with its hash, and the exact reviewed artifact revisions. When the final check fails, send \`revise\` once with slot_ids, reason and \`failed_tests\` (the ids of the acceptance tests or gates that failed); the work goes back to produce and is reviewed again. A failed review or a final check that still fails needs \`flags\` and status DELIVERED_WITH_FLAGS.
 
 ## feedback
 Items of {slot_id, action: keep, kill or more_like_this}. Feedback applies to one artifact unless scope: family and a reason are given.

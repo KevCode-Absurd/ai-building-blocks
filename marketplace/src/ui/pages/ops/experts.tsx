@@ -15,6 +15,7 @@ interface ExpertItem {
   job_types?: string[];
   application?: { experience?: string; claims?: { text: string; evidence_url: string }[]; sample_links?: string[]; country?: string } | null;
   founding?: boolean;
+  invited?: boolean;
   note?: string;
   reviewed_at?: string | null;
   applied_at?: string;
@@ -47,7 +48,7 @@ function ExpertCard(props: { expert: ExpertItem; onDone: (message: string) => vo
     } finally { setBusy(null); }
   };
   return (
-    <Card title={name} actions={<div class="row"><Badge tone={TONE[e.status] ?? "neutral"}>{words(e.status)}</Badge>{e.founding && <Badge tone="info">Founding expert</Badge>}</div>}>
+    <Card title={name} actions={<div class="row"><Badge tone={TONE[e.status] ?? "neutral"}>{words(e.status)}</Badge>{e.invited && <Badge tone="info">Invited</Badge>}{e.founding && <Badge tone="info">Founding expert</Badge>}</div>}>
       {e.headline && <p>{e.headline}</p>}
       <dl class="ops-facts">
         {e.email && <div><dt>Email</dt><dd>{e.email}</dd></div>}

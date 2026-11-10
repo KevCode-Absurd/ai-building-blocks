@@ -6,7 +6,7 @@ import { api } from "../../lib/api.ts";
 import { useAuth } from "../../lib/auth.tsx";
 import {
   AREA_LABELS, WhatNext, canApplyAgain, longDate,
-  type Agreement, type CatalogueList, type ExpertMe, type ExpertView,
+  type Agreement, type CatalogueList, type ExpertMe, type ExpertView, type PublicInviteView,
 } from "./shared.tsx";
 
 const MAX_AREAS = 3, MAX_JOBS = 10, MAX_CLAIMS = 5, MAX_SAMPLES = 5;
@@ -15,15 +15,28 @@ const isHttps = (v: string) => {
   try { const u = new URL(v); return u.protocol === "https:" && u.hostname.includes("."); } catch { return false; }
 };
 
-export function ApplyPage() {
-  const state = useLoad(() => api<ExpertMe>("/api/experts/me"), []);
+/** The founding invite in ?invite=<token>, or null. A bad or used link just means applying without it. */
+async function loadInvite(token: string): Promise<{ token: string; invite: PublicInviteView } | null> {
+  if (!token) return null;
+  try {
+    const res = await api<{ invite: PublicInviteView }>(`/api/experts/invites/${encodeURIComponent(token)}`);
+    return res.invite.state === "open" ? { token, invite: res.invite } : null;
+  } catch { return null; }
+}
+
+export function ApplyPage(props: { query?: URLSearchParams }) {
+  const inviteToken = props.query?.get("invite")?.trim() ?? "";
+  const state = useLoad(async () => {
+    const [me, invite] = await Promise.all([api<ExpertMe>("/api/experts/me"), loadInvite(inviteToken)]);
+    return { ...me, invite };
+  }, [inviteToken]);
   const [sent, setSent] = useState<string | null>(null);
   if (sent) return <Sent reviewTime={sent} />;
   if (state.error) return <Page title="Apply as an expert"><Notice tone="bad">{state.error}</Notice></Page>;
   if (!state.data) return <Page title="Apply as an expert"><Spinner /></Page>;
   const ex = state.data.expert;
   if (ex && !canApplyAgain(ex)) return <AlreadyIn expert={ex} />;
-  return <ApplyForm me={state.data} onSent={setSent} />;
+  return <ApplyForm me={state.data} invite={state.data.invite} inviteMissing={!!inviteToken && !state.data.invite} onSent={setSent} />;
 }
 
 function Sent(props: { reviewTime: string }) {
@@ -57,16 +70,17 @@ function AlreadyIn(props: { expert: ExpertView }) {
 
 type Claim = { text: string; evidence_url: string };
 
-function ApplyForm(props: { me: ExpertMe; onSent: (reviewTime: string) => void }) {
+function ApplyForm(props: { me: ExpertMe; invite: { token: string; invite: PublicInviteView } | null; inviteMissing: boolean; onSent: (reviewTime: string) => void }) {
   const auth = useAuth();
   const prev = props.me.expert?.application ?? null;
+  const inv = props.invite?.invite ?? null;
   const catalogue = useLoad(() => api<CatalogueList>("/api/catalogue"), []);
   const agreement = useLoad(() => api<{ agreement: Agreement }>("/api/experts/agreement"), []);
 
-  const [name, setName] = useState(prev?.display_name ?? auth.me?.user.name ?? "");
+  const [name, setName] = useState(prev?.display_name ?? inv?.name ?? auth.me?.user.name ?? "");
   const [headline, setHeadline] = useState(prev?.headline ?? "");
-  const [areas, setAreas] = useState<Area[]>((prev?.areas as Area[] | undefined) ?? []);
-  const [jobTypes, setJobTypes] = useState<string[]>(prev?.job_types ?? []);
+  const [areas, setAreas] = useState<Area[]>((prev?.areas as Area[] | undefined) ?? (inv?.areas as Area[] | undefined)?.slice(0, MAX_AREAS) ?? []);
+  const [jobTypes, setJobTypes] = useState<string[]>(prev?.job_types ?? inv?.job_types.slice(0, MAX_JOBS) ?? []);
   const [experience, setExperience] = useState(prev?.experience ?? "");
   const [claims, setClaims] = useState<Claim[]>(prev?.claims?.length ? prev.claims : [{ text: "", evidence_url: "" }]);
   const [samples, setSamples] = useState((prev?.sample_links ?? []).join("\n"));
@@ -119,6 +133,7 @@ function ApplyForm(props: { me: ExpertMe; onSent: (reviewTime: string) => void }
           display_name: name.trim(), headline: headline.trim(), areas, job_types: jobTypes, experience: experience.trim(),
           claims: claims.filter(c => c.text.trim() || c.evidence_url.trim()).map(c => ({ text: c.text.trim(), evidence_url: c.evidence_url.trim() })),
           sample_links: sampleList(), country: country.trim(), agree,
+          ...(props.invite ? { invite_token: props.invite.token } : {}),
         },
       });
       await auth.refreshMe();
@@ -135,6 +150,8 @@ function ApplyForm(props: { me: ExpertMe; onSent: (reviewTime: string) => void }
   return (
     <Page title="Apply as an expert" intro="Tell us how you work. If we approve you, you turn your method into an AI agent that buyers can hire.">
       {props.me.expert?.status === "rejected" && <Notice tone="info">Your last answers are filled in. Change what our team asked for, then send it again.</Notice>}
+      {inv && <Notice tone="good" title={`Welcome, ${inv.first_name}`}>You are applying with your founding invite. We filled in what we know. Check it and add the rest.</Notice>}
+      {props.inviteMissing && <Notice tone="info">Your invite link did not work, or it was already used. You can still apply here.</Notice>}
       <form class="exp-form" onSubmit={submit} noValidate>
         <Card title="About you">
           <Field label="Your name" id="exp-name" error={errors.name}>

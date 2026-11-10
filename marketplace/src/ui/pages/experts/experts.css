@@ -68,3 +68,28 @@
 .exp-checks { margin: 4px 0 0; padding-left: 20px; }
 .exp-edits-wrap > summary { cursor: pointer; font-weight: 600; font-size: 14px; }
 .exp-edits { background: var(--panel-2); border: 1px solid var(--line); border-radius: var(--radius); padding: 10px 12px; margin: 8px 0 0; overflow-x: auto; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 13px; max-height: 360px; }
+
+/* The setup checklist on the dashboard. */
+.exp-progress { height: 8px; background: var(--panel-2); border: 1px solid var(--line); border-radius: 999px; overflow: hidden; margin: 0 0 14px; }
+.exp-progress span { display: block; height: 100%; background: var(--btn); }
+.exp-checklist { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.exp-checklist li { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 10px; align-items: start; }
+.exp-check-mark { width: 24px; height: 24px; display: grid; place-items: center; border: 2px solid var(--line-2); border-radius: 50%; font-size: 14px; font-weight: 700; line-height: 1; }
+.exp-check-done .exp-check-mark { background: var(--btn); border-color: var(--btn); color: var(--btn-text); }
+.exp-check-done .exp-check-text b { color: var(--muted); font-weight: 500; text-decoration: line-through; text-decoration-color: var(--line-2); }
+.exp-check-text { display: grid; gap: 2px; min-width: 0; }
+
+/* The public page, the share link and job posts. */
+.exp-profile-form { max-width: none; }
+.exp-share-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 8px 0 16px; }
+.exp-share-link { font-family: var(--mono); font-size: 14px; background: var(--panel-2); border: 1px solid var(--line); border-radius: var(--radius); padding: 8px 10px; overflow-wrap: anywhere; min-width: 0; flex: 1 1 260px; }
+.exp-share-stats { margin-top: 4px; }
+.exp-posts { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.exp-post { border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; display: grid; gap: 8px; min-width: 0; background: var(--panel); }
+.exp-post p { margin: 0; }
+.exp-post-picked { border-color: var(--text); box-shadow: var(--hard); }
+.exp-post-title { font-size: 18px; margin: 0; overflow-wrap: anywhere; }
+.exp-areas-title { font-size: 14px; font-family: var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 22px 0 0; font-weight: 600; }
+.exp-areas { margin-top: 8px; }
+.exp-agent-name { margin-bottom: 0; }
+.exp-profile .dir-outcome .btn { margin-top: auto; }

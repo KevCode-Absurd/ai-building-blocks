@@ -4,6 +4,7 @@
 
 - [Acquired asset earnings adjustment checker](https://useaiblocks.com/skills/purchased-amortization-eps-bridge): Share acquired asset charges and their tax effect. Compare reported earnings per share with an adjusted view.
 - [Ad data quality checker](https://useaiblocks.com/skills/ad-data-quality-checker): Give it ad and sales data with dates and time zone. Pick checks, like spend totals or duplicate leads, and get full BigQuery findings.
+- [Ad lift test planner](https://useaiblocks.com/skills/incrementality-test-planner): Share your ad spend and sales by region. Get a test of the sales your ads really caused, with a cut, hold or scale rule.
 - [Analytics events and tracking gap review](https://useaiblocks.com/agents/monthly-tracking-health-keeper): Review event reports, campaign links and platform totals. Find missing evidence, double counts and tag changes to check.
 - [Animal study severity scorer](https://useaiblocks.com/skills/animal-study-severity-scorer): Share animal welfare readings and a reference group. Get scores of change over time, with plots and forecasts to explore.
 - [Appointment no-show analyst](https://useaiblocks.com/workflows/explain-appointment-no-show-patterns): Check booking records and the rule for no-shows. Get a table and plain summary, with reasons left unknown unless supported.
@@ -18,7 +19,6 @@
 - [Business results drop investigator](https://useaiblocks.com/prompts/numbers-drop-explainer): Find out why your numbers dropped. Paste the before and after figures and what changed. You get causes ranked by evidence and one check to run.
 - [Business subscription renewal reviewer](https://useaiblocks.com/agents/monthly-subscription-renewal-decision-assistant): Review changed bills, usage and renewal terms. Find duplicate costs and evidence gaps before proposing a renewal decision.
 - [Business subscription usage auditor](https://useaiblocks.com/workflows/find-duplicate-and-unused-business-subscriptions): Check software bills and real use. Compare keep or replace options and list renewal choices with possible savings.
-- [CAC payback checker](https://useaiblocks.com/skills/cac-payback-checker): Check your CAC payback: give it ad spend, margins and cohort profit. Get profit to CAC ratios, a scale, hold or fix call and a score out of 100.
 - [Cantera ignition delay simulator](https://useaiblocks.com/skills/ignition-delay-simulator): Use a reaction model, gas mix, temperature, and pressure to find the wait before ignition.
 - [Conversion funnel analyst](https://useaiblocks.com/skills/conversion-funnel-analyst): Find where people leave your sign-up or checkout funnel. Give it an event log and your steps to get conversion per step and ranked fixes.
 - [Conversion tracking planner](https://useaiblocks.com/agents/agency-paid-media-tracking-specialist): Plan or fix your ad conversion tracking across GA4, Google Ads and Meta. Get an event list, a double-count check and a step-by-step test plan.
@@ -26,7 +26,8 @@
 - [Cross-platform conversion reconciler](https://useaiblocks.com/skills/conversion-reconciliation): See why Meta, Google and GA4 report different conversions. Get a side-by-side table, the reason for each gap and a fix plan.
 - [Customer acquisition profitability reviewer](https://useaiblocks.com/skills/ltgp-to-cac-checker): Share ad spend, new customers and order profits. Get customer payback ratios, warning signs and a score out of 100.
 - [Customer behaviour group finder](https://useaiblocks.com/skills/behaviour-group-finder): Share customer data and a decision goal. Get proposed behaviour groups, profiles and actions, with checks on how useful the groups are.
-- [Customer value and payback reviewer](https://useaiblocks.com/skills/store-ltv-payback-reader): Find your store's LTV and real CAC payback month from first-order cohorts by month. Get repeat rate, LTV and a score out of 100.
+- [Customer cost payback checker](https://useaiblocks.com/skills/cac-payback-checker): Share ad spend, margins and customer profit. Get a score and a scale, hold or fix call on what customers cost to win.
+- [Customer value and payback reviewer](https://useaiblocks.com/skills/store-ltv-payback-reader): Share first orders grouped by month. Get repeat rate, customer lifetime value, the month your cost to win them pays back and a score.
 - [Department budget difference and options review](https://useaiblocks.com/workflows/explain-a-department-budget-overrun): Check actual spend against the budget. Trace major differences to the records and draft choices for the budget owner.
 - [Donated goods stock handover checker](https://useaiblocks.com/workflows/reconcile-donated-goods-records): Share donation receipts, distributions, dates and stock counts. Get an item-by-item quantity check, missing records and handover notes.
 - [Employee share dilution cash calculator](https://useaiblocks.com/skills/sbc-share-offset-cost): Share net employee shares and repurchase assumptions. Estimate the cash to offset dilution beside the reported pay expense.
@@ -42,7 +43,6 @@
 - [Google Analytics analyst](https://useaiblocks.com/skills/google-analytics-reader): Check your Google Analytics 4 traffic, top pages and sign-ups by asking in plain words. Get a live, read-only report and the query behind it.
 - [Grant spending and evidence report preparer](https://useaiblocks.com/workflows/prepare-a-grant-spending-evidence-pack): Share grant rules, budget, transactions and receipts. Get a spending table, budget differences and missing evidence for the fund owner.
 - [Grant spending and receipt review](https://useaiblocks.com/agents/grant-spending-evidence-review-assistant): Match grant spending with its budget, rules and receipts. See changes, disputed costs and missing evidence.
-- [Incrementality test planner](https://useaiblocks.com/skills/incrementality-test-planner): Plan an incrementality test for your ad channel. Get a test sized to your spend and regions, plus a cut, hold or scale rule to read it.
 - [Indian economy dashboard builder](https://useaiblocks.com/skills/rates-economy-dashboard): Build an India economy dashboard from dated official data. Show key measures, sources, gaps and limits.
 - [Invoice financing cash flow checker](https://useaiblocks.com/skills/factoring-cashflow-timing-bridge): Share operating cash and matched invoice-financing records. See how early advances changed the timing of reported cash.
 - [Lead source field checker](https://useaiblocks.com/skills/lead-source-field-checker): Check if your CRM lead source fields can be matched to your ad history. You get a clear verdict for each field, with no customer data kept.
@@ -69,11 +69,10 @@
 - [PyMC run tracker with MLflow](https://useaiblocks.com/skills/model-run-tracker): Turn PyMC model code into MLflow tracking code that saves settings, fit results, and diagnostics.
 - [Queue and process simulator](https://useaiblocks.com/skills/queue-and-process-simulator): Test a queue or process before you change it. Get a simulation of waits and busy staff or machines, run many times, with a plain summary.
 - [Raw material price impact calculator](https://useaiblocks.com/skills/commodity-pass-through-cost-bridge): Share material costs, product quantities and price plans. See how cost increases affect the margin left.
-- [Recurring KPI report maker](https://useaiblocks.com/skills/recurring-kpi-report-maker): Describe a report and connect its data. Get checked numbers, a workbook and a saved report definition to rerun.
+- [Recurring report maker](https://useaiblocks.com/skills/recurring-kpi-report-maker): Describe a report and connect its data. Get checked numbers, a workbook and a saved report definition to rerun.
 - [Report definition change reviewer](https://useaiblocks.com/agents/report-definition-drift-review-assistant): Compare report formulas, dates and counting rules. Find mismatches before presenting a trend or changing a shared definition.
 - [Report totals and definition checker](https://useaiblocks.com/workflows/align-recurring-report-metric-definitions): Trace why recurring reports disagree. Get a difference table, worked examples and draft rules for future reporting.
 - [Research spending adjustment calculator](https://useaiblocks.com/skills/research-spend-cohort-adjustment): Share research costs and useful-life assumptions. Compare reported operating profit with an analyst view that spreads those costs.
-- [Retention cohort analyst](https://useaiblocks.com/skills/retention-cohort-analyst): Give it user activity data. Get retention curves by sign-up group, feature adoption trends and what they suggest.
 - [Retention heatmap maker](https://useaiblocks.com/skills/retention-heatmap-maker): Give it signup and activity dates. Get retention by group over time, as a colour-coded grid with a plain reading.
 - [Revenue growth currency checker](https://useaiblocks.com/skills/constant-currency-revenue-bridge): Share sales and exchange rates for both periods. Separate sales growth from the effect of changing rates.
 - [Sales data extraction planner](https://useaiblocks.com/agents/agency-sales-data-extraction-agent): Pull month to date and year to date sales numbers out of messy Excel reports into one clean table, with a log of skipped rows.
@@ -81,6 +80,7 @@
 - [Seawater carbonate calculator](https://useaiblocks.com/skills/seawater-carbonate-calculator): Use two separate seawater readings to find carbon forms, error ranges, and whether minerals may form.
 - [Shopify campaign link planner](https://useaiblocks.com/skills/campaign-link-tracker): Share campaign dates, channels and page links. Get tagged links, Shopify match rules and an attribution model.
 - [Shopify dashboard reader](https://useaiblocks.com/skills/shopify-dashboard-reader): Read your Shopify dashboard the safe way. Paste your analytics numbers to see which tiles to trust, your cash collected and a score out of 100.
+- [Sign-up group retention analyst](https://useaiblocks.com/skills/retention-cohort-analyst): Give it user activity data. Get retention curves by sign-up group, feature adoption trends and what they suggest.
 - [SQL query launch reviewer](https://useaiblocks.com/skills/sql-query-launch-reviewer): Share a SQL query before it goes live. Get wrong-result risks, slow spots and rewrites ranked by impact.
 - [SQL query writer](https://useaiblocks.com/skills/sql-query-writer): Describe what you want to know. Get a working SQL query, using joins, groups, windows and CTEs as needed.
 - [Startup metrics picker](https://useaiblocks.com/skills/startup-metrics-picker): Pick the one metric your startup should track this quarter. Give your model and stage. You get a partner metric, a target and a short list.

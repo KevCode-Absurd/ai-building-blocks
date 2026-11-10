@@ -1,6 +1,6 @@
 # Make image ads: AI Blocks
 
-> 64 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 65 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [3D cutaway image ad maker](https://useaiblocks.com/skills/3d-cutaway-image-ad-maker): Share sourced product facts and approved claims. Get a cutaway image prompt, layout and ad copy, with image creation when tools allow.
 - [Ad image planner](https://useaiblocks.com/skills/ad-image-generation-and-edit-planner): Plan a batch of ad images from your product photo: get the settings, a prompt for each version, edit requests and a log of every change.
@@ -37,6 +37,7 @@
 - [Image enlargement quality checker](https://useaiblocks.com/skills/image-upscale-checker): Check an image upscale before it goes to print. Give it your approved image and target size. You get safe settings, a change check and a score.
 - [Knitted wool image ad maker](https://useaiblocks.com/skills/knitted-wool-image-ad-maker): Make a knitted wool image ad for awkward subjects. Give it your selling idea and photos. You get an image prompt, ad words and a layout.
 - [Leftover mess image ad maker](https://useaiblocks.com/skills/leftover-mess-image-ad-maker): Turn your story ad into a close-up photo prompt of the mess your problem leaves behind, plus a short line to run under the image.
+- [Make an ad concept spread](https://useaiblocks.com/skills/make-ad-concept-spread): Give it your ad brief and product facts. You get nine or more ideas, the best ones made, and one lead ad.
 - [Meta offer image ad planner](https://useaiblocks.com/workflows/offer-image-ads): Share website facts, real prices and product photos. Get offer ideas, three image-ad plans and a first-pass Meta rules review.
 - [Odd-one-out image ad maker](https://useaiblocks.com/skills/odd-one-out-image-ad-maker): Share your story ad. Create a photo brief, prompt and caption around one odd detail, with image generation when available.
 - [Overhead portrait image maker](https://useaiblocks.com/prompts/overhead-portrait-image-maker): Describe an overhead adult portrait and share reference photos. Get a camera-and-light prompt, with an image if an image tool is available.

@@ -80,7 +80,7 @@
 - [Research report summary and slide-brief writer](https://useaiblocks.com/workflows/make-a-research-report-easier-to-share): Share a report, its sources, audience and sharing limits. Get a plain summary, slide outline and checks across figures and claims.
 - [Safe database query runner](https://useaiblocks.com/skills/safe-database-query-runner): Ask a question about your Postgres data in plain words. Get a read-only SQL query run for you, with the results back and write commands blocked.
 - [Scanned document reader and fact checker](https://useaiblocks.com/workflows/extract-a-scanned-document-and-verify-key-facts): Read text from a scan. Check key names and numbers against the original pages and flag what is unclear.
-- [Scanned PDF text reader](https://useaiblocks.com/skills/scanned-pdf-text-reader): Give it PDFs, Office files, or scans. Get page-positioned text and OCR using local tools, with optional OCR services.
+- [Scanned PDF text reader](https://useaiblocks.com/skills/scanned-pdf-text-reader): Give it PDFs, Office files or scans. Get text with page positions, using OCR (reading text from images) on your own computer.
 - [Screenshot privacy masker](https://useaiblocks.com/skills/screenshot-privacy-masker): Mask phone numbers, emails, keys and IDs in a screenshot on your own computer. Check the masked copy before you share it.
 - [Slide deck number updater](https://useaiblocks.com/skills/deck-number-refresher): Update every number in your deck with new figures. Find each old value, approve the plan, and get the refreshed deck plus a change log.
 - [Slide outline and image maker](https://useaiblocks.com/skills/slide-deck-image-maker): Give it content. Review a slide outline, then create one image for each approved slide.

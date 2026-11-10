@@ -1,6 +1,6 @@
 # Design things people love: AI Blocks
 
-> 118 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 119 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [AI assistant interface style guide writer](https://useaiblocks.com/skills/ai-assistant-style-guide): Describe your AI product. Get a style guide for a chat-first screen with few controls and clear outcomes.
 - [AI default patterns](https://useaiblocks.com/skills/ai-default-patterns): Give it your brief or draft. You get the AI habits to avoid for your brand, and a check for them.
@@ -18,7 +18,7 @@
 - [Creative style brief writer](https://useaiblocks.com/skills/aesthetic-direction-brief-writer): Turn a vague feel into an aesthetic direction brief. Answer four questions on tone and style, and keep your copy, design and images in one voice.
 - [Cultural fit reviewer](https://useaiblocks.com/agents/agency-specialized-cultural-intelligence-strategist): Review your forms, copy or image prompts for cultural blind spots. Get ranked exclusion risks and copy-ready fixes for the markets you serve.
 - [Customer complaint design researcher](https://useaiblocks.com/workflows/turn-user-complaints-into-design-questions): Share dated complaints, product versions and relevant screens. Get themes, ranked design questions and a small research plan to test possible causes.
-- [Dark-theme SVG diagram maker](https://useaiblocks.com/skills/diagram-maker): Describe a system, process or idea. Get a dark-theme SVG diagram and, with the conversion tool, a PNG copy.
+- [Dark-theme diagram maker](https://useaiblocks.com/skills/diagram-maker): Describe a system, process or idea. Get a dark-theme diagram as an SVG file (an image that stays sharp at any size).
 - [Design animator](https://useaiblocks.com/skills/design-to-motion-animator): Turn a static design into an animated HTML version that loops, with checks on the still frame and loop, plus MP4 or GIF files if you ask.
 - [Design brief rules writer](https://useaiblocks.com/skills/design-brief-rules-writer): Turn a loose design job into a design brief with three to five firm limits and room to play. Give it the job and the audience.
 - [Design feedback reviewer](https://useaiblocks.com/skills/design-feedback-giver): Share a design, audience and goal. Get specific usability notes, reading-order feedback, strengths and fixes ranked by importance.
@@ -63,6 +63,7 @@
 - [Logo strength tester](https://useaiblocks.com/skills/logo-strength-tester): Test your logo ideas before you pick one. Get each scored out of 100 on seven tests, plus a one-colour and small-size check, with a keep, fix or drop call.
 - [Long web form usability planner](https://useaiblocks.com/workflows/make-a-long-form-easier-to-finish): Share the current form, required fields and user goal. Get field choices, a revised flow and a usability-test script.
 - [Magazine-style interface guide writer](https://useaiblocks.com/skills/magazine-layout-style-guide): Share your product brief. Get magazine-style font and layout rules, plus checks that make screens easier to use.
+- [Make three design directions](https://useaiblocks.com/skills/make-design-directions): Give it your design brief and brand file. You get three different directions made at real size, with one chosen.
 - [Map designer](https://useaiblocks.com/agents/agency-gis-cartography-designer): Get a map design plan with base map, colour scheme, symbols, labels, legend and layout for print or web, plus a colour blindness check.
 - [Minimal style guide writer](https://useaiblocks.com/skills/minimal-style-guide-writer): Get a minimal style guide for your product, with plain type, few colours, spacing tokens, part rules and a contrast check.
 - [Mobile app designer](https://useaiblocks.com/skills/mobile-app-designer): Share the platform, app flow and device needs. Get a touch-first design, feasibility review and device checks to run.

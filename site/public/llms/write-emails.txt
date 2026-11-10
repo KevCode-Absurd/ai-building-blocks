@@ -1,6 +1,6 @@
 # Write emails that get read: AI Blocks
 
-> 74 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 75 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Account-based outreach drafter](https://useaiblocks.com/skills/account-based-outreach-drafter): Draft outreach for one named company or contact. Get an email, call script and LinkedIn note from real signals. Needs a paid Common Room account.
 - [Browse abandonment email flow builder](https://useaiblocks.com/skills/browse-abandonment-flow-builder): Share products, proof and offer rules. Get site-visit and product-view email flows, with entry rules, timing and message outlines.
@@ -43,7 +43,7 @@
 - [Five-email welcome sequence writer](https://useaiblocks.com/workflows/write-a-welcome-email-sequence-that-teaches-then-sells): Share your offer, readers and product proof. Get five teaching-led email drafts, claim edits and a readiness check for each email.
 - [Follow-up email sequence writer](https://useaiblocks.com/prompts/follow-up-email-sequence-writer): Turn one planned email into four follow-ups with a new reason each, one ask, send timing and a stop rule. Paste your email and offer.
 - [Inactive subscriber cleanup planner](https://useaiblocks.com/skills/sunset-flow-and-list-cleaner): Define an inactive segment. Get a three-email re-engagement flow and monthly steps to suppress contacts with no opens or clicks.
-- [Inbox delivery fixer](https://useaiblocks.com/skills/inbox-delivery-fixer): Share your sending domain. Get SPF, DKIM and DMARC checks plus a staged repair plan.
+- [Inbox delivery fixer](https://useaiblocks.com/skills/inbox-delivery-fixer): Share your sending domain. Get checks on your email sender records (SPF, DKIM and DMARC) and a staged repair plan.
 - [Inbox triage and reply writer](https://useaiblocks.com/skills/email-backlog-clearer): Sort an inbox or pasted emails by what needs attention. Get ranked decisions, reply drafts and extracted deadlines, with approval before sending.
 - [Launch email sequence planner](https://useaiblocks.com/skills/launch-email-sequence-planner): Share your product, list and close date. Get a 10-email launch plan with resends and a triple close.
 - [Lifecycle email experiment planner](https://useaiblocks.com/skills/traction-email-marketing): Share your product link. Test an activation email with an eligible group, a holdout and an outcome measure.
@@ -73,6 +73,7 @@
 - [Tense email softener](https://useaiblocks.com/prompts/tense-email-softener): Share a tense email and the fix you need. Get a calmer version that preserves the facts, one clear request and a firmer follow-up.
 - [Testimonial request writer](https://useaiblocks.com/skills/testimonial-request-writer): Share who you served and what you did. Get a short testimonial request with three easy questions and a follow-up.
 - [Text message campaign writer](https://useaiblocks.com/skills/text-message-campaign-writer): Share your audience, goal, and opt-in process. Get SMS or WhatsApp drafts with timing.
+- [Three series arcs](https://useaiblocks.com/skills/three-series-arcs): Give it your email brief and facts. You get three plans for the series, each with its first email, and one chosen.
 - [Welcome flow builder](https://useaiblocks.com/skills/welcome-flow-builder): Build a welcome email flow for new subscribers. Give it your offer and best sellers. Get timing, filters, email outlines, SMS and tests.
 - [Welcome, cart and browse email rollout planner](https://useaiblocks.com/workflows/roll-out-the-welcome-cart-and-browse-email-flows-one-at-a-time): Share store setup, offers and email-tool context. Get setup findings, three coordinated flow drafts and staged rollout checks.
 - [Win-back flow builder](https://useaiblocks.com/skills/win-back-flow-builder): Share your order gaps and discount room. Get a win-back flow timed to how your buyers actually reorder.

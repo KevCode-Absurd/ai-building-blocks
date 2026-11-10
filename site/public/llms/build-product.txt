@@ -63,7 +63,7 @@
 - [Six-week product scope reviewer](https://useaiblocks.com/workflows/set-a-six-week-product-bet-and-screen-requests-against-it): Share your product plan and incoming requests. Get a bounded six-week brief, exclusions and a yes, later or no recommendation for each request.
 - [Small product launch planner](https://useaiblocks.com/workflows/smaller-product-launch): Share your launch goal, date and budget. Get a reduced core scope, request decisions and a teaser-to-preview plan.
 - [Sprint plan writer](https://useaiblocks.com/skills/sprint-plan-writer): Give it your backlog and team time off. Get sprint scope, goals and a stretch list sized to real capacity.
-- [Subscription churn prevention planner](https://useaiblocks.com/skills/churn-reducer): Cut subscriber churn with a cancel flow, save offers and a failed-payment plan. Give it your billing setup and churn details to get started.
+- [Subscription cancellation prevention planner](https://useaiblocks.com/skills/churn-reducer): Share your billing setup and why people cancel. Get a cancel flow, offers to keep them and a failed-payment recovery plan.
 - [User flow mapper](https://useaiblocks.com/skills/user-flow-mapper): Describe what users do and get a user flow diagram with choices, error paths and drop-off risks. Paste it into a Mermaid tool to share it.
 - [User story writer](https://useaiblocks.com/skills/user-story-writer): Turn a feature idea into user stories with acceptance criteria and a sprint plan your team can build from. Free user story writer for Scrum teams.
 - [Web project brief writer](https://useaiblocks.com/skills/web-project-scoper): Turn your web project idea into a scoped brief. Get goals, users, features, design tokens, a tech pick and an MVP plan for your web project.

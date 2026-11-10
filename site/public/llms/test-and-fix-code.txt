@@ -11,9 +11,9 @@
 - [AI-built app code cleaner](https://useaiblocks.com/skills/vibe-coded-app-cleaner): Point it at a fast-built app. Get dead code and broken imports removed without breaking routes or APIs.
 - [AI-written code reviewer](https://useaiblocks.com/skills/ai-written-code-reviewer): Share AI-written or prototype code. Get risks tied to specific lines, with small fixes ranked by impact.
 - [Animation reviewer](https://useaiblocks.com/skills/animation-reviewer): Share a code change with motion. Get a table of fixes and a clear approve or block verdict.
-- [API contract tester](https://useaiblocks.com/skills/api-contract-tester): Share the API contract, change and affected apps. Get compatibility checks, local tests and gaps that still need live proof.
-- [API design reviewer](https://useaiblocks.com/skills/api-design-reviewer): Give it your API spec. Get a scorecard, flagged breaking changes and fixes for naming and errors.
-- [API test planner](https://useaiblocks.com/agents/agency-testing-api-tester): Turn your API spec into a test plan with edge cases, auth checks and failure cases, plus starter test code to run on a test server.
+- [API contract tester](https://useaiblocks.com/skills/api-contract-tester): Share the API contract (the rules for how apps talk to your service), the change and affected apps. Get compatibility checks, local tests and gaps.
+- [API design reviewer](https://useaiblocks.com/skills/api-design-reviewer): Give it your API spec (how other software uses yours). Get a scorecard, flagged breaking changes and fixes for naming and errors.
+- [API test planner](https://useaiblocks.com/agents/agency-testing-api-tester): Share your API spec (how other software talks to yours). Get a test plan with edge cases, sign-in checks, failure cases and starter test code.
 - [API test suite builder](https://useaiblocks.com/skills/api-test-suite-builder): Share route code and expected behaviour. Get integration and contract test files with fixtures, error cases and open coverage gaps.
 - [App test coverage reviewer](https://useaiblocks.com/skills/test-coverage-gap-finder): Share your app. Get every page, part and endpoint listed with what is tested and what is not.
 - [Application performance optimizer](https://useaiblocks.com/skills/speed-tuner): Describe a slow app or feature. Get its bottleneck measured, fixed, and measured again.
@@ -40,7 +40,7 @@
 - [Code correctness planner](https://useaiblocks.com/skills/code-correctness-planner): Check a tricky function before you trust it. Your AI writes the rules and edge cases first, then code that keeps them.
 - [Code habits reviewer](https://useaiblocks.com/skills/code-habits-reviewer): Find repeated logic, tangled code and unclear promises in your code. You get a score out of ten and a fix for each problem.
 - [Code performance investigator](https://useaiblocks.com/workflows/find-what-is-slow-fix-it-and-show-the-numbers): Find the slow code path and measure it. Make a focused fix and write a pull request with before-and-after timings.
-- [Code refactor planner](https://useaiblocks.com/skills/code-refactor-planner): Share code and tests. Get small refactoring steps that keep behavior the same.
+- [Code refactor planner](https://useaiblocks.com/skills/code-refactor-planner): Share code and tests. Get a refactor plan (small tidy-ups that keep the code doing the same thing).
 - [Code reviewer agent](https://useaiblocks.com/agents/agency-engineering-code-reviewer): Paste a code change and get a review of bugs, security, tests and clarity. Each point has the reason and a fix, ranked blocker, suggestion or nit.
 - [Code simplifier](https://useaiblocks.com/skills/code-simplifier): Share working code that is hard to read. Get a clearer refactor and checks aimed at preserving its behavior.
 - [Cypress flaky test fixer](https://useaiblocks.com/skills/copilot-cypress-flake-fixer): Give it an existing Cypress suite and version. Get flaky patterns and removed APIs checked, with test-only fixes and verification steps.
@@ -106,7 +106,6 @@
 - [Pull request risk scorer](https://useaiblocks.com/skills/pull-request-risk-scorer): Check a pull request for risk. Get a complexity score, code smells and review comments, so you know where to look first in your code review.
 - [PyTensor model math debugger](https://useaiblocks.com/skills/model-math-debugger): Share PyTensor code and the error. Trace shapes, values and gradients. Get a proposed fix and checks against a separate calculation.
 - [Python change test checker](https://useaiblocks.com/skills/change-test-prover): Give it a Python change. Get tests checked against code mutations to find gaps.
-- [QA test scenario writer](https://useaiblocks.com/skills/qa-test-scenario-writer): Paste your user stories and get QA test scenarios with starting state, numbered steps and the result to expect, plus edge cases to try.
 - [Qdrant performance reviewer](https://useaiblocks.com/workflows/diagnose-slow-qdrant-search): Review slow Qdrant search, compare candidate fixes and plan capacity and health checks against a clear baseline.
 - [Quality bar setter](https://useaiblocks.com/skills/quality-bar-setter): Answer a few questions. Get a written quality bar and a guard that flags changes that weaken it.
 - [Quarkus integration test builder](https://useaiblocks.com/skills/copilot-quarkus-dev-services-and-testing): Write Quarkus tests that run against real databases and services in containers. Get test classes for your endpoints and the commands to run them.
@@ -141,6 +140,7 @@
 - [Test framework migrator](https://useaiblocks.com/skills/test-framework-migrator): Share test files and a target framework. Get rewritten tests using supported conversion guides.
 - [Test plan writer](https://useaiblocks.com/skills/test-plan-writer): Describe what you are building. Get a test plan with what to test, which kind of test, sample cases and the gaps in the tests you already have.
 - [Test results analyst](https://useaiblocks.com/agents/agency-testing-test-results-analyzer): Paste your test run results and get failures grouped by cause, coverage gaps, risks and a go or no-go call on the release.
+- [Test scenario writer](https://useaiblocks.com/skills/qa-test-scenario-writer): Paste your user stories. Get test scenarios with starting state, numbered steps and the result to expect, plus edge cases to try.
 - [Test suite auditor](https://useaiblocks.com/skills/test-suite-auditor): Share a Python project. Get weak, flaky, slow and useless tests, checked by mutation.
 - [Test suite writer](https://useaiblocks.com/skills/test-suite-writer): Write tests for your code and check what they miss. Give it a module and get unit, integration and end-to-end tests plus a coverage report.
 - [Test-first coach](https://useaiblocks.com/skills/test-first-coach): Use a feature request and codebase to draft behavior tests and minimal code changes, one at a time.
@@ -149,11 +149,11 @@
 - [Two-model pull request reviewer](https://useaiblocks.com/skills/two-model-pull-request-reviewer): Give it a pull request or local branch. Two reviewers test findings; the lead decides what merits a printed or posted comment.
 - [TypeScript test type fixer](https://useaiblocks.com/skills/test-type-fixer): Give it TypeScript tests. It replaces unsafe casts with typed partial data using shoehorn.
 - [Untested code change planner](https://useaiblocks.com/skills/untested-code-change-guide): Give it code with no tests. Get steps to add checks and make a small change safely.
-- [Visual QA evidence collector](https://useaiblocks.com/agents/agency-testing-evidence-collector): Check a website against its spec and get a QA report with screenshots, pass or fail results and a clear FAILED, NOT DETERMINED or READY call.
 - [Vue and Pinia test writer](https://useaiblocks.com/skills/copilot-unit-test-vue-pinia): Write Vue 3 unit tests for your components, composables and Pinia stores. Get focused tests for user actions, state and edge cases.
-- [Web accessibility checker](https://useaiblocks.com/skills/accessibility-checker): Check a web page or code for WCAG 2.2 accessibility problems. Get a ranked list with where each one is, and fixes if you ask.
+- [Web accessibility checker](https://useaiblocks.com/skills/accessibility-checker): Check a page or code against WCAG 2.2 (the web accessibility standard). Get ranked problems, where each one is, and fixes if you ask.
 - [Web app tester](https://useaiblocks.com/skills/web-app-tester): Share your local app. Get its screens tried in a real browser, with screenshots and error logs.
 - [Web page control tester](https://useaiblocks.com/skills/web-page-control-tester): Share a built page. Get a report of broken controls after allowing one-time test-tool install.
+- [Website spec and screenshot checker](https://useaiblocks.com/agents/agency-testing-evidence-collector): Share a website and its spec. Get a test report with screenshots, pass or fail results and a clear failed, not determined or ready call.
 - [Website test runner](https://useaiblocks.com/skills/site-qa-sweep-runner): Share a website and test depth. Get browser checks to run and a report template for findings.
 - [WooCommerce code checker](https://useaiblocks.com/skills/woocommerce-code-checker): Check WooCommerce code before it goes live. Find order storage bugs, checkout gaps, money errors and security holes in AI-written code.
 - [WordPress code checker](https://useaiblocks.com/skills/wordpress-code-checker): Share a WordPress plugin or theme you may review. Get potential security, translation and speed issues to check before release.

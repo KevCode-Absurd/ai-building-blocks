@@ -18,7 +18,7 @@
 - [Business diligence meeting question planner](https://useaiblocks.com/skills/diligence-meeting-prep-writer): Share the company, meeting type and open concerns. Get neutral priority questions, evidence to request and specific gaps to probe.
 - [Business expertise reviewer](https://useaiblocks.com/skills/circle-of-competence-sorter): Describe a business or bet. Get it sorted as yes, no or too tough, with your real edge written down.
 - [Business group valuation reviewer](https://useaiblocks.com/agents/conglomerate-perimeter-review-assistant): Check ownership and segment changes before reusing business values. Count each asset and debt once, and keep missing values clear.
-- [Business investment analyst](https://useaiblocks.com/skills/business-investment-analyst): Check if a business purchase pays off. Give it the cost and savings. You get payback, ROI, NPV, IRR, risks and a clear answer.
+- [Business investment analyst](https://useaiblocks.com/skills/business-investment-analyst): Give it a purchase's cost and savings. Get payback time, return and value in today's money (ROI, NPV and IRR), risks and a clear answer.
 - [Business investment reviewer](https://useaiblocks.com/skills/business-tenet-scorecard-writer): Turn your findings on a business into a ten-test scorecard. Each test is pass, fail or unknown, and you learn if a price check is worth it.
 - [Business plan risk buffer reviewer](https://useaiblocks.com/skills/room-for-error-plan-checker): Check your budget or business plan for room for error. Get a survival score out of 100, where it breaks in a bad year, and fixes.
 - [Business quality and return reviewer](https://useaiblocks.com/workflows/great-business-judge): Share company records, rival facts and your own experience. Get a review of the business, its leaders and possible returns, with gaps marked.
@@ -121,7 +121,7 @@
 - [India deal due diligence planner](https://useaiblocks.com/skills/due-diligence-checklist-builder): Plan due diligence for an Indian deal. Get workstream requests, owners, status tracking and a separate list of red flags.
 - [India earnings preview writer](https://useaiblocks.com/skills/india-earnings-preview): Name an Indian stock and quarter. Get an HTML earnings preview with sources and data gaps.
 - [India financial model checker](https://useaiblocks.com/skills/india-modeling-rules-checker): Check an Indian company model for fiscal year, unit, Ind AS and listing rule mistakes.
-- [India subscription unit economics analyst](https://useaiblocks.com/skills/subscription-unit-economics): Share Indian subscription data. Get cohort, retention, LTV-to-CAC and payback analysis in Indian fiscal years and lakh or crore.
+- [India subscription customer value analyst](https://useaiblocks.com/skills/subscription-unit-economics): Share Indian subscription data. See how long customers stay, what each is worth against the cost to win them, and when that cost pays back.
 - [Indian bond portfolio reviewer](https://useaiblocks.com/skills/bond-portfolio-reviewer): Use Indian holdings data to review portfolio yield, rate risk, composition, and projected cash flows.
 - [Indian company DCF modeler](https://useaiblocks.com/skills/dcf-model-builder-for-india): Use an Indian company's financials and growth assumptions to build an Excel cash flow valuation.
 - [Indian company profile writer](https://useaiblocks.com/skills/company-tear-sheet): Turn an Indian company name and choice of reader into a Word profile from free public data.
@@ -209,7 +209,6 @@
 - [Return on equity and margin checker](https://useaiblocks.com/skills/roe-margin-check): Check a company's return on equity and margins over four or five years. See if debt props it up and get pass or fail on each test.
 - [Revolving credit availability checker](https://useaiblocks.com/skills/revolver-availability-checker): Share borrowing bases, loan limits and current use. Check remaining capacity and any amount above the limit.
 - [Revolving loan interest and fee checker](https://useaiblocks.com/skills/revolver-interest-fee-checker): Share average loan use, unused capacity and rates. Check interest, commitment fees and total charges.
-- [SaaS metrics coach](https://useaiblocks.com/skills/saas-metrics-coach): Check your SaaS metrics: share your revenue and customer numbers and get ARR, churn, CAC and LTV rated healthy, watch or critical, with fixes.
 - [Sale earnout payout checker](https://useaiblocks.com/skills/earnout-payout-checker): Share the signed earnout thresholds and agreed result. Check the payment due between the minimum and cap.
 - [Sale process letter drafter](https://useaiblocks.com/skills/sale-process-letter-drafter): Draft a sale process letter with bid instructions, deadlines and meeting details. Give it your deal facts and get a letter for your advisor to check.
 - [Sale working capital settlement checker](https://useaiblocks.com/skills/working-capital-true-up-checker): Share target, estimated and final working capital. Check the settlement still due after the closing adjustment.
@@ -240,6 +239,7 @@
 - [Stock purchase price checker](https://useaiblocks.com/skills/defensive-price-ceiling-tester): Test a stock's price against three ceilings. Paste share price, earnings and book value, and get pass or fail with every sum shown.
 - [Stock trading cost checker](https://useaiblocks.com/skills/stock-trading-cost-checker): Compare stock codes and trade sizes. Get price gaps, volume and estimated trade costs; quotes may lag.
 - [Stock valuation margin-of-safety reviewer](https://useaiblocks.com/workflows/stock-margin-of-safety): Share earnings, asset records and a dated share price. Get estimated earnings value, asset recovery and the gap from price.
+- [Subscription software metrics coach](https://useaiblocks.com/skills/saas-metrics-coach): Share your revenue and customer numbers. Get recurring income, lost customers, cost per new customer and customer value rated healthy, watch or critical.
 - [Suspicious money trail reviewer](https://useaiblocks.com/skills/suspicious-money-trail-reviewer): Share records that do not add up. Get red flags, money flow traces and what to check next.
 - [Sustainability reporting reviewer](https://useaiblocks.com/skills/esg-report-preparer): Turn supplied environmental, staff and governance data into a report draft or gap list. Show sources, missing measures and review needs.
 - [Terminal growth reinvestment checker](https://useaiblocks.com/skills/terminal-growth-reinvestment-consistency): Share stable growth and return assumptions. Check required reinvestment, free cash flow and the resulting terminal value.

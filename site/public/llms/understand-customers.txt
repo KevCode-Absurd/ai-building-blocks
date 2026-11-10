@@ -38,7 +38,7 @@
 - [Customer feedback and brand reviewer](https://useaiblocks.com/agents/monthly-customer-voice-keeper): Find new buyer language and doubts in customer feedback. Get sourced brand note changes to review.
 - [Customer feedback sorter](https://useaiblocks.com/skills/feedback-pile-sorter): Share ongoing customer feedback and decision context to get weighted themes and suggested review steps.
 - [Customer fit reviewer](https://useaiblocks.com/skills/wrong-buyer-review-checker): Share poor reviews. Separate product faults from poor buyer fit and get copy that sets clearer expectations.
-- [Customer health and churn scorer](https://useaiblocks.com/skills/customer-health-and-churn-scorer): Share account data. Get health scores, churn-risk tiers and expansion signals for each customer.
+- [Customer health and loss risk scorer](https://useaiblocks.com/skills/customer-health-and-churn-scorer): Share account data. Get a health score, a risk-of-leaving tier and signs of growth for each customer.
 - [Customer identity messaging mapper](https://useaiblocks.com/skills/customer-identity-messaging): Map who your customers are and who they want to be, then get copy that reflects it. A customer identity messaging tool for believable wording.
 - [Customer interview coach](https://useaiblocks.com/skills/customer-interview-coach): Get customer interview questions that draw honest answers, and score your plan or notes out of 7. Based on The Mom Test, built to catch polite lies.
 - [Customer interview pattern tracker](https://useaiblocks.com/agents/customer-interview-program-keeper): Turn real buying stories into shared patterns. Track each round and plan the next interviews or a change to test.

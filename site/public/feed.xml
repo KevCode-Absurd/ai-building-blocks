@@ -8,411 +8,671 @@
     <atom:link href="https://useaiblocks.com/feed.xml" rel="self" type="application/rss+xml" />
     <lastBuildDate>Tue, 10 Nov 2026 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>Grounded job protocol</title>
-      <link>https://useaiblocks.com/skills/grounded-job-protocol</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/grounded-job-protocol</guid>
-      <description>Give it any real job. Your AI frames it, studies your actual business first, explores real options, builds in your style and gets checked.</description>
+      <title>Buyer can act check</title>
+      <link>https://useaiblocks.com/skills/buyer-can-act-check</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/buyer-can-act-check</guid>
+      <description>Give it what you sell and the link. You learn if a buyer can get it today, and what to do if not.</description>
       <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
+      <category>new</category>
       <category>skill</category>
-      <category>Plan your strategy</category>
+      <category>Check ads before they go live</category>
     </item>
     <item>
-      <title>AI default patterns</title>
-      <link>https://useaiblocks.com/skills/ai-default-patterns</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/ai-default-patterns</guid>
-      <description>Give it your brief or draft. You get the AI habits to avoid for your brand, and a check for them.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Claim source trace</title>
+      <link>https://useaiblocks.com/skills/claim-source-trace</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/claim-source-trace</guid>
+      <description>Give it your draft and your sources. Every fact gets a dated source, a rewrite or a cut.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>new</category>
+      <category>skill</category>
+      <category>Write ad copy</category>
+    </item>
+    <item>
+      <title>Client&apos;s-eye check</title>
+      <link>https://useaiblocks.com/skills/clients-eye-check</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/clients-eye-check</guid>
+      <description>Give it your brief, the finished work and your facts. A fresh reviewer reads it as your client and lists fixes.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>new</category>
+      <category>skill</category>
+      <category>Think it through and decide</category>
+    </item>
+    <item>
+      <title>Make an ad concept spread</title>
+      <link>https://useaiblocks.com/skills/make-ad-concept-spread</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/make-ad-concept-spread</guid>
+      <description>Give it your ad brief and product facts. You get nine or more ideas, the best ones made, and one lead ad.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>new</category>
+      <category>skill</category>
+      <category>Make image ads</category>
+    </item>
+    <item>
+      <title>Make three design directions</title>
+      <link>https://useaiblocks.com/skills/make-design-directions</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/make-design-directions</guid>
+      <description>Give it your design brief and brand file. You get three different directions made at real size, with one chosen.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>new</category>
       <category>skill</category>
       <category>Design things people love</category>
     </item>
     <item>
-      <title>Brand DNA capture</title>
+      <title>Make three first screens</title>
+      <link>https://useaiblocks.com/skills/make-three-first-screens</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/make-three-first-screens</guid>
+      <description>Give it your page brief and brand file. You get three different first screens as real pages, with one chosen.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>new</category>
+      <category>skill</category>
+      <category>Write and build a landing page</category>
+    </item>
+    <item>
+      <title>Outside chooser</title>
+      <link>https://useaiblocks.com/skills/outside-chooser</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/outside-chooser</guid>
+      <description>Give it two to four options and your brief. A fresh reviewer picks one and says what to borrow.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>new</category>
+      <category>skill</category>
+      <category>Think it through and decide</category>
+    </item>
+    <item>
+      <title>Three series arcs</title>
+      <link>https://useaiblocks.com/skills/three-series-arcs</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/three-series-arcs</guid>
+      <description>Give it your email brief and facts. You get three plans for the series, each with its first email, and one chosen.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>new</category>
+      <category>skill</category>
+      <category>Write emails that get read</category>
+    </item>
+    <item>
+      <title>Two plan shapes</title>
+      <link>https://useaiblocks.com/skills/two-plan-shapes</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/two-plan-shapes</guid>
+      <description>Give it your question, budget and numbers. You get two differently shaped one-page plans with money and dates, and one pick.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>new</category>
+      <category>skill</category>
+      <category>Plan your strategy</category>
+    </item>
+    <item>
+      <title>Brand file capture</title>
       <link>https://useaiblocks.com/skills/brand-dna-capture</link>
       <guid isPermaLink="true">https://useaiblocks.com/skills/brand-dna-capture</guid>
-      <description>Give it your website. You get your real colours, fonts, buttons, page order, voice and prices, measured, for your AI to follow.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-      <category>new</category>
+      <description>Give it your website. You get a brand file your AI keeps current: prices, look, voice and facts, each with its source and date.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
       <category>skill</category>
       <category>Set up your brand file</category>
-    </item>
-    <item>
-      <title>Brand fidelity check</title>
-      <link>https://useaiblocks.com/skills/brand-fidelity-check</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/brand-fidelity-check</guid>
-      <description>Give it your site capture and a new page. You get a pass or fail on the eight ways pages drift off-brand, with screenshots.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-      <category>new</category>
-      <category>skill</category>
-      <category>Audit a landing page</category>
-    </item>
-    <item>
-      <title>Expert agent blind test</title>
-      <link>https://useaiblocks.com/skills/expert-agent-blind-test</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/expert-agent-blind-test</guid>
-      <description>Give it your agent and its test cases. You get a fair blind test against plain AI, with win rate and consistency.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-      <category>new</category>
-      <category>skill</category>
-      <category>Set up AI to work for you</category>
     </item>
     <item>
       <title>Expert agent eval builder</title>
       <link>https://useaiblocks.com/skills/expert-agent-eval-builder</link>
       <guid isPermaLink="true">https://useaiblocks.com/skills/expert-agent-eval-builder</guid>
       <description>Give it your agent files. You get a rubric in your words, 20 or more test cases and a judge that grades like you.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-      <category>new</category>
-      <category>skill</category>
-      <category>Set up AI to work for you</category>
-    </item>
-    <item>
-      <title>Expert agent improvement loop</title>
-      <link>https://useaiblocks.com/skills/expert-agent-improvement-loop</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/expert-agent-improvement-loop</guid>
-      <description>Bring a week of your agent&apos;s mistakes. You get two tested fixes, a new version and a log of ideas you dropped.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-      <category>new</category>
-      <category>skill</category>
-      <category>Set up AI to work for you</category>
-    </item>
-    <item>
-      <title>Expert knowledge interview</title>
-      <link>https://useaiblocks.com/skills/expert-knowledge-interview</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/expert-knowledge-interview</guid>
-      <description>Tell it your job and bring real cases. It interviews you and writes your judgment and taste into agent files.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-      <category>new</category>
-      <category>skill</category>
-      <category>Set up AI to work for you</category>
-    </item>
-    <item>
-      <title>Personal agent builder</title>
-      <link>https://useaiblocks.com/skills/personal-agent-builder</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/personal-agent-builder</guid>
-      <description>Build a personal prompt, skill, agent or collection from real work, tacit judgment, conditional taste and reviewed corrections. Keep an editable private dossier.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
       <category>Set up AI to work for you</category>
     </item>
     <item>
-      <title>China recruitment planner</title>
-      <link>https://useaiblocks.com/agents/agency-recruitment-specialist</link>
-      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-recruitment-specialist</guid>
-      <description>Plan hiring in China, from job post and Boss Zhipin or Liepin channels to interviews, offer and a labour law check. Give it the role, city and budget.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>agent</category>
-      <category>Hire and look after your people</category>
-    </item>
-    <item>
-      <title>Agent injection evidence review assistant</title>
-      <link>https://useaiblocks.com/agents/track-agent-injection-controls-and-retest-evidence</link>
-      <guid isPermaLink="true">https://useaiblocks.com/agents/track-agent-injection-controls-and-retest-evidence</guid>
-      <description>Get safe prompt injection test cases for your AI agent, a control gap list and retest records. Tests run only with the owner&apos;s written approval.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>agent</category>
-      <category>Keep your code secure</category>
-    </item>
-    <item>
-      <title>Product-page brand analyst</title>
-      <link>https://useaiblocks.com/skills/product-page-brand-profile-extractor</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/product-page-brand-profile-extractor</guid>
-      <description>Turn one product page into a brand profile: product facts, claims, six colors and visual style, with gaps flagged. Works from a link or pasted text.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Grounded job protocol</title>
+      <link>https://useaiblocks.com/skills/grounded-job-protocol</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/grounded-job-protocol</guid>
+      <description>Give it any real job. Your AI studies your business, makes real options and gets the work checked.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
-      <category>Set up your brand file</category>
+      <category>Plan your strategy</category>
     </item>
     <item>
-      <title>Plain HTML landing page builder</title>
-      <link>https://useaiblocks.com/skills/static-html-landing-page-builder</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/static-html-landing-page-builder</guid>
-      <description>Share approved copy and layout. Get a responsive HTML page, local files and recorded browser checks.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Ambition planner</title>
+      <link>https://useaiblocks.com/skills/ambition-planner</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/ambition-planner</guid>
+      <description>Give it your task or prompt. Get the goal behind it, an expert-level plan, a pass check and a rewritten prompt.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
-      <category>Write and build a landing page</category>
+      <category>Set up AI to work for you</category>
     </item>
     <item>
-      <title>Premium product positioning planner</title>
-      <link>https://useaiblocks.com/skills/premium-positioning-mapper</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/premium-positioning-mapper</guid>
-      <description>Share product facts, buyer groups and costs. Get positioning lines, proof needs and price scenarios to test with real buyers.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Set up your brand file</category>
-    </item>
-    <item>
-      <title>Salary band and benefits planner</title>
-      <link>https://useaiblocks.com/workflows/set-fair-pay-bands-and-a-pay-and-benefits-plan</link>
-      <guid isPermaLink="true">https://useaiblocks.com/workflows/set-fair-pay-bands-and-a-pay-and-benefits-plan</guid>
-      <description>Share roles, location, pay data and budget. Get market comparisons, salary bands and a proposed bonus and benefits plan.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>workflow</category>
-      <category>Hire and look after your people</category>
-    </item>
-    <item>
-      <title>Store hero section writer</title>
-      <link>https://useaiblocks.com/skills/store-hero-section-writer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/store-hero-section-writer</guid>
-      <description>Write the top screen of your store page: five headline options, a subhead, proof, a button and a test plan, all built from your offer and ad.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Write and build a landing page</category>
-    </item>
-    <item>
-      <title>Animated landing page builder</title>
-      <link>https://useaiblocks.com/skills/animated-landing-page-builder</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/animated-landing-page-builder</guid>
-      <description>Answer a few questions about your product. Get a one-page site with 3D motion and scroll effects.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Write and build a landing page</category>
-    </item>
-    <item>
-      <title>Bet price and odds reviewer</title>
-      <link>https://useaiblocks.com/skills/mispriced-bet-tester</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/mispriced-bet-tester</guid>
-      <description>Test your bets against their price. Give each bet a cost and payoff and get a call of near cinch, fair bet or no bet, with the odds.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Research investments and business value</category>
-    </item>
-    <item>
-      <title>Conversion landing page designer</title>
-      <link>https://useaiblocks.com/skills/conversion-landing-page-designer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/conversion-landing-page-designer</guid>
-      <description>Share your offer, audience, and proof for landing page copy, layout, and visual design rules.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Write and build a landing page</category>
-    </item>
-    <item>
-      <title>Fair escape checker</title>
-      <link>https://useaiblocks.com/skills/fair-escape-checker</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/fair-escape-checker</guid>
-      <description>Check if your story&apos;s escapes feel fair. Paste your plan and get each way out judged for luck, effort and cost, with fixes for cheats.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Write and tell stories</category>
-    </item>
-    <item>
-      <title>Interface designer</title>
-      <link>https://useaiblocks.com/skills/interface-designer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/interface-designer</guid>
-      <description>Describe your page or app and get a built interface with its own look, picked for your subject and audience, not a stock template.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Build websites and web apps</category>
-    </item>
-    <item>
-      <title>Interface styling and motion designer</title>
-      <link>https://useaiblocks.com/skills/premium-interface-designer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/premium-interface-designer</guid>
-      <description>Share a page brief, brand and project setup. Get interface code with considered type, spacing, depth and motion, plus checks to run.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Design things people love</category>
-    </item>
-    <item>
-      <title>Interview and research planner</title>
-      <link>https://useaiblocks.com/skills/interview-and-research-planner</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/interview-and-research-planner</guid>
-      <description>Share a decision, research question and who you can reach. Get a study plan and interview guide, not findings before research.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Understand your customers</category>
-    </item>
-    <item>
-      <title>Sales agreement question planner</title>
-      <link>https://useaiblocks.com/skills/yes-ladder-question-writer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/yes-ladder-question-writer</guid>
-      <description>Write a yes ladder of four to seven fair questions that leads from shared ground to your ask, with a plan for each no.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Cold call script writer</title>
+      <link>https://useaiblocks.com/skills/cold-call-script-writer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/cold-call-script-writer</guid>
+      <description>Tell it what you sell and who you call. Get a cold call script: opener, questions, replies to brush-offs and a voicemail.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
       <category>Sell and negotiate</category>
     </item>
     <item>
-      <title>Shift schedule planner</title>
-      <link>https://useaiblocks.com/skills/shift-schedule-planner</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/shift-schedule-planner</guid>
-      <description>Plan a fair shift pattern, a weekly schedule and a rotation for nights and weekends, with a swap policy and staff notice. Not legal advice.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Etsy shop opening planner</title>
+      <link>https://useaiblocks.com/skills/etsy-shop-opening-planner</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/etsy-shop-opening-planner</guid>
+      <description>Say what you make and who buys it. Get a plan for your Etsy shop: listings, photos, price check and launch steps.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
-      <category>Hire and look after your people</category>
+      <category>Set up your online store</category>
     </item>
     <item>
-      <title>Web page designer</title>
-      <link>https://useaiblocks.com/skills/page-design-gate</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/page-design-gate</guid>
-      <description>Share a page brief or code. Get design changes and browser findings at two screen sizes.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Accessibility auditor</title>
+      <link>https://useaiblocks.com/agents/agency-testing-accessibility-auditor</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-testing-accessibility-auditor</guid>
+      <description>Audit a web page or app for accessibility barriers. Get findings tied to WCAG 2.2, a test plan for keyboard and screen readers, and a fix list.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Test and fix code</category>
+    </item>
+    <item>
+      <title>Aging parent care coordinator</title>
+      <link>https://useaiblocks.com/agents/agency-healthcare-aging-parent-care-companion</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-healthcare-aging-parent-care-companion</guid>
+      <description>Keep an aging parent&apos;s medicines, appointments and care team straight. Get a care plan, who to tell about what, and questions for the doctor.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Run meetings, notes and plans</category>
+    </item>
+    <item>
+      <title>AI document search planner</title>
+      <link>https://useaiblocks.com/agents/agency-engineering-rag-pipeline-engineer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-engineering-rag-pipeline-engineer</guid>
+      <description>Plan an AI that answers from your own documents. Get how to split and search them, plus a question set to score each change.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Build and ship software</category>
+    </item>
+    <item>
+      <title>AI feature planner</title>
+      <link>https://useaiblocks.com/agents/agency-engineering-ai-engineer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-engineering-ai-engineer</guid>
+      <description>Get a plan to add an AI feature to your product, from data check to launch, with bias tests, monitoring and a retraining trigger.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Build and ship software</category>
+    </item>
+    <item>
+      <title>API platform engineer agent</title>
+      <link>https://useaiblocks.com/agents/agency-engineering-api-platform-engineer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-engineering-api-platform-engineer</guid>
+      <description>Describe your API (how other software connects to yours). Get its rules, changes that would break users, and a plan for versions and limits.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Build and ship software</category>
+    </item>
+    <item>
+      <title>API test planner</title>
+      <link>https://useaiblocks.com/agents/agency-testing-api-tester</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-testing-api-tester</guid>
+      <description>Share your API spec (how other software talks to yours). Get a test plan with edge cases, sign-in checks, failure cases and starter test code.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Test and fix code</category>
+    </item>
+    <item>
+      <title>China ecommerce operations planner</title>
+      <link>https://useaiblocks.com/agents/agency-marketing-china-ecommerce-operator</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-marketing-china-ecommerce-operator</guid>
+      <description>Get a China ecommerce plan for Taobao, Tmall, JD, Pinduoduo or Douyin Shop, with margin checks, ad plans and a 618 or Double 11 countdown.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Run your online store</category>
+    </item>
+    <item>
+      <title>China market localization planner</title>
+      <link>https://useaiblocks.com/agents/agency-marketing-china-market-localization-strategist</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-marketing-china-market-localization-strategist</guid>
+      <description>Turn China trend data into a market entry brief with platform picks, content templates and a week-by-week launch checklist for a small team.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Plan your strategy</category>
+    </item>
+    <item>
+      <title>Claude Code learning coach</title>
+      <link>https://useaiblocks.com/skills/claude-code-learning-coach</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/claude-code-learning-coach</guid>
+      <description>Check what you have tried in Claude Code and find your gaps. Get a short practice plan from a quick or deeper experience check.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
-      <category>Build websites and web apps</category>
+      <category>Study and check your understanding</category>
     </item>
     <item>
-      <title>30-point landing page checker</title>
-      <link>https://useaiblocks.com/prompts/landing-page-30-point-checker</link>
-      <guid isPermaLink="true">https://useaiblocks.com/prompts/landing-page-30-point-checker</guid>
-      <description>Share your page and screenshots. Get a 30-point audit, a score and five fixes to make first.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Compliance auditor agent</title>
+      <link>https://useaiblocks.com/agents/agency-security-compliance-auditor</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-security-compliance-auditor</guid>
+      <description>Check your security setup against a standard such as SOC 2, ISO 27001 or HIPAA. Get a gap table, proof list and fix order.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
-      <category>prompt</category>
-      <category>Audit a landing page</category>
+      <category>agent</category>
+      <category>Check contracts and rules</category>
     </item>
     <item>
-      <title>Ad-matched landing page writer</title>
-      <link>https://useaiblocks.com/skills/ad-matched-landing-page-writer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/ad-matched-landing-page-writer</guid>
-      <description>Write landing page copy that picks up where your ad left off. Give it the ad, your facts and reviews. You get a page with the full cost stated.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Content writer</title>
+      <link>https://useaiblocks.com/agents/agency-marketing-content-creator</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-marketing-content-creator</guid>
+      <description>Get a content plan and channel drafts from one idea: blog, video and social posts, each with its audience goal and facts to check. Bring your topic.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
-      <category>skill</category>
-      <category>Write and build a landing page</category>
+      <category>agent</category>
+      <category>Grow on social</category>
     </item>
     <item>
-      <title>Landing page conversion reviewer</title>
-      <link>https://useaiblocks.com/skills/landing-page-auditor</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/landing-page-auditor</guid>
-      <description>Share your page and screenshots. Get conversion problems ranked by impact, with recommended fixes and a score.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Cross-border ecommerce planner</title>
+      <link>https://useaiblocks.com/agents/agency-marketing-cross-border-ecommerce</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-marketing-cross-border-ecommerce</guid>
+      <description>Get a cross-border ecommerce plan for Amazon, Shopee, Temu or TikTok Shop with margin per product, compliance to-dos and a launch order.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
-      <category>skill</category>
-      <category>Audit a landing page</category>
+      <category>agent</category>
+      <category>Run your online store</category>
     </item>
     <item>
-      <title>Landing page design planner</title>
-      <link>https://useaiblocks.com/skills/landing-page-design-planner</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/landing-page-design-planner</guid>
-      <description>Plan a landing page design from your copy and brand. Get three different directions, a section plan and a build brief, before anyone builds.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Data pipeline designer</title>
+      <link>https://useaiblocks.com/agents/agency-engineering-data-engineer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-engineering-data-engineer</guid>
+      <description>Get a data pipeline design with raw, cleaned and report-ready layers, quality checks, freshness targets, alerts and a plan for when loads fail.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
-      <category>skill</category>
-      <category>Write and build a landing page</category>
+      <category>agent</category>
+      <category>Build and ship software</category>
     </item>
     <item>
-      <title>Shopify landing page builder</title>
-      <link>https://useaiblocks.com/skills/shopify-landing-page-builder</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/shopify-landing-page-builder</guid>
-      <description>Turn your finished landing page copy into a Shopify landing page: a section file, a page template with your words in, and install steps.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Drone mapping specialist</title>
+      <link>https://useaiblocks.com/agents/agency-gis-drone-reality-mapping</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-gis-drone-reality-mapping</guid>
+      <description>Plan a drone mapping job: flight settings, ground control points, processing steps and accuracy checks for orthomosaics, terrain models and 3D meshes.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
-      <category>skill</category>
-      <category>Write and build a landing page</category>
+      <category>agent</category>
+      <category>Research a topic properly</category>
     </item>
     <item>
-      <title>Video ad production plan builder</title>
-      <link>https://useaiblocks.com/skills/video-ad-production-plan-builder</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/video-ad-production-plan-builder</guid>
-      <description>Turn your product facts and ad idea into a video ad production plan: cast kit, timed shot table, clip prompts and edit handoff in one style.</description>
-      <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Game economy designer</title>
+      <link>https://useaiblocks.com/agents/agency-economy-designer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-economy-designer</guid>
+      <description>Get a game economy plan with each currency&apos;s sources and sinks, a 90-day balance check for four player types, and the numbers to track.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
-      <category>skill</category>
-      <category>Make video ads</category>
+      <category>agent</category>
+      <category>Build and ship software</category>
     </item>
     <item>
-      <title>AI task brief writer</title>
-      <link>https://useaiblocks.com/prompts/job-to-agent-goal-writer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/prompts/job-to-agent-goal-writer</guid>
-      <description>Describe a job and your limits. Get a clear AI task brief with scope, completion checks, approval points and stop rules.</description>
-      <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Geoprocessing specialist agent</title>
+      <link>https://useaiblocks.com/agents/agency-gis-geoprocessing-specialist</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-gis-geoprocessing-specialist</guid>
+      <description>Turn a repeat ArcGIS Pro task into a Python script, toolbox or Model Builder model. Get a build plan with parameters, checks and a draft script.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
-      <category>prompt</category>
-      <category>Set up AI to work for you</category>
+      <category>agent</category>
+      <category>Research a topic properly</category>
     </item>
     <item>
-      <title>Clothing marketplace photo editor</title>
-      <link>https://useaiblocks.com/workflows/turn-a-clothing-flat-lay-into-marketplace-ready-photos</link>
-      <guid isPermaLink="true">https://useaiblocks.com/workflows/turn-a-clothing-flat-lay-into-marketplace-ready-photos</guid>
-      <description>Share a real garment photo and target marketplace. Get photo edits, close-up checks and a review of the final images against relevant rules.</description>
-      <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+      <title>GIS solution designer</title>
+      <link>https://useaiblocks.com/agents/agency-gis-solution-engineer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-gis-solution-engineer</guid>
+      <description>Plan a working GIS demo or proof of concept: what it must show, the simplest tools, build steps, a safe backup and what is not production ready.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
-      <category>workflow</category>
-      <category>Make product photos</category>
+      <category>agent</category>
+      <category>Research a topic properly</category>
     </item>
     <item>
-      <title>Short film video ad script writer</title>
-      <link>https://useaiblocks.com/skills/short-film-ad-script</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/short-film-ad-script</guid>
-      <description>Write a short film video ad script with a twist your product causes. You get a timed shot table, edit notes and a cast note.</description>
-      <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Image prompt engineer agent</title>
+      <link>https://useaiblocks.com/agents/agency-design-image-prompt-engineer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-design-image-prompt-engineer</guid>
+      <description>Describe the photo you want. Get an image prompt that sets subject, light, camera and style, plus a leave-out list, for Midjourney, DALL-E or Flux.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
-      <category>skill</category>
-      <category>Make video ads</category>
+      <category>agent</category>
+      <category>Make images and art</category>
     </item>
     <item>
-      <title>React landing page builder</title>
-      <link>https://useaiblocks.com/skills/react-landing-page-builder</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/react-landing-page-builder</guid>
-      <description>Describe your product and get a React landing page builder result: a Next.js page with hero, pricing, FAQ and proof sections, plus SEO tags.</description>
-      <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Implementation brief writer</title>
+      <link>https://useaiblocks.com/agents/agency-specialized-master-plan-architect</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-specialized-master-plan-architect</guid>
+      <description>Turn a software change into a written implementation plan with risks, files to change, test steps and a rollback path. No code is written.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
-      <category>skill</category>
-      <category>Write and build a landing page</category>
+      <category>agent</category>
+      <category>Build and ship software</category>
     </item>
     <item>
-      <title>Brand profile builder</title>
-      <link>https://useaiblocks.com/skills/website-brand-brain-builder</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/website-brand-brain-builder</guid>
-      <description>Share your website. Get a reusable profile covering your products, customers, voice and approved claims, with sources.</description>
-      <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Incident response coordinator</title>
+      <link>https://useaiblocks.com/agents/agency-engineering-incident-response-commander</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-engineering-incident-response-commander</guid>
+      <description>Get a clear severity call, roles, update messages and a blameless post-mortem for a tech outage. Bring the timeline, alerts and who is on call.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
-      <category>skill</category>
-      <category>Set up your brand file</category>
+      <category>agent</category>
+      <category>Ship and host your app</category>
     </item>
     <item>
-      <title>Website design token extractor</title>
-      <link>https://useaiblocks.com/skills/website-design-token-extractor</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/website-design-token-extractor</guid>
-      <description>Give it a website address. Get its colours, fonts, spacing and contrast score as Tailwind, CSS and Figma files.</description>
-      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-      <category>new</category>
-      <category>skill</category>
+      <title>Instagram content planner</title>
+      <link>https://useaiblocks.com/agents/agency-marketing-instagram-curator</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-marketing-instagram-curator</guid>
+      <description>Get a 30-day Instagram plan with a look guide, a 9-post grid, Reels and Stories ideas and hashtags. Bring your brand and goal.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Grow on social</category>
+    </item>
+    <item>
+      <title>Knowledge graph engineer</title>
+      <link>https://useaiblocks.com/agents/agency-engineering-knowledge-graph-engineer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-engineering-knowledge-graph-engineer</guid>
+      <description>Turn your documents into a knowledge graph design with linked facts, source tracking and test queries. Bring your files and your questions.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Build and ship software</category>
+    </item>
+    <item>
+      <title>LinkedIn content writer</title>
+      <link>https://useaiblocks.com/agents/agency-marketing-linkedin-content-creator</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-marketing-linkedin-content-creator</guid>
+      <description>Get a LinkedIn voice profile, three content pillars, a 30-day calendar and post drafts with three hook options each. Bring your goal and stories.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Grow on social</category>
+    </item>
+    <item>
+      <title>Map designer</title>
+      <link>https://useaiblocks.com/agents/agency-gis-cartography-designer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-gis-cartography-designer</guid>
+      <description>Get a map design plan with base map, colour scheme, symbols, labels, legend and layout for print or web, plus a colour blindness check.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
       <category>Design things people love</category>
     </item>
     <item>
-      <title>Logo strength tester</title>
-      <link>https://useaiblocks.com/skills/logo-strength-tester</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/logo-strength-tester</guid>
-      <description>Test your logo ideas before you pick one. Get each scored out of 100 on seven tests, plus a one-colour and small-size check, with a keep, fix or drop call.</description>
-      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Merger integration manager</title>
+      <link>https://useaiblocks.com/agents/agency-ma-integration-manager</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-ma-integration-manager</guid>
+      <description>Plan your first 100 days after buying or merging with a business. Get a Day 1 checklist, workstream owners, dependencies and the risks to watch.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
-      <category>skill</category>
+      <category>agent</category>
+      <category>Run meetings, notes and plans</category>
+    </item>
+    <item>
+      <title>Outbound sales planner</title>
+      <link>https://useaiblocks.com/agents/agency-sales-outbound-strategist</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-sales-outbound-strategist</guid>
+      <description>Get an outbound sales plan: who to target, which buying signals to watch and a multi-channel message sequence with draft emails you can send.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Sell and negotiate</category>
+    </item>
+    <item>
+      <title>Payments and billing engineer agent</title>
+      <link>https://useaiblocks.com/agents/agency-engineering-payments-billing-engineer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-engineering-payments-billing-engineer</guid>
+      <description>Plan a Stripe, Adyen, Braintree or PayPal build with no double charges, safe webhooks, a small card-data footprint and daily reconciliation.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Build and ship software</category>
+    </item>
+    <item>
+      <title>Playful interface designer</title>
+      <link>https://useaiblocks.com/agents/agency-design-whimsy-injector</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-design-whimsy-injector</guid>
+      <description>Get three to five playful touches for your product, such as 404 pages, loading lines and button labels, with accessibility and speed checks.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
       <category>Design things people love</category>
     </item>
     <item>
-      <title>17-section advertising report writer</title>
-      <link>https://useaiblocks.com/skills/seventeen-section-advertising-report-writer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/seventeen-section-advertising-report-writer</guid>
-      <description>Turn your Meta, Google Ads and Shopify results into a 17-section monthly ad performance report with wins, fixes and next steps.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Reddit community planner</title>
+      <link>https://useaiblocks.com/agents/agency-marketing-reddit-community-builder</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-marketing-reddit-community-builder</guid>
+      <description>Get a Reddit plan: which subreddits to join, a rules and disclosure check for each, and helpful draft posts and replies. Bring your brand.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
-      <category>skill</category>
-      <category>Read your ad results</category>
+      <category>agent</category>
+      <category>Grow on social</category>
+    </item>
+    <item>
+      <title>Release acceptance evidence reviewer</title>
+      <link>https://useaiblocks.com/agents/agency-testing-reality-checker</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-testing-reality-checker</guid>
+      <description>Get a launch readiness review of a finished build. It checks earlier QA claims against proof and returns FAILED, NEEDS WORK or READY.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Test and fix code</category>
+    </item>
+    <item>
+      <title>Sales data consolidation planner</title>
+      <link>https://useaiblocks.com/agents/agency-data-consolidation-agent</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-data-consolidation-agent</guid>
+      <description>Turn your sales rows into one report by territory and rep, with quota attainment, pipeline by stage and top performers. Bring your sales table.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Analyse data and explain the results</category>
+    </item>
+    <item>
+      <title>Sales outreach writer</title>
+      <link>https://useaiblocks.com/agents/agency-sales-outreach</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-sales-outreach</guid>
+      <description>Write B2B cold outreach for one prospect: a personalized email, a 7-touch follow-up plan, replies to likely objections and the next step.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Sell and negotiate</category>
+    </item>
+    <item>
+      <title>Search relevance engineer agent</title>
+      <link>https://useaiblocks.com/agents/agency-engineering-search-relevance-engineer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-engineering-search-relevance-engineer</guid>
+      <description>Fix poor site search with a tested plan for Elasticsearch or OpenSearch, so each change is scored on real queries before it goes live.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Build and ship software</category>
+    </item>
+    <item>
+      <title>Simulated user walkthrough reviewer</title>
+      <link>https://useaiblocks.com/agents/agency-design-persona-walkthrough</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-design-persona-walkthrough</guid>
+      <description>Share your web page and a visitor profile. See what that visitor thinks at each scroll, where they doubt or leave, and the fixes ranked.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Audit a landing page</category>
+    </item>
+    <item>
+      <title>Software architect</title>
+      <link>https://useaiblocks.com/agents/agency-engineering-software-architect</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-engineering-software-architect</guid>
+      <description>Choose how to structure your software, with at least two options, their trade-offs, a recommended design and a written decision record.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Build and ship software</category>
+    </item>
+    <item>
+      <title>Software tool comparison planner</title>
+      <link>https://useaiblocks.com/agents/agency-testing-tool-evaluator</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-testing-tool-evaluator</guid>
+      <description>Choose between software tools with a scored comparison. Get your criteria, a trial plan, a cost view and a pick you can defend.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Research a topic properly</category>
+    </item>
+    <item>
+      <title>Spatial data engineer agent</title>
+      <link>https://useaiblocks.com/agents/agency-gis-spatial-data-engineer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-gis-spatial-data-engineer</guid>
+      <description>Plan a pipeline that turns messy map data into clean, standard files, with coordinate fixes, field rules, quality checks and a repeatable run.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Build and ship software</category>
+    </item>
+    <item>
+      <title>Spatial data scientist</title>
+      <link>https://useaiblocks.com/agents/agency-gis-spatial-data-scientist</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-gis-spatial-data-scientist</guid>
+      <description>Plan a spatial analysis, such as hot spots, clusters or location based prediction, with the right test, bias checks and plain language results.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Research a topic properly</category>
+    </item>
+    <item>
+      <title>Studio operations planner</title>
+      <link>https://useaiblocks.com/agents/agency-project-management-studio-operations</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-project-management-studio-operations</guid>
+      <description>Write step-by-step procedures and an operating plan for your small studio or team. Get who owns what, your tools and vendors, and a support routine.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Run meetings, notes and plans</category>
+    </item>
+    <item>
+      <title>Study abroad advisor agent</title>
+      <link>https://useaiblocks.com/agents/agency-study-abroad-advisor</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-study-abroad-advisor</guid>
+      <description>Plan your study abroad applications. Get a reach, target and safety school list, a dated timeline, an essay check and visa questions.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Run meetings, notes and plans</category>
+    </item>
+    <item>
+      <title>Test automation engineer agent</title>
+      <link>https://useaiblocks.com/agents/agency-testing-test-automation-engineer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-testing-test-automation-engineer</guid>
+      <description>Get stable Playwright or Cypress browser tests, a CI setup and a fix for each flaky test, so failures mean real bugs and not bad timing.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Test and fix code</category>
+    </item>
+    <item>
+      <title>TikTok content planner</title>
+      <link>https://useaiblocks.com/agents/agency-marketing-tiktok-strategist</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-marketing-tiktok-strategist</guid>
+      <description>Get a TikTok plan: content pillars, 10 video ideas with 3-second hooks, one test for each and the numbers to read. Bring your product and buyer.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Grow on social</category>
+    </item>
+    <item>
+      <title>UI designer agent</title>
+      <link>https://useaiblocks.com/agents/agency-design-ui-designer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-design-ui-designer</guid>
+      <description>Get a UI design system for your product, with colours, type, spacing, buttons and forms in every state, dark mode and accessibility checks.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Design things people love</category>
+    </item>
+    <item>
+      <title>Unity software architect</title>
+      <link>https://useaiblocks.com/agents/agency-unity-architect</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-unity-architect</guid>
+      <description>Plan a Unity project structure with ScriptableObjects so systems stay separate, designers can edit data, and oversized scripts get split up.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Build and ship software</category>
+    </item>
+    <item>
+      <title>Unreal gameplay systems engineer</title>
+      <link>https://useaiblocks.com/agents/agency-unreal-systems-engineer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-unreal-systems-engineer</guid>
+      <description>Plan an Unreal Engine 5 gameplay feature in C++ and Blueprint. Get the code split, build setup and checks to run before you ship.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Build and ship software</category>
+    </item>
+    <item>
+      <title>Visual story planner</title>
+      <link>https://useaiblocks.com/agents/agency-design-visual-storyteller</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-design-visual-storyteller</guid>
+      <description>Turn your message into a visual story plan, with the story arc, a frame-by-frame sequence of one message per frame and a version for each channel.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Design things people love</category>
+    </item>
+    <item>
+      <title>Web page structure designer</title>
+      <link>https://useaiblocks.com/agents/agency-design-ux-architect</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-design-ux-architect</guid>
+      <description>Get a page structure and CSS base for a new site, with section order, a layout grid, type and spacing scales and a light, dark and system theme toggle.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Design things people love</category>
+    </item>
+    <item>
+      <title>Website spec and screenshot checker</title>
+      <link>https://useaiblocks.com/agents/agency-testing-evidence-collector</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-testing-evidence-collector</guid>
+      <description>Share a website and its spec. Get a test report with screenshots, pass or fail results and a clear failed, not determined or ready call.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Test and fix code</category>
+    </item>
+    <item>
+      <title>Workflow improvement reviewer</title>
+      <link>https://useaiblocks.com/agents/agency-testing-workflow-optimizer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-testing-workflow-optimizer</guid>
+      <description>Improve one work process. Get a step map, ranked bottlenecks, what to automate and small tests to try, from your numbers.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Run meetings, notes and plans</category>
+    </item>
+    <item>
+      <title>Workflow specification writer</title>
+      <link>https://useaiblocks.com/agents/agency-specialized-workflow-architect</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-specialized-workflow-architect</guid>
+      <description>Turn a feature into a workflow spec with every path, failure, cleanup and test case written down before anyone builds it.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Write down how work gets done</category>
+    </item>
+    <item>
+      <title>X post and reply writer</title>
+      <link>https://useaiblocks.com/agents/agency-marketing-twitter-engager</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-marketing-twitter-engager</guid>
+      <description>Get a week of X (Twitter) posts, one thread and reply drafts for your account, plus a crisis reply plan. Bring your topic and sample posts.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Grow on social</category>
     </item>
     <item>
       <title>Ad concept writer</title>
       <link>https://useaiblocks.com/skills/seven-bucket-ad-concept-brainstormer</link>
       <guid isPermaLink="true">https://useaiblocks.com/skills/seven-bucket-ad-concept-brainstormer</guid>
       <description>Brainstorm 20 or more ad concepts in seven groups, then rank them and pick the top eight to produce. Built for planning your next ad tests.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
       <category>Plan what ads to test</category>
@@ -422,7 +682,7 @@
       <link>https://useaiblocks.com/skills/ad-image-generation-and-edit-planner</link>
       <guid isPermaLink="true">https://useaiblocks.com/skills/ad-image-generation-and-edit-planner</guid>
       <description>Plan a batch of ad images from your product photo: get the settings, a prompt for each version, edit requests and a log of every change.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
       <category>Make image ads</category>
@@ -432,37 +692,17 @@
       <link>https://useaiblocks.com/skills/trigger-to-payoff-ad-structure-planner</link>
       <guid isPermaLink="true">https://useaiblocks.com/skills/trigger-to-payoff-ad-structure-planner</guid>
       <description>Plan an ad structure around trigger, emotion, evidence and payoff. Get a video timeline or static layout brief for your product and buyer.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
       <category>Plan what ads to test</category>
-    </item>
-    <item>
-      <title>Ad performance change checker</title>
-      <link>https://useaiblocks.com/skills/ad-performance-early-warning-reviewer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/ad-performance-early-warning-reviewer</guid>
-      <description>Check your ad costs, frequency, clicks and view rates against past results. Get early warning signs to check, not a forecast of lower sales.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Read your ad results</category>
-    </item>
-    <item>
-      <title>Ad performance change investigator</title>
-      <link>https://useaiblocks.com/skills/six-pattern-ad-performance-diagnoser</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/six-pattern-ad-performance-diagnoser</guid>
-      <description>Find out why your ad results changed. Give it current and past numbers. You get a ranked cause, a confidence score and what to check next.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Read your ad results</category>
     </item>
     <item>
       <title>Ad photography style chooser</title>
       <link>https://useaiblocks.com/skills/ad-photography-style-chooser</link>
       <guid isPermaLink="true">https://useaiblocks.com/skills/ad-photography-style-chooser</guid>
       <description>Choose the photo style for your ad. Get a main style, a style to test against it and one to avoid, plus shot notes for the shoot.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
       <category>Make image ads</category>
@@ -472,27 +712,57 @@
       <link>https://useaiblocks.com/skills/creative-gap-to-brief-queue-planner</link>
       <guid isPermaLink="true">https://useaiblocks.com/skills/creative-gap-to-brief-queue-planner</guid>
       <description>Turn gaps in your ad mix into 5 to 10 ready-to-make creative briefs. Get a ranked queue a designer or creator can start on today.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
       <category>Plan what ads to test</category>
     </item>
     <item>
-      <title>Audit sales presentation planner</title>
-      <link>https://useaiblocks.com/skills/audit-to-sales-presentation-planner</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/audit-to-sales-presentation-planner</guid>
-      <description>Turn your audit of a prospect&apos;s ad account or store into a ten-slide sales pitch with findings, proof and a clear scope and fee.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Agent injection evidence review assistant</title>
+      <link>https://useaiblocks.com/agents/track-agent-injection-controls-and-retest-evidence</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/track-agent-injection-controls-and-retest-evidence</guid>
+      <description>Get safe prompt injection test cases for your AI agent, a control gap list and retest records. Tests run only with the owner&apos;s written approval.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Keep your code secure</category>
+    </item>
+    <item>
+      <title>Avatar motion transfer planner</title>
+      <link>https://useaiblocks.com/workflows/avatar-motion-transfer-planner</link>
+      <guid isPermaLink="true">https://useaiblocks.com/workflows/avatar-motion-transfer-planner</guid>
+      <description>Share an approved avatar and owned performance clip. Get a motion-transfer plan, reference roles and checks for the result.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>workflow</category>
+      <category>Make video ads</category>
+    </item>
+    <item>
+      <title>Backup communication plan builder</title>
+      <link>https://useaiblocks.com/skills/backup-communication-plan-builder</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/backup-communication-plan-builder</guid>
+      <description>Build a backup communication plan with fallback paths, owners and switch triggers. Get a worksheet, check-in card and a safe test outline.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
-      <category>Sell and negotiate</category>
+      <category>Run meetings, notes and plans</category>
+    </item>
+    <item>
+      <title>Brand ad remix designer</title>
+      <link>https://useaiblocks.com/workflows/brand-look-ad-remix</link>
+      <guid isPermaLink="true">https://useaiblocks.com/workflows/brand-look-ad-remix</guid>
+      <description>Share your own ads and real product photos. Get a new set in your brand style, with prompts, checks and a change log.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>workflow</category>
+      <category>Make image ads</category>
     </item>
     <item>
       <title>Brand enemy statement writer</title>
       <link>https://useaiblocks.com/prompts/brand-enemy-statement-writer</link>
       <guid isPermaLink="true">https://useaiblocks.com/prompts/brand-enemy-statement-writer</guid>
       <description>Write a brand enemy statement from your customer reviews. You get a clear stance, a promise and a list of proof gaps to fill.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>prompt</category>
       <category>Plan your strategy</category>
@@ -502,17 +772,47 @@
       <link>https://useaiblocks.com/skills/brand-to-image-prompt-compiler</link>
       <guid isPermaLink="true">https://useaiblocks.com/skills/brand-to-image-prompt-compiler</guid>
       <description>Turn your brand, scene, product and copy into one image prompt for an AI image tool, with a negative prompt and a model pick.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
       <category>Make image ads</category>
+    </item>
+    <item>
+      <title>Build a research talk from checked figures</title>
+      <link>https://useaiblocks.com/workflows/prepare-a-source-checked-research-talk</link>
+      <guid isPermaLink="true">https://useaiblocks.com/workflows/prepare-a-source-checked-research-talk</guid>
+      <description>Attach a paper, result tables and talk length. Get traceable figures, slides and speaker notes for review.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>workflow</category>
+      <category>Research a topic properly</category>
+    </item>
+    <item>
+      <title>Business data migration planner</title>
+      <link>https://useaiblocks.com/skills/business-data-move-runbook</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/business-data-move-runbook</guid>
+      <description>Plan a business data move with field maps, test imports, final switch checks and a recovery plan.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Make documents, sheets and slides</category>
+    </item>
+    <item>
+      <title>Business tool launch reviewer</title>
+      <link>https://useaiblocks.com/skills/business-tool-launch-checklist</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/business-tool-launch-checklist</guid>
+      <description>Check a business tool launch before go-live. Share your rollout plan and get a checklist, open blockers and a go or no-go record.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Run meetings, notes and plans</category>
     </item>
     <item>
       <title>Buyer awareness ad planner</title>
       <link>https://useaiblocks.com/skills/awareness-stage-ad-framework-chooser</link>
       <guid isPermaLink="true">https://useaiblocks.com/skills/awareness-stage-ad-framework-chooser</guid>
       <description>Pick the right ad copy structure for what your buyer already knows. Get a headline, body and CTA, plus a warning if the stage is wrong.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
       <category>Write ad copy</category>
@@ -522,7 +822,7 @@
       <link>https://useaiblocks.com/skills/buyer-trigger-and-proof-mapper</link>
       <guid isPermaLink="true">https://useaiblocks.com/skills/buyer-trigger-and-proof-mapper</guid>
       <description>Find what makes a buyer start looking, how they feel, what proof they need and what result they want. Get a buyer trigger and proof map.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
       <category>Understand your customers</category>
@@ -532,67 +832,117 @@
       <link>https://useaiblocks.com/skills/persona-stage-theme-matrix-planner</link>
       <guid isPermaLink="true">https://useaiblocks.com/skills/persona-stage-theme-matrix-planner</guid>
       <description>Map your buyers, their awareness stage and nine ad themes. Find gaps and get the ten best ad cells to make next, ranked.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
       <category>Plan what ads to test</category>
     </item>
     <item>
-      <title>Campaign budget scenario planner</title>
-      <link>https://useaiblocks.com/skills/campaign-budget-scenario-planner</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/campaign-budget-scenario-planner</guid>
-      <description>Plan your campaign budget in three scenarios. Check totals, learning risk and spend concentration before you move any ad budget.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Campaign copy writer</title>
+      <link>https://useaiblocks.com/agents/campaign-copy-draft-agent</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/campaign-copy-draft-agent</guid>
+      <description>Get campaign copy checked against your approved claims. Every claim is tied to its proof, gaps are flagged and a checkpoint is saved.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Set up AI to work for you</category>
+    </item>
+    <item>
+      <title>Codebase learning planner</title>
+      <link>https://useaiblocks.com/skills/codebase-learning-map</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/codebase-learning-map</guid>
+      <description>Turn a code folder into a study map. Get ordered phases, what to know first and 2 or 3 paths that fit your goal and level.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
-      <category>Launch and scale Meta and TikTok ads</category>
+      <category>Study and check your understanding</category>
+    </item>
+    <item>
+      <title>Coding project coach</title>
+      <link>https://useaiblocks.com/skills/coding-project-coach</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/coding-project-coach</guid>
+      <description>Learn to code by building a real project. Your AI sets small milestones, gives hints and checks your code, and you write every line yourself.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Study and check your understanding</category>
+    </item>
+    <item>
+      <title>Community needs research planner</title>
+      <link>https://useaiblocks.com/skills/community-needs-research-planner</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/community-needs-research-planner</guid>
+      <description>Plan a community needs assessment: give your area and service idea, get a research plan, provider map and gap summary to show if the need is real.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Research a topic properly</category>
     </item>
     <item>
       <title>Competitor ad theme and gap mapper</title>
       <link>https://useaiblocks.com/skills/competitor-ad-theme-and-gap-mapper</link>
       <guid isPermaLink="true">https://useaiblocks.com/skills/competitor-ad-theme-and-gap-mapper</guid>
       <description>Sort competitor Meta ads into thirteen themes, see which lanes are crowded or open, and get ranked ad briefs to test next.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
       <category>Study competitor ads</category>
     </item>
     <item>
-      <title>Creative sprint readiness reviewer</title>
-      <link>https://useaiblocks.com/skills/creative-sprint-readiness-reviewer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/creative-sprint-readiness-reviewer</guid>
-      <description>Check a creative sprint before you brief, generate images or launch ads. Get a PASS, FIX or NOT CHECKED result for each gate, with an owner.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Customer message tone and urgency reviewer</title>
+      <link>https://useaiblocks.com/skills/customer-message-tone-and-urgency-review</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/customer-message-tone-and-urgency-review</guid>
+      <description>Find out how upset a customer is and how fast to reply. Paste their message and get tone, urgency, churn signs and how to respond.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
-      <category>Check ads before they go live</category>
+      <category>Help your customers</category>
     </item>
     <item>
-      <title>Daily Meta ad review planner</title>
-      <link>https://useaiblocks.com/skills/meta-manage-ads-on-a-daily-basis-planner</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/meta-manage-ads-on-a-daily-basis-planner</guid>
-      <description>Get a daily review table for your Meta ads: each ad marked keep, watch, refresh or pause, with the proof and the next checks ranked.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Debugging practice coach</title>
+      <link>https://useaiblocks.com/skills/debugging-practice-coach</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/debugging-practice-coach</guid>
+      <description>Learn to debug your own code. Share the bug and what you tried, and this debugging practice coach guides you to find and prove the fix yourself.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
-      <category>Launch and scale Meta and TikTok ads</category>
+      <category>Study and check your understanding</category>
+    </item>
+    <item>
+      <title>Donated goods intake planner</title>
+      <link>https://useaiblocks.com/skills/donated-goods-intake-planner</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/donated-goods-intake-planner</guid>
+      <description>Plan your donated goods intake: what to accept, how to grade, where each item goes, and a basic donor receipt. Built for thrift and resale stores.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Run meetings, notes and plans</category>
     </item>
     <item>
       <title>Eight-lever ad visual planner</title>
       <link>https://useaiblocks.com/skills/eight-lever-ad-visual-planner</link>
       <guid isPermaLink="true">https://useaiblocks.com/skills/eight-lever-ad-visual-planner</guid>
       <description>Set eight visual choices for an ad image, lock the ones that must stay and get three version previews that differ enough to test.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
       <category>Make image ads</category>
+    </item>
+    <item>
+      <title>Five reasons landing page builder</title>
+      <link>https://useaiblocks.com/workflows/reasons-page-html-builder</link>
+      <guid isPermaLink="true">https://useaiblocks.com/workflows/reasons-page-html-builder</guid>
+      <description>Share product facts and an offer. Get a five-reasons HTML page, with a choice of looks and a Shopify file if needed.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>workflow</category>
+      <category>Write and build a landing page</category>
     </item>
     <item>
       <title>Five-angle ad headline writer</title>
       <link>https://useaiblocks.com/skills/five-angle-ad-headline-writer</link>
       <guid isPermaLink="true">https://useaiblocks.com/skills/five-angle-ad-headline-writer</guid>
       <description>Write five ad headlines for one product, each with a different angle. You get character counts and a plan for which two to test first.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
       <category>Write ad copy</category>
@@ -602,7 +952,7 @@
       <link>https://useaiblocks.com/skills/five-part-creator-ad-script-writer</link>
       <guid isPermaLink="true">https://useaiblocks.com/skills/five-part-creator-ad-script-writer</guid>
       <description>Write a creator video ad script in five parts, from hook to call to action. Get timed lines, delivery notes and a shot list.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
       <category>Make video ads</category>
@@ -612,7 +962,7 @@
       <link>https://useaiblocks.com/skills/five-tactic-ad-hook-writer</link>
       <guid isPermaLink="true">https://useaiblocks.com/skills/five-tactic-ad-hook-writer</guid>
       <description>Write short ad hooks for your product with five tactics. Get 10 to 15 hooks, ranked, with the first ones to test and notes for filming.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
       <category>Write ad copy</category>
@@ -622,390 +972,40 @@
       <link>https://useaiblocks.com/skills/five-voice-video-opener-writer</link>
       <guid isPermaLink="true">https://useaiblocks.com/skills/five-voice-video-opener-writer</guid>
       <description>Write eighteen spoken video ad openers in five voices, with exact words and delivery notes, built only from your approved claims.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
       <category>Make video ads</category>
     </item>
     <item>
-      <title>Meta ad concept test planner</title>
-      <link>https://useaiblocks.com/skills/meta-concept-diversity-test-planner</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/meta-concept-diversity-test-planner</guid>
-      <description>Sort your Meta ads into 13 concept types, spot gaps and tired ads, and get three ranked creative test plans with a capped budget.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Plan what ads to test</category>
-    </item>
-    <item>
-      <title>Meta Ads 30-check account auditor</title>
-      <link>https://useaiblocks.com/skills/meta-ads-30-check-account-auditor</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/meta-ads-30-check-account-auditor</guid>
-      <description>Check your Meta Ads account with 30 tests. Get a score out of 100 for tracking, creative, structure and audiences, plus ranked fixes.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Check ads before they go live</category>
-    </item>
-    <item>
-      <title>Meta and Google budget comparison reviewer</title>
-      <link>https://useaiblocks.com/skills/meta-and-google-budget-comparison-reviewer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/meta-and-google-budget-comparison-reviewer</guid>
-      <description>Compare Meta and Google ad results on matched dates next to your store sales, then get budget scenarios with the sums shown.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Read your ad results</category>
-    </item>
-    <item>
-      <title>Meta bid cap adjustment planner</title>
-      <link>https://useaiblocks.com/skills/meta-adjusting-and-scaling-bid-caps-in-meta-ads-planner</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/meta-adjusting-and-scaling-bid-caps-in-meta-ads-planner</guid>
-      <description>Check your Meta bid caps against real results and your cost limits. You get small bid changes to test, a review date and clear rules for when to stop.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Launch and scale Meta and TikTok ads</category>
-    </item>
-    <item>
-      <title>Meta bid cap launch planner</title>
-      <link>https://useaiblocks.com/skills/meta-set-up-a-bid-cap-campaign-planner</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/meta-set-up-a-bid-cap-campaign-planner</guid>
-      <description>Plan a Meta bid cap campaign before you spend. Get a settings table, launch checks and stop rules, built from your own results.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Launch and scale Meta and TikTok ads</category>
-    </item>
-    <item>
-      <title>Meta campaign change reviewer</title>
-      <link>https://useaiblocks.com/skills/meta-optimization-of-existing-ad-campaigns-planner</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/meta-optimization-of-existing-ad-campaigns-planner</guid>
-      <description>Check changes before you make them to a Meta campaign. Get each ad marked, the proof, the changes in order and how to judge each one.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Launch and scale Meta and TikTok ads</category>
-    </item>
-    <item>
-      <title>Meta campaign scaling planner</title>
-      <link>https://useaiblocks.com/skills/five-gate-campaign-scaling-planner</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/five-gate-campaign-scaling-planner</guid>
-      <description>Check which Meta campaigns are ready to scale. Give it your results and targets. You get a five-gate review, a scaling plan and stop rules.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Launch and scale Meta and TikTok ads</category>
-    </item>
-    <item>
-      <title>Meta creative refresh setup planner</title>
-      <link>https://useaiblocks.com/skills/meta-adding-new-ads-to-an-existing-campaign-planner</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/meta-adding-new-ads-to-an-existing-campaign-planner</guid>
-      <description>Plan new ads inside a running Meta campaign. Get a draft list, a pre-launch checklist and spend limits that keep what already works.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Launch and scale Meta and TikTok ads</category>
-    </item>
-    <item>
-      <title>Meta creative similarity risk reviewer</title>
-      <link>https://useaiblocks.com/skills/meta-creative-similarity-risk-reviewer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/meta-creative-similarity-risk-reviewer</guid>
-      <description>Find Meta ads that look too alike. Get a creative diversity score out of 100, the repeat pairs, and what new format, hook or look to make next.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Check ads before they go live</category>
-    </item>
-    <item>
-      <title>Meta creative test campaign planner</title>
-      <link>https://useaiblocks.com/skills/meta-setup-of-new-ad-campaigns-with-new-creatives-planner</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/meta-setup-of-new-ad-campaigns-with-new-creatives-planner</guid>
-      <description>Plan a Meta creative test: how to set up the campaign, name and check each ad, cap the spend and decide when to stop and judge the winner.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Launch and scale Meta and TikTok ads</category>
-    </item>
-    <item>
-      <title>Meta event matching evidence reviewer</title>
-      <link>https://useaiblocks.com/skills/meta-event-matching-evidence-reviewer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/meta-event-matching-evidence-reviewer</guid>
-      <description>Check how well your Meta events match real customers. Get a per-event review of missing fields, hashing and duplicates, with fixes in order.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Check ads before they go live</category>
-    </item>
-    <item>
-      <title>Product photo ad prompt set writer</title>
-      <link>https://useaiblocks.com/skills/six-image-ad-prompt-set</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/six-image-ad-prompt-set</guid>
-      <description>Turn one product photo into six ready-to-paste image ad prompts that share the same brand details, copy and layout rules.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Make image ads</category>
-    </item>
-    <item>
-      <title>Rapid-cut product video prompt writer</title>
-      <link>https://useaiblocks.com/skills/rapid-cut-product-video-prompt</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/rapid-cut-product-video-prompt</guid>
-      <description>Make a rapid-cut product video prompt with timed beats and a clear final hero shot. Give it your product and spot idea.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Make video ads</category>
-    </item>
-    <item>
-      <title>Reel cover style guide builder</title>
-      <link>https://useaiblocks.com/skills/reusable-reel-cover-recipe-builder</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/reusable-reel-cover-recipe-builder</guid>
-      <description>Make every Instagram Reel cover look like one brand. Get a title with one accent word, a reusable cover recipe and an image prompt for your portrait.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Grow on social</category>
-    </item>
-    <item>
-      <title>Reference-based product photoshoot planner</title>
-      <link>https://useaiblocks.com/workflows/reference-library-photoshoot</link>
-      <guid isPermaLink="true">https://useaiblocks.com/workflows/reference-library-photoshoot</guid>
-      <description>Pick photo looks for one real product. Get a shot plan, a pilot and checked files in each size you ask for.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Foreplay ad strategy planner</title>
+      <link>https://useaiblocks.com/workflows/foreplay-creative-strategy-runner</link>
+      <guid isPermaLink="true">https://useaiblocks.com/workflows/foreplay-creative-strategy-runner</guid>
+      <description>Share your Foreplay ads. Get groups by ad type, notes on what they show and an HTML test brief.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>workflow</category>
-      <category>Make product photos</category>
+      <category>Study competitor ads</category>
     </item>
     <item>
-      <title>Sales funnel ad brief writer</title>
-      <link>https://useaiblocks.com/skills/funnel-stage-creative-brief-builder</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/funnel-stage-creative-brief-builder</guid>
-      <description>Turn your buyer and product facts into ranked ad angles and ready-to-use creative briefs for each funnel stage in your ad campaigns.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Learning level checker</title>
+      <link>https://useaiblocks.com/skills/learning-level-check</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/learning-level-check</guid>
+      <description>Find your real level in a technical topic. Answer a few short questions and get a starting level and first lesson to match.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
-      <category>Plan what ads to test</category>
+      <category>Study and check your understanding</category>
     </item>
     <item>
-      <title>Theme-based ad copy set writer</title>
-      <link>https://useaiblocks.com/skills/theme-based-ad-copy-set-writer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/theme-based-ad-copy-set-writer</guid>
-      <description>Write three to five ad copy sets from one product theme. Each set has a headline, body and CTA, plus a pick of which two to A/B test first.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Learning session handover writer</title>
+      <link>https://useaiblocks.com/skills/learning-session-handoff</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/learning-session-handoff</guid>
+      <description>Turn your session notes into an updated learner profile and a handoff note, so your next learning session starts where this one stopped.</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>updated</category>
       <category>skill</category>
-      <category>Write ad copy</category>
-    </item>
-    <item>
-      <title>Themed ad layout planner</title>
-      <link>https://useaiblocks.com/skills/theme-based-ad-layout-blueprint-maker</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/theme-based-ad-layout-blueprint-maker</guid>
-      <description>Plan the layout of an image ad by theme and shape. Get zone shares, text rules, a diagram and three or four layout options.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Make image ads</category>
-    </item>
-    <item>
-      <title>Twelve-pattern static ad brief maker</title>
-      <link>https://useaiblocks.com/skills/twelve-pattern-static-ad-brief-maker</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/twelve-pattern-static-ad-brief-maker</guid>
-      <description>Pick one of 12 static ad patterns for your product and buyer stage. Get a static ad brief with copy, layout and image notes.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Make image ads</category>
-    </item>
-    <item>
-      <title>Video hook and retention reviewer</title>
-      <link>https://useaiblocks.com/skills/video-hook-and-hold-matrix-reviewer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/video-hook-and-hold-matrix-reviewer</guid>
-      <description>Find which video ads lose people early or late. Give it your view counts. You get a hook and hold matrix with a fix for each ad.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Read your ad results</category>
-    </item>
-    <item>
-      <title>Video opening frame designer</title>
-      <link>https://useaiblocks.com/skills/twelve-pattern-opening-frame-designer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/twelve-pattern-opening-frame-designer</guid>
-      <description>Pick opening frames for your ad from twelve visual patterns. Get a design brief for each first-frame test, with layout, light and text notes.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Make image ads</category>
-    </item>
-    <item>
-      <title>Weighted advertising health score builder</title>
-      <link>https://useaiblocks.com/skills/weighted-advertising-health-score-builder</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/weighted-advertising-health-score-builder</guid>
-      <description>Score your Meta and Google ad account health out of 100 with weighted checks, a grade for each category and a ranked list of fixes.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Check ads before they go live</category>
-    </item>
-    <item>
-      <title>Research poster content and source planner</title>
-      <link>https://useaiblocks.com/workflows/prepare-research-poster-source-notes</link>
-      <guid isPermaLink="true">https://useaiblocks.com/workflows/prepare-research-poster-source-notes</guid>
-      <description>Share your completed study, approved results and poster rules. Get a reading order, figure briefs, source index and wording check.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>workflow</category>
-      <category>Make documents, sheets and slides</category>
-    </item>
-    <item>
-      <title>3PL bill auditor</title>
-      <link>https://useaiblocks.com/skills/3pl-bill-auditor</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/3pl-bill-auditor</guid>
-      <description>Check your 3PL invoice against your own orders and rate card. See each overcharge, a dispute note to send and a match score out of 100.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Run your online store</category>
-    </item>
-    <item>
-      <title>Ad and page match checker</title>
-      <link>https://useaiblocks.com/skills/ad-and-page-match-checker</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/ad-and-page-match-checker</guid>
-      <description>Check that your ad and landing page match. Get a score out of 100, mismatches ranked by risk, and a fix for each one.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Check ads before they go live</category>
-    </item>
-    <item>
-      <title>Ad awareness stage reviewer</title>
-      <link>https://useaiblocks.com/skills/ad-awareness-stage-checker</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/ad-awareness-stage-checker</guid>
-      <description>Check your ad&apos;s awareness stage. Attach the ad and get a score out of 100, the clashes between image and copy, and rewrites to fix them.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Check ads before they go live</category>
-    </item>
-    <item>
-      <title>Ad concept testing planner</title>
-      <link>https://useaiblocks.com/skills/ad-concept-matrix-builder</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/ad-concept-matrix-builder</guid>
-      <description>Share your product and reviews. Get buyer groups, messages and offers arranged into an ad testing plan.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Plan what ads to test</category>
-    </item>
-    <item>
-      <title>Ad creative mix planner</title>
-      <link>https://useaiblocks.com/skills/creative-portfolio-mix-planner</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/creative-portfolio-mix-planner</guid>
-      <description>Plan your ad mix: give it your live ads and get a target split by source, stage and format, plus which formats to add or retire.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Plan what ads to test</category>
-    </item>
-    <item>
-      <title>Ad creative team planner</title>
-      <link>https://useaiblocks.com/skills/creative-team-pod-designer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/creative-team-pod-designer</guid>
-      <description>Fix slow creative approvals. Give it your team and review steps. You get two-person pods, review rules and a trend budget plan.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Lead and manage people</category>
-    </item>
-    <item>
-      <title>Ad creative test analyst</title>
-      <link>https://useaiblocks.com/skills/creative-test-reader</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/creative-test-reader</guid>
-      <description>Paste your ad test results by ad set. Get keep, leave or replace calls for each ad, false winners flagged and a score for how safe the read is.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Read your ad results</category>
-    </item>
-    <item>
-      <title>Ad recall risk checker</title>
-      <link>https://useaiblocks.com/skills/ad-recall-risk-checker</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/ad-recall-risk-checker</guid>
-      <description>Share an ad or creator brief. Get a five-part brand-recall review, a checklist score and practical fixes.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Check ads before they go live</category>
-    </item>
-    <item>
-      <title>Ad return evidence checker</title>
-      <link>https://useaiblocks.com/skills/platform-roas-reality-check</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/platform-roas-reality-check</guid>
-      <description>Share ad reports and store totals. Get matched comparisons, evidence gaps and a custom review score, without a causal sales claim.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Read your ad results</category>
-    </item>
-    <item>
-      <title>Ad sameness checker</title>
-      <link>https://useaiblocks.com/skills/ad-sameness-checker</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/ad-sameness-checker</guid>
-      <description>Share your ads with buyer, message, offer and format. Get idea groups, a repeat score and specific changes for repeated ideas.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Check ads before they go live</category>
-    </item>
-    <item>
-      <title>Ad test budget calculator</title>
-      <link>https://useaiblocks.com/skills/ad-test-budget-calculator</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/ad-test-budget-calculator</guid>
-      <description>Share your target cost per sale and test days. Get a daily budget, spend limits and a results-review window.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Plan what ads to test</category>
-    </item>
-    <item>
-      <title>Ad testing success rate planner</title>
-      <link>https://useaiblocks.com/skills/creative-hit-rate-planner</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/creative-hit-rate-planner</guid>
-      <description>Share an ad export. Calculate how often new concepts meet your profit target and identify ideas to develop.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Read your ad results</category>
-    </item>
-    <item>
-      <title>Advertised product finder</title>
-      <link>https://useaiblocks.com/skills/proven-product-scout</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/proven-product-scout</guid>
-      <description>Find proven products to sell. Name your market and get ad spy filters, an ad reading routine and a short list of five to ten products marked winner or fluke.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Find products worth selling</category>
-    </item>
-    <item>
-      <title>AI citation source finder</title>
-      <link>https://useaiblocks.com/skills/ai-citation-source-finder</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/ai-citation-source-finder</guid>
-      <description>Share five buyer questions and collected search citations. Get a ranked outreach sheet with placement types, known contacts and costs to confirm.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Get found in search and AI answers</category>
-    </item>
-    <item>
-      <title>AI search recommendation gap finder</title>
-      <link>https://useaiblocks.com/skills/ai-recommendation-gap-finder</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/ai-recommendation-gap-finder</guid>
-      <description>Share AI search test results. See where your store is missing or misread, with six gap checks and actions ranked for review.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Get found in search and AI answers</category>
+      <category>Study and check your understanding</category>
     </item>
   </channel>
 </rss>

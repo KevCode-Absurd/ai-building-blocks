@@ -1,6 +1,6 @@
 # Write ad copy: AI Blocks
 
-> 72 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 73 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ad angle planner](https://useaiblocks.com/skills/ad-angle-planner): Plan your ad angle before you write. Give it your buyer and idea. You get a brief under 200 words on how the ad opens, argues and asks.
 - [Ad body copy and proof editor](https://useaiblocks.com/workflows/persuasive-body-copy): Share the brief, product facts and evidence. Get body-copy drafts, a supported explanation and each claim matched to proof or a gap.
@@ -21,6 +21,7 @@
 - [Buyer-aware headline test planner](https://useaiblocks.com/workflows/buyer-aware-headline): Review what buyers know and which claims they have heard, then write supported headlines and a plan to test different approaches.
 - [Call-to-action writer](https://useaiblocks.com/skills/call-to-action-writer): Share your draft, offer terms and next step. Get two clear asks using real deadlines, guarantees or trials only when supplied.
 - [Campaign copy change release coordinator](https://useaiblocks.com/workflows/update-campaign-copy-after-a-fact-change): Apply an approved fact or offer change across existing campaign copy. Get scoped patches, review results and a versioned publishing handoff.
+- [Claim source trace](https://useaiblocks.com/skills/claim-source-trace): Give it your draft and your sources. Every fact gets a dated source, a rewrite or a cut.
 - [Closing paragraph writer](https://useaiblocks.com/skills/summing-up-paragraph-writer): Write a summing-up paragraph for your ad. Paste your draft and get a short section that pictures the gain, sums up the case and gives one real reason to act.
 - [Concrete copy rewriter](https://useaiblocks.com/skills/concrete-copy-rewriter): Paste vague ad or product copy plus your true facts. Get pass or fail on three tests and concrete copy rewrites, each tied to a fact.
 - [Conversational video ad script writer](https://useaiblocks.com/skills/conversational-ad-script): Write a video ad script that sounds like a person talking, built only on your buyer's words and your facts, with shot notes a crew can film.
@@ -42,7 +43,7 @@
 - [How-it-works copy writer](https://useaiblocks.com/skills/how-it-works-copy-writer): Paste your draft and product facts. Get a short how-it-works passage that shows why your promise is true, with each step backed by a fact.
 - [Image ad copy writer](https://useaiblocks.com/skills/image-ad-copy-writer): Get every word your image ad needs, on the picture and around it, in two or three versions that each test a different appeal.
 - [Loss-framing copywriter](https://useaiblocks.com/skills/loss-framing-writer): Write loss framing copy that shows what waiting really costs your buyer, with real facts and no scare tactics. Get gain-framed versions to compare.
-- [Marketing copy structure writer](https://useaiblocks.com/skills/copywriting-framework-writer): Write marketing copy in AIDA, PAS or BAB form from your offer. Get tone options, A/B variants and clearer calls to action to test.
+- [Marketing copy structure writer](https://useaiblocks.com/skills/copywriting-framework-writer): Describe your offer. Get marketing copy in a proven structure such as AIDA, PAS or BAB, with tone options and A/B variants to test.
 - [Matched ad and landing page reviewer](https://useaiblocks.com/workflows/write-an-ad-and-a-landing-page-that-keep-the-same-promise): Share product facts, reviews and your offer. Get ad copy, a matching page draft, proof placement and a structured page review.
 - [Meta ad copywriter](https://useaiblocks.com/skills/meta-ad-copywriter): Write Meta ad copy for Facebook and Instagram. Give it your offer and buyer, and get hooks, primary text, headlines and UGC scripts to test.
 - [Pain-point ad builder](https://useaiblocks.com/skills/pain-point-ad-builder): Write a pain-point ad that names a real problem, shows your proof and one step to take. Checks the fix first and flags policy risks.

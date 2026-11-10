@@ -1,6 +1,6 @@
 # Check ads before they go live: AI Blocks
 
-> 42 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 43 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ad and page match checker](https://useaiblocks.com/skills/ad-and-page-match-checker): Check that your ad and landing page match. Get a score out of 100, mismatches ranked by risk, and a fix for each one.
 - [Ad and page policy checker](https://useaiblocks.com/skills/ad-and-page-policy-checker): Paste ad, page, script or email copy and name the platform. Get risks flagged line by line, safer rewrites and a checklist-based score.
@@ -17,6 +17,7 @@
 - [AI visual feedback editor](https://useaiblocks.com/skills/ai-image-fix-rules): Turn feedback on AI images and video into fix rules. Each rule gets a prompt line to paste and a check line, so the same mistake is not paid for twice.
 - [AI-style wording editor](https://useaiblocks.com/skills/anti-ai-slop-copy-editor): Paste finished copy. Get quoted style problems, plain fixes, a full rewrite and before-and-after scores using its own rules.
 - [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor): Paste your ad, voice rules and customer quotes. Get small wording fixes that keep claims intact, plus a line-based voice score.
+- [Buyer can act check](https://useaiblocks.com/skills/buyer-can-act-check): Give it what you sell and the link. You learn if a buyer can get it today, and what to do if not.
 - [Campaign attention reviewer](https://useaiblocks.com/skills/campaign-fame-checker): Share a campaign plan. Get four scores, the weakest area and one change to test.
 - [China healthcare marketing reviewer](https://useaiblocks.com/agents/agency-healthcare-marketing-compliance): Check China healthcare ads and posts for banned claims before you publish. Get flagged lines, risk levels and safer rewrites. Not legal advice.
 - [Claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher): Share your copy and evidence. See which claims are supported, which go too far and how to fix them.

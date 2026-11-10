@@ -26,7 +26,7 @@
 - [Guarantee and refund plan writer](https://useaiblocks.com/skills/guarantee-designer): Share your offer, costs and refund history. Get a guarantee draft, refund scenarios and the checks needed before you use it.
 - [Information offer and lead follow-up writer](https://useaiblocks.com/workflows/lead-nurture-follow-up): Share the product, buyer problem and true terms. Get a helpful guide offer, a reply plan and follow-up email drafts.
 - [Lead generation cost planner](https://useaiblocks.com/skills/lead-cost-and-friction-planner): Plan your lead cost per qualified lead with handling cost included. Add friction one step at a time, with a stop rule and a qualifier line.
-- [Lead magnet planner](https://useaiblocks.com/skills/lead-magnet-planner): Describe your buyer, business and goal. Get lead magnet ideas, a recommended pick, a signup page and follow-up emails.
+- [Lead magnet planner](https://useaiblocks.com/skills/lead-magnet-planner): Describe your buyer, business and goal. Get lead magnet ideas (free items people sign up for), a top pick, a signup page and follow-up emails.
 - [Market demand scorer](https://useaiblocks.com/skills/starving-crowd-market-scorer): Score the markets you could serve on pain, money, reach and growth. Find your starving crowd market and the one to commit to for a set number of tries.
 - [New buyer offer planner](https://useaiblocks.com/workflows/first-offer-new-buyers): Compare premium, free and discount entry offers. Plan lead costs, next offers and a small test before rollout.
 - [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): Paste your prices and deals. Get clashes flagged and new offers to try first.
@@ -74,7 +74,7 @@
 - [Target price cost planner](https://useaiblocks.com/skills/price-first-cost-squeeze-planner): Set the price your buyers can pay first. This price-first cost planner shows which costs to cut, keep or simplify to reach it, plus one small test.
 - [Upsell and downsell sequence planner](https://useaiblocks.com/skills/upsell-and-downsell-sequencer): Plan the order of your upsell and downsell offers. Give it prices and checkout steps. You get a fallback for each no and post-purchase rules.
 - [Value ladder planner](https://useaiblocks.com/skills/value-ladder-planner): Turn what you sell into a value ladder: a free first step, rising rungs, what moves buyers up and the one rung to fix this quarter.
-- [Value proposition builder](https://useaiblocks.com/skills/value-proposition-builder): Write a value proposition from your offer and customer facts: what they gain, one incentive and proof from a similar customer.
-- [Value statement writer](https://useaiblocks.com/skills/value-statement-writer): Turn your value proposition into value statements for each customer group, with versions for marketing, sales and onboarding copy.
+- [Value pitch builder](https://useaiblocks.com/skills/value-proposition-builder): Share your offer and customer facts. Get a pitch that says what they gain, one incentive and proof from a similar customer.
+- [Value statement writer](https://useaiblocks.com/skills/value-statement-writer): Share why customers should buy from you and who they are. Get a value statement for each group, for marketing, sales and welcome copy.
 - [Welcome pop-up offer tester](https://useaiblocks.com/skills/welcome-popup-offer-tester): Test your welcome pop-up offer. Give it order value, margin and site discounts. You get four to eight offers ranked by cost, plus a fair test plan.
 - [Why-it-works story builder](https://useaiblocks.com/skills/why-it-works-story-builder): Explain why your offer works when other methods failed. Get a named method and a reason that holds up, using only facts you give.

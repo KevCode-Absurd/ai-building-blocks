@@ -19,11 +19,9 @@
 - [China ecommerce operations planner](https://useaiblocks.com/agents/agency-marketing-china-ecommerce-operator): Get a China ecommerce plan for Taobao, Tmall, JD, Pinduoduo or Douyin Shop, with margin checks, ad plans and a 618 or Double 11 countdown.
 - [Cross-border ecommerce planner](https://useaiblocks.com/agents/agency-marketing-cross-border-ecommerce): Get a cross-border ecommerce plan for Amazon, Shopee, Temu or TikTok Shop with margin per product, compliance to-dos and a launch order.
 - [Customer bulk note updater](https://useaiblocks.com/skills/customer-note-bulk-adder): Give it a customer list and a note. Get the note added to each record in one go. Changes live customer data.
-- [Customer churn risk scorer](https://useaiblocks.com/skills/customer-churn-risk-scorer): Run it on your customers. Get each one scored for churn risk from how often they buy and how long since.
 - [Customer email list checker](https://useaiblocks.com/skills/customer-email-list-checker): Check your customer email list for bad, role-based and throwaway addresses. Get a suppression list to protect your sender reputation.
 - [Customer history exporter](https://useaiblocks.com/skills/customer-history-exporter): Name a customer. Get their orders, refunds, returns, notes and consent in one dated CSV.
 - [Customer record merger](https://useaiblocks.com/skills/customer-record-merger): Merge duplicate customers in Shopify. Give the record to keep and the one to merge in, check a preview, and keep tags and notes. Cannot be undone.
-- [Customer RFM segment builder](https://useaiblocks.com/skills/customer-segment-builder): Run read-only recency, frequency and spend scoring on Shopify customers. Get RFM scores, named customer segments and an optional tag preview.
 - [Customer spend tier tagger](https://useaiblocks.com/skills/customer-spend-tier-tagger): Tag every Shopify customer Bronze, Silver, Gold or Platinum by lifetime spend. You set the limits and check a preview before any tag changes.
 - [Customer tag bulk updater](https://useaiblocks.com/skills/customer-tag-bulk-updater): Pick customers and tags. Get tags added or removed across the whole group. Changes live customer data.
 - [Daily fulfillment digest writer](https://useaiblocks.com/skills/daily-fulfillment-digest-writer): Run it each morning. Get open orders grouped by age, with holds and exceptions flagged for action.
@@ -87,6 +85,8 @@
 - [Shopify abandoned checkout reporter](https://useaiblocks.com/skills/abandoned-checkout-reader): Give a Shopify store and date range. Get abandoned checkouts counted by cart value band and by hour of day in UTC.
 - [Shopify brand protection planner](https://useaiblocks.com/skills/store-brand-protection-planner): Use your brand and domain to review suspected copycats and draft complaint and notice templates.
 - [Shopify collection stock sorter](https://useaiblocks.com/skills/collection-order-sorter): Reorder a manual Shopify collection by stock. Preview the new order, then apply it to your live store.
+- [Shopify customer loss risk scorer](https://useaiblocks.com/skills/customer-churn-risk-scorer): Run it on your Shopify orders. Get each repeat customer scored 0 to 100 for how overdue their next order is.
+- [Shopify customer segment builder](https://useaiblocks.com/skills/customer-segment-builder): Score Shopify customers, read-only, by how recently, how often and how much they buy. Get named customer groups and an optional tag preview.
 - [Shopify days of stock calculator](https://useaiblocks.com/skills/days-of-stock-calculator): Use Shopify stock and sales data to estimate days remaining and flag items running low.
 - [Shopify delivery time reporter](https://useaiblocks.com/skills/delivery-time-analyzer): Connect Shopify and choose an order window. Compare delivery times by carrier and see which records lack a confirmed delivery date.
 - [Shopify discount code analyst](https://useaiblocks.com/skills/discount-code-comparer): Choose discount codes and a date range. Compare order counts, recorded sales and average order value, with lifetime use counts shown separately.
@@ -120,7 +120,7 @@
 - [Stock reorder and inbound shipment planner](https://useaiblocks.com/workflows/reorder-stock-before-you-run-out-and-track-the-shipment): Connect supported store tools and share supplier lead times. Get stock coverage, reorder rules, draft purchase orders and a shipment tracker.
 - [Store product edge finder](https://useaiblocks.com/skills/store-product-edge-finder): Give it rival stores and reviews. Get their gaps, your unique value, and a ranked list of what to change.
 - [Store profit margin calculator](https://useaiblocks.com/skills/store-profit-margin-calculator): Share orders and full costs or Shopify read access. Get order and product margins with missing costs flagged.
-- [Subscription revenue tracker](https://useaiblocks.com/skills/subscription-revenue-tracker): Work out your subscription revenue: monthly and yearly recurring revenue, active subscribers and churn, read from your Shopify store's contracts.
+- [Subscription revenue tracker](https://useaiblocks.com/skills/subscription-revenue-tracker): Run it on your Shopify subscriptions. Get monthly and yearly recurring revenue, active subscribers and how many cancel.
 - [Support capacity planner](https://useaiblocks.com/skills/support-capacity-planner): Plan support staffing for peak sales. Give it your tickets, costs and sales forecast. You get cost per ticket and the dates to hire and train.
 - [Support hiring date planner](https://useaiblocks.com/prompts/support-hiring-date-planner): Share ticket history, order forecasts, agent capacity and hiring lead time. Get estimated staffing needs and dates to start hiring.
 - [Survey-ready order finder](https://useaiblocks.com/skills/survey-ready-order-finder): Find buyers to email for a post-purchase survey: Shopify orders fulfilled 7 to 14 days ago, minus refunds, cancels and no-consent.

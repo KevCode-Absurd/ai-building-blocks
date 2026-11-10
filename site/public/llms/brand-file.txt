@@ -4,9 +4,10 @@
 
 - [Brand consistency reviewer](https://useaiblocks.com/agents/agency-design-brand-guardian): Get a brand foundation document or a brand consistency check. See your purpose, voice and look in writing, or where your materials drift from them.
 - [Brand direction brainstormer](https://useaiblocks.com/skills/brand-direction-brainstormer): Share your product and buyers. Explore what the brand stands for, possible names, visual styles and story ideas, then narrow the options.
-- [Brand DNA capture](https://useaiblocks.com/skills/brand-dna-capture): Give it your website. You get your real colours, fonts, buttons, page order, voice and prices, measured, for your AI to follow.
 - [Brand family planner](https://useaiblocks.com/skills/brand-family-planner): List your brands and products. Get a clear structure for how they relate and what each one is called.
 - [Brand file and style guide builder](https://useaiblocks.com/workflows/build-a-brand-file-and-style-guide-from-scratch): Turn product and buyer facts into core messages, writing rules, a visual direction and one shared brand guide.
+- [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): Share your website. Get one brand file with your offers, facts, buyers, claims, voice and look, each with a source and date.
+- [Brand file capture](https://useaiblocks.com/skills/brand-dna-capture): Give it your website. You get a brand file your AI keeps current: prices, look, voice and facts, each with its source and date.
 - [Brand guide builder](https://useaiblocks.com/skills/brand-guide-builder): Turn your brand file into a printable brand guide and a values file to paste into any design tool. Colour pairs are checked so text stays readable.
 - [Brand health auditor](https://useaiblocks.com/skills/brand-health-auditor): Share brand materials, goals and feedback. See what is clear, what clashes and how you differ from rivals, with ranked fixes.
 - [Brand materials finder](https://useaiblocks.com/skills/brand-materials-finder): Share connected workspaces and search scope. Find existing brand guides, decks and notes, with ranked sources, conflicts and coverage gaps.
@@ -16,7 +17,6 @@
 - [Brand name finder](https://useaiblocks.com/skills/brand-name-finder): Share your brand brief. Get name ideas, or scores and honest feedback on the names you already have.
 - [Brand perception auditor](https://useaiblocks.com/skills/brand-perception-auditor): Share brand materials, goals and audience feedback. Find mismatched signals and small changes to test how the brand comes across.
 - [Brand positioning and naming planner](https://useaiblocks.com/workflows/name-and-position-a-new-brand): Share the category, rivals and product proof. Get a positioning draft, name shortlist, naming checks and future-range questions.
-- [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): Share your website. Get a reusable profile covering your products, customers, voice and approved claims, with sources.
 - [Brand ritual designer](https://useaiblocks.com/skills/brand-ritual-designer): Design a brand ritual for your product. Give it how customers use it. You get three ritual ideas and a 90-day launch plan for the best one.
 - [Brand style guide writer](https://useaiblocks.com/skills/brand-style-guide-writer): Share the finished identity, voice rules and real examples. Get a versioned guide for logo, colour, type, images, copy and use.
 - [Brand style starter picker](https://useaiblocks.com/skills/brand-style-starter-picker): Find a brand style starting point for your business: colours, fonts, voice lines and image notes you can change. Give it a short description.

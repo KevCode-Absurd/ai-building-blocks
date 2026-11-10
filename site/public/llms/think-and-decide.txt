@@ -1,6 +1,6 @@
 # Think it through and decide: AI Blocks
 
-> 138 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 140 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Adaptive tutor](https://useaiblocks.com/skills/adaptive-tutor): Name a topic and your goal. Get a level check, then short lessons with practice and feedback.
 - [Advice credibility checker](https://useaiblocks.com/skills/advice-skin-in-the-game-checker): Share advice and how the adviser is paid. Get who gains, who could lose and how much weight to give the advice.
@@ -28,6 +28,7 @@
 - [Claim fact checker](https://useaiblocks.com/skills/claim-fact-checker): Give it a text. Get each claim checked against trusted sources and scored by confidence.
 - [Claim stress tester](https://useaiblocks.com/skills/claim-stress-tester): Share a claim and known facts to get opposing views, suggested tests, and a conclusion with limits.
 - [Client pricing planner](https://useaiblocks.com/skills/client-fee-and-cap-setter): Set your client fee and cap from your income floor and real market prices. Get a fee, a client limit and billing terms that cover your costs.
+- [Client's-eye check](https://useaiblocks.com/skills/clients-eye-check): Give it your brief, the finished work and your facts. A fresh reviewer reads it as your client and lists fixes.
 - [Conversation direction reviewer](https://useaiblocks.com/skills/direction-check-in): Pause a long chat to review its goal, approach and assumptions. Get a clear next step: continue, change direction or settle a question.
 - [Daily news digest writer](https://useaiblocks.com/skills/daily-news-digest-writer): Share a list of news sites. Get a daily report of the best items. Collects data from websites.
 - [Decision and risk reviewer](https://useaiblocks.com/workflows/mental-models-decision): Share the choice, evidence and limits. Get key assumptions, pressures, rewards, possible effects, failure risks and the case against the plan.
@@ -82,6 +83,7 @@
 - [Mission choice tester](https://useaiblocks.com/skills/mission-choice-tester): Test your mission statement on five real choices. Get each one marked clear, partly clear or silent, a score out of 100 and line fixes.
 - [Not-to-do list builder](https://useaiblocks.com/skills/not-to-do-list-builder): Build a not-to-do list from your real week. Each habit gets a stop rule with a number, a swap and a review date. Free, in any chat AI.
 - [Organization and person research writer](https://useaiblocks.com/skills/organization-dossier-researcher): Name the subject and belief you want to test. Get a Word research brief with supporting evidence, counterevidence and source notes.
+- [Outside chooser](https://useaiblocks.com/skills/outside-chooser): Give it two to four options and your brief. A fresh reviewer picks one and says what to borrow.
 - [Past-project timeline estimator](https://useaiblocks.com/prompts/outside-view-timeline-estimator): Share a project estimate and similar past results. Get a history-based estimate, a range and the assumptions behind it.
 - [Peer feedback group planner](https://useaiblocks.com/skills/challenge-circle-feedback): Share a draft or plan and possible reviewers. Get support or challenge questions matched to what each person knows.
 - [Performance gap planner](https://useaiblocks.com/skills/current-and-target-gap-planner): Plan how to close the gap between where you are and your target. Get a gap analysis table with priorities, owners and closure checks.

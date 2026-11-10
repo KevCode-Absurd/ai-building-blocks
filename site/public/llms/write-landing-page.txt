@@ -1,6 +1,6 @@
 # Write and build a landing page: AI Blocks
 
-> 46 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 47 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ad landing page designer](https://useaiblocks.com/workflows/ad-landing-page): Create page copy that matches your ad, three design options and a 30-point review from your site facts and offer.
 - [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer): Write landing page copy that picks up where your ad left off. Give it the ad, your facts and reviews. You get a page with the full cost stated.
@@ -24,6 +24,7 @@
 - [Future press release writer](https://useaiblocks.com/skills/future-press-release-writer): Paste your need statement. Get a one-page future press release, written as if your product launched today, with weak claims marked.
 - [Landing page and email copywriter](https://useaiblocks.com/skills/honest-conversion-copywriter): Share your offer, audience and page goal. Confirm a brief, then get structured copy, headline options and clear next steps without made-up proof.
 - [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner): Plan a landing page design from your copy and brand. Get three different directions, a section plan and a build brief, before anyone builds.
+- [Make three first screens](https://useaiblocks.com/skills/make-three-first-screens): Give it your page brief and brand file. You get three different first screens as real pages, with one chosen.
 - [Marketing copy editor](https://useaiblocks.com/skills/marketing-copy-sweeper): Share copy and the change you need. Get focused edits that keep your message and voice, with reasons.
 - [Message-first website builder](https://useaiblocks.com/skills/message-first-website-guide): Share your business, audience and website goal. Work through messaging, design, build and review, with decisions saved between sessions.
 - [Nonprofit giving page writer](https://useaiblocks.com/skills/nonprofit-donation-page-writer): Draft a giving page with checked impact claims, clear gift choices and a thank-you screen.

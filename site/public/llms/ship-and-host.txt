@@ -39,7 +39,7 @@
 - [Deployment pipeline designer](https://useaiblocks.com/agents/agency-engineering-devops-automator): Turn manual deploys into an automated pipeline that tests, ships and rolls back, with alerts and a rollout order. Bring your stack and current steps.
 - [Docker Compose file writer](https://useaiblocks.com/skills/docker-compose-setter): Describe your app services and data needs. Get Compose files with networks, volumes, and health checks.
 - [Docker setup builder](https://useaiblocks.com/skills/docker-setup-builder): Share your app or Dockerfile. Get revised Docker files, service settings, and suggested security fixes.
-- [Domain and DNS planner](https://useaiblocks.com/skills/domain-and-dns-planner): Share your domain list and service needs. Get DNS records, redirect maps, and renewal plans.
+- [Domain and DNS planner](https://useaiblocks.com/skills/domain-and-dns-planner): Share your domain list and service needs. Get DNS records (the settings that point each web address), redirect maps and renewal plans.
 - [Domain and redirect layout planner](https://useaiblocks.com/prompts/domain-redirect-layout-planner): Paste your domains and what each is for. Get a domain redirect plan: the main address, where each other name points, and what to do with spares.
 - [Error budget planner](https://useaiblocks.com/skills/error-budget-planner): Use service metrics and user needs to plan service targets, allowed failures, and ways to track them.
 - [Expo app deployment engineer](https://useaiblocks.com/skills/mobile-app-release-shipper): Share your Expo app and release target. Configure builds, store submissions or web deployment, with version and status checks.
@@ -84,11 +84,10 @@
 - [Release readiness reviewer](https://useaiblocks.com/skills/release-readiness-reviewer): Share a release or diff. Get a read-only report of migration, config, order and rollback risks to check.
 - [Release safety planner](https://useaiblocks.com/skills/safe-release-planner): Get a safe deploy plan for your app: what to check first, the steps in order, how to roll back and how to know the release worked.
 - [Render publisher](https://useaiblocks.com/skills/render-publisher): Deploy your app to Render from a Git repo. Get a render.yaml setup file, a Blueprint link and a list of settings left to fill in.
-- [Runbook writer](https://useaiblocks.com/skills/runbook-writer): Build a runbook for your service with deploy, incident, maintenance and rollback sections. Name the service and get a markdown file to fill in.
 - [Service error budget planner](https://useaiblocks.com/skills/service-target-planner): Describe your service. Get targets from measured results, error budgets and alert rules.
+- [Service operations guide writer](https://useaiblocks.com/skills/runbook-writer): Name your service. Get a guide to fill in, with sections for release, incidents, upkeep and rollback, as a text file you can edit.
 - [Service reliability target planner](https://useaiblocks.com/skills/reliability-target-setter): Use service goals and data to set targets, allowed failure shares, and draft alert rules.
 - [Service rollout and rollback planner](https://useaiblocks.com/skills/copilot-devops-rollout-plan): Plan a safe service rollout and rollback. Share your release or infrastructure change and get preflight checks, stages, health signals and a rollback plan.
-- [Site go-live runbook writer](https://useaiblocks.com/skills/site-go-live-runbook-writer): Write a site go-live runbook with launch checks, DNS cutover steps, post-launch watching and a rollback plan. Give it your scope, window and team.
 - [Site reliability engineer](https://useaiblocks.com/agents/agency-engineering-sre): Turn how your service fails into reliability goals, alert rules and recovery checks. Give it your service details and get a plan to review.
 - [Software release preparer](https://useaiblocks.com/skills/release-preparer): Share your project. Review a version and changelog proposal, then confirm file updates and a release tag.
 - [Software release readiness reviewer](https://useaiblocks.com/workflows/check-a-release-and-its-docs): Review missing tests and outdated docs, then plan release checks, rollout stages and a way to roll back.
@@ -102,4 +101,5 @@
 - [Vercel publisher](https://useaiblocks.com/skills/vercel-publisher): Say "deploy my app". Get it live on Vercel as a preview or production site, with the link.
 - [Vercel release and deployment checker](https://useaiblocks.com/workflows/release-a-new-version-and-prove-it-is-live): Share your project, release access and approvals. Get a version, changelog, readiness decision and verified Vercel deployment when all gates pass.
 - [Version and release notes planner](https://useaiblocks.com/skills/version-and-changelog-automator): Use Git history and release rules to draft version changes, changelogs, and release tool settings.
+- [Website launch day plan writer](https://useaiblocks.com/skills/site-go-live-runbook-writer): Share your launch scope, time and team. Get launch checks, steps to point your web address at the new site, and a rollback plan.
 - [Website speed check builder](https://useaiblocks.com/skills/page-speed-gate-builder): Share your web app and speed targets. Add Lighthouse checks to your build, with reports for pages that miss the limits.

@@ -2,7 +2,7 @@
 
 > 42 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [Break-even ROAS and CPA calculator](https://useaiblocks.com/skills/break-even-roas-and-cpa-calculator): Share order value, costs and ad figures. Get ad-cost limits, a matching cost check and clear gaps before choosing a test.
+- [Break-even ad spend calculator](https://useaiblocks.com/skills/break-even-roas-and-cpa-calculator): Share order value, costs and ad figures. Get ad-cost limits, a matching cost check and clear gaps before choosing a test.
 - [Feed-only Performance Max builder](https://useaiblocks.com/skills/feed-only-performance-max-builder): Share your Shopping setup. Get a feed-only Performance Max plan, exclusions, review dates and stop rules.
 - [Google Ads audience builder](https://useaiblocks.com/skills/google-ads-audience-builder): Share site traffic and customer data. Get remarketing lists, exclusions and custom segments to build in Google Ads.
 - [Google Ads brand traffic splitter](https://useaiblocks.com/skills/brand-and-non-brand-splitter): Share matching Google Ads reports and brand names. Compare visible brand and non-brand results, check data gaps and plan supported exclusions.

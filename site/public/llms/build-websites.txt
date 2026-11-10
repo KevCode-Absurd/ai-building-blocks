@@ -50,10 +50,10 @@
 - [Shopify theme developer](https://useaiblocks.com/skills/shopify-theme-developer): Say how your store should look. Get a built or edited theme with sections, templates and speed fixes.
 - [Site map planner](https://useaiblocks.com/skills/site-map-planner): Plan your site map: get a page tree, menu plan, URL list and internal link map from a short brief about your business and goals.
 - [Store policy editor](https://useaiblocks.com/skills/store-policy-cleaner): Share approved store policies. Get readability gaps and plain-text drafts; applying changes updates live policies.
-- [Structured data writer](https://useaiblocks.com/skills/structured-data-writer): Give it visible page facts and page type. Get matching JSON-LD to validate; markup does not promise a rich result.
+- [Structured data writer](https://useaiblocks.com/skills/structured-data-writer): Give it visible page facts and page type. Get matching structured data (JSON-LD code that labels a page for search engines) to validate before use.
 - [UI component developer](https://useaiblocks.com/skills/ui-component-adder): Add buttons, forms, tables and sidebars to your project with the UI component adder. It sets up each part and shows you how to use it.
 - [USWDS developer agent](https://useaiblocks.com/agents/agency-engineering-uswds-developer): Plan a government website on the U.S. Web Design System (USWDS): theme settings, official components, required .gov elements and access checks.
-- [WCAG accessibility reviewer](https://useaiblocks.com/skills/wcag-accessibility-fixer): Share site code or pages and target WCAG level. It checks selected issues and suggests fixes; retest results depend on tools and manual review.
+- [WCAG accessibility reviewer](https://useaiblocks.com/skills/wcag-accessibility-fixer): Share site code or pages and a target level of WCAG (the web accessibility standard). It checks chosen issues and suggests fixes to retest.
 - [Web animation builder](https://useaiblocks.com/skills/web-animation-builder): Describe the motion you want and get Anime.js web animation code: staggered grids, timed sequences and SVG line drawing for your page.
 - [Web font pairing picker](https://useaiblocks.com/skills/web-font-pairing-picker): Describe your site. Get font pairs, sizes and line spacing that read well on every screen.
 - [Web form designer](https://useaiblocks.com/skills/web-form-designer): Describe your form and goal. Get field, error and spam tips.

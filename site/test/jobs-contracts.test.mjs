@@ -231,7 +231,7 @@ test('approach index rejects missing items, empty families and excessive family 
 });
 
 test('rubric weights and pass threshold cannot be weakened by the host', () => {
-  const d = sample('rubric'); d.standard[2].weight = 0; rejects('rubric', d, /range must carry weight 15/);
+  const d = sample('rubric'); d.standard[2].weight = 0; rejects('rubric', d, /range must carry weight 5/);
   d.pass.overall = 0.1; rejects('rubric', d, /threshold is 0.75/);
 });
 
@@ -247,4 +247,20 @@ test('schema evaluator enforces unique arrays and typed object maps', () => {
   assert.equal(checkJobSchema(s, { a: [1, 2] }).length, 0);
   assert.equal(checkJobSchema(s, { a: [-1, -1] }).length, 3);
   assert.equal(JOB_TIERS.standard.max_seats, 7); assert.equal(VARIETY_CONFIG.presets.balanced.new, 30);
+});
+
+test('the team standard puts the job first by a clear margin and keeps the paperwork rows small', async () => {
+  const { STANDARD_CRITERIA, assembleRubric } = await import('../src/jobs/rubric.mjs');
+  const { STANDARD_WEIGHTS } = await import('../src/jobs/contracts.mjs');
+  const weights = Object.fromEntries(STANDARD_CRITERIA.map(row => [row.id, row.weight]));
+  assert.deepEqual(weights, { job: 30, usable: 15, truth: 15, insight: 10, fit: 10, clear: 10, range: 5, reasoned: 5 });
+  assert.deepEqual(weights, { ...STANDARD_WEIGHTS }); assert.equal(STANDARD_CRITERIA.reduce((sum, row) => sum + row.weight, 0), 100);
+  // "Does the job" is the largest row, twice the next one. Range and the recorded decision are the smallest.
+  assert.equal(STANDARD_CRITERIA[0].id, 'job'); assert.ok(STANDARD_CRITERIA.slice(1).every(row => row.weight * 2 <= weights.job));
+  assert.equal(Math.min(...Object.values(weights)), weights.reasoned); assert.equal(weights.range, weights.reasoned);
+  const rubric = assembleRubric({ acceptance: [] }); assert.equal(validateJobDocument('ai-blocks-rubric/1', rubric).ok, true);
+  // A review that only does the paperwork well cannot pass; one that does the job and is true, usable and clear can.
+  const paperwork = { job: 5, usable: 5, truth: 5, insight: 5, fit: 5, clear: 5, range: 10, reasoned: 10 }, work = { job: 9, usable: 8, truth: 9, insight: 7, fit: 7, clear: 8, range: 3, reasoned: 3 };
+  const overall = scores => STANDARD_CRITERIA.reduce((sum, row) => sum + scores[row.id] / 10 * row.weight, 0) / 100;
+  assert.ok(overall(paperwork) < 0.75); assert.ok(overall(work) >= 0.75);
 });

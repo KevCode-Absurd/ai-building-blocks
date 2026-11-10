@@ -322,7 +322,11 @@ function evidenceChecks(d, c, add) {
     if (claim?.status === 'CONFIRMED' && !present(claim.source)) add(`claims[${idx}].source`, 'confirmed claims need a traceable source.');
   });
 }
-const WEIGHTS = Object.freeze({ job: 20, usable: 15, range: 15, truth: 15, reasoned: 10, insight: 10, fit: 10, clear: 5 });
+// The team standard. The job leads by a clear margin, as it does in every craft rubric. What the client receives (usable,
+// true, their own material, a fit, clear) carries the rest. The two rows about how the team worked, range and the
+// recorded decision, are small: blind judges never see them.
+const WEIGHTS = Object.freeze({ job: 30, usable: 15, truth: 15, insight: 10, fit: 10, clear: 10, range: 5, reasoned: 5 });
+export const STANDARD_WEIGHTS = WEIGHTS;
 function rubricChecks(d, add) {
   unique(d.standard, 'id', 'standard', add);
   for (const [id, weight] of Object.entries(WEIGHTS)) if (!list(d.standard).some(row => row?.id === id && row.weight === weight)) add('standard', `${id} must carry weight ${weight}.`);

@@ -3941,7 +3941,7 @@
           "standard": [
             {
               "id": "job",
-              "weight": 20,
+              "weight": 30,
               "text": "Check job"
             },
             {
@@ -3951,7 +3951,7 @@
             },
             {
               "id": "range",
-              "weight": 15,
+              "weight": 5,
               "text": "Check range"
             },
             {
@@ -3961,7 +3961,7 @@
             },
             {
               "id": "reasoned",
-              "weight": 10,
+              "weight": 5,
               "text": "Check reasoned"
             },
             {
@@ -3976,7 +3976,7 @@
             },
             {
               "id": "clear",
-              "weight": 5,
+              "weight": 10,
               "text": "Check clear"
             }
           ],
@@ -3995,7 +3995,7 @@
           "standard": [
             {
               "id": "job",
-              "weight": 20,
+              "weight": 30,
               "text": "Check job"
             },
             {
@@ -4005,7 +4005,7 @@
             },
             {
               "id": "range",
-              "weight": 15,
+              "weight": 5,
               "text": "Check range"
             },
             {
@@ -4015,7 +4015,7 @@
             },
             {
               "id": "reasoned",
-              "weight": 10,
+              "weight": 5,
               "text": "Check reasoned"
             },
             {
@@ -4030,7 +4030,7 @@
             },
             {
               "id": "clear",
-              "weight": 5,
+              "weight": 10,
               "text": "Check clear"
             }
           ],
@@ -4051,7 +4051,7 @@
           "standard": [
             {
               "id": "job",
-              "weight": 20,
+              "weight": 30,
               "text": "Check job"
             },
             {
@@ -4061,7 +4061,7 @@
             },
             {
               "id": "range",
-              "weight": 15,
+              "weight": 5,
               "text": "Check range"
             },
             {
@@ -4071,7 +4071,7 @@
             },
             {
               "id": "reasoned",
-              "weight": 10,
+              "weight": 5,
               "text": "Check reasoned"
             },
             {
@@ -4086,7 +4086,7 @@
             },
             {
               "id": "clear",
-              "weight": 5,
+              "weight": 10,
               "text": "Check clear"
             }
           ],
@@ -4116,7 +4116,7 @@
           "standard": [
             {
               "id": "job",
-              "weight": 20,
+              "weight": 30,
               "text": "Check job"
             },
             {
@@ -4126,7 +4126,7 @@
             },
             {
               "id": "range",
-              "weight": 15,
+              "weight": 5,
               "text": "Check range"
             },
             {
@@ -4136,7 +4136,7 @@
             },
             {
               "id": "reasoned",
-              "weight": 10,
+              "weight": 5,
               "text": "Check reasoned"
             },
             {
@@ -4151,7 +4151,7 @@
             },
             {
               "id": "clear",
-              "weight": 5,
+              "weight": 10,
               "text": "Check clear"
             }
           ],
@@ -4170,7 +4170,7 @@
           "standard": [
             {
               "id": "job",
-              "weight": 20,
+              "weight": 30,
               "text": "Check job"
             },
             {
@@ -4180,7 +4180,7 @@
             },
             {
               "id": "range",
-              "weight": 15,
+              "weight": 5,
               "text": "Check range"
             },
             {
@@ -4190,7 +4190,7 @@
             },
             {
               "id": "reasoned",
-              "weight": 10,
+              "weight": 5,
               "text": "Check reasoned"
             },
             {
@@ -4205,7 +4205,7 @@
             },
             {
               "id": "clear",
-              "weight": 5,
+              "weight": 10,
               "text": "Check clear"
             }
           ],
@@ -4224,7 +4224,7 @@
           "standard": [
             {
               "id": "job",
-              "weight": 20,
+              "weight": 30,
               "text": "Check job"
             },
             {
@@ -4234,7 +4234,7 @@
             },
             {
               "id": "range",
-              "weight": 15,
+              "weight": 5,
               "text": "Check range"
             },
             {
@@ -4244,7 +4244,7 @@
             },
             {
               "id": "reasoned",
-              "weight": 10,
+              "weight": 5,
               "text": "Check reasoned"
             },
             {
@@ -4259,7 +4259,7 @@
             },
             {
               "id": "clear",
-              "weight": 5,
+              "weight": 10,
               "text": "Check clear"
             }
           ],

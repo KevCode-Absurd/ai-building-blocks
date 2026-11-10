@@ -5,7 +5,7 @@ import { AREAS, type Persona, type PersonaProfile } from "../../core/types.ts";
 import { all, first, nowIso, parseJson, sha256Hex, stableJson } from "../../core/db.ts";
 import { eventStatement } from "../../core/events.ts";
 import { houseDataVersion, housePersonas } from "./index.ts";
-import { getRole } from "./roles.ts";
+import { searchPersonas } from "./search.ts";
 
 export interface PersonaRow {
   id: string; kind: "house" | "expert"; expert_id: string | null; name: string; title: string; tagline: string; area: string;
@@ -138,51 +138,10 @@ export async function getPersona(env: Env, id: string, opts: { includeHidden?: b
   return p && (p.status === "live" || opts.includeHidden) ? p : null;
 }
 
-const fold = (text: string) => text.toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "");
+// Search lives in search.ts: what is searched, how a plain request is read and how matches are ranked.
+export { searchPersonas, searchTerms } from "./search.ts";
 
-/** Lower-case words of a search, so "SEO Plan" finds "A 90-day SEO plan". */
-export function searchTerms(q: string | undefined): string[] {
-  return fold(q ?? "").split(/[^a-z0-9$%+#&]+/).filter(Boolean).slice(0, 12);
-}
-
-/**
- * How well a persona matches: 0 = every word is in the name, title or job role name, 1 = also using the tagline and
- * the role's aliases (the words people search for, such as "keyword research"), 2 = also using outcome titles,
- * -1 = no match. No words: everyone is 0.
- */
-export function searchRank(p: Persona, terms: string[]): number {
-  if (!terms.length) return 0;
-  const role = getRole(p.role);
-  const fields = [
-    fold([`${p.name} ${p.title}`, role?.name ?? ""].join(" \u0001 ")),
-    fold([p.tagline, ...(role?.aliases ?? [])].join(" \u0001 ")),
-    fold((p.profile?.outcomes ?? []).map(o => o.title).join(" \u0001 ")),
-  ];
-  let text = "";
-  for (let rank = 0; rank < fields.length; rank++) {
-    text += ` \u0001 ${fields[rank]}`;
-    if (terms.every(t => text.includes(t))) return rank;
-  }
-  return -1;
-}
-
-/** True when every search word appears in the name, title, job role (name or aliases), tagline or an outcome title. */
-export function matchesSearch(p: Persona, terms: string[]): boolean {
-  return searchRank(p, terms) >= 0;
-}
-
-/**
- * The display order everywhere: `sort` ascending (lower = more useful), then name.
- * With a search, stronger matches (name or title) come first, and `sort` orders each group.
- */
-export function searchPersonas(list: Persona[], q: string | undefined): Persona[] {
-  const terms = searchTerms(q);
-  if (!terms.length) return [...list].sort(byOrder);
-  return list.map(p => ({ p, rank: searchRank(p, terms) })).filter(x => x.rank >= 0)
-    .sort((a, b) => a.rank - b.rank || byOrder(a.p, b.p)).map(x => x.p);
-}
-
-/** Live personas of both kinds, in display order. area filters exactly; every word of q must match the name, title, job role, tagline or an outcome title. */
+/** Live personas of both kinds, in display order. area filters exactly; q is a plain request or a few words (search.ts). */
 export async function listPersonas(env: Env, filter?: { area?: string; q?: string }): Promise<Persona[]> {
   const area = filter?.area || undefined;
   const { list } = await livePersonas(env);

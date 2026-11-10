@@ -5,7 +5,13 @@ import { AREAS, type Area, type Persona, type PersonaOutcome, type PersonaSoul }
 import { getJobType, jobTypeSummary } from "../catalogue/index.ts";
 import { getRole } from "./roles.ts";
 import { megaCard, megaTeam, type TeamMember } from "./mega.ts";
+import { contentWords } from "./search.ts";
 import { soulView } from "./soul.ts";
+import { bringGroups, roleTasks, roleToolbox, type AgentTask, type BringGroup, type RoleToolbox } from "./toolbox.ts";
+import { outcomeThing, workLine, type WorkNature } from "./work.ts";
+
+export type { AgentTask, BringGroup, BringItem } from "./toolbox.ts";
+export { TASKS_SHOWN } from "./work.ts";
 
 // The personality lives in soul.ts (type imports only, so the browser app can use it too); re-exported for other modules.
 export { SOUL_SECTIONS, soulMarkdown, soulView, splitVoice } from "./soul.ts";
@@ -49,12 +55,27 @@ export interface AgentCard {
   outcomes: string[];
   /** The quickest turnaround among the outcomes that have a job type, in hours; null when none has one. */
   ready_in_hours: number | null;
+  /**
+   * What kind of work the agent does, worked out from its outcomes (work.ts): "Makes", "Plans and briefs" or
+   * "Reviews and advises", then up to three things by name. null when the agent lists no outcomes.
+   */
+  does: { nature: WorkNature; label: string; things: string[] } | null;
 }
 
-export interface AgentOutcome { id: string; title: string; deliverable: string; job_type_id: string | null; job: JobSummary | null }
+export interface AgentOutcome {
+  id: string; title: string; deliverable: string; job_type_id: string | null; job: JobSummary | null;
+  /** The agent's own skill that does this outcome ("See how I do this"): its file in the download and its plain name. null when none fits. */
+  how: { path: string; name: string } | null;
+}
 
 export interface AgentProfile extends Omit<AgentCard, "outcomes"> {
   bio: string;
+  /** The agent's own "Not for" line that says it does not make the finished thing, shown beside `does`. null when it has none. */
+  does_not: string | null;
+  /** "What I can do": the job role's tasks in plain words, the ones closest to this agent's own outcomes first. Empty until the role has a toolbox. */
+  tasks: AgentTask[];
+  /** "What I bring": skills, prompts, workflows, tools, thinking lenses and helper agents, each item by its plain name. Counts are the list lengths. */
+  brings: BringGroup[];
   /** Every outcome, each joined to its job type summary (turnaround, deliverable). */
   outcomes: AgentOutcome[];
   capabilities: string[];
@@ -90,6 +111,7 @@ export function roleRef(p: Persona): { id: string; name: string } | null {
 }
 
 export function agentCard(p: Persona): AgentCard {
+  const line = workLine(p.profile.outcomes, p.profile.not_for);
   return {
     id: p.id, kind: p.kind, name: p.name, title: p.title, tagline: p.tagline, area: p.area, area_label: areaLabel(p.area),
     role: roleRef(p),
@@ -98,7 +120,86 @@ export function agentCard(p: Persona): AgentCard {
     accent: HEX.test(p.profile.accent ?? "") ? p.profile.accent : "#0A0A0A",
     outcomes: (p.profile.outcomes ?? []).slice(0, 3).map(o => o.title),
     ready_in_hours: readyIn(p),
+    does: line ? { nature: line.nature, label: line.label, things: line.things } : null,
   };
+}
+
+// ---------- The agent's toolbox on its profile ----------
+
+interface SkillWords { slug: string; name: string; title: Set<string>; text: Set<string> }
+
+/** Each kit skill's words, read once per role: its name and folder name, then its description and the tasks that use it. */
+const skillWords = new WeakMap<RoleToolbox, SkillWords[]>();
+
+function skillsOf(box: RoleToolbox): SkillWords[] {
+  let list = skillWords.get(box);
+  if (!list) {
+    list = Object.keys(box.skills).map(slug => {
+      const name = box.kit[`skills/${slug}`] ?? slug;
+      return { slug, name, title: contentWords(`${name} ${slug.replace(/-/g, " ")}`), text: contentWords(box.skills[slug] ?? "") };
+    });
+    skillWords.set(box, list);
+  }
+  return list;
+}
+
+/** Words many skills are named with. Sharing one of these alone ("plan", "check") does not make a skill the right one. */
+const COMMON_SKILL_WORDS = contentWords("plan check brief review audit report list set guide template pack kit sheet rule fix clean full short simple clear build write draft file note step test design spec setup");
+
+/**
+ * The agent's own skill that does an outcome, for "See how I do this". The outcome's title and search hint are
+ * matched against the name and description of each skill in the pack: the role kit's skills and the skill of the
+ * outcome's job type. A skill fits when its name shares a telling word with the outcome: not a word many skills
+ * are named with ("plan", "check"), and not one that half of this pack's skills share ("SEO" in an SEO pack). The
+ * skill with the most telling words wins, then the closest description. Failing that, the job type's skill
+ * stands when its name shares two words with the outcome. The link used to follow the job type alone, which sent
+ * "A logo design brief" to the visual identity skill although the pack has a logo design brief skill. null when
+ * nothing fits: no link is better than a wrong one. The path is the skill's file in the agent's download.
+ */
+export function outcomeSkill(o: PersonaOutcome, box: RoleToolbox | null, job: JobSummary | null): { path: string; name: string } | null {
+  const ask = contentWords(`${o.title} ${o.job_type_hint ?? ""}`);
+  const skills = box ? [...skillsOf(box)] : [];
+  const jobSkill = job && !skills.some(s => s.slug === job.id)
+    ? { slug: job.id, name: job.title, title: contentWords(`${job.title} ${job.id.replace(/-/g, " ")}`), text: contentWords(job.summary ?? "") } : null;
+  if (jobSkill) skills.push(jobSkill);
+  if (!skills.length) return null;
+  const named = (w: string) => skills.filter(s => s.title.has(w)).length;
+  const telling = (w: string) => !COMMON_SKILL_WORDS.has(w) && (skills.length < 3 || named(w) * 2 <= skills.length);
+  // A word most of these skills use says little about which one is meant.
+  const weight = (w: string) => Math.log(1 + skills.length / Math.max(1, skills.filter(s => s.title.has(w) || s.text.has(w)).length)) * (COMMON_SKILL_WORDS.has(w) ? 0.5 : 1);
+  // Only the name of the thing can tell: in "A 90-day SEO plan built from your Search Console export", "search" is detail.
+  const thing = contentWords(`${outcomeThing(o.title, o.job_type_hint)} ${o.job_type_hint ?? ""}`);
+  let best: { skill: SkillWords; tells: number; score: number } | null = null;
+  for (const skill of skills) {
+    let score = 0, tells = 0;
+    for (const w of ask) {
+      if (skill.title.has(w)) { score += 2 * weight(w); if (thing.has(w) && telling(w)) tells++; } else if (skill.text.has(w)) score += weight(w);
+    }
+    if (tells > 0 && (!best || tells > best.tells || (tells === best.tells && score > best.score))) best = { skill, tells, score };
+  }
+  if (!best && job) {
+    const own = skills.find(s => s.slug === job.id);
+    if (own && [...ask].filter(w => own.title.has(w)).length >= 2) best = { skill: own, tells: 0, score: 0 };
+  }
+  return best ? { path: `skills/${best.skill.slug}/SKILL.md`, name: best.skill.name } : null;
+}
+
+/**
+ * The role's tasks, the agent's own first: a task is its own when it shares two or more words with one of the
+ * agent's outcomes, at least one of them a telling word (not "brief" and "design" alone). Each group keeps the
+ * toolbox's order, most common first.
+ */
+export function agentTasks(p: Persona, box: RoleToolbox | null = roleToolbox(p.role)): AgentTask[] {
+  const tasks = roleTasks(box);
+  if (!tasks.length) return tasks;
+  const outcomes = (p.profile.outcomes ?? []).map(o => contentWords(`${o.title} ${o.job_type_hint ?? ""}`));
+  const close = (task: AgentTask) => {
+    const have = contentWords(task.task);
+    return outcomes.some(o => { let n = 0, telling = 0; for (const w of have) if (o.has(w)) { n++; if (!COMMON_SKILL_WORDS.has(w)) telling++; } return n >= 2 && telling >= 1; });
+  };
+  const own: AgentTask[] = [], rest: AgentTask[] = [];
+  for (const t of tasks) (close(t) ? own : rest).push(t);
+  return [...own, ...rest];
 }
 
 const STOP = new Set("a an and the of for to in on with your my our you we i me us is are be it this that from by as at or into out up about can will what how who".split(" "));
@@ -120,12 +221,17 @@ export function sampleJob(p: Persona, sample: { title: string; brief: string }):
 }
 
 export function agentProfile(p: Persona): AgentProfile {
+  // Experts' agents have no pack, so no toolbox to show.
+  const box = p.kind === "house" ? roleToolbox(p.role) : null;
   return {
     ...agentCard(p),
     bio: p.profile.bio ?? "",
+    does_not: workLine(p.profile.outcomes, p.profile.not_for)?.does_not ?? null,
+    tasks: agentTasks(p, box),
+    brings: bringGroups(box, id => getRole(id)?.name ?? null),
     outcomes: (p.profile.outcomes ?? []).map(o => {
       const job = outcomeJob(o);
-      return { id: o.id, title: o.title, deliverable: o.deliverable, job_type_id: job ? job.id : null, job };
+      return { id: o.id, title: o.title, deliverable: o.deliverable, job_type_id: job ? job.id : null, job, how: p.kind === "house" ? outcomeSkill(o, box, job) : null };
     }),
     capabilities: p.profile.capabilities ?? [],
     good_at: p.profile.good_at ?? [],

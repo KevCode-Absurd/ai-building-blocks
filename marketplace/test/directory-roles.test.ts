@@ -97,8 +97,9 @@ test("search finds agents by their role's name and its aliases", async () => {
   const name = await t.api("GET", `/api/agents?q=${encodeURIComponent("content marketer")}`);
   assert.deepEqual(name.body.agents.map((a: any) => a.id), ["ada-content"]);
   assert.deepEqual((await t.api("GET", "/api/agents?q=editorial%20calendar")).body.agents.map((a: any) => a.id), ["ada-content"]);
-  // Every word must still match somewhere: a role alias does not widen a search to everyone.
-  assert.deepEqual((await t.api("GET", `/api/agents?q=${encodeURIComponent("keyword newsletter")}`)).body.agents, []);
+  // An alias does not widen a search to everyone: the SEO agents have "keyword" (their alias) but nothing about
+  // newsletters, which carries most of this request, so they are left out. Ada, who writes newsletters, is found.
+  assert.deepEqual((await t.api("GET", `/api/agents?q=${encodeURIComponent("keyword newsletter")}`)).body.agents.map((a: any) => a.id), ["ada-content"]);
 });
 
 test("a role name match ranks with the title; an alias match ranks with the tagline", () => {

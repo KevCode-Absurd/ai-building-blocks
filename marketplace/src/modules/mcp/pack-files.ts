@@ -29,9 +29,9 @@ export interface PackIndex {
 export const CORE_FILES = ["AGENTS.md", "toolbox.md", "WORK-METHOD.md", "context/README.md", "soul.md", "playbook.md"] as const;
 
 /** A request that means working inside the user's own tools or accounts. */
-const ACCESS_WORDS = /\b(access|accounts?|connect\w*|log ?ins?|sign ?ins?|permissions?|publish\w*|schedul\w+|upload\w*|install\w*|deploy\w*|go(?:es|ing)? live|launch\w*|integrat\w+|api|exports?|dashboards?|ads manager|search console|analytics|crm|inbox|shopify|wordpress|klaviyo|mailchimp|hubspot|quickbooks|xero|stripe|send (?:it|them|out)|post (?:it|them))\b/i;
+const ACCESS_WORDS = /\b(access|accounts?|connect\w*|log ?ins?|sign ?ins?|permissions?|publish\w*|schedul\w+|upload\w*|install\w*|deploy\w*|go(?:es|ing)? live|integrat\w+|api|exports?|dashboards?|ads manager|search console|analytics|crm|inbox|shopify|wordpress|klaviyo|mailchimp|hubspot|quickbooks|xero|stripe|send (?:it|them|out)|post (?:it|them))\b/i;
 /** A request for something built, published or sent in its real format, not only written in the chat. */
-const NATIVE_WORDS = /\b(build|built|launch\w*|publish\w*|deploy\w*|ship|send|print\w*|export\w*|ready to (?:use|send|publish|post|print)|files?|pdf|pptx?|docx?|xlsx?|csv|html|figma|canva|web ?sites?|web ?pages?|landing pages?|apps?|code|scripts?|spreadsheets?|decks?|slides?|videos?|images?)\b/i;
+const NATIVE_WORDS = /\b(build|built|go(?:es|ing)? live|publish\w*|deploy\w*|ship|send|print\w*|export\w*|ready to (?:use|send|publish|post|print)|files?|pdf|pptx?|docx?|xlsx?|csv|html|figma|canva|web ?sites?|web ?pages?|landing pages?|apps?|code|scripts?|spreadsheets?|decks?|slides?|videos?|images?)\b/i;
 
 /**
  * Files the first load leaves out unless the request needs them, so less is read before any work starts. The rule

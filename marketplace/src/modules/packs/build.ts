@@ -973,7 +973,7 @@ function scorecardMarkdown(jts: JobType[]): string {
   out.push("## Every job", "", bullets([
     "The gates for every job in WORK-METHOD.md, step 5: a failed gate fails the answer.",
     "Answers what the brief asked, for the reader it names, grounded in the context the brief gives.",
-    "Craft, scored with the family weights in WORK-METHOD.md: could a competitor publish it unchanged?",
+    "Craft, scored with the weights in the job's skill: does it do the job for the buyer or the decision, and could a competitor publish it unchanged?",
   ]), "", "## The result", "",
   "When to stop training is in instructions.md, stage 6. Write down why your agent lost each brief, and fix the files before the next round.");
   return out.join("\n");

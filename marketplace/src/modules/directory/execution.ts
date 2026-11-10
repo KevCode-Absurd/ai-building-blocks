@@ -36,7 +36,8 @@ export function executionPlan(request: string, tier: 'quick'|'standard'|'deep' =
       library: 'https://useaiblocks.com',
       library_mcp: 'https://useaiblocks.com/mcp',
       agent_mcp: 'https://agents.useaiblocks.com/mcp',
-      next_steps: ['Use start_outcome with the original request for the outcome/specification front door.', 'Use get_approaches and propose_team to retrieve the job palette and a task-specific lead.', 'Read full selected skills, workflows and reference files from AI Blocks at pinned revisions.', 'Load the chosen agent seats here, then run and check real artifacts in the connected AI.'],
+      // A piece of work goes to one agent, who already carries its toolbox. Only a goal with no deliverable goes to start_outcome.
+      next_steps: ['A piece of work (a page, ads, emails, an audit, a plan, code): load one agent here with load_agent and hand it the request. It carries its own toolbox, so nothing needs searching.', 'Work that mixes kinds (a page, ads and emails): call start_job on the library MCP. It names one lead and a maker for each kind.', 'A business goal with no deliverable named yet ("more sales"): call start_outcome on the library MCP with the original request.', 'Run the work and check the real artifacts in the connected AI.'],
       production_validation: 'Use this service check_execution_delivery for artifact quality or the library advance_job for the complete phase/state protocol.',
     },
   };

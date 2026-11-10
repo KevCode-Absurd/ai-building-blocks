@@ -5,8 +5,8 @@ import { dialQuestions } from './dial-questions.mjs';
 import { jobMethod, jobRecords, deliveryTemplates } from './method.mjs';
 import { JOB_SCHEMAS } from './contracts.mjs';
 import { checkSchema } from '../outcomes/schema-check.mjs';
-import { prepareJobContext, DELIVERABLE_KINDS } from './grounding.mjs';
-import { intakeQuestions, INTAKE_NOTE } from './intake-questions.mjs';
+import { prepareJobContext, DELIVERABLE_KINDS, NO_SEARCH } from './grounding.mjs';
+import { INTAKE_ASK } from './intake-questions.mjs';
 import { routeJob } from './router.mjs';
 
 const text = maxLength => ({ type: 'string', minLength: 1, maxLength });
@@ -33,12 +33,14 @@ function jobContext(input, context) {
   const { schema, brief, ...rest } = prepareJobContext(input, context.grounding ?? {}), args = rest.annex.next.team.arguments;
   const routed = routeJob({ request: input.request, deliverable_kind: input.deliverable_kind }, { approaches: context.approaches ?? {} });
   const next = routed.mode === 'outcome' ? { tool: 'start_outcome', arguments: { request: input.request }, why: 'This is a goal with no deliverable named yet.' }
-    : { tool: 'start_job', arguments: args, why: routed.mode === 'team' ? 'Names the lead and helpers and opens the team record.' : 'Names the lead to load for this job.' };
+    : { tool: 'start_job', arguments: args, why: routed.mode === 'team' ? 'Names the lead and helpers and opens the team record.' : 'Names the lead to load for this job.', then: NO_SEARCH };
   return {
     schema, brief,
-    questions: intakeQuestions({ deliverableKind: rest.annex.deliverable_kind, family: rest.annex.family, request: input.request }),
-    questions_note: INTAKE_NOTE,
-    route: { mode: routed.mode, reason: routed.mode_reason, next },
+    // One list: the same questions the brief's ASK line and annex.questions carry.
+    questions: rest.annex.questions,
+    questions_note: INTAKE_ASK,
+    // When the job type is only a guess, the one question to ask comes back here, before anyone is named.
+    route: { mode: routed.mode, reason: routed.mode_reason, ...(routed.ask ? { ask_first: routed.question } : {}), next },
     ...rest,
   };
 }

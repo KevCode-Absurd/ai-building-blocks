@@ -59,6 +59,12 @@ test('company OAuth and actual SDK client retrieve private skills and references
   try {
     await client.connect(transport);
     assert.equal(client.getServerVersion().name, 'ai-blocks-company-workspace');
+    // The signed-in connection opens with the same route as the public one: one first call for any piece of work, one
+    // lead by default, and no search before building. Then it says what this connection adds.
+    const { PUBLIC_MCP_ROUTE, PUBLIC_MCP_INSTRUCTIONS } = await import('../src/server/public-mcp.ts'), instructions = client.getInstructions();
+    assert.ok(instructions.startsWith('This read-only connection is scoped to the authenticated employee and selected company workspace.\n\n' + PUBLIC_MCP_ROUTE + '\n\nWhen the user asks for something they saved')); assert.ok(PUBLIC_MCP_INSTRUCTIONS.startsWith(PUBLIC_MCP_ROUTE));
+    assert.match(instructions.slice(0, 512), /Start any piece of work \([^)]*\) with prepare_job_context: send the request and deliverable_kind\./); assert.match(instructions, /A job needs no search: its lead carries the toolbox\./);
+    assert.match(instructions, /When the user asks for something they saved, list the saved items and retrieve the chosen one by ID/); assert.doesNotMatch(instructions, /brand brain|taste question/i);
     assert.deepEqual((await client.listTools()).tools.map(t => t.name), ['list_company_items', 'get_company_item', 'get_company_resource', 'prepare_company_workflow', 'start_outcome', 'advance_outcome', 'record_outcome_decision', 'record_outcome_experiment', 'read_back_outcome_experiment', 'prepare_outcome_pattern', 'prepare_job_context', 'start_job', 'advance_job', 'propose_team', 'get_approaches', 'get_job_templates', 'get_job_preferences', 'set_job_preferences', 'scope_specialist_request', 'prepare_scoped_specialist_work', 'route_scoped_specialist_work', 'prepare_scoped_specialist_team', 'prepare_recommendation_handoff', 'prepare_specialist_team', 'checkpoint_specialist_team', 'find_specialist', 'prepare_specialist', 'search_library', 'plan_workflow', 'get_skill', 'get_workflow', 'get_resource', 'prepare_workflow', 'get_item', 'search', 'fetch']);
     const list = await client.callTool({ name: 'list_company_items', arguments: {} });
     assert.ok(list.structuredContent.items.some(i => i.item_id === 'private-skill'));

@@ -728,7 +728,7 @@ export class PublicCatalogueService {
       ...handoff,
       ...(isFlow ? { ...governance, execution: item.execution ?? "host-interpreted", steps: (item.steps ?? []).map((s, i) => ({ id: `s${i + 1}`, slug: s.uses, notes: page.stepNotes?.[i] ?? s.note ?? "", depends_on: i ? [`s${i}`] : [], revision_sha256: c.manifest.resources[s.uses]?.revision_sha256 ?? null })), dependency_basis: "Declared catalogue step order; governing skill controls branches and gates. Support-only uses links do not create execution steps.", execution_policy: executionPolicy() } : {}),
       trust,
-      next_action: (preamble ? "Run before_you_run first: ground in the client's real assets or data, answer the taste questions and name the defaults to avoid. " : "") + (!instruction || instruction.length > 48000 ? "Retrieve all instruction chunks with get_resource, or have the host download and verify the supplied asset directly when archive-required. Then read all active required resources. No content was silently truncated." : "Read full instructions and all active references before execution. Tool availability and input acceptance are unverified."),
+      next_action: (preamble ? "Run before_you_run first: write the spec sheet, ask its questions once (each has a default), ground in the client's real assets or data and name the defaults to avoid. " : "") + (!instruction || instruction.length > 48000 ? "Retrieve all instruction chunks with get_resource, or have the host download and verify the supplied asset directly when archive-required. Then read all active required resources. No content was silently truncated." : "Read full instructions and all active references before execution. Tool availability and input acceptance are unverified."),
     };
   }
 

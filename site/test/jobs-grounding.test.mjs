@@ -3,7 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import * as grounding from '../src/jobs/grounding.mjs';
-import { prepareJobContext, suggestDeliverableKind, resolveDeliverableKind, resolveMode, normalizePatterns, defaultsFor, validateGrounding, substanceOverlap, skillPreamble, skillPreambleKind, craftRubric, gatesFor, CRAFT_RUBRICS, tasteQuestions, EMBEDDED_DEFAULT_PATTERNS, DELIVERABLE_KINDS, CANDIDATES, CANDIDATE_AXES, COMPLETENESS, completenessFor, contextNeed, requestedCount } from '../src/jobs/grounding.mjs';
+import { prepareJobContext, suggestDeliverableKind, resolveDeliverableKind, resolveMode, normalizePatterns, defaultsFor, validateGrounding, substanceOverlap, skillPreamble, skillPreambleKind, craftRubric, gatesFor, CRAFT_RUBRICS, EMBEDDED_DEFAULT_PATTERNS, DELIVERABLE_KINDS, CANDIDATES, CANDIDATE_AXES, COMPLETENESS, completenessFor, contextNeed, requestedCount } from '../src/jobs/grounding.mjs';
 import { buildExecutionPlan } from '../src/jobs/execution-quality.mjs';
 import { resolveDials, namesOneDeliverable } from '../src/jobs/dials.mjs';
 import { assembleRubric, scoreReview } from '../src/jobs/rubric.mjs';
@@ -11,6 +11,7 @@ import { startJob, advanceJob } from '../src/jobs/engine.mjs';
 import { jobMcpTools, callJobTool, JOB_REST_OPERATIONS } from '../src/jobs/job-mcp.mjs';
 import { proposeTeam } from '../src/jobs/propose-team.mjs';
 import { validateJobDocument } from '../src/jobs/contracts.mjs';
+import { intakeQuestions, INTAKE_ASK } from '../src/jobs/intake-questions.mjs';
 import { engineFixture } from './fixtures/jobs/engine-fixture.mjs';
 
 const send = (previous, entry, context) => advanceJob({ job_id: previous.job_id, state: previous.state, state_digest: previous.state_digest, ...entry }, context);
@@ -24,17 +25,25 @@ test('prepare_job_context returns a short brief and a structured annex for each 
   const page = prepareJobContext({ request: 'Build a landing page for my jewellery brand', site_url: 'https://www.tanishq.co.in' });
   assert.equal(page.schema, 'ai-blocks-job-context/1'); assert.equal(page.model_calls, 0); assert.equal(page.stored_by_service, false);
   assert.ok(page.brief.length <= 1500, `brief is ${page.brief.length}`);
-  for (const word of ['SPEC', 'annex.spec_sheet', 'GROUND', 'https://www.tanishq.co.in', 'context/brand-dna.json', 'TRUTH', 'ASK once', 'price point', 'admire', 'AVOID', 'CANDIDATES', 'BUILD', 'CHECK', 'HAND-OVER']) assert.ok(page.brief.includes(word), word);
+  for (const word of ['SPEC', 'annex.spec_sheet', 'GROUND', 'https://www.tanishq.co.in', 'context/brand-dna.json', 'TRUTH', 'ASK once', 'defaults in annex.questions', 'Where will visitors come from', 'AVOID', 'Your toolbox has "Make three first screens".', 'CANDIDATES', 'BUILD', 'CHECK', 'HAND-OVER']) assert.ok(page.brief.includes(word), word);
   assert.deepEqual(page.brief.split('\n').map(line => line.split(/[: ]/)[0]), ['Job', 'SPEC', 'GROUND', 'TRUTH', 'ASK', 'AVOID', 'CANDIDATES', 'BUILD', 'CHECK', 'HAND-OVER']);
-  assert.equal(page.annex.questions.length, 3);
+  // One question list: the job's intake questions, each with its default. The old fixed taste set is gone.
+  assert.deepEqual(page.annex.questions, intakeQuestions({ deliverableKind: 'web_page', request: 'Build a landing page for my jewellery brand' }));
+  assert.deepEqual(page.annex.questions.map(q => q.id), ['traffic_source', 'one_action', 'proof', 'offer']); assert.ok(page.annex.questions.every(q => q.default));
+  assert.doesNotMatch(page.brief, /price point|admire|TASTE/);
   const a = page.annex;
   assert.equal(a.deliverable_kind, 'web_page'); assert.equal(a.kind_source, 'suggested'); assert.equal(a.family, 'web_page');
   assert.equal(a.mode_default.mode, 'extend');
   assert.deepEqual(a.protocol.map(s => s.id), ['frame', 'ground', 'taste', 'diverge', 'build', 'check', 'record']);
   assert.ok(a.context_requirements.some(r => r.id === 'brand_dna' && r.required));
-  assert.deepEqual(a.capture.tools.map(t => t.file), ['capture-brand-dna.mjs', 'brand-dna-snippet.js', 'check-brand-fidelity.mjs']);
-  for (const tool of a.capture.tools) { assert.equal(tool.get_skill.response_format, 'detailed'); assert.match(tool.marketplace_url, /^https:\/\/agents\.useaiblocks\.com\/tools\//); assert.equal(tool.status, 'CHECK_GET_SKILL'); }
-  assert.equal(a.taste_brief.questions.length, 3); assert.equal(a.taste_brief.path, 'context/taste-brief.md');
+  // Work a buyer sees also gets the tool that puts candidates side by side for the reviewer.
+  assert.deepEqual(a.capture.tools.map(t => t.file), ['capture-brand-dna.mjs', 'brand-dna-snippet.js', 'check-brand-fidelity.mjs', 'compare-candidates.mjs']);
+  for (const tool of a.capture.tools) { assert.equal(tool.get_skill.response_format, 'detailed'); assert.equal(tool.status, 'CHECK_GET_SKILL'); assert.equal(tool.agents_app, undefined); }
+  // The agents app serves the three capture and check tools; the compare tool comes from its library skill.
+  for (const tool of a.capture.tools.slice(0, 3)) assert.match(tool.marketplace_url, /^https:\/\/agents\.useaiblocks\.com\/tools\//);
+  const compare = a.capture.tools[3]; assert.equal(compare.marketplace_url, null); assert.deepEqual(compare.get_skill, { slug: 'make-three-first-screens', response_format: 'detailed' }); assert.equal(compare.get_resource.path, 'scripts/compare-candidates.mjs'); assert.match(compare.use, /side by side/);
+  assert.match(a.candidates.compare_with, /^compare-candidates\.mjs/);
+  assert.equal(a.taste_brief.questions, undefined); assert.match(a.taste_brief.fill_from, /Ask nothing more/); assert.equal(a.taste_brief.path, 'context/taste-brief.md');
   assert.equal(a.craft_rubric.reduce((n, c) => n + c.weight, 0), 100);
   assert.ok(a.gates.some(g => g.id === 'primary_action_works'));
   assert.ok(a.defaults_to_avoid.some(d => d.id === 'web-template-stack')); assert.equal(a.defaults_source, 'embedded:DESIGN.md AI-default list');
@@ -275,8 +284,22 @@ test('the catalogue service reads patterns.json and script URLs from the publish
   assert.equal((await service.callTool('prepare_job_context', { request: 'audit my Meta ad account' })).annex.deliverable_kind, 'audit');
 });
 
-test('taste questions replace dial questions for every family', () => {
-  for (const kind of ['web_page', 'audit', 'strategy', 'code']) { const q = tasteQuestions(kind); assert.equal(q.length, 3); assert.ok(q.every(row => row.question.length > 10 && row.why.length > 0)); }
+test('one question list: the brief, the annex, the front door and start_job all ask the same intake questions', async () => {
+  assert.equal(grounding.tasteQuestions, undefined); assert.equal(grounding.TASTE_QUESTIONS, undefined);
+  for (const [request, kind] of [['Build a landing page for my jewellery brand', 'web_page'], ['Make 6 image ads for our candles', 'ad_creative'], ['Write a welcome email', 'email'], ['audit my Meta ad account', 'audit'], ['Plan our Q1 launch', 'plan'], ['Fix the checkout bug in our Shopify theme', 'code']]) {
+    const expected = intakeQuestions({ deliverableKind: kind, request });
+    const context = prepareJobContext({ request, deliverable_kind: kind });
+    assert.deepEqual(context.annex.questions, expected, kind); assert.ok(expected.length >= 1 && expected.length <= 4, kind);
+    // The brief quotes the first questions in full and counts the rest; it never invents a second set.
+    const asked = [...context.brief.split('\n').find(line => line.startsWith('ASK once')).matchAll(/"([^"]+)"/g)].map(m => m[1]);
+    assert.ok(asked.length >= 1 && asked.every((question, n) => question === expected[n].question), kind);
+    const door = await callJobTool('prepare_job_context', { request, deliverable_kind: kind });
+    assert.deepEqual(door.questions, expected, kind); assert.equal(door.questions_note, INTAKE_ASK);
+    const f = engineFixture(), single = await startJob({ request, deliverable_kind: kind }, f.context), team = await startJob({ ...f.input, request, deliverable_kind: kind, mode: 'team' }, f.context);
+    assert.deepEqual(single.questions, expected, kind); assert.deepEqual(team.questions, expected, kind);
+    for (const reply of [single, team]) { assert.equal(reply.questions_note, INTAKE_ASK); assert.doesNotMatch(JSON.stringify(reply), /TASTE questions|taste questions/); }
+  }
+  assert.doesNotMatch(INTAKE_ASK, /TASTE/);
   assert.equal(resolveMode({ request: 'Improve our product page', kind: 'web_page' }).mode, 'patch');
   assert.equal(resolveMode({ request: 'Make a page', kind: 'web_page', has_existing_asset: false }).mode, 'new');
   assert.equal(resolveMode({ request: 'Make a page', kind: 'web_page' }).confirm, true);
@@ -371,7 +394,7 @@ test('the grounded-job-protocol skill states the same weights, candidates and ga
 
 test('the shared method lists are identical in the library and the agents app', async () => {
   const packs = await import('../../marketplace/src/modules/packs/families.ts');
-  for (const name of ['WORD_BUDGETS', 'PROVEN_LEVERS', 'CANDIDATE_AXES', 'CANDIDATES', 'COMPLETENESS', 'CONTEXT_LEVELS', 'CONTEXT_NEED']) {
+  for (const name of ['WORD_BUDGETS', 'PROVEN_LEVERS', 'CANDIDATE_AXES', 'CANDIDATES', 'CRAFT_METHODS', 'SKILL_ADDRESS', 'COMPLETENESS', 'CONTEXT_LEVELS', 'CONTEXT_NEED']) {
     assert.ok(packs[name] && grounding[name], name);
     assert.deepEqual(JSON.parse(JSON.stringify(packs[name])), JSON.parse(JSON.stringify(grounding[name])), name);
   }
@@ -382,6 +405,56 @@ test('the shared method lists are identical in the library and the agents app', 
   for (const kind of DELIVERABLE_KINDS) {
     assert.deepEqual(packs.CRAFT_WEIGHTS[packs.RUBRIC_GROUP[kind]], craftRubric(kind).map(c => [c.criterion, c.weight]), kind);
     assert.ok(packs.familySlice(kind).diverge.startsWith(CANDIDATES[kind]), kind);
+    // Both apps name the same craft skill for a kind's candidates, as a toolbox item with its library address.
+    const method = grounding.candidateMethod(kind);
+    assert.equal(packs.candidateMethodLine(kind), method ? ` Use "${method.name}": your toolbox has it (${method.address}).` : '', kind);
+    assert.ok(packs.familySlice(kind).diverge.endsWith(packs.candidateMethodLine(kind)), kind);
     assert.deepEqual(packs.contextNeed(kind), { level: contextNeed(kind).level, take: contextNeed(kind).take }, kind);
   }
+});
+
+test('the method names the craft skill for each step as a toolbox item with its library address, and never says to search', () => {
+  const names = { web_page: 'Make three first screens', ad_creative: 'Make an ad concept spread', email: 'Three series arcs', strategy: 'Two plan shapes', plan: 'Two plan shapes' };
+  for (const kind of DELIVERABLE_KINDS) {
+    const r = prepareJobContext({ request: 'x', deliverable_kind: kind }), a = r.annex, selling = ['web_page', 'ad_creative', 'copy', 'email'].includes(kind);
+    if (names[kind]) {
+      assert.ok(r.brief.includes(`A fresh reviewer picks. Your toolbox has "${names[kind]}".`), kind);
+      assert.deepEqual(a.candidates.method, { name: names[kind], slug: a.candidates.method.slug, address: `https://useaiblocks.com/skills/${a.candidates.method.slug}`, where: 'Your toolbox has it.' }, kind);
+    } else { assert.equal(a.candidates.method, undefined, kind); assert.doesNotMatch(r.brief, /Your toolbox has/, kind); }
+    assert.equal(a.candidates.when_the_look_is_open?.name, ['web_page', 'ad_creative'].includes(kind) ? 'Make three design directions' : undefined, kind);
+    assert.equal(a.reviewer.choose.method.name, 'Outside chooser', kind); assert.equal(a.reviewer.clients_eye.method.name, 'Client\'s-eye check', kind);
+    assert.equal(a.truth.method.name, 'Claim source trace', kind); assert.match(a.truth.rule, /Never flag it and leave it in/, kind);
+    assert.equal(a.buyer_can_act?.method.name, selling ? 'Buyer can act check' : undefined, kind);
+    // The compare tool comes with work a buyer sees, and with nothing else.
+    assert.equal(a.capture.tools.some(tool => tool.file === 'compare-candidates.mjs'), selling, kind); assert.equal(Boolean(a.candidates.compare_with), selling, kind);
+    for (const part of [a.candidates, a.reviewer, a.truth, a.buyer_can_act]) assert.doesNotMatch(JSON.stringify(part ?? {}), /search/i, kind);
+  }
+  // Every named skill is a real library item, under the plain name its page uses.
+  const rows = [...Object.values(grounding.CRAFT_METHODS.candidates), grounding.CRAFT_METHODS.look, grounding.CRAFT_METHODS.choose, grounding.CRAFT_METHODS.check, grounding.CRAFT_METHODS.truth, grounding.CRAFT_METHODS.buyer];
+  assert.equal(new Set(rows.map(row => row[0])).size, 9);
+  for (const [slug, name] of rows) {
+    const page = fs.readFileSync(new URL(`../../catalogue-items/general/${slug}/page.yaml`, import.meta.url), 'utf8');
+    assert.equal(/^name: "?(.+?)"?\r?$/m.exec(page)[1], name, slug);
+    assert.deepEqual(grounding.craftMethod([slug, name]), { name, slug, address: `https://useaiblocks.com/skills/${slug}`, where: 'Your toolbox has it.' });
+  }
+  assert.ok(fs.existsSync(new URL('../../catalogue-items/general/make-three-first-screens/scripts/compare-candidates.mjs', import.meta.url)));
+});
+
+test('the public page for the method describes the same seven steps as its skill, in the new words', async () => {
+  const YAML = (await import('yaml')).default;
+  const read = name => fs.readFileSync(new URL(`../../catalogue-items/general/grounded-job-protocol/${name}`, import.meta.url), 'utf8');
+  const raw = read('page.yaml'), page = YAML.parse(raw), item = YAML.parse(read('item.yaml')), skill = read('SKILL.md');
+  // The old method is gone from the page: no job card, no menu of options for the person, no decisions file as a deliverable.
+  assert.doesNotMatch(raw + read('item.yaml'), /job card|five-line|Pick one of the options|decisions file|decision record|two or three (?:real )?options|taste questions/i);
+  for (const phrase of ['spec sheet', 'five to seven tests', 'about three real versions', 'a fresh reviewer picks one', 'You are not asked to choose', 'Any claim without a source is removed', 'finished work first']) assert.ok(raw.includes(phrase), phrase);
+  // One page step for each numbered step of the skill, in the same order.
+  const headings = [...skill.matchAll(/^## \d\. ([A-Z ]+)/gm)].map(match => match[1].trim());
+  assert.equal(headings.length, 7); assert.equal(page.how_it_works.length, 7);
+  assert.deepEqual(page.how_it_works.map(step => step.title), ['Writes the spec sheet', 'Captures what the job needs', 'Writes a taste brief', 'Makes real candidates', 'Builds to a craft floor', 'Gets a client\'s-eye check', 'Hands over the work first']);
+  // What the page promises is what the skill hands back: the work first, then CHECKS MISSED; working files stay with the AI.
+  assert.match(page.output_shape, /^OPENING LINES \(3 to 5\)/); assert.match(page.output_shape, /CHECKS MISSED/); assert.match(page.output_shape, /WORKING FILES \(your AI keeps these; they are not part of the hand-over\)/);
+  assert.match(page.you_get[0], /^The finished work first/); assert.equal(page.you_get.length, 4); assert.ok(page.summary.split(/\s+/).length <= 18);
+  assert.match(item.summary, /spec sheet/); assert.equal(page.example.business, 'gehna'); assert.match(page.example.output, /^SPEC SHEET/);
+  // The tools line on the page is the one the skill's "Before you start" section repeats.
+  for (const tool of page.works_best_with.tools) assert.ok(skill.includes(`**${tool.name}:** ${tool.why}`), tool.name);
 });

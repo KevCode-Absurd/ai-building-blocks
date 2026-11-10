@@ -1,75 +1,78 @@
 new_slug: grounded-job-protocol
 name: "Grounded job protocol"
-summary: "Give it any real job. Your AI frames it, studies your actual business first, explores real options, builds in your style and gets checked."
+summary: "Give it any real job. Your AI studies your business, makes real options and gets the work checked."
 job: plan-strategy
 thinking: medium
 thinking_why: "It sets the order of work and the checks. The work itself is done by the skills it calls."
 
-headline: "Make your AI's work fit your business, not the average one"
-subhead: Seven steps your AI follows for any job bigger than a quick answer. It frames the job, captures your real site or data, writes what good looks like for you, tries real options, builds in your own style and has a fresh chat check it. You get the work, the checks and a short record of what was decided.
+headline: "Make your AI's work do its job for your business"
+subhead: Seven steps for any job bigger than a quick answer. Your AI writes a one-screen spec sheet and captures your real site or data. It makes about three real versions of the key part, and a fresh reviewer picks one. You get the finished work first.
 
 explain: |
-  AI work often looks the same for every business. Pages ignore the real site. Plans could belong to anyone. That is not a wording problem. The AI was never shown your business, so it wrote the average answer.
+  AI work often looks the same for every business. Pages ignore the real site. Plans could belong to anyone. Even work that fits your brand can miss the point, like an email with no product in it. The AI was never told what the work is for.
 
-  This protocol fixes the order of work. First it writes a short job card, including whether to improve what you have or start fresh. Improving is the default when something exists. Then it captures the real thing: your site's colours, fonts, layout, words and prices, or your real account data. Nothing gets made until that file exists.
-
-  Next it writes a short taste brief: what must stay, which brands to learn from, and which AI habits to avoid. It makes two or three options that really differ, builds the chosen one in your style, and has a separate chat check it against pass-or-fail rules and a score for that kind of work. It ends with a decisions file and any lessons worth keeping.
+  This protocol fixes the order of work. First your AI writes a one-screen spec sheet. It says who must do what after seeing the work, and lists five to seven tests the work must pass. Then it captures the real thing, your site or your account data. It makes about three real versions of the part that matters most, and a fresh reviewer picks one. It builds that one with true facts only. Before hand-over, another fresh reviewer reads it as your client would. Any claim without a source is removed.
 
 when:
-  - Your AI is about to make a page, ads, emails, copy, an audit, an analysis, a plan or code for a real business.
-  - Past AI work for you came back generic and you want a method that stops it.
+  - Your AI is about to make a page, ads, emails, copy, an audit, a plan or code for a real business.
+  - Past AI work for you came back generic, or looked right but did not do its job.
   - You run several AI agents and want them all to follow one way of working.
 not_for:
   - "Quick answers and one-line edits. Just ask."
   - "A brand-new business with nothing to capture yet. You can still use the steps; the capture step becomes your brand guide and references."
 
 you_give:
-  - The job, in your own words, and what a good result looks like
-  - Your website or the account or data the job is about
-  - Two or three brands or pages you admire, and one you do not want to look like (optional)
+  - The job, in your own words
+  - Your website, or the account or data the job is about
+  - Answers to a few short questions, or "you decide" (optional)
 you_get:
-  - A five-line job card with the kind of work and the mode
-  - Context files with your real site or data, captured before any work starts
-  - A taste brief with what to keep, what to learn from and what to avoid
-  - Two or three real options, and the chosen one built in your style
-  - A check by a fresh chat, with pass-or-fail rules and a score
-  - A decisions file and any lessons worth keeping
+  - The finished work first, with three to five lines on what it is and what to check
+  - A one-screen spec sheet with the tests the work had to pass
+  - Every fact traced to a dated source, and no claim your AI made up
+  - A short list of any checks that could not run
 
 how_to_use:
-  - Add the skill to your AI, or paste it in at the start of the chat.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Describe the job and give your website or data.
-  - Answer the few taste questions it asks about position, price, what must never change and brands you admire.
-  - Pick one of the options it shows you, or let it choose and say why.
-  - Read the check results and the decisions file before you use the work.
+  - Answer its few questions in one message, or say "you decide". It tells you what it will assume.
+  - Let it work. It makes about three real versions of the key part, and a fresh chat picks one. You are not asked to choose.
+  - Read the opening lines of the result. They say what was decided and what to check before you use it.
 
 how_it_works:
-  - title: Frames the job
-    text: Writes who it is for, the outcome, the kind of work, how success is measured, and whether to improve what exists or start fresh.
-  - title: Captures the real thing
-    text: Measures your live site or pulls your real data first. Every later choice must point back to it.
+  - title: Writes the spec sheet
+    text: One screen with who must do what after seeing the work, the exact count, and five to seven tests the finished work must pass.
+  - title: Captures what the job needs
+    text: Measures your live site or pulls your real data. Every fact gets a source and a date. It checks that what you sell is live, in stock and at that price.
   - title: Writes a taste brief
-    text: Says which brand codes to keep, which category habits to keep or break, which references to learn from and which AI habits to avoid.
-  - title: Tries real options
-    text: Makes two or three options that differ in idea, proof, structure, look or offer, not just colour or wording.
-  - title: Builds in your style
-    text: Keeps your menu, footer, fonts, colours and real facts. Gaps go on a checklist, not on the page.
-  - title: Gets checked by someone else
-    text: A fresh chat checks hard rules (facts, placeholders, access, brand fit) and scores the craft for that kind of work.
-  - title: Records what was decided
-    text: Writes what was considered, what was chosen and why, the strongest objection and what to test next.
+    text: For work a buyer sees, it notes which brand codes to keep, which references to learn from and which AI habits to avoid.
+  - title: Makes real candidates
+    text: About three versions of the part that decides the result, such as three first screens or nine ad ideas. A fresh reviewer picks one.
+  - title: Builds to a craft floor
+    text: Gives true facts a new framing and adds no new facts. It makes one recommendation, never a menu, and fills every field the format needs.
+  - title: Gets a client's-eye check
+    text: A fresh reviewer sees only your brief, the work and the facts. Each test gets a pass or a fail. A claim with no source is removed.
+  - title: Hands over the work first
+    text: Three to five opening lines, then the work. No process notes reach you. Lessons are kept for the next job.
 
 output_shape: |
-  JOB CARD
-  Client / Outcome / Deliverable kind / Success measure / Mode (patch | extend | new)
+  OPENING LINES (3 to 5)
+  <what this is> / <the main decision and why> / <what to check before use>
 
-  CONTEXT        context/brand-dna.md (or data snapshot), references
-  TASTE BRIEF    codes to keep / conventions to keep or break / references / defaults to avoid / must never change
-  DIRECTIONS     A, B, C with the axis each changes and the reference it learns from
-  DELIVERABLE    built inside the client's system
-  CHECK          gates pass/fail, craft score by criterion, defaults found, fidelity report (pages)
-  DECISIONS.md   considered / chosen and why / strongest dissent / test next
-  RULES I LEARNED  typed lines: decision_rule, taste_reference, never_do, exemplar, check
-  CHECKS MISSED  <one line each, or none>
+  THE WORK
+  <in the format you asked for, built inside your own system>
+
+  APPENDIX
+  <supporting detail, only if needed>
+
+  CHECKS MISSED
+  <one line each, or none>
+
+  WORKING FILES (your AI keeps these; they are not part of the hand-over)
+  context/spec.md         <the job, the count, 5 to 7 acceptance tests, decisions, assumptions, mode>
+  context/facts.md        <every fact with its source and date>
+  context/brand-dna.json  <your captured site, or a data snapshot for an audit>
+  context/taste-brief.md  <brand codes to keep, references, defaults to avoid>
+  DECISIONS.md            <working notes for the next job>
 
 example:
   business: gehna
@@ -79,36 +82,49 @@ example:
     Improve the product page for the Filigree Pearl 18K Gold Dangle Earrings
     on gehnaindia.com so more visitors add it to the cart.
   output: |
-    JOB CARD
-    Client: Gehna, gehnaindia.com, gold and gemstone jewellery
-    Outcome: more add-to-carts on this product page
-    Deliverable kind: web_page   Success measure: add-to-cart rate
-    Mode: patch (the page is live)
+    SPEC SHEET (context/spec.md)
+    The job: a shopper on this product page adds the earrings to the cart.
+    Deliverable: 1 improved product page (web_page). Mode: patch, the page is live.
+    Acceptance tests:
+    1. Does a shopper see the price and any saving before the button? (job)
+    2. Is the proof beside the place where a doubt starts? (job)
+    3. Can Gehna publish this today on its own theme? (ready)
+    4. Does every price, rating and policy match a dated source? (truth)
+    5. After five seconds on a phone, is it clear what is sold and what to do? (clear)
+    Decisions to take: which proof leads, what to cut from the first screen.
+    Brand context: facts, voice and look.
 
-    CONTEXT
-    Captured / and the product page on 9 Nov 2026 into context/brand-dna.md:
+    FACTS (context/facts.md, captured from / and the product page on 9 Nov 2026)
+    Price 16,530 rupees. 4.8/5 from 519 Google reviews.
     Lato body and UPPERCASE buttons, Nanum Myeongjo titles, marigold #F6B74D
-    main button with 4 px corners, white page, dark six-column footer,
-    price 16,530 rupees, 4.8/5 from 519 Google reviews.
+    main button with 4 px corners, white page, dark six-column footer.
+    Buyer can act: to confirm on the live page before the build (stock, price, link).
 
     TASTE BRIEF (defaults to avoid)
     web-font-swap, web-sentence-case-buttons, web-accent-promoted,
     web-cream-premium, web-dropped-chrome, web-visible-placeholders.
 
-    DIRECTIONS (change-sets to the live page)
+    CANDIDATES (three first screens, each the live page as it would change)
     A. Price clarity: one line under the price explaining the online-payment
        saving; delivery date beside the button.
-    B. Proof: move the 4.8/5 Google rating next to the title.
-    C. Size and scale: add the existing spec grid values to the first screen
+    B. Proof: the 4.8/5 Google rating moves next to the title.
+    C. Size and scale: the existing spec grid values join the first screen
        on phones.
-    Chosen: A, because the price block is the first doubt on the page.
+    Fresh reviewer's pick: A. The price block is the first doubt on the page.
+    To take from B: the rating beside the title. Reviews answer many doubts.
 
-    CHECK (after the build, by a fresh chat)
-    Gates to run: facts traced, no placeholders, nav and footer kept, fonts
-    loaded, works at 390 px, button works, then the brand fidelity check.
+    CHECK (after the build, by a fresh chat with only the brief, the page and the facts)
+    Each acceptance test: pass or fail, with the line that proves it.
+    Each claim: sourced or not. A claim with no source is removed.
+    Gates to run: facts traced, the buyer can act today, no placeholders,
+    nav and footer kept, fonts loaded, works at 390 px, button works,
+    then the brand fidelity check.
 
-    DECISIONS.md: chose A over B and C; strongest dissent is that reviews
-    (B) answer more doubts. Test next: change-set A against the live page.
+    HAND-OVER (opening lines)
+    This is the product page with the price block made clear and the rating
+    moved beside the title.
+    Main decision: lead with price clarity, because it is the first doubt.
+    Check before use: the saving line against today's price, and the delivery date.
 
     CHECKS MISSED
     none
@@ -116,22 +132,25 @@ example:
 tweaks:
   - what: Improve or start fresh
     how: Say "start fresh" only if you want a new design. Otherwise your AI improves what you have and lists each change with its reason.
-  - what: Number of options
-    how: Two or three is the default. Ask for one if the job is small, but it still writes down what else it considered.
-  - what: Who checks
-    how: Use a new chat, another AI or a colleague for the check. The point is that the checker did not make the work.
+  - what: How many candidates
+    how: About three is the default. Ask for two if the job is small. They are still made as real work, not as descriptions.
+  - what: Who reviews
+    how: Use a new chat, another AI or a colleague. The point is that the reviewer did not make the work and has not seen the reasoning.
+  - what: How much brand context
+    how: A page or an ad takes your facts, voice and look. A plan takes facts only. Say so if your job needs more or less.
 
 judge:
-  - The job card names the mode, and it is "patch" when something already exists.
-  - Every design or copy choice points to the captured site, data or a named reference.
-  - The options differ in idea, proof, structure, look or offer, not only in colour or wording.
-  - The check is done separately, with pass-or-fail rules that cannot be averaged away.
-  - The decisions file records the strongest objection and what to test next.
+  - The spec sheet has five to seven tests, and at least two are about the buyer or the decision.
+  - Every price, rating, policy and product claim points to a dated source.
+  - The candidates differ in promise, proof, structure or offer, not only in colour or wording.
+  - The result gives one recommendation, not a list of options for you to pick from.
+  - The work comes first, and nothing in it talks about the method or its files.
 
 test:
   - Give it a job for a business with a live site and no other details. It should capture the site before it makes anything.
   - Ask for "a redesign". It should ask once whether to improve the page or replace it.
-  - Read the options. If two differ only in colour, ask it to replace one.
+  - Check one price or rating in the result against your live site. It should match, and the facts file should show the date it was captured.
+  - Read the candidates. If two differ only in colour, ask it to replace one.
 
 improve:
   - Keep the context folder in your project, so the next job starts from the same capture.
@@ -150,23 +169,25 @@ output_sample:
   input:
     - The job, in your own words
     - Your website, or the account or data the job is about
-    - Brands you admire and one to avoid (optional)
+    - Answers to a few short questions (optional)
   output:
-    - name: Job card
-      contains: Who, outcome, kind of work, success measure and mode.
-    - name: Context and taste brief
-      contains: Your captured site or data, and what to keep, learn from and avoid.
-    - name: Options and the built work
-      contains: Two or three real options, the chosen one built in your style.
-    - name: Check and decisions
-      contains: Pass-or-fail rules, a craft score, the decisions file and lessons worth keeping.
+    - name: Opening lines
+      contains: What this is, the main decision and why, and what to check before use.
+    - name: The work
+      contains: The finished page, ads, emails, audit, plan or code, built in your style with true facts only.
+    - name: Spec sheet and facts
+      contains: The tests the work had to pass, and every fact with its source and date.
     - name: Checks missed
       contains: One line for each check that could not run, or none.
 
 terms:
+  - term: Spec sheet
+    meaning: One screen that says what the work is for, how many pieces there are, and the tests it must pass.
+  - term: Acceptance test
+    meaning: A question the finished work must answer yes to, such as "Does every email show a product?"
   - term: Mode
     meaning: Whether the job improves what exists (patch), adds to it (extend) or starts fresh (new).
   - term: Gate
     meaning: A pass-or-fail rule, such as "every fact has a source". A failed gate cannot be made up for by a good score elsewhere.
-  - term: Fresh chat
-    meaning: A new conversation, or another AI or person, that checks the work without having made it.
+  - term: Fresh reviewer
+    meaning: A new chat, another AI or a person who checks the work without having made it.

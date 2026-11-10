@@ -106,6 +106,8 @@ export const TOOL_FILES: { name: string; purpose: string }[] = [
  * or it is a sales role whose jobs are copy or email.
  */
 const BRAND_DEPARTMENTS = new Set(["marketing", "content", "design", "ecommerce"]);
+/** The tools that capture or check a brand. The list of AI defaults to avoid is for every kind of work, so every pack carries it. */
+export const BRAND_TOOLS = new Set(["capture-brand-dna.mjs", "brand-dna-snippet.js", "check-brand-fidelity.mjs"]);
 export function brandFacing(department: string, families: DeliverableFamily[]): boolean {
   if (BRAND_DEPARTMENTS.has(department)) return true;
   if (families.some(f => f === "web_page" || f === "ad_creative")) return true;
@@ -529,7 +531,8 @@ function contextReadme(jts: JobType[], tools: Set<string>, origin: string, brand
   const families = [...new Set(jts.map(familyOf))];
   if (!families.length) families.push("other");
   // Roles that carry no brand to the public capture no site and get no capture tools (brandFacing).
-  const capture = brand || tools.size > 0;
+  const capture = brand || [...BRAND_TOOLS].some(t => tools.has(t));
+  const listed = TOOL_FILES.filter(t => brand || tools.has(t.name));
   const out = [
     "# Context: what to capture before the work",
     "",
@@ -555,8 +558,8 @@ function contextReadme(jts: JobType[], tools: Set<string>, origin: string, brand
     const jobs = jts.filter(jt => familyOf(jt) === f).map(jt => jt.title);
     out.push(`### ${FAMILY_LABELS[f]}${jobs.length ? ` (${jobs.join(", ")})` : ""}`, "", bullets(CAPTURE[f]), "");
   }
-  if (capture) {
-    out.push("## Tools", "", bullets(TOOL_FILES.map(t => tools.has(t.name) ? `\`tools/${t.name}\` (also at ${origin}/tools/${t.name}): ${t.purpose}` : `tools/${t.name}: ${t.purpose}`)), "",
+  if (listed.length) {
+    out.push("## Tools", "", bullets(listed.map(t => tools.has(t.name) ? `\`tools/${t.name}\` (also at ${origin}/tools/${t.name}): ${t.purpose}` : `tools/${t.name}: ${t.purpose}`)), "",
       "Run them in the client's project or browser, never on AI Blocks.");
   }
   return out.join("\n").trimEnd();
@@ -1176,10 +1179,12 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
   const brand = brandFacing(department, families);
   const kitText = brand ? "" : [...Object.values(kitFiles), persona.profile.method ?? ""].join("\n");
   const toolDrafts: Draft[] = agent
-    ? TOOL_FILES.filter(t => input.tools?.[t.name]?.trim() && (brand || kitText.includes(`tools/${t.name}`)))
+    ? TOOL_FILES.filter(t => input.tools?.[t.name]?.trim() && (brand || !BRAND_TOOLS.has(t.name) || kitText.includes(`tools/${t.name}`)))
       .map(t => ({ path: `tools/${t.name}`, group: "tool" as const, content: input.tools![t.name], source: "tools" as const, purpose: `Tool: ${t.purpose}` }))
     : [];
   const toolNames = new Set(toolDrafts.map(d => d.path.slice("tools/".length)));
+  /** The tools this build has at all: what a brand-facing agent pack carries. */
+  const allTools = new Set(agent ? TOOL_FILES.filter(t => input.tools?.[t.name]?.trim()).map(t => t.name) : []);
 
   // The toolbox (toolbox.ts): with a toolbox.json in the role kit, toolbox.md is the curated "when this, use that"
   // list and the pack carries the full text of every library item it names. Without one, toolbox.md is the plain
@@ -1341,7 +1346,14 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
     if (d.path === "pack.json") continue;
     let content = d.template ? fillTemplate(d.template, templates[d.template], values) : d.content!;
     // A pack never names a tools/ file it lacks: train packs ship no tools/, so their role kit files, playbook and knowledge point at the public copy.
-    if (d.resolveTools || (kind === "train" && (sourceOf(d) === "role" || d.path === "playbook.md" || d.path === "knowledge.md"))) content = resolveToolRefs(content, toolNames, origin);
+    let source = sourceOf(d);
+    if (d.resolveTools || (kind === "train" && (source === "role" || d.path === "playbook.md" || d.path === "knowledge.md"))) {
+      const resolved = resolveToolRefs(content, toolNames, origin);
+      // A job skill is one shared file for every pack that links the job. In a pack without the brand tools its text
+      // points at their public copies instead, so that pack keeps its own copy and the shared one stays the same.
+      if (agent && (source === "job" || source === "role") && resolved !== resolveToolRefs(content, allTools, origin)) source = "agent";
+      content = resolved;
+    }
     if (!agent && (d.path === "soul.md" || d.path === "personality.md") && !content.replace(/^\uFEFF/, "").trimStart().startsWith(TEMPLATE_MARKER)) {
       content = `${TEMPLATE_MARKER}\n${content}`;
     }
@@ -1351,7 +1363,7 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
       notes.push(`packs/shared/${d.template} has no {{team_list}}, so the channel team was added at the end of ${persona.id}'s ${kind} AGENTS.md`);
     }
     content = normalizeText(content);
-    files.push({ path: d.path, content, purpose: d.purpose, group: d.group, bytes: encoder.encode(content).length, sha256: await sha256(content), source: sourceOf(d), ...(d.sharedPath ? { sharedPath: d.sharedPath } : {}) });
+    files.push({ path: d.path, content, purpose: d.purpose, group: d.group, bytes: encoder.encode(content).length, sha256: await sha256(content), source, ...(d.sharedPath ? { sharedPath: d.sharedPath } : {}) });
   }
   const knowledgeOn = knowledgeReady || !!megaKit;
   const knowledgeDates = [knowledgeReady ? kit!.role.updated : "", megaKit?.json.updated ?? ""].filter(Boolean).sort(byPath);

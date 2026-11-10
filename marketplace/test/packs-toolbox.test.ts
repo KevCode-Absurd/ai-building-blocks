@@ -398,12 +398,19 @@ test("intake fits the role: only brand-facing work is asked about brands, and on
   assert.match(agents, /ask for the business name, what they need done, and the files, exports or account the job runs on/);
   assert.match(agents, /the period to cover, the accounting software and the bank or payout exports, cash or accrual basis, who the records are for, and the access level for each tool/);
   assert.doesNotMatch(agents, /brands they admire|the website/);
-  // The brand-capture tools: in the designer's pack, not in the bookkeeper's.
+  // The brand-capture tools: in the designer's pack, not in the bookkeeper's. The list of AI defaults to avoid
+  // covers copy, audits and plans too, so every pack keeps it.
   assert.equal(riley.files.filter(f => f.path.startsWith("tools/")).length, 4);
-  assert.equal(russell.files.filter(f => f.path.startsWith("tools/")).length, 0);
-  assert.doesNotMatch(file(russell, "context/README.md")!, /brand-dna\.json|## Tools/);
-  assert.match(file(riley, "context/README.md")!, /## Tools/);
+  assert.deepEqual(russell.files.filter(f => f.path.startsWith("tools/")).map(f => f.path), ["tools/ai-default-patterns.md"]);
+  assert.doesNotMatch(file(russell, "context/README.md")!, /brand-dna|capture-brand|check-brand-fidelity/);
+  assert.match(file(russell, "context/README.md")!, /## Tools\n\n- `tools\/ai-default-patterns\.md`/);
+  assert.match(file(riley, "context/README.md")!, /## Tools\n\n- `tools\/capture-brand-dna\.mjs`/);
   assert.deepEqual(lintPack(russell), []);
+  // A job skill is one shared file for every pack that links the job. Where a pack lacks a brand tool the skill
+  // names, its text differs (it points at the public copy), so that pack keeps its own copy.
+  for (const pack of [riley, russell]) {
+    for (const f of pack.files.filter(x => x.source === "job" || x.source === "role")) assert.doesNotMatch(f.content, /into a tools\/ folder first/, `${f.path} is the shared text`);
+  }
 });
 
 test("packs are free: no wording left from priced jobs", async () => {

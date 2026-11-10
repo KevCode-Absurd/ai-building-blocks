@@ -93,3 +93,13 @@ test('start_outcome says it is for a goal, not the first call for a deliverable'
   assert.doesNotMatch(`${source.title} ${source.description}`, /front door|start here|first call|any goal or problem/i);
   assert.match(OUTCOME_INSTRUCTIONS, /^For a business goal with no deliverable named yet/); assert.match(OUTCOME_INSTRUCTIONS, /A named piece of work \(a page, ads, emails, an audit, a plan\) starts with prepare_job_context instead\./);
 });
+
+test('the front door hands back the one question when the job type is only a guess', async () => {
+  const fs = await import('node:fs');
+  const approaches = JSON.parse(fs.readFileSync(new URL('../public/data/approach-index.json', import.meta.url)));
+  const unsure = await callJobTool('prepare_job_context', { request: 'Write a haiku about autumn' }, { approaches });
+  assert.equal(unsure.route.mode, 'single'); assert.match(unsure.route.ask_first, /^What kind of work is this\?/); assert.match(unsure.route.reason, /not clear yet what kind of work/);
+  // A clear request, or a declared kind, carries no such question.
+  assert.equal((await callJobTool('prepare_job_context', { request: 'Write a press release' }, { approaches })).route.ask_first, undefined);
+  assert.equal((await callJobTool('prepare_job_context', { request: 'Write a haiku about autumn', deliverable_kind: 'copy' }, { approaches })).route.ask_first, undefined);
+});

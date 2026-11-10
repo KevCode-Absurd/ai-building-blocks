@@ -255,7 +255,7 @@ function routesChecks(d, c, add) {
 function spreadChecks(d, c, add) {
   const slots = list(d.slots), N = slots.length, card = cardOf(c), mix = card.dials?.variety_mix ?? d.variety_mix ?? {}, families = new Map(), makers = new Set(), methods = new Set(), modalities = new Set(), seats = list(teamOf(c).seats), job = paletteOf(c);
   mixChecks(d.variety_mix, 'variety_mix', add);
-  if (card.dials?.variety_mix && ['proven', 'new', 'outlier'].some(k => d.variety_mix?.[k] !== mix[k])) add('variety_mix', 'must match the resolved job-card mix.');
+  if (card.dials?.variety_mix && ['proven', 'new', 'outlier'].some(k => d.variety_mix?.[k] !== mix[k])) add('variety_mix', 'must match the mix resolved on the spec sheet.');
   unique(slots, 'slot_id', 'slots', add);
   const count = list(card.deliverables).reduce((sum, x) => sum + (Number.isSafeInteger(x?.count) ? x.count : 0), 0);
   if (count && N !== count) add('slots', `must cover all ${count} requested deliverables.`);
@@ -267,12 +267,12 @@ function spreadChecks(d, c, add) {
     if (job && !family) add(`${p}.family`, 'does not exist in this job palette.');
     if (seats.length && (!hasSeatType(seat, 'maker') || !list(seat?.families).includes(slot.family))) add(`${p}.maker_seat`, 'must be a maker assigned to this family.');
     const requiredImplementation = slot.family === 'built-experiences' && buildExecutionPlan({ request: card.request_verbatim ?? '', card }).landing_pages.delivery_mode === 'LAUNCHABLE_SITE';
-    if (Array.isArray(chosen) && !chosen.includes(slot.family) && !requiredImplementation) add(`${p}.family`, 'was not selected in the job card.');
+    if (Array.isArray(chosen) && !chosen.includes(slot.family) && !requiredImplementation) add(`${p}.family`, 'was not selected on the spec sheet.');
     const allowed = family ? new Set([...list(family.items), ...list(family.pickers), ...list(family.checks), ...list(family.tool_guides), ...list(family.supporting_items)]) : undefined;
     unique(slot.items, 'slug', `${p}.items`, add);
     list(slot.items).forEach((ref, j) => { methods.add(ref?.slug); pinned(ref, `${p}.items[${j}]`, c, add, allowed); });
     const supported = card.dials?.modalities?.value;
-    if (Array.isArray(supported) && !supported.includes(slot.modality)) add(`${p}.modality`, 'is outside the job-card modalities.');
+    if (Array.isArray(supported) && !supported.includes(slot.modality)) add(`${p}.modality`, 'is outside the modalities on the spec sheet.');
     if (family?.modality && !family.modality.includes(slot.modality)) add(`${p}.modality`, 'is not supported by this family.');
   });
   if (mix.preset === 'focused') { if (families.size !== 1) add('slots', 'focused work must stay within one selected family.'); }
@@ -290,7 +290,7 @@ function spreadChecks(d, c, add) {
   if (methods.size < families.size) add('slots', 'distinct methods must cover the distinct families.');
   if (families.size >= 2 && makers.size < VARIETY_CONFIG.min_makers) add('slots', 'two or more families need at least two maker seats.');
   const tools = list(c.host_capabilities?.tools ?? c.hostCapabilities?.tools), media = ['image', 'video', 'audio', '3d'].filter(x => tools.includes(x)), allowed = card.dials?.modalities?.value;
-  if (media.length > 1 && !(Array.isArray(allowed) && allowed.length === 1) && modalities.size < 2) add('slots', 'use at least two available modalities or record the restriction in the job card.');
+  if (media.length > 1 && !(Array.isArray(allowed) && allowed.length === 1) && modalities.size < 2) add('slots', 'use at least two available modalities or record the restriction on the spec sheet.');
 }
 function councilChecks(d, c, add, warn) {
   const proposals = list(d.proposals), critiques = list(d.critiques), ballots = list(d.ranking?.ballots), labels = new Set(proposals.map(p => p?.label)), team = list(teamOf(c).seats), full = tierOf(c) !== 'quick';

@@ -39,7 +39,8 @@ function jobContext(input, context) {
     // One list: the same questions the brief's ASK line and annex.questions carry.
     questions: rest.annex.questions,
     questions_note: INTAKE_ASK,
-    route: { mode: routed.mode, reason: routed.mode_reason, next },
+    // When the job type is only a guess, the one question to ask comes back here, before anyone is named.
+    route: { mode: routed.mode, reason: routed.mode_reason, ...(routed.ask ? { ask_first: routed.question } : {}), next },
     ...rest,
   };
 }

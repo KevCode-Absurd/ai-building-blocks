@@ -89,7 +89,7 @@ Send the complete \`state\` and \`state_digest\` from the latest result, unchang
 - Dials are silent defaults: state them in one line (\`dials_line\`). An ordinary request changes no saved default.
 
 ## staff (ai-blocks-team-plan/2)
-\`proposal_id\` equals the proposal returned for this job card. Changed seats need \`amendments\` with reasons. The lead is not the coordinator and not a judge. A coordinator never makes the work; a maker never judges it. Each seat loads its \`focus_methods\` in full; the rest of its toolbox is an allowed palette.
+\`proposal_id\` equals the proposal returned for this spec sheet. Changed seats need \`amendments\` with reasons. The lead is not the coordinator and not a judge. A coordinator never makes the work; a maker never judges it. Each seat loads its \`focus_methods\` in full; the rest of its toolbox is an allowed palette.
 
 ## diverge (ai-blocks-routes/1, ai-blocks-spread/1)
 - Each route: owner_seat, the 1 to 6 \`methods\` it uses ({slug, revision_sha256}, pinned in the owner's toolbox) and, for brand work, its \`references\`. Rival routes sharing more than 60% of either are refused.

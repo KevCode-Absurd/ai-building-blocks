@@ -136,7 +136,7 @@ async function applyEvent(view, entry, base, catalogue) {
     if(document.tier&&document.tier!==base.tier)fail('document.tier','The staffed tier must match the scoped job.');
     const original=proposeTeam({task:base.request,job:base.job_type.job,job_card:view.card,tier:base.tier,host_capabilities:base.host_capabilities},catalogue);
     if(!original.ok)fail('document.proposal_id','The catalogue cannot staff this job yet. Resolve the reported role or palette gaps.');
-    if(document.proposal_id!==original.proposal_id)fail('document.proposal_id','Use the proposal returned for this job card and current catalogue.');
+    if(document.proposal_id!==original.proposal_id)fail('document.proposal_id','Use the proposal returned for this spec sheet and current catalogue.');
     if(canonicalJobJSON(document.seats)!==canonicalJobJSON(original.seats)&&!document.amendments?.length)fail('document.amendments','Explain changes to the proposed roster.');
     check(stageSchema.staff, document, context);
     const lead=document.seats.find(s=>s.seat_id===document.lead_seat_id);if(!lead||types(lead).has('coordinator')||types(lead).has('judge'))fail('document.lead_seat_id','Choose a task-specific expert lead separate from the general coordinator and independent judge.');

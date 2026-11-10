@@ -1,0 +1,268 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "professional-services-marketer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "service-page",
+      "task": "Write a service or practice-area page",
+      "kind": "web_page",
+      "items": [
+        { "ref": "kit:prompts/service-page-draft", "use": "build", "when": "When you need a first draft a careful buyer can understand on one read" },
+        { "ref": "kit:skills/regulated-service-page", "use": "build", "when": "When the page must lead with the client's problem and stay inside the profession's rules" },
+        { "ref": "library:trust-barrier-fixer", "type": "skill", "use": "brief", "when": "Before writing, to list the doubts this buyer holds and the proof that answers each" },
+        { "ref": "library:top-of-page-headline-writer", "type": "prompt", "use": "explore", "when": "When the top of the page is flat, to get five headlines with a subhead and a pick" },
+        { "ref": "kit:prompts/claims-check", "use": "check", "when": "Before the page goes live, to catch promises of results and claims the firm cannot make" },
+        { "ref": "library:clear-before-clever-copy-checker", "type": "prompt", "use": "check", "when": "When the draft sounds smart but a first-time client might not follow it" },
+        { "ref": "library:robert-cialdini", "type": "mind", "use": "think", "when": "When the page leans on pressure, to use real proof and authority honestly instead" }
+      ]
+    },
+    {
+      "id": "work-with-me-page",
+      "task": "Write a 'work with me' page and discovery call flow",
+      "kind": "web_page",
+      "items": [
+        { "ref": "kit:prompts/service-page-draft", "use": "build", "when": "When a coach or consultant needs one page that says who it is for, how it works and the cost" },
+        { "ref": "library:booking-page-designer", "type": "skill", "use": "build", "when": "When the page ends in a call booking and needs open times and qualifying questions" },
+        { "ref": "library:agency-sales-discovery-coach", "type": "agent", "use": "build", "when": "When the expert hates selling and needs a calm plan of questions for the first call" },
+        { "ref": "library:sales-call-prep-assistant", "type": "agent", "use": "brief", "when": "Before each booked call, to prepare from what is known about the person" },
+        { "ref": "library:three-tier-price-ladder-drafter", "type": "prompt", "use": "explore", "when": "When the offer has no clear packages, to draft three levels and compare them" },
+        { "ref": "library:landing-page-fix-loop", "type": "agent", "use": "check", "when": "When the page is drafted, to audit it, rewrite what fails and check again" }
+      ]
+    },
+    {
+      "id": "claims-check",
+      "task": "Check a page, ad, email or proposal before it is published",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/claims-check", "use": "check", "when": "Before anything from a law, accounting, insurance, coaching or design firm goes live" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When copy has many claims, to sort each as fine, needs proof or cut" },
+        { "ref": "library:claim-and-proof-matcher", "type": "skill", "use": "check", "when": "When you hold the firm's evidence, to see which claims it supports and which go too far" },
+        { "ref": "library:ad-and-page-policy-checker", "type": "skill", "use": "check", "when": "When the piece is an ad and its page, to flag platform policy risks line by line" }
+      ]
+    },
+    {
+      "id": "intake-script",
+      "task": "Write an intake script, form and client questionnaire",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/intake-script", "use": "build", "when": "When the people answering phone, inbox or form need a calm script that gives no advice" },
+        { "ref": "library:questionnaire-writer", "type": "skill", "use": "build", "when": "When a new client or project needs a brief questionnaire aimed at what they know" },
+        { "ref": "library:multi-step-form-designer", "type": "skill", "use": "build", "when": "When the web form asks too much at once and should be staged" },
+        { "ref": "library:agency-legal-client-intake", "type": "agent", "use": "build", "when": "When a law firm's intake notes must become a summary with urgency flags for the lawyer" },
+        { "ref": "library:plain-words-interface-rewriter", "type": "skill", "use": "check", "when": "When the form uses the firm's terms, to rewrite it in the words clients use" }
+      ]
+    },
+    {
+      "id": "enquiry-to-consultation",
+      "task": "Design the path from first enquiry to booked consultation",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/enquiry-to-consultation", "use": "build", "when": "When you need acknowledgement, intake, booking, reminders and follow-up as one path" },
+        { "ref": "library:new-inquiry-reply-drafter", "type": "skill", "use": "build", "when": "When new enquiries wait in the inbox and each needs qualifying and a draft reply" },
+        { "ref": "library:booking-page-designer", "type": "skill", "use": "build", "when": "When callers should book their own slot and the booking flow needs designing" },
+        { "ref": "library:follow-up-email-sequence-writer", "type": "prompt", "use": "build", "when": "When an enquirer goes quiet, to follow up with a new reason each time" },
+        { "ref": "library:lead-grader", "type": "skill", "use": "brief", "when": "When there are more enquiries than time, to grade them by how soon each must act" }
+      ]
+    },
+    {
+      "id": "enquiry-response-fix",
+      "task": "Find why enquiries go unanswered or never book",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/enquiry-response-fix", "use": "build", "when": "When replies are slow, many never book, or the firm cannot say where clients come from" },
+        { "ref": "library:lead-source-field-checker", "type": "skill", "use": "check", "when": "When the firm records where leads came from, to test whether those records can be trusted" },
+        { "ref": "library:explain-appointment-no-show-patterns", "type": "workflow", "use": "check", "when": "When booked consultations are missed, to find the pattern in who does not turn up" },
+        { "ref": "library:marketing-performance-report", "type": "skill", "use": "build", "when": "When the partners need the findings as wins, misses and what to change" }
+      ]
+    },
+    {
+      "id": "onboarding-sequence",
+      "task": "Write a new-client welcome and onboarding sequence",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/client-updates-and-reminders", "use": "build", "when": "When a new client needs to know what happens next, what to send and by when" },
+        { "ref": "library:email-sequence-writer", "type": "skill", "use": "build", "when": "When the welcome runs over several emails and needs timing and subject lines" },
+        { "ref": "library:prepare-a-clear-client-project-kickoff", "type": "workflow", "use": "brief", "when": "When the work starts with a kickoff and needs a one-page brief first" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When clients miss the emails, to try subject lines from several angles" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "Before the sequence is loaded, to get cuts, subject fixes and a score for each email" }
+      ]
+    },
+    {
+      "id": "deadline-reminders",
+      "task": "Write deadline, document and renewal reminders",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/client-updates-and-reminders", "use": "build", "when": "When the firm supplies the dates and needs a year of reminders that cut chasing time" },
+        { "ref": "library:follow-up-email-sequence-writer", "type": "prompt", "use": "build", "when": "When one reminder is ignored and the next ones need a fresh reason and one clear ask" },
+        { "ref": "library:tense-email-softener", "type": "prompt", "use": "explore", "when": "When a late-documents chaser sounds cross, to get a version the client wants to help with" },
+        { "ref": "kit:prompts/claims-check", "use": "check", "when": "When a renewal note mentions cover, savings or outcomes, to check it promises nothing" }
+      ]
+    },
+    {
+      "id": "project-stage-updates",
+      "task": "Write client update emails for each project stage",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/client-updates-and-reminders", "use": "build", "when": "When a matter or design project moves stage and the client must know what it means" },
+        { "ref": "library:client-project-communication-plan", "type": "skill", "use": "brief", "when": "Before the updates, to set channels, update dates and how decisions are recorded" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When an update is full of the profession's terms, to put it in plain words" },
+        { "ref": "library:dale-carnegie", "type": "mind", "use": "think", "when": "When the update carries a delay or extra cost and must be said without blame" }
+      ]
+    },
+    {
+      "id": "monthly-client-communications",
+      "task": "Plan and write the monthly client newsletter",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:workflows/monthly-client-communications", "use": "build", "when": "In the last week of each month, to plan next month's newsletter, reminders and posts" },
+        { "ref": "library:prepare-a-useful-customer-newsletter-issue", "type": "workflow", "use": "build", "when": "When client questions and firm news should become one useful issue" },
+        { "ref": "library:weekly-newsletter-keeper", "type": "agent", "use": "build", "when": "When the firm sends often and wants each issue drafted and checked against its voice" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When open rates are low, to compare subject lines before sending" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "Before the issue is sent, to get cuts, a pacing check and a send or hold verdict" }
+      ]
+    },
+    {
+      "id": "plain-english-explainers",
+      "task": "Explain a term, process or document in plain English",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/plain-english-explainer", "use": "build", "when": "When clients keep asking what something means and you want a short general-information piece" },
+        { "ref": "library:faq-page-from-questions-writer", "type": "prompt", "use": "build", "when": "When you have real client questions and answers and want one FAQ page from them" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the draft still reads like the profession wrote it, to cut and explain each change" },
+        { "ref": "library:blog-post-publish-check-loop", "type": "agent", "use": "check", "when": "Before an explainer post is published, to check it and fix what fails" },
+        { "ref": "library:carl-richards", "type": "mind", "use": "think", "when": "When the subject is money or cover, to make the choice easy to talk about" },
+        { "ref": "library:george-orwell", "type": "mind", "use": "think", "when": "When a sentence hides behind long words, to say the same thing in short ones" }
+      ]
+    },
+    {
+      "id": "reviews-and-testimonials",
+      "task": "Ask for reviews and testimonials the honest way",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/review-request", "use": "build", "when": "At the end of a piece of work, to ask for a review and, separately, a testimonial" },
+        { "ref": "kit:skills/proof-and-reviews", "use": "build", "when": "When the firm needs a fair process: every client asked, no incentive and no screening" },
+        { "ref": "library:testimonial-request-writer", "type": "skill", "use": "explore", "when": "When clients do not know what to write, to try a request with three easy questions" },
+        { "ref": "library:review-request-and-reply-planner", "type": "skill", "use": "brief", "when": "When you must decide when to ask and how to answer good and bad reviews" },
+        { "ref": "library:public-review-reply-desk", "type": "agent", "use": "build", "when": "When new public reviews arrive and each needs a checked reply with risky ones held" }
+      ]
+    },
+    {
+      "id": "case-and-project-stories",
+      "task": "Write case stories and portfolio write-ups",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/proof-and-reviews", "use": "build", "when": "When a case or project is shown as proof and needs permission and fair context" },
+        { "ref": "library:portfolio-case-study-writer", "type": "skill", "use": "build", "when": "When a studio has project notes and needs a write-up of the brief, choices and result" },
+        { "ref": "library:turn-a-customer-interview-into-a-case-outline", "type": "workflow", "use": "brief", "when": "When a client interview should become a case story and you need the evidence gaps" },
+        { "ref": "library:social-proof-placer", "type": "skill", "use": "build", "when": "When you must choose which story or quote answers which doubt, and where it goes" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a write-up says 'stunning' and 'bespoke', to make each line true and specific" }
+      ]
+    },
+    {
+      "id": "solo-expert-plan",
+      "task": "Write a 90-day client plan for a solo expert",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/ninety-day-client-plan", "use": "build", "when": "When a solo coach or consultant wants a steadier flow of clients without a big ad budget" },
+        { "ref": "library:niche-readiness-checker", "type": "skill", "use": "brief", "when": "Before the plan, to test whether the expert's niche is clear enough to market" },
+        { "ref": "library:one-page-marketing-plan-builder", "type": "skill", "use": "explore", "when": "When you want a second plan on one page to compare, from stranger to loyal client" },
+        { "ref": "library:linkedin-content-strategy", "type": "skill", "use": "build", "when": "When LinkedIn is the main channel and needs topics and a rhythm the expert can keep" },
+        { "ref": "library:marketing-decision-coach", "type": "skill", "use": "check", "when": "When the plan includes a move you doubt, to get a straight verdict with reasons" }
+      ]
+    },
+    {
+      "id": "firm-foundations",
+      "task": "Set up a firm's marketing foundations in 90 days",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/firm-marketing-foundations", "use": "build", "when": "When a firm's website, intake and proof have grown up piece by piece" },
+        { "ref": "library:message-first-website-guide", "type": "skill", "use": "brief", "when": "When the site needs replanning from the message down, before any design" },
+        { "ref": "library:local-search-listing-manager", "type": "skill", "use": "build", "when": "When the firm serves an area and its map listing and local search need fixing" },
+        { "ref": "library:landing-page-auditor", "type": "skill", "use": "check", "when": "When key pages exist, to rank what stops visitors from getting in touch" }
+      ]
+    },
+    {
+      "id": "referrals-and-reactivation",
+      "task": "Build a referral and past-client reactivation pack",
+      "kind": "email",
+      "items": [
+        { "ref": "library:word-of-mouth-planner", "type": "skill", "use": "explore", "when": "When referrals happen by luck, to get scored ideas for making clients talk" },
+        { "ref": "library:email-sequence-writer", "type": "skill", "use": "build", "when": "When past clients have gone quiet and need a short, useful run of emails" },
+        { "ref": "library:elevator-pitch-writer", "type": "skill", "use": "build", "when": "When referrers cannot say what the firm does, to give them a line to pass on" },
+        { "ref": "kit:prompts/claims-check", "use": "check", "when": "When the pack offers a thank-you or reward, to check the profession allows it" },
+        { "ref": "library:joe-girard", "type": "mind", "use": "think", "when": "When the firm forgets clients after the invoice, to plan steady follow-up" }
+      ]
+    },
+    {
+      "id": "workshop-and-lead-magnet",
+      "task": "Plan a free workshop or guide that leads to paid work",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:lead-magnet-planner", "type": "skill", "use": "explore", "when": "When you need several guide or checklist ideas, the best pick and its page and emails" },
+        { "ref": "library:free-giveaway-designer", "type": "skill", "use": "explore", "when": "When the free piece must lead to the paid service, to design it backwards from that" },
+        { "ref": "library:prepare-a-webinar-people-can-follow", "type": "workflow", "use": "build", "when": "When the workshop is online and must teach one clear result" },
+        { "ref": "library:webinar-promotion-planner", "type": "skill", "use": "build", "when": "When seats need filling and attendees need a follow-up" },
+        { "ref": "kit:prompts/claims-check", "use": "check", "when": "Before the sign-up page goes live, to check it gives information, not advice or promises" }
+      ]
+    },
+    {
+      "id": "fee-proposal",
+      "task": "Write a fee proposal and scope of services",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature", "type": "workflow", "use": "build", "when": "When a first meeting went well and its notes must become a checked proposal" },
+        { "ref": "library:contract-and-proposal-drafter", "type": "skill", "use": "build", "when": "When you need a proposal or scope of work draft for the firm's lawyer to review" },
+        { "ref": "library:three-tier-price-ladder-drafter", "type": "prompt", "use": "explore", "when": "When the client could buy more or less, to offer three levels of service" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the proposal is drafted, to have a fresh reader check it against the brief" }
+      ]
+    },
+    {
+      "id": "about-and-bios",
+      "task": "Write the about page and team bios",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:brand-origin-story-writer", "type": "skill", "use": "build", "when": "When the firm's about page is a list of dates and needs a human story" },
+        { "ref": "library:linkedin-profile-rewriter", "type": "skill", "use": "build", "when": "When partners' profiles must match the new page and say who they help" },
+        { "ref": "library:elevator-pitch-writer", "type": "skill", "use": "explore", "when": "When nobody can say what the firm does in one breath, to get three lengths to choose from" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a bio says 'passionate' and 'trusted', to make each line true and specific" }
+      ]
+    },
+    {
+      "id": "local-and-social-posts",
+      "task": "Write local, community and LinkedIn posts for the firm",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:workflows/monthly-client-communications", "use": "brief", "when": "When posts should follow the month's client themes and deadlines" },
+        { "ref": "library:social-post-planner", "type": "skill", "use": "build", "when": "When the firm needs a month of posts planned and written for its platforms" },
+        { "ref": "library:linkedin-content-strategy", "type": "skill", "use": "brief", "when": "When a partner posts at random and needs set topics and a rhythm" },
+        { "ref": "kit:prompts/claims-check", "use": "check", "when": "Before posts are scheduled, to check none gives advice or promises a result" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When copy states a law, rate, deadline or figure you cannot trace to the firm or a source" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before anything goes to a client, to catch typos and terms used two ways" },
+    { "ref": "library:brand-voice-rules-writer", "type": "skill", "use": "brief", "when": "At the start with a new firm, to set tone and word choices every later piece follows" }
+  ],
+  "helpers": [
+    { "role": "compliance-specialist", "when": "When a claim, review practice or referral reward may break the profession's rules" },
+    { "role": "local-marketing-specialist", "when": "When the firm needs its map listing, local pages and directories put right" },
+    { "role": "email-marketing-specialist", "when": "When sequences and reminders must be built, timed and sent in an email tool" },
+    { "role": "proposal-writer", "when": "When the job is a formal tender or a long fee proposal, not a short scope" },
+    { "role": "reputation-manager", "when": "When bad reviews or search results are the main thing putting clients off" },
+    { "role": "front-desk-coordinator", "when": "When the intake script needs turning into daily front desk routines and cover" }
+  ],
+  "gaps": [
+    "No library item knows the advertising rules for lawyers, accountants, insurers or coaches; the claim checkers are general",
+    "No library item writes a phone or inbox intake script that gathers facts and gives no advice; only the kit prompt does",
+    "No library item builds a year of deadline or document reminders from dates a firm supplies",
+    "No library item writes an insurance renewal sequence or a claims-day checklist for clients",
+    "No library item writes project stage updates for architecture or interior design clients",
+    "No library item writes a staged fee proposal for a design practice with scope, exclusions and stages",
+    "No library item plans referrals for professions that may not pay for them",
+    "No library item writes local community posts for a small agency or practice",
+    "No library item logs where a small firm's clients come from when it has no CRM",
+    "No library item makes a one-page checklist or job aid for clients to follow"
+  ]
+}

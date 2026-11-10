@@ -1,0 +1,257 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "reputation-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "reply-batch",
+      "task": "Reply to a batch of reviews",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:workflows/weekly-review-desk", "use": "brief", "when": "Each week, or daily for busy venues and apps, to run the reply desk in a fixed order" },
+        { "ref": "kit:skills/review-reply-desk", "use": "build", "when": "When reviews from several platforms need sorting into buckets and a reply for each" },
+        { "ref": "kit:prompts/review-reply-batch", "use": "build", "when": "When you have one batch to answer now, with risky ones held for the owner" },
+        { "ref": "library:customer-message-tone-and-urgency-review", "type": "skill", "use": "brief", "when": "Before replying, to rank the batch by tone, urgency and warning signs" },
+        { "ref": "library:review-reply-batch-writer", "type": "prompt", "use": "explore", "when": "When replies start to sound the same, to get a second set written a different way" },
+        { "ref": "library:public-review-reply-desk", "type": "agent", "use": "build", "when": "When reviews arrive in a steady stream and each batch needs checked replies" },
+        { "ref": "library:angry-customer-reply-checker", "type": "skill", "use": "check", "when": "Before a reply to an upset reviewer is posted, to check promises, facts and tone" }
+      ]
+    },
+    {
+      "id": "one-bad-review",
+      "task": "Write a careful reply to one bad review",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/one-bad-review", "use": "build", "when": "When one negative review has upset the owner and needs a public reply and a private note" },
+        { "ref": "library:angry-customer-reply-writer", "type": "prompt", "use": "explore", "when": "When you want a second draft that names the feeling first, to compare with yours" },
+        { "ref": "library:agency-hospitality-guest-services", "type": "agent", "use": "build", "when": "When the reviewer was a hotel or restaurant guest and the reply needs a fair fix" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before the owner approves, to check each promise in the reply can be kept" },
+        { "ref": "library:harriet-lerner", "type": "mind", "use": "think", "when": "When the reply says sorry but then explains it away, to apologise without a 'but'" },
+        { "ref": "library:chris-voss", "type": "mind", "use": "think", "when": "When the private message must calm someone who feels unheard" }
+      ]
+    },
+    {
+      "id": "team-reply-guide",
+      "task": "Write a review reply guide for the team",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/team-reply-guide", "use": "build", "when": "When several people reply to reviews and the business sounds like different firms" },
+        { "ref": "library:voice-and-tone-guide-writer", "type": "skill", "use": "brief", "when": "When there is no written voice yet, to set tone by situation with word lists" },
+        { "ref": "library:brand-voice-one-pager-writer", "type": "prompt", "use": "explore", "when": "When the team needs one page with before and after examples, to compare formats" },
+        { "ref": "library:draft-brand-voice-checker", "type": "skill", "use": "check", "when": "When the guide is in use, to check real replies against it and rank the slips" }
+      ]
+    },
+    {
+      "id": "repeat-complaint-report",
+      "task": "Report the month's repeat complaints and praise",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/repeat-complaint-report", "use": "build", "when": "When a month of reviews from every platform needs ranking with counts, quotes and trend" },
+        { "ref": "library:review-insight-finder", "type": "skill", "use": "build", "when": "When you paste product reviews and need complaints, praise and requests ranked" },
+        { "ref": "library:review-reason-spotter", "type": "prompt", "use": "brief", "when": "When you need the reason behind each review named before you count them" },
+        { "ref": "library:wrong-buyer-review-checker", "type": "skill", "use": "check", "when": "When low reviews may come from people the product was never for" },
+        { "ref": "library:monthly-customer-voice-keeper", "type": "agent", "use": "build", "when": "Each month, to keep one running record of what customers say across sources" },
+        { "ref": "library:taiichi-ohno", "type": "mind", "use": "think", "when": "When the same complaint returns every month, to trace it to the step that causes it" }
+      ]
+    },
+    {
+      "id": "monthly-reputation-review",
+      "task": "Run the monthly reputation review with the owner",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/monthly-reputation-review", "use": "build", "when": "In the first week of each month, for about an hour of work and 20 minutes with the owner" },
+        { "ref": "library:brand-mention-tracker", "type": "skill", "use": "brief", "when": "Before the review, to gather ratings and mentions from many sites in one report" },
+        { "ref": "library:social-listening-brief-writer", "type": "skill", "use": "brief", "when": "When talk about the business happens outside review sites, to group it by theme" },
+        { "ref": "library:marketing-performance-report", "type": "skill", "use": "build", "when": "When the owner wants ratings, volume and reply times written up with what to change" }
+      ]
+    },
+    {
+      "id": "earn-more-reviews",
+      "task": "Plan how to earn more reviews the honest way",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/honest-review-ask", "use": "build", "when": "When you write the ask: the same for every customer, no rewards and no filtering" },
+        { "ref": "library:reply-to-your-reviews-safely-and-plan-how-to-get-more", "type": "workflow", "use": "build", "when": "When replies and a plan to get more reviews are needed in one run" },
+        { "ref": "library:review-request-and-reply-planner", "type": "skill", "use": "brief", "when": "When you must decide the moment to ask and the channel to ask through" },
+        { "ref": "library:survey-ready-order-finder", "type": "skill", "use": "brief", "when": "When a shop needs the list of buyers whose order arrived a week or two ago" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When review emails go unopened, to compare subject lines from several angles" },
+        { "ref": "library:honest-persuasion-editor", "type": "skill", "use": "check", "when": "Before the ask is sent, to check it pressures nobody and steers no one to five stars" }
+      ]
+    },
+    {
+      "id": "flag-review",
+      "task": "Decide whether to flag a review and file the flag",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/review-flag-request", "use": "build", "when": "When one review may break a platform's rules and you must decide and write the flag" },
+        { "ref": "kit:skills/policy-flags-and-takedowns", "use": "build", "when": "When you need the rule it breaks, the evidence and the platform's own tool to file through" },
+        { "ref": "library:fake-review-spotter", "type": "skill", "use": "check", "when": "When reviews look planted, to get a trust rating and the red flags behind it" },
+        { "ref": "library:fact-vs-opinion-sorter", "type": "prompt", "use": "check", "when": "Before flagging, to split the review's false facts from opinion, which platforms keep" }
+      ]
+    },
+    {
+      "id": "review-attack",
+      "task": "Respond to a burst of bad reviews or a viral complaint",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/review-attack-response", "use": "build", "when": "When one and two-star reviews arrive in a burst, look coordinated or come with a demand" },
+        { "ref": "kit:skills/policy-flags-and-takedowns", "use": "build", "when": "When many of the reviews break platform rules and need flags with evidence" },
+        { "ref": "library:crisis-response-planner", "type": "skill", "use": "build", "when": "When the cause is a real failure and you need who to tell and what to do for 30 days" },
+        { "ref": "library:fake-review-spotter", "type": "skill", "use": "check", "when": "When you must judge whether the burst is real customers or a campaign" },
+        { "ref": "library:social-listening-brief-writer", "type": "skill", "use": "brief", "when": "When the complaint is spreading on social media and you need what is being said" },
+        { "ref": "library:mary-barra", "type": "mind", "use": "think", "when": "When the first instinct is to defend the firm, to start from the people affected" }
+      ]
+    },
+    {
+      "id": "private-complaint-replies",
+      "task": "Write private replies that put a complaint right",
+      "kind": "email",
+      "items": [
+        { "ref": "library:customer-reply-drafter", "type": "skill", "use": "build", "when": "When a reviewer is contacted privately and the reply must fit their situation" },
+        { "ref": "library:apology-email-writer", "type": "skill", "use": "build", "when": "When the business was at fault and owes a short apology that says what happens next" },
+        { "ref": "library:refund-request-reply-writer", "type": "prompt", "use": "build", "when": "When the reviewer wants money back and the answer is yes, partial or no" },
+        { "ref": "library:angry-customer-reply-checker", "type": "skill", "use": "check", "when": "Before sending, to check the facts, the promises and the tone" },
+        { "ref": "library:tony-hsieh", "type": "mind", "use": "think", "when": "When the reply follows policy but leaves the customer no better off" }
+      ]
+    },
+    {
+      "id": "testimonial-campaign",
+      "task": "Run a testimonial request campaign",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/testimonial-request", "use": "build", "when": "When you ask one happy customer, with three questions and a note on how words are used" },
+        { "ref": "kit:skills/testimonial-and-consent-library", "use": "brief", "when": "When you plan who to ask, when, and how each answer is approved and recorded" },
+        { "ref": "library:testimonial-request-writer", "type": "skill", "use": "explore", "when": "When the first request gets thin answers, to try a different set of questions" },
+        { "ref": "library:loyalty-customer-list-builder", "type": "skill", "use": "brief", "when": "When a shop needs its best customers listed so you know who to ask first" },
+        { "ref": "library:follow-up-email-sequence-writer", "type": "prompt", "use": "build", "when": "When a customer said yes but has not replied, to nudge with a new reason" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "Before the request is sent, to cut it down and check it asks for one thing" }
+      ]
+    },
+    {
+      "id": "testimonial-library",
+      "task": "Build a testimonial library with permissions tracked",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/testimonial-and-consent-library", "use": "build", "when": "When quotes sit in inboxes and nobody knows which may be used or where" },
+        { "ref": "library:monthly-review-proof-keeper", "type": "agent", "use": "build", "when": "Each month, to add new reviews, check approved quotes and link claims to evidence" },
+        { "ref": "library:claim-and-proof-matcher", "type": "skill", "use": "check", "when": "When a quote states a result, to check the business holds evidence for it" }
+      ]
+    },
+    {
+      "id": "video-testimonial-kit",
+      "task": "Prepare a video testimonial kit",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/testimonial-and-consent-library", "use": "brief", "when": "Before filming, to record what the customer agrees to and where the video will run" },
+        { "ref": "library:buying-story-interview-guide", "type": "skill", "use": "build", "when": "When you need questions that draw out the before, the choice and the result on camera" },
+        { "ref": "library:turn-reviews-into-a-checked-sales-video-and-cut-list", "type": "workflow", "use": "build", "when": "When written reviews should become a video script with every line sourced" },
+        { "ref": "library:descript", "type": "tool", "use": "build", "when": "When a customer's recording needs trimming and captions by editing the transcript" }
+      ]
+    },
+    {
+      "id": "advocate-programme",
+      "task": "Set up a customer advocate programme",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:build-a-vip-program-for-your-best-customers", "type": "workflow", "use": "build", "when": "When a shop wants its best customers known, thanked and invited to speak up" },
+        { "ref": "library:top-customer-touch-planner", "type": "skill", "use": "build", "when": "When you have a budget for the top customers and want a plan with a control group" },
+        { "ref": "library:referral-program-designer", "type": "skill", "use": "explore", "when": "When advocates might also refer friends and you want a reward design to consider" },
+        { "ref": "library:customer-content-planner", "type": "skill", "use": "build", "when": "When you want customers posting their own photos and stories about the business" },
+        { "ref": "kit:prompts/honest-review-ask", "use": "check", "when": "When the programme touches reviews, to check no reward is tied to leaving one" }
+      ]
+    },
+    {
+      "id": "proof-bank",
+      "task": "Turn the best reviews into proof for pages and ads",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:social-proof-placer", "type": "skill", "use": "build", "when": "When you know buyers' doubts and must pick which quote answers each and where" },
+        { "ref": "library:review-quote-ad-card-planner", "type": "prompt", "use": "explore", "when": "When review lines should become quote cards, to plan several with pictures and text" },
+        { "ref": "library:review-ad-copy", "type": "workflow", "use": "build", "when": "When reviews should drive an ad, to get an angle and copy built from buyers' words" },
+        { "ref": "library:structured-data-writer", "type": "skill", "use": "build", "when": "When ratings should show in search results and the page needs working markup" },
+        { "ref": "kit:skills/testimonial-and-consent-library", "use": "check", "when": "Before a quote is published, to confirm consent covers this use and the edit is fair" }
+      ]
+    },
+    {
+      "id": "case-story",
+      "task": "Turn a happy customer into a case story",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:turn-a-customer-interview-into-a-case-outline", "type": "workflow", "use": "build", "when": "When one customer interview should become a case outline with the evidence gaps listed" },
+        { "ref": "library:buying-story-interview-guide", "type": "skill", "use": "brief", "when": "Before the call, to plan questions that follow the customer's own timeline" },
+        { "ref": "kit:prompts/testimonial-request", "use": "build", "when": "When the customer has no time for a call and will answer three written questions" }
+      ]
+    },
+    {
+      "id": "mention-monitoring",
+      "task": "Track what people say about the business beyond reviews",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:brand-mention-tracker", "type": "skill", "use": "build", "when": "When you need reviews, ratings and mentions from many sites in one report" },
+        { "ref": "library:social-listening-brief-writer", "type": "skill", "use": "build", "when": "When you need social talk about the brand grouped by theme with notable posts" },
+        { "ref": "library:comment-mining-analyst", "type": "skill", "use": "build", "when": "When comments under the brand's own posts hold questions and complaints to sort" },
+        { "ref": "library:reddit-answer-planner", "type": "skill", "use": "brief", "when": "When forum threads about the category keep being cited and you must pick which to answer" }
+      ]
+    },
+    {
+      "id": "ai-and-search-facts",
+      "task": "Check what search and AI tools say about the business",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:brand-facts-accuracy-fixer", "type": "skill", "use": "check", "when": "When an AI tool states wrong facts about the business, to list each with its fix" },
+        { "ref": "library:ai-brand-mention-scanner", "type": "skill", "use": "check", "when": "When the owner asks where the brand is mentioned online and how strongly" },
+        { "ref": "library:local-search-listing-manager", "type": "skill", "use": "build", "when": "When the map listing shows wrong hours, categories or photos next to the reviews" },
+        { "ref": "library:google-ratings-and-store-badge-planner", "type": "skill", "use": "build", "when": "When a shop wants its star ratings and store badge to show on Google" }
+      ]
+    },
+    {
+      "id": "feedback-analysis",
+      "task": "Analyse survey, NPS and feedback comments",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:feedback-theme-finder", "type": "skill", "use": "build", "when": "When you have NPS, CSAT or open comments and need themes and trends in a report" },
+        { "ref": "library:feedback-pile-sorter", "type": "skill", "use": "build", "when": "When feedback comes from tickets, surveys and calls and needs one ranked signal" },
+        { "ref": "library:post-purchase-survey-builder", "type": "skill", "use": "brief", "when": "When there is no survey yet and you need short questions to send after purchase" },
+        { "ref": "library:survey-answer-truth-checker", "type": "prompt", "use": "check", "when": "Before acting on a survey, to see which answers can be trusted" }
+      ]
+    },
+    {
+      "id": "fix-the-cause",
+      "task": "Trace a repeat complaint to its cause and hand over a fix",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/repeat-complaint-report", "use": "brief", "when": "When you must name the one fix that would remove the most complaints" },
+        { "ref": "library:root-cause-finder", "type": "skill", "use": "build", "when": "When a problem keeps coming back and needs a checked chain of whys" },
+        { "ref": "library:support-issue-cause-investigator", "type": "skill", "use": "build", "when": "When related tickets and reviews should be read together for a shared cause" },
+        { "ref": "library:hard-to-use-thing-diagnoser", "type": "skill", "use": "build", "when": "When people keep getting the same thing wrong and the design may be at fault" },
+        { "ref": "library:wrong-buyer-review-checker", "type": "skill", "use": "check", "when": "When the cause may be the promise on the page, not the product or service" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-voice-rules-writer", "type": "skill", "use": "brief", "when": "At the start with a new client, to set the voice every reply and request follows" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a reply or proof line states a fact about the business you cannot trace" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before replies are posted in public, to catch typos and names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "customer-support-specialist", "when": "When a review needs the order looked up, a refund made or a case worked to the end" },
+    { "role": "pr-specialist", "when": "When a complaint reaches the press or needs a public statement" },
+    { "role": "cx-manager", "when": "When repeat complaints point to a broken journey that needs redesigning" },
+    { "role": "local-marketing-specialist", "when": "When the map listing and local pages need fixing alongside the reviews" },
+    { "role": "compliance-specialist", "when": "When a review ask, reward or takedown may break consumer law or sector rules" },
+    { "role": "video-producer", "when": "When video testimonials need filming, editing and versions for each channel" }
+  ],
+  "gaps": [
+    "No library item knows each platform's review rules for Google, Trustpilot, Yelp, Tripadvisor or app stores; only the kit does",
+    "No library item builds an evidence pack for a review flag or drafts the next step when a platform refuses",
+    "No library item handles a coordinated review attack or a demand for money to remove reviews",
+    "No library item records testimonial consent: what was agreed, where it may be used and when it lapses",
+    "No library item makes a video testimonial kit: questions, a filming guide for a phone and a release form",
+    "No library item sets up a B2B reference customer programme with reference calls and no reward for reviews",
+    "No library item explains consumer law on review incentives, gating and fake reviews by country",
+    "No library item works on the search results for a brand name or a knowledge panel",
+    "No library item covers employer review sites or marketplace seller feedback",
+    "No library item scores a team's past review replies against its reply guide",
+    "No library item writes the private follow-up message that goes with a public review reply"
+  ]
+}

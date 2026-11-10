@@ -1,0 +1,274 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "product-marketing-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "positioning-message-sheet",
+      "task": "Write the positioning and one-page message sheet",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/product-positioning-and-message-sheet", "use": "build", "when": "When buyer evidence is gathered and you need the position, proof and words on one page" },
+        { "ref": "library:positioning-idea-generator", "type": "skill", "use": "explore", "when": "Before you commit, to see several ways to stand apart, each with its own position" },
+        { "ref": "library:one-line-position-writer", "type": "prompt", "use": "explore", "when": "When the position will not fit in one sentence, to draft and compare short versions" },
+        { "ref": "library:map-your-rivals-and-write-a-message-they-cannot-answer", "type": "workflow", "use": "build", "when": "When everyone in the market sounds alike and the message must be one rivals cannot copy" },
+        { "ref": "library:usp-claim-checker", "type": "skill", "use": "check", "when": "When the main claim is drafted, to test it is specific, true and not already a rival's" },
+        { "ref": "library:april-dunford", "type": "mind", "use": "think", "when": "When the position starts from features, to start again from what buyers would use instead" }
+      ]
+    },
+    {
+      "id": "buyer-evidence",
+      "task": "Turn reviews, calls and lost deals into buyer evidence",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/positioning-from-reviews-and-calls", "use": "build", "when": "At the start of positioning work, to turn raw material into alternatives, values and words" },
+        { "ref": "library:customer-research-analyst", "type": "skill", "use": "build", "when": "When you have interviews, surveys or tickets and need patterns and buyers' own words" },
+        { "ref": "library:buying-story-interview-guide", "type": "skill", "use": "brief", "when": "When there is too little evidence, to interview five to eight recent buyers on why they bought" },
+        { "ref": "library:switch-story-mapper", "type": "skill", "use": "build", "when": "When interview notes are in, to map each buying story and the forces behind the switch" },
+        { "ref": "library:deal-win-reason-finder", "type": "prompt", "use": "build", "when": "When you have notes on won and lost deals, to find why you really win" },
+        { "ref": "library:clayton-christensen", "type": "mind", "use": "think", "when": "When the evidence is a list of feature requests, to ask what job the buyer hired this for" }
+      ]
+    },
+    {
+      "id": "buyer-profile",
+      "task": "Build a buyer profile and pick the first audience",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:build-a-buyer-profile-from-interviews-and-reviews", "type": "workflow", "use": "build", "when": "When you have orders and reviews and need a job-based profile writers can use" },
+        { "ref": "library:job-statement-rivals", "type": "workflow", "use": "build", "when": "When you need the customer's job written down and the real rivals for that job named" },
+        { "ref": "library:beachhead-market-picker", "type": "skill", "use": "explore", "when": "When there are several possible audiences, to compare them and pick one to start with" }
+      ]
+    },
+    {
+      "id": "rival-map",
+      "task": "Map what rivals claim and find the open gap",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/rival-claim-map", "use": "build", "when": "When you need a dated table of what five or more rivals and alternatives claim" },
+        { "ref": "library:competitor-profile-writer", "type": "skill", "use": "brief", "when": "When you have rival links and need site, pricing and positioning for each" },
+        { "ref": "library:owned-word-mapper", "type": "skill", "use": "build", "when": "When you want the word each rival owns in buyers' minds and the words nobody owns" },
+        { "ref": "library:rival-gap-message-writer", "type": "prompt", "use": "explore", "when": "When the gap is found, to draft messages that claim it" },
+        { "ref": "library:jack-trout", "type": "mind", "use": "think", "when": "When the client wants to claim a place a bigger rival already holds" }
+      ]
+    },
+    {
+      "id": "quarterly-review",
+      "task": "Run the quarterly positioning and rival review",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/quarterly-positioning-and-rival-review", "use": "build", "when": "Every quarter, or when a major rival launches, prices move or win rates change" },
+        { "ref": "library:monthly-competitor-watcher", "type": "agent", "use": "brief", "when": "Between reviews, to keep a monthly record of what each rival changed" },
+        { "ref": "library:win-and-loss-pattern-finder", "type": "skill", "use": "brief", "when": "When closed deals are logged, to see loss stages, common objections and who you lose to" },
+        { "ref": "library:mark-ritson", "type": "mind", "use": "think", "when": "When the review jumps to new tactics, to go back to the market and the chosen buyer first" }
+      ]
+    },
+    {
+      "id": "comparison-page",
+      "task": "Publish a fair comparison or alternatives page",
+      "kind": "web_page",
+      "items": [
+        { "ref": "kit:workflows/comparison-page-publication", "use": "brief", "when": "When the client wants a 'vs' page, an alternatives page or a table that names rivals" },
+        { "ref": "kit:skills/competitor-comparison-and-claims-check", "use": "build", "when": "When you need a like-for-like comparison where every line can be verified and dated" },
+        { "ref": "library:comparison-page-set-planner", "type": "skill", "use": "explore", "when": "Before writing, to choose between best-of, review, alternative and versus pages" },
+        { "ref": "library:alternative-page-writer", "type": "skill", "use": "build", "when": "When one rival is named and you need a fair page built to rank and persuade" },
+        { "ref": "library:comparison-table-designer", "type": "skill", "use": "build", "when": "When the table itself must help people choose, not only list ticks" },
+        { "ref": "library:claim-and-proof-matcher", "type": "skill", "use": "check", "when": "Before publishing, to see which claims are supported and which go too far" }
+      ]
+    },
+    {
+      "id": "claims-check",
+      "task": "Check every claim in a page, ad or sales sheet",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/competitor-comparison-and-claims-check", "use": "check", "when": "When copy makes objective or comparative claims that a rival or regulator could test" },
+        { "ref": "library:claim-and-proof-matcher", "type": "skill", "use": "check", "when": "When you have the copy and the evidence, to match each claim to its support" },
+        { "ref": "library:ad-claim-proof-gap-finder", "type": "prompt", "use": "check", "when": "When an ad is the piece under review, to pair every claim with proof and list the gaps" }
+      ]
+    },
+    {
+      "id": "homepage-message-check",
+      "task": "Check the homepage against the message sheet",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/homepage-message-check", "use": "check", "when": "After the message sheet is agreed, to check the page line by line and rewrite weak lines" },
+        { "ref": "library:top-of-page-headline-writer", "type": "prompt", "use": "explore", "when": "When the top of the page fails, to get five headlines with a subhead and a pick" },
+        { "ref": "library:agency-design-persona-walkthrough", "type": "agent", "use": "check", "when": "When you want to see what a named buyer thinks at each scroll of the page" },
+        { "ref": "library:headline-promise-checker", "type": "skill", "use": "check", "when": "When a new headline is drafted, to check it picks the right reader and promises a gain" }
+      ]
+    },
+    {
+      "id": "pricing-page",
+      "task": "Review or draft the pricing page and packaging",
+      "kind": "web_page",
+      "items": [
+        { "ref": "kit:skills/pricing-page-and-packaging-review", "use": "build", "when": "When the pricing page confuses buyers or the plans no longer fit how people buy" },
+        { "ref": "library:three-tier-price-ladder-drafter", "type": "prompt", "use": "explore", "when": "When the plans are undecided, to draft a three-step ladder and see how it reads" },
+        { "ref": "library:pricing-strategist", "type": "skill", "use": "brief", "when": "When the value metric and tiers are in doubt and need a reasoned proposal and test plan" },
+        { "ref": "library:willingness-to-pay-survey", "type": "skill", "use": "brief", "when": "When nobody knows what buyers would pay, to ask customers two questions and read the range" },
+        { "ref": "library:comparison-table-designer", "type": "skill", "use": "check", "when": "When the plan table is drafted, to check it helps a buyer choose between plans" }
+      ]
+    },
+    {
+      "id": "launch-plan",
+      "task": "Plan a product or feature launch",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/launch-from-demand-test-to-week-after", "use": "brief", "when": "When a product, feature or relaunch has a target date and needs the whole run in order" },
+        { "ref": "kit:skills/product-launch-plan", "use": "build", "when": "When a small team needs the plan from an optional demand test to the review two weeks after" },
+        { "ref": "library:smaller-product-launch", "type": "workflow", "use": "explore", "when": "When the date is fixed and the plan is too big, to see a half-scope version" },
+        { "ref": "library:go-or-no-go-launch-checker", "type": "skill", "use": "check", "when": "A few days before launch, to get a clear go or no-go with the blockers listed" },
+        { "ref": "library:pieter-levels", "type": "mind", "use": "think", "when": "When the plan is heavy for a small team, to cut it to what a solo maker would ship" }
+      ]
+    },
+    {
+      "id": "demand-test",
+      "task": "Design a cheap demand test before building or launching",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/demand-test-design", "use": "build", "when": "Before building or launching, when it is unclear whether buyers will act" },
+        { "ref": "library:pretotype-experiment-designer", "type": "skill", "use": "explore", "when": "When you want several cheap test types to compare, such as a page or a pre-order" },
+        { "ref": "library:pre-sell-your-idea-to-three-buyers-then-launch-in-thirty-days", "type": "workflow", "use": "build", "when": "When the best test is to sell it to three real buyers before it exists" },
+        { "ref": "library:idea-stress-test-panel", "type": "skill", "use": "check", "when": "Before spending on the test, to get a blunt review of what is weak in the idea" }
+      ]
+    },
+    {
+      "id": "launch-message-pack",
+      "task": "Write every launch message in one voice",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/launch-message-pack", "use": "build", "when": "Once the launch plan and message sheet exist, to write email, posts, page and partner notes" },
+        { "ref": "library:launch-email-sequence-planner", "type": "skill", "use": "build", "when": "When the launch runs on an email list and needs a full sequence with a close date" },
+        { "ref": "library:multi-platform-post-planner", "type": "skill", "use": "build", "when": "When the announcement needs posts made for each social platform" },
+        { "ref": "library:memorable-message-writer", "type": "skill", "use": "explore", "when": "When the launch line is correct but dull, to get a simpler, more concrete version" },
+        { "ref": "library:hard-questions-faq-writer", "type": "skill", "use": "check", "when": "When the pack is drafted, to list the hard questions it raises and answer them" }
+      ]
+    },
+    {
+      "id": "sales-handoff",
+      "task": "Brief sales and support before the launch",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/sales-launch-handoff-brief", "use": "build", "when": "A few working days before launch, to give sales and support one page plus objections" },
+        { "ref": "library:sales-battlecard-builder", "type": "skill", "use": "build", "when": "When sales face one named rival and need comparisons and reply scripts" },
+        { "ref": "library:sales-collateral-writer", "type": "skill", "use": "build", "when": "When the team needs a one-pager, an objection sheet or a deck outline for the launch" },
+        { "ref": "library:live-objection-responder", "type": "skill", "use": "check", "when": "When an objection has no good answer yet, to work out what it means and how to reply" }
+      ]
+    },
+    {
+      "id": "beta-plan",
+      "task": "Plan a beta and decide when it is ready to open up",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:beta-program-planner", "type": "skill", "use": "build", "when": "When you need who to invite, what to ask them and clear rules for ending the beta" },
+        { "ref": "library:launch-a-feature-through-a-beta-and-read-the-numbers", "type": "workflow", "use": "build", "when": "When a feature ships through a beta with measures set before it starts" }
+      ]
+    },
+    {
+      "id": "post-launch-review",
+      "task": "Review the launch and report what was learned",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/product-launch-plan", "use": "brief", "when": "Two weeks after launch, to compare results with the targets the plan set" },
+        { "ref": "library:saas-launch-review-agent", "type": "agent", "use": "build", "when": "When a software launch needs a decision on what to keep, fix or stop" },
+        { "ref": "library:marketing-performance-report", "type": "skill", "use": "build", "when": "When you have launch numbers and need trends, wins, misses and what to change" }
+      ]
+    },
+    {
+      "id": "feature-announcement",
+      "task": "Announce a feature or update to existing customers",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:roadmap-update-writer", "type": "skill", "use": "build", "when": "When changes need writing up as release notes or a roadmap story for customers" },
+        { "ref": "library:value-statement-writer", "type": "skill", "use": "explore", "when": "When the same value must be said differently for marketing, sales and onboarding" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When the announcement says 'powerful' and 'seamless', to make each line true and specific" }
+      ]
+    },
+    {
+      "id": "value-proposition",
+      "task": "Write the value proposition and selling points",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:value-proposition-builder", "type": "skill", "use": "build", "when": "When you have the offer and customer facts and need the gain stated in one place" },
+        { "ref": "library:selling-points-writer", "type": "skill", "use": "build", "when": "When features must become selling points in the order buyers care about" },
+        { "ref": "library:positioning-idea-generator", "type": "skill", "use": "explore", "when": "When the value could be framed several ways and you want to compare them" },
+        { "ref": "library:usp-claim-checker", "type": "skill", "use": "check", "when": "When the proposition is drafted, to test whether a rival could say the same thing" }
+      ]
+    },
+    {
+      "id": "naming-and-tagline",
+      "task": "Name a product or feature and test its tagline",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:product-name-brainstormer", "type": "skill", "use": "explore", "when": "When a launch or rename needs name ideas, each with the reason it fits" },
+        { "ref": "library:owned-word-mapper", "type": "skill", "use": "brief", "when": "Before naming, to see which words rivals own and which are free" },
+        { "ref": "library:message-stickiness-rewriter", "type": "prompt", "use": "explore", "when": "When a tagline is flat, to get three versions people will remember" },
+        { "ref": "library:tagline-tester", "type": "skill", "use": "check", "when": "When a tagline is chosen, to score it against ten tests and get sharper versions" }
+      ]
+    },
+    {
+      "id": "customer-proof",
+      "task": "Gather case studies and place proof where buyers doubt",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:turn-a-customer-interview-into-a-case-outline", "type": "workflow", "use": "build", "when": "When one customer interview should become a case study and you need the evidence gaps" },
+        { "ref": "library:social-proof-placer", "type": "skill", "use": "build", "when": "When you know the buyer's doubts and must choose which quote or number answers each" },
+        { "ref": "library:monthly-review-proof-keeper", "type": "agent", "use": "check", "when": "Each month, to check approved quotes and link every claim to its evidence" }
+      ]
+    },
+    {
+      "id": "go-to-market",
+      "task": "Choose the market, segment and route for a new product",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:beachhead-market-picker", "type": "skill", "use": "build", "when": "When the product could serve many groups and needs one starting segment and a plan" },
+        { "ref": "library:go-to-market-positioning-planner", "type": "skill", "use": "build", "when": "When you need positioning, a route to market and launch steps in one plan" },
+        { "ref": "library:size-a-market-and-separate-facts-from-guesses", "type": "workflow", "use": "check", "when": "When the plan quotes a market size, to rebuild it bottom-up and mark the guesses" }
+      ]
+    },
+    {
+      "id": "win-loss",
+      "task": "Run a win and loss review",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:win-and-loss-pattern-finder", "type": "skill", "use": "build", "when": "When closed deals are logged, to find patterns in why you win and lose" },
+        { "ref": "library:why-buyers-switched", "type": "workflow", "use": "build", "when": "When you need interviews with recent buyers and their stories mapped" },
+        { "ref": "library:deal-win-reason-finder", "type": "prompt", "use": "build", "when": "When you only have rough deal notes, to pull out the real reasons and a message" },
+        { "ref": "library:buying-story-interview-guide", "type": "skill", "use": "brief", "when": "When the deal notes are thin, to interview recent buyers and lost prospects on a timeline" }
+      ]
+    },
+    {
+      "id": "launch-deck",
+      "task": "Build the launch deck or product overview deck",
+      "kind": "other",
+      "items": [
+        { "ref": "library:pitch-arc-planner", "type": "skill", "use": "brief", "when": "Before slides, to outline a story that builds belief for this audience" },
+        { "ref": "library:gamma", "type": "tool", "use": "build", "when": "When the outline is agreed and you want a first deck draft to edit" },
+        { "ref": "library:talk-tension-planner", "type": "skill", "use": "check", "when": "When the deck is outlined, to check the audience hears the stakes early" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:product-context-builder", "type": "skill", "use": "brief", "when": "At the start, to put product facts in one file every later step reads" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When copy states a number or a fact about a rival that you cannot trace to a source" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a sheet or page is shared, to catch typos and product names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "customer-insights-researcher", "when": "When there is too little buyer evidence and interviews or a survey must be run" },
+    { "role": "pricing-strategist", "when": "When the job is the price itself, not how the pricing page explains it" },
+    { "role": "conversion-copywriter", "when": "When the homepage or launch page needs full new copy, not a line-by-line check" },
+    { "role": "sales-enablement-specialist", "when": "When sales need full battlecards, a deck and training beyond the one-page brief" },
+    { "role": "pr-specialist", "when": "When the launch needs a press release and pitches to reporters" },
+    { "role": "email-marketing-specialist", "when": "When the launch emails must be built, segmented and sent, not only written" }
+  ],
+  "gaps": [
+    "No library item checks a homepage line by line against an agreed message sheet; only the kit prompt does",
+    "No library item runs a post-launch review for a marketing launch: results against targets, what to repeat and what to drop",
+    "No library item writes a one-page launch brief for sales and support; battlecards and collateral exist but not the handoff page",
+    "No library item reads the result of a demand test against a bar set before it ran",
+    "No library item tests a message with real buyers, such as a five-second test or a message survey, and scores the answers",
+    "No library item sizes a launch into tiers so a small update does not get a full launch",
+    "No library item builds a dated, sourced feature comparison from rivals' public pages; only the kit skill does",
+    "No library item writes an hour-by-hour run sheet for launch day",
+    "No library item plans a launch on product directories or community sites step by step"
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "pinterest-marketer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "weekly-pin-batch",
+      "task": "Write a weekly batch of Pins ready to make and schedule",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:workflows/weekly-pin-batch", "use": "brief", "when": "Once a week, to run the batch in one sitting with the steps and checks in order" },
+        { "ref": "kit:skills/pin-batch-writer", "use": "build", "when": "When the board map exists and you need 30 Pins with titles, descriptions and image ideas" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the Pin titles all sound alike, to get several different angles for the same page" },
+        { "ref": "library:ad-and-page-match-checker", "type": "skill", "use": "check", "when": "Before scheduling, to check each Pin's promise is kept by the page it links to" }
+      ]
+    },
+    {
+      "id": "keyword-board-map",
+      "task": "Build a Pinterest keyword list and board map",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/pinterest-keyword-board-map", "use": "build", "when": "When starting or rebuilding an account, to get up to 12 boards named as real searches" },
+        { "ref": "kit:prompts/board-names-from-search-phrases", "use": "build", "when": "When boards are named after moods or product lines and need renaming as search phrases" },
+        { "ref": "library:search-intent-keyword-mapper", "type": "skill", "use": "brief", "when": "Before the board map, to sort a raw phrase list by what the searcher wants and group it" },
+        { "ref": "library:shopper-question-and-fan-out-mapper", "type": "skill", "use": "brief", "when": "When you need the questions shoppers ask around a product, to widen the phrase list" },
+        { "ref": "library:neil-patel", "type": "mind", "use": "think", "when": "When the list is built from product names, to start again from the buyer's questions" }
+      ]
+    },
+    {
+      "id": "seasonal-calendar",
+      "task": "Plan a 90-day seasonal Pin calendar",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/seasonal-pin-calendar", "use": "build", "when": "When you need publish-by dates set ahead of each seasonal climb for the next 90 days" },
+        { "ref": "kit:prompts/trends-curve-reader", "use": "brief", "when": "When you have looked up phrases in Pinterest Trends and need the climb and peak weeks read" },
+        { "ref": "library:rising-trend-spotter", "type": "skill", "use": "brief", "when": "When you want to see what is rising for the topic on other platforms before it reaches Pins" },
+        { "ref": "library:sales-led-content-planner", "type": "skill", "use": "brief", "when": "When the shop has sales data, to pick which products each seasonal moment should push" }
+      ]
+    },
+    {
+      "id": "quarterly-plan",
+      "task": "Write the quarterly Pinterest plan",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/quarterly-pinterest-plan", "use": "build", "when": "About three weeks before each quarter, to turn the review, keywords and seasons into one plan" },
+        { "ref": "library:competitor-social-research", "type": "skill", "use": "brief", "when": "Before the plan, to see what content works for rival accounts and where the gaps are" },
+        { "ref": "library:content-calendar-builder", "type": "skill", "use": "build", "when": "When the client has no topic plan and Pins need subjects drawn from customer words" },
+        { "ref": "library:rand-fishkin", "type": "mind", "use": "think", "when": "When nobody has asked whether the client's buyers are on Pinterest at all" }
+      ]
+    },
+    {
+      "id": "analytics-review",
+      "task": "Review a Pinterest Analytics export and say what to change",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/pinterest-analytics-review", "use": "build", "when": "When you have the export and need top and weak Pins and boards and what winners share" },
+        { "ref": "kit:prompts/analytics-export-review", "use": "build", "when": "Each quarter, or when Pinterest traffic goes flat, for a quick read of one export" },
+        { "ref": "library:utm-revenue-reader", "type": "skill", "use": "check", "when": "When you need orders and revenue by source to check clicks from Pins turned into sales" },
+        { "ref": "library:organic-format-tester", "type": "skill", "use": "check", "when": "When you compare Pin formats, to see which earned their place and which to stop" }
+      ]
+    },
+    {
+      "id": "pins-from-one-page",
+      "task": "Turn one product, recipe or post into several fresh Pins",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/pin-batch-from-one-page", "use": "build", "when": "When one page deserves more than one Pin and each must look and read differently" },
+        { "ref": "library:product-angle-finder", "type": "skill", "use": "explore", "when": "When the product seems plain, to get eight angles that each make a different Pin" },
+        { "ref": "library:monthly-content-repurposer", "type": "agent", "use": "build", "when": "Each month, to pick last month's best pieces and turn them into new Pins" },
+        { "ref": "library:ad-and-page-match-checker", "type": "skill", "use": "check", "when": "When several Pins point at one page, to check each one still matches what the page says" }
+      ]
+    },
+    {
+      "id": "pin-image-design",
+      "task": "Design Pin images, text overlays and reusable templates",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:eight-lever-ad-visual-planner", "type": "skill", "use": "brief", "when": "Before making images, to set the visual choices and lock the ones that must stay" },
+        { "ref": "library:theme-based-ad-layout-blueprint-maker", "type": "skill", "use": "explore", "when": "When you need three or four layouts with text zones and product placement to compare" },
+        { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "When every Pin looks like the same template, to get three hand-made alternatives" },
+        { "ref": "library:marketing-image-maker", "type": "skill", "use": "build", "when": "When a Pin needs a new picture and you want a prompt, the exact size and a file plan" },
+        { "ref": "library:canva", "type": "tool", "use": "build", "when": "When the client's team will make and reuse the Pin templates themselves" },
+        { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When a Pin is drafted, to see where the eye lands first and what to cut from the overlay" },
+        { "ref": "library:kenya-hara", "type": "mind", "use": "think", "when": "When the image is crowded with badges and text and needs stripping to one clear thing" }
+      ]
+    },
+    {
+      "id": "pin-photos",
+      "task": "Plan product and lifestyle photos for Pins",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:product-photo-shoot-planner", "type": "skill", "use": "brief", "when": "When the shop's photos do not match each other, to get a style sheet and nine prompts" },
+        { "ref": "library:product-shot-list-writer", "type": "prompt", "use": "build", "when": "When a photographer will shoot for Pins and needs a shot list with a reason per shot" },
+        { "ref": "library:product-photo-set-builder", "type": "skill", "use": "explore", "when": "When there is only one product photo, to get a set of new angles and scenes to choose from" },
+        { "ref": "library:agency-design-inclusive-visuals-specialist", "type": "agent", "use": "check", "when": "When AI images show people, to check for stereotypes, cloned faces and odd hands" }
+      ]
+    },
+    {
+      "id": "video-pins",
+      "task": "Plan and script video Pins",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:short-video-format-picker", "type": "skill", "use": "brief", "when": "Before filming, to pick a format that fits the product and who can be on camera" },
+        { "ref": "library:short-video-hook-writer", "type": "skill", "use": "explore", "when": "When the first two seconds are weak, to get ten opening lines to choose from" },
+        { "ref": "library:product-photo-to-clip-maker", "type": "skill", "use": "build", "when": "When there is no footage, to turn a main product photo into a short moving clip" },
+        { "ref": "library:video-hook-scorer", "type": "skill", "use": "check", "when": "Before publishing, to score each opening line and get a rewrite of the weak ones" }
+      ]
+    },
+    {
+      "id": "step-and-infographic-pins",
+      "task": "Make step-by-step, list and infographic Pins",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:word-picture-explainer", "type": "skill", "use": "brief", "when": "Before drawing, to plan which picture pairs with each step so the point sticks" },
+        { "ref": "library:infographic-maker", "type": "skill", "use": "build", "when": "When a how-to or checklist should become one tall image with a layout that fits it" },
+        { "ref": "library:story-carousel-ad-writer", "type": "skill", "use": "build", "when": "When the idea needs several cards, to plan each card's picture and words in order" },
+        { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "When the infographic looks like a stock template, to get three other layouts" },
+        { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When the tall image is drafted, to trace the eye path and cut what slows the reader" }
+      ]
+    },
+    {
+      "id": "shop-setup",
+      "task": "Set up the shop catalogue and product Pins",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/shop-setup-and-shopping-ads", "use": "build", "when": "When a shop wants its products on Pinterest or its conversions do not match its sales" },
+        { "ref": "library:shopping-feed-title-writer", "type": "skill", "use": "build", "when": "When feed titles are bare product names and need the phrases shoppers search for" },
+        { "ref": "library:product-title-cleaner", "type": "skill", "use": "build", "when": "When product titles are messy or uneven and the feed needs one tidy pattern" },
+        { "ref": "library:store-image-prep-checker", "type": "skill", "use": "check", "when": "Before the feed is submitted, to find images to resize or rename and missing alt text" }
+      ]
+    },
+    {
+      "id": "pinterest-ads-plan",
+      "task": "Plan and budget a Pinterest ad campaign",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/shop-setup-and-shopping-ads", "use": "brief", "when": "When the client wants shopping ads, to get tag, catalogue and campaign steps in order" },
+        { "ref": "library:break-even-roas-and-cpa-calculator", "type": "skill", "use": "brief", "when": "Before any spend, to work out the return and cost per order the margin can bear" },
+        { "ref": "library:small-budget-ad-test-planner", "type": "skill", "use": "build", "when": "When the budget is small, to stage the test so images run before video" },
+        { "ref": "library:ad-creative-variation-planner", "type": "skill", "use": "explore", "when": "When you promote Pins, to plan clearly different versions and when to refresh them" },
+        { "ref": "library:drayton-bird", "type": "mind", "use": "think", "when": "When the plan is a big launch on a guess, to shrink it to one small test with a clear offer" }
+      ]
+    },
+    {
+      "id": "ads-results-read",
+      "task": "Read Pinterest ad results and decide what to keep or cut",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:creative-test-reader", "type": "skill", "use": "build", "when": "When results are in by ad group, to get keep, leave or replace calls and false winners" },
+        { "ref": "library:platform-roas-reality-check", "type": "skill", "use": "check", "when": "When Pinterest reports a high return, to test it against the shop's own totals" },
+        { "ref": "library:post-purchase-survey-reader", "type": "skill", "use": "check", "when": "When buyers answer how they found the shop, to see if Pinterest is over or under-credited" }
+      ]
+    },
+    {
+      "id": "policy-check",
+      "task": "Check Pins and ads against policy before they go live",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/pinterest-ad-policy-check", "use": "check", "when": "Before an ad, or a Pin with a discount, strong claim, paid or affiliate content, goes live" },
+        { "ref": "library:ad-and-page-policy-checker", "type": "skill", "use": "check", "when": "When the ad and its page both need a line-by-line risk check with safer rewrites" },
+        { "ref": "library:pre-launch-ad-checker", "type": "skill", "use": "check", "when": "When you have the approved facts, to find issues in the ad and what a person must confirm" }
+      ]
+    },
+    {
+      "id": "tracking-setup",
+      "task": "Set up the Pinterest tag, tagged links and conversion tracking",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:campaign-link-tracker", "type": "skill", "use": "build", "when": "When Pin links carry no tags, to get one naming pattern and tagged links per campaign" },
+        { "ref": "library:conversion-tracking-fixer", "type": "skill", "use": "build", "when": "When sales from Pins are missing or doubled and the tracking needs repair" },
+        { "ref": "library:monthly-tracking-health-keeper", "type": "agent", "use": "check", "when": "Each month, to catch tracking that broke after a theme or checkout change" }
+      ]
+    },
+    {
+      "id": "landing-page-check",
+      "task": "Check the pages Pins send people to",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:ad-and-page-match-checker", "type": "skill", "use": "check", "when": "When a Pin gets clicks but no sales, to score how well the page matches the Pin" },
+        { "ref": "library:landing-page-auditor", "type": "skill", "use": "check", "when": "When the page itself is the weak point, to rank its problems by effect on sales" },
+        { "ref": "library:link-preview-fixer", "type": "skill", "use": "build", "when": "When saved links show the wrong title or image, to fix the page tags Pins read from" }
+      ]
+    },
+    {
+      "id": "blog-content-plan",
+      "task": "Plan blog posts and guides that feed Pinterest",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:store-blog-plan-builder", "type": "skill", "use": "build", "when": "When a shop has few pages worth pinning, to plan 10 to 30 posts that lift its collections" },
+        { "ref": "library:content-topic-planner", "type": "skill", "use": "brief", "when": "When a blog has no topic groups, to plan clusters that each become a board" },
+        { "ref": "library:old-content-refresher", "type": "skill", "use": "brief", "when": "When the blog has years of old posts, to pick which to update before making fresh Pins" },
+        { "ref": "library:article-cover-maker", "type": "skill", "use": "build", "when": "When a post has no image worth pinning and needs a cover that fits the piece" }
+      ]
+    },
+    {
+      "id": "account-audit",
+      "task": "Audit the account set-up, profile and boards",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/pinterest-analytics-review", "use": "check", "when": "When you suspect set-up gaps such as an unclaimed site, no Rich Pins or a broken tag" },
+        { "ref": "kit:prompts/board-names-from-search-phrases", "use": "build", "when": "When the audit finds boards nobody would search for and they need new names" },
+        { "ref": "library:brand-social-account-checker", "type": "skill", "use": "check", "when": "When the profile and recent Pins need scoring against the brand's own rules" },
+        { "ref": "library:link-preview-fixer", "type": "skill", "use": "build", "when": "When Pins saved from the site pull the wrong title, price or picture" }
+      ]
+    },
+    {
+      "id": "buyer-research",
+      "task": "Find out who the pinners are and what they plan",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:job-based-avatar-builder", "type": "skill", "use": "build", "when": "When you have reviews and buyer stories, to get avatar cards built on a job and a trigger" },
+        { "ref": "library:comment-mining-analyst", "type": "skill", "use": "brief", "when": "When you want what people ask and want, in their own words, from social comments" },
+        { "ref": "library:product-review-mining", "type": "workflow", "use": "brief", "when": "When the product page and reviews hold the best phrases, to sort them for titles" },
+        { "ref": "library:rand-fishkin", "type": "mind", "use": "think", "when": "When the buyer picture is a guess, to check where these people really spend attention" }
+      ]
+    },
+    {
+      "id": "brand-look",
+      "task": "Set a consistent look for the account's Pins",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:brand-stylescape-planner", "type": "skill", "use": "explore", "when": "When the look is undecided, to compare three mood board directions and pick one" },
+        { "ref": "library:visual-system-rules-writer", "type": "skill", "use": "build", "when": "When the look is chosen, to write firm colour, type and grid rules every Pin follows" },
+        { "ref": "library:david-carson", "type": "mind", "use": "think", "when": "When the feed is tidy but nothing in it would stop a thumb" }
+      ]
+    },
+    {
+      "id": "creator-and-affiliate",
+      "task": "Plan creator, gifting and affiliate Pins",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:creator-partnership-planner", "type": "skill", "use": "build", "when": "When the brand wants creators pinning its products, to plan deals, briefs and tracking" },
+        { "ref": "library:influencer-gifting-planner", "type": "skill", "use": "build", "when": "When products are sent as gifts, to plan the box card and track which posts follow" },
+        { "ref": "kit:prompts/pinterest-ad-policy-check", "use": "check", "when": "Before a paid or affiliate Pin is published, to check it is labelled and allowed" }
+      ]
+    },
+    {
+      "id": "client-report",
+      "task": "Write the monthly Pinterest report for the client",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/analytics-export-review", "use": "brief", "when": "When the month's export is in and you need the main findings before writing" },
+        { "ref": "library:marketing-performance-report", "type": "skill", "use": "build", "when": "When the client needs trends, wins, misses and what changes next in one report" },
+        { "ref": "library:utm-revenue-reader", "type": "skill", "use": "check", "when": "When the report must show orders and revenue from Pins, not only saves and clicks" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any work that must match the client's live site: colours, fonts and voice" },
+    { "ref": "library:product-context-builder", "type": "skill", "use": "brief", "when": "At the start of a new client, to put product facts in one file every later step reads" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a Pin states a number, a result or a claim you cannot trace to the client" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a batch is scheduled, to catch typos and product names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "graphic-designer", "when": "When the job needs finished Pin templates or image files, not only image ideas" },
+    { "role": "product-photographer", "when": "When the shop's photos are too few or too plain to make fresh Pins from" },
+    { "role": "content-marketer", "when": "When there are not enough posts or guides worth pinning and they must be written" },
+    { "role": "shopify-specialist", "when": "When the catalogue feed, the tag or the checkout events need fixing inside the store" },
+    { "role": "marketing-analyst", "when": "When the client asks what Pinterest really adds on top of search, email and other ads" },
+    { "role": "video-editor", "when": "When video Pins need cutting, captions and exports from real footage" }
+  ],
+  "gaps": [
+    "No library item is about Pinterest itself: Pin titles, boards, Pinterest search and Trends are covered only by the kit",
+    "No library item plans a Pinterest ad campaign: objectives, targeting, bids and structure. The ad planners cover Meta, Google and TikTok",
+    "No library item lays out a 2:3 Pin image with a text overlay or makes three Pin template directions to compare",
+    "No library item scores a finished Pin before it is scheduled: title, image readability on a phone, link and board fit",
+    "No library item covers the Pinterest catalogue feed, Rich Pins, claiming a site or checking the Pinterest tag step by step",
+    "No library item specs video Pins or multi-page Pins: length, cover frame, safe areas and what to say in the first seconds",
+    "No tool guide covers a Pin scheduler such as Tailwind or Pinterest's own scheduler",
+    "No library item plans Pins for a blogger who earns from ads and affiliate links rather than a shop",
+    "No library item reads Pinterest Trends data or sets seasonal publish dates outside the kit"
+  ]
+}

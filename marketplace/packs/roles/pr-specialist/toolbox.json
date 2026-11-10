@@ -1,0 +1,305 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "pr-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "press-release",
+      "task": "Write a press release a reporter can use in a minute",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/newsworthiness-check", "use": "brief", "when": "Before writing, when you are not sure the news is a story a reporter would run" },
+        { "ref": "kit:skills/press-release", "use": "build", "when": "When the news is confirmed and you need headline, five Ws, checked facts and quotes" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the headline is flat, to get several factual angles and pick the plainest strong one" },
+        { "ref": "library:ten-percent-cutter", "type": "skill", "use": "build", "when": "When the release runs long, to cut it and keep a log of what went" },
+        { "ref": "library:hard-questions-faq-writer", "type": "skill", "use": "check", "when": "When the release is drafted, to list the hard questions it raises and answer them first" },
+        { "ref": "library:george-orwell", "type": "mind", "use": "think", "when": "When the draft is full of 'delighted' and 'leading', to put it in plain exact words" }
+      ]
+    },
+    {
+      "id": "story-angle",
+      "task": "Find the story angle in a piece of business news",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/newsworthiness-check", "use": "check", "when": "When past releases got no coverage and you need an honest test of this one" },
+        { "ref": "library:product-angle-finder", "type": "skill", "use": "explore", "when": "When the news seems plain, to get product and story angles ranked against each other" },
+        { "ref": "library:recent-topic-pulse-researcher", "type": "skill", "use": "brief", "when": "When you need what people have said on the topic lately, to tie the news to it" },
+        { "ref": "library:message-stickiness-rewriter", "type": "prompt", "use": "explore", "when": "When the one-line story is forgettable, to get three versions people will repeat" },
+        { "ref": "library:jonah-berger", "type": "mind", "use": "think", "when": "When the story is true but nobody would pass it on, to find what makes it worth sharing" }
+      ]
+    },
+    {
+      "id": "media-list-and-pitches",
+      "task": "Build a small media list and pitch each reporter",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/media-pitching", "use": "build", "when": "When one story needs a short researched list and a personal pitch for each name" },
+        { "ref": "library:press-outreach-planner", "type": "skill", "use": "brief", "when": "When you start from the news alone and need a first list, pitches and a press kit outline" },
+        { "ref": "library:audience-hangout-finder", "type": "skill", "use": "brief", "when": "Before the list, to map the sites, shows and newsletters the client's buyers follow" },
+        { "ref": "library:perplexity", "type": "tool", "use": "brief", "when": "When you must read what a reporter wrote lately, with links, before you write to them" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When pitches go unopened, to try subject lines from several angles" },
+        { "ref": "library:cold-email-pre-send-checker", "type": "skill", "use": "check", "when": "Before sending, to test each claim in the pitch and the legal basics of the email" }
+      ]
+    },
+    {
+      "id": "single-pitch",
+      "task": "Write one pitch and follow-up for a named reporter or host",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/journalist-pitch", "use": "build", "when": "When you have a story and one named reporter, editor, newsletter writer or host" },
+        { "ref": "library:follow-up-email-sequence-writer", "type": "prompt", "use": "build", "when": "When there is no reply, to write a follow-up that brings a new reason, not a nudge" },
+        { "ref": "library:no-question-email-rewriter", "type": "prompt", "use": "explore", "when": "When the pitch pushes for a yes, to try a version where a no still helps you" },
+        { "ref": "library:cold-email-claim-checker", "type": "prompt", "use": "check", "when": "Before sending, to test what the pitch says about the outlet against its own pages" }
+      ]
+    },
+    {
+      "id": "news-announcement",
+      "task": "Run a news announcement from story to coverage",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/news-announcement", "use": "build", "when": "Two to four weeks before a launch, hire, partnership or result can be made public" },
+        { "ref": "library:publicity-first-launch-planner", "type": "skill", "use": "brief", "when": "When the launch should win press before any ad money is spent" },
+        { "ref": "library:prepare-a-partner-launch-announcement-pack", "type": "workflow", "use": "build", "when": "When two firms announce together and need one message brief and an approval tracker" },
+        { "ref": "library:agency-marketing-pr-communications-manager", "type": "agent", "use": "brief", "when": "When you want a second plan with three key messages and a release outline to compare" },
+        { "ref": "library:multi-platform-post-planner", "type": "skill", "use": "build", "when": "When the announcement also needs posts written for each social platform" },
+        { "ref": "library:hard-questions-faq-writer", "type": "skill", "use": "check", "when": "Before the news goes out, to prepare answers to what customers and staff will ask" }
+      ]
+    },
+    {
+      "id": "crisis-response",
+      "task": "Build a response pack for a live crisis",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/crisis-first-48-hours", "use": "brief", "when": "When something has gone wrong that customers, staff or reporters know about or soon will" },
+        { "ref": "kit:skills/crisis-response", "use": "build", "when": "When you have confirmed facts and need the fact log, statement, notes, Q&A and update plan" },
+        { "ref": "library:prepare-a-service-outage-communication-pack", "type": "workflow", "use": "build", "when": "When the issue is an outage and you need first notice, progress updates and the all-clear" },
+        { "ref": "library:stakeholder-map-builder", "type": "skill", "use": "brief", "when": "When you must decide who hears first and how, to map everyone the issue touches" },
+        { "ref": "library:fact-vs-opinion-sorter", "type": "prompt", "use": "check", "when": "Before anything is sent, to split what is confirmed from what is guessed or hoped" },
+        { "ref": "library:mary-barra", "type": "mind", "use": "think", "when": "When the draft protects the firm first, to start again from the people affected" }
+      ]
+    },
+    {
+      "id": "holding-statement",
+      "task": "Write a holding statement in the first hours",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/holding-statement", "use": "build", "when": "When you must say something true and useful before all the facts are known" },
+        { "ref": "library:fact-vs-opinion-sorter", "type": "prompt", "use": "check", "when": "When the statement mixes facts with guesses, to mark every line that is not confirmed" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "When the statement makes promises, to check each one can be kept" },
+        { "ref": "library:george-orwell", "type": "mind", "use": "think", "when": "When the statement hides behind 'an issue was identified', to say plainly what happened" }
+      ]
+    },
+    {
+      "id": "staff-and-customer-notes",
+      "task": "Tell staff and customers before the public hears",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/crisis-response", "use": "brief", "when": "When the staff note and customer message must match the statement word for word on facts" },
+        { "ref": "library:staff-announcement-writer", "type": "skill", "use": "build", "when": "When staff need the news first, with manager talking points and a rollout order" },
+        { "ref": "library:apology-email-writer", "type": "skill", "use": "build", "when": "When customers are owed an apology that owns the mistake and says what happens next" },
+        { "ref": "library:company-story-aligner", "type": "skill", "use": "check", "when": "When each group gets its own message, to find where the versions contradict each other" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "When replies to upset customers are drafted, to check promises and tone before sending" }
+      ]
+    },
+    {
+      "id": "crisis-playbook",
+      "task": "Write a crisis communications playbook before one is needed",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/crisis-response", "use": "build", "when": "When the client has no plan and needs severity levels, roles and ready templates" },
+        { "ref": "library:crisis-response-planner", "type": "skill", "use": "build", "when": "When you plan for a defect or failure and need who to tell and what to do for 30 days" },
+        { "ref": "library:workforce-crisis-playbook-writer", "type": "skill", "use": "build", "when": "When the plan must cover staff: who does what and the first-hour message to employees" },
+        { "ref": "library:stakeholder-map-builder", "type": "skill", "use": "brief", "when": "Before the playbook, to list every group that would need to hear and who owns each" },
+        { "ref": "library:hard-questions-faq-writer", "type": "skill", "use": "check", "when": "When scenarios are drafted, to test each with the questions a reporter would ask" }
+      ]
+    },
+    {
+      "id": "post-crisis-review",
+      "task": "Review a crisis afterwards and plan the recovery",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:incident-postmortem-writer", "type": "skill", "use": "build", "when": "When the issue is over and you need a blame-free timeline, causes and follow-ups" },
+        { "ref": "library:brand-mention-tracker", "type": "skill", "use": "brief", "when": "When you need reviews, ratings and mentions gathered to see what the crisis left behind" },
+        { "ref": "library:social-listening-brief-writer", "type": "skill", "use": "brief", "when": "When you need what people are still saying, grouped by theme with notable posts" },
+        { "ref": "library:crisis-response-planner", "type": "skill", "use": "build", "when": "When the recovery needs a 30-day plan of who to contact and what to put right" }
+      ]
+    },
+    {
+      "id": "interview-prep",
+      "task": "Prepare a spokesperson for a media or podcast interview",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/media-interview-prep", "use": "build", "when": "Before a spokesperson talks to a reporter or host, in good times or in a crisis" },
+        { "ref": "library:brand-messaging-builder", "type": "skill", "use": "brief", "when": "When there are no agreed key messages, to set them with a proof point for each" },
+        { "ref": "library:hard-questions-faq-writer", "type": "skill", "use": "check", "when": "When the prep sheet is drafted, to add the questions the speaker hopes nobody asks" },
+        { "ref": "library:message-stickiness-rewriter", "type": "prompt", "use": "explore", "when": "When a key message is long and abstract, to get three versions that can be said aloud" }
+      ]
+    },
+    {
+      "id": "key-messages",
+      "task": "Set key messages and proof points for the business",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:brand-messaging-builder", "type": "skill", "use": "build", "when": "When the client needs a short set of messages with proof for each audience" },
+        { "ref": "library:competitor-messaging-comparer", "type": "skill", "use": "brief", "when": "Before you write, to see what rivals already say so the client does not echo them" },
+        { "ref": "library:message-stickiness-rewriter", "type": "prompt", "use": "explore", "when": "When a message is accurate but dull, to get three more memorable versions" },
+        { "ref": "library:company-story-aligner", "type": "skill", "use": "check", "when": "When the firm tells press, staff and investors different things, to find the clashes" }
+      ]
+    },
+    {
+      "id": "award-entry",
+      "task": "Write an award entry to the category criteria",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/award-entry-draft", "use": "build", "when": "When you have the category, its entry rules and the client's results to hand" },
+        { "ref": "kit:skills/awards-talks-and-podcasts", "use": "brief", "when": "When you must choose the category and line up evidence against each criterion first" },
+        { "ref": "library:turn-a-customer-interview-into-a-case-outline", "type": "workflow", "use": "brief", "when": "When the entry rests on a customer result, to outline the case and list evidence gaps" },
+        { "ref": "library:overstuffed-draft-cutter", "type": "skill", "use": "build", "when": "When the entry is over the word limit, to name the main point and cut what fights it" },
+        { "ref": "library:annette-simmons", "type": "mind", "use": "think", "when": "When the entry is a list of numbers, to find one true incident that makes judges care" }
+      ]
+    },
+    {
+      "id": "awards-events-calendar",
+      "task": "Build a scored calendar of awards and events to enter",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/awards-talks-and-podcasts", "use": "build", "when": "When the client asks which awards and stages are worth the time this year" },
+        { "ref": "library:audience-hangout-finder", "type": "skill", "use": "brief", "when": "Before scoring, to find the events and shows the client's buyers really attend or follow" },
+        { "ref": "library:perplexity", "type": "tool", "use": "brief", "when": "When you need entry dates, fees and rules checked on each organiser's own page" }
+      ]
+    },
+    {
+      "id": "talk-proposal",
+      "task": "Write a conference talk proposal",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/awards-talks-and-podcasts", "use": "build", "when": "When an event has a call for speakers and the proposal must sell one clear takeaway" },
+        { "ref": "library:pitch-arc-planner", "type": "skill", "use": "brief", "when": "Before the abstract, to outline the talk so it builds belief step by step" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the talk title is flat, to get several title angles for the programme" },
+        { "ref": "library:talk-tension-planner", "type": "skill", "use": "check", "when": "When the outline is drafted, to check the room knows the stakes early" },
+        { "ref": "library:headline-promise-checker", "type": "skill", "use": "check", "when": "When the title is chosen, to check it picks the right audience and promises a clear gain" }
+      ]
+    },
+    {
+      "id": "podcast-guesting",
+      "task": "Get a client ready to guest on podcasts",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/awards-talks-and-podcasts", "use": "build", "when": "When you need target show rules, a guest one-sheet and pitches for a shortlist of shows" },
+        { "ref": "kit:prompts/journalist-pitch", "use": "build", "when": "When you write to one named host and must show you know the show and its listeners" },
+        { "ref": "library:audience-hangout-finder", "type": "skill", "use": "brief", "when": "When there is no shortlist yet, to find the shows the client's buyers listen to" },
+        { "ref": "library:elevator-pitch-writer", "type": "skill", "use": "explore", "when": "When the guest cannot say what they do briefly, to get 10, 30 and 60 second versions" },
+        { "ref": "kit:prompts/media-interview-prep", "use": "check", "when": "Before a booked episode, to prepare the stories, likely questions and what not to say" }
+      ]
+    },
+    {
+      "id": "bios-and-press-kit",
+      "task": "Write bios, a one-sheet and press kit text",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/bios-in-three-lengths", "use": "build", "when": "When a spokesperson, speaker, author or artist needs a press-ready bio in three lengths" },
+        { "ref": "library:brand-origin-story-writer", "type": "skill", "use": "build", "when": "When the press kit needs the company's origin story told in a human way" },
+        { "ref": "library:write-your-founder-story-and-cut-it-to-what-moves", "type": "workflow", "use": "explore", "when": "When the founder's story is long, to map it and cut it to the parts that move a reader" },
+        { "ref": "library:linkedin-profile-rewriter", "type": "skill", "use": "build", "when": "When reporters will look the speaker up and the profile must match the new bio" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a bio says 'passionate' and 'visionary', to test it and get a true rewrite" }
+      ]
+    },
+    {
+      "id": "music-publicity",
+      "task": "Write an artist press kit and booking pitches",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/bios-in-three-lengths", "use": "build", "when": "When an act needs short, medium and long bios for a press kit and programme" },
+        { "ref": "kit:prompts/journalist-pitch", "use": "build", "when": "When you pitch one named venue booker, promoter or music writer" },
+        { "ref": "kit:skills/awards-talks-and-podcasts", "use": "build", "when": "When the act needs a one-sheet for a release or a pitch for a festival slot" },
+        { "ref": "library:follow-up-email-sequence-writer", "type": "prompt", "use": "build", "when": "When a booker has not replied, to follow up with a new reason each time" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When the kit sounds hyped, to make each line clear, true and easy to picture" }
+      ]
+    },
+    {
+      "id": "monthly-earned-media",
+      "task": "Plan the month's earned media work",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/monthly-earned-media-cycle", "use": "build", "when": "In the last week of each month, to plan next month's stories, pitches and entries" },
+        { "ref": "library:traction-public-relations", "type": "skill", "use": "brief", "when": "When press is untested for this client, to frame it as one small test with a decision rule" },
+        { "ref": "library:traction-unconventional-pr", "type": "skill", "use": "explore", "when": "When ordinary news is thin, to consider a stunt or gesture people would talk about" },
+        { "ref": "library:link-and-pr-outreach-planner", "type": "skill", "use": "build", "when": "When coverage should also earn links and brand mentions for the client's site" },
+        { "ref": "library:recent-topic-pulse-researcher", "type": "skill", "use": "brief", "when": "When you need this month's talking points in the client's field to react to" }
+      ]
+    },
+    {
+      "id": "journalist-queries",
+      "task": "Answer journalist requests for expert comment",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:journalist-query-answer-writer", "type": "skill", "use": "build", "when": "When you have a batch of reporter requests and need ranked picks and expert answers" },
+        { "ref": "kit:prompts/bios-in-three-lengths", "use": "build", "when": "When the reply needs a one-line credit for the expert" },
+        { "ref": "library:fact-vs-opinion-sorter", "type": "prompt", "use": "check", "when": "Before the comment is sent, to mark which lines are fact and which are opinion" }
+      ]
+    },
+    {
+      "id": "byline-article",
+      "task": "Draft an opinion piece or expert article under a client's name",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:business-buyer-trust-builder", "type": "skill", "use": "brief", "when": "When the article is meant to build trust with slow, careful business buyers" },
+        { "ref": "library:blog-post-writer", "type": "skill", "use": "build", "when": "When the argument is agreed and you need a full draft with an opening and a close" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When an editor needs a headline, to offer several angles without clickbait" },
+        { "ref": "library:overstuffed-draft-cutter", "type": "skill", "use": "check", "when": "When the piece argues three things at once, to name the one idea and cut the rest" },
+        { "ref": "library:fact-vs-opinion-sorter", "type": "prompt", "use": "check", "when": "Before it goes to an editor, to check each claim is marked as fact or as the author's view" }
+      ]
+    },
+    {
+      "id": "data-led-story",
+      "task": "Turn survey or company data into a news story",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:prepare-a-survey-findings-briefing", "type": "workflow", "use": "build", "when": "When you have survey results and need findings you can defend to a reporter" },
+        { "ref": "library:survey-answer-truth-checker", "type": "prompt", "use": "check", "when": "Before any number is pitched, to see how far the survey's answers can be trusted" },
+        { "ref": "library:study-headline-claim-checker", "type": "prompt", "use": "check", "when": "When the headline claim is drafted, to test what the data really shows" },
+        { "ref": "kit:skills/press-release", "use": "build", "when": "When the findings hold up and need writing as a release with the method stated" },
+        { "ref": "library:tim-harford", "type": "mind", "use": "think", "when": "When one number looks striking, to slow down and ask what it counts and against what" }
+      ]
+    },
+    {
+      "id": "coverage-report",
+      "task": "Track mentions and report what the coverage did",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:brand-mention-tracker", "type": "skill", "use": "build", "when": "When you need mentions, reviews and ratings from many sites gathered in one report" },
+        { "ref": "library:social-listening-brief-writer", "type": "skill", "use": "build", "when": "When you need what people said about the news, grouped by theme" },
+        { "ref": "library:ai-brand-mention-scanner", "type": "skill", "use": "check", "when": "When the client asks whether AI tools now mention the brand after the coverage" },
+        { "ref": "library:ai-citation-source-finder", "type": "skill", "use": "brief", "when": "When you choose which outlets to pitch next, to see which sites AI tools keep citing" },
+        { "ref": "library:marketing-performance-report", "type": "skill", "use": "build", "when": "When the client needs wins, misses and next steps written up as a monthly report" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before any release, statement or entry goes out, to check each claim against sources" },
+    { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When copy says 'first', 'best' or 'only', to sort each claim as fine, needs proof or cut" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before anything is sent to a reporter, to catch typos and names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "speechwriter", "when": "When an accepted talk or a statement read aloud needs a full script" },
+    { "role": "internal-communications-specialist", "when": "When a crisis or big announcement needs a full staff rollout, not one note" },
+    { "role": "reputation-manager", "when": "When the issue lives in reviews and search results and needs replies and clean-up" },
+    { "role": "social-media-manager", "when": "When the news needs a social plan and someone to handle replies after it lands" },
+    { "role": "ghostwriter", "when": "When a client needs a run of articles or a long piece in their own voice" },
+    { "role": "link-building-specialist", "when": "When the aim of the coverage is links and search ranking, not only awareness" }
+  ],
+  "gaps": [
+    "No library item writes an award entry to scoring criteria or scores a list of awards by fit, cost and odds",
+    "No library item writes a conference talk proposal for a call for speakers; the talk items are for student or research talks",
+    "No library item covers podcast guesting: scoring shows, a guest one-sheet or a pitch to a host",
+    "No library item writes speaker, author or artist bios",
+    "No library item covers music publicity: press kit text, booking pitches, release one-sheets, tech and hospitality riders",
+    "No library item builds a media list of named reporters from their recent work, or handles embargoes and exclusives",
+    "No library item writes a holding statement, recall notice or public data incident notice; the privacy items only check law by country",
+    "No library item drills a spokesperson with hostile questions or scores practice answers",
+    "No library item reports press coverage: a coverage log, reach, share of voice and whether key messages came through",
+    "No library item builds a press page or press kit for the client's site",
+    "No library item reviews a finished release or pitch the way a reporter would and scores it",
+    "No library item plans a press event, launch invite or media briefing"
+  ]
+}

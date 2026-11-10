@@ -1,0 +1,259 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "tiktok-ads-media-buyer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "weekly-review",
+      "task": "Run the weekly account review and call each ad",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/weekly-review-routine", "use": "brief", "when": "Once a week on the same day, plus a quick mid-week look at spend and rejections" },
+        { "ref": "kit:skills/tiktok-hook-test-and-weekly-review", "use": "build", "when": "When the weekly export is in and each ad needs a pause, keep or scale call" },
+        { "ref": "library:tiktok-ads-weekly-account-keeper", "type": "agent", "use": "build", "when": "Each week, to turn the exports into keep, fix or kill calls with reasons" },
+        { "ref": "library:tiktok-ad-test-reader", "type": "skill", "use": "check", "when": "When test numbers are small, to check each call against sample size and the kill rule" },
+        { "ref": "library:video-hook-and-hold-matrix-reviewer", "type": "skill", "use": "build", "when": "When you have view counts and want each video placed by how it hooks and holds" },
+        { "ref": "library:platform-roas-reality-check", "type": "skill", "use": "check", "when": "When TikTok reports a high return, to test it against the shop's own totals" }
+      ]
+    },
+    {
+      "id": "campaign-plan",
+      "task": "Plan a TikTok campaign with a test and a scale phase",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/tiktok-campaign-plan", "use": "build", "when": "When a client needs objectives, structure, budgets and rules for test and scale" },
+        { "ref": "library:tiktok-starter-campaign-builder", "type": "skill", "use": "explore", "when": "When you want a second layout from the budget and target cost to compare" },
+        { "ref": "library:break-even-roas-and-cpa-calculator", "type": "skill", "use": "brief", "when": "Before any budget is set, to work out the cost per order the margin can bear" },
+        { "ref": "library:ad-test-budget-calculator", "type": "skill", "use": "build", "when": "When you need the test budget, the days to run and the keep or cut rule" },
+        { "ref": "library:creative-volume-planner", "type": "skill", "use": "build", "when": "When the plan must say how many new videos are needed each week" },
+        { "ref": "library:claude-hopkins", "type": "mind", "use": "think", "when": "When the plan bets big on a guess, to shrink it to a small test that proves the claim" }
+      ]
+    },
+    {
+      "id": "account-intake",
+      "task": "Run new client intake before touching Ads Manager",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/account-intake", "use": "build", "when": "In the first conversation, to collect the facts every later decision depends on" },
+        { "ref": "library:product-context-builder", "type": "skill", "use": "build", "when": "When product facts are scattered, to put them in one file every later step reads" },
+        { "ref": "library:tiktok-ads-account-setup-checker", "type": "skill", "use": "check", "when": "When the client says the account is set up, to find the missing steps" },
+        { "ref": "library:break-even-roas-and-cpa-calculator", "type": "skill", "use": "brief", "when": "When the client has no target cost, to work one out from price and margin" }
+      ]
+    },
+    {
+      "id": "campaign-launch",
+      "task": "Launch a first campaign or rebuild after costs climbed",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/campaign-launch", "use": "build", "when": "For a first campaign, a new product or market, or a rebuild after costs climbed" },
+        { "ref": "library:launch-tiktok-ads-and-read-your-first-test", "type": "workflow", "use": "explore", "when": "When you want a second launch run with a setup fix list and a first test read-out" },
+        { "ref": "kit:prompts/change-request-for-approval", "use": "build", "when": "Before launch, to get the client's yes to the one-time action list" },
+        { "ref": "library:tiktok-ads-account-setup-checker", "type": "skill", "use": "check", "when": "Before money is spent, to score the setup and list what is missing" },
+        { "ref": "library:pre-launch-ad-checker", "type": "skill", "use": "check", "when": "When ads are loaded, to find issues against the approved facts and audience" }
+      ]
+    },
+    {
+      "id": "tracking-setup",
+      "task": "Set up and check the pixel and conversion events",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:conversion-tracking-fixer", "type": "skill", "use": "build", "when": "When sales or leads from ads are missing or doubled and tracking needs repair" },
+        { "ref": "library:monthly-tracking-health-keeper", "type": "agent", "use": "check", "when": "Each month, to catch tracking that broke after a site or checkout change" },
+        { "ref": "library:tiktok-ads-account-setup-checker", "type": "skill", "use": "check", "when": "When you must confirm the pixel and events are in place before a launch" }
+      ]
+    },
+    {
+      "id": "hook-test-matrix",
+      "task": "Plan the next round of hook and format tests",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/hook-test-matrix", "use": "build", "when": "When each test must change one thing and have a kill rule before it starts" },
+        { "ref": "kit:skills/tiktok-hook-test-and-weekly-review", "use": "build", "when": "When tests need named hooks, a dated log and rules set before launch" },
+        { "ref": "library:five-tactic-ad-hook-writer", "type": "skill", "use": "explore", "when": "When you need hooks from five different tactics, ranked by buyer fit and proof" },
+        { "ref": "library:short-video-hook-writer", "type": "skill", "use": "explore", "when": "When you want ten more openings checked for length and reading level" },
+        { "ref": "library:winning-hook-rubric-builder", "type": "skill", "use": "brief", "when": "When past winners exist, to build a rubric from them and score new drafts" },
+        { "ref": "library:video-hook-scorer", "type": "skill", "use": "check", "when": "Before filming, to score each hook for this audience and rewrite the weak ones" }
+      ]
+    },
+    {
+      "id": "creator-ad-script",
+      "task": "Write short ad scripts for creators",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:prompts/creator-ad-script", "use": "build", "when": "When a creator needs a 15 to 30 second script to film in their own voice" },
+        { "ref": "library:five-part-creator-ad-script-writer", "type": "skill", "use": "build", "when": "When the script should follow five parts from hook to call to action with timings" },
+        { "ref": "library:selfie-style-ad-script", "type": "skill", "use": "explore", "when": "When you want a selfie-style version built on the buyer's main doubt to compare" },
+        { "ref": "library:quote-video-ad-script", "type": "skill", "use": "explore", "when": "When reviews are strong, to try a script where every line comes from a customer" },
+        { "ref": "library:video-ad-bridge-checker", "type": "skill", "use": "check", "when": "When a script is drafted, to find where it starts selling too early" },
+        { "ref": "library:phyllis-k-robinson", "type": "mind", "use": "think", "when": "When the script reads like an advert, to put it in the way a person really talks" }
+      ]
+    },
+    {
+      "id": "spark-ads-brief",
+      "task": "Write a Spark Ads creator brief and approval process",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/spark-ads-creator-brief", "use": "build", "when": "When a creator's post will run as an ad and brief, approvals and access must be clear" },
+        { "ref": "library:creator-filming-brief-writer", "type": "skill", "use": "build", "when": "When the script is approved and the creator needs a filming brief and shoot order" },
+        { "ref": "library:tiktok-spark-ad-picker", "type": "skill", "use": "build", "when": "When posts already exist and you must pick which to boost as Spark Ads" },
+        { "ref": "library:organic-post-to-ad-promoter", "type": "skill", "use": "build", "when": "When the brand's own organic post did well and should be promoted as an ad" },
+        { "ref": "kit:prompts/ad-rules-and-label-check", "use": "check", "when": "Before the post is authorised as an ad, to check claims, disclosure and consent" }
+      ]
+    },
+    {
+      "id": "creator-roster",
+      "task": "Find creators, build a roster and set fair pay",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:creator-ad-roster-builder", "type": "skill", "use": "build", "when": "When you need a gifting funnel, roster size and a pay rule for creator ads" },
+        { "ref": "library:tiktok-creator-outreach-planner", "type": "skill", "use": "build", "when": "When you must find creators, decide what to offer and how to approach them" },
+        { "ref": "library:creator-pay-planner", "type": "skill", "use": "build", "when": "When you need a fair flat fee or a floor plus commission for one creator post" },
+        { "ref": "library:creator-audience-checker", "type": "skill", "use": "check", "when": "Before a deal, to check who the creator's audience is and whether it fits" }
+      ]
+    },
+    {
+      "id": "concept-batch",
+      "task": "Develop a batch of ad concepts and angles",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:seven-bucket-ad-concept-brainstormer", "type": "skill", "use": "explore", "when": "When you need concepts from seven different groups with the best eight ranked" },
+        { "ref": "library:ad-angle-multiplier", "type": "skill", "use": "explore", "when": "When one idea works and you want 10 to 15 other angles on it with hooks" },
+        { "ref": "library:ad-concept-matrix-builder", "type": "skill", "use": "brief", "when": "When you have reviews, to map personas, angles and offers in the order to test" },
+        { "ref": "library:untried-ad-idea-finder", "type": "skill", "use": "explore", "when": "When the account repeats itself, to map gaps and get five ideas not yet tried" },
+        { "ref": "kit:prompts/hook-test-matrix", "use": "check", "when": "When concepts are chosen, to check each test changes one thing and has a kill rule" },
+        { "ref": "library:luke-sullivan", "type": "mind", "use": "think", "when": "When every concept is a feature list, to find one true, simple idea" }
+      ]
+    },
+    {
+      "id": "creative-refresh",
+      "task": "Catch tired ads early and refresh the winners",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:ad-fatigue-watcher", "type": "agent", "use": "check", "when": "Twice a week, to catch ads that are tiring before costs climb" },
+        { "ref": "library:fatigued-ad-reviver", "type": "skill", "use": "build", "when": "When a winner is fading and you need the cause and ranked ways to revive it" },
+        { "ref": "library:tired-ad-hook-refresher", "type": "prompt", "use": "explore", "when": "When the body still works and only the opening is worn out, to get ten new ones" },
+        { "ref": "library:winning-ad-variant-writer", "type": "skill", "use": "explore", "when": "When a winner should be rewritten for each top customer group in the same voice" },
+        { "ref": "library:weekly-video-ad-batch-maker", "type": "agent", "use": "build", "when": "Each week, to turn last week's results into a checked batch of new scripts" }
+      ]
+    },
+    {
+      "id": "scale-and-budget",
+      "task": "Move budget to what sells and scale safely",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/tiktok-campaign-plan", "use": "brief", "when": "When a test has winners and the scale rules in the plan decide the next step" },
+        { "ref": "kit:prompts/change-request-for-approval", "use": "build", "when": "When a budget rise or a new campaign needs the client's yes first" },
+        { "ref": "library:creative-test-reader", "type": "skill", "use": "check", "when": "Before scaling, to check the winner is real and not a small-sample fluke" },
+        { "ref": "library:incrementality-test-planner", "type": "skill", "use": "build", "when": "When spend is large enough to ask whether TikTok sales would have happened anyway" },
+        { "ref": "library:nassim-taleb", "type": "mind", "use": "think", "when": "When the plan doubles spend at once, to ask what a bad week would cost" }
+      ]
+    },
+    {
+      "id": "ad-rules-check",
+      "task": "Check ads against TikTok rules and AI-label needs",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/ad-rules-and-label-check", "use": "check", "when": "Before any ad or Spark Ad launches, to catch claim, disclosure, AI-label and teen issues" },
+        { "ref": "library:ad-and-page-policy-checker", "type": "skill", "use": "check", "when": "When the ad and its page both need a line-by-line policy check with safer rewrites" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When a script has many claims, to sort each as fine, needs proof or cut" }
+      ]
+    },
+    {
+      "id": "change-request",
+      "task": "Write a change request for the client to approve",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/change-request-for-approval", "use": "build", "when": "Whenever a change needs the client's yes or sits outside the agreed limits" },
+        { "ref": "library:ad-performance-diagnoser", "type": "skill", "use": "brief", "when": "When the request must show the bottleneck and its cause in the numbers" },
+        { "ref": "library:ad-dashboard-reader", "type": "skill", "use": "brief", "when": "When the client needs each metric explained before they can say yes" }
+      ]
+    },
+    {
+      "id": "account-audit",
+      "task": "Audit an existing TikTok ad account",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:tiktok-ads-account-auditor", "type": "skill", "use": "build", "when": "When you have the account's exports and need to find where money leaks" },
+        { "ref": "library:six-pattern-ad-performance-diagnoser", "type": "skill", "use": "check", "when": "When results changed, to test six possible causes against the account's own past" },
+        { "ref": "library:ad-performance-diagnoser", "type": "skill", "use": "build", "when": "When one campaign underperforms and you need the main bottleneck named" },
+        { "ref": "kit:workflows/weekly-review-routine", "use": "brief", "when": "After the audit, to set the weekly routine that keeps the fixes in place" }
+      ]
+    },
+    {
+      "id": "video-ad-edit",
+      "task": "Plan the edit, captions and on-screen text for video ads",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:video-ad-edit-planner", "type": "skill", "use": "build", "when": "When you have clips and a script and need a timed cut list and caption windows" },
+        { "ref": "library:video-ad-text-overlays", "type": "skill", "use": "build", "when": "When on-screen words must be timed and kept clear of the app's buttons" },
+        { "ref": "library:cut-caption-and-check-a-video-ad-before-launch", "type": "workflow", "use": "check", "when": "Before upload, to run the cut, the captions and a launch check in one pass" },
+        { "ref": "library:capcut", "type": "tool", "use": "build", "when": "When the cut, captions and resize are done on a phone or in a browser" }
+      ]
+    },
+    {
+      "id": "competitor-ad-research",
+      "task": "Study rival ads and what is working in the category",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:competitor-ad-teardown-writer", "type": "skill", "use": "build", "when": "When you need a report on rivals' public ads and the pages they send people to" },
+        { "ref": "library:winning-ad-dna-mapper", "type": "skill", "use": "build", "when": "When you have winning ads and want each split into its message and its look" },
+        { "ref": "library:tiktok-research-collector", "type": "skill", "use": "brief", "when": "When you need public videos, comments and stats for a hashtag or account" }
+      ]
+    },
+    {
+      "id": "tiktok-shop-ads",
+      "task": "Plan ads for a TikTok Shop",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:tiktok-shop-ad-planner", "type": "skill", "use": "build", "when": "When the client sells in TikTok Shop and needs shopping ads, video ads and bids planned" },
+        { "ref": "library:gmv-max-campaign-setup-planner", "type": "skill", "use": "build", "when": "When the shop moves to automated shop campaigns and needs settings and a return target" },
+        { "ref": "library:tiktok-shop-results-reader", "type": "skill", "use": "check", "when": "When results are in, to see which videos, creators and ads really made sales" }
+      ]
+    },
+    {
+      "id": "landing-page-match",
+      "task": "Check the page each ad sends people to",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:ad-and-page-match-checker", "type": "skill", "use": "check", "when": "When an ad gets clicks but few sales, to score how well the page matches it" },
+        { "ref": "library:ad-matched-landing-page-writer", "type": "skill", "use": "build", "when": "When the page does not carry on from the video and needs new copy that does" }
+      ]
+    },
+    {
+      "id": "client-report",
+      "task": "Write the monthly results report for the client",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/tiktok-hook-test-and-weekly-review", "use": "brief", "when": "When the report should draw on the dated test log and the weekly calls" },
+        { "ref": "library:marketing-performance-report", "type": "skill", "use": "build", "when": "When the client needs trends, wins, misses and what changes next" },
+        { "ref": "library:ad-dashboard-reader", "type": "skill", "use": "check", "when": "When platform numbers and store numbers disagree and must be reconciled" },
+        { "ref": "library:platform-roas-reality-check", "type": "skill", "use": "check", "when": "Before a return figure goes in the report, to test it against real sales" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a script or report states a number or result you cannot trace to the client" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a brief, script or report is sent, to catch typos and names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "ad-creative-strategist", "when": "When the account needs a deeper bank of concepts and a creative plan for months" },
+    { "role": "video-editor", "when": "When raw creator footage needs cutting into several finished versions" },
+    { "role": "affiliate-influencer-manager", "when": "When creator work needs contracts, rates and a tracked programme" },
+    { "role": "tiktok-shop-manager", "when": "When the client sells in TikTok Shop and listings, affiliates and lives need running" },
+    { "role": "cro-specialist", "when": "When ads get clicks but the landing page or checkout loses the sale" },
+    { "role": "marketing-analyst", "when": "When the client asks what TikTok really adds next to other channels" }
+  ],
+  "gaps": [
+    "No library item sets up the TikTok pixel and Events API step by step; the tracking items cover GA4, Meta and Google",
+    "No library item explains Smart+ campaigns: when to use them, what to set and how to read them",
+    "No library item covers Spark Ads authorisation: codes, how long access lasts and usage rights; only the kit does",
+    "No library item checks an ad against TikTok's own ad rules, AI-label rule and rules on teens",
+    "No library item plans how to scale a TikTok winner with a spend ladder; the one scale planner is for Meta",
+    "No library item plans TikTok app install or lead form campaigns",
+    "No library item drafts a creator contract or usage-rights terms for paid posts",
+    "No library item reads TikTok's top ads and trending sounds or picks music that may be used in ads",
+    "No library item writes a change request for client approval or sets approval levels for account changes",
+    "No library item runs a new client intake for a TikTok ad account; only the kit prompt does",
+    "No library item makes clearly different cuts of one video ad to test against each other"
+  ]
+}

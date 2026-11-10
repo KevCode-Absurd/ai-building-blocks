@@ -1,0 +1,294 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "seo-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "technical-audit",
+      "task": "Run a technical SEO audit and rank the fixes",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/technical-seo-audit", "use": "build", "when": "When you have a crawl export and Search Console exports and need fixes ranked by impact" },
+        { "ref": "library:crawl-error-triage-planner", "type": "skill", "use": "build", "when": "When the crawler lists thousands of issues and you must cut them to the few that matter" },
+        { "ref": "library:technical-seo-auditor", "type": "skill", "use": "explore", "when": "When you want a second audit of crawling, indexing and structure to compare with yours" },
+        { "ref": "library:store-seo-fix-prioritiser", "type": "skill", "use": "build", "when": "When the site is an online shop and the crawl must become five to ten ranked fixes" },
+        { "ref": "library:audit-your-sites-seo-and-fix-titles-tags-and-markup-first", "type": "workflow", "use": "build", "when": "When the client wants the audit and the first on-page fixes done in one run" },
+        { "ref": "library:seo-change-tracker", "type": "skill", "use": "check", "when": "Before fixes go in, to save the site's state so later changes can be seen" }
+      ]
+    },
+    {
+      "id": "indexing-readout",
+      "task": "Find why pages are not indexed and list the fixes",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/technical-seo-audit", "use": "build", "when": "When the indexing report shows many excluded pages and each reason needs a decision" },
+        { "ref": "library:search-indexing-auditor", "type": "skill", "use": "build", "when": "When you have a Search Console export and need to know why pages stay out of the index" },
+        { "ref": "library:thin-page-finder", "type": "skill", "use": "check", "when": "When a shop has empty or very short pages that may be dragging the rest down" }
+      ]
+    },
+    {
+      "id": "keyword-map",
+      "task": "Build a keyword map by search intent",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/keyword-intent-map", "use": "build", "when": "When searches need grouping by intent, scoring and assigning one group to each page" },
+        { "ref": "library:customer-question-keyword-finder", "type": "prompt", "use": "brief", "when": "Before any keyword tool, to start from the questions customers really ask" },
+        { "ref": "library:search-intent-keyword-mapper", "type": "skill", "use": "explore", "when": "When you want a second grouping of the same topic by intent to compare" },
+        { "ref": "library:store-keyword-map-builder", "type": "skill", "use": "build", "when": "When the site is a shop and each collection and product needs its own topic" },
+        { "ref": "library:rival-seo-comparer", "type": "skill", "use": "check", "when": "When you must judge the chance of winning a group against the sites that rank now" },
+        { "ref": "library:neil-patel", "type": "mind", "use": "think", "when": "When the list is built from search volume alone, to go back to what buyers want to know" }
+      ]
+    },
+    {
+      "id": "content-brief",
+      "task": "Write an SEO content brief for a new or refreshed page",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/serp-intent-check", "use": "brief", "when": "Before you write or rewrite, to match page type and angle to what already ranks" },
+        { "ref": "kit:skills/seo-content-brief", "use": "build", "when": "When a writer needs one page built from the live results and the client's customer words" },
+        { "ref": "library:search-page-brief-writer", "type": "skill", "use": "explore", "when": "When you have the ranking pages and want a second brief with gaps to compare" },
+        { "ref": "library:keyword-to-post-outline-writer", "type": "prompt", "use": "build", "when": "When the brief needs a one-page outline with headings in the order a reader asks" },
+        { "ref": "library:perplexity", "type": "tool", "use": "brief", "when": "When you need to read what ranks and what is cited for the query, with links" },
+        { "ref": "library:roy-peter-clark", "type": "mind", "use": "think", "when": "When the brief lists twenty headings and no point, to find the one focus" }
+      ]
+    },
+    {
+      "id": "write-or-refresh-post",
+      "task": "Write or refresh a post to win a search",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/seo-content-brief", "use": "brief", "when": "Before drafting, so the post follows a brief built from the live results" },
+        { "ref": "library:write-a-post-that-beats-the-pages-ranking-today", "type": "workflow", "use": "build", "when": "When one search matters and the post must be better than what ranks today" },
+        { "ref": "library:search-blog-post-writer", "type": "skill", "use": "build", "when": "When you need a long post with the answer first, FAQs and internal links" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the title is flat, to get several angles that earn the click honestly" },
+        { "ref": "library:answer-first-page-rewriter", "type": "skill", "use": "build", "when": "When an old post buries its answer, to rewrite each section answer first" },
+        { "ref": "library:pre-publish-content-checker", "type": "skill", "use": "check", "when": "Before publishing, to check the draft against its brief for facts, voice and structure" }
+      ]
+    },
+    {
+      "id": "title-and-meta",
+      "task": "Rewrite titles and meta descriptions for low click-through",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/title-and-meta-rewrite", "use": "build", "when": "When a page has many impressions but a low click rate for its average position" },
+        { "ref": "library:search-console-quick-win-finder", "type": "skill", "use": "brief", "when": "Before rewriting, to pick the pages where a better title would pay most this month" },
+        { "ref": "library:search-title-and-snippet-writer", "type": "prompt", "use": "explore", "when": "When you want three title and description pairs inside the length limits to choose from" },
+        { "ref": "library:headline-promise-checker", "type": "skill", "use": "check", "when": "When a title is chosen, to check it picks the right searcher and promises a clear gain" }
+      ]
+    },
+    {
+      "id": "internal-links",
+      "task": "Plan internal links to lift a page that matters",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/internal-link-suggestions", "use": "build", "when": "When a key page ranks lower than it should, sits deep, or has just gone live" },
+        { "ref": "library:internal-link-mapper", "type": "skill", "use": "build", "when": "When the whole site needs a map of which pages link to which, with anchor text" },
+        { "ref": "library:content-hub-planner", "type": "skill", "use": "brief", "when": "When links should follow a hub of one main page and its supporting pages" },
+        { "ref": "library:site-map-planner", "type": "skill", "use": "brief", "when": "When the menu and URL structure are the reason pages sit too deep" }
+      ]
+    },
+    {
+      "id": "schema-markup",
+      "task": "Draft structured data for the main page types",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/schema-markup-draft", "use": "build", "when": "When a page type Google supports needs JSON-LD, or the home page needs business markup" },
+        { "ref": "library:schema-markup-writer", "type": "skill", "use": "build", "when": "When you want checked markup for a named page type, ready to paste" }
+      ]
+    },
+    {
+      "id": "traffic-drop",
+      "task": "Diagnose a drop in organic search traffic",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/search-traffic-drop-diagnosis", "use": "build", "when": "When organic traffic falls and you must work through the causes step by step" },
+        { "ref": "library:search-console-traffic-drop-diagnoser", "type": "skill", "use": "build", "when": "When you have the Search Console export and need the pages that lost clicks and why" },
+        { "ref": "library:fix-a-drop-in-search-traffic-and-check-it-recovers", "type": "workflow", "use": "build", "when": "When the client wants the diagnosis, the fixes and a check that traffic came back" },
+        { "ref": "library:traffic-channel-classifier", "type": "skill", "use": "check", "when": "When the drop may be a tracking or channel-labelling change, not a search change" },
+        { "ref": "library:charles-darwin", "type": "mind", "use": "think", "when": "When you already have a favourite cause, to keep the facts that do not fit it" }
+      ]
+    },
+    {
+      "id": "core-update-readout",
+      "task": "Tell a client what a Google core update did to their site",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/core-update-readout", "use": "build", "when": "After a core update finishes rolling out, to say plainly what happened and what to do" },
+        { "ref": "library:search-console-traffic-drop-diagnoser", "type": "skill", "use": "brief", "when": "Before the read-out, to find which pages and queries moved across the update dates" },
+        { "ref": "library:page-keep-or-cut-auditor", "type": "skill", "use": "build", "when": "When the update hit thin or overlapping pages and each needs a keep, merge or cut call" },
+        { "ref": "library:tim-harford", "type": "mind", "use": "think", "when": "When one scary percentage leads the read-out, to ask what it counts and against what" }
+      ]
+    },
+    {
+      "id": "monthly-search-review",
+      "task": "Run the monthly search review and report",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/monthly-search-review", "use": "build", "when": "In the first week of each month, once last month's Search Console data has settled" },
+        { "ref": "library:monthly-search-console-keeper", "type": "agent", "use": "build", "when": "Each month, to turn the export into pages to push, thin pages and what changed" },
+        { "ref": "library:organic-search-report-builder", "type": "skill", "use": "build", "when": "When the client needs non-branded clicks against last period in a short report" },
+        { "ref": "library:search-console-quick-win-finder", "type": "skill", "use": "build", "when": "When the report should end with the few pages worth pushing this month" },
+        { "ref": "library:traffic-channel-classifier", "type": "skill", "use": "check", "when": "When analytics and Search Console disagree on what counts as organic search" }
+      ]
+    },
+    {
+      "id": "content-refresh",
+      "task": "Find decaying content and refresh, merge or cut it",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/content-refresh-cycle", "use": "build", "when": "Every quarter, to pick the posts to refresh and run them through in order" },
+        { "ref": "library:find-old-posts-losing-traffic-refresh-or-cut-them-and-track-it", "type": "workflow", "use": "build", "when": "When a blog has many old posts and each needs a refresh, merge or cut decision" },
+        { "ref": "library:old-content-refresher", "type": "skill", "use": "build", "when": "When you have the list of posts and need to know how deep each update should go" },
+        { "ref": "library:page-keep-or-cut-auditor", "type": "skill", "use": "check", "when": "Before anything is deleted, to mark each page keep, update, merge or redirect" },
+        { "ref": "library:answer-first-page-rewriter", "type": "skill", "use": "build", "when": "When a refreshed post should lead with its answer so search and AI tools can quote it" }
+      ]
+    },
+    {
+      "id": "site-migration",
+      "task": "Plan a site migration without losing traffic",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/site-migration", "use": "build", "when": "Before any change of domain, URL structure, platform or templates" },
+        { "ref": "library:website-content-mover", "type": "skill", "use": "build", "when": "When content moves from an old site to a new one and rank and links must be kept" },
+        { "ref": "library:domain-redirect-layout-planner", "type": "prompt", "use": "build", "when": "When several domains and subdomains need one layout and one set of redirect rules" },
+        { "ref": "library:redirect-chain-finder", "type": "skill", "use": "check", "when": "After launch, to find redirects that chain or all point at one page" },
+        { "ref": "library:seo-change-tracker", "type": "skill", "use": "check", "when": "Before and after launch, to compare tags, pages and rankings and catch what broke" }
+      ]
+    },
+    {
+      "id": "seo-plan",
+      "task": "Write a 90-day SEO plan from a Search Console export",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:seo-worth-it-checker", "type": "skill", "use": "brief", "when": "Before planning, to test whether search can pay for this business at all" },
+        { "ref": "kit:skills/keyword-intent-map", "use": "brief", "when": "When the plan needs the few searches worth chasing, scored by value and effort" },
+        { "ref": "library:search-console-quick-win-finder", "type": "skill", "use": "build", "when": "When the first month should be pages already close to page one" },
+        { "ref": "library:rival-seo-comparer", "type": "skill", "use": "brief", "when": "When you need search overlap and content depth against named rivals" },
+        { "ref": "library:rand-fishkin", "type": "mind", "use": "think", "when": "When the plan assumes search is the channel, to check where the audience really goes" }
+      ]
+    },
+    {
+      "id": "on-page-fixes",
+      "task": "List on-page fixes for the top pages",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:on-page-seo-tuner", "type": "skill", "use": "build", "when": "When one page needs fixes for title, headings, content and links in one list" },
+        { "ref": "kit:prompts/title-and-meta-rewrite", "use": "build", "when": "When the fix list includes titles and descriptions with low click rates" },
+        { "ref": "kit:prompts/internal-link-suggestions", "use": "build", "when": "When a top page needs more links from the rest of the site" },
+        { "ref": "kit:prompts/serp-intent-check", "use": "check", "when": "When a page will not rise, to check its type still matches what ranks" }
+      ]
+    },
+    {
+      "id": "collection-pages",
+      "task": "Plan and write collection and product pages for a shop",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:plan-collection-pages-that-rank-for-buying-searches", "type": "workflow", "use": "build", "when": "When a shop has products and a keyword export and needs collections that match buying searches" },
+        { "ref": "library:collection-page-seo-builder", "type": "skill", "use": "build", "when": "When one collection needs its title, heading, URL, copy and FAQ written" },
+        { "ref": "library:product-page-seo-builder", "type": "skill", "use": "build", "when": "When one product page needs layout, copy, image names and markup for a target term" },
+        { "ref": "library:search-title-and-snippet-writer", "type": "prompt", "use": "explore", "when": "When each collection needs three title options to pick from" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When collection copy reads like filler, to test it and get a true, specific rewrite" }
+      ]
+    },
+    {
+      "id": "comparison-pages",
+      "task": "Write a fair comparison or best-of page",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:publish-comparison-and-best-of-pages-that-shoppers-and-ai-quote", "type": "workflow", "use": "build", "when": "When you have rivals and product facts and want pages people and AI tools quote" },
+        { "ref": "library:comparison-page-set-planner", "type": "skill", "use": "explore", "when": "Before writing, to choose between best-of, review, alternative and versus pages" },
+        { "ref": "library:best-of-page-writer", "type": "skill", "use": "build", "when": "When a buyer question needs a fair ranked list with real numbers" },
+        { "ref": "kit:prompts/serp-intent-check", "use": "brief", "when": "Before choosing the page type, to see which kind already ranks for the query" },
+        { "ref": "library:claim-and-proof-matcher", "type": "skill", "use": "check", "when": "Before publishing, to check every claim about a rival is supported" }
+      ]
+    },
+    {
+      "id": "ai-assistant-visibility",
+      "task": "Plan how to be named by AI assistants",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:ai-search-audit", "type": "skill", "use": "check", "when": "First, to score how likely AI search is to cite the site and why" },
+        { "ref": "library:get-your-store-recommended-by-ai-assistants", "type": "workflow", "use": "build", "when": "When a shop wants a baseline of who AI names, the gaps and a plan to close them" },
+        { "ref": "library:ai-search-visibility-optimiser", "type": "skill", "use": "build", "when": "When one page or topic needs edits so AI tools can quote it" },
+        { "ref": "library:ai-citation-source-finder", "type": "skill", "use": "brief", "when": "When you need the sites AI tools keep citing for the buyer's questions" },
+        { "ref": "library:ai-crawler-access-editor", "type": "skill", "use": "build", "when": "When the robots file blocks AI crawlers the client wants to allow" }
+      ]
+    },
+    {
+      "id": "page-speed-readout",
+      "task": "Read out Core Web Vitals for the pages that matter",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/technical-seo-audit", "use": "brief", "when": "When speed is one part of the audit and must be ranked against the other fixes" },
+        { "ref": "library:website-speed-tuner", "type": "skill", "use": "build", "when": "When a slow site needs its Core Web Vitals, bundle and caching problems found" }
+      ]
+    },
+    {
+      "id": "local-seo",
+      "task": "Audit the Google profile and plan local search work",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:local-search-listing-manager", "type": "skill", "use": "build", "when": "When a local or service-area business needs a listing audit and ranked fixes" },
+        { "ref": "library:page-at-scale-builder", "type": "skill", "use": "build", "when": "When many area pages are needed and each must be useful, not a copy" },
+        { "ref": "kit:prompts/schema-markup-draft", "use": "build", "when": "When the home or contact page needs local business markup" },
+        { "ref": "library:review-request-and-reply-planner", "type": "skill", "use": "build", "when": "When the listing needs a steady, honest rhythm of new reviews and replies" },
+        { "ref": "library:thin-page-finder", "type": "skill", "use": "check", "when": "When area pages exist, to find the ones too short or too alike to keep" }
+      ]
+    },
+    {
+      "id": "link-earning",
+      "task": "Plan link earning and outreach",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/link-earning-outreach", "use": "build", "when": "When the client has something worth citing and wants links without buying them" },
+        { "ref": "library:link-and-pr-outreach-planner", "type": "skill", "use": "build", "when": "When links should come from digital PR, brand mentions and local sources together" },
+        { "ref": "library:store-link-gap-planner", "type": "skill", "use": "brief", "when": "When a shop needs to see which links rivals have that it lacks" },
+        { "ref": "library:cold-email-pre-send-checker", "type": "skill", "use": "check", "when": "Before outreach is sent, to test each claim and the legal basics of the email" }
+      ]
+    },
+    {
+      "id": "topic-cluster",
+      "task": "Plan a topic cluster from keywords to briefs",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:plan-a-topic-cluster-from-keywords-to-post-briefs-and-links", "type": "workflow", "use": "build", "when": "When one topic should become a main page, supporting posts, briefs and links" },
+        { "ref": "kit:skills/keyword-intent-map", "use": "brief", "when": "Before the cluster, so each page in it owns one group of searches" },
+        { "ref": "library:content-hub-planner", "type": "skill", "use": "build", "when": "When the cluster needs its URL structure and linking set out" }
+      ]
+    },
+    {
+      "id": "multi-language",
+      "task": "Plan search set-up for more than one language or country",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:multi-language-site-planner", "type": "skill", "use": "build", "when": "When the site adds markets and needs language URLs and the tags that link them" },
+        { "ref": "kit:skills/technical-seo-audit", "use": "check", "when": "After launch, to check the language versions are crawled and indexed as planned" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a page or report states a number or fact you cannot trace to a source" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a brief, page or report is sent, to catch typos and terms used two ways" }
+  ],
+  "helpers": [
+    { "role": "content-marketer", "when": "When briefs are agreed and the posts and guides must be written at volume" },
+    { "role": "link-building-specialist", "when": "When link earning becomes a campaign with a prospect list and many emails" },
+    { "role": "aeo-geo-specialist", "when": "When the main goal is to be named by AI assistants, not to rank in Google" },
+    { "role": "frontend-developer", "when": "When fixes need template, rendering or page speed changes in the code" },
+    { "role": "local-marketing-specialist", "when": "When the job is mostly the map listing, local directories and reviews" },
+    { "role": "marketing-analyst", "when": "When the client asks what search is worth next to paid, email and other channels" }
+  ],
+  "gaps": [
+    "No library item builds a page-by-page redirect map from an old crawl and a new one, with a launch-day checklist",
+    "No library item reads a Core Web Vitals field report for search pages; the speed items are written for developers",
+    "No library item writes a core update read-out for a client; only the kit prompt does",
+    "No library item finds two or more pages competing for the same search",
+    "No library item reads server logs to show what search and AI crawlers fetch",
+    "No library item checks whether pages built with JavaScript are rendered and indexed",
+    "No library item forecasts the traffic and revenue a ranking gain would bring",
+    "No library item checks name, address and phone across listings or plans photos and posts for a Google profile",
+    "No library item checks a page against Google's people-first content questions and author signals",
+    "No library item audits language and country tags on a live multi-language site",
+    "No library item checks the live results page for intent outside the kit prompt"
+  ]
+}

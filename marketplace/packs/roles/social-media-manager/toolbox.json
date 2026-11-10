@@ -1,0 +1,284 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "social-media-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "monthly-content-plan",
+      "task": "Build a month-long social content calendar",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/monthly-plan-and-review", "use": "brief", "when": "In the last week of each month, to review what worked and plan the next month in order" },
+        { "ref": "kit:skills/social-content-plan", "use": "build", "when": "When a small business needs a plan it can keep on the time it really has" },
+        { "ref": "library:content-calendar-builder", "type": "skill", "use": "explore", "when": "When you want a second calendar built from customer words and rivals' gaps to compare" },
+        { "ref": "library:competitor-social-research", "type": "skill", "use": "brief", "when": "Before planning, to see what works for rival accounts and where they leave gaps" },
+        { "ref": "library:gary-vaynerchuk", "type": "mind", "use": "think", "when": "When the plan is all selling, to ask what would be useful to the audience first" }
+      ]
+    },
+    {
+      "id": "weekly-cycle",
+      "task": "Run the weekly cycle of posts, replies and checks",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/weekly-social-cycle", "use": "build", "when": "Every week on a fixed day, to write, check and schedule the following week" },
+        { "ref": "library:weekly-social-content-planner", "type": "agent", "use": "build", "when": "Each week, to turn the plan and last week's results into next week's posts" },
+        { "ref": "library:social-post-planner", "type": "skill", "use": "build", "when": "When the week has no plan yet and you need posts drafted for each platform" },
+        { "ref": "kit:prompts/disclosure-and-claims-check", "use": "check", "when": "Before the week is scheduled, to check gifted, paid or AI-made posts and any claims" }
+      ]
+    },
+    {
+      "id": "caption-batch",
+      "task": "Write a batch of captions and posts ready to publish",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/platform-native-posts", "use": "build", "when": "When posts must fit each platform's habits and the business's own voice" },
+        { "ref": "library:voice-matched-post-writer", "type": "skill", "use": "build", "when": "When the owner has posts they wrote themselves and new ones must sound the same" },
+        { "ref": "library:message-stickiness-rewriter", "type": "prompt", "use": "explore", "when": "When a first line is flat, to get three versions people will remember" },
+        { "ref": "library:shareable-content-checker", "type": "skill", "use": "check", "when": "Before posting, to score a post on the reasons people share and fix the weakest" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a caption could be from any business, to test it and get a true rewrite" },
+        { "ref": "library:jonah-berger", "type": "mind", "use": "think", "when": "When posts are liked but never sent on, to find what would make someone pass it to a friend" }
+      ]
+    },
+    {
+      "id": "one-idea-many-platforms",
+      "task": "Turn one idea into native posts for each platform",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/one-idea-many-platforms", "use": "build", "when": "When one idea, tip or announcement needs separate versions, not one post pasted everywhere" },
+        { "ref": "library:multi-platform-post-planner", "type": "skill", "use": "explore", "when": "When you want a second set of posts with hooks and a posting plan to compare" },
+        { "ref": "library:x-and-linkedin-post-pair-writer", "type": "prompt", "use": "build", "when": "When the idea goes to X and LinkedIn and each must read as written for that place" },
+        { "ref": "library:shareable-content-checker", "type": "skill", "use": "check", "when": "When the versions are drafted, to see which one people are most likely to share" }
+      ]
+    },
+    {
+      "id": "carousels",
+      "task": "Write and plan a pack of carousels",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:skills/platform-native-posts", "use": "build", "when": "When each carousel needs its slide text and caption written for the platform" },
+        { "ref": "library:agency-marketing-carousel-growth-engine", "type": "agent", "use": "brief", "when": "When you need a plan of carousel topics with hooks and slide order" },
+        { "ref": "library:story-carousel-ad-writer", "type": "skill", "use": "build", "when": "When a carousel tells a story and each card needs its picture and words planned" },
+        { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "When every slide looks like a stock template, to get three hand-made layouts" },
+        { "ref": "library:canva", "type": "tool", "use": "build", "when": "When the owner's team will build the slides from a template" },
+        { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When slides are drafted, to see where the eye lands first and what to cut" }
+      ]
+    },
+    {
+      "id": "profile-makeover",
+      "task": "Rewrite the profile bio, pinned post and grid look",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/profile-bio-and-pinned-post", "use": "build", "when": "When the profile does not say who you help or what to do next" },
+        { "ref": "library:elevator-pitch-writer", "type": "skill", "use": "explore", "when": "When the owner cannot say what they do briefly, to get three lengths to choose from" },
+        { "ref": "library:agency-marketing-instagram-curator", "type": "agent", "use": "brief", "when": "When the Instagram grid needs visual themes and a posting pattern" },
+        { "ref": "library:reusable-reel-cover-recipe-builder", "type": "skill", "use": "build", "when": "When the grid looks messy and video covers need one repeatable style" },
+        { "ref": "library:brand-social-account-checker", "type": "skill", "use": "check", "when": "When the profile and recent posts need scoring with a fix for each rule missed" }
+      ]
+    },
+    {
+      "id": "pillars-and-rhythm",
+      "task": "Set content pillars and a four-week rhythm",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/social-content-plan", "use": "build", "when": "When the account posts at random and needs set subjects and a pace it can keep" },
+        { "ref": "library:content-pillar-finder", "type": "skill", "use": "explore", "when": "When the owner has posted before, to find three to five subjects they can keep posting on" },
+        { "ref": "library:agency-marketing-social-media-strategist", "type": "agent", "use": "brief", "when": "When you want a second view on audience, platforms and what to measure" },
+        { "ref": "library:rand-fishkin", "type": "mind", "use": "think", "when": "When the platform list is a guess, to check where this audience really spends time" }
+      ]
+    },
+    {
+      "id": "short-video-scripts",
+      "task": "Plan and script a month of short videos",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:skills/short-video-scripts", "use": "build", "when": "When a small business needs Reels, TikToks or Shorts it can film itself" },
+        { "ref": "library:short-video-format-picker", "type": "skill", "use": "brief", "when": "Before scripting, to pick a format that fits the product and who can be on camera" },
+        { "ref": "library:agency-marketing-tiktok-strategist", "type": "agent", "use": "explore", "when": "When you want a second set of TikTok formats and test ideas to compare" },
+        { "ref": "library:rising-trend-spotter", "type": "skill", "use": "brief", "when": "When you want what is rising for the topic before you pick this month's ideas" },
+        { "ref": "library:video-hook-scorer", "type": "skill", "use": "check", "when": "When scripts are drafted, to score each opening and rewrite the weak ones" },
+        { "ref": "library:alfred-hitchcock", "type": "mind", "use": "think", "when": "When a script tells everything at once, to decide what the viewer waits to find out" }
+      ]
+    },
+    {
+      "id": "video-hooks",
+      "task": "Write and test hooks for one video idea",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/video-hook-batch", "use": "explore", "when": "When you know what the video is about but not how to open it" },
+        { "ref": "library:short-video-hook-writer", "type": "skill", "use": "explore", "when": "When you want ten more hooks checked for length and reading level" },
+        { "ref": "library:video-opening-line-batch-writer", "type": "prompt", "use": "explore", "when": "When the opening is spoken to camera and you need lines that sound natural aloud" },
+        { "ref": "library:social-video-transcript-analyst", "type": "skill", "use": "brief", "when": "When you want the hooks and themes pulled from videos that already did well" },
+        { "ref": "library:video-hook-scorer", "type": "skill", "use": "check", "when": "When you have a batch, to score each hook for this audience before filming" }
+      ]
+    },
+    {
+      "id": "shoot-plan",
+      "task": "Plan a one-day shoot for a batch of videos",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/short-video-scripts", "use": "brief", "when": "When ten scripts must be grouped by place and outfit so one session covers them" },
+        { "ref": "library:creator-filming-brief-writer", "type": "skill", "use": "build", "when": "When the person filming needs a brief, a shoot order and file names" }
+      ]
+    },
+    {
+      "id": "edit-notes",
+      "task": "Write edit notes, captions and covers for raw footage",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:social-video-edit-planner", "type": "skill", "use": "build", "when": "When you have clips and the post's idea and need a timed cut list, captions and a cover" },
+        { "ref": "library:agency-marketing-short-video-editing-coach", "type": "agent", "use": "build", "when": "When the owner edits in a phone app and needs a second-by-second plan" },
+        { "ref": "library:branded-video-captions", "type": "skill", "use": "build", "when": "When the video plays without sound and needs timed captions in the brand's font" },
+        { "ref": "library:shorts-clip-finder", "type": "skill", "use": "build", "when": "When a long video should give up its five best moments as short clips" },
+        { "ref": "library:capcut", "type": "tool", "use": "build", "when": "When the edit, captions and resize are done on a phone or in a browser" }
+      ]
+    },
+    {
+      "id": "replies",
+      "task": "Reply to a batch of comments and messages",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/comment-and-message-replies", "use": "build", "when": "When comments and messages need sorting, a reply each and risky ones held for a person" },
+        { "ref": "library:customer-message-tone-and-urgency-review", "type": "skill", "use": "brief", "when": "Before replying, to rank the batch by tone, urgency and warning signs" },
+        { "ref": "library:social-comment-and-reply-desk", "type": "agent", "use": "build", "when": "When comments arrive daily and each reply should add something" },
+        { "ref": "library:weekly-community-keeper", "type": "agent", "use": "build", "when": "Each week, to answer community posts and note the questions that repeat" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before a reply to a complaint is posted, to check every promise can be kept" }
+      ]
+    },
+    {
+      "id": "dm-scripts",
+      "task": "Write direct message scripts for common questions",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/comment-and-message-replies", "use": "build", "when": "When the same ten questions arrive in messages and need ready answers in the brand voice" },
+        { "ref": "library:comment-mining-analyst", "type": "skill", "use": "brief", "when": "Before writing, to find what people really ask and in what words" },
+        { "ref": "library:customer-reply-drafter", "type": "skill", "use": "build", "when": "When a message does not fit a script and needs a reply for that person's situation" }
+      ]
+    },
+    {
+      "id": "community-policy",
+      "task": "Write a community and comment policy",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/comment-and-message-replies", "use": "build", "when": "When the team needs rules for what to answer, hide, report and hand to a person" },
+        { "ref": "library:voice-and-tone-guide-writer", "type": "skill", "use": "build", "when": "When replies need a set tone for praise, questions, complaints and trolls" },
+        { "ref": "library:whitney-wolfe-herd", "type": "mind", "use": "think", "when": "When the policy only lists bans, to ask what would make people feel safe to take part" }
+      ]
+    },
+    {
+      "id": "bad-moment",
+      "task": "Respond to a complaint or rumour that is spreading",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/bad-moment-response", "use": "build", "when": "When an angry thread, outage, recall or rumour is spreading and posts must pause" },
+        { "ref": "kit:prompts/holding-statement", "use": "build", "when": "When you need calm words fast while the facts are still being checked" },
+        { "ref": "library:social-listening-brief-writer", "type": "skill", "use": "brief", "when": "When you need what people are saying, grouped by theme, before you answer" },
+        { "ref": "library:crisis-response-planner", "type": "skill", "use": "build", "when": "When the cause is a real failure and the response must run for weeks" },
+        { "ref": "library:fact-vs-opinion-sorter", "type": "prompt", "use": "check", "when": "Before the statement is posted, to split what is confirmed from what is guessed" },
+        { "ref": "library:angry-customer-reply-checker", "type": "skill", "use": "check", "when": "Before public replies go out, to check facts, promises and tone" }
+      ]
+    },
+    {
+      "id": "post-review",
+      "task": "Review the last 30 posts and say what to change",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/last-30-posts-review", "use": "build", "when": "Once a month, to find what worked using shares, saves, sends, clicks and new reach" },
+        { "ref": "library:social-content-results-reader", "type": "skill", "use": "brief", "when": "When you need the engagement figures for the accounts gathered first" },
+        { "ref": "library:organic-format-tester", "type": "skill", "use": "check", "when": "When you compare formats, to see which earned their place and which to stop" },
+        { "ref": "library:post-for-two-weeks-and-learn-what-worked-and-flopped", "type": "workflow", "use": "build", "when": "When there is too little history and you need a two-week test with a read-out" },
+        { "ref": "library:marketing-performance-report", "type": "skill", "use": "build", "when": "When the owner wants the month written up as wins, misses and next steps" }
+      ]
+    },
+    {
+      "id": "disclosure-check",
+      "task": "Check disclosures and claims before posting",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/disclosure-and-claims-check", "use": "check", "when": "Before anything gifted, paid, affiliated or AI-made, or any claim on results or price" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When a post has several claims, to sort each as fine, needs proof or cut" },
+        { "ref": "library:ad-and-page-policy-checker", "type": "skill", "use": "check", "when": "When the post will be boosted, to flag platform policy risks line by line" }
+      ]
+    },
+    {
+      "id": "boost-and-starter-ads",
+      "task": "Plan a starter ad test or boost the best posts",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:tiktok-starter-campaign-builder", "type": "skill", "use": "build", "when": "When the owner wants a first TikTok campaign with budgets and a four-week plan" },
+        { "ref": "library:tiktok-spark-ad-picker", "type": "skill", "use": "build", "when": "When organic posts have results and you must pick which to put money behind" },
+        { "ref": "kit:prompts/disclosure-and-claims-check", "use": "check", "when": "Before a post is boosted, to check claims and labels hold up as an ad" }
+      ]
+    },
+    {
+      "id": "customer-and-creator-content",
+      "task": "Get customers and creators posting about the business",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:customer-content-planner", "type": "skill", "use": "build", "when": "When you want customers posting their own photos and videos, with a brief to give them" },
+        { "ref": "library:influencer-gifting-planner", "type": "skill", "use": "build", "when": "When products go out as gifts and you must track which posts follow" },
+        { "ref": "library:creator-gifting-brief", "type": "workflow", "use": "build", "when": "When creators need a gifting plan, a phone-video script and a filming brief" },
+        { "ref": "kit:prompts/disclosure-and-claims-check", "use": "check", "when": "Before a gifted or paid post goes up, to check it is labelled the way the rules ask" }
+      ]
+    },
+    {
+      "id": "social-images",
+      "task": "Make images, quote cards and covers for posts",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:marketing-image-maker", "type": "skill", "use": "build", "when": "When a post needs a picture and you want a prompt, the exact size and a file plan" },
+        { "ref": "library:customer-quote-image-ad", "type": "skill", "use": "build", "when": "When a post is built around a customer's own words" },
+        { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "When every graphic looks like the same template, to get three other layouts" },
+        { "ref": "library:canva", "type": "tool", "use": "build", "when": "When the owner will reuse the designs from a shared template" },
+        { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When an image carries text, to check the eye finds the main line first" }
+      ]
+    },
+    {
+      "id": "listening-and-research",
+      "task": "Research rivals, trends and what the audience says",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:competitor-social-research", "type": "skill", "use": "build", "when": "When you need what works for named rivals and the gaps they leave" },
+        { "ref": "library:social-listening-brief-writer", "type": "skill", "use": "build", "when": "When you need what people say about the brand or topic, grouped by theme" },
+        { "ref": "library:comment-mining-analyst", "type": "skill", "use": "build", "when": "When comments hold questions and wants that should become posts" },
+        { "ref": "library:rising-trend-spotter", "type": "skill", "use": "brief", "when": "When you want what is rising on each platform for the client's topic" }
+      ]
+    },
+    {
+      "id": "repurpose",
+      "task": "Turn long content and past winners into new posts",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:monthly-content-repurposer", "type": "agent", "use": "build", "when": "Each month, to pick last month's best pieces and turn them into new posts" },
+        { "ref": "library:shorts-clip-finder", "type": "skill", "use": "build", "when": "When a podcast or long video should become short clips" },
+        { "ref": "kit:prompts/one-idea-many-platforms", "use": "build", "when": "When one strong post should be rewritten for the other platforms" },
+        { "ref": "library:opus-clip", "type": "tool", "use": "build", "when": "When long recordings need cutting into captioned clips to review" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-voice-rules-writer", "type": "skill", "use": "brief", "when": "At the start with a new client, to set the voice every post and reply follows" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a post states a number, result or fact you cannot trace to the business" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a batch is scheduled, to catch typos and names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "graphic-designer", "when": "When the job needs finished templates and image files, not only words" },
+    { "role": "video-editor", "when": "When raw footage needs a full edit, sound and exports for each platform" },
+    { "role": "community-manager", "when": "When replies grow into running a group, forum or member space" },
+    { "role": "meta-media-buyer", "when": "When boosting posts turns into a real ad account with budgets and tests" },
+    { "role": "affiliate-influencer-manager", "when": "When creator work needs contracts, rates and a tracked programme" },
+    { "role": "pr-specialist", "when": "When a bad moment reaches the press or needs a formal public statement" }
+  ],
+  "gaps": [
+    "No library item writes captions built for Instagram, Facebook or Threads; the post writers are strongest on LinkedIn and X",
+    "No library item writes a profile bio and pinned post; only the kit prompt does",
+    "No library item writes direct message scripts for the questions an account gets most",
+    "No library item writes a community and comment policy: what to answer, hide, report or block",
+    "No library item plans a giveaway or contest inside each platform's promotion rules",
+    "No library item picks hashtags or social search phrases for a post",
+    "No library item works out posting times and rhythm from an account's own data",
+    "No library item plans Stories, lives or other short-lived formats",
+    "No library item plans a one-day shoot for a small business filming its own organic videos",
+    "No tool guide covers a post scheduler such as Buffer, Later or Meta Business Suite",
+    "No library item explains each platform's rules for labelling paid, gifted and AI-made posts"
+  ]
+}

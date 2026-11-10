@@ -21,7 +21,7 @@ when:
   - You need to run a model on long inputs without running out of memory.
 not_for:
   - You use a hosted model through an API. You cannot change its window, so split your document or pick a model with a longer one.
-  - You only need to answer questions about a long document. Use the RAG pipeline designer to search it in pieces.
+  - You only need to answer questions about a long document. Use the AI document search designer to search it in pieces.
   - You want to shrink a model to fit your GPU. Use the AWQ model compression planner.
   - You want to fine-tune a model for a task, not for length. Use the Unsloth fine-tuning code writer.
 you_give:

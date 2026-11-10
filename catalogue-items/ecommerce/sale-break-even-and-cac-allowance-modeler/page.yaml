@@ -18,7 +18,7 @@ when:
   - Your ads look fine during a sale but your profit does not.
   - You want one clear break-even ROAS and CAC limit to hand your media buyer before the sale starts.
 not_for:
-  - "You want break-even ROAS and CPA with no sale in play: use the break-even ROAS and CPA calculator."
+  - "You want break-even ROAS and CPA with no sale in play: use the Break-even ad spend calculator."
   - "You need to set daily hold and cut points for ad spend: use the Sale season ad spend planner once you have your numbers."
   - "You do not know your product cost, shipping or fees: work those out first, because break-even cannot be trusted without them."
 

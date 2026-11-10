@@ -31,7 +31,7 @@ when:
   - A boss asks who your top five performers are this year, and you need numbers to back it up.
 not_for:
   - "You still have the raw Excel files and need the numbers pulled out first: use the Sales data extraction planner."
-  - "You want a dashboard people can open every day: use the Offline dashboard builder or the Recurring KPI report maker."
+  - "You want a dashboard people can open every day: use the Offline dashboard builder or the Recurring report maker."
   - "You want to review deal health and forecast the quarter: use the Sales pipeline analyst or the Sales pipeline deal priority reviewer."
   - "You want final figures for tax or accounts. Use this for management reports only, and have your accountant sign off the books."
 you_give:

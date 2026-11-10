@@ -9,7 +9,7 @@ explain: |
   It routes your request to one of three forms. A decision narrative fits a strategy, spending or staffing choice. A PR/FAQ fits a new product or service, written backwards from the customer's gain to the hard questions. A short brief fits a narrow question with little context. It adds the one sentence on why it chose that form. This copy is under the MIT licence (the LICENSE.md file in this item), written by Magnus Hedemark.
 subhead: Share the decision, the reader, your evidence and your limits. The skill picks a short brief, a full narrative or a future-product question document. You get connected prose that keeps choices, costs, risks and gaps in view. It is adapted from a public MIT-licensed source on Amazon-style writing, not official Amazon templates.
 not_for:
-  - "You need an architecture decision record or an incident write-up: use the Decision record writer for an architecture decision, or the Incident postmortem writer for an outage."
+  - "You need an architecture decision record or an incident write-up: use the Decision record writer for an architecture decision, or the Incident review writer for an outage."
   - "You need setup steps, runbooks or instructions: use the Incident runbook writer or the Developer docs writer, or write the steps as a plain checklist."
   - "You still do not know if customers want it: do the problem and demand research first, because a polished memo cannot supply missing evidence."
 you_give:

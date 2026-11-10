@@ -20,7 +20,7 @@ when:
 not_for:
   - "You need triage, symptom questions or urgency rules: those belong to your clinicians. This writes administrative steps only."
   - "You have no approved process yet: agree one with your practice manager first, then run this."
-  - "You already have a procedure and want it checked: use the SOP and runbook checker."
+  - "You already have a procedure and want it checked: use the Company procedure checker."
   - "You need advice on patient consent or privacy law: ask your privacy officer or a lawyer."
 you_give:
   - Your clinic's approved intake process, as a document or notes

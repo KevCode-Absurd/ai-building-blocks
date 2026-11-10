@@ -19,7 +19,7 @@ when:
   - You are launching and doing each step by hand until the system is ready.
 not_for:
   - No customer has accepted anything yet, so there is no scope to promise. Write the scope first with the Project kickoff brief writer.
-  - You deliver this work every week and only want it written down. Use the Process and SOP writer.
+  - You deliver this work every week and only want it written down. Use the Process and procedure writer.
   - You need to set a date for a new request. Use the Team capacity and delivery-date planner workflow.
   - You want to design the automated version. This plans the manual one and will not describe a tool you have not built.
 you_give:

@@ -27,7 +27,7 @@ when:
 not_for:
   - "You need exact words on the image, such as a logo or a headline. Use the Exact-text image ad prompt writer."
   - "You are making an ad and must keep your real product's label and shape. Use the Product image ad prompt writer."
-  - "You use Gemini or Nano Banana, not Midjourney. Use the Nano Banana image and edit prompt planner."
+  - "You use Gemini or Nano Banana, not Midjourney. Use the Nano Banana image prompt planner."
   - "You want one plain prompt for a marketing image with a size and file name. Use the Marketing image prompt writer."
 
 you_give:

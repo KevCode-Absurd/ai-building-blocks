@@ -15,8 +15,8 @@ when:
   - New hires keep asking questions the docs should answer.
   - You want a short, ranked fix list each month, not a long audit.
 not_for:
-  - "You want one SOP checked once: use the SOP and runbook checker."
-  - "You want a new process written from scratch: use the Process and SOP writer."
+  - "You want one SOP checked once: use the Company procedure checker."
+  - "You want a new process written from scratch: use the Process and procedure writer."
   - "Your doc covers pay, leave, discipline or safety: ask a qualified person, such as an HR adviser or a lawyer."
 you_give:
   - An export or folder of your process docs, SOPs or runbooks

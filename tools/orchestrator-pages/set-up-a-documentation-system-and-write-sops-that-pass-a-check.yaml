@@ -15,7 +15,7 @@ when:
   - Something broke at night and the only person who could fix it was asleep.
   - You have docs, but nobody can find them or trusts them.
 not_for:
-  - "You already have one document to test: use the SOP and runbook checker on it."
+  - "You already have one document to test: use the Company procedure checker on it."
   - "Your team has no repeat tasks to write down: start with a simple shared notes page."
   - "You need to teach one procedure with a training deck: use the Procedure draft, newcomer test and training-deck builder workflow."
 you_give:

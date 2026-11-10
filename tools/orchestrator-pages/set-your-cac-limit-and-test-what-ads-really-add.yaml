@@ -16,7 +16,7 @@ when:
   - You want to know how many of one channel's sales it really caused.
 not_for:
   - "You run one channel and have no order export: use the New-customer profit dashboard builder on its own."
-  - "You only want to know if a payback time is safe: use the CAC payback checker on its own."
+  - "You only want to know if a payback time is safe: use the Customer cost payback checker on its own."
   - "You only want to compare platform numbers with your store: use the Ad return evidence checker on its own."
 you_give:
   - Shopify orders with a new or returning flag, and net revenue after returns

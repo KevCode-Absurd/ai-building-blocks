@@ -20,7 +20,7 @@ when:
 not_for:
   - "The garment is worn by a person in the photo: use the Virtual try-on photo maker."
   - "The garment is folded, piled, or part of a set in one photo. Lay out one piece flat, or split the set and run each piece."
-  - "You want a full set of store photos, not one shaped garment: use the Product photo set builder."
+  - "You want a full set of store photos, not one shaped garment: use the Product photo angle and scene builder."
   - "You cannot use any image maker. This skill writes the prompt only, and something else must draw the picture."
 you_give:
   - A flat lay photo of one garment, laid flat on a plain background

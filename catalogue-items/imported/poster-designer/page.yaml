@@ -19,7 +19,7 @@ when:
   - You want a design file to send to a printer, with specs you will check yourself.
 not_for:
   - "Your poster must carry a lot of text, such as a schedule or a price list: use the Type-led poster planner, or build it in a slide or layout tool."
-  - "You are making a research poster from results and figures: use the Research poster maker."
+  - "You are making a research poster from results and figures: use the LaTeX research poster maker."
   - "You need a real logo or product photo on it: this skill does not draw them. Add them afterwards, or use the Chinese-text product image designer for a product image."
   - "You need a press-ready file with bleed and a colour profile: ask your printer for specs and check the file against them."
 you_give:

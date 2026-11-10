@@ -19,7 +19,7 @@ when:
   - Your product costs hundreds of dollars and you only see a few sales a week, so tests never seem to finish.
 not_for:
   - "You want to compare ads that already run inside your scaling campaign: use Meta's own experiment tools, since this plans new tests only."
-  - "You do not know your target cost per sale yet: work out your break-even cost per sale first with the Break-even ROAS and CPA calculator."
+  - "You do not know your target cost per sale yet: work out your break-even cost per sale first with the Break-even ad spend calculator."
   - "You want ad copy or hooks written: ask your AI to write the ads first, then come back here to size the test."
 
 you_give:

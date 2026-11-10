@@ -16,7 +16,7 @@ when:
   - You need to read cohort retention.
   - You want to know if a feature is actually being used.
 not_for:
-  - "You need revenue forecasts or SaaS numbers like ARR, MRR, churn and LTV: use the SaaS metrics coach in the finance area, or ask your accountant."
+  - "You need revenue forecasts or SaaS numbers like ARR, MRR, churn and LTV: use the Subscription software metrics coach in the finance area, or ask your accountant."
   - "You want to test a change with an A/B test: use an experiment planning tool or ask your analyst to set it up."
   - "You want to pick which feature to build next: use a simple scoring sheet in Google Sheets or talk to your team."
 you_give:

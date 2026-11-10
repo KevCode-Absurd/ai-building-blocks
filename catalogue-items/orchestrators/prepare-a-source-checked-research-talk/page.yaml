@@ -10,7 +10,7 @@ when:
 not_for:
   - "You only want to know if your abstract matches your results: use Conference abstract evidence editor."
   - "You already have approved figures and only need slides: use the Conference talk slide maker."
-  - "You need a poster, not a talk: use the Research poster maker."
+  - "You need a poster, not a talk: use the LaTeX research poster maker."
 you_give:
   - "PAPER: attach compiled paper and approved source text with citations."
   - "FIGURE_SOURCES: attach result tables, plotting code and approved assets with permissions."

@@ -18,7 +18,7 @@ when:
   - A co-author asks where a number on the poster came from
   - You want every caption checked against the results before you pay for printing
 not_for:
-  - You want the poster itself laid out for print. Use the Research poster builder for an editable PowerPoint, or the Research poster maker for a LaTeX PDF.
+  - You want the poster itself laid out for print. Use the PowerPoint research poster builder for an editable PowerPoint, or the LaTeX research poster maker for a LaTeX PDF.
   - Your study has no approved results yet. Wait for them. This workflow only reports what was measured.
   - You want a talk, not a poster. Use Build a research talk from checked figures.
   - You want a poster for a public event, with a date and a price. Use Event poster designer and reviewer.

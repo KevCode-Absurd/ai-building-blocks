@@ -15,7 +15,7 @@ when:
   - Churn moved and you do not know which part changed.
   - You made a change last month, such as new billing emails, and want to know if it helped.
 not_for:
-  - "You have only a few hundred subscribers or fewer: the day-by-day chart is too thin, so treat the result as a rough guess or run the Subscription churn auditor alone."
+  - "You have only a few hundred subscribers or fewer: the day-by-day chart is too thin, so treat the result as a rough guess or run the Subscription cancellation auditor alone."
   - "You sell one-off orders with no repeat billing: use a plain repeat-purchase check in your shop reports instead."
   - "You want emails sent or your subscription app changed for you: this agent only lists changes, so make them yourself in your own tools."
 you_give:

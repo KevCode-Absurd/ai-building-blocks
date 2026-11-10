@@ -19,7 +19,7 @@ when:
   - You need a clear way to tell whether the result is right before you rely on it.
 not_for:
   - "Your request is unclear and you want it written as a clean, structured prompt: use the Prompt editor."
-  - "You are not sure yet what you want and need to talk it through first: use the Intent interviewer."
+  - "You are not sure yet what you want and need to talk it through first: use the Request clarification interviewer."
   - "The task is small and exact, like fixing a typo or renaming a file: just ask your AI to do it."
 you_give:
   - The task or prompt, in your own words

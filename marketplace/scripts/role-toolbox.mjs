@@ -53,12 +53,20 @@ const pageFolder = (section, type) => type === "mind" ? "minds" : type === "agen
 export function libraryLookup(root = CATALOGUE) {
   const quarantineFile = path.join(root, "quarantine.yaml");
   const quarantined = new Set(existsSync(quarantineFile) ? [...read(quarantineFile).matchAll(/^(?:- +)?["']?([a-z0-9][a-z0-9-]*)["']?:?[ 	]*(?:#.*)?$/gm)].map(m => m[1]) : []);
+  // display-copy.yaml holds the name a visitor sees on the site; it wins over page.yaml and item.yaml, as it does there.
+  const copyFile = path.join(root, "display-copy.yaml");
+  const shown = new Map();
+  if (existsSync(copyFile)) for (const block of read(copyFile).split(/^(?=[a-z0-9][a-z0-9-]*:[ \t]*$)/m)) {
+    const slug = /^([a-z0-9][a-z0-9-]*):/.exec(block)?.[1];
+    const name = /^[ \t]+name:[ \t]*(.+)$/m.exec(block)?.[1]?.trim().replace(/^(["'])(.*)\1$/, "$2");
+    if (slug && name) shown.set(slug, name);
+  }
   const cache = new Map();
   const lookup = (type, slug) => {
     if (quarantined.has(slug) || !/^[a-z0-9][a-z0-9-]*$/.test(slug)) return null;
     if (type === "mind") {
       const file = path.join(root, "minds", slug, "mind.yaml");
-      return existsSync(file) ? { key: `minds/${slug}`, name: oneLine(field(read(file), "name")) || fromSlug(slug), paged: true } : null;
+      return existsSync(file) ? { key: `minds/${slug}`, name: shown.get(slug) || oneLine(field(read(file), "name")) || fromSlug(slug), paged: true } : null;
     }
     if (type === "tool") {
       const file = path.join(root, "ai-tools", `${slug}.yaml`);
@@ -70,7 +78,7 @@ export function libraryLookup(root = CATALOGUE) {
       const item = read(file);
       const pageFile = path.join(root, section, slug, "page.yaml");
       const page = existsSync(pageFile) ? read(pageFile) : "";
-      return { key: `${pageFolder(section, field(item, "type"))}/${slug}`, name: oneLine(field(page, "name") ?? field(item, "name")) || fromSlug(slug), paged: !!field(page, "headline") };
+      return { key: `${pageFolder(section, field(item, "type"))}/${slug}`, name: shown.get(slug) || oneLine(field(page, "name") ?? field(item, "name")) || fromSlug(slug), paged: !!field(page, "headline") };
     }
     return null;
   };

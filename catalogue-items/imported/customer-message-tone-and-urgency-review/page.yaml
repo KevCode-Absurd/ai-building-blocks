@@ -21,7 +21,7 @@ not_for:
   - You need a full queue sorted by priority. Use the Support ticket sorter, or the Gorgias ticket priority planner if you use Gorgias.
   - You have your own reply ready and want it checked. Use the Angry customer reply checker.
   - The message is about a legal threat, a chargeback or a refund decision. Give it to a person who owns that decision. This tool only rates the tone.
-  - You want to rate Shopify buyers by order history. Use the Customer churn risk scorer.
+  - You want to rate Shopify buyers by order history. Use the Shopify customer loss risk scorer.
 you_give:
   - The customer message, pasted as text
   - Earlier messages from the same customer, for a trend (optional)

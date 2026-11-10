@@ -19,8 +19,8 @@ when:
   - You review the same reports every month and want a record of what changed since last time.
 not_for:
   - "You have one question about two files today, such as why two totals differ. Use the Spreadsheet checker."
-  - "You need a written procedure for a process and no report is in question. Use the Process and SOP writer."
-  - "You want the monthly numbers report itself, not a check on its definitions. Use the Recurring KPI report maker."
+  - "You need a written procedure for a process and no report is in question. Use the Process and procedure writer."
+  - "You want the monthly numbers report itself, not a check on its definitions. Use the Recurring report maker."
   - "You want a single run with no saved record for next time. Use the Report totals and definition checker workflow."
 you_give:
   - "The recurring reports you want checked, as exports or files, with the period each covers."

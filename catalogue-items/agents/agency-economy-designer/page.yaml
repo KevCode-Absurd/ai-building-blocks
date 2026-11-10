@@ -30,7 +30,7 @@ when:
   - Players can trade with each other and you need fees that work as sinks.
 not_for:
   - You have live player data and want to find what went wrong. Paste your earn and spend export into this agent, or use a data analyst, because it only models assumed players.
-  - Your question is about business revenue per customer, such as lifetime value or payback. Use the India subscription unit economics analyst.
+  - Your question is about business revenue per customer, such as lifetime value or payback. Use the India subscription customer value analyst.
   - You need the wider game design, such as levels or the core loop. Use the Gameplay designer. For game code, use the Unity software architect or the Godot gameplay programmer.
   - You need legal advice on loot box or odds rules in your country. Ask a lawyer. This agent only designs odds to be shown.
 you_give:

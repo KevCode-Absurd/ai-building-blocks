@@ -15,7 +15,7 @@ when:
   - You are about to move budget between channels, or raise spend on the ad with the best ROAS.
   - A new channel looks weak while Meta suddenly looks better, and you wonder why.
 not_for:
-  - "You want to plan a holdout or lift test: use the Incrementality test planner."
+  - "You want to plan a holdout or lift test: use the Ad lift test planner."
   - "You want to know if your customers repay what you spend to win them: use the Customer acquisition profitability reviewer."
   - "You have no store totals or platform export yet: pull those numbers first, or ask your ad manager for them."
 you_give:

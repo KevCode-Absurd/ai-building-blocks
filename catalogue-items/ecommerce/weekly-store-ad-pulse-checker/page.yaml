@@ -20,7 +20,7 @@ when:
 not_for:
   - "You only have one day of numbers, or half a day: wait for a full week, then run this check."
   - "Your store is brand new with no past weeks: there is nothing to compare, so track a few weeks by hand first."
-  - "You want to know if one campaign pays back its cost: use the CAC payback checker."
+  - "You want to know if one campaign pays back its cost: use the Customer cost payback checker."
 
 you_give:
   - This week's and last week's blended ROAS, new-customer ROAS, CAC, CPM and spend by channel

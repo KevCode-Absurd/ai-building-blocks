@@ -40,7 +40,7 @@ how_to_use:
 next: [due-diligence-checklist-builder, subscription-payback-checker]
 not_for:
   - "You run an online store and want repeat-purchase value. Use the Customer value and payback reviewer."
-  - "You want a quick health check of your own SaaS numbers. Use the SaaS metrics coach."
+  - "You want a quick health check of your own SaaS numbers. Use the Subscription software metrics coach."
   - "You report in dollars on a calendar year. This skill is set up for Indian markets, with April to March years and lakh or crore units, so say so up front."
 output_sample:
   input:

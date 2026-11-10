@@ -19,8 +19,8 @@ when:
   - Your product costs are not all tagged in Shopify and margin is a guess.
 not_for:
   - Your orders have no new or returning flag. Fix that in Shopify first, or the new-customer lines cannot be trusted.
-  - You spend heavily on influencers, TV or retail. One platform's spend misleads, so run a lift test instead (use the incrementality test planner).
-  - You want to judge how fast a customer pays back their cost. Use the CAC payback checker.
+  - You spend heavily on influencers, TV or retail. One platform's spend misleads, so run a lift test instead (use the Ad lift test planner).
+  - You want to judge how fast a customer pays back their cost. Use the Customer cost payback checker.
 
 you_give:
   - Shopify orders with a new or returning flag

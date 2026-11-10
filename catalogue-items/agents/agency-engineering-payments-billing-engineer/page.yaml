@@ -35,7 +35,7 @@ when:
   - Your payout from the processor doesn't match your orders and you can't see why.
 not_for:
   - You want your store's checkout settings checked, such as Shopify payments. Use the Payments and checkout settings checker.
-  - You want to learn why subscribers cancel. Use the Subscription churn auditor.
+  - You want to learn why subscribers cancel. Use the Subscription cancellation auditor.
   - You need to change live payments, issue refunds or answer a dispute. Do that in your processor's dashboard, with a qualified person for PCI sign-off.
 you_give:
   - Your payment provider, what you sell, and the currencies you take

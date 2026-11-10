@@ -21,7 +21,7 @@ when:
   - You want to know how much of your profit comes from customers you already have.
 not_for:
   - "Your store has under a few hundred orders a month: the split is too noisy, so track simple monthly profit in a spreadsheet instead."
-  - "You want a per-customer view of how fast a new customer pays back: use the CAC payback checker."
+  - "You want a per-customer view of how fast a new customer pays back: use the Customer cost payback checker."
   - "Your orders are not tagged first-time or returning: tag them first, because the split cannot be guessed."
 
 you_give:

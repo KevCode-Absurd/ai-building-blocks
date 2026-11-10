@@ -19,7 +19,7 @@ when:
   - You changed synonyms or boosts and need a way to know if search got better or worse.
 not_for:
   - You want your pages to rank higher on Google. That is website SEO, not site search. Use the Search Console quick-win finder.
-  - You want an AI to answer questions from your documents. Use the RAG pipeline implementation planner.
+  - You want an AI to answer questions from your documents. Use the AI document search planner.
   - Your database queries are slow and search is not the cause. Use the Database performance analyst.
 you_give:
   - Which search tool you use, such as Elasticsearch or OpenSearch, and its version

@@ -95,7 +95,7 @@ improve:
 not_for:
   - "Your emails land in spam and open rates fell: use Email delivery recovery and quiet-subscriber plan."
   - "You only want to find which customers have gone quiet: use Lapsed customer finder."
-  - "You sell by subscription and want to cut cancellations: use Subscription churn prevention planner."
+  - "You sell by subscription and want to cut cancellations: use Subscription cancellation prevention planner."
 output_sample:
   input:
     - Your orders export, with customer, date, order value, discount and refund

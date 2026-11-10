@@ -203,6 +203,14 @@ const quarantined = (() => {
   return new Set(Array.isArray(q) ? q.map(x => (typeof x === "string" ? x : x?.slug)).filter(Boolean) : Object.keys(q ?? {}));
 })();
 
+// The name and summary a visitor sees on the site: catalogue-items/display-copy.yaml wins, then page.yaml, then
+// item.yaml (site/scripts/build-index.mjs applies them in that order), so a pack names an item as its page does.
+const displayCopy = yamlLite(readIf(path.join(CATALOGUE, "display-copy.yaml")) ?? "") ?? {};
+const shownAs = (slug, ...metas) => {
+  const pick = key => [displayCopy[slug], ...metas].map(m => (m && typeof m[key] === "string" ? m[key].trim() : "")).find(Boolean) || "";
+  return { name: pick("name") || slug, summary: pick("summary") };
+};
+
 /** One library item as packs carry it, or a plain reason it cannot be shipped. */
 function readLibraryItem(slug, type) {
   if (quarantined.has(slug)) return { skip: "is quarantined in the library" };
@@ -215,13 +223,14 @@ function readLibraryItem(slug, type) {
     if (kind === "tool" && existsSync(toolFile)) return { item: renderToolGuide(slug, readFileSync(toolFile, "utf8")) };
     if (kind === "mind" && existsSync(path.join(mindDir, "SKILL.md"))) {
       const meta = yamlLite(readIf(path.join(mindDir, "mind.yaml")) ?? "");
-      return { item: renderLibraryItem({ slug, type: "mind", name: meta?.name || slug, summary: meta?.summary || "", main: readFileSync(path.join(mindDir, "SKILL.md"), "utf8") }) };
+      return { item: renderLibraryItem({ slug, type: "mind", ...shownAs(slug, meta), main: readFileSync(path.join(mindDir, "SKILL.md"), "utf8") }) };
     }
     if (kind === "item" && dir && existsSync(path.join(dir, "SKILL.md"))) {
       const meta = yamlLite(readIf(path.join(dir, "item.yaml")) ?? "") ?? {};
+      const page = yamlLite(readIf(path.join(dir, "page.yaml")) ?? "") ?? {};
       const actual = meta.type === "agent" || meta.type === "prompt" ? meta.type : meta.type === "workflow" || meta.type === "routine" || meta.category === "orchestrator" ? "workflow" : "skill";
       const files = walk(dir).filter(f => !["SKILL.md", "item.yaml", "page.yaml"].includes(f));
-      return { item: renderLibraryItem({ slug, type: actual, name: meta.name || slug, summary: meta.summary || "", main: readFileSync(path.join(dir, "SKILL.md"), "utf8"), files, uses: Array.isArray(meta.uses) ? meta.uses.filter(u => typeof u === "string") : [], packTools: packToolsOf[slug] ?? {} }) };
+      return { item: renderLibraryItem({ slug, type: actual, ...shownAs(slug, page, meta), main: readFileSync(path.join(dir, "SKILL.md"), "utf8"), files, uses: Array.isArray(meta.uses) ? meta.uses.filter(u => typeof u === "string") : [], packTools: packToolsOf[slug] ?? {} }) };
     }
   }
   return { skip: "is not in the library (catalogue-items)" };

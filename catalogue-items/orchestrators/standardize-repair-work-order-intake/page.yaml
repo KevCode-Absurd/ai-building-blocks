@@ -20,8 +20,8 @@ when:
 not_for:
   - "You need a fault diagnosed or a repair judged safe: that stays with your qualified technicians."
   - "You want to decide whether a customer agreed to a repair: only their own authorization counts. This lists where it is missing."
-  - "You want a procedure for some other process: use the Process and SOP writer."
-  - "You already have an intake procedure and want it checked: use the SOP and runbook checker."
+  - "You want a procedure for some other process: use the Process and procedure writer."
+  - "You already have an intake procedure and want it checked: use the Company procedure checker."
 you_give:
   - A few real work orders, with customer names and contact details removed
   - Your required intake fields, if you have a list (optional)

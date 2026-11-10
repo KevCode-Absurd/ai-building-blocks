@@ -19,7 +19,7 @@ when:
   - An auditor, insurer or client asks you to show that you can recover.
 not_for:
   - You have no backups or no test history yet. Use the Backup restore rehearsal planner workflow to write the first plan.
-  - A system is down right now. Follow your incident runbook and call your technical lead first. Use the Incident postmortem writer afterwards.
+  - A system is down right now. Follow your incident runbook and call your technical lead first. Use the Incident review writer afterwards.
   - You want step-by-step instructions to restore a system. Use the Incident runbook writer.
   - You need a formal sign-off for an auditor. This agent sorts your evidence, but a qualified person must approve it.
 you_give:

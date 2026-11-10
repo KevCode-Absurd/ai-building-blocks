@@ -18,7 +18,7 @@ when:
   - "A mistake happened and the fix is a new step."
   - "A new tool replaces an old one and people need to know what to do on day one."
 not_for:
-  - "You need to check a written procedure for gaps: use the SOP and runbook checker."
+  - "You need to check a written procedure for gaps: use the Company procedure checker."
   - "You want to update the step-by-step how-to the change affects: use the Repeat task how-to writer."
   - "You have a one-off message with no change in how work is done: write it yourself in a few lines."
 

@@ -18,7 +18,7 @@ when:
   - You must give an analyst role read access to a few schemas.
   - You are setting up dbt to run on Snowflake.
 not_for:
-  - "Your database is not Snowflake: use the SQL query helper."
+  - "Your database is not Snowflake: use the SQL query and migration helper."
   - "You only want to design tables, with no Snowflake code yet: use the Database schema designer."
   - "You need the code checked against your live account: ask a Snowflake admin or an engineer to review it first."
 you_give:

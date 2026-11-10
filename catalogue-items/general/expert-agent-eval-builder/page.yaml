@@ -20,7 +20,7 @@ when:
 not_for:
   - "Capturing your judgment in the first place. Use the Expert knowledge interview first."
   - "Running the test itself. Use the Expert agent blind test with what this makes."
-  - "A grading rubric for a classroom task. Use the Task rubric drafter."
+  - "A grading rubric for a classroom task. Use the Task marking guide writer."
 
 you_give:
   - "Your agent's files: the jobs it does, your cases, rules, taste picks and never-do list"

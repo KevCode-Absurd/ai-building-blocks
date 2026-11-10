@@ -24,7 +24,7 @@ not_for:
   - You are checking an order for the first time with no earlier version. Use the Catering order and service checker.
   - You want the AI to confirm that a meal is safe for an allergy. It cannot. A chef or a dietitian must confirm every dietary fact.
   - You only need to check invoice totals and nothing else. Use the Invoice totals checker.
-  - You want to write the kitchen's standard procedures. Use the Process and SOP writer.
+  - You want to write the kitchen's standard procedures. Use the Process and procedure writer.
   - You want it to email the customer or the kitchen. It prepares drafts and sends nothing.
 
 you_give:

@@ -33,7 +33,7 @@ when:
   - A source file changed and you need to know which facts it touches.
 not_for:
   - You only want a table layout for an app. Use the Backend Architect agent.
-  - You want an AI to answer questions from documents by search, with no graph. Use the RAG pipeline implementation planner.
+  - You want an AI to answer questions from documents by search, with no graph. Use the AI document search planner.
   - Your data is messy and needs cleaning first. Use the AI data repair engineer.
 you_give:
   - Three to five sample documents, pasted or attached

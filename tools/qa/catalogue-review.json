@@ -1396,6 +1396,42 @@
           "rationale": "The link the buyer lands on is the live page the check opens to read stock, price and offer; required."
         }
       ]
+    },
+    "catalogue-items/general/make-three-first-screens/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude, Q6 craft skills)",
+      "reviewed_on": "2026-11-10",
+      "method_sha256": "ea4e08c15ded676afcfda1b42e84c4a48dec031ec67f2e4b87d4755f2a65dccd",
+      "inputs": [
+        {
+          "type": "brief",
+          "required": true
+        },
+        {
+          "type": "design_tokens",
+          "required": false
+        },
+        {
+          "type": "store_capture",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "brief",
+          "quote": "who must do what after seeing this page, and the acceptance tests the finished page must pass",
+          "rationale": "The method starts from the page brief and its spec sheet, which state the job and the tests; that request is the brief input."
+        },
+        {
+          "type": "design_tokens",
+          "quote": "It holds the fonts for each role, colours with their share of the page, button style and header.",
+          "rationale": "The brand file from Brand DNA capture supplies fonts, colour shares and button style as tokens. Optional because a new brand has no site to capture."
+        },
+        {
+          "type": "store_capture",
+          "quote": "prices, offers, proof and policies, each with its source and date",
+          "rationale": "The captured facts are dated evidence read from the live site; every screen may use only these, so they are the required store capture."
+        }
+      ]
     }
   },
   "handoffs": {

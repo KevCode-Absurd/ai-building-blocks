@@ -1,6 +1,6 @@
 slug: agency-engineering-api-platform-engineer
-name: API Platform Engineer agent
-summary: Get a plan for a public or partner API with contract rules, a breaking-change list, a versioning policy, rate limits and an SDK plan.
+name: API platform engineer agent
+summary: Describe your API (how other software connects to yours). Get its rules, changes that would break users, and a plan for versions and limits.
 category: agent
 boards: []
 type: agent

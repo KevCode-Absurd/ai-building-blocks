@@ -1,11 +1,11 @@
 thinking: medium
 thinking_why: Rules follow a set pattern, but each needs testing.
 new_slug: ai-app-guardrails-builder
-name: AI app guardrails builder
-summary: Set up guardrails for your AI chatbot with NeMo Guardrails. Get rules set to refuse jailbreaks and private data, and a test plan. Fact checks are placeholders you finish.
+name: NeMo Guardrails safety rule builder
+summary: Describe your app's limits. Get rules for NeMo Guardrails (NVIDIA's safety rules tool for AI apps), with test cases for inputs, outputs and private data.
 job: build-software
-headline: AI app guardrails builder
-subhead: Tell it what your AI app must never say or do. You get guardrail rules for what users send in and what the app sends back, refusal messages and a test plan. It labels any check you must still write yourself. Fact checks and toxicity checks come as placeholders, and you supply the source or service.
+headline: NeMo Guardrails safety rule builder
+subhead: Share the app's policies, examples, model setup and data limits. It maps checks to what users send in, what the app sends back and what it looks up, then connects the detectors those rules need. Get a setup for NeMo Guardrails (NVIDIA's safety rules tool for AI apps), integration guidance and test cases. A compatible runtime and approved models are required. The rules can miss problems or block valid requests, so they need testing.
 explain: |
   AI chatbot guardrails are rules that sit outside the prompt. They check what a user sends before the model sees it, and what the model says before the user sees it. Because they sit outside the prompt, they are harder to talk your way around.
 

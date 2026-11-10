@@ -1,6 +1,6 @@
 slug: api-to-mcp-server-builder
 name: API to MCP server builder
-summary: Give it an API spec. Get an MCP server in Python or TypeScript that lets your AI use that API.
+summary: Share your API spec (what other software can ask yours to do). Get starter code for an MCP server (a connector AI assistants use).
 category: general
 boards: []
 type: skill

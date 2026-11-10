@@ -1,6 +1,6 @@
 slug: recurring-kpi-report-maker
-name: Recurring KPI report maker
-summary: Describe the report you want in plain words. Get the numbers pulled, a workbook, and a saved report to rerun.
+name: Recurring report maker
+summary: Describe a report and connect its data. Get checked numbers, a workbook and a saved report definition to rerun.
 category: general
 boards: []
 type: skill

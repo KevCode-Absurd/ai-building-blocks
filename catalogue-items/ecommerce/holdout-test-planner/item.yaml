@@ -1,6 +1,6 @@
 slug: holdout-test-planner
 name: "Holdout test planner"
-summary: "Name the channel or change you doubt. Get a holdout design, run time and how to read it."
+summary: Name the channel or email you doubt. Get a holdout test (one group goes without, to compare), with the split, run time and budget rule.
 category: ecommerce
 boards: [ecommerce]
 type: skill

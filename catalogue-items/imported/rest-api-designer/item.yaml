@@ -1,6 +1,6 @@
 slug: rest-api-designer
 name: REST API designer
-summary: Describe what your service does. Get a clean REST API plan with routes, status codes, paging and docs.
+summary: Describe your service. Get a REST API plan (a standard way for other software to use yours), with routes, status codes and docs.
 category: general
 boards: []
 type: skill

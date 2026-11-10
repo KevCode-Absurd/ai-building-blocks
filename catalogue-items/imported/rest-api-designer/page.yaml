@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It applies design rules but weighs trade-offs for your case.
 new_slug: rest-api-designer
 name: REST API designer
-summary: Plan a REST API before you build it. Describe your service and get routes, status codes, paging and OpenAPI docs.
+summary: Describe your service. Get a REST API plan (a standard way for other software to use yours), with routes, status codes and docs.
 job: build-software
 headline: REST API designer
-subhead: "A complete plan for a REST API before anyone writes code: the routes, the methods, the status codes and the docs. Mistakes caught here cost minutes."
+subhead: "A full plan for a REST API (a standard way for other software to use your service) before anyone writes code: the routes, the methods, the status codes and the docs. Mistakes caught here cost minutes."
 explain: |
   A complete plan for a REST API before anyone writes code: the routes, the methods, the status codes and the docs. Mistakes caught here cost minutes. Caught after launch, they cost your users.
 

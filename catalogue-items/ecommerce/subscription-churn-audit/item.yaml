@@ -1,6 +1,6 @@
 slug: subscription-churn-audit
-name: "Subscription churn audit"
-summary: "Give it your subscription data. Get a score out of 100 for where subscribers leave."
+name: "Subscription cancellation auditor"
+summary: "Share your cancel data. Find where and why subscribers cancel. Get a score out of 100 and your top three fixes."
 category: ecommerce
 boards: [ecommerce]
 type: skill

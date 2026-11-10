@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It follows set formulas but needs clean contract data.
 new_slug: subscription-revenue-tracker
 name: Subscription revenue tracker
-summary: "Work out your subscription revenue: monthly and yearly recurring revenue, active subscribers and churn, read from your Shopify store's contracts."
+summary: "Run it on your Shopify subscriptions. Get monthly and yearly recurring revenue, active subscribers and how many cancel."
 job: run-your-store
 headline: Subscription revenue tracker
-subhead: "A read-only count of your subscription income: monthly and yearly recurring revenue, active subscribers and churn, taken straight from your store's subscription contracts. Nothing in the store is changed."
+subhead: "A read-only count of your subscription income: monthly and yearly recurring revenue, active subscribers and the share who cancel, taken straight from your store's subscription contracts. Nothing in the store is changed."
 explain: |
   The skill queries subscription contract data through the store's API, then converts each plan to a monthly amount so weekly, monthly and yearly plans can be added together. It counts active subscribers, then tracks rolling churn by comparing who stayed and who cancelled over the period. It records the session and handles errors, such as missing permissions or large stores that need paging. It needs API access to a store with subscription products.
 when:

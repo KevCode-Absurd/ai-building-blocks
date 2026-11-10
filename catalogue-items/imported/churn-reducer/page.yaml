@@ -1,10 +1,10 @@
 thinking: medium
 thinking_why: It applies proven flows to your case.
 new_slug: churn-reducer
-name: Churn reducer
-summary: Cut subscriber churn with a cancel flow, save offers and a failed-payment plan. Give it your billing setup and churn details to get started.
+name: Subscription cancellation prevention planner
+summary: Share your billing setup and why people cancel. Get a cancel flow, offers to keep them and a failed-payment recovery plan.
 job: build-product
-headline: Churn reducer
+headline: Subscription cancellation prevention planner
 subhead: "A plan to keep more subscribers: a cancel flow that asks why, save offers that match each reason, and a way to win back failed payments."
 explain: |
   A plan to keep more subscribers: a cancel flow that asks why, save offers that match each reason, and a way to win back failed payments. You describe your product, billing setup and why people leave, and you get the full set.

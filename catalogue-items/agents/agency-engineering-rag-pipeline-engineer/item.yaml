@@ -1,7 +1,6 @@
 slug: agency-engineering-rag-pipeline-engineer
-name: RAG Pipeline Engineer agent
-summary: Get a retrieval pipeline plan with source and answer quality checks.
-  Bring your brief.
+name: AI document search planner
+summary: Plan an AI that answers from your own documents. Get how to split and search them, plus a question set to score each change.
 category: agent
 boards: []
 type: agent

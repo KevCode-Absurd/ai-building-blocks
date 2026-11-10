@@ -1,7 +1,7 @@
-name: Compliance Auditor agent
-summary: Check your security setup against SOC 2, ISO 27001, HIPAA or PCI-DSS. Get a gap table, an auditor proof list and a fix order.
-headline: Compliance Auditor agent
-subhead: Name the framework you are aiming for, such as SOC 2, and describe how your team handles logins, access, changes and incidents. It checks each control the way an auditor would. You get a gap table, a proof list and a fix order.
+name: Compliance auditor agent
+summary: Check your security setup against a standard such as SOC 2, ISO 27001 or HIPAA. Get a gap table, proof list and fix order.
+headline: Compliance auditor agent
+subhead: Name the security standard you are aiming for, such as SOC 2, and describe how your team handles logins, access, changes and incidents. It checks each rule the way an auditor would. You get a gap table, a proof list and a fix order.
 job: check-contracts
 thinking: high
 thinking_why: It must compare your setup with each control, ask what an auditor would test and refuse to mark a control met without proof. Use a model that reasons carefully.

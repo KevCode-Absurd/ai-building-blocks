@@ -1,6 +1,6 @@
 slug: customer-health-and-churn-scorer
-name: Customer health and churn scorer
-summary: Give it your customer data. Get health scores, churn risk and upsell chances for each account.
+name: Customer health and loss risk scorer
+summary: Share account data. Get a health score, a risk-of-leaving tier and signs of growth for each customer.
 category: general
 boards: []
 type: skill

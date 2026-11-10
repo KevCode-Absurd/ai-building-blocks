@@ -1,6 +1,6 @@
 slug: incrementality-test-planner
-name: "Incrementality test planner"
-summary: "Tell it your spend and regions. Get a lift test sized to you and how to read it."
+name: "Ad lift test planner"
+summary: "Share your ad spend and sales by region. Get a test of the sales your ads really caused, with a cut, hold or scale rule."
 category: ecommerce
 boards: [ecommerce]
 type: skill

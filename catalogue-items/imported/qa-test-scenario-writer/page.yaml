@@ -1,10 +1,10 @@
 thinking: medium
 thinking_why: It must think through edge cases for each story.
 new_slug: qa-test-scenario-writer
-name: QA test scenario writer
-summary: Paste your user stories and get QA test scenarios with starting state, numbered steps and the result to expect, plus edge cases to try.
+name: Test scenario writer
+summary: Paste your user stories. Get test scenarios with starting state, numbered steps and the result to expect, plus edge cases to try.
 job: test-and-fix-code
-headline: QA test scenario writer
+headline: Test scenario writer
 subhead: A set of test scenarios you can hand straight to a tester, one per user story. Each one says what is being checked, what must be true before you start, who does it, the steps, and what you should see after each step.
 explain: |
   A set of test scenarios you can hand straight to a tester, one per user story. Each one says what is being checked, what must be true before you start, who does it, the steps, and what you should see after each step.

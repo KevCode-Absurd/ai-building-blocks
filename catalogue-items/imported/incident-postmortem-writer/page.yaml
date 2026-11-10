@@ -1,11 +1,11 @@
 thinking: medium
 thinking_why: It sorts facts into causes without blaming people.
 new_slug: incident-postmortem-writer
-name: Incident postmortem writer
-summary: Turn your outage notes into a blameless incident postmortem with a timeline, root causes and action items that have owners and due dates.
+name: Incident review writer
+summary: Give it the facts of an outage. Get a blame-free review with a timeline, causes and follow-up actions.
 job: organise-work
-headline: Incident postmortem writer
-subhead: Give your AI your notes, chat logs and alert times from an outage. It writes a blameless postmortem. You get a timeline, the causes, and fixes with owners and due dates.
+headline: Incident review writer
+subhead: Give it incident notes, times and impact. It builds a timeline, checks causes against evidence, and drafts actions with owners. Open facts stay open.
 explain: |
   A blameless postmortem of an outage, written so your team learns from it and the same failure does not return. You give the facts and get a document with a timeline, causes and follow-up actions that have owners.
 

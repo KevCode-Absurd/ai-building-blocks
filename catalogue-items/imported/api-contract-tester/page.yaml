@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It maps both sides of the contract, then writes targeted tests.
 new_slug: api-contract-tester
 name: API contract tester
-summary: Check an API change against its contract before it ships. Give it the spec and callers. You get tests that flag breaking changes.
+summary: Share the API contract (the rules for how apps talk to your service), the change and affected apps. Get compatibility checks, local tests and gaps.
 job: test-and-fix-code
 headline: API contract tester
-subhead: Tests that catch the moment an API change would break the programs using it, before it reaches anyone. Give it the API and a list of who calls it, and you get a small test set that checks both sides.
+subhead: Share the API rules (how apps talk to your service), changed code and the apps that use it. It checks required fields, types, errors and supported version pairs, then builds small local tests for both sides. Get a change assessment, test results, failures and coverage gaps. Passing a mock does not prove the live service matches; unknown clients stay untested. It does not deploy or migrate anything.
 explain: |
   Tests that catch the moment an API change would break the programs using it, before it reaches anyone. Give it the API and a list of who calls it, and you get a small test set that checks both sides.
 

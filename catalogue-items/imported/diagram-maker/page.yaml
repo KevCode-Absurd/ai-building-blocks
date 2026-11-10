@@ -1,11 +1,11 @@
 thinking: medium
 thinking_why: It chooses a diagram type, then lays it out with set rules.
 new_slug: diagram-maker
-name: Diagram maker
-summary: Describe a system or process and get a dark-themed SVG diagram you can open, edit and reuse. This diagram maker picks the type that fits.
+name: Dark-theme diagram maker
+summary: Describe a system, process or idea. Get a dark-theme diagram as an SVG file (an image that stays sharp at any size).
 job: design-work
-headline: Diagram maker
-subhead: Describe a system, process or idea in words. Your AI picks a diagram type and draws it as one SVG file. Open it in any browser, drop it into slides or edit it later.
+headline: Dark-theme diagram maker
+subhead: Bring the parts, links or steps to show. It chooses a diagram type, plans the layout and writes one SVG file (an image that stays sharp at any size) with local styles. It checks spacing and can make a high-resolution PNG with the required tool. Fonts may use a remote import or system fallback, so appearance can vary. Unrendered files still need a visual check.
 explain: |
   A clean SVG diagram in a dark theme, saved as one file you can open in any browser, drop into slides or edit later. The styles are built in. It loads the JetBrains Mono font from Google Fonts, so it needs internet access to show that font.
 

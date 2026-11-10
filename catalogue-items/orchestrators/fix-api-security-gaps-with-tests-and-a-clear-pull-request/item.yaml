@@ -1,6 +1,6 @@
 slug: fix-api-security-gaps-with-tests-and-a-clear-pull-request
-name: "Fix API security gaps with tests and a pull request"
-summary: "Give it your API code. Get its sign-in, access and input gaps fixed, tests for each fix and a reviewed pull request."
+name: "API security repair reviewer"
+summary: "Share your API code (the part other software connects to). Get sign-in, access and input gaps fixed, tests reviewed and a pull request written."
 category: orchestrator
 type: workflow
 role: orchestrate

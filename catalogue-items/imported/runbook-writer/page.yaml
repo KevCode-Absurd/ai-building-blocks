@@ -1,11 +1,11 @@
 thinking: low
 thinking_why: It fills a fixed template from what you know.
 new_slug: runbook-writer
-name: Runbook writer
-summary: Build a runbook for your service with deploy, incident, maintenance and rollback sections. Name the service and get a markdown file to fill in.
+name: Service operations guide writer
+summary: Name your service. Get a guide to fill in, with sections for release, incidents, upkeep and rollback, as a text file you can edit.
 job: ship-and-host
-headline: Runbook writer
-subhead: On-call people need clear steps at 3 a.m., and this builds them before launch. Name a service and get a runbook with sections for deploy, incidents, maintenance and rollback, ready to fill in.
+headline: Service operations guide writer
+subhead: On-call people need clear steps at 3 a.m., and this builds them before launch. Name a service and get a guide with sections for release, incidents, upkeep and rollback, ready to fill in.
 explain: |
   On-call people need clear steps at 3 a.m., and this builds them before launch. Name a service and get a runbook with sections for deploy, incidents, maintenance and rollback, ready to fill in.
 

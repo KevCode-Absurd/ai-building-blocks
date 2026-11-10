@@ -1,11 +1,11 @@
 new_slug: turn-a-customer-interview-into-a-case-outline
-name: Turn a customer interview into a case outline
-headline: Turn a customer interview into a case outline
-summary: Turn one customer interview into a case study outline, a list of gaps in the evidence and a checklist of what the customer must approve before you publish.
+name: Customer interview case-study planner
+headline: Customer interview case-study planner
+summary: Share a consented customer interview, facts and result records. Get a sourced case outline, evidence gaps and a customer approval checklist.
 job: write-and-tell-stories
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: Give it the interview notes or transcript, the facts the customer approved and any results evidence. Your AI builds a sourced outline, marks every claim it cannot back and lists what the customer must OK.
+subhead: It separates the customer's problem, actions and observed results, builds an outline and checks the wording. You get source links, dates and approval questions. One interview is one case. Quotes and identifying details need actual permission, and unsupported results stay out of the draft.
 explain: |-
   A good customer interview can still make a weak case study. The customer says "sales doubled", you write it down, and later nobody can show where it came from. This workflow builds the case outline from what the customer really said, and shows the proof for each point.
 

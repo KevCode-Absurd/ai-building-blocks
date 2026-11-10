@@ -1,11 +1,11 @@
 thinking: medium
 thinking_why: It runs set calculations, then explains what they mean.
 new_slug: campaign-attribution-analyst
-name: Campaign attribution analyst
-summary: Find which channels earn credit for sales, where buyers drop out and what each campaign returned. Run campaign attribution analysis on your JSON data.
+name: Campaign sales credit analyst
+summary: Share campaign data as a file. Find which channels earn credit for sales, where buyers drop out and what each campaign returned.
 job: read-ad-results
-headline: Campaign attribution analyst
-subhead: Give it your customer paths to purchase, funnel stage counts and campaign spend as JSON. Three small scripts spread sales credit across channels under several attribution models, find the biggest funnel drop and work out returns. You get attribution by channel, drop-off by stage, ROI per campaign and suggestions.
+headline: Campaign sales credit analyst
+subhead: Give it your customer paths to purchase, funnel stage counts and campaign spend as JSON (a structured data file). Three small scripts spread sales credit across channels in several ways, find the biggest drop and work out returns. You get credit by channel, drop-off by stage, return per campaign and suggestions.
 explain: |
   You see which channels earn credit for sales, where buyers drop out of your funnel, and what each campaign returned. Give it your campaign data as JSON and three small scripts do the maths the same way every time.
 

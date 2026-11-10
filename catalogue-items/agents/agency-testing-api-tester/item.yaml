@@ -1,6 +1,6 @@
 slug: agency-testing-api-tester
-name: API Tester agent
-summary: "Turn your API spec into a test plan with edge cases, auth checks and failure cases, plus starter test code to run on a test server."
+name: API test planner
+summary: "Share your API spec (how other software talks to yours). Get a test plan with edge cases, sign-in checks, failure cases and starter test code."
 category: agent
 boards: []
 type: agent

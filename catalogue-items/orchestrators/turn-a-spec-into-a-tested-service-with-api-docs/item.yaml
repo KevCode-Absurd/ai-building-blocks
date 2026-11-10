@@ -1,6 +1,6 @@
 slug: turn-a-spec-into-a-tested-service-with-api-docs
-name: "Turn a spec into a tested service with API docs"
-summary: "Give it a written spec. Get a starter project, a working service, API tests and an API spec."
+name: "API service and test builder"
+summary: "Share the service spec and limits. Get a starter project, service code, route tests and docs for its API (how other software uses it)."
 category: orchestrator
 type: workflow
 role: orchestrate

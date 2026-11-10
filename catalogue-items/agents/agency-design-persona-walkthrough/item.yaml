@@ -1,6 +1,6 @@
 slug: agency-design-persona-walkthrough
-name: Persona Walkthrough Specialist agent
-summary: "Get a persona walkthrough of your web page. See what a visitor thinks at each scroll, where they doubt or leave, and the fixes ranked."
+name: Simulated user walkthrough reviewer
+summary: "Share your web page and a visitor profile. See what that visitor thinks at each scroll, where they doubt or leave, and the fixes ranked."
 category: agent
 boards: []
 type: agent

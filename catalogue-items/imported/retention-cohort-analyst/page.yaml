@@ -1,11 +1,11 @@
 thinking: medium
 thinking_why: The steps are set, but reading the patterns takes judgment.
 new_slug: retention-cohort-analyst
-name: Retention cohort analyst
-summary: Find which sign-up groups stay and which leave. Give it your user activity file and get retention charts, adoption trends and next steps.
+name: Sign-up group retention analyst
+summary: Give it user activity data. Get retention curves by sign-up group, feature adoption trends and what they suggest.
 job: track-numbers
-headline: Retention cohort analyst
-subhead: A clear picture of which sign-up groups stay and which leave, with charts and a short list of what to look into next. You see where the drop-off happens and who it happens to.
+headline: Sign-up group retention analyst
+subhead: Share user activity with sign-up groups and time periods. It checks the data, works out retention and feature use for each sign-up group, then charts changes and suggests follow-up questions. It reports patterns, not causes.
 explain: |
   A clear picture of which sign-up groups stay and which leave, with charts and a short list of what to look into next. You see where the drop-off happens and who it happens to.
 

@@ -1,11 +1,11 @@
 new_slug: break-even-roas-and-cpa-calculator
-name: Break-even ROAS and CPA calculator
-summary: Work out your break-even ROAS and CPA from order value and costs. Get an ad allowance per order and a list of what is still missing.
+name: Break-even ad spend calculator
+summary: Share order value, costs and ad figures. Get ad-cost limits, a matching cost check and clear gaps before choosing a test.
 job: run-google-ads
 thinking: medium
 thinking_why: The sums are simple, but it has to catch weak inputs and judge whether the numbers can pay for ads.
-headline: Break-even ROAS and CPA calculator
-subhead: It uses order value and profit left before ads to work out an ad-cost allowance and sales-to-ad-spend threshold. It compares matching click and order data, checks any repeat-buyer case and shows cost gaps. Get the sums, a custom checklist and a verdict of GO, GO WITH CARE or FIX FIRST. These figures cover the costs named; they do not prove total profit or approve higher spending.
+headline: Break-even ad spend calculator
+subhead: Share average order value and the margin left before ads. Add matching click cost and purchase rate to compare cost per order. It shows the formulas, checks any measured repeat-profit case and tests targets against each cost basis. Get the sums and a custom checklist with gaps. Order cost and new-customer cost stay separate. These limits cover named costs; they do not prove total profit or approve more spending.
 explain: |
   An ad result only makes sense against a clear cost basis. This skill starts with sales left after the variable costs you name, before advertising. It shows which costs are included and which still need checking. An order cost and a new-customer acquisition cost need different, matching counts.
 

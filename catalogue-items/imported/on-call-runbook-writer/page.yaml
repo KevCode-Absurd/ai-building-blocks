@@ -1,11 +1,11 @@
 thinking: medium
 thinking_why: It fills a fixed template with exact steps and checks.
 new_slug: on-call-runbook-writer
-name: On-call runbook writer
-summary: Write an on-call runbook for your service. You get numbered steps, checks, rollback and who to call, so anyone on call can fix it fast.
+name: On-call fix guide writer
+summary: Describe a service or process. Get numbered steps, checks, rollback and who to call, so anyone on call can fix it fast.
 job: document-work
-headline: On-call runbook writer
-subhead: A runbook that a tired person can follow at 3am without asking anyone. You describe a service or a process and get plain, numbered steps with the checks and fixes written out.
+headline: On-call fix guide writer
+subhead: A guide that a tired person can follow at 3am without asking anyone. You describe a service or a process and get plain, numbered steps with the checks and fixes written out.
 explain: |
   A runbook that a tired person can follow at 3am without asking anyone. You describe a service or a process and get plain, numbered steps with the checks and fixes written out.
 

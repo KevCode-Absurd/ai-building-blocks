@@ -1,6 +1,6 @@
 slug: ai-app-guardrails-builder
-name: AI app guardrails builder
-summary: Describe what your AI app must never do. Get rules set to refuse jailbreaks, made-up facts and leaked personal details, plus a test plan to check each one.
+name: NeMo Guardrails safety rule builder
+summary: Describe your app's limits. Get rules for NeMo Guardrails (NVIDIA's safety rules tool for AI apps), with test cases for inputs, outputs and private data.
 category: general
 boards: []
 type: skill

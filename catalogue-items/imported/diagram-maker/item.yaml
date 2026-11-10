@@ -1,6 +1,6 @@
 slug: diagram-maker
-name: Diagram maker
-summary: Describe a system, process or idea. Get a clean dark-themed SVG diagram you can open and reuse.
+name: Dark-theme diagram maker
+summary: Describe a system, process or idea. Get a dark-theme diagram as an SVG file (an image that stays sharp at any size).
 category: general
 boards: []
 type: skill

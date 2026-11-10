@@ -1,6 +1,6 @@
 slug: on-call-runbook-writer
-name: On-call runbook writer
-summary: Describe a service or process. Get a step-by-step runbook that anyone on call can follow under pressure.
+name: On-call fix guide writer
+summary: Describe a service or process. Get numbered steps, checks, rollback and who to call, so anyone on call can fix it fast.
 category: general
 boards: []
 type: skill

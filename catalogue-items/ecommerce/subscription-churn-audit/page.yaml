@@ -1,11 +1,11 @@
 new_slug: subscription-churn-audit
-name: "Subscription churn audit"
-summary: "Find where subscribers cancel with a subscription churn audit. Give it your cancel data. You get a score out of 100 and your top three fixes."
+name: "Subscription cancellation auditor"
+summary: "Share your cancel data. Find where and why subscribers cancel. Get a score out of 100 and your top three fixes."
 job: keep-customers
 thinking: high
 thinking_why: "It reads your numbers, finds spikes and scores four parts, so a stronger model makes fewer arithmetic and reading mistakes."
 
-headline: "Subscription churn audit"
+headline: "Subscription cancellation auditor"
 subhead: Give it your cancels with dates and order numbers, your first-order subscription flag, the emails you sent to subscribers and your save rate. It finds the days subscribers leave and why. You get a score out of 100, a cancels-by-day chart and the top three fixes.
 
 explain: |

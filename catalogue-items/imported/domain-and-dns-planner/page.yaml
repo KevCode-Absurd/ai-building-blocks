@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It sets a layout where small mistakes break sites.
 new_slug: domain-and-dns-planner
 name: Domain and DNS planner
-summary: "Plan your domain and DNS setup: which address is main, what redirects where, and what to do with names you don't use. Give it your domain list."
+summary: "Share your domain list and service needs. Get DNS records (the settings that point each web address), redirect maps and renewal plans."
 job: ship-and-host
 headline: Domain and DNS planner
-subhead: "Give it every domain you own, with its status and role. It works through five decisions in order: main address, subdomain or subfolder, registrar, DNS provider and unused names. You get a written plan you can enter in your DNS panel."
+subhead: "Bring domain status, roles, providers, and linked service needs. It groups domains by role and reviews current settings. It picks main addresses and maps permanent redirects. Get record standards, unused-domain plans, and a renewal calendar."
 explain: |
   A clear layout for how your domains, subdomains and DNS records fit together, including redirects and what to do with the names you do not use. It works for one site or a hundred.
 

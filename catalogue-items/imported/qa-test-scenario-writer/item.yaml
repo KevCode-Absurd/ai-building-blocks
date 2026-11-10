@@ -1,6 +1,6 @@
 slug: qa-test-scenario-writer
-name: QA test scenario writer
-summary: Paste your user stories. Get test scenarios with starting state, steps and the result to expect.
+name: Test scenario writer
+summary: Paste your user stories. Get test scenarios with starting state, numbered steps and the result to expect, plus edge cases to try.
 category: general
 boards: []
 type: skill

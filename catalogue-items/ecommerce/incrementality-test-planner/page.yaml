@@ -1,11 +1,11 @@
 new_slug: incrementality-test-planner
-name: "Incrementality test planner"
-summary: "Plan an incrementality test for your ad channel. Get a test sized to your spend and regions, plus a cut, hold or scale rule to read it."
+name: "Ad lift test planner"
+summary: "Share your ad spend and sales by region. Get a test of the sales your ads really caused, with a cut, hold or scale rule."
 job: track-numbers
 thinking: high
 thinking_why: "Matching regions and sizing a test needs careful reasoning about data, and a bad design wastes real money. A stronger model catches more."
 
-headline: "Incrementality test planner"
+headline: "Ad lift test planner"
 subhead: "Tell it the channel, your spend and your sales by region. It says if you should test at all, then plans a lift test for your size, with matched regions, dates, spend change, read-out window and a cut, hold or scale rule."
 
 explain: |

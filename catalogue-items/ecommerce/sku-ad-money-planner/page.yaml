@@ -1,12 +1,12 @@
 new_slug: sku-ad-money-planner
-name: "SKU ad money planner"
-summary: "Plan ad money by SKU. Give it stock days, costs and ad spend. Get a grade, ROAS target and clearance plan for each product."
+name: "Product ad budget planner"
+summary: "Give it stock days, costs and ad spend for each product. Get a stock grade, an ad return target and a clearance plan for each."
 job: launch-and-scale-ads
 thinking: medium
 thinking_why: "The work is sorting and sums on your product list, so a mid-level model is enough. Check the grades of two products by hand."
 
-headline: "SKU ad money planner"
-subhead: "Give it stock, days of stock, price, cost and ad spend for each product. It grades stock A to D, sets a ROAS target per grade, shows which product earns most per sale, sorts SKUs into four roles, and plans a clearance funnel for slow stock."
+headline: "Product ad budget planner"
+subhead: "Give it stock, days of stock, price, cost and ad spend for each product. It grades stock A to D, sets an ad return target per grade, shows which product earns most per sale, sorts products into four roles, and plans a clearance sale for slow stock."
 
 explain: |
   Most ad targets treat every product the same. But a SKU (one product in one size and color) with 400 days of stock needs a different target from one that sells out next week. Cutting ads on slow stock because ROAS is low leaves cash sitting on the shelf. Pushing ads on a product about to sell out wastes your best batch.

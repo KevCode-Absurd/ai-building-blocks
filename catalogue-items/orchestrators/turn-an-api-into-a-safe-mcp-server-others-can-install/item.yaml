@@ -1,6 +1,6 @@
 slug: turn-an-api-into-a-safe-mcp-server-others-can-install
-name: "Turn an API into a safe, installable MCP server"
-summary: "Give it an OpenAPI file or your API code. Get an MCP server with sign-in, a security check and a published package others can add."
+name: API-to-MCP server release builder
+summary: Share your API spec (how other software connects to yours). Get an MCP server (a connector AI assistants can use), with sign-in and security findings.
 category: orchestrator
 type: workflow
 role: orchestrate

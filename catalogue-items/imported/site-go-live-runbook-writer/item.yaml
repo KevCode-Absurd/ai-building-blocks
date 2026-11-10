@@ -1,6 +1,6 @@
 slug: site-go-live-runbook-writer
-name: Site go-live runbook writer
-summary: Tell it what you are launching. Get a go-live runbook with checks, DNS cutover steps, post-launch watching and a rollback plan.
+name: Website launch day plan writer
+summary: Share your launch scope, time and team. Get launch checks, steps to point your web address at the new site, and a rollback plan.
 category: general
 boards: []
 type: skill

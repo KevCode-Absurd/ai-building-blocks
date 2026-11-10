@@ -1,10 +1,10 @@
 thinking: medium
 thinking_why: It scores by set rules and names the groups.
 new_slug: customer-segment-builder
-name: Customer segment builder
-summary: Score your Shopify customers on how recently, how often and how much they buy, then group them from Champions to Lost for email planning.
+name: Shopify customer segment builder
+summary: Score Shopify customers, read-only, by how recently, how often and how much they buy. Get named customer groups and an optional tag preview.
 job: run-your-store
-headline: Customer segment builder
+headline: Shopify customer segment builder
 subhead: Not all customers deserve the same email. This scores each Shopify customer on how recently they bought, how often, and how much they spent, then sorts them into groups from Champions to Lost.
 explain: |
   Not all customers deserve the same email. This scores each Shopify customer on how recently they bought, how often, and how much they spent, then sorts them into groups from Champions to Lost.

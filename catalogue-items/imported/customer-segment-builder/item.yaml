@@ -1,6 +1,6 @@
 slug: customer-segment-builder
-name: Customer segment builder
-summary: Run it on your customers. Get each one scored on recency, frequency and spend, then grouped from Champions to Lost.
+name: Shopify customer segment builder
+summary: Score Shopify customers, read-only, by how recently, how often and how much they buy. Get named customer groups and an optional tag preview.
 category: general
 boards: []
 type: skill

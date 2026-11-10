@@ -1,6 +1,6 @@
 slug: sop-and-runbook-checker
-name: SOP and runbook checker
-summary: Give it your SOPs or wiki export. Get missing owners, stale pages and gaps, plus new SOPs to fix them.
+name: Company procedure checker
+summary: Share your written procedures or a wiki export. Get missing owners, stale pages and gaps ranked, plus draft procedures to fill what's missing.
 category: general
 boards: []
 type: skill

@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: Retry rules need care to avoid doubled actions.
 new_slug: api-retry-handler
 name: API retry handler
-summary: Get API retry code that waits, backs off and retries when an API says slow down, without sending the same action twice. Name your API and language.
+summary: Share the rules and failed replies of an API (a service your code calls). Get retry code with capped attempts that respects wait times.
 job: build-software
 headline: API retry handler
-subhead: Code that handles an API saying slow down, without crashing your app or sending the same action twice. Name the API and you get a retry layer that is safe, bounded and easy to read.
+subhead: Share the docs for the API (the service your code calls), request types and time limits. It sorts failures worth retrying, reads wait headers and adds capped attempts with random waits between them. Writes need a documented way to avoid repeating an action. Get code and checks for limits and failures. A retry-wait budget does not stop a hung call; add a network timeout. Limits shared across servers need shared state.
 explain: |
   Code that handles an API saying slow down, without crashing your app or sending the same action twice. Name the API and you get a retry layer that is safe, bounded and easy to read.
 

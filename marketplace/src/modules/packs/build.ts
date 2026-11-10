@@ -8,7 +8,7 @@
 // Shared templates (packs/shared/*) may use only the placeholders in SIMPLE_PLACEHOLDERS and BLOCK_PLACEHOLDERS; any
 // other {{...}} in a template fails the build. Role kit files (packs/roles/<id>/*) are copied as they are: their own
 // {{user placeholders}} are for the person using the prompt, so they are never filled or rejected.
-import type { JobType, Persona } from "../../core/types.ts";
+import type { DeliverableFamily, JobType, Persona } from "../../core/types.ts";
 import type { Role, RoleKitJson } from "../directory/roles.ts";
 import { soulMarkdown, soulView, splitVoice } from "../directory/soul.ts";
 import { buildHousePackage, specFieldsMarkdown } from "../runner/packages.ts";
@@ -20,6 +20,10 @@ import { outputPolicyMarkdown } from "../runner/output-policy.ts";
 import { CAPTURE, FAMILY_LABELS, RUBRIC_GROUP, contextRequirements, familyGates, familyOf, familySlice } from "./families.ts";
 import { bestRoute, type RouteCandidate } from "./route.ts";
 import { agentFrontmatter, megaSources, teamListMarkdown, type MegaKit } from "./mega.ts";
+import {
+  ONE_FILE_ITEMS, TYPE_LABELS, buildToolbox, checkToolbox, fallbackToolbox, toolboxItemPath,
+  type HelperRole, type LibraryItem, type ToolboxSummary,
+} from "./toolbox.ts";
 
 export class PackBuildError extends Error {}
 
@@ -39,20 +43,27 @@ export interface PackOptions {
 }
 
 /** What a file is, for grouping in the pack viewer (files.json "kind"). team = a mega agent's specialists, channel = their channels. */
-export type FileGroup = "start" | "identity" | "work" | "knowledge" | "skill" | "prompt" | "workflow" | "training" | "about" | "team" | "channel" | "tool";
+export type FileGroup = "start" | "identity" | "work" | "knowledge" | "skill" | "prompt" | "workflow" | "training" | "about" | "team" | "channel" | "tool" | "toolbox";
 /**
  * Where a file's browsable copy lives (see fileUrl): "role" = the same for every agent in the role (copied from the
  * role kit as it stands, or sources.md and library.md built from it), "job" = a job skill, the same in every agent
  * pack that links that job, "mega" = a mega kit file as it stands (sharedPath is its path in the kit), "agent" = this
- * agent's own, "tools" = a capture or check tool, the same file in every pack (served at /packs/tools/ and /tools/).
+ * agent's own, "tools" = a capture or check tool, the same file in every pack (served at /packs/tools/ and /tools/),
+ * "toolbox" = a library item's text, the same in every pack that carries it (served once at /packs/toolbox/).
  */
-export type FileSource = "agent" | "role" | "job" | "mega" | "tools";
+export type FileSource = "agent" | "role" | "job" | "mega" | "tools" | "toolbox";
 export interface PackFile { path: string; content: string; purpose: string; group: FileGroup; bytes: number; sha256: string; source: FileSource; sharedPath?: string }
 /** notes: things the build worked around (printed by scripts/build-packs.mjs), such as a renamed job skill. */
 export interface BuiltPack {
   kind: PackKind; folder: string; files: PackFile[]; manifest: PackManifest; notes: string[];
   /** What a request can be routed to (load_agent): every job skill, role skill and workflow, with its matching words. */
   routes: RouteCandidate[];
+  /**
+   * The curated toolbox, when the role kit has a toolbox.json: what files.json says about it, and the pack paths of
+   * its library items, best for this agent first (the one-file text carries the first few). null: the role has none
+   * yet, and toolbox.md is the plain list of the pack's skills.
+   */
+  toolbox: { summary: ToolboxSummary; top: string[] } | null;
 }
 
 export interface PackInput {
@@ -70,6 +81,13 @@ export interface PackInput {
    * (TOOL_FILES). Agent packs carry the ones given under tools/; a missing one is referred to by its public URL.
    */
   tools?: Record<string, string>;
+  /**
+   * The library items the role's toolbox.json names (slug -> the rendered item), read by scripts/build-packs.mjs from
+   * catalogue-items/. A named item that is not here is left out of the pack, with a note.
+   */
+  library?: Record<string, LibraryItem>;
+  /** The roles a toolbox may bring in as helpers (role id -> name and lead agent). One that is not here is left out. */
+  helpers?: Record<string, HelperRole>;
   options: PackOptions;
 }
 
@@ -81,9 +99,58 @@ export const TOOL_FILES: { name: string; purpose: string }[] = [
   { name: "ai-default-patterns.md", purpose: "The named AI defaults to avoid unless chosen on purpose." },
 ];
 
+/**
+ * Whether a role's work carries a brand to the public. Only these roles get the brand-capture tools and the
+ * questions about position and admired brands; a bookkeeper, recruiter or support agent gets what fits its work.
+ * The rule: the department is marketing, content, design or ecommerce; or a linked job makes a web page or an ad;
+ * or it is a sales role whose jobs are copy or email.
+ */
+const BRAND_DEPARTMENTS = new Set(["marketing", "content", "design", "ecommerce"]);
+export function brandFacing(department: string, families: DeliverableFamily[]): boolean {
+  if (BRAND_DEPARTMENTS.has(department)) return true;
+  if (families.some(f => f === "web_page" || f === "ad_creative")) return true;
+  return department === "sales" && families.some(f => f === "copy" || f === "email");
+}
+
+/** What the one intake message is spent on (AGENTS.md, "Ask once"): four things at most, since access is the fifth. */
+const BRAND_ASKS = "position, price point, what must never change, brands they admire and avoid";
+const DEPARTMENT_ASKS: Record<string, string> = {
+  sales: "who the buyer is and what they buy today, the offer and its terms, where deals stall, the list or CRM you work from",
+  "customer-support": "the channels and how many messages come in, the policies to follow (refunds, returns, warranty), the tone to keep, when to hand over to a person",
+  finance: "the period to cover, the accounting software and the bank or payout exports, cash or accrual basis, who the records are for",
+  people: "the role or team it is for, the country and its hiring or employment rules, the pay range and must-haves, who decides",
+  learning: "who the learners are and what they know now, what they must be able to do after, the time and format available, how success is checked",
+  operations: "who will use it and when, the rules or standards it must follow, what goes wrong today, the tools and format they work in",
+  product: "the user and the problem, the evidence so far, what is fixed (date, budget, scope), who decides",
+  engineering: "where it runs and the stack, what must not break, how it is tested, who reviews it",
+  data: "the decision this feeds, where the data lives and the period, how each number is defined, who reads it",
+  research: "the decision this feeds, who or what to study, the sources you trust, what would change the answer",
+};
+const FAMILY_ASKS: Partial<Record<DeliverableFamily, string>> = {
+  audit: DEPARTMENT_ASKS.data, analysis: DEPARTMENT_ASKS.data, strategy: DEPARTMENT_ASKS.product, plan: DEPARTMENT_ASKS.product, code: DEPARTMENT_ASKS.engineering,
+};
+/** The intake asks for a role: the brand questions for brand-facing work, else the department's, else the first job family's. */
+export function intakeAsks(department: string, families: DeliverableFamily[]): { start: string; asks: string } {
+  if (brandFacing(department, families)) return { start: "the business name, the website (or what they can paste) and what they need done", asks: BRAND_ASKS };
+  const byFamily = families.map(f => FAMILY_ASKS[f]).find(Boolean);
+  return {
+    start: "the business name, what they need done, and the files, exports or account the job runs on",
+    asks: DEPARTMENT_ASKS[department] ?? byFamily ?? DEPARTMENT_ASKS.operations,
+  };
+}
+
+/**
+ * The pack is free, so wording left from priced jobs goes: "Base price covers 10." in a job's field help becomes
+ * "One job covers 10.", which is what it means now.
+ */
+export function freeWording(text: string): string {
+  return text.replace(/\bBase price covers\b/g, "One job covers").replace(/\bbase price covers\b/g, "one job covers");
+}
+
 export const SIMPLE_PLACEHOLDERS = [
   "name", "title", "role_name", "tagline", "agent_id", "role_id", "department", "version", "updated", "bio",
   "profile_url", "pack_url", "train_pack_url", "one_file_url", "guide_url", "studio_url", "mcp_url", "not_for_inline",
+  "start_ask", "intake_asks",
 ] as const;
 /** team_list is a mega agent's "My channel team" section, heading included; it is empty (its line removed) for other agents. */
 export const BLOCK_PLACEHOLDERS = ["files_table", "skills_list", "prompts_list", "workflows_list", "outcomes_list", "not_for_list", "intake_list", "team_list"] as const;
@@ -113,6 +180,7 @@ const firstSentence = (text: string, max = 120) => {
   return s.length > max ? `${s.slice(0, max - 1).replace(/\s+\S*$/, "")}…` : s;
 };
 const lowerFirst = (text: string) => { const t = text.trim().replace(/\.$/, ""); return t ? t[0].toLowerCase() + t.slice(1) : t; };
+const upperFirst = (text: string) => (text ? text[0].toUpperCase() + text.slice(1) : text);
 function cut(text: string, max: number): string {
   if (text.length <= max) return text;
   return text.slice(0, max).replace(/\s+\S*$/, "").replace(/[\s,;:]+$/, "");
@@ -222,6 +290,8 @@ Read these files before you start, in this order:
 4. playbook.md: what you deliver and what you ask for first.
 5. knowledge.md: what you know about the role.
 6. access.md: the tools you can ask for, and what you never ask for.
+
+For each task, find what to use in toolbox.md, choose at your own discretion and open only what you chose.
 
 {{team_list}}
 
@@ -455,9 +525,11 @@ export function resolveToolRefs(text: string, have: Set<string>, origin: string)
 }
 
 /** context/README.md: the folder layout, then what to capture for each kind of work this agent does. */
-function contextReadme(jts: JobType[], tools: Set<string>, origin: string): string {
+function contextReadme(jts: JobType[], tools: Set<string>, origin: string, brand = true): string {
   const families = [...new Set(jts.map(familyOf))];
   if (!families.length) families.push("other");
+  // Roles that carry no brand to the public capture no site and get no capture tools (brandFacing).
+  const capture = brand || tools.size > 0;
   const out = [
     "# Context: what to capture before the work",
     "",
@@ -467,7 +539,7 @@ function contextReadme(jts: JobType[], tools: Set<string>, origin: string): stri
     "",
     bullets([
       "`context/job-card.md`: client, outcome, deliverable kind, success measure, mode and access (step 0).",
-      "`context/brand-dna.json` and `context/screenshots/`: the captured site (step 1).",
+      ...(capture ? ["`context/brand-dna.json` and `context/screenshots/`: the captured site (step 1)."] : []),
       "`context/voice.md`: verbatim voice samples, with customer words marked as theirs.",
       "`context/facts.md`: live facts, each with its source and the date you captured it.",
       "`context/references.md`: competitors and references, and what each does better.",
@@ -483,9 +555,11 @@ function contextReadme(jts: JobType[], tools: Set<string>, origin: string): stri
     const jobs = jts.filter(jt => familyOf(jt) === f).map(jt => jt.title);
     out.push(`### ${FAMILY_LABELS[f]}${jobs.length ? ` (${jobs.join(", ")})` : ""}`, "", bullets(CAPTURE[f]), "");
   }
-  out.push("## Tools", "", bullets(TOOL_FILES.map(t => tools.has(t.name) ? `\`tools/${t.name}\` (also at ${origin}/tools/${t.name}): ${t.purpose}` : `tools/${t.name}: ${t.purpose}`)), "",
-    "Run them in the client's project or browser, never on AI Blocks.");
-  return out.join("\n");
+  if (capture) {
+    out.push("## Tools", "", bullets(TOOL_FILES.map(t => tools.has(t.name) ? `\`tools/${t.name}\` (also at ${origin}/tools/${t.name}): ${t.purpose}` : `tools/${t.name}: ${t.purpose}`)), "",
+      "Run them in the client's project or browser, never on AI Blocks.");
+  }
+  return out.join("\n").trimEnd();
 }
 
 // ---------- Role kits ----------
@@ -493,7 +567,7 @@ function contextReadme(jts: JobType[], tools: Set<string>, origin: string): stri
 interface SourceRow { n: number; title: string; publisher: string; url: string; checked: string; supports: string }
 interface LibraryRow { slug: string; name: string; why: string }
 
-const KIT_ROOT_FILES = new Set(["TEAM.md", "knowledge.md", "access.md", "sources.json", "library.json", "role.json"]);
+const KIT_ROOT_FILES = new Set(["TEAM.md", "knowledge.md", "access.md", "sources.json", "library.json", "toolbox.json", "role.json"]);
 const KIT_FOLDERS = new Set(["skills", "prompts", "workflows", "training"]);
 
 function parseKitJson<T>(kit: RoleKit, path: string): T | null {
@@ -508,9 +582,20 @@ function parseKitJson<T>(kit: RoleKit, path: string): T | null {
  * Checks a role kit's files against the layout in the spec. Errors stop the build; warnings are printed.
  * role.json itself is checked by directory/roles.ts checkRoleKitJson.
  */
-export function validateRoleKit(kit: RoleKit): { errors: string[]; warnings: string[] } {
+export function validateRoleKit(kit: RoleKit, roleIds?: Set<string>): { errors: string[]; warnings: string[] } {
   const errors: string[] = [], warnings: string[] = [];
   const at = (p: string) => `packs/roles/${kit.role.id}/${p}`;
+  // toolbox.json (the role's curated toolbox) is optional: a role without one builds as before.
+  try {
+    const raw = parseKitJson<unknown>(kit, "toolbox.json");
+    if (raw !== null) {
+      const checked = checkToolbox(raw, kit.role.id, Object.keys(kit.files), roleIds);
+      errors.push(...checked.errors);
+      warnings.push(...checked.warnings);
+    }
+  } catch (err) {
+    errors.push(err instanceof Error ? err.message : String(err));
+  }
   if (!kit.files["knowledge.md"]?.trim()) errors.push(`${at("knowledge.md")}: missing or empty`);
   for (const path of Object.keys(kit.files).sort(byPath)) {
     const top = path.split("/")[0];
@@ -622,7 +707,7 @@ function jobSkill(jt: JobType, kind: PackKind, slug: string = jt.id, pointer: Me
     "",
     "Then the details of the job, asked for in the one intake message (AGENTS.md) only where capture cannot give them:",
     "",
-    specFieldsMarkdown(jt.spec_fields),
+    freeWording(specFieldsMarkdown(jt.spec_fields)),
     "",
     "## How to run this job",
     "",
@@ -1084,10 +1169,53 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
 
   // Capture and check tools: in agent packs only (zip and files.json; the one-file version links to them). A training
   // pack is uploaded back to the studio, which takes text files only, so it links to the public copies instead.
+  // They capture and check a brand, so only brand-facing roles carry them (brandFacing); any other role carries just
+  // the ones its role kit or its own method names, so a pack never points at a tool it lacks.
+  const department = role?.department ?? persona.area;
+  const families = [...new Set(jts.map(familyOf))];
+  const brand = brandFacing(department, families);
+  const kitText = brand ? "" : [...Object.values(kitFiles), persona.profile.method ?? ""].join("\n");
   const toolDrafts: Draft[] = agent
-    ? TOOL_FILES.filter(t => input.tools?.[t.name]?.trim()).map(t => ({ path: `tools/${t.name}`, group: "tool" as const, content: input.tools![t.name], source: "tools" as const, purpose: `Tool: ${t.purpose}` }))
+    ? TOOL_FILES.filter(t => input.tools?.[t.name]?.trim() && (brand || kitText.includes(`tools/${t.name}`)))
+      .map(t => ({ path: `tools/${t.name}`, group: "tool" as const, content: input.tools![t.name], source: "tools" as const, purpose: `Tool: ${t.purpose}` }))
     : [];
   const toolNames = new Set(toolDrafts.map(d => d.path.slice("tools/".length)));
+
+  // The toolbox (toolbox.ts): with a toolbox.json in the role kit, toolbox.md is the curated "when this, use that"
+  // list and the pack carries the full text of every library item it names. Without one, toolbox.md is the plain
+  // list of the pack's skills, prompts and workflows, and the pack keeps library.md, as before.
+  const toolboxRaw = kit ? parseKitJson<unknown>(kit, "toolbox.json") : null;
+  const toolboxChecked = toolboxRaw === null ? null : checkToolbox(toolboxRaw, kit!.role.id, Object.keys(kitFiles), input.helpers ? new Set(Object.keys(input.helpers)) : undefined);
+  if (toolboxChecked?.errors.length) throw new PackBuildError(toolboxChecked.errors.join("\n"));
+  const toolboxJson = toolboxChecked?.toolbox ?? null;
+  const plainName = (d: Draft): string => {
+    if (!d.path.startsWith("skills/")) return kitPurpose(d.path, d.content!).title;
+    const body = d.content!.replace(/^﻿?---\r?\n[\s\S]*?\r?\n---\r?\n?/, "");
+    return heading(body) ?? upperFirst(d.path.split("/")[1].replace(/-/g, " "));
+  };
+  const jobSkillFiles = jts.map(jt => ({ title: jt.title, path: `skills/${jobSlug.get(jt.id)}/SKILL.md` }));
+  const pickable = [...skillDrafts.filter(d => d.path.endsWith("/SKILL.md")), ...promptDrafts, ...workflowDrafts];
+  const builtToolbox = toolboxJson ? buildToolbox({
+    toolbox: toolboxJson, kind, origin, agentName: persona.name, agentTitle: persona.title, roleName,
+    packFiles: pickable.map(d => ({ path: d.path, name: plainName(d) })),
+    jobSkills: jobSkillFiles,
+    library: input.library ?? {},
+    helpers: input.helpers ?? {},
+    personaText: [persona.title, persona.tagline, ...persona.profile.outcomes.flatMap(o => [o.title, o.deliverable]), ...jts.flatMap(jt => [jt.title, ...jt.keywords])].join(". "),
+    families,
+  }) : null;
+  if (builtToolbox) notes.push(...builtToolbox.notes);
+  const toolboxMarkdown = builtToolbox?.markdown ?? fallbackToolbox({
+    agentName: persona.name, roleName, jobSkills: jobSkillFiles,
+    files: pickable.map(d => ({ path: d.path, name: plainName(d), about: d.path.startsWith("skills/") ? cut(firstSentence(frontmatter(d.content!)?.description ?? "", 240), 240) : "" })),
+  });
+  const libraryItemDrafts: Draft[] = (builtToolbox?.items ?? []).map(item => ({
+    path: toolboxItemPath(item.type, item.slug), group: "toolbox" as const, source: "toolbox" as const, content: item.text,
+    purpose: `${upperFirst(TYPE_LABELS[item.type])}: ${firstSentence(item.summary || item.name)}`,
+  }));
+  // A curated agent pack has no library.md: the toolbox carries those items in full. Training packs keep it,
+  // because packs/shared/train/AGENTS.md names it.
+  const withLibraryMd = !builtToolbox || !agent;
 
   // The examples guide may be a template, as train/examples/README.md or train/examples-README.md.
   const examplesTemplate = ["train/examples/README.md", "train/examples-README.md"].find(t => templates[t]?.trim()) ?? null;
@@ -1096,8 +1224,10 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
       purpose: agent ? "Start here: who this is, what's inside and how to load it in your AI tool." : "Start here: what training does and how to begin." },
     { path: "AGENTS.md", group: "start", template: agent ? "AGENTS.md" : "train/AGENTS.md", purpose: "The operating instructions any AI reads first." },
     { path: "CLAUDE.md", group: "start", content: "@AGENTS.md", purpose: "Points Claude Code to AGENTS.md." },
+    { path: "toolbox.md", group: "start", content: toolboxMarkdown,
+      purpose: builtToolbox ? "What to use when: every skill, prompt, workflow, thinking lens and helper for this role, task by task." : "The skills, prompts and workflows in this pack, in one list." },
     { path: "WORK-METHOD.md", group: "start", template: "WORK-METHOD.md", resolveTools: true, purpose: "How every job runs: ground, taste, diverge, build, check and record, with the gates and craft rubrics." },
-    { path: "context/README.md", group: "start", content: contextReadme(jts, toolNames, origin), resolveTools: true, purpose: "What to capture about the client before the work, by kind of work, and where each file goes." },
+    { path: "context/README.md", group: "start", content: contextReadme(jts, toolNames, origin, brand), resolveTools: true, purpose: "What to capture about the client before the work, by kind of work, and where each file goes." },
     ...(agent ? [] : [{ path: "instructions.md", group: "start" as const, template: "train/instructions.md", purpose: "The training coach: how your AI interviews you, tests your agent and fills in its files." }]),
     // Training logs the coach writes into (instructions.md): shipped as empty starters so every named file exists.
     ...(agent ? [] : TRAIN_LOGS.map(l => ({ path: l.path, group: "training" as const, content: l.content, purpose: l.purpose }))),
@@ -1124,6 +1254,7 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
     ...promptDrafts,
     ...workflowDrafts,
     ...megaDrafts,
+    ...libraryItemDrafts,
     ...toolDrafts,
     ...(agent ? [] : [
       ...(megaTraining.some(d => d.path === "training/interview.md") && !roleTraining.has("training/interview.md") ? [] : [
@@ -1136,10 +1267,10 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
         ? { path: "examples/README.md", group: "training" as const, template: examplesTemplate, purpose: "How to add anonymised past work." }
         : { path: "examples/README.md", group: "training" as const, content: examplesReadme(), purpose: "How to add anonymised past work." },
     ]),
-    // library.md and sources.md are always there, because AGENTS.md and README.md name them (the pack linter checks).
-    libraryRows.length
+    // sources.md is always there, because AGENTS.md names it (the pack linter checks). library.md: see withLibraryMd.
+    ...(!withLibraryMd ? [] : [libraryRows.length
       ? { path: "library.md", group: "knowledge" as const, content: libraryMarkdown(libraryRows, roleName), purpose: "Related AI Blocks library items, with links." }
-      : { path: "library.md", group: "knowledge" as const, content: `# Related AI Blocks library items\n\nThe list for the ${roleName} role is coming with its researched knowledge. Until then, search the free library at ${LIBRARY_ORIGIN}.`, purpose: "Related AI Blocks library items: coming with the role's knowledge." },
+      : { path: "library.md", group: "knowledge" as const, content: `# Related AI Blocks library items\n\nThe list for the ${roleName} role is coming with its researched knowledge. Until then, search the free library at ${LIBRARY_ORIGIN}.`, purpose: "Related AI Blocks library items: coming with the role's knowledge." }]),
     megaSrc?.count
       ? { path: "sources.md", group: "knowledge" as const, content: megaSourcesMarkdown(sourceRows, `${megaKit!.json.name} kit`, megaSrc.markdown), purpose: "Every source behind the knowledge, the traction playbook and the channels, grouped by file." }
       : sourceRows.length
@@ -1178,7 +1309,13 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
     guide_url: `${origin}/guides/train-your-own-agent`,
     studio_url: `${origin}/studio`,
     mcp_url: `${origin}/mcp`,
-    files_table: ["| File | What it is |", "|---|---|", ...drafts.map(d => `| \`${d.path}\` | ${cell(d.purpose)} |`)].join("\n"),
+    start_ask: intakeAsks(department, families).start,
+    intake_asks: intakeAsks(department, families).asks,
+    // The toolbox's library items are one row, not fifty: toolbox.md lists each with what it is for.
+    files_table: ["| File | What it is |", "|---|---|",
+      ...drafts.filter(d => d.group !== "toolbox").map(d => `| \`${d.path}\` | ${cell(d.purpose)} |`),
+      ...(libraryItemDrafts.length ? [`| \`toolbox/\` | The ${libraryItemDrafts.length} library items toolbox.md names, each in full in its own file. |`] : []),
+    ].join("\n"),
     skills_list: listOf(skillDrafts, "- (no skills yet)"),
     prompts_list: listOf(promptDrafts, "- (no prompts yet)"),
     workflows_list: listOf(workflowDrafts, "- (no workflows yet)"),
@@ -1249,7 +1386,7 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
   const manifestText = `${JSON.stringify(manifest, null, 2)}\n`;
   const manifestDraft = drafts.find(d => d.path === "pack.json")!;
   files.push({ path: "pack.json", content: manifestText, purpose: manifestDraft.purpose, group: manifestDraft.group, bytes: encoder.encode(manifestText).length, sha256: await sha256(manifestText), source: "agent" });
-  return { kind, folder, files, manifest, notes, routes };
+  return { kind, folder, files, manifest, notes, routes, toolbox: builtToolbox ? { summary: builtToolbox.summary, top: builtToolbox.top } : null };
 }
 
 // ---------- Versions (packs/versions.json) ----------
@@ -1295,12 +1432,13 @@ export function fileUrl(pack: BuiltPack, file: PackFile): string {
   if (file.source === "role" && pack.manifest.role) return `/packs/roles/${pack.manifest.role}/${file.path}`;
   if (file.source === "job") return `/packs/jobs/${file.path.slice("skills/".length)}`;
   if (file.source === "mega" && pack.manifest.mega) return `/packs/mega/${pack.manifest.mega.kit}/${file.sharedPath ?? file.path}`;
-  if (file.source === "tools") return `/packs/${file.path}`;
+  // A tool or a library item is one file for every pack that carries it: /packs/tools/<file>, /packs/toolbox/<type>/<slug>.md.
+  if (file.source === "tools" || file.source === "toolbox") return `/packs/${file.path}`;
   return `/packs/${pack.manifest.agent_id}/${file.path}`;
 }
 
 /** Folder names under /packs that are not agents, so no agent id may use them. */
-export const RESERVED_PACK_PATHS = new Set(["roles", "jobs", "mega", "tools", "index.json", "index"]);
+export const RESERVED_PACK_PATHS = new Set(["roles", "jobs", "mega", "tools", "toolbox", "toolbox-index.json", "toolbox-index", "index.json", "index"]);
 
 /**
  * The pack as a zip: every file under its folder, then a copy of skills/ in each of SKILL_MIRRORS (.agents/skills
@@ -1335,25 +1473,31 @@ const NOT_IN_ONE_FILE = new Set(["README.md", "CLAUDE.md", "CHANGELOG.md", "pack
  * line; each skill's SKILL.md is left out when skills.md holds them all. Plain .txt, because every chat app takes it
  * (Gemini's list of file types does not name .md). Agent packs only.
  */
-export function oneFileText(pack: BuiltPack, origin: string = ORIGIN): string {
+export function oneFileText(pack: BuiltPack, origin: string = ORIGIN, inlineItems: number = ONE_FILE_ITEMS): string {
   if (pack.kind !== "agent") throw new PackBuildError(`only agent packs have a one-file version, not ${pack.kind} packs`);
   const m = pack.manifest, site = origin.replace(/\/+$/, "");
   const bundled = pack.files.some(f => f.path === "skills.md");
   // Scripts stay out (a chat app cannot run them); every reference to one points at its public copy instead.
   const kept = new Set(pack.files.filter(f => f.path.startsWith("tools/") && !isToolScript(f.path)).map(f => f.path.slice("tools/".length)));
+  // The toolbox's library items: the best few for this agent are here in full; the rest are named by address, so the
+  // file stays small enough to attach to a chat. Each address is one known page, not a search.
+  const items = pack.files.filter(f => f.source === "toolbox");
+  const inline = new Set((pack.toolbox?.top ?? []).filter(p => items.some(f => f.path === p)).slice(0, inlineItems));
+  const away = items.filter(f => !inline.has(f.path)).map(f => f.path);
+  const byAddress = (text: string) => away.length ? text.replace(/(?<![\w/.-])toolbox\/[a-z]+\/[a-z0-9-]+\.md\b/g, p => inline.has(p) || !away.includes(p) ? p : `${site}/packs/${p}`) : text;
   const files = pack.files
-    .filter(f => !NOT_IN_ONE_FILE.has(f.path) && !isToolScript(f.path) && !(bundled && /^skills\/[^/]+\/SKILL\.md$/.test(f.path)))
+    .filter(f => !NOT_IN_ONE_FILE.has(f.path) && !isToolScript(f.path) && !(bundled && /^skills\/[^/]+\/SKILL\.md$/.test(f.path)) && !(f.source === "toolbox" && !inline.has(f.path)))
     .sort((a, b) => Number(b.path === "AGENTS.md") - Number(a.path === "AGENTS.md"));
   const head = [
     `# ${m.name}, ${m.title}: the whole agent in one file`,
     "",
     `This is ${m.name}'s agent pack from AI Blocks, version ${m.version}, in one file for chat apps such as ChatGPT, Claude and Gemini. Attach it to a chat, or add it to a project or Gem, and your AI works as ${m.name}. It runs on your own AI plan.`,
     "",
-    `For the AI reading this: each part below is one file of the pack and starts with a line such as "===== FILE: playbook.md =====". When your instructions say to open or read a file, read that part. Start with the AGENTS.md part and follow it.${bundled ? " Every skill is in the skills.md part, under its own heading, so a path such as skills/<name>/SKILL.md means that heading." : ""}`,
+    `For the AI reading this: each part below is one file of the pack and starts with a line such as "===== FILE: playbook.md =====". When your instructions say to open or read a file, read that part. Start with the AGENTS.md part and follow it.${bundled ? " Every skill is in the skills.md part, under its own heading, so a path such as skills/<name>/SKILL.md means that heading." : ""}${away.length ? ` The toolbox.md part names ${items.length} library items: ${inline.size} are parts of this file, and each of the other ${away.length} is one page at the address beside its name. Open that page when you choose the item; if you cannot open pages, ask the person to paste it or work from the items you have.` : ""}`,
     "",
     `Free to use and change, not to sell: the LICENSE.md part has the terms. Newest version and ${m.name}'s profile: ${site}/agents/${m.agent_id}`,
   ];
-  const parts = files.map(f => `===== FILE: ${f.path} =====\n\n${resolveToolRefs(f.content, kept, site).trim()}`);
+  const parts = files.map(f => `===== FILE: ${f.path} =====\n\n${byAddress(resolveToolRefs(f.content, kept, site)).trim()}`);
   return normalizeText([head.join("\n"), ...parts].join("\n\n"));
 }
 
@@ -1377,6 +1521,10 @@ export function filesIndex(pack: BuiltPack, zips: { zip?: BuiltFile; train_zip?:
     ...zips,
     files: pack.files.map(f => ({ path: f.path, url: fileUrl(pack, f), bytes: f.bytes, purpose: f.purpose, kind: f.group })),
     // What load_agent routes a request to (src/modules/packs/route.ts): job skills, role skills and workflows.
+    // Only used for a pack with no curated toolbox: with one, the agent picks from toolbox.md itself.
     routes: pack.routes,
+    // The curated toolbox in short (toolbox.ts, ToolboxSummary): tasks, item counts and names by type, helpers.
+    // null while the role kit has no toolbox.json.
+    toolbox: pack.toolbox?.summary ?? null,
   };
 }

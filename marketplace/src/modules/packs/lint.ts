@@ -2,10 +2,19 @@
 // failures that made packs read as boilerplate (notes/diag-marketplace.md §2, §11): references to files the pack does
 // not contain, the same limit set twice with different numbers, paragraphs repeated within a pack, and made-up
 // example businesses. Pure: it reads only the built pack.
+//
+// The toolbox's library items (source "toolbox", toolbox/<type>/<slug>.md) are other people's methods about any
+// subject, opened one at a time: they may name files of their own world and share the library's standard
+// paragraphs, so the missing-file and repeated-paragraph rules skip them. toolbox.md itself is checked in full:
+// every path it names must be in the pack.
 import type { BuiltPack, PackFile } from "./build.ts";
+import { TOOLBOX_WORD_BUDGET } from "./toolbox.ts";
 
-export type LintRule = "missing_file" | "limit_conflict" | "repeated_paragraph" | "made_up_business";
+export type LintRule = "missing_file" | "limit_conflict" | "repeated_paragraph" | "made_up_business" | "price_wording";
 export interface LintIssue { rule: LintRule; file: string; message: string }
+/** Things worth knowing that do not stop the build, such as a role whose toolbox is not curated yet. */
+export type LintNoteRule = "no_toolbox" | "toolbox_left_out" | "toolbox_long";
+export interface LintNote { rule: LintNoteRule; file: string; message: string }
 
 /** Made-up firms that examples must never use (DESIGN.md hard rules). "Sprout Social" is a real company. */
 export const MADE_UP_BUSINESSES: RegExp[] = [/\bSprout\b(?! Social)/, /\bHarbourside Pottery\b/, /\bTidewell\b/];
@@ -19,16 +28,16 @@ const isScript = (p: string) => /\.(mjs|js)$/.test(p);
 function readSet(pack: BuiltPack): PackFile[] {
   const bundled = pack.files.some(f => f.path === "skills.md");
   return pack.files.filter(f => !["README.md", "CLAUDE.md", "CHANGELOG.md", "pack.json"].includes(f.path) && !isScript(f.path)
-    && !(bundled && /^skills\/[^/]+\/SKILL\.md$/.test(f.path)));
+    && f.source !== "toolbox" && !(bundled && /^skills\/[^/]+\/SKILL\.md$/.test(f.path)));
 }
 
 /** Files the agent or the training coach writes while it works, so the pack rightly does not hold them. */
 const CREATED_FILES = /^training\/(progress|results)\.md$/;
 
 /** Root files of the pack layout: a reference to one of these must point at a file the pack has. */
-const ROOT_FILES = /(?<![\w./-])(AGENTS\.md|WORK-METHOD\.md|QUALITY-METHOD\.md|OUTPUT-POLICY\.md|TEAM\.md|CLAUDE\.md|LICENSE\.md|CHANGELOG\.md|EXECUTION-PLAN\.json|JOB-CARD\.json|TEAM\.json|soul\.md|personality\.md|playbook\.md|knowledge\.md|access\.md|sources\.md|library\.md|skills\.md|instructions\.md|traction-playbook\.md)\b/g;
+const ROOT_FILES = /(?<![\w./-])(AGENTS\.md|WORK-METHOD\.md|QUALITY-METHOD\.md|OUTPUT-POLICY\.md|TEAM\.md|CLAUDE\.md|LICENSE\.md|CHANGELOG\.md|EXECUTION-PLAN\.json|JOB-CARD\.json|TEAM\.json|soul\.md|personality\.md|playbook\.md|knowledge\.md|access\.md|sources\.md|library\.md|skills\.md|toolbox\.md|instructions\.md|traction-playbook\.md)\b/g;
 /** Pack folders: a path under one of these must exist. context/ holds the client's files, so only its README counts. */
-const FOLDER_PATHS = /(?<![\w./-])((?:skills|prompts|workflows|training|tools|channels|agents)\/[A-Za-z0-9_.-]+(?:\/[A-Za-z0-9_.-]+)*\.(?:md|json|mjs|js)|context\/README\.md)\b/g;
+const FOLDER_PATHS = /(?<![\w./-])((?:skills|prompts|workflows|training|tools|toolbox|channels|agents)\/[A-Za-z0-9_.-]+(?:\/[A-Za-z0-9_.-]+)*\.(?:md|json|mjs|js)|context\/README\.md)\b/g;
 
 /**
  * Lines that may name a file the pack does not hold: a line that says so ("not in this pack"), or any line in a
@@ -49,7 +58,7 @@ function missingFiles(pack: BuiltPack): LintIssue[] {
   const have = new Set(pack.files.map(f => f.path));
   const issues: LintIssue[] = [];
   for (const f of pack.files) {
-    if (isScript(f.path) || f.path === "pack.json") continue;
+    if (isScript(f.path) || f.path === "pack.json" || f.source === "toolbox") continue;
     const exempt = exemptLines(f.content);
     const seen = new Set<string>();
     f.content.split("\n").forEach((line, i) => {
@@ -105,7 +114,8 @@ function generated(pack: BuiltPack): PackFile[] {
 
 function limitConflicts(pack: BuiltPack): LintIssue[] {
   const byNoun = new Map<string, { n: number; file: string; phrase: string }[]>();
-  for (const f of generated(pack)) for (const l of limits(f.content)) {
+  // toolbox.md carries the curator's own "when" lines, which are a role kit's words like its skills and prompts.
+  for (const f of generated(pack).filter(x => x.path !== "toolbox.md")) for (const l of limits(f.content)) {
     const list = byNoun.get(l.noun) ?? [];
     list.push({ n: l.n, file: f.path, phrase: l.phrase });
     byNoun.set(l.noun, list);
@@ -138,6 +148,8 @@ function paragraphs(md: string): string[] {
 function repeatedParagraphs(pack: BuiltPack): LintIssue[] {
   const seen = new Map<string, string[]>();
   for (const f of readSet(pack)) {
+    // toolbox.md is a list by task: two tasks may rightly name the same items in the same words.
+    if (f.path === "toolbox.md") continue;
     for (const p of paragraphs(f.content)) {
       if (p.length < MIN_REPEATED_PARAGRAPH) continue;
       const where = seen.get(p) ?? [];
@@ -160,7 +172,36 @@ function madeUpBusinesses(pack: BuiltPack): LintIssue[] {
   return issues;
 }
 
+/** Packs are free: the builder's own files must not carry wording left from priced jobs. */
+const PRICE_WORDING = /\bbase price\b/i;
+
+function priceWording(pack: BuiltPack): LintIssue[] {
+  return generated(pack).filter(f => PRICE_WORDING.test(f.content)).map(f => ({
+    rule: "price_wording" as const, file: f.path,
+    message: `says "${PRICE_WORDING.exec(f.content)![0]}"; packs are free, so say what one job covers instead`,
+  }));
+}
+
 /** Every problem in one pack. An empty list means the pack is clean. */
 export function lintPack(pack: BuiltPack): LintIssue[] {
-  return [...missingFiles(pack), ...limitConflicts(pack), ...repeatedParagraphs(pack), ...madeUpBusinesses(pack)];
+  return [...missingFiles(pack), ...limitConflicts(pack), ...repeatedParagraphs(pack), ...madeUpBusinesses(pack), ...priceWording(pack)];
+}
+
+/** toolbox.md may run a little past its word budget; this far past it, the list needs trimming in toolbox.json. */
+export const TOOLBOX_WORDS_WARN = Math.round(TOOLBOX_WORD_BUDGET * 1.2);
+
+/**
+ * Notes on one pack that never stop the build: its role has no curated toolbox yet (toolbox.md is then the plain
+ * list of the pack's skills, and load_agent still routes requests by keyword), toolbox.json names items the build
+ * could not ship, or toolbox.md is long. Agent packs only.
+ */
+export function lintNotes(pack: BuiltPack): LintNote[] {
+  if (pack.kind !== "agent") return [];
+  const role = pack.manifest.role ?? "(no role)";
+  if (!pack.toolbox) return [{ rule: "no_toolbox", file: "toolbox.md", message: `${role}: no toolbox.json yet, so toolbox.md is the plain list of the pack's skills` }];
+  const notes: LintNote[] = [];
+  const { summary } = pack.toolbox;
+  if (summary.left_out.length) notes.push({ rule: "toolbox_left_out", file: "toolbox.md", message: `${role}: ${summary.left_out.length} item(s) in toolbox.json could not be shipped (${summary.left_out.slice(0, 5).join(", ")}${summary.left_out.length > 5 ? ", ..." : ""})` });
+  if (summary.words > TOOLBOX_WORDS_WARN) notes.push({ rule: "toolbox_long", file: "toolbox.md", message: `${role}: toolbox.md is ${summary.words} words before its "More" list; it aims for ${TOOLBOX_WORD_BUDGET}` });
+  return notes;
 }

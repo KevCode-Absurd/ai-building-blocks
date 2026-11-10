@@ -19,6 +19,15 @@
 //                                          library.md as built for the packs
 //   dist/packs/jobs/<skill-slug>/SKILL.md  each job skill, once
 //   dist/packs/index.json                  every agent: versions, knowledge status, zips and files.json url
+//   dist/packs/toolbox/<type>/<slug>.md    each library item a toolbox names, once, as the packs carry it
+//   dist/packs/toolbox-index.json          library slug -> the job roles (and their agents) that carry it, for the
+//                                          library site to link an item to its agents
+//
+// Toolboxes: a role kit with a toolbox.json (src/modules/packs/toolbox.ts) gets a curated toolbox.md and the full text
+// of every library item it names, read here from ../catalogue-items. Nothing is searched when an agent works: the
+// curator did the matching, and this build ships the result. A role with no toolbox.json builds as before, with a
+// note. An item that cannot be shipped (unknown slug, quarantined, a made-up business in its text) is left out of the
+// packs with a note, so one bad line never stops the build.
 //
 // Inputs: personas and job types from the app, roles from src/modules/directory/data/roles.json, role kits from
 // packs/roles/<role-id>/, shared templates from packs/shared/ (the builder's fallback templates fill any gap).
@@ -34,7 +43,8 @@ import {
   RESERVED_PACK_PATHS, validateRoleKit,
 } from "../src/modules/packs/build.ts";
 import { validateMegaKit } from "../src/modules/packs/mega.ts";
-import { lintPack } from "../src/modules/packs/lint.ts";
+import { lintNotes, lintPack, MADE_UP_BUSINESSES } from "../src/modules/packs/lint.ts";
+import { checkToolbox, leadAgentOfRole, renderLibraryItem, renderToolGuide, toolboxIndex, toolboxLibraryRefs, yamlLite } from "../src/modules/packs/toolbox.ts";
 import { TOOL_FILES } from "../src/modules/packs/build.ts";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -97,6 +107,8 @@ const kits = new Map();      // role id -> { role, files } (files without role.j
 const kitFilesAsTheyStand = new Map(); // role id -> every text file of the kit, role.json included
 const kitErrors = [];
 const rolesDir = path.join(PACKS, "roles");
+/** Every role folder: the roles a toolbox may name as helpers. */
+const roleFolders = new Set(existsSync(rolesDir) ? readdirSync(rolesDir).filter(f => statSync(path.join(rolesDir, f)).isDirectory()) : []);
 for (const folder of existsSync(rolesDir) ? readdirSync(rolesDir).sort() : []) {
   const dir = path.join(rolesDir, folder);
   if (!statSync(dir).isDirectory()) continue;
@@ -112,7 +124,7 @@ for (const folder of existsSync(rolesDir) ? readdirSync(rolesDir).sort() : []) {
   const all = { ...files };
   delete files["role.json"];
   const kit = { role: roleJson, files };
-  const checked = validateRoleKit(kit);
+  const checked = validateRoleKit(kit, roleFolders);
   kitErrors.push(...checked.errors);
   warnings.push(...checked.warnings);
   if (!checked.errors.length) { kits.set(folder, kit); kitFilesAsTheyStand.set(folder, all); }
@@ -142,6 +154,80 @@ for (const folder of existsSync(megaDir) ? readdirSync(megaDir).sort() : []) {
   megaFilesAsTheyStand.set(folder, files);
 }
 
+// ---------- Toolboxes and the library items they name ----------
+// Each item is read once from ../catalogue-items and rendered once (toolbox.ts), so every pack that carries it holds
+// the same text and the browsable copy is one file: /packs/toolbox/<type>/<slug>.md.
+
+const CATALOGUE = path.resolve(ROOT, "..", "catalogue-items");
+const ITEM_GROUPS = ["general", "ecommerce", "imported", "agents", "orchestrators"];
+const toolboxes = new Map(); // role id -> the checked toolbox.json
+for (const [roleId, kit] of kits) {
+  if (!kit.files["toolbox.json"]) continue;
+  const { toolbox } = checkToolbox(JSON.parse(kit.files["toolbox.json"].replace(/^\uFEFF/, "")), roleId, Object.keys(kit.files), roleFolders);
+  if (toolbox) toolboxes.set(roleId, toolbox);
+}
+
+let itemDirs = null;
+/** The folder of a skill, prompt, workflow or library agent, by slug. */
+function itemDir(slug) {
+  if (!itemDirs) {
+    itemDirs = new Map();
+    for (const group of ITEM_GROUPS) {
+      const dir = path.join(CATALOGUE, group);
+      if (!existsSync(dir)) continue;
+      for (const name of readdirSync(dir)) if (!itemDirs.has(name)) itemDirs.set(name, path.join(dir, name));
+    }
+  }
+  return itemDirs.get(slug) ?? null;
+}
+const readIf = file => (existsSync(file) ? readFileSync(file, "utf8") : null);
+const quarantined = (() => {
+  const q = yamlLite(readIf(path.join(CATALOGUE, "quarantine.yaml")) ?? "");
+  return new Set(Array.isArray(q) ? q.map(x => (typeof x === "string" ? x : x?.slug)).filter(Boolean) : Object.keys(q ?? {}));
+})();
+
+/** One library item as packs carry it, or a plain reason it cannot be shipped. */
+function readLibraryItem(slug, type) {
+  if (quarantined.has(slug)) return { skip: "is quarantined in the library" };
+  const toolFile = path.join(CATALOGUE, "ai-tools", `${slug}.yaml`);
+  const mindDir = path.join(CATALOGUE, "minds", slug);
+  const dir = itemDir(slug);
+  // The curator's type says where to look first; an item filed under another type is still found.
+  const kinds = type === "tool" ? ["tool", "item", "mind"] : type === "mind" ? ["mind", "item", "tool"] : ["item", "mind", "tool"];
+  for (const kind of kinds) {
+    if (kind === "tool" && existsSync(toolFile)) return { item: renderToolGuide(slug, readFileSync(toolFile, "utf8")) };
+    if (kind === "mind" && existsSync(path.join(mindDir, "SKILL.md"))) {
+      const meta = yamlLite(readIf(path.join(mindDir, "mind.yaml")) ?? "");
+      return { item: renderLibraryItem({ slug, type: "mind", name: meta?.name || slug, summary: meta?.summary || "", main: readFileSync(path.join(mindDir, "SKILL.md"), "utf8") }) };
+    }
+    if (kind === "item" && dir && existsSync(path.join(dir, "SKILL.md"))) {
+      const meta = yamlLite(readIf(path.join(dir, "item.yaml")) ?? "") ?? {};
+      const actual = meta.type === "agent" || meta.type === "prompt" ? meta.type : meta.type === "workflow" || meta.type === "routine" || meta.category === "orchestrator" ? "workflow" : "skill";
+      const files = walk(dir).filter(f => !["SKILL.md", "item.yaml", "page.yaml"].includes(f));
+      return { item: renderLibraryItem({ slug, type: actual, name: meta.name || slug, summary: meta.summary || "", main: readFileSync(path.join(dir, "SKILL.md"), "utf8"), files, uses: Array.isArray(meta.uses) ? meta.uses.filter(u => typeof u === "string") : [] }) };
+    }
+  }
+  return { skip: "is not in the library (catalogue-items)" };
+}
+
+const library = {};       // slug -> the rendered item
+const libraryNotes = [];  // items left out, and why
+const typeNotes = [];
+for (const [roleId, toolbox] of toolboxes) {
+  for (const { slug, type } of toolboxLibraryRefs(toolbox)) {
+    if (!(slug in library)) {
+      const got = readLibraryItem(slug, type);
+      const madeUp = got.item ? MADE_UP_BUSINESSES.map(re => re.exec(got.item.text)).find(Boolean) : null;
+      library[slug] = got.item && !madeUp ? got.item : null;
+      if (!library[slug]) libraryNotes.push(`library item ${slug} ${got.skip ?? `uses the made-up business "${madeUp[0]}"`}, so packs leave it out (first named by packs/roles/${roleId}/toolbox.json)`);
+    }
+    const item = library[slug];
+    if (item && item.type !== type) typeNotes.push(`packs/roles/${roleId}/toolbox.json: library:${slug} is a ${item.type} in the library, not a ${type}; packs carry it as a ${item.type}`);
+  }
+}
+for (const slug of Object.keys(library)) if (!library[slug]) delete library[slug];
+warnings.push(...libraryNotes, ...typeNotes);
+
 // ---------- Capture and check tools ----------
 // The library owns them (catalogue-items/general/<skill>/, any depth); --tools=<dir> reads them from one folder
 // instead. packs/shared/tools/ holds fallbacks for files the library does not have yet. A tool found nowhere is
@@ -162,6 +248,11 @@ for (const { name } of TOOL_FILES) {
 // ---------- Personas ----------
 
 const jobTypes = listJobTypes();
+// The roles a toolbox may bring in as helpers, each with the agent load_agent returns for its role_id (the lead).
+const helpers = Object.fromEntries(listRoles().map(r => {
+  const lead = leadAgentOfRole(housePersonas(), r.id);
+  return [r.id, { name: r.name, lead: lead ? { id: lead.id, name: lead.name, title: lead.title } : null }];
+}));
 const personas = housePersonas().filter(p => p.kind === "house" && p.status === "live" && (!only || only.has(p.id)));
 if (!personas.length) fatal("no live house personas to build");
 for (const p of personas) if (RESERVED_PACK_PATHS.has(p.id)) fatal(`persona id "${p.id}" is a reserved name under /packs; rename the persona`);
@@ -169,7 +260,7 @@ for (const u of personasWithUnknownRole(personas)) warnings.push(`persona ${u.id
 const inputFor = (persona, kind, version) => {
   const role = getRole(persona.role);
   const mega = persona.mega ? megaKits.get(persona.mega.kit) ?? null : null;
-  return { persona, role, kit: role ? kits.get(role.id) ?? null : null, mega, jobTypes, templates, tools, options: { kind, ...version } };
+  return { persona, role, kit: role ? kits.get(role.id) ?? null : null, mega, jobTypes, templates, tools, library, helpers, options: { kind, ...version } };
 };
 const started = Date.now();
 
@@ -223,6 +314,9 @@ const OLD_LICENCE = /CC[ -]BY|creativecommons\.org|Creative Commons/i;
 const buildNotes = new Set();
 /** Pack linter findings (src/modules/packs/lint.ts). Any finding stops the build; --lint=report prints them and goes on. */
 const lintIssues = [];
+/** Pack linter notes (lintNotes): printed once each, never a failure. message -> rule */
+const lintNoteSet = new Map();
+let toolboxPacks = 0, toolboxItemFiles = 0;
 
 function writeAt(url, content) {
   const target = path.join(OUT, ...url.replace(/^\/packs\//, "").split("/"));
@@ -258,7 +352,9 @@ async function buildOne(persona) {
     }
     for (const n of pack.notes) buildNotes.add(n);
     for (const issue of lintPack(pack)) lintIssues.push({ pack: `${persona.id}${pack.kind === "train" ? "-train" : ""}`, ...issue });
+    for (const note of lintNotes(pack)) lintNoteSet.set(note.message, note.rule);
   }
+  if (agent.toolbox) { toolboxPacks++; toolboxItemFiles += agent.files.filter(f => f.source === "toolbox").length; }
   const [agentZip, trainZip] = await Promise.all([packZip(agent), packZip(train)]);
   writeFileSync(path.join(OUT, `${persona.id}.zip`), agentZip);
   writeFileSync(path.join(OUT, `${persona.id}-train.zip`), trainZip);
@@ -322,11 +418,23 @@ if (lintIssues.length) {
   }
 }
 writeAt("/packs/index.json",`${JSON.stringify({ schema: "ai-blocks-pack-index/1", count: index.length, packs: index }, null, 2)}\n`);
+// Which job roles (and their live agents) carry each library item. Built from every role kit, also with --only.
+const roleAgents = Object.fromEntries([...toolboxes.keys()].map(roleId => [roleId, {
+  name: getRole(roleId)?.name ?? roleId,
+  agents: housePersonas().filter(p => p.kind === "house" && p.status === "live" && p.role === roleId)
+    .sort((a, b) => a.sort - b.sort || (a.id < b.id ? -1 : 1)).map(p => ({ id: p.id, name: p.name, title: p.title })),
+}]));
+writeAt("/packs/toolbox-index.json", `${JSON.stringify(toolboxIndex(toolboxes.values(), library, roleAgents), null, 2)}\n`);
 
 const mb = n => (n / 1024 / 1024).toFixed(1);
 for (const w of [...warnings, ...buildNotes]) console.warn(`build-packs: note: ${w}`);
+// Roles with no toolbox yet come as one line, not one per role.
+const withoutToolbox = [...lintNoteSet].filter(([, rule]) => rule === "no_toolbox").map(([m]) => m.split(":")[0]).sort();
+for (const [message, rule] of lintNoteSet) if (rule !== "no_toolbox") console.warn(`build-packs: note: ${message}`);
+if (withoutToolbox.length) console.warn(`build-packs: note: ${withoutToolbox.length} role(s) have no toolbox.json yet, so their toolbox.md is the plain list of the pack's skills: ${withoutToolbox.slice(0, 12).join(", ")}${withoutToolbox.length > 12 ? `, and ${withoutToolbox.length - 12} more` : ""}`);
 const sharedCount = prefix => [...shared.keys()].filter(u => u.startsWith(prefix)).length;
 console.log(`build-packs: ${index.length} agents: ${index.length * 2} zips (${mb(zipBytes)} MB), browsable copies ${mb(browseBytes)} MB (shared: ${sharedCount("/packs/roles/")} role files, ${sharedCount("/packs/jobs/")} job skills, ${sharedCount("/packs/mega/")} mega kit files); ${fileCount} files in ${path.relative(ROOT, OUT) || "."}`);
 console.log(`build-packs: mega kits ready: ${megaKits.size}; mega agents: ${index.filter(p => p.mega).length}`);
+console.log(`build-packs: toolboxes: ${toolboxes.size} of ${kits.size} role kits; ${toolboxPacks} agents carry one (${toolboxItemFiles} item files inside their zips); ${sharedCount("/packs/toolbox/")} library items stored once under toolbox/; ${libraryNotes.length} left out`);
 console.log(`build-packs: tools: ${TOOL_FILES.map(t => `${t.name} ${toolFrom[t.name] ? `from ${toolFrom[t.name]}` : "not available"}`).join("; ")}`);
 console.log(`build-packs: role kits ready: ${kits.size} of ${listRoles().length} roles; knowledge pending for ${pending} of ${index.length} agents; ${((Date.now() - started) / 1000).toFixed(1)}s`);

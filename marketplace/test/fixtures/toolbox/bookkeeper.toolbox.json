@@ -1,0 +1,117 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "bookkeeper",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "month-end-close",
+      "task": "Close the month and explain what moved",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/month-end-close", "use": "build", "when": "When you run the close from bank feed to signed-off report" },
+        { "ref": "library:close-the-month-and-explain-every-line-that-moved", "type": "workflow", "use": "build", "when": "When the owner wants each change explained in plain words" },
+        { "ref": "library:build-a-monthly-p-and-l-and-know-your-real-margin", "type": "workflow", "use": "build", "when": "When there is no profit and loss statement yet" },
+        { "ref": "library:monthly-profit-close", "type": "agent", "use": "check", "when": "When a second pass should test the month's profit figure" },
+        { "ref": "kit:skills/bank-reconciliation", "use": "check", "when": "Before the close, to prove the bank and the books agree" }
+      ]
+    },
+    {
+      "id": "bank-reconciliation",
+      "task": "Match the bank statement to the books",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/bank-reconciliation", "use": "build", "when": "When a statement must be matched line by line" },
+        { "ref": "library:excel-table-join-reconciler", "type": "skill", "use": "build", "when": "When two exports must be joined and the gaps listed" },
+        { "ref": "kit:skills/transaction-categorisation", "use": "build", "when": "When unmatched lines still need an account code" }
+      ]
+    },
+    {
+      "id": "payout-reconciliation",
+      "task": "Match Stripe, Shopify or PayPal payouts to sales",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/payout-reconciliation", "use": "build", "when": "When a payout hides sales, fees, refunds and reserves" },
+        { "ref": "library:excel-table-join-reconciler", "type": "skill", "use": "check", "when": "When the payout report and the order export must agree" }
+      ]
+    },
+    {
+      "id": "categorise-transactions",
+      "task": "Sort and code a batch of transactions",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/transaction-categorisation", "use": "build", "when": "When a batch of bank lines needs account codes and rules" },
+        { "ref": "kit:prompts/expense-and-receipt-sort", "use": "build", "when": "When a pile of receipts must be sorted and matched" },
+        { "ref": "library:expense-report-builder", "type": "skill", "use": "build", "when": "When expenses must become a report someone can approve" }
+      ]
+    },
+    {
+      "id": "chart-of-accounts",
+      "task": "Set up or tidy the chart of accounts",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/chart-of-accounts-setup", "use": "build", "when": "When the accounts list is new, messy or too long" },
+        { "ref": "library:agency-finance-bookkeeper-controller", "type": "agent", "use": "check", "when": "When a second pass should test the set-up for control gaps" }
+      ]
+    },
+    {
+      "id": "catch-up-books",
+      "task": "Catch up books that are months behind",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/catch-up-books-plan", "use": "brief", "when": "First, to size the backlog and order the months" },
+        { "ref": "library:monthly-freelancer-books-closer", "type": "agent", "use": "build", "when": "When the client is a freelancer with one account and few rules" }
+      ]
+    },
+    {
+      "id": "supplier-bills",
+      "task": "Check supplier bills before they are paid",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:check-supplier-invoices-before-approval", "type": "workflow", "use": "check", "when": "When bills must be tested against orders and terms" },
+        { "ref": "library:agency-accounts-payable-agent", "type": "agent", "use": "build", "when": "When the payables run needs a steady weekly routine" },
+        { "ref": "library:find-duplicate-and-unused-business-subscriptions", "type": "workflow", "use": "check", "when": "When the same tool may be paid for twice" }
+      ]
+    },
+    {
+      "id": "chase-late-invoices",
+      "task": "Chase invoices that are overdue",
+      "kind": "email",
+      "items": [
+        { "ref": "library:weekly-invoice-and-cash-chaser", "type": "agent", "use": "build", "when": "When overdue invoices need a weekly list and next steps" },
+        { "ref": "library:get-a-late-invoice-paid-and-keep-the-customer", "type": "workflow", "use": "build", "when": "When one late invoice needs firm, friendly messages" }
+      ]
+    },
+    {
+      "id": "tax-set-aside",
+      "task": "Work out what to set aside for tax",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/tax-set-aside-plan", "use": "build", "when": "When the owner asks how much to keep back each month" },
+        { "ref": "library:tax-set-aside-planner", "type": "skill", "use": "build", "when": "When income is uneven and the amount must be worked out" },
+        { "ref": "library:self-assessment-tax-return-checklist", "type": "skill", "use": "check", "when": "When a UK sole trader's return is due and records must be complete" }
+      ]
+    },
+    {
+      "id": "year-end-pack",
+      "task": "Hand a clean year-end pack to the accountant",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/year-end-handover", "use": "build", "when": "When the year must be closed and handed over in order" },
+        { "ref": "kit:prompts/year-end-records-pack", "use": "build", "when": "When you list every record the accountant will ask for" },
+        { "ref": "kit:prompts/contractor-payments-summary", "use": "build", "when": "When payments to contractors must be totalled for filing" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:excel-powerpoint-number-checker", "type": "skill", "use": "check", "when": "Before hand-over, to test that every total and figure agrees" }
+  ],
+  "helpers": [
+    { "role": "management-accountant", "when": "When the owner needs margins or job costs, not only clean books" },
+    { "role": "ap-ar-specialist", "when": "When bills and collections need their own weekly run" },
+    { "role": "payroll-compensation-specialist", "when": "When pay runs or payroll taxes are part of the job" }
+  ],
+  "gaps": [
+    "No library item imports a bank export and proposes account codes from past entries",
+    "No library item covers sales tax or VAT returns for a named country"
+  ]
+}

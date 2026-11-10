@@ -25,6 +25,13 @@ test("AGENTS.md is a short entry point that starts every job by grounding it", a
   assert.ok(agents.split("\n").length <= 75, `AGENTS.md has ${agents.split("\n").length} lines`);
   assert.match(agents, /## How to start every job\n\n1\. \*\*Ground first\.\*\*/);
   assert.match(agents, /five questions at most/);
+  // The method lives in WORK-METHOD.md and the choice of tools in toolbox.md; AGENTS.md only points at both.
+  assert.match(agents, /run the job the way `WORK-METHOD\.md` says/);
+  assert.match(agents, /Find the task in `toolbox\.md` and pick what fits it, at your own discretion/);
+  assert.match(agents, /never search for a skill/);
+  assert.match(agents, /one line naming the toolbox items you used/);
+  assert.doesNotMatch(agents, /Your skills:|use the narrowest one/, "no flat skills list");
+  assert.doesNotMatch(agents, /\{\{/);
   assert.doesNotMatch(agents, /read-only/i, "access is by level, never an absolute read-only rule");
   for (const level of ["Level 1, read", "Level 2, draft", "Level 3, publish"]) assert.ok(agents.includes(level), level);
 });

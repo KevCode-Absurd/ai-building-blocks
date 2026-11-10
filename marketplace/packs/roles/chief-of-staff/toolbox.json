@@ -1,0 +1,289 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "chief-of-staff",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "decision-brief",
+      "task": "Write a one-page decision brief",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:fast-decision-evidence", "type": "workflow", "use": "brief", "when": "Before the brief, to see if the choice can be undone and how much evidence is enough" },
+        { "ref": "kit:skills/decision-brief-and-log", "use": "build", "when": "When a leader must choose and needs the question, real options, costs, risks and a recommendation" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the options on the table look alike, to get two differently shaped plans with money and dates" },
+        { "ref": "library:three-mind-debate-brief", "type": "prompt", "use": "explore", "when": "When the room agrees too fast, to hear three thinkers argue the decision" },
+        { "ref": "library:agency-chief-financial-officer", "type": "agent", "use": "build", "when": "When the choice is about money, to get cash impact, a downside case and numbers to check first" },
+        { "ref": "library:annie-duke", "type": "mind", "use": "think", "when": "When the brief hides what is unknown, to set conditions for going on or stopping" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the brief is drafted, to have a fresh reviewer read it as the leader who must decide" }
+      ]
+    },
+    {
+      "id": "board-pack",
+      "task": "Build the board pack",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/board-and-investor-update", "use": "build", "when": "When the period's numbers and notes are in and the board meets this month" },
+        { "ref": "library:prepare-a-board-decision-brief", "type": "workflow", "use": "build", "when": "When the board must decide something, to get an evidence map and the update around it" },
+        { "ref": "library:board-deck-builder", "type": "skill", "use": "explore", "when": "When the pack reads as a list, to try another order for the story, the numbers and the bad news" },
+        { "ref": "library:hard-questions-board-prep-coach", "type": "skill", "use": "check", "when": "When the pack is drafted, to get the toughest questions and drills on the weak numbers" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before it is sent, to give every figure and claim a dated source, a rewrite or a cut" },
+        { "ref": "library:ben-horowitz", "type": "mind", "use": "think", "when": "When bad news is buried, to name the problem plainly and who owns the next step" }
+      ]
+    },
+    {
+      "id": "investor-update",
+      "task": "Write the regular investor update",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/board-and-investor-update", "use": "build", "when": "When investors expect the monthly or quarterly note and past updates set the format" },
+        { "ref": "library:copilot-gtm-board-and-investor-communication", "type": "skill", "use": "explore", "when": "When you want a second framing of the story, plus the questions investors will ask" },
+        { "ref": "library:bad-news-update-writer", "type": "skill", "use": "build", "when": "When the period had a setback, to state the loss, the numbers and the next step briefly" },
+        { "ref": "library:company-story-aligner", "type": "skill", "use": "check", "when": "When staff, board and investors hear different things, to find the contradictions" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before sending, to tie each number to the books or the source it came from" }
+      ]
+    },
+    {
+      "id": "monthly-report",
+      "task": "Write the monthly business report",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/monthly-review-and-updates", "use": "build", "when": "Monthly, after the books close, with the board pack added when the board meets" },
+        { "ref": "library:recurring-kpi-report-maker", "type": "skill", "use": "build", "when": "When the same numbers are pulled each month and the report should rerun from a saved set-up" },
+        { "ref": "library:budget-variance-explainer", "type": "skill", "use": "build", "when": "When actuals miss the budget, to say what moved, why, and give a short note for leaders" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When the report is long, to put the answer, the impact in numbers and the decision on one page" },
+        { "ref": "library:vanity-metric-fixer", "type": "skill", "use": "check", "when": "When the report shows totals that always go up, to find numbers that show cause" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "Before numbers leave the workbook, to catch formula errors and broken links" }
+      ]
+    },
+    {
+      "id": "okr-set",
+      "task": "Set a quarterly OKR set for a team or company",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/okr-set-and-check-ins", "use": "build", "when": "When there is a year plan and last period's numbers and you need a short OKR set with owners" },
+        { "ref": "library:okr-goal-writer", "type": "skill", "use": "explore", "when": "When you want a second draft of objectives with dated key results to compare" },
+        { "ref": "library:north-star-metric-picker", "type": "skill", "use": "brief", "when": "When the team has no agreed main measure, to pick one and the few numbers that feed it" },
+        { "ref": "library:vanity-metric-fixer", "type": "skill", "use": "check", "when": "When key results count activity, to swap them for numbers that show a result" },
+        { "ref": "library:peter-drucker", "type": "mind", "use": "think", "when": "When goals list tasks, to ask what result the customer would notice" }
+      ]
+    },
+    {
+      "id": "okr-review",
+      "task": "Review draft goals and fix them",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/okr-set-and-check-ins", "use": "check", "when": "When a team shares draft OKRs and you must check baseline, target, owner and data source" },
+        { "ref": "library:okr-writer", "type": "skill", "use": "build", "when": "When the draft needs rewriting, with a scoring rule and a mid-quarter check routine" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When two versions of the set exist and you want a fresh reviewer to pick one" }
+      ]
+    },
+    {
+      "id": "okr-check-ins",
+      "task": "Run check-ins and the quarter-end review",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/okr-set-and-check-ins", "use": "build", "when": "When the quarter is running and you need the check-in script, scorecard and confidence calls" },
+        { "ref": "library:quarterly-strategy-reviewer", "type": "agent", "use": "check", "when": "At quarter end, to compare plan and results and say what to keep, cut or change" },
+        { "ref": "library:team-goals-one-on-ones", "type": "workflow", "use": "build", "when": "When managers must carry the goals into one-on-ones and settle disputes" }
+      ]
+    },
+    {
+      "id": "priorities",
+      "task": "Cut ten priorities to three",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/ten-priorities-to-three", "use": "build", "when": "When the list of top priorities is long and the team must pick a few and park the rest" },
+        { "ref": "library:stop-doing-list-writer", "type": "prompt", "use": "build", "when": "When cutting needs someone to say what stops, and who tells whom" },
+        { "ref": "library:hedgehog-focus-finder", "type": "skill", "use": "brief", "when": "When the business has no clear focus to rank against" },
+        { "ref": "library:jim-collins", "type": "mind", "use": "think", "when": "When nobody will drop anything, to face the facts and choose what to stop" }
+      ]
+    },
+    {
+      "id": "strategy-memo",
+      "task": "Write a strategy memo for one question",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/strategy-memo", "use": "build", "when": "When a leader must think through one question, such as a new market or a pricing change" },
+        { "ref": "library:narrative-decision-memo-writer", "type": "skill", "use": "build", "when": "When evidence is in hand and the memo must set out choices, risks and missing facts" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the memo leans one way from the start, to set two different plans side by side" },
+        { "ref": "library:six-page-narrative-memo-writer", "type": "skill", "use": "explore", "when": "When the leadership team reads in silence and wants the full argument in sentences" },
+        { "ref": "library:narrative-memo-checker", "type": "skill", "use": "check", "when": "When the memo is drafted, to score it and get the three fixes that matter" },
+        { "ref": "library:george-orwell", "type": "mind", "use": "think", "when": "When the memo hides behind vague labels, to cut padding and say the plain thing" }
+      ]
+    },
+    {
+      "id": "pre-mortem",
+      "task": "Run a pre-mortem on a big plan",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/pre-mortem", "use": "build", "when": "Before a launch, senior hire, new site or price change that is hard to undo" },
+        { "ref": "library:plan-pre-mortem-runner", "type": "skill", "use": "explore", "when": "When you want a second pass that imagines the plan failed a year on" },
+        { "ref": "library:bold-bet-downside-checker", "type": "skill", "use": "check", "when": "When the bet is large, to see what the worst case costs and if the business survives it" },
+        { "ref": "library:stress-test-a-business-plan-before-you-commit-money", "type": "workflow", "use": "check", "when": "When money is about to be committed, to get the strongest case against the plan" },
+        { "ref": "library:charlie-munger", "type": "mind", "use": "think", "when": "When the plan sounds certain, to turn it upside down and check incentives" }
+      ]
+    },
+    {
+      "id": "operating-rhythm",
+      "task": "Design or repair the operating rhythm",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/operating-rhythm-and-meetings", "use": "build", "when": "When meetings sprawl or decisions stall and each meeting needs an owner, pre-read and agenda" },
+        { "ref": "library:copilot-gtm-operating-cadence", "type": "skill", "use": "explore", "when": "When you want another rhythm to compare, with metric reviews and decision rules by stage" },
+        { "ref": "library:meeting-agenda-and-cost-planner", "type": "skill", "use": "check", "when": "When a meeting is in doubt, to cost it and decide whether to hold it at all" }
+      ]
+    },
+    {
+      "id": "weekly-leadership",
+      "task": "Prepare and follow up the weekly leadership meeting",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/weekly-leadership-rhythm", "use": "build", "when": "Every week, to prepare the day before the meeting and follow up the same day" },
+        { "ref": "library:meeting-pre-read-writer", "type": "skill", "use": "build", "when": "When the meeting needs an agenda and a pre-read drawn from existing pages" },
+        { "ref": "library:run-a-meeting-worth-holding-from-agenda-to-action-items", "type": "workflow", "use": "build", "when": "When one meeting must run from pre-read to notes with owners and dates" },
+        { "ref": "library:weekly-meeting-actions-keeper", "type": "agent", "use": "check", "when": "Each week, to check last week's open actions and set the next agenda" },
+        { "ref": "library:granola", "type": "tool", "use": "build", "when": "When the leader takes rough notes in calls and wants fuller notes with no bot present" }
+      ]
+    },
+    {
+      "id": "minutes-actions",
+      "task": "Turn meeting notes into minutes and an action list",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:meeting-minutes-writer", "type": "skill", "use": "build", "when": "When you have rough notes and need decisions, actions with owners and dates, and open questions" },
+        { "ref": "library:board-minutes-drafter", "type": "skill", "use": "build", "when": "When the meeting was a board or committee and minutes must follow a proper format" },
+        { "ref": "library:executive-action-register", "type": "skill", "use": "build", "when": "When actions sit across notes and emails, to get one list with owners, dates and sources" }
+      ]
+    },
+    {
+      "id": "cross-team-status",
+      "task": "Write the cross-team project status",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/cross-team-project-status", "use": "build", "when": "Before the leadership meeting, to turn team notes into one page of on track and blocked" },
+        { "ref": "library:status-report-writer", "type": "skill", "use": "build", "when": "When one project needs its own report with status, risks and decisions needed" },
+        { "ref": "library:agency-project-management-project-shepherd", "type": "agent", "use": "brief", "when": "When a cross-team project has no charter, owners or dependency list to report against" }
+      ]
+    },
+    {
+      "id": "leader-message",
+      "task": "Draft a message in the leader's name",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/message-in-the-leaders-name", "use": "build", "when": "When an all-team note, investor reply or partner note must go out as the leader" },
+        { "ref": "library:executive-update-drafter", "type": "skill", "use": "explore", "when": "When the same news goes to two audiences, to see it pitched each way" },
+        { "ref": "library:staff-announcement-writer", "type": "skill", "use": "build", "when": "When the note needs manager talking points, a FAQ and a rollout order" },
+        { "ref": "library:announce-a-change-of-direction-and-bring-the-team-with-you", "type": "workflow", "use": "build", "when": "When the message is a change of direction and needs a memo, a script and listening talks" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before it goes out, to have a fresh reviewer read it as the person receiving it" }
+      ]
+    },
+    {
+      "id": "quarterly-planning",
+      "task": "Run quarterly planning and review",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/quarterly-planning-and-review", "use": "build", "when": "In the last weeks of each quarter, to review, plan and set the next goals in order" },
+        { "ref": "library:quarterly-strategy-reviewer", "type": "agent", "use": "brief", "when": "When last quarter's plan and results are in, to see what to keep, cut or change" },
+        { "ref": "library:quarterly-roadmap-builder", "type": "skill", "use": "build", "when": "When requests outrun capacity, to balance build, improve and maintain with a not-doing list" },
+        { "ref": "library:peter-drucker", "type": "mind", "use": "think", "when": "When the plan adds work and removes none, to ask what to stop" }
+      ]
+    },
+    {
+      "id": "annual-plan",
+      "task": "Write the annual plan and the annual letter",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/operating-rhythm-and-meetings", "use": "brief", "when": "When the annual plan must fit the yearly cycle of reviews and planning dates" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When next year could go two ways, to compare two plans with money and dates" },
+        { "ref": "library:annual-letter-writer", "type": "skill", "use": "build", "when": "When the leader writes to the team or owners with principles and the year's honest numbers" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the letter goes out, to tie every figure to the books" }
+      ]
+    },
+    {
+      "id": "meeting-prep",
+      "task": "Prepare the leader for a board or investor meeting",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:hard-questions-board-prep-coach", "type": "skill", "use": "check", "when": "Before the meeting, to drill the toughest questions and own the weak spots" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When the leader needs a one-page brief of a long paper before walking in" },
+        { "ref": "library:talk-tension-planner", "type": "skill", "use": "build", "when": "When the leader will present, to reorder the talk so the stakes land early" }
+      ]
+    },
+    {
+      "id": "briefing-deck",
+      "task": "Turn a report into a briefing deck",
+      "kind": "other",
+      "items": [
+        { "ref": "library:pitch-arc-planner", "type": "skill", "use": "explore", "when": "Before the slides, to try an outline that builds belief and ends in a clear ask" },
+        { "ref": "library:turn-a-report-into-an-editable-briefing-deck", "type": "workflow", "use": "build", "when": "When a written report must become editable slides with text checked against the source" },
+        { "ref": "library:gamma", "type": "tool", "use": "build", "when": "When a first draft of the deck is needed fast from an outline" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the deck is shown, to check each slide's numbers against the report" }
+      ]
+    },
+    {
+      "id": "leader-time",
+      "task": "Audit the leader's time and what to hand off",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:weekly-time-audit-planner", "type": "skill", "use": "build", "when": "When last week's calendar is to hand, to count what was chosen and what was taken" },
+        { "ref": "library:founder-leadership-coach", "type": "skill", "use": "build", "when": "When the founder does too much, to find what only they should do and a delegation plan" },
+        { "ref": "library:executive-office-work-planner", "type": "skill", "use": "build", "when": "When incoming work needs a route and an owner, or the calendar needs keep or drop calls" },
+        { "ref": "library:executive-work-keeper", "type": "agent", "use": "check", "when": "When commitments pile up, to track changed promises and draft the follow-ups due" }
+      ]
+    },
+    {
+      "id": "decision-log",
+      "task": "Keep the decision log and review past decisions",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/decision-brief-and-log", "use": "build", "when": "When a decision is made and must be logged with owner, date, reasons and a review date" },
+        { "ref": "library:decision-checklist-keeper", "type": "agent", "use": "check", "when": "When a past decision's result is known, to review the process and sharpen the checklist" },
+        { "ref": "library:checklist-upkeep-planner", "type": "skill", "use": "check", "when": "When a decision went badly, to judge it by the process and not the result" }
+      ]
+    },
+    {
+      "id": "decision-rights",
+      "task": "Map who decides what and who must be consulted",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:org-structure-map", "type": "skill", "use": "build", "when": "When roles overlap, to get an org plan, a spans check and a chart of who decides what" },
+        { "ref": "library:stakeholder-map-builder", "type": "skill", "use": "brief", "when": "When a project touches many people, to map power and interest and how to talk to each" },
+        { "ref": "library:believability-weighted-decisions", "type": "skill", "use": "build", "when": "When views clash, to weigh each by track record on the topic and reach a call" }
+      ]
+    },
+    {
+      "id": "offsite",
+      "task": "Plan a leadership offsite",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:prepare-a-small-team-offsite", "type": "workflow", "use": "build", "when": "When the team will meet off site and needs a decision-first agenda and a pre-read request" },
+        { "ref": "library:meeting-agenda-and-cost-planner", "type": "skill", "use": "check", "when": "Before booking, to cost the days and check the offsite is worth holding" },
+        { "ref": "library:executive-action-register", "type": "skill", "use": "build", "when": "After the offsite, to turn the notes into one action list with owners and dates" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before anything goes to the board, investors or all staff, to catch typos and mixed terms" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a draft states a number or a market fact you cannot trace to company records" }
+  ],
+  "helpers": [
+    { "role": "fpa-analyst", "when": "When the report needs a forecast, a budget or a variance analysis built from the books" },
+    { "role": "presentation-designer", "when": "When the board pack or all-hands deck must be designed, not only outlined" },
+    { "role": "internal-communications-specialist", "when": "When a change needs a full staff communication plan across channels" },
+    { "role": "project-manager", "when": "When a cross-team project needs a plan, owners and tracking, not only a status page" },
+    { "role": "startup-fundraising-consultant", "when": "When investor updates turn into a raise and need a deck, a model and a target list" },
+    { "role": "executive-assistant", "when": "When the work is the leader's inbox, calendar, travel and meeting logistics" }
+  ],
+  "gaps": [
+    "No library item drafts in one named leader's voice from their past messages; only the kit prompt does",
+    "No library item assembles a full board pack with agenda, resolutions, committee papers and a pre-read schedule",
+    "No library item writes a company annual plan that ties goals to budget and headcount; only the annual letter is covered",
+    "No library item runs a weekly OKR check-in with confidence scores and a scorecard; only the kit skill does",
+    "No library item maps cross-team dependencies to show which team blocks which",
+    "No library item sets decision rights for a whole company; the one that exists covers product questions only",
+    "No library item prepares the monthly business review pack and its fixed agenda",
+    "No library item writes a leader's briefing note for an outside meeting from plain notes without a paid data tool",
+    "No library item makes three clearly different versions of a board update or leader message to compare",
+    "No library item keeps a dated decision register and brings each decision back on its review date"
+  ]
+}

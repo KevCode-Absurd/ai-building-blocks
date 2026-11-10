@@ -1,0 +1,269 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "pricing-strategist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "price-recommendation",
+      "task": "Recommend a price for one product, service or package",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/pricing-review-and-change", "use": "brief", "when": "When costs jump, margins slip or the owner asks whether to raise prices, to set the steps" },
+        { "ref": "kit:skills/price-recommendation", "use": "build", "when": "When you have costs, rival prices and buyer evidence and need a price with the maths shown" },
+        { "ref": "library:pricing-decision-planner", "type": "skill", "use": "explore", "when": "Before you settle, to get three test prices set against the buyer's gain and your pick" },
+        { "ref": "library:breakeven-point-calculator", "type": "skill", "use": "check", "when": "When a price is proposed, to see break-even volume and the margin of safety" },
+        { "ref": "library:rory-sutherland", "type": "mind", "use": "think", "when": "When the owner prices by cost alone and ignores how the price itself signals value" }
+      ]
+    },
+    {
+      "id": "cost-floor",
+      "task": "Build the cost floor and a margin table",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:product-margin-checker", "type": "skill", "use": "build", "when": "When you have a price and every cost and need the true margin per unit" },
+        { "ref": "library:per-order-profit-calculator", "type": "prompt", "use": "build", "when": "When costs fall per order, not per unit, and you need profit on a typical order" },
+        { "ref": "library:waterfall-price-setter", "type": "skill", "use": "build", "when": "When you need the lowest price that still works after targets and selling costs" },
+        { "ref": "library:units-and-error-margin-checker", "type": "skill", "use": "check", "when": "Before a partner checks the table, to confirm units match and rough inputs are marked" }
+      ]
+    },
+    {
+      "id": "rival-prices",
+      "task": "Put rival prices on the same basis and pick a position",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:competitor-profile-writer", "type": "skill", "use": "brief", "when": "When you have rival links and need each one's published pricing and positioning collected" },
+        { "ref": "library:price-position-planner", "type": "skill", "use": "build", "when": "When you have costs and rival offers and need a price per product and rules for rival moves" },
+        { "ref": "library:positioning-grid-builder", "type": "skill", "use": "explore", "when": "When rivals crowd one price band, to plot them and find a corner you can own" },
+        { "ref": "library:premium-positioning-mapper", "type": "skill", "use": "explore", "when": "When the client wants to charge more than rivals and needs a reason buyers accept" }
+      ]
+    },
+    {
+      "id": "buyer-evidence",
+      "task": "Gather buyer evidence on what they would pay",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/buyer-pricing-questions", "use": "build", "when": "When no buyer evidence sits behind a price and the client needs questions for calls or a survey" },
+        { "ref": "library:willingness-to-pay-survey", "type": "skill", "use": "build", "when": "When the client can survey customers and needs two questions that turn into a price range" },
+        { "ref": "library:customer-interview-questions", "type": "skill", "use": "build", "when": "When the client will talk to buyers and the draft questions lead the answer" },
+        { "ref": "library:check-a-marketing-survey-before-sending-it", "type": "workflow", "use": "check", "when": "Before the survey goes out, to find biased wording and questions nobody can answer" },
+        { "ref": "library:survey-answer-truth-checker", "type": "prompt", "use": "check", "when": "When answers are in, to mark which ones you can trust before they set a price" }
+      ]
+    },
+    {
+      "id": "tiers-and-packaging",
+      "task": "Design a good, better, best package ladder",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/tiers-and-packaging", "use": "build", "when": "When you need three tiers with a value metric, contents, prices and a margin check" },
+        { "ref": "library:three-tier-price-ladder-drafter", "type": "prompt", "use": "explore", "when": "Before you fix the tiers, to draft a ladder fast and see why the middle one should win" },
+        { "ref": "library:pricing-model-designer", "type": "skill", "use": "build", "when": "When you have price survey data and need price points and tiers built from it" },
+        { "ref": "library:bundle-tier-layout-planner", "type": "skill", "use": "build", "when": "When the tiers are product bundles and need savings wording and a test plan" },
+        { "ref": "library:price-presentation-planner", "type": "skill", "use": "check", "when": "When tiers are set, to check the order and anchor make value clear without tricks" }
+      ]
+    },
+    {
+      "id": "software-pricing-model",
+      "task": "Design a per-seat, usage or subscription pricing model",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/tiers-and-packaging", "use": "brief", "when": "Before the model, to pick the one number to charge by and what each plan holds" },
+        { "ref": "library:saas-pricing-designer", "type": "skill", "use": "build", "when": "When software needs a value metric, a tier layout and pricing tests to run" },
+        { "ref": "library:usage-pricing-designer", "type": "skill", "use": "explore", "when": "When pay-as-you-go may fit better than seats and buyers must be able to predict the bill" },
+        { "ref": "library:free-plan-designer", "type": "skill", "use": "build", "when": "When a free tier is planned and its limits must win paid users without anger" },
+        { "ref": "library:price-your-software-in-tiers-people-pick-then-test-it", "type": "workflow", "use": "build", "when": "When you want one guided run from revenue model to tiers, price page and a safe test" }
+      ]
+    },
+    {
+      "id": "discount-rules",
+      "task": "Write discount rules with reasons, caps and end dates",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/discount-and-promotion-rules", "use": "build", "when": "When discounts are given by habit and each needs a reason, cap, trade and end date" },
+        { "ref": "library:discount-policy-designer", "type": "skill", "use": "build", "when": "When a sales team quotes prices and needs a discount matrix and approval limits" },
+        { "ref": "library:deal-desk-reviewer", "type": "skill", "use": "check", "when": "When one deal asks for a deep discount, to see its margin and risky terms" },
+        { "ref": "library:discount-sanity-checker", "type": "prompt", "use": "check", "when": "When several discounts show at once, to find where they clash or stack" }
+      ]
+    },
+    {
+      "id": "discount-break-even",
+      "task": "Show the sales lift a discount needs to break even",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/discount-break-even", "use": "build", "when": "When someone proposes a discount and you need the extra sales it must win, in one minute" },
+        { "ref": "library:discount-and-price-change-checker", "type": "agent", "use": "check", "when": "When a sale or price change is planned, to find the deepest cut the margin allows" },
+        { "ref": "library:breakeven-point-calculator", "type": "skill", "use": "check", "when": "When fixed costs matter too, to see break-even volume before and after the discount" }
+      ]
+    },
+    {
+      "id": "sale-plan",
+      "task": "Plan a sale or promotion with an honest deadline",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/discount-and-promotion-rules", "use": "brief", "when": "Before planning a promotion, to set the depth, reason and end date it must keep to" },
+        { "ref": "library:promotion-idea-planner", "type": "skill", "use": "explore", "when": "When a straight discount is the default, to try a gift, bundle or pre-order instead" },
+        { "ref": "library:pick-a-sale-offer-check-profit-set-an-honest-deadline", "type": "workflow", "use": "build", "when": "When you have margins and need a sale offer with a true reason and a real deadline" },
+        { "ref": "library:sale-offer-ladder-planner", "type": "skill", "use": "build", "when": "When the sale needs a main offer, backups and a plan if the first one stalls" },
+        { "ref": "kit:prompts/price-display-check", "use": "check", "when": "Before the sale goes live, to check reference prices, savings and deadlines are honest" }
+      ]
+    },
+    {
+      "id": "price-test-plan",
+      "task": "Plan a safe price test",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/price-test-cycle", "use": "brief", "when": "When there is a pricing question worth testing and tests must run one at a time" },
+        { "ref": "kit:skills/price-test-and-readout", "use": "build", "when": "When a test needs its decision rule and stop rule set before it starts" },
+        { "ref": "library:price-test-planner", "type": "skill", "use": "explore", "when": "When you need the best price to try and three outcome cases from costs and sales data" },
+        { "ref": "library:ab-test-traffic-checker", "type": "skill", "use": "check", "when": "Before the test starts, to see if visits and orders are enough and how many weeks it needs" },
+        { "ref": "library:price-test-keeper", "type": "agent", "use": "build", "when": "When tests repeat and someone must plan each one, read the result and keep a log" },
+        { "ref": "library:set-your-price-from-what-buyers-say-then-test-it-safely", "type": "workflow", "use": "build", "when": "When there is no buyer evidence yet and the survey, price model and test should run in order" }
+      ]
+    },
+    {
+      "id": "price-test-readout",
+      "task": "Read out a finished price test",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/price-test-and-readout", "use": "build", "when": "When a test has ended and needs reading against its comparison group and its rules" },
+        { "ref": "library:experiment-result-analyst", "type": "skill", "use": "check", "when": "When you have the test numbers and need to know if the result is real" },
+        { "ref": "library:experiment-readout-desk", "type": "agent", "use": "check", "when": "When tests repeat and each needs a readiness check before and an honest verdict after" },
+        { "ref": "library:daniel-kahneman", "type": "mind", "use": "think", "when": "When the owner already believes the new price worked and reads every number that way" }
+      ]
+    },
+    {
+      "id": "past-price-change-effect",
+      "task": "Show what a past price change or discount really did",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/price-test-and-readout", "use": "build", "when": "When a past price change or promotion needs reading against a comparison group" },
+        { "ref": "library:trend-and-forecast-analyst", "type": "skill", "use": "check", "when": "When the change fell in a busy season, to separate the trend and season from the price effect" },
+        { "ref": "library:knock-on-effects-tracer", "type": "prompt", "use": "think", "when": "When sales held but something else moved, to trace what the change caused next" }
+      ]
+    },
+    {
+      "id": "price-rise-plan",
+      "task": "Plan a price rise for existing customers",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/pricing-review-and-change", "use": "build", "when": "When the rise is likely and needs review, approval and rollout steps in order" },
+        { "ref": "library:price-rise-readiness-checker", "type": "prompt", "use": "check", "when": "Before committing, to score whether the offer and buyer signals support a rise" },
+        { "ref": "library:commodity-pass-through-cost-bridge", "type": "skill", "use": "build", "when": "When input costs rose and you need how much margin a given price rise wins back" },
+        { "ref": "library:customer-churn-risk-scorer", "type": "skill", "use": "check", "when": "When some repeat buyers are already drifting and should be handled apart from the rest" },
+        { "ref": "library:knock-on-effects-tracer", "type": "prompt", "use": "think", "when": "Before rollout, to trace what the rise causes next for sales staff and key accounts" }
+      ]
+    },
+    {
+      "id": "price-rise-letter",
+      "task": "Write the price rise notice to customers",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/price-rise-letter", "use": "build", "when": "When the rise is approved and customers and key accounts each need their notice" },
+        { "ref": "library:price-rise-letter-writer", "type": "prompt", "use": "explore", "when": "When you want a second draft with a different opening to compare against the first" },
+        { "ref": "library:objection-answer-sheet-writer", "type": "skill", "use": "build", "when": "When staff will take calls about the rise and need an answer for each doubt" },
+        { "ref": "library:persuasive-claim-truth-checker", "type": "skill", "use": "check", "when": "Before sending, to check each reason given for the rise is true and not missing context" }
+      ]
+    },
+    {
+      "id": "offer-design",
+      "task": "Build a clear offer with a price and a promise",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/offer-design", "use": "build", "when": "When an offer is vague or converts weakly and needs a price and a promise the client can keep" },
+        { "ref": "library:offer-designer", "type": "skill", "use": "explore", "when": "When you want a second version with different value framing, bonuses and payment terms" },
+        { "ref": "library:guarantee-designer", "type": "skill", "use": "build", "when": "When buyers fear the risk and the offer needs a guarantee sized to what refunds cost" },
+        { "ref": "library:build-an-offer-that-sells-without-cutting-your-margin", "type": "workflow", "use": "build", "when": "When the client reaches for a discount and needs an offer that keeps margin instead" },
+        { "ref": "library:offer-checklist-reviewer", "type": "skill", "use": "check", "when": "When the offer is drafted, to score it and get the three changes that matter most" },
+        { "ref": "library:alex-hormozi", "type": "mind", "use": "think", "when": "When the offer lists features and the buyer cannot see what they get or why now" }
+      ]
+    },
+    {
+      "id": "offer-ladder",
+      "task": "Shape offers for each buyer type, entry to full service",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:buyer-identity-segment-finder", "type": "skill", "use": "brief", "when": "When you have reviews or survey answers and need buyer groups before shaping offers" },
+        { "ref": "library:niche-price-ladder-builder", "type": "skill", "use": "explore", "when": "When one offer serves everyone, to rewrite it for narrower buyers each with a price" },
+        { "ref": "library:value-ladder-planner", "type": "skill", "use": "build", "when": "When the client needs a first step, rising rungs and what moves a buyer up each one" },
+        { "ref": "library:make-your-offer-harder-to-refuse", "type": "workflow", "use": "build", "when": "When one rung is weak and needs honest limits, bonuses, a guarantee and a name" }
+      ]
+    },
+    {
+      "id": "order-value",
+      "task": "Raise order value with bundles and add-ons",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:raise-order-value-with-bundles-and-add-ons-you-can-check", "type": "workflow", "use": "build", "when": "When you have a sales export and need a shipping threshold, bundles and add-ons to check" },
+        { "ref": "library:bundle-and-quantity-break-builder", "type": "skill", "use": "explore", "when": "When one hero product sells alone, to try bundle tiers, a default and quantity breaks" },
+        { "ref": "library:upsell-and-downsell-sequencer", "type": "skill", "use": "build", "when": "When offers follow the first sale and need an order and a fallback for each no" }
+      ]
+    },
+    {
+      "id": "pricing-page-copy",
+      "task": "Write pricing page copy for hesitating visitors",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:make-visitors-who-hesitate-at-the-price-say-yes", "type": "workflow", "use": "build", "when": "When buyers stall at the price and the page needs a value case, a guarantee and honest reasons" },
+        { "ref": "library:buyer-psychology-advisor", "type": "skill", "use": "explore", "when": "Before rewriting, to get several honest angles on why visitors hesitate" },
+        { "ref": "library:price-presentation-planner", "type": "skill", "use": "build", "when": "When the page shows several plans and needs their order and anchor laid out" },
+        { "ref": "library:objection-answer-sheet-writer", "type": "skill", "use": "build", "when": "When the page needs an FAQ that answers each price doubt buyers raise" },
+        { "ref": "kit:prompts/price-display-check", "use": "check", "when": "Before the page goes live, to check savings, fees, deadlines and free claims" }
+      ]
+    },
+    {
+      "id": "price-display-check",
+      "task": "Check how prices, savings and deadlines are shown",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/price-display-check", "use": "check", "when": "Before a price page, sale, ad, email or quote goes live, to test each price claim" },
+        { "ref": "library:discount-wording-planner", "type": "skill", "use": "build", "when": "When a discount needs showing as a percent or an amount and the sale price laid out" },
+        { "ref": "library:sale-price-wording-picker", "type": "prompt", "use": "explore", "when": "When you have a full and a sale price and want the clearest ways to show the saving" },
+        { "ref": "library:discount-sanity-checker", "type": "prompt", "use": "check", "when": "When several discounts appear on one page, to find where they contradict each other" }
+      ]
+    },
+    {
+      "id": "service-and-digital-pricing",
+      "task": "Price a service, course or digital product",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/price-recommendation", "use": "build", "when": "When the service or course needs a price range with cost floor and buyer evidence" },
+        { "ref": "library:hourly-rate-calculator", "type": "skill", "use": "build", "when": "When a service firm needs an hourly, day and project rate from pay, costs and billable hours" },
+        { "ref": "library:digital-product-pricer", "type": "skill", "use": "build", "when": "When the product is a course or ebook and needs price digits, labels and launch terms" },
+        { "ref": "library:pricing-decision-planner", "type": "skill", "use": "explore", "when": "When value to the buyer is far above cost, to compare three prices against that gain" }
+      ]
+    },
+    {
+      "id": "wholesale-pricing",
+      "task": "Check wholesale and channel prices leave margin",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:wholesale-margin-checker", "type": "skill", "use": "check", "when": "When a retailer takes a cut and you need margin per unit after promos and freight" },
+        { "ref": "library:price-position-planner", "type": "skill", "use": "build", "when": "When shelf prices must sit sensibly against rivals in the same store" },
+        { "ref": "kit:skills/discount-and-promotion-rules", "use": "build", "when": "When trade discounts and retailer promotions need caps and a reason for each" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before pricing work on a live site, to record the prices shown today with their dates" },
+    { "ref": "library:units-and-error-margin-checker", "type": "skill", "use": "check", "when": "Before any price maths goes out, to check units and carry rough inputs through as ranges" }
+  ],
+  "helpers": [
+    { "role": "management-accountant", "when": "When the cost build is unclear and true cost per product or job must be worked out first" },
+    { "role": "customer-insights-researcher", "when": "When buyer evidence needs proper interviews or a survey run and analysed" },
+    { "role": "conversion-copywriter", "when": "When the pricing page or offer page needs full copy, not only the price logic" },
+    { "role": "cro-specialist", "when": "When a price test must be set up and run on a live site" },
+    { "role": "data-analyst", "when": "When reading a past price change needs sales data cleaned and compared by group" },
+    { "role": "product-marketing-manager", "when": "When new tiers change how the product is positioned and launched" }
+  ],
+  "gaps": [
+    "No library item reads the effect of a past price change against a comparison group; only the kit skill does",
+    "No library item measures promotion lift and payback from sales data, with sales pulled forward and taken from other products",
+    "No library item checks price display against consumer rules by country: reference prices, added fees, free claims and deadlines",
+    "No library item plans a price rise rollout for existing customers: who is exempt, old-price terms, timing and expected losses",
+    "No library item prices a service as day rate, retainer or fixed fee, or builds a three-option proposal",
+    "No library item sets annual against monthly plan discounts or billing terms",
+    "No library item builds a wholesale or volume price list with quantity breaks for trade buyers",
+    "No library item handles pricing across countries and currencies",
+    "No library item prices a restaurant or café menu by dish margin and popularity",
+    "No library item turns price survey answers into a too-cheap to too-expensive range chart"
+  ]
+}

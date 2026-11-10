@@ -1,0 +1,281 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "small-business-advisor",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "full-business-plan",
+      "task": "Write a full business plan from the owner's facts",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/business-plan-for-lenders-and-grants", "use": "build", "when": "When you have the owner's accounts, costs and notes and need a structured plan for each reader" },
+        { "ref": "library:business-model-canvas-builder", "type": "skill", "use": "brief", "when": "Before writing, to get the business on nine blocks and see gaps between customers and costs" },
+        { "ref": "library:market-research-report-writer", "type": "skill", "use": "build", "when": "When the market section needs sourced facts and sizing that shows its assumptions" },
+        { "ref": "library:startup-financial-model-builder", "type": "skill", "use": "build", "when": "When the plan needs three years of revenue, costs and cash with scenarios" },
+        { "ref": "library:unsupported-claim-spotter", "type": "skill", "use": "check", "when": "When the draft is done, to find every claim a lender or panel would want a source for" }
+      ]
+    },
+    {
+      "id": "one-page-plan",
+      "task": "Put the whole business on one page",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/one-page-business-plan", "use": "build", "when": "Before a full plan, or as its summary, to share with a partner, mentor or bank" },
+        { "ref": "library:business-model-canvas-builder", "type": "skill", "use": "explore", "when": "When the owner thinks in boxes, not prose, and a canvas version would be clearer" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When a long plan exists and the page must give the answer first with the numbers" },
+        { "ref": "library:peter-drucker", "type": "mind", "use": "think", "when": "When the page lists activity and never says who the customer is or what to stop" }
+      ]
+    },
+    {
+      "id": "loan-application",
+      "task": "Prepare a bank loan application and lender plan",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/loan-or-grant-application", "use": "brief", "when": "When the owner wants a loan or grant and needs the steps from eligibility to a sent file" },
+        { "ref": "kit:skills/business-plan-for-lenders-and-grants", "use": "build", "when": "When the plan must be re-cut for a lender with funding request, use of funds and repayment" },
+        { "ref": "library:cash-forecast-builder", "type": "skill", "use": "build", "when": "When the lender asks how the next 90 days of cash look and what the risks are" },
+        { "ref": "library:bad-year-break-even-tester", "type": "skill", "use": "check", "when": "Before applying, to test whether the loan can still be repaid in a bad year" },
+        { "ref": "library:agency-loan-officer-assistant", "type": "agent", "use": "check", "when": "Before the file goes in, to list missing documents, expiry dates and open questions" }
+      ]
+    },
+    {
+      "id": "grant-application",
+      "task": "Prepare a small business grant application",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/loan-or-grant-application", "use": "brief", "when": "When a council, government or foundation grant is open and the steps need setting out" },
+        { "ref": "library:grant-and-bid-response-writer", "type": "skill", "use": "brief", "when": "Before spending time on it, to get a go or no-go call on whether the grant fits" },
+        { "ref": "library:agency-grant-writer", "type": "agent", "use": "build", "when": "When the funder's rules are known and the answers must match them point by point" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before sending, to tie every fact in the application to a dated source" },
+        { "ref": "library:prepare-a-grant-spending-evidence-pack", "type": "workflow", "use": "build", "when": "After the award, when the funder wants spending reconciled with evidence" }
+      ]
+    },
+    {
+      "id": "plan-send-ready-check",
+      "task": "Check a draft plan before it goes to a bank or panel",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/business-plan-send-ready-check", "use": "check", "when": "When a draft plan is about to go to a bank, a grant panel or a partner" },
+        { "ref": "library:stress-test-a-business-plan-before-you-commit-money", "type": "workflow", "use": "check", "when": "When money is about to be committed, to get the strongest case against the plan" },
+        { "ref": "library:plan-stress-tester", "type": "skill", "use": "check", "when": "Before a lender meeting, to face tough questions with a suggested answer to each" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When you are too close to the draft and need it read fresh, as the lender would" },
+        { "ref": "library:nassim-taleb", "type": "mind", "use": "think", "when": "When the plan has one outcome that could ruin the owner and no answer to it" }
+      ]
+    },
+    {
+      "id": "market-and-rivals",
+      "task": "Research the market and rivals for the plan",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:size-a-market-and-separate-facts-from-guesses", "type": "workflow", "use": "build", "when": "When the plan needs a market size built from the bottom up with guesses marked" },
+        { "ref": "library:competitor-product-analyst", "type": "skill", "use": "build", "when": "When you have facts on a rival and need their prices and strengths set against the client's" },
+        { "ref": "library:market-research-report-writer", "type": "skill", "use": "build", "when": "When the research must stand alone as a sourced report a lender can check" }
+      ]
+    },
+    {
+      "id": "startup-costs-and-break-even",
+      "task": "Work out start-up costs and break-even",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/startup-costs-and-break-even", "use": "build", "when": "Before committing money to a new business, site or product line, to see cost to open" },
+        { "ref": "library:breakeven-point-calculator", "type": "skill", "use": "check", "when": "When prices and costs are set, to see break-even volume and the margin of safety" },
+        { "ref": "library:bad-year-break-even-tester", "type": "skill", "use": "check", "when": "When break-even looks comfortable, to test how big a loss a bad first year brings" },
+        { "ref": "library:noah-kagan", "type": "mind", "use": "think", "when": "When the owner plans to spend a lot before anyone has paid for anything" }
+      ]
+    },
+    {
+      "id": "financial-projections",
+      "task": "Build the plan's financial projections",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:startup-financial-model-builder", "type": "skill", "use": "build", "when": "When a new business needs revenue, costs and cash for three years with scenarios" },
+        { "ref": "library:budget-and-forecast-builder", "type": "skill", "use": "build", "when": "When the business has trading history and the forecast should start from past numbers" },
+        { "ref": "library:assumption-stress-test", "type": "skill", "use": "check", "when": "When the model is built, to find which assumptions break first and what to test" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "Before the workbook is shared, to catch formula errors and totals that do not tie" }
+      ]
+    },
+    {
+      "id": "idea-check",
+      "task": "Test a business idea before spending on it",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:idea-to-business-guide", "type": "skill", "use": "build", "when": "When there is only an idea and it needs a tested customer, a position and a price" },
+        { "ref": "library:first-customer-group-picker", "type": "skill", "use": "explore", "when": "When several kinds of buyer might want it, to compare groups and pick one to talk to" },
+        { "ref": "library:idea-validation-analyst", "type": "agent", "use": "check", "when": "When the riskiest guess needs a test planned and its result read honestly" },
+        { "ref": "library:noah-kagan", "type": "mind", "use": "think", "when": "When the owner keeps planning and has not yet asked one person to pay" }
+      ]
+    },
+    {
+      "id": "business-setup",
+      "task": "Build a dated set-up checklist for a new business",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/new-business-first-30-days", "use": "brief", "when": "When someone is starting or has just started and wants set-up done in order" },
+        { "ref": "kit:skills/business-setup-and-first-hire-checklist", "use": "build", "when": "When you need each set-up step with its official page, owner and deadline" },
+        { "ref": "library:business-structure-chooser", "type": "skill", "use": "explore", "when": "When the structure is undecided, to compare options on risk, tax and paperwork" },
+        { "ref": "library:business-insurance-needs-checker", "type": "skill", "use": "check", "when": "When nobody has listed the risks, the usual cover and what may be required" },
+        { "ref": "library:income-floor-calculator", "type": "skill", "use": "brief", "when": "When the owner is leaving a job and needs the monthly income they must reach first" }
+      ]
+    },
+    {
+      "id": "first-hire",
+      "task": "Plan the first employee, from cost to start date",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/business-setup-and-first-hire-checklist", "use": "build", "when": "When the first hire is planned and each legal step needs an owner and a deadline" },
+        { "ref": "library:employee-or-contractor-checker", "type": "skill", "use": "check", "when": "Before the offer, to flag whether the work looks like employment or contracting" },
+        { "ref": "library:first-employee-payroll-setup-planner", "type": "skill", "use": "build", "when": "When a start date is set and payroll needs a dated set-up plan and questions" },
+        { "ref": "library:problem-first-job-description-writer", "type": "prompt", "use": "build", "when": "When the owner knows the problem to fix but has no job description yet" }
+      ]
+    },
+    {
+      "id": "freelance-rate",
+      "task": "Work out a day rate and hourly rate",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/freelance-rate-and-service-packages", "use": "build", "when": "When a freelancer needs minimum and target rates from income, costs and billable hours" },
+        { "ref": "library:hourly-rate-calculator", "type": "skill", "use": "check", "when": "When you want the rate cross-checked from target pay, costs and billable hours" },
+        { "ref": "library:client-fee-and-cap-setter", "type": "skill", "use": "build", "when": "When the rate is known and you need a fee, billing terms and a cap on one client" },
+        { "ref": "library:quarterly-client-rate-reviewer", "type": "agent", "use": "check", "when": "When the freelancer has traded a while, to see each client's real rate per hour" }
+      ]
+    },
+    {
+      "id": "service-packages",
+      "task": "Shape services into three packages with clear limits",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/freelance-rate-and-service-packages", "use": "build", "when": "When services are sold by the hour and need three packages with scope and limits" },
+        { "ref": "library:three-tier-price-ladder-drafter", "type": "prompt", "use": "explore", "when": "Before you fix the packages, to draft a three-tier ladder and compare" },
+        { "ref": "library:offer-designer", "type": "skill", "use": "explore", "when": "When a package needs a name, value framing, a guarantee and payment terms" },
+        { "ref": "library:offer-checklist-reviewer", "type": "skill", "use": "check", "when": "When the packages are drafted, to score each and get the three changes that matter" }
+      ]
+    },
+    {
+      "id": "project-quote",
+      "task": "Write a quote or proposal for a client project",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:prepare-your-first-freelance-project-quote", "type": "workflow", "use": "build", "when": "When a brief arrives and the freelancer needs scope, price assumptions and terms" },
+        { "ref": "library:three-tier-price-ladder-drafter", "type": "prompt", "use": "explore", "when": "When one price feels like take it or leave it, to offer three options instead" },
+        { "ref": "library:contract-and-proposal-drafter", "type": "skill", "use": "build", "when": "When the quote must become a proposal or statement of work with the right clauses" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to have the quote read fresh as the client would read it" },
+        { "ref": "library:prepare-a-client-scope-change-brief", "type": "workflow", "use": "build", "when": "When the client later asks for more and the change must be priced against the scope" }
+      ]
+    },
+    {
+      "id": "contract-checklist",
+      "task": "Build a contract checklist and lawyer questions",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/contract-checklist-and-lawyer-questions", "use": "build", "when": "Before a first client contract goes out, terms change, or the client's paper is signed" },
+        { "ref": "library:contract-risk-reviewer", "type": "skill", "use": "check", "when": "When the client sends their own contract, to rate key clauses and duties by risk" },
+        { "ref": "library:contract-and-proposal-drafter", "type": "skill", "use": "build", "when": "When there is no contract at all and a first draft is needed for the lawyer to review" }
+      ]
+    },
+    {
+      "id": "client-process",
+      "task": "Set up the client process and message templates",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/client-process-message-templates", "use": "build", "when": "When clients get lost between first call and paid invoice, or every message is written fresh" },
+        { "ref": "library:new-inquiry-reply-drafter", "type": "skill", "use": "build", "when": "When new enquiries arrive and each needs qualifying and a first reply" },
+        { "ref": "library:call-follow-up-drafter", "type": "skill", "use": "build", "when": "After a first call, to turn notes into a follow-up email and next steps" },
+        { "ref": "library:prepare-a-clear-client-project-kickoff", "type": "workflow", "use": "build", "when": "When a job is won and needs a one-page brief and a clear start" },
+        { "ref": "library:client-project-communication-plan", "type": "skill", "use": "build", "when": "When clients message on every channel and need set channels and update dates" },
+        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before a template is saved, to score it and cut what the client will not read" }
+      ]
+    },
+    {
+      "id": "invoicing-and-late-payment",
+      "task": "Invoice clients and chase late payment",
+      "kind": "email",
+      "items": [
+        { "ref": "library:invoice-maker", "type": "skill", "use": "build", "when": "When work is done and an invoice needs the right details with totals added" },
+        { "ref": "library:invoice-totals-checker", "type": "skill", "use": "check", "when": "Before sending, to recalculate every line and find missing fields" },
+        { "ref": "library:get-a-late-invoice-paid-and-keep-the-customer", "type": "workflow", "use": "explore", "when": "When an invoice is late, to get a warm reminder and a firm follow-up to choose from" },
+        { "ref": "library:weekly-invoice-and-cash-chaser", "type": "agent", "use": "build", "when": "When several invoices are open and someone must decide who to chase each week" }
+      ]
+    },
+    {
+      "id": "cash-forecast",
+      "task": "Build a 13-week cash forecast",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/cash-flow-forecast-and-profit-allocation", "use": "build", "when": "When you have bank statements, invoices and bills and need the lowest week and days of cash" },
+        { "ref": "library:prepare-a-seasonal-cash-buffer", "type": "workflow", "use": "build", "when": "When sales are seasonal and the owner needs a downside case and a buffer" },
+        { "ref": "library:treasury-forecast-backtest-checker", "type": "skill", "use": "check", "when": "When an earlier forecast exists, to see how far it missed what really happened" },
+        { "ref": "library:lean-year-cash-rules-writer", "type": "skill", "use": "build", "when": "When a lean stretch is likely and the owner needs a buffer rule and who to ask early" }
+      ]
+    },
+    {
+      "id": "profit-allocation",
+      "task": "Set up profit-first allocation and the routine",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/cash-flow-forecast-and-profit-allocation", "use": "build", "when": "When sales are steady but little is left and the owner needs target percentages by account" },
+        { "ref": "kit:workflows/allocation-days-and-quarterly-check", "use": "build", "when": "When the percentages are set and the twice-monthly routine and quarterly check must run" },
+        { "ref": "library:tax-set-aside-planner", "type": "skill", "use": "build", "when": "When the accountant has quoted a tax share and each payment needs a rule and a place" },
+        { "ref": "library:monthly-freelancer-books-closer", "type": "agent", "use": "check", "when": "Each month, to sort transactions and check them against the allocation targets" },
+        { "ref": "library:cash-versus-earnings-checker", "type": "skill", "use": "check", "when": "When profit on paper and cash in the bank disagree and the owner asks why" }
+      ]
+    },
+    {
+      "id": "adviser-triage",
+      "task": "Sort worries into accountant, lawyer or do it yourself",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/accountant-or-lawyer-triage", "use": "build", "when": "When an owner has a list of worries and needs to know which professional to ask and how" },
+        { "ref": "library:agency-finance-tax-strategist", "type": "agent", "use": "build", "when": "When one decision has tax effects and the owner needs facts and questions for a tax pro" },
+        { "ref": "library:business-structure-chooser", "type": "skill", "use": "brief", "when": "When the worry is the structure itself and options need comparing before the meeting" },
+        { "ref": "library:contract-risk-reviewer", "type": "skill", "use": "brief", "when": "When the worry is a contract and the lawyer needs the risky clauses listed first" }
+      ]
+    },
+    {
+      "id": "first-customers",
+      "task": "Plan how to win the first customers",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:first-customers-by-hand-planner", "type": "skill", "use": "build", "when": "When the business is new and the first customers must be won one by one" },
+        { "ref": "library:one-page-marketing-plan-builder", "type": "skill", "use": "build", "when": "When the plan needs a simple marketing page from stranger to loyal customer" },
+        { "ref": "library:first-customer-group-picker", "type": "skill", "use": "explore", "when": "When the owner targets everyone, to compare groups and choose where to start" }
+      ]
+    },
+    {
+      "id": "second-site-check",
+      "task": "Check the business is ready for a second site",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:second-location-check", "type": "skill", "use": "check", "when": "Before signing a second lease, to see if the first site runs without the owner" },
+        { "ref": "kit:prompts/startup-costs-and-break-even", "use": "build", "when": "When the second site needs its own opening costs and break-even worked out" },
+        { "ref": "library:ray-kroc", "type": "mind", "use": "think", "when": "When the first site works only because the owner is there every day" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:unsupported-claim-spotter", "type": "skill", "use": "check", "when": "Before anything goes to a bank, panel or client, to find claims with no source" },
+    { "ref": "library:data-jargon-translator", "type": "skill", "use": "check", "when": "Before the owner reads it, to find finance and legal jargon and put it in plain words" }
+  ],
+  "helpers": [
+    { "role": "bookkeeper", "when": "When the books are behind and the plan or forecast has no clean numbers to start from" },
+    { "role": "fractional-cfo", "when": "When the owner faces debt, a lender problem or a big money decision beyond set-up" },
+    { "role": "pricing-strategist", "when": "When rates and packages need buyer evidence, rival prices or a price test" },
+    { "role": "hr-specialist", "when": "When the first hire needs a contract, policies or a fair hiring process" },
+    { "role": "fundraising-specialist", "when": "When the grant is large or competitive and needs a full funder-matched bid" },
+    { "role": "local-marketing-specialist", "when": "When the plan needs a real local marketing plan, not one page" }
+  ],
+  "gaps": [
+    "No library item writes a full small business plan for a lender or grant panel; the nearest items plan venture-style startups",
+    "No library item writes the lender section: funding request, use of funds, security offered and ability to repay",
+    "No library item finds or checks eligibility for small business grants; grant items serve nonprofits and research",
+    "No library item lists start-up costs or builds an opening budget; only break-even is covered",
+    "No library item builds a country-specific business registration checklist linked to official pages",
+    "No library item covers the first hire beyond payroll: contract, right to work checks, pension and employer insurance",
+    "No library item sets profit-first target percentages, an account structure or an allocation day worksheet",
+    "No library item builds a 13-week cash forecast by week; the cash forecast item works in 30, 60 and 90 day blocks",
+    "No library item maps a service firm's client process from enquiry to paid invoice or writes the full set of client messages",
+    "No library item offers different tones of client message to compare, such as warm, brief and formal",
+    "No library item lists what a first freelance client contract must contain; contract items review an existing one",
+    "No library item writes a rate rise notice for a freelancer's existing clients",
+    "No library item prepares an owner for a meeting with a bank manager"
+  ]
+}

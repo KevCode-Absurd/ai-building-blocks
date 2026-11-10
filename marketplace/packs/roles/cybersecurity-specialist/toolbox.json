@@ -1,0 +1,265 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "cybersecurity-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "health-check",
+      "task": "Run a security health check and build the risk register",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/security-health-check-and-risk-register", "use": "build", "when": "When an owner answers a question set and needs gaps scored in plain words and a register" },
+        { "ref": "library:security-safeguards-planner", "type": "skill", "use": "build", "when": "When you need to know which basic safeguards come first for this size of business" },
+        { "ref": "library:cybersecurity-profile-builder", "type": "skill", "use": "build", "when": "When a customer or insurer expects the check set out against a known framework" },
+        { "ref": "library:bruce-schneier", "type": "mind", "use": "think", "when": "When a fix is proposed, to ask what it protects, what it costs and what it still assumes" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the report is drafted, to have a fresh reviewer read it as a non-technical owner" }
+      ]
+    },
+    {
+      "id": "plan-90",
+      "task": "Write the first 90-day security plan",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/first-90-days-security-plan", "use": "build", "when": "For a new client with no plan, after a near miss, or when an insurer asks what is in place" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the budget is tight, to compare a bare-minimum plan with a fuller one, with money and dates" },
+        { "ref": "library:security-safeguards-planner", "type": "skill", "use": "brief", "when": "When the order of fixes is unclear, to see which safeguards to do first" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before handing over, to check the owner can see what to do each week and why" }
+      ]
+    },
+    {
+      "id": "staff-rules",
+      "task": "Write staff security rules on one page",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/staff-security-rules-one-page", "use": "build", "when": "When every member of staff needs one page of plain rules for the handbook or the wall" },
+        { "ref": "library:sign-in-policy-drafter", "type": "prompt", "use": "build", "when": "When the rules must cover passwords and second-step sign-in for staff and customers" },
+        { "ref": "library:team-ai-use-policy-drafter", "type": "skill", "use": "build", "when": "When staff paste work into AI tools and need rules on what may and may not go in" },
+        { "ref": "library:remote-work-policy-writer", "type": "skill", "use": "build", "when": "When people work from home or on their own devices and the rules must say how" },
+        { "ref": "library:make-a-new-policy-understandable-to-staff", "type": "workflow", "use": "build", "when": "When the rules are approved and need a plain explanation and a staff announcement" },
+        { "ref": "library:don-norman", "type": "mind", "use": "think", "when": "When staff ignore a rule, to ask what makes it hard to follow and fix that" }
+      ]
+    },
+    {
+      "id": "phishing-session",
+      "task": "Build a phishing and payment-fraud awareness session",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/phishing-awareness-session", "use": "build", "when": "When a small team needs a 30-minute session with made-up examples from their own sector" },
+        { "ref": "library:staff-phishing-rules-briefer", "type": "skill", "use": "explore", "when": "When 30 minutes is too long, to try a one-page rule sheet with a ten-minute drill" },
+        { "ref": "library:training-handout-writer", "type": "prompt", "use": "build", "when": "When people need one page to keep at their desk a month after the session" },
+        { "ref": "library:recall-quiz-writer", "type": "prompt", "use": "check", "when": "A week later, to test what stuck with a short quiz at three levels" },
+        { "ref": "library:review-staff-adoption-of-a-policy-change", "type": "workflow", "use": "check", "when": "Some weeks later, to see if staff follow the call-back rule and what gets in the way" }
+      ]
+    },
+    {
+      "id": "suspicious-message",
+      "task": "Check a suspicious message or payment request",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/suspicious-message-or-payment-request-check", "use": "build", "when": "When someone got a message asking for a payment, a bank change, a code, a sign-in or a file" },
+        { "ref": "library:security-incident-triager", "type": "skill", "use": "build", "when": "When someone already clicked or replied, to set severity, who to tell and what to keep" },
+        { "ref": "library:suspicious-money-trail-reviewer", "type": "skill", "use": "check", "when": "When money may have moved, to trace the flow in the records and list what to check next" },
+        { "ref": "library:troy-hunt", "type": "mind", "use": "think", "when": "When a breach notice or scare arrives, to separate what is known from what is feared" }
+      ]
+    },
+    {
+      "id": "incident-plan",
+      "task": "Write the what-to-do-if-hit plan",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/incident-response-plan-and-exercise", "use": "build", "when": "When the business needs one page on who decides, who to call, first steps and what to save" },
+        { "ref": "library:incident-runbook-writer", "type": "skill", "use": "build", "when": "When one system matters most and needs its own steps, severity levels and who to tell" },
+        { "ref": "library:backup-and-recovery-planner", "type": "skill", "use": "brief", "when": "When the plan must say how much loss is bearable and how systems come back" },
+        { "ref": "library:agency-security-incident-responder", "type": "agent", "use": "check", "when": "When the plan is drafted, to test its contain and recover steps against a likely attack" },
+        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When the plan assumes calm people, to check handoffs, warnings and human mistakes" }
+      ]
+    },
+    {
+      "id": "tabletop",
+      "task": "Rehearse the plan with a tabletop exercise",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/tabletop-exercise-script", "use": "build", "when": "When there is a plan or a draft and the team can give under an hour, with no live system touched" },
+        { "ref": "kit:skills/incident-response-plan-and-exercise", "use": "brief", "when": "Before the exercise, to have the plan the team will be tested against" },
+        { "ref": "library:compound-scenario-modeler", "type": "skill", "use": "explore", "when": "When one scenario is too easy, to model several things going wrong at once" },
+        { "ref": "library:turn-an-incident-into-a-safer-procedure", "type": "workflow", "use": "check", "when": "After the exercise, to turn what went wrong into changes with owners and dates" }
+      ]
+    },
+    {
+      "id": "live-incident",
+      "task": "Handle a live incident and tell the people affected",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:security-incident-triager", "type": "skill", "use": "build", "when": "In the first minutes, to set severity, who to tell, what to preserve and the next steps" },
+        { "ref": "library:agency-engineering-incident-response-commander", "type": "agent", "use": "build", "when": "When several people are working the incident and need roles, evidence rules and recovery checks" },
+        { "ref": "library:bad-news-update-writer", "type": "skill", "use": "build", "when": "When customers or staff must be told, to state what happened, the facts and the next step" },
+        { "ref": "library:mary-barra", "type": "mind", "use": "think", "when": "When writing to those affected, to start with them, state known facts and name owners" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before any notice goes out, to check each statement against what the logs really show" }
+      ]
+    },
+    {
+      "id": "store-lockdown",
+      "task": "Lock down a store's logins, staff access and settings",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/store-lockdown-and-card-testing", "use": "build", "when": "When a small online store needs its admin, staff access and checkout tightened" },
+        { "ref": "library:store-security-checkup", "type": "skill", "use": "check", "when": "When you need a ranked fix list and a score from the admin team and app list" },
+        { "ref": "library:lock-down-your-store-logins-and-staff-against-takeover", "type": "workflow", "use": "build", "when": "When you want one run to a fix list, a sign-in policy and a phishing rule sheet" },
+        { "ref": "library:store-sign-in-security-checker", "type": "skill", "use": "check", "when": "When sign-in is the worry, to rank the gaps and set a password and second-step policy" },
+        { "ref": "library:payments-and-checkout-settings-checker", "type": "skill", "use": "check", "when": "When payment and checkout settings may be loose, to score them and rank the fixes" }
+      ]
+    },
+    {
+      "id": "card-testing",
+      "task": "Stop a card-testing attack in the first hour",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/card-testing-first-hour", "use": "build", "when": "When a store shows many small orders, declined payments or odd names, often at night" },
+        { "ref": "library:stop-fake-orders-card-testing-and-bot-abuse", "type": "workflow", "use": "build", "when": "After the first hour, to set fraud rules, a review routine and a bot access plan" },
+        { "ref": "library:bot-and-ai-agent-access-planner", "type": "skill", "use": "build", "when": "When bots drive the attack, to decide which to allow, check or block at login and checkout" },
+        { "ref": "library:fraud-review-queue-builder", "type": "skill", "use": "check", "when": "When orders from the attack window must be reviewed by risk level before shipping" }
+      ]
+    },
+    {
+      "id": "fraud-rules",
+      "task": "Set fraud rules and a review routine for orders",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/store-lockdown-and-card-testing", "use": "brief", "when": "When fake orders are part of a wider store lockdown and the rules must fit it" },
+        { "ref": "library:fraud-rules-setter", "type": "skill", "use": "build", "when": "When you have order volume and payment set-up and need rules and a chargeback watch line" },
+        { "ref": "library:risky-order-rule-writer", "type": "prompt", "use": "explore", "when": "When you want a second set of rules by risk level to compare with the first" },
+        { "ref": "library:chargeback-evidence-gatherer", "type": "skill", "use": "build", "when": "When a dispute arrives, to see what proof to collect or whether to accept it" },
+        { "ref": "library:order-cancellation-reason-reader", "type": "skill", "use": "check", "when": "After a month, to see if fraud cancellations fell and good orders were not blocked" }
+      ]
+    },
+    {
+      "id": "apps-scripts",
+      "task": "Review risky apps and scripts on a store or site",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:cut-risky-apps-and-scripts-from-your-store", "type": "workflow", "use": "build", "when": "When the app list has grown, to mark each keep, swap or cut and rank the scripts left" },
+        { "ref": "library:store-script-and-app-risk-auditor", "type": "skill", "use": "check", "when": "When you need each script and package scored for risk and what to remove" },
+        { "ref": "library:vendor-risk-reviewer", "type": "skill", "use": "check", "when": "When one app handles customer data, to tier its risk and ask it the right questions" }
+      ]
+    },
+    {
+      "id": "website-check",
+      "task": "Check a website for basic security gaps",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:website-security-check", "type": "skill", "use": "build", "when": "When the owner wants a baseline check of HTTPS, headers and secrets with ranked fixes" },
+        { "ref": "library:exposed-secrets-finder", "type": "skill", "use": "check", "when": "When keys or private files may be readable by visitors on a site the client owns" },
+        { "ref": "library:find-leaked-keys-move-them-to-safe-storage-and-check-the-live-site", "type": "workflow", "use": "build", "when": "When a key has leaked, to find the rest, rotate them and check the live site" },
+        { "ref": "library:vulnerability-scan-planner", "type": "skill", "use": "check", "when": "When the site is a custom app the client owns, to check for common web flaws" },
+        { "ref": "library:wordpress-health-fixer", "type": "skill", "use": "build", "when": "When the site is WordPress, to turn its health report into a backup-first fix plan" }
+      ]
+    },
+    {
+      "id": "email-domain",
+      "task": "Protect the email domain from spoofing",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:email-setup-health-checker", "type": "skill", "use": "check", "when": "When you have the DNS records, to score the set-up and get the exact fixes" },
+        { "ref": "library:inbox-delivery-fixer", "type": "skill", "use": "build", "when": "When sender records are missing, to set them up without sending real mail to spam" },
+        { "ref": "library:domain-and-certificate-watch-checker", "type": "skill", "use": "check", "when": "When domains have piled up, to flag leftover records and weak registrar access" }
+      ]
+    },
+    {
+      "id": "backups",
+      "task": "Plan backups and rehearse a restore",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:backup-and-recovery-planner", "type": "skill", "use": "build", "when": "When nobody knows how much data loss is bearable or how a restore would run" },
+        { "ref": "library:build-a-backup-recovery-rehearsal", "type": "workflow", "use": "build", "when": "When backups exist but were never tested, to plan a safe restore test and an evidence log" },
+        { "ref": "library:recovery-rehearsal-evidence-assistant", "type": "agent", "use": "check", "when": "After the test, to compare the evidence with the recovery targets and assign open gaps" }
+      ]
+    },
+    {
+      "id": "access-and-leavers",
+      "task": "Review access and remove leavers",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:staff-access-reviewer", "type": "skill", "use": "check", "when": "When accounts have piled up, to find old logins, inactive users and too much access" },
+        { "ref": "library:offboarding-plan-builder", "type": "skill", "use": "build", "when": "When someone leaves, to get a checklist that covers accounts, devices and handover" },
+        { "ref": "library:review-employee-data-access-before-a-change", "type": "workflow", "use": "check", "when": "Before a role or system change, to review who can reach staff or customer data" },
+        { "ref": "library:microsoft-365-admin-helper", "type": "skill", "use": "build", "when": "When the office runs on Microsoft 365 and the fixes are user, mail and security settings" }
+      ]
+    },
+    {
+      "id": "risk-register-notes",
+      "task": "Turn notes into a risk register",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/risk-register-from-notes", "use": "build", "when": "When you have notes from a meeting, an audit, an insurer's form or an incident" },
+        { "ref": "library:threat-modeler", "type": "skill", "use": "brief", "when": "When the notes describe a system, to find threats, rate them and add a way to reduce each" },
+        { "ref": "kit:skills/security-health-check-and-risk-register", "use": "check", "when": "When the register must use the same scoring words the owner agreed in the health check" }
+      ]
+    },
+    {
+      "id": "quarterly-review",
+      "task": "Run the quarterly security review",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/quarterly-security-review", "use": "build", "when": "Every three months, with about an hour of the owner's time and a few exports" },
+        { "ref": "library:quarterly-store-security-keeper", "type": "agent", "use": "check", "when": "When the client is a store, to score against last quarter and pick the fixes to do first" },
+        { "ref": "library:staff-access-reviewer", "type": "skill", "use": "check", "when": "Each quarter, to recheck who still has access and who should not" }
+      ]
+    },
+    {
+      "id": "questionnaire",
+      "task": "Answer an insurer's or customer's security questionnaire",
+      "kind": "other",
+      "items": [
+        { "ref": "library:prepare-a-vendor-security-questionnaire-response", "type": "workflow", "use": "build", "when": "When a questionnaire arrives, to draft sourced answers and an evidence index" },
+        { "ref": "library:rfp-response-builder", "type": "skill", "use": "brief", "when": "When the form is long, to sort the must-haves and see where the business falls short" },
+        { "ref": "library:business-insurance-needs-checker", "type": "skill", "use": "brief", "when": "When the form is for cover, to list the risks, the usual cover and questions for the broker" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before sending, to tie every yes to a setting, a policy or a record, or change the answer" }
+      ]
+    },
+    {
+      "id": "framework-check",
+      "task": "Check the business against a security standard",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:uk-cyber-essentials-checker", "type": "skill", "use": "check", "when": "When the client wants UK Cyber Essentials, to find gaps before applying" },
+        { "ref": "library:cybersecurity-profile-builder", "type": "skill", "use": "build", "when": "When a customer asks for a NIST CSF view of where the business is and where it is going" },
+        { "ref": "library:card-payment-security-checker", "type": "skill", "use": "check", "when": "When the business takes cards, to find its PCI level and the right self-check form" },
+        { "ref": "library:eu-network-security-check", "type": "skill", "use": "check", "when": "When the client may fall under the EU network security rules and their reporting deadlines" }
+      ]
+    },
+    {
+      "id": "new-tool-vetting",
+      "task": "Vet a new tool or vendor before staff use it",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:vendor-risk-reviewer", "type": "skill", "use": "build", "when": "When a tool will hold company or customer data, to tier the risk and question the vendor" },
+        { "ref": "library:ai-vendor-terms-checker", "type": "skill", "use": "check", "when": "When the tool is an AI service, to flag data-training, liability and model-change terms" },
+        { "ref": "library:bruce-schneier", "type": "mind", "use": "think", "when": "When the tool is sold as making things safer, to ask what it changes and what it costs" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any plan, rule sheet or notice goes out, to catch typos and names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "it-administrator", "when": "When the fixes are device, account, licence or network settings someone must apply" },
+    { "role": "compliance-specialist", "when": "When the job needs privacy records, a breach duty check or audit evidence" },
+    { "role": "application-security-engineer", "when": "When the client builds its own app and needs code review or a threat model" },
+    { "role": "shopify-specialist", "when": "When store fixes mean changing theme, checkout or app settings in Shopify" },
+    { "role": "wordpress-developer", "when": "When a WordPress or WooCommerce site needs plugins removed, updated or hardened" },
+    { "role": "communications-coordinator", "when": "When an incident needs customer, press and staff messages written and timed" }
+  ],
+  "gaps": [
+    "No library item checks one suspicious email, text or call for fraud signs; only the kit prompt does",
+    "No library item plans a password manager and two-step sign-in rollout for an office that is not a store",
+    "No library item covers device basics: updates, disk encryption, screen lock and a lost or stolen laptop",
+    "No library item gives a ransomware playbook for a small business",
+    "No library item walks through recovering a hacked email, social or store account",
+    "No library item writes a breach notice to customers or decides who must be told and by when",
+    "No library item writes a tabletop exercise script with timed surprises; only the kit prompt does",
+    "No library item sets a call-back rule and steps for bank-detail changes and urgent payment requests",
+    "No library item checks office or home Wi-Fi and router settings",
+    "No library item locks down a WooCommerce store; the store security items are written for Shopify",
+    "No library item makes clearly different awareness session formats to compare"
+  ]
+}

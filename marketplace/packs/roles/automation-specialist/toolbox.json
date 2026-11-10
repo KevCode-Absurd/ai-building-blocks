@@ -1,0 +1,301 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "automation-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "automation-spec",
+      "task": "Write a build spec for one automation",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/automate-one-task", "use": "brief", "when": "When a client names a repeat task and you need the steps from intake to live in order" },
+        { "ref": "kit:skills/automation-build-spec", "use": "build", "when": "When you know the task and need trigger, steps, field map, dedupe key and error paths written out" },
+        { "ref": "library:automation-flow-sketcher", "type": "prompt", "use": "brief", "when": "Before the full spec, to lay the task out step by step and see what can break" },
+        { "ref": "library:no-code-automation-planner", "type": "skill", "use": "explore", "when": "When the tool is not chosen, to compare a Zapier or Make set-up with switching to code" },
+        { "ref": "library:edge-case-list-maker", "type": "prompt", "use": "check", "when": "When the spec is drafted, to list the odd cases to test, smallest first" },
+        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When the spec covers only the happy path and must say what happens when people or data go wrong" }
+      ]
+    },
+    {
+      "id": "candidates",
+      "task": "Rank which repeat tasks to automate first",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:repeat-chore-automation-planner", "type": "skill", "use": "brief", "when": "When the team has not listed its weekly chores yet and you need the list to score" },
+        { "ref": "kit:prompts/automation-candidates-scorer", "use": "build", "when": "When there is a list of repeat jobs and you must pick three to automate and what to leave" },
+        { "ref": "library:process-waste-finder", "type": "skill", "use": "brief", "when": "When a task is slow because work waits, to see which steps are waste before automating them" },
+        { "ref": "library:hidden-value-check", "type": "skill", "use": "check", "when": "Before you automate a step, to find what it quietly does that nobody wrote down" },
+        { "ref": "library:agency-automation-governance-architect", "type": "agent", "use": "check", "when": "When a task is risky, to get a verdict on automating it, a fallback and tests to pass" },
+        { "ref": "library:taiichi-ohno", "type": "mind", "use": "think", "when": "When the client wants to automate a bad process, to fix the handoffs first" }
+      ]
+    },
+    {
+      "id": "fix-automation",
+      "task": "Diagnose an automation that fails, runs twice or misses records",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/automation-review-and-fix", "use": "build", "when": "When you have run history and step settings and need the cause, the fix and a retest" },
+        { "ref": "library:error-and-log-debugger", "type": "skill", "use": "build", "when": "When there is an error message or log from a step and you need the cause and a working fix" },
+        { "ref": "library:n8n-failure-handler", "type": "skill", "use": "build", "when": "When an n8n workflow breaks quietly and needs clear errors, retries and alerts" },
+        { "ref": "library:schedule-timing-checker", "type": "skill", "use": "check", "when": "When a scheduled run skips or repeats, to read the schedule and its next run times" },
+        { "ref": "library:john-carmack", "type": "mind", "use": "think", "when": "When guesses pile up, to follow one real run step by step and measure before changing anything" }
+      ]
+    },
+    {
+      "id": "pre-reliance-review",
+      "task": "Review a new automation before anyone relies on it",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/automation-review-and-fix", "use": "check", "when": "When a new automation is built and you must find double runs, missed records and silent fails" },
+        { "ref": "library:check-a-new-automation-before-relying-on-it", "type": "workflow", "use": "check", "when": "When you want a guided run to a test checklist, a written procedure and recovery steps" },
+        { "ref": "library:launch-readiness-seam-checker", "type": "skill", "use": "check", "when": "When several tools join up, to check each join and what wins when events pile up" },
+        { "ref": "library:edge-case-list-maker", "type": "prompt", "use": "check", "when": "When you need the test cases for odd data, such as blanks, repeats and late events" },
+        { "ref": "library:charlie-munger", "type": "mind", "use": "think", "when": "When everyone is sure it works, to turn it upside down and ask how it would fail" }
+      ]
+    },
+    {
+      "id": "platform-pick",
+      "task": "Choose the platform: Zapier, Make, n8n or code",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:no-code-automation-planner", "type": "skill", "use": "build", "when": "When you know the task, apps and volume and need a tool pick with reasons" },
+        { "ref": "library:agency-testing-tool-evaluator", "type": "agent", "use": "explore", "when": "When two or three tools are close, to score them with criteria, cost and a trial plan" },
+        { "ref": "library:zapier", "type": "tool", "use": "brief", "when": "When the apps are common and the owner wants the simplest tool to look after" },
+        { "ref": "library:make", "type": "tool", "use": "brief", "when": "When the flow branches a lot and the owner wants to see it on a canvas" },
+        { "ref": "library:n8n", "type": "tool", "use": "brief", "when": "When the business needs to self-host, inspect each step or keep run costs low" }
+      ]
+    },
+    {
+      "id": "code-step",
+      "task": "Write a code step that cleans data inside an automation",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/code-step-writer", "use": "build", "when": "When a Zap, scenario or workflow must split names, fix phones, sum lines or pull a number from text" },
+        { "ref": "library:code-correctness-planner", "type": "skill", "use": "brief", "when": "When the rule is tricky, to write the rules and odd cases first and then the code" },
+        { "ref": "library:sample-data-file-maker", "type": "skill", "use": "build", "when": "When you need realistic test rows with blanks and odd values to run the step against" },
+        { "ref": "library:generated-code-reviewer", "type": "skill", "use": "check", "when": "When the step is written, to catch repeated logic and common slips before it goes in" }
+      ]
+    },
+    {
+      "id": "webhook-intake",
+      "task": "Build a webhook intake that checks, dedupes and answers fast",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/webhook-intake-check", "use": "build", "when": "When a shop, payment tool or form sends events and fake, repeat or late ones must do no harm" },
+        { "ref": "library:webhook-receiver-builder", "type": "skill", "use": "build", "when": "When the intake must be code, to get a receiver that checks signatures and handles repeats" },
+        { "ref": "library:agency-testing-api-tester", "type": "agent", "use": "check", "when": "When the endpoint exists, to get a test plan with auth, failure and odd cases" },
+        { "ref": "library:bug-and-security-code-reviewer", "type": "skill", "use": "check", "when": "Before go-live, to review the receiver for bugs and security gaps" }
+      ]
+    },
+    {
+      "id": "api-connector",
+      "task": "Connect a tool that has no built-in app",
+      "kind": "code",
+      "items": [
+        { "ref": "library:api-connector-builder", "type": "skill", "use": "build", "when": "When a service has an API but no connector, to get code with sign-in, errors and retries" },
+        { "ref": "library:api-retry-handler", "type": "skill", "use": "build", "when": "When the API says slow down, to add safe waiting, retrying and backing off" },
+        { "ref": "library:browser-automation-scripter", "type": "skill", "use": "explore", "when": "When the tool has no API at all, to try doing the task in a browser by script" },
+        { "ref": "library:agency-security-secrets-credential-engineer", "type": "agent", "use": "check", "when": "When keys and logins sit in steps or sheets, to review storage and rotation" }
+      ]
+    },
+    {
+      "id": "python-script",
+      "task": "Write a Python script for a repeat file job",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/python-script-with-dry-run", "use": "build", "when": "When a weekly file job takes an hour by hand and needs a script that shows changes first" },
+        { "ref": "library:task-automation-builder", "type": "skill", "use": "explore", "when": "When a trigger, file watcher or schedule may suit better than a script run by hand" },
+        { "ref": "library:sample-data-file-maker", "type": "skill", "use": "build", "when": "When you must test without the real files" },
+        { "ref": "library:agency-engineering-code-reviewer", "type": "agent", "use": "check", "when": "When the script is drafted, to review bugs, clarity and tests with a fix for each point" }
+      ]
+    },
+    {
+      "id": "clean-export",
+      "task": "Clean and reshape a messy export",
+      "kind": "code",
+      "items": [
+        { "ref": "library:messy-spreadsheet-cleaner", "type": "skill", "use": "build", "when": "When an export has stray spaces, text numbers, mixed dates and duplicates" },
+        { "ref": "library:data-file-clean-up-loop", "type": "agent", "use": "build", "when": "When the same file comes every week, to fix, re-check and save the rules for next time" },
+        { "ref": "library:agency-engineering-ai-data-remediation-engineer", "type": "agent", "use": "build", "when": "When the file is big, to fix it with a few tested rules and a list of risky rows" },
+        { "ref": "library:excel-table-join-reconciler", "type": "skill", "use": "check", "when": "When two exports must match, to see unmatched rows and duplicate keys explained" },
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "When the clean file is ready, to report gaps, duplicates and odd values left" }
+      ]
+    },
+    {
+      "id": "report-by-script",
+      "task": "Build an Excel or PDF report by script",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/python-script-with-dry-run", "use": "build", "when": "When the report comes from weekly exports and must build the same way each time" },
+        { "ref": "library:agency-specialized-document-generator", "type": "agent", "use": "build", "when": "When you need a script and a reusable template for a PDF, Word or Excel file" },
+        { "ref": "library:document-file-generator", "type": "skill", "use": "build", "when": "When one file is needed now, built from a spec with no script to keep" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "When the workbook has formulas, to list errors and broken links before it is sent" }
+      ]
+    },
+    {
+      "id": "fix-script",
+      "task": "Fix a Python script that fails",
+      "kind": "code",
+      "items": [
+        { "ref": "library:error-and-log-debugger", "type": "skill", "use": "build", "when": "When you have the traceback or log and need the cause and a fix" },
+        { "ref": "library:bug-diagnoser", "type": "skill", "use": "build", "when": "When the script is wrong or slow with no error, to find the cause step by step" }
+      ]
+    },
+    {
+      "id": "schedule-guide",
+      "task": "Write a run and schedule guide for scripts",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:repeat-task-step-guide-writer", "type": "skill", "use": "build", "when": "When a non-developer must run the job, to give exact steps, fixes and who to call" },
+        { "ref": "library:schedule-timing-checker", "type": "skill", "use": "check", "when": "When the job runs on a timer, to confirm what the schedule means and its next run times" },
+        { "ref": "library:code-documentation-writer", "type": "skill", "use": "build", "when": "When the script needs a README and usage notes that match what the code does" },
+        { "ref": "library:readme-first-run-tester", "type": "skill", "use": "check", "when": "When the guide is written, to mark each step working or broken on a first run" }
+      ]
+    },
+    {
+      "id": "workspace-design",
+      "task": "Design an Airtable base or a Notion workspace",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/airtable-notion-workspace-design", "use": "build", "when": "When a team tracks things in scattered sheets and needs tables, fields, links and views per role" },
+        { "ref": "library:database-schema-designer", "type": "skill", "use": "brief", "when": "When the things tracked link in many ways, to get clean tables and links first" },
+        { "ref": "library:tim-berners-lee", "type": "mind", "use": "think", "when": "When the design invents new structure, to link what exists and keep formats simple" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the design is drafted, to have a fresh reviewer read it as the team that must use it" }
+      ]
+    },
+    {
+      "id": "off-spreadsheets",
+      "task": "Plan a move off spreadsheets into one base",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/airtable-notion-workspace-design", "use": "brief", "when": "Before the move, to fix the target tables and fields the old sheets must map to" },
+        { "ref": "library:column-mapping-document-writer", "type": "skill", "use": "build", "when": "When each old column needs a target field, a rule and a decision to review" },
+        { "ref": "library:business-data-move-runbook", "type": "skill", "use": "build", "when": "When you need the move in steps with field maps, checks and a way back" },
+        { "ref": "library:messy-spreadsheet-cleaner", "type": "skill", "use": "build", "when": "When the old sheets must be cleaned before import" },
+        { "ref": "library:data-quality-scorecard-maker", "type": "skill", "use": "check", "when": "After a trial import, to check blanks, duplicates, broken links and stale rows" }
+      ]
+    },
+    {
+      "id": "workspace-review",
+      "task": "Review a messy base or workspace",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/airtable-notion-workspace-design", "use": "check", "when": "When a base has duplicate tables, free-text fields and views nobody opens" },
+        { "ref": "library:sop-and-runbook-checker", "type": "skill", "use": "check", "when": "When the workspace holds how-to pages, to find missing owners, stale pages and gaps" },
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "When the records are in doubt, to report gaps, duplicates and odd values" }
+      ]
+    },
+    {
+      "id": "go-live",
+      "task": "Switch an automation on and tell the team",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/go-live-action-list", "use": "build", "when": "When the automation is built and tested and someone with access will switch it on" },
+        { "ref": "library:release-day-rollback-planner", "type": "prompt", "use": "build", "when": "When you need the checks, the way back and how to know it worked on the day" },
+        { "ref": "library:business-tool-launch-checklist", "type": "skill", "use": "check", "when": "Before the switch, to list launch checks, open blockers and a decision record" },
+        { "ref": "library:process-change-note-writer", "type": "prompt", "use": "build", "when": "When the team must be told what they do differently and from when" }
+      ]
+    },
+    {
+      "id": "health-check",
+      "task": "Run the monthly automation health check",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/monthly-automation-health-check", "use": "build", "when": "Monthly, and straight after any failure alert that repeats" },
+        { "ref": "kit:skills/automation-review-and-fix", "use": "check", "when": "When the check finds a flow that fails, runs twice or burns through its plan" },
+        { "ref": "library:software-spend-auditor", "type": "skill", "use": "check", "when": "When plans and add-ons have grown, to find duplicate tools and what to cut" }
+      ]
+    },
+    {
+      "id": "failure-alerts",
+      "task": "Plan failure alerts that reach a real person",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/automation-build-spec", "use": "build", "when": "When each error path needs an owner, a message and what to do with the stuck record" },
+        { "ref": "library:n8n-failure-handler", "type": "skill", "use": "build", "when": "When the flow is in n8n and needs retries and alerts added" },
+        { "ref": "library:uptime-and-alert-setup-planner", "type": "skill", "use": "build", "when": "When a custom endpoint or script must be watched, with alert rules that avoid alert fatigue" },
+        { "ref": "library:on-call-runbook-writer", "type": "skill", "use": "build", "when": "When the person alerted needs steps to follow under pressure" },
+        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When alerts exist but nobody acts, to check priorities, warnings and human mistakes" }
+      ]
+    },
+    {
+      "id": "n8n-build",
+      "task": "Design and build an n8n workflow",
+      "kind": "code",
+      "items": [
+        { "ref": "library:n8n-workflow-designer", "type": "skill", "use": "build", "when": "When you know the task and need the workflow laid out on a proven pattern" },
+        { "ref": "library:build-an-n8n-automation-that-reports-failures-and-can-be-reused", "type": "workflow", "use": "build", "when": "When you want one run to a workflow with visible failures and reusable parts" },
+        { "ref": "library:n8n-sub-workflow-builder", "type": "skill", "use": "build", "when": "When a workflow has grown long and should be split into parts with clear inputs" },
+        { "ref": "library:edge-case-list-maker", "type": "prompt", "use": "check", "when": "Before it goes live, to list the cases to run through the workflow" }
+      ]
+    },
+    {
+      "id": "ai-step",
+      "task": "Add an AI step or agent to an automation",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:n8n-ai-agent-builder", "type": "skill", "use": "build", "when": "When an n8n agent needs its tools, memory and review steps set up" },
+        { "ref": "library:guaranteed-format-generator", "type": "skill", "use": "build", "when": "When the AI step must always return the same fields so later steps do not break" },
+        { "ref": "library:extract-a-scanned-document-and-verify-key-facts", "type": "workflow", "use": "build", "when": "When the step reads scans or invoices, to pull facts and check them against the page" },
+        { "ref": "library:ai-approval-gate-designer", "type": "skill", "use": "brief", "when": "When the AI can act, to set which actions need a person and when to escalate" },
+        { "ref": "library:ai-agent-tester", "type": "skill", "use": "check", "when": "Before relying on it, to build a test set, scoring rules and a release decision" }
+      ]
+    },
+    {
+      "id": "power-platform",
+      "task": "Spec a Power Automate flow or a Power Apps screen",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:plan-a-power-platform-solution", "type": "skill", "use": "brief", "when": "When a Microsoft 365 process needs its people, tools and data flow mapped first" },
+        { "ref": "kit:skills/automation-build-spec", "use": "build", "when": "When IT needs the flow's trigger, steps, approvals and error handling in a spec to support" }
+      ]
+    },
+    {
+      "id": "runbook-handover",
+      "task": "Write the run book and hand over ownership",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:make-a-recurring-process-easier-to-hand-over", "type": "workflow", "use": "build", "when": "When a new owner takes over, to get a procedure, an exception guide and practice tasks" },
+        { "ref": "library:repeat-task-step-guide-writer", "type": "skill", "use": "build", "when": "When one task needs exact steps, fixes if it fails and how to roll back" },
+        { "ref": "library:on-call-runbook-writer", "type": "skill", "use": "build", "when": "When the flow is critical and needs steps anyone can follow when it breaks" },
+        { "ref": "library:sop-and-runbook-checker", "type": "skill", "use": "check", "when": "When run books exist, to find missing owners and stale pages" }
+      ]
+    },
+    {
+      "id": "risk-check",
+      "task": "Check an automation's data, access and privacy risks",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:gdpr-privacy-checker", "type": "skill", "use": "check", "when": "When the flow moves personal data, to list privacy risks and whether an assessment is needed" },
+        { "ref": "library:agency-security-secrets-credential-engineer", "type": "agent", "use": "check", "when": "When shared logins and keys run the flows, to review storage and rotation" },
+        { "ref": "library:ai-approval-gate-designer", "type": "skill", "use": "build", "when": "When the flow sends messages or decides about people, to set where a person must approve" },
+        { "ref": "library:agency-automation-governance-architect", "type": "agent", "use": "check", "when": "When the process is sensitive, to get the risks, a safe design and tests before go-live" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:human-review-gate", "type": "skill", "use": "check", "when": "Before you call any automation tested or live, to get a one-page sign-off with proof" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a spec is handed over, to catch field and step names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "backend-developer", "when": "When the job needs a hosted endpoint or service, not a step inside a no-code tool" },
+    { "role": "spreadsheet-specialist", "when": "When the fix belongs in Excel or Google Sheets formulas, not in an automation" },
+    { "role": "no-code-app-developer", "when": "When the team needs app screens and forms on top of the base" },
+    { "role": "it-administrator", "when": "When accounts, licences, permissions or Microsoft 365 admin settings must change" },
+    { "role": "revops-specialist", "when": "When the automation routes leads or changes CRM stages and scoring" },
+    { "role": "ai-engineer", "when": "When the AI step needs evaluation, retrieval or a model choice beyond one prompt" }
+  ],
+  "gaps": [
+    "No library item covers Airtable: formulas, linked records, interfaces, automations and record limits; only the kit skill does",
+    "No library item designs a Notion workspace: databases, relations, templates and permissions",
+    "No library item specs a Power Automate flow, writes Power Fx formulas or specs a Power Apps screen on SharePoint or Dataverse",
+    "No library item is specific to Zapier or Make builds: paths, filters, routers, and task or operation budgets",
+    "No library item estimates hours saved, run cost and payback for an automation",
+    "No library item writes or tests a text pattern to pull order numbers, dates or phones out of free text",
+    "No library item covers Google Apps Script or automations inside Google Sheets",
+    "No library item reads a run history export to find the failing step and the records it missed",
+    "No library item writes a brief a freelancer or tool builder can quote and build from",
+    "No library item writes a one-page team guide for a new base or workspace",
+    "No library item covers the US, UK and EU rules for automated messages and automated decisions about people"
+  ]
+}

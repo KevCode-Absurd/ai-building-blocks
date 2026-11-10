@@ -1,0 +1,270 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "startup-fundraising-consultant",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "pitch-deck-text",
+      "task": "Write the investor story and slide-by-slide deck text",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/pitch-deck-story-and-text", "use": "build", "when": "When you have the founder's model, metrics and notes and need the story and text for each slide" },
+        { "ref": "library:founder-office-hours-questioner", "type": "skill", "use": "brief", "when": "When the idea is still fuzzy, to answer six sharp questions before any slide is written" },
+        { "ref": "library:pitch-arc-planner", "type": "skill", "use": "explore", "when": "Before you fix the slide order, to try a different arc that builds belief step by step" },
+        { "ref": "library:prepare-a-funding-pitch-evidence-appendix", "type": "workflow", "use": "check", "when": "When the deck is drafted, to back every claim with a dated source in an appendix" },
+        { "ref": "library:finance-deck-quality-checker", "type": "skill", "use": "check", "when": "Before the deck goes out, to find numbers that do not match from slide to slide" },
+        { "ref": "library:gamma", "type": "tool", "use": "build", "when": "When the text is agreed and the founder wants a first laid-out deck fast" },
+        { "ref": "library:nancy-duarte", "type": "mind", "use": "think", "when": "When the deck lists facts and never moves from how things are to how they could be" }
+      ]
+    },
+    {
+      "id": "deck-review",
+      "task": "Review a deck against the questions investors ask",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/deck-review-against-investor-questions", "use": "check", "when": "When investors keep asking the same questions or said they did not get it" },
+        { "ref": "library:investor-panel-pitch-tester", "type": "skill", "use": "check", "when": "Before meetings start, to have tough investors grill the pitch and vote in or out" },
+        { "ref": "library:pitch-deck-checker-10-20-30", "type": "skill", "use": "check", "when": "When the deck runs long, to test slide count, talk time and type size" },
+        { "ref": "library:startup-due-diligence-reviewer", "type": "skill", "use": "check", "when": "When you want the market, traction, money and team read as an investor would" },
+        { "ref": "library:pitch-revision-log", "type": "skill", "use": "build", "when": "After each no, to rank the doubts heard and revise the pitch against them" }
+      ]
+    },
+    {
+      "id": "teaser-deck",
+      "task": "Cut a short teaser from the full deck",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/teaser-deck-from-full-deck", "use": "build", "when": "When a full deck exists and first contact needs five slides, with what to hold back" },
+        { "ref": "library:elevator-pitch-writer", "type": "skill", "use": "explore", "when": "When the opening line is weak, to compare 10, 30 and 60 second versions" },
+        { "ref": "library:finance-deck-quality-checker", "type": "skill", "use": "check", "when": "Before sending, to check the teaser's numbers still match the full deck" }
+      ]
+    },
+    {
+      "id": "pitch-script-and-questions",
+      "task": "Write the spoken pitch and prepare for questions",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:investor-pitch-scriptwriter", "type": "skill", "use": "build", "when": "When the founder must speak the pitch in one, three or ten minutes" },
+        { "ref": "library:write-a-short-pitch-and-fix-it-after-every-no", "type": "workflow", "use": "explore", "when": "When the pitch is new, to draft a short honest version and improve it after each meeting" },
+        { "ref": "library:hardest-objections-answer-writer", "type": "skill", "use": "build", "when": "When you need the toughest objections found and an answer tied to evidence for each" },
+        { "ref": "library:investor-panel-pitch-tester", "type": "skill", "use": "check", "when": "Before the first meeting, to rehearse against a panel that pushes back" },
+        { "ref": "library:paul-graham", "type": "mind", "use": "think", "when": "When the pitch sounds impressive but cannot be said plainly in two sentences" }
+      ]
+    },
+    {
+      "id": "round-plan",
+      "task": "Plan the round from decision to close",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/fundraising-round-plan", "use": "build", "when": "When the founder decides to raise, or runway is shorter than a raise usually takes" },
+        { "ref": "library:startup-runway-forecaster", "type": "skill", "use": "brief", "when": "Before setting dates, to know the month cash runs out at current burn" },
+        { "ref": "library:forecast-your-startup-runway-and-prepare-a-finance-pack", "type": "workflow", "use": "build", "when": "When the round size must come from a model with a cash-out date and ranges" },
+        { "ref": "library:early-stage-valuation-estimator", "type": "skill", "use": "brief", "when": "When the founder needs a value range to set expectations before talking terms" }
+      ]
+    },
+    {
+      "id": "financial-model",
+      "task": "Build or check the financial model behind the raise",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:startup-financial-model-builder", "type": "skill", "use": "build", "when": "When the raise needs a three to five year model with revenue, costs, cash and scenarios" },
+        { "ref": "library:assumption-stress-test", "type": "skill", "use": "check", "when": "When the model is built, to find which bets break first and what to test" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "Before an investor opens the workbook, to catch formula errors and broken links" },
+        { "ref": "library:agency-finance-financial-analyst", "type": "agent", "use": "check", "when": "When the founder built the model alone, to have figures recalculated and cases tested" }
+      ]
+    },
+    {
+      "id": "market-and-competition",
+      "task": "Size the market and map the competition for the deck",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:size-a-market-and-separate-facts-from-guesses", "type": "workflow", "use": "build", "when": "When the market slide needs a bottom-up number with facts and guesses told apart" },
+        { "ref": "library:market-size-estimator", "type": "skill", "use": "check", "when": "When you want the size cross-checked top-down and bottom-up" },
+        { "ref": "library:competitor-landscape-deck", "type": "skill", "use": "build", "when": "When the competition slide needs rivals compared from sourced facts" },
+        { "ref": "library:peter-thiel", "type": "mind", "use": "think", "when": "When the deck claims a huge market and cannot name the small one it will own first" }
+      ]
+    },
+    {
+      "id": "traction-metrics",
+      "task": "Turn raw numbers into traction investors can check",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:saas-metrics-coach", "type": "skill", "use": "build", "when": "When you have revenue and customer data and need recurring revenue, churn and payback read" },
+        { "ref": "library:subscription-unit-economics", "type": "skill", "use": "build", "when": "When investors will ask for cohorts, lifetime value against acquisition cost, and payback" },
+        { "ref": "library:retention-cohort-analyst", "type": "skill", "use": "build", "when": "When retention is the proof and needs curves by sign-up group" },
+        { "ref": "library:metric-definition-writer", "type": "skill", "use": "check", "when": "When a number could be worked out two ways, to fix one definition before it is quoted" }
+      ]
+    },
+    {
+      "id": "investor-fit-scoring",
+      "task": "Set investor fit criteria and score the investor list",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/investor-fit-scoring", "use": "build", "when": "When the founder has an investor list and needs it scored on stage, cheque, sector and place" },
+        { "ref": "library:organization-dossier-researcher", "type": "skill", "use": "brief", "when": "When facts on one investor are thin, to build a sourced file before scoring them" }
+      ]
+    },
+    {
+      "id": "outreach-notes",
+      "task": "Write outreach notes for the top investors",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/investor-fit-scoring", "use": "brief", "when": "Before writing to anyone, to know why each investor fits and what to lead with" },
+        { "ref": "library:organization-dossier-researcher", "type": "skill", "use": "brief", "when": "When a note must cite what the investor has backed or said, with sources" },
+        { "ref": "library:own-voice-outreach-writer", "type": "skill", "use": "explore", "when": "When each note must sound like the founder, to get versions tied to a real detail" },
+        { "ref": "library:cold-email-pre-send-checker", "type": "skill", "use": "check", "when": "Before sending, to test each claim in the note and the basics of the message" }
+      ]
+    },
+    {
+      "id": "intro-blurb",
+      "task": "Write a forwardable intro email for a contact",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/forwardable-intro-blurb", "use": "build", "when": "When a contact has offered an intro and needs a short email they can forward" },
+        { "ref": "library:elevator-pitch-writer", "type": "skill", "use": "explore", "when": "When the one-line description is weak, to compare a few short versions first" },
+        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before handing it over, to score the email and cut what an investor will skip" }
+      ]
+    },
+    {
+      "id": "pipeline-tracker",
+      "task": "Keep the fundraising pipeline and follow-ups",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/fundraising-round-plan", "use": "brief", "when": "When meetings start and the plan's stages must become a tracker" },
+        { "ref": "library:deal-notes-and-crm-updater", "type": "skill", "use": "build", "when": "After calls and emails, to update each investor's status and follow-up" },
+        { "ref": "library:executive-work-keeper", "type": "agent", "use": "build", "when": "When promises to investors pile up and due follow-ups need drafting each week" }
+      ]
+    },
+    {
+      "id": "cap-table",
+      "task": "Build a clean cap table from the share records",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/cap-table-and-round-model", "use": "build", "when": "When you have the share register, grants, SAFEs and notes and must list conflicts first" },
+        { "ref": "library:post-money-safe-ownership-checker", "type": "skill", "use": "check", "when": "When SAFEs sit on the table, to check what each owns before and after a priced round" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "Before founders rely on it, to check formulas and that ownership adds to 100 percent" }
+      ]
+    },
+    {
+      "id": "round-model",
+      "task": "Model the next round and check each conversion",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/cap-table-and-round-model", "use": "build", "when": "When the table is clean and you need ownership before and after the round" },
+        { "ref": "library:check-a-safe-into-priced-financing", "type": "workflow", "use": "check", "when": "When a SAFE converts in a priced round with an option pool top-up" },
+        { "ref": "library:check-a-convertible-note-conversion", "type": "workflow", "use": "check", "when": "When a note converts and interest, cap and discount decide the share count" },
+        { "ref": "library:cap-and-discount-conversion-checker", "type": "skill", "use": "check", "when": "When an instrument converts at the lower of cap or discount and both must be shown" },
+        { "ref": "library:option-pool-top-up-checker", "type": "skill", "use": "check", "when": "When investors ask for a bigger option pool before they invest" },
+        { "ref": "library:safe-financing-revision-assistant", "type": "agent", "use": "build", "when": "When round terms keep changing and the SAFE result must be reworked each time" }
+      ]
+    },
+    {
+      "id": "round-options",
+      "task": "Compare round options side by side",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/cap-table-and-round-model", "use": "explore", "when": "When the founder weighs sizes, valuations or instruments and needs each shown in ownership" },
+        { "ref": "library:early-stage-valuation-estimator", "type": "skill", "use": "brief", "when": "When each option needs a defensible value range behind it" },
+        { "ref": "library:venture-loan-terms-reviewer", "type": "skill", "use": "explore", "when": "When a startup loan is one option and its cost, warrants and covenants need explaining" },
+        { "ref": "library:review-a-down-round-rights-change", "type": "workflow", "use": "check", "when": "When one option is a lower-priced round and earlier investors' rights change" }
+      ]
+    },
+    {
+      "id": "term-sheet",
+      "task": "Turn a term sheet into numbers and lawyer questions",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/term-sheet-questions-for-your-lawyer", "use": "build", "when": "When one or more term sheets arrive and the founder needs ownership and sale outcomes in numbers" },
+        { "ref": "library:contract-and-term-sheet-reviewer", "type": "skill", "use": "check", "when": "When you need the risky terms flagged in plain words and when to call the lawyer" },
+        { "ref": "library:compare-preferred-exit-payout-terms", "type": "workflow", "use": "check", "when": "When preference terms differ, to see what investors and founders each get at a sale" },
+        { "ref": "library:weighted-average-antidilution-checker", "type": "skill", "use": "check", "when": "When the sheet has price protection and its effect in a later lower round must be shown" },
+        { "ref": "library:weak-position-negotiation", "type": "skill", "use": "brief", "when": "When only one sheet is on the table and the founder still needs to push on terms" },
+        { "ref": "library:chris-voss", "type": "mind", "use": "think", "when": "When the founder is about to accept the first terms to avoid a hard talk" }
+      ]
+    },
+    {
+      "id": "data-room",
+      "task": "Build the data room index for the round",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/fundraising-data-room-index", "use": "build", "when": "When an investor asks for documents, or before term sheets so the round does not stall" },
+        { "ref": "library:prepare-a-due-diligence-document-index", "type": "workflow", "use": "build", "when": "When files exist and need a versioned index and a map of what requests they cover" },
+        { "ref": "library:due-diligence-checklist-builder", "type": "skill", "use": "brief", "when": "Before filling the room, to know what an investor's checks will ask for" },
+        { "ref": "library:startup-due-diligence-reviewer", "type": "skill", "use": "check", "when": "When the room is filled, to read it as an investor and find what is missing" }
+      ]
+    },
+    {
+      "id": "investor-update",
+      "task": "Write the monthly investor update",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:workflows/monthly-investor-update-cycle", "use": "brief", "when": "When the month's numbers close and the update is due on its fixed date" },
+        { "ref": "kit:skills/investor-update", "use": "build", "when": "When you have the KPI sheet, P&L and notes and need a short, honest update with asks" },
+        { "ref": "library:copilot-gtm-board-and-investor-communication", "type": "skill", "use": "explore", "when": "When the story could be framed more than one way, to get a second version to compare" },
+        { "ref": "library:bad-news-update-writer", "type": "skill", "use": "build", "when": "When the month went badly and the loss, the numbers and the plan must be said straight" },
+        { "ref": "library:company-story-aligner", "type": "skill", "use": "check", "when": "Before sending, to find where the update contradicts the deck or the last update" }
+      ]
+    },
+    {
+      "id": "quarterly-letter",
+      "task": "Write a quarterly letter with a clear story",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/investor-update", "use": "build", "when": "When three monthly updates need pulling into one quarterly letter" },
+        { "ref": "library:data-story-writer", "type": "skill", "use": "explore", "when": "When the numbers could tell more than one story, to draft the point, proof and next step" },
+        { "ref": "library:annual-letter", "type": "workflow", "use": "build", "when": "When the letter covers a full year and needs principles, a cash check and mistakes owned" },
+        { "ref": "library:company-story-aligner", "type": "skill", "use": "check", "when": "Before it goes out, to check the letter matches what the board and team were told" },
+        { "ref": "library:warren-buffett", "type": "mind", "use": "think", "when": "When the letter hides a mistake that the investors will find anyway" }
+      ]
+    },
+    {
+      "id": "board-prep",
+      "task": "Prepare for a board or investor meeting",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/board-question-prep", "use": "build", "when": "When a board meeting or investor call is coming and tough questions need honest answers" },
+        { "ref": "library:hard-questions-board-prep-coach", "type": "skill", "use": "check", "when": "When the update is drafted, to drill the numbers and own the weak spots" },
+        { "ref": "library:board-deck-builder", "type": "skill", "use": "build", "when": "When the meeting needs a deck with the story, numbers and bad news placed right" },
+        { "ref": "library:prepare-a-board-decision-brief", "type": "workflow", "use": "build", "when": "When the board must decide something and needs an evidence map" },
+        { "ref": "library:deck-number-refresher", "type": "skill", "use": "check", "when": "When last quarter's deck is reused, to update every number and list what changed" }
+      ]
+    },
+    {
+      "id": "ownership-summary",
+      "task": "Explain ownership to founders and team in plain words",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/cap-table-and-round-model", "use": "build", "when": "When founders and team need who owns what before and after the round in plain numbers" },
+        { "ref": "library:pay-benchmark-and-equity-modeler", "type": "skill", "use": "build", "when": "When new hires will get equity and grant sizes need a model" },
+        { "ref": "library:data-jargon-translator", "type": "skill", "use": "check", "when": "Before the team reads it, to find cap table jargon and put it in plain words" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:unsupported-claim-spotter", "type": "skill", "use": "check", "when": "Before anything goes to an investor, to find every claim that has no number or source" },
+    { "ref": "library:company-story-aligner", "type": "skill", "use": "check", "when": "When deck, update and data room exist together, to check they tell one story" }
+  ],
+  "helpers": [
+    { "role": "presentation-designer", "when": "When the deck text is final and the slides need designing" },
+    { "role": "fpa-analyst", "when": "When the raise needs a driver-based model built or rebuilt" },
+    { "role": "market-research-analyst", "when": "When the market size and competition need proper sourced research" },
+    { "role": "product-marketing-manager", "when": "When the positioning is unclear and the deck cannot say who the product is for" },
+    { "role": "fractional-cfo", "when": "When the round involves debt, a lender or wider finance decisions" },
+    { "role": "crowdfunding-manager", "when": "When the founder chooses to raise from the crowd as well as investors" }
+  ],
+  "gaps": [
+    "No library item sets investor fit criteria or scores an investor list; only the kit skill does",
+    "No library item finds investors by stage, sector, cheque size and place; the research item covers one named firm at a time",
+    "No library item keeps a fundraising pipeline tracker with stage, next step and last contact for each investor",
+    "No library item builds a whole cap table from share records; library items each check one conversion or one pool",
+    "No library item lays out round options side by side: priced round, SAFE or note, at different sizes and values",
+    "No library item plans a round: how much to raise, milestones the money buys, use of funds and a timeline",
+    "No library item writes a routine monthly investor update; the library covers bad news and board stories only",
+    "No library item cuts a teaser deck or writes a one-page investor summary for a startup",
+    "No library item builds a data room index for a venture round; the document index was written for company sales",
+    "No library item compares whole term sheets on control terms such as board seats, vetoes and pro rata rights",
+    "No library item explains options, vesting and dilution to staff, or helps founders split equity",
+    "No library item covers accelerator applications, equity crowdfunding rounds or non-dilutive startup grants",
+    "No library item writes a forwardable intro or a thank-you and follow-up after an investor meeting"
+  ]
+}

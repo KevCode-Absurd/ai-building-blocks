@@ -1,0 +1,273 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "leadership-coach",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "one-on-one-system",
+      "task": "Set up one-on-ones with questions for the next 8 weeks",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/one-on-one-system", "use": "build", "when": "When a manager needs a rhythm, agenda rules and questions for each person on the team" },
+        { "ref": "library:one-on-one-meeting-planner", "type": "skill", "use": "build", "when": "When one report needs their own meeting plan with timing and topics" },
+        { "ref": "library:get-them-talking-plan", "type": "skill", "use": "explore", "when": "When a report stays quiet, to try a warm start and questions they will enjoy answering" },
+        { "ref": "library:team-goals-one-on-ones", "type": "workflow", "use": "build", "when": "When the one-on-ones should tie to team goals and how decisions get settled" },
+        { "ref": "library:weekly-one-on-one-prep-keeper", "type": "agent", "use": "build", "when": "When the manager wants each week's prep done from last week's notes" },
+        { "ref": "library:andy-grove", "type": "mind", "use": "think", "when": "When one-on-ones have become status updates the manager could read in a report" }
+      ]
+    },
+    {
+      "id": "hard-conversation-script",
+      "task": "Prepare a manager for a hard feedback conversation",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/hard-conversation-prep", "use": "build", "when": "When a manager must say something hard and needs a script in their own voice" },
+        { "ref": "library:plan-a-difficult-feedback-conversation", "type": "workflow", "use": "build", "when": "When you want a guided run to an opening built on facts and questions to listen with" },
+        { "ref": "library:feedback-conversation-planner", "type": "skill", "use": "explore", "when": "When you want a second version that sets out what to praise and what to change" },
+        { "ref": "library:listen-first-talk-planner", "type": "skill", "use": "explore", "when": "When the other person is likely to feel attacked, to try a plan that listens before it tells" },
+        { "ref": "library:brene-brown", "type": "mind", "use": "think", "when": "When the manager keeps softening the message until it no longer says anything" }
+      ]
+    },
+    {
+      "id": "feedback-note",
+      "task": "Draft a clear, kind written feedback note",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/feedback-note-drafter", "use": "build", "when": "When feedback must go in writing and should change behaviour without starting a fight" },
+        { "ref": "library:tough-feedback-note-drafter", "type": "prompt", "use": "explore", "when": "When you want a firmer second draft to compare against the kind one" },
+        { "ref": "library:written-feedback-checker", "type": "skill", "use": "check", "when": "Before it is sent, to check the note is specific and tells the person what to do next" },
+        { "ref": "library:kim-scott", "type": "mind", "use": "think", "when": "When the note is either too nice to be clear or too blunt to be heard" }
+      ]
+    },
+    {
+      "id": "ask-for-feedback",
+      "task": "Help a leader ask their team for honest feedback",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:ask-for-feedback-then-give-it", "type": "workflow", "use": "build", "when": "When a manager gives feedback but never asks for it and wants to start" },
+        { "ref": "library:feedback-request-script-writer", "type": "skill", "use": "build", "when": "When the leader needs a go-to question in their own voice and a plan for the silence" },
+        { "ref": "library:employee-survey-designer", "type": "skill", "use": "explore", "when": "When people will not say it face to face and a short survey may work better" }
+      ]
+    },
+    {
+      "id": "new-manager-30-days",
+      "task": "Plan a new manager's first 30 days",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/new-manager-30-day-plan", "use": "build", "when": "When someone has just become a manager and needs who to meet, what to ask and what not to promise" },
+        { "ref": "kit:skills/one-on-one-system", "use": "build", "when": "When the new manager must start one-on-ones in the first weeks" },
+        { "ref": "library:take-over-a-team-as-its-new-leader", "type": "workflow", "use": "build", "when": "When they inherit an existing team and need a first message and a listening tour" },
+        { "ref": "library:new-leader-first-message-writer", "type": "skill", "use": "build", "when": "When the first note to the team must say who they are and how they work" },
+        { "ref": "library:stakeholder-map-builder", "type": "skill", "use": "brief", "when": "Before the plan, to map who has power and interest and how to reach each" },
+        { "ref": "library:herminia-ibarra", "type": "mind", "use": "think", "when": "When a new manager still acts like the best individual worker on the team" }
+      ]
+    },
+    {
+      "id": "coaching-programme-plan",
+      "task": "Plan a coaching programme of up to eight sessions",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/coaching-engagement-cycle", "use": "brief", "when": "When a new client or sponsor asks for coaching and the steps need setting out" },
+        { "ref": "kit:skills/coaching-programme-plan", "use": "build", "when": "When goals are agreed and you need sessions, work between them and a way to review" },
+        { "ref": "library:personal-goal-reflection-coach", "type": "skill", "use": "brief", "when": "At intake, when the client's goal is vague and needs focused questions to sharpen it" },
+        { "ref": "library:leadership-program-designer", "type": "skill", "use": "explore", "when": "When the sponsor wants a group programme with a 360 form and a coaching guide" },
+        { "ref": "library:manager-quality-review-planner", "type": "skill", "use": "brief", "when": "When the programme should start from skill standards and 360 feedback" }
+      ]
+    },
+    {
+      "id": "coaching-session-plan",
+      "task": "Plan one coaching session",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/coaching-session-plan", "use": "build", "when": "When one session is coming and needs a timed plan, questions, an exercise and a worksheet" },
+        { "ref": "library:personal-goal-reflection-coach", "type": "skill", "use": "build", "when": "When the session turns on one choice and needs questions that lead to a small step" },
+        { "ref": "library:weekly-time-audit-planner", "type": "skill", "use": "build", "when": "When the exercise should be a look at where the client's week really went" },
+        { "ref": "library:not-to-do-list-builder", "type": "skill", "use": "build", "when": "When the client is overloaded and the exercise should be what to stop" },
+        { "ref": "library:granola", "type": "tool", "use": "build", "when": "When the coach wants fuller session notes without a recording bot in the call" }
+      ]
+    },
+    {
+      "id": "group-session",
+      "task": "Plan a group coaching or manager training session",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/coaching-session-plan", "use": "build", "when": "When the session is for a group and needs timings, questions and one shared exercise" },
+        { "ref": "library:build-a-practical-manager-training-session", "type": "workflow", "use": "build", "when": "When managers must practise a skill and you need a session plan and proof of learning" },
+        { "ref": "library:practice-session-minute-planner", "type": "prompt", "use": "build", "when": "When the group must practise, not listen, and each minute needs planning" },
+        { "ref": "library:peer-feedback-session-planner", "type": "skill", "use": "explore", "when": "When the group could coach each other, to try a peer session with rules" },
+        { "ref": "library:training-handout-writer", "type": "prompt", "use": "build", "when": "When people need a one-page handout to use back at their desk" }
+      ]
+    },
+    {
+      "id": "between-session-messages",
+      "task": "Write messages for clients between sessions",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/between-session-messages", "use": "build", "when": "When each gap between sessions needs a short message with a prompt and one small action" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before writing them, to compare three shapes the series of messages could take" },
+        { "ref": "library:habit-plan-builder", "type": "skill", "use": "build", "when": "When the action is a habit and needs a two-minute first step, a cue and a restart plan" },
+        { "ref": "library:agency-personal-growth-mentor", "type": "agent", "use": "build", "when": "When the client wants a weekly check-in that asks first and skips the pep talk" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "Before sending, to cut each message down and check it asks for one thing" }
+      ]
+    },
+    {
+      "id": "coaching-package",
+      "task": "Shape a coaching package clients understand",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/coaching-programme-plan", "use": "brief", "when": "Before pricing, to fix what the programme includes and how long it runs" },
+        { "ref": "library:offer-designer", "type": "skill", "use": "build", "when": "When the package needs a name, value framing, a guarantee and payment terms" },
+        { "ref": "library:three-tier-price-ladder-drafter", "type": "prompt", "use": "explore", "when": "When one package feels like take it or leave it, to draft three levels to compare" },
+        { "ref": "library:offer-checklist-reviewer", "type": "skill", "use": "check", "when": "When the package is drafted, to score it and get the three changes that matter" }
+      ]
+    },
+    {
+      "id": "mentoring-programme-design",
+      "task": "Design a mentoring scheme with matching rules",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/mentoring-programme-launch-and-review", "use": "brief", "when": "When an employer or body decides to run a scheme, or to fix one that fizzled" },
+        { "ref": "kit:skills/mentoring-programme-design", "use": "build", "when": "When you need goals, matching rules, length and check-ins people will stick with" },
+        { "ref": "library:mentoring-program-builder", "type": "skill", "use": "explore", "when": "When you want a second design with a six-month plan and talk guides to compare" },
+        { "ref": "library:career-ladder-plan", "type": "skill", "use": "brief", "when": "When mentoring should link to career levels and growth plans in the firm" }
+      ]
+    },
+    {
+      "id": "mentor-and-mentee-guides",
+      "task": "Write mentor and mentee guides and session prompts",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/mentoring-programme-design", "use": "build", "when": "When the scheme is designed and each side needs a guide and session templates" },
+        { "ref": "library:mentoring-program-builder", "type": "skill", "use": "build", "when": "When mentors need talk guides for each stage of the six months" },
+        { "ref": "library:get-them-talking-plan", "type": "skill", "use": "build", "when": "When first meetings are stiff and pairs need questions that open people up" },
+        { "ref": "library:written-feedback-checker", "type": "skill", "use": "check", "when": "When the guides include sample feedback, to check it is specific and usable" }
+      ]
+    },
+    {
+      "id": "mentoring-review-survey",
+      "task": "Design the mentoring midpoint and end surveys",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/mentoring-review-survey", "use": "build", "when": "When the scheme hits its midpoint or end and needs short surveys for both sides" },
+        { "ref": "library:employee-survey-designer", "type": "skill", "use": "build", "when": "When you also want a focus group guide and a way to read the results" },
+        { "ref": "library:check-a-marketing-survey-before-sending-it", "type": "workflow", "use": "check", "when": "Before the survey goes out, to find leading or unclear questions" },
+        { "ref": "library:turn-employee-feedback-into-owned-actions", "type": "workflow", "use": "build", "when": "When answers are in and comments must become themes and actions with owners" }
+      ]
+    },
+    {
+      "id": "programme-launch-messages",
+      "task": "Write launch and sign-up messages for a programme",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:workflows/mentoring-programme-launch-and-review", "use": "brief", "when": "When the scheme is ready and launch, sign-up and reminders must go out in order" },
+        { "ref": "library:staff-announcement-writer", "type": "skill", "use": "build", "when": "When staff need a clear announcement with manager talking points and an FAQ" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before drafting, to compare three ways the invite series could run" },
+        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before the invite goes out, to score it and get subject line options" }
+      ]
+    },
+    {
+      "id": "team-conflict",
+      "task": "Coach a manager through conflict between team members",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:conflict-mediation-guide", "type": "skill", "use": "build", "when": "When two people are in open conflict and the manager needs causes and a mediation plan" },
+        { "ref": "library:prepare-a-confidential-conflict-discussion", "type": "workflow", "use": "build", "when": "When the talk must stay private and needs a neutral map of the issues first" },
+        { "ref": "library:win-win-deal", "type": "workflow", "use": "explore", "when": "When both sides have dug in, to look for a third option after listening first" },
+        { "ref": "library:chris-voss", "type": "mind", "use": "think", "when": "When the manager wants to rule on who is right before either side feels heard" }
+      ]
+    },
+    {
+      "id": "delegation",
+      "task": "Coach a leader to hand work off and keep it handed off",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:hand-off-the-work-only-you-do-and-keep-it-handed-off", "type": "workflow", "use": "build", "when": "When the leader's week is full of work only they do and they need a handover plan" },
+        { "ref": "library:results-agreement-writer", "type": "skill", "use": "build", "when": "When a task is handed over and needs a one-page agreement on results, not methods" },
+        { "ref": "library:weekly-time-audit-planner", "type": "skill", "use": "brief", "when": "Before choosing what to hand off, to see what the week was really spent on" },
+        { "ref": "library:founder-leadership-coach", "type": "skill", "use": "brief", "when": "When the client is a founder and needs their blind spot and what only they should do" },
+        { "ref": "library:peter-drucker", "type": "mind", "use": "think", "when": "When the leader adds new work and never asks what to stop doing" }
+      ]
+    },
+    {
+      "id": "performance-and-career-talks",
+      "task": "Prepare performance, promotion and exit conversations",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/hard-conversation-prep", "use": "build", "when": "When the talk is about underperformance and the manager needs a script they can say" },
+        { "ref": "library:performance-review-helper", "type": "skill", "use": "build", "when": "When a review is due and the manager needs it written from evidence" },
+        { "ref": "library:prepare-a-fair-promotion-discussion", "type": "workflow", "use": "build", "when": "When someone asks for promotion and the case must be matched to the criteria" },
+        { "ref": "library:let-someone-go-fairly-and-tell-the-team-well", "type": "workflow", "use": "build", "when": "When the decision is to let someone go and it must be done fairly and told well" }
+      ]
+    },
+    {
+      "id": "team-health",
+      "task": "Read team health and shape how the team works",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:agency-organizational-psychologist", "type": "agent", "use": "build", "when": "When people go quiet, burn out or leave and the leader needs findings and causes" },
+        { "ref": "library:motivation-designer", "type": "skill", "use": "explore", "when": "When drive is low, to see ways to raise it through choice, skill growth and purpose" },
+        { "ref": "library:team-culture-memo-writer", "type": "skill", "use": "build", "when": "When the leader wants how the team should work written down in a short memo" },
+        { "ref": "library:turn-employee-feedback-into-owned-actions", "type": "workflow", "use": "build", "when": "When survey comments exist and need themes and actions with owners" }
+      ]
+    },
+    {
+      "id": "leading-change",
+      "task": "Help a leader announce a change and bring the team along",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:announce-a-change-of-direction-and-bring-the-team-with-you", "type": "workflow", "use": "build", "when": "When direction changes and the leader needs the memo, the script and a rollout plan" },
+        { "ref": "library:top-priority-shift-memo-writer", "type": "skill", "use": "build", "when": "When the team's top priority must be reset in one page" },
+        { "ref": "library:change-rollout-planner", "type": "skill", "use": "build", "when": "When a re-org or tool switch needs message templates and a plan for pushback" },
+        { "ref": "library:stakeholder-map-builder", "type": "skill", "use": "brief", "when": "Before any message, to see who the change affects and who can block it" }
+      ]
+    },
+    {
+      "id": "priorities-and-decisions",
+      "task": "Coach a leader on priorities, decisions and meetings",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:manager-output-coach", "type": "skill", "use": "build", "when": "When a manager needs meeting rhythms and the few tasks that move the team's output" },
+        { "ref": "library:informed-captain-decisions", "type": "skill", "use": "build", "when": "When a big decision drifts and needs one named owner and a plan to hear dissent" },
+        { "ref": "library:run-a-meeting-worth-holding-from-agenda-to-action-items", "type": "workflow", "use": "build", "when": "When the leader's meetings run long and end without owners or actions" },
+        { "ref": "library:okr-goal-writer", "type": "skill", "use": "build", "when": "When the team has no clear goals for the quarter and needs a few with dates and numbers" },
+        { "ref": "library:not-to-do-list-builder", "type": "skill", "use": "build", "when": "When the leader's list only grows and needs a stop list with a rule for each item" }
+      ]
+    },
+    {
+      "id": "sponsor-progress-report",
+      "task": "Report coaching progress to the sponsor",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:workflows/coaching-engagement-cycle", "use": "brief", "when": "When a review point arrives and the sponsor is owed an update within agreed limits" },
+        { "ref": "library:executive-update-drafter", "type": "skill", "use": "build", "when": "When progress must be written up for a senior reader in a short status note" },
+        { "ref": "library:written-feedback-checker", "type": "skill", "use": "check", "when": "Before sending, to check the report is specific and says what happens next" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a guide or session plan cites research, to check the claim is real before it is taught" }
+  ],
+  "helpers": [
+    { "role": "hr-specialist", "when": "When a conversation touches discipline, dismissal, grievance or anything with legal risk" },
+    { "role": "learning-development-specialist", "when": "When coaching sits inside a wider training plan for many managers" },
+    { "role": "career-coach", "when": "When the client's real question is whether to stay in the role or move on" },
+    { "role": "organisation-development-specialist", "when": "When the problem is the team's structure or roles, not one manager's skill" },
+    { "role": "internal-communications-specialist", "when": "When a change or programme launch needs a full staff communication plan" },
+    { "role": "employee-engagement-specialist", "when": "When team health needs a proper survey run and action plan" }
+  ],
+  "gaps": [
+    "No library item plans a one-to-one coaching programme across sessions; the nearest item designs a training programme",
+    "No library item plans a single coaching session or holds coaching questions sorted by situation",
+    "No library item writes between-session messages with a reflection prompt and one action",
+    "No library item plays the other person so a manager can rehearse a hard conversation",
+    "No library item checks a conversation script for blame, vague wording or mixed messages before it is used",
+    "No library item plans a first-time manager's first 30 days; items cover new hires or senior leaders taking over a team",
+    "No library item writes a coaching agreement with a sponsor: goals, privacy limits and review points",
+    "No library item reports coaching progress to a sponsor without breaking confidence",
+    "No library item builds a personal development plan for a leader or debriefs 360 feedback results",
+    "No library item matches mentors to mentees, writes mentor and mentee guides or builds mentoring surveys",
+    "No library item writes sign-up and reminder messages for an internal programme",
+    "No library item coaches managing up, presence in senior meetings or influence without authority",
+    "No library item plans a stay conversation or a written improvement plan for an underperformer"
+  ]
+}

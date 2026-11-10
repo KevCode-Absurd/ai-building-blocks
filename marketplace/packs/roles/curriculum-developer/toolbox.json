@@ -1,0 +1,295 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "curriculum-developer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "lesson-plan",
+      "task": "Write a ready-to-teach lesson plan",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/weekly-lesson-pack", "use": "brief", "when": "When next week's lessons are due and the pack must be built and checked in order" },
+        { "ref": "kit:skills/lesson-plan-and-class-materials", "use": "build", "when": "When you know the topic, class and lesson length and need a timed plan with an exit ticket" },
+        { "ref": "library:direct-teaching-lesson-builder", "type": "skill", "use": "explore", "when": "When the skill is new, to shape the lesson as show it, practise together, then alone" },
+        { "ref": "library:struggle-first-lesson-reshaper", "type": "skill", "use": "explore", "when": "When the class can attempt it first, to try a version where the explanation comes second" },
+        { "ref": "library:lesson-opener-planner", "type": "prompt", "use": "build", "when": "When the lesson needs a five-minute start that brings back last lesson" },
+        { "ref": "library:lesson-understanding-check", "type": "skill", "use": "build", "when": "When each stage needs a quick check of who has it before the class moves on" },
+        { "ref": "library:check-a-lesson-before-teaching-it", "type": "workflow", "use": "check", "when": "When the plan is drafted, to cut overload and fix barriers before it is taught" }
+      ]
+    },
+    {
+      "id": "unit-plan",
+      "task": "Plan a unit with outcomes, lessons and assessment points",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/lesson-plan-and-class-materials", "use": "build", "when": "When the unit needs a run of up to six lessons written out and timed" },
+        { "ref": "library:backwards-unit-planner", "type": "skill", "use": "brief", "when": "Before any lesson, to plan from the end result and the proof of learning backward" },
+        { "ref": "library:plan-a-unit-from-the-end-goal-and-schedule-the-revision", "type": "workflow", "use": "build", "when": "When you want one guided run from standards to a unit with mixed practice and revision" },
+        { "ref": "library:mixed-practice-unit-planner", "type": "skill", "use": "build", "when": "When topics are taught in blocks and should be mixed so learners must choose the method" },
+        { "ref": "library:hard-topic-teaching-guide", "type": "skill", "use": "brief", "when": "When the unit holds a topic that is hard to teach and you need the usual mistakes first" },
+        { "ref": "library:daniel-willingham", "type": "mind", "use": "think", "when": "When lessons are built around fun activities and not around what learners will think about" }
+      ]
+    },
+    {
+      "id": "explanations-and-examples",
+      "task": "Write explanations and worked examples for a topic",
+      "kind": "other",
+      "items": [
+        { "ref": "library:small-working-example-explainer", "type": "skill", "use": "build", "when": "When an idea needs the smallest example that still shows how it works" },
+        { "ref": "library:worked-example-practice", "type": "skill", "use": "build", "when": "When a procedure needs a run from fully worked examples to solving alone" },
+        { "ref": "library:think-aloud-script-writer", "type": "skill", "use": "build", "when": "When the teacher must model the thinking out loud and needs the words" },
+        { "ref": "library:self-explanation-question-writer", "type": "skill", "use": "check", "when": "When an example is written, to add questions that make learners explain the why" },
+        { "ref": "library:richard-feynman", "type": "mind", "use": "think", "when": "When the explanation uses terms the learners do not have yet" }
+      ]
+    },
+    {
+      "id": "worksheets-three-levels",
+      "task": "Make worksheets at three levels with answer keys",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/adapted-materials-same-goal", "use": "build", "when": "When one worksheet must reach the same goal for learners at three levels" },
+        { "ref": "library:practice-problem-set-writer", "type": "skill", "use": "build", "when": "When you need problems that rise in difficulty and vary just enough" },
+        { "ref": "library:task-adapter-learners", "type": "skill", "use": "explore", "when": "When one learner need is known, to see the same task adapted with the goal kept" },
+        { "ref": "library:step-by-step-hint-writer", "type": "skill", "use": "build", "when": "When the support version needs hints that help bit by bit without giving the answer" },
+        { "ref": "library:task-language-demand-checker", "type": "skill", "use": "check", "when": "When the sheets are drafted, to find words and sentences that block learners" }
+      ]
+    },
+    {
+      "id": "practice-and-homework",
+      "task": "Write a practice or homework set with worked answers",
+      "kind": "other",
+      "items": [
+        { "ref": "library:practice-problem-set-writer", "type": "skill", "use": "build", "when": "When a skill needs a graded set of problems to practise" },
+        { "ref": "library:turn-a-worked-example-into-independent-practice", "type": "workflow", "use": "build", "when": "When you have one worked example and want staged problems that fade the help" },
+        { "ref": "library:flawed-example-writer", "type": "skill", "use": "explore", "when": "When learners keep making one mistake, to try examples with that mistake built in" },
+        { "ref": "library:build-a-practice-plan-from-common-mistakes", "type": "workflow", "use": "build", "when": "When you have learners' wrong answers and the set should target the top mistakes" }
+      ]
+    },
+    {
+      "id": "quiz-with-answer-key",
+      "task": "Write a quiz with an answer key and explanations",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/assessment-blueprint-and-mark-scheme", "use": "build", "when": "When the quiz must come from the client's own material with a key you can trust" },
+        { "ref": "library:recall-quiz-writer", "type": "prompt", "use": "build", "when": "When you have lesson notes and need a low-stakes recall quiz at three levels" },
+        { "ref": "library:understanding-check-questions", "type": "skill", "use": "build", "when": "When a question must show who understands and which wrong idea the rest hold" },
+        { "ref": "library:assessment-fairness-check", "type": "skill", "use": "check", "when": "When the quiz is drafted, to check it tests the goals and not reading speed or tricks" }
+      ]
+    },
+    {
+      "id": "test-and-mark-scheme",
+      "task": "Build an end-of-unit or end-of-course test and mark scheme",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/assessment-blueprint-and-mark-scheme", "use": "build", "when": "When a test needs a blueprint of what is tested, the paper and a mark scheme" },
+        { "ref": "library:critical-thinking-task-writer", "type": "skill", "use": "build", "when": "When the test needs a longer task where learners weigh evidence or test a claim" },
+        { "ref": "library:assessment-fairness-check", "type": "skill", "use": "check", "when": "Before the test is printed, to check each question against the outcomes taught" },
+        { "ref": "library:cultural-bias-lesson-checker", "type": "skill", "use": "check", "when": "When questions use names, places or settings, to find hidden assumptions" }
+      ]
+    },
+    {
+      "id": "marking-rubric",
+      "task": "Write a marking rubric for an essay, project or task",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/assessment-blueprint-and-mark-scheme", "use": "brief", "when": "Before the rubric, to fix which outcomes the task is meant to show" },
+        { "ref": "library:marking-rubric-writer", "type": "skill", "use": "build", "when": "When you have the task and its goal and need clear wording for each level" },
+        { "ref": "library:single-point-rubric-builder", "type": "skill", "use": "explore", "when": "When a full grid is too heavy, to try one standard with room for evidence and next steps" },
+        { "ref": "library:mark-student-work-against-a-rubric-and-sharpen-your-feedback", "type": "workflow", "use": "check", "when": "When the rubric is drafted, to trial it on real work and see where it fails" }
+      ]
+    },
+    {
+      "id": "question-bank",
+      "task": "Build a question bank ready for an LMS",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/assessment-blueprint-and-mark-scheme", "use": "build", "when": "When a course needs many questions tagged by outcome and level with keys" },
+        { "ref": "library:understanding-check-questions", "type": "skill", "use": "build", "when": "When each question should reveal a known wrong idea, not only right or wrong" },
+        { "ref": "library:assessment-fairness-check", "type": "skill", "use": "check", "when": "Before import, to check the bank covers every outcome and none twice over" }
+      ]
+    },
+    {
+      "id": "adapt-for-access",
+      "task": "Adapt a lesson so every learner can reach the same goal",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/adapted-materials-same-goal", "use": "build", "when": "When one lesson or sheet needs scaffolds and supports with the goal unchanged" },
+        { "ref": "library:lesson-barrier-spotter", "type": "skill", "use": "brief", "when": "Before adapting, to find which barriers this class will hit in this lesson" },
+        { "ref": "library:learning-options-designer", "type": "skill", "use": "explore", "when": "When you want several ways to present, engage and let learners show what they know" },
+        { "ref": "library:adapt-a-lesson-for-different-access-needs", "type": "workflow", "use": "build", "when": "When you have the lesson files and want adapted activities with the goal checked" },
+        { "ref": "library:accessible-lesson-auditor", "type": "skill", "use": "check", "when": "When the adapted version is done, to find barriers that remain, ranked" }
+      ]
+    },
+    {
+      "id": "english-learner-supports",
+      "task": "Add language support for learners of English",
+      "kind": "other",
+      "items": [
+        { "ref": "library:task-language-demand-checker", "type": "skill", "use": "brief", "when": "Before adding support, to find the words and sentence types that will block learners" },
+        { "ref": "library:ell-sentence-frames", "type": "skill", "use": "build", "when": "When learners need sentence starters at several English levels for one task" },
+        { "ref": "library:ell-task-scaffolds", "type": "skill", "use": "build", "when": "When a task needs language help added while the thinking stays just as hard" },
+        { "ref": "library:vocabulary-lesson-planner", "type": "skill", "use": "build", "when": "When key words must be taught first, shown, named and checked" },
+        { "ref": "library:subject-writing-frame-maker", "type": "skill", "use": "build", "when": "When learners must write a set text type, like a lab report, and need a frame" }
+      ]
+    },
+    {
+      "id": "cover-lesson",
+      "task": "Write a cover lesson a non-specialist can run",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/cover-lesson-for-a-non-specialist", "use": "build", "when": "When a teacher is absent and the cover teacher does not teach the subject" },
+        { "ref": "library:practice-problem-set-writer", "type": "skill", "use": "build", "when": "When the cover lesson needs a self-running practice set with answers" },
+        { "ref": "library:check-a-lesson-before-teaching-it", "type": "workflow", "use": "check", "when": "Before it is left on the desk, to check a stranger could follow it" }
+      ]
+    },
+    {
+      "id": "scope-and-sequence",
+      "task": "Map a year or course before lessons are planned",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/plan-a-teaching-year", "use": "brief", "when": "Before a new year, intake or syllabus change, or after coverage gaps are found" },
+        { "ref": "kit:skills/scope-and-sequence-with-alignment", "use": "build", "when": "When you need units, outcomes and assessment points mapped to the syllabus" },
+        { "ref": "library:course-scope-sequence", "type": "skill", "use": "explore", "when": "When the order is open, to see what to teach and when so each part builds on the last" },
+        { "ref": "library:skill-progression-map-builder", "type": "skill", "use": "build", "when": "When one skill runs through the year and needs steps from first prerequisite to mastery" },
+        { "ref": "library:revision-schedule-planner", "type": "skill", "use": "build", "when": "When the map needs dates that bring each topic back before the exam" },
+        { "ref": "library:henry-roediger", "type": "mind", "use": "think", "when": "When the year teaches each topic once and never asks learners to recall it again" }
+      ]
+    },
+    {
+      "id": "standards-gap-check",
+      "task": "Check a scheme of work against the standards",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/standards-alignment-gap-check", "use": "check", "when": "When a scheme of work exists and you need outcomes never taught or never checked" },
+        { "ref": "library:curriculum-gap-check", "type": "skill", "use": "check", "when": "When you have the curriculum and a list of requirements and want a coverage table" },
+        { "ref": "kit:skills/scope-and-sequence-with-alignment", "use": "build", "when": "When gaps are found and the map must be rebuilt to close them" }
+      ]
+    },
+    {
+      "id": "unit-resource-list",
+      "task": "Build a resource list for each unit",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/scope-and-sequence-with-alignment", "use": "brief", "when": "Before listing resources, to know each unit's outcomes and assessment points" },
+        { "ref": "library:course-reading-list-builder", "type": "skill", "use": "build", "when": "When the course is at college level and needs recent papers by topic" },
+        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a resource makes factual claims and must be checked before learners see it" }
+      ]
+    },
+    {
+      "id": "exit-tickets-to-reteach",
+      "task": "Turn exit ticket or quiz results into a reteach plan",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/exit-tickets-to-reteach-plan", "use": "build", "when": "When you have today's results and need what to reteach tomorrow and how to check it" },
+        { "ref": "library:student-mistake-analyser", "type": "skill", "use": "brief", "when": "When errors cluster, to find the likely cause behind each before reteaching" },
+        { "ref": "library:quiz-and-dashboard-data-reader", "type": "skill", "use": "build", "when": "When results sit in an LMS export and need reading into class actions" },
+        { "ref": "library:class-quiz-reteach-keeper", "type": "agent", "use": "build", "when": "When this repeats each week and the next quiz should check the reteach worked" }
+      ]
+    },
+    {
+      "id": "marking-and-feedback",
+      "task": "Mark student work and write feedback they can act on",
+      "kind": "other",
+      "items": [
+        { "ref": "library:student-work-marking-desk", "type": "agent", "use": "build", "when": "When a batch of work must be marked against one rubric the same way" },
+        { "ref": "library:student-work-gap-finder", "type": "skill", "use": "build", "when": "When one piece needs exactly what is missing against the criteria" },
+        { "ref": "library:prepare-feedback-students-can-act-on", "type": "workflow", "use": "check", "when": "When comments are drafted, to turn them into steps a student can take" }
+      ]
+    },
+    {
+      "id": "revision-materials",
+      "task": "Make revision notes, flashcards and a revision plan",
+      "kind": "other",
+      "items": [
+        { "ref": "library:exam-study-roadmap-builder", "type": "skill", "use": "brief", "when": "When you have the syllabus and past papers and need what to revise ranked" },
+        { "ref": "library:flashcard-maker", "type": "skill", "use": "build", "when": "When notes or a chapter must become cards with one question and one short answer" },
+        { "ref": "library:revision-schedule-planner", "type": "skill", "use": "build", "when": "When topics and exam dates are known and revision needs spacing out" },
+        { "ref": "library:recall-quiz-writer", "type": "prompt", "use": "build", "when": "When learners should test themselves instead of rereading the notes" },
+        { "ref": "library:john-dunlosky", "type": "mind", "use": "think", "when": "When the revision pack is mostly rereading and highlighting" }
+      ]
+    },
+    {
+      "id": "discussion-and-group-tasks",
+      "task": "Design discussion and group tasks for a lesson",
+      "kind": "other",
+      "items": [
+        { "ref": "library:class-discussion-format-picker", "type": "skill", "use": "explore", "when": "When a topic needs talk, to compare formats and get the steps to run the best fit" },
+        { "ref": "library:group-work-task-planner", "type": "skill", "use": "build", "when": "When group work goes wrong and the task needs roles that share the thinking" },
+        { "ref": "library:critical-thinking-task-writer", "type": "skill", "use": "build", "when": "When learners should weigh evidence or spot bias, not only recall" },
+        { "ref": "library:lesson-understanding-check", "type": "skill", "use": "check", "when": "When the task is set, to add a check that shows what each learner took from it" }
+      ]
+    },
+    {
+      "id": "project-unit",
+      "task": "Plan a project or inquiry unit",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:project-based-unit-brief-writer", "type": "skill", "use": "build", "when": "When a topic should become a project with a driving question, milestones and marking" },
+        { "ref": "library:build-a-community-project-with-clear-learning", "type": "workflow", "use": "explore", "when": "When a local need could carry the unit and still meet the curriculum goals" },
+        { "ref": "library:marking-rubric-writer", "type": "skill", "use": "build", "when": "When the project needs a rubric learners see before they start" },
+        { "ref": "library:assessment-fairness-check", "type": "skill", "use": "check", "when": "When the project is planned, to check it assesses the outcomes and not presentation polish" }
+      ]
+    },
+    {
+      "id": "ai-resource-safety",
+      "task": "Check an AI-made resource or AI tool for classroom use",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/ai-resource-safety-check", "use": "check", "when": "When a school wants to use an AI-made resource or tool directly with under-18s" },
+        { "ref": "library:assignment-ai-boundaries", "type": "skill", "use": "build", "when": "When an assignment needs clear lines on where AI may help and where it would replace learning" },
+        { "ref": "library:teach-a-class-to-check-ai-answers-and-set-fair-ai-rules", "type": "workflow", "use": "build", "when": "When the class itself needs lessons on checking AI answers and fair rules" },
+        { "ref": "library:ai-fact-check-lesson", "type": "skill", "use": "build", "when": "When learners need a step-by-step way to check AI claims and citations" }
+      ]
+    },
+    {
+      "id": "member-education-year",
+      "task": "Plan a year of member education",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/member-education-year", "use": "build", "when": "Two to three months before the programme year, to plan it by member segment" },
+        { "ref": "library:training-program-builder", "type": "skill", "use": "build", "when": "When member skills gaps must become ranked needs, objectives and a programme" },
+        { "ref": "library:check-training-transfer-after-a-course", "type": "workflow", "use": "check", "when": "After a course, to see whether it changed what members do at work" }
+      ]
+    },
+    {
+      "id": "webinar-series-and-cpd",
+      "task": "Plan a webinar series with speaker briefs and invites",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/member-webinar-series-and-cpd-record", "use": "build", "when": "When an association wants a series, speaker briefs and a CPD record members can keep" },
+        { "ref": "library:prepare-a-webinar-people-can-follow", "type": "workflow", "use": "build", "when": "When one webinar needs a teaching outline and slides that reach one clear result" },
+        { "ref": "library:deliverer-fit-planner", "type": "skill", "use": "build", "when": "When a speaker is chosen and the brief should fit how they present" },
+        { "ref": "library:webinar-promotion-planner", "type": "skill", "use": "build", "when": "When each webinar needs invites, reminders and a follow-up" },
+        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before an invite goes to members, to score it and get subject line options" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:check-a-lesson-before-teaching-it", "type": "workflow", "use": "check", "when": "Before any lesson material is handed over, to cut overload and fix barriers" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before learners see it, to check the facts in notes, questions and answer keys" },
+    { "ref": "library:cultural-bias-lesson-checker", "type": "skill", "use": "check", "when": "When material uses examples from daily life, to find assumptions that shut learners out" }
+  ],
+  "helpers": [
+    { "role": "instructional-designer", "when": "When the course will run online or self-paced and needs storyboards and modules" },
+    { "role": "learning-development-specialist", "when": "When the learners are staff and the programme must tie to job skills" },
+    { "role": "tutor", "when": "When one learner needs the material explained and practised one to one" },
+    { "role": "presentation-designer", "when": "When a lesson or webinar needs designed slides, not only the text" },
+    { "role": "translator", "when": "When materials are needed in a home language as well as English" },
+    { "role": "email-marketing-specialist", "when": "When a member programme needs a full invite and reminder sequence" }
+  ],
+  "gaps": [
+    "No library item writes a cover lesson for a non-specialist; only the kit prompt does",
+    "No library item builds a full test paper with a blueprint of marks by outcome and a mark scheme",
+    "No library item writes multiple-choice questions with wrong options built from known mistakes",
+    "No library item formats a question bank for LMS import, such as GIFT, QTI or a CSV layout",
+    "No library item checks an answer key by working each answer again from scratch",
+    "No library item makes visual schedules, task cards or other picture supports",
+    "No library item rewrites one text at three reading levels; the only simplifier is for history sources",
+    "No library item holds named standards such as a national curriculum or exam board syllabus to map against",
+    "No library item builds a resource list for a school unit; the reading list item finds academic papers",
+    "No library item builds classroom slides for a lesson",
+    "No library item plans a yearly member education calendar by segment or drafts a CPD record or certificate",
+    "No library item writes a speaker brief or a learner feedback survey for a course or webinar",
+    "No library item writes a note to parents about a unit, homework or a test"
+  ]
+}

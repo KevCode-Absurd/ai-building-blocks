@@ -1,0 +1,275 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "executive-assistant",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "inbox-triage",
+      "task": "Sort a batch of emails and draft replies in the owner's voice",
+      "kind": "email",
+      "items": [
+        { "ref": "library:inbox-rules-interviewer", "type": "skill", "use": "brief", "when": "Before the first batch, to save a guide to the owner's senders, reply voice and triage rules" },
+        { "ref": "kit:skills/inbox-triage-and-reply-drafts", "use": "build", "when": "When a batch of emails must be sorted into reply, delegate, decline, wait or file, with drafts" },
+        { "ref": "library:inbox-triager", "type": "skill", "use": "build", "when": "When the inbox can be read directly, to sort messages, check senders and draft replies unsent" },
+        { "ref": "library:copilot-email-drafter", "type": "skill", "use": "explore", "when": "When one reply is delicate, to get a second draft checked against samples of the owner's style" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "When a draft answers a complaint, to check every promise in it and flag the tone" },
+        { "ref": "library:seneca", "type": "mind", "use": "think", "when": "When the owner wants to fire back an angry reply, to weigh it and choose one practical step" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before the batch goes for approval, to have a fresh reviewer read each reply as its recipient" }
+      ]
+    },
+    {
+      "id": "daily-run",
+      "task": "Run the daily inbox and calendar check",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/daily-inbox-and-calendar-run", "use": "build", "when": "Once or twice each working day, in about 30 to 45 minutes" },
+        { "ref": "library:prepare-your-executive-day", "type": "workflow", "use": "build", "when": "When one day needs meeting briefs, an action register and a plan from the calendar and open work" },
+        { "ref": "library:executive-daily-digest", "type": "skill", "use": "build", "when": "When the owner wants one short briefing of what needs them today" },
+        { "ref": "library:executive-due-task-drafts", "type": "skill", "use": "build", "when": "When follow-ups fall due today and each needs a draft ready to approve" }
+      ]
+    },
+    {
+      "id": "email-backlog",
+      "task": "Clear an email backlog and set triage rules that stick",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:clear-an-email-backlog-and-set-triage-rules-that-stick", "type": "workflow", "use": "build", "when": "When hundreds of emails have piled up and rules are needed so it does not happen again" },
+        { "ref": "library:email-backlog-clearer", "type": "skill", "use": "build", "when": "When the inbox can be read directly, to pull out what needs the owner and deadlines in threads" },
+        { "ref": "library:inbox-rules-interviewer", "type": "skill", "use": "brief", "when": "When the rules are unwritten, to capture them by asking the owner a few questions" },
+        { "ref": "library:cal-newport", "type": "mind", "use": "think", "when": "When email runs the owner's day, to cut the overload and keep fewer priorities" }
+      ]
+    },
+    {
+      "id": "meeting-notes",
+      "task": "Turn a transcript or rough notes into minutes and follow-ups",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:subtitle-and-transcript-maker", "type": "skill", "use": "brief", "when": "When there is only a recording, to get a transcript with who spoke first" },
+        { "ref": "kit:skills/meeting-notes-and-actions", "use": "build", "when": "When you have a transcript or notes and need one-page minutes with one owner and date per action" },
+        { "ref": "library:rough-notes-to-minutes-writer", "type": "prompt", "use": "explore", "when": "When you want a shorter version of the minutes to compare" },
+        { "ref": "library:honest-appreciation-note-writer", "type": "skill", "use": "build", "when": "When a guest or host deserves one short, specific thank-you after the meeting" },
+        { "ref": "library:granola", "type": "tool", "use": "build", "when": "When the owner takes rough notes in calls and wants fuller notes with no bot present" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the minutes go out, to check each decision and action against the transcript" }
+      ]
+    },
+    {
+      "id": "agenda",
+      "task": "Write the agenda for the next meeting",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:meeting-agenda-and-cost-planner", "type": "skill", "use": "build", "when": "When a meeting is proposed, to decide whether to hold it, cost it and time the agenda" },
+        { "ref": "library:run-a-meeting-worth-holding-from-agenda-to-action-items", "type": "workflow", "use": "build", "when": "When one meeting must run from pre-read to notes with owners and dates" },
+        { "ref": "library:meeting-pre-read-writer", "type": "skill", "use": "build", "when": "When attendees need an agenda and pre-read drawn from existing pages" },
+        { "ref": "library:meeting-to-written-update-converter", "type": "prompt", "use": "check", "when": "When a status meeting may not be needed, to turn it into a short written update" }
+      ]
+    },
+    {
+      "id": "action-tracker",
+      "task": "Keep an action tracker across several meetings",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/meeting-notes-and-actions", "use": "build", "when": "When each meeting's actions must carry one owner and one date into the tracker" },
+        { "ref": "library:executive-action-register", "type": "skill", "use": "build", "when": "When actions sit across notes and email threads and must become one list with sources" },
+        { "ref": "library:weekly-meeting-actions-keeper", "type": "agent", "use": "check", "when": "Each week, to check last week's open actions and set the next agenda" },
+        { "ref": "library:executive-due-task-drafts", "type": "skill", "use": "build", "when": "When actions fall due, to draft the nudge for each owner" }
+      ]
+    },
+    {
+      "id": "briefing-note",
+      "task": "Write a one-page briefing note before an important meeting",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/meeting-briefing-note", "use": "build", "when": "When the owner has a meeting that matters and must walk in knowing the aim and the people" },
+        { "ref": "library:executive-meeting-brief", "type": "skill", "use": "build", "when": "When there are notes on file and you need a sourced brief with open decisions and gaps" },
+        { "ref": "library:organization-dossier-researcher", "type": "skill", "use": "brief", "when": "When little is known about the other side, to build a sourced file on the company or person" },
+        { "ref": "library:before-you-meet-brief-writer", "type": "skill", "use": "explore", "when": "When rapport matters more than facts, to find what they care about and one good question" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the note is handed over, to tie each fact about the other side to a dated source" }
+      ]
+    },
+    {
+      "id": "trip-itinerary",
+      "task": "Build a trip itinerary from booking confirmations",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/travel-itinerary", "use": "build", "when": "When flights, trains, hotels and meetings are booked and need one day-by-day plan with gaps spotted" },
+        { "ref": "library:meeting-scheduler", "type": "skill", "use": "build", "when": "When meetings on the trip cross time zones and slots must be offered to others" },
+        { "ref": "library:personal-trip-guide-builder", "type": "skill", "use": "build", "when": "When free time on the trip needs a sourced plan with stops, breaks and alternatives" }
+      ]
+    },
+    {
+      "id": "weekly-plan",
+      "task": "Plan the week from the calendar and the to-do list",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/weekly-plan-from-calendar", "use": "build", "when": "Sunday evening or Monday morning, to turn a full calendar and long list into a week that fits" },
+        { "ref": "library:make-a-realistic-plan-for-a-busy-week", "type": "workflow", "use": "explore", "when": "When you want a second plan built a different way to compare" },
+        { "ref": "library:deep-work-day-planner", "type": "skill", "use": "build", "when": "When one day needs protected focus blocks and shallow work cut back" },
+        { "ref": "library:weekly-review-guide", "type": "skill", "use": "check", "when": "At the end of the week, to close open loops and find stalled projects" },
+        { "ref": "library:weekly-time-audit-planner", "type": "skill", "use": "check", "when": "When weeks keep overrunning, to count what was chosen and what was taken, and win back an hour" }
+      ]
+    },
+    {
+      "id": "scheduling",
+      "task": "Schedule meetings across calendars and time zones",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:meeting-scheduler", "type": "skill", "use": "build", "when": "When several people must meet, to sort time zones, check calendars and offer the best slots" },
+        { "ref": "library:new-inquiry-reply-drafter", "type": "skill", "use": "build", "when": "When a new enquiry asks to meet, to answer it with a draft reply and real meeting times" },
+        { "ref": "library:meeting-agenda-and-cost-planner", "type": "skill", "use": "check", "when": "Before the invite goes out, to check the meeting is worth holding at all" }
+      ]
+    },
+    {
+      "id": "chase-or-decline",
+      "task": "Write a polite chase, delay or decline",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/chase-delay-or-decline", "use": "build", "when": "When someone owes a reply, a document or a payment, or the owner must push back or say no" },
+        { "ref": "library:hard-no-planner", "type": "skill", "use": "build", "when": "When the no is hard, to give real reasons, a fairness check and another way forward" },
+        { "ref": "library:no-question-email-rewriter", "type": "prompt", "use": "explore", "when": "When earlier chasers were ignored, to try a version where a no still moves things on" },
+        { "ref": "library:unpaid-invoice-chaser", "type": "skill", "use": "build", "when": "When several invoices are unpaid, to get a reminder for each, gentle or firm to suit" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to have a fresh reviewer read it as the person being chased or declined" }
+      ]
+    },
+    {
+      "id": "formal-letter",
+      "task": "Write a formal complaint, refund or dispute letter",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:demand-letter-fact-gatherer", "type": "skill", "use": "brief", "when": "Before writing, to get the facts of the problem into one sheet with dates" },
+        { "ref": "kit:skills/formal-letter-and-complaint", "use": "build", "when": "When a company, landlord, agent or council must take a complaint or request seriously" },
+        { "ref": "library:no-question-email-rewriter", "type": "prompt", "use": "explore", "when": "When the first letter got no answer, to try a differently framed version to compare" },
+        { "ref": "library:chris-voss", "type": "mind", "use": "think", "when": "When the owner is angry, to state the other side's view first and ask how the fix will work" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before sending, to tie every fact in the letter to a dated receipt, message or contract term" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to have a fresh reviewer read it as the complaints team receiving it" }
+      ]
+    },
+    {
+      "id": "complaint-to-resolution",
+      "task": "Take a complaint from first letter to resolution",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/complaint-to-resolution", "use": "build", "when": "When a first informal request has not fixed it and the complaint must be escalated in steps" },
+        { "ref": "library:dispute-timeline-builder", "type": "skill", "use": "build", "when": "When the record is scattered across emails, to get a dated timeline with key events marked" },
+        { "ref": "library:turn-a-dispute-into-a-checked-demand-letter-draft", "type": "workflow", "use": "build", "when": "When the complaint has become a formal dispute and needs a fact sheet and a demand draft" },
+        { "ref": "library:incoming-demand-letter-reviewer", "type": "skill", "use": "check", "when": "When the other side replies with a formal letter, to read its claims and the reply options" }
+      ]
+    },
+    {
+      "id": "payment-check",
+      "task": "Check a payment or bank-detail request before anyone acts",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/payment-request-check", "use": "build", "when": "When a message asks to pay new bank details, pay urgently, wire money or buy gift cards" },
+        { "ref": "library:invoice-totals-checker", "type": "skill", "use": "check", "when": "When the request comes with an invoice, to recalculate it and list missing fields and odd dates" },
+        { "ref": "library:security-incident-triager", "type": "skill", "use": "build", "when": "When money or details were already sent, to set severity, who to tell and what to keep" }
+      ]
+    },
+    {
+      "id": "admin-system",
+      "task": "Set up filing, naming and the yearly admin calendar",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/admin-system-setup", "use": "build", "when": "When a small office needs a folder tree, a naming rule and a yearly admin calendar" },
+        { "ref": "library:folder-tidier", "type": "skill", "use": "build", "when": "When an existing folder is a mess, to get a clean plan and duplicates found before anything moves" },
+        { "ref": "library:company-filing-deadline-tracker", "type": "skill", "use": "brief", "when": "When the calendar must include company filings and their due dates" },
+        { "ref": "library:marie-kondo", "type": "mind", "use": "think", "when": "When everything is kept just in case, to sort by category and give what stays a home" }
+      ]
+    },
+    {
+      "id": "clean-list",
+      "task": "Clean up a messy list or spreadsheet",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/admin-system-setup", "use": "build", "when": "When a list must be cleaned with every fix flagged and nothing deleted" },
+        { "ref": "library:messy-spreadsheet-cleaner", "type": "skill", "use": "build", "when": "When a sheet has stray spaces, text numbers, mixed dates and duplicates" },
+        { "ref": "library:data-file-clean-up-loop", "type": "agent", "use": "build", "when": "When the same list arrives each month, to fix, re-check and save the rules" },
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "When the list is cleaned, to report gaps, duplicates and odd values left" }
+      ]
+    },
+    {
+      "id": "expenses-invoices",
+      "task": "Prepare expenses and chase unpaid invoices",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:expense-report-builder", "type": "skill", "use": "build", "when": "When receipts and notes must become a report with totals by category and gaps to fix" },
+        { "ref": "library:prepare-expenses-for-your-bookkeeper", "type": "workflow", "use": "build", "when": "When the bookkeeper needs a categorised file, receipt gaps and a reconciliation summary" },
+        { "ref": "library:weekly-invoice-and-cash-chaser", "type": "agent", "use": "build", "when": "Each week, to see who to chase, a reminder for each and a 90-day cash view" },
+        { "ref": "library:invoice-totals-checker", "type": "skill", "use": "check", "when": "Before a supplier invoice is passed for payment, to recalculate each line and total" }
+      ]
+    },
+    {
+      "id": "subscriptions",
+      "task": "Track subscriptions, renewals and notice dates",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:find-duplicate-and-unused-business-subscriptions", "type": "workflow", "use": "build", "when": "When nobody knows what is being paid for, to get a register and savings options" },
+        { "ref": "library:saas-terms-check", "type": "skill", "use": "check", "when": "When a software contract is up for renewal, to flag renewal traps and price rises" },
+        { "ref": "library:monthly-subscription-renewal-decision-assistant", "type": "agent", "use": "build", "when": "Each month, to see what changed, notice deadlines and proposed actions for the owner" }
+      ]
+    },
+    {
+      "id": "forms-and-pdfs",
+      "task": "Fill forms and handle PDFs and scans",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:pdf-toolkit", "type": "skill", "use": "build", "when": "When a PDF must be filled, merged, split or redacted with the original kept safe" },
+        { "ref": "library:scanned-pdf-text-reader", "type": "skill", "use": "build", "when": "When a letter or form is a scan and its text is needed" },
+        { "ref": "library:browser-task-runner", "type": "skill", "use": "build", "when": "When a form lives on a website and must be filled and a copy saved" }
+      ]
+    },
+    {
+      "id": "summaries",
+      "task": "Summarise a long document or thread for the owner",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:summarizer", "type": "skill", "use": "build", "when": "When a long text or several must be cut to a short summary at a chosen level of detail" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When the owner needs the answer first, the impact in numbers and the decision needed" },
+        { "ref": "library:plain-words-contract-summary", "type": "prompt", "use": "build", "when": "When the document is a contract and the owner needs what each side owes" }
+      ]
+    },
+    {
+      "id": "procedures-handover",
+      "task": "Write an office procedure or a handover note",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When a routine lives in one head and needs a written procedure with who does what" },
+        { "ref": "library:repeat-task-step-guide-writer", "type": "skill", "use": "build", "when": "When one repeat task needs exact steps, fixes if it fails and who to call" },
+        { "ref": "library:handover-note-writer", "type": "prompt", "use": "build", "when": "When work passes to someone else and they must be able to run from the note on day one" },
+        { "ref": "library:prepare-a-team-absence-handover", "type": "workflow", "use": "build", "when": "When someone goes on leave, to get a coverage map and task-by-task handover notes" }
+      ]
+    },
+    {
+      "id": "proofread",
+      "task": "Proofread a draft before the owner sends it",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "When a letter or document must be corrected in the owner's own voice with a log of changes" },
+        { "ref": "library:copilot-email-drafter", "type": "skill", "use": "check", "when": "When there are samples of the owner's emails, to check a draft against their usual style" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before anything goes out in the owner's name, to catch typos and names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "bookkeeper", "when": "When receipts and invoices must be coded, reconciled and entered in the books" },
+    { "role": "spreadsheet-specialist", "when": "When the list needs formulas, lookups or a tracker built, not only a clean-up" },
+    { "role": "chief-of-staff", "when": "When the owner needs a decision brief, board update or goals, not admin" },
+    { "role": "event-manager", "when": "When the job is an event with venue, suppliers and a run sheet" },
+    { "role": "compliance-specialist", "when": "When a contract needs a full plain summary and a list of questions for a lawyer" },
+    { "role": "automation-specialist", "when": "When a repeat admin task should run by itself between the owner's tools" }
+  ],
+  "gaps": [
+    "No library item learns one person's writing voice from their past emails and keeps it for later replies",
+    "No library item builds an itinerary from booking confirmations and spots tight connections or missing bookings",
+    "No library item writes a consumer complaint, refund or repair letter; the legal letter items are for formal disputes",
+    "No library item explains where to escalate a complaint: the ombudsman, regulator or scheme for each sector and country",
+    "No library item builds a yearly admin calendar for a small office: insurance, licences, tax dates and renewals",
+    "No library item answers an official form or application from the owner's own records",
+    "No library item checks a payment or bank-detail change request for fraud signs; only the kit prompt does",
+    "No library item designs a folder tree and file naming rule from scratch; the one that exists tidies a folder",
+    "No library item scripts a phone call to chase, complain or cancel",
+    "No library item gives clearly different versions of a hard letter, such as firm, conciliatory and final notice",
+    "No library item researches and shortlists options for errands such as gifts, restaurants or a local service"
+  ]
+}

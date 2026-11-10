@@ -1,0 +1,295 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "compliance-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "contract-summary",
+      "task": "Summarise a contract in plain words before signing",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/contract-plain-summary", "use": "build", "when": "When you have the full contract and need a plain summary with every date, payment and duty by clause" },
+        { "ref": "library:contract-risk-reviewer", "type": "skill", "use": "check", "when": "When the summary is done, to rate the key clauses and risks by how serious they are" },
+        { "ref": "library:ip-clause-checker", "type": "skill", "use": "check", "when": "When the deal creates or uses work product, to check ownership, licence and indemnity clauses" },
+        { "ref": "library:nda-quick-checker", "type": "skill", "use": "build", "when": "When the document is an NDA and the owner wants a quick green, yellow or red call" },
+        { "ref": "library:george-orwell", "type": "mind", "use": "think", "when": "When the summary copies the contract's wording, to say plainly what each side must do" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before it goes to the owner, to tie each statement to a clause number or cut it" }
+      ]
+    },
+    {
+      "id": "contract-dates",
+      "task": "Build a tracker of contract dates, renewals and duties",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/contract-plain-summary", "use": "build", "when": "When each contract needs its dates, notice periods and payments pulled into one table" },
+        { "ref": "library:vendor-agreement-status-checker", "type": "skill", "use": "check", "when": "When you must see what was signed with a vendor, what is missing and what expires soon" },
+        { "ref": "library:monthly-contract-renewal-keeper", "type": "agent", "use": "build", "when": "Each month, to list renewals and notice dates due, the traps in each and what to ask" },
+        { "ref": "library:prepare-a-contract-renewal-negotiation", "type": "workflow", "use": "build", "when": "When a renewal is near, to plan the notice deadline and keep, renegotiate or replace options" }
+      ]
+    },
+    {
+      "id": "contract-compare",
+      "task": "Compare two contract versions or two offers",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:prepare-a-contract-amendment-for-review", "type": "workflow", "use": "build", "when": "When a new version arrives, to trace each clause change and list the issues for legal review" },
+        { "ref": "library:vendor-comparison-writer", "type": "skill", "use": "build", "when": "When two suppliers have sent proposals, to compare cost and risk and name points to negotiate" },
+        { "ref": "kit:skills/contract-plain-summary", "use": "build", "when": "When each offer first needs its own plain summary and table before you compare them" },
+        { "ref": "library:contract-and-term-sheet-reviewer", "type": "skill", "use": "check", "when": "When one version adds risky terms, to flag them and say when to call a lawyer" }
+      ]
+    },
+    {
+      "id": "lawyer-questions",
+      "task": "List the questions to take to a lawyer",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:agency-legal-document-review", "type": "agent", "use": "build", "when": "When a contract is in hand, to rank risky and missing terms and write questions for the lawyer" },
+        { "ref": "library:contract-intake-reviewer", "type": "agent", "use": "check", "when": "When contracts arrive often, to rate each one and list the clauses to question" },
+        { "ref": "library:legal-inquiry-reply-drafter", "type": "skill", "use": "build", "when": "When a legal request has come in, to draft a reply and flag when a lawyer must review" }
+      ]
+    },
+    {
+      "id": "regulation-checklist",
+      "task": "Turn a regulation into a plain summary and duty checklist",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:rules-and-approvals-checker", "type": "skill", "use": "brief", "when": "When it is not clear which rules apply to a plan, to list rules, approvals and risk areas" },
+        { "ref": "kit:skills/regulation-to-checklist", "use": "build", "when": "When you have the rule text and need a summary in its order and a checklist with proof to keep" },
+        { "ref": "library:agency-support-legal-compliance-checker", "type": "agent", "use": "check", "when": "When a practice spans countries, to check which laws apply and what to ask a lawyer" },
+        { "ref": "library:compliance-checklist", "type": "skill", "use": "build", "when": "When the rule is a known framework, to get an evidence checklist with gaps ranked" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the checklist is shared, to tie each duty to its section or cut it" }
+      ]
+    },
+    {
+      "id": "rule-change",
+      "task": "Summarise what changed in a new version of a rule",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/regulation-to-checklist", "use": "build", "when": "When a new version is out and you need what was added, removed and changed, with deadlines" },
+        { "ref": "library:rule-change-policy-comparer", "type": "skill", "use": "build", "when": "When the change must be mapped to the policies it touches and what to change in each" },
+        { "ref": "library:rule-change-policy-keeper", "type": "agent", "use": "check", "when": "When rules change often, to find the gaps and check small redrafts each time" },
+        { "ref": "library:policy-redraft-proposer", "type": "skill", "use": "build", "when": "When a gap is found, to mark up the current policy with small edits for review" }
+      ]
+    },
+    {
+      "id": "privacy-register",
+      "task": "Build the data map and privacy records",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/privacy-register-builder", "use": "build", "when": "When the business needs a data map, processing records, a vendor list and a request log" },
+        { "ref": "library:gdpr-privacy-checker", "type": "skill", "use": "check", "when": "When code and data use can be inspected, to list privacy risks and track data requests" },
+        { "ref": "library:california-privacy-law-checker", "type": "skill", "use": "brief", "when": "When the business has US customers, to see if California law applies and what it adds" },
+        { "ref": "library:marketing-consent-auditor", "type": "skill", "use": "check", "when": "When the register covers marketing, to see who agreed to email and SMS and who did not" },
+        { "ref": "library:privacy-management-audit-planner", "type": "skill", "use": "check", "when": "When the records are built, to find gaps against the privacy management standard" }
+      ]
+    },
+    {
+      "id": "new-data-use",
+      "task": "Review a new use of customer data",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/privacy-register-builder", "use": "brief", "when": "Before the review, to see what the register already says about this data and its purpose" },
+        { "ref": "library:privacy-impact-assessment-writer", "type": "skill", "use": "build", "when": "When a new feature uses personal data, to write the assessment with conditions and owners" },
+        { "ref": "library:agency-data-privacy-officer", "type": "agent", "use": "check", "when": "When one use needs a regulator's eye, to list the duties, the proof missing and what to fix" },
+        { "ref": "library:privacy-policy-drift-checker", "type": "skill", "use": "check", "when": "When the new use may not match the published policy, to find the gap and fix wording" },
+        { "ref": "library:bruce-schneier", "type": "mind", "use": "think", "when": "When a safeguard is proposed, to ask what it protects, what it costs and what it assumes" }
+      ]
+    },
+    {
+      "id": "vendor-data-terms",
+      "task": "Check a vendor's data terms before signing",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/vendor-data-terms-check", "use": "build", "when": "Before signing a vendor that handles personal data, or when a customer asks how vendors are checked" },
+        { "ref": "library:dpa-review", "type": "skill", "use": "check", "when": "When the vendor sends a data processing agreement, to check each term and the edits to ask for" },
+        { "ref": "library:ai-vendor-terms-checker", "type": "skill", "use": "check", "when": "When the vendor is an AI tool, to flag data-training, liability and model-change terms" }
+      ]
+    },
+    {
+      "id": "new-vendor-intake",
+      "task": "Run intake for a new vendor or tool",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/new-vendor-or-tool-intake", "use": "build", "when": "When someone wants a new tool that will touch personal data, card data or company systems" },
+        { "ref": "library:vendor-risk-reviewer", "type": "skill", "use": "build", "when": "When you need a risk tier, tailored questions and a read of the vendor's assurance report" },
+        { "ref": "library:contract-intake-reviewer", "type": "agent", "use": "check", "when": "When the vendor's contract arrives, to get a risk rating and clauses to question" }
+      ]
+    },
+    {
+      "id": "privacy-page",
+      "task": "Draft privacy page notes for a lawyer to finish",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:policy-page-drafter", "type": "skill", "use": "build", "when": "When you know the business facts and country and need a draft privacy, terms or cookie page" },
+        { "ref": "library:privacy-policy-drafter", "type": "skill", "use": "explore", "when": "When you want a second draft with a review checklist to compare against the first" },
+        { "ref": "library:privacy-policy-drift-checker", "type": "skill", "use": "check", "when": "When a page exists, to find where it no longer matches what the business does" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the notes are drafted, to have a fresh reviewer read them as a customer would" }
+      ]
+    },
+    {
+      "id": "access-review",
+      "task": "Review who can see what",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:review-employee-data-access-before-a-change", "type": "workflow", "use": "build", "when": "Before a role or system change, to review who can reach staff or customer data" },
+        { "ref": "library:staff-access-reviewer", "type": "skill", "use": "check", "when": "When accounts have piled up, to find old logins, inactive users and too much access" },
+        { "ref": "library:bruce-schneier", "type": "mind", "use": "think", "when": "When everyone has access just in case, to weigh what each grant really protects" }
+      ]
+    },
+    {
+      "id": "data-request-or-breach",
+      "task": "Handle a data request or a suspected breach",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:data-request-reply-drafter", "type": "skill", "use": "build", "when": "When someone asks for their data, to get the steps to find it and a draft reply" },
+        { "ref": "library:security-incident-triager", "type": "skill", "use": "build", "when": "When an alert may be a breach, to set severity, who to tell and what to preserve" },
+        { "ref": "library:turn-an-incident-into-a-safer-procedure", "type": "workflow", "use": "build", "when": "After the event, to write a blameless report and a tracked list of prevention actions" },
+        { "ref": "library:troy-hunt", "type": "mind", "use": "think", "when": "When an exposure notice arrives, to separate what is known from what is feared" }
+      ]
+    },
+    {
+      "id": "ai-register",
+      "task": "Build the AI use register and screen it against the AI Act",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/ai-use-register", "use": "build", "when": "When staff use AI tools and you need a list of what is used and a first screen against the Act" },
+        { "ref": "library:eu-ai-act-readiness-checker", "type": "skill", "use": "check", "when": "When a system may be high risk, to get a first read of risk level, duties and gaps" },
+        { "ref": "library:ai-impact-assessment-writer", "type": "skill", "use": "build", "when": "When one AI use needs its risks, the rules that apply and conditions written down" },
+        { "ref": "library:new-ai-rule-gap-checker", "type": "skill", "use": "check", "when": "When a new AI law lands, to find gaps against current practice and a fix plan" },
+        { "ref": "library:ai-vendor-terms-checker", "type": "skill", "use": "check", "when": "When a tool on the register has terms that may allow training on company data" }
+      ]
+    },
+    {
+      "id": "audit-readiness",
+      "task": "Prepare for a SOC 2, ISO 27001 or PCI DSS check",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/audit-readiness-run", "use": "build", "when": "When a customer asks for a SOC 2 report or ISO certificate, or the acquirer for PCI validation" },
+        { "ref": "library:soc-2-readiness-planner", "type": "skill", "use": "build", "when": "When the target is SOC 2, to map controls, find gaps and list what the auditor will ask for" },
+        { "ref": "library:iso-27001-audit-prep-coach", "type": "skill", "use": "build", "when": "When the target is ISO 27001, to find gaps to fix before an internal or outside audit" },
+        { "ref": "library:card-payment-security-checker", "type": "skill", "use": "build", "when": "When the business takes cards, to find its PCI level, the right self-check form and gaps" },
+        { "ref": "library:agency-security-compliance-auditor", "type": "agent", "use": "check", "when": "Before the auditor arrives, to get a gap table, a proof list and a fix order" }
+      ]
+    },
+    {
+      "id": "evidence-pack",
+      "task": "Build the control register and evidence pack",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/audit-evidence-pack", "use": "build", "when": "When scope is set and you need a control register, evidence map and a request list" },
+        { "ref": "library:prepare-evidence-for-a-compliance-review", "type": "workflow", "use": "build", "when": "When a review date is fixed and evidence must be gathered and indexed in order" },
+        { "ref": "library:compliance-evidence-request-assistant", "type": "agent", "use": "build", "when": "When the auditor sends requests, to match each to evidence and track what is open" },
+        { "ref": "library:control-testing-workpaper", "type": "skill", "use": "check", "when": "When a control must be tested, to pick a sample, fill a workpaper and rate any gap" }
+      ]
+    },
+    {
+      "id": "security-questionnaire",
+      "task": "Answer a customer's security questionnaire",
+      "kind": "other",
+      "items": [
+        { "ref": "library:prepare-a-vendor-security-questionnaire-response", "type": "workflow", "use": "build", "when": "When a questionnaire arrives, to draft sourced answers and an evidence index" },
+        { "ref": "library:rfp-response-builder", "type": "skill", "use": "brief", "when": "When the questionnaire is long, to sort the must-haves and see where the business fits" },
+        { "ref": "kit:prompts/policy-gap-check", "use": "check", "when": "When a question asks for a policy, to see which policy covers it and where there is none" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before sending, to tie every yes to a policy, a setting or a report, or change the answer" }
+      ]
+    },
+    {
+      "id": "policy-gap",
+      "task": "Check policies against a rule or framework",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/policy-gap-check", "use": "build", "when": "When a rule changed, a customer sent a framework or an audit is coming" },
+        { "ref": "library:policy-redraft-proposer", "type": "skill", "use": "build", "when": "When a gap is confirmed, to propose small marked-up edits to the current policy" },
+        { "ref": "library:elinor-ostrom", "type": "mind", "use": "think", "when": "When a policy exists on paper only, to find the rules people really follow" }
+      ]
+    },
+    {
+      "id": "staff-policy",
+      "task": "Write a one-page policy staff can follow",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:policy-handbook-writer", "type": "skill", "use": "build", "when": "When a policy must be drafted for the country and company size, with points for a lawyer" },
+        { "ref": "library:make-a-new-policy-understandable-to-staff", "type": "workflow", "use": "build", "when": "When an approved policy needs a plain explanation and a staff announcement" },
+        { "ref": "library:review-staff-adoption-of-a-policy-change", "type": "workflow", "use": "check", "when": "Some weeks later, to see if staff follow it and what gets in the way" },
+        { "ref": "library:george-orwell", "type": "mind", "use": "think", "when": "When the policy is padded with legal filler, to write what staff must actually do" }
+      ]
+    },
+    {
+      "id": "governance-calendar",
+      "task": "Build the 12-month governance and compliance calendar",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/governance-calendar", "use": "build", "when": "At the start of a financial year, after a change of secretary, or when deadlines are missed" },
+        { "ref": "library:company-filing-deadline-tracker", "type": "skill", "use": "brief", "when": "When the group has several companies, to list annual filings and due dates by place" },
+        { "ref": "library:quarterly-compliance-readiness-keeper", "type": "agent", "use": "check", "when": "Each quarter, to check last quarter's fixes and what to close before an audit" }
+      ]
+    },
+    {
+      "id": "board-agenda",
+      "task": "Prepare a board agenda and papers list",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:nonprofit-board-meeting-and-role-planner", "type": "skill", "use": "build", "when": "When a charity or school board needs clearer agendas, roles and committee duties" },
+        { "ref": "library:prepare-a-board-decision-brief", "type": "workflow", "use": "build", "when": "When the board must decide something and needs the evidence and options set out" },
+        { "ref": "kit:prompts/governance-calendar", "use": "brief", "when": "Before the agenda, to see which filings, reviews and approvals fall due at this meeting" }
+      ]
+    },
+    {
+      "id": "board-minutes",
+      "task": "Write formal minutes and resolutions from notes",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/board-minutes-from-notes", "use": "build", "when": "After a board, trustee or committee meeting, from rough notes or a transcript" },
+        { "ref": "library:board-minutes-drafter", "type": "skill", "use": "explore", "when": "When you want a second draft in a set format to compare against the first" },
+        { "ref": "library:board-written-consent-drafter", "type": "skill", "use": "build", "when": "When directors will approve a decision in writing with no meeting" },
+        { "ref": "library:executive-action-register", "type": "skill", "use": "build", "when": "When decisions and actions must go into one register with owners and dates" }
+      ]
+    },
+    {
+      "id": "quarterly-review",
+      "task": "Run the quarterly compliance review",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/quarterly-compliance-review", "use": "build", "when": "Every three months, with a light monthly check of deadlines" },
+        { "ref": "library:quarterly-compliance-readiness-keeper", "type": "agent", "use": "check", "when": "When a framework is in scope, to see new gaps and whether last quarter's fixes held" },
+        { "ref": "library:monthly-contract-renewal-keeper", "type": "agent", "use": "check", "when": "When contracts are part of the review, to list notice dates falling in the next quarter" }
+      ]
+    },
+    {
+      "id": "other-regimes",
+      "task": "Check privacy duties in another country or sector",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:india-data-privacy-checker", "type": "skill", "use": "check", "when": "When the business handles personal data in India" },
+        { "ref": "library:health-data-privacy-checker", "type": "skill", "use": "check", "when": "When the business handles health data or builds a health app for the US" },
+        { "ref": "library:financial-it-resilience-checker", "type": "skill", "use": "check", "when": "When the client is an EU finance firm, or supplies IT to one" },
+        { "ref": "library:california-privacy-law-checker", "type": "skill", "use": "check", "when": "When US customers are a large share and the thresholds may be met" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any summary, register or minutes go out, to catch typos and names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "cybersecurity-specialist", "when": "When a control needs a technical fix, such as sign-in, backups, logging or device settings" },
+    { "role": "it-administrator", "when": "When access must be changed or accounts removed after the review" },
+    { "role": "hr-specialist", "when": "When the policy is about employment, such as leave, conduct or grievances" },
+    { "role": "procurement-specialist", "when": "When the vendor must be chosen or its price and terms negotiated" },
+    { "role": "chief-of-staff", "when": "When the board needs a pack with numbers and a decision brief, not only records" },
+    { "role": "qhse-manager", "when": "When the rule is about health, safety, quality or the environment on a site" }
+  ],
+  "gaps": [
+    "No library item writes terms of reference for a board committee",
+    "No library item decides if a breach must be reported, or drafts the notice to the regulator and to the people affected",
+    "No library item builds a retention schedule that says how long each record is kept and why",
+    "No library item writes a company board agenda with a papers list; the one that exists is for nonprofit boards",
+    "No library item compares two versions of a regulation clause by clause",
+    "No library item builds records of processing or a data map from scratch; only the kit skill does",
+    "No library item checks a cookie banner and consent set-up against the rules",
+    "No library item keeps statutory registers such as directors, members and people with control",
+    "No library item covers product rules such as labelling, product safety or food rules for a small firm",
+    "No library item keeps a conflicts of interest register or a gifts register",
+    "No library item writes the ISO 27001 statement of applicability",
+    "No library item gives clearly different versions of a policy or notice to compare"
+  ]
+}

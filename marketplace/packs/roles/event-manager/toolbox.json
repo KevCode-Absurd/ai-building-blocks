@@ -1,0 +1,277 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "event-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "event-brief",
+      "task": "Turn a thin request into a brief, budget and timeline",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/event-countdown", "use": "brief", "when": "When an event is agreed with a date or date range and you need the steps to doors open" },
+        { "ref": "kit:skills/event-brief-budget-and-timeline", "use": "build", "when": "When the request is thin and you need purpose, success measure, guest count and a full budget" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the budget could buy two kinds of event, to compare two plans with money and dates" },
+        { "ref": "library:key-moment-designer", "type": "skill", "use": "build", "when": "When the event risks being forgettable, to plan the one peak worth building, with owners and costs" },
+        { "ref": "library:event-ticket-pricer", "type": "skill", "use": "build", "when": "When guests pay, to set ticket prices, early-bird terms and how seats and dates are shown" },
+        { "ref": "library:walt-disney", "type": "mind", "use": "think", "when": "When the plan is a list of logistics, to walk through each scene as a guest and find what drags" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the brief is drafted, to have a fresh reviewer read it as the person paying for the event" }
+      ]
+    },
+    {
+      "id": "run-sheet",
+      "task": "Write the run sheet and the if-this-goes-wrong plan",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/run-sheet-and-contingency", "use": "build", "when": "When the day needs every line timed, placed and owned, with a cue and a backup" },
+        { "ref": "library:compound-scenario-modeler", "type": "skill", "use": "explore", "when": "When one backup per line is not enough, to model several things going wrong at once" },
+        { "ref": "library:backup-communication-plan-builder", "type": "skill", "use": "build", "when": "When radios or phones may fail, to set fallback ways to reach the crew and who switches" },
+        { "ref": "library:launch-readiness-seam-checker", "type": "skill", "use": "check", "when": "When suppliers hand over to each other, to check each join and what gives way in a clash" },
+        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When the sheet assumes nobody slips, to check handoffs, warnings and human mistakes" }
+      ]
+    },
+    {
+      "id": "supplier-quotes",
+      "task": "Brief venues and suppliers and compare their quotes",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/supplier-brief-and-quote-request", "use": "build", "when": "When you need comparable quotes from caterers, AV, venues, furniture, security or printers" },
+        { "ref": "kit:skills/venue-and-supplier-contracts", "use": "build", "when": "When quotes come back and must be compared like for like before anyone signs" },
+        { "ref": "library:supplier-quote-table-builder", "type": "prompt", "use": "build", "when": "When the quotes must sit side by side in one table first" },
+        { "ref": "library:supplier-quote-comparer", "type": "skill", "use": "check", "when": "When deposits and lead times differ, to compare risk and how safe each deposit is" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When two or three venues are close, to have a fresh reviewer pick one against the brief" }
+      ]
+    },
+    {
+      "id": "contract-summary",
+      "task": "Summarise a venue or supplier contract on one page",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/venue-and-supplier-contracts", "use": "build", "when": "When a contract arrives and you need its dates, minimums, cancellation terms and duties" },
+        { "ref": "library:plain-words-contract-summary", "type": "prompt", "use": "explore", "when": "When you want a second plain reading of what each side owes, to compare" },
+        { "ref": "library:contract-and-term-sheet-reviewer", "type": "skill", "use": "check", "when": "When attrition, cancellation or damage terms look one-sided, to flag them for a lawyer" }
+      ]
+    },
+    {
+      "id": "invitations",
+      "task": "Write invitations, reminders and the day-before email",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/guest-invitation-and-reminders", "use": "build", "when": "Once the date, venue and programme are fixed" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "When the reminders all say the same thing, to compare three plans for the series" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before sending, to check a guest can register from the link today" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to have a fresh reviewer read each email as a guest who knows nothing" }
+      ]
+    },
+    {
+      "id": "registration",
+      "task": "Design the registration form and the attendee data plan",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/registration-form-and-data-check", "use": "build", "when": "Before registration opens, or when a form asks for more than it needs" },
+        { "ref": "library:multi-step-form-designer", "type": "skill", "use": "explore", "when": "When the form is long, to try a staged version with conditional questions" },
+        { "ref": "library:signup-flow-improver", "type": "skill", "use": "check", "when": "When people start the form and drop out, to cut fields and clear up the wording" },
+        { "ref": "library:gdpr-privacy-checker", "type": "skill", "use": "check", "when": "When the form collects dietary, access or health details, to list the privacy risks" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "When the form is live, to check a guest can complete it today" }
+      ]
+    },
+    {
+      "id": "access-inclusion",
+      "task": "Build the access and inclusion checklist",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/access-and-inclusion-checklist", "use": "build", "when": "When choosing a venue, and again two weeks before the event" },
+        { "ref": "library:prepare-a-community-event-access-plan", "type": "workflow", "use": "build", "when": "When guests have access needs, to plan step-free routes and what the venue must confirm" },
+        { "ref": "library:wayfinding-sign-planner", "type": "skill", "use": "build", "when": "When first-time visitors must find the way, to map each point where they choose a route" },
+        { "ref": "library:kat-holmes", "type": "mind", "use": "think", "when": "When the plan fits a typical guest, to ask who cannot take part and offer more than one way in" }
+      ]
+    },
+    {
+      "id": "promotion",
+      "task": "Plan promotion to fill the room",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:event-marketing-planner", "type": "skill", "use": "build", "when": "When you know the event type and goal and need a plan to fill seats and follow up" },
+        { "ref": "library:multi-platform-post-planner", "type": "skill", "use": "build", "when": "When the event must be announced across platforms, with posts made for each" },
+        { "ref": "library:product-launch-planner", "type": "skill", "use": "build", "when": "When the event is a launch, to time channels and announcement copy around the day" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When money is tight, to compare a paid push with an invite-led one, with costs and dates" }
+      ]
+    },
+    {
+      "id": "event-page",
+      "task": "Make the event page",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:conversion-landing-page-designer", "type": "skill", "use": "build", "when": "When the event needs a page with a plan, copy and firm design rules" },
+        { "ref": "library:make-three-first-screens", "type": "skill", "use": "explore", "when": "When the first screen must sell the event, to see three made as real pages and one chosen" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the page goes live, to check every date, time, speaker and price against the brief" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "When the page is live, to check a visitor can book a place today" }
+      ]
+    },
+    {
+      "id": "programme",
+      "task": "Shape the programme and the opening remarks",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:shortlist-running-order", "type": "skill", "use": "build", "when": "When there are too many sessions, to cut to the best few in an order that holds attention" },
+        { "ref": "library:talk-tension-planner", "type": "skill", "use": "build", "when": "When a keynote buries its point, to reorder it so the room knows the stakes early" },
+        { "ref": "library:launch-talk-writer", "type": "skill", "use": "build", "when": "When the host needs a two-minute timed opening with one story and a close" },
+        { "ref": "library:quincy-jones", "type": "mind", "use": "think", "when": "When the running order sags, to strengthen the core and cut weak material" }
+      ]
+    },
+    {
+      "id": "signs-and-print",
+      "task": "Plan event signs, posters and printed pieces",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:one-symbol-concept-finder", "type": "skill", "use": "brief", "when": "Before any layout, to find the one idea and one symbol the poster or banner should carry" },
+        { "ref": "library:wayfinding-sign-planner", "type": "skill", "use": "build", "when": "When you need what each sign says and where it stands at every decision point" },
+        { "ref": "library:make-a-readable-event-poster", "type": "workflow", "use": "build", "when": "When you have the event details and want a guided run to a layout and an export checklist" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "When the look is undecided, to see three directions made at real size and one chosen" },
+        { "ref": "library:type-led-poster-planner", "type": "skill", "use": "explore", "when": "When there are no usable photos, to try a type-only poster that reads from far away" },
+        { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When a layout is drafted, to see where the eye lands first and what to cut" },
+        { "ref": "library:canva", "type": "tool", "use": "build", "when": "When the client's team will build and reprint the pieces themselves" }
+      ]
+    },
+    {
+      "id": "crew-and-volunteers",
+      "task": "Brief crew and volunteers and set the day rota",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/run-sheet-and-contingency", "use": "brief", "when": "When each crew member needs the lines they own pulled from the run sheet" },
+        { "ref": "library:shift-schedule-builder", "type": "skill", "use": "build", "when": "When the day needs cover at busy hours within the staff you have" },
+        { "ref": "library:build-a-volunteer-induction-checklist", "type": "workflow", "use": "build", "when": "When volunteers are new, to get an induction procedure and a practice plan" },
+        { "ref": "library:nonprofit-volunteer-program-planner", "type": "skill", "use": "build", "when": "When volunteers need clear roles, screening, training and shift plans" }
+      ]
+    },
+    {
+      "id": "catering-check",
+      "task": "Check the catering order before service",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/venue-and-supplier-contracts", "use": "brief", "when": "When the order must match the minimums and deadlines in the caterer's contract" },
+        { "ref": "library:check-a-catering-order-before-service", "type": "workflow", "use": "check", "when": "Before the day, to check the order against the quote and event details and list mismatches" },
+        { "ref": "library:catering-order-change-review-assistant", "type": "agent", "use": "check", "when": "When numbers or dietary needs change late, to check each change against the confirmed order" }
+      ]
+    },
+    {
+      "id": "trade-show-year",
+      "task": "Shortlist shows and plan the trade show year",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:workflows/trade-show-cycle", "use": "brief", "when": "Once a year to choose shows, then for each show from three months before to 30 days after" },
+        { "ref": "kit:skills/trade-show-plan", "use": "build", "when": "When shows and packages must be ranked on audience fit, full cost and cost per qualified lead" },
+        { "ref": "library:traction-trade-shows", "type": "skill", "use": "explore", "when": "When the firm has never exhibited, to frame one show as a small test with decision rules" },
+        { "ref": "library:charlie-munger", "type": "mind", "use": "think", "when": "When a show is booked from habit, to ask what the organiser gains and what you really get" }
+      ]
+    },
+    {
+      "id": "booth-and-staff-kit",
+      "task": "Plan the booth and the staff kit",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/trade-show-plan", "use": "build", "when": "When a show is booked and you need the stand plan, goals, staff roles and lead capture" },
+        { "ref": "library:counter-demo-script-writer", "type": "skill", "use": "build", "when": "When staff need a short demo that explains the product and lets the visitor see the result" },
+        { "ref": "library:sales-collateral-writer", "type": "skill", "use": "build", "when": "When the stand needs a one-pager and an objection sheet for staff" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "When the stand graphics are undecided, to see three directions made at real size" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the kit is drafted, to have a fresh reviewer read it as a visitor walking past" }
+      ]
+    },
+    {
+      "id": "sponsorship-decision",
+      "task": "Decide whether a sponsorship or exhibitor package is worth it",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/sponsorship-decision-brief", "use": "build", "when": "When an organiser offers a package and the client wants go, negotiate or walk away" },
+        { "ref": "library:build-a-clear-sponsorship-decision-brief", "type": "workflow", "use": "explore", "when": "When you want a second view with a cost comparison and a small capped pilot" },
+        { "ref": "library:charlie-munger", "type": "mind", "use": "think", "when": "When the offer flatters the brand, to turn it upside down and check incentives" }
+      ]
+    },
+    {
+      "id": "sponsor-packages",
+      "task": "Build sponsor packages for your own event",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:nonprofit-sponsor-package-planner", "type": "skill", "use": "build", "when": "When your event needs sponsor tiers, pitch copy and a list of promises to track" },
+        { "ref": "library:pitch-arc-planner", "type": "skill", "use": "build", "when": "When the sponsor pitch needs an outline that builds belief and ends in a clear ask" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When there are two or three tier structures, to have a fresh reviewer pick one" }
+      ]
+    },
+    {
+      "id": "follow-up",
+      "task": "Follow up guests and leads after the event",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:workflows/post-event-wrap-up", "use": "brief", "when": "The day after any event, show or webinar, to run the wrap-up in order" },
+        { "ref": "kit:prompts/post-event-follow-up-and-report", "use": "build", "when": "When attendance, lead notes and costs are to hand and thank-yous and follow-ups must go" },
+        { "ref": "library:plan-an-event-follow-up-that-earns-a-reply", "type": "workflow", "use": "build", "when": "When follow-ups should be grouped by what each person asked for at the event" },
+        { "ref": "library:lead-prioritizer", "type": "skill", "use": "brief", "when": "When the show gave many leads, to score them on fit and activity and rank who gets a call" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "When the follow-up is a series, to compare three plans, each with its first email" },
+        { "ref": "library:honest-appreciation-note-writer", "type": "skill", "use": "build", "when": "When a speaker, sponsor or helper deserves one short, specific thank-you with no ask" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to have a fresh reviewer read the emails as a guest or a lead" }
+      ]
+    },
+    {
+      "id": "results-report",
+      "task": "Write the results report and check budget against actual",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/post-event-follow-up-and-report", "use": "build", "when": "When the numbers are in and the client needs results against the success measure" },
+        { "ref": "library:budget-variance-explainer", "type": "skill", "use": "build", "when": "When actual costs differ from the budget, to say what moved and why" },
+        { "ref": "library:feedback-pile-sorter", "type": "skill", "use": "build", "when": "When guest feedback has come in from several places, to rank what guests really need" },
+        { "ref": "library:lessons-learned-note-writer", "type": "prompt", "use": "build", "when": "When the team will run this event again, to note what to repeat and what to change" }
+      ]
+    },
+    {
+      "id": "webinar",
+      "task": "Plan a webinar or an online event",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:prepare-a-webinar-people-can-follow", "type": "workflow", "use": "build", "when": "When the webinar must teach one clear result, to get an outline, a deck brief and promotion" },
+        { "ref": "library:webinar-promotion-planner", "type": "skill", "use": "build", "when": "When you have the topic and audience and need a plan to promote, run and follow up" },
+        { "ref": "library:content-repurposer", "type": "skill", "use": "build", "when": "After the session, to turn the recording into posts, emails and clips" }
+      ]
+    },
+    {
+      "id": "special-formats",
+      "task": "Plan an offsite, a tasting or a fundraising event",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:prepare-a-small-team-offsite", "type": "workflow", "use": "build", "when": "When a team meets off site and needs a decision-first agenda and a pre-read request" },
+        { "ref": "library:nonprofit-fundraising-event-planner", "type": "skill", "use": "build", "when": "When the event must raise money, to get a budget, income scenarios and a day schedule" },
+        { "ref": "library:taster-event-planner", "type": "skill", "use": "build", "when": "When the event lets buyers try product versions, to plan the day and a decision rule" }
+      ]
+    },
+    {
+      "id": "photos-and-social",
+      "task": "Brief the photographer and plan posts around the event",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:creative-shoot-briefer", "type": "skill", "use": "build", "when": "When a photographer or video team needs one clear brief for the day" },
+        { "ref": "library:multi-platform-post-planner", "type": "skill", "use": "build", "when": "When the event needs before, during and after posts for each platform" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any invitation, run sheet or sign goes out, to catch typos and names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "graphic-designer", "when": "When signs, posters, badges or stand graphics must be laid out as print-ready artwork" },
+    { "role": "sponsorship-manager", "when": "When the event must sell sponsor packages and manage what each sponsor was promised" },
+    { "role": "email-marketing-specialist", "when": "When invitations go to a large list and need segments, timing and delivery checks" },
+    { "role": "website-designer", "when": "When the event needs a full site or booking page built, not only its copy" },
+    { "role": "sales-coordinator", "when": "When show leads must be logged, routed and chased through to a quote" },
+    { "role": "social-media-manager", "when": "When the event needs daily posting and replies before, during and after" }
+  ],
+  "gaps": [
+    "No library item writes a run sheet or cue sheet for an event day; only the kit skill does",
+    "No library item builds a general event budget; the one that exists is for nonprofit fundraisers",
+    "No library item shortlists venues, compares them or gives a site-visit checklist",
+    "No library item writes event invitations and reminder emails",
+    "No library item finds speakers, writes a speaker brief or scripts a host for the whole day",
+    "No library item plans a trade show stand layout or a lead capture form with scoring",
+    "No library item writes an event risk assessment covering crowds, weather, fire and first aid",
+    "No library item designs an attendee feedback survey",
+    "No library item plans group travel, room blocks and transfers",
+    "No library item makes a seating plan, a floor plan or name badges"
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "fractional-cfo",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "finance-health-check",
+      "task": "Run a financial health check of the business",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/finance-health-check", "use": "build", "when": "When you have the P&L, balance sheet and bank statements and need five areas rated with evidence" },
+        { "ref": "library:books-reconciliation-pl", "type": "skill", "use": "check", "when": "Before you rate anything, to find mismatches, duplicates and gaps in the books you were given" },
+        { "ref": "library:financial-statement-analyst", "type": "skill", "use": "build", "when": "When you need the full ratio set worked out from the accounts before you judge each area" },
+        { "ref": "library:cash-tied-up-finder", "type": "skill", "use": "build", "when": "When the cash cycle looks slow and you need debtor, creditor and stock days with the cash held in each" },
+        { "ref": "library:customer-concentration-risk", "type": "skill", "use": "check", "when": "When a few customers or one supplier carry the business and the risk needs a limit and a plan" },
+        { "ref": "library:john-d-rockefeller", "type": "mind", "use": "think", "when": "When the totals look fine but nobody has read the cost lines closely" }
+      ]
+    },
+    {
+      "id": "monthly-owner-pack",
+      "task": "Write the monthly finance pack for the owner",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/monthly-cfo-cycle", "use": "brief", "when": "When the month is closed and you need the order of work, from checks to the owner meeting" },
+        { "ref": "kit:prompts/monthly-owner-finance-pack", "use": "build", "when": "When the numbers are ready and the owner needs key figures, trends, risks and decisions in plain words" },
+        { "ref": "library:variance-commentary", "type": "skill", "use": "build", "when": "When lines moved against last month and each one needs a written reason" },
+        { "ref": "library:budget-variance-explainer", "type": "skill", "use": "build", "when": "When the owner has a budget and wants to know what moved against it and why" },
+        { "ref": "library:kpi-dashboard-designer", "type": "skill", "use": "brief", "when": "When the pack has no fixed set of numbers yet and you must pick the few the owner decides on" },
+        { "ref": "library:figures-to-plain-pictures-writer", "type": "prompt", "use": "build", "when": "When a figure will not land with a non-finance owner and needs a comparison they can picture" },
+        { "ref": "library:agency-finance-bookkeeper-controller", "type": "agent", "use": "check", "when": "Before the pack goes out, to find accounts that do not reconcile and odd entries in the close" }
+      ]
+    },
+    {
+      "id": "cash-forecast",
+      "task": "Build a cash forecast and find the tight weeks",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:cash-forecast-builder", "type": "skill", "use": "build", "when": "When you have open invoices, bills and fixed costs and need a 30, 60 and 90 day cash view" },
+        { "ref": "library:prepare-a-seasonal-cash-buffer", "type": "workflow", "use": "build", "when": "When sales are seasonal and the owner needs a dated forecast, a downside case and a buffer" },
+        { "ref": "library:treasury-forecast-backtest-checker", "type": "skill", "use": "check", "when": "When a past forecast exists, to see how far it missed before anyone trusts the new one" },
+        { "ref": "library:room-for-error-plan-checker", "type": "skill", "use": "check", "when": "When the forecast only works if nothing goes wrong, to see where it breaks in a bad year" }
+      ]
+    },
+    {
+      "id": "free-up-cash",
+      "task": "Find cash inside the business when it is short",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:cash-lever-ranker", "type": "skill", "use": "explore", "when": "When cash is tight and you need six levers ranked by how much cash each frees" },
+        { "ref": "library:cash-tied-up-finder", "type": "skill", "use": "brief", "when": "Before you choose a lever, to see whether debtors, stock or supplier terms hold the cash" },
+        { "ref": "library:supplier-payment-terms-planner", "type": "skill", "use": "build", "when": "When longer supplier terms are the lever and you need what to ask for and what it costs" },
+        { "ref": "library:weekly-invoice-and-cash-chaser", "type": "agent", "use": "build", "when": "When late-paying customers are the lever and someone must chase open invoices every week" }
+      ]
+    },
+    {
+      "id": "ninety-day-plan",
+      "task": "Set the finance priorities for the next 90 days",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/finance-health-check", "use": "brief", "when": "Before you set priorities, to know which of the five areas is red and why" },
+        { "ref": "library:cash-lever-ranker", "type": "skill", "use": "explore", "when": "When cash is the red area, to see six levers ranked before you pick three priorities" },
+        { "ref": "library:90-day-plan-builder", "type": "skill", "use": "build", "when": "When the priorities are chosen and each needs an owner, weekly check-ins and risks" },
+        { "ref": "library:failure-first-plan-check", "type": "skill", "use": "check", "when": "When the plan is drafted, to list the ways it could fail and change it first" }
+      ]
+    },
+    {
+      "id": "big-decision-memo",
+      "task": "Weigh one big money decision in a short memo",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/big-decision-memo", "use": "build", "when": "When the owner faces one large choice and wants a two-page memo with options and a call" },
+        { "ref": "library:agency-chief-financial-officer", "type": "agent", "use": "explore", "when": "When you want two to four options side by side with cash out, return and a downside case" },
+        { "ref": "library:business-investment-analyst", "type": "skill", "use": "build", "when": "When the choice is a purchase and you need payback, return and risk worked out" },
+        { "ref": "library:headcount-scenario-planner", "type": "skill", "use": "build", "when": "When the choice is hiring now or later and you need base, best and worst cost cases" },
+        { "ref": "library:bad-year-break-even-tester", "type": "skill", "use": "check", "when": "Before you recommend, to test how big a loss one bad year brings if the bet fails" },
+        { "ref": "library:daniel-kahneman", "type": "mind", "use": "think", "when": "When the owner already loves one option and the forecast behind it looks hopeful" }
+      ]
+    },
+    {
+      "id": "debt-map",
+      "task": "Map every debt and plan the order to pay it off",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/debt-map-and-payoff-plan", "use": "build", "when": "When the owner juggles loans, cards and leases and needs them on one page with true cost" },
+        { "ref": "library:debt-payoff-planner", "type": "skill", "use": "explore", "when": "When you want two payoff orders compared, with the timeline and total interest of each" },
+        { "ref": "library:debt-maturity-funding-ladder", "type": "skill", "use": "check", "when": "When several loans fall due, to check cash covers each date and find the biggest gap" },
+        { "ref": "library:debt-restructuring-plan-drafter", "type": "skill", "use": "build", "when": "When the debts cannot be met as written and each creditor needs proposed new terms" }
+      ]
+    },
+    {
+      "id": "loan-offer-review",
+      "task": "Explain a loan offer and what it really costs",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/loan-offer-plain-words", "use": "build", "when": "When a lender sends an offer letter and the owner needs cost, limits and questions in plain words" },
+        { "ref": "library:contract-and-term-sheet-reviewer", "type": "skill", "use": "check", "when": "When the full agreement arrives, to flag risky terms and when to bring in a lawyer" },
+        { "ref": "library:debt-issue-proceeds-checker", "type": "skill", "use": "check", "when": "When fees and discounts come off the top, to see the cash the business really receives" }
+      ]
+    },
+    {
+      "id": "lender-conversation",
+      "task": "Plan a talk with the lender when payments are tight",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/lender-conversation-plan", "use": "build", "when": "When a missed payment or covenant test is in sight and the owner needs a calm, factual plan" },
+        { "ref": "library:debt-service-covenant-headroom-checker", "type": "skill", "use": "check", "when": "When the loan has a cash cover test and you need the headroom for each test period" },
+        { "ref": "library:negotiation-prep-coach", "type": "skill", "use": "brief", "when": "Before the call, to set the opening, the questions to ask and the fallback" },
+        { "ref": "library:chris-voss", "type": "mind", "use": "think", "when": "When the owner dreads the call and needs to start from how the lender sees it" }
+      ]
+    },
+    {
+      "id": "budget-and-scenarios",
+      "task": "Build the budget and a model with scenarios",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:budget-and-forecast-builder", "type": "skill", "use": "build", "when": "When the owner needs next year's budget and a forecast from past numbers and plans" },
+        { "ref": "library:linked-financial-model-builder", "type": "skill", "use": "build", "when": "When a lender or buyer needs profit, balance sheet and cash models that tie together" },
+        { "ref": "library:room-for-error-plan-checker", "type": "skill", "use": "check", "when": "When the budget is drafted, to score how it survives a bad year and where it breaks" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "Before anyone relies on the workbook, to find formula errors, broken links and tie-out fails" },
+        { "ref": "library:nassim-taleb", "type": "mind", "use": "think", "when": "When the plan has no answer to a shock that could end the business" }
+      ]
+    },
+    {
+      "id": "books-reliability-check",
+      "task": "Check the books can be relied on before advising",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:books-reconciliation-pl", "type": "skill", "use": "check", "when": "When you get ledger and payment reports and need mismatches and missing receipts flagged" },
+        { "ref": "library:cogs-line-sorter", "type": "skill", "use": "check", "when": "When gross margin looks wrong because costs sit in the wrong part of the P&L" },
+        { "ref": "library:agency-finance-bookkeeper-controller", "type": "agent", "use": "check", "when": "When you get bank and ledger exports and need unreconciled accounts and odd entries listed" }
+      ]
+    },
+    {
+      "id": "margin-and-profit",
+      "task": "Find which products, jobs or costs drain profit",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:product-profit-analyst", "type": "skill", "use": "build", "when": "When you have revenue and costs by product and need to see which lines lose money" },
+        { "ref": "library:cogs-line-sorter", "type": "skill", "use": "brief", "when": "Before you read margin, to sort each cost line into direct cost or overhead" },
+        { "ref": "library:john-d-rockefeller", "type": "mind", "use": "think", "when": "When overheads crept up line by line and nobody can say what each one buys" }
+      ]
+    },
+    {
+      "id": "quality-of-earnings",
+      "task": "Rebuild reported profit into profit a buyer can rely on",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/quality-of-earnings-review", "use": "build", "when": "When you have the accounts and need add-backs, one-offs and owner costs set out with proof" },
+        { "ref": "library:owner-earnings-calculator", "type": "skill", "use": "build", "when": "When you need the cash an owner could take out each year, shown as a range" },
+        { "ref": "library:deal-ebitda-addback-checker", "type": "skill", "use": "check", "when": "When an add-back looks large, to test it against a documented cap" },
+        { "ref": "library:suspicious-money-trail-reviewer", "type": "skill", "use": "check", "when": "When the records do not add up and you need the money flows traced and the next checks listed" },
+        { "ref": "library:warren-buffett", "type": "mind", "use": "think", "when": "When adjusted profit keeps growing with every add-back the seller suggests" }
+      ]
+    },
+    {
+      "id": "diligence-request-list",
+      "task": "Write the due diligence request list for a purchase",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/acquisition-diligence-sprint", "use": "brief", "when": "When a buyer has a broker summary or first accounts and needs the steps before an offer" },
+        { "ref": "kit:prompts/due-diligence-request-list", "use": "build", "when": "When you need the documents and answers to ask the seller for, ranked by deal impact" },
+        { "ref": "library:due-diligence-checklist-builder", "type": "skill", "use": "build", "when": "When the list must be split by workstream with status tracking as answers come in" },
+        { "ref": "library:check-a-small-business-before-you-buy-it", "type": "workflow", "use": "build", "when": "When a first-time buyer has the listing and the books and wants a guided first pass" },
+        { "ref": "library:diligence-meeting-prep-writer", "type": "skill", "use": "build", "when": "Before a seller meeting, to get sharp questions, benchmarks and red flags to probe" }
+      ]
+    },
+    {
+      "id": "red-flag-report",
+      "task": "Write a red-flag report on a target's financials",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/quality-of-earnings-review", "use": "brief", "when": "Before you list red flags, to know how far reported profit differs from reliable profit" },
+        { "ref": "library:acquisition-due-diligence", "type": "skill", "use": "build", "when": "When you need red flags and valuation checks pulled into one view of the purchase" },
+        { "ref": "library:customer-concentration-risk", "type": "skill", "use": "check", "when": "When sales lean on a few customers and the buyer needs that risk sized" },
+        { "ref": "library:hand-over-founder-dependent-operations", "type": "workflow", "use": "check", "when": "When profit may depend on the owner, to find the work only the owner does" }
+      ]
+    },
+    {
+      "id": "value-and-price",
+      "task": "Estimate a value range and test the asking price",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:business-valuation-discount", "type": "workflow", "use": "build", "when": "When you have the accounts and a price and need to see if the price leaves room for error" },
+        { "ref": "library:valuation-method-comparer", "type": "skill", "use": "explore", "when": "When you want cash flow, peer multiple and past deal values side by side as a range" },
+        { "ref": "library:price-against-value-checker", "type": "skill", "use": "check", "when": "Before an offer, to set a walk-away price and the best alternative" },
+        { "ref": "library:aswath-damodaran", "type": "mind", "use": "think", "when": "When the seller's growth story and the numbers behind the price do not match" }
+      ]
+    },
+    {
+      "id": "deal-cash-and-closing",
+      "task": "Work out cash needed after buying and at closing",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:cash-forecast-builder", "type": "skill", "use": "build", "when": "When the buyer needs the first 90 days of cash after takeover, with risks named" },
+        { "ref": "library:check-acquisition-refinancing-funds", "type": "workflow", "use": "check", "when": "When new debt funds the deal, to check the cash it raises covers payoff and closing" },
+        { "ref": "library:working-capital-true-up-checker", "type": "skill", "use": "check", "when": "When the price has a working capital target and the true-up after closing must be worked out" },
+        { "ref": "library:closing-equity-proceeds-checker", "type": "skill", "use": "build", "when": "When a seller asks what they will receive at closing after debt and costs" }
+      ]
+    },
+    {
+      "id": "sale-readiness",
+      "task": "Score how ready the business is to sell and plan the fixes",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/sale-readiness-review", "use": "build", "when": "When an owner plans to sell and needs seven areas scored with the evidence behind each" },
+        { "ref": "kit:workflows/sale-preparation-programme", "use": "build", "when": "When the sale is one to three years away and the fixes need a month-by-month programme" },
+        { "ref": "library:hand-over-founder-dependent-operations", "type": "workflow", "use": "build", "when": "When the owner's role scores low and each task needs a deputy and a handover note" },
+        { "ref": "library:succession-plan-builder", "type": "skill", "use": "build", "when": "When key roles have no cover and a buyer will ask who runs the business next" },
+        { "ref": "library:customer-concentration-risk", "type": "skill", "use": "check", "when": "When the customer area scores low, to set limits and a plan a buyer can believe" }
+      ]
+    },
+    {
+      "id": "buyer-document-index",
+      "task": "Build the document index for the buyer's checks",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:prepare-a-due-diligence-document-index", "type": "workflow", "use": "build", "when": "When the files exist and you need a versioned index and a map of what requests they cover" },
+        { "ref": "library:due-diligence-checklist-builder", "type": "skill", "use": "brief", "when": "Before indexing, to know what a buyer in this sector will ask for" },
+        { "ref": "kit:skills/sale-readiness-review", "use": "check", "when": "When the index is drafted, to check each scored area has its evidence filed" }
+      ]
+    },
+    {
+      "id": "broker-profile",
+      "task": "Write a one-page business profile for a broker",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:anonymous-company-teaser-writer", "type": "skill", "use": "explore", "when": "When the business must not be named yet and buyers need a one-page reason to ask for more" },
+        { "ref": "library:company-tear-sheet", "type": "skill", "use": "explore", "when": "When the broker wants a named one-page sheet with financials, ratios and a summary" },
+        { "ref": "library:sale-memorandum-drafter", "type": "skill", "use": "build", "when": "When interest is real and the broker needs the longer sale document drafted" },
+        { "ref": "library:company-story-aligner", "type": "skill", "use": "check", "when": "Before it goes out, to find where the profile contradicts what staff or lenders were told" }
+      ]
+    },
+    {
+      "id": "treasury-and-risk",
+      "task": "Check where cash sits and the money risks around it",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/bank-deposit-exposure-check", "use": "build", "when": "When a large balance sits at one bank and you need how much is above protection limits" },
+        { "ref": "library:cash-and-currency-risk-planner", "type": "skill", "use": "build", "when": "When the business holds debt or foreign currency and needs a liquidity and rate plan" },
+        { "ref": "library:financial-risk-mapper", "type": "skill", "use": "build", "when": "When the owner wants every money risk listed, sized and stress tested" }
+      ]
+    },
+    {
+      "id": "board-or-lender-update",
+      "task": "Prepare a board, investor or lender update",
+      "kind": "other",
+      "items": [
+        { "ref": "library:prepare-a-board-decision-brief", "type": "workflow", "use": "build", "when": "When decisions are due and the board needs an evidence map and a clear update" },
+        { "ref": "library:board-deck-builder", "type": "skill", "use": "build", "when": "When the update is a deck and the story, numbers and bad news need placing" },
+        { "ref": "library:hard-questions-board-prep-coach", "type": "skill", "use": "check", "when": "When the update is drafted, to face the toughest questions before the room asks them" },
+        { "ref": "library:company-story-aligner", "type": "skill", "use": "check", "when": "When lender, board and staff each hear a different version of the numbers" }
+      ]
+    },
+    {
+      "id": "adviser-questions",
+      "task": "Prepare questions for the tax adviser or lawyer",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:agency-finance-tax-strategist", "type": "agent", "use": "build", "when": "When one decision has tax effects and the owner needs facts, options and questions for a tax pro" },
+        { "ref": "library:business-structure-chooser", "type": "skill", "use": "explore", "when": "When the structure may be wrong and you need options compared on risk, tax and paperwork" },
+        { "ref": "library:contract-and-term-sheet-reviewer", "type": "skill", "use": "brief", "when": "When a contract drives the decision and the lawyer needs the risky terms listed first" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:books-reconciliation-pl", "type": "skill", "use": "check", "when": "Before any advice built on the books, to know whether the numbers can be trusted" },
+    { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "Before any workbook leaves, to catch formula errors, broken links and totals that do not tie" },
+    { "ref": "library:data-jargon-translator", "type": "skill", "use": "check", "when": "Before the owner reads it, to find finance jargon and put it in plain words" }
+  ],
+  "helpers": [
+    { "role": "bookkeeper", "when": "When the books are not closed or reconciled and must be fixed before any review" },
+    { "role": "management-accountant", "when": "When the job needs job costing, stock valuation or a full monthly management accounts pack" },
+    { "role": "fpa-analyst", "when": "When the job needs a detailed driver-based budget, forecast or scenario model built" },
+    { "role": "ap-ar-specialist", "when": "When freeing cash depends on chasing customers or resetting supplier payment runs" },
+    { "role": "pricing-strategist", "when": "When thin margin is a pricing problem and prices or discounts must be reset" },
+    { "role": "startup-fundraising-consultant", "when": "When the answer to the cash gap is raising equity from investors" }
+  ],
+  "gaps": [
+    "No library item builds a 13-week direct cash forecast by week; the cash forecast item works in 30, 60 and 90 day blocks",
+    "No library item writes a monthly management pack for an owner-led business; only the kit prompt covers it",
+    "No library item compares lease, hire purchase and outright purchase for equipment, vehicles or property",
+    "No library item works out the true yearly cost of an ordinary bank loan, card or merchant cash advance with all fees",
+    "No library item reviews a personal guarantee or lists the security a lender holds",
+    "No library item compares funding routes for a small firm: term loan, overdraft, asset finance, invoice finance or a government-backed loan",
+    "No library item does a quality of earnings review for a small private business; the add-back checker only tests one add-back against a cap",
+    "No library item runs a proof of cash test that ties reported sales to bank receipts",
+    "No library item scores sale readiness or plans an exit; searches for exit planning returned staff exit interviews",
+    "No library item explains or compares deal terms for a small business sale: earn-outs, seller loans, deferred payment or a letter of intent",
+    "No library item checks bank deposit protection limits or writes a simple cash policy for a small firm",
+    "No library item helps an owner choose how to pay themselves (salary, dividends, drawings) with questions for their accountant",
+    "No library item reviews a commercial property lease from the tenant's money side",
+    "No library item sets up a finance function: which accounting system, who does what, and a first set of controls"
+  ]
+}

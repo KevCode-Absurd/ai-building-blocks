@@ -1,0 +1,289 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "management-accountant",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "month-end-close",
+      "task": "Plan and run the month-end close",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/monthly-management-accounts-cycle", "use": "brief", "when": "When a month has ended and you need the order of work from cut-off to the approved pack" },
+        { "ref": "library:month-end-close-planner", "type": "skill", "use": "build", "when": "When the owner closes the books alone and needs a dated task list with owners and blockers" },
+        { "ref": "library:close-the-month-and-explain-every-line-that-moved", "type": "workflow", "use": "build", "when": "When you want one guided run from close tasks to draft statements and a note on each line" },
+        { "ref": "library:agency-finance-bookkeeper-controller", "type": "agent", "use": "check", "when": "When the close looks done, to find accounts that do not reconcile and odd entries" }
+      ]
+    },
+    {
+      "id": "accruals-and-journals",
+      "task": "List the accruals, prepayments and journals to post",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:accrual-schedule-drafter", "type": "skill", "use": "build", "when": "When costs belong to the month but have no bill yet and each accrual needs support" },
+        { "ref": "library:journal-entry-preparer", "type": "skill", "use": "build", "when": "When an adjustment is agreed and needs debits, credits and support ready for review" },
+        { "ref": "library:balance-roll-forward-builder", "type": "skill", "use": "check", "when": "After posting, to tie each balance from opening to closing against the ledger" }
+      ]
+    },
+    {
+      "id": "reconciliations",
+      "task": "Reconcile the bank and the balance sheet accounts",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:reconcile-the-bank-to-your-books-and-issue-a-clean-p-and-l", "type": "workflow", "use": "build", "when": "When you have the bank statement and ledger and need matches and each gap traced to a cause" },
+        { "ref": "library:books-reconciliation-pl", "type": "skill", "use": "check", "when": "When payment reports and the ledger disagree and you need duplicates and missing receipts found" },
+        { "ref": "library:reconciliation-break-tracer", "type": "skill", "use": "check", "when": "When one difference will not clear and must be traced to its source entries on both sides" },
+        { "ref": "library:balance-roll-forward-builder", "type": "skill", "use": "build", "when": "When a balance sheet line needs its movement shown from opening to closing" }
+      ]
+    },
+    {
+      "id": "management-accounts-pack",
+      "task": "Write the monthly management accounts pack",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/management-accounts-pack", "use": "build", "when": "When the month is closed and an owner, board or lender needs a pack they can read in five minutes" },
+        { "ref": "library:p-l-and-balance-sheet-writer", "type": "skill", "use": "build", "when": "When you need the statements drawn from the books with the big swings flagged" },
+        { "ref": "library:variance-commentary", "type": "skill", "use": "build", "when": "When lines moved against last month and each needs a plain written reason" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When the pack is long and the first page must give the answer and the impact in numbers" },
+        { "ref": "library:cash-versus-earnings-checker", "type": "skill", "use": "check", "when": "When profit is up but cash is not, to show the gap before a reader asks" },
+        { "ref": "library:cole-nussbaumer-knaflic", "type": "mind", "use": "think", "when": "When the pack is a wall of tables and the reader cannot see what changed" }
+      ]
+    },
+    {
+      "id": "budget-versus-actual",
+      "task": "Compare actual results with the budget",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/flexed-budget-review", "use": "build", "when": "When volume differed from plan and the budget must be flexed before costs are judged" },
+        { "ref": "library:budget-variance-explainer", "type": "skill", "use": "build", "when": "When you have actual and budget numbers and need what moved, why, and a note for leaders" },
+        { "ref": "library:explain-a-department-budget-overrun", "type": "workflow", "use": "build", "when": "When one team overspent and the budget owner needs a reconciled report and options" },
+        { "ref": "library:monthly-budget-versus-actual-keeper", "type": "agent", "use": "build", "when": "When the review repeats each month and should carry last month's reasons forward" },
+        { "ref": "library:production-cost-variance", "type": "skill", "use": "build", "when": "When a production cost gap must be split into price, volume and efficiency causes" }
+      ]
+    },
+    {
+      "id": "lender-pack",
+      "task": "Prepare a financial pack and ratio sheet for a lender",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/management-accounts-pack", "use": "build", "when": "When a bank or partner asks for current accounts with notes they can follow" },
+        { "ref": "library:financial-statement-analyst", "type": "skill", "use": "build", "when": "When the lender wants ratios and you need them worked out with a simple health read" },
+        { "ref": "library:cash-forecast-builder", "type": "skill", "use": "build", "when": "When the lender asks how the next 90 days of cash look, with risks named" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "Before the pack goes to the bank, to catch broken formulas and statements that do not tie" }
+      ]
+    },
+    {
+      "id": "product-margin",
+      "task": "Show profit per product and per order after every cost",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/product-margin-analysis", "use": "build", "when": "When you have sales, cost, fee and returns exports and need true margin by product and channel" },
+        { "ref": "library:missing-product-cost-finder", "type": "skill", "use": "check", "when": "Before any margin report, to find products with no cost set" },
+        { "ref": "library:landed-cost-allocator", "type": "skill", "use": "build", "when": "When freight and duty sit in one bill and must be spread to a true cost per unit" },
+        { "ref": "library:return-cost-calculator", "type": "skill", "use": "build", "when": "When returns eat margin and you need their true cost by reason and product" },
+        { "ref": "library:per-order-profit-calculator", "type": "prompt", "use": "build", "when": "When you need profit on one order type with every cost, and what moves it most" },
+        { "ref": "library:build-a-monthly-p-and-l-and-know-your-real-margin", "type": "workflow", "use": "build", "when": "When a seller has invoices and sales but no monthly P&L to read margin from" }
+      ]
+    },
+    {
+      "id": "discount-check",
+      "task": "Check a planned discount, sale or price covers its costs",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:discount-and-price-change-checker", "type": "agent", "use": "check", "when": "When a sale is planned and you need the deepest discount the margin allows" },
+        { "ref": "library:price-a-product-so-it-pays-after-delivery-ads-and-discounts", "type": "workflow", "use": "explore", "when": "When the price itself is in doubt, to compare three test prices after every cost" },
+        { "ref": "kit:skills/product-margin-analysis", "use": "brief", "when": "Before judging a discount, to know the true margin of the products in it" }
+      ]
+    },
+    {
+      "id": "keep-fix-cut",
+      "task": "Make a keep, fix or cut list for the range",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:workflows/quarterly-profitability-and-controls-review", "use": "brief", "when": "When three monthly packs are approved and the quarter's profit by product is due a review" },
+        { "ref": "library:product-profit-analyst", "type": "skill", "use": "build", "when": "When you need each product's margin ranked and the loss-makers named" },
+        { "ref": "library:job-test-product-line-cutter", "type": "skill", "use": "explore", "when": "When margin alone cannot decide, to sort each product by the job it does for buyers" },
+        { "ref": "library:decision-bias-pileup-checker", "type": "skill", "use": "check", "when": "Before cutting a line the owner is attached to, to name the pressures on the call" }
+      ]
+    },
+    {
+      "id": "unit-costing",
+      "task": "Work out the true cost of a unit, batch or dish",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:manufacturing-yield-cost-bridge", "type": "skill", "use": "build", "when": "When a batch loses weight or units in production and you need cost per good unit" },
+        { "ref": "library:restaurant-portion-cost-builder", "type": "skill", "use": "build", "when": "When a kitchen needs cost per portion from real weights and trim loss" },
+        { "ref": "library:landed-cost-allocator", "type": "skill", "use": "build", "when": "When imported goods need freight, duty and fees added to the supplier price" },
+        { "ref": "library:inventory-value-calculator", "type": "skill", "use": "build", "when": "When stock must be valued at first-in first-out or average cost from purchases and counts" },
+        { "ref": "library:henry-ford", "type": "mind", "use": "think", "when": "When the unit cost is high and nobody has asked which steps and parts are needless" }
+      ]
+    },
+    {
+      "id": "job-costing",
+      "task": "Report what each job or project really earned",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/job-and-service-costing", "use": "build", "when": "When you have timesheets, job costs, bills and invoices and need profit by job" },
+        { "ref": "library:payroll-timesheet-checker", "type": "skill", "use": "check", "when": "Before costing labour, to total hours by person and flag every oddity in the timesheets" },
+        { "ref": "library:project-cost-progress-tracker", "type": "skill", "use": "build", "when": "When a job is still running and you need cost and schedule indexes and a finish cost" },
+        { "ref": "library:outside-view-timeline-estimator", "type": "prompt", "use": "check", "when": "When an estimate looks hopeful, to correct it by how jobs like it really ran" }
+      ]
+    },
+    {
+      "id": "rates-and-quote-rules",
+      "task": "Set a labour and overhead rate and rules for quotes",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/job-and-service-costing", "use": "brief", "when": "Before setting a rate, to see which past job types lost money and why" },
+        { "ref": "library:hourly-rate-calculator", "type": "skill", "use": "build", "when": "When you need an hourly, day and project rate from pay, costs and billable hours" },
+        { "ref": "library:client-fee-and-cap-setter", "type": "skill", "use": "build", "when": "When a service firm needs a fee floor, billing terms and a cap on any one client" }
+      ]
+    },
+    {
+      "id": "utilisation-and-effective-rate",
+      "task": "Find which clients and services really pay",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/utilisation-and-effective-rate", "use": "build", "when": "When a service firm is busy all year with little profit and partners want it by client" },
+        { "ref": "library:service-utilization-margin-builder", "type": "skill", "use": "build", "when": "When you have a month of paid hours and need utilisation, revenue and delivery margin" },
+        { "ref": "library:reconcile-service-capacity-and-shared-cost", "type": "workflow", "use": "check", "when": "When hours, revenue and shared costs must tie before partners see the result" },
+        { "ref": "library:quarterly-client-rate-reviewer", "type": "agent", "use": "build", "when": "When the review repeats each quarter and should show each client's real rate" },
+        { "ref": "library:project-time-and-expense-plan", "type": "skill", "use": "build", "when": "When time is logged late or loosely and the firm needs entry rules and approval steps" }
+      ]
+    },
+    {
+      "id": "wip-schedule",
+      "task": "Build a WIP schedule with over and under billing",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/wip-schedule-over-under-billing", "use": "build", "when": "When a contractor runs several jobs and needs to see which are billed ahead or behind" },
+        { "ref": "library:project-cost-progress-tracker", "type": "skill", "use": "build", "when": "When each job needs its cost to date set against budget and a forecast finish cost" },
+        { "ref": "library:contract-asset-billing-cash-bridge", "type": "skill", "use": "check", "when": "When earned revenue, invoices and cash collected must be told apart for the period" },
+        { "ref": "library:completion-funding-gap-checker", "type": "skill", "use": "check", "when": "When a half-built job may not have enough money left to finish" },
+        { "ref": "library:revenue-recognition-checker", "type": "skill", "use": "check", "when": "When a contract's terms decide when revenue counts and you need the timing set out" }
+      ]
+    },
+    {
+      "id": "relevant-cost-decision",
+      "task": "Decide a one-off choice using relevant costs",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/relevant-cost-decision", "use": "build", "when": "When the choice is take the job, keep the line or make or buy, and the P&L misleads" },
+        { "ref": "library:business-investment-analyst", "type": "skill", "use": "build", "when": "When the choice needs new spending and you need payback, return and risk" },
+        { "ref": "library:decision-bias-pileup-checker", "type": "skill", "use": "check", "when": "Before you recommend, to name the pressures bending the owner's judgment" },
+        { "ref": "library:john-d-rockefeller", "type": "mind", "use": "think", "when": "When costs are being argued about and nobody has traced which ones truly change" }
+      ]
+    },
+    {
+      "id": "annual-budget",
+      "task": "Build the annual budget",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:budget-and-forecast-builder", "type": "skill", "use": "build", "when": "When you have past numbers and plans and need a budget and forecast with gaps noted" },
+        { "ref": "library:department-budget-planner", "type": "skill", "use": "build", "when": "When the budget must be split by team and phased across the year" },
+        { "ref": "library:room-for-error-plan-checker", "type": "skill", "use": "check", "when": "When the budget is drafted, to see where it breaks in a bad year" }
+      ]
+    },
+    {
+      "id": "nonprofit-budget",
+      "task": "Build a nonprofit budget with a cautious case",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:nonprofit-operating-budget-planner", "type": "skill", "use": "build", "when": "When a charity needs funding assumptions, programme costs and shared-cost splits for the board" },
+        { "ref": "library:room-for-error-plan-checker", "type": "skill", "use": "explore", "when": "When funding may fall, to build the cautious case and see what must be cut first" },
+        { "ref": "library:grant-restrictions-cash-reconciler", "type": "skill", "use": "brief", "when": "Before budgeting, to know how much cash is free and how much is tied to grants" }
+      ]
+    },
+    {
+      "id": "grant-tracker",
+      "task": "Track grant money and keep restricted funds apart",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:grant-restrictions-cash-reconciler", "type": "skill", "use": "build", "when": "When the bank balance mixes grant money and free money and both must be shown" },
+        { "ref": "library:prepare-a-grant-spending-evidence-pack", "type": "workflow", "use": "build", "when": "When a funder report is due and spending must be reconciled with evidence" },
+        { "ref": "library:hand-over-a-restricted-fund-program", "type": "workflow", "use": "build", "when": "When a new person takes over a fund and needs its rules, records and open items" }
+      ]
+    },
+    {
+      "id": "nonprofit-board-report",
+      "task": "Write a finance report for a charity board",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/nonprofit-board-finance-report", "use": "build", "when": "When trustees meet next week and need a five-minute report with restricted money kept apart" },
+        { "ref": "library:nonprofit-executive-dashboard-planner", "type": "skill", "use": "brief", "when": "When the board has no agreed measures and you must pick what staff and trustees each see" },
+        { "ref": "library:figures-to-plain-pictures-writer", "type": "prompt", "use": "build", "when": "When trustees are not finance people and a figure needs a comparison they can picture" },
+        { "ref": "library:grant-restrictions-cash-reconciler", "type": "skill", "use": "check", "when": "Before the report goes out, to check restricted and free balances add up to the bank" }
+      ]
+    },
+    {
+      "id": "money-controls-review",
+      "task": "Review the controls that stop money going missing",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/money-controls-review", "use": "build", "when": "When one or two people handle all the money tasks or a near miss has happened" },
+        { "ref": "kit:workflows/quarterly-profitability-and-controls-review", "use": "brief", "when": "When the quarterly review is due and controls are checked alongside profit" },
+        { "ref": "library:internal-controls-testing", "type": "skill", "use": "check", "when": "When controls exist on paper and you need a test plan, sample sizes and a gap rating" },
+        { "ref": "library:90-day-plan-builder", "type": "skill", "use": "build", "when": "When the gaps are ranked and the fixes need owners, dates and check-ins" }
+      ]
+    },
+    {
+      "id": "transaction-scan",
+      "task": "Scan transactions and invoices for odd patterns",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:unusual-transaction-finder", "type": "skill", "use": "check", "when": "When you have a large export and need the odd ones flagged with a reason for each" },
+        { "ref": "library:check-supplier-invoices-before-approval", "type": "workflow", "use": "check", "when": "Before a payment run, to match invoices and list amounts needing a look" },
+        { "ref": "library:recurring-invoice-exception-review-assistant", "type": "agent", "use": "check", "when": "When the check repeats and should carry open exceptions forward with evidence" },
+        { "ref": "library:invoice-totals-checker", "type": "skill", "use": "check", "when": "When one invoice looks wrong and every line and total needs recalculating" }
+      ]
+    },
+    {
+      "id": "approval-policy",
+      "task": "Write a one-page approval and sign-off policy",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/money-controls-review", "use": "brief", "when": "Before writing the policy, to know which gaps it must close" },
+        { "ref": "library:project-time-and-expense-plan", "type": "skill", "use": "build", "when": "When time and expense claims need entry rules and approval steps" },
+        { "ref": "library:make-a-new-policy-understandable-to-staff", "type": "workflow", "use": "build", "when": "When the policy is approved and staff need it in plain words with what changes for them" }
+      ]
+    },
+    {
+      "id": "kpi-report",
+      "task": "Set up a recurring KPI report from the numbers",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:kpi-dashboard-designer", "type": "skill", "use": "brief", "when": "When nobody has agreed who reads the report and what they decide from it" },
+        { "ref": "library:recurring-kpi-report-maker", "type": "skill", "use": "build", "when": "When the report is described and needs the numbers pulled into a workbook you can rerun" },
+        { "ref": "library:align-recurring-report-metric-definitions", "type": "workflow", "use": "check", "when": "When two reports show different figures for the same measure" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:data-quality-scorecard-maker", "type": "skill", "use": "check", "when": "Before any analysis of an export, to check for blanks, duplicates and stale rows" },
+    { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "Before any workbook leaves, to catch formula errors, broken links and totals that do not tie" },
+    { "ref": "library:data-jargon-translator", "type": "skill", "use": "check", "when": "Before an owner or trustee reads it, to find accounting jargon and put it in plain words" }
+  ],
+  "helpers": [
+    { "role": "bookkeeper", "when": "When transactions are not coded or the bank is not reconciled and the close cannot start" },
+    { "role": "fpa-analyst", "when": "When the job needs a driver-based forecast or a scenario model beyond the budget" },
+    { "role": "fractional-cfo", "when": "When the numbers lead to a debt, funding or sale decision the owner must make" },
+    { "role": "pricing-strategist", "when": "When margin work shows prices or discount rules need a full reset" },
+    { "role": "ap-ar-specialist", "when": "When the fix is in supplier payment runs or chasing customer invoices" },
+    { "role": "spreadsheet-specialist", "when": "When the pack or cost sheet needs a workbook built to be reused each month" }
+  ],
+  "gaps": [
+    "No library item flexes a budget to actual volume before comparing costs; only the kit skill does",
+    "No library item costs a job or project from timesheets, bills and invoices, or compares estimate with actual for one job",
+    "No library item builds a contractor's WIP schedule with over and under billing, a schedule of values or a progress invoice",
+    "No library item tracks retention held on construction jobs or reports job profit fade",
+    "No library item analyses write-offs and scope creep for a service firm",
+    "No library item works out a labour burden rate or an overhead recovery rate to price with",
+    "No library item handles relevant costs for a one-off choice such as a special order, dropping a line or make or buy",
+    "No library item reviews money controls for a small team: who can pay, who checks, and changed bank details",
+    "No library item writes an approval and sign-off policy with spending limits",
+    "No library item builds a prepayment schedule or a general management accounts pack with notes",
+    "No library item writes a finance report for charity trustees or handles fund accounting beyond cash",
+    "No library item does break-even or cost-volume-profit work for a business that is not an online store",
+    "No library item designs or tidies a chart of accounts",
+    "No library item reconciles a stock count to the books"
+  ]
+}

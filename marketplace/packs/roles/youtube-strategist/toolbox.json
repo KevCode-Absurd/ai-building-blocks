@@ -1,0 +1,300 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "youtube-strategist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "video-script",
+      "task": "Write a YouTube video script that holds viewers",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/retention-script", "use": "build", "when": "When the title and promise are set and you need a timed script with B-roll notes and chapters" },
+        { "ref": "library:youtube-script-writer", "type": "skill", "use": "explore", "when": "Before the full draft, to get several scored opening options and a second take on the script" },
+        { "ref": "library:video-opening-line-batch-writer", "type": "prompt", "use": "explore", "when": "When the first line is flat, to get ten different openings and the two to film first" },
+        { "ref": "library:alfred-hitchcock", "type": "mind", "use": "think", "when": "When the script tells everything at once and needs a reason to keep watching" },
+        { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "When the draft is done, to find and fix every line that trips when spoken" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before filming, to give every fact in the script a dated source, a rewrite or a cut" }
+      ]
+    },
+    {
+      "id": "title-thumbnail-pair",
+      "task": "Write the title and thumbnail pair for a video",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:skills/title-and-thumbnail-concepts", "use": "build", "when": "When you know the video's promise and need a title and thumbnail that say it together" },
+        { "ref": "library:thumbnail-and-title-planner", "type": "skill", "use": "explore", "when": "When you want several different pairs to compare, with the first minute written to pay them off" },
+        { "ref": "library:mrbeast", "type": "mind", "use": "think", "when": "When the pair is accurate but nobody would click it, or it promises more than the video gives" },
+        { "ref": "library:youtube-title-thumbnail-check", "type": "skill", "use": "check", "when": "Before upload, to check title length and that the thumbnail does not repeat the title" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When you have two to four pairs and want a fresh reviewer to pick one and say what to borrow" }
+      ]
+    },
+    {
+      "id": "thumbnail-concepts",
+      "task": "Design three thumbnail concepts for a video",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:one-symbol-concept-finder", "type": "skill", "use": "brief", "when": "Before any layout, to find the one idea, one feeling and one image the thumbnail should carry" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "When the client must see three clearly different thumbnails at real size, with one chosen" },
+        { "ref": "kit:skills/title-and-thumbnail-concepts", "use": "build", "when": "When each concept needs its face, object, three words at most and a matching title" },
+        { "ref": "library:saul-bass", "type": "mind", "use": "think", "when": "When the thumbnail is a collage of everything and needs one bold shape" },
+        { "ref": "library:pack-and-thumbnail-glance-tester", "type": "skill", "use": "check", "when": "When a thumbnail is drafted, to score what a viewer takes in within three seconds" },
+        { "ref": "library:canva", "type": "tool", "use": "build", "when": "When the client's team will build the chosen thumbnail themselves from a template" }
+      ]
+    },
+    {
+      "id": "channel-plan",
+      "task": "Build a six-month channel plan and topic map",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:content-pillar-finder", "type": "skill", "use": "brief", "when": "Before the plan, to find the three to five subjects the business can speak on again and again" },
+        { "ref": "kit:skills/channel-plan-and-topic-map", "use": "build", "when": "When you know the business goal and need series, topics, cadence and targets for six months" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the client could go search-led or series-led, to compare two plans with hours and dates" },
+        { "ref": "library:youtube-upload-planner", "type": "skill", "use": "build", "when": "When the owner has few free hours and the plan must fit them, with what to drop first" },
+        { "ref": "library:rand-fishkin", "type": "mind", "use": "think", "when": "When the plan guesses who watches, to ask where these buyers really pay attention" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the plan is drafted, to have a fresh reviewer read it as the client and list fixes" }
+      ]
+    },
+    {
+      "id": "search-topics",
+      "task": "Find video topics people search for",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/search-topic-ideas", "use": "build", "when": "When you have customer questions, comments or Trends screenshots and need ideas people look for" },
+        { "ref": "library:keyword-research-planner", "type": "skill", "use": "brief", "when": "When you need a ranked list of question searches grouped by what the searcher wants" },
+        { "ref": "library:comment-mining-analyst", "type": "skill", "use": "brief", "when": "When the best source is what viewers ask and complain about in their own words" },
+        { "ref": "library:youtube-viral-video-finder", "type": "skill", "use": "brief", "when": "When you want videos in the niche that beat their channel's usual views, as topic proof" }
+      ]
+    },
+    {
+      "id": "test-pairs",
+      "task": "Set up title and thumbnail test variants",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:prompts/title-and-thumbnail-test-pairs", "use": "build", "when": "When a video is nearly ready and you need the pair to publish plus variants for Test and compare" },
+        { "ref": "library:thumbnail-and-title-planner", "type": "skill", "use": "explore", "when": "When the variants are too alike and you need pairs that test truly different promises" },
+        { "ref": "library:pick-a-title-and-thumbnail-then-fix-where-viewers-leave", "type": "workflow", "use": "build", "when": "When you want one guided run from picking the pair to the change that holds viewers" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When you must pick the pair to publish first and want a pick that is not your own" }
+      ]
+    },
+    {
+      "id": "analytics-review",
+      "task": "Review 90 days of channel analytics",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/channel-analytics-review", "use": "build", "when": "When you have YouTube Studio exports or screenshots and need a read by series, source and audience" },
+        { "ref": "kit:workflows/quarterly-channel-review", "use": "build", "when": "Every 90 days, or when growth stalls, to run the review and the refresh in a set order" },
+        { "ref": "library:youtube-channel-auditor", "type": "skill", "use": "check", "when": "When you have only a channel link or three videos and need the one fix that matters most" }
+      ]
+    },
+    {
+      "id": "retention-fix",
+      "task": "Fix where viewers leave a published video",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:youtube-transcript-saver", "type": "skill", "use": "brief", "when": "When you have only the link and need a clean transcript to set against the graph" },
+        { "ref": "library:youtube-retention-reader", "type": "skill", "use": "check", "when": "When you have the retention export, to see where viewers leave and what was said then" },
+        { "ref": "kit:prompts/retention-dip-rewrite", "use": "build", "when": "When you know the dips and need the weak passages rewritten for the next video or a re-cut" },
+        { "ref": "library:story-shape-mapper", "type": "skill", "use": "check", "when": "When there is no clear dip, to map the script's flat spots and get one fix" },
+        { "ref": "library:william-zinsser", "type": "mind", "use": "think", "when": "When the opening takes too long to reach the point and needs cutting to what viewers need" }
+      ]
+    },
+    {
+      "id": "shorts-from-long",
+      "task": "Cut a long video into Shorts and script new ones",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/long-video-to-shorts", "use": "build", "when": "When you have a long video, webinar or podcast and want Shorts that send viewers to the full one" },
+        { "ref": "library:shorts-clip-finder", "type": "skill", "use": "build", "when": "When you have the transcript and need the best five moments, each with a new first line" },
+        { "ref": "library:cut-chapter-and-clip-a-long-video-into-five-shorts", "type": "workflow", "use": "build", "when": "When you want one run that gives the cut list, the chapters and five clips together" },
+        { "ref": "library:short-video-format-picker", "type": "skill", "use": "explore", "when": "When the Short is new, not a clip, to pick a format and get an outline and ten openings" },
+        { "ref": "library:short-video-hook-writer", "type": "skill", "use": "explore", "when": "When a clip's first line is weak, to get ten openings checked for length and first shot" },
+        { "ref": "library:video-hook-scorer", "type": "skill", "use": "check", "when": "Before cutting, to score each opening out of 100 and get rewrites for the weak ones" },
+        { "ref": "library:capcut", "type": "tool", "use": "build", "when": "When the owner will cut, caption and resize the Shorts on a phone" }
+      ]
+    },
+    {
+      "id": "upload-metadata",
+      "task": "Write the description, chapters, tags and captions",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:youtube-description-tags", "type": "skill", "use": "build", "when": "When the video is cut and needs a description and tags built around the searches to win" },
+        { "ref": "library:youtube-chapter-writer", "type": "skill", "use": "build", "when": "When you have the transcript and need chapters that follow YouTube's rules and show up" },
+        { "ref": "library:subtitle-and-transcript-maker", "type": "skill", "use": "build", "when": "When the video has no captions and needs a transcript and a timed subtitle file" },
+        { "ref": "library:youtube-title-and-tags-writer", "type": "skill", "use": "explore", "when": "When you want a second version of the title, description and timestamps to compare" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "When the description links to an offer, to check a viewer can get it today from that link" }
+      ]
+    },
+    {
+      "id": "back-catalogue",
+      "task": "Refresh titles and descriptions on older videos",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:youtube-channel-browser", "type": "skill", "use": "brief", "when": "When you need the list of uploads and a search inside them before you choose which to refresh" },
+        { "ref": "kit:prompts/back-catalogue-refresh", "use": "build", "when": "When older videos still get views but little search traffic, or titles miss what people search" },
+        { "ref": "library:youtube-title-and-tags-writer", "type": "skill", "use": "check", "when": "When one old video is stuck, to audit its title, description and tags and get new ones" },
+        { "ref": "library:youtube-title-thumbnail-check", "type": "skill", "use": "check", "when": "Before you change a live title, to check length and that it does not repeat the thumbnail" }
+      ]
+    },
+    {
+      "id": "weekly-cycle",
+      "task": "Run the weekly video cycle from idea to upload",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/weekly-video-cycle", "use": "build", "when": "Every week on a fixed day, for each long video in the plan and the Shorts that follow it" },
+        { "ref": "library:youtube-upload-planner", "type": "skill", "use": "brief", "when": "When the week is short on hours and you must choose formats and what to drop first" }
+      ]
+    },
+    {
+      "id": "thumbnail-style-system",
+      "task": "Build a thumbnail style system for a channel",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:design-style-analyst", "type": "skill", "use": "brief", "when": "When the client shares thumbnails they like, to turn them into colours, type and feel to reuse" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "When the channel has no look yet, to compare three directions made at real size" },
+        { "ref": "library:visual-system-rules-writer", "type": "skill", "use": "build", "when": "When a direction is picked, to write firm rules for colour, type and layout on every thumbnail" },
+        { "ref": "library:reusable-reel-cover-recipe-builder", "type": "skill", "use": "build", "when": "When the look uses the host's portrait and a title, to set one recipe anyone can repeat" },
+        { "ref": "library:pack-and-thumbnail-glance-tester", "type": "skill", "use": "check", "when": "When the system is drafted, to test sample thumbnails for a three-second read at small size" }
+      ]
+    },
+    {
+      "id": "thumbnail-backgrounds",
+      "task": "Write AI image prompts for thumbnail backgrounds",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:agency-design-image-prompt-engineer", "type": "agent", "use": "build", "when": "When you need a prompt that sets subject, light, camera and style, with a leave-out list" },
+        { "ref": "library:midjourney-four-direction-prompt-writer", "type": "skill", "use": "explore", "when": "When one background idea should be tried as four different treatments" },
+        { "ref": "library:ideogram", "type": "tool", "use": "build", "when": "When the image itself must carry two or three words spelt correctly" },
+        { "ref": "library:pack-and-thumbnail-glance-tester", "type": "skill", "use": "check", "when": "When a background is made, to check the face and words still read over it in three seconds" }
+      ]
+    },
+    {
+      "id": "face-shot-setup",
+      "task": "Plan a face-shot set-up for thumbnails",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:creative-shoot-briefer", "type": "skill", "use": "build", "when": "When the host or a photographer needs one brief for the expressions, light and backdrop" },
+        { "ref": "library:reusable-reel-cover-recipe-builder", "type": "skill", "use": "brief", "when": "Before the shoot, to fix how the portrait sits with the title so the shots fit the layout" }
+      ]
+    },
+    {
+      "id": "explainer-script",
+      "task": "Script a tutorial or explainer video",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:word-picture-explainer", "type": "skill", "use": "brief", "when": "Before writing, to plan which diagram or visual pairs with the words so the point sticks" },
+        { "ref": "kit:skills/retention-script", "use": "build", "when": "When the steps are known and you need timed sections that each pay off for the viewer" },
+        { "ref": "library:youtube-script-writer", "type": "skill", "use": "explore", "when": "When you want a different structure for the same lesson, with what shows on screen" },
+        { "ref": "library:carl-sagan", "type": "mind", "use": "think", "when": "When a hard idea must be made clear without losing what the evidence really shows" },
+        { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "When the steps read well on paper, to catch lines that trip when said aloud" }
+      ]
+    },
+    {
+      "id": "series-plan",
+      "task": "Plan a video series or a founder-led run",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:founder-video-series-planner", "type": "skill", "use": "build", "when": "When the founder is on camera and you have buyer questions for a ten-week plan and set-up" },
+        { "ref": "library:serial-story-planner", "type": "skill", "use": "explore", "when": "When one subject should run across parts, to give each part a job and a reason to return" },
+        { "ref": "library:founder-video-month", "type": "workflow", "use": "build", "when": "When the client wants a month of episodes, the first script and an edit plan in one run" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When you have two or three series ideas and want a fresh reviewer to pick one" }
+      ]
+    },
+    {
+      "id": "rival-channels",
+      "task": "Study rival channels and winning videos",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:youtube-viral-video-finder", "type": "skill", "use": "brief", "when": "When you need the niche's videos that beat their channel's usual views, ranked" },
+        { "ref": "library:youtube-transcript-reader", "type": "skill", "use": "brief", "when": "When you need a rival channel's video list, new uploads and transcripts to read" },
+        { "ref": "library:social-video-transcript-analyst", "type": "skill", "use": "build", "when": "When you have rival videos and want their openings, claims and themes pulled out" },
+        { "ref": "library:creator-profile-teardown-writer", "type": "skill", "use": "build", "when": "When one channel is the model, to write up its positioning, themes and what to test" }
+      ]
+    },
+    {
+      "id": "launch-from-zero",
+      "task": "Start a brand's channel from zero",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:youtube-channel-growth-kit", "type": "skill", "use": "build", "when": "When there is no channel yet and the client wants ideas, scripts, thumbnails and a calendar" },
+        { "ref": "kit:skills/channel-plan-and-topic-map", "use": "build", "when": "When the first six months need series, a topic map, cadence and honest targets" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When budget and hours are tight, to compare a small start with a fuller one, with dates" }
+      ]
+    },
+    {
+      "id": "playlists-channel-page",
+      "task": "Structure playlists and the channel page",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:youtube-playlist-reader", "type": "skill", "use": "brief", "when": "When you need every video in the current playlists listed before you regroup them" },
+        { "ref": "kit:skills/channel-plan-and-topic-map", "use": "build", "when": "When playlists should follow the plan's series, so each has one viewer and one promise" },
+        { "ref": "library:shortlist-running-order", "type": "skill", "use": "build", "when": "When a playlist needs its best few videos chosen and put in an order that holds attention" }
+      ]
+    },
+    {
+      "id": "edit-plan",
+      "task": "Plan the edit, B-roll and on-screen text",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:cut-a-raw-recording-and-get-chapters-and-short-clips", "type": "workflow", "use": "build", "when": "When you have a raw recording and need clean speech, a timed cut list and chapters" },
+        { "ref": "library:social-video-edit-planner", "type": "skill", "use": "build", "when": "When you have clips and the idea, and need a timed cut list, captions and export checks" },
+        { "ref": "library:branded-video-captions", "type": "skill", "use": "build", "when": "When captions must be timed in the brand font, with a subtitle file and a fault list" },
+        { "ref": "library:agency-marketing-short-video-editing-coach", "type": "agent", "use": "check", "when": "When a cut exists, to get caption and sound checks and fixes ranked by impact" },
+        { "ref": "library:descript", "type": "tool", "use": "build", "when": "When the owner edits a talking video and would rather cut the transcript than a timeline" }
+      ]
+    },
+    {
+      "id": "comments",
+      "task": "Reply to comments and mine them for ideas",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:youtube-comment-reply-writer", "type": "skill", "use": "build", "when": "When comments pile up, to sort them, draft short replies in the host's voice and pick one to pin" },
+        { "ref": "library:comment-mining-analyst", "type": "skill", "use": "brief", "when": "When you want the repeat questions and complaints counted as ideas for the next videos" }
+      ]
+    },
+    {
+      "id": "repurpose",
+      "task": "Turn a video into posts, emails and an article",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:content-repurposer", "type": "skill", "use": "build", "when": "When one strong video should become an article, emails, posts and clips, each in its own form" },
+        { "ref": "library:long-form-post-repurposer", "type": "skill", "use": "build", "when": "When the transcript should become an X or LinkedIn post that works without a click" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the set is drafted, to have a fresh reviewer read it as the client and list fixes" }
+      ]
+    },
+    {
+      "id": "review-or-sponsored",
+      "task": "Script a product review or a sponsored segment",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:honest-product-review-writer", "type": "skill", "use": "build", "when": "When the video reviews products, to build it on real evidence with no made-up hands-on claims" },
+        { "ref": "library:video-opening-line-batch-writer", "type": "prompt", "use": "explore", "when": "When the segment needs several ways in, to get ten openings and the two to film first" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "When the sponsor supplies claims, to give each a dated source, a rewrite or a cut" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any work that must look or sound like the client's own site and channel" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any title, description or script is handed over, to catch typos and names spelt two ways" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a script or title states a number, a record or a result you cannot trace to the client" }
+  ],
+  "helpers": [
+    { "role": "video-editor", "when": "When the job includes cutting the footage, sound and captions, not only planning the edit" },
+    { "role": "graphic-designer", "when": "When the chosen thumbnail concept must be built as final artwork or a template set" },
+    { "role": "video-producer", "when": "When the video needs a shoot plan, crew, locations or a studio set-up" },
+    { "role": "seo-specialist", "when": "When video topics must tie to the site's search plan and pages that embed the videos" },
+    { "role": "social-media-manager", "when": "When Shorts and clips must be posted and scheduled across other platforms" },
+    { "role": "sponsorship-manager", "when": "When the channel wants sponsors and needs a rate card, a pitch and deal terms" }
+  ],
+  "gaps": [
+    "No library item plans playlists, the channel home layout, the About text or a channel trailer",
+    "No library item plans a presenter's face shots for thumbnails: expressions, light, lens and backdrop",
+    "No library item covers creator-side sponsorship: rate card, media kit, sponsor read script and disclosure rules",
+    "No library item covers YouTube monetisation: Partner Programme checks, memberships, and advertiser-friendly content rules",
+    "No library item checks a video for YouTube's altered or AI-made content label and paid promotion disclosure",
+    "No library item plans end screens, cards and pinned comments to send viewers to the next video",
+    "No library item makes three different series plans for a video channel to compare; the series arc item is for email",
+    "No library item reads a YouTube Studio export by traffic source and audience; only the kit skill does",
+    "No library item plans a live stream or premiere on YouTube",
+    "No library item writes YouTube Community posts"
+  ]
+}

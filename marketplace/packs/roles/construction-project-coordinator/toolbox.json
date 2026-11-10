@@ -1,0 +1,264 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "construction-project-coordinator",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "build-programme",
+      "task": "Build a programme with trades in site order",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/job-setup-to-start-on-site", "use": "brief", "when": "When a job is won or a contractor chosen and the start date is set" },
+        { "ref": "kit:skills/build-programme-and-look-ahead", "use": "build", "when": "When you have the scope, trade list and start date and need tasks, durations, links and key dates" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the job could run in one go or in phases, to compare two plans with money and dates" },
+        { "ref": "library:check-capacity-before-promising-a-delivery-date", "type": "workflow", "use": "check", "when": "Before a finish date is promised, to test it against the crews and hours really free" },
+        { "ref": "library:launch-readiness-seam-checker", "type": "skill", "use": "check", "when": "When trades overlap, to check each handover between them and what gives way in a clash" },
+        { "ref": "library:daniel-kahneman", "type": "mind", "use": "think", "when": "When durations look hopeful, to compare them with how long past jobs really took" }
+      ]
+    },
+    {
+      "id": "look-ahead",
+      "task": "Write the two-week look-ahead for trades",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/two-week-look-ahead", "use": "build", "when": "Every week on site, to tell each trade what is coming and catch what will stop them" },
+        { "ref": "kit:skills/build-programme-and-look-ahead", "use": "brief", "when": "When the look-ahead must be drawn from the current programme and what moved this week" },
+        { "ref": "library:trace-why-work-keeps-missing-deadlines", "type": "workflow", "use": "check", "when": "When the same tasks slip week after week, to trace where the work waits and why" },
+        { "ref": "library:taiichi-ohno", "type": "mind", "use": "think", "when": "When trades wait on each other, to look at the handoffs and try one small fix" }
+      ]
+    },
+    {
+      "id": "daily-report",
+      "task": "Turn site notes into a daily site report",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/daily-and-weekly-site-records", "use": "brief", "when": "Every site day and every week, to know which record is due and when" },
+        { "ref": "kit:skills/site-reports-and-delay-log", "use": "build", "when": "When you have rough notes, voice memos and a photo list and need the report under fixed headings" },
+        { "ref": "library:subtitle-and-transcript-maker", "type": "skill", "use": "build", "when": "When the notes are a voice recording and need a written transcript first" },
+        { "ref": "library:image-text-reader", "type": "skill", "use": "build", "when": "When a delivery note, meter or sign was photographed and its text must go in the report" },
+        { "ref": "library:whisper", "type": "tool", "use": "build", "when": "When voice memos must be turned into text on the site manager's own computer" }
+      ]
+    },
+    {
+      "id": "delay-log",
+      "task": "Keep the delay and weather log",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/site-reports-and-delay-log", "use": "build", "when": "When a delay happens, to log date, cause, activity, days lost and the record that proves it" },
+        { "ref": "library:weekly-project-delay-evidence-assistant", "type": "agent", "use": "check", "when": "Each week, to see where work waited, the trend and whether the fix is working" },
+        { "ref": "library:root-cause-finder", "type": "skill", "use": "build", "when": "When one kind of delay keeps coming back, to chase the cause and a way to prevent it" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the log supports a claim, to tie each entry to a dated note, photo or message" }
+      ]
+    },
+    {
+      "id": "client-report",
+      "task": "Write the weekly client progress report",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/weekly-client-progress-report", "use": "build", "when": "Every week on a live job, to give the client one page with bad news first and decisions due" },
+        { "ref": "library:weekly-status-update-writer", "type": "prompt", "use": "explore", "when": "When you want a shorter version built from done, stuck and needed, to compare" },
+        { "ref": "library:bad-news-update-writer", "type": "skill", "use": "build", "when": "When the week had a setback, to state the loss, the numbers and the next step briefly" },
+        { "ref": "library:project-cost-progress-tracker", "type": "skill", "use": "build", "when": "When the client asks if the job is on budget and on time, to work out the cost and time position" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to have a fresh reviewer read it as the client paying for the job" }
+      ]
+    },
+    {
+      "id": "renovation-brief",
+      "task": "Write a renovation brief every builder can price the same way",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/renovation-brief-and-quote-check", "use": "build", "when": "When an owner plans a renovation and needs a room-by-room brief for builders to quote on" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the budget may not stretch, to compare the full job with a phased one, with money and dates" },
+        { "ref": "library:christopher-alexander", "type": "mind", "use": "think", "when": "When the brief lists finishes but not how the rooms will be used day to day" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the brief is drafted, to have a fresh reviewer read it as a builder who must price it" }
+      ]
+    },
+    {
+      "id": "quote-check",
+      "task": "Compare builders' quotes like for like",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/renovation-brief-and-quote-check", "use": "build", "when": "When three quotes do not match and you need them set against the brief line by line" },
+        { "ref": "library:supplier-quote-table-builder", "type": "prompt", "use": "build", "when": "When the quotes must go side by side in one table before you judge them" },
+        { "ref": "library:supplier-quote-comparer", "type": "skill", "use": "check", "when": "When deposit terms and lead times differ, to compare risk and how safe each deposit is" },
+        { "ref": "library:compare-facilities-service-contract-options", "type": "workflow", "use": "build", "when": "When each quote comes with its own contract, to get a cost and risk table across them" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When two or three quotes are close, to have a fresh reviewer pick one against the brief" }
+      ]
+    },
+    {
+      "id": "contractor-vetting",
+      "task": "List the questions to ask contractors before hiring",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/renovation-brief-and-quote-check", "use": "build", "when": "When quotes are in and the owner needs questions on exclusions, allowances and payment stages" },
+        { "ref": "library:reference-check-question-writer", "type": "skill", "use": "build", "when": "When the owner will phone past clients, to get fair questions and a sheet to record answers" },
+        { "ref": "library:supplier-quote-comparer", "type": "skill", "use": "check", "when": "When a builder asks for a large deposit, to score how safe it is and what terms to ask for" }
+      ]
+    },
+    {
+      "id": "contract-read",
+      "task": "Read the building contract in plain words before signing",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:plain-words-contract-summary", "type": "prompt", "use": "build", "when": "When the builder sends a contract, to see what each side owes and the risky clauses" },
+        { "ref": "library:contract-and-term-sheet-reviewer", "type": "skill", "use": "check", "when": "When terms on payment, delay or defects look one-sided, to flag them and when to call a lawyer" },
+        { "ref": "library:contract-risk-reviewer", "type": "skill", "use": "check", "when": "When the contract is long, to rate the key clauses and risks by how serious they are" }
+      ]
+    },
+    {
+      "id": "pre-start",
+      "task": "List pre-start duties, permits and inspections",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/pre-start-duties-and-permits-checklist", "use": "build", "when": "Before work starts, to list who holds each safety role and which documents and permits must exist" },
+        { "ref": "kit:workflows/job-setup-to-start-on-site", "use": "build", "when": "When the whole set-up, from contract to first day on site, must happen in order" },
+        { "ref": "library:rules-and-approvals-checker", "type": "skill", "use": "brief", "when": "When it is not clear which approvals the work needs, to list the rules and risk areas to check" }
+      ]
+    },
+    {
+      "id": "rfis-submittals",
+      "task": "Write RFIs and keep the RFI and submittal registers",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/rfi-writer", "use": "build", "when": "When a drawing, spec or site condition raises a question the documents do not answer" },
+        { "ref": "kit:skills/rfis-submittals-and-changes", "use": "build", "when": "When you need the RFI log and a submittal register with submit-by dates worked back" },
+        { "ref": "library:executive-action-register", "type": "skill", "use": "check", "when": "When answers are overdue, to pull every open question from notes and emails into one chase list" }
+      ]
+    },
+    {
+      "id": "variation",
+      "task": "Check a variation and control the change",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/change-and-payment-control", "use": "build", "when": "When a request, instruction or site condition may change the work, price or time" },
+        { "ref": "kit:skills/rfis-submittals-and-changes", "use": "build", "when": "When the change must be written up with its cost, its time effect and who approved it" },
+        { "ref": "library:prepare-a-construction-variation-decision", "type": "workflow", "use": "check", "when": "When a variation is claimed, to check it against the signed contract and its prices" },
+        { "ref": "library:construction-variation-review-assistant", "type": "agent", "use": "check", "when": "When variations keep coming, to check each one's cost and time against the contract" },
+        { "ref": "library:prepare-a-client-scope-change-brief", "type": "workflow", "use": "build", "when": "When the client asks for extra work, to set out the options and draft the reply" }
+      ]
+    },
+    {
+      "id": "payment-check",
+      "task": "Check a payment claim or a funding draw",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/change-and-payment-control", "use": "build", "when": "When a payment falls due and must match the work done and the changes agreed" },
+        { "ref": "library:invoice-totals-checker", "type": "skill", "use": "check", "when": "When a builder's invoice arrives, to recalculate each line and total and list what is missing" },
+        { "ref": "library:check-supplier-invoices-before-approval", "type": "workflow", "use": "check", "when": "When several invoices arrive, to match them to orders and list amounts to query" },
+        { "ref": "library:construction-funding-draw-planner", "type": "skill", "use": "build", "when": "When a lender funds the build, to plan how each period's costs are paid from equity and loan" },
+        { "ref": "library:construction-funding-evidence-reviewer", "type": "agent", "use": "check", "when": "When build costs or draw dates change, to recheck interest and any funding shortfall" }
+      ]
+    },
+    {
+      "id": "cost-tracking",
+      "task": "Track cost against budget on a live job",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:project-cost-progress-tracker", "type": "skill", "use": "build", "when": "When you have budget, programme and spend to date and need a forecast finish cost" },
+        { "ref": "library:cash-forecast-builder", "type": "skill", "use": "build", "when": "When payments in and out must be forecast for the next 30, 60 and 90 days" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "When the cost sheet has grown by hand, to catch formula errors and broken links" }
+      ]
+    },
+    {
+      "id": "problem-letter",
+      "task": "Write a calm, firm letter to a contractor about a problem",
+      "kind": "email",
+      "items": [
+        { "ref": "library:demand-letter-fact-gatherer", "type": "skill", "use": "brief", "when": "Before writing, to get the facts of the dispute into one sheet with dates" },
+        { "ref": "kit:prompts/problem-letter-to-contractor", "use": "build", "when": "When there are delays, poor work or a price above the quote and the owner wants it in writing" },
+        { "ref": "library:no-question-email-rewriter", "type": "prompt", "use": "explore", "when": "When the first letter got no reply, to try a version where a no still moves things on" },
+        { "ref": "library:negotiation-prep-coach", "type": "skill", "use": "brief", "when": "When a call or site meeting comes first, to plan an opening, calm questions and a fallback" },
+        { "ref": "library:turn-a-dispute-into-a-checked-demand-letter-draft", "type": "workflow", "use": "build", "when": "When the problem has become a formal dispute and needs a dated timeline and a demand draft" },
+        { "ref": "library:chris-voss", "type": "mind", "use": "think", "when": "When the owner is angry, to sum up the builder's side first and ask how the fix will work" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before sending, to tie each fact in the letter to a dated message, photo or contract clause" }
+      ]
+    },
+    {
+      "id": "site-meeting",
+      "task": "Write site meeting minutes and chase the actions",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:meeting-minutes-writer", "type": "skill", "use": "build", "when": "When you have rough notes and need decisions, actions with owners and dates, and open questions" },
+        { "ref": "library:weekly-meeting-actions-keeper", "type": "agent", "use": "check", "when": "Each week, to check last week's open actions and set the next agenda" },
+        { "ref": "kit:workflows/daily-and-weekly-site-records", "use": "brief", "when": "When the meeting must fit the weekly cycle of look-ahead and client report" }
+      ]
+    },
+    {
+      "id": "client-decisions",
+      "task": "Keep the client's decisions and approvals on record",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:client-project-communication-plan", "type": "skill", "use": "build", "when": "At the start, to agree channels, update days and where decisions and approvals are recorded" },
+        { "ref": "kit:prompts/weekly-client-progress-report", "use": "build", "when": "Each week, to list the decisions the client owes and the date each is needed by" },
+        { "ref": "library:executive-action-register", "type": "skill", "use": "build", "when": "When decisions are scattered across messages, to pull them into one dated list" }
+      ]
+    },
+    {
+      "id": "defects-handover",
+      "task": "Build the snag list and the handover pack",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:prepare-a-construction-defects-handover", "type": "workflow", "use": "build", "when": "When inspection records must become a defects register with owners and proof of closure" },
+        { "ref": "library:handover-note-writer", "type": "prompt", "use": "build", "when": "When the owner or the maintenance team takes over and needs a note to run from" },
+        { "ref": "library:prepare-an-engagement-closeout-evidence-pack", "type": "workflow", "use": "check", "when": "At the end, to show what was delivered and accepted, with a register" }
+      ]
+    },
+    {
+      "id": "site-incident",
+      "task": "Record a site incident and tighten the procedure",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/site-reports-and-delay-log", "use": "build", "when": "On the day, to record what happened, when and who was told, in the daily report" },
+        { "ref": "library:turn-an-incident-into-a-safer-procedure", "type": "workflow", "use": "build", "when": "Afterwards, to write a blameless report, a safer procedure and tracked prevention actions" },
+        { "ref": "library:root-cause-finder", "type": "skill", "use": "check", "when": "When the same kind of incident repeats, to test the chain of causes against the facts" }
+      ]
+    },
+    {
+      "id": "small-job-quote",
+      "task": "Price a small job and write the quote",
+      "kind": "other",
+      "items": [
+        { "ref": "library:quote-and-proposal-builder", "type": "skill", "use": "build", "when": "When you have call notes and photos and need a costed quote in your own template" },
+        { "ref": "library:sheet-cutting-planner", "type": "skill", "use": "build", "when": "When the job uses boards or panels, to plan cuts that waste the least material" },
+        { "ref": "library:units-and-error-margin-checker", "type": "skill", "use": "check", "when": "When quantities come from measurements, to check the units and the margin for error" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "explore", "when": "When you could price it two ways, such as fixed or staged, to have a fresh reviewer pick" }
+      ]
+    },
+    {
+      "id": "close-out-review",
+      "task": "Run a close-out review and capture the lessons",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:project-review-prep-planner", "type": "skill", "use": "brief", "when": "Before the review, to pick the format, the numbers to pull and who hears the lessons" },
+        { "ref": "library:honest-project-review", "type": "workflow", "use": "build", "when": "When the job is done, to run a review that keeps blame out and turns lessons into rules" },
+        { "ref": "library:lessons-learned-note-writer", "type": "prompt", "use": "build", "when": "When there is no time for a meeting, to get a one-page note of what to repeat and change" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any report, letter or register goes out, to catch typos and names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "interior-designer", "when": "When the job needs layouts, finishes and a design brief, not only a build scope" },
+    { "role": "qhse-manager", "when": "When the site needs risk assessments, method statements or a safety plan written" },
+    { "role": "procurement-specialist", "when": "When materials must be sourced, ordered and tracked against lead times" },
+    { "role": "compliance-specialist", "when": "When the building contract needs a full plain summary and a list for a lawyer" },
+    { "role": "bookkeeper", "when": "When job costs and payments must be recorded and matched to the bank" },
+    { "role": "facilities-maintenance-coordinator", "when": "When the finished building needs a maintenance schedule after handover" }
+  ],
+  "gaps": [
+    "The library is thin for this role: about 55 items fit, and most site paperwork rests on the kit alone",
+    "No library item builds a construction programme, sequences trades or draws a critical path or bar chart",
+    "No library item writes a daily site report, a look-ahead or a delay and weather log",
+    "No library item estimates building costs or takes off quantities from drawings",
+    "No library item writes RFIs or keeps a submittal register",
+    "No library item prepares a builder's payment claim with stage values, retention and variations",
+    "No library item writes a risk assessment, method statement, site induction or toolbox talk",
+    "No library item covers permits, building control stages or inspection bookings",
+    "No library item drafts a delay notice or an extension of time claim from the delay log",
+    "No library item plans long-lead material orders against the programme",
+    "No library item writes a subcontract scope or a trade package",
+    "No library item builds a room-by-room snagging checklist or a handover pack with warranties and manuals",
+    "No library item offers different build sequences to compare for one job"
+  ]
+}

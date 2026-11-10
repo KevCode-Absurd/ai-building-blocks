@@ -1,0 +1,265 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "instructional-designer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "course-outline",
+      "task": "Design a course outline back from one result",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/course-outline-backward-design", "use": "build", "when": "When you know what the learner must be able to do and need modules, goals and evidence" },
+        { "ref": "library:skill-breakdown-teaching-planner", "type": "prompt", "use": "brief", "when": "Before the outline, to break the skill into steps a beginner can learn with the usual mistakes" },
+        { "ref": "library:expert-knowledge-interview", "type": "skill", "use": "brief", "when": "When the know-how sits in one expert's head and must be drawn out from real cases" },
+        { "ref": "library:agency-corporate-training-designer", "type": "agent", "use": "explore", "when": "When the course is for staff, to get a second outline built from the real work problem" },
+        { "ref": "library:anders-ericsson", "type": "mind", "use": "think", "when": "When the outline covers every topic and never makes learners practise the hard part" }
+      ]
+    },
+    {
+      "id": "source-to-content",
+      "task": "Turn an SOP, policy or expert notes into teachable content",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/build-an-elearning-module", "use": "brief", "when": "When a client hands over source material and needs a self-paced module through to launch" },
+        { "ref": "library:write-a-procedure-test-it-and-build-a-training-deck", "type": "workflow", "use": "build", "when": "When the procedure is not written down yet and must be captured and gap-checked first" },
+        { "ref": "library:hard-topic-teaching-guide", "type": "skill", "use": "brief", "when": "When one part is known to confuse people and you need the usual mistakes and examples" },
+        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When the source is old or second-hand, to check its facts before they are taught" }
+      ]
+    },
+    {
+      "id": "elearning-storyboard",
+      "task": "Write a screen-by-screen e-learning storyboard",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/elearning-storyboard", "use": "build", "when": "When the outline is agreed and a developer needs numbered screens to build from" },
+        { "ref": "library:learning-options-designer", "type": "skill", "use": "explore", "when": "Before fixing the screens, to see several ways to present the content and let learners respond" },
+        { "ref": "library:online-worked-example-builder", "type": "skill", "use": "build", "when": "When a screen must teach a skill step by step with help that fades" },
+        { "ref": "library:study-note-diagrams", "type": "skill", "use": "build", "when": "When a concept needs a diagram or table placed where it helps the explanation" },
+        { "ref": "library:overloaded-lesson-checker", "type": "skill", "use": "check", "when": "When the storyboard is drafted, to find screens that overload the learner" },
+        { "ref": "library:check-a-lesson-before-teaching-it", "type": "workflow", "use": "check", "when": "Before it goes to the developer, to cut excess and fix barriers" }
+      ]
+    },
+    {
+      "id": "lesson-pages",
+      "task": "Write lesson pages or scripts with exercises",
+      "kind": "other",
+      "items": [
+        { "ref": "library:build-a-lesson-from-explanation-to-practice-and-a-quiz", "type": "workflow", "use": "build", "when": "When you have the topic and learners and need a lesson, examples, practice and a quiz" },
+        { "ref": "library:struggle-first-lesson-reshaper", "type": "skill", "use": "explore", "when": "When the lesson opens with the explanation, to try a version where learners attempt first" },
+        { "ref": "library:small-working-example-explainer", "type": "skill", "use": "build", "when": "When an idea needs the smallest example that still shows how it works" },
+        { "ref": "library:practice-problem-set-writer", "type": "skill", "use": "build", "when": "When the lesson needs exercises that rise in difficulty" },
+        { "ref": "library:overloaded-lesson-checker", "type": "skill", "use": "check", "when": "When the page is drafted, to find where it asks too much at once" }
+      ]
+    },
+    {
+      "id": "branching-scenario",
+      "task": "Write a branching scenario with feedback for every choice",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/branching-scenario-script", "use": "build", "when": "When learners must practise a hard conversation or decision with tempting wrong choices" },
+        { "ref": "library:feedback-conversation-planner", "type": "skill", "use": "brief", "when": "When the scenario is a hard talk and you need what a skilled person would really say" },
+        { "ref": "library:understanding-check-questions", "type": "skill", "use": "build", "when": "When each wrong choice should reveal one known mistake, not a silly option" },
+        { "ref": "library:mermaid-chart-writer", "type": "skill", "use": "build", "when": "When the decision points and paths need a map the builder can paste into docs" },
+        { "ref": "library:chris-voss", "type": "mind", "use": "think", "when": "When the best path reads like a policy and not like how people talk under pressure" }
+      ]
+    },
+    {
+      "id": "knowledge-checks",
+      "task": "Write knowledge checks that test doing the job",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/knowledge-check-writer", "use": "build", "when": "When a module needs questions that test the task, not a remembered definition" },
+        { "ref": "library:why-and-how-question-writer", "type": "skill", "use": "build", "when": "When questions should push past recall to why and how" },
+        { "ref": "library:recall-quiz-writer", "type": "prompt", "use": "build", "when": "When a short quiz should end the course and bring back the key points" },
+        { "ref": "library:assessment-fairness-check", "type": "skill", "use": "check", "when": "When the questions are drafted, to check they test the goals and not tricks or reading speed" }
+      ]
+    },
+    {
+      "id": "certification-exam",
+      "task": "Set certification rules and write the exam",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/knowledge-check-writer", "use": "build", "when": "When the exam needs job-based questions for each goal in the course" },
+        { "ref": "library:work-sample-test-designer", "type": "skill", "use": "build", "when": "When passing should mean doing a real task, with a scoring guide" },
+        { "ref": "library:marking-rubric-writer", "type": "skill", "use": "build", "when": "When a practical task needs clear wording for each level of work" },
+        { "ref": "library:assessment-fairness-check", "type": "skill", "use": "check", "when": "Before the exam counts, to check every question maps to something taught" }
+      ]
+    },
+    {
+      "id": "training-video-script",
+      "task": "Write a training or how-to video script",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/training-video-script-and-captions", "use": "build", "when": "When one task needs a two-column script with narration beside what is on screen" },
+        { "ref": "library:think-aloud-script-writer", "type": "skill", "use": "build", "when": "When the presenter must show their thinking aloud, not only the clicks" },
+        { "ref": "library:product-demo-video-maker", "type": "skill", "use": "build", "when": "When you have screenshots and want a short walkthrough video or GIF made from them" },
+        { "ref": "library:make-an-educational-narration-with-a-text-companion", "type": "workflow", "use": "build", "when": "When an approved lesson needs a checked spoken script and a text version to follow" },
+        { "ref": "library:synthesia", "type": "tool", "use": "build", "when": "When nobody will go on camera and the script needs an AI presenter" },
+        { "ref": "library:descript", "type": "tool", "use": "build", "when": "When a screen recording needs trimming and cleaning by editing its transcript" }
+      ]
+    },
+    {
+      "id": "captions-and-narration",
+      "task": "Make captions, narration and other-language versions",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/training-video-script-and-captions", "use": "build", "when": "When the script is final and captions must be ready to upload" },
+        { "ref": "library:subtitle-and-transcript-maker", "type": "skill", "use": "build", "when": "When a video is already recorded and needs a timed transcript and subtitle file" },
+        { "ref": "library:voiceover-maker", "type": "skill", "use": "build", "when": "When the narration needs spoken audio without booking a voice artist" },
+        { "ref": "library:make-a-voiceover-and-ship-it-in-other-languages", "type": "workflow", "use": "build", "when": "When the same video must go out in other languages with the voice kept" },
+        { "ref": "library:veed", "type": "tool", "use": "build", "when": "When captions need adding and checking in a browser with no install" }
+      ]
+    },
+    {
+      "id": "email-micro-course",
+      "task": "Write an email or chat micro-course",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/email-micro-course", "use": "build", "when": "When one practical skill should be taught in short lessons by email, text or Slack" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before writing lessons, to compare three plans for how the series could unfold" },
+        { "ref": "library:email-sequence-arc-planner", "type": "skill", "use": "brief", "when": "When the order of lessons is unclear and each must build on the last" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When a lesson email is drafted, to get cuts, subject fixes and a score" },
+        { "ref": "library:peter-c-brown", "type": "mind", "use": "think", "when": "When each lesson tells and none asks the learner to recall or try anything" }
+      ]
+    },
+    {
+      "id": "course-welcome-and-launch-emails",
+      "task": "Write the welcome, invite and launch emails for a course",
+      "kind": "email",
+      "items": [
+        { "ref": "library:write-a-welcome-email-sequence-that-teaches-then-sells", "type": "workflow", "use": "build", "when": "When new sign-ups need a welcome series that teaches before it asks" },
+        { "ref": "library:launch-email-sequence-planner", "type": "skill", "use": "build", "when": "When the course opens on a date and needs a launch plan through to the close" },
+        { "ref": "library:price-a-course-or-ebook-and-write-its-launch-emails", "type": "workflow", "use": "build", "when": "When the price is not set and the launch emails depend on it" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "Before drafting, to compare three different shapes for the series" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "Before each email is scheduled, to get cuts and a verdict" }
+      ]
+    },
+    {
+      "id": "course-sales-page",
+      "task": "Write an honest course sales page and price note",
+      "kind": "web_page",
+      "items": [
+        { "ref": "kit:skills/course-outline-backward-design", "use": "brief", "when": "Before any sales copy, to state the one result the course can honestly promise" },
+        { "ref": "library:offer-designer", "type": "skill", "use": "brief", "when": "When the course needs a name, a guarantee and payment terms before the page is written" },
+        { "ref": "library:proof-sales-copy", "type": "workflow", "use": "explore", "when": "When you have learner reviews, to get a buyer brief and two openings to compare" },
+        { "ref": "library:conversion-page-writer", "type": "skill", "use": "build", "when": "When the offer is set and the page needs hero, value points, proof and a call to act" },
+        { "ref": "library:sales-copy-reviewer", "type": "skill", "use": "check", "when": "When the page is drafted, to find the weakest parts and fix them" },
+        { "ref": "library:persuasive-claim-truth-checker", "type": "skill", "use": "check", "when": "Before publishing, to check every promised outcome is true and has context" }
+      ]
+    },
+    {
+      "id": "accessibility-review",
+      "task": "Review a module, page or video for accessibility",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/accessibility-review-of-a-module", "use": "check", "when": "Before a module goes live, or when an existing course gets a complaint" },
+        { "ref": "library:accessibility-checker", "type": "skill", "use": "check", "when": "When the course is a web page and needs ranked problems against the standard" },
+        { "ref": "library:powerpoint-accessibility-reviewer", "type": "skill", "use": "check", "when": "When the module was built from slides and needs titles, reading order and alt text fixed" },
+        { "ref": "library:accessible-lesson-auditor", "type": "skill", "use": "check", "when": "When the barrier may be in the lesson design itself, not the page code" },
+        { "ref": "library:quarterly-accessibility-keeper", "type": "agent", "use": "check", "when": "When the course library changes often and needs a recheck each quarter" }
+      ]
+    },
+    {
+      "id": "lms-package",
+      "task": "Choose and test the LMS package",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/choose-and-test-the-lms-package", "use": "build", "when": "When a module is ready and nobody knows which output to pick, or it fails in one LMS" },
+        { "ref": "kit:workflows/build-an-elearning-module", "use": "brief", "when": "When the module reaches the publish step and the launch checks must run in order" }
+      ]
+    },
+    {
+      "id": "customer-academy",
+      "task": "Plan a customer academy from support tickets",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/customer-academy-launch", "use": "brief", "when": "When a company wants customers to learn the product without opening tickets" },
+        { "ref": "kit:prompts/customer-academy-from-tickets", "use": "build", "when": "When the same support questions keep coming and should become short courses by role" },
+        { "ref": "library:research-theme-synthesizer", "type": "skill", "use": "brief", "when": "When you have a ticket export and need themes ranked by how often they come up" },
+        { "ref": "library:customer-onboarding-planner", "type": "skill", "use": "build", "when": "When the academy must fit phased onboarding steps for new customers" },
+        { "ref": "library:help-article-writer", "type": "skill", "use": "build", "when": "When a topic is better as a searchable help article than a lesson" },
+        { "ref": "library:make-onboarding-instructions-match-the-product", "type": "workflow", "use": "check", "when": "When the product has changed, to check each tutorial still matches the screens" }
+      ]
+    },
+    {
+      "id": "academy-upkeep-and-report",
+      "task": "Keep the academy current and report ticket deflection",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/customer-academy-launch", "use": "build", "when": "When the academy is live and the monthly upkeep and report are due" },
+        { "ref": "library:monthly-course-lesson-keeper", "type": "agent", "use": "check", "when": "Each month, to find lessons that are stale or hard to follow" },
+        { "ref": "library:support-ticket-sorter", "type": "skill", "use": "build", "when": "When tickets must be sorted by topic to compare volume before and after a course" },
+        { "ref": "library:recurring-kpi-report-maker", "type": "skill", "use": "build", "when": "When the deflection numbers need a report you can rerun each month" }
+      ]
+    },
+    {
+      "id": "staff-training-programme",
+      "task": "Plan staff, onboarding or compliance training",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:training-program-builder", "type": "skill", "use": "build", "when": "When a skills gap must become ranked needs, objectives and a training plan" },
+        { "ref": "library:agency-corporate-training-designer", "type": "agent", "use": "build", "when": "When training should start from one real work problem with measurable goals" },
+        { "ref": "kit:skills/course-outline-backward-design", "use": "build", "when": "When the plan is agreed and each course needs an outline built from its result" },
+        { "ref": "library:review-staff-adoption-of-a-policy-change", "type": "workflow", "use": "check", "when": "After compliance training, to see whether staff follow the policy and what blocks them" }
+      ]
+    },
+    {
+      "id": "job-aids-and-visuals",
+      "task": "Make job aids, handouts and explainer visuals",
+      "kind": "other",
+      "items": [
+        { "ref": "library:training-handout-writer", "type": "prompt", "use": "build", "when": "When a session needs a one-page handout people can use at their desk" },
+        { "ref": "library:infographic-maker", "type": "skill", "use": "explore", "when": "When content suits a picture, to see it in a layout and style picked to fit" },
+        { "ref": "library:study-note-diagrams", "type": "skill", "use": "build", "when": "When one concept needs a simple diagram or table" },
+        { "ref": "library:overloaded-lesson-checker", "type": "skill", "use": "check", "when": "When the handout is drafted, to find where it crams in too much" }
+      ]
+    },
+    {
+      "id": "course-check",
+      "task": "Check a lesson or module before it goes live",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:check-a-lesson-before-teaching-it", "type": "workflow", "use": "check", "when": "When a lesson is drafted and needs a lighter version and barriers fixed" },
+        { "ref": "library:lesson-barrier-spotter", "type": "skill", "use": "check", "when": "When you know the learners and want the barriers this group will hit" },
+        { "ref": "library:task-engagement-tuner", "type": "skill", "use": "check", "when": "When a task is dull or stressful and people are likely to quit there" },
+        { "ref": "library:don-norman", "type": "mind", "use": "think", "when": "When learners get stuck on how the module works, not on the content" }
+      ]
+    },
+    {
+      "id": "course-results",
+      "task": "Read course results and decide what to fix",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:quiz-and-dashboard-data-reader", "type": "skill", "use": "build", "when": "When you have quiz results or LMS numbers and need what they mean and what to change" },
+        { "ref": "library:check-training-transfer-after-a-course", "type": "workflow", "use": "check", "when": "After the course, to compare real work with the skills taught" },
+        { "ref": "library:monthly-course-lesson-keeper", "type": "agent", "use": "build", "when": "When fixes should be found and tracked lesson by lesson each month" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before learners see it, to check the facts in scripts, screens and answers" },
+    { "ref": "library:overloaded-lesson-checker", "type": "skill", "use": "check", "when": "Before any screen, page or handout is handed over, to find where it asks too much" }
+  ],
+  "helpers": [
+    { "role": "video-producer", "when": "When a training video must be filmed, edited and delivered, not only scripted" },
+    { "role": "conversion-copywriter", "when": "When the course sales page needs full selling copy and testing" },
+    { "role": "email-marketing-specialist", "when": "When launch and welcome emails need lists, timing and sending set up" },
+    { "role": "accessibility-specialist", "when": "When the module must pass a formal accessibility standard" },
+    { "role": "technical-writer", "when": "When the academy needs help articles and product docs beside the lessons" },
+    { "role": "learning-development-specialist", "when": "When the course is part of a wider staff skills plan with managers involved" }
+  ],
+  "gaps": [
+    "No library item writes an e-learning storyboard; storyboard searches returned ad and film items",
+    "No library item writes a branching scenario, offers different scenario structures to compare, or tests a map for dead ends",
+    "No library item helps choose or test SCORM, xAPI or cmi5 output, or gives an LMS upload test list",
+    "No library item writes a screen recording or procedure demo script; video script items are for ads",
+    "No library item writes scenario-based questions for job tasks; quiz items are built for classroom recall",
+    "No library item writes an email, text or chat course that teaches; email sequence items are built to sell",
+    "No library item designs an adult or online course outline back from one result; unit planners assume school standards",
+    "No library item plans a customer academy by user role or measures ticket deflection",
+    "No library item sets certification rules such as pass mark, retakes and expiry",
+    "No library item writes a learner feedback survey or evaluates a course at more than quiz level",
+    "No library item gives build notes for Rise, Storyline or course platforms such as Teachable or Kajabi",
+    "No library item finds where learners drop out of a course and why"
+  ]
+}

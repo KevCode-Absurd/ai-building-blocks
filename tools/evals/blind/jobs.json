@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "note": "Test briefs about real businesses, written by us from public facts only. The businesses did not write these briefs, are not clients, and do not use AI Blocks. Every arm gets the brief word for word and nothing else about the job.",
+  "jobs": [
+    {
+      "id": "J1",
+      "title": "Allbirds: 6 static Meta ad creatives",
+      "client": "Allbirds",
+      "site": "allbirds.com",
+      "deliverable": "deliverable.md",
+      "brief": "We need 6 static Meta ads for the Allbirds men's Tree Runner, aimed at cold traffic in the US. Each one needs primary text, a headline, a description, and either a finished visual or a visual spec a designer can build from without asking questions.",
+      "judge_role": "a senior paid-social creative lead",
+      "web_check": "Check allbirds.com today for the men's Tree Runner: the product, its price, its stock and sale status, and its claims (materials, washable, carbon footprint and so on).",
+      "rubric": [
+        { "key": "job", "points": 25, "text": "Job done: would these stop the scroll and sell to cold US audiences? Are the 6 creatives truly different angles, not six wordings of one idea?" },
+        { "key": "grounded", "points": 25, "text": "Grounded in the real product and brand: facts are true and nothing is invented." },
+        { "key": "brand", "points": 20, "text": "Brand voice and fit: it sounds and looks like Allbirds, not generic DTC copy." },
+        { "key": "launchable", "points": 20, "text": "Ready to produce: a designer and a media buyer could act on it today. Each creative has primary text, a headline, a description and a finished visual or a full visual spec. It respects Meta's specs and policies." },
+        { "key": "clarity", "points": 10, "text": "Clarity: each creative is easy to find, read and use, with nothing in the way of the work." }
+      ]
+    },
+    {
+      "id": "J2",
+      "title": "Allbirds: landing page for Meta ad traffic",
+      "client": "Allbirds",
+      "site": "allbirds.com",
+      "deliverable": "deliverable.html",
+      "brief": "We need a landing page for the Allbirds men's Tree Runner, for people who click our Meta ads in the US. Most of them will be new to Allbirds. Send it as one self-contained HTML file.",
+      "judge_role": "a senior landing-page and conversion lead",
+      "web_check": "Check allbirds.com today for the men's Tree Runner: the product, its price, its stock and sale status, its reviews, its claims, and the shipping and returns terms. Check every price, offer, rating and policy shown on each page against the live site.",
+      "rubric": [
+        { "key": "job", "points": 25, "text": "Job done: would a cold visitor from a Meta ad grasp the offer in seconds and move towards buying? Does the page keep the promise an ad for this shoe would make, with one clear next step?" },
+        { "key": "grounded", "points": 25, "text": "Grounded in the real product and brand: prices, claims, reviews and policies are true and nothing is invented." },
+        { "key": "brand", "points": 20, "text": "Brand fit: it looks and sounds like Allbirds, not a generic shoe-shop template." },
+        { "key": "launchable", "points": 20, "text": "Ready to publish: it is one self-contained HTML file that looks right on a phone and on a desktop, with working buttons and links, and no placeholder text or broken images." },
+        { "key": "clarity", "points": 10, "text": "Clarity: a visitor can scan the page fast, and the words are plain." }
+      ]
+    },
+    {
+      "id": "J3",
+      "title": "Gehna: 5-email welcome series",
+      "client": "Gehna",
+      "site": "gehnaindia.com",
+      "deliverable": "deliverable.md",
+      "brief": "Write a 5-email welcome series for new newsletter subscribers of Gehna (gehnaindia.com), a fine jewellery brand in India. Give the subject line, preview text and body copy for each email.",
+      "judge_role": "a senior lifecycle and email marketing lead",
+      "web_check": "Check gehnaindia.com: its brand voice, history, products, policies, offers (for example, any newsletter discount) and store details.",
+      "rubric": [
+        { "key": "job", "points": 25, "text": "Job done: would this series turn new subscribers into first purchases? Are the sequence logic and timing sound, and does each of the 5 emails earn its place?" },
+        { "key": "grounded", "points": 25, "text": "Grounded in the real business: facts are true and nothing is invented." },
+        { "key": "brand", "points": 20, "text": "Brand voice: it sounds like Gehna, not a generic jewellery email." },
+        { "key": "launchable", "points": 20, "text": "Ready to send: subject and preview lengths work, links and CTAs are clear, and it could be built in an email tool today." },
+        { "key": "clarity", "points": 10, "text": "Clarity: each email is easy to find and read, with nothing in the way of the copy." }
+      ]
+    },
+    {
+      "id": "J4",
+      "title": "Gehna: festive-season carousel ad set",
+      "client": "Gehna",
+      "site": "gehnaindia.com",
+      "deliverable": "deliverable.md",
+      "brief": "We want a festive-season carousel ad set on Meta for Gehna (gehnaindia.com), a fine jewellery brand in India. Give us 3 carousels of 4 to 5 cards each, with the copy for every card and either finished visuals or visual specs a designer can build from.",
+      "judge_role": "a senior paid-social creative lead who knows the Indian jewellery market",
+      "web_check": "Check gehnaindia.com: its collections, products, price range, offers, policies and store details. Check the date of any festival or season a file targets against today's date.",
+      "rubric": [
+        { "key": "job", "points": 25, "text": "Job done: would these carousels stop the scroll and sell festive jewellery to buyers in India? Are the 3 carousels truly different ideas, and does each card give a reason to swipe to the next?" },
+        { "key": "grounded", "points": 25, "text": "Grounded in the real business: products, prices, offers and festival dates are true and nothing is invented." },
+        { "key": "brand", "points": 20, "text": "Brand fit: it looks and sounds like Gehna, not a generic jewellery ad." },
+        { "key": "launchable", "points": 20, "text": "Ready to produce: a designer and a media buyer could act on it today. Each carousel has 4 to 5 cards with copy and a finished visual or a full visual spec. It respects Meta's carousel specs and policies." },
+        { "key": "clarity", "points": 10, "text": "Clarity: each carousel and card is easy to find, read and use, with nothing in the way of the work." }
+      ]
+    },
+    {
+      "id": "J5",
+      "title": "Plausible Analytics: sign-up landing page for people leaving Google Analytics",
+      "client": "Plausible Analytics",
+      "site": "plausible.io",
+      "deliverable": "deliverable.html",
+      "brief": "We need a sign-up landing page for Plausible Analytics (plausible.io), aimed at people who are leaving Google Analytics. The goal is sign-ups. Send it as one self-contained HTML file.",
+      "judge_role": "a senior SaaS growth and conversion lead",
+      "web_check": "Check plausible.io today: what the product does, its prices and trial terms, its privacy and open-source claims, and any customer names, numbers or quotes it shows. Check each claim a page makes about Google Analytics against a current source.",
+      "rubric": [
+        { "key": "job", "points": 25, "text": "Job done: would someone leaving Google Analytics see why to switch and sign up? Does the page answer their main worries and lead to one clear sign-up step?" },
+        { "key": "grounded", "points": 25, "text": "Grounded in the real product: features, prices, numbers, customer names and claims about Google Analytics are true and nothing is invented." },
+        { "key": "brand", "points": 20, "text": "Brand fit: it looks and sounds like Plausible, not a generic SaaS template." },
+        { "key": "launchable", "points": 20, "text": "Ready to publish: it is one self-contained HTML file that looks right on a phone and on a desktop, with working buttons and links, and no placeholder text or broken images." },
+        { "key": "clarity", "points": 10, "text": "Clarity: a visitor can scan the page fast, and the words are plain." }
+      ]
+    },
+    {
+      "id": "J6",
+      "title": "Plausible Analytics: pricing page audit",
+      "client": "Plausible Analytics",
+      "site": "plausible.io",
+      "deliverable": "deliverable.md",
+      "brief": "Audit the pricing page of Plausible Analytics (plausible.io) and tell us what to fix first. Give us the fixes in order of priority, and rewrite the sections that need it.",
+      "judge_role": "a senior SaaS pricing and conversion lead",
+      "web_check": "Open the live pricing on plausible.io today and note the plans, prices, limits, trial terms, options and questions answered. Check that each problem a file reports is really on the page, and that each rewrite keeps the real plans and prices.",
+      "rubric": [
+        { "key": "job", "points": 25, "text": "Job done: are these the fixes that would most raise paid sign-ups, in a sound order of priority? Are the rewritten sections better than what is live now?" },
+        { "key": "grounded", "points": 25, "text": "Grounded in the real page: it describes the page as it is today, quotes it correctly, and invents no plans, prices, numbers or test results." },
+        { "key": "brand", "points": 20, "text": "Specific to Plausible: it fits their product, buyers and voice, not a generic pricing-page checklist." },
+        { "key": "launchable", "points": 20, "text": "Ready to act on: each fix says what to change and where, and the rewrites could go onto the page today." },
+        { "key": "clarity", "points": 10, "text": "Clarity: the top fixes are plain within a minute, and the rest is easy to follow." }
+      ]
+    },
+    {
+      "id": "J7",
+      "title": "Gehna: 90-day organic search and AI-search plan",
+      "client": "Gehna",
+      "site": "gehnaindia.com",
+      "deliverable": "deliverable.md",
+      "brief": "We want Gehna (gehnaindia.com), a fine jewellery brand in India, to show up more in Google and in AI answers such as ChatGPT and Google's AI Overviews. Give us a 90-day plan to get there.",
+      "judge_role": "a senior SEO and AI-search lead",
+      "web_check": "Check gehnaindia.com: its pages, collections, products, store details and how it shows up in search today. Search Google for a few of the terms each file targets, and ask an AI search tool about them if you have one, to see who shows up now.",
+      "rubric": [
+        { "key": "job", "points": 25, "text": "Job done: is it a sound 90-day plan that would likely lift Gehna's organic search and AI-search visibility? Are the priorities right, and are the targets ones a brand of this size can win?" },
+        { "key": "grounded", "points": 25, "text": "Grounded in the real business and site: facts about Gehna, its pages, its rivals and the search results are true, and no numbers are invented." },
+        { "key": "brand", "points": 20, "text": "Specific to Gehna: it fits their products, buyers and site, not a generic SEO template." },
+        { "key": "launchable", "points": 20, "text": "Executable: a small team could start on day 1, with tasks, owners, dates and ways to measure, and no blanks the client must fill before work can start." },
+        { "key": "clarity", "points": 10, "text": "Clarity: the plan is easy to follow week by week, with the first actions plain within a minute." }
+      ]
+    }
+  ]
+}

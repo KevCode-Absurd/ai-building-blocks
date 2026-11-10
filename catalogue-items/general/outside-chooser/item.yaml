@@ -1,0 +1,23 @@
+slug: outside-chooser
+name: "Outside chooser"
+summary: "Give it two to four options and your brief. A fresh reviewer picks one and says what to borrow."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: web_page, required: false}
+  - {type: static_ads, required: false}
+  - {type: design_direction, required: false}
+  - {type: email_flow, required: false}
+  - {type: plan, required: false}
+outputs:
+  - {type: feedback_notes, required: true}
+uses: []
+origin: own
+version: 1.0.0
+added: 2026-11-10
+credits:
+  - {title: "Original AI Blocks method", by: "AI Blocks contributors", used: "The packet, the three routes to a fresh reviewer, the same-context label and the one extra round rule."}

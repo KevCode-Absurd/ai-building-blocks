@@ -1,0 +1,20 @@
+slug: clients-eye-check
+name: "Client's-eye check"
+summary: "Give it your brief, the finished work and your facts. A fresh reviewer reads it as your client and lists fixes."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: copy_draft, required: true}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: audit_report, required: true}
+uses: [outside-chooser, claim-source-trace]
+origin: own
+version: 1.0.0
+added: 2026-11-10
+credits:
+  - {title: "Original AI Blocks method", by: "AI Blocks contributors", used: "The five questions, the packet, the claims list and the fix, cut, stop rule. Built from the blind tests of 10 Nov 2026."}

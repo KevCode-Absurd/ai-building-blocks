@@ -1,0 +1,171 @@
+new_slug: claim-source-trace
+name: "Claim source trace"
+summary: "Give it your draft and your sources. Every fact gets a dated source, a rewrite or a cut."
+job: write-ad-copy
+thinking: medium
+thinking_why: "It must find every fact, match each to the exact source and decide with no middle option."
+
+headline: "Make sure every fact in your copy has a source"
+subhead: Give it your draft and the sources you hold, such as your product page, your facts file or an export. It lists every fact a reader will see and traces each one to a dated source. Each fact is kept, rewritten to what the source says, or cut. Nothing unproven stays in.
+
+explain: |
+  AI-written copy picks up small facts that nobody checked. A founder's name appears under an email. A delivery time gets added. A "best seller" badge moves from one product to another. Each one sounds right, and any of them can be wrong.
+
+  Flagging these lines for you to confirm does not fix them. The reader sees the line, not the flag. So this skill has three results and no fourth. If a source says it, about this product and this offer, the line stays. If the source says something smaller or different, the line is rewritten to match. If no source says it, the line is cut.
+
+  It covers prices, counts, ratings, policies, names, delivery times, quotes, product details and badges. It looks inside images, subject lines and sign-offs too. Prices, stock and offers are read again on the day. You get the corrected copy and a short table that shows what happened to each fact.
+
+when:
+  - Before any ad, page, email or plan goes to a client or goes live.
+  - After an AI wrote copy from a brief and you are not sure where each fact came from.
+  - When prices or offers have changed since the draft was written.
+  - When a reviewer marked claims as having no source.
+
+not_for:
+  - Scoring how persuasive your claims are against your proof. Use the Claim evidence checker.
+  - Legal or platform sign-off. Ask a compliance reviewer.
+  - Copy with no facts yet. Capture your site or gather your facts first.
+
+you_give:
+  - Your draft, complete, with subject lines, button words, image text and sign-offs
+  - Your sources, such as your product page, facts file, product feed or export, each with its date
+you_get:
+  - Your draft, corrected
+  - A table of every fact, its source and date, and whether it was kept, rewritten or cut
+  - The new wording for each rewrite
+  - A short list of cut lines that could return if you supply a source
+
+how_to_use:
+  - Open the skill in your AI. Give it the draft and the sources.
+  - It lists every fact a reader will see, line by line.
+  - It finds each one in a source and writes down the source, the date and the exact words.
+  - It keeps, rewrites or cuts each one, then mends the copy around the changes.
+  - Read the table. If you can prove a cut fact, give the source and it goes back in.
+
+how_it_works:
+  - title: Lists every fact
+    text: Goes through the draft for prices, counts, ratings, policies, names, times, quotes, product details and badges.
+  - title: Finds each one in a source
+    text: Records the source, the date it was read and the words it uses.
+  - title: Decides with three results
+    text: Keeps a fact the source supports, rewrites one the source states differently, and cuts one with no source.
+  - title: Checks the dates
+    text: Reads prices, stock, offers and deadlines again on the day.
+  - title: Keeps planning figures apart
+    text: Lets budgets and targets stay as labelled working figures, and never in copy a buyer reads.
+  - title: Mends the copy
+    text: Rereads around each change, so no promise is left without proof.
+
+output_shape: |
+  CLAIM TRACE
+  <n> facts listed | <n> kept | <n> rewritten | <n> cut
+
+  # | Claim as written | Source, date | Result | New wording
+  1 | "<...>" | <source>, <date> | KEEP |
+  2 | "<...>" | <source>, <date>: "<what it says>" | REWRITE | "<...>"
+  3 | "<...>" | none | CUT |
+
+  COULD RETURN WITH A SOURCE
+  <cut line> | <the source that would allow it>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+example:
+  business: plausible
+  input: |
+    [the skill]
+
+    Draft ad copy for Plausible Analytics:
+    "The easy, privacy-friendly Google Analytics alternative. Our script is
+    75 times smaller than Google Analytics. No cookie banner needed. Hosted
+    in Germany. Trusted by 25,000+ companies including Stripe and Mozilla.
+    Set up in two minutes. Start your 30-day free trial. No credit card
+    required."
+    Source: https://plausible.io/ home page, read 10 Nov 2026.
+  output: |
+    CORRECTED COPY
+    "The easy, privacy-friendly Google Analytics alternative. Our script is
+    54 times smaller than Google Analytics. No cookie banner needed. Made
+    and hosted in the EU. Trusted by thousands of organizations, including
+    Stripe and Mozilla. Start your 30-day free trial. No credit card
+    required."
+
+    CLAIM TRACE (source for all rows: plausible.io home page, 10 Nov 2026)
+    7 facts listed | 3 kept | 3 rewritten | 1 cut
+
+    # | Claim as written | What the source says | Result | New wording
+    1 | "easy, privacy-friendly Google Analytics alternative" | "Easy to use and privacy-friendly Google Analytics alternative" | KEEP |
+    2 | "75 times smaller than Google Analytics" | "Our script is 54 times smaller than Google Analytics." | REWRITE | "54 times smaller"
+    3 | "No cookie banner needed" | "No need for cookie banners or GDPR consent" | KEEP |
+    4 | "Hosted in Germany" | "Made and hosted in the EU, powered by European-owned infrastructure." | REWRITE | "Made and hosted in the EU"
+    5 | "Trusted by 25,000+ companies including Stripe and Mozilla" | "trusted by thousands of organizations, including Stripe, Mozilla, MongoDB, Harvard University and Sentry"; "Paying subscribers 22k" | REWRITE | "Trusted by thousands of organizations, including Stripe and Mozilla"
+    6 | "Set up in two minutes" | none | CUT |
+    7 | "30-day free trial. No credit card required." | "Sign up for 30-day free trial. No credit card required." | KEEP |
+
+    COULD RETURN WITH A SOURCE
+    "Set up in two minutes" | a set-up time stated on the site or in its documentation
+
+    CHECKS MISSED
+    none
+
+tweaks:
+  - what: Which sources count
+    how: Name them. For example, only your live site and your own approved claims list.
+  - what: How fresh
+    how: Say how old a price or offer may be. By default it must be read today.
+  - what: Quotes and reviews
+    how: Give the review export. Each quote is matched word for word and credited.
+  - what: Plans
+    how: For a plan, say which numbers are yours. The rest are marked as working figures.
+
+judge:
+  - Every fact in the draft is in the table, including those in subject lines and images.
+  - Every kept fact names a source and the date it was read.
+  - No line in the copy carries a flag, a footnote or "to confirm".
+  - Rewritten lines say no more than the source says.
+  - The copy still reads well where lines were cut.
+
+test:
+  - Plant one wrong number in a draft. It should be rewritten or cut.
+  - Add a sign-off from a person your sources never name. It should be cut.
+  - Change a price on your page and run it again. The copy should follow the page.
+
+improve:
+  - Keep one approved claims list with a source and date for each line.
+  - Add your rules for review quotes, such as needing permission.
+  - Add words your legal adviser wants avoided.
+  - Pair it with the Client's-eye check, which lists claims with no source.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Matching copy to sources needs careful reading, not special tools."}
+    - {name: "An AI that can open web pages", why: "Reads a missing fact from your live page on the day."}
+  inputs:
+    - "Your product page or a capture of it, with the date"
+    - "Your approved claims list"
+    - "Your review export"
+
+terms:
+  - term: Source
+    meaning: Where a fact is written down, such as your product page, with the date it was read.
+  - term: Rewrite
+    meaning: Changing a line so it says only what the source says.
+  - term: Working figure
+    meaning: A planning number, such as a target, that is labelled and yours to change. It is not a fact.
+
+output_sample:
+  input:
+    - Your complete draft
+    - Your sources, each with its date
+  prerequisites:
+    - An AI that can open web pages, if a fact must be read again today
+  output:
+    - name: Corrected copy
+      contains: Your draft with every unproven fact rewritten or removed.
+    - name: Claim trace
+      contains: Every fact with its source, date and result.
+    - name: Could return with a source
+      contains: Cut lines you could restore, and what source each needs.
+    - name: Checks missed
+      contains: One line for each check that did not run, or none.

@@ -1,93 +1,73 @@
-# Work method: the Grounded Job Protocol
+# Work method
 
-A model left alone falls back to its average output, so every business gets the same page, the same ad and the same plan. This method stops that. Ground the work in the client's real business, brief the taste, explore real alternatives, build inside what exists, then have the work checked by a fresh pass.
+The client judges one thing: does this do its job for their buyer or their decision, and can they use it today? Grounding and brand fit are the floor, not the win.
 
-Run all seven steps for anything bigger than a quick answer. A quick answer (a fact, a definition, a one-line fix) skips to the reply, but its facts still need a source.
+## 0. Frame: the spec sheet
 
-## 0. Frame: write the job card
+Write `context/spec.md`, one screen:
 
-Write `context/job-card.md` in five lines:
+- **The job:** who must do what after seeing this (buy, sign up, reply, approve a budget). One sentence.
+- **Deliverables:** the exact count and format, in the client's words.
+- **Acceptance tests:** 5 to 7 questions the client would ask: two or more on the commercial job ("Does email 1 show a product and give a reason to click?"), one each on readiness ("Can a designer make each ad without asking me anything?"), truth and clarity.
+- **Decisions you must take** and **assumptions**, one line each.
+- **Mode:** `patch` what exists (the default), `extend` it, or `new`.
+- **Brand context:** none, facts, voice, look or all three. Take only that slice.
 
-- **Client and outcome:** who they are and the result they want.
-- **Deliverable kind:** one of web_page, ad_creative, copy, email, audit, analysis, strategy, plan, code, ops_doc or other.
-- **Success measure:** how the client will judge it.
-- **Mode:** `patch` improves the existing asset, and is the default whenever one exists. `extend` adds a new page or asset inside the existing system. `new` is only for a new brand or when nothing exists, or when the client says so.
-- **Access:** the level and limits for each tool you will touch (AGENTS.md, "Access levels").
+## 1. Ground: only what the job needs
 
-## 1. Ground: capture the real thing before you make anything
+Capture what the acceptance tests depend on, and no more (`context/README.md`), including the buyer's real setting: city, season, any promotion live today. To capture a site:
 
-What to capture for each kind of work, and where each file goes, is in `context/README.md`. For audits and analysis, grounding means pulling the real account or data, not reading about it.
+1. Run `node tools/capture-brand-dna.mjs <url>`.
+2. Or run `tools/brand-dna-snippet.js` in a browser console on the live site and save its output as `context/brand-dna.json`.
+3. Or ask for the URL, screenshots and brand guide.
 
-Three ways to capture a website, in order:
+Every fact goes in `context/facts.md` with its source and date. None is used without both.
 
-1. Run `node tools/capture-brand-dna.mjs <url>` where Node and Playwright are available. It writes `context/brand-dna.json` and `context/screenshots/`.
-2. Paste `tools/brand-dna-snippet.js` into any browser tool or the devtools console on the live site, and save what it prints as `context/brand-dna.json`.
-3. Ask the client for the URL, screenshots of the key pages (phone and desktop) and their CSS or brand guide, and write `context/brand-dna.json` from those.
+**Can the buyer act today?** Confirm the thing sold is live, in stock in the sizes or variants that matter, at the stated price, at the link you use. If not (nearly sold out, wrong city, dead link), decide yourself, build for the option that works, and say so in your first line.
 
-Also note 2 or 3 competitors or references: the ones the client names, or ones you find and name.
+## 2. Taste and tools
 
-**The gate.** Production does not start until the context file for this kind of work exists. Every design and copy choice cites a captured fact or a named reference ("Headline font: Söhne 600, from brand-dna.json"). If a fact cannot be captured, ask for it. Never fall back to a template in silence.
+For work a buyer sees, note in `context/taste-brief.md` the brand codes to keep, 2 admired references, 1 to avoid, and the defaults in `tools/ai-default-patterns.md` to stay out of.
 
-## 2. Taste: write the taste brief
+Your `toolbox.md` lists what to use when; pick at your own discretion and open only what you pick.
 
-Write `context/taste-brief.md` with four parts:
+## 3. Diverge: real candidates, and someone else chooses
 
-- **Brand codes to keep:** type, colour and its proportions, imagery, pacing and voice, each citing the capture.
-- **Category conventions:** which to keep and which to break, and why.
-- **References:** 2 the client admires, and 1 to avoid looking like.
-- **Defaults to avoid:** name the ones from `tools/ai-default-patterns.md` that this job could slip into.
+First check the proven levers in the job skill against the live asset.
 
-Spend your questions here, not on format: their position, price point and occasion, what must never change, and the brands they admire and avoid. Format choices (length, layout, file type) are silent defaults you state in one line.
+Then make about 3 candidates of the part that decides the outcome, as real work, not descriptions: three first screens of a page; at least 9 one-line ad concepts, then the strongest written up; three email series arcs, each with email 1 written; two differently shaped one-page plans; three competing explanations with their evidence. They differ on at least two of: promise, proof, structure, buyer moment, offer, visual world.
 
-## 3. Diverge: explore on substance
+Give the brief, the spec sheet and the unlabelled candidates to a fresh reviewer who has not seen your reasoning: a new sub-agent, or else a separate pass labelled SAME-CONTEXT in your notes. They answer each acceptance test per candidate, pick one, and name what to take from the others. If none passes the commercial tests, make one more round only.
 
-First, check the proven levers for this kind of work against the live asset, and mark each one present, missing or not applicable. Each job skill lists them, for example reviews near the decision, a delivery date, or the returns terms. Add the missing ones from real data, or give the reason you skip one. For audits, rank adding them among the fixes.
+## 4. Build: the craft floor
 
-Then make 2 or 3 directions, or for audits and analysis 2 or 3 competing hypotheses. They must differ on named axes:
+- **New framing of true facts, never new facts.** Page lines are facts to use, not copy to paste. Write the persuasion yourself.
+- **Every piece earns its place:** each email, ad or section gives the buyer a reason to act and shows the product where they expect it.
+- **Decide.** One recommendation, the runner-up in a line. Never a menu.
+- **Be specific where the client will act:** real product names, prices, dates and set-up steps. Working figures only for planning numbers the client will tune (budgets, targets, test sizes), sum shown; never in what a buyer reads, never as a revenue forecast.
+- **Match the voice by ear:** 5 real brand lines beside 5 of yours.
+- **Finish the format.** Ads: every platform field including the description, character counts, safe areas, brand and price for a cold audience, landing URL. Emails: subject, preview, one product and one ask each, links, exit rule, merge tags. Plans: totals that add up, dated steps, owners, cut, keep and scale rules, break-even. Pages: one action, proof, mobile, load.
 
-- mechanism or promise;
-- proof;
-- structure;
-- visual world or art direction;
-- offer.
+## 5. Check: the client's-eye review
 
-Each direction names the reference it learns from and how it departs from the category default. Reject any direction that differs only in colour, crop, wording or style label. In patch mode, each direction is a change-set to the live asset: a ranked list of specific edits, each with its evidence. Choose one, or let the client choose, and record why.
+A fresh reviewer (as in step 3) gets only the client's brief, the finished deliverable and `context/facts.md`, and answers:
 
-## 4. Build: inside the client's system
+1. Each acceptance test: pass or fail, with the line that proves it.
+2. Each claim a buyer or the client will read (prices, counts, ratings, policies, names, delivery times, quotes, product properties): sourced or not.
+3. The weakest piece, and why a buyer would skip it.
+4. What the client would have to ask before using it.
+5. What can be cut.
 
-- For web work, build on the captured shell. Keep the existing nav, footer, fonts, colour proportions and component styles unless the plan changes them on purpose.
-- Use the client's real copy and facts. No lorem ipsum, and no placeholder that the capture could have filled.
-- For code, deliver runnable files the client can drop in.
+Remove each unsourced claim, or rewrite it to what the source says. Never flag or footnote it. Fix 1, 3 and 4, cut 5, then stop.
 
-## 5. Check: a separate pass, against the client
+**Gates.** Answers 1 and 2, the buyer-can-act check, access, the finished format and the job skill's own gates are pass or fail. No craft score makes up for a failure.
 
-Check in a fresh context or another seat, or at least as a separate step after the build. Never grade the work in the same breath as making it.
+**Craft.** "Does the job" (for the buyer or the decision) weighs most, 30 of 100; no other row outranks it. "Own material" weighs 10: at least one idea, proof or angle from this business's real material that a generic answer would not have.
 
-**Gates.** Pass or fail; a high craft score never makes up for a failed gate.
+## 6. Hand over, and learn
 
-- Every fact traces to a source in `context/` or one you name.
-- No invented numbers.
-- Access was respected.
-- No placeholder is left that the capture could have filled.
-- The hand-over fits. It opens with a one-screen summary that answers the brief (what you delivered, why, what to check first; nothing the brief did not ask for). The deliverable stays inside its word budget in its job skill. Easy to scan: short sentences, headings that state the point, tables for comparisons. It stands on its own: supporting detail goes in an appendix inside it, never in a file the client does not have, such as DECISIONS.md or knowledge.md.
-- Pages, ads, copy, email and audits also: every proven lever was checked, and each missing one was added or skipped with a reason (step 3).
-- Web pages also: the existing nav and footer are kept unless changed on purpose, the brand fonts load, the page works at 390 px and 1440 px, the primary action works, and `tools/check-brand-fidelity.mjs` (or its checklist) passes.
+- The work comes first, opened by 3 to 5 lines: what this is, the main decision and why, what to check before use. Stay inside the job skill's word budget.
+- Nothing internal reaches the client: no process sections, lever checklists, rejected candidates, agent names, file names (knowledge.md, DECISIONS.md), access levels or method words. Supporting detail goes in an appendix inside the deliverable.
+- Headings state the point. Sentences are short. Tables are for comparisons only.
 
-**Craft.** Score each criterion out of its weight. Every family tests specificity (could a competitor publish this unchanged?), fidelity (is it recognisably this brand?), distinctiveness (does it avoid the named defaults?) and whether it does the job. A job type's own craft rubric, when its skill has one, replaces this table.
-
-| Family | Weights |
-|---|---|
-| web_page | Job and conversion logic 20, Brand fidelity 25, Launchability 20, Specificity 15, Distinctiveness vs defaults 10, Clarity 10 |
-| ad_creative | Strategic idea 20, Range across named axes 20, Brand fidelity 15, Hook and thumb-stop 15, Specificity 15, Platform fit 15 |
-| copy / email | Voice fidelity 25, Specificity 20, Job done 20, Proof and claims grounded 15, Distinctiveness 10, Clarity 10 |
-| audit / analysis | Diagnosis specific to this account or data 25, Evidence quality 20, Prioritised actions with expected impact 20, Correctness 20, Clarity 15 |
-| strategy / plan | Grounded in this business 25, Options considered with trade-offs 20, Decision quality 20, Actionability 20, Clarity 15 |
-| code / ops_doc / other | Job done 30, Correctness 25, Fits existing system 20, Clarity 15, Specificity 10 |
-
-Then compare the work with the best reference: what does the reference do that this does not? Refine once, then deliver.
-
-## 6. Record and learn
-
-Write `DECISIONS.md` next to the deliverable: what you considered, what you chose and why, the strongest dissent, and what to test next. It is your working record for the next job; the client reads the deliverable, so nothing in the deliverable depends on it.
-
-When a lesson would help with every client, propose it for "Rules I learned" in playbook.md, typed as one of `decision_rule`, `taste_reference`, `never_do`, `exemplar` or `check`. A lesson about one client stays in that client's `context/`. It never becomes a general rule, so one client's taste does not flatten the next.
+Keep working notes in `DECISIONS.md`. Add a lesson that would help every client to "Rules I learned" in playbook.md, in the form shown there. A lesson about one client stays in that client's `context/`.

@@ -4,26 +4,28 @@ The client judges one thing: does this do its job for their buyer or their decis
 
 ## 0. Frame: the spec sheet
 
-Write `context/spec.md`, one screen:
+Read `context/brand-file/worked.md` first, if any: what this client kept and killed. Then write `context/spec.md`, one screen:
 
 - **The job:** who must do what after seeing this (buy, sign up, reply, approve a budget). One sentence.
 - **Deliverables:** the exact count and format, in the client's words.
-- **Acceptance tests:** 5 to 7 questions the client would ask. Two or more on the commercial job ("Does email 1 show a product and give a reason to click?"). One each on readiness ("Can a designer make each ad without asking me anything?"), truth and clarity.
+- **Acceptance tests:** 5 to 7 questions the client would ask. Two or more on the commercial job ("Does email 1 show a product and give a reason to click?"). One each on readiness, truth and clarity.
 - **Decisions you must take** and **assumptions**, one line each.
-- **Mode:** `patch` what exists (the default), `extend` it, or `new` when nothing exists.
-- **Brand context:** none, facts, voice, look or all three. Take only that slice.
+- **Mode:** `patch` (the default), `extend`, or `new` only when nothing exists.
+- **Brand file slice:** none, facts, voice, look or full.
 
 ## 1. Ground: only what the job needs
 
-Capture what the acceptance tests depend on, and no more (`context/README.md`). Include the buyer's real setting: city, season, any promotion live today. To capture a site:
+Capture what the acceptance tests depend on, and no more (`context/README.md`). Include the buyer's real setting: city, season, any promotion live today.
+
+Unless the slice is none, run `node tools/brand-file.mjs status --for <kind>` and do only what it lists: a first job builds the brand file, later jobs refresh stale parts only. To capture:
 
 1. Run `node tools/capture-brand-dna.mjs <url>`.
-2. Or run `tools/brand-dna-snippet.js` in a browser console on the live site and save its output as `context/brand-dna.json`.
+2. Or paste `tools/brand-dna-snippet.js` into the site's console and save the result as `context/brand-dna.json`.
 3. Or ask for the URL, screenshots and brand guide.
 
-Every fact goes in `context/facts.md` with its source and date. None is used without both.
+Save the slice as `context/facts.md`; read only that. Use no fact without a source and date, or from a RECHECK line.
 
-**Can the buyer act today?** Confirm the thing sold is live, in stock in the sizes or variants that matter, at the stated price, at the link you use. If not (nearly sold out, wrong city, dead link), decide yourself, build for the option that works, and say so in your first line.
+**Can the buyer act today?** Confirm the thing sold is live, in stock in the sizes or variants that matter, at the stated price, at the link you use. If not, decide yourself, build for the option that works, and say so in your first line.
 
 ## 2. Taste and tools
 
@@ -37,7 +39,7 @@ First check the proven levers in the job skill against the live asset.
 
 Then make about 3 candidates of the part that decides the outcome, as real work, not descriptions. That means three first screens of a page; at least 9 one-line ad concepts, then the strongest written up; three email series arcs, each with email 1 written; two differently shaped one-page plans; or three competing explanations with their evidence. They differ on at least two of: promise, proof, structure, buyer moment, offer, visual world.
 
-Give the brief, the spec sheet and the unlabelled candidates to a fresh reviewer who has not seen your reasoning. Use a new sub-agent, or else a separate pass labelled SAME-CONTEXT in your notes. They answer each acceptance test per candidate, pick one, and name what to take from the others. If none passes the commercial tests, make one more round only.
+Give the brief, the spec sheet and the unlabelled candidates to a fresh reviewer who has not seen your reasoning. Use a new sub-agent, or a separate pass labelled SAME-CONTEXT in your notes. They answer each acceptance test per candidate, pick one, and name what to take from the others. If none passes the commercial tests, make one more round only.
 
 ## 4. Build: the craft floor
 
@@ -62,12 +64,12 @@ Remove each unsourced claim, or rewrite it to what the source says. Never flag o
 
 **Gates.** Answers 1 and 2, the buyer-can-act check, access, the finished format and the job skill's own gates are pass or fail. No craft score makes up for a failure.
 
-**Craft.** "Does the job" (for the buyer or the decision) weighs most, 30 of 100; no other row outranks it. "Own material" weighs 10: at least one idea, proof or angle from this business's real material that a generic answer would not have.
+**Craft.** "Does the job" (for the buyer or the decision) weighs most, 30 of 100. "Own material" weighs 10: at least one idea, proof or angle from this business's real material that a generic answer would not have.
 
 ## 6. Hand over, and learn
 
-- The work comes first, opened by 3 to 5 lines: what this is, the main decision and why, what to check before use. Stay inside the job skill's word budget.
+- The work comes first, opened by 3 to 5 lines: what this is, the main decision and why, what to check before use.
 - Nothing internal reaches the client: no process sections, lever checklists, rejected candidates, agent names, file names (knowledge.md, DECISIONS.md), access levels or method words. Supporting detail goes in an appendix inside the deliverable.
 - Headings state the point. Sentences are short. Tables are for comparisons only.
 
-Keep working notes in `DECISIONS.md`. Add a lesson that would help every client to "Rules I learned" in playbook.md, in the form shown there. A lesson about one client stays in that client's `context/`.
+Keep working notes in `DECISIONS.md`. When the client replies, record what they kept and killed: `node tools/brand-file.mjs learn`. Add a lesson that would help every client to "Rules I learned" in playbook.md, in the form shown there.

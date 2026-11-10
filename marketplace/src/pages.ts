@@ -13,6 +13,7 @@ import { agentPayload, featuredPayload, HOME_FEATURED } from "./modules/director
 import { areaLabel } from "./modules/directory/views.ts";
 import { AGENTS_TITLE, agentTitle, CONNECT_TITLE, GUIDES_TITLE, roleTitle, SITE_SUFFIX } from "./modules/directory/titles.ts";
 import type { Persona } from "./core/types.ts";
+import { publicProfile, publicProfileSlugs, recordShareVisit, type PublicProfile } from "./modules/experts/profiles.ts";
 
 /** The how-to guides (src/ui/content/guides). Titles match each file's first heading (test/pages.test.ts checks). */
 export const GUIDES = [
@@ -37,6 +38,7 @@ const LIBRARY = "https://useaiblocks.com";
 const APP_ONLY = [
   /^\/sign-in$/, /^\/invite$/, /^\/jobs(\/[^/]+)?$/, /^\/notifications$/, /^\/ops(\/.*)?$/, /^\/review$/,
   /^\/experts\/apply$/, /^\/expert$/, /^\/new$/, /^\/requests\/[^/]+$/, /^\/studio(\/agents\/[^/]+)?$/,
+  /^\/experts\/invite\/[^/]+$/, /^\/job-posts(\/new|\/[^/]+)?$/,
 ];
 
 const isProduction = (env: Env) => env.APP_ENV === "production";
@@ -168,6 +170,32 @@ async function agentPage(env: Env, id: string): Promise<PageView> {
   };
 }
 
+/** /experts/<slug>: a public expert profile, indexed like an agent page. A 404 while the expert has no live agent. */
+async function expertPage(env: Env, slug: string): Promise<PageView> {
+  const p: PublicProfile | null = await publicProfile(env, slug);
+  if (!p) return notFound();
+  const origin = originOf(env);
+  const agents = p.agents.map(a => `<li><a href="${esc(a.href)}">${esc(a.persona_name)}: ${esc(a.title)}</a>. ${esc(a.summary)}</li>`).join("");
+  return {
+    status: 200, index: true, path: p.path,
+    title: `${p.name}, expert${SITE_SUFFIX}`,
+    description: clip(`${p.headline}. ${p.name} builds AI agents from their own method on AI Blocks.`, 160),
+    image: `${origin}${p.portrait}`,
+    preloadImage: p.portrait,
+    jsonLd: [
+      { "@context": "https://schema.org", "@type": "ProfilePage", url: `${origin}${p.path}`,
+        mainEntity: { "@type": "Person", name: p.name, description: p.headline, image: `${origin}${p.portrait}`, url: `${origin}${p.path}`,
+          knowsAbout: p.areas.map(a => a.label) } },
+      { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Agents", item: `${origin}/agents` },
+        { "@type": "ListItem", position: 2, name: p.name, item: `${origin}${p.path}` },
+      ] },
+    ],
+    body: `<p><a href="/agents">All agents</a></p><img src="${esc(p.portrait)}" alt="${esc(p.name)}" width="160" height="160"><h1>${esc(p.name)}</h1><p>${esc(p.headline)}</p>${p.bio ? `<p>${esc(p.bio)}</p>` : ""}${p.areas.length ? `<p>Works in: ${esc(p.areas.map(a => a.label).join(", "))}</p>` : ""}<h2>Agents built by ${esc(p.name)}</h2><ul>${agents}</ul>`,
+    boot: { [`/api/expert-profiles/${p.slug}`]: { profile: p } },
+  };
+}
+
 function guidesPage(): PageView {
   return {
     status: 200, index: true, path: "/guides",
@@ -211,6 +239,8 @@ async function viewFor(env: Env, url: URL): Promise<PageView> {
   }
   m = path.match(/^\/guides\/([a-z0-9-]+)$/);
   if (m) return guidePage(m[1]);
+  m = path.match(/^\/experts\/([a-z0-9-]+)$/);
+  if (m && m[1] !== "apply") return expertPage(env, m[1]);
   if (APP_ONLY.some(re => re.test(path))) return { status: 200, index: false, path, title: `${SITE} agents`, description: HOME_DESCRIPTION };
   return notFound();
 }
@@ -291,6 +321,12 @@ export async function pageResponse(req: Request, env: Env): Promise<Response | n
   const view = await viewFor(env, url);
   const headers: Record<string, string> = { ...PAGE_HEADERS };
   if (!(view.index && isProduction(env))) headers["x-robots-tag"] = "noindex";
+  // ?via=<code> on any page: an expert's share link (first-party cookie, first touch wins; see experts/profiles.ts).
+  const via = url.searchParams.get("via");
+  if (via && req.method === "GET") {
+    const hit = await recordShareVisit(env, req, via.toLowerCase()).catch(() => null);
+    if (hit?.setCookie) headers["set-cookie"] = hit.setCookie;
+  }
   return new Response(req.method === "HEAD" ? null : renderShell(html, env, view), { status: view.status, headers });
 }
 
@@ -302,9 +338,9 @@ const text = (body: string, type: string) => new Response(body, { status: 200, h
 export function robotsTxt(env: Env): Response {
   if (!isProduction(env)) return text("# Not the live site: nothing here should be indexed.\nUser-agent: *\nDisallow: /\n", "text/plain");
   const origin = originOf(env);
-  const blocked = ["/api/", "/oauth/", "/mcp", "/ops", "/studio", "/jobs", "/requests/", "/review", "/new", "/invite", "/notifications", "/sign-in", "/expert$", "/experts/", "/*.zip$"];
-  // The public pages load these two while they draw, so a crawler that runs the app needs them (the longer rule wins).
-  const allowed = ["/api/agents", "/api/config"];
+  const blocked = ["/api/", "/oauth/", "/mcp", "/ops", "/studio", "/jobs", "/requests/", "/review", "/new", "/invite", "/notifications", "/sign-in", "/expert$", "/experts/apply", "/experts/invite/", "/e/", "/job-posts", "/*.zip$"];
+  // The public pages load these while they draw, so a crawler that runs the app needs them (the longer rule wins).
+  const allowed = ["/api/agents", "/api/config", "/api/expert-profiles/"];
   return text(`User-agent: *\n${blocked.map(p => `Disallow: ${p}`).join("\n")}\n${allowed.map(p => `Allow: ${p}`).join("\n")}\nAllow: /\n\nSitemap: ${origin}/sitemap.xml\n`, "text/plain");
 }
 
@@ -316,6 +352,7 @@ export async function sitemapXml(env: Env): Promise<Response> {
     "/", "/agents", "/connect", "/guides", ...GUIDES.map(g => `/guides/${g.slug}`),
     ...roles.map(r => `/agents?role=${encodeURIComponent(r.id)}`),
     ...everyone.filter(p => p.kind === "house").map(p => `/agents/${p.id}`),
+    ...(await publicProfileSlugs(env)).map(slug => `/experts/${slug}`),
   ];
   const urls = paths.map(p => `  <url><loc>${esc(`${origin}${p}`)}</loc></url>`).join("\n");
   return text(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`, "application/xml");

@@ -6,11 +6,13 @@ import type { AuthUser } from "./auth.ts";
 import { first, newId, nowIso } from "./db.ts";
 import { eventStatement } from "./events.ts";
 
-export interface UserRow { id: string; email: string | null; email_verified: number; name: string | null; beta_access: number; created_at: string; last_seen_at: string }
+export interface UserRow { id: string; email: string | null; email_verified: number; name: string | null; beta_access: number; created_at: string; last_seen_at: string; referred_by_expert?: string | null }
 export interface ExpertRow {
   id: string; user_id: string; status: "applied" | "approved" | "rejected" | "paused"; display_name: string; headline: string;
   areas: string; job_types: string; application: string; founding: number; agreement_version: string | null; agreement_accepted_at: string | null;
   review_note: string; reviewed_by: string | null; reviewed_at: string | null; created_at: string; updated_at: string;
+  /** The founding invite this application came from (migration 0020). */
+  invite_id?: string | null;
 }
 
 export interface Account {
@@ -39,8 +41,19 @@ export const hostedJobs = (env: Env) => env.HOSTED_JOBS === "on";
 export const runsInYourAi = (env: Env) =>
   `Our agents work in your own AI, so we do not run jobs on this site. Download the agent from its page, or connect your AI at ${env.APP_ORIGIN}/connect and load the agent there.`;
 
-/** Creates the user row and personal org on first sign-in; refreshes last_seen and email afterwards. */
-export async function ensureAccount(env: Env, auth: AuthUser): Promise<Account> {
+/** The first-party cookie that holds the share code (an expert's profile slug) of the link that first brought this
+ *  browser here, for 90 days. Set by the experts module (/e/<slug>, ?via=<slug>). */
+export const REFERRAL_COOKIE = "aib_via";
+
+/** The share code in the request's referral cookie, or null. */
+export function referralCode(req: Request): string | null {
+  const m = /(?:^|;\s*)aib_via=([a-z0-9-]{2,60})(?:;|$)/.exec(req.headers.get("cookie") ?? "");
+  return m ? m[1]! : null;
+}
+
+/** Creates the user row and personal org on first sign-in; refreshes last_seen and email afterwards. `via` is the
+ *  referral cookie's share code: on first sign-in only, it sets users.referred_by_expert to that approved expert. */
+export async function ensureAccount(env: Env, auth: AuthUser, opts: { via?: string | null } = {}): Promise<Account> {
   const db = env.DB, now = nowIso();
   let user = await first<UserRow>(db, "SELECT * FROM users WHERE id = ?", auth.id);
   if (!user) {
@@ -53,6 +66,8 @@ export async function ensureAccount(env: Env, auth: AuthUser): Promise<Account> 
       db.prepare("INSERT INTO org_members (org_id, user_id, role, created_at) SELECT ?, ?, 'owner', ? WHERE EXISTS (SELECT 1 FROM orgs WHERE id = ?)")
         .bind(orgId, auth.id, now, orgId),
       eventStatement(db, { actor: auth.id, actorKind: "user", entity: "user", entityId: auth.id, type: "user.signed_up", data: { via: auth.via } }, now),
+      ...(opts.via ? [db.prepare(`UPDATE users SET referred_by_expert = (SELECT p.expert_id FROM expert_profiles p JOIN experts e ON e.id = p.expert_id WHERE p.slug = ? AND e.status = 'approved')
+        WHERE id = ? AND created_at = ? AND referred_by_expert IS NULL`).bind(opts.via, auth.id, now)] : []),
     ]);
     user = (await first<UserRow>(db, "SELECT * FROM users WHERE id = ?", auth.id))!;
   } else if (Date.parse(now) - Date.parse(user.last_seen_at) > 5 * 60_000 || (auth.email && auth.email !== user.email)) {
@@ -74,7 +89,7 @@ export async function ensureAccount(env: Env, auth: AuthUser): Promise<Account> 
 }
 
 export async function account(ctx: Ctx): Promise<Account> {
-  return ensureAccount(ctx.env, await ctx.user());
+  return ensureAccount(ctx.env, await ctx.user(), { via: referralCode(ctx.req) });
 }
 
 export async function requireOps(ctx: Ctx): Promise<Account> {

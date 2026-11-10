@@ -5,6 +5,7 @@ import { coreRoutes } from "./core/routes.ts";
 import { moduleRoutes, scheduledTasks } from "./modules/index.ts";
 import "./modules/fakes.ts";
 import { llmsTxt, pageResponse, robotsTxt, sitemapXml } from "./pages.ts";
+import { shareRedirect } from "./modules/experts/profiles.ts";
 
 const compiled = compile([...coreRoutes, ...moduleRoutes]);
 const API_PREFIXES = ["/api/", "/mcp", "/oauth/", "/.well-known/"];
@@ -24,6 +25,9 @@ export async function handleFetch(req: Request, env: Env, exec: ExecutionContext
     if (url.pathname === "/robots.txt") return robotsTxt(env);
     if (url.pathname === "/sitemap.xml") return sitemapXml(env);
     if (url.pathname === "/llms.txt") return llmsTxt(env);
+    // An expert's share link: count the visit, set the first-party cookie, go to their profile.
+    const share = /^\/e\/([a-z0-9-]{2,60})\/?$/.exec(url.pathname);
+    if (share) return (await shareRedirect(env, req, share[1]!)) ?? errorResponse(404, "not_found", "There is no expert at this address.");
     // A page (no file extension): its own head tags and plain content, and a real 404 for unknown addresses.
     if (!/\.[A-Za-z0-9]+$/.test(url.pathname)) {
       const page = await pageResponse(req, env);

@@ -1,7 +1,7 @@
 // Whether the browser app should load Clerk now (src/ui/lib/auth.tsx). No imports, so tests can load it in Node.
 
-/** Pages anyone can use signed out. Elsewhere (accounts, consent, ops, studio) Clerk always loads. */
-export const PUBLIC_PAGE = /^\/($|agents(\/|$)|guides(\/|$)|connect$)/;
+/** Pages anyone can use signed out (expert profiles and invite pages too, not the application). Elsewhere (accounts, consent, ops, studio) Clerk always loads. */
+export const PUBLIC_PAGE = /^\/($|agents(\/|$)|guides(\/|$)|connect$|experts\/(?!apply(\/|$))[^/]+)/;
 
 /** Clerk keeps a __client_uat cookie on useaiblocks.com: a timestamp while someone is signed in, "0" or missing
  *  otherwise. Without it, a public page skips downloading Clerk (most of the page weight) until the visitor signs in. */

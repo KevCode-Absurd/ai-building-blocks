@@ -156,6 +156,7 @@ function SiteFooter() {
           {jobs && <Link href="/jobs">My jobs</Link>}
           <Link href="/connect">Connect your AI</Link>
           <Link href="/guides">Guides</Link>
+          <Link href="/job-posts/new">Post a job for experts</Link>
           <Link href="/experts/apply">Apply as an expert</Link>
           <a href={LIBRARY_URL}>AI Blocks library</a>
         </nav>

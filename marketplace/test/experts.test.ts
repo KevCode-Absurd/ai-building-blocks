@@ -231,7 +231,7 @@ test("approving creates a hidden expert persona and emails the expert", async ()
   assert.equal(profile.portrait, "/agents/expert-default.webp");
 
   const events = await t.sql("SELECT type, actor_kind, data FROM events WHERE (entity = 'expert' AND entity_id = ?) OR (entity = 'persona' AND entity_id = ?) ORDER BY seq", id, p.id);
-  assert.deepEqual(events.map(e => e.type), ["expert.applied", "persona.created", "expert.approved"]);
+  assert.deepEqual(events.map(e => e.type), ["expert.applied", "persona.created", "expert.approved", "expert.profile_created"]);
   const approved = JSON.parse(events[2].data);
   assert.equal(approved.founding, 1);
   assert.equal(approved.persona_id, p.id);

@@ -12,6 +12,8 @@ const SECTIONS = [
   { href: "/ops/agents", label: "Agents" },
   { href: "/ops/review", label: "Quality" },
   { href: "/ops/experts", label: "Experts" },
+  { href: "/ops/invites", label: "Expert invites" },
+  { href: "/ops/job-posts", label: "Job posts" },
   { href: "/ops/beta", label: "Invites and staff" },
   { href: "/ops/costs", label: "Costs" },
 ];

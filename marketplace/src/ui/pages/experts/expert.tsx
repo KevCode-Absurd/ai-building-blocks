@@ -7,6 +7,8 @@ import {
   type ExpertDashboard, type ExpertMe, type ExpertView,
 } from "./shared.tsx";
 import type { Area } from "../../../core/types.ts";
+import { useState } from "preact/hooks";
+import { AgreementCard, Checklist, MatchingPosts, ProfileCard } from "./dashboard-parts.tsx";
 
 export function ExpertHome() {
   const state = useLoad(() => api<ExpertMe>("/api/experts/me"), []);
@@ -92,6 +94,9 @@ function Paused(props: { expert: ExpertView }) {
 function Dashboard(props: { expert: ExpertView }) {
   const state = useLoad(() => api<ExpertDashboard>("/api/experts/me/dashboard"), []);
   const e = props.expert;
+  // Saving the profile or agreeing to the agreement ticks the setup checklist without a reload.
+  const [version, setVersion] = useState(0);
+  const bump = () => setVersion(v => v + 1);
   return (
     <Page wide title="Expert dashboard" intro="How your agents are doing with buyers."
       actions={<Button href="/studio">Build an agent</Button>}>
@@ -99,7 +104,13 @@ function Dashboard(props: { expert: ExpertView }) {
         {e.founding ? <Badge tone="good">Founding expert</Badge> : <Badge>Expert</Badge>}
         <span class="muted small">Hiring is free for buyers right now.</span>
       </p>
-      <Loaded state={state}>{d => <DashboardBody d={d} />}</Loaded>
+      <div class="stack exp-dash">
+        <Checklist version={version} />
+        <Loaded state={state}>{d => <DashboardBody d={d} />}</Loaded>
+        <MatchingPosts />
+        <ProfileCard onSaved={bump} />
+        <AgreementCard expert={e} onAccepted={bump} />
+      </div>
     </Page>
   );
 }

@@ -1,4 +1,5 @@
 // Shared bits for the experts pages: API shapes, labels and the "what happens next" steps.
+import { useState } from "preact/hooks";
 import type { Area } from "../../../core/types.ts";
 import type { ExpertView } from "../../../modules/experts/service.ts";
 
@@ -72,5 +73,31 @@ export function WhatNext(props: { reviewTime: string }) {
         <span>You turn your method into an agent in the studio. We check it before buyers can hire it.</span>
       </li>
     </ol>
+  );
+}
+
+export type { PublicProfile, MyProfile, ChecklistView } from "../../../modules/experts/profiles.ts";
+export type { PublicInviteView, OpsInviteView, InviteStatus } from "../../../modules/experts/invites.ts";
+export type { PostView, ReplyView, NeededBy } from "../../../modules/experts/posts.ts";
+
+/** "When do you need it?" choices, in order (the server's NEEDED_BY). */
+export const NEEDED_BY_OPTIONS: { value: string; label: string }[] = [
+  { value: "asap", label: "As soon as possible" },
+  { value: "two_weeks", label: "Within 2 weeks" },
+  { value: "month", label: "Within a month" },
+  { value: "flexible", label: "No fixed date" },
+];
+
+/** A button that copies text and says so. */
+export function CopyButton(props: { text: string; label?: string; small?: boolean }) {
+  const [state, setState] = useState<"idle" | "done" | "failed">("idle");
+  const copy = async () => {
+    try { await navigator.clipboard.writeText(props.text); setState("done"); } catch { setState("failed"); }
+    setTimeout(() => setState("idle"), 2500);
+  };
+  return (
+    <button type="button" class={`btn btn-line${props.small === false ? "" : " btn-sm"}`} onClick={copy} aria-live="polite">
+      {state === "done" ? "Copied" : state === "failed" ? "Copy failed: select the link" : props.label ?? "Copy link"}
+    </button>
   );
 }

@@ -1,41 +1,46 @@
-name: Brand profile builder
+name: Brand file builder
 new_slug: website-brand-brain-builder
-summary: Build a reusable brand profile from your website. Get eight files on your products, buyers, voice and approved claims, each fact with a source.
+summary: Build one brand file from your website and what you already have. Offers, facts, buyers, claims, voice and look, each with a source and date.
 job: brand-file
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
-headline: Brand profile builder
-subhead: Share your website and any product, customer or brand documents you already have. It builds eight reusable files covering what you sell, who buys, your voice and the claims you can support. Every fact has a source, and unanswered questions stay visible.
+headline: Brand file builder
+subhead: Share your website and any product, customer or brand documents you already have. It builds one brand file your AI reads before every job. Each line says where it came from and when, old prices are flagged, and unanswered questions stay visible.
 explain: |
   Every time you ask an AI to write an ad, a page or an email, it starts from nothing. You paste the same facts again, it guesses the rest, and the guesses creep into your copy as prices you don't charge and claims you can't make.
 
-  This skill builds your brand file once, for any online business. It reads your website, then sorts in what you already have, like product sheets, a style guide or old ads. You get one folder of eight files. They cover what you sell, who buys and why, what you can claim, how you sound and look, your market, and a log. Every fact carries a tag (confirmed, inferred, disputed or unknown). A claim with no proof on file is marked pending, even on your own site. Paste the start file into a Claude project, a ChatGPT project or a Gemini Gem, and add the other seven as files.
+  This skill builds your brand file once, for any online business, and then keeps it current. It measures your website, then sorts in what you already have, like product sheets, a style guide, reviews or old ads. You get one folder in your own project. It holds your live prices and offers, your lasting facts, your buyers and the claims you can make, your voice and look, the sites you admire and compete with, and what worked on past jobs.
+
+  Every line carries its source, its date and a status. A claim with no proof on file is marked pending, even on your own site. Prices and offers count as old after 7 days, so your AI checks them again before it sells anything. Each job reads only the slice it needs, and a job that needs none skips it.
 when:
   - You use AI for marketing and keep pasting the same background into every chat.
   - You're briefing a new writer, designer or AI tool and want them working from facts you can stand behind.
   - Your facts are spread across your site, product sheets and old ads, and you can't tell which claims are proven.
+  - Your AI has used an old price or an offer that has ended.
 not_for:
   - "You need one ad or one email and have no site or brand material: ask your AI to write it directly, with the facts pasted in."
   - "You only want a quick look at a rival: read their site yourself, or ask your AI to summarise their pages."
-  - "You want a printable design guide for a designer: this gives facts and rules, not a formatted guide, so ask a designer to make one from the files."
+  - "You want a printable design guide for a designer: this gives facts and rules, not a formatted guide."
 you_give:
   - Your website address, or your pages pasted in if it can't be read
   - Brand material you already have, like product sheets, a style guide or past ads, each with a label and date (optional)
   - Customer reviews, survey answers or support emails (optional)
-  - Past results from ads, emails or offers, as an export or pasted summary (optional). If your AI is connected to an ad account or store, it reads it only with your say-so; that needs your own access, and some tools need a paid plan
+  - Past results from ads, emails or offers, as an export or pasted summary (optional). If your AI is connected to an ad account or store, it reads it only with your say-so
   - Your next step, such as planning, writing or image work (optional)
 you_get:
-  - A folder of eight plain files, from a start file for your AI to a claims list and a change log
-  - A tag on every fact, and every claim marked approved, pending or banned
-  - A two-sentence diagnosis of your biggest gap, and a list of what's missing and who can answer it
+  - One brand file in your own project, with an index that shows what is fresh, what is old and what is missing
+  - Your prices, offers, stock and shipping, each with its page and date
+  - Your lasting facts, buyers and claims, each marked checked, not confirmed or banned
+  - Real lines in your own words, your colours, fonts and buttons
+  - The sites you admire, avoid and compete with, and what you kept or dropped on past jobs
   - A short slice for your next step, if you name one
 how_to_use:
   - Paste your website address into your AI. If it can't read sites, paste your key pages as text instead.
   - Add any product sheets, style guides, reviews or past results. Label each one and give its date.
   - Name your next step, such as writing ads. You then get a short slice for that job.
   - Check the short fact sheet it shows you and correct anything wrong. Answer its questions, or skip them.
-  - Review the eight files. Look at claims marked pending and the list of what's missing.
-  - Save the files in a Claude project, a ChatGPT project or a Gemini Gem. Use 00-start-here.md as the instructions.
+  - Look at the claims marked pending and the list of what's missing.
+  - Before each later job, ask it to check the brand file. It refreshes only what has gone old.
 output_sample:
   input:
     - Your website address, or your pages pasted in
@@ -44,207 +49,116 @@ output_sample:
     - Past results from ads, emails or offers (optional)
     - Your next step, such as planning, writing or image work (optional)
   output:
-    - name: 00-start-here.md
-      contains: The business in five lines, your biggest gap, house rules for any AI, and which file fits which task.
-    - name: business.md
-      contains: One-line description, category, stage, positioning, the story your site tells and your promise.
-    - name: offers.md
-      contains: Each product or plan with price, terms, what is included, policies word for word and buyer questions.
-    - name: customers.md
-      contains: Two to four buyer profiles with quotes, what pushed them, what held them back and the words they use.
-    - name: proof-and-claims.md
-      contains: Each claim marked approved, pending or banned, with its proof, source and date.
-    - name: voice-and-look.md
-      contains: Voice traits, tone by situation, words to use and avoid, colours, fonts, logo files and image style.
-    - name: market.md
-      contains: The options buyers weigh, a competitor table and the open ground no one holds.
-    - name: log.md
-      contains: Dated changes, decisions, graded results and open questions, newest first.
+    - name: index.md
+      contains: One screen that says what is in the brand file, how fresh each part is and what is missing.
+    - name: offers.json
+      contains: Each price, promotion, stock and shipping line with its page and the date it was read.
+    - name: facts.json
+      contains: What you are and sell, policies, proof, buyers and the claims list, each with a source, a date and a status.
+    - name: look.json
+      contains: Colours with their share of the page, fonts, shapes, buttons, menu, footer and image style.
+    - name: voice.md
+      contains: Real lines word for word, button words, customer words kept apart, and voice notes.
+    - name: references.md
+      contains: The sites you admire and avoid, and your competitors with their pitch, prices and the gap they leave.
+    - name: worked.md
+      contains: What you kept, dropped or asked for more of, and results, by job and date.
     - name: Slice for your next step
       contains: Only the facts your named next step needs, if you name one.
 how_it_works:
-  - title: Reads the site and your material
-    text: Reads the pages every business has, then the ones your kind of business has, then each labelled piece you gave it. If the site can't be read, it builds from your material.
-  - title: Tags every fact
-    text: Marks each fact confirmed (with its page or label and date), inferred, disputed or unknown. When your material and your site disagree, it keeps both.
+  - title: Checks what exists
+    text: Looks for a brand file first and updates it. It never starts a second one. Older folders and loose notes are moved in.
+  - title: Measures the site
+    text: Captures your live pages for prices, offers, stock, look and real lines, each with its page and date.
+  - title: Sorts in your material
+    text: Reads each labelled piece you gave it. When your material and your site disagree, it keeps both and marks them disputed.
   - title: Checks in once
-    text: Shows you a short fact sheet and waits for your corrections. If no one can answer, it lists each fact to confirm as MISSING and uses only tagged facts.
+    text: Shows you a short fact sheet and waits for your corrections. It asks only about a conflict or a missing decision.
   - title: Asks the most-needed questions
     text: At most five, one at a time, each skippable, ranked by how many later tasks need the answer.
+  - title: Lists buyers and claims
+    text: Builds each buyer record on real quotes. Marks each claim approved, pending or banned. A review of a rival never counts as proof.
   - title: Maps your market
     text: Lists the options buyers weigh, including doing nothing, and 3 to 5 competitors with their pitch, prices and the gap they leave.
-  - title: Writes eight files
-    text: Marks each claim approved, pending or banned. A review of a rival never counts as proof, and a missing logo or font file is listed as a gap.
-  - title: Checks its own work
-    text: Makes sure prices match across files and every claim sits in the claims list. Colours and fonts never share a line with a claim.
   - title: Cuts a slice
     text: Planning gets buyers and approved claims. Writing gets offer facts, claims and quotes. Image work gets the product's look, colours, fonts and the words allowed on the picture.
-  - title: Keeps one source of truth
-    text: Returns eight named sections in chat or verifies saved files. It logs sourced changes, keeps conflicts visible and selects only the context needed for the next task.
+  - title: Keeps it current
+    text: Prices, offers and stock count as old after 7 days, and look and voice after 90. A new capture adds to the file and lists what changed.
 output_shape: |
-  brand-file/
-    00-start-here.md     <the business in five lines, diagnosis,
-                          house rules, which file for which task>
-    business.md          <one line, category, stage, positioning>
-    offers.md            <each offer: price, terms, policies>
-    customers.md         <buyer profiles with real quotes>
-    proof-and-claims.md  <claim | approved, pending or banned |
-                          proof | source>
-    voice-and-look.md    <voice, colours, fonts, logo and font
-                          files, photo style>
-    market.md            <options buyers weigh, competitors>
-    log.md               <changes, decisions, graded results>
+  context/brand-file/
+    index.md        <what is here, how fresh, what is missing>
+    offers.json     <price | offer | stock | shipping, each with
+                     source and date>
+    facts.json      <facts, buyers and claims, each with source,
+                     date and status>
+    look.json       <colours, fonts, shapes, buttons, imagery>
+    voice.md        <real lines, button words, customer words>
+    references.md   <admired, avoided, competitors>
+    worked.md       <kept, dropped, results, by job and date>
+    history/        <earlier versions, changes>
 
   SLICE FOR <NEXT STEP>
   <only what that step needs>
 
   SUMMARY
   Disputed: <n, and which>
-  Buyer profiles grounded: <n of n>
+  Buyer records grounded: <n of n>
   MISSING: <what>, <who can answer>
 
   CHECKS MISSED: <one line each, or none>
-example:
-  business: sprout
-  input: |
-    [the skill]
-
-    Website: sprout.example
-    Brand material I already have:
-    - brand notes (colours, fonts, pouch, product rules)
-    - live ads (15 headlines, 2 main texts)
-    - public reviews, numbered R1 to R20
-    Next step: image work. A designer is making image ads for the
-    Original pouch.
-
-    (Check-in) Fact sheet looks right.
-    (Questions, one at a time)
-    1 Proof for "1M+ customers" and the 4.8 rating? Skip.
-    2 What's live right now? The $29.99 first box with text sign-up.
-    3 Logo and font files? Not to hand. Skip.
-    4 Past results with numbers? None. Skip.
-    5 Who may appear in content? Skip.
-    Competitors: your list of five is right, go ahead.
-  output: |
-    CHECK-IN
-    Sprout | daily greens gummies in single-serve packs | greens gummy
-    supplement | established [inferred: sold in big-box stores] |
-    Original Adults $49.99 every 4 weeks or $66.65 once [confirmed:
-    product page] | #00582D [confirmed: brand notes]
-    > You: looks right
-
-    --- 00-start-here.md (top) ---
-    Diagnosis: Buyers already know the problem and have tried powders
-    and pills; the gut-fix seeker feels it most. The ads lead with
-    money off, while buyers talk most about finally sticking with a
-    supplement, and only 3 of the 40 newest ads are habit or story.
-
-    --- offers.md (excerpt) ---
-    Sprout Original (Adults), Low Sugar, 28 packs
-      One-time $66.65 ($2.38/day). Subscribe $49.99 every 4 weeks
-      [confirmed: product page]
-      First order $29.99, only with the text sign-up discount
-      [confirmed: product page footer; you, question 2]
-      Discount: 52% and up to 55% on this page, 49% and 58% on others,
-      61% in ads [disputed]
-      Vitamins and minerals: "21" [confirmed: brand notes; live ads]
-      and "over 20" [confirmed: product page ingredients] [disputed]
-      An ad says "probiotics"; the ingredient list shows prebiotic
-      fiber and no probiotics [disputed]
-
-    --- proof-and-claims.md (excerpt) ---
-    "Clinically tested for nutrient absorption" | approved | 2025
-      study, 120 adults: vitamin C +40.1%, folate +20.5% | name the
-      study and those two nutrients only
-    "Third-party tested" | approved | "Tested by [an outside lab]" |
-      product page | name what was tested
-    "Supports digestion and gut health" | approved | on the label,
-      brand notes list it as fine to repeat | as written
-    "Supports immunity + stress relief" | pending | nothing on file
-    "1M+ Customers" | pending | nothing on file
-    "4.8/5.0 (100,000)" | pending | widget 4.75 from 109,639, reviews
-      page 4.74 from 118,002, a review site 4.0 from 2,411 [disputed]
-    "Fix the Hot Girl Tummy" | banned | brand notes: claims stay at
-      "supports" | live ads
-    Category research, not proof: rival gummy reviews say "stringy, gooey"
-
-    SLICE FOR IMAGE WORK (Original pouch)
-    Product: glossy deep green stand-up foil pouch, big yellow
-      wordmark, yellow bear face top right, "28 Daily Packs" at the
-      bottom. Gummies: small opaque deep-green bears, soft matte.
-    Show it right: tear the daily pack straight across the top and
-      pour gummies into a palm or bowl. The big pouch opens only at
-      its resealable top. No tie-in characters or partner marks.
-    Colours: #00582D, #002C17 headings, #FFF7DF background, #007E40
-      buttons, #FFCC2E stars and badges. Fonts: Work Sans, DM Mono.
-    Photo style: bright and sunny, one pouch on a soft two-colour
-      gradient, everyday adults pouring gummies into a hand.
-    Words allowed on the picture: "Supports digestion and gut
-      health", "60+ ingredients", "6g fiber", "Third-party tested",
-      "Rip. Tip. Enjoy."
-    Held back: ratings, "1M+", discounts, the vitamin count (disputed).
-
-    SUMMARY
-    Files written: 8 of 8. Buyer profiles grounded: 4 of 4.
-    Disputed: 5 (the discount, 21 against "over 20", probiotics, the
-    star rating, the Kids first price)
-    MISSING: logo file, font files, display font name (founder)
-    MISSING: proof for "1M+" and one agreed star rating (founder)
-    MISSING: the real discount, grams of sugar per pack, who may
-    appear in content (founder)
-    MISSING: ad results with real numbers (whoever runs the ad account)
-    (cut for length: the full run also had business.md, customers.md,
-    voice-and-look.md, market.md, log.md, and how to load the folder)
 tweaks:
   - what: Your material and reviews
-    how: Every labelled piece fills blanks the site leaves. Pasting 20 or more real reviews is the biggest upgrade, because it turns inferred buyer profiles into ones built on real words.
+    how: Every labelled piece fills blanks the site leaves. Pasting 20 or more real reviews is the biggest upgrade, because it turns inferred buyer records into ones built on real words.
   - what: The next step
     how: Name it and you get a slice. Image work gets the product's look, colours and allowed words, with no review quotes. Writing gets offer facts, approved claims and quotes, with no hex codes.
   - what: Pages it reads
     how: Point it at specific pages if your site is big ("read the homepage, /pricing and these three product pages"). For an online store, the store add-on adds product photos and a truth sheet per product.
   - what: Competitors
-    how: Name the competitors you care about instead of letting it search. You'll get a sharper market file and fewer irrelevant names.
+    how: Name the competitors you care about instead of letting it search. You'll get a sharper market map and fewer irrelevant names.
   - what: Results
-    how: Paste an export with real numbers. Without numbers, every result in the log is graded "seen running" or "reported", which is honest but less useful.
+    how: Paste an export with real numbers. Without numbers, every result is graded "seen running" or "reported", which is honest but less useful.
 judge:
-  - Every price in the files matches your price list exactly.
-  - Every fact carries a tag, and every confirmed fact names its page, label or person.
+  - Every price in the brand file matches your price list exactly, and has the date it was read.
+  - Every line has a source, and every checked fact names its page, label or person.
   - Claims with nothing on file are marked pending, even when they're on your own site.
-  - Every customer quote is something a real customer wrote, with where it came from. Profiles without quotes say inferred.
-  - Two sources that disagree are both recorded and tagged disputed, never quietly picked.
+  - Every customer quote is something a real customer wrote, with where it came from.
+  - Two sources that disagree are both recorded and marked disputed, never quietly picked.
   - The slice holds only what the next step needs. An image slice has no review quotes and no pending claims.
+  - Old prices are listed for a recheck, not passed on as facts.
 test:
   - Check the prices first. Compare three offers line by line with your price list; any rounding or a missing offer means it read an old or wrong page.
-  - Give it a product sheet that disagrees with your site, such as an old price. Both versions should be there, tagged disputed.
+  - Give it a product sheet that disagrees with your site, such as an old price. Both versions should be there, marked disputed.
   - Leave out your logo file. It should come back as a MISSING line, with no stand-in logo or font.
-  - Start a fresh project, load only the folder, and ask for one ad. If your AI asks for something the folder should hold, fill that blank.
+  - Run it again a week later. It should update the same brand file and list what changed, not start a new one.
 improve:
-  - Edit the page list in step 1 to name the pages that matter on your site, so it never skips them.
-  - Add your banned claims and house rules to the 00-start-here.md row, so every tool that loads the folder follows them.
-  - Keep log.md current. Add a dated line every time a price, offer or product changes, so later tasks don't use old facts.
-  - Rerun it with new material when a product, price or offer changes, then rerun step 8 to catch facts that no longer match.
-  - Pair it with a skill that interviews the founder to fill the gaps only they can answer. Then add one that turns the folder into a printable guide for designers.
+  - Edit the page list in step 3 to name the pages that matter on your site, so it never skips them.
+  - Add your banned claims, so every job that reads the brand file leaves them out.
+  - Capture your pricing and best-selling pages each week, so later tasks don't use old facts.
+  - After each job, tell it what you kept and dropped. The next job starts from that.
+  - Pair it with a skill that interviews the founder to fill the gaps only they can answer.
 works_best_with:
   tools:
     - name: Claude
-      why: A project keeps the start file as its instructions and the other files as knowledge, even on a free account.
+      why: A project keeps the index as its instructions and the slice as knowledge, even on a free account.
     - name: Gemini
-      why: A Gem keeps the start file as instructions that Gemini follows every time you use it.
+      why: A Gem keeps the index as instructions that Gemini follows every time you use it.
     - name: Shopify
-      why: If you sell on Shopify, it exports your products and variants as a spreadsheet, so offers.md matches every variant.
+      why: If you sell on Shopify, it exports your products and variants as a spreadsheet, so offers match every variant.
   inputs:
     - Names of 3 to 5 competitors you already watch, so the market map starts from real ones
-    - Your logo and font files by name, so the look file has no gaps
+    - Your logo and font files by name, so the look has no gaps
     - Lab reports or test certificates, so more claims can be approved instead of pending
     - Who on your team can answer questions about proof and offers, so each gap names a real person
 terms:
   - term: Brand file
-    meaning: One folder with your facts, offers, buyers, claims, voice and history, which any AI or person can read before working for you.
-  - term: Tag
-    meaning: A short label on each fact saying whether it's confirmed (with its source), inferred, disputed or unknown.
+    meaning: One folder in your own project with your offers, facts, buyers, claims, voice, look and history, which any AI or person can read before working for you.
+  - term: Status
+    meaning: A short label on each line. Live means checked, not confirmed means reasoned, disputed or unknown, and banned means you've ruled it out.
   - term: Claims list
     meaning: Every claim you might make, with its proof. Approved means a document or test backs it, pending means nothing is on file yet, banned means you've ruled it out.
-  - term: Buyer profile
+  - term: Buyer record
     meaning: A short description of one kind of buyer, what they want and what makes them hesitate, built on their own words where possible.
   - term: Slice
     meaning: The short part of the brand file one next step needs, such as the look and allowed words for a designer.
+  - term: Stale
+    meaning: Too old to trust. Prices, offers and stock are stale after 7 days, and the look and voice after 90 days.

@@ -471,9 +471,9 @@
       ]
     },
     "catalogue-items/general/website-brand-brain-builder/item.yaml": {
-      "reviewed_by": "AI Blocks source review (Codex)",
-      "reviewed_on": "2026-11-08",
-      "method_sha256": "01575b86e9e9016787690a5dbd5b7a373407b5a525bcf79e436f5f7cfccd0751",
+      "reviewed_by": "AI Blocks source review (Claude, brand file workstream)",
+      "reviewed_on": "2026-11-10",
+      "method_sha256": "7bc5cf536421eab27408fcf7bfc5145b19cf04a97bc402f66260119ae5b1a769",
       "inputs": [
         {
           "type": "web_page",
@@ -786,9 +786,9 @@
       ]
     },
     "catalogue-items/general/brand-dna-capture/item.yaml": {
-      "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
-      "reviewed_on": "2026-11-09",
-      "method_sha256": "6c6f1c98315a5523454bb0bbfcf953928a535d678ba1d36c9a9bb07df3935196",
+      "reviewed_by": "AI Blocks source review (Claude, brand file workstream)",
+      "reviewed_on": "2026-11-10",
+      "method_sha256": "50306fdc517fd79be47cfa9a03415ba612ec001ad6aa46960fe3e1c793e24240",
       "inputs": [
         {
           "type": "web_page",
@@ -1612,9 +1612,9 @@
       "rationale": "The producer's real revised offer supplies the consumer offer port, not its entire brand or visual ad context. Predictions stay guesses, and the writer still needs approved business facts and any actual ad image before checking continuity."
     },
     "catalogue-items/general/motion-graphics-build-plan/page.yaml#before#website-brand-brain-builder": {
-      "reviewed_by": "AI Blocks source review (Codex)",
-      "reviewed_on": "2026-11-08",
-      "from_sha256": "01575b86e9e9016787690a5dbd5b7a373407b5a525bcf79e436f5f7cfccd0751",
+      "reviewed_by": "AI Blocks source review (Claude, brand file workstream)",
+      "reviewed_on": "2026-11-10",
+      "from_sha256": "7bc5cf536421eab27408fcf7bfc5145b19cf04a97bc402f66260119ae5b1a769",
       "to_sha256": "701f06f24965cfe3bdacf3f0cda46d5c4ddf99532b73e5243957218b04e3aa07",
       "ports_sha256": "7aa74471a9d33de6449bc49a0603954055e54bb4d3a285da5e80959580ce19ec",
       "type": "brand_brain",
@@ -1624,9 +1624,9 @@
       "rationale": "The producer image-work slice supplies the consumer's optional brand context. Only actual approved asset references and exact permitted words pass onward; no raw research, fictional product geometry, tool credentials or spend authority is created."
     },
     "catalogue-items/general/reason-why-deal-writer/page.yaml#before#website-brand-brain-builder": {
-      "reviewed_by": "AI Blocks source review (Codex)",
-      "reviewed_on": "2026-11-08",
-      "from_sha256": "01575b86e9e9016787690a5dbd5b7a373407b5a525bcf79e436f5f7cfccd0751",
+      "reviewed_by": "AI Blocks source review (Claude, brand file workstream)",
+      "reviewed_on": "2026-11-10",
+      "from_sha256": "7bc5cf536421eab27408fcf7bfc5145b19cf04a97bc402f66260119ae5b1a769",
       "to_sha256": "720143c28658593c549c61f282b296c276515cb549be859483bb15f05bd08543",
       "ports_sha256": "fee40714691a399b3123099678988900ad3b50e2f70841482f6f001a97af6d02",
       "type": "brand_brain",

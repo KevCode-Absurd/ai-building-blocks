@@ -1,7 +1,7 @@
 slug: website-brand-brain-builder
 renamed_from: website-brand-file-builder
-name: Brand profile builder
-summary: Share your website. Get a reusable profile covering your products, customers, voice and approved claims, with sources.
+name: Brand file builder
+summary: Share your website. Get one brand file with your offers, facts, buyers, claims, voice and look, each with a source and date.
 category: general
 boards:
   - ecommerce
@@ -27,18 +27,18 @@ source_ids:
   - CES-010
   - CES-082
 old_name: brand knowledge folder from a website
-version: 2.3.0
+version: 3.0.0
 minds:
   - april-dunford
 credits:
   - title: "Obviously Awesome: How to Nail Product Positioning so Customers Get It, Buy It, Love It"
     by: April Dunford
     url: https://www.aprildunford.com/books
-    used: Positioning parts in business.md and the options buyers weigh in market.md
+    used: Positioning facts in facts.json and the options buyers weigh in references.md
   - title: The Four Dimensions of Tone of Voice
     by: Kate Moran, Nielsen Norman Group
     url: https://www.nngroup.com/articles/tone-of-voice-dimensions/
-    used: The four voice scales in voice-and-look.md
+    used: The voice notes in voice.md
   - title: Voice and Tone
     by: Mailchimp Content Style Guide
     url: https://styleguide.mailchimp.com/voice-and-tone/
@@ -46,7 +46,7 @@ credits:
   - title: What are projects?
     by: Anthropic, Claude Help Center
     url: https://support.claude.com/en/articles/9517075-what-are-projects
-    used: Project instructions plus project knowledge, the shape the start file is built for
+    used: Project instructions plus project knowledge, the shape the index is built for
   - title: How Claude remembers your project
     by: Anthropic, Claude Code docs
     url: https://code.claude.com/docs/en/memory

@@ -1,0 +1,270 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "it-administrator",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "office-it-plan",
+      "task": "Plan IT for a new or moving office",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/office-it-setup-or-clean-up", "use": "brief", "when": "When an office opens, moves, switches platform or a new manager inherits IT that grew unplanned" },
+        { "ref": "kit:prompts/office-it-plan", "use": "build", "when": "When internet, Wi-Fi, devices, accounts, backups and help must be sorted in the right order" },
+        { "ref": "library:security-safeguards-planner", "type": "skill", "use": "brief", "when": "Before the plan, to see which basic safeguards an office this size needs first" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the budget is tight, to compare a lean and a fuller set-up with costs and dates" },
+        { "ref": "library:microsoft-365-admin-helper", "type": "skill", "use": "build", "when": "When the office runs on Microsoft 365 and needs users, mail, Teams and security set up by script" }
+      ]
+    },
+    {
+      "id": "device-licence-register",
+      "task": "Build a device and licence register",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/device-and-licence-register", "use": "build", "when": "When nobody knows how many devices, licences and subscriptions exist, who has them or when they renew" },
+        { "ref": "library:empty-workbook-builder", "type": "skill", "use": "build", "when": "When the fields are agreed and you need a clean workbook with no made-up rows" },
+        { "ref": "library:find-duplicate-and-unused-business-subscriptions", "type": "workflow", "use": "build", "when": "When card and invoice exports are to hand, to find duplicate and unused subscriptions" },
+        { "ref": "library:monthly-subscription-renewal-decision-assistant", "type": "agent", "use": "check", "when": "Each month, to see renewals with notice deadlines and a keep or cancel action for each" },
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "When an old device list is handed over, to find gaps, duplicates and odd values" }
+      ]
+    },
+    {
+      "id": "starters-leavers",
+      "task": "Run the IT side of starters, movers and leavers",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/starters-and-leavers", "use": "build", "when": "When someone joins, changes role or leaves and accounts must change in the vendor's own order" },
+        { "ref": "library:microsoft-365-admin-helper", "type": "skill", "use": "build", "when": "When the same Microsoft 365 user steps repeat and should be scripted" },
+        { "ref": "library:google-workspace-cli", "type": "skill", "use": "build", "when": "When Google Workspace steps should be run from the command line, not clicked each time" },
+        { "ref": "library:offboarding-plan-builder", "type": "skill", "use": "brief", "when": "When a leaver's handover and HR steps must line up with the day access is removed" }
+      ]
+    },
+    {
+      "id": "tenant-security",
+      "task": "Check tenant security and rank the changes",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/tenant-security-baseline", "use": "build", "when": "When a Microsoft 365 or Google Workspace tenant needs checking against vendor and public baselines" },
+        { "ref": "library:uk-cyber-essentials-checker", "type": "skill", "use": "check", "when": "When the client wants Cyber Essentials, to list the gaps to fix before applying" },
+        { "ref": "library:security-safeguards-planner", "type": "skill", "use": "brief", "when": "When the fix list is long, to put the basic safeguards in order for a small office" },
+        { "ref": "library:bruce-schneier", "type": "mind", "use": "think", "when": "When a control is proposed, to ask what it protects, what it costs and what risk is left" }
+      ]
+    },
+    {
+      "id": "sign-in-and-phishing",
+      "task": "Tighten sign-in rules and staff phishing habits",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:sign-in-policy-drafter", "type": "prompt", "use": "build", "when": "When sign-in habits are unknown, to rank the gaps and write a one-page policy" },
+        { "ref": "library:staff-phishing-rules-briefer", "type": "skill", "use": "build", "when": "When staff need one page of phishing rules and a ten-minute drill" },
+        { "ref": "library:make-a-new-policy-understandable-to-staff", "type": "workflow", "use": "build", "when": "When a new sign-in rule starts, to explain the change to staff in plain words" },
+        { "ref": "library:troy-hunt", "type": "mind", "use": "think", "when": "When a breach notice arrives, to separate what is known from what is feared before acting" }
+      ]
+    },
+    {
+      "id": "backup-restore",
+      "task": "Plan backups and prove a restore works",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/backup-and-restore-plan", "use": "build", "when": "When a small office needs to know what is backed up, where, and how long a restore takes" },
+        { "ref": "library:backup-and-recovery-planner", "type": "skill", "use": "brief", "when": "Before choosing tools, to set how much loss and downtime the business can take" },
+        { "ref": "library:build-a-backup-recovery-rehearsal", "type": "workflow", "use": "build", "when": "When backups exist but nobody has restored one, to plan a safe test with an evidence log" },
+        { "ref": "library:recovery-rehearsal-evidence-assistant", "type": "agent", "use": "check", "when": "After a restore test, to compare the evidence with the recovery targets and list the gaps" },
+        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When the plan assumes every step works, to test hand-offs, warnings and a missed step" }
+      ]
+    },
+    {
+      "id": "write-script",
+      "task": "Write an admin script that is safe to run twice",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/safe-admin-script", "use": "build", "when": "When a repeat chore needs a PowerShell or Bash script with a dry run and clear logging" },
+        { "ref": "library:task-automation-builder", "type": "skill", "use": "build", "when": "When the chore also needs a schedule or trigger, not only the script" },
+        { "ref": "library:test-first-coach", "type": "skill", "use": "build", "when": "When the script changes files or accounts, to build it in small steps with a test first" },
+        { "ref": "library:powershell-pitfall-checker", "type": "skill", "use": "check", "when": "Before a Windows script is trusted, to catch operator, quoting and error handling mistakes" },
+        { "ref": "library:schedule-timing-checker", "type": "skill", "use": "check", "when": "When the script runs on a cron schedule, to confirm the next run times and catch silent mistakes" },
+        { "ref": "library:claude-code", "type": "tool", "use": "build", "when": "When you can work in the client's script folder and run the dry run yourself" }
+      ]
+    },
+    {
+      "id": "fix-script",
+      "task": "Fix a script that fails or does the wrong thing",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/safe-admin-script", "use": "build", "when": "When an old script must be repaired and made safe to run a second time" },
+        { "ref": "library:bug-root-cause-finder", "type": "skill", "use": "brief", "when": "Before changing any line, to prove the cause of the failure with evidence" },
+        { "ref": "library:powershell-pitfall-checker", "type": "skill", "use": "check", "when": "When a PowerShell script fails oddly, to check for the common language traps first" },
+        { "ref": "library:slow-system-investigator", "type": "skill", "use": "build", "when": "When the job is slow or fails on the server and the script may not be the cause" }
+      ]
+    },
+    {
+      "id": "review-script",
+      "task": "Review a script before it is run",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/script-review-before-running", "use": "check", "when": "When a script came from a colleague, a website or an old scheduled job and is not yet trusted" },
+        { "ref": "library:bug-and-security-code-reviewer", "type": "skill", "use": "check", "when": "When the script is long, to review it for bugs, security gaps and risky commands" },
+        { "ref": "library:generated-code-reviewer", "type": "skill", "use": "check", "when": "When an AI wrote the script, to catch repeated logic and the usual AI mistakes" },
+        { "ref": "library:secrets-hygiene-checker", "type": "skill", "use": "check", "when": "When scripts hold passwords or keys, to find them and plan how to rotate and store them" },
+        { "ref": "library:check-a-new-automation-before-relying-on-it", "type": "workflow", "use": "check", "when": "Before a job is scheduled, to find double runs, missing approvals and other ways it can fail" }
+      ]
+    },
+    {
+      "id": "logs-and-data",
+      "task": "Pull what is needed from logs and command output",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/safe-admin-script", "use": "build", "when": "When a one-line command or short script must pull errors, sign-ins or sizes from logs" },
+        { "ref": "library:json-query-helper", "type": "skill", "use": "build", "when": "When an admin tool returns JSON and you need a command that filters or sums it" },
+        { "ref": "library:slow-system-investigator", "type": "skill", "use": "build", "when": "When the logs are being read to explain a slow or failing system" }
+      ]
+    },
+    {
+      "id": "staff-how-tos",
+      "task": "Write staff IT how-tos and troubleshooting trees",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/staff-how-to-and-troubleshooting-tree", "use": "build", "when": "When the same questions keep coming in and staff should fix them alone" },
+        { "ref": "library:help-article-writer", "type": "skill", "use": "build", "when": "When past tickets and vendor docs are to hand and you need short, searchable articles" },
+        { "ref": "library:repeat-task-step-guide-writer", "type": "skill", "use": "build", "when": "When one task needs exact steps, what to do if it fails and who to call" },
+        { "ref": "library:plain-words-interface-rewriter", "type": "skill", "use": "check", "when": "When a guide uses admin words, to rewrite it in the words staff say and test it read aloud" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before the set is shared, to read it as a non-technical member of staff and list what stalls them" },
+        { "ref": "library:richard-feynman", "type": "mind", "use": "think", "when": "When a how-to explains the system and not the fix, to cut it to a plain example" }
+      ]
+    },
+    {
+      "id": "help-process",
+      "task": "Set up a first-line help process and escalation rules",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:support-ticket-sorter", "type": "skill", "use": "build", "when": "When requests arrive unsorted, to class each one, rank it and draft a first reply" },
+        { "ref": "library:escalation-brief-writer", "type": "skill", "use": "build", "when": "When a problem must go to a vendor or outside IT firm with the impact and steps tried" },
+        { "ref": "library:support-desk-automation-builder", "type": "skill", "use": "build", "when": "When the office has a help desk tool and wants reply templates and a triage routine" },
+        { "ref": "library:documentation-system-planner", "type": "skill", "use": "brief", "when": "When guides are scattered, to decide what to write down, where it lives and who keeps it fresh" }
+      ]
+    },
+    {
+      "id": "file-structure",
+      "task": "Design the file and permission structure",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/file-and-permission-structure", "use": "build", "when": "When files are scattered and nobody knows who can see what in SharePoint or Shared drives" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the structure could follow teams or follow projects, to compare two shapes before picking" },
+        { "ref": "library:documentation-system-planner", "type": "skill", "use": "brief", "when": "When the structure must also say where procedures and guides live" }
+      ]
+    },
+    {
+      "id": "migration",
+      "task": "Plan a move off an old file server or tool",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/office-it-setup-or-clean-up", "use": "brief", "when": "When the move is part of a wider clean-up of accounts, devices and backups" },
+        { "ref": "library:business-data-move-runbook", "type": "skill", "use": "build", "when": "When data moves between tools, to get a map of fields, checks and a way back" },
+        { "ref": "library:zero-downtime-migration-planner", "type": "skill", "use": "build", "when": "When staff must keep working during the move, to plan each step with a check and a rollback" },
+        { "ref": "library:plan-a-vendor-change-without-losing-work", "type": "workflow", "use": "build", "when": "When the move also ends a contract, to plan notice dates and a staged switch" }
+      ]
+    },
+    {
+      "id": "it-policies",
+      "task": "Write IT policies staff will read",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:team-ai-use-policy-drafter", "type": "skill", "use": "build", "when": "When staff already use AI tools and there is no rule on what data may go into them" },
+        { "ref": "library:remote-work-policy-writer", "type": "skill", "use": "build", "when": "When people work from home on mixed devices and the rules are unwritten" },
+        { "ref": "library:sign-in-policy-drafter", "type": "prompt", "use": "build", "when": "When the policy needed is about passwords, sign-in codes and shared accounts" },
+        { "ref": "library:make-a-new-policy-understandable-to-staff", "type": "workflow", "use": "check", "when": "When a policy is approved, to turn it into a plain announcement staff can follow" }
+      ]
+    },
+    {
+      "id": "security-incident",
+      "task": "Handle the first hour of a security incident",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/security-incident-first-hour", "use": "build", "when": "When a mailbox sends spam, a ransom note appears or someone typed a password into a fake page" },
+        { "ref": "library:security-incident-triager", "type": "skill", "use": "brief", "when": "When an alert arrives, to set severity, who to tell and what to preserve" },
+        { "ref": "library:prepare-a-service-outage-communication-pack", "type": "workflow", "use": "build", "when": "When staff or customers must be told, to draft the first notice, updates and all-clear" },
+        { "ref": "library:copilot-incident-postmortem", "type": "skill", "use": "build", "when": "After the event, to write a no-blame report with causes, owners and open facts" },
+        { "ref": "library:turn-an-incident-into-a-safer-procedure", "type": "workflow", "use": "build", "when": "When the incident shows a weak procedure, to redraft it and track the prevention actions" },
+        { "ref": "library:troy-hunt", "type": "mind", "use": "think", "when": "When panic is driving the response, to hold to what the evidence shows was exposed" }
+      ]
+    },
+    {
+      "id": "monthly-health-check",
+      "task": "Run the monthly IT health check",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/monthly-it-health-check", "use": "build", "when": "In the first working week of each month, from the tenant, backup and device exports" },
+        { "ref": "library:agency-support-infrastructure-maintainer", "type": "agent", "use": "check", "when": "When there is a server or cloud set-up, to check alerts, backups, patches and access for gaps" },
+        { "ref": "library:domain-and-certificate-watch-checker", "type": "skill", "use": "check", "when": "When domains and certificates are renewed by hand, to flag leftovers and weak registrar access" },
+        { "ref": "library:vendor-scorecard-builder", "type": "skill", "use": "check", "when": "When an internet or IT provider keeps missing targets, to score them and claim credits" },
+        { "ref": "library:status-report-writer", "type": "skill", "use": "build", "when": "When the owner wants one page with status, risks and the decisions needed" }
+      ]
+    },
+    {
+      "id": "email-authentication",
+      "task": "Set up email sender records so mail is trusted",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:inbox-delivery-fixer", "type": "skill", "use": "build", "when": "When office mail lands in spam or the domain has no SPF, DKIM or DMARC records" },
+        { "ref": "library:email-setup-health-checker", "type": "skill", "use": "check", "when": "When the records are in place, to score the settings and get the exact fixes" }
+      ]
+    },
+    {
+      "id": "runbooks",
+      "task": "Write runbooks for server and admin chores",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:runbook-writer", "type": "skill", "use": "build", "when": "When a service needs written steps for maintenance, faults and rollback" },
+        { "ref": "library:write-a-procedure-test-it-and-build-a-training-deck", "type": "workflow", "use": "build", "when": "When the office manager will run the chore and needs it tested and taught" },
+        { "ref": "library:sop-and-runbook-checker", "type": "skill", "use": "check", "when": "When old runbooks exist, to find missing owners, stale pages and gaps" },
+        { "ref": "library:process-doc-freshness-keeper", "type": "agent", "use": "check", "when": "On a schedule, to flag runbooks that no longer match the systems" }
+      ]
+    },
+    {
+      "id": "ai-agents-in-admin",
+      "task": "Set rules for AI agents and add-ons with admin access",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:copilot-agent-governance", "type": "skill", "use": "build", "when": "When an AI agent will act in an admin console, to set its permissions and risky-action rules" },
+        { "ref": "library:skill-safety-checker", "type": "skill", "use": "check", "when": "Before an AI add-on or skill is installed, to find risky code and hidden data leaks" },
+        { "ref": "library:ai-vendor-terms-checker", "type": "skill", "use": "check", "when": "Before staff data goes into an AI tool, to check its terms on training and liability" },
+        { "ref": "library:microsoft-copilot", "type": "tool", "use": "brief", "when": "When the tenant has Copilot, to know what it can see and do before rules are written" }
+      ]
+    },
+    {
+      "id": "choose-it-tools",
+      "task": "Choose or switch an IT tool or provider",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:software-vendor-chooser", "type": "skill", "use": "build", "when": "When backup, device management or help desk tools are being compared against real needs" },
+        { "ref": "library:saas-terms-check", "type": "skill", "use": "check", "when": "Before signing, to flag renewal traps, price rises, uptime and data terms" },
+        { "ref": "library:plan-a-vendor-change-without-losing-work", "type": "workflow", "use": "build", "when": "When the choice replaces a tool in use, to plan the exit and a staged switch" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a guide, plan or policy is shared, to catch typos and a system named two ways" },
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "When a plan cites vendor settings, limits or rules, to tie each to a dated source or cut it" }
+  ],
+  "helpers": [
+    { "role": "cybersecurity-specialist", "when": "When an incident is serious, or the client needs a full security review or a formal standard" },
+    { "role": "devops-engineer", "when": "When the work is servers, cloud accounts, pipelines or monitoring rather than office IT" },
+    { "role": "automation-specialist", "when": "When joiner, leaver or help requests should flow between tools without a script to maintain" },
+    { "role": "technical-writer", "when": "When the how-to set grows into a full help centre or staff handbook" },
+    { "role": "compliance-specialist", "when": "When a breach may need reporting, or retention and privacy rules must be checked for a region" },
+    { "role": "procurement-specialist", "when": "When licences, internet or an IT support contract need quotes compared and terms negotiated" }
+  ],
+  "gaps": [
+    "No library item designs a SharePoint or Shared drive structure with permission groups, or Teams and Chat channel rules",
+    "No library item builds a device and licence register; only subscriptions are covered",
+    "No library item runs joiner, mover and leaver steps in Microsoft 365 or Google Workspace in the vendor's order; only the HR side exists",
+    "No library item checks a Microsoft 365 or Google Workspace tenant against vendor, CISA SCuBA or ENISA baselines",
+    "No library item reviews a Bash script for unsafe patterns; only PowerShell has a pitfall checker",
+    "No library item writes regex or a log parser for sign-in, mail or backup logs",
+    "No library item plans office internet, Wi-Fi, printers and network kit for a small office",
+    "No library item covers device management and patching: Intune, Jamf, update rings or disk encryption checks",
+    "No library item drafts an acceptable use policy, or naming, retention and sharing rules for files",
+    "No library item reviews admin roles and who holds them across a tenant",
+    "No library item tracks breach reporting clocks by region for a small office",
+    "No library item offers different layouts of a troubleshooting tree to test with staff"
+  ]
+}

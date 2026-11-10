@@ -1,0 +1,257 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "procurement-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "sourcing-plan-rfq",
+      "task": "Write a sourcing plan and a request pack",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/source-and-award-one-purchase", "use": "brief", "when": "When a new product, service or supplier is needed, or a contract is up for re-tender" },
+        { "ref": "kit:skills/sourcing-plan-and-rfq", "use": "build", "when": "When a buying need must become a one-page plan and a request suppliers can answer" },
+        { "ref": "library:sourcing-plan-builder", "type": "skill", "use": "brief", "when": "When starting a spend category cold, to get a supplier list, scoring rules and talk points" },
+        { "ref": "library:supplier-quote-request-writer", "type": "skill", "use": "build", "when": "When the request is for a made product, to word it in maker terms with checks to run" },
+        { "ref": "library:perplexity", "type": "tool", "use": "brief", "when": "When you need a first list of suppliers with links you can check" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before the pack is sent, to read it as a supplier and list what they would have to ask" }
+      ]
+    },
+    {
+      "id": "level-quotes",
+      "task": "Put quotes on one basis and score the suppliers",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/quote-levelling-and-supplier-scoring", "use": "build", "when": "When quotes differ in unit, quantity, currency, delivery point or period" },
+        { "ref": "library:compare-supplier-prices-on-the-same-basis", "type": "workflow", "use": "build", "when": "When the quotes are for a physical product and need one table with a risk view" },
+        { "ref": "library:supplier-quote-table-builder", "type": "prompt", "use": "build", "when": "When you need a quick table of two or more quotes and the cash each needs up front" },
+        { "ref": "library:supplier-scorer", "type": "skill", "use": "build", "when": "When price is not the only test, to weight the criteria and get one pick with reasons" },
+        { "ref": "library:landed-cost-calculator", "type": "skill", "use": "check", "when": "When goods are imported, to test cost per sellable unit after freight and duty" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "Before the comparison is shared, to catch formula errors and broken links" }
+      ]
+    },
+    {
+      "id": "true-cost",
+      "task": "Estimate the true cost over one to three years",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/quote-levelling-and-supplier-scoring", "use": "build", "when": "When set-up, running, support and exit costs must sit beside the quoted price" },
+        { "ref": "library:vendor-comparison-writer", "type": "skill", "use": "build", "when": "When two proposals need cost, risk and a clear pick with points to negotiate" },
+        { "ref": "library:business-investment-analyst", "type": "skill", "use": "build", "when": "When the purchase is an investment, to work out payback, return and risk" },
+        { "ref": "library:saas-terms-check", "type": "skill", "use": "check", "when": "When the purchase is software, to find the price rises and renewal traps that change the total" }
+      ]
+    },
+    {
+      "id": "decision-memo",
+      "task": "Write the award decision memo and keep the trail",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/source-and-award-one-purchase", "use": "brief", "when": "When the scoring is done and the award must be written up and approved" },
+        { "ref": "library:narrative-decision-memo-writer", "type": "skill", "use": "build", "when": "When the owner must choose, to set out the options, risks and missing facts on one memo" },
+        { "ref": "library:narrative-memo-checker", "type": "skill", "use": "check", "when": "When the memo is drafted, to score it and get the three fixes that matter" },
+        { "ref": "library:preserve-a-procurement-decision-audit-trail", "type": "workflow", "use": "build", "when": "When the choice may be questioned later, to keep criteria, scores and approvals together" },
+        { "ref": "library:procurement-evidence-gap-review-assistant", "type": "agent", "use": "check", "when": "Before sign-off, to see which mandatory checks still lack proof" }
+      ]
+    },
+    {
+      "id": "vendor-call",
+      "task": "Prepare questions for a vendor call",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/vendor-call-questions", "use": "build", "when": "When a call is booked and there are 30 minutes to prepare questions on price, terms, risk and exit" },
+        { "ref": "library:software-vendor-chooser", "type": "skill", "use": "brief", "when": "When the vendor sells software, to draw the questions from scored criteria" },
+        { "ref": "library:vendor-risk-reviewer", "type": "skill", "use": "build", "when": "When the vendor will hold data or run something critical, to get questions sized to the risk" },
+        { "ref": "library:ai-vendor-terms-checker", "type": "skill", "use": "check", "when": "When the vendor is an AI tool, to flag data-training and liability terms to raise on the call" }
+      ]
+    },
+    {
+      "id": "negotiation-plan",
+      "task": "Plan a supplier negotiation and the opening email",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/negotiation-and-contract-terms-check", "use": "build", "when": "When a price talk is coming and the alternative, target, fallback and walk-away must be set" },
+        { "ref": "library:negotiation-call-prep-planner", "type": "skill", "use": "build", "when": "Before the call, to get opening lines, questions to ask and what to listen for" },
+        { "ref": "library:weak-position-negotiation", "type": "skill", "use": "explore", "when": "When the supplier holds more power, to plan terms, their needs and the order to move" },
+        { "ref": "library:factory-price-break-negotiator", "type": "skill", "use": "build", "when": "When the talk is about unit price and minimum order with a factory" },
+        { "ref": "library:supplier-payment-terms-planner", "type": "skill", "use": "build", "when": "When cash matters more than price, to work out which payment terms to ask for" },
+        { "ref": "library:chris-voss", "type": "mind", "use": "think", "when": "Before the call, to sum up the supplier's side and plan the questions that open it up" }
+      ]
+    },
+    {
+      "id": "renewal-brief",
+      "task": "Prepare a contract renewal brief",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/negotiation-and-contract-terms-check", "use": "build", "when": "When a renewal is due and the price has crept up" },
+        { "ref": "library:prepare-a-contract-renewal-negotiation", "type": "workflow", "use": "build", "when": "When there is a notice deadline, to plan it and choose keep, renegotiate or replace" },
+        { "ref": "library:monthly-contract-renewal-keeper", "type": "agent", "use": "check", "when": "Each month, to list renewals and notice dates due, the traps in each and the asks to make" },
+        { "ref": "library:plan-a-vendor-change-without-losing-work", "type": "workflow", "use": "explore", "when": "When replacing is a real option, to see what the switch would take before the talk" }
+      ]
+    },
+    {
+      "id": "contract-terms-check",
+      "task": "Check contract terms before signing",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/negotiation-and-contract-terms-check", "use": "check", "when": "When a contract is ready to sign and the terms that cost later need finding" },
+        { "ref": "library:contract-and-term-sheet-reviewer", "type": "skill", "use": "check", "when": "When the contract is long, to flag risky terms in plain words and when to call a lawyer" },
+        { "ref": "library:saas-terms-check", "type": "skill", "use": "check", "when": "When it is a software subscription, to check renewal, price rise, uptime and data terms" },
+        { "ref": "library:contract-intake-reviewer", "type": "agent", "use": "check", "when": "When contracts arrive often, to rate each new one and list the clauses to question" }
+      ]
+    },
+    {
+      "id": "supplier-due-diligence",
+      "task": "Check a supplier before award and at renewal",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/supplier-due-diligence-and-sanctions-check", "use": "build", "when": "When a supplier's identity, owners and sanctions status must be checked and recorded" },
+        { "ref": "library:factory-shortlist-vetter", "type": "skill", "use": "check", "when": "When factories have answered your questions, to score each and list the red flags" },
+        { "ref": "library:vendor-risk-reviewer", "type": "skill", "use": "check", "when": "When the supplier handles data or a critical service, to set a risk tier and review their reports" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the check is filed, to tie every finding to a dated source" },
+        { "ref": "library:anita-roddick", "type": "mind", "use": "think", "when": "When a supplier's claims sound good, to ask what proof stands behind each one" }
+      ]
+    },
+    {
+      "id": "samples",
+      "task": "Request samples and score them the same way",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/sample-request-and-check-sheet", "use": "build", "when": "When two or three suppliers are shortlisted and samples must be judged against the spec" },
+        { "ref": "library:sample-approval-gatekeeper", "type": "skill", "use": "check", "when": "When a sample arrives and there is a tech pack, to pass or fail it line by line" },
+        { "ref": "library:product-sample-approval-loop", "type": "agent", "use": "check", "when": "When samples go back and forth, to give go or hold each round and stop at three" }
+      ]
+    },
+    {
+      "id": "spend-review",
+      "task": "Review spending and subscriptions for savings",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/spend-and-subscription-review", "use": "build", "when": "When the owner wants to know where the money goes and what to keep, cut or renegotiate" },
+        { "ref": "kit:workflows/quarterly-spend-and-supplier-review", "use": "brief", "when": "Every quarter, in the first two weeks after the accounts close" },
+        { "ref": "library:spend-savings-finder", "type": "skill", "use": "build", "when": "When there is a list of supplier payments, to group spend and rank the savings chances" },
+        { "ref": "library:find-duplicate-and-unused-business-subscriptions", "type": "workflow", "use": "build", "when": "When card and invoice exports are to hand, to find duplicate and unused subscriptions" },
+        { "ref": "library:software-spend-auditor", "type": "skill", "use": "build", "when": "When the sprawl is software, to find duplicate tools and a plan to cut suppliers" },
+        { "ref": "library:code-vendor-bills-flag-odd-ones-and-find-supplier-savings", "type": "workflow", "use": "check", "when": "When bills are coded each month, to flag odd ones and where a supplier costs more than before" },
+        { "ref": "library:john-d-rockefeller", "type": "mind", "use": "think", "when": "When the totals look fine, to read the ledger line by line and trace each cost" }
+      ]
+    },
+    {
+      "id": "energy-tariff-check",
+      "task": "Check energy and utility bills and compare tariffs",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/energy-bill-and-tariff-check", "use": "build", "when": "When a fixed contract is ending, bills jumped, or estimated reads and wrong rates are suspected" },
+        { "ref": "library:business-investment-analyst", "type": "skill", "use": "build", "when": "When savings actions cost money, to rank them by payback" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before the usage and cost trend is shared, to catch broken formulas and wrong totals" }
+      ]
+    },
+    {
+      "id": "public-tender",
+      "task": "Decide bid or no-bid on a public tender",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/public-tender-bid-or-no-bid", "use": "build", "when": "When a public tender is found and the client must decide fast, then plan a compliance matrix" },
+        { "ref": "library:grant-and-bid-response-writer", "type": "skill", "use": "explore", "when": "When weighing several open bids, to get a go or no-go call on each" },
+        { "ref": "library:rfp-response-builder", "type": "skill", "use": "build", "when": "When the tender pack is in, to sort requirements by must-have and score the fit" }
+      ]
+    },
+    {
+      "id": "modern-slavery",
+      "task": "Outline a modern slavery statement or answer a questionnaire",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/modern-slavery-statement-outline", "use": "build", "when": "When a UK statement is due or a large customer sends a forced labour questionnaire" },
+        { "ref": "library:responsible-sourcing-checker", "type": "skill", "use": "brief", "when": "Before writing, to find ethics gaps across suppliers and a questionnaire to send them" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before publishing, to make sure every step claimed has a dated record behind it" },
+        { "ref": "library:anita-roddick", "type": "mind", "use": "think", "when": "When the draft is all policy, to check what the business has really done on the ground" }
+      ]
+    },
+    {
+      "id": "operating-budget",
+      "task": "Build an operating cost budget and a cash buffer plan",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:department-budget-planner", "type": "skill", "use": "build", "when": "When past spend is known, to phase next year's running costs month by month" },
+        { "ref": "library:prepare-a-seasonal-cash-buffer", "type": "workflow", "use": "build", "when": "When quiet months strain cash, to get a dated forecast, a downside case and actions" },
+        { "ref": "library:lean-year-cash-rules-writer", "type": "skill", "use": "build", "when": "When the owner wants simple rules for the buffer and who to ask early" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When there is a savings target, to compare two budgets that cut in different places" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "Before the budget is agreed, to catch formula errors in the workbook" }
+      ]
+    },
+    {
+      "id": "supplier-performance",
+      "task": "Score supplier performance each quarter",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/quarterly-spend-and-supplier-review", "use": "build", "when": "Each quarter, to review key suppliers alongside the spend" },
+        { "ref": "library:vendor-scorecard-builder", "type": "skill", "use": "build", "when": "When there is delivery or uptime data, to score each supplier and claim missed-target credits" },
+        { "ref": "library:supplier-contract-manager", "type": "skill", "use": "build", "when": "When promises and renewal dates are scattered, to track both in one place" },
+        { "ref": "library:supplier-partnership-planner", "type": "skill", "use": "build", "when": "When one supplier is key, to plan what to share and how often to meet" }
+      ]
+    },
+    {
+      "id": "supply-risk",
+      "task": "Rate supplier risk and plan a backup",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:supplier-risk-scorecard-builder", "type": "skill", "use": "build", "when": "When the business leans on a few suppliers, to score each and list the warning signs" },
+        { "ref": "library:supply-chain-backup-plan-builder", "type": "skill", "use": "build", "when": "When a failure would stop sales, to rank the risks and write who does what" },
+        { "ref": "library:supplier-order-splitter", "type": "skill", "use": "explore", "when": "When a second source exists, to plan how much to order from each" },
+        { "ref": "library:charlie-munger", "type": "mind", "use": "think", "when": "When the plan looks safe, to turn it upside down and ask what would make it fail" }
+      ]
+    },
+    {
+      "id": "invoice-checks",
+      "task": "Check supplier invoices against orders and receipts",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:check-supplier-invoices-before-approval", "type": "workflow", "use": "check", "when": "Before invoices are approved, to match them and list amounts to question" },
+        { "ref": "library:prepare-a-goods-receipt-discrepancy-brief", "type": "workflow", "use": "build", "when": "When goods arrive short or wrong, to match order, receipt and invoice and write to the supplier" },
+        { "ref": "library:invoice-checker", "type": "skill", "use": "check", "when": "When invoices come as files, to pull the fields out and match them to purchase orders" }
+      ]
+    },
+    {
+      "id": "product-cost-down",
+      "task": "Cut the unit cost of a made product",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:cut-your-product-cost-and-turn-supplier-terms-into-cash", "type": "workflow", "use": "build", "when": "When a product's margin is thin, to get a cost sheet by part, terms to ask for and a plan" },
+        { "ref": "library:landed-cost-allocator", "type": "skill", "use": "brief", "when": "When freight and duty invoices are in, to know the true landed cost per unit first" },
+        { "ref": "kit:skills/negotiation-and-contract-terms-check", "use": "build", "when": "When the cost sheet shows where to push, to plan the talk with the supplier" }
+      ]
+    },
+    {
+      "id": "software-choice",
+      "task": "Choose a software tool, agency or service provider",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/quote-levelling-and-supplier-scoring", "use": "build", "when": "When proposals for a service must be compared on scope, price and risk" },
+        { "ref": "library:software-vendor-chooser", "type": "skill", "use": "build", "when": "When tools are being compared, to score each against needs and list contract checks" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When two or three options are close, to have a fresh reader pick against the brief" },
+        { "ref": "library:plan-a-vendor-change-without-losing-work", "type": "workflow", "use": "build", "when": "When the pick replaces a supplier in use, to plan the exit and a staged switch" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a request, memo or statement is sent, to catch typos and a supplier named two ways" }
+  ],
+  "helpers": [
+    { "role": "compliance-specialist", "when": "When a sanctions hit, export control or regulated purchase needs a formal review" },
+    { "role": "proposal-writer", "when": "When the client decides to bid on a tender and the response must be written" },
+    { "role": "supply-chain-planner", "when": "When order sizes, lead times and stock levels drive the buying decision" },
+    { "role": "logistics-coordinator", "when": "When freight quotes, Incoterms, customs papers or a 3PL are part of the purchase" },
+    { "role": "management-accountant", "when": "When the budget needs cost centres, accruals or a full cost model" },
+    { "role": "physical-product-developer", "when": "When suppliers cannot quote because the spec or tech pack is not yet written" }
+  ],
+  "gaps": [
+    "No library item screens a supplier against OFAC, UK and EU sanctions lists or checks owners and controllers",
+    "No library item checks energy, water or telecoms bills for errors or compares tariffs and contract quotes",
+    "No library item builds a compliance matrix for a public tender or reads a tender notice for pass or fail rules",
+    "No library item drafts a modern slavery statement or answers a customer's forced labour questionnaire",
+    "No library item writes an RFI or RFP pack for a service, agency or freelancer; the fits are for made products",
+    "No library item works out total cost of ownership over one to three years with set-up, running and exit costs",
+    "No library item writes a sample request and a scoring sheet when there is no tech pack",
+    "No library item writes question lists for a vendor sales call outside software",
+    "No library item sets a purchase approval policy with limits, or a simple purchase order process",
+    "No library item benchmarks a quoted price against market rates or builds a should-cost estimate"
+  ]
+}

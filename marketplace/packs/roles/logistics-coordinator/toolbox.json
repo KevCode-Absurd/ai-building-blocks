@@ -1,0 +1,253 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "logistics-coordinator",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "daily-watch",
+      "task": "Run the daily order and exception watch",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/daily-order-and-exception-watch", "use": "brief", "when": "Every working day, first thing, before the first carrier collection" },
+        { "ref": "kit:prompts/order-exception-watch-list", "use": "build", "when": "When you have the morning's order and tracking export and need the late and stuck ones listed" },
+        { "ref": "library:daily-order-and-shipping-watcher", "type": "agent", "use": "build", "when": "When the watch should run each morning and hold risky orders only on the owner's say" },
+        { "ref": "library:where-is-my-order-risk-finder", "type": "skill", "use": "check", "when": "When the store is connected, to find shipped orders with stale tracking before customers ask" },
+        { "ref": "library:shipment-tracking-planner", "type": "skill", "use": "brief", "when": "When there is no tracking routine, to decide what to track at each step and when to alert" }
+      ]
+    },
+    {
+      "id": "delay-messages",
+      "task": "Write delay, lost parcel and peak season messages",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/delay-and-lost-parcel-messages", "use": "build", "when": "When each stage of a delivery problem needs an honest, calm message, plus banner and auto-reply text" },
+        { "ref": "library:delivery-update-flow-builder", "type": "skill", "use": "build", "when": "When updates should send themselves, to plan the flow, the tracking page and the delay script" },
+        { "ref": "library:support-reply-tone-editor", "type": "skill", "use": "explore", "when": "When a message reads stiff or too sorry, to try it in another tone with the facts unchanged" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the set goes live, to check every date, cut-off and promise against carrier and store terms" },
+        { "ref": "library:matthew-dixon", "type": "mind", "use": "think", "when": "When customers still write in after the update, to find the effort the message leaves them with" },
+        { "ref": "library:klaviyo", "type": "tool", "use": "build", "when": "When the store sends email and text from Klaviyo and the delay flow will be built there" }
+      ]
+    },
+    {
+      "id": "upset-customer-replies",
+      "task": "Reply to customers upset about a delivery",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/carrier-claims-and-delivery-issues", "use": "build", "when": "When a parcel is late, lost or damaged and the customer needs a reply and a next step today" },
+        { "ref": "library:customer-message-tone-and-urgency-review", "type": "skill", "use": "brief", "when": "When a batch of messages arrives, to read tone, urgency and warning signs first" },
+        { "ref": "library:angry-customer-reply-writer", "type": "prompt", "use": "explore", "when": "When the first draft sounds defensive, to get a version that names the feeling and promises nothing false" },
+        { "ref": "library:refund-request-reply-writer", "type": "prompt", "use": "build", "when": "When the customer asks for money back, to give a clear yes, part or no under the policy" },
+        { "ref": "library:angry-customer-reply-checker", "type": "skill", "use": "check", "when": "Before sending, to check the promises, facts and tone of the reply" },
+        { "ref": "library:gorgias", "type": "tool", "use": "build", "when": "When replies are sent from a Gorgias inbox and order facts should be pulled in there" }
+      ]
+    },
+    {
+      "id": "carrier-claims",
+      "task": "Build a carrier claim pack and keep the claims log",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/carrier-claims-and-delivery-issues", "use": "build", "when": "When a parcel is lost or damaged and the claim needs the carrier's own evidence list and deadline" },
+        { "ref": "library:shipment-problem-handler", "type": "skill", "use": "build", "when": "When the shipment is freight, to get next steps, a claim checklist and draft notices" },
+        { "ref": "library:amazon-reimbursement-claim-finder", "type": "skill", "use": "build", "when": "When stock went missing at Amazon, to find the claims worth filing from the reports" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before a claim is filed, to tie every value, date and weight to a document" },
+        { "ref": "library:chris-voss", "type": "mind", "use": "think", "when": "When a carrier denies a fair claim, to plan the appeal call around their side of it" }
+      ]
+    },
+    {
+      "id": "shipping-cost-review",
+      "task": "Review shipping and fulfilment costs from invoices",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/shipping-cost-review", "use": "build", "when": "When carrier invoices and the order export are to hand and the true cost per order is unknown" },
+        { "ref": "kit:workflows/monthly-shipping-cost-and-claims-review", "use": "brief", "when": "Each month, once the carrier invoices for the month are in" },
+        { "ref": "library:shipping-cost-analyzer", "type": "skill", "use": "build", "when": "When you need what is charged for shipping against what it costs, by carrier and method" },
+        { "ref": "library:check-supplier-invoices-before-approval", "type": "workflow", "use": "check", "when": "Before a carrier invoice is paid, to match its lines and list amounts to question" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before the review goes to the owner, to catch broken formulas and wrong totals" }
+      ]
+    },
+    {
+      "id": "carrier-comparison",
+      "task": "Compare carriers and prepare the rate talk",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:carrier-performance-comparer", "type": "skill", "use": "build", "when": "When shipment data is to hand, to set delivery times and costs side by side by carrier" },
+        { "ref": "library:freight-mode-and-carrier-picker", "type": "skill", "use": "build", "when": "When freight invoices show mixed lanes, to pick the best mode and carrier for each" },
+        { "ref": "library:freight-carrier-manager", "type": "skill", "use": "build", "when": "When rates are up for talks, to get a bid plan, talking points and a carrier scorecard" },
+        { "ref": "library:prepare-a-contract-renewal-negotiation", "type": "workflow", "use": "brief", "when": "When a carrier contract is due, to plan notice dates and keep, renegotiate or replace" },
+        { "ref": "library:chris-voss", "type": "mind", "use": "think", "when": "Before the rate call, to sum up the carrier's position and plan the questions to ask" }
+      ]
+    },
+    {
+      "id": "checkout-rates",
+      "task": "Set a shipping rate table and free-shipping line",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/shipping-cost-review", "use": "brief", "when": "Before setting rates, to know the true cost per order by zone and weight" },
+        { "ref": "library:shipping-rate-planner", "type": "skill", "use": "build", "when": "When parcels, costs and countries are known and you need zones, rates and a free-shipping line" },
+        { "ref": "library:order-threshold-planner", "type": "skill", "use": "build", "when": "When the free-shipping line is a guess, to set it at the real peaks in order size" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When flat, tiered and free shipping are all possible, to compare two models with the money shown" },
+        { "ref": "library:shipping-rate-gap-finder", "type": "skill", "use": "check", "when": "After the table is entered, to find zones with no rate or only manual rates" }
+      ]
+    },
+    {
+      "id": "packing-specs",
+      "task": "Write packing specs and fix box sizes",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/packing-spec-per-product", "use": "build", "when": "When breakages, crushed boxes or size-based billing are costing money" },
+        { "ref": "library:monthly-returns-and-refunds-reviewer", "type": "agent", "use": "check", "when": "Each month, to see which products drive damage refunds and what to fix first" }
+      ]
+    },
+    {
+      "id": "3pl-choice",
+      "task": "Compare 3PL quotes and check 3PL bills",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/3pl-quote-comparison", "use": "build", "when": "When 3PL quotes are laid out differently and must be put on one basis" },
+        { "ref": "library:3pl-bid-and-agreement-builder", "type": "skill", "use": "brief", "when": "Before asking for quotes, to write the pricing request and the agreement terms to demand" },
+        { "ref": "library:3pl-bill-auditor", "type": "skill", "use": "check", "when": "When a 3PL bill arrives, to find overcharges against the rate card and draft a dispute note" },
+        { "ref": "library:plan-a-vendor-change-without-losing-work", "type": "workflow", "use": "build", "when": "When moving warehouse, to plan notice dates and a staged switch that drops no orders" },
+        { "ref": "library:michael-dell", "type": "mind", "use": "think", "when": "When deciding in-house or 3PL, to ask what the partner adds and when cash moves" }
+      ]
+    },
+    {
+      "id": "delivery-routes",
+      "task": "Plan delivery zones, routes and run sheets",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/delivery-routes-and-run-sheets", "use": "build", "when": "When a local business runs its own vans and needs zones, days, fees and a printable run sheet" },
+        { "ref": "library:delivery-time-slot-route-planner", "type": "skill", "use": "build", "when": "When each drop has a promised window, to route so every window is met with the fewest vans" },
+        { "ref": "library:multi-stop-route-planner", "type": "skill", "use": "build", "when": "When several drivers share the day's drops, to get a low-mileage route for each" },
+        { "ref": "library:van-loading-planner", "type": "skill", "use": "build", "when": "When the load is tight, to check fit, weight and the order things come off" },
+        { "ref": "library:return-pickup-route-planner", "type": "skill", "use": "build", "when": "When drivers also collect returns, to bring them back on the same trip" },
+        { "ref": "library:last-mile-delivery-planner", "type": "skill", "use": "check", "when": "When cost per drop is too high, to rank the changes and ways to cut failed deliveries" }
+      ]
+    },
+    {
+      "id": "pick-pack-sop",
+      "task": "Write the pick, pack and dispatch SOP",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/pick-pack-dispatch-sop", "use": "build", "when": "When orders go out wrong or each packer works their own way, or a new packer starts soon" },
+        { "ref": "library:pick-pack-and-ship-improver", "type": "skill", "use": "brief", "when": "Before writing, to find the slow steps and compare picking methods" },
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When the steps need a flowchart, who does what and the edge cases written out" },
+        { "ref": "library:write-a-procedure-test-it-and-build-a-training-deck", "type": "workflow", "use": "check", "when": "When the SOP is drafted, to test it for gaps and make a short deck for new packers" },
+        { "ref": "library:taiichi-ohno", "type": "mind", "use": "think", "when": "When errors repeat, to watch one order from shelf to label and look at each hand-off" }
+      ]
+    },
+    {
+      "id": "warehouse-layout",
+      "task": "Plan shelf and bin layout from order data",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:warehouse-slot-assigner", "type": "skill", "use": "build", "when": "When pick counts are known, to put fast sellers in the closest spots" },
+        { "ref": "library:warehouse-layout-planner", "type": "skill", "use": "build", "when": "When a room or unit is being set up, to plan zones, aisles and storage type" },
+        { "ref": "library:warehouse-picker-route-planner", "type": "skill", "use": "check", "when": "When the layout is drawn, to test picker paths against one-way aisles and travel rules" }
+      ]
+    },
+    {
+      "id": "returns-bench",
+      "task": "Set up the returns bench and grading rules",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/returns-bench-sop", "use": "build", "when": "When returns pile up, refunds wait too long or damaged returns go back on the shelf" },
+        { "ref": "library:returns-policy-designer", "type": "skill", "use": "brief", "when": "When the policy itself is unclear, to set refund timing, keep-it rules and a recovery budget" },
+        { "ref": "library:refund-speed-checker", "type": "skill", "use": "check", "when": "When the bench is running, to see days from return request to refund and the late ones" },
+        { "ref": "library:monthly-returns-and-refunds-reviewer", "type": "agent", "use": "check", "when": "Each month, to see what returns cost, which products drive them and the one fix to make" },
+        { "ref": "library:find-out-why-good-orders-turn-into-bad-reviews-and-returns", "type": "workflow", "use": "build", "when": "When returns stay high after the bench is fixed, to find the wrong-fit buyers behind them" }
+      ]
+    },
+    {
+      "id": "peak-season",
+      "task": "Plan for peak season before it hits",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/peak-season-plan", "use": "build", "when": "When the busiest season is coming and stock, staff, carriers and cut-offs need dates" },
+        { "ref": "library:get-ready-for-peak-season-with-support-and-3pl-planned", "type": "workflow", "use": "build", "when": "When past sales and a peak target are known, to plan support hires, 3PL terms and inbound stock" },
+        { "ref": "library:support-capacity-planner", "type": "skill", "use": "build", "when": "When ticket data is to hand, to work out cost per ticket and hiring dates for peak" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the owner must choose between adding staff and capping orders, to compare two plans" },
+        { "ref": "library:faq-page-from-questions-writer", "type": "prompt", "use": "build", "when": "When last year's questions are known, to write the peak season FAQ from them" }
+      ]
+    },
+    {
+      "id": "international-shipping",
+      "task": "Get goods ready to cross a border",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/international-shipping-and-customs-prep", "use": "build", "when": "When an order or a supplier shipment crosses a border and terms, duty and papers must be settled" },
+        { "ref": "library:import-export-paperwork", "type": "skill", "use": "build", "when": "When you need likely tariff codes, duty options and the papers customs will ask for" },
+        { "ref": "library:landed-cost-allocator", "type": "skill", "use": "build", "when": "When freight, duty and supplier invoices are in, to get true landed cost per unit" },
+        { "ref": "library:landed-cost-calculator", "type": "skill", "use": "check", "when": "Before ordering, to test cost per sellable unit and margin from the quote and freight" },
+        { "ref": "library:trade-compliance-checklist", "type": "skill", "use": "check", "when": "When the product or route is new, to list the trade rules that apply and who owns each" }
+      ]
+    },
+    {
+      "id": "inbound-freight",
+      "task": "Track inbound shipments and compare freight quotes",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:inbound-shipment-tracker-builder", "type": "skill", "use": "build", "when": "When purchase orders are on the water, to build a shared tracker and a warehouse notice" },
+        { "ref": "library:compare-freight-quotes-with-all-charges", "type": "workflow", "use": "build", "when": "When freight quotes differ in what they include, to compare them with every charge counted" },
+        { "ref": "library:prepare-a-goods-receipt-discrepancy-brief", "type": "workflow", "use": "check", "when": "When goods arrive short or wrong, to match order, receipt and invoice line by line" }
+      ]
+    },
+    {
+      "id": "stock-counts",
+      "task": "Run stock counts and explain the differences",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:stock-count-program-planner", "type": "skill", "use": "build", "when": "When counts happen only at year end, to set a rolling schedule and who counts what" },
+        { "ref": "library:explain-a-warehouse-stock-count-variance", "type": "workflow", "use": "check", "when": "When the count and the system disagree, to split timing, unit and real loss" },
+        { "ref": "library:stock-sync-error-finder", "type": "skill", "use": "check", "when": "When the store shows negative or impossible stock, to find where the counts drifted" }
+      ]
+    },
+    {
+      "id": "delivery-numbers",
+      "task": "Report delivery, claims and store numbers",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/monthly-shipping-cost-and-claims-review", "use": "build", "when": "Each month, to bring cost per order, claims won and lost and late rates onto one page" },
+        { "ref": "library:delivery-time-analyzer", "type": "skill", "use": "build", "when": "When you need days from dispatch to delivery by carrier and place" },
+        { "ref": "library:sales-channel-reporter", "type": "skill", "use": "build", "when": "When the weekly summary needs revenue, units and order value by sales channel" },
+        { "ref": "library:supply-chain-dashboard-designer", "type": "skill", "use": "brief", "when": "When the owner wants one screen showing delays, low stock and orders at risk" },
+        { "ref": "library:recurring-kpi-report-maker", "type": "skill", "use": "build", "when": "When the same numbers are needed every week and should be rerun, not rebuilt" }
+      ]
+    },
+    {
+      "id": "delivery-info-page",
+      "task": "Write the delivery and returns information page",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:faq-page-from-questions-writer", "type": "prompt", "use": "build", "when": "When real customer questions about delivery are to hand and need one clear page" },
+        { "ref": "library:store-policy-checker", "type": "skill", "use": "check", "when": "When shipping and returns policies exist, to find gaps, clashes and unclear wording" },
+        { "ref": "library:store-policy-cleaner", "type": "skill", "use": "build", "when": "When policies are long, to get plain versions customers and AI assistants can quote" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before publishing, to read the page as a shopper and mark each promise with no source" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any SOP, message or claim goes out, to catch typos and a carrier or service named two ways" },
+    { "ref": "library:spreadsheet-checker", "type": "skill", "use": "check", "when": "When a carrier or store export is messy, to clean and reconcile it before any figure is quoted" }
+  ],
+  "helpers": [
+    { "role": "supply-chain-planner", "when": "When the problem is stock: forecasts, reorder points and supplier lead times" },
+    { "role": "customer-support-specialist", "when": "When delivery questions need a full help centre or macro set, not one message set" },
+    { "role": "shopify-specialist", "when": "When rates, markets, duties at checkout or tracking pages must be set up in the store" },
+    { "role": "ecommerce-analyst", "when": "When the cost review needs order-level profit by channel, product and customer group" },
+    { "role": "packaging-designer", "when": "When the fix is a new box, insert or mailer design, not only a packing rule" },
+    { "role": "compliance-specialist", "when": "When goods are dangerous, restricted or need licences, or product safety rules apply" }
+  ],
+  "gaps": [
+    "No library item builds a parcel carrier claim pack with each carrier's evidence list and deadlines; only freight is covered",
+    "No library item matches parcel carrier invoice lines to orders to find surcharges, wrong weights and late-delivery refunds",
+    "No library item writes a packing spec or picks box sizes to cut dimensional weight charges and breakage",
+    "No library item sets own-van delivery zones with days, fees and cut-offs, or prints a driver run sheet",
+    "No library item checks routes against drivers' hours and break rules",
+    "No library item writes a returns bench SOP with grading rules for resale, refurbish or write-off",
+    "No library item covers dangerous goods in parcels, such as lithium batteries, aerosols and perfume",
+    "No library item helps choose and word an Incoterms rule, or explains duties and taxes to a buyer at checkout",
+    "No library item sets proof-of-delivery and photo rules that win more carrier claims",
+    "No library item builds a peak season calendar of carrier cut-offs and last order dates",
+    "No library item offers clearly different versions of a delay or lost parcel message set to compare"
+  ]
+}

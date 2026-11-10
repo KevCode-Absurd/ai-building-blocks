@@ -1,0 +1,286 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "short-term-rental-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "listing-copy",
+      "task": "Write a listing title and description",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/guest-messages-and-house-guide", "use": "build", "when": "When a home needs a title and description built from its real features and rules" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the title is flat, to get several honest angles before picking one" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "build", "when": "When the description says cosy and stunning, to make each line true and easy to picture" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the listing is drafted, to read it as a guest and list what they would have to ask" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "When the listing is live, to check a guest can book the dates and price you meant today" },
+        { "ref": "library:brian-chesky", "type": "mind", "use": "think", "when": "When the listing lists features and never walks through the stay from the door inwards" }
+      ]
+    },
+    {
+      "id": "listing-photos",
+      "task": "Plan the listing photos and their order",
+      "kind": "other",
+      "items": [
+        { "ref": "library:product-shot-list-writer", "type": "prompt", "use": "build", "when": "Before the shoot, to list each shot and the guest question it answers" },
+        { "ref": "library:product-page-gallery-planner", "type": "skill", "use": "explore", "when": "When photos exist, to plan which eight lead the gallery and what is missing" },
+        { "ref": "library:store-image-prep-checker", "type": "skill", "use": "check", "when": "Before upload, to check sizes, file names and the caption for each photo" },
+        { "ref": "library:adobe-firefly", "type": "tool", "use": "build", "when": "When a true photo needs straightening or brightening, without changing what the room is" }
+      ]
+    },
+    {
+      "id": "guest-message-set",
+      "task": "Write the guest message set from booking to check-out",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/guest-message-set", "use": "build", "when": "When setting up or rewriting the timed messages guests get around a stay" },
+        { "ref": "library:customer-path-mapper", "type": "skill", "use": "brief", "when": "Before writing, to map each stage of the stay with what the guest worries about" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "When planning the series, to compare three ways to pace the messages and pick one" },
+        { "ref": "library:customer-support-message-translator", "type": "skill", "use": "build", "when": "When guests write in another language and need the same message in theirs" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the set is drafted, to cut each message to what a tired traveller reads on a phone" }
+      ]
+    },
+    {
+      "id": "house-guide",
+      "task": "Write a house guide for guests",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/house-guide", "use": "build", "when": "When guests keep asking the same questions or a new home needs a guide before the first stay" },
+        { "ref": "library:faq-page-from-questions-writer", "type": "prompt", "use": "build", "when": "When you have the real questions guests ask, to turn them into one clear page" },
+        { "ref": "library:plain-words-interface-rewriter", "type": "skill", "use": "build", "when": "When appliance or heating steps confuse guests, to rewrite them and test them read aloud" },
+        { "ref": "library:turn-rough-notes-into-a-checked-word-handout", "type": "workflow", "use": "build", "when": "When the guide should be a printed handout checked page by page" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the guide is drafted, to read it as a guest arriving late and find what is missing" }
+      ]
+    },
+    {
+      "id": "guest-question-replies",
+      "task": "Draft replies to a batch of guest questions",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/guest-messages-and-house-guide", "use": "build", "when": "When common questions need quick replies that match the house guide" },
+        { "ref": "library:customer-reply-drafter", "type": "skill", "use": "build", "when": "When a question is unusual, to get a reply and notes on what to check before sending" },
+        { "ref": "library:support-reply-tone-editor", "type": "skill", "use": "explore", "when": "When a reply reads cold, to try it warmer with the same facts" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before sending, to check no reply promises an early check-in or extra nobody agreed" }
+      ]
+    },
+    {
+      "id": "review-replies",
+      "task": "Reply to guest reviews",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/review-reply", "use": "build", "when": "When a guest has left a review, above all a tricky or negative one" },
+        { "ref": "library:review-reply-batch-writer", "type": "prompt", "use": "build", "when": "When many reviews wait, to get a specific reply to each and a list of the risky ones" },
+        { "ref": "library:public-review-reply-desk", "type": "agent", "use": "build", "when": "When reviews arrive every week, to hold risky ones back and flag repeat complaints" },
+        { "ref": "library:review-insight-finder", "type": "skill", "use": "brief", "when": "Before replying to a run of reviews, to rank what guests praise and complain about" },
+        { "ref": "library:support-reply-tone-editor", "type": "skill", "use": "explore", "when": "When a reply sounds defensive, to try it calmer with the same facts" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before posting, to check the reply admits nothing untrue and promises nothing new" },
+        { "ref": "library:tony-hsieh", "type": "mind", "use": "think", "when": "When a reply argues with the guest in front of every future guest who reads it" }
+      ]
+    },
+    {
+      "id": "guest-issues",
+      "task": "Handle a guest problem during a stay",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/reviews-and-guest-issues", "use": "build", "when": "When a stay goes wrong and the guest needs a fast, calm reply and a fix" },
+        { "ref": "library:customer-message-tone-and-urgency-review", "type": "skill", "use": "brief", "when": "Before replying, to read the message for urgency, safety and warning signs" },
+        { "ref": "library:agency-hospitality-guest-services", "type": "agent", "use": "build", "when": "When you want a warm reply, a fair fix and a note on who to tell" },
+        { "ref": "library:angry-customer-reply-writer", "type": "prompt", "use": "explore", "when": "When the guest is furious, to try a reply that names the feeling first" },
+        { "ref": "library:chris-voss", "type": "mind", "use": "think", "when": "Before a call with an angry guest, to plan calm questions and test what would settle it" }
+      ]
+    },
+    {
+      "id": "refunds-cancellations",
+      "task": "Set out refund or cancellation options and their cost",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/refund-or-cancellation-options", "use": "build", "when": "When a guest asks for money back or the host is thinking about cancelling" },
+        { "ref": "library:refund-request-reply-writer", "type": "prompt", "use": "build", "when": "When the decision is made, to write a clear yes, partial or no that leads with it" },
+        { "ref": "library:explain-service-booking-terms-to-customers", "type": "workflow", "use": "brief", "when": "When the guest disputes the policy, to explain the booking terms in plain words" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before sending, to check the reply matches the policy and what the host agreed" }
+      ]
+    },
+    {
+      "id": "damage-claims",
+      "task": "Prepare a damage claim within the platform's time limit",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/reviews-and-guest-issues", "use": "build", "when": "When damage is found after check-out and a claim must go in on time" },
+        { "ref": "library:dispute-timeline-builder", "type": "skill", "use": "build", "when": "When the claim needs a dated timeline from messages, photos and cleaner notes" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before filing, to tie each item claimed to a dated photo, receipt or quote" }
+      ]
+    },
+    {
+      "id": "price-calendar",
+      "task": "Build a 12-month nightly price calendar",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/nightly-pricing-and-stay-rules", "use": "build", "when": "When a home needs a base rate with season, weekday and event layers the host approves" },
+        { "ref": "library:hotel-room-pricing-planner", "type": "skill", "use": "build", "when": "When a small hotel or B&B has several rooms and needs prices and a channel mix" },
+        { "ref": "library:demand-forecast-planner", "type": "skill", "use": "brief", "when": "When past bookings exist, to forecast busy and quiet weeks before setting layers" },
+        { "ref": "library:agency-specialized-pricing-analyst", "type": "agent", "use": "check", "when": "When the base rate is a guess, to test it against costs, rival prices and guest value" },
+        { "ref": "library:price-test-keeper", "type": "agent", "use": "check", "when": "When a new rate goes live, to run one test you can undo and read the result" }
+      ]
+    },
+    {
+      "id": "stay-rules",
+      "task": "Set minimum stay, gap night and discount rules",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/gap-night-and-minimum-stay-rules", "use": "build", "when": "When one and two night gaps sit empty or minimum stays are the same all year" },
+        { "ref": "kit:skills/nightly-pricing-and-stay-rules", "use": "build", "when": "When the rules must fit the price calendar and each platform's settings" },
+        { "ref": "library:discount-policy-designer", "type": "skill", "use": "build", "when": "When weekly, monthly and last-minute discounts need one matrix with limits" },
+        { "ref": "library:discount-payoff-calculator", "type": "skill", "use": "check", "when": "When a discount has run, to see the extra revenue against what it cost" },
+        { "ref": "library:discount-and-price-change-checker", "type": "agent", "use": "check", "when": "Before a new discount, to find the deepest cut the margin per night allows" }
+      ]
+    },
+    {
+      "id": "booking-review",
+      "task": "Review occupancy and revenue from a booking export",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/booking-review-and-pace", "use": "build", "when": "When a messy booking export must become occupancy, rate and revenue by month and channel" },
+        { "ref": "library:messy-spreadsheet-cleaner", "type": "skill", "use": "brief", "when": "When the export has mixed dates, text numbers and duplicates, to clean it first" },
+        { "ref": "library:hotel-channel-revenue-reconciler", "type": "skill", "use": "build", "when": "When you need revenue per channel after commission and service cost" },
+        { "ref": "library:numbers-drop-explainer", "type": "prompt", "use": "brief", "when": "When occupancy or rate fell, to rank the likely causes by evidence" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before the review goes to the owner, to find broken formulas and wrong totals" }
+      ]
+    },
+    {
+      "id": "break-even-target-rate",
+      "task": "Work out the break-even and target nightly rate",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/booking-review-and-pace", "use": "build", "when": "When fees, cleaning and running costs must be set against nights sold" },
+        { "ref": "library:per-order-profit-calculator", "type": "prompt", "use": "build", "when": "When you want the profit on one booking after every cost, and what moves it most" },
+        { "ref": "library:bad-year-break-even-tester", "type": "skill", "use": "check", "when": "When the home carries a loan, to see how bad a year it can take before it stops earning" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "When the sums live in a spreadsheet, to find formula errors before the owner relies on them" }
+      ]
+    },
+    {
+      "id": "weekly-review",
+      "task": "Run the weekly revenue and calendar review",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/weekly-revenue-and-calendar-review", "use": "build", "when": "Each week for the 90-day pace check and gap sweep, and on the first working day of the month" },
+        { "ref": "kit:skills/booking-review-and-pace", "use": "build", "when": "When bookings on the books must be compared with the same point last year" },
+        { "ref": "library:build-a-weekly-kpi-report-with-a-forecast-and-dashboard", "type": "workflow", "use": "build", "when": "When a host with many units wants the same numbers each week with a trend" },
+        { "ref": "kit:prompts/gap-night-and-minimum-stay-rules", "use": "check", "when": "When the sweep finds orphan nights, to decide which rule to relax" }
+      ]
+    },
+    {
+      "id": "new-listing-launch",
+      "task": "Launch a new listing or move to a new platform",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/new-listing-launch", "use": "build", "when": "When a host lists a home for the first time, adds a unit or joins a new platform" },
+        { "ref": "library:business-insurance-needs-checker", "type": "skill", "use": "brief", "when": "Before the first guest, to list the risks and the questions to ask an insurance broker" },
+        { "ref": "library:failure-first-plan-check", "type": "skill", "use": "check", "when": "When the launch plan is drafted, to list how the first stays could go wrong" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "On launch day, to check the calendar is open and the price on the page is the one planned" }
+      ]
+    },
+    {
+      "id": "local-rules-check",
+      "task": "Check local rules and registration before listing",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/local-rules-and-registration-check", "use": "build", "when": "Before a listing goes live, when a home is bought for short stays, or at each refresh" },
+        { "ref": "library:rule-change-policy-comparer", "type": "skill", "use": "check", "when": "When a local rule changes, to see which house rules and settings it touches" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "When the check states a night cap or licence rule, to tie it to a dated official source" }
+      ]
+    },
+    {
+      "id": "turnover",
+      "task": "Run a booking through to check-out and turnover",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/booking-to-checkout-and-turnover", "use": "build", "when": "On every new booking, to run messages, access, check-out and the clean in order" },
+        { "ref": "library:standards-sheet-writer", "type": "skill", "use": "build", "when": "When each stay should feel the same, to write one page of checkable standards" },
+        { "ref": "library:operations-manual-writer", "type": "skill", "use": "build", "when": "When the cleaner needs a job card and a rule for what to do when a standard is missed" },
+        { "ref": "library:restock-rule-designer", "type": "skill", "use": "build", "when": "When linen and supplies run out, to set a simple restock rule for each" },
+        { "ref": "library:prepare-a-property-maintenance-handover", "type": "workflow", "use": "build", "when": "When the clean finds faults, to hand over each repair with access notes" },
+        { "ref": "library:compare-facilities-service-contract-options", "type": "workflow", "use": "check", "when": "When choosing a cleaning or laundry firm, to compare quotes and terms side by side" }
+      ]
+    },
+    {
+      "id": "house-rules-terms",
+      "task": "Write house rules and booking terms guests understand",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/guest-messages-and-house-guide", "use": "build", "when": "When rules on noise, pets, parties and check-out need short, firm, friendly wording" },
+        { "ref": "library:explain-service-booking-terms-to-customers", "type": "workflow", "use": "build", "when": "When direct booking terms exist, to explain payment, cancelling and refunds in plain words" },
+        { "ref": "library:tense-email-softener", "type": "prompt", "use": "explore", "when": "When the rules read like a threat, to try a version guests are glad to follow" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the rules are drafted, to cut them to one page a guest will read" }
+      ]
+    },
+    {
+      "id": "group-booking",
+      "task": "Prepare a group booking handover sheet",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:prepare-a-hotel-group-booking-handover", "type": "workflow", "use": "build", "when": "When a group is confirmed, to check deposit and rate and list open requests and key dates" },
+        { "ref": "kit:prompts/guest-message-set", "use": "build", "when": "When the group lead needs their own messages on arrival, rooms and payment" },
+        { "ref": "kit:prompts/refund-or-cancellation-options", "use": "brief", "when": "When the group asks what happens if numbers drop or the date moves" }
+      ]
+    },
+    {
+      "id": "direct-bookings",
+      "task": "Win direct bookings and repeat guests",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:make-three-first-screens", "type": "skill", "use": "explore", "when": "When the host has a direct booking site, to see three first screens and pick one" },
+        { "ref": "library:local-search-listing-manager", "type": "skill", "use": "build", "when": "When a B&B or small hotel must be found on local search and maps" },
+        { "ref": "library:email-sequence-writer", "type": "skill", "use": "build", "when": "When past guests gave consent to email, to write a short return-visit series" },
+        { "ref": "library:after-sale-offer-planner", "type": "skill", "use": "explore", "when": "When add-ons such as late check-out could be sold, to pick ones to try with a small test" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the page or emails are drafted, to read them as a guest comparing with the platform" }
+      ]
+    },
+    {
+      "id": "owner-report",
+      "task": "Report the month to the owner of a managed home",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/booking-review-and-pace", "use": "build", "when": "When a co-host must show the owner nights, rate and revenue net of fees and cleaning" },
+        { "ref": "library:monthly-profit-close", "type": "agent", "use": "build", "when": "When the month's income and costs must be set against last month" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When the owner wants one page with the answer first and the decision needed" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the report is drafted, to read it as the owner and list what they would ask" }
+      ]
+    },
+    {
+      "id": "tax-records",
+      "task": "Get the year's income and costs ready for the accountant",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:self-assessment-tax-return-checklist", "type": "skill", "use": "brief", "when": "When a UK host files their own return, to list records, totals and accountant questions" },
+        { "ref": "library:expense-sorter", "type": "skill", "use": "build", "when": "When a year of costs must be sorted by home and by type" },
+        { "ref": "library:tax-set-aside-planner", "type": "skill", "use": "build", "when": "When tax bills come as a shock, to set a rule for what to put aside from each payout" },
+        { "ref": "library:hotel-channel-revenue-reconciler", "type": "skill", "use": "check", "when": "Before the file goes, to check payouts by platform agree with the booking records" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before anything a guest reads goes live, to catch typos, wrong times and codes" },
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "When copy states a distance, an amenity or a platform rule, to tie it to a source or cut it" }
+  ],
+  "helpers": [
+    { "role": "hospitality-marketer", "when": "When the job is a direct booking push, social content or a seasonal campaign" },
+    { "role": "product-photographer", "when": "When the listing needs a planned photo set, not just an order for the photos it has" },
+    { "role": "property-manager", "when": "When a home moves to long lets or needs tenant notices and a compliance log" },
+    { "role": "reputation-manager", "when": "When reviews across many platforms need a standing reply and recovery plan" },
+    { "role": "bookkeeper", "when": "When payouts, fees and cleaning costs must be reconciled for several homes each month" },
+    { "role": "translator", "when": "When the guide and messages must be properly translated for a main guest market" }
+  ],
+  "gaps": [
+    "No library item writes a short-stay listing title and description or checks it against a platform's content rules",
+    "No library item builds a nightly price calendar with season, weekday and event layers for a single home",
+    "No library item sets minimum stay and gap night rules or sweeps a calendar for orphan nights",
+    "No library item works out occupancy, average daily rate and revenue per available night from a booking export",
+    "No library item checks booking pace against the same point last year",
+    "No library item checks short-let licence, registration, night cap and tourist tax rules for a named city",
+    "No library item writes a cleaning and turnover checklist or schedules cleaners against check-outs",
+    "No library item prepares a damage claim to a platform with photos, receipts and the deadline",
+    "No library item plans room and exterior photos for a property listing; the photo items are for products",
+    "No library item compares a home with a set of similar local listings on price and features",
+    "No tool guide covers channel managers, dynamic pricing tools or smart lock and messaging tools",
+    "No thinking lens covers revenue management or hotel-style hospitality"
+  ]
+}

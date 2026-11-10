@@ -1,0 +1,303 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "qhse-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "risk-assessment",
+      "task": "Draft a risk assessment for a task, area or site",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/risk-assessment-and-checklists", "use": "build", "when": "When you have the firm's tasks, equipment and incident history and need rated hazards and controls" },
+        { "ref": "library:failure-first-plan-check", "type": "skill", "use": "brief", "when": "Before rating anything, to list the ways the job could go wrong that nobody has named yet" },
+        { "ref": "library:mistake-proofing-designer", "type": "skill", "use": "build", "when": "When a control relies on people remembering, to make the wrong move impossible or loud" },
+        { "ref": "library:design-review-panel", "type": "skill", "use": "check", "when": "When the assessment is drafted, to have it tested for hidden assumptions and missed failures" },
+        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When the risk sits in handovers, warnings and what happens when two things go wrong at once" }
+      ]
+    },
+    {
+      "id": "inspection-checklists",
+      "task": "Write daily and weekly inspection checklists",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/risk-assessment-and-checklists", "use": "build", "when": "When each control in a risk assessment must become a line someone can tick on site" },
+        { "ref": "library:decision-checklist-builder", "type": "skill", "use": "build", "when": "When past slips are logged, to turn them into one page of pass or fail questions" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the checklist is drafted, to cut each line to plain words a busy crew will read" },
+        { "ref": "library:don-norman", "type": "mind", "use": "think", "when": "When people tick every box without looking and the form itself is the problem" }
+      ]
+    },
+    {
+      "id": "incident-log",
+      "task": "Set up an incident and near-miss form and log",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/incident-log-and-reportability-check", "use": "build", "when": "When the firm needs a report form, a log and a check of each incident against reporting rules" },
+        { "ref": "library:google-forms-automator", "type": "skill", "use": "build", "when": "When reports should come in on a phone form that emails an alert and logs a row" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "When you say an incident is or is not reportable, to tie the call to the dated official rule" }
+      ]
+    },
+    {
+      "id": "incident-investigation",
+      "task": "Investigate an incident or near miss and close it out",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/after-an-incident", "use": "build", "when": "When any injury, near miss, dangerous event or damage is reported and steps must run in order" },
+        { "ref": "library:five-whys-session-planner", "type": "skill", "use": "brief", "when": "Before the review meeting, to set who attends, the ground rules and a no-blame agenda" },
+        { "ref": "library:root-cause-finder", "type": "skill", "use": "build", "when": "When the same thing keeps happening, to get a chain of whys checked against the facts" },
+        { "ref": "library:proportional-fix-planner", "type": "skill", "use": "build", "when": "When the causes are known, to size a fix at each level with an owner, a date and a check" },
+        { "ref": "library:turn-an-incident-into-a-safer-procedure", "type": "workflow", "use": "build", "when": "When the incident shows the procedure is wrong, to get a new draft and tracked actions" },
+        { "ref": "library:taiichi-ohno", "type": "mind", "use": "think", "when": "When the report blames a person and nobody has gone to watch how the work is really done" }
+      ]
+    },
+    {
+      "id": "nonconformance-capa",
+      "task": "Raise a nonconformance and plan the corrective action",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/nonconformance-and-corrective-action", "use": "build", "when": "When a complaint, failed inspection, audit finding or defect needs a record and a fix" },
+        { "ref": "library:failure-root-cause", "type": "workflow", "use": "build", "when": "When the cause is unclear, to run a no-blame review with a checked chain of whys" },
+        { "ref": "library:quality-control-plan-builder", "type": "skill", "use": "brief", "when": "When there is defect data, to rank the biggest causes before choosing what to correct" },
+        { "ref": "library:proportional-fix-planner", "type": "skill", "use": "check", "when": "When an action is proposed, to check it is sized to the problem and has a way to verify it" }
+      ]
+    },
+    {
+      "id": "iso-gap-review",
+      "task": "Run a clause-by-clause gap review against an ISO standard",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/iso-gap-review-and-document-set", "use": "build", "when": "When the firm wants to know where it stands against ISO 9001, 14001 or 45001" },
+        { "ref": "library:process-bottleneck-finder", "type": "skill", "use": "brief", "when": "Before the review, to map how the work really flows and who does each step" },
+        { "ref": "library:sop-and-runbook-checker", "type": "skill", "use": "check", "when": "When procedures already exist, to find missing owners, stale pages and gaps" },
+        { "ref": "library:audit-readiness-checker", "type": "skill", "use": "check", "when": "When records and controls exist, to list the gaps an auditor would find first" }
+      ]
+    },
+    {
+      "id": "document-set",
+      "task": "Write the policy, manual and procedures the firm needs",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/iso-gap-review-and-document-set", "use": "build", "when": "When the gap review is done and documents must be written in order of need" },
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When one process needs a flowchart, who does what and a written procedure with edge cases" },
+        { "ref": "library:write-a-procedure-test-it-and-build-a-training-deck", "type": "workflow", "use": "build", "when": "When a new procedure must also be gap checked, proofread and taught to staff" },
+        { "ref": "library:make-a-new-policy-understandable-to-staff", "type": "workflow", "use": "build", "when": "When an approved policy must be explained to staff in plain words" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When a document reads like a standard, to cut it to what people will use" }
+      ]
+    },
+    {
+      "id": "document-control",
+      "task": "Build a document and record control register",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/iso-gap-review-and-document-set", "use": "build", "when": "When every controlled document needs an owner, a version, a review date and a home" },
+        { "ref": "library:documentation-system-planner", "type": "skill", "use": "brief", "when": "Before the register, to decide what gets written down, where it lives and how it stays fresh" },
+        { "ref": "library:sop-and-runbook-checker", "type": "skill", "use": "check", "when": "Each quarter, to find documents with no owner or past their review date" }
+      ]
+    },
+    {
+      "id": "internal-audit",
+      "task": "Plan an internal audit and write the audit checklists",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/iso-gap-review-and-document-set", "use": "brief", "when": "Before the plan, to take the clauses and processes the audit must cover" },
+        { "ref": "library:internal-controls-testing", "type": "skill", "use": "build", "when": "When you need a test plan, sample sizes and a way to rate each gap found" },
+        { "ref": "kit:prompts/nonconformance-and-corrective-action", "use": "build", "when": "When the audit finds something, to raise it as a finding with a corrective action" }
+      ]
+    },
+    {
+      "id": "certification-audit",
+      "task": "Get ready for a certification or surveillance audit",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/get-ready-for-certification-audit", "use": "build", "when": "When the firm decides to certify or move a certificate to a new edition" },
+        { "ref": "library:prepare-evidence-for-a-compliance-review", "type": "workflow", "use": "build", "when": "When evidence is scattered, to get an index, a gap list and a plan with owners and dates" },
+        { "ref": "library:compliance-evidence-request-assistant", "type": "agent", "use": "build", "when": "When evidence is expired or missing, to draft a request to each owner" },
+        { "ref": "library:quarterly-compliance-readiness-keeper", "type": "agent", "use": "check", "when": "Each quarter, to check last quarter's fixes held and what to close before the auditor comes" }
+      ]
+    },
+    {
+      "id": "safety-induction",
+      "task": "Build a first-day safety induction for new starters",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/safety-induction-pack", "use": "build", "when": "When an employee, agency worker, contractor or volunteer starts on site" },
+        { "ref": "library:build-a-volunteer-induction-checklist", "type": "workflow", "use": "build", "when": "When the starters are volunteers and need a procedure, a practice plan and supervision" },
+        { "ref": "library:recall-quiz-writer", "type": "prompt", "use": "check", "when": "At the end of the induction, to check the starter took in the rules that matter" }
+      ]
+    },
+    {
+      "id": "toolbox-talks",
+      "task": "Write five-minute toolbox talks with a sign-in sheet",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/toolbox-talk-and-sign-in-sheet", "use": "build", "when": "When a crew needs a short talk drawn from the firm's own risk assessment" },
+        { "ref": "library:lesson-talk-writer", "type": "skill", "use": "explore", "when": "When the supervisor hates reading from a sheet, to build the talk from their own site stories" },
+        { "ref": "library:recall-quiz-writer", "type": "prompt", "use": "check", "when": "After each talk, to get three quick questions that show whether it landed" },
+        { "ref": "library:richard-feynman", "type": "mind", "use": "think", "when": "When a talk repeats rules and never shows, with a plain example, why they exist" }
+      ]
+    },
+    {
+      "id": "talk-calendar",
+      "task": "Plan a 52-week toolbox talk and training calendar",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/toolbox-talk-and-sign-in-sheet", "use": "brief", "when": "Before the calendar, to list the talks the risk assessments call for" },
+        { "ref": "library:revision-schedule-planner", "type": "skill", "use": "build", "when": "When key topics must come back through the year at sensible gaps" },
+        { "ref": "kit:workflows/monthly-qhse-rhythm", "use": "build", "when": "When the talks must fit with inspections, drills and reviews in one yearly calendar" }
+      ]
+    },
+    {
+      "id": "business-impact-review",
+      "task": "Run a business impact review and outline a continuity plan",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/business-impact-review", "use": "build", "when": "When a customer, insurer or landlord asks for a continuity plan" },
+        { "ref": "library:customer-concentration-risk", "type": "skill", "use": "brief", "when": "Before the review, to map the clients, suppliers and systems the firm cannot do without" },
+        { "ref": "library:supply-chain-backup-plan-builder", "type": "skill", "use": "build", "when": "When a supplier failure is a top risk, to set a backup and who does what if it breaks" },
+        { "ref": "library:succession-plan-builder", "type": "skill", "use": "build", "when": "When one person holds key knowledge, to plan who could step in and what they need" },
+        { "ref": "library:slack-and-backup-planner", "type": "prompt", "use": "check", "when": "When the plan is drafted, to find where the firm still breaks under stress" },
+        { "ref": "library:nassim-taleb", "type": "mind", "use": "think", "when": "When a calm record is taken as proof that nothing serious can happen" }
+      ]
+    },
+    {
+      "id": "it-recovery-order",
+      "task": "Set the IT and data recovery order",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:backup-and-recovery-planner", "type": "skill", "use": "build", "when": "When you need how much data loss the firm can take and a backup plan to match" },
+        { "ref": "library:build-a-backup-recovery-rehearsal", "type": "workflow", "use": "build", "when": "When backups have never been tested, to plan a safe restore test with an evidence log" },
+        { "ref": "library:recovery-rehearsal-evidence-assistant", "type": "agent", "use": "check", "when": "After a restore test, to compare the evidence with the recovery targets" },
+        { "ref": "kit:prompts/business-impact-review", "use": "brief", "when": "Before ordering systems, to take the recovery times the business said it needs" }
+      ]
+    },
+    {
+      "id": "emergency-contacts-messages",
+      "task": "Build an emergency contact tree and message pack",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:backup-communication-plan-builder", "type": "skill", "use": "build", "when": "When phones or email may be down, to set fallback routes, owners and a safe test" },
+        { "ref": "library:prepare-a-service-outage-communication-pack", "type": "workflow", "use": "build", "when": "When customers must be told, to draft the first notice, the updates and the all-clear" },
+        { "ref": "library:workforce-crisis-playbook-writer", "type": "skill", "use": "build", "when": "When staff must be told, to get a first-hour message and a 24-hour action list" },
+        { "ref": "library:plan-workforce-disruption-coverage-before-announcing", "type": "workflow", "use": "explore", "when": "Before any message, to compare ways of covering essential work with the staff you have" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the pack is drafted, to read it as a customer and list what they would still ask" }
+      ]
+    },
+    {
+      "id": "continuity-exercise",
+      "task": "Run a one-hour continuity practice exercise",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/continuity-exercise-script", "use": "build", "when": "When a plan has never been tested or has changed and needs a timed tabletop exercise" },
+        { "ref": "library:compound-scenario-modeler", "type": "skill", "use": "explore", "when": "When choosing the scenario, to see how several things going wrong at once hit each team" },
+        { "ref": "library:lessons-learned-note-writer", "type": "prompt", "use": "build", "when": "After the exercise, to write one page on what to repeat and what to change" }
+      ]
+    },
+    {
+      "id": "carbon-footprint",
+      "task": "Estimate a carbon footprint from the firm's own records",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/carbon-footprint-and-green-claims", "use": "build", "when": "When you have energy, fuel and travel records and a named emission factor set" },
+        { "ref": "library:supply-chain-carbon-tracker", "type": "skill", "use": "build", "when": "When shipping and supplier data must be added, to work out emissions by source" },
+        { "ref": "library:units-and-error-margin-checker", "type": "skill", "use": "check", "when": "When the sums are done, to check units and carry the error margin through to the total" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "When the footprint lives in a spreadsheet, to find formula errors and broken links" },
+        { "ref": "library:tim-harford", "type": "mind", "use": "think", "when": "When one headline number hides what was counted, what was left out and how rough it is" }
+      ]
+    },
+    {
+      "id": "sustainability-report",
+      "task": "Write a short, honest sustainability report",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:agency-esg-sustainability-officer", "type": "agent", "use": "brief", "when": "Before writing, to pick the topics that matter, the framework and the data gaps" },
+        { "ref": "library:esg-report-preparer", "type": "skill", "use": "build", "when": "When you have the environmental, social and governance data and need a draft report" },
+        { "ref": "library:eu-sustainability-report-checker", "type": "skill", "use": "brief", "when": "When the firm sells into the EU, to see whether reporting rules apply and what to disclose" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the report needs a 12-month plan, to compare two ways of spending the budget" },
+        { "ref": "kit:skills/carbon-footprint-and-green-claims", "use": "check", "when": "Before it is published, to check every green claim in the report against the records" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the report is drafted, to read it as the customer who asked for it" }
+      ]
+    },
+    {
+      "id": "emissions-waste-plan",
+      "task": "Plan 12 months of cuts to emissions and waste",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/carbon-footprint-and-green-claims", "use": "brief", "when": "Before the plan, to take the baseline and the biggest sources" },
+        { "ref": "library:waste-reduction-planner", "type": "skill", "use": "build", "when": "When you want process waste mapped and quick fixes ranked by payoff" },
+        { "ref": "library:reuse-and-returns-planner", "type": "skill", "use": "build", "when": "When the firm sells goods, to rank what to reuse, repair, refurbish or recycle" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the budget is fixed, to compare two plans that place different bets" },
+        { "ref": "library:business-investment-analyst", "type": "skill", "use": "check", "when": "When an upgrade costs money, to work out payback before it goes in the plan" }
+      ]
+    },
+    {
+      "id": "green-claims-check",
+      "task": "Check green claims before they are published",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/carbon-footprint-and-green-claims", "use": "check", "when": "When the firm wants to say it is greener and you need each claim tied to its records" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When claims sit in ad or page copy, to sort each as fine, needs proof or cut" },
+        { "ref": "library:claim-and-proof-matcher", "type": "skill", "use": "check", "when": "When you have the evidence file, to see which claims it supports and which go too far" }
+      ]
+    },
+    {
+      "id": "customer-questionnaire",
+      "task": "Answer a customer QHSE, ESG or tender questionnaire",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/customer-qhse-questionnaire-answers", "use": "build", "when": "When a customer, tender or supplier portal sends a questionnaire and wants honest answers" },
+        { "ref": "library:rfp-response-builder", "type": "skill", "use": "brief", "when": "When the questionnaire is long, to sort questions by must have and see where you fit" },
+        { "ref": "library:prepare-a-vendor-security-questionnaire-response", "type": "workflow", "use": "build", "when": "When it has an IT security section, to answer with sources and an evidence index" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before it is submitted, to tie every answer to a dated record or soften it" }
+      ]
+    },
+    {
+      "id": "supplier-quality",
+      "task": "Review supplier quality and corrective action replies",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:prepare-a-supplier-corrective-action-review", "type": "workflow", "use": "build", "when": "When a supplier replies to a defect, to check the reply against your inspection evidence" },
+        { "ref": "library:supplier-correction-evidence-review-assistant", "type": "agent", "use": "check", "when": "When the supplier sends proof of the fix, to test it against your acceptance standard" },
+        { "ref": "library:supplier-risk-scorecard-builder", "type": "skill", "use": "build", "when": "When you need a risk score for each supplier and warning signs to watch" },
+        { "ref": "library:responsible-sourcing-checker", "type": "skill", "use": "build", "when": "When suppliers must be asked about ethics and environment, to get the questionnaire to send" }
+      ]
+    },
+    {
+      "id": "monthly-rhythm",
+      "task": "Run the monthly QHSE review and report to management",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/monthly-qhse-rhythm", "use": "build", "when": "Each month, for the one-hour review and the fixed points in the yearly calendar" },
+        { "ref": "library:kpi-dashboard-designer", "type": "skill", "use": "brief", "when": "When management asks for numbers, to pick the few measures they will act on" },
+        { "ref": "library:executive-action-register", "type": "skill", "use": "build", "when": "After the review, to hold every action with an owner, a date and its source" },
+        { "ref": "kit:skills/incident-log-and-reportability-check", "use": "brief", "when": "Before the review, to pull the month's incidents, near misses and open actions" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "When a document cites a law, a standard clause or a figure, to tie it to a dated source or cut it" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any document is issued, to catch typos and terms used two ways" },
+    { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When a document is written for the auditor and not for the people who must use it" }
+  ],
+  "helpers": [
+    { "role": "compliance-specialist", "when": "When the question is what the law requires in a given country, not how to document it" },
+    { "role": "it-administrator", "when": "When the continuity plan needs real backup, restore and access steps for the firm's systems" },
+    { "role": "technical-writer", "when": "When a manual or a large procedure set must be written to one standard" },
+    { "role": "instructional-designer", "when": "When induction or safety training must become a course with practice and assessment" },
+    { "role": "procurement-specialist", "when": "When supplier approval, audits and contract terms must change after a quality failure" },
+    { "role": "proposal-writer", "when": "When the questionnaire is part of a full tender with method statements and pricing" }
+  ],
+  "gaps": [
+    "No library item runs a gap review against ISO 9001, 14001 or 45001; the ISO items cover security and medical devices only",
+    "No library item drafts a workplace health and safety risk assessment with a rating scale and the hierarchy of controls",
+    "No library item writes site inspection checklists for workshops, warehouses, kitchens or building sites",
+    "No library item checks an injury or incident against RIDDOR, OSHA or EU national reporting rules",
+    "No library item writes toolbox talks, a 52-week talk calendar or a sign-in sheet for crews",
+    "No library item covers hazardous substances, manual handling, fire and evacuation plans or permits to work",
+    "No library item plans an internal audit programme for a management system or writes audit reports",
+    "No library item runs a business impact review or writes a continuity plan for a small firm with one site",
+    "No library item scripts a tabletop exercise with timed updates, or offers different scenarios to compare",
+    "No library item estimates scope 1, 2 and 3 emissions with named emission factors and their year",
+    "No library item answers ESG rating questionnaires such as EcoVadis or CDP",
+    "No library item builds a legal register, a training and competence matrix or a calibration register",
+    "No thinking lens covers quality management or safety science, such as variation, checklists or just culture"
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "facilities-maintenance-coordinator",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "asset-register",
+      "task": "Build an asset and vehicle register",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/asset-register-and-pm-calendar", "use": "build", "when": "When the client has a rough list of kit and vehicles and needs one register with IDs, intervals and owners" },
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "When an old asset list is handed over, to find gaps, duplicates and odd values before you build on it" },
+        { "ref": "library:empty-workbook-builder", "type": "skill", "use": "build", "when": "When the fields are agreed and you need a clean, formatted workbook with no made-up rows" },
+        { "ref": "library:excel-input-form-builder", "type": "skill", "use": "build", "when": "When staff will add assets themselves and need dropdowns and entry checks to keep the list clean" },
+        { "ref": "library:microsoft-copilot", "type": "tool", "use": "build", "when": "When the register lives in Excel and the client wants to query and update it in the sheet" }
+      ]
+    },
+    {
+      "id": "pm-calendar",
+      "task": "Build a preventive maintenance calendar",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/asset-register-and-pm-calendar", "use": "build", "when": "When the register is in place and each service needs a date, an owner and the source of its interval" },
+        { "ref": "library:equipment-maintenance-planner", "type": "skill", "use": "build", "when": "When you have repair history, to draw service intervals and a spares list from what really fails" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When money or hours cannot cover every service, to compare two plans with costs and dates" },
+        { "ref": "library:stewart-brand", "type": "mind", "use": "think", "when": "When deciding what to service often and what to leave: parts that wear fast against things that last" }
+      ]
+    },
+    {
+      "id": "set-up-planned-maintenance",
+      "task": "Set up planned maintenance where there is no system",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/set-up-planned-maintenance", "use": "brief", "when": "When there is no system, a tool was bought and never filled, or a new site or fleet is taken on" },
+        { "ref": "library:software-vendor-chooser", "type": "skill", "use": "explore", "when": "When the client is choosing a maintenance or fleet tool, to score the options against their needs" },
+        { "ref": "library:plan-a-vendor-change-without-losing-work", "type": "workflow", "use": "build", "when": "When moving from a spreadsheet or an old tool, to switch in stages without losing open jobs" }
+      ]
+    },
+    {
+      "id": "daily-check-sheets",
+      "task": "Write daily check sheets for equipment",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/check-sheets-and-work-orders", "use": "build", "when": "When each equipment type needs a one-page check with tick boxes and what a fail looks like" },
+        { "ref": "library:google-forms-automator", "type": "skill", "use": "build", "when": "When checks should be done on a phone, with each fail emailed to the right person and logged" },
+        { "ref": "library:plain-words-interface-rewriter", "type": "skill", "use": "check", "when": "When a sheet uses office words, to rewrite it in the words the crew say and test it read aloud" },
+        { "ref": "library:don-norman", "type": "mind", "use": "think", "when": "When sheets come back ticked but faults are missed, to find what makes the check hard to do right" }
+      ]
+    },
+    {
+      "id": "vehicle-walkaround",
+      "task": "Write a vehicle walkaround check and defect route",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/vehicle-walkaround-check-sheet", "use": "build", "when": "When drivers need a one-page daily check and defects must reach the person who can act" },
+        { "ref": "kit:skills/check-sheets-and-work-orders", "use": "build", "when": "When a reported defect must become a work order with a priority and a close-out" },
+        { "ref": "library:google-forms-automator", "type": "skill", "use": "build", "when": "When drivers will report on a phone and a defect must send an alert the same minute" }
+      ]
+    },
+    {
+      "id": "fault-to-work-order",
+      "task": "Turn fault reports into work orders and keep the log",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/fault-report-to-work-order", "use": "build", "when": "When a fault arrives as a text, email or shout and needs a clear work order with a priority" },
+        { "ref": "kit:skills/check-sheets-and-work-orders", "use": "build", "when": "When there is no work order form or log that tracks each fault from report to close" },
+        { "ref": "library:standardize-repair-work-order-intake", "type": "workflow", "use": "brief", "when": "When reports arrive in many forms with fields missing, to set one intake procedure and checks" },
+        { "ref": "library:excel-monthly-rollup-builder", "type": "skill", "use": "build", "when": "When the log has dates and you need monthly counts, totals and rates you can trace to rows" }
+      ]
+    },
+    {
+      "id": "pm-backlog",
+      "task": "Review an overdue maintenance backlog",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/pm-backlog-review", "use": "build", "when": "When a pile of overdue services needs sorting into do first, reschedule and drop" },
+        { "ref": "library:property-maintenance-evidence-review-assistant", "type": "agent", "use": "check", "when": "When open repair tickets pile up, to list overdue decisions and what each needs to close" },
+        { "ref": "library:taiichi-ohno", "type": "mind", "use": "think", "when": "When the backlog keeps growing, to go and watch the work and find where jobs wait" }
+      ]
+    },
+    {
+      "id": "weekly-review",
+      "task": "Run the weekly maintenance review",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/weekly-maintenance-review", "use": "build", "when": "At the start of each week, to review open work orders, checks done and services due" },
+        { "ref": "library:status-report-writer", "type": "skill", "use": "build", "when": "When the owner wants one page each week with status, risks and the decisions needed" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before the weekly figures go out, to catch broken formulas and wrong totals" }
+      ]
+    },
+    {
+      "id": "compliance-calendar",
+      "task": "Build the statutory checks calendar for a site",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/compliance-calendar", "use": "build", "when": "When fire, water, lifting, gas and electrical check dates sit in different heads and files" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before sharing, to make sure every date and interval has a dated source or is cut" },
+        { "ref": "library:monthly-contract-renewal-keeper", "type": "agent", "use": "check", "when": "Each month, to catch service contracts and notice dates due before a statutory visit lapses" }
+      ]
+    },
+    {
+      "id": "water-log",
+      "task": "Set up water temperature and flushing logs",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/water-temperature-log", "use": "build", "when": "When the written scheme lists routine checks and you need a log sheet and a monthly summary" },
+        { "ref": "kit:skills/compliance-calendar", "use": "brief", "when": "When the water checks must sit on the same calendar as the site's other statutory dates" },
+        { "ref": "library:excel-input-form-builder", "type": "skill", "use": "build", "when": "When readings are typed into Excel and out-of-range entries should be flagged as they are made" },
+        { "ref": "library:excel-monthly-rollup-builder", "type": "skill", "use": "build", "when": "When a month of readings needs a summary with counts of misses and out-of-range results" }
+      ]
+    },
+    {
+      "id": "contractor-job",
+      "task": "Brief a contractor and manage the job to sign-off",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/contractor-job-request-to-sign-off", "use": "brief", "when": "When a work order needs an outside contractor, from request through quote to sign-off" },
+        { "ref": "kit:prompts/contractor-job-pack", "use": "build", "when": "Before a contractor comes on site, to set out the job, site risks, permits and access" },
+        { "ref": "library:prepare-a-construction-defects-handover", "type": "workflow", "use": "check", "when": "When building work ends, to turn inspection notes into a defects list with owners and proof" },
+        { "ref": "library:prepare-an-engagement-closeout-evidence-pack", "type": "workflow", "use": "check", "when": "When a contractor job closes, to keep proof of what was delivered and what is still open" }
+      ]
+    },
+    {
+      "id": "compare-service-contracts",
+      "task": "Compare contractor quotes and service contracts",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:compare-facilities-service-contract-options", "type": "workflow", "use": "build", "when": "When two or more contractor proposals need one cost and risk table in plain words" },
+        { "ref": "library:supplier-scorer", "type": "skill", "use": "build", "when": "When price is not the only test, to weight response time, cover and skills and get one pick" },
+        { "ref": "library:prepare-a-contract-renewal-negotiation", "type": "workflow", "use": "brief", "when": "When a service contract is up for renewal, to plan notice dates and keep, renegotiate or replace" },
+        { "ref": "library:narrative-decision-memo-writer", "type": "skill", "use": "build", "when": "When the owner must choose, to give one memo with the options, risks and missing facts" }
+      ]
+    },
+    {
+      "id": "contractor-performance",
+      "task": "Track contractor performance and renewals",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:vendor-scorecard-builder", "type": "skill", "use": "build", "when": "When a contractor misses response times, to score them and get a keep, review or replace call" },
+        { "ref": "library:monthly-contractor-roster-keeper", "type": "agent", "use": "check", "when": "Each month, to see which contractors to keep, whose terms to fix and which agreements to redo" },
+        { "ref": "library:monthly-contract-renewal-keeper", "type": "agent", "use": "check", "when": "Each month, to list renewals and notice dates due and the traps in each" }
+      ]
+    },
+    {
+      "id": "repair-or-replace",
+      "task": "Decide whether to repair or replace an asset",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/repair-or-replace-review", "use": "build", "when": "When an asset keeps failing and you have its repair history, running costs and a quote" },
+        { "ref": "library:business-investment-analyst", "type": "skill", "use": "build", "when": "When a replacement is a big purchase, to work out payback, return and risk" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "Before the figures go to the owner, to catch formula errors and broken links in the workbook" },
+        { "ref": "library:narrative-decision-memo-writer", "type": "skill", "use": "build", "when": "When the owner signs off the spend, to put the choice, risks and missing facts on one memo" }
+      ]
+    },
+    {
+      "id": "fleet-plan",
+      "task": "Plan fleet size and vehicle replacement",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:vehicle-fleet-planner", "type": "skill", "use": "build", "when": "When the client asks how many vehicles they need and when each should be replaced" },
+        { "ref": "library:fleet-replacement-cash-comparer", "type": "skill", "use": "build", "when": "When there is a replacement quote and a sale value, to compare keeping and replacing in cash" },
+        { "ref": "library:compare-transport-cash-and-fleet-replacement", "type": "workflow", "use": "build", "when": "When the vehicle is a truck that earns per trip, to set trip earnings beside replacement" },
+        { "ref": "kit:skills/repair-or-replace-review", "use": "check", "when": "When one vehicle's repair bills are the trigger, to test the case on its own history" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the fleet can be renewed all at once or in steps, to compare two plans with money and dates" }
+      ]
+    },
+    {
+      "id": "breakdown-root-cause",
+      "task": "Find why a breakdown keeps coming back",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:root-cause-finder", "type": "skill", "use": "build", "when": "When the same fault returns, to build a chain of whys checked against facts, with a fix" },
+        { "ref": "library:five-whys-session-planner", "type": "skill", "use": "brief", "when": "When the team must review a failure together, to set who attends and a no-blame agenda" },
+        { "ref": "library:proportional-fix-planner", "type": "skill", "use": "build", "when": "When the causes are known, to size a fix at each level with an owner, date and check" },
+        { "ref": "library:taiichi-ohno", "type": "mind", "use": "think", "when": "When the cause is argued from the office, to go to the machine and look at the hand-offs" },
+        { "ref": "library:donella-meadows", "type": "mind", "use": "think", "when": "When fixes keep wearing off, to find the pattern over time that brings the fault back" }
+      ]
+    },
+    {
+      "id": "spares-stock",
+      "task": "Set spare parts and consumables stock levels",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:equipment-maintenance-planner", "type": "skill", "use": "brief", "when": "When you need the list of spares each machine is likely to need, drawn from its history" },
+        { "ref": "library:stock-and-reorder-planner", "type": "skill", "use": "build", "when": "When you have usage numbers, to set safety stock and reorder points for parts and consumables" }
+      ]
+    },
+    {
+      "id": "maintenance-budget",
+      "task": "Build and track the yearly maintenance budget",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:department-budget-planner", "type": "skill", "use": "build", "when": "When you have past spend, to phase next year's maintenance budget by month" },
+        { "ref": "kit:skills/repair-or-replace-review", "use": "brief", "when": "When big replacements may fall in the year and need a figure in the budget" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the owner sets a cap, to show two budgets that place different bets and what each drops" },
+        { "ref": "library:budget-variance-explainer", "type": "skill", "use": "check", "when": "When actual spend drifts from budget, to show what moved, why, and a short note for the owner" }
+      ]
+    },
+    {
+      "id": "maintenance-numbers",
+      "task": "Report maintenance numbers each month",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:kpi-dashboard-designer", "type": "skill", "use": "brief", "when": "Before building a report, to pick the few measures the reader uses to decide" },
+        { "ref": "library:recurring-kpi-report-maker", "type": "skill", "use": "build", "when": "When the same numbers are needed every month and should be rerun, not rebuilt" },
+        { "ref": "library:excel-monthly-rollup-builder", "type": "skill", "use": "build", "when": "When work orders and checks are dated rows and you need monthly counts and rates" },
+        { "ref": "library:spreadsheet-checker", "type": "skill", "use": "check", "when": "When the export is messy, to clean and reconcile it before any number is quoted" }
+      ]
+    },
+    {
+      "id": "procedures-and-training",
+      "task": "Write maintenance procedures and brief staff on them",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When a task lives in one person's head, to get the steps, who does what and the edge cases" },
+        { "ref": "library:write-a-procedure-test-it-and-build-a-training-deck", "type": "workflow", "use": "build", "when": "When a new procedure must be tested for gaps and taught to a crew" },
+        { "ref": "library:make-a-new-policy-understandable-to-staff", "type": "workflow", "use": "build", "when": "When a new check routine starts, to explain the change to staff in plain words" },
+        { "ref": "library:sop-and-runbook-checker", "type": "skill", "use": "check", "when": "When old procedures exist, to find missing owners, stale pages and gaps" },
+        { "ref": "library:process-doc-freshness-keeper", "type": "agent", "use": "check", "when": "On a schedule, to flag procedures that no longer match how the work is done" }
+      ]
+    },
+    {
+      "id": "major-failure-response",
+      "task": "Plan the response to a major failure on site",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:crisis-response-planner", "type": "skill", "use": "build", "when": "When a serious failure has happened, to plan who to tell, who investigates and what to fix" },
+        { "ref": "library:backup-communication-plan-builder", "type": "skill", "use": "build", "when": "When out-of-hours call-outs depend on one phone, to set fallback contacts and switch triggers" },
+        { "ref": "library:turn-an-incident-into-a-safer-procedure", "type": "workflow", "use": "build", "when": "After the event, to turn the timeline into a no-blame report and a safer procedure" },
+        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When writing the plan, to test hand-offs, warnings and what happens when a step is missed" }
+      ]
+    },
+    {
+      "id": "repairs-handover",
+      "task": "Hand over open repairs when a person or contractor changes",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:prepare-a-property-maintenance-handover", "type": "workflow", "use": "build", "when": "When open repairs pass to someone new, to give a job-by-job handover with access notes" },
+        { "ref": "library:property-maintenance-evidence-review-assistant", "type": "agent", "use": "check", "when": "Before the handover is sent, to check overdue decisions and closure proof are listed" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before any register, calendar or review is handed over, to read it as the client and list fixes" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a sheet is printed or shared, to catch typos and an asset named two ways" }
+  ],
+  "helpers": [
+    { "role": "qhse-manager", "when": "When the job needs risk assessments, permits to work or safe systems of work written" },
+    { "role": "procurement-specialist", "when": "When a large service contract goes out to several suppliers or energy bills need a tariff check" },
+    { "role": "property-manager", "when": "When repairs involve tenants, landlords or lease duties, not only the client's own site" },
+    { "role": "spreadsheet-specialist", "when": "When the register or log needs formulas, lookups or a dashboard beyond a simple sheet" },
+    { "role": "automation-specialist", "when": "When fault reports and check sheets should flow into the maintenance tool without retyping" },
+    { "role": "management-accountant", "when": "When a replacement needs a full cost case with depreciation, finance and tax treatment" }
+  ],
+  "gaps": [
+    "No library item builds an asset or vehicle register; only the kit skill covers it (the one library register is for accounting depreciation)",
+    "No library item builds a statutory checks calendar for a site: fire alarm, emergency lighting, lifts, gas, electrical and water",
+    "No library item covers legionella control: temperature logs, flushing records or a written scheme summary",
+    "No library item writes daily equipment check sheets or a driver walkaround check with defect reporting",
+    "No library item covers contractor control on site: induction, permits to work, isolation and method statements",
+    "No library item sorts an overdue maintenance backlog by risk into do, reschedule and drop",
+    "No library item reports maintenance measures such as planned work done on time, downtime and repeat faults",
+    "No library item helps set up or fill a CMMS or fleet tool: import sheets, asset hierarchy and task lists",
+    "No library item tracks fuel use, mileage, tyres and driver defects for a small fleet",
+    "No library item covers building energy use, cleaning schedules, or planning an office or workshop move",
+    "No library item offers two or three clearly different check sheet layouts to test with the crew"
+  ]
+}

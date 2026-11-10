@@ -1,0 +1,285 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "employee-engagement-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "survey-design",
+      "task": "Design a short staff survey or pulse",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/staff-survey-design-and-readout", "use": "build", "when": "When the firm wants to hear from staff and privacy rules must be set before launch" },
+        { "ref": "library:employee-survey-designer", "type": "skill", "use": "explore", "when": "When you want a second set of questions and a focus group guide to compare with yours" },
+        { "ref": "library:check-a-marketing-survey-before-sending-it", "type": "workflow", "use": "check", "when": "Before launch, to review the questions for bias and plan a small pretest" },
+        { "ref": "library:review-employee-data-access-before-a-change", "type": "workflow", "use": "check", "when": "Before the survey tool goes live, to check who can see answers and staff data" },
+        { "ref": "library:tim-harford", "type": "mind", "use": "think", "when": "When a question will produce a striking number and nobody has asked what it really counts" }
+      ]
+    },
+    {
+      "id": "survey-readout",
+      "task": "Turn survey results and comments into findings",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/staff-survey-design-and-readout", "use": "build", "when": "When results are in and need scored topics and counted comment themes" },
+        { "ref": "library:research-theme-synthesizer", "type": "skill", "use": "build", "when": "When there are many open comments, to rank themes by how often they come up, with quotes" },
+        { "ref": "library:prepare-a-survey-findings-briefing", "type": "workflow", "use": "build", "when": "When leaders need a briefing that keeps what the data shows apart from what is assumed" },
+        { "ref": "library:survey-answer-truth-checker", "type": "prompt", "use": "check", "when": "Before sharing, to score how far each answer can be trusted and what weakens it" },
+        { "ref": "library:agency-academic-statistician", "type": "agent", "use": "check", "when": "When groups are small, to get an honest read of what the numbers can and cannot show" },
+        { "ref": "library:statistics-helper", "type": "skill", "use": "build", "when": "When you need trends and differences between teams explained in plain words" }
+      ]
+    },
+    {
+      "id": "action-plan",
+      "task": "Build an action plan with owners and dates",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/survey-to-action-cycle", "use": "build", "when": "For the yearly survey, the quarterly pulse and the check-ins that run between them" },
+        { "ref": "library:turn-employee-feedback-into-owned-actions", "type": "workflow", "use": "build", "when": "When themes are known, to get priority actions with owners and a draft reply to staff" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When money is limited, to compare two plans that spend it in different ways" },
+        { "ref": "library:employee-feedback-action-review-assistant", "type": "agent", "use": "check", "when": "Each month, to see which agreed actions are overdue and what new themes have come up" }
+      ]
+    },
+    {
+      "id": "you-said-we-did",
+      "task": "Write the \"you said, we did\" update for staff",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/you-said-we-did-update", "use": "build", "when": "When a survey, pulse or set of stay interviews has closed and staff must hear the result" },
+        { "ref": "library:dull-update-email-rewriter", "type": "prompt", "use": "explore", "when": "When the update reads flat, to try a version that leads with what changes for staff" },
+        { "ref": "library:internal-update-writer", "type": "skill", "use": "build", "when": "When the same news must also go in a newsletter or a leadership update" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the update is drafted, to read it as a sceptical member of staff and list what is dodged" }
+      ]
+    },
+    {
+      "id": "change-announcement",
+      "task": "Write a staff announcement and manager pack for one change",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/change-announcement-and-manager-pack", "use": "build", "when": "When staff must be told about a new tool, rota, policy, move or direction" },
+        { "ref": "library:staff-announcement-writer", "type": "skill", "use": "build", "when": "When you need the announcement, manager talking points, a FAQ and a rollout order" },
+        { "ref": "library:org-change-announcement-writer", "type": "skill", "use": "explore", "when": "When you want another version with a town hall script and hard-question answers" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the draft hides the change behind soft words, to make it short and honest" },
+        { "ref": "library:satya-nadella", "type": "mind", "use": "think", "when": "When the message says what is changing and never says who it helps or why now" }
+      ]
+    },
+    {
+      "id": "hard-news",
+      "task": "Write a message for hard news",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:announce-a-change-of-direction-and-bring-the-team-with-you", "type": "workflow", "use": "build", "when": "When the firm is changing direction and the team must hear why and what happens next" },
+        { "ref": "library:change-announcement", "type": "skill", "use": "build", "when": "When the news is a re-org or job losses and needs a FAQ and a send plan" },
+        { "ref": "library:bad-news-update-writer", "type": "skill", "use": "explore", "when": "When you want a shorter version that states the loss, the numbers and the next step" },
+        { "ref": "kit:prompts/change-announcement-and-manager-pack", "use": "build", "when": "When managers need the first five questions answered before they face their teams" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before it goes, to read it as the person most affected and list what they would ask" }
+      ]
+    },
+    {
+      "id": "policy-explainer",
+      "task": "Explain a new policy in plain words",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:make-a-new-policy-understandable-to-staff", "type": "workflow", "use": "build", "when": "When a policy is approved and staff need a clear explanation of what changes" },
+        { "ref": "library:handbook-change-checker", "type": "skill", "use": "check", "when": "Before it is published, to find other policies the change breaks" },
+        { "ref": "library:hard-questions-faq-writer", "type": "skill", "use": "build", "when": "When staff will push back, to write the hard questions and honest answers first" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the explainer still reads like the policy" }
+      ]
+    },
+    {
+      "id": "rollout-plan",
+      "task": "Plan the rollout of a new tool, rule or routine",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/roll-out-a-change-and-check-it-landed", "use": "build", "when": "When the business has decided a change that affects staff and it must be understood and used" },
+        { "ref": "library:change-rollout-planner", "type": "skill", "use": "build", "when": "When you need a rollout plan, message templates and a plan for pushback" },
+        { "ref": "library:agency-change-management-consultant", "type": "agent", "use": "brief", "when": "Before the plan, to map who is affected and what each group needs to hear" },
+        { "ref": "library:failure-first-plan-check", "type": "skill", "use": "check", "when": "When the plan is drafted, to list the ways the change could fail to stick" }
+      ]
+    },
+    {
+      "id": "adoption-check",
+      "task": "Check at 30 days whether a change has landed",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:review-staff-adoption-of-a-policy-change", "type": "workflow", "use": "check", "when": "When a change is live, to see whether staff follow it and what gets in the way" },
+        { "ref": "kit:workflows/roll-out-a-change-and-check-it-landed", "use": "check", "when": "At the planned check point, to compare what was meant with what people do" },
+        { "ref": "library:root-cause-finder", "type": "skill", "use": "build", "when": "When the change is not sticking, to get a chain of whys checked against facts" },
+        { "ref": "library:policy-removal-test-planner", "type": "skill", "use": "explore", "when": "When a rule may be doing more harm than good, to plan a small dated test of dropping it" }
+      ]
+    },
+    {
+      "id": "recognition-programme",
+      "task": "Design a staff recognition programme inside a budget",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/recognition-programme", "use": "build", "when": "When the firm wants peer thanks, manager praise, milestones and a few fair awards" },
+        { "ref": "library:recognition-plan-designer", "type": "skill", "use": "explore", "when": "When you want a second programme design to compare with yours" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the budget is fixed, to show two options with a money table for each" },
+        { "ref": "library:mary-kay-ash", "type": "mind", "use": "think", "when": "When the plan is about prizes and not about what makes one person feel noticed" },
+        { "ref": "library:alfie-kohn", "type": "mind", "use": "think", "when": "When rewards might turn good work into a contest and sour the people who miss out" }
+      ]
+    },
+    {
+      "id": "recognition-guide",
+      "task": "Write a manager recognition guide and fair award criteria",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/recognition-programme", "use": "build", "when": "When managers need message starters and awards need criteria anyone can check" },
+        { "ref": "library:honest-appreciation-note-writer", "type": "skill", "use": "build", "when": "When a manager wants one short, true and specific thank-you with no ask" },
+        { "ref": "library:written-feedback-checker", "type": "skill", "use": "check", "when": "When sample praise messages are drafted, to check each is specific and useful" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the guide is drafted, to cut it to a page managers will use" }
+      ]
+    },
+    {
+      "id": "team-moments-calendar",
+      "task": "Plan a 12-month calendar of team moments",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/team-moments-calendar", "use": "build", "when": "When you want a year of small rituals and celebrations planned around busy periods" },
+        { "ref": "library:key-moment-designer", "type": "skill", "use": "explore", "when": "When one moment, such as a first day or a milestone, should be made memorable" },
+        { "ref": "library:prepare-a-small-team-offsite", "type": "workflow", "use": "build", "when": "When the calendar includes an away day, to plan a decision-first agenda" },
+        { "ref": "library:meeting-agenda-and-cost-planner", "type": "skill", "use": "check", "when": "Before adding a gathering, to see its real cost and whether it is worth holding" }
+      ]
+    },
+    {
+      "id": "culture-memo",
+      "task": "Write a culture memo and the habits that make it real",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/culture-memo-and-habits", "use": "build", "when": "When values are vague or unwritten and you want three to five in plain words with habits" },
+        { "ref": "library:write-your-team-culture-memo-and-make-it-real-in-daily-habits", "type": "workflow", "use": "build", "when": "When you want a guided run to a memo, a standards sheet and a rule to drop" },
+        { "ref": "library:team-culture-memo-writer", "type": "skill", "use": "explore", "when": "When you want a second memo with a keeper test and feedback rules to compare" },
+        { "ref": "library:company-values-culture", "type": "skill", "use": "build", "when": "When each value must be written as behaviour you can see, with a simple health check" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a value could hang on any firm's wall, to test it and make it specific" },
+        { "ref": "library:patty-mccord", "type": "mind", "use": "think", "when": "When the memo describes the team people wish they had, not how work is really done" }
+      ]
+    },
+    {
+      "id": "values-interview-signals",
+      "task": "Turn values into interview signals",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:culture-fit-hiring-planner", "type": "skill", "use": "build", "when": "When you have the team's values and a role, to get a two-part values interview" },
+        { "ref": "library:structured-interview-guide", "type": "skill", "use": "build", "when": "When each value needs set questions with strong and weak answer signs" },
+        { "ref": "kit:prompts/culture-memo-and-habits", "use": "brief", "when": "Before writing questions, to take the habits each value is meant to show" }
+      ]
+    },
+    {
+      "id": "turnover-analysis",
+      "task": "Analyse turnover and early leaving from an HR export",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/turnover-and-stay-interviews", "use": "build", "when": "When you have an anonymised HR export and need turnover with every sum shown" },
+        { "ref": "library:headcount-and-turnover-reporter", "type": "skill", "use": "build", "when": "When leaders want a report with a metrics table, trends and next steps" },
+        { "ref": "library:numbers-drop-explainer", "type": "prompt", "use": "brief", "when": "When leaving jumped in one period, to rank the likely causes by evidence" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before the analysis is shared, to find broken formulas and totals that do not add up" },
+        { "ref": "library:agency-academic-statistician", "type": "agent", "use": "check", "when": "When a team has few people, to check a rate is not being read from too small a number" }
+      ]
+    },
+    {
+      "id": "exit-stay-interviews",
+      "task": "Write exit and stay interview guides and read the answers",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/turnover-and-stay-interviews", "use": "build", "when": "When managers need stay interview questions and exit answers need counted themes" },
+        { "ref": "library:offboarding-plan-builder", "type": "skill", "use": "build", "when": "When someone is leaving, to get exit questions and a handover plan" },
+        { "ref": "library:listen-first-talk-planner", "type": "skill", "use": "brief", "when": "Before a stay interview, to plan how to listen until the person feels heard" },
+        { "ref": "library:research-theme-synthesizer", "type": "skill", "use": "build", "when": "When interview notes pile up, to rank themes with quotes" }
+      ]
+    },
+    {
+      "id": "retention-plan",
+      "task": "Map retention risk by team and write a manager playbook",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/turnover-and-stay-interviews", "use": "build", "when": "When warning signs must be mapped by team and role, never by named person" },
+        { "ref": "library:agency-organizational-psychologist", "type": "agent", "use": "brief", "when": "When people go quiet, burn out or leave, to get findings with evidence and fixes" },
+        { "ref": "library:one-on-one-meeting-planner", "type": "skill", "use": "build", "when": "When the playbook needs a one-to-one routine managers can keep" },
+        { "ref": "library:career-ladder-plan", "type": "skill", "use": "build", "when": "When people leave for lack of a path, to set levels and a guide for career talks" },
+        { "ref": "library:pay-benchmark-and-equity-modeler", "type": "skill", "use": "check", "when": "When pay is the stated reason, to compare roles with market ranges" },
+        { "ref": "library:daniel-pink", "type": "mind", "use": "think", "when": "When the fix on the table is perks and the cause may be pay, choice or progress" }
+      ]
+    },
+    {
+      "id": "onboarding-check-ins",
+      "task": "Set onboarding check-ins and a view of each cohort",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/onboarding-check-in-questions", "use": "build", "when": "When new starters leave early or settle slowly and you want short check-ins in year one" },
+        { "ref": "library:employee-experience-map-builder", "type": "skill", "use": "brief", "when": "Before writing questions, to map the first weeks with key moments and pain points" },
+        { "ref": "library:hiring-quality-reviewer", "type": "skill", "use": "build", "when": "When you want manager and new hire surveys and 30, 60 and 90 day check-ins" },
+        { "ref": "library:new-hire-onboarding-keeper", "type": "agent", "use": "check", "when": "Each week of a new hire's start, to see progress against the plan and what to fix" }
+      ]
+    },
+    {
+      "id": "wellbeing-plan",
+      "task": "Build a wellbeing plan and 12-month calendar on a small budget",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/wellbeing-plan-and-signposting", "use": "build", "when": "When the plan must fix workload, control and support before adding activities" },
+        { "ref": "library:employee-wellbeing-program", "type": "skill", "use": "explore", "when": "When you want a second plan with a manager guide and return-to-work steps to compare" },
+        { "ref": "library:team-capacity-planner", "type": "skill", "use": "brief", "when": "Before the plan, to see who is overloaded and whether the team can take on more" },
+        { "ref": "kit:prompts/team-moments-calendar", "use": "build", "when": "When wellbeing activities must sit in the same calendar as other team moments" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "When the plan names a helpline or service, to check each is real, current and sourced" }
+      ]
+    },
+    {
+      "id": "manager-check-in-guide",
+      "task": "Write a manager guide for check-ins and signposting",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/wellbeing-plan-and-signposting", "use": "build", "when": "When managers are unsure what to say and where to point someone who is struggling" },
+        { "ref": "library:one-on-one-meeting-planner", "type": "skill", "use": "build", "when": "When check-ins need a simple agenda, timing and follow-up" },
+        { "ref": "library:listen-first-talk-planner", "type": "skill", "use": "build", "when": "When a manager faces a hard talk, to plan listening first and one agreed next step" },
+        { "ref": "library:prepare-a-confidential-conflict-discussion", "type": "workflow", "use": "build", "when": "When the issue is conflict between people, to get a neutral map and a discussion guide" }
+      ]
+    },
+    {
+      "id": "handbook-section",
+      "task": "Write a handbook section on wellbeing, recognition or culture",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:policy-handbook-writer", "type": "skill", "use": "build", "when": "When a section must be drafted for the firm's country and size, with points to check" },
+        { "ref": "kit:skills/wellbeing-plan-and-signposting", "use": "brief", "when": "When the section is on wellbeing and must match the plan and the signposting list" },
+        { "ref": "library:handbook-change-checker", "type": "skill", "use": "check", "when": "Before it goes in, to find other policies the new section clashes with" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the section is drafted, to make it read the way the firm talks" }
+      ]
+    },
+    {
+      "id": "engagement-report",
+      "task": "Report engagement measures to leaders",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:hr-metrics-and-report-builder", "type": "skill", "use": "build", "when": "When you must choose the measures, define each and draft a monthly people report" },
+        { "ref": "library:kpi-dashboard-designer", "type": "skill", "use": "brief", "when": "Before building, to pick the few measures leaders will act on" },
+        { "ref": "kit:skills/staff-survey-design-and-readout", "use": "brief", "when": "When survey scores feed the report and minimum group sizes must be kept" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before the report goes, to check totals and state the key figures in plain words" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before anything goes to all staff, to catch typos, wrong dates and terms used two ways" },
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "When a message quotes a survey figure or a benchmark, to tie it to its source or cut it" }
+  ],
+  "helpers": [
+    { "role": "hr-specialist", "when": "When an action touches contracts, pay, grievances or employment law" },
+    { "role": "internal-communications-specialist", "when": "When a change needs a full campaign across channels, not one announcement" },
+    { "role": "organisation-development-specialist", "when": "When the findings point to roles, structure or how decisions are made" },
+    { "role": "data-analyst", "when": "When the HR export or survey data is large or messy and needs proper analysis" },
+    { "role": "leadership-coach", "when": "When the findings come down to how one or two managers lead" },
+    { "role": "event-manager", "when": "When the calendar includes an away day or a staff event that needs running" }
+  ],
+  "gaps": [
+    "No library item sets survey privacy rules: confidential or anonymous, minimum group size and comment handling",
+    "No library item writes a \"you said, we did\" update or makes different versions of a staff message to compare",
+    "No library item writes fair award criteria or a recognition budget with options",
+    "No library item plans a 12-month calendar of team moments or low-cost wellbeing activities",
+    "No library item writes stay interview questions or builds a retention risk map by team and role",
+    "No library item works out turnover and early leaving rates from an HR export with every sum shown",
+    "No library item writes onboarding check-in questions for set points in the first year",
+    "No library item builds a wellbeing signposting list or a manager guide on what to say and where to point",
+    "No library item compares a survey score with a sourced benchmark or tracks it across pulses",
+    "No library item plans a listening session or focus group for staff and writes up what was said",
+    "No tool guide covers staff survey or recognition tools"
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "field-service-coordinator",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "write-quote",
+      "task": "Write a quote and scope from site notes",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/quote-and-scope-writer", "use": "build", "when": "When you have site notes, measurements and the client's price list and need a clear written quote" },
+        { "ref": "library:quote-and-proposal-builder", "type": "skill", "use": "build", "when": "When the client has a branded template and wants the quote costed and laid out in it" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the job can be done two ways, to show two costed options with dates and one pick" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to read the quote as the customer and list what they would have to ask" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "When the quote states prices, dates or guarantees, to trace each to the price list or terms" },
+        { "ref": "library:robert-cialdini", "type": "mind", "use": "think", "when": "When the quote is only a price, to add real proof and honest expertise the customer can check" }
+      ]
+    },
+    {
+      "id": "quote-follow-up",
+      "task": "Follow up open quotes and explain the price",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/quote-follow-up-and-price-explainer", "use": "build", "when": "When quotes go quiet or a customer says the price is more than they expected" },
+        { "ref": "library:almost-buyer-follow-up-writer", "type": "skill", "use": "explore", "when": "When one nudge has failed, to get a series where each message gives a different reason to reply" },
+        { "ref": "library:objection-answer-sheet-writer", "type": "skill", "use": "build", "when": "When the office hears the same doubts each week, to write one answer sheet with proof" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "Before a follow-up goes out, to cut it down and fix the subject line" }
+      ]
+    },
+    {
+      "id": "change-order",
+      "task": "Write a change order for extra work",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/quote-and-scope-writer", "use": "build", "when": "When extra work turns up mid-job and needs a short note with price and time before it starts" },
+        { "ref": "library:prepare-a-client-scope-change-brief", "type": "workflow", "use": "brief", "when": "When a customer asks for more, to compare it with the agreed scope and the team's hours" },
+        { "ref": "library:prepare-a-construction-variation-decision", "type": "workflow", "use": "build", "when": "When a building job has a signed contract, to check the variation against its clauses and rates" },
+        { "ref": "library:client-scope-decision-review-assistant", "type": "agent", "use": "check", "when": "Before replying, to check the new work is priced as new and not folded into the old scope" }
+      ]
+    },
+    {
+      "id": "repair-estimate",
+      "task": "Explain a repair estimate: fix now, soon or later",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/repair-estimate-explainer", "use": "build", "when": "When a technician's notes and a price list must become an estimate a customer trusts" },
+        { "ref": "library:standardize-repair-work-order-intake", "type": "workflow", "use": "brief", "when": "When job cards arrive with fields missing, to fix how the shop takes in repair jobs" },
+        { "ref": "library:data-jargon-translator", "type": "skill", "use": "build", "when": "When the notes are full of trade terms, to find them and rewrite for a customer" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to test the estimate does not scare, hide a cost or leave a question open" }
+      ]
+    },
+    {
+      "id": "schedule-dispatch",
+      "task": "Plan the daily schedule and dispatch the team",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/daily-schedule-and-dispatch", "use": "brief", "when": "Every working day: plan the evening before, check first thing and handle changes" },
+        { "ref": "kit:skills/scheduling-and-dispatch", "use": "build", "when": "When jobs need arrival windows, the right technician and parts, and a sensible order" },
+        { "ref": "library:delivery-time-slot-route-planner", "type": "skill", "use": "build", "when": "When each visit has a promised window, to order stops so every window is met" },
+        { "ref": "library:multi-stop-route-planner", "type": "skill", "use": "build", "when": "When several vans share the day's jobs, to get a low-mileage route for each" },
+        { "ref": "library:check-capacity-before-promising-a-delivery-date", "type": "workflow", "use": "check", "when": "Before promising a date for a big job, to check the team has the hours" }
+      ]
+    },
+    {
+      "id": "customer-messages",
+      "task": "Write the customer message set for a job",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/customer-messages", "use": "build", "when": "When the business needs booking, reminder, on-my-way, late, done and review messages" },
+        { "ref": "library:brand-voice-rules-writer", "type": "skill", "use": "brief", "when": "Before writing, to fix how the business talks so every message sounds like one firm" },
+        { "ref": "library:text-message-campaign-writer", "type": "skill", "use": "build", "when": "When messages go by SMS or WhatsApp and need consent rules and timing" },
+        { "ref": "library:support-reply-tone-editor", "type": "skill", "use": "explore", "when": "When a message reads cold or pushy, to try it in another tone with the facts unchanged" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the set goes live, to check every time, price and promise against the client's terms" },
+        { "ref": "library:matthew-dixon", "type": "mind", "use": "think", "when": "When customers still ring the office, to find the effort each message leaves them with" }
+      ]
+    },
+    {
+      "id": "enquiry-to-job",
+      "task": "Take a new enquiry through to a booked job",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/enquiry-to-paid-job", "use": "brief", "when": "When an enquiry arrives by phone, form or email and must reach a paid job without gaps" },
+        { "ref": "library:new-inquiry-reply-drafter", "type": "skill", "use": "build", "when": "When several enquiries wait, to qualify each and draft a reply with real visit times" },
+        { "ref": "library:booking-page-designer", "type": "skill", "use": "build", "when": "When customers should book online, to set open times, qualifying questions and prep emails" },
+        { "ref": "library:neil-rackham", "type": "mind", "use": "think", "when": "When the office quotes before it understands the problem, to plan the questions to ask first" }
+      ]
+    },
+    {
+      "id": "job-sheets",
+      "task": "Build job checklists with photos and sign-off",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/job-sheets-and-handover", "use": "build", "when": "When each job type needs a checklist with required photos, readings and a customer sign-off" },
+        { "ref": "library:operations-manual-writer", "type": "skill", "use": "build", "when": "When the owner has a standards sheet and each role needs a job card and a missed-standard rule" },
+        { "ref": "library:google-forms-automator", "type": "skill", "use": "build", "when": "When the checklist should be filled on a phone and each sign-off logged and emailed" },
+        { "ref": "library:plain-words-interface-rewriter", "type": "skill", "use": "check", "when": "When new starters misread a checklist, to rewrite it in the words the crew use" }
+      ]
+    },
+    {
+      "id": "handover-pack",
+      "task": "Write a customer handover and aftercare pack",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/job-sheets-and-handover", "use": "build", "when": "When a finished job needs a pack that tells the customer what was done and how to care for it" },
+        { "ref": "kit:prompts/plain-warranty-summary", "use": "build", "when": "When the pack must say what the guarantee covers, in the customer's words" },
+        { "ref": "library:help-article-writer", "type": "skill", "use": "build", "when": "When the phone rings with the same how-do-I questions, to write short care articles" },
+        { "ref": "library:faq-page-from-questions-writer", "type": "prompt", "use": "build", "when": "When you have real customer questions and answers and want one FAQ page for the pack or site" },
+        { "ref": "library:post-sale-follow-up-planner", "type": "skill", "use": "build", "when": "When the job should lead to repeat work, to plan the thank-you, service dates and referral ask" },
+        { "ref": "library:prepare-an-engagement-closeout-evidence-pack", "type": "workflow", "use": "check", "when": "When a job closes, to keep proof of what was delivered, accepted and still open" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before the pack goes out, to read it as the customer and find what they would still ring about" }
+      ]
+    },
+    {
+      "id": "plain-terms",
+      "task": "Put warranty and booking terms in plain words",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/plain-warranty-summary", "use": "build", "when": "When customers misread the guarantee or the office promises more than the terms give" },
+        { "ref": "library:explain-service-booking-terms-to-customers", "type": "workflow", "use": "build", "when": "When booking, deposit and cancellation terms need a plain summary linked to each clause" },
+        { "ref": "library:contract-and-term-sheet-reviewer", "type": "skill", "use": "brief", "when": "When a maker's warranty is hard to follow, to get its plain meaning and the risky terms" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before publishing, to check each plain line matches a clause and nothing new was promised" },
+        { "ref": "library:george-orwell", "type": "mind", "use": "think", "when": "When the summary still sounds like a contract, to cut padding and say what is meant" }
+      ]
+    },
+    {
+      "id": "complaint-reply",
+      "task": "Reply to a complaint and plan the return visit",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/complaint-and-return-visit", "use": "build", "when": "When a customer is unhappy with a job and needs a same-day reply and a return-visit plan" },
+        { "ref": "library:customer-message-tone-and-urgency-review", "type": "skill", "use": "brief", "when": "When a message is heated, to read its tone, urgency and warning signs before replying" },
+        { "ref": "library:angry-customer-reply-writer", "type": "prompt", "use": "explore", "when": "When the first draft sounds defensive, to get a second version that names the feeling" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before sending, to check every promise in the reply can be kept" },
+        { "ref": "library:root-cause-finder", "type": "skill", "use": "build", "when": "When the same complaint keeps coming back, to find the cause and a way to prevent it" },
+        { "ref": "library:tony-hsieh", "type": "mind", "use": "think", "when": "When the reply follows policy but leaves the customer worse off, to weigh the service cost" }
+      ]
+    },
+    {
+      "id": "reviews",
+      "task": "Reply to public reviews and ask for new ones",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/review-reply-batch", "use": "build", "when": "When a batch of new reviews needs specific, calm replies in the business's voice" },
+        { "ref": "library:public-review-reply-desk", "type": "agent", "use": "check", "when": "On each new batch, to hold risky replies for the owner and flag repeat complaints" },
+        { "ref": "library:review-request-and-reply-planner", "type": "skill", "use": "brief", "when": "When the business rarely asks for reviews, to plan when to ask and how to word it" },
+        { "ref": "library:testimonial-request-writer", "type": "skill", "use": "build", "when": "When a happy customer could give a quote for the site, to ask with three easy questions" },
+        { "ref": "library:review-insight-finder", "type": "skill", "use": "build", "when": "When there are many reviews, to rank the complaints and praise by how often they come up" }
+      ]
+    },
+    {
+      "id": "service-plans",
+      "task": "Design maintenance plan tiers and cost each visit",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/service-plan-tiers-and-visit-costing", "use": "build", "when": "When the owner wants plan tiers, a worked cost per visit and the members needed to break even" },
+        { "ref": "library:membership-plan-pricer", "type": "skill", "use": "build", "when": "When tier prices are open, to set them and decide flat fee or pay per use" },
+        { "ref": "library:offer-designer", "type": "skill", "use": "build", "when": "When the plan needs a name, member perks, a guarantee and payment terms" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the owner is unsure how to shape the plan, to compare two models with money and dates" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "Before the pricing workbook is trusted, to catch formula errors and broken links" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When there are two or three tier sets, to have a fresh reader pick one as a customer would" }
+      ]
+    },
+    {
+      "id": "plan-launch-renewals",
+      "task": "Launch a maintenance plan and run renewals",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:workflows/maintenance-plan-launch-and-renewals", "use": "brief", "when": "When a plan is ready to launch, or members are not being booked or renewed" },
+        { "ref": "kit:skills/customer-messages", "use": "build", "when": "When members need visit-due, renewal and thank-you messages in one voice" },
+        { "ref": "library:billing-reminder-and-confirmation-writer", "type": "skill", "use": "build", "when": "When members are billed on a schedule and need a notice before each charge" },
+        { "ref": "library:objection-answer-sheet-writer", "type": "skill", "use": "build", "when": "When technicians hate selling, to give them honest answers to the doubts customers raise" },
+        { "ref": "library:neil-rackham", "type": "mind", "use": "think", "when": "When the sign-up script is a pitch, to turn it into questions about the customer's problem" }
+      ]
+    },
+    {
+      "id": "service-reminders",
+      "task": "Send service-due and seasonal reminders",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/customer-messages", "use": "build", "when": "When past customers are due a service, test or seasonal visit and need a reminder that gets opened" },
+        { "ref": "library:post-sale-follow-up-planner", "type": "skill", "use": "brief", "when": "When there is no follow-up routine, to set the schedule and records for each customer" },
+        { "ref": "library:text-message-campaign-writer", "type": "skill", "use": "build", "when": "When reminders go by text, to write the flow with consent and opt-out wording" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "Before a reminder is scheduled, to tighten it and fix the subject line" }
+      ]
+    },
+    {
+      "id": "service-menu-and-rates",
+      "task": "Set the service menu, rates and a price rise",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:hourly-rate-calculator", "type": "skill", "use": "build", "when": "When the owner guesses the rate, to work it out from pay, costs and billable hours" },
+        { "ref": "library:reconcile-service-capacity-and-shared-cost", "type": "workflow", "use": "check", "when": "When jobs feel busy but unprofitable, to see what the team's hours earn after all costs" },
+        { "ref": "library:click-choice-clarity-checker", "type": "skill", "use": "check", "when": "When the service menu confuses customers, to rate each choice and rewrite the labels" },
+        { "ref": "library:price-rise-readiness-checker", "type": "prompt", "use": "check", "when": "Before raising prices, to score how ready the offer is and what to add first" },
+        { "ref": "library:price-rise-letter-writer", "type": "prompt", "use": "build", "when": "When the new price is set, to tell regular customers in a letter that keeps most of them" }
+      ]
+    },
+    {
+      "id": "service-page-and-listing",
+      "task": "Write a service page and Google profile text",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:local-search-listing-manager", "type": "skill", "use": "build", "when": "When the business is hard to find locally, to audit the listing and fix its text" },
+        { "ref": "library:conversion-page-writer", "type": "skill", "use": "build", "when": "When a service needs page copy with proof, answers to doubts and a clear way to book" },
+        { "ref": "library:make-three-first-screens", "type": "skill", "use": "explore", "when": "Before settling the page, to see three different first screens in the firm's own look" },
+        { "ref": "library:buyer-can-act-check", "type": "skill", "use": "check", "when": "Before the page goes live, to check a customer can book today at the price shown" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the copy is drafted, to read it as a local customer and mark each unsourced claim" }
+      ]
+    },
+    {
+      "id": "chase-invoices",
+      "task": "Chase unpaid invoices after a job",
+      "kind": "email",
+      "items": [
+        { "ref": "library:weekly-invoice-and-cash-chaser", "type": "agent", "use": "build", "when": "Each week, to see who to chase, a reminder for each and the cash due in 90 days" },
+        { "ref": "library:unpaid-invoice-chaser", "type": "skill", "use": "build", "when": "When a few invoices are late, to write each reminder gentle or firm to suit the customer" },
+        { "ref": "library:uk-late-payment-chaser", "type": "skill", "use": "build", "when": "When a UK business customer is overdue, to add the legal interest and fixed fee" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "When the customer disputes the bill, to check the reply promises only what can be done" }
+      ]
+    },
+    {
+      "id": "train-new-staff",
+      "task": "Train new cleaners or technicians on the standard",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:operations-manual-writer", "type": "skill", "use": "build", "when": "When new starters arrive every month and need a job card and a day-one trial sheet" },
+        { "ref": "library:write-a-procedure-test-it-and-build-a-training-deck", "type": "workflow", "use": "build", "when": "When one job type needs a tested procedure and a short deck to teach it" }
+      ]
+    },
+    {
+      "id": "weekly-numbers",
+      "task": "Review no-access visits, call-backs and weekly numbers",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:explain-appointment-no-show-patterns", "type": "workflow", "use": "build", "when": "When no-access and missed visits keep happening, to find the pattern in the booking records" },
+        { "ref": "library:trace-why-work-keeps-missing-deadlines", "type": "workflow", "use": "build", "when": "When jobs keep running late, to map where they wait and test one small fix" },
+        { "ref": "library:recurring-kpi-report-maker", "type": "skill", "use": "build", "when": "When the owner wants the same few numbers each week without rebuilding the report" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before the numbers reach the owner, to catch broken formulas and wrong totals" }
+      ]
+    },
+    {
+      "id": "choose-software",
+      "task": "Choose or switch field service software",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:software-vendor-chooser", "type": "skill", "use": "build", "when": "When the owner is comparing job management tools, to score each against real needs" },
+        { "ref": "library:plan-a-vendor-change-without-losing-work", "type": "workflow", "use": "build", "when": "When moving tools, to plan notice dates and a staged switch that drops no bookings" }
+      ]
+    },
+    {
+      "id": "referrals",
+      "task": "Set up a referral offer for past customers",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:referral-program-designer", "type": "skill", "use": "build", "when": "When most work comes by word of mouth, to set the reward, the ask and the launch" },
+        { "ref": "library:post-sale-follow-up-planner", "type": "skill", "use": "build", "when": "When the referral ask should sit inside the thank-you and follow-up routine" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before customer-facing work, to capture the firm's voice and dated prices from its live site" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before anything reaches a customer, to catch typos and a service named two ways" }
+  ],
+  "helpers": [
+    { "role": "pricing-strategist", "when": "When the job is a full price review across services, not one plan or one rate" },
+    { "role": "local-marketing-specialist", "when": "When the owner wants more local enquiries, not only better pages and replies" },
+    { "role": "reputation-manager", "when": "When reviews are a serious problem: a low score, a pile-on or fake reviews" },
+    { "role": "automation-specialist", "when": "When messages, forms and the job tool should connect so nothing is typed twice" },
+    { "role": "construction-project-coordinator", "when": "When the job is a multi-week build with a contract, stages and variations" },
+    { "role": "ap-ar-specialist", "when": "When late payment is a pattern and credit terms and collections need a proper process" }
+  ],
+  "gaps": [
+    "No library item writes a trades, cleaning or repair quote from site notes, or lays one job out as good, better and best options",
+    "No library item plans a field team's day: arrival windows, matching skills and parts to jobs, and same-day changes",
+    "No library item writes the on-my-way, running-late, no-access and job-done message set, or offers clearly different versions of it",
+    "No library item builds job checklists with required photos and customer sign-off, or room-by-room cleaning checklists",
+    "No library item writes a customer handover or aftercare pack with care steps and service dates",
+    "No library item costs a maintenance plan per visit and works out the members needed to break even",
+    "No library item writes technician and office sign-up scripts for a service plan",
+    "No library item costs one job after labour, travel, parts and call-backs to show its margin",
+    "No library item writes a change order or extra-work note for a small trades job without a formal contract",
+    "No library item checks a quote against consumer rules such as cooling-off rights and deposit limits",
+    "No library item tracks first-time fix rate, call-backs and quote win rate for a service team"
+  ]
+}

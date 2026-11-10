@@ -1,0 +1,280 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "project-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "project-plan",
+      "task": "Turn a goal into a project plan",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/goal-to-launch", "use": "brief", "when": "When a project is agreed: a client job signed, a launch, a redesign, a system change or a move" },
+        { "ref": "kit:skills/project-plan-and-risk-log", "use": "build", "when": "When the goal needs a finish line, tasks, owners, effort ranges, dependencies and milestones" },
+        { "ref": "library:requirements-question-asker", "type": "skill", "use": "brief", "when": "When the goal is vague, to ask the few questions that matter before any planning" },
+        { "ref": "library:task-breakdown-planner", "type": "skill", "use": "build", "when": "When a spec exists, to split it into small ordered tasks, each with a way to check it is done" },
+        { "ref": "library:agency-project-management-project-shepherd", "type": "agent", "use": "build", "when": "When the project spans several teams and needs a charter, owners and dependencies" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the project could be phased or done in one push, to compare two plans with money and dates" }
+      ]
+    },
+    {
+      "id": "risk-log",
+      "task": "Build the risk and assumption log",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/project-plan-and-risk-log", "use": "build", "when": "When the plan exists and each risk needs a trigger, an owner and a response" },
+        { "ref": "library:launch-readiness-seam-checker", "type": "skill", "use": "check", "when": "When several parts must meet on one date, to find the joins where things fail" },
+        { "ref": "library:project-risk-portfolio", "type": "skill", "use": "build", "when": "When several projects run at once, to score risks across them and balance people" },
+        { "ref": "library:nassim-taleb", "type": "mind", "use": "think", "when": "When the log lists only small risks, to look for the one shock that would end the project" }
+      ]
+    },
+    {
+      "id": "kickoff-brief",
+      "task": "Write a client or team kickoff brief",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/kickoff-brief", "use": "build", "when": "When a project is about to start and everyone needs the same picture of scope, roles and timeline" },
+        { "ref": "library:prepare-a-clear-client-project-kickoff", "type": "workflow", "use": "build", "when": "When it is a client project, to get the brief and an agenda only if a meeting is worth holding" },
+        { "ref": "library:project-kickoff-brief-writer", "type": "skill", "use": "explore", "when": "When the brief is for a creative job, to try a version built on goal, audience, tone and limits" },
+        { "ref": "library:client-project-communication-plan", "type": "skill", "use": "build", "when": "When channels and update dates are unclear, to set them and where decisions are recorded" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before the brief is sent, to read it as the client and list what they would have to ask" }
+      ]
+    },
+    {
+      "id": "weekly-status",
+      "task": "Write the weekly status update",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/weekly-status-update", "use": "build", "when": "Each week on a running project, to say where things stand on one page" },
+        { "ref": "library:status-report-writer", "type": "skill", "use": "build", "when": "When the reader wants status, risks and decisions needed in a fixed monthly or weekly format" },
+        { "ref": "library:stakeholder-update-writer", "type": "skill", "use": "explore", "when": "When leaders, the team and the client each need the update at a different depth" },
+        { "ref": "library:executive-update-drafter", "type": "skill", "use": "build", "when": "When the news is bad, to pitch the note to the person who must act on it" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the update goes out, to check every date, cost and percent against the plan and notes" }
+      ]
+    },
+    {
+      "id": "weekly-control",
+      "task": "Run weekly project control",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/weekly-project-control", "use": "build", "when": "At every review point, on the same day, for each running project" },
+        { "ref": "library:project-cost-progress-tracker", "type": "skill", "use": "check", "when": "When budget, schedule and spend are known, to get cost and schedule indexes and a finish cost" },
+        { "ref": "library:weekly-project-delay-evidence-assistant", "type": "agent", "use": "check", "when": "Each week, to see where work waits and whether the current fix should stay" },
+        { "ref": "library:weekly-meeting-actions-keeper", "type": "agent", "use": "build", "when": "After each review meeting, to check last week's actions and set the next agenda" },
+        { "ref": "library:bill-gates", "type": "mind", "use": "think", "when": "When the status is green by habit, to check the data behind each measure and the delivery gaps" }
+      ]
+    },
+    {
+      "id": "scope-statement",
+      "task": "Write a client project scope",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/scope-and-change-control", "use": "build", "when": "When deliverables, revisions, exclusions, assumptions and the change process must be written down" },
+        { "ref": "library:web-project-scoper", "type": "skill", "use": "build", "when": "When the project is a website, to get goals, users, features and a page plan in one brief" },
+        { "ref": "library:project-requirement-tracker", "type": "skill", "use": "build", "when": "When each requirement needs an owner, a build, a test and an approval beside it" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before the scope is signed, to read it as the client and find what could be argued later" }
+      ]
+    },
+    {
+      "id": "change-request",
+      "task": "Turn a new ask into a change request",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/scope-and-change-control", "use": "build", "when": "When a client asks for more and it needs a polite note with time, cost and a choice" },
+        { "ref": "library:prepare-a-client-scope-change-brief", "type": "workflow", "use": "brief", "when": "Before replying, to compare the ask with the signed scope and the team's hours" },
+        { "ref": "library:change-request-writer", "type": "skill", "use": "build", "when": "When the change is to a system or process and needs impact, risks and rollback steps" },
+        { "ref": "library:tense-email-softener", "type": "prompt", "use": "explore", "when": "When the draft sounds annoyed, to get a version the client wants to say yes to" },
+        { "ref": "library:client-scope-decision-review-assistant", "type": "agent", "use": "check", "when": "Before sending, to check new work is kept as proposed and priced, not folded in" }
+      ]
+    },
+    {
+      "id": "estimate",
+      "task": "Estimate cost and time with ranges",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/estimate-with-ranges", "use": "build", "when": "When a software, website or other project needs low, likely and high figures with assumptions" },
+        { "ref": "library:task-breakdown-planner", "type": "skill", "use": "brief", "when": "Before estimating, to split the spec into small tasks that can each be sized" },
+        { "ref": "library:ai-assisted-work-estimator", "type": "skill", "use": "build", "when": "When the team builds with AI agents, to get time ranges that allow for it" },
+        { "ref": "library:outside-view-timeline-estimator", "type": "prompt", "use": "check", "when": "When the estimate is done, to correct it by how similar projects really went" },
+        { "ref": "library:prepare-your-first-freelance-project-quote", "type": "workflow", "use": "build", "when": "When the estimate must become a first client quote with terms" },
+        { "ref": "library:philip-tetlock", "type": "mind", "use": "think", "when": "When a date is promised from hope, to turn it into a dated forecast with a base rate" }
+      ]
+    },
+    {
+      "id": "quote-check",
+      "task": "Check a developer or agency quote",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/developer-quote-check", "use": "check", "when": "When a non-developer has a quote and wants to know what is vague, missing or out of line" },
+        { "ref": "library:agency-project-manager-senior", "type": "agent", "use": "build", "when": "When there is a spec, to list the tasks a full quote should cover and the gaps to settle" },
+        { "ref": "library:outside-view-timeline-estimator", "type": "prompt", "use": "check", "when": "When the quoted timeline looks short, to test it against projects like it" },
+        { "ref": "library:contract-and-term-sheet-reviewer", "type": "skill", "use": "check", "when": "When the quote comes with terms, to flag the risky ones in plain words" }
+      ]
+    },
+    {
+      "id": "scope-to-budget",
+      "task": "Offer scope options that fit the budget",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/estimate-with-ranges", "use": "build", "when": "When the estimate is over budget and the client needs options with what each drops" },
+        { "ref": "library:launch-scope-cutter", "type": "skill", "use": "build", "when": "When the date is fixed, to keep it with half the scope: the core first, the rest parked" },
+        { "ref": "library:lean-product-shaping-coach", "type": "skill", "use": "explore", "when": "When the plan keeps growing, to shape a smaller bet and list what to say no to" },
+        { "ref": "library:priority-method-picker", "type": "skill", "use": "brief", "when": "When the team cannot agree what to cut, to pick a ranking method that fits" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When there are two ways to spend the budget, to show both with money and dates" },
+        { "ref": "library:jason-fried", "type": "mind", "use": "think", "when": "When every feature is called essential, to cut to a first version that is still useful" }
+      ]
+    },
+    {
+      "id": "reforecast",
+      "task": "Re-forecast a project in progress",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/estimate-with-ranges", "use": "build", "when": "When work done so far shows the first estimate was off and a new range is needed" },
+        { "ref": "library:project-cost-progress-tracker", "type": "skill", "use": "build", "when": "When spend and progress to date are known, to project the finish cost and date" },
+        { "ref": "library:trace-why-work-keeps-missing-deadlines", "type": "workflow", "use": "brief", "when": "When the slip repeats, to map where work waits before promising a new date" },
+        { "ref": "library:executive-update-drafter", "type": "skill", "use": "build", "when": "When the new forecast is bad news, to tell the client or owner plainly" }
+      ]
+    },
+    {
+      "id": "capacity-plan",
+      "task": "Plan team capacity for the next six weeks",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/team-capacity-plan", "use": "build", "when": "When the team must decide whether it can take a project or promise a date" },
+        { "ref": "library:team-capacity-planner", "type": "skill", "use": "build", "when": "When people and projects are listed, to see who is overloaded and what can be taken on" },
+        { "ref": "library:check-capacity-before-promising-a-delivery-date", "type": "workflow", "use": "check", "when": "Before a date is promised, to see the options and their risks with a draft reply" }
+      ]
+    },
+    {
+      "id": "wrap-up-review",
+      "task": "Run a project wrap-up and lessons review",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/project-wrap-up-review", "use": "build", "when": "When a project has finished or stopped and the team wants to learn without blame" },
+        { "ref": "library:honest-project-review", "type": "workflow", "use": "build", "when": "When people hold back in reviews, to run one where they tell the truth" },
+        { "ref": "library:sprint-retro-facilitator", "type": "skill", "use": "build", "when": "When feedback is collected, to sort what went well, what did not and actions with owners" },
+        { "ref": "library:lessons-learned-note-writer", "type": "prompt", "use": "build", "when": "When the review is done, to write one page of what to repeat and what to change" },
+        { "ref": "library:prepare-an-engagement-closeout-evidence-pack", "type": "workflow", "use": "check", "when": "When closing a client job, to record what was delivered, accepted and still open" }
+      ]
+    },
+    {
+      "id": "content-inventory-page-list",
+      "task": "Build a content inventory and new page list",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/website-redesign-and-migration", "use": "build", "when": "When a redesign starts and each current page needs a keep, update, merge or cut call" },
+        { "ref": "library:page-keep-or-cut-auditor", "type": "skill", "use": "build", "when": "When there is a list of the site's pages, to mark each with a call and a reason" },
+        { "ref": "library:site-map-planner", "type": "skill", "use": "build", "when": "When the new page list needs a hierarchy, navigation and URL plan" }
+      ]
+    },
+    {
+      "id": "redesign-brief",
+      "task": "Write the redesign brief for a designer or agency",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/website-redesign-and-migration", "use": "build", "when": "When the why, the audience and the page list are agreed and a designer needs one brief" },
+        { "ref": "library:web-project-scoper", "type": "skill", "use": "build", "when": "When goals, users, features and design tokens should sit in one scoped document" },
+        { "ref": "library:aesthetic-direction-brief-writer", "type": "skill", "use": "brief", "when": "When the client cannot describe the look, to pin down tone and feel in four answers" },
+        { "ref": "library:make-three-first-screens", "type": "skill", "use": "explore", "when": "When the client must pick a direction, to show three first screens before the brief is fixed" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before the brief goes out, to read it as the designer and list what they would have to ask" }
+      ]
+    },
+    {
+      "id": "site-migration",
+      "task": "Plan a site move with a redirect map",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/website-redesign-and-migration", "use": "build", "when": "When a site moves platform or theme and search traffic must survive the move" },
+        { "ref": "library:website-content-mover", "type": "skill", "use": "build", "when": "When old and new sites are named, to plan a move that keeps rank, links and bookmarks" },
+        { "ref": "library:domain-redirect-layout-planner", "type": "prompt", "use": "build", "when": "When domains or subdomains change, to lay out DNS and redirect rules" },
+        { "ref": "library:seo-change-tracker", "type": "skill", "use": "check", "when": "Before launch, to save the site's search state and be warned if rankings or tags slip after" },
+        { "ref": "library:technical-seo-auditor", "type": "skill", "use": "check", "when": "After launch, to audit crawling, indexing and structure on the new site" }
+      ]
+    },
+    {
+      "id": "launch-go-live",
+      "task": "Plan a launch or go-live",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/goal-to-launch", "use": "build", "when": "When the build is near done and the last steps to launch need owners and dates" },
+        { "ref": "library:launch-checklist-runner", "type": "skill", "use": "build", "when": "When a release is set, to get a pre-launch checklist, a staged rollout and a rollback plan" },
+        { "ref": "library:launch-critical-path-builder", "type": "skill", "use": "build", "when": "When a physical product launches, to date every step from samples to warehouse" },
+        { "ref": "library:business-tool-launch-checklist", "type": "skill", "use": "check", "when": "When an internal tool is rolled out, to list open blockers and record the go decision" },
+        { "ref": "library:launch-readiness-seam-checker", "type": "skill", "use": "check", "when": "In the last week, to check the joins between teams and what gives way under load" }
+      ]
+    },
+    {
+      "id": "meeting-minutes",
+      "task": "Turn meeting notes into minutes and owned actions",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:meeting-minutes-writer", "type": "skill", "use": "build", "when": "When rough notes need short minutes with decisions, owners, dates and open questions" },
+        { "ref": "library:turn-meetings-into-owned-actions", "type": "workflow", "use": "build", "when": "When actions are spread over a meeting and several threads, to make one list with follow-ups" },
+        { "ref": "library:granola", "type": "tool", "use": "build", "when": "When you sit in the meeting and want fuller notes without a bot in the call" }
+      ]
+    },
+    {
+      "id": "stakeholders-comms",
+      "task": "Map stakeholders and plan project communication",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:stakeholder-map-builder", "type": "skill", "use": "build", "when": "When many people are affected, to place each on a power and interest grid" },
+        { "ref": "library:client-project-communication-plan", "type": "skill", "use": "build", "when": "When updates are ad hoc, to set channels, dates and a record of approvals" },
+        { "ref": "library:agency-change-management-consultant", "type": "agent", "use": "build", "when": "When the project changes how staff work, to plan messages and adoption" }
+      ]
+    },
+    {
+      "id": "requirements",
+      "task": "Write requirements and acceptance checks",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:requirements-question-asker", "type": "skill", "use": "brief", "when": "When the request is vague, to ask the few questions that settle it, with default answers" },
+        { "ref": "library:feature-spec-writer", "type": "skill", "use": "build", "when": "When one feature needs goals, non-goals, success measures and acceptance checks" },
+        { "ref": "library:user-story-writer", "type": "skill", "use": "build", "when": "When the developers work from stories, to write them with acceptance criteria" },
+        { "ref": "library:project-requirement-tracker", "type": "skill", "use": "check", "when": "Before sign-off, to see that every requirement has a build, a test and an approval" }
+      ]
+    },
+    {
+      "id": "slipping-project",
+      "task": "Find why a project keeps slipping",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:trace-why-work-keeps-missing-deadlines", "type": "workflow", "use": "build", "when": "When deadlines slip again and again, to map the delay and back causes with records" },
+        { "ref": "library:root-cause-finder", "type": "skill", "use": "build", "when": "When one failure keeps returning, to build a chain of whys checked against facts" },
+        { "ref": "kit:prompts/team-capacity-plan", "use": "check", "when": "When the cause may be overbooking, to compare the hours promised with the hours there are" }
+      ]
+    },
+    {
+      "id": "system-change",
+      "task": "Plan a system or supplier change",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/project-plan-and-risk-log", "use": "build", "when": "When the change needs a plan with a cut-over date, owners and a way back" },
+        { "ref": "library:plan-a-vendor-change-without-losing-work", "type": "workflow", "use": "build", "when": "When a tool or supplier is being replaced, to plan notice dates and a staged switch" },
+        { "ref": "library:business-data-move-runbook", "type": "skill", "use": "build", "when": "When data moves between tools, to map fields, checks and a rollback path" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a plan, scope or update is shared, to catch typos and a deliverable named two ways" }
+  ],
+  "helpers": [
+    { "role": "software-engineer", "when": "When an estimate or quote check needs someone to judge the technical work itself" },
+    { "role": "website-designer", "when": "When the redesign moves from brief to actual page designs and a build" },
+    { "role": "seo-specialist", "when": "When the site move puts a lot of search traffic at risk and needs a full audit" },
+    { "role": "accessibility-specialist", "when": "When the new site must meet accessibility rules for the client's region" },
+    { "role": "event-manager", "when": "When the project is an event and needs a run sheet, venue and supplier plan" },
+    { "role": "product-manager", "when": "When the question is what to build and why, not when and by whom" }
+  ],
+  "gaps": [
+    "No library item builds a general project plan with dependencies, a critical path and milestones for a non-software project",
+    "No library item builds a risk and assumption log with triggers and owners, or runs a premortem",
+    "No library item checks a developer or agency quote for vague lines, missing work and prices out of line",
+    "No library item re-forecasts a project in progress from work done against the first estimate",
+    "No library item writes a client scope statement with revisions, exclusions and a change process",
+    "No library item builds a redirect map from old to new URLs or checks it after launch",
+    "No library item pulls a content inventory from a live site with traffic and a keep or cut call per page",
+    "No library item plans an office move, or draws a timeline or Gantt view of a plan",
+    "No library item writes a team capacity plan across several client projects week by week",
+    "No library item offers clearly different formats of a status update to test with a client"
+  ]
+}

@@ -1,0 +1,288 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "supply-chain-planner",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "demand-forecast",
+      "task": "Forecast units for each product by week or month",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/demand-forecast-by-product", "use": "build", "when": "When you have sales history and need a unit forecast per product with a method for each group" },
+        { "ref": "library:demand-forecast-planner", "type": "skill", "use": "explore", "when": "When you want a second forecast with the best-fit method named, to compare with your own" },
+        { "ref": "library:quick-time-series-forecaster", "type": "skill", "use": "check", "when": "When you want a forecast with ranges tested on held-back months, with no model to train" },
+        { "ref": "library:analysis-assumptions-logger", "type": "skill", "use": "check", "when": "Before the forecast is used for buying, to log each assumption and what would change the answer" },
+        { "ref": "library:david-spiegelhalter", "type": "mind", "use": "think", "when": "When one forecast number is shown with no range and no word on what is unknown" }
+      ]
+    },
+    {
+      "id": "clean-history",
+      "task": "Clean sales history and rebuild demand hidden by stockouts",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/rebuild-demand-after-stockouts", "use": "build", "when": "Before any forecast, when some products ran out during the sales history" },
+        { "ref": "library:data-cleaner", "type": "skill", "use": "build", "when": "When the export has gaps, duplicates, wrong types and odd spikes to fix first" },
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "When the data is cleaned, to report what is still missing or odd and the rules to catch it" },
+        { "ref": "library:stock-sync-error-finder", "type": "skill", "use": "check", "when": "When stock sits in Shopify, to find negative or impossible levels that spoil the history" }
+      ]
+    },
+    {
+      "id": "new-product-demand",
+      "task": "Estimate demand for a new product from similar ones",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/demand-forecast-by-product", "use": "build", "when": "When a new product has no history and must borrow a launch curve from similar ones" },
+        { "ref": "library:opportunity-size-estimator", "type": "skill", "use": "build", "when": "When you need a low, base and high estimate with every assumption listed" },
+        { "ref": "library:one-time-stock-quantity-picker", "type": "skill", "use": "check", "when": "When the first order cannot be topped up, to pick the amount and see the risk of each choice" }
+      ]
+    },
+    {
+      "id": "forecast-accuracy",
+      "task": "Check forecast accuracy by product",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/forecast-accuracy-by-product", "use": "check", "when": "After a season or before trusting a forecast for buying, to see which products forecast badly" },
+        { "ref": "library:quick-time-series-forecaster", "type": "skill", "use": "check", "when": "When you want to test a method on months it has not seen" },
+        { "ref": "library:demand-forecast-planner", "type": "skill", "use": "build", "when": "When a product group needs a different method and a way to track how far off it runs" }
+      ]
+    },
+    {
+      "id": "reorder-points",
+      "task": "Set safety stock, reorder points and order quantities",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/reorder-points-and-safety-stock", "use": "build", "when": "When you have forecast use, measured lead times and a service level the client chose" },
+        { "ref": "library:restock-rule-designer", "type": "skill", "use": "explore", "when": "When weighing min-max against a fixed order cycle for each product group" },
+        { "ref": "library:order-quantity-calculator", "type": "skill", "use": "build", "when": "When order and holding costs are known, to find the lowest-cost size with discounts compared" },
+        { "ref": "library:stock-and-reorder-planner", "type": "skill", "use": "check", "when": "When you want a second set of reorder points and an ABC ranking to compare with yours" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "When the reorder sheet is built, to find formula errors before anyone orders from it" }
+      ]
+    },
+    {
+      "id": "weekly-reorder-run",
+      "task": "Run the weekly stock and reorder check",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/weekly-stock-and-reorder-run", "use": "build", "when": "Every week on the same day, before the main supplier's order cut-off" },
+        { "ref": "library:weekly-stock-and-cash-reorder-watcher", "type": "agent", "use": "build", "when": "When the check should run itself each week and say whether cash covers the order" },
+        { "ref": "library:reorder-stock-before-you-run-out-and-track-the-shipment", "type": "workflow", "use": "build", "when": "When the store is connected and you want days of stock left and draft orders" },
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "Before the run, to catch a stock export with blanks or duplicated rows" }
+      ]
+    },
+    {
+      "id": "order-cash-plan",
+      "task": "Plan the cash for the next stock order",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:plan-the-cash-for-your-next-stock-order", "type": "workflow", "use": "build", "when": "When you have supplier invoices and lead times and need true unit cost and cash needed" },
+        { "ref": "library:inventory-cash-planner", "type": "skill", "use": "build", "when": "When you need order timing, the cash required and a downside case" },
+        { "ref": "library:supplier-payment-terms-planner", "type": "skill", "use": "explore", "when": "When cash is tight, to see what better terms would free and what to ask for" },
+        { "ref": "library:growth-cash-limit-checker", "type": "skill", "use": "check", "when": "When the owner wants to grow, to see whether stock cash or demand is the real limit" },
+        { "ref": "kit:skills/reorder-points-and-safety-stock", "use": "brief", "when": "Before the cash plan, to take the order quantities it must pay for" }
+      ]
+    },
+    {
+      "id": "slow-stock",
+      "task": "Find the cash tied up in slow stock",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/slow-stock-cash-release", "use": "build", "when": "When cash is tight, the warehouse is full or a season has ended" },
+        { "ref": "library:stock-age-report-builder", "type": "skill", "use": "build", "when": "When you need stock sorted by how long it has sat unsold" },
+        { "ref": "library:dead-stock-finder", "type": "skill", "use": "build", "when": "When stock is in Shopify, to list items with units on the shelf and no sales in 90 days" },
+        { "ref": "library:clearance-discount-planner", "type": "skill", "use": "explore", "when": "When deciding how to clear it, to plan when and how deep to cut prices" }
+      ]
+    },
+    {
+      "id": "seasonal-buy",
+      "task": "Plan a seasonal buy or a stock build for the busy season",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/seasonal-one-time-buy", "use": "build", "when": "When a product sells in one season and is ordered once, months ahead" },
+        { "ref": "library:seasonal-buy-planner", "type": "skill", "use": "build", "when": "When you have last season's sales, to split the buy into early, held back and markdown" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the budget is fixed, to compare a cautious and a bold buy plan with money and dates" },
+        { "ref": "library:production-plan-builder", "type": "skill", "use": "build", "when": "When the stock is made in-house, to plan week by week what to build ahead of the peak" },
+        { "ref": "library:prepare-a-seasonal-cash-buffer", "type": "workflow", "use": "check", "when": "Before committing, to test a downside case and the cash buffer it needs" },
+        { "ref": "library:morgan-housel", "type": "mind", "use": "think", "when": "When the plan only works if the season matches the forecast exactly" }
+      ]
+    },
+    {
+      "id": "purchase-orders",
+      "task": "Raise purchase orders and follow each to receipt",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/purchase-orders-and-supplier-lead-times", "use": "build", "when": "When an approved buy list must become orders with price, terms and requested dates" },
+        { "ref": "library:inbound-shipment-tracker-builder", "type": "skill", "use": "build", "when": "When orders are placed, to get a shared tracker and a notice for the warehouse" },
+        { "ref": "library:import-export-paperwork", "type": "skill", "use": "brief", "when": "When goods cross a border, to list tariff codes, duty options and the papers customs asks for" },
+        { "ref": "library:shipment-problem-handler", "type": "skill", "use": "build", "when": "When a shipment is late, lost or damaged, to get next steps and a carrier claim checklist" },
+        { "ref": "library:prepare-a-goods-receipt-discrepancy-brief", "type": "workflow", "use": "check", "when": "When goods arrive, to match order, receipt and invoice line by line" }
+      ]
+    },
+    {
+      "id": "supplier-lead-times",
+      "task": "Measure real supplier lead times and reliability",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/supplier-lead-time-check", "use": "build", "when": "Before setting safety stock or when deliveries feel late, to replace quoted times with measured" },
+        { "ref": "library:supplier-risk-scorecard-builder", "type": "skill", "use": "build", "when": "When you need a risk score for each supplier and warning signs to watch" },
+        { "ref": "library:supplier-contract-manager", "type": "skill", "use": "check", "when": "When suppliers miss dates they agreed, to track broken promises and terms to push for" }
+      ]
+    },
+    {
+      "id": "supplier-split",
+      "task": "Compare quotes and split an order across suppliers",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:supplier-quote-request-writer", "type": "skill", "use": "brief", "when": "Before comparing, to ask every supplier for a quote in the same maker terms" },
+        { "ref": "library:compare-supplier-prices-on-the-same-basis", "type": "workflow", "use": "build", "when": "When quotes use different units, currency or delivery terms" },
+        { "ref": "library:supplier-quote-comparer", "type": "skill", "use": "check", "when": "When you need minimum order, lead time and deposit risk side by side" },
+        { "ref": "library:set-your-order-size-and-split-it-across-suppliers", "type": "workflow", "use": "build", "when": "When the order should be sized from sales and split to keep cost and risk down" },
+        { "ref": "kit:skills/purchase-orders-and-supplier-lead-times", "use": "build", "when": "When the split is agreed and each supplier needs its own order pack" }
+      ]
+    },
+    {
+      "id": "landed-cost",
+      "task": "Work out landed cost per unit",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:landed-cost-allocator", "type": "skill", "use": "build", "when": "When freight, duty and supplier invoices must be spread to a true cost per unit" },
+        { "ref": "library:landed-cost-calculator", "type": "skill", "use": "check", "when": "Before ordering, to see cost per sellable unit and whether the margin still holds" },
+        { "ref": "library:units-and-error-margin-checker", "type": "skill", "use": "check", "when": "When the sum mixes cartons, units, kilos and currencies, to check each conversion" }
+      ]
+    },
+    {
+      "id": "bom-costing",
+      "task": "Cost a product from its bill of materials",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/production-and-materials-plan", "use": "build", "when": "When a product must be costed from parts, scrap allowance, labour and overhead share" },
+        { "ref": "library:product-bill-of-materials-builder", "type": "skill", "use": "build", "when": "When you want a cost sheet by part with the maker and price-break questions for each" },
+        { "ref": "library:raw-cost-breakdown-finder", "type": "skill", "use": "explore", "when": "When the cost looks high, to break the price into raw parts and find the biggest gaps" },
+        { "ref": "library:cut-your-product-cost-and-turn-supplier-terms-into-cash", "type": "workflow", "use": "build", "when": "When the costed sheet should lead to asks on price and terms" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "When the cost sheet is built, to find formula errors before prices are set from it" }
+      ]
+    },
+    {
+      "id": "production-schedule",
+      "task": "Build a production schedule from open orders",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/production-and-materials-plan", "use": "build", "when": "When open orders must be loaded against each workstation's capacity" },
+        { "ref": "library:production-plan-builder", "type": "skill", "use": "build", "when": "When you have a forecast and capacity and need a week-by-week make plan" },
+        { "ref": "library:production-schedule-planner", "type": "skill", "use": "explore", "when": "When jobs compete for machines, to try a job order that meets the due dates" },
+        { "ref": "library:check-capacity-before-promising-a-delivery-date", "type": "workflow", "use": "check", "when": "Before a date is promised to a customer, to see the options and the risk of each" }
+      ]
+    },
+    {
+      "id": "capacity-bottleneck",
+      "task": "Check capacity and find the bottleneck",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:production-capacity-checker", "type": "skill", "use": "build", "when": "When demand may be more than you can make, to find the gaps and a plan to close them" },
+        { "ref": "library:factory-bottleneck-finder", "type": "skill", "use": "build", "when": "When you have step times, to find the slowest step and rank fixes by output gained" },
+        { "ref": "library:connect-production-yield-to-mix-contribution", "type": "workflow", "use": "build", "when": "When scrap is high, to get cost per good unit and whether the mix fits the bottleneck" },
+        { "ref": "library:production-contribution-evidence-reviewer", "type": "agent", "use": "check", "when": "When the mix changes, to recheck profit per good unit against bottleneck hours" },
+        { "ref": "library:taiichi-ohno", "type": "mind", "use": "think", "when": "When the plan adds capacity before anyone has watched where the work really waits" }
+      ]
+    },
+    {
+      "id": "materials-buy-list",
+      "task": "Turn the schedule into a materials buy list",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/production-and-materials-plan", "use": "build", "when": "When the schedule is set and each part must be bought in time, less what is in stock" },
+        { "ref": "library:supply-and-demand-balancer", "type": "skill", "use": "build", "when": "When parts are short, to allocate what is available by a priority rule and show what is unfilled" },
+        { "ref": "kit:skills/purchase-orders-and-supplier-lead-times", "use": "build", "when": "When the buy list is approved and must become orders" }
+      ]
+    },
+    {
+      "id": "quality-check-plan",
+      "task": "Write a quality check plan for a product",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/production-and-materials-plan", "use": "brief", "when": "Before the plan, to see each production step where a check could sit" },
+        { "ref": "library:quality-control-plan-builder", "type": "skill", "use": "build", "when": "When you have defect data, to rank the biggest causes and plan how to cut them" },
+        { "ref": "library:pre-shipment-inspection-brief-writer", "type": "skill", "use": "build", "when": "When goods are made elsewhere, to brief an inspector with a pass rule" },
+        { "ref": "library:prepare-a-supplier-corrective-action-review", "type": "workflow", "use": "check", "when": "When a supplier replies to a defect, to test the reply against your inspection evidence" }
+      ]
+    },
+    {
+      "id": "monthly-review",
+      "task": "Run the monthly demand and supply review",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/monthly-demand-and-supply-review", "use": "build", "when": "Once a month, a week before the main buying or production decisions" },
+        { "ref": "library:demand-supply-meeting", "type": "skill", "use": "build", "when": "When the review is a meeting, to get an agenda and a demand and supply gap list" },
+        { "ref": "library:what-if-supply-scenario-planner", "type": "skill", "use": "explore", "when": "When one worry dominates, to see three scenarios, their cost and a response for each" },
+        { "ref": "kit:prompts/forecast-accuracy-by-product", "use": "check", "when": "At the start of the review, to see how last month's forecast held up" }
+      ]
+    },
+    {
+      "id": "disruption-plan",
+      "task": "Plan for a late shipment, a demand spike or a supplier failure",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:supply-chain-backup-plan-builder", "type": "skill", "use": "build", "when": "When you need the top risks ranked with a backup and an owner for each" },
+        { "ref": "library:what-if-supply-scenario-planner", "type": "skill", "use": "explore", "when": "When weighing one named worry, to compare three scenarios and what each costs" },
+        { "ref": "library:compound-scenario-modeler", "type": "skill", "use": "check", "when": "When the plan is drafted, to test several things going wrong at once" },
+        { "ref": "library:nassim-taleb", "type": "mind", "use": "think", "when": "When one supplier or one route could stop the business and the record so far looks calm" }
+      ]
+    },
+    {
+      "id": "stock-count",
+      "task": "Plan stock counts and explain a count variance",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:stock-count-program-planner", "type": "skill", "use": "build", "when": "When counts are rare or rushed, to set a rolling schedule and who counts what" },
+        { "ref": "library:explain-a-warehouse-stock-count-variance", "type": "workflow", "use": "check", "when": "When the count differs from the system, to split timing, unit and counting errors" },
+        { "ref": "library:warehouse-count-discrepancy-review-assistant", "type": "agent", "use": "check", "when": "When variances repeat, to reconcile each count against its movements" },
+        { "ref": "library:inventory-value-calculator", "type": "skill", "use": "build", "when": "When the counted stock must be valued, with write-downs flagged" }
+      ]
+    },
+    {
+      "id": "channel-stock",
+      "task": "Plan stock across warehouses and sales channels",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:warehouse-stock-level-planner", "type": "skill", "use": "build", "when": "When stock sits in more than one place, to set how much each should hold" },
+        { "ref": "library:amazon-inbound-stock-planner", "type": "skill", "use": "build", "when": "When stock goes to Amazon, to plan how much to send and when, with a shipment checklist" },
+        { "ref": "kit:skills/reorder-points-and-safety-stock", "use": "check", "when": "When each location is planned, to check the totals still meet the service level" }
+      ]
+    },
+    {
+      "id": "customer-date-updates",
+      "task": "Tell customers and the team about shortages and dates",
+      "kind": "email",
+      "items": [
+        { "ref": "library:check-capacity-before-promising-a-delivery-date", "type": "workflow", "use": "brief", "when": "Before any date is given, to see what can really be delivered and when" },
+        { "ref": "library:bad-news-update-writer", "type": "skill", "use": "build", "when": "When a product will be out of stock, to write a short update with the facts and next step" },
+        { "ref": "library:delivery-update-flow-builder", "type": "skill", "use": "build", "when": "When delays are common, to set up an update flow and a delay script" },
+        { "ref": "library:tense-email-softener", "type": "prompt", "use": "explore", "when": "When chasing a late supplier, to try a version they will want to help with" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before the update goes, to read it as the customer and list what they would still ask" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before any plan or forecast is shared, to find broken formulas and totals that do not add up" },
+    { "ref": "library:analysis-assumptions-logger", "type": "skill", "use": "check", "when": "When a plan rests on a lead time, a service level or a growth rate, to log it and its risk" }
+  ],
+  "helpers": [
+    { "role": "procurement-specialist", "when": "When suppliers must be found, tendered or renegotiated, not just ordered from" },
+    { "role": "logistics-coordinator", "when": "When freight booking, customs papers and warehouse receiving need running day to day" },
+    { "role": "management-accountant", "when": "When product costs, overhead shares and stock value must tie to the accounts" },
+    { "role": "data-analyst", "when": "When sales history is large or messy and needs proper cleaning and analysis first" },
+    { "role": "qhse-manager", "when": "When a quality failure needs a corrective action record or a supplier audit" },
+    { "role": "amazon-marketplace-manager", "when": "When stock plans depend on Amazon limits, fees and inbound rules" }
+  ],
+  "gaps": [
+    "No library item rebuilds demand hidden by stockouts before a forecast is made",
+    "No library item sorts products into steady, seasonal, lumpy and new and picks a forecast method for each",
+    "No library item scores forecast accuracy and bias by product from past forecasts and actuals",
+    "No library item measures real supplier lead times and their spread from order and receipt dates",
+    "No library item turns a production schedule and bills of materials into a dated materials buy list",
+    "No library item writes a purchase order pack with Incoterms rule, place and terms",
+    "No library item plans in-process quality checks for a small maker: what to check, when and the pass rule",
+    "No library item estimates demand for a new product from similar products' launch curves",
+    "No library item reports stock turns, days of cover and service level as a monthly planning scorecard",
+    "No tool guide covers inventory planning or small-maker production software"
+  ]
+}

@@ -1,0 +1,292 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "career-coach",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "story-bank",
+      "task": "Build a bank of the person's own work stories",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/story-bank-builder", "use": "build", "when": "Before a CV or interview, when the person has done good work but cannot find examples on the spot" },
+        { "ref": "library:copilot-brag-sheet", "type": "skill", "use": "build", "when": "When the person has work notes, to turn them into impact statements backed by evidence" },
+        { "ref": "library:prepare-work-examples-for-a-job-interview", "type": "workflow", "use": "build", "when": "When a target role is known, to map real work history to what the role needs" },
+        { "ref": "library:richard-nelson-bolles", "type": "mind", "use": "think", "when": "When the person lists duties and cannot see which of their experience counts as evidence" }
+      ]
+    },
+    {
+      "id": "cv-rewrite",
+      "task": "Rewrite a CV or resume",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/tailored-cv-and-cover-letter", "use": "build", "when": "When a CV must be rewritten using only the person's own history" },
+        { "ref": "library:cv-writer", "type": "skill", "use": "explore", "when": "When you want a second, paste-ready version and a flaw report to compare with yours" },
+        { "ref": "library:ten-percent-cutter", "type": "skill", "use": "build", "when": "When a long CV must come down to two pages without losing the point" },
+        { "ref": "library:agency-engineering-ats-validator-architect", "type": "agent", "use": "check", "when": "Before sending, to see what hiring software may miss in the layout and keywords" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the CV is drafted, to read it as a busy recruiter and list what they would skip" }
+      ]
+    },
+    {
+      "id": "cv-tailor",
+      "task": "Tailor a CV to one job ad",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:job-ad-reader", "type": "skill", "use": "brief", "when": "Before tailoring, to split the ad into firm needs, wishes and what is missing" },
+        { "ref": "kit:skills/tailored-cv-and-cover-letter", "use": "build", "when": "When the CV must answer one ad without inventing anything" },
+        { "ref": "library:tailor-a-job-application-to-real-evidence", "type": "workflow", "use": "build", "when": "When you want a guided run from the ad to a tailored draft and application answers" },
+        { "ref": "library:agency-resume-tailor", "type": "agent", "use": "explore", "when": "When you want other bullet wordings and a keyword map to choose from" },
+        { "ref": "library:job-application-evidence-review-assistant", "type": "agent", "use": "check", "when": "Before sending, to see every claim the person's record cannot support" }
+      ]
+    },
+    {
+      "id": "cover-letter",
+      "task": "Write a cover letter for one job",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/tailored-cv-and-cover-letter", "use": "build", "when": "When the tailored CV is done and the letter must add the why, not repeat the CV" },
+        { "ref": "library:capability-pitch-letter-writer", "type": "skill", "use": "explore", "when": "When a standard letter feels flat, to try a short numbered letter that ends in a proof" },
+        { "ref": "library:resume-job-application-builder", "type": "skill", "use": "check", "when": "When CV and letter are drafted, to check both for claims the history does not support" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a line could be in anyone's letter, to test it and get a true, specific rewrite" }
+      ]
+    },
+    {
+      "id": "selection-criteria",
+      "task": "Answer selection criteria and application questions",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/selection-criteria-answers", "use": "build", "when": "When a form asks how the person meets each criterion within word limits" },
+        { "ref": "kit:prompts/story-bank-builder", "use": "brief", "when": "Before answering, to pick the story that best proves each criterion" },
+        { "ref": "library:ten-percent-cutter", "type": "skill", "use": "build", "when": "When an answer is over the word limit and must lose words, not evidence" },
+        { "ref": "library:job-application-evidence-review-assistant", "type": "agent", "use": "check", "when": "Before submitting, to check each answer rests on something the person really did" }
+      ]
+    },
+    {
+      "id": "interview-prep",
+      "task": "Prepare a person for one interview",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/interview-prep-from-your-stories", "use": "build", "when": "When an interview is booked and likely questions need answers from the person's own stories" },
+        { "ref": "library:structured-interview-guide", "type": "skill", "use": "brief", "when": "Before prep, to see the questions and the strong and weak answer signs an interviewer may use" },
+        { "ref": "library:research-question-outliner", "type": "prompt", "use": "brief", "when": "When the person knows little about the employer, to plan what to find out and where" },
+        { "ref": "library:prepare-work-examples-for-a-job-interview", "type": "workflow", "use": "build", "when": "When answers must be short examples tied to the role, with practice questions" },
+        { "ref": "library:annette-simmons", "type": "mind", "use": "think", "when": "When an answer is a list of claims and needs one true incident that shows the point" }
+      ]
+    },
+    {
+      "id": "mock-interview",
+      "task": "Run a mock interview and give feedback",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/interview-prep-from-your-stories", "use": "build", "when": "When the person wants a script to practise with and notes on each answer" },
+        { "ref": "library:interview-question-set-maker", "type": "prompt", "use": "brief", "when": "When you need a realistic question set with what a good answer shows" },
+        { "ref": "library:technical-interview-practice", "type": "skill", "use": "build", "when": "When the role is technical, to practise at a chosen pressure level and get scores" },
+        { "ref": "library:written-feedback-checker", "type": "skill", "use": "check", "when": "When you have written feedback on the answers, to check it is specific and usable" }
+      ]
+    },
+    {
+      "id": "interview-presentation",
+      "task": "Prepare a talk for an interview presentation task",
+      "kind": "other",
+      "items": [
+        { "ref": "library:storyboard-to-powerpoint-deck-builder", "type": "skill", "use": "build", "when": "When the brief and audience are known, to get a storyboard and then the slides" },
+        { "ref": "library:presentation-builder", "type": "skill", "use": "build", "when": "When the outline is agreed and the person needs a clean deck fast" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "explore", "when": "When there are two or three ways to open the talk, to have a fresh reader pick one" },
+        { "ref": "library:pitch-deck-checker-10-20-30", "type": "skill", "use": "check", "when": "When the deck is drafted, to check slide count, time and type size" }
+      ]
+    },
+    {
+      "id": "thank-you-follow-up",
+      "task": "Write thank-you and follow-up messages after an interview",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/thank-you-and-follow-up", "use": "build", "when": "The same day as an interview, and again if nothing is heard by the date given" },
+        { "ref": "library:honest-appreciation-note-writer", "type": "skill", "use": "explore", "when": "When the note should name one true, specific thing and ask for nothing" },
+        { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before sending, to catch a misspelt name, title or company" }
+      ]
+    },
+    {
+      "id": "linkedin-profile",
+      "task": "Rewrite a LinkedIn profile",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/linkedin-profile-and-bios", "use": "build", "when": "When a profile must say clearly what the person does and who they help" },
+        { "ref": "library:personal-brand-planner", "type": "skill", "use": "brief", "when": "Before writing, to settle what the person wants to be known for and by whom" },
+        { "ref": "library:linkedin-profile-rewriter", "type": "skill", "use": "explore", "when": "When you want another headline and About section to compare with yours" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the headline is a job title and needs several honest angles to choose from" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the profile is drafted, to read it as a recruiter or client and list what is unclear" }
+      ]
+    },
+    {
+      "id": "bios",
+      "task": "Write a professional bio in three lengths",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/linkedin-profile-and-bios", "use": "build", "when": "When the person needs a one-line, a short and a full bio that agree with each other" },
+        { "ref": "library:elevator-pitch-writer", "type": "skill", "use": "explore", "when": "When the one-liner will be spoken, to try 10, 30 and 60 second versions" },
+        { "ref": "library:one-line-position-writer", "type": "prompt", "use": "brief", "when": "When a consultant sounds like everyone else, to find the one plain line they can own" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When the bio says passionate and results-driven, to swap each for a fact" }
+      ]
+    },
+    {
+      "id": "speaker-one-sheet",
+      "task": "Write a speaker one-sheet and a host introduction",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/linkedin-profile-and-bios", "use": "build", "when": "When a speaker needs topics, a bio and an intro the host can read aloud" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "When the one-sheet needs a layout, to see three directions at real size and pick one" },
+        { "ref": "library:portfolio-case-study-writer", "type": "skill", "use": "build", "when": "When the sheet needs one short proof story from past work" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before it goes to organisers, to tie each credit, client name and number to a source" }
+      ]
+    },
+    {
+      "id": "freelance-profile",
+      "task": "Write a freelance marketplace profile and bid replies",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/linkedin-profile-and-bios", "use": "build", "when": "When the profile must say what the freelancer does, for whom and with what result" },
+        { "ref": "library:portfolio-case-study-writer", "type": "skill", "use": "build", "when": "When past projects must become short case studies that show the person's role" },
+        { "ref": "library:own-voice-outreach-writer", "type": "skill", "use": "explore", "when": "When replying to a posted job, to write a bid tied to something specific in the brief" },
+        { "ref": "library:prepare-your-first-freelance-project-quote", "type": "workflow", "use": "build", "when": "When a client asks for a price, to set scope, assumptions and contract risks" },
+        { "ref": "library:income-floor-calculator", "type": "skill", "use": "check", "when": "Before setting a rate, to check it covers the monthly income the person needs" }
+      ]
+    },
+    {
+      "id": "linkedin-visibility",
+      "task": "Plan LinkedIn posts and outreach for a job search",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:linkedin-content-strategy", "type": "skill", "use": "brief", "when": "When the person wants to be seen, to set topics and a posting rhythm they can keep" },
+        { "ref": "library:linkedin-post-writer", "type": "skill", "use": "build", "when": "When a real work story should become a post the person publishes themselves" },
+        { "ref": "library:x-and-linkedin-post-pair-writer", "type": "prompt", "use": "explore", "when": "When one idea should be tried in two voices before posting" },
+        { "ref": "library:linkedin-outreach-plan", "type": "skill", "use": "build", "when": "When the person must reach hiring managers, to plan comments and connection notes" },
+        { "ref": "library:dale-carnegie", "type": "mind", "use": "think", "when": "When a message asks for a favour and gives the reader no reason to care" }
+      ]
+    },
+    {
+      "id": "networking",
+      "task": "Write networking messages and prepare for a first meeting",
+      "kind": "email",
+      "items": [
+        { "ref": "library:own-voice-outreach-writer", "type": "skill", "use": "build", "when": "When asking for a chat, to write a short note tied to something true about that person" },
+        { "ref": "library:first-impression-plan", "type": "workflow", "use": "build", "when": "Before meeting someone who matters, to get a brief, a plan and an honest thank-you" },
+        { "ref": "library:elevator-pitch-writer", "type": "skill", "use": "explore", "when": "When asked what do you do, to have a short answer and an opening question ready" },
+        { "ref": "library:tense-email-softener", "type": "prompt", "use": "check", "when": "When a follow-up to someone who went quiet sounds needy or sharp" }
+      ]
+    },
+    {
+      "id": "pay-talk",
+      "task": "Prepare the pay and offer conversation",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/offer-and-pay-talk", "use": "build", "when": "When an offer is coming or has arrived and the person must talk about pay" },
+        { "ref": "library:pay-benchmark-and-equity-modeler", "type": "skill", "use": "brief", "when": "Before naming a number, to see market ranges for the role and how a grant may be worth" },
+        { "ref": "library:negotiation-prep-coach", "type": "skill", "use": "build", "when": "When you want an opening line, calm questions and a fallback plan" },
+        { "ref": "library:negotiation-call-prep-planner", "type": "skill", "use": "check", "when": "The day before the call, to run through the prep sheet and what could go wrong" },
+        { "ref": "library:chris-voss", "type": "mind", "use": "think", "when": "When the person plans to argue their worth and has not thought about the employer's limits" }
+      ]
+    },
+    {
+      "id": "pay-rise",
+      "task": "Build the case for a pay rise or promotion",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/offer-and-pay-talk", "use": "build", "when": "When the person will ask their current employer for more" },
+        { "ref": "library:pay-raise-case-builder", "type": "skill", "use": "build", "when": "When results are known, to get the case, a script and replies to likely answers" },
+        { "ref": "library:copilot-brag-sheet", "type": "skill", "use": "brief", "when": "Before the ask, to turn the year's work notes into evidence" },
+        { "ref": "library:prepare-a-fair-promotion-discussion", "type": "workflow", "use": "check", "when": "When there are written promotion criteria, to match evidence to each and list the gaps" },
+        { "ref": "library:performance-review-helper", "type": "skill", "use": "build", "when": "When the ask rides on a self-assessment, to write it from real examples" }
+      ]
+    },
+    {
+      "id": "offer-decision",
+      "task": "Weigh a job offer and check its terms",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:offer-letter-check", "type": "skill", "use": "check", "when": "When an offer letter arrives, to flag risky terms and non-compete limits for a lawyer" },
+        { "ref": "library:contract-and-term-sheet-reviewer", "type": "skill", "use": "check", "when": "When the full contract arrives, to get the risky terms in plain English" },
+        { "ref": "library:pros-and-cons-decision-planner", "type": "skill", "use": "build", "when": "When the person cannot choose between two offers or between staying and going" },
+        { "ref": "library:decision-bias-pileup-checker", "type": "skill", "use": "think", "when": "When a deadline or flattery is pushing the person to say yes today" },
+        { "ref": "kit:skills/offer-and-pay-talk", "use": "build", "when": "When the terms are weak and the person will ask for changes before signing" }
+      ]
+    },
+    {
+      "id": "resignation",
+      "task": "Resign well: the letter, the talk and the handover",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/resignation-letter", "use": "build", "when": "When a new job is accepted in writing and the person must resign" },
+        { "ref": "library:resignation-letter-writer", "type": "skill", "use": "explore", "when": "When you want a second version in another tone to choose from" },
+        { "ref": "library:handover-note-writer", "type": "prompt", "use": "build", "when": "When the person wants to leave a note the next person can run from on day one" },
+        { "ref": "library:job-exit-plan-writer", "type": "skill", "use": "build", "when": "When the person is leaving to work for their own clients, not for another employer" }
+      ]
+    },
+    {
+      "id": "career-change",
+      "task": "Shape a career change story and plan the move",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/career-change-story", "use": "build", "when": "When the person keeps being asked why the change and needs a true, short answer" },
+        { "ref": "library:topic-learning-roadmap", "type": "skill", "use": "build", "when": "When the new field needs skills the person lacks, to plan what to learn in what order" },
+        { "ref": "library:learn-borrow-or-pass-planner", "type": "skill", "use": "explore", "when": "When weighing whether to retrain, lean on others, start small or drop the idea" },
+        { "ref": "library:leave-job-own-income", "type": "workflow", "use": "build", "when": "When the change is from a salary to the person's own clients" },
+        { "ref": "library:jenny-blake", "type": "mind", "use": "think", "when": "When the person plans one big leap and could test the new work in a small way first" }
+      ]
+    },
+    {
+      "id": "job-search-plan",
+      "task": "Plan the job search and check adverts for scams",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/land-the-next-job", "use": "build", "when": "When a person starts a search or has one job they want to win" },
+        { "ref": "kit:prompts/job-search-plan-and-scam-check", "use": "build", "when": "At the start of a search, or when weeks of applications have brought no interviews" },
+        { "ref": "library:job-ad-reader", "type": "skill", "use": "check", "when": "When an advert looks odd, to see what it really asks for and what is missing" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When time and savings are limited, to compare two ways of running the search" }
+      ]
+    },
+    {
+      "id": "weekly-review",
+      "task": "Run the weekly job search review",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/weekly-job-search-review", "use": "build", "when": "Once a week during an active search, in about 30 minutes with the person" },
+        { "ref": "library:weekly-review-guide", "type": "skill", "use": "build", "when": "When open loops and stalled applications need closing and next week needs a plan" },
+        { "ref": "library:numbers-drop-explainer", "type": "prompt", "use": "check", "when": "When replies or interviews dried up, to rank the likely causes before changing everything" }
+      ]
+    },
+    {
+      "id": "first-weeks",
+      "task": "Plan the first weeks in a new job",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:first-impression-plan", "type": "workflow", "use": "build", "when": "Before meeting a new manager or team, to plan the first conversations" },
+        { "ref": "library:30-60-90-day-onboarding-planner", "type": "skill", "use": "build", "when": "When the person wants draft 30, 60 and 90 day goals to agree with their manager" },
+        { "ref": "library:new-leader-first-message-writer", "type": "skill", "use": "build", "when": "When the new job is a leadership role and the team needs a first note" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before anything goes to an employer, to tie every date, title and number to the person's own record" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any CV, letter or message is sent, to catch typos and names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "recruiter", "when": "When the person needs to know how the hiring side screens and scores for this kind of role" },
+    { "role": "speechwriter", "when": "When an interview talk or a speaker introduction must work read aloud" },
+    { "role": "presentation-designer", "when": "When the interview task needs slides or the CV needs a designed layout" },
+    { "role": "ghostwriter", "when": "When the person wants a run of LinkedIn posts or articles in their own voice" },
+    { "role": "leadership-coach", "when": "When the move is into a first leadership role and the question is how to lead, not how to get hired" },
+    { "role": "hr-specialist", "when": "When the question is about notice, contracts or rights at work in a given country" }
+  ],
+  "gaps": [
+    "No library item builds a story bank of a person's own work examples in a set format",
+    "No library item answers selection criteria or public sector application questions within word limits",
+    "No library item runs a full mock interview for non-technical roles with scored feedback",
+    "No library item writes a professional bio in three lengths or a speaker one-sheet and host introduction",
+    "No library item writes a freelance marketplace profile or a service listing",
+    "No library item checks a job advert or recruiter message for scam signs",
+    "No library item writes a thank-you or follow-up message after an interview",
+    "No library item explains an employment gap, a redundancy or a short job on a CV",
+    "No library item compares two job offers on pay, benefits, travel and prospects side by side",
+    "No library item prepares a short talk for an interview presentation task, or makes clearly different CV layouts to compare",
+    "No library item helps a person choose a career direction from their strengths and interests"
+  ]
+}

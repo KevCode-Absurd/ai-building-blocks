@@ -1,0 +1,271 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "practice-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "patient-flow",
+      "task": "Map patient flow and write front desk procedures",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/patient-flow-and-front-desk-procedures", "use": "build", "when": "When the path from booking to follow-up has pinch points and the desk needs written steps" },
+        { "ref": "library:process-bottleneck-finder", "type": "skill", "use": "brief", "when": "Before writing, to draw the flow in lanes with times and find the stage holding things up" },
+        { "ref": "library:document-a-clinic-appointment-intake-process", "type": "workflow", "use": "build", "when": "When the approved intake process exists and needs plain steps for front desk staff" },
+        { "ref": "library:write-a-procedure-test-it-and-build-a-training-deck", "type": "workflow", "use": "check", "when": "When a procedure is drafted, to test it for gaps and make a short deck to teach it" },
+        { "ref": "library:florence-nightingale", "type": "mind", "use": "think", "when": "When hand-offs between desk and clinician fail, to replace vague notes with clear observations" }
+      ]
+    },
+    {
+      "id": "busiest-minutes",
+      "task": "Find the desk's busiest minutes and what to change",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/busiest-ten-minutes-at-the-desk", "use": "build", "when": "When the waiting room backs up or calls ring out at the same times each day" },
+        { "ref": "library:measure-a-clinic-administrative-queue", "type": "workflow", "use": "build", "when": "When there are timings or logs, to map the delay and compare staff capacity options" },
+        { "ref": "library:queue-and-process-simulator", "type": "skill", "use": "explore", "when": "When weighing a second person at the desk against staggered slots, to test each before trying it" },
+        { "ref": "library:rory-sutherland", "type": "mind", "use": "think", "when": "When the wait cannot be cut, to change how it feels and what patients are told" }
+      ]
+    },
+    {
+      "id": "appointment-book",
+      "task": "Build the appointment book template",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/appointment-book-and-rota", "use": "build", "when": "When each clinician and room needs slot types, lengths, buffers and emergency slots set out" },
+        { "ref": "library:booking-page-designer", "type": "skill", "use": "build", "when": "When patients book online, to set open times, the questions asked and the prep messages" },
+        { "ref": "library:service-utilization-margin-builder", "type": "skill", "use": "check", "when": "After a month on the new template, to see how much of each clinician's paid time was used" }
+      ]
+    },
+    {
+      "id": "staff-rota",
+      "task": "Build the staff rota with cover rules",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/staff-rota-with-cover-rules", "use": "build", "when": "When desk and support staff need a weekly rota that covers every open session" },
+        { "ref": "kit:skills/appointment-book-and-rota", "use": "brief", "when": "When the rota must follow the appointment book session by session" },
+        { "ref": "library:shift-schedule-builder", "type": "skill", "use": "build", "when": "When cover must match the busy hours within each person's limits, with a cost check" },
+        { "ref": "library:shift-schedule-planner", "type": "skill", "use": "explore", "when": "When the team wants a fairer pattern, to try a rotation for late and weekend sessions" },
+        { "ref": "library:plan-coverage-for-a-critical-role", "type": "workflow", "use": "build", "when": "When only one person can do a task, to map who covers it and what each backup must learn" },
+        { "ref": "library:weekly-team-coverage-review-assistant", "type": "agent", "use": "check", "when": "Each week, to spot sessions and tasks left without cover during leave" }
+      ]
+    },
+    {
+      "id": "recall-process",
+      "task": "Design the recall and reactivation process",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/recall-process", "use": "build", "when": "When patients fall off the books because nobody owns who is due, who calls and what happens next" },
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When the recall steps need a flowchart, who does what and the edge cases" },
+        { "ref": "library:excel-monthly-rollup-builder", "type": "skill", "use": "check", "when": "When recalls are logged as dated rows, to count those due, contacted and booked each month" }
+      ]
+    },
+    {
+      "id": "recall-messages",
+      "task": "Write recall and reminder messages",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/recall-process", "use": "build", "when": "When the process is agreed and each step needs its message, by letter, text or email" },
+        { "ref": "library:text-message-campaign-writer", "type": "skill", "use": "build", "when": "When reminders go by text, to write the sequence with consent and opt-out wording" },
+        { "ref": "library:support-reply-tone-editor", "type": "skill", "use": "explore", "when": "When a reminder reads cold or nagging, to try another tone with the facts unchanged" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "Before an email recall is scheduled, to tighten it and fix the subject line" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before messages go live, to check each interval, fee and time against what the clinicians set" },
+        { "ref": "library:matthew-dixon", "type": "mind", "use": "think", "when": "When patients read the reminder and still do not book, to cut the effort the next step takes" }
+      ]
+    },
+    {
+      "id": "no-shows",
+      "task": "Cut no-shows and late cancellations",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:explain-appointment-no-show-patterns", "type": "workflow", "use": "build", "when": "When attendance records are to hand, to find which days, slots and patient groups miss most" },
+        { "ref": "library:explain-service-booking-terms-to-customers", "type": "workflow", "use": "build", "when": "When the cancellation and late arrival terms exist but patients do not understand them" },
+        { "ref": "kit:skills/practice-kpi-pack", "use": "check", "when": "After a change, to see whether no-show and late cancellation rates moved" }
+      ]
+    },
+    {
+      "id": "kpi-pack",
+      "task": "Build the monthly practice KPI pack",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/practice-kpi-pack", "use": "build", "when": "When the practice system exports are in and the owner wants one page of numbers" },
+        { "ref": "library:input-metric-picker", "type": "skill", "use": "brief", "when": "Before building, to pick the few measures the desk team can move" },
+        { "ref": "library:kpi-dashboard-designer", "type": "skill", "use": "brief", "when": "When the owners and the desk need different views of the same numbers" },
+        { "ref": "library:excel-monthly-rollup-builder", "type": "skill", "use": "build", "when": "When the exports are dated rows and you need monthly counts and rates you can trace" },
+        { "ref": "library:recurring-kpi-report-maker", "type": "skill", "use": "build", "when": "When the pack is needed every month and should be rerun, not rebuilt" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before the pack goes to the owners, to catch broken formulas and wrong totals" }
+      ]
+    },
+    {
+      "id": "monthly-review",
+      "task": "Run the monthly practice review",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/monthly-practice-review", "use": "build", "when": "In the first week of each month, to review the numbers and agree a short list of fixes" },
+        { "ref": "library:weekly-meeting-actions-keeper", "type": "agent", "use": "check", "when": "After each review, to check last month's open actions and set the next agenda" },
+        { "ref": "library:root-cause-finder", "type": "skill", "use": "build", "when": "When the same number slips for a third month, to find the cause and a way to prevent it" }
+      ]
+    },
+    {
+      "id": "fee-information",
+      "task": "Set out fee information and estimates",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/fee-information-and-estimates", "use": "build", "when": "When the practice needs a price list page, an estimate template and a rule for when estimates are due" },
+        { "ref": "library:price-rise-letter-writer", "type": "prompt", "use": "build", "when": "When fees go up, to tell patients in a letter that keeps most of them" },
+        { "ref": "library:check-a-clinic-service-information-page", "type": "workflow", "use": "check", "when": "Before publishing, to check the page against approved service facts and flag unsupported lines" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the fee page is drafted, to read it as a patient and list what they would still have to ask" }
+      ]
+    },
+    {
+      "id": "records-requests",
+      "task": "Set up the patient records request procedure",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/patient-records-request-procedure", "use": "build", "when": "When requests for copies of records need a desk procedure and a log from the day they arrive" },
+        { "ref": "library:data-request-reply-drafter", "type": "skill", "use": "build", "when": "When a request has arrived, to list the steps to find the data and draft the reply" },
+        { "ref": "library:health-data-privacy-checker", "type": "skill", "use": "check", "when": "When the practice is in the US, to check the procedure for HIPAA gaps" }
+      ]
+    },
+    {
+      "id": "system-access",
+      "task": "Plan who can see and do what in the practice system",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/system-access-plan", "use": "build", "when": "When each person, and any AI agent, should have the narrowest role that does the job" },
+        { "ref": "library:sign-in-policy-drafter", "type": "prompt", "use": "build", "when": "When staff share logins or passwords, to rank the gaps and write a one-page policy" },
+        { "ref": "library:ai-vendor-terms-checker", "type": "skill", "use": "check", "when": "Before an AI tool touches patient data, to check its terms on training and liability" },
+        { "ref": "library:team-ai-use-policy-drafter", "type": "skill", "use": "build", "when": "When staff already use AI tools and there is no rule on what may go into them" },
+        { "ref": "library:staff-phishing-rules-briefer", "type": "skill", "use": "build", "when": "When the desk handles email all day and needs one page of rules and a short drill" }
+      ]
+    },
+    {
+      "id": "data-incident",
+      "task": "Respond to a patient data incident",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/patient-data-incident-response", "use": "build", "when": "When anyone suspects patient data went where it should not: wrong recipient, lost device, odd login" },
+        { "ref": "library:security-incident-triager", "type": "skill", "use": "brief", "when": "In the first hour, to set severity, who to tell and what to preserve" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before a letter goes to an affected patient, to check every promise in it can be kept" },
+        { "ref": "library:turn-an-incident-into-a-safer-procedure", "type": "workflow", "use": "build", "when": "After the incident, to write a no-blame report and a safer desk procedure" }
+      ]
+    },
+    {
+      "id": "first-30-days",
+      "task": "Take over a practice in the first 30 days",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/first-30-days-in-a-practice", "use": "brief", "when": "When a new manager starts or an owner takes the desk back after a manager leaves" },
+        { "ref": "library:sop-and-runbook-checker", "type": "skill", "use": "check", "when": "When the practice has old procedures, to find stale pages, missing owners and gaps" },
+        { "ref": "library:documentation-system-planner", "type": "skill", "use": "build", "when": "When nothing is written down, to decide what to write first and where it lives" },
+        { "ref": "library:measure-a-clinic-administrative-queue", "type": "workflow", "use": "build", "when": "When admin work is behind, to find the step that slows the queue" }
+      ]
+    },
+    {
+      "id": "complaints-and-reviews",
+      "task": "Reply to patient complaints and public reviews",
+      "kind": "email",
+      "items": [
+        { "ref": "library:customer-message-tone-and-urgency-review", "type": "skill", "use": "brief", "when": "When a complaint arrives, to read its tone, urgency and warning signs before replying" },
+        { "ref": "library:agency-healthcare-customer-service", "type": "agent", "use": "build", "when": "When the reply is about bills, appointments or insurance and needs privacy checks" },
+        { "ref": "library:angry-customer-reply-writer", "type": "prompt", "use": "explore", "when": "When the first draft sounds defensive, to get a version that names the feeling" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before sending, to check each promise and flag tone" },
+        { "ref": "library:public-review-reply-desk", "type": "agent", "use": "build", "when": "When public reviews come in, to draft replies and hold risky ones for the owner" },
+        { "ref": "library:tony-hsieh", "type": "mind", "use": "think", "when": "When the reply follows policy but leaves the patient worse off" }
+      ]
+    },
+    {
+      "id": "referral-admin",
+      "task": "Keep referral paperwork moving",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:prepare-a-referral-administration-handover", "type": "workflow", "use": "build", "when": "When referrals pass to another administrator, to list what was sent, received and booked" },
+        { "ref": "library:referral-administration-evidence-review-assistant", "type": "agent", "use": "check", "when": "On a schedule, to find referrals with no confirmation and draft the follow-ups" }
+      ]
+    },
+    {
+      "id": "payments-reconciliation",
+      "task": "Reconcile insurer payments and chase balances",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:clinic-claims-collections-bridge", "type": "skill", "use": "build", "when": "When claims owed and insurer payments must be matched to the bank deposit, using totals only" },
+        { "ref": "library:reconcile-clinic-remittances-to-settlement-cash", "type": "workflow", "use": "check", "when": "When remittances, offsets and bank receipts do not agree, to reconcile them line by line" },
+        { "ref": "library:unpaid-invoice-chaser", "type": "skill", "use": "build", "when": "When patient balances are overdue, to write each reminder gentle or firm" }
+      ]
+    },
+    {
+      "id": "patient-information",
+      "task": "Write new patient information and an intake form",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:faq-page-from-questions-writer", "type": "prompt", "use": "build", "when": "When the desk answers the same questions daily, to turn them into one clear page" },
+        { "ref": "library:multi-step-form-designer", "type": "skill", "use": "build", "when": "When the new patient form is long, to stage it so people finish it" },
+        { "ref": "library:plain-words-interface-rewriter", "type": "skill", "use": "check", "when": "When forms and letters use clinic words, to rewrite them in the words patients say" },
+        { "ref": "library:check-a-clinic-service-information-page", "type": "workflow", "use": "check", "when": "Before publishing, to check each line against facts the clinicians approved" }
+      ]
+    },
+    {
+      "id": "train-desk-staff",
+      "task": "Train front desk staff on the procedures",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/patient-flow-and-front-desk-procedures", "use": "brief", "when": "When the written procedures are the base for what new staff must learn" },
+        { "ref": "library:training-handout-writer", "type": "prompt", "use": "build", "when": "After a training session, to make a one-page handout staff can use at the desk" },
+        { "ref": "library:new-hire-plan-builder", "type": "skill", "use": "build", "when": "When a receptionist starts, to plan pre-start checks, the first week and 90-day goals" },
+        { "ref": "library:process-doc-freshness-keeper", "type": "agent", "use": "check", "when": "Each month, to flag procedures that no longer match how the desk works" }
+      ]
+    },
+    {
+      "id": "supplies-stock",
+      "task": "Set stock levels for clinic supplies",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:hospital-supply-stock-planner", "type": "skill", "use": "build", "when": "When supplies run out or expire, to set par levels, expiry rules and an emergency stock" },
+        { "ref": "kit:workflows/monthly-practice-review", "use": "check", "when": "Each month, to review stock-outs and waste alongside the other numbers" }
+      ]
+    },
+    {
+      "id": "switch-practice-system",
+      "task": "Choose or switch the practice system",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:software-vendor-chooser", "type": "skill", "use": "build", "when": "When practice systems are being compared, to score each against the practice's needs" },
+        { "ref": "library:plan-a-vendor-change-without-losing-work", "type": "workflow", "use": "build", "when": "When the switch is agreed, to plan notice dates and a staged move that drops no bookings" },
+        { "ref": "library:business-data-move-runbook", "type": "skill", "use": "build", "when": "When patient and booking data must move, to map fields, checks and a way back" }
+      ]
+    },
+    {
+      "id": "membership-plan",
+      "task": "Price a practice membership plan",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:membership-plan-pricer", "type": "skill", "use": "build", "when": "When the owners want a monthly plan, to set tier prices and flat fee or pay per use" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the plan could be one tier or several, to compare two shapes with the money shown" },
+        { "ref": "kit:prompts/fee-information-and-estimates", "use": "check", "when": "When the plan is priced, to make sure the fee page and estimates say the same thing" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a procedure, letter or pack is shared, to catch typos and a service named two ways" }
+  ],
+  "helpers": [
+    { "role": "front-desk-coordinator", "when": "When the job is phone scripts, greetings and day-to-day desk replies" },
+    { "role": "hr-specialist", "when": "When rotas raise contract, leave or working-time questions, or a hire is needed" },
+    { "role": "compliance-specialist", "when": "When patient data rules, regulator reporting or inspection readiness need a regional check" },
+    { "role": "it-administrator", "when": "When access roles, backups or device security must be set up, not only planned" },
+    { "role": "bookkeeper", "when": "When takings, insurer payments and the accounts need matching every month" },
+    { "role": "reputation-manager", "when": "When reviews are a serious problem or the practice wants a steady way to earn them" }
+  ],
+  "gaps": [
+    "No library item builds an appointment book template by clinician and room with slot types, buffers and emergency slots",
+    "No library item designs a recall or reactivation process, or writes recall messages for patients or pet owners",
+    "No library item writes front desk phone scripts, greetings and call handling steps for a practice",
+    "No library item builds a staff rota that follows the appointment book with break and cover rules by region",
+    "No library item writes a fee estimate template or a rule for when a written estimate is due",
+    "No library item sets up a records request log with deadlines by region; the reply drafter covers one request",
+    "No library item plans role-based access inside a practice system, or reviews who has which role",
+    "No library item gives data incident steps and notification clocks for patient data by region",
+    "No library item defines practice measures such as chair-time use, recall rate and wait-list fills",
+    "No library item covers wait-list management or end-of-day desk cash-up",
+    "No library item offers clearly different versions of a reminder or recall message to compare"
+  ]
+}

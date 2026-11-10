@@ -1,0 +1,265 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "real-estate-transaction-coordinator",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "key-dates-table",
+      "task": "Pull every date and duty from a contract into one table",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/contract-key-dates-table", "use": "build", "when": "When you have a signed contract, memorandum of sale or addendum and need all dates in one table" },
+        { "ref": "library:extract-a-scanned-document-and-verify-key-facts", "type": "workflow", "use": "brief", "when": "When the contract is a scan, to pull the facts and check each against its page" },
+        { "ref": "library:contract-change-tracer", "type": "skill", "use": "build", "when": "When addenda have changed the dates, to get each clause's latest wording" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before the table is shared, to tie every date to its clause or mark it as not found" }
+      ]
+    },
+    {
+      "id": "deal-tracker",
+      "task": "Build a deal deadline tracker back from the closing date",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/deal-deadline-tracker", "use": "build", "when": "When the key dates are known and each needs an owner, a warning date and a status" },
+        { "ref": "library:outside-view-timeline-estimator", "type": "prompt", "use": "check", "when": "When the target date looks hopeful, to correct it by how deals like this really went" },
+        { "ref": "library:failure-first-plan-check", "type": "skill", "use": "check", "when": "When the tracker is drafted, to list the ways this deal could slip and what to change" },
+        { "ref": "library:empty-workbook-builder", "type": "skill", "use": "build", "when": "When the agent wants the tracker as a clean spreadsheet with no invented rows" }
+      ]
+    },
+    {
+      "id": "stage-document-checklists",
+      "task": "Write the document checklist for each stage of a sale",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/stage-document-checklists", "use": "build", "when": "When a deal starts and you need what is due at each stage, from whom and by when" },
+        { "ref": "library:agency-real-estate-buyer-seller", "type": "agent", "use": "brief", "when": "When the client is the buyer or seller, to see their documents and choices from offer to closing" },
+        { "ref": "library:agency-loan-officer-assistant", "type": "agent", "use": "check", "when": "When a loan is involved, to list missing loan documents, expiry dates and deadlines" },
+        { "ref": "library:decision-checklist-runner", "type": "skill", "use": "check", "when": "At each stage gate, to mark every checklist line pass, fail or unknown with the proof" }
+      ]
+    },
+    {
+      "id": "one-deal-start-to-close",
+      "task": "Run one deal from accepted offer to closed file",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/accepted-offer-to-closed-file", "use": "build", "when": "When an offer is accepted or a sale is agreed and every step must run in order" },
+        { "ref": "kit:skills/deal-deadline-tracker", "use": "build", "when": "When the deal's dates must be tracked from day one" },
+        { "ref": "kit:skills/stage-document-checklists", "use": "build", "when": "When each stage needs its own list of papers to collect and file" },
+        { "ref": "library:executive-action-register", "type": "skill", "use": "build", "when": "When tasks are buried in email threads, to get one action list with owners and dates" }
+      ]
+    },
+    {
+      "id": "weekly-party-updates",
+      "task": "Write weekly updates for every party on a deal",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/weekly-party-updates", "use": "build", "when": "Once a week per deal, or when a stage changes, so each party hears before they ask" },
+        { "ref": "library:stakeholder-update-writer", "type": "skill", "use": "build", "when": "When buyer, seller, lender and agent each need the same news at a different depth" },
+        { "ref": "library:dull-update-email-rewriter", "type": "prompt", "use": "explore", "when": "When the update reads flat, to try a version that puts the reader's gain first" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before sending, to read the update as an anxious first-time buyer and list what they would ask" },
+        { "ref": "library:barbara-minto", "type": "mind", "use": "think", "when": "When an update buries the one thing the reader must do under a list of events" }
+      ]
+    },
+    {
+      "id": "stage-update-templates",
+      "task": "Build a reusable set of stage-by-stage update templates",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/party-updates-with-wire-safety", "use": "build", "when": "When an agent wants templates for each stage in three parts: done, next, needed from you" },
+        { "ref": "library:client-project-communication-plan", "type": "skill", "use": "brief", "when": "Before the templates, to agree channels, update days and where decisions are recorded" },
+        { "ref": "library:three-series-arcs", "type": "skill", "use": "explore", "when": "When planning the whole message series, to compare three ways to pace it and pick one" },
+        { "ref": "library:customer-path-mapper", "type": "skill", "use": "brief", "when": "When you need each stage mapped with what the buyer feels and where they get stuck" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When templates are drafted, to cut trade words a first-time buyer will not know" }
+      ]
+    },
+    {
+      "id": "bad-news-update",
+      "task": "Write a delay or bad news update",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/delay-or-bad-news-update", "use": "build", "when": "When a loan is late, an appraisal is low, a chain is delayed or a deadline is at risk" },
+        { "ref": "library:bad-news-update-writer", "type": "skill", "use": "explore", "when": "When you want a second, shorter version that leads with the loss and the next step" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before sending, to test every promise and date in the message against what you control" },
+        { "ref": "library:chris-voss", "type": "mind", "use": "think", "when": "Before the phone call that follows, to plan calm questions and name the other side's worry" }
+      ]
+    },
+    {
+      "id": "wire-safety",
+      "task": "Check a message about wiring, deposits or bank details",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/suspicious-money-message-check", "use": "check", "when": "When anyone on a deal gets an email, text or call about wiring money or new bank details" },
+        { "ref": "kit:skills/party-updates-with-wire-safety", "use": "build", "when": "When every update must carry the standing wire safety line and the call-back rule" },
+        { "ref": "library:staff-phishing-rules-briefer", "type": "skill", "use": "build", "when": "When the brokerage team needs a one-page rule sheet and a ten-minute drill" },
+        { "ref": "library:inbox-delivery-fixer", "type": "skill", "use": "build", "when": "When the agent's own email domain is easy to fake and needs sender checks set up" }
+      ]
+    },
+    {
+      "id": "closing-day-plan",
+      "task": "Plan closing or completion day hour by hour",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/closing-day-plan", "use": "build", "when": "When the signing or completion time is set and the day must be planned back from it" },
+        { "ref": "library:failure-first-plan-check", "type": "skill", "use": "check", "when": "When the day is planned, to list what could go wrong and add a fallback for each" },
+        { "ref": "library:decision-checklist-runner", "type": "skill", "use": "check", "when": "The day before, to run the checklist line by line with proof for each item" }
+      ]
+    },
+    {
+      "id": "monday-pipeline-review",
+      "task": "Review every live deal on Monday and flag the ones at risk",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/monday-pipeline-review", "use": "build", "when": "When an agent has several live deals and wants what is due, at risk and owed an update" },
+        { "ref": "library:crm-hygiene-auditor", "type": "skill", "use": "check", "when": "Before the review, to find deals with missing fields, stale dates or the wrong stage" },
+        { "ref": "library:weekly-project-delay-evidence-assistant", "type": "agent", "use": "check", "when": "Each week, to see where deals wait longest and whether the trend is getting worse" },
+        { "ref": "library:weekly-status-update-writer", "type": "prompt", "use": "build", "when": "After the review, to give the broker one page on done, stuck and needed" }
+      ]
+    },
+    {
+      "id": "uk-chase-list",
+      "task": "Build a UK sale progression chase list",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/uk-sale-progression-chase-list", "use": "build", "when": "When an agent in England or Wales has many sales agreed and needs who to chase for what" },
+        { "ref": "library:executive-due-task-drafts", "type": "skill", "use": "build", "when": "When each chase needs a follow-up draft linked to its task and thread" },
+        { "ref": "library:tense-email-softener", "type": "prompt", "use": "check", "when": "When it is the third chase to a slow solicitor and the draft has turned sharp" }
+      ]
+    },
+    {
+      "id": "chase-missing-documents",
+      "task": "Chase missing documents and overdue tasks",
+      "kind": "email",
+      "items": [
+        { "ref": "library:executive-due-task-drafts", "type": "skill", "use": "build", "when": "When tasks are due, to draft a follow-up for each with the missing facts marked" },
+        { "ref": "library:compliance-evidence-request-assistant", "type": "agent", "use": "build", "when": "When several papers are missing or out of date, to draft one request per owner" },
+        { "ref": "kit:skills/stage-document-checklists", "use": "brief", "when": "Before chasing, to see exactly which documents this stage still needs" },
+        { "ref": "library:inbox-triager", "type": "skill", "use": "brief", "when": "When replies are buried in a full inbox, to sort them and draft answers without sending" }
+      ]
+    },
+    {
+      "id": "contract-plain-summary",
+      "task": "Summarise a contract or addendum in plain words",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:plain-words-contract-summary", "type": "prompt", "use": "build", "when": "When a client wants a two-minute read of what they owe, what they get and the risky parts" },
+        { "ref": "library:prepare-a-contract-amendment-for-review", "type": "workflow", "use": "build", "when": "When an addendum arrives, to trace each change and write a plain summary for the broker" },
+        { "ref": "library:agency-legal-document-review", "type": "agent", "use": "check", "when": "When a term looks unusual, to list the questions to take to the broker or lawyer" },
+        { "ref": "kit:prompts/contract-key-dates-table", "use": "build", "when": "When the summary must end with the dates and duties in one table" }
+      ]
+    },
+    {
+      "id": "buyer-seller-guide",
+      "task": "Write a what-happens-next guide for buyers and sellers",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:faq-page-from-questions-writer", "type": "prompt", "use": "build", "when": "When clients keep asking the same questions, to turn them into one clear page" },
+        { "ref": "library:technical-topic-explainer", "type": "skill", "use": "explore", "when": "When a term like escrow or exchange needs an everyday comparison and its limits" },
+        { "ref": "library:turn-rough-notes-into-a-checked-word-handout", "type": "workflow", "use": "build", "when": "When the guide should be a handout checked page by page" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the guide is drafted, to read it as a first-time buyer and list what is still unclear" },
+        { "ref": "library:brian-chesky", "type": "mind", "use": "think", "when": "When the guide lists steps but never walks through what the buyer sees and feels each week" }
+      ]
+    },
+    {
+      "id": "anxious-client-replies",
+      "task": "Reply to an anxious or upset client",
+      "kind": "email",
+      "items": [
+        { "ref": "library:customer-message-tone-and-urgency-review", "type": "skill", "use": "brief", "when": "Before replying, to read the message for urgency, worry and warning signs" },
+        { "ref": "library:angry-customer-reply-writer", "type": "prompt", "use": "build", "when": "When the client is angry, to answer the feeling, fix what you can and promise nothing false" },
+        { "ref": "library:support-reply-tone-editor", "type": "skill", "use": "explore", "when": "When the facts are right but the tone is not, to try the same reply warmer or firmer" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before sending, to check the reply gives no legal view and no promise you cannot keep" },
+        { "ref": "library:dale-carnegie", "type": "mind", "use": "think", "when": "When a reply defends the process and forgets how the delay looks from the client's side" }
+      ]
+    },
+    {
+      "id": "document-intake",
+      "task": "Read scanned documents and check a file is complete",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:scanned-pdf-text-reader", "type": "skill", "use": "build", "when": "When papers arrive as scans or photos and the text must be read with page positions" },
+        { "ref": "library:pdf-toolkit", "type": "skill", "use": "build", "when": "When PDFs must be merged, split or checked with the original kept safe" },
+        { "ref": "library:extract-a-scanned-document-and-verify-key-facts", "type": "workflow", "use": "check", "when": "When names, prices and dates in a scan must match the contract" },
+        { "ref": "library:prepare-evidence-for-a-compliance-review", "type": "workflow", "use": "check", "when": "When the broker audits files, to get an index, a gap list and owners for each gap" },
+        { "ref": "kit:skills/stage-document-checklists", "use": "check", "when": "When the file is closing, to tick every stage's papers before it is archived" }
+      ]
+    },
+    {
+      "id": "tracker-workspace",
+      "task": "Design a tracker or workspace for many deals at once",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/deal-deadline-tracker", "use": "brief", "when": "Before building, to fix the columns every deal needs: date, duty, owner, status" },
+        { "ref": "library:excel-input-form-builder", "type": "skill", "use": "build", "when": "When deals are entered by hand, to get dropdowns and checks that stop bad entries" },
+        { "ref": "library:multi-step-form-designer", "type": "skill", "use": "build", "when": "When agents hand over new deals, to plan an intake form that collects what you need once" },
+        { "ref": "library:notion-ai", "type": "tool", "use": "build", "when": "When the brokerage keeps deals in Notion and wants pages and records updated there" },
+        { "ref": "library:make", "type": "tool", "use": "build", "when": "When deadline reminders should fire on their own from the tracker to email or calendar" }
+      ]
+    },
+    {
+      "id": "calls-to-actions",
+      "task": "Turn calls and email threads into owned actions",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:turn-meetings-into-owned-actions", "type": "workflow", "use": "build", "when": "After a call with several parties, to get actions with owners, dates and follow-up drafts" },
+        { "ref": "library:meeting-minutes-writer", "type": "skill", "use": "build", "when": "When rough call notes need short minutes with decisions and open questions" },
+        { "ref": "library:otter", "type": "tool", "use": "brief", "when": "When calls should be transcribed live so nothing agreed is lost" }
+      ]
+    },
+    {
+      "id": "process-and-handover",
+      "task": "Write the coordinator's procedure and cover handover",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When the way deals are run lives in one head and needs a written procedure" },
+        { "ref": "library:make-a-recurring-process-easier-to-hand-over", "type": "workflow", "use": "build", "when": "When someone new takes over, to build a procedure and exception guide from a real deal" },
+        { "ref": "library:prepare-a-team-absence-handover", "type": "workflow", "use": "build", "when": "When the coordinator is away, to give the cover person each deal's tasks and who to call" },
+        { "ref": "library:handover-note-writer", "type": "prompt", "use": "build", "when": "When one deal moves to another person and they must run it from day one" }
+      ]
+    },
+    {
+      "id": "missed-deadline-review",
+      "task": "Find why deals keep missing deadlines",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:trace-why-work-keeps-missing-deadlines", "type": "workflow", "use": "build", "when": "When the same stage slips on deal after deal, to map the delay and its cause from records" },
+        { "ref": "library:decision-checklist", "type": "workflow", "use": "build", "when": "When the same mistake repeats, to turn the misses into a one-page checklist and test it" },
+        { "ref": "library:lessons-learned-note-writer", "type": "prompt", "use": "build", "when": "After a hard deal closes, to note what to repeat and what to change" }
+      ]
+    },
+    {
+      "id": "after-closing",
+      "task": "Close the file and follow up after completion",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:workflows/accepted-offer-to-closed-file", "use": "build", "when": "When the deal completes and the file must be closed with every paper in place" },
+        { "ref": "library:post-sale-follow-up-planner", "type": "skill", "use": "build", "when": "When the agent wants a thank-you note and a plan to stay in touch" },
+        { "ref": "library:honest-appreciation-note-writer", "type": "skill", "use": "explore", "when": "When the thank-you should name one true, specific thing and ask for nothing" },
+        { "ref": "library:testimonial-request-writer", "type": "skill", "use": "build", "when": "When the agent wants a review, to ask with three easy questions and one follow-up" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "Before the messages go, to keep them short and free of sales talk" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "When any message states a date, a duty or a sum, to tie it to the contract or cut it" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any update goes out, to catch a wrong name, address, date or amount" }
+  ],
+  "helpers": [
+    { "role": "compliance-specialist", "when": "When the brokerage needs its file rules checked against state, anti-money-laundering or data rules" },
+    { "role": "executive-assistant", "when": "When the job is mostly diary, inbox and booking inspections, surveys and signings" },
+    { "role": "spreadsheet-specialist", "when": "When the tracker must be built as a real workbook with date formulas and warnings" },
+    { "role": "automation-specialist", "when": "When reminders and updates should send themselves from the tracker" },
+    { "role": "property-manager", "when": "When the home is tenanted and notices, access and deposits must be handled before completion" },
+    { "role": "customer-support-specialist", "when": "When a brokerage needs a shared inbox answered every day across many deals" }
+  ],
+  "gaps": [
+    "No library item builds a real estate deal tracker or key dates table; the contract items read commercial contracts only",
+    "No library item lists the documents for each stage of a US closing or an England and Wales conveyance",
+    "No library item checks a wiring or bank-details message for fraud signs, or scripts the call-back check",
+    "No library item plans a closing or completion day with a timed checklist",
+    "No library item counts contract days, such as business days and weekend roll-over rules, to a calendar date",
+    "No library item covers inspections, appraisals, repair requests or survey results and how to pass them on",
+    "No library item covers title, escrow, earnest money, mortgage offers or searches in plain words for buyers",
+    "No library item builds a UK sale progression chase list or tracks a chain of linked sales",
+    "No library item makes different versions of a party update to compare; only general email rewriters exist",
+    "No tool guide covers transaction software or e-signature tools"
+  ]
+}

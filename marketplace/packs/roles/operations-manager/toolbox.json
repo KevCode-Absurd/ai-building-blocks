@@ -1,0 +1,275 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "operations-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "write-sop",
+      "task": "Write an SOP and a one-page checklist for one task",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/sop-writing", "use": "build", "when": "When a recurring task is done from memory and anyone in the role should be able to follow it" },
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When the task has branches, to get a flowchart, who does what and the edge cases" },
+        { "ref": "library:repeat-task-step-guide-writer", "type": "skill", "use": "build", "when": "When one person does the task alone and needs exact steps, fixes and who to call" },
+        { "ref": "library:write-a-procedure-test-it-and-build-a-training-deck", "type": "workflow", "use": "check", "when": "When the draft is done, to test it for gaps and make a short deck to teach it" },
+        { "ref": "library:plain-words-interface-rewriter", "type": "skill", "use": "check", "when": "When the SOP uses office words, to rewrite it in the team's words and test it read aloud" },
+        { "ref": "library:grace-hopper", "type": "mind", "use": "think", "when": "When people skip the SOP, to make the task itself easier and use the words they use" }
+      ]
+    },
+    {
+      "id": "review-sops",
+      "task": "Review old SOPs and guides and fix the gaps",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/sop-writing", "use": "check", "when": "When an old SOP exists and needs checking against how the work is done today" },
+        { "ref": "library:sop-and-runbook-checker", "type": "skill", "use": "check", "when": "When there is a folder of SOPs, to find missing owners, stale pages and gaps" },
+        { "ref": "library:process-doc-freshness-keeper", "type": "agent", "use": "check", "when": "Each month, to flag stale or ownerless documents and draft the rewrites" },
+        { "ref": "library:turn-an-incident-into-a-safer-procedure", "type": "workflow", "use": "build", "when": "When something went wrong, to turn the timeline into a safer procedure and tracked actions" }
+      ]
+    },
+    {
+      "id": "docs-system",
+      "task": "Plan the SOP library and docs system",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:documentation-system-planner", "type": "skill", "use": "build", "when": "When know-how is scattered, to decide what to write down, where it lives and who keeps it fresh" },
+        { "ref": "library:set-up-a-documentation-system-and-write-sops-that-pass-a-check", "type": "workflow", "use": "build", "when": "When starting from nothing, to set up the system and write the first procedures with a check" },
+        { "ref": "library:notion-ai", "type": "tool", "use": "build", "when": "When the team keeps its documents in Notion and wants to find and update them there" }
+      ]
+    },
+    {
+      "id": "process-map",
+      "task": "Map one process and find the delays",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/process-map-and-bottleneck", "use": "build", "when": "When one process needs mapping end to end with every wait, hand-off and redo marked" },
+        { "ref": "library:process-bottleneck-finder", "type": "skill", "use": "build", "when": "When you want a swim-lane map with cycle times and the one stage holding things up" },
+        { "ref": "library:process-waste-finder", "type": "skill", "use": "check", "when": "When the steps are listed, to mark each as value or waste and name the worst" },
+        { "ref": "library:trace-why-work-keeps-missing-deadlines", "type": "workflow", "use": "build", "when": "When there are records of late work, to map where it waits and back causes with data" },
+        { "ref": "library:taiichi-ohno", "type": "mind", "use": "think", "when": "When the map is drawn from a meeting room, to go and watch the work and its hand-offs" }
+      ]
+    },
+    {
+      "id": "leaner-process",
+      "task": "Design a leaner version of one process",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/fix-and-document-one-process", "use": "brief", "when": "When one process keeps causing delays or complaints and must be fixed, then written down" },
+        { "ref": "kit:skills/process-map-and-bottleneck", "use": "build", "when": "When the current map is agreed and a leaner flow and trial plan are needed" },
+        { "ref": "library:process-waste-cause", "type": "workflow", "use": "build", "when": "When the waste is clear but its cause is not, to find it and one change to try" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the fix could be small tweaks or a redesign, to compare two plans with cost and dates" },
+        { "ref": "library:hidden-value-check", "type": "skill", "use": "check", "when": "Before a step or rule is cut, to see what else it quietly does" },
+        { "ref": "library:process-change-note-writer", "type": "prompt", "use": "build", "when": "When the change is agreed, to tell the team what to do differently and from when" }
+      ]
+    },
+    {
+      "id": "constraint",
+      "task": "Find the constraint and plan capacity around it",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/process-map-and-bottleneck", "use": "build", "when": "When work piles up and you need the one step that caps output" },
+        { "ref": "library:production-capacity-checker", "type": "skill", "use": "build", "when": "When demand and what the team can make are known, to find the gap and a plan to close it" },
+        { "ref": "library:team-capacity-planner", "type": "skill", "use": "build", "when": "When the constraint is people, to see workload against hours and who is overloaded" },
+        { "ref": "library:business-investment-analyst", "type": "skill", "use": "check", "when": "When adding capacity costs money, to work out payback and risk on each option" },
+        { "ref": "library:andy-grove", "type": "mind", "use": "think", "when": "When every step claims to be the problem, to find the limiting step and plan from it" }
+      ]
+    },
+    {
+      "id": "weekly-review",
+      "task": "Run the weekly operations review",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/weekly-operations-rhythm", "use": "brief", "when": "Every week on the same day, to keep the review, the fixes and the watch list moving" },
+        { "ref": "kit:skills/weekly-ops-review", "use": "build", "when": "When the week's numbers and notes are in and need one page of fixes with owners" },
+        { "ref": "library:weekly-meeting-actions-keeper", "type": "agent", "use": "check", "when": "Each week, to check last week's open actions and set the next agenda" },
+        { "ref": "library:weekly-status-update-writer", "type": "prompt", "use": "build", "when": "When the owner wants a short written update in place of a meeting" }
+      ]
+    },
+    {
+      "id": "kpi-report",
+      "task": "Build a weekly or monthly KPI report",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:input-metric-picker", "type": "skill", "use": "brief", "when": "Before building, to pick the few measures the team can move week to week" },
+        { "ref": "library:metric-definition-writer", "type": "skill", "use": "brief", "when": "When two people work a number out differently, to write one agreed definition" },
+        { "ref": "library:define-your-metrics-once-and-write-a-weekly-update-anyone-gets", "type": "workflow", "use": "build", "when": "When the numbers exist but nobody reads them, to define them and write a plain weekly update" },
+        { "ref": "library:recurring-kpi-report-maker", "type": "skill", "use": "build", "when": "When the same report is needed each week and should be rerun, not rebuilt" },
+        { "ref": "library:build-a-weekly-kpi-report-with-a-forecast-and-dashboard", "type": "workflow", "use": "build", "when": "When the owner also wants a trend, a forecast and a dashboard to share" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before the report goes out, to catch broken formulas and wrong totals" }
+      ]
+    },
+    {
+      "id": "ops-health-check",
+      "task": "Run an operations health check",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/weekly-ops-review", "use": "brief", "when": "When recent weekly reviews exist, to see what keeps slipping before judging the whole" },
+        { "ref": "library:company-health-scorer", "type": "skill", "use": "build", "when": "When the client can supply numbers, to score each function and show what data is missing" },
+        { "ref": "library:experience-drift-auditor", "type": "skill", "use": "check", "when": "When growth has brought shortcuts, to see which changes watered down what customers liked" },
+        { "ref": "library:donella-meadows", "type": "mind", "use": "think", "when": "When the same problems return each quarter, to find the structure that keeps making them" }
+      ]
+    },
+    {
+      "id": "roles-chart",
+      "task": "Draw the roles chart and write role agreements",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/roles-chart-and-role-agreements", "use": "build", "when": "When nobody is sure who owns which task, or the business must see the roles before the people" },
+        { "ref": "library:org-structure-map", "type": "skill", "use": "explore", "when": "When the structure itself is open, to get a plan, a spans check and who decides what" },
+        { "ref": "library:company-operating-system-setter", "type": "skill", "use": "build", "when": "When roles need a scorecard, a meeting rhythm and 90-day goals around them" }
+      ]
+    },
+    {
+      "id": "owner-time-audit",
+      "task": "Audit the owner's week and plan what to hand over",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/owner-time-audit", "use": "build", "when": "When the owner is the bottleneck and wants to see doing, managing and building time" },
+        { "ref": "library:weekly-time-audit-planner", "type": "skill", "use": "brief", "when": "When there is no record of the week yet, to plan how to log it" },
+        { "ref": "library:founder-leadership-coach", "type": "skill", "use": "build", "when": "When the owner cannot name what only they should do, to get a delegation plan" },
+        { "ref": "library:hand-over-founder-dependent-operations", "type": "workflow", "use": "build", "when": "When daily operations run through the owner, to plan the handover task by task" },
+        { "ref": "library:manager-output-coach", "type": "skill", "use": "build", "when": "When the owner now manages people, to set one-on-ones and the tasks that lift team output" }
+      ]
+    },
+    {
+      "id": "one-person-handover",
+      "task": "Plan the handover of work only one person knows",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/one-person-handover-plan", "use": "build", "when": "When one person holds the know-how and is going on leave, leaving, or is too big a risk" },
+        { "ref": "library:make-a-recurring-process-easier-to-hand-over", "type": "workflow", "use": "build", "when": "When there is a recent real run of the task, to write the procedure and its exceptions" },
+        { "ref": "library:handover-note-writer", "type": "prompt", "use": "build", "when": "When the handover is days away, to write a note the next person can run from on day one" }
+      ]
+    },
+    {
+      "id": "recurring-calendar",
+      "task": "Build a recurring-tasks calendar",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/recurring-tasks-calendar", "use": "build", "when": "When stock counts, checks, renewals and reports are done from memory and get missed" },
+        { "ref": "library:empty-workbook-builder", "type": "skill", "use": "build", "when": "When the calendar should live in a sheet, to get a clean file with the agreed fields" },
+        { "ref": "library:no-code-automation-planner", "type": "skill", "use": "build", "when": "When reminders should fire on their own, to pick a simple set-up that holds up" }
+      ]
+    },
+    {
+      "id": "operations-manual",
+      "task": "Write the operations manual",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/operations-manual", "use": "build", "when": "When a second site, new manager or franchisee must run the business like the best site" },
+        { "ref": "library:standards-sheet-writer", "type": "skill", "use": "brief", "when": "Before the chapters, to put the service on one page of standards that can be checked" },
+        { "ref": "library:operations-manual-writer", "type": "skill", "use": "build", "when": "When the standards exist, to turn them into a job card per role and a missed-standard rule" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When a chapter is drafted, to read it as a new manager and list what they would have to ask" },
+        { "ref": "library:ray-kroc", "type": "mind", "use": "think", "when": "When the manual describes ideals, to write the basics and try them in one place first" }
+      ]
+    },
+    {
+      "id": "second-site",
+      "task": "Prepare to open a second site",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/open-a-second-site", "use": "brief", "when": "When the owner has decided to open another site or get ready to franchise" },
+        { "ref": "library:second-location-check", "type": "skill", "use": "check", "when": "Before committing, to test whether the first site runs without the owner and list the gaps" },
+        { "ref": "library:shop-system-playbook", "type": "workflow", "use": "build", "when": "When the best site must be written down as standards and a manual a stranger can follow" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the opening could be fast or staged, to compare two plans with money and dates" }
+      ]
+    },
+    {
+      "id": "franchise-model",
+      "task": "Test a franchise or partner-run model",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:partner-profit-tester", "type": "skill", "use": "check", "when": "Before offering a site to a partner, to see what they keep at forecast and at weaker sales" },
+        { "ref": "library:partner-deal-terms-writer", "type": "skill", "use": "build", "when": "When the sums work, to put the terms for people who run the business on one page" },
+        { "ref": "kit:skills/operations-manual", "use": "build", "when": "When partners will need the manual and standards that come with the deal" }
+      ]
+    },
+    {
+      "id": "site-visit-scorecard",
+      "task": "Build a site visit scorecard",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/site-visit-scorecard", "use": "build", "when": "When an owner or area manager visits sites and needs a fair, repeatable way to score them" },
+        { "ref": "library:standards-sheet-writer", "type": "skill", "use": "brief", "when": "When there are no written standards to score against yet" },
+        { "ref": "library:google-forms-automator", "type": "skill", "use": "build", "when": "When scores should be entered on a phone, logged and sent to the site manager" }
+      ]
+    },
+    {
+      "id": "day-one-docs",
+      "task": "Write day-one documentation for a new team member",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/sop-writing", "use": "build", "when": "When the new person's first tasks have no written steps" },
+        { "ref": "library:new-hire-plan-builder", "type": "skill", "use": "build", "when": "When a start date is set, to plan pre-start checks, the first week and 30, 60 and 90 day goals" },
+        { "ref": "library:operations-manual-writer", "type": "skill", "use": "build", "when": "When the role needs a job card and a day-one trial sheet" }
+      ]
+    },
+    {
+      "id": "meetings-and-reports",
+      "task": "Cut and fix recurring meetings, approvals and reports",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:process-and-meeting-cull-planner", "type": "skill", "use": "build", "when": "When the calendar is full, to get a keep, simplify or drop call on each meeting and report" },
+        { "ref": "library:meeting-to-written-update-converter", "type": "prompt", "use": "build", "when": "When a status meeting could be a written update, to sort each agenda item and the hours saved" },
+        { "ref": "library:turn-meetings-into-owned-actions", "type": "workflow", "use": "build", "when": "When meetings end without owners, to turn the notes into actions with names and dates" },
+        { "ref": "library:hidden-value-check", "type": "skill", "use": "check", "when": "Before a meeting or approval is dropped, to see what it quietly does for the team" }
+      ]
+    },
+    {
+      "id": "recurring-problem",
+      "task": "Find why a problem keeps coming back",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:root-cause-finder", "type": "skill", "use": "build", "when": "When the same problem returns, to build a chain of whys checked against facts" },
+        { "ref": "library:failure-root-cause", "type": "workflow", "use": "build", "when": "When a failure needs a no-blame review with the team and sized fixes" },
+        { "ref": "library:proportional-fix-planner", "type": "skill", "use": "build", "when": "When the causes are known, to size a fix at each level with an owner, date and check" },
+        { "ref": "library:donella-meadows", "type": "mind", "use": "think", "when": "When each fix wears off, to look at the pattern over time and what feeds it" }
+      ]
+    },
+    {
+      "id": "quarterly-goals",
+      "task": "Set quarterly goals and a scorecard",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:okr-goal-writer", "type": "skill", "use": "build", "when": "When the quarter needs a few objectives, each with dated, numbered results" },
+        { "ref": "library:company-operating-system-setter", "type": "skill", "use": "build", "when": "When goals need a scorecard, an accountability chart and a meeting rhythm to hold them" },
+        { "ref": "library:input-metric-picker", "type": "skill", "use": "brief", "when": "When goals are all end results, to pick the weekly measures that drive them" }
+      ]
+    },
+    {
+      "id": "automate-or-buy",
+      "task": "Decide what to automate and which tool to buy",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:agency-automation-governance-architect", "type": "agent", "use": "check", "when": "Before automating, to get a verdict on whether the process should be, with risks and a fallback" },
+        { "ref": "library:no-code-automation-planner", "type": "skill", "use": "build", "when": "When a task is worth automating, to pick the right Zapier or Make set-up" },
+        { "ref": "library:software-vendor-chooser", "type": "skill", "use": "build", "when": "When tools are being compared, to score each against the client's needs" },
+        { "ref": "library:check-a-new-automation-before-relying-on-it", "type": "workflow", "use": "check", "when": "Before the team relies on it, to find double runs and missing approval steps" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before an SOP, manual chapter or review is shared, to catch typos and a task named two ways" },
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "When a review or report states numbers, to tie each to the client's own export or cut it" }
+  ],
+  "helpers": [
+    { "role": "automation-specialist", "when": "When the leaner process needs tools connected or a workflow built, not only designed" },
+    { "role": "organisation-development-specialist", "when": "When the roles chart turns into a restructure with reporting lines and spans to redesign" },
+    { "role": "data-analyst", "when": "When the KPI report needs messy exports joined, cleaned and analysed first" },
+    { "role": "qhse-manager", "when": "When a procedure covers safety, food hygiene or quality rules that differ by region" },
+    { "role": "workforce-planner", "when": "When the constraint is staffing and rotas, cover and headcount need planning" },
+    { "role": "learning-development-specialist", "when": "When SOPs must become a training programme with practice and sign-off" }
+  ],
+  "gaps": [
+    "No library item builds a site visit scorecard with weighted standards, evidence notes and follow-up actions",
+    "No library item builds a recurring-tasks calendar of daily, weekly, monthly and yearly routines with owners",
+    "No library item writes role agreements for each position; the org chart items stop at structure",
+    "No library item runs a one-page weekly operations review from a small business's own numbers and notes",
+    "No library item sets pacing rules around a constraint for a kitchen, workshop or service team; the fits are factory-shaped",
+    "No library item writes a new site opening checklist with dates for fit-out, hiring, training and soft launch",
+    "No library item writes franchise manual chapters such as brand standards, audits and what a franchisee may change",
+    "No library item turns an SOP into a one-page checklist or job aid on its own",
+    "No library item checks a procedure against region-specific safety or food rules",
+    "No library item offers two or three clearly different SOP formats to test with the team"
+  ]
+}

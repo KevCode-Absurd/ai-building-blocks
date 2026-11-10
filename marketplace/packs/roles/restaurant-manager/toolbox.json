@@ -1,0 +1,294 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "restaurant-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "recipe-costing",
+      "task": "Cost a recipe and build a recipe card",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/recipe-costing-and-menu-pricing", "use": "build", "when": "When you have recipes and supplier invoices and need cost per portion with trim and yield" },
+        { "ref": "library:restaurant-portion-cost-builder", "type": "skill", "use": "build", "when": "When one batch of one dish must be costed from real weights and what was paid" },
+        { "ref": "library:units-and-error-margin-checker", "type": "skill", "use": "check", "when": "When a card mixes grams, litres and each, to check the units and how rough the figure is" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "When the cards live in a spreadsheet, to find formula errors and broken links" },
+        { "ref": "library:kenji-lopez-alt", "type": "mind", "use": "think", "when": "When a yield or portion size is a guess and should be tested by changing one thing" }
+      ]
+    },
+    {
+      "id": "menu-pricing",
+      "task": "Set menu prices that hit a target food cost",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/recipe-costing-and-menu-pricing", "use": "build", "when": "When costed cards exist and each dish needs a price for the target food cost percent" },
+        { "ref": "library:price-display-planner", "type": "skill", "use": "explore", "when": "When weighing a price, to decide on rounding, how to price extras and where to show it" },
+        { "ref": "library:discount-and-price-change-checker", "type": "agent", "use": "check", "when": "Before a price change, to see what the margin allows and the wording to use" },
+        { "ref": "library:price-rise-letter-writer", "type": "prompt", "use": "build", "when": "When regulars or catering clients must be told about a rise and you want to keep them" }
+      ]
+    },
+    {
+      "id": "menu-engineering",
+      "task": "Review which dishes earn their place on the menu",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/menu-engineering-and-food-cost-check", "use": "build", "when": "When you have the till's sales mix and need a keep, reprice, rework or cut call per dish" },
+        { "ref": "library:product-profit-analyst", "type": "skill", "use": "build", "when": "When you want each item's margin and the ones that lose money shown plainly" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before the review goes to the owner, to check totals and state the key figures in plain words" },
+        { "ref": "library:sam-walton", "type": "mind", "use": "think", "when": "When the numbers say cut a dish and nobody has asked the floor staff or the guests" }
+      ]
+    },
+    {
+      "id": "food-cost-check",
+      "task": "Run a weekly food cost check",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/menu-engineering-and-food-cost-check", "use": "build", "when": "When the week's purchases, stock and sales are in and you need actual food cost percent" },
+        { "ref": "library:production-cost-variance", "type": "skill", "use": "build", "when": "When actual cost is above the recipe cost, to split the gap into price, volume and waste" },
+        { "ref": "library:numbers-drop-explainer", "type": "prompt", "use": "brief", "when": "When margin fell this week, to rank the likely causes before blaming portions" },
+        { "ref": "library:donella-meadows", "type": "mind", "use": "think", "when": "When food cost creeps up every month and each fix only holds for a week" }
+      ]
+    },
+    {
+      "id": "month-end-close",
+      "task": "Close the month's food cost after the stock count",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/month-end-food-cost-close", "use": "build", "when": "Each month, within a few days of the stock count, to run the close in order" },
+        { "ref": "library:stock-count-program-planner", "type": "skill", "use": "brief", "when": "When counts are slow or wrong, to set who counts what and how to trace mismatches" },
+        { "ref": "library:inventory-value-calculator", "type": "skill", "use": "build", "when": "When the count must be valued at what was paid, with write-downs flagged" },
+        { "ref": "library:explain-a-warehouse-stock-count-variance", "type": "workflow", "use": "check", "when": "When the count and the records disagree, to split timing, unit and counting errors" },
+        { "ref": "library:check-supplier-invoices-before-approval", "type": "workflow", "use": "check", "when": "Before the close, to match the month's invoices and list amounts to query" }
+      ]
+    },
+    {
+      "id": "supplier-prices",
+      "task": "Check supplier price changes and compare suppliers",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/supplier-price-change-check", "use": "build", "when": "When an invoice or price list shows new prices and you need the effect on each dish" },
+        { "ref": "library:compare-supplier-prices-on-the-same-basis", "type": "workflow", "use": "build", "when": "When quotes use different pack sizes and units and must be compared like for like" },
+        { "ref": "library:hotel-restaurant-buying", "type": "skill", "use": "brief", "when": "When total spend is too high, to get a sourcing plan and a supplier shortlist" },
+        { "ref": "library:invoice-totals-checker", "type": "skill", "use": "check", "when": "When an invoice looks wrong, to recalculate every line and total" },
+        { "ref": "library:prepare-a-goods-receipt-discrepancy-brief", "type": "workflow", "use": "check", "when": "When a delivery does not match the order, to get a mismatch table and supplier questions" }
+      ]
+    },
+    {
+      "id": "opening-closing-checklists",
+      "task": "Write opening and closing checklists by area",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/kitchen-checklists-prep-and-station-guides", "use": "build", "when": "When each area needs its tasks listed in the order they happen" },
+        { "ref": "library:standards-sheet-writer", "type": "skill", "use": "brief", "when": "Before the checklists, to write one page of checkable standards for how the place should feel" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the list is drafted, to cut each line to words a new starter reads at a glance" },
+        { "ref": "library:ray-kroc", "type": "mind", "use": "think", "when": "When standards change with whoever is on shift and the basics were never written down" }
+      ]
+    },
+    {
+      "id": "prep-and-pars",
+      "task": "Set daily prep lists and par levels",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/prep-par-levels", "use": "build", "when": "When dishes run out on busy nights and prep is thrown away on quiet ones" },
+        { "ref": "kit:skills/kitchen-checklists-prep-and-station-guides", "use": "build", "when": "When the pars must become a daily prep list each station can follow" },
+        { "ref": "library:demand-forecast-planner", "type": "skill", "use": "brief", "when": "When you have past sales, to forecast covers and track how far off the forecast runs" },
+        { "ref": "library:plan-what-to-make-each-week-from-your-past-sales", "type": "workflow", "use": "build", "when": "When batch items are made weekly, to plan amounts from past sales and kitchen capacity" },
+        { "ref": "library:one-time-stock-quantity-picker", "type": "skill", "use": "check", "when": "When a special uses a short-life ingredient, to pick the order amount and see the risk" }
+      ]
+    },
+    {
+      "id": "station-guides",
+      "task": "Write one-page station guides for kitchen and floor",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/kitchen-checklists-prep-and-station-guides", "use": "build", "when": "When each station needs set-up, service and clean-down on one page" },
+        { "ref": "library:operations-manual-writer", "type": "skill", "use": "build", "when": "When you have a standards sheet, to get a job card for each role and a day-one trial sheet" },
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When one task, such as cashing up, needs a written procedure with the edge cases" },
+        { "ref": "library:recall-quiz-writer", "type": "prompt", "use": "check", "when": "When a new starter has read the guide, to check they took in the points that matter" }
+      ]
+    },
+    {
+      "id": "shift-log-handover",
+      "task": "Set up a shift log and handover",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:prepare-a-restaurant-shift-handover", "type": "workflow", "use": "build", "when": "At the end of a shift, to brief the next lead with food safety issues first" },
+        { "ref": "library:restaurant-shift-exception-review-assistant", "type": "agent", "use": "check", "when": "When shift notes pile up, to keep an open-issue list and what to escalate" },
+        { "ref": "kit:skills/kitchen-checklists-prep-and-station-guides", "use": "build", "when": "When the venue has no shift log template and needs one that fits its areas" },
+        { "ref": "kit:skills/weekly-restaurant-review", "use": "brief", "when": "When the log's fields must feed the weekly review without retyping" }
+      ]
+    },
+    {
+      "id": "weekly-review",
+      "task": "Run the weekly restaurant review",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/weekly-restaurant-rhythm", "use": "build", "when": "Every week on the same quiet day, to run the review and set the week's actions" },
+        { "ref": "kit:skills/weekly-restaurant-review", "use": "build", "when": "When shift log, till, bookings, waste log and reviews must become one page" },
+        { "ref": "library:build-a-weekly-kpi-report-with-a-forecast-and-dashboard", "type": "workflow", "use": "build", "when": "When the owner wants the same numbers each week with a trend and a forecast" },
+        { "ref": "library:feedback-theme-finder", "type": "skill", "use": "brief", "when": "When the week's reviews and comment cards need sorting into themes" },
+        { "ref": "library:numbers-drop-explainer", "type": "prompt", "use": "check", "when": "When covers or spend per head fell, to rank the causes by evidence" }
+      ]
+    },
+    {
+      "id": "review-replies",
+      "task": "Reply to a batch of online reviews",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/restaurant-review-replies", "use": "build", "when": "When new Google, booking or delivery app reviews need replies" },
+        { "ref": "library:public-review-reply-desk", "type": "agent", "use": "build", "when": "When reviews arrive every week, to hold risky ones back and flag repeat complaints" },
+        { "ref": "library:support-reply-tone-editor", "type": "skill", "use": "explore", "when": "When a reply has the right facts but the wrong tone, to try it warmer or firmer" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before posting, to check no reply promises a refund or change nobody agreed" },
+        { "ref": "library:tony-hsieh", "type": "mind", "use": "think", "when": "When replies defend the kitchen and miss what the guest's evening was like" }
+      ]
+    },
+    {
+      "id": "guest-complaint",
+      "task": "Handle a direct guest complaint",
+      "kind": "email",
+      "items": [
+        { "ref": "library:agency-hospitality-guest-services", "type": "agent", "use": "build", "when": "When a guest writes to complain, to get a warm reply, a fair fix and who to tell" },
+        { "ref": "library:angry-customer-reply-writer", "type": "prompt", "use": "explore", "when": "When the guest is furious, to try a reply that names the feeling first" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before sending, to test each promise against what the manager may offer" }
+      ]
+    },
+    {
+      "id": "rota",
+      "task": "Draft next week's rota against forecast covers",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/rota-draft-against-covers", "use": "build", "when": "When building next week's rota so hours follow the covers" },
+        { "ref": "library:shift-schedule-builder", "type": "skill", "use": "build", "when": "When busy hours must be covered within staff limits, with a cost check per shift" },
+        { "ref": "library:shift-schedule-planner", "type": "skill", "use": "explore", "when": "When weekends and lates feel unfair, to try a rotation with a swap policy" },
+        { "ref": "library:payroll-timesheet-checker", "type": "skill", "use": "check", "when": "After the week, to total hours worked and flag every oddity against the rota" },
+        { "ref": "library:attendance-policy-writer", "type": "skill", "use": "build", "when": "When lateness and no-shows have no written rule" }
+      ]
+    },
+    {
+      "id": "allergen-matrix",
+      "task": "Draft an allergen matrix from recipe cards",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/allergen-matrix-draft", "use": "build", "when": "When a menu, special or recipe changes and the trained manager needs a draft to check" },
+        { "ref": "kit:skills/recipe-costing-and-menu-pricing", "use": "brief", "when": "Before the matrix, to make sure every recipe card lists each ingredient and sub-recipe" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "When the matrix is drafted, to tie each allergen to a dated supplier spec or mark it open" }
+      ]
+    },
+    {
+      "id": "new-menu-launch",
+      "task": "Launch a new or seasonal menu",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/new-menu-launch", "use": "build", "when": "When a seasonal change, new opening or menu rework must run from costing to first service" },
+        { "ref": "library:taster-event-planner", "type": "skill", "use": "explore", "when": "When several versions of a dish are in play, to plan a tasting with a decision rule" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "build", "when": "When dish descriptions are vague, to make each short, true and easy to picture" },
+        { "ref": "library:make-design-directions", "type": "skill", "use": "explore", "when": "When the printed menu needs a new look, to see three layouts at real size and pick one" },
+        { "ref": "library:practice-session-minute-planner", "type": "prompt", "use": "build", "when": "When floor staff must learn the new dishes, to plan the briefing minute by minute" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the menu is drafted, to read it as a guest and list what they would have to ask" }
+      ]
+    },
+    {
+      "id": "catering-order",
+      "task": "Cost and check a catering or event order",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:check-a-catering-order-before-service", "type": "workflow", "use": "check", "when": "Before the event, to match the order to the quote and details and list what to ask the client" },
+        { "ref": "kit:skills/recipe-costing-and-menu-pricing", "use": "build", "when": "When the event menu needs a cost per head and a price" },
+        { "ref": "library:per-order-profit-calculator", "type": "prompt", "use": "check", "when": "When staff, travel and hire costs are added, to see the profit on this one order" },
+        { "ref": "kit:prompts/allergen-matrix-draft", "use": "build", "when": "When the client asks for allergen information for the event dishes" }
+      ]
+    },
+    {
+      "id": "waste",
+      "task": "Cut food waste and track it",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:waste-to-profit", "type": "workflow", "use": "build", "when": "When you want a cost on each step and a price on each kind of waste" },
+        { "ref": "library:expiry-date-stock-manager", "type": "skill", "use": "build", "when": "When stock goes out of date, to get a use-first list and when to run it as a special" },
+        { "ref": "library:waste-reduction-planner", "type": "skill", "use": "explore", "when": "When the kitchen's flow causes the waste, to map it and rank quick fixes by payoff" },
+        { "ref": "kit:skills/weekly-restaurant-review", "use": "check", "when": "Each week, to see whether the waste log is moving after a change" }
+      ]
+    },
+    {
+      "id": "ordering-and-cash",
+      "task": "Plan stock orders and the cash to pay for them",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:stock-and-reorder-planner", "type": "skill", "use": "build", "when": "When dry goods and drinks need reorder points and safety stock from sales" },
+        { "ref": "kit:prompts/prep-par-levels", "use": "brief", "when": "Before ordering fresh goods, to take the pars by day of week" },
+        { "ref": "library:cash-forecast-builder", "type": "skill", "use": "build", "when": "When supplier bills bunch up, to see the next 30, 60 and 90 days of cash" },
+        { "ref": "library:prepare-a-seasonal-cash-buffer", "type": "workflow", "use": "check", "when": "Before a quiet season, to test a downside case and set actions" }
+      ]
+    },
+    {
+      "id": "hire-and-train",
+      "task": "Hire and train new kitchen and floor staff",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:inclusive-job-post-writer", "type": "skill", "use": "build", "when": "When a role is open, to write a clear post with real requirements" },
+        { "ref": "library:interview-question-set-maker", "type": "prompt", "use": "build", "when": "Before interviews, to get set questions, answer signs and a scorecard" },
+        { "ref": "library:new-hire-first-week-planner", "type": "prompt", "use": "build", "when": "When someone starts, to plan a day-by-day first week with one small real task" },
+        { "ref": "kit:skills/kitchen-checklists-prep-and-station-guides", "use": "brief", "when": "When training must follow the station guide the starter will work from" },
+        { "ref": "library:recall-quiz-writer", "type": "prompt", "use": "check", "when": "At the end of week one, to check what stuck and what to go over again" }
+      ]
+    },
+    {
+      "id": "specials-and-offers",
+      "task": "Plan specials, set menus and offers that keep margin",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/menu-engineering-and-food-cost-check", "use": "brief", "when": "Before choosing an offer, to see which dishes have the margin to carry it" },
+        { "ref": "library:promotion-idea-planner", "type": "skill", "use": "explore", "when": "When you want a bundle or added-value idea in place of a plain price cut" },
+        { "ref": "library:offer-name-batch-writer", "type": "prompt", "use": "explore", "when": "When the offer needs a name, to get ten and the three to test" },
+        { "ref": "library:discount-and-price-change-checker", "type": "agent", "use": "check", "when": "Before it runs, to find the deepest discount the margin allows" }
+      ]
+    },
+    {
+      "id": "service-flow",
+      "task": "Find what slows service and fix ticket times",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:process-bottleneck-finder", "type": "skill", "use": "build", "when": "When tickets back up, to map the steps and find the one stage holding service up" },
+        { "ref": "library:queue-and-process-simulator", "type": "skill", "use": "explore", "when": "When weighing an extra pass, grill or runner, to test the change before paying for it" },
+        { "ref": "library:equipment-maintenance-planner", "type": "skill", "use": "build", "when": "When breakdowns cause the delays, to set a service schedule and spares list" },
+        { "ref": "kit:skills/weekly-restaurant-review", "use": "check", "when": "The week after a change, to see whether ticket times moved" }
+      ]
+    },
+    {
+      "id": "second-site",
+      "task": "Get the operation ready for a new opening or second site",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:second-location-check", "type": "skill", "use": "check", "when": "When the owner wants a second site, to see if the first runs without them" },
+        { "ref": "library:shop-system-playbook", "type": "workflow", "use": "build", "when": "When the best site's ways must become standards and a manual a stranger can follow" },
+        { "ref": "library:standards-sheet-writer", "type": "skill", "use": "build", "when": "When the guest experience must feel the same in both places" },
+        { "ref": "library:ray-kroc", "type": "mind", "use": "think", "when": "Before copying the system, to try it in one place and check the costs first" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any checklist, card or menu is printed, to catch typos and dish names spelt two ways" },
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "When a document states a price, a yield or a food safety rule, to tie it to a dated source" }
+  ],
+  "helpers": [
+    { "role": "recipe-developer", "when": "When a dish needs developing, scaling or testing, not only costing" },
+    { "role": "hospitality-marketer", "when": "When the job is filling quiet nights, listings, bookings and social, not running service" },
+    { "role": "qhse-manager", "when": "When the venue needs a food safety system, risk assessments or an incident log" },
+    { "role": "procurement-specialist", "when": "When supplier contracts must be tendered or renegotiated across the whole spend" },
+    { "role": "graphic-designer", "when": "When the printed menu, menu board or table cards need laying out for print" },
+    { "role": "hr-specialist", "when": "When contracts, tips rules, breaks or a staff dispute need handling properly" }
+  ],
+  "gaps": [
+    "No library item runs menu engineering: sorting dishes by margin and popularity from the till's sales mix",
+    "No library item builds a costed recipe card with trim and cooking yield, sub-recipes and food cost percent",
+    "No library item works out actual against theoretical food cost from stock counts and sales",
+    "No library item writes opening and closing checklists, prep lists or station guides for a kitchen or bar",
+    "No library item drafts an allergen matrix or covers calories and menu labelling rules",
+    "No library item covers food safety records such as temperature logs, cleaning schedules or a HACCP plan",
+    "No library item drafts a rota against forecast covers or checks labour cost as a share of sales",
+    "No library item covers tips and service charge sharing, or cash-up and till variance",
+    "No library item plans a menu's sections and dish order, or writes dish descriptions in several styles to compare",
+    "No library item covers bookings: no-show rules, deposits, table turn times or delivery app fees and pricing",
+    "No library item costs drinks: pour cost, cocktail specs or a wine list margin check",
+    "No thinking lens covers hospitality and restaurant service"
+  ]
+}

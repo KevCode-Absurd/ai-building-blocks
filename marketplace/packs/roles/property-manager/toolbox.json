@@ -1,0 +1,282 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "property-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "tenant-notices",
+      "task": "Write a tenant notice, reminder or house rule letter",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/tenant-notices-and-letters", "use": "build", "when": "When a tenant must be told something in writing and the wording has to be calm and accurate" },
+        { "ref": "library:tense-email-softener", "type": "prompt", "use": "explore", "when": "When the landlord's own draft is angry, to get a version the tenant will want to help with" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the letter is drafted, to cut legal-sounding padding so the tenant sees what to do and by when" },
+        { "ref": "library:george-orwell", "type": "mind", "use": "think", "when": "When a notice hides the real message behind vague, official words" }
+      ]
+    },
+    {
+      "id": "late-rent",
+      "task": "Chase late rent with fair, escalating messages",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/late-rent-reminder-sequence", "use": "build", "when": "When rent is late and you need a friendly, a firmer and a final message that match the tenancy" },
+        { "ref": "library:customer-message-tone-and-urgency-review", "type": "skill", "use": "brief", "when": "Before you reply, to read the tenant's messages for hardship, anger or warning signs" },
+        { "ref": "library:payment-reminder-letter-writer", "type": "skill", "use": "explore", "when": "When this tenant has a good record, to try a reminder that starts from the history and keeps goodwill" },
+        { "ref": "library:get-a-late-invoice-paid-and-keep-the-customer", "type": "workflow", "use": "build", "when": "When the tenant cannot pay in full, to set a range they can meet and a firm follow-up" },
+        { "ref": "library:chris-voss", "type": "mind", "use": "think", "when": "Before a hard call about arrears, to plan calm questions and test how a payment plan will hold" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "Before the final letter goes, to check the amount, the date and the next step are plain" }
+      ]
+    },
+    {
+      "id": "notice-of-entry",
+      "task": "Give notice of entry for a repair, inspection or viewing",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/notice-of-entry", "use": "build", "when": "When a contractor, inspector or viewer needs to get into an occupied home" },
+        { "ref": "kit:skills/tenant-notices-and-letters", "use": "build", "when": "When the visit also needs a repair update or a follow-up letter after a missed appointment" },
+        { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before sending, to catch a wrong date, time or address and names spelt two ways" }
+      ]
+    },
+    {
+      "id": "repairs-triage",
+      "task": "Sort repair reports by urgency and write work orders",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/repairs-and-compliance-log", "use": "build", "when": "When repair reports come in and each needs an urgency, a work order, access and a dated log line" },
+        { "ref": "library:customer-message-tone-and-urgency-review", "type": "skill", "use": "brief", "when": "When a tenant's repair message is long or upset, to pull out how urgent it really is" },
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When the landlord has no written urgency rules, to set who does what and the edge cases" },
+        { "ref": "library:property-maintenance-evidence-review-assistant", "type": "agent", "use": "check", "when": "Each week, to find overdue decisions and jobs marked done with no proof of closure" }
+      ]
+    },
+    {
+      "id": "contractor-quotes",
+      "task": "Compare contractor quotes and keep the contractor list",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:compare-facilities-service-contract-options", "type": "workflow", "use": "build", "when": "When two or three contractors have quoted, to see cost, risk and terms side by side" },
+        { "ref": "library:vendor-comparison-writer", "type": "skill", "use": "build", "when": "When the owner wants one clear pick with the points to negotiate" },
+        { "ref": "library:monthly-contractor-roster-keeper", "type": "agent", "use": "check", "when": "Each month, to see which contractors to keep and whose terms or agreements need fixing" },
+        { "ref": "kit:skills/repairs-and-compliance-log", "use": "brief", "when": "Before asking for quotes, to pull the repair history and what was paid last time" }
+      ]
+    },
+    {
+      "id": "owner-report",
+      "task": "Write the monthly owner report",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/owner-monthly-report", "use": "build", "when": "At month end, to tell an owner how the property did in five minutes of reading" },
+        { "ref": "kit:skills/owner-report-and-deal-numbers", "use": "build", "when": "When the report must be built from the rent ledger, bills and repair log" },
+        { "ref": "library:excel-monthly-rollup-builder", "type": "skill", "use": "build", "when": "When the records are dated rows, to get monthly totals and rates you can trace back" },
+        { "ref": "library:numbers-drop-explainer", "type": "prompt", "use": "brief", "when": "When income fell or costs jumped, to rank the likely causes before you explain it to the owner" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before the report goes, to find broken formulas and totals that do not add up" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the report is drafted, to read it as the owner and list what they would have to ask" }
+      ]
+    },
+    {
+      "id": "monthly-run",
+      "task": "Run the monthly property routine across the portfolio",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/monthly-property-run", "use": "build", "when": "Each month and at the short weekly check, to work through rent, repairs, dates and reports in order" },
+        { "ref": "library:monthly-renewal-watcher", "type": "agent", "use": "check", "when": "Each month, to see which tenancies, certificates and contracts fall due in the next 90 days" },
+        { "ref": "library:build-a-weekly-kpi-report-with-a-forecast-and-dashboard", "type": "workflow", "use": "build", "when": "When an owner with many units wants the same numbers each week with a trend" },
+        { "ref": "library:handover-note-writer", "type": "prompt", "use": "build", "when": "When someone else covers the portfolio, to leave a note they can run from on day one" }
+      ]
+    },
+    {
+      "id": "rent-reconciliation",
+      "task": "Reconcile rent received against the rent ledger",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:bank-and-ledger-matcher", "type": "skill", "use": "check", "when": "When you have the bank statement and the ledger, to get matches, near matches and what is left" },
+        { "ref": "library:reconciliation-break-tracer", "type": "skill", "use": "check", "when": "When one payment will not match, to trace it to its source entries on both sides" },
+        { "ref": "library:expense-sorter", "type": "skill", "use": "build", "when": "When bills and repair costs need sorting by property and by type before the report" },
+        { "ref": "kit:skills/owner-report-and-deal-numbers", "use": "build", "when": "When the reconciled figures feed the owner's money in and money out lines" }
+      ]
+    },
+    {
+      "id": "listing-advert",
+      "task": "Write a fair rental advert and screening criteria",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/letting-and-tenancy-file", "use": "build", "when": "When a home is coming empty and needs an advert and written criteria applied the same to all" },
+        { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When the advert's first line is flat, to try five short headlines that each take a new angle" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "build", "when": "When the description is vague, to make each line true and easy to picture" },
+        { "ref": "kit:prompts/fair-listing-advert-check", "use": "check", "when": "Before the advert goes live, to catch wording or criteria that treat applicants unfairly" },
+        { "ref": "library:outside-chooser", "type": "skill", "use": "check", "when": "When you have two or three advert versions, to have a fresh reader pick one and say why" }
+      ]
+    },
+    {
+      "id": "enquiries-viewings",
+      "task": "Answer rental enquiries and plan viewings",
+      "kind": "email",
+      "items": [
+        { "ref": "library:new-inquiry-reply-drafter", "type": "skill", "use": "build", "when": "When enquiries arrive, to answer each with a draft reply and real viewing times" },
+        { "ref": "kit:skills/letting-and-tenancy-file", "use": "brief", "when": "Before replying, to apply the same written criteria and questions to every applicant" },
+        { "ref": "kit:prompts/notice-of-entry", "use": "build", "when": "When the home is still occupied and the sitting tenant must be told about viewings" },
+        { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before the replies go, to catch a wrong rent, date or address" }
+      ]
+    },
+    {
+      "id": "tenancy-start-to-end",
+      "task": "Run a tenancy from advert to deposit return",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/tenancy-start-to-end", "use": "build", "when": "When a tenant gives notice or a new home is ready to let, to run every step in order" },
+        { "ref": "kit:skills/letting-and-tenancy-file", "use": "build", "when": "When you need the move-in pack: condition report, deposit papers and the documents to serve" },
+        { "ref": "library:agency-legal-document-review", "type": "agent", "use": "check", "when": "When the tenancy agreement is new or unusual, to list risky or missing terms for a lawyer" },
+        { "ref": "library:monthly-renewal-watcher", "type": "agent", "use": "check", "when": "When fixed terms and notice dates must not be missed across several homes" }
+      ]
+    },
+    {
+      "id": "tenant-welcome-guide",
+      "task": "Write a tenant welcome guide and house manual",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/letting-and-tenancy-file", "use": "brief", "when": "Before writing, to pull what the move-in pack already says about meters, keys and contacts" },
+        { "ref": "library:turn-rough-notes-into-a-checked-word-handout", "type": "workflow", "use": "build", "when": "When you have rough notes on the home, to get a clean handout checked page by page" },
+        { "ref": "library:explain-service-booking-terms-to-customers", "type": "workflow", "use": "build", "when": "When tenants need the agreement's duties, payments and notice rules in plain words" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the guide is drafted, to cut it to what a new tenant will read and use" }
+      ]
+    },
+    {
+      "id": "deposit-deductions",
+      "task": "Propose deposit deductions at the end of a tenancy",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/deposit-deduction-proposal", "use": "build", "when": "When a tenancy has ended and the landlord wants to keep part of the deposit" },
+        { "ref": "library:dispute-timeline-builder", "type": "skill", "use": "brief", "when": "When the tenant disputes a deduction, to build a dated timeline from emails and reports" },
+        { "ref": "library:win-win-deal", "type": "workflow", "use": "explore", "when": "When both sides are stuck, to find a third option and put the agreement in writing" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "Before sending, to check every deduction points to a dated photo, report or invoice" }
+      ]
+    },
+    {
+      "id": "complaints",
+      "task": "Reply to a tenant complaint or dispute",
+      "kind": "email",
+      "items": [
+        { "ref": "library:angry-customer-reply-writer", "type": "prompt", "use": "build", "when": "When a tenant writes in anger, to reply to the feeling, fix what you can and promise nothing false" },
+        { "ref": "library:dispute-timeline-builder", "type": "skill", "use": "brief", "when": "When the complaint has a long history, to set out what happened and when before you answer" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before the reply goes, to test each promise in it against what the landlord can really do" },
+        { "ref": "kit:skills/tenant-notices-and-letters", "use": "build", "when": "When the reply must also serve as a formal repair update or house rule reminder" },
+        { "ref": "library:chris-voss", "type": "mind", "use": "think", "when": "When the tenant and landlord are both dug in and a call must lower the heat" }
+      ]
+    },
+    {
+      "id": "compliance-check",
+      "task": "Check a landlord's compliance and keep the dates log",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/england-renters-rights-check", "use": "check", "when": "When a landlord with homes in England asks if they are compliant or takes on a new property" },
+        { "ref": "kit:skills/repairs-and-compliance-log", "use": "build", "when": "When safety certificates, checks and their expiry dates need one dated log" },
+        { "ref": "library:compliance-evidence-request-assistant", "type": "agent", "use": "check", "when": "When certificates are missing or expired, to list each gap and draft the request to its owner" },
+        { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "When your notes state a rule or deadline, to tie each to a dated official source or cut it" }
+      ]
+    },
+    {
+      "id": "rent-increase",
+      "task": "Plan and write a rent increase",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/tenant-notices-and-letters", "use": "build", "when": "When the increase needs the correct notice wording and period for the tenancy" },
+        { "ref": "library:price-rise-letter-writer", "type": "prompt", "use": "explore", "when": "When you want a covering letter that gives the reason and keeps a good tenant" },
+        { "ref": "library:price-against-value-checker", "type": "skill", "use": "brief", "when": "Before setting the figure, to weigh the extra rent against the cost of an empty month" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "Before it is served, to check old rent, new rent and start date are impossible to misread" }
+      ]
+    },
+    {
+      "id": "deal-numbers",
+      "task": "Run the numbers on a rental property deal",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/owner-report-and-deal-numbers", "use": "build", "when": "When a client brings a deal and needs buying costs, cash flow and yields worked out" },
+        { "ref": "library:mortgage-affordability-checker", "type": "skill", "use": "build", "when": "When the deal needs a loan, to get monthly payments at quoted and higher rates" },
+        { "ref": "library:price-against-value-checker", "type": "skill", "use": "check", "when": "Before an offer, to set a value range, a walk-away price and the alternative to beat" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "When the numbers live in a spreadsheet, to find formula errors and broken links" },
+        { "ref": "library:benjamin-graham", "type": "mind", "use": "think", "when": "When the asking price is treated as the value and nobody has asked about room for error" }
+      ]
+    },
+    {
+      "id": "deal-stress-test",
+      "task": "Stress test a deal for rates, empty months and repairs",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/rental-deal-stress-test", "use": "build", "when": "Before an offer, to see cash flow when rates rise, the home sits empty or a big repair hits" },
+        { "ref": "library:bad-year-plan-stress-tester", "type": "prompt", "use": "check", "when": "When the landlord has other debts, to find the breaking point and size a cash cushion" },
+        { "ref": "library:floating-rate-repricing-planner", "type": "skill", "use": "build", "when": "When loans are on a floating rate, to work out the extra interest from a rate rise loan by loan" },
+        { "ref": "library:plan-pre-mortem-runner", "type": "skill", "use": "think", "when": "When the numbers look fine, to imagine the deal failed in a year and find the hidden bets" },
+        { "ref": "library:nassim-taleb", "type": "mind", "use": "think", "when": "When a calm record hides one event that could force a sale" },
+        { "ref": "library:agency-finance-financial-analyst", "type": "agent", "use": "check", "when": "When the model is built, to have the figures recalculated and the key assumption named" }
+      ]
+    },
+    {
+      "id": "compare-deals",
+      "task": "Compare deals side by side and build a five-year hold view",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/owner-report-and-deal-numbers", "use": "build", "when": "When two or three deals must be compared on the same rules and the same costs" },
+        { "ref": "library:deal-returns-sensitivity-builder", "type": "skill", "use": "build", "when": "When you want returns shown across purchase price, debt, sale price and years held" },
+        { "ref": "library:business-investment-analyst", "type": "skill", "use": "check", "when": "When the client asks which deal to pick, to get payback and return with risks flagged" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before the comparison is shared, to check totals and state the key figures in plain words" }
+      ]
+    },
+    {
+      "id": "pre-offer-questions",
+      "task": "List the questions to answer before an offer or a viewing",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:prepare-questions-for-a-property-viewing", "type": "workflow", "use": "build", "when": "Before a viewing, to split the listing's claims from facts and plan what to check in person" },
+        { "ref": "library:agency-real-estate-buyer-seller", "type": "agent", "use": "brief", "when": "When the client moves to an offer, to get documents, deadlines and choices from offer to closing" },
+        { "ref": "library:agency-legal-document-review", "type": "agent", "use": "check", "when": "When the home comes with a sitting tenant or a lease, to list risky terms for a lawyer" },
+        { "ref": "kit:prompts/rental-deal-stress-test", "use": "brief", "when": "When you need to know which unknowns change the numbers most, so those get asked first" }
+      ]
+    },
+    {
+      "id": "repairs-budget",
+      "task": "Plan a year of repairs and upgrades within a budget",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/repairs-and-compliance-log", "use": "brief", "when": "Before planning, to list repeat faults, ageing items and checks that fall due this year" },
+        { "ref": "library:two-plan-shapes", "type": "skill", "use": "explore", "when": "When the owner has a fixed sum, to compare two plans that spend it in different ways" },
+        { "ref": "library:cash-forecast-builder", "type": "skill", "use": "build", "when": "When you must show the owner the next 30, 60 and 90 days of rent in and bills out" },
+        { "ref": "library:business-insurance-needs-checker", "type": "skill", "use": "brief", "when": "When cover has not been reviewed, to list the risks and the questions to ask a broker" }
+      ]
+    },
+    {
+      "id": "year-end-tax-records",
+      "task": "Get rental income and costs ready for the accountant",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:self-assessment-tax-return-checklist", "type": "skill", "use": "brief", "when": "When a UK landlord files their own return, to list records, totals and accountant questions" },
+        { "ref": "library:prepare-expenses-for-your-bookkeeper", "type": "workflow", "use": "build", "when": "When the year's receipts are a pile, to get them categorised with the gaps listed" },
+        { "ref": "library:tax-set-aside-planner", "type": "skill", "use": "build", "when": "When the owner is caught short each year, to set a rule for what to put aside from each rent" },
+        { "ref": "library:bank-and-ledger-matcher", "type": "skill", "use": "check", "when": "Before the file goes to the accountant, to check the ledger agrees with the bank" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any letter or report goes out, to catch typos, wrong dates and names spelt two ways" },
+    { "ref": "library:claim-source-trace", "type": "skill", "use": "check", "when": "When a document states a rule, a deadline or a figure, to tie it to a dated source or cut it" }
+  ],
+  "helpers": [
+    { "role": "bookkeeper", "when": "When the rent ledger and bank do not agree or the year's books need closing properly" },
+    { "role": "facilities-maintenance-coordinator", "when": "When a block or large home needs a planned maintenance schedule and contractor management" },
+    { "role": "compliance-specialist", "when": "When rules outside England apply or the owner needs a full evidence file for a regulator" },
+    { "role": "short-term-rental-manager", "when": "When a home is let by the night and needs listings, guest messages and turnover plans" },
+    { "role": "real-estate-transaction-coordinator", "when": "When a purchase or sale is under way and deadlines and documents must be tracked to closing" },
+    { "role": "spreadsheet-specialist", "when": "When the deal model or rent ledger needs building as a workbook the owner can reuse" }
+  ],
+  "gaps": [
+    "No library item writes tenant notices, notices of entry or rent increase notices; only the kit covers them",
+    "No library item writes a rental listing advert or checks it against fair housing and discrimination rules",
+    "No library item sets tenant screening criteria or records how each applicant was scored",
+    "No library item builds a move-in inventory and condition report or compares it with the move-out state",
+    "No library item works out rental yield, cash flow after mortgage or a five-year hold for a property deal",
+    "No library item tracks landlord safety certificates such as gas, electrical and energy ratings by expiry date",
+    "No library item covers possession, eviction steps or tribunal papers for any country",
+    "No library item handles damp and mould reports, emergency call-outs or out-of-hours repair rules",
+    "No library item plans an arrears payment plan with a tenant or records one in writing",
+    "No library item covers property insurance claims or service charge budgets for blocks",
+    "No tool guide covers property management software such as rent ledgers and repair portals"
+  ]
+}

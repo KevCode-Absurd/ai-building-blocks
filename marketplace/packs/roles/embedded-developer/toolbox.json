@@ -1,0 +1,220 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "embedded-developer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "gadget-program",
+      "task": "Write the program for one sensor, counter or display gadget",
+      "kind": "code",
+      "items": [
+        { "ref": "library:idea-to-dev-brief-writer", "type": "skill", "use": "brief", "when": "When the client has only a rough idea and you need scope and limits written before code" },
+        { "ref": "library:agency-engineering-embedded-firmware-engineer", "type": "agent", "use": "brief", "when": "When the build uses tasks on an ESP32 or similar chip and memory and failure handling matter" },
+        { "ref": "kit:skills/non-blocking-device-program", "use": "build", "when": "When you write the sketch or script so it keeps reading, counting and showing without stalls" },
+        { "ref": "kit:prompts/library-and-version-check", "use": "check", "when": "Before the client builds it, to confirm every library and board version really exists" },
+        { "ref": "library:test-list-writer", "type": "skill", "use": "check", "when": "When the program is drafted, to list the cases to try on the bench, smallest first" },
+        { "ref": "library:steve-wozniak", "type": "mind", "use": "think", "when": "When the design has grown parts it does not need, to cut it to the fewest that do the job" }
+      ]
+    },
+    {
+      "id": "new-gadget",
+      "task": "Take a new gadget from brief to a working test",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:workflows/new-gadget-from-brief-to-working-test", "use": "build", "when": "When a client asks for a new counter, logger, queue light, display or sensor alarm" },
+        { "ref": "library:task-breakdown-planner", "type": "skill", "use": "brief", "when": "When the build is more than one evening's work and needs small ordered steps with a check each" },
+        { "ref": "library:test-plan-writer", "type": "skill", "use": "check", "when": "When the client needs to know what will be tested, at what level and what is left out" },
+        { "ref": "library:failure-first-plan-check", "type": "skill", "use": "check", "when": "Before parts are ordered, to list how the plan could fail and what to change" }
+      ]
+    },
+    {
+      "id": "device-fault",
+      "task": "Find why a board or script misbehaves and fix it",
+      "kind": "code",
+      "items": [
+        { "ref": "library:bug-evidence-plan-writer", "type": "prompt", "use": "brief", "when": "When you have the fault, the error and the code near it and need suspects ranked with a check each" },
+        { "ref": "kit:skills/device-fault-diagnosis", "use": "build", "when": "When you have code, wiring notes, photos and output and need the likely cause and the fix" },
+        { "ref": "library:bug-root-cause-finder", "type": "skill", "use": "brief", "when": "When earlier fixes did not hold and the cause must be proven before anything changes" },
+        { "ref": "library:fix-loop-breaker", "type": "skill", "use": "build", "when": "When an AI tool keeps failing at the same fix and you need a three-try plan and a way back" },
+        { "ref": "library:fix-a-bug-with-proof-and-a-clear-pull-request", "type": "workflow", "use": "build", "when": "When the code lives in a repository and the fix needs a test and a pull request" },
+        { "ref": "library:john-carmack", "type": "mind", "use": "think", "when": "When guesses pile up, to follow what the code and the signal really do step by step" }
+      ]
+    },
+    {
+      "id": "serial-log-triage",
+      "task": "Triage a serial log from a board that resets or freezes",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/serial-log-triage", "use": "build", "when": "When a board resets, freezes or reads nonsense and you have the serial output" },
+        { "ref": "library:error-and-log-debugger", "type": "skill", "use": "brief", "when": "When the log is from a Pi script or service and holds a Python error or stack trace" },
+        { "ref": "kit:skills/device-fault-diagnosis", "use": "build", "when": "When the log points at wiring or power and the code must be read beside it" }
+      ]
+    },
+    {
+      "id": "pin-table-wiring",
+      "task": "Build a pin table and wiring guide",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/pin-table-and-wiring-guide", "use": "build", "when": "When a low-voltage gadget needs each pin, wire and part value written out plainly" },
+        { "ref": "library:diagram-maker", "type": "skill", "use": "build", "when": "When the guide needs a simple block picture of what connects to what" },
+        { "ref": "library:circuit-design-verification-planner", "type": "skill", "use": "check", "when": "Before power-on, to check part limits with worst-case sums and plan staged bench tests" },
+        { "ref": "library:units-and-error-margin-checker", "type": "skill", "use": "check", "when": "When resistor, current or divider sums must have units and margins checked" }
+      ]
+    },
+    {
+      "id": "circuit-check",
+      "task": "Check a circuit and power budget before power-on",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:circuit-design-verification-planner", "type": "skill", "use": "check", "when": "When you have the real circuit and part sheets and need limits, sums and a bench plan" },
+        { "ref": "library:agency-engineering-electrical-engineer", "type": "agent", "use": "check", "when": "When wire sizes, supply ratings or standards need a second, checked calculation" },
+        { "ref": "kit:skills/pin-table-and-wiring-guide", "use": "build", "when": "When the check changes a pin or part and the table must be redone" }
+      ]
+    },
+    {
+      "id": "wiring-readme",
+      "task": "Write a wiring and set-up README for a kit or gadget",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/wiring-guide-readme", "use": "build", "when": "When the gadget works and a customer or colleague must set it up without help" },
+        { "ref": "library:code-walkthrough-writer", "type": "skill", "use": "build", "when": "When buyers of a kit should understand the code, with each part beside its reason" },
+        { "ref": "library:write-docs-a-new-developer-can-follow-on-day-one", "type": "workflow", "use": "build", "when": "When the project is a repository another developer will take over" },
+        { "ref": "library:readme-first-run-tester", "type": "skill", "use": "check", "when": "When the README is drafted, to follow each step and mark it working or broken" },
+        { "ref": "library:richard-feynman", "type": "mind", "use": "think", "when": "When a step only makes sense to you, to explain it with a plain example a beginner follows" }
+      ]
+    },
+    {
+      "id": "pi-start-on-boot",
+      "task": "Set a Raspberry Pi script to start on boot with logs",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/pi-script-start-on-boot", "use": "build", "when": "When a script works by hand and must start on boot, restart on a crash and keep logs" },
+        { "ref": "library:safe-shutdown-code-writer", "type": "skill", "use": "build", "when": "When the script must finish a write or close a device cleanly when it is stopped" },
+        { "ref": "library:schedule-timing-checker", "type": "skill", "use": "check", "when": "When part of the job runs on a cron line, to see its next run times and catch mistakes" }
+      ]
+    },
+    {
+      "id": "library-version-check",
+      "task": "Check libraries, cores and versions before a build",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/library-and-version-check", "use": "check", "when": "Before building someone else's project, upgrading a core, or trusting AI-written firmware" },
+        { "ref": "library:library-change-finder", "type": "skill", "use": "check", "when": "When a Pi project is Python and its libraries changed after the AI tool was trained" },
+        { "ref": "library:docs-backed-coder", "type": "skill", "use": "check", "when": "When a call looks made up and must be checked against the official docs, with sources" },
+        { "ref": "library:major-upgrade-planner", "type": "skill", "use": "build", "when": "When a core or SDK jump could break the build and needs stages with a test each" }
+      ]
+    },
+    {
+      "id": "firmware-review",
+      "task": "Review AI-written or inherited firmware",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:ai-written-code-reviewer", "type": "skill", "use": "check", "when": "When an AI wrote the firmware fast and you want the few risks that will hurt later" },
+        { "ref": "library:agency-engineering-code-reviewer", "type": "agent", "use": "check", "when": "When a change needs a ranked review of bugs, tests and clarity" },
+        { "ref": "kit:prompts/library-and-version-check", "use": "check", "when": "When the code uses libraries nobody has checked exist at that version" },
+        { "ref": "library:code-refactor-planner", "type": "skill", "use": "build", "when": "When one long loop must be split into small parts without changing what it does" }
+      ]
+    },
+    {
+      "id": "firmware-update-plan",
+      "task": "Plan how a connected product gets firmware updates",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/firmware-update-and-release-plan", "use": "build", "when": "When a product in other people's hands needs a safe way to receive each new release" },
+        { "ref": "library:agency-engineering-iot-fleet-engineer", "type": "agent", "use": "brief", "when": "When many devices are in the field, some offline, and stages and health checks are needed" },
+        { "ref": "library:firmware-update-recovery-rehearsal", "type": "workflow", "use": "check", "when": "Before trusting the update path, to plan failure tests and review the recovery evidence" },
+        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When the plan assumes power and signal never drop mid-update, to design for when they do" }
+      ]
+    },
+    {
+      "id": "staged-rollout",
+      "task": "Roll out a firmware change in stages",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/staged-firmware-rollout", "use": "build", "when": "When a fix or feature is ready for devices other people own" },
+        { "ref": "library:copilot-devops-rollout-plan", "type": "skill", "use": "build", "when": "When you need preflight checks, stage sizes and the health signals that stop the rollout" },
+        { "ref": "library:release-notes-writer", "type": "skill", "use": "build", "when": "When owners need to know what changed in this version, from the commits" },
+        { "ref": "library:turn-an-incident-into-a-safer-procedure", "type": "workflow", "use": "build", "when": "When an update went wrong and the lesson must change the procedure" }
+      ]
+    },
+    {
+      "id": "connected-product-security",
+      "task": "List security and marking gaps before a product is sold",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/connected-product-security-questions", "use": "build", "when": "When a connected gadget is about to be sold and you need questions for the test lab" },
+        { "ref": "library:iot-security-check", "type": "skill", "use": "check", "when": "When it will be sold in the EU and you need its risk class, duties and reporting steps" },
+        { "ref": "library:threat-list-maker", "type": "prompt", "use": "brief", "when": "When nobody has listed how the device, its app and its cloud could be attacked" },
+        { "ref": "library:dependency-risk-scanner", "type": "skill", "use": "check", "when": "When a buyer or rule asks for a software parts list and known weak packages" },
+        { "ref": "library:bruce-schneier", "type": "mind", "use": "think", "when": "When a protection is proposed, to ask what it guards, what it costs and what stays open" }
+      ]
+    },
+    {
+      "id": "parts-and-cost",
+      "task": "List the parts and cost the build",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:product-bill-of-materials-builder", "type": "skill", "use": "build", "when": "When a kit or product needs a cost sheet by part with price-break questions" },
+        { "ref": "library:electronics-parts-sourcing", "type": "skill", "use": "check", "when": "When one hard-to-get part could stall a batch and second sources are needed" },
+        { "ref": "library:tech-stack-comparer", "type": "skill", "use": "explore", "when": "When two or three boards could do the job and need a side-by-side with a pick" }
+      ]
+    },
+    {
+      "id": "readings-dashboard",
+      "task": "Log readings and show them on a simple dashboard",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/non-blocking-device-program", "use": "build", "when": "When the device must keep reading and saving on time while it also sends data" },
+        { "ref": "library:api-connector-builder", "type": "skill", "use": "build", "when": "When readings go to an online service and the Pi needs sign-in, retries and error handling" },
+        { "ref": "library:dashboard-builder", "type": "skill", "use": "build", "when": "When logged readings should become one offline page of charts the owner can open" },
+        { "ref": "library:units-and-error-margin-checker", "type": "skill", "use": "check", "when": "When raw counts are turned into degrees, volts or litres and the sums need checking" }
+      ]
+    },
+    {
+      "id": "kit-help-page",
+      "task": "Write a troubleshooting page for people who bought a kit",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:solved-ticket-help-page-writer", "type": "skill", "use": "build", "when": "When one solved buyer problem should become a page with steps and what they should see" },
+        { "ref": "library:help-article-writer", "type": "skill", "use": "build", "when": "When many buyer questions need clear, searchable answers" },
+        { "ref": "kit:skills/device-fault-diagnosis", "use": "brief", "when": "When you first need the real causes behind the faults buyers report" }
+      ]
+    },
+    {
+      "id": "mount-or-case",
+      "task": "Draft a simple mount or case for the board",
+      "kind": "other",
+      "items": [
+        { "ref": "library:lab-hardware-designer", "type": "skill", "use": "build", "when": "When a bracket or simple case is needed as a printable file from key sizes" },
+        { "ref": "kit:skills/pin-table-and-wiring-guide", "use": "brief", "when": "Before sizing the case, to know where each connector and cable leaves the board" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:verified-code-writer", "type": "skill", "use": "build", "when": "Whenever you change a client's code, to ground each step in their real files and check it" },
+    { "ref": "library:dev-work-report-writer", "type": "skill", "use": "check", "when": "At the end of any job, to write what changed, what was tested on real hardware and what was not" }
+  ],
+  "helpers": [
+    { "role": "physical-product-developer", "when": "When the gadget is becoming a product: case, materials, makers and test lab" },
+    { "role": "backend-developer", "when": "When devices need a server, an API or a database behind them" },
+    { "role": "application-security-engineer", "when": "When a connected product needs a full review of its app, cloud and update path" },
+    { "role": "technical-writer", "when": "When a kit needs a full printed manual, not one README" },
+    { "role": "mobile-app-developer", "when": "When the gadget needs a phone app to set it up or read it" },
+    { "role": "compliance-specialist", "when": "When CE, UKCA, FCC or radio rules need an owner beyond a list of questions" }
+  ],
+  "gaps": [
+    "The library is thin for this role's core work: most hardware items need MATLAB, so the items listed are mostly general coding, docs and release items",
+    "No library item writes an Arduino sketch, ESP32 program or Raspberry Pi script; only the kit does",
+    "No library item writes FreeRTOS or Zephyr tasks, queues and timers, or checks stack and heap use",
+    "No library item draws a wiring diagram or breadboard layout from a pin table",
+    "No library item works out a power budget or battery life for a small device",
+    "No library item helps choose a board, sensor or display for a job and a budget",
+    "No library item covers MQTT, Home Assistant, ESPHome or sending readings to a cloud dashboard",
+    "No library item covers Bluetooth or Wi-Fi set-up on a device without MATLAB",
+    "No library item writes host-side unit tests or a hardware-in-the-loop test for firmware",
+    "No library item filters or calibrates sensor readings in C or Python on the device",
+    "No library item covers CE, UKCA, FCC or radio approval steps for a small maker",
+    "No library item makes a case with cut-outs for a named board; the one design item is for lab parts",
+    "The case task has no item that offers different designs to compare or checks fit before printing"
+  ]
+}

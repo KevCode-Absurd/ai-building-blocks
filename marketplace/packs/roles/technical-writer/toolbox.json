@@ -1,0 +1,298 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "technical-writer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "help-articles",
+      "task": "Write help articles from support tickets",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:research-theme-synthesizer", "type": "skill", "use": "brief", "when": "When you have a pile of tickets, to rank the questions by how often they come up" },
+        { "ref": "kit:skills/help-centre-articles-from-tickets", "use": "build", "when": "When you know the top questions and need articles written in the customer's words" },
+        { "ref": "library:solved-ticket-help-page-writer", "type": "skill", "use": "build", "when": "When one solved ticket should become a page with steps and what the reader should see" },
+        { "ref": "library:answer-first-page-rewriter", "type": "skill", "use": "explore", "when": "When a page opens with background, to compare a version that gives the answer first" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When a draft uses the team's inside words instead of the words customers type" }
+      ]
+    },
+    {
+      "id": "readme-setup-guide",
+      "task": "Write a README and setup guide for a project",
+      "kind": "code",
+      "items": [
+        { "ref": "library:write-docs-a-new-developer-can-follow-on-day-one", "type": "workflow", "use": "brief", "when": "When you get a codebase with no docs and need a guided run from code read to tested README" },
+        { "ref": "library:readme-and-decision-interviewer", "type": "skill", "use": "brief", "when": "When only one person knows how the project runs and the facts must be asked out of them" },
+        { "ref": "kit:skills/readme-and-setup-guide", "use": "build", "when": "When you have the code, scripts and config and need a README a new developer can follow" },
+        { "ref": "library:github-readme-improver", "type": "skill", "use": "explore", "when": "When the project is public and the README must also make a stranger want to try it" },
+        { "ref": "library:readme-first-run-tester", "type": "skill", "use": "check", "when": "When the README is drafted, to run each step and mark it working or broken with proof" },
+        { "ref": "library:grace-hopper", "type": "mind", "use": "think", "when": "When setup needs ten manual steps and some should be scripted, not documented" }
+      ]
+    },
+    {
+      "id": "api-reference",
+      "task": "Write an API reference from a spec or code",
+      "kind": "code",
+      "items": [
+        { "ref": "library:api-spec-writer", "type": "skill", "use": "brief", "when": "When there is no OpenAPI file yet and you need one made from the code before you write" },
+        { "ref": "kit:skills/api-reference-and-quickstart", "use": "build", "when": "When you have the spec, examples and error list and need a reference that works first try" },
+        { "ref": "library:error-message-rewriter", "type": "skill", "use": "build", "when": "When the error list only gives codes, to say what went wrong and what to do next" },
+        { "ref": "library:agency-testing-api-tester", "type": "agent", "use": "check", "when": "When every example must be proven, to plan test calls with edge and failure cases" },
+        { "ref": "library:documentation-checker", "type": "skill", "use": "check", "when": "Before you publish, to list claims that have drifted from what the code does" }
+      ]
+    },
+    {
+      "id": "developer-quickstart",
+      "task": "Write a quickstart that gets a developer to a first call",
+      "kind": "code",
+      "items": [
+        { "ref": "library:developer-onboarding-improver", "type": "skill", "use": "brief", "when": "Before writing, to find which sign-up and key steps slow a developer's first working call" },
+        { "ref": "kit:skills/api-reference-and-quickstart", "use": "build", "when": "When you know the shortest path and need the quickstart with copy-ready examples" },
+        { "ref": "library:developer-quickstart-writer", "type": "skill", "use": "explore", "when": "When you want a second plan to compare: quickstart, tutorial and a sample app" },
+        { "ref": "library:readme-first-run-tester", "type": "skill", "use": "check", "when": "When the quickstart is drafted, to follow it on a clean machine and log what breaks" }
+      ]
+    },
+    {
+      "id": "faq-page",
+      "task": "Write an FAQ page for a product or shop",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:customer-question-researcher", "type": "skill", "use": "brief", "when": "When the answer to a question is buried in old tickets and docs and must be found first" },
+        { "ref": "library:faq-page-from-questions-writer", "type": "prompt", "use": "build", "when": "When you have real questions and the owner's answers and need one findable FAQ page" },
+        { "ref": "kit:skills/help-centre-articles-from-tickets", "use": "build", "when": "When some answers are too long for an FAQ and need their own article" },
+        { "ref": "library:hard-questions-faq-writer", "type": "skill", "use": "explore", "when": "When the product is new and has no tickets yet, to predict the hard questions people will ask" },
+        { "ref": "library:answer-first-page-rewriter", "type": "skill", "use": "check", "when": "When the page is drafted, to put each answer first and list facts that still need a source" }
+      ]
+    },
+    {
+      "id": "product-manual",
+      "task": "Write a user manual for a physical product",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:questionnaire-writer", "type": "skill", "use": "brief", "when": "When the engineer holds the facts, to send questions aimed at what only they know" },
+        { "ref": "kit:skills/product-manual-and-quick-start", "use": "build", "when": "When you have specs, a parts list and support questions and need the full manual" },
+        { "ref": "library:creative-shoot-briefer", "type": "skill", "use": "build", "when": "When an illustrator or photographer must make the step pictures and needs a clear brief" },
+        { "ref": "library:don-norman", "type": "mind", "use": "think", "when": "When users keep making the same mistake and the manual blames them, not the product's cues" },
+        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When a wrong step could hurt someone and the warnings must come before the step, not after" },
+        { "ref": "library:technical-doc-proofreader", "type": "skill", "use": "check", "when": "Before layout, to catch part names used two ways, typos and jargon without rewriting" }
+      ]
+    },
+    {
+      "id": "quick-start-card",
+      "task": "Write a quick start card, assembly steps or care card",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/product-manual-and-quick-start", "use": "build", "when": "When the product needs a one-page card or numbered assembly steps with a diagram brief" },
+        { "ref": "library:ten-percent-cutter", "type": "skill", "use": "build", "when": "When the steps will not fit the card and must lose words without losing a step" },
+        { "ref": "library:mistake-proofing-designer", "type": "skill", "use": "check", "when": "When returns come from one wrong step, to make that step hard to get wrong" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the card will be translated, to cut idioms and long sentences first" }
+      ]
+    },
+    {
+      "id": "troubleshooting-chart",
+      "task": "Build a troubleshooting chart",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:research-theme-synthesizer", "type": "skill", "use": "brief", "when": "When you have returns reasons, reviews and tickets, to rank the faults by how common they are" },
+        { "ref": "kit:prompts/troubleshooting-chart", "use": "build", "when": "When you know the common faults and need a symptom, cause and fix table" },
+        { "ref": "library:mermaid-chart-writer", "type": "skill", "use": "explore", "when": "When a table gets long, to try the same faults as a yes or no decision tree" },
+        { "ref": "library:error-message-rewriter", "type": "skill", "use": "build", "when": "When the product shows error codes, to explain each one and its next step" },
+        { "ref": "library:technical-doc-proofreader", "type": "skill", "use": "check", "when": "When the chart is done, to check each part and light is named the same way throughout" }
+      ]
+    },
+    {
+      "id": "release-notes",
+      "task": "Write release notes and a migration guide",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:workflows/docs-as-code-release-cycle", "use": "brief", "when": "At each release, to run the docs steps in order alongside the code" },
+        { "ref": "library:release-notes-writer", "type": "skill", "use": "brief", "when": "When the only record is the commit history, to get a first sorted list of changes" },
+        { "ref": "kit:prompts/release-notes-and-migration-guide", "use": "build", "when": "When you know what changed and who must act, to write the notes and upgrade steps" },
+        { "ref": "library:roadmap-update-writer", "type": "skill", "use": "explore", "when": "When executives, engineers and customers each need their own version of the same release" },
+        { "ref": "library:api-design-reviewer", "type": "skill", "use": "check", "when": "When the API changed, to flag breaking changes the migration guide must cover" },
+        { "ref": "library:check-a-release-and-its-docs", "type": "workflow", "use": "check", "when": "Before the release ships, to check the notes and docs match what is going out" }
+      ]
+    },
+    {
+      "id": "docstrings",
+      "task": "Add docstrings and comments to one source file",
+      "kind": "code",
+      "items": [
+        { "ref": "library:code-explainer-for-newcomers", "type": "prompt", "use": "brief", "when": "When you must understand a file before you document it, read in order for a newcomer" },
+        { "ref": "kit:prompts/docstrings-for-one-file", "use": "build", "when": "When every public function and class in one file needs a docstring and no code may change" },
+        { "ref": "library:code-comment-cleaner", "type": "skill", "use": "build", "when": "When old comments are wrong or noisy and need tidying with the logic left alone" },
+        { "ref": "library:documentation-checker", "type": "skill", "use": "check", "when": "When the comments are written, to find any that say something the code does not do" }
+      ]
+    },
+    {
+      "id": "handover-notes",
+      "task": "Write handover notes and a code tour for the next developer",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:codebase-learning-map", "type": "skill", "use": "brief", "when": "Before writing, to get an ordered map of the code and what a reader must know first" },
+        { "ref": "library:handover-note-writer", "type": "prompt", "use": "build", "when": "When a freelancer or agency hands over and the next person must run it from day one" },
+        { "ref": "library:codebase-tour-guide", "type": "skill", "use": "build", "when": "When the new developer needs a step-by-step tour that links real files and lines" },
+        { "ref": "library:readme-first-run-tester", "type": "skill", "use": "check", "when": "Before handover, to prove the run steps work for someone who is not the author" }
+      ]
+    },
+    {
+      "id": "decision-records",
+      "task": "Write decision records from notes and threads",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/decision-record-from-notes", "use": "build", "when": "When a choice sits in meeting notes or a pull request thread and needs a short record" },
+        { "ref": "library:decision-record-writer", "type": "skill", "use": "build", "when": "When the owner can tell you the choice and you need the options they passed on written up" },
+        { "ref": "library:readme-and-decision-interviewer", "type": "skill", "use": "brief", "when": "When nothing is written down and the reasons must be asked out a few questions at a time" },
+        { "ref": "library:project-glossary-writer", "type": "skill", "use": "build", "when": "When the records use project words a new developer will not know" }
+      ]
+    },
+    {
+      "id": "getting-started-guide",
+      "task": "Write a getting started guide for an app or service",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/help-centre-articles-from-tickets", "use": "brief", "when": "When early tickets show where new users get stuck, to pick what the guide must cover" },
+        { "ref": "library:product-how-to-guide-writer", "type": "skill", "use": "build", "when": "When you have product facts and user problems and need short numbered routines" },
+        { "ref": "library:in-app-tour-designer", "type": "skill", "use": "explore", "when": "When a page may not be read, to compare a short in-app tour that teaches the same steps" },
+        { "ref": "library:make-onboarding-instructions-match-the-product", "type": "workflow", "use": "check", "when": "When the guide is drafted, to walk the product and fix steps and labels that do not match" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the guide assumes words a first-day user has not met yet" }
+      ]
+    },
+    {
+      "id": "docs-audit",
+      "task": "Audit existing docs for gaps, drift and stale pages",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/docs-gap-audit", "use": "check", "when": "Before writing anything new, or once a quarter, to list what is missing, stale or doubled" },
+        { "ref": "library:copilot-docs-sync-audit", "type": "skill", "use": "check", "when": "When a feature changed, to trace which pages and steps the change made out of date" },
+        { "ref": "library:documentation-checker", "type": "skill", "use": "check", "when": "When one README or page is in doubt, to list false claims and weak spots" },
+        { "ref": "library:monthly-developer-docs-keeper", "type": "agent", "use": "check", "when": "When developer docs need a standing monthly pass for stale pages and broken steps" },
+        { "ref": "library:sop-and-runbook-checker", "type": "skill", "use": "check", "when": "When the docs are an internal wiki, to find pages with no owner and missing procedures" }
+      ]
+    },
+    {
+      "id": "api-design-review",
+      "task": "Review an API design from its spec",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:api-design-reviewer", "type": "skill", "use": "check", "when": "When you have the spec, to score naming, errors and consistency and flag breaking changes" },
+        { "ref": "library:risky-design-reviewer", "type": "skill", "use": "check", "when": "When an endpoint is easy to misuse, to find the parts that lead to security mistakes" },
+        { "ref": "library:agency-engineering-api-platform-engineer", "type": "agent", "use": "brief", "when": "When the API will be public and needs a versioning policy, rate limits and contract rules" }
+      ]
+    },
+    {
+      "id": "help-centre-review",
+      "task": "Run a monthly help centre review",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/monthly-help-centre-review", "use": "build", "when": "In the first week of each month, for any business with a help centre or FAQ page" },
+        { "ref": "library:monthly-help-centre-keeper", "type": "agent", "use": "build", "when": "When the client wants the review to run itself from last month's tickets" },
+        { "ref": "library:support-chatbot-conversation-review", "type": "skill", "use": "check", "when": "When a chatbot answers from the help pages, to find the questions it missed or got wrong" },
+        { "ref": "library:research-theme-synthesizer", "type": "skill", "use": "brief", "when": "When the month's tickets must be sorted into themes before you pick pages to fix" }
+      ]
+    },
+    {
+      "id": "docs-structure",
+      "task": "Plan a documentation structure and style guide",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/docs-gap-audit", "use": "brief", "when": "Before the plan, to see what exists and what readers cannot find" },
+        { "ref": "library:documentation-system-planner", "type": "skill", "use": "build", "when": "When a team asks what to write down, where it lives and who keeps it fresh" },
+        { "ref": "library:site-map-planner", "type": "skill", "use": "build", "when": "When the help centre needs a page tree, menu and links readers can find their way through" },
+        { "ref": "library:voice-and-tone-guide-writer", "type": "skill", "use": "build", "when": "When several people write the docs and need tone rules, word lists and examples" },
+        { "ref": "library:project-glossary-writer", "type": "skill", "use": "build", "when": "When the same thing has three names across pages and one term must be chosen" }
+      ]
+    },
+    {
+      "id": "policy-page",
+      "task": "Write a plain-language policy page",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:store-policy-checker", "type": "skill", "use": "check", "when": "Before and after the rewrite, to find gaps, clashes and unclear wording in the policies" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "build", "when": "When the policy is correct but written in legal words customers do not read" },
+        { "ref": "library:george-orwell", "type": "mind", "use": "think", "when": "When a vague phrase hides what the policy really does to the customer" }
+      ]
+    },
+    {
+      "id": "design-document",
+      "task": "Write a technical design document",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:system-design-planner", "type": "skill", "use": "brief", "when": "When the design is not settled, to lay out the choice, diagrams and trade-offs first" },
+        { "ref": "library:technical-writer", "type": "skill", "use": "build", "when": "When the engineers have decided and you must write it up for readers outside the team" },
+        { "ref": "library:mermaid-chart-writer", "type": "skill", "use": "build", "when": "When the document needs a flow or data diagram that lives as text beside the docs" },
+        { "ref": "library:donald-knuth", "type": "mind", "use": "think", "when": "When the explanation is correct but hard to follow, and one small worked example would fix it" },
+        { "ref": "library:design-review-panel", "type": "skill", "use": "check", "when": "When the document is drafted, to have it tested for hidden assumptions and ways to fail" }
+      ]
+    },
+    {
+      "id": "procedures-runbooks",
+      "task": "Write an internal procedure or runbook",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When a team's way of working must become a flowchart and a written procedure with edge cases" },
+        { "ref": "library:repeat-task-step-guide-writer", "type": "skill", "use": "build", "when": "When one repeat task needs exact steps, fixes if it fails and how to roll back" },
+        { "ref": "library:set-up-a-documentation-system-and-write-sops-that-pass-a-check", "type": "workflow", "use": "brief", "when": "When the team has no procedures at all and needs a system and the first set written" },
+        { "ref": "library:sop-and-runbook-checker", "type": "skill", "use": "check", "when": "When procedures exist, to find missing owners, stale steps and gaps" }
+      ]
+    },
+    {
+      "id": "interface-text",
+      "task": "Rewrite error messages and interface text",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:write-helpful-error-and-empty-states", "type": "workflow", "use": "brief", "when": "When an app's errors and empty screens need listing in full before any rewording" },
+        { "ref": "library:error-message-rewriter", "type": "skill", "use": "build", "when": "When error messages blame the user or give a code and nothing to do next" },
+        { "ref": "library:interface-microcopy-writer", "type": "skill", "use": "explore", "when": "When labels and buttons need a friendlier voice, to compare with the plain version" },
+        { "ref": "library:usability-heuristic-reviewer", "type": "skill", "use": "check", "when": "When the new text is in place, to score the screen and rank what still confuses" }
+      ]
+    },
+    {
+      "id": "diagrams-and-pictures",
+      "task": "Make diagrams and plan pictures for docs",
+      "kind": "other",
+      "items": [
+        { "ref": "library:mermaid-chart-writer", "type": "skill", "use": "build", "when": "When a flow or system should be a text diagram that can be pasted into the docs" },
+        { "ref": "library:diagram-maker", "type": "skill", "use": "build", "when": "When the page needs a clean picture file of a system or process" },
+        { "ref": "library:screen-capture-taker", "type": "skill", "use": "build", "when": "When a help page needs fresh screenshots of the product in a browser" },
+        { "ref": "library:creative-shoot-briefer", "type": "skill", "use": "brief", "when": "When an illustrator will draw the pictures and needs one brief for the set" }
+      ]
+    },
+    {
+      "id": "api-connection-plan",
+      "task": "Plan how an API connects to another tool or AI assistant",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:turn-an-api-into-a-safe-mcp-server-others-can-install", "type": "workflow", "use": "brief", "when": "When the client wants AI assistants to use their API and needs the steps and safety checks" },
+        { "ref": "library:api-to-mcp-server-builder", "type": "skill", "use": "build", "when": "When the plan is agreed and a first connector must be made from the API spec" },
+        { "ref": "library:llms-txt-writer", "type": "skill", "use": "build", "when": "When AI tools should find the right docs pages, to write the guide file that points to them" },
+        { "ref": "library:mcp-attack-defence-reviewer", "type": "skill", "use": "check", "when": "Before anyone installs the connector, to rank the ways it could be misused and the fixes" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:technical-doc-proofreader", "type": "skill", "use": "check", "when": "Before any doc is published, to list typos, term clashes and jargon without rewriting it" },
+    { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When a page is for customers and reads like it was written for the team" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a page states a limit, date, price or standard you cannot trace to the client's files" }
+  ],
+  "helpers": [
+    { "role": "software-engineer", "when": "When code samples or setup steps must be run and fixed, not only written down" },
+    { "role": "translator", "when": "When the manual or help centre must ship in a second language" },
+    { "role": "presentation-designer", "when": "When a manual or quick start card needs page layout and print-ready files" },
+    { "role": "customer-support-specialist", "when": "When the job needs ticket exports sorted or saved replies written to match the new pages" },
+    { "role": "compliance-specialist", "when": "When a manual needs safety warnings, marks or legal wording checked against the rules" },
+    { "role": "ux-designer", "when": "When the real fix is the screen or the first-use flow, not the words that explain it" }
+  ],
+  "gaps": [
+    "No library item writes a user manual, quick start card, assembly steps or care card for a physical product; only the kit covers them",
+    "No library item writes safety warnings and hazard labels for a manual or checks them against product safety rules",
+    "No library item briefs an exploded diagram or step drawing, or plans and labels screenshots for a help page",
+    "No library item offers two or three structures for a manual, policy page or troubleshooting chart to compare",
+    "No library item tests customer instructions by following each step the way the first-run tester does for a README",
+    "No library item writes a migration guide or a deprecation notice; the release items stop at the changelog",
+    "No library item measures the reading grade of a help page or checks text is ready for translation",
+    "No library item finds broken links, old screenshots and out-of-date steps across a help centre",
+    "No library item writes a documentation style guide with a word list, heading rules and example pages",
+    "No library item sets up a docs site or a docs-as-code build; only the kit's release cycle covers the routine",
+    "No library item writes a plain-language warranty or terms summary; the policy items only check or draft legal text"
+  ]
+}

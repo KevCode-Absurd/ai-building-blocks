@@ -1,0 +1,291 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "ux-designer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "usability-review",
+      "task": "Review a page, screen or flow for usability",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/usability-review", "use": "check", "when": "When you review a flow step by step as a named user and rank each problem by severity" },
+        { "ref": "library:usability-heuristic-reviewer", "type": "skill", "use": "check", "when": "When the client wants a quick score out of 100 with each usability break and ranked fixes" },
+        { "ref": "library:everyday-usability-reviewer", "type": "skill", "use": "check", "when": "When people cannot tell what is clickable or what just happened after they act" },
+        { "ref": "library:decision-friction-auditor", "type": "skill", "use": "check", "when": "When people stall at a choice, to find where layout, defaults or order stop them" },
+        { "ref": "library:page-usability-review", "type": "workflow", "use": "check", "when": "When the review should end with a one-morning test with three people" },
+        { "ref": "library:steve-krug", "type": "mind", "use": "think", "when": "When the screen makes people stop and think about what to do next" }
+      ]
+    },
+    {
+      "id": "persona-walkthrough",
+      "task": "Walk through a flow as three types of user",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:user-persona-and-path-mapper", "type": "skill", "use": "brief", "when": "Before the walkthrough, to turn research notes into the user types and their paths" },
+        { "ref": "library:agency-design-persona-walkthrough", "type": "agent", "use": "check", "when": "When you want to see what a visitor thinks at each scroll and where they doubt or leave" },
+        { "ref": "kit:skills/usability-review", "use": "check", "when": "When each user type must be taken through the flow step by step with severity ratings" },
+        { "ref": "library:kat-holmes", "type": "mind", "use": "think", "when": "When all three user types look alike, to ask who cannot take part at all" }
+      ]
+    },
+    {
+      "id": "usability-test-plan",
+      "task": "Plan a small usability test for one flow",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/usability-test-plan", "use": "build", "when": "When you have a prototype or live flow and want to watch real people try it" },
+        { "ref": "library:small-usability-test-planner", "type": "skill", "use": "build", "when": "When the test must fit one morning, with tasks, a script and a fix list" },
+        { "ref": "library:usability-test-runner", "type": "skill", "use": "build", "when": "When you also need moderator notes and a findings summary format" },
+        { "ref": "kit:workflows/test-a-flow-before-build", "use": "brief", "when": "When the test is part of getting a flow ready for development" }
+      ]
+    },
+    {
+      "id": "prototype-pre-test-check",
+      "task": "Check a prototype before user testing",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:check-a-prototype-before-user-testing", "type": "workflow", "use": "check", "when": "Before sessions, to find test blockers and reword any task that leads the user" },
+        { "ref": "kit:workflows/test-a-flow-before-build", "use": "build", "when": "When a new flow is about to go to development and must be tested first" },
+        { "ref": "kit:skills/usability-review", "use": "check", "when": "Before recruiting anyone, to fix the obvious problems so sessions find the hidden ones" },
+        { "ref": "library:figma-ai", "type": "tool", "use": "build", "when": "When there is no prototype yet and you need a clickable one to test" }
+      ]
+    },
+    {
+      "id": "session-findings",
+      "task": "Turn test sessions or complaints into ranked findings",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/session-notes-to-findings", "use": "build", "when": "When sessions are done and you need problems, how many hit each one and fixes" },
+        { "ref": "library:research-theme-synthesizer", "type": "skill", "use": "build", "when": "When you have interviews, surveys or tickets and need themes ranked with quotes" },
+        { "ref": "library:turn-user-complaints-into-design-questions", "type": "workflow", "use": "build", "when": "When the input is complaints, to get a theme map and ranked design questions" },
+        { "ref": "library:feedback-pile-sorter", "type": "skill", "use": "check", "when": "When one loud voice may be skewing the list, to rank by what most users need" },
+        { "ref": "library:notebooklm", "type": "tool", "use": "brief", "when": "When there are many transcripts and you need to ask questions across them" }
+      ]
+    },
+    {
+      "id": "design-review-fix-list",
+      "task": "Turn a design review into a fix list developers can act on",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:turn-a-design-review-into-fixes", "type": "workflow", "use": "build", "when": "When you have one screen or prototype and need issues, a revised brief and a test" },
+        { "ref": "library:new-screen-design-reviewer", "type": "agent", "use": "check", "when": "When new screens arrive often, to get a ready, fix-first or rethink call on each" },
+        { "ref": "library:design-feedback-giver", "type": "skill", "use": "check", "when": "When the input is a mockup or Figma link and you want hierarchy and consistency notes" },
+        { "ref": "library:agency-product-sprint-prioritizer", "type": "agent", "use": "build", "when": "When the fix list is long and the team must pick what fits the next sprint" }
+      ]
+    },
+    {
+      "id": "wireframe-spec",
+      "task": "Write a text wireframe spec for an app or flow",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:user-flow-mapper", "type": "skill", "use": "brief", "when": "Before the screens, to map the steps, choices, error states and drop-off points" },
+        { "ref": "library:user-flow-designer", "type": "skill", "use": "explore", "when": "When the flow is open, to get a second route built on proven patterns to compare" },
+        { "ref": "kit:skills/text-wireframe-spec", "use": "build", "when": "When a feature list must become a screen list, flow map and per-screen spec in words" },
+        { "ref": "library:wireframe-drafter", "type": "skill", "use": "build", "when": "When you want text wireframes at three levels of detail for different screen sizes" },
+        { "ref": "library:screen-states-designer", "type": "skill", "use": "build", "when": "When a screen has only its happy path, to add empty, loading, error and offline" },
+        { "ref": "library:don-norman", "type": "mind", "use": "think", "when": "When a screen gives no cue about what to do or no feedback after an action" },
+        { "ref": "kit:skills/usability-review", "use": "check", "when": "When the spec is drafted, to walk it as a first-time user before anyone builds it" }
+      ]
+    },
+    {
+      "id": "website-wireframes",
+      "task": "Write text wireframes for a small website",
+      "kind": "web_page",
+      "items": [
+        { "ref": "kit:skills/site-structure-and-navigation", "use": "brief", "when": "Before any page, to agree the page tree and menu from what visitors come to do" },
+        { "ref": "kit:skills/text-wireframe-spec", "use": "build", "when": "When each page needs its one job, layout zones and exact words written out" },
+        { "ref": "library:wireframe-drafter", "type": "skill", "use": "explore", "when": "When you want a rough version first to compare page layouts before the detail" },
+        { "ref": "library:page-design-standards-checker", "type": "skill", "use": "check", "when": "When a page is drafted, to check hierarchy, spacing and how it works on mobile" }
+      ]
+    },
+    {
+      "id": "component-spec-sheet",
+      "task": "Write a component spec sheet for an interface",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:give-developers-a-complete-component-brief", "type": "workflow", "use": "build", "when": "When one component needs variants, states, accessible behaviour and tokens in a brief" },
+        { "ref": "kit:skills/text-wireframe-spec", "use": "build", "when": "When the components come from the screens and need exact labels and behaviour" },
+        { "ref": "library:design-handoff-completeness-assistant", "type": "agent", "use": "check", "when": "Before handoff, to find the states and variants still missing" }
+      ]
+    },
+    {
+      "id": "site-structure",
+      "task": "Plan a site structure, main menu, footer and mobile menu",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:page-keep-or-cut-auditor", "type": "skill", "use": "brief", "when": "When the site grew without a plan, to mark each page keep, merge, redirect or delete" },
+        { "ref": "kit:skills/site-structure-and-navigation", "use": "build", "when": "When you rank top tasks, group pages by task and write labels in visitors' words" },
+        { "ref": "library:site-map-planner", "type": "skill", "use": "explore", "when": "When you want a second page tree with a URL and internal link plan to compare" },
+        { "ref": "library:collections-and-menu-planner", "type": "skill", "use": "build", "when": "When the site is a store and the menu depends on collections and filters" },
+        { "ref": "library:click-choice-clarity-checker", "type": "skill", "use": "check", "when": "When the menu is drafted, to rate each label and rewrite the unclear ones" }
+      ]
+    },
+    {
+      "id": "navigation-audit",
+      "task": "Audit and fix navigation and labels on a live site",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/fix-site-navigation", "use": "build", "when": "When visitors cannot find key pages or the team is arguing about the menu" },
+        { "ref": "library:competitor-site-audit", "type": "skill", "use": "brief", "when": "When the client asks what similar sites do, to set the bar their menu must meet" },
+        { "ref": "library:click-choice-clarity-checker", "type": "skill", "use": "check", "when": "When you have the current menu, to score each choice out of 100" },
+        { "ref": "library:plain-words-interface-rewriter", "type": "skill", "use": "build", "when": "When labels use internal terms, to rewrite them in the words users already say" }
+      ]
+    },
+    {
+      "id": "findability-test",
+      "task": "Plan a findability test for a menu or page tree",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/site-structure-and-navigation", "use": "brief", "when": "Before the test, to list the top tasks people must be able to find" },
+        { "ref": "kit:prompts/usability-test-plan", "use": "build", "when": "When you write neutral find-it tasks and decide who to recruit" },
+        { "ref": "library:small-usability-test-planner", "type": "skill", "use": "build", "when": "When the test must be run in one morning with a few people and a script" }
+      ]
+    },
+    {
+      "id": "microcopy-pass",
+      "task": "Write or fix the microcopy on a screen or form",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/interface-microcopy", "use": "build", "when": "When buttons, labels, hints and confirmations must say what happens and what to do next" },
+        { "ref": "library:interface-microcopy-writer", "type": "skill", "use": "explore", "when": "When you want a second set of labels and messages in a friendlier voice to compare" },
+        { "ref": "library:plain-words-interface-rewriter", "type": "skill", "use": "build", "when": "When the text uses company terms, to swap in users' own words and read it aloud" },
+        { "ref": "library:william-zinsser", "type": "mind", "use": "think", "when": "When a line is too long for its space and every word seems needed" },
+        { "ref": "library:click-choice-clarity-checker", "type": "skill", "use": "check", "when": "When the labels are written, to rate whether each choice is clear before a click" }
+      ]
+    },
+    {
+      "id": "error-empty-states",
+      "task": "Write error and empty-state messages for a flow",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:write-helpful-error-and-empty-states", "type": "workflow", "use": "build", "when": "When you have the screens and current text and need every state listed and reworded" },
+        { "ref": "library:error-message-rewriter", "type": "skill", "use": "build", "when": "When you have a list of error messages that blame the user or say nothing useful" },
+        { "ref": "kit:skills/interface-microcopy", "use": "explore", "when": "When a hard moment needs a calm message, to write two or three versions to choose from" },
+        { "ref": "kit:prompts/accessibility-quick-check", "use": "check", "when": "When errors are shown by colour alone or are not tied to the field they refer to" }
+      ]
+    },
+    {
+      "id": "onboarding-copy",
+      "task": "Design first-use onboarding and write its copy",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:new-user-drop-off-finder", "type": "skill", "use": "brief", "when": "Before rewriting, to find the step between sign-up and first use that loses most people" },
+        { "ref": "library:first-use-onboarding-designer", "type": "skill", "use": "build", "when": "When you know the product's first win and need a flow that cuts set-up to reach it" },
+        { "ref": "library:first-run-wizard-designer", "type": "skill", "use": "explore", "when": "When a guided set-up may work better, to compare a wizard with skip options" },
+        { "ref": "kit:skills/interface-microcopy", "use": "build", "when": "When each onboarding step needs its title, one line of help and a button label" },
+        { "ref": "library:make-onboarding-instructions-match-the-product", "type": "workflow", "use": "check", "when": "When the product has changed, to check each instruction still matches the screen" }
+      ]
+    },
+    {
+      "id": "voice-and-terms-guide",
+      "task": "Write a product voice and terminology guide",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:brand-voice-guide-builder", "type": "skill", "use": "brief", "when": "When the brand's voice lives in documents and calls, to draw the rules out first" },
+        { "ref": "kit:prompts/product-voice-and-term-guide", "use": "build", "when": "When several people write interface text and need shared words and tone" },
+        { "ref": "library:draft-brand-voice-checker", "type": "skill", "use": "check", "when": "When new text is written, to find where it breaks the guide, with before and after" },
+        { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "When one thing may have two names across the product, to catch every clash" }
+      ]
+    },
+    {
+      "id": "form-and-signup",
+      "task": "Make a long form, sign-up or checkout easier to finish",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:make-a-long-form-easier-to-finish", "type": "workflow", "use": "build", "when": "When a form is long, to get a shorter field list, a new flow and a test script" },
+        { "ref": "library:signup-flow-improver", "type": "skill", "use": "build", "when": "When sign-up loses people, to cut fields and make each step's copy clearer" },
+        { "ref": "library:multi-step-form-designer", "type": "skill", "use": "explore", "when": "When one long page may work better in stages, to compare a stepped version" },
+        { "ref": "library:dieter-rams", "type": "mind", "use": "think", "when": "When every team wants its own field kept and nobody will cut one" },
+        { "ref": "library:checkout-page-auditor", "type": "skill", "use": "check", "when": "When the flow is a checkout, to rank fixes for guest checkout, fields and surprise costs" },
+        { "ref": "kit:skills/usability-review", "use": "check", "when": "When the new form is drafted, to walk it step by step before it is built" }
+      ]
+    },
+    {
+      "id": "deceptive-design-check",
+      "task": "Check a flow for deceptive design",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/deceptive-design-check", "use": "check", "when": "Before launching a sign-up, checkout, cancel or consent flow, or when asked to make leaving harder" },
+        { "ref": "library:honest-persuasion-advisor", "type": "skill", "use": "build", "when": "When a trick is removed and the team needs an honest way to make the same case" },
+        { "ref": "library:robert-cialdini", "type": "mind", "use": "think", "when": "When it is unclear whether a nudge uses real proof and limits or invented pressure" },
+        { "ref": "library:interface-principles-checker", "type": "skill", "use": "check", "when": "When the flow includes AI answers, to add trust checks to the review" }
+      ]
+    },
+    {
+      "id": "accessibility-quick-check",
+      "task": "Run a quick accessibility check on a screen or page",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/accessibility-quick-check", "use": "check", "when": "Before a design is signed off or a page goes live, to catch the common problems early" },
+        { "ref": "library:accessibility-checker", "type": "skill", "use": "check", "when": "When you can point at the page or code and want ranked problems with fixes" },
+        { "ref": "library:accessibility-standards-checker", "type": "skill", "use": "check", "when": "When the client needs gaps listed by level and notes for an accessibility statement" },
+        { "ref": "library:agency-testing-accessibility-auditor", "type": "agent", "use": "build", "when": "When the quick check finds a lot, to plan keyboard and screen reader tests" }
+      ]
+    },
+    {
+      "id": "research-plan",
+      "task": "Plan user interviews or research for one question",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:user-research-planner", "type": "skill", "use": "brief", "when": "When you know what you need to learn but not which research method fits" },
+        { "ref": "library:interview-and-research-planner", "type": "skill", "use": "build", "when": "When the method is interviews and you need recruiting, a guide and synthesis steps" },
+        { "ref": "library:jobs-to-be-done-framer", "type": "skill", "use": "brief", "when": "When the question is why people use the product at all, to frame it as jobs" }
+      ]
+    },
+    {
+      "id": "personas-and-journey",
+      "task": "Map personas and the user journey from research",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:customer-research-analyst", "type": "skill", "use": "brief", "when": "When you have raw interviews or tickets and need the patterns and users' own words" },
+        { "ref": "library:user-persona-and-path-mapper", "type": "skill", "use": "build", "when": "When research notes must become personas, a path map and a test plan" },
+        { "ref": "library:customer-path-blueprint-maker", "type": "skill", "use": "build", "when": "When each step needs its touchpoints, friction and the systems behind it" },
+        { "ref": "library:job-story-writer", "type": "skill", "use": "build", "when": "When a finding must become a short story the team can design and test against" }
+      ]
+    },
+    {
+      "id": "drop-off-and-proof",
+      "task": "Find where users leave a flow and prove the fix works",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:find-where-new-users-leave-and-prove-the-fix-works", "type": "workflow", "use": "build", "when": "When new users leave early and you need the leak, one fix and a way to measure it" },
+        { "ref": "library:conversion-funnel-analyst", "type": "skill", "use": "brief", "when": "When you have an event log, to see conversion and drop-off at each step" },
+        { "ref": "library:agency-project-management-experiment-tracker", "type": "agent", "use": "build", "when": "When the fix will be tested, to set sample size and stop rules before launch" },
+        { "ref": "library:a-b-test-verdict-maker", "type": "skill", "use": "check", "when": "When test data is in, to check the split and make a ship call with a range" }
+      ]
+    },
+    {
+      "id": "chatbot-and-ai-flows",
+      "task": "Design a chatbot or AI assistant flow",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:chatbot-conversation-designer", "type": "skill", "use": "build", "when": "When a chatbot needs its questions, error recovery and fallbacks mapped" },
+        { "ref": "library:ai-assistant-style-guide", "type": "skill", "use": "explore", "when": "When the screen is chat-first, to see a version with few controls and clear outcomes" },
+        { "ref": "library:ai-approval-gate-designer", "type": "skill", "use": "build", "when": "When the assistant can act, to set which actions need a person to approve" },
+        { "ref": "library:interface-principles-checker", "type": "skill", "use": "check", "when": "When the flow is drafted, to check it against named principles and AI trust checks" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before writing product words that must match the client's live site and voice" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a spec or copy deck is sent, to catch typos and terms used two ways" }
+  ],
+  "helpers": [
+    { "role": "ui-designer", "when": "When the flow is agreed and the screens need type, colour, spacing and states" },
+    { "role": "accessibility-specialist", "when": "When the product needs a full audit against the standard, not a quick check" },
+    { "role": "customer-insights-researcher", "when": "When the job needs a larger study: many interviews, a survey or a segment analysis" },
+    { "role": "product-analyst", "when": "When drop-off must be measured from event data before and after the fix" },
+    { "role": "frontend-developer", "when": "When the wireframes or copy must be built or the fix list applied in code" },
+    { "role": "conversion-copywriter", "when": "When the page is a sales or landing page and the words must sell, not only guide" }
+  ],
+  "gaps": [
+    "No library item plans a card sort, tree test or first-click test; only the kit's general test plan covers findability",
+    "No library item checks a flow for deceptive design or dark patterns, or designs a fair cookie consent banner; only the kit prompt does",
+    "No library item audits buttons and labels across a whole product; the label checker works on one menu or screen",
+    "No library item checks the reading level of interface text",
+    "No library item plans the structure of an app: sections, tabs and where each feature lives",
+    "No library item turns a text wireframe into a picture or clickable draft to show a client",
+    "No library item writes a recruiting screener, consent form or note-taking sheet for test sessions",
+    "No library item writes push, in-app or system notification copy",
+    "No library item designs on-site search: results, filters and no-results pages"
+  ]
+}

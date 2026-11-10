@@ -1,0 +1,301 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "application-security-engineer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "secure-code-review",
+      "task": "Review a codebase for the gaps behind most break-ins",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:untrusted-input-checker", "type": "skill", "use": "brief", "when": "Before reading line by line, to list every place outside data enters and how far each is trusted" },
+        { "ref": "kit:skills/secure-code-review", "use": "check", "when": "When the client owns the code and wants access, sign-in and injection gaps ranked with fixes" },
+        { "ref": "library:code-security-scanner", "type": "skill", "use": "check", "when": "When you want static tools to back up the manual read and leave rules the team can reuse" },
+        { "ref": "library:django-access-control-auditor", "type": "skill", "use": "check", "when": "When the app is Django and the main question is who can see or change what" },
+        { "ref": "library:copilot-audit-integrity", "type": "skill", "use": "check", "when": "Before the report goes out, to catch findings stated without proof or a failed check left out" }
+      ]
+    },
+    {
+      "id": "change-review",
+      "task": "Review a pull request or diff for security risks",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:diff-security-skimmer", "type": "prompt", "use": "check", "when": "When a small change is pasted and a quick ranked list with the line and a fix is enough" },
+        { "ref": "library:security-focused-change-reviewer", "type": "skill", "use": "check", "when": "When a pull request touches sign-in, access or data handling and needs a full security read" },
+        { "ref": "kit:skills/secure-code-review", "use": "check", "when": "When the change needs the code around it read too, in order of what attackers use most" },
+        { "ref": "library:review-a-pull-request-fix-the-comments-and-sign-off", "type": "workflow", "use": "build", "when": "When the client wants the review comments fixed in code and a one-page sign-off as well" }
+      ]
+    },
+    {
+      "id": "api-gaps-fix",
+      "task": "Fix API access, sign-in and input gaps with tests",
+      "kind": "code",
+      "items": [
+        { "ref": "library:api-security-checker", "type": "skill", "use": "check", "when": "Before any fix, to check each route's sign-in, access rule and input and list the gaps" },
+        { "ref": "library:fix-api-security-gaps-with-tests-and-a-clear-pull-request", "type": "workflow", "use": "build", "when": "When the gaps are known and each needs a fix, a test and a pull request a reviewer can follow" },
+        { "ref": "library:agency-testing-api-tester", "type": "agent", "use": "check", "when": "When you need test cases for wrong-user, no-token and bad-input calls on every route" },
+        { "ref": "library:test-suite-writer", "type": "skill", "use": "build", "when": "When the fix has no tests around it and you must prove it holds and nothing else broke" }
+      ]
+    },
+    {
+      "id": "headers-csp",
+      "task": "Roll out security headers and a CSP without breaking the site",
+      "kind": "code",
+      "items": [
+        { "ref": "library:website-security-check", "type": "skill", "use": "check", "when": "Before and after the change, to see which headers, HTTPS settings and content rules are missing" },
+        { "ref": "kit:skills/hardening-with-safe-rollout", "use": "build", "when": "When you write the headers and a content policy that starts in report-only mode with a rollback" }
+      ]
+    },
+    {
+      "id": "signin-sessions",
+      "task": "Harden sign-in, sessions and password storage",
+      "kind": "code",
+      "items": [
+        { "ref": "library:login-and-access-builder", "type": "skill", "use": "brief", "when": "When roles and permissions were never written down and you need the plan before the code" },
+        { "ref": "library:agency-engineering-identity-access-engineer", "type": "agent", "use": "brief", "when": "When the job includes single sign-on, account recovery or session rules across several apps" },
+        { "ref": "kit:skills/hardening-with-safe-rollout", "use": "build", "when": "When you write cookie and session settings or move password hashing without locking users out" },
+        { "ref": "library:sign-in-flow-setup-helper", "type": "skill", "use": "build", "when": "When sign-in goes through another service and the right OAuth flow must be set up" },
+        { "ref": "library:store-sign-in-security-checker", "type": "skill", "use": "check", "when": "When staff and customer sign-in needs a scored check and a password and second-step policy" }
+      ]
+    },
+    {
+      "id": "input-uploads",
+      "task": "Add input validation, output escaping and safe uploads",
+      "kind": "code",
+      "items": [
+        { "ref": "library:untrusted-input-checker", "type": "skill", "use": "brief", "when": "Before writing checks, to find every entry point and which ones have no filter yet" },
+        { "ref": "kit:skills/hardening-with-safe-rollout", "use": "build", "when": "When you write the validation, escaping and upload rules for the client's routes" },
+        { "ref": "library:code-scan-rule-writer", "type": "skill", "use": "check", "when": "When one unsafe pattern keeps coming back and you want a tested rule that finds it everywhere" },
+        { "ref": "library:test-suite-writer", "type": "skill", "use": "check", "when": "When each new check needs a test that sends bad input and proves it is refused" }
+      ]
+    },
+    {
+      "id": "rate-limits-bots",
+      "task": "Add rate limits and bot protection to routes",
+      "kind": "code",
+      "items": [
+        { "ref": "library:bot-and-ai-agent-access-planner", "type": "skill", "use": "brief", "when": "Before blocking anything, to decide which bots and AI agents to allow, check or block" },
+        { "ref": "library:api-rate-limit-adder", "type": "skill", "use": "build", "when": "When routes have no limits and you need the right window for sign-in, search and write calls" },
+        { "ref": "library:stop-fake-orders-card-testing-and-bot-abuse", "type": "workflow", "use": "build", "when": "When a shop sees fake orders or card testing and needs fraud rules and a review routine" }
+      ]
+    },
+    {
+      "id": "vulnerability-triage",
+      "task": "Rank scanner and dependency findings into a patch order",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:dependency-risk-scanner", "type": "skill", "use": "brief", "when": "When the client has no scan output yet and you need known weak packages and a parts list" },
+        { "ref": "kit:skills/vulnerability-triage-and-patch-order", "use": "build", "when": "When scan output is in and you need a ranked patch plan with exploited flaws first" },
+        { "ref": "library:major-upgrade-planner", "type": "skill", "use": "build", "when": "When the fix means a major version jump that could break the build" },
+        { "ref": "library:copilot-test-gap-audit", "type": "skill", "use": "check", "when": "Before upgrading, to see which behaviour has no test and could break without anyone noticing" }
+      ]
+    },
+    {
+      "id": "explain-finding",
+      "task": "Explain a scanner finding or CVE in plain words",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/explain-a-scanner-finding", "use": "build", "when": "When an alert names a weakness and someone must know if it matters for this app" },
+        { "ref": "library:copilot-data-breach-blast-radius", "type": "skill", "use": "brief", "when": "When the owner asks what data could leak if the flaw were used" },
+        { "ref": "library:bruce-schneier", "type": "mind", "use": "think", "when": "When a finding sounds frightening, to weigh the real risk against the cost of the fix" }
+      ]
+    },
+    {
+      "id": "leaked-secret",
+      "task": "Respond to a leaked key, token or password",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/leaked-secret-response", "use": "build", "when": "When a secret turns up in code, history, logs or chat and must be revoked in the right order" },
+        { "ref": "library:find-leaked-keys-move-them-to-safe-storage-and-check-the-live-site", "type": "workflow", "use": "build", "when": "When one leak suggests more and the whole project needs a search, rotation and live check" },
+        { "ref": "library:exposed-secrets-finder", "type": "skill", "use": "check", "when": "After rotation, to check the live site no longer serves keys or private files to visitors" },
+        { "ref": "library:safe-secrets-manager", "type": "skill", "use": "build", "when": "When new keys must be loaded and checked without the values showing in logs or chat" },
+        { "ref": "library:troy-hunt", "type": "mind", "use": "think", "when": "When the owner is alarmed, to separate what is known to be exposed from what is only feared" }
+      ]
+    },
+    {
+      "id": "secrets-hygiene",
+      "task": "Check how keys and secrets are stored and rotated",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:secrets-hygiene-checker", "type": "skill", "use": "check", "when": "When you need leaked keys found, env files tidied and a rotation plan for one project" },
+        { "ref": "library:agency-security-secrets-credential-engineer", "type": "agent", "use": "brief", "when": "When the team has no rule for where secrets live, who holds them and how often they change" },
+        { "ref": "library:copilot-secret-scanning", "type": "skill", "use": "build", "when": "When the code is on GitHub and pushes holding secrets should be blocked from now on" },
+        { "ref": "kit:skills/leaked-secret-response", "use": "build", "when": "When the check finds a live secret and it must be handled at once" }
+      ]
+    },
+    {
+      "id": "ci-security-checks",
+      "task": "Add dependency, secret and code scans to CI",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:workflows/security-checks-in-ci", "use": "build", "when": "When a repository has no automatic security checks or a scan would have caught the last issue" },
+        { "ref": "library:copilot-codeql", "type": "skill", "use": "build", "when": "When the team wants code scanning set up in their GitHub builds or on the command line" },
+        { "ref": "library:copilot-secret-scanning", "type": "skill", "use": "build", "when": "When secret scanning and push blocking must be switched on with a plan for each alert" },
+        { "ref": "library:code-scan-rule-writer", "type": "skill", "use": "build", "when": "When a flaw found in review should fail the build if anyone writes it again" },
+        { "ref": "library:copilot-github-actions-hardening", "type": "skill", "use": "check", "when": "When the build files are written, to find loose permissions and inputs an outsider controls" }
+      ]
+    },
+    {
+      "id": "threat-model",
+      "task": "Threat model a new feature or app",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/threat-model-in-four-questions", "use": "build", "when": "At design stage or before a customer review, to write what can go wrong in about an hour" },
+        { "ref": "library:threat-list-maker", "type": "prompt", "use": "brief", "when": "When the owner can only describe the system loosely and needs a first ranked list of attacks" },
+        { "ref": "library:threat-modeler", "type": "skill", "use": "build", "when": "When a larger system needs every part checked against six kinds of attack and rated by risk" },
+        { "ref": "library:risky-design-reviewer", "type": "skill", "use": "check", "when": "When an API or config design makes the unsafe choice the easy one for developers" },
+        { "ref": "library:copilot-threat-model-analyst", "type": "skill", "use": "check", "when": "When a change lands on a system that has a threat model and the new risks must be recorded" },
+        { "ref": "library:bruce-schneier", "type": "mind", "use": "think", "when": "When a control is proposed, to ask what it protects, what it costs and what it leaves open" }
+      ]
+    },
+    {
+      "id": "security-questionnaire",
+      "task": "Answer a customer's security questionnaire",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:rfp-response-builder", "type": "skill", "use": "brief", "when": "When the questionnaire is long, to sort questions into must-haves and spot the ones you fail" },
+        { "ref": "kit:prompts/security-questionnaire-answers", "use": "build", "when": "When answers must be honest, backed by evidence and the same from one question to the next" },
+        { "ref": "library:prepare-a-vendor-security-questionnaire-response", "type": "workflow", "use": "build", "when": "When several people hold the facts and you need an evidence index and a list of open questions" },
+        { "ref": "library:copilot-audit-integrity", "type": "skill", "use": "check", "when": "Before sending, to catch any answer that claims a control with no proof behind it" }
+      ]
+    },
+    {
+      "id": "customer-review-ready",
+      "task": "Get ready for a customer security review or pen test",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/ready-for-a-customer-security-review", "use": "build", "when": "When a larger customer asks for a review, a test report or which standard the business follows" },
+        { "ref": "library:security-safeguards-planner", "type": "skill", "use": "brief", "when": "When the business follows no standard and needs a short first set of safeguards for its size" },
+        { "ref": "library:agency-security-compliance-auditor", "type": "agent", "use": "check", "when": "When the customer names SOC 2, ISO 27001, HIPAA or PCI and you need a gap table against it" },
+        { "ref": "library:prepare-evidence-for-a-compliance-review", "type": "workflow", "use": "build", "when": "When the evidence is scattered and needs an index, a gap list and an owner for each item" },
+        { "ref": "library:agency-security-penetration-tester", "type": "agent", "use": "brief", "when": "When an outside tester will be hired and the scope and evidence rules must be set first" }
+      ]
+    },
+    {
+      "id": "authorised-scan",
+      "task": "Scope and run an authorised scan of a running app",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/written-authorisation-and-scope", "use": "brief", "when": "Before any scan or test of a running site, API or app, even a passive scan of staging" },
+        { "ref": "library:vulnerability-scan-planner", "type": "skill", "use": "check", "when": "When the owner wants common web flaws checked on their own app and the fixes ranked" },
+        { "ref": "library:live-app-security-tester", "type": "skill", "use": "check", "when": "When written permission covers safe probing of a running app or API the client owns" },
+        { "ref": "library:website-security-check", "type": "skill", "use": "check", "when": "When only a passive baseline is allowed: HTTPS, headers and files left open" }
+      ]
+    },
+    {
+      "id": "disclosure-policy",
+      "task": "Set up security.txt and a way to report flaws",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/security-txt-and-disclosure-policy", "use": "build", "when": "When the business wants finders of a flaw to have a clear, safe way to report it" },
+        { "ref": "library:turn-a-bug-report-into-proof", "type": "workflow", "use": "check", "when": "When a report arrives, to reproduce it and record what is verified before anyone replies" },
+        { "ref": "library:security-incident-triager", "type": "skill", "use": "build", "when": "When a report looks serious and you need severity, who to tell and what to preserve" }
+      ]
+    },
+    {
+      "id": "launch-security-check",
+      "task": "Run a launch security check on a small app",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:security-posture-auditor", "type": "skill", "use": "brief", "when": "Before launch, to scope what is checked across code, servers, sign-in and daily running" },
+        { "ref": "library:secure-development-checker", "type": "skill", "use": "check", "when": "When you want one pass for code flaws, weak packages and exposed secrets with a risk score" },
+        { "ref": "kit:skills/secure-code-review", "use": "check", "when": "When the launch depends on a few routes that handle sign-in, payments or personal data" },
+        { "ref": "library:website-security-check", "type": "skill", "use": "check", "when": "When the live site needs its HTTPS, headers and open files checked before launch day" },
+        { "ref": "library:ship-readiness-gate", "type": "skill", "use": "check", "when": "When the owner needs a clear go or no-go with the blockers listed" },
+        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When the plan assumes nobody will make a mistake, to ask what happens when someone does" }
+      ]
+    },
+    {
+      "id": "ai-written-code",
+      "task": "Review AI-written code for security gaps",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:agency-security-ai-generated-code-auditor", "type": "agent", "use": "check", "when": "When an app was built fast with AI and may hold leaked keys or open database rules" },
+        { "ref": "library:ai-written-code-reviewer", "type": "skill", "use": "check", "when": "When you want only the few risks that will hurt later, each with the smallest fix" },
+        { "ref": "library:connect-code-to-supabase-builder-prompt", "type": "prompt", "use": "build", "when": "When open Supabase rules are the gap and the app must reconnect with scoped access" },
+        { "ref": "library:insecure-code-catcher", "type": "skill", "use": "build", "when": "When the team keeps coding with AI and wants a warning each time risky code is written" }
+      ]
+    },
+    {
+      "id": "ai-feature-security",
+      "task": "Check an AI feature, agent or MCP server for attack paths",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:review-an-agent-before-launch", "type": "workflow", "use": "check", "when": "Before an agent goes live, to rank risks in its tool access, plugins and behaviour" },
+        { "ref": "library:ai-system-attack-tester", "type": "skill", "use": "check", "when": "When an AI app must be tested for hidden instructions, jailbreaks and tool misuse" },
+        { "ref": "library:ai-app-injection-defender", "type": "skill", "use": "build", "when": "When the weak spots are known and layered defences must be added to the app" },
+        { "ref": "library:copilot-agent-owasp-compliance", "type": "skill", "use": "check", "when": "When a customer asks for findings against the published list of agent risks, with evidence" },
+        { "ref": "library:mcp-attack-defence-reviewer", "type": "skill", "use": "check", "when": "When the client runs an MCP server and needs its attack risks ranked with fixes" },
+        { "ref": "library:ai-workflow-security-checker", "type": "skill", "use": "check", "when": "When an AI agent runs inside the build and outside text such as issue titles could reach it" }
+      ]
+    },
+    {
+      "id": "cloud-config-review",
+      "task": "Review cloud and infrastructure config for security gaps",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:cloud-misconfiguration-finder", "type": "skill", "use": "check", "when": "When the set-up is in code files and you need open buckets and loose access rules ranked" },
+        { "ref": "library:aws-security-checker", "type": "skill", "use": "check", "when": "When the client is on AWS and wants account-wide gaps ranked with fixes" },
+        { "ref": "library:aws-access-policy-reviewer", "type": "skill", "use": "build", "when": "When access policies grant too much and need tighter versions written" }
+      ]
+    },
+    {
+      "id": "monthly-sweep",
+      "task": "Run the monthly vulnerability and secrets sweep",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/monthly-vulnerability-and-secrets-sweep", "use": "build", "when": "Monthly, or at once when a widely reported flaw hits a package the client uses" },
+        { "ref": "library:weekly-dependency-and-security-sweep", "type": "agent", "use": "build", "when": "When the client wants a weekly run that shows what is new, open or fixed since last time" },
+        { "ref": "library:secrets-hygiene-checker", "type": "skill", "use": "check", "when": "During each sweep, to look again for keys in code and env files" },
+        { "ref": "kit:skills/vulnerability-triage-and-patch-order", "use": "build", "when": "When the sweep turns up new findings that need a place in the patch order" }
+      ]
+    },
+    {
+      "id": "security-incident",
+      "task": "Triage a security alert or suspected break-in",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:security-incident-triager", "type": "skill", "use": "build", "when": "When an alert comes in and you need severity, who to tell, what to keep and next steps" },
+        { "ref": "library:copilot-data-breach-blast-radius", "type": "skill", "use": "brief", "when": "When you must work out which personal or payment data the attacker could have reached" },
+        { "ref": "library:copilot-incident-postmortem", "type": "skill", "use": "build", "when": "When it is over and the client needs a blameless report with causes and follow-up owners" },
+        { "ref": "library:troy-hunt", "type": "mind", "use": "think", "when": "When customers must be told, to state plainly what was exposed and what they should do" }
+      ]
+    },
+    {
+      "id": "personal-data-review",
+      "task": "Check how the app collects, keeps and deletes personal data",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:agency-engineering-privacy-engineer", "type": "agent", "use": "brief", "when": "When nobody knows where personal data lives and deletion must reach every copy" },
+        { "ref": "library:copilot-gdpr-compliant", "type": "skill", "use": "check", "when": "When the code must support access, deletion and consent requests and you need the gaps" },
+        { "ref": "library:privacy-impact-assessment-writer", "type": "skill", "use": "build", "when": "When a new feature uses personal data and a customer or regulator expects an assessment" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:safe-secrets-manager", "type": "skill", "use": "check", "when": "Whenever keys or env files are in reach, so no secret value is printed, logged or repeated" },
+    { "ref": "library:copilot-audit-integrity", "type": "skill", "use": "check", "when": "Before any report or answer is sent, to confirm every claim has evidence you can point to" }
+  ],
+  "helpers": [
+    { "role": "backend-developer", "when": "When a fix means reworking endpoints, webhooks or payment code, not just adding a check" },
+    { "role": "devops-engineer", "when": "When the job needs pipeline, container or cloud changes beyond the security checks" },
+    { "role": "cybersecurity-specialist", "when": "When the gaps are in staff accounts, devices, email or backups and not in the code" },
+    { "role": "compliance-specialist", "when": "When the customer wants a full SOC 2, ISO 27001 or privacy programme, not one review" },
+    { "role": "qa-engineer", "when": "When fixes need a wider regression test run before release" },
+    { "role": "ai-engineer", "when": "When an AI feature must be rebuilt to resist hijacked instructions, not only tested" }
+  ],
+  "gaps": [
+    "No library item writes security headers or a Content Security Policy, or reads CSP violation reports; only the kit covers it",
+    "No library item covers password hashing choice and migration, secure cookie settings, or JWT and session token handling",
+    "No library item covers safe file uploads: type checks, size limits, storage outside the web root and malware scanning",
+    "No library item writes output escaping or cross-site scripting and request forgery fixes for a named framework",
+    "No library item ranks CVEs by known exploitation and reachability; only the kit's triage skill does",
+    "No library item writes a vulnerability disclosure policy or handles an outside researcher's report through to a reply",
+    "No library item plans or reads an authorised dynamic scan such as an OWASP ZAP baseline; live testing items are general",
+    "No library item checks row-level database rules for Supabase or Firebase directly",
+    "No library item covers breach notification duties and deadlines by region for a small business",
+    "No library item reviews mobile app security: stored secrets, certificate checks and deep links",
+    "No library item reviews Dockerfile and container image security, or Kubernetes settings",
+    "No library item adds security logging and alerting so a break-in attempt is noticed"
+  ]
+}

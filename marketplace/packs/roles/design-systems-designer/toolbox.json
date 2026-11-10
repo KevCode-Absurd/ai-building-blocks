@@ -1,0 +1,268 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "design-systems-designer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "system-audit",
+      "task": "Audit a product's interface for inconsistency",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/design-system-audit", "use": "build", "when": "When screens were built by many hands and you must count the distinct colours, sizes and parts in use" },
+        { "ref": "library:website-design-token-extractor", "type": "skill", "use": "build", "when": "When the product is a live site, to pull its real colours, fonts and spacing as a starting list" },
+        { "ref": "library:design-system-auditor", "type": "skill", "use": "check", "when": "When you have the component code, to find naming problems and hardcoded values" },
+        { "ref": "library:page-design-standards-checker", "type": "skill", "use": "check", "when": "When one page stands for the rest, to check contrast, spacing, hierarchy and mobile" },
+        { "ref": "library:dieter-rams", "type": "mind", "use": "think", "when": "When the audit lists forty variants and you must decide which few serve a purpose" }
+      ]
+    },
+    {
+      "id": "token-set",
+      "task": "Build a design token set from a brand or brief",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/design-token-set", "use": "build", "when": "When you need primitives, semantic tokens and light and dark values as JSON, CSS and Tailwind" },
+        { "ref": "library:visual-system-rules-writer", "type": "skill", "use": "brief", "when": "Before naming tokens, to fix the firm rules for colour, type and grid they must carry" },
+        { "ref": "library:design-token-builder", "type": "skill", "use": "build", "when": "When the tokens also need component notes, responsive sizes and a developer handoff" },
+        { "ref": "library:write-design-rules-check-colours-and-hand-developers-a-spec", "type": "workflow", "use": "build", "when": "When you want one run from brief to rules, checked colours and a developer spec" },
+        { "ref": "library:colour-contrast-checker", "type": "skill", "use": "check", "when": "Before the set is published, to check every text and background pair in light and dark" },
+        { "ref": "library:massimo-vignelli", "type": "mind", "use": "think", "when": "When the set keeps growing and needs fewer choices with clearer rules" }
+      ]
+    },
+    {
+      "id": "tokens-from-css",
+      "task": "Turn scattered CSS into one named token set",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/tokens-from-pasted-css", "use": "build", "when": "When colours, sizes and spacings live in CSS or SCSS files and need one shared set of names" },
+        { "ref": "kit:skills/design-token-set", "use": "build", "when": "When the merged values must become a full set with semantic names and both themes" },
+        { "ref": "library:website-design-token-extractor", "type": "skill", "use": "build", "when": "When you cannot get the source files, to read the values from the live site" },
+        { "ref": "library:design-system-auditor", "type": "skill", "use": "check", "when": "After the swap, to find hardcoded values the new tokens should have replaced" }
+      ]
+    },
+    {
+      "id": "dark-mode",
+      "task": "Add dark mode values from a light palette",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/dark-mode-from-light-palette", "use": "build", "when": "When a light theme works and the team wants dark mode without a redesign" },
+        { "ref": "kit:skills/design-token-set", "use": "build", "when": "When the dark values must be written into the token files beside the light ones" },
+        { "ref": "library:colour-contrast-checker", "type": "skill", "use": "check", "when": "When dark values are drafted, to check each pair and get the nearest passing colour" },
+        { "ref": "library:chart-and-app-styler", "type": "skill", "use": "build", "when": "When charts and data colours must also work in dark mode" }
+      ]
+    },
+    {
+      "id": "token-delivery",
+      "task": "Deliver tokens as CSS variables, a Tailwind theme or a design file",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/design-token-set", "use": "build", "when": "When developers need the tokens in the exact format their build uses" },
+        { "ref": "library:design-system-file-writer", "type": "skill", "use": "build", "when": "When AI coding tools will build screens and need the rules in one design file they can read" },
+        { "ref": "library:claude-code", "type": "tool", "use": "build", "when": "When the tokens must be wired into the project's code and the build re-run" },
+        { "ref": "library:figma-ai", "type": "tool", "use": "brief", "when": "When the design team works in Figma and you must check how it takes the values" }
+      ]
+    },
+    {
+      "id": "component-spec",
+      "task": "Write a component spec and documentation page",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/component-spec-and-docs", "use": "build", "when": "When one component needs purpose, anatomy, variants, every state, tokens and keyboard rules written" },
+        { "ref": "library:screen-states-designer", "type": "skill", "use": "brief", "when": "Before the spec, to list the states people hit first: empty, loading, error and success" },
+        { "ref": "library:give-developers-a-complete-component-brief", "type": "workflow", "use": "build", "when": "When you have the source files and want a guided run to a brief with variants and states" },
+        { "ref": "library:developer-handoff-spec-writer", "type": "skill", "use": "build", "when": "When the design is finished and the spec must cover props, breakpoints and edge cases" },
+        { "ref": "library:design-handoff-completeness-assistant", "type": "agent", "use": "check", "when": "When a component changed, to find the states and variants still missing" },
+        { "ref": "library:agency-testing-accessibility-auditor", "type": "agent", "use": "check", "when": "When the spec is drafted, to test its keyboard, focus and screen reader behaviour" }
+      ]
+    },
+    {
+      "id": "screen-brief",
+      "task": "Write a design brief for one screen or flow",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/screen-design-brief", "use": "build", "when": "Before anyone designs a new screen, so it uses existing components and covers every state" },
+        { "ref": "library:user-flow-designer", "type": "skill", "use": "brief", "when": "When the screen is part of a flow, to set the steps and navigation first" },
+        { "ref": "library:wireframe-drafter", "type": "skill", "use": "explore", "when": "When the layout is open, to get text wireframes at three levels of detail to compare" },
+        { "ref": "library:product-true-ui-designer", "type": "skill", "use": "build", "when": "When the screen should be built from the product's own components and tokens" },
+        { "ref": "library:new-screen-design-reviewer", "type": "agent", "use": "check", "when": "When the screen comes back, to review it against the system before build" }
+      ]
+    },
+    {
+      "id": "handoff-check",
+      "task": "Check a design handoff before developers start",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/handoff-completeness-check", "use": "check", "when": "Before developers start on a designed screen or component, to catch what is missing" },
+        { "ref": "library:design-handoff-completeness-assistant", "type": "agent", "use": "check", "when": "When a changed component needs its missing states listed and a review request written" },
+        { "ref": "library:screen-states-designer", "type": "skill", "use": "build", "when": "When the check finds missing states, to design them" },
+        { "ref": "library:developer-handoff-spec-writer", "type": "skill", "use": "build", "when": "When the handoff has no spec at all, to write layout, tokens, props and edge cases" }
+      ]
+    },
+    {
+      "id": "starter-system",
+      "task": "Set up a starter design system",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/set-up-a-starter-design-system", "use": "brief", "when": "When a product has drift and no system, or is about to add dark mode or a second brand" },
+        { "ref": "kit:skills/design-system-audit", "use": "brief", "when": "Before you choose what goes in the system, to see what the product really uses" },
+        { "ref": "library:minimal-style-guide-writer", "type": "skill", "use": "explore", "when": "When the team has no guide, to get a plain first one with tokens and part rules to react to" },
+        { "ref": "library:interface-builder", "type": "skill", "use": "build", "when": "When the starter set needs real responsive, accessible components in code" },
+        { "ref": "library:icon-set-planner", "type": "skill", "use": "build", "when": "When the starter system needs a small icon set that reads as one family" },
+        { "ref": "library:otl-aicher", "type": "mind", "use": "think", "when": "When the system is a pile of parts with no stated purpose or shared rule" }
+      ]
+    },
+    {
+      "id": "release",
+      "task": "Version and release a library or token update",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/system-release-and-migration", "use": "build", "when": "When a change must ship with the right version number, notes and deprecations" },
+        { "ref": "kit:prompts/library-release-notes", "use": "build", "when": "When you are about to publish a library or token update and need the notes written" },
+        { "ref": "library:release-notes-writer", "type": "skill", "use": "build", "when": "When the changes live in commits, to draft notes and the version bump from them" },
+        { "ref": "library:release-manager", "type": "agent", "use": "check", "when": "Before the release, to get a go or no-go, a rollback plan and a live check" }
+      ]
+    },
+    {
+      "id": "migration",
+      "task": "Plan a move to a new design system",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/system-release-and-migration", "use": "build", "when": "When screens must move to new components without breaking what is live" },
+        { "ref": "library:prepare-a-design-system-migration", "type": "workflow", "use": "build", "when": "When you have the source files and need a change inventory, swap rules and stages" },
+        { "ref": "library:migration-planner", "type": "skill", "use": "explore", "when": "When you want a second plan for retiring the old parts and moving teams over" },
+        { "ref": "library:test-plan-writer", "type": "skill", "use": "check", "when": "Before each stage, to list what to test so a swapped component does not break a screen" }
+      ]
+    },
+    {
+      "id": "health-check",
+      "task": "Run the monthly design system health check",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/monthly-design-system-health-check", "use": "build", "when": "Monthly on a fixed day, and after any major release" },
+        { "ref": "library:monthly-design-system-keeper", "type": "agent", "use": "build", "when": "When the code can be read each month, to find drift and get a spec to approve" },
+        { "ref": "library:design-system-auditor", "type": "skill", "use": "check", "when": "When new components were added, to check names and hardcoded values" },
+        { "ref": "library:colour-contrast-checker", "type": "skill", "use": "check", "when": "When colours changed this month, to re-check the pairs" }
+      ]
+    },
+    {
+      "id": "screen-review",
+      "task": "Review a new screen against the system",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:new-screen-design-reviewer", "type": "agent", "use": "check", "when": "When a new screen arrives, to check it uses the system's parts and rules" },
+        { "ref": "library:design-feedback-giver", "type": "skill", "use": "check", "when": "When you have a mockup or Figma link, for hierarchy and consistency feedback with fixes" },
+        { "ref": "library:agency-design-ui-finish-gate-reviewer", "type": "agent", "use": "check", "when": "Before release, to list visual gaps that must close first" },
+        { "ref": "library:turn-a-design-review-into-fixes", "type": "workflow", "use": "build", "when": "When the review is done, to turn it into an issue list and a revised brief" }
+      ]
+    },
+    {
+      "id": "accessibility",
+      "task": "Check components for contrast, keyboard and focus",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/component-spec-and-docs", "use": "build", "when": "When the fixes must be written into each component's keyboard and focus rules" },
+        { "ref": "library:accessibility-standards-checker", "type": "skill", "use": "check", "when": "When you need the gaps by level and the fixes ranked" },
+        { "ref": "library:agency-testing-accessibility-auditor", "type": "agent", "use": "check", "when": "When a component needs a test plan for keyboard and screen reader use" },
+        { "ref": "library:wcag-accessibility-fixer", "type": "skill", "use": "build", "when": "When you have the code, to fix the problems found and check again" }
+      ]
+    },
+    {
+      "id": "states-and-copy",
+      "task": "Define empty, loading and error states with their words",
+      "kind": "other",
+      "items": [
+        { "ref": "library:screen-states-designer", "type": "skill", "use": "build", "when": "When a screen or component has only its happy state designed" },
+        { "ref": "library:interface-microcopy-writer", "type": "skill", "use": "explore", "when": "When states need button labels, errors and toasts, to get wording to choose from" },
+        { "ref": "library:loading-and-error-state-designer", "type": "skill", "use": "build", "when": "When the states must be added in code so nobody stares at a blank box" },
+        { "ref": "library:write-helpful-error-and-empty-states", "type": "workflow", "use": "check", "when": "When the product already has messages, to review the current text and rewrite the weak ones" }
+      ]
+    },
+    {
+      "id": "type-and-spacing",
+      "task": "Set the type scale, spacing and grid",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/design-token-set", "use": "build", "when": "When the scale must be written as tokens with names that will last" },
+        { "ref": "library:web-font-pairing-picker", "type": "skill", "use": "explore", "when": "When the fonts are open, to compare pairs with sizes and line spacing for screens" },
+        { "ref": "library:page-grid-and-type-planner", "type": "skill", "use": "build", "when": "When a page type needs a grid, a short type list and a white-space plan" },
+        { "ref": "library:visual-hierarchy-fixer", "type": "skill", "use": "check", "when": "When a screen built on the scale still looks flat, to fix spacing, type and depth" },
+        { "ref": "library:josef-muller-brockmann", "type": "mind", "use": "think", "when": "When spacing is set by eye on each screen and needs one grid" }
+      ]
+    },
+    {
+      "id": "motion-rules",
+      "task": "Set motion rules for components",
+      "kind": "other",
+      "items": [
+        { "ref": "library:animation-reviewer", "type": "skill", "use": "check", "when": "When a change adds motion, to get a table of fixes and an approve or block call" },
+        { "ref": "library:design-to-motion-animator", "type": "skill", "use": "explore", "when": "When the team cannot picture the motion, to see a static design animated" }
+      ]
+    },
+    {
+      "id": "chart-colours",
+      "task": "Set chart and data colours that fit the system",
+      "kind": "other",
+      "items": [
+        { "ref": "library:chart-and-app-styler", "type": "skill", "use": "build", "when": "When charts need palettes and colour maps that match the product and work in dark mode" },
+        { "ref": "library:agency-engineering-data-visualization-engineer", "type": "agent", "use": "check", "when": "When chart styles are drafted, to check colours and axes do not mislead" },
+        { "ref": "library:colour-contrast-checker", "type": "skill", "use": "check", "when": "When data colours sit on both light and dark backgrounds" }
+      ]
+    },
+    {
+      "id": "native-app",
+      "task": "Extend the system to iOS and Android",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/design-token-set", "use": "build", "when": "When the same tokens must be delivered in the formats native apps use" },
+        { "ref": "library:mobile-app-designer", "type": "skill", "use": "build", "when": "When components must fit each platform, with thumb-friendly layout and offline states" },
+        { "ref": "library:apple-interface-reviewer", "type": "skill", "use": "check", "when": "When an iOS screen is drafted, to check it against Apple's design rules" }
+      ]
+    },
+    {
+      "id": "brand-to-system",
+      "task": "Turn a brand into product design rules",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:design-style-analyst", "type": "skill", "use": "brief", "when": "When the brand is a set of screenshots or links, to turn them into a profile you can reuse" },
+        { "ref": "library:visual-system-rules-writer", "type": "skill", "use": "build", "when": "When the feeling is agreed, to write firm rules for colour, type and grid" },
+        { "ref": "library:build-a-brand-file-and-style-guide-from-scratch", "type": "workflow", "use": "explore", "when": "When there is no brand file at all, to get a first one to react to" },
+        { "ref": "kit:skills/design-token-set", "use": "build", "when": "When the rules are agreed and must become tokens" }
+      ]
+    },
+    {
+      "id": "component-build",
+      "task": "Build or add components that follow the system",
+      "kind": "code",
+      "items": [
+        { "ref": "library:agency-engineering-frontend-developer", "type": "agent", "use": "brief", "when": "Before the build, to plan the component list, accessibility and tests" },
+        { "ref": "library:accessible-ui-builder", "type": "skill", "use": "build", "when": "When a screen must be coded with accessible, responsive components that follow the system" },
+        { "ref": "library:ui-component-adder", "type": "skill", "use": "build", "when": "When the project needs ready-made components added with the right setup" },
+        { "ref": "library:react-test-writer", "type": "skill", "use": "check", "when": "When components are built in React, to add tests for the parts that lack them" },
+        { "ref": "library:v0", "type": "tool", "use": "explore", "when": "When you want a quick live preview of a component idea before speccing it" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any token or component work on a product with a live site: its colours, fonts and voice" },
+    { "ref": "library:page-design-standards-checker", "type": "skill", "use": "check", "when": "Before any spec or screen leaves, to check contrast, spacing, hierarchy and mobile" }
+  ],
+  "helpers": [
+    { "role": "ui-designer", "when": "When whole screens or flows must be designed, not only briefed and reviewed" },
+    { "role": "frontend-developer", "when": "When tokens and components must be built, tested and shipped in the codebase" },
+    { "role": "accessibility-specialist", "when": "When the product needs a full accessibility audit or a formal statement" },
+    { "role": "brand-designer", "when": "When there is no agreed palette, type or logo to build the tokens from" },
+    { "role": "ux-designer", "when": "When the flow itself is wrong and consistent parts will not fix it" },
+    { "role": "technical-writer", "when": "When the system needs a full documentation site written and kept up" }
+  ],
+  "gaps": [
+    "No library item writes tokens in the W3C design tokens format or sets up Style Dictionary or Figma variables",
+    "No library item derives dark mode values from a light palette; the library only checks the contrast afterwards",
+    "No library item counts distinct values from screenshots or a Figma file and proposes which to merge",
+    "No library item sets token naming rules or reviews names for how long they will last",
+    "No library item picks a version number or writes deprecations for a design library; release items are for code",
+    "No library item covers Figma library structure: variables, modes, publishing and usage analytics",
+    "No library item covers system governance: who may add a component, how requests are handled and how adoption is tracked",
+    "No library item sets up visual regression tests or a component documentation site",
+    "No library item plans multi-brand or white-label theming from one token set",
+    "No library item writes motion tokens: durations, easing and reduced-motion rules"
+  ]
+}

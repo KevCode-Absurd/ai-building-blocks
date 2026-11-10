@@ -1,0 +1,293 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "brand-designer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "logo-brief",
+      "task": "Write a logo design brief a designer can build from",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/logo-design-brief", "use": "build", "when": "When a client is about to hire a logo designer and needs the brief and the checks to judge drafts" },
+        { "ref": "library:brand-discovery-researcher", "type": "skill", "use": "brief", "when": "Before the brief, to find who the brand is for, who it competes with and where it could stand out" },
+        { "ref": "library:design-brief-rules-writer", "type": "skill", "use": "brief", "when": "When the client sets no limits, to fix firm rules that still leave the designer room" },
+        { "ref": "library:brand-mark-system-planner", "type": "skill", "use": "build", "when": "When the brief is agreed, to list the obvious ideas, one surprising move and small-size tests" },
+        { "ref": "library:paul-rand", "type": "mind", "use": "think", "when": "When the brief asks the logo to say five things and it should carry one" }
+      ]
+    },
+    {
+      "id": "logo-directions",
+      "task": "Explore logo and wordmark directions",
+      "kind": "other",
+      "items": [
+        { "ref": "library:one-symbol-concept-finder", "type": "skill", "use": "brief", "when": "Before any sketch, to find the one idea, one feeling and one symbol the mark should carry" },
+        { "ref": "library:logo-concept-generator", "type": "skill", "use": "explore", "when": "When the client needs several directions, from wordmarks to symbols, each with its reasons" },
+        { "ref": "library:wordmark-sketch-planner", "type": "skill", "use": "explore", "when": "When the name itself should be the logo, to get five letter-shape ideas and a pick" },
+        { "ref": "library:brand-mark-design", "type": "workflow", "use": "build", "when": "When you want one guided run from tight brief to mark plan to strength test" },
+        { "ref": "library:recraft", "type": "tool", "use": "build", "when": "When a direction needs a vector draft that can be scaled and refined" },
+        { "ref": "library:logo-strength-tester", "type": "skill", "use": "check", "when": "When there are several ideas, to score each and get a keep or drop call" },
+        { "ref": "library:herb-lubalin", "type": "mind", "use": "think", "when": "When the wordmark is set in a font and the letters are not doing any work" }
+      ]
+    },
+    {
+      "id": "logo-draft-review",
+      "task": "Review logo drafts against the brief",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/logo-draft-review", "use": "check", "when": "When drafts arrive from a designer and the client needs a fair review, not a gut reaction" },
+        { "ref": "kit:skills/logo-design-brief", "use": "check", "when": "When you need the brief's own checks to judge each draft against" },
+        { "ref": "library:logo-strength-tester", "type": "skill", "use": "check", "when": "When a draft looks good large, to test it in one colour and at small size" },
+        { "ref": "library:michael-bierut", "type": "mind", "use": "think", "when": "When the client wants something new and risks throwing away what people already recognise" }
+      ]
+    },
+    {
+      "id": "palette",
+      "task": "Build a colour palette with roles and contrast pairs",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/palette-and-type-system", "use": "build", "when": "When you need five to eight colours with roles, values and a contrast table people can apply" },
+        { "ref": "library:design-style-analyst", "type": "skill", "use": "brief", "when": "When the client shares designs they like, to turn them into colours and feel you can reuse" },
+        { "ref": "library:emotion-led-design-brief-writer", "type": "skill", "use": "explore", "when": "When the client names a feeling, to see colour, type and image choices that support it" },
+        { "ref": "library:mood-colour-palette-planner", "type": "skill", "use": "build", "when": "When the feeling is agreed and you need a small palette with one job per colour" },
+        { "ref": "library:colour-contrast-checker", "type": "skill", "use": "check", "when": "Before the palette is approved, to check each text and background pair and get the nearest pass" }
+      ]
+    },
+    {
+      "id": "type-system",
+      "task": "Choose a font pairing and type scale",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/palette-and-type-system", "use": "build", "when": "When the type system needs fonts, sizes, weights and fallbacks written so anyone can apply them" },
+        { "ref": "library:font-pair-shortlist-maker", "type": "prompt", "use": "explore", "when": "When the client has no fonts, to compare three pairs with sizes and line spacing" },
+        { "ref": "library:web-font-pairing-picker", "type": "skill", "use": "explore", "when": "When the brand lives mostly on screens, to pick pairs that read well at every size" },
+        { "ref": "library:plain-page-type-checker", "type": "skill", "use": "check", "when": "When the type is set on a sample page, to check size, spacing and line length where it is read" },
+        { "ref": "library:ellen-lupton", "type": "mind", "use": "think", "when": "When the type choice is about taste and nobody has asked what the reader needs" }
+      ]
+    },
+    {
+      "id": "identity-brief",
+      "task": "Write a full visual identity brief",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/new-identity-to-handoff", "use": "brief", "when": "When a new or refreshed business needs an identity and will hire someone to draw it" },
+        { "ref": "library:aesthetic-direction-brief-writer", "type": "skill", "use": "brief", "when": "When the client cannot describe the look, to pin down tone and feel in four answers" },
+        { "ref": "library:identity-system-planner", "type": "skill", "use": "build", "when": "When you need the fixed core, what may flex and a test for every place the brand appears" },
+        { "ref": "library:brand-stylescape-planner", "type": "skill", "use": "explore", "when": "When the look is undecided, to compare three mood board directions and merge a pick" },
+        { "ref": "library:visual-system-rules-writer", "type": "skill", "use": "build", "when": "When the choices are made, to write firm rules for colour, type and grid" },
+        { "ref": "library:agency-design-brand-guardian", "type": "agent", "use": "check", "when": "When the brief is drafted, to find where purpose, voice and look do not agree" },
+        { "ref": "library:jessica-walsh", "type": "mind", "use": "think", "when": "When the direction follows a trend and says nothing true about this business" }
+      ]
+    },
+    {
+      "id": "mood-directions",
+      "task": "Set mood board directions for the client to choose from",
+      "kind": "other",
+      "items": [
+        { "ref": "library:brand-direction-brainstormer", "type": "skill", "use": "explore", "when": "When the brand is only an idea, to get name, position and mood directions narrowed to one" },
+        { "ref": "library:brand-stylescape-planner", "type": "skill", "use": "explore", "when": "When you need three distinct mood boards with photo, type and colour choices" },
+        { "ref": "library:midjourney-four-direction-prompt-writer", "type": "skill", "use": "explore", "when": "When a direction needs pictures, to try one idea as four different treatments" },
+        { "ref": "library:midjourney", "type": "tool", "use": "explore", "when": "When you want to explore looks fast and then reuse the style the client chose" },
+        { "ref": "library:agency-design-inclusive-visuals-specialist", "type": "agent", "use": "check", "when": "When the boards show people, to check for stereotypes and faces that all look alike" }
+      ]
+    },
+    {
+      "id": "asset-audit",
+      "task": "Audit every logo, colour and font in use",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/brand-asset-audit", "use": "check", "when": "Before a brand book or refresh, to list every version in use and where the brand has drifted" },
+        { "ref": "library:brand-materials-finder", "type": "skill", "use": "brief", "when": "When files are scattered across tools, to find the guides and decks that exist and the gaps" },
+        { "ref": "library:website-design-token-extractor", "type": "skill", "use": "build", "when": "When the live site is the truth, to pull its real colours, fonts and spacing" },
+        { "ref": "library:store-brand-signal-auditor", "type": "skill", "use": "check", "when": "When the brand shows up on site, emails, pack and ads, to score what each one says" },
+        { "ref": "library:agency-design-brand-guardian", "type": "agent", "use": "check", "when": "When you have the materials side by side, to find where they drift from the brand" }
+      ]
+    },
+    {
+      "id": "brand-book",
+      "task": "Write the brand guidelines book",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/brand-book-from-scattered-assets", "use": "brief", "when": "When staff make their own versions and one document must settle it" },
+        { "ref": "kit:skills/brand-guidelines-book", "use": "build", "when": "When scattered logos, colours, fonts and templates must become one book others can follow" },
+        { "ref": "library:visual-system-rules-writer", "type": "skill", "use": "build", "when": "When the book needs firm rules, not soft advice, for colour, type and grid" },
+        { "ref": "library:brand-guide-builder", "type": "skill", "use": "build", "when": "When the rules are agreed and the client wants a printable guide" },
+        { "ref": "library:build-a-brand-file-and-style-guide-from-scratch", "type": "workflow", "use": "explore", "when": "When the business has almost nothing written down and needs a first guide to react to" },
+        { "ref": "library:colour-contrast-checker", "type": "skill", "use": "check", "when": "Before the colour pages are final, to confirm every pair shown is readable" }
+      ]
+    },
+    {
+      "id": "logo-usage-rules",
+      "task": "Write logo use and clear-space rules",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/brand-guidelines-book", "use": "build", "when": "When the logo needs versions, clear space, minimum sizes, backgrounds and misuse examples" },
+        { "ref": "library:logo-and-brand-kit-designer", "type": "skill", "use": "build", "when": "When the file formats and where each version is used must be listed" },
+        { "ref": "library:favicon-maker", "type": "skill", "use": "build", "when": "When the mark must work as a browser icon and you need the full set of sizes" },
+        { "ref": "library:logo-strength-tester", "type": "skill", "use": "check", "when": "When you set the minimum size, to test the mark small and in one colour first" }
+      ]
+    },
+    {
+      "id": "mascot-brief",
+      "task": "Write a mascot or character design brief",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/illustration-and-mascot-brief", "use": "build", "when": "When an illustrator needs personality, shapes, colours, turnarounds, expressions and poses" },
+        { "ref": "library:creative-shoot-briefer", "type": "skill", "use": "brief", "when": "When the campaign goal must be tied to what the illustrator is asked to draw" },
+        { "ref": "library:brand-sticker-set-maker", "type": "skill", "use": "explore", "when": "When the client wants to see a quick set of characters drawn from their logo" },
+        { "ref": "library:agency-design-inclusive-visuals-specialist", "type": "agent", "use": "check", "when": "When the character is a person, to check it avoids stereotypes" }
+      ]
+    },
+    {
+      "id": "mascot-ai-test",
+      "task": "Write AI prompts to test a mascot idea",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/illustration-and-mascot-brief", "use": "brief", "when": "When the character brief exists and the prompts must follow its shapes and colours" },
+        { "ref": "library:midjourney-four-direction-prompt-writer", "type": "skill", "use": "explore", "when": "When one mascot idea should be tried as four different treatments" },
+        { "ref": "library:agency-design-image-prompt-engineer", "type": "agent", "use": "build", "when": "When a prompt needs subject, light, style and a leave-out list for a named image tool" },
+        { "ref": "library:brand-to-image-prompt-compiler", "type": "skill", "use": "build", "when": "When brand colours and avoid rules must be held inside every prompt" },
+        { "ref": "library:ai-image-fix-rules", "type": "skill", "use": "check", "when": "When the character drifts between images, to turn each fault into a prompt line and a check" }
+      ]
+    },
+    {
+      "id": "spot-illustration",
+      "task": "Brief a spot illustration set",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/illustration-and-mascot-brief", "use": "build", "when": "When a site or app needs a matching set and the illustrator must be able to quote from the brief" },
+        { "ref": "library:article-illustrator", "type": "skill", "use": "brief", "when": "When the set is for articles or pages, to plan where pictures belong and what each shows" },
+        { "ref": "library:aesthetic-direction-brief-writer", "type": "skill", "use": "brief", "when": "Before the brief, to agree the tone and feel every piece must keep" },
+        { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "When the planned set looks like stock art, to get three hand-made alternatives" }
+      ]
+    },
+    {
+      "id": "icon-set",
+      "task": "Spec an icon set that looks like one family",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/icon-set-spec", "use": "build", "when": "When icons need a grid, stroke, corner and size rule before anyone draws them" },
+        { "ref": "library:icon-set-planner", "type": "skill", "use": "check", "when": "When the list is drafted, to plan a small clear set and test that each icon reads" },
+        { "ref": "library:recraft", "type": "tool", "use": "build", "when": "When you need vector drafts of the icons to test the rules" }
+      ]
+    },
+    {
+      "id": "picture-book-mural",
+      "task": "Brief a picture book, mural or other large illustration job",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/illustration-and-mascot-brief", "use": "build", "when": "When an author or venue needs one brief an illustrator can quote and draw from" },
+        { "ref": "library:one-symbol-concept-finder", "type": "skill", "use": "brief", "when": "Before the brief, to find the one idea and feeling the artwork should carry" },
+        { "ref": "library:creative-shoot-briefer", "type": "skill", "use": "build", "when": "When the job has a campaign goal and several pieces to deliver" }
+      ]
+    },
+    {
+      "id": "design-tokens",
+      "task": "Turn the approved brand into design tokens",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/design-tokens-from-brand", "use": "build", "when": "When colours, fonts and spacing are approved and developers need a tokens file, not a PDF" },
+        { "ref": "library:design-token-builder", "type": "skill", "use": "build", "when": "When the tokens also need component notes, responsive sizes and a developer handoff" },
+        { "ref": "library:write-design-rules-check-colours-and-hand-developers-a-spec", "type": "workflow", "use": "build", "when": "When you want one run from brief to rules, checked colours and a developer spec" },
+        { "ref": "library:colour-contrast-checker", "type": "skill", "use": "check", "when": "Before handoff, to check light and dark pairs built from the tokens" }
+      ]
+    },
+    {
+      "id": "trademark-first-search",
+      "task": "Run a first trade mark search on a name or logo",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/trademark-first-search-log", "use": "build", "when": "Before a new name or logo goes further, to log obvious clashes from the official search tools" },
+        { "ref": "library:trademark-name-first-check", "type": "skill", "use": "check", "when": "When you have a name, to get similar marks and risk factors flagged for a lawyer" },
+        { "ref": "library:store-name-tester", "type": "skill", "use": "check", "when": "When there is a shortlist of names, to score each and get a keep, fix or drop call" }
+      ]
+    },
+    {
+      "id": "stationery",
+      "task": "Spec email signature, letterhead and business cards",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/brand-guidelines-book", "use": "build", "when": "When the book must include specs for signature, letterhead and cards" },
+        { "ref": "library:page-grid-and-type-planner", "type": "skill", "use": "build", "when": "When the letterhead carries text and needs a grid, a short type list and white space" },
+        { "ref": "library:plain-page-type-checker", "type": "skill", "use": "check", "when": "When the pieces are drafted, to check small type and spacing where they are read" }
+      ]
+    },
+    {
+      "id": "template-list",
+      "task": "List the templates the team needs",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/brand-guidelines-book", "use": "build", "when": "When everyone makes their own slides and the book must name the templates to build" },
+        { "ref": "library:brand-materials-finder", "type": "skill", "use": "brief", "when": "Before the list, to see which decks and documents the team already uses" },
+        { "ref": "library:canva", "type": "tool", "use": "brief", "when": "When the team will build and reuse the templates themselves and you must check what the tool allows" }
+      ]
+    },
+    {
+      "id": "rebrand-plan",
+      "task": "Plan a refresh that keeps recognition",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/brand-asset-audit", "use": "brief", "when": "Before any change, to see what is in use and what people already know the brand by" },
+        { "ref": "library:brand-health-auditor", "type": "skill", "use": "brief", "when": "When the client says the brand feels dated, to name what works and what is off" },
+        { "ref": "library:rebrand-planner", "type": "skill", "use": "build", "when": "When the reason for change is clear, to set what to keep, what to change and the rollout" },
+        { "ref": "library:store-rebrand-planner", "type": "skill", "use": "check", "when": "When a rename is on the table, to score keep against rename before committing" },
+        { "ref": "library:brand-launch-planner", "type": "skill", "use": "build", "when": "When the new look has a date, to plan the message and steps for each stage" }
+      ]
+    },
+    {
+      "id": "brand-brief-voice-story",
+      "task": "Write a one-file brand brief with voice and story",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:positioning-idea-generator", "type": "skill", "use": "explore", "when": "When the brand cannot say why it is different, to get several ways to stand apart" },
+        { "ref": "library:brand-voice-one-pager-writer", "type": "prompt", "use": "build", "when": "When the brief needs a one-page voice guide with word lists and before and after lines" },
+        { "ref": "library:brand-origin-story-writer", "type": "skill", "use": "build", "when": "When the brief needs the founding story told in a human way" },
+        { "ref": "library:tagline-tester", "type": "skill", "use": "check", "when": "When there is a tagline, to score it on ten tests and get sharper versions" },
+        { "ref": "library:marty-neumeier", "type": "mind", "use": "think", "when": "When the brief lists many virtues and no single thing that sets the brand apart" }
+      ]
+    },
+    {
+      "id": "photo-style",
+      "task": "Set photo and image style rules",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:ad-photography-style-chooser", "type": "skill", "use": "explore", "when": "When the photo style is open, to compare styles and pick a main one, a test one and one to avoid" },
+        { "ref": "library:store-photo-style-locker", "type": "skill", "use": "build", "when": "When the style is chosen, to fix models, light and layout in one file" },
+        { "ref": "library:creative-shoot-briefer", "type": "skill", "use": "build", "when": "When a photographer needs the rules as a brief for a real shoot" },
+        { "ref": "library:agency-design-inclusive-visuals-specialist", "type": "agent", "use": "check", "when": "When the rules cover people, to check who is shown and how" }
+      ]
+    },
+    {
+      "id": "brand-architecture",
+      "task": "Plan how sub-brands and product marks relate",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:brand-family-planner", "type": "skill", "use": "build", "when": "When there are several brands or ranges, to set how they relate and what each is called" },
+        { "ref": "library:store-brand-architecture-planner", "type": "skill", "use": "explore", "when": "When the business runs more than one store or range and needs a naming rule to compare" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any work on a brand that already has a live site: colours, fonts and voice" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any brief or brand book goes out, to catch typos and names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "brand-strategist", "when": "When the brand has no position or audience agreed and the look has nothing to stand on" },
+    { "role": "graphic-designer", "when": "When the identity is set and flyers, social posts or signs must be laid out" },
+    { "role": "packaging-designer", "when": "When the identity must go onto a box, label or pouch with legal panels" },
+    { "role": "design-systems-designer", "when": "When a product team needs the brand as tokens and components, not a PDF" },
+    { "role": "advertising-copywriter", "when": "When the brand needs names, taglines or voice written at length" },
+    { "role": "presentation-designer", "when": "When the team needs slide and document templates built from the brand" }
+  ],
+  "gaps": [
+    "No library item reviews logo drafts against a written brief; only the kit prompt and a strength test exist",
+    "No library item writes a mascot or character brief with turnarounds, expressions and poses",
+    "No library item briefs picture book, mural or spot illustration work; only the kit skill covers it",
+    "No library item specs email signatures, letterheads or business cards",
+    "No library item writes logo clear-space, minimum size and misuse rules",
+    "No library item tests mood board or logo directions with real buyers before the client picks",
+    "No library item covers brand motion: logo animation and movement rules",
+    "No library item checks font licences or image rights before a brand book is published",
+    "No library item plans a brand pattern, graphic device or illustration style as a system",
+    "No tool guide covers Figma or Adobe Illustrator"
+  ]
+}

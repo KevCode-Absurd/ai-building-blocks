@@ -1,0 +1,277 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "packaging-designer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "panel-layout",
+      "task": "Map the panels and write the layout spec",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/panel-map-and-layout-spec", "use": "build", "when": "When you have the printer's dieline, the product facts and approved copy and need a panel-by-panel spec" },
+        { "ref": "library:page-grid-and-type-planner", "type": "skill", "use": "build", "when": "When a back panel carries a lot of text and needs a grid, a short type list and white space" },
+        { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "Before you settle the front, to get three hand-made alternatives to the template look" },
+        { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When a panel is drafted, to see where the eye lands first, what to move and what to cut" },
+        { "ref": "library:plain-page-type-checker", "type": "skill", "use": "check", "when": "When small type is set, to check size, spacing and line length at the distance it is read" }
+      ]
+    },
+    {
+      "id": "on-pack-copy",
+      "task": "Write front and back pack copy panel by panel",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/on-pack-copy-by-panel", "use": "build", "when": "When each panel has a fixed space and the front must win a three-second glance" },
+        { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When the front line is flat, to get five short lines that each take a different angle" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "build", "when": "When a line sounds like any product, to make it short, true and easy to picture" },
+        { "ref": "library:ten-percent-cutter", "type": "skill", "use": "build", "when": "When the copy will not fit the panel and must lose words without losing the point" },
+        { "ref": "library:clear-before-clever-copy-checker", "type": "prompt", "use": "check", "when": "When a line is witty, to test a shopper gets what the product is before the joke" },
+        { "ref": "library:elmer-wheeler", "type": "mind", "use": "think", "when": "When the front names features and not the one benefit a shopper would pick it up for" }
+      ]
+    },
+    {
+      "id": "front-directions",
+      "task": "Explore front panel directions",
+      "kind": "other",
+      "items": [
+        { "ref": "library:one-symbol-concept-finder", "type": "skill", "use": "brief", "when": "Before any layout, to find the one idea, one feeling and one symbol the front should carry" },
+        { "ref": "library:brand-stylescape-planner", "type": "skill", "use": "explore", "when": "When the pack look is undecided, to compare three mood board directions and merge a pick" },
+        { "ref": "library:midjourney-four-direction-prompt-writer", "type": "skill", "use": "explore", "when": "When a direction needs a picture, to try one pack idea as four different treatments" },
+        { "ref": "kit:prompts/front-panel-thumbnail-test", "use": "check", "when": "When there are several fronts, to compare them beside the packs they will sit next to" },
+        { "ref": "library:pack-and-thumbnail-glance-tester", "type": "skill", "use": "check", "when": "When a front is drafted, to test what a shopper takes in at a glance and at thumbnail size" },
+        { "ref": "library:raymond-loewy", "type": "mind", "use": "think", "when": "When a redesign risks being so new that current buyers no longer spot the product" }
+      ]
+    },
+    {
+      "id": "label-details",
+      "task": "List the details the label must carry",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/required-label-details-check", "use": "build", "when": "When you need the list of required details for the product type and each market it sells in" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When the label makes claims, to sort each as fine, needs proof or cut, with safer wording" },
+        { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "When the details are set, to catch typos and one name spelt two ways across panels" }
+      ]
+    },
+    {
+      "id": "shelf-test",
+      "task": "Test the front panel on shelf and as a thumbnail",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/front-panel-thumbnail-test", "use": "check", "when": "Before print, to review the front against the competitors beside it on a shelf or search page" },
+        { "ref": "library:pack-and-thumbnail-glance-tester", "type": "skill", "use": "check", "when": "When you want a second scored test of what reads at a glance and at small size" },
+        { "ref": "library:store-brand-signal-auditor", "type": "skill", "use": "check", "when": "When the pack must match the site, emails and ads, to score what each one says" },
+        { "ref": "library:paul-feldwick", "type": "mind", "use": "think", "when": "When the front is clear but carries no cue that buyers would know the brand by" }
+      ]
+    },
+    {
+      "id": "packaging-brief",
+      "task": "Write the packaging brief",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/new-pack-to-approved-proof", "use": "brief", "when": "When a new product or pack format has a launch date and needs steps from brief to proof" },
+        { "ref": "library:packaging-brief-writer", "type": "skill", "use": "build", "when": "When a designer needs one brief covering materials, format, panels and unboxing" },
+        { "ref": "library:design-brief-rules-writer", "type": "skill", "use": "brief", "when": "When the client sets no limits, to fix firm rules for the pack before any layout" },
+        { "ref": "library:product-brand-sheet-planner", "type": "workflow", "use": "brief", "when": "When assets are scattered, to plan a one-page visual sheet and list what is missing" },
+        { "ref": "library:kenya-hara", "type": "mind", "use": "think", "when": "When the brief keeps adding messages and the pack needs less on it" }
+      ]
+    },
+    {
+      "id": "printer-spec",
+      "task": "Request the dieline and spec from the printer",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/printer-spec-request", "use": "build", "when": "At the start of the job, to get the dieline, artwork guide and proof dates before any layout" },
+        { "ref": "library:supplier-quote-request-writer", "type": "skill", "use": "build", "when": "When the pack has not been quoted yet, to write the request in the maker's terms" },
+        { "ref": "library:supplier-quote-comparer", "type": "skill", "use": "check", "when": "When printers have quoted, to compare price, minimum order, lead time and risk" }
+      ]
+    },
+    {
+      "id": "artwork-preflight",
+      "task": "Preflight artwork and check the printer's proof",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/artwork-preflight-and-print-release", "use": "check", "when": "Before the file is sent and again when the proof comes back, to check it line by line" },
+        { "ref": "library:plain-page-type-checker", "type": "skill", "use": "check", "when": "When the legal panel uses very small type, to check it can still be read" },
+        { "ref": "library:colour-contrast-checker", "type": "skill", "use": "check", "when": "When text sits on a coloured or printed background, to check each pair is readable" },
+        { "ref": "library:sample-approval-gatekeeper", "type": "skill", "use": "check", "when": "When a printed sample arrives, to pass or fail it line by line against the spec" },
+        { "ref": "library:product-sample-approval-loop", "type": "agent", "use": "check", "when": "When samples go back and forth, to track fixes and stop at three rounds" }
+      ]
+    },
+    {
+      "id": "range-system",
+      "task": "Build a layout system across a product range",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/range-layout-system", "use": "build", "when": "When several flavours, scents or sizes look messy side by side, or before adding variants" },
+        { "ref": "library:product-and-variant-setup-planner", "type": "skill", "use": "brief", "when": "Before the system, to list every product type and variant the range must hold" },
+        { "ref": "library:mood-colour-palette-planner", "type": "skill", "use": "explore", "when": "When each variant needs its own colour, to plan a small palette with one job per colour" },
+        { "ref": "library:visual-system-rules-writer", "type": "skill", "use": "build", "when": "When the range needs firm rules for what stays fixed and what changes per variant" },
+        { "ref": "library:colour-contrast-checker", "type": "skill", "use": "check", "when": "When variant colours are picked, to check the text reads on every one" }
+      ]
+    },
+    {
+      "id": "range-copy",
+      "task": "Write a copy system for a product range",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/on-pack-copy-by-panel", "use": "build", "when": "When every variant needs the same panel structure with its own name and lines" },
+        { "ref": "library:name-family-planner", "type": "skill", "use": "explore", "when": "When variants need names, to get a family of names from one root to choose from" },
+        { "ref": "library:brand-voice-one-pager-writer", "type": "prompt", "use": "brief", "when": "When the range has no written voice, to set tone and word lists before the lines" },
+        { "ref": "library:draft-brand-voice-checker", "type": "skill", "use": "check", "when": "When the lines are drafted, to find where a variant drifts from the brand's voice" }
+      ]
+    },
+    {
+      "id": "label-sticker",
+      "task": "Spec a label or sticker layout",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/panel-map-and-layout-spec", "use": "build", "when": "When a jar label, bottle wrap or sticker needs zones, sizes and safe areas written out" },
+        { "ref": "library:font-pair-shortlist-maker", "type": "prompt", "use": "explore", "when": "When the maker has no brand fonts, to compare three pairs with sizes" },
+        { "ref": "library:page-grid-and-type-planner", "type": "skill", "use": "build", "when": "When the label is small and crowded and needs a strict grid" },
+        { "ref": "library:plain-page-type-checker", "type": "skill", "use": "check", "when": "When the label is drafted, to check the smallest text at arm's length" }
+      ]
+    },
+    {
+      "id": "unboxing",
+      "task": "Plan the unboxing and insert cards",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/insert-card-and-unboxing-plan", "use": "build", "when": "When the product ships in a box or mailer and you plan what the buyer sees, in order" },
+        { "ref": "library:sensory-unboxing-planner", "type": "skill", "use": "explore", "when": "When the unboxing feels plain, to get matched sight, touch and sound cues with costs" },
+        { "ref": "library:unboxing-insert-and-gift-planner", "type": "skill", "use": "build", "when": "When the insert, note and gift must be costed against order value and margin" },
+        { "ref": "library:plan-a-branded-unboxing-that-customers-film-and-reorder-for", "type": "workflow", "use": "build", "when": "When the client wants one guided run to an unboxing plan built on their order data" },
+        { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When an insert card is drafted, to check what the eye lands on first" }
+      ]
+    },
+    {
+      "id": "claims-check",
+      "task": "Check on-pack claims against proof",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/required-label-details-check", "use": "check", "when": "When a claim such as organic or vegan has its own label rules in a market" },
+        { "ref": "library:claim-and-proof-matcher", "type": "skill", "use": "check", "when": "When the pack makes claims, to match each one to the evidence the maker holds" },
+        { "ref": "library:usp-claim-checker", "type": "skill", "use": "check", "when": "When the front rests on one claim, to test it is real, unique and strong" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "build", "when": "When a claim fails, to get safer wording that still sells" }
+      ]
+    },
+    {
+      "id": "component-list",
+      "task": "List pack components for recycling labels and EPR data",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/packaging-component-list", "use": "build", "when": "When choosing a recycling label, when materials change, or when a producer needs data by component" },
+        { "ref": "library:product-bill-of-materials-builder", "type": "skill", "use": "build", "when": "When the pack has many parts, to list each part with its maker and cost" }
+      ]
+    },
+    {
+      "id": "label-change",
+      "task": "Handle a label change and reprint",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/label-change-and-reprint", "use": "build", "when": "When a recipe, supplier, size, address or material changes, or a new market is added" },
+        { "ref": "kit:skills/required-label-details-check", "use": "check", "when": "When the change may alter what the label has to carry" },
+        { "ref": "library:update-campaign-copy-after-a-fact-change", "type": "workflow", "use": "build", "when": "When the same fact also appears in ads, pages and emails and all must change together" },
+        { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before the reprint, to check the changed panels word by word" }
+      ]
+    },
+    {
+      "id": "new-pack-project",
+      "task": "Run a new pack from brief to approved proof",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/new-pack-to-approved-proof", "use": "build", "when": "When a maker moves from home-printed labels to printed packs with a shop date" },
+        { "ref": "library:launch-critical-path-builder", "type": "skill", "use": "build", "when": "When the launch date is fixed, to date every step from samples to warehouse with owners" },
+        { "ref": "library:co-packer-picker", "type": "skill", "use": "brief", "when": "When someone else will fill and pack the product and their limits shape the pack" },
+        { "ref": "library:outside-view-timeline-estimator", "type": "prompt", "use": "check", "when": "When the plan has no slack, to correct the dates by how such jobs really go" }
+      ]
+    },
+    {
+      "id": "pack-mockups",
+      "task": "Make pack mockup images to show the client",
+      "kind": "other",
+      "items": [
+        { "ref": "library:product-image-spec-writer", "type": "skill", "use": "brief", "when": "Before any image, to write the pack's true details and the lines that lock them" },
+        { "ref": "library:marketing-image-maker", "type": "skill", "use": "build", "when": "When a direction needs a picture and you want a prompt, the exact size and a file plan" },
+        { "ref": "library:image-maker-and-editor", "type": "skill", "use": "build", "when": "When a flat design must be placed on a pack shape or cut out cleanly" },
+        { "ref": "library:ai-product-photo-inspector", "type": "skill", "use": "check", "when": "When a mockup comes back, to check the label text and shape were not changed" },
+        { "ref": "library:recraft", "type": "tool", "use": "build", "when": "When you need a vector draft of a label or icon that can be scaled" },
+        { "ref": "library:adobe-firefly", "type": "tool", "use": "build", "when": "When a photo the client owns must be extended or cleaned up for the mockup" }
+      ]
+    },
+    {
+      "id": "quotes-and-cost",
+      "task": "Compare packaging quotes and cost per unit",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:compare-supplier-prices-on-the-same-basis", "type": "workflow", "use": "build", "when": "When quotes use different units, currencies or delivery terms and must be put on one basis" },
+        { "ref": "library:supplier-quote-table-builder", "type": "prompt", "use": "build", "when": "When you have two or more quotes pasted, to get one table and the cash each needs" },
+        { "ref": "library:cost-per-sellable-unit-finder", "type": "prompt", "use": "check", "when": "When the pack price is known, to see what it does to cost per unit sold" }
+      ]
+    },
+    {
+      "id": "new-market",
+      "task": "Adapt a pack for another country or language",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/required-label-details-check", "use": "build", "when": "When the pack enters a new market and the required details differ" },
+        { "ref": "library:overseas-listing-localizer", "type": "skill", "use": "build", "when": "When images and copy need local language, sizes and required labels for each country" },
+        { "ref": "library:translator", "type": "skill", "use": "build", "when": "When panel text must be translated in a natural tone with consistent terms" }
+      ]
+    },
+    {
+      "id": "back-panel-story",
+      "task": "Write the brand story for the back panel",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/on-pack-copy-by-panel", "use": "build", "when": "When the story must fit a fixed back-panel space beside the required details" },
+        { "ref": "library:write-your-founder-story-and-cut-it-to-what-moves", "type": "workflow", "use": "explore", "when": "When the founder has a long true story, to map it and cut it to what moves a reader" },
+        { "ref": "library:brand-origin-story-writer", "type": "skill", "use": "build", "when": "When the maker has only rough notes on how they started" },
+        { "ref": "library:ten-percent-cutter", "type": "skill", "use": "check", "when": "When the story is over the space, to cut it without losing the point" }
+      ]
+    },
+    {
+      "id": "gift-and-seasonal",
+      "task": "Plan a gift set or seasonal sleeve",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/panel-map-and-layout-spec", "use": "build", "when": "When a sleeve or gift box needs its own panel map on top of the standard pack" },
+        { "ref": "library:promotion-idea-planner", "type": "skill", "use": "explore", "when": "When the season needs an idea, to compare gift, bundle and pre-order options" },
+        { "ref": "library:cart-bundle-and-gift-planner", "type": "skill", "use": "brief", "when": "When the set must hold margin, to fix what goes in it before any design" }
+      ]
+    },
+    {
+      "id": "pack-review",
+      "task": "Review a current pack and rank the fixes",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/front-panel-thumbnail-test", "use": "check", "when": "When a pack is on sale and the maker asks why it is missed on shelf or in search" },
+        { "ref": "library:review-insight-finder", "type": "skill", "use": "brief", "when": "When reviews exist, to find what buyers say about the pack, the label and opening it" },
+        { "ref": "library:store-brand-signal-auditor", "type": "skill", "use": "check", "when": "When the pack sits beside the site and ads, to score what each one says" },
+        { "ref": "library:kenya-hara", "type": "mind", "use": "think", "when": "When every panel is full and the fix is to take things away" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any pack work for a brand with a live site: colours, fonts and voice" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When the pack states a number, award or claim you cannot trace to the maker" }
+  ],
+  "helpers": [
+    { "role": "brand-designer", "when": "When the brand has no logo, palette or type to build the pack from" },
+    { "role": "compliance-specialist", "when": "When label rules for a regulated product or market need a proper check" },
+    { "role": "physical-product-developer", "when": "When the pack format, material or supplier is still open" },
+    { "role": "product-photographer", "when": "When the finished pack needs real photos for listings and ads" },
+    { "role": "translator", "when": "When panels must be translated for another market" },
+    { "role": "advertising-copywriter", "when": "When the launch needs ads and page copy to match the pack" }
+  ],
+  "gaps": [
+    "No library item writes on-pack copy panel by panel to a fixed space; only the kit skill does",
+    "No library item turns a dieline into a panel map and layout spec",
+    "No library item lists required label details by product type and market: allergens, nutrition, ingredients and date marks",
+    "No library item covers recycling labels, EPR data or choosing lower-waste materials",
+    "No library item covers barcodes: number source, size, quiet zone and placement",
+    "No library item preflights packaging artwork or checks a printer's proof for bleed, spot colours and minimum type",
+    "No library item chooses a pack format or plans a shipping box and its protection",
+    "No library item builds a layout or colour-coding system across a range of variants",
+    "No library item covers retailer and Amazon packaging rules such as shelf-ready packs and warehouse labels",
+    "No library item makes a mockup from a dieline, and no tool guide covers Illustrator or pack mockup tools"
+  ]
+}

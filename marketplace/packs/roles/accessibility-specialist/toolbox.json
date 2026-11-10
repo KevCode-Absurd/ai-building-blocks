@@ -1,0 +1,301 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "accessibility-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "audit-page-or-flow",
+      "task": "Audit a page, app screen or key flow against WCAG",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/accessibility-audit", "use": "build", "when": "When a site, app or key flow needs a full audit at a chosen level with scoped samples" },
+        { "ref": "library:accessibility-checker", "type": "skill", "use": "check", "when": "When you want a first automated pass on a page or code before the manual checks" },
+        { "ref": "library:agency-testing-accessibility-auditor", "type": "agent", "use": "explore", "when": "When you want a second audit view with its own keyboard and screen reader test plan" },
+        { "ref": "library:accessibility-standards-checker", "type": "skill", "use": "brief", "when": "When the client can only describe the product and needs likely gaps by level first" },
+        { "ref": "library:colour-contrast-checker", "type": "skill", "use": "check", "when": "When text and background pairs need testing in light and dark themes" },
+        { "ref": "library:kat-holmes", "type": "mind", "use": "think", "when": "When the audit lists rule failures and nobody has asked who is shut out and how they cope now" }
+      ]
+    },
+    {
+      "id": "audit-to-tickets",
+      "task": "Turn audit findings into developer tickets",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/audit-findings-to-dev-tickets", "use": "build", "when": "When you have an audit, agency report or checker export and developers need tickets to fix and test" },
+        { "ref": "library:work-ticket-writer", "type": "skill", "use": "build", "when": "When a ticket must match the team's tracker fields with a clear done test" },
+        { "ref": "kit:skills/accessibility-audit", "use": "check", "when": "When a finding is unclear and you must go back to the rule, the user harm and the evidence" }
+      ]
+    },
+    {
+      "id": "component-fix",
+      "task": "Fix a component for keyboard and screen reader users",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/component-keyboard-and-screen-reader-fixes", "use": "build", "when": "When a modal, menu, tabs, accordion, select or carousel traps or loses keyboard users" },
+        { "ref": "library:give-developers-a-complete-component-brief", "type": "workflow", "use": "brief", "when": "When the component has no spec for its states and accessible behaviour" },
+        { "ref": "library:accessible-ui-builder", "type": "skill", "use": "explore", "when": "When the component is past patching and a clean accessible rebuild should be compared" },
+        { "ref": "library:wcag-accessibility-fixer", "type": "skill", "use": "build", "when": "When you have the code and want problems found, fixed and checked again in one run" },
+        { "ref": "library:live-screen-debugger", "type": "skill", "use": "check", "when": "When the fix must be clicked and tabbed through in a running app to prove it works" }
+      ]
+    },
+    {
+      "id": "accessible-forms",
+      "task": "Make a form accessible, with clear labels and errors",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/component-keyboard-and-screen-reader-fixes", "use": "build", "when": "When labels, groups, hints and error messages must be tied to their fields in code" },
+        { "ref": "library:web-form-designer", "type": "skill", "use": "brief", "when": "When the form's fields and error messages need planning before any code" },
+        { "ref": "library:error-message-rewriter", "type": "skill", "use": "build", "when": "When error text blames the user or does not say what went wrong and what to do" },
+        { "ref": "library:make-a-long-form-easier-to-finish", "type": "workflow", "use": "explore", "when": "When the form is long and a shorter field list and flow should be tried" },
+        { "ref": "library:plain-words-interface-rewriter", "type": "skill", "use": "check", "when": "When labels and help text use the organisation's words, not the user's" },
+        { "ref": "library:don-norman", "type": "mind", "use": "think", "when": "When people keep making the same mistake and the form gives no cue, feedback or way back" }
+      ]
+    },
+    {
+      "id": "fix-list-to-code",
+      "task": "Turn an audit fix list into working code",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/component-keyboard-and-screen-reader-fixes", "use": "build", "when": "When each finding needs a code change with keyboard and screen reader behaviour stated" },
+        { "ref": "library:wcag-accessibility-fixer", "type": "skill", "use": "build", "when": "When many small page-level failures can be fixed and re-checked together" },
+        { "ref": "library:small-change-keeper", "type": "skill", "use": "build", "when": "While fixing, to change only what the finding needs and leave the design alone" },
+        { "ref": "library:generated-code-reviewer", "type": "skill", "use": "check", "when": "Before the fixes are handed over, to catch repeated logic and common slips" }
+      ]
+    },
+    {
+      "id": "automated-checks",
+      "task": "Add automated accessibility checks to the tests",
+      "kind": "code",
+      "items": [
+        { "ref": "library:browser-test-setup-builder", "type": "skill", "use": "build", "when": "When the project has no browser tests and needs them installed with a sample and a CI file" },
+        { "ref": "library:browser-test-writer", "type": "skill", "use": "build", "when": "When a key flow needs a test that tabs through it and checks names, roles and focus" },
+        { "ref": "library:react-test-writer", "type": "skill", "use": "build", "when": "When React components need tests for what a keyboard or screen reader user gets" },
+        { "ref": "library:agency-testing-test-automation-engineer", "type": "agent", "use": "check", "when": "When the new tests are flaky and failures must mean real bugs" }
+      ]
+    },
+    {
+      "id": "pre-release-check",
+      "task": "Check new UI code before release",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/accessibility-audit", "use": "check", "when": "When only the changed screens need checking, scoped to the new flow" },
+        { "ref": "library:accessibility-checker", "type": "skill", "use": "check", "when": "When you want ranked problems from the changed code before a manual pass" },
+        { "ref": "library:animation-reviewer", "type": "skill", "use": "check", "when": "When the change adds motion and it must respect a reduced-motion setting" },
+        { "ref": "library:site-qa-sweep-runner", "type": "skill", "use": "check", "when": "When the release touches many pages and needs a quick sweep for breakage" }
+      ]
+    },
+    {
+      "id": "contrast-and-tokens",
+      "task": "Fix colour contrast while keeping the brand",
+      "kind": "other",
+      "items": [
+        { "ref": "library:colour-contrast-checker", "type": "skill", "use": "explore", "when": "When brand colours fail and you need the closest passing colours to choose between" },
+        { "ref": "library:write-design-rules-check-colours-and-hand-developers-a-spec", "type": "workflow", "use": "build", "when": "When the fix must become design rules, checked colours and a spec for developers" },
+        { "ref": "library:design-token-builder", "type": "skill", "use": "build", "when": "When the passing colours should be saved as tokens the whole product uses" },
+        { "ref": "library:monthly-design-system-keeper", "type": "agent", "use": "check", "when": "Each month, to find drift from the rules and re-check contrast" }
+      ]
+    },
+    {
+      "id": "alt-text-batch",
+      "task": "Write alt text for a batch of images",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/alt-text-batch", "use": "build", "when": "When a set of photos, blog images or report graphics needs one consistent table of alt text" },
+        { "ref": "kit:skills/alt-text-and-media-descriptions", "use": "check", "when": "When you must decide if an image is decorative, functional or informative before writing" },
+        { "ref": "library:product-image-alt-text-writer", "type": "skill", "use": "build", "when": "When a shop has hundreds of product photos and the text should be set on the live files" },
+        { "ref": "library:store-image-prep-checker", "type": "skill", "use": "check", "when": "When image files also need sizes and names checked along with their alt text" }
+      ]
+    },
+    {
+      "id": "chart-descriptions",
+      "task": "Write long descriptions for charts and infographics",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/alt-text-and-media-descriptions", "use": "build", "when": "When a chart or infographic needs a short alt text and a full description of its data" },
+        { "ref": "library:agency-engineering-data-visualization-engineer", "type": "agent", "use": "check", "when": "When you must be sure what the chart shows, and that it does not mislead, before describing it" },
+        { "ref": "library:alberto-cairo", "type": "mind", "use": "think", "when": "When the description repeats the title and should say what the chart shows and what it does not" }
+      ]
+    },
+    {
+      "id": "captions-and-audio-description",
+      "task": "Write captions, transcripts and audio description",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/alt-text-and-media-descriptions", "use": "build", "when": "When a video needs an audio description script that fits the gaps in the speech" },
+        { "ref": "library:branded-video-captions", "type": "skill", "use": "build", "when": "When clips and a script need timed captions, a subtitle file and a fault list" },
+        { "ref": "library:veed", "type": "tool", "use": "build", "when": "When the team needs to caption and correct video in a browser themselves" },
+        { "ref": "library:elevenlabs", "type": "tool", "use": "build", "when": "When speech must be transcribed, or the description script needs a recorded voice" }
+      ]
+    },
+    {
+      "id": "plain-language-rewrite",
+      "task": "Rewrite a letter, policy or form in plain language",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/plain-language-rewrite-with-fact-list", "use": "build", "when": "When a letter, notice or form is hard to read and the plain version must lose no facts" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "explore", "when": "When you want a second plain version with each cut explained, to compare" },
+        { "ref": "library:make-a-new-policy-understandable-to-staff", "type": "workflow", "use": "build", "when": "When the text is an approved staff policy and needs a clear explanation beside it" },
+        { "ref": "library:text-difficulty-checker", "type": "skill", "use": "check", "when": "Before and after the rewrite, to show how hard the text is and for which readers" },
+        { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "When the rewrite is done, to catch slips and one thing called by two names" },
+        { "ref": "library:george-orwell", "type": "mind", "use": "think", "when": "When the text hides who does what behind padding and vague labels" }
+      ]
+    },
+    {
+      "id": "easy-read-version",
+      "task": "Make an Easy Read version with picture briefs",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/accessible-documents-and-easy-read", "use": "build", "when": "When people with learning disabilities need the document in short sentences with pictures" },
+        { "ref": "kit:prompts/plain-language-rewrite-with-fact-list", "use": "brief", "when": "Before the Easy Read version, to get the fact list every version must keep" },
+        { "ref": "library:agency-design-inclusive-visuals-specialist", "type": "agent", "use": "build", "when": "When picture briefs show people and must avoid stereotypes" },
+        { "ref": "library:text-difficulty-checker", "type": "skill", "use": "check", "when": "When the draft is done, to check each sentence asks one thing of the reader" }
+      ]
+    },
+    {
+      "id": "glossary-and-team-checklist",
+      "task": "Write a glossary and a plain language checklist",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/accessible-documents-and-easy-read", "use": "build", "when": "When the team needs a one-page checklist they can use on every letter and form" },
+        { "ref": "library:project-glossary-writer", "type": "skill", "use": "build", "when": "When hard words keep coming back and need one agreed plain meaning each" },
+        { "ref": "library:voice-and-tone-guide-writer", "type": "skill", "use": "build", "when": "When the team needs word lists and side-by-side examples for how to write" }
+      ]
+    },
+    {
+      "id": "accessible-documents",
+      "task": "Make a PDF, Word file or slide deck accessible",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/accessible-documents-and-easy-read", "use": "build", "when": "When a report, form or PDF needs headings, reading order, table headers and alt text set" },
+        { "ref": "library:powerpoint-accessibility-reviewer", "type": "skill", "use": "check", "when": "When a deck needs slide titles, reading order and alt text checked with exact fixes" },
+        { "ref": "library:prepare-a-powerpoint-deck-for-presenting-and-sharing", "type": "workflow", "use": "build", "when": "When a finished deck will be shared and needs notes, links and a readable handout" },
+        { "ref": "library:pdf-toolkit", "type": "skill", "use": "check", "when": "When you need to pull the text out of a PDF to see what a screen reader would get" },
+        { "ref": "library:pdf-converter", "type": "skill", "use": "explore", "when": "When a broken PDF may be better offered as a web page or Word file instead" }
+      ]
+    },
+    {
+      "id": "accessibility-statement",
+      "task": "Draft an honest accessibility statement",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/accessibility-statement-draft", "use": "build", "when": "After an audit or fix round, to say what works, what does not yet and how to get help" },
+        { "ref": "library:accessibility-standards-checker", "type": "skill", "use": "brief", "when": "When you need the known gaps by level set out before the statement is written" },
+        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before publishing, to check each claim of conformance can be traced to a test result" }
+      ]
+    },
+    {
+      "id": "vendor-acr-review",
+      "task": "Review a vendor's accessibility conformance report",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/vendor-acr-review", "use": "check", "when": "Before buying or renewing software, or when a public buyer asks for your own report" },
+        { "ref": "library:procurement-evidence-gap-review-assistant", "type": "agent", "use": "check", "when": "When several vendors must be set against a checklist to see which proofs are missing" },
+        { "ref": "library:vendor-comparison-writer", "type": "skill", "use": "build", "when": "When the buyer needs a clear pick between two vendors with points to negotiate" }
+      ]
+    },
+    {
+      "id": "complaint-triage",
+      "task": "Triage an accessibility complaint or demand letter",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/accessibility-complaint-triage", "use": "build", "when": "When a customer could not use the site, or a demand letter or legal complaint arrives" },
+        { "ref": "library:incoming-demand-letter-reviewer", "type": "skill", "use": "brief", "when": "When the letter makes legal claims and you need them listed with reply options for a lawyer" },
+        { "ref": "library:customer-reply-drafter", "type": "skill", "use": "build", "when": "When the person needs a reply today that gives them another way to get the service" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before the reply goes, to check each promise and fix date is one the team can keep" },
+        { "ref": "library:liz-jackson", "type": "mind", "use": "think", "when": "When the reply defends the product and has not asked what the person wanted to do" }
+      ]
+    },
+    {
+      "id": "quarterly-check",
+      "task": "Run the quarterly accessibility check",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/quarterly-accessibility-check", "use": "brief", "when": "Every quarter, in the first two weeks" },
+        { "ref": "library:quarterly-accessibility-keeper", "type": "agent", "use": "check", "when": "When last quarter's fixes must be re-checked and the statement kept current" },
+        { "ref": "library:website-quality-keeper", "type": "agent", "use": "check", "when": "When the same visit should also catch broken pages and other quality slips" },
+        { "ref": "kit:prompts/accessibility-statement-draft", "use": "build", "when": "When the check changes what is known and the public statement needs updating" }
+      ]
+    },
+    {
+      "id": "audit-fix-retest",
+      "task": "Run an audit, fix and retest cycle to a deadline",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/audit-fix-and-retest", "use": "brief", "when": "For a launch, a redesign, a tender that names a standard, a complaint or the yearly check" },
+        { "ref": "kit:skills/accessibility-audit", "use": "build", "when": "At the start, and again at retest on the same sample" },
+        { "ref": "kit:prompts/audit-findings-to-dev-tickets", "use": "build", "when": "When findings are agreed and the fix round needs tickets" },
+        { "ref": "library:ship-readiness-gate", "type": "skill", "use": "check", "when": "At the end, to get a go or no-go with the remaining blockers listed" }
+      ]
+    },
+    {
+      "id": "public-sector-check",
+      "task": "Check against Section 508 for a public sector buyer",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:federal-accessibility-checker", "type": "skill", "use": "build", "when": "When a US federal buyer is involved and you need gaps, a fix plan and report notes" },
+        { "ref": "library:agency-engineering-section-508-specialist", "type": "agent", "use": "check", "when": "When one page or form needs a ranked fix list and a draft conformance note" },
+        { "ref": "kit:prompts/vendor-acr-review", "use": "check", "when": "When the buyer asks for your own conformance report and it must stand up to review" }
+      ]
+    },
+    {
+      "id": "mobile-screens",
+      "task": "Check mobile app screens for accessibility",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/accessibility-audit", "use": "build", "when": "When app screens need checking for touch targets, labels, focus order and text size" },
+        { "ref": "library:apple-app-design-checker", "type": "skill", "use": "check", "when": "When the app is for iPhone or iPad and should match Apple's own design rules" },
+        { "ref": "library:mobile-app-designer", "type": "skill", "use": "explore", "when": "When a screen fails badly and a thumb-friendly layout should be drafted to compare" }
+      ]
+    },
+    {
+      "id": "design-review",
+      "task": "Review a design for barriers before it is built",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:new-screen-design-reviewer", "type": "agent", "use": "check", "when": "When each new screen needs a ready, fix-first or rethink call before build" },
+        { "ref": "library:turn-a-design-review-into-fixes", "type": "workflow", "use": "build", "when": "When one screen needs an issue list, a revised brief and a small test" },
+        { "ref": "library:screen-states-designer", "type": "skill", "use": "build", "when": "When the design shows the happy path only and error, empty and loading states are missing" },
+        { "ref": "library:developer-handoff-spec-writer", "type": "skill", "use": "build", "when": "When the design is agreed and developers need states, focus order and names written down" }
+      ]
+    },
+    {
+      "id": "usability-test-with-disabled-users",
+      "task": "Plan a usability test with disabled users",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:small-usability-test-planner", "type": "skill", "use": "build", "when": "When you can run a one-morning test and need tasks, a script and a fix list" },
+        { "ref": "library:usability-test-runner", "type": "skill", "use": "build", "when": "When a fuller study needs task scripts, moderator notes and a findings summary" },
+        { "ref": "library:check-a-prototype-before-user-testing", "type": "workflow", "use": "check", "when": "Before sessions, to find blockers that would stop a participant using the prototype at all" },
+        { "ref": "library:patricia-moore", "type": "mind", "use": "think", "when": "When the test plan covers the screen and misses the everyday moments around it" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When any report or statement says something passes, to trace it to a test you ran" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any report, statement or rewrite goes out, to catch typos and mixed terms" }
+  ],
+  "helpers": [
+    { "role": "frontend-developer", "when": "When the fixes need a rebuild of pages or components in the client's framework" },
+    { "role": "qa-engineer", "when": "When accessibility checks must be built into a wider test suite and release process" },
+    { "role": "ux-designer", "when": "When a flow is the barrier and must be redesigned, not patched" },
+    { "role": "design-systems-designer", "when": "When contrast and focus fixes must be made once in shared tokens and components" },
+    { "role": "compliance-specialist", "when": "When the client needs a view on which accessibility laws apply to them" },
+    { "role": "video-editor", "when": "When captions or audio description must be cut into the finished video" }
+  ],
+  "gaps": [
+    "No library item writes alt text for non-product images, or checks alt text against what the image shows",
+    "No library item writes long descriptions for charts and infographics; only the kit skill covers it",
+    "No library item writes an audio description script or checks captions for accuracy, speaker names and sound cues",
+    "No library item makes an Easy Read version or briefs its pictures; only the kit skill covers it",
+    "No library item rewrites in plain language with a fact list and a reading grade before and after; only the kit prompt covers it",
+    "No library item checks or fixes PDF tags, reading order and form fields, or the heading structure of a Word file",
+    "No library item drafts an accessibility statement or reviews a vendor's conformance report",
+    "No library item triages an accessibility complaint under the ADA or the European Accessibility Act",
+    "No library item sets up automated accessibility rules in browser tests or a build pipeline",
+    "No library item gives a screen reader test script for NVDA, JAWS, VoiceOver or TalkBack",
+    "No library item holds accessible patterns for single components such as dialogs, tabs and menus; only the kit skill covers it",
+    "No library item audits a native iOS or Android app with its own screen reader and settings",
+    "No library item scopes which rules apply under the European Accessibility Act or EN 301 549",
+    "No library item checks an HTML email for accessibility"
+  ]
+}

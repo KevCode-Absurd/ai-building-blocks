@@ -1,0 +1,276 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "product-analyst",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "funnel-drop-off",
+      "task": "Find the biggest drop-off in a sign-up or checkout funnel",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/funnel-drop-off-analysis", "use": "build", "when": "When you have exported events or step counts and need each step defined, counted and ranked by loss" },
+        { "ref": "kit:prompts/funnel-from-step-counts", "use": "build", "when": "When the client only has weekly or monthly counts per step and wants the biggest drop named" },
+        { "ref": "library:conversion-funnel-analyst", "type": "skill", "use": "build", "when": "When you have a raw event log and also need time to convert between steps" },
+        { "ref": "library:new-user-drop-off-finder", "type": "skill", "use": "check", "when": "When the funnel runs from first visit to day 30, to confirm the leak and the missing first-visit step" },
+        { "ref": "library:cohort-funnel-reader", "type": "skill", "use": "check", "when": "When step counts are split by join week, to see which change moved which rate and if the report holds" },
+        { "ref": "library:andrew-chen", "type": "mind", "use": "think", "when": "When every step looks leaky and you must pick the one that limits growth" }
+      ]
+    },
+    {
+      "id": "retention-cohorts",
+      "task": "Build a retention cohort table by start month",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/retention-cohort-analysis", "use": "build", "when": "When you have sign-up and activity or cancel dates and must agree the start, return and period first" },
+        { "ref": "kit:prompts/cohort-grid-from-export", "use": "build", "when": "When the client pastes a simple export and wants to see who stays after one, three and six months" },
+        { "ref": "library:retention-heatmap-maker", "type": "skill", "use": "build", "when": "When the owner needs the grid as a colour-coded picture with a plain reading" },
+        { "ref": "library:retention-cohort-analyst", "type": "skill", "use": "explore", "when": "When you want retention curves by group and feature use to compare against the grid" },
+        { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before you share the grid, to check the method, the sums and small cohorts read as trends" }
+      ]
+    },
+    {
+      "id": "tracking-plan",
+      "task": "Write or repair a product tracking plan",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/event-tracking-plan", "use": "build", "when": "When you need each event named, timed and typed, starting from the questions it must answer" },
+        { "ref": "kit:workflows/tracking-plan-to-live-events", "use": "brief", "when": "When a launch or redesign is coming and the plan must go from draft to checked live events" },
+        { "ref": "library:event-tracking-planner", "type": "skill", "use": "explore", "when": "When the product has no tracking yet and you want a first event list, funnels and one main metric" },
+        { "ref": "library:set-up-product-tracking-and-build-a-retention-dashboard", "type": "workflow", "use": "build", "when": "When the client wants one guided run from event plan to a retention grid and dashboard" }
+      ]
+    },
+    {
+      "id": "test-plan",
+      "task": "Plan a test for the biggest drop-off before launch",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/drop-off-test-plan", "use": "build", "when": "When one change is chosen and you need hypothesis, split, main metric, guardrails and stop rule written" },
+        { "ref": "library:ab-test-traffic-checker", "type": "skill", "use": "check", "when": "Before you commit, to see whether the traffic can prove the lift and how many weeks it needs" },
+        { "ref": "library:product-experiment-designer", "type": "skill", "use": "explore", "when": "When the idea is still loose and you want a second hypothesis and sample size to compare" },
+        { "ref": "library:assumption-test-ranker", "type": "skill", "use": "brief", "when": "When there are many ideas, to rank them by impact and risk and test the top one first" },
+        { "ref": "library:find-where-new-users-leave-and-prove-the-fix-works", "type": "workflow", "use": "build", "when": "When the client wants the leak found, the fix tested and the result read in one run" },
+        { "ref": "library:peep-laja", "type": "mind", "use": "think", "when": "When the test idea is a guess with no user evidence behind it" }
+      ]
+    },
+    {
+      "id": "test-readout",
+      "task": "Read a finished test and make the ship call",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:a-b-test-verdict-maker", "type": "skill", "use": "build", "when": "When the test has ended and you need a split check, the lift as a range and a ship call" },
+        { "ref": "library:test-result-trust-checker", "type": "prompt", "use": "check", "when": "When something else happened during the test, to pass or fail each trust check and guardrail" },
+        { "ref": "library:experiment-result-analyst", "type": "skill", "use": "check", "when": "When you are unsure which statistical test fits the metric and whether the result is real" },
+        { "ref": "library:experiment-readout-desk", "type": "agent", "use": "build", "when": "When the client runs tests often and wants each one checked at start and end, with the lesson saved" },
+        { "ref": "library:david-spiegelhalter", "type": "mind", "use": "think", "when": "When a small lift is being told as a certain win and the range needs plain words" }
+      ]
+    },
+    {
+      "id": "churn-by-group",
+      "task": "Work out churn rate and time to cancel by group",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/retention-cohort-analysis", "use": "build", "when": "When you need churn by plan, channel or start month with the counting rule stated" },
+        { "ref": "library:subscription-churn-audit", "type": "skill", "use": "check", "when": "When the client sells subscriptions, to score where subscribers leave" },
+        { "ref": "library:subscription-revenue-tracker", "type": "skill", "use": "build", "when": "When churn must sit beside recurring revenue and active subscriber counts" },
+        { "ref": "library:feedback-theme-finder", "type": "skill", "use": "build", "when": "When cancel notes or survey answers exist, to turn them into counted themes" }
+      ]
+    },
+    {
+      "id": "repeat-purchase",
+      "task": "Build a repeat purchase view for an online shop",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/cohort-grid-from-export", "use": "build", "when": "When you have order dates and want a grid of who orders again, by first-order month" },
+        { "ref": "library:customer-cohort-reader", "type": "skill", "use": "build", "when": "When you need repeat rate and revenue for each first-purchase month" },
+        { "ref": "library:repeat-buyer-rate-calculator", "type": "skill", "use": "build", "when": "When the owner asks which products bring buyers back within a set number of days" },
+        { "ref": "library:repeat-order-bottleneck-finder", "type": "skill", "use": "check", "when": "When repeat orders are weak, to find the one stage between first and second order to fix" },
+        { "ref": "library:store-ltv-payback-reader", "type": "skill", "use": "check", "when": "When the owner asks if repeat orders pay back what a new customer costs" }
+      ]
+    },
+    {
+      "id": "weekly-review",
+      "task": "Run the weekly funnel and retention review",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/weekly-funnel-and-retention-review", "use": "build", "when": "Each week on the same day, using the last complete week" },
+        { "ref": "library:weekly-product-funnel-watcher", "type": "agent", "use": "build", "when": "When the client wants the losing step, the likely cause and one experiment named every week" },
+        { "ref": "library:product-metrics-review-writer", "type": "skill", "use": "build", "when": "When the numbers are in and you need what moved against target written up" },
+        { "ref": "library:metric-drop-investigator", "type": "skill", "use": "check", "when": "When one number moved sharply, to confirm it is real before anyone reacts" }
+      ]
+    },
+    {
+      "id": "metric-definitions",
+      "task": "Define the main metric and how each number is counted",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:north-star-metric-picker", "type": "skill", "use": "explore", "when": "When the team has no agreed main metric, to get one with the numbers that feed it" },
+        { "ref": "library:product-metrics-planner", "type": "skill", "use": "brief", "when": "When you need the right metrics for the product's stage before you define any" },
+        { "ref": "library:metric-definition-writer", "type": "skill", "use": "build", "when": "When two people count the same metric two ways and one written rule is needed" },
+        { "ref": "library:vanity-metric-fixer", "type": "skill", "use": "check", "when": "When the report is full of totals that only go up, to swap them for per-customer numbers" },
+        { "ref": "library:align-recurring-report-metric-definitions", "type": "workflow", "use": "check", "when": "When two regular reports disagree and you must show where the definitions split" }
+      ]
+    },
+    {
+      "id": "event-clean-up",
+      "task": "Clean up a messy event list or move to a new tool",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/clean-up-event-names", "use": "build", "when": "When the event list has duplicates, mixed case and values in names, to get one clean set and a map" },
+        { "ref": "kit:skills/event-tracking-plan", "use": "build", "when": "When the clean list needs properties, owners and a version note so it stays clean" },
+        { "ref": "library:monthly-tracking-health-keeper", "type": "agent", "use": "check", "when": "When the list keeps drifting, to find broken tracking and double counts each month" }
+      ]
+    },
+    {
+      "id": "tracking-qa",
+      "task": "Check new events fire correctly after a release",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/tracking-qa-after-release", "use": "check", "when": "When new or renamed events went live, to check each fires once with the right properties" },
+        { "ref": "kit:workflows/tracking-plan-to-live-events", "use": "check", "when": "When the release is part of a larger tracking change with sign-off points" },
+        { "ref": "library:metric-mismatch-tracer", "type": "skill", "use": "check", "when": "When the analytics tool and the database give different counts, to find the step where they split" }
+      ]
+    },
+    {
+      "id": "privacy-check",
+      "task": "Check a tracking plan collects no more personal data than needed",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/privacy-check-on-a-tracking-plan", "use": "check", "when": "Before a plan goes live or when you inherit one, to find properties the questions do not need" },
+        { "ref": "library:agency-data-privacy-officer", "type": "agent", "use": "check", "when": "When users are in the EU or California, to list the duties that apply and the proof missing" }
+      ]
+    },
+    {
+      "id": "activation-signal",
+      "task": "Find the early action that predicts who stays",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:customer-success-signals", "type": "skill", "use": "build", "when": "When you can compare what kept and lost customers did early, to set one sign with a time limit" },
+        { "ref": "library:retention-problem-fixer", "type": "skill", "use": "brief", "when": "When users leave in week one, to name the cause before you pick a fix" },
+        { "ref": "library:onboarding-improver", "type": "skill", "use": "explore", "when": "When the sign is set, to get ways to bring new users to it faster" },
+        { "ref": "library:sean-ellis", "type": "mind", "use": "think", "when": "When nobody can say what users would miss if the product went away" }
+      ]
+    },
+    {
+      "id": "dashboard-plan",
+      "task": "Plan or build a product dashboard",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:kpi-dashboard-designer", "type": "skill", "use": "brief", "when": "Before any chart, to set who reads it, what they decide and the few metrics that fit" },
+        { "ref": "library:dashboard-builder", "type": "skill", "use": "build", "when": "When the client has no analytics tool and needs a dashboard file built from an export" },
+        { "ref": "library:data-chart-drawer", "type": "skill", "use": "build", "when": "When one finding needs a clean chart with the right chart type" },
+        { "ref": "library:agency-engineering-data-visualization-engineer", "type": "agent", "use": "check", "when": "When charts are drafted, to check the chart type and axes do not mislead" },
+        { "ref": "library:alberto-cairo", "type": "mind", "use": "think", "when": "When a chart looks tidy but a reader could take the wrong point from it" },
+        { "ref": "library:hex", "type": "tool", "use": "build", "when": "When the team wants a shared report they can rerun on company data" }
+      ]
+    },
+    {
+      "id": "csv-analysis",
+      "task": "Analyse a CSV export and report the findings",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:analysis-request-scoper", "type": "skill", "use": "brief", "when": "When the request is vague, to pin down the question, the decision and the data needed" },
+        { "ref": "library:new-dataset-explorer", "type": "skill", "use": "brief", "when": "When the file is new to you, to map its columns, spread and odd spots first" },
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "Before any sums, to count gaps, duplicates and odd values in the export" },
+        { "ref": "library:data-cleaner", "type": "skill", "use": "build", "when": "When the export has wrong types, duplicates or outliers that must be fixed and logged" },
+        { "ref": "library:data-analyst", "type": "skill", "use": "build", "when": "When the file is clean and you need the question answered with trends and tests" },
+        { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before the findings go out, to check the method, the sums and any bias" },
+        { "ref": "library:julius", "type": "tool", "use": "build", "when": "When the client wants to ask follow-up questions of the file themselves" }
+      ]
+    },
+    {
+      "id": "customer-segments",
+      "task": "Group customers by behaviour or value",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:customer-segment-builder", "type": "skill", "use": "build", "when": "When you have orders and want each customer scored on recency, frequency and spend" },
+        { "ref": "library:behaviour-group-finder", "type": "skill", "use": "explore", "when": "When fixed rules miss the pattern, to find natural groups from behaviour" },
+        { "ref": "library:churn-risk-finder", "type": "skill", "use": "build", "when": "When the client wants accounts at risk of leaving scored from usage and support data" },
+        { "ref": "library:statistics-helper", "type": "skill", "use": "check", "when": "When two groups look different, to test whether the gap is more than chance" }
+      ]
+    },
+    {
+      "id": "metric-drop",
+      "task": "Investigate why a metric dropped",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:metric-drop-investigator", "type": "skill", "use": "build", "when": "When a number moved, to confirm the change, split it by group and rank the drivers" },
+        { "ref": "library:metric-mismatch-tracer", "type": "skill", "use": "check", "when": "When the drop shows in one report and not another, to rule out a counting change" },
+        { "ref": "library:heatmap-and-recording-reader", "type": "skill", "use": "brief", "when": "When heatmaps or session recordings exist, to see the friction behind the number" },
+        { "ref": "library:monthly-tracking-health-keeper", "type": "agent", "use": "check", "when": "When you suspect the drop is broken tracking and not user behaviour" }
+      ]
+    },
+    {
+      "id": "subscription-numbers",
+      "task": "Report recurring revenue, lifetime value and payback",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:subscription-unit-economics", "type": "skill", "use": "build", "when": "When you have customer and revenue data and need cohorts, lifetime value and payback worked out" },
+        { "ref": "library:saas-metrics-coach", "type": "skill", "use": "check", "when": "When the numbers are done, to read them against stage and say what to fix first" }
+      ]
+    },
+    {
+      "id": "sql-queries",
+      "task": "Write and check SQL for funnel, cohort and test queries",
+      "kind": "code",
+      "items": [
+        { "ref": "library:sql-query-writer", "type": "skill", "use": "build", "when": "When the data sits in a database and you need joins, windows and step logic written" },
+        { "ref": "library:plain-words-sql-explainer", "type": "skill", "use": "check", "when": "When you inherit a query, to see what it counts and which rows it keeps" },
+        { "ref": "library:data-warehouse-query-reviewer", "type": "skill", "use": "check", "when": "Before you trust a result, to catch join errors that double count users" }
+      ]
+    },
+    {
+      "id": "size-and-rank-fixes",
+      "task": "Size the fixes and pick what to work on first",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:opportunity-size-estimator", "type": "skill", "use": "build", "when": "When a fix is proposed, to give a low, base and high gain with each assumption listed" },
+        { "ref": "library:growth-bottleneck-finder", "type": "skill", "use": "check", "when": "When the team argues over where to work, to name the one limit and the work order" },
+        { "ref": "library:eric-ries", "type": "mind", "use": "think", "when": "When the plan is a big build and the riskiest guess has not been tested" }
+      ]
+    },
+    {
+      "id": "retention-plan",
+      "task": "Turn churn findings into a retention and win-back plan",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:cancel-reason-save-planner", "type": "prompt", "use": "build", "when": "When you have cancel reasons, to set one save per reason and the numbers to track" },
+        { "ref": "library:churn-reducer", "type": "skill", "use": "explore", "when": "When the plan needs a cancel flow, save offers and failed-payment recovery to choose from" },
+        { "ref": "library:win-back-flow-builder", "type": "skill", "use": "build", "when": "When lapsed buyers should get messages timed to how they really reorder" },
+        { "ref": "kit:skills/drop-off-test-plan", "use": "check", "when": "When the plan's first change should be tested, not just shipped" }
+      ]
+    },
+    {
+      "id": "findings-write-up",
+      "task": "Write up findings an owner can read in a minute",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When the analysis is long, to put the answer, the impact in numbers and the decision on one page" },
+        { "ref": "library:data-chart-drawer", "type": "skill", "use": "build", "when": "When one chart would carry the point better than a table" },
+        { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before you send it, to check each claim follows from the numbers shown" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:analysis-request-scoper", "type": "skill", "use": "brief", "when": "Before any analysis, to fix the question, the decision it feeds and what data is needed" },
+    { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "Before any sums on an export, to count gaps, duplicates and odd values" },
+    { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before any finding is shared, to check the method, the sums and any bias" }
+  ],
+  "helpers": [
+    { "role": "data-engineer", "when": "When events must be piped into a warehouse or a broken feed must be repaired" },
+    { "role": "cro-specialist", "when": "When the losing step needs a new page or flow designed, not only a test plan" },
+    { "role": "lifecycle-marketer", "when": "When the retention plan needs onboarding, save and win-back messages written" },
+    { "role": "customer-insights-researcher", "when": "When the numbers show where users leave and interviews must show why" },
+    { "role": "data-visualisation-specialist", "when": "When the dashboard needs more than a plan: a designed set of charts for a wide audience" },
+    { "role": "product-manager", "when": "When findings must become a ranked roadmap with owners" }
+  ],
+  "gaps": [
+    "No tool guide covers GA4, Mixpanel, Amplitude or PostHog: how to build a funnel or retention report in each",
+    "No library item checks product events after a release; the library's tracking checks are all for ad conversions",
+    "No library item cleans an event list and returns an old-to-new name map; only the kit prompt does",
+    "No library item checks an analytics tracking plan for personal data in properties, consent mode or retention settings",
+    "No library item measures time to cancel as a survival curve by group",
+    "No library item analyses feature adoption: which features retained users use and lost users do not",
+    "No library item reads user paths or sequences to show what users do just before they leave",
+    "No library item covers guardrail metrics, peeking and stopping rules for tests in one place"
+  ]
+}

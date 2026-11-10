@@ -1,0 +1,293 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "bookkeeper",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "bank-reconciliation",
+      "task": "Reconcile a bank, card or loan account to its statement",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/bank-reconciliation", "use": "build", "when": "When you have a statement and a ledger or feed export for one or more months" },
+        { "ref": "library:bank-and-ledger-matcher", "type": "skill", "use": "build", "when": "When you want matched items, near matches and a list of what is left over" },
+        { "ref": "library:account-reconciler", "type": "skill", "use": "check", "when": "When gaps remain, to sort them by type and get a next step for each" },
+        { "ref": "library:reconciliation-break-tracer", "type": "skill", "use": "check", "when": "When one difference will not clear, to trace it to the entries on both sides" },
+        { "ref": "library:reconcile-the-bank-to-your-books-and-issue-a-clean-p-and-l", "type": "workflow", "use": "build", "when": "When the owner also wants statements built once the bank agrees to the books" },
+        { "ref": "library:katherine-johnson", "type": "mind", "use": "think", "when": "When the totals nearly agree, to work back from the closing balance and check a second way" }
+      ]
+    },
+    {
+      "id": "transaction-categorisation",
+      "task": "Sort bank and card lines into the chart of accounts",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/transaction-categorisation", "use": "build", "when": "When an export needs every line coded, with a confidence note and reusable rules" },
+        { "ref": "library:expense-sorter", "type": "skill", "use": "build", "when": "When lines also need a department and a tax treatment beside the category" },
+        { "ref": "library:supplier-name-cleaner", "type": "skill", "use": "build", "when": "When one payee shows under many spellings and rules keep missing it" },
+        { "ref": "library:unusual-transaction-finder", "type": "skill", "use": "check", "when": "After coding, to flag lines that look odd for their category, with a reason each" }
+      ]
+    },
+    {
+      "id": "expense-and-receipt-sort",
+      "task": "Sort a month of card spending and receipts",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/expense-and-receipt-sort", "use": "build", "when": "When a card export and a pile of receipts need sorting, with missing receipts listed" },
+        { "ref": "library:prepare-expenses-for-your-bookkeeper", "type": "workflow", "use": "build", "when": "When you have the files, to get a categorised file, receipt gaps and a tie-out summary" },
+        { "ref": "library:find-duplicate-and-unused-business-subscriptions", "type": "workflow", "use": "check", "when": "When small monthly charges pile up, to find forgotten and doubled subscriptions" },
+        { "ref": "library:james-clear", "type": "mind", "use": "think", "when": "When the owner never keeps receipts, to shrink the habit to one small monthly step" }
+      ]
+    },
+    {
+      "id": "expense-report",
+      "task": "Build an expense report for one trip or project",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:expense-report-builder", "type": "skill", "use": "build", "when": "When you have receipts and notes and need totals by category with a reason per line" },
+        { "ref": "library:project-time-and-expense-plan", "type": "skill", "use": "brief", "when": "When expenses are rebilled to clients, to set entry rules, approvals and the handoff" },
+        { "ref": "kit:prompts/expense-and-receipt-sort", "use": "check", "when": "When the report must tie back to the card statement line by line" }
+      ]
+    },
+    {
+      "id": "payout-reconciliation",
+      "task": "Reconcile online sales to payouts and bank deposits",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/payout-reconciliation", "use": "build", "when": "When sales on a platform do not equal what reached the bank for the period" },
+        { "ref": "library:payout-reconciler", "type": "skill", "use": "build", "when": "When you can read the store's payouts, to match each to the orders that funded it" },
+        { "ref": "library:excel-table-join-reconciler", "type": "skill", "use": "build", "when": "When you have two exports and a shared key, to list unmatched rows and duplicate keys" },
+        { "ref": "library:reconciliation-break-tracer", "type": "skill", "use": "check", "when": "When one payout is off, to trace the difference to fees, refunds or timing" }
+      ]
+    },
+    {
+      "id": "month-end-close",
+      "task": "Run the month-end close",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/month-end-close", "use": "build", "when": "Monthly, once the last bank and card statements for the month arrive" },
+        { "ref": "library:month-end-close-day-planner", "type": "skill", "use": "brief", "when": "When the close drags, to get a day by day schedule and what is blocking" },
+        { "ref": "library:close-the-month-and-explain-every-line-that-moved", "type": "workflow", "use": "build", "when": "When the owner wants draft statements and a written reason for each line that moved" },
+        { "ref": "library:accrual-schedule-drafter", "type": "skill", "use": "build", "when": "When costs belong to the month but the bills are not in, to draft accruals with support" },
+        { "ref": "library:monthly-freelancer-books-closer", "type": "agent", "use": "build", "when": "When the client is a freelancer, to sort the month and set the tax share aside" },
+        { "ref": "library:agency-finance-bookkeeper-controller", "type": "agent", "use": "check", "when": "Before you call the month closed, to review what does not reconcile and odd entries" }
+      ]
+    },
+    {
+      "id": "catch-up-plan",
+      "task": "Plan a catch-up when the books are months behind",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/catch-up-books-plan", "use": "build", "when": "When nothing has been touched for months and a deadline is coming" },
+        { "ref": "kit:skills/bank-reconciliation", "use": "build", "when": "When the catch-up starts, to reconcile each account month by month in order" },
+        { "ref": "library:self-assessment-tax-return-checklist", "type": "skill", "use": "brief", "when": "When the deadline is a personal tax return, to list the records to gather first" },
+        { "ref": "library:outside-view-timeline-estimator", "type": "prompt", "use": "check", "when": "When you quote how long it will take, to correct the guess by how such jobs really went" }
+      ]
+    },
+    {
+      "id": "profit-and-loss",
+      "task": "Produce a clean profit and loss for the period",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:p-l-and-balance-sheet-writer", "type": "skill", "use": "build", "when": "When the books are reconciled and you need statements with big swings flagged" },
+        { "ref": "library:monthly-profit-close", "type": "agent", "use": "build", "when": "When the owner wants the month set against last month and what to fix first" },
+        { "ref": "library:build-a-monthly-p-and-l-and-know-your-real-margin", "type": "workflow", "use": "build", "when": "When the seller needs true unit costs and margin, not only totals" },
+        { "ref": "library:variance-commentary", "type": "skill", "use": "build", "when": "When each line that moved past a limit needs a written reason" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "When the statement lives in a spreadsheet, to find formula errors and totals that do not tie" }
+      ]
+    },
+    {
+      "id": "chart-of-accounts",
+      "task": "Design a chart of accounts that fits the business",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/chart-of-accounts-setup", "use": "build", "when": "When a new or messy business needs a small, clear list of accounts with use notes" },
+        { "ref": "library:store-pl-builder", "type": "skill", "use": "brief", "when": "When the client sells online, to see the profit view the accounts must be able to feed" },
+        { "ref": "kit:skills/transaction-categorisation", "use": "check", "when": "When the chart is drafted, to test it on a real month and see which lines have no home" }
+      ]
+    },
+    {
+      "id": "software-set-up",
+      "task": "Set up accounting software and bank rules",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/chart-of-accounts-setup", "use": "build", "when": "When the software is new and the accounts and tracking categories must go in first" },
+        { "ref": "kit:skills/transaction-categorisation", "use": "build", "when": "When regular payees need rules so the feed codes them the same way each time" },
+        { "ref": "library:software-vendor-chooser", "type": "skill", "use": "explore", "when": "When the owner has not picked software, to score the options against their needs" },
+        { "ref": "library:business-data-move-runbook", "type": "skill", "use": "build", "when": "When moving from a spreadsheet or old system, to plan field maps, checks and a way back" }
+      ]
+    },
+    {
+      "id": "year-end-pack",
+      "task": "Build the year-end records pack for the accountant",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/year-end-handover", "use": "build", "when": "When the financial year ends or the accountant asks for records" },
+        { "ref": "kit:prompts/year-end-records-pack", "use": "build", "when": "When you want one tidy pack with totals that tie to the bank and the papers needed" },
+        { "ref": "library:self-assessment-tax-return-checklist", "type": "skill", "use": "brief", "when": "When the client is a sole trader, to list records, totals and questions for the return" },
+        { "ref": "library:fixed-asset-register-keeper", "type": "skill", "use": "build", "when": "When equipment was bought or sold in the year, to list what to capitalise" },
+        { "ref": "library:balance-roll-forward-builder", "type": "skill", "use": "check", "when": "When a balance must be shown from opening to closing with each movement tied to the ledger" }
+      ]
+    },
+    {
+      "id": "accountant-questions",
+      "task": "Prepare questions for the owner and the accountant",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/year-end-records-pack", "use": "build", "when": "When open items from the pack must become a short list of questions" },
+        { "ref": "library:agency-finance-tax-strategist", "type": "agent", "use": "brief", "when": "When one tax decision is open, to set out the facts, options and questions for the tax adviser" },
+        { "ref": "library:unusual-transaction-finder", "type": "skill", "use": "check", "when": "When you want the odd lines found before the accountant finds them" }
+      ]
+    },
+    {
+      "id": "contractor-payments",
+      "task": "Summarise payments to contractors for the accountant",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/contractor-payments-summary", "use": "build", "when": "Near year-end, to list who was paid for services, how much, how, and what is missing" },
+        { "ref": "library:supplier-name-cleaner", "type": "skill", "use": "build", "when": "When one contractor appears under several names and totals are split" },
+        { "ref": "library:monthly-contractor-roster-keeper", "type": "agent", "use": "check", "when": "When the roster and invoices are kept monthly, to see whose details or terms need fixing" }
+      ]
+    },
+    {
+      "id": "tax-set-aside",
+      "task": "Set aside money for tax through the year",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/tax-set-aside-plan", "use": "build", "when": "When tax bills keep arriving as a shock and the accountant has given a rate" },
+        { "ref": "library:tax-set-aside-planner", "type": "skill", "use": "build", "when": "When you want a rule for each payment in, a place to keep it and dates to check" },
+        { "ref": "library:cash-forecast-builder", "type": "skill", "use": "check", "when": "When the plan is set, to check cash still covers bills at 30, 60 and 90 days" }
+      ]
+    },
+    {
+      "id": "fees-and-refunds-review",
+      "task": "Review platform fees, returns and refunds",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/payout-reconciliation", "use": "build", "when": "When fees and refunds must be split out of each payout before they are judged" },
+        { "ref": "library:store-profit-margin-calculator", "type": "skill", "use": "build", "when": "When the owner asks what is left per order after cost, shipping, fees and refunds" },
+        { "ref": "library:monthly-returns-and-refunds-reviewer", "type": "agent", "use": "build", "when": "Monthly, to see which products drive refunds, what returns cost and the first fix" },
+        { "ref": "library:repeat-partial-refund-spotter", "type": "skill", "use": "check", "when": "When refunds look high, to find orders with many partial refunds" }
+      ]
+    },
+    {
+      "id": "monthly-sales-summary",
+      "task": "Write the monthly sales summary for the books",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/payout-reconciliation", "use": "build", "when": "When the summary must show gross sales, fees, refunds and net deposits that tie to the bank" },
+        { "ref": "library:excel-monthly-rollup-builder", "type": "skill", "use": "build", "when": "When dated records need a monthly workbook with counts and totals you can trace" },
+        { "ref": "library:sales-tax-summary-builder", "type": "skill", "use": "build", "when": "When the summary needs tax collected by state, province and rate for filing prep" }
+      ]
+    },
+    {
+      "id": "journals-and-adjustments",
+      "task": "Draft journals for accruals, assets and stock",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:journal-entry-drafter", "type": "skill", "use": "build", "when": "When a transaction needs a balanced entry with debits, credits and support notes" },
+        { "ref": "library:accrual-schedule-drafter", "type": "skill", "use": "build", "when": "When several accruals are due, to list each with its support and entry" },
+        { "ref": "library:fixed-asset-register-keeper", "type": "skill", "use": "build", "when": "When purchases may be assets, to decide what to capitalise and the yearly depreciation" },
+        { "ref": "library:inventory-value-calculator", "type": "skill", "use": "build", "when": "When closing stock must be valued from purchases and counts, with write-downs flagged" },
+        { "ref": "library:agency-finance-bookkeeper-controller", "type": "agent", "use": "check", "when": "Before the entries go to the accountant, to review them against the bank and ledger" }
+      ]
+    },
+    {
+      "id": "duplicates-and-oddities",
+      "task": "Find duplicates, odd amounts and missing entries",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:books-reconciliation-pl", "type": "skill", "use": "check", "when": "When you have the ledger and payment reports, to flag mismatches and missing receipts" },
+        { "ref": "library:unusual-transaction-finder", "type": "skill", "use": "check", "when": "When the year has thousands of lines, to flag the odd ones with a reason for each" },
+        { "ref": "library:suspicious-money-trail-reviewer", "type": "skill", "use": "check", "when": "When records do not add up and you need the money traced and red flags listed" },
+        { "ref": "library:john-d-rockefeller", "type": "mind", "use": "think", "when": "When a number looks fine at a glance, to read the books closely and trace where each cost goes" }
+      ]
+    },
+    {
+      "id": "books-routine",
+      "task": "Set a weekly and monthly books routine for the owner",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/month-end-close", "use": "brief", "when": "When the routine must feed a close that starts in the first week of each month" },
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When the routine needs written steps, who does each and what to do with the odd cases" },
+        { "ref": "library:make-a-recurring-process-easier-to-hand-over", "type": "workflow", "use": "build", "when": "When the books pass to a part-time bookkeeper who was not there when they were set up" },
+        { "ref": "library:james-clear", "type": "mind", "use": "think", "when": "When the owner skips the routine, to tie it to a fixed cue and make the first step tiny" }
+      ]
+    },
+    {
+      "id": "profit-tracking",
+      "task": "Plan how to track profit by service, site or project",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/chart-of-accounts-setup", "use": "build", "when": "When the owner wants profit split by service, site or project, to set tracking categories" },
+        { "ref": "library:service-utilization-margin-builder", "type": "skill", "use": "build", "when": "When the business sells hours, to turn paid hours into revenue and delivery margin" },
+        { "ref": "library:build-a-monthly-p-and-l-and-know-your-real-margin", "type": "workflow", "use": "check", "when": "When the business sells products, to check the split shows true unit cost and margin" }
+      ]
+    },
+    {
+      "id": "payroll-entries",
+      "task": "Check payroll inputs and post the entries",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:check-payroll-inputs-before-the-cut-off", "type": "workflow", "use": "check", "when": "Before the cut-off, to get an exception list and questions for whoever runs payroll" },
+        { "ref": "library:payroll-timesheet-checker", "type": "skill", "use": "check", "when": "When pay runs from timesheets, to total hours by person and flag every oddity" },
+        { "ref": "library:journal-entry-drafter", "type": "skill", "use": "build", "when": "When the payroll report must be posted as wages, taxes and amounts owed" }
+      ]
+    },
+    {
+      "id": "sales-tax-prep",
+      "task": "Get sales tax figures ready for filing",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:sales-tax-summary-builder", "type": "skill", "use": "build", "when": "When a filing period is due and you need tax collected by place and rate" },
+        { "ref": "library:store-tax-setup-planner", "type": "skill", "use": "check", "when": "When the figures look wrong, to check the store's tax settings and rates" },
+        { "ref": "kit:skills/transaction-categorisation", "use": "build", "when": "When purchases need a tax treatment on each line before the return" }
+      ]
+    },
+    {
+      "id": "bills-and-invoices",
+      "task": "Record supplier bills and track unpaid invoices",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:vendor-bill-coder", "type": "skill", "use": "build", "when": "When a stack of bills must be read, coded and matched for entry" },
+        { "ref": "library:check-supplier-invoices-before-approval", "type": "workflow", "use": "check", "when": "When bills are entered, to match them and list amounts that need a second look" },
+        { "ref": "library:weekly-invoice-and-cash-chaser", "type": "agent", "use": "build", "when": "When open invoices should be reviewed each week with a reminder for each" }
+      ]
+    },
+    {
+      "id": "owner-numbers-note",
+      "task": "Write the owner's monthly numbers note",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:variance-commentary", "type": "skill", "use": "build", "when": "When this month and last are in, to give a reason for every line that moved" },
+        { "ref": "library:budget-variance-explainer", "type": "skill", "use": "build", "when": "When there is a budget, to say what moved against it and why in a short note" },
+        { "ref": "library:cash-forecast-builder", "type": "skill", "use": "build", "when": "When the owner's real question is whether cash will last the next quarter" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before any workbook goes to the owner or accountant, to find broken formulas and wrong totals" },
+    { "ref": "library:unusual-transaction-finder", "type": "skill", "use": "check", "when": "Before you hand over any period, to flag lines that look out of place" }
+  ],
+  "helpers": [
+    { "role": "ap-ar-specialist", "when": "When unpaid invoices need chasing or supplier bills need a proper check and payment run" },
+    { "role": "payroll-compensation-specialist", "when": "When payroll itself is wrong or needs setting up, not only posting" },
+    { "role": "management-accountant", "when": "When the owner wants budgets, cost reports or accruals that need an accountant's judgment" },
+    { "role": "fractional-cfo", "when": "When the books show a cash or funding problem that needs a plan" },
+    { "role": "spreadsheet-specialist", "when": "When exports need heavy cleaning or a workbook must be built to do the matching" },
+    { "role": "ecommerce-analyst", "when": "When payout gaps point to a pricing, fee or returns problem in the store" }
+  ],
+  "gaps": [
+    "No library item designs a chart of accounts or tracking categories; only the kit skill does",
+    "No library item writes bank feed rules or a set-up checklist for Xero, QuickBooks or similar software",
+    "No library item plans a catch-up when the books are months behind",
+    "No library item reconciles Stripe, PayPal, Square, Amazon or Etsy payouts; the library covers one store's payouts only",
+    "No library item summarises contractor payments for year-end reporting",
+    "No library item builds a year-end records pack for a small company; the library only has a personal tax return checklist",
+    "No library item prepares a VAT or GST return from the books",
+    "No library item matches receipts to bank lines or reads receipt photos into a list",
+    "No library item splits personal from business spending in a mixed account",
+    "No library item splits loan repayments into interest and capital or records owner drawings",
+    "No library item enters opening balances when a business moves from a spreadsheet to software",
+    "No library item handles books kept in more than one currency"
+  ]
+}

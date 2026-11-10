@@ -1,0 +1,275 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "data-scientist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "pick-test",
+      "task": "Pick the right statistical test for a question",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/which-test-should-i-use", "use": "build", "when": "When there is a question and some data and the method is not yet chosen" },
+        { "ref": "library:statistical-test-picker", "type": "skill", "use": "build", "when": "When you need the test, its assumption checks and effect sizes written up" },
+        { "ref": "library:agency-academic-statistician", "type": "agent", "use": "explore", "when": "When you want a second opinion on the design and what the numbers can prove" },
+        { "ref": "library:david-spiegelhalter", "type": "mind", "use": "think", "when": "When the answer is a p-value nobody can read, to say what is known and unknown plainly" }
+      ]
+    },
+    {
+      "id": "dataset-analysis",
+      "task": "Write a checked analysis of a dataset",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/statistical-test-and-analysis", "use": "build", "when": "When someone asks whether the numbers really show what they think" },
+        { "ref": "library:new-dataset-explorer", "type": "skill", "use": "brief", "when": "Before any test, to map the data's structure, spread, links and odd spots" },
+        { "ref": "library:statistics-helper", "type": "skill", "use": "build", "when": "When trends, outliers and correlations need working out and explaining plainly" },
+        { "ref": "library:regression-and-forecast-modeller", "type": "skill", "use": "build", "when": "When the question is what drives an outcome and a fitted model with checks is needed" },
+        { "ref": "library:analysis-assumptions-logger", "type": "skill", "use": "check", "when": "When reviewers should see every assumption and how it could change the answer" },
+        { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before the analysis is shared, to check the method, the maths and any bias" }
+      ]
+    },
+    {
+      "id": "sample-size",
+      "task": "Estimate the sample size and run time a test needs",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/sample-size-for-a-test", "use": "build", "when": "Before an A/B test or split email, to see if it can find the change you care about" },
+        { "ref": "library:sample-size-planner", "type": "skill", "use": "build", "when": "When the design is not a simple two-group test and needs power worked out" },
+        { "ref": "library:ab-test-traffic-checker", "type": "skill", "use": "check", "when": "When you have visits and orders, to cross-check the size and the weeks needed" }
+      ]
+    },
+    {
+      "id": "experiment-design",
+      "task": "Design an A/B test or small trial",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/experiment-design-and-readout", "use": "build", "when": "When a change needs one primary metric, a smallest effect and a written plan" },
+        { "ref": "kit:workflows/test-plan-to-decision", "use": "brief", "when": "When someone wants to test a change and you need the steps from idea to decision" },
+        { "ref": "library:experiment-designer", "type": "skill", "use": "explore", "when": "When you want a second plan with its own hypothesis and reading rule to compare" },
+        { "ref": "library:study-design-and-randomizer", "type": "skill", "use": "build", "when": "When groups or run order must be set at random so results are not confounded" },
+        { "ref": "library:split-run-test-planner", "type": "skill", "use": "build", "when": "When two ads, emails or pages are compared and need one change and a winner rule" }
+      ]
+    },
+    {
+      "id": "price-and-email-tests",
+      "task": "Plan a price test or an email test queue",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:price-test-planner", "type": "skill", "use": "build", "when": "When a price change needs three outcome cases and a test that can be undone" },
+        { "ref": "library:email-test-planner", "type": "skill", "use": "build", "when": "When email flows need a ranked test queue with sample sizes and win rules" },
+        { "ref": "kit:skills/experiment-design-and-readout", "use": "check", "when": "When the plan is drafted, to confirm the metric, the effect size and the stop rule" }
+      ]
+    },
+    {
+      "id": "test-readout",
+      "task": "Read a finished test and say whether it won",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/did-the-test-win", "use": "check", "when": "When a test has finished and someone wants to ship the winner" },
+        { "ref": "kit:skills/experiment-design-and-readout", "use": "build", "when": "When the read-out needs the effect as a range and a plain ship or hold call" },
+        { "ref": "library:a-b-test-verdict-maker", "type": "skill", "use": "build", "when": "When you have the raw test data and need a split check and confidence ranges" },
+        { "ref": "library:experiment-result-analyst", "type": "skill", "use": "explore", "when": "When you want the result worked a second way to see if the call holds" },
+        { "ref": "library:test-result-trust-checker", "type": "prompt", "use": "check", "when": "When only summary numbers exist, to judge whether the result can be trusted" },
+        { "ref": "library:experiment-readout-desk", "type": "agent", "use": "check", "when": "When tests finish often and each needs the same checked read-out" }
+      ]
+    },
+    {
+      "id": "marketing-lift",
+      "task": "Design a holdout or lift test for marketing spend",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:holdout-test-planner", "type": "skill", "use": "build", "when": "When a channel or change is doubted and needs a holdout design and run time" },
+        { "ref": "library:incrementality-test-planner", "type": "skill", "use": "build", "when": "When spend runs across regions and a lift test must be sized to the business" },
+        { "ref": "kit:skills/experiment-design-and-readout", "use": "check", "when": "When the design is drafted, to check the metric and how the result will be read" }
+      ]
+    },
+    {
+      "id": "review-a-result",
+      "task": "Review a result or claim someone handed you",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/statistical-test-and-analysis", "use": "check", "when": "When a report, chart or claim needs its data, method and conclusion checked" },
+        { "ref": "library:study-claim-checker", "type": "skill", "use": "check", "when": "When the claim rests on a study, to grade its biases, flaws and weak statistics" },
+        { "ref": "library:findings-and-guesses-separator", "type": "skill", "use": "check", "when": "When the report mixes results and hopes, to mark each line proven, likely or a guess" },
+        { "ref": "library:carl-bergstrom", "type": "mind", "use": "think", "when": "When a number is impressive, to check selection, mechanism and what it can establish" }
+      ]
+    },
+    {
+      "id": "explain-model",
+      "task": "Explain a model or score in plain words",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/model-and-ai-claim-review", "use": "build", "when": "When a business relies on a score and nobody can say what it means or costs" },
+        { "ref": "library:model-decision-explainer", "type": "skill", "use": "build", "when": "When you have the trained model and need which inputs matter and where it fails" },
+        { "ref": "library:prediction-driver-explainer", "type": "skill", "use": "explore", "when": "When single predictions must be explained, with checked plots of what drove each" },
+        { "ref": "library:data-jargon-translator", "type": "skill", "use": "check", "when": "When the explainer is drafted, to find the jargon and put it in business words" }
+      ]
+    },
+    {
+      "id": "model-results-table",
+      "task": "Work out what a model's results table really means",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/confusion-matrix-from-counts", "use": "build", "when": "When you have counts of what was flagged and what really happened" },
+        { "ref": "kit:skills/model-and-ai-claim-review", "use": "build", "when": "When each kind of mistake has a cost and the decision is whether to use the model" },
+        { "ref": "library:data-classifier-comparer", "type": "skill", "use": "explore", "when": "When several models could be used, to rank them with tests that show real differences" },
+        { "ref": "library:agency-specialized-model-qa", "type": "agent", "use": "check", "when": "When the model was built by someone else and needs a test plan and rated findings" }
+      ]
+    },
+    {
+      "id": "vendor-ai-claim",
+      "task": "Check a vendor's AI accuracy claim",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/vendor-ai-claim-questions", "use": "build", "when": "When a pitch claims an accuracy figure and you need the questions that test it" },
+        { "ref": "kit:skills/model-and-ai-claim-review", "use": "check", "when": "When the vendor has answered and the claim must be judged for this business" },
+        { "ref": "library:hr-ai-tool-vendor-checker", "type": "skill", "use": "build", "when": "When the tool is for hiring or staff, to test accuracy and bias and plan a pilot" },
+        { "ref": "library:ai-vendor-terms-checker", "type": "skill", "use": "check", "when": "Before signing, to flag data-training, liability and model-change terms" }
+      ]
+    },
+    {
+      "id": "simple-scoring-rule",
+      "task": "Design a simple scoring rule to use in place of a model",
+      "kind": "other",
+      "items": [
+        { "ref": "library:pattern-from-cases-finder", "type": "skill", "use": "explore", "when": "When you have ten or twenty cases, to find a one-line rule and test it on unseen ones" },
+        { "ref": "library:lead-prioritizer", "type": "skill", "use": "build", "when": "When leads need a fit and activity score and ranked tiers" },
+        { "ref": "library:customer-health-and-churn-scorer", "type": "skill", "use": "build", "when": "When accounts need a health score and a churn risk from data already held" },
+        { "ref": "library:fraud-rules-setter", "type": "skill", "use": "build", "when": "When orders need fraud rules and a review routine, not a black-box score" },
+        { "ref": "kit:prompts/confusion-matrix-from-counts", "use": "check", "when": "When the rule has run on past cases, to count its hits and misses" },
+        { "ref": "library:daniel-kahneman", "type": "mind", "use": "think", "when": "When people trust gut feel over a rule, to compare past cases and base rates" }
+      ]
+    },
+    {
+      "id": "ai-tool-pilot",
+      "task": "Pilot an AI tool before the client commits",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/ai-tool-pilot", "use": "build", "when": "When a vendor offers a tool and the client is deciding whether to buy" },
+        { "ref": "library:ai-answer-testing-planner", "type": "skill", "use": "brief", "when": "When the tool writes answers, to set scores, human review and a baseline first" },
+        { "ref": "library:assess-ai-workflow-value", "type": "skill", "use": "build", "when": "When the pilot is done, to weigh results, costs and harms and choose grow or stop" },
+        { "ref": "library:ai-pilot-evaluation-review-assistant", "type": "agent", "use": "check", "when": "When results are in, to get an evidence brief and the data gaps flagged" },
+        { "ref": "library:prepare-an-ai-pilot-go-decision", "type": "workflow", "use": "check", "when": "When the go or stop call must be checked against the baseline and a checklist" }
+      ]
+    },
+    {
+      "id": "model-card",
+      "task": "Write a one-page model card",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/model-card-one-pager", "use": "build", "when": "When a model is in use and needs an honest record of what it does and how it is watched" },
+        { "ref": "library:method-explainer", "type": "skill", "use": "build", "when": "When the card needs a plain account of how the model was built and its limits" },
+        { "ref": "library:ai-impact-assessment-writer", "type": "skill", "use": "brief", "when": "When the card must name risks, the rules that apply and conditions of use" }
+      ]
+    },
+    {
+      "id": "responsible-ai-check",
+      "task": "Run a responsible-AI check on a tool that scores people or money",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/responsible-ai-risk-check", "use": "build", "when": "When a tool scores, ranks or decides about people and its use must be mapped and tested" },
+        { "ref": "library:eu-ai-act-risk-classifier", "type": "skill", "use": "brief", "when": "When the client works in the EU and needs the risk tier and duties that follow" },
+        { "ref": "library:ai-risk-framework-planner", "type": "skill", "use": "build", "when": "When risks should be mapped, measured and managed under a named framework" },
+        { "ref": "library:hr-ai-use-policy-writer", "type": "skill", "use": "build", "when": "When the tool is used in hiring and needs a policy, a bias check and a staff notice" },
+        { "ref": "library:fei-fei-li", "type": "mind", "use": "think", "when": "When the check looks only at accuracy, to start from the people the tool affects" },
+        { "ref": "library:human-review-gate", "type": "skill", "use": "check", "when": "Before the tool decides anything alone, to set a signed human review step" }
+      ]
+    },
+    {
+      "id": "model-health-check",
+      "task": "Run a health check on a model the business relies on",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/model-health-check", "use": "build", "when": "Each quarter, and straight after a complaint or a big change in the data" },
+        { "ref": "library:the-monitoring-loop-always-watching-implementation-planner", "type": "skill", "use": "build", "when": "When the model's rates need baselines and alerts for unusual change" },
+        { "ref": "library:agency-specialized-model-qa", "type": "agent", "use": "check", "when": "When the health check needs an outside audit with rated findings" }
+      ]
+    },
+    {
+      "id": "build-model",
+      "task": "Build and validate a predictive model",
+      "kind": "code",
+      "items": [
+        { "ref": "library:ml-pipeline-builder", "type": "skill", "use": "build", "when": "When a model is justified and needs a repeatable path from data prep to checks" },
+        { "ref": "library:prediction-feature-picker", "type": "skill", "use": "build", "when": "When there are many columns and the useful inputs must be chosen and tested" },
+        { "ref": "library:time-to-event-model-builder", "type": "skill", "use": "build", "when": "When the question is when something happens and some cases have not ended yet" },
+        { "ref": "library:ai-model-training-debugger", "type": "skill", "use": "check", "when": "When results look too good or too bad, to find silent bugs before tuning" },
+        { "ref": "library:andrej-karpathy", "type": "mind", "use": "think", "when": "When the model misbehaves, to look at real examples and start from the smallest case" }
+      ]
+    },
+    {
+      "id": "thin-data-model",
+      "task": "Estimate an effect when the data is thin",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:bayesian-model-builder", "type": "skill", "use": "build", "when": "When there are few data points and the answer should come with honest ranges" },
+        { "ref": "library:starting-assumptions-checker", "type": "skill", "use": "brief", "when": "When prior knowledge goes in, to state it in plain units and test it makes sense" },
+        { "ref": "library:statistical-model-checker", "type": "skill", "use": "check", "when": "When the model is fitted, to learn where its results can and cannot be trusted" }
+      ]
+    },
+    {
+      "id": "forecast-with-ranges",
+      "task": "Forecast a number with honest ranges",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:trend-and-forecast-analyst", "type": "skill", "use": "brief", "when": "Before forecasting, to find trend, season and odd spikes in the history" },
+        { "ref": "library:quick-time-series-forecaster", "type": "skill", "use": "build", "when": "When you need a forecast with ranges and a test on held-back data" },
+        { "ref": "library:philip-tetlock", "type": "mind", "use": "think", "when": "When a forecast is one confident number, to add base rates and a date to score it" }
+      ]
+    },
+    {
+      "id": "natural-groups",
+      "task": "Find natural groups in customer or case data",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:behaviour-group-finder", "type": "skill", "use": "build", "when": "When groups should come from behaviour, each profiled with a plan" },
+        { "ref": "kit:skills/statistical-test-and-analysis", "use": "check", "when": "When groups are found, to test whether the differences between them are real" }
+      ]
+    },
+    {
+      "id": "ai-answer-accuracy",
+      "task": "Test how accurate an AI assistant's answers are",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:ai-answer-testing-planner", "type": "skill", "use": "build", "when": "When an AI feature needs scores, human review and a rule that flags a drop" },
+        { "ref": "library:ai-answer-judge-designer", "type": "skill", "use": "build", "when": "When answers will be graded by an AI and need a fair scoring guide" },
+        { "ref": "library:ai-agent-tester", "type": "skill", "use": "check", "when": "When an agent is near release and needs a test set and a decision memo" }
+      ]
+    },
+    {
+      "id": "method-write-up",
+      "task": "Write up the method, limits and uncertainty",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:analysis-write-up-builder", "type": "skill", "use": "build", "when": "When the analysis is done and needs question, data, method, results and rerun steps" },
+        { "ref": "library:method-explainer", "type": "skill", "use": "build", "when": "When non-specialists must follow how it was done and where it stops" },
+        { "ref": "library:document-a-dataset-analysis-for-reproduction", "type": "workflow", "use": "build", "when": "When someone else must repeat the work from a data inventory and method notes" },
+        { "ref": "library:david-spiegelhalter", "type": "mind", "use": "think", "when": "When a range must be explained to an owner, to use comparisons people understand" },
+        { "ref": "library:data-jargon-translator", "type": "skill", "use": "check", "when": "Before it goes out, to replace statistical terms with plain business words" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:requirements-question-asker", "type": "skill", "use": "brief", "when": "Before any analysis, when the decision and the cost of being wrong are not stated" },
+    { "ref": "library:findings-and-guesses-separator", "type": "skill", "use": "check", "when": "Before any conclusion is sent, to separate what the data shows from what is assumed" }
+  ],
+  "helpers": [
+    { "role": "data-analyst", "when": "When exports must be cleaned and merged before any test can be run" },
+    { "role": "cro-specialist", "when": "When a site test must be set up, run and tracked in a testing tool" },
+    { "role": "marketing-analyst", "when": "When the question is which channel earns its spend and tracking data must be reconciled" },
+    { "role": "ai-engineer", "when": "When a model or AI feature must be built into a product and kept running" },
+    { "role": "compliance-specialist", "when": "When an AI tool's use raises legal duties on privacy, hiring or lending" },
+    { "role": "prompt-engineer", "when": "When an AI assistant's accuracy problem lies in its prompts and test set" }
+  ],
+  "gaps": [
+    "No library item works out precision, recall and the cost of each mistake from a table of counts and a base rate; only the kit prompt does",
+    "No library item lists the questions to ask about a vendor's AI accuracy claim outside hiring tools",
+    "No library item writes a model card",
+    "No library item checks a live business model for drift, calibration and performance by group",
+    "No library item tests a model's results for unfair differences between groups of people",
+    "No library item covers stopping rules, peeking and many comparisons in one test",
+    "No library item estimates cause and effect from data that was not a planned test, such as before and after with a comparison group",
+    "No library item explains a confidence range or a p-value to an owner in plain words",
+    "No library item builds a points-based scoring rule and checks it against past outcomes",
+    "No library item reads survey results with margins of error and small-group warnings"
+  ]
+}

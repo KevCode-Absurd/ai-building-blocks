@@ -1,0 +1,287 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "prompt-engineer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "production-prompt",
+      "task": "Write a system prompt a business will run every day",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/production-prompt-writing", "use": "build", "when": "When a prompt will run again and again and must be clear, structured and tied to the client's facts" },
+        { "ref": "kit:workflows/build-test-and-ship-a-prompt", "use": "brief", "when": "When a new AI task is going into daily use and needs steps from draft to tested hand-over" },
+        { "ref": "library:agent-prompt-writer", "type": "skill", "use": "brief", "when": "When the request is rough, to ask the few questions that settle the task before you write" },
+        { "ref": "library:agency-engineering-prompt-engineer", "type": "agent", "use": "explore", "when": "When you want a second draft and test cases from a different approach to compare" },
+        { "ref": "library:copilot-ai-prompt-engineering-safety-review", "type": "skill", "use": "check", "when": "When the prompt is drafted, to find risky wording, likely failure cases and bias" },
+        { "ref": "library:andrej-karpathy", "type": "mind", "use": "think", "when": "When the prompt is long and clever and nobody has looked at real outputs yet" }
+      ]
+    },
+    {
+      "id": "rewrite-weak-prompt",
+      "task": "Rewrite a prompt that gives uneven results",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/rewrite-a-weak-prompt", "use": "build", "when": "When a prompt gives off-target answers and you want a clearer, structured version to test" },
+        { "ref": "library:prompt-fixer", "type": "skill", "use": "explore", "when": "When you want a tighter version aimed at reliability to set beside your own rewrite" },
+        { "ref": "library:prompt-improver", "type": "skill", "use": "explore", "when": "When the prompt has no structure at all, to rebuild it on a framework that fits the task" },
+        { "ref": "library:prompt-change-tester", "type": "skill", "use": "check", "when": "When you have old and new versions, to see on fixed cases what got better and what got worse" }
+      ]
+    },
+    {
+      "id": "test-set",
+      "task": "Build a test set and score a prompt against it",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/prompt-test-set-and-fix", "use": "build", "when": "When you have the client's real examples and need a test set, scores and fixes one at a time" },
+        { "ref": "kit:prompts/grade-outputs-against-expected", "use": "check", "when": "When the prompt has run on the test inputs and you need a fair score and failures by cause" },
+        { "ref": "library:ai-answer-judge-designer", "type": "skill", "use": "build", "when": "When answers cannot be checked by code, to write a scoring guide an AI grader can follow fairly" },
+        { "ref": "library:prompt-tester-and-tuner", "type": "skill", "use": "build", "when": "When several versions must be scored on the same cases and the best one backed by results" },
+        { "ref": "library:tune-a-prompt-with-real-tests-then-ship-it-with-versions", "type": "workflow", "use": "build", "when": "When the client wants one guided run from rough prompt to tested version with a change record" },
+        { "ref": "library:alan-turing", "type": "mind", "use": "think", "when": "When \"good\" is vague and the test would pass almost anything" }
+      ]
+    },
+    {
+      "id": "extraction-prompt",
+      "task": "Write an extraction prompt and JSON schema for documents",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/extraction-prompt-and-schema", "use": "build", "when": "When fields must come out of invoices, emails or forms the same way every time, with no guessing" },
+        { "ref": "kit:prompts/extraction-schema-from-samples", "use": "build", "when": "When the client pastes a few sample documents and wants a first schema and prompt" },
+        { "ref": "library:structured-data-extractor", "type": "skill", "use": "build", "when": "When a developer will run it, to get code that checks each field and retries on errors" },
+        { "ref": "library:scanned-pdf-text-reader", "type": "skill", "use": "brief", "when": "When the documents are scans or photos and the text must be read before any prompt runs" },
+        { "ref": "library:extract-a-scanned-document-and-verify-key-facts", "type": "workflow", "use": "check", "when": "When key facts from a scan must be checked against the page, with unsure readings marked" }
+      ]
+    },
+    {
+      "id": "extraction-review",
+      "task": "Review extraction results and fix the failures",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/grade-outputs-against-expected", "use": "check", "when": "When the client pastes results and expected answers, to score them and group failures by cause" },
+        { "ref": "kit:skills/prompt-test-set-and-fix", "use": "build", "when": "When failures are grouped, to fix the prompt one change at a time and re-score" },
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "When the output is a table, to count blanks, duplicates and odd values across all rows" },
+        { "ref": "library:prompt-change-tester", "type": "skill", "use": "check", "when": "After each fix, to confirm it helped and broke nothing that passed before" }
+      ]
+    },
+    {
+      "id": "field-definitions",
+      "task": "Write field definitions and map them to the client's sheet",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/extraction-prompt-and-schema", "use": "build", "when": "When each field needs a name, type, allowed values and a rule for missing data" },
+        { "ref": "library:column-mapping-document-writer", "type": "skill", "use": "build", "when": "When extracted fields must map to columns in a sheet or CRM, with gaps to decide" }
+      ]
+    },
+    {
+      "id": "extraction-to-sheet",
+      "task": "Spec how extracted data flows into a sheet or CRM",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:no-code-automation-planner", "type": "skill", "use": "build", "when": "When the data should move by Zapier or Make, to get a setup built to hold up" },
+        { "ref": "library:automation-flow-sketcher", "type": "prompt", "use": "explore", "when": "When you want a quick step-by-step sketch and what can break before you spec it fully" },
+        { "ref": "library:check-a-new-automation-before-relying-on-it", "type": "workflow", "use": "check", "when": "Before the client relies on it, to find double runs, missing approvals and recovery steps" },
+        { "ref": "library:zapier", "type": "tool", "use": "brief", "when": "When you must check what the client's automation tool can trigger on and write to" }
+      ]
+    },
+    {
+      "id": "injection-review",
+      "task": "Review an assistant for prompt injection risks",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/prompt-injection-review", "use": "check", "when": "When the assistant reads content a stranger could write, to see how it could be hijacked" },
+        { "ref": "library:prompt-injection-defender", "type": "skill", "use": "build", "when": "When risks are found, to get a threat map and fixes against hidden instructions" },
+        { "ref": "library:ai-agent-attack-tester", "type": "skill", "use": "check", "when": "When the owner approves testing, to plan safe attacks and report where the agent is tricked" },
+        { "ref": "library:harden-an-ai-app-against-hijacked-instructions-and-runaway-bills", "type": "workflow", "use": "build", "when": "When the assistant is a live app and also needs spend limits set" },
+        { "ref": "library:track-agent-injection-controls-and-retest-evidence", "type": "agent", "use": "check", "when": "When fixes are in, to keep test cases, a gap list and retest records" },
+        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When the plan assumes users and inputs will behave and nothing covers mistakes" }
+      ]
+    },
+    {
+      "id": "model-change",
+      "task": "Re-test prompts when a model is replaced",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/model-change-retest", "use": "build", "when": "When a model the client uses is replaced or retired and every prompt needs a re-test" },
+        { "ref": "kit:skills/prompt-test-set-and-fix", "use": "check", "when": "When the new model fails cases the old one passed, to fix and re-score" },
+        { "ref": "library:prompt-change-manager", "type": "skill", "use": "build", "when": "When prompts live in production and need versions, a registry and a safe way back" },
+        { "ref": "library:prompt-change-tester", "type": "skill", "use": "check", "when": "When you compare old and new model outputs on the same fixed cases" }
+      ]
+    },
+    {
+      "id": "assistant-setup",
+      "task": "Set up a custom GPT, Claude Project or Gem",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/production-prompt-writing", "use": "build", "when": "When the assistant needs its instructions written and tied to the client's own files" },
+        { "ref": "library:chatbot-conversation-designer", "type": "skill", "use": "build", "when": "When the assistant talks to customers and needs flows, error recovery and fallbacks" },
+        { "ref": "kit:prompts/prompt-injection-review", "use": "check", "when": "Before it is shared, when it reads uploads, emails or web pages" },
+        { "ref": "library:chatgpt", "type": "tool", "use": "brief", "when": "When the client uses ChatGPT, to check what a custom GPT can and cannot do" },
+        { "ref": "library:claude", "type": "tool", "use": "brief", "when": "When the client uses Claude, to check what a Project can hold and do" }
+      ]
+    },
+    {
+      "id": "chatbot-test",
+      "task": "Test and tune a chatbot's answers",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:ai-answer-testing-planner", "type": "skill", "use": "build", "when": "When the bot has no tests, to plan scores, human review and side-by-side checks" },
+        { "ref": "library:support-chatbot-conversation-review", "type": "skill", "use": "check", "when": "When real chats exist, to find missed questions, wrong answers and content to fix" },
+        { "ref": "library:ai-answer-fact-checker", "type": "skill", "use": "check", "when": "When answers state facts, to check each claim against sources" },
+        { "ref": "kit:skills/prompt-test-set-and-fix", "use": "build", "when": "When the review shows failures, to fix the prompt one change at a time" }
+      ]
+    },
+    {
+      "id": "grounded-answers",
+      "task": "Write a prompt that answers only from the client's documents",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/production-prompt-writing", "use": "build", "when": "When answers must quote the client's files and say so when the files are silent" },
+        { "ref": "library:document-qa-builder", "type": "skill", "use": "build", "when": "When a developer will build it, to get code that answers from documents and shows the pages used" },
+        { "ref": "library:ai-answer-fact-checker", "type": "skill", "use": "check", "when": "When sample answers are in, to check each claim really comes from a source" }
+      ]
+    },
+    {
+      "id": "classification-prompt",
+      "task": "Write a prompt that sorts or tags messages",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/production-prompt-writing", "use": "build", "when": "When tickets, emails or leads must be sorted into fixed labels the same way each time" },
+        { "ref": "library:ai-training-data-labeling-planner", "type": "skill", "use": "brief", "when": "Before the prompt, to write label rules, edge cases and a sampling plan for review" },
+        { "ref": "kit:prompts/grade-outputs-against-expected", "use": "check", "when": "When the prompt has run on labelled examples, to see which labels get confused" }
+      ]
+    },
+    {
+      "id": "agent-instructions",
+      "task": "Write instructions or a skill for an AI agent",
+      "kind": "other",
+      "items": [
+        { "ref": "library:agent-prompt-writer", "type": "skill", "use": "build", "when": "When a rough request must become one clear prompt an agent can act on" },
+        { "ref": "library:skill-writer", "type": "skill", "use": "build", "when": "When the job repeats, to package it as a skill with test prompts and a trigger line" },
+        { "ref": "library:expert-agent-eval-builder", "type": "skill", "use": "build", "when": "When the agent needs a rubric in the owner's words, twenty test cases and a grader" },
+        { "ref": "library:ai-agent-tester", "type": "skill", "use": "check", "when": "Before release, to get a test set, scoring rules and a release decision memo" },
+        { "ref": "library:write-a-skill-and-check-it-is-safe-to-share", "type": "workflow", "use": "check", "when": "When the skill will be shared, to score it and scan it for safety and portability" },
+        { "ref": "library:prompt-and-skill-tuner", "type": "agent", "use": "build", "when": "When a prompt or skill should be tuned over several rounds against tests" }
+      ]
+    },
+    {
+      "id": "cost-and-monitoring",
+      "task": "Cut a prompt's running cost and watch it in use",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:ai-cost-cutter", "type": "skill", "use": "build", "when": "When the bill is high, to see where the tokens go and what to cut without losing quality" },
+        { "ref": "library:ai-agent-monitoring-planner", "type": "skill", "use": "build", "when": "When the prompt is live, to plan how to trace steps, cost and errors without logging private data" },
+        { "ref": "library:prompt-tester-and-tuner", "type": "skill", "use": "check", "when": "After a shorter prompt or cheaper model, to prove the scores did not drop" }
+      ]
+    },
+    {
+      "id": "product-image-prompts",
+      "task": "Write a set of product scene image prompts",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:prompts/product-image-prompt-set", "use": "build", "when": "When a shop needs lifestyle images of a real product that all look consistent and true" },
+        { "ref": "kit:skills/image-and-video-prompt-set", "use": "build", "when": "When the set spans scenes, sizes and tools and the product must look right in every one" },
+        { "ref": "library:product-image-spec-writer", "type": "skill", "use": "brief", "when": "Before any prompt, to write the product's true details and the lines that lock them" },
+        { "ref": "library:product-photo-set-builder", "type": "skill", "use": "explore", "when": "When one product photo should become a range of new angles and scenes to choose from" },
+        { "ref": "library:ai-product-photo-inspector", "type": "skill", "use": "check", "when": "When images come back, to rate the risk and get lines to add before you retry" },
+        { "ref": "library:nano-banana", "type": "tool", "use": "build", "when": "When the real product photo must be placed into scenes by plain edit requests" }
+      ]
+    },
+    {
+      "id": "brand-image-prompts",
+      "task": "Write brand and website image prompts in one style",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:skills/image-and-video-prompt-set", "use": "build", "when": "When a series of site and social images must share one look" },
+        { "ref": "library:store-photo-style-locker", "type": "skill", "use": "brief", "when": "Before the set, to fix models, light and layout in one style file" },
+        { "ref": "library:brand-to-image-prompt-compiler", "type": "skill", "use": "build", "when": "When brand, scene, product, text and avoid rules must be combined into one prompt" },
+        { "ref": "library:midjourney-four-direction-prompt-writer", "type": "skill", "use": "explore", "when": "When one image idea should be tried as four different treatments" },
+        { "ref": "library:marketing-image-maker", "type": "skill", "use": "build", "when": "When each image needs its exact size and a file plan as well as a prompt" },
+        { "ref": "library:agency-design-inclusive-visuals-specialist", "type": "agent", "use": "check", "when": "When images show people, to check for stereotypes, cloned faces and fake symbols" },
+        { "ref": "library:midjourney", "type": "tool", "use": "explore", "when": "When you want to explore looks and then reuse the style you chose" }
+      ]
+    },
+    {
+      "id": "mascot-prompts",
+      "task": "Build a consistent character or mascot prompt set",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:skills/image-and-video-prompt-set", "use": "build", "when": "When one character must look the same across poses, scenes and sizes" },
+        { "ref": "library:avatar-storyboard-planner", "type": "skill", "use": "build", "when": "When the character will appear in clips and needs angle sheets and a storyboard" },
+        { "ref": "library:midjourney-four-direction-prompt-writer", "type": "skill", "use": "explore", "when": "Before you lock the character, to try four different treatments of it" },
+        { "ref": "library:ai-image-fix-rules", "type": "skill", "use": "check", "when": "When the character drifts between images, to turn each fault into a prompt line and a check" }
+      ]
+    },
+    {
+      "id": "image-with-text",
+      "task": "Write image prompts that carry exact words",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:image-ad-maker-with-exact-text", "type": "skill", "use": "build", "when": "When the image must show a headline or price word for word" },
+        { "ref": "library:six-image-ad-prompt-set", "type": "skill", "use": "explore", "when": "When one product photo should become six prompts with shared brand and layout rules" },
+        { "ref": "library:accurate-product-image-ad-maker", "type": "prompt", "use": "check", "when": "When the image must keep the real product, to get a prompt and an image check" },
+        { "ref": "library:ideogram", "type": "tool", "use": "build", "when": "When the tool must draw readable text inside the image" }
+      ]
+    },
+    {
+      "id": "video-shot-prompts",
+      "task": "Write AI video shot prompts for a short clip",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:prompts/ai-video-shot-prompts", "use": "build", "when": "When a short clip is planned and each shot needs one clear prompt" },
+        { "ref": "kit:skills/image-and-video-prompt-set", "use": "build", "when": "When stills and clips must match and the product must stay true across shots" },
+        { "ref": "library:ai-video-shot-planner", "type": "skill", "use": "build", "when": "When you have a one-line idea and need a shot list and fixes for failed clips" },
+        { "ref": "library:cinematic-image-shot-variation-planner", "type": "skill", "use": "explore", "when": "When a shot feels flat, to get four versions with different camera, lens and light" },
+        { "ref": "library:human-representation-reviewer", "type": "skill", "use": "check", "when": "When a clip shows people, to get fixes for how they look and move" },
+        { "ref": "library:veo", "type": "tool", "use": "build", "when": "When clips need sound and are made from text or a still image" },
+        { "ref": "library:alfred-hitchcock", "type": "mind", "use": "think", "when": "When the shots are pretty but nothing tells the viewer where to look or what happens next" }
+      ]
+    },
+    {
+      "id": "image-fix",
+      "task": "Fix hands, labels and odd colours in AI images",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:ai-product-photo-inspector", "type": "skill", "use": "check", "when": "When an image looks off, to run eight checks and rate the risk of using it" },
+        { "ref": "library:ai-image-fix-rules", "type": "skill", "use": "build", "when": "When feedback is in, to turn each fix into a rule with a prompt line and a check line" },
+        { "ref": "library:nano-banana-image-prompt-planner", "type": "skill", "use": "build", "when": "When the image needs an edit, to write the change with clear roles for each reference" },
+        { "ref": "library:skin-realism-image-prompt-checker", "type": "skill", "use": "check", "when": "When skin or hands look fake, to get focused fixes that keep the face and light" },
+        { "ref": "library:ad-image-generation-and-edit-planner", "type": "skill", "use": "build", "when": "When a batch needs edits, to plan settings, edit requests and a log of every change" },
+        { "ref": "library:adobe-firefly", "type": "tool", "use": "build", "when": "When a photo the client owns must be extended or cleaned up" }
+      ]
+    },
+    {
+      "id": "prompt-versions",
+      "task": "Keep prompt versions, a change log and a hand-over note",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/build-test-and-ship-a-prompt", "use": "build", "when": "When a tested prompt is handed over and the client must know how to run and change it" },
+        { "ref": "library:prompt-change-manager", "type": "skill", "use": "build", "when": "When several prompts are in use and each change needs a version, a test and a way back" },
+        { "ref": "library:tune-a-prompt-with-real-tests-then-ship-it-with-versions", "type": "workflow", "use": "check", "when": "When a prompt has no history, to re-score it and start a version record" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any image or copy prompt that must look or sound like the client's live site" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a prompt or its sample output states a number or claim you cannot trace to the client" }
+  ],
+  "helpers": [
+    { "role": "chatbot-specialist", "when": "When the job is a full customer chatbot with flows, hand-off and a knowledge base" },
+    { "role": "automation-specialist", "when": "When the extraction must be built and run inside Zapier, Make or a similar tool" },
+    { "role": "ai-engineer", "when": "When the prompt must run in code through an API with retries, logs and tests" },
+    { "role": "product-photographer", "when": "When the product needs real shots or a shot list before any AI scenes" },
+    { "role": "video-producer", "when": "When the clip needs a script, voice, edit and delivery, not only shot prompts" },
+    { "role": "brand-designer", "when": "When the brand has no settled look to hold the image prompts to" }
+  ],
+  "gaps": [
+    "No library item writes a JSON schema and extraction prompt for business documents with a rule against guessing; only the kit does",
+    "No library item scores extraction results field by field against expected answers",
+    "No library item sets up a custom GPT, Claude Project or Gem: instructions, knowledge files and starter prompts",
+    "No library item writes or tests a classification prompt with label definitions and a confusion check",
+    "No library item compares models on one test set for quality, cost and speed, or tracks vendor retirement dates",
+    "No library item builds a character or mascot sheet that keeps one character the same across many images",
+    "No library item checks an AI video clip for product accuracy, flicker and continuity between shots",
+    "No library item covers disclosure labels and usage rights for AI images and video by region",
+    "No library item builds a team prompt library with owners, versions and examples of good output",
+    "No library item picks and orders few-shot examples for a prompt"
+  ]
+}

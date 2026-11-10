@@ -1,0 +1,293 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "etsy-shop-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "listing-rewrite",
+      "task": "Rewrite a batch of Etsy listings",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/listing-rewrite-batch", "use": "build", "when": "When up to 15 listings need new titles, tags, attributes and description openings in one go" },
+        { "ref": "kit:skills/etsy-listing-rewrite", "use": "build", "when": "When one listing needs the full rewrite: title, 13 tags, attributes and a description buyers read" },
+        { "ref": "library:customer-question-keyword-finder", "type": "prompt", "use": "brief", "when": "Before you write, to pull the questions and words buyers use from reviews and messages" },
+        { "ref": "library:product-listing-writer", "type": "skill", "use": "explore", "when": "When you want a second draft of title and description from the same facts to compare" },
+        { "ref": "library:etsy-listing-seo-scorer", "type": "skill", "use": "check", "when": "When a listing is drafted, to score it and get a ranked list of title and tag fixes" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a description could fit any shop, to test it and get a true, picturable rewrite" },
+        { "ref": "library:claude-hopkins", "type": "mind", "use": "think", "when": "When a listing is full of praise words and needs plain facts a buyer can check" }
+      ]
+    },
+    {
+      "id": "tag-and-keyword-plan",
+      "task": "Build a shop-wide tag and keyword plan",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/etsy-tag-and-keyword-plan", "use": "build", "when": "When you have the shop's own search terms and need phrases grouped by product and buyer need" },
+        { "ref": "library:etsy-search-results-collector", "type": "skill", "use": "brief", "when": "When you need to see who ranks for a phrase on Etsy, at what price, before you choose it" },
+        { "ref": "library:keyword-list-maker", "type": "skill", "use": "explore", "when": "When the shop's own terms are few, to draw more candidate phrases from buyer messages and reviews" },
+        { "ref": "library:search-intent-keyword-mapper", "type": "skill", "use": "build", "when": "When a long phrase list must be grouped by what the buyer wants: a gift, a style, an occasion" },
+        { "ref": "library:rand-fishkin", "type": "mind", "use": "think", "when": "When the plan copies rival tags and nobody has asked what this shop's own buyers type" }
+      ]
+    },
+    {
+      "id": "tag-audit",
+      "task": "Audit tags across the shop and cut the wasted ones",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/tag-audit", "use": "check", "when": "When tags have empty slots, single words, repeats of attributes or phrases that never bring orders" },
+        { "ref": "kit:skills/etsy-tag-and-keyword-plan", "use": "build", "when": "When the wasted tags are found and each slot needs a better phrase from the plan" },
+        { "ref": "library:etsy-listing-seo-scorer", "type": "skill", "use": "check", "when": "When one key listing needs its title and tags scored after the changes" }
+      ]
+    },
+    {
+      "id": "sections-and-featured",
+      "task": "Group listings into sections and pick featured items",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/shop-sections-and-featured", "use": "build", "when": "When listings need grouping the way buyers shop and four must be chosen to feature" },
+        { "ref": "library:click-choice-clarity-checker", "type": "skill", "use": "check", "when": "When section names are drafted, to rate each label and rewrite the ones buyers would not get" }
+      ]
+    },
+    {
+      "id": "shop-audit",
+      "task": "Audit the whole shop and rank the fixes",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/etsy-shop-audit", "use": "build", "when": "When the owner wants one ranked fix list across search, photos, sections, shipping and policies" },
+        { "ref": "library:etsy-listing-seo-scorer", "type": "skill", "use": "check", "when": "When the top listings each need a score so the audit can show before and after" },
+        { "ref": "library:product-page-image-checker", "type": "skill", "use": "check", "when": "When the audit reaches photos and you need every fault with one fix each" },
+        { "ref": "library:store-policy-checker", "type": "skill", "use": "check", "when": "When return and shipping policy text has gaps, clashes or unclear wording" },
+        { "ref": "library:rival-store-comparer", "type": "skill", "use": "brief", "when": "When the owner asks how the shop stands against two or three named rival shops" }
+      ]
+    },
+    {
+      "id": "etsy-ads",
+      "task": "Plan and review Etsy Ads",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/etsy-ads-plan", "use": "build", "when": "When the owner wants to know which listings to advertise, the daily budget and a keep or stop rule" },
+        { "ref": "library:product-margin-checker", "type": "skill", "use": "brief", "when": "Before any budget, to find each listing's true margin and the ad return it must reach" },
+        { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "At the 30-day review, to test the sums behind each keep or stop call" }
+      ]
+    },
+    {
+      "id": "new-listing-launch",
+      "task": "Launch a new listing or product range",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/new-listing-launch", "use": "brief", "when": "When a new product is ready to list, with photos taken and the owner's facts written down" },
+        { "ref": "kit:prompts/creativity-and-ai-disclosure-check", "use": "check", "when": "Before a new product type is listed, to check how it was made is declared the right way" },
+        { "ref": "kit:skills/etsy-listing-rewrite", "use": "build", "when": "When the new listing needs its title, tags, attributes and description written" },
+        { "ref": "library:product-shot-list-writer", "type": "prompt", "use": "brief", "when": "When the photos are not taken yet and the owner needs a shot list with a reason for each" },
+        { "ref": "library:buyer-trigger-and-proof-mapper", "type": "skill", "use": "brief", "when": "When you need what makes a buyer look for this item and what proof settles their doubt" }
+      ]
+    },
+    {
+      "id": "listing-photos",
+      "task": "Plan and check listing photos",
+      "kind": "other",
+      "items": [
+        { "ref": "library:product-page-gallery-planner", "type": "skill", "use": "brief", "when": "When you have the product photos and facts and need a plan where each image answers a doubt" },
+        { "ref": "library:phone-product-photoshoot", "type": "workflow", "use": "build", "when": "When the owner shoots on a phone and needs 8 to 12 photos, each with a job and its own light" },
+        { "ref": "library:product-background-swapper", "type": "skill", "use": "explore", "when": "When a plain-background photo could be tried in a few scenes; check Etsy's AI rules first" },
+        { "ref": "library:product-photo-set-maker", "type": "agent", "use": "build", "when": "When a full set is needed from photos of one real product, with failed frames redone" },
+        { "ref": "library:product-page-image-checker", "type": "skill", "use": "check", "when": "When the set is done, to list every fault with one fix each and a score" },
+        { "ref": "library:marketplace-photo-rule-checker", "type": "skill", "use": "check", "when": "Before upload, to get a pass or reject on each photo against the platform's rules" },
+        { "ref": "library:ansel-adams", "type": "mind", "use": "think", "when": "When the first photo is flat and you must decide what it should show and where the light falls" }
+      ]
+    },
+    {
+      "id": "listing-video",
+      "task": "Plan a short listing video",
+      "kind": "other",
+      "items": [
+        { "ref": "library:short-video-format-picker", "type": "skill", "use": "explore", "when": "When the owner has not made video before, to pick a format and get ten opening ideas" },
+        { "ref": "library:captioned-product-reel", "type": "workflow", "use": "build", "when": "When you have product facts and photos and want a short reel with timed captions" },
+        { "ref": "kit:prompts/creativity-and-ai-disclosure-check", "use": "check", "when": "When any part of the video or its images was made with AI tools and may need declaring" }
+      ]
+    },
+    {
+      "id": "pricing-and-fees",
+      "task": "Check prices against costs and fees",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:price-a-product-so-it-pays-after-delivery-ads-and-discounts", "type": "workflow", "use": "build", "when": "When a price must cover materials, time, fees, delivery and ads, with three prices to test" },
+        { "ref": "library:per-order-profit-calculator", "type": "prompt", "use": "check", "when": "When you want a quick hand check of profit on one typical order, with every fee listed" },
+        { "ref": "library:price-test-planner", "type": "skill", "use": "explore", "when": "When the owner fears a price rise, to plan one they can undo with three outcome cases" },
+        { "ref": "library:digital-product-pricer", "type": "skill", "use": "build", "when": "When the item is a download and needs a price, a label and a launch discount" }
+      ]
+    },
+    {
+      "id": "shipping-and-processing",
+      "task": "Review shipping profiles and processing times",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/shipping-and-processing-review", "use": "check", "when": "When on-time shipping slips, buyers complain about delivery or costs look high" },
+        { "ref": "library:shipping-rate-planner", "type": "skill", "use": "build", "when": "When you need zones and rates worked out from parcel sizes, costs and countries" },
+        { "ref": "library:overseas-market-planner", "type": "skill", "use": "brief", "when": "When the owner asks which countries to open next, with shipping and tax costs for each" }
+      ]
+    },
+    {
+      "id": "creativity-and-ai-disclosure",
+      "task": "Check listings against Etsy's making and AI rules",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/creativity-and-ai-disclosure-check", "use": "check", "when": "After a policy notice, or when a printer, supplier or AI tool is part of how items are made" },
+        { "ref": "library:infringement-first-look-sorter", "type": "skill", "use": "check", "when": "When a design leans on a character, team, brand or another maker's work" },
+        { "ref": "library:trademark-name-first-check", "type": "skill", "use": "check", "when": "When a title or tag uses a phrase that may be someone's registered mark" },
+        { "ref": "library:anita-roddick", "type": "mind", "use": "think", "when": "When the listing says handmade or natural and nobody has checked the supplier's own claims" }
+      ]
+    },
+    {
+      "id": "product-safety",
+      "task": "Prepare product safety details for a new market",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/product-safety-readiness", "use": "build", "when": "Before selling a product type into a new country, or when Etsy asks for safety details" },
+        { "ref": "library:trade-compliance-checklist", "type": "skill", "use": "brief", "when": "When the owner imports materials or ships abroad and needs the rules that apply listed" }
+      ]
+    },
+    {
+      "id": "monthly-shop-health",
+      "task": "Run the monthly shop health check",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/monthly-shop-health", "use": "brief", "when": "In the first week of each month, after Etsy's Star Seller check on the 1st" },
+        { "ref": "kit:prompts/tag-audit", "use": "check", "when": "When this month's search terms show tags that brought visits but no orders" },
+        { "ref": "library:review-reason-spotter", "type": "prompt", "use": "check", "when": "When new reviews are in and you need the reasons behind the stars, good and bad" },
+        { "ref": "library:monthly-returns-and-refunds-reviewer", "type": "agent", "use": "check", "when": "When refunds or cases rose and you need the items behind them and the first fix" }
+      ]
+    },
+    {
+      "id": "shop-takeover",
+      "task": "Take over an existing shop for a new client",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/new-client-shop-takeover", "use": "brief", "when": "When a new client hands over a live shop and you need the order of work for the first weeks" },
+        { "ref": "kit:skills/etsy-shop-audit", "use": "build", "when": "In the first week, to get the ranked fix list everything else follows" },
+        { "ref": "library:rival-store-comparer", "type": "skill", "use": "brief", "when": "When you need a side-by-side of rival shops' prices and messages before you set priorities" }
+      ]
+    },
+    {
+      "id": "about-policies-faq",
+      "task": "Write the shop's About, policies and FAQs",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:brand-origin-story-writer", "type": "skill", "use": "build", "when": "When the About section is empty or stiff and the owner can tell you how they started" },
+        { "ref": "library:faq-page-from-questions-writer", "type": "prompt", "use": "build", "when": "When the same buyer questions keep coming and the shop needs them answered once" },
+        { "ref": "library:returns-policy-designer", "type": "skill", "use": "build", "when": "When the owner has no clear rule on returns for custom or made-to-order items" },
+        { "ref": "library:store-policy-checker", "type": "skill", "use": "check", "when": "When the policy text is drafted, to find gaps, clashes and unclear wording" }
+      ]
+    },
+    {
+      "id": "review-replies",
+      "task": "Reply to reviews and plan how to ask for them",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:review-reply-batch-writer", "type": "prompt", "use": "build", "when": "When a batch of reviews needs a specific public reply each, with the risky ones listed" },
+        { "ref": "library:public-review-reply-desk", "type": "agent", "use": "check", "when": "When replies run every week and risky ones must be held for the owner" },
+        { "ref": "library:review-request-and-reply-planner", "type": "skill", "use": "brief", "when": "When the shop has few reviews and needs a fair way and time to ask for them" }
+      ]
+    },
+    {
+      "id": "buyer-messages",
+      "task": "Draft replies to buyer messages and complaints",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:customer-reply-drafter", "type": "skill", "use": "build", "when": "When a buyer asks about an order, a custom request or a delay and needs a clear reply" },
+        { "ref": "library:angry-customer-reply-writer", "type": "prompt", "use": "build", "when": "When a buyer is angry and the reply must fix what it can and promise nothing false" },
+        { "ref": "library:customer-support-message-translator", "type": "skill", "use": "build", "when": "When a buyer writes in another language and needs a reply in it" },
+        { "ref": "library:angry-customer-reply-checker", "type": "skill", "use": "check", "when": "Before a hard reply is sent, to check its promises, facts and tone" }
+      ]
+    },
+    {
+      "id": "niche-and-rival-research",
+      "task": "Research rivals and find product gaps",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:etsy-search-results-collector", "type": "skill", "use": "brief", "when": "When you need the listings that rank for a phrase, with their prices and shops" },
+        { "ref": "library:rating-gap-product-finder", "type": "skill", "use": "explore", "when": "When the owner wants a new product, to find sub-categories with strong search and weak ratings" },
+        { "ref": "library:find-a-product-idea-in-buyer-complaints-and-score-it", "type": "workflow", "use": "explore", "when": "When you want product ideas drawn from what buyers complain about, each scored" },
+        { "ref": "library:agency-product-trend-researcher", "type": "agent", "use": "check", "when": "When a trend looks tempting and you must judge if it is real and how long it may last" }
+      ]
+    },
+    {
+      "id": "seasonal-plan",
+      "task": "Plan the shop around gift seasons",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:sales-led-content-planner", "type": "skill", "use": "build", "when": "When past sales should decide what to push, what offers to run and what to hold each month" },
+        { "ref": "library:seasonal-buy-planner", "type": "skill", "use": "build", "when": "When materials or stock must be bought before a season and you need how much and when" },
+        { "ref": "library:one-time-stock-quantity-picker", "type": "skill", "use": "check", "when": "When a seasonal item may not sell out and the owner asks how many to make" }
+      ]
+    },
+    {
+      "id": "off-etsy-promotion",
+      "task": "Plan simple promotion outside Etsy",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:content-calendar-builder", "type": "skill", "use": "build", "when": "When the owner wants a calendar of post topics drawn from real buyer words" },
+        { "ref": "library:social-post-planner", "type": "skill", "use": "build", "when": "When the calendar is agreed and the posts must be written for each platform" },
+        { "ref": "library:email-cadence-planner", "type": "skill", "use": "build", "when": "When the owner has a small list of past buyers and wants a weekly email plan" }
+      ]
+    },
+    {
+      "id": "packaging-and-inserts",
+      "task": "Plan packaging inserts and a thank-you note",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:unboxing-insert-and-gift-planner", "type": "skill", "use": "build", "when": "When the owner wants an insert card, a note and a gift rule that the margin can carry" },
+        { "ref": "library:packaging-brief-writer", "type": "skill", "use": "build", "when": "When a designer or printer needs a clear brief for the box, label or wrap" }
+      ]
+    },
+    {
+      "id": "open-new-shop",
+      "task": "Open a new Etsy shop",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:etsy-shop-opening-planner", "type": "skill", "use": "build", "when": "When someone is starting out and needs listings, photos, a price check and launch steps" },
+        { "ref": "library:store-name-tester", "type": "skill", "use": "explore", "when": "When there is a shortlist of shop names and each needs a keep, fix or drop call" },
+        { "ref": "kit:prompts/shop-sections-and-featured", "use": "build", "when": "When the first listings are in and need sections before the shop opens" },
+        { "ref": "library:canva", "type": "tool", "use": "build", "when": "When the shop needs a banner and icon the owner can edit later" }
+      ]
+    },
+    {
+      "id": "digital-and-print-on-demand",
+      "task": "Set up a digital download or print-on-demand listing",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/creativity-and-ai-disclosure-check", "use": "check", "when": "Before listing, to check the design is the seller's own and the print partner is declared" },
+        { "ref": "kit:skills/etsy-listing-rewrite", "use": "build", "when": "When the listing must say plainly what the buyer gets: files, sizes, or a printed item" },
+        { "ref": "library:digital-product-pricer", "type": "skill", "use": "build", "when": "When a download needs a price and a launch discount" },
+        { "ref": "library:marketing-image-maker", "type": "skill", "use": "build", "when": "When the listing needs a preview image and you want a prompt, exact size and a file plan" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any listing or policy text goes live, to catch typos and names spelt two ways" },
+    { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When a listing claims handmade, organic, safe or a result, to sort each claim and reword it" }
+  ],
+  "helpers": [
+    { "role": "product-photographer", "when": "When the listings need a real photo set planned and shot, not a check of existing photos" },
+    { "role": "ecommerce-copywriter", "when": "When more than 15 listings need full descriptions in the shop's voice" },
+    { "role": "pinterest-marketer", "when": "When the shop wants Pinterest pins and boards to bring buyers to its listings" },
+    { "role": "social-media-manager", "when": "When off-Etsy promotion needs a running social plan, not a one-month calendar" },
+    { "role": "compliance-specialist", "when": "When product safety, labelling or import rules need more than a readiness list" },
+    { "role": "packaging-designer", "when": "When the packaging needs artwork, a label or a box layout" }
+  ],
+  "gaps": [
+    "No library item works out Etsy's fees per order: listing, transaction, payment and offsite ad fees",
+    "No library item reads Etsy Stats: visits, conversion, traffic sources and search terms by listing",
+    "No library item plans or reviews Etsy Ads from the ads dashboard; only the kit skill covers it",
+    "No library item groups a shop into sections or picks featured listings; only the kit prompt covers it",
+    "No library item covers Etsy shipping profiles, processing times or Star Seller measures",
+    "No library item checks listings against Etsy's Creativity Standards, AI disclosure or production partner rules",
+    "No library item covers product safety duties for handmade goods sold into the EU, UK or US",
+    "No library item sets up print-on-demand products or makes honest mockups from a real design file",
+    "No library item covers digital download listings: file formats, what the buyer gets and delivery",
+    "No library item sets up variations and personalisation fields for made-to-order items",
+    "No library item plans Etsy sales and coupons, such as thank-you or abandoned basket offers",
+    "No library item gives a gift season calendar for when Etsy buyers start searching for each occasion",
+    "No library item writes vintage item descriptions with age, condition and flaws"
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "video-producer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "explainer-script",
+      "task": "Write a 60 to 90 second explainer script",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:word-picture-explainer", "type": "skill", "use": "brief", "when": "Before the script, to plan which picture pairs with each idea so the point sticks" },
+        { "ref": "kit:skills/two-column-explainer-script", "use": "build", "when": "When product notes must become a timed script: what we hear beside what we see" },
+        { "ref": "library:video-ad-script-angle-chooser", "type": "prompt", "use": "explore", "when": "When the approach is open, to get four different kinds of script, each with its opening" },
+        { "ref": "library:3d-explainer-video-script", "type": "skill", "use": "explore", "when": "When the product is best shown working from the inside, to try a how-it-works version" },
+        { "ref": "library:richard-feynman", "type": "mind", "use": "think", "when": "When the script uses the product's own jargon and a newcomer would not follow it" },
+        { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "When the script is drafted, to find every line that trips when spoken and fix it" },
+        { "ref": "kit:prompts/script-fit-and-cut", "use": "check", "when": "Before sign-off, to check the script fits the length and what to cut if not" }
+      ]
+    },
+    {
+      "id": "script-fit",
+      "task": "Fit a script to a fixed length",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/script-fit-and-cut", "use": "build", "when": "When a script must fit 30, 60 or 90 seconds and you need to know what to cut" },
+        { "ref": "library:ten-percent-cutter", "type": "skill", "use": "build", "when": "When the script is a little long and must lose words without losing the point" },
+        { "ref": "library:video-ad-script-line-checker", "type": "skill", "use": "check", "when": "When you must choose which lines to drop, to find the weak ones first" },
+        { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "After the cut, to check the shorter lines still read well aloud" }
+      ]
+    },
+    {
+      "id": "demo-script",
+      "task": "Write a product demo walkthrough script",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/two-column-explainer-script", "use": "build", "when": "When each screen or step needs its spoken line beside what the viewer sees" },
+        { "ref": "library:counter-demo-script-writer", "type": "skill", "use": "explore", "when": "When the demo should let the viewer see the result first, to compare that order" },
+        { "ref": "library:product-demo-video-maker", "type": "skill", "use": "build", "when": "When you have screenshots or a page and want a short demo video or GIF made" },
+        { "ref": "library:narrated-video-maker", "type": "skill", "use": "build", "when": "When the walkthrough can be narrated slides made from a written document" },
+        { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "Before recording, to fix lines that are hard to say while clicking through the product" }
+      ]
+    },
+    {
+      "id": "storyboard-live-action",
+      "task": "Storyboard a live-action video",
+      "kind": "other",
+      "items": [
+        { "ref": "library:one-symbol-concept-finder", "type": "skill", "use": "brief", "when": "Before the shots, to find the one idea, feeling and symbol the opening should carry" },
+        { "ref": "kit:skills/storyboard-and-shoot-plan", "use": "build", "when": "When an approved script must become a timed shot table and a shoot plan" },
+        { "ref": "library:video-ad-shot-list-maker", "type": "skill", "use": "explore", "when": "When you want a second pass of timed shots from the script to compare coverage" },
+        { "ref": "library:alfred-hitchcock", "type": "mind", "use": "think", "when": "When the board is talking heads, to decide what viewers know and plan the visual beats" },
+        { "ref": "library:sound-off-commercial-checker", "type": "skill", "use": "check", "when": "When the board is drafted, to check it still makes sense with the sound off" },
+        { "ref": "library:voice-over-stripping-test", "type": "skill", "use": "check", "when": "When the pictures only repeat the voice-over, to test what they say on their own" }
+      ]
+    },
+    {
+      "id": "storyboard-animation",
+      "task": "Storyboard an animated explainer and brief the animator",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/storyboard-and-shoot-plan", "use": "build", "when": "When the script is approved and each scene needs its motion, text and audio in a table" },
+        { "ref": "library:motion-graphics-build-plan", "type": "skill", "use": "build", "when": "When the animator needs an exact build plan and a table of every on-screen word" },
+        { "ref": "library:3d-explainer-video-prompts", "type": "skill", "use": "explore", "when": "When a 3D look is an option, to see a storyboard with image and clip prompts" },
+        { "ref": "library:paper-cutout-video-prompts", "type": "skill", "use": "explore", "when": "When a hand-made cutout look is an option, to compare it with the clean version" },
+        { "ref": "library:scott-mccloud", "type": "mind", "use": "think", "when": "When scenes jump and the viewer cannot follow what happened between two frames" },
+        { "ref": "library:sound-off-commercial-checker", "type": "skill", "use": "check", "when": "Before the brief goes out, to check the visuals carry the message without sound" }
+      ]
+    },
+    {
+      "id": "storyboard-vertical",
+      "task": "Storyboard a short vertical video",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:short-video-format-picker", "type": "skill", "use": "explore", "when": "When the format is open, to pick one and get a script outline and ten hooks" },
+        { "ref": "library:short-video-hook-writer", "type": "skill", "use": "explore", "when": "When the first two seconds are undecided, to get ten hooks checked against the first shot" },
+        { "ref": "kit:skills/storyboard-and-shoot-plan", "use": "build", "when": "When the idea is picked and each shot needs size, angle and on-screen text for 9:16" },
+        { "ref": "library:video-ad-text-overlays", "type": "skill", "use": "build", "when": "When on-screen words must be timed and placed clear of the app's buttons" },
+        { "ref": "library:sound-off-commercial-checker", "type": "skill", "use": "check", "when": "Before filming, since most people watch muted, to check it works without sound" }
+      ]
+    },
+    {
+      "id": "shoot-day-plan",
+      "task": "Plan the shoot day and brief the person filming",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/shoot-day-plan", "use": "build", "when": "When the storyboard is approved and you need shots in filming order, a schedule and a kit list" },
+        { "ref": "kit:skills/storyboard-and-shoot-plan", "use": "brief", "when": "When the shots must be regrouped by place and set-up before the day is planned" },
+        { "ref": "library:creative-shoot-briefer", "type": "skill", "use": "build", "when": "When a hired video team needs one brief with the brand and the goal" },
+        { "ref": "library:product-shoot-brief-writer", "type": "skill", "use": "build", "when": "When the same day must cover product stills and video, with a reason for each shot" }
+      ]
+    },
+    {
+      "id": "logo-animation",
+      "task": "Spec a logo animation or sting",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/motion-and-titles-spec", "use": "build", "when": "When a logo sting needs a keyframe table with time in seconds and frames" },
+        { "ref": "library:design-to-motion-animator", "type": "skill", "use": "explore", "when": "When the client must see the logo moving in two or three ways before choosing" },
+        { "ref": "library:web-animation-builder", "type": "skill", "use": "build", "when": "When the sting will run on a website and can be built as a timed vector animation" },
+        { "ref": "library:saul-bass", "type": "mind", "use": "think", "when": "When the sting is busy, to reduce it to one clear move that sets the mood" },
+        { "ref": "library:animation-reviewer", "type": "skill", "use": "check", "when": "When the motion is built in code, to get a table of fixes and an approve or block call" }
+      ]
+    },
+    {
+      "id": "kinetic-text",
+      "task": "Spec a kinetic text video timed to voice-over",
+      "kind": "other",
+      "items": [
+        { "ref": "library:motion-graphics-ad-script", "type": "skill", "use": "brief", "when": "When there is no script yet, to write one made for graphics with a sourced fact sheet" },
+        { "ref": "kit:skills/motion-and-titles-spec", "use": "build", "when": "When each line of text needs in, hold and out times matched to the voice-over" },
+        { "ref": "library:motion-graphics-remake", "type": "workflow", "use": "explore", "when": "When a filmed video did well, to try it remade as motion graphics with every word kept" },
+        { "ref": "library:motion-graphics-build-plan", "type": "skill", "use": "build", "when": "When the builder needs the exact layers, cutouts and text table" },
+        { "ref": "library:herb-lubalin", "type": "mind", "use": "think", "when": "When the words just slide in, to make the letters themselves carry the idea" },
+        { "ref": "library:sound-off-commercial-checker", "type": "skill", "use": "check", "when": "When the text is timed, to check the piece still reads with no voice at all" }
+      ]
+    },
+    {
+      "id": "titles-pack",
+      "task": "Design lower thirds, title cards and end cards",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/lower-thirds-and-titles-pack", "use": "build", "when": "When a series or channel needs name straps, title, chapter and end cards an editor can reuse" },
+        { "ref": "kit:skills/motion-and-titles-spec", "use": "build", "when": "When each card needs its in and out motion specified to the frame" },
+        { "ref": "library:font-pair-shortlist-maker", "type": "prompt", "use": "explore", "when": "When the brand has no fonts, to compare three pairs before the pack is set" },
+        { "ref": "library:branded-video-captions", "type": "skill", "use": "check", "when": "When the pack sits beside captions, to check brand-font text for timing and faults" }
+      ]
+    },
+    {
+      "id": "animated-social-post",
+      "task": "Plan an animated social post, loop or GIF",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:skills/motion-and-titles-spec", "use": "build", "when": "When a short loop needs its moves, timing and loop point written as keyframes" },
+        { "ref": "library:design-to-motion-animator", "type": "skill", "use": "explore", "when": "When a static design exists, to see it moving and compare versions before the final export" },
+        { "ref": "library:offer-reel-real-product", "type": "workflow", "use": "build", "when": "When the post is an offer and the product and price must be exactly right in every size" },
+        { "ref": "library:sound-off-commercial-checker", "type": "skill", "use": "check", "when": "Before posting, to check the loop makes its point silently" }
+      ]
+    },
+    {
+      "id": "series-plan",
+      "task": "Plan a short explainer or video series",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:serial-story-planner", "type": "skill", "use": "build", "when": "When one topic must be split into parts, each with its own job and hook" },
+        { "ref": "library:founder-video-series-planner", "type": "skill", "use": "explore", "when": "When the founder could front the series, to see a ten-week plan from buyer questions" },
+        { "ref": "library:video-content-planner", "type": "skill", "use": "build", "when": "When the series serves a channel goal and long videos should also feed short clips" },
+        { "ref": "kit:skills/two-column-explainer-script", "use": "build", "when": "When the plan is agreed and each episode needs its timed script" }
+      ]
+    },
+    {
+      "id": "brief-to-delivered-video",
+      "task": "Run a video from brief to delivery",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:video-route-picker", "type": "skill", "use": "brief", "when": "At the start, to choose between filming, generating, composing or editing footage" },
+        { "ref": "library:marketing-video-producer", "type": "skill", "use": "brief", "when": "When the client only knows they need a video, to pick the tool, script and shot plan" },
+        { "ref": "kit:workflows/brief-to-delivered-video", "use": "build", "when": "When a client needs an explainer, demo or product video and someone else will build it" },
+        { "ref": "library:approved-plan-video-production-workflow", "type": "workflow", "use": "build", "when": "When footage already exists and the client must approve a scene plan before the render" },
+        { "ref": "kit:skills/delivery-and-rights-check", "use": "check", "when": "At the end, to check the cut is safe to publish on each platform" }
+      ]
+    },
+    {
+      "id": "monthly-short-video-batch",
+      "task": "Plan a monthly batch of short videos",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:video-hook-and-hold-matrix-reviewer", "type": "skill", "use": "brief", "when": "Before the batch, to see from view counts which past videos hooked and which held" },
+        { "ref": "kit:workflows/monthly-short-video-batch", "use": "build", "when": "Once a month, to plan, script and board the next set of short videos" },
+        { "ref": "library:video-opening-line-batch-writer", "type": "prompt", "use": "explore", "when": "When each video needs an opening, to get ten and the two to film first" },
+        { "ref": "library:founder-ad-shoot-planner", "type": "skill", "use": "build", "when": "When one person films the whole batch, to plan hooks and bodies as one shoot list" },
+        { "ref": "library:social-video-edit-planner", "type": "skill", "use": "build", "when": "When clips are filmed, to give each a timed cut list, captions and a cover" }
+      ]
+    },
+    {
+      "id": "vertical-cutdown",
+      "task": "Plan vertical cut-downs from a landscape video",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/vertical-cutdown-plan", "use": "build", "when": "When a finished landscape video should yield vertical clips without filming again" },
+        { "ref": "library:shorts-clip-finder", "type": "skill", "use": "brief", "when": "When you have the transcript, to find the five best moments and a new first line for each" },
+        { "ref": "library:video-ad-text-overlays", "type": "skill", "use": "build", "when": "When the reframed clip needs on-screen words placed for a vertical screen" },
+        { "ref": "kit:skills/delivery-and-rights-check", "use": "check", "when": "Before the clips go out, to check sizes, captions and rights for each platform" }
+      ]
+    },
+    {
+      "id": "rights-log",
+      "task": "Log and check music and footage rights",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/music-and-footage-rights-log", "use": "build", "when": "Before a video goes live, or when a client asks if they can use a song or clip" },
+        { "ref": "kit:skills/delivery-and-rights-check", "use": "check", "when": "When the cut is final, to check every track, clip, face and logo is cleared" },
+        { "ref": "library:suno-song-and-music-bed-prompt-writer", "type": "skill", "use": "build", "when": "When a track cannot be cleared and a made-to-order music bed is the safer choice" }
+      ]
+    },
+    {
+      "id": "delivery-check",
+      "task": "Check a finished cut and deliver it to each platform",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/delivery-and-rights-check", "use": "check", "when": "When a cut leaves the edit and needs the right size, captions and settings per platform" },
+        { "ref": "library:cut-caption-and-check-a-video-ad-before-launch", "type": "workflow", "use": "check", "when": "When the video is an ad, to run the caption and launch checks with fixes" },
+        { "ref": "library:thumbnail-and-title-planner", "type": "skill", "use": "explore", "when": "When the video needs title and thumbnail pairs to test before it goes up" },
+        { "ref": "library:youtube-title-thumbnail-check", "type": "skill", "use": "check", "when": "Before upload, to check title length and that the thumbnail does not repeat it" },
+        { "ref": "library:human-representation-reviewer", "type": "skill", "use": "check", "when": "When people appear on screen, to check they are shown fairly and move naturally" }
+      ]
+    },
+    {
+      "id": "voice-and-sound",
+      "task": "Plan the voice-over, music and sound",
+      "kind": "other",
+      "items": [
+        { "ref": "library:five-voice-video-opener-writer", "type": "skill", "use": "explore", "when": "When the delivery is undecided, to hear the opening in five voice styles with pace notes" },
+        { "ref": "library:voiceover-maker", "type": "skill", "use": "build", "when": "When the script is final and a narration track is needed in a built-in voice" },
+        { "ref": "library:video-audio-finishing-plan", "type": "workflow", "use": "build", "when": "When voice, music, effects and fades need one timed plan with mix checks" },
+        { "ref": "library:elevenlabs", "type": "tool", "use": "build", "when": "When the client wants a natural voice, a dub or a short music bed" },
+        { "ref": "library:ar-rahman", "type": "mind", "use": "think", "when": "When the music fights the voice, to ask what each sound does for the scene" },
+        { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "Before recording, to catch lines a voice artist will stumble on" }
+      ]
+    },
+    {
+      "id": "ai-video-production",
+      "task": "Plan a video made with AI video tools",
+      "kind": "other",
+      "items": [
+        { "ref": "library:video-ad-production-plan-builder", "type": "skill", "use": "build", "when": "When the idea is agreed and you need a cast kit, timed shots, prompts and edit handoff" },
+        { "ref": "library:ai-video-shot-planner", "type": "skill", "use": "build", "when": "When a one-line idea needs a shot list, a prompt per shot and fixes for failed clips" },
+        { "ref": "library:avatar-storyboard-planner", "type": "skill", "use": "explore", "when": "When a presenter is needed, to see an avatar, angle sheets and a storyboard first" },
+        { "ref": "library:runway", "type": "tool", "use": "build", "when": "When shots are generated from prompts or stills and then edited" },
+        { "ref": "library:heygen", "type": "tool", "use": "build", "when": "When a typed script should be read by an AI presenter and then translated" },
+        { "ref": "library:ai-image-fix-rules", "type": "skill", "use": "check", "when": "When clips come back wrong, to turn each note into a rule for every later shot" }
+      ]
+    },
+    {
+      "id": "founder-or-customer-story",
+      "task": "Plan a founder or customer story video",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:founder-video-ad-script-writer", "type": "skill", "use": "brief", "when": "When the founder will be filmed, to get interview questions or a brief on one real decision" },
+        { "ref": "library:quote-video-ad-script", "type": "skill", "use": "build", "when": "When real customer quotes must become a script with a source for every line" },
+        { "ref": "library:founder-ad-script-builder", "type": "skill", "use": "explore", "when": "When the story could open several ways, to get two to four hooks and narrator swaps" },
+        { "ref": "library:turn-reviews-into-a-checked-sales-video-and-cut-list", "type": "workflow", "use": "build", "when": "When reviews are the source and you need a checked script, timed shots and a cut list" },
+        { "ref": "kit:prompts/shoot-day-plan", "use": "build", "when": "When real people are filmed and the day needs a schedule and a consent list" },
+        { "ref": "library:video-ad-bridge-checker", "type": "skill", "use": "check", "when": "When the story turns into a pitch too early, to score the bridge and tighten it" }
+      ]
+    },
+    {
+      "id": "youtube-long-script",
+      "task": "Write a long YouTube video script",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:thumbnail-and-title-planner", "type": "skill", "use": "brief", "when": "Before the script, to fix the title and thumbnail the first minute must pay off" },
+        { "ref": "library:youtube-script-writer", "type": "skill", "use": "explore", "when": "When you want scored hook options and a full spoken script with what shows on screen" },
+        { "ref": "kit:skills/two-column-explainer-script", "use": "build", "when": "When the script must be handed to an editor with sound and picture side by side" },
+        { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "Before filming, to fix lines that are hard to say to camera" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any video that must look and sound like the client's live site" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a script or on-screen line states a number or claim you cannot trace to the client" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a script or title pack is sent, to catch typos and names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "video-editor", "when": "When footage exists and the job is the cut, clips, captions and chapters" },
+    { "role": "graphic-designer", "when": "When title cards, thumbnails or animated posts need static designs first" },
+    { "role": "ad-creative-strategist", "when": "When the video is a paid ad and needs angles, hooks and a test plan" },
+    { "role": "youtube-strategist", "when": "When the video must fit a channel plan, its topics and its numbers" },
+    { "role": "product-photographer", "when": "When the shoot also needs product stills or a matching photo style" },
+    { "role": "brand-designer", "when": "When there is no logo or brand kit to animate or build titles from" }
+  ],
+  "gaps": [
+    "No library item writes a plain explainer or tutorial script; the library's video scripts are built for ads",
+    "No library item draws storyboard frames as sketches or pictures for a live-action shoot; boards are text tables",
+    "No library item specs a logo animation, kinetic text timing or a lower thirds and title card pack; only the kit covers them",
+    "No library item checks whether on-screen text stays up long enough to read",
+    "No library item builds a shoot day schedule, call sheet, kit list or consent and release forms",
+    "No library item logs music, footage and font licences or checks them before publishing",
+    "No library item gives delivery specs per platform: sizes, frame rate, length limits, captions and thumbnails",
+    "No library item plans a screen-recording tutorial: capture steps, zooms, cursor moves and callouts",
+    "No library item prices a video job or compares quotes from filmers and animators",
+    "No library item plans an event recap or highlights video"
+  ]
+}

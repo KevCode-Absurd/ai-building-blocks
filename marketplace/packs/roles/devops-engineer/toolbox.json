@@ -1,0 +1,294 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "devops-engineer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "ci-pipeline",
+      "task": "Build a CI pipeline that tests and deploys on push",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:workflows/automate-a-manual-deploy", "use": "brief", "when": "When the team deploys by hand and the steps must be captured before anything is automated" },
+        { "ref": "kit:skills/docker-and-ci-pipeline", "use": "build", "when": "When manual build and deploy steps must become a pinned image and a pipeline that tests first" },
+        { "ref": "library:ci-cd-pipeline-setup", "type": "skill", "use": "build", "when": "When the pipeline must ship through several environments, such as staging then live" },
+        { "ref": "library:secrets-setup-helper", "type": "skill", "use": "build", "when": "When the pipeline needs keys and you must plan where they are stored, read and rotated" },
+        { "ref": "library:copilot-github-actions-hardening", "type": "skill", "use": "check", "when": "When the build files are written, to find loose permissions and inputs an outsider controls" }
+      ]
+    },
+    {
+      "id": "dockerfile-compose",
+      "task": "Write a Dockerfile and Compose set-up for an app",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/docker-and-ci-pipeline", "use": "build", "when": "When it works on one machine only and needs a pinned multi-stage image and local Compose" },
+        { "ref": "library:docker-setup-builder", "type": "skill", "use": "build", "when": "When only the container files are needed, lean and safe, for an app that already runs" },
+        { "ref": "library:safe-shutdown-code-writer", "type": "skill", "use": "build", "when": "When containers are stopped mid-request and the app must finish live work before exit" },
+        { "ref": "library:readme-first-run-tester", "type": "skill", "use": "check", "when": "When the set-up is written, to run each README step and mark it working or broken" }
+      ]
+    },
+    {
+      "id": "ci-build-failure",
+      "task": "Fix a Docker build or CI run that fails",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/ci-build-failure-diagnosis", "use": "build", "when": "When a build fails, or passes on one machine only, and you need the cause and the fixed config" },
+        { "ref": "library:error-and-log-debugger", "type": "skill", "use": "brief", "when": "When the failure is inside the app's own tests or scripts and you have the log" },
+        { "ref": "library:copilot-github-actions-runtime-upgrade-conventions", "type": "skill", "use": "build", "when": "When runs break or warn because actions or runtimes are out of support" },
+        { "ref": "library:docs-backed-coder", "type": "skill", "use": "check", "when": "When the fix depends on a tool's current syntax and you want it checked against its docs" }
+      ]
+    },
+    {
+      "id": "release-checklist",
+      "task": "Plan a release with a deploy checklist and rollback",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:release-readiness-reviewer", "type": "skill", "use": "brief", "when": "Before the checklist, for a read-only look at migrations, config and deploy order risks" },
+        { "ref": "kit:skills/release-checklist-and-rollback", "use": "build", "when": "When one release needs a readiness check, steps with owners and a stop point for each" },
+        { "ref": "library:release-day-rollback-planner", "type": "prompt", "use": "build", "when": "When the owner wants a short plan: checks, rollback and how to know it worked" },
+        { "ref": "library:copilot-devops-rollout-plan", "type": "skill", "use": "build", "when": "When the change should go out in stages with health signals to watch at each one" },
+        { "ref": "library:feature-flag-planner", "type": "skill", "use": "build", "when": "When risky code should ship switched off, with a kill switch and a removal date" },
+        { "ref": "library:release-manager", "type": "agent", "use": "check", "when": "When the team wants a go or no-go, a version and a live check run before every release" },
+        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When the plan has no answer for a step failing halfway, to design the recovery first" }
+      ]
+    },
+    {
+      "id": "release-notes",
+      "task": "Write release notes from merged changes",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:release-notes-writer", "type": "skill", "use": "brief", "when": "When you have only the commits and need them sorted and the right version bump" },
+        { "ref": "kit:prompts/release-notes-from-changes", "use": "build", "when": "When a release is ready and you have the list of merged pull requests or tickets" },
+        { "ref": "library:roadmap-update-writer", "type": "skill", "use": "explore", "when": "When customers, engineers and leaders each need the same release told their own way" },
+        { "ref": "library:documentation-checker", "type": "skill", "use": "check", "when": "Before publishing, to catch any line that claims something the release does not do" }
+      ]
+    },
+    {
+      "id": "docs-match-release",
+      "task": "Check the docs match the new release",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:check-a-release-and-its-docs", "type": "workflow", "use": "check", "when": "When a change and its release plan are ready and you need test gaps and stale docs found" },
+        { "ref": "library:copilot-docs-sync-audit", "type": "skill", "use": "check", "when": "When one feature changed and you must trace which instructions are now wrong" },
+        { "ref": "library:monthly-developer-docs-keeper", "type": "agent", "use": "build", "when": "When docs fall behind every month and need a regular pass" },
+        { "ref": "library:readme-first-run-tester", "type": "skill", "use": "check", "when": "When the set-up steps changed, to prove a new person can still follow them" }
+      ]
+    },
+    {
+      "id": "go-live-runbook",
+      "task": "Write a go-live runbook for a new site or app",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:site-go-live-runbook-writer", "type": "skill", "use": "build", "when": "When a first launch needs checks, DNS cutover steps and a watch period after" },
+        { "ref": "library:domain-and-dns-planner", "type": "skill", "use": "brief", "when": "When domains and redirects must be laid out before the cutover" },
+        { "ref": "kit:skills/release-checklist-and-rollback", "use": "build", "when": "When the launch includes a big data move and each step needs an owner and a stop point" },
+        { "ref": "library:launch-readiness-seam-checker", "type": "skill", "use": "check", "when": "When the runbook is drafted, to look at the joins between parts and what wins under load" },
+        { "ref": "library:release-a-new-version-and-prove-it-is-live", "type": "workflow", "use": "check", "when": "On the day, to get a go or no-go, deploy and proof the new version is being served" }
+      ]
+    },
+    {
+      "id": "managed-host-deploy",
+      "task": "Deploy an app to a managed host",
+      "kind": "code",
+      "items": [
+        { "ref": "library:tech-stack-comparer", "type": "skill", "use": "explore", "when": "When the host is not chosen, to compare options on cost, security and team fit" },
+        { "ref": "library:vercel-deployer", "type": "skill", "use": "build", "when": "When the app suits Vercel and the client wants a live link fast" },
+        { "ref": "library:render-publisher", "type": "skill", "use": "build", "when": "When the app has workers or a database and Render fits, with a set-up file" },
+        { "ref": "library:uptime-and-alert-setup-planner", "type": "skill", "use": "check", "when": "After the deploy, so uptime checks and alerts reach a person" }
+      ]
+    },
+    {
+      "id": "environment-setup-checklist",
+      "task": "Write an environment and server set-up checklist",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:agency-support-infrastructure-maintainer", "type": "agent", "use": "check", "when": "When servers exist and you need gaps in alerts, backups and patching found" },
+        { "ref": "library:secrets-setup-helper", "type": "skill", "use": "build", "when": "When each environment needs its own keys and a plan for storing and rotating them" },
+        { "ref": "library:runbook-writer", "type": "skill", "use": "build", "when": "When the set-up needs deploy, maintenance and rollback steps written down" }
+      ]
+    },
+    {
+      "id": "terraform",
+      "task": "Write or review Terraform for a small cloud set-up",
+      "kind": "code",
+      "items": [
+        { "ref": "library:terraform-setup-builder", "type": "skill", "use": "build", "when": "When a small cloud set-up must be written as modules with safe state" },
+        { "ref": "kit:prompts/terraform-plan-review", "use": "check", "when": "Before anyone applies an infrastructure change, to read the plan for destroys and surprises" },
+        { "ref": "library:cloud-misconfiguration-finder", "type": "skill", "use": "check", "when": "When the files are written, to find open buckets and loose access rules" },
+        { "ref": "library:aws-access-policy-reviewer", "type": "skill", "use": "check", "when": "When the change adds AWS permissions and they should grant only what is needed" }
+      ]
+    },
+    {
+      "id": "lint-hooks",
+      "task": "Add linting, formatting and pre-commit hooks",
+      "kind": "code",
+      "items": [
+        { "ref": "library:agency-engineering-git-workflow-master", "type": "agent", "use": "brief", "when": "When the team has no agreed branch names, commit rules or pull request checklist" },
+        { "ref": "library:pre-commit-hook-setter", "type": "skill", "use": "build", "when": "When formatting, type and test checks should run before every commit" },
+        { "ref": "kit:skills/docker-and-ci-pipeline", "use": "build", "when": "When the same checks must also run in the pipeline so nothing skips them" }
+      ]
+    },
+    {
+      "id": "ci-speed-cost",
+      "task": "Cut slow builds and CI cost",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:cut-ci-cost-without-weakening-checks", "type": "workflow", "use": "build", "when": "When the CI bill is high and savings must not remove any check" },
+        { "ref": "library:copilot-github-actions-efficiency", "type": "skill", "use": "check", "when": "When you need wasted build minutes, slow jobs and repeated work pointed out" },
+        { "ref": "kit:skills/docker-and-ci-pipeline", "use": "build", "when": "When the fix is layer order and caching in the image build" }
+      ]
+    },
+    {
+      "id": "pipeline-secrets-dependencies",
+      "task": "Keep pipeline secrets and dependencies safe",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:find-leaked-keys-move-them-to-safe-storage-and-check-the-live-site", "type": "workflow", "use": "build", "when": "When keys sit in the repo or build logs and must be rotated and moved to safe storage" },
+        { "ref": "library:weekly-dependency-and-security-sweep", "type": "agent", "use": "check", "when": "When packages should be checked each week for new flaws and a safe upgrade order" },
+        { "ref": "library:copilot-github-actions-hardening", "type": "skill", "use": "check", "when": "When build workflows may run with more rights than they need" }
+      ]
+    },
+    {
+      "id": "cloud-cost-review",
+      "task": "Review a cloud bill and find safe savings",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/cloud-cost-and-resilience-review", "use": "build", "when": "When you have cost exports and a service list and need top costs, waste and risks ranked" },
+        { "ref": "library:review-aws-cost-and-resilience", "type": "workflow", "use": "build", "when": "When the client is on AWS and each saving must be weighed against workload risk" },
+        { "ref": "library:review-azure-cost-and-resilience", "type": "workflow", "use": "build", "when": "When the client is on Azure and needs a resource map, prices and a savings plan" },
+        { "ref": "library:cloud-bill-waste-finder", "type": "skill", "use": "check", "when": "When you can read the AWS account and want idle and unused resources listed with savings" },
+        { "ref": "library:agency-engineering-finops-engineer", "type": "agent", "use": "check", "when": "When you want a second view of the savings with reliability checks" },
+        { "ref": "library:taiichi-ohno", "type": "mind", "use": "think", "when": "When the same waste returns each month, to find the habit that keeps creating it" }
+      ]
+    },
+    {
+      "id": "monthly-cost-check",
+      "task": "Run the monthly cloud cost check",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/monthly-cloud-cost-check", "use": "build", "when": "A few days after the bill closes, or when an anomaly or budget alert fires" },
+        { "ref": "library:monthly-cloud-and-ai-bill-keeper", "type": "agent", "use": "build", "when": "When cloud and AI bills should be compared each month for what grew and why" },
+        { "ref": "kit:skills/cloud-cost-and-resilience-review", "use": "check", "when": "When the monthly numbers show a jump that needs a full look" }
+      ]
+    },
+    {
+      "id": "budget-alerts",
+      "task": "Set up budgets, tags and cost alerts",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/budget-and-alert-plan", "use": "build", "when": "After a surprise bill or on a new account, so spend shows by project and alerts reach a person" },
+        { "ref": "library:ai-spend-limit-checker", "type": "skill", "use": "build", "when": "When code calls paid AI services and needs spending caps and loop limits" },
+        { "ref": "library:monthly-cloud-and-ai-bill-keeper", "type": "agent", "use": "check", "when": "When caps are set and someone should check each month that they still fit" }
+      ]
+    },
+    {
+      "id": "hosting-move-cost",
+      "task": "Compare the cost of a hosting move",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:tech-stack-comparer", "type": "skill", "use": "explore", "when": "When two or three hosts are on the table and need a side-by-side with a pick" },
+        { "ref": "library:technical-capacity-cost-planner", "type": "skill", "use": "build", "when": "When the cost depends on traffic and tested limits, not list prices alone" },
+        { "ref": "kit:skills/cloud-cost-and-resilience-review", "use": "brief", "when": "Before comparing, to know what the current set-up really costs and why" },
+        { "ref": "library:decision-record-writer", "type": "skill", "use": "build", "when": "When the choice is made, to record why and what was passed over" }
+      ]
+    },
+    {
+      "id": "resilience-backup-review",
+      "task": "Review resilience and backups",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:backup-and-recovery-planner", "type": "skill", "use": "brief", "when": "When the owner has never said how much data or downtime they can afford to lose" },
+        { "ref": "kit:skills/cloud-cost-and-resilience-review", "use": "check", "when": "When you check single points of failure, backups and restore tests beside the bill" },
+        { "ref": "library:production-stability-reviewer", "type": "skill", "use": "check", "when": "When a service needs missing timeouts, retries and circuit breakers found" },
+        { "ref": "library:build-a-backup-recovery-rehearsal", "type": "workflow", "use": "build", "when": "When backups exist but nobody has proved a restore works" },
+        { "ref": "library:failure-drill-planner", "type": "skill", "use": "build", "when": "When the team is ready to break one part on purpose, safely, to see what happens" }
+      ]
+    },
+    {
+      "id": "incident-report",
+      "task": "Write a blameless incident report after an outage",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/after-an-outage", "use": "brief", "when": "When an incident met the client's triggers: downtime, data loss, a rollback or a missed alert" },
+        { "ref": "library:slow-system-investigator", "type": "skill", "use": "brief", "when": "When the cause is still unclear and the possible causes must be checked one by one" },
+        { "ref": "kit:skills/blameless-incident-report", "use": "build", "when": "When you have chat exports, alerts and deploy logs and need a sourced timeline and actions" },
+        { "ref": "library:turn-an-incident-into-a-safer-procedure", "type": "workflow", "use": "build", "when": "When the report must also produce a changed procedure and tracked prevention work" },
+        { "ref": "library:taiichi-ohno", "type": "mind", "use": "think", "when": "When the report stops at human error, to keep asking why until a process cause appears" }
+      ]
+    },
+    {
+      "id": "customer-incident-update",
+      "task": "Write a customer update about an incident",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/customer-incident-update", "use": "build", "when": "When customers were affected and need an honest first notice, progress or final update" },
+        { "ref": "library:prepare-a-service-outage-communication-pack", "type": "workflow", "use": "build", "when": "When the outage is long and you need every notice plus a record of confirmed facts" },
+        { "ref": "library:apology-email-writer", "type": "skill", "use": "build", "when": "When it is over and one short message must own the mistake and say what changes" },
+        { "ref": "library:angry-customer-reply-checker", "type": "skill", "use": "check", "when": "Before sending, to check promises, facts and tone against what customers complained of" },
+        { "ref": "library:mary-barra", "type": "mind", "use": "think", "when": "When the draft protects the company first, to start again from the people affected" }
+      ]
+    },
+    {
+      "id": "runbook",
+      "task": "Write a runbook for the next time it happens",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:on-call-runbook-writer", "type": "skill", "use": "build", "when": "When someone under pressure must follow the steps without knowing the system well" },
+        { "ref": "library:incident-runbook-writer", "type": "skill", "use": "build", "when": "When the service needs severity levels, first steps and who to tell" },
+        { "ref": "library:sop-and-runbook-checker", "type": "skill", "use": "check", "when": "When runbooks exist, to find missing owners, stale pages and gaps" }
+      ]
+    },
+    {
+      "id": "monitoring-alerts",
+      "task": "Set up monitoring, alerts and reliability targets",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:monitoring-planner", "type": "skill", "use": "brief", "when": "Before adding tools, to choose the metrics, logs and alerts that show real harm" },
+        { "ref": "library:error-budget-planner", "type": "skill", "use": "build", "when": "When the team needs targets based on what users feel and alert rules to match" },
+        { "ref": "library:uptime-and-alert-setup-planner", "type": "skill", "use": "build", "when": "When a small site needs uptime checks, error tracking and a simple on-call plan" },
+        { "ref": "library:logging-and-alerts-setter", "type": "skill", "use": "build", "when": "When the code itself has no useful logs and they must be added" }
+      ]
+    },
+    {
+      "id": "cloud-provider-incident",
+      "task": "Review an incident on a cloud service",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:investigate-an-aws-service-incident", "type": "workflow", "use": "build", "when": "When the trouble was on AWS and you need log evidence, a recovery plan and lessons" },
+        { "ref": "library:copilot-aws-cloudwatch-investigation", "type": "skill", "use": "brief", "when": "When you have the time window and need the right log queries and linked deploys" },
+        { "ref": "kit:skills/blameless-incident-report", "use": "build", "when": "When the findings must become a timeline and report the client can share" }
+      ]
+    },
+    {
+      "id": "mobile-release-plan",
+      "task": "Plan a mobile app release",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:agency-engineering-mobile-release-engineer", "type": "agent", "use": "build", "when": "When an iOS or Android release needs a signing check, a go list and a staged rollout" },
+        { "ref": "kit:skills/release-checklist-and-rollback", "use": "build", "when": "When the app release depends on a server change that must go first and can roll back" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:dev-work-report-writer", "type": "skill", "use": "check", "when": "At the end of any config or code job, to write what changed, why and the proof it works" }
+  ],
+  "helpers": [
+    { "role": "backend-developer", "when": "When a deploy fails because of application code, migrations or an integration" },
+    { "role": "database-engineer", "when": "When a release includes a risky migration or a restore must be proven" },
+    { "role": "application-security-engineer", "when": "When the pipeline needs security scans, or an incident looks like a break-in" },
+    { "role": "mobile-app-developer", "when": "When the release is an app store submission with builds, labels and review" },
+    { "role": "technical-writer", "when": "When release notes or docs need more than a tidy list of changes" },
+    { "role": "it-administrator", "when": "When the job is staff accounts, devices or office tools, not the product's servers" }
+  ],
+  "gaps": [
+    "No library item writes two or three differently pitched incident notices to compare before one is sent",
+    "No library item writes or fixes GitLab CI or Bitbucket Pipelines files; the CI items are general or GitHub Actions only",
+    "No library item diagnoses a failing Docker build or a CI run from its log; only the kit prompt does",
+    "No library item reads a Terraform or OpenTofu plan for destroys, replacements and drift",
+    "No library item reviews a Google Cloud bill, or a bill from a small host such as DigitalOcean or Hetzner",
+    "No library item writes a cost tagging and budget alert plan for AWS, Azure or Google Cloud",
+    "No library item prices a hosting move with egress, migration effort and running both for a while",
+    "No library item writes a status page entry or sets how often to update customers during an outage",
+    "No library item sets up a plain Linux server: users, firewall, reverse proxy, TLS and updates",
+    "No library item plans blue-green or canary deploys for a small app without Kubernetes"
+  ]
+}

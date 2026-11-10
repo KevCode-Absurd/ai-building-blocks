@@ -1,0 +1,276 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "ecommerce-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "bundles-and-add-ons",
+      "task": "Plan bundles and add-ons that raise order value",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/bundles-and-order-value", "use": "build", "when": "When you have order history and costs and need bundles and add-ons with the margin of each" },
+        { "ref": "library:bundle-pair-finder", "type": "skill", "use": "brief", "when": "Before you design anything, to see which pairs and triples people already buy together" },
+        { "ref": "library:bundle-tier-layout-planner", "type": "skill", "use": "explore", "when": "When one product could sell as good, better and best, to lay out three tiers with savings wording" },
+        { "ref": "library:bundle-and-quantity-break-builder", "type": "skill", "use": "explore", "when": "When a hero product suits buy-more-save-more, to try quantity breaks against a fixed bundle" },
+        { "ref": "library:cart-and-checkout-upsell-planner", "type": "skill", "use": "build", "when": "When add-ons must be placed in the cart and checkout, one offer per slot, ranked by profit" },
+        { "ref": "library:bundle-stock-checker", "type": "skill", "use": "check", "when": "Before a bundle goes live, to check every part is in stock and how many you can really sell" },
+        { "ref": "library:alex-hormozi", "type": "mind", "use": "think", "when": "When a bundle is only a discount and needs a reason the buyer would want it at full price" }
+      ]
+    },
+    {
+      "id": "free-shipping-threshold",
+      "task": "Set a free shipping threshold",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:order-threshold-planner", "type": "skill", "use": "build", "when": "When you have order sizes and need the threshold set just above where real orders cluster" },
+        { "ref": "kit:skills/bundles-and-order-value", "use": "check", "when": "When you must show the threshold still leaves margin after the shipping you give away" },
+        { "ref": "library:gift-with-purchase-planner", "type": "skill", "use": "explore", "when": "When free shipping costs too much, to try spend-and-get gift tiers instead" },
+        { "ref": "library:raise-order-value-with-bundles-and-add-ons-you-can-check", "type": "workflow", "use": "brief", "when": "When the owner wants threshold, bundles and an after-sale offer worked out in one run" }
+      ]
+    },
+    {
+      "id": "category-tree",
+      "task": "Design the category tree and menu",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/catalogue-structure", "use": "build", "when": "When the store needs a category tree in shoppers' words with the attributes each one needs" },
+        { "ref": "library:collections-and-menu-planner", "type": "skill", "use": "explore", "when": "When you want a second cut of collections, filters and menu from the product list to compare" },
+        { "ref": "library:store-navigation-planner", "type": "skill", "use": "build", "when": "When the tree is agreed and you need the menu, sub-collection links and breadcrumbs" },
+        { "ref": "library:click-choice-clarity-checker", "type": "skill", "use": "check", "when": "When the menu labels are drafted, to rate each choice and rewrite the unclear ones" },
+        { "ref": "library:dieter-rams", "type": "mind", "use": "think", "when": "When the tree has grown levels and labels nobody needs and must be cut to what helps" }
+      ]
+    },
+    {
+      "id": "filters-and-attributes",
+      "task": "Fix filters and attribute values",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/filter-and-attribute-audit", "use": "check", "when": "When shoppers cannot narrow down, filters show odd values or products vanish under a filter" },
+        { "ref": "kit:skills/catalogue-structure", "use": "build", "when": "When each category needs its attributes, allowed values and filter order written down" },
+        { "ref": "library:product-attribute-field-setter", "type": "skill", "use": "build", "when": "When material, size and spec fields must be filled on live products so filters have data" },
+        { "ref": "library:variant-name-tidier", "type": "skill", "use": "build", "when": "When sizes and colours are spelt several ways and must be set to one standard" }
+      ]
+    },
+    {
+      "id": "product-data-template",
+      "task": "Write a product data template and variant rules",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/catalogue-structure", "use": "build", "when": "When new items need one sheet with every field, its allowed values and the tag rules" },
+        { "ref": "library:product-and-variant-setup-planner", "type": "skill", "use": "build", "when": "When you must decide what is a product and what is a variant, with a fill-in checklist" },
+        { "ref": "library:product-data-gap-filler", "type": "skill", "use": "check", "when": "When live products miss barcode, SKU, vendor or weight and the gaps must be found and filled" }
+      ]
+    },
+    {
+      "id": "catalogue-restructure",
+      "task": "Move the current catalogue to a new structure",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/catalogue-restructure", "use": "brief", "when": "When filters are messy, a big range is coming or the store is moving platform" },
+        { "ref": "library:product-category-assigner", "type": "skill", "use": "build", "when": "When every product needs a standard category so feeds and shopping tools can place it" },
+        { "ref": "library:monthly-catalogue-clean-up-keeper", "type": "agent", "use": "check", "when": "After the move and each month, to find missing costs, clashing codes and hidden products" }
+      ]
+    },
+    {
+      "id": "clean-product-data",
+      "task": "Clean a messy product list before import",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:data-file-clean-up-loop", "type": "agent", "use": "build", "when": "When a supplier sheet is messy and must be fixed and re-checked until it passes" },
+        { "ref": "library:product-title-cleaner", "type": "skill", "use": "build", "when": "When titles are inconsistent and you need tidy ones with a before and after sheet" },
+        { "ref": "library:duplicate-sku-finder", "type": "skill", "use": "check", "when": "Before import, to find products sharing a code or barcode that would mix stock and orders" },
+        { "ref": "library:missing-product-image-finder", "type": "skill", "use": "check", "when": "After import, to list products and variants with no image or too few" }
+      ]
+    },
+    {
+      "id": "feed-fix-list",
+      "task": "Turn feed diagnostics into a ranked fix list",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/feed-diagnostics-triage", "use": "brief", "when": "When the issue list is long and you need to know in ten minutes what to fix first and where" },
+        { "ref": "kit:skills/product-feed-fix", "use": "build", "when": "When you need each issue with products affected, the cause in the data and where to fix it" },
+        { "ref": "library:merchant-center-feed-health-checker", "type": "skill", "use": "check", "when": "When you want Google feed problems ranked by lost sales, with a score to track" },
+        { "ref": "library:merchant-center-suspension-checker", "type": "skill", "use": "check", "when": "When the account has a warning and you must rank each gap by suspension risk" }
+      ]
+    },
+    {
+      "id": "feed-titles-and-rules",
+      "task": "Write feed title and attribute rewrite rules",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/product-feed-fix", "use": "build", "when": "When missing size, colour or gender must come from a supplemental feed or a feed rule" },
+        { "ref": "library:shopping-feed-title-writer", "type": "skill", "use": "build", "when": "When titles are codes or vague and you have the search terms that convert" },
+        { "ref": "library:shopping-title-rewriter", "type": "prompt", "use": "explore", "when": "When you want a second title pattern in one fixed word order to compare on a sample" },
+        { "ref": "library:merchant-center-feed-health-checker", "type": "skill", "use": "check", "when": "After the new titles load, to see that no new issues appeared" }
+      ]
+    },
+    {
+      "id": "monthly-feed-health",
+      "task": "Run the monthly feed health check",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/monthly-feed-health", "use": "brief", "when": "Each month, and two to three weeks before any big sale" },
+        { "ref": "kit:prompts/feed-diagnostics-triage", "use": "build", "when": "When this month's diagnostics are in and you need the short list first" },
+        { "ref": "library:store-policy-checker", "type": "skill", "use": "check", "when": "When issues point at returns, shipping or contact pages that are missing or clash" }
+      ]
+    },
+    {
+      "id": "weekly-trading",
+      "task": "Run the weekly trading review and calendar",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/weekly-trading-cycle", "use": "brief", "when": "Every Monday, with a short Thursday stock check before the weekend" },
+        { "ref": "kit:prompts/weekly-trading-review", "use": "build", "when": "When you must decide what to feature, push and reorder, and whether a markdown moves on" },
+        { "ref": "library:variant-sales-ranker", "type": "skill", "use": "brief", "when": "When you need every size and colour ranked by sales, units and refunds, with stock" },
+        { "ref": "library:sales-led-content-planner", "type": "skill", "use": "build", "when": "When the trading calls must become a 30 day plan of what to push and which offers to run" },
+        { "ref": "library:collection-page-fixer", "type": "skill", "use": "check", "when": "When a featured collection shows sizes that are sold out and needs a daily check" },
+        { "ref": "library:sam-walton", "type": "mind", "use": "think", "when": "When the plan comes from the report alone and nobody has asked staff or shoppers what they see" }
+      ]
+    },
+    {
+      "id": "markdown-and-clearance",
+      "task": "Plan markdowns and clear slow stock",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/merchandising-and-markdown-plan", "use": "build", "when": "When you have stock, sales and cost exports and need each product sorted with a markdown path" },
+        { "ref": "library:dead-stock-finder", "type": "skill", "use": "brief", "when": "When you need the list of products with stock and no sales in 90 days, at cost value" },
+        { "ref": "library:clearance-discount-planner", "type": "skill", "use": "build", "when": "When you need the dates and depth of each price cut to sell out by a set day" },
+        { "ref": "library:promotion-idea-planner", "type": "skill", "use": "explore", "when": "Before cutting price, to try a gift, bundle or pre-order route that protects the price" },
+        { "ref": "library:retail-markdown-stock-reconciler", "type": "skill", "use": "check", "when": "After a markdown, to check units sold and left and cash recovered against what the stock cost" }
+      ]
+    },
+    {
+      "id": "sort-and-homepage-rules",
+      "task": "Set collection sort and homepage slot rules",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/merchandising-and-markdown-plan", "use": "brief", "when": "When the rules must follow each product's role: hero, push, clear or cut" },
+        { "ref": "library:store-navigation-planner", "type": "skill", "use": "build", "when": "When the homepage needs a fixed list of feature slots and what earns each one" },
+        { "ref": "library:collection-order-sorter", "type": "skill", "use": "build", "when": "When in-stock products must move to the top of a live collection and sold-out ones down" },
+        { "ref": "library:collection-page-fixer", "type": "skill", "use": "check", "when": "When you want to test a collection's top row against stock by size" }
+      ]
+    },
+    {
+      "id": "range-review",
+      "task": "Review the range: keep, cut or reorder",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/merchandising-and-markdown-plan", "use": "build", "when": "When each product needs sell-through, weeks of cover, margin and trend side by side" },
+        { "ref": "library:product-profit-analyst", "type": "skill", "use": "build", "when": "When the review must show each product's margin and the ones that lose money" },
+        { "ref": "library:product-line-cutter", "type": "skill", "use": "explore", "when": "When the range is too wide and you want a keep and cut plan drawn as a simple grid" },
+        { "ref": "library:seasonal-buy-planner", "type": "skill", "use": "build", "when": "When next season's buy must be split into early, held back and markdown dates" }
+      ]
+    },
+    {
+      "id": "collection-intros",
+      "task": "Write collection page intros for featured ranges",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:collection-page-seo-builder", "type": "skill", "use": "build", "when": "When a collection needs its title, heading, two-part intro and questions for one search term" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the intro's first line is flat, to get several honest angles to choose from" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When an intro could describe any shop, to test it and get a true, picturable rewrite" }
+      ]
+    },
+    {
+      "id": "price-hesitation",
+      "task": "Fix pages where shoppers hesitate at the price",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:product-page-doubt-mapper", "type": "prompt", "use": "brief", "when": "When you know what buyers doubt and need each doubt tied to a page section and real proof" },
+        { "ref": "library:price-presentation-planner", "type": "skill", "use": "explore", "when": "When the price looks high alone, to try tier and anchor layouts that show value without tricks" },
+        { "ref": "library:store-social-proof-placer", "type": "skill", "use": "build", "when": "When reviews exist but sit far from the price, to pick which proof goes where" },
+        { "ref": "library:product-page-auditor", "type": "skill", "use": "check", "when": "When the page is changed, to get ranked fixes for variants, proof, buttons and price" }
+      ]
+    },
+    {
+      "id": "vip-programme",
+      "task": "Design a simple VIP programme",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:build-a-vip-program-for-your-best-customers", "type": "workflow", "use": "brief", "when": "When you have order history and want the best-customer profile and programme in one run" },
+        { "ref": "library:loyalty-and-vip-program-designer", "type": "skill", "use": "build", "when": "When you know spend tiers and margins and want perks that are not discounts, with a test" },
+        { "ref": "library:top-customer-touch-planner", "type": "skill", "use": "explore", "when": "When a full programme is too much, to try a personal touch plan for the top 50 first" },
+        { "ref": "kit:skills/bundles-and-order-value", "use": "check", "when": "When you must check that the perks leave margin on a typical VIP order" }
+      ]
+    },
+    {
+      "id": "digital-product-ladder",
+      "task": "Plan a digital product ladder, listings and emails",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/digital-product-ladder", "use": "build", "when": "When a creator has one or two downloads and wants a range from free to bundle" },
+        { "ref": "library:free-giveaway-designer", "type": "skill", "use": "explore", "when": "When the ladder needs a free first step worth an email address" },
+        { "ref": "library:digital-product-pricer", "type": "skill", "use": "build", "when": "When each step needs a price, a label and a launch discount" },
+        { "ref": "library:product-listing-writer", "type": "skill", "use": "build", "when": "When a listing gets views but few sales and needs a title, bullets and description" },
+        { "ref": "library:post-purchase-flow-builder", "type": "skill", "use": "build", "when": "When buyers need a delivery email and follow-ups that lead to the next step" }
+      ]
+    },
+    {
+      "id": "product-launch",
+      "task": "Plan a product or range launch",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:product-launch-planner", "type": "skill", "use": "build", "when": "When a new product has a date and needs timing, channels and announcement copy" },
+        { "ref": "library:launch-teaser-to-preview-planner", "type": "skill", "use": "explore", "when": "When you want a teaser and preview route with a sign-up page before launch day" },
+        { "ref": "library:launch-email-sequence-planner", "type": "skill", "use": "build", "when": "When the launch runs to a close date and the list needs a planned run of emails" },
+        { "ref": "library:pre-launch-store-checker", "type": "agent", "use": "check", "when": "Before go-live, to check the store, re-check after each fix and get a clear go or no-go" }
+      ]
+    },
+    {
+      "id": "promotion-and-price-check",
+      "task": "Plan a promotion and check every sale price",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:sale-offer-ladder-planner", "type": "skill", "use": "explore", "when": "When a sale needs a main offer, backups and a subscriber plan from stock and margin" },
+        { "ref": "library:discount-and-price-change-checker", "type": "agent", "use": "check", "when": "Before a sale, to find the deepest discount the margin allows and the wording to use" },
+        { "ref": "kit:prompts/price-reduction-check", "use": "check", "when": "Before a markdown goes live, to check each was-price, percentage, deadline and delivery charge" },
+        { "ref": "library:sale-price-wording-picker", "type": "prompt", "use": "build", "when": "When you must choose how to show the saving so it is clear and true" }
+      ]
+    },
+    {
+      "id": "shipping-review",
+      "task": "Review shipping rates and delivery costs",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:shipping-cost-analyzer", "type": "skill", "use": "build", "when": "When you need what is charged against what is paid, by carrier and method" },
+        { "ref": "library:shipping-rate-planner", "type": "skill", "use": "build", "when": "When the store needs zones, rates and a free-shipping line ready to enter" },
+        { "ref": "library:shipping-rate-gap-finder", "type": "skill", "use": "check", "when": "When some countries cannot check out, to list zones with no rate or only manual ones" }
+      ]
+    },
+    {
+      "id": "reorder-and-cash",
+      "task": "Plan stock reorders against cash",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:reorder-quantity-planner", "type": "skill", "use": "build", "when": "When each product needs a sales forecast, a reorder date and a quantity" },
+        { "ref": "library:weekly-stock-and-cash-reorder-watcher", "type": "agent", "use": "check", "when": "Each week, to see what to reorder, what it costs and whether cash can cover it" },
+        { "ref": "kit:prompts/weekly-trading-review", "use": "brief", "when": "When the reorder list should follow this week's trading calls, not last month's" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before any margin, threshold or sell-through figure goes to the owner, to test the sums" },
+    { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "Before any shopper-facing wording goes live, to sort each claim as fine, needs proof or cut" }
+  ],
+  "helpers": [
+    { "role": "ecommerce-copywriter", "when": "When product pages or many collection pages need full copy, not one intro" },
+    { "role": "ecommerce-analyst", "when": "When the plan needs margin per order, customer segments or a sales change explained first" },
+    { "role": "shopify-specialist", "when": "When the structure or bundles must be built in the store's theme, apps and settings" },
+    { "role": "google-ads-media-buyer", "when": "When a clean feed must be turned into Shopping campaigns and bids" },
+    { "role": "lifecycle-marketer", "when": "When the VIP programme or post-purchase plan needs its emails written and run" },
+    { "role": "supply-chain-planner", "when": "When reorders depend on supplier lead times, minimums and freight" }
+  ],
+  "gaps": [
+    "No library item builds a category tree with attributes and allowed values for each category; only the kit skill covers it",
+    "No library item gives two or three category tree options tested on real shopper tasks, such as a card sort or tree test",
+    "No library item writes a product data template or import sheet with allowed values for each field",
+    "No library item maps every product from an old catalogue structure to a new one with redirects",
+    "No library item reads Meta Commerce Manager catalogue diagnostics; feed items cover Google only",
+    "No library item builds a supplemental feed or writes rules for a feed tool",
+    "No library item plans a weekly trading calendar or homepage slot rules for a store",
+    "No library item checks was-prices against price history rules such as the lowest price in the last 30 days",
+    "No library item covers digital downloads: a product ladder, preview images, use rules in plain words and the delivery email",
+    "No library item tunes on-site search: synonyms, no-result searches and pinned results",
+    "No thinking lens in the library covers retail merchandising or how shoppers sort and find products"
+  ]
+}

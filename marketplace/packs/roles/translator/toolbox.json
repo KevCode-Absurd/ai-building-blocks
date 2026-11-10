@@ -1,0 +1,256 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "translator",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "translate-web-page",
+      "task": "Translate and adapt a web page for one market",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/translation-brief-intake", "use": "brief", "when": "Before a word is translated, to fix the reader, country, tone and what must not change" },
+        { "ref": "kit:skills/translate-and-localise-content", "use": "build", "when": "When the brief is agreed and the page must read as if written in that country" },
+        { "ref": "library:translator", "type": "skill", "use": "explore", "when": "When a line has two fair readings, to get a second natural version to compare" },
+        { "ref": "library:draft-brand-voice-checker", "type": "skill", "use": "check", "when": "When the client has a voice guide, to rank where the translation drifts from it" },
+        { "ref": "kit:prompts/locale-format-check", "use": "check", "when": "Before the page goes live, to check dates, prices, units and forms for that country" }
+      ]
+    },
+    {
+      "id": "caption-file",
+      "task": "Make an SRT or WebVTT caption file from a recording",
+      "kind": "other",
+      "items": [
+        { "ref": "library:whisper-speech-transcriber", "type": "skill", "use": "brief", "when": "When there is only audio or video and you need the words written out first" },
+        { "ref": "library:subtitle-and-transcript-maker", "type": "skill", "use": "brief", "when": "When you need word-level timing and speaker labels to cut captions from" },
+        { "ref": "kit:skills/captions-and-subtitles", "use": "build", "when": "When you have a transcript and need a valid caption file with sound line breaks and timing" },
+        { "ref": "library:descript", "type": "tool", "use": "build", "when": "When timings need nudging by hand against the video" },
+        { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before delivery, to catch a speaker or product name spelt two ways across the file" }
+      ]
+    },
+    {
+      "id": "clean-auto-captions",
+      "task": "Clean up auto-captions and fix the names",
+      "kind": "other",
+      "items": [
+        { "ref": "library:youtube-transcript-saver", "type": "skill", "use": "brief", "when": "When the auto-captions sit on YouTube and you need them out as clean text" },
+        { "ref": "kit:skills/captions-and-subtitles", "use": "build", "when": "When auto-captions have wrong names, no punctuation and lines that break mid-phrase" },
+        { "ref": "library:recording-transcriber", "type": "skill", "use": "check", "when": "When the auto-captions are too poor to fix, to get a fresh transcript with speakers named" },
+        { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "After the clean-up, to list any name or term still spelt more than one way" }
+      ]
+    },
+    {
+      "id": "translated-subtitles",
+      "task": "Translate subtitles and keep the timings",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/captions-and-subtitles", "use": "build", "when": "When a finished caption file must be translated line by line with every time code kept" },
+        { "ref": "library:translator", "type": "skill", "use": "explore", "when": "When a line is too long to read in its slot, to get a shorter natural wording" },
+        { "ref": "library:make-a-voiceover-and-ship-it-in-other-languages", "type": "workflow", "use": "build", "when": "When the client wants dubbed audio as well as subtitles for each language" },
+        { "ref": "library:veed", "type": "tool", "use": "check", "when": "When you need to watch the translated subtitles play over the video in a browser" }
+      ]
+    },
+    {
+      "id": "machine-translation-post-edit",
+      "task": "Post-edit machine translation to an agreed level",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/translation-risk-triage", "use": "brief", "when": "Before the engine runs, to decide which texts are safe to machine translate at all" },
+        { "ref": "kit:skills/machine-translation-post-editing", "use": "build", "when": "When machine output exists and must be edited to light or full level with the glossary" },
+        { "ref": "library:article-translator", "type": "skill", "use": "explore", "when": "When machine output is poor, to compare a fresh translation in quick or reviewed mode" },
+        { "ref": "library:check-translation-parity-across-three-languages", "type": "skill", "use": "check", "when": "When the job is in Russian, English and Brazilian Portuguese, to flag changed facts and names" }
+      ]
+    },
+    {
+      "id": "glossary-style-sheet",
+      "task": "Build a bilingual glossary and style sheet",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:product-vocabulary-sheet-builder", "type": "skill", "use": "brief", "when": "When you must harvest the client's own product phrases from a manual or page first" },
+        { "ref": "library:project-glossary-writer", "type": "skill", "use": "brief", "when": "When the client uses several words for one thing and must pick the source term" },
+        { "ref": "library:brand-voice-guide-builder", "type": "skill", "use": "brief", "when": "When there is no voice guide, to build one from the client's documents before the style sheet" },
+        { "ref": "kit:skills/glossary-and-style-sheet", "use": "build", "when": "When source terms are settled and you need the glossary, do-not-translate list and style sheet" },
+        { "ref": "library:technical-doc-proofreader", "type": "skill", "use": "check", "when": "When the source is English, to find term clashes before they are copied into the glossary" }
+      ]
+    },
+    {
+      "id": "product-listings",
+      "task": "Localise product listings for another country",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:keyword-researcher", "type": "skill", "use": "brief", "when": "Before translating titles, to find the words local shoppers really search for" },
+        { "ref": "kit:skills/translate-and-localise-content", "use": "build", "when": "When listings must be adapted with local terms, sizes and spelling, not word for word" },
+        { "ref": "library:overseas-listing-localizer", "type": "skill", "use": "explore", "when": "When images carry text too, to get a second version with local sizes and required labels" },
+        { "ref": "kit:prompts/locale-format-check", "use": "check", "when": "Before the listings go live, to check prices, units, sizes and returns wording" }
+      ]
+    },
+    {
+      "id": "interface-strings",
+      "task": "Translate app and website interface strings",
+      "kind": "code",
+      "items": [
+        { "ref": "library:app-translation-setup-helper", "type": "skill", "use": "brief", "when": "When the app still has hardcoded text and no locale files to translate yet" },
+        { "ref": "kit:prompts/ui-strings-and-placeholders", "use": "build", "when": "When you get a strings file with tags, variables and length limits that must survive" },
+        { "ref": "library:data-file-reader-and-writer", "type": "skill", "use": "check", "when": "After translating, to prove the JSON or CSV file still opens and saves cleanly" },
+        { "ref": "library:check-a-translated-interface-still-makes-sense", "type": "workflow", "use": "check", "when": "When strings are translated, to check meaning in context and list screens to review" },
+        { "ref": "library:agency-engineering-i18n-engineer", "type": "agent", "use": "check", "when": "When plurals, dates or right-to-left layout break in the new language" }
+      ]
+    },
+    {
+      "id": "voiceover-script",
+      "task": "Adapt a voiceover script into a second language",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/voiceover-script-adaptation", "use": "build", "when": "When a video script must fit the original timing in a second language for a voice" },
+        { "ref": "library:video-dubbing-editor", "type": "skill", "use": "explore", "when": "When the client wants to hear a dubbed draft that keeps each speaker's own voice" },
+        { "ref": "library:multilingual-narrator", "type": "skill", "use": "check", "when": "When you need to hear the adapted script spoken to time it against the video" },
+        { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "When the target language is English, to fix lines that trip when spoken" },
+        { "ref": "library:elevenlabs", "type": "tool", "use": "build", "when": "When the final voice is a text-to-speech voice, not a voice actor" }
+      ]
+    },
+    {
+      "id": "new-market-launch",
+      "task": "Get a website ready for a new language market",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:new-country-expansion-planner", "type": "skill", "use": "brief", "when": "When the client has not yet chosen the country, to weigh markets and what each needs" },
+        { "ref": "kit:workflows/new-market-website-launch", "use": "build", "when": "When the country is chosen and the site or shop must be made ready in its language" },
+        { "ref": "library:multi-language-site-planner", "type": "skill", "use": "build", "when": "When the site needs language URLs, language tags, currencies and layout planned" },
+        { "ref": "library:shopify-markets-setup-planner", "type": "skill", "use": "build", "when": "When the shop is on Shopify and needs market groups, currency and language settings" },
+        { "ref": "kit:prompts/locale-format-check", "use": "check", "when": "Before launch day, to check each page type against the new country's formats" }
+      ]
+    },
+    {
+      "id": "pre-launch-locale-check",
+      "task": "Check translated content before it goes live abroad",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/locale-format-check", "use": "check", "when": "When a translated page, listing, email or screen is ready, to check formats and market fit" },
+        { "ref": "library:agency-specialized-cultural-intelligence-strategist", "type": "agent", "use": "check", "when": "When images, names or examples may exclude or offend readers in the new market" },
+        { "ref": "library:agency-support-legal-compliance-checker", "type": "agent", "use": "check", "when": "When the page makes an offer or claim that may be ruled on differently in that country" }
+      ]
+    },
+    {
+      "id": "risk-triage",
+      "task": "Sort a mixed batch into machine, human and expert work",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/translation-brief-intake", "use": "brief", "when": "When a batch arrives with no brief, to get purpose, reader and deadline for each part" },
+        { "ref": "kit:prompts/translation-risk-triage", "use": "build", "when": "When the batch mixes blog posts, contracts and safety text and each needs its own route" },
+        { "ref": "library:agency-support-legal-compliance-checker", "type": "agent", "use": "think", "when": "When you are unsure a document is regulated and should go to a qualified human" }
+      ]
+    },
+    {
+      "id": "emails-and-help-articles",
+      "task": "Translate emails and help articles",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/translate-and-localise-content", "use": "build", "when": "When emails or help pages must keep links, steps and buttons right in the new language" },
+        { "ref": "library:article-translator", "type": "skill", "use": "explore", "when": "When an article is long, to compare a quick pass with a reviewed pass before choosing" },
+        { "ref": "library:translator", "type": "skill", "use": "explore", "when": "When a subject line or call to action reads stiff, to get another natural wording" },
+        { "ref": "kit:prompts/locale-format-check", "use": "check", "when": "Before sending, to check greetings, dates, prices and opt-out wording for that country" }
+      ]
+    },
+    {
+      "id": "transcreate-headline",
+      "task": "Adapt a slogan, headline or ad for a new culture",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:prompts/translation-brief-intake", "use": "brief", "when": "Before adapting, to pin down what the line must make people feel and do" },
+        { "ref": "kit:skills/translate-and-localise-content", "use": "build", "when": "When wordplay will not survive and the line must be rebuilt in the new language" },
+        { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When the literal headline falls flat, to get five fresh angles to adapt from" },
+        { "ref": "library:tagline-score-card", "type": "prompt", "use": "check", "when": "When you have a candidate line, to score it and see four rewrites" },
+        { "ref": "library:agency-specialized-cultural-intelligence-strategist", "type": "agent", "use": "check", "when": "When a joke, colour or symbol may mean something else in the new market" }
+      ]
+    },
+    {
+      "id": "source-preparation",
+      "task": "Prepare source text so it translates cleanly",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "build", "when": "When the English source is full of idioms and long sentences an engine will mangle" },
+        { "ref": "library:george-orwell", "type": "mind", "use": "think", "when": "When a vague source phrase hides its meaning and no translation can be right until it is clear" },
+        { "ref": "library:technical-doc-proofreader", "type": "skill", "use": "check", "when": "Before translation starts, to list typos, term clashes and jargon in the source" }
+      ]
+    },
+    {
+      "id": "customer-messages",
+      "task": "Translate a customer message and draft the reply",
+      "kind": "email",
+      "items": [
+        { "ref": "library:customer-support-message-translator", "type": "skill", "use": "build", "when": "When a customer writes in another language and the team needs the meaning and a reply draft" },
+        { "ref": "library:agency-language-translator", "type": "agent", "use": "explore", "when": "When the pair is Spanish and English and you want a version with local words and notes" },
+        { "ref": "library:support-reply-tone-editor", "type": "skill", "use": "check", "when": "When the reply's facts are right but the tone is too stiff or too casual for the customer" }
+      ]
+    },
+    {
+      "id": "burned-in-captions",
+      "task": "Write burned-in caption text for short videos",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:skills/captions-and-subtitles", "use": "brief", "when": "When you need the timed transcript the on-screen words will be cut from" },
+        { "ref": "library:branded-video-captions", "type": "skill", "use": "build", "when": "When the captions must be timed and set in the client's own font" },
+        { "ref": "library:video-ad-text-overlays", "type": "skill", "use": "explore", "when": "When you want on-screen words that add to the speech, placed clear of the app's buttons" },
+        { "ref": "library:capcut", "type": "tool", "use": "build", "when": "When the client will burn the captions in themselves on a phone" },
+        { "ref": "library:cut-caption-and-check-a-video-ad-before-launch", "type": "workflow", "use": "check", "when": "When the video is an ad, to check the cut and captions before it runs" }
+      ]
+    },
+    {
+      "id": "translation-upkeep",
+      "task": "Keep translated pages in step with the source each month",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/monthly-translation-upkeep", "use": "build", "when": "Monthly or at each release, for a business that already publishes in several languages" },
+        { "ref": "kit:skills/glossary-and-style-sheet", "use": "build", "when": "When new product terms appeared this month and the glossary must be updated first" },
+        { "ref": "library:check-translation-parity-across-three-languages", "type": "skill", "use": "check", "when": "When the set is Russian, English and Brazilian Portuguese, to find drift between versions" }
+      ]
+    },
+    {
+      "id": "transcript-and-notes",
+      "task": "Make a transcript and show notes from a long recording",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:recording-transcriber", "type": "skill", "use": "build", "when": "When a podcast or lesson needs the words written out with each speaker named" },
+        { "ref": "library:rough-text-to-article-tidier", "type": "prompt", "use": "build", "when": "When the raw transcript must become a readable page with headings and no words changed" },
+        { "ref": "library:podcast-show-notes-writer", "type": "skill", "use": "build", "when": "When the episode also needs a title, summary, key points and links" },
+        { "ref": "library:whisper", "type": "tool", "use": "build", "when": "When recordings are private and must be transcribed on the client's own computer" },
+        { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before publishing, to catch names and terms the transcriber heard two ways" }
+      ]
+    },
+    {
+      "id": "image-alt-text",
+      "task": "Write alt text for images in each language",
+      "kind": "other",
+      "items": [
+        { "ref": "library:store-image-prep-checker", "type": "skill", "use": "build", "when": "When a shop's images need alt text drafted and file names checked before translation" },
+        { "ref": "library:product-image-alt-text-writer", "type": "skill", "use": "build", "when": "When the owner agrees to alt text being set on the live store's product images" },
+        { "ref": "kit:skills/translate-and-localise-content", "use": "build", "when": "When the alt text exists in one language and each market needs its own" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a translated line states a number, award or claim that differs from the source" }
+  ],
+  "helpers": [
+    { "role": "seo-specialist", "when": "When the new market needs keyword research and language tags, not only translated pages" },
+    { "role": "video-editor", "when": "When captions must be burned in, re-timed to a new cut or exported for each platform" },
+    { "role": "shopify-specialist", "when": "When the shop's markets, currencies and language settings must be changed in the store" },
+    { "role": "software-engineer", "when": "When hardcoded text, plurals or locale files in the app's code block the translation" },
+    { "role": "accessibility-specialist", "when": "When the job needs audio description or captions checked against access rules" },
+    { "role": "ecommerce-copywriter", "when": "When the market needs new product copy written for it, not an adapted version" }
+  ],
+  "gaps": [
+    "The library is thin for translation: fewer than 50 items fit, and most captioning and localisation work rests on the kit alone",
+    "No library item checks a translation against its source line by line for omissions, numbers, names and tags",
+    "No library item post-edits machine translation or scores engine output; only the kit covers it",
+    "No library item builds a bilingual glossary or a do-not-translate list, or prepares one for a translation engine",
+    "No library item checks a caption file for reading speed, line length, overlaps and valid SRT or WebVTT format",
+    "No library item translates subtitles while keeping time codes, or adds sound labels for deaf viewers",
+    "No library item gives three transcreated options for a slogan with a back-translation and a reason for each",
+    "No library item checks dates, currency, addresses, units and forms for a locale; only the kit's prompt does",
+    "No library item checks placeholders, tags and plural forms in a strings file after translation",
+    "No library item finds which translated pages went stale after the source changed",
+    "No library item writes audio description for video, or alt text outside shop product images",
+    "No tool guide covers a translation engine or a translation memory tool, and no thinking lens is built on a translator",
+    "Language-pair help is patchy: one Spanish and English agent and a three-language parity check, nothing for other pairs"
+  ]
+}

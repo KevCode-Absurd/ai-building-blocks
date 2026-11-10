@@ -1,0 +1,277 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "mobile-app-developer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "screen-build",
+      "task": "Build one app screen in React Native or Flutter",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/screen-states-table", "use": "brief", "when": "Before any code, to write what the screen shows when loading, empty, failed or offline" },
+        { "ref": "kit:workflows/build-a-screen-to-test-build", "use": "build", "when": "When a client needs a new screen taken all the way to a build testers can install" },
+        { "ref": "kit:skills/mobile-screen-build", "use": "build", "when": "When you write the screen from a plain description and sample data, every state first" },
+        { "ref": "library:expo-app-interface-builder", "type": "skill", "use": "build", "when": "When the app is Expo and the screen needs native tabs, styling and motion in its router" },
+        { "ref": "library:new-screen-design-reviewer", "type": "agent", "use": "check", "when": "When the screen is drafted, for a ready, fix-first or rethink call with ranked fixes" },
+        { "ref": "library:dieter-rams", "type": "mind", "use": "think", "when": "When the screen is crowded, to keep only what serves the one job it has" }
+      ]
+    },
+    {
+      "id": "screen-states-and-messages",
+      "task": "Plan screen states and rewrite error and empty messages",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/screen-states-table", "use": "build", "when": "When a screen keeps drawing bug reports about spinners, blank pages or nothing happening" },
+        { "ref": "library:screen-states-designer", "type": "skill", "use": "brief", "when": "When you need the states people hit first listed for a screen nobody planned" },
+        { "ref": "library:write-helpful-error-and-empty-states", "type": "workflow", "use": "build", "when": "When the app's screens and current text are shared and every message needs rewriting" },
+        { "ref": "library:error-message-rewriter", "type": "skill", "use": "build", "when": "When error lines blame the user or say nothing about what to do next" },
+        { "ref": "library:interface-microcopy-writer", "type": "skill", "use": "build", "when": "When buttons, toasts and hints need to be short and friendly" }
+      ]
+    },
+    {
+      "id": "screen-fix",
+      "task": "Fix a screen that crashes, hangs or looks wrong",
+      "kind": "code",
+      "items": [
+        { "ref": "library:prepare-private-bug-evidence-for-developers", "type": "agent", "use": "brief", "when": "When a user sends rough notes and a screenshot and personal details must be kept out" },
+        { "ref": "library:bug-evidence-plan-writer", "type": "prompt", "use": "brief", "when": "When you have the bug and the code near it and need suspects ranked with a check each" },
+        { "ref": "kit:skills/mobile-screen-build", "use": "build", "when": "When the fault is a missing state or a layout that breaks on small or old phones" },
+        { "ref": "library:fix-a-bug-with-proof-and-a-clear-pull-request", "type": "workflow", "use": "build", "when": "When the fix must come with the cause proven, a test and a pull request" },
+        { "ref": "library:john-carmack", "type": "mind", "use": "think", "when": "When guesses pile up, to follow what the code really does on the device" }
+      ]
+    },
+    {
+      "id": "crash-triage",
+      "task": "Triage crash reports after a release",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/crash-report-triage", "use": "build", "when": "When crashes or Android vitals warnings pile up and you must pick which to fix first" },
+        { "ref": "library:app-update-health-checker", "type": "skill", "use": "brief", "when": "When the app is Expo and you need crash rates and installs for each published update" },
+        { "ref": "library:bug-cause-investigator-team", "type": "skill", "use": "brief", "when": "When one crash has several possible causes worth checking side by side" },
+        { "ref": "library:low-star-review-triager", "type": "skill", "use": "brief", "when": "When poor store reviews describe problems the crash reports do not show" }
+      ]
+    },
+    {
+      "id": "accessibility-pass",
+      "task": "Check and fix a screen for accessibility",
+      "kind": "code",
+      "items": [
+        { "ref": "library:agency-testing-accessibility-auditor", "type": "agent", "use": "brief", "when": "When you need a test plan for screen readers and keyboards, not only a code read" },
+        { "ref": "kit:skills/mobile-accessibility-pass", "use": "build", "when": "When one screen must work with VoiceOver, TalkBack, large text and reduced motion" },
+        { "ref": "library:accessibility-standards-checker", "type": "skill", "use": "check", "when": "When the client asks which WCAG level the app meets and what a statement should say" },
+        { "ref": "library:quarterly-accessibility-keeper", "type": "agent", "use": "check", "when": "Each quarter, to rank the gaps and confirm last quarter's fixes held" }
+      ]
+    },
+    {
+      "id": "framework-upgrade",
+      "task": "Plan a React Native, Expo or Flutter upgrade",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/framework-upgrade-plan", "use": "build", "when": "When the app is behind and a store deadline or a dying library forces the move" },
+        { "ref": "library:expo-upgrade-helper", "type": "skill", "use": "build", "when": "When the app is Expo and you want the upgrade run and broken packages fixed" },
+        { "ref": "library:major-upgrade-planner", "type": "skill", "use": "build", "when": "When one package is the risky part and needs stages with a test each" },
+        { "ref": "library:weekly-dependency-and-security-sweep", "type": "agent", "use": "check", "when": "When the app should never fall this far behind again" }
+      ]
+    },
+    {
+      "id": "screen-tests",
+      "task": "Write component or widget tests for screens",
+      "kind": "code",
+      "items": [
+        { "ref": "library:test-list-writer", "type": "skill", "use": "brief", "when": "Before writing tests, to list each state and action to cover, smallest first" },
+        { "ref": "library:untested-code-change-guide", "type": "skill", "use": "brief", "when": "When a screen has no tests and must be made safe to change" },
+        { "ref": "kit:skills/mobile-screen-build", "use": "build", "when": "When tests are written with the screen, one for each state in the table" },
+        { "ref": "library:test-failure-repair-loop", "type": "agent", "use": "build", "when": "When the suite is red and you want capped rounds of fixes until green or stopped" },
+        { "ref": "library:kent-beck", "type": "mind", "use": "think", "when": "When a screen seems too tangled to test, to take one small case at a time" }
+      ]
+    },
+    {
+      "id": "store-release-readiness",
+      "task": "Get an app version ready for the stores",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/store-release-readiness", "use": "build", "when": "When a version must meet build rules and have its privacy answers and notes drafted" },
+        { "ref": "library:agency-engineering-mobile-release-engineer", "type": "agent", "use": "brief", "when": "When signing, a go or no-go list and rollout stages need planning" },
+        { "ref": "library:apple-app-design-checker", "type": "skill", "use": "check", "when": "Before review, to see what in the design breaks Apple's rules" },
+        { "ref": "library:ship-readiness-gate", "type": "skill", "use": "check", "when": "When the owner needs a clear go or no-go with the blockers listed" }
+      ]
+    },
+    {
+      "id": "staged-rollout",
+      "task": "Release to the stores with a staged rollout",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/store-release-with-staged-rollout", "use": "build", "when": "When a tested version is ready: a first launch, a big update or a store deadline" },
+        { "ref": "library:mobile-app-release-shipper", "type": "skill", "use": "build", "when": "When the app is Expo and builds must be made and sent to both stores" },
+        { "ref": "library:copilot-devops-rollout-plan", "type": "skill", "use": "build", "when": "When you need stage sizes and the health signals that pause the rollout" },
+        { "ref": "library:release-day-rollback-planner", "type": "prompt", "use": "check", "when": "On release day, for checks, a way back and how to know it worked" },
+        { "ref": "library:check-a-release-and-its-docs", "type": "workflow", "use": "check", "when": "Before release, to find test gaps and help pages the new version makes wrong" }
+      ]
+    },
+    {
+      "id": "privacy-answers",
+      "task": "Draft the privacy label and Data safety answers",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:agency-engineering-privacy-engineer", "type": "agent", "use": "brief", "when": "When nobody has mapped what personal data the app and its SDKs collect" },
+        { "ref": "library:dependency-risk-scanner", "type": "skill", "use": "brief", "when": "When you need the full list of packages and SDKs in the app before answering" },
+        { "ref": "kit:prompts/privacy-answers-draft", "use": "build", "when": "Before a first submission, after adding an SDK, or when a store flags a mismatch" },
+        { "ref": "library:policy-page-drafter", "type": "skill", "use": "build", "when": "When the store asks for a privacy policy link and there is none to send a lawyer" }
+      ]
+    },
+    {
+      "id": "permission-messages",
+      "task": "Write permission messages and decide when to ask",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/permission-messages", "use": "build", "when": "When the app asks for location, camera, photos, contacts, notifications or tracking" },
+        { "ref": "library:plain-words-interface-rewriter", "type": "skill", "use": "check", "when": "When the wording is drafted, to test it against the words users already say" }
+      ]
+    },
+    {
+      "id": "data-and-offline",
+      "task": "Add data loading, caching and offline behaviour",
+      "kind": "code",
+      "items": [
+        { "ref": "library:mobile-data-fetching-coder", "type": "skill", "use": "build", "when": "When a React Native screen needs fetch, cache, retry and offline code" },
+        { "ref": "library:agency-engineering-realtime-collaboration-engineer", "type": "agent", "use": "brief", "when": "When edits made offline must merge later and the rules need planning" },
+        { "ref": "library:api-retry-handler", "type": "skill", "use": "build", "when": "When calls fail on weak signal and need safe waiting and retrying" },
+        { "ref": "kit:prompts/screen-states-table", "use": "check", "when": "When the code is in, to confirm every offline and error state has a screen" }
+      ]
+    },
+    {
+      "id": "backend-and-sign-in",
+      "task": "Connect the app to a back end and sign-in",
+      "kind": "code",
+      "items": [
+        { "ref": "library:connect-code-to-supabase-builder-prompt", "type": "prompt", "use": "build", "when": "When the app uses Supabase and must connect with scoped access and safe keys" },
+        { "ref": "library:expo-api-route-builder", "type": "skill", "use": "build", "when": "When an Expo app needs a few server routes of its own" },
+        { "ref": "library:sign-in-flow-setup-helper", "type": "skill", "use": "build", "when": "When users sign in through another service and the right OAuth flow is needed" },
+        { "ref": "library:find-leaked-keys-move-them-to-safe-storage-and-check-the-live-site", "type": "workflow", "use": "check", "when": "When keys may be sitting in the app bundle or the repository" }
+      ]
+    },
+    {
+      "id": "paywall",
+      "task": "Plan a paywall and upgrade screens",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:paywall-designer", "type": "skill", "use": "build", "when": "When the app has plans and needs upgrade screens, trigger moments and copy" },
+        { "ref": "kit:prompts/screen-states-table", "use": "check", "when": "When the purchase can fail, be pending or be restored and each needs a state" }
+      ]
+    },
+    {
+      "id": "build-automation",
+      "task": "Automate builds and watch update health",
+      "kind": "code",
+      "items": [
+        { "ref": "library:expo-build-workflow-writer", "type": "skill", "use": "build", "when": "When an Expo app should build on every push and make preview builds" },
+        { "ref": "library:build-pipeline-writer", "type": "skill", "use": "build", "when": "When the app is not Expo and needs a pipeline file with test and build stages" },
+        { "ref": "library:app-update-health-checker", "type": "skill", "use": "check", "when": "After an update ships, to compare its crash rate and size with the last one" }
+      ]
+    },
+    {
+      "id": "beta-and-feedback",
+      "task": "Run a beta and sort tester feedback",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:beta-program-planner", "type": "skill", "use": "build", "when": "When the beta needs who to invite, what to ask and a rule for when it ends" },
+        { "ref": "library:launch-a-feature-through-a-beta-and-read-the-numbers", "type": "workflow", "use": "build", "when": "When one feature goes to a beta with metrics set before it starts" },
+        { "ref": "library:feedback-pile-sorter", "type": "skill", "use": "build", "when": "When feedback from testers and reviews needs ranking into what users need" },
+        { "ref": "library:weekly-product-feedback-triager", "type": "agent", "use": "build", "when": "When feedback arrives every week and each request needs a yes, later or no" }
+      ]
+    },
+    {
+      "id": "whats-new-notes",
+      "task": "Write the What's New notes for a release",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:app-store-release-notes-writer", "type": "skill", "use": "build", "when": "When you have the code history and need plain notes users can read" },
+        { "ref": "library:roadmap-update-writer", "type": "skill", "use": "explore", "when": "When users and the team each need the same update told their own way" },
+        { "ref": "library:documentation-checker", "type": "skill", "use": "check", "when": "Before submitting, to catch any line that claims a change the build does not have" }
+      ]
+    },
+    {
+      "id": "store-listing",
+      "task": "Prepare the store listing and screenshots",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:app-store-listing-optimiser", "type": "skill", "use": "check", "when": "When a listing exists and needs a scored audit and a rewritten title and description" },
+        { "ref": "library:app-screenshot-maker", "type": "skill", "use": "build", "when": "When the running app needs sharp screenshots for the stores and social posts" },
+        { "ref": "kit:skills/store-release-readiness", "use": "check", "when": "When listing text must match what the build and the privacy answers say" }
+      ]
+    },
+    {
+      "id": "translation-ready",
+      "task": "Prepare an app for more than one language",
+      "kind": "code",
+      "items": [
+        { "ref": "library:agency-engineering-i18n-engineer", "type": "agent", "use": "brief", "when": "When you need to find what breaks in other languages: plurals, dates and right-to-left" },
+        { "ref": "library:app-translation-setup-helper", "type": "skill", "use": "build", "when": "When text is hardcoded and needs moving to locale files with a plan" },
+        { "ref": "library:check-a-translated-interface-still-makes-sense", "type": "workflow", "use": "check", "when": "When strings are translated, to check meaning and that longer words still fit" }
+      ]
+    },
+    {
+      "id": "app-speed",
+      "task": "Fix a slow or stuttering screen",
+      "kind": "code",
+      "items": [
+        { "ref": "library:slow-code-fixer", "type": "skill", "use": "build", "when": "When a screen feels slow and the bottleneck must be found, fixed and timed" },
+        { "ref": "library:animation-speed-fixer", "type": "skill", "use": "build", "when": "When an animation stutters and each slow spot needs a small fix" }
+      ]
+    },
+    {
+      "id": "native-ios-code",
+      "task": "Write or review native iOS screens",
+      "kind": "code",
+      "items": [
+        { "ref": "library:iphone-screen-designer", "type": "skill", "use": "brief", "when": "When iPhone screens must feel native and be checked on small and large sizes" },
+        { "ref": "library:swiftui-code-reviewer", "type": "skill", "use": "check", "when": "When SwiftUI code needs review or a rewrite with current APIs" },
+        { "ref": "library:apple-app-design-checker", "type": "skill", "use": "check", "when": "When the design must match Apple's rules before submission" }
+      ]
+    },
+    {
+      "id": "app-tracking-events",
+      "task": "Plan the app's analytics events",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:event-tracking-planner", "type": "skill", "use": "build", "when": "When the app needs an event list, naming rules and one main metric" },
+        { "ref": "kit:prompts/privacy-answers-draft", "use": "check", "when": "When new tracking is added and the store privacy answers must change to match" }
+      ]
+    },
+    {
+      "id": "app-plan",
+      "task": "Plan a small app before building it",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:agency-engineering-mobile-app-builder", "type": "agent", "use": "build", "when": "When a small business wants an app and needs a build plan with device checks" },
+        { "ref": "library:react-app-structure-planner", "type": "skill", "use": "build", "when": "When a React Native project needs a folder layout and rules for what imports what" },
+        { "ref": "library:prototype-to-production-guide", "type": "skill", "use": "check", "when": "When a working prototype must become an app real users can rely on" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:dev-work-report-writer", "type": "skill", "use": "check", "when": "At the end of any coding job, to write what changed, why and which devices it was tried on" }
+  ],
+  "helpers": [
+    { "role": "backend-developer", "when": "When the app needs endpoints, webhooks or payments built behind it" },
+    { "role": "ui-designer", "when": "When there is no design and screens need one before they are built" },
+    { "role": "mobile-app-marketer", "when": "When the listing, keywords and screenshots must win installs" },
+    { "role": "qa-engineer", "when": "When a release needs a test pass across devices and system versions" },
+    { "role": "accessibility-specialist", "when": "When the client needs a full audit and statement, not fixes to one screen" },
+    { "role": "application-security-engineer", "when": "When the app stores secrets or handles payments and needs a security review" }
+  ],
+  "gaps": [
+    "No library item writes a Flutter screen or Flutter widget tests; the library's mobile builders are Expo or React Native only",
+    "No library item writes React Native Testing Library tests or end-to-end tests with Maestro or Detox",
+    "No library item reads Crashlytics, Sentry or Android vitals output and ranks crashes; only the kit prompt does",
+    "No library item drafts Apple privacy labels or Google Data safety answers from an SDK list",
+    "No library item offers alternative permission wordings to compare, or checks them against store rules",
+    "No library item answers an App Store or Google Play rejection",
+    "No library item covers in-app purchases and subscriptions in code: StoreKit, Play Billing or RevenueCat",
+    "No library item sets up push notifications, deep links or universal links",
+    "No library item fixes slow lists, slow start-up or memory use on older Android phones",
+    "No library item writes or reviews Kotlin or Jetpack Compose code",
+    "No library item checks a mobile screen with VoiceOver or TalkBack; accessibility items are written for the web",
+    "No library item covers code signing, provisioning profiles and keystore set-up"
+  ]
+}

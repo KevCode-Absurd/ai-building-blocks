@@ -1,0 +1,298 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "qa-engineer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "test-plan",
+      "task": "Write a risk-ranked test plan and test cases",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/risk-based-test-plan", "use": "build", "when": "When you have a spec, stories or screens and need numbered cases ranked by risk" },
+        { "ref": "kit:workflows/new-feature-test-cycle", "use": "brief", "when": "When a feature is about to be built or a build is ready on staging, to run the whole cycle" },
+        { "ref": "library:test-plan-writer", "type": "skill", "use": "brief", "when": "Before the cases, to decide what to test at unit, API and browser level and where the gaps are" },
+        { "ref": "library:qa-test-scenario-writer", "type": "skill", "use": "build", "when": "When you have user stories and need scenarios with a starting state, steps and expected result" },
+        { "ref": "library:edge-case-list-maker", "type": "prompt", "use": "explore", "when": "When the spec covers only the happy path, to list the odd cases, smallest first" },
+        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When the plan assumes users and systems behave, to ask what happens when they do not" }
+      ]
+    },
+    {
+      "id": "bug-report",
+      "task": "Turn a complaint or failure into a bug report",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/bug-report-and-triage", "use": "build", "when": "When you have a complaint, screenshot or failed test and need a report a developer can act on" },
+        { "ref": "library:copilot-bug-reproduction-brief", "type": "skill", "use": "brief", "when": "When the report is vague, to get repeatable steps, a minimal case and what proof is missing" },
+        { "ref": "library:bug-report-writer", "type": "skill", "use": "build", "when": "When you have logs or a stack trace and the report must go in as a GitHub issue" },
+        { "ref": "library:prepare-private-bug-evidence-for-developers", "type": "agent", "use": "check", "when": "When the evidence shows customer data, to draft the issue and list what to remove first" },
+        { "ref": "library:screenshot-privacy-masker", "type": "skill", "use": "build", "when": "Before you attach a screenshot, to mask emails, phone numbers, keys and IDs on your own machine" },
+        { "ref": "library:turn-a-bug-report-into-proof", "type": "workflow", "use": "check", "when": "When you have the repo, to make a repeatable failing case and record what is verified" }
+      ]
+    },
+    {
+      "id": "acceptance-tests",
+      "task": "Write acceptance tests from a spec or user story",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/acceptance-tests-from-a-spec", "use": "build", "when": "When you have a spec or story and want pass or fail checks anyone can run before it ships" },
+        { "ref": "library:qa-test-scenario-writer", "type": "skill", "use": "build", "when": "When the checks need full scenarios with set-up data, not one-line pass rules" },
+        { "ref": "library:request-acceptance-checker", "type": "skill", "use": "check", "when": "When the build is done, to mark every requirement pass, fail or not run with what is left" }
+      ]
+    },
+    {
+      "id": "manual-form-tests",
+      "task": "Write manual test cases for a form or flow",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/manual-test-cases-for-a-form", "use": "build", "when": "When a sign-up, booking or checkout form needs a table of cases, including odd inputs" },
+        { "ref": "library:edge-case-list-maker", "type": "prompt", "use": "explore", "when": "When you want more boundary and empty-value cases than the first table gave" },
+        { "ref": "library:web-page-control-tester", "type": "skill", "use": "check", "when": "When the page is built, to find buttons and controls that do nothing when used" }
+      ]
+    },
+    {
+      "id": "unit-tests",
+      "task": "Write unit tests for pasted code",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/automated-test-suite", "use": "build", "when": "When you need tests from a case table of rules, boundaries and errors, at the right level" },
+        { "ref": "library:code-correctness-planner", "type": "skill", "use": "brief", "when": "When the function is tricky, to write its rules and edge cases down before any test" },
+        { "ref": "library:test-suite-writer", "type": "skill", "use": "build", "when": "When the code has no tests, to get unit, linked-part and user-task tests with a coverage report" },
+        { "ref": "library:test-first-coach", "type": "skill", "use": "build", "when": "When a new rule or fix should start from a failing test and move in small steps" },
+        { "ref": "library:change-test-prover", "type": "skill", "use": "check", "when": "When the code is Python, to prove the tests fail when the change is broken on purpose" },
+        { "ref": "library:kent-beck", "type": "mind", "use": "think", "when": "When tests are large and brittle, to list the cases and take one small step at a time" },
+        { "ref": "library:claude-code", "type": "tool", "use": "build", "when": "When you have the repo and want the tests written, run and fixed in the project itself" }
+      ]
+    },
+    {
+      "id": "browser-tests",
+      "task": "Write end-to-end browser tests for a key flow",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/automated-test-suite", "use": "brief", "when": "First, to pick the few flows worth a browser test and push the rest down a level" },
+        { "ref": "library:browser-test-writer", "type": "skill", "use": "build", "when": "When you have a user story or page and want Playwright tests you can run" },
+        { "ref": "library:agency-testing-test-automation-engineer", "type": "agent", "use": "build", "when": "When the suite is Cypress or needs a CI setup along with stable tests" },
+        { "ref": "library:browser-test-reviewer", "type": "skill", "use": "check", "when": "When the tests are written, to check each against common bad habits such as fixed waits" },
+        { "ref": "library:browserstack-test-runner", "type": "skill", "use": "check", "when": "When the flow must work on several browsers and phones, to run it on each and report" }
+      ]
+    },
+    {
+      "id": "api-tests",
+      "task": "Write API test cases and test code",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/api-test-cases", "use": "build", "when": "When you have an OpenAPI file, endpoint list or route code and want cases below the screen" },
+        { "ref": "library:agency-testing-api-tester", "type": "agent", "use": "brief", "when": "When you have the API spec and need a plan covering sign-in, edge and failure cases" },
+        { "ref": "library:api-test-suite-builder", "type": "skill", "use": "build", "when": "When you have the code, to get integration tests and fixtures for each route" },
+        { "ref": "library:api-contract-tester", "type": "skill", "use": "check", "when": "When other teams or apps call the API, to catch breaking changes before they ship" },
+        { "ref": "library:api-test-pipeline-writer", "type": "skill", "use": "build", "when": "When the tests live in a Postman collection and should run on every push" }
+      ]
+    },
+    {
+      "id": "bug-triage",
+      "task": "Triage a list of reported bugs",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/bug-report-and-triage", "use": "build", "when": "When a pile of reports needs severity, priority, duplicates and a next step for each" },
+        { "ref": "library:issue-triager", "type": "skill", "use": "build", "when": "When the bugs sit in a GitHub repo, to sort and check each open issue and write it up" },
+        { "ref": "library:support-inbox-priority-sorter", "type": "skill", "use": "build", "when": "When bugs arrive as support tickets, to set a category, a priority and any known duplicate" }
+      ]
+    },
+    {
+      "id": "fix-review",
+      "task": "Review a fix and list what to re-test",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/fix-review-and-retest-list", "use": "check", "when": "When a developer says a bug is fixed and you must decide what to test again" },
+        { "ref": "library:test-gap-finder", "type": "skill", "use": "check", "when": "When you have the change and the tests, to mark each new behaviour covered or not" },
+        { "ref": "library:bug-root-cause-finder", "type": "skill", "use": "check", "when": "When the fix may treat a symptom, to see the cause proven with evidence first" },
+        { "ref": "library:agency-engineering-code-reviewer", "type": "agent", "use": "check", "when": "When you can read the change, to review it for bugs, security and missing tests" }
+      ]
+    },
+    {
+      "id": "regression-checklist",
+      "task": "Build the regression checklist for a release",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/release-regression-checklist", "use": "build", "when": "When you ship on a schedule and need a short, ranked list to re-test after every change" },
+        { "ref": "library:copilot-test-gap-audit", "type": "skill", "use": "brief", "when": "When you have the repo, to rank missing, weak and stale tests by the behaviour at risk" },
+        { "ref": "library:site-qa-sweep-runner", "type": "skill", "use": "check", "when": "When the release is a website, to run a smoke, standard or full pass and list the problems" }
+      ]
+    },
+    {
+      "id": "release-sign-off",
+      "task": "Run release sign-off and give a go or no-go",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/release-sign-off", "use": "check", "when": "Every release, weekly or per sprint, or before a big launch" },
+        { "ref": "library:agency-testing-test-results-analyzer", "type": "agent", "use": "check", "when": "When the test run is in, to group failures by cause and get a go or no-go call" },
+        { "ref": "library:agency-testing-reality-checker", "type": "agent", "use": "check", "when": "When earlier QA says all clear, to check each claim against proof before sign-off" },
+        { "ref": "library:check-a-release-and-its-docs", "type": "workflow", "use": "check", "when": "When the release changes behaviour users read about, to find test gaps and stale docs" },
+        { "ref": "library:launch-readiness-seam-checker", "type": "skill", "use": "check", "when": "When the release touches several systems, to check the joins between them and what fails first" },
+        { "ref": "library:release-day-rollback-planner", "type": "prompt", "use": "build", "when": "When nobody has written how to undo the release or how to tell that it worked" }
+      ]
+    },
+    {
+      "id": "flaky-tests",
+      "task": "Diagnose and clean up flaky tests",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/flaky-test-diagnosis", "use": "check", "when": "When a test passes and fails on the same code, or the suite is retried until green" },
+        { "ref": "kit:workflows/flaky-test-cleanup", "use": "build", "when": "Monthly, or at once when the team starts ignoring red builds" },
+        { "ref": "library:flaky-test-fixer", "type": "skill", "use": "build", "when": "When one Playwright test is flaky, to find the cause and make the fix" },
+        { "ref": "library:copilot-cypress-flake-fixer", "type": "skill", "use": "build", "when": "When the suite is Cypress, to find fragile waits and old calls and fix the tests they hit" },
+        { "ref": "library:test-suite-auditor", "type": "skill", "use": "check", "when": "When the suite is Python, to list weak, flaky, slow and useless tests" },
+        { "ref": "library:test-failure-repair-loop", "type": "agent", "use": "build", "when": "When the whole suite is red, to fix and re-check in capped rounds until green or stopped" }
+      ]
+    },
+    {
+      "id": "accessibility-pass",
+      "task": "Test a page or flow for accessibility",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/accessibility-test-pass", "use": "check", "when": "When a page, flow or release needs an automated scan plus keyboard and screen reader checks" },
+        { "ref": "library:accessibility-checker", "type": "skill", "use": "check", "when": "When you have the page or its code, to get ranked problems against the current standard" },
+        { "ref": "library:agency-testing-accessibility-auditor", "type": "agent", "use": "check", "when": "When you need findings tied to each rule and a test plan for keyboard and screen reader" },
+        { "ref": "library:quarterly-accessibility-keeper", "type": "agent", "use": "check", "when": "When the site is checked every quarter, to rank new gaps and confirm last quarter's fixes" }
+      ]
+    },
+    {
+      "id": "test-setup-and-ci",
+      "task": "Set up tests and CI for a project with none",
+      "kind": "code",
+      "items": [
+        { "ref": "library:test-coverage-gap-finder", "type": "skill", "use": "brief", "when": "First, to list every page, part and endpoint and what is tested and what is not" },
+        { "ref": "library:browser-test-setup-builder", "type": "skill", "use": "build", "when": "When the project has no browser tests, to install Playwright with a config and a sample test" },
+        { "ref": "library:build-pipeline-writer", "type": "skill", "use": "build", "when": "When tests exist but run only on a laptop, to get a pipeline file that runs them on each push" },
+        { "ref": "kit:skills/automated-test-suite", "use": "build", "when": "When the setup works and the first real tests must cover the riskiest rules" }
+      ]
+    },
+    {
+      "id": "pin-before-refactor",
+      "task": "Pin current behaviour with tests before a refactor",
+      "kind": "code",
+      "items": [
+        { "ref": "library:untested-code-change-guide", "type": "skill", "use": "build", "when": "When the code has no tests, to add them in safe steps before anything is changed" },
+        { "ref": "kit:skills/automated-test-suite", "use": "build", "when": "When you write tests that record what the code does today, odd cases included" },
+        { "ref": "library:kent-beck", "type": "mind", "use": "think", "when": "When the refactor is one big step, to split tidying from behaviour change" }
+      ]
+    },
+    {
+      "id": "site-launch-check",
+      "task": "Check a site or store against its spec before launch",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:agency-testing-evidence-collector", "type": "agent", "use": "check", "when": "When you have the spec and the site, to get pass or fail results with screenshots" },
+        { "ref": "library:site-qa-sweep-runner", "type": "skill", "use": "check", "when": "When you want one pass over pages, links and forms at a depth you choose" },
+        { "ref": "library:pre-launch-store-checker", "type": "agent", "use": "check", "when": "When the launch is an online store, to check go-live and re-check after each fix" },
+        { "ref": "library:website-security-check", "type": "skill", "use": "check", "when": "Before go-live, to check HTTPS, security headers and exposed secrets" }
+      ]
+    },
+    {
+      "id": "exploratory-pass",
+      "task": "Explore a build by hand and log what breaks",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/risk-based-test-plan", "use": "brief", "when": "Before the session, to pick the risky areas worth an hour of free exploring" },
+        { "ref": "library:web-app-tester", "type": "skill", "use": "check", "when": "When the app runs locally, to try its screens in a real browser with screenshots and logs" },
+        { "ref": "library:browser-page-debugger", "type": "skill", "use": "check", "when": "When a page misbehaves, to see the real errors, network calls and slow spots" },
+        { "ref": "kit:skills/bug-report-and-triage", "use": "build", "when": "When the session ends, to turn rough notes into reports with steps and evidence" }
+      ]
+    },
+    {
+      "id": "performance-test",
+      "task": "Plan a speed or load test",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:agency-testing-performance-benchmarker", "type": "agent", "use": "build", "when": "When a site or API needs a repeatable load test with baselines and ranked bottlenecks" },
+        { "ref": "library:page-speed-gate-builder", "type": "skill", "use": "build", "when": "When slow pages keep shipping, to add a speed check that blocks them in the pipeline" },
+        { "ref": "library:browser-page-debugger", "type": "skill", "use": "check", "when": "When one page is slow, to find the calls and scripts that hold it up" }
+      ]
+    },
+    {
+      "id": "security-checks",
+      "task": "Run basic security checks on an app you own",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:live-app-security-tester", "type": "skill", "use": "check", "when": "When the app is running and you may test it, to find weaknesses by safe probing" },
+        { "ref": "library:api-security-checker", "type": "skill", "use": "check", "when": "When you have the API routes, to check sign-in, access rules and input handling" },
+        { "ref": "library:website-security-check", "type": "skill", "use": "check", "when": "When you want a quick checklist pass, not a full test" }
+      ]
+    },
+    {
+      "id": "test-data",
+      "task": "Create safe, realistic test data",
+      "kind": "code",
+      "items": [
+        { "ref": "library:test-data-seeder", "type": "skill", "use": "build", "when": "When staging needs realistic, repeatable rows loaded into its tables" },
+        { "ref": "library:sample-data-file-maker", "type": "skill", "use": "build", "when": "When a test needs a fake file with set columns and rules, as CSV, JSON or SQL" },
+        { "ref": "library:screenshot-privacy-masker", "type": "skill", "use": "check", "when": "When evidence from real accounts must be shared, to mask personal details first" }
+      ]
+    },
+    {
+      "id": "ai-feature-tests",
+      "task": "Test an AI feature or chatbot",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:ai-answer-testing-planner", "type": "skill", "use": "brief", "when": "When a feature gives AI answers, to plan scored tests and human review" },
+        { "ref": "library:ai-answer-judge-designer", "type": "skill", "use": "build", "when": "When answers must be graded the same way each run, to write the scoring guide" },
+        { "ref": "library:ai-agent-tester", "type": "skill", "use": "build", "when": "When the feature is an agent that takes actions, to get a test set and a release memo" },
+        { "ref": "library:prompt-change-tester", "type": "skill", "use": "check", "when": "When a prompt changes, to run a fixed set of cases and see what got better or worse" },
+        { "ref": "library:review-support-bot-errors-with-retest-cases", "type": "agent", "use": "check", "when": "When a support bot gave wrong answers, to list them and write retest cases" },
+        { "ref": "library:andrej-karpathy", "type": "mind", "use": "think", "when": "When scores look fine but real answers are poor, to read actual examples first" }
+      ]
+    },
+    {
+      "id": "escaped-bug-review",
+      "task": "Find why a bug escaped and stop it coming back",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:root-cause-finder", "type": "skill", "use": "build", "when": "When the same kind of bug keeps returning, to check a chain of whys against the facts" },
+        { "ref": "library:incident-postmortem-writer", "type": "skill", "use": "build", "when": "When a bug caused an outage, to write a blameless timeline, causes and follow-up actions" },
+        { "ref": "kit:prompts/release-regression-checklist", "use": "build", "when": "When the cause is known, to add the missing check to what is re-tested each release" }
+      ]
+    },
+    {
+      "id": "usability-test",
+      "task": "Run a small usability or user acceptance test",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:small-usability-test-planner", "type": "skill", "use": "build", "when": "When three users can spare a morning, to plan tasks, a script and a fix list" },
+        { "ref": "kit:prompts/acceptance-tests-from-a-spec", "use": "build", "when": "When the client's own staff will run the checks and need plain pass or fail steps" },
+        { "ref": "library:steve-krug", "type": "mind", "use": "think", "when": "When the tasks you set would lead the user to the answer" }
+      ]
+    },
+    {
+      "id": "test-migration",
+      "task": "Move tests to a new framework",
+      "kind": "code",
+      "items": [
+        { "ref": "library:browser-test-migrator", "type": "skill", "use": "build", "when": "When Cypress or Selenium tests must move to Playwright, file by file" },
+        { "ref": "library:browser-test-reviewer", "type": "skill", "use": "check", "when": "After the move, to check the new tests did not carry over old bad habits" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:screenshot-privacy-masker", "type": "skill", "use": "check", "when": "Before any screenshot or log leaves the team, to mask personal details and keys" },
+    { "ref": "library:request-acceptance-checker", "type": "skill", "use": "check", "when": "Before you hand over, to check your own output against every point in the request" }
+  ],
+  "helpers": [
+    { "role": "software-engineer", "when": "When a bug needs a code fix, or the code must change before it can be tested" },
+    { "role": "devops-engineer", "when": "When tests need a pipeline, test environments or deploy checks you cannot set up alone" },
+    { "role": "accessibility-specialist", "when": "When the job is a full accessibility audit and statement, not one test pass" },
+    { "role": "application-security-engineer", "when": "When testing finds a security hole or the client needs a real security review" },
+    { "role": "ux-designer", "when": "When testers pass the feature but real users still cannot finish the task" },
+    { "role": "ai-engineer", "when": "When an AI feature fails its tests and the prompt, model or retrieval must change" }
+  ],
+  "gaps": [
+    "No library item runs an exploratory testing session: charters, timed notes and a session report",
+    "No library item writes spreadsheet-ready manual test cases for a form or a release regression checklist; only the kit prompts do",
+    "No library item tests a mobile app on real devices or plans a device and OS matrix",
+    "No library item compares screenshots between releases to catch visual changes",
+    "No library item writes a load test script; the library only plans the test",
+    "No library item masks or scrambles personal data in a database copy for testing; only screenshots are covered",
+    "No library item checks how an email renders across mail apps",
+    "No library item reports quality over time: escaped bugs, flaky rate, time to fix",
+    "No library item tests a translated app for clipped text, date formats and right-to-left layout",
+    "The mutation check and suite audit in the library are for Python only; other languages have no equal"
+  ]
+}

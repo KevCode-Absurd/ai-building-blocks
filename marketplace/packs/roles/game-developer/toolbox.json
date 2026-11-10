@@ -1,0 +1,290 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "game-developer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "mechanic-build",
+      "task": "Build one game mechanic in Unity",
+      "kind": "code",
+      "items": [
+        { "ref": "library:agency-game-designer", "type": "agent", "use": "brief", "when": "When the studio has an idea but no written spec for the mechanic or its tuning numbers" },
+        { "ref": "kit:workflows/mechanic-from-brief-to-merged-pr", "use": "build", "when": "When a new mechanic, or one that feels wrong, must go from brief to a merged change" },
+        { "ref": "kit:skills/unity-mechanic-build", "use": "build", "when": "When you write movement, pick-ups, menus or rules from a feel brief, parts list first" },
+        { "ref": "library:agency-unity-architect", "type": "agent", "use": "brief", "when": "When the mechanic must fit a project where designers edit data and systems stay separate" },
+        { "ref": "library:test-list-writer", "type": "skill", "use": "check", "when": "Before coding, to list the cases the mechanic must pass, smallest first" },
+        { "ref": "library:john-carmack", "type": "mind", "use": "think", "when": "When the mechanic keeps growing, to cut scope and follow what the code really does" }
+      ]
+    },
+    {
+      "id": "game-feel-tuning",
+      "task": "Tune how a mechanic feels",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/game-feel-tuning-sheet", "use": "build", "when": "When the client says snappy, floaty or heavy, or names a game, and you need starting numbers" },
+        { "ref": "library:agency-game-designer", "type": "agent", "use": "brief", "when": "When the feel must serve the game's design pillars and nobody has written them" },
+        { "ref": "library:small-usability-test-planner", "type": "skill", "use": "check", "when": "When the numbers are set, to plan one morning of people playing and what to watch" }
+      ]
+    },
+    {
+      "id": "game-bug-fix",
+      "task": "Fix a physics, input or timing bug",
+      "kind": "code",
+      "items": [
+        { "ref": "library:prepare-private-bug-evidence-for-developers", "type": "agent", "use": "brief", "when": "When a tester sends rough notes and a screenshot and you need a clean issue" },
+        { "ref": "library:bug-evidence-plan-writer", "type": "prompt", "use": "brief", "when": "When you have the bug and the code near it and need suspects ranked with a check each" },
+        { "ref": "kit:skills/game-bug-diagnosis", "use": "build", "when": "When you must reproduce at set frame rates, name the kind of bug and fix it" },
+        { "ref": "library:turn-a-bug-report-into-proof", "type": "workflow", "use": "check", "when": "When the report is vague and needs a repeatable case and a record of what is verified" },
+        { "ref": "library:fix-a-bug-with-proof-and-a-clear-pull-request", "type": "workflow", "use": "build", "when": "When the fix needs the cause proven, a test and a pull request" },
+        { "ref": "library:bug-root-cause-finder", "type": "skill", "use": "brief", "when": "When earlier fixes did not hold and the cause must be proven before code changes" }
+      ]
+    },
+    {
+      "id": "monobehaviour-split",
+      "task": "Split a messy script into clear parts",
+      "kind": "code",
+      "items": [
+        { "ref": "library:untested-code-change-guide", "type": "skill", "use": "brief", "when": "When the script has no tests and needs a safety net before it is split" },
+        { "ref": "kit:prompts/monobehaviour-split", "use": "build", "when": "When one script does input, movement, health, UI and sound and must become small parts" },
+        { "ref": "library:function-purity-refactor-planner", "type": "skill", "use": "build", "when": "When game rules hide in scene code and should become plain functions you can test" },
+        { "ref": "library:code-refactor-planner", "type": "skill", "use": "build", "when": "When the split needs named, small moves that keep behaviour the same" },
+        { "ref": "library:fragile-code-spotter", "type": "prompt", "use": "check", "when": "When an AI wrote the script fast, to find the few risks that will hurt later" }
+      ]
+    },
+    {
+      "id": "game-rule-tests",
+      "task": "Write edit mode and play mode tests for game rules",
+      "kind": "code",
+      "items": [
+        { "ref": "library:edge-case-list-maker", "type": "prompt", "use": "brief", "when": "Before writing tests, to list the odd cases for damage, scoring, cooldowns or inventory" },
+        { "ref": "kit:prompts/unity-tests-for-game-rules", "use": "build", "when": "When you want Unity tests for the game's rules and one key behaviour" },
+        { "ref": "library:test-failure-repair-loop", "type": "agent", "use": "build", "when": "When the suite is red and you want capped rounds of fixes until green or stopped" },
+        { "ref": "library:kent-beck", "type": "mind", "use": "think", "when": "When nothing is testable yet, to list the cases and take one small step at a time" }
+      ]
+    },
+    {
+      "id": "save-system",
+      "task": "Build a save system that survives updates",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/versioned-save-system", "use": "build", "when": "When saves need a version number, safe writes and upgrades from every old version" },
+        { "ref": "library:breaking-change-reviewer", "type": "skill", "use": "check", "when": "Before changing the save format, to see whose saves break and a safer way to ship it" },
+        { "ref": "library:failure-first-plan-check", "type": "skill", "use": "check", "when": "When the design is drafted, to list how a save could be lost or corrupted" },
+        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When the plan assumes the game never quits mid-save, to design for when it does" }
+      ]
+    },
+    {
+      "id": "unity-upgrade",
+      "task": "Plan a move to a newer Unity version",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/unity-version-upgrade-plan", "use": "build", "when": "When a project is on an older Unity version and needs a safe, ordered plan" },
+        { "ref": "library:major-upgrade-planner", "type": "skill", "use": "build", "when": "When one package or plugin is the risky part and needs stages with a test each" },
+        { "ref": "library:release-day-rollback-planner", "type": "prompt", "use": "check", "when": "When the upgraded build is about to ship and needs checks and a way back" }
+      ]
+    },
+    {
+      "id": "steam-release",
+      "task": "Get a game ready to release on Steam",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/game-release-readiness", "use": "build", "when": "When a small studio needs a dated timeline counted back from launch day" },
+        { "ref": "kit:workflows/steam-beta-to-release", "use": "build", "when": "When it is a first Steam launch or an update big enough for a public beta" },
+        { "ref": "library:beta-program-planner", "type": "skill", "use": "brief", "when": "When the beta needs who to invite, what to ask and a clear rule for when it ends" },
+        { "ref": "library:launch-scope-cutter", "type": "skill", "use": "brief", "when": "When the date is fixed and the feature list is too long to finish" },
+        { "ref": "library:release-manager", "type": "agent", "use": "check", "when": "Before each build goes out, for a go or no-go, a version and a changelog" },
+        { "ref": "library:release-day-rollback-planner", "type": "prompt", "use": "check", "when": "On release day, for checks, a rollback and how to know it worked" }
+      ]
+    },
+    {
+      "id": "paid-items-ratings",
+      "task": "Check paid items, odds screens and the age rating",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/paid-items-and-ratings-check", "use": "check", "when": "Before a release that sells anything in the game, most of all random items" },
+        { "ref": "library:agency-economy-designer", "type": "agent", "use": "brief", "when": "When the shop and currencies were never planned and prices need a fair basis" },
+        { "ref": "library:policy-page-drafter", "type": "skill", "use": "build", "when": "When the game needs a draft privacy notice or terms to send to a lawyer" }
+      ]
+    },
+    {
+      "id": "menus-first-run",
+      "task": "Build menus, settings and the first-run tutorial",
+      "kind": "code",
+      "items": [
+        { "ref": "library:first-run-wizard-designer", "type": "skill", "use": "brief", "when": "When new players get lost in the first minutes and need a short guided start" },
+        { "ref": "kit:skills/unity-mechanic-build", "use": "build", "when": "When you write the menu, pause and settings screens and the code behind them" },
+        { "ref": "library:interface-microcopy-writer", "type": "skill", "use": "build", "when": "When button labels, prompts and error lines need to be short and clear" },
+        { "ref": "library:usability-heuristic-reviewer", "type": "skill", "use": "check", "when": "When the menus are drafted, to score them and list each usability break" }
+      ]
+    },
+    {
+      "id": "design-plan-prototype",
+      "task": "Turn a game idea into a design plan and first prototype",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:agency-game-designer", "type": "agent", "use": "build", "when": "When an idea needs pillars, a gameplay loop and mechanic specs on paper" },
+        { "ref": "library:agency-engineering-rapid-prototyper", "type": "agent", "use": "build", "when": "When one thing must be tested with three to five features and a short schedule" },
+        { "ref": "library:five-day-idea-test-planner", "type": "skill", "use": "explore", "when": "When several ideas compete and a five-day sketch, build and test would pick one" },
+        { "ref": "library:launch-scope-cutter", "type": "skill", "use": "check", "when": "When the plan is bigger than the team, to keep the core and park the rest" }
+      ]
+    },
+    {
+      "id": "economy-balance",
+      "task": "Balance the economy and progression",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:agency-economy-designer", "type": "agent", "use": "build", "when": "When each currency needs its sources and sinks and a balance check over time" },
+        { "ref": "library:habit-loop-designer", "type": "skill", "use": "check", "when": "When players do not come back, to score the weak steps in the return loop" },
+        { "ref": "kit:prompts/paid-items-and-ratings-check", "use": "check", "when": "When the economy sells items, to check it stays fair and inside store rules" }
+      ]
+    },
+    {
+      "id": "levels-and-story",
+      "task": "Plan levels, pacing and story beats",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:agency-level-designer", "type": "agent", "use": "build", "when": "When a level needs a brief with pacing and a check that players can find their way" },
+        { "ref": "library:agency-narrative-designer", "type": "agent", "use": "build", "when": "When the game needs a story plan with the paths players can choose" },
+        { "ref": "library:dialogue-ear-checker", "type": "skill", "use": "check", "when": "When dialogue is written, to test each line and fix the worst" }
+      ]
+    },
+    {
+      "id": "performance",
+      "task": "Find and fix frame rate and memory problems",
+      "kind": "code",
+      "items": [
+        { "ref": "library:slow-code-finder", "type": "skill", "use": "brief", "when": "When the game stutters and you need CPU, memory and loading hot spots found" },
+        { "ref": "library:slow-code-fixer", "type": "skill", "use": "build", "when": "When the bottleneck is known and must be fixed and timed before and after" },
+        { "ref": "library:agency-technical-artist", "type": "agent", "use": "check", "when": "When art assets and rendering, not code, are the likely cost" },
+        { "ref": "library:john-carmack", "type": "mind", "use": "think", "when": "When tempted to optimise on a hunch, to measure the real frame first" }
+      ]
+    },
+    {
+      "id": "multiplayer-plan",
+      "task": "Plan multiplayer and what syncs between players",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:agency-unity-multiplayer-engineer", "type": "agent", "use": "build", "when": "When a Unity game needs a plan for who owns what and what syncs" },
+        { "ref": "library:agency-godot-multiplayer-engineer", "type": "agent", "use": "build", "when": "When the game is in Godot and needs its networking and authority designed" },
+        { "ref": "library:agency-unreal-multiplayer-architect", "type": "agent", "use": "build", "when": "When the game is in Unreal and each piece of state needs an owner" }
+      ]
+    },
+    {
+      "id": "godot-unreal-work",
+      "task": "Plan or fix gameplay code in Godot or Unreal",
+      "kind": "code",
+      "items": [
+        { "ref": "library:agency-godot-gameplay-scripter", "type": "agent", "use": "build", "when": "When the studio works in Godot and needs scenes and scripts planned" },
+        { "ref": "library:agency-unreal-systems-engineer", "type": "agent", "use": "build", "when": "When a feature is in Unreal and needs its C++ and Blueprint split planned" },
+        { "ref": "kit:skills/game-bug-diagnosis", "use": "build", "when": "When a physics or timing bug is in Godot or Unreal and the same method applies" }
+      ]
+    },
+    {
+      "id": "shaders-effects",
+      "task": "Write a shader or visual effect",
+      "kind": "code",
+      "items": [
+        { "ref": "library:agency-unity-shader-graph-artist", "type": "agent", "use": "build", "when": "When a Unity effect needs a shader design with render and speed checks" },
+        { "ref": "library:glsl-shader-writer", "type": "skill", "use": "build", "when": "When the effect is hand-written shader code for the web or a custom engine" },
+        { "ref": "library:agency-godot-shader-developer", "type": "agent", "use": "build", "when": "When the effect is for Godot" },
+        { "ref": "library:agency-technical-artist", "type": "agent", "use": "check", "when": "When the effect works but its cost on weaker machines must be checked" }
+      ]
+    },
+    {
+      "id": "game-audio",
+      "task": "Plan the sound system and draft sounds and music",
+      "kind": "other",
+      "items": [
+        { "ref": "library:agency-game-audio-engineer", "type": "agent", "use": "brief", "when": "When the game needs a named list of sound events and rules for music that adapts" },
+        { "ref": "library:sound-effects-designer", "type": "skill", "use": "build", "when": "When a jump, hit or button needs a short placeholder sound of a set length" },
+        { "ref": "library:text-to-music-maker", "type": "skill", "use": "build", "when": "When a level needs a draft music clip from a description or a melody" },
+        { "ref": "library:suno", "type": "tool", "use": "explore", "when": "When the studio wants to hear a few music directions before hiring a composer" }
+      ]
+    },
+    {
+      "id": "placeholder-art",
+      "task": "Make placeholder art and sprites",
+      "kind": "other",
+      "items": [
+        { "ref": "library:leonardo", "type": "tool", "use": "explore", "when": "When the game needs a few art directions to compare before an artist is hired" },
+        { "ref": "library:image-maker-and-editor", "type": "skill", "use": "build", "when": "When a sprite needs variants or a transparent cut-out" },
+        { "ref": "library:agency-technical-artist", "type": "agent", "use": "check", "when": "When assets must meet size, format and import rules before they go in the project" }
+      ]
+    },
+    {
+      "id": "playtest-feedback",
+      "task": "Run a playtest and sort the feedback",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:check-a-prototype-before-user-testing", "type": "workflow", "use": "check", "when": "Before testers arrive, to find blockers and word the tasks neutrally" },
+        { "ref": "library:small-usability-test-planner", "type": "skill", "use": "build", "when": "When a one-morning test with a script and a fix list is enough" },
+        { "ref": "library:usability-test-runner", "type": "skill", "use": "build", "when": "When a fuller test needs task scripts, moderator notes and a findings summary" },
+        { "ref": "library:feedback-pile-sorter", "type": "skill", "use": "build", "when": "When feedback from testers, forums and reviews needs ranking into what players need" },
+        { "ref": "library:low-star-review-triager", "type": "skill", "use": "build", "when": "When poor reviews pile up after launch and you must pick what to fix first" }
+      ]
+    },
+    {
+      "id": "editor-tools-builds",
+      "task": "Build an editor tool or automate game builds",
+      "kind": "code",
+      "items": [
+        { "ref": "library:agency-unity-editor-tool-developer", "type": "agent", "use": "build", "when": "When a repeated editor chore should become an asset checker, drawer or import rule" },
+        { "ref": "library:build-pipeline-writer", "type": "skill", "use": "build", "when": "When builds are made by hand and should run from a pipeline with tests first" }
+      ]
+    },
+    {
+      "id": "patch-notes",
+      "task": "Write patch notes players can read",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:release-notes-writer", "type": "skill", "use": "build", "when": "When you have the commits and need them sorted into tidy notes" },
+        { "ref": "library:roadmap-update-writer", "type": "skill", "use": "explore", "when": "When players and the team each need the same update told their own way" },
+        { "ref": "library:documentation-checker", "type": "skill", "use": "check", "when": "Before posting, to catch any line that claims a fix the build does not have" }
+      ]
+    },
+    {
+      "id": "launch-outreach",
+      "task": "Plan price, community and launch outreach",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:agency-specialized-pricing-analyst", "type": "agent", "use": "build", "when": "When the studio must set a launch price from costs, similar games and value" },
+        { "ref": "library:developer-community-builder", "type": "skill", "use": "build", "when": "When the game needs a Discord or forum with channels, onboarding and events" },
+        { "ref": "library:creator-partnership-planner", "type": "skill", "use": "build", "when": "When streamers and video makers should be found, briefed and tracked" },
+        { "ref": "library:press-outreach-planner", "type": "skill", "use": "build", "when": "When launch news needs a media list, pitch emails and a press kit outline" }
+      ]
+    },
+    {
+      "id": "translation-ready",
+      "task": "Prepare game text for other languages",
+      "kind": "code",
+      "items": [
+        { "ref": "library:app-translation-setup-helper", "type": "skill", "use": "build", "when": "When text is hardcoded and needs moving to locale files with a plan" },
+        { "ref": "library:check-a-translated-interface-still-makes-sense", "type": "workflow", "use": "check", "when": "When strings are translated, to check meaning and that longer words still fit" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:dev-work-report-writer", "type": "skill", "use": "check", "when": "At the end of any coding job, to write what changed, why and the proof that it works" }
+  ],
+  "helpers": [
+    { "role": "mobile-app-developer", "when": "When the game ships on iOS or Android and needs store builds, labels and review" },
+    { "role": "qa-engineer", "when": "When a release needs a full test pass across machines, saves and settings" },
+    { "role": "graphic-designer", "when": "When the store page needs capsule art, a logo or screenshots laid out" },
+    { "role": "video-editor", "when": "When the launch needs a trailer cut from gameplay footage" },
+    { "role": "community-manager", "when": "When players need daily replies, moderation and updates, not only a plan" },
+    { "role": "backend-developer", "when": "When the game needs accounts, leaderboards or a server behind it" }
+  ],
+  "gaps": [
+    "No library item writes Unity C# for a mechanic, a menu or a save system; only the kit does, and library game items are planning agents",
+    "No library item reads Unity Profiler output or finds garbage collection spikes, draw call and batching costs",
+    "No library item covers Steam release steps: store page, build review, Coming Soon timing, depots and branches",
+    "No library item checks loot box odds disclosure, purchase flows or age rating answers by country",
+    "No library item offers two or three game feel directions with numbers to compare side by side",
+    "No library item writes Unity Test Framework tests or sets up a headless Unity test run in CI",
+    "No library item plans a Unity version upgrade or a render pipeline move",
+    "No library item covers controller support, key rebinding or accessibility options in games",
+    "No library item writes Godot or Unreal gameplay code; the items for those engines only plan",
+    "No library item checks placeholder art or sound against the game's style, or their licences, before release",
+    "No library item writes a Steam store description, capsule art brief or trailer plan for a game"
+  ]
+}

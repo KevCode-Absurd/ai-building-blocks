@@ -1,0 +1,278 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "ai-engineer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "feature-spec",
+      "task": "Write a one-page spec for an AI feature",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/ai-feature-spec", "use": "build", "when": "Before any code or prompt, to agree what the feature does, how good it must be and how it fails" },
+        { "ref": "library:feature-spec-writer", "type": "skill", "use": "build", "when": "When the client wants goals, non-goals, success measures and acceptance checks in their usual format" },
+        { "ref": "library:agency-engineering-ai-engineer", "type": "agent", "use": "explore", "when": "When you want a second plan from data check to launch, with monitoring, to compare" },
+        { "ref": "library:alan-turing", "type": "mind", "use": "think", "when": "When the request is vague and needs turning into clear steps and a fair test" }
+      ]
+    },
+    {
+      "id": "does-it-need-ai",
+      "task": "Check whether the task needs AI at all",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/does-this-need-ai", "use": "check", "when": "Before building, to see if a plain rule, lookup or form would do the job cheaper and safer" },
+        { "ref": "library:pattern-from-cases-finder", "type": "skill", "use": "explore", "when": "When you have ten or twenty real cases and want to see if one simple rule covers them" },
+        { "ref": "library:ai-build-or-buy-advisor", "type": "skill", "use": "brief", "when": "When the choice is between a model API, a tuned model or a bought tool, with the break-even" }
+      ]
+    },
+    {
+      "id": "build-ai-feature",
+      "task": "Build one AI feature into an app",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:workflows/ship-an-ai-feature", "use": "brief", "when": "When a client names one job for a model, or a feature needs rebuilding after complaints" },
+        { "ref": "kit:skills/ai-feature-build", "use": "build", "when": "When you write the feature: prompt in its own file, checked output, safe failure and limits" },
+        { "ref": "library:claude-app-builder", "type": "skill", "use": "build", "when": "When the feature calls Claude and you need the API used the right way" },
+        { "ref": "library:openai-docs-guide", "type": "skill", "use": "brief", "when": "When the feature calls OpenAI and you need current answers and the right model for the job" },
+        { "ref": "library:api-retry-handler", "type": "skill", "use": "build", "when": "When calls can be rate limited and need safe waiting, retrying and backing off" },
+        { "ref": "library:generated-code-reviewer", "type": "skill", "use": "check", "when": "When the code is written, to catch repeated logic and common AI coding mistakes" },
+        { "ref": "library:claude-code", "type": "tool", "use": "build", "when": "When you work inside the client's project and need changes made and tests run" }
+      ]
+    },
+    {
+      "id": "extraction-script",
+      "task": "Write a script that pulls structured data out of text",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/extraction-prompt-and-schema", "use": "build", "when": "When fields must come out of emails, notes or forms as checked rows, with unsure ones flagged" },
+        { "ref": "library:structured-data-extractor", "type": "skill", "use": "build", "when": "When you need code that returns checked fields and retries when the reply does not fit" },
+        { "ref": "library:ai-data-extractor-builder", "type": "skill", "use": "explore", "when": "When you want a second way to get typed results, to compare on the same samples" },
+        { "ref": "library:scanned-pdf-text-reader", "type": "skill", "use": "brief", "when": "When the source is scans or office files and the text must be read out first" },
+        { "ref": "kit:skills/prompt-test-set-and-tuning", "use": "check", "when": "Before it runs on real data, to score it on 15 to 30 real cases with known answers" }
+      ]
+    },
+    {
+      "id": "document-assistant",
+      "task": "Build an assistant that answers from the client's documents",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/answers-from-your-documents", "use": "build", "when": "When answers must come only from the client's documents, cite the section and admit gaps" },
+        { "ref": "library:rag-pipeline-designer", "type": "skill", "use": "brief", "when": "Before building, to choose how to split, embed and store the documents and how to test results" },
+        { "ref": "library:document-qa-builder", "type": "skill", "use": "build", "when": "When you want working code that answers from the files and shows which pages it used" },
+        { "ref": "library:chroma-search-database-setup", "type": "skill", "use": "build", "when": "When the documents need a store that finds passages by meaning" },
+        { "ref": "library:agency-engineering-rag-pipeline-engineer", "type": "agent", "use": "check", "when": "When answers are wrong and you must tell a retrieval fault from an answer fault" }
+      ]
+    },
+    {
+      "id": "prompt-and-test-set",
+      "task": "Design a prompt with a test set",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/prompt-test-set-and-tuning", "use": "build", "when": "When a prompt needs 15 to 30 realistic cases with pass rules before any wording is changed" },
+        { "ref": "library:agency-engineering-prompt-engineer", "type": "agent", "use": "explore", "when": "When you want a second prompt draft and test cases from the task and answer format" },
+        { "ref": "library:prompt-tester-and-tuner", "type": "skill", "use": "check", "when": "When there are several versions and each needs a score on the same cases" },
+        { "ref": "library:tune-a-prompt-with-real-tests-then-ship-it-with-versions", "type": "workflow", "use": "build", "when": "When the tuned prompt must ship with saved versions and a way back" },
+        { "ref": "library:andrej-karpathy", "type": "mind", "use": "think", "when": "When scores are argued over and nobody has read the actual failing examples one by one" }
+      ]
+    },
+    {
+      "id": "prompt-tuning-report",
+      "task": "Fix a prompt that misbehaves and report what changed",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/prompt-test-set-and-tuning", "use": "build", "when": "When complaints are in and you must turn them into test cases before touching the prompt" },
+        { "ref": "library:review-support-bot-errors-with-retest-cases", "type": "agent", "use": "brief", "when": "When you have bad chats and approved help text and need wrong answers listed with retests" },
+        { "ref": "library:prompt-fixer", "type": "skill", "use": "build", "when": "When a prompt gives weak or uneven answers and needs a tighter version" },
+        { "ref": "library:dspy-prompt-optimizer", "type": "skill", "use": "explore", "when": "When hand tuning has stalled and a program that tunes its own prompts is worth a try" },
+        { "ref": "library:prompt-and-skill-tuner", "type": "agent", "use": "build", "when": "When you want test, fix and re-test run for you until the checks pass" },
+        { "ref": "library:prompt-change-tester", "type": "skill", "use": "check", "when": "When a change is proposed, to show what got better and what got worse on fixed cases" }
+      ]
+    },
+    {
+      "id": "evaluation-script",
+      "task": "Write an evaluation script and a model grader",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/model-grader-rubric", "use": "build", "when": "When some cases need judgement, such as tone or faithfulness, and a model must grade them the same way each time" },
+        { "ref": "library:ai-answer-testing-planner", "type": "skill", "use": "brief", "when": "Before the script, to plan scores, human review and side-by-side checks" },
+        { "ref": "library:ai-answer-judge-designer", "type": "skill", "use": "build", "when": "When the grader needs a scoring guide with checks for its own bias" },
+        { "ref": "library:copilot-eval-driven-dev", "type": "skill", "use": "build", "when": "When the app needs test cases wired in so each change is compared on real results" },
+        { "ref": "library:check-an-ai-app-improvement", "type": "workflow", "use": "check", "when": "When someone claims a change made the feature better and it must be proven" }
+      ]
+    },
+    {
+      "id": "guardrails-and-launch-review",
+      "task": "Review an AI feature or agent before launch",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/ai-guardrails-and-launch-review", "use": "check", "when": "Before launch, to review the feature against the known risks for AI apps and tool servers" },
+        { "ref": "library:review-an-agent-before-launch", "type": "workflow", "use": "check", "when": "When the thing being launched is an agent that can take actions" },
+        { "ref": "library:ai-system-attack-tester", "type": "skill", "use": "check", "when": "When you need injection, jailbreak and tool abuse risks found and ranked" },
+        { "ref": "library:ai-app-guardrails-builder", "type": "skill", "use": "build", "when": "When the review finds gaps and rules must be added for refusals, made-up facts and leaked details" },
+        { "ref": "library:ai-approval-gate-designer", "type": "skill", "use": "build", "when": "When some actions should wait for a person and you need clear rules for which ones" },
+        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When the review covers normal use only and nobody has asked what happens when a step fails" }
+      ]
+    },
+    {
+      "id": "injection-tests",
+      "task": "Write and run prompt injection tests on your own feature",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/injection-test-cases", "use": "build", "when": "Before launching a chatbot, document assistant or agent you own, to write safe test inputs" },
+        { "ref": "library:prompt-injection-defender", "type": "skill", "use": "brief", "when": "When you need a map of where outside text reaches the model and what it could do" },
+        { "ref": "library:ai-app-injection-defender", "type": "skill", "use": "build", "when": "When tests fail and layered defences must be added in the code" },
+        { "ref": "library:prompt-attack-detector", "type": "skill", "use": "build", "when": "When inputs need a small filter that flags hidden instructions before they land" },
+        { "ref": "library:track-agent-injection-controls-and-retest-evidence", "type": "agent", "use": "check", "when": "When fixes are in and you need retest records and a list of control gaps" },
+        { "ref": "library:harden-an-ai-app-against-hijacked-instructions-and-runaway-bills", "type": "workflow", "use": "explore", "when": "When you want injection and spending risks handled in one run, to compare with your plan" }
+      ]
+    },
+    {
+      "id": "cost-and-limits",
+      "task": "Estimate cost and set spending limits",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/ai-cost-estimate", "use": "build", "when": "Before launch or a model change, to estimate cost per call and per month, low and high" },
+        { "ref": "library:ai-cost-cutter", "type": "skill", "use": "explore", "when": "When the estimate is too high and you need where the tokens go and what to change" },
+        { "ref": "library:ai-spend-limit-checker", "type": "skill", "use": "check", "when": "When code calls a paid model and needs caps and loop limits before a surprise bill" },
+        { "ref": "library:your-agent-s-first-ai-call-implementation-planner", "type": "skill", "use": "build", "when": "When every model call should check the budget first and record tokens and cost" },
+        { "ref": "library:execution-policies-and-budget-enforcement-implementation-planner", "type": "skill", "use": "build", "when": "When an agent needs budget reservations, hard stops and cost tracking in code" }
+      ]
+    },
+    {
+      "id": "logging-and-monitoring",
+      "task": "Add logging and monitoring to AI code",
+      "kind": "code",
+      "items": [
+        { "ref": "library:ai-agent-monitoring-planner", "type": "skill", "use": "brief", "when": "Before adding logs, to plan what to trace for steps, costs and errors without storing private data" },
+        { "ref": "library:phoenix-ai-app-tracer", "type": "skill", "use": "build", "when": "When you want open tracing of every step with tests that score answers" },
+        { "ref": "library:langsmith-ai-app-monitor", "type": "skill", "use": "explore", "when": "When the team may prefer a hosted tracing tool with test sets and scores" },
+        { "ref": "library:logging-and-alerts-setter", "type": "skill", "use": "build", "when": "When failures and cost spikes must raise an alert, not sit in a log" }
+      ]
+    },
+    {
+      "id": "feature-health-check",
+      "task": "Run the AI feature health check after launch",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/ai-feature-health-check", "use": "brief", "when": "Every two weeks for the first two months after launch, then monthly" },
+        { "ref": "kit:skills/prompt-test-set-and-tuning", "use": "check", "when": "When the test set must be rerun and new failures from real use added to it" },
+        { "ref": "kit:prompts/ai-cost-estimate", "use": "check", "when": "When real cost per call should be set against the estimate" },
+        { "ref": "library:ai-pilot-evaluation-review-assistant", "type": "agent", "use": "check", "when": "When the client must decide to widen, hold or stop and needs the evidence against the baseline" }
+      ]
+    },
+    {
+      "id": "incident-review",
+      "task": "Review an AI feature after an incident",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/ai-guardrails-and-launch-review", "use": "check", "when": "After a bad answer, a leak or a runaway bill, to find which control was missing" },
+        { "ref": "library:copilot-incident-postmortem", "type": "skill", "use": "build", "when": "When you have the timeline and evidence and need a blameless report with owners" },
+        { "ref": "kit:prompts/injection-test-cases", "use": "build", "when": "When the incident came from hidden instructions and the case must become a standing test" }
+      ]
+    },
+    {
+      "id": "mcp-server",
+      "task": "Build and check an MCP server",
+      "kind": "code",
+      "items": [
+        { "ref": "library:turn-an-api-into-a-safe-mcp-server-others-can-install", "type": "workflow", "use": "brief", "when": "When an existing API should become a tool server others can install, start to finish" },
+        { "ref": "library:api-to-mcp-server-builder", "type": "skill", "use": "build", "when": "When you have an API spec and want the server written in Python or TypeScript" },
+        { "ref": "library:copilot-python-mcp-server-generator", "type": "skill", "use": "explore", "when": "When there is no API spec and the tools must be described by hand, with tests" },
+        { "ref": "library:ai-tool-definition-writer", "type": "skill", "use": "build", "when": "When a tool's description is vague and the model picks the wrong one or guesses inputs" },
+        { "ref": "library:mcp-server-test-runner", "type": "skill", "use": "check", "when": "When the server runs and you need to know if a model picks the right tool on real tasks" },
+        { "ref": "library:copilot-mcp-implementation-security-review", "type": "skill", "use": "check", "when": "Before others install it, to trace risks through each tool handler" },
+        { "ref": "library:verify-an-mcp-server-release", "type": "workflow", "use": "check", "when": "Before each release, to verify the package does what it says" }
+      ]
+    },
+    {
+      "id": "agent-build",
+      "task": "Design an agent that uses tools safely",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:copilot-agent-architecture", "type": "skill", "use": "brief", "when": "Before building, to settle the design and its trade-offs" },
+        { "ref": "library:ai-agent-workflow-designer", "type": "skill", "use": "explore", "when": "When the job may need several agents, to see a design with handoffs and cost limits" },
+        { "ref": "library:ai-tool-definition-writer", "type": "skill", "use": "build", "when": "When each tool needs a clear, safe definition the model can call without guessing" },
+        { "ref": "library:agent-memory-designer", "type": "skill", "use": "build", "when": "When the agent must remember things between steps or sessions" },
+        { "ref": "library:ai-approval-gate-designer", "type": "skill", "use": "build", "when": "When some actions spend money or change records and need a person's yes" },
+        { "ref": "library:ai-agent-attack-tester", "type": "skill", "use": "check", "when": "When the agent works and you need a safe test of where it can be tricked" },
+        { "ref": "kit:skills/ai-guardrails-and-launch-review", "use": "check", "when": "Before the agent touches real accounts or data" }
+      ]
+    },
+    {
+      "id": "model-choice-or-change",
+      "task": "Choose a model or plan a model change",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/ai-cost-estimate", "use": "build", "when": "When each candidate model needs its cost per call and per month side by side" },
+        { "ref": "kit:skills/prompt-test-set-and-tuning", "use": "check", "when": "When the same test set must be run on each model before any switch" },
+        { "ref": "library:prompt-change-tester", "type": "skill", "use": "check", "when": "When the new model needs prompt changes and you must see what got worse" },
+        { "ref": "library:ai-build-or-buy-advisor", "type": "skill", "use": "brief", "when": "When the client asks whether to tune a model of their own or stay on an API" }
+      ]
+    },
+    {
+      "id": "chatbot-flow",
+      "task": "Design a chatbot's conversation and fallbacks",
+      "kind": "other",
+      "items": [
+        { "ref": "library:chatbot-conversation-designer", "type": "skill", "use": "build", "when": "When the bot needs flows with questions, error recovery and a graceful way out" },
+        { "ref": "library:ai-app-and-chatbot-builder", "type": "skill", "use": "explore", "when": "When you want a working first version to try the flow on real questions" },
+        { "ref": "kit:skills/answers-from-your-documents", "use": "build", "when": "When the bot must answer only from approved text and say when it does not know" },
+        { "ref": "kit:prompts/injection-test-cases", "use": "check", "when": "Before the bot faces the public, to test whether users can talk it out of its rules" }
+      ]
+    },
+    {
+      "id": "privacy-and-rules",
+      "task": "Check privacy and AI rules for a feature",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:eu-ai-act-risk-classifier", "type": "skill", "use": "check", "when": "When the feature serves people in the EU and you need its risk tier and duties" },
+        { "ref": "library:agency-data-privacy-officer", "type": "agent", "use": "check", "when": "When customer data goes to a model and you need the duties and the proof you lack" },
+        { "ref": "kit:skills/ai-guardrails-and-launch-review", "use": "check", "when": "When you must show what data the feature sends, stores and logs" }
+      ]
+    },
+    {
+      "id": "batch-job",
+      "task": "Build a batch job that runs a model over many records",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/ai-feature-build", "use": "build", "when": "When the job needs a prompt file, checked output and a safe way to skip bad records" },
+        { "ref": "library:data-pipeline-builder", "type": "skill", "use": "build", "when": "When the job needs scheduling, checks and fixes for common faults around the model step" },
+        { "ref": "library:api-retry-handler", "type": "skill", "use": "build", "when": "When thousands of calls will hit rate limits and must wait and retry safely" },
+        { "ref": "library:ai-spend-limit-checker", "type": "skill", "use": "check", "when": "Before the first full run, to cap spend and stop a loop from running away" }
+      ]
+    },
+    {
+      "id": "code-review",
+      "task": "Review AI feature code and tests before merge",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:generated-code-reviewer", "type": "skill", "use": "check", "when": "When an AI tool wrote much of the code and it needs a pass for common slips" },
+        { "ref": "library:bug-and-security-code-reviewer", "type": "skill", "use": "check", "when": "When the change handles keys, user input or outside text and needs a bug and security review" },
+        { "ref": "kit:skills/ai-guardrails-and-launch-review", "use": "check", "when": "When the review must also cover what the model can be made to do, not only the code" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:ai-spend-limit-checker", "type": "skill", "use": "check", "when": "Before any code that calls a paid model runs unattended, to confirm caps and loop limits" },
+    { "ref": "library:generated-code-reviewer", "type": "skill", "use": "check", "when": "Before any code is handed over, to catch common slips" }
+  ],
+  "helpers": [
+    { "role": "backend-developer", "when": "When the feature needs new endpoints, queues or database changes around the model call" },
+    { "role": "application-security-engineer", "when": "When the launch review finds risks that need a full security test of the app" },
+    { "role": "prompt-engineer", "when": "When several prompts need designing and tuning at once across features" },
+    { "role": "chatbot-specialist", "when": "When the job is a customer-facing bot with handover to staff and a help centre behind it" },
+    { "role": "data-engineer", "when": "When the documents or records need a proper pipeline before a model can use them" },
+    { "role": "qa-engineer", "when": "When the feature needs tests beyond the prompt, across the whole app" }
+  ],
+  "gaps": [
+    "No library item estimates what an AI feature will cost per call and per month with a low and high case; only the kit prompt covers it",
+    "No library item decides between a plain rule and a model for a task; only the kit prompt covers it",
+    "No library item builds a test set from real logs with expected results and pass rules; only the kit skill covers it",
+    "No library item tests retrieval on its own: whether the right passage was found, and whether the assistant says it does not know",
+    "No library item plans a model change: rerun the test set on the new model, compare cost and quality, and roll back",
+    "No library item tunes prompt caching, batching or response time for a live feature",
+    "No library item removes personal details from text before it is sent to a model",
+    "No library item designs what happens when the model is down, slow or unsure, such as a queue for a person",
+    "No library item runs a regular health check on a live AI feature: sample logs, new failures and cost per call",
+    "No thinking lens in the library looks at a system the way an attacker would"
+  ]
+}

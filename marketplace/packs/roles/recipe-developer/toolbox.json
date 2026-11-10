@@ -1,0 +1,250 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "recipe-developer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "recipe-card",
+      "task": "Turn rough notes into a clear recipe card",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/recipe-development-cycle", "use": "brief", "when": "When a recipe is new or keeps failing for others, to run draft, test and fix in order" },
+        { "ref": "library:whisper-speech-transcriber", "type": "skill", "use": "brief", "when": "When the cook's notes are a voice memo, to turn it into text first" },
+        { "ref": "kit:prompts/notes-to-recipe-card", "use": "build", "when": "When you have rough notes, an old card or a transcript and need a card anyone can follow" },
+        { "ref": "kit:skills/recipe-card-writing", "use": "build", "when": "When you need yield, times, pan size, ingredients in order of use and doneness cues" },
+        { "ref": "library:skill-breakdown-teaching-planner", "type": "prompt", "use": "build", "when": "When one step hides a technique, to break it into small steps with the usual mistake" },
+        { "ref": "library:mary-berry", "type": "mind", "use": "think", "when": "When the method assumes skill, to ask what a nervous home baker needs to be told" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the card is drafted, to swap chef words for plain ones" }
+      ]
+    },
+    {
+      "id": "scale-and-convert",
+      "task": "Scale a recipe or convert its units",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/scale-a-recipe", "use": "build", "when": "When you need a recipe at a new yield, batch size or pan size" },
+        { "ref": "kit:skills/recipe-scaling-and-conversion", "use": "build", "when": "When every amount must be multiplied, converted and rounded to amounts a cook can measure" },
+        { "ref": "library:harold-mcgee", "type": "mind", "use": "think", "when": "When a big batch behaves differently, to ask what physical change does not scale in a line" },
+        { "ref": "library:units-and-error-margin-checker", "type": "skill", "use": "check", "when": "After scaling, to check every unit and how rounding errors add up" },
+        { "ref": "library:check-a-catering-order-before-service", "type": "workflow", "use": "check", "when": "When the batch is for a catered event, to check the order against the quote and guest needs" }
+      ]
+    },
+    {
+      "id": "kitchen-standard-recipe",
+      "task": "Write standard recipe cards for a kitchen team",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/kitchen-standard-recipe", "use": "build", "when": "When a restaurant, cafe or caterer needs every cook to make a dish the same way" },
+        { "ref": "library:standards-sheet-writer", "type": "skill", "use": "build", "when": "When the dish needs one page of standards a cook can check: weight, colour, time, plating" },
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When prep spans stations, to write who does what and in what order" },
+        { "ref": "library:training-handout-writer", "type": "prompt", "use": "build", "when": "When new cooks must learn the dish, to make a one-page handout for the pass" },
+        { "ref": "library:jacques-pepin", "type": "mind", "use": "think", "when": "When the card lists steps but not the technique that makes them work" },
+        { "ref": "library:overloaded-lesson-checker", "type": "skill", "use": "check", "when": "When the card is dense, to find where a new cook would be overloaded" }
+      ]
+    },
+    {
+      "id": "recipe-testing",
+      "task": "Plan and record recipe tests",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/recipe-testing-plan", "use": "build", "when": "When a recipe must work for someone other than its author: criteria, test sheet and testers" },
+        { "ref": "library:experiment-designer", "type": "skill", "use": "build", "when": "When one thing is in doubt, to set a clear question and change only that" },
+        { "ref": "library:expert-and-newcomer-test-planner", "type": "skill", "use": "build", "when": "When choosing testers, to pick an expert and a beginner and what to ask each" },
+        { "ref": "library:taster-event-planner", "type": "skill", "use": "build", "when": "When several versions need tasting side by side, to plan the session and the taster card" },
+        { "ref": "library:kenji-lopez-alt", "type": "mind", "use": "think", "when": "When tests wander, to set a target, change one thing and measure it" }
+      ]
+    },
+    {
+      "id": "fix-a-failing-recipe",
+      "task": "Find why a recipe keeps failing for other cooks",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/recipe-development-cycle", "use": "brief", "when": "When reader or staff reports say the recipe does not work, to retest it in order" },
+        { "ref": "kit:skills/recipe-testing-plan", "use": "build", "when": "When you need a test sheet for weights, times and temperatures to find the fault" },
+        { "ref": "library:samin-nosrat", "type": "mind", "use": "think", "when": "When the dish is bland or flat, to check salt, fat, acid and heat in turn" },
+        { "ref": "library:harold-mcgee", "type": "mind", "use": "think", "when": "When a step fails for no clear reason, to ask what is happening to the food itself" },
+        { "ref": "library:experiment-designer", "type": "skill", "use": "check", "when": "When you think you know the cause, to confirm it with one controlled test" }
+      ]
+    },
+    {
+      "id": "recipe-blog-post",
+      "task": "Write a recipe blog post around a tested recipe",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:customer-question-keyword-finder", "type": "prompt", "use": "brief", "when": "Before writing, to find the questions readers ask and how they search for them" },
+        { "ref": "kit:prompts/recipe-blog-post", "use": "build", "when": "When the recipe is tested and you want a post that helps readers make it, with no padding" },
+        { "ref": "kit:skills/recipe-blog-post", "use": "build", "when": "When the post needs a headnote, disclosure, the card, tips, swaps and reader questions" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the title is plain, to compare several honest angles" },
+        { "ref": "library:deb-perelman", "type": "mind", "use": "think", "when": "When the headnote is filler, to say why this recipe earns a place in a real week" },
+        { "ref": "library:blog-post-publish-check-loop", "type": "agent", "use": "check", "when": "When the post is drafted, to match each claim to proof and make the words plain" },
+        { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "Before publishing, to fix lines that read as machine written" }
+      ]
+    },
+    {
+      "id": "publish-online",
+      "task": "Publish recipes online with markup and search basics",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/publish-recipes-online", "use": "brief", "when": "When tested recipes are ready for the site, or old recipe posts need fixing" },
+        { "ref": "library:keyword-research-planner", "type": "skill", "use": "brief", "when": "Before publishing a batch, to rank the searches worth a post" },
+        { "ref": "library:structured-data-writer", "type": "skill", "use": "build", "when": "When each recipe page needs markup for rich results, tested and ready to paste" },
+        { "ref": "library:title-and-meta-tag-writer", "type": "skill", "use": "build", "when": "When the page needs a search title, description and share tags that fit" },
+        { "ref": "library:on-page-seo-tuner", "type": "skill", "use": "check", "when": "When the page is live, to get fixes for headings, links and content" }
+      ]
+    },
+    {
+      "id": "refresh-old-posts",
+      "task": "Fix or refresh old recipe posts",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/publish-recipes-online", "use": "build", "when": "When old posts lack a proper card, markup or tested amounts" },
+        { "ref": "library:find-old-posts-losing-traffic-refresh-or-cut-them-and-track-it", "type": "workflow", "use": "build", "when": "When many posts are fading, to decide refresh, merge or cut for each and track it" },
+        { "ref": "library:old-content-refresher", "type": "skill", "use": "build", "when": "When you have the list, to see how deep each update should go" }
+      ]
+    },
+    {
+      "id": "content-plan",
+      "task": "Plan recipe content from what readers ask",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:content-pillar-finder", "type": "skill", "use": "brief", "when": "When the blog covers everything, to find the few subjects the cook can own" },
+        { "ref": "library:search-intent-keyword-mapper", "type": "skill", "use": "build", "when": "When you have a topic, to group searches by what the reader wants" },
+        { "ref": "library:customer-question-keyword-finder", "type": "prompt", "use": "build", "when": "When you have comments and emails, to turn reader questions into post ideas" },
+        { "ref": "library:store-blog-plan-builder", "type": "skill", "use": "build", "when": "When a bakery or food shop sells online and posts should lift its product pages" }
+      ]
+    },
+    {
+      "id": "cookbook-proposal",
+      "task": "Write a cookbook proposal or chapter plan",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:idea-sharpener", "type": "skill", "use": "brief", "when": "Before the proposal, to stress-test the book idea and cut it to one page" },
+        { "ref": "kit:prompts/cookbook-proposal-outline", "use": "build", "when": "When you want to pitch a cookbook to an agent or publisher, or plan one to self-publish" },
+        { "ref": "library:book-writing-project-coach", "type": "skill", "use": "build", "when": "When the author needs an outline and a writing plan for their stage" },
+        { "ref": "library:long-form-piece-structurer", "type": "skill", "use": "build", "when": "When a chapter's recipes and essays need a clear order" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the book needs a title, to compare several angles" }
+      ]
+    },
+    {
+      "id": "nutrition-and-allergens",
+      "task": "Prepare a nutrition and allergen data pack",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/nutrition-label-data-pack", "use": "build", "when": "When a recipe is moving into a packaged product and a qualified person will work out the label" },
+        { "ref": "library:food-supply-chain-planner", "type": "skill", "use": "build", "when": "When the product needs shelf life, safe handling and tracing planned" },
+        { "ref": "library:units-and-error-margin-checker", "type": "skill", "use": "check", "when": "When weights per serving are worked out, to check units and rounding" }
+      ]
+    },
+    {
+      "id": "recipe-costing",
+      "task": "Cost a recipe per portion",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:restaurant-portion-cost-builder", "type": "skill", "use": "build", "when": "When you have ingredient prices, to get cost per portion and contribution for one batch" },
+        { "ref": "library:connect-production-yield-to-mix-contribution", "type": "workflow", "use": "build", "when": "When real yield differs from the recipe, to turn measured yield into cost per good unit" },
+        { "ref": "library:manufacturing-yield-cost-bridge", "type": "skill", "use": "build", "when": "When trim and cooking loss are large, to find the true cost per good kilogram" },
+        { "ref": "kit:skills/recipe-scaling-and-conversion", "use": "build", "when": "When costing needs the recipe at the batch size the kitchen really makes" }
+      ]
+    },
+    {
+      "id": "photo-brief",
+      "task": "Brief the photos and step shots for a recipe",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:product-shot-list-writer", "type": "prompt", "use": "build", "when": "When photos are planned, to list each shot and the reason for it" },
+        { "ref": "library:article-cover-maker", "type": "skill", "use": "build", "when": "When the post needs a cover image that fits the piece" }
+      ]
+    },
+    {
+      "id": "recipe-video",
+      "task": "Script a short recipe video",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:short-video-format-picker", "type": "skill", "use": "explore", "when": "Before scripting, to pick a format and get a script outline" },
+        { "ref": "library:video-content-planner", "type": "skill", "use": "build", "when": "When one long cook-along should become a plan of shorter videos" },
+        { "ref": "library:social-video-edit-planner", "type": "skill", "use": "build", "when": "When clips are shot, to get a timed cut list, captions and a cover" },
+        { "ref": "library:video-hook-scorer", "type": "skill", "use": "check", "when": "When the opening is drafted, to score it and get rewrites" }
+      ]
+    },
+    {
+      "id": "social-and-newsletter",
+      "task": "Write social posts and a newsletter from recipes",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:standing-social-calendar-maker", "type": "skill", "use": "brief", "when": "When posts are ad hoc, to set a rolling calendar with captions" },
+        { "ref": "library:social-post-writer", "type": "skill", "use": "build", "when": "When one recipe needs clear posts for each platform" },
+        { "ref": "library:weekly-newsletter-keeper", "type": "agent", "use": "build", "when": "When a recipe newsletter runs every week and should match past issues" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "Before sending, to compare subject lines from several angles" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When the issue is drafted, to get cuts and a ship or fix call" }
+      ]
+    },
+    {
+      "id": "menu-descriptions",
+      "task": "Write dish names and menu descriptions",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "build", "when": "When a description is vague, to make it short, true and easy to picture" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When the menu says local, homemade or free-from, to check each claim can be backed" }
+      ]
+    },
+    {
+      "id": "adapt-a-recipe",
+      "task": "Adapt a recipe for a diet, allergy or another country",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/recipe-scaling-and-conversion", "use": "build", "when": "When the new market uses other units, pan sizes or oven settings" },
+        { "ref": "library:translator", "type": "skill", "use": "build", "when": "When the card must read naturally in another language with local ingredient names" },
+        { "ref": "library:samin-nosrat", "type": "mind", "use": "think", "when": "When an ingredient is swapped, to keep the balance of salt, fat, acid and heat" },
+        { "ref": "kit:skills/recipe-testing-plan", "use": "check", "when": "After any swap, to retest before the adapted card is shared" }
+      ]
+    },
+    {
+      "id": "recipe-set-style",
+      "task": "Edit a set of recipes to one style",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:build-a-brand-file-and-style-guide-from-scratch", "type": "workflow", "use": "brief", "when": "When the blog or kitchen has no written style, to set one before editing" },
+        { "ref": "kit:skills/recipe-card-writing", "use": "build", "when": "When old cards must follow one order, one set of units and one way of naming things" },
+        { "ref": "library:technical-doc-proofreader", "type": "skill", "use": "check", "when": "When the set is long, to list term clashes and slips without rewriting" },
+        { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "Last pass on the set, with a log of every change" }
+      ]
+    },
+    {
+      "id": "ebook-or-free-guide",
+      "task": "Package recipes as an ebook or free guide",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:free-giveaway-designer", "type": "skill", "use": "build", "when": "When the cook wants a free guide that leads readers to what they sell next" },
+        { "ref": "kit:prompts/cookbook-proposal-outline", "use": "build", "when": "When the ebook needs a chapter plan and a recipe list" },
+        { "ref": "library:price-a-course-or-ebook-and-write-its-launch-emails", "type": "workflow", "use": "build", "when": "When the ebook is for sale and needs a price and launch emails" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:units-and-error-margin-checker", "type": "skill", "use": "check", "when": "Whenever an amount, unit or temperature changes, to check the sums before the card goes out" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a post makes a health, nutrition or origin claim, to check it against a trusted source" },
+    { "ref": "library:ai-default-patterns", "type": "skill", "use": "check", "when": "Before delivery, to catch stock phrases that make a post read as machine written" },
+    { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "Last step before sign-off, to catch slips in amounts, times and names" }
+  ],
+  "helpers": [
+    { "role": "product-photographer", "when": "When the recipe needs finished photos, step shots or image edits" },
+    { "role": "restaurant-manager", "when": "When standard recipes feed menu pricing, ordering and kitchen training" },
+    { "role": "seo-specialist", "when": "When the recipe site needs a search audit or a keyword plan beyond one post" },
+    { "role": "ghostwriter", "when": "When the cookbook needs chapters and essays written in the cook's voice" },
+    { "role": "compliance-specialist", "when": "When a packaged food needs label rules checked for the country it sells in" },
+    { "role": "social-media-manager", "when": "When recipe posts need scheduling, replies and a channel plan" }
+  ],
+  "gaps": [
+    "No library item writes, scales or converts recipes; cards, baker's percentages and pan-size changes rest on the kit alone",
+    "No library item works out nutrition values or builds an allergen table, and none knows food label rules by country",
+    "No library item suggests ingredient swaps for a diet or allergy and says what else must change",
+    "No library item gives a recipe test sheet or scores a tasting panel; general test planners stand in",
+    "No library item checks recipe markup for search; the markup writers are general",
+    "No library item plans food photos or styling; a product shot list stands in",
+    "No library item scripts a hands-and-pans recipe video",
+    "No library item writes a cookbook proposal with comparable titles and a sample chapter",
+    "No library item writes menu descriptions or makes different versions to compare",
+    "No library item gives safe cooling, storing and reheating notes to put on a card",
+    "Fewer than ten library items are about food; most picks here are general writing, search and testing tools"
+  ]
+}

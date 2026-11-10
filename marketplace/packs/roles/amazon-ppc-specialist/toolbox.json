@@ -1,0 +1,249 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "amazon-ppc-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "search-term-harvest",
+      "task": "Harvest search terms and build the negatives list",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:messy-spreadsheet-cleaner", "type": "skill", "use": "brief", "when": "When the export has text numbers, odd dates or duplicate rows that would skew the sort" },
+        { "ref": "kit:skills/search-term-harvest", "use": "build", "when": "When you have a search term report and need harvest, negative and watch lists" },
+        { "ref": "kit:prompts/search-term-report-review", "use": "build", "when": "Weekly or fortnightly, to get harvest and negative lists ready for bulk upload" },
+        { "ref": "library:search-term-sorter", "type": "skill", "use": "check", "when": "When you want a second sort of winners and negatives to compare against your own" },
+        { "ref": "library:search-term-junk-sorter", "type": "prompt", "use": "check", "when": "When you need a quick waste score on one report before the full harvest" }
+      ]
+    },
+    {
+      "id": "break-even-acos",
+      "task": "Work out break-even ACOS for every product",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:landed-cost-calculator", "type": "skill", "use": "brief", "when": "When landed cost is a guess, to get cost per sellable unit from the quote and freight" },
+        { "ref": "kit:prompts/break-even-acos-table", "use": "build", "when": "At the start of any job, or monthly, before judging any campaign" },
+        { "ref": "library:amazon-fee-and-margin-checker", "type": "skill", "use": "check", "when": "When you want every Amazon fee listed by size tier and the margin scored" },
+        { "ref": "library:amazon-unit-profit-checker", "type": "prompt", "use": "check", "when": "When one product's number looks off, to redo profit per unit and break-even ad cost" },
+        { "ref": "library:benjamin-graham", "type": "mind", "use": "think", "when": "When a target sits right on break-even, to ask how much room for error is left" }
+      ]
+    },
+    {
+      "id": "acos-tacos-review",
+      "task": "Review ACOS and TACOS against each product's margin",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/break-even-acos-review", "use": "build", "when": "When each product must be labelled profitable, break-even, losing money or too new to call" },
+        { "ref": "library:sku-ad-money-planner", "type": "skill", "use": "build", "when": "When stock days matter too, to grade each SKU and set its ad target or clearance plan" },
+        { "ref": "library:platform-roas-reality-check", "type": "skill", "use": "check", "when": "When ad-reported sales look too good, to compare them with total sales" },
+        { "ref": "library:carl-bergstrom", "type": "mind", "use": "think", "when": "When ACOS looks fine but profit does not, to ask what the number leaves out" },
+        { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before the review is shared, to check the method and the sums" }
+      ]
+    },
+    {
+      "id": "sponsored-products-structure",
+      "task": "Design or rebuild a Sponsored Products structure",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/account-map", "use": "brief", "when": "Before a rebuild, to see what exists, where it overlaps and what it wastes" },
+        { "ref": "library:amazon-keyword-picker", "type": "skill", "use": "brief", "when": "When you have a keyword export, to pick the phrases each product should target" },
+        { "ref": "kit:skills/sponsored-products-structure", "use": "build", "when": "When the account needs campaigns split by product and match type with a naming rule" },
+        { "ref": "library:amazon-ppc-launch-builder", "type": "skill", "use": "explore", "when": "When you want a second structure with starting bids and negatives to compare" },
+        { "ref": "kit:prompts/change-request-for-approval", "use": "check", "when": "Before anything is built, to give the client a numbered list to approve" }
+      ]
+    },
+    {
+      "id": "account-map-cleanup",
+      "task": "Map a messy account and plan the clean-up",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/account-map", "use": "build", "when": "When years of auto campaigns overlap and products are mixed in one campaign" },
+        { "ref": "library:ad-spend-analyst", "type": "skill", "use": "check", "when": "When you have the exports, to list wasted spend and the campaigns that stand out" },
+        { "ref": "library:ad-account-bottleneck-auditor", "type": "skill", "use": "check", "when": "When the account is busy but flat, to find the one thing holding growth back" },
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "Before the map, to catch gaps, duplicates and odd values in the bulk export" },
+        { "ref": "kit:prompts/change-request-for-approval", "use": "build", "when": "When the clean-up is planned and each pause, merge and move needs sign-off" }
+      ]
+    },
+    {
+      "id": "phase-bid-rules",
+      "task": "Write bid and budget rules for launch, growth and defend",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/break-even-acos-table", "use": "brief", "when": "Before any rule, to fix the ACOS each product can afford in each phase" },
+        { "ref": "kit:skills/phase-bid-rules", "use": "build", "when": "When each product needs rules for when to raise, hold, cut or pause, by phase" },
+        { "ref": "library:campaign-budget-scenario-planner", "type": "skill", "use": "explore", "when": "When budget must move between campaigns, to compare three plans with change limits" },
+        { "ref": "library:les-binet", "type": "mind", "use": "think", "when": "When defend spend is under attack, to ask which sales the ads really caused" },
+        { "ref": "kit:prompts/change-request-for-approval", "use": "check", "when": "When the rules are drafted and the client must agree the limits you may act within" }
+      ]
+    },
+    {
+      "id": "weekly-ppc-routine",
+      "task": "Run the weekly PPC routine",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/weekly-ppc-routine", "use": "build", "when": "Once a week on the same day, and twice in the first week of a launch" },
+        { "ref": "kit:prompts/search-term-report-review", "use": "build", "when": "When this week's search term export is in" },
+        { "ref": "library:ad-performance-early-warning-reviewer", "type": "skill", "use": "check", "when": "When you compare this week's costs and clicks with past weeks to flag what to look at" },
+        { "ref": "kit:prompts/change-request-for-approval", "use": "build", "when": "At the end of the routine, to list this week's changes for approval or report them" }
+      ]
+    },
+    {
+      "id": "product-launch-ads",
+      "task": "Plan the ads for a product launch",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/product-launch-ads", "use": "build", "when": "When a product goes live in four to eight weeks, or has just gone live with no ads" },
+        { "ref": "library:amazon-ppc-launch-builder", "type": "skill", "use": "build", "when": "When you have keywords and a daily budget and need the first campaigns with bids" },
+        { "ref": "library:amazon-launch-week-planner", "type": "skill", "use": "brief", "when": "When ads must line up with the days before and after go-live" },
+        { "ref": "kit:skills/phase-bid-rules", "use": "build", "when": "When the launch needs a set time and budget at a higher ACOS, then a hand-over to growth" },
+        { "ref": "kit:prompts/break-even-acos-table", "use": "check", "when": "Before the launch budget is set, to check what the product can afford to lose" }
+      ]
+    },
+    {
+      "id": "monthly-margin-review",
+      "task": "Run the monthly margin review",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/monthly-margin-review", "use": "build", "when": "In the first week of each month, covering the month just ended" },
+        { "ref": "kit:skills/break-even-acos-review", "use": "build", "when": "When each product's actual ACOS and TACOS must be set against its break-even" },
+        { "ref": "library:amazon-monthly-account-keeper", "type": "agent", "use": "check", "when": "When fee, stock and sales reports should be checked for margin slips in the same pass" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "Before the review is sent, to catch formula errors and broken links in the workings" }
+      ]
+    },
+    {
+      "id": "change-request",
+      "task": "Write a change request the client can approve",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/change-request-for-approval", "use": "build", "when": "When your analysis must become a numbered list the client approves item by item" },
+        { "ref": "library:ai-approval-gate-designer", "type": "skill", "use": "brief", "when": "When the client asks which changes you may make alone and which need a yes first" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before the upload sheet is shared, to find broken totals and wrong rows" }
+      ]
+    },
+    {
+      "id": "sponsored-brands-creative",
+      "task": "Write Sponsored Brands headlines and a video brief",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When the headline is open, to get five short lines that each take a new angle" },
+        { "ref": "library:ad-headline-writer", "type": "skill", "use": "build", "when": "When you need plain headlines with character counts and the one to test first" },
+        { "ref": "library:video-ad-script-angle-chooser", "type": "prompt", "use": "explore", "when": "When a video is planned, to see four kinds of script before one is written" },
+        { "ref": "library:sound-off-commercial-checker", "type": "skill", "use": "check", "when": "When the video will play muted in search results, to check it still sells" },
+        { "ref": "kit:prompts/sponsored-brands-claims-check", "use": "check", "when": "Before submitting a headline, image or video script, to catch claims that need proof" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When the copy has many claims, to sort each as fine, needs proof or cut" }
+      ]
+    },
+    {
+      "id": "product-targeting-and-display",
+      "task": "Plan product targeting and Sponsored Display",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:amazon-product-edge-finder", "type": "skill", "use": "brief", "when": "Before choosing rival products to target, to see where yours is clearly stronger" },
+        { "ref": "kit:skills/sponsored-products-structure", "use": "build", "when": "When product-targeting campaigns need their place and names in the structure" },
+        { "ref": "library:retargeting-objection-ad-planner", "type": "skill", "use": "explore", "when": "When display ads will follow past visitors, to plan one message per doubt" },
+        { "ref": "kit:skills/break-even-acos-review", "use": "check", "when": "When display sales are counted on views, to judge them against margin with care" }
+      ]
+    },
+    {
+      "id": "diagnose-a-drop",
+      "task": "Find why ad results dropped or costs jumped",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:metric-drop-investigator", "type": "skill", "use": "build", "when": "When a number moved, to confirm the change, split it by group and rank the drivers" },
+        { "ref": "library:six-pattern-ad-performance-diagnoser", "type": "skill", "use": "build", "when": "When the cause is unclear, to test six possible causes and say how sure you are" },
+        { "ref": "library:ad-performance-diagnoser", "type": "skill", "use": "explore", "when": "When you want a second read that names one bottleneck and the fix to try first" },
+        { "ref": "library:trend-and-forecast-analyst", "type": "skill", "use": "check", "when": "When the change may be seasonal, to separate trend, season and odd spikes" }
+      ]
+    },
+    {
+      "id": "sale-event-budget",
+      "task": "Plan ad budget and pacing for a sale event",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:plan-a-big-sales-budget-and-daily-pacing", "type": "workflow", "use": "build", "when": "When a big sale is coming and you need a cost limit, an offer ladder and daily pacing" },
+        { "ref": "library:sale-season-pacing-sheet-builder", "type": "skill", "use": "build", "when": "When you have last year's sale data and need scale, hold and cut rules by day" },
+        { "ref": "library:marketing-budget-scenarios", "type": "skill", "use": "explore", "when": "When the budget is not fixed, to see low and high cases with diminishing returns" },
+        { "ref": "kit:skills/phase-bid-rules", "use": "build", "when": "When the event needs its own bid rules and a date to return to normal" },
+        { "ref": "kit:prompts/break-even-acos-table", "use": "check", "when": "When prices drop for the sale, to redo break-even ACOS at the sale price" }
+      ]
+    },
+    {
+      "id": "ads-report",
+      "task": "Write the client's ads report",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:marketing-performance-report", "type": "skill", "use": "build", "when": "When the numbers are ready and need trends, wins, misses and what to change next" },
+        { "ref": "library:seventeen-section-advertising-report-writer", "type": "skill", "use": "explore", "when": "When the client wants a fuller report with open issues and owners for next steps" },
+        { "ref": "library:data-chart-drawer", "type": "skill", "use": "build", "when": "When a trend needs a clean chart drawn from the export" },
+        { "ref": "library:ad-dashboard-reader", "type": "skill", "use": "check", "when": "Before making a scale, hold or cut call, to check you are not misreading a metric" },
+        { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before the report is sent, to check the method, the sums and any bias" }
+      ]
+    },
+    {
+      "id": "incrementality-test",
+      "task": "Test whether ads add sales or take organic ones",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:incrementality-test-planner", "type": "skill", "use": "build", "when": "When you can hold ads back on some products or regions and read the difference" },
+        { "ref": "library:experiment-designer", "type": "skill", "use": "build", "when": "When any bid or budget change should be run as a test with a clear way to read it" },
+        { "ref": "library:les-binet", "type": "mind", "use": "think", "when": "When brand-term ads look cheap, to ask whether those sales would have come anyway" },
+        { "ref": "library:a-b-test-verdict-maker", "type": "skill", "use": "check", "when": "When the test data is in, to check the split and give a call with a range" }
+      ]
+    },
+    {
+      "id": "keyword-list",
+      "task": "Build the keyword list for a product",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:amazon-keyword-picker", "type": "skill", "use": "build", "when": "When you have a keyword export and must choose which phrases to target and where" },
+        { "ref": "library:review-reason-spotter", "type": "prompt", "use": "brief", "when": "When you want the exact words buyers use for why they bought" },
+        { "ref": "library:amazon-search-gap-finder", "type": "skill", "use": "explore", "when": "When the obvious keywords are costly, to find searches page one serves badly" },
+        { "ref": "kit:skills/search-term-harvest", "use": "build", "when": "When past campaigns exist and their converting searches should seed the list" }
+      ]
+    },
+    {
+      "id": "listing-ready-check",
+      "task": "Check a listing is ready before spending on ads",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:amazon-product-edge-finder", "type": "skill", "use": "check", "when": "When clicks do not convert, to compare the listing with rivals and rank the fixes" },
+        { "ref": "library:marketplace-photo-rule-checker", "type": "skill", "use": "check", "when": "When images may be holding conversion back or risk a rejection" },
+        { "ref": "library:review-insight-finder", "type": "skill", "use": "brief", "when": "When reviews may explain a weak conversion rate, to rank the complaints" },
+        { "ref": "kit:skills/break-even-acos-review", "use": "check", "when": "When the listing cannot be fixed yet, to decide if ads should run on it at all" }
+      ]
+    },
+    {
+      "id": "export-data-check",
+      "task": "Clean and check ad exports before analysis",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:messy-spreadsheet-cleaner", "type": "skill", "use": "build", "when": "When exports have text numbers, mixed dates and duplicate rows" },
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "When you need gaps, duplicates and odd values listed before any sum is trusted" },
+        { "ref": "library:julius", "type": "tool", "use": "build", "when": "When the file is large and you want to ask it questions and chart it in plain words" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "When your own workbook joins several exports, to catch broken formulas" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before any finding goes to the client, to check the method and the sums" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a report or ad states a number or claim you cannot trace to the client's data" }
+  ],
+  "helpers": [
+    { "role": "amazon-marketplace-manager", "when": "When the listing, price, stock or account health is the real problem, not the ads" },
+    { "role": "ad-creative-strategist", "when": "When Sponsored Brands or video ads need concepts, angles and a test plan" },
+    { "role": "product-photographer", "when": "When weak images hold conversion back and a new image set is needed" },
+    { "role": "ecommerce-analyst", "when": "When ad data must be joined with store, stock and profit data across channels" },
+    { "role": "spreadsheet-specialist", "when": "When the weekly exports need a reusable workbook or bulk sheet template" },
+    { "role": "pricing-strategist", "when": "When no ACOS target works at the current price and the price itself must change" }
+  ],
+  "gaps": [
+    "No library item designs an Amazon Sponsored Products structure by product and match type; the campaign planners are for Google and Meta",
+    "No library item turns an Amazon search term report into harvest and negative lists with negative ASINs, set at the right level",
+    "No library item writes or checks an Amazon Ads bulk upload sheet",
+    "No library item sets Amazon bid rules by placement or time of day, or pauses ads when stock runs low",
+    "No library item builds Sponsored Brands or Sponsored Display campaigns, or covers Amazon DSP",
+    "No library item splits ad sales from organic sales to work out TACOS from Amazon business reports",
+    "No library item audits an Amazon Ads account; the account auditors cover Google, Meta, TikTok and LinkedIn",
+    "No library item reads Amazon Marketing Cloud or new-to-brand numbers",
+    "The library has fewer than 50 good fits for Amazon ads; most paid media items are built for Google and Meta"
+  ]
+}

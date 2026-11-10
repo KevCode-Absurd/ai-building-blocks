@@ -1,0 +1,288 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "bi-analyst",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "kpi-tree",
+      "task": "Turn a goal into a KPI tree of the few numbers that drive it",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/kpi-tree-from-goal", "use": "build", "when": "When there is a goal for the year or quarter and you need the drivers under it" },
+        { "ref": "library:input-metric-picker", "type": "skill", "use": "brief", "when": "When the client only reports results, to find the inputs they can control and test each" },
+        { "ref": "library:weekly-numbers-sheet-designer", "type": "prompt", "use": "explore", "when": "When a tree is too much for a small firm, to try a one-page sheet of seven numbers" },
+        { "ref": "library:vanity-metric-fixer", "type": "skill", "use": "check", "when": "When the tree is drafted, to find numbers that look good but do not show cause" },
+        { "ref": "library:andy-grove", "type": "mind", "use": "think", "when": "When a number can be gamed, to pair it with a second measure that guards quality" }
+      ]
+    },
+    {
+      "id": "metric-definitions",
+      "task": "Write exact metric definitions every team counts the same way",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/metric-definition-sheet", "use": "build", "when": "When the metrics are picked and each needs meaning, formula, grain, filters and owner" },
+        { "ref": "library:metric-definition-writer", "type": "skill", "use": "build", "when": "When one metric must be written as a checked definition file the data team can reuse" },
+        { "ref": "library:align-recurring-report-metric-definitions", "type": "workflow", "use": "check", "when": "When two reports count the same metric differently and you need worked examples of the gap" },
+        { "ref": "library:tim-harford", "type": "mind", "use": "think", "when": "When a number sounds clear, to ask what it really counts and what it leaves out" }
+      ]
+    },
+    {
+      "id": "dashboard-plan",
+      "task": "Plan what a new dashboard should measure and for whom",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/dashboard-from-brief-to-live", "use": "brief", "when": "When someone asks for a new dashboard and you need the steps and sign-off points in order" },
+        { "ref": "library:requirements-question-asker", "type": "skill", "use": "brief", "when": "When the request is one vague line, to ask the few questions that change the build" },
+        { "ref": "library:kpi-dashboard-designer", "type": "skill", "use": "build", "when": "When you know who reads it and what they decide, to pick the metrics and a first layout" },
+        { "ref": "library:cole-nussbaumer-knaflic", "type": "mind", "use": "think", "when": "When the plan lists twenty tiles, to cut it to what the reader must see and do" }
+      ]
+    },
+    {
+      "id": "dashboard-build-sheet",
+      "task": "Write a build sheet for one dashboard in the client's tool",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/dashboard-build-sheet", "use": "build", "when": "When the plan is agreed and a builder needs sources, joins, model, measures and pages" },
+        { "ref": "library:design-a-power-bi-report-layout", "type": "skill", "use": "build", "when": "When the tool is Power BI and you need pages, charts and filters laid out for the reader" },
+        { "ref": "library:dashboard-builder", "type": "skill", "use": "explore", "when": "When the client must see a working sample first, to mock it up from their data" },
+        { "ref": "library:edward-tufte", "type": "mind", "use": "think", "when": "When a page is full of gauges and colour, to keep only what helps people compare" },
+        { "ref": "kit:skills/dashboard-review-and-tie-out", "use": "check", "when": "Before go-live, to check each headline number against the accounts or source report" }
+      ]
+    },
+    {
+      "id": "write-measures",
+      "task": "Write measures or calculated fields with a worked check",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/write-a-measure-in-my-tool", "use": "build", "when": "When you know the number wanted but not how to write it in the client's BI tool" },
+        { "ref": "kit:skills/metric-definition-sheet", "use": "brief", "when": "Before writing a measure, to fix its grain, time window, filters and edge cases" },
+        { "ref": "library:plain-words-sql-writer", "type": "skill", "use": "build", "when": "When the measure is easier to build as a query in the client's database" },
+        { "ref": "library:plain-words-sql-explainer", "type": "skill", "use": "check", "when": "When you inherit a query behind a measure and must say what it counts and keeps" }
+      ]
+    },
+    {
+      "id": "data-model",
+      "task": "Design the tables and joins behind a dashboard",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/dashboard-build-sheet", "use": "build", "when": "When you need the fact and lookup tables, keys and joins written for this dashboard" },
+        { "ref": "library:column-mapping-document-writer", "type": "skill", "use": "build", "when": "When source columns must be mapped to model columns with a rule for each" },
+        { "ref": "library:review-a-power-bi-data-model", "type": "skill", "use": "check", "when": "When a Power BI model exists, to find risky links and tables and get a ranked fix list" },
+        { "ref": "library:excel-table-join-reconciler", "type": "skill", "use": "check", "when": "When two tables are joined, to list unmatched rows and duplicate keys before totals are trusted" }
+      ]
+    },
+    {
+      "id": "kpi-report",
+      "task": "Produce a one-page weekly or monthly KPI report",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/kpi-report-pack", "use": "build", "when": "When the metrics are agreed and you need five to seven numbers with trend, status and comment" },
+        { "ref": "library:build-a-weekly-kpi-report-with-a-forecast-and-dashboard", "type": "workflow", "use": "build", "when": "When the report must rerun each week and carry a trend, a forecast and a shareable view" },
+        { "ref": "library:recurring-kpi-report-maker", "type": "skill", "use": "build", "when": "When the owner describes the report in plain words and wants a workbook they can rerun" },
+        { "ref": "library:variance-commentary", "type": "skill", "use": "build", "when": "When each line that moved past a set limit needs a written reason" },
+        { "ref": "library:trend-and-forecast-analyst", "type": "skill", "use": "build", "when": "When the report should show trend, season and odd spikes, not only this period's figure" },
+        { "ref": "library:define-your-metrics-once-and-write-a-weekly-update-anyone-gets", "type": "workflow", "use": "explore", "when": "When readers skip the tables, to try a plain weekly update with pictures instead" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before the report goes out, to catch broken formulas and totals that do not add up" }
+      ]
+    },
+    {
+      "id": "board-pack",
+      "task": "Build a board or partner meeting pack from the numbers",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/kpi-report-pack", "use": "build", "when": "When the pack needs the KPI page, the top movements and the decisions asked for" },
+        { "ref": "library:board-deck-builder", "type": "skill", "use": "explore", "when": "When the pack is a deck, to outline the story and where the bad news should sit" },
+        { "ref": "library:prepare-a-board-decision-brief", "type": "workflow", "use": "build", "when": "When the board must decide something and needs the evidence mapped to each decision" },
+        { "ref": "library:nonprofit-executive-dashboard-planner", "type": "skill", "use": "build", "when": "When the client is a charity and staff and trustees need two different views" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When a long report must become one page with the answer and the decision first" },
+        { "ref": "library:excel-powerpoint-number-checker", "type": "skill", "use": "check", "when": "Before the pack is sent, to check every slide number and chart against the workbook" }
+      ]
+    },
+    {
+      "id": "exec-review-sheet",
+      "task": "Set up a weekly executive review sheet",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:weekly-numbers-sheet-designer", "type": "prompt", "use": "build", "when": "When leaders want one page of at most seven numbers, each with a source and an owner" },
+        { "ref": "kit:skills/kpi-report-pack", "use": "build", "when": "When the sheet needs a status, a comparison and one plain comment for each number" },
+        { "ref": "library:product-metrics-review-writer", "type": "skill", "use": "build", "when": "When the review covers a product, to set trends against targets and say what moved" },
+        { "ref": "library:vanity-metric-fixer", "type": "skill", "use": "check", "when": "When the sheet is drafted, to drop numbers nobody can act on" }
+      ]
+    },
+    {
+      "id": "numbers-mismatch",
+      "task": "Find out why two numbers do not match and which to trust",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/why-dont-these-numbers-match", "use": "build", "when": "When the dashboard and the accounts, or two reports, differ for the same thing" },
+        { "ref": "kit:skills/dashboard-review-and-tie-out", "use": "check", "when": "When you need the full walk from source to report with each difference explained" },
+        { "ref": "library:report-definition-drift-review-assistant", "type": "agent", "use": "check", "when": "When a recurring report changed quietly and you must find where the definition moved" },
+        { "ref": "library:excel-table-join-reconciler", "type": "skill", "use": "check", "when": "When the gap may come from a join, to list unmatched rows and duplicate keys" },
+        { "ref": "library:conversion-reconciliation", "type": "skill", "use": "check", "when": "When the gap is between ad platforms and web analytics, to explain each difference" },
+        { "ref": "library:ga4-raw-data-analyst", "type": "skill", "use": "check", "when": "When the raw web analytics export and its own screen disagree on sessions or sign-ups" },
+        { "ref": "library:metric-mismatch-tracer", "type": "skill", "use": "check", "when": "When one number differs between two reports, to find the step where they split" }
+      ]
+    },
+    {
+      "id": "dashboard-review",
+      "task": "Review a slow, stale or ignored dashboard and list the fixes",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/dashboard-review-and-tie-out", "use": "check", "when": "When a dashboard is wrong, slow, stale or unused and you need ranked fixes" },
+        { "ref": "library:diagnose-a-slow-power-bi-report", "type": "skill", "use": "check", "when": "When a Power BI report is slow and you need a plan to test each likely cause" },
+        { "ref": "library:review-a-power-bi-data-model", "type": "skill", "use": "check", "when": "When wrong totals point to the model, to find risky links between tables" },
+        { "ref": "library:slow-query-fixer", "type": "skill", "use": "build", "when": "When one query behind the report is slow and needs a faster version" },
+        { "ref": "library:agency-engineering-data-visualization-engineer", "type": "agent", "use": "check", "when": "When the charts themselves may mislead, to check chart types, axes and colours" }
+      ]
+    },
+    {
+      "id": "dashboard-health-check",
+      "task": "Run a quarterly health check on live dashboards",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/quarterly-dashboard-health-check", "use": "check", "when": "Each quarter, and after any change of till, CRM, booking or accounts system" },
+        { "ref": "library:data-quality-scorecard-maker", "type": "skill", "use": "check", "when": "When you need blanks, duplicates, broken links and stale data scored for each source" },
+        { "ref": "library:excel-pivot-refresh-planner", "type": "skill", "use": "check", "when": "When the report is a workbook, to find stale pivots and set the refresh order" },
+        { "ref": "library:report-definition-drift-review-assistant", "type": "agent", "use": "check", "when": "When a metric's meaning may have changed since the last check" }
+      ]
+    },
+    {
+      "id": "spreadsheet-to-bi",
+      "task": "Move a spreadsheet dashboard into a BI tool",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/spreadsheet-dashboard-to-bi-plan", "use": "build", "when": "When a many-tab workbook must move to a BI tool without losing its logic" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "Before copying any logic, to find formula errors and broken links in the old workbook" },
+        { "ref": "library:excel-handover-guide-writer", "type": "skill", "use": "brief", "when": "When nobody knows how the workbook works, to write down inputs, formulas and update steps" },
+        { "ref": "library:column-mapping-document-writer", "type": "skill", "use": "build", "when": "When each old column needs a home in the new model, with rules and open gaps" },
+        { "ref": "kit:workflows/dashboard-from-brief-to-live", "use": "build", "when": "When the move is agreed and you need the build, test and go-live steps" }
+      ]
+    },
+    {
+      "id": "pivot-report-workbook",
+      "task": "Build pivot summaries and a monthly workbook anyone can refresh",
+      "kind": "other",
+      "items": [
+        { "ref": "library:excel-monthly-rollup-builder", "type": "skill", "use": "build", "when": "When dated records must become a monthly summary with counts and totals you can trace" },
+        { "ref": "library:build-a-monthly-excel-and-powerpoint-update", "type": "workflow", "use": "build", "when": "When the monthly workbook also feeds an update deck that must match it" },
+        { "ref": "library:excel-pivot-refresh-planner", "type": "skill", "use": "build", "when": "When the workbook has several pivots and needs a safe refresh order and source checks" },
+        { "ref": "library:julius", "type": "tool", "use": "explore", "when": "When you want to try cross-tabs and charts on an export quickly before building the workbook" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before the workbook is shared, to find wrong totals and broken formulas" }
+      ]
+    },
+    {
+      "id": "utilisation-heatmap",
+      "task": "Show which hours, rooms and staff sit idle from a booking export",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/utilisation-heatmap-from-bookings", "use": "build", "when": "When a salon, clinic, gym or venue wants idle hours shown by hour and day" },
+        { "ref": "library:data-chart-drawer", "type": "skill", "use": "build", "when": "When the heatmap or table must be drawn as a clean chart from the client's data" },
+        { "ref": "library:shift-schedule-builder", "type": "skill", "use": "build", "when": "When quiet and busy hours are known, to fit the rota to them with a cost check" },
+        { "ref": "library:reconcile-service-capacity-and-shared-cost", "type": "workflow", "use": "check", "when": "When the owner asks what unused hours cost, with idle capacity on its own line" }
+      ]
+    },
+    {
+      "id": "chart-specs",
+      "task": "Pick the right chart for each number and write its spec",
+      "kind": "other",
+      "items": [
+        { "ref": "library:data-chart-drawer", "type": "skill", "use": "build", "when": "When you have the data and need a clean chart of the right type" },
+        { "ref": "library:interactive-visual-builder", "type": "skill", "use": "explore", "when": "When readers should try filters or sliders, to draft an interactive version to compare" },
+        { "ref": "library:agency-engineering-data-visualization-engineer", "type": "agent", "use": "check", "when": "When a chart is drafted, to check the type, axes and colours do not mislead" },
+        { "ref": "library:edward-tufte", "type": "mind", "use": "think", "when": "When a chart decorates more than it compares" }
+      ]
+    },
+    {
+      "id": "team-dashboards",
+      "task": "Plan a dashboard for one team: sales, marketing, HR or stock",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:marketing-scorecard-builder", "type": "skill", "use": "build", "when": "When marketing wants short-term and long-term measures on one scorecard" },
+        { "ref": "library:pipeline-stage-health-reviewer", "type": "skill", "use": "build", "when": "When the sales view needs coverage, ageing and conversion stage by stage" },
+        { "ref": "library:hr-metrics-and-report-builder", "type": "skill", "use": "build", "when": "When the people team needs its metrics defined and a monthly report laid out" },
+        { "ref": "library:supply-chain-dashboard-designer", "type": "skill", "use": "build", "when": "When operations need one screen for delays, low stock and orders at risk" },
+        { "ref": "library:new-customer-profit-dashboard-builder", "type": "skill", "use": "build", "when": "When an online shop wants a daily sheet of new-customer cost and profit" },
+        { "ref": "library:product-metrics-planner", "type": "skill", "use": "build", "when": "When a software product needs its KPIs, a layout and a way to read retention" }
+      ]
+    },
+    {
+      "id": "report-sql",
+      "task": "Write and check the SQL behind a report",
+      "kind": "code",
+      "items": [
+        { "ref": "library:plain-words-sql-writer", "type": "skill", "use": "build", "when": "When you can say the number in plain words and need a working query for the database" },
+        { "ref": "library:sql-query-launch-reviewer", "type": "skill", "use": "check", "when": "Before a query feeds a live report, to find wrong-result risks and slow spots" },
+        { "ref": "library:data-warehouse-query-reviewer", "type": "skill", "use": "check", "when": "When a query runs on a warehouse, to check joins, privacy and that it only reads" },
+        { "ref": "library:hex", "type": "tool", "use": "build", "when": "When the team wants to ask the company data and see each step behind the answer" }
+      ]
+    },
+    {
+      "id": "metric-moved",
+      "task": "Explain why a number moved",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:metric-drop-investigator", "type": "skill", "use": "build", "when": "When a number moved and you must confirm it, split it by group and rank the drivers" },
+        { "ref": "library:numbers-drop-explainer", "type": "prompt", "use": "explore", "when": "When you only have before and after figures, to rank likely causes and what to check" },
+        { "ref": "library:variance-commentary", "type": "skill", "use": "build", "when": "When the reason must be written as a short comment beside each line" },
+        { "ref": "library:findings-and-guesses-separator", "type": "skill", "use": "check", "when": "Before the explanation is shared, to mark what is proven, likely or a guess" }
+      ]
+    },
+    {
+      "id": "okrs-from-tree",
+      "task": "Tie quarterly goals to the KPI tree",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/kpi-tree-from-goal", "use": "brief", "when": "When the quarter's goals should hang off the same tree as the dashboard" },
+        { "ref": "library:okr-writer", "type": "skill", "use": "build", "when": "When goals need clear objectives, measurable key results and a mid-quarter check" },
+        { "ref": "library:input-metric-picker", "type": "skill", "use": "check", "when": "When key results are all outcomes, to swap in inputs the team can move" },
+        { "ref": "library:andy-grove", "type": "mind", "use": "think", "when": "When there are too many goals, to find the limiting step and the right owner" }
+      ]
+    },
+    {
+      "id": "alerts-and-targets",
+      "task": "Set targets, thresholds and alerts for key numbers",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:the-monitoring-loop-always-watching-implementation-planner", "type": "skill", "use": "build", "when": "When numbers need baselines, warning levels and quiet periods so alerts stay few" },
+        { "ref": "kit:skills/metric-definition-sheet", "use": "brief", "when": "Before setting a limit, to confirm the metric's window, filters and owner" },
+        { "ref": "library:trend-and-forecast-analyst", "type": "skill", "use": "brief", "when": "When a target must allow for trend and season, not last month alone" }
+      ]
+    },
+    {
+      "id": "report-handover",
+      "task": "Write a guide so someone else can run the report",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:excel-handover-guide-writer", "type": "skill", "use": "build", "when": "When the report is a workbook and its next owner needs inputs, steps and risks" },
+        { "ref": "library:make-a-recurring-process-easier-to-hand-over", "type": "workflow", "use": "build", "when": "When you have one real run of the report and need a procedure and an exceptions guide" },
+        { "ref": "library:repeat-task-step-guide-writer", "type": "skill", "use": "build", "when": "When the refresh needs exact steps, fixes if it fails and who to call" },
+        { "ref": "library:data-catalog-entry-writer", "type": "skill", "use": "build", "when": "When the guide should say what each source table and column means" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:requirements-question-asker", "type": "skill", "use": "brief", "when": "Before any build, when the request does not say who reads it or what they decide" },
+    { "ref": "library:findings-and-guesses-separator", "type": "skill", "use": "check", "when": "Before any comment on the numbers goes out, to separate what is proven from guesses" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a report or pack is sent, to catch typos and a metric named two ways" }
+  ],
+  "helpers": [
+    { "role": "data-engineer", "when": "When the sources must be loaded into one warehouse before any dashboard can be built" },
+    { "role": "data-visualisation-specialist", "when": "When charts need accessible colours, alt text or a designed infographic or deck" },
+    { "role": "data-analyst", "when": "When a question needs a one-off deep dive, a clean-up of messy exports or a forecast" },
+    { "role": "data-quality-analyst", "when": "When the source data is unreliable and needs a dictionary, quality rules or a duplicate clean-up" },
+    { "role": "spreadsheet-specialist", "when": "When the report stays in Excel or Sheets and needs complex formulas or a rebuilt workbook" },
+    { "role": "management-accountant", "when": "When dashboard figures must tie to the management accounts line by line" }
+  ],
+  "gaps": [
+    "No library item writes DAX measures, Data Studio calculated fields, Tableau calculations or Metabase questions; only the kit prompt covers it",
+    "No library item covers Data Studio (Looker Studio), Tableau or Metabase build or review; the only tool-specific items are three for Power BI",
+    "No library item designs a star schema or date table for reporting; only general database schema planners exist",
+    "No library item builds pivot tables or cross-tabs from an export, step by step",
+    "No library item turns a booking export into a utilisation heatmap, or proposes pricing and offers for quiet hours",
+    "No library item lists a firm's reports and usage so unused dashboards can be retired",
+    "No library item plans dashboard access, row-level security or who may see which figures",
+    "No library item drafts two or three dashboard layouts to compare before the build",
+    "No library item plans scheduled refresh, gateways or what to do when a refresh fails",
+    "No library item walks a dashboard total back to the accounts or till line by line; only the kit skill does the full tie-out"
+  ]
+}

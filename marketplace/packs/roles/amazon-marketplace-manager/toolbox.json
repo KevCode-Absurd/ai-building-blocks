@@ -1,0 +1,263 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "amazon-marketplace-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "amazon-listing",
+      "task": "Write or rewrite an Amazon listing",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:amazon-keyword-picker", "type": "skill", "use": "brief", "when": "Before writing, to pick which phrases go in the title, the bullets and the backend" },
+        { "ref": "library:amazon-product-edge-finder", "type": "skill", "use": "brief", "when": "When rivals crowd the page, to find their weak spots and your best selling points" },
+        { "ref": "kit:skills/amazon-listing-builder", "use": "build", "when": "When you have the product's real facts and the words shoppers use" },
+        { "ref": "library:amazon-listing-first-draft-writer", "type": "prompt", "use": "explore", "when": "When you want a fast second draft of title and bullets to compare against the first" },
+        { "ref": "library:amazon-listing-writer", "type": "skill", "use": "explore", "when": "When keywords are sorted into tiers, to see a version that leads with benefits" },
+        { "ref": "library:claude-hopkins", "type": "mind", "use": "think", "when": "When the bullets are vague praise, to replace each with a fact a shopper can check" },
+        { "ref": "kit:prompts/listing-rule-check", "use": "check", "when": "Before publishing a new or edited listing, to catch what Amazon would flag" }
+      ]
+    },
+    {
+      "id": "listing-rule-check",
+      "task": "Check a listing against Amazon's rules or fix a flagged one",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/listing-rule-check", "use": "check", "when": "When a listing is flagged or suppressed, or before any edit goes live" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When the copy makes health, safety or best-in-class claims that need proof" },
+        { "ref": "library:marketplace-photo-rule-checker", "type": "skill", "use": "check", "when": "When the images may be the cause, to get a pass or reject for each photo" },
+        { "ref": "library:ad-claim-proof-gap-finder", "type": "prompt", "use": "check", "when": "When you hold the proof, to pair each claim with it and see the gaps" }
+      ]
+    },
+    {
+      "id": "review-complaint-mining",
+      "task": "Mine reviews for complaints, wants and buyer words",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/review-complaint-mining", "use": "build", "when": "When researching a niche, improving a product or writing a listing from reviews" },
+        { "ref": "library:star-rating-review-miner", "type": "skill", "use": "build", "when": "When you want reviews split by star rating to see what each group says" },
+        { "ref": "library:review-insight-finder", "type": "skill", "use": "build", "when": "When you need complaints, praise and requests ranked by how often they come up" },
+        { "ref": "library:review-reason-spotter", "type": "prompt", "use": "build", "when": "When you want the reasons people bought, each in a customer's exact words" },
+        { "ref": "library:fake-review-spotter", "type": "skill", "use": "check", "when": "Before trusting a rival's reviews, to rate them for signs of fake or bought ones" }
+      ]
+    },
+    {
+      "id": "product-gap-report",
+      "task": "Judge whether a niche or product idea is worth selling",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/product-opportunity-research", "use": "build", "when": "When a client asks if a product idea or niche is worth it on Amazon" },
+        { "ref": "library:amazon-search-gap-finder", "type": "skill", "use": "explore", "when": "When the client has a category but no idea, to find searches page one does not serve" },
+        { "ref": "library:pain-point-niche-finder", "type": "skill", "use": "explore", "when": "When you want ideas from buyer problems, not from keywords, to compare both routes" },
+        { "ref": "library:amazon-market-researcher", "type": "skill", "use": "brief", "when": "When the client pays for a data service and you need rank, review and seller numbers" },
+        { "ref": "library:competitor-saturation-checker", "type": "skill", "use": "check", "when": "When an idea looks good, to check how many sellers and how strong they are" },
+        { "ref": "library:carl-bergstrom", "type": "mind", "use": "think", "when": "When a research tool shows a big sales number, to ask what it really measures" }
+      ]
+    },
+    {
+      "id": "idea-scorecard",
+      "task": "Rank several product ideas on one scorecard",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:amazon-product-viability-scorer", "type": "skill", "use": "build", "when": "When each idea has costs, to score it out of 100 and name its weakest test" },
+        { "ref": "library:find-an-amazon-product-gap-and-check-it-will-pay", "type": "workflow", "use": "build", "when": "When you want ideas found and one scored to a go, test first or no-go" },
+        { "ref": "library:find-a-product-idea-in-buyer-complaints-and-score-it", "type": "workflow", "use": "explore", "when": "When the list is thin, to add ideas that come from what buyers complain about" },
+        { "ref": "library:product-idea-risk-checker", "type": "skill", "use": "check", "when": "Before stock is ordered, to score the four risks and find the cheapest first test" },
+        { "ref": "library:noah-kagan", "type": "mind", "use": "think", "when": "When an idea scores well on paper, to plan a small paid test before a full order" }
+      ]
+    },
+    {
+      "id": "unit-profit-break-even",
+      "task": "Work out unit profit, fees and break-even ACOS",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:landed-cost-calculator", "type": "skill", "use": "brief", "when": "Before the profit sum, to get cost per sellable unit from the quote and freight" },
+        { "ref": "kit:prompts/unit-profit-and-break-even", "use": "build", "when": "Before ordering stock or setting an ad budget, or when sales are good but cash is not" },
+        { "ref": "library:amazon-fee-and-margin-checker", "type": "skill", "use": "check", "when": "When you want every Amazon fee listed by size tier and the margin scored" },
+        { "ref": "library:amazon-unit-profit-checker", "type": "prompt", "use": "check", "when": "When you need a quick second sum of profit per unit and break-even ad cost" },
+        { "ref": "library:landed-cost-allocator", "type": "skill", "use": "build", "when": "When one shipment carried several products and freight and duty must be split" },
+        { "ref": "library:benjamin-graham", "type": "mind", "use": "think", "when": "When the margin only works if nothing goes wrong, to ask how much room for error is left" }
+      ]
+    },
+    {
+      "id": "trend-brief",
+      "task": "Write a trend brief or monthly scan of new ideas",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:agency-product-trend-researcher", "type": "agent", "use": "build", "when": "When a trend must be judged real or not, with its stage, risks and next steps" },
+        { "ref": "library:recent-topic-pulse-researcher", "type": "skill", "use": "brief", "when": "When you need a cited read of what people have said about a topic lately" },
+        { "ref": "library:product-demand-researcher", "type": "skill", "use": "brief", "when": "When you want the pain points and buying signals people post, with links" },
+        { "ref": "library:long-run-effects-checker", "type": "skill", "use": "check", "when": "Before the client acts, to make a fad or lasting-shift call on each item" }
+      ]
+    },
+    {
+      "id": "launch-plan",
+      "task": "Build a 90-day Amazon launch plan for one product",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/unit-profit-and-break-even", "use": "brief", "when": "Before the plan, to fix the margin and the ad cost the product can carry" },
+        { "ref": "kit:skills/amazon-launch-plan", "use": "build", "when": "When one product needs a 90-day plan built from its real margin and budget" },
+        { "ref": "library:launch-an-amazon-product-with-sales-from-day-one", "type": "workflow", "use": "build", "when": "When listing, launch ads, stock and launch week must be planned in one run" },
+        { "ref": "library:amazon-launch-week-planner", "type": "skill", "use": "build", "when": "When you need the days before and after go-live planned for early sales and reviews" },
+        { "ref": "library:amazon-ppc-launch-builder", "type": "skill", "use": "build", "when": "When the launch needs its first auto, keyword and competitor campaigns with bids" },
+        { "ref": "library:jeff-bezos", "type": "mind", "use": "think", "when": "When the plan is built around the seller's hopes, to restart from what the customer needs" }
+      ]
+    },
+    {
+      "id": "idea-to-launch",
+      "task": "Take a new product from idea to launch",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/idea-to-launch", "use": "build", "when": "When a client wants to sell a new product, or choose between ideas, before ordering stock" },
+        { "ref": "kit:skills/product-opportunity-research", "use": "brief", "when": "At the start, to decide whether the idea is worth the next step" },
+        { "ref": "library:get-a-product-made-right-from-tech-pack-to-inspected-shipment", "type": "workflow", "use": "build", "when": "When the idea passes and the product must be specified, made and inspected" },
+        { "ref": "kit:skills/amazon-launch-plan", "use": "build", "when": "When stock is on order and the first 90 days need planning" }
+      ]
+    },
+    {
+      "id": "monthly-account-check",
+      "task": "Run the monthly Amazon account check",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/monthly-account-review", "use": "build", "when": "In the first week after the month closes, to run the review in order" },
+        { "ref": "kit:skills/amazon-account-check", "use": "check", "when": "When the client has exported the month's reports and wants the account checked" },
+        { "ref": "library:amazon-monthly-account-keeper", "type": "agent", "use": "check", "when": "When margins, restock and refund claims should be checked from the same reports" },
+        { "ref": "library:metric-drop-investigator", "type": "skill", "use": "check", "when": "When sales or conversion fell, to confirm the change and rank what drove it" },
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "Before reading any report, to catch gaps, duplicates and odd values in the export" },
+        { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before the review goes to the client, to check the method and the sums" }
+      ]
+    },
+    {
+      "id": "search-term-review",
+      "task": "Review the search term report",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/search-term-report-review", "use": "build", "when": "Weekly in a launch and monthly after, to find searches that pay and searches that waste" },
+        { "ref": "library:search-term-sorter", "type": "skill", "use": "check", "when": "When you want a second sort into winners, negatives and a waste score" },
+        { "ref": "library:amazon-keyword-picker", "type": "skill", "use": "build", "when": "When winning searches should be moved into the title, bullets or backend" }
+      ]
+    },
+    {
+      "id": "reimbursement-claims",
+      "task": "Claim back lost, damaged or missing FBA stock",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:amazon-reimbursement-claim-finder", "type": "skill", "use": "brief", "when": "When you have shipment and fee reports, to find which claims are worth filing" },
+        { "ref": "kit:prompts/reimbursement-claim-pack", "use": "build", "when": "When stock is lost, damaged or short on an inbound shipment and Amazon has not paid" },
+        { "ref": "library:ship-stock-to-amazon-and-claim-back-what-goes-missing", "type": "workflow", "use": "build", "when": "When you want the shipment planned so that any later claim has its proof ready" },
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "Before filing, to check the shipment and receipt records for gaps and duplicates" }
+      ]
+    },
+    {
+      "id": "inbound-and-restock",
+      "task": "Plan inbound shipments and restock dates",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:amazon-inbound-stock-planner", "type": "skill", "use": "build", "when": "When you know sales, lead times and case sizes and need how much to send and when" },
+        { "ref": "library:demand-and-stock-planner", "type": "skill", "use": "brief", "when": "When there is sales history, to forecast demand and set safety stock first" },
+        { "ref": "library:stock-and-reorder-planner", "type": "skill", "use": "check", "when": "When you want reorder points and an ABC ranking to test the plan against" },
+        { "ref": "library:weekly-stock-and-cash-reorder-watcher", "type": "agent", "use": "check", "when": "Each week, to see what to reorder and whether cash can cover it" },
+        { "ref": "library:inbound-shipment-tracker-builder", "type": "skill", "use": "build", "when": "When several shipments are moving and need one shared tracker" }
+      ]
+    },
+    {
+      "id": "sourcing-and-samples",
+      "task": "Request supplier quotes and approve samples",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:supplier-quote-request-writer", "type": "skill", "use": "build", "when": "When buyer complaints should shape the spec, to write a quote request in maker terms" },
+        { "ref": "library:supplier-quote-comparer", "type": "skill", "use": "check", "when": "When quotes are back, to set price, minimum order, lead time and risk side by side" },
+        { "ref": "library:product-sample-approval-loop", "type": "agent", "use": "check", "when": "When samples arrive, to get go or hold and the fixes to send the factory" },
+        { "ref": "library:pre-shipment-inspection-brief-writer", "type": "skill", "use": "build", "when": "Before the final payment, to brief an inspector with a pass rule" }
+      ]
+    },
+    {
+      "id": "pricing-and-promotions",
+      "task": "Set prices, repricing rules and promotions",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:price-position-planner", "type": "skill", "use": "build", "when": "When you have costs and rival offers and need a price and rules for rival discounts" },
+        { "ref": "library:price-test-planner", "type": "skill", "use": "explore", "when": "When the right price is unclear, to plan a test with three outcomes you can undo" },
+        { "ref": "library:repricing-rules-designer", "type": "skill", "use": "build", "when": "When prices will move by rule and need floors, test cases and a kill switch" },
+        { "ref": "library:promotion-and-stock-planner", "type": "skill", "use": "build", "when": "When coupons or deals are planned, to size the lift, the cost and the extra stock" },
+        { "ref": "kit:prompts/unit-profit-and-break-even", "use": "check", "when": "Before any price or deal goes live, to check the unit still makes money" }
+      ]
+    },
+    {
+      "id": "brand-registry-and-protection",
+      "task": "Set up brand registry and deal with hijackers",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:amazon-brand-registry-planner", "type": "skill", "use": "build", "when": "When the brand is not registered, to choose a trademark route and the tools to turn on" },
+        { "ref": "library:amazon-brand-protection-planner", "type": "skill", "use": "check", "when": "When another seller is on the listing or fakes appear, to check and draft complaints" },
+        { "ref": "kit:skills/amazon-account-check", "use": "check", "when": "Each month, to see lost buy box share or new sellers on your listings early" }
+      ]
+    },
+    {
+      "id": "listing-images",
+      "task": "Plan the listing's image set and main image test",
+      "kind": "other",
+      "items": [
+        { "ref": "library:product-page-gallery-planner", "type": "skill", "use": "build", "when": "When you have photos and facts and need an eight-image plan with a gaps list" },
+        { "ref": "library:main-image-a-b-test-planner", "type": "skill", "use": "explore", "when": "When the main image must win the click, to plan versions that change one thing each" },
+        { "ref": "library:pack-and-thumbnail-glance-tester", "type": "skill", "use": "check", "when": "When the image is seen as a small thumbnail, to score what reads in three seconds" },
+        { "ref": "library:marketplace-photo-rule-checker", "type": "skill", "use": "check", "when": "Before upload, to catch photos Amazon would reject" }
+      ]
+    },
+    {
+      "id": "rival-teardown",
+      "task": "Tear down rival listings to find your edge",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:amazon-product-edge-finder", "type": "skill", "use": "build", "when": "When you have rival listings and reviews and need their weak spots ranked" },
+        { "ref": "kit:prompts/review-complaint-mining", "use": "brief", "when": "Before the teardown, to pull what buyers dislike about each rival" },
+        { "ref": "library:competitor-product-analyst", "type": "skill", "use": "build", "when": "When price and features must be set against yours with gaps to act on" },
+        { "ref": "library:untapped-avatar-finder", "type": "skill", "use": "explore", "when": "When the product is crowded, to find buyer groups the rivals do not serve" }
+      ]
+    },
+    {
+      "id": "reviews-and-returns",
+      "task": "Get more reviews within the rules and cut returns",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:review-request-and-reply-planner", "type": "skill", "use": "build", "when": "When reviews are few, to plan when and how to ask and how to answer a bad one" },
+        { "ref": "library:monthly-returns-and-refunds-reviewer", "type": "agent", "use": "check", "when": "Each month, to find the products driving refunds, why and what it costs" },
+        { "ref": "kit:prompts/review-complaint-mining", "use": "brief", "when": "When returns rise, to see whether reviews name the same fault" },
+        { "ref": "kit:prompts/listing-rule-check", "use": "check", "when": "Before any insert or message asks for a review, to check it against Amazon's rules" }
+      ]
+    },
+    {
+      "id": "new-marketplace",
+      "task": "Plan a move into another Amazon country",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:overseas-market-planner", "type": "skill", "use": "build", "when": "When the client wants to sell abroad and needs countries ranked with shipping and tax costs" },
+        { "ref": "library:agency-marketing-cross-border-ecommerce", "type": "agent", "use": "build", "when": "When margin per product and compliance to-dos are needed for each marketplace" },
+        { "ref": "library:trade-compliance-checklist", "type": "skill", "use": "check", "when": "Before stock ships across a border, to list the rules that apply and who owns each" },
+        { "ref": "kit:prompts/unit-profit-and-break-even", "use": "check", "when": "When fees and freight differ by country, to redo the unit sum for each one" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a listing or report states a number or claim you cannot trace to the client" },
+    { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "Before any workings go to the client, to catch formula errors and broken links" }
+  ],
+  "helpers": [
+    { "role": "amazon-ppc-specialist", "when": "When ads need a full structure, weekly search term work and bid rules" },
+    { "role": "product-photographer", "when": "When the listing needs a new image set shot or specified for Amazon" },
+    { "role": "ecommerce-copywriter", "when": "When many listings or A+ pages need writing in one brand voice" },
+    { "role": "supply-chain-planner", "when": "When stock planning spans several suppliers, long lead times or more than one warehouse" },
+    { "role": "physical-product-developer", "when": "When review complaints call for a changed product, not a changed listing" },
+    { "role": "bookkeeper", "when": "When Amazon payouts must be matched to the books and fees split out" }
+  ],
+  "gaps": [
+    "No library item writes A+ content, a brand story or an Amazon storefront plan",
+    "No library item handles account health: policy warnings, a suppressed listing or a suspension appeal and plan of action",
+    "No library item sets up variations: parent and child listings, and when to split or merge them",
+    "No library item matches Amazon settlement reports to payouts and fees line by line",
+    "No library item covers product compliance for Amazon: safety documents, labels and restricted categories",
+    "No library item plans Amazon coupons, Lightning Deals, Prime Day or Subscribe and Save offers by name",
+    "No library item answers customer questions on a listing or plans the question and answer section",
+    "No library item covers Walmart, eBay or other marketplaces when the client asks to copy a listing across",
+    "No library item tracks keyword rank and buy box share week by week"
+  ]
+}

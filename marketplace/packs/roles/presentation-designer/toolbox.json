@@ -1,0 +1,309 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "presentation-designer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "deck-layout-plan",
+      "task": "Turn a crowded deck or notes into a slide-by-slide plan",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:workflows/deck-from-notes-to-handoff", "use": "brief", "when": "When a talk, pitch or training deck is due and you start from notes or a crowded deck" },
+        { "ref": "kit:skills/deck-layout-plan", "use": "build", "when": "When each slide must make one point with a sentence headline, a layout type and zones" },
+        { "ref": "library:pitch-arc-planner", "type": "skill", "use": "brief", "when": "Before the slide plan, to set an outline that builds belief and ends in a clear ask" },
+        { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "When every slide is a title and bullets, to get three hand-made alternatives" },
+        { "ref": "library:storyboard-to-powerpoint-deck-builder", "type": "skill", "use": "build", "when": "When the plan is agreed and the client wants a storyboard and a PowerPoint file from it" },
+        { "ref": "kit:prompts/accessibility-check", "use": "check", "when": "Before the deck is presented or shared, to catch low contrast and missing titles" },
+        { "ref": "library:nancy-duarte", "type": "mind", "use": "think", "when": "When the deck lists facts in order and has no story or request" }
+      ]
+    },
+    {
+      "id": "slide-crowding",
+      "task": "Fix a slide that says too much",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/slide-crowding-fix", "use": "build", "when": "When a slide has too much text, two messages or a heading that says nothing" },
+        { "ref": "library:word-picture-explainer", "type": "skill", "use": "explore", "when": "When words could become a picture, to plan a visual that pairs with a short line" },
+        { "ref": "library:ten-percent-cutter", "type": "skill", "use": "build", "when": "When the text must lose words without losing the point" },
+        { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When the slide is rebuilt, to see where the eye lands first and what to cut" },
+        { "ref": "library:garr-reynolds", "type": "mind", "use": "think", "when": "When the slide is really a document and the detail belongs in a handout" }
+      ]
+    },
+    {
+      "id": "new-deck-story",
+      "task": "Write the story and slide text for a new deck",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/deck-layout-plan", "use": "build", "when": "When the story is set and each slide needs its headline and what goes where" },
+        { "ref": "library:pitch-arc-planner", "type": "skill", "use": "explore", "when": "When the order is open, to get an arc for this audience and this decision to react to" },
+        { "ref": "library:data-story-writer", "type": "skill", "use": "build", "when": "When the deck rests on numbers, to turn them into the point, the proof and the next step" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When the source is a long report, to put the answer and the decision on one opening slide" },
+        { "ref": "library:pitch-deck-checker-10-20-30", "type": "skill", "use": "check", "when": "When the draft runs long, to test slide count, talk time and type size" }
+      ]
+    },
+    {
+      "id": "pitch-deck",
+      "task": "Design an investor pitch deck",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/deck-layout-plan", "use": "build", "when": "When the founder has the content and needs a layout where each slide makes one point" },
+        { "ref": "library:prepare-a-funding-pitch-evidence-appendix", "type": "workflow", "use": "build", "when": "When every claim needs a dated source in a backup section" },
+        { "ref": "library:editable-slide-deck-builder", "type": "skill", "use": "build", "when": "When the deck must be a PowerPoint file with real editable text, tables and charts" },
+        { "ref": "library:pitch-deck-checker-10-20-30", "type": "skill", "use": "check", "when": "Before it is sent, to score slide count, length and type size and get a cut list" },
+        { "ref": "library:guy-kawasaki", "type": "mind", "use": "think", "when": "When the deck has thirty slides and the purpose is not clear by slide two" }
+      ]
+    },
+    {
+      "id": "sales-deck",
+      "task": "Design a sales or customer deck",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/deck-layout-plan", "use": "build", "when": "When the sales story is known and each slide needs its layout and headline" },
+        { "ref": "library:audit-to-sales-presentation-planner", "type": "skill", "use": "build", "when": "When the deck follows an audit, to turn findings into a ten-slide story with proof" },
+        { "ref": "library:customer-one-pager-deck", "type": "skill", "use": "explore", "when": "When the buyer may want a one-pager or leave-behind in place of a full deck" },
+        { "ref": "library:finance-deck-quality-checker", "type": "skill", "use": "check", "when": "Before it goes to a client, to find number mismatches, weak wording and format slips" }
+      ]
+    },
+    {
+      "id": "talk-slides",
+      "task": "Make visual-first slides for a talk or webinar",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/deck-layout-plan", "use": "build", "when": "When the talk is written and the slides should carry pictures and few words" },
+        { "ref": "library:prepare-a-webinar-people-can-follow", "type": "workflow", "use": "build", "when": "When it is a webinar that must teach one clear result, with outline and deck" },
+        { "ref": "library:slide-deck-image-maker", "type": "skill", "use": "explore", "when": "When the client wants to see a version with one drawn image per slide" },
+        { "ref": "library:conference-talk-slide-maker", "type": "skill", "use": "build", "when": "When the talk comes from a finished paper and needs slides, notes and a script" },
+        { "ref": "library:powerpoint-speaker-note-builder", "type": "skill", "use": "build", "when": "When the slides are light and the speaker needs notes, transitions and timings" },
+        { "ref": "kit:prompts/accessibility-check", "use": "check", "when": "Before the talk, to check the slides read from the back of the room and on a small screen" },
+        { "ref": "library:garr-reynolds", "type": "mind", "use": "think", "when": "When the speaker plans to read the slides aloud" }
+      ]
+    },
+    {
+      "id": "chart-for-slide",
+      "task": "Choose and style a chart for a slide or page",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/chart-choice", "use": "build", "when": "When you have numbers and need the right chart, styled so it says one thing" },
+        { "ref": "library:data-chart-drawer", "type": "skill", "use": "build", "when": "When the chart must be drawn cleanly from the client's own data" },
+        { "ref": "library:powerpoint-chart-data-rebuilder", "type": "skill", "use": "build", "when": "When the deck holds charts as pictures and they must become editable charts" },
+        { "ref": "library:agency-engineering-data-visualization-engineer", "type": "agent", "use": "check", "when": "When a chart is drafted, to check the chart type and axes do not mislead" },
+        { "ref": "library:excel-powerpoint-number-checker", "type": "skill", "use": "check", "when": "When numbers come from a workbook, to check each slide figure agrees with it" },
+        { "ref": "library:cole-nussbaumer-knaflic", "type": "mind", "use": "think", "when": "When the chart shows everything and the audience cannot see what to look at" }
+      ]
+    },
+    {
+      "id": "template-system",
+      "task": "Build a slide or document template a team can reuse",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/template-and-style-system", "use": "build", "when": "When a team needs one size, grid, type scale, colours and master layouts to build from" },
+        { "ref": "library:font-pair-shortlist-maker", "type": "prompt", "use": "explore", "when": "When the team has no fonts set, to compare three pairs with sizes and line spacing" },
+        { "ref": "library:slide-and-page-styler", "type": "skill", "use": "explore", "when": "When the look is open, to see the same slides in several themes before fixing one" },
+        { "ref": "library:visual-system-rules-writer", "type": "skill", "use": "build", "when": "When the choices are made, to write firm rules for colour, type and grid" },
+        { "ref": "library:powerpoint-template-populator", "type": "skill", "use": "check", "when": "When the template is built, to fill it with real content and see where layouts break" },
+        { "ref": "library:colour-contrast-checker", "type": "skill", "use": "check", "when": "Before the template is shared, to check every text and background pair" }
+      ]
+    },
+    {
+      "id": "build-deck-file",
+      "task": "Build the deck as an editable file",
+      "kind": "other",
+      "items": [
+        { "ref": "library:editable-slide-deck-builder", "type": "skill", "use": "build", "when": "When the plan is approved and the client needs a PowerPoint file they can edit" },
+        { "ref": "library:powerpoint-template-populator", "type": "skill", "use": "build", "when": "When the client has their own template and approved content to pour into it" },
+        { "ref": "library:html-slide-deck-maker", "type": "skill", "use": "explore", "when": "When the deck will be shown in a browser and could use motion" },
+        { "ref": "library:powerpoint-slide-size-converter", "type": "skill", "use": "build", "when": "When a deck must change from 4:3 to 16:9 with no stretched images" },
+        { "ref": "library:prepare-a-powerpoint-deck-for-presenting-and-sharing", "type": "workflow", "use": "check", "when": "When the file is built, to get it ready to present and to share" },
+        { "ref": "library:gamma", "type": "tool", "use": "explore", "when": "When the client wants a fast first draft from an outline to react to" }
+      ]
+    },
+    {
+      "id": "deck-review",
+      "task": "Review a deck and list the fixes",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/slide-crowding-fix", "use": "check", "when": "When the review finds slides with two messages or empty headings" },
+        { "ref": "library:finance-deck-quality-checker", "type": "skill", "use": "check", "when": "When the deck carries figures, to check numbers, wording and format slide by slide" },
+        { "ref": "library:powerpoint-deck-change-reviewer", "type": "skill", "use": "check", "when": "When there is an old and a new version, to list every changed message, number and link" },
+        { "ref": "library:powerpoint-accessibility-reviewer", "type": "skill", "use": "check", "when": "When the deck will be shared, for fixes to titles, reading order and alternative text" }
+      ]
+    },
+    {
+      "id": "accessibility",
+      "task": "Check a deck, workbook or PDF for accessibility",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/accessibility-check", "use": "check", "when": "Before anything is presented, shared or published, to catch what stops people reading it" },
+        { "ref": "library:powerpoint-accessibility-reviewer", "type": "skill", "use": "check", "when": "When the file is PowerPoint, for slide titles, reading order and alternative text" },
+        { "ref": "library:colour-contrast-checker", "type": "skill", "use": "check", "when": "When colours are in doubt, to check each pair and get the nearest passing colour" },
+        { "ref": "library:plain-page-type-checker", "type": "skill", "use": "check", "when": "When the piece is mostly text, to check size, spacing and line length" }
+      ]
+    },
+    {
+      "id": "report-to-deck",
+      "task": "Turn a report or spreadsheet into a deck",
+      "kind": "other",
+      "items": [
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "brief", "when": "Before any slide, to cut the report to the answer, the impact and the decision" },
+        { "ref": "library:turn-a-report-into-an-editable-briefing-deck", "type": "workflow", "use": "build", "when": "When the source is a written report and the result must be an editable deck" },
+        { "ref": "library:turn-a-messy-spreadsheet-into-a-clean-slide-deck", "type": "workflow", "use": "build", "when": "When the source is a data file that must be cleaned and checked first" },
+        { "ref": "library:excel-powerpoint-number-checker", "type": "skill", "use": "check", "when": "When the deck is built, to trace each slide number back to the workbook" }
+      ]
+    },
+    {
+      "id": "workbook-layout",
+      "task": "Lay out a workbook or worksheet",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/form-and-workbook-layout", "use": "build", "when": "When pages are filled in by hand or on screen and need space, order and clear prompts" },
+        { "ref": "library:page-grid-and-type-planner", "type": "skill", "use": "build", "when": "When a Google Doc must look designed, to set a grid, a short type list and white space" },
+        { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "When every page looks like a default document, to get three hand-made alternatives" },
+        { "ref": "library:plain-page-type-checker", "type": "skill", "use": "check", "when": "When pages are drafted, to check type, spacing and line length where they are read" }
+      ]
+    },
+    {
+      "id": "lead-magnet",
+      "task": "Lay out a lead magnet or checklist PDF",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/form-and-workbook-layout", "use": "build", "when": "When a checklist or guide must print cleanly and read well on a phone" },
+        { "ref": "library:free-giveaway-designer", "type": "skill", "use": "brief", "when": "When the content is not settled, to pick a guide or checklist worth an email address" },
+        { "ref": "library:pick-a-lead-magnet-then-build-its-path-and-page", "type": "workflow", "use": "brief", "when": "When the client also needs the path from the download to a sale" },
+        { "ref": "library:infographic-maker", "type": "skill", "use": "explore", "when": "When one page could be a picture, to try an infographic version" },
+        { "ref": "library:pdf-maker-and-reader", "type": "skill", "use": "build", "when": "When the layout is agreed and the PDF must be made with its layout checked" },
+        { "ref": "library:agency-engineering-pdf-engine-architect", "type": "agent", "use": "check", "when": "When the PDF is built from a web page and pages break badly or text prints blurry" }
+      ]
+    },
+    {
+      "id": "ebook-interior",
+      "task": "Lay out an ebook interior",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/template-and-style-system", "use": "build", "when": "When a long document needs page size, margins, heading styles and a repeatable chapter opening" },
+        { "ref": "library:font-pair-shortlist-maker", "type": "prompt", "use": "explore", "when": "When the author has no fonts, to compare three pairs for long reading" },
+        { "ref": "library:page-grid-and-type-planner", "type": "skill", "use": "build", "when": "When pages mix text, pull quotes and pictures and need one grid" },
+        { "ref": "library:plain-page-type-checker", "type": "skill", "use": "check", "when": "When a sample chapter is set, to check line length and spacing for long reading" },
+        { "ref": "library:ellen-lupton", "type": "mind", "use": "think", "when": "When the pages are decorated and the reader's path through them is unclear" }
+      ]
+    },
+    {
+      "id": "media-kit",
+      "task": "Lay out a media kit or rate card",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/media-kit-page-plan", "use": "build", "when": "When a creator needs a 2 to 6 page kit using only the numbers and rates they supply" },
+        { "ref": "library:page-grid-and-type-planner", "type": "skill", "use": "build", "when": "When numbers, partner logos and rates must sit on one tidy grid" },
+        { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "When the kit looks like every other creator's, to get three hand-made alternatives" },
+        { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When a page is drafted, to check the eye lands on the number that matters" }
+      ]
+    },
+    {
+      "id": "business-form",
+      "task": "Design a printable or online business form",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/form-and-workbook-layout", "use": "build", "when": "When a job sheet, order or inspection form must be filled in right first time" },
+        { "ref": "kit:prompts/form-field-list", "use": "build", "when": "When the form will be built in an online tool and needs a field-by-field build list" },
+        { "ref": "library:web-form-designer", "type": "skill", "use": "build", "when": "When the form lives on a website and needs fields, error messages and spam protection" },
+        { "ref": "library:multi-step-form-designer", "type": "skill", "use": "explore", "when": "When the form is long, to compare a staged version with progress cues" },
+        { "ref": "library:google-forms-automator", "type": "skill", "use": "build", "when": "When each reply should send an alert or log a row" },
+        { "ref": "library:interface-microcopy-writer", "type": "skill", "use": "build", "when": "When fields need help text and error messages in plain, polite words" },
+        { "ref": "library:don-norman", "type": "mind", "use": "think", "when": "When people fill the form in wrong and the form, not the people, is at fault" }
+      ]
+    },
+    {
+      "id": "form-redesign",
+      "task": "Redesign a form that comes back half-filled",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/form-field-list", "use": "build", "when": "When the old form must be rebuilt with every field justified" },
+        { "ref": "library:make-a-long-form-easier-to-finish", "type": "workflow", "use": "build", "when": "When you have the current form, to get a shorter field list, a new flow and a test script" },
+        { "ref": "library:hard-to-use-thing-diagnoser", "type": "skill", "use": "check", "when": "When you know which fields go wrong, to find what in the design misleads people" }
+      ]
+    },
+    {
+      "id": "book-cover",
+      "task": "Lay out a full book cover: front, spine and back",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:workflows/print-ready-cover-or-printable", "use": "brief", "when": "When a self-published book needs a cover that a printer or print-on-demand service will accept" },
+        { "ref": "kit:prompts/cover-size-check", "use": "check", "when": "Before the artist starts or after a printer rejects a file, to work out spine width and wrap size" },
+        { "ref": "kit:skills/book-cover-layout-and-brief", "use": "build", "when": "When you need type zones, sizes and the full wrap laid out on the printer's template" },
+        { "ref": "library:one-symbol-concept-finder", "type": "skill", "use": "brief", "when": "Before layout, to find the one idea, one feeling and one symbol the cover should carry" },
+        { "ref": "library:type-led-poster-planner", "type": "skill", "use": "explore", "when": "When there is no art, to try a type-only cover that reads small" },
+        { "ref": "library:pack-and-thumbnail-glance-tester", "type": "skill", "use": "check", "when": "When the front is drafted, to test what reads at thumbnail size in an online store" }
+      ]
+    },
+    {
+      "id": "cover-art",
+      "task": "Brief a cover illustrator or write AI cover prompts",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/book-cover-layout-and-brief", "use": "build", "when": "When the illustrator needs the type zones and what the art must leave clear" },
+        { "ref": "library:creative-shoot-briefer", "type": "skill", "use": "build", "when": "When an illustrator needs one clear brief for the job" },
+        { "ref": "library:midjourney-four-direction-prompt-writer", "type": "skill", "use": "explore", "when": "When one cover idea should be tried as four different treatments" },
+        { "ref": "library:agency-design-image-prompt-engineer", "type": "agent", "use": "build", "when": "When a prompt needs subject, light, style and a leave-out list for a named image tool" },
+        { "ref": "library:ai-image-fix-rules", "type": "skill", "use": "check", "when": "When the art comes back with faults, to turn each into a prompt line and a check" },
+        { "ref": "library:midjourney", "type": "tool", "use": "explore", "when": "When you want to explore cover moods and then reuse the style chosen" }
+      ]
+    },
+    {
+      "id": "series-look",
+      "task": "Set a series look for several books",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/book-cover-layout-and-brief", "use": "build", "when": "When each book in the series needs the same zones with its own title and art" },
+        { "ref": "kit:skills/template-and-style-system", "use": "build", "when": "When the series needs fixed type, colour and position rules for every future cover" },
+        { "ref": "library:brand-stylescape-planner", "type": "skill", "use": "explore", "when": "When the series look is undecided, to compare three directions" },
+        { "ref": "library:visual-system-rules-writer", "type": "skill", "use": "build", "when": "When a direction is picked, to write what stays fixed and what changes per book" }
+      ]
+    },
+    {
+      "id": "launch-graphics",
+      "task": "Make social graphics for a book or deck launch",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:agency-marketing-carousel-growth-engine", "type": "agent", "use": "brief", "when": "When the launch needs a carousel, to plan the hook and the slide order" },
+        { "ref": "library:marketing-image-maker", "type": "skill", "use": "build", "when": "When a post needs a picture and you want a prompt, the exact size and a file plan" },
+        { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "Before you settle the post layout, to get three hand-made alternatives" },
+        { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When a graphic is drafted, to check the title is what the eye lands on first" }
+      ]
+    },
+    {
+      "id": "diagrams",
+      "task": "Draw a diagram or visual for a slide or page",
+      "kind": "other",
+      "items": [
+        { "ref": "library:word-picture-explainer", "type": "skill", "use": "brief", "when": "Before drawing, to plan which visual pairs with the words so the point sticks" },
+        { "ref": "library:diagram-maker", "type": "skill", "use": "build", "when": "When a process or system needs a clean diagram you can reuse" },
+        { "ref": "library:infographic-maker", "type": "skill", "use": "build", "when": "When the content should be one infographic with a layout picked to fit it" },
+        { "ref": "library:agency-engineering-data-visualization-engineer", "type": "agent", "use": "check", "when": "When the visual carries data, to check it does not mislead" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any deck or document that must match the client's live site: colours, fonts and voice" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any file is presented, printed or published, to catch typos and names spelt two ways" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a slide or page states a number or claim you cannot trace to the client" }
+  ],
+  "helpers": [
+    { "role": "speechwriter", "when": "When the talk itself needs writing, not only its slides" },
+    { "role": "startup-fundraising-consultant", "when": "When the pitch needs its numbers, ask and investor story worked out" },
+    { "role": "data-visualisation-specialist", "when": "When the deck depends on many charts or a dashboard" },
+    { "role": "graphic-designer", "when": "When the launch needs flyers, posters or a full social set" },
+    { "role": "brand-designer", "when": "When there is no brand palette or type to build the template from" },
+    { "role": "editor", "when": "When the ebook or workbook text needs editing before layout" }
+  ],
+  "gaps": [
+    "No library item lays out an ebook or long document interior: chapter openings, running heads and page styles",
+    "No library item lays out a book cover or works out spine width from a printer's formula; only the kit does",
+    "No library item lays out a media kit or rate card",
+    "No library item designs a printable paper form such as a job sheet or inspection form; form items are for web forms",
+    "No library item lays out a workbook or worksheet with fill-in space",
+    "No library item builds slide masters, or covers Google Slides or Keynote; the deck items are for PowerPoint",
+    "No library item shows one deck in two or three visual directions as real slides to compare",
+    "No library item checks a PDF for tags, reading order and alternative text",
+    "No library item checks a print file for bleed, embedded fonts and image resolution",
+    "No library item sets a matching look across a book series"
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "data-entry-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "documents-to-csv",
+      "task": "Turn pasted documents into one import-ready CSV",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/documents-to-import-file", "use": "build", "when": "When invoices, receipts, forms or order emails must become rows in the client's columns" },
+        { "ref": "kit:workflows/batch-from-documents-to-import", "use": "brief", "when": "When a new batch arrives and you need the steps from intake to a checked import" },
+        { "ref": "library:pdf-converter", "type": "skill", "use": "build", "when": "When the source is a PDF and its tables must come out intact before you map them" },
+        { "ref": "library:scanned-pdf-text-reader", "type": "skill", "use": "build", "when": "When the source is a scan or photo and needs text with page positions first" },
+        { "ref": "kit:skills/entry-checks-and-spot-sampling", "use": "check", "when": "Before the file is handed over, to prove the rows match their source documents" }
+      ]
+    },
+    {
+      "id": "invoices-to-bills",
+      "task": "Turn supplier invoices into a bills import file",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/invoices-to-bills-import", "use": "build", "when": "When a batch of supplier invoices must become a file for the accounting bills import" },
+        { "ref": "library:invoice-checker", "type": "skill", "use": "build", "when": "When invoices should be matched to purchase orders and given suggested account codes" },
+        { "ref": "library:vendor-bill-coder", "type": "skill", "use": "build", "when": "When each bill needs a code and a match, with a payment run left for approval" },
+        { "ref": "library:invoice-totals-checker", "type": "skill", "use": "check", "when": "When every line and total must be recalculated and missing fields or bad dates listed" },
+        { "ref": "library:check-supplier-invoices-before-approval", "type": "workflow", "use": "check", "when": "When the batch needs a matched register and a list of amounts to investigate" },
+        { "ref": "library:recurring-invoice-exception-review-assistant", "type": "agent", "use": "check", "when": "When the same suppliers recur, to track new exceptions and those resolved with evidence" }
+      ]
+    },
+    {
+      "id": "receipts-and-expenses",
+      "task": "Enter receipts and expenses for the bookkeeper",
+      "kind": "other",
+      "items": [
+        { "ref": "library:prepare-expenses-for-your-bookkeeper", "type": "workflow", "use": "build", "when": "When loose receipts must become a categorised file with gaps and a reconciliation" },
+        { "ref": "library:image-text-reader", "type": "skill", "use": "build", "when": "When a receipt is a phone photo and the text must be read before entry" },
+        { "ref": "library:expense-sorter", "type": "skill", "use": "build", "when": "When each transaction needs a category, department and tax treatment" },
+        { "ref": "library:expense-report-builder", "type": "skill", "use": "check", "when": "When the batch should end as a report with totals by category and gaps to fix" }
+      ]
+    },
+    {
+      "id": "business-cards-to-crm",
+      "task": "Turn business cards into a CRM contacts file",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/business-cards-to-crm-contacts", "use": "build", "when": "After an event, when cards typed or scanned to text must become CRM contacts" },
+        { "ref": "kit:skills/import-field-map-and-check", "use": "build", "when": "When the contacts must fit the CRM's import template field by field" },
+        { "ref": "library:crm-record-filler", "type": "skill", "use": "build", "when": "When cards miss company size, industry or job title and the CRM needs them" },
+        { "ref": "kit:prompts/check-a-file-before-import", "use": "check", "when": "Before upload, to catch duplicates of existing contacts and fields that will fail" }
+      ]
+    },
+    {
+      "id": "ocr-check",
+      "task": "Check OCR text against the original",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/ocr-text-against-the-original", "use": "check", "when": "When a scanner app has made text from a scan and the values must be checked" },
+        { "ref": "library:extract-a-scanned-document-and-verify-key-facts", "type": "workflow", "use": "build", "when": "When key facts must be pulled from a scan and each checked against its page" },
+        { "ref": "library:image-text-reader", "type": "skill", "use": "build", "when": "When the image is hard to read and needs clean-up before the text is trusted" },
+        { "ref": "library:katherine-johnson", "type": "mind", "use": "think", "when": "When a figure matters, to reach it by a second route and compare the two" }
+      ]
+    },
+    {
+      "id": "import-field-map",
+      "task": "Map the client's columns to a target system's import template",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/import-field-map-and-check", "use": "build", "when": "When columns must map to Xero, QuickBooks, HubSpot, Shopify or a booking system" },
+        { "ref": "library:column-mapping-document-writer", "type": "skill", "use": "build", "when": "When each source column needs a target, a format rule and a decision on gaps" },
+        { "ref": "library:business-data-move-runbook", "type": "skill", "use": "brief", "when": "When the import is part of a move between tools and needs checks and a rollback" },
+        { "ref": "library:data-file-reader-and-writer", "type": "skill", "use": "build", "when": "When the file must be saved in the exact format and encoding the system accepts" }
+      ]
+    },
+    {
+      "id": "pre-import-check",
+      "task": "Check a file before it is imported",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/check-a-file-before-import", "use": "check", "when": "When a CSV or sheet is ready and must pass the target system's rules first time" },
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "When you need blanks, duplicates and odd values listed with the rules that catch them" },
+        { "ref": "library:messy-spreadsheet-cleaner", "type": "skill", "use": "build", "when": "When spacing, numbers stored as text and mixed dates must be fixed before import" },
+        { "ref": "library:data-file-clean-up-loop", "type": "agent", "use": "build", "when": "When the file should be fixed and rechecked until it passes, with the rules saved" }
+      ]
+    },
+    {
+      "id": "spot-sampling",
+      "task": "Prove an entered batch matches its source documents",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/entry-checks-and-spot-sampling", "use": "check", "when": "Before anyone imports or relies on a batch, to sample it and check control totals" },
+        { "ref": "library:excel-table-join-reconciler", "type": "skill", "use": "check", "when": "When entered rows can be matched to a source list, to find missing and doubled rows" },
+        { "ref": "library:data-quality-scorecard-maker", "type": "skill", "use": "check", "when": "When the client wants one score per batch for blanks, duplicates and broken links" }
+      ]
+    },
+    {
+      "id": "exceptions-list",
+      "task": "Write the exceptions list and questions for the client",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/documents-to-import-file", "use": "build", "when": "When unclear or missing values need listing with the source text quoted" },
+        { "ref": "library:human-review-gate", "type": "skill", "use": "check", "when": "Before the batch counts as done, to get the client's signed review of open items" },
+        { "ref": "library:taiichi-ohno", "type": "mind", "use": "think", "when": "When the same exception keeps coming back, to trace it to where the record is made" }
+      ]
+    },
+    {
+      "id": "entry-rules",
+      "task": "Write a one-page data entry rules sheet for a team",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/entry-rules-sheet-and-validation", "use": "build", "when": "When dates, names, addresses, phones, money and codes need one agreed way" },
+        { "ref": "kit:prompts/team-data-entry-rules", "use": "build", "when": "When several people enter the same records differently and mistakes repeat" },
+        { "ref": "library:shared-business-record-planner", "type": "skill", "use": "brief", "when": "When the same record lives in two tools, to set which tool owns each field" },
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When the rules need a flow, who does what and the edge cases written out" }
+      ]
+    },
+    {
+      "id": "entry-form",
+      "task": "Build an entry form or sheet with dropdowns and checks",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/entry-rules-sheet-and-validation", "use": "build", "when": "When each rule should become a check or dropdown on the sheet itself" },
+        { "ref": "library:excel-input-form-builder", "type": "skill", "use": "build", "when": "When staff enter into Excel and need dropdowns, clear cells and validation" },
+        { "ref": "library:google-forms-automator", "type": "skill", "use": "explore", "when": "When a web form that logs rows would stop errors better than a shared sheet" },
+        { "ref": "library:empty-workbook-builder", "type": "skill", "use": "build", "when": "When the field list is agreed and you need a formatted empty file with no made-up rows" },
+        { "ref": "library:don-norman", "type": "mind", "use": "think", "when": "When people keep typing the wrong thing, to change the form so the mistake is hard to make" },
+        { "ref": "library:prepare-an-excel-input-workbook-for-handover", "type": "workflow", "use": "check", "when": "When the form is built, to check it and leave a guide for whoever maintains it" }
+      ]
+    },
+    {
+      "id": "backlog-clear-down",
+      "task": "Plan and clear a backlog of paper or PDF records",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/backlog-clear-down", "use": "build", "when": "When months of unentered records must be entered by a date" },
+        { "ref": "library:ai-assisted-work-estimator", "type": "skill", "use": "brief", "when": "When the client asks how long it will take, to give time estimates with ranges" },
+        { "ref": "library:outside-view-timeline-estimator", "type": "prompt", "use": "check", "when": "When the estimate feels hopeful, to correct it by how such jobs really went" }
+      ]
+    },
+    {
+      "id": "duplicates",
+      "task": "Find duplicate records before or after entry",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:agency-identity-graph-operator", "type": "agent", "use": "build", "when": "When records must be matched across tools with keys, scores and a review step" },
+        { "ref": "library:duplicate-customer-finder", "type": "skill", "use": "build", "when": "When the list is a Shopify store's customers and likely doubles need a review list" },
+        { "ref": "kit:prompts/check-a-file-before-import", "use": "check", "when": "When a new file may repeat records the system already holds" }
+      ]
+    },
+    {
+      "id": "product-list-entry",
+      "task": "Enter or tidy a product list for a shop import",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/import-field-map-and-check", "use": "build", "when": "When a supplier's list must fit the shop's product import template" },
+        { "ref": "library:product-title-cleaner", "type": "skill", "use": "build", "when": "When product titles are inconsistent and need one tidy pattern with a before and after" },
+        { "ref": "library:monthly-catalogue-clean-up-keeper", "type": "agent", "use": "check", "when": "When the catalogue should be checked monthly for missing costs and clashing codes" }
+      ]
+    },
+    {
+      "id": "timesheets",
+      "task": "Enter and check timesheets before payroll",
+      "kind": "other",
+      "items": [
+        { "ref": "library:payroll-timesheet-checker", "type": "skill", "use": "build", "when": "When hours must be totalled by person with every oddity flagged for approval" },
+        { "ref": "library:check-payroll-inputs-before-the-cut-off", "type": "workflow", "use": "check", "when": "Before the cut-off, to list exceptions and questions against the source files" }
+      ]
+    },
+    {
+      "id": "stock-count-entry",
+      "task": "Enter a stock count and trace mismatches",
+      "kind": "other",
+      "items": [
+        { "ref": "library:stock-count-program-planner", "type": "skill", "use": "brief", "when": "When counts are entered regularly and need a schedule and a way to trace mismatches" },
+        { "ref": "library:warehouse-count-discrepancy-review-assistant", "type": "agent", "use": "check", "when": "When the count differs from the system, to split timing, unit and counting errors" }
+      ]
+    },
+    {
+      "id": "web-facts-to-sheet",
+      "task": "Collect listed facts from web pages into a sheet",
+      "kind": "other",
+      "items": [
+        { "ref": "library:web-page-data-extractor", "type": "skill", "use": "build", "when": "When tables, lists or prices on given pages must become a CSV" },
+        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a collected fact will be relied on, to check it against a trusted source" }
+      ]
+    },
+    {
+      "id": "type-up-recordings",
+      "task": "Type up recordings and handwritten notes",
+      "kind": "other",
+      "items": [
+        { "ref": "library:recording-transcriber", "type": "skill", "use": "build", "when": "When audio or video must be written out with each speaker labelled" },
+        { "ref": "library:image-text-reader", "type": "skill", "use": "build", "when": "When notes are photographed and the text must be read before it is typed up" },
+        { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "When the typed text is ready, to catch typos and names spelt two ways" }
+      ]
+    },
+    {
+      "id": "remove-personal-details",
+      "task": "Remove personal details before files are shared",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:pdf-toolkit", "type": "skill", "use": "build", "when": "When names or numbers in a PDF must be redacted with the original kept safe" },
+        { "ref": "library:screenshot-privacy-masker", "type": "skill", "use": "build", "when": "When a screenshot shows phone numbers, emails or IDs that must be masked first" }
+      ]
+    },
+    {
+      "id": "entry-procedure",
+      "task": "Write the entry procedure and exception guide",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When the entry job needs a written procedure with who does what" },
+        { "ref": "library:make-a-recurring-process-easier-to-hand-over", "type": "workflow", "use": "build", "when": "When you have one real run and its exceptions and someone else takes over" },
+        { "ref": "library:repeat-task-step-guide-writer", "type": "skill", "use": "build", "when": "When one repeat task needs exact steps, fixes if it fails and who to call" },
+        { "ref": "library:set-up-a-documentation-system-and-write-sops-that-pass-a-check", "type": "workflow", "use": "check", "when": "When the firm has several procedures and each should pass a written check" }
+      ]
+    },
+    {
+      "id": "automate-repeat-entry",
+      "task": "Spot entry work that should be automated",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:automation-flow-sketcher", "type": "prompt", "use": "build", "when": "When the same entry repeats, to lay it out as a no-code automation with what can break" },
+        { "ref": "library:task-automation-builder", "type": "skill", "use": "explore", "when": "When a small script would do the job better than a no-code tool" },
+        { "ref": "library:zapier", "type": "tool", "use": "build", "when": "When a form, inbox or sheet should pass rows to another app without retyping" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:requirements-question-asker", "type": "skill", "use": "brief", "when": "Before any batch, when the target system, columns or formats are not stated" },
+    { "ref": "library:human-review-gate", "type": "skill", "use": "check", "when": "Before a file is imported or relied on, to get a named person's sign-off" }
+  ],
+  "helpers": [
+    { "role": "bookkeeper", "when": "When entered bills and receipts must be coded, reconciled to the bank and closed" },
+    { "role": "ap-ar-specialist", "when": "When invoices need approval rules, payment runs or supplier statement checks" },
+    { "role": "data-quality-analyst", "when": "When the system needs a data dictionary, weekly quality checks or a duplicate merge plan" },
+    { "role": "spreadsheet-specialist", "when": "When the entry sheet needs formulas, lookups or macros beyond dropdowns" },
+    { "role": "automation-specialist", "when": "When repeat entry should be replaced by a form, a sync or an automation" },
+    { "role": "revops-specialist", "when": "When a CRM import needs pipeline stages, owners and lead routing set, not only contacts" }
+  ],
+  "gaps": [
+    "No library item turns pasted invoices, forms or order emails into rows in a client's own column layout with an exceptions list; only the kit does",
+    "No library item turns business card text into CRM contacts",
+    "No library item knows the import templates of Xero, QuickBooks, HubSpot or Shopify field by field",
+    "No library item checks OCR text for commonly misread characters and digits against the original",
+    "No library item sets a spot-sample size and an acceptable error rate for an entered batch",
+    "No library item writes a data entry rules sheet for dates, names, addresses and phone numbers by country",
+    "No library item plans a backlog clear-down: volumes per day, batch order and progress checks",
+    "No library item compares two people's entry of the same batch to find keying errors",
+    "No library item reads handwritten forms and marks uncertain characters",
+    "The library is thin for this role: about 50 items fit, and most support checking and clean-up, not the entry itself"
+  ]
+}

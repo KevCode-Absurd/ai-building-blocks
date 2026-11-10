@@ -1,0 +1,261 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "tiktok-shop-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "thirty-day-launch",
+      "task": "Plan a 30-day TikTok Shop launch",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/tiktok-rules-snapshot", "use": "brief", "when": "At the start of the job, to capture TikTok's current rules for the client's market on one dated sheet" },
+        { "ref": "kit:workflows/thirty-day-shop-launch", "use": "build", "when": "When a client is opening a shop, or relaunching one that stalled" },
+        { "ref": "library:tiktok-shop-launch-planner", "type": "skill", "use": "explore", "when": "When you want a second week-by-week plan from the client's starting point to compare" },
+        { "ref": "library:tiktok-shop-brand-builder", "type": "skill", "use": "brief", "when": "When the shop has no clear voice, content pillars or story yet" },
+        { "ref": "library:start-your-stores-organic-social-from-zero", "type": "workflow", "use": "brief", "when": "When the brand has never posted and needs its first formats and routine" },
+        { "ref": "library:gary-vaynerchuk", "type": "mind", "use": "think", "when": "When the plan asks viewers to buy from day one and gives them nothing worth watching first" }
+      ]
+    },
+    {
+      "id": "hero-product-pick",
+      "task": "Pick hero products after fees and commission",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/hero-product-margin-pick", "use": "build", "when": "When you need profit per order after platform fees, commission, shipping, returns and discount" },
+        { "ref": "library:winning-product-scorer", "type": "skill", "use": "explore", "when": "When several products could lead and each needs a score and a verdict" },
+        { "ref": "library:price-a-product-so-it-pays-after-delivery-ads-and-discounts", "type": "workflow", "use": "build", "when": "When a hero product's price must be reset so it pays after every cost" },
+        { "ref": "library:product-margin-checker", "type": "skill", "use": "check", "when": "When one product's sums are in doubt and you need true margin and break-even" },
+        { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before the pick goes to the client, to test the method and the sums" }
+      ]
+    },
+    {
+      "id": "product-research",
+      "task": "Research trends and find products worth testing",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:tiktok-shop-breakout-finder", "type": "skill", "use": "build", "when": "When you have product sales graphs and need each scored as test or drop" },
+        { "ref": "library:rising-trend-spotter", "type": "skill", "use": "explore", "when": "When you want what is rising for a topic across TikTok and other platforms" },
+        { "ref": "library:tiktok-research-collector", "type": "skill", "use": "brief", "when": "When you need public videos, comments and numbers for a hashtag or rival account" },
+        { "ref": "library:agency-product-trend-researcher", "type": "agent", "use": "check", "when": "When a trend looks tempting and you must judge if it is real and what stage it is at" }
+      ]
+    },
+    {
+      "id": "shop-listings",
+      "task": "Write TikTok Shop listings for a batch of products",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/tiktok-shop-listing", "use": "build", "when": "When up to ten products need a title, selling points, description, sizes and image order" },
+        { "ref": "library:tiktok-shop-listing-writer", "type": "skill", "use": "explore", "when": "When you want a second title and description built for TikTok Shop search to compare" },
+        { "ref": "library:main-product-image-designer", "type": "skill", "use": "build", "when": "When the first image needs the selling points laid on a real product photo" },
+        { "ref": "library:main-image-a-b-test-planner", "type": "skill", "use": "explore", "when": "When the main image should be tested in versions that each change one thing" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a selling point is vague, to test it and get a true, picturable rewrite" },
+        { "ref": "kit:prompts/claims-price-and-disclosure-check", "use": "check", "when": "Before a listing goes out, to catch unproven claims and false was-prices" }
+      ]
+    },
+    {
+      "id": "live-run-sheet",
+      "task": "Build a run sheet for a LIVE selling session",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/live-selling-run-sheet", "use": "build", "when": "When one session needs a minute-by-minute plan with demos, offers, stock calls and a host checklist" },
+        { "ref": "library:agency-marketing-livestream-commerce-coach", "type": "agent", "use": "explore", "when": "When the seller is new to LIVE and wants another run order and host practice to compare" },
+        { "ref": "library:live-auction-show-planner", "type": "skill", "use": "explore", "when": "When the session could run as an auction or timed drops, with a profit sheet" },
+        { "ref": "library:live-objection-responder", "type": "skill", "use": "build", "when": "When the host needs ready answers to the doubts viewers type in comments" },
+        { "ref": "library:honest-urgency-planner", "type": "skill", "use": "check", "when": "When the offer uses limits or deadlines and each must be real and said plainly" },
+        { "ref": "kit:prompts/claims-price-and-disclosure-check", "use": "check", "when": "Before going live, to check the script's claims, prices and disclosure lines" },
+        { "ref": "library:estee-lauder", "type": "mind", "use": "think", "when": "When the session talks about the product and should let viewers see it tried and working" }
+      ]
+    },
+    {
+      "id": "shoppable-video-briefs",
+      "task": "Write shoppable video briefs tied to products",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:prompts/shoppable-video-briefs", "use": "build", "when": "After hero products are picked, to plan ten videos with hook, proof shot and price moment" },
+        { "ref": "library:short-video-format-picker", "type": "skill", "use": "explore", "when": "When you need a format for the product and who is on camera, with ten opening ideas" },
+        { "ref": "library:short-video-hook-writer", "type": "skill", "use": "explore", "when": "When a brief needs ten hooks checked for length and first shot" },
+        { "ref": "library:video-hook-scorer", "type": "skill", "use": "check", "when": "When hooks are drafted, to score each for the viewer and get rewrites" },
+        { "ref": "library:sound-off-commercial-checker", "type": "skill", "use": "check", "when": "When a script is done, to check it still sells with the sound off" },
+        { "ref": "library:mrbeast", "type": "mind", "use": "think", "when": "When the opening seconds do not pay off what the cover and first line promise" }
+      ]
+    },
+    {
+      "id": "video-scripts-and-edit",
+      "task": "Script, film and edit a phone video",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:phone-video-ad-scriptwriter", "type": "prompt", "use": "build", "when": "When a brief needs a 30-second phone script in five beats with a shot plan" },
+        { "ref": "library:five-part-creator-ad-script-writer", "type": "skill", "use": "explore", "when": "When you want a second script from hook to call to action, with timed lines" },
+        { "ref": "library:social-video-edit-planner", "type": "skill", "use": "build", "when": "When clips are shot and need a timed cut list, captions, a cover and export checks" },
+        { "ref": "library:capcut", "type": "tool", "use": "build", "when": "When the seller edits on a phone and needs captions and resizing in one app" },
+        { "ref": "kit:prompts/claims-price-and-disclosure-check", "use": "check", "when": "Before posting, to check what is said and shown against the product facts" }
+      ]
+    },
+    {
+      "id": "made-video",
+      "task": "Make a product video from photos when no one can film",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:video-route-picker", "type": "skill", "use": "brief", "when": "Before making anything, to choose between generating, composing or editing real footage" },
+        { "ref": "library:offer-reel-real-product", "type": "workflow", "use": "build", "when": "When you have real product photos and an offer and need a 10 to 20 second video" },
+        { "ref": "library:ai-video-shot-planner", "type": "skill", "use": "explore", "when": "When an idea needs a shot list with a prompt per shot and fixes for failed clips" },
+        { "ref": "kit:prompts/claims-price-and-disclosure-check", "use": "check", "when": "When parts of the video are AI-made and may need a label under TikTok's rules" }
+      ]
+    },
+    {
+      "id": "creator-affiliates",
+      "task": "Set up creator affiliates, commission and samples",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/creator-affiliates-and-samples", "use": "build", "when": "When you need the commission ceiling, sample rules and how requests are judged" },
+        { "ref": "library:tiktok-shop-affiliate-planner", "type": "skill", "use": "explore", "when": "When you want a second commission and sample setup from products and margins" },
+        { "ref": "library:tiktok-creator-outreach-planner", "type": "skill", "use": "build", "when": "When you must find creators, decide what to offer and track who replies" },
+        { "ref": "library:influencer-shortlist-builder", "type": "skill", "use": "brief", "when": "When you need a first list of creators in the niche with fit notes" },
+        { "ref": "library:creator-pay-planner", "type": "skill", "use": "check", "when": "When a creator asks for a flat fee and you must test it against their real views" },
+        { "ref": "library:creator-ad-roster-builder", "type": "skill", "use": "build", "when": "When the shop wants a standing roster with a gifting funnel and a pay rule" }
+      ]
+    },
+    {
+      "id": "creator-brief",
+      "task": "Write a creator brief with disclosure rules",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/creator-affiliates-and-samples", "use": "build", "when": "When the brief must state what to show, what not to claim and how to disclose" },
+        { "ref": "library:creator-gifting-brief", "type": "workflow", "use": "explore", "when": "When you want a gifting plan, phone script and filming brief drafted from the brand file" },
+        { "ref": "library:creator-filming-brief-writer", "type": "skill", "use": "build", "when": "When the script is approved and the creator needs shoot order and file names" },
+        { "ref": "library:ad-and-page-policy-checker", "type": "skill", "use": "check", "when": "When the brief is drafted, to flag policy risks line by line with safer wording" },
+        { "ref": "kit:prompts/claims-price-and-disclosure-check", "use": "check", "when": "Before the brief goes out, to check claims and that paid links are disclosed" }
+      ]
+    },
+    {
+      "id": "weekly-shop-review",
+      "task": "Run the weekly shop review",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/weekly-shop-cycle", "use": "brief", "when": "Every week once the shop is live, with a monthly check of TikTok's rules" },
+        { "ref": "kit:prompts/weekly-shop-review", "use": "build", "when": "When you have seven days of exports and need what made money and three actions" },
+        { "ref": "library:tiktok-shop-results-reader", "type": "skill", "use": "build", "when": "When you need sales split by video, LIVE, creator and ad from the Seller Center numbers" },
+        { "ref": "library:video-hook-and-hold-matrix-reviewer", "type": "skill", "use": "check", "when": "When view counts are in and each video needs its weak point found: the hook or the hold" },
+        { "ref": "library:organic-format-tester", "type": "skill", "use": "check", "when": "When you must decide which video formats earned another week" }
+      ]
+    },
+    {
+      "id": "repeat-winning-format",
+      "task": "Turn one winning video into a repeatable format",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:outlier-post-finder", "type": "skill", "use": "brief", "when": "When you need the posts that beat the account's normal reach and why they worked" },
+        { "ref": "library:winning-hook-rubric-builder", "type": "skill", "use": "build", "when": "When the winners should become a rubric that new hooks are graded against" },
+        { "ref": "kit:prompts/shoppable-video-briefs", "use": "explore", "when": "When the winning format should be tried on other products as a batch of briefs" },
+        { "ref": "library:video-hook-scorer", "type": "skill", "use": "check", "when": "When the new versions are drafted, to score each hook before filming" }
+      ]
+    },
+    {
+      "id": "rules-snapshot",
+      "task": "Capture TikTok Shop's current rules for the market",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/tiktok-rules-snapshot", "use": "build", "when": "At the start of each job and each month, so plans and margins use this month's rules" },
+        { "ref": "library:ad-and-page-policy-checker", "type": "skill", "use": "check", "when": "When existing listings and scripts should be re-read against the new sheet" }
+      ]
+    },
+    {
+      "id": "claims-and-disclosure-check",
+      "task": "Check claims, prices and disclosure before posting",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/claims-price-and-disclosure-check", "use": "check", "when": "Before a video, listing, LIVE script or creator brief goes out" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When copy is long and each claim needs sorting as fine, needs proof or cut" },
+        { "ref": "library:claim-and-proof-matcher", "type": "skill", "use": "check", "when": "When you have the client's evidence and must see which claims it supports" },
+        { "ref": "library:honest-urgency-planner", "type": "skill", "use": "build", "when": "When a deadline or stock line fails the check and needs a real limit to replace it" }
+      ]
+    },
+    {
+      "id": "fulfilment-and-returns",
+      "task": "Check fulfilment and returns before a launch or big LIVE",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/fulfilment-and-returns-check", "use": "check", "when": "Before a launch, a sale or a big LIVE, or when late orders and returns rise" },
+        { "ref": "library:what-if-supply-scenario-planner", "type": "skill", "use": "brief", "when": "When a video may go viral and you need three demand cases with a response for each" },
+        { "ref": "library:daily-order-and-shipping-watcher", "type": "agent", "use": "check", "when": "Each morning after a spike, to find late and stuck orders before buyers write" },
+        { "ref": "library:returns-policy-designer", "type": "skill", "use": "build", "when": "When returns are rising and the seller needs refund timing and keep-it rules" }
+      ]
+    },
+    {
+      "id": "promotions",
+      "task": "Plan offers, bundles and flash deals that hold margin",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:sale-offer-ladder-planner", "type": "skill", "use": "explore", "when": "When a sale needs a main offer and backups from stock and margin" },
+        { "ref": "library:bundle-and-quantity-break-builder", "type": "skill", "use": "build", "when": "When a hero product should sell in tiers or multi-buys with a clear default" },
+        { "ref": "kit:skills/hero-product-margin-pick", "use": "check", "when": "When the planned discount must be tested against profit per order after fees and commission" },
+        { "ref": "library:discount-and-price-change-checker", "type": "agent", "use": "check", "when": "Before the deal goes live, to find the deepest discount allowed and the wording to use" }
+      ]
+    },
+    {
+      "id": "shop-ads",
+      "task": "Plan and read TikTok Shop ads",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:tiktok-shop-ad-planner", "type": "skill", "use": "build", "when": "When the shop has a budget and needs a plan for shopping ads, video ads and bids" },
+        { "ref": "library:gmv-max-campaign-setup-planner", "type": "skill", "use": "build", "when": "When top products and a target cost per order are known and the campaign needs its settings" },
+        { "ref": "library:tiktok-spark-ad-picker", "type": "skill", "use": "explore", "when": "When organic or creator posts have results and you must pick which to boost" },
+        { "ref": "library:tiktok-ad-test-reader", "type": "skill", "use": "check", "when": "When test numbers are in and each ad needs a keep, fix or kill call" }
+      ]
+    },
+    {
+      "id": "content-calendar",
+      "task": "Plan the shop's weekly content calendar",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:tiktok-shop-content-planner", "type": "skill", "use": "build", "when": "When you know the products and need formats, hooks, hashtags and a calendar" },
+        { "ref": "library:agency-marketing-tiktok-strategist", "type": "agent", "use": "explore", "when": "When you want a second content plan with different formats and test ideas" },
+        { "ref": "library:weekly-social-content-planner", "type": "agent", "use": "build", "when": "Each week, to plan next week's posts from what worked last week" },
+        { "ref": "kit:prompts/weekly-shop-review", "use": "brief", "when": "When the calendar should follow what made money, not what got views" }
+      ]
+    },
+    {
+      "id": "comments-and-messages",
+      "task": "Reply to comments, buyer messages and reviews",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:social-comment-and-reply-desk", "type": "agent", "use": "build", "when": "When comments pile up and the ones worth a reply need answers in the shop's voice" },
+        { "ref": "library:comment-mining-analyst", "type": "skill", "use": "brief", "when": "When you want what viewers ask and doubt, in their own words, for the next videos" },
+        { "ref": "library:customer-reply-drafter", "type": "skill", "use": "build", "when": "When a buyer writes about an order or a delay and needs a clear reply" },
+        { "ref": "kit:prompts/fulfilment-and-returns-check", "use": "check", "when": "When replies promise dispatch or refund times that must match what the shop can do" }
+      ]
+    },
+    {
+      "id": "market-expansion",
+      "task": "Plan a TikTok Shop in another country",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:tiktok-shop-expansion", "type": "skill", "use": "build", "when": "When the seller wants to know which markets to enter first, with shipping and rules" },
+        { "ref": "library:overseas-listing-localizer", "type": "skill", "use": "build", "when": "When listings need local language, sizes and required labels" },
+        { "ref": "kit:prompts/tiktok-rules-snapshot", "use": "check", "when": "When the new market's fees and rules must be captured before any margin is quoted" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "Before anything a buyer will see goes out, to sort each claim as fine, needs proof or cut" },
+    { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before any margin or results figure goes to the client, to test the sums" }
+  ],
+  "helpers": [
+    { "role": "tiktok-ads-media-buyer", "when": "When paid TikTok campaigns need building, bidding and weekly changes" },
+    { "role": "affiliate-influencer-manager", "when": "When the creator programme grows past a few creators and needs contracts and tracking" },
+    { "role": "video-editor", "when": "When raw clips need a proper edit, not a cut list for the seller" },
+    { "role": "social-media-manager", "when": "When the brand's wider social accounts must be planned alongside the shop" },
+    { "role": "logistics-coordinator", "when": "When dispatch, carriers or a fulfilment partner cannot meet the platform's times" },
+    { "role": "ecommerce-analyst", "when": "When the shop's numbers must be read with the brand's own store and customer data" }
+  ],
+  "gaps": [
+    "No library item holds TikTok Shop's fees, commission rules and dispatch times by market; only the kit's rules snapshot covers it",
+    "No library item reviews a finished LIVE session: sales per minute, which product order worked and where viewers left",
+    "No library item checks a finished shoppable video against the product facts and price before it is posted",
+    "No library item covers Seller Center shop health: violation points, warnings and appeals",
+    "No library item plans TikTok Shop's own promotion tools: flash deals, vouchers and free shipping offers",
+    "No library item sets rules for judging creator sample requests; only the kit skill covers it",
+    "No library item writes captions, hashtags and sound choices for shoppable videos as a set of options",
+    "No library item plans stock and dispatch for a sudden viral spike on one product"
+  ]
+}

@@ -1,0 +1,300 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "wordpress-developer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "break-fix",
+      "task": "Find why a site or page broke and fix it safely",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:workflows/fix-a-broken-site-safely", "use": "brief", "when": "When a white screen, critical error, broken form or admin lock-out needs the full safe run" },
+        { "ref": "kit:skills/wordpress-break-fix", "use": "build", "when": "When you have the error log, Site Health info and plugin list and need the cause and fix" },
+        { "ref": "library:wordpress-health-fixer", "type": "skill", "use": "build", "when": "When you have the Site Health report, to get a ranked, backup-first fix plan with commands" },
+        { "ref": "library:error-and-log-debugger", "type": "skill", "use": "build", "when": "When the main clue is a PHP error or stack trace and you need the first real cause" },
+        { "ref": "library:browser-page-debugger", "type": "skill", "use": "check", "when": "When a menu, slider or layout broke in the browser, to see script errors and failed calls" },
+        { "ref": "library:bug-root-cause-finder", "type": "skill", "use": "check", "when": "Before you change live code, to see the cause proven and not guessed" }
+      ]
+    },
+    {
+      "id": "error-log",
+      "task": "Explain a WordPress error log in plain words",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/explain-the-error-log", "use": "build", "when": "When an owner has a debug log, host error log or recovery email and asks what it means" },
+        { "ref": "library:error-and-log-debugger", "type": "skill", "use": "build", "when": "When the log is long and noisy, to find the lines that matter and a working fix" },
+        { "ref": "library:bug-evidence-plan-writer", "type": "prompt", "use": "brief", "when": "When the log points at several suspects, to rank them and name a check for each" }
+      ]
+    },
+    {
+      "id": "plugin-conflict",
+      "task": "Diagnose a plugin or theme conflict",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/wordpress-break-fix", "use": "build", "when": "When a feature vanished after an update and you must find which plugin or theme did it" },
+        { "ref": "library:copilot-bug-reproduction-brief", "type": "skill", "use": "brief", "when": "When the owner's report is vague, to get repeatable steps and the proof still missing" },
+        { "ref": "library:bug-evidence-plan-writer", "type": "prompt", "use": "brief", "when": "Before switching plugins off, to rank the suspects so you test the likeliest first" }
+      ]
+    },
+    {
+      "id": "safe-update-plan",
+      "task": "Plan a safe update of core, themes, plugins and PHP",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/safe-update-plan", "use": "build", "when": "When a live site is behind on updates and needs a backup check, an order and tests" },
+        { "ref": "library:major-upgrade-planner", "type": "skill", "use": "build", "when": "When one plugin or library jumps a major version, to stage it and test what breaks" },
+        { "ref": "library:release-day-rollback-planner", "type": "prompt", "use": "build", "when": "When nobody has written how to undo the update or how to tell that it worked" },
+        { "ref": "library:build-a-backup-recovery-rehearsal", "type": "workflow", "use": "check", "when": "When a backup exists but a restore was never tried, to test it before you update" },
+        { "ref": "library:linus-torvalds", "type": "mind", "use": "think", "when": "When an update is neat for you but may break what editors and visitors rely on" }
+      ]
+    },
+    {
+      "id": "monthly-maintenance",
+      "task": "Run monthly maintenance and updates",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/monthly-maintenance-and-updates", "use": "build", "when": "Monthly, and within days of a security release for core or an installed plugin" },
+        { "ref": "kit:skills/safe-update-plan", "use": "build", "when": "When this month's updates include a risky one that needs staging and a rollback" },
+        { "ref": "library:weekly-dependency-and-security-sweep", "type": "agent", "use": "check", "when": "When custom code has its own packages, to track new and open risks each week" },
+        { "ref": "library:website-quality-keeper", "type": "agent", "use": "check", "when": "Each week, to see what got slower or harder to find since the last check" },
+        { "ref": "library:backup-and-recovery-planner", "type": "skill", "use": "build", "when": "When the site has no backup plan, to set how much loss is acceptable and a restore drill" },
+        { "ref": "library:domain-and-certificate-watch-checker", "type": "skill", "use": "check", "when": "When domains and certificates are due, to flag leftover records and weak registrar access" },
+        { "ref": "library:uptime-and-alert-setup-planner", "type": "skill", "use": "build", "when": "When nobody hears about downtime until a customer calls, to set checks and alerts" }
+      ]
+    },
+    {
+      "id": "form-emails",
+      "task": "Fix form and order emails that do not arrive",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/form-emails-not-arriving", "use": "check", "when": "When contact, booking or order emails go missing, land in spam or reach only some people" },
+        { "ref": "library:email-setup-health-checker", "type": "skill", "use": "check", "when": "When you have the mail settings and DNS records, to score them and get exact fixes" },
+        { "ref": "library:inbox-delivery-fixer", "type": "skill", "use": "build", "when": "When the sending domain lacks SPF, DKIM or DMARC and they must be set up" },
+        { "ref": "library:web-form-designer", "type": "skill", "use": "build", "when": "When the form itself draws spam or confuses people, to fix fields, errors and spam protection" }
+      ]
+    },
+    {
+      "id": "plugin-cleanup",
+      "task": "Review plugins and themes: keep, replace or remove",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/plugin-cleanup-review", "use": "check", "when": "When a site has many plugins, some unknown or overlapping, before the next round of updates" },
+        { "ref": "library:agency-engineering-wordpress-performance", "type": "agent", "use": "check", "when": "When the worry is speed, to rank which plugins, queries and settings slow the site" },
+        { "ref": "library:wordpress-health-fixer", "type": "skill", "use": "check", "when": "When Site Health lists warnings, to see which come from old or inactive plugins" }
+      ]
+    },
+    {
+      "id": "custom-plugin",
+      "task": "Build a small custom plugin for one feature",
+      "kind": "code",
+      "items": [
+        { "ref": "library:idea-to-dev-brief-writer", "type": "skill", "use": "brief", "when": "When the owner describes the feature loosely, to pin down scope and open questions" },
+        { "ref": "kit:skills/custom-plugin-build", "use": "build", "when": "When one feature should live in a small plugin editors can manage without code" },
+        { "ref": "library:agency-engineering-cms-developer", "type": "agent", "use": "brief", "when": "When the feature needs a content model and theme changes too, to plan the whole build" },
+        { "ref": "library:wordpress-code-checker", "type": "skill", "use": "check", "when": "Before shipping, to find security, translation and speed problems in the new plugin" },
+        { "ref": "library:docs-backed-coder", "type": "skill", "use": "check", "when": "When a hook or function may have changed, to check the code against the official docs" }
+      ]
+    },
+    {
+      "id": "block-or-shortcode",
+      "task": "Build a custom block or shortcode for editors",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/custom-plugin-build", "use": "build", "when": "When editors need a repeatable piece of content as a block or shortcode they fill in" },
+        { "ref": "library:wordpress-code-checker", "type": "skill", "use": "check", "when": "When the block is written, to check escaping, translation and loading" },
+        { "ref": "library:accessibility-checker", "type": "skill", "use": "check", "when": "When the block outputs buttons, tabs or forms, to check they work by keyboard and reader" },
+        { "ref": "library:steve-krug", "type": "mind", "use": "think", "when": "When the block's settings would make an editor stop and guess what a field does" }
+      ]
+    },
+    {
+      "id": "plugin-security",
+      "task": "Harden custom plugin or theme code",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/plugin-security-hardening", "use": "check", "when": "When custom code needs capability checks, nonces, sanitising and escaping reviewed" },
+        { "ref": "library:untrusted-input-checker", "type": "skill", "use": "check", "when": "When you have the code, to find every place outside data enters and how it is checked" },
+        { "ref": "library:bug-and-security-code-reviewer", "type": "skill", "use": "check", "when": "When one file or change needs a wider review of bugs, security gaps and speed" },
+        { "ref": "library:security-focused-change-reviewer", "type": "skill", "use": "check", "when": "When a fix is made, to review only what changed for new risks" },
+        { "ref": "library:bruce-schneier", "type": "mind", "use": "think", "when": "When a security plugin is offered as the fix, to ask what it protects and what is left" }
+      ]
+    },
+    {
+      "id": "php-readiness",
+      "task": "Get custom code ready for a newer PHP version",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/php-version-readiness", "use": "build", "when": "When the host moves to a newer PHP or the site runs an end-of-life version" },
+        { "ref": "library:major-upgrade-planner", "type": "skill", "use": "build", "when": "When the move needs stages, with what breaks checked and tested at each step" },
+        { "ref": "library:untested-code-change-guide", "type": "skill", "use": "build", "when": "When the custom code has no tests, to add a safety net before changing it" }
+      ]
+    },
+    {
+      "id": "plugin-readme",
+      "task": "Write a plugin readme and setup notes",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/plugin-readme-and-setup-notes", "use": "build", "when": "When a custom plugin needs a proper readme and plain notes for the people who run it" },
+        { "ref": "library:code-documentation-writer", "type": "skill", "use": "build", "when": "When the code has no comments or usage notes, to write docs that match what it does" },
+        { "ref": "library:documentation-checker", "type": "skill", "use": "check", "when": "Before handing over, to find claims in the notes that do not match the code" }
+      ]
+    },
+    {
+      "id": "site-speed",
+      "task": "Speed up a slow WordPress site",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:agency-engineering-wordpress-performance", "type": "agent", "use": "check", "when": "When the site is slow, to rank fixes for plugins, caching, database, images and hosting" },
+        { "ref": "library:page-speed-fixer", "type": "skill", "use": "build", "when": "When you have a PageSpeed report, to work through the fixes in ordered batches" },
+        { "ref": "library:website-speed-tuner", "type": "skill", "use": "build", "when": "When the theme's scripts and caching are the problem, to fix load and layout shift" },
+        { "ref": "library:image-compressor", "type": "skill", "use": "build", "when": "When large images slow the pages, to make smaller files that look the same" }
+      ]
+    },
+    {
+      "id": "woocommerce",
+      "task": "Set up, fix or speed up a WooCommerce store",
+      "kind": "code",
+      "items": [
+        { "ref": "library:woocommerce-store-setup-planner", "type": "skill", "use": "brief", "when": "When a new store is planned, to get a build plan from hosting to the first test order" },
+        { "ref": "library:agency-engineering-wordpress-shopping-cart", "type": "agent", "use": "build", "when": "When the store needs custom checkout or payment work planned with checks" },
+        { "ref": "library:woocommerce-code-checker", "type": "skill", "use": "check", "when": "When new store code is written, to catch broken order storage and missed checkout checks" },
+        { "ref": "library:payments-and-checkout-settings-checker", "type": "skill", "use": "check", "when": "When orders fail or payments are disputed, to score the settings and rank the risks" },
+        { "ref": "library:speed-up-a-woocommerce-store-and-keep-it-fast", "type": "workflow", "use": "build", "when": "When the store is slow, to get ordered fixes and a budget that keeps it fast" },
+        { "ref": "library:self-hosted-store-speed-fixer", "type": "skill", "use": "build", "when": "When you know the store's hosting and plugins and want fixes in order of gain" }
+      ]
+    },
+    {
+      "id": "site-security",
+      "task": "Harden a site's logins, headers and settings",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:website-security-check", "type": "skill", "use": "check", "when": "When you want a pass over HTTPS, security headers, exposed files and content policy" },
+        { "ref": "library:exposed-secrets-finder", "type": "skill", "use": "check", "when": "When config files or keys may be readable by visitors, to find them and plan rotation" },
+        { "ref": "library:sign-in-policy-drafter", "type": "prompt", "use": "build", "when": "When admins share logins or reuse passwords, to rank the gaps and write a one-page policy" },
+        { "ref": "library:threat-list-maker", "type": "prompt", "use": "check", "when": "When the owner asks what could go wrong, to rank the likeliest attacks with a fix for each" },
+        { "ref": "kit:skills/plugin-security-hardening", "use": "check", "when": "When the weak point is custom code, not settings" }
+      ]
+    },
+    {
+      "id": "hack-recovery",
+      "task": "Recover from a hack or malware warning",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/fix-a-broken-site-safely", "use": "build", "when": "When the site must come back from a clean backup with each step checked" },
+        { "ref": "library:website-security-check", "type": "skill", "use": "check", "when": "After the clean-up, to check what is still open before the site goes live again" },
+        { "ref": "library:turn-an-incident-into-a-safer-procedure", "type": "workflow", "use": "build", "when": "When the site is back, to turn the timeline into a report and prevention actions" },
+        { "ref": "library:troy-hunt", "type": "mind", "use": "think", "when": "When the owner asks what was exposed, to separate what is known from what is feared" }
+      ]
+    },
+    {
+      "id": "host-or-domain-move",
+      "task": "Move a site to a new host or domain",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:website-content-mover", "type": "skill", "use": "build", "when": "When addresses change, to keep search rank, links and bookmarks working" },
+        { "ref": "library:zero-downtime-migration-planner", "type": "skill", "use": "build", "when": "When the store or site cannot go down, to plan checks and a rollback for each step" },
+        { "ref": "library:domain-and-dns-planner", "type": "skill", "use": "build", "when": "When DNS records and redirects must be laid out before the switch" },
+        { "ref": "library:site-go-live-runbook-writer", "type": "skill", "use": "build", "when": "When cutover day needs a runbook with checks, DNS steps and what to watch after" },
+        { "ref": "library:email-setup-health-checker", "type": "skill", "use": "check", "when": "After the move, to check the site's mail records still pass" }
+      ]
+    },
+    {
+      "id": "launch-check",
+      "task": "Check a new or rebuilt site before launch",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:site-qa-sweep-runner", "type": "skill", "use": "check", "when": "When you want one pass over pages, links and forms at a depth you choose" },
+        { "ref": "library:agency-testing-evidence-collector", "type": "agent", "use": "check", "when": "When the site must match a spec, to get pass or fail results with screenshots" },
+        { "ref": "library:site-go-live-runbook-writer", "type": "skill", "use": "build", "when": "When launch day needs its steps, checks and rollback written down" },
+        { "ref": "kit:skills/safe-update-plan", "use": "check", "when": "When everything must be current and backed up before the site goes live" }
+      ]
+    },
+    {
+      "id": "technical-seo",
+      "task": "Fix technical SEO on a WordPress site",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:technical-seo-auditor", "type": "skill", "use": "check", "when": "When rankings drop after a rebuild, to audit crawling, indexing and site structure" },
+        { "ref": "library:search-indexing-auditor", "type": "skill", "use": "check", "when": "When pages are missing from search, to find why and get a fix list" },
+        { "ref": "library:schema-markup-writer", "type": "skill", "use": "build", "when": "When a page type needs structured data added to the theme or a plugin" }
+      ]
+    },
+    {
+      "id": "accessibility-fixes",
+      "task": "Find and fix accessibility problems in a theme",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:accessibility-checker", "type": "skill", "use": "check", "when": "When you have a page or its code, to get ranked problems against the current standard" },
+        { "ref": "library:wcag-accessibility-fixer", "type": "skill", "use": "build", "when": "When you can edit the theme code, to fix each problem and check it again" },
+        { "ref": "library:quarterly-accessibility-keeper", "type": "agent", "use": "check", "when": "When the site is checked each quarter, to rank new gaps and confirm old fixes" }
+      ]
+    },
+    {
+      "id": "tracking-and-consent",
+      "task": "Set up tracking, consent and policy pages",
+      "kind": "code",
+      "items": [
+        { "ref": "library:tracking-plan-builder", "type": "skill", "use": "brief", "when": "Before adding tags, to list the events worth measuring and how to name them" },
+        { "ref": "library:conversion-tracking-fixer", "type": "skill", "use": "build", "when": "When sales or leads are not counted right, to set up or repair the tracking" },
+        { "ref": "library:policy-page-drafter", "type": "skill", "use": "build", "when": "When the site needs a draft privacy or cookie notice for a lawyer to check" }
+      ]
+    },
+    {
+      "id": "inherited-site-audit",
+      "task": "Audit a site built by someone who has left",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/plugin-cleanup-review", "use": "check", "when": "First, to list what is installed and what to keep, replace or remove" },
+        { "ref": "library:wordpress-health-fixer", "type": "skill", "use": "check", "when": "When you have the Site Health report, to rank what to fix first" },
+        { "ref": "library:website-fix-backlog-builder", "type": "skill", "use": "build", "when": "When the owner wants one ranked list of fixes for speed, usability and message" },
+        { "ref": "library:website-security-check", "type": "skill", "use": "check", "when": "When nobody knows how the site was secured, to check the basics" },
+        { "ref": "kit:skills/plugin-security-hardening", "use": "check", "when": "When the last developer left custom code that nobody has reviewed" }
+      ]
+    },
+    {
+      "id": "editor-guide",
+      "task": "Write an editor guide and handover notes",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/plugin-readme-and-setup-notes", "use": "build", "when": "When the handover includes custom plugins that need setup notes" },
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When staff need written steps for routine jobs such as adding a page or a product" },
+        { "ref": "library:help-article-writer", "type": "skill", "use": "build", "when": "When editors keep asking the same questions, to write short how-to articles" }
+      ]
+    },
+    {
+      "id": "integrations",
+      "task": "Connect the site to another tool or schedule a task",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/custom-plugin-build", "use": "build", "when": "When the link to another tool should live in a small plugin with its own settings" },
+        { "ref": "library:api-connector-builder", "type": "skill", "use": "build", "when": "When the site must send or fetch data from a service, with retries and error handling" },
+        { "ref": "library:schedule-timing-checker", "type": "skill", "use": "check", "when": "When a scheduled job runs at the wrong time or not at all, to read the schedule plainly" },
+        { "ref": "library:untrusted-input-checker", "type": "skill", "use": "check", "when": "When outside data comes into the site, to check it before it reaches your logic" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:bug-root-cause-finder", "type": "skill", "use": "check", "when": "Before any change to a live site, to be sure the cause is proven" },
+    { "ref": "library:release-day-rollback-planner", "type": "prompt", "use": "check", "when": "Before any change to a live site, to know how to undo it" }
+  ],
+  "helpers": [
+    { "role": "website-designer", "when": "When the fix turns into a redesign of pages, layout or the theme's look" },
+    { "role": "seo-specialist", "when": "When a move, rebuild or clean-up may cost search traffic and needs an SEO plan" },
+    { "role": "cybersecurity-specialist", "when": "When the site was hacked or holds data that needs a deeper security review" },
+    { "role": "accessibility-specialist", "when": "When the site needs a full accessibility audit and statement" },
+    { "role": "it-administrator", "when": "When the cause sits in DNS, mailboxes or the hosting account, not in WordPress" },
+    { "role": "frontend-developer", "when": "When a block or theme needs heavy JavaScript or a custom front end" }
+  ],
+  "gaps": [
+    "No library item finds a plugin or theme conflict by switching items off in a safe, logged order",
+    "No library item builds a WordPress block, shortcode or small plugin; only the kit skill does",
+    "No library item plans core, theme and plugin updates with staging, order and rollback; only the kit skill does",
+    "No library item cleans up a hacked WordPress site: finding changed files, rogue admins and reinfection",
+    "No library item checks custom PHP code against a newer PHP version",
+    "No library item writes a WordPress readme.txt or an editor guide for a WordPress site",
+    "No library item fixes Elementor or other page-builder layouts, or customises a theme through a child theme",
+    "No library item moves a WordPress site between hosts or from staging to live, including address changes in the database",
+    "No library item cleans a WordPress database of old revisions, expired temporary data and heavy autoloaded options",
+    "No library item sets up a multilingual or multisite WordPress install",
+    "No library item writes a monthly maintenance report for the site owner"
+  ]
+}

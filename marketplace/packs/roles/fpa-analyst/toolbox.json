@@ -1,0 +1,299 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "fpa-analyst",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "thirteen-week-cash-forecast",
+      "task": "Build a 13-week cash forecast and flag the tight weeks",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/thirteen-week-cash-forecast", "use": "build", "when": "When you have a bank export, unpaid invoices, bills and pay dates and need a weekly view" },
+        { "ref": "library:cash-forecast-builder", "type": "skill", "use": "build", "when": "When the owner wants a quick 30, 60 and 90 day view with the risks named" },
+        { "ref": "library:prepare-a-seasonal-cash-buffer", "type": "workflow", "use": "build", "when": "When income is seasonal, to get a dated forecast, a downside case and actions" },
+        { "ref": "library:bad-year-plan-stress-tester", "type": "prompt", "use": "explore", "when": "When you need the worst case in plain words: three bad-year tests and the breaking point" },
+        { "ref": "library:treasury-forecast-backtest-checker", "type": "skill", "use": "check", "when": "When last period's forecast can be set against what happened, to see each miss and why" },
+        { "ref": "library:morgan-housel", "type": "mind", "use": "think", "when": "When the forecast has no slack, to ask how much room for error the business needs" }
+      ]
+    },
+    {
+      "id": "budget-versus-actual",
+      "task": "Explain budget versus actual with causes",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/variance-analysis", "use": "build", "when": "When a number moved against budget, forecast or last period and the owner asks why" },
+        { "ref": "library:budget-variance-explainer", "type": "skill", "use": "build", "when": "When you have actual and budget figures and need what moved, why, and a short note" },
+        { "ref": "library:explain-a-department-budget-overrun", "type": "workflow", "use": "build", "when": "When one department overspent, to get a reconciled report and options for its owner" },
+        { "ref": "library:monthly-budget-versus-actual-keeper", "type": "agent", "use": "check", "when": "Each month, to track what moved against budget and the cash levers if the year is off" }
+      ]
+    },
+    {
+      "id": "annual-budget",
+      "task": "Build a 12-month budget for the business or a team",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/annual-budget-cycle", "use": "brief", "when": "Two to three months before the year starts, or after a big change, to run the whole cycle" },
+        { "ref": "kit:prompts/annual-budget-from-actuals", "use": "build", "when": "When you have last year's monthly numbers and next year's goals" },
+        { "ref": "kit:skills/driver-based-model", "use": "build", "when": "When the budget should run from named drivers, with an inputs sheet and cash" },
+        { "ref": "library:department-budget-planner", "type": "skill", "use": "build", "when": "When each department needs a phased budget from its past spend and targets" },
+        { "ref": "library:budget-and-forecast-builder", "type": "skill", "use": "explore", "when": "When you want a second budget built from the same history to compare with yours" },
+        { "ref": "library:people-cost-budget-builder", "type": "skill", "use": "build", "when": "When pay is the largest cost, to budget it by team and month from the headcount plan" },
+        { "ref": "library:room-for-error-plan-checker", "type": "skill", "use": "check", "when": "When the budget is drafted, to see where it breaks in a bad year and how to fix it" }
+      ]
+    },
+    {
+      "id": "plan-scenarios",
+      "task": "Build plan, cautious and stretch versions",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/driver-based-model", "use": "build", "when": "When three versions should run from one set of drivers, so they stay comparable" },
+        { "ref": "library:headcount-scenario-planner", "type": "skill", "use": "explore", "when": "When hiring is the big swing, to get base, best and worst cases and switch signals" },
+        { "ref": "library:bad-year-plan-stress-tester", "type": "prompt", "use": "check", "when": "When the cautious case looks mild, to test the plan against three bad years" },
+        { "ref": "library:agency-finance-financial-analyst", "type": "agent", "use": "check", "when": "When the versions are built, to recalculate them and see which assumptions matter most" },
+        { "ref": "library:nassim-taleb", "type": "mind", "use": "think", "when": "When the worst case is only a little worse, to look for the shock that ends the business" }
+      ]
+    },
+    {
+      "id": "reforecast",
+      "task": "Update the full-year forecast after month end",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/monthly-performance-review", "use": "build", "when": "Once the month is closed, and each Monday for the cash refresh" },
+        { "ref": "library:financial-model-refresher", "type": "skill", "use": "build", "when": "When a model exists and new results are in, to update it and flag the biggest changes" },
+        { "ref": "library:trend-and-forecast-analyst", "type": "skill", "use": "build", "when": "When sales have seasons and spikes, to find the trend and a forecast table" },
+        { "ref": "library:treasury-forecast-backtest-checker", "type": "skill", "use": "check", "when": "Before the new forecast goes out, to see how far the last one missed" }
+      ]
+    },
+    {
+      "id": "kpi-one-pager",
+      "task": "Write the one-page monthly numbers review",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/monthly-kpi-one-pager", "use": "build", "when": "At month end, when the owner wants five numbers, how they moved and what to do" },
+        { "ref": "library:kpi-dashboard-designer", "type": "skill", "use": "brief", "when": "Before the page, to pick the few numbers that match the decisions the reader makes" },
+        { "ref": "library:build-a-weekly-kpi-report-with-a-forecast-and-dashboard", "type": "workflow", "use": "build", "when": "When the review should also run weekly with a forecast and a dashboard" },
+        { "ref": "library:data-chart-drawer", "type": "skill", "use": "build", "when": "When one number needs a clean chart drawn from the client's own data" },
+        { "ref": "library:excel-powerpoint-number-checker", "type": "skill", "use": "check", "when": "When the page is a slide, to check every number and chart agrees with the workbook" },
+        { "ref": "library:cole-nussbaumer-knaflic", "type": "mind", "use": "think", "when": "When the page is crowded, to keep one message per chart and put the action in view" }
+      ]
+    },
+    {
+      "id": "three-year-model",
+      "task": "Build a three-year financial model",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/driver-based-model", "use": "build", "when": "When a young company needs revenue, costs, hires, cash and runway from named drivers" },
+        { "ref": "library:startup-financial-model-builder", "type": "skill", "use": "explore", "when": "When you want a second build from the same numbers to compare structure and results" },
+        { "ref": "library:forecast-your-startup-runway-and-prepare-a-finance-pack", "type": "workflow", "use": "build", "when": "When the model must also give a cash-out date with ranges and a finance pack" },
+        { "ref": "library:analysis-assumptions-logger", "type": "skill", "use": "build", "when": "When every assumption needs logging with its risk on one page" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "Before anyone relies on it, to find formula errors, broken links and totals that do not tie" },
+        { "ref": "library:aswath-damodaran", "type": "mind", "use": "think", "when": "When the numbers and the story have drifted apart, to make each assumption follow the story" }
+      ]
+    },
+    {
+      "id": "assumptions-and-sensitivity",
+      "task": "Show assumptions, sources and which inputs matter most",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:analysis-assumptions-logger", "type": "skill", "use": "build", "when": "When a reader must see every assumption and how it could change the answer" },
+        { "ref": "library:opportunity-size-estimator", "type": "skill", "use": "build", "when": "When one input needs a low, base and high value with its reasoning listed" },
+        { "ref": "library:agency-finance-financial-analyst", "type": "agent", "use": "check", "when": "When you need the model re-run to rank which assumptions move the result most" },
+        { "ref": "kit:skills/driver-based-model", "use": "build", "when": "When the inputs sheet must let a non-finance partner change a driver and see the effect" }
+      ]
+    },
+    {
+      "id": "saas-metrics",
+      "task": "Turn subscription data into trusted recurring revenue metrics",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/saas-metrics-pack", "use": "build", "when": "When you have a billing export and need revenue movement, churn and retention you can trust" },
+        { "ref": "library:saas-metrics-coach", "type": "skill", "use": "check", "when": "When the numbers are worked out, to read them and see what to fix first" },
+        { "ref": "library:subscription-revenue-tracker", "type": "skill", "use": "build", "when": "When subscriptions run through a store, to get recurring revenue, subscribers and churn" },
+        { "ref": "library:weekly-saas-numbers-keeper", "type": "agent", "use": "build", "when": "When the founder wants the same sheet kept each week with one growth target" },
+        { "ref": "library:subscription-churn-watcher", "type": "agent", "use": "check", "when": "When churn must be watched between reports so a rise is caught early" }
+      ]
+    },
+    {
+      "id": "churn-by-group",
+      "task": "Analyse churn and retention by customer group",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/saas-metrics-pack", "use": "build", "when": "When churn must be split by plan, start month or size, with failed payments told apart" },
+        { "ref": "library:retention-cohort-analyst", "type": "skill", "use": "build", "when": "When you have activity data, to get retention curves by sign-up group" },
+        { "ref": "library:retention-heatmap-maker", "type": "skill", "use": "build", "when": "When the reader needs retention by group as a colour grid with a plain reading" },
+        { "ref": "library:subscription-churn-watcher", "type": "agent", "use": "check", "when": "When one group looks worse, to keep watching it month to month" }
+      ]
+    },
+    {
+      "id": "unit-economics",
+      "task": "Check cost to win a customer, payback and lifetime value",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/unit-economics-check", "use": "build", "when": "When money is spent to win customers and the owner asks how fast it comes back" },
+        { "ref": "library:subscription-unit-economics", "type": "skill", "use": "build", "when": "When you have customer and revenue data, to work out cohorts, payback and value" },
+        { "ref": "library:cac-payback-checker", "type": "skill", "use": "check", "when": "When the figures are in, to get profit against cost to win and a scale-or-fix call" }
+      ]
+    },
+    {
+      "id": "price-volume-mix",
+      "task": "Break a sales or margin change into price, volume and mix",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/price-volume-mix-bridge", "use": "build", "when": "When revenue or margin moved between two periods and you need each part sized" },
+        { "ref": "kit:skills/variance-analysis", "use": "build", "when": "When the bridge needs causes beside each part, not only amounts" },
+        { "ref": "library:production-cost-variance", "type": "skill", "use": "build", "when": "When the change is in making cost, to split it into price, volume and efficiency" },
+        { "ref": "library:data-chart-drawer", "type": "skill", "use": "build", "when": "When the bridge should be shown as a waterfall chart from the worked numbers" },
+        { "ref": "library:katherine-johnson", "type": "mind", "use": "think", "when": "When the parts do not add back to the total, to rework the sum a second way" }
+      ]
+    },
+    {
+      "id": "sales-dip-or-spike",
+      "task": "Find why sales dipped or spiked",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:store-sales-drop-splitter", "type": "skill", "use": "build", "when": "When online sales fell, to split the drop into visits, conversion and order value" },
+        { "ref": "library:sales-drop-cause-finder", "type": "prompt", "use": "build", "when": "When you have before and after numbers, to find the lever that moved and the next check" },
+        { "ref": "library:trend-and-forecast-analyst", "type": "skill", "use": "check", "when": "When the move may be seasonal, to test it against trend and past seasons" },
+        { "ref": "kit:skills/variance-analysis", "use": "build", "when": "When the cause is found and must be written up with amounts" }
+      ]
+    },
+    {
+      "id": "margin-by-product",
+      "task": "Show which products or jobs moved the margin",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:product-profit-analyst", "type": "skill", "use": "build", "when": "When you have revenue and costs by product, to see each margin and the loss-makers" },
+        { "ref": "library:service-utilization-margin-builder", "type": "skill", "use": "build", "when": "When the business sells hours, to turn paid hours into revenue and delivery margin" },
+        { "ref": "library:shared-service-activity-cost-allocator", "type": "skill", "use": "build", "when": "When shared costs must be split across products or sites by how much each used" },
+        { "ref": "library:breakeven-point-calculator", "type": "skill", "use": "check", "when": "When margins are known, to find break-even volume and the effect of a price change" },
+        { "ref": "kit:prompts/price-volume-mix-bridge", "use": "build", "when": "When the margin change must be split into price, volume and mix" }
+      ]
+    },
+    {
+      "id": "zero-based-cost-review",
+      "task": "Review fixed costs from zero",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/zero-based-cost-review", "use": "check", "when": "Once a year, or when profit or cash is under pressure, to question every fixed cost" },
+        { "ref": "library:find-duplicate-and-unused-business-subscriptions", "type": "workflow", "use": "check", "when": "When subscriptions have piled up, to get a register and savings scenarios" },
+        { "ref": "library:spend-savings-finder", "type": "skill", "use": "build", "when": "When you have a list of supplier payments, to group spend and rank the savings" }
+      ]
+    },
+    {
+      "id": "business-case",
+      "task": "Build a business case for a purchase or hire",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:business-investment-analyst", "type": "skill", "use": "build", "when": "When the owner asks whether to buy, to work out payback, return and risk" },
+        { "ref": "library:fleet-replacement-cash-comparer", "type": "skill", "use": "build", "when": "When the purchase replaces a vehicle, to compare the cash both ways" },
+        { "ref": "library:headcount-business-case-builder", "type": "skill", "use": "build", "when": "When the spend is a hire, to show full yearly cost, hire against contractor and payback" },
+        { "ref": "library:agency-chief-financial-officer", "type": "agent", "use": "explore", "when": "When there are several ways to do it, to see options, cash impact and a downside case" },
+        { "ref": "library:claim-skepticism-kit", "type": "skill", "use": "check", "when": "When the saving comes from a supplier's own figures, to test the claim" },
+        { "ref": "kit:skills/thirteen-week-cash-forecast", "use": "check", "when": "When the case is made, to show what the payments do to cash week by week" }
+      ]
+    },
+    {
+      "id": "cash-gap-options",
+      "task": "Work out ways to close a cash gap",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/thirteen-week-cash-forecast", "use": "brief", "when": "First, to size the gap and name the weeks it falls in" },
+        { "ref": "library:cash-tied-up-finder", "type": "skill", "use": "build", "when": "When cash may be stuck in debtors, creditors or stock, to see where and how much" },
+        { "ref": "library:compare-project-options-against-cash-limits", "type": "workflow", "use": "explore", "when": "When several projects compete for the same cash, to compare which fit the limit" },
+        { "ref": "library:supplier-payment-terms-planner", "type": "skill", "use": "build", "when": "When stretching supplier terms is one option, to see the float and what to ask for" },
+        { "ref": "library:agency-chief-financial-officer", "type": "agent", "use": "explore", "when": "When the owner must choose, to set out the options with cash impact and downside" }
+      ]
+    },
+    {
+      "id": "forecast-update-guide",
+      "task": "Write a one-page guide to update the forecast each week",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/thirteen-week-cash-forecast", "use": "build", "when": "When the forecast is built and the owner must keep it going without you" },
+        { "ref": "library:excel-handover-guide-writer", "type": "skill", "use": "build", "when": "When the workbook needs its inputs, formulas, update steps and risks written down" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before handover, to find broken formulas and totals that do not add up" }
+      ]
+    },
+    {
+      "id": "headcount-plan",
+      "task": "Plan hiring and what it will cost",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:plan-a-year-of-hiring-and-what-it-will-cost", "type": "workflow", "use": "build", "when": "When you have headcount history and goals and need a role-by-role plan with monthly cost" },
+        { "ref": "library:people-cost-budget-builder", "type": "skill", "use": "build", "when": "When the plan is set and must become a budget by team and month" },
+        { "ref": "library:headcount-scenario-planner", "type": "skill", "use": "explore", "when": "When hiring depends on sales, to compare base, best and worst cases" },
+        { "ref": "kit:skills/driver-based-model", "use": "check", "when": "When the hires must tie into the main model's profit, cash and runway" }
+      ]
+    },
+    {
+      "id": "runway",
+      "task": "Forecast startup burn and runway",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:startup-runway-forecaster", "type": "skill", "use": "build", "when": "When you have monthly cash data and need the burn and the month cash runs out" },
+        { "ref": "library:forecast-your-startup-runway-and-prepare-a-finance-pack", "type": "workflow", "use": "build", "when": "When the board or investors need the cash-out date with ranges and a plan" },
+        { "ref": "kit:skills/driver-based-model", "use": "build", "when": "When runway must respond to hires and revenue drivers, not a flat burn" },
+        { "ref": "library:bad-year-plan-stress-tester", "type": "prompt", "use": "check", "when": "When runway rests on sales arriving on time, to test it against a bad year" }
+      ]
+    },
+    {
+      "id": "board-and-lender-pack",
+      "task": "Prepare a board, investor or lender numbers pack",
+      "kind": "other",
+      "items": [
+        { "ref": "library:prepare-a-board-decision-brief", "type": "workflow", "use": "brief", "when": "When decisions are due, to map the evidence and write the update around them" },
+        { "ref": "library:board-deck-builder", "type": "skill", "use": "build", "when": "When the quarter must become a deck outline with the numbers and bad news placed right" },
+        { "ref": "library:debt-service-covenant-headroom-checker", "type": "skill", "use": "build", "when": "When a lender tests cash cover, to show the cushion in each test period" },
+        { "ref": "library:cash-versus-earnings-checker", "type": "skill", "use": "check", "when": "When profit looks fine, to set free cash beside it before a lender does" },
+        { "ref": "library:hard-questions-board-prep-coach", "type": "skill", "use": "check", "when": "Before the meeting, to face the toughest questions and drill the numbers" },
+        { "ref": "library:excel-powerpoint-number-checker", "type": "skill", "use": "check", "when": "Before sending, to check each slide number and chart against the workbook" }
+      ]
+    },
+    {
+      "id": "price-and-break-even",
+      "task": "Work out break-even and the effect of a price change",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:breakeven-point-calculator", "type": "skill", "use": "build", "when": "When you have prices and costs and need break-even volume and margin of safety" },
+        { "ref": "library:price-test-planner", "type": "skill", "use": "explore", "when": "When a new price is on the table, to see three outcome cases and a test you can undo" },
+        { "ref": "kit:prompts/unit-economics-check", "use": "check", "when": "When the price change alters what a customer is worth against the cost to win one" }
+      ]
+    },
+    {
+      "id": "model-review",
+      "task": "Review a budget or model someone else built",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "First, to find formula errors, broken links and statements that do not tie" },
+        { "ref": "library:agency-finance-financial-analyst", "type": "agent", "use": "check", "when": "When figures must be recalculated and the weak assumptions named" },
+        { "ref": "library:room-for-error-plan-checker", "type": "skill", "use": "check", "when": "When the sums are right, to test whether the plan survives a bad year" },
+        { "ref": "kit:skills/variance-analysis", "use": "check", "when": "When the model can be set against actuals to see where it has already missed" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before any workbook leaves you, to find broken formulas and totals that do not add up" },
+    { "ref": "library:analysis-assumptions-logger", "type": "skill", "use": "build", "when": "Whenever a number rests on a guess, to log the guess and its risk beside the result" }
+  ],
+  "helpers": [
+    { "role": "bookkeeper", "when": "When the actuals are not closed or reconciled and the numbers cannot yet be trusted" },
+    { "role": "fractional-cfo", "when": "When the forecast shows a funding need or a decision that is bigger than the numbers" },
+    { "role": "pricing-strategist", "when": "When the bridge or margin work points to a pricing problem that needs its own study" },
+    { "role": "startup-fundraising-consultant", "when": "When the model is for a raise and needs an investor story and terms around it" },
+    { "role": "data-visualisation-specialist", "when": "When the pack needs several charts or a dashboard designed, not one chart" },
+    { "role": "spreadsheet-specialist", "when": "When exports need heavy cleaning or the workbook needs advanced formulas or macros" }
+  ],
+  "gaps": [
+    "No library item builds a weekly 13-week direct cash forecast; the library forecast works in 30, 60 and 90 days",
+    "No library item builds a price, volume and mix bridge or checks that its parts add back to the total",
+    "No library item draws a waterfall chart of a change; only a general chart drawer exists",
+    "No library item builds a sensitivity table or ranks the three inputs that move a model most",
+    "No library item reviews fixed costs from zero, line by line",
+    "No library item builds a driver-based budget with plan, cautious and stretch versions in one spreadsheet layout",
+    "No library item compares buy, lease and finance for a machine, software or fit-out; only vehicles are covered",
+    "No library item writes a business case memo for an owner or a lender",
+    "No library item turns a Stripe, Paddle or Chargebee export into revenue movement, or tells real churn from failed payments",
+    "No library item offers two or three layouts of a one-page numbers review to compare",
+    "No library item forecasts working capital or plans capital spending for a small business"
+  ]
+}

@@ -1,0 +1,292 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "customer-success-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "onboarding-plan",
+      "task": "Plan onboarding from signed to first useful result",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/sales-to-success-handoff", "use": "brief", "when": "When a deal has just closed and what was promised must reach the people who deliver" },
+        { "ref": "kit:skills/onboarding-to-first-value", "use": "build", "when": "When you know what the customer bought and need the path to their first real result" },
+        { "ref": "library:customer-onboarding-planner", "type": "skill", "use": "explore", "when": "When you want a second plan to compare, laid out in phases with milestones and owners" },
+        { "ref": "library:copilot-gtm-enterprise-onboarding", "type": "skill", "use": "build", "when": "When the customer is a large account with several teams and sign-offs at each stage" },
+        { "ref": "library:onboarding-improver", "type": "skill", "use": "check", "when": "When the plan has too many setup steps before the customer sees any value" },
+        { "ref": "library:customer-onboarding-keeper", "type": "agent", "use": "check", "when": "When onboarding is live, to see each week where new customers stall in the first 30 days" }
+      ]
+    },
+    {
+      "id": "weekly-health-report",
+      "task": "Run the weekly account health report",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:data-quality-scorecard-maker", "type": "skill", "use": "check", "when": "Before scoring, to find blanks, duplicates and stale rows in the usage or billing export" },
+        { "ref": "kit:workflows/weekly-account-health-run", "use": "build", "when": "Every week on the same day, to turn the latest signals into a short action list" },
+        { "ref": "kit:skills/health-score-and-save-plan", "use": "build", "when": "When there is no score yet and you must build one from signals the business can see" },
+        { "ref": "library:customer-health-and-churn-scorer", "type": "skill", "use": "build", "when": "When you have customer data and need a score, churn risk and upsell chance per account" },
+        { "ref": "library:churn-risk-finder", "type": "skill", "use": "check", "when": "When you want a second read on who is at risk from usage, engagement and ticket data" },
+        { "ref": "library:weekly-customer-health-watcher", "type": "agent", "use": "build", "when": "When the owner wants the weekly run to happen on its own with the next touch for each" }
+      ]
+    },
+    {
+      "id": "save-plan",
+      "task": "Write a save plan for one at-risk customer",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:customer-message-tone-and-urgency-review", "type": "skill", "use": "brief", "when": "When the customer's recent messages hold warning signs you need named before you act" },
+        { "ref": "kit:skills/health-score-and-save-plan", "use": "build", "when": "When an account turns amber or red and needs the reason, the owner and the next steps" },
+        { "ref": "library:agency-customer-success-manager", "type": "agent", "use": "explore", "when": "When you want a second plan for the same account to compare with your own" },
+        { "ref": "library:get-a-stuck-customer-issue-unstuck-and-close-the-loop", "type": "workflow", "use": "build", "when": "When the risk comes from one open issue nobody owns" },
+        { "ref": "library:matthew-dixon", "type": "mind", "use": "think", "when": "When the plan adds calls and gifts but does not remove the effort that annoys the customer" }
+      ]
+    },
+    {
+      "id": "welcome-emails",
+      "task": "Write a welcome and onboarding email series",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/onboarding-to-first-value", "use": "brief", "when": "Before writing, to fix the first result each email should move the customer towards" },
+        { "ref": "library:new-customer-onboarding-sequence-writer", "type": "skill", "use": "build", "when": "When you need a 14-day email and text plan and a map of the first 100 days" },
+        { "ref": "library:email-sequence-writer", "type": "skill", "use": "explore", "when": "When you want a second series with different timing and subject lines to compare" },
+        { "ref": "library:make-onboarding-instructions-match-the-product", "type": "workflow", "use": "check", "when": "When the emails give setup steps, to check each against the real product" },
+        { "ref": "library:one-ask-email-tightener", "type": "prompt", "use": "check", "when": "Before sending, to cut each email to one action the customer can take" }
+      ]
+    },
+    {
+      "id": "renewal-plan",
+      "task": "Plan renewals for one customer or a batch",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:prepare-a-contract-renewal-negotiation", "type": "workflow", "use": "brief", "when": "When the contract has notice dates and terms you must read before you set the timeline" },
+        { "ref": "kit:workflows/renewal-cycle", "use": "build", "when": "When a renewal date falls inside the planning window and the steps must run in order" },
+        { "ref": "kit:skills/renewal-and-price-change", "use": "build", "when": "When you need the timeline, risk notes and a value recap built only from real numbers" },
+        { "ref": "library:renewal-watch-planner", "type": "skill", "use": "build", "when": "When you need every upcoming renewal listed with timing, risk and room to raise the price" },
+        { "ref": "library:monthly-renewal-watcher", "type": "agent", "use": "build", "when": "When the client wants renewals due in 90 days flagged each month with a plan for each call" },
+        { "ref": "library:narayana-murthy", "type": "mind", "use": "think", "when": "When one or two customers make up most of the revenue up for renewal" }
+      ]
+    },
+    {
+      "id": "check-in-messages",
+      "task": "Write check-in messages for each customer stage",
+      "kind": "email",
+      "items": [
+        { "ref": "library:customer-message-tone-and-urgency-review", "type": "skill", "use": "brief", "when": "When you have the customer's last messages and need their mood before you write" },
+        { "ref": "kit:prompts/check-in-messages-by-stage", "use": "build", "when": "When you need short, human check-ins for new, active, quiet and unhappy customers" },
+        { "ref": "library:customer-reply-drafter", "type": "skill", "use": "explore", "when": "When one customer's situation is unusual and needs a reply in a different tone to compare" },
+        { "ref": "library:one-ask-email-tightener", "type": "prompt", "use": "check", "when": "When a check-in rambles, to cut it to one real reason to reply" }
+      ]
+    },
+    {
+      "id": "success-plan-and-review",
+      "task": "Prepare a success plan or quarterly review pack",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:qbr-prep-brief-writer", "type": "skill", "use": "brief", "when": "Before the meeting, to get a health read, value delivered and a draft agenda" },
+        { "ref": "kit:prompts/success-plan-and-quarterly-review", "use": "build", "when": "When a key customer needs a 90-day plan or a review outline with talking points" },
+        { "ref": "library:account-plan-builder", "type": "skill", "use": "build", "when": "When the account needs goals, key people, risks and next steps in one written plan" },
+        { "ref": "library:prepare-an-enterprise-account-plan", "type": "workflow", "use": "build", "when": "When the account is large and the plan must cover several buyers and open deals" },
+        { "ref": "library:data-story-writer", "type": "skill", "use": "build", "when": "When the customer's usage numbers need a clear point, proof and next step" },
+        { "ref": "library:markdown-slide-deck-maker", "type": "skill", "use": "build", "when": "When the review needs simple slides made from the outline" },
+        { "ref": "library:clayton-christensen", "type": "mind", "use": "think", "when": "When the plan lists features used but not what the customer hired the product to do" }
+      ]
+    },
+    {
+      "id": "cancel-flow",
+      "task": "Design a fair cancel flow with pause and downgrade options",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/fair-cancel-flow-and-win-back", "use": "build", "when": "When customers can only cancel by fighting for it, or leave with no other option shown" },
+        { "ref": "library:cancel-reason-save-planner", "type": "prompt", "use": "build", "when": "When you know the cancel reasons and what the billing tool can do, to match one save to each" },
+        { "ref": "library:subscription-cancel-flow-builder", "type": "skill", "use": "build", "when": "When the flow lives in a subscription portal and failed payments need their own path" },
+        { "ref": "library:churn-reducer", "type": "skill", "use": "explore", "when": "When you want a second flow with different save offers to compare" },
+        { "ref": "library:agency-support-legal-compliance-checker", "type": "agent", "use": "check", "when": "Before launch, to check the flow against cancellation rules where the business sells" },
+        { "ref": "library:robert-cialdini", "type": "mind", "use": "think", "when": "When a save step starts to use pressure or guilt instead of an honest offer" }
+      ]
+    },
+    {
+      "id": "churn-breakdown",
+      "task": "Break down cancellations from a billing export",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "Before any sums, to find gaps, duplicates and odd values in the export" },
+        { "ref": "kit:prompts/churn-reasons-breakdown", "use": "build", "when": "When you have a cancellation export and need who leaves, why and when with sums shown" },
+        { "ref": "library:retention-cohort-analyst", "type": "skill", "use": "build", "when": "When you need retention by sign-up month to see which groups leave early" },
+        { "ref": "library:subscription-churn-audit", "type": "skill", "use": "check", "when": "When you want a score for where in the subscription life customers drop out" },
+        { "ref": "library:feedback-theme-finder", "type": "skill", "use": "build", "when": "When the export has free-text cancel reasons that must be grouped into themes" },
+        { "ref": "library:subscription-churn-watcher", "type": "agent", "use": "build", "when": "When the client wants churn watched on a schedule after the first breakdown" }
+      ]
+    },
+    {
+      "id": "renewal-emails",
+      "task": "Write a renewal email series",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/renewal-and-price-change", "use": "build", "when": "When notices must state the date, amount and how to cancel, with a value recap" },
+        { "ref": "library:billing-reminder-and-confirmation-writer", "type": "skill", "use": "build", "when": "When the renewal is an automatic charge and needs a reminder and a confirmation" },
+        { "ref": "library:email-sequence-writer", "type": "skill", "use": "explore", "when": "When you want a second series with different timing and subject lines to compare" },
+        { "ref": "library:discount-and-price-change-checker", "type": "agent", "use": "check", "when": "When the emails quote a price or discount, to check every figure agrees" },
+        { "ref": "library:one-ask-email-tightener", "type": "prompt", "use": "check", "when": "Before sending, to make sure each notice asks for one clear action" }
+      ]
+    },
+    {
+      "id": "price-change",
+      "task": "Announce a price change to customers",
+      "kind": "email",
+      "items": [
+        { "ref": "library:pricing-strategist", "type": "skill", "use": "brief", "when": "When the new price is not yet settled and the tiers need a second look first" },
+        { "ref": "kit:skills/renewal-and-price-change", "use": "build", "when": "When the price is set and customers need the date, the amount and their options stated plainly" },
+        { "ref": "library:hard-questions-faq-writer", "type": "skill", "use": "explore", "when": "When the notice is drafted, to predict the hard questions and try answers for each" },
+        { "ref": "library:discount-and-price-change-checker", "type": "agent", "use": "check", "when": "Before sending, to check old and new prices and dates match everywhere they appear" }
+      ]
+    },
+    {
+      "id": "win-back",
+      "task": "Write win-back messages for customers who left",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/fair-cancel-flow-and-win-back", "use": "build", "when": "When members have left and you need honest messages matched to why each one went" },
+        { "ref": "library:win-back-flow-builder", "type": "skill", "use": "build", "when": "When timing should follow how long buyers usually wait before they order again" },
+        { "ref": "library:text-message-campaign-writer", "type": "skill", "use": "explore", "when": "When text or WhatsApp may work better than email, with consent rules kept" },
+        { "ref": "library:one-ask-email-tightener", "type": "prompt", "use": "check", "when": "Before sending, to cut each message to one offer and one way back" }
+      ]
+    },
+    {
+      "id": "save-scripts",
+      "task": "Write save scripts for phone, chat and email by cancel reason",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:cancel-reason-save-planner", "type": "prompt", "use": "brief", "when": "Before the scripts, to pick the one fair save that fits each cancel reason" },
+        { "ref": "kit:skills/fair-cancel-flow-and-win-back", "use": "build", "when": "When the save desk needs words for each reason that still respect a no" },
+        { "ref": "library:angry-customer-reply-writer", "type": "prompt", "use": "explore", "when": "When the member is angry as well as leaving and the script must name the feeling first" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "When a script offers a credit or a fix, to check each promise can be kept" }
+      ]
+    },
+    {
+      "id": "tiers-and-service-levels",
+      "task": "Set customer tiers and service levels",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:customer-segment-builder", "type": "skill", "use": "brief", "when": "When you have order history and need customers grouped by recency, frequency and spend" },
+        { "ref": "kit:prompts/customer-tiers-and-service-levels", "use": "build", "when": "When every customer gets the same attention and the team cannot keep up" },
+        { "ref": "library:loyalty-and-vip-program-designer", "type": "skill", "use": "explore", "when": "When the top tier should earn perks that are not discounts" },
+        { "ref": "library:tony-hsieh", "type": "mind", "use": "think", "when": "When cutting service for small accounts saves cost now but may hurt what the firm is known for" }
+      ]
+    },
+    {
+      "id": "client-intake",
+      "task": "Build a client intake form and document request list",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/sales-to-success-handoff", "use": "brief", "when": "Before the form, to list what sales already knows so the client is not asked twice" },
+        { "ref": "library:questionnaire-writer", "type": "skill", "use": "build", "when": "When you need questions aimed at what only the client knows" },
+        { "ref": "library:multi-step-form-designer", "type": "skill", "use": "build", "when": "When the form is long and needs stages, conditional questions and save and resume" },
+        { "ref": "library:prepare-a-clear-client-project-kickoff", "type": "workflow", "use": "build", "when": "When intake ends in a kickoff and you need the brief, agenda and action list" },
+        { "ref": "library:make-a-long-form-easier-to-finish", "type": "workflow", "use": "check", "when": "When clients abandon the form, to cut fields and test the new flow" }
+      ]
+    },
+    {
+      "id": "setup-guide",
+      "task": "Write a setup guide and onboarding checklist",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/onboarding-to-first-value", "use": "brief", "when": "Before writing, to pick the few steps that lead to the first result and drop the rest" },
+        { "ref": "library:product-how-to-guide-writer", "type": "skill", "use": "build", "when": "When you have product facts and customer problems and need short numbered routines" },
+        { "ref": "library:help-article-writer", "type": "skill", "use": "build", "when": "When setup questions keep coming and each needs its own searchable page" },
+        { "ref": "library:make-onboarding-instructions-match-the-product", "type": "workflow", "use": "check", "when": "When the guide is drafted, to walk the product and fix steps and labels that differ" }
+      ]
+    },
+    {
+      "id": "upgrade-offer",
+      "task": "Write an upgrade offer for happy customers",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:expansion-whitespace-finder", "type": "skill", "use": "brief", "when": "When you need to see what an account owns, what it could add and the proof for each" },
+        { "ref": "library:customer-health-and-churn-scorer", "type": "skill", "use": "brief", "when": "Before any offer, to pick only the accounts healthy enough to hear one" },
+        { "ref": "library:offer-designer", "type": "skill", "use": "build", "when": "When the upgrade needs value framing, terms and a name the customer understands" },
+        { "ref": "library:free-to-paid-flow-designer", "type": "skill", "use": "explore", "when": "When the upgrade could be shown in the product at the right moment instead of by email" },
+        { "ref": "library:discount-and-price-change-checker", "type": "agent", "use": "check", "when": "When the offer quotes a price or a saving, to check every figure is right" }
+      ]
+    },
+    {
+      "id": "unhappy-customer",
+      "task": "Reply to an unhappy customer and get the issue moving",
+      "kind": "email",
+      "items": [
+        { "ref": "library:customer-message-tone-and-urgency-review", "type": "skill", "use": "brief", "when": "When a hard message lands and you need its tone, urgency and warning signs read first" },
+        { "ref": "library:angry-customer-reply-writer", "type": "prompt", "use": "build", "when": "When the customer is angry and the reply must fix what it can and promise nothing false" },
+        { "ref": "library:customer-reply-drafter", "type": "skill", "use": "explore", "when": "When you want a second reply in a different tone to choose between" },
+        { "ref": "library:get-a-stuck-customer-issue-unstuck-and-close-the-loop", "type": "workflow", "use": "build", "when": "When the fix sits with another team and needs an escalation brief and a close-out" },
+        { "ref": "library:angry-customer-reply-checker", "type": "skill", "use": "check", "when": "Before sending, to check the promises, facts and tone of your draft" }
+      ]
+    },
+    {
+      "id": "feedback-and-surveys",
+      "task": "Run a customer survey and sort the feedback",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:questionnaire-writer", "type": "skill", "use": "build", "when": "When you need a short survey or exit survey aimed at what you do not yet know" },
+        { "ref": "library:delighted-and-satismeter-survey-assistant", "type": "skill", "use": "build", "when": "When the survey runs in a survey tool and you need its report or a list check before sending" },
+        { "ref": "library:feedback-theme-finder", "type": "skill", "use": "build", "when": "When scores and open comments are in and need themes, trends and a short report" },
+        { "ref": "library:feedback-pile-sorter", "type": "skill", "use": "check", "when": "When feedback comes from tickets, surveys and calls and the loudest voice may mislead" }
+      ]
+    },
+    {
+      "id": "call-notes",
+      "task": "Turn a customer call into notes and a follow-up",
+      "kind": "email",
+      "items": [
+        { "ref": "library:call-follow-up-drafter", "type": "skill", "use": "build", "when": "When you have call notes and need a follow-up email, a team summary and record updates" },
+        { "ref": "library:turn-a-recorded-call-into-notes-a-follow-up-and-coaching", "type": "workflow", "use": "build", "when": "When the call was recorded and you also want coaching on how it went" },
+        { "ref": "library:fireflies", "type": "tool", "use": "brief", "when": "When calls are recorded and you need searchable transcripts and action lists" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "When the follow-up repeats promises made on the call, to check each can be kept" }
+      ]
+    },
+    {
+      "id": "advocacy",
+      "task": "Ask happy customers for a referral or a case study",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:referral-program-designer", "type": "skill", "use": "build", "when": "When happy customers would refer others if there were a clear reward and a simple way" },
+        { "ref": "library:turn-a-customer-interview-into-a-case-outline", "type": "workflow", "use": "build", "when": "When a customer agrees to a case study and you need the outline and what they must approve" },
+        { "ref": "library:social-proof-placer", "type": "skill", "use": "build", "when": "When you have quotes and results and need to know where each one works hardest" }
+      ]
+    },
+    {
+      "id": "journey-process-map",
+      "task": "Map the customer journey from signed to renewal as steps",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/sales-to-success-handoff", "use": "brief", "when": "When the first step of the journey is a handoff that keeps losing details" },
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When onboarding lives in one person's head and must become a written procedure" },
+        { "ref": "library:process-bottleneck-finder", "type": "skill", "use": "check", "when": "When time to first delivery is slow, to find the one stage holding everything up" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before any value recap or review goes out, to trace each number to the customer's own data" },
+    { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before any message that promises a date, a credit or a fix" }
+  ],
+  "helpers": [
+    { "role": "customer-support-specialist", "when": "When the save plan depends on clearing open tickets or writing saved replies" },
+    { "role": "lifecycle-marketer", "when": "When onboarding or win-back needs full automated flows built in an email tool" },
+    { "role": "pricing-strategist", "when": "When a renewal or upgrade needs the price, tiers or discount rules worked out" },
+    { "role": "data-analyst", "when": "When the health score or churn breakdown needs joined exports and tested sums" },
+    { "role": "technical-writer", "when": "When onboarding needs a full set of help pages or a manual, not one setup guide" },
+    { "role": "compliance-specialist", "when": "When the cancel flow or renewal notices must be checked against consumer rules by country" }
+  ],
+  "gaps": [
+    "No library item writes check-in messages by customer stage; only the kit's prompt covers it",
+    "No library item writes save scripts for phone and chat by cancel reason, or lets you compare two script styles",
+    "No library item writes an exit survey with reason codes; the questionnaire writer is general",
+    "No library item writes a price rise announcement; the library can only check the figures in one",
+    "No library item builds a value recap for a renewal from the customer's own usage and results",
+    "No library item writes a sales-to-success handoff sheet or a document request list for a service firm",
+    "No library item sets service levels by customer tier for a business with 10 to 200 accounts",
+    "No library item asks a happy customer for a testimonial, review or reference call",
+    "No library item covers gym, studio or membership retention such as seasonal pause options",
+    "No library item checks a cancel flow against click-to-cancel and auto-renewal rules; only a general legal agent fits",
+    "No library item prepares the talk track for a renewal call from the seller's side",
+    "No library item maps the people in an account and plans for a champion leaving"
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "no-code-app-developer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "portal-brief",
+      "task": "Turn a loose request into a portal or staff tool brief",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/client-portal-brief", "use": "build", "when": "At the start, to get roles, jobs, data, sensitive data and open questions on one page" },
+        { "ref": "library:request-clarifier", "type": "skill", "use": "brief", "when": "When the client says \"we need an app\" and little else, to ask sharp questions first" },
+        { "ref": "library:process-bottleneck-finder", "type": "skill", "use": "brief", "when": "When the tool replaces a manual process, to map who does what and where it stalls today" },
+        { "ref": "library:product-requirements-writer", "type": "skill", "use": "build", "when": "When a founder or funder wants a short requirements document, not only a brief" }
+      ]
+    },
+    {
+      "id": "data-model",
+      "task": "Design the app's tables, fields and links",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/app-data-model", "use": "build", "when": "When you have the client's sheet or base and need tables, field types, links and owner fields" },
+        { "ref": "library:database-schema-designer", "type": "skill", "use": "check", "when": "When the model has many linked tables, to cross-check it against a clean, normalised design" },
+        { "ref": "library:column-mapping-document-writer", "type": "skill", "use": "build", "when": "When old sheet columns must map to new tables, to list each column, its rule and the gaps" }
+      ]
+    },
+    {
+      "id": "page-spec",
+      "task": "Spec each page, button and screen state",
+      "kind": "web_page",
+      "items": [
+        { "ref": "kit:skills/app-page-and-workflow-spec", "use": "build", "when": "When the data model is agreed and each screen needs a card a builder can follow" },
+        { "ref": "library:user-flow-designer", "type": "skill", "use": "brief", "when": "Before the page cards, to lay out the steps a user takes to finish each job" },
+        { "ref": "library:wireframe-drafter", "type": "skill", "use": "explore", "when": "When the client must see a screen before the build, to draft it at rough and detailed levels" },
+        { "ref": "library:screen-states-designer", "type": "skill", "use": "build", "when": "When a page is specced only for the happy path, to add empty, loading, error and no-result states" },
+        { "ref": "library:usability-heuristic-reviewer", "type": "skill", "use": "check", "when": "When a page is drafted, to score it and get each usability break with ranked fixes" },
+        { "ref": "library:don-norman", "type": "mind", "use": "think", "when": "When users cannot tell what a button will do or whether their action worked" }
+      ]
+    },
+    {
+      "id": "roles-and-privacy",
+      "task": "Plan who can see and change what",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/roles-and-privacy-rules", "use": "build", "when": "When the app has more than one kind of user, to set a roles table and the real server-side rule" },
+        { "ref": "library:login-and-access-builder", "type": "skill", "use": "check", "when": "When you want a second look at the sign-in and permissions plan before you build it" },
+        { "ref": "library:privacy-first-app-designer", "type": "skill", "use": "brief", "when": "When the app holds personal data, to keep less of it and plan consent and safe storage" },
+        { "ref": "library:threat-list-maker", "type": "prompt", "use": "check", "when": "When the design is written down, to rank the likeliest attacks and one fix for each" },
+        { "ref": "library:bruce-schneier", "type": "mind", "use": "think", "when": "When a safeguard is proposed, to ask what it really protects, what it costs and what is left" }
+      ]
+    },
+    {
+      "id": "platform-fit",
+      "task": "Pick the platform, or say no-code is the wrong choice",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/no-code-platform-fit", "use": "build", "when": "Before any build, to score Airtable Interfaces, Glide, Softr and Bubble for this client" },
+        { "ref": "library:software-vendor-chooser", "type": "skill", "use": "check", "when": "When the client wants options scored against their own criteria, with risks and contract points" },
+        { "ref": "library:saas-terms-check", "type": "skill", "use": "check", "when": "Before the client commits to a plan, to flag renewal traps, price rises and data terms" }
+      ]
+    },
+    {
+      "id": "sheet-tidy",
+      "task": "Tidy the sheet or base before it feeds the app",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/sheet-tidy-list", "use": "build", "when": "Before a Google Sheet, Excel file or Airtable base becomes the data source for an app" },
+        { "ref": "library:messy-spreadsheet-cleaner", "type": "skill", "use": "build", "when": "When the sheet has stray spaces, text numbers, mixed dates and duplicates to fix" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "When the sheet has formulas and totals the app will show, to find broken ones first" }
+      ]
+    },
+    {
+      "id": "automations",
+      "task": "Plan automations between the app and other tools",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/app-page-and-workflow-spec", "use": "brief", "when": "When you list what each button and trigger does, before any step moves to another tool" },
+        { "ref": "library:no-code-automation-planner", "type": "skill", "use": "build", "when": "When a task should run in Zapier or Make, to get a setup that holds up and when to use code" },
+        { "ref": "library:check-a-new-automation-before-relying-on-it", "type": "workflow", "use": "check", "when": "Before the client relies on a new automation, to find double runs and missing approval steps" },
+        { "ref": "library:zapier", "type": "tool", "use": "build", "when": "When a simple trigger and action between two common apps is all the job needs" },
+        { "ref": "library:make", "type": "tool", "use": "build", "when": "When the automation branches, loops over rows or needs a visual map of each step" }
+      ]
+    },
+    {
+      "id": "privacy-test",
+      "task": "Test privacy and access before launch",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/privacy-test-script", "use": "check", "when": "Before launch or after adding a role, table, page or integration, to test as each role" },
+        { "ref": "kit:skills/roles-and-privacy-rules", "use": "check", "when": "When a test fails, to trace it back to the rule that should have blocked it" },
+        { "ref": "library:exposed-secrets-finder", "type": "skill", "use": "check", "when": "When the app is live on a web address, to find keys and private files a visitor can read" },
+        { "ref": "library:prepare-new-data-use-review-for-signoff", "type": "workflow", "use": "check", "when": "When someone must sign off a new use of personal data, to prepare the assessment and questions" }
+      ]
+    },
+    {
+      "id": "forms-and-signup",
+      "task": "Design forms and sign-up steps",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:web-form-designer", "type": "skill", "use": "build", "when": "When the app needs an intake or request form, to set fields, error messages and spam protection" },
+        { "ref": "library:multi-step-form-designer", "type": "skill", "use": "explore", "when": "When one long form puts people off, to try it as stages with conditional questions" },
+        { "ref": "library:signup-flow-improver", "type": "skill", "use": "check", "when": "When people start sign-up and drop out, to cut fields and clear up the copy" }
+      ]
+    },
+    {
+      "id": "app-microcopy",
+      "task": "Write labels, empty states and error messages",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:interface-microcopy-writer", "type": "skill", "use": "build", "when": "When a screen needs button labels, empty states and toasts in one friendly voice" },
+        { "ref": "library:write-helpful-error-and-empty-states", "type": "workflow", "use": "build", "when": "When the whole app's error and empty states need writing in one pass from the screens" },
+        { "ref": "library:error-message-rewriter", "type": "skill", "use": "check", "when": "When error messages blame the user or say nothing, to rewrite each with what to do next" },
+        { "ref": "library:click-choice-clarity-checker", "type": "skill", "use": "check", "when": "When users pick the wrong menu item, to score each label and get clearer wording" },
+        { "ref": "library:steve-krug", "type": "mind", "use": "think", "when": "When a screen makes people stop and think about what a word or button means" }
+      ]
+    },
+    {
+      "id": "dashboard-page",
+      "task": "Plan a dashboard or report page in the app",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:kpi-dashboard-designer", "type": "skill", "use": "brief", "when": "Before the layout, to pick the few numbers each reader needs for the decisions they make" },
+        { "ref": "library:dashboard-builder", "type": "skill", "use": "explore", "when": "When the client must see the dashboard with real data before you build it on the platform" },
+        { "ref": "kit:skills/app-page-and-workflow-spec", "use": "build", "when": "When the numbers are agreed and the page needs filters, who sees it and its empty state" },
+        { "ref": "library:usability-heuristic-reviewer", "type": "skill", "use": "check", "when": "When the dashboard is drafted, to find what is unclear and rank the fixes" }
+      ]
+    },
+    {
+      "id": "user-testing",
+      "task": "Test the app with real users before launch",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:qa-test-scenario-writer", "type": "skill", "use": "build", "when": "When each job in the brief needs a test with a starting state, steps and expected result" },
+        { "ref": "library:small-usability-test-planner", "type": "skill", "use": "build", "when": "When you can get three users for a morning, to plan tasks, a script and a fix list" },
+        { "ref": "library:check-a-prototype-before-user-testing", "type": "workflow", "use": "check", "when": "Before the test session, to find blockers and reword any task that leads the user" },
+        { "ref": "library:accessibility-standards-checker", "type": "skill", "use": "check", "when": "When the portal is for the public or a public body, to list access gaps and rank the fixes" },
+        { "ref": "library:bug-report-writer", "type": "skill", "use": "build", "when": "When testers send screenshots and notes, to turn each into clear steps, impact and proof" },
+        { "ref": "library:request-acceptance-checker", "type": "skill", "use": "check", "when": "Before sign-off, to mark every requirement in the brief as pass, fail or not run" }
+      ]
+    },
+    {
+      "id": "build-and-launch",
+      "task": "Plan the build, launch and rollout",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/plan-build-and-launch-a-portal", "use": "build", "when": "When a client wants a portal or staff tool taken from their sheet to a launched app" },
+        { "ref": "library:business-tool-launch-checklist", "type": "skill", "use": "check", "when": "Before go-live, to list launch checks, open blockers and a record of the decision" },
+        { "ref": "library:staff-announcement-writer", "type": "skill", "use": "build", "when": "When staff must switch to the new tool, to write the note, a FAQ and manager talking points" }
+      ]
+    },
+    {
+      "id": "handover",
+      "task": "Write the handover guide and user help",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/app-handover-guide", "use": "build", "when": "At the end of a build or when the app changes hands, so the owner can run and change it" },
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When staff need a written procedure for the work the app now supports, with edge cases" },
+        { "ref": "library:help-article-writer", "type": "skill", "use": "build", "when": "When portal users keep asking the same questions, to write short help articles and FAQs" },
+        { "ref": "library:sop-and-runbook-checker", "type": "skill", "use": "check", "when": "When the guide is drafted, to find missing owners, stale steps and gaps" }
+      ]
+    },
+    {
+      "id": "plan-and-usage",
+      "task": "Check plan limits, usage and cost",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/plan-usage-check", "use": "check", "when": "Monthly, before launch, or when the app slows down or a usage email arrives" },
+        { "ref": "library:slow-system-investigator", "type": "skill", "use": "check", "when": "When the app is slow or failing, to work through the likely causes and write up what was found" },
+        { "ref": "library:saas-terms-check", "type": "skill", "use": "check", "when": "When the platform changes its pricing or terms, to see what it means for this client" }
+      ]
+    },
+    {
+      "id": "monthly-review",
+      "task": "Run the monthly access and usage review",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/monthly-access-and-usage-review", "use": "check", "when": "Once a month, and after any new role, table, integration or usage alert" },
+        { "ref": "kit:prompts/privacy-test-script", "use": "check", "when": "When the review finds a new role or table, to retest what each role can see" },
+        { "ref": "library:sign-in-policy-drafter", "type": "prompt", "use": "build", "when": "When the review shows shared logins or weak sign-in, to rank the gaps and write a policy" }
+      ]
+    },
+    {
+      "id": "mvp-scope",
+      "task": "Scope a founder's first version",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:mvp-experiment-planner", "type": "skill", "use": "brief", "when": "When a founder wants to test an idea, to find the riskiest guess and the smallest test" },
+        { "ref": "library:lean-product-shaping-coach", "type": "skill", "use": "build", "when": "When the feature list is too long, to cut it to a six-week scope and a list of no's" },
+        { "ref": "library:user-story-writer", "type": "skill", "use": "build", "when": "When the scope is agreed and each feature needs stories with checks for done" },
+        { "ref": "library:eric-ries", "type": "mind", "use": "think", "when": "When the plan is to build everything first and learn later" }
+      ]
+    },
+    {
+      "id": "data-move",
+      "task": "Move data in from the old sheet or tool",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:business-data-move-runbook", "type": "skill", "use": "build", "when": "When records move from an old tool to the app, to plan field maps, checks and a way back" },
+        { "ref": "library:column-mapping-document-writer", "type": "skill", "use": "build", "when": "When you need a column-by-column map with the rule for each and the decisions to review" },
+        { "ref": "library:excel-table-join-reconciler", "type": "skill", "use": "check", "when": "After the import, to compare old and new tables and list unmatched rows and duplicate keys" }
+      ]
+    },
+    {
+      "id": "takeover-audit",
+      "task": "Take over and audit an app someone else built",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/roles-and-privacy-rules", "use": "check", "when": "First, to check what each role can really see and change in the app as built" },
+        { "ref": "kit:skills/app-data-model", "use": "check", "when": "When the tables grew without a plan, to write down the model and what to fix" },
+        { "ref": "library:everyday-usability-reviewer", "type": "skill", "use": "check", "when": "When users complain the app is confusing, to find what misleads them and how to fix it" },
+        { "ref": "library:exposed-secrets-finder", "type": "skill", "use": "check", "when": "When the last builder pasted keys into pages, to find what a visitor can read" }
+      ]
+    },
+    {
+      "id": "backup-and-restore",
+      "task": "Plan backups and a restore test",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:backup-and-recovery-planner", "type": "skill", "use": "build", "when": "When nobody knows how the app's data would be restored, to plan backups and a restore drill" },
+        { "ref": "library:build-a-backup-recovery-rehearsal", "type": "workflow", "use": "check", "when": "When a backup exists but was never tested, to plan a safe restore test and log the result" }
+      ]
+    },
+    {
+      "id": "payments-and-emails",
+      "task": "Add payments or app emails",
+      "kind": "code",
+      "items": [
+        { "ref": "library:stripe-payments-builder", "type": "skill", "use": "build", "when": "When the portal must take a payment or run a subscription, with test steps before go-live" },
+        { "ref": "library:agency-engineering-payments-billing-engineer", "type": "agent", "use": "check", "when": "When payments are wired in, to check failed payments, repeats and that totals reconcile" },
+        { "ref": "library:transactional-email-builder", "type": "skill", "use": "build", "when": "When the app sends invites, resets or status emails and they need templates and a sender setup" }
+      ]
+    },
+    {
+      "id": "ai-step",
+      "task": "Add an AI step or assistant to the app",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:agency-engineering-ai-engineer", "type": "agent", "use": "build", "when": "When the client wants an AI feature, to plan it from data check to launch and monitoring" },
+        { "ref": "library:prompt-injection-defender", "type": "skill", "use": "check", "when": "When the AI reads text users type or upload, to map and block hidden instructions" },
+        { "ref": "library:ai-answer-testing-planner", "type": "skill", "use": "check", "when": "Before users see AI answers, to plan scored tests and human review that catch weak ones" }
+      ]
+    },
+    {
+      "id": "move-to-code",
+      "task": "Plan the move from no-code to custom code",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/no-code-platform-fit", "use": "check", "when": "First, to confirm the app has truly outgrown no-code and say which limit it hit" },
+        { "ref": "library:idea-to-dev-brief-writer", "type": "skill", "use": "build", "when": "When a developer takes over, to give them a brief with scope and open questions" },
+        { "ref": "library:database-schema-planner", "type": "skill", "use": "build", "when": "When the data must move to a real database, to get a schema and a migration plan" },
+        { "ref": "library:plan-a-vendor-change-without-losing-work", "type": "workflow", "use": "build", "when": "When leaving a platform, to plan notice dates, data export and work that must not drop" },
+        { "ref": "library:bolt", "type": "tool", "use": "explore", "when": "When you want to see how far an AI app builder gets with the same spec before hiring" }
+      ]
+    },
+    {
+      "id": "quote-and-changes",
+      "task": "Quote the job and handle change requests",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:agency-project-manager-senior", "type": "agent", "use": "build", "when": "When the spec is done, to split it into small tasks with a done check and gaps to settle" },
+        { "ref": "library:outside-view-timeline-estimator", "type": "prompt", "use": "check", "when": "When your time estimate feels hopeful, to correct it by how jobs like this really went" },
+        { "ref": "library:prepare-a-client-scope-change-brief", "type": "workflow", "use": "build", "when": "When the client asks for more mid-build, to compare it with the signed scope and give options" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:request-clarifier", "type": "skill", "use": "brief", "when": "When any request is loose, to ask a few rounds of sharp questions before the first draft" },
+    { "ref": "library:threat-list-maker", "type": "prompt", "use": "check", "when": "Whenever the app gains a role, table or integration, to recheck the likeliest attacks" }
+  ],
+  "helpers": [
+    { "role": "automation-specialist", "when": "When the job needs many Zapier or Make flows with error handling, not one or two" },
+    { "role": "ux-designer", "when": "When the app has many screens and the flows need research and testing, not only a spec" },
+    { "role": "spreadsheet-specialist", "when": "When the source sheet needs heavy formula work or cleaning before it can feed the app" },
+    { "role": "database-engineer", "when": "When the data outgrows the platform and needs a real database and a migration" },
+    { "role": "software-engineer", "when": "When no-code is the wrong choice and the app, or a part of it, must be coded" },
+    { "role": "cybersecurity-specialist", "when": "When the app holds health, money or children's data and needs a deeper security review" }
+  ],
+  "gaps": [
+    "No library item is specific to Bubble, Glide, Softr or Airtable Interfaces: none covers Bubble privacy rules, Glide row owners or Softr user groups",
+    "No library item compares no-code platforms on users, records, price and limits; only the kit's platform fit skill does",
+    "No library item writes a formula and computed-column list for each screen of a no-code app",
+    "No library item tests an app as each user role and records what each role could see or change",
+    "No library item checks a platform plan against record, user and workflow-run limits or forecasts when the app will hit them",
+    "No library item offers two or three clearly different page layouts for a portal screen to compare",
+    "No library item offers alternative wordings of app labels and messages to choose between",
+    "No library item writes a handover guide for a no-code app: logins, plan, automations and what breaks if a field is renamed",
+    "No library item quotes a no-code build; the freelance quote workflow in the library is for websites",
+    "No library item plans exporting data and logic out of a no-code platform into code"
+  ]
+}

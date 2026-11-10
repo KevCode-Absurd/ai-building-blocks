@@ -1,0 +1,248 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "editor",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "copy-edit",
+      "task": "Copy edit a draft with the changes marked",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/draft-to-clean-copy", "use": "brief", "when": "When a client sends a draft and a deadline, to agree the level of edit and run it in order" },
+        { "ref": "kit:prompts/style-sheet-builder", "use": "brief", "when": "Before editing anything longer than a few pages, to fix spellings, capitals and number style" },
+        { "ref": "kit:skills/copy-edit-and-proofread", "use": "build", "when": "When the draft needs to be clear, consistent and correct while keeping the writer's voice" },
+        { "ref": "library:proofreader", "type": "skill", "use": "build", "when": "When the client has a style guide and wants grammar and punctuation fixed against it" },
+        { "ref": "library:william-zinsser", "type": "mind", "use": "think", "when": "When sentences are correct but cluttered, to find the point and cut what does no work" },
+        { "ref": "kit:prompts/consistency-check", "use": "check", "when": "Before handing back, to catch a term, name or number written two ways" }
+      ]
+    },
+    {
+      "id": "proofread",
+      "task": "Proofread final copy before it is published",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/copy-edit-and-proofread", "use": "build", "when": "When the text is final and only errors should change, not style" },
+        { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "When you want it corrected in the writer's own voice with a log of every change" },
+        { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "When the writer wants a list of slips and term clashes with nothing rewritten" },
+        { "ref": "library:plain-page-type-checker", "type": "skill", "use": "check", "when": "When the copy is laid out, to check type size, spacing and line length on the page" },
+        { "ref": "library:grammarly", "type": "tool", "use": "check", "when": "When the client works in a browser or Word and wants a second pass in their own tool" }
+      ]
+    },
+    {
+      "id": "plain-language-rewrite",
+      "task": "Rewrite a text in plain language for a named reader",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/plain-language-rewrite", "use": "build", "when": "When a text must reach about a grade 8 reader and keep every legal, safety and money point" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "build", "when": "When a draft needs plain words with each cut explained" },
+        { "ref": "library:expert-and-newcomer-writing", "type": "workflow", "use": "explore", "when": "When the piece has two audiences, to try a version experts respect and newcomers follow" },
+        { "ref": "library:plain-words-contract-summary", "type": "prompt", "use": "build", "when": "When the text is a contract and the reader needs what each side owes in two minutes" },
+        { "ref": "library:george-orwell", "type": "mind", "use": "think", "when": "When long words and passive sentences hide who does what" },
+        { "ref": "library:text-difficulty-checker", "type": "skill", "use": "check", "when": "When the rewrite is done, to check how hard it still is for the reader named" }
+      ]
+    },
+    {
+      "id": "structural-edit",
+      "task": "Give a structural edit of a long draft",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:overstuffed-draft-cutter", "type": "skill", "use": "brief", "when": "Before the critique, to name the one main idea and what fights it" },
+        { "ref": "kit:skills/structural-edit", "use": "build", "when": "When a report, guide, chapter or proposal needs its order, gaps and repeats assessed" },
+        { "ref": "library:long-form-piece-structurer", "type": "skill", "use": "build", "when": "When the draft needs a new outline, to propose an order that holds a reader" },
+        { "ref": "library:barbara-minto", "type": "mind", "use": "think", "when": "When the argument wanders, to put the answer first and group the reasons under it" },
+        { "ref": "library:honest-draft-feedback-giver", "type": "skill", "use": "build", "when": "When the writer needs straight feedback that names the weak lines" },
+        { "ref": "library:long-form-draft-editor", "type": "agent", "use": "check", "when": "When the restructured draft is back, to edit and re-check it until it passes" }
+      ]
+    },
+    {
+      "id": "cut-to-length",
+      "task": "Cut a draft to a word limit without losing the point",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/cut-to-length", "use": "build", "when": "When a piece is over its limit and every word feels necessary to the writer" },
+        { "ref": "library:ten-percent-cutter", "type": "skill", "use": "explore", "when": "When you are unsure how deep to cut, to see a light trim first with a log of every cut" },
+        { "ref": "library:overstuffed-draft-cutter", "type": "skill", "use": "build", "when": "When the piece is far over, to cut whole parts that do not serve the main idea" },
+        { "ref": "library:ernest-hemingway", "type": "mind", "use": "think", "when": "When a passage is wordy and should say the same in shorter, harder sentences" },
+        { "ref": "library:check-a-conference-abstract-against-results", "type": "workflow", "use": "check", "when": "When the cut piece is an abstract, to check it still matches the results" }
+      ]
+    },
+    {
+      "id": "style-sheet-and-consistency",
+      "task": "Build a style sheet and run a consistency check",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/style-sheet-builder", "use": "build", "when": "When a team keeps writing the same words different ways" },
+        { "ref": "kit:prompts/consistency-check", "use": "check", "when": "Before the final proofread of a long document, above all one with several writers" },
+        { "ref": "library:draft-brand-voice-checker", "type": "skill", "use": "check", "when": "When the client has a voice and style guide, to rank where the draft departs from it" },
+        { "ref": "library:technical-doc-proofreader", "type": "skill", "use": "check", "when": "When the document is technical, to list term clashes and jargon as well as slips" }
+      ]
+    },
+    {
+      "id": "claims-and-sources",
+      "task": "Flag claims that need a source and check the facts",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/claim-and-source-flag-list", "use": "build", "when": "Before publishing, to list every claim about numbers, research, health, money or law" },
+        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When the flagged claims must be checked against trusted sources" },
+        { "ref": "library:study-claim-checker", "type": "skill", "use": "check", "when": "When a claim rests on one study, to see its biases, weak statistics and evidence grade" },
+        { "ref": "library:citation-and-bibtex-fixer", "type": "skill", "use": "build", "when": "When the reference list is messy, to get clean, checked references" }
+      ]
+    },
+    {
+      "id": "peer-review",
+      "task": "Write a fair peer review of a paper or study",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/academic-paper-review", "use": "build", "when": "When an author wants the review a fair journal reviewer would give, before submitting" },
+        { "ref": "library:review-a-paper-and-write-a-fair-peer-review", "type": "workflow", "use": "build", "when": "When you have the manuscript and want a claim check, a methods review and a kind report" },
+        { "ref": "library:study-claim-checker", "type": "skill", "use": "check", "when": "When one result carries the paper, to test how strong the evidence is" },
+        { "ref": "library:rosalind-franklin", "type": "mind", "use": "think", "when": "When the conclusions run ahead of the data, to ask what the data really shows" },
+        { "ref": "library:check-a-conference-abstract-against-results", "type": "workflow", "use": "check", "when": "When the abstract may promise more than the results give" }
+      ]
+    },
+    {
+      "id": "revision-plan",
+      "task": "Plan the revision of a paper before submission",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/paper-review-and-resubmission", "use": "brief", "when": "When a paper is ready to submit or has come back, to run review and revision in order" },
+        { "ref": "kit:skills/academic-paper-review", "use": "build", "when": "When the review is done and must turn into a ranked list of revisions" },
+        { "ref": "library:draft-a-paper-review-it-and-fit-your-journals-rules", "type": "workflow", "use": "build", "when": "When the paper is still being drafted and must fit one journal from the start" },
+        { "ref": "library:manuscript-evidence-gatherer", "type": "skill", "use": "brief", "when": "When the review finds thin support, to gather current sources and competing findings" }
+      ]
+    },
+    {
+      "id": "reviewer-response",
+      "task": "Plan a response to journal reviewer comments",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/reviewer-response-table", "use": "build", "when": "When a paper has a revise-and-resubmit decision and every comment needs an answer" },
+        { "ref": "library:map-journal-reviewer-requests-to-evidence", "type": "workflow", "use": "build", "when": "When each comment must be tied to the manuscript and the evidence that answers it" },
+        { "ref": "library:reviewer-response-progress-assistant", "type": "agent", "use": "check", "when": "During revision, to track which comments are answered and which are still open" },
+        { "ref": "kit:workflows/paper-review-and-resubmission", "use": "brief", "when": "When the response and the revised paper must go back together" }
+      ]
+    },
+    {
+      "id": "journal-rules-check",
+      "task": "Check a paper against the journal's rules",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:journal-submission-formatter", "type": "skill", "use": "build", "when": "When the journal is named, to get its template, page limits and anonymity rules" },
+        { "ref": "library:check-manuscript-reference-consistency", "type": "workflow", "use": "check", "when": "Before submitting, to check each citation against the reference list and the papers" },
+        { "ref": "library:citation-and-bibtex-fixer", "type": "skill", "use": "build", "when": "When references are in the wrong form or incomplete" },
+        { "ref": "library:journal-ready-figure-maker", "type": "skill", "use": "build", "when": "When figures do not meet the journal's rules for clarity, colour or uncertainty" }
+      ]
+    },
+    {
+      "id": "voice-edit",
+      "task": "Edit a draft so it sounds like its writer, not a machine",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:brand-voice-editor", "type": "skill", "use": "build", "when": "When the client has a set voice, to fix off-voice words without touching the claims" },
+        { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "When lines sound machine made, to fix each one and see a score" },
+        { "ref": "library:ai-default-patterns", "type": "skill", "use": "check", "when": "When you need the list of stock phrases and structures to look for" }
+      ]
+    },
+    {
+      "id": "fiction-edit",
+      "task": "Edit a story or novel manuscript",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:draft-revision", "type": "workflow", "use": "build", "when": "When a story or book draft has rested and is ready to be revised step by step" },
+        { "ref": "library:story-rules-checker", "type": "skill", "use": "check", "when": "When you want the story checked against plain-fiction rules with each fault named" },
+        { "ref": "library:story-continuity-checker", "type": "skill", "use": "check", "when": "When the manuscript is long, to list name slips, age errors and things out of their time" },
+        { "ref": "library:dialogue-ear-checker", "type": "skill", "use": "check", "when": "When the talk sounds stiff, to test each line and fix the worst" },
+        { "ref": "library:scene-turn-checker", "type": "skill", "use": "check", "when": "When scenes feel flat, to mark what changes in each one and which do nothing" },
+        { "ref": "library:agency-academic-narratologist", "type": "agent", "use": "check", "when": "When the author wants structure, character arcs and pacing checked against named models" },
+        { "ref": "library:stephen-king", "type": "mind", "use": "think", "when": "When the draft over-explains and should trust the situation and the reader" }
+      ]
+    },
+    {
+      "id": "article-and-email-edit",
+      "task": "Edit an article, web page or long email",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/copy-edit-and-proofread", "use": "build", "when": "When an owner writes well but rambles and the piece needs tightening" },
+        { "ref": "library:marketing-copy-sweeper", "type": "skill", "use": "check", "when": "When it is web or marketing copy, to tighten it in passes for clarity, proof and the ask" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When it is a long email, to get cuts, a pacing map and subject fixes" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the title is weak, to offer the writer several angles" },
+        { "ref": "library:headline-cover-test-ranker", "type": "skill", "use": "check", "when": "When there are several titles, to score each read alone" }
+      ]
+    },
+    {
+      "id": "technical-edit",
+      "task": "Edit technical documentation for a named reader",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:technical-doc-proofreader", "type": "skill", "use": "check", "when": "When an English technical document needs slips, term clashes and jargon listed" },
+        { "ref": "library:data-jargon-translator", "type": "skill", "use": "build", "when": "When findings are written for experts and the reader is not one" },
+        { "ref": "kit:prompts/consistency-check", "use": "check", "when": "When product names, units and commands must be written one way throughout" }
+      ]
+    },
+    {
+      "id": "author-feedback",
+      "task": "Write honest feedback an author can act on",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:honest-draft-feedback-giver", "type": "skill", "use": "build", "when": "When the writer asked for the truth and needs the weak parts named plainly" },
+        { "ref": "kit:skills/structural-edit", "use": "build", "when": "When the feedback must cover order, gaps and what to cut, not line fixes" },
+        { "ref": "library:prepare-feedback-students-can-act-on", "type": "workflow", "use": "build", "when": "When the writer is a student and comments must turn into clear next steps" }
+      ]
+    },
+    {
+      "id": "proposal-edit",
+      "task": "Edit a proposal or grant section to the funder's rules",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/cut-to-length", "use": "build", "when": "When a section is over the funder's word limit" },
+        { "ref": "library:check-scholarship-application-evidence", "type": "workflow", "use": "check", "when": "When it is an application, to check each claim against the rules and the evidence" },
+        { "ref": "library:research-grant-proposal-coach", "type": "skill", "use": "brief", "when": "When it is a research grant, to know the funder's rules before editing" }
+      ]
+    },
+    {
+      "id": "abstract-and-summary",
+      "task": "Write an abstract or summary of a long piece",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:source-note-summariser", "type": "prompt", "use": "brief", "when": "Before writing, to pull out the piece's claims, evidence and gaps" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When a long analysis needs one page with the answer first" },
+        { "ref": "library:summarizer", "type": "skill", "use": "explore", "when": "When the length is not fixed, to compare summaries at different levels of detail" },
+        { "ref": "library:check-a-conference-abstract-against-results", "type": "workflow", "use": "check", "when": "When the abstract is drafted, to list anything it overclaims" }
+      ]
+    },
+    {
+      "id": "thesis-review",
+      "task": "Review a thesis or dissertation chapter",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:scholarly-work-reviewer", "type": "skill", "use": "build", "when": "When a thesis needs a fair review of what is strong and what is weak" },
+        { "ref": "kit:skills/academic-paper-review", "use": "build", "when": "When a chapter should be read the way an examiner would read it" },
+        { "ref": "library:prepare-a-thesis-defence-evidence-brief", "type": "workflow", "use": "build", "when": "When the defence is near and every claim needs a page reference" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "Last pass on anything you hand back, with a log of every change" },
+    { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "After your own rewrites, so the edit does not add machine-sounding lines" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When an edit changes a fact, name or number, to check the new wording is still true" }
+  ],
+  "helpers": [
+    { "role": "technical-writer", "when": "When technical documents need writing or restructuring, not only editing" },
+    { "role": "translator", "when": "When the text must be translated, or a translation checked against its source" },
+    { "role": "research-assistant", "when": "When flagged claims need sources found and read, not only marked" },
+    { "role": "proposal-writer", "when": "When a bid or grant needs its argument rebuilt, not only cut" },
+    { "role": "ghostwriter", "when": "When the draft is too thin to edit and needs to be written in the client's voice" },
+    { "role": "presentation-designer", "when": "When the edited report needs a page layout or a deck version" }
+  ],
+  "gaps": [
+    "No library item copy edits general prose with marked changes and author queries; the editors are for sales copy or light proofreading",
+    "No library item builds a style sheet or checks hyphens, capitals and numbers across a long document; the kit carries this alone",
+    "No library item gives a developmental edit of a non-fiction book or report beyond an outline",
+    "No library item edits English written by a non-native speaker, or checks a translation against its source for ordinary text",
+    "No library item checks for inclusive or sensitive language",
+    "No library item checks a paper against reporting checklists for trials, reviews or surveys",
+    "No library item checks for copied text or overlap with published work",
+    "No library item converts references between styles such as APA, Chicago and Harvard",
+    "No library item returns edits as Word tracked changes"
+  ]
+}

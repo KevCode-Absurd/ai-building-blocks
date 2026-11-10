@@ -1,0 +1,296 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "chatbot-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "assistant-setup-pack",
+      "task": "Build a full set-up pack for one AI assistant",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/assistant-setup-pack", "use": "build", "when": "When a custom GPT, Claude Project, Gem or help-desk agent needs instructions, files and tests" },
+        { "ref": "library:requirements-question-asker", "type": "skill", "use": "brief", "when": "When the client says \"we want a bot\" and nothing about users, sources or limits is fixed" },
+        { "ref": "library:agency-engineering-prompt-engineer", "type": "agent", "use": "explore", "when": "When you want a second prompt spec and first draft to set against your own" },
+        { "ref": "library:copilot-ai-prompt-engineering-safety-review", "type": "skill", "use": "check", "when": "When the instructions are drafted, to find risky wording and likely failure cases" },
+        { "ref": "library:chatgpt", "type": "tool", "use": "build", "when": "When the assistant will live as a custom GPT and you must check what the builder allows" },
+        { "ref": "library:claude", "type": "tool", "use": "build", "when": "When the assistant will live as a Claude Project with its own files and instructions" }
+      ]
+    },
+    {
+      "id": "write-instructions",
+      "task": "Write instructions for an assistant the client already uses",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/write-assistant-instructions", "use": "build", "when": "When you need one copy-ready block that keeps the assistant on topic, honest and safe" },
+        { "ref": "library:prompt-improver", "type": "skill", "use": "explore", "when": "When a rough prompt exists, to see it rebuilt in a clear structure before you choose" },
+        { "ref": "library:prompt-tester-and-tuner", "type": "skill", "use": "check", "when": "When you have test cases, to score each version and keep the one that wins" }
+      ]
+    },
+    {
+      "id": "fix-wrong-answers",
+      "task": "Fix an assistant that gives wrong answers",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/chatbot-test-and-review", "use": "check", "when": "When you must show where it fails, with a test set and a pass rule for each case" },
+        { "ref": "library:review-support-bot-errors-with-retest-cases", "type": "agent", "use": "check", "when": "When you have redacted chats and the approved text, to list wrong answers and retest cases" },
+        { "ref": "library:prompt-fixer", "type": "skill", "use": "build", "when": "When answers are weak or uneven and the instructions need tightening" },
+        { "ref": "library:tune-a-prompt-with-real-tests-then-ship-it-with-versions", "type": "workflow", "use": "build", "when": "When the fix must be scored on real cases and shipped with a version you can undo" },
+        { "ref": "library:andrej-karpathy", "type": "mind", "use": "think", "when": "When the cause is unclear, to read real failed chats one by one before changing anything" }
+      ]
+    },
+    {
+      "id": "knowledge-base-build",
+      "task": "Write a bot-ready knowledge base from policies and help pages",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/bot-knowledge-base-build", "use": "build", "when": "When policies, help pages and solved tickets must become one-topic approved answers" },
+        { "ref": "library:help-article-writer", "type": "skill", "use": "build", "when": "When a topic needs a full help article behind the short bot answer" },
+        { "ref": "library:answer-first-page-rewriter", "type": "skill", "use": "build", "when": "When source pages bury the answer, to rewrite each section answer first" },
+        { "ref": "library:customer-question-finder", "type": "skill", "use": "check", "when": "When entries are drafted, to find customer doubts they still leave unanswered" },
+        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When an entry states a price, time or promise you cannot trace to the client's own text" }
+      ]
+    },
+    {
+      "id": "split-documents",
+      "task": "Split and tag documents so an assistant can find the answer",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/split-documents-into-knowledge-entries", "use": "build", "when": "When policies or manuals must become short, tagged entries an assistant can find" },
+        { "ref": "library:rag-pipeline-designer", "type": "skill", "use": "brief", "when": "When a developer runs the search, to agree chunk size, search method and how to test it" },
+        { "ref": "library:context-package-cleaner", "type": "skill", "use": "build", "when": "When files repeat each other, to remove duplicates and fit the size limit" }
+      ]
+    },
+    {
+      "id": "retrieval-test",
+      "task": "Test whether the assistant finds the right entry",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/chatbot-test-and-review", "use": "check", "when": "When you need questions in customers' words, each with the entry it should use" },
+        { "ref": "library:agency-engineering-rag-pipeline-engineer", "type": "agent", "use": "check", "when": "When wrong sources keep coming back and the search itself needs quality checks" }
+      ]
+    },
+    {
+      "id": "new-entries-from-tickets",
+      "task": "Draft new knowledge entries from recent tickets",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/new-entries-from-tickets", "use": "build", "when": "Each month, to find questions the knowledge base misses and draft entries to approve" },
+        { "ref": "library:research-theme-synthesizer", "type": "skill", "use": "brief", "when": "When there are hundreds of tickets, to rank the themes by how often they come up" },
+        { "ref": "library:help-article-from-ticket-writer", "type": "prompt", "use": "build", "when": "When several tickets share one problem and need a short article in the customer's words" },
+        { "ref": "library:monthly-help-centre-keeper", "type": "agent", "use": "check", "when": "When the monthly run should also flag stale help pages, not only missing ones" }
+      ]
+    },
+    {
+      "id": "top-question-answers",
+      "task": "Write approved answers for orders, refunds and bookings",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/bot-knowledge-base-build", "use": "build", "when": "When the top five questions each need a short approved answer and a detail line" },
+        { "ref": "library:refund-request-reply-writer", "type": "prompt", "use": "build", "when": "When refund answers must lead with the decision and follow the written policy" },
+        { "ref": "library:angry-customer-reply-checker", "type": "skill", "use": "check", "when": "When an answer goes to upset customers, to check promises, facts and tone" }
+      ]
+    },
+    {
+      "id": "conversation-flow",
+      "task": "Design the conversation flow with intents and fallbacks",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/conversation-flow-and-handover", "use": "build", "when": "When you have real customer messages and need intents, a flow map and hand-over points" },
+        { "ref": "library:support-ticket-sorter", "type": "skill", "use": "brief", "when": "Before the flow, to sort real tickets into types and see which the bot may answer" },
+        { "ref": "library:chatbot-conversation-designer", "type": "skill", "use": "explore", "when": "When you want a second flow with other questions and recovery paths to compare" },
+        { "ref": "library:mermaid-chart-writer", "type": "skill", "use": "build", "when": "When the flow map must be a diagram the client can paste into their docs" },
+        { "ref": "kit:skills/chatbot-test-and-review", "use": "check", "when": "When the flow is drafted, to walk test messages through it and mark each path" },
+        { "ref": "library:don-norman", "type": "mind", "use": "think", "when": "When people get stuck in the bot, to check its cues, feedback and way back" }
+      ]
+    },
+    {
+      "id": "bot-words",
+      "task": "Write the greeting, AI disclosure, fallback and hand-over lines",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/ai-disclosure-and-handover-lines", "use": "build", "when": "When the bot needs words to say it is an AI, greet, admit a gap and hand over" },
+        { "ref": "library:interface-microcopy-writer", "type": "skill", "use": "explore", "when": "When button labels and short lines need a few friendly versions to choose from" },
+        { "ref": "library:error-message-rewriter", "type": "skill", "use": "build", "when": "When fallback lines only say sorry, to say what went wrong and what to do next" },
+        { "ref": "library:plain-words-interface-rewriter", "type": "skill", "use": "check", "when": "When the lines are drafted, to test them read aloud in the words customers use" }
+      ]
+    },
+    {
+      "id": "scope-and-voice",
+      "task": "Set the bot's scope, voice and hard rules on one sheet",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/assistant-setup-pack", "use": "build", "when": "When you need scope, sources and hard rules written before any flow or entry" },
+        { "ref": "library:voice-and-tone-guide-writer", "type": "skill", "use": "build", "when": "When the bot needs tone set by situation, with word lists and example lines" },
+        { "ref": "library:ai-app-guardrails-builder", "type": "skill", "use": "build", "when": "When you must list what the bot must never do and how each rule is tested" }
+      ]
+    },
+    {
+      "id": "handover-rules",
+      "task": "Set when and how the bot hands over to a person",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/conversation-flow-and-handover", "use": "build", "when": "When each hand-over point needs a trigger, the words used and what staff receive" },
+        { "ref": "library:define-a-customer-support-escalation-agreement", "type": "workflow", "use": "build", "when": "When nobody has written who takes a stuck issue and when it moves up" },
+        { "ref": "library:escalation-brief-writer", "type": "skill", "use": "build", "when": "When staff need a summary of the issue and what was tried, so nobody asks twice" },
+        { "ref": "library:matthew-dixon", "type": "mind", "use": "think", "when": "When the bot holds on too long, to cut the effort a customer spends to reach help" }
+      ]
+    },
+    {
+      "id": "test-set",
+      "task": "Write a test set with expected answers and pass rules",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/chatbot-test-and-review", "use": "build", "when": "When you need everyday, tricky, off-topic, unsafe and hand-over cases with pass rules" },
+        { "ref": "library:ai-answer-testing-planner", "type": "skill", "use": "brief", "when": "When the client asks how answers will be scored and who reviews them" },
+        { "ref": "library:ai-answer-judge-designer", "type": "skill", "use": "build", "when": "When an AI will grade the answers and needs a fair scoring guide" },
+        { "ref": "library:qa-test-scenario-writer", "type": "skill", "use": "build", "when": "When the flow has set paths, to write each as steps and an expected result" }
+      ]
+    },
+    {
+      "id": "transcript-review",
+      "task": "Review live bot transcripts and list the fixes",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/review-bot-transcripts", "use": "check", "when": "When the bot is live and you want its wrong answers found before customers complain" },
+        { "ref": "library:support-chatbot-conversation-review", "type": "skill", "use": "check", "when": "When you have a chat export and want resolved, partly resolved and failed chats counted" },
+        { "ref": "library:review-support-bot-errors-with-retest-cases", "type": "agent", "use": "check", "when": "When each wrong answer needs a proposed fix and a retest case" }
+      ]
+    },
+    {
+      "id": "injection-check",
+      "task": "Check the bot's defences against prompt injection",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:track-agent-injection-controls-and-retest-evidence", "type": "agent", "use": "check", "when": "When you need safe test cases, a list of control gaps and a retest record" },
+        { "ref": "library:prompt-injection-defender", "type": "skill", "use": "build", "when": "When the bot reads pages, files or emails that could hide instructions" },
+        { "ref": "library:harden-an-ai-app-against-hijacked-instructions-and-runaway-bills", "type": "workflow", "use": "build", "when": "When the bot is custom code and needs defences, tests and spending caps added" },
+        { "ref": "kit:skills/chatbot-test-and-review", "use": "check", "when": "When injection and data-request cases must sit in the same test set as the rest" }
+      ]
+    },
+    {
+      "id": "guardrails-and-privacy",
+      "task": "Write guardrail rules for unsafe, off-topic and data requests",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:ai-app-guardrails-builder", "type": "skill", "use": "build", "when": "When the bot must refuse jailbreaks, made-up facts and leaks of personal details" },
+        { "ref": "library:data-request-reply-drafter", "type": "skill", "use": "build", "when": "When someone asks the bot for their data and staff need the steps and a draft reply" },
+        { "ref": "library:eu-ai-act-risk-classifier", "type": "skill", "use": "brief", "when": "When the client serves the EU and must know which duties apply to the bot" },
+        { "ref": "library:ai-vendor-terms-checker", "type": "skill", "use": "check", "when": "Before customer chats go to a bot vendor, to check data training and liability terms" }
+      ]
+    },
+    {
+      "id": "retest-after-change",
+      "task": "Retest the bot after a change to prompt, knowledge or model",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:prompt-change-tester", "type": "skill", "use": "check", "when": "When a prompt changed, to run a fixed set of cases and see what got better or worse" },
+        { "ref": "library:check-an-ai-app-improvement", "type": "workflow", "use": "check", "when": "When a change is proposed and you need the criteria and comparison plan first" },
+        { "ref": "kit:skills/chatbot-test-and-review", "use": "check", "when": "When you need a retest sheet that marks each case pass or fail against last time" }
+      ]
+    },
+    {
+      "id": "launch-support-bot",
+      "task": "Launch a customer-facing support bot",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/launch-a-support-bot", "use": "build", "when": "When a business wants a bot on chat, help desk or social, or must replace a bad one" },
+        { "ref": "library:software-vendor-chooser", "type": "skill", "use": "explore", "when": "When the platform is not chosen, to score the options against the client's needs" },
+        { "ref": "library:intercom-fin", "type": "tool", "use": "build", "when": "When the bot should answer from help content and pass unresolved chats to staff" },
+        { "ref": "library:gorgias", "type": "tool", "use": "build", "when": "When the client is an online shop and most questions are about orders" },
+        { "ref": "library:check-a-new-automation-before-relying-on-it", "type": "workflow", "use": "check", "when": "Before go-live, to find where the bot can run twice or act without approval" }
+      ]
+    },
+    {
+      "id": "monthly-upkeep",
+      "task": "Run monthly bot quality and knowledge upkeep",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/monthly-bot-quality-and-knowledge-upkeep", "use": "build", "when": "Monthly, and straight after any change to prices, policies, products or the model" },
+        { "ref": "library:monthly-help-centre-keeper", "type": "agent", "use": "build", "when": "When last month's tickets should drive new articles and fixes to stale ones" },
+        { "ref": "library:process-doc-freshness-keeper", "type": "agent", "use": "check", "when": "When source documents have no owner or date, to find stale ones each month" },
+        { "ref": "kit:prompts/review-bot-transcripts", "use": "check", "when": "When the month's chats need a sample read for wrong and made-up answers" }
+      ]
+    },
+    {
+      "id": "dm-lead-flow",
+      "task": "Design a comment-to-DM or WhatsApp lead capture flow",
+      "kind": "other",
+      "items": [
+        { "ref": "library:comment-keyword-dm-funnel-builder", "type": "skill", "use": "build", "when": "When a post should trigger a DM by keyword, with follow-up and email capture" },
+        { "ref": "kit:skills/conversation-flow-and-handover", "use": "build", "when": "When the DM flow needs buttons, fallbacks and a point where a person takes over" },
+        { "ref": "library:whatsapp-marketing-planner", "type": "skill", "use": "build", "when": "When the channel is WhatsApp and needs automatic replies and support flows set up" },
+        { "ref": "library:quiz-and-recommender-designer", "type": "skill", "use": "explore", "when": "When the flow should sort people with a few questions before it asks for details" },
+        { "ref": "library:text-message-campaign-writer", "type": "skill", "use": "check", "when": "When messages follow up later, to check the consent rules for texts and WhatsApp" }
+      ]
+    },
+    {
+      "id": "staff-assistant",
+      "task": "Set up a staff assistant that answers from company documents",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/assistant-setup-pack", "use": "build", "when": "When staff need one assistant with set sources, rules and example questions" },
+        { "ref": "kit:prompts/split-documents-into-knowledge-entries", "use": "build", "when": "When the staff handbook and procedures must be split so answers can be found" },
+        { "ref": "library:glean", "type": "tool", "use": "explore", "when": "When answers must come from many work apps and respect who may open what" },
+        { "ref": "library:notebooklm", "type": "tool", "use": "explore", "when": "When a small team wants answers from a set of files with no set-up work" }
+      ]
+    },
+    {
+      "id": "team-prompt-library",
+      "task": "Build a shared prompt library for a team",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:prompt-improver", "type": "skill", "use": "build", "when": "When staff prompts are rough and each needs a clear, structured version" },
+        { "ref": "library:agent-procedure-writer", "type": "skill", "use": "build", "when": "When a repeat job should become a step-by-step procedure the AI follows each time" },
+        { "ref": "library:prompt-tester-and-tuner", "type": "skill", "use": "check", "when": "When two versions of a prompt compete, to score them on the same cases" },
+        { "ref": "library:monthly-skill-library-keeper", "type": "agent", "use": "check", "when": "Each month, to find weak, clashing or unsafe entries and gaps worth a new one" },
+        { "ref": "library:team-ai-use-policy-drafter", "type": "skill", "use": "brief", "when": "When the team has no rules on what may be pasted into an AI tool" }
+      ]
+    },
+    {
+      "id": "custom-bot-build",
+      "task": "Spec a custom bot when no ready platform fits",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:ai-app-and-chatbot-builder", "type": "skill", "use": "build", "when": "When the bot must be custom code that answers questions or uses tools" },
+        { "ref": "library:n8n-ai-agent-builder", "type": "skill", "use": "build", "when": "When the bot should run in a visual automation tool with tools, memory and review steps" },
+        { "ref": "library:voice-assistant-builder", "type": "skill", "use": "explore", "when": "When customers would rather talk than type, to try a voice version" },
+        { "ref": "library:ai-cost-cutter", "type": "skill", "use": "check", "when": "When the monthly bill worries the client, to see where tokens go and what to cut" }
+      ]
+    },
+    {
+      "id": "model-quality-review",
+      "task": "Review the quality of an AI pilot, model or classifier",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:ai-pilot-evaluation-review-assistant", "type": "agent", "use": "check", "when": "When pilot results are in and you need an evidence brief and a go or stop result" },
+        { "ref": "library:ai-answer-testing-planner", "type": "skill", "use": "brief", "when": "When no baseline exists, to set the scores and the drop that should raise a flag" },
+        { "ref": "kit:skills/chatbot-test-and-review", "use": "check", "when": "When the tool sorts or labels messages and needs cases with expected labels" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When any bot answer states a fact, price or promise you cannot trace to the client" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before entries or bot lines go live, to catch typos and a product named two ways" },
+    { "ref": "library:human-review-gate", "type": "skill", "use": "check", "when": "Before anything customer-facing counts as done, to get the owner's signed review" }
+  ],
+  "helpers": [
+    { "role": "prompt-engineer", "when": "When instructions need deep tuning against a large test set or across several models" },
+    { "role": "ai-engineer", "when": "When the bot needs custom code, document search or links to the client's systems" },
+    { "role": "support-operations-manager", "when": "When hand-over depends on routing, queues, hours and service targets nobody has set" },
+    { "role": "customer-support-specialist", "when": "When staff need macros and reply templates for the cases the bot hands over" },
+    { "role": "automation-specialist", "when": "When the bot must create tickets, update the CRM or book slots in other tools" },
+    { "role": "data-scientist", "when": "When a vendor's accuracy claim or a classifier's results need a proper statistical check" }
+  ],
+  "gaps": [
+    "No library item writes instructions for a named builder (custom GPT, Claude Project, Gemini Gem, Copilot Studio) with its fields and file limits",
+    "No library item splits documents into one-topic entries with customer phrasings and tags; the only chunking items are for developers",
+    "No library item writes AI disclosure, greeting, fallback and hand-over lines, or says what disclosure each region requires",
+    "No library item builds a retrieval test: questions in customers' words mapped to the entry each should return",
+    "No library item reports bot performance: share resolved, hand-over rate, wrong-answer rate and satisfaction by topic",
+    "No library item compares support bot platforms for a small business on price, channels and fit",
+    "No library item designs Messenger or Instagram bot flows in tools like ManyChat beyond the comment keyword funnel",
+    "No library item writes a phone menu, call greeting or voicemail script",
+    "No library item sets up a shared team prompt library with names, owners and a review rhythm",
+    "No library item removes personal details from chat transcripts before they are reviewed or reused"
+  ]
+}

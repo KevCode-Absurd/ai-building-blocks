@@ -1,0 +1,283 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "ecommerce-analyst",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "weekly-store-report",
+      "task": "Build the one-page weekly store report",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/weekly-report-cycle", "use": "brief", "when": "Every Monday, to run the pull, the checks and the write-up in the same order each week" },
+        { "ref": "kit:skills/weekly-store-report", "use": "build", "when": "When you have the order export and the analytics export and need the one-page report" },
+        { "ref": "library:shopify-dashboard-reader", "type": "skill", "use": "check", "when": "Before you quote a Shopify tile, to know which tiles to trust and what cash was really collected" },
+        { "ref": "library:weekly-store-numbers-watcher", "type": "agent", "use": "check", "when": "When store and analytics numbers disagree this week and you must say which one to trust" },
+        { "ref": "library:tim-harford", "type": "mind", "use": "think", "when": "When one striking number is about to lead the report and nobody has asked what it counts" }
+      ]
+    },
+    {
+      "id": "sales-by-channel",
+      "task": "Break sales down by channel and campaign",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:sales-channel-reporter", "type": "skill", "use": "build", "when": "When the owner sells on several channels and wants revenue, units and order value for each" },
+        { "ref": "library:utm-revenue-reader", "type": "skill", "use": "build", "when": "When you need revenue and orders by campaign, source and medium from tagged order links" },
+        { "ref": "library:store-page-conversion-reader", "type": "skill", "use": "build", "when": "When you have GA4 exports and need conversion by channel and by landing page" },
+        { "ref": "library:attribution-model-chooser", "type": "skill", "use": "check", "when": "When two reports give one sale to different channels and you must pick a rule and explain it" },
+        { "ref": "library:les-binet", "type": "mind", "use": "think", "when": "When a channel claims sales and you must ask whether its ads caused them" }
+      ]
+    },
+    {
+      "id": "sales-change",
+      "task": "Explain a sales dip or spike",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/sales-change-diagnosis", "use": "build", "when": "When sales moved and the owner wants the cause step by step, tracking breaks ruled out first" },
+        { "ref": "library:store-sales-drop-splitter", "type": "skill", "use": "build", "when": "When you need the change split into visits, conversion and order value before you look for causes" },
+        { "ref": "library:metric-drop-investigator", "type": "skill", "use": "explore", "when": "When the first split shows nothing, to cut the change by group and rank the drivers" },
+        { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before you send the cause, to test the method, the sums and any bias in the story" }
+      ]
+    },
+    {
+      "id": "store-vs-analytics",
+      "task": "Reconcile store orders with analytics and ad platforms",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/store-vs-analytics-reconcile", "use": "build", "when": "When the store and GA4 show different orders or revenue, before anyone reads a trend" },
+        { "ref": "library:conversion-reconciliation", "type": "skill", "use": "build", "when": "When Meta, Google and GA4 each report a different sales count and you need the reason for each gap" },
+        { "ref": "library:payout-reconciler", "type": "skill", "use": "check", "when": "When the money paid out does not match the orders and each payout must be tied to its orders" }
+      ]
+    },
+    {
+      "id": "tracking-check",
+      "task": "Check GA4 ecommerce tracking before trusting it",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/ga4-ecommerce-event-check", "use": "check", "when": "When GA4's sales reports look empty, too high or too low, or before you build a funnel on them" },
+        { "ref": "library:ga4-store-setup-checker", "type": "skill", "use": "check", "when": "When you take on a store, to list missing settings and store events with a setup score" },
+        { "ref": "library:google-ads-purchase-tracking-checker", "type": "skill", "use": "check", "when": "When Google Ads may count one purchase twice and you need a pass or fail on each action" },
+        { "ref": "library:monthly-tracking-health-keeper", "type": "agent", "use": "check", "when": "Once a month, to re-test the tracking so a quiet break does not sit in the reports" }
+      ]
+    },
+    {
+      "id": "consent-gap",
+      "task": "Size how much data consent and blockers hide",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/consent-gap-sizer", "use": "build", "when": "When analytics shows fewer visits or orders than the store, most of all in the EU and UK" },
+        { "ref": "kit:prompts/store-vs-analytics-reconcile", "use": "brief", "when": "Before you size the gap, to get the store and analytics totals lined up on the same dates" },
+        { "ref": "library:david-spiegelhalter", "type": "mind", "use": "think", "when": "When you must report a number you know is partly missing and say how sure you are" }
+      ]
+    },
+    {
+      "id": "rfm-segments",
+      "task": "Score customers and name the segments",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/rfm-and-cohorts", "use": "build", "when": "When you have an order export and need every customer scored and grouped in plain words" },
+        { "ref": "library:customer-segment-builder", "type": "skill", "use": "build", "when": "When the store is connected and you want the scores and groups run straight on its customers" },
+        { "ref": "library:behaviour-group-finder", "type": "skill", "use": "explore", "when": "When the usual score groups feel forced, to find natural groups from what customers do" },
+        { "ref": "library:best-and-worst-customer-profiler", "type": "skill", "use": "build", "when": "When the owner asks what the best and worst buyers have in common and which ads brought them" },
+        { "ref": "library:duplicate-customer-finder", "type": "skill", "use": "check", "when": "Before scoring, to find one person held as two records, which would split their history" }
+      ]
+    },
+    {
+      "id": "segment-action-plan",
+      "task": "Write an action plan for each customer segment",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/rfm-and-cohorts", "use": "brief", "when": "When the groups are sized and you need each one's share of customers and revenue first" },
+        { "ref": "library:email-segment-builder", "type": "skill", "use": "build", "when": "When each group must become an email audience with clear include and exclude rules" },
+        { "ref": "library:byron-sharp", "type": "mind", "use": "think", "when": "When the plan leans only on loyal buyers and ignores the many light buyers who bring growth" }
+      ]
+    },
+    {
+      "id": "repeat-purchase-cohorts",
+      "task": "Show repeat purchase by first-order month",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/rfm-and-cohorts", "use": "build", "when": "When you need the first-order month table from an order export, with young months marked" },
+        { "ref": "library:customer-cohort-reader", "type": "skill", "use": "build", "when": "When the store is connected and you want repeat rate and revenue per first-order month" },
+        { "ref": "library:repeat-buyer-rate-calculator", "type": "skill", "use": "build", "when": "When the question is which first product or collection leads to a second order" },
+        { "ref": "library:retention-heatmap-maker", "type": "skill", "use": "build", "when": "When the table needs to be a colour grid the owner can read in one look" },
+        { "ref": "library:repeat-order-bottleneck-finder", "type": "skill", "use": "check", "when": "When repeat rate is low and you need the step between first and second order that fails" }
+      ]
+    },
+    {
+      "id": "slipping-customers",
+      "task": "List good customers who have gone quiet",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/slipping-customers-list", "use": "build", "when": "When you want a ranked list of good customers who have gone quiet, for a win-back or a note" },
+        { "ref": "library:customer-churn-risk-scorer", "type": "skill", "use": "build", "when": "When each buyer should be judged against their own buying rhythm, not one cut-off for all" },
+        { "ref": "library:win-back-lapsed-buyers-and-clean-out-the-rest", "type": "workflow", "use": "brief", "when": "When the owner wants the win-back emails too and you need the full run to hand over" }
+      ]
+    },
+    {
+      "id": "margin-per-order",
+      "task": "Work out contribution margin per order and product",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/margin-and-returns-check", "use": "build", "when": "When you have order, cost, shipping, fee and refund exports and need margin in layers" },
+        { "ref": "library:product-profit-analyst", "type": "skill", "use": "build", "when": "When you need each product's margin and a clear list of the ones that lose money" },
+        { "ref": "library:shipping-cost-analyzer", "type": "skill", "use": "build", "when": "When shipping looks like the leak and you need charged against paid, by carrier and method" },
+        { "ref": "library:product-margin-checker", "type": "skill", "use": "check", "when": "When one product's price is in doubt and you need true margin and the break-even ad return" }
+      ]
+    },
+    {
+      "id": "returns-review",
+      "task": "Break returns down by product and reason",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/returns-reason-breakdown", "use": "build", "when": "At the monthly review, or when one product seems to come back too often" },
+        { "ref": "library:return-reason-finder", "type": "skill", "use": "build", "when": "When the store is connected and you want return reasons counted by product" },
+        { "ref": "library:refund-rate-analyzer", "type": "skill", "use": "build", "when": "When you need refund rate by product, collection or date to spot a quality or listing fault" },
+        { "ref": "library:return-cost-calculator", "type": "skill", "use": "build", "when": "When the owner asks what returns really cost: refunds, lost shipping and written-off stock" },
+        { "ref": "library:monthly-returns-and-refunds-reviewer", "type": "agent", "use": "check", "when": "Each month, to name the products behind refunds and the one fix to make first" }
+      ]
+    },
+    {
+      "id": "product-collection-report",
+      "task": "Build the monthly product and collection report",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/weekly-store-report", "use": "brief", "when": "When the monthly report should use the same definitions and layout as the weekly page" },
+        { "ref": "library:page-traffic-conversion", "type": "skill", "use": "build", "when": "When you need visits and conversion rate for each product and collection page" },
+        { "ref": "library:product-profit-analyst", "type": "skill", "use": "build", "when": "When the report should rank products by margin, not only by sales" },
+        { "ref": "library:bought-together-pair-finder", "type": "skill", "use": "build", "when": "When the owner asks which products sell together, for bundles and cross-sell" },
+        { "ref": "library:average-order-value-tracker", "type": "skill", "use": "build", "when": "When order value over time is needed, split into new and returning buyers" },
+        { "ref": "kit:skills/margin-and-returns-check", "use": "check", "when": "When a best seller may be a loss maker once costs and returns are taken off" }
+      ]
+    },
+    {
+      "id": "funnel-read",
+      "task": "Find where the store funnel leaks",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:store-funnel-benchmark-checker", "type": "skill", "use": "build", "when": "When you have the GA4 funnel by device and need the step that leaks most and why" },
+        { "ref": "library:conversion-funnel-analyst", "type": "skill", "use": "build", "when": "When you have a raw event log and need drop-off and time to convert for each step" },
+        { "ref": "library:store-profit-per-visitor-calculator", "type": "skill", "use": "build", "when": "When conversion rate alone misleads and you need profit per visitor from corrected revenue" },
+        { "ref": "library:weekly-product-funnel-watcher", "type": "agent", "use": "check", "when": "Each week, to watch product page to cart to checkout and flag the step that slipped" },
+        { "ref": "kit:prompts/ga4-ecommerce-event-check", "use": "check", "when": "Before you trust any funnel step, to be sure the events behind it fire once and in order" }
+      ]
+    },
+    {
+      "id": "ltv-and-payback",
+      "task": "Work out customer value and payback on ad spend",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:store-ltv-payback-reader", "type": "skill", "use": "build", "when": "When you have first-order months and need repeat rate, customer value and true payback" },
+        { "ref": "library:customer-value-spend-limit", "type": "skill", "use": "build", "when": "When the owner asks the most they can pay to win a customer, by type and source" },
+        { "ref": "library:cac-payback-checker", "type": "skill", "use": "check", "when": "When the numbers are in and you need a scale or fix call on profit against cost to win" }
+      ]
+    },
+    {
+      "id": "promo-impact",
+      "task": "Measure what a discount or sale really earned",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:discount-payoff-calculator", "type": "skill", "use": "build", "when": "After a promotion, to set each code's extra revenue against what the discount cost" },
+        { "ref": "library:discount-impact-checker", "type": "skill", "use": "check", "when": "Before a sale, to show the ad return needed at that discount and margin" },
+        { "ref": "kit:skills/margin-and-returns-check", "use": "check", "when": "After the sale, to see margin per order once returns from sale buyers have come back" }
+      ]
+    },
+    {
+      "id": "report-sheet",
+      "task": "Build a reusable report sheet or dashboard",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:kpi-dashboard-designer", "type": "skill", "use": "brief", "when": "Before you build, to fix who reads it, what they decide and which few numbers they need" },
+        { "ref": "library:metric-definition-writer", "type": "skill", "use": "brief", "when": "When two people mean different things by one number and the sheet needs one written meaning" },
+        { "ref": "library:recurring-kpi-report-maker", "type": "skill", "use": "build", "when": "When the report must rerun each week from the same pull into the same workbook" },
+        { "ref": "library:data-chart-drawer", "type": "skill", "use": "build", "when": "When one number needs a clean chart with the right chart type" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "Before handing the sheet over, to list formula errors, broken links and totals that do not tie" },
+        { "ref": "library:cole-nussbaumer-knaflic", "type": "mind", "use": "think", "when": "When the sheet is crowded and the reader cannot see what to do from it" }
+      ]
+    },
+    {
+      "id": "sales-forecast",
+      "task": "Forecast sales for the next weeks or a peak season",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:store-revenue-forecast-builder", "type": "skill", "use": "build", "when": "When you have past spend, first-order months and a calendar and need daily revenue against target" },
+        { "ref": "library:trend-and-forecast-analyst", "type": "skill", "use": "build", "when": "When you need trend, seasons and odd spikes pulled apart before any forecast" },
+        { "ref": "library:philip-tetlock", "type": "mind", "use": "think", "when": "When the forecast is one hopeful number and needs a base rate, a range and a date to check it" }
+      ]
+    },
+    {
+      "id": "test-readout",
+      "task": "Read an A/B test and say whether to ship",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:ab-test-traffic-checker", "type": "skill", "use": "brief", "when": "Before a test, to see if the store has enough visits and orders and how many weeks it needs" },
+        { "ref": "library:a-b-test-verdict-maker", "type": "skill", "use": "build", "when": "When the test has run and you need a split check, ranges and a ship call" },
+        { "ref": "library:experiment-result-analyst", "type": "skill", "use": "check", "when": "When a result looks too good and you need the right test and a plain answer on whether it is real" }
+      ]
+    },
+    {
+      "id": "stock-and-sell-through",
+      "task": "Report stock cover and slow sellers",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:days-of-stock-calculator", "type": "skill", "use": "build", "when": "When the weekly report should flag products about to run out, by location" },
+        { "ref": "library:stock-and-reorder-planner", "type": "skill", "use": "build", "when": "When you need products ranked into fast, steady and slow sellers with reorder points" }
+      ]
+    },
+    {
+      "id": "clean-export",
+      "task": "Clean and check an export before analysis",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "When a new export arrives, to list gaps, duplicates and odd values before any sums" },
+        { "ref": "library:data-file-clean-up-loop", "type": "agent", "use": "build", "when": "When the file is messy and must be fixed and re-checked until it passes, with rules kept" }
+      ]
+    },
+    {
+      "id": "quarterly-customer-review",
+      "task": "Run the quarterly customer review",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/quarterly-customer-review", "use": "brief", "when": "In the first two weeks after a quarter ends, to run segments, cohorts and margin in order" },
+        { "ref": "kit:skills/rfm-and-cohorts", "use": "build", "when": "When you rescore customers and compare group sizes with last quarter" },
+        { "ref": "kit:skills/margin-and-returns-check", "use": "build", "when": "When the review must show which groups and products made money after returns" },
+        { "ref": "library:store-ltv-payback-reader", "type": "skill", "use": "build", "when": "When the review should say whether new customers from the quarter are paying back" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When the full review is long and the owner needs one page with the answer first" },
+        { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before the review goes out, to test the method and the sums" }
+      ]
+    },
+    {
+      "id": "findings-write-up",
+      "task": "Write up findings in plain words for the owner",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:analysis-write-up-builder", "type": "skill", "use": "build", "when": "When a one-off analysis is done and needs the question, data, method and result written down" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When the owner will read one page only and needs the answer, the money and the decision" },
+        { "ref": "library:agency-engineering-data-visualization-engineer", "type": "agent", "use": "check", "when": "When a chart carries the point, to check the chart type and axes do not mislead" },
+        { "ref": "library:tim-harford", "type": "mind", "use": "think", "when": "When a finding sounds dramatic and needs its comparison and its doubt stated" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:analysis-assumptions-logger", "type": "skill", "use": "check", "when": "On any analysis, to log each assumption and what would change the answer" },
+    { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before any number leaves you, to test the method, the sums and the bias" },
+    { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "Before you work on any export, to catch gaps, duplicates and odd values" }
+  ],
+  "helpers": [
+    { "role": "lifecycle-marketer", "when": "When the segments or the slipping list need emails and flows written and run" },
+    { "role": "cro-specialist", "when": "When the funnel read finds a leaking page and someone must plan and run the tests" },
+    { "role": "marketing-analyst", "when": "When the question is ad spend and channel credit across platforms, not store data" },
+    { "role": "spreadsheet-specialist", "when": "When the report sheet needs heavy formulas, pivots or an automated refresh" },
+    { "role": "data-visualisation-specialist", "when": "When the owner wants a designed dashboard, not a working sheet" },
+    { "role": "supply-chain-planner", "when": "When the stock read turns into reorder quantities and supplier lead times" }
+  ],
+  "gaps": [
+    "No library item builds a monthly product and collection sales report from an order export; it has to be pieced together from page, profit and order-value readers",
+    "No library item sizes the analytics consent gap by country or browser; only the kit prompt covers it",
+    "No library item checks GA4 purchase events against store orders one by one to find missing or doubled orders",
+    "No library item combines sales from a store, a POS and marketplaces into one deduplicated report",
+    "No library item sets up a reusable weekly report sheet in Google Sheets or Excel with paste-in tabs for store exports",
+    "No library item gives two or three layouts of a store report to compare before the owner picks one",
+    "No library item reads repeat purchase or customer value by acquisition channel",
+    "No library item reviews a peak sale such as Black Friday after the event against last year"
+  ]
+}

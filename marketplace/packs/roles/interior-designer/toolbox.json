@@ -1,0 +1,239 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "interior-designer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "measure-and-brief",
+      "task": "Measure the space and write the brief",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/measure-and-brief", "use": "build", "when": "At the very start, when the owner has photos and a vague goal but no measured plan" },
+        { "ref": "library:aesthetic-direction-brief-writer", "type": "skill", "use": "brief", "when": "When the owner cannot describe the look, to pin down tone and feel in four answers" },
+        { "ref": "library:design-brief-rules-writer", "type": "skill", "use": "brief", "when": "When the owner sets no limits, to fix firm rules for budget, keep-list and style before any plan" },
+        { "ref": "library:prepare-a-clear-client-project-kickoff", "type": "workflow", "use": "build", "when": "When the job has several people involved, to get a one-page brief and who decides what" },
+        { "ref": "library:william-h-whyte", "type": "mind", "use": "think", "when": "Before you move anything, to watch where people really sit, queue and enter" }
+      ]
+    },
+    {
+      "id": "space-plan",
+      "task": "Plan the layout of a cafe, salon, studio or shop floor",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/space-plan-and-clearances", "use": "build", "when": "When you have measurements and need zones, furniture sizes, walkways, turning space and exits" },
+        { "ref": "library:customer-path-mapper", "type": "skill", "use": "brief", "when": "Before the layout, to map a visit from the door to the till with the snags at each stage" },
+        { "ref": "library:hard-to-use-thing-diagnoser", "type": "skill", "use": "check", "when": "When people queue in the wrong place or miss the counter, to find what in the layout misleads them" },
+        { "ref": "library:christopher-alexander", "type": "mind", "use": "think", "when": "When the plan fits the furniture but not how people meet, wait and move" }
+      ]
+    },
+    {
+      "id": "office-layout",
+      "task": "Lay out a small office or workroom",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/space-plan-and-clearances", "use": "build", "when": "When desks, storage and walkways must fit a measured room with clear exits" },
+        { "ref": "kit:skills/lighting-and-colour-plan", "use": "build", "when": "When the desks need task light at the right level and glare kept off screens" },
+        { "ref": "library:hard-to-use-thing-diagnoser", "type": "skill", "use": "check", "when": "When staff keep working around the room, to name what gets in their way" }
+      ]
+    },
+    {
+      "id": "lighting-plan",
+      "task": "Write a lighting plan for a room",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/lighting-and-colour-plan", "use": "build", "when": "When the room needs general, task and accent light with positions, warmth and dimming" },
+        { "ref": "library:emotion-led-design-brief-writer", "type": "skill", "use": "brief", "when": "When the owner names a feeling, to set what the light and colour must do to support it" },
+        { "ref": "library:james-gurney", "type": "mind", "use": "think", "when": "When the room looks flat, to study where the light falls and what should stand out" }
+      ]
+    },
+    {
+      "id": "colour-scheme",
+      "task": "Choose a colour scheme for a room",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/lighting-and-colour-plan", "use": "build", "when": "When wall, trim and accent colours must be set with the light they will be seen in" },
+        { "ref": "library:mood-colour-palette-planner", "type": "skill", "use": "explore", "when": "When you know the feeling wanted, to get a small palette with one job per colour" },
+        { "ref": "library:emotion-led-design-brief-writer", "type": "skill", "use": "explore", "when": "When two moods are in play, to see the colour and image choices each would bring" }
+      ]
+    },
+    {
+      "id": "concept-looks",
+      "task": "Show the owner the planned look before they spend",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/concept-image-prompts", "use": "build", "when": "When the owner wants to see the look before spending and you need prompts for an image tool" },
+        { "ref": "library:brand-stylescape-planner", "type": "skill", "use": "explore", "when": "When the look is undecided, to compare three mood board directions and merge a pick" },
+        { "ref": "library:midjourney-four-direction-prompt-writer", "type": "skill", "use": "explore", "when": "When one room idea should be tried as four different treatments" },
+        { "ref": "library:nano-banana-image-prompt-planner", "type": "skill", "use": "build", "when": "When you have a photo of the real room and want the changes drawn onto it" },
+        { "ref": "library:ai-image-fix-rules", "type": "skill", "use": "check", "when": "When the images show things the room cannot have, to turn each fault into a prompt line" },
+        { "ref": "library:nano-banana", "type": "tool", "use": "build", "when": "When the concept should start from the owner's own photo of the room" },
+        { "ref": "library:midjourney", "type": "tool", "use": "explore", "when": "When you want to explore moods quickly before fixing one" }
+      ]
+    },
+    {
+      "id": "window-display",
+      "task": "Plan a shop window display",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/window-and-display-plan", "use": "build", "when": "When you have the window size, products, goal and dates and need one idea, a focal point and a prop list" },
+        { "ref": "library:one-symbol-concept-finder", "type": "skill", "use": "brief", "when": "Before the plan, to cut the window to one idea, one feeling and one thing to look at" },
+        { "ref": "library:type-led-poster-planner", "type": "skill", "use": "build", "when": "When the window needs one sign that reads from across the street" },
+        { "ref": "library:howard-schultz", "type": "mind", "use": "think", "when": "When the window sells a product and says nothing of how the shop feels inside" }
+      ]
+    },
+    {
+      "id": "in-store-display",
+      "task": "Plan an in-store table, shelf or wall display",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/window-and-display-plan", "use": "build", "when": "When a table, shelf or wall needs a focal point, grouping and heights planned from measurements" },
+        { "ref": "library:shelf-layout-planner", "type": "skill", "use": "build", "when": "When you have sales and margins, to give best sellers the best space shelf by shelf" },
+        { "ref": "library:resale-store-pricing-and-layout-planner", "type": "skill", "use": "build", "when": "When the shop is a charity or resale store and needs display zones tied to price bands" }
+      ]
+    },
+    {
+      "id": "window-calendar",
+      "task": "Plan a year of window themes",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/seasonal-window-calendar", "use": "build", "when": "When a shop wants twelve months of themes tied to its sales dates, with props it can reuse" },
+        { "ref": "library:campaign-brief-calendar", "type": "skill", "use": "brief", "when": "When the windows must line up with the shop's promotions, to set the push for each period first" }
+      ]
+    },
+    {
+      "id": "monthly-window-change",
+      "task": "Run the monthly window change",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/monthly-window-change", "use": "build", "when": "Once a month, starting two weeks before the change date in the window calendar" },
+        { "ref": "kit:skills/window-and-display-plan", "use": "build", "when": "When this month's theme needs its own plan, prop list and set-up order" },
+        { "ref": "library:repeat-task-step-guide-writer", "type": "skill", "use": "build", "when": "When staff will change the window themselves and need exact steps and what to do if it goes wrong" }
+      ]
+    },
+    {
+      "id": "market-stall",
+      "task": "Plan a market stall or pop-up display",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/window-and-display-plan", "use": "build", "when": "When a table or stall needs height, a focal point and a set-up order that fits in a car" },
+        { "ref": "library:type-led-poster-planner", "type": "skill", "use": "build", "when": "When the stall needs a banner or sign that reads from the end of the aisle" },
+        { "ref": "library:one-time-stock-quantity-picker", "type": "skill", "use": "brief", "when": "When the owner asks how much stock to bring to a one-off event" }
+      ]
+    },
+    {
+      "id": "signs",
+      "task": "Lay out window and in-store signs",
+      "kind": "other",
+      "items": [
+        { "ref": "library:wayfinding-sign-planner", "type": "skill", "use": "brief", "when": "Before any sign, to map each point where a first-time visitor must choose a way" },
+        { "ref": "kit:skills/window-and-display-plan", "use": "build", "when": "When signs are part of a display and need sizes, heights and positions" },
+        { "ref": "library:page-grid-and-type-planner", "type": "skill", "use": "build", "when": "When a sign or price list carries a lot of text and needs a grid and a short type list" },
+        { "ref": "library:type-led-poster-planner", "type": "skill", "use": "explore", "when": "When the sign has no picture, to try a type-only version that reads from far away" },
+        { "ref": "library:make-a-readable-event-poster", "type": "workflow", "use": "build", "when": "When the sign is for an event and you want a guided run to a layout and export checklist" },
+        { "ref": "library:plain-page-type-checker", "type": "skill", "use": "check", "when": "When a sign is drafted, to check type size, spacing and line length where it is read" }
+      ]
+    },
+    {
+      "id": "holiday-let-styling",
+      "task": "Style a holiday let room for photos and guests",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/holiday-let-styling-plan", "use": "build", "when": "When a host wants rooms that photograph well and are comfortable and safe on a small budget" },
+        { "ref": "kit:skills/lighting-and-colour-plan", "use": "build", "when": "When the rooms look dull in photos and need warmer, layered light" },
+        { "ref": "library:creative-shoot-briefer", "type": "skill", "use": "build", "when": "When a photographer will shoot the rooms and needs one clear brief" },
+        { "ref": "library:hayao-miyazaki", "type": "mind", "use": "think", "when": "When the room is tidy but does not feel welcoming to someone arriving tired" }
+      ]
+    },
+    {
+      "id": "photo-corner",
+      "task": "Set up a photo or content corner",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/space-plan-and-clearances", "use": "build", "when": "When a corner must fit a backdrop, a stool and room to stand back with a phone" },
+        { "ref": "kit:skills/lighting-and-colour-plan", "use": "build", "when": "When the corner needs even, flattering light at the times the owner films" },
+        { "ref": "library:product-photo-shoot-planner", "type": "skill", "use": "brief", "when": "When the corner is for product shots, to set a style sheet the backdrop and props must match" }
+      ]
+    },
+    {
+      "id": "budget-and-order",
+      "task": "Cost the refresh and set the order of work",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/refresh-budget-and-order-of-work", "use": "build", "when": "When the plans are approved and you need a costed list that reuses owned items first" },
+        { "ref": "library:budget-and-space-picker-knapsack", "type": "skill", "use": "build", "when": "When the wish list is over budget, to pick the set of items worth most within the limit" },
+        { "ref": "library:supplier-quote-comparer", "type": "skill", "use": "check", "when": "When you have two or more quotes for the same items, to compare price, lead time and risk" },
+        { "ref": "library:big-purchase-pause-check", "type": "prompt", "use": "check", "when": "Before one large buy such as a counter or sofa, to see the real cost and a small test first" },
+        { "ref": "library:outside-view-timeline-estimator", "type": "prompt", "use": "check", "when": "When the owner has a reopening date, to correct the estimate by how such jobs really go" }
+      ]
+    },
+    {
+      "id": "professional-checks",
+      "task": "Sort which changes need a trade or building control",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/professional-check-triage", "use": "check", "when": "Before costing or starting, to sort each change into owner can do it, needs a trade or must ask" },
+        { "ref": "library:compare-facilities-service-contract-options", "type": "workflow", "use": "build", "when": "When trades have quoted, to compare their proposals and terms side by side" },
+        { "ref": "library:supplier-quote-table-builder", "type": "prompt", "use": "build", "when": "When you have two or more quotes pasted, to get one table and what each needs up front" }
+      ]
+    },
+    {
+      "id": "refresh-project",
+      "task": "Run a room refresh from brief to reopening",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/room-refresh-from-brief-to-reopening", "use": "build", "when": "When an owner wants a refresh with a budget and a date and needs the steps in order" },
+        { "ref": "kit:skills/refresh-budget-and-order-of-work", "use": "build", "when": "When the order of work must keep the business open as long as possible" },
+        { "ref": "library:project-cost-progress-tracker", "type": "skill", "use": "check", "when": "Once work has started, to track spend and dates against the plan and the likely final cost" },
+        { "ref": "library:outside-view-timeline-estimator", "type": "prompt", "use": "check", "when": "When the plan has no slack, to test the dates against jobs like it" }
+      ]
+    },
+    {
+      "id": "access-and-comfort",
+      "task": "Check the space works for every visitor",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/space-plan-and-clearances", "use": "check", "when": "When you need walkway widths, turning space and counter heights checked on the plan" },
+        { "ref": "library:prepare-a-community-event-access-plan", "type": "workflow", "use": "brief", "when": "When the space hosts events, to plan step-free routes and what the venue must confirm" },
+        { "ref": "library:wayfinding-sign-planner", "type": "skill", "use": "build", "when": "When visitors cannot find the toilet, till or exit without asking" }
+      ]
+    },
+    {
+      "id": "space-review",
+      "task": "Review an existing space and list the fixes",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/space-plan-and-clearances", "use": "check", "when": "When you have photos and measurements and must find pinch points and wasted areas" },
+        { "ref": "library:feedback-theme-finder", "type": "skill", "use": "brief", "when": "When reviews mention noise, seating or queues, to count the themes before you plan" },
+        { "ref": "library:turn-user-complaints-into-design-questions", "type": "workflow", "use": "brief", "when": "When complaints are piling up, to turn them into ranked questions the redesign must answer" },
+        { "ref": "library:customer-path-mapper", "type": "skill", "use": "build", "when": "When you walk the space as a customer, to log each stage and where it snags" },
+        { "ref": "library:william-h-whyte", "type": "mind", "use": "think", "when": "When the owner blames the decor and the real fault is where people are made to stand" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any plan for a business with a live site, so the room matches its colours and voice" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any sign or price list is printed, to catch typos and names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "graphic-designer", "when": "When signs, menus or window graphics need finished print-ready artwork" },
+    { "role": "retail-manager", "when": "When the display depends on stock levels, margins and what the shop needs to sell" },
+    { "role": "short-term-rental-manager", "when": "When the holiday let also needs its listing, pricing and guest messages sorted" },
+    { "role": "product-photographer", "when": "When the finished space or its products need a planned photo set" },
+    { "role": "construction-project-coordinator", "when": "When the refresh grows into building work with several trades and inspections" },
+    { "role": "local-marketing-specialist", "when": "When the reopening needs local promotion and a launch plan" }
+  ],
+  "gaps": [
+    "The library is thin for this role: about 40 items fit, most of them adjacent, and the four kit skills carry the core work",
+    "No library item plans a room layout from measurements: zones, walkways, clearances and exits",
+    "No library item writes a lighting plan or picks lamps, colour temperature and dimming",
+    "No library item chooses paint, flooring or finishes for a real room; the palette items set a feeling only",
+    "No library item plans a shop window or does visual merchandising beyond shelf facings",
+    "No library item plans a market stall, pop-up or exhibition stand",
+    "No library item styles a holiday let or writes a room-by-room photo shot list",
+    "No library item draws a scaled floor plan or elevation, or offers two or three layouts to compare",
+    "No library item checks a plan for fire exits, access widths or furniture fire labels",
+    "No library item builds a reuse-first shopping list or sources furniture and fittings",
+    "No library item briefs a trade with a scope of work or keeps a snagging list",
+    "No mind covers interior or retail display design, and no tool guide covers room planning or 3D room tools"
+  ]
+}

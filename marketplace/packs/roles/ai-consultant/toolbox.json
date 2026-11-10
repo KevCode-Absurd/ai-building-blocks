@@ -1,0 +1,277 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "ai-consultant",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "task-map",
+      "task": "Map a team's tasks and score each for AI fit",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:role-task-breakdown-for-ai-help", "type": "skill", "use": "brief", "when": "Before scoring, to break each role into the real tasks it does in a week" },
+        { "ref": "kit:skills/ai-task-map-and-pilot", "use": "build", "when": "When tasks are listed and each needs a score for fit, time at stake, risk and data" },
+        { "ref": "library:taiichi-ohno", "type": "mind", "use": "think", "when": "When the map comes from what managers say and nobody has watched the work being done" },
+        { "ref": "library:ai-fit-problem-checker", "type": "skill", "use": "check", "when": "When a top candidate looks too good, to test it three ways before it goes on the shortlist" },
+        { "ref": "library:hand-tasks-to-ai-without-losing-what-the-job-quietly-does", "type": "workflow", "use": "check", "when": "When a task also trains juniors or catches errors, to see what would be lost" },
+        { "ref": "library:agency-automation-governance-architect", "type": "agent", "use": "check", "when": "When you want a second verdict on whether one process should be automated at all" }
+      ]
+    },
+    {
+      "id": "workflow-redesign",
+      "task": "Redesign one process with AI steps and human checks",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:agency-testing-workflow-optimizer", "type": "agent", "use": "brief", "when": "Before the redesign, to get today's steps mapped with the bottlenecks ranked" },
+        { "ref": "kit:skills/ai-workflow-redesign", "use": "build", "when": "When each new step must be marked AI, tool or person, with the full prompt for AI steps" },
+        { "ref": "library:ai-agent-workflow-designer", "type": "skill", "use": "explore", "when": "When the process is long, to compare a design that splits it across several agents" },
+        { "ref": "library:copilot-diagnose", "type": "skill", "use": "check", "when": "When a redesigned workflow disappoints, to rank its weak points and their causes" },
+        { "ref": "library:check-a-new-automation-before-relying-on-it", "type": "workflow", "use": "check", "when": "Before the team relies on it, to find double runs, missing approvals and silent failures" }
+      ]
+    },
+    {
+      "id": "ai-use-policy",
+      "task": "Write a one-page staff AI use policy",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/ai-use-policy-and-register", "use": "build", "when": "When staff need allowed uses, data that never goes in and who approves new tools on one page" },
+        { "ref": "library:team-ai-use-policy-drafter", "type": "skill", "use": "explore", "when": "When you want a second draft built from public model policies, to compare" },
+        { "ref": "library:nassim-taleb", "type": "mind", "use": "think", "when": "When a rule guards against small slips but not the one leak that would end a client" },
+        { "ref": "library:employee-data-privacy-checker", "type": "skill", "use": "check", "when": "When any allowed use touches staff data, to shorten the data list and draft a notice" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the page reads like a legal notice and staff will not follow it" }
+      ]
+    },
+    {
+      "id": "tool-comparison",
+      "task": "Compare the AI tools on a shortlist",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:ai-tool-picker", "type": "skill", "use": "brief", "when": "When the shortlist is not set yet and you need the right kind of tool for each job" },
+        { "ref": "kit:prompts/ai-tool-comparison", "use": "build", "when": "When two to four tools or plans need a fair side-by-side on the team's own tasks" },
+        { "ref": "library:agency-testing-tool-evaluator", "type": "agent", "use": "check", "when": "When you want scored criteria, a trial plan and a cost view to test your pick" },
+        { "ref": "library:chatgpt", "type": "tool", "use": "brief", "when": "When ChatGPT is on the shortlist and you need what it does and where it falls short" },
+        { "ref": "library:claude", "type": "tool", "use": "brief", "when": "When Claude is on the shortlist and you need what it does and where it falls short" },
+        { "ref": "library:microsoft-copilot", "type": "tool", "use": "brief", "when": "When the team lives in Word, Excel and Outlook and Copilot is on the shortlist" },
+        { "ref": "library:gemini", "type": "tool", "use": "brief", "when": "When the team uses Google's apps and Gemini is on the shortlist" }
+      ]
+    },
+    {
+      "id": "pilot-plan",
+      "task": "Plan a 30-day AI pilot with go and stop rules",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/first-ai-rollout", "use": "brief", "when": "When a team starts with AI, or has licences nobody uses, to run the steps in order" },
+        { "ref": "kit:skills/ai-task-map-and-pilot", "use": "build", "when": "When two or three tasks are chosen and the pilot needs a baseline, a check and stop rules" },
+        { "ref": "library:ai-fit-problem-checker", "type": "skill", "use": "check", "when": "Before the pilot starts, to confirm the task passes and to set a first small test" },
+        { "ref": "library:gerd-gigerenzer", "type": "mind", "use": "think", "when": "When the success rules are a long scorecard and one simple rule would decide it better" }
+      ]
+    },
+    {
+      "id": "pilot-review",
+      "task": "Review AI pilot results and make a go or stop call",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "Before judging, to find gaps and odd values in the pilot's time and error log" },
+        { "ref": "kit:prompts/pilot-results-review", "use": "build", "when": "When the pilot has ended and the owner needs a call based on the rules agreed at the start" },
+        { "ref": "library:prepare-an-ai-pilot-go-decision", "type": "workflow", "use": "build", "when": "When results must be set against the baseline and a go or stop checklist with evidence" },
+        { "ref": "library:assess-ai-workflow-value", "type": "skill", "use": "check", "when": "When you must weigh results against costs and harms: grow, limit, change or stop" },
+        { "ref": "library:ai-pilot-evaluation-review-assistant", "type": "agent", "use": "check", "when": "When you want the evidence brief and data gaps reviewed before the owner sees them" },
+        { "ref": "library:julia-galef", "type": "mind", "use": "think", "when": "When everyone liked the pilot and the numbers are being read to fit that feeling" }
+      ]
+    },
+    {
+      "id": "risk-check-one-use",
+      "task": "Run a data and risk check on one AI use",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/ai-risk-check-one-use", "use": "check", "when": "When someone wants AI for one task and you must decide fast: yes, yes with rules, or no" },
+        { "ref": "library:ai-impact-assessment-writer", "type": "skill", "use": "check", "when": "When the use affects people's work or outcomes and needs risks and conditions written up" },
+        { "ref": "library:privacy-impact-assessment-writer", "type": "skill", "use": "check", "when": "When personal data goes in and a fuller privacy assessment is needed" },
+        { "ref": "library:eu-ai-act-risk-classifier", "type": "skill", "use": "check", "when": "When the business works in the EU and the use may fall into a regulated risk tier" }
+      ]
+    },
+    {
+      "id": "ai-tool-register",
+      "task": "Build and review the register of AI tools in use",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:find-duplicate-and-unused-business-subscriptions", "type": "workflow", "use": "brief", "when": "When nobody knows which AI tools are paid for, to list them from the bills first" },
+        { "ref": "kit:skills/ai-use-policy-and-register", "use": "build", "when": "When each tool needs an owner, the data allowed in it and a review date" },
+        { "ref": "kit:workflows/quarterly-ai-register-review", "use": "check", "when": "Every three months, or straight after an incident or a change in a vendor's data terms" },
+        { "ref": "library:eu-ai-act-readiness-checker", "type": "skill", "use": "check", "when": "When the firm sells or works in the EU and needs a first read of its duties" },
+        { "ref": "library:ai-management-audit-planner", "type": "skill", "use": "check", "when": "When a client or auditor asks how AI is managed and the gaps must be found" }
+      ]
+    },
+    {
+      "id": "vendor-check",
+      "task": "Check an AI vendor before buying or renewing",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/ai-vendor-questions", "use": "build", "when": "Before a team signs up, renews, or lets a tool connect to email, files or a CRM" },
+        { "ref": "library:ai-vendor-terms-checker", "type": "skill", "use": "check", "when": "When you have the vendor's terms and need data-training and liability risks flagged" },
+        { "ref": "library:employee-data-privacy-checker", "type": "skill", "use": "check", "when": "When the tool will read staff data and needs a privacy review and a notice" }
+      ]
+    },
+    {
+      "id": "staff-rollout-message",
+      "task": "Tell staff about new AI rules or an approved tool",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/staff-rollout-message-and-faq", "use": "build", "when": "When new rules or a newly approved tool must be explained calmly with an FAQ" },
+        { "ref": "library:change-rollout-planner", "type": "skill", "use": "explore", "when": "When some staff will push back, to compare message options and a plan for objections" },
+        { "ref": "library:make-a-new-policy-understandable-to-staff", "type": "workflow", "use": "build", "when": "When the approved policy needs a plain explanation of what changes for each person" },
+        { "ref": "library:review-staff-adoption-of-a-policy-change", "type": "workflow", "use": "check", "when": "A few weeks later, to see if staff follow the rules and what stands in the way" }
+      ]
+    },
+    {
+      "id": "prompt-library",
+      "task": "Build a tested team prompt library",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:rough-prompt-rebuilder", "type": "prompt", "use": "build", "when": "When a staff member's rough prompt must become one clear prompt worth sharing" },
+        { "ref": "kit:prompts/prompt-library-entry", "use": "build", "when": "When each entry needs testing on samples, with an example and a check, before it is shared" },
+        { "ref": "library:prompt-tester-and-tuner", "type": "skill", "use": "check", "when": "When two versions of a prompt compete, to score both on the same test cases" },
+        { "ref": "library:tune-a-prompt-with-real-tests-then-ship-it-with-versions", "type": "workflow", "use": "build", "when": "When an important prompt needs real tests and a version history" },
+        { "ref": "library:monthly-skill-library-keeper", "type": "agent", "use": "check", "when": "Each month, to find weak, clashing or unsafe entries in the shared library" }
+      ]
+    },
+    {
+      "id": "ai-workshop",
+      "task": "Plan a two-hour hands-on AI workshop",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/ai-skills-workshop", "use": "build", "when": "When a team has licences but no training and needs practice on its own weekly tasks" },
+        { "ref": "library:agency-corporate-training-designer", "type": "agent", "use": "explore", "when": "When you want a second outline built from one real work problem, to compare" },
+        { "ref": "library:anders-ericsson", "type": "mind", "use": "think", "when": "When practice rounds are free play and each should drill one habit with feedback" },
+        { "ref": "library:training-handout-writer", "type": "prompt", "use": "build", "when": "When the session needs a one-page handout people still use a month later" },
+        { "ref": "library:check-training-transfer-after-a-course", "type": "workflow", "use": "check", "when": "A few weeks after, to compare real work with the skills check taken before" }
+      ]
+    },
+    {
+      "id": "automation-build-spec",
+      "task": "Write a build spec for the automated steps",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:automation-flow-sketcher", "type": "prompt", "use": "brief", "when": "When one repeated task needs laying out step by step with what can break" },
+        { "ref": "library:no-code-automation-planner", "type": "skill", "use": "build", "when": "When the steps will run in Zapier or Make and must hold up, or need code instead" },
+        { "ref": "library:agency-specialized-workflow-architect", "type": "agent", "use": "build", "when": "When a developer will build it and needs every path, failure and test case written" },
+        { "ref": "library:make", "type": "tool", "use": "brief", "when": "When the client will run the flow in Make and you must check what it can connect" },
+        { "ref": "library:check-a-new-automation-before-relying-on-it", "type": "workflow", "use": "check", "when": "When the build is done, to test for double runs and steps with no approval" }
+      ]
+    },
+    {
+      "id": "first-rollout",
+      "task": "Run a first AI rollout for a small team",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/first-ai-rollout", "use": "build", "when": "When staff use free tools with client data, or bought licences sit unused" },
+        { "ref": "kit:skills/ai-use-policy-and-register", "use": "build", "when": "When the rollout needs its rules and tool register written before anyone is trained" },
+        { "ref": "library:agency-change-management-consultant", "type": "agent", "use": "brief", "when": "When the people side is the risk: who is affected, who resists and what to say when" },
+        { "ref": "library:review-staff-adoption-of-a-policy-change", "type": "workflow", "use": "check", "when": "After a month, to see who uses the tools and the rules and who does not" }
+      ]
+    },
+    {
+      "id": "cheat-sheet-and-micro-course",
+      "task": "Write a safe-use cheat sheet and a follow-up micro-course",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/ai-skills-workshop", "use": "brief", "when": "Before writing, to take the habits and practice tasks the workshop taught" },
+        { "ref": "library:training-handout-writer", "type": "prompt", "use": "build", "when": "When the rules must fit one page staff keep at their desk" },
+        { "ref": "library:mini-course-builder", "type": "skill", "use": "explore", "when": "When the follow-up could be a short web course with lessons and quizzes, not emails" },
+        { "ref": "library:ai-answer-doubt-check", "type": "skill", "use": "build", "when": "When the course should teach one checking habit staff use after every AI answer" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the cheat sheet uses AI jargon office staff would not" }
+      ]
+    },
+    {
+      "id": "output-checking-rules",
+      "task": "Set how staff check AI output before it is used",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/ai-use-policy-and-register", "use": "brief", "when": "When the policy says check outputs and staff need to know how for each kind of task" },
+        { "ref": "library:ai-answer-fact-checker", "type": "skill", "use": "check", "when": "When an AI answer states facts that will go to a client, to check each against sources" },
+        { "ref": "library:ai-answer-judge-designer", "type": "skill", "use": "build", "when": "When a repeated task needs a scoring guide so checks are the same every time" },
+        { "ref": "library:ai-answer-doubt-check", "type": "skill", "use": "build", "when": "When staff accept answers too fast and need one quick doubt step each time" }
+      ]
+    },
+    {
+      "id": "prompt-or-chatbot-test",
+      "task": "Test and tune a prompt or chatbot",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:prompt-tester-and-tuner", "type": "skill", "use": "check", "when": "When you have a prompt and test cases and need scores for each version" },
+        { "ref": "library:prompt-fixer", "type": "skill", "use": "build", "when": "When a prompt gives uneven answers and needs tightening before it is tested again" },
+        { "ref": "library:chatbot-conversation-designer", "type": "skill", "use": "build", "when": "When the bot's flow is the problem: questions, recovery from mistakes and handover" },
+        { "ref": "library:ai-answer-judge-designer", "type": "skill", "use": "build", "when": "When answers must be graded the same way every time and you need the scoring guide" }
+      ]
+    },
+    {
+      "id": "assistant-safety-check",
+      "task": "Check an AI assistant or agent for misuse and runaway cost",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:harden-an-ai-app-against-hijacked-instructions-and-runaway-bills", "type": "workflow", "use": "check", "when": "When an AI app reads outside text and needs defences, tests and spending caps" },
+        { "ref": "library:prompt-injection-defender", "type": "skill", "use": "check", "when": "When the assistant reads emails or web pages that could carry hidden instructions" },
+        { "ref": "library:ai-agent-attack-tester", "type": "skill", "use": "check", "when": "When the client owns the agent and wants a safe test of where it can be tricked" },
+        { "ref": "library:copilot-agent-governance", "type": "skill", "use": "build", "when": "When the agent can act through tools and needs limits on permissions and risky actions" },
+        { "ref": "library:ai-cost-cutter", "type": "skill", "use": "check", "when": "When the monthly bill surprises the owner and you must find where it goes" }
+      ]
+    },
+    {
+      "id": "ai-incident-review",
+      "task": "Review an AI mistake and update the rules",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:turn-an-incident-into-a-safer-procedure", "type": "workflow", "use": "build", "when": "When an AI mistake reached a client and needs a blame-free report and a safer procedure" },
+        { "ref": "kit:workflows/quarterly-ai-register-review", "use": "check", "when": "Straight after the incident, to review the tool's entry and the rules around it" },
+        { "ref": "kit:prompts/ai-risk-check-one-use", "use": "check", "when": "When the use that failed must be checked again before it is allowed to restart" },
+        { "ref": "kit:prompts/staff-rollout-message-and-faq", "use": "build", "when": "When the rule change that follows must be told to staff without blame" }
+      ]
+    },
+    {
+      "id": "expert-knowledge-assistant",
+      "task": "Turn an expert's know-how into a shared assistant",
+      "kind": "other",
+      "items": [
+        { "ref": "library:expert-knowledge-interview", "type": "skill", "use": "brief", "when": "When the team's best person holds the judgment and it must be asked out with real cases" },
+        { "ref": "library:personal-agent-builder", "type": "skill", "use": "build", "when": "When their way of working should become a prompt, skill or agent others can use" },
+        { "ref": "library:expert-agent-eval-builder", "type": "skill", "use": "check", "when": "When the assistant exists and needs test cases and a judge that grades as the expert would" }
+      ]
+    },
+    {
+      "id": "build-buy-or-wait",
+      "task": "Advise whether to build, buy or wait on an AI idea",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:ai-fit-problem-checker", "type": "skill", "use": "brief", "when": "Before any spend, to check the problem is one AI can really help with" },
+        { "ref": "library:ai-build-or-buy-advisor", "type": "skill", "use": "build", "when": "When the owner is choosing between a ready tool, an API and a custom build" },
+        { "ref": "library:assess-ai-workflow-value", "type": "skill", "use": "check", "when": "When there are early results, to weigh them against cost and harm before spending more" },
+        { "ref": "library:gerd-gigerenzer", "type": "mind", "use": "think", "when": "When the forecast is uncertain and a simple rule of thumb beats a detailed model" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before any report states what a tool does with data, to check it against the vendor's own terms" }
+  ],
+  "helpers": [
+    { "role": "automation-specialist", "when": "When the redesigned workflow must be built and run in Zapier, Make or n8n" },
+    { "role": "prompt-engineer", "when": "When one prompt carries real risk and needs a full test set and tuning" },
+    { "role": "compliance-specialist", "when": "When the AI rules must be checked against privacy law or a regulator's guidance" },
+    { "role": "it-administrator", "when": "When licences, sign-in, sharing settings or connectors must be changed in the tools" },
+    { "role": "learning-development-specialist", "when": "When one workshop must grow into a training programme for the whole firm" },
+    { "role": "chatbot-specialist", "when": "When the chosen use is a customer-facing bot that must be built and tested" }
+  ],
+  "gaps": [
+    "No library item scores a team's tasks for AI fit, time at stake, risk and data sensitivity in one map; only the kit does",
+    "No library item writes a 30-day pilot plan with a baseline and go and stop rules; the library covers only the review after",
+    "No library item builds a register of AI tools with owner, data allowed, approval and review date",
+    "No library item gives a quick data and risk check for one AI use in a small firm; the assessments are full legal-style ones",
+    "No library item lists the questions to ask an AI vendor on training, retention and sub-processors",
+    "No library item compares business plans of chat assistants on data terms, admin controls and price",
+    "No library item plans a hands-on AI workshop from a team's own tasks or runs a before and after skills check",
+    "No library item sets up a shared prompt library with owners and a test for each entry",
+    "No library item writes the staff message and FAQ for new AI rules, or reviews an AI mistake as its own kind of incident",
+    "No library item covers rolling out Copilot or Gemini in a workplace: admin settings and files shared too widely",
+    "No library item finds which AI tools staff already use without approval",
+    "No library item measures time saved by an AI step with a timing log before and after",
+    "No library item says when and how to tell customers that AI was used"
+  ]
+}

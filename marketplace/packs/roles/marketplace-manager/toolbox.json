@@ -1,0 +1,300 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "marketplace-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "listing-field-map",
+      "task": "Map product data to a marketplace's own fields",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/marketplace-listing-mapper", "use": "build", "when": "When the brand's product data must fit eBay, Walmart, bol or Zalando fields, with gaps shown" },
+        { "ref": "library:column-mapping-document-writer", "type": "skill", "use": "build", "when": "When you need a column-by-column map from the store export to the marketplace file, with rules" },
+        { "ref": "library:product-and-variant-setup-planner", "type": "skill", "use": "brief", "when": "When it is unclear what is one product with variants and what are separate listings" },
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "Before mapping, to find blanks, duplicates and odd values in the source product data" }
+      ]
+    },
+    {
+      "id": "marketplace-listings",
+      "task": "Write eBay or Walmart listings for a batch of products",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/marketplace-listing-mapper", "use": "brief", "when": "Before writing, to know each marketplace's required fields, title length and banned wording" },
+        { "ref": "library:product-listing-writer", "type": "skill", "use": "build", "when": "When you have product facts and need a title, bullets and description built for the marketplace" },
+        { "ref": "library:store-product-data-collector", "type": "skill", "use": "explore", "when": "When you want to see how top rival listings word titles and price the same item" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a description could fit any seller, to test it and get a true, picturable rewrite" },
+        { "ref": "kit:prompts/listing-gap-check", "use": "check", "when": "When the listings are drafted, to catch missing details before they are uploaded" },
+        { "ref": "library:claude-hopkins", "type": "mind", "use": "think", "when": "When a listing leans on praise words and needs facts a buyer can check" }
+      ]
+    },
+    {
+      "id": "bulk-upload-sheet",
+      "task": "Fill and check a bulk upload sheet",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/marketplace-listing-mapper", "use": "build", "when": "When each row must carry every required field in the marketplace's own format" },
+        { "ref": "library:empty-workbook-builder", "type": "skill", "use": "build", "when": "When you need a clean empty sheet from a confirmed field list, with no invented rows" },
+        { "ref": "library:product-title-cleaner", "type": "skill", "use": "build", "when": "When source titles are inconsistent and need tidying before they go in the sheet" },
+        { "ref": "library:data-file-clean-up-loop", "type": "agent", "use": "check", "when": "When the sheet keeps failing upload and must be fixed and re-checked until it passes" },
+        { "ref": "library:duplicate-sku-finder", "type": "skill", "use": "check", "when": "Before upload, to find items sharing a code or barcode that would mix stock across channels" }
+      ]
+    },
+    {
+      "id": "listing-health-check",
+      "task": "Check listing health and rank the fixes",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/listing-gap-check", "use": "check", "when": "When a listing export shows errors, low quality scores or missing details" },
+        { "ref": "kit:skills/marketplace-listing-mapper", "use": "build", "when": "When hundreds of listings miss fields and you need the gaps grouped by cause" },
+        { "ref": "library:marketplace-photo-rule-checker", "type": "skill", "use": "check", "when": "When listings are held back for images, to get a pass or reject on each photo" }
+      ]
+    },
+    {
+      "id": "marketplace-photos",
+      "task": "Get product photos ready for marketplace rules",
+      "kind": "other",
+      "items": [
+        { "ref": "library:product-shot-list-writer", "type": "prompt", "use": "brief", "when": "When photos are not taken yet and the seller needs a shot list with a reason for each" },
+        { "ref": "library:make-matching-photos-for-a-product-sheet-and-check-them", "type": "workflow", "use": "build", "when": "When a whole sheet of products needs one matching photo each, with faults reported" },
+        { "ref": "library:turn-a-clothing-flat-lay-into-marketplace-ready-photos", "type": "workflow", "use": "build", "when": "When a clothing seller has only phone flat lays and needs clean, rule-safe photos" },
+        { "ref": "library:product-photo-set-maker", "type": "agent", "use": "explore", "when": "When one real product needs a fuller set of angles to choose from, checked frame by frame" },
+        { "ref": "library:marketplace-photo-rule-checker", "type": "skill", "use": "check", "when": "Before upload, to check each photo against the platform's background and size rules" }
+      ]
+    },
+    {
+      "id": "channel-profit-sheet",
+      "task": "Work out what the seller keeps on each channel",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/what-you-keep-sheet", "use": "build", "when": "Before listing on a new marketplace or app, or when payouts feel thin" },
+        { "ref": "kit:skills/channel-profit-sheet", "use": "build", "when": "When you need profit per item on each channel, on the fee base each one really uses" },
+        { "ref": "library:product-margin-checker", "type": "skill", "use": "check", "when": "When one item's price is in doubt and you need its true margin from price and every cost" },
+        { "ref": "library:per-order-profit-calculator", "type": "prompt", "use": "check", "when": "When you want a quick hand check of one typical order against the full sheet" },
+        { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before the sheet goes to the seller, to test the method and the sums" },
+        { "ref": "library:john-c-bogle", "type": "mind", "use": "think", "when": "When fees are stacked and you must trace each one to see what reaches the seller" }
+      ]
+    },
+    {
+      "id": "landed-cost-sheet",
+      "task": "Build a landed cost and margin sheet for a new country",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:landed-cost-calculator", "type": "skill", "use": "build", "when": "When you have a quote and freight and need cost per sellable unit and margin" },
+        { "ref": "library:landed-cost-allocator", "type": "skill", "use": "build", "when": "When freight and duty invoices must be spread across products to get true cost per unit" },
+        { "ref": "library:import-export-paperwork", "type": "skill", "use": "brief", "when": "When you need tariff codes, duty options and the papers customs will ask for" },
+        { "ref": "kit:skills/channel-profit-sheet", "use": "check", "when": "When landed cost is known and you must see what is left after the marketplace's fees" }
+      ]
+    },
+    {
+      "id": "market-entry-plan",
+      "task": "Plan entry to a new marketplace or country",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:workflows/new-marketplace-launch", "use": "brief", "when": "When the client wants to sell on a new marketplace or in a new country" },
+        { "ref": "kit:skills/new-marketplace-entry-plan", "use": "build", "when": "When you need the entry plan: account, tax, product rules, delivery, returns and costs" },
+        { "ref": "library:overseas-market-planner", "type": "skill", "use": "explore", "when": "When the client has not chosen a country, to rank options with shipping and tax costs" },
+        { "ref": "library:new-country-expansion-planner", "type": "skill", "use": "explore", "when": "When you want a second view of market pick, entry route and what to localise" },
+        { "ref": "library:agency-marketing-cross-border-ecommerce", "type": "agent", "use": "build", "when": "When the target is Amazon, Shopee, Temu or TikTok Shop abroad and needs margin and a launch order" },
+        { "ref": "library:local-store-and-warehouse-planner", "type": "skill", "use": "brief", "when": "When sales by country may justify local stock and you need the trigger for each step" }
+      ]
+    },
+    {
+      "id": "seller-readiness",
+      "task": "Check seller readiness: identity, tax and product safety",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/seller-readiness-check", "use": "check", "when": "Before joining a marketplace, or when it asks for identity, product safety or tax details" },
+        { "ref": "library:trade-compliance-checklist", "type": "skill", "use": "build", "when": "When you need the rules that apply to what the seller makes, imports and exports, with owners" },
+        { "ref": "library:import-export-paperwork", "type": "skill", "use": "build", "when": "When goods will cross a border and the customs papers must be ready first" }
+      ]
+    },
+    {
+      "id": "localised-listings",
+      "task": "Localise listings for another country",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:overseas-listing-localizer", "type": "skill", "use": "build", "when": "When listings need local language, sizes, units and required labels for another country" },
+        { "ref": "library:translator", "type": "skill", "use": "explore", "when": "When a title or key line should be tried in two or three natural local wordings" },
+        { "ref": "library:check-a-translated-interface-still-makes-sense", "type": "workflow", "use": "check", "when": "When you have the original and translated text side by side and need a meaning check" },
+        { "ref": "kit:skills/marketplace-listing-mapper", "use": "check", "when": "When the local marketplace has its own required fields the home listing never needed" }
+      ]
+    },
+    {
+      "id": "china-operating-plan",
+      "task": "Write a China marketplace operating plan",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:agency-marketing-china-ecommerce-operator", "type": "agent", "use": "build", "when": "When the brand will sell on Tmall, JD, Pinduoduo or Douyin and needs margin checks and a plan" },
+        { "ref": "library:agency-marketing-china-market-localization-strategist", "type": "agent", "use": "brief", "when": "Before the plan, to turn China trend data into platform picks and a week-by-week brief" },
+        { "ref": "kit:skills/new-marketplace-entry-plan", "use": "check", "when": "When the plan must be tested for costs and rules the brand has not met before" }
+      ]
+    },
+    {
+      "id": "buyer-message-templates",
+      "task": "Write buyer message templates by marketplace and issue",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/buyer-cases-and-account-health", "use": "brief", "when": "Before writing, to know what each marketplace allows and bans in buyer messages" },
+        { "ref": "library:support-desk-automation-builder", "type": "skill", "use": "build", "when": "When the seller wants a set of reply templates and a routine that drafts first replies" },
+        { "ref": "library:customer-reply-drafter", "type": "skill", "use": "build", "when": "When one buyer situation needs a reply in the right tone with notes on what to check" },
+        { "ref": "library:customer-support-message-translator", "type": "skill", "use": "build", "when": "When a buyer writes in another language and needs a reply in it" },
+        { "ref": "library:matthew-dixon", "type": "mind", "use": "think", "when": "When templates are polite but make the buyer do more work to get the problem solved" }
+      ]
+    },
+    {
+      "id": "claim-response",
+      "task": "Respond to a buyer case, claim or return request",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/claim-response-draft", "use": "build", "when": "When a buyer opens a case and you need a response with evidence before the deadline" },
+        { "ref": "kit:skills/buyer-cases-and-account-health", "use": "brief", "when": "When you must decide whether to refund, replace or contest inside the marketplace's rules" },
+        { "ref": "library:shipment-problem-handler", "type": "skill", "use": "build", "when": "When the case is a late, lost or damaged parcel and a carrier claim is needed too" },
+        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before sending, to check every date, tracking event and statement can be traced to a record" }
+      ]
+    },
+    {
+      "id": "upset-buyer-replies",
+      "task": "Reply to upset buyers before they open a case",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:customer-inbox-triage-and-reply-drafter", "type": "agent", "use": "brief", "when": "When the inbox is full and messages must be ranked, with a draft reply for each" },
+        { "ref": "library:customer-message-tone-and-urgency-review", "type": "skill", "use": "brief", "when": "When you need to spot which messages are close to a case or bad feedback" },
+        { "ref": "library:angry-customer-reply-writer", "type": "prompt", "use": "build", "when": "When a buyer is angry and the reply must fix what it can and promise nothing false" },
+        { "ref": "library:angry-customer-reply-checker", "type": "skill", "use": "check", "when": "Before a hard reply is sent, to check its promises, facts and tone" }
+      ]
+    },
+    {
+      "id": "feedback-follow-up",
+      "task": "Follow up feedback and reviews within policy",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/buyer-cases-and-account-health", "use": "brief", "when": "Before any feedback request, to know what the marketplace allows you to ask and offer" },
+        { "ref": "library:review-request-and-reply-planner", "type": "skill", "use": "build", "when": "When the seller needs a fair time and wording to ask for feedback" },
+        { "ref": "library:review-reply-batch-writer", "type": "prompt", "use": "build", "when": "When a batch of reviews needs a specific public reply each" },
+        { "ref": "library:public-review-reply-desk", "type": "agent", "use": "check", "when": "When replies run every week and risky ones must be held for the seller" }
+      ]
+    },
+    {
+      "id": "account-health-report",
+      "task": "Write an account health watch report from exports",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/buyer-cases-and-account-health", "use": "build", "when": "When you have the performance exports and need each rate set against the marketplace's limit" },
+        { "ref": "library:order-cancellation-reason-reader", "type": "skill", "use": "build", "when": "When cancellations are rising and you need the rate over time and the reasons" },
+        { "ref": "library:monthly-returns-and-refunds-reviewer", "type": "agent", "use": "check", "when": "Each month, to name the items behind returns and the one fix to make first" },
+        { "ref": "library:recurring-kpi-report-maker", "type": "skill", "use": "build", "when": "When the watch report must rerun each week from the same exports" }
+      ]
+    },
+    {
+      "id": "account-warning-response",
+      "task": "Respond to a warning, suppression or suspension",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/account-warning-response", "use": "brief", "when": "When a marketplace warns, suppresses listings, limits selling, holds funds or suspends" },
+        { "ref": "kit:prompts/appeal-draft", "use": "build", "when": "When the marketplace allows an appeal or asks for a plan of action" },
+        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before the appeal is sent, to check each fact, date and fix is true and can be shown" }
+      ]
+    },
+    {
+      "id": "weekly-operations",
+      "task": "Run weekly marketplace operations",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/weekly-marketplace-operations", "use": "brief", "when": "For the daily inbox and case check, the Monday review and the monthly fee and price check" },
+        { "ref": "library:daily-order-and-shipping-watcher", "type": "agent", "use": "check", "when": "Each morning, to find late and stuck orders before buyers write or a late rate rises" },
+        { "ref": "library:stock-sync-error-finder", "type": "skill", "use": "check", "when": "When stock counts across channels look wrong and an oversell is likely" },
+        { "ref": "library:weekly-status-update-writer", "type": "prompt", "use": "build", "when": "When the seller wants one page on what was done, what is stuck and what is needed" }
+      ]
+    },
+    {
+      "id": "channel-pricing",
+      "task": "Set and adjust prices across channels",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:price-position-planner", "type": "skill", "use": "build", "when": "When you have costs and rival offers and need a price per product and rules for rival discounts" },
+        { "ref": "library:agency-specialized-pricing-analyst", "type": "agent", "use": "explore", "when": "When you want a second price view from costs, rival prices and buyer value, with a margin table" },
+        { "ref": "library:repricing-rules-designer", "type": "skill", "use": "build", "when": "When prices will move by rule and you need safe limits, test cases and a stop switch" },
+        { "ref": "library:price-test-keeper", "type": "agent", "use": "check", "when": "When a price change is live and someone must watch it and call keep or undo" },
+        { "ref": "kit:prompts/what-you-keep-sheet", "use": "check", "when": "Before any price change, to see what is left on that channel after its fees" }
+      ]
+    },
+    {
+      "id": "promotion-calendar",
+      "task": "Plan promotions with a margin check on each",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:promotion-idea-planner", "type": "skill", "use": "explore", "when": "When you want promotion ideas beyond a plain price cut, such as a gift or bundle" },
+        { "ref": "library:discount-and-price-change-checker", "type": "agent", "use": "check", "when": "Before a promotion, to find the deepest discount the margin allows and the wording to use" },
+        { "ref": "kit:skills/channel-profit-sheet", "use": "check", "when": "When the marketplace or app takes its fee on the full price and the promotion cost is yours" }
+      ]
+    },
+    {
+      "id": "delivery-menu-rebuild",
+      "task": "Rebuild a menu for delivery apps",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/marketplace-listing-mapper", "use": "build", "when": "When a dine-in menu must be fitted to an app's categories, options and item fields" },
+        { "ref": "library:click-choice-clarity-checker", "type": "skill", "use": "check", "when": "When category and item names are drafted, to rate each and rewrite the unclear ones" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "build", "when": "When item descriptions are vague, to make each short, true and easy to picture" },
+        { "ref": "library:product-shot-list-writer", "type": "prompt", "use": "build", "when": "When the kitchen needs a photo shot list for its best sellers" }
+      ]
+    },
+    {
+      "id": "delivery-price-sheet",
+      "task": "Price delivery items after app commission",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/what-you-keep-sheet", "use": "build", "when": "When you need what is left on each item after commission, packaging and promotions" },
+        { "ref": "library:restaurant-portion-cost-builder", "type": "skill", "use": "brief", "when": "When a dish has no costing and you need cost per portion from real weights first" },
+        { "ref": "kit:skills/channel-profit-sheet", "use": "check", "when": "When each app charges on a different base and the same dish earns different amounts" }
+      ]
+    },
+    {
+      "id": "returns-and-policies",
+      "task": "Set returns rules that fit each marketplace",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/buyer-cases-and-account-health", "use": "brief", "when": "When you need each marketplace's own return window and who pays, before writing any rule" },
+        { "ref": "library:returns-policy-designer", "type": "skill", "use": "build", "when": "When you have returns data and costs and need refund timing and keep-it rules" },
+        { "ref": "library:store-policy-checker", "type": "skill", "use": "check", "when": "When the policy text is drafted, to find gaps, clashes and unclear wording" }
+      ]
+    },
+    {
+      "id": "fulfilment-set-up",
+      "task": "Choose how orders will be fulfilled on a new channel",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:3pl-bid-and-agreement-builder", "type": "skill", "use": "build", "when": "When the seller needs a fulfilment partner and a request for pricing with terms to ask for" },
+        { "ref": "kit:skills/new-marketplace-entry-plan", "use": "brief", "when": "When the marketplace sets delivery promises the seller must be able to meet" },
+        { "ref": "library:shipment-problem-handler", "type": "skill", "use": "check", "when": "When parcels go late or missing and each needs next steps and a carrier claim" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "Before any listing goes live, to sort each claim as fine, needs proof or cut" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any listing, reply or appeal is sent, to catch typos and names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "amazon-marketplace-manager", "when": "When the job includes Amazon, which has its own listing, fee and account rules" },
+    { "role": "translator", "when": "When listings or buyer replies need a careful translation, not a quick local version" },
+    { "role": "logistics-coordinator", "when": "When carriers, customs papers or a fulfilment partner must be set up and run" },
+    { "role": "customer-support-specialist", "when": "When buyer messages are high in volume and need a full support routine" },
+    { "role": "compliance-specialist", "when": "When product safety, labelling or tax registration needs more than a readiness check" },
+    { "role": "restaurant-manager", "when": "When a delivery menu depends on kitchen costs, prep times and what the kitchen can make" }
+  ],
+  "gaps": [
+    "No library item knows eBay or Walmart listing rules: item specifics, category attributes, title limits and condition grades",
+    "No library item covers bol, Zalando or other European marketplaces at all",
+    "No library item fills a marketplace's own bulk upload template or reads its upload error report",
+    "No library item works out marketplace fees on each one's real fee base; only the kit skill and prompt cover it",
+    "No library item covers VAT, import one-stop shop, duty-paid delivery or sales tax for cross-border sellers",
+    "No library item drafts a marketplace appeal or plan of action with root cause, fix and prevention; only the kit prompt covers it",
+    "No library item builds the evidence list for a marketplace case such as item not received or not as described",
+    "No library item reads marketplace account health exports: defect, late shipment and cancellation rates against limits",
+    "No library item rebuilds a menu for delivery apps: categories, options, item names, descriptions and photos",
+    "No library item plans marketplace ads such as eBay promoted listings or Walmart sponsored products",
+    "No library item gives two or three listing title patterns per marketplace to compare before a batch is written",
+    "No library item keeps stock in step across several marketplaces or sets buffer stock to stop overselling",
+    "No library item writes listings for used or refurbished goods with condition notes"
+  ]
+}

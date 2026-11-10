@@ -1,0 +1,279 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "spreadsheet-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "workbook-review",
+      "task": "Check a workbook before it is shared or relied on",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/spreadsheet-review", "use": "check", "when": "When a workbook is about to be shared, to map inputs and workings and hunt wrong ranges and hard-coded numbers" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "When you want a guided pass that ends in an issue list and the key figures re-worked" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "When the file is large, to list formula errors, broken links and totals that do not tie" },
+        { "ref": "library:excel-workbook-change-reviewer", "type": "skill", "use": "check", "when": "When there is an old and a revised version, to see every changed value, formula and name" },
+        { "ref": "library:analysis-assumptions-logger", "type": "skill", "use": "build", "when": "When the review finds buried assumptions, to log each one with its risk for the owner" },
+        { "ref": "library:katherine-johnson", "type": "mind", "use": "think", "when": "When a total looks right, to re-work it a second way before you trust it" }
+      ]
+    },
+    {
+      "id": "write-formula",
+      "task": "Write a formula with a worked example",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/formula-for-my-sheet", "use": "build", "when": "When the client knows what to calculate but not the formula, or theirs is too long to follow" },
+        { "ref": "library:small-working-example-explainer", "type": "skill", "use": "build", "when": "When the client must understand the formula, to show the smallest example with values traced" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "After the formula is filled down, to catch cells where the range or reference slipped" }
+      ]
+    },
+    {
+      "id": "fix-formula",
+      "task": "Fix a formula that errors or gives the wrong answer",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/fix-a-formula-error", "use": "build", "when": "When a cell shows an error code or a number the client knows is wrong" },
+        { "ref": "kit:skills/spreadsheet-review", "use": "check", "when": "When one broken formula suggests the same fault sits elsewhere in the workbook" },
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "When the formula is right and the data is the cause: text numbers, blanks or odd dates" }
+      ]
+    },
+    {
+      "id": "quote-calculator",
+      "task": "Build a quote or price calculator",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:workflows/build-and-hand-over-a-new-sheet", "use": "brief", "when": "When a business needs a new calculator built, tested and handed over in order" },
+        { "ref": "kit:skills/calculator-and-model-build", "use": "build", "when": "When the price list lives in the owner's head and must become inputs, rates and outputs cell by cell" },
+        { "ref": "library:requirements-question-asker", "type": "skill", "use": "brief", "when": "When the request is one line, to ask the few questions that fix inputs, rates and outputs" },
+        { "ref": "library:excel-input-form-builder", "type": "skill", "use": "build", "when": "When staff will type the job details, to give them dropdowns, clear entry cells and checks" },
+        { "ref": "library:breakeven-point-calculator", "type": "skill", "use": "check", "when": "When the calculator gives a price, to test it covers costs and what a discount does" },
+        { "ref": "library:quote-and-proposal-builder", "type": "skill", "use": "build", "when": "When the calculator's result must go out as a branded quote in the client's template" },
+        { "ref": "kit:skills/spreadsheet-review", "use": "check", "when": "Before handover, to test the calculator with edge cases and look for hard-coded numbers" }
+      ]
+    },
+    {
+      "id": "day-rate-job-cost",
+      "task": "Build a day-rate or job-cost sheet",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/calculator-and-model-build", "use": "build", "when": "When the owner wants to change one input and see the rate or job cost update" },
+        { "ref": "library:hourly-rate-calculator", "type": "skill", "use": "brief", "when": "Before the sheet, to work out the hourly and day rate from target pay, costs and billable hours" },
+        { "ref": "library:step-cost-tracker", "type": "skill", "use": "build", "when": "When the job has stages, to cost each step and see which lines drain the margin" },
+        { "ref": "library:landed-cost-calculator", "type": "skill", "use": "build", "when": "When materials are imported, to bring freight and duty into the cost per unit" },
+        { "ref": "library:per-order-profit-calculator", "type": "prompt", "use": "check", "when": "When the sheet is built, to check profit per job by hand against the sheet's answer" }
+      ]
+    },
+    {
+      "id": "what-if-model",
+      "task": "Build a what-if model with three cases",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/calculator-and-model-build", "use": "build", "when": "When the owner needs low, base and high cases driven from one inputs block" },
+        { "ref": "library:cash-forecast-builder", "type": "skill", "use": "build", "when": "When the model is about cash, to lay out 30, 60 and 90 days from invoices, bills and fixed costs" },
+        { "ref": "library:analysis-assumptions-logger", "type": "skill", "use": "build", "when": "When each case rests on guesses, to log them so a reader sees what could change the answer" },
+        { "ref": "library:bad-year-break-even-tester", "type": "skill", "use": "explore", "when": "When the low case feels too kind, to test how bad one year can get before the business stops earning" },
+        { "ref": "library:agency-finance-financial-analyst", "type": "agent", "use": "check", "when": "When the model is drafted, to have figures re-worked and the assumption that matters most named" }
+      ]
+    },
+    {
+      "id": "budget-sheet",
+      "task": "Build a budget or budget-against-actual sheet",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:budget-and-forecast-builder", "type": "skill", "use": "build", "when": "When past numbers and plans must become a budget and a forecast with gaps noted" },
+        { "ref": "library:department-budget-planner", "type": "skill", "use": "build", "when": "When the budget is split by team and phased by month" },
+        { "ref": "library:monthly-budget-versus-actual-keeper", "type": "agent", "use": "build", "when": "When spend should be read against budget every month, with reasons" },
+        { "ref": "kit:skills/spreadsheet-review", "use": "check", "when": "Before the budget is shared, to check totals tie across tabs and nothing is counted twice" }
+      ]
+    },
+    {
+      "id": "tracker-design",
+      "task": "Design a tracker or log that other people fill in",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:workflows/build-and-hand-over-a-new-sheet", "use": "brief", "when": "When a new tracker must be built so others can use it safely" },
+        { "ref": "library:empty-workbook-builder", "type": "skill", "use": "build", "when": "When the field list is agreed, to get a formatted empty file with no invented rows" },
+        { "ref": "library:excel-input-form-builder", "type": "skill", "use": "build", "when": "When entries must be limited to allowed values with dropdowns and checks" },
+        { "ref": "library:weekly-numbers-sheet-designer", "type": "prompt", "use": "explore", "when": "When the owner is unsure what to track, to get a one-page sheet of seven numbers to react to" },
+        { "ref": "library:prepare-an-excel-input-workbook-for-handover", "type": "workflow", "use": "check", "when": "When the tracker goes to a new keeper, to check it against the field rules and write the guide" },
+        { "ref": "library:grace-hopper", "type": "mind", "use": "think", "when": "When the tracker uses the builder's words and not the words of the people who fill it in" }
+      ]
+    },
+    {
+      "id": "vba-macro",
+      "task": "Write an Excel macro for one repeat task",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/safe-macro-or-script", "use": "build", "when": "When a weekly chore should run from a button, with a plain plan, settings at the top and a backup step" },
+        { "ref": "library:repeat-task-step-guide-writer", "type": "skill", "use": "brief", "when": "Before any code, to write the manual steps exactly so the macro does the same job" },
+        { "ref": "library:test-plan-writer", "type": "skill", "use": "check", "when": "When the macro is written, to list the cases to run on a copy: empty, one row, large and odd data" },
+        { "ref": "library:generated-code-reviewer", "type": "skill", "use": "check", "when": "When the code is drafted, to catch repeated logic and common slips before the client runs it" },
+        { "ref": "library:kent-beck", "type": "mind", "use": "think", "when": "When the macro tries to do everything at once and should grow in small tested steps" }
+      ]
+    },
+    {
+      "id": "recorded-macro",
+      "task": "Clean up a recorded macro so it works on any data size",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/clean-up-a-recorded-macro", "use": "build", "when": "When a recorded macro worked once and now skips rows, errors or takes forever" },
+        { "ref": "library:code-refactor-planner", "type": "skill", "use": "build", "when": "When the recording is long, to plan small safe changes that do not alter what it does" },
+        { "ref": "library:untested-code-change-guide", "type": "skill", "use": "check", "when": "When nobody knows what the macro should produce, to pin its output before you change it" }
+      ]
+    },
+    {
+      "id": "fix-script",
+      "task": "Fix a macro or script that errors or runs slow",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/safe-macro-or-script", "use": "build", "when": "When a macro or script fails and the fix must stay safe for the people who press the button" },
+        { "ref": "library:error-and-log-debugger", "type": "skill", "use": "build", "when": "When there is an error message or log, to find the cause and a fix that works" },
+        { "ref": "library:readable-code-reviewer", "type": "skill", "use": "check", "when": "When the script was left half-working, to get clearer names and tidier error handling" }
+      ]
+    },
+    {
+      "id": "apps-script",
+      "task": "Write a Google Apps Script for a repeat Sheets task",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/apps-script-for-a-repeat-task", "use": "build", "when": "When a daily or weekly Sheets job should run on a timer or a button" },
+        { "ref": "kit:skills/safe-macro-or-script", "use": "build", "when": "When the script will be run by non-experts and needs settings on top and a safe test run" },
+        { "ref": "library:google-forms-automator", "type": "skill", "use": "build", "when": "When the task starts from form replies that must be logged or sent as alerts" },
+        { "ref": "library:generated-code-reviewer", "type": "skill", "use": "check", "when": "Before the client turns the timer on, to catch slips in the drafted script" }
+      ]
+    },
+    {
+      "id": "form-to-sheet",
+      "task": "Set up a Google Form to Sheet workflow",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:google-forms-automator", "type": "skill", "use": "build", "when": "When each form reply should trigger an email, a log row or a sorted tab" },
+        { "ref": "kit:prompts/apps-script-for-a-repeat-task", "use": "build", "when": "When replies need a summary tab or reminders the form cannot do by itself" },
+        { "ref": "library:no-code-automation-planner", "type": "skill", "use": "explore", "when": "When a script may be the wrong tool, to compare a Zapier or Make setup" },
+        { "ref": "library:check-a-new-automation-before-relying-on-it", "type": "workflow", "use": "check", "when": "Before the team relies on it, to find double runs and what happens when a step fails" },
+        { "ref": "library:zapier", "type": "tool", "use": "brief", "when": "When replies must reach another app, to check what can be triggered and written" }
+      ]
+    },
+    {
+      "id": "scheduled-report",
+      "task": "Build a scheduled report from a sheet",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/apps-script-for-a-repeat-task", "use": "build", "when": "When a report is made by hand every week in Google Sheets and should send itself" },
+        { "ref": "library:recurring-kpi-report-maker", "type": "skill", "use": "build", "when": "When the client describes the report in plain words and wants a workbook they can rerun" },
+        { "ref": "library:excel-monthly-rollup-builder", "type": "skill", "use": "build", "when": "When dated records must become a monthly summary with counts and totals you can trace" },
+        { "ref": "library:build-a-weekly-kpi-report-with-a-forecast-and-dashboard", "type": "workflow", "use": "build", "when": "When the weekly report also needs a trend, a forecast and a dashboard to share" },
+        { "ref": "library:excel-powerpoint-number-checker", "type": "skill", "use": "check", "when": "When report numbers are pasted into slides, to check each slide figure agrees with the workbook" }
+      ]
+    },
+    {
+      "id": "clean-data",
+      "task": "Clean a messy sheet or export",
+      "kind": "other",
+      "items": [
+        { "ref": "library:messy-spreadsheet-cleaner", "type": "skill", "use": "build", "when": "When a sheet has stray spaces, text numbers, mixed dates and duplicates" },
+        { "ref": "library:data-file-clean-up-loop", "type": "agent", "use": "build", "when": "When the same messy file arrives every month and the rules should be saved" },
+        { "ref": "library:spreadsheet-checker", "type": "skill", "use": "build", "when": "When cleaning must keep the formulas and formatting intact" },
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "After cleaning, to count what gaps, duplicates and odd values remain" }
+      ]
+    },
+    {
+      "id": "match-two-tables",
+      "task": "Match two lists and explain what does not match",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:excel-table-join-reconciler", "type": "skill", "use": "build", "when": "When two tables share a key, to join them and explain unmatched rows and duplicate keys" },
+        { "ref": "kit:prompts/formula-for-my-sheet", "use": "build", "when": "When the client wants the lookup formula itself, with a worked example" },
+        { "ref": "library:account-reconciler", "type": "skill", "use": "build", "when": "When the two lists are a ledger and a bank statement, to sort the gaps by type" }
+      ]
+    },
+    {
+      "id": "summary-and-charts",
+      "task": "Build a summary tab, PivotTable or chart",
+      "kind": "other",
+      "items": [
+        { "ref": "library:kpi-dashboard-designer", "type": "skill", "use": "brief", "when": "Before the summary, to set who reads it, what they decide and the few numbers that fit" },
+        { "ref": "library:excel-monthly-rollup-builder", "type": "skill", "use": "build", "when": "When raw rows must roll up by month with traceable totals and rates" },
+        { "ref": "library:data-chart-drawer", "type": "skill", "use": "build", "when": "When one clean chart with the right chart type is needed from the data" },
+        { "ref": "library:excel-pivot-refresh-planner", "type": "skill", "use": "check", "when": "When the workbook has PivotTables, to set the refresh order and find stale outputs" },
+        { "ref": "library:agency-engineering-data-visualization-engineer", "type": "agent", "use": "check", "when": "When a chart is drafted, to check the chart type and axes do not mislead" }
+      ]
+    },
+    {
+      "id": "make-safe",
+      "task": "Make a sheet safe for non-experts to use",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/spreadsheet-review", "use": "check", "when": "When others will type into the sheet, to find where one wrong entry breaks the result" },
+        { "ref": "library:excel-input-form-builder", "type": "skill", "use": "build", "when": "When free typing causes errors, to add an input form with allowed values and checks" },
+        { "ref": "library:jakob-nielsen", "type": "mind", "use": "think", "when": "When the sheet is correct but a new user cannot tell where to type or what happened" }
+      ]
+    },
+    {
+      "id": "handover",
+      "task": "Write handover notes for a workbook or macro",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/workbook-handover-notes", "use": "build", "when": "When someone is taking over a workbook and must run it without calling you" },
+        { "ref": "library:excel-handover-guide-writer", "type": "skill", "use": "build", "when": "When the next owner needs inputs, formulas, update steps and risks in one guide" },
+        { "ref": "library:code-walkthrough-writer", "type": "skill", "use": "build", "when": "When the handover includes a macro or script, to explain each part beside its reason" },
+        { "ref": "library:repeat-task-step-guide-writer", "type": "skill", "use": "build", "when": "When the weekly routine needs exact steps, what to do if it fails and how to roll back" }
+      ]
+    },
+    {
+      "id": "health-check",
+      "task": "Run the quarterly spreadsheet health check",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/quarterly-spreadsheet-health-check", "use": "build", "when": "Every three months for the workbooks the business depends on, and before year end" },
+        { "ref": "kit:skills/spreadsheet-review", "use": "check", "when": "When each workbook on the list needs its inputs, workings and outputs checked" },
+        { "ref": "library:excel-workbook-change-reviewer", "type": "skill", "use": "check", "when": "When you have last quarter's copy, to see what changed since" },
+        { "ref": "library:excel-pivot-refresh-planner", "type": "skill", "use": "check", "when": "When reports are built on PivotTables that may be stale" }
+      ]
+    },
+    {
+      "id": "print-and-export",
+      "task": "Set up a sheet to print or export cleanly",
+      "kind": "other",
+      "items": [
+        { "ref": "library:excel-print-layout-fixer", "type": "skill", "use": "build", "when": "When a sheet prints across odd pages, to fix columns, repeated headers and page breaks" },
+        { "ref": "library:excel-powerpoint-number-checker", "type": "skill", "use": "check", "when": "When the export feeds a slide deck, to check every figure still matches the workbook" }
+      ]
+    },
+    {
+      "id": "outgrown-sheet",
+      "task": "Plan the move when a sheet has outgrown itself",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:business-data-move-runbook", "type": "skill", "use": "build", "when": "When data must move to a new tool, to plan field maps, checks and a way back" },
+        { "ref": "library:database-schema-designer", "type": "skill", "use": "brief", "when": "When the sheet is really several linked tables, to lay them out before any move" },
+        { "ref": "library:julius", "type": "tool", "use": "explore", "when": "When the real need is asking questions of the data, not keeping a bigger workbook" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:requirements-question-asker", "type": "skill", "use": "brief", "when": "Before any build, to ask the few questions that settle inputs, outputs and who will use it" },
+    { "ref": "library:microsoft-copilot", "type": "tool", "use": "brief", "when": "When the client has Copilot in Excel and asks what it can do in the workbook itself" }
+  ],
+  "helpers": [
+    { "role": "fpa-analyst", "when": "When the model is a full budget, forecast or board pack and needs finance judgement" },
+    { "role": "bookkeeper", "when": "When the numbers come from the books and the ledger itself needs fixing" },
+    { "role": "data-analyst", "when": "When the client wants findings from the data, not a sheet that works" },
+    { "role": "automation-specialist", "when": "When the job spans several apps and should not live in a spreadsheet script" },
+    { "role": "no-code-app-developer", "when": "When the sheet has become an app and needs forms, logins and a database" },
+    { "role": "pricing-strategist", "when": "When the question is what the prices should be, not how to calculate a quote" }
+  ],
+  "gaps": [
+    "No library item writes or explains an Excel or Google Sheets formula: lookups, dynamic arrays, LET and LAMBDA",
+    "No library item writes, reviews or fixes Excel VBA; the only fits are general code skills",
+    "No library item covers Office Scripts or Power Automate for Excel",
+    "No library item writes Google Apps Script beyond form replies: timers, custom menus, sidebars and quota limits",
+    "No library item builds a quote or price calculator for a trade or service business; only the kit does",
+    "No library item covers Power Query or importing and refreshing CSV files",
+    "No library item covers locking cells, protected ranges, sharing rights and version history",
+    "No library item moves a workbook between Excel and Google Sheets and lists the functions that differ",
+    "No library item speeds up a slow workbook: volatile functions, whole-column references and too many links",
+    "No library item reviews a Google Sheets file; the review items are written for Excel",
+    "No library item lays out different designs of one calculator or tracker to compare",
+    "No tool guide covers Excel, Google Sheets or Airtable"
+  ]
+}

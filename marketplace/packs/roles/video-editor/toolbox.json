@@ -1,0 +1,259 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "video-editor",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "edit-decision-list",
+      "task": "Write an edit decision list from a transcript",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:interview-transcript-trimmer", "type": "skill", "use": "brief", "when": "Before the list, to cut a long interview to its few strong passages and their order" },
+        { "ref": "kit:skills/edit-decision-list-from-transcript", "use": "build", "when": "When you have a timed transcript and need every keep, cut and tighten with a reason" },
+        { "ref": "library:dead-air-and-retake-cutter", "type": "skill", "use": "build", "when": "When the recording is full of pauses, fillers and retakes that need a timed cut list" },
+        { "ref": "library:edgar-allan-poe", "type": "mind", "use": "think", "when": "When everything seems worth keeping, to pick the one effect and cut what weakens it" },
+        { "ref": "kit:prompts/meaning-check-on-cuts", "use": "check", "when": "Before the list goes out, to check no cut changes what the speaker meant" }
+      ]
+    },
+    {
+      "id": "timed-transcript",
+      "task": "Get a timed transcript from a recording",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:recording-transcriber", "type": "skill", "use": "build", "when": "When the client sends audio or video with no transcript and speakers must be labelled" },
+        { "ref": "library:subtitle-and-transcript-maker", "type": "skill", "use": "build", "when": "When you need word-level timing for cuts and captions, not just the words" },
+        { "ref": "library:whisper-speech-transcriber", "type": "skill", "use": "build", "when": "When the recording is not in English or needs an English translation" },
+        { "ref": "library:youtube-transcript-saver", "type": "skill", "use": "build", "when": "When the source is already on YouTube and you only have the link" },
+        { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "When names and product terms may be misheard, to catch each one spelt two ways" }
+      ]
+    },
+    {
+      "id": "tighten-to-length",
+      "task": "Tighten a long recording to a target length",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/tighten-to-target-length", "use": "build", "when": "When you need a quick first-pass cut list to hit a set length before the full edit list" },
+        { "ref": "library:dead-air-and-retake-cutter", "type": "skill", "use": "build", "when": "When easy time can be won first by cutting pauses, fillers and retakes" },
+        { "ref": "library:stanley-kubrick", "type": "mind", "use": "think", "when": "When the cut hits the length but drags, to question each choice and test it again" },
+        { "ref": "kit:prompts/meaning-check-on-cuts", "use": "check", "when": "When answers were shortened, to check each one still says what the speaker meant" }
+      ]
+    },
+    {
+      "id": "short-clips",
+      "task": "Find and plan short clips with hooks",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:skills/short-clip-finder", "use": "build", "when": "When a long recording must yield vertical clips with in and out points and hook text" },
+        { "ref": "library:shorts-clip-finder", "type": "skill", "use": "explore", "when": "When you want a second pick of the best five moments, each with a new first line" },
+        { "ref": "library:short-video-hook-writer", "type": "skill", "use": "explore", "when": "When a clip's opening is weak, to get ten hooks checked for length and first shot" },
+        { "ref": "library:opus-clip", "type": "tool", "use": "build", "when": "When the client wants draft clips cut and captioned by a tool for you to review" },
+        { "ref": "library:mrbeast", "type": "mind", "use": "think", "when": "When a clip starts slowly, to review whether the first seconds pay off the title" },
+        { "ref": "kit:prompts/meaning-check-on-cuts", "use": "check", "when": "Before a clip is posted, to check the cut-down version does not twist the point" }
+      ]
+    },
+    {
+      "id": "captions",
+      "task": "Write caption files for a video or its clips",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/clip-captions-srt", "use": "build", "when": "When each clip needs an accurate SRT file with short lines and times from its in point" },
+        { "ref": "library:branded-video-captions", "type": "skill", "use": "explore", "when": "When captions are burned in, to see them timed in the brand font with a fault list" },
+        { "ref": "library:video-ad-text-overlays", "type": "skill", "use": "build", "when": "When on-screen words must sit clear of the app's buttons and captions" },
+        { "ref": "library:subtitle-and-transcript-maker", "type": "skill", "use": "brief", "when": "When there is no timed transcript to build the captions from" },
+        { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before delivery, to catch typos and names spelt two ways across caption files" }
+      ]
+    },
+    {
+      "id": "cue-notes",
+      "task": "Write B-roll, pacing, graphics and music cue notes",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/cue-notes-and-chapters", "use": "build", "when": "When the editor needs cues tied to timecodes, using only footage and music the client has" },
+        { "ref": "library:video-audio-finishing-plan", "type": "workflow", "use": "build", "when": "When voice, music, effects and fades need a timed plan with mix checks" },
+        { "ref": "library:motion-graphics-build-plan", "type": "skill", "use": "build", "when": "When a section is graphics only and needs an exact build plan and text table" },
+        { "ref": "library:alfred-hitchcock", "type": "mind", "use": "think", "when": "When the cut is flat, to decide what viewers know and map the visual beats" }
+      ]
+    },
+    {
+      "id": "chapters-and-description",
+      "task": "Write chapters, description and show notes",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/chapters-and-description", "use": "build", "when": "When a finished long video needs chapters and a description from what was actually said" },
+        { "ref": "kit:skills/cue-notes-and-chapters", "use": "build", "when": "When chapters are written along with the cue notes for the same cut" },
+        { "ref": "library:youtube-chapter-writer", "type": "skill", "use": "check", "when": "When chapters do not show on the video, to check them against YouTube's rules" },
+        { "ref": "library:youtube-description-tags", "type": "skill", "use": "explore", "when": "When the description should also target searches, to compare a search-led version" },
+        { "ref": "library:podcast-show-notes-writer", "type": "skill", "use": "build", "when": "When the recording is a podcast and needs a summary, key points and links mentioned" }
+      ]
+    },
+    {
+      "id": "long-recording-to-cut-and-clips",
+      "task": "Take a long recording to a finished cut and clips",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/long-recording-to-cut-and-clips", "use": "build", "when": "When the client wants a tightened version, clips, captions and chapters from one recording" },
+        { "ref": "library:cut-a-raw-recording-and-get-chapters-and-short-clips", "type": "workflow", "use": "explore", "when": "When you start from raw audio, to compare a run that cleans speech first" },
+        { "ref": "library:cut-chapter-and-clip-a-long-video-into-five-shorts", "type": "workflow", "use": "explore", "when": "When the client wants exactly five shorts with new first lines from a transcript" },
+        { "ref": "library:descript", "type": "tool", "use": "build", "when": "When the client will apply the cuts by editing the transcript themselves" },
+        { "ref": "kit:prompts/meaning-check-on-cuts", "use": "check", "when": "Before the cut and clips go to the client or the speaker" }
+      ]
+    },
+    {
+      "id": "weekly-clip-batch",
+      "task": "Run a weekly batch of clips from new recordings",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/weekly-clip-batch", "use": "build", "when": "Each week, when new recordings arrive and a set of clips is due" },
+        { "ref": "kit:skills/short-clip-finder", "use": "build", "when": "When each recording needs its moments picked and planned as vertical clips" },
+        { "ref": "library:monthly-content-repurposer", "type": "agent", "use": "brief", "when": "When last month's results are in, to pick which pieces deserve more clips" },
+        { "ref": "library:content-repurposer", "type": "skill", "use": "build", "when": "When the client also wants posts and emails made from the same recording" }
+      ]
+    },
+    {
+      "id": "editor-handoff",
+      "task": "Turn an approved edit list into steps for the editing tool",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/editor-handoff-steps", "use": "build", "when": "When the edit list is approved and the client edits in Descript, CapCut or similar" },
+        { "ref": "library:agency-marketing-short-video-editing-coach", "type": "agent", "use": "build", "when": "When the client is new to their app and needs a second-by-second plan with export settings" },
+        { "ref": "library:capcut", "type": "tool", "use": "brief", "when": "When the client edits on a phone and you must know what the app can do" },
+        { "ref": "library:descript", "type": "tool", "use": "brief", "when": "When the client edits by transcript and the steps must match that way of working" }
+      ]
+    },
+    {
+      "id": "multicam-plan",
+      "task": "Plan camera angles for a multicam podcast or interview",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/multicam-angle-plan", "use": "build", "when": "When two or more cameras were used and the editor needs to know which angle when" },
+        { "ref": "kit:skills/edit-decision-list-from-transcript", "use": "brief", "when": "Before the angle plan, to fix what stays in the cut and where each speaker talks" },
+        { "ref": "kit:skills/short-clip-finder", "use": "build", "when": "When the vertical clips need their own angle and crop for each speaker" }
+      ]
+    },
+    {
+      "id": "copyright-claim",
+      "task": "Plan a response to a copyright claim or muted video",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/copyright-claim-response", "use": "build", "when": "When a video has a Content ID claim or is muted or blocked and the client wants options" },
+        { "ref": "library:infringement-first-look-sorter", "type": "skill", "use": "brief", "when": "When it is unclear how serious the claim is, to list the factors before replying" },
+        { "ref": "library:text-to-music-maker", "type": "skill", "use": "build", "when": "When the simplest fix is to swap the claimed track for music made for the client" },
+        { "ref": "library:copyright-takedown-notice-helper", "type": "skill", "use": "build", "when": "When someone has re-uploaded the client's video and a notice may be needed" }
+      ]
+    },
+    {
+      "id": "social-video-edit",
+      "task": "Plan the edit of a Reel, TikTok or Short from clips",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:social-video-edit-planner", "type": "skill", "use": "build", "when": "When you have clips and the post's idea and need a timed cut list, captions and a cover" },
+        { "ref": "library:approved-plan-video-production-workflow", "type": "workflow", "use": "build", "when": "When raw footage needs a scene-by-scene plan the client approves before the render" },
+        { "ref": "library:video-opening-line-batch-writer", "type": "prompt", "use": "explore", "when": "When the first line is undecided, to get ten openings and the two to try first" },
+        { "ref": "library:reusable-reel-cover-recipe-builder", "type": "skill", "use": "build", "when": "When the client wants one repeatable cover style for every Reel" },
+        { "ref": "library:agency-marketing-short-video-editing-coach", "type": "agent", "use": "check", "when": "When a cut is drafted, to check captions, sound and export and rank the fixes" }
+      ]
+    },
+    {
+      "id": "video-ad-edit",
+      "task": "Cut and caption a video ad",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:video-ad-edit-planner", "type": "skill", "use": "build", "when": "When you have the clips and script and need a timed cut list, caption windows and exports" },
+        { "ref": "library:cut-caption-and-check-a-video-ad-before-launch", "type": "workflow", "use": "build", "when": "When the ad needs the cut, brand-font captions and a launch check in one run" },
+        { "ref": "library:spoken-video-ad-opening-writer", "type": "skill", "use": "explore", "when": "When the opening is weak, to get three spoken openings with a storyboard to compare" },
+        { "ref": "library:video-ad-bridge-checker", "type": "skill", "use": "check", "when": "When the ad sells too early, to score the move from hook to offer and tighten it" },
+        { "ref": "library:winning-hook-rubric-builder", "type": "skill", "use": "check", "when": "When past ads have results, to grade the new opening against what won before" }
+      ]
+    },
+    {
+      "id": "audio-finish",
+      "task": "Clean up and finish the audio",
+      "kind": "other",
+      "items": [
+        { "ref": "library:noisy-audio-cleaner", "type": "skill", "use": "build", "when": "When speech is buried under background noise or music" },
+        { "ref": "library:video-audio-finishing-plan", "type": "workflow", "use": "build", "when": "When the mix needs a timed plan for voice, music, effects and fades" },
+        { "ref": "library:elevenlabs", "type": "tool", "use": "build", "when": "When a line needs a voice-over, a sound effect or a music bed made" },
+        { "ref": "library:audio-quality-metric-picker", "type": "skill", "use": "check", "when": "Before export, to measure loudness, noise and speech quality" }
+      ]
+    },
+    {
+      "id": "title-thumbnail-cover",
+      "task": "Plan the title, thumbnail and cover for a video",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:thumbnail-and-title-planner", "type": "skill", "use": "explore", "when": "When a video needs several title and thumbnail pairs to test against each other" },
+        { "ref": "library:reusable-reel-cover-recipe-builder", "type": "skill", "use": "build", "when": "When short clips need a cover style that repeats across the feed" },
+        { "ref": "library:headline-cover-test-ranker", "type": "skill", "use": "check", "when": "When there is a list of titles, to read each alone and keep the best three" },
+        { "ref": "library:youtube-title-thumbnail-check", "type": "skill", "use": "check", "when": "Before upload, to check title length and that the thumbnail does not repeat it" }
+      ]
+    },
+    {
+      "id": "retention-fix",
+      "task": "Read retention data and fix where viewers leave",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:youtube-retention-reader", "type": "skill", "use": "check", "when": "When you have a retention export, to see where viewers leave and what was said then" },
+        { "ref": "library:pick-a-title-and-thumbnail-then-fix-where-viewers-leave", "type": "workflow", "use": "build", "when": "When the next video should fix both the click and the first drop in one plan" },
+        { "ref": "kit:skills/cue-notes-and-chapters", "use": "build", "when": "When the fix is pacing, to rewrite the cues at the points where viewers dropped" },
+        { "ref": "library:mrbeast", "type": "mind", "use": "think", "when": "When viewers leave in the first minute and the opening does not pay off the title" }
+      ]
+    },
+    {
+      "id": "interview-story-edit",
+      "task": "Shape an interview or testimonial into a story",
+      "kind": "other",
+      "items": [
+        { "ref": "library:interview-transcript-trimmer", "type": "skill", "use": "build", "when": "When a long interview must be cut to its strongest passages in a usable order" },
+        { "ref": "library:story-structure-reorderer", "type": "skill", "use": "explore", "when": "When the order follows the recording, to try an order that puts the viewer in the seat" },
+        { "ref": "library:quote-video-ad-script", "type": "skill", "use": "build", "when": "When customer quotes must become a short video script with a source for every line" },
+        { "ref": "library:robert-mckee", "type": "mind", "use": "think", "when": "When the piece lists facts but nothing changes for the person on screen" },
+        { "ref": "kit:prompts/meaning-check-on-cuts", "use": "check", "when": "When answers were reordered or joined, to check nobody seems to say what they did not" }
+      ]
+    },
+    {
+      "id": "translate-and-dub",
+      "task": "Make subtitles or dubs in other languages",
+      "kind": "other",
+      "items": [
+        { "ref": "library:video-dubbing-editor", "type": "skill", "use": "build", "when": "When the video needs versions in other languages that keep each speaker's voice" },
+        { "ref": "library:make-a-voiceover-and-ship-it-in-other-languages", "type": "workflow", "use": "build", "when": "When a scripted voice-over needs dubbed versions and subtitles for each language" },
+        { "ref": "kit:skills/clip-captions-srt", "use": "build", "when": "When translated lines must be re-timed and kept short enough to read" },
+        { "ref": "library:veed", "type": "tool", "use": "build", "when": "When the client wants to caption and translate in a browser with no install" }
+      ]
+    },
+    {
+      "id": "fill-footage-gap",
+      "task": "Fill a gap in the cut with AI or stock footage",
+      "kind": "other",
+      "items": [
+        { "ref": "library:video-route-picker", "type": "skill", "use": "brief", "when": "Before making anything, to choose between generating, composing or editing footage" },
+        { "ref": "library:ai-video-shot-planner", "type": "skill", "use": "build", "when": "When a missing shot will be generated and needs a prompt and fixes for failed clips" },
+        { "ref": "library:runway", "type": "tool", "use": "build", "when": "When you need a short generated clip or an edit to footage you already have" },
+        { "ref": "library:ai-image-fix-rules", "type": "skill", "use": "check", "when": "When generated clips come back wrong, to turn each fault into a rule for the retry" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When on-screen text or a description states a number or claim nobody said on tape" }
+  ],
+  "helpers": [
+    { "role": "video-producer", "when": "When the job needs a script, a shoot plan or new footage, not only an edit" },
+    { "role": "podcast-producer", "when": "When the recording is a podcast that also needs audio release, show notes and guests handled" },
+    { "role": "youtube-strategist", "when": "When titles, thumbnails and topics must fit a channel plan and its numbers" },
+    { "role": "social-media-manager", "when": "When the clips need captions for the post, a schedule and replies" },
+    { "role": "graphic-designer", "when": "When thumbnails, covers, lower thirds or title cards need designing" },
+    { "role": "translator", "when": "When subtitles in another language must be checked by someone who knows it well" }
+  ],
+  "gaps": [
+    "No library item writes a timecoded edit decision list in a format an editing tool can import; only the kit skill covers it",
+    "No library item plans a multicam edit: which angle to use when, for the long cut and for vertical clips",
+    "No library item builds a B-roll list from a transcript or finds stock footage the client may use",
+    "No library item plans a vertical reframe: crop, speaker tracking and safe areas for 9:16 from 16:9",
+    "No library item sets export settings per platform: size, frame rate, bitrate, loudness and file names",
+    "No library item checks caption quality: reading speed, line length, line breaks and timing against speech",
+    "No library item covers colour correction, a grade look or matching shots from two cameras",
+    "No library item checks music and footage licences or helps answer a Content ID claim; only the kit prompt does",
+    "No library item gives step-by-step handoff for Premiere or DaVinci Resolve; tool guides cover Descript, CapCut and VEED only",
+    "No library item manages client review rounds and timecoded revision notes"
+  ]
+}

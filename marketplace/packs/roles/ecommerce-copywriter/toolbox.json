@@ -1,0 +1,265 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "ecommerce-copywriter",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "product-descriptions",
+      "task": "Write product descriptions for one product or a batch",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:workflows/new-product-copy", "use": "brief", "when": "When new products arrive with no copy and you need the run from label to live page and feed" },
+        { "ref": "library:product-page-doubt-mapper", "type": "prompt", "use": "brief", "when": "Before writing, to tie each page section to a real doubt buyers have" },
+        { "ref": "library:customer-buying-reasons-finder", "type": "skill", "use": "brief", "when": "When there are reviews or support emails, to find the buying reasons in customers' own words" },
+        { "ref": "kit:skills/product-page-copy", "use": "build", "when": "When the fact sheet is checked and you need titles, bullets, description and specs" },
+        { "ref": "library:copywriting-framework-writer", "type": "skill", "use": "explore", "when": "When the first version is flat, to see the same facts in two or three structures and tones" },
+        { "ref": "library:joseph-sugarman", "type": "mind", "use": "think", "when": "When a product has a story and the page should pull the reader from line to line" },
+        { "ref": "library:sales-copy-readiness-checker", "type": "skill", "use": "check", "when": "When the copy is finished, to get a ship, fix or rewrite call with three fixes" }
+      ]
+    },
+    {
+      "id": "fact-sheet",
+      "task": "Build a checked fact sheet from a label or supplier sheet",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/product-fact-sheet", "use": "build", "when": "Before any product copy, to turn a label photo or spec sheet into checked facts with gaps marked" },
+        { "ref": "library:process-fact-finder", "type": "skill", "use": "build", "when": "When maker and supplier notes exist, to find true facts about how it is made that rivals never state" },
+        { "ref": "library:claim-and-proof-matcher", "type": "skill", "use": "check", "when": "When the sheet is built, to see which planned claims the evidence supports" }
+      ]
+    },
+    {
+      "id": "distinct-descriptions",
+      "task": "Rewrite thin or look-alike descriptions so each is distinct",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:selling-points-writer", "type": "skill", "use": "brief", "when": "Before rewriting, to put each product's features in buying order and flag claims needing proof" },
+        { "ref": "library:product-description-enricher", "type": "skill", "use": "build", "when": "When descriptions are thin, to add materials, uses and facts a shopper needs" },
+        { "ref": "kit:skills/product-page-copy", "use": "build", "when": "When a batch of similar products each needs its own reason to choose it" },
+        { "ref": "library:copywriting-framework-writer", "type": "skill", "use": "explore", "when": "When two products read the same, to try a different structure and tone for each" },
+        { "ref": "library:claude-hopkins", "type": "mind", "use": "think", "when": "When the copy is all adjectives, to swap each for a specific fact" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a line is vague, to test it and get a true version a shopper can picture" }
+      ]
+    },
+    {
+      "id": "titles-by-surface",
+      "task": "Write titles for the page, search, feed and marketplace",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/titles-by-surface", "use": "build", "when": "When one product needs a page title, SEO title, feed title and marketplace title in limits" },
+        { "ref": "library:shopping-feed-title-writer", "type": "skill", "use": "build", "when": "When you have the search terms that convert and need search-led feed titles" },
+        { "ref": "library:product-title-cleaner", "type": "skill", "use": "build", "when": "When the whole list needs tidy, consistent titles as a file to import" },
+        { "ref": "library:title-and-meta-tag-writer", "type": "skill", "use": "build", "when": "When the page also needs a meta description and social share tags that fit" },
+        { "ref": "kit:skills/catalogue-copy-cleanup", "use": "check", "when": "After the batch, to catch titles over a platform limit and mixed naming or units" }
+      ]
+    },
+    {
+      "id": "collection-page",
+      "task": "Write a collection page for buying searches",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:plan-collection-pages-that-rank-for-buying-searches", "type": "workflow", "use": "brief", "when": "Before writing, to check which buying searches deserve a collection page" },
+        { "ref": "kit:skills/collection-page-copy", "use": "build", "when": "When you need the intro, a buying guide from real product differences and an FAQ" },
+        { "ref": "library:collection-page-seo-builder", "type": "skill", "use": "build", "when": "When the page needs its title, heading, address and copy set for one keyword" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the page heading and intro line need several angles to choose from" },
+        { "ref": "library:collection-page-fixer", "type": "skill", "use": "check", "when": "When the page is live, to check which products to feature and what to fix" }
+      ]
+    },
+    {
+      "id": "amazon-listing",
+      "task": "Write an Amazon listing set",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:amazon-product-edge-finder", "type": "skill", "use": "brief", "when": "Before writing, to read rival listings and reviews for their weak spots and your best points" },
+        { "ref": "library:amazon-listing-writer", "type": "skill", "use": "build", "when": "When you have facts and keyword tiers and need a title, five bullets and a description" },
+        { "ref": "library:amazon-listing-first-draft-writer", "type": "prompt", "use": "explore", "when": "When you want a second, plainer version to compare before choosing" },
+        { "ref": "kit:skills/claims-and-label-check", "use": "check", "when": "Before upload, to check every claim in the bullets against the label and the rules" }
+      ]
+    },
+    {
+      "id": "marketplace-listing",
+      "task": "Write an Etsy or other marketplace listing",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:product-listing-writer", "type": "skill", "use": "build", "when": "When you need a title, bullets and description built for one marketplace's rules" },
+        { "ref": "library:etsy-listing-seo-scorer", "type": "skill", "use": "check", "when": "When it is an Etsy listing, to score it and get a better title and tags" },
+        { "ref": "library:overseas-listing-localizer", "type": "skill", "use": "build", "when": "When the listing will sell in another country and needs local language, sizes and terms" }
+      ]
+    },
+    {
+      "id": "food-product-page",
+      "task": "Write a food product page from the label",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/product-fact-sheet", "use": "brief", "when": "Before writing, to copy ingredients, allergens, weight and storage from the label exactly" },
+        { "ref": "kit:prompts/food-product-page", "use": "build", "when": "When taste and story matter but every label fact must match" },
+        { "ref": "library:m-f-k-fisher", "type": "mind", "use": "think", "when": "When the taste copy is generic and should say what eating it is really like" },
+        { "ref": "kit:skills/claims-and-label-check", "use": "check", "when": "Before it ships, to check origin, free-from, allergen and health wording" },
+        { "ref": "library:agency-healthcare-clinical-evidence-agent", "type": "agent", "use": "check", "when": "When the page hints at a health benefit, to sort each claim by its evidence" }
+      ]
+    },
+    {
+      "id": "gift-bundle-copy",
+      "task": "Write gift box and bundle copy",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:cart-bundle-and-gift-planner", "type": "skill", "use": "brief", "when": "When the bundle is not fixed yet, to plan it from products, margins and shipping costs" },
+        { "ref": "library:promotion-idea-planner", "type": "skill", "use": "explore", "when": "When the client wants a gift, bundle or pre-order offer and not a plain price cut" },
+        { "ref": "kit:prompts/food-product-page", "use": "build", "when": "When it is a food gift box or hamper and each item's label facts must carry over" },
+        { "ref": "library:discount-wording-planner", "type": "skill", "use": "build", "when": "When the bundle saves money, to choose how to show the saving" },
+        { "ref": "kit:skills/claims-and-label-check", "use": "check", "when": "Before launch, to check price-reduction and deadline claims are true" }
+      ]
+    },
+    {
+      "id": "order-delivery-emails",
+      "task": "Write order, dispatch, delay and delivered emails",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/order-and-delivery-emails", "use": "build", "when": "When the emails should answer what customers write in to ask, in the shop's voice" },
+        { "ref": "library:delivery-update-flow-builder", "type": "skill", "use": "build", "when": "When late parcels drive tickets, to plan the update flow and tracking page" },
+        { "ref": "library:support-reply-tone-editor", "type": "skill", "use": "explore", "when": "When the delay email sounds cold, to see the same facts in two or three tones" },
+        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "Before the emails go live, to get counts, cuts and a ship or fix score" }
+      ]
+    },
+    {
+      "id": "maker-story",
+      "task": "Write a maker story and about page",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:write-your-founder-story-and-cut-it-to-what-moves", "type": "workflow", "use": "build", "when": "When you have the true facts of how the maker started and need them shaped and cut" },
+        { "ref": "library:brand-origin-story-writer", "type": "skill", "use": "build", "when": "When the about page must sound like the maker and not a template" },
+        { "ref": "library:top-of-page-headline-writer", "type": "prompt", "use": "explore", "when": "When the page opens flat, to compare five headlines with a subhead" },
+        { "ref": "library:leo-burnett", "type": "mind", "use": "think", "when": "When the story is about the founder and should be about what is special in the product" },
+        { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "When the story is drafted, to fix lines that sound machine made" }
+      ]
+    },
+    {
+      "id": "faq-and-captions",
+      "task": "Turn shopper questions into a product FAQ and image captions",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:buyer-doubt-gap-finder", "type": "prompt", "use": "brief", "when": "When you have customer questions, to see which ones the page does not answer" },
+        { "ref": "kit:prompts/shopper-questions-to-faq", "use": "build", "when": "When the same questions keep coming, to answer them on the page and beside the photos" },
+        { "ref": "library:product-gallery-answers", "type": "workflow", "use": "build", "when": "When the gallery should answer questions, to review each photo and plan what it must show" },
+        { "ref": "library:faq-page-from-questions-writer", "type": "prompt", "use": "build", "when": "When the questions are store-wide and belong on one FAQ page" },
+        { "ref": "library:claim-and-proof-matcher", "type": "skill", "use": "check", "when": "When answers are drafted, to make sure each rests on a fact you hold" }
+      ]
+    },
+    {
+      "id": "catalogue-cleanup",
+      "task": "Audit catalogue copy and list the fixes",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/catalogue-copy-refresh", "use": "brief", "when": "Monthly or quarterly, to run the refresh in order across the catalogue" },
+        { "ref": "kit:skills/catalogue-copy-cleanup", "use": "build", "when": "When you have the export, to find duplicates, supplier text, missing fields and mixed units" },
+        { "ref": "library:thin-page-finder", "type": "skill", "use": "build", "when": "When the store is connected, to list pages that are empty, short or missing search fields" },
+        { "ref": "library:monthly-catalogue-clean-up-keeper", "type": "agent", "use": "check", "when": "Each month, to catch new data faults such as clashing codes and hidden products" }
+      ]
+    },
+    {
+      "id": "claims-check",
+      "task": "Check claims against the label and the proof",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/claims-and-label-check", "use": "check", "when": "Before copy ships, to check origin, material, green, health, allergen and price claims" },
+        { "ref": "library:claim-and-proof-matcher", "type": "skill", "use": "check", "when": "When the client has evidence on file, to see which claims go too far" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When there is no proof file, to sort each claim as fine, needs proof or cut" },
+        { "ref": "library:monthly-review-proof-keeper", "type": "agent", "use": "check", "when": "When pages quote reviews, to keep approved quotes checked and linked to evidence" }
+      ]
+    },
+    {
+      "id": "product-page-search-plan",
+      "task": "Plan search copy, keywords and markup for product pages",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:store-keyword-map-builder", "type": "skill", "use": "brief", "when": "Before writing, to give each page one topic so pages do not compete" },
+        { "ref": "library:product-page-seo-builder", "type": "skill", "use": "build", "when": "When one product targets one term and needs layout, copy, image names and markup" },
+        { "ref": "library:schema-markup-writer", "type": "skill", "use": "build", "when": "When the page needs product markup ready to paste for rich results" }
+      ]
+    },
+    {
+      "id": "ai-ready-pages",
+      "task": "Make product pages easy for AI shopping tools to read",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:shopper-question-and-fan-out-mapper", "type": "skill", "use": "brief", "when": "Before editing, to list the questions shoppers ask AI about products like these" },
+        { "ref": "library:ai-ready-product-page-editor", "type": "skill", "use": "build", "when": "When a page needs clear facts, a spec table and FAQs that AI tools can quote" },
+        { "ref": "library:ai-shopper-store-scorecard", "type": "skill", "use": "check", "when": "When the store is live, to score what AI shopping tools can and cannot see" }
+      ]
+    },
+    {
+      "id": "product-page-review",
+      "task": "Review a product page and rank the fixes",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:product-page-auditor", "type": "skill", "use": "check", "when": "When the client sends a live page, to get ranked changes to copy, proof, buttons and price" },
+        { "ref": "library:product-page-section-planner", "type": "skill", "use": "build", "when": "When the page order is wrong, to plan the sections from the buyers' doubts" },
+        { "ref": "library:slippery-slide-copy-checker", "type": "skill", "use": "check", "when": "When the copy loses readers, to mark each line for whether it pulls them on" }
+      ]
+    },
+    {
+      "id": "reviews-to-copy",
+      "task": "Mine reviews for buyer words and proof",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:product-review-mining", "type": "workflow", "use": "build", "when": "When you have reviews or a manual, to sort its own phrases for headlines and proof" },
+        { "ref": "library:customer-buying-reasons-finder", "type": "skill", "use": "build", "when": "When you want the reasons people bought, in their exact words, ranked" },
+        { "ref": "library:store-social-proof-placer", "type": "skill", "use": "build", "when": "When you have the quotes, to decide which proof to show, from whom and where" }
+      ]
+    },
+    {
+      "id": "policy-and-help-copy",
+      "task": "Write shipping, returns and care copy in plain words",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:store-policy-cleaner", "type": "skill", "use": "build", "when": "When shipping, returns and privacy pages need clean, plain versions" },
+        { "ref": "library:product-how-to-guide-writer", "type": "skill", "use": "build", "when": "When a product needs a short care or how-to-use guide in numbered steps" },
+        { "ref": "library:store-policy-checker", "type": "skill", "use": "check", "when": "Before publishing, to find gaps, clashes and unclear wording in the policies" }
+      ]
+    },
+    {
+      "id": "sale-wording",
+      "task": "Word a sale, price cut or deadline honestly",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:discount-wording-planner", "type": "skill", "use": "build", "when": "When a discount is planned, to choose percent or amount and the banner words" },
+        { "ref": "library:sale-price-wording-picker", "type": "prompt", "use": "explore", "when": "When you have the full and sale price, to compare ways to show the saving" },
+        { "ref": "library:discount-and-price-change-checker", "type": "agent", "use": "check", "when": "Before the sale goes live, to check the discount against margin and the rules" }
+      ]
+    },
+    {
+      "id": "launch-emails",
+      "task": "Write launch or seasonal emails for new products",
+      "kind": "email",
+      "items": [
+        { "ref": "library:campaign-email-writer", "type": "skill", "use": "build", "when": "When a new range or season needs email copy by block from the product facts" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "Before sending, to compare subject lines from several angles" },
+        { "ref": "library:email-send-readiness-scorer", "type": "prompt", "use": "check", "when": "When the email is drafted, to get cuts and a ship or fix score" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any work for a store with a live site, to capture its voice, facts and prices" },
+    { "ref": "library:brand-voice-editor", "type": "skill", "use": "check", "when": "When a batch is drafted, to fix off-brand words without touching the claims" },
+    { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "Before delivery, to fix lines that read as machine written" },
+    { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "Last step before upload, to catch slips with a log of every change" }
+  ],
+  "helpers": [
+    { "role": "shopify-specialist", "when": "When copy must be loaded into the store, or themes, fields and feeds need set-up" },
+    { "role": "amazon-marketplace-manager", "when": "When the Amazon job goes past the listing into keywords, ads and account health" },
+    { "role": "etsy-shop-manager", "when": "When the Etsy job needs shop set-up, tags research and pricing as well as copy" },
+    { "role": "seo-specialist", "when": "When the catalogue needs keyword research or a technical search audit first" },
+    { "role": "email-marketing-specialist", "when": "When order and launch emails need flows, timing and list rules built" },
+    { "role": "product-photographer", "when": "When the gallery needs new images to answer shopper questions" }
+  ],
+  "gaps": [
+    "No library item writes food copy from a label: tasting notes, allergen wording and storage lines rest on the kit alone",
+    "No library item makes and compares title options for each surface; title tools give one answer",
+    "No library item writes an Etsy listing from scratch; the scorer only improves one that exists",
+    "No library item checks environmental or origin claims against consumer rules",
+    "No library item compares near-identical products and names what sets each apart",
+    "No library item writes a size guide or care label copy",
+    "No library item writes transactional order and dispatch emails; the nearest ones plan flows and timing",
+    "No library item turns shopper questions into photo captions; the gallery workflow plans images, not words",
+    "No library item finds duplicate or supplier-pasted descriptions across a catalogue export"
+  ]
+}

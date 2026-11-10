@@ -1,0 +1,297 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "advertising-copywriter",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "radio-ad",
+      "task": "Write a radio or streaming audio ad timed to the second",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:workflows/campaign-copy-brief-to-air", "use": "brief", "when": "When air time is booked and you need the steps from brief to approved script in order" },
+        { "ref": "kit:skills/radio-and-podcast-script", "use": "build", "when": "When you need a 15, 30 or 60 second script with sound cues, voice notes and legal lines" },
+        { "ref": "library:ad-opening-line-batch-writer", "type": "prompt", "use": "explore", "when": "Before you pick an opening, to get ten different first lines, each with the line that follows" },
+        { "ref": "library:jerry-seinfeld", "type": "mind", "use": "think", "when": "When a funny spot is nearly there and every spare word has to go" },
+        { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "When the script is drafted, to find every line that trips the tongue and fix it" }
+      ]
+    },
+    {
+      "id": "podcast-host-read",
+      "task": "Write a podcast host-read ad",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:buyer-brief-writer", "type": "skill", "use": "brief", "when": "Before writing, to put the listener's situation and doubts in their own words" },
+        { "ref": "kit:prompts/podcast-host-read", "use": "build", "when": "When a host will read the ad and needs talking points, must-say lines and a loose script" },
+        { "ref": "library:ad-opening-line-batch-writer", "type": "prompt", "use": "explore", "when": "When the read needs a way in, to get ten openings the host could say naturally" },
+        { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "Before sending to the host, to catch lines that sound written, not spoken" },
+        { "ref": "kit:prompts/ad-standards-claim-check", "use": "check", "when": "Before the sponsor signs off, to catch claims the host should not make" }
+      ]
+    },
+    {
+      "id": "print-flyer-poster",
+      "task": "Write copy for a flyer or poster",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:one-symbol-concept-finder", "type": "skill", "use": "brief", "when": "Before any words, to cut the job to one idea, one feeling and one thing to show" },
+        { "ref": "kit:skills/print-and-outdoor-copy", "use": "build", "when": "When you know the size and where it will be seen and need the copy written to fit" },
+        { "ref": "library:typed-headline-batch-writer", "type": "skill", "use": "explore", "when": "When you need twenty or more headlines sorted by type to choose from" },
+        { "ref": "library:make-a-readable-event-poster", "type": "workflow", "use": "build", "when": "When it is an event poster and you want a guided run to checked text and a layout" },
+        { "ref": "library:headline-cover-test-ranker", "type": "skill", "use": "check", "when": "When you have a long list of headlines, to score each read alone and keep the best three" },
+        { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When the layout is drafted, to see where the eye lands first and what to cut" }
+      ]
+    },
+    {
+      "id": "brochure",
+      "task": "Write a tri-fold or multi-page brochure",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:selling-points-writer", "type": "skill", "use": "brief", "when": "Before writing panels, to put the selling points in the order a buyer needs them" },
+        { "ref": "kit:skills/print-and-outdoor-copy", "use": "build", "when": "When you need copy written panel by panel to the fold and the word count" },
+        { "ref": "library:typed-headline-batch-writer", "type": "skill", "use": "explore", "when": "When the cover panel needs several headline angles to choose from" },
+        { "ref": "library:overstuffed-draft-cutter", "type": "skill", "use": "check", "when": "When the client's draft is a wall of text, to name the main idea and cut what fights it" },
+        { "ref": "library:marketing-copy-sweeper", "type": "skill", "use": "check", "when": "When the brochure is drafted, to tighten it in passes for clarity, proof and the ask" }
+      ]
+    },
+    {
+      "id": "billboard-outdoor",
+      "task": "Write a billboard, bus shelter or vehicle line",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:one-symbol-concept-finder", "type": "skill", "use": "brief", "when": "Before writing, to find the one thought a driver can take in at a glance" },
+        { "ref": "kit:skills/print-and-outdoor-copy", "use": "build", "when": "When you need a line of seven words or fewer written for the viewing distance" },
+        { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When you need five short lines, each from a different angle, with word counts" },
+        { "ref": "library:george-lois", "type": "mind", "use": "think", "when": "When the line is safe and forgettable and needs one bold picture and words joined" },
+        { "ref": "kit:prompts/outdoor-glance-test", "use": "check", "when": "Before it goes to print or live, to test whether it reads in two seconds" }
+      ]
+    },
+    {
+      "id": "press-ad",
+      "task": "Write a newspaper or magazine ad",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When you need five headlines from different angles, with a fair plan to test them" },
+        { "ref": "library:fact-based-ad-copy-writer", "type": "prompt", "use": "build", "when": "When the ad must persuade with checked facts and not adjectives" },
+        { "ref": "library:david-ogilvy", "type": "mind", "use": "think", "when": "When the body copy is vague and needs one clear promise and facts that back it" },
+        { "ref": "library:headline-promise-checker", "type": "skill", "use": "check", "when": "When the headline is chosen, to check it picks the right reader and promises a reward" },
+        { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When the ad is laid out, to check the path from picture to headline to coupon" }
+      ]
+    },
+    {
+      "id": "direct-mail-plan",
+      "task": "Plan a direct mail campaign and its break-even",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/direct-mail-test-cycle", "use": "brief", "when": "When a mail drop is planned and you need the cycle from list and offer to readout" },
+        { "ref": "kit:skills/direct-mail-campaign", "use": "build", "when": "When you need the break-even response rate, list rules, offer and tracking planned" },
+        { "ref": "library:small-test-and-rollout-planner", "type": "skill", "use": "build", "when": "When the client wants to mail everyone at once, to set a small test and a rollout rule" },
+        { "ref": "library:programmatic-direct-mail-planner", "type": "skill", "use": "build", "when": "When an online brand mails its own customers after set triggers like a lapsed order" },
+        { "ref": "library:make-your-offer-harder-to-refuse", "type": "workflow", "use": "explore", "when": "When the offer is weak, to add honest limits, a deadline, a bonus and a guarantee" },
+        { "ref": "library:drayton-bird", "type": "mind", "use": "think", "when": "When the plan is all creative and no numbers, to bring it back to offer, list and test" },
+        { "ref": "library:offer-checklist-reviewer", "type": "skill", "use": "check", "when": "Before printing, to score the offer, price and guarantee and get three changes to test" }
+      ]
+    },
+    {
+      "id": "direct-mail-copy",
+      "task": "Write a postcard or sales letter in three versions",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:sales-letter-outline-planner", "type": "skill", "use": "brief", "when": "When it is a letter, to outline it from the research with the proof each part needs" },
+        { "ref": "kit:skills/direct-mail-campaign", "use": "build", "when": "When you need postcard or letter copy in three versions, each with its own code" },
+        { "ref": "library:typed-headline-batch-writer", "type": "skill", "use": "explore", "when": "When each version needs a different kind of headline: self-interest, news or curiosity" },
+        { "ref": "library:gary-halbert", "type": "mind", "use": "think", "when": "When the letter reads like a company wrote it and should sound like one person" },
+        { "ref": "library:coupon-and-form-fixer", "type": "skill", "use": "build", "when": "When the piece has a reply coupon or form, to make it sell the offer and ask less" },
+        { "ref": "library:direct-mail-package-reviewer", "type": "skill", "use": "check", "when": "When envelope, letter and offer are drafted, to review the whole package before print" }
+      ]
+    },
+    {
+      "id": "mail-tracking-readout",
+      "task": "Set up tracking per version and read the response counts",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/direct-mail-test-cycle", "use": "build", "when": "When responses are in and you need to log them, compare versions and plan the next drop" },
+        { "ref": "library:campaign-link-tracker", "type": "skill", "use": "build", "when": "When each version needs its own tagged web link or QR code address" },
+        { "ref": "library:split-run-test-planner", "type": "skill", "use": "build", "when": "When two versions will be mailed, to change one thing only and key each one" },
+        { "ref": "library:split-run-result-reader", "type": "skill", "use": "check", "when": "When you have counts for two versions, to see the gap and whether luck explains it" }
+      ]
+    },
+    {
+      "id": "jingle",
+      "task": "Write jingle lyrics with a melody guide",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/jingle-and-sonic-logo-brief", "use": "build", "when": "When you need original lyrics with syllable counts, rhyme and 15, 30 and 60 second cuts" },
+        { "ref": "library:message-stickiness-rewriter", "type": "prompt", "use": "explore", "when": "When the hook line is flat, to get three versions people are more likely to remember" },
+        { "ref": "library:jingle-video-ad-script-writer", "type": "skill", "use": "build", "when": "When the jingle will run under a short video and needs a script and a music brief" },
+        { "ref": "library:suno-song-and-music-bed-prompt-writer", "type": "skill", "use": "build", "when": "When the client wants to hear a rough demo, to write the music tool prompt" },
+        { "ref": "library:suno", "type": "tool", "use": "explore", "when": "When you want two or three rough sung demos so the client can compare hooks" },
+        { "ref": "library:campaign-fame-checker", "type": "skill", "use": "check", "when": "When the jingle is drafted, to score how well the tune and line could become known" }
+      ]
+    },
+    {
+      "id": "sonic-logo-and-music-brief",
+      "task": "Brief a sonic logo, podcast intro or brand music",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/jingle-and-sonic-logo-brief", "use": "build", "when": "When a composer needs a written brief for a short sound mark, intro or outro" },
+        { "ref": "library:suno-song-and-music-bed-prompt-writer", "type": "skill", "use": "build", "when": "When you need a music bed described by genre, tempo and instruments" },
+        { "ref": "library:music-composer", "type": "skill", "use": "explore", "when": "When the client cannot picture the sound, to make short sample tracks to react to" }
+      ]
+    },
+    {
+      "id": "voiceover-script",
+      "task": "Write a voiceover script for a video",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/radio-and-podcast-script", "use": "build", "when": "When the words are heard, not read, and must fit an exact running time" },
+        { "ref": "library:video-ad-script-type-picker", "type": "skill", "use": "explore", "when": "Before drafting, to compare four kinds of video script with an opening for each" },
+        { "ref": "library:video-ad-script-line-checker", "type": "skill", "use": "check", "when": "When the script is drafted, to find each weak line and get a fix" },
+        { "ref": "library:elevenlabs", "type": "tool", "use": "build", "when": "When the client needs a finished voice read from the approved script" }
+      ]
+    },
+    {
+      "id": "voiceover-other-language",
+      "task": "Adapt a script or ad for another language",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:translator", "type": "skill", "use": "build", "when": "When the script must read naturally in the new language with local tone" },
+        { "ref": "library:make-a-voiceover-and-ship-it-in-other-languages", "type": "workflow", "use": "build", "when": "When one approved script needs spoken versions and subtitles in several languages" }
+      ]
+    },
+    {
+      "id": "book-blurb",
+      "task": "Write a back cover blurb and store description",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/book-blurb-and-store-description", "use": "build", "when": "When you need blurb, store description, taglines and bios with no spoilers" },
+        { "ref": "library:ad-opening-line-batch-writer", "type": "prompt", "use": "explore", "when": "When the first line of the blurb is flat, to get ten different ways in" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "Before publishing, to catch praise or claims about the book that nobody can back" }
+      ]
+    },
+    {
+      "id": "author-bio-series-page",
+      "task": "Write an author bio in three lengths or a series page",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/book-blurb-and-store-description", "use": "build", "when": "When the author needs short, medium and long bios that match the book's tone" },
+        { "ref": "library:witty-line-punch-up", "type": "skill", "use": "explore", "when": "When the bio is a dry list, to add one or two sharp, true lines" },
+        { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "Before it goes on the cover or store page, to fix slips and keep the author's voice" }
+      ]
+    },
+    {
+      "id": "book-launch-outreach",
+      "task": "Write launch emails and pitches to reviewers and podcasts",
+      "kind": "email",
+      "items": [
+        { "ref": "library:launch-email-sequence-planner", "type": "skill", "use": "brief", "when": "When the author has a reader list and a launch date and needs the emails planned" },
+        { "ref": "library:email-sequence-writer", "type": "skill", "use": "build", "when": "When the plan is agreed and you need each email with subject lines and timing" },
+        { "ref": "library:press-outreach-planner", "type": "skill", "use": "build", "when": "When the book needs a list of reviewers and shows, pitch emails and a press kit outline" },
+        { "ref": "library:stranger-first-message-writer", "type": "skill", "use": "explore", "when": "When a pitch goes to someone who has never heard of the author and must land fast" },
+        { "ref": "library:ad-and-page-policy-checker", "type": "skill", "use": "check", "when": "Before sending, to flag lines in the emails that could mislead or break the rules" }
+      ]
+    },
+    {
+      "id": "tagline",
+      "task": "Write and test a tagline or slogan",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:brand-messaging-builder", "type": "skill", "use": "build", "when": "When the brand has no set messages and needs a tagline with proof points behind it" },
+        { "ref": "library:message-stickiness-rewriter", "type": "prompt", "use": "explore", "when": "When you have a line that is right but dull, to get three versions that stick" },
+        { "ref": "library:dan-wieden", "type": "mind", "use": "think", "when": "When every line sounds like the category and you need a human angle" },
+        { "ref": "library:tagline-tester", "type": "skill", "use": "check", "when": "When you have candidates, to score each on ten tests and get sharper versions" },
+        { "ref": "library:usp-claim-checker", "type": "skill", "use": "check", "when": "When the line makes a claim, to check it is true, specific and not a rival's too" }
+      ]
+    },
+    {
+      "id": "search-social-lines",
+      "task": "Write search and social ad lines to the character limits",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:prompts/search-and-social-ad-lines", "use": "build", "when": "When you need Google headlines and descriptions or Meta text that fit the limits" },
+        { "ref": "library:ad-angle-multiplier", "type": "skill", "use": "explore", "when": "When one idea works and you need ten or more different angles with hooks" },
+        { "ref": "library:meta-ads-compliance-checker", "type": "skill", "use": "check", "when": "Before launch, to check Facebook or Instagram ads against the platform's ad rules" }
+      ]
+    },
+    {
+      "id": "claim-check",
+      "task": "Check claims and wording before an ad goes out",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/ad-standards-claim-check", "use": "check", "when": "Before any ad goes out, to catch wording that could mislead or be rejected" },
+        { "ref": "library:ad-claim-proof-gap-finder", "type": "prompt", "use": "check", "when": "When the client has proof on file, to pair every claim with it and show the gaps" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When there is no proof file yet, to sort each claim as fine, needs proof or cut" },
+        { "ref": "library:agency-support-legal-compliance-checker", "type": "agent", "use": "check", "when": "When a prize draw, discount or promotion must follow the law where it runs" }
+      ]
+    },
+    {
+      "id": "campaign-concept",
+      "task": "Find the one campaign idea and write the copy brief",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:workflows/campaign-copy-brief-to-air", "use": "brief", "when": "When one campaign runs across print, outdoor, audio or mail and needs one plan" },
+        { "ref": "library:marketing-brief-writer", "type": "skill", "use": "build", "when": "When notes are scattered, to get a one-page brief with the one thing to say" },
+        { "ref": "library:selling-proposition-finder", "type": "skill", "use": "explore", "when": "When the brand has no clear claim, to get three to five one-sentence claims to pick from" },
+        { "ref": "library:seven-bucket-ad-concept-brainstormer", "type": "skill", "use": "explore", "when": "When you need concepts from seven different groups, with the best eight ranked" },
+        { "ref": "library:campaign-fame-checker", "type": "skill", "use": "check", "when": "When the idea is chosen, to score how well it can get noticed and remembered" }
+      ]
+    },
+    {
+      "id": "print-piece-review",
+      "task": "Review a current print piece and rank the fixes",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When the client sends a layout, to see where the eye goes and what is in the way" },
+        { "ref": "library:sales-copy-reviewer", "type": "skill", "use": "check", "when": "When the copy must bring a response, to get a critique and fixes for the weakest parts" },
+        { "ref": "library:headline-promise-checker", "type": "skill", "use": "check", "when": "When the headline is the likely problem, to test who it picks and what it promises" }
+      ]
+    },
+    {
+      "id": "local-promotion-offer",
+      "task": "Plan the offer and wording for a local promotion",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:pick-a-sale-offer-check-profit-set-an-honest-deadline", "type": "workflow", "use": "build", "when": "When a sale is planned, to pick an offer the margins allow and a true deadline" },
+        { "ref": "library:promotion-idea-planner", "type": "skill", "use": "explore", "when": "When the client wants more than a price cut: a gift, bundle or pre-order offer" },
+        { "ref": "library:discount-wording-planner", "type": "skill", "use": "build", "when": "When you must choose percent or amount off and the words for the sign or flyer" },
+        { "ref": "library:traction-offline-ads", "type": "skill", "use": "brief", "when": "When choosing between print, radio and outdoor, to plan one small test with its costs" }
+      ]
+    },
+    {
+      "id": "sales-leave-behind",
+      "task": "Write a trade show leave-behind or one-page sales sheet",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:selling-points-writer", "type": "skill", "use": "brief", "when": "Before writing, to rank the features as selling points and flag claims needing proof" },
+        { "ref": "library:sales-collateral-writer", "type": "skill", "use": "build", "when": "When a buyer or deal needs a one-pager, objection sheet or short pitch outline" },
+        { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When the sheet needs a headline, to compare five angles side by side" },
+        { "ref": "library:overstuffed-draft-cutter", "type": "skill", "use": "check", "when": "When the sheet tries to say everything, to cut it to one idea a stand visitor keeps" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any work for a client with a live site, to capture their voice, facts and prices" },
+    { "ref": "library:brand-voice-editor", "type": "skill", "use": "check", "when": "When a draft is done, to fix off-brand words without touching the claims" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When copy states facts or numbers, to check each against a trusted source" },
+    { "ref": "library:ai-default-patterns", "type": "skill", "use": "check", "when": "Before delivery, to catch stock phrases that make copy read as machine written" },
+    { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "Last step before sign-off, to catch spelling and grammar slips with a log of changes" }
+  ],
+  "helpers": [
+    { "role": "graphic-designer", "when": "When the copy needs a print layout, a poster design or printer-ready files" },
+    { "role": "translator", "when": "When an ad or voiceover must work in another language and market" },
+    { "role": "conversion-copywriter", "when": "When the ad sends people to a landing page that must carry on the same promise" },
+    { "role": "marketing-analyst", "when": "When response counts across several drops or channels need a proper readout" },
+    { "role": "pr-specialist", "when": "When a book or campaign needs press coverage, not only pitch emails" },
+    { "role": "podcast-producer", "when": "When a host read, intro or audio ad needs recording, editing and show planning" }
+  ],
+  "gaps": [
+    "No library item writes radio or audio-only ad scripts; apart from the kit skill, every script writer is for video",
+    "No library item makes or compares billboard and outdoor lines; the options come from general headline writers",
+    "No library item writes book blurbs, author bios or series pages, or checks a blurb for spoilers and genre fit",
+    "No library item plans a brochure panel by panel for a given fold",
+    "No library item checks jingle lyrics for singability, stress and rhyme, or for likeness to an existing tune",
+    "No library item adapts an ad for another language and re-times it; the translator skill does not check running time",
+    "No library item writes shelf signs or point-of-sale copy",
+    "No library item sets up phone call tracking or unique codes for offline ads; the link tracker covers web links only",
+    "No library item works out a break-even response rate for mail; the break-even tools are built for online ad spend",
+    "The sonic logo brief has no check item; nothing in the library reviews a music brief before it goes to a composer"
+  ]
+}

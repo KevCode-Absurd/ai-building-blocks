@@ -1,0 +1,293 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "data-analyst",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "profile-export",
+      "task": "Profile an export before anyone trusts it",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/profile-an-export", "use": "check", "when": "When a CSV or Excel export arrives and you need to know what is wrong with it first" },
+        { "ref": "library:new-dataset-explorer", "type": "skill", "use": "brief", "when": "When the data is new to you, to map its structure, spread, links and odd spots" },
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "When you need gaps, duplicates and odd values listed with the rules that would catch them" }
+      ]
+    },
+    {
+      "id": "clean-up-rules",
+      "task": "Write clean-up rules for a messy dataset",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/data-profiling-and-clean-up", "use": "build", "when": "When dates, names, phones, categories and duplicates need numbered rules and steps" },
+        { "ref": "library:messy-spreadsheet-cleaner", "type": "skill", "use": "build", "when": "When the mess is spacing, numbers stored as text, mixed dates and repeated rows" },
+        { "ref": "library:agency-engineering-ai-data-remediation-engineer", "type": "agent", "use": "build", "when": "When thousands of rows need a few tested fix rules, a change log and a risky-row list" },
+        { "ref": "library:data-file-clean-up-loop", "type": "agent", "use": "check", "when": "When the file must be fixed and rechecked until it passes, with the rules saved" }
+      ]
+    },
+    {
+      "id": "merge-files",
+      "task": "Merge several exports or reports into one table",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/data-profiling-and-clean-up", "use": "build", "when": "When several files with different columns must become one table with a key" },
+        { "ref": "library:excel-table-join-reconciler", "type": "skill", "use": "check", "when": "After the join, to explain unmatched rows and duplicate keys before totals are used" }
+      ]
+    },
+    {
+      "id": "monthly-recipe",
+      "task": "Write a refreshable recipe for a monthly export",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/power-query-monthly-recipe", "use": "build", "when": "When someone fixes the same export by hand each month and wants a refresh instead" },
+        { "ref": "kit:skills/data-profiling-and-clean-up", "use": "brief", "when": "Before the recipe, to write the clean-up rules it must apply" },
+        { "ref": "library:task-automation-builder", "type": "skill", "use": "explore", "when": "When Power Query does not fit, to try a small script or schedule that does the same job" },
+        { "ref": "library:repeat-task-step-guide-writer", "type": "skill", "use": "build", "when": "When the steps stay manual, to write exact steps, fixes if it fails and how to undo" },
+        { "ref": "library:spreadsheet-formula-auditor", "type": "skill", "use": "check", "when": "When the recipe feeds formulas, to find errors and broken links after a refresh" }
+      ]
+    },
+    {
+      "id": "insight-brief",
+      "task": "Turn a clean data file into a checked insight brief",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/insight-brief-from-data", "use": "build", "when": "When the file is clean and you need the question, a short answer and up to five findings" },
+        { "ref": "library:turn-a-raw-dataset-into-a-checked-brief-of-top-insights", "type": "workflow", "use": "build", "when": "When you want a guided run from raw file and question to a ranked, checked brief" },
+        { "ref": "library:data-analyst", "type": "skill", "use": "build", "when": "When the question needs trends, tests and correlations worked from the data" },
+        { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before the brief is shared, to check the method, the maths and any bias" },
+        { "ref": "library:rosalind-franklin", "type": "mind", "use": "think", "when": "When a finding is exciting, to match the claim to the evidence and run a second check" }
+      ]
+    },
+    {
+      "id": "question-to-decision",
+      "task": "Take a business question through to a decision",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/question-to-decision", "use": "build", "when": "When an owner or committee asks a question the data might answer" },
+        { "ref": "kit:prompts/is-this-data-enough", "use": "check", "when": "Before any analysis, to see whether the data can support the answer needed" },
+        { "ref": "library:decision-evidence-bar-setter", "type": "skill", "use": "brief", "when": "When nobody has said how sure they must be, to set how much evidence is enough" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When the answer must fit one page with the decision first" }
+      ]
+    },
+    {
+      "id": "segment-cohort",
+      "task": "Compare customer segments or cohorts",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/insight-brief-from-data", "use": "build", "when": "When groups must be compared fairly, with numbers, a caveat and an action for each" },
+        { "ref": "library:customer-segment-builder", "type": "skill", "use": "build", "when": "When customers should be scored on recency, frequency and spend and then grouped" },
+        { "ref": "library:customer-cohort-reader", "type": "skill", "use": "build", "when": "When you need repeat rate and revenue for each first-purchase month" },
+        { "ref": "library:retention-heatmap-maker", "type": "skill", "use": "build", "when": "When retention by start month should be shown as a colour grid with a plain reading" },
+        { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before groups are compared in a report, to check the group sizes and the maths" }
+      ]
+    },
+    {
+      "id": "sales-forecast",
+      "task": "Forecast monthly sales from the business's own history",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/forecast-from-history", "use": "build", "when": "When you have history and need the simplest method that fits, ranges and update formulas" },
+        { "ref": "library:trend-and-forecast-analyst", "type": "skill", "use": "brief", "when": "Before choosing a method, to find trend, season and odd spikes in the history" },
+        { "ref": "library:quick-time-series-forecaster", "type": "skill", "use": "explore", "when": "When you want a second forecast with ranges and a test on held-back months" },
+        { "ref": "library:regression-and-forecast-modeller", "type": "skill", "use": "build", "when": "When sales depend on known drivers and a fitted model with checks is needed" },
+        { "ref": "library:philip-tetlock", "type": "mind", "use": "think", "when": "When a forecast is one confident number, to add base rates, a range and a date to score it" },
+        { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before the forecast goes out, or to review last year's against what really happened" }
+      ]
+    },
+    {
+      "id": "weekly-ops-forecast",
+      "task": "Forecast weekly covers, bookings or orders",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/forecast-from-history", "use": "build", "when": "When a kitchen, clinic or shop needs next week's numbers by day with a range" },
+        { "ref": "library:plan-what-to-make-each-week-from-your-past-sales", "type": "workflow", "use": "build", "when": "When the forecast must turn into a weekly make plan within capacity" },
+        { "ref": "library:shift-schedule-builder", "type": "skill", "use": "build", "when": "When the forecast should set how many staff cover each busy hour" },
+        { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before staff or stock are planned on it, to check the method and the range" }
+      ]
+    },
+    {
+      "id": "pipeline-forecast",
+      "task": "Forecast from open deals and split a target by month",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:bookings-forecast-builder", "type": "skill", "use": "build", "when": "When you have a pipeline export and need commit, best case and pipeline-only views" },
+        { "ref": "kit:skills/forecast-from-history", "use": "build", "when": "When next year's target must be split by month using the real seasonal pattern" },
+        { "ref": "library:pipeline-and-forecast-checker", "type": "skill", "use": "check", "when": "When the forecast is drafted, to test pipeline cover and past forecast accuracy" }
+      ]
+    },
+    {
+      "id": "benchmark-gap",
+      "task": "Benchmark the client's numbers against public figures",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/benchmark-gap-table", "use": "build", "when": "When you have the client's numbers and published figures and need a fair gap table" },
+        { "ref": "library:financial-statement-analyst", "type": "skill", "use": "build", "when": "When the client wants a financial health and ratio sheet from their accounts" },
+        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a public figure will be quoted, to check it against its source first" },
+        { "ref": "library:hans-rosling", "type": "mind", "use": "think", "when": "When one gap looks dramatic, to compare spread, dates and proportions before judging" }
+      ]
+    },
+    {
+      "id": "survey-readout",
+      "task": "Write a survey read-out with honest caveats",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/survey-read-out", "use": "build", "when": "When a customer, parent, member or staff survey needs a fair summary for a meeting" },
+        { "ref": "library:prepare-a-survey-findings-briefing", "type": "workflow", "use": "build", "when": "When the read-out must become a briefing with a findings table and slide notes" },
+        { "ref": "library:research-theme-synthesizer", "type": "skill", "use": "build", "when": "When open comments need themes ranked by how often they come up, with quotes" },
+        { "ref": "library:survey-answer-truth-checker", "type": "prompt", "use": "check", "when": "When some answers may flatter, to score how far each question can be trusted" },
+        { "ref": "library:david-spiegelhalter", "type": "mind", "use": "think", "when": "When a small sample is quoted as fact, to say what is still unknown in plain words" }
+      ]
+    },
+    {
+      "id": "monthly-refresh",
+      "task": "Refresh a monthly report when the new export lands",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/monthly-report-refresh", "use": "build", "when": "Each month, to run the same checks, refresh and comment steps in order" },
+        { "ref": "library:excel-monthly-rollup-builder", "type": "skill", "use": "build", "when": "When dated records must roll up to monthly counts and totals you can trace" },
+        { "ref": "library:variance-commentary", "type": "skill", "use": "build", "when": "When each line that moved past a limit needs a written reason" },
+        { "ref": "library:excel-pivot-refresh-planner", "type": "skill", "use": "check", "when": "When the workbook has pivots, to set a safe refresh order and find stale ones" },
+        { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before the report is sent, to catch wrong totals and broken formulas" }
+      ]
+    },
+    {
+      "id": "club-report",
+      "task": "Write a season, term or year report for a club or charity",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/insight-brief-from-data", "use": "build", "when": "When registers and results must become a short report with findings and actions" },
+        { "ref": "library:explain-appointment-no-show-patterns", "type": "workflow", "use": "build", "when": "When attendance and no-shows need a reconciled table and the patterns behind them" },
+        { "ref": "library:data-story-writer", "type": "skill", "use": "explore", "when": "When the report reads as a table, to try it as a story with the point and proof" },
+        { "ref": "library:nonprofit-annual-report-planner", "type": "skill", "use": "check", "when": "Before the report goes to print or funders, to check facts, numbers and names" }
+      ]
+    },
+    {
+      "id": "donor-analysis",
+      "task": "Report donor retention and segment the next appeal",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/insight-brief-from-data", "use": "build", "when": "When gift history must show who stayed, who lapsed and what each appeal raised" },
+        { "ref": "library:customer-segment-builder", "type": "skill", "use": "build", "when": "When donors should be grouped by how recently, how often and how much they gave" },
+        { "ref": "library:retention-heatmap-maker", "type": "skill", "use": "build", "when": "When retention by first-gift year should be shown as a grid" },
+        { "ref": "library:nonprofit-annual-appeal-planner", "type": "skill", "use": "build", "when": "When segments are set and the appeal needs gift amounts and measures to track" },
+        { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before trustees see it, to check donor counts, periods and any double counting" }
+      ]
+    },
+    {
+      "id": "register-tracker",
+      "task": "Design a register or tracker for members and attendance",
+      "kind": "other",
+      "items": [
+        { "ref": "library:excel-input-form-builder", "type": "skill", "use": "build", "when": "When volunteers will enter records and need dropdowns and checks on each cell" },
+        { "ref": "library:prepare-an-excel-input-workbook-for-handover", "type": "workflow", "use": "check", "when": "When the tracker will be run by someone else and needs a check and a guide" }
+      ]
+    },
+    {
+      "id": "report-charts",
+      "task": "Make charts for a report or funder pack",
+      "kind": "other",
+      "items": [
+        { "ref": "library:data-chart-drawer", "type": "skill", "use": "build", "when": "When you have the data and need a clean chart of the right type" },
+        { "ref": "library:julius", "type": "tool", "use": "explore", "when": "When you want to try several chart types on the file quickly before choosing" },
+        { "ref": "library:agency-engineering-data-visualization-engineer", "type": "agent", "use": "check", "when": "When a chart is drafted, to check the type, axes and colours do not mislead" },
+        { "ref": "library:cole-nussbaumer-knaflic", "type": "mind", "use": "think", "when": "When a chart shows everything and the reader cannot see the point" }
+      ]
+    },
+    {
+      "id": "one-task-script",
+      "task": "Write a script or query for one data task",
+      "kind": "code",
+      "items": [
+        { "ref": "library:fast-data-table-analyst", "type": "skill", "use": "build", "when": "When the file is too big for a spreadsheet and you need code you can rerun" },
+        { "ref": "library:plain-words-sql-writer", "type": "skill", "use": "build", "when": "When the data sits in a database and the need can be said in plain words" },
+        { "ref": "library:sql-query-launch-reviewer", "type": "skill", "use": "check", "when": "Before a query's result is relied on, to find wrong-result risks and slow spots" }
+      ]
+    },
+    {
+      "id": "pipeline-win-loss",
+      "task": "Review a CRM pipeline or win-loss record",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:crm-hygiene-auditor", "type": "skill", "use": "check", "when": "Before any reading, to list missing fields, stale dates and stage mismatches" },
+        { "ref": "library:pipeline-stage-health-reviewer", "type": "skill", "use": "build", "when": "When you need coverage, ageing and conversion stage by stage" },
+        { "ref": "library:win-and-loss-pattern-finder", "type": "skill", "use": "build", "when": "When closed deals should show where and why the firm wins and loses" }
+      ]
+    },
+    {
+      "id": "pre-import-check",
+      "task": "Check a file before it is imported into another system",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/profile-an-export", "use": "check", "when": "When a file is about to be imported and must be profiled against the target's rules" },
+        { "ref": "library:column-mapping-document-writer", "type": "skill", "use": "build", "when": "When each source column needs a target column, a rule and any open gap written down" },
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "When rows that will fail or create duplicates must be found before the import" }
+      ]
+    },
+    {
+      "id": "metric-moved",
+      "task": "Find out why a number moved",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:metric-drop-investigator", "type": "skill", "use": "build", "when": "When a number moved and you must confirm it, split it by group and rank the drivers" },
+        { "ref": "library:numbers-drop-explainer", "type": "prompt", "use": "explore", "when": "When you only have before and after figures, to rank likely causes and what to check" },
+        { "ref": "library:metric-mismatch-tracer", "type": "skill", "use": "check", "when": "When the move may be a counting change, to find where two reports split" }
+      ]
+    },
+    {
+      "id": "product-sales-analysis",
+      "task": "Analyse product sales: margin, pairs and price",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:product-profit-analyst", "type": "skill", "use": "build", "when": "When you have revenue and cost by product and need each margin and the loss makers" },
+        { "ref": "library:bundle-pair-finder", "type": "skill", "use": "build", "when": "When order lines should show which products are bought together" },
+        { "ref": "library:price-test-planner", "type": "skill", "use": "explore", "when": "When the data suggests a price change, to set three cases and a test you can undo" },
+        { "ref": "library:excel-table-join-reconciler", "type": "skill", "use": "check", "when": "When sales and cost tables are joined, to find products that failed to match" }
+      ]
+    },
+    {
+      "id": "statistical-check",
+      "task": "Check whether a difference in the numbers is real",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/is-this-data-enough", "use": "check", "when": "Before testing, to see whether the sample can show the difference at all" },
+        { "ref": "library:statistical-test-picker", "type": "skill", "use": "build", "when": "When you need the right test, its assumption checks and the effect size" }
+      ]
+    },
+    {
+      "id": "explain-method",
+      "task": "Explain the method and its limits in plain words",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:method-explainer", "type": "skill", "use": "build", "when": "When readers ask how you did it, to write a plain section with the limits" },
+        { "ref": "library:data-jargon-translator", "type": "skill", "use": "build", "when": "When findings are full of analyst words and the reader is an owner or trustee" },
+        { "ref": "library:document-a-dataset-analysis-for-reproduction", "type": "workflow", "use": "build", "when": "When someone else must be able to repeat the analysis from your notes" },
+        { "ref": "library:tim-harford", "type": "mind", "use": "think", "when": "When a striking number is about to be shared, to say what it counts and what it leaves out" },
+        { "ref": "library:findings-and-guesses-separator", "type": "skill", "use": "check", "when": "Before the write-up goes out, to mark each line proven, likely or a guess" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:requirements-question-asker", "type": "skill", "use": "brief", "when": "Before any analysis, when the request does not say what decision the answer feeds" },
+    { "ref": "library:findings-and-guesses-separator", "type": "skill", "use": "check", "when": "Before any finding is sent, to separate what the data shows from what is assumed" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a report is sent, to catch typos and a measure named two ways" }
+  ],
+  "helpers": [
+    { "role": "data-quality-analyst", "when": "When the data needs a dictionary, weekly quality checks, a duplicate merge plan or a made-up test file" },
+    { "role": "bi-analyst", "when": "When the answer should live on as a dashboard or a regular KPI report" },
+    { "role": "data-visualisation-specialist", "when": "When charts need accessible colours, an infographic or a designed results deck" },
+    { "role": "data-scientist", "when": "When the question needs a formal test, an experiment design or a model review" },
+    { "role": "spreadsheet-specialist", "when": "When the fix is a rebuilt workbook with formulas, lookups or macros" },
+    { "role": "market-research-analyst", "when": "When a survey must be designed or outside market figures must be found and judged" }
+  ],
+  "gaps": [
+    "No library item writes Power Query steps or Google Sheets clean-up formulas; only the kit prompt covers refreshable recipes",
+    "No library item standardises dates, names, phone numbers and addresses by rule for a given country",
+    "No library item checks last year's sales forecast against actuals; the only backtest item is for cash forecasts",
+    "No library item splits an annual sales target by month from the seasonal pattern",
+    "No library item compares a firm's numbers with published benchmarks like for like, or finds trade body and official figures",
+    "No library item reports donor retention, lapsed donors or appeal results by segment and channel from a gift export",
+    "No library item analyses attendance and drop-out for a club, class or school term",
+    "No library item designs a member register or attendance tracker; only general Excel form builders exist",
+    "No library item builds a messy test file to prove a clean-up recipe works",
+    "No library item makes survey cross-tabs with small-base warnings or weighting"
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "website-designer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "site-build-sheet",
+      "task": "Plan the page list and section-by-section build sheet",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:message-first-website-guide", "type": "skill", "use": "brief", "when": "Before any layout, to settle what the business says before how the site looks" },
+        { "ref": "library:site-map-planner", "type": "skill", "use": "brief", "when": "When the page list is open, to get a page tree, menu, URLs and internal links" },
+        { "ref": "kit:skills/site-build-sheet", "use": "build", "when": "When a 5 to 10 page site needs each section planned in the builder's own block names" },
+        { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "Before you settle a page layout, to get three alternatives to the template's default" },
+        { "ref": "library:donald-miller", "type": "mind", "use": "think", "when": "When the home page talks about the firm and not the visitor's problem" },
+        { "ref": "library:click-choice-clarity-checker", "type": "skill", "use": "check", "when": "When the menu and buttons are drafted, to rate each label and rewrite the unclear ones" },
+        { "ref": "library:page-design-standards-checker", "type": "skill", "use": "check", "when": "When a page is laid out, to check hierarchy, spacing, contrast and the phone view" }
+      ]
+    },
+    {
+      "id": "page-copy",
+      "task": "Write the words for each section so they fit the blocks",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:customer-hero-message-writer", "type": "skill", "use": "brief", "when": "Before writing, to frame the message with the customer as the hero" },
+        { "ref": "kit:prompts/page-copy-for-blocks", "use": "build", "when": "When the build sheet is agreed and each headline, button and card needs words that fit" },
+        { "ref": "library:store-hero-section-writer", "type": "skill", "use": "explore", "when": "When the top of the home page is undecided, to compare five headlines with a subhead" },
+        { "ref": "library:page-copywriter", "type": "skill", "use": "build", "when": "When a whole page needs its headline, sections and calls to action drafted" },
+        { "ref": "library:faq-page-from-questions-writer", "type": "prompt", "use": "build", "when": "When the client has real customer questions and the site needs an FAQ page" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a line could be on any firm's site, to test it and get a true, picturable rewrite" }
+      ]
+    },
+    {
+      "id": "site-styles",
+      "task": "Set the site's fonts, colours and style settings",
+      "kind": "other",
+      "items": [
+        { "ref": "library:website-design-dna-extractor", "type": "skill", "use": "brief", "when": "When the client points to a site they like, to read its colours, fonts and layout rules" },
+        { "ref": "library:font-pair-shortlist-maker", "type": "prompt", "use": "explore", "when": "When there are no brand fonts, to compare three pairs with sizes and line spacing" },
+        { "ref": "library:mood-colour-palette-planner", "type": "skill", "use": "explore", "when": "When the brand has one colour or none, to get a small palette with one job per colour" },
+        { "ref": "library:brand-style-setup-wizard", "type": "skill", "use": "build", "when": "When the choices are made, to save colours, fonts and style once for every page" },
+        { "ref": "library:ellen-lupton", "type": "mind", "use": "think", "when": "When the site uses many sizes and weights and nothing leads the eye" },
+        { "ref": "library:colour-contrast-checker", "type": "skill", "use": "check", "when": "Before the styles are set in the builder, to test every text and background pair" }
+      ]
+    },
+    {
+      "id": "design-directions",
+      "task": "Show clearly different design directions for the site",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:design-style-analyst", "type": "skill", "use": "brief", "when": "When the client shares sites they like, to turn them into a look you can name and reuse" },
+        { "ref": "library:landing-page-design-planner", "type": "skill", "use": "explore", "when": "When the copy is ready, to get three on-brand designs for a key page and a build brief" },
+        { "ref": "library:standout-website-designer", "type": "skill", "use": "explore", "when": "When one option should be bold, with motion and layout that push past the template" },
+        { "ref": "library:website-art-director", "type": "skill", "use": "build", "when": "When the client must see a real page in the chosen look before the builder work starts" },
+        { "ref": "library:neville-brody", "type": "mind", "use": "think", "when": "When every option is the template with new colours" },
+        { "ref": "library:page-design-standards-checker", "type": "skill", "use": "check", "when": "When a direction is drafted, to check it still reads well on a phone" }
+      ]
+    },
+    {
+      "id": "cms-plan",
+      "task": "Plan the CMS collections for a blog or case studies",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/cms-collection-plan", "use": "build", "when": "When a site needs collections, fields, links between them and template pages planned" },
+        { "ref": "library:page-at-scale-builder", "type": "skill", "use": "build", "when": "When one template will make many pages, such as locations or services, from data" },
+        { "ref": "library:portfolio-case-study-writer", "type": "skill", "use": "build", "when": "When the case study collection needs its first entries written from project notes" },
+        { "ref": "library:schema-markup-writer", "type": "skill", "use": "build", "when": "When collection pages need structured data added to the template" }
+      ]
+    },
+    {
+      "id": "builder-code-snippet",
+      "task": "Write a custom CSS or code-injection snippet",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/builder-code-snippet", "use": "build", "when": "When the builder's own settings cannot do the job and a small snippet is the only way" },
+        { "ref": "library:web-animation-builder", "type": "skill", "use": "build", "when": "When the snippet is a small timed or scroll animation the builder lacks" },
+        { "ref": "library:interface-polish-checker", "type": "skill", "use": "check", "when": "When the snippet changes spacing or type, to catch slips it causes elsewhere" },
+        { "ref": "library:accessibility-checker", "type": "skill", "use": "check", "when": "When the snippet hides, moves or restyles content, to check it still works by keyboard" }
+      ]
+    },
+    {
+      "id": "build-on-existing-site",
+      "task": "Add or rebuild a page inside an existing site",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:website-design-token-extractor", "type": "skill", "use": "brief", "when": "Before designing, to pull the live site's colours, fonts and spacing so the page matches" },
+        { "ref": "kit:skills/build-on-existing-site", "use": "build", "when": "When a new page must look like the rest of the site, not like a fresh template" },
+        { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "When the page could be laid out several ways within the site's existing blocks" },
+        { "ref": "kit:skills/site-launch-check", "use": "check", "when": "After the page is added, to check forms, titles, phone layout and links" }
+      ]
+    },
+    {
+      "id": "landing-page",
+      "task": "Build a landing page on the client's site",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:conversion-landing-page-designer", "type": "skill", "use": "brief", "when": "When you have the offer and audience and need the page plan and strict design rules" },
+        { "ref": "library:conversion-page-writer", "type": "skill", "use": "build", "when": "When the page needs hero, value points, proof, answers to doubts and buttons written" },
+        { "ref": "library:landing-page-design-planner", "type": "skill", "use": "explore", "when": "When the copy is done, to compare three on-brand designs before building" },
+        { "ref": "kit:skills/build-on-existing-site", "use": "build", "when": "When the page goes into the client's builder and must match their site" },
+        { "ref": "library:static-html-landing-page-builder", "type": "skill", "use": "build", "when": "When there is no builder and the page must ship as plain HTML with a working form" },
+        { "ref": "library:landing-page-auditor", "type": "skill", "use": "check", "when": "When the page is built, to rank conversion problems by impact with fixes" }
+      ]
+    },
+    {
+      "id": "launch-check",
+      "task": "Run the launch check before a site goes live",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/site-launch-check", "use": "check", "when": "Before go-live or after a big change, to check domain, forms, titles, phone layout and access" },
+        { "ref": "library:site-go-live-runbook-writer", "type": "skill", "use": "build", "when": "When the switch needs a runbook with cutover steps, watching and a way back" },
+        { "ref": "library:domain-and-dns-planner", "type": "skill", "use": "build", "when": "When the client has several domains and needs the records and redirects laid out" },
+        { "ref": "library:site-qa-sweep-runner", "type": "skill", "use": "check", "when": "When you want a test pass across the pages with a list of problems found" }
+      ]
+    },
+    {
+      "id": "plan-build-launch",
+      "task": "Run a small site from brief to launch",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:web-project-scoper", "type": "skill", "use": "brief", "when": "At the start, to get goals, users, features and a page plan into one scoped brief" },
+        { "ref": "kit:workflows/plan-build-and-launch-a-site", "use": "build", "when": "When a client wants a new 5 to 10 page site or a full rebuild of a template site" },
+        { "ref": "kit:skills/site-launch-check", "use": "check", "when": "At the end, before the domain is pointed at the new site" }
+      ]
+    },
+    {
+      "id": "accessibility-pass",
+      "task": "Run an accessibility quick pass on a builder site",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/accessibility-quick-pass", "use": "check", "when": "Before launch or after a redesign, to catch common failures with fixes in the builder" },
+        { "ref": "library:accessibility-checker", "type": "skill", "use": "check", "when": "When you can point at the live page and want ranked problems with fixes" },
+        { "ref": "library:accessibility-standards-checker", "type": "skill", "use": "build", "when": "When the client needs gaps by level and notes for an accessibility statement" },
+        { "ref": "library:quarterly-accessibility-keeper", "type": "agent", "use": "check", "when": "Each quarter, to rank new gaps and confirm last quarter's fixes held" },
+        { "ref": "library:kat-holmes", "type": "mind", "use": "think", "when": "When the site passes the checks but some visitors still cannot finish the main task" }
+      ]
+    },
+    {
+      "id": "choose-builder",
+      "task": "Choose a site builder or decide whether to move",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:web-project-scoper", "type": "skill", "use": "brief", "when": "Before comparing builders, to list what the site must do now and next year" },
+        { "ref": "kit:prompts/choose-a-site-builder", "use": "build", "when": "Before a client signs up for a builder, or when they ask if they should move" },
+        { "ref": "library:website-content-mover", "type": "skill", "use": "build", "when": "When the answer is to move, to plan it so search rank and old links keep working" }
+      ]
+    },
+    {
+      "id": "cookie-and-tracking",
+      "task": "Check the cookie banner, tracking and policy pages",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:tracking-plan-builder", "type": "skill", "use": "brief", "when": "Before the check, to list which tags and events the site should fire and why" },
+        { "ref": "kit:prompts/cookie-banner-check", "use": "check", "when": "Before launch, after adding a tag, or when the client asks if the banner works" },
+        { "ref": "library:policy-page-drafter", "type": "skill", "use": "build", "when": "When the site has no privacy or cookie page, to draft one for a lawyer to review" }
+      ]
+    },
+    {
+      "id": "image-spec",
+      "task": "Write the image spec and alt text list",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/image-spec-and-alt-text", "use": "build", "when": "Before photos are taken or chosen, or when the site's images are slow or blurry" },
+        { "ref": "library:creative-shoot-briefer", "type": "skill", "use": "build", "when": "When a photographer will shoot for the site and needs one clear brief" },
+        { "ref": "library:image-compressor", "type": "skill", "use": "build", "when": "When files are too heavy and must load faster without looking worse" },
+        { "ref": "library:store-image-prep-checker", "type": "skill", "use": "check", "when": "When the files are ready, to check sizes, names and alt text before upload" }
+      ]
+    },
+    {
+      "id": "monthly-site-care",
+      "task": "Run monthly site care",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/monthly-site-care", "use": "build", "when": "Once a month, and after a builder update, a new tag or a visitor complaint" },
+        { "ref": "library:website-quality-keeper", "type": "agent", "use": "check", "when": "When you want the site's quality checked on a schedule with a short fix list" },
+        { "ref": "library:monthly-search-console-keeper", "type": "agent", "use": "check", "when": "Each month, to read search data and catch pages that dropped or broke" },
+        { "ref": "library:domain-and-certificate-watch-checker", "type": "skill", "use": "check", "when": "When domains or certificates may lapse, to flag leftovers and weak access" }
+      ]
+    },
+    {
+      "id": "seo-basics",
+      "task": "Set page titles, descriptions, markup and local listings",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:on-page-seo-tuner", "type": "skill", "use": "build", "when": "When each page needs its title, description, headings and image text fixed" },
+        { "ref": "library:schema-markup-writer", "type": "skill", "use": "build", "when": "When a page type needs checked markup ready to paste into the builder" },
+        { "ref": "library:local-search-listing-manager", "type": "skill", "use": "build", "when": "When the client is a local firm and its listing and reviews matter as much as the site" },
+        { "ref": "library:ai-search-visibility-audit", "type": "skill", "use": "check", "when": "When the client asks why they do not show in Google or AI answers" },
+        { "ref": "library:site-search-basics-checker", "type": "skill", "use": "check", "when": "Before launch, to catch duplicate titles, a missing sitemap and dead-end pages" }
+      ]
+    },
+    {
+      "id": "site-move",
+      "task": "Move a site to a new builder without losing traffic",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:page-keep-or-cut-auditor", "type": "skill", "use": "brief", "when": "Before the move, to mark each old page keep, update, merge, redirect or delete" },
+        { "ref": "library:website-content-mover", "type": "skill", "use": "build", "when": "When you plan the move so rank, links and bookmarks keep working" },
+        { "ref": "library:domain-redirect-layout-planner", "type": "prompt", "use": "build", "when": "When several domains are involved and each needs its redirect decided" },
+        { "ref": "library:search-indexing-auditor", "type": "skill", "use": "check", "when": "After the move, to find pages that dropped out of search and why" }
+      ]
+    },
+    {
+      "id": "site-speed",
+      "task": "Fix a slow or jumpy site",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:speed-report-translator", "type": "prompt", "use": "brief", "when": "When the client pastes a speed report and wants to know what it means" },
+        { "ref": "library:page-speed-fixer", "type": "skill", "use": "build", "when": "When you have the report and need the fixes in ordered batches" },
+        { "ref": "library:layout-shift-fixer", "type": "skill", "use": "build", "when": "When the page jumps as it loads and you must find the element that moves" },
+        { "ref": "kit:prompts/image-spec-and-alt-text", "use": "build", "when": "When oversized images are the cause and each block needs a size limit" }
+      ]
+    },
+    {
+      "id": "forms-and-booking",
+      "task": "Plan contact forms and a booking page",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:web-form-designer", "type": "skill", "use": "build", "when": "When a form needs its fields, error messages and spam protection planned" },
+        { "ref": "library:multi-step-form-designer", "type": "skill", "use": "explore", "when": "When an enquiry form is long, to compare a staged version" },
+        { "ref": "library:booking-page-designer", "type": "skill", "use": "build", "when": "When visitors should book a call or visit, with qualifying questions and follow-up" },
+        { "ref": "kit:skills/site-launch-check", "use": "check", "when": "Before launch, to send a test through every form and confirm where it lands" }
+      ]
+    },
+    {
+      "id": "site-review",
+      "task": "Review a live site and rank the fixes",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:website-fix-backlog-builder", "type": "skill", "use": "check", "when": "When the client asks what is wrong with the site, to rank fixes with evidence" },
+        { "ref": "library:usability-heuristic-reviewer", "type": "skill", "use": "check", "when": "When a key page or form confuses people, to score it and list each break" },
+        { "ref": "library:agency-design-persona-walkthrough", "type": "agent", "use": "check", "when": "When you want to see what a first-time visitor thinks at each scroll" },
+        { "ref": "library:steve-krug", "type": "mind", "use": "think", "when": "When visitors must stop and think to find the one thing they came for" }
+      ]
+    },
+    {
+      "id": "scope-and-quote",
+      "task": "Scope and quote a website project",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:web-project-scoper", "type": "skill", "use": "brief", "when": "When the request is vague, to pin down goals, features and pages before pricing" },
+        { "ref": "library:prepare-your-first-freelance-project-quote", "type": "workflow", "use": "build", "when": "When a brief must become a quote with scope, price assumptions and contract risks" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any page that must match the client's live site: colours, fonts and voice" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When page copy states a number, award or claim you cannot trace to the client" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before copy goes into the builder, to catch typos and names spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "conversion-copywriter", "when": "When a sales or landing page needs more than block-length copy" },
+    { "role": "seo-specialist", "when": "When the site depends on search and needs keyword research and a content plan" },
+    { "role": "brand-designer", "when": "When the client has no logo, palette or fonts to build the site on" },
+    { "role": "ux-designer", "when": "When the site is large and its structure and menus need testing with users" },
+    { "role": "frontend-developer", "when": "When the job needs more custom code than a small snippet in the builder" },
+    { "role": "product-photographer", "when": "When the site needs new photos planned and a consistent photo style" }
+  ],
+  "gaps": [
+    "No library item knows Squarespace, Wix, Webflow or Framer: block names, style settings, limits or which builder to choose",
+    "No library item plans CMS collections, fields and template pages for a builder site; only the kit skill does",
+    "No library item writes custom CSS or code-injection snippets for a site builder",
+    "No library item checks a cookie banner: whether tags wait for consent and whether refusing is as easy as accepting",
+    "No library item shows two or three home page directions as pictures or inside the builder for a client to choose from",
+    "No library item plans a service firm's home page section by section; the layout planners are built for stores and ads",
+    "No library item writes a handover guide that teaches a client to edit their own site",
+    "No library item sets image sizes, crops and focal points for each block of a builder template"
+  ]
+}

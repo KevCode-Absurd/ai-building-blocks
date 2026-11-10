@@ -1,0 +1,277 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "ghostwriter",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "linkedin-batch",
+      "task": "Write a month's batch of LinkedIn posts in the client's voice",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:workflows/monthly-founder-content-cycle", "use": "brief", "when": "Each month, to run notes, interview, drafts, approval and scheduling in a fixed order" },
+        { "ref": "library:linkedin-results-reader", "type": "skill", "use": "brief", "when": "Before the new batch, to see which of last month's posts worked and why reach changed" },
+        { "ref": "kit:skills/linkedin-post-batch", "use": "build", "when": "When you have notes, wins, mistakes and opinions and need 8 to 12 posts in a mix of types" },
+        { "ref": "library:linkedin-hook-post-writer", "type": "skill", "use": "explore", "when": "When a post needs a stronger first line, to try several opening patterns" },
+        { "ref": "kit:prompts/voice-match-edit", "use": "check", "when": "Before sending the batch for approval, to fix lines the client would never say" }
+      ]
+    },
+    {
+      "id": "voice-profile",
+      "task": "Build a voice profile from the client's own words",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:whisper-speech-transcriber", "type": "skill", "use": "brief", "when": "When the samples are voice memos or talks, to turn them into text first" },
+        { "ref": "kit:skills/voice-profile-from-samples", "use": "build", "when": "When you have the client's unedited words and need one page every draft can follow" },
+        { "ref": "library:write-a-voice-guide-from-your-documents-and-check-copy", "type": "workflow", "use": "build", "when": "When the client has many documents and wants a guide plus a check of new copy against it" },
+        { "ref": "library:brand-voice-one-pager-writer", "type": "prompt", "use": "build", "when": "When the client's team needs the profile as one page with before and after lines" },
+        { "ref": "library:brand-voice-reviewer", "type": "agent", "use": "check", "when": "When the profile is agreed, to check each later draft against it" }
+      ]
+    },
+    {
+      "id": "story-mining",
+      "task": "Prepare and run a story-mining interview",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/story-mining-questions", "use": "build", "when": "Before an interview or voice memo session, to get scenes, numbers and opinions, not generalities" },
+        { "ref": "library:expert-knowledge-interview", "type": "skill", "use": "build", "when": "When the expert's judgment is hard to put in words, to draw it out case by case" },
+        { "ref": "library:hero-story-mapper", "type": "skill", "use": "build", "when": "When you have the facts of a turning point, to map them into a story shape" },
+        { "ref": "library:oprah-winfrey", "type": "mind", "use": "think", "when": "When the client gives polished answers, to ask the question that gets the real one" },
+        { "ref": "library:otter", "type": "tool", "use": "build", "when": "When the session is a live call, to record it and get a transcript to write from" }
+      ]
+    },
+    {
+      "id": "idea-bank",
+      "task": "Find content pillars and a bank of idea prompts",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:content-pillar-finder", "type": "skill", "use": "build", "when": "When the client posts about everything, to find three to five subjects they can own" },
+        { "ref": "library:linkedin-content-strategy", "type": "skill", "use": "build", "when": "When the goal is known, to set pillars, positioning and a posting rhythm they can keep" },
+        { "ref": "kit:prompts/story-mining-questions", "use": "build", "when": "When the bank runs dry, to get ten prompts the client can answer by voice memo" },
+        { "ref": "library:long-form-post-repurposer", "type": "skill", "use": "build", "when": "When the client has old articles, talks or transcripts that hold posts" }
+      ]
+    },
+    {
+      "id": "hooks-and-closes",
+      "task": "Fix weak first lines and endings",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/hook-and-close-options", "use": "explore", "when": "When a post or intro is written but the first lines are weak or the ending begs" },
+        { "ref": "library:linkedin-hook-post-writer", "type": "skill", "use": "explore", "when": "When you want to see the same idea opened in a different pattern" },
+        { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "When the hook sounds like every other post, to fix the machine-made lines" }
+      ]
+    },
+    {
+      "id": "opinion-article",
+      "task": "Write an opinion article from the client's notes",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:contrarian-belief-tester", "type": "skill", "use": "brief", "when": "Before drafting, to find the true but unpopular belief behind the idea and who disagrees" },
+        { "ref": "kit:skills/story-interview-to-article", "use": "build", "when": "When notes, memos or an interview must become a piece under the client's name" },
+        { "ref": "library:hardest-objections-answer-writer", "type": "skill", "use": "build", "when": "When the argument will be attacked, to answer the toughest objections fairly" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the piece needs a title, to compare several honest angles" },
+        { "ref": "library:paul-graham", "type": "mind", "use": "think", "when": "When the argument is vague, to say the claim plainly and test each step" },
+        { "ref": "library:unsupported-claim-spotter", "type": "skill", "use": "check", "when": "Before it goes to an outlet, to list every claim that needs a source, ranked by risk" }
+      ]
+    },
+    {
+      "id": "founder-story",
+      "task": "Write a founder story cut to what moves",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:hero-story-mapper", "type": "skill", "use": "brief", "when": "Before writing, to lay the true facts out as a call, a struggle and a change" },
+        { "ref": "library:write-your-founder-story-and-cut-it-to-what-moves", "type": "workflow", "use": "build", "when": "When you have the facts of how they started and need the story shaped and cut" },
+        { "ref": "kit:skills/story-interview-to-article", "use": "build", "when": "When the story comes from an interview and must sound like the founder telling it" },
+        { "ref": "library:case-first-story-builder", "type": "skill", "use": "explore", "when": "When the story could start in several places, to find the moment with the surprise" },
+        { "ref": "library:annette-simmons", "type": "mind", "use": "think", "when": "When the story lists achievements, to find the one true incident that shows who they are" },
+        { "ref": "kit:prompts/voice-match-edit", "use": "check", "when": "Before approval, to check the story sounds like the founder and not a profile writer" }
+      ]
+    },
+    {
+      "id": "about-page",
+      "task": "Write an about page",
+      "kind": "web_page",
+      "items": [
+        { "ref": "kit:skills/story-interview-to-article", "use": "build", "when": "When the about page should come from the founder's own account" },
+        { "ref": "library:brand-origin-story-writer", "type": "skill", "use": "build", "when": "When you have how and why they started and need a page that sounds like them" },
+        { "ref": "library:top-of-page-headline-writer", "type": "prompt", "use": "explore", "when": "When the page opens flat, to compare five headlines with a subhead" },
+        { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "When the page is drafted, to fix lines that sound like a template" }
+      ]
+    },
+    {
+      "id": "linkedin-profile-and-bio",
+      "task": "Rewrite a LinkedIn profile and bio",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:personal-brand-planner", "type": "skill", "use": "brief", "when": "Before rewriting, to decide what the client wants to be known for and by whom" },
+        { "ref": "library:linkedin-profile-rewriter", "type": "skill", "use": "build", "when": "When the profile needs a stronger headline, About section and experience lines" },
+        { "ref": "library:witty-line-punch-up", "type": "skill", "use": "explore", "when": "When the bio is a dry list, to add one or two sharp, true lines" },
+        { "ref": "kit:prompts/voice-match-edit", "use": "check", "when": "Before it goes live, to make sure the profile reads like the person" }
+      ]
+    },
+    {
+      "id": "carousel-post",
+      "task": "Write a document carousel post",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:linkedin-post-writer", "type": "skill", "use": "build", "when": "When one idea should become a carousel script, slide by slide" },
+        { "ref": "kit:prompts/hook-and-close-options", "use": "explore", "when": "When the first slide must earn the swipe, to compare openings" },
+        { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "When the slides are drafted, to cut filler lines" }
+      ]
+    },
+    {
+      "id": "comment-and-outreach-playbook",
+      "task": "Build a comment and outreach playbook",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:linkedin-outreach-plan", "type": "skill", "use": "build", "when": "When the client wants the right conversations: who to comment on and how to connect" },
+        { "ref": "library:linkedin-comment-writer", "type": "skill", "use": "build", "when": "When a comment should add something new in the client's voice" },
+        { "ref": "library:social-comment-and-reply-desk", "type": "agent", "use": "build", "when": "When replies to comments on the client's own posts need drafting each week" },
+        { "ref": "library:own-voice-outreach-writer", "type": "skill", "use": "build", "when": "When a comment thread should turn into a first message that sounds like the client" }
+      ]
+    },
+    {
+      "id": "x-posts",
+      "task": "Write X posts and threads in the client's voice",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:voice-matched-post-writer", "type": "skill", "use": "build", "when": "When you have posts the client wrote, to get new ones that sound the same" },
+        { "ref": "library:x-and-linkedin-post-pair-writer", "type": "prompt", "use": "build", "when": "When one idea needs an X post and a LinkedIn post that read as written apart" },
+        { "ref": "library:x-thread-writer", "type": "skill", "use": "build", "when": "When a long idea or transcript should become a thread where each post stands alone" },
+        { "ref": "kit:prompts/hook-and-close-options", "use": "explore", "when": "When the first post is weak, to compare openings" },
+        { "ref": "kit:prompts/voice-match-edit", "use": "check", "when": "Before scheduling, to catch lines that do not sound like the client" }
+      ]
+    },
+    {
+      "id": "big-idea",
+      "task": "Test the big idea for a book, course or talk series",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/big-idea-test", "use": "build", "when": "At the start, to turn a pile of material into one sentence that can carry the project" },
+        { "ref": "library:contrarian-belief-tester", "type": "skill", "use": "check", "when": "When the idea sounds agreeable, to see whether anyone would disagree with it" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the idea holds, to try it as several working titles" },
+        { "ref": "library:malcolm-gladwell", "type": "mind", "use": "think", "when": "When the idea is abstract, to find the one real case that makes a reader care" }
+      ]
+    },
+    {
+      "id": "book-proposal",
+      "task": "Write a book proposal and chapter plan",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/book-from-notes-to-proposal", "use": "brief", "when": "When an expert with years of posts or talks wants a book, to run the steps in order" },
+        { "ref": "kit:skills/book-proposal-and-chapter-plan", "use": "build", "when": "When you need the big idea, title options, reader, chapter plan and proposal sections" },
+        { "ref": "library:book-writing-project-coach", "type": "skill", "use": "build", "when": "When the author needs an outline and a writing plan for their stage" },
+        { "ref": "library:long-form-piece-structurer", "type": "skill", "use": "build", "when": "When one chapter's material needs a clear order before the plan is fixed" }
+      ]
+    },
+    {
+      "id": "chapter-draft",
+      "task": "Draft a chapter from the author's notes",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:agency-marketing-book-co-author", "type": "agent", "use": "build", "when": "When voice notes and rough ideas must become a chapter in the author's own voice" },
+        { "ref": "library:expert-and-newcomer-writing", "type": "workflow", "use": "explore", "when": "When the chapter must please experts and newcomers, to try a version that does both" },
+        { "ref": "library:william-zinsser", "type": "mind", "use": "think", "when": "When the chapter is all material and no point" },
+        { "ref": "kit:prompts/voice-match-edit", "use": "check", "when": "Before the author reads it, to fix what does not sound like them" },
+        { "ref": "library:long-form-draft-editor", "type": "agent", "use": "check", "when": "When the chapter is drafted, to edit and re-check it until it passes" }
+      ]
+    },
+    {
+      "id": "book-coaching",
+      "task": "Coach an author through the writing months",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:daily-writing-habit", "type": "workflow", "use": "build", "when": "When the author keeps stalling, to set a daily count, a reading plan and a restart rule" },
+        { "ref": "library:writing-log-reviewer", "type": "skill", "use": "check", "when": "Each week, to read the log for days hit, pace and a likely finish date" },
+        { "ref": "library:book-writing-project-coach", "type": "skill", "use": "build", "when": "When the author is stuck at one stage and needs the next steps" }
+      ]
+    },
+    {
+      "id": "book-launch",
+      "task": "Plan a book launch",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:launch-teaser-to-preview-planner", "type": "skill", "use": "build", "when": "When there is a date, to plan the teaser, the preview and launch day" },
+        { "ref": "library:launch-email-sequence-planner", "type": "skill", "use": "build", "when": "When the author has a list, to plan the launch emails up to the close date" },
+        { "ref": "library:price-a-course-or-ebook-and-write-its-launch-emails", "type": "workflow", "use": "build", "when": "When the book is self-published and needs a price and honest launch wording" },
+        { "ref": "library:press-outreach-planner", "type": "skill", "use": "build", "when": "When the book needs reviewers and podcasts: a list, pitches and a press kit outline" }
+      ]
+    },
+    {
+      "id": "voice-match-edit",
+      "task": "Edit a draft until it sounds like the named author",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/voice-match-edit", "use": "build", "when": "When a draft is right on the facts but does not sound like the author" },
+        { "ref": "library:draft-brand-voice-checker", "type": "skill", "use": "check", "when": "When there is a written voice profile, to rank where the draft departs from it" },
+        { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "When the draft has stock phrases the author would never use" }
+      ]
+    },
+    {
+      "id": "job-check",
+      "task": "Check a ghostwriting job for honesty and outlet rules",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/ghostwriting-job-check", "use": "check", "when": "Before taking a job, and again before a piece goes to a platform, publisher or contest" },
+        { "ref": "library:ai-writing-workflow-planner", "type": "skill", "use": "brief", "when": "When the client's team uses AI, to agree what AI drafts and what a person must own" },
+        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before the client puts their name on it, to check every fact and number" }
+      ]
+    },
+    {
+      "id": "personal-newsletter",
+      "task": "Write a personal story email or newsletter",
+      "kind": "email",
+      "items": [
+        { "ref": "library:write-a-personal-story-email-and-read-how-it-did", "type": "workflow", "use": "build", "when": "When one true story should become an email, with a read of how it did after" },
+        { "ref": "library:story-email-writer", "type": "skill", "use": "explore", "when": "When you want three different drafts from the same story to choose from" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "Before sending, to compare subject lines from several angles" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When the email is drafted, to get cuts, a pacing map and a ship or fix call" }
+      ]
+    },
+    {
+      "id": "talk-opening",
+      "task": "Write a talk opening or short speech",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/story-interview-to-article", "use": "build", "when": "When the client's story should open a talk" },
+        { "ref": "library:build-a-talk-around-one-real-case", "type": "workflow", "use": "build", "when": "When the talk needs one case to carry it from start to request" },
+        { "ref": "library:read-aloud-speech-shaper", "type": "skill", "use": "build", "when": "When the words will be heard, to shape them for the ear with a refrain" },
+        { "ref": "library:funny-speech-planner", "type": "skill", "use": "explore", "when": "When the room wants to laugh, to try a deadpan version built on one true story" },
+        { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "When the script is drafted, to fix lines that trip when spoken" }
+      ]
+    },
+    {
+      "id": "annual-letter",
+      "task": "Write an annual letter or investor update",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:annual-letter", "type": "workflow", "use": "build", "when": "When you have the year's numbers and need principles, metrics and a plain letter" },
+        { "ref": "library:company-story-aligner", "type": "skill", "use": "check", "when": "When staff, owners and investors each get a version, to find where they contradict" },
+        { "ref": "library:hard-questions-board-prep-coach", "type": "skill", "use": "check", "when": "Before it goes out, to list the toughest questions readers will ask" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a piece states facts, names or numbers under the client's name, to check each one" },
+    { "ref": "library:ai-default-patterns", "type": "skill", "use": "check", "when": "Before any draft goes for approval, to catch phrases that read as machine written" },
+    { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "Last step before sending, to catch slips with a log of every change" }
+  ],
+  "helpers": [
+    { "role": "editor", "when": "When a long draft needs a structural edit or a final proofread by fresh eyes" },
+    { "role": "speechwriter", "when": "When the client needs a full keynote or a speech for an occasion, not only an opening" },
+    { "role": "pr-specialist", "when": "When an article needs placing in an outlet, or a book needs press" },
+    { "role": "social-media-manager", "when": "When posts need scheduling, replies and reporting across channels" },
+    { "role": "presentation-designer", "when": "When a carousel or deck needs designed slides, not only the words" },
+    { "role": "content-marketer", "when": "When the founder's content must tie into search, email and a company content plan" }
+  ],
+  "gaps": [
+    "No library item builds a voice profile of one person from their unedited words; the voice guides are made for brands",
+    "No library item scores how close a draft is to the author's own samples",
+    "No library item writes a book proposal for agents: comparable titles, market, author platform and a query letter",
+    "No library item drafts a non-fiction chapter from notes, apart from one imported agent",
+    "No library item writes a LinkedIn document carousel for an expert; the carousel writers are for ads",
+    "No library item fits an opinion article to an outlet's rules or pitches it to an editor",
+    "No library item checks a ghostwritten piece against platform, publisher or contest rules on disclosure and AI use",
+    "No library item writes a speaker one-sheet or a bio in three lengths",
+    "No library item makes clearly different versions of an annual letter or investor update"
+  ]
+}

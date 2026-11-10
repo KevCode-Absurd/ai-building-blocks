@@ -1,0 +1,322 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "speechwriter",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "wedding-speech",
+      "task": "Write a wedding speech or best man toast",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:workflows/personal-speech-from-brief-to-day", "use": "brief", "when": "When someone asks for a personal speech and you need the steps from first call to the day" },
+        { "ref": "kit:prompts/story-mining-for-a-speech", "use": "brief", "when": "When the speaker has memories but no shape, to pull out the two or three stories worth telling" },
+        { "ref": "kit:skills/speech-from-stories", "use": "build", "when": "When the stories and names are in, to write the speech timed to the slot" },
+        { "ref": "library:funny-speech-planner", "type": "skill", "use": "explore", "when": "When the speaker wants a dry, funny version built on one true story, with the pauses marked" },
+        { "ref": "library:witty-line-punch-up", "type": "skill", "use": "build", "when": "When the draft is warm but flat and needs a few sharp, true lines" },
+        { "ref": "library:mike-birbiglia", "type": "mind", "use": "think", "when": "When a mishap story is funny in the telling but has no point or ending yet" },
+        { "ref": "kit:prompts/humour-safety-check", "use": "check", "when": "Before the day, when the room holds family, children, older relatives or a boss" }
+      ]
+    },
+    {
+      "id": "eulogy",
+      "task": "Write a eulogy or memorial speech",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/story-mining-for-a-speech", "use": "brief", "when": "When the family has many memories and you need the few that show who the person was" },
+        { "ref": "kit:skills/speech-from-stories", "use": "build", "when": "When you have the stories and names and need a eulogy that fits the service slot" },
+        { "ref": "library:read-aloud-speech-shaper", "type": "skill", "use": "explore", "when": "When you want a second version shaped for the ear, with a line that returns" },
+        { "ref": "library:maya-angelou", "type": "mind", "use": "think", "when": "When the draft lists a life's dates and jobs but not the true details that show the person" },
+        { "ref": "library:single-effect-draft-checker", "type": "skill", "use": "check", "when": "When the draft is done, to find the lines that pull away from the feeling you meant" }
+      ]
+    },
+    {
+      "id": "conference-talk",
+      "task": "Write a conference talk or keynote around one real case",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:workflows/business-talk-from-notes-to-stage", "use": "brief", "when": "When a speaking slot is confirmed and you need the steps from notes to stage in order" },
+        { "ref": "library:build-a-talk-around-one-real-case", "type": "workflow", "use": "brief", "when": "When the speaker has a topic and loose notes but no single case to hang the talk on" },
+        { "ref": "kit:skills/talk-or-pitch-script", "use": "build", "when": "When the case and the ask are chosen and you need the full script for a 10 to 20 minute slot" },
+        { "ref": "library:lesson-talk-writer", "type": "skill", "use": "explore", "when": "When you want a second shape to compare: two or three lessons, each with its own story" },
+        { "ref": "library:talk-tension-planner", "type": "skill", "use": "build", "when": "When the outline is in order of events and the room would not know the stakes until late" },
+        { "ref": "library:nancy-duarte", "type": "mind", "use": "think", "when": "When the talk rambles and the audience cannot tell what it asks of them" },
+        { "ref": "library:story-shape-mapper", "type": "skill", "use": "check", "when": "When the script is drafted, to find the flat stretches where a room stops listening" }
+      ]
+    },
+    {
+      "id": "short-pitch",
+      "task": "Write a 60-second and a 3-minute pitch",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:pitch-arc-planner", "type": "skill", "use": "brief", "when": "Before the script, to set the order that builds belief and ends on one clear decision" },
+        { "ref": "kit:skills/talk-or-pitch-script", "use": "build", "when": "When you need both pitch lengths with answers to the likeliest questions" },
+        { "ref": "library:elevator-pitch-writer", "type": "skill", "use": "explore", "when": "When the speaker needs 10, 30 and 60 second versions and an opening question to compare" },
+        { "ref": "library:rival-free-pitch-rewriter", "type": "skill", "use": "explore", "when": "When the pitch leans on a rival's name, to try versions built on what only they do" },
+        { "ref": "library:sales-opener-trio-writer", "type": "prompt", "use": "explore", "when": "When the first ten words are weak, to get three openers and a way to test them" },
+        { "ref": "library:hardest-objections-answer-writer", "type": "skill", "use": "check", "when": "When the pitch is drafted, to find the toughest objections and where it overclaims" }
+      ]
+    },
+    {
+      "id": "personal-polish",
+      "task": "Polish a speech the client already wrote",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:read-aloud-speech-shaper", "type": "skill", "use": "build", "when": "When the draft reads well on paper but was written for the eye, not the ear" },
+        { "ref": "library:overstuffed-draft-cutter", "type": "skill", "use": "build", "when": "When the draft tries to say everything, to name the one idea and cut what fights it" },
+        { "ref": "library:mark-twain", "type": "mind", "use": "think", "when": "When the words are fancy and the pauses are in the wrong place" },
+        { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "When lines trip the tongue, to find each one and fix it so it can be said in one breath" },
+        { "ref": "kit:skills/timing-and-rehearsal-plan", "use": "check", "when": "When the polish is done, to time it against the slot before the speaker rehearses" }
+      ]
+    },
+    {
+      "id": "leaving-speech",
+      "task": "Write a retirement, leaving or farewell speech",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/story-mining-for-a-speech", "use": "brief", "when": "When colleagues send scattered memories and you need the ones the whole room will know" },
+        { "ref": "kit:skills/speech-from-stories", "use": "build", "when": "When you have the stories and need a speech that thanks people by name and fits the slot" },
+        { "ref": "library:lesson-talk-writer", "type": "skill", "use": "explore", "when": "When the person leaving is the speaker and wants to pass on two or three lessons" },
+        { "ref": "library:funny-speech-planner", "type": "skill", "use": "explore", "when": "When the office expects a roast and you want a deadpan version to compare" },
+        { "ref": "kit:prompts/humour-safety-check", "use": "check", "when": "Before the day, to check the teasing is safe in front of a boss and junior staff" }
+      ]
+    },
+    {
+      "id": "toast",
+      "task": "Write a short birthday or anniversary toast",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/speech-from-stories", "use": "build", "when": "When you have one or two stories and need a toast of two minutes or less" },
+        { "ref": "library:funny-speech-planner", "type": "skill", "use": "explore", "when": "When the room wants a laugh, to try a version built on one story told straight-faced" },
+        { "ref": "library:witty-line-punch-up", "type": "skill", "use": "build", "when": "When the toast needs one line people will repeat as they raise a glass" },
+        { "ref": "kit:prompts/cut-to-time", "use": "check", "when": "When the toast runs past two minutes and must lose words without losing the ending" }
+      ]
+    },
+    {
+      "id": "written-tribute",
+      "task": "Write an obituary or written tribute",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/story-mining-for-a-speech", "use": "brief", "when": "When the family gives you dates and jobs and you need the details that made the person" },
+        { "ref": "kit:skills/speech-from-stories", "use": "build", "when": "When the tribute will be read, not spoken, and must fit a notice or an order of service" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the tribute has drifted into stock phrases the family would never say" },
+        { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before it is printed, to catch a name, place or date spelt two ways" }
+      ]
+    },
+    {
+      "id": "investor-pitch",
+      "task": "Script an investor pitch",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:pitch-arc-planner", "type": "skill", "use": "brief", "when": "Before the script, to plan the order of belief and the decision you ask investors for" },
+        { "ref": "library:investor-pitch-scriptwriter", "type": "skill", "use": "build", "when": "When the founder needs spoken scripts from one minute to ten, with likely questions" },
+        { "ref": "library:rival-free-pitch-rewriter", "type": "skill", "use": "explore", "when": "When the pitch says \"like X but\", to compare versions that stand without a rival" },
+        { "ref": "library:investor-panel-pitch-tester", "type": "skill", "use": "check", "when": "When the script is drafted, to have it grilled by tough investors before the real room" },
+        { "ref": "library:pitch-deck-checker-10-20-30", "type": "skill", "use": "check", "when": "When there are slides, to check slide count, talk time and type size against the slot" },
+        { "ref": "library:prepare-a-funding-pitch-evidence-appendix", "type": "workflow", "use": "check", "when": "When the pitch states numbers, to back each claim with a dated source and list the gaps" }
+      ]
+    },
+    {
+      "id": "pitch-revision",
+      "task": "Revise a pitch after feedback or a no",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:write-a-short-pitch-and-fix-it-after-every-no", "type": "workflow", "use": "brief", "when": "When a pitch keeps getting turned down and you want a guided run from doubts to rewrite" },
+        { "ref": "library:pitch-revision-log", "type": "skill", "use": "build", "when": "When you have the pitch and each no, to rank the doubts and get a revised pitch" },
+        { "ref": "kit:skills/talk-or-pitch-script", "use": "build", "when": "When the doubts are ranked and both pitch lengths need rewriting around them" },
+        { "ref": "library:strongest-objection-finder", "type": "prompt", "use": "check", "when": "When the speaker is sure of the new version, to get the three best arguments against it" }
+      ]
+    },
+    {
+      "id": "questions-and-answers",
+      "task": "Prepare answers for the questions after a talk or pitch",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/likely-questions-and-answers", "use": "build", "when": "When the talk has Q&A and the speaker wants short, honest answers ready" },
+        { "ref": "library:objection-answer-sheet-writer", "type": "skill", "use": "build", "when": "When buyers raise the same doubts each time, to give each one an answer with proof" },
+        { "ref": "library:hardest-objections-answer-writer", "type": "skill", "use": "check", "when": "When the answers sound too tidy, to find the hardest questions and the gaps to admit" },
+        { "ref": "library:investor-panel-pitch-tester", "type": "skill", "use": "check", "when": "When the speaker wants a practice grilling before investors or a board" }
+      ]
+    },
+    {
+      "id": "event-remarks",
+      "task": "Write remarks for a launch, award or event",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/talk-or-pitch-script", "use": "build", "when": "When the remarks are three to five minutes and need one case and one clear ask" },
+        { "ref": "library:launch-talk-writer", "type": "skill", "use": "build", "when": "When the remarks open a product launch and need one story, a demo and a closing belief" },
+        { "ref": "library:read-aloud-speech-shaper", "type": "skill", "use": "explore", "when": "When the occasion is formal, to try a version with a refrain the room can hold on to" },
+        { "ref": "library:funny-speech-planner", "type": "skill", "use": "explore", "when": "When the event is light, to try a deadpan version built on one true story" },
+        { "ref": "kit:prompts/cut-to-time", "use": "check", "when": "When the host gives a hard time limit and the remarks run over" }
+      ]
+    },
+    {
+      "id": "change-speech",
+      "task": "Write an all-hands or town hall speech about a change",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:announce-a-change-of-direction-and-bring-the-team-with-you", "type": "workflow", "use": "brief", "when": "When a leader must announce a change and needs the memo, script and listening talks planned" },
+        { "ref": "library:org-change-announcement-writer", "type": "skill", "use": "build", "when": "When you need the town hall script, manager talking points and hard-question answers" },
+        { "ref": "library:bad-news-update-writer", "type": "skill", "use": "build", "when": "When the news is a setback, to state the loss, the numbers and the next step plainly" },
+        { "ref": "library:hostile-room-speech-planner", "type": "skill", "use": "explore", "when": "When staff will be angry, to try a version that agrees first and then turns them" },
+        { "ref": "kit:prompts/likely-questions-and-answers", "use": "check", "when": "Before the meeting, to test the speech against the questions staff will ask" }
+      ]
+    },
+    {
+      "id": "sceptical-room",
+      "task": "Write a speech for a room that disagrees",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:hostile-room-speech-planner", "type": "skill", "use": "build", "when": "When you know who is in the room and what they believe, to plan a speech that turns them" },
+        { "ref": "library:hard-talk-plan", "type": "workflow", "use": "brief", "when": "When the speaker dreads the talk, to map the other side and the easy yeses in order" },
+        { "ref": "library:aristotle", "type": "mind", "use": "think", "when": "When the argument is sound but ignores who is listening and what they already hold" },
+        { "ref": "library:fact-vs-opinion-sorter", "type": "prompt", "use": "check", "when": "When the speech persuades, to mark which lines are fact, guess or opinion" },
+        { "ref": "library:hardest-objections-answer-writer", "type": "skill", "use": "check", "when": "When the draft is done, to find the fair objections it has not answered" }
+      ]
+    },
+    {
+      "id": "appeal-speech",
+      "task": "Write a fundraising or gala appeal speech",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:nonprofit-ethical-impact-story-writer", "type": "skill", "use": "brief", "when": "When the appeal rests on one person's story, to check consent and the facts first" },
+        { "ref": "kit:skills/talk-or-pitch-script", "use": "build", "when": "When you have the story and the amount and need remarks that end on one clear ask" },
+        { "ref": "library:read-aloud-speech-shaper", "type": "skill", "use": "explore", "when": "When you want a second version with a repeated line donors will remember" },
+        { "ref": "library:single-effect-draft-checker", "type": "skill", "use": "check", "when": "When the draft swings between guilt and hope, to hold every line to one feeling" }
+      ]
+    },
+    {
+      "id": "story-finding",
+      "task": "Find the stories and facts a speech will stand on",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/story-mining-for-a-speech", "use": "brief", "when": "When the speech is personal and the speaker has memories but no shape" },
+        { "ref": "library:case-first-story-builder", "type": "skill", "use": "brief", "when": "When the talk is for work, to pick the one case to build on and the surprise under it" },
+        { "ref": "library:idea-fragment-miner", "type": "skill", "use": "brief", "when": "When the speaker can talk but not write, to pull raw stories out by asking questions" },
+        { "ref": "library:whisper-speech-transcriber", "type": "skill", "use": "brief", "when": "When the client sends voice memos of their stories and you need them as text" },
+        { "ref": "library:interview-transcript-trimmer", "type": "skill", "use": "build", "when": "When a long interview must be cut to the few passages worth saying out loud" },
+        { "ref": "library:turn-a-customer-interview-into-a-case-outline", "type": "workflow", "use": "check", "when": "When the case is a customer's, to list what they must approve before it is told on stage" },
+        { "ref": "library:annette-simmons", "type": "mind", "use": "think", "when": "When the speaker states values and lessons but has no true incident that shows them" }
+      ]
+    },
+    {
+      "id": "humour",
+      "task": "Add humour to a speech and check it is safe",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:funny-speech-planner", "type": "skill", "use": "explore", "when": "When the speech needs laughs, to plan a deadpan run with the pause and the dropped remark" },
+        { "ref": "library:turn-your-lessons-into-funny-stories-and-a-short-talk", "type": "workflow", "use": "build", "when": "When the speaker has lessons but no jokes, to get a funny story for each one" },
+        { "ref": "library:witty-line-punch-up", "type": "skill", "use": "build", "when": "When jokes feel forced, to swap them for a few turned lines that are true" },
+        { "ref": "library:mike-birbiglia", "type": "mind", "use": "think", "when": "When a funny story mocks someone else and should turn on the speaker instead" },
+        { "ref": "kit:prompts/humour-safety-check", "use": "check", "when": "Before the day, to test each joke against who is in the room" }
+      ]
+    },
+    {
+      "id": "cut-to-time",
+      "task": "Cut a speech to fit its time slot",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/cut-to-time", "use": "build", "when": "When the speech runs long and must fit without losing the ending or speeding up" },
+        { "ref": "library:ten-percent-cutter", "type": "skill", "use": "build", "when": "When the speech is only a little over, to trim a tenth with every cut logged" },
+        { "ref": "library:overstuffed-draft-cutter", "type": "skill", "use": "explore", "when": "When it is far over, to see a version rebuilt around one idea with whole parts removed" },
+        { "ref": "kit:skills/timing-and-rehearsal-plan", "use": "check", "when": "After the cut, to time it again at the speaker's real pace" }
+      ]
+    },
+    {
+      "id": "rehearsal-plan",
+      "task": "Make cue cards, a delivery copy and a rehearsal plan",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/timing-and-rehearsal-plan", "use": "build", "when": "When the words are final and the speaker needs cue cards and a short rehearsal plan" },
+        { "ref": "library:elevenlabs-spoken-script-writer", "type": "skill", "use": "build", "when": "When the speaker wants pace and pause marks written into the script itself" },
+        { "ref": "library:elevenlabs", "type": "tool", "use": "check", "when": "When the speaker wants to hear the speech read aloud before they practise it" },
+        { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "After the first timed read, to fix the lines the speaker stumbled on" }
+      ]
+    },
+    {
+      "id": "speaker-notes-and-slides",
+      "task": "Write speaker notes and plan slides for a talk",
+      "kind": "other",
+      "items": [
+        { "ref": "library:storyboard-to-powerpoint-deck-builder", "type": "skill", "use": "build", "when": "When the script is done and the speaker needs a storyboard and a deck to match it" },
+        { "ref": "library:powerpoint-speaker-note-builder", "type": "skill", "use": "build", "when": "When a deck exists and each slide needs notes, transitions and a rehearsal plan" },
+        { "ref": "library:markdown-slide-deck-maker", "type": "skill", "use": "build", "when": "When the speaker wants simple slides with notes that open in any browser" },
+        { "ref": "library:gamma", "type": "tool", "use": "explore", "when": "When the speaker wants to see the outline as a draft deck in two or three looks" },
+        { "ref": "library:nancy-duarte", "type": "mind", "use": "think", "when": "When the slides repeat the script word for word and add nothing to what is said" },
+        { "ref": "library:pitch-deck-checker-10-20-30", "type": "skill", "use": "check", "when": "When the deck is for a pitch, to check slide count and type size against the talk time" }
+      ]
+    },
+    {
+      "id": "access-and-captions",
+      "task": "Make a talk work for captions, interpreters and every listener",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/accessible-speech-and-captions", "use": "build", "when": "When the talk has slides or online viewers and must work for people who cannot see or hear it" },
+        { "ref": "kit:prompts/captioner-and-interpreter-brief", "use": "build", "when": "When a captioner or interpreter is booked and needs names, terms and the script ahead" },
+        { "ref": "library:powerpoint-audience-handout-builder", "type": "skill", "use": "build", "when": "When the audience should get a readable handout with private notes left out" },
+        { "ref": "library:prepare-a-powerpoint-deck-for-presenting-and-sharing", "type": "workflow", "use": "check", "when": "When the deck will be shared after, to run an access review and fix what fails" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When many listeners use English as a second language and idioms must go" }
+      ]
+    },
+    {
+      "id": "numbers-out-loud",
+      "task": "Turn figures and hard ideas into pictures a room can follow",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:figures-to-plain-pictures-writer", "type": "prompt", "use": "build", "when": "When the talk has key figures, to turn each into a comparison the room can picture" },
+        { "ref": "library:technical-topic-explainer", "type": "skill", "use": "explore", "when": "When an idea is technical, to try an everyday comparison and see where it breaks" },
+        { "ref": "library:data-story-writer", "type": "skill", "use": "build", "when": "When the speaker has a table of numbers and needs the point, the proof and the next step" },
+        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a figure sounds striking, to check it against a source before it is said on stage" }
+      ]
+    },
+    {
+      "id": "spoken-scripts",
+      "task": "Write a demo, webinar or video script to be spoken",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:prepare-a-webinar-people-can-follow", "type": "workflow", "use": "brief", "when": "When the session is a webinar, to plan one clear result and a teaching outline" },
+        { "ref": "library:counter-demo-script-writer", "type": "skill", "use": "build", "when": "When the speaker shows a product live and needs a short script that lets the result speak" },
+        { "ref": "library:youtube-script-writer", "type": "skill", "use": "build", "when": "When the talk is recorded for video and needs a spoken script with what shows on screen" },
+        { "ref": "library:five-voice-video-opener-writer", "type": "skill", "use": "explore", "when": "When the first line on camera matters, to compare openers in five voices with delivery notes" },
+        { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "Before recording, to fix every line that trips when spoken" }
+      ]
+    },
+    {
+      "id": "publish-afterwards",
+      "task": "Turn a delivered speech into an article or posts",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:whisper-speech-transcriber", "type": "skill", "use": "brief", "when": "When the speaker went off script and you need the words as they were really said" },
+        { "ref": "library:article-shaper", "type": "skill", "use": "build", "when": "When the speech should become one article that reads well on a page" },
+        { "ref": "library:content-repurposer", "type": "skill", "use": "explore", "when": "When you want to see the talk as a blog series, emails, posts and clips before choosing" },
+        { "ref": "library:linkedin-post-writer", "type": "skill", "use": "build", "when": "When the speaker wants one story from the talk as a post under their own name" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When spoken repeats and asides must be cleaned up for a reader" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before any speech with a number, date, award or quoted fact goes to the speaker" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before the delivery copy is printed, to catch names and titles spelt two ways" }
+  ],
+  "helpers": [
+    { "role": "presentation-designer", "when": "When the talk needs a designed slide deck, not only notes and a slide plan" },
+    { "role": "startup-fundraising-consultant", "when": "When an investor pitch needs the deck, the numbers and the round terms worked out" },
+    { "role": "internal-communications-specialist", "when": "When a staff speech is one part of a wider change announcement with memos and FAQs" },
+    { "role": "pr-specialist", "when": "When launch remarks need a press release or media answers to go with them" },
+    { "role": "translator", "when": "When the speech must be given or captioned in a second language" },
+    { "role": "ghostwriter", "when": "When the speech should become a long article, op-ed or chapter under the speaker's name" }
+  ],
+  "gaps": [
+    "No library item writes a wedding speech, best man speech, toast or wedding vows; only the kit covers them",
+    "No library item writes a eulogy, obituary or written tribute; the one eulogy item is a life-planning exercise",
+    "No library item drafts three different openings or closings for a speech; the hook writers are all for ads and video",
+    "No library item writes an award acceptance, thank-you speech or welcome remarks",
+    "No library item writes a speaker introduction, a host or MC script, or panel moderator questions",
+    "No library item coaches delivery: pace, pauses, nerves or a review of a recorded practice run",
+    "No library item lays out cue cards or a teleprompter copy; only the kit's timing and rehearsal plan covers it",
+    "No library item checks quotes, poems and song lyrics in a speech for the right source and permission to use",
+    "No library item captures one person's speaking voice from samples; the voice items are for brands",
+    "No library item prepares a spokesperson for a media interview or press conference",
+    "No library item writes a sermon, homily or ceremony script for an officiant",
+    "No library item checks a personal speech for tone in a mixed or grieving room beyond the kit's humour check"
+  ]
+}

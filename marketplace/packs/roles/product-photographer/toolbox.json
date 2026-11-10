@@ -1,0 +1,281 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "product-photographer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "shot-list",
+      "task": "Write a shot list for a product shoot",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:product-page-gallery-planner", "type": "skill", "use": "brief", "when": "Before the list, to decide which eight images the product page needs and what is missing" },
+        { "ref": "kit:skills/shot-list-and-shoot-brief", "use": "build", "when": "When the channels are known and you need every shot, angle, crop and prop written down" },
+        { "ref": "library:product-shot-list-writer", "type": "prompt", "use": "build", "when": "When the seller needs a quick list for one product, with the reason for each shot" },
+        { "ref": "library:shopper-question-and-fan-out-mapper", "type": "skill", "use": "brief", "when": "When you are unsure what to show, to list the questions shoppers ask that a photo can answer" }
+      ]
+    },
+    {
+      "id": "photographer-brief",
+      "task": "Write a creative brief for a hired photographer",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:aesthetic-direction-brief-writer", "type": "skill", "use": "brief", "when": "When the seller cannot describe the look, to pin down tone and feel in four answers" },
+        { "ref": "library:ad-photography-style-chooser", "type": "skill", "use": "explore", "when": "When the style is open, to compare photo styles and pick one main, one to test, one to avoid" },
+        { "ref": "kit:skills/shot-list-and-shoot-brief", "use": "build", "when": "When the photographer must quote and shoot from one document with every shot listed" },
+        { "ref": "library:creative-shoot-briefer", "type": "skill", "use": "build", "when": "When the shoot is for a campaign and the brief must carry the brand and the goal" },
+        { "ref": "library:product-shoot-brief-writer", "type": "skill", "use": "build", "when": "When one shoot must cover both stills and video and each shot needs a reason" }
+      ]
+    },
+    {
+      "id": "photo-style-guide",
+      "task": "Write a brand photo style guide",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:design-style-analyst", "type": "skill", "use": "brief", "when": "When the seller shares photos they like, to turn them into light, colour and feel you can name" },
+        { "ref": "library:brand-stylescape-planner", "type": "skill", "use": "explore", "when": "When the look is undecided, to compare three mood board directions with photo rules" },
+        { "ref": "kit:skills/photo-style-and-edit-recipe", "use": "build", "when": "When a direction is picked and you need background, light, crop and edit rules for every photo" },
+        { "ref": "library:kenya-hara", "type": "mind", "use": "think", "when": "When every frame is crowded with props and the product gets lost" },
+        { "ref": "library:product-page-image-checker", "type": "skill", "use": "check", "when": "When sample photos follow the guide, to find each fault and see if the set holds together" }
+      ]
+    },
+    {
+      "id": "home-studio",
+      "task": "Set up a home or phone studio",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/home-studio-setup", "use": "build", "when": "When photos shot at home look grey, yellow, dark or change from one day to the next" },
+        { "ref": "kit:skills/photo-style-and-edit-recipe", "use": "build", "when": "When the set-up works and you want the same light and edit steps written down for next time" },
+        { "ref": "library:ansel-adams", "type": "mind", "use": "think", "when": "When the light is flat, to decide what the photo should show and where light and dark must fall" }
+      ]
+    },
+    {
+      "id": "edit-recipe",
+      "task": "Write an edit recipe for Lightroom or Snapseed",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/photo-style-and-edit-recipe", "use": "build", "when": "When every photo needs the same true-to-life edit, step by step, in the seller's own app" },
+        { "ref": "library:product-photo-retoucher", "type": "skill", "use": "build", "when": "When a phone photo has wrinkles, dust or a messy edge and an AI tool will clean it" },
+        { "ref": "library:ai-product-photo-inspector", "type": "skill", "use": "check", "when": "After an AI clean-up, to check the product's shape, label and colour did not change" },
+        { "ref": "library:product-page-image-checker", "type": "skill", "use": "check", "when": "When the edited set is done, to list each fault with one fix and a score" }
+      ]
+    },
+    {
+      "id": "channel-image-spec",
+      "task": "Write an image size and file spec for each sales channel",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/channel-image-spec-and-ai-check", "use": "build", "when": "When images go to Amazon, Shopify, Google or Etsy and each needs its size, ratio and background" },
+        { "ref": "library:marketplace-photo-rule-checker", "type": "skill", "use": "check", "when": "Before upload, to get a pass or reject for each photo against the platform's rules" },
+        { "ref": "library:store-image-prep-checker", "type": "skill", "use": "check", "when": "When files are exported, to see what to resize or rename before they go live" },
+        { "ref": "library:merchant-center-feed-health-checker", "type": "skill", "use": "brief", "when": "When Google has flagged products, to see which image problems cost the most sales" }
+      ]
+    },
+    {
+      "id": "listing-image-audit",
+      "task": "Audit the images on a listing or product page",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:return-reason-finder", "type": "skill", "use": "brief", "when": "Before the audit, to see which products get returns that point to misleading photos" },
+        { "ref": "kit:prompts/listing-image-audit", "use": "check", "when": "When a product sells less than it should or buyers keep asking the same questions" },
+        { "ref": "library:product-page-image-checker", "type": "skill", "use": "check", "when": "When you have the images and the plan, to get every fault, one fix each and a score" },
+        { "ref": "library:product-gallery-answers", "type": "workflow", "use": "check", "when": "When reviews and questions show doubts, to review the gallery and plan images that answer them" },
+        { "ref": "library:missing-product-image-finder", "type": "skill", "use": "check", "when": "When the store is large, to find products and variants with no image or too few" }
+      ]
+    },
+    {
+      "id": "gallery-plan",
+      "task": "Plan the full image set for a product page",
+      "kind": "other",
+      "items": [
+        { "ref": "library:shopper-doubt-survey-planner", "type": "skill", "use": "brief", "when": "When nobody knows why shoppers hesitate, to collect their doubts before planning images" },
+        { "ref": "library:product-page-gallery-planner", "type": "skill", "use": "build", "when": "When you have photos and facts and need an eight-image plan with a gaps list" },
+        { "ref": "library:eight-picture-product-page-planner", "type": "prompt", "use": "build", "when": "When the seller wants a fast plan for the eight pictures from what they already have" },
+        { "ref": "library:photo-product-gallery", "type": "workflow", "use": "build", "when": "When real photos exist and each gallery image should answer one shopper question" },
+        { "ref": "library:main-image-a-b-test-planner", "type": "skill", "use": "explore", "when": "When the first image is in doubt, to make versions that each change one thing" },
+        { "ref": "library:scott-mccloud", "type": "mind", "use": "think", "when": "When the images are fine one by one but the set tells no story in order" },
+        { "ref": "library:product-page-image-checker", "type": "skill", "use": "check", "when": "When the set is made, to score it against the plan and list the fixes" }
+      ]
+    },
+    {
+      "id": "amazon-images",
+      "task": "Plan Amazon main and secondary images",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/channel-image-spec-and-ai-check", "use": "brief", "when": "Before the shoot, to set Amazon's white background, fill, size and file rules" },
+        { "ref": "library:main-image-a-b-test-planner", "type": "skill", "use": "explore", "when": "When the main image must win the click, to plan test versions and a review sheet" },
+        { "ref": "library:infographic-maker", "type": "skill", "use": "build", "when": "When a secondary image must show size, parts or benefits with labels" },
+        { "ref": "library:pack-and-thumbnail-glance-tester", "type": "skill", "use": "check", "when": "When the image is seen as a small thumbnail, to score what reads in three seconds" },
+        { "ref": "library:marketplace-photo-rule-checker", "type": "skill", "use": "check", "when": "Before upload, to catch photos Amazon would reject and get fixed copies" }
+      ]
+    },
+    {
+      "id": "ai-background-edit",
+      "task": "Change a background or scene with an AI tool",
+      "kind": "other",
+      "items": [
+        { "ref": "library:product-image-spec-writer", "type": "skill", "use": "brief", "when": "Before any AI edit, to write down what the real product looks like so it cannot drift" },
+        { "ref": "kit:prompts/ai-background-edit-brief", "use": "brief", "when": "Before using an AI editor, to say what may change and what must stay exactly as shot" },
+        { "ref": "library:product-background-swapper", "type": "skill", "use": "build", "when": "When a white-background photo must sit in a real-looking scene with matching light" },
+        { "ref": "library:reference-product-photos", "type": "skill", "use": "explore", "when": "When the seller has a photo they like, to get ranked pictures in that style" },
+        { "ref": "library:adobe-firefly", "type": "tool", "use": "build", "when": "When you must extend or clean up a real photo the seller already owns" },
+        { "ref": "library:ai-product-photo-inspector", "type": "skill", "use": "check", "when": "When the AI image is back, to rate the risk and get lines to add before a retry" },
+        { "ref": "kit:skills/channel-image-spec-and-ai-check", "use": "check", "when": "Before upload, to check the edited image against each channel's rules on AI images" }
+      ]
+    },
+    {
+      "id": "ai-photo-set",
+      "task": "Make a matching AI photo set from real product photos",
+      "kind": "other",
+      "items": [
+        { "ref": "library:product-photo-shoot-planner", "type": "skill", "use": "brief", "when": "Before making images, to get a style sheet and nine matching photo prompts" },
+        { "ref": "library:three-look-product-photos", "type": "workflow", "use": "explore", "when": "When the seller wants to see the product in three different looks before choosing" },
+        { "ref": "library:phone-product-photoshoot", "type": "workflow", "use": "build", "when": "When phone photos are all there is and you need 8 to 12 images, each with a job" },
+        { "ref": "library:product-photo-set-maker", "type": "agent", "use": "build", "when": "When the set must be checked frame by frame and every failed frame redone" },
+        { "ref": "library:nano-banana", "type": "tool", "use": "build", "when": "When you edit or combine real photos with plain requests and need the product kept" },
+        { "ref": "library:ai-product-photo-inspector", "type": "skill", "use": "check", "when": "When a frame looks right at a glance, to run eight checks for changed product details" },
+        { "ref": "library:ai-image-fix-rules", "type": "skill", "use": "check", "when": "When the seller sends feedback, to turn each fix into a rule for every later image" }
+      ]
+    },
+    {
+      "id": "apparel-photos",
+      "task": "Prepare clothing and accessory photos",
+      "kind": "other",
+      "items": [
+        { "ref": "library:turn-a-clothing-flat-lay-into-marketplace-ready-photos", "type": "workflow", "use": "build", "when": "When you have a phone photo of a garment and need clean, worn-shape and close-up shots" },
+        { "ref": "library:ghost-mannequin-photo-maker", "type": "skill", "use": "build", "when": "When a flat lay should look worn but the seller has no model" },
+        { "ref": "library:virtual-try-on-photo-maker", "type": "skill", "use": "explore", "when": "When the seller wants to see the garment on a person before paying for a model" },
+        { "ref": "library:accessory-try-on-photo-maker", "type": "skill", "use": "explore", "when": "When a shoe, bag, watch or necklace needs to be shown on a person for scale" },
+        { "ref": "library:fabric-close-up-maker", "type": "skill", "use": "build", "when": "When the page needs close-ups of fabric, stitching and weave" },
+        { "ref": "library:human-representation-reviewer", "type": "skill", "use": "check", "when": "When images show people, to check they look real and are shown fairly" },
+        { "ref": "library:marketplace-photo-rule-checker", "type": "skill", "use": "check", "when": "Before upload, to check each garment photo against the marketplace's rules" }
+      ]
+    },
+    {
+      "id": "catalogue-consistency",
+      "task": "Keep photos matching across a large catalogue",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/photo-style-and-edit-recipe", "use": "brief", "when": "Before a batch, to fix the one look every product photo must share" },
+        { "ref": "library:store-photo-style-locker", "type": "skill", "use": "build", "when": "When AI makes many photos, to keep one style file that every prompt reuses" },
+        { "ref": "library:make-matching-photos-for-a-product-sheet-and-check-them", "type": "workflow", "use": "build", "when": "When a sheet of products needs one matching photo each, with a faults report" },
+        { "ref": "library:product-photo-batch-maker", "type": "skill", "use": "build", "when": "When a spreadsheet of products needs matching photos made within a cost limit" },
+        { "ref": "library:missing-product-image-finder", "type": "skill", "use": "check", "when": "After the batch, to find any product or variant still short of images" }
+      ]
+    },
+    {
+      "id": "catalogue-refresh",
+      "task": "Refresh catalogue images when channel rules change",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/catalogue-image-refresh", "use": "build", "when": "Each quarter, or when a channel changes its image rules, to find and fix what fails" },
+        { "ref": "kit:skills/channel-image-spec-and-ai-check", "use": "brief", "when": "When a rule has changed, to rewrite the spec sheet before anyone re-exports files" },
+        { "ref": "library:store-image-prep-checker", "type": "skill", "use": "check", "when": "When you have the current files, to list what to resize and rename" },
+        { "ref": "library:image-upscale-checker", "type": "skill", "use": "build", "when": "When an old photo is too small for a new rule and cannot be reshot" }
+      ]
+    },
+    {
+      "id": "new-range-shoot",
+      "task": "Run a new range shoot from brief to live images",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/new-range-shoot", "use": "build", "when": "When a new range needs a full image set for every channel, shot at home or by a hired photographer" },
+        { "ref": "kit:skills/shot-list-and-shoot-brief", "use": "build", "when": "When the range is fixed and you need one list that covers every product in one day" },
+        { "ref": "library:product-page-gallery-planner", "type": "skill", "use": "brief", "when": "Before the shoot, to agree the image set each product page will carry" },
+        { "ref": "library:product-page-image-checker", "type": "skill", "use": "check", "when": "When the shots are back, to check each product's set before it goes live" }
+      ]
+    },
+    {
+      "id": "shoot-day-plan",
+      "task": "Plan the shoot day schedule and prep list",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/shot-list-and-shoot-brief", "use": "build", "when": "When you need the shots grouped by set-up so the day runs in the fewest changes" },
+        { "ref": "kit:workflows/new-range-shoot", "use": "brief", "when": "When the day is part of a launch and you need the steps before and after it in order" },
+        { "ref": "library:product-shoot-brief-writer", "type": "skill", "use": "build", "when": "When stills and video are shot on the same day and must share set-ups" }
+      ]
+    },
+    {
+      "id": "hire-photographer",
+      "task": "Get and compare photographer quotes",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/photographer-quote-request", "use": "build", "when": "When hiring a photographer, to get like-for-like quotes and settle ownership first" },
+        { "ref": "library:creative-shoot-briefer", "type": "skill", "use": "brief", "when": "When the photographer asks what the shoot is for before they can price it" },
+        { "ref": "library:contract-risk-reviewer", "type": "skill", "use": "check", "when": "When the photographer sends terms, to flag who owns the images and where they may be used" }
+      ]
+    },
+    {
+      "id": "product-video-brief",
+      "task": "Brief a short product demo, unboxing or how-to video",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/product-video-brief", "use": "build", "when": "When a listing or post needs a short video and someone must film it from a plan" },
+        { "ref": "library:marketing-video-producer", "type": "skill", "use": "brief", "when": "When it is unclear what kind of video fits, to pick the tool, script and shot plan" },
+        { "ref": "library:phone-style-video-ad", "type": "workflow", "use": "explore", "when": "When a phone-filmed creator look may beat a studio look, to get a script and filming brief" },
+        { "ref": "library:video-ad-shot-list-maker", "type": "skill", "use": "build", "when": "When the script is agreed and you need timed shots and an edit list" },
+        { "ref": "library:product-photo-to-clip-maker", "type": "skill", "use": "build", "when": "When there is no footage and a main photo must become a few seconds of listing video" },
+        { "ref": "library:video-ad-edit-planner", "type": "skill", "use": "check", "when": "When clips are filmed, to check they cover the script and plan the cut and captions" }
+      ]
+    },
+    {
+      "id": "lifestyle-social-images",
+      "task": "Make lifestyle and social images from product photos",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:product-image-spec-writer", "type": "skill", "use": "brief", "when": "Before any new scene, to lock the product details every image must keep" },
+        { "ref": "library:product-photo-set-builder", "type": "skill", "use": "explore", "when": "When one product photo must become a set of new angles and scenes to choose from" },
+        { "ref": "library:flash-product-photos", "type": "skill", "use": "explore", "when": "When the brand wants a candid snapshot feel from one real occasion" },
+        { "ref": "library:social-post-photo-maker", "type": "skill", "use": "build", "when": "When an outfit photo needs new scenes and poses for social posts" },
+        { "ref": "library:accurate-product-image-ad-maker", "type": "prompt", "use": "build", "when": "When the image is for an ad and the real product must stay exact" },
+        { "ref": "library:george-lois", "type": "mind", "use": "think", "when": "When the image is pretty but says nothing, to join one picture to one line" },
+        { "ref": "library:ai-product-photo-inspector", "type": "skill", "use": "check", "when": "Before posting, to check the product in each scene still matches the real one" }
+      ]
+    },
+    {
+      "id": "main-image-test",
+      "task": "Test which main image wins the click",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:main-image-a-b-test-planner", "type": "skill", "use": "explore", "when": "When you want test versions that each change one thing, with a review sheet" },
+        { "ref": "library:ab-test-traffic-checker", "type": "skill", "use": "brief", "when": "Before the test, to see if the listing has enough visits and how many weeks it needs" },
+        { "ref": "library:pack-and-thumbnail-glance-tester", "type": "skill", "use": "check", "when": "Before spending traffic, to drop versions that do not read at thumbnail size" },
+        { "ref": "library:a-b-test-verdict-maker", "type": "skill", "use": "check", "when": "When results are in, to check the split and call a winner with a confidence range" }
+      ]
+    },
+    {
+      "id": "file-delivery",
+      "task": "Prepare final files: names, alt text, size and speed",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/channel-image-spec-and-ai-check", "use": "brief", "when": "When you need the file names and alt text pattern each channel expects" },
+        { "ref": "library:product-image-alt-text-writer", "type": "skill", "use": "build", "when": "When a Shopify store's images have no alt text and it should be set on each" },
+        { "ref": "library:image-compressor", "type": "skill", "use": "build", "when": "When files are too heavy and must load faster without looking worse" },
+        { "ref": "library:shopify-magic", "type": "tool", "use": "build", "when": "When the seller edits photos inside Shopify and you must know what it can do" },
+        { "ref": "library:store-image-prep-checker", "type": "skill", "use": "check", "when": "Before handover, to check sizes, names and alt text and get a score" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any work that must match the seller's live store: colours, mood and voice" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When an image carries a size, number or claim you cannot trace to the seller" }
+  ],
+  "helpers": [
+    { "role": "video-producer", "when": "When the job is a full product video with a script, crew and edit, not a short brief" },
+    { "role": "graphic-designer", "when": "When images need text, labels or layouts such as infographics, banners or ads" },
+    { "role": "amazon-marketplace-manager", "when": "When the images are part of a whole Amazon listing with title, bullets and A+ content" },
+    { "role": "shopify-specialist", "when": "When the image work needs theme changes, bulk uploads or page speed fixes" },
+    { "role": "ecommerce-copywriter", "when": "When the gallery needs captions, on-image words or a product description to match" },
+    { "role": "packaging-designer", "when": "When the pack itself reads badly in photos and needs a redesign, not a reshoot" }
+  ],
+  "gaps": [
+    "No library item covers real lighting set-ups, camera or phone settings, or white balance for a home studio; only the kit prompt does",
+    "No library item writes an edit recipe for Lightroom, Snapseed or similar apps, or checks colour against the real product",
+    "No library item builds a shoot day schedule, call sheet or prep and props list",
+    "No library item covers model or property releases, image usage licences, or comparing photographer quotes like for like",
+    "No library item plans an Amazon image set: main image rules, secondary infographic images and A+ image modules",
+    "No library item gives image rules for Etsy, Google Merchant Center or TikTok Shop one by one; one general rule checker covers all",
+    "No library item covers hard-to-shoot products such as food, jewellery, glass and other shiny items",
+    "No library item specs a 360 spin or sets listing video sizes and lengths per channel",
+    "No library item checks where retouching crosses the line into a misleading photo, or when an AI image must be labelled"
+  ]
+}

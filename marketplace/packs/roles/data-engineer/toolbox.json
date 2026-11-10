@@ -1,0 +1,280 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "data-engineer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "source-inventory",
+      "task": "List every source tool, object and join key",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/source-inventory-table", "use": "build", "when": "At the start of a warehouse project, before any sync tool is chosen or model written" },
+        { "ref": "library:shared-business-record-planner", "type": "skill", "use": "brief", "when": "When two tools hold the same customer or order, to set which tool owns each field" },
+        { "ref": "library:column-mapping-document-writer", "type": "skill", "use": "build", "when": "When source columns need a column-by-column map to the target with rules and gaps" }
+      ]
+    },
+    {
+      "id": "pipeline-spec",
+      "task": "Write a pipeline spec from the firm's tools to one warehouse",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/pipeline-spec-from-tools", "use": "build", "when": "When shop, payments, CRM, ads and bookings must land in one database on a schedule" },
+        { "ref": "library:agency-engineering-data-engineer", "type": "agent", "use": "explore", "when": "When you want a second design with raw, cleaned and report layers to set against yours" },
+        { "ref": "library:data-pipeline-builder", "type": "skill", "use": "build", "when": "When the spec is agreed and a working pipeline with checks and a schedule is needed" },
+        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When the design only covers the happy path, to plan for late, failed and repeated loads" },
+        { "ref": "library:small-sample-pipeline-builder", "type": "skill", "use": "check", "when": "Before full loads, to prove the whole path on a tiny sample and see the cost" }
+      ]
+    },
+    {
+      "id": "first-warehouse",
+      "task": "Set up a firm's first warehouse",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/first-warehouse-setup", "use": "build", "when": "When a firm wants its tools' data in one place because reports disagree or take too long" },
+        { "ref": "library:database-design-guide", "type": "skill", "use": "brief", "when": "When the database is not chosen, to pick one and outline schema, indexes and migration" },
+        { "ref": "library:snowflake-data-builder", "type": "skill", "use": "build", "when": "When the warehouse is Snowflake and its SQL and loading rules must be followed" },
+        { "ref": "library:postgres-schema-designer", "type": "skill", "use": "build", "when": "When the warehouse is Postgres and needs the right types, keys and indexes" }
+      ]
+    },
+    {
+      "id": "reporting-schema",
+      "task": "Design the reporting schema",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/dbt-models-with-tests", "use": "build", "when": "When each mart table needs a stated grain and a clear path from staging" },
+        { "ref": "library:database-schema-planner", "type": "skill", "use": "build", "when": "When you need a clean schema with keys and query advice for the reports asked for" },
+        { "ref": "library:metric-definition-writer", "type": "skill", "use": "brief", "when": "Before the marts, to fix how each reported metric is worked out" },
+        { "ref": "library:mermaid-chart-writer", "type": "skill", "use": "build", "when": "When the tables and links should be drawn as a diagram the client can read" }
+      ]
+    },
+    {
+      "id": "dbt-models",
+      "task": "Write layered models with tests",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/dbt-models-with-tests", "use": "build", "when": "When staging, intermediate and mart models are needed in the client's SQL dialect" },
+        { "ref": "kit:prompts/staging-model-from-schema", "use": "build", "when": "When a raw table has landed and needs a clean staging model with sources and tests" },
+        { "ref": "library:claude-code", "type": "tool", "use": "build", "when": "When the models live in a repo and should be written, run and tested in place" },
+        { "ref": "library:kent-beck", "type": "mind", "use": "think", "when": "When a model grows large, to list the cases and change it in small tested steps" },
+        { "ref": "library:sql-query-launch-reviewer", "type": "skill", "use": "check", "when": "Before a model goes live, to find wrong-result risks, slow spots and safer rewrites" },
+        { "ref": "library:agency-engineering-code-reviewer", "type": "agent", "use": "check", "when": "Before merge, for a review of bugs, tests and clarity ranked by how serious each is" }
+      ]
+    },
+    {
+      "id": "model-tests",
+      "task": "Decide and write the tests for a model",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/test-table-for-a-model", "use": "build", "when": "Before writing or changing a model, to decide its tests and which failures block reports" },
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "brief", "when": "When you do not know the data's faults yet, to find them and the rules that catch them" },
+        { "ref": "library:sample-data-file-maker", "type": "skill", "use": "build", "when": "When tests need a made-up file with bad rows to prove each one fires" },
+        { "ref": "library:test-data-seeder", "type": "skill", "use": "build", "when": "When staging needs realistic, repeatable data loaded into its tables" }
+      ]
+    },
+    {
+      "id": "run-book-alerts",
+      "task": "Write the run book and alert rules for a pipeline",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/pipeline-run-book-and-alerts", "use": "build", "when": "When each source needs freshness and completeness promises and alerts with an owner" },
+        { "ref": "library:on-call-runbook-writer", "type": "skill", "use": "build", "when": "When one failure needs steps anyone can follow under pressure" },
+        { "ref": "library:reliability-target-setter", "type": "skill", "use": "brief", "when": "When nobody has said how fresh is fresh enough, to set targets and an error budget" },
+        { "ref": "library:the-monitoring-loop-always-watching-implementation-planner", "type": "skill", "use": "build", "when": "When row counts and totals need baselines and quiet periods so alerts stay few" },
+        { "ref": "library:sop-and-runbook-checker", "type": "skill", "use": "check", "when": "When run books exist, to find missing owners, stale pages and gaps" }
+      ]
+    },
+    {
+      "id": "failed-load",
+      "task": "Respond to a failed or late load",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/failed-or-late-load-response", "use": "build", "when": "When an alert fires or someone reports a number that looks wrong" },
+        { "ref": "library:error-and-log-debugger", "type": "skill", "use": "build", "when": "When you have the error or log and need the cause and a fix that works" },
+        { "ref": "library:schedule-timing-checker", "type": "skill", "use": "check", "when": "When a job ran twice or not at all, to read the schedule and find silent mistakes" },
+        { "ref": "library:incident-postmortem-writer", "type": "skill", "use": "build", "when": "After the fix, to write a blameless record with timeline, causes and actions" },
+        { "ref": "library:turn-an-incident-into-a-safer-procedure", "type": "workflow", "use": "build", "when": "When the incident should change the run book and leave tracked prevention actions" }
+      ]
+    },
+    {
+      "id": "safe-rerun",
+      "task": "Check a re-run or backfill is safe before running it",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/safe-rerun-check", "use": "check", "when": "When a load failed, ran late or ran twice and someone wants to re-run or backfill" },
+        { "ref": "library:copilot-bigquery-pipeline-audit", "type": "skill", "use": "check", "when": "When the pipeline is Python on BigQuery, to find repeat-run risks and costly queries" },
+        { "ref": "kit:skills/pipeline-run-book-and-alerts", "use": "build", "when": "When the safe steps should be written into the run book for next time" }
+      ]
+    },
+    {
+      "id": "source-to-report-tie-out",
+      "task": "Trace a report number back to the source and fix the gap",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/source-to-report-tie-out", "use": "build", "when": "When a report number does not match the source tool and must be fixed for good" },
+        { "ref": "library:metric-mismatch-tracer", "type": "skill", "use": "check", "when": "When two reports differ, to find the step where their counts split" },
+        { "ref": "library:reconciliation-break-tracer", "type": "skill", "use": "check", "when": "When one difference must be traced to the entries on both sides" },
+        { "ref": "library:plain-words-sql-explainer", "type": "skill", "use": "check", "when": "When a model's SQL must be read line by line for what it counts and drops" },
+        { "ref": "library:copilot-sql-server-table-reconciliation", "type": "skill", "use": "check", "when": "When two SQL Server tables should match, to list schema and row differences" }
+      ]
+    },
+    {
+      "id": "lineage-and-docs",
+      "task": "Document tables, columns and lineage",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:data-catalog-entry-writer", "type": "skill", "use": "build", "when": "When a table needs a plain entry with column meanings, sources and who may use it" },
+        { "ref": "library:copilot-sql-object-impact-analysis", "type": "skill", "use": "build", "when": "When you need what reads a table or view and what sits downstream of it" },
+        { "ref": "library:mermaid-chart-writer", "type": "skill", "use": "build", "when": "When the path from raw table to report should be drawn as a diagram" },
+        { "ref": "library:code-documentation-writer", "type": "skill", "use": "build", "when": "When the pipeline code needs a README and usage notes that match what it does" }
+      ]
+    },
+    {
+      "id": "spend-guardrails",
+      "task": "Set warehouse spend guardrails",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/warehouse-spend-guardrails", "use": "build", "when": "Before people, jobs or an AI tool get query access, or after a surprise bill" },
+        { "ref": "library:data-warehouse-query-reviewer", "type": "skill", "use": "check", "when": "When queries from analysts or AI tools must stay read-only and safe on joins and privacy" },
+        { "ref": "library:safe-database-query-runner", "type": "skill", "use": "build", "when": "When someone needs answers from Postgres through a read-only path with write protection" },
+        { "ref": "library:monthly-cloud-and-ai-bill-keeper", "type": "agent", "use": "check", "when": "Each month, to see what grew on the bill, the waste behind it and caps to add" }
+      ]
+    },
+    {
+      "id": "change-release",
+      "task": "Release a pipeline change safely",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/pipeline-change-release", "use": "build", "when": "For any change to a source, model, test or schedule that reaches production" },
+        { "ref": "library:copilot-sql-object-impact-analysis", "type": "skill", "use": "check", "when": "Before changing a table or view, to list what depends on it" },
+        { "ref": "library:database-migration-writer", "type": "skill", "use": "build", "when": "When the change alters a schema and needs a versioned step that can roll back" },
+        { "ref": "library:release-day-rollback-planner", "type": "prompt", "use": "build", "when": "When the release needs its checks, a rollback plan and a sign it worked" },
+        { "ref": "library:release-readiness-reviewer", "type": "skill", "use": "check", "when": "Before release, for a read-only report of migration, config and order risks" },
+        { "ref": "library:release-manager", "type": "agent", "use": "check", "when": "When you want a go or no-go with version, changelog and a live check" }
+      ]
+    },
+    {
+      "id": "sql-queries",
+      "task": "Write SQL queries from a schema",
+      "kind": "code",
+      "items": [
+        { "ref": "library:plain-words-sql-writer", "type": "skill", "use": "build", "when": "When the need can be said in plain words and the database type is known" },
+        { "ref": "library:snowflake-data-builder", "type": "skill", "use": "build", "when": "When the query runs on Snowflake and should follow its good practice" },
+        { "ref": "library:sql-query-launch-reviewer", "type": "skill", "use": "check", "when": "Before a query feeds a report, to find wrong-result risks and slow spots" }
+      ]
+    },
+    {
+      "id": "query-speed",
+      "task": "Speed up a slow query or model",
+      "kind": "code",
+      "items": [
+        { "ref": "library:slow-query-fixer", "type": "skill", "use": "build", "when": "When one query is slow and needs the cause found and a faster version" },
+        { "ref": "library:postgres-query-tuner", "type": "skill", "use": "build", "when": "When Postgres is slow across several queries and needs indexes and settings ranked" },
+        { "ref": "library:john-carmack", "type": "mind", "use": "think", "when": "When people guess at the slow part, to follow the real run and measure first" }
+      ]
+    },
+    {
+      "id": "custom-extract",
+      "task": "Build an extract for a tool with no ready connector",
+      "kind": "code",
+      "items": [
+        { "ref": "library:api-connector-builder", "type": "skill", "use": "build", "when": "When a source has an API but no sync tool, to get code with sign-in, retries and errors" },
+        { "ref": "library:webhook-receiver-builder", "type": "skill", "use": "build", "when": "When the source pushes events, to receive them with signature checks and safe repeats" },
+        { "ref": "library:shopify-data-connector", "type": "skill", "use": "build", "when": "When the source is Shopify and you need queries with paging and rate limits handled" },
+        { "ref": "library:data-file-reader-and-writer", "type": "skill", "use": "build", "when": "When the source drops CSV, Excel, JSON or Parquet files that must be read correctly" }
+      ]
+    },
+    {
+      "id": "scheduling-and-ci",
+      "task": "Schedule jobs and run tests on every change",
+      "kind": "code",
+      "items": [
+        { "ref": "library:schedule-timing-checker", "type": "skill", "use": "check", "when": "When a schedule is written, to see its next run times and catch silent mistakes" },
+        { "ref": "library:ci-cd-pipeline-setup", "type": "skill", "use": "build", "when": "When model tests should run on every change before anything ships" },
+        { "ref": "library:failed-workflow-diagnoser", "type": "skill", "use": "build", "when": "When a CI run fails and you need the cause from the log and a fix" }
+      ]
+    },
+    {
+      "id": "data-quality-monitoring",
+      "task": "Check loaded data quality on a regular rhythm",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:data-quality-scorecard-maker", "type": "skill", "use": "build", "when": "When blanks, duplicates, broken links and stale data need a regular score per table" },
+        { "ref": "library:ad-data-quality-checker", "type": "skill", "use": "check", "when": "When ad and sales data in BigQuery must be checked before anyone reports on it" },
+        { "ref": "library:monthly-tracking-health-keeper", "type": "agent", "use": "check", "when": "Each month, to catch broken tracking and double counts before they reach the warehouse" }
+      ]
+    },
+    {
+      "id": "privacy-and-secrets",
+      "task": "Plan personal data handling, access and secrets",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:agency-engineering-privacy-engineer", "type": "agent", "use": "build", "when": "When you need a map of where personal data lives and deletion that reaches every table" },
+        { "ref": "library:secrets-setup-helper", "type": "skill", "use": "build", "when": "When pipeline keys and passwords need a safe plan to store, read and rotate" },
+        { "ref": "library:data-warehouse-query-reviewer", "type": "skill", "use": "check", "when": "When shared queries may expose personal columns, to check privacy before access is given" }
+      ]
+    },
+    {
+      "id": "backup-and-recovery",
+      "task": "Plan backups and rehearse a restore",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:backup-and-recovery-planner", "type": "skill", "use": "build", "when": "When nobody has said how much data loss is acceptable or how a restore would run" },
+        { "ref": "library:build-a-backup-recovery-rehearsal", "type": "workflow", "use": "check", "when": "When backups exist but no restore has been tested, to plan a safe rehearsal" }
+      ]
+    },
+    {
+      "id": "data-move",
+      "task": "Move data from an old database or tool to a new one",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:business-data-move-runbook", "type": "skill", "use": "build", "when": "When data moves between tools and needs field maps, checks and a rollback path" },
+        { "ref": "library:column-mapping-document-writer", "type": "skill", "use": "build", "when": "When every old column needs a new home, a rule and a decision on gaps" },
+        { "ref": "library:copilot-sql-server-table-reconciliation", "type": "skill", "use": "check", "when": "After the move, when old and new SQL Server tables must be proved to match" }
+      ]
+    },
+    {
+      "id": "event-data",
+      "task": "Land product and web analytics events in the warehouse",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:event-tracking-planner", "type": "skill", "use": "brief", "when": "When events are not yet defined, to set the event list and naming rules first" },
+        { "ref": "library:ga4-raw-data-analyst", "type": "skill", "use": "build", "when": "When the GA4 export is in BigQuery and must give sessions, channels and sign-ups" }
+      ]
+    },
+    {
+      "id": "design-doc",
+      "task": "Write a technical design document or decision record",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:system-design-planner", "type": "skill", "use": "build", "when": "When a build needs an architecture choice with diagrams and trade-offs" },
+        { "ref": "library:decision-record-writer", "type": "skill", "use": "build", "when": "When a design choice is made, to record why and what was passed over" },
+        { "ref": "library:agency-engineering-data-engineer", "type": "agent", "use": "check", "when": "When the design is drafted, to test it against layers, quality checks and failure plans" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:requirements-question-asker", "type": "skill", "use": "brief", "when": "Before any build, when the request does not say which reports the data must feed" },
+    { "ref": "library:change-impact-checker", "type": "skill", "use": "check", "when": "Before any change ships, to name what it could break outside its own diff" },
+    { "ref": "library:technical-doc-proofreader", "type": "skill", "use": "check", "when": "Before a spec or run book is handed over, to catch typos and terms used two ways" }
+  ],
+  "helpers": [
+    { "role": "database-engineer", "when": "When the job is deep database work: indexes, replication, tuning or a hard schema migration" },
+    { "role": "devops-engineer", "when": "When the pipeline needs servers, containers, CI or cloud set-up beyond the data work" },
+    { "role": "bi-analyst", "when": "When the marts are ready and someone must define metrics and build the dashboards" },
+    { "role": "data-quality-analyst", "when": "When the firm needs a data dictionary, weekly quality checks or a duplicate clean-up" },
+    { "role": "backend-developer", "when": "When a source needs a custom API client or the app itself must emit new data" },
+    { "role": "automation-specialist", "when": "When a small firm is better served by a no-code sync than by a warehouse" }
+  ],
+  "gaps": [
+    "No library item writes dbt models, sources, tests, snapshots or contracts; only the kit covers dbt",
+    "No library item writes an Airflow or Dagster DAG, or plans job order, retries and dependencies for data loads",
+    "No library item compares sync tools or picks a load method (full, incremental or change capture) per source",
+    "No library item designs a star schema, a date table or history tables for values that change over time",
+    "No library item sets warehouse cost controls such as quotas, partitioning rules and per-user limits",
+    "No library item watches pipeline freshness and row counts; the monitoring items are for web services",
+    "No library item plans a safe backfill or proves a job can run twice without double counting",
+    "No library item draws a lineage map from a report number back to the raw table",
+    "No library item compares BigQuery, Snowflake and Postgres for a small firm's first warehouse",
+    "No library item syncs warehouse data back into a CRM or email tool"
+  ]
+}

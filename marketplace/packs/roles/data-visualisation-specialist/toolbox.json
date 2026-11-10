@@ -1,0 +1,283 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "data-visualisation-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "chart-pick-and-spec",
+      "task": "Pick the right chart for a message and write its spec",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/which-chart-for-this-message", "use": "brief", "when": "When there is a small table and a point to make and the chart type is not chosen" },
+        { "ref": "kit:skills/chart-pick-and-spec", "use": "build", "when": "When the chart must be written in full as Vega-Lite, Chart.js or spreadsheet steps" },
+        { "ref": "library:data-chart-drawer", "type": "skill", "use": "explore", "when": "When the client should see a drawn alternative, as an image or an interactive plot" },
+        { "ref": "library:alberto-cairo", "type": "mind", "use": "think", "when": "When a chart is correct but unclear, to separate what it shows from what readers assume" },
+        { "ref": "library:agency-engineering-data-visualization-engineer", "type": "agent", "use": "check", "when": "When the spec is drafted, to check the type, axes and colours do not mislead" }
+      ]
+    },
+    {
+      "id": "chart-set",
+      "task": "Make a set of charts for one message",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:workflows/chart-from-brief-to-published", "use": "brief", "when": "When a request for charts arrives and you need the steps from brief to published" },
+        { "ref": "library:data-story-writer", "type": "skill", "use": "brief", "when": "Before any chart, to fix the point, the proof and the next step for the reader" },
+        { "ref": "kit:skills/chart-pick-and-spec", "use": "build", "when": "When each chart needs its own message, headline and full spec" },
+        { "ref": "library:chart-maker", "type": "skill", "use": "explore", "when": "When you want several versions drawn in code to compare before choosing" },
+        { "ref": "library:cole-nussbaumer-knaflic", "type": "mind", "use": "think", "when": "When every chart shows everything, to bring out the one thing the reader must see" },
+        { "ref": "kit:prompts/is-this-chart-misleading", "use": "check", "when": "Before the set goes into a report, deck or post" }
+      ]
+    },
+    {
+      "id": "chart-review",
+      "task": "Review existing charts and list the fixes",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/chart-review-and-fix", "use": "check", "when": "When charts or results slides may mislead, exclude or confuse readers" },
+        { "ref": "kit:prompts/is-this-chart-misleading", "use": "check", "when": "When one chart is questioned and needs a quick, clear verdict" },
+        { "ref": "library:carl-bergstrom", "type": "mind", "use": "think", "when": "When a chart looks impressive, to check its scales, selection and what it can establish" },
+        { "ref": "library:journal-ready-figure-maker", "type": "skill", "use": "build", "when": "When a chart must be redrawn honest and colour-safe with its uncertainty shown" },
+        { "ref": "library:agency-engineering-data-visualization-engineer", "type": "agent", "use": "check", "when": "When you want a second pass or fail on axes, colours and chart type" }
+      ]
+    },
+    {
+      "id": "brand-palette",
+      "task": "Turn brand colours into an accessible chart palette",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/brand-colours-to-chart-palette", "use": "build", "when": "When charts should use brand colours and some may fail accessibility checks" },
+        { "ref": "kit:skills/accessible-chart-colour-and-text", "use": "build", "when": "When the palette must pass contrast, colour-blind, greyscale and dark mode checks" },
+        { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "When the brand colours are only on the live site and must be measured first" },
+        { "ref": "library:mood-colour-palette-planner", "type": "skill", "use": "explore", "when": "When the brand has too few usable colours, to plan a small added palette with one job each" },
+        { "ref": "library:colour-contrast-checker", "type": "skill", "use": "check", "when": "When each text and background pair needs testing, with the nearest passing colour" }
+      ]
+    },
+    {
+      "id": "alt-text",
+      "task": "Write alt text and a long description for a chart",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/alt-text-and-long-description", "use": "build", "when": "When a chart goes on a site, PDF, deck or email and needs text alternatives" },
+        { "ref": "kit:skills/accessible-chart-colour-and-text", "use": "check", "when": "When colour is the only cue and labels or patterns must carry the meaning too" },
+        { "ref": "library:powerpoint-accessibility-reviewer", "type": "skill", "use": "check", "when": "When the charts sit in a deck, to check titles, reading order and alt text" },
+        { "ref": "library:agency-testing-accessibility-auditor", "type": "agent", "use": "check", "when": "When the charts sit on a web page that must work with keyboard and screen reader" }
+      ]
+    },
+    {
+      "id": "infographic",
+      "task": "Plan a one-page infographic",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/infographic-and-data-deck-layout", "use": "build", "when": "When numbers, steps or results need one main message and sections in reading order" },
+        { "ref": "library:word-picture-explainer", "type": "skill", "use": "brief", "when": "Before layout, to plan which visual pairs with which words so the point sticks" },
+        { "ref": "library:infographic-maker", "type": "skill", "use": "explore", "when": "When the client wants to see a finished version with a layout and style picked" },
+        { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "When the page looks like a stock template, to get three hand-made alternatives" },
+        { "ref": "library:page-grid-and-type-planner", "type": "skill", "use": "build", "when": "When the page carries a lot of text and needs a grid and a short type list" },
+        { "ref": "library:edward-tufte", "type": "mind", "use": "think", "when": "When decoration crowds the numbers, to keep only what helps people compare" },
+        { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When the layout is drafted, to see where the eye lands first and what to cut" }
+      ]
+    },
+    {
+      "id": "social-data-carousel",
+      "task": "Plan a data carousel or infographic set for social posts",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/infographic-and-data-deck-layout", "use": "build", "when": "When results must become slides for Instagram or LinkedIn, one fact per slide" },
+        { "ref": "library:linkedin-post-writer", "type": "skill", "use": "explore", "when": "When the set is for LinkedIn, to try a different carousel script and opening slide" },
+        { "ref": "library:figures-to-plain-pictures-writer", "type": "prompt", "use": "build", "when": "When a figure means little alone, to turn it into a comparison people can picture" },
+        { "ref": "library:canva", "type": "tool", "use": "build", "when": "When the client's team will build and reuse the slides themselves" },
+        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before posting, to check each figure on a slide against its source" }
+      ]
+    },
+    {
+      "id": "results-deck",
+      "task": "Outline a results deck from a table",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/results-deck-outline-from-a-table", "use": "build", "when": "When there is a spreadsheet of results and a meeting, with one message per slide" },
+        { "ref": "library:turn-a-messy-spreadsheet-into-a-clean-slide-deck", "type": "workflow", "use": "build", "when": "When the data is messy and must be cleaned and checked before the story is built" },
+        { "ref": "library:storyboard-to-powerpoint-deck-builder", "type": "skill", "use": "explore", "when": "When you want a second storyboard built as a deck to compare" },
+        { "ref": "library:editable-slide-deck-builder", "type": "skill", "use": "build", "when": "When the client needs a PowerPoint file with real editable text, tables and charts" },
+        { "ref": "library:nancy-duarte", "type": "mind", "use": "think", "when": "When the deck is a pile of charts, to shape it into a story with a clear ask" },
+        { "ref": "library:excel-powerpoint-number-checker", "type": "skill", "use": "check", "when": "Before the deck is sent, to check every slide number and chart against the workbook" }
+      ]
+    },
+    {
+      "id": "monthly-chart-refresh",
+      "task": "Refresh the charts for a recurring report",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/monthly-report-chart-refresh", "use": "build", "when": "Monthly or quarterly, when new figures land for a report, board pack or results page" },
+        { "ref": "library:deck-number-refresher", "type": "skill", "use": "build", "when": "When a deck needs every number updated from new figures, with a change log" },
+        { "ref": "library:build-a-monthly-excel-and-powerpoint-update", "type": "workflow", "use": "build", "when": "When the monthly workbook and its update deck are built together" },
+        { "ref": "library:powerpoint-deck-change-reviewer", "type": "skill", "use": "check", "when": "When the new deck should be compared with last month's for every changed number" },
+        { "ref": "library:excel-powerpoint-number-checker", "type": "skill", "use": "check", "when": "When each chart and label must agree with the source workbook" }
+      ]
+    },
+    {
+      "id": "chart-style-guide",
+      "task": "Write a chart style guide for the client's reports",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/accessible-chart-colour-and-text", "use": "build", "when": "When the guide needs a tested palette, text sizes and labelling rules" },
+        { "ref": "library:visual-system-rules-writer", "type": "skill", "use": "build", "when": "When colour, type and grid need firm rules every chart and page must follow" },
+        { "ref": "library:font-pair-shortlist-maker", "type": "prompt", "use": "explore", "when": "When the client has no report fonts, to compare three pairs with sizes" },
+        { "ref": "library:write-design-rules-check-colours-and-hand-developers-a-spec", "type": "workflow", "use": "build", "when": "When developers will apply the guide and need tokens and a handoff spec" },
+        { "ref": "library:colour-contrast-checker", "type": "skill", "use": "check", "when": "Before the guide is issued, to test every colour pair in light and dark" }
+      ]
+    },
+    {
+      "id": "chart-code",
+      "task": "Write chart code for an app or website",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/chart-pick-and-spec", "use": "build", "when": "When the site needs a runnable Chart.js config or Vega-Lite spec for each chart" },
+        { "ref": "library:interactive-chart-maker", "type": "skill", "use": "explore", "when": "When hover, zoom and pan matter, to try an embeddable interactive version" },
+        { "ref": "library:dashboard-builder", "type": "skill", "use": "build", "when": "When several charts with filters should ship as one page that works offline" },
+        { "ref": "library:agency-testing-accessibility-auditor", "type": "agent", "use": "check", "when": "When the charts are live on a page, to test them against accessibility rules" }
+      ]
+    },
+    {
+      "id": "office-charts",
+      "task": "Build or fix charts in Excel and PowerPoint",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/which-chart-for-this-message", "use": "brief", "when": "When the client builds charts in a spreadsheet and needs the type and steps" },
+        { "ref": "library:powerpoint-chart-data-rebuilder", "type": "skill", "use": "build", "when": "When a deck holds picture charts that must become editable ones from real data" },
+        { "ref": "library:powerpoint-template-populator", "type": "skill", "use": "build", "when": "When charts and text must follow the client's own slide template" },
+        { "ref": "library:excel-powerpoint-number-checker", "type": "skill", "use": "check", "when": "When the charts are placed, to prove each value matches the workbook" }
+      ]
+    },
+    {
+      "id": "results-one-pager",
+      "task": "Lay out a one-page results summary",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/infographic-and-data-deck-layout", "use": "build", "when": "When a year or project must fit one page with a big number, a chart and three facts" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "brief", "when": "When the source is a long report, to get the answer and the numbers that matter first" },
+        { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "When the page looks like every other summary, to get three alternatives" },
+        { "ref": "library:plain-page-type-checker", "type": "skill", "use": "check", "when": "When the page is drafted, to check type size, spacing and line length" }
+      ]
+    },
+    {
+      "id": "dashboard-page-design",
+      "task": "Design a dashboard page readers take in at a glance",
+      "kind": "other",
+      "items": [
+        { "ref": "library:kpi-dashboard-designer", "type": "skill", "use": "build", "when": "When you know who reads it and what they decide, to pick metrics and a layout" },
+        { "ref": "library:design-a-power-bi-report-layout", "type": "skill", "use": "build", "when": "When the tool is Power BI and pages, charts and filters need laying out" },
+        { "ref": "library:interactive-visual-builder", "type": "skill", "use": "explore", "when": "When a working sample with sliders or toggles would settle the layout" },
+        { "ref": "library:design-feedback-giver", "type": "skill", "use": "check", "when": "When there is a mockup, for feedback on hierarchy and consistency with fixes" }
+      ]
+    },
+    {
+      "id": "report-charts",
+      "task": "Make charts for an annual or impact report",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:workflows/chart-from-brief-to-published", "use": "build", "when": "When a report needs a consistent set of charts taken from brief to print" },
+        { "ref": "library:figures-to-plain-pictures-writer", "type": "prompt", "use": "explore", "when": "When key figures should also be shown as comparisons readers can picture" },
+        { "ref": "library:unsupported-claim-spotter", "type": "skill", "use": "check", "when": "When captions state claims, to find each one that needs a source" },
+        { "ref": "library:nonprofit-annual-report-planner", "type": "skill", "use": "check", "when": "When the client is a charity, to check facts, numbers and names before print" }
+      ]
+    },
+    {
+      "id": "survey-charts",
+      "task": "Chart survey results fairly",
+      "kind": "other",
+      "items": [
+        { "ref": "library:prepare-a-survey-findings-briefing", "type": "workflow", "use": "build", "when": "When survey results need a findings table, caveats and a slide-by-slide briefing" },
+        { "ref": "kit:skills/chart-pick-and-spec", "use": "build", "when": "When each survey question needs the right chart with its base size shown" },
+        { "ref": "library:david-spiegelhalter", "type": "mind", "use": "think", "when": "When small groups are compared, to show what the numbers cannot tell you" },
+        { "ref": "library:survey-answer-truth-checker", "type": "prompt", "use": "check", "when": "Before charting, to see which answers can be trusted and which are weak" }
+      ]
+    },
+    {
+      "id": "diagram",
+      "task": "Draw a process diagram or flowchart",
+      "kind": "other",
+      "items": [
+        { "ref": "library:word-picture-explainer", "type": "skill", "use": "brief", "when": "Before drawing, to plan a diagram that pairs with the explanation" },
+        { "ref": "library:mermaid-chart-writer", "type": "skill", "use": "build", "when": "When the diagram should be text the client can paste into docs and edit" },
+        { "ref": "library:diagram-maker", "type": "skill", "use": "explore", "when": "When a finished picture is wanted, to get a clean SVG version" },
+        { "ref": "library:workflow-diagram-and-change-planner", "type": "skill", "use": "check", "when": "When the diagram shows a workflow, to check each hand-off as it is drawn" }
+      ]
+    },
+    {
+      "id": "map",
+      "task": "Design a map of the numbers",
+      "kind": "other",
+      "items": [
+        { "ref": "library:agency-gis-cartography-designer", "type": "agent", "use": "build", "when": "When figures vary by place and need a map with symbols, labels and readability checks" },
+        { "ref": "kit:prompts/is-this-chart-misleading", "use": "check", "when": "When shaded areas may mislead because big regions hold few people" }
+      ]
+    },
+    {
+      "id": "research-figures",
+      "task": "Make figures for a paper or a research poster",
+      "kind": "other",
+      "items": [
+        { "ref": "library:research-paper-figure-maker", "type": "skill", "use": "build", "when": "When results or a method need charts and diagrams fit for a paper" },
+        { "ref": "library:journal-ready-figure-maker", "type": "skill", "use": "build", "when": "When figures must be colour-safe, show uncertainty and export at journal size" },
+        { "ref": "library:research-poster-builder", "type": "skill", "use": "build", "when": "When approved text and figures must become an editable poster at print size" },
+        { "ref": "library:agency-engineering-data-visualization-engineer", "type": "agent", "use": "check", "when": "Before submission, to check each figure for chart type, axes and colour problems" }
+      ]
+    },
+    {
+      "id": "icons-and-pictures",
+      "task": "Plan icons and pictures for an infographic",
+      "kind": "other",
+      "items": [
+        { "ref": "library:icon-set-planner", "type": "skill", "use": "build", "when": "When the page needs a small icon set and a test that each icon reads" },
+        { "ref": "library:marketing-image-maker", "type": "skill", "use": "build", "when": "When one picture is needed, with a prompt, the exact size and a file plan" },
+        { "ref": "library:article-illustrator", "type": "skill", "use": "explore", "when": "When a long piece needs a plan for where pictures belong and a matching set" },
+        { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "When the pictures are placed, to have a fresh reviewer read the page as the client would" }
+      ]
+    },
+    {
+      "id": "animated-chart",
+      "task": "Animate a chart or infographic for social or video",
+      "kind": "other",
+      "items": [
+        { "ref": "library:design-to-motion-animator", "type": "skill", "use": "build", "when": "When a static design should move, with fidelity checks and video or GIF exports" },
+        { "ref": "library:motion-graphics-build-plan", "type": "skill", "use": "build", "when": "When an editor will build it and needs an exact plan and a sourced text table" },
+        { "ref": "kit:skills/chart-review-and-fix", "use": "check", "when": "When the animation is drafted, to check the chart still reads true at each stage" }
+      ]
+    },
+    {
+      "id": "present-and-share",
+      "task": "Get a results deck ready to present and share",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:prepare-a-powerpoint-deck-for-presenting-and-sharing", "type": "workflow", "use": "build", "when": "When the deck is finished and needs notes, appendix links and an accessibility pass" },
+        { "ref": "library:powerpoint-speaker-note-builder", "type": "skill", "use": "build", "when": "When the presenter needs notes with sources, transitions and a rehearsal plan" },
+        { "ref": "library:powerpoint-accessibility-reviewer", "type": "skill", "use": "check", "when": "Before sharing, to fix slide titles, reading order and alt text" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:clients-eye-check", "type": "skill", "use": "check", "when": "Before delivery, to have a fresh reviewer read the work against the brief as the client would" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before anything is published, to catch typos and a measure named two ways" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a headline or caption states a figure you cannot trace to the client's data" }
+  ],
+  "helpers": [
+    { "role": "data-analyst", "when": "When the numbers are messy or the finding is not yet worked out" },
+    { "role": "bi-analyst", "when": "When the charts must live in a dashboard with defined metrics and a refresh" },
+    { "role": "graphic-designer", "when": "When the infographic needs full artwork, print files or a social template kit" },
+    { "role": "presentation-designer", "when": "When the deck needs slide design and a template beyond the charts" },
+    { "role": "accessibility-specialist", "when": "When a report or page must pass a formal accessibility audit" },
+    { "role": "frontend-developer", "when": "When charts must be built into a live site or app with real data" }
+  ],
+  "gaps": [
+    "No library item writes a Vega-Lite spec or a Chart.js config; the chart makers produce Python, Plotly or MATLAB output",
+    "No library item gives step-by-step chart building in Excel or Google Sheets",
+    "No library item scores a chart for cut axes, dual axes, crowded pies or misleading colour; only one imported agent checks charts",
+    "No library item tests a chart palette for colour-blind readers and greyscale; the contrast checker is for interface colours",
+    "No library item writes alt text or a long description for a chart; the alt text items are for product photos",
+    "No library item plans a data carousel for Instagram or LinkedIn; the carousel writers are for ads",
+    "No library item renders three clearly different chart or infographic directions as images to compare",
+    "No library item writes a chart style guide: palette, type, labels, number formats and when to use each chart",
+    "No library item writes the headline and annotations that say what a chart shows",
+    "No library item decides when a table beats a chart, or designs a readable table"
+  ]
+}

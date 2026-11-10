@@ -1,0 +1,288 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "frontend-developer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "component-build",
+      "task": "Build or fix one React or Vue component",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/component-brief-from-design", "use": "brief", "when": "When there is a screen design and a full spec is needed so nothing is guessed in the build" },
+        { "ref": "kit:skills/component-build", "use": "build", "when": "When you write the component with a props table, every state, keyboard use and tests" },
+        { "ref": "library:loading-and-error-state-designer", "type": "skill", "use": "build", "when": "When an existing component shows a blank box while loading, empty or failed" },
+        { "ref": "library:design-handoff-completeness-assistant", "type": "agent", "use": "check", "when": "When a component changed, to find the states and variants still missing" },
+        { "ref": "library:interface-polish-reviewer", "type": "skill", "use": "check", "when": "When it works but feels unfinished, for notes on motion, feel and small details" }
+      ]
+    },
+    {
+      "id": "landing-on-existing-site",
+      "task": "Build a new page on a business's existing website",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any code, to measure the live site's colours, fonts, buttons and layout into a file" },
+        { "ref": "library:landing-page-design-planner", "type": "skill", "use": "explore", "when": "When copy, colours and fonts are known and the client should compare three on-brand designs" },
+        { "ref": "kit:skills/build-on-existing-site", "use": "build", "when": "When the page must look like part of the site they have, not a fresh template" },
+        { "ref": "library:brand-fidelity-check", "type": "skill", "use": "check", "when": "When the page is built, to check fonts, colours, buttons, header and footer against the live site" },
+        { "ref": "library:page-design-standards-checker", "type": "skill", "use": "check", "when": "Before handover, to check contrast, spacing, hierarchy and the phone view" }
+      ]
+    },
+    {
+      "id": "one-file-landing-page",
+      "task": "Build a fast one-file landing page in HTML and CSS",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:landing-page-design-planner", "type": "skill", "use": "explore", "when": "Before building, to compare three designs made from the client's copy and colours" },
+        { "ref": "kit:prompts/one-file-landing-page", "use": "build", "when": "When a founder needs a landing, waitlist or event page this week on a free static host" },
+        { "ref": "library:static-html-landing-page-builder", "type": "skill", "use": "build", "when": "When copy and layout are already checked and need turning into plain HTML with a working form" },
+        { "ref": "library:web-form-designer", "type": "skill", "use": "build", "when": "When the sign-up form needs its fields, error messages and spam protection planned" },
+        { "ref": "library:ai-look-design-reviewer", "type": "skill", "use": "check", "when": "When the page looks machine-made, to score it and rank what to change" },
+        { "ref": "library:steve-krug", "type": "mind", "use": "think", "when": "When the page asks visitors to think, to make the one next step obvious" }
+      ]
+    },
+    {
+      "id": "phone-layout-fix",
+      "task": "Fix a page that breaks on phones",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/fix-a-page-that-breaks-on-phones", "use": "build", "when": "When text overflows, buttons overlap, a table scrolls sideways or the menu will not open" },
+        { "ref": "library:layout-shift-fixer", "type": "skill", "use": "build", "when": "When parts of the page jump as it loads and you have the layout shift report" },
+        { "ref": "library:page-design-standards-checker", "type": "skill", "use": "check", "when": "After the fix, to check spacing, tap sizes and hierarchy on the small view" },
+        { "ref": "library:agency-testing-evidence-collector", "type": "agent", "use": "check", "when": "When the client wants screenshots and pass or fail results as proof" }
+      ]
+    },
+    {
+      "id": "accessibility-fixes",
+      "task": "Fix accessibility problems in a page or component",
+      "kind": "code",
+      "items": [
+        { "ref": "library:accessibility-checker", "type": "skill", "use": "brief", "when": "Before fixing, to get the problems on a page or in code ranked against WCAG 2.2" },
+        { "ref": "library:agency-testing-accessibility-auditor", "type": "agent", "use": "brief", "when": "When you need a test plan for keyboard and screen reader use, not only a code scan" },
+        { "ref": "kit:skills/accessibility-fix-pass", "use": "build", "when": "When you fix what code can fix: headings, labels, keyboard access, focus and contrast" },
+        { "ref": "library:accessible-ui-builder", "type": "skill", "use": "build", "when": "When a part is beyond repair and must be rebuilt accessible from the start" },
+        { "ref": "library:colour-contrast-checker", "type": "skill", "use": "check", "when": "When colour pairs fail and you need the closest passing shade for light and dark themes" }
+      ]
+    },
+    {
+      "id": "page-speed",
+      "task": "Find why a page is slow and what to fix first",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/page-speed-diagnosis", "use": "build", "when": "When you have speed test results and must explain them plainly and rank the fixes" },
+        { "ref": "library:page-speed-fixer", "type": "skill", "use": "build", "when": "When the client pastes a PageSpeed report and wants the fixes in ordered batches" },
+        { "ref": "library:hero-image-loading-fixer", "type": "skill", "use": "build", "when": "When the main image is the slow part and must be set to load first" },
+        { "ref": "library:layout-shift-fixer", "type": "skill", "use": "build", "when": "When the layout shift score fails and each shifting element needs its cause fixed" },
+        { "ref": "library:find-what-is-slow-fix-it-and-show-the-numbers", "type": "workflow", "use": "build", "when": "When the fix must land as a pull request with before and after timings" },
+        { "ref": "library:page-speed-gate-builder", "type": "skill", "use": "check", "when": "When the page is fast again and a build check should stop it slowing down later" }
+      ]
+    },
+    {
+      "id": "image-font-plan",
+      "task": "Write an image and font loading plan",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:image-and-video-pipeline-planner", "type": "skill", "use": "build", "when": "When the site's images and video need formats, responsive sizes and a hosting plan" },
+        { "ref": "library:image-compressor", "type": "skill", "use": "build", "when": "When heavy images must become smaller files that look the same" },
+        { "ref": "kit:skills/page-speed-diagnosis", "use": "brief", "when": "Before the plan, to see which images and fonts cost the most load time" }
+      ]
+    },
+    {
+      "id": "cms-speed-clean-up",
+      "task": "Plan a speed clean-up for a WordPress or Shopify site",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/page-speed-diagnosis", "use": "brief", "when": "Before touching plugins or apps, to find what the speed tests really blame" },
+        { "ref": "library:agency-engineering-wordpress-performance", "type": "agent", "use": "build", "when": "When the site is WordPress and plugins, caching, database and images all need ranking" },
+        { "ref": "library:theme-script-and-style-loader", "type": "skill", "use": "build", "when": "When the site is Shopify and app scripts, styles and fonts block the first paint" }
+      ]
+    },
+    {
+      "id": "browser-extension",
+      "task": "Build, fix or review a small browser extension",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/browser-extension-build", "use": "build", "when": "When a team repeats the same clicks on sites they own and wants a small extension" },
+        { "ref": "kit:prompts/extension-permissions-review", "use": "check", "when": "Before publishing, after a store rejection, or when asked if it is safe to install" },
+        { "ref": "library:skill-safety-reviewer", "type": "skill", "use": "check", "when": "When someone else wrote the add-on and you want a read-only safety review first" },
+        { "ref": "library:code-documentation-writer", "type": "skill", "use": "build", "when": "When the extension needs a README and set-up guide that match what the code does" },
+        { "ref": "library:readme-first-run-tester", "type": "skill", "use": "check", "when": "When the guide is written, to follow each install step and mark it working or broken" }
+      ]
+    },
+    {
+      "id": "modernise-component",
+      "task": "Move an old component to hooks or the Composition API",
+      "kind": "code",
+      "items": [
+        { "ref": "library:untested-code-change-guide", "type": "skill", "use": "brief", "when": "When the old component has no tests and needs a safety net before it changes" },
+        { "ref": "kit:prompts/modernise-a-component", "use": "build", "when": "When a class or Options API component must move to modern style with the same behaviour" },
+        { "ref": "library:copilot-react18-lifecycle-patterns", "type": "skill", "use": "build", "when": "When React class components still use the old lifecycle methods" },
+        { "ref": "library:copilot-react19-source-patterns", "type": "skill", "use": "build", "when": "When the app is moving to React 19 and roots, refs and default props must change" }
+      ]
+    },
+    {
+      "id": "ui-tests",
+      "task": "Write component and browser tests for part of a UI",
+      "kind": "code",
+      "items": [
+        { "ref": "library:test-coverage-gap-finder", "type": "skill", "use": "brief", "when": "Before writing tests, to list every page and part with what is tested and what is not" },
+        { "ref": "library:react-test-writer", "type": "skill", "use": "build", "when": "When React components and user tasks lack tests" },
+        { "ref": "library:copilot-unit-test-vue-pinia", "type": "skill", "use": "build", "when": "When the app is Vue and components and stores need behaviour and failure tests" },
+        { "ref": "library:browser-test-writer", "type": "skill", "use": "build", "when": "When a whole user journey should be tested in a real browser" },
+        { "ref": "library:browser-test-reviewer", "type": "skill", "use": "check", "when": "When browser tests exist but fail at random, to check them for bad habits" },
+        { "ref": "library:kent-beck", "type": "mind", "use": "think", "when": "When nobody dares touch a component, to list the cases and add tests one small step at a time" }
+      ]
+    },
+    {
+      "id": "build-plan-from-design",
+      "task": "Turn a design into a build plan and component brief",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:agency-engineering-frontend-developer", "type": "agent", "use": "build", "when": "When a whole front end needs a component list, a speed and accessibility plan and an order" },
+        { "ref": "kit:prompts/component-brief-from-design", "use": "build", "when": "When one part of the design needs a spec complete enough to build without questions" },
+        { "ref": "library:give-developers-a-complete-component-brief", "type": "workflow", "use": "build", "when": "When the design files are shared and variants, states and tokens must all be written" },
+        { "ref": "library:developer-handoff-spec-writer", "type": "skill", "use": "build", "when": "When a finished design needs layout, breakpoints and edge cases specified" },
+        { "ref": "library:design-handoff-completeness-assistant", "type": "agent", "use": "check", "when": "When the brief is drafted, to find the states nobody designed" }
+      ]
+    },
+    {
+      "id": "forms",
+      "task": "Build a sign-up or contact form that works",
+      "kind": "code",
+      "items": [
+        { "ref": "library:web-form-designer", "type": "skill", "use": "brief", "when": "Before code, to settle fields, error messages and spam protection" },
+        { "ref": "kit:skills/component-build", "use": "build", "when": "When you write the form with every state: empty, invalid, sending, failed and sent" },
+        { "ref": "library:interface-microcopy-writer", "type": "skill", "use": "build", "when": "When labels, hints and error lines need to be short and kind" },
+        { "ref": "library:make-a-long-form-easier-to-finish", "type": "workflow", "use": "check", "when": "When people give up halfway and the form needs fewer fields and a test script" }
+      ]
+    },
+    {
+      "id": "static-hosting",
+      "task": "Put a static page live with a hosting config",
+      "kind": "code",
+      "items": [
+        { "ref": "library:netlify-publisher", "type": "skill", "use": "build", "when": "When the page should go live on Netlify as a preview or production deploy" },
+        { "ref": "library:cloudflare-publisher", "type": "skill", "use": "build", "when": "When the client's domain is on Cloudflare and the page should be served from there" },
+        { "ref": "library:deploy-verifier", "type": "skill", "use": "check", "when": "After the deploy, to prove the live page is the version you meant to ship" }
+      ]
+    },
+    {
+      "id": "ship-ui-change",
+      "task": "Ship a UI change through a pull request",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:workflows/build-and-ship-a-ui-change", "use": "build", "when": "When a page, component or fix is requested and must go from brief to merged" },
+        { "ref": "library:ai-code-change-steps", "type": "workflow", "use": "build", "when": "When an AI coding tool will write the change and needs a test list and small steps" },
+        { "ref": "library:pull-request-description-writer", "type": "skill", "use": "build", "when": "When the branch is ready and reviewers need what changed, why and what to look at" },
+        { "ref": "library:pull-request-reviewer", "type": "agent", "use": "check", "when": "When each pull request should get a risk rating and ranked findings before a person reviews" }
+      ]
+    },
+    {
+      "id": "monthly-check",
+      "task": "Run the monthly speed and accessibility check",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/monthly-speed-and-accessibility-check", "use": "build", "when": "Once a month on the same pages, and after a redesign, new theme, app or tracking tag" },
+        { "ref": "library:website-quality-keeper", "type": "agent", "use": "check", "when": "When the client wants a regular wider check of the site, not only speed and access" },
+        { "ref": "library:quarterly-accessibility-keeper", "type": "agent", "use": "check", "when": "Each quarter, to rank the gaps and confirm last quarter's fixes held" }
+      ]
+    },
+    {
+      "id": "dashboard-ui",
+      "task": "Build a dashboard, table or chart view",
+      "kind": "code",
+      "items": [
+        { "ref": "library:screen-states-designer", "type": "skill", "use": "brief", "when": "Before building, to list what the screen shows when empty, loading, failed or with no results" },
+        { "ref": "kit:skills/component-build", "use": "build", "when": "When filters, tables and modals must be reusable parts with every state handled" },
+        { "ref": "library:interactive-chart-maker", "type": "skill", "use": "build", "when": "When the view needs a chart with hover and zoom that can be embedded in a page" },
+        { "ref": "library:dashboard-builder", "type": "skill", "use": "explore", "when": "When the client should see a quick working dashboard from their data before the real build" }
+      ]
+    },
+    {
+      "id": "design-tokens",
+      "task": "Set up design tokens and tidy a component library",
+      "kind": "code",
+      "items": [
+        { "ref": "library:website-design-token-extractor", "type": "skill", "use": "brief", "when": "When the live site is the only source of truth for colours, fonts and spacing" },
+        { "ref": "library:design-token-builder", "type": "skill", "use": "build", "when": "When brand colours and fonts must become tokens with responsive sizes" },
+        { "ref": "library:design-system-auditor", "type": "skill", "use": "check", "when": "When components hold hardcoded values and uneven names that need finding" },
+        { "ref": "library:colour-contrast-checker", "type": "skill", "use": "check", "when": "Before the tokens are agreed, to check every text and background pair" }
+      ]
+    },
+    {
+      "id": "motion",
+      "task": "Add or fix animation and small interactions",
+      "kind": "code",
+      "items": [
+        { "ref": "library:web-animation-builder", "type": "skill", "use": "build", "when": "When the page needs timed, staggered or SVG motion written in code" },
+        { "ref": "library:animation-speed-fixer", "type": "skill", "use": "build", "when": "When an animation stutters and each slow spot needs a small fix" },
+        { "ref": "library:animation-reviewer", "type": "skill", "use": "check", "when": "When a change adds motion, to get a table of fixes and an approve or block call" },
+        { "ref": "kit:skills/accessibility-fix-pass", "use": "check", "when": "When motion must respect people who ask their device for less of it" }
+      ]
+    },
+    {
+      "id": "seo-and-tracking-tags",
+      "task": "Add meta tags, structured data and tracking to a page",
+      "kind": "code",
+      "items": [
+        { "ref": "library:on-page-seo-tuner", "type": "skill", "use": "build", "when": "When a page needs its title, description, headings and image text fixed" },
+        { "ref": "library:schema-markup-writer", "type": "skill", "use": "build", "when": "When the page type calls for checked structured data ready to paste" },
+        { "ref": "library:tracking-plan-builder", "type": "skill", "use": "brief", "when": "When events must be named and planned before any tag is added" }
+      ]
+    },
+    {
+      "id": "ui-bug-fix",
+      "task": "Fix a component or page that renders wrong",
+      "kind": "code",
+      "items": [
+        { "ref": "library:error-and-log-debugger", "type": "skill", "use": "brief", "when": "When the console shows an error or stack trace and you need the cause" },
+        { "ref": "library:fix-a-bug-with-proof-and-a-clear-pull-request", "type": "workflow", "use": "build", "when": "When the fix must come with the cause proven, a test and a pull request" },
+        { "ref": "kit:skills/component-build", "use": "build", "when": "When the bug is a missing state and the component needs that state built" },
+        { "ref": "library:agency-testing-evidence-collector", "type": "agent", "use": "check", "when": "When the client wants before and after screenshots as proof of the fix" }
+      ]
+    },
+    {
+      "id": "translation-ready",
+      "task": "Prepare a UI for more than one language",
+      "kind": "code",
+      "items": [
+        { "ref": "library:app-translation-setup-helper", "type": "skill", "use": "build", "when": "When text is hardcoded and needs locale files and right-to-left support planned" },
+        { "ref": "library:check-a-translated-interface-still-makes-sense", "type": "workflow", "use": "check", "when": "When strings are translated, to check meaning and that longer words still fit" }
+      ]
+    },
+    {
+      "id": "ui-finish-review",
+      "task": "Review a UI for finish before release",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:page-design-standards-checker", "type": "skill", "use": "check", "when": "When you need contrast, spacing, hierarchy and the phone view checked with fixes" },
+        { "ref": "library:ai-look-design-reviewer", "type": "skill", "use": "check", "when": "When the UI looks templated, to score it and rank what gives it away" },
+        { "ref": "library:interface-polish-reviewer", "type": "skill", "use": "check", "when": "When details such as focus rings, transitions and feedback need a final pass" },
+        { "ref": "library:jakob-nielsen", "type": "mind", "use": "think", "when": "When it looks fine but people may still get lost, to walk it for likely usability problems" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:dev-work-report-writer", "type": "skill", "use": "check", "when": "At the end of any coding job, to write what changed, why and the proof that it works" }
+  ],
+  "helpers": [
+    { "role": "ui-designer", "when": "When there is no design and the page or component needs one before it is built" },
+    { "role": "conversion-copywriter", "when": "When a landing page needs its headline, sections and call to action written" },
+    { "role": "accessibility-specialist", "when": "When the client needs a full audit and an accessibility statement, not code fixes" },
+    { "role": "backend-developer", "when": "When the UI needs an endpoint, a form handler or data it cannot get yet" },
+    { "role": "seo-specialist", "when": "When the page must rank and needs more than tidy tags and markup" },
+    { "role": "qa-engineer", "when": "When the change needs testing across browsers, devices and user journeys" }
+  ],
+  "gaps": [
+    "No library item builds or fixes a Manifest V3 browser extension, or plans a move from Manifest V2",
+    "No library item fixes a responsive layout from a screenshot of a page that breaks on phones",
+    "No library item moves a Vue Options API component to the Composition API",
+    "No library item wires a static form to a form service such as Formspree, Netlify Forms or Basin",
+    "No library item writes a static host config: redirects, headers and cache rules",
+    "No library item cuts JavaScript bundle size or finds unused code and heavy third-party scripts",
+    "No library item plans web font loading: subsets, preload and fallback fonts",
+    "No library item runs visual regression tests that compare screenshots before and after a change",
+    "No library item reads Core Web Vitals field data apart from lab data; only the kit does",
+    "No library item covers client-side state and data fetching for React or Vue web apps",
+    "No library item writes Svelte or Angular components"
+  ]
+}

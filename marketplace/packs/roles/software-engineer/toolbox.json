@@ -1,0 +1,281 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "software-engineer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "bug-diagnosis",
+      "task": "Diagnose a crash or error and hand back a tested fix",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/bug-diagnosis-and-fix", "use": "build", "when": "When you have an error, a log or a wrong result and need the cause proven before the fix" },
+        { "ref": "library:bug-evidence-plan-writer", "type": "prompt", "use": "brief", "when": "Before changing anything, to rank the suspects and name one check for each" },
+        { "ref": "library:error-and-log-debugger", "type": "skill", "use": "build", "when": "When the main clue is a stack trace or log and you need the first real error under the noise" },
+        { "ref": "library:bug-root-cause-finder", "type": "skill", "use": "check", "when": "When a fix is proposed, to see the cause proven with evidence so the fix is not a guess" },
+        { "ref": "library:live-code-debugger", "type": "skill", "use": "build", "when": "When reading the code is not enough and you need the values at each step of a real run" },
+        { "ref": "library:john-carmack", "type": "mind", "use": "think", "when": "When you are guessing at the cause, to follow the actual run and measure first" }
+      ]
+    },
+    {
+      "id": "code-review",
+      "task": "Review a pull request or code change",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/code-review", "use": "check", "when": "When one pull request or diff needs a review of behaviour, edge cases, risks and tests" },
+        { "ref": "library:pull-request-risk-reviewer", "type": "skill", "use": "check", "when": "When the change is large, to rank the issues by severity and write clear comments" },
+        { "ref": "library:security-focused-change-reviewer", "type": "skill", "use": "check", "when": "When the change touches sign-in, payments, uploads or user input, to review only that risk" },
+        { "ref": "library:test-gap-finder", "type": "skill", "use": "check", "when": "When the change comes with tests, to mark each new behaviour covered or not" },
+        { "ref": "library:pull-request-reviewer", "type": "agent", "use": "check", "when": "When every new pull request should get a risk rating and a draft review to approve" },
+        { "ref": "library:linus-torvalds", "type": "mind", "use": "think", "when": "When a change looks neat but may break people who rely on today's behaviour" }
+      ]
+    },
+    {
+      "id": "ai-code-check",
+      "task": "Check AI-written code before it is merged",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/check-ai-written-code", "use": "check", "when": "When an AI tool wrote or changed code and it must be checked before a pull request" },
+        { "ref": "library:ai-written-code-reviewer", "type": "skill", "use": "check", "when": "When the code was written fast, to find the few risks that will hurt later and the smallest fix" },
+        { "ref": "library:agency-security-ai-generated-code-auditor", "type": "agent", "use": "check", "when": "When the AI built a whole app, to find leaked keys, open database rules and injection holes" },
+        { "ref": "library:agency-specialized-codebase-archaeologist", "type": "agent", "use": "check", "when": "When code grew over many AI sessions, to find duplicate logic and fallbacks that disagree" }
+      ]
+    },
+    {
+      "id": "bug-fix-pull-request",
+      "task": "Fix a bug through a reviewed pull request",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:workflows/fix-a-bug-through-a-pull-request", "use": "build", "when": "When a bug report, alert or failed build must end as a reviewed, merged fix" },
+        { "ref": "library:turn-a-bug-report-into-proof", "type": "workflow", "use": "brief", "when": "First, to turn the report into a repeatable failing case and note what is verified" },
+        { "ref": "library:fix-a-bug-with-proof-and-a-clear-pull-request", "type": "workflow", "use": "build", "when": "When you have the repo and want the fix, its proof and the pull request in one run" },
+        { "ref": "library:test-first-coach", "type": "skill", "use": "build", "when": "When the fix should start from a failing test that then stays as the regression test" },
+        { "ref": "library:pull-request-description-writer", "type": "skill", "use": "build", "when": "When the fix is committed, to say what changed, why, and what reviewers should check" }
+      ]
+    },
+    {
+      "id": "safe-refactor",
+      "task": "Clean up a messy or legacy file without changing what it does",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/safe-refactor", "use": "build", "when": "When one long or tangled file must be cleaned up with tests first and behaviour kept" },
+        { "ref": "library:code-refactor-planner", "type": "skill", "use": "brief", "when": "Before editing, to name the refactoring moves and put them in small safe steps" },
+        { "ref": "library:untested-code-change-guide", "type": "skill", "use": "build", "when": "When the file has no tests, to add a safety net before any line moves" },
+        { "ref": "library:ai-code-change-steps", "type": "workflow", "use": "build", "when": "When an AI helper will do the edits, to split the change into small tested steps with rules" },
+        { "ref": "library:readable-code-reviewer", "type": "skill", "use": "check", "when": "When the clean-up is done, to check names, function size and error handling" },
+        { "ref": "library:kent-beck", "type": "mind", "use": "think", "when": "When tidying and behaviour change are mixed in one step and should be split" }
+      ]
+    },
+    {
+      "id": "safety-net-tests",
+      "task": "Add safety-net and regression tests",
+      "kind": "code",
+      "items": [
+        { "ref": "library:test-suite-writer", "type": "skill", "use": "build", "when": "When the code has no tests, to cover units, linked parts and the main user tasks" },
+        { "ref": "library:untested-code-change-guide", "type": "skill", "use": "brief", "when": "When the code is hard to test as written, to find the safe places to start" },
+        { "ref": "library:change-test-prover", "type": "skill", "use": "check", "when": "When the code is Python, to prove the new tests fail if the change is broken" },
+        { "ref": "library:test-failure-repair-loop", "type": "agent", "use": "build", "when": "When the suite is red after a change, to fix and re-check in capped rounds" },
+        { "ref": "kit:skills/bug-diagnosis-and-fix", "use": "build", "when": "When a bug is fixed, to leave a regression test that fails on the old code" }
+      ]
+    },
+    {
+      "id": "upgrade-plan",
+      "task": "Plan a framework, language or library upgrade",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/upgrade-plan", "use": "build", "when": "When the app is versions behind and needs a step-by-step plan from its dependency file" },
+        { "ref": "library:major-upgrade-planner", "type": "skill", "use": "build", "when": "When one package jumps a major version, to stage it and test what breaks at each step" },
+        { "ref": "library:dependency-risk-scanner", "type": "skill", "use": "brief", "when": "Before the plan, to list packages with known weak spots and licence problems" },
+        { "ref": "library:docs-backed-coder", "type": "skill", "use": "check", "when": "When a file is updated for the new version, to check it against the official docs" },
+        { "ref": "library:copilot-react19-source-patterns", "type": "skill", "use": "build", "when": "When the move is to React 19, to update roots, default props, refs and context" },
+        { "ref": "library:weekly-dependency-and-security-sweep", "type": "agent", "use": "check", "when": "After the upgrade, to keep a weekly list of what is new, open or fixed" }
+      ]
+    },
+    {
+      "id": "codebase-map",
+      "task": "Map an unfamiliar codebase for a new owner or developer",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/codebase-map", "use": "build", "when": "When you inherit a project or must show an owner how their software fits together" },
+        { "ref": "library:agency-engineering-codebase-onboarding-engineer", "type": "agent", "use": "build", "when": "When you have the repo, to get entry points, key files and how a request flows" },
+        { "ref": "library:codebase-tour-guide", "type": "skill", "use": "build", "when": "When a new teammate needs a step-by-step tour that links to real files and lines" },
+        { "ref": "library:write-docs-a-new-developer-can-follow-on-day-one", "type": "workflow", "use": "build", "when": "When the project has no docs, to get a README, a quickstart and a first-run test" },
+        { "ref": "library:readme-first-run-tester", "type": "skill", "use": "check", "when": "When set-up steps exist, to run each one and mark it working or broken" }
+      ]
+    },
+    {
+      "id": "explain-code",
+      "task": "Explain a piece of code in plain words",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/explain-this-code", "use": "build", "when": "When you must understand a function or file before changing it, or explain it to an owner" },
+        { "ref": "library:code-explainer-for-newcomers", "type": "prompt", "use": "build", "when": "When the reader is new to code and needs it explained in reading order" },
+        { "ref": "library:code-walkthrough-writer", "type": "skill", "use": "build", "when": "When the explanation should be a document with each piece of code beside its reason" },
+        { "ref": "library:donald-knuth", "type": "mind", "use": "think", "when": "When the explanation is abstract, to work one small example by hand" }
+      ]
+    },
+    {
+      "id": "review-comments",
+      "task": "Plan answers to pull request review comments",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/respond-to-review-comments", "use": "build", "when": "When a pull request comes back with many comments and you need what to change and reply" },
+        { "ref": "library:review-comment-fixer", "type": "skill", "use": "build", "when": "When the comments are on GitHub, to number them and fix the ones you pick" },
+        { "ref": "library:review-a-pull-request-fix-the-comments-and-sign-off", "type": "workflow", "use": "check", "when": "When the same pull request should be reviewed, fixed and signed off with proof in one run" }
+      ]
+    },
+    {
+      "id": "tested-regex",
+      "task": "Write, test or explain a regular expression",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/tested-regex", "use": "build", "when": "When you need a pattern for postcodes, order numbers or dates, tested on real examples" },
+        { "ref": "library:edge-case-list-maker", "type": "prompt", "use": "explore", "when": "Before testing, to list the odd inputs the pattern must accept or reject" },
+        { "ref": "library:code-correctness-planner", "type": "skill", "use": "check", "when": "When the pattern guards money or identity data, to write its rules down and hold it to them" }
+      ]
+    },
+    {
+      "id": "log-parser",
+      "task": "Parse a log or messy export into a clean table",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/log-or-export-parser", "use": "build", "when": "When a log or text export must become a CSV, with odd lines counted and not lost" },
+        { "ref": "kit:prompts/tested-regex", "use": "build", "when": "When each line needs a tested pattern to pull out its fields" },
+        { "ref": "library:data-file-reader-and-writer", "type": "skill", "use": "build", "when": "When the file's encoding, separators or format cause read errors" },
+        { "ref": "library:test-suite-writer", "type": "skill", "use": "check", "when": "When the parser will be reused, to add tests for normal, odd and broken lines" }
+      ]
+    },
+    {
+      "id": "input-validation",
+      "task": "Write validation rules for form or API input",
+      "kind": "code",
+      "items": [
+        { "ref": "library:untrusted-input-checker", "type": "skill", "use": "check", "when": "When you have the code, to find every place outside data enters and how it is checked" },
+        { "ref": "kit:prompts/tested-regex", "use": "build", "when": "When a field has a fixed format, such as a postcode, phone number or order number" },
+        { "ref": "library:edge-case-list-maker", "type": "prompt", "use": "explore", "when": "When you need the empty, too-long and wrong-type cases each rule must handle" }
+      ]
+    },
+    {
+      "id": "codebase-health-check",
+      "task": "Run a health check on an inherited codebase",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/codebase-health-check", "use": "check", "when": "When a new owner inherits a codebase, a key developer leaves, or every three months" },
+        { "ref": "library:tech-debt-prioritiser", "type": "skill", "use": "check", "when": "When you need the debt that slows the team ranked, with cost and small fixes" },
+        { "ref": "library:codebase-architecture-reviewer", "type": "skill", "use": "check", "when": "When the structure itself is in doubt, to list design improvements and pick one" },
+        { "ref": "library:old-code-paydown-guide", "type": "skill", "use": "build", "when": "When the codebase is large and old, to plan making it readable and bounded step by step" },
+        { "ref": "library:monthly-tech-debt-keeper", "type": "agent", "use": "check", "when": "After the first check, to find new debt each month and confirm last month's clean-up" },
+        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When the risk notes list bugs but not what happens when a part fails" }
+      ]
+    },
+    {
+      "id": "security-pass",
+      "task": "Check code for security gaps and leaked secrets",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:code-security-reviewer", "type": "skill", "use": "check", "when": "When the code is Python, JavaScript, TypeScript or Go, to rank security gaps with fixes" },
+        { "ref": "library:secrets-hygiene-checker", "type": "skill", "use": "check", "when": "When keys may sit in the repo or its history, to find them and plan rotation" },
+        { "ref": "library:dependency-risk-scanner", "type": "skill", "use": "check", "when": "When the risk is in packages, to list known weak spots and licence issues" },
+        { "ref": "kit:skills/code-review", "use": "check", "when": "When one change is in question, to check input handling and permission checks" }
+      ]
+    },
+    {
+      "id": "server-only-failure",
+      "task": "Fix code that works locally but fails on the server",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/bug-diagnosis-and-fix", "use": "build", "when": "When it runs on a laptop and fails live, to compare versions, config and data in order" },
+        { "ref": "library:production-error-summarizer", "type": "skill", "use": "brief", "when": "When errors are tracked in Sentry, to sum up the recent issues and key details first" },
+        { "ref": "library:production-stability-reviewer", "type": "skill", "use": "check", "when": "When the failure is a timeout or a flaky outside call, to add retries and limits" },
+        { "ref": "library:failed-workflow-diagnoser", "type": "skill", "use": "check", "when": "When the failure is in a GitHub Actions run, to read the log and fix the workflow file" }
+      ]
+    },
+    {
+      "id": "slow-code",
+      "task": "Find and fix slow code or a slow query",
+      "kind": "code",
+      "items": [
+        { "ref": "library:slow-code-finder", "type": "skill", "use": "check", "when": "When something is slow and nobody knows where, to measure CPU, memory and I/O hot spots" },
+        { "ref": "library:find-what-is-slow-fix-it-and-show-the-numbers", "type": "workflow", "use": "build", "when": "When the fix should land as a pull request with before and after timings" },
+        { "ref": "library:slow-query-fixer", "type": "skill", "use": "build", "when": "When one SQL query is the slow part, to find why and add indexes where needed" },
+        { "ref": "library:john-carmack", "type": "mind", "use": "think", "when": "When the plan is to rewrite before measuring where the time goes" }
+      ]
+    },
+    {
+      "id": "ci-and-checks",
+      "task": "Set up CI and checks that run on every push",
+      "kind": "code",
+      "items": [
+        { "ref": "library:build-pipeline-writer", "type": "skill", "use": "build", "when": "When the project needs a pipeline file with test and deploy stages for its stack" },
+        { "ref": "library:pre-commit-hook-setter", "type": "skill", "use": "build", "when": "When formatting, type and test checks should run before each commit" },
+        { "ref": "library:lint-and-type-check-runner", "type": "skill", "use": "check", "when": "After a change, to run the project's checks, fix real failures and say what did not run" },
+        { "ref": "library:failed-workflow-diagnoser", "type": "skill", "use": "check", "when": "When the pipeline fails, to find the root cause in the log" }
+      ]
+    },
+    {
+      "id": "docs-and-decisions",
+      "task": "Write the README, code docs and decision records",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:code-documentation-writer", "type": "skill", "use": "build", "when": "When the code has no docs, to write docstrings, a README and usage guides that match it" },
+        { "ref": "library:decision-record-writer", "type": "skill", "use": "build", "when": "When a design choice was made, to record why and what was passed over" },
+        { "ref": "library:documentation-checker", "type": "skill", "use": "check", "when": "Before publishing, to find claims in the docs that no longer match the code" },
+        { "ref": "library:monthly-developer-docs-keeper", "type": "agent", "use": "check", "when": "When docs go stale, to fix old pages and flag broken steps each month" }
+      ]
+    },
+    {
+      "id": "git-and-commits",
+      "task": "Sort out a Git tangle and write clean commits",
+      "kind": "code",
+      "items": [
+        { "ref": "library:git-workflow-helper", "type": "skill", "use": "build", "when": "When a merge, rebase or branch has gone wrong and needs untangling safely" },
+        { "ref": "library:commit-message-writer", "type": "skill", "use": "build", "when": "When changes are staged and need a short message that says what changed and why" },
+        { "ref": "library:pull-request-description-writer", "type": "skill", "use": "build", "when": "When the branch is ready and reviewers need to know what to look at" }
+      ]
+    },
+    {
+      "id": "release-check",
+      "task": "Prepare and check a release",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:release-manager", "type": "agent", "use": "check", "when": "Before each release, to get a go or no-go, the version, a changelog and a rollback plan" },
+        { "ref": "library:release-readiness-reviewer", "type": "skill", "use": "check", "when": "When the release has migrations or config changes, to list the real deploy risks" },
+        { "ref": "kit:skills/code-review", "use": "check", "when": "When one late change is going into the release and needs a second look" }
+      ]
+    },
+    {
+      "id": "agent-ready-repo",
+      "task": "Make the repo ready for AI coding agents",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:make-your-repo-agent-ready", "type": "workflow", "use": "build", "when": "When coding agents will work in the repo, to score it and write project instructions" },
+        { "ref": "library:agent-instructions-auditor", "type": "skill", "use": "check", "when": "When an instructions file exists, to check it has real commands and no guesses" },
+        { "ref": "library:ai-code-change-steps", "type": "workflow", "use": "build", "when": "When an agent takes on a change, to give it a test list and small steps" },
+        { "ref": "library:claude-code", "type": "tool", "use": "build", "when": "When the change should be made and tested inside the project by a coding agent" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:edge-case-list-maker", "type": "prompt", "use": "check", "when": "Before any change, to list the cases to check, smallest first" },
+    { "ref": "library:lint-and-type-check-runner", "type": "skill", "use": "check", "when": "After any code change, to run the project's own checks before you call it done" }
+  ],
+  "helpers": [
+    { "role": "qa-engineer", "when": "When the fix or refactor needs a test plan, browser tests or a regression checklist" },
+    { "role": "devops-engineer", "when": "When the problem is in the pipeline, the containers or the server setup, not the code" },
+    { "role": "application-security-engineer", "when": "When the review finds a security hole that needs a proper threat model and fix" },
+    { "role": "database-engineer", "when": "When the bug or slowness sits in the schema, a migration or the queries" },
+    { "role": "system-architect", "when": "When the health check shows the structure is the problem and needs a redesign" },
+    { "role": "technical-writer", "when": "When the codebase map must become full docs for users or other teams" }
+  ],
+  "gaps": [
+    "No library item writes, tests or explains a regular expression; only the kit prompt does",
+    "No library item turns a log file or messy text export into a table with odd lines counted",
+    "No library item moves jQuery to plain JavaScript or converts a JavaScript file to TypeScript",
+    "No library item plans a Laravel, Symfony, Django, Rails, Express, Vue or Angular upgrade; only React and Expo are covered",
+    "No library item plans a move to a supported PHP, Python or Node version, or tests old and new versions side by side in CI",
+    "No library item compares local and server set-ups (versions, config, env values, data) for a bug that only fails live",
+    "No library item diagnoses a bug that happens only sometimes, such as a race or timing fault",
+    "No library item writes validation rules for form or API input",
+    "No library item plans replacing an unmaintained library with a supported one",
+    "No library item writes a first-week plan for a new developer joining a codebase"
+  ]
+}

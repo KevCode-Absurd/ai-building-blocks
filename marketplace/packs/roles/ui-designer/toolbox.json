@@ -1,0 +1,276 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "ui-designer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "screen-visual-spec",
+      "task": "Write the visual spec for key screens",
+      "kind": "web_page",
+      "items": [
+        { "ref": "kit:workflows/screen-design-to-handoff", "use": "brief", "when": "When wireframes are agreed and you need the steps from visual design to handoff in order" },
+        { "ref": "kit:skills/screen-visual-spec", "use": "build", "when": "When each screen needs reading order, spacing, type style and colour role for every element" },
+        { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "Before you settle a screen layout, to get three hand-made alternatives to the stock look" },
+        { "ref": "library:product-true-ui-designer", "type": "skill", "use": "build", "when": "When the product has its own components and tokens and the screen must be built from them" },
+        { "ref": "library:new-screen-design-reviewer", "type": "agent", "use": "check", "when": "When a new screen is drafted, to get a ready, fix-first or rethink call and a fix list" },
+        { "ref": "kit:skills/ui-review-before-after", "use": "check", "when": "Before sign-off, to check hierarchy, alignment, spacing and states on each screen" }
+      ]
+    },
+    {
+      "id": "ui-foundations",
+      "task": "Set type, spacing, grid and colour foundations",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/ui-foundations-and-component-sheet", "use": "build", "when": "When a product has no agreed type scale, spacing scale, grid or colour roles" },
+        { "ref": "library:design-token-builder", "type": "skill", "use": "build", "when": "When brand colours and fonts are known and developers need them as named tokens" },
+        { "ref": "library:design-system-file-writer", "type": "skill", "use": "build", "when": "When AI or a new developer will build screens and needs one rules file to follow" },
+        { "ref": "library:write-design-rules-check-colours-and-hand-developers-a-spec", "type": "workflow", "use": "build", "when": "When you start from a brief and want rules, checked colours, tokens and a spec in one run" },
+        { "ref": "library:josef-muller-brockmann", "type": "mind", "use": "think", "when": "When spacing is set by eye on each screen and nothing lines up across the product" },
+        { "ref": "library:colour-contrast-checker", "type": "skill", "use": "check", "when": "Before the foundations are approved, to test each colour pair in light and dark" }
+      ]
+    },
+    {
+      "id": "visual-directions",
+      "task": "Explore clearly different visual directions for a product",
+      "kind": "other",
+      "items": [
+        { "ref": "library:aesthetic-direction-brief-writer", "type": "skill", "use": "brief", "when": "When the client cannot describe the look, to pin down tone and feel in four answers" },
+        { "ref": "library:design-style-analyst", "type": "skill", "use": "brief", "when": "When the client shares products they like, to turn them into colour, type and feel" },
+        { "ref": "library:bento-grid-style-guide-writer", "type": "skill", "use": "explore", "when": "When one direction should be a tidy card grid, with tokens and states" },
+        { "ref": "library:editorial-web-designer", "type": "skill", "use": "explore", "when": "When one direction should be calm and document-like, with warm greys and crisp borders" },
+        { "ref": "library:raw-brutalist-style-guide-writer", "type": "skill", "use": "explore", "when": "When one direction should be raw and blunt, to contrast with the safe options" },
+        { "ref": "library:ai-look-design-reviewer", "type": "skill", "use": "check", "when": "When a direction is built, to score how generic it looks and what to change" }
+      ]
+    },
+    {
+      "id": "type-scale",
+      "task": "Build a type scale from brand fonts",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/type-scale-from-brand", "use": "build", "when": "When brand fonts exist but text sizes differ from screen to screen" },
+        { "ref": "library:web-font-pairing-picker", "type": "skill", "use": "explore", "when": "When there are no brand fonts, to compare pairs with sizes and line spacing for screens" },
+        { "ref": "library:font-pair-shortlist-maker", "type": "prompt", "use": "explore", "when": "When the client wants a quick shortlist of three font pairs to choose from" },
+        { "ref": "library:ellen-lupton", "type": "mind", "use": "think", "when": "When the scale has many sizes and you cannot say what job each one does" },
+        { "ref": "library:plain-page-type-checker", "type": "skill", "use": "check", "when": "When a text-heavy screen is set, to check size, spacing and line length where it is read" }
+      ]
+    },
+    {
+      "id": "colour-roles",
+      "task": "Set colour roles for light and dark themes",
+      "kind": "other",
+      "items": [
+        { "ref": "library:mood-colour-palette-planner", "type": "skill", "use": "explore", "when": "When the brand has one colour or none, to get a small palette with one job per colour" },
+        { "ref": "kit:skills/ui-foundations-and-component-sheet", "use": "build", "when": "When you need each colour role in hex for light and dark, from surface to danger" },
+        { "ref": "library:chart-and-app-styler", "type": "skill", "use": "build", "when": "When charts and data colours must work in dark mode too" },
+        { "ref": "kit:skills/contrast-and-dark-mode-check", "use": "check", "when": "Before approval, to measure every text and interface pair in both themes" }
+      ]
+    },
+    {
+      "id": "contrast-dark-mode-check",
+      "task": "Check contrast and dark mode across a product",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/contrast-and-dark-mode-check", "use": "check", "when": "When a scan or user flags low contrast, to list each pair, its ratio and the fix" },
+        { "ref": "library:colour-contrast-checker", "type": "skill", "use": "check", "when": "When you have the colour tokens, to get the closest passing colour for each failing pair" },
+        { "ref": "library:accessibility-checker", "type": "skill", "use": "check", "when": "When the check should go past colour to labels, focus order and other access problems" },
+        { "ref": "kit:prompts/extract-styles-from-screenshots", "use": "brief", "when": "When there is no design file and the colours must be read from the live product" }
+      ]
+    },
+    {
+      "id": "component-sheet",
+      "task": "Write a component style sheet",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/ui-foundations-and-component-sheet", "use": "build", "when": "When buttons, inputs, cards and other parts need sizes, colours and radius set once" },
+        { "ref": "kit:prompts/states-matrix-for-a-component", "use": "build", "when": "When a part has only its default look and needs hover, focus, disabled and error" },
+        { "ref": "library:give-developers-a-complete-component-brief", "type": "workflow", "use": "build", "when": "When one component needs variants, states, accessible behaviour and tokens in a brief" },
+        { "ref": "library:design-system-auditor", "type": "skill", "use": "check", "when": "When components exist in code, to find hardcoded values and naming problems" }
+      ]
+    },
+    {
+      "id": "screen-states",
+      "task": "Design empty, loading, error and success states",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:screen-states-designer", "type": "skill", "use": "build", "when": "When a screen has only its happy path, to cover empty, loading, error, offline and success" },
+        { "ref": "library:write-helpful-error-and-empty-states", "type": "workflow", "use": "build", "when": "When the states exist but the words blame the user or say nothing useful" },
+        { "ref": "library:interface-microcopy-writer", "type": "skill", "use": "explore", "when": "When a state needs its label, message and button worded, to compare short options" },
+        { "ref": "library:don-norman", "type": "mind", "use": "think", "when": "When an error state shows what went wrong but not how to recover" },
+        { "ref": "library:design-handoff-completeness-assistant", "type": "agent", "use": "check", "when": "When a component has changed, to find the states and variants still missing" }
+      ]
+    },
+    {
+      "id": "ui-review",
+      "task": "Review screens and write before-and-after notes",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/ui-review-before-after", "use": "check", "when": "When screens work but look off, to write each issue as a before and after a developer can apply" },
+        { "ref": "library:visual-hierarchy-fixer", "type": "skill", "use": "check", "when": "When everything on a screen has the same weight, to fix spacing, colour, type and depth" },
+        { "ref": "library:interface-polish-checker", "type": "skill", "use": "check", "when": "When you have the code, to list spacing, type and layout slips with a fix for each" },
+        { "ref": "library:design-feedback-giver", "type": "skill", "use": "check", "when": "When the input is a mockup or Figma link and you want usability and consistency notes" },
+        { "ref": "library:agency-design-ui-finish-gate-reviewer", "type": "agent", "use": "check", "when": "Before a release, to list the visual gaps that should block it" },
+        { "ref": "library:jony-ive", "type": "mind", "use": "think", "when": "When the screen passes every check but still feels careless" }
+      ]
+    },
+    {
+      "id": "polish-pass",
+      "task": "Run a polish pass on a live product",
+      "kind": "web_page",
+      "items": [
+        { "ref": "kit:workflows/ui-polish-pass", "use": "build", "when": "Before a launch, demo or funding round, when the product works but looks unfinished" },
+        { "ref": "library:interface-upgrader", "type": "skill", "use": "build", "when": "When the product looks generic and needs fixing in place without a rewrite" },
+        { "ref": "library:detail-polisher", "type": "skill", "use": "explore", "when": "When one detail matters most, to try several versions and keep the best" },
+        { "ref": "library:app-polish-guide", "type": "skill", "use": "brief", "when": "When the app is shipped and you need the order to fix fit, flow and clarity" },
+        { "ref": "library:interface-polish-reviewer", "type": "skill", "use": "check", "when": "After the pass, to check motion, feel and the small details that make it look finished" }
+      ]
+    },
+    {
+      "id": "extract-styles",
+      "task": "Pull the current styles out of a live product",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/extract-styles-from-screenshots", "use": "build", "when": "When there is no design file, only screenshots of the live product" },
+        { "ref": "library:website-design-token-extractor", "type": "skill", "use": "build", "when": "When the product is a public website and you want its colours, fonts and spacing as files" },
+        { "ref": "library:website-design-dna-extractor", "type": "skill", "use": "brief", "when": "When you also need the reasons behind a site's colour, type and layout choices" },
+        { "ref": "library:design-system-auditor", "type": "skill", "use": "check", "when": "When you can see the code, to find where the same style is written many ways" }
+      ]
+    },
+    {
+      "id": "developer-handoff",
+      "task": "Hand a final screen to developers",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/developer-handoff-notes", "use": "build", "when": "When a screen design is final and a developer will build it" },
+        { "ref": "library:developer-handoff-spec-writer", "type": "skill", "use": "build", "when": "When the handoff must cover tokens, component props, breakpoints and edge cases" },
+        { "ref": "kit:workflows/screen-design-to-handoff", "use": "brief", "when": "When several screens go to build and you need the approval points in order" },
+        { "ref": "library:design-handoff-completeness-assistant", "type": "agent", "use": "check", "when": "Before sending, to find missing states and write a review request developers can act on" },
+        { "ref": "library:agency-testing-evidence-collector", "type": "agent", "use": "check", "when": "After the build, to check the live screen against the spec with screenshots" }
+      ]
+    },
+    {
+      "id": "platform-fit",
+      "task": "Design or adapt screens for iPhone and Android",
+      "kind": "web_page",
+      "items": [
+        { "ref": "kit:prompts/platform-fit-check", "use": "check", "when": "When a web or one-platform design must feel native on iPhone or Android" },
+        { "ref": "library:mobile-app-designer", "type": "skill", "use": "build", "when": "When you design a phone screen and need thumb reach and offline states covered" },
+        { "ref": "library:iphone-screen-designer", "type": "skill", "use": "explore", "when": "When you want native-feeling iPhone screens to compare on small and large sizes" },
+        { "ref": "library:apple-interface-reviewer", "type": "skill", "use": "check", "when": "When the screen is for iOS or Mac, to check it against Apple's current design rules" },
+        { "ref": "kit:skills/screen-visual-spec", "use": "build", "when": "When the adapted screen needs its own spacing, type and states written for that platform" }
+      ]
+    },
+    {
+      "id": "landing-page-visuals",
+      "task": "Design the look of a landing or marketing page",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:landing-page-design-planner", "type": "skill", "use": "explore", "when": "When the copy is ready, to get three on-brand page designs and a build brief" },
+        { "ref": "library:conversion-landing-page-designer", "type": "skill", "use": "build", "when": "When the page must turn visitors into buyers and needs strict design rules" },
+        { "ref": "library:website-art-director", "type": "skill", "use": "build", "when": "When you want a built page with a chosen look, checked in a browser" },
+        { "ref": "library:page-design-standards-checker", "type": "skill", "use": "check", "when": "When the page is drafted, to check contrast, spacing, hierarchy and mobile" },
+        { "ref": "kit:skills/ui-review-before-after", "use": "check", "when": "When the page is built, to write the remaining visual fixes as before and after" }
+      ]
+    },
+    {
+      "id": "dashboard-screens",
+      "task": "Design a dashboard or data-heavy screen",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:kpi-dashboard-designer", "type": "skill", "use": "brief", "when": "Before layout, to agree who reads the dashboard and which numbers they act on" },
+        { "ref": "kit:skills/screen-visual-spec", "use": "build", "when": "When the layout is agreed and each tile, table and filter needs its type and spacing" },
+        { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "When the dashboard is a wall of equal cards, to get three other arrangements" },
+        { "ref": "library:chart-and-app-styler", "type": "skill", "use": "build", "when": "When charts need palettes that match the app and still read in dark mode" },
+        { "ref": "library:edward-tufte", "type": "mind", "use": "think", "when": "When decoration crowds out the numbers people need to compare" },
+        { "ref": "library:agency-engineering-data-visualization-engineer", "type": "agent", "use": "check", "when": "When a chart is drafted, to check the chart type and axes do not mislead" }
+      ]
+    },
+    {
+      "id": "form-design",
+      "task": "Design a form or multi-step flow screen",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:web-form-designer", "type": "skill", "use": "build", "when": "When a form needs its fields, error messages and a plan to raise completions" },
+        { "ref": "library:multi-step-form-designer", "type": "skill", "use": "explore", "when": "When a long form may work better in stages, to compare a stepped version" },
+        { "ref": "kit:prompts/states-matrix-for-a-component", "use": "build", "when": "When inputs, selects and checkboxes need focus, filled, error and disabled looks" },
+        { "ref": "library:accessibility-checker", "type": "skill", "use": "check", "when": "When the form is built, to check labels, focus order and error announcements" }
+      ]
+    },
+    {
+      "id": "motion-details",
+      "task": "Specify motion and small interactions",
+      "kind": "other",
+      "items": [
+        { "ref": "library:small-interface-details-designer", "type": "skill", "use": "build", "when": "When a screen needs its small moments planned: trigger, rule, feedback and loop" },
+        { "ref": "library:design-to-motion-animator", "type": "skill", "use": "explore", "when": "When a static design should be seen moving before anyone builds it" },
+        { "ref": "library:interface-polish-reviewer", "type": "skill", "use": "check", "when": "When motion is built, to judge whether it feels right or just busy" },
+        { "ref": "library:animation-reviewer", "type": "skill", "use": "check", "when": "When a code change adds motion, to get a table of fixes and an approve or block call" }
+      ]
+    },
+    {
+      "id": "icon-set",
+      "task": "Plan an icon set and favicon",
+      "kind": "other",
+      "items": [
+        { "ref": "library:icon-set-planner", "type": "skill", "use": "build", "when": "When the product needs a small icon set and each icon must be tested for meaning" },
+        { "ref": "library:recraft", "type": "tool", "use": "explore", "when": "When you need vector drafts of icons in one style to compare and refine" },
+        { "ref": "library:favicon-maker", "type": "skill", "use": "build", "when": "When the logo must become a full favicon set with the link tags" },
+        { "ref": "kit:skills/contrast-and-dark-mode-check", "use": "check", "when": "Before shipping icons, to check each one reaches 3:1 against its background in both themes" }
+      ]
+    },
+    {
+      "id": "coded-prototype",
+      "task": "Build a coded prototype of a screen",
+      "kind": "code",
+      "items": [
+        { "ref": "library:screenshot-to-interface-builder", "type": "skill", "use": "build", "when": "When you have a mockup or screenshot and want matching UI built from your own parts" },
+        { "ref": "library:polished-interface-builder", "type": "skill", "use": "build", "when": "When there is no mockup and you want a built page with careful colour, layout and motion" },
+        { "ref": "library:throwaway-prototype-builder", "type": "skill", "use": "explore", "when": "When a design question is open and a quick prototype would settle it" },
+        { "ref": "library:v0", "type": "tool", "use": "explore", "when": "When you want a live preview of a screen idea in minutes to react to" },
+        { "ref": "library:figma-ai", "type": "tool", "use": "build", "when": "When the team works in Figma and wants a clickable prototype from a prompt" },
+        { "ref": "library:page-design-gate", "type": "skill", "use": "check", "when": "When the prototype is built, to check it in a real browser at phone and desktop width" }
+      ]
+    },
+    {
+      "id": "style-drift-audit",
+      "task": "Audit a growing product for style drift",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:monthly-design-system-keeper", "type": "agent", "use": "check", "when": "Each month, to find where the code has drifted from the design rules" },
+        { "ref": "library:design-system-auditor", "type": "skill", "use": "check", "when": "When components multiply, to find hardcoded values and undocumented variants" },
+        { "ref": "kit:skills/ui-review-before-after", "use": "check", "when": "When drift shows on screen, to write each fix as a before and after note" },
+        { "ref": "library:prepare-a-design-system-migration", "type": "workflow", "use": "build", "when": "When old styles must be replaced, to list the changes and stage the move" }
+      ]
+    },
+    {
+      "id": "translated-screens",
+      "task": "Check screens still work after translation",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:check-a-translated-interface-still-makes-sense", "type": "workflow", "use": "check", "when": "When strings are translated, to check meaning and list where the layout may break" },
+        { "ref": "kit:skills/ui-review-before-after", "use": "check", "when": "When longer words wrap or cut off, to write the spacing and size fixes" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any work that must match the client's live site: colours, fonts and voice" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a spec goes to developers, to catch typos and a part named two ways" }
+  ],
+  "helpers": [
+    { "role": "ux-designer", "when": "When the flow, screen list or wording is not agreed and visuals would be guesswork" },
+    { "role": "design-systems-designer", "when": "When the job is a full token set and component library, not a few screens" },
+    { "role": "frontend-developer", "when": "When the spec must become working code or the build needs fixing to match" },
+    { "role": "accessibility-specialist", "when": "When the product needs a full audit with keyboard and screen reader tests" },
+    { "role": "brand-designer", "when": "When there is no logo, palette or brand font to build the interface on" },
+    { "role": "mobile-app-developer", "when": "When native platform parts or app store rules decide what the screen can do" }
+  ],
+  "gaps": [
+    "No library item checks a screen against Android's Material Design rules; only Apple's rules are covered",
+    "No library item designs data tables and dense lists: column order, sorting, filters, density and row states",
+    "No library item shows three screen directions as pictures side by side; the style guides give words and code only",
+    "No library item covers Figma itself: variables, auto layout, component properties or file set-up",
+    "No library item measures spacing and alignment from a screenshot or compares a build with its design pixel by pixel",
+    "No library item designs an app icon or app store screenshots",
+    "No library item sets an illustration or image style for an interface",
+    "No library item plans breakpoints and how each screen reflows from phone to desktop"
+  ]
+}

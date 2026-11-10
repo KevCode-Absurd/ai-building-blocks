@@ -1,0 +1,244 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "podcast-producer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "show-notes",
+      "task": "Write show notes, titles and chapters from a transcript",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:interview-transcript-trimmer", "type": "skill", "use": "brief", "when": "Before writing, to cut a long transcript down to the few parts worth quoting" },
+        { "ref": "kit:skills/show-notes-and-transcript", "use": "build", "when": "When the episode is recorded and you need titles, summary, takeaways, timestamps and chapters" },
+        { "ref": "library:podcast-show-notes-writer", "type": "skill", "use": "build", "when": "When you only have rough notes, not a full transcript, and still need notes with links" },
+        { "ref": "library:youtube-chapter-writer", "type": "skill", "use": "build", "when": "When the episode also goes on YouTube and the chapter list must follow its rules" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the three titles feel alike, to see several different angles" },
+        { "ref": "library:headline-cover-test-ranker", "type": "skill", "use": "check", "when": "When you have a title list, to score each read alone and keep the best three" },
+        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When the notes repeat a guest's facts or numbers, to check each before publishing" }
+      ]
+    },
+    {
+      "id": "episode-plan",
+      "task": "Plan an episode and its timed run sheet",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/episode-from-booking-to-release", "use": "brief", "when": "When a guest or topic is chosen, to run every step from booking to release in order" },
+        { "ref": "library:case-first-story-builder", "type": "skill", "use": "brief", "when": "When the topic is broad, to find the one case the episode should be built on" },
+        { "ref": "kit:skills/episode-plan-and-run-sheet", "use": "build", "when": "Before recording, to set the promise, the segments, the questions and the timings" },
+        { "ref": "library:podcast-pilot-brief-builder", "type": "skill", "use": "build", "when": "When it is a first episode, to get a pilot hook, a timed run sheet and a recording plan" },
+        { "ref": "library:ira-glass", "type": "mind", "use": "think", "when": "When the outline is a list of topics, to find what happened and what it meant" }
+      ]
+    },
+    {
+      "id": "guest-questions",
+      "task": "Write guest questions and follow-ups",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:other-person-view-mapper", "type": "skill", "use": "brief", "when": "Before writing questions, to see the topic from the guest's side: what they want and why" },
+        { "ref": "kit:skills/episode-plan-and-run-sheet", "use": "build", "when": "When you need open questions with follow-ups in an order that builds" },
+        { "ref": "library:oprah-winfrey", "type": "mind", "use": "think", "when": "When the questions invite rehearsed answers, to find the one that gets a real story" }
+      ]
+    },
+    {
+      "id": "guest-booking",
+      "task": "Shortlist, pitch and book guests",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/guest-booking-and-release", "use": "build", "when": "When you need a scored shortlist, the booking steps and a signed release" },
+        { "ref": "kit:prompts/guest-pitch-and-prep-pack", "use": "build", "when": "When you want one named guest, and again when they say yes and need a prep pack" },
+        { "ref": "library:own-voice-outreach-writer", "type": "skill", "use": "build", "when": "When the pitch and the follow-ups must sound like the host and name something specific" },
+        { "ref": "library:stranger-first-message-writer", "type": "skill", "use": "explore", "when": "When the guest has never heard of the show, to try a first message read in seconds" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "Before sending the pitch, to cut it and check it has one clear ask" }
+      ]
+    },
+    {
+      "id": "rights-and-consent",
+      "task": "Log rights and consent before release",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/rights-and-consent-log", "use": "build", "when": "Before release, or when asked whether a song, clip or voice can be used" },
+        { "ref": "kit:skills/guest-booking-and-release", "use": "check", "when": "When a guest appears, to confirm consent on tape and a signed release are on file" },
+        { "ref": "library:agency-support-legal-compliance-checker", "type": "agent", "use": "check", "when": "When a giveaway, promotion or sponsor message must follow the law where listeners are" }
+      ]
+    },
+    {
+      "id": "clips-and-promo",
+      "task": "Pick clips and write the promo kit",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:shorts-clip-finder", "type": "skill", "use": "brief", "when": "When you have the transcript, to find the best five moments to clip" },
+        { "ref": "kit:prompts/clips-and-promo-kit", "use": "build", "when": "When the episode is final and you need three clips, the posts and the email" },
+        { "ref": "library:long-form-post-repurposer", "type": "skill", "use": "build", "when": "When one strong passage should become a post that stands alone" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the episode email needs a subject line, to compare several angles" },
+        { "ref": "library:video-hook-scorer", "type": "skill", "use": "check", "when": "When clips are chosen, to score each opening and rewrite the weak ones" },
+        { "ref": "library:opus-clip", "type": "tool", "use": "build", "when": "When the client wants captioned short clips cut from the recording for review" }
+      ]
+    },
+    {
+      "id": "captions-and-video-version",
+      "task": "Caption clips and prepare the video version",
+      "kind": "other",
+      "items": [
+        { "ref": "library:branded-video-captions", "type": "skill", "use": "build", "when": "When clips need timed captions in the show's font and a subtitle file" },
+        { "ref": "library:descript", "type": "tool", "use": "build", "when": "When clips and captions are cut by editing the transcript" },
+        { "ref": "library:youtube-title-and-tags-writer", "type": "skill", "use": "build", "when": "When the episode goes on YouTube and needs a title, description, tags and timestamps" },
+        { "ref": "library:youtube-title-thumbnail-check", "type": "skill", "use": "check", "when": "Before upload, to check titles for length and repeats beside the thumbnail idea" }
+      ]
+    },
+    {
+      "id": "transcript",
+      "task": "Make and clean a transcript with speaker labels",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:recording-transcriber", "type": "skill", "use": "build", "when": "When you have the audio and need the words written out with each speaker labelled" },
+        { "ref": "library:subtitle-and-transcript-maker", "type": "skill", "use": "build", "when": "When you also need word timings and a subtitle file" },
+        { "ref": "kit:skills/show-notes-and-transcript", "use": "check", "when": "When the transcript will be published, to make it readable and accessible" },
+        { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "Before it goes on the episode page, to fix names, terms and slips" }
+      ]
+    },
+    {
+      "id": "edit-plan",
+      "task": "Plan the edit of a raw recording",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:cut-a-raw-recording-and-get-chapters-and-short-clips", "type": "workflow", "use": "build", "when": "When you have the raw file and need clean speech, a timed cut list and chapters" },
+        { "ref": "library:interview-transcript-trimmer", "type": "skill", "use": "build", "when": "When the talk runs long, to decide in passes what stays" },
+        { "ref": "library:noisy-audio-cleaner", "type": "skill", "use": "build", "when": "When the recording has background noise or music under the speech" },
+        { "ref": "library:video-audio-finishing-plan", "type": "workflow", "use": "build", "when": "When voice, music and effects need a timed plan before the final mix" },
+        { "ref": "library:jad-abumrad", "type": "mind", "use": "think", "when": "When the edit is clean but flat, to listen for the part worth building around" }
+      ]
+    },
+    {
+      "id": "release-check",
+      "task": "Check an episode before it goes live",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/episode-release-check", "use": "check", "when": "Before publishing, to check file format, loudness, feed basics and the episode page" },
+        { "ref": "library:audio-quality-metric-picker", "type": "skill", "use": "check", "when": "When you have the file, to measure loudness, noise and speech quality" },
+        { "ref": "library:noisy-audio-cleaner", "type": "skill", "use": "build", "when": "When the check finds noise that must be fixed before release" }
+      ]
+    },
+    {
+      "id": "season-plan",
+      "task": "Plan a season of episodes and guests",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:content-pillar-finder", "type": "skill", "use": "brief", "when": "Before listing episodes, to find the few subjects the host can truly own" },
+        { "ref": "kit:prompts/season-plan", "use": "build", "when": "Before a new season, to get episodes, guests to pitch and a rhythm the host can keep" },
+        { "ref": "library:agency-marketing-global-podcast-strategist", "type": "agent", "use": "build", "when": "When the season plan must also cover positioning and growth on each platform" }
+      ]
+    },
+    {
+      "id": "launch-a-show",
+      "task": "Launch or relaunch a show",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/launch-a-new-show", "use": "brief", "when": "When a client wants to start a podcast or restart one that stopped" },
+        { "ref": "library:agency-marketing-global-podcast-strategist", "type": "agent", "use": "build", "when": "When the show needs its positioning and a first-season plan for the main platforms" },
+        { "ref": "library:podcast-pilot-brief-builder", "type": "skill", "use": "build", "when": "When the idea needs testing as one pilot before a full season" },
+        { "ref": "library:product-name-brainstormer", "type": "skill", "use": "explore", "when": "When the show has no name yet, to compare five name ideas and why each fits listeners" },
+        { "ref": "library:launch-teaser-to-preview-planner", "type": "skill", "use": "build", "when": "When there is a launch date, to plan the teaser, the preview and launch day" }
+      ]
+    },
+    {
+      "id": "sponsor-read",
+      "task": "Write a sponsor read with disclosure",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/sponsor-read-with-disclosure", "use": "build", "when": "When an episode carries a sponsor and the host reads the message" },
+        { "ref": "library:ad-opening-line-batch-writer", "type": "prompt", "use": "explore", "when": "When the read needs a way in, to get ten openings the host could say naturally" },
+        { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "Before recording, to fix lines that trip when spoken" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "Before the sponsor signs off, to sort each claim as fine, needs proof or cut" }
+      ]
+    },
+    {
+      "id": "partners-and-sponsors",
+      "task": "Plan cross-promotion and sponsor outreach",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:partner-campaign-planner", "type": "skill", "use": "build", "when": "When another show or brand shares the audience, to plan a joint push and the pitch" },
+        { "ref": "library:nonprofit-sponsor-package-planner", "type": "skill", "use": "build", "when": "When the show needs sponsor tiers and pitch copy; built for events, so adapt the benefits" },
+        { "ref": "library:own-voice-outreach-writer", "type": "skill", "use": "build", "when": "When the pitch to a sponsor or partner must sound like the host" }
+      ]
+    },
+    {
+      "id": "monthly-review",
+      "task": "Review the show's month and decide what to change",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/monthly-show-review", "use": "build", "when": "After the last release of the month, to read the numbers and pick what to change" },
+        { "ref": "library:agency-support-analytics-reporter", "type": "agent", "use": "build", "when": "When you have the host's export and need trends in plain words" },
+        { "ref": "library:vanity-metric-fixer", "type": "skill", "use": "check", "when": "When the report leans on totals, to swap them for numbers that show real listening" },
+        { "ref": "library:monthly-content-repurposer", "type": "agent", "use": "build", "when": "When the month's best episodes should be turned into more content" }
+      ]
+    },
+    {
+      "id": "episode-to-article",
+      "task": "Turn an episode into an article or newsletter",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:rough-text-to-article-tidier", "type": "prompt", "use": "build", "when": "When the transcript should become a tidy article with a title, summary and headings" },
+        { "ref": "library:content-repurposer", "type": "skill", "use": "build", "when": "When one episode should feed a series of emails, posts and clips" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the article needs its own title, to compare several angles" },
+        { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "When the article is drafted, to fix lines that read as machine written" }
+      ]
+    },
+    {
+      "id": "intro-outro-and-music",
+      "task": "Script the intro and outro and brief the music bed",
+      "kind": "other",
+      "items": [
+        { "ref": "library:elevenlabs-spoken-script-writer", "type": "skill", "use": "build", "when": "When the intro is voiced, to write it with pacing and pauses marked" },
+        { "ref": "library:suno-song-and-music-bed-prompt-writer", "type": "skill", "use": "build", "when": "When the show needs a theme or a bed described by genre, tempo and instruments" },
+        { "ref": "library:suno", "type": "tool", "use": "explore", "when": "When the host wants to hear two or three rough themes before choosing" },
+        { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "When the intro is drafted, to fix lines that trip when spoken" }
+      ]
+    },
+    {
+      "id": "trailer-and-solo-script",
+      "task": "Write a trailer or solo episode script",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:read-aloud-speech-shaper", "type": "skill", "use": "build", "when": "When one voice carries the piece and it must be shaped for the ear" },
+        { "ref": "library:elevenlabs-spoken-script-writer", "type": "skill", "use": "build", "when": "When the script needs clear speakers, pacing and a set length" },
+        { "ref": "library:ad-opening-line-batch-writer", "type": "prompt", "use": "explore", "when": "When the trailer's first ten seconds are weak, to compare openings" },
+        { "ref": "library:roman-mars", "type": "mind", "use": "think", "when": "When a solo episode explains something, to start from one ordinary thing and ask why" },
+        { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "Before recording, to catch every line that reads well but speaks badly" }
+      ]
+    },
+    {
+      "id": "other-languages",
+      "task": "Release an episode in another language",
+      "kind": "other",
+      "items": [
+        { "ref": "library:video-dubbing-editor", "type": "skill", "use": "build", "when": "When the episode should exist in other languages and keep each speaker's voice" },
+        { "ref": "library:translator", "type": "skill", "use": "build", "when": "When the show notes and titles need a natural version in the new language" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When notes, posts or reads state facts or numbers, to check each one" },
+    { "ref": "library:ai-default-patterns", "type": "skill", "use": "check", "when": "Before delivery, to catch stock phrases that make copy read as machine written" },
+    { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "Last step before publishing, to catch slips and wrong names" }
+  ],
+  "helpers": [
+    { "role": "video-editor", "when": "When the episode needs a full video edit, not only clips and captions" },
+    { "role": "social-media-manager", "when": "When the promo kit needs scheduling, replies and a channel plan" },
+    { "role": "sponsorship-manager", "when": "When the show is ready for a rate card, a sponsor deck and sponsor prospecting" },
+    { "role": "graphic-designer", "when": "When the show needs cover art, episode cards or quote cards designed" },
+    { "role": "advertising-copywriter", "when": "When a sponsor wants a produced ad, a jingle or a sonic logo" },
+    { "role": "youtube-strategist", "when": "When the video version should grow as a channel in its own right" }
+  ],
+  "gaps": [
+    "No library item writes guest interview questions with follow-ups; the question sets are for hiring and customer research",
+    "No library item scores a guest shortlist or drafts a guest release form",
+    "No library item checks a podcast feed or the Apple and Spotify listing rules",
+    "No library item reads podcast numbers such as downloads, listen-through and followers from a host's export",
+    "No library item covers music licensing or fair use for a show",
+    "No library item builds a sponsor rate card or media kit for a podcast; the sponsor planner is for events",
+    "No library item makes show cover art to directory sizes",
+    "No library item writes a trailer or a solo episode script; speech and voice script items stand in",
+    "No library item makes clearly different caption or audiogram styles to compare, or checks a dubbed episode",
+    "The library has too few podcast-specific items to do much more than this; most picks here are general audio, video or writing tools"
+  ]
+}

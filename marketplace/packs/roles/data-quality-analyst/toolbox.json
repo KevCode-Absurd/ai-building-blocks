@@ -1,0 +1,268 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "data-quality-analyst",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "data-dictionary",
+      "task": "Write a data dictionary for files, CRM fields or tables",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/data-dictionary-and-glossary", "use": "build", "when": "When each column needs a plain meaning, type, allowed values, example and owner" },
+        { "ref": "library:dataset-profiler", "type": "skill", "use": "brief", "when": "Before writing meanings, to see each column's shape, missing values and odd entries" },
+        { "ref": "library:data-catalog-entry-writer", "type": "skill", "use": "build", "when": "When one important table needs a fuller entry with sources and who may use it" },
+        { "ref": "library:plain-words-sql-explainer", "type": "skill", "use": "brief", "when": "When a column is worked out by a query and you must say what it really counts" },
+        { "ref": "library:mermaid-chart-writer", "type": "skill", "use": "build", "when": "When the dictionary comes from a database schema and the links should be drawn" }
+      ]
+    },
+    {
+      "id": "business-glossary",
+      "task": "Write a business glossary the whole team uses",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/data-dictionary-and-glossary", "use": "build", "when": "When terms like active customer or booking need one agreed meaning" },
+        { "ref": "library:project-glossary-writer", "type": "skill", "use": "explore", "when": "When the terms are still argued over, to talk them through and record each decision" },
+        { "ref": "library:metric-definition-writer", "type": "skill", "use": "build", "when": "When a term is a metric and needs its exact working written down" },
+        { "ref": "library:definition-tester", "type": "skill", "use": "check", "when": "When a definition sounds clear, to try it against hard cases before it is agreed" }
+      ]
+    },
+    {
+      "id": "naming-and-pick-lists",
+      "task": "Set naming and pick-list rules for a CRM or shared sheets",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/data-quality-rules-and-checks", "use": "build", "when": "When each field needs its valid values and format written as a rule you can check" },
+        { "ref": "library:shared-business-record-planner", "type": "skill", "use": "build", "when": "When the same field lives in two tools, to set which one owns it" },
+        { "ref": "library:excel-input-form-builder", "type": "skill", "use": "build", "when": "When pick-lists should be enforced with dropdowns on the sheet itself" },
+        { "ref": "library:crm-hygiene-auditor", "type": "skill", "use": "check", "when": "When rules exist, to list CRM records with missing fields, stale dates and mismatches" }
+      ]
+    },
+    {
+      "id": "report-lineage",
+      "task": "Note where each report's numbers come from",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:data-catalog-entry-writer", "type": "skill", "use": "build", "when": "When each source table behind a report needs its meaning and quality notes" },
+        { "ref": "library:align-recurring-report-metric-definitions", "type": "workflow", "use": "build", "when": "When two reports use one name for different counts and need a worked comparison" },
+        { "ref": "library:metric-mismatch-tracer", "type": "skill", "use": "check", "when": "When a number differs between two reports, to find the step where they split" },
+        { "ref": "library:report-definition-drift-review-assistant", "type": "agent", "use": "check", "when": "When a recurring report may have changed its definition without anyone saying" }
+      ]
+    },
+    {
+      "id": "quality-rules",
+      "task": "Write data quality rules and the checks that run them",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/data-quality-rules-and-checks", "use": "build", "when": "When a dataset needs rules for complete, valid, unique, consistent, linked and fresh" },
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "brief", "when": "Before writing rules, to find the gaps, duplicates and odd values already there" },
+        { "ref": "library:plain-words-sql-writer", "type": "skill", "use": "build", "when": "When a rule must run as a query on the client's database" },
+        { "ref": "library:sample-data-file-maker", "type": "skill", "use": "check", "when": "When you need a file of bad rows to prove each check fires" },
+        { "ref": "library:taiichi-ohno", "type": "mind", "use": "think", "when": "When checks keep catching the same fault, to fix where the record is made" }
+      ]
+    },
+    {
+      "id": "weekly-quality-check",
+      "task": "Run the weekly data quality check",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/weekly-data-quality-check", "use": "build", "when": "Weekly before reports, and straight after a new import, form or integration" },
+        { "ref": "library:data-quality-scorecard-maker", "type": "skill", "use": "build", "when": "When the week's results should be one scorecard per dataset" },
+        { "ref": "library:data-file-clean-up-loop", "type": "agent", "use": "build", "when": "When failed rows should be fixed and rechecked until the file passes" },
+        { "ref": "library:the-monitoring-loop-always-watching-implementation-planner", "type": "skill", "use": "build", "when": "When checks should alert only on unusual change, with baselines and quiet periods" }
+      ]
+    },
+    {
+      "id": "pre-import-check",
+      "task": "Check a file before it goes into a system",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/pre-import-file-check", "use": "check", "when": "Before a CSV goes into a CRM, stock, booking or accounts system" },
+        { "ref": "library:messy-spreadsheet-cleaner", "type": "skill", "use": "build", "when": "When spacing, numbers stored as text and mixed dates must be fixed first" },
+        { "ref": "library:data-file-reader-and-writer", "type": "skill", "use": "check", "when": "When characters or dates break on import, to read and save the file correctly" },
+        { "ref": "library:excel-table-join-reconciler", "type": "skill", "use": "check", "when": "When the file must be matched to records already held, to find doubles and orphans" }
+      ]
+    },
+    {
+      "id": "crm-data-audit",
+      "task": "Audit CRM data and write a change table",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/data-quality-rules-and-checks", "use": "build", "when": "When the export needs profiling, rules and a table of proposed changes" },
+        { "ref": "library:crm-hygiene-auditor", "type": "skill", "use": "check", "when": "When deals and contacts need a fix list that changes nothing by itself" },
+        { "ref": "library:lead-source-field-checker", "type": "skill", "use": "check", "when": "When lead source fields may be too poor to link leads to campaigns" },
+        { "ref": "library:crm-record-filler", "type": "skill", "use": "build", "when": "When records miss company or contact details the team relies on" }
+      ]
+    },
+    {
+      "id": "duplicates",
+      "task": "Find duplicates and write a merge plan",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/duplicate-review-and-merge-plan", "use": "build", "when": "When customers, companies or products are doubled and need keys, review and a plan" },
+        { "ref": "library:agency-identity-graph-operator", "type": "agent", "use": "explore", "when": "When records span several tools, to compare a second matching and scoring design" },
+        { "ref": "library:duplicate-customer-finder", "type": "skill", "use": "build", "when": "When the records are a Shopify store's customers" },
+        { "ref": "library:duplicate-sku-finder", "type": "skill", "use": "build", "when": "When a Shopify store's products share a code or barcode" },
+        { "ref": "library:human-review-gate", "type": "skill", "use": "check", "when": "Before any merge runs, to get a named person's sign-off on the review list" }
+      ]
+    },
+    {
+      "id": "made-up-test-data",
+      "task": "Build made-up test, demo or training data",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/made-up-test-data", "use": "build", "when": "When data must match the client's columns, types and rules without real people in it" },
+        { "ref": "library:edge-case-list-maker", "type": "prompt", "use": "brief", "when": "Before building, to list the awkward cases the data must contain" },
+        { "ref": "library:sample-data-file-maker", "type": "skill", "use": "explore", "when": "When you want a second, differently built file as CSV, JSON, SQL or a script" },
+        { "ref": "library:test-data-seeder", "type": "skill", "use": "build", "when": "When a new database needs realistic, repeatable seed data loaded" }
+      ]
+    },
+    {
+      "id": "test-cases",
+      "task": "Write test cases that use the test data",
+      "kind": "other",
+      "items": [
+        { "ref": "library:qa-test-scenario-writer", "type": "skill", "use": "build", "when": "When each import or form path needs a starting state, steps and expected result" },
+        { "ref": "library:edge-case-list-maker", "type": "prompt", "use": "brief", "when": "When you must decide which cases matter, smallest first" },
+        { "ref": "kit:skills/made-up-test-data", "use": "build", "when": "When each case needs its own rows with the expected outcome marked" }
+      ]
+    },
+    {
+      "id": "migration-field-map",
+      "task": "Map every old field to a new one before data moves",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/migration-field-map", "use": "build", "when": "When moving from spreadsheets or an old system and nothing is mapped yet" },
+        { "ref": "library:column-mapping-document-writer", "type": "skill", "use": "build", "when": "When each column needs a target, a rule, open gaps and decisions to review" },
+        { "ref": "library:business-data-move-runbook", "type": "skill", "use": "brief", "when": "When the map is one part of a wider move that also needs checks and a rollback path" }
+      ]
+    },
+    {
+      "id": "transform-rules",
+      "task": "Write the transform and clean-up rules for a move",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/migration-field-map", "use": "brief", "when": "When the rules should follow from the agreed field map" },
+        { "ref": "library:agency-engineering-ai-data-remediation-engineer", "type": "agent", "use": "build", "when": "When many rows need a few tested fix rules, a change log and a risky-row list" },
+        { "ref": "library:data-cleaner", "type": "skill", "use": "build", "when": "When missing values, wrong types and outliers must be fixed before loading" }
+      ]
+    },
+    {
+      "id": "system-move",
+      "task": "Plan a system move with a test import and record counts",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/system-move-with-record-counts", "use": "build", "when": "When switching CRM, accounts, booking or till and no record may be lost" },
+        { "ref": "library:business-data-move-runbook", "type": "skill", "use": "build", "when": "When the move needs field maps, checks and a rollback path in one plan" },
+        { "ref": "library:zero-downtime-migration-planner", "type": "skill", "use": "explore", "when": "When the old system must stay live during the move, to compare a staged plan" },
+        { "ref": "library:copilot-sql-server-table-reconciliation", "type": "skill", "use": "check", "when": "When old and new tables are in SQL Server and must be proved to match" }
+      ]
+    },
+    {
+      "id": "cut-over",
+      "task": "Write the cut-over checklist with rollback steps",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:business-tool-launch-checklist", "type": "skill", "use": "build", "when": "When the rollout needs launch checks, open blockers and a decision record" },
+        { "ref": "library:release-day-rollback-planner", "type": "prompt", "use": "build", "when": "When the day itself needs checks, a rollback plan and a sign it worked" },
+        { "ref": "library:launch-readiness-seam-checker", "type": "skill", "use": "check", "when": "When several parts switch at once, to find the joins where things can fall through" },
+        { "ref": "library:backup-and-recovery-planner", "type": "skill", "use": "check", "when": "Before the switch, to confirm a backup exists and a restore has been tried" },
+        { "ref": "library:change-rollout-planner", "type": "skill", "use": "build", "when": "When staff must change how they work, to plan messages and handle pushback" },
+        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When the plan assumes nothing goes wrong, to walk each handoff and human slip" }
+      ]
+    },
+    {
+      "id": "dbt-tests",
+      "task": "Write tests and a contract for a model that feeds reports",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/dbt-tests-and-contract", "use": "build", "when": "When a model feeds reports or other teams and needs tests and freshness checks" },
+        { "ref": "library:metric-definition-writer", "type": "skill", "use": "brief", "when": "When the model carries a metric whose working must be fixed first" },
+        { "ref": "library:sql-query-launch-reviewer", "type": "skill", "use": "check", "when": "Before the model is relied on, to find wrong-result risks in its SQL" }
+      ]
+    },
+    {
+      "id": "issue-log",
+      "task": "Log a data issue and find its root cause",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/issue-log-and-root-cause", "use": "build", "when": "When a check fails or a report is wrong and the fix should be at the source" },
+        { "ref": "library:root-cause-finder", "type": "skill", "use": "build", "when": "When the issue keeps coming back and needs a chain of whys checked against facts" },
+        { "ref": "library:failure-postmortem-writer", "type": "skill", "use": "build", "when": "When the issue hurt a report or customer and needs a blame-free write-up" },
+        { "ref": "library:turn-an-incident-into-a-safer-procedure", "type": "workflow", "use": "build", "when": "When the fix should change a procedure and leave tracked prevention actions" }
+      ]
+    },
+    {
+      "id": "correction-request",
+      "task": "Trace a correction request across every copy of a record",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/correction-request-trace", "use": "build", "when": "When someone says their details are wrong and every copy must be found and fixed" },
+        { "ref": "library:agency-engineering-privacy-engineer", "type": "agent", "use": "brief", "when": "When nobody knows where personal data lives, to map it across systems" },
+        { "ref": "library:data-request-reply-drafter", "type": "skill", "use": "build", "when": "When the person is owed a reply, to draft it with the steps taken" },
+        { "ref": "library:agency-data-privacy-officer", "type": "agent", "use": "check", "when": "When the request touches privacy law, to check duties and the proof you lack" }
+      ]
+    },
+    {
+      "id": "data-governance",
+      "task": "Set rules for new uses of customer data",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:prepare-new-data-use-review-for-signoff", "type": "workflow", "use": "build", "when": "When a team wants to use customer data in a new way and needs a review before launch" },
+        { "ref": "library:privacy-policy-drift-checker", "type": "skill", "use": "check", "when": "When a data plan may no longer match the published privacy policy" }
+      ]
+    },
+    {
+      "id": "quality-report",
+      "task": "Report data quality to managers",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:data-quality-scorecard-maker", "type": "skill", "use": "build", "when": "When managers want one score per dataset and the trend" },
+        { "ref": "library:data-chart-drawer", "type": "skill", "use": "build", "when": "When the trend in failed checks should be shown as a clean chart" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When the report must be one page with the decision needed first" }
+      ]
+    },
+    {
+      "id": "dataset-documentation",
+      "task": "Document a dataset so its analysis can be repeated",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:document-a-dataset-analysis-for-reproduction", "type": "workflow", "use": "build", "when": "When someone else must repeat an analysis from a data inventory and method notes" },
+        { "ref": "library:analysis-assumptions-logger", "type": "skill", "use": "build", "when": "When every assumption should be logged with its risk for reviewers" }
+      ]
+    },
+    {
+      "id": "strip-personal-details",
+      "task": "Strip personal details before data is shared or used for tests",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:training-data-cleaner", "type": "skill", "use": "build", "when": "When a pile of text or files must have copies, junk and personal details removed" },
+        { "ref": "library:pdf-toolkit", "type": "skill", "use": "build", "when": "When names or numbers in a PDF must be redacted with the original kept safe" },
+        { "ref": "kit:skills/made-up-test-data", "use": "explore", "when": "When made-up data would do the job and no real record needs to leave the system" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:requirements-question-asker", "type": "skill", "use": "brief", "when": "Before any work, when the system, the columns or the use of the data is not stated" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a dictionary or rules sheet is handed over, to catch a term used two ways" }
+  ],
+  "helpers": [
+    { "role": "data-engineer", "when": "When checks must run inside a pipeline or warehouse, or loads need a run book" },
+    { "role": "data-entry-specialist", "when": "When records must be re-keyed or a batch of documents entered to the new rules" },
+    { "role": "compliance-specialist", "when": "When retention, access or privacy duties decide what may be kept or merged" },
+    { "role": "qa-engineer", "when": "When the test data feeds a full test plan for an app or integration" },
+    { "role": "bi-analyst", "when": "When metric definitions and dashboards must be rebuilt on the cleaned data" },
+    { "role": "revops-specialist", "when": "When CRM stages, owners and routing must change, not only the data in them" }
+  ],
+  "gaps": [
+    "No library item writes a whole data dictionary with allowed values and owners, or builds one from a database schema; only single-table entries",
+    "No library item sets naming and pick-list rules for a CRM or shared sheets",
+    "No library item writes data quality checks as SQL for a named database (nulls, uniqueness, broken links, freshness)",
+    "No library item plans fuzzy matching, which record survives and a merge order; the duplicate finders are for Shopify only",
+    "No library item plans a test import with record counts and proves old and new systems match, except for SQL Server tables",
+    "No library item sets data owners, stewards, access levels or a retention schedule for a small firm",
+    "No library item keeps a data quality issue log with severity, owner and status",
+    "No library item traces one person's record across every system for a correction request",
+    "No library item writes dbt tests, freshness checks or model contracts; only the kit prompt does",
+    "No library item masks or scrambles real data to make safe test data"
+  ]
+}

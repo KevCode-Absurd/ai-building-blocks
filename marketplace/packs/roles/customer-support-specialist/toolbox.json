@@ -1,0 +1,310 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "customer-support-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "inbox-triage",
+      "task": "Sort an inbox by urgency and draft a reply for each message",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:workflows/daily-support-run", "use": "brief", "when": "Once or twice each working day, to run the inbox in the same order every time" },
+        { "ref": "library:customer-message-tone-and-urgency-review", "type": "skill", "use": "brief", "when": "When a batch arrives, to read tone, urgency and warning signs before you rank it" },
+        { "ref": "kit:skills/inbox-triage-and-policy-replies", "use": "build", "when": "When you need each message ranked, given a path and answered from the business's own policy" },
+        { "ref": "library:customer-inbox-triage-and-reply-drafter", "type": "agent", "use": "build", "when": "When the owner wants new emails ranked and drafted for approval on a schedule" },
+        { "ref": "library:customer-reply-drafter", "type": "skill", "use": "explore", "when": "When one message is unusual and you want a second reply in a different tone" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before a reply is approved, to check each promise in it can be kept" }
+      ]
+    },
+    {
+      "id": "batch-replies",
+      "task": "Draft replies to a batch of customer emails",
+      "kind": "email",
+      "items": [
+        { "ref": "library:order-lookup-assistant", "type": "skill", "use": "brief", "when": "When a reply depends on the order's items, payment and shipping history" },
+        { "ref": "kit:skills/inbox-triage-and-policy-replies", "use": "build", "when": "When up to 30 emails need short, clear replies that stay true to policy" },
+        { "ref": "library:customer-reply-and-order-checker", "type": "skill", "use": "build", "when": "When each reply must quote the live order status, with refunds left for the owner's yes" },
+        { "ref": "library:legal-inquiry-reply-drafter", "type": "skill", "use": "build", "when": "When a message is a data request or a legal threat and needs a careful holding reply" },
+        { "ref": "library:support-reply-tone-editor", "type": "skill", "use": "explore", "when": "When the facts are right but you want the same reply warmer, firmer or shorter" },
+        { "ref": "library:angry-customer-reply-checker", "type": "skill", "use": "check", "when": "When a reply answers a complaint, to check its promises, facts and tone" }
+      ]
+    },
+    {
+      "id": "returns-batch",
+      "task": "Handle a batch of return and refund requests",
+      "kind": "email",
+      "items": [
+        { "ref": "library:gorgias-refund-review-brief", "type": "skill", "use": "brief", "when": "When the request sits in Gorgias and you need the refund facts and policy checks in one brief" },
+        { "ref": "kit:skills/returns-and-refunds", "use": "build", "when": "When each request must be checked against order date, item state and the rule that applies" },
+        { "ref": "library:refund-request-reply-writer", "type": "prompt", "use": "build", "when": "When one request needs a clear yes, partial or no that leads with the answer" },
+        { "ref": "library:agency-retail-customer-returns", "type": "agent", "use": "explore", "when": "When a case is borderline and you want a second read of the policy and the refund sum" },
+        { "ref": "library:repeat-partial-refund-spotter", "type": "skill", "use": "check", "when": "When a customer asks often, to see orders with many partial refunds before you agree" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before sending, to check refund dates and amounts promised in each reply" }
+      ]
+    },
+    {
+      "id": "angry-customer",
+      "task": "Reply to an angry customer without over-promising",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/angry-customer-reply", "use": "build", "when": "When a customer is upset for the second or third time and the reply must calm and fix" },
+        { "ref": "library:angry-customer-reply-writer", "type": "prompt", "use": "explore", "when": "When you want a second draft that names the feeling first, to compare" },
+        { "ref": "library:apology-email-writer", "type": "skill", "use": "build", "when": "When the business got it wrong and owes a plain apology with what happens next" },
+        { "ref": "library:get-a-stuck-customer-issue-unstuck-and-close-the-loop", "type": "workflow", "use": "build", "when": "When the fix sits with someone else and needs an escalation brief and a close-out" },
+        { "ref": "library:harriet-lerner", "type": "mind", "use": "think", "when": "When the apology explains, defends or asks to be forgiven instead of owning the fault" },
+        { "ref": "library:angry-customer-reply-checker", "type": "skill", "use": "check", "when": "Before sending, to test the draft for promises, wrong facts and a cold tone" }
+      ]
+    },
+    {
+      "id": "reply-templates",
+      "task": "Build a library of reply templates",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:research-theme-synthesizer", "type": "skill", "use": "brief", "when": "Before writing, to rank past tickets by the questions that come up most" },
+        { "ref": "kit:skills/reply-template-library", "use": "build", "when": "When the team answers the same questions all day and needs templates with fill-in fields" },
+        { "ref": "library:support-desk-automation-builder", "type": "skill", "use": "build", "when": "When the templates should load into the help desk with a routine that drafts replies" },
+        { "ref": "library:support-reply-tone-editor", "type": "skill", "use": "explore", "when": "When a template sounds canned, to try it in two or three tones and pick one" },
+        { "ref": "library:matthew-dixon", "type": "mind", "use": "think", "when": "When a template answers the question but makes the customer write back to finish the job" },
+        { "ref": "library:draft-brand-voice-checker", "type": "skill", "use": "check", "when": "When the set is drafted, to rank where templates drift from the tone guide" }
+      ]
+    },
+    {
+      "id": "returns-policy",
+      "task": "Write a plain returns and refunds policy",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:returns-policy-designer", "type": "skill", "use": "brief", "when": "When the rules themselves are not settled: refund timing, keep-it limits and cost" },
+        { "ref": "kit:prompts/plain-returns-policy", "use": "build", "when": "When the policy is long, scattered or contradicts itself and needs one plain page" },
+        { "ref": "library:tony-hsieh", "type": "mind", "use": "think", "when": "When a strict rule saves a little money but costs the goodwill the shop lives on" },
+        { "ref": "library:store-policy-checker", "type": "skill", "use": "check", "when": "When the page is drafted, to find gaps and clashes with the shipping and privacy pages" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When legal words crept back in and customers will not read them" }
+      ]
+    },
+    {
+      "id": "returns-report",
+      "task": "Report monthly on returns and warranty claims",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "Before any sums, to find gaps, duplicates and odd values in the returns export" },
+        { "ref": "kit:prompts/monthly-returns-and-claims-report", "use": "build", "when": "Once a month, to see which products and reasons drive returns and what they cost" },
+        { "ref": "kit:workflows/monthly-returns-and-policy-review", "use": "build", "when": "In the first week of the month, to run the report and the policy review together" },
+        { "ref": "library:return-reason-finder", "type": "skill", "use": "build", "when": "When you need return reasons counted by product to spot faults and misleading listings" },
+        { "ref": "library:return-cost-calculator", "type": "skill", "use": "build", "when": "When the owner asks what returns really cost, with shipping and written-off stock" },
+        { "ref": "library:refund-speed-checker", "type": "skill", "use": "check", "when": "When customers complain of slow refunds, to see average days and the late ones" },
+        { "ref": "library:monthly-returns-and-refunds-reviewer", "type": "agent", "use": "build", "when": "When the client wants the monthly review to run itself and name one fix" }
+      ]
+    },
+    {
+      "id": "warranty-claims-batch",
+      "task": "Reply to a batch of warranty claims",
+      "kind": "email",
+      "items": [
+        { "ref": "library:customer-history-exporter", "type": "skill", "use": "brief", "when": "When a claim depends on the customer's past orders, returns and notes" },
+        { "ref": "kit:skills/warranty-claims", "use": "build", "when": "When each claim needs an approve, decline or send-evidence reply with the reason" },
+        { "ref": "library:refund-request-reply-writer", "type": "prompt", "use": "explore", "when": "When a claim ends in money back, to compare a reply that leads with the answer" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before sending, to check repair dates and replacements promised can be met" }
+      ]
+    },
+    {
+      "id": "warranty-terms",
+      "task": "Write plain warranty terms and a claim form",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/warranty-claims", "use": "build", "when": "When the business's warranty rules must become plain terms, a form and an evidence list" },
+        { "ref": "library:make-a-long-form-easier-to-finish", "type": "workflow", "use": "check", "when": "When customers give up on the claim form, to cut fields and test the new flow" },
+        { "ref": "library:agency-support-legal-compliance-checker", "type": "agent", "use": "check", "when": "Before publishing, to check the terms against consumer law where the business sells" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the terms read like a contract and need plain words with nothing dropped" }
+      ]
+    },
+    {
+      "id": "supplier-claim-pack",
+      "task": "Build a pack to claim costs back from a supplier",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:return-reason-finder", "type": "skill", "use": "brief", "when": "When you need the fault counted by product to show the supplier a pattern" },
+        { "ref": "library:refund-rate-analyzer", "type": "skill", "use": "brief", "when": "When you need the refund rate for one product or date range to prove a bad batch" },
+        { "ref": "kit:skills/warranty-claims", "use": "build", "when": "When the claim log shows one product failing and the costs must be set out for the maker" }
+      ]
+    },
+    {
+      "id": "chargeback-response",
+      "task": "Decide and prepare a chargeback response",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/chargeback-response", "use": "build", "when": "When a customer disputes a card payment and you must choose fast to accept or respond" },
+        { "ref": "library:chargeback-evidence-gatherer", "type": "skill", "use": "build", "when": "When you know the dispute reason and need the proof to collect and where to find it" },
+        { "ref": "library:order-lookup-assistant", "type": "skill", "use": "brief", "when": "When you need the order's full payment, shipping and message history in one place" }
+      ]
+    },
+    {
+      "id": "backlog-plan",
+      "task": "Plan how to clear a support backlog",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/backlog-clearing-plan", "use": "build", "when": "When tickets piled up after a sale, a delay or time off and need an order of work" },
+        { "ref": "library:clear-an-email-backlog-and-set-triage-rules-that-stick", "type": "workflow", "use": "build", "when": "When the backlog is in email and the same run should leave rules that last" },
+        { "ref": "library:clear-your-support-inbox-and-turn-fixes-into-help-pages", "type": "workflow", "use": "build", "when": "When the same few questions fill the backlog and should become help pages" },
+        { "ref": "library:prepare-a-service-outage-communication-pack", "type": "workflow", "use": "build", "when": "When one outage or delay caused the pile and one notice could answer most of it" },
+        { "ref": "library:gorgias-response-deadline-checker", "type": "skill", "use": "check", "when": "When the desk is Gorgias, to see which tickets are late or about to be" }
+      ]
+    },
+    {
+      "id": "triage-rules",
+      "task": "Write triage and escalation rules for the inbox",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:inbox-rules-interviewer", "type": "skill", "use": "brief", "when": "When the rules live in the owner's head and must be asked out a few questions at a time" },
+        { "ref": "kit:skills/inbox-triage-and-policy-replies", "use": "build", "when": "When you need written rules for what comes first and which path each kind of message takes" },
+        { "ref": "library:define-a-customer-support-escalation-agreement", "type": "workflow", "use": "build", "when": "When nobody knows who takes a stuck issue or when it moves up" },
+        { "ref": "library:gorgias-ticket-tag-planner", "type": "skill", "use": "build", "when": "When the desk is Gorgias and the rules need tags with reasons before any change" },
+        { "ref": "library:zendesk-ticket-priority-planner", "type": "skill", "use": "check", "when": "When the desk is Zendesk, to test the rules on the tickets waiting now" }
+      ]
+    },
+    {
+      "id": "tone-guide",
+      "task": "Write a support tone and style guide",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:brand-voice-guide-builder", "type": "skill", "use": "brief", "when": "When good past replies exist, to draw the voice out of them before writing rules" },
+        { "ref": "library:voice-and-tone-guide-writer", "type": "skill", "use": "build", "when": "When the team needs tone by situation, word lists and side-by-side examples" },
+        { "ref": "kit:skills/reply-template-library", "use": "build", "when": "When the guide needs three or four model replies that show the tone in use" },
+        { "ref": "library:draft-brand-voice-checker", "type": "skill", "use": "check", "when": "When the guide exists, to test real replies against it and rank the slips" }
+      ]
+    },
+    {
+      "id": "chat-scripts",
+      "task": "Write live chat opening, holding and closing scripts",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/reply-template-library", "use": "build", "when": "When chat staff need short openers, hold lines and closers with fill-in fields" },
+        { "ref": "library:chatbot-conversation-designer", "type": "skill", "use": "build", "when": "When a chat needs a flow with questions, recovery from mistakes and a handover" },
+        { "ref": "library:support-reply-tone-editor", "type": "skill", "use": "explore", "when": "When an opener sounds scripted, to try it in two or three tones" },
+        { "ref": "library:draft-brand-voice-checker", "type": "skill", "use": "check", "when": "When the scripts are drafted, to check they match the tone guide" }
+      ]
+    },
+    {
+      "id": "whatsapp-setup",
+      "task": "Set up WhatsApp quick replies, greetings and order updates",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:whatsapp-marketing-planner", "type": "skill", "use": "brief", "when": "When the shop is new to WhatsApp Business and needs replies, broadcasts and flows planned" },
+        { "ref": "kit:skills/reply-template-library", "use": "build", "when": "When the owner answers every chat by hand and needs labelled quick replies" },
+        { "ref": "library:delivery-update-flow-builder", "type": "skill", "use": "build", "when": "When order and delay updates should go out on their own with a tracking page" },
+        { "ref": "library:text-message-campaign-writer", "type": "skill", "use": "explore", "when": "When broadcasts are wanted, to draft message flows with opt-in and consent rules" },
+        { "ref": "library:whatsapp-support-reply-assistant", "type": "skill", "use": "build", "when": "When chats run through Wati or Whautomate and waiting ones need reply drafts" },
+        { "ref": "library:sms-send-checker", "type": "skill", "use": "check", "when": "Before a broadcast, to check the message and send plan for cost and rule flags" }
+      ]
+    },
+    {
+      "id": "price-rise-notice",
+      "task": "Tell customers about a price rise",
+      "kind": "email",
+      "items": [
+        { "ref": "library:price-rise-readiness-checker", "type": "prompt", "use": "brief", "when": "Before writing, to score how ready the offer is for a rise and what to add first" },
+        { "ref": "library:price-rise-letter-writer", "type": "prompt", "use": "build", "when": "When you have the old price, the new price and the reason and need the letter" },
+        { "ref": "library:hard-questions-faq-writer", "type": "skill", "use": "explore", "when": "When the letter is drafted, to predict the hard questions and try answers for the FAQ" },
+        { "ref": "library:discount-and-price-change-checker", "type": "agent", "use": "check", "when": "Before sending, to check prices and dates agree in the letter, email and FAQ" }
+      ]
+    },
+    {
+      "id": "policy-change-notice",
+      "task": "Write a notice for a policy, hours or service change",
+      "kind": "email",
+      "items": [
+        { "ref": "library:rule-change-policy-keeper", "type": "agent", "use": "brief", "when": "When a rule changed, to find every policy page the notice must agree with" },
+        { "ref": "library:prepare-a-service-outage-communication-pack", "type": "workflow", "use": "build", "when": "When a service stops or changes and needs a first notice, updates and an all-clear" },
+        { "ref": "kit:skills/reply-template-library", "use": "build", "when": "When staff need a matching saved reply for questions the notice will cause" },
+        { "ref": "library:hard-questions-faq-writer", "type": "skill", "use": "explore", "when": "When you want the questions customers will ask, to shape the notice around them" },
+        { "ref": "library:one-ask-email-tightener", "type": "prompt", "use": "check", "when": "Before sending, to cut the notice to what changes, when and what to do" }
+      ]
+    },
+    {
+      "id": "help-pages",
+      "task": "Turn repeat questions into help pages and an FAQ",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:help-article-from-ticket-writer", "type": "prompt", "use": "build", "when": "When several tickets ask the same thing and one short article would answer them" },
+        { "ref": "library:solved-ticket-help-page-writer", "type": "skill", "use": "build", "when": "When one solved ticket has the full fix and should become a page with steps" },
+        { "ref": "library:faq-page-from-questions-writer", "type": "prompt", "use": "build", "when": "When you have real questions and answers and need one findable FAQ page" },
+        { "ref": "library:monthly-help-centre-keeper", "type": "agent", "use": "check", "when": "Each month, to find the questions the help pages still miss and the stale ones" }
+      ]
+    },
+    {
+      "id": "delivery-questions",
+      "task": "Answer where-is-my-order questions and cut them down",
+      "kind": "email",
+      "items": [
+        { "ref": "library:order-lookup-assistant", "type": "skill", "use": "brief", "when": "When a customer asks where an order is and you need its shipping history" },
+        { "ref": "kit:skills/inbox-triage-and-policy-replies", "use": "build", "when": "When late-delivery messages need replies that state what is known and what happens next" },
+        { "ref": "library:delivery-update-flow-builder", "type": "skill", "use": "build", "when": "When the same question floods in and updates should reach customers before they ask" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before sending, to make sure no reply promises a delivery date the carrier has not given" }
+      ]
+    },
+    {
+      "id": "public-reviews",
+      "task": "Reply to public reviews",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:review-reply-batch-writer", "type": "prompt", "use": "build", "when": "When a batch of reviews needs a specific public reply each, with risky ones listed" },
+        { "ref": "library:review-request-and-reply-planner", "type": "skill", "use": "brief", "when": "When the shop also needs to know when and how to ask for reviews" },
+        { "ref": "library:public-review-reply-desk", "type": "agent", "use": "check", "when": "When replies should be checked, risky ones held and repeat complaints flagged each batch" }
+      ]
+    },
+    {
+      "id": "other-language-reply",
+      "task": "Reply to a customer who writes in another language",
+      "kind": "email",
+      "items": [
+        { "ref": "library:customer-support-message-translator", "type": "skill", "use": "build", "when": "When a message is not in English and you need its meaning and a reply in their language" },
+        { "ref": "kit:skills/inbox-triage-and-policy-replies", "use": "brief", "when": "Before translating, to settle the answer from policy in plain English first" },
+        { "ref": "library:support-reply-tone-editor", "type": "skill", "use": "check", "when": "When the English source reply should be plainer so it translates cleanly" }
+      ]
+    },
+    {
+      "id": "chatbot-review",
+      "task": "Review a support chatbot's missed and wrong answers",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:support-chatbot-conversation-review", "type": "skill", "use": "check", "when": "When you have recent bot chats and need missed questions and wrong answers listed" },
+        { "ref": "library:review-support-bot-errors-with-retest-cases", "type": "agent", "use": "check", "when": "When wrong answers must be fixed against approved help text and tested again" },
+        { "ref": "library:intercom-fin", "type": "tool", "use": "brief", "when": "When the bot is Intercom's and you need to know what it answers from and when it hands over" }
+      ]
+    },
+    {
+      "id": "support-trends",
+      "task": "Report on ticket trends and repeat problems",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:research-theme-synthesizer", "type": "skill", "use": "build", "when": "When you have a ticket export and need themes ranked by how often they appear" },
+        { "ref": "library:gorgias-weekly-support-report", "type": "skill", "use": "build", "when": "When the desk is Gorgias and the owner wants the week's trends and repeat problems" },
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "Before counting, to find duplicate and merged tickets that would skew the numbers" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:customer-question-researcher", "type": "skill", "use": "brief", "when": "When you are unsure of an answer, to find it in the business's docs and past tickets" },
+    { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before any reply that promises a date, a refund, a credit or a fix" }
+  ],
+  "helpers": [
+    { "role": "support-operations-manager", "when": "When the fix is staffing, response targets or help desk set-up, not better replies" },
+    { "role": "technical-writer", "when": "When repeat questions need a full help centre or a product manual" },
+    { "role": "shopify-specialist", "when": "When refunds, order edits or store policy pages must be changed in the store itself" },
+    { "role": "chatbot-specialist", "when": "When the support bot needs rebuilding, not only its wrong answers listed" },
+    { "role": "reputation-manager", "when": "When public reviews need a standing plan across review sites, not one batch of replies" },
+    { "role": "compliance-specialist", "when": "When warranty terms, refunds or data requests must be checked against the law by country" }
+  ],
+  "gaps": [
+    "No library item builds a reply template library with fill-in fields, the policy line each relies on and when not to use it",
+    "No library item covers warranty work: plain terms, evidence rules, claim replies or a claim log; only the kit does",
+    "No library item builds a supplier cost-recovery pack from a run of faulty-item claims",
+    "No library item writes triage rules that put safety, money and access first",
+    "No library item writes live chat openers, hold lines and closers, or checks a chat script",
+    "No library item writes WhatsApp Business templates in the form the app approves, or greeting and away messages by opening hours",
+    "No library item writes holiday hours, move or closure notices as one matching set for every channel",
+    "No library item writes a plain-words notice of a terms or policy change, or offers two versions of a policy page to compare",
+    "No library item sets goodwill rules: when to give a credit or gift and how much",
+    "No library item scores reply quality on a sample of sent tickets",
+    "No library item gives scripts for tricky returns such as worn items, late requests or no proof of purchase",
+    "Help desk coverage is narrow: several Gorgias items, one for Zendesk, none for Freshdesk, Help Scout or Front"
+  ]
+}

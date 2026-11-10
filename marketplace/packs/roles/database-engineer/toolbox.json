@@ -1,0 +1,283 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "database-engineer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "sql-business-question",
+      "task": "Write SQL that answers one business question",
+      "kind": "code",
+      "items": [
+        { "ref": "library:metric-definition-writer", "type": "skill", "use": "brief", "when": "When the question uses a term like active member or net sales that nobody has pinned down" },
+        { "ref": "kit:skills/sql-for-a-business-question", "use": "build", "when": "When you write, explain and check a query for PostgreSQL, MySQL, SQLite or SQL Server" },
+        { "ref": "library:safe-database-query-runner", "type": "skill", "use": "build", "when": "When you may run the query on the client's Postgres and it must be read-only" },
+        { "ref": "library:data-warehouse-query-reviewer", "type": "skill", "use": "check", "when": "Before the number is shared, to check joins for double counting and rows dropped by mistake" },
+        { "ref": "library:plain-words-sql-explainer", "type": "skill", "use": "check", "when": "When the owner must confirm in plain words what the query counts and which rows it keeps" },
+        { "ref": "library:katherine-johnson", "type": "mind", "use": "think", "when": "When a total looks off, to work it a second way and see if both routes agree" }
+      ]
+    },
+    {
+      "id": "query-review-rewrite",
+      "task": "Review and rewrite an existing query",
+      "kind": "code",
+      "items": [
+        { "ref": "library:plain-words-sql-explainer", "type": "skill", "use": "brief", "when": "When nobody remembers what an old query does and you must read it before changing it" },
+        { "ref": "library:copilot-sql-object-impact-analysis", "type": "skill", "use": "brief", "when": "Before editing a view, function or table, to list what calls it and what depends on it" },
+        { "ref": "kit:skills/sql-for-a-business-question", "use": "build", "when": "When the query gives wrong numbers and needs a readable rewrite with checks" },
+        { "ref": "library:sql-query-launch-reviewer", "type": "skill", "use": "check", "when": "Before a query goes live, to rank wrong-result risks and slow spots with rewrites" },
+        { "ref": "library:donald-knuth", "type": "mind", "use": "think", "when": "When a query is clever but unclear, to work a tiny example by hand and prove each step" }
+      ]
+    },
+    {
+      "id": "report-queries",
+      "task": "Build the queries for a regular report",
+      "kind": "code",
+      "items": [
+        { "ref": "library:align-recurring-report-metric-definitions", "type": "workflow", "use": "brief", "when": "When two reports show different numbers for the same thing and one definition must win" },
+        { "ref": "kit:skills/sql-for-a-business-question", "use": "build", "when": "When each report line needs its own checked query: sales by month, credits left, reorders" },
+        { "ref": "library:retention-cohort-analyst", "type": "skill", "use": "build", "when": "When the report needs retention by sign-up group and you must get the cohort logic right" },
+        { "ref": "library:conversion-funnel-analyst", "type": "skill", "use": "build", "when": "When the report is a funnel and needs conversion per step and time to convert" },
+        { "ref": "library:recurring-kpi-report-maker", "type": "skill", "use": "build", "when": "When the client wants the numbers pulled into a workbook they can rerun" },
+        { "ref": "library:report-definition-drift-review-assistant", "type": "agent", "use": "check", "when": "When a report has run for months and its numbers must be checked against the agreed meaning" }
+      ]
+    },
+    {
+      "id": "schema-design",
+      "task": "Design tables for a new app or feature",
+      "kind": "code",
+      "items": [
+        { "ref": "library:business-model-code-designer", "type": "skill", "use": "brief", "when": "When the business rules are tangled and you need a glossary and which data belongs together" },
+        { "ref": "kit:skills/schema-design-from-business-rules", "use": "build", "when": "When bookings, memberships, stock or orders must become tables, keys and constraints" },
+        { "ref": "library:postgres-schema-designer", "type": "skill", "use": "build", "when": "When the database is Postgres and column types, indexes and rules need careful choice" },
+        { "ref": "library:nosql-data-modeler", "type": "skill", "use": "build", "when": "When the client is on DynamoDB or Cassandra and tables must follow the queries" },
+        { "ref": "library:mermaid-chart-writer", "type": "skill", "use": "build", "when": "When the owner needs a diagram of tables and links they can paste into docs" },
+        { "ref": "library:shared-field-change-checker", "type": "skill", "use": "check", "when": "When a field is added or renamed, to find every place in API and screens that reads it" }
+      ]
+    },
+    {
+      "id": "spreadsheet-to-tables",
+      "task": "Turn a busy spreadsheet into proper tables",
+      "kind": "code",
+      "items": [
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "brief", "when": "Before designing tables, to see the gaps, duplicates and odd values in the sheet today" },
+        { "ref": "kit:prompts/spreadsheet-to-tables", "use": "build", "when": "When part of the business runs on a spreadsheet and needs tables that keep bad data out" },
+        { "ref": "library:column-mapping-document-writer", "type": "skill", "use": "build", "when": "When each sheet column needs a written rule for where it goes and how it changes" },
+        { "ref": "library:data-file-clean-up-loop", "type": "agent", "use": "build", "when": "When the export is messy and must be fixed and re-checked until it loads cleanly" },
+        { "ref": "library:excel-table-join-reconciler", "type": "skill", "use": "check", "when": "After loading, to match the new tables back to the sheet and list unmatched rows" }
+      ]
+    },
+    {
+      "id": "live-migration",
+      "task": "Plan and run a migration on live tables",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/migration-risk-check", "use": "check", "when": "Before a migration runs on live data, to see which statements lock, rewrite or destroy" },
+        { "ref": "kit:workflows/production-migration-with-backup-gate", "use": "build", "when": "When any schema or data change will run on production and needs a proven backup first" },
+        { "ref": "library:database-migration-writer", "type": "skill", "use": "build", "when": "When the change needs a versioned migration that runs forward and rolls back" },
+        { "ref": "library:zero-downtime-migration-planner", "type": "skill", "use": "build", "when": "When the table has millions of rows and the app must stay up through every step" },
+        { "ref": "library:copilot-sql-object-impact-analysis", "type": "skill", "use": "brief", "when": "Before renaming or dropping anything, to find the code and reports that still use it" },
+        { "ref": "library:change-request-writer", "type": "skill", "use": "build", "when": "When the client needs the change written up with impact, risks and who approves" },
+        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When the plan has no answer for a step that fails halfway, to design the recovery first" }
+      ]
+    },
+    {
+      "id": "data-move",
+      "task": "Move data from an old layout or tool to a new one",
+      "kind": "code",
+      "items": [
+        { "ref": "library:column-mapping-document-writer", "type": "skill", "use": "brief", "when": "Before any script, to map each source column to its target with rules and open questions" },
+        { "ref": "library:business-data-move-runbook", "type": "skill", "use": "build", "when": "When data moves between two tools and needs field maps, checks and a way back" },
+        { "ref": "library:database-migration-writer", "type": "skill", "use": "build", "when": "When the move is inside one database and needs a versioned script" },
+        { "ref": "library:copilot-sql-server-table-reconciliation", "type": "skill", "use": "check", "when": "When both sides are SQL Server and you need schema and row differences listed" },
+        { "ref": "library:data-quality-scorecard-maker", "type": "skill", "use": "check", "when": "After the move, to test for blanks, duplicates and broken links against agreed rules" }
+      ]
+    },
+    {
+      "id": "data-dictionary",
+      "task": "Write a data dictionary and schema notes",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/data-dictionary-from-schema", "use": "build", "when": "When nobody fully understands the database and new people need tables, joins and traps" },
+        { "ref": "library:data-catalog-entry-writer", "type": "skill", "use": "build", "when": "When one important table needs a fuller entry: owner, column meanings and quality notes" },
+        { "ref": "library:mermaid-chart-writer", "type": "skill", "use": "build", "when": "When the notes need a diagram of how the main tables link" },
+        { "ref": "library:documentation-checker", "type": "skill", "use": "check", "when": "Before sharing, to find statements that no longer match the real schema" }
+      ]
+    },
+    {
+      "id": "slow-query",
+      "task": "Find why a query is slow and fix it",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/explain-my-query-plan", "use": "brief", "when": "When you have the plan output and need to know in plain words why it is slow" },
+        { "ref": "kit:skills/query-plan-and-index-tuning", "use": "build", "when": "When you must pick the worst queries from the logs and rank the fixes for each" },
+        { "ref": "library:slow-query-fixer", "type": "skill", "use": "build", "when": "When one query is the problem and needs a faster rewrite or an index" },
+        { "ref": "library:postgres-performance-tuner", "type": "skill", "use": "check", "when": "When the database is Postgres and settings, types and indexes all need a second look" },
+        { "ref": "library:john-carmack", "type": "mind", "use": "think", "when": "When tempted to add an index on a hunch, to measure the real path first" }
+      ]
+    },
+    {
+      "id": "index-plan",
+      "task": "Write an index plan from the slow-query log",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/query-plan-and-index-tuning", "use": "build", "when": "When the log shows many slow queries and you need the few indexes worth their write cost" },
+        { "ref": "library:agency-engineering-database-optimizer", "type": "agent", "use": "check", "when": "When you want a second ranked list of slow queries, missing indexes and risky schema choices" },
+        { "ref": "kit:prompts/migration-risk-check", "use": "check", "when": "Before building an index on a busy table, to check it will not block writes" }
+      ]
+    },
+    {
+      "id": "n-plus-one",
+      "task": "Fix a page that fires hundreds of queries",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/n-plus-one-finder", "use": "brief", "when": "When the logs show many near-identical queries per request from ORM code in a loop" },
+        { "ref": "library:django-speed-reviewer", "type": "skill", "use": "check", "when": "When the project is Django and you want every such loop found with its fix" },
+        { "ref": "library:find-what-is-slow-fix-it-and-show-the-numbers", "type": "workflow", "use": "build", "when": "When the client wants the fix in a pull request with before and after timings" }
+      ]
+    },
+    {
+      "id": "slow-endpoint",
+      "task": "Rework a slow endpoint with paging and caching",
+      "kind": "code",
+      "items": [
+        { "ref": "library:slow-code-fixer", "type": "skill", "use": "build", "when": "When a dashboard or report takes seconds and the bottleneck must be found and proven fixed" },
+        { "ref": "library:agency-testing-performance-benchmarker", "type": "agent", "use": "check", "when": "When you need a repeatable timing script and a baseline to compare against" }
+      ]
+    },
+    {
+      "id": "backup-restore",
+      "task": "Check backups and run a restore drill",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:backup-and-recovery-planner", "type": "skill", "use": "brief", "when": "When the owner has never said how much data or time they can afford to lose" },
+        { "ref": "kit:skills/backup-and-restore-drill", "use": "check", "when": "When you check how a database is backed up and prove a restore really works" },
+        { "ref": "library:database-backup-setter", "type": "skill", "use": "build", "when": "When there are no proper backups and full, incremental and point-in-time ones must be set up" },
+        { "ref": "library:build-a-backup-recovery-rehearsal", "type": "workflow", "use": "build", "when": "When the drill needs a rehearsal checklist and an evidence record others can read" },
+        { "ref": "library:recovery-rehearsal-evidence-assistant", "type": "agent", "use": "check", "when": "After a drill, to compare the evidence with the recovery targets and list the gaps" },
+        { "ref": "library:agency-engineering-database-reliability-engineer", "type": "agent", "use": "brief", "when": "When the client also needs failover and a recovery plan beyond backups" }
+      ]
+    },
+    {
+      "id": "monthly-health-check",
+      "task": "Run the monthly database health check",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/monthly-database-health-check", "use": "build", "when": "Monthly, or after an end-of-life notice, a slow-page complaint or a failed backup alert" },
+        { "ref": "library:agency-engineering-database-optimizer", "type": "agent", "use": "check", "when": "During the check, to rank slow queries, missing indexes and risky schema choices" },
+        { "ref": "library:data-quality-scorecard-maker", "type": "skill", "use": "check", "when": "When the check should also score blanks, duplicates and stale rows in key tables" },
+        { "ref": "kit:skills/backup-and-restore-drill", "use": "check", "when": "When the last proven restore is older than the client's own rule allows" }
+      ]
+    },
+    {
+      "id": "orm-models-seed-data",
+      "task": "Write ORM models and seed data for a framework",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/schema-design-from-business-rules", "use": "brief", "when": "Before the models, to settle keys, constraints and delete behaviour" },
+        { "ref": "library:test-data-seeder", "type": "skill", "use": "build", "when": "When development and staging need realistic, repeatable rows loaded" },
+        { "ref": "library:docs-backed-coder", "type": "skill", "use": "check", "when": "When model code must match the framework's current docs, with sources cited" }
+      ]
+    },
+    {
+      "id": "data-quality-rules",
+      "task": "Find bad data and add rules that keep it out",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "When you need gaps, duplicates and odd values found, with the rules that would catch them" },
+        { "ref": "library:data-quality-scorecard-maker", "type": "skill", "use": "check", "when": "When the client has rules already and wants each one tested and scored" },
+        { "ref": "kit:skills/schema-design-from-business-rules", "use": "build", "when": "When the fix is a constraint, a unique key or a foreign key the tables lack" },
+        { "ref": "library:data-cleaner", "type": "skill", "use": "build", "when": "When existing rows must be cleaned before a new rule can be switched on" }
+      ]
+    },
+    {
+      "id": "platform-move",
+      "task": "Plan a move to another database or a newer version",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:plan-oracle-to-postgres-with-proof", "type": "workflow", "use": "build", "when": "When the move is Oracle to Postgres and needs scope, baseline tests and a behaviour review" },
+        { "ref": "library:copilot-migrating-oracle-to-postgres-stored-procedures", "type": "skill", "use": "build", "when": "When Oracle procedures must become Postgres code with changed behaviour called out" },
+        { "ref": "library:copilot-reviewing-oracle-to-postgres-migration", "type": "skill", "use": "check", "when": "Before release, to check the migrated code for gaps between the two databases" },
+        { "ref": "library:zero-downtime-migration-planner", "type": "skill", "use": "build", "when": "When the cutover must happen with the app up and a rollback at each step" },
+        { "ref": "library:release-day-rollback-planner", "type": "prompt", "use": "build", "when": "When cutover day needs its checks, a rollback and a way to know it worked" }
+      ]
+    },
+    {
+      "id": "choose-database",
+      "task": "Choose a database and set-up for a small app",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:database-design-guide", "type": "skill", "use": "explore", "when": "When the client asks which database to use and wants the options compared" },
+        { "ref": "library:data-system-designer", "type": "skill", "use": "brief", "when": "When the choice turns on storage, copies and how consistent the data must be" },
+        { "ref": "library:technical-capacity-cost-planner", "type": "skill", "use": "check", "when": "When the pick must be tested against expected traffic and running cost" },
+        { "ref": "library:decision-record-writer", "type": "skill", "use": "build", "when": "When the choice is made, to record why and what was passed over" }
+      ]
+    },
+    {
+      "id": "access-rules",
+      "task": "Set database roles and access rules",
+      "kind": "code",
+      "items": [
+        { "ref": "library:login-and-access-builder", "type": "skill", "use": "brief", "when": "When nobody has written down which kind of user may read or change which data" },
+        { "ref": "library:connect-code-to-supabase-builder-prompt", "type": "prompt", "use": "build", "when": "When the app is on Supabase and must connect with scoped access and safe keys" },
+        { "ref": "library:agent-database-setup-planner", "type": "skill", "use": "build", "when": "When AI agents will write to the database and each table needs its own access rule" },
+        { "ref": "library:agency-security-ai-generated-code-auditor", "type": "agent", "use": "check", "when": "When an app was built fast with AI and its database rules may be open to anyone" }
+      ]
+    },
+    {
+      "id": "personal-data",
+      "task": "Plan how personal data is kept, found and deleted",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:agency-engineering-privacy-engineer", "type": "agent", "use": "brief", "when": "When nobody knows which tables hold personal data and deletion must reach every copy" },
+        { "ref": "library:copilot-gdpr-compliant", "type": "skill", "use": "check", "when": "When the schema must support access, deletion and consent requests and you need the gaps" },
+        { "ref": "library:data-request-reply-drafter", "type": "skill", "use": "build", "when": "When a person asks for their data and you need the steps to find it and a draft reply" }
+      ]
+    },
+    {
+      "id": "database-incident",
+      "task": "Diagnose a database outage, lock-up or data loss",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:error-and-log-debugger", "type": "skill", "use": "brief", "when": "When you have the database log or an error and need the cause found" },
+        { "ref": "library:incident-runbook-writer", "type": "skill", "use": "build", "when": "When the same failure could return and someone needs first steps and who to tell" },
+        { "ref": "library:copilot-incident-postmortem", "type": "skill", "use": "build", "when": "When it is over and the client needs a blameless report with causes and owners" },
+        { "ref": "kit:skills/backup-and-restore-drill", "use": "build", "when": "When rows were lost and a restore to a point in time must be planned" }
+      ]
+    },
+    {
+      "id": "warehouse-queries",
+      "task": "Write or review queries on a data warehouse",
+      "kind": "code",
+      "items": [
+        { "ref": "library:data-warehouse-query-reviewer", "type": "skill", "use": "check", "when": "When a warehouse query needs a read-only plan and a check for join and privacy risks" },
+        { "ref": "library:snowflake-sql-helper", "type": "skill", "use": "build", "when": "When the warehouse is Snowflake and the SQL must follow its rules" },
+        { "ref": "library:copilot-bigquery-pipeline-audit", "type": "skill", "use": "check", "when": "When a BigQuery job costs too much or could double-load on a rerun" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:verified-code-writer", "type": "skill", "use": "build", "when": "Whenever you write SQL or code for a client's system, to ground it in their real schema" },
+    { "ref": "library:dev-work-report-writer", "type": "skill", "use": "check", "when": "At the end of any job, to write what changed, why and the proof that it works" }
+  ],
+  "helpers": [
+    { "role": "backend-developer", "when": "When the fix is in application code: endpoints, ORM calls, caching or a sync job" },
+    { "role": "data-engineer", "when": "When the job is a pipeline or warehouse build, not one database" },
+    { "role": "data-analyst", "when": "When the client needs the numbers read and explained, not only the query" },
+    { "role": "devops-engineer", "when": "When backups, upgrades or failover depend on hosting, servers or a deploy pipeline" },
+    { "role": "application-security-engineer", "when": "When access rules, secrets or injection risks need a full security review" },
+    { "role": "data-quality-analyst", "when": "When bad data needs owners, rules and a routine, not a one-off clean" }
+  ],
+  "gaps": [
+    "No library item reads an EXPLAIN plan or the MySQL slow log; only the kit covers query plans",
+    "No library item finds N+1 queries outside Django, for example in Rails, Laravel, Prisma or SQLAlchemy",
+    "No library item writes ORM models or migrations for Prisma, SQLAlchemy, Django, Laravel or Rails by name",
+    "No library item writes a batched backfill script that can stop, resume and be checked by row counts",
+    "No library item covers MySQL, SQLite or SQL Server tuning; the tuning items are Postgres only",
+    "No library item plans a MySQL to Postgres move, a managed-host move or a major version upgrade",
+    "No library item sets database roles, grants or row-level security policies and tests them",
+    "No library item diagnoses locks, deadlocks, connection limits, bloat or a full disk",
+    "No library item tests a SQL query against a small hand-made dataset with known answers",
+    "No library item adds paging and caching to a slow list endpoint",
+    "No library item designs audit or history tables, soft deletes or a retention job"
+  ]
+}

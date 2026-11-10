@@ -1,0 +1,298 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "ap-ar-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "chase-plan",
+      "task": "Rank open invoices into a chase plan",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/overdue-invoice-chase", "use": "build", "when": "When you have an aged debt report or open invoice list and need who to chase first and how" },
+        { "ref": "library:weekly-invoice-and-cash-chaser", "type": "agent", "use": "build", "when": "When the list is chased every week, to get who to chase, a reminder each and a 90-day cash view" },
+        { "ref": "library:cash-tied-up-finder", "type": "skill", "use": "check", "when": "When you want days outstanding and where cash is stuck across debtors, creditors and stock" },
+        { "ref": "library:customer-concentration-risk", "type": "skill", "use": "think", "when": "When one big customer pays late, to map the risk and set a limit before you push" }
+      ]
+    },
+    {
+      "id": "reminder-messages",
+      "task": "Write reminder messages from friendly to firm",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/overdue-invoice-chase", "use": "build", "when": "When each stage needs a short message with the amount, the date and how to pay" },
+        { "ref": "library:unpaid-invoice-chaser", "type": "skill", "use": "explore", "when": "When each customer needs a gentle or a firm version to choose between" },
+        { "ref": "library:payment-reminder-letter-writer", "type": "skill", "use": "build", "when": "When you know the history with one customer and the reminder should start where they are" },
+        { "ref": "library:get-a-late-invoice-paid-and-keep-the-customer", "type": "workflow", "use": "build", "when": "When one late invoice matters and you want a warm reminder, then a firm follow-up" },
+        { "ref": "library:uk-late-payment-chaser", "type": "skill", "use": "build", "when": "When the debtor is a UK business, to add statutory interest and the fixed fee correctly" },
+        { "ref": "library:support-reply-tone-editor", "type": "skill", "use": "explore", "when": "When the facts are right but the tone is off, to rewrite it warmer or firmer" },
+        { "ref": "library:chris-voss", "type": "mind", "use": "think", "when": "When a customer has gone quiet, to open with their side and ask a calm question" }
+      ]
+    },
+    {
+      "id": "supplier-invoice-check",
+      "task": "Check supplier invoices before they are approved or paid",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/supplier-invoice-check", "use": "check", "when": "When a batch of bills is due for approval and each needs totals, tax and details checked" },
+        { "ref": "library:check-supplier-invoices-before-approval", "type": "workflow", "use": "check", "when": "When you have the files, to get a matched register and the amounts to investigate" },
+        { "ref": "library:invoice-totals-checker", "type": "skill", "use": "check", "when": "When one invoice looks wrong, to recalculate every line and total and list missing fields" },
+        { "ref": "library:invoice-checker", "type": "skill", "use": "check", "when": "When there are purchase orders, to match each invoice to its order and code it" },
+        { "ref": "library:prepare-a-goods-receipt-discrepancy-brief", "type": "workflow", "use": "check", "when": "When goods were short or wrong, to match order, receipt and invoice and write to the supplier" },
+        { "ref": "library:recurring-invoice-exception-review-assistant", "type": "agent", "use": "check", "when": "When the same exceptions return each month, to track new and resolved ones with evidence" }
+      ]
+    },
+    {
+      "id": "duplicate-payment-scan",
+      "task": "Scan for duplicate and double payments",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/supplier-invoice-check", "use": "check", "when": "When a batch may hold the same bill twice under a changed number or date" },
+        { "ref": "library:agency-accounts-payable-agent", "type": "agent", "use": "check", "when": "When you have invoices, approved vendors and your approval rule, to check each for duplicates" },
+        { "ref": "library:supplier-name-cleaner", "type": "skill", "use": "build", "when": "When one supplier appears under several spellings, which hides double payments" },
+        { "ref": "library:unusual-transaction-finder", "type": "skill", "use": "check", "when": "When you have a long payment history, to flag the odd ones with a reason for each" }
+      ]
+    },
+    {
+      "id": "payment-run",
+      "task": "Plan a supplier payment run that protects cash",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/payment-run-plan", "use": "build", "when": "When bills are checked and you must decide who is paid this run from the cash you have" },
+        { "ref": "library:vendor-bill-coder", "type": "skill", "use": "build", "when": "When bills still need reading, coding and matching before a run can be approved" },
+        { "ref": "library:cash-forecast-builder", "type": "skill", "use": "check", "when": "Before approving the run, to see cash at 30, 60 and 90 days with the run included" },
+        { "ref": "library:supplier-payment-terms-planner", "type": "skill", "use": "think", "when": "When cash is tight, to see your float and which suppliers to ask for longer terms" }
+      ]
+    },
+    {
+      "id": "bank-change-check",
+      "task": "Check a supplier's request to change bank details",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/supplier-bank-change-check", "use": "check", "when": "When new bank details arrive by email or on an invoice, before anything is changed or paid" },
+        { "ref": "library:suspicious-money-trail-reviewer", "type": "skill", "use": "check", "when": "When a payment may already have gone to the wrong account, to trace it and list red flags" },
+        { "ref": "library:troy-hunt", "type": "mind", "use": "think", "when": "When a message presses you to act fast, to check it through a route you already trust" }
+      ]
+    },
+    {
+      "id": "payment-plan-offer",
+      "task": "Offer a payment plan to a customer who is struggling",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/payment-plan-offer", "use": "build", "when": "When a customer cannot pay in full and you would sooner agree a plan than lose them" },
+        { "ref": "library:can-they-pay-deal-checker", "type": "skill", "use": "brief", "when": "Before you name figures, to find a range they can pay and a sum they can meet" },
+        { "ref": "library:get-a-late-invoice-paid-and-keep-the-customer", "type": "workflow", "use": "explore", "when": "When you want the offer and a firm follow-up drafted together to compare" },
+        { "ref": "library:cash-forecast-builder", "type": "skill", "use": "check", "when": "Before you send it, to check your own cash can carry the slower payments" }
+      ]
+    },
+    {
+      "id": "payment-call",
+      "task": "Prepare a phone call about an overdue payment",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/overdue-invoice-chase", "use": "build", "when": "When emails have not worked and the next step in the plan is a call" },
+        { "ref": "library:negotiation-prep-coach", "type": "skill", "use": "build", "when": "Before the call, to get an opening, calm questions and a fallback" },
+        { "ref": "library:disagreement-calming-line-writer", "type": "skill", "use": "explore", "when": "When the customer disputes the bill, to have lines ready that lower the heat" },
+        { "ref": "library:chris-voss", "type": "mind", "use": "think", "when": "When the customer avoids a date, to sum up their side and ask how they would fix it" }
+      ]
+    },
+    {
+      "id": "credit-terms-setup",
+      "task": "Set up payment terms and how the business bills",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/credit-terms-and-billing-setup", "use": "build", "when": "When late payment is common and terms, deposits and billing dates need to be set" },
+        { "ref": "library:contract-risk-reviewer", "type": "skill", "use": "check", "when": "When a customer sends their own contract, to find payment clauses that hurt you" },
+        { "ref": "library:explain-service-booking-terms-to-customers", "type": "workflow", "use": "build", "when": "When the terms are agreed, to put them in plain words customers will read" }
+      ]
+    },
+    {
+      "id": "credit-application-and-limits",
+      "task": "Write a credit application form and credit limit rules",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/credit-application-and-limits", "use": "build", "when": "When you give terms to anyone who asks, or a bad debt has made you nervous" },
+        { "ref": "library:borrower-credit-memo-writer", "type": "skill", "use": "check", "when": "When a customer shares accounts, to judge whether they can pay what they will owe" },
+        { "ref": "library:customer-concentration-risk", "type": "skill", "use": "check", "when": "When a few customers hold most of the debt, to set limits for the biggest" },
+        { "ref": "library:benjamin-graham", "type": "mind", "use": "think", "when": "When a limit is set on hope, to look at the downside and leave a margin" }
+      ]
+    },
+    {
+      "id": "invoice-template",
+      "task": "Design an invoice and numbering that gets paid",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/invoice-template-and-numbering", "use": "build", "when": "When invoices bounce back from payables teams or you are setting up invoicing" },
+        { "ref": "library:invoice-maker", "type": "skill", "use": "build", "when": "When one invoice must go out now, with the totals added up and checked" },
+        { "ref": "library:invoice-totals-checker", "type": "skill", "use": "check", "when": "Before it is sent, to recalculate each line and list missing fields or date problems" }
+      ]
+    },
+    {
+      "id": "recurring-billing-rules",
+      "task": "Write the rules for recurring billing",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/recurring-billing-rules", "use": "build", "when": "When plans or retainers hit awkward cases: a mid-month start, an upgrade, a failed card" },
+        { "ref": "library:billing-reminder-and-confirmation-writer", "type": "skill", "use": "build", "when": "When subscribers need billing reminders and confirmations that match the rules" },
+        { "ref": "library:churn-reducer", "type": "skill", "use": "build", "when": "When failed payments lose customers, to plan the recovery steps" },
+        { "ref": "library:subscription-revenue-tracker", "type": "skill", "use": "check", "when": "After a billing cycle, to check recurring revenue and active subscribers against the rules" }
+      ]
+    },
+    {
+      "id": "billing-schedule",
+      "task": "Set a billing schedule for a project or retainer",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/credit-terms-and-billing-setup", "use": "build", "when": "When a job should be billed in stages with a deposit, not all at the end" },
+        { "ref": "library:project-time-and-expense-plan", "type": "skill", "use": "build", "when": "When billing depends on time and expenses, to set entry rules, approvals and the handoff" },
+        { "ref": "library:cash-forecast-builder", "type": "skill", "use": "check", "when": "When the schedule is drafted, to see whether it covers costs as they fall due" }
+      ]
+    },
+    {
+      "id": "billing-change-notice",
+      "task": "Tell customers about a change in how you bill",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/billing-change-notice", "use": "build", "when": "When you move to deposits, stage payments, shorter terms or e-invoicing" },
+        { "ref": "library:price-rise-letter-writer", "type": "prompt", "use": "build", "when": "When the change is a price rise, to write a letter that keeps most customers" },
+        { "ref": "library:support-reply-tone-editor", "type": "skill", "use": "explore", "when": "When the notice reads cold, to try a warmer or plainer version with the same facts" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "When customers push back, to check each promise in your reply before it goes" }
+      ]
+    },
+    {
+      "id": "weekly-cycle",
+      "task": "Run the weekly money in, money out cycle",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/weekly-ap-ar-cycle", "use": "build", "when": "Weekly on fixed days, for example chasing on Tuesday and the payment run on Thursday" },
+        { "ref": "library:weekly-invoice-and-cash-chaser", "type": "agent", "use": "build", "when": "When you want the week's chase list and reminders produced from the open invoices" },
+        { "ref": "kit:skills/payment-run-plan", "use": "build", "when": "When the week's bills are checked and the run must fit the cash" }
+      ]
+    },
+    {
+      "id": "month-end-close",
+      "task": "Close payables and receivables at month end",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/month-end-ap-ar-close", "use": "build", "when": "In the first three working days after month end, before the books are closed" },
+        { "ref": "library:month-end-close-planner", "type": "skill", "use": "brief", "when": "When the close has no list, to get dated tasks with owners and blockers" },
+        { "ref": "library:account-reconciler", "type": "skill", "use": "check", "when": "When a control account does not agree to its list, to sort the gaps by type" },
+        { "ref": "library:reconciliation-break-tracer", "type": "skill", "use": "check", "when": "When one difference will not clear, to trace it to the entries on both sides" },
+        { "ref": "library:accrual-schedule-drafter", "type": "skill", "use": "build", "when": "When bills for the month have not arrived, to draft the accruals with support" },
+        { "ref": "library:agency-finance-bookkeeper-controller", "type": "agent", "use": "check", "when": "Before handing over, to review what does not reconcile and any odd entries" }
+      ]
+    },
+    {
+      "id": "aged-debt-review",
+      "task": "Review aged debt and decide on stops and write-offs",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/overdue-invoice-chase", "use": "build", "when": "When the aged report needs an action against every overdue account" },
+        { "ref": "kit:prompts/credit-application-and-limits", "use": "build", "when": "When you need rules for putting an account on stop and reopening it" },
+        { "ref": "library:cash-tied-up-finder", "type": "skill", "use": "check", "when": "When you want to show how many days of sales sit unpaid and the trend" },
+        { "ref": "library:journal-entry-drafter", "type": "skill", "use": "build", "when": "When a debt is written off or provided for, to draft the entry for the accountant" }
+      ]
+    },
+    {
+      "id": "statement-reconciliation",
+      "task": "Reconcile a supplier statement to the ledger",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:excel-table-join-reconciler", "type": "skill", "use": "build", "when": "When you have the statement and the ledger as two tables, to match them and list what is left" },
+        { "ref": "library:reconciliation-break-tracer", "type": "skill", "use": "check", "when": "When one item differs, to trace it to its source on both sides" },
+        { "ref": "kit:skills/supplier-invoice-check", "use": "check", "when": "When the statement shows an invoice you never received or already paid" }
+      ]
+    },
+    {
+      "id": "cash-allocation",
+      "task": "Match incoming payments to open invoices",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:bank-and-ledger-matcher", "type": "skill", "use": "build", "when": "When you have the bank statement and the ledger, to get matches, near matches and leftovers" },
+        { "ref": "library:reconciliation-break-tracer", "type": "skill", "use": "check", "when": "When a receipt will not match, to trace what differs" },
+        { "ref": "kit:workflows/weekly-ap-ar-cycle", "use": "build", "when": "When receipts are matched weekly before the chase list is made, so nobody is chased in error" }
+      ]
+    },
+    {
+      "id": "disputes-and-credits",
+      "task": "Handle an invoice dispute or credit request",
+      "kind": "email",
+      "items": [
+        { "ref": "library:invoice-totals-checker", "type": "skill", "use": "check", "when": "First, to check whether the invoice itself is right before you defend it" },
+        { "ref": "library:refund-request-reply-writer", "type": "prompt", "use": "build", "when": "When you must give a clear yes, partial or no on a credit, from your policy and the facts" },
+        { "ref": "library:angry-customer-reply-writer", "type": "prompt", "use": "explore", "when": "When the customer is angry, to draft a reply that names the feeling and fixes what you can" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before sending, to check every promise and the tone, and get a repaired draft" }
+      ]
+    },
+    {
+      "id": "debt-escalation",
+      "task": "Escalate a debt that reminders have not moved",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:turn-a-dispute-into-a-checked-demand-letter-draft", "type": "workflow", "use": "build", "when": "When it is time for a formal demand, to build a fact sheet, a timeline and a draft letter" },
+        { "ref": "library:uk-late-payment-chaser", "type": "skill", "use": "build", "when": "When the debtor is a UK business, to work out the interest and fixed fee to claim" },
+        { "ref": "kit:prompts/payment-plan-offer", "use": "explore", "when": "Before legal steps, to offer one last plan as the other road" },
+        { "ref": "library:contract-risk-reviewer", "type": "skill", "use": "check", "when": "Before you threaten anything, to read what the contract says on payment and disputes" }
+      ]
+    },
+    {
+      "id": "bills-to-payment-process",
+      "task": "Write a simple bills-to-payment process",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/supplier-invoice-check", "use": "brief", "when": "When the process must say what is checked on every bill and by whom" },
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When the steps from bill received to bill paid need a flowchart and written procedure" },
+        { "ref": "library:make-a-recurring-process-easier-to-hand-over", "type": "workflow", "use": "build", "when": "When one person runs payables from memory and someone else must be able to cover" },
+        { "ref": "library:charlie-munger", "type": "mind", "use": "think", "when": "When the process trusts one person end to end, to ask how it could be abused" }
+      ]
+    },
+    {
+      "id": "cash-forecast",
+      "task": "Forecast cash from open invoices and bills",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:cash-forecast-builder", "type": "skill", "use": "build", "when": "When you have invoices, bills and fixed costs and need a 30, 60 and 90 day view" },
+        { "ref": "library:prepare-a-seasonal-cash-buffer", "type": "workflow", "use": "build", "when": "When a slow season is coming, to get a dated forecast, a downside case and actions" },
+        { "ref": "library:treasury-forecast-backtest-checker", "type": "skill", "use": "check", "when": "When last month's forecast missed, to see each miss and why" }
+      ]
+    },
+    {
+      "id": "supplier-terms-and-savings",
+      "task": "Find supplier savings and better payment terms",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:code-vendor-bills-flag-odd-ones-and-find-supplier-savings", "type": "workflow", "use": "build", "when": "When you have the vendor bills, to code them, flag odd ones and rank the savings" },
+        { "ref": "library:spend-savings-finder", "type": "skill", "use": "build", "when": "When you have a list of what was paid, to group spend and find quick wins" },
+        { "ref": "library:supplier-payment-terms-planner", "type": "skill", "use": "build", "when": "When you want to know which terms to ask each supplier for" },
+        { "ref": "library:monthly-contract-renewal-keeper", "type": "agent", "use": "check", "when": "Each month, to catch renewals and notice dates before they roll over" },
+        { "ref": "library:negotiation-prep-coach", "type": "skill", "use": "brief", "when": "Before you ask a supplier for longer terms, to plan the opening and a fallback" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any message or invoice goes out, to catch typos and names or numbers written two ways" },
+    { "ref": "library:check-a-spreadsheet-before-sharing-the-results", "type": "workflow", "use": "check", "when": "Before any list or schedule is shared, to find broken formulas and totals that do not add up" }
+  ],
+  "helpers": [
+    { "role": "bookkeeper", "when": "When postings, bank reconciliation or the ledger itself need fixing before you can chase or pay" },
+    { "role": "management-accountant", "when": "When accruals, provisions or month-end reports need an accountant's judgment" },
+    { "role": "fractional-cfo", "when": "When cash is short enough that funding, not chasing, is the real question" },
+    { "role": "procurement-specialist", "when": "When supplier prices, contracts or a tender need work beyond payment terms" },
+    { "role": "customer-success-manager", "when": "When a key account pays late and the relationship needs handling alongside the chase" },
+    { "role": "spreadsheet-specialist", "when": "When the aged report or payment list needs a workbook built or repaired" }
+  ],
+  "gaps": [
+    "No library item writes a phone script for a payment call",
+    "No library item checks a supplier's bank-detail change or screens an email for invoice fraud; only the kit prompt does",
+    "No library item writes a credit application form or sets credit limits from customer data",
+    "No library item offers invoice layouts to compare or sets an invoice numbering scheme",
+    "No library item writes recurring billing rules for part months, upgrades and failed cards",
+    "No library item builds a billing schedule for a staged project or retainer",
+    "No library item reconciles a supplier statement to the payables ledger; only general table matching exists",
+    "No library item allocates receipts to invoices with part payments and remittance advices",
+    "No library item works out late payment interest or legal steps outside the UK",
+    "No library item lists the fields a tax invoice or e-invoice needs in each country",
+    "No library item checks a reminder for the right amount, date, invoice number and tone before it is sent",
+    "No library item sets approval limits and split duties for a small finance team",
+    "No library item sets a bad debt provision from an aged debt report"
+  ]
+}

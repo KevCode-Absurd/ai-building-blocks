@@ -1,0 +1,290 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "communications-coordinator",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "weekly-notices",
+      "task": "Write weekly notices and a read-aloud version",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:workflows/weekly-comms-run", "use": "brief", "when": "Each week on news day, to gather items, chase missing facts and run the sign-off in order" },
+        { "ref": "kit:prompts/weekly-notices-and-read-aloud", "use": "build", "when": "When you need the notice sheet, a short newsletter and a version to read out loud" },
+        { "ref": "library:weekly-newsletter-keeper", "type": "agent", "use": "build", "when": "When the same edition runs every week and should be drafted and checked against past issues" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the notices go by email, to compare subject lines from several angles" },
+        { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "When the read-aloud version is drafted, to fix lines that trip when spoken" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "Before sending, to swap stiff words for plain ones and see each cut explained" }
+      ]
+    },
+    {
+      "id": "newsletter",
+      "task": "Write a monthly or term newsletter",
+      "kind": "email",
+      "items": [
+        { "ref": "library:plan-a-nonprofit-supporter-newsletter", "type": "skill", "use": "brief", "when": "When the newsletter has no fixed shape, to set its sections, readers and rhythm" },
+        { "ref": "kit:skills/newsletter-and-notices", "use": "build", "when": "When you have the news and dates and need the edition in the organisation's voice" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "Before sending, to pick a subject line from several honest options" },
+        { "ref": "library:william-zinsser", "type": "mind", "use": "think", "when": "When an item rambles, to find its point and cut what the reader does not need" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When the edition is drafted, to get cuts, subject fixes and a score before it goes" }
+      ]
+    },
+    {
+      "id": "urgent-notice",
+      "task": "Send an urgent notice about a closure or change",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:workflows/urgent-notice", "use": "build", "when": "When people must know now: a closure, a change of time or place, or a safety message" },
+        { "ref": "library:prepare-a-service-outage-communication-pack", "type": "workflow", "use": "build", "when": "When the problem will run on, to plan the first notice, the updates and the all-clear" },
+        { "ref": "library:backup-communication-plan-builder", "type": "skill", "use": "brief", "when": "Before the next emergency, to set fallback channels, owners and when to switch" },
+        { "ref": "library:translator", "type": "skill", "use": "build", "when": "When some families read another language, to send the same notice in each one" },
+        { "ref": "library:george-orwell", "type": "mind", "use": "think", "when": "When the notice hides the news in soft words, to say what happened and what to do" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "Before it goes out, to make sure the action and the time are plain in the first lines" }
+      ]
+    },
+    {
+      "id": "welcome-set",
+      "task": "Write a welcome and follow-up set for newcomers",
+      "kind": "email",
+      "items": [
+        { "ref": "library:email-sequence-arc-planner", "type": "skill", "use": "brief", "when": "Before writing, to plan what each message does so one builds on the last" },
+        { "ref": "kit:prompts/welcome-and-follow-up-set", "use": "build", "when": "When a new family, member or visitor should get a warm welcome and one clear next step" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the first message must be opened, to compare several subject lines" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When the set is drafted, to check length, pace and the one ask in each message" }
+      ]
+    },
+    {
+      "id": "parent-updates",
+      "task": "Turn staff notes into parent updates and progress notes",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:learning-documentation-planner", "type": "skill", "use": "brief", "when": "When staff notes are thin, to set a simple way to record learning and share it with families" },
+        { "ref": "kit:prompts/parent-progress-notes", "use": "build", "when": "At the end of a week or term, to turn notes on several children into kind, honest updates" },
+        { "ref": "library:haim-ginott", "type": "mind", "use": "think", "when": "When a note labels a child, to describe what happened and what helps instead" },
+        { "ref": "library:support-reply-tone-editor", "type": "skill", "use": "explore", "when": "When a note carries a concern, to compare a warmer and a firmer wording of the same facts" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "Before sending, to cut teacher jargon a parent would not know" }
+      ]
+    },
+    {
+      "id": "all-member-announcement",
+      "task": "Write an announcement to all staff, parents or members",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/all-staff-or-all-member-announcement", "use": "build", "when": "When one message goes to everyone and must say what, why, when and who to ask" },
+        { "ref": "library:staff-announcement-writer", "type": "skill", "use": "build", "when": "When staff hear first, to add talking points for leaders, a question list and a rollout order" },
+        { "ref": "library:hard-questions-faq-writer", "type": "skill", "use": "build", "when": "When the news will raise hard questions, to write them down with straight answers" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the announcement goes by email, to choose a subject line that says the news" },
+        { "ref": "library:company-story-aligner", "type": "skill", "use": "check", "when": "When staff, parents and the public each get a version, to find where they contradict" }
+      ]
+    },
+    {
+      "id": "hard-message",
+      "task": "Write a hard message gently",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/newsletter-and-notices", "use": "build", "when": "When you need a policy reminder or a hard update written kindly and clearly" },
+        { "ref": "library:bad-news-update-writer", "type": "skill", "use": "build", "when": "When there is a setback to report: what was lost, the numbers and what happens next" },
+        { "ref": "library:apology-email-writer", "type": "skill", "use": "build", "when": "When the organisation got something wrong and must own it and say what changes" },
+        { "ref": "library:support-reply-tone-editor", "type": "skill", "use": "explore", "when": "When you are unsure of the tone, to see the same facts in two or three tones" },
+        { "ref": "library:brene-brown", "type": "mind", "use": "think", "when": "When the draft is kind but unclear, or clear but cold" },
+        { "ref": "library:angry-customer-reply-checker", "type": "skill", "use": "check", "when": "When replying to an upset parent or member, to check promises, facts and tone" }
+      ]
+    },
+    {
+      "id": "plain-language-rewrite",
+      "task": "Rewrite a policy, letter or form in plain language",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/plain-language-rewrite", "use": "build", "when": "When a policy, letter or notice is stiff or full of jargon and must keep its meaning" },
+        { "ref": "library:make-a-new-policy-understandable-to-staff", "type": "workflow", "use": "build", "when": "When a new policy must be explained to staff with what changed and what to do" },
+        { "ref": "library:plain-words-interface-rewriter", "type": "skill", "use": "build", "when": "When the piece is a form or a set of steps, to use the words readers already say" },
+        { "ref": "library:george-orwell", "type": "mind", "use": "think", "when": "When long words and passive sentences hide who must do what" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the rewrite is done, to check nothing was lost and each cut has a reason" }
+      ]
+    },
+    {
+      "id": "house-style-guide",
+      "task": "Write a house style guide from past messages",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:brand-voice-guide-builder", "type": "skill", "use": "brief", "when": "When you have past newsletters and letters, to pull out the voice with examples" },
+        { "ref": "kit:skills/house-style-guide", "use": "build", "when": "When you need voice, tone shifts, words to use and avoid, and how names and dates are written" },
+        { "ref": "library:voice-and-tone-guide-writer", "type": "skill", "use": "build", "when": "When tone must change by situation: welcome, reminder, bad news, celebration" },
+        { "ref": "library:brand-voice-one-pager-writer", "type": "prompt", "use": "build", "when": "When volunteers need one page with word lists and before and after lines" },
+        { "ref": "library:brand-voice-reviewer", "type": "agent", "use": "check", "when": "When the guide is agreed, to check each new draft against it before it goes out" }
+      ]
+    },
+    {
+      "id": "comms-calendar",
+      "task": "Build the comms calendar and sign-off chain for a term or season",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/term-or-season-plan", "use": "brief", "when": "Before a term, church season or campaign starts, to plan it once from the key dates" },
+        { "ref": "kit:skills/comms-calendar-and-approvals", "use": "build", "when": "When you need one calendar across every channel with an owner and approver per message" },
+        { "ref": "library:campaign-brief-calendar", "type": "skill", "use": "build", "when": "When one event or push needs its own brief with messages, channels and a week-by-week plan" },
+        { "ref": "library:email-campaign-calendar-planner", "type": "skill", "use": "build", "when": "When email is the main channel and you need a month of sends planned" },
+        { "ref": "library:standing-social-calendar-maker", "type": "skill", "use": "build", "when": "When social posts should follow the same calendar on a rolling basis" }
+      ]
+    },
+    {
+      "id": "invitation-pack",
+      "task": "Write an invitation pack for a festival or special event",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:event-marketing-planner", "type": "skill", "use": "brief", "when": "When the aim is to fill seats, to plan who to invite, through which channels and the follow-up" },
+        { "ref": "library:prepare-a-community-event-access-plan", "type": "workflow", "use": "brief", "when": "When guests have access needs, to plan what the invitation must tell them" },
+        { "ref": "kit:skills/newsletter-and-notices", "use": "build", "when": "When you need the invitation, the notice and the reminder in the organisation's voice" },
+        { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When the invitation needs a headline, to compare five angles for people who have never come" },
+        { "ref": "library:make-a-readable-event-poster", "type": "workflow", "use": "build", "when": "When the pack includes a poster, for a guided run to checked text and a layout" },
+        { "ref": "kit:skills/accessible-documents-and-emails", "use": "check", "when": "Before it goes out, to check the invitation works for screen readers and large print" }
+      ]
+    },
+    {
+      "id": "accessibility-check",
+      "task": "Check a newsletter, document or poster for accessibility",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/accessible-documents-and-emails", "use": "check", "when": "When an email, Word file, PDF or poster must be readable by everyone" },
+        { "ref": "library:colour-contrast-checker", "type": "skill", "use": "check", "when": "When the organisation's colours are used behind text, to check each pair is readable" },
+        { "ref": "library:powerpoint-accessibility-reviewer", "type": "skill", "use": "check", "when": "When the piece is a slide deck for an assembly or meeting" },
+        { "ref": "library:accessibility-standards-checker", "type": "skill", "use": "check", "when": "When the newsletter also lives on the website and the page itself needs checking" }
+      ]
+    },
+    {
+      "id": "impact-report",
+      "task": "Structure and write an annual or impact report",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:nonprofit-annual-report-planner", "type": "skill", "use": "brief", "when": "Before writing, to plan the report and check facts, numbers and names" },
+        { "ref": "library:nonprofit-program-measurement-planner", "type": "skill", "use": "brief", "when": "When the numbers are thin, to decide what to measure and who tracks it for next year" },
+        { "ref": "kit:prompts/impact-report-numbers-and-stories", "use": "build", "when": "When you have data and case notes and need honest numbers beside real stories" },
+        { "ref": "library:data-story-writer", "type": "skill", "use": "build", "when": "When a table of numbers needs a point, the proof and a next step" },
+        { "ref": "library:case-first-story-builder", "type": "skill", "use": "explore", "when": "To try opening the report on one real case and not a summary" },
+        { "ref": "library:tim-harford", "type": "mind", "use": "think", "when": "When a big number sounds good, to ask what it counts and what to compare it with" },
+        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before print, to check every figure and claim against its source" }
+      ]
+    },
+    {
+      "id": "impact-stories",
+      "task": "Write impact stories from case notes",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:turn-a-customer-interview-into-a-case-outline", "type": "workflow", "use": "brief", "when": "When you have one interview, to outline the story and list what evidence is missing" },
+        { "ref": "library:testimonial-request-writer", "type": "skill", "use": "brief", "when": "When you need a person's own words, to ask with three easy questions" },
+        { "ref": "library:nonprofit-ethical-impact-story-writer", "type": "skill", "use": "build", "when": "When the story is about a real person, to write it with consent and checked facts" },
+        { "ref": "library:case-first-story-builder", "type": "skill", "use": "explore", "when": "When you have many cases, to pick the one to build on and its surprise" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When the story is drafted, to cut sector words the person would never say" }
+      ]
+    },
+    {
+      "id": "numbers-pages",
+      "task": "Plan numbers pages with chart specs",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/impact-report-numbers-and-stories", "use": "brief", "when": "When you must choose which few numbers earn a page" },
+        { "ref": "library:agency-engineering-data-visualization-engineer", "type": "agent", "use": "build", "when": "When each number needs the right chart and a check that it does not mislead" },
+        { "ref": "library:infographic-maker", "type": "skill", "use": "explore", "when": "When a page of figures could work as one infographic, to try a layout and style" },
+        { "ref": "library:cole-nussbaumer-knaflic", "type": "mind", "use": "think", "when": "When a chart is crowded, to strip it to the one thing the reader should see" },
+        { "ref": "kit:skills/accessible-documents-and-emails", "use": "check", "when": "When charts are placed, to write alt text and long descriptions and check contrast" }
+      ]
+    },
+    {
+      "id": "funder-summary",
+      "task": "Write a two-page summary for funders",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/impact-report-numbers-and-stories", "use": "brief", "when": "When the full report exists and you must pick what a funder needs first" },
+        { "ref": "library:executive-summary-writer", "type": "skill", "use": "build", "when": "When a long report must become a short summary with the answer first" },
+        { "ref": "library:overstuffed-draft-cutter", "type": "skill", "use": "check", "when": "When the summary runs past two pages, to keep the main idea and cut what fights it" }
+      ]
+    },
+    {
+      "id": "report-layout",
+      "task": "Plan a page-by-page layout for a report",
+      "kind": "other",
+      "items": [
+        { "ref": "library:page-grid-and-type-planner", "type": "skill", "use": "build", "when": "When the report carries a lot of text and needs a grid, a short type list and white space" },
+        { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "Before settling the layout, to see three alternatives to the template look" },
+        { "ref": "library:plain-page-type-checker", "type": "skill", "use": "check", "when": "When pages are drafted, to check type size, spacing and line length" }
+      ]
+    },
+    {
+      "id": "first-visit-page",
+      "task": "Write a 'what to expect' or enrolment page",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:faq-page-from-questions-writer", "type": "prompt", "use": "build", "when": "When you have the real questions newcomers ask and the answers" },
+        { "ref": "library:page-copywriter", "type": "skill", "use": "build", "when": "When the page needs a headline, sections and one clear next step" },
+        { "ref": "library:top-of-page-headline-writer", "type": "prompt", "use": "explore", "when": "When the top of the page is flat, to compare five headlines with a subhead and button" },
+        { "ref": "library:agency-design-persona-walkthrough", "type": "agent", "use": "check", "when": "When the page is drafted, to walk it as a first-time visitor and see where they stall" }
+      ]
+    },
+    {
+      "id": "enquiry-replies",
+      "task": "Write enquiry replies and answers that cut repeat questions",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:weekly-community-keeper", "type": "agent", "use": "brief", "when": "When the same questions keep coming, to list them from posts and messages" },
+        { "ref": "library:customer-reply-drafter", "type": "skill", "use": "build", "when": "When an enquiry needs a reply in the right tone with the next step" },
+        { "ref": "library:faq-page-from-questions-writer", "type": "prompt", "use": "build", "when": "When repeat questions should be answered once, on a page or in a welcome pack" },
+        { "ref": "library:support-reply-tone-editor", "type": "skill", "use": "explore", "when": "When a reply sounds curt, to see it warmer with the same facts" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "Before saving a reply as a template, to make sure a new parent would follow it" }
+      ]
+    },
+    {
+      "id": "social-posts",
+      "task": "Write social posts for the community",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:standing-social-calendar-maker", "type": "skill", "use": "brief", "when": "When posts are ad hoc, to set a rolling calendar tied to the organisation's dates" },
+        { "ref": "library:multi-platform-post-planner", "type": "skill", "use": "build", "when": "When one piece of news needs a post made for each platform" },
+        { "ref": "library:brand-voice-reviewer", "type": "agent", "use": "check", "when": "Before posting, to check each post still sounds like the organisation" }
+      ]
+    },
+    {
+      "id": "press-notice",
+      "task": "Write a notice for local press",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:press-outreach-planner", "type": "skill", "use": "build", "when": "When there is news for the local paper or radio: who to send it to and the pitch" },
+        { "ref": "library:hard-questions-faq-writer", "type": "skill", "use": "check", "when": "Before sending, to list the hard questions a reporter may ask and the answers" }
+      ]
+    },
+    {
+      "id": "appeal",
+      "task": "Write a volunteer or giving appeal",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:nonprofit-volunteer-program-planner", "type": "skill", "use": "brief", "when": "When asking for volunteers, to define the roles and what is asked of each" },
+        { "ref": "library:nonprofit-annual-appeal-planner", "type": "skill", "use": "build", "when": "When asking members or donors to give: the copy, the amounts and the schedule" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "When the appeal goes by email, to compare subject lines that are honest about the ask" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When the appeal is drafted, to check length, pace and one clear ask" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-voice-reviewer", "type": "agent", "use": "check", "when": "When a draft is done, to check it against the organisation's voice and fix what drifts" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a message gives dates, names, numbers or rules, to check each against its source" },
+    { "ref": "library:ai-default-patterns", "type": "skill", "use": "check", "when": "Before delivery, to catch stock phrases that make a message read as machine written" },
+    { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "Last step before sign-off, to catch slips with a log of every change" }
+  ],
+  "helpers": [
+    { "role": "graphic-designer", "when": "When a poster, invitation or sign needs a real layout and print-ready files" },
+    { "role": "presentation-designer", "when": "When the annual report needs a designed page layout or a deck version" },
+    { "role": "data-visualisation-specialist", "when": "When the numbers pages need charts built, not only chosen and described" },
+    { "role": "fundraising-specialist", "when": "When the report or appeal feeds a grant bid or a donor campaign" },
+    { "role": "translator", "when": "When notices must go out in several languages for families and members" },
+    { "role": "curriculum-developer", "when": "When a tutor or school needs a lesson or scheme-of-work outline, not a message about one" }
+  ],
+  "gaps": [
+    "No library item writes for schools, nurseries or faith groups; parent notes, daily updates and report comments rest on the kit alone",
+    "No library item writes an urgent notice in versions for text, email, door sign and phone tree; the outage pack is for services",
+    "No library item measures the reading age of a draft",
+    "No library item checks Word files, PDFs or email newsletters for accessibility; the checkers are for web pages and slides",
+    "No library item writes an invitation pack, an order of service or content for a faith season",
+    "No library item writes a first-visit or enrolment page; general page and FAQ writers stand in",
+    "No library item sets a sign-off chain for messages, with who approves what and a fallback approver",
+    "No library item checks a newsletter for children's names and photos used without consent",
+    "No library item makes clearly different options for a funder summary, social posts or a press notice for a community group",
+    "No library item writes a welcome pack for new families or members; the welcome flows are built for shops"
+  ]
+}

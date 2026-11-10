@@ -1,0 +1,304 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "system-architect",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "system-design-doc",
+      "task": "Write a design document for a new system or major change",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/design-a-new-system", "use": "brief", "when": "When a new product, service or major change is about to be built and needs the full run" },
+        { "ref": "kit:skills/system-design-doc", "use": "build", "when": "When goals are clear and you need scenarios, diagrams, key flows and trade-offs in one doc" },
+        { "ref": "library:system-design-planner", "type": "skill", "use": "explore", "when": "Before you settle, to see an architecture choice set against its alternatives and trade-offs" },
+        { "ref": "library:agency-engineering-backend-architect", "type": "agent", "use": "build", "when": "When the core is a backend, to get a right-sized setup, tables, an API outline and a failure plan" },
+        { "ref": "library:design-review-panel", "type": "skill", "use": "check", "when": "When the draft is done, to have reviewers test it in turn for hidden assumptions" },
+        { "ref": "library:failure-first-plan-check", "type": "skill", "use": "check", "when": "Before sign-off, to list the ways the design could fail and the changes that avoid them" },
+        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When the design covers only the happy path and not errors, overload or bad handoffs" }
+      ]
+    },
+    {
+      "id": "architecture-review",
+      "task": "Review a current or proposed architecture",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/architecture-review", "use": "check", "when": "When a system must be checked against its quality goals and the cloud provider's pillars" },
+        { "ref": "library:copilot-aws-well-architected-review", "type": "skill", "use": "check", "when": "When the system runs on AWS, to list gaps and fixes against AWS workload guidance" },
+        { "ref": "library:copilot-azure-well-architected-review", "type": "skill", "use": "check", "when": "When the system runs on Azure, to list gaps and fixes against Azure workload guidance" },
+        { "ref": "library:codebase-architecture-reviewer", "type": "skill", "use": "check", "when": "When you can read the code, to find design problems the diagrams do not show" },
+        { "ref": "library:production-stability-reviewer", "type": "skill", "use": "check", "when": "When outages are the worry, to find missing timeouts, retries and circuit breakers" }
+      ]
+    },
+    {
+      "id": "decision-record",
+      "task": "Write a decision record for a big technical choice",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/architecture-decision-record", "use": "build", "when": "When a choice is made or due, to record context, options, the decision and its consequences" },
+        { "ref": "library:tech-stack-comparer", "type": "skill", "use": "explore", "when": "When the options are named, to compare cost, security, team fit and long-term support" },
+        { "ref": "library:technical-spike-planner", "type": "skill", "use": "brief", "when": "When one unknown blocks the decision, to plan a short study with an owner and a deadline" },
+        { "ref": "library:decision-record-writer", "type": "skill", "use": "build", "when": "When a small choice needs only a short note of why and what was passed over" },
+        { "ref": "library:jeff-bezos", "type": "mind", "use": "think", "when": "When the team is stuck, to ask if the choice can be undone cheaply and decide at that speed" }
+      ]
+    },
+    {
+      "id": "threat-model",
+      "task": "Run a design-level threat model",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/threat-model", "use": "build", "when": "When a system or feature needs a data flow diagram, trust boundaries and a threat pass" },
+        { "ref": "library:threat-modeler", "type": "skill", "use": "check", "when": "When you want a second pass that rates each threat by risk with a way to reduce it" },
+        { "ref": "library:copilot-data-breach-blast-radius", "type": "skill", "use": "check", "when": "When sensitive data is involved, to trace its paths and what a breach would expose" },
+        { "ref": "library:risky-design-reviewer", "type": "skill", "use": "check", "when": "When an API or config design is new, to find the parts that are easy to misuse" },
+        { "ref": "library:agency-security-architect", "type": "agent", "use": "build", "when": "When the model must end in a list of proposed controls for each trust boundary" },
+        { "ref": "library:bruce-schneier", "type": "mind", "use": "think", "when": "When a control is proposed, to ask what it protects, what it costs and what risk remains" }
+      ]
+    },
+    {
+      "id": "c4-diagrams",
+      "task": "Draw context, container and flow diagrams",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/c4-diagrams-from-description", "use": "build", "when": "When you need a shared picture of a system from a description, folder list or resource list" },
+        { "ref": "library:mermaid-chart-writer", "type": "skill", "use": "build", "when": "When a flow, sequence or database diagram must paste straight into the docs" },
+        { "ref": "library:diagram-maker", "type": "skill", "use": "explore", "when": "When the picture is for a slide or a client and should be a finished image, not code" },
+        { "ref": "library:design-review-panel", "type": "skill", "use": "check", "when": "When the diagrams are drawn, to test whether they match the design and hide no assumption" }
+      ]
+    },
+    {
+      "id": "quality-scenarios",
+      "task": "Turn vague requirements into measurable quality scenarios",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/quality-attribute-scenarios", "use": "build", "when": "When someone says fast, scalable, secure or reliable and you need numbers first" },
+        { "ref": "library:reliability-target-setter", "type": "skill", "use": "build", "when": "When reliability needs a target users would feel, an error budget and alert rules" },
+        { "ref": "library:technical-capacity-cost-planner", "type": "skill", "use": "build", "when": "When scale needs numbers, to link traffic, tested limits and running cost" }
+      ]
+    },
+    {
+      "id": "stack-choice",
+      "task": "Choose a tech stack, database or vendor with trade-offs",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:tech-stack-comparer", "type": "skill", "use": "explore", "when": "When two or three stacks are in play, to compare them side by side and get a pick" },
+        { "ref": "library:database-design-guide", "type": "skill", "use": "build", "when": "When the question is which database, to get a pick, a schema and a safe migration plan" },
+        { "ref": "library:data-system-designer", "type": "skill", "use": "build", "when": "When the data is large or spread out, to choose storage, copies, splitting and consistency" },
+        { "ref": "library:software-vendor-chooser", "type": "skill", "use": "check", "when": "When buying is an option, to score vendors against your criteria with risk notes" },
+        { "ref": "kit:skills/architecture-decision-record", "use": "build", "when": "When the choice is made, to write down why so the next person understands" }
+      ]
+    },
+    {
+      "id": "monolith-or-services",
+      "task": "Decide between a monolith, modular monolith or services",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/monolith-or-services", "use": "build", "when": "When the team debates splitting a system or starting a product as microservices" },
+        { "ref": "library:system-design-planner", "type": "skill", "use": "explore", "when": "When you want each shape drawn with its trade-offs before you argue for one" },
+        { "ref": "library:elon-musk", "type": "mind", "use": "think", "when": "When the split is assumed, to question the requirement and delete parts before adding any" },
+        { "ref": "library:design-review-panel", "type": "skill", "use": "check", "when": "When a shape is chosen, to stress it for ways the split could fail the team" }
+      ]
+    },
+    {
+      "id": "multi-tenancy",
+      "task": "Choose a multi-tenancy model for a SaaS product",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:prompts/multi-tenancy-model", "use": "build", "when": "When a product serves many customers and you must decide what is shared and what is separate" },
+        { "ref": "library:data-system-designer", "type": "skill", "use": "build", "when": "When tenant data size differs a lot, to plan how to split and copy the data" },
+        { "ref": "library:agency-engineering-identity-access-engineer", "type": "agent", "use": "build", "when": "When tenants need single sign-on and roles, to design login, sessions and permissions" },
+        { "ref": "kit:skills/threat-model", "use": "check", "when": "When the model is chosen, to check one tenant cannot reach another's data" }
+      ]
+    },
+    {
+      "id": "data-model-and-api",
+      "task": "Outline the data model and the API",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:database-schema-designer", "type": "skill", "use": "build", "when": "When the app is described, to get tables, links, indexes and rules in a clean schema" },
+        { "ref": "library:rest-api-designer", "type": "skill", "use": "build", "when": "When the service needs routes, status codes, paging and docs planned" },
+        { "ref": "library:agency-engineering-api-platform-engineer", "type": "agent", "use": "build", "when": "When partners will call the API, to set contract rules, versioning and rate limits" },
+        { "ref": "library:api-design-reviewer", "type": "skill", "use": "check", "when": "When an API spec exists, to score it and flag breaking changes and naming problems" }
+      ]
+    },
+    {
+      "id": "cloud-cost-review",
+      "task": "Review a cloud bill and find the waste",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/cloud-cost-review", "use": "check", "when": "When the cloud bill keeps growing or nobody can explain the main costs" },
+        { "ref": "library:review-aws-cost-and-resilience", "type": "workflow", "use": "check", "when": "When the bill is AWS, to weigh each saving against the risk to the workload" },
+        { "ref": "library:review-azure-cost-and-resilience", "type": "workflow", "use": "check", "when": "When the bill is Azure, to get a resource map, price estimates and a savings plan" },
+        { "ref": "library:cloud-bill-waste-finder", "type": "skill", "use": "check", "when": "When you have access to the AWS account, to list idle resources and the saving for each" },
+        { "ref": "library:monthly-cloud-and-ai-bill-keeper", "type": "agent", "use": "check", "when": "After the review, to track what grew each month and the caps to add" },
+        { "ref": "library:elon-musk", "type": "mind", "use": "think", "when": "When each cost has a defender, to ask what the requirement behind it really is" }
+      ]
+    },
+    {
+      "id": "cloud-design",
+      "task": "Design the cloud set-up on AWS, Azure or Google Cloud",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:aws-architecture-designer", "type": "skill", "use": "explore", "when": "When AWS is a candidate, to get a design with serverless parts, templates and cost cuts" },
+        { "ref": "library:azure-architecture-designer", "type": "skill", "use": "explore", "when": "When Azure is a candidate, to get a design with templates, a pipeline and cost cuts" },
+        { "ref": "library:google-cloud-architect", "type": "skill", "use": "explore", "when": "When Google Cloud is a candidate, to get services, a cost estimate and deploy steps" },
+        { "ref": "kit:skills/system-design-doc", "use": "build", "when": "When the provider is chosen, to write the set-up down with diagrams and trade-offs" },
+        { "ref": "library:cloud-misconfiguration-finder", "type": "skill", "use": "check", "when": "When set-up files exist, to find open buckets and loose access rules" }
+      ]
+    },
+    {
+      "id": "infrastructure-code",
+      "task": "Write Terraform for the chosen cloud set-up",
+      "kind": "code",
+      "items": [
+        { "ref": "library:terraform-setup-builder", "type": "skill", "use": "build", "when": "When the design is agreed, to get Terraform modules with safe state and clean structure" },
+        { "ref": "library:cloud-setup-coder", "type": "skill", "use": "build", "when": "When the team uses Pulumi or CloudFormation, not Terraform" },
+        { "ref": "library:cloud-misconfiguration-finder", "type": "skill", "use": "check", "when": "Before anything is applied, to check the files for loose access and open storage" }
+      ]
+    },
+    {
+      "id": "migration-plan",
+      "task": "Plan a move to a new host, cloud or data store",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:zero-downtime-migration-planner", "type": "skill", "use": "build", "when": "When the move must not take the system down, to plan checks and a rollback per step" },
+        { "ref": "library:migration-planner", "type": "skill", "use": "build", "when": "When an old system is being retired, to move users over without breaking them" },
+        { "ref": "kit:skills/architecture-decision-record", "use": "build", "when": "Before the move, to record why the new home was chosen over staying put" },
+        { "ref": "library:failure-first-plan-check", "type": "skill", "use": "check", "when": "When the plan is drafted, to list how the cutover could fail and what avoids it" },
+        { "ref": "library:linus-torvalds", "type": "mind", "use": "think", "when": "When the move changes behaviour that users or other systems rely on today" }
+      ]
+    },
+    {
+      "id": "reliability-and-recovery",
+      "task": "Set reliability targets and a recovery plan",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:reliability-target-setter", "type": "skill", "use": "build", "when": "When nobody has said how reliable the service must be, to set targets and an error budget" },
+        { "ref": "library:backup-and-recovery-planner", "type": "skill", "use": "build", "when": "When you must state how much loss is acceptable and plan backups and a restore drill" },
+        { "ref": "library:build-a-backup-recovery-rehearsal", "type": "workflow", "use": "check", "when": "When backups exist but a restore was never tested, to plan the test and log the proof" },
+        { "ref": "library:failure-drill-planner", "type": "skill", "use": "check", "when": "When the design claims to survive a failure, to plan a safe experiment that proves it" },
+        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When the plan lists failures but not which job wins when several hit at once" }
+      ]
+    },
+    {
+      "id": "observability-plan",
+      "task": "Plan monitoring, alerts and runbooks",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:monitoring-system-planner", "type": "skill", "use": "build", "when": "When a service has no clear signals, to plan metrics, logs, traces and alerts step by step" },
+        { "ref": "library:runbook-writer", "type": "skill", "use": "build", "when": "When the design is live, to write runbooks for deploy, incidents and rollback" },
+        { "ref": "kit:prompts/quality-attribute-scenarios", "use": "brief", "when": "First, to name the numbers the alerts should protect" }
+      ]
+    },
+    {
+      "id": "architecture-health-check",
+      "task": "Run the quarterly architecture health check",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/quarterly-architecture-health-check", "use": "check", "when": "Every three months, and after any major incident" },
+        { "ref": "kit:skills/architecture-review", "use": "check", "when": "When the check shows drift from the quality goals and one area needs a closer look" },
+        { "ref": "library:tech-debt-prioritiser", "type": "skill", "use": "check", "when": "When you need the debt that slows the team ranked, with cost and small fixes" },
+        { "ref": "library:monthly-tech-debt-keeper", "type": "agent", "use": "check", "when": "Between checks, to find new debt each month and confirm the last clean-up" },
+        { "ref": "library:weekly-dependency-and-security-sweep", "type": "agent", "use": "check", "when": "Between checks, to track new, open and fixed package risks and an upgrade order" },
+        { "ref": "library:turn-an-incident-into-a-safer-procedure", "type": "workflow", "use": "build", "when": "After a major incident, to turn the timeline into a report and tracked prevention actions" }
+      ]
+    },
+    {
+      "id": "auth-design",
+      "task": "Design login, single sign-on and permissions",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:agency-engineering-identity-access-engineer", "type": "agent", "use": "build", "when": "When the app needs login, single sign-on, session rules and account recovery designed" },
+        { "ref": "library:login-and-access-builder", "type": "skill", "use": "check", "when": "When a login and permissions plan exists and needs a review" },
+        { "ref": "kit:skills/threat-model", "use": "check", "when": "When the design is drafted, to test each sign-in path for spoofing and privilege gain" }
+      ]
+    },
+    {
+      "id": "ai-system-design",
+      "task": "Design an AI feature, retrieval set-up or agent system",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:ai-build-or-buy-advisor", "type": "skill", "use": "brief", "when": "First, to decide between a model API and fine-tuning, with a cost break-even" },
+        { "ref": "library:rag-pipeline-designer", "type": "skill", "use": "build", "when": "When answers must come from the client's documents, to choose chunking, embeddings and a store" },
+        { "ref": "library:multi-agent-system-planner", "type": "skill", "use": "explore", "when": "When several agents are planned, to compare supervisor, swarm and handoff designs" },
+        { "ref": "library:ai-cost-cutter", "type": "skill", "use": "check", "when": "When the design is drafted, to see where tokens go and cut the bill without hurting quality" },
+        { "ref": "library:prompt-injection-defender", "type": "skill", "use": "check", "when": "When the AI reads outside text, to map and block hidden instructions" }
+      ]
+    },
+    {
+      "id": "data-platform-design",
+      "task": "Design a data pipeline or reporting store",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:agency-engineering-data-engineer", "type": "agent", "use": "build", "when": "When reports need raw, cleaned and report-ready layers with quality checks and alerts" },
+        { "ref": "library:data-system-designer", "type": "skill", "use": "build", "when": "When you must choose where the data lives and how consistent it must be" },
+        { "ref": "kit:skills/system-design-doc", "use": "build", "when": "When the pipeline is a major change and needs flows and trade-offs written down" }
+      ]
+    },
+    {
+      "id": "integration-design",
+      "task": "Design how systems talk to each other",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/c4-diagrams-from-description", "use": "brief", "when": "First, to draw which systems call which and where the data crosses a boundary" },
+        { "ref": "library:api-contract-tester", "type": "skill", "use": "check", "when": "When two teams or vendors share an API, to catch breaking changes before they ship" },
+        { "ref": "library:production-stability-reviewer", "type": "skill", "use": "check", "when": "When a call to another system can hang or fail, to plan timeouts, retries and fallbacks" },
+        { "ref": "library:risky-design-reviewer", "type": "skill", "use": "check", "when": "When the interface is drafted, to find the parts a caller could misuse" }
+      ]
+    },
+    {
+      "id": "compliance-ready-design",
+      "task": "Shape the design for an audit or privacy rules",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:soc-2-readiness-planner", "type": "skill", "use": "brief", "when": "When a customer asks for SOC 2, to map controls, gaps and the evidence an auditor wants" },
+        { "ref": "library:agency-engineering-privacy-engineer", "type": "agent", "use": "build", "when": "When personal data is stored, to map where it lives and make deletion reach every system" },
+        { "ref": "library:vendor-risk-reviewer", "type": "skill", "use": "check", "when": "When the design leans on a vendor for sensitive data, to tier the risk and set questions" }
+      ]
+    },
+    {
+      "id": "legacy-modernisation",
+      "task": "Decide whether to rewrite, refactor or retire an old system",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:old-code-paydown-guide", "type": "skill", "use": "build", "when": "When the old codebase stays, to plan making it readable and bounded step by step" },
+        { "ref": "library:careful-rewrite-guard", "type": "skill", "use": "check", "when": "When a part seems too rotten to patch, to justify a rebuild and keep what worked" },
+        { "ref": "library:migration-planner", "type": "skill", "use": "build", "when": "When the old system is retired, to plan moving users without breaking them" },
+        { "ref": "kit:skills/architecture-decision-record", "use": "build", "when": "When the call is made, to record the options and why this one won" }
+      ]
+    },
+    {
+      "id": "fractional-cto-advice",
+      "task": "Advise a founder on team, stack and build order",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:tech-leadership-advisor", "type": "skill", "use": "build", "when": "When a founder needs a view on tech debt, hiring and the next architecture calls" },
+        { "ref": "library:tech-stack-comparer", "type": "skill", "use": "explore", "when": "When the founder is choosing a stack before the first hire" },
+        { "ref": "kit:skills/architecture-review", "use": "check", "when": "When a one-server set-up is starting to strain and the founder asks what to change first" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:failure-first-plan-check", "type": "skill", "use": "check", "when": "Before any design or plan goes out, to list how it could fail" },
+    { "ref": "library:decision-record-writer", "type": "skill", "use": "build", "when": "Whenever a choice is made in passing, to leave a short note of why" }
+  ],
+  "helpers": [
+    { "role": "devops-engineer", "when": "When the design needs pipelines, containers or infrastructure code built and run" },
+    { "role": "application-security-engineer", "when": "When the threat model finds risks that need code-level review and fixes" },
+    { "role": "database-engineer", "when": "When the schema, indexes or a data migration need detailed design and tuning" },
+    { "role": "backend-developer", "when": "When the API and services in the design must be built or prototyped" },
+    { "role": "data-engineer", "when": "When the design includes pipelines and a warehouse that someone must build" },
+    { "role": "ai-engineer", "when": "When an AI feature in the design needs prompts, evaluation and model choice worked out" }
+  ],
+  "gaps": [
+    "No library item draws C4 context and container diagrams; the library only has general diagram makers",
+    "No library item turns words like fast, scalable or secure into measurable quality scenarios",
+    "No library item decides between a monolith, a modular monolith and services",
+    "No library item chooses a multi-tenancy model or checks tenant isolation",
+    "No library item reviews a Google Cloud set-up or bill; the reviews cover AWS and Azure only",
+    "No library item plans a move from one host or cloud to another; only a general zero-downtime plan exists",
+    "No library item designs queues, events or caching, or says when each is worth adding",
+    "No library item checks that a diagram matches the system it claims to show",
+    "No thinking lens in the library covers distributed systems or software architecture",
+    "No library item picks a region or data location for common markets; only UAE and Saudi rules are covered"
+  ]
+}

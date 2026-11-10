@@ -1,0 +1,275 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "shopify-specialist",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "theme-snippet",
+      "task": "Write a Liquid or CSS snippet for one theme change",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/change-request-writer", "use": "brief", "when": "Before any change, so the owner sees what will change, approves it and knows how to undo it" },
+        { "ref": "kit:skills/theme-section-builder", "use": "build", "when": "When one small theme change must be built on a duplicate theme with clear install steps" },
+        { "ref": "library:liquid-snippet-writer", "type": "skill", "use": "build", "when": "When you need correct Liquid for products, carts or loops from pasted theme code" },
+        { "ref": "library:generated-code-reviewer", "type": "skill", "use": "check", "when": "When the snippet is drafted, to catch repeated logic and common slips before the owner installs it" },
+        { "ref": "library:claude-code", "type": "tool", "use": "build", "when": "When you have the theme files locally and the change spans several files" },
+        { "ref": "library:kent-beck", "type": "mind", "use": "think", "when": "When a change is growing and should be cut into small steps, tidy-ups kept apart from new behaviour" }
+      ]
+    },
+    {
+      "id": "custom-section",
+      "task": "Build a custom section the owner can edit",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:product-page-section-planner", "type": "skill", "use": "brief", "when": "Before building, to decide which sections and settings answer buyers' doubts" },
+        { "ref": "library:landing-page-design-planner", "type": "skill", "use": "explore", "when": "When the look is open, to get three on-brand designs and a build brief to choose from" },
+        { "ref": "kit:skills/theme-section-builder", "use": "build", "when": "When the section needs settings and blocks the owner can change in the theme editor" },
+        { "ref": "library:shopify-theme-code-writer", "type": "skill", "use": "build", "when": "When you know the section and the theme and need installable code and what to upload" },
+        { "ref": "library:page-design-standards-checker", "type": "skill", "use": "check", "when": "When the section is built, to check contrast, spacing, hierarchy and the phone view" },
+        { "ref": "kit:prompts/theme-code-review", "use": "check", "when": "Before publishing, to check the section's code for errors, speed and access problems" }
+      ]
+    },
+    {
+      "id": "metafield-display",
+      "task": "Show product details from metafields",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/metafield-display", "use": "build", "when": "When size charts, care notes, materials or prior prices must show on the storefront" },
+        { "ref": "library:product-field-bulk-editor", "type": "skill", "use": "build", "when": "When the field exists but must be set on many products at once" },
+        { "ref": "library:unused-custom-field-finder", "type": "skill", "use": "check", "when": "Before adding fields, to find ones that are unused, undocumented or share a key" },
+        { "ref": "library:liquid-snippet-writer", "type": "skill", "use": "build", "when": "When a theme without dynamic sources needs the field output written in Liquid" }
+      ]
+    },
+    {
+      "id": "theme-code-review",
+      "task": "Review theme code before it is published",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/theme-code-review", "use": "check", "when": "When someone edited theme files on a duplicate theme and you want a second check" },
+        { "ref": "library:generated-code-reviewer", "type": "skill", "use": "check", "when": "When an AI tool wrote the code and it needs a pass for common AI mistakes" },
+        { "ref": "library:bug-and-security-code-reviewer", "type": "skill", "use": "check", "when": "When the change has scripts or forms and needs a review for bugs and security gaps" },
+        { "ref": "library:accessibility-checker", "type": "skill", "use": "check", "when": "When the change adds buttons, forms or pop-ups that keyboard and screen reader users must use" }
+      ]
+    },
+    {
+      "id": "safe-theme-change",
+      "task": "Make a theme change safely from request to publish",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/safe-theme-change", "use": "brief", "when": "When the owner asks for a change to how the store looks or works" },
+        { "ref": "kit:prompts/change-request-writer", "use": "build", "when": "When the change needs a written request with scope, approval and undo steps" },
+        { "ref": "library:small-change-keeper", "type": "skill", "use": "build", "when": "While coding, to change only what was asked and pick the simplest fix" },
+        { "ref": "library:release-day-rollback-planner", "type": "prompt", "use": "check", "when": "Before publishing, to set the checks, the way back and how to know it worked" }
+      ]
+    },
+    {
+      "id": "pre-launch-check",
+      "task": "Check a store before it goes live",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/launch-and-sale-readiness", "use": "brief", "when": "When a new store is about to go live or is moving platform or theme" },
+        { "ref": "kit:skills/store-launch-check", "use": "check", "when": "When you walk the buyer path on a phone, then policies, prices, test orders and tracking" },
+        { "ref": "library:pre-launch-store-checker", "type": "agent", "use": "check", "when": "When fixes come in over days and each needs a re-check until a clear go or no-go" },
+        { "ref": "library:store-go-live-checker", "type": "skill", "use": "check", "when": "When you want the blockers scored and a test-order plan from the store's settings" },
+        { "ref": "library:payments-and-checkout-settings-checker", "type": "skill", "use": "check", "when": "When payment and checkout settings need their risks ranked before real orders arrive" },
+        { "ref": "library:store-policy-checker", "type": "skill", "use": "check", "when": "When policy pages may be missing, clash with each other or read unclear" }
+      ]
+    },
+    {
+      "id": "sale-readiness",
+      "task": "Get a store ready for a big sale or product drop",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/sale-day-runbook", "use": "build", "when": "Two to four weeks before a big promotion, to plan the freeze, the timed changes and who does what" },
+        { "ref": "kit:workflows/launch-and-sale-readiness", "use": "brief", "when": "When a sale or drop is four or more weeks away and the checks need an order" },
+        { "ref": "library:speed-budget-and-sale-check", "type": "skill", "use": "check", "when": "When you need a speed budget, a test routine and a pre-sale checklist for the date" },
+        { "ref": "library:get-your-store-ready-for-a-big-sale-day", "type": "workflow", "use": "build", "when": "When heavy sliders, pop-ups and apps should be cut from the home and collection pages first" },
+        { "ref": "library:stop-fake-orders-card-testing-and-bot-abuse", "type": "workflow", "use": "check", "when": "When a drop may draw bots or card testing and the store needs fraud rules ready" },
+        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When the plan covers the happy path only and nobody has asked what happens when a step fails" }
+      ]
+    },
+    {
+      "id": "speed-fix-list",
+      "task": "Find why a store is slow and rank the fixes",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/speed-fix-list", "use": "build", "when": "When the store feels slow and fixes must be ranked by sales at risk against the work" },
+        { "ref": "library:store-speed-report-reader", "type": "skill", "use": "brief", "when": "When you have the PageSpeed report and need each page read and the field score" },
+        { "ref": "library:speed-fix-ranker", "type": "skill", "use": "build", "when": "When there are many possible fixes and they need one order by payback" },
+        { "ref": "library:hero-image-loading-fixer", "type": "skill", "use": "build", "when": "When the main image loads late and you need the code to make it load first" },
+        { "ref": "library:theme-script-and-style-loader", "type": "skill", "use": "build", "when": "When scripts, styles and fonts block the page and must be delayed or deferred safely" },
+        { "ref": "library:layout-shift-fixer", "type": "skill", "use": "build", "when": "When the page jumps as it loads and you need the shifting element and its fix" },
+        { "ref": "library:fix-what-slows-your-shopify-store-in-the-order-that-pays-back", "type": "workflow", "use": "explore", "when": "When you want the whole run in one go, with fixes priced in orders, to compare with your list" }
+      ]
+    },
+    {
+      "id": "monthly-speed-and-app-review",
+      "task": "Run the monthly speed and app review",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/monthly-speed-and-app-review", "use": "brief", "when": "Once a month, and within a week of a new app, theme update or redesign" },
+        { "ref": "kit:prompts/leftover-app-code-finder", "use": "check", "when": "After uninstalling apps, or when old apps are suspected of slowing the store" },
+        { "ref": "library:leftover-app-code-finder", "type": "skill", "use": "check", "when": "When you have the theme files and want leftover app code found file by file" },
+        { "ref": "library:app-script-auditor", "type": "skill", "use": "check", "when": "When each app needs a keep, remove or delay call from the speed report" },
+        { "ref": "library:store-script-and-app-risk-auditor", "type": "skill", "use": "check", "when": "When scripts and apps should be ranked by risk, not only by speed" },
+        { "ref": "library:monthly-store-speed-keeper", "type": "agent", "use": "check", "when": "Each month, to compare with last month and flag new app scripts" }
+      ]
+    },
+    {
+      "id": "new-store-plan",
+      "task": "Plan the pages and setup for a new store",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/new-store-page-plan", "use": "build", "when": "Before building or rebuilding, to agree which pages to build and what each must say" },
+        { "ref": "library:shopify-store-setup-planner", "type": "skill", "use": "build", "when": "When the owner needs the plan, payments, domain and build order for their country" },
+        { "ref": "library:shopify-theme-picker", "type": "skill", "use": "explore", "when": "When the theme is not chosen, to compare a shortlist scored on the must-haves" },
+        { "ref": "library:site-map-planner", "type": "skill", "use": "build", "when": "When the page list needs a hierarchy, navigation and URL plan" },
+        { "ref": "library:open-a-shopify-store-and-take-your-first-order", "type": "workflow", "use": "brief", "when": "When a first-time owner wants the whole path from plan to first order" },
+        { "ref": "library:steve-krug", "type": "mind", "use": "think", "when": "When the page plan makes sense to the owner but a first-time visitor would have to think" }
+      ]
+    },
+    {
+      "id": "page-build",
+      "task": "Build or rebuild a product or landing page",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:landing-page-design-planner", "type": "skill", "use": "explore", "when": "When you have copy, colours and fonts and want three designs before any code" },
+        { "ref": "library:shopify-landing-page-builder", "type": "skill", "use": "build", "when": "When the copy is approved and you need Shopify files with it loaded in and install steps" },
+        { "ref": "library:shopify-page-rebuild", "type": "workflow", "use": "build", "when": "When the owner shows a page they like and wants their own version as Shopify files" },
+        { "ref": "library:page-design-gate", "type": "skill", "use": "check", "when": "When the page is built, to check it in a real browser at phone and desktop width" },
+        { "ref": "library:product-page-auditor", "type": "skill", "use": "check", "when": "When it is a product page, to get ranked changes to variants, proof, buttons and price" }
+      ]
+    },
+    {
+      "id": "migration-plan",
+      "task": "Plan a move to Shopify from another platform",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/launch-and-sale-readiness", "use": "brief", "when": "When the move has a fixed launch date and the checks must be set in order" },
+        { "ref": "library:business-data-move-runbook", "type": "skill", "use": "build", "when": "When you need the data-move plan with field maps, checks and a way back" },
+        { "ref": "library:website-content-mover", "type": "skill", "use": "build", "when": "When pages and posts must move without losing search rank, links or bookmarks" },
+        { "ref": "library:store-app-stack-picker", "type": "skill", "use": "build", "when": "When each old plug-in or feature needs a keep, swap or cut call on the new store" },
+        { "ref": "library:launch-checklist-runner", "type": "skill", "use": "check", "when": "When the switch needs a staged rollout, a checklist and a rollback plan" }
+      ]
+    },
+    {
+      "id": "import-mapping",
+      "task": "Map and check product, customer and order files",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:column-mapping-document-writer", "type": "skill", "use": "build", "when": "When old export columns must be mapped to the new import format, with rules and gaps" },
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "Before import, to find blanks, duplicates and odd values in each file" },
+        { "ref": "library:data-file-clean-up-loop", "type": "agent", "use": "build", "when": "When a file is messy and must be fixed and re-checked until it passes" },
+        { "ref": "library:duplicate-sku-finder", "type": "skill", "use": "check", "when": "After the product import, to find items that share a code or barcode" }
+      ]
+    },
+    {
+      "id": "redirect-map",
+      "task": "Build a redirect map from old to new URLs",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:website-content-mover", "type": "skill", "use": "build", "when": "When every old address needs a new home so search rank and links keep working" },
+        { "ref": "library:redirect-chain-finder", "type": "skill", "use": "check", "when": "After redirects are loaded, to find ones that chain or share a target" },
+        { "ref": "library:shopify-duplicate-page-fixer", "type": "skill", "use": "check", "when": "When the new store makes several addresses for one page and search sees duplicates" }
+      ]
+    },
+    {
+      "id": "launch-day-and-first-week",
+      "task": "Run launch day and the first-week checks",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/store-launch-check", "use": "check", "when": "On the day, to walk the buyer path again on the live domain and place a real test order" },
+        { "ref": "library:release-day-rollback-planner", "type": "prompt", "use": "brief", "when": "Before the switch, to agree the checks, the way back and who decides" },
+        { "ref": "library:traffic-drop-investigator", "type": "skill", "use": "check", "when": "In the first weeks, if search visits fall after the move and the cause must be ranked" },
+        { "ref": "library:store-seo-fix-prioritiser", "type": "skill", "use": "check", "when": "When a crawl of the new store is in and you need the few fixes that matter" }
+      ]
+    },
+    {
+      "id": "store-settings",
+      "task": "Set up payments, shipping, tax and domain",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:payments-and-checkout-settings-checker", "type": "skill", "use": "check", "when": "When payment and checkout settings are in and need their risks ranked" },
+        { "ref": "library:store-tax-setup-planner", "type": "skill", "use": "build", "when": "When you need tax settings and rate rows for where and what the store sells" },
+        { "ref": "library:shipping-rate-planner", "type": "skill", "use": "build", "when": "When the store needs zones, rates and a free-shipping line ready to enter" },
+        { "ref": "library:domain-and-dns-planner", "type": "skill", "use": "build", "when": "When the domain must point to the store with the right records and redirects" }
+      ]
+    },
+    {
+      "id": "international-setup",
+      "task": "Set up selling in other countries",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:shopify-markets-setup-planner", "type": "skill", "use": "build", "when": "When you know the countries and gateway and need market groups, currencies and tax settings" },
+        { "ref": "library:overseas-market-planner", "type": "skill", "use": "brief", "when": "When the owner has not chosen countries and needs them ranked with costs" },
+        { "ref": "kit:skills/store-launch-check", "use": "check", "when": "When a new market is switched on and the buyer path must be walked in that country" }
+      ]
+    },
+    {
+      "id": "tracking-setup",
+      "task": "Set up or repair store tracking",
+      "kind": "code",
+      "items": [
+        { "ref": "library:shopify-google-conversion-tracking-builder", "type": "skill", "use": "build", "when": "When Google purchase tracking must be built through the store and Tag Manager" },
+        { "ref": "library:meta-pixel-capi-fix", "type": "skill", "use": "build", "when": "When the Meta pixel misses or doubles sales and needs step-by-step fixes" },
+        { "ref": "library:ga4-store-setup-checker", "type": "skill", "use": "check", "when": "When GA4 is installed and you need missing settings and store events listed" }
+      ]
+    },
+    {
+      "id": "store-seo-basics",
+      "task": "Fix technical SEO basics in the theme",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:store-seo-gap-finder", "type": "skill", "use": "check", "when": "When products, collections or pages have no search title or description" },
+        { "ref": "library:shopify-duplicate-page-fixer", "type": "skill", "use": "build", "when": "When the theme links to duplicate product addresses and each needs its fix" },
+        { "ref": "library:structured-data-writer", "type": "skill", "use": "build", "when": "When product or shop pages need tested markup for rich results" }
+      ]
+    },
+    {
+      "id": "accessibility-fixes",
+      "task": "Check and fix theme accessibility",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:accessibility-checker", "type": "skill", "use": "check", "when": "When you need a page's access problems ranked before deciding what to fix" },
+        { "ref": "library:wcag-accessibility-fixer", "type": "skill", "use": "build", "when": "When you have the theme code and want the problems fixed and checked again" },
+        { "ref": "kit:prompts/theme-code-review", "use": "check", "when": "When the fixes are in a duplicate theme and need a last check before publishing" }
+      ]
+    },
+    {
+      "id": "store-data-script",
+      "task": "Write a script to read or change store data in bulk",
+      "kind": "code",
+      "items": [
+        { "ref": "library:shopify-data-connector", "type": "skill", "use": "build", "when": "When you need working queries to read or change store data, with paging and limits handled" },
+        { "ref": "kit:prompts/change-request-writer", "use": "brief", "when": "Before any bulk change to live data, so the owner approves it and knows how to undo it" },
+        { "ref": "library:bug-and-security-code-reviewer", "type": "skill", "use": "check", "when": "Before the script touches live data, to review it for bugs and unsafe handling of keys" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:small-change-keeper", "type": "skill", "use": "build", "when": "On every code job, to change only what was asked and leave the rest of the theme alone" },
+    { "ref": "library:generated-code-reviewer", "type": "skill", "use": "check", "when": "Before any code is handed to the owner, to catch common slips" }
+  ],
+  "helpers": [
+    { "role": "frontend-developer", "when": "When the job needs a custom app, a headless storefront or heavy JavaScript" },
+    { "role": "seo-specialist", "when": "When a migration risks search traffic and needs keyword and page-level checks" },
+    { "role": "cro-specialist", "when": "When the owner wants to know which page change will sell more, and to test it" },
+    { "role": "ecommerce-manager", "when": "When collections, filters, bundles or product data need planning before any build" },
+    { "role": "accessibility-specialist", "when": "When the store needs a full access audit and a statement, not a quick theme fix" },
+    { "role": "marketing-analyst", "when": "When tracking is in place and the numbers need reading across ad platforms" }
+  ],
+  "gaps": [
+    "No library item plans metafield and metaobject definitions or shows them on the storefront; only the kit skill covers it",
+    "No library item reviews Liquid theme code for Shopify's own pitfalls; only general code reviewers and the kit prompt",
+    "No library item plans a store move between platforms with step order, a freeze window and a first-week watch list",
+    "No library item maps product, customer and order files to Shopify's import format or checks an import report",
+    "No library item builds a redirect map from old to new addresses; the library only finds redirect chains afterwards",
+    "No library item writes a sale-day runbook with a freeze, timed changes and roles; only the kit prompt covers it",
+    "No library item edits Shopify notification emails or builds Shopify Flow automations",
+    "No library item covers checkout changes, discount logic or other custom store functions",
+    "No library item plans a theme update or a move to a new theme that keeps past custom changes",
+    "No library item sets up wholesale, point of sale or subscription selling in Shopify",
+    "No library item lists replacements for the features and apps of an old platform",
+    "No thinking lens in the library covers web speed"
+  ]
+}

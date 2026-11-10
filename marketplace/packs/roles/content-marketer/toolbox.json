@@ -1,0 +1,286 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "content-marketer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "seo-article",
+      "task": "Write an SEO article that beats the page ranking today",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/content-brief", "use": "brief", "when": "Before drafting, to fix the reader, the search, the angle and what the piece must prove" },
+        { "ref": "library:write-a-post-that-beats-the-pages-ranking-today", "type": "workflow", "use": "build", "when": "When you know the keyword and the pages that rank and need a brief, a post and fixes" },
+        { "ref": "kit:skills/ai-assisted-drafting", "use": "build", "when": "When AI helps with the draft and you need the steps that keep it accurate and yours" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the title is flat, to compare several angles that earn the click without bait" },
+        { "ref": "library:ann-handley", "type": "mind", "use": "think", "when": "When the draft is correct but dull and should sound like one person helping another" },
+        { "ref": "library:blog-post-publish-check-loop", "type": "agent", "use": "check", "when": "When the draft is finished, to match each claim to proof and make the words plain" }
+      ]
+    },
+    {
+      "id": "content-brief-outline",
+      "task": "Write a content brief or outline a writer can draft from",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:search-page-brief-writer", "type": "skill", "use": "brief", "when": "When you have the keyword and the ranking pages, to find the intent and the gaps" },
+        { "ref": "kit:skills/content-brief", "use": "build", "when": "When a writer who has never met the client needs one page to draft from" },
+        { "ref": "library:keyword-to-post-outline-writer", "type": "prompt", "use": "build", "when": "When the client wants only the outline: intent, headings and what each must answer" },
+        { "ref": "library:pre-publish-content-checker", "type": "skill", "use": "check", "when": "When the draft comes back, to check it against the brief for facts, voice and structure" }
+      ]
+    },
+    {
+      "id": "content-strategy",
+      "task": "Build a one-page content strategy tied to one goal",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:content-pillar-finder", "type": "skill", "use": "brief", "when": "Before choosing topics, to find the three to five subjects the client can truly own" },
+        { "ref": "kit:skills/content-strategy", "use": "build", "when": "When a small business needs one page: goal, reader, topics, channels and measures" },
+        { "ref": "library:content-channel-planner", "type": "skill", "use": "build", "when": "When you must decide where each kind of piece goes and which channels to drop" },
+        { "ref": "library:zero-click-content-planner", "type": "prompt", "use": "explore", "when": "When readers get the answer without clicking, to plan content that works without the visit" },
+        { "ref": "library:rand-fishkin", "type": "mind", "use": "think", "when": "When the plan chases search volume and ignores where the audience really spends time" }
+      ]
+    },
+    {
+      "id": "topic-cluster",
+      "task": "Plan a topic cluster for a main product or service",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:search-intent-keyword-mapper", "type": "skill", "use": "brief", "when": "Before the cluster, to sort keywords by what the searcher wants and group them" },
+        { "ref": "library:plan-a-topic-cluster-from-keywords-to-post-briefs-and-links", "type": "workflow", "use": "build", "when": "When you need the full run: keywords, cluster plan, post briefs and links" },
+        { "ref": "library:internal-link-mapper", "type": "skill", "use": "build", "when": "When the pages exist, to decide which links to which and with what link text" }
+      ]
+    },
+    {
+      "id": "topics-from-questions",
+      "task": "Find topics from what customers already ask",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/customer-question-topic-finder", "use": "build", "when": "Before any keyword tool, to turn sales and support questions into a topic list" },
+        { "ref": "library:customer-question-keyword-finder", "type": "prompt", "use": "build", "when": "When you have reviews, tickets and comments, to find how people would search for each" },
+        { "ref": "library:help-article-from-ticket-writer", "type": "prompt", "use": "build", "when": "When a ticket shows a gap, to turn it into a help article that answers it once" }
+      ]
+    },
+    {
+      "id": "editorial-calendar",
+      "task": "Build an editorial calendar for the next quarter",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/monthly-editorial-cycle", "use": "brief", "when": "Each month, to run planning, drafting, review and publishing in a fixed order" },
+        { "ref": "kit:prompts/editorial-calendar-builder", "use": "build", "when": "When you have a strategy and topics and need a calendar the team can keep" },
+        { "ref": "library:content-channel-planner", "type": "skill", "use": "build", "when": "When each calendar slot needs its distribution: where it is shared and when" }
+      ]
+    },
+    {
+      "id": "newsletter-issue",
+      "task": "Write a newsletter issue",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/newsletter-issue", "use": "build", "when": "When you need this issue drafted from notes and recent content, built for clicks and replies" },
+        { "ref": "library:weekly-newsletter-keeper", "type": "agent", "use": "build", "when": "When the newsletter runs every week and should be checked against past issues" },
+        { "ref": "library:subject-line-writer", "type": "skill", "use": "explore", "when": "Before sending, to compare subject lines from several honest angles" },
+        { "ref": "library:email-draft-reviewer", "type": "skill", "use": "check", "when": "When the issue is drafted, to get cuts, a pacing map and a ship or fix verdict" }
+      ]
+    },
+    {
+      "id": "repurposing-pack",
+      "task": "Turn one long piece into a repurposing pack",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:workflows/repurpose-and-distribute", "use": "brief", "when": "When a strong piece is published and should be used beyond the site, step by step" },
+        { "ref": "kit:prompts/repurpose-one-piece", "use": "build", "when": "When one piece should become email, social, video and sales versions that differ" },
+        { "ref": "library:content-repurposer", "type": "skill", "use": "build", "when": "When the source is a webinar, podcast or long post and you need a series from it" },
+        { "ref": "library:monthly-content-repurposer", "type": "agent", "use": "build", "when": "Each month, to pick last month's best pieces from the results and turn them into more" },
+        { "ref": "library:draft-brand-voice-checker", "type": "skill", "use": "check", "when": "When the pack is drafted, to find where versions drift from the client's voice" }
+      ]
+    },
+    {
+      "id": "social-versions",
+      "task": "Write LinkedIn and X posts from a piece",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:x-and-linkedin-post-pair-writer", "type": "prompt", "use": "build", "when": "When one idea needs an X post and a LinkedIn post that read as written apart" },
+        { "ref": "library:linkedin-hook-post-writer", "type": "skill", "use": "explore", "when": "When the LinkedIn post needs a stronger first line, to try opening patterns" },
+        { "ref": "library:x-thread-writer", "type": "skill", "use": "build", "when": "When a long idea should become a thread where each post stands alone" },
+        { "ref": "library:draft-brand-voice-checker", "type": "skill", "use": "check", "when": "Before posting, to check each post against the voice and style guide" }
+      ]
+    },
+    {
+      "id": "case-study",
+      "task": "Write a customer case study",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:buying-story-interview-guide", "type": "skill", "use": "brief", "when": "Before the interview, to get a timeline script that draws out what really happened" },
+        { "ref": "library:turn-a-customer-interview-into-a-case-outline", "type": "workflow", "use": "brief", "when": "When you have the transcript, to outline the case and list the evidence gaps" },
+        { "ref": "library:long-form-piece-structurer", "type": "skill", "use": "build", "when": "When you need the case study's sections in an order that holds a reader" },
+        { "ref": "library:case-first-story-builder", "type": "skill", "use": "explore", "when": "When the story could open several ways, to find the surprise to lead with" },
+        { "ref": "library:ira-glass", "type": "mind", "use": "think", "when": "When the case reads like a press release and needs what happened and what it meant" },
+        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before the customer signs off, to check every result and number against its source" }
+      ]
+    },
+    {
+      "id": "comparison-pages",
+      "task": "Write a fair comparison, alternative or best-of page",
+      "kind": "web_page",
+      "items": [
+        { "ref": "library:comparison-page-set-planner", "type": "skill", "use": "brief", "when": "Before writing, to plan which best-of, alternative and versus pages to make" },
+        { "ref": "library:write-a-rival-alternative-page-that-wins-on-a-real-gap", "type": "workflow", "use": "build", "when": "When one rival is named, to find the gap worth owning and write a fair page" },
+        { "ref": "library:best-of-page-writer", "type": "skill", "use": "build", "when": "When buyers search for the best in a category and you need a fair list with real numbers" },
+        { "ref": "library:comparison-table-designer", "type": "skill", "use": "build", "when": "When the page needs a table that helps people choose" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the page title must be fair and still win the click" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "Before publishing, to sort every claim about a rival as fine, needs proof or cut" }
+      ]
+    },
+    {
+      "id": "white-paper",
+      "task": "Write a white paper or research report with sources",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:research-a-question-and-write-a-cited-report", "type": "workflow", "use": "build", "when": "When the report starts from a question and every claim needs a source" },
+        { "ref": "library:long-form-piece-structurer", "type": "skill", "use": "build", "when": "When the material exists and needs a clear outline for a white paper" },
+        { "ref": "library:survey-answer-truth-checker", "type": "prompt", "use": "check", "when": "When the report rests on a survey, to test how far each result can be trusted" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When the report needs a title, to compare several angles" },
+        { "ref": "library:malcolm-gladwell", "type": "mind", "use": "think", "when": "When the findings are sound but dry and need one real case to carry the idea" },
+        { "ref": "library:long-form-draft-editor", "type": "agent", "use": "check", "when": "When the draft is finished, to have it edited and checked until it passes" }
+      ]
+    },
+    {
+      "id": "ebook-lead-magnet",
+      "task": "Plan and draft an ebook or lead magnet",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:lead-magnet-planner", "type": "skill", "use": "explore", "when": "Before writing, to compare lead magnet ideas and pick the one that fits the buyer" },
+        { "ref": "library:pick-a-lead-magnet-then-build-its-path-and-page", "type": "workflow", "use": "build", "when": "When you need the lead magnet, its signup page and the path to a sale" },
+        { "ref": "library:long-form-piece-structurer", "type": "skill", "use": "build", "when": "When scattered expertise needs a chapter order" },
+        { "ref": "library:long-form-draft-editor", "type": "agent", "use": "check", "when": "When the ebook draft is done, to edit and re-check it before design" }
+      ]
+    },
+    {
+      "id": "report-summary-versions",
+      "task": "Turn a long report into a brief, deck outline or source notes",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:make-a-research-report-easier-to-share", "type": "workflow", "use": "build", "when": "When a finished report needs a summary, a slide brief and a fact-check list" },
+        { "ref": "library:turn-a-report-into-an-editable-briefing-deck", "type": "workflow", "use": "build", "when": "When staff, clients or a board need the report as slides they can edit" },
+        { "ref": "library:prepare-research-poster-source-notes", "type": "workflow", "use": "build", "when": "When the findings go on a poster or into a talk and every claim needs a source note" },
+        { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When the short version is drafted, to check no number changed on the way" }
+      ]
+    },
+    {
+      "id": "content-audit",
+      "task": "Audit existing content against the buyer journey",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/quarterly-content-review", "use": "brief", "when": "Every three months, or after a search update hits the site, to run the review in order" },
+        { "ref": "library:page-keep-or-cut-auditor", "type": "skill", "use": "build", "when": "When you have the content list, to mark each page keep, update, merge or remove" },
+        { "ref": "library:content-gap-and-decay-finder", "type": "skill", "use": "build", "when": "When a search tool is connected, to find missing topics, thin pages and fading posts" }
+      ]
+    },
+    {
+      "id": "performance-review",
+      "task": "Review what the content earns",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/content-performance-review", "use": "build", "when": "When you have search, analytics and email numbers and need to know what earned what" },
+        { "ref": "kit:workflows/quarterly-content-review", "use": "build", "when": "When the review should end in decisions: push, refresh, merge or stop" },
+        { "ref": "library:monthly-search-console-keeper", "type": "agent", "use": "build", "when": "Each month, to find pages to push and thin pages from the search export" },
+        { "ref": "library:organic-search-report-builder", "type": "skill", "use": "build", "when": "When the client wants non-branded clicks compared with the last period" },
+        { "ref": "library:bob-hoffman", "type": "mind", "use": "think", "when": "When a dashboard looks good, to ask what the numbers prove about sales" }
+      ]
+    },
+    {
+      "id": "refresh-or-retire",
+      "task": "Decide whether to refresh, merge or retire old pieces",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:prompts/refresh-or-retire-decision", "use": "build", "when": "When one old piece is losing traffic and you need a quick, reasoned call" },
+        { "ref": "library:find-old-posts-losing-traffic-refresh-or-cut-them-and-track-it", "type": "workflow", "use": "build", "when": "When many posts are fading and each needs a decision and tracking" },
+        { "ref": "library:monthly-content-decay-keeper", "type": "agent", "use": "check", "when": "Each month, to catch pages losing ground before the quarter's review" }
+      ]
+    },
+    {
+      "id": "titles-and-snippets",
+      "task": "Write titles, meta descriptions and headlines",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:search-title-and-snippet-writer", "type": "prompt", "use": "build", "when": "When a page needs three titles and descriptions that fit the length limits" },
+        { "ref": "library:headline-option-writer", "type": "skill", "use": "explore", "when": "When you want several headline angles before you pick one" },
+        { "ref": "library:headline-cover-test-ranker", "type": "skill", "use": "check", "when": "When you have a list, to score each headline read alone and keep the best three" }
+      ]
+    },
+    {
+      "id": "draft-check",
+      "task": "Check and edit a draft before it is published",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/ai-assisted-drafting", "use": "check", "when": "When AI helped write it, to run the checks that stop slop reaching the site" },
+        { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "When lines sound machine made, to fix each one and see a score" },
+        { "ref": "library:william-zinsser", "type": "mind", "use": "think", "when": "When the piece is cluttered, to find the point and cut every word that does no work" },
+        { "ref": "library:pre-publish-content-checker", "type": "skill", "use": "check", "when": "When there is a brief, to check facts, voice, structure and search basics against it" }
+      ]
+    },
+    {
+      "id": "ai-answer-visibility",
+      "task": "Make a piece easy for AI answers to quote",
+      "kind": "audit",
+      "items": [
+        { "ref": "library:ai-citation-scorer", "type": "skill", "use": "check", "when": "When a page is live, to score how easily AI tools can quote each passage" },
+        { "ref": "library:ai-search-visibility-optimiser", "type": "skill", "use": "build", "when": "When the score is low, to get edits that help AI answers and search find and cite it" }
+      ]
+    },
+    {
+      "id": "tour-script",
+      "task": "Write a stop-by-stop tour or audio guide script",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:expert-knowledge-interview", "type": "skill", "use": "brief", "when": "Before scripting, to draw the guide's own stories and judgment out in an interview" },
+        { "ref": "library:make-an-educational-narration-with-a-text-companion", "type": "workflow", "use": "build", "when": "When the script will be recorded and needs a checked spoken version and a text copy" },
+        { "ref": "library:case-first-story-builder", "type": "skill", "use": "explore", "when": "When a stop has many facts, to pick the one story to tell there" },
+        { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "When the script is drafted, to fix every line that trips when spoken" },
+        { "ref": "library:elevenlabs", "type": "tool", "use": "build", "when": "When the site has no voice artist and needs the audio guide tracks recorded" }
+      ]
+    },
+    {
+      "id": "tour-listing-and-preview",
+      "task": "Write tour listing copy and a short preview video script",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:page-copywriter", "type": "skill", "use": "build", "when": "When the booking page needs a headline, what guests get and one clear next step" },
+        { "ref": "library:short-video-format-picker", "type": "skill", "use": "explore", "when": "When a preview video is planned, to pick a format and get a script outline" },
+        { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "Before it goes on a booking site, to fix lines that sound like every other listing" }
+      ]
+    },
+    {
+      "id": "distribution",
+      "task": "Plan distribution for a new piece",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/repurpose-and-distribute", "use": "build", "when": "When a new piece is published and needs its sharing plan run in order" },
+        { "ref": "library:content-channel-planner", "type": "skill", "use": "build", "when": "When you must choose where to share it, when, and which channels to skip" },
+        { "ref": "library:guide-outreach-list-planner", "type": "skill", "use": "build", "when": "When a guide is worth sharing, to plan who to contact with a personal note" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any work for a client with a live site, to capture their voice, facts and prices" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a piece states facts or numbers, to check each against a trusted source" },
+    { "ref": "library:anti-ai-slop-copy-editor", "type": "skill", "use": "check", "when": "Before anything ships, to fix lines that read as machine written" },
+    { "ref": "library:draft-proofreader", "type": "skill", "use": "check", "when": "Last step before sign-off, to catch slips with a log of every change" }
+  ],
+  "helpers": [
+    { "role": "seo-specialist", "when": "When the job needs technical SEO, a site audit or keyword data beyond one article" },
+    { "role": "social-media-manager", "when": "When the repurposed posts need scheduling, community replies and a channel plan" },
+    { "role": "email-marketing-specialist", "when": "When the newsletter needs list set-up, automation or deliverability work" },
+    { "role": "presentation-designer", "when": "When a report, ebook or deck needs a designed layout" },
+    { "role": "marketing-analyst", "when": "When the performance review needs tracking set up or attribution worked out" },
+    { "role": "aeo-geo-specialist", "when": "When the client wants a full plan to be named in AI answers" }
+  ],
+  "gaps": [
+    "No library item writes a tour or audio guide script stop by stop with timings and a track list, or guide training notes",
+    "No library item writes tour listing copy for booking sites",
+    "No library item writes a customer case study from interview to final copy; the nearest ones outline it or cover your own projects",
+    "No library item builds a quote and idea bank from a webinar or podcast transcript",
+    "No library item writes a why-switch page",
+    "No library item drafts an ebook chapter by chapter; the structurer gives only the outline",
+    "No library item reads self-reported answers to how did you hear about us beside search and email results",
+    "No library item makes clearly different versions of a repurposing pack or of a report summary for staff, clients and boards"
+  ]
+}

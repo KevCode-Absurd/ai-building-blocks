@@ -1,0 +1,284 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "support-operations-manager",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "weekly-kpi-pack",
+      "task": "Produce the weekly support KPI pack",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "Before any counts, to find duplicate, merged and blank tickets in the export" },
+        { "ref": "kit:workflows/weekly-support-ops-review", "use": "build", "when": "Every Monday morning, to review the week before in the same order each time" },
+        { "ref": "kit:skills/voice-of-customer-report", "use": "build", "when": "When each measure needs a one-line definition and contact reasons counted by customer" },
+        { "ref": "library:define-your-metrics-once-and-write-a-weekly-update-anyone-gets", "type": "workflow", "use": "build", "when": "When people argue over what a number means and the definitions must be fixed once" },
+        { "ref": "library:gorgias-support-metrics-report", "type": "skill", "use": "build", "when": "When the desk is Gorgias and you need counts, response times and trends for chosen dates" },
+        { "ref": "library:metric-mismatch-tracer", "type": "skill", "use": "check", "when": "When the help desk and your sheet show different numbers for the same measure" }
+      ]
+    },
+    {
+      "id": "voice-of-customer-report",
+      "task": "Write the monthly voice-of-customer report",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:workflows/monthly-quality-and-customer-insights", "use": "build", "when": "In the first week of each month, to cover quality and customer themes together" },
+        { "ref": "kit:skills/voice-of-customer-report", "use": "build", "when": "When tickets, chats, reviews and survey answers must become ranked themes with quotes" },
+        { "ref": "library:research-theme-synthesizer", "type": "skill", "use": "build", "when": "When you have hundreds of messy items and need themes ranked by how often they appear" },
+        { "ref": "library:feedback-theme-finder", "type": "skill", "use": "build", "when": "When survey scores and open comments need trends as well as themes" },
+        { "ref": "library:gorgias-duplicate-ticket-finder", "type": "skill", "use": "check", "when": "When one customer wrote five times, so the same issue is not counted as five" },
+        { "ref": "library:feedback-pile-sorter", "type": "skill", "use": "check", "when": "When the loudest few customers may be drowning out what most people need" }
+      ]
+    },
+    {
+      "id": "help-desk-build",
+      "task": "Design a help desk: queues, tags, views and routing",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/help-desk-build-sheet", "use": "build", "when": "When a shared inbox must become a desk with owners, a short tag list and ordered rules" },
+        { "ref": "library:agency-engineering-it-service-manager", "type": "agent", "use": "explore", "when": "When the desk serves IT users and you want a second design with a change approval path" },
+        { "ref": "library:gorgias-ticket-tag-planner", "type": "skill", "use": "build", "when": "When the desk is Gorgias and each proposed tag needs a reason before it is applied" },
+        { "ref": "library:support-inbox-priority-sorter", "type": "skill", "use": "check", "when": "When the rules are drafted, to test them on real tickets for category, priority and owner" },
+        { "ref": "library:zendesk-ai", "type": "tool", "use": "brief", "when": "When the desk is Zendesk and you must know what its routing and drafting can do" }
+      ]
+    },
+    {
+      "id": "service-level-targets",
+      "task": "Set response and resolution targets by channel and priority",
+      "kind": "strategy",
+      "items": [
+        { "ref": "kit:skills/service-levels-and-staffing", "use": "build", "when": "When targets must come from the team's own volume, not from a number someone liked" },
+        { "ref": "library:matthew-dixon", "type": "mind", "use": "think", "when": "When a fast first reply is the target but customers still have to write three times" },
+        { "ref": "library:gorgias-response-deadline-checker", "type": "skill", "use": "check", "when": "When the desk is Gorgias, to test the targets against tickets that are late right now" },
+        { "ref": "library:zendesk-ticket-priority-planner", "type": "skill", "use": "check", "when": "When the desk is Zendesk, to see waiting tickets grouped by urgency and deadline" }
+      ]
+    },
+    {
+      "id": "support-rota",
+      "task": "Build a support rota from ticket volume by hour",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:support-capacity-planner", "type": "skill", "use": "brief", "when": "Before the rota, to turn ticket data and the sales forecast into people needed" },
+        { "ref": "kit:skills/service-levels-and-staffing", "use": "build", "when": "When you need staff by hour, a weekly rota with breaks and cover, and handover rules" },
+        { "ref": "library:shift-schedule-builder", "type": "skill", "use": "build", "when": "When busy hours must be covered within fixed staff limits, with a cost check per shift" },
+        { "ref": "library:shift-schedule-planner", "type": "skill", "use": "explore", "when": "When you want a second pattern that shares nights and weekends fairly, with a swap rule" },
+        { "ref": "library:queue-and-process-simulator", "type": "skill", "use": "check", "when": "When you doubt the rota holds on a Monday morning, to simulate the queue and the wait" }
+      ]
+    },
+    {
+      "id": "qa-scorecard",
+      "task": "Build a support quality scorecard",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/support-qa-scorecard", "use": "build", "when": "When replies are judged by feel and the team needs weighted lines with pass and fail examples" },
+        { "ref": "library:marking-rubric-writer", "type": "skill", "use": "build", "when": "When each scorecard line needs a clear description of what each level looks like" },
+        { "ref": "library:voice-and-tone-guide-writer", "type": "skill", "use": "brief", "when": "When the tone lines have nothing to point to and a tone guide must exist first" }
+      ]
+    },
+    {
+      "id": "grade-and-coach",
+      "task": "Grade a sample of tickets and write coaching notes",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/support-qa-scorecard", "use": "build", "when": "When you need a fair sample graded, with the quoted line behind every point" },
+        { "ref": "library:angry-customer-reply-checker", "type": "skill", "use": "check", "when": "When a sampled reply answered a complaint, to check its promises, facts and tone" },
+        { "ref": "library:draft-brand-voice-checker", "type": "skill", "use": "check", "when": "When tone is a scorecard line, to rank each reply's slips from the tone guide" },
+        { "ref": "library:turn-a-recorded-call-into-notes-a-follow-up-and-coaching", "type": "workflow", "use": "build", "when": "When support is by phone and the sample is call recordings, not tickets" },
+        { "ref": "library:john-wooden", "type": "mind", "use": "think", "when": "When coaching notes list ten faults and should teach one small habit the agent can control" }
+      ]
+    },
+    {
+      "id": "escalation-playbook",
+      "task": "Write an escalation playbook",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/escalation-playbook", "use": "build", "when": "When tickets get lost between support, billing and engineering, or customers repeat their story" },
+        { "ref": "library:define-a-customer-support-escalation-agreement", "type": "workflow", "use": "build", "when": "When the other team must agree who takes a stuck issue and when it moves up" },
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When the playbook needs a flowchart and a written procedure with its edge cases" },
+        { "ref": "library:support-inbox-priority-sorter", "type": "skill", "use": "check", "when": "When the playbook is drafted, to test its priority levels on a batch of past tickets" }
+      ]
+    },
+    {
+      "id": "serious-complaint",
+      "task": "Reply to a serious complaint",
+      "kind": "email",
+      "items": [
+        { "ref": "library:crisis-response-planner", "type": "skill", "use": "brief", "when": "When the complaint shows a defect or failure that needs a plan beyond one reply" },
+        { "ref": "kit:prompts/serious-complaint-reply", "use": "build", "when": "When the reply needs an apology that fits the facts, a clear next step and no excuses" },
+        { "ref": "library:apology-email-writer", "type": "skill", "use": "explore", "when": "When you want a second draft of the apology to compare before the owner signs it" },
+        { "ref": "library:harriet-lerner", "type": "mind", "use": "think", "when": "When the draft explains and defends where it should own the fault" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before sending, to check every promise in the reply can be kept" }
+      ]
+    },
+    {
+      "id": "stuck-issue",
+      "task": "Unstick one stuck customer issue and record the case",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:customer-history-exporter", "type": "skill", "use": "brief", "when": "When you need the customer's orders, refunds and notes in one dated file first" },
+        { "ref": "library:get-a-stuck-customer-issue-unstuck-and-close-the-loop", "type": "workflow", "use": "build", "when": "When an issue has bounced between teams and needs facts, an owner and a close-out" },
+        { "ref": "kit:prompts/escalation-playbook", "use": "check", "when": "After the case, to see which rule would have stopped it getting stuck" },
+        { "ref": "library:narrative-decision-memo-writer", "type": "skill", "use": "build", "when": "When the case needs a written summary for the records with what was decided and why" }
+      ]
+    },
+    {
+      "id": "apology-templates",
+      "task": "Write a set of apology and complaint templates",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/serious-complaint-reply", "use": "brief", "when": "Before the set, to fix what a good serious reply contains so templates follow it" },
+        { "ref": "library:apology-email-writer", "type": "skill", "use": "build", "when": "When each common failure needs its own plain apology with what happens next" },
+        { "ref": "library:support-reply-tone-editor", "type": "skill", "use": "explore", "when": "When a template sounds canned, to try it firmer, warmer or shorter" },
+        { "ref": "library:angry-customer-reply-checker", "type": "skill", "use": "check", "when": "When the set is drafted, to test each template against a real complaint" }
+      ]
+    },
+    {
+      "id": "outage-updates",
+      "task": "Prepare customer updates for an outage or delay",
+      "kind": "email",
+      "items": [
+        { "ref": "library:outage-incident-leader", "type": "skill", "use": "brief", "when": "When the outage is live and severity, roles and a timeline must be set first" },
+        { "ref": "library:prepare-a-service-outage-communication-pack", "type": "workflow", "use": "build", "when": "When customers need a first notice, progress updates and an all-clear" },
+        { "ref": "library:bad-news-update-writer", "type": "skill", "use": "explore", "when": "When you want a shorter version that states the loss, the numbers and the next step" },
+        { "ref": "library:incident-postmortem-writer", "type": "skill", "use": "build", "when": "When it is fixed and the team needs a blame-free record of causes and actions" },
+        { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before each update, to make sure no fix time is promised that engineering has not given" }
+      ]
+    },
+    {
+      "id": "client-service-levels",
+      "task": "Write a client-facing service level schedule",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/service-levels-and-staffing", "use": "brief", "when": "Before promising anything, to check the team can meet the targets from its own volume" },
+        { "ref": "kit:prompts/client-service-level-schedule", "use": "build", "when": "When clients must be told response times, what is in scope and what happens on a miss" },
+        { "ref": "library:agency-engineering-it-service-manager", "type": "agent", "use": "explore", "when": "When the firm is IT support and you want a second set of priorities to compare" },
+        { "ref": "library:contract-risk-reviewer", "type": "skill", "use": "check", "when": "When the schedule joins a contract, to rate the duties and risks it creates" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When clients argue about what urgent means and every term must be plain" }
+      ]
+    },
+    {
+      "id": "headcount-plan",
+      "task": "Plan support headcount and hiring dates",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:support-hiring-date-planner", "type": "prompt", "use": "build", "when": "When you have 12 months of tickets and a sales forecast and need agents and hire dates" },
+        { "ref": "library:support-capacity-planner", "type": "skill", "use": "build", "when": "When the owner asks what a ticket costs and when the team runs out of room" },
+        { "ref": "library:get-ready-for-peak-season-with-support-and-3pl-planned", "type": "workflow", "use": "build", "when": "When a peak season is coming and support and shipping must be ready together" },
+        { "ref": "kit:skills/service-levels-and-staffing", "use": "check", "when": "When the plan is drafted, to check the headcount still meets the response targets by hour" }
+      ]
+    },
+    {
+      "id": "new-starter-training",
+      "task": "Plan two weeks of training for new support staff",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/new-starter-training-plan", "use": "build", "when": "When new staff start soon and must be ready for live tickets in about two weeks" },
+        { "ref": "library:agency-corporate-training-designer", "type": "agent", "use": "explore", "when": "When you want a second outline built from one real work problem, to compare" },
+        { "ref": "library:build-a-lesson-from-explanation-to-practice-and-a-quiz", "type": "workflow", "use": "build", "when": "When one topic needs a lesson, practice tasks and a knowledge check with answers" },
+        { "ref": "library:listen-first-talk-planner", "type": "skill", "use": "build", "when": "When hard conversations must be practised and staff need a way to hear a customer out" },
+        { "ref": "library:training-handout-writer", "type": "prompt", "use": "build", "when": "When each session needs a one-page handout staff can still use a month later" },
+        { "ref": "library:anders-ericsson", "type": "mind", "use": "think", "when": "When practice is a full mock ticket and should be one weak skill drilled with feedback" },
+        { "ref": "library:check-training-transfer-after-a-course", "type": "workflow", "use": "check", "when": "A few weeks after go-live, to check the training shows up in real tickets" }
+      ]
+    },
+    {
+      "id": "tone-guide",
+      "task": "Write a tone and phrasing guide with before and after lines",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:brand-voice-guide-builder", "type": "skill", "use": "brief", "when": "When your best agent's replies exist, to draw the voice out of them" },
+        { "ref": "library:voice-and-tone-guide-writer", "type": "skill", "use": "build", "when": "When the team needs tone by situation, word lists and side-by-side examples" },
+        { "ref": "library:support-reply-tone-editor", "type": "skill", "use": "build", "when": "When you need before and after pairs made from real replies" },
+        { "ref": "library:draft-brand-voice-checker", "type": "skill", "use": "check", "when": "When the guide is written, to test it on a week of sent replies" }
+      ]
+    },
+    {
+      "id": "ai-agent-readiness",
+      "task": "Check readiness before switching on an AI support agent",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/ai-agent-readiness-check", "use": "check", "when": "Before a bot answers customers, or before its scope is widened" },
+        { "ref": "library:monthly-help-centre-keeper", "type": "agent", "use": "check", "when": "When the bot will answer from help pages, to find the missing and stale ones first" },
+        { "ref": "library:support-chatbot-conversation-review", "type": "skill", "use": "check", "when": "When a trial has run, to list the questions the bot missed or got wrong" },
+        { "ref": "library:review-support-bot-errors-with-retest-cases", "type": "agent", "use": "check", "when": "When wrong answers must be fixed against approved text and tested again" },
+        { "ref": "library:intercom-fin", "type": "tool", "use": "brief", "when": "When the agent is Intercom's and you need to know what it reads and when it hands over" }
+      ]
+    },
+    {
+      "id": "help-centre-and-macro-review",
+      "task": "Review help articles and macros for stale content",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/help-centre-and-macro-review", "use": "check", "when": "Once a month or after a policy change, to find out-of-date, unused or missing content" },
+        { "ref": "library:clear-your-support-inbox-and-turn-fixes-into-help-pages", "type": "workflow", "use": "build", "when": "When the review shows the same fixes typed out again and again" },
+        { "ref": "library:help-article-from-ticket-writer", "type": "prompt", "use": "build", "when": "When a missing article is found and tickets about it exist to write from" }
+      ]
+    },
+    {
+      "id": "help-desk-change-release",
+      "task": "Release a help desk change safely",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:workflows/help-desk-change-release", "use": "build", "when": "For any change to live routing, triggers, targets, macros, articles or a bot's scope" },
+        { "ref": "library:release-day-rollback-planner", "type": "prompt", "use": "build", "when": "When you need the checks, the way back and how to know the change worked" },
+        { "ref": "library:check-a-new-automation-before-relying-on-it", "type": "workflow", "use": "check", "when": "When the change is a new trigger or automation, to test it before trusting it" },
+        { "ref": "library:business-tool-launch-checklist", "type": "skill", "use": "check", "when": "Before go-live, to list launch checks, open blockers and record the decision" }
+      ]
+    },
+    {
+      "id": "feature-request-triage",
+      "task": "Rank feature requests and run the weekly feedback triage",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:yes-later-no-request-sorter", "type": "prompt", "use": "build", "when": "When requests pile up and each needs a yes, later or no with a reason" },
+        { "ref": "library:weekly-product-feedback-triager", "type": "agent", "use": "build", "when": "When the client wants every request counted and ruled on each week" },
+        { "ref": "library:feature-priority-scorer", "type": "skill", "use": "check", "when": "When the product team wants the ranked list scored the same way for every request" }
+      ]
+    },
+    {
+      "id": "owner-summary",
+      "task": "Write a one-page support summary and cost view for the owner",
+      "kind": "analysis",
+      "items": [
+        { "ref": "kit:skills/voice-of-customer-report", "use": "brief", "when": "When the month's pack exists and must be cut to what the owner needs to decide" },
+        { "ref": "library:support-capacity-planner", "type": "skill", "use": "build", "when": "When the owner asks what support costs per ticket and where that is heading" },
+        { "ref": "library:data-story-writer", "type": "skill", "use": "build", "when": "When the numbers need one point, its proof and the next step on a single page" },
+        { "ref": "library:metric-drop-investigator", "type": "skill", "use": "check", "when": "When a number moved sharply, to confirm it and find the main driver before reporting" }
+      ]
+    },
+    {
+      "id": "satisfaction-survey",
+      "task": "Run a satisfaction survey and follow up low scores",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:delighted-and-satismeter-survey-assistant", "type": "skill", "use": "build", "when": "When the survey runs in a survey tool and you need its report or a list check first" },
+        { "ref": "library:feedback-theme-finder", "type": "skill", "use": "build", "when": "When scores and comments are in and need themes and trends" },
+        { "ref": "library:gorgias-satisfaction-follow-up-writer", "type": "skill", "use": "build", "when": "When resolved tickets in Gorgias got low scores and each needs a personal follow-up" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before any report or client schedule goes out, to trace each figure to the ticket data" }
+  ],
+  "helpers": [
+    { "role": "customer-support-specialist", "when": "When the job needs replies, macros or a returns policy written, not the system around them" },
+    { "role": "data-analyst", "when": "When ticket, order and survey exports must be joined and the sums tested" },
+    { "role": "technical-writer", "when": "When the review shows the help centre needs a rewrite, not a few fixed pages" },
+    { "role": "chatbot-specialist", "when": "When the AI agent must be set up, given its content and tested before launch" },
+    { "role": "workforce-planner", "when": "When the rota grows into contracts, shift patterns and headcount across the business" },
+    { "role": "instructional-designer", "when": "When new-starter training needs full lessons and assessments, not a two-week plan" }
+  ],
+  "gaps": [
+    "No library item builds a support QA scorecard, grades replies against it or writes coaching notes; only the kit does",
+    "No library item builds a calibration pack so two reviewers grade the same ticket the same way",
+    "No library item designs a help desk: queues, a tag list, routing order and views; the library has only single-tool helpers",
+    "No library item sets response and resolution targets by channel and priority from ticket volume",
+    "No library item works out agents needed by hour from ticket arrivals; the shift builders start from a staff list",
+    "No library item writes a client service level schedule, a support policy page or a monthly service report against targets",
+    "No library item checks readiness before an AI agent answers customers: scope, handover rules and a test set",
+    "No library item audits macros for unused, out-of-date or duplicate saved replies",
+    "No library item writes role-play scripts for hard support conversations or a go-live sign-off checklist for new staff",
+    "No library item writes a case summary for a complaint record; a general decision memo is the nearest fit",
+    "No library item shows support cost by channel and contact reason beyond one cost-per-ticket figure",
+    "No library item helps choose a help desk tool or plan a move from one to another"
+  ]
+}

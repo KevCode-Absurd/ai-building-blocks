@@ -1,0 +1,297 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "backend-developer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "build-endpoint",
+      "task": "Build or fix one API endpoint",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/endpoint-contract-table", "use": "brief", "when": "Before any code, to agree method, path, who may call it, the body and every response" },
+        { "ref": "library:rest-api-designer", "type": "skill", "use": "brief", "when": "When the endpoint is one of several and routes, status codes and paging must match" },
+        { "ref": "kit:skills/api-endpoint-build", "use": "build", "when": "When the contract is agreed and you write validation, errors and tests in Node or Python" },
+        { "ref": "library:api-test-suite-builder", "type": "skill", "use": "check", "when": "When the endpoint works by hand and needs integration and contract tests with fixtures" },
+        { "ref": "library:api-design-reviewer", "type": "skill", "use": "check", "when": "Before merging, to score naming and errors and flag anything that breaks existing callers" }
+      ]
+    },
+    {
+      "id": "webhook-receiver",
+      "task": "Build a webhook receiver that never loses or repeats an event",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/webhook-receiver", "use": "build", "when": "When a payment, shop, CRM or messaging tool sends events and each must be handled once" },
+        { "ref": "library:stripe-payments-builder", "type": "skill", "use": "build", "when": "When the events come from Stripe and checkout, subscriptions and webhooks are built together" },
+        { "ref": "library:logging-and-alerts-setter", "type": "skill", "use": "build", "when": "When failed or stuck events must raise an alert instead of going unseen" },
+        { "ref": "kit:prompts/what-happens-twice-review", "use": "check", "when": "Before merging, to walk through a repeated, late or out-of-order event" },
+        { "ref": "library:test-suite-writer", "type": "skill", "use": "check", "when": "When the receiver needs tests for bad signatures, repeats and unknown event types" }
+      ]
+    },
+    {
+      "id": "webhook-fix",
+      "task": "Fix webhooks that fail, run twice or go missing",
+      "kind": "code",
+      "items": [
+        { "ref": "library:error-and-log-debugger", "type": "skill", "use": "brief", "when": "When you have the provider's delivery log or a stack trace and need the cause" },
+        { "ref": "library:bug-root-cause-finder", "type": "skill", "use": "brief", "when": "When the customer got three emails and nobody can say why, to prove the cause first" },
+        { "ref": "kit:skills/webhook-receiver", "use": "build", "when": "When the receiver lacks a signature check, a fast answer or an event store and needs rebuilding" },
+        { "ref": "library:fix-a-bug-with-proof-and-a-clear-pull-request", "type": "workflow", "use": "build", "when": "When the fix must come with a failing test first and a pull request a reviewer can follow" },
+        { "ref": "kit:prompts/what-happens-twice-review", "use": "check", "when": "After the fix, to confirm a repeat of the same event now changes nothing" }
+      ]
+    },
+    {
+      "id": "third-party-client",
+      "task": "Build a client or sync job for another service's API",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:skills/third-party-api-client", "use": "build", "when": "When code calls a payment, shop, CRM, messaging or AI service and must survive its failures" },
+        { "ref": "library:api-retry-handler", "type": "skill", "use": "build", "when": "When the service answers slow down and you need waiting and backing off done safely" },
+        { "ref": "library:sign-in-flow-setup-helper", "type": "skill", "use": "build", "when": "When the service needs OAuth and the right flow and token refresh must be set up" },
+        { "ref": "library:docs-backed-coder", "type": "skill", "use": "check", "when": "When you are unsure a call matches the service's current docs and want it checked with sources" },
+        { "ref": "library:schedule-timing-checker", "type": "skill", "use": "check", "when": "When the sync runs on a schedule, to read the cron line and catch silent timing mistakes" }
+      ]
+    },
+    {
+      "id": "payments-test-mode",
+      "task": "Add checkout or subscriptions in test mode",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:prompts/test-mode-checkout-plan", "use": "brief", "when": "When adding one-off or repeat payments and payment must be confirmed by the provider's event" },
+        { "ref": "library:agency-engineering-payments-billing-engineer", "type": "agent", "use": "brief", "when": "When billing has upgrades, refunds or failed renewals and money must reconcile to records" },
+        { "ref": "library:stripe-payments-builder", "type": "skill", "use": "build", "when": "When the provider is Stripe and you need checkout, subscriptions and test steps" },
+        { "ref": "kit:prompts/what-happens-twice-review", "use": "check", "when": "Before merging payment code, to prove no path can charge or fulfil twice" },
+        { "ref": "library:payments-and-checkout-settings-checker", "type": "skill", "use": "check", "when": "Before going live, to score the payment and checkout settings and rank the risks" }
+      ]
+    },
+    {
+      "id": "schema-migration",
+      "task": "Design tables and write a safe migration",
+      "kind": "code",
+      "items": [
+        { "ref": "library:postgres-schema-designer", "type": "skill", "use": "brief", "when": "When the feature is new and you need types, keys, indexes and rules chosen for Postgres" },
+        { "ref": "kit:skills/safe-database-migration", "use": "build", "when": "When you write up and down migrations through the client's ORM without locking live tables" },
+        { "ref": "library:zero-downtime-migration-planner", "type": "skill", "use": "build", "when": "When a big live table changes and each step needs its own check and rollback" },
+        { "ref": "library:shared-field-change-checker", "type": "skill", "use": "check", "when": "When a field is renamed or added, to find every place in database, API and screens that reads it" }
+      ]
+    },
+    {
+      "id": "twice-review",
+      "task": "Review write paths for repeats, races and partial failure",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/what-happens-twice-review", "use": "check", "when": "Before merging code that writes data, charges money, sends messages or calls a service" },
+        { "ref": "library:production-stability-reviewer", "type": "skill", "use": "check", "when": "When a service needs its weak spots found: missing timeouts, retries and circuit breakers" },
+        { "ref": "library:test-gap-finder", "type": "skill", "use": "check", "when": "When the change has tests, to mark each new behaviour as covered or not" },
+        { "ref": "library:margaret-hamilton", "type": "mind", "use": "think", "when": "When the design assumes each step succeeds, to ask what the system does when one does not" }
+      ]
+    },
+    {
+      "id": "api-security-review",
+      "task": "Review an API for common security weaknesses",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/api-security-review", "use": "check", "when": "Before launching or opening up an API, or after adding routes, to check your own code" },
+        { "ref": "library:fix-api-security-gaps-with-tests-and-a-clear-pull-request", "type": "workflow", "use": "build", "when": "When the review found gaps and each needs a fix, a test and a clear pull request" },
+        { "ref": "library:find-leaked-keys-move-them-to-safe-storage-and-check-the-live-site", "type": "workflow", "use": "build", "when": "When keys sit in the code or its history and must be rotated and moved to safe storage" }
+      ]
+    },
+    {
+      "id": "input-checks-rate-limits",
+      "task": "Add input checks and rate limits to routes",
+      "kind": "code",
+      "items": [
+        { "ref": "library:untrusted-input-checker", "type": "skill", "use": "brief", "when": "Before writing checks, to find every place outside data enters and which have no filter" },
+        { "ref": "kit:skills/api-endpoint-build", "use": "build", "when": "When validation and clear error answers must be added at the edge of each route" },
+        { "ref": "library:api-rate-limit-adder", "type": "skill", "use": "build", "when": "When routes have no limits and each needs the right window for its kind of traffic" }
+      ]
+    },
+    {
+      "id": "sign-in-permissions",
+      "task": "Add sign-in and permissions to an API",
+      "kind": "code",
+      "items": [
+        { "ref": "library:login-and-access-builder", "type": "skill", "use": "brief", "when": "When roles and who may do what were never written down and you need the plan first" },
+        { "ref": "library:sign-in-flow-setup-helper", "type": "skill", "use": "build", "when": "When users sign in through another service and the OAuth flow must be built" },
+        { "ref": "library:api-security-checker", "type": "skill", "use": "check", "when": "When the routes are protected, to check each one's sign-in and access rule" }
+      ]
+    },
+    {
+      "id": "bug-fix",
+      "task": "Diagnose and fix a bug from an error or log",
+      "kind": "code",
+      "items": [
+        { "ref": "library:copilot-bug-reproduction-brief", "type": "skill", "use": "brief", "when": "When the report is vague and you need repeatable steps and a minimal case" },
+        { "ref": "library:error-and-log-debugger", "type": "skill", "use": "brief", "when": "When you have an error, a log or a stack trace and need the cause found" },
+        { "ref": "library:bug-root-cause-finder", "type": "skill", "use": "brief", "when": "When earlier fixes did not hold and the cause must be proven before code changes" },
+        { "ref": "library:fix-a-bug-with-proof-and-a-clear-pull-request", "type": "workflow", "use": "build", "when": "When the client wants a minimal fix, the test gap closed and a pull request" },
+        { "ref": "library:john-carmack", "type": "mind", "use": "think", "when": "When guesses pile up, to follow what the code really does step by step" }
+      ]
+    },
+    {
+      "id": "automated-tests",
+      "task": "Write automated tests for endpoints and integrations",
+      "kind": "code",
+      "items": [
+        { "ref": "library:test-list-writer", "type": "skill", "use": "brief", "when": "Before writing tests, to get an ordered list of cases, smallest first" },
+        { "ref": "library:agency-testing-api-tester", "type": "agent", "use": "brief", "when": "When you have an API spec and need edge, auth and failure cases planned" },
+        { "ref": "library:api-test-suite-builder", "type": "skill", "use": "build", "when": "When each route needs integration and contract tests with fixtures" },
+        { "ref": "library:test-first-coach", "type": "skill", "use": "build", "when": "When new behaviour should be built from a failing test in small steps" },
+        { "ref": "library:kent-beck", "type": "mind", "use": "think", "when": "When the change feels too big to test, to list the cases and take one small step at a time" }
+      ]
+    },
+    {
+      "id": "ai-endpoint",
+      "task": "Build an endpoint that calls an AI model for one task",
+      "kind": "code",
+      "items": [
+        { "ref": "library:your-agent-s-first-ai-call-implementation-planner", "type": "skill", "use": "brief", "when": "Before the first call, to plan a wrapper that checks budget and records tokens and cost" },
+        { "ref": "library:claude-app-builder", "type": "skill", "use": "build", "when": "When the endpoint calls Claude and the request must be written the current way" },
+        { "ref": "library:structured-data-extractor", "type": "skill", "use": "build", "when": "When the model's reply must come back as checked fields, with a retry on bad output" },
+        { "ref": "kit:skills/third-party-api-client", "use": "build", "when": "When the model call needs timeouts, one layer of retries and a fallback" },
+        { "ref": "library:ai-app-injection-defender", "type": "skill", "use": "check", "when": "When user text reaches the model, to find and close ways it could be hijacked" }
+      ]
+    },
+    {
+      "id": "integration-design",
+      "task": "Plan how two systems should connect",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:system-design-planner", "type": "skill", "use": "explore", "when": "When there are several ways to connect them, to compare options with diagrams and trade-offs" },
+        { "ref": "library:business-data-move-runbook", "type": "skill", "use": "build", "when": "When the job is a one-off move from an old tool, with field maps, checks and a way back" },
+        { "ref": "library:decision-record-writer", "type": "skill", "use": "build", "when": "When the choice is made, to record why and which options were passed over" },
+        { "ref": "library:launch-readiness-seam-checker", "type": "skill", "use": "check", "when": "When the plan is drafted, to look at the joins between parts and what wins under load" }
+      ]
+    },
+    {
+      "id": "api-contract-spec",
+      "task": "Write an API spec and guard it against breaking changes",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/endpoint-contract-table", "use": "brief", "when": "When front end and back end disagree about what an endpoint returns" },
+        { "ref": "library:api-spec-writer", "type": "skill", "use": "build", "when": "When the API needs a full OpenAPI spec for docs and client code" },
+        { "ref": "library:graphql-schema-designer", "type": "skill", "use": "build", "when": "When the client's API is GraphQL and the schema, paging and resolvers need design" },
+        { "ref": "library:breaking-change-reviewer", "type": "skill", "use": "check", "when": "Before shipping a change, to see who it breaks and a safer way to roll it out" },
+        { "ref": "library:api-contract-tester", "type": "skill", "use": "check", "when": "When another team consumes the API, to add tests that catch a break before it ships" }
+      ]
+    },
+    {
+      "id": "ship-to-production",
+      "task": "Ship an endpoint or integration from brief to production",
+      "kind": "code",
+      "items": [
+        { "ref": "kit:workflows/ship-an-endpoint-or-integration", "use": "build", "when": "When a client needs a new endpoint, webhook, sync or schema change taken all the way live" },
+        { "ref": "library:turn-a-spec-into-a-tested-service-with-api-docs", "type": "workflow", "use": "build", "when": "When the client hands over a written spec and wants a new service with tests and docs" },
+        { "ref": "library:pull-request-description-writer", "type": "skill", "use": "build", "when": "When the branch is ready and reviewers need what changed, why and what to look at" },
+        { "ref": "library:agency-engineering-code-reviewer", "type": "agent", "use": "check", "when": "Before asking for review, to catch bugs, missing tests and unclear code yourself" }
+      ]
+    },
+    {
+      "id": "go-live",
+      "task": "Take an integration live with a checklist and rollback",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/integration-go-live-checklist", "use": "build", "when": "When it works in sandbox and you need exact steps, owners and rollback before live" },
+        { "ref": "library:feature-flag-planner", "type": "skill", "use": "build", "when": "When the change should reach a few users first, with a kill switch" },
+        { "ref": "library:release-day-rollback-planner", "type": "prompt", "use": "build", "when": "When release day needs checks, a rollback and a way to know it worked" },
+        { "ref": "library:release-readiness-reviewer", "type": "skill", "use": "check", "when": "Before deploy, for a read-only look at migrations, config and deploy order" }
+      ]
+    },
+    {
+      "id": "health-check",
+      "task": "Run the monthly integration and API health check",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/integration-health-check", "use": "build", "when": "Monthly, or after a provider's version notice, a webhook failure spike or a duplicate report" },
+        { "ref": "library:weekly-dependency-and-security-sweep", "type": "agent", "use": "check", "when": "When packages and SDKs should be checked each week for new flaws and updates" },
+        { "ref": "library:uptime-and-alert-setup-planner", "type": "skill", "use": "build", "when": "When the check shows nobody is told about failures and uptime and alert rules are needed" }
+      ]
+    },
+    {
+      "id": "queues-scheduled-jobs",
+      "task": "Add background jobs, queues and scheduled tasks",
+      "kind": "code",
+      "items": [
+        { "ref": "library:set-up-redis-bullmq-job-queue-builder-prompt", "type": "prompt", "use": "build", "when": "When slow work must move off the request into a Redis queue with retries" },
+        { "ref": "library:safe-shutdown-code-writer", "type": "skill", "use": "build", "when": "When a deploy or restart must let workers finish live jobs before they stop" },
+        { "ref": "library:schedule-timing-checker", "type": "skill", "use": "check", "when": "When a job runs on a cron line, to see its next run times and catch mistakes" },
+        { "ref": "kit:prompts/what-happens-twice-review", "use": "check", "when": "Before merging a job, to check a retry or double run does no harm" }
+      ]
+    },
+    {
+      "id": "slow-endpoint",
+      "task": "Speed up a slow endpoint",
+      "kind": "code",
+      "items": [
+        { "ref": "library:slow-code-fixer", "type": "skill", "use": "build", "when": "When something feels slow and you need the bottleneck found, fixed and timed before and after" },
+        { "ref": "library:slow-query-fixer", "type": "skill", "use": "build", "when": "When one SQL query is the slow step and needs a faster version or an index" },
+        { "ref": "library:django-speed-reviewer", "type": "skill", "use": "check", "when": "When the app is Django and pages fire many near-identical queries" },
+        { "ref": "library:agency-testing-performance-benchmarker", "type": "agent", "use": "check", "when": "When you need a repeatable speed or load test with a baseline" },
+        { "ref": "library:john-carmack", "type": "mind", "use": "think", "when": "When tempted to guess, to measure the real path first and cut what is not needed" }
+      ]
+    },
+    {
+      "id": "logs-alerts",
+      "task": "Add logs, alerts and a runbook for a service",
+      "kind": "code",
+      "items": [
+        { "ref": "library:monitoring-planner", "type": "skill", "use": "brief", "when": "Before adding anything, to choose the few metrics, logs and alerts that show real harm" },
+        { "ref": "library:logging-and-alerts-setter", "type": "skill", "use": "build", "when": "When the service has no useful logs and problems must show up fast" },
+        { "ref": "library:incident-runbook-writer", "type": "skill", "use": "build", "when": "When an alert fires and someone needs first steps, fixes and who to tell" }
+      ]
+    },
+    {
+      "id": "review-refactor",
+      "task": "Review or refactor back-end code",
+      "kind": "code",
+      "items": [
+        { "ref": "library:agency-engineering-code-reviewer", "type": "agent", "use": "check", "when": "When a change needs a ranked review of bugs, security, tests and clarity" },
+        { "ref": "library:untested-code-change-guide", "type": "skill", "use": "brief", "when": "When the code has no tests and must be changed without breaking it" },
+        { "ref": "library:code-refactor-planner", "type": "skill", "use": "build", "when": "When a messy module needs named, small moves that keep its behaviour the same" },
+        { "ref": "library:linus-torvalds", "type": "mind", "use": "think", "when": "When reviewing a change, to ask first what it breaks for people already using the code" }
+      ]
+    },
+    {
+      "id": "transactional-email",
+      "task": "Send app emails and messages without repeats",
+      "kind": "code",
+      "items": [
+        { "ref": "library:transactional-email-builder", "type": "skill", "use": "build", "when": "When the app must send receipts, resets or notices with coded templates and a sending set-up" },
+        { "ref": "library:inbox-delivery-fixer", "type": "skill", "use": "check", "when": "When app emails land in spam and the sending domain's records need fixing" },
+        { "ref": "kit:prompts/what-happens-twice-review", "use": "check", "when": "Before merging, to make sure a retry cannot send the same message twice" }
+      ]
+    },
+    {
+      "id": "developer-docs",
+      "task": "Write API docs and a README for the service",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:write-docs-a-new-developer-can-follow-on-day-one", "type": "workflow", "use": "build", "when": "When a new developer must run and change the service without asking anyone" },
+        { "ref": "library:documentation-checker", "type": "skill", "use": "check", "when": "Before publishing, to find claims that no longer match the code" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:verified-code-writer", "type": "skill", "use": "build", "when": "Whenever you change a client's code, to ground each step in their real files and check it" },
+    { "ref": "library:dev-work-report-writer", "type": "skill", "use": "check", "when": "At the end of any coding job, to write what changed, why and the proof that it works" }
+  ],
+  "helpers": [
+    { "role": "database-engineer", "when": "When the job needs schema design for complex rules, slow-query tuning or a risky migration" },
+    { "role": "application-security-engineer", "when": "When the API handles sign-in, payments or personal data and needs a full security review" },
+    { "role": "devops-engineer", "when": "When the service needs a pipeline, containers or a deploy and rollback plan" },
+    { "role": "frontend-developer", "when": "When the endpoint needs a screen, a form or a client that handles its errors" },
+    { "role": "qa-engineer", "when": "When the change needs a wider test plan than endpoint and integration tests" },
+    { "role": "ai-engineer", "when": "When the AI call needs prompt design, test sets or retrieval, not only a wrapper" }
+  ],
+  "gaps": [
+    "No library item replays real saved webhook payloads as tests, or checks signature and timestamp handling for a named provider",
+    "No library item designs idempotency keys, an outbox table or exactly-once handling; only the kit prompts cover repeats",
+    "No library item covers database locking, isolation levels or races such as two bookings for one slot",
+    "No library item builds a two-way sync between two tools that avoids duplicates and handles conflicts",
+    "No library item covers payment providers other than Stripe, such as Razorpay, PayPal or Paddle",
+    "No library item tracks a provider's API version and deprecation notices and plans the upgrade",
+    "No library item builds an endpoint in FastAPI, Express, Laravel or Rails by name; builders are general or Next.js only",
+    "No library item writes an ORM migration for Prisma, SQLAlchemy, Django or Laravel",
+    "No library item adds paging, filtering and caching to a slow list endpoint",
+    "No library item covers file uploads to object storage with signed links"
+  ]
+}

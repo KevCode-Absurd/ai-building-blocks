@@ -1,0 +1,266 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "front-desk-coordinator",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "booking-message-set",
+      "task": "Write the booking confirmation and reminder message set",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:workflows/set-up-booking-messages-and-phone-line", "use": "brief", "when": "When a new booking system goes in and every message must be written and loaded in order" },
+        { "ref": "kit:skills/booking-reminders-and-no-show-plan", "use": "build", "when": "When you need confirmation, reminders, reschedule, waitlist and no-show follow-up as one set" },
+        { "ref": "library:agency-product-behavioral-nudge-engine", "type": "agent", "use": "explore", "when": "When you want a second plan: one small step per message and the best time to send each" },
+        { "ref": "library:rory-sutherland", "type": "mind", "use": "think", "when": "When reminders are ignored and a change of wording or framing may work better than more of them" },
+        { "ref": "library:sms-send-checker", "type": "skill", "use": "check", "when": "Before texts go live, to check length, cost and rule flags for each message" }
+      ]
+    },
+    {
+      "id": "no-show-plan",
+      "task": "Build a plan to cut no-shows and late cancellations",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/no-show-pattern-from-export", "use": "brief", "when": "Before changing anything, to see where no-shows happen with every figure worked out" },
+        { "ref": "kit:skills/booking-reminders-and-no-show-plan", "use": "build", "when": "When you need reminder timing, deposit or card-hold wording and a fair fee rule" },
+        { "ref": "library:booking-page-designer", "type": "skill", "use": "build", "when": "When no-shows start at booking: unclear times, no prep note, no easy way to change" },
+        { "ref": "library:agency-support-legal-compliance-checker", "type": "agent", "use": "check", "when": "Before deposits or fees start, to check them against consumer rules where the business trades" }
+      ]
+    },
+    {
+      "id": "phone-menu",
+      "task": "Design a phone menu and write every prompt",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/phone-menu-and-call-scripts", "use": "build", "when": "When callers get lost or wait too long and the menu must be cut to what they need" },
+        { "ref": "library:elevenlabs-spoken-script-writer", "type": "skill", "use": "explore", "when": "When you want a second wording of the prompts with pacing and pauses marked" },
+        { "ref": "library:matthew-dixon", "type": "mind", "use": "think", "when": "When the menu suits the office's departments, not the effort it costs a caller" },
+        { "ref": "library:voiceover-maker", "type": "skill", "use": "check", "when": "When you need to hear the prompts spoken before anyone records them" },
+        { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "When a prompt is hard to say or follow by ear, to find and fix each line" }
+      ]
+    },
+    {
+      "id": "front-desk-answer-book",
+      "task": "Write a front-desk answer book and FAQ",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:customer-question-researcher", "type": "skill", "use": "brief", "when": "When the answer to a common question is buried in old emails and policy files" },
+        { "ref": "kit:skills/front-desk-faq-and-intake", "use": "build", "when": "When hours, fees, payment, cancellations and what to bring must be in one answer book" },
+        { "ref": "library:faq-page-from-questions-writer", "type": "prompt", "use": "build", "when": "When the same answers should also go on the website as an FAQ page" },
+        { "ref": "library:check-a-clinic-service-information-page", "type": "workflow", "use": "check", "when": "When the answers state service facts, to check each against what the clinic approved" }
+      ]
+    },
+    {
+      "id": "inbound-call-script",
+      "task": "Write an inbound call script for the desk",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/phone-menu-and-call-scripts", "use": "build", "when": "When new or temporary staff need a script with transfer and emergency steps" },
+        { "ref": "library:agency-healthcare-customer-service", "type": "agent", "use": "explore", "when": "When the desk is a clinic, to compare replies on bills and bookings with privacy checks" },
+        { "ref": "library:listen-first-talk-planner", "type": "skill", "use": "build", "when": "When callers are often upset and staff need a way to hear them out before answering" },
+        { "ref": "library:training-handout-writer", "type": "prompt", "use": "build", "when": "When the script must fit one page a temp can keep beside the phone" },
+        { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "When scripted lines sound stiff out loud, to fix the ones that trip" }
+      ]
+    },
+    {
+      "id": "greetings-and-hold-messages",
+      "task": "Write greetings, voicemail, after-hours and hold messages",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/phone-menu-and-call-scripts", "use": "build", "when": "When open, closed, holiday and busy times each need their own short message" },
+        { "ref": "library:elevenlabs-spoken-script-writer", "type": "skill", "use": "explore", "when": "When you want a second version of each greeting written for the ear, with pauses" },
+        { "ref": "library:multilingual-narrator", "type": "skill", "use": "build", "when": "When many callers speak another language and need the greeting in it too" },
+        { "ref": "library:ad-script-read-aloud-editor", "type": "skill", "use": "check", "when": "Before recording, to fix any line that is hard to say in one breath" }
+      ]
+    },
+    {
+      "id": "recall-messages",
+      "task": "Write recall and reactivation messages",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:prompts/recall-and-reactivation-messages", "use": "build", "when": "When check-ups or vaccinations are due, or clients have not booked for a long time" },
+        { "ref": "library:text-message-campaign-writer", "type": "skill", "use": "explore", "when": "When texts may work better than email, to try a short flow with consent rules kept" },
+        { "ref": "library:one-ask-email-tightener", "type": "prompt", "use": "check", "when": "Before sending, to cut each message to one action: book, call or reply" },
+        { "ref": "library:sms-send-checker", "type": "skill", "use": "check", "when": "Before a recall text goes to the whole list, to check cost and rule flags" }
+      ]
+    },
+    {
+      "id": "booking-policy",
+      "task": "Write booking and cancellation terms in plain words",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/booking-policy-in-plain-words", "use": "build", "when": "When terms are long or scattered and clients are surprised by fees" },
+        { "ref": "library:explain-service-booking-terms-to-customers", "type": "workflow", "use": "explore", "when": "When you want a clause-by-clause plain version to compare with your own" },
+        { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When a fee line still sounds harsh or legal after the rewrite" },
+        { "ref": "library:agency-support-legal-compliance-checker", "type": "agent", "use": "check", "when": "Before the terms are published, to check fees and deposits against local consumer rules" }
+      ]
+    },
+    {
+      "id": "intake-process",
+      "task": "Set up a new-client or new-patient intake process and form",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/front-desk-faq-and-intake", "use": "build", "when": "When intake depends on whoever is at the desk and needs written steps" },
+        { "ref": "library:document-a-clinic-appointment-intake-process", "type": "workflow", "use": "build", "when": "When a clinic has an approved process that must become plain steps with open questions" },
+        { "ref": "library:multi-step-form-designer", "type": "skill", "use": "build", "when": "When the form is long and needs stages, conditional questions and save and resume" },
+        { "ref": "library:plain-words-interface-rewriter", "type": "skill", "use": "build", "when": "When form labels use office words and clients answer the wrong thing" },
+        { "ref": "library:make-a-long-form-easier-to-finish", "type": "workflow", "use": "check", "when": "When clients give up on the form, to cut fields and test the shorter flow" },
+        { "ref": "library:health-data-privacy-checker", "type": "skill", "use": "check", "when": "When the form collects health details, to find privacy gaps before it goes live" }
+      ]
+    },
+    {
+      "id": "review-replies",
+      "task": "Reply to public reviews without breaching privacy",
+      "kind": "copy",
+      "items": [
+        { "ref": "library:review-request-and-reply-planner", "type": "skill", "use": "brief", "when": "When the practice also needs to know when and how to ask for reviews" },
+        { "ref": "kit:skills/privacy-safe-review-replies", "use": "build", "when": "When a clinic, vet or salon must reply without confirming anyone is a client" },
+        { "ref": "library:review-reply-batch-writer", "type": "prompt", "use": "explore", "when": "When you want a second reply to compare, to be run through the privacy rules after" },
+        { "ref": "library:public-review-reply-desk", "type": "agent", "use": "check", "when": "When replies come in batches and risky ones should be held for the owner" }
+      ]
+    },
+    {
+      "id": "no-show-analysis",
+      "task": "Find no-show patterns in a booking export",
+      "kind": "analysis",
+      "items": [
+        { "ref": "library:data-quality-auditor", "type": "skill", "use": "check", "when": "Before any sums, to find duplicate bookings, blank statuses and odd dates in the export" },
+        { "ref": "kit:prompts/no-show-pattern-from-export", "use": "build", "when": "When you have the export and need no-shows by day, time, service and lead time" },
+        { "ref": "library:explain-appointment-no-show-patterns", "type": "workflow", "use": "check", "when": "When you want the attendance table reconciled and the gaps in the evidence listed" },
+        { "ref": "library:data-story-writer", "type": "skill", "use": "build", "when": "When the owner needs the pattern as one point, its proof and the next step" }
+      ]
+    },
+    {
+      "id": "aftercare-note",
+      "task": "Turn approved aftercare text into a plain client note",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:prompts/aftercare-note-from-approved-text", "use": "build", "when": "When a clinician or vet wrote the instructions and the client needs a plain version" },
+        { "ref": "library:translator", "type": "skill", "use": "build", "when": "When the client reads another language and needs the same note in it" },
+        { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before it is handed over, to catch a dose, date or name written two ways" }
+      ]
+    },
+    {
+      "id": "service-page",
+      "task": "Write a new-patient or service page with clear next steps",
+      "kind": "web_page",
+      "items": [
+        { "ref": "kit:skills/front-desk-faq-and-intake", "use": "brief", "when": "Before the page, to take the approved facts on fees, hours and what to bring" },
+        { "ref": "library:booking-page-designer", "type": "skill", "use": "build", "when": "When the page should end in a booking flow with open times and a prep note" },
+        { "ref": "library:answer-first-page-rewriter", "type": "skill", "use": "explore", "when": "When the page opens with the practice's story, to compare a version that answers first" },
+        { "ref": "kit:prompts/patient-page-claims-check", "use": "check", "when": "Before the page is published, to flag promises and claims the rules do not allow" },
+        { "ref": "library:check-a-clinic-service-information-page", "type": "workflow", "use": "check", "when": "When the page lists services, to check each line against the approved facts" }
+      ]
+    },
+    {
+      "id": "claims-check",
+      "task": "Check marketing copy for health and results claims",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/patient-page-claims-check", "use": "check", "when": "Before a clinic, vet or beauty business posts a page, ad or social post" },
+        { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "When you want each claim sorted as fine, needs proof or cut, with safer wording" },
+        { "ref": "library:persuasive-claim-truth-checker", "type": "skill", "use": "check", "when": "When a post cites a study or number, to check it and what context is missing" }
+      ]
+    },
+    {
+      "id": "upset-client",
+      "task": "Reply to an upset client or pet owner",
+      "kind": "email",
+      "items": [
+        { "ref": "library:customer-message-tone-and-urgency-review", "type": "skill", "use": "brief", "when": "When a hard message lands, to read its urgency and warning signs first" },
+        { "ref": "library:angry-customer-reply-writer", "type": "prompt", "use": "build", "when": "When the reply must name the feeling, fix what it can and promise nothing false" },
+        { "ref": "library:listen-first-talk-planner", "type": "skill", "use": "explore", "when": "When a phone call would do better than a message, to plan how to listen first" },
+        { "ref": "library:angry-customer-reply-checker", "type": "skill", "use": "check", "when": "Before sending, to check the draft's promises, facts and tone" }
+      ]
+    },
+    {
+      "id": "monthly-review",
+      "task": "Run the monthly front desk review",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/monthly-front-desk-review", "use": "build", "when": "In the first week of each month, to check no-shows, missed calls, reviews and messages" },
+        { "ref": "kit:prompts/no-show-pattern-from-export", "use": "build", "when": "When this month's booking export is in and the pattern needs updating" },
+        { "ref": "library:measure-a-clinic-administrative-queue", "type": "workflow", "use": "check", "when": "When admin work is piling up, to find the step that slows the queue" },
+        { "ref": "library:explain-appointment-no-show-patterns", "type": "workflow", "use": "check", "when": "When the month's numbers look odd, to reconcile attendance before reporting" }
+      ]
+    },
+    {
+      "id": "phone-and-booking-setup",
+      "task": "Set up booking messages and the phone line for a new system",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/set-up-booking-messages-and-phone-line", "use": "build", "when": "When a new system or location opens, or no-shows and missed calls are out of hand" },
+        { "ref": "kit:skills/phone-menu-and-call-scripts", "use": "build", "when": "When the phone side needs its menu, greetings and desk script written" },
+        { "ref": "library:process-and-sop-writer", "type": "skill", "use": "build", "when": "When desk staff need a written procedure for the new system with its edge cases" },
+        { "ref": "library:local-search-listing-manager", "type": "skill", "use": "check", "when": "When hours or the phone number changed, to make the public listings match" }
+      ]
+    },
+    {
+      "id": "recording-brief",
+      "task": "Write a recording brief for a voice artist or AI voice",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:skills/phone-menu-and-call-scripts", "use": "build", "when": "When the prompts are final and a voice artist needs names, pace and file names" },
+        { "ref": "library:elevenlabs-voice-description-writer", "type": "skill", "use": "build", "when": "When the voice will be made by a tool and needs tone, pace and character described" },
+        { "ref": "library:elevenlabs", "type": "tool", "use": "build", "when": "When the practice wants the prompts read by a text-to-speech voice" }
+      ]
+    },
+    {
+      "id": "ai-receptionist-plan",
+      "task": "Plan an AI phone or chat assistant for bookings",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/front-desk-faq-and-intake", "use": "brief", "when": "Before any build, to write the approved answers the assistant may give" },
+        { "ref": "library:chatbot-conversation-designer", "type": "skill", "use": "build", "when": "When the assistant needs flows with questions, recovery from mistakes and a handover" },
+        { "ref": "library:voice-assistant-builder", "type": "skill", "use": "build", "when": "When the assistant should answer calls by voice and book through a tool" },
+        { "ref": "library:health-data-privacy-checker", "type": "skill", "use": "check", "when": "When the assistant will hear health details, to find privacy gaps first" }
+      ]
+    },
+    {
+      "id": "desk-handover",
+      "task": "Hand over referrals and open desk tasks between staff",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "library:handover-note-writer", "type": "prompt", "use": "build", "when": "When one person leaves the desk and the next must run it from the first hour" },
+        { "ref": "library:prepare-a-referral-administration-handover", "type": "workflow", "use": "build", "when": "When referral paperwork is part-done and you need what was sent, received and booked" },
+        { "ref": "library:referral-administration-evidence-review-assistant", "type": "agent", "use": "check", "when": "When the referral handover must be checked for missing letters and bookings" }
+      ]
+    },
+    {
+      "id": "other-language-client",
+      "task": "Answer a client who writes in another language",
+      "kind": "email",
+      "items": [
+        { "ref": "kit:skills/front-desk-faq-and-intake", "use": "brief", "when": "Before translating, to settle the answer from the approved answer book" },
+        { "ref": "library:customer-support-message-translator", "type": "skill", "use": "build", "when": "When a message is not in English and you need its meaning and a reply in their language" },
+        { "ref": "library:translator", "type": "skill", "use": "explore", "when": "When a booking or fee line could be misread, to get a second wording to compare" },
+        { "ref": "library:angry-customer-reply-checker", "type": "skill", "use": "check", "when": "When the message is a complaint, to check the English draft before it is translated" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:complaint-reply-promise-checker", "type": "prompt", "use": "check", "when": "Before any message that promises a time, a refund or a call back" },
+    { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "When a message or script uses clinic or office words a client would not" }
+  ],
+  "helpers": [
+    { "role": "practice-manager", "when": "When the fix is rotas, fees or desk procedures the owner must decide, not wording" },
+    { "role": "local-marketing-specialist", "when": "When hours, listings and local search pages must be updated to match the desk" },
+    { "role": "reputation-manager", "when": "When reviews need a standing plan across sites, not one batch of replies" },
+    { "role": "chatbot-specialist", "when": "When an AI phone or chat assistant must be built and tested, not only planned" },
+    { "role": "compliance-specialist", "when": "When health privacy, advertising claims or cancellation fees need a rules check" },
+    { "role": "website-designer", "when": "When the new-patient page or booking page must be built on the practice's site" }
+  ],
+  "gaps": [
+    "The library is thin for front desk work: about 50 items fit, and booking, phone and aftercare work rests on the kit",
+    "No library item writes booking confirmations, reminders, reschedule, waitlist or no-show follow-up messages",
+    "No library item writes deposit, card-hold or late-cancel fee wording, or offers two versions of booking terms to compare",
+    "No library item designs a phone menu or writes greetings, voicemail, after-hours and hold messages",
+    "No library item writes an inbound call script for a desk; the call scripts in the library are for cold sales calls",
+    "No library item writes recall messages for check-ups, vaccinations or lapsed clients",
+    "No library item turns a clinician's or vet's aftercare text into a plain note that adds and drops nothing",
+    "No library item writes a privacy-safe review reply for a clinic or vet; the review items are written for shops",
+    "No library item writes a new-patient or service page, or checks health advertising rules country by country",
+    "No library item plans a waitlist or a way to fill cancelled slots, or a text back to missed callers",
+    "No library item is written for vets, salons or studios, and no tool guide covers a booking or phone system",
+    "No library item checks an emergency script: what staff say and do when a caller describes an urgent problem"
+  ]
+}

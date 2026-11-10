@@ -1,0 +1,298 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "graphic-designer",
+  "reviewed": "2026-11-10",
+  "tasks": [
+    {
+      "id": "flyer-layout",
+      "task": "Lay out a flyer, postcard or handout",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:workflows/brief-to-print-ready", "use": "brief", "when": "When a printed piece has a deadline and you need the steps and approval points in order" },
+        { "ref": "kit:skills/print-layout-spec", "use": "build", "when": "When the brief and copy are approved and you need size, grid, type and bleed written out" },
+        { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "Before you settle a layout, to get three hand-made alternatives to the template look" },
+        { "ref": "library:page-grid-and-type-planner", "type": "skill", "use": "build", "when": "When the piece carries a lot of text and needs a grid, a short type list and white space" },
+        { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When a layout is drafted, to see where the eye lands first, what to move and what to cut" }
+      ]
+    },
+    {
+      "id": "social-carousel",
+      "task": "Make a carousel or a set of social posts",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "kit:skills/social-graphics-spec", "use": "build", "when": "When you need exact sizes, type, safe areas and slide-by-slide text for each post" },
+        { "ref": "library:story-carousel-ad-writer", "type": "skill", "use": "brief", "when": "When the client has no slide text yet and needs each card's words and picture planned" },
+        { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "Before you settle a slide layout, to get three hand-made alternatives" },
+        { "ref": "library:david-carson", "type": "mind", "use": "think", "when": "When every slide looks like a stock template and nothing would stop a thumb" },
+        { "ref": "kit:skills/contrast-and-legibility-check", "use": "check", "when": "Before posting, to check the words read on a phone and sit inside the safe area" },
+        { "ref": "library:canva", "type": "tool", "use": "build", "when": "When the client's team will build and reuse the slides themselves" }
+      ]
+    },
+    {
+      "id": "event-poster",
+      "task": "Design an event poster",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:one-symbol-concept-finder", "type": "skill", "use": "brief", "when": "Before layout, to find the one idea, one feeling and one symbol the poster should carry" },
+        { "ref": "library:make-a-readable-event-poster", "type": "workflow", "use": "build", "when": "When you have the event details and want a guided run to a layout and an export checklist" },
+        { "ref": "library:type-led-poster-planner", "type": "skill", "use": "explore", "when": "When there are no usable photos, to try a type-only poster that reads from far away" },
+        { "ref": "library:poster-designer", "type": "skill", "use": "explore", "when": "When the client wants to see a finished art-style poster fast and it carries few words" },
+        { "ref": "library:saul-bass", "type": "mind", "use": "think", "when": "When the poster is a collage of everything and needs one bold symbol" },
+        { "ref": "kit:skills/contrast-and-legibility-check", "use": "check", "when": "Before sign-off, to check type size for the viewing distance and the colour contrast" }
+      ]
+    },
+    {
+      "id": "design-brief",
+      "task": "Turn a thin request into a brief and copy deck",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:skills/design-brief-and-copy-deck", "use": "build", "when": "When a client says \"can you do us a flyer?\" and nothing about the job is written down" },
+        { "ref": "library:design-brief-rules-writer", "type": "skill", "use": "brief", "when": "When the client sets no limits, to fix firm rules for the piece before any layout" },
+        { "ref": "library:aesthetic-direction-brief-writer", "type": "skill", "use": "brief", "when": "When the client cannot describe the look, to pin down tone and feel in four answers" },
+        { "ref": "library:design-style-analyst", "type": "skill", "use": "brief", "when": "When the client shares designs they like, to turn them into colours, type and feel you can reuse" }
+      ]
+    },
+    {
+      "id": "social-template-kit",
+      "task": "Build a reusable social template kit",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:visual-system-rules-writer", "type": "skill", "use": "brief", "when": "Before the templates, to fix the colour, type and grid rules every post must follow" },
+        { "ref": "library:brand-stylescape-planner", "type": "skill", "use": "explore", "when": "When the brand has no clear look, to compare three mood board directions first" },
+        { "ref": "kit:skills/social-graphics-spec", "use": "build", "when": "When you spec each template's size, type styles and safe areas for the client's team" },
+        { "ref": "kit:prompts/handoff-build-notes", "use": "build", "when": "When someone else will build the templates in Canva or a similar tool" },
+        { "ref": "library:agency-design-brand-guardian", "type": "agent", "use": "check", "when": "When the kit is drafted, to find where the templates drift from the brand's look and voice" }
+      ]
+    },
+    {
+      "id": "menu-layout",
+      "task": "Lay out a printed menu or a menu board",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/menu-layout-plan", "use": "build", "when": "When you have every item and price and need sections, order and what to feature" },
+        { "ref": "kit:skills/print-layout-spec", "use": "build", "when": "When the menu plan is agreed and the printer needs exact size, type and bleed" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "build", "when": "When dish descriptions are vague, to make each one short, true and easy to picture" },
+        { "ref": "library:josef-muller-brockmann", "type": "mind", "use": "think", "when": "When a crowded menu needs a strict grid so names, notes and prices line up" },
+        { "ref": "library:plain-page-type-checker", "type": "skill", "use": "check", "when": "When the menu is drafted, to check type size, spacing and line length where it is read" }
+      ]
+    },
+    {
+      "id": "event-signage",
+      "task": "Plan event signs and wayfinding",
+      "kind": "other",
+      "items": [
+        { "ref": "library:wayfinding-sign-planner", "type": "skill", "use": "brief", "when": "Before the sign list, to map every point where a first-time visitor must choose a way" },
+        { "ref": "kit:prompts/sign-schedule", "use": "build", "when": "When you need one schedule of every sign, its words, size and place for the printer" },
+        { "ref": "library:prepare-a-community-event-access-plan", "type": "workflow", "use": "brief", "when": "When guests have access needs, to plan step-free routes and what the venue must confirm" },
+        { "ref": "library:erik-spiekermann", "type": "mind", "use": "think", "when": "When signs must be read at a glance by people who are walking and unsure" },
+        { "ref": "kit:skills/contrast-and-legibility-check", "use": "check", "when": "Before printing, to check letter height for the reading distance and the contrast" }
+      ]
+    },
+    {
+      "id": "banner-shop-sign",
+      "task": "Lay out a banner, roll-up stand or shop sign",
+      "kind": "other",
+      "items": [
+        { "ref": "library:one-symbol-concept-finder", "type": "skill", "use": "brief", "when": "Before layout, to cut the message to one line a passer-by takes in" },
+        { "ref": "kit:skills/print-layout-spec", "use": "build", "when": "When you need the large-format size, safe area, type sizes and file set-up written out" },
+        { "ref": "library:type-led-poster-planner", "type": "skill", "use": "explore", "when": "When the sign is read from across a street, to try a type-only version" },
+        { "ref": "kit:skills/contrast-and-legibility-check", "use": "check", "when": "Before sign-off, to check the main line reads from the real viewing distance" }
+      ]
+    },
+    {
+      "id": "business-cards-stationery",
+      "task": "Spec business cards and stationery",
+      "kind": "other",
+      "items": [
+        { "ref": "library:font-pair-shortlist-maker", "type": "prompt", "use": "explore", "when": "When the client has no brand fonts, to compare three font pairs with sizes" },
+        { "ref": "kit:skills/print-layout-spec", "use": "build", "when": "When you need card size, margins, type sizes and bleed for the printer's template" },
+        { "ref": "kit:prompts/printer-file-preflight", "use": "check", "when": "Just before the order, to catch small type, thin lines and wrong bleed" }
+      ]
+    },
+    {
+      "id": "merch",
+      "task": "Spec merch for shirts, totes, caps and stickers",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:prompts/merch-print-spec", "use": "build", "when": "Before ordering, to turn a design idea into a spec the printer can produce" },
+        { "ref": "library:brand-sticker-set-maker", "type": "skill", "use": "explore", "when": "When the client wants stickers, to draft a set of characters from their logo" },
+        { "ref": "library:creative-shoot-briefer", "type": "skill", "use": "brief", "when": "When an illustrator will draw the artwork and needs a clear brief" },
+        { "ref": "library:one-time-stock-quantity-picker", "type": "skill", "use": "brief", "when": "When the client asks how many to order for a first drop that may not sell out" },
+        { "ref": "library:aaron-draplin", "type": "mind", "use": "think", "when": "When the artwork is fussy and must work as one bold shape on fabric" },
+        { "ref": "library:logo-strength-tester", "type": "skill", "use": "check", "when": "When a mark goes on merch, to test it in one colour and at small size" }
+      ]
+    },
+    {
+      "id": "print-preflight",
+      "task": "Check a print file before it goes to the printer",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:prompts/printer-file-preflight", "use": "check", "when": "Just before sending a file, or after a printer rejects one, to catch reprint causes" },
+        { "ref": "kit:skills/contrast-and-legibility-check", "use": "check", "when": "When the file passes the printer's rules but you doubt it reads at real size" },
+        { "ref": "library:agency-engineering-pdf-engine-architect", "type": "agent", "use": "build", "when": "When you build the PDF from a web page and pages break badly or text prints blurry" }
+      ]
+    },
+    {
+      "id": "monthly-social-batch",
+      "task": "Plan and batch a month of social graphics",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:workflows/monthly-social-graphics-batch", "use": "build", "when": "Once a month, for a client who posts often and wants a consistent feed" },
+        { "ref": "library:content-calendar-builder", "type": "skill", "use": "brief", "when": "When the client has no post plan and you need topics before you design anything" },
+        { "ref": "library:organic-format-tester", "type": "skill", "use": "check", "when": "When last month's numbers are in, to see which post formats earned their place" }
+      ]
+    },
+    {
+      "id": "print-copy",
+      "task": "Write or tighten the words for a printed piece",
+      "kind": "copy",
+      "items": [
+        { "ref": "kit:skills/design-brief-and-copy-deck", "use": "brief", "when": "When the client's words need ranking into what is read first, second and last" },
+        { "ref": "library:five-angle-ad-headline-writer", "type": "skill", "use": "explore", "when": "When the main line is flat, to get five short headlines that each take a new angle" },
+        { "ref": "library:ten-percent-cutter", "type": "skill", "use": "build", "when": "When the copy will not fit the layout and must lose words without losing the point" },
+        { "ref": "library:concrete-copy-rewriter", "type": "skill", "use": "check", "when": "When a line sounds like any business, to test it and get a true, picturable rewrite" },
+        { "ref": "library:direct-mail-package-reviewer", "type": "skill", "use": "check", "when": "When the piece is a mailer, to review the envelope line, offer, letter and look" }
+      ]
+    },
+    {
+      "id": "static-ads",
+      "task": "Design a set of static image ads",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:eight-lever-ad-visual-planner", "type": "skill", "use": "brief", "when": "Before making images, to set the visual choices and lock the ones that must stay" },
+        { "ref": "library:theme-based-ad-layout-blueprint-maker", "type": "skill", "use": "explore", "when": "When you need three or four layouts with text zones and product placement to compare" },
+        { "ref": "library:image-ad-copy-writer", "type": "skill", "use": "build", "when": "When the ad needs every word on and around the picture, in two or three versions" },
+        { "ref": "library:customer-quote-image-ad", "type": "skill", "use": "build", "when": "When the ad or post is built around a customer's own words" },
+        { "ref": "library:static-ad-critic", "type": "skill", "use": "check", "when": "When an ad is drafted, to score it against its page and get fixes" }
+      ]
+    },
+    {
+      "id": "covers-thumbnails",
+      "task": "Make Reel, Story and video cover templates",
+      "kind": "ad_creative",
+      "items": [
+        { "ref": "library:reusable-reel-cover-recipe-builder", "type": "skill", "use": "build", "when": "When the client wants one repeatable cover style with their portrait, title and colours" },
+        { "ref": "kit:skills/social-graphics-spec", "use": "build", "when": "When you need cover sizes and the area the app's buttons and captions will hide" },
+        { "ref": "library:thumbnail-and-title-planner", "type": "skill", "use": "explore", "when": "When a video needs several title and thumbnail pairs to test against each other" },
+        { "ref": "library:youtube-title-thumbnail-check", "type": "skill", "use": "check", "when": "Before upload, to check the title length and that the thumbnail does not repeat it" }
+      ]
+    },
+    {
+      "id": "brand-basics",
+      "task": "Set colours, fonts and layout rules for a client with no kit",
+      "kind": "strategy",
+      "items": [
+        { "ref": "library:brand-stylescape-planner", "type": "skill", "use": "explore", "when": "When the look is undecided, to compare three mood board directions and pick one" },
+        { "ref": "library:mood-colour-palette-planner", "type": "skill", "use": "build", "when": "When you know the feeling wanted and need a small palette with one job per colour" },
+        { "ref": "library:font-pair-shortlist-maker", "type": "prompt", "use": "explore", "when": "When the client has no fonts, to compare three pairs with sizes and line spacing" },
+        { "ref": "library:visual-system-rules-writer", "type": "skill", "use": "build", "when": "When the choices are made, to write firm rules for colour, type and grid" },
+        { "ref": "library:brand-guide-builder", "type": "skill", "use": "build", "when": "When the rules are agreed, to give the client a printable brand guide" },
+        { "ref": "kit:skills/contrast-and-legibility-check", "use": "check", "when": "Before the palette is approved, to check every text and background pair" }
+      ]
+    },
+    {
+      "id": "logo-directions",
+      "task": "Draft logo or wordmark directions",
+      "kind": "other",
+      "items": [
+        { "ref": "library:logo-concept-generator", "type": "skill", "use": "explore", "when": "When the client needs several directions, from wordmarks to symbols, with reasons" },
+        { "ref": "library:wordmark-sketch-planner", "type": "skill", "use": "explore", "when": "When the name itself should be the logo, to get five letter-shape ideas" },
+        { "ref": "library:logo-and-brand-kit-designer", "type": "skill", "use": "build", "when": "When a direction is picked, to set its colours, file formats and usage rules" },
+        { "ref": "library:recraft", "type": "tool", "use": "build", "when": "When you need a vector draft of the mark that can be scaled and refined" },
+        { "ref": "library:aaron-draplin", "type": "mind", "use": "think", "when": "When a mark is busy, to shrink it and cut it to one clear shape" },
+        { "ref": "library:logo-strength-tester", "type": "skill", "use": "check", "when": "When there are several ideas, to score each and get a keep or drop call" }
+      ]
+    },
+    {
+      "id": "image-making",
+      "task": "Make or edit images with an AI image tool",
+      "kind": "other",
+      "items": [
+        { "ref": "library:marketing-image-maker", "type": "skill", "use": "build", "when": "When a piece needs a picture and you want a prompt, the exact size and a file plan" },
+        { "ref": "library:midjourney-four-direction-prompt-writer", "type": "skill", "use": "explore", "when": "When one image idea should be tried as four different treatments" },
+        { "ref": "library:adobe-firefly", "type": "tool", "use": "build", "when": "When you must extend or clean up a photo the client already owns" },
+        { "ref": "library:midjourney", "type": "tool", "use": "explore", "when": "When you want to explore visual ideas and then reuse the style you chose" },
+        { "ref": "library:agency-design-inclusive-visuals-specialist", "type": "agent", "use": "check", "when": "When images show people, to check for stereotypes, cloned faces and fake symbols" }
+      ]
+    },
+    {
+      "id": "infographic",
+      "task": "Make an infographic or a one-page explainer",
+      "kind": "other",
+      "items": [
+        { "ref": "library:word-picture-explainer", "type": "skill", "use": "brief", "when": "Before drawing, to plan which visual pairs with the words so the point sticks" },
+        { "ref": "library:infographic-maker", "type": "skill", "use": "build", "when": "When the content is ready and you need a layout and style picked to fit it" },
+        { "ref": "library:data-chart-drawer", "type": "skill", "use": "build", "when": "When the piece needs a clean chart drawn from the client's own data" },
+        { "ref": "library:layout-default-breaker", "type": "skill", "use": "explore", "when": "When the page looks like a stock template, to get three hand-made alternatives" },
+        { "ref": "library:agency-engineering-data-visualization-engineer", "type": "agent", "use": "check", "when": "When a chart is drafted, to check the chart type and axes do not mislead" }
+      ]
+    },
+    {
+      "id": "illustration-brief",
+      "task": "Brief an illustrator or photographer",
+      "kind": "plan",
+      "items": [
+        { "ref": "library:aesthetic-direction-brief-writer", "type": "skill", "use": "brief", "when": "Before the brief, to agree the tone and feel the artwork must keep" },
+        { "ref": "library:creative-shoot-briefer", "type": "skill", "use": "build", "when": "When a photographer or illustrator needs one clear brief for the job" },
+        { "ref": "library:product-shot-list-writer", "type": "prompt", "use": "build", "when": "When a photographer needs a shot list with the reason for each shot" },
+        { "ref": "library:icon-set-planner", "type": "skill", "use": "build", "when": "When the job is a small icon set, to plan it and test that each icon reads" }
+      ]
+    },
+    {
+      "id": "vehicle-livery",
+      "task": "Plan a van wrap or vehicle livery",
+      "kind": "other",
+      "items": [
+        { "ref": "kit:skills/design-brief-and-copy-deck", "use": "brief", "when": "Before layout, to put name, service, phone and web in the order drivers read them" },
+        { "ref": "kit:skills/print-layout-spec", "use": "build", "when": "When you need a panel-by-panel spec the wrap printer and installer can follow" },
+        { "ref": "kit:skills/contrast-and-legibility-check", "use": "check", "when": "Before sign-off, to check the phone number reads from a car's length away" }
+      ]
+    },
+    {
+      "id": "design-review",
+      "task": "Review an existing design and list the fixes",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:skills/contrast-and-legibility-check", "use": "check", "when": "When you review any piece, to test contrast, type size and safe areas with exact fixes" },
+        { "ref": "library:ad-reading-flow-checker", "type": "skill", "use": "check", "when": "When the piece feels cluttered, to trace the eye path and list what to cut" },
+        { "ref": "library:plain-page-type-checker", "type": "skill", "use": "check", "when": "When the piece is mostly text, to check type, spacing and line length" },
+        { "ref": "library:design-feedback-giver", "type": "skill", "use": "check", "when": "When the piece is a screen or mockup, for hierarchy and consistency feedback" },
+        { "ref": "library:paula-scher", "type": "mind", "use": "think", "when": "When the piece is tidy but has no voice and could be for anyone" }
+      ]
+    },
+    {
+      "id": "handoff",
+      "task": "Hand off build notes so someone else can make the file",
+      "kind": "ops_doc",
+      "items": [
+        { "ref": "kit:prompts/handoff-build-notes", "use": "build", "when": "When the spec is approved and the owner or another designer will build the final file" },
+        { "ref": "library:canva", "type": "tool", "use": "brief", "when": "When you must check what the client's design tool can and cannot do before writing steps" }
+      ]
+    }
+  ],
+  "always": [
+    { "ref": "library:brand-dna-capture", "type": "skill", "use": "brief", "when": "Before any work that must match the client's live site: colours, fonts and voice" },
+    { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before any file goes to print or post, to catch typos and names spelt two ways" },
+    { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When the copy states a number, award or claim you cannot trace to the client" }
+  ],
+  "helpers": [
+    { "role": "advertising-copywriter", "when": "When the piece needs more copy than a headline and a line" },
+    { "role": "brand-designer", "when": "When the client has no logo or brand kit and needs an identity, not one piece" },
+    { "role": "social-media-manager", "when": "When the job includes what to post and when, not only how the posts look" },
+    { "role": "packaging-designer", "when": "When the piece is a label, box or pouch with barcode and legal panel rules" },
+    { "role": "presentation-designer", "when": "When the job is a slide deck, a report or a multi-page brochure" },
+    { "role": "event-manager", "when": "When the signs depend on a run sheet or set-up times nobody has planned" }
+  ],
+  "gaps": [
+    "No library item lays out a flyer, brochure or multi-page booklet; only the kit's print layout spec covers it",
+    "No library item plans a restaurant or salon menu: sections, dish order and how prices are shown",
+    "No library item covers large-format print such as banners, roll-up stands, exhibition stands or window graphics",
+    "No library item covers vehicle wraps: panel templates, door and window breaks, or three livery directions to compare",
+    "No library item offers different sign styles to compare for one event",
+    "No library item checks a print PDF for bleed, colour mode, embedded fonts and image resolution",
+    "No library item specs artwork for shirts, totes or caps, or plans a first merch range",
+    "No library item covers Pinterest pin layouts or a social template kit a client's team can reuse",
+    "No library item checks image, font and stock photo licences before a piece is published",
+    "No library item manages client feedback rounds and proof sign-off for a design job"
+  ]
+}

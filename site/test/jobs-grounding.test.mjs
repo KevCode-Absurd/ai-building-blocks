@@ -354,6 +354,20 @@ test('candidates are real work chosen by someone else, and the checks put truth 
   assert.match(gatesFor('plan').find(g => g.id === 'hand_over_budget').gate, /agent names, file names, access levels or method words/);
 });
 
+test('the grounded-job-protocol skill states the same weights, candidates and gates as the method data', () => {
+  const skill = fs.readFileSync(new URL('../../catalogue-items/general/grounded-job-protocol/SKILL.md', import.meta.url), 'utf8');
+  const labels = { web_page: 'web_page', ad_creative: 'ad_creative', copy_email: 'copy, email', audit_analysis: 'audit, analysis', strategy_plan: 'strategy, plan', code_ops_other: 'code, ops_doc, other' };
+  for (const [family, rows] of Object.entries(CRAFT_RUBRICS)) {
+    const others = rows.filter(c => !/^Does the job/.test(c.criterion) && c.id !== 'own_material').map(c => `${c.criterion} ${c.weight}`).join(', ');
+    assert.ok(skill.includes(`| ${labels[family]} | ${others} |`), family);
+  }
+  assert.match(skill, /"Does the job" \(for the buyer or the decision\) weighs 30, the most\. "Own material" weighs 10/);
+  assert.ok(skill.includes(`at least two of: ${CANDIDATE_AXES.map(axis => `**${axis}**`).join(', ')}.`));
+  for (const heading of ['0. FRAME: the spec sheet', '1. GROUND: only what the job needs', '2. TASTE: the taste brief', '3. DIVERGE: real candidates, and someone else chooses', '4. BUILD: the craft floor', '5. CHECK: the client\'s-eye review', '6. HAND OVER and LEARN']) assert.ok(skill.includes(`\n## ${heading}\n`), heading);
+  for (const phrase of ['New framing of true facts, never new facts.', 'Never leave one in with a flag or a footnote.', 'Can the buyer act today?', 'SAME-CONTEXT', 'Never hand the client a menu.', 'Nothing internal reaches the client', 'never as a revenue forecast']) assert.ok(skill.includes(phrase), phrase);
+  assert.doesNotMatch(skill, /job card|2 or 3 directions|let the user choose/i);
+});
+
 test('the shared method lists are identical in the library and the agents app', async () => {
   const packs = await import('../../marketplace/src/modules/packs/families.ts');
   for (const name of ['WORD_BUDGETS', 'PROVEN_LEVERS', 'CANDIDATE_AXES', 'CANDIDATES', 'COMPLETENESS', 'CONTEXT_LEVELS', 'CONTEXT_NEED']) {

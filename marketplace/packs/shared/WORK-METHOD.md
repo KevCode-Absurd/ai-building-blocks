@@ -8,14 +8,14 @@ Write `context/spec.md`, one screen:
 
 - **The job:** who must do what after seeing this (buy, sign up, reply, approve a budget). One sentence.
 - **Deliverables:** the exact count and format, in the client's words.
-- **Acceptance tests:** 5 to 7 questions the client would ask: two or more on the commercial job ("Does email 1 show a product and give a reason to click?"), one each on readiness ("Can a designer make each ad without asking me anything?"), truth and clarity.
+- **Acceptance tests:** 5 to 7 questions the client would ask. Two or more on the commercial job ("Does email 1 show a product and give a reason to click?"). One each on readiness ("Can a designer make each ad without asking me anything?"), truth and clarity.
 - **Decisions you must take** and **assumptions**, one line each.
 - **Mode:** `patch` what exists (the default), `extend` it, or `new`.
 - **Brand context:** none, facts, voice, look or all three. Take only that slice.
 
 ## 1. Ground: only what the job needs
 
-Capture what the acceptance tests depend on, and no more (`context/README.md`), including the buyer's real setting: city, season, any promotion live today. To capture a site:
+Capture what the acceptance tests depend on, and no more (`context/README.md`). Include the buyer's real setting: city, season, any promotion live today. To capture a site:
 
 1. Run `node tools/capture-brand-dna.mjs <url>`.
 2. Or run `tools/brand-dna-snippet.js` in a browser console on the live site and save its output as `context/brand-dna.json`.
@@ -27,7 +27,7 @@ Every fact goes in `context/facts.md` with its source and date. None is used wit
 
 ## 2. Taste and tools
 
-For work a buyer sees, note in `context/taste-brief.md` the brand codes to keep, 2 admired references, 1 to avoid, and the defaults in `tools/ai-default-patterns.md` to stay out of.
+For work a buyer sees, note in `context/taste-brief.md` the brand codes to keep, 2 admired references and 1 to avoid. Add the defaults in `tools/ai-default-patterns.md` to stay out of.
 
 Your `toolbox.md` lists what to use when; pick at your own discretion and open only what you pick.
 
@@ -35,16 +35,16 @@ Your `toolbox.md` lists what to use when; pick at your own discretion and open o
 
 First check the proven levers in the job skill against the live asset.
 
-Then make about 3 candidates of the part that decides the outcome, as real work, not descriptions: three first screens of a page; at least 9 one-line ad concepts, then the strongest written up; three email series arcs, each with email 1 written; two differently shaped one-page plans; three competing explanations with their evidence. They differ on at least two of: promise, proof, structure, buyer moment, offer, visual world.
+Then make about 3 candidates of the part that decides the outcome, as real work, not descriptions. That means three first screens of a page; at least 9 one-line ad concepts, then the strongest written up; three email series arcs, each with email 1 written; two differently shaped one-page plans; or three competing explanations with their evidence. They differ on at least two of: promise, proof, structure, buyer moment, offer, visual world.
 
-Give the brief, the spec sheet and the unlabelled candidates to a fresh reviewer who has not seen your reasoning: a new sub-agent, or else a separate pass labelled SAME-CONTEXT in your notes. They answer each acceptance test per candidate, pick one, and name what to take from the others. If none passes the commercial tests, make one more round only.
+Give the brief, the spec sheet and the unlabelled candidates to a fresh reviewer who has not seen your reasoning. Use a new sub-agent, or else a separate pass labelled SAME-CONTEXT in your notes. They answer each acceptance test per candidate, pick one, and name what to take from the others. If none passes the commercial tests, make one more round only.
 
 ## 4. Build: the craft floor
 
 - **New framing of true facts, never new facts.** Page lines are facts to use, not copy to paste. Write the persuasion yourself.
 - **Every piece earns its place:** each email, ad or section gives the buyer a reason to act and shows the product where they expect it.
 - **Decide.** One recommendation, the runner-up in a line. Never a menu.
-- **Be specific where the client will act:** real product names, prices, dates and set-up steps. Working figures only for planning numbers the client will tune (budgets, targets, test sizes), sum shown; never in what a buyer reads, never as a revenue forecast.
+- **Be specific where the client will act:** real product names, prices, dates and set-up steps. Working figures only for planning numbers the client will tune (budgets, targets, test sizes), sum shown. Never in what a buyer reads, never as a revenue forecast.
 - **Match the voice by ear:** 5 real brand lines beside 5 of yours.
 - **Finish the format.** Ads: every platform field including the description, character counts, safe areas, brand and price for a cold audience, landing URL. Emails: subject, preview, one product and one ask each, links, exit rule, merge tags. Plans: totals that add up, dated steps, owners, cut, keep and scale rules, break-even. Pages: one action, proof, mobile, load.
 

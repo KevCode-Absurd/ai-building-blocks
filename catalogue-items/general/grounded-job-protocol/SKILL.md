@@ -1,13 +1,13 @@
 ---
 name: grounded-job-protocol
-description: "Use for any substantial job (a page, ad batch, email, copy, audit, analysis, strategy, plan, code or ops document) before you produce anything. Seven steps that work in any chat: FRAME the job and its mode (patch by default when an asset exists), GROUND in the real site, data or account, write a TASTE brief, DIVERGE on substance, BUILD inside the client's system, CHECK with a separate critic against gates and a craft rubric, then RECORD decisions and typed rules learned."
+description: "Use for any substantial job (a page, ad batch, email, copy, audit, analysis, strategy, plan, code or ops document) before you produce anything. Seven steps that work in any chat: FRAME the job as a one-screen spec sheet with acceptance tests, GROUND only what the job needs in the real site, data or account, brief the TASTE, DIVERGE with real candidates that a fresh reviewer chooses between, BUILD with no new facts, CHECK through a client's-eye review that removes every unsourced claim, then HAND OVER the work first."
 ---
 
 # Grounded job protocol (GJP)
 
-A model left alone produces the average answer for the category, so every client gets the same page, ad or plan. Better wording does not fix that. Context and process do: capture the real business first, decide what taste means for this client, explore real alternatives, build inside their system, and have someone else check the result against the client.
+The client judges one thing: does the work do its job for their buyer or their decision, and can they use it today? A model left alone gives the average answer for the category. Grounding and brand fit stop that, but they are the floor, not the win.
 
-Run all seven steps for anything bigger than a quick answer. Each step names the file it leaves behind, in the project's `context/` folder or beside the deliverable. In a plain chat, write the same sections in the chat instead.
+Run all seven steps for anything bigger than a quick answer. Working files go in the project's `context/` folder. In a plain chat, write the same sections in the chat instead.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -29,181 +29,100 @@ How to start:
 - **A second chat or AI seat:** Does the independent check without having made the work.
 <!-- /needs -->
 
-## 0. FRAME: the job card
+## 0. FRAME: the spec sheet
 
-Write five lines before anything else.
+Write one screen (`context/spec.md`) before anything else:
 
-```
-Client: <who, with their site or account>
-Outcome: <what they want to change, in their words>
-Deliverable kind: web_page | ad_creative | copy | email | audit | analysis | strategy | plan | code | ops_doc | other
-Success measure: <how we will know it worked>
-Mode: patch | extend | new
-```
+- **The job:** who must do what after seeing this (buy, sign up, reply, approve a budget). One sentence.
+- **Deliverables:** the exact count and format, in the client's words, and the kind: web_page, ad_creative, copy, email, audit, analysis, strategy, plan, code, ops_doc or other.
+- **Acceptance tests:** 5 to 7 questions the client would ask of the finished work. At least two on the commercial job ("Does email 1 show a product and give a reason to click?"), one on readiness ("Can a designer make each ad without asking me anything?"), one on truth, one on clarity.
+- **Decisions you must take** and **assumptions**, one line each. Never hand back open options.
+- **Mode:** `patch` what exists (the default), `extend` it, or `new` only when nothing exists. "Redesign from scratch" is a request to confirm, not a mode to assume.
+- **Brand context:** none, facts, voice, look or all three. Take only that slice. Strategy, plans, code and operations work need facts at most.
 
-- **patch** improves the existing asset. It is the default whenever an asset exists (a live page, running ads, a current plan).
-- **extend** adds a new page or asset inside the existing system, such as a campaign page on a live site.
-- **new** is for a new brand or no asset at all. Use it only when the user says so or nothing exists.
+Ask once, in one short message, only what capture cannot tell you. Say what you will assume if they skip a question.
 
-"Redesign from scratch" in a brief is a request to confirm, not a mode to assume. Ask once: "Your site exists. Shall I improve it (patch) or replace it (new)?" If they say new, list what may change.
+## 1. GROUND: only what the job needs
 
-## 1. GROUND: capture the real thing first
+Capture what the acceptance tests depend on, and no more:
 
-| Kind | Capture | Where it goes |
-|---|---|---|
-| web_page, ad_creative, copy, email | The live site with [Brand DNA capture](https://useaiblocks.com/skills/brand-dna-capture): colours with area share, fonts per role, radius, buttons, links, nav, footer, section order, image density, 5 to 10 verbatim voice lines, live facts with capture date | `context/brand-dna.json`, `context/brand-dna.md`, `context/screenshots/` |
-| ads, analytics, finance | A pull of the real account or data through the client's connector, at access level 1 (read) | `context/data-snapshot.*` with date range and source |
-| any | 2 or 3 competitors or references the client names, or that you find | `context/references.md` |
+- **Pages, ads, copy and email:** The live site with [Brand DNA capture](https://useaiblocks.com/skills/brand-dna-capture), into `context/brand-dna.json`, `context/brand-dna.md` and `context/screenshots/`. Run `capture-brand-dna.mjs`; else run `brand-dna-snippet.js` in any browser tool or console; else ask for the URL, screenshots and CSS.
+- **Audits and analysis:** a pull of the real account or data through the client's connector, at access level 1 (read), into `context/data-snapshot.*` with its date range and source.
+- **Any job:** the buyer's real setting (city, season, any promotion live today).
 
-Capture in this order: run `capture-brand-dna.mjs`; else run `brand-dna-snippet.js` in any browser tool or console; else ask the user for the URL, screenshots and CSS.
+Every fact goes in `context/facts.md` with its source and date. No fact is used without both. If one cannot be captured, ask for it. Never fall back to a template without saying so.
 
-Record each capture in the job record with its **path, hash, source, date and method** (`script`, `snippet` or `manual`). The capture script writes these to `context/brand-dna.receipt.json`.
-
-**Gate.** Production does not start until the context file exists and is recorded. Every design or copy choice cites a captured fact or a named reference. If a fact cannot be captured, ask for it. Never fall back to a template without saying so.
-
-For audits and analysis, GROUND means pulling the real numbers before forming any view.
+**Can the buyer act today?** Confirm the thing being sold is live, in stock in the sizes or variants that matter, at the stated price, at the link you will use. If the brief's target is compromised (nearly sold out, wrong city, dead link), make the call yourself, build for the option that works, and say so in your first line.
 
 ## 2. TASTE: the taste brief
 
-Spend your questions here, not on format. Ask the user about: position, price point and occasion; what must never change; brands they admire and brands they do not want to look like. State format choices (length, number of options) as silent defaults in one line.
+For work a buyer sees, write `context/taste-brief.md` in a few lines: the brand codes to keep (type, colour proportions, imagery, pacing, voice), each citing the capture; 2 references the client admires and 1 to avoid looking like; what must never change; and the defaults from [AI default patterns](https://useaiblocks.com/skills/ai-default-patterns) this job could slip into. Drop any default the brand already uses.
 
-Write `context/taste-brief.md`:
+## 3. DIVERGE: real candidates, and someone else chooses
 
-```
-# Taste brief: <client> / <deliverable>
-Mode: <patch | extend | new>   Captured: <date>, see brand-dna.md
+First mark the proven levers for this kind of work present or missing on the live asset, and add the missing ones from real data. The marks stay in your notes.
 
-## Brand codes to keep (each cites the capture)
-- Type: <families per role, case>
-- Colour and proportion: <hex and share; which accent stays small>
-- Imagery: <house style, density>
-- Pacing and structure: <section order, density, rhythm>
-- Voice: <2 verbatim lines; words they use and never use>
+- Pages: reviews and ratings near the decision; price, saving and payment options; delivery date and shipping cost; returns and guarantee; stock, size or fit help; real proof and trust marks; one clear primary action on the first mobile screen.
+- Ads: a hook in the first line and first second; real proof; the offer or price when it helps; the product in use; one clear call to action.
+- Copy: a specific promise first; proof next to each claim; the main objection answered; one next step.
+- Email: a subject line with a reason to open; one main action with a direct link; real proof; a true reason to buy now; footer, unsubscribe and an exit rule for buyers.
 
-## Category conventions
-- Keep: <convention, and why buyers rely on it>
-- Break: <convention, and the reason this client can>
+Then make about 3 candidates of the part that decides the outcome, as real work, not descriptions: three first screens of a page; at least 9 one-line ad concepts across different promises, proofs and formats, then the strongest written up; three openings for copy; three email series arcs, each with email 1 written in full; two differently shaped one-page plans; three competing explanations for an audit or analysis, each with its evidence and what would rule it out.
 
-## References
-- Admired 1: <name, URL, what to learn from it>
-- Admired 2: <...>
-- Avoid looking like: <name, URL, why>
+Candidates differ on at least two of: **promise**, **proof**, **structure**, **buyer moment**, **offer**, **visual world**. A new colour, crop or wording is not a candidate. In **patch** mode each candidate is the live asset as you would change it, with its ranked edits and their evidence.
 
-## Defaults to avoid (ids from ai-default-patterns)
-- <id>: <the brand-specific thing to do instead>
+Give the brief, the spec sheet and the unlabelled candidates to a fresh reviewer who has not seen your reasoning: a new sub-agent or a second chat if you can start one, else a separate pass you label SAME-CONTEXT in your notes. The reviewer answers each acceptance test for each candidate, picks one, and names what to take from the others. If none passes the commercial tests, make one more round, and no more.
 
-## Must never change
-- <facts, terms, legal lines, components>
-```
+## 4. BUILD: the craft floor
 
-Pick the defaults from [AI default patterns](https://useaiblocks.com/skills/ai-default-patterns). Drop any the brand already uses.
+- **New framing of true facts, never new facts.** Page lines are facts to use, not copy to paste. Write the persuasion yourself.
+- **Every piece earns its place:** each email, ad or section gives the buyer a reason to act and shows the product where they expect it.
+- **Decide.** One recommendation, with the runner-up in a line. Never hand the client a menu.
+- **Be specific where the client will act:** real product names, prices, dates and set-up steps. A working figure is allowed only for planning numbers the client will tune (budgets, targets, test sizes), with the sum shown. Never for anything a buyer reads, and never as a revenue forecast.
+- **Match the voice by ear:** put 5 real lines from the brand beside 5 of yours.
+- **Build inside their system.** Web: start from the captured shell and keep the nav, footer, fonts, colour proportions and components unless the plan changes them on purpose. Code: a runnable file in their stack.
+- **Finish the format.** Ads: every field the platform needs including the description, character counts, placement safe areas, the brand and the price named for a cold audience, the landing URL. Emails: subject, preview, one product and one ask in every email, links, exit rule, merge tags. Plans: totals that add up, dated steps, owners, cut, keep and scale rules, break-even shown. Pages: one action, proof, mobile, load.
 
-**Gate.** The brief is complete only with at least 1 brand code that cites the capture, at least 2 admired references, at least 1 reference to avoid, and the named defaults by id. For a new brand with no site, the brand codes come from the brand guide or the user's answers.
+## 5. CHECK: the client's-eye review
 
-## 3. DIVERGE: real alternatives
+Give a fresh reviewer, chosen as in step 3, only the client's brief, the finished deliverable and the captured facts. They answer:
 
-- First, check the proven levers for this kind of work against the live asset, and mark each one present, missing or not applicable. Add the missing ones from real data, or give the reason you skip one. For audits, rank adding them among the fixes.
-  - Pages: reviews and ratings near the decision; price, saving and payment options; delivery date and shipping cost; returns and guarantee; stock, size or fit help; real proof and trust marks; one clear primary action on the first mobile screen.
-  - Ads: a hook in the first line and first second; real proof; the offer or price when it helps; the product in use; one clear call to action.
-  - Copy: a specific promise first; proof next to each claim; the main objection answered; one next step.
-  - Email: a subject line with a reason to open; one main action with a direct link; real proof; a true reason to buy now; footer, unsubscribe and an exit rule for buyers.
-- Make 2 or 3 directions (for audits and analysis: competing hypotheses). Plan them first in one pass, then draft each separately.
-- Each direction differs on at least one named axis: **mechanism or promise**, **proof**, **structure**, **visual world or art direction**, **offer**.
-- Each cites the reference it learns from and says how it departs from the category default.
-- Reject directions that differ only in colour, crop, wording or a style label.
-- In **patch** mode, each direction is a change-set to the live asset: a ranked list of specific edits, each with its evidence (the finding, the screenshot, the number) and the test it implies.
-- Choose one, or let the user choose. Write down why.
+1. Each acceptance test: pass or fail, with the line that proves it.
+2. Every claim a buyer or the client will read (prices, counts, ratings, policies, names, delivery times, quotes, product properties): sourced or not.
+3. Which piece is weakest, and why a buyer would skip it.
+4. What the client would have to ask before using this.
+5. What can be cut without loss.
 
-## 4. BUILD: inside the client's system
-
-- Web: start from the captured shell. Keep the nav, footer, fonts, colour proportions and component styles unless the plan changes them on purpose.
-- Use the client's real copy and facts. No lorem ipsum, and no placeholder that the capture could have filled. Gaps go in `handoff-checklist.md`, not on the page.
-- Keep dated facts (sale prices, deadlines) in one data block with the capture date.
-- If a constraint blocks a brand asset (a "no external requests" rule blocks the brand font), embed the asset or stop and say so.
-- Code: deliver a runnable file or source the client can drop in, in their stack.
-
-## 5. CHECK: independent, against the client
-
-Use a separate critic: a fresh chat, or another seat. Give it the deliverable, `brand-dna.md`, the taste brief and the rubric. Do not give it the build notes, and do not grade your own work in the same breath.
+Remove every unsourced claim, or rewrite it to what the source says. Never leave one in with a flag or a footnote. Fix 1, 3 and 4, cut 5, then stop.
 
 **Gates (pass or fail; a failed gate cannot be averaged away):**
 
-- Facts trace to a source.
-- No invented numbers.
-- Access respected: read, draft or publish-within-limits, as granted.
-- No fillable placeholders.
-- The hand-over fits. It opens with a one-screen summary that answers the brief (what you delivered, why, what to check first; nothing the brief did not ask for). The deliverable stays inside its word budget. Easy to scan: short sentences, headings that state the point, tables for comparisons. It stands on its own: supporting detail goes in an appendix inside it, never in a file the client does not have, such as DECISIONS.md or knowledge.md. The budgets:
-  - Page: a hand-over note of up to 150 words, and page copy no longer than the live page plus 20%.
-  - Ads: up to 150 words per concept.
-  - Email: up to 200 words of body per email.
-  - Audit or analysis: the top 3 fixes or the answer on the first screen, and up to 10,000 words.
-  - Strategy or plan: a summary of up to 250 words, and up to 10,000 words that keep the specifics someone needs to act.
-  - Code: a note of up to 150 words.
-- Pages, ads, copy, email and audits also: every proven lever was checked, and each missing one was added or skipped with a reason (step 3).
-- web_page also: the existing nav and footer are kept unless the change is on purpose; brand fonts are loaded; the page works at 390 px and 1440 px; the primary action works. Run [Brand fidelity check](https://useaiblocks.com/skills/brand-fidelity-check) (`check-brand-fidelity.mjs`, or its manual checklist) and its fresh-context side-by-side review.
+- Every acceptance test passes.
+- Every fact traces to a dated source, and no number is invented.
+- Where something is sold, the buyer can act today.
+- Access was respected, the format is finished, and no placeholder blocks use.
+- The deliverable stays inside its word budget. Page: a hand-over note of up to 150 words, and page copy no longer than the live page plus 20%. Ads: up to 150 words per concept. Email: up to 200 words of body per email. Audit or analysis: the top 3 fixes or the answer on the first screen, and up to 10,000 words. Strategy or plan: a summary of up to 250 words, and up to 10,000 words that keep the specifics someone needs to act. Code: a note of up to 150 words.
+- A web page also passes [Brand fidelity check](https://useaiblocks.com/skills/brand-fidelity-check) (`check-brand-fidelity.mjs`, or its manual checklist): nav and footer kept, brand fonts loaded, works at 390 px and 1440 px, primary action works.
 
-**Craft rubric (score 0 to 10 per criterion, weight as shown):**
+**Craft rubric (score 0 to 10 per criterion, weight as shown).** In every family "Does the job" (for the buyer or the decision) weighs 30, the most. "Own material" weighs 10: at least one idea, proof or angle that came from this business's real material and would not appear in a generic answer. The other rows:
 
 | Family | Weights |
 |---|---|
-| web_page | Job and conversion logic 20, Brand fidelity 25, Launchability 20, Specificity 15, Distinctiveness vs defaults 10, Clarity 10 |
-| ad_creative | Strategic idea 20, Range across named axes 20, Brand fidelity 15, Hook and thumb-stop 15, Specificity 15, Platform fit 15 |
-| copy, email | Voice fidelity 25, Specificity 20, Job done 20, Proof and claims grounded 15, Distinctiveness 10, Clarity 10 |
-| audit, analysis | Diagnosis specific to this account or data 25, Evidence quality 20, Prioritised actions with expected impact 20, Correctness 20, Clarity 15 |
-| strategy, plan | Grounded in this business 25, Options considered with trade-offs 20, Decision quality 20, Actionability 20, Clarity 15 |
-| code, ops_doc, other | Job done 30, Correctness 25, Fits existing system 20, Clarity 15, Specificity 10 |
+| web_page | Brand fidelity 20, Launchability 15, Specificity 10, Clarity 10, Distinctiveness vs defaults 5 |
+| ad_creative | Range across named axes 15, Brand fidelity 15, Strategic idea 10, Hook and thumb-stop 10, Platform fit 10 |
+| copy, email | Voice fidelity 20, Specificity 15, Clarity 15, Distinctiveness vs defaults 10 |
+| audit, analysis | Evidence quality 20, Prioritised actions with expected impact 15, Correctness 15, Clarity 10 |
+| strategy, plan | Actionability 25, Grounded in this business 20, Clarity 15 |
+| code, ops_doc, other | Correctness 25, Fits the existing system 20, Clarity 15 |
 
-Every family is read through four questions:
+## 6. HAND OVER and LEARN
 
-- **Specificity:** could a competitor publish this unchanged?
-- **Fidelity:** is it recognisably this brand?
-- **Distinctiveness:** does it avoid the named defaults?
-- **Job done:** does it do what the client asked?
+- The work comes first, in the format the client asked for. Open with 3 to 5 lines: what this is, the main decision you made and why, and what to check before use.
+- Nothing internal reaches the client: no process sections, lever checklists, rejected candidates, agent names, file names such as knowledge.md or DECISIONS.md, access levels or method words. Supporting detail goes in an appendix inside the deliverable.
+- Headings state the point. Sentences are short. Tables are for comparisons only.
+- End with one line, `CHECKS MISSED`: each gate or check that could not run, or "none".
 
-Then compare pairwise with the best reference: what does the reference do that ours does not? Refine once. Deliver with the decision record.
-
-## 6. RECORD and LEARN
-
-Write `DECISIONS.md` beside the deliverable:
-
-```
-# Decisions: <client> / <deliverable> / <date>
-Mode: <...>   Grounded in: <files and capture date>
-## Considered
-- Direction A: <axis it changed, reference> ...
-## Chosen and why
-- <direction>, because <evidence>
-## Strongest dissent
-- <the best case against the choice, and who made it>
-## Gates and score
-- Gates: <pass/fail each>   Craft: <score by criterion>   Defaults found: <ids>
-## Test next
-- <one change, the metric, the decision rule>
-```
-
-Then write lessons that generalise into the agent's local `Rules I learned`, one per line, typed:
-
-```
-- [decision_rule] When <situation>, <do this>, because <evidence>. (source: <job, date>)
-- [taste_reference] <name, URL>: good for <what>, not for <what>.
-- [never_do] Never <action> when <condition>. (seen in: <job>)
-- [exemplar] <file or URL>: the standard for <deliverable kind>.
-- [check] Before hand-off, <test that would have caught a past mistake>.
-```
-
-Client-specific lessons (this brand's colours, this buyer's words) stay in the client's `context/`. They never go into the agent's general rules, so one client's taste does not flatten the next.
-
-## How the three helper skills fit
-
-| Step | Skill | What it gives |
-|---|---|---|
-| GROUND | [Brand DNA capture](https://useaiblocks.com/skills/brand-dna-capture) | `brand-dna.json`, screenshots and the `brand-dna.md` every later step cites |
-| TASTE and CHECK | [AI default patterns](https://useaiblocks.com/skills/ai-default-patterns) | The ids for "Defaults to avoid" and the critic's checks |
-| CHECK (web) | [Brand fidelity check](https://useaiblocks.com/skills/brand-fidelity-check) | Pass or fail on fonts, palette shares, buttons, chrome, placeholders, facts, 390 px and the main action, plus the side-by-side review |
-
-## What you hand back
-
-The deliverable, plus: the job card, the context files, the taste brief, the directions considered, the check results (gates, rubric scores, default hits, fidelity report), `DECISIONS.md`, and any new `Rules I learned`. End with `CHECKS MISSED`: each gate or check that could not run, or "none".
+Keep working notes in `DECISIONS.md` for the next job. Write a lesson that would help every client into the agent's local `Rules I learned`, one line each, typed `decision_rule`, `taste_reference`, `never_do`, `exemplar` or `check`. A lesson about one client stays in that client's `context/`.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

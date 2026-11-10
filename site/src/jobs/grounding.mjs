@@ -24,7 +24,7 @@ export const DATA_KINDS = Object.freeze(['audit', 'analysis']);
 export const GJP_STEPS = Object.freeze([
   { id: 'frame', name: 'Spec sheet', do: 'Write the one-screen spec sheet: who must do what after seeing this, the deliverables with counts in the client\'s words, 5 to 7 acceptance tests, the decisions you must take, your assumptions, the mode (patch what exists by default) and the brand context this job needs.' },
   { id: 'ground', name: 'Ground what the job needs', do: 'Capture only what the acceptance tests depend on: the live site into context/brand-dna.json and context/screenshots/, or the real account or data for audits. Every fact gets a source and a date. Check the thing being sold is live, in stock, at the stated price and at the link you will use.' },
-  { id: 'taste', name: 'Taste and tools', do: 'For work a buyer sees, write context/taste-brief.md: brand codes to keep, 2 admired references and 1 to avoid, and the named defaults to avoid. Pick your tools from the toolbox you were given; search nothing.' },
+  { id: 'taste', name: 'Taste and tools', do: 'For work a buyer sees, write context/taste-brief.md: brand codes to keep, 2 admired references and 1 to avoid, and the named defaults to avoid. When you were given a toolbox, pick from it at your own discretion and open only what you pick.' },
   { id: 'diverge', name: 'Real candidates, someone else chooses', do: 'Make about 3 candidates of the part that decides the outcome, as real work, differing on at least two of promise, proof, structure, buyer moment, offer and visual world. A fresh reviewer answers each acceptance test per candidate, picks one and names what to take from the others. One extra round at most.' },
   { id: 'build', name: 'Build to the craft floor', do: 'Give true facts a new framing and add no new facts. Every piece earns its place commercially. Decide; never hand over a menu. Working figures only for planning numbers the client will tune, with the sum shown. Finish the format\'s completeness list.' },
   { id: 'check', name: 'Client\'s-eye check', do: 'A fresh reviewer gets only the brief, the deliverable and the captured facts. They answer each acceptance test with the proving line, mark every claim sourced or not, and name the weakest piece, what the client would have to ask, and what can be cut. Remove unsourced claims, fix, cut, stop.' },
@@ -32,7 +32,7 @@ export const GJP_STEPS = Object.freeze([
 ]);
 const AUDIT_STEP_OVERRIDES = Object.freeze({
   ground: 'Pull the real account or data snapshot through the client connector at read level into context/ (for example context/data-snapshot.json), with its source and date. Pull only what the acceptance tests depend on.',
-  taste: 'Write the decision this informs, what changed recently and what normal looks like for the key metric. Pick your tools from the toolbox you were given; search nothing.',
+  taste: 'Write the decision this informs, what changed recently and what normal looks like for the key metric. When you were given a toolbox, pick from it at your own discretion and open only what you pick.',
   diverge: 'Write three competing explanations of the main problem, each with the evidence for it and what would rule it out. A fresh reviewer picks the one the evidence supports. A fixed checklist score is not a diagnosis.',
   build: 'Diagnose this account or data specifically, then rank actions by expected impact. Recommend the first fix; never hand over a menu.',
 });

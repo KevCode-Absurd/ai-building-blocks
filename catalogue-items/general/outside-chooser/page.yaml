@@ -1,0 +1,184 @@
+new_slug: outside-chooser
+name: "Outside chooser"
+summary: "Give it two to four options and your brief. A fresh reviewer picks one and says what to borrow."
+job: think-and-decide
+thinking: medium
+thinking_why: "The reviewer must judge each option against each test and commit to one pick."
+
+headline: "Let a fresh reviewer pick between your options"
+subhead: Give it two to four options your AI has made, your brief and the tests the work must pass. It strips the labels and hands them to a reviewer that has not seen how they were made. You get one pick, what to take from the others and what would make a buyer ignore it.
+
+explain: |
+  When an AI makes three options and then picks one, it picks its own favourite. It remembers why it made each one. Your buyer will see none of that. They only see the work.
+
+  This skill takes the choice away from the maker. It removes any name that hints at what an option is, calls them A, B and C, and mixes the order. It sends them with your brief and your tests to a fresh reviewer. Where your AI can start a second agent, it uses one. If not, you can paste the packet into a new chat. If neither is possible, the same AI does a separate pass. The result is marked SAME-CONTEXT, so you know it is weaker.
+
+  The reviewer answers each test for each option with pass or fail and what it saw. It picks one. It names the parts of the others worth keeping, and the one or two things most likely to lose a buyer. If no option passes, your AI makes one more round, and only one.
+
+when:
+  - Your AI has made two to four versions of a page, ad, design, email plan or plan.
+  - You want a choice that does not depend on the maker's own taste.
+  - You are about to show options to a client and want one recommendation.
+  - Two options look close and you need a reason to pick.
+
+not_for:
+  - One finished piece of work. Use the Client's-eye check.
+  - A test with real buyers. This is a review, not an experiment.
+  - Scoring a whole AI setup against plain AI. Use the Expert agent blind test.
+
+you_give:
+  - Two to four options, as pictures, files or text
+  - Your brief, in your own words
+  - Five to seven tests the work must pass
+you_get:
+  - A pass or fail for every test on every option, with what the reviewer saw
+  - One pick and the reason a buyer would care about
+  - What to take from the options that lost
+  - What would make a buyer ignore the pick
+  - A clear label for how the review was run
+
+how_to_use:
+  - Add the skill to your AI. One that can start a second agent works best.
+  - Give it the options, your brief and your tests. If you have no tests, it writes five to seven first.
+  - It strips the labels and writes the packet for the reviewer.
+  - It starts a fresh reviewer, or gives you the packet to paste into a new chat.
+  - Read the pick and the reason. Your AI then builds the pick and moves in what was worth keeping.
+
+how_it_works:
+  - title: Strips the labels
+    text: Renames the options A, B and C, removes hints and mixes the order.
+  - title: Writes the packet
+    text: Puts the brief, the job, the tests and the options in one fixed message.
+  - title: Starts a fresh reviewer
+    text: Uses a new agent, a second chat, or a labelled same-context pass, in that order.
+  - title: Checks the reply
+    text: Makes sure every test has an answer for every option and there is one pick.
+  - title: Acts on it
+    text: Builds the pick, borrows from the others and fixes what would lose a buyer.
+  - title: Limits the rounds
+    text: Allows one more round of options if none passed, and no more.
+
+output_shape: |
+  CHOICE
+  Pick: <letter, and which candidate that was>
+  Run as: <new sub-agent | second chat | SAME-CONTEXT>
+  Reason: <the reviewer's reason, in their words>
+  Taken from the others: <what moved in>
+  Rounds: <1 or 2>
+  Overruled: <no | yes: the test failed and the fact that shows it>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+example:
+  business: plausible
+  input: |
+    [the skill]
+
+    Brief: a first screen for a Plausible Analytics sign-up page. Visitors
+    clicked an ad about leaving Google Analytics.
+    Tests: 1. Does a site owner see in five seconds what they would gain?
+    2. Is there one clear action? 3. Is every fact on plausible.io today?
+    4. Could a rival run this headline unchanged?
+    A. "Analytics you can read on one page." Button: Start free trial.
+       Under it: View live demo.
+    B. "Drop the cookie banner." Line: No need for cookie banners or GDPR
+       consent. Made and hosted in the EU. Button: Start free trial.
+    C. "54 times smaller than Google Analytics." Line: Every visitor
+       downloads 135KB less JavaScript. Button: Start free trial.
+    You cannot start a second agent here.
+  output: |
+    CHOICE
+    Run as: SAME-CONTEXT. No second agent or second chat was available, so
+    this is a separate pass by the same AI. Treat it as weaker than an
+    outside review.
+
+    TESTS
+    1 | A: fail, "read on one page" does not say what I gain over my
+        current tool | B: pass, I gain a site with no banner | C: pass,
+        I gain a lighter page
+    2 | A: fail, two actions compete | B: pass | C: pass
+    3 | A: pass, both buttons are on the site | B: pass, both lines are on
+        the site | C: pass, both numbers are on the site
+    4 | A: fail, most simple analytics tools could say this | B: pass in
+        part, the EU line makes it theirs | C: pass, the number is theirs
+
+    PICK
+    B, because a visitor who is leaving Google Analytics has a banner today
+    and can picture it gone.
+
+    TAKE FROM THE OTHERS
+    C: the "54 times smaller" number, as the second line of proof.
+    A: nothing for the first screen. Keep "View live demo" lower down.
+
+    WOULD MAKE A BUYER IGNORE IT
+    "Drop the cookie banner" alone does not say this is analytics. Name the
+    product type in the line under the headline.
+
+    NONE PASS
+    No. B and C pass every test about the job.
+
+tweaks:
+  - what: Your tests
+    how: Give your own five to seven tests. The reviewer uses only those.
+  - what: Who reviews
+    how: Ask for the packet if you want to paste it into another AI, or hand it to a person.
+  - what: How many options
+    how: Two to four work. With more, compare them in groups and send the winners through again.
+  - what: Pictures or text
+    how: For pages, ads and designs, give the side-by-side pictures. For emails and plans, give the text.
+
+judge:
+  - The reviewer saw no notes from the maker and no hint of a favourite.
+  - Every test has an answer for every option.
+  - There is one pick, not a blend.
+  - The reason is one a buyer would care about.
+  - A same-context review is labelled as one.
+
+test:
+  - Give it two options where one breaks a test on purpose. The reviewer should fail it on that test.
+  - Run it twice with the order mixed. The pick should not follow the letter A.
+  - Check the label. If your AI could not start a second agent, it should say SAME-CONTEXT.
+
+improve:
+  - Add the tests every piece of work must pass in your business.
+  - Add a rule for who may overrule the reviewer, and on what evidence.
+  - Keep the reviewer's replies, so you learn which tests your work fails most.
+  - Pair it with Make three first screens, which makes the side-by-side pictures.
+
+works_best_with:
+  tools:
+    - {name: "An AI that can start a second agent", why: "The reviewer starts clean and never sees the maker's reasons."}
+    - {name: "A second chat window", why: "Works when your AI cannot start an agent. You paste the packet in and the reply back."}
+  inputs:
+    - "The side-by-side pictures from the compare script"
+    - "Your brief and tests"
+
+terms:
+  - term: Candidate
+    meaning: One of the options being compared.
+  - term: Acceptance test
+    meaning: A question the finished work must pass, such as "is there one clear action?"
+  - term: Packet
+    meaning: The one message the reviewer gets, with the brief, the tests and the options.
+  - term: SAME-CONTEXT
+    meaning: A label that says the same AI made and chose the options, so the choice is weaker.
+
+output_sample:
+  input:
+    - Two to four options
+    - Your brief
+    - Five to seven tests
+  prerequisites:
+    - An AI that can start a second agent, or a second chat you can paste into
+  output:
+    - name: Tests
+      contains: Pass or fail for every test on every option, with what the reviewer saw.
+    - name: Pick
+      contains: One option and the reason a buyer would care about.
+    - name: Take from the others
+      contains: The parts of the losing options worth moving into the pick.
+    - name: Would make a buyer ignore it
+      contains: The one or two things most likely to lose the buyer.
+    - name: How it was run
+      contains: New agent, second chat or SAME-CONTEXT.

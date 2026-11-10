@@ -1,0 +1,20 @@
+slug: claim-source-trace
+name: "Claim source trace"
+summary: "Give it your draft and your sources. Every fact gets a dated source, a rewrite or a cut."
+category: general
+type: skill
+role: check
+job: copy
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: store_capture, required: true}
+outputs:
+  - {type: copy_draft, required: true}
+  - {type: audit_report, required: true}
+uses: []
+origin: own
+version: 1.0.0
+added: 2026-11-10
+credits:
+  - {title: "Original AI Blocks method", by: "AI Blocks contributors", used: "The list of fact kinds, the three results with no fourth, and the rule that a flagged claim cannot stay. Built from the blind tests of 10 Nov 2026."}

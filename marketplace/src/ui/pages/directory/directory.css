@@ -237,17 +237,17 @@
 .dir-file-link:hover { background: var(--panel-2); }
 .dir-file-link:hover .dir-file-name { text-decoration: underline; text-underline-offset: 3px; }
 .dir-file-link[aria-current="page"] { background: var(--panel-2); box-shadow: inset 3px 0 0 var(--dir-accent, var(--text)); }
-.dir-file-name { font: 500 14px var(--mono); overflow-wrap: anywhere; }
+.dir-file-name { font-weight: 600; font-size: 15px; overflow-wrap: anywhere; }
 .dir-file-purpose { font-size: 14px; line-height: 1.45; color: var(--muted); }
 .dir-files-compact { grid-template-columns: minmax(0, 1fr); gap: 4px; margin-top: 8px; }
 .dir-files-compact .dir-file-link { padding: 5px 8px; }
-.dir-files-compact .dir-file-name { font-size: 13px; }
+.dir-files-compact .dir-file-name { font-size: 14px; font-weight: 500; }
 
 /* ---------- File viewer: /agents/:id/files/<path> ---------- */
 .dir-file-layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: clamp(28px, 4vw, 56px); align-items: start; }
 .dir-file-main { min-width: 0; }
 .dir-file-head { padding-bottom: 20px; margin-bottom: 24px; border-bottom: 1px solid var(--line); }
-.dir-file-title { font: 600 clamp(22px, 3.2vw, 34px)/1.2 var(--mono); letter-spacing: -0.02em; overflow-wrap: anywhere; margin-bottom: 10px; }
+.dir-file-title { font-size: clamp(24px, 3.4vw, 36px); line-height: 1.2; letter-spacing: -0.02em; overflow-wrap: anywhere; margin-bottom: 10px; }
 .dir-file-lede { max-width: 44em; color: var(--text-2); }
 .dir-file-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 .dir-file-body { min-width: 0; }
@@ -286,3 +286,38 @@
   .dir-card:hover, .dir-card:focus-within, .dir-outcome:hover, .dir-outcome:focus-within, .dir-sample:hover, .dir-sample:focus-visible { transform: none; }
   .dir-card-skeleton > span { animation: none; }
 }
+
+/* ---------- What the agent does, in one line (cards and the profile) ---------- */
+.dir-does { margin: 8px 0 0; font-size: 14px; line-height: 1.4; color: var(--text-2); }
+.dir-does b { font-weight: 600; color: var(--text); }
+.dir-profile-does { margin: -6px 0 6px; font-size: 16px; }
+.dir-profile-not { margin: 0 0 18px; font-size: 15px; color: var(--muted); }
+.dir-profile-not b { font-weight: 600; color: var(--text-2); }
+.dir-profile-does + .lede { margin-top: 14px; }
+
+/* ---------- What I can do, What I bring ---------- */
+.dir-can-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 20px 32px; margin-top: 18px; }
+.dir-can-group { min-width: 0; padding-top: 12px; border-top: 1px solid var(--line); }
+.dir-can-group h3 { margin: 0 0 12px; font: 500 12px var(--mono); text-transform: uppercase; letter-spacing: .07em; color: var(--muted); }
+.dir-can-more { margin: 18px 0 0; }
+.dir-bring-counts { list-style: none; padding: 0; margin: 18px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.dir-bring-counts li { padding: 7px 13px; border: 1px solid var(--line-2); border-radius: 999px; background: var(--panel); font-size: 14px; }
+.dir-bring-counts b { font-family: var(--mono); font-weight: 600; }
+.dir-bring-groups { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 8px 32px; margin-top: 18px; align-items: start; }
+.dir-bring-group { min-width: 0; padding: 12px 0 4px; border-top: 1px solid var(--line); }
+.dir-bring-group summary { cursor: pointer; font: 500 12px var(--mono); text-transform: uppercase; letter-spacing: .07em; color: var(--muted); }
+.dir-bring-group summary:hover { color: var(--text); }
+.dir-bring-group ul { list-style: none; margin: 10px 0 8px; padding: 0; display: grid; gap: 6px; font-size: 15px; line-height: 1.4; }
+.dir-bring-group a { color: var(--text); text-underline-offset: 3px; }
+.dir-file-where { margin: 0 0 14px; font-size: 13px; color: var(--muted); overflow-wrap: anywhere; }
+.dir-file-where code { font: 400 13px var(--mono); }
+
+/* ---------- "What do you need done?" on the home page ---------- */
+.dir-home-search { max-width: 620px; margin: 26px auto 0; text-align: left; }
+.dir-home-search-label { display: block; margin: 0 0 8px; font-weight: 600; text-align: center; }
+.dir-home-search-row { display: flex; gap: 10px; }
+.dir-home-search-input { flex: 1 1 auto; min-width: 0; padding: 13px 14px; font-size: 17px; border-color: var(--line-2); background: var(--panel); }
+.dir-home-search-input:hover { border-color: var(--text); }
+.dir-home-search-input:focus { border-color: var(--text); box-shadow: var(--hard); outline: none; }
+.dir-home-search-row .btn { flex: none; height: auto; }
+@media (max-width: 520px) { .dir-home-search-row { flex-direction: column; } .dir-home-search-row .btn { height: 46px; } }

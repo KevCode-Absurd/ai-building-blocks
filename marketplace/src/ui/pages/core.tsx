@@ -31,6 +31,26 @@ function Typewriter(props: { text: string }) {
   );
 }
 
+/**
+ * "What do you need done?": a plain request goes to /agents?q=..., where the agents who do that work come first. A
+ * real form with a real address, so it works before the app starts and with the Enter key. The same form is in the
+ * page the Worker sends (src/pages.ts).
+ */
+function FindAnAgent() {
+  const [q, setQ] = useState("");
+  return (
+    <form class="dir-home-search" role="search" action="/agents" method="get"
+      onSubmit={e => { e.preventDefault(); const ask = q.trim(); navigate(ask ? `/agents?${new URLSearchParams({ q: ask })}` : "/agents"); }}>
+      <label class="dir-home-search-label" for="home-q">What do you need done?</label>
+      <div class="dir-home-search-row">
+        <input class="input dir-home-search-input" id="home-q" name="q" type="search" value={q} maxLength={120} autoComplete="off" enterKeyHint="search"
+          placeholder="A landing page for my shop" onInput={e => setQ((e.target as HTMLInputElement).value)} />
+        <button type="submit" class="btn btn-primary">Find an agent</button>
+      </div>
+    </form>
+  );
+}
+
 function Home() {
   useEffect(() => {
     document.title = HOME_TITLE;
@@ -42,6 +62,7 @@ function Home() {
         <div class="wrap hero-in">
           <h1 class="h1">Hire an AI agent. It works in your own AI.</h1>
           <Typewriter text="Named AI agents, each built for one job role, and free. Download one, or connect your AI and load it, and it works in the tools you already use." />
+          <FindAnAgent />
           <div class="hero-actions">
             <Link href="/agents" class="btn btn-primary">Meet the agents <ArrowIcon /></Link>
             <Link href="/connect" class="btn btn-line">Connect your AI <ArrowIcon /></Link>

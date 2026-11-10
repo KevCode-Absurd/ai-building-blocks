@@ -143,3 +143,53 @@ test("every role page title fits in 65 characters", async () => {
   assert.deepEqual(long, []);
   assert.equal(roleTitle("Bookkeeper"), "Bookkeeper AI agents, free | AI Blocks");
 });
+
+test("an agent's plain page says what the app says: the work line, the tasks, what it brings and real download links", async () => {
+  const t = await testEnv(PROD);
+  // An agent in a role with a toolbox, so both new sections have something to say.
+  const { roleToolboxFile } = await import("../src/modules/directory/toolbox.ts");
+  const roles = roleToolboxFile().roles;
+  const withBox = live.find(p => p.role && roles[p.role]?.tasks.length);
+  if (!withBox) return;
+  const html = String((await t.api("GET", `/agents/${withBox.id}`)).body);
+  const page = html.slice(html.indexOf('<div id="app">'), html.indexOf('id="boot"'));
+  const profile = (await t.api("GET", `/api/agents/${withBox.id}`)).body.agent;
+  // The line under the title, word for word what the card and the profile show.
+  assert.ok(profile.does && page.includes(`<strong>${esc(profile.does.label)}`), "the work line is in the page");
+  for (const thing of profile.does.things) assert.ok(page.includes(esc(thing)), thing);
+  // Every task and every item the app lists, with the same counts and the same links.
+  assert.ok(page.includes(`<h2>What ${esc(withBox.name)} can do</h2>`) && page.includes(`<h2>What ${esc(withBox.name)} brings</h2>`));
+  for (const task of profile.tasks) assert.ok(page.includes(`<li>${esc(task.task)}</li>`), task.task);
+  for (const group of profile.brings) {
+    assert.ok(page.includes(`<h3>${esc(group.label)}: ${group.items.length}</h3>`), `${group.label} count`);
+    for (const item of group.items) {
+      const href = item.file ? `/agents/${withBox.id}/files/${item.file}` : item.href;
+      assert.ok(page.includes(href ? `<a href="${esc(href)}">${esc(item.name)}</a>` : `<li>${esc(item.name)}</li>`), item.name);
+    }
+  }
+  // What a visitor reads names no file path: paths only sit inside link addresses.
+  const read = page.replace(/<a href="[^"]*">/g, "<a>").replace(/<img [^>]*>/g, "");
+  assert.doesNotMatch(read, /SKILL\.md|skills\/|prompts\/|workflows\//);
+  // "Download ... from this page" used to have no link to download.
+  assert.ok(page.includes(`href="/packs/${withBox.id}.txt"`) && page.includes(`href="/packs/${withBox.id}.zip"`), "the download links are real");
+  assert.doesNotMatch(page, /\$\d|price|beta|reviewed by (a|our) /i);
+});
+
+test("the home page has a search form that works without scripts, and a search page lists the matches in the app's order", async () => {
+  const t = await testEnv(PROD);
+  const home = String((await t.api("GET", "/")).body);
+  assert.match(home, /<form action="\/agents" method="get" role="search">/);
+  assert.match(home, /<input id="seo-q" name="q" type="search"/);
+  const q = "I need a landing page for my shop";
+  const search = await t.api("GET", `/agents?q=${encodeURIComponent(q)}`);
+  assert.equal(search.status, 200);
+  const html = String(search.body);
+  assert.match(html, /<meta name="robots" content="noindex, follow" \/>/);
+  assert.ok(html.includes(`<h1>AI agents for &quot;${esc(q)}&quot;</h1>`) || html.includes(`<h1>AI agents for "${esc(q)}"</h1>`));
+  const api = (await t.api("GET", `/api/agents?q=${encodeURIComponent(q)}`)).body;
+  assert.ok(api.agents.length > 0, "the request finds agents");
+  const listed = [...html.matchAll(/<li><a href="\/agents\/([a-z0-9-]+)">/g)].map(m => m[1]);
+  assert.deepEqual(listed, api.agents.slice(0, 40).map((a: any) => a.id), "same agents, same order as the app");
+  // Each line says what the agent does, so nobody has to open a profile to learn it only audits.
+  assert.match(html, /(Makes|Plans and briefs|Reviews and advises): /);
+});

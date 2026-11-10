@@ -6,7 +6,7 @@ What a team lead reads is `JOB-METHOD.md` (under 900 words). Receipt, hash and r
 
 ## Flexible teams
 
-The general coordinator turns the user's words into a real job and measurable acceptance checks. It reads the brand brain, chooses a task-specific lead and experts, and checks the final delivery against the original job. Experts compare distinct routes, record disagreement and combine useful parts when they fit together. A fresh judge reviews the work without seeing the council.
+The general coordinator turns the user's words into a real job and measurable acceptance checks. It asks the few questions the job needs, writes the spec sheet, reads the brand file when the job is a page, ad, copy or email, picks one task-specific lead (with a maker for each kind of work when the request mixes kinds), and checks the final delivery against each acceptance test. Experts compare distinct routes, record disagreement and combine useful parts when they fit together. A fresh judge reviews the work without seeing the council.
 
 The coordinator is a general role. Department labels help discovery; they do not install fixed department heads. A person can edit the roster, lead, personas, handoffs, three routes and acceptance checks at `/councils` (`/plan-team` is an alias). Named councils can be saved and reopened in the browser, or imported from editable JSON. Private brain-file bytes are not persisted; loading a council clears the previous brain-read confirmation. Its exported plan is a draft for the connected AI to validate and run.
 

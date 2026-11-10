@@ -15,7 +15,7 @@ const annotations = { readOnlyHint: true, destructiveHint: false, idempotentHint
 const outputSchema = { type: 'object', properties: { schema: { type: 'string' } }, required: ['schema'], additionalProperties: true };
 
 /** The outcome part of a server's instructions (the local scoping preview uses it; the public MCP has its own short text). */
-export const OUTCOME_INSTRUCTIONS = 'For any outcome the owner wants (more customers, rising ad costs, launch a product, close the month, or something vague like "my business is not doing well"), call start_outcome with their own words and follow each result\'s next step. You pin the outcome down with one batch of questions, research relevant facts and constraints, select task methods from AI Blocks, compose a plan from our specialists and items, and the owner approves it before anything runs. Save the returned files in outcomes/<id>/. Decisions and live actions always stop for the owner; API keys stay with you and never go in files.';
+export const OUTCOME_INSTRUCTIONS = 'For a business goal with no deliverable named yet (more customers, rising ad costs, launch a product, close the month, or something vague like "my business is not doing well"), call start_outcome with their own words and follow each result\'s next step. A named piece of work (a page, ads, emails, an audit, a plan) starts with prepare_job_context instead. You pin the outcome down with one batch of questions, research relevant facts and constraints, select task methods from AI Blocks, compose a plan from our specialists and items, and the owner approves it before anything runs. Save the returned files in outcomes/<id>/. Decisions and live actions always stop for the owner; API keys stay with you and never go in files.';
 
 /**
  * The outcome tools, one entry each. To add a tool, append an entry (or spread a list imported from another file):
@@ -27,8 +27,8 @@ export const OUTCOME_INSTRUCTIONS = 'For any outcome the owner wants (more custo
  */
 export const OUTCOME_TOOLS = [
   {
-    name: 'start_outcome', title: 'Start here for any business goal', rest: '/api/v1/outcomes',
-    description: 'The front door for any goal or problem the owner states, in their own words. Returns a new engagement waiting for its brief, the next step and the files for outcomes/<id>/, with METHOD.md (brief frame with examples, research protocol, composition and run rules). include_example adds a worked example of a good brief, research and plan. No work runs here.',
+    name: 'start_outcome', title: 'Work on a business goal', rest: '/api/v1/outcomes',
+    description: 'For a goal or problem with no deliverable named yet, in the owner\'s own words ("more customers", "my ad costs are rising"). For a named piece of work, such as a page, ads, emails, an audit or a plan, use prepare_job_context. Returns a new engagement waiting for its brief, the next step and the files for outcomes/<id>/, with METHOD.md (brief frame with examples, research protocol, composition and run rules). include_example adds a worked example of a good brief, research and plan. No work runs here.',
     input: { properties: {
       request: str(), engagement_id: { type: 'string', pattern: '^[a-z0-9][a-z0-9-]{0,79}$' }, started: { type: 'string', pattern: '^\\d{4}-\\d{2}-\\d{2}$' },
       include_example: { type: 'boolean', description: 'Add the worked example (rising ad costs) to see the quality bar. Off by default; it is large.' },

@@ -66,3 +66,30 @@ test('nothing tells an AI to search the library before it builds', async () => {
   // The public instructions keep search for browsing, and say a job does not need one.
   assert.match(PUBLIC_MCP_INSTRUCTIONS, /A job needs no search: its lead carries the toolbox\. To browse or fetch one item: search_library/);
 });
+
+test('the team-mode pack file teaches the same method: spec sheet, one lead, job-first rubric, final check', async () => {
+  const fs = await import('node:fs');
+  const { STANDARD_CRITERIA } = await import('../src/jobs/rubric.mjs');
+  const pack = fs.readFileSync(new URL('../src/jobs/pack/TEAM-MODE.md', import.meta.url), 'utf8');
+  assert.doesNotMatch(pack, /brand brain|taste question|at most three questions|job card/i);
+  for (const phrase of ['One lead is the default', 'Ask up to four questions in one short message', 'Give each question a default', 'write the spec sheet (`JOB-CARD.json`)', 'Acceptance tests:', 'Do not ask for a brand file when the job does not need one', 'Do not search the library during the job', 'one maker for each kind of work the request names', 'sends the work back to the lead once, with the failed tests named', 'never flagged and left in']) assert.ok(pack.includes(phrase), phrase);
+  // A brand file is asked for only where a page, ad, copy or email needs it.
+  assert.match(pack, /\*\*A page, ad, copy or email\*\* needs the brand file/); assert.equal(pack.match(/brand file/g).length, 2);
+  // The rubric table carries the same weights as the engine, largest first.
+  const weights = [...pack.matchAll(/^\| [A-Z][^|]+ \| (\d+) \|$/gm)].map(match => Number(match[1])).slice(-8);
+  assert.deepEqual(weights, STANDARD_CRITERIA.map(row => row.weight)); assert.match(pack, /\| Does the job for the buyer or the decision \| 30 \|/);
+  // The published copy is built from this file and must not drift from it.
+  const built = new URL('../public/packs/team-mode.md', import.meta.url);
+  if (fs.existsSync(built)) assert.equal(fs.readFileSync(built, 'utf8').trimEnd(), pack.replace(/\r\n?/g, '\n').trimEnd());
+});
+
+test('start_outcome says it is for a goal, not the first call for a deliverable', async () => {
+  const { OUTCOME_TOOLS, OUTCOME_INSTRUCTIONS } = await import('../src/outcomes/outcome-mcp.mjs');
+  const { PUBLIC_MCP_TOOLS } = await import('../src/server/public-mcp.ts');
+  const source = OUTCOME_TOOLS.find(tool => tool.name === 'start_outcome'), listed = PUBLIC_MCP_TOOLS.find(tool => tool.name === 'start_outcome');
+  // The source text and the listed tool say the same thing: no rewording is needed at the listing.
+  assert.equal(source.title, 'Work on a business goal'); assert.equal(listed.title, source.title); assert.equal(listed.description, source.description);
+  assert.match(source.description, /^For a goal or problem with no deliverable named yet/); assert.match(source.description, /For a named piece of work, such as a page, ads, emails, an audit or a plan, use prepare_job_context\./);
+  assert.doesNotMatch(`${source.title} ${source.description}`, /front door|start here|first call|any goal or problem/i);
+  assert.match(OUTCOME_INSTRUCTIONS, /^For a business goal with no deliverable named yet/); assert.match(OUTCOME_INSTRUCTIONS, /A named piece of work \(a page, ads, emails, an audit, a plan\) starts with prepare_job_context instead\./);
+});

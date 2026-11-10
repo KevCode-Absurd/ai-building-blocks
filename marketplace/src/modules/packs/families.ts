@@ -1,10 +1,10 @@
-// Deliverable families of the Grounded Job Protocol (DESIGN.md): what each family captures before work, how each GJP
-// stage applies to it, and its default context requirements. Pure data and pure functions, no I/O.
+// Deliverable families of the work method: what each family captures before work, how each stage applies to it, its
+// real candidates, completeness list, craft weights and default context requirements. Pure data and functions, no I/O.
 //
-// One place per sentence: the protocol itself and the craft-rubric weights live in packs/shared/WORK-METHOD.md; the
-// capture lists live here and render into context/README.md; a job skill carries only its family's stage slice with
-// the job's own details filled in.
-import type { ContextRequirement, DeliverableFamily, JobType } from "../../core/types.ts";
+// One place per sentence: the method itself lives in packs/shared/WORK-METHOD.md; the capture lists live here and
+// render into context/README.md; a job skill carries only its family's stage slice and gates with the job's own
+// details filled in.
+import type { ContextRequirement, CraftCriterion, DeliverableFamily, JobType } from "../../core/types.ts";
 
 export const FAMILY_LABELS: Record<DeliverableFamily, string> = {
   web_page: "Web pages and sites",
@@ -120,71 +120,188 @@ export const CAPTURE: Record<DeliverableFamily, string[]> = {
   ],
 };
 
-/** The family's GJP slice for a job skill: how each stage applies. `{deliverable}` is filled per job. */
+/**
+ * The shared method lists. site/src/jobs/grounding.mjs holds the same lists under the same names, and
+ * site/test/jobs-grounding.test.mjs fails when the two copies differ: WORD_BUDGETS, PROVEN_LEVERS, CANDIDATE_AXES,
+ * CANDIDATES, COMPLETENESS, CONTEXT_LEVELS, CONTEXT_NEED and the craft weights.
+ */
+
+/** What candidates must differ on: at least two of these. A new colour, crop or wording is not a candidate. */
+export const CANDIDATE_AXES: string[] = ["promise", "proof", "structure", "buyer moment", "offer", "visual world"];
+
+/**
+ * Real candidates by family: the part that decides the outcome, made as real work before the build. The 10 Nov 2026
+ * blind test found described directions came out the same as a plain model's; made candidates did not.
+ */
+export const CANDIDATES: Record<DeliverableFamily, string> = {
+  web_page: "Three first screens, made in full: headline, proof and the one action.",
+  ad_creative: "At least 9 one-line concepts across different promises, proofs and formats, then the strongest written up in full.",
+  copy: "Three openings, each written in full: the headline and the first paragraph.",
+  email: "Three series arcs, each with email 1 written in full. For one email: three subject lines, each with its opening.",
+  audit: "Three competing explanations of the main problem, each with the evidence for it and what would rule it out.",
+  analysis: "Three competing explanations, each tested against the data, with what would rule it out.",
+  strategy: "Two differently shaped one-page plans, each with what it costs and what it wins.",
+  plan: "Two differently shaped one-page plans, each with its totals.",
+  code: "When the design is open, two approaches taken far enough to compare: the interface and the trade-off.",
+  ops_doc: "When the process is open, two outlines of the steps, with what each costs the team.",
+  other: "When the approach is open, two short versions of the part that decides the outcome.",
+};
+
+/**
+ * Format completeness by family: what the maker ticks before hand-over. The same blind test marked down ads with no
+ * description or price, emails with no product, and plans whose totals did not add up.
+ */
+export const COMPLETENESS: Partial<Record<DeliverableFamily, string[]>> = {
+  web_page: ["one primary action", "proof beside the claim it supports", "works on a 390 px phone screen", "loads fast, with sized images"],
+  ad_creative: ["every field the platform needs, including the description", "character counts inside the platform limits", "text and logo inside the placement's safe areas", "the brand and the price named for a cold audience", "the landing URL"],
+  email: ["a subject line", "preview text", "one product and one ask in every email", "working links", "an exit rule", "merge tags that match the email tool"],
+  plan: ["totals that add up", "dated steps", "an owner for each step", "cut, keep and scale rules", "break-even shown"],
+};
+
+/** How much brand context a job takes from the brand file. A job takes its slice, never the whole file. */
+export const CONTEXT_LEVELS = {
+  none: "No brand context: work from the system, files or data.",
+  facts: "Facts only: the offer, prices, customers and numbers, each with its source and date.",
+  voice: "Facts and voice: the facts, plus 5 to 10 real lines in the brand's own words.",
+  look: "Facts and look: the facts, plus colours, type, components and screenshots.",
+  full: "Full: facts, voice and look.",
+} as const;
+export type ContextLevel = keyof typeof CONTEXT_LEVELS;
+
+/** The default slice by family. Strategy, plans, code and operations work never demand a brand capture. */
+export const CONTEXT_NEED: Record<DeliverableFamily, ContextLevel> = {
+  web_page: "full", ad_creative: "full", copy: "voice", email: "voice", audit: "facts", analysis: "none",
+  strategy: "facts", plan: "facts", code: "none", ops_doc: "none", other: "none",
+};
+
+/** The slice a job of this family takes, as one line for a spec sheet or a job skill. */
+export function contextNeed(family: DeliverableFamily): { level: ContextLevel; take: string } {
+  const level = CONTEXT_NEED[family];
+  return { level, take: CONTEXT_LEVELS[level] };
+}
+
+/**
+ * Craft weights by rubric group (the keys are RUBRIC_GROUP's values). The job carries the largest weight in every
+ * group: blind judges score "does it do the job" first, and the old weights put brand or voice fidelity above it.
+ * "Own material" is the scoreable stand-in for "better than a plain model": at least one idea, proof or angle that
+ * came from this business's real material and would not appear in a generic answer. Truth is a gate, not a score.
+ */
+export const CRAFT_WEIGHTS: Record<string, [criterion: string, weight: number][]> = {
+  "web_page": [["Does the job for the buyer", 30], ["Brand fidelity", 20], ["Launchability", 15], ["Own material", 10], ["Specificity", 10], ["Clarity", 10], ["Distinctiveness vs defaults", 5]],
+  "ad_creative": [["Does the job for the buyer", 30], ["Range across named axes", 15], ["Brand fidelity", 15], ["Strategic idea", 10], ["Hook and thumb-stop", 10], ["Platform fit", 10], ["Own material", 10]],
+  "copy / email": [["Does the job for the buyer", 30], ["Voice fidelity", 20], ["Specificity", 15], ["Clarity", 15], ["Own material", 10], ["Distinctiveness vs defaults", 10]],
+  "audit / analysis": [["Does the job for the decision", 30], ["Evidence quality", 20], ["Prioritised actions with expected impact", 15], ["Correctness", 15], ["Own material", 10], ["Clarity", 10]],
+  "strategy / plan": [["Does the job for the decision", 30], ["Actionability", 25], ["Grounded in this business", 20], ["Clarity", 15], ["Own material", 10]],
+  "code / ops_doc / other": [["Does the job", 30], ["Correctness", 25], ["Fits the existing system", 20], ["Clarity", 15], ["Own material", 10]],
+};
+
+/**
+ * A family's craft weights as one line ("Does the job for the buyer 30, Brand fidelity 20, ..."), for a job skill whose
+ * job type has no craft rubric of its own. WORK-METHOD.md states only the two rows every family shares.
+ */
+export function craftWeightsLine(family: DeliverableFamily): string {
+  return CRAFT_WEIGHTS[RUBRIC_GROUP[family]].map(([criterion, weight]) => `${criterion} ${weight}`).join(", ");
+}
+
+export const OWN_MATERIAL: CraftCriterion = {
+  criterion: "Own material", weight: 10,
+  test: "At least one idea, proof or angle came from this business's real material and would not appear in a generic answer.",
+};
+const JOB_TESTS: Record<string, string> = {
+  "Does the job for the buyer": "The buyer it is for gets a reason to act and can act today; every acceptance test on the spec sheet passes.",
+  "Does the job for the decision": "The client can decide and act today: one recommendation that follows from the evidence; every acceptance test on the spec sheet passes.",
+  "Does the job": "It does what was asked on the real system or for the real team; every acceptance test on the spec sheet passes.",
+};
+const JOB_ROW = /^(job done|job and conversion logic|does the job)\b/i;
+
+/**
+ * A job type's own craft rubric, made job-first: its job row (or the group's, when it has none) leads at 30, "Own
+ * material" follows at 10, and its other rows keep their order and share the remaining 60 in proportion. Weights still
+ * sum to 100. In the catalogue only 1 of 242 job types puts the job first and 92 have no job row at all.
+ */
+export function jobFirstCraft(rows: CraftCriterion[], family: DeliverableFamily): CraftCriterion[] {
+  const [label, weight] = CRAFT_WEIGHTS[RUBRIC_GROUP[family]][0];
+  const own = rows.find(r => /^own material\b/i.test(r.criterion));
+  const job = rows.find(r => JOB_ROW.test(r.criterion));
+  const rest = rows.filter(r => r !== job && r !== own);
+  const left = 100 - weight - OWN_MATERIAL.weight, sum = rest.reduce((n, r) => n + r.weight, 0);
+  // Largest-remainder rounding, so the scaled rows add up exactly.
+  const exact = rest.map(r => (sum ? r.weight * left / sum : left / Math.max(rest.length, 1)));
+  const scaled = exact.map(Math.floor);
+  const order = exact.map((x, i) => [x - Math.floor(x), i] as const).sort((a, b) => b[0] - a[0] || a[1] - b[1]);
+  for (let k = 0, short = left - scaled.reduce((n, x) => n + x, 0); rest.length && k < short; k++) scaled[order[k % order.length][1]]++;
+  return [
+    { criterion: label, weight: rest.length ? weight : weight + left, test: job?.test ?? JOB_TESTS[label] },
+    { ...OWN_MATERIAL, ...(own ? { test: own.test } : {}) },
+    ...rest.map((r, i) => ({ ...r, weight: scaled[i] })),
+  ];
+}
+
+/** The family's GJP slice for a job skill: how each stage applies. `diverge` is the family's real candidates. */
 const SLICES: Record<DeliverableFamily, { taste: string; diverge: string; build: string; check: string }> = {
   web_page: {
     taste: "Name the brand codes to keep (type, colour proportions, imagery, pacing, voice) and the defaults to avoid from tools/ai-default-patterns.md.",
-    diverge: "In patch mode, give 2 or 3 change-sets to the live page, each a ranked list of edits with its evidence. Otherwise, directions that differ on structure, proof or visual world.",
-    build: "Build on the captured shell: keep the nav, footer, fonts, colour proportions and component styles unless the plan changes them on purpose.",
+    diverge: `${CANDIDATES.web_page} In patch mode each one is the live first screen as you would change it, with its ranked edits and their evidence.`,
+    build: "Build on the captured shell: keep the nav, footer, fonts, colour proportions and component styles unless the plan changes them on purpose. Page lines are facts to use, not copy to paste.",
     check: "Run tools/check-brand-fidelity.mjs (or its manual checklist) and test at 390 px and 1440 px.",
   },
   ad_creative: {
     taste: "Name the brand codes to keep and the ad defaults to avoid: one look for every concept, reused hook formulas, product on a gradient.",
-    diverge: "Concepts differ on at least two of mechanism, proof, visual world and offer. A new colour or headline is not a new concept.",
-    build: "Each concept uses the client's real product, offer and voice, sized for its placement.",
-    check: "Check range across the named axes and platform fit, then compare with the best reference ad.",
+    diverge: `${CANDIDATES.ad_creative} A new colour or headline is not a new concept.`,
+    build: "Each ad uses the client's real product, offer and voice, sized for its placement. It names the brand and the price for someone who has never heard of them.",
+    check: "Confirm each product advertised is live and in stock at its landing URL, and that the set covers different promises and proofs.",
   },
   copy: {
     taste: "Name the voice traits to keep from the samples, and the copy defaults to avoid (\"unlock\", \"elevate\", rule-of-three lists, fake urgency).",
-    diverge: "Write 2 or 3 angles that differ on promise, proof or structure, and say which reference each learns from.",
-    build: "Use their real facts and their customers' words. No claim without a source in context/.",
-    check: "Ask of every line: could a competitor publish this unchanged? Rewrite the ones that pass that test.",
+    diverge: CANDIDATES.copy,
+    build: "Give their real facts and their customers' words a new framing. No claim without a dated source in context/.",
+    check: "Ask of every line: could a competitor publish this unchanged? Rewrite the lines that could.",
   },
   email: {
     taste: "Name the voice traits to keep from their past emails, and the defaults to avoid (fake urgency, generic subject lines).",
-    diverge: "Draft 2 or 3 angles that differ on the reason to open and the proof offered.",
-    build: "Write it for the named list or segment, with facts from context/facts.md.",
-    check: "Check it against the emails they sent before: is it recognisably theirs?",
+    diverge: CANDIDATES.email,
+    build: "Write it for the named list or segment, with facts from context/facts.md. Every email shows one product and makes one ask.",
+    check: "Check it against the emails they sent before: is it recognisably theirs? Check every link, price and policy against context/facts.md.",
   },
   audit: {
     taste: "Agree the goal and the numbers that matter before you score anything.",
-    diverge: "Write 2 or 3 competing explanations of why the key numbers moved, each with the evidence that would confirm or kill it.",
-    build: "Diagnose this account, then rank the fixes by expected impact, with the number each one should move.",
+    diverge: CANDIDATES.audit,
+    build: "Diagnose this account, then rank the fixes by expected impact, with the number each one should move. Recommend the first fix; do not hand over a menu.",
     check: "Recompute every figure from the snapshot. A checklist score with no account-specific diagnosis fails.",
   },
   analysis: {
     taste: "Agree the decision the analysis supports and how sure it must be.",
-    diverge: "Test 2 or 3 competing hypotheses against the data before you settle on one.",
-    build: "Show the working on their data: what each number means, how it was computed, and what the data cannot say.",
+    diverge: CANDIDATES.analysis,
+    build: "Answer the decision first. Show the working on their data: what each number means, how it was computed, and what the data cannot say.",
     check: "Recompute the key numbers from the source and label each claim as observed, inferred or estimated.",
   },
   strategy: {
     taste: "Ask where they want to be positioned, at what price point, and which brands they admire or avoid.",
-    diverge: "Give 2 or 3 options with real trade-offs, each grounded in this business's facts.",
-    build: "Recommend one, with the first moves, owners and the measure of success.",
-    check: "Check that each claim about the business or market traces to context/, and that the options really differ.",
+    diverge: CANDIDATES.strategy,
+    build: "Recommend one, with the runner-up in a line, the first moves, their owners and the measure of success.",
+    check: "Check that each claim about the business or market traces to context/, and that every number adds up with its sum shown.",
   },
   plan: {
     taste: "Confirm the fixed dates, owners and limits before you plan.",
-    diverge: "Where the order of work is open, compare 2 sequences and say when each would win.",
-    build: "Every step has an owner, a date and a finish line a person can check.",
-    check: "Walk the plan against the constraints in context/: does anything clash?",
+    diverge: CANDIDATES.plan,
+    build: "Every step has an owner, a date and a finish line a person can check. Where a planning number is unknown, give a working figure with its sum shown, never a blank.",
+    check: "Walk the plan against the constraints in context/: does anything clash, and do the totals add up?",
   },
   code: {
     taste: "Follow the repo's own conventions; note any you will break and why.",
-    diverge: "When the design is open, compare 2 approaches with their trade-offs before you write code.",
+    diverge: CANDIDATES.code,
     build: "Deliver runnable files that drop into the existing system, with how to run and test them.",
     check: "Run it, or the tests, and report what ran. Never claim a run that did not happen.",
   },
   ops_doc: {
     taste: "Match the format and words the team already uses.",
-    diverge: "When the process is open, compare 2 ways of running it and their costs.",
+    diverge: CANDIDATES.ops_doc,
     build: "Write steps a person can follow, each with an owner and a clear finish.",
     check: "Check every rule against its dated source, and walk the steps as a new team member would.",
   },
   other: {
     taste: "Agree what good looks like for this person before you start.",
-    diverge: "When the approach is open, compare 2 routes and say when each wins.",
+    diverge: CANDIDATES.other,
     build: "Fit the work into what already exists.",
     check: "Check it against the job's gates and the person's own goal.",
   },
@@ -200,7 +317,7 @@ export function familySlice(family: DeliverableFamily) { return SLICES[family]; 
 export const WORD_BUDGETS: Record<DeliverableFamily, string> = {
   web_page: "Hand-over note up to 150 words. Page copy no longer than the live page plus 20%, unless the change says why.",
   ad_creative: "Up to 150 words per concept. The hook fits the placement's visible text (about 125 characters on Meta).",
-  copy: "The length the job card names; with none, no longer than the copy it replaces.",
+  copy: "The length the spec sheet names; with none, no longer than the copy it replaces.",
   email: "Body up to 200 words per email, unless the brand's own past emails run longer.",
   audit: "The top 3 fixes on the first screen, and up to 10,000 words in all. Evidence tables go in an appendix.",
   analysis: "The answer and how sure it is on the first screen, and up to 10,000 words in all. Working goes in an appendix.",
@@ -223,12 +340,17 @@ export const PROVEN_LEVERS: Partial<Record<DeliverableFamily, string[]>> = {
   audit: ["the proven levers for the page, ad or email being audited (the same lists as those jobs), each marked present or missing"],
 };
 
-/** The family gates every job skill of the family carries: the hand-over budget, and the proven levers when it has them. */
+/**
+ * The family gates every job skill of the family carries: the hand-over shape with its word budget, the proven levers
+ * when the family has them, and the format's completeness list. The gates for every job (acceptance tests, sourced
+ * claims, the buyer can act, access) are in WORK-METHOD.md, step 5.
+ */
 export function familyGates(family: DeliverableFamily): string[] {
-  const levers = PROVEN_LEVERS[family];
+  const levers = PROVEN_LEVERS[family], complete = COMPLETENESS[family];
   return [
-    `The hand-over fits: a one-screen summary first that answers the brief (what you delivered, why, what to check first; nothing the brief did not ask for). ${WORD_BUDGETS[family]} Easy to scan: short sentences, headings that state the point, tables for comparisons. It stands on its own: supporting detail goes in an appendix inside it, never in a file the client does not have, such as DECISIONS.md or knowledge.md.`,
-    ...(levers ? [`Proven levers checked on the live asset, each marked present, missing or not applicable: ${levers.join("; ")}. Each missing one is added from real data, or skipped with a reason.`] : []),
+    `The hand-over fits: the work first, opened by 3 to 5 lines, with nothing internal in it. ${WORD_BUDGETS[family]} Supporting detail goes in an appendix inside the deliverable, never in a file the client does not have.`,
+    ...(levers ? [`Proven levers checked on the live asset, each marked present, missing or not applicable: ${levers.join("; ")}. Each missing one is added from real data, or skipped with a reason. The marks stay in your notes, not in the deliverable.`] : []),
+    ...(complete ? [`Format complete: ${complete.join("; ")}.`] : []),
   ];
 }
 

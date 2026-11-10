@@ -860,7 +860,7 @@
     "catalogue-items/general/grounded-job-protocol/item.yaml": {
       "reviewed_by": "AI Blocks source review (Claude, W3 library workstream)",
       "reviewed_on": "2026-11-10",
-      "method_sha256": "e650a04821177c85095abc4607085822e34cd21b86055a20b25a7399b60a888b",
+      "method_sha256": "f256a3460de4d0a163651515d00cf7d388efd0268a02c0c5f1b4b56e362ab08f",
       "inputs": [
         {
           "type": "question",
@@ -874,8 +874,8 @@
       "evidence": [
         {
           "type": "question",
-          "quote": "Outcome: <what they want to change, in their words>",
-          "rationale": "The job card starts from the client's own request and wanted outcome, which is the question type."
+          "quote": "**The job:** who must do what after seeing this",
+          "rationale": "The spec sheet starts from the client's own request and the result they want, which is the question type."
         },
         {
           "type": "web_page",

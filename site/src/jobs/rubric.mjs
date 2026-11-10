@@ -1,14 +1,19 @@
 import { craftRubric, familyOf, gatesFor, DELIVERABLE_KINDS } from './grounding.mjs';
 
+/**
+ * The standard criteria for every team job. The job leads here too. The ids and weights are fixed by contracts.mjs
+ * (WEIGHTS); the wording follows the 10 Nov 2026 blind test: do the job for the buyer or the decision, keep only
+ * sourced claims, finish the format, decide rather than hand over a menu, and keep internal notes out of the work.
+ */
 export const STANDARD_CRITERIA = Object.freeze([
-  { id: 'job', weight: 20, text: 'Meets the original request and its current scope; preserves required existing behaviour and context.' },
-  { id: 'usable', weight: 15, text: 'Provides the requested native artifact with observed task-appropriate checks; unresolved blockers remain explicit.' },
+  { id: 'job', weight: 20, text: 'Does the job for the buyer or the decision: every acceptance test on the spec sheet passes, within the original request and its scope, and required existing behaviour is kept.' },
+  { id: 'usable', weight: 15, text: 'Usable today: the requested native artifact, complete for its format, with observed task-appropriate checks; where something is sold it is live, in stock and at the stated price; no placeholder blocks use.' },
   { id: 'range', weight: 15, text: 'Explores substantively different mechanisms, evidence or structures where useful, while preserving agreed invariants and intentional controlled variants.' },
-  { id: 'truth', weight: 15, text: 'Traces claims to sources and states what remains unknown.' },
-  { id: 'reasoned', weight: 10, text: 'Records the choice, alternatives and strongest dissent.' },
-  { id: 'insight', weight: 10, text: 'Offers useful insight specific to this job.' },
+  { id: 'truth', weight: 15, text: 'Every fact a buyer or the client will read traces to a dated source; unsourced claims were removed, not flagged; what remains unknown is stated.' },
+  { id: 'reasoned', weight: 10, text: 'Decides: one recommendation that follows from the evidence, the runner-up in one line, and the strongest dissent on record. No menu of options is handed over.' },
+  { id: 'insight', weight: 10, text: 'Own material: at least one idea, proof or angle came from this business\'s real material and would not appear in a generic answer.' },
   { id: 'fit', weight: 10, text: 'Fits the actual project or brand system, purpose, audience, structure, behaviour, evidence and hard constraints; matching tokens alone is insufficient.' },
-  { id: 'clear', weight: 5, text: 'Makes the next action clear.' },
+  { id: 'clear', weight: 5, text: 'The work comes first and the next action is clear; nothing internal (process notes, agent or file names) reaches the client.' },
 ]);
 /** Craft must reach this weighted share on its own; a strong standard score cannot carry weak craft. */
 export const CRAFT_PASS = 0.7;
@@ -18,8 +23,9 @@ export const CRAFT_FLOOR = 5;
  * @param {any} card
  * @param {any[]} [items]
  * @param {{kind?: string}} [options] kind: the job's deliverable_kind. When set, the rubric adds the craft criteria for
- *   that family (DESIGN weights: brand fidelity, distinctiveness against the named defaults, launchability for web pages)
- *   and its pass/fail gates. Legacy jobs replay without it.
+ *   that family (job-first: "does the job" carries the largest weight, then fidelity, own material and the rest) and
+ *   its pass/fail gates (acceptance tests, sourced claims, the buyer can act, format complete). Legacy jobs replay
+ *   without it.
  */
 export function assembleRubric(card, items = [], { kind } = {}) {
   const craft = DELIVERABLE_KINDS.includes(kind) ? { deliverable_kind: kind, family: familyOf(kind), criteria: craftRubric(kind), gates: gatesFor(kind), pass: CRAFT_PASS, floor: CRAFT_FLOOR } : null;

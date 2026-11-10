@@ -10,7 +10,7 @@ Write `context/spec.md`, one screen:
 - **Deliverables:** the exact count and format, in the client's words.
 - **Acceptance tests:** 5 to 7 questions the client would ask. Two or more on the commercial job ("Does email 1 show a product and give a reason to click?"). One each on readiness ("Can a designer make each ad without asking me anything?"), truth and clarity.
 - **Decisions you must take** and **assumptions**, one line each.
-- **Mode:** `patch` what exists (the default), `extend` it, or `new`.
+- **Mode:** `patch` what exists (the default), `extend` it, or `new` when nothing exists.
 - **Brand context:** none, facts, voice, look or all three. Take only that slice.
 
 ## 1. Ground: only what the job needs

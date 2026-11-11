@@ -53,15 +53,19 @@ export function pack(run, panel = 'v3', arm = 'v3', renderTool) {
       }
     }
   }
+  write(path.join(run,'panels',panel+'.json'),{schema:'codex-quality-panel/1',ids:files.map(f=>f.t.id)});
   write(keyFile,{schema:'codex-quality-blind/1',panel,arm,generator_model:'Codex (session model)',baseline_model:'Codex (session model)',original_claude_run:'interrupted, preserved separately',key});
   return {pairs:files.length,html:files.filter(f=>f.t.ext==='html').length};
 }
 
 export function tally(run, panel = 'v3', expectedJudges = ['j1','j2','i1','i2']) {
-  const frozen = json(path.join(run,'keys',panel+'.json')), ids = Object.keys(frozen.key);
+  const ids = json(path.join(run,'panels',panel+'.json')).ids;
   const dir = path.join(run,'verdicts',panel);
   const results = fs.readdirSync(dir).filter(f=>f.endsWith('.json')).map(f=>json(path.join(dir,f)));
   const count = validateVerdicts(results,ids,expectedJudges);
+  // The answer key is opened only after every expected blind verdict has validated.
+  const frozen = json(path.join(run,'keys',panel+'.json'));
+  if(Object.keys(frozen.key).length!==ids.length || ids.some(id=>!frozen.key[id])) throw Error('Panel and frozen key differ');
   const tasks = json(path.join(run,'tasks.json'));
   const rows = results.flatMap(r=>r.pairs.map(p=>{
     const labels = frozen.key[p.id], a = labels.X.arm===frozen.arm?'X':'Y', b=a==='X'?'Y':'X';
@@ -74,12 +78,13 @@ export function tally(run, panel = 'v3', expectedJudges = ['j1','j2','i1','i2'])
   }));
   const interval = data => {
     const clusters = [...new Set(data.map(x=>x.id))].map(id=>data.filter(x=>x.id===id));
+    if(clusters.length<3) return null;
     let seed=27644437; const random=()=>((seed=(Math.imul(seed,1664525)+1013904223)>>>0)/4294967296);
     const rates=[];
     for(let i=0;i<2000;i++){let wins=0,total=0;for(let j=0;j<clusters.length;j++){const c=clusters[Math.floor(random()*clusters.length)];wins+=c.filter(x=>x.win).length;total+=c.length;}rates.push(wins/total);}
     rates.sort((a,b)=>a-b);return [rates[50],rates[1949]];
   };
-  const stats = data => ({task_clustered_win_rate_ci95:interval(data),verdicts:data.length,wins:data.filter(x=>x.win).length,ties:data.filter(x=>x.tie).length,win_rate:data.filter(x=>x.win).length/data.length,clarity_delta:data.reduce((s,x)=>s+x.engine.clarity-x.plain.clarity,0)/data.length,overall_delta:data.reduce((s,x)=>s+x.engine.overall-x.plain.overall,0)/data.length});
+  const stats = data => ({scores:Object.fromEntries(DIMENSIONS.map(dim=>[dim,{plain:data.reduce((n,v)=>n+v.plain[dim],0)/data.length,engine:data.reduce((n,v)=>n+v.engine[dim],0)/data.length,delta:data.reduce((n,v)=>n+v.engine[dim]-v.plain[dim],0)/data.length}])),task_clustered_win_rate_ci95:interval(data),verdicts:data.length,wins:data.filter(x=>x.win).length,ties:data.filter(x=>x.tie).length,win_rate:data.filter(x=>x.win).length/data.length,clarity_delta:data.reduce((s,x)=>s+x.engine.clarity-x.plain.clarity,0)/data.length,overall_delta:data.reduce((s,x)=>s+x.engine.overall-x.plain.overall,0)/data.length});
   const groups = {all:stats(rows)};
   for(const set of ['practice','held-out']) if(rows.some(x=>x.set===set)) groups[set]=stats(rows.filter(x=>x.set===set));
   for(const brief of ['original brief','independent brief']) groups[brief]=stats(rows.filter(x=>x.panel===brief));
@@ -87,7 +92,7 @@ export function tally(run, panel = 'v3', expectedJudges = ['j1','j2','i1','i2'])
   const pass = groups.all.win_rate>.5 && (!groups['held-out'] || groups['held-out'].win_rate>.5) && groups.all.clarity_delta>=0;
   const report = {schema:'codex-quality-results/1',panel,arm:frozen.arm,expected_judges:expectedJudges,verdicts:count,groups,release_gate:{pass,rule:'More than 50% wins overall and on held-out tasks; no mean clarity regression.'},limits:['Single model family for generation and judging.','AI preference, not customer acceptance or measured business results.','Builders used same-context internal checks; external judges are independent contexts.','Separate from the interrupted Claude benchmark; no cross-model gain is claimed.'],per_task:ids.map(id=>({id,...stats(rows.filter(x=>x.id===id))}))};
   write(path.join(run,'RESULTS-'+panel+'.json'),report);
-  write(path.join(run,'RESULTS-'+panel+'.md'),`# Separate Codex evaluation: ${panel}\n\n${count} blind verdicts; ${ids.length} tasks; ${expectedJudges.length} judges.\n\n| Scope | Wins | Ties | Win rate | Mean clarity gain | Mean overall gain |\n|---|---:|---:|---:|---:|---:|\n`+Object.entries(groups).map(([name,g])=>`| ${name} | ${g.wins}/${g.verdicts} | ${g.ties} | ${(100*g.win_rate).toFixed(1)}% | ${g.clarity_delta.toFixed(2)} | ${g.overall_delta.toFixed(2)} |`).join('\n')+`\n\nRelease gate: ${pass?'PASS':'FAIL'}. ${report.release_gate.rule}\n\n`+report.limits.map(x=>'- '+x).join('\n')+'\n');
+  write(path.join(run,'RESULTS-'+panel+'.md'),`# Separate Codex evaluation: ${panel}\n\n${count} blind verdicts; ${ids.length} tasks; ${expectedJudges.length} judges.\n\n| Scope | Wins | Ties | Win rate | 95% task CI | Mean clarity gain | Mean overall gain |\n|---|---:|---:|---:|---:|---:|---:|\n`+Object.entries(groups).map(([name,g])=>`| ${name} | ${g.wins}/${g.verdicts} | ${g.ties} | ${(100*g.win_rate).toFixed(1)}% | ${g.task_clustered_win_rate_ci95 ? g.task_clustered_win_rate_ci95.map(n=>(100*n).toFixed(1)+"%").join(" to ") : "not estimated"} | ${g.clarity_delta.toFixed(2)} | ${g.overall_delta.toFixed(2)} |`).join('\n')+`\n\nRelease gate: ${pass?'PASS':'FAIL'}. ${report.release_gate.rule}\n\n`+report.limits.map(x=>'- '+x).join('\n')+'\n');
   return report;
 }
 

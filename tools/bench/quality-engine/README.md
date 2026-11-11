@@ -7,7 +7,7 @@ checker or a pack ships only if it wins this benchmark blind against a plain mod
 
 | File | What it is |
 |---|---|
-| `QUALITY-ENGINE.md` | The method being tested (v2.1). Packs carry its short form in `marketplace/packs/shared/WORK-METHOD.md`. |
+| `QUALITY-ENGINE.md` | Archived v2.1 method. The v3 method is in `marketplace/packs/shared/tools/quality/QUALITY-ENGINE-v3.md`. |
 | `CHECKER.md` | How the engine's own reviewer judges: as the client and as a field expert, calibrated against outside judges. |
 | `tasks.json` | 16 real requests for two real businesses: Grüns (gruns.co, 10 tasks) and Linear (linear.app, 6 fresh tasks). |
 | `judge-brief.md` | Panel A's brief for blind judges. |
@@ -40,3 +40,23 @@ Report the fresh set separately: tasks used to tune the engine are a development
 
 Limits: the judges are AI, not customers; the engine spends far more compute than one plain attempt; the checker was
 calibrated on v1's judge verdicts.
+
+## Separate Codex continuation
+
+The original v3 runs stopped at Claude's weekly usage limit. The owner approved a separately labelled Codex continuation on 11 Nov 2026. Its results are kept apart from the earlier Opus/Sonnet benchmark.
+
+- `tasks-v3.json` freezes 40 tasks across six companies: 16 practice and 24 held-out.
+- `judge-brief-v3.md` and `judge-brief-independent-v3.md` preserve both blind panels. The second brief was authored before the continuation by an agent that did not see the methods.
+- `v3-bench.mjs` packs anonymous X/Y pairs, requires phone and desktop screenshots for both versions of every HTML page, freezes source and screenshot hashes, and refuses incomplete or duplicate judging. It reports a seeded task-clustered bootstrap interval.
+- Both generation arms use Codex. The engine may use the fresh request-only answer as its plain candidate; internal critique is labelled SAME-CONTEXT. External judges get fresh contexts and see no method files or key.
+- Four judges cover every task, two per brief. The promotion gate is a strict majority of wins overall and on held-out tasks, with no mean clarity regression. Ties do not count as wins.
+- Single-model AI preferences do not establish customer acceptance, business lift or a replication of the mixed-model Claude results.
+
+With a run folder containing `tasks.json`, `codex/plain/<id>/final.*` and `codex/v3/<id>/final.*`:
+
+```text
+node tools/bench/quality-engine/v3-bench.mjs pack <run> P1 v3 <absolute renderer path>
+node tools/bench/quality-engine/v3-bench.mjs tally <run> P1
+```
+
+The renderer is `marketplace/packs/shared/tools/quality/render.cjs`. Run from a host with Playwright and Chromium installed, or set `PW_CHANNEL=chrome` to use installed Chrome. Judges write `<run>/verdicts/P1/<judge>.json` using ids j1, j2, i1, i2. Keep `<run>/keys/` closed until all verdicts are in. To evaluate the 24-task v2.1 continuation, use a new panel name and the arm `v21`.

@@ -13,7 +13,7 @@ const { pathToFileURL } = require('url');
 
 // Install Playwright in the host project before rendering.
 let PW;
-try { PW = require.resolve('playwright', { paths: [process.cwd(), __dirname] }); }
+try { PW = require.resolve('playwright', { paths: [process.cwd(), path.join(process.cwd(), 'site'), __dirname] }); }
 catch { console.error('Rendering not run: install Playwright and its Chromium browser in the host project.'); process.exit(2); }
 
 async function main() {
@@ -28,7 +28,8 @@ async function main() {
   fs.mkdirSync(path.dirname(outPrefix), { recursive: true });
 
   const { chromium } = require(PW);
-  const browser = await chromium.launch();
+  // Use an installed browser when the host sets PW_CHANNEL (for example chrome).
+  const browser = await chromium.launch(process.env.PW_CHANNEL ? { channel: process.env.PW_CHANNEL } : {});
   const blocked = new Set();
   const failed = [];
   try {

@@ -47,7 +47,7 @@ export function pack(run, panel = 'v3', arm = 'v3', renderTool) {
       const target = path.join(dir,label+'.'+t.ext); fs.copyFileSync(source,target);
       key[t.id][label] = {arm:source===a?arm:'plain', sha256:hash(target)};
       if (t.ext==='html') {
-        execFileSync(process.execPath,[renderTool,target,path.join(dir,label)],{cwd:path.dirname(path.dirname(renderTool)),stdio:'pipe',timeout:120000});
+        execFileSync(process.execPath,[renderTool,target,path.join(dir,label)],{cwd:process.cwd(),stdio:'pipe',timeout:120000});
         key[t.id][label].screenshots = {};
         for (const size of ['phone','desktop']) { const file=path.join(dir,`${label}-${size}.png`); if(!fs.existsSync(file)) throw Error('Screenshot missing'); key[t.id][label].screenshots[size]=hash(file); }
       }

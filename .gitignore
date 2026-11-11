@@ -54,6 +54,7 @@ site/.copyable-build/
 !/tools/release.mjs
 !/tools/qa/
 !/tools/evals/
+!/tools/bench/
 !/tools/package.json
 !/tools/package-lock.json
 !/tools/.gitkeep

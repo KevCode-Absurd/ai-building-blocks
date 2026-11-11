@@ -395,7 +395,7 @@ test('the grounded-job-protocol skill states the same weights, candidates and ga
 
 test('the shared method lists are identical in the library and the agents app', async () => {
   const packs = await import('../../marketplace/src/modules/packs/families.ts');
-  for (const name of ['WORD_BUDGETS', 'PROVEN_LEVERS', 'CANDIDATE_AXES', 'CANDIDATES', 'CRAFT_METHODS', 'SKILL_ADDRESS', 'COMPLETENESS', 'CONTEXT_LEVELS', 'CONTEXT_NEED']) {
+  for (const name of ['WORD_BUDGETS', 'PROVEN_LEVERS', 'CANDIDATE_AXES', 'CANDIDATES', 'CRAFT_METHODS', 'SKILL_ADDRESS', 'COMPLETENESS', 'CONTEXT_LEVELS', 'CONTEXT_NEED', 'HANDOVER_FINISH']) {
     assert.ok(packs[name] && grounding[name], name);
     assert.deepEqual(JSON.parse(JSON.stringify(packs[name])), JSON.parse(JSON.stringify(grounding[name])), name);
   }

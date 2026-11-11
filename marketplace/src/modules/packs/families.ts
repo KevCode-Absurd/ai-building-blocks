@@ -357,6 +357,13 @@ export const WORD_BUDGETS: Record<DeliverableFamily, string> = {
 };
 
 /**
+ * What every hand-over also meets (the same as grounding.mjs HANDOVER_FINISH). In the 11 Nov 2026 benchmark, work
+ * that left blanks or ran 2 to 4 times longer than a plain answer lost on clarity; complete proposals and a length
+ * near the plain answer won 88% of 128 blind verdicts.
+ */
+export const HANDOVER_FINISH = "No blanks or placeholders: what needs sign-off is a complete proposal marked \"Proposal: confirm before use\". At most 1.3 times a plain one-pass answer's words, never over 1.6 unless the brief asks; tools/check-handover.mjs passes.";
+
+/**
  * Proven conversion levers by family (the same as grounding.mjs PROVEN_LEVERS). The blind test also found plain
  * output sometimes added a strong lever (star ratings) that grounded work left out, so the job checks for them.
  */
@@ -376,7 +383,7 @@ export const PROVEN_LEVERS: Partial<Record<DeliverableFamily, string[]>> = {
 export function familyGates(family: DeliverableFamily): string[] {
   const levers = PROVEN_LEVERS[family], complete = COMPLETENESS[family];
   return [
-    `The hand-over fits: the work first, opened by 3 to 5 lines, with nothing internal in it. ${WORD_BUDGETS[family]} Supporting detail goes in an appendix inside the deliverable, never in a file the client does not have.`,
+    `The hand-over fits: the work first, opened by 3 to 5 lines, with nothing internal in it. ${WORD_BUDGETS[family]} ${HANDOVER_FINISH} Supporting detail goes in an appendix inside the deliverable, never in a file the client does not have.`,
     ...(levers ? [`Proven levers checked on the live asset, each marked present, missing or not applicable: ${levers.join("; ")}. Each missing one is added from real data, or skipped with a reason. The marks stay in your notes, not in the deliverable.`] : []),
     ...(complete ? [`Format complete: ${complete.join("; ")}.`] : []),
   ];

@@ -100,6 +100,7 @@ export const TOOL_FILES: { name: string; purpose: string }[] = [
   { name: "ai-default-patterns.md", purpose: "The named AI defaults to avoid unless chosen on purpose." },
   { name: "brand-file.mjs", purpose: "Keeps the client's living brand file in context/brand-file/: status says what is stale, slice takes only what a job needs, learn records what the client kept or killed." },
   { name: "compare-candidates.mjs", purpose: "Puts 2 to 4 candidates side by side at desktop and phone width, labelled A to D, for an outside pick (Node; Playwright for the PNG sheets)." },
+  { name: "check-handover.mjs", purpose: "Checks a finished deliverable before hand-over: nothing internal or unfinished a reader would see, and its length against a plain answer (plain Node)." },
 ];
 
 /**

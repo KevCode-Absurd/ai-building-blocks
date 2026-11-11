@@ -107,7 +107,7 @@ export const COMMON_GATES = Object.freeze([
   { id: 'no_invented_numbers', gate: 'No invented numbers. A working figure is allowed only for planning numbers the client will tune (budgets, targets, test sizes), with the sum shown; never in anything a buyer reads, and never as a revenue forecast.' },
   { id: 'access_respected', gate: 'Access respected: read, draft, or publish within the agreed limits.' },
   { id: 'no_fillable_placeholders', gate: 'No placeholder that capture could have filled, and none that blocks the client from using the work.' },
-  { id: 'hand_over_budget', gate: 'Hand-over fits: the work first, opened by 3 to 5 lines (what this is, the main decision and why, what to check before use), inside its word budget. One recommendation, never a menu. Nothing internal: no process sections, lever checklists, agent names, file names, access levels or method words. Supporting detail goes in an appendix inside the deliverable, never in a file the client does not have, such as DECISIONS.md or knowledge.md.' },
+  { id: 'hand_over_budget', gate: 'Hand-over fits: the work first, opened by 3 to 5 lines (what this is, the main decision and why, what to check before use), inside its word budget and at most 1.3 times the words of a plain one-pass answer (never over 1.6 unless the brief asks). One recommendation, never a menu. No blanks or placeholders: what needs sign-off is a complete proposal marked "Proposal: confirm before use". Nothing internal: no process sections, lever checklists, agent names, file names, access levels or method words. Supporting detail goes in an appendix inside the deliverable, never in a file the client does not have, such as DECISIONS.md or knowledge.md.' },
 ]);
 /**
  * Word budgets by deliverable kind. The 9 Nov 2026 blind test found grounded work scored lower on clarity than plain
@@ -381,6 +381,12 @@ export const CAPTURE_TOOLS = Object.freeze([
   { file: 'compare-candidates.mjs', skill: 'make-three-first-screens', path: 'scripts/compare-candidates.mjs', use: 'CANDIDATES step, for work a buyer sees: puts 2 to 4 candidates (HTML, a URL, SVG or images) side by side under the labels A, B, C, so a fresh reviewer can look and choose. Use --shuffle, and keep compare.key.json from the reviewer until they have picked.' },
 ]);
 export const MARKETPLACE_TOOLS_BASE = 'https://agents.useaiblocks.com/tools/';
+/**
+ * What every hand-over also meets (the same as marketplace families.ts HANDOVER_FINISH). In the 11 Nov 2026 benchmark,
+ * work that left blanks or ran 2 to 4 times longer than a plain answer lost on clarity; complete proposals and a length
+ * near the plain answer won 88% of 128 blind verdicts.
+ */
+export const HANDOVER_FINISH = 'No blanks or placeholders: what needs sign-off is a complete proposal marked "Proposal: confirm before use". At most 1.3 times a plain one-pass answer\'s words, never over 1.6 unless the brief asks; tools/check-handover.mjs passes.';
 export const GJP_SKILLS = Object.freeze({ protocol: 'grounded-job-protocol', capture: 'brand-dna-capture', fidelity: 'brand-fidelity-check', defaults: 'ai-default-patterns' });
 
 /** Capture spec per family: what goes into context/ and how. */
@@ -665,7 +671,7 @@ export function prepareJobContext(input = {}, context = {}) {
       craft_floor: [...CRAFT_RULES],
       completeness: complete,
       craft_rubric: rubric, gates,
-      hand_over: { opening: 'The work comes first, in the format asked for. Open with 3 to 5 lines: what this is, the main decision you made and why, and what to check before use.', word_budget: WORD_BUDGETS[kind] ?? WORD_BUDGETS.other, readable: 'Headings state the point. Sentences are short. Tables are for comparisons only.', detail_goes_to: ['an appendix inside the deliverable'], never_in_the_deliverable: ['process sections', 'lever checklists', 'rejected candidates', 'agent or persona names', 'file names such as knowledge.md or DECISIONS.md', 'access levels', 'method vocabulary'], never_point_to: ['DECISIONS.md', 'knowledge.md', 'other working files'] },
+      hand_over: { opening: 'The work comes first, in the format asked for. Open with 3 to 5 lines: what this is, the main decision you made and why, and what to check before use.', word_budget: WORD_BUDGETS[kind] ?? WORD_BUDGETS.other, finish: HANDOVER_FINISH, check_tool: MARKETPLACE_TOOLS_BASE + 'check-handover.mjs', readable: 'Headings state the point. Sentences are short. Tables are for comparisons only.', detail_goes_to: ['an appendix inside the deliverable'], never_in_the_deliverable: ['process sections', 'lever checklists', 'rejected candidates', 'agent or persona names', 'file names such as knowledge.md or DECISIONS.md', 'access levels', 'method vocabulary'], never_point_to: ['DECISIONS.md', 'knowledge.md', 'other working files'] },
       proven_levers: levers,
       defaults_to_avoid: defaults, defaults_source: patterns.length ? `catalogue:${GJP_SKILLS.defaults}/patterns.json` : 'embedded:DESIGN.md AI-default list',
       next: { team: { tool: 'start_job', arguments: { request, deliverable_kind: kind, ...(siteUrl ? { site_url: siteUrl } : {}), ...(typeof input.has_existing_asset === 'boolean' ? { has_existing_asset: input.has_existing_asset } : {}) } }, single: { tool: 'start_job', arguments: { request, deliverable_kind: kind, ...(siteUrl ? { site_url: siteUrl } : {}), ...(typeof input.has_existing_asset === 'boolean' ? { has_existing_asset: input.has_existing_asset } : {}) }, then: `Load the lead it names with its next_action.tool. ${NO_SEARCH}` } },

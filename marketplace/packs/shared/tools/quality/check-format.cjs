@@ -15,7 +15,7 @@ try {
   const failures = []; let checks = 0;
   const assert = (ok, message) => { checks++; if (!ok) failures.push(message); };
   const visible = raw.replace(/<!--[\s\S]*?-->/g, '').replace(/<script[\s\S]*?<\/script>/gi, '').replace(/<style[\s\S]*?<\/style>/gi, '');
-  const clean = text => text.replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/[*_`]/g, '').trim();
+  const clean = text => text.replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\*\*([^*]+)\*\*/g, '$1').replace(/(?<!\w)__([^_]+)__(?!\w)/g, '$1').replace(/\*([^*]+)\*/g, '$1').replace(/(?<!\w)_([^_]+)_(?!\w)/g, '$1').replace(/`([^`]+)`/g, '$1').trim();
   let codeFence = false;
   const native = visible.split(/\r?\n/).filter(line => { if (/^\s*(```|~~~)/.test(line)) { codeFence = !codeFence; return false; } return !codeFence; }).join('\n');
   const headings = [...native.matchAll(/^#{1,6}\s+(.+)$/gm)].map(m => clean(m[1]));

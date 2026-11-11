@@ -50,3 +50,9 @@ test('a heading shown only in a code example cannot satisfy a native heading req
   const contract=put('heading.json',JSON.stringify({required_headings:['Required heading']}));
   assert.equal(run('quality/check-format.cjs',file,'--contract',contract).status,1);
 });
+test('native field names retain underscores and visible link labels use their own length',()=>{
+  const file=put('field-names.md','| field_name | Body |\n|---|---|\n| **order_id** | [Go](https://example.com/long-path) |\n');
+  const contract=put('field-names.json',JSON.stringify({tables:[{headers:['field_name','Body'],rows:1,max_chars:{field_name:8,Body:2}}]}));
+  const r=run('quality/check-format.cjs',file,'--contract',contract);
+  assert.equal(r.status,0,r.stdout+r.stderr);
+});

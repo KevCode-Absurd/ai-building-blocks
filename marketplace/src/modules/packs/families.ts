@@ -361,7 +361,7 @@ export const WORD_BUDGETS: Record<DeliverableFamily, string> = {
  * that left blanks or ran 2 to 4 times longer than a plain answer lost on clarity; complete proposals and a length
  * near the plain answer won 88% of 128 blind verdicts.
  */
-export const HANDOVER_FINISH = "No blanks or placeholders: what needs sign-off is a complete proposal marked \"Proposal: confirm before use\". At most 1.3 times a plain one-pass answer's words, never over 1.6 unless the brief asks; tools/check-handover.mjs passes.";
+export const HANDOVER_FINISH = "No blanks or placeholders. Put sign-offs once in To confirm outside publishable copy. Follow the matched quality family profile aim, ceiling and shape; the brief can ask for more. tools/check-handover.mjs with --profile <family> passes, along with the applicable v3 clarity, proof and visual checks.";
 
 /**
  * Proven conversion levers by family (the same as grounding.mjs PROVEN_LEVERS). The blind test also found plain

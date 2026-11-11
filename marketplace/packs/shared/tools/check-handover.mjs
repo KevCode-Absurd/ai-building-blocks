@@ -7,12 +7,25 @@
 //    placeholders, TBD or UNKNOWN. For HTML it reads the text a visitor sees and flags elements that look like notes.
 // 2. Length: the words a reader sees, against the plain answer written from the brief alone. Up to 1.3 times is the
 //    aim; over 1.6 times fails unless the brief asked for more. --one-page fails over about 450 words.
+// --profile <family> uses the shipped v3 family aim and ceiling. Legacy calls retain their old limits.
+// --requested-more records that the brief explicitly requests more; it waives only the ratio ceiling.
 // It exits 1 when anything fails, so it can gate a hand-over. Plain Node, no packages.
 import { readFileSync } from "node:fs";
 
 const args = process.argv.slice(2);
 const onePage = args.includes("--one-page");
-const [file, plain] = args.filter(a => !a.startsWith("--"));
+const profileAt = args.indexOf("--profile");
+const profileName = profileAt >= 0 ? args[profileAt + 1] : null;
+let limits = { aim: 1.3, ceiling: 1.6 };
+if (profileAt >= 0) {
+  const profiles = JSON.parse(readFileSync(new URL("./quality/profiles.json", import.meta.url), "utf8"));
+  if (!profileName || !Object.hasOwn(profiles, profileName)) {
+    console.error("Unknown or missing quality family profile."); process.exit(2);
+  }
+  limits = profiles[profileName];
+}
+const requestedMore = args.includes("--requested-more");
+const [file, plain] = args.filter((a, i) => !a.startsWith("--") && !(profileAt >= 0 && i === profileAt + 1));
 if (!file) {
   console.error("Usage: node tools/check-handover.mjs <deliverable> [plain-answer] [--one-page]");
   process.exit(2);
@@ -55,8 +68,8 @@ if (plain) {
   const p = words(visibleText(plain, readFileSync(plain, "utf8")));
   const ratio = p ? n / p : 0;
   lengthNote += `, ${ratio.toFixed(2)} times the plain answer (${p} words)`;
-  if (ratio > 1.6) problems.push(`length: ${ratio.toFixed(2)} times the plain answer; cut to 1.3 times or less unless the brief asked for more`);
-  else if (ratio > 1.3) lengthNote += "; over the 1.3 aim, so check every part is one the reader will use";
+  if (ratio > limits.ceiling && !requestedMore) problems.push(`length: ${ratio.toFixed(2)} times the plain answer; family ceiling ${limits.ceiling}. Cut toward ${limits.aim} unless the brief asked for more`);
+  else if (ratio > limits.aim) lengthNote += `; over the ${limits.aim} aim, so check every part is one the reader will use`;
 }
 if (onePage && n > 450) problems.push(`length: ${n} words is more than one page (about 450)`);
 

@@ -13,7 +13,7 @@ const API_PREFIXES = ["/api/", "/mcp", "/oauth/", "/.well-known/"];
  * Files the Worker writes outside /api: an agent's personality (/agents/<id>/soul.md), one skill in one file
  * (/agents/<id>/skills/<skill>.txt) and the capture tools (/tools/<file>). wrangler.jsonc run_worker_first sends them here.
  */
-const WORKER_FILES = /^\/agents\/[^/]+\/soul\.md$|^\/agents\/[^/]+\/skills\/[^/]+\.txt$|^\/tools\/[^/]+$/;
+const WORKER_FILES = /^\/agents\/[^/]+\/soul\.md$|^\/agents\/[^/]+\/skills\/[^/]+\.txt$|^\/tools\/(?:quality\/(?:cards\/)?)?[^/]+$/;
 
 export async function handleFetch(req: Request, env: Env, exec: ExecutionContext): Promise<Response> {
   const url = new URL(req.url);

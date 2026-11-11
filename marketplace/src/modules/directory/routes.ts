@@ -1,6 +1,6 @@
 // API routes for the directory module. Paths and owners are listed in ARCHITECTURE.md.
 // Every route is public: no sign-in, and nothing private (method, source_roles, look) or priced ever leaves them.
-import { fail, json, str, type Route } from "../../core/http.ts";
+import { fail, json, str, type Route, type Ctx } from "../../core/http.ts";
 import type { Env } from "../../env.ts";
 import { AREAS } from "../../core/types.ts";
 import { getRole } from "./roles.ts";
@@ -33,6 +33,15 @@ function textFile(body: string, status: number, type: string, cache = true): Res
       ...(cache ? PUBLIC_CACHE : { "cache-control": "no-store" }),
     },
   });
+}
+
+async function toolFile(ctx: Ctx, name: string): Promise<Response> {
+  const tool = TOOL_FILES.find(t => t.name === name);
+  if (!tool) return textFile('There is no tool at this address.\n', 404, 'text/plain', false);
+  const text = await builtFile(ctx.env, ctx.env.APP_ORIGIN, `/packs/tools/${tool.name}`);
+  if (text === null) return textFile(`${tool.name} is not published in this build.\n`, 404, 'text/plain', false);
+  const type = name.endsWith('.md') ? 'text/markdown' : name.endsWith('.json') ? 'application/json' : 'text/javascript';
+  return textFile(text, 200, type);
 }
 
 /** What /api/agents/:id returns, or null for an unknown or hidden agent. The website's profile page (src/pages.ts) sends
@@ -130,15 +139,10 @@ export const routes: Route[] = [
   {
     // The capture and check tools every pack links to (context/README.md), served from the built packs with their
     // own content types. Only the names in TOOL_FILES are answered.
-    method: "GET", path: "/tools/:file", handler: async ctx => {
-      const origin = ctx.env.APP_ORIGIN.replace(/\/+$/, "");
-      const tool = TOOL_FILES.find(t => t.name === ctx.params.file);
-      if (!tool) return textFile(`There is no tool at this address. The tools are: ${TOOL_FILES.map(t => `${origin}/tools/${t.name}`).join(", ")}\n`, 404, "text/plain", false);
-      const text = await builtFile(ctx.env, ctx.env.APP_ORIGIN, `/packs/tools/${tool.name}`);
-      if (text === null) return textFile(`${tool.name} is not published yet. Capture by hand for now: WORK-METHOD.md, step 1, route 3.\n`, 404, "text/plain", false);
-      return textFile(text, 200, tool.name.endsWith(".md") ? "text/markdown" : "text/javascript");
-    },
+    method: "GET", path: "/tools/:file", handler: ctx => toolFile(ctx, ctx.params.file),
   },
+  { method: 'GET', path: '/tools/quality/:file', handler: ctx => toolFile(ctx, `quality/${ctx.params.file}`) },
+  { method: 'GET', path: '/tools/quality/cards/:file', handler: ctx => toolFile(ctx, `quality/cards/${ctx.params.file}`) },
   {
     // One skill of an agent with the files the agent reads first, in one text file for chat apps: a smaller start
     // than the whole agent (/packs/<id>.txt). Assembled from the built pack; nothing runs a model.

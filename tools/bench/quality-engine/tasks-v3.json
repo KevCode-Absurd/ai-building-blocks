@@ -1,0 +1,354 @@
+[
+  {
+    "id": "T01",
+    "idx": 0,
+    "brand": "gruns",
+    "set": "gruns-dev",
+    "ext": "md",
+    "kind": "ads",
+    "brief": "I run marketing at Grüns (gruns.co). Write 5 Meta ad concepts for a cold US audience that has never tried a greens product. For each: primary text, headline, and a description of the image.",
+    "evaluation_set": "practice"
+  },
+  {
+    "id": "T02",
+    "idx": 1,
+    "brand": "gruns",
+    "set": "gruns-dev",
+    "ext": "html",
+    "kind": "landing page",
+    "brief": "I run marketing at Grüns (gruns.co). Make a landing page for our subscription that people land on from Meta ads aimed at people new to greens. Deliver it as one self-contained HTML file with the copy and simple styling.",
+    "evaluation_set": "practice"
+  },
+  {
+    "id": "T03",
+    "idx": 2,
+    "brand": "gruns",
+    "set": "gruns-dev",
+    "ext": "md",
+    "kind": "email",
+    "brief": "I run retention at Grüns (gruns.co). Write a 3-email welcome series for new subscribers whose goal is to cut cancellations in the first month.",
+    "evaluation_set": "practice"
+  },
+  {
+    "id": "T04",
+    "idx": 3,
+    "brand": "gruns",
+    "set": "gruns-dev",
+    "ext": "md",
+    "kind": "competitor analysis",
+    "brief": "Compare Grüns (gruns.co) with AG1, Bloom and Ritual on price per day, format, positioning and claims. Tell me where Grüns is weakest and what we should do about it.",
+    "evaluation_set": "practice"
+  },
+  {
+    "id": "T05",
+    "idx": 4,
+    "brand": "gruns",
+    "set": "gruns-dev",
+    "ext": "md",
+    "kind": "support macros",
+    "brief": "I lead customer support at Grüns (gruns.co). Write reply macros for our 6 most common ticket types.",
+    "evaluation_set": "practice"
+  },
+  {
+    "id": "T06",
+    "idx": 5,
+    "brand": "gruns",
+    "set": "gruns-dev",
+    "ext": "md",
+    "kind": "retail pitch",
+    "brief": "I'm on the sales team at Grüns (gruns.co). Write a one-page pitch to a Target buyer to expand our presence on their shelves.",
+    "evaluation_set": "practice"
+  },
+  {
+    "id": "T07",
+    "idx": 6,
+    "brand": "gruns",
+    "set": "gruns-dev",
+    "ext": "md",
+    "kind": "claims review",
+    "brief": "I'm at Grüns (gruns.co). Our team drafted these marketing claims. Review each for FDA/FTC risk and rewrite the risky ones: 1) 'Replaces your multivitamin.' 2) 'Boosts your immune system.' 3) 'Clinically proven to reduce bloating.' 4) '60 nutrient-dense ingredients in every pack.' 5) 'The same nutrition as 2 cups of vegetables.' 6) 'Doctors recommend Grüns.'",
+    "evaluation_set": "practice"
+  },
+  {
+    "id": "T08",
+    "idx": 7,
+    "brand": "gruns",
+    "set": "gruns-dev",
+    "ext": "md",
+    "kind": "experiment design",
+    "brief": "I'm the growth lead at Grüns (gruns.co). Design a pricing test for our subscription: what to test, the sample size, how long to run it, and how to read the result.",
+    "evaluation_set": "practice"
+  },
+  {
+    "id": "T09",
+    "idx": 8,
+    "brand": "gruns",
+    "set": "gruns-dev",
+    "ext": "md",
+    "kind": "creator brief",
+    "brief": "I'm at Grüns (gruns.co). Write the brief we send to TikTok creators who will make videos about Grüns.",
+    "evaluation_set": "practice"
+  },
+  {
+    "id": "T10",
+    "idx": 9,
+    "brand": "gruns",
+    "set": "gruns-dev",
+    "ext": "md",
+    "kind": "crisis response",
+    "brief": "I'm at Grüns (gruns.co). A TikTok video saying Grüns gummies are 'basically candy with too much sugar' is going viral. Write our response plan and the reply we post.",
+    "evaluation_set": "practice"
+  },
+  {
+    "id": "L01",
+    "idx": 10,
+    "brand": "linear",
+    "set": "linear-fresh",
+    "ext": "md",
+    "kind": "outbound sales",
+    "brief": "I'm on the sales team at Linear (linear.app). Write a 3-email cold outbound sequence to VPs of Engineering at Series B startups that currently use Jira.",
+    "evaluation_set": "practice"
+  },
+  {
+    "id": "L02",
+    "idx": 11,
+    "brand": "linear",
+    "set": "linear-fresh",
+    "ext": "md",
+    "kind": "help guide",
+    "brief": "I'm at Linear (linear.app). Write a help-center guide for teams moving from Jira to Linear.",
+    "evaluation_set": "practice"
+  },
+  {
+    "id": "L03",
+    "idx": 12,
+    "brand": "linear",
+    "set": "linear-fresh",
+    "ext": "md",
+    "kind": "pricing analysis",
+    "brief": "I'm at Linear (linear.app). Compare our pricing with Jira, Asana and Shortcut and recommend whether we should change the price of our Business plan.",
+    "evaluation_set": "practice"
+  },
+  {
+    "id": "L04",
+    "idx": 13,
+    "brand": "linear",
+    "set": "linear-fresh",
+    "ext": "md",
+    "kind": "job description",
+    "brief": "I'm hiring at Linear (linear.app). Write the job description for a Senior Product Designer.",
+    "evaluation_set": "practice"
+  },
+  {
+    "id": "L05",
+    "idx": 14,
+    "brand": "linear",
+    "set": "linear-fresh",
+    "ext": "md",
+    "kind": "webinar",
+    "brief": "I'm at Linear (linear.app). Write the outline and talk track for a 30-minute webinar on running product development cycles in Linear.",
+    "evaluation_set": "practice"
+  },
+  {
+    "id": "L06",
+    "idx": 15,
+    "brand": "linear",
+    "set": "linear-fresh",
+    "ext": "md",
+    "kind": "review reply",
+    "brief": "I'm at Linear (linear.app). A G2 review says Linear is 'too opinionated for large enterprises with complex workflows'. Write our public reply and what we should do internally.",
+    "evaluation_set": "practice"
+  },
+  {
+    "id": "A01",
+    "brand": "allbirds",
+    "kind": "paid social ads",
+    "ext": "md",
+    "brief": "I run paid social at Allbirds (https://www.allbirds.com). Our Black Friday Early Access sale is up to 70% off select styles, and I need a set of Meta ads (Facebook and Instagram) for it, mainly pushing the Tree Runner NZ and the new Cruiser Slip On to people who already know us. Give me the copy for each ad plus what the image or video should show.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "A02",
+    "brand": "allbirds",
+    "kind": "angry customer reply",
+    "ext": "md",
+    "brief": "I'm on the customer experience team at Allbirds (https://www.allbirds.com). A customer bought the Women's Runner NZ Slip On at $73.50 marked Final Sale, the size runs small for her, and she's now posted on Instagram and emailed us calling us greedy for refusing a return. Write the email reply I'll send her.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "A03",
+    "brand": "allbirds",
+    "kind": "supplier delay email",
+    "ext": "md",
+    "brief": "I manage sourcing at Allbirds (https://www.allbirds.com). Our merino wool yarn supplier just told us the next shipment will land three weeks late, which puts our spring Runner restock at risk. Draft the email I'll send their account manager asking for a firm date, a partial early shipment, and what they'll do to make up for it.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "A04",
+    "brand": "allbirds",
+    "kind": "product page copy",
+    "ext": "md",
+    "brief": "I'm a copywriter at Allbirds (https://www.allbirds.com). We're about to add the Men's Cruiser Slip On to the site at $105. Write the product page copy: name line, short description, the feature bullets and the materials and care section.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "A05",
+    "brand": "allbirds",
+    "kind": "internal returns policy",
+    "ext": "md",
+    "brief": "I lead customer experience at Allbirds (https://www.allbirds.com). Agents keep handling Final Sale return requests differently, especially for sizing problems, defects and gifts, and we need one clear internal policy before the Black Friday rush. Write the policy document I can hand to the team.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "A06",
+    "brand": "allbirds",
+    "kind": "lapsed customer survey",
+    "ext": "md",
+    "brief": "I work on the insights team at Allbirds (https://www.allbirds.com). We want to survey people who bought from us before 2024 but haven't ordered since, to find out why they stopped and what would bring them back. Write the survey.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "R01",
+    "brand": "ramp",
+    "kind": "LinkedIn ad campaign",
+    "ext": "md",
+    "brief": "I run demand gen at Ramp (https://ramp.com). I want a LinkedIn campaign aimed at controllers and CFOs at 200 to 1,000 person companies still on legacy expense tools, pushing a demo of Ramp Plus. Write the ads I can load into Campaign Manager.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "R02",
+    "brand": "ramp",
+    "kind": "procurement landing page",
+    "ext": "html",
+    "brief": "I'm a product marketer at Ramp (https://ramp.com). We need a landing page for the Procurement add-on on the Plus plan (automated POs, three-way match, vendor compliance reviews) aimed at finance leaders tired of chasing approvals. Build it as one self-contained HTML file I can share with our web team.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "R03",
+    "brand": "ramp",
+    "kind": "product release notes",
+    "ext": "md",
+    "brief": "I'm a PM at Ramp (https://ramp.com). We're shipping an update to Policy Agents so they can now review out-of-policy travel bookings before the trip and suggest a cheaper option to the employee. Write the release notes we'll post in the product changelog and send to admins.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "R04",
+    "brand": "ramp",
+    "kind": "hiring scorecard",
+    "ext": "md",
+    "brief": "I'm hiring an Implementation Manager for our Enterprise segment at Ramp (https://ramp.com), someone who'll run rollouts with NetSuite and Workday customers. Put together the interview scorecard the panel will use.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "R05",
+    "brand": "ramp",
+    "kind": "expense policy template",
+    "ext": "md",
+    "brief": "I work on content at Ramp (https://ramp.com). A lot of our free-tier customers are 50 to 200 person startups writing their first travel and expense policy. Write a ready-to-use expense policy template they can adapt.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "R06",
+    "brand": "ramp",
+    "kind": "analytics data request",
+    "ext": "md",
+    "brief": "I'm on the growth team at Ramp (https://ramp.com). I need to ask our data team to pull what's driving customers on the Free plan to upgrade to Plus over the last 12 months. Write up the data request so they can get started without a meeting.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "S01",
+    "brand": "sweetgreen",
+    "kind": "menu price test",
+    "ext": "md",
+    "brief": "I'm on the menu strategy team at Sweetgreen (https://www.sweetgreen.com). We're thinking about adding a lower-priced smaller bowl to give guests a cheaper way in, and I need a plan for testing the price point in a handful of markets before we roll it out. Write it up for my VP.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "S02",
+    "brand": "sweetgreen",
+    "kind": "rewards welcome emails",
+    "ext": "md",
+    "brief": "I run CRM at Sweetgreen (https://www.sweetgreen.com). Write the welcome email series for people who just joined SG Rewards in our app, aimed at getting them to their second and third orders.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "S03",
+    "brand": "sweetgreen",
+    "kind": "Outpost landing page",
+    "ext": "html",
+    "brief": "I work on B2B marketing at Sweetgreen (https://www.sweetgreen.com). We need a landing page for Outpost, our daily batch delivery to offices, aimed at office managers and HR leads choosing a lunch option for their team. Make it one self-contained HTML file.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "S04",
+    "brand": "sweetgreen",
+    "kind": "shift opening checklist",
+    "ext": "md",
+    "brief": "I'm a general manager opening a new Sweetgreen (https://www.sweetgreen.com) restaurant with an Infinite Kitchen next month. I need the opening and closing shift checklists my team leads will follow every day.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "S05",
+    "brand": "sweetgreen",
+    "kind": "landlord lease email",
+    "ext": "md",
+    "brief": "I handle real estate at Sweetgreen (https://www.sweetgreen.com). Traffic at one of our suburban mall locations has dropped a lot since the anchor tenant left, and the lease renewal is coming up in six months. Draft the email to the landlord opening a conversation about lower rent or a percentage-rent deal.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "S06",
+    "brand": "sweetgreen",
+    "kind": "new menu training plan",
+    "ext": "md",
+    "brief": "I run training for the Northeast region at Sweetgreen (https://www.sweetgreen.com). We're adding new wraps to the menu and I need a training plan to get every restaurant team ready in the two weeks before launch.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "D01",
+    "brand": "duolingo",
+    "kind": "subscription price change",
+    "ext": "md",
+    "brief": "I'm on the monetization team at Duolingo (https://www.duolingo.com). We're considering raising the annual Super price in the US and want a recommendation on whether to do it, by how much, and what it would do to conversions and churn. Write the analysis for our leadership review.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "D02",
+    "brand": "duolingo",
+    "kind": "win-back email series",
+    "ext": "md",
+    "brief": "I run lifecycle marketing at Duolingo (https://www.duolingo.com). Write the email series for learners who lost a streak of 100+ days and haven't opened the app in two weeks.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "D03",
+    "brand": "duolingo",
+    "kind": "press reply statement",
+    "ext": "md",
+    "brief": "I'm in communications at Duolingo (https://www.duolingo.com). A reporter is writing a story saying our shift to AI-generated courses has made lesson quality worse and pushed out contractors, and she wants our comment by end of day. Write the statement we'll send her.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "D04",
+    "brand": "duolingo",
+    "kind": "push notification copy",
+    "ext": "md",
+    "brief": "I'm a growth PM at Duolingo (https://www.duolingo.com). We're launching streak reminders for learners taking the chess course and need a set of push notifications in Duo's voice. Write them.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "D05",
+    "brand": "duolingo",
+    "kind": "quarterly leadership update",
+    "ext": "md",
+    "brief": "I lead the math and music courses team at Duolingo (https://www.duolingo.com). I need to write our quarterly update for the leadership team covering where engagement stands, what we shipped, what slipped and what we're asking for next quarter. Draft it so I can fill in our actual numbers.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "D06",
+    "brand": "duolingo",
+    "kind": "lesson story script",
+    "ext": "md",
+    "brief": "I'm a learning designer on the Spanish course at Duolingo (https://www.duolingo.com). Write a Duolingo Story for beginner learners (around unit 3) where two characters order food at a market, with the comprehension questions that pop up along the way.",
+    "evaluation_set": "held-out"
+  }
+]

@@ -83,7 +83,7 @@ function readTextFiles(dir, warnings, label) {
   for (const rel of walk(dir)) {
     if (/(^|\/)\.[^/]*$/.test(rel)) continue; // dotfiles such as .DS_Store
     // Tool fallbacks in packs/shared/tools/ may be scripts (see "Capture and check tools" below).
-    const toolScript = label === "packs/shared" && /^tools\/[^/]+\.(mjs|js)$/i.test(rel);
+    const toolScript = label === "packs/shared" && /^tools\/.+\.(mjs|cjs|js)$/i.test(rel);
     if (!TEXT.test(rel) && !toolScript) { warnings.push(`${label}/${rel}: not a text file, left out`); continue; }
     files[rel] = readFileSync(path.join(dir, rel), "utf8");
   }

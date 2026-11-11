@@ -101,6 +101,49 @@ export const TOOL_FILES: { name: string; purpose: string }[] = [
   { name: "brand-file.mjs", purpose: "Keeps the client's living brand file in context/brand-file/: status says what is stale, slice takes only what a job needs, learn records what the client kept or killed." },
   { name: "compare-candidates.mjs", purpose: "Puts 2 to 4 candidates side by side at desktop and phone width, labelled A to D, for an outside pick (Node; Playwright for the PNG sheets)." },
   { name: "check-handover.mjs", purpose: "Checks a finished deliverable before hand-over: nothing internal or unfinished a reader would see, and its length against a plain answer (plain Node)." },
+  { name: "quality/QUALITY-ENGINE-v3.md", purpose: "Quality Engine v3: QUALITY-ENGINE-v3.md" },
+  { name: "quality/CHECKER-v3.md", purpose: "Quality Engine v3: CHECKER-v3.md" },
+  { name: "quality/CLARITY.md", purpose: "Quality Engine v3: CLARITY.md" },
+  { name: "quality/INTAKE.md", purpose: "Quality Engine v3: INTAKE.md" },
+  { name: "quality/ROUTING.md", purpose: "Quality Engine v3: ROUTING.md" },
+  { name: "quality/PROFILES.md", purpose: "Quality Engine v3: PROFILES.md" },
+  { name: "quality/profiles.json", purpose: "Quality Engine v3: profiles.json" },
+  { name: "quality/PROOF.md", purpose: "Quality Engine v3: PROOF.md" },
+  { name: "quality/VISUAL.md", purpose: "Quality Engine v3: VISUAL.md" },
+  { name: "quality/VOICE.md", purpose: "Quality Engine v3: VOICE.md" },
+  { name: "quality/OUTCOME-SIGNALS.md", purpose: "Quality Engine v3: OUTCOME-SIGNALS.md" },
+  { name: "quality/lessons-general.md", purpose: "Quality Engine v3: lessons-general.md" },
+  { name: "quality/wordcount.cjs", purpose: "Quality Engine v3: wordcount.cjs" },
+  { name: "quality/readability.cjs", purpose: "Quality Engine v3: readability.cjs" },
+  { name: "quality/proof.cjs", purpose: "Quality Engine v3: proof.cjs" },
+  { name: "quality/render.cjs", purpose: "Quality Engine v3: render.cjs" },
+  { name: "quality/leakcheck.cjs", purpose: "Quality Engine v3: leakcheck.cjs" },
+  { name: "quality/cards/_any.md", purpose: "Quality Engine v3: cards/_any.md" },
+  { name: "quality/cards/claims-review.md", purpose: "Quality Engine v3: cards/claims-review.md" },
+  { name: "quality/cards/competitor-analysis.md", purpose: "Quality Engine v3: cards/competitor-analysis.md" },
+  { name: "quality/cards/creator-brief.md", purpose: "Quality Engine v3: cards/creator-brief.md" },
+  { name: "quality/cards/crisis-response.md", purpose: "Quality Engine v3: cards/crisis-response.md" },
+  { name: "quality/cards/experiment-design.md", purpose: "Quality Engine v3: cards/experiment-design.md" },
+  { name: "quality/cards/help-docs.md", purpose: "Quality Engine v3: cards/help-docs.md" },
+  { name: "quality/cards/INDEX.md", purpose: "Quality Engine v3: cards/INDEX.md" },
+  { name: "quality/cards/investor-update.md", purpose: "Quality Engine v3: cards/investor-update.md" },
+  { name: "quality/cards/job-description.md", purpose: "Quality Engine v3: cards/job-description.md" },
+  { name: "quality/cards/landing-page.md", purpose: "Quality Engine v3: cards/landing-page.md" },
+  { name: "quality/cards/launch-plan.md", purpose: "Quality Engine v3: cards/launch-plan.md" },
+  { name: "quality/cards/lifecycle-email.md", purpose: "Quality Engine v3: cards/lifecycle-email.md" },
+  { name: "quality/cards/onboarding-flow.md", purpose: "Quality Engine v3: cards/onboarding-flow.md" },
+  { name: "quality/cards/outbound-sales.md", purpose: "Quality Engine v3: cards/outbound-sales.md" },
+  { name: "quality/cards/paid-social-ads.md", purpose: "Quality Engine v3: cards/paid-social-ads.md" },
+  { name: "quality/cards/partnership-pitch.md", purpose: "Quality Engine v3: cards/partnership-pitch.md" },
+  { name: "quality/cards/pricing.md", purpose: "Quality Engine v3: cards/pricing.md" },
+  { name: "quality/cards/product-announcement.md", purpose: "Quality Engine v3: cards/product-announcement.md" },
+  { name: "quality/cards/research-design.md", purpose: "Quality Engine v3: cards/research-design.md" },
+  { name: "quality/cards/review-replies.md", purpose: "Quality Engine v3: cards/review-replies.md" },
+  { name: "quality/cards/sales-pitch.md", purpose: "Quality Engine v3: cards/sales-pitch.md" },
+  { name: "quality/cards/seo-article.md", purpose: "Quality Engine v3: cards/seo-article.md" },
+  { name: "quality/cards/social-calendar.md", purpose: "Quality Engine v3: cards/social-calendar.md" },
+  { name: "quality/cards/support-macros.md", purpose: "Quality Engine v3: cards/support-macros.md" },
+  { name: "quality/cards/webinar-script.md", purpose: "Quality Engine v3: cards/webinar-script.md" },
 ];
 
 /**
@@ -315,7 +358,7 @@ For each task, find what to use in toolbox.md, choose at your own discretion and
 
 ## How you work
 
-- Ask once, in one short numbered message, five questions at most, for what capture cannot tell you.
+- Ask once, in one short numbered message, three questions at most, for what capture cannot tell you.
 - Never ask for passwords, API keys or card numbers. Ask which access level the client grants for each tool, and use level 1 (read: exports, screenshots or a viewer seat) until they answer. Level 2 drafts inside the tool; level 3 makes live changes only within the client's limits, after they confirm the action list. Log every action.
 - Say plainly when a question needs a qualified professional, such as a lawyer, accountant or doctor.
 
@@ -505,7 +548,7 @@ const REQUIRED_TEMPLATES: Record<PackKind, string[]> = {
  * Points every tools/<file> reference at the pack's own copy when it has one, else at the public copy
  * (<origin>/tools/<file>), so a pack never names a file it does not hold.
  */
-const TOOL_REF = /(?<![\w/.-])tools\/([a-z0-9][a-z0-9.-]*\.(?:mjs|js|md))\b/g;
+const TOOL_REF = /(?<![\w/.-])tools\/((?:[A-Za-z0-9_-]+\/)*[A-Za-z0-9_][A-Za-z0-9_.-]*\.(?:mjs|cjs|js|md|json))\b/g;
 const FENCE = "```";
 
 /**
@@ -1481,7 +1524,7 @@ export function packZip(pack: BuiltPack): Promise<Uint8Array> {
 }
 
 /** A capture or check script: in the zip and files.json, never inlined in a one-file text. */
-const isToolScript = (path: string) => /^tools\/.+\.(mjs|js)$/.test(path);
+const isToolScript = (path: string) => /^tools\/.+\.(mjs|cjs|js)$/.test(path);
 
 /** The setup guide, the pointer for Claude Code and the record files are for people and tools, not the agent. */
 // QUALITY-METHOD.md is only for hosts that call the AI Blocks MCP job tools, and those load it through MCP: a chat

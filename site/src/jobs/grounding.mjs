@@ -8,6 +8,7 @@
 
 import { intakeQuestions } from './intake-questions.mjs';
 import { brandFileStep } from './brand-file.mjs';
+import { qualityEngineContext } from './quality-engine.mjs';
 
 const list = value => Array.isArray(value) ? value : [];
 const text = value => typeof value === 'string' && value.trim().length > 0;
@@ -386,7 +387,7 @@ export const MARKETPLACE_TOOLS_BASE = 'https://agents.useaiblocks.com/tools/';
  * work that left blanks or ran 2 to 4 times longer than a plain answer lost on clarity; complete proposals and a length
  * near the plain answer won 88% of 128 blind verdicts.
  */
-export const HANDOVER_FINISH = 'No blanks or placeholders: what needs sign-off is a complete proposal marked "Proposal: confirm before use". At most 1.3 times a plain one-pass answer\'s words, never over 1.6 unless the brief asks; tools/check-handover.mjs passes.';
+export const HANDOVER_FINISH = "No blanks or placeholders. Put sign-offs once in To confirm outside publishable copy. Follow the matched quality family profile aim, ceiling and shape; the brief can ask for more. tools/check-handover.mjs with --profile <family> passes, along with the applicable v3 clarity, proof and visual checks.";
 export const GJP_SKILLS = Object.freeze({ protocol: 'grounded-job-protocol', capture: 'brand-dna-capture', fidelity: 'brand-fidelity-check', defaults: 'ai-default-patterns' });
 
 /** Capture spec per family: what goes into context/ and how. */
@@ -550,11 +551,11 @@ export function skillPreamble(item = {}) {
   ] : [
     'SPEC: write the one-screen spec sheet first (prepare_job_context returns it pre-filled): who must do what after seeing this, the deliverables with counts, and 5 to 7 acceptance tests the client would ask of the finished work. Ask its questions in one message; each has a default.',
     'GROUND what those tests need: capture the client\'s live site into context/brand-dna.json and give every fact a buyer will read a dated source. Check the thing being sold is live, in stock and at that price at the link you use.',
-    'CANDIDATES: make about 3 real candidates of the part that decides the outcome, differing on two of promise, proof, structure, buyer moment, offer and visual world. This skill\'s fixed structures are options, not rules.',
+    'CANDIDATES: follow annex.quality_engine depth: expert and plain drafts at light or standard; add a real creative alternative only at full depth, or specialist parts at team depth. This skill\'s fixed structures are options, not rules.',
     `BUILD: give true facts a new framing and add no new facts. Decide; never hand over a menu. Name the AI defaults you will avoid (prepare_job_context lists them). ${TOOLBOX_ONLY}`,
     'CHECK with a fresh reviewer who sees only the brief, the work and the captured facts: each acceptance test pass or fail, every claim sourced or not. Remove unsourced claims. Hand over the work first, with nothing internal in it.',
   ];
-  return { title: 'Before you run this', kind, lines, tool: { name: 'prepare_job_context', arguments: { request: '<the user\'s request>', deliverable_kind: kind === 'assess' ? 'audit' : '<web_page|ad_creative|copy|email>' } }, precedence: 'The spec sheet and the client\'s captured context override this method\'s defaults on look and structure; they never override truth or permission rules.' };
+  return { title: 'Before you run this', kind, lines, quality_engine: { version: '3', method_url: qualityEngineContext().method_url }, tool: { name: 'prepare_job_context', arguments: { request: '<the user\'s request>', deliverable_kind: kind === 'assess' ? 'audit' : '<web_page|ad_creative|copy|email>' } }, precedence: 'The spec sheet and the client\'s captured context come first. Read prepare_job_context annex.quality_engine for family shape, length, clarity, proof and visual checks before using generic defaults. Truth and permission rules always apply.' };
 }
 
 /** The craft floor: what the build must clear whatever the kind of work. */
@@ -625,7 +626,7 @@ export function prepareJobContext(input = {}, context = {}) {
     : 'fit the existing system. Decide the approach yourself; hand over no menu.';
   const head = [
     `Job: ${kind}${resolved.source === 'suggested' ? ' (suggested; declare deliverable_kind if wrong)' : ''}. Mode: ${mode.mode}${mode.confirm ? ' (confirm it)' : ''}.`,
-    'SPEC: first fill annex.spec_sheet: the job, deliverables, 5 to 7 acceptance tests, decisions.',
+    'SPEC: follow annex.quality_engine; fill annex.spec_sheet: the job, deliverables, 5 to 7 acceptance tests, decisions.',
     ground,
     'TRUTH: every fact a reader sees needs a dated source; cut what has none, never flag it.',
   ];
@@ -652,7 +653,8 @@ export function prepareJobContext(input = {}, context = {}) {
   return {
     schema: 'ai-blocks-job-context/1', brief,
     annex: {
-      read: 'Act on the brief. Open the annex parts it names (spec_sheet, questions, completeness, proven_levers, brand_context) and reviewer before each review. Save the whole annex as context/job-context.json.',
+      read: 'Read quality_engine first for draft depth, family shape and length, clarity, proof and visual checks. It governs the generic defaults below while existing truth, access and delivery gates still apply. Act on the brief. Open the annex parts it names (spec_sheet, questions, completeness, proven_levers, brand_context) and reviewer before each review. Save the whole annex as context/job-context.json.',
+      quality_engine: qualityEngineContext(request, kind),
       request_verbatim: request, deliverable_kind: kind, kind_source: resolved.source, suggestion: resolved.suggestion, family,
       mode_default: mode, site_url: siteUrl ?? null, category: typeof input.category === 'string' ? input.category.slice(0, 80) : null,
       spec_sheet: spec,

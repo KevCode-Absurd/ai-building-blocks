@@ -247,7 +247,7 @@ test('get_skill preamble qualifies creative, page, ad, copy, email, audit and an
   assert.equal(skillPreambleKind({ slug: 'docker-compose-setter', task: 'ship-and-host' }), null);
   const create = skillPreamble({ slug: 'store-hero-section-writer', task: 'write-landing-page' });
   assert.equal(create.title, 'Before you run this'); assert.equal(create.lines.length, 5);
-  for (const pattern of [/^SPEC: .*5 to 7 acceptance tests/, /^GROUND .*live, in stock and at that price/, /^CANDIDATES: make about 3 real candidates/, /add no new facts.*defaults you will avoid/, /^CHECK with a fresh reviewer .*Remove unsourced claims/]) assert.ok(create.lines.some(line => pattern.test(line)), String(pattern));
+  for (const pattern of [/^SPEC: .*5 to 7 acceptance tests/, /^GROUND .*live, in stock and at that price/, /^CANDIDATES: follow annex\.quality_engine depth/, /add no new facts.*defaults you will avoid/, /^CHECK with a fresh reviewer .*Remove unsourced claims/]) assert.ok(create.lines.some(line => pattern.test(line)), String(pattern));
   assert.equal(create.tool.name, 'prepare_job_context');
   const assess = skillPreamble({ slug: 'ad-account-audit', task: 'read-ad-results' });
   assert.equal(assess.lines.length, 5);

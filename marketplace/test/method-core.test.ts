@@ -34,14 +34,14 @@ test("WORK-METHOD.md is under 1,000 words and still covers every part of the met
     ["format completeness", /\*\*Finish the format\.\*\* Ads:[\s\S]*Emails:[\s\S]*Plans:[\s\S]*Pages:/],
     ["client's-eye check", /## 5\. Check: the client's-eye review\n\nA fresh reviewer \(as in step 3\) gets only the client's brief, the finished deliverable and `context\/facts\.md`/],
     ["hand-over shape", /The work comes first, opened by 3 to 5 lines[\s\S]*Nothing internal reaches the client[\s\S]*appendix inside the deliverable/],
-    ["rules I learned", /Add a lesson that would help every client to "Rules I learned" in playbook\.md/],
+    ["rules I learned", /Add shared lessons to "Rules I learned" in playbook\.md/],
     // The Quality Engine v2.1 rules (11 Nov 2026 benchmark: 88% of 128 blind verdicts against a plain model).
     ["expert and playbook", /\*\*Expert and playbook:\*\*[\s\S]*One is the expert's standard playbook done excellently; clever ones must beat it\./],
     ["plain yardstick and final pick", /plain one-pass answer from the brief alone: the yardstick[\s\S]*the reviewer picks, unlabelled, between the deliverable and the plain answer/],
-    ["facts versus proposals", /\*\*Facts and proposals differ\.\*\*[\s\S]*"Proposal: confirm before use"[\s\S]*Never blanks or placeholders\./],
-    ["length against the plain answer", /\*\*Length follows use:\*\*[\s\S]*1\.3 times the plain answer's words, never over 1\.6/],
+    ["facts versus proposals", /\*\*Facts and proposals differ\.\*\*[\s\S]*"To confirm"[\s\S]*Never blanks or placeholders\./],
+    ["length against the plain answer", /\*\*Length follows use:\*\*[\s\S]*family profile[\s\S]*ceiling is never a target/],
     ["fresh facts", /Re-check on the day facts that change/],
-    ["hand-over check tool", /Run `node tools\/check-handover\.mjs <deliverable> <plain answer>` and fix every hit\./],
+    ["hand-over check tool", /Run `node tools\/check-handover\.mjs <deliverable> <plain answer> --profile <family>` and fix every hit\./],
   ];
   for (const [name, re] of parts) assert.match(METHOD, re, name);
   // Other pack files point at these steps by number: ground is step 1, the gates and craft are step 5, learning is step 6.

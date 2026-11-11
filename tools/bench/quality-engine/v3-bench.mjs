@@ -74,7 +74,7 @@ export function tally(run, panel = 'v3', expectedJudges = ['j1','j2','i1','i2'])
       if(hash(file)!==labels[label].sha256) throw Error('Judged deliverable changed: '+p.id);
       for(const [size,digest] of Object.entries(labels[label].screenshots ?? {})) if(hash(path.join(run,'judge',panel,p.id,`${label}-${size}.png`))!==digest) throw Error('Judged screenshot changed: '+p.id);
     }
-    return {id:p.id,judge:r.judge,panel:r.judge.startsWith('i')?'independent brief':'original brief',set:['gruns','linear'].includes(tasks.find(t=>t.id===p.id).brand)?'practice':'held-out',win:p.winner===a,tie:p.winner==='tie',engine:p[a],plain:p[b]};
+    return {id:p.id,judge:r.judge,panel:r.judge.startsWith('i')?'independent brief':'original brief',set:tasks.find(t=>t.id===p.id).evaluation_set ?? (['gruns','linear'].includes(tasks.find(t=>t.id===p.id).brand)?'practice':'held-out'),win:p.winner===a,tie:p.winner==='tie',engine:p[a],plain:p[b]};
   }));
   const interval = data => {
     const clusters = [...new Set(data.map(x=>x.id))].map(id=>data.filter(x=>x.id===id));

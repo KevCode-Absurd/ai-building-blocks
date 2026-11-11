@@ -61,8 +61,8 @@ test("every seat pack grounds the job first with the work method", () => {
   const outline = role.files["WORK-METHOD.md"];
   assert.match(outline, /0\. Frame: write context\/spec\.md/);
   assert.match(outline, /1\. Ground: capture only what the acceptance tests depend on/);
-  assert.match(outline, /3\. Diverge: make about 3 real candidates[^\n]+a fresh reviewer picks/);
-  assert.match(outline, /6\. Hand over the work first, opened by 3 to 5 lines/);
+  assert.match(outline, /3\. Diverge: expert and plain drafts[^\n]+A fresh reviewer picks/);
+  assert.match(outline, /6\. Hand over the native work first, with context only when needed/);
   assert.doesNotMatch(outline, /job-card|2 or 3 directions/);
 });
 

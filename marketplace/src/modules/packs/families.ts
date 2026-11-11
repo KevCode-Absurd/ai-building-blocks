@@ -361,7 +361,7 @@ export const WORD_BUDGETS: Record<DeliverableFamily, string> = {
  * that left blanks or ran 2 to 4 times longer than a plain answer lost on clarity; complete proposals and a length
  * near the plain answer won 88% of 128 blind verdicts.
  */
-export const HANDOVER_FINISH = "No blanks or placeholders. Put sign-offs once in To confirm outside publishable copy. Follow the matched quality family profile aim, ceiling and shape; the brief can ask for more. tools/check-handover.mjs with --profile <family> passes, along with the applicable v3 clarity, proof and visual checks.";
+export const HANDOVER_FINISH = "No unintended blanks or placeholders; preserve explicitly requested template fields with --requested-template. Put sign-offs once in To confirm outside publishable copy. Follow the matched quality family profile aim, ceiling and shape; the brief can ask for more. tools/check-handover.mjs with --profile <family> passes, along with the applicable v3 clarity, proof and visual checks.";
 
 /**
  * Proven conversion levers by family (the same as grounding.mjs PROVEN_LEVERS). The blind test also found plain
@@ -383,7 +383,7 @@ export const PROVEN_LEVERS: Partial<Record<DeliverableFamily, string[]>> = {
 export function familyGates(family: DeliverableFamily): string[] {
   const levers = PROVEN_LEVERS[family], complete = COMPLETENESS[family];
   return [
-    `The hand-over fits: the work first, opened by 3 to 5 lines, with nothing internal in it. ${WORD_BUDGETS[family]} ${HANDOVER_FINISH} Supporting detail goes in an appendix inside the deliverable, never in a file the client does not have.`,
+    `The hand-over fits: the native work first, with context only when needed, with nothing internal in it. ${WORD_BUDGETS[family]} ${HANDOVER_FINISH} Supporting detail goes in an appendix inside the deliverable, never in a file the client does not have.`,
     ...(levers ? [`Proven levers checked on the live asset, each marked present, missing or not applicable: ${levers.join("; ")}. Each missing one is added from real data, or skipped with a reason. The marks stay in your notes, not in the deliverable.`] : []),
     ...(complete ? [`Format complete: ${complete.join("; ")}.`] : []),
   ];

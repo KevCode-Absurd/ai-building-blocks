@@ -27,3 +27,9 @@
 - "We're excited to announce", "We're thrilled"
 - "At the end of the day", "Here's the thing"
 - Stacked triplets of adjectives, rhetorical-question openers, closing "Ready to...?" lines
+
+## Channel-native short copy
+
+Match the channel, not merely the company. Use one or two short public examples from that channel as private references; describe their voice traits instead of recycling campaign lines. A push needs a lock-screen reason to act, a support reply resolves the actual problem, and an internal update starts with the decision. Generic cheerful encouragement is not a substitute for the brand's characteristic language.
+
+The final fresh reader checks the native piece without its setup notes. Keep compliant disclosure where it belongs, but do not turn every variant into the same dense notice. Keep platform-field limits in the brief-derived output contract, verified from the brief or a current primary specification.

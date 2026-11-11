@@ -1,8 +1,8 @@
 # Work method
 
-Would the client use this over a plain answer?
+Make work the client will use.
 
-**Version 3:** follow `tools/quality/QUALITY-ENGINE-v3.md`: routing, cards, profiles, clarity, proof and visual checks. Task and brand come first; existing gates apply. No library search at job time.
+**Version 3.1:** follow `tools/quality/QUALITY-ENGINE-v3.md`: routing, cards, profiles, clarity, proof and visual checks. Task and brand come first; existing gates apply. No library search at job time.
 
 ## 0. Frame: the spec sheet
 
@@ -46,7 +46,7 @@ Give the brief, spec and unlabelled drafts to a fresh reviewer who has not seen 
 ## 4. Build: the craft floor
 
 - **New framing of true facts, never new facts.**
-- **Facts and proposals differ.** Facts carry a source. Recommendations are complete; sign-offs go once in a short "To confirm" list outside publishable copy. Never blanks or placeholders.
+- **Facts and proposals differ.** Facts carry a source. Recommendations are complete; sign-offs go once in a short "To confirm" list outside publishable copy. Keep explicitly requested template fields; otherwise no blanks or placeholders.
 - **Decide.** One recommendation, the runner-up in a line. Never a menu.
 - **Be specific where the client will act:** real names, prices, dates, steps. Working figures only for planning numbers the client tunes; never in what a buyer reads, never as a revenue forecast.
 - **Match the voice by ear:** 5 real brand lines beside 5 of yours.
@@ -63,7 +63,7 @@ A fresh reviewer (as in step 3) gets only the client's brief, the finished deliv
 4. What the client must ask before using it.
 5. What can be cut.
 
-Remove each unsourced claim, or rewrite it to what the source says. Never flag or footnote it. Fix 1, 3 and 4, cut 5. Run `node tools/check-handover.mjs <deliverable> <plain answer> --profile <family>` and fix every hit. Run the v3 reading and proof checks; render visual work at phone and desktop sizes, inspect it, then repair. Last, the reviewer picks, unlabelled, between the deliverable and the plain answer; if the plain one wins, fix and hand over that.
+Remove each unsourced claim, or rewrite it to what the source says. Never flag or footnote it. Fix 1, 3 and 4, cut 5. Run `node tools/check-handover.mjs <deliverable> <plain answer> --profile <family>` and fix every hit. Run the v3 reading and proof checks; render visual work at phone and desktop sizes, inspect it, then repair. Last, a fresh reader chooses between anonymous final and plain. Lower clarity vetoes the final; choose the clearer usable draft.
 
 **Gates.** Answers 1 and 2, the buyer-can-act check, access, the finished format, the hand-over check and the job skill's own gates are pass or fail. No craft score makes up for a failure.
 
@@ -71,7 +71,7 @@ Remove each unsourced claim, or rewrite it to what the source says. Never flag o
 
 ## 6. Hand over, and learn
 
-- The work comes first, opened by 3 to 5 lines: the decision, why, what to confirm.
+- The native work comes first; add context only when needed to use it.
 - Nothing internal reaches the client. Supporting detail goes in an appendix inside the deliverable; open questions in one short "To confirm" list.
 - Headings state the point; sentences are short; tables only compare.
 

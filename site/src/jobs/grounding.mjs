@@ -32,7 +32,7 @@ export const GJP_STEPS = Object.freeze([
   { id: 'diverge', name: 'Real candidates, someone else chooses', do: 'Make about 3 candidates of the part that decides the outcome, as real work, differing on at least two of promise, proof, structure, buyer moment, offer and visual world. A fresh reviewer answers each acceptance test per candidate, picks one and names what to take from the others. One extra round at most.' },
   { id: 'build', name: 'Build to the craft floor', do: 'Give true facts a new framing and add no new facts. Every piece earns its place commercially. Decide; never hand over a menu. Working figures only for planning numbers the client will tune, with the sum shown. Finish the format\'s completeness list.' },
   { id: 'check', name: 'Client\'s-eye check', do: 'A fresh reviewer gets only the brief, the deliverable and the captured facts. They answer each acceptance test with the proving line, mark every claim sourced or not, and name the weakest piece, what the client would have to ask, and what can be cut. Remove unsourced claims, fix, cut, stop.' },
-  { id: 'record', name: 'Hand over', do: 'The work first, opened by 3 to 5 lines: what this is, the main decision and why, what to check before use. Nothing internal reaches the client. Keep working notes in DECISIONS.md.' },
+  { id: 'record', name: 'Hand over', do: 'The native work first; add context only when needed to use it. Nothing internal reaches the client. Keep working notes in DECISIONS.md.' },
 ]);
 const AUDIT_STEP_OVERRIDES = Object.freeze({
   ground: 'Pull the real account or data snapshot through the client connector at read level into context/ (for example context/data-snapshot.json), with its source and date. Pull only what the acceptance tests depend on.',
@@ -108,7 +108,7 @@ export const COMMON_GATES = Object.freeze([
   { id: 'no_invented_numbers', gate: 'No invented numbers. A working figure is allowed only for planning numbers the client will tune (budgets, targets, test sizes), with the sum shown; never in anything a buyer reads, and never as a revenue forecast.' },
   { id: 'access_respected', gate: 'Access respected: read, draft, or publish within the agreed limits.' },
   { id: 'no_fillable_placeholders', gate: 'No placeholder that capture could have filled, and none that blocks the client from using the work.' },
-  { id: 'hand_over_budget', gate: 'Hand-over fits: the work first, opened by 3 to 5 lines (what this is, the main decision and why, what to check before use), inside its word budget and at most 1.3 times the words of a plain one-pass answer (never over 1.6 unless the brief asks). One recommendation, never a menu. No blanks or placeholders: what needs sign-off is a complete proposal marked "Proposal: confirm before use". Nothing internal: no process sections, lever checklists, agent names, file names, access levels or method words. Supporting detail goes in an appendix inside the deliverable, never in a file the client does not have, such as DECISIONS.md or knowledge.md.' },
+  { id: 'hand_over_budget', gate: 'Hand-over fits the requested native format, count and family profile. The brief can request intentional template fields or more depth. Keep setup outside customer-facing copy and omit unneeded preambles. No unrequested scope or invented actuals. Nothing internal: no process sections, agent names, file names, access levels or method words. A fresh final reader must find clarity at least as strong as plain; truth, access and delivery gates still apply.' },
 ]);
 /**
  * Word budgets by deliverable kind. The 9 Nov 2026 blind test found grounded work scored lower on clarity than plain
@@ -387,7 +387,7 @@ export const MARKETPLACE_TOOLS_BASE = 'https://agents.useaiblocks.com/tools/';
  * work that left blanks or ran 2 to 4 times longer than a plain answer lost on clarity; complete proposals and a length
  * near the plain answer won 88% of 128 blind verdicts.
  */
-export const HANDOVER_FINISH = "No blanks or placeholders. Put sign-offs once in To confirm outside publishable copy. Follow the matched quality family profile aim, ceiling and shape; the brief can ask for more. tools/check-handover.mjs with --profile <family> passes, along with the applicable v3 clarity, proof and visual checks.";
+export const HANDOVER_FINISH = "No unintended blanks or placeholders; preserve explicitly requested template fields with --requested-template. Put sign-offs once in To confirm outside publishable copy. Follow the matched quality family profile aim, ceiling and shape; the brief can ask for more. tools/check-handover.mjs with --profile <family> passes, along with the applicable v3 clarity, proof and visual checks.";
 export const GJP_SKILLS = Object.freeze({ protocol: 'grounded-job-protocol', capture: 'brand-dna-capture', fidelity: 'brand-fidelity-check', defaults: 'ai-default-patterns' });
 
 /** Capture spec per family: what goes into context/ and how. */
@@ -555,7 +555,7 @@ export function skillPreamble(item = {}) {
     `BUILD: give true facts a new framing and add no new facts. Decide; never hand over a menu. Name the AI defaults you will avoid (prepare_job_context lists them). ${TOOLBOX_ONLY}`,
     'CHECK with a fresh reviewer who sees only the brief, the work and the captured facts: each acceptance test pass or fail, every claim sourced or not. Remove unsourced claims. Hand over the work first, with nothing internal in it.',
   ];
-  return { title: 'Before you run this', kind, lines, quality_engine: { version: '3', method_url: qualityEngineContext().method_url }, tool: { name: 'prepare_job_context', arguments: { request: '<the user\'s request>', deliverable_kind: kind === 'assess' ? 'audit' : '<web_page|ad_creative|copy|email>' } }, precedence: 'The spec sheet and the client\'s captured context come first. Read prepare_job_context annex.quality_engine for family shape, length, clarity, proof and visual checks before using generic defaults. Truth and permission rules always apply.' };
+  return { title: 'Before you run this', kind, lines, quality_engine: { version: '3.1', method_url: qualityEngineContext().method_url }, tool: { name: 'prepare_job_context', arguments: { request: '<the user\'s request>', deliverable_kind: kind === 'assess' ? 'audit' : '<web_page|ad_creative|copy|email>' } }, precedence: 'The spec sheet and the client\'s captured context come first. Read prepare_job_context annex.quality_engine for family shape, length, clarity, proof and visual checks before using generic defaults. Truth and permission rules always apply.' };
 }
 
 /** The craft floor: what the build must clear whatever the kind of work. */
@@ -604,6 +604,8 @@ const AVOID_RESERVE = 150;
 export function prepareJobContext(input = {}, context = {}) {
   const request = String(input.request ?? '').trim();
   const resolved = resolveDeliverableKind(input.deliverable_kind, request), kind = resolved.kind, family = familyOf(kind);
+  const quality = qualityEngineContext(request, kind);
+  const draftPlan = quality.depth === 'full' ? 'Expert and plain drafts, plus one real creative alternative.' : quality.depth === 'team' ? 'Specialist parts integrated by one lead, plus a plain draft.' : 'One expert draft and one plain request-only draft.';
   const siteUrl = typeof input.site_url === 'string' && /^https?:\/\/[^\s]+$/i.test(input.site_url) ? input.site_url : undefined;
   const mode = resolveMode({ request, site_url: siteUrl, has_existing_asset: input.has_existing_asset, kind });
   const patterns = normalizePatterns(context.patterns), defaults = defaultsFor(kind, patterns);
@@ -631,10 +633,10 @@ export function prepareJobContext(input = {}, context = {}) {
     'TRUTH: every fact a reader sees needs a dated source; cut what has none, never flag it.',
   ];
   const tail = [
-    `CANDIDATES: ${candidatesFor(kind)}${selling ? ` Differ on two of: ${CANDIDATE_AXES.join(', ')}.` : ''} A fresh reviewer picks.${method ? ` Your toolbox has "${method.name}".` : ''}`,
+    `CANDIDATES: ${audit ? candidatesFor(kind) : "Follow annex.quality_engine depth and annex.candidates; make real work."} A fresh reviewer picks.${method ? ` Your toolbox has "${method.name}".` : ''}`,
     `BUILD: ${build}${ticks.length ? ` Tick ${ticks.join(' and ')}.` : ''}`,
     'CHECK: a fresh reviewer with only the brief, the work and the facts answers each test and marks each claim sourced or not. Fix, cut, stop.',
-    `HAND-OVER: the work first, opened by 3 to 5 lines. ${WORD_BUDGETS[kind] ?? WORD_BUDGETS.other} Nothing internal; detail in an appendix, never in a file the client does not have.`,
+    `HAND-OVER: native work first; setup only if needed. ${WORD_BUDGETS[kind] ?? WORD_BUDGETS.other} Nothing internal; detail in an appendix, never in a file the client does not have.`,
   ];
   // Under 1,500 characters: the fixed lines first, then room kept for AVOID, then as many questions as fit in full.
   let room = 1500 - [...head, ...tail].join('\n').length - 2;
@@ -654,7 +656,7 @@ export function prepareJobContext(input = {}, context = {}) {
     schema: 'ai-blocks-job-context/1', brief,
     annex: {
       read: 'Read quality_engine first for draft depth, family shape and length, clarity, proof and visual checks. It governs the generic defaults below while existing truth, access and delivery gates still apply. Act on the brief. Open the annex parts it names (spec_sheet, questions, completeness, proven_levers, brand_context) and reviewer before each review. Save the whole annex as context/job-context.json.',
-      quality_engine: qualityEngineContext(request, kind),
+      quality_engine: quality,
       request_verbatim: request, deliverable_kind: kind, kind_source: resolved.source, suggestion: resolved.suggestion, family,
       mode_default: mode, site_url: siteUrl ?? null, category: typeof input.category === 'string' ? input.category.slice(0, 80) : null,
       spec_sheet: spec,
@@ -668,12 +670,12 @@ export function prepareJobContext(input = {}, context = {}) {
       production_gate: { requires: need, report_as: need.data_snapshot ? { grounding: { data_snapshot: { path: 'context/data-snapshot.json', sha256: '<sha256>', source: '<account or connector>', captured_at: '<ISO date>' } } } : need.brand_dna ? { grounding: { brand_dna: { path: 'context/brand-dna.json', sha256: '<sha256>', source: siteUrl ?? '<site URL>', captured_at: '<ISO date>', method: 'capture-brand-dna.mjs' }, taste_brief: { path: 'context/taste-brief.md', sha256: '<sha256>', brand_codes: ['<code>'], references_admired: ['<ref>', '<ref>'], reference_avoid: ['<ref>'], defaults_to_avoid: defaults.slice(0, 3).map(d => d.id), conventions_break: [] } } } : null, note: 'start_job and advance_job check this structure before PRODUCE. It is a host report, not proof of capture.' },
       truth: { rule: 'Every fact a reader sees needs a dated source. Cut what has none, or rewrite it to what the source says. Never flag it and leave it in.', method: craftMethod(CRAFT_METHODS.truth) },
       buyer_can_act: selling ? { check: 'Before you build, confirm the thing being sold is live, in stock in the sizes or variants that matter, at the stated price, at the link you will use.', if_not: 'Make the call yourself, build for the option that works, and say so in the first line of the hand-over.', method: craftMethod(CRAFT_METHODS.buyer) } : null,
-      candidates: { make: candidatesFor(kind), ...(method ? { method } : {}), ...(['web_page', 'ad_creative'].includes(kind) ? { when_the_look_is_open: craftMethod(CRAFT_METHODS.look) } : {}), ...(selling ? { compare_with: 'compare-candidates.mjs (annex.capture.tools): puts the candidates side by side under blind labels for the reviewer.' } : {}), as: 'Real work, not descriptions.', axes: selling ? [...CANDIDATE_AXES] : [], differ_on_at_least: selling ? 2 : null, reject: 'Candidates that differ only in colour, crop, wording or style label.', patch_mode: mode.mode === 'patch' ? 'Each candidate is the live asset as you would change it, with its ranked edits and their evidence.' : null },
+      candidates: { make: draftPlan, family_reference: candidatesFor(kind), ...(method ? { method } : {}), ...(['web_page', 'ad_creative'].includes(kind) ? { when_the_look_is_open: craftMethod(CRAFT_METHODS.look) } : {}), ...(selling ? { compare_with: 'compare-candidates.mjs (annex.capture.tools): puts the candidates side by side under blind labels for the reviewer.' } : {}), as: 'Real work, not descriptions.', axes: selling && quality.depth === 'full' ? [...CANDIDATE_AXES] : [], differ_on_at_least: selling && quality.depth === 'full' ? 2 : null, reject: 'Candidates that differ only in colour, crop, wording or style label.', patch_mode: mode.mode === 'patch' ? 'Each candidate is the live asset as you would change it, with its ranked edits and their evidence.' : null },
       reviewer: { who: REVIEWER.who, choose: { ...REVIEWER.choose, method: craftMethod(CRAFT_METHODS.choose) }, clients_eye: { ...REVIEWER.clients_eye, method: craftMethod(CRAFT_METHODS.check) } },
       craft_floor: [...CRAFT_RULES],
       completeness: complete,
       craft_rubric: rubric, gates,
-      hand_over: { opening: 'The work comes first, in the format asked for. Open with 3 to 5 lines: what this is, the main decision you made and why, and what to check before use.', word_budget: WORD_BUDGETS[kind] ?? WORD_BUDGETS.other, finish: HANDOVER_FINISH, check_tool: MARKETPLACE_TOOLS_BASE + 'check-handover.mjs', readable: 'Headings state the point. Sentences are short. Tables are for comparisons only.', detail_goes_to: ['an appendix inside the deliverable'], never_in_the_deliverable: ['process sections', 'lever checklists', 'rejected candidates', 'agent or persona names', 'file names such as knowledge.md or DECISIONS.md', 'access levels', 'method vocabulary'], never_point_to: ['DECISIONS.md', 'knowledge.md', 'other working files'] },
+      hand_over: { opening: 'The native work comes first, in the format asked for. Add context only when needed to use it; keep setup notes outside customer-facing copy.', word_budget: WORD_BUDGETS[kind] ?? WORD_BUDGETS.other, finish: HANDOVER_FINISH, check_tool: MARKETPLACE_TOOLS_BASE + 'check-handover.mjs', readable: 'Headings state the point. Sentences are short. Tables are for comparisons only.', detail_goes_to: ['an appendix inside the deliverable'], never_in_the_deliverable: ['process sections', 'lever checklists', 'rejected candidates', 'agent or persona names', 'file names such as knowledge.md or DECISIONS.md', 'access levels', 'method vocabulary'], never_point_to: ['DECISIONS.md', 'knowledge.md', 'other working files'] },
       proven_levers: levers,
       defaults_to_avoid: defaults, defaults_source: patterns.length ? `catalogue:${GJP_SKILLS.defaults}/patterns.json` : 'embedded:DESIGN.md AI-default list',
       next: { team: { tool: 'start_job', arguments: { request, deliverable_kind: kind, ...(siteUrl ? { site_url: siteUrl } : {}), ...(typeof input.has_existing_asset === 'boolean' ? { has_existing_asset: input.has_existing_asset } : {}) } }, single: { tool: 'start_job', arguments: { request, deliverable_kind: kind, ...(siteUrl ? { site_url: siteUrl } : {}), ...(typeof input.has_existing_asset === 'boolean' ? { has_existing_asset: input.has_existing_asset } : {}) }, then: `Load the lead it names with its next_action.tool. ${NO_SEARCH}` } },

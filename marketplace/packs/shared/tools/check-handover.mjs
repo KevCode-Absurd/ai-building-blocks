@@ -25,6 +25,8 @@ if (profileAt >= 0) {
   limits = profiles[profileName];
 }
 const requestedMore = args.includes("--requested-more");
+const requestedTemplate = args.includes("--requested-template");
+let acceptedTemplateFields = 0;
 const [file, plain] = args.filter((a, i) => !a.startsWith("--") && !(profileAt >= 0 && i === profileAt + 1));
 if (!file) {
   console.error("Usage: node tools/check-handover.mjs <deliverable> [plain-answer] [--one-page]");
@@ -58,7 +60,11 @@ const LEAKS = [
 text.split(/\r?\n/).forEach((line, i) => {
   for (const [re, what] of LEAKS) {
     const m = line.match(re);
-    if (m) problems.push(`line ${i + 1}: ${what} "${m[0]}": ${line.trim().slice(0, 100)}`);
+    if (m) {
+      const field = ["a placeholder", "a fill-in blank", "a blank to fill"].includes(what);
+      if (requestedTemplate && field && !/\[(?:INTERNAL|TODO|TBD|CONFIRM)\b/i.test(m[0])) acceptedTemplateFields++;
+      else problems.push(`line ${i + 1}: ${what} "${m[0]}": ${line.trim().slice(0, 100)}`);
+    }
   }
 });
 
@@ -74,6 +80,7 @@ if (plain) {
 if (onePage && n > 450) problems.push(`length: ${n} words is more than one page (about 450)`);
 
 console.log(`Hand-over check: ${lengthNote}.`);
+if (requestedTemplate) console.log(`Requested-template mode: ${acceptedTemplateFields} intentional field matches accepted; field completion is not claimed.`);
 if (problems.length) {
   console.log(`${problems.length} to fix:\n- ${problems.join("\n- ")}`);
   process.exitCode = 1;

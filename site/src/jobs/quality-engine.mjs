@@ -1,7 +1,7 @@
 // Model-free routing. The host confirms the family and depth against the brief.
 import { QUALITY_PROFILES } from './quality-profiles.mjs';
 
-export const QUALITY_ENGINE_VERSION = '3';
+export const QUALITY_ENGINE_VERSION = '3.1';
 const BASE = 'https://agents.useaiblocks.com/tools/quality/';
 const matches = [
   ['claims-review', /claims? (?:review|audit)|regulatory claims/i],
@@ -42,11 +42,12 @@ export function qualityEngineContext(request = '', kind = 'other') {
     card_url: BASE + 'cards/' + family + '.md', profiles_url: BASE + 'profiles.json',
     routing_url: BASE + 'ROUTING.md',
     drafts: depth === 'full' ? ['expert', 'plain', 'creative'] : depth === 'team' ? ['specialist parts integrated by lead', 'plain'] : ['expert', 'plain'],
-    checks: ['family must-haves', 'core design choice', 'clarity and reading level', 'dated claim sources', 'arithmetic and working links', 'visual inspection when applicable', 'hand-over leaks', 'blind final versus plain pick'],
-    tool_urls: Object.fromEntries(['wordcount', 'readability', 'proof', 'render', 'leakcheck'].map(name => [name, BASE + name + '.cjs'])),
+    checks: ['family must-haves', 'core design choice', 'clarity and reading level', 'dated claim sources', 'arithmetic and working links', 'visual inspection when applicable', 'hand-over leaks', 'fresh anonymous final choice with a native-piece clarity floor'],
+    tool_urls: Object.fromEntries(['wordcount', 'readability', 'proof', 'render', 'leakcheck', 'check-format'].map(name => [name, BASE + name + '.cjs'])),
     precedence: 'Task and brand first. This method governs draft depth and family length; existing truth, access and delivery gates still apply. No library search at job time. A same-context review is never independent.',
     length: 'The family ceiling is a cap, never a target. The brief can ask for more. Keep directly used customer copy no longer than the plain version.',
     learning: 'Only opted-in feedback proposes scoped changes. No feedback is stored by this response. Blind evaluation decides method changes.',
+    final_choice: { fresh_context: true, clarity_below_plain: 'VETO', requested_artifact_first: true, requested_template_fields: 'PRESERVE', no_fresh_reader: 'Plain base plus necessary verified repairs; disclose SAME-CONTEXT.' },
     assurance: 'Guidance and host-reported checks do not prove semantic quality, independent review, customer acceptance or business results.',
   };
 }

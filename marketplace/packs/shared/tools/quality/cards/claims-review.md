@@ -16,6 +16,8 @@ Families: claims-review; also: ad claims check, marketing compliance review, sub
 4. Hedges ("may help") that keep the same impression, or fine print contradicting the headline.
 5. Strips all persuasion, or invents evidence, certifications or citations.
 
+**READING ORDER:** Lead with the decision table and paste-ready wording. Keep rule detail and sources compact, after the usable review. Omit unrelated litigation or background history unless it changes the claim decision.
+
 **SHAPE:** Verdict summary first (claims found, high-risk count, top three fixes). Then a short table: claim, risk, verdict. Then per claim: where it appears, the rule in one or two lines, evidence needed, and a paste-ready rewrite. End with one short box on the evidence that would clear the open claims.
 
 **RULES AND RISKS:** Ads must not mislead by net impression and need proof before running. Health and efficacy claims generally need competent and reliable scientific evidence, usually controlled human studies. Comparisons need matching proof; vague green claims need specifics. Testimonials must reflect typical results and disclose material connections; no fake or sentiment-conditioned reviews. Food, supplements, cosmetics, medical, financial and children's products have sector rules; a disease claim can make a product a regulated drug. Check local rules.

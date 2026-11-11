@@ -1,69 +1,73 @@
-# The Quality Engine (v3)
+# The Quality Engine (v3.1)
 
-Goal: for any request, a result the person would choose over one plain attempt by the same model. Blind tests showed that clarity comes from short, plain sentences, not fewer words; the right depth beats more drafts; and each kind of job has its own must-haves and length.
+Goal: finished work the reader would choose over one plain attempt. The task, requested format and brand come first. Truth, access and action permissions always apply. All files below are under tools/quality/; client memory stays in context/brand-file/ in the client's own project.
 
-Engine files named below sit in tools/quality/. Company memory stays in the client project under context/brand-file/. The task and brand requirements take precedence over general style. A reviewer without a fresh context is recorded as SAME-CONTEXT, never independent.
+## Rules
 
-## Rules that hold at every step
+1. **Facts versus proposals.** Source and date facts. Recheck changing prices, offers, terms and product availability. Never invent actual results. State necessary proposals plainly; put sign-offs once in a short To confirm box outside publishable copy.
+2. **Deliver the requested artifact.** An email is the email; a fill-in update is the update with named fields. Advice about writing it is not the deliverable. Preserve fields explicitly requested for templates or per-customer macros. Otherwise no blanks, internal notes, method talk or unfinished markers.
+3. **Length follows use.** Match the family aim, ceiling, shape and reading time in profiles.json. The ceiling is not a target. The brief can ask for more. Direct customer copy stays no longer than plain unless the request requires it. A short, dense draft still loses.
+4. **Standard playbook first.** Use the assigned expert and already equipped toolbox; do not search the library at job time. Clever additions must earn their place. Do not change a product package, offer, audience or experimental variable beyond the ask.
+5. **Blind evidence decides changes.** Automated checks are diagnostics, not proof of clarity or factual truth. A fresh reviewer must make the final clarity choice; same-context critique is labelled honestly. Customer use and business results are separate from AI preference.
 
-1. **Facts vs proposals.** Facts are sourced and current; re-check anything time-sensitive (prices, offers, stock, locations, deal status, legal disputes, deadlines) live before use. Proposals (offers, owners, dates, budgets, numbers you recommend) are stated plainly and completely. Items that need sign-off are listed once in the "To confirm" box, not stamped inline. Mark a figure "estimate" or "proposed" only where a reader could take it for a fact. A finished deliverable never contains blanks, placeholders, bracket slots ("[Your name]"), [INTERNAL], TBD or UNKNOWN.
-2. **No internal notes.** No file names, workflow words, review tags, "checked live" stamps or notes to self. Open items and assumptions go in one short "To confirm" box at the end, outside any text meant to be published or sent; skip the box when nothing is open.
-3. **Length by family profile.** Its `ceiling` (times the plain draft's words) is a cap, never a target; pass it only when the brief asks for more. Its `aim` is the typical winning ratio, reached only with parts the reader will use. The piece the reader uses directly (an ad, email, buyer page, public reply) stays no longer than the plain draft's version; kits, tables and scripts follow under labels. "One page" means one printed page, about 450 words. A short, dense draft still loses.
-4. **Standard playbook first.** One draft is always what a top practitioner would normally do, done excellently. Clever moves that add risk lose.
-5. **The benchmark is the referee.** Changes ship only if they win the blind benchmark.
+## 1. Frame the actual job
 
-## Steps
+Write context/spec.md: reader, use, channel, hard constraints, success measure and time span, and what done means. Name the actual deliverable, counts, fields and acceptance tests. Inspect existing work before replacing it; patch by default unless new work is requested.
 
-Light depth uses the checker's quick check in step 4 and runs step 7 only when the piece has figures or links. Step 8 runs only for visual pieces. Every other step runs at every depth.
+Read INTAKE.md and ROUTING.md. Interactive use asks at most three costly unknowns, together, with defaults. One-shot use states reasonable assumptions and proceeds. Choose light, standard, full or team, with the deciding signal. Stakes add a claims check, not drafts or length.
 
-### 1. Intake and frame → contract.md
-- **Company memory:** facts.md, market.md, preferences.md, lessons.md, and voice.md if present.
-- **Intake (INTAKE.md):** write the six lines: reader, use, channel, constraints, success measure over the real time span, done. One-shot use: never ask; pick the assumption a top practitioner would pick and build on it fully. Interactive use: at most three questions, each with a default.
-- **Depth (ROUTING.md):** record one depth (light, standard, full, team) and the deciding signal. When torn, take the lower depth. Stakes add a claims gate to the check, never drafts or length. A reviewer (legal, claims, finance) checks; never writes.
-- **Family card:** match the request by family name or alias in cards/INDEX.md and read that card (cards/_any.md if none fits). Copy its must-haves and failure modes into the contract, leaving out any that do not apply to this request.
-- **Profile:** the same family in profiles.json (explained in PROFILES.md): aim, ceiling, shape, reader minutes. Where card and profile differ on length, the profile wins.
-- **Expert:** use the lead assigned to this job and its already equipped soul.md, playbook.md, skills.md and toolbox.md. Pick its tools at your discretion. For mixed work use the assigned helpers; do not search the library at job time.
-- **General lessons:** at standard depth and above, read the lessons-general.md entries that match this job.
-- **Playbook:** that expert's standard approach in 3-5 lines.
-- **Audience level** for the reading check: consumer, business or specialist.
+Match cards/INDEX.md and read the card; use cards/_any.md if none fits. Read its profile, the assigned lead's soul.md and, above light depth, playbook.md and selected skills. Write the expert's standard approach in three lines. Choose consumer, business or specialist reading level. Read only relevant scoped lessons.
 
-### 2. Ground → research.md
-Fill the missing facts. Re-check every time-sensitive fact live, with source and date. Compute every number in code with its base shown.
+## 2. Ground what the decision needs
 
-### 3. Drafts by depth
-- **Expert draft (all depths):** written as the named expert from the card, playbook and profile shape; meets each must-have, avoids each failure mode.
-- **Plain draft (all depths):** the request alone, no engine material. It is the yardstick for length, density and the final pick.
-- **Creative draft (full only):** a real alternative concept or structure that could beat the playbook.
-- **Team (team only):** specialists write the parts needing different experts; a lead integrates them into one voice and one length budget. A solo playbook draft and the plain draft still compete.
-- Light and standard: no third draft. At light depth each piece stays no longer than the plain draft's version.
+Take the smallest useful client-memory slice. Fill missing facts from primary sources, with dates. Recheck time-sensitive facts and actual link destinations. Compute numbers in code on one stated basis. If something cannot be verified, omit the claim or make its uncertainty clear outside customer copy.
 
-### 4. Check
-Run CHECKER-v3.md on all drafts, blind. It returns a ranking, the base draft and a merge plan. Light depth uses its quick check. At standard depth and above, it confirms the core design choice (metric and time span, audience, the main charge answered) before polish.
+For decisions, verify the core design before drafting: one question, a valid comparison, a denominator, and a useful time horizon. A price-only test keeps packaging fixed. Separate early signals from mature outcomes; do not turn an immediate decision into an unasked multi-year program.
 
-### 5. Base and merge
-Follow the CLARITY.md base rule: build on the clearest draft that can take the others' extra substance, grafting each part in as its own short sentence, bullet or table row. Otherwise start from the best draft and graft the strongest parts of the others, including the plain draft. Apply rules 1 and 3.
+## 3. Make real alternatives at the right depth
 
-### 6. Clarity edit
-- Follow CLARITY.md: answer in the first two sentences; one idea per sentence; plain words; headings and tables by length; no method talk; shared lines said once.
-- Shape and length: the profile's shape and reader minutes, at about 230 words a minute. Measure: `node tools/quality/wordcount.cjs <final> <plain>`
-- Reading level: `node tools/quality/readability.cjs <final> --audience <consumer|business|specialist>`. Fix exit 1 and meet the editor targets. Run it on the plain draft too: the final's long-sentence share and parentheses rate must not exceed the plain draft's.
-- Voice (VOICE.md) for customer-facing copy: the brand's channel voice, no generic AI phrases or no-go words, read aloud. For internal work, clarity beats house style.
+Every depth has an expert draft and a plain request-only draft. Full adds a distinct creative alternative. Team uses specialists only for parts needing different expertise, with one lead integrating them. Light and standard have no creative third draft. Candidates are actual work, never descriptions.
 
-### 7. Proof (PROOF.md)
-`node tools/quality/proof.cjs <final> --sources <research.md> <company memory files>`
-Add `--allow-external` only when the page is meant to load outside scripts or styles. Fix every FAIL; confirm, fix or label every WARN. Prove what the tool cannot: run code, recalculate spreadsheets, open key links. Re-run until 0 FAIL.
+Use CHECKER-v3.md on anonymous drafts. A fresh reader is preferred; otherwise label the internal review SAME-CONTEXT. Check the requested artifact, card must-haves, claims and core decision before polishing. Pick the clearest usable base and name only indispensable grafts.
 
-### 8. Visual review (VISUAL.md)
-For anything people look at (pages, emails with layout, decks, image ads): `node tools/quality/render.cjs <file.html> <out-prefix>`. Read every slice, phone first, as a senior designer seeing it cold. Fix, render and look again until the checklist passes on both sizes.
+## 4. Build the native piece first
 
-### 9. Hand-over check
-`node tools/quality/leakcheck.cjs <final>`. Fix every hit. Re-run the reading check if fixes changed the prose.
+Put the requested copy, page, checklist, template or decision first. Add setup notes only if needed to use it; keep them separate and avoid repeating the argument. No default preamble for self-explanatory short copy. Do not add contracts, fee proposals, packages or options just to look complete.
 
-### 10. Final pick against the plain draft
-Blind pairwise by CHECKER-v3.md: final and plain draft as unlabelled X and Y, order randomised. "Which would the reader use?" If the plain draft wins with no fact errors, give it the clarity edit, proof and hand-over check, and ship it instead.
+For support macros, use available order-system merge fields instead of asking the customer to repeat known details. Request only missing essentials. Never ask for a photo of an absent item. Policy wording, permitted actions and exception routes must be correct.
 
-### 11. Lessons
-Write one only when this job showed a concrete error or win it would have changed; otherwise skip. Lessons are scoped (this company, or this kind of job), two-sided (what won and what to avoid) and short. No lesson may push outputs longer, shorter or more defensive than the reader needs. Company lessons go in company/<slug>/lessons.md, general ones in lessons-general.md, length and shape lessons in the family profile, depth lessons in ROUTING.md.
+## 5. Edit for reading effort and channel
 
-## How the method learns over time (OUTCOME-SIGNALS.md)
-Opted-in users say whether they used the result as is, edited it, or threw it away, and later whether it worked. Counted by family, depth and engine version, these signals propose new defaults and lesson candidates; the blind benchmark decides.
+Follow CLARITY.md and VOICE.md: answer promptly, one idea per sentence, ordinary words, useful headings and narrow tables. Keep technical detail where the reader uses it; don't compress it into codes or slash stacks. Preserve necessary operating detail without surrounding the native piece with a manual.
+
+For customer-facing copy, compare channel-matched brand examples and write original lines in that voice. A push, support reply and leadership update need different registers. Generic cheerful filler is not brand voice. Check short copy aloud, then measure it.
+
+## 6. Run mechanical checks on the actual files
+
+- `node tools/quality/wordcount.cjs <final> <plain>`
+- `node tools/quality/readability.cjs <final> --audience <consumer|business|specialist>`
+- `node tools/quality/proof.cjs <final> --sources <research> <memory>`
+- `node tools/quality/check-format.cjs <final> --contract <output-contract.json>`
+- `node tools/quality/leakcheck.cjs <final>`
+
+The output contract comes from the brief, not the draft: required counts, headings, links and verified field limits. The format checker binds its report to both file hashes. Check Markdown header/delimiter/data widths; every requested row and field must survive rendering. Fix every failure; resolve warnings honestly. Offline proof does not check live destinations.
+
+Use --requested-template only when the request explicitly requires input fields. It accepts those fields, not internal notes, TODO, UNKNOWN or invented actuals. Do not claim that a template's future filled values were checked. Finish the hand-over check with the matched family profile.
+
+## 7. Look at visual work
+
+For pages, layout emails, decks and image ads, render and inspect phone first, then desktop. `node tools/quality/render.cjs <page.html> <prefix>` captures both; the host may set PW_CHANNEL to an installed browser. Read every slice, tables and expanded states. Check clipping, hierarchy, legibility, links and keyboard access. Repair and look again.
+
+## 8. Fresh final choice with a clarity floor
+
+Give a fresh reader only the original request and anonymous final/plain candidates in shuffled order, plus actual renders. Exclude origins, writer rationale and earlier outside verdicts. They check factual and requested-format gates, then the effort needed to read and use the native piece.
+
+Lower clarity vetoes a candidate even if its weighted total is higher. Choose the clearer usable work; break a clarity tie on usefulness. If neither is usable, make one narrow repair round and obtain a fresh check. Freeze the selected artifact unchanged. A later edit needs a new check.
+
+Without a fresh reader, use plain as the base plus only necessary verified fact or requirement repairs. Label SAME-CONTEXT; do not claim an independent gate or validated improvement.
+
+## 9. Hand over and learn narrowly
+
+Deliver the actual files and an honest verification receipt. Keep working notes and rejected drafts private. A To confirm box contains only unresolved decisions needed before use.
+
+Record a lesson only for a concrete error or win: its scope, what worked and what to avoid. Keep client corrections in that client's project. OUTCOME-SIGNALS.md describes opted-in local feedback; it adds no server endpoint. Test proposed method changes on fresh blind cases before promotion. No AI score establishes customer acceptance or business lift.

@@ -1,52 +1,34 @@
-# Checker brief (v3)
+# Checker brief (v3.1)
 
-You are the checker. You did not write any draft. You judge as two people at once:
-- **The person who asked**: busy, will use this tomorrow. Would I use it as is? Can I act on it in minutes?
-- **A top practitioner in this field** (the expert named in the contract and the family card's WHO line): is the judgment sound? Is this what a seasoned pro would do, or a clever move that creates new risk?
+Judge as the person who asked and as a seasoned practitioner. Read the original request and actual anonymous artifacts. A fresh checker did not write them and has not seen origins, writer rationale or previous outside verdicts. Otherwise label the review SAME-CONTEXT and do not certify an independent final gate.
 
-Files named below sit in tools/quality/.
+## Gates before scores
 
-## Quick check (light depth)
-For light jobs, skip the scoring below. For each draft: verify its facts and claims, run the reading and leak tools, mark the card's must-haves that apply, and ask whether it answers the reader's real worry first. Then pick the base and list at most three grafts.
+1. **Requested artifact.** The answer is the actual requested email, page, checklist, analysis or fill-in draft, with the right counts and fields. Writing instructions do not substitute for the artifact. Preserve input fields explicitly requested for templates or per-customer macros; never invent actual company results to fill them.
+2. **Truth.** Verify material changing facts with dated primary sources. Match evidence to the exact claim and recompute arithmetic. A confident wrong price, policy or regulated claim is serious. An honest uncertainty is different from a proven error. Missing private facts do not justify invented actuals.
+3. **Core decision.** Answer the actual question. Hold other factors fixed in a single-variable test. Match the metric, denominator and time span to the decision. Do not add an unrequested package, offer, audience, contract or long program to seem sophisticated.
+4. **Working format.** Run proof.cjs, check-format.cjs against a brief-derived contract, and leakcheck.cjs. Use --requested-template only for intentionally requested fields. Check table header/delimiter/data widths, links and actual rendered phone/desktop work. A source hash proves correspondence, not semantic quality.
 
-## How to judge (standard depth and above)
-1. Read each draft fully, as the reader would see it.
-2. Tool checks (do them, don't guess):
-   - Verify key facts (prices, numbers, dates, names, claims, policies) against company memory, research or a live fetch. Recompute math in code. Check HTML parses.
-   - Reading, every draft including the plain one: `node tools/quality/readability.cjs <draft> --audience <consumer|business|specialist>`
-   - Length: `node tools/quality/wordcount.cjs <draft> <plain>`
-   - Leaks: `node tools/quality/leakcheck.cjs <draft>`. Any hit is a defect.
-3. **Card check.** Open the family card (cards/INDEX.md; cards/_any.md if none fits). For each draft, mark every must-have that applies to this request met or missed, and every failure mode present or absent. A missed must-have costs a point in its dimension, most often usefulness. A failure mode present costs one or two points in judgment or accuracy, by its size.
-4. Score each draft 1-10 on:
-   - usefulness (25%): usable as is; complete (no blanks where a proposal was needed); the working parts the card asks for
-   - clarity (20%): as the reader experiences it (below)
-   - judgment (20%): sound expert call; the standard playbook done well beats clever-but-risky
-   - accuracy (20%): facts correct and current; unsupported claims or confident errors cost heavily; regulated claims compliant
-   - specificity (15%): about this business and this exact request; voice match where it applies (below)
-5. Weighted total, then a gut check: "If I were the reader, which would I actually use?" If your gut and the totals disagree, trust the gut and say why.
+Use cards/INDEX.md and the matching family card; mark each applicable must-have met or missed. A failure of truth, permission, requested format or an indispensable requirement is not averaged away by craft.
 
-## Clarity as the reader experiences it
-- Does the answer come in the first two sentences? Is the reader's real objection or the charge met head-on?
-- Density, not length, hurts. Long-sentence share, parentheses rate, average sentence length and method talk each cost clarity. A grade over the audience ceiling (consumer 8, business 10, specialist 12) costs a point.
-- Watch for codes and invented acronyms, "Label: a; b; c" runs, slash stacks, the same long disclaimer pasted into every piece, and tables of reasoning.
-- Scannable for its length (CLARITY.md, section 5).
+## Draft-pool scores
 
-## Voice match (VOICE.md)
-Where the reader is the client's customer: compare two quoted lines with the brand's closest voice examples. Flag generic AI phrasing, wrong formality, wrong person, wrong punctuation habits and wrong reading level for the channel. Score inside specificity: each flag costs a point; a no-go word costs two. For internal work, flag only lines that hurt clarity.
+Score 1-10: usefulness 25%, clarity 20%, judgment 20%, accuracy 20%, specificity 15%. For light tasks, use the gates and a quick preference rather than a scorecard. Prefer the expert's standard approach done well over a clever change that creates risk.
 
-## Length against the family profile
-Read the family's aim, ceiling and shape in profiles.json. Over the ceiling loses clarity points unless the brief asks for more. The ceiling is a cap, not a target: never reward a draft for reaching it. The piece the reader uses directly stays no longer than the plain draft's version. Ignoring the shape costs usefulness. A short, dense draft loses too.
+Pick the clearest usable base. Graft only a necessary fact, requirement or working part from another draft, as its own plain sentence, row or field. Do not graft every useful-looking appendix. If none is usable, allow one narrow repair round.
 
-## Calibration notes (from outside judges)
-- Outside judges punish: blanks and placeholders, internal notes, telegraphic or jargon-heavy writing, missing working parts (owners, scripts, tables), clever framings that keep a negative story alive, and short-term metrics for long-term decisions.
-- They reward: complete, ready-to-use kits; honest concessions; the standard playbook done excellently; real facts with sources; proposals stated plainly, with sign-off items in one short "To confirm" box.
-- Accuracy matters, but a careful draft that is hard to use loses to a clear draft with one small factual slip. Weigh the size of each error: a confident wrong price or a risky claim is serious; an unverified minor detail is small.
-- Do not reward length. Do not reward caution, hedges or extra disclaimers for their own sake.
-- Length did not predict clarity in blind tests; long sentences, parentheses and method talk did.
+## Read clarity as a user would
 
-## Output
-For a pool of drafts: ranking with weighted totals and one line each (must-haves missed, failure modes present, reading figures, length ratio); the base draft; a merge plan (must-fix errors in the base; parts to graft from the others, including the plain draft).
+Judge the native piece separately from setup notes. Does it answer promptly? Can the reader find and use the next action? Is the operating detail placed where needed rather than compressed into codes, slash stacks, dense tables or repeated disclaimers?
 
-**Picking the base (CLARITY.md base rule):** when the clearest draft is a plain one and the expert drafts' extra substance can be added to it, name the clear draft as base and list each graft as its own short sentence, bullet or table row. Do not pick a dense draft just to cut it down when a clear one can take the grafts.
+Readability, sentence length and the family ceiling are diagnostics, not proof. Run readability.cjs on both candidates with the correct audience, and wordcount.cjs against plain. A ceiling is not a target; explicit requested depth can exceed it. Neither longer nor shorter automatically wins.
 
-For a pairwise gate: the two drafts come unlabelled. Say which one the reader should get and why, in two sentences. A clear, complete answer beats a denser one whose extra substance is marginal. Only a real gap reverses that: a missed must-have, a fact error, or a working part the reader needs.
+For customer copy, check the actual channel against a few short public brand examples. Generic enthusiasm is not brand voice. Keep disclosures concise but correctly placed. For internal work, clarity beats a house style.
+
+## Final anonymous choice
+
+Check both candidates fully. Lower clarity than a usable plain candidate vetoes a final, even if its weighted score is higher. Choose the clearer usable work; break a clarity tie on usefulness. If the clearer piece needs a narrow factual or required-field repair, request that repair instead of replacing it with a dense alternative.
+
+Return both clarity judgments, usable/not usable with the failing gate, selected label, concrete reasons and indispensable repairs. If neither can ship, return repair-needed. Freeze a chosen artifact unchanged; any later edit requires checking the changed version again.
+
+Without a fresh reader, plain is the base with only necessary verified fact or requirement repairs. Record the limitation honestly. AI preference scores are not customer acceptance, legal sign-off or measured business results.

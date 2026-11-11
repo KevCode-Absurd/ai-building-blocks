@@ -162,7 +162,7 @@ test("agent pack: files in order, soul and personality from the persona, one job
   assert.match(file("personality.md"), /\(OUTPUT-POLICY\.md\)/);
   assert.match(file("playbook.md"), /## How I work\n\n1\. Read the brief/);
   assert.match(file("playbook.md"), /These are my Build steps\. The spec sheet, grounding and real candidates come before them, and a fresh reviewer's check comes after/);
-  assert.match(file("playbook.md"), /## Handoff\n\nI hand back the work itself first, opened by 3 to 5 lines/);
+  assert.match(file("playbook.md"), /## Handoff\n\nI hand back the native work itself first, with context only when needed/);
   assert.doesNotMatch(file("playbook.md"), /and DECISIONS\.md for anything bigger/, "working notes are never handed to the client");
   assert.match(file("playbook.md"), /### Landing page copy\n\n- Context: .+\n- Details: What are you selling; Who is it for/);
   assert.match(file("playbook.md"), /Landing page copy: `skills\/landing-page-copy\/SKILL\.md`/);

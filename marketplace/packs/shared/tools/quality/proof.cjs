@@ -547,12 +547,36 @@ function htmlChecks(src) {
   return out;
 }
 
+// A mismatched delimiter/header silently turns a GFM table into broken text or loses cells.
+function markdownShapeChecks(raw) {
+  const out = [], lines = raw.split(/\r?\n/);
+  let fenced = false;
+  const cells = line => line.trim().replace(/^\|/, '').replace(/\|$/, '').split(/(?<!\\)\|/).map(x => x.trim());
+  for (let i = 0; i < lines.length - 1; i++) {
+    if (/^\s*(```|~~~)/.test(lines[i])) { fenced = !fenced; continue; }
+    if (fenced || !lines[i].includes('|')) continue;
+    const separator = cells(lines[i + 1]);
+    if (separator.length < 2 || !separator.every(x => /^:?-+:?$/.test(x))) continue;
+    const expected = separator.length, header = cells(lines[i]);
+    const add = (line, count) => out.push({sev:'FAIL', line, msg:`Markdown table has ${count} cells; delimiter has ${expected}.`});
+    if (header.length !== expected) add(i + 1, header.length);
+    let row = i + 2;
+    while (row < lines.length && lines[row].trim() && lines[row].includes('|')) {
+      const count = cells(lines[row]).length;
+      if (count !== expected) add(row + 1, count);
+      row++;
+    }
+    i = row - 1;
+  }
+  return out;
+}
+
 // ---------------------------------------------------------------- main
 (async () => {
   const raw = fs.readFileSync(file, 'utf8'), html = isHtmlFile(file), ls = lineStarts(raw);
   const vis = visibleOf(raw, html);
   const at = off => lineOf(ls, vis.pos ? vis.pos[Math.min(off, vis.pos.length - 1)] ?? 0 : off);
-  const R = { file: path.resolve(file), sources: srcFiles.map(f => path.resolve(f)), links: [], numbers: [], arithmetic: [], html: [] };
+  const R = { file: path.resolve(file), sources: srcFiles.map(f => path.resolve(f)), links: [], numbers: [], arithmetic: [], html: [], markdown: [] };
 
   // (a) links
   const urls = extractUrls(raw, html);
@@ -586,8 +610,9 @@ function htmlChecks(src) {
 
   // (d) html
   if (html) R.html = htmlChecks(raw);
+  else R.markdown = markdownShapeChecks(raw);
 
-  const all = [...R.links, ...R.numbers, ...R.arithmetic, ...R.html];
+  const all = [...R.links, ...R.numbers, ...R.arithmetic, ...R.html, ...R.markdown];
   R.fail = all.filter(x => x.sev === 'FAIL').length; R.warn = all.filter(x => x.sev === 'WARN').length;
   if (opt.json) { console.log(JSON.stringify(R, null, 1)); process.exitCode = R.fail ? 1 : 0; return; }
 
@@ -605,6 +630,7 @@ function htmlChecks(src) {
     P(`\n[d] HTML  ${cnt(R.html, 'WARN')} WARN, ${cnt(R.html, 'FAIL')} FAIL`);
     for (const h of R.html) if (h.sev !== 'ok' || V) P(`  ${h.sev.padEnd(4)} line ${String(h.line).padEnd(4)} ${h.msg}`);
   }
+  for (const m of R.markdown) P(`  ${m.sev} line ${m.line}: ${m.msg}`);
   P(`\nRESULT: ${R.fail ? 'FAIL' : 'PASS'}  (${R.fail} FAIL, ${R.warn} WARN)${R.fail ? '  - fix every FAIL' : ''}${R.warn ? '  - resolve every WARN: confirm live, correct, or label' : ''}`);
   process.exitCode = R.fail ? 1 : 0;
 })().catch(e => { console.error('proof.cjs crashed: ' + (e && e.stack || e)); process.exitCode = 2; });

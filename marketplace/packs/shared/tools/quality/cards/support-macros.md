@@ -16,6 +16,8 @@ Families: support-macros; also: canned responses, saved replies, reply templates
 4. No escalation path, so macros get used where they do not fit.
 5. Token syntax that does not match the tool; chat replies too long.
 
+**USABILITY:** Prefer the help desk's known order, tracking and account merge fields over another customer round trip. Request only missing essentials. A missing-item case never requires a photograph of an item the customer lacks. Requested per-customer fields are intentional template inputs, not unfinished work.
+
 **SHAPE:** An index table, then each macro: title, use and do-not-use lines, body (50 to 150 words for email, one to three lines for chat), policy line, actions; one token format, for per-use data only. Then a short tone guide with before-and-after examples. One macro per asked case; build a 10 to 25 macro library only when asked for one.
 
 **RULES AND RISKS:** Consumer law on refunds, returns, warranties and cancellation overrides company policy. Verify identity before sharing account details; never ask for full card numbers or passwords; route data access and deletion requests to the owner. A bot says it is automated and how to reach a person. Check local rules.

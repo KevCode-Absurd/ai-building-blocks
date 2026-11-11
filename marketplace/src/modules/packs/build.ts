@@ -118,6 +118,7 @@ export const TOOL_FILES: { name: string; purpose: string }[] = [
   { name: "quality/proof.cjs", purpose: "Quality Engine v3: proof.cjs" },
   { name: "quality/render.cjs", purpose: "Quality Engine v3: render.cjs" },
   { name: "quality/leakcheck.cjs", purpose: "Quality Engine v3: leakcheck.cjs" },
+  { name: "quality/check-format.cjs", purpose: "Checks actual output counts, headings, links, table fields and character limits against a brief-derived contract, with file and contract hashes." },
   { name: "quality/cards/_any.md", purpose: "Quality Engine v3: cards/_any.md" },
   { name: "quality/cards/claims-review.md", purpose: "Quality Engine v3: cards/claims-review.md" },
   { name: "quality/cards/competitor-analysis.md", purpose: "Quality Engine v3: cards/competitor-analysis.md" },
@@ -377,7 +378,7 @@ Pack version {{version}}, updated {{updated}}. Profile: {{profile_url}}
 3. Diverge: make about 3 real candidates of the part that decides the outcome; a fresh reviewer picks.
 4. Build: new framing of true facts, never new facts. Decide, be specific, finish the format.
 5. Check: a fresh reviewer gets the brief, the deliverable and the facts, and tests each acceptance test and each claim. Gates pass or fail.
-6. Hand over the work first, opened by 3 to 5 lines; nothing internal reaches the client. Keep working notes in DECISIONS.md.
+6. Hand over the native work first, with context only when needed; nothing internal reaches the client. Keep working notes in DECISIONS.md.
 `,
   // Only a pointer: the licence text itself lives in packs/shared/LICENSE.md, which always wins when it exists.
   "LICENSE.md": `# Licence
@@ -773,7 +774,7 @@ function jobSkill(jt: JobType, kind: PackKind, slug: string = jt.id, pointer: Me
     `3. **Diverge: real candidates, and someone else chooses.** ${slice.diverge} A fresh reviewer who has not seen your reasoning picks one and names what to take from the others.`,
     `4. **Build** ${lowerFirst(jt.deliverable)}. ${pointer ? `Follow \`${pointer.path}\` (${pointer.title}) step by step for the craft. ` : ""}${slice.build}`,
     `5. **Check, in a separate pass.** ${slice.check} Then the gates and craft below.`,
-    "6. **Hand over.** The work comes first, opened by 3 to 5 lines: what this is, the main decision and why, what to check before use. Nothing internal reaches the client.",
+    "6. **Hand over.** The native work comes first; add context only when needed to use it. Nothing internal reaches the client.",
     "",
     "## Gates: pass or fail",
     "",
@@ -935,7 +936,7 @@ function playbookMarkdown(persona: Persona, jts: JobType[], kind: PackKind, role
     out.push(bullets(jts.map(jt => `${jt.title}: \`${skillPaths.get(jt.id) ?? `skills/${jt.id}/SKILL.md`}\``)), "");
   }
   // What is not my work is in AGENTS.md ("Rules"), once.
-  out.push(...section("Handoff"), "I hand back the work itself first, opened by 3 to 5 lines: what it is, the main decision and why, and what to check before you publish or send it. My working notes stay with me; nothing in the work depends on them.", "");
+  out.push(...section("Handoff"), "I hand back the native work itself first, with context only when needed to use it. My working notes stay with me; nothing in the work depends on them.", "");
   out.push(...rulesSection(train));
   return out.join("\n");
 }

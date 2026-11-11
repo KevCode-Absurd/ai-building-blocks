@@ -351,11 +351,13 @@ test('brand context is asked for by slice: strategy, plans, code and operations 
 
 test('candidates are real work chosen by someone else, and the checks put truth first', () => {
   const page = prepareJobContext({ request: 'Build a landing page', deliverable_kind: 'web_page' });
-  assert.match(page.brief, /CANDIDATES: Three first screens, made in full/); assert.match(page.brief, /Differ on two of: promise, proof, structure, buyer moment, offer, visual world\./);
+  assert.match(page.brief, /CANDIDATES: Follow annex\.quality_engine depth and annex\.candidates/);
   assert.match(page.brief, /A fresh reviewer picks\./); assert.match(page.brief, /reframe true facts, add none/); assert.match(page.brief, /cut what has none, never flag it/);
   assert.match(page.brief, /Check what is sold is live, in stock, at that price and link\./);
   const a = page.annex;
-  assert.equal(a.candidates.make, CANDIDATES.web_page); assert.equal(a.candidates.differ_on_at_least, 2); assert.deepEqual(a.candidates.axes, [...CANDIDATE_AXES]);
+  assert.match(a.candidates.make, /One expert draft and one plain/); assert.equal(a.candidates.differ_on_at_least, null); assert.deepEqual(a.candidates.axes, []);
+  const full = prepareJobContext({ request: 'Build three distinct concepts for a landing page', deliverable_kind: 'web_page' }).annex;
+  assert.equal(full.candidates.differ_on_at_least, 2); assert.deepEqual(full.candidates.axes, [...CANDIDATE_AXES]);
   assert.match(a.reviewer.who, /SAME-CONTEXT/); assert.match(a.reviewer.choose.rounds, /One extra round at most/);
   // The client's-eye reviewer sees only the brief, the work and the captured facts, and lists every claim as sourced or not.
   assert.equal(a.reviewer.clients_eye.gets.length, 3); assert.match(a.reviewer.clients_eye.gets[2], /captured facts/);
@@ -366,7 +368,7 @@ test('candidates are real work chosen by someone else, and the checks put truth 
   assert.ok(a.hand_over.never_in_the_deliverable.some(x => /agent or persona names/.test(x)));
   for (const kind of DELIVERABLE_KINDS) {
     const r = prepareJobContext({ request: 'x', deliverable_kind: kind });
-    assert.ok(r.brief.includes(`CANDIDATES: ${CANDIDATES[kind]}`), kind);
+    assert.ok(r.brief.includes('CANDIDATES:'), kind); assert.equal(r.annex.candidates.family_reference, CANDIDATES[kind], kind);
     assert.deepEqual(r.annex.completeness, completenessFor(kind), kind);
     assert.equal(/annex\.completeness/.test(r.brief), Boolean(COMPLETENESS[kind]), kind);
     const ids = gatesFor(kind).map(g => g.id);

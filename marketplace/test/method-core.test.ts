@@ -33,12 +33,12 @@ test("WORK-METHOD.md is under 1,000 words and still covers every part of the met
     ["buyer can act", /\*\*Can the buyer act today\?\*\* Confirm the thing sold is live, in stock[\s\S]*say so in your first line/],
     ["format completeness", /\*\*Finish the format\.\*\* Ads:[\s\S]*Emails:[\s\S]*Plans:[\s\S]*Pages:/],
     ["client's-eye check", /## 5\. Check: the client's-eye review\n\nA fresh reviewer \(as in step 3\) gets only the client's brief, the finished deliverable and `context\/facts\.md`/],
-    ["hand-over shape", /The work comes first, opened by 3 to 5 lines[\s\S]*Nothing internal reaches the client[\s\S]*appendix inside the deliverable/],
+    ["hand-over shape", /The native work comes first[\s\S]*Nothing internal reaches the client[\s\S]*appendix inside the deliverable/],
     ["rules I learned", /Add shared lessons to "Rules I learned" in playbook\.md/],
     // The Quality Engine v2.1 rules (11 Nov 2026 benchmark: 88% of 128 blind verdicts against a plain model).
     ["expert and playbook", /\*\*Expert and playbook:\*\*[\s\S]*One is the expert's standard playbook done excellently; clever ones must beat it\./],
-    ["plain yardstick and final pick", /plain one-pass answer from the brief alone: the yardstick[\s\S]*the reviewer picks, unlabelled, between the deliverable and the plain answer/],
-    ["facts versus proposals", /\*\*Facts and proposals differ\.\*\*[\s\S]*"To confirm"[\s\S]*Never blanks or placeholders\./],
+    ["plain yardstick and final pick", /plain one-pass answer from the brief alone: the yardstick[\s\S]*a fresh reader chooses between anonymous final and plain/],
+    ["facts versus proposals", /\*\*Facts and proposals differ\.\*\*[\s\S]*"To confirm"[\s\S]*Keep explicitly requested template fields; otherwise no blanks or placeholders\./],
     ["length against the plain answer", /\*\*Length follows use:\*\*[\s\S]*family profile[\s\S]*ceiling is never a target/],
     ["fresh facts", /Re-check on the day facts that change/],
     ["hand-over check tool", /Run `node tools\/check-handover\.mjs <deliverable> <plain answer> --profile <family>` and fix every hit\./],
@@ -93,7 +93,7 @@ test("each family's real candidates, completeness list and brand-context slice a
   for (const family of FAMILIES) {
     assert.ok(familySlice(family).diverge.startsWith(CANDIDATES[family]), family);
     const gates = familyGates(family);
-    assert.match(gates[0], /^The hand-over fits: the work first, opened by 3 to 5 lines, with nothing internal in it\./, family);
+    assert.match(gates[0], /^The hand-over fits: the native work first, with context only when needed, with nothing internal in it\./, family);
     assert.ok(gates[0].includes(WORD_BUDGETS[family]), family);
     assert.equal(gates.some(g => g === `Format complete: ${(COMPLETENESS[family] ?? []).join("; ")}.`), Boolean(COMPLETENESS[family]), family);
     assert.equal(gates.length, 1 + Number(Boolean(PROVEN_LEVERS[family])) + Number(Boolean(COMPLETENESS[family])), family);
@@ -121,6 +121,6 @@ test("a built job skill carries its family's candidates and completeness list, a
   const skill = pack.files.find(f => f.path === `skills/${email.id}/SKILL.md`)!.content;
   assert.ok(skill.includes(CANDIDATES.email), "the candidates reach the job skill");
   assert.ok(skill.includes(`Format complete: ${COMPLETENESS.email!.join("; ")}.`), "the completeness list reaches the job skill");
-  assert.ok(skill.includes("The hand-over fits: the work first, opened by 3 to 5 lines"));
+  assert.ok(skill.includes("The hand-over fits: the native work first, with context only when needed"));
   assert.deepEqual(lintPack(pack), []);
 });

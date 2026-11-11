@@ -23,13 +23,13 @@ test('mixed deliverables get a lead; a reviewer alone does not create a writing 
   assert.equal(qualityEngineContext('Help organize a cupboard').family, '_any');
 });
 
-test('job context exposes the portable v3 method and all five check tools without executing a model', () => {
+test('job context exposes the portable v3 method and all six check tools without executing a model', () => {
   const context = prepareJobContext({request: 'Build a procurement landing page', deliverable_kind: 'web_page'});
   assert.equal(context.model_calls, 0);
   assert.equal(context.stored_by_service, false);
-  assert.equal(context.annex.quality_engine.version, '3');
+  assert.equal(context.annex.quality_engine.version, '3.1');
   assert.equal(context.annex.quality_engine.family, 'landing-page');
-  assert.equal(Object.keys(context.annex.quality_engine.tool_urls).length, 5);
+  assert.equal(Object.keys(context.annex.quality_engine.tool_urls).length, 6);
   assert.match(context.brief, /annex.quality_engine/);
   assert.equal(context.annex.quality_engine.profile.ceiling, QUALITY_PROFILES['landing-page'].ceiling);
   assert.ok(context.annex.production_gate.requires.brand_dna);

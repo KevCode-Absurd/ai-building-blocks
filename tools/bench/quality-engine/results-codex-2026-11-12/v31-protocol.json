@@ -1,0 +1,18 @@
+{
+  "schema": "codex-fresh-validation/1",
+  "started": "2026-11-12",
+  "tasks_sha256": "5dd7e5e5f7ca3475cb4bd78b8b142a0f808dc0562f67527d7b849a8f33d84f9e",
+  "tasks": 12,
+  "brands": 6,
+  "generation_model": "Codex session model, both arms",
+  "original_rounds": "P1 v3 and P2 v2.1 are preserved; both failed the strict clarity gate.",
+  "method": "v3.1 candidate, ten scoped improvements; maintainer has not read these fresh briefs or answers.",
+  "selection": "One fresh anonymous reader chooses the clearer usable final/plain artifact, breaking a clarity tie on usefulness; selected bytes are frozen unchanged.",
+  "judging": "Four new independent contexts, j1/j2 on brief A and i1/i2 on brief B. HTML requires both views of both versions.",
+  "gate": "Strict majority wins, ties not wins; no mean clarity regression. All fresh cases count as held-out. No change to winner rules after unblinding.",
+  "limits": [
+    "Single model family; compute differs between arms.",
+    "AI preference is not customer acceptance or business lift.",
+    "Original development results remain reported, including failures."
+  ]
+}

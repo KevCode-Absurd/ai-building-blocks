@@ -1,0 +1,233 @@
+{
+  "reader": "r1",
+  "pairs": [
+    {
+      "id": "N01",
+      "X": {
+        "clarity": 8,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Complete run sheet with setup, role swap, comfortable refusal, three neutral questions and reconciled stock tally. The longer invitation and repeated handling instructions slow scanning during the lunch window."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Clear lead-role labels and a shorter invitation make this easier to use at the table. Preserves the 90-minute window, 120 sealed packs, optional feedback, packaging referral, three neutral questions and closing tally."
+      },
+      "selected": "Y",
+      "required_repairs": []
+    },
+    {
+      "id": "N02",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Exactly ten checks. Separate record and hold-trigger columns make the receiver's decision easy to find. Required approved-reference blanks, uncertain-scope hold, named handoff, acknowledgment and authorized disposition remain explicit without invented thresholds."
+      },
+      "Y": {
+        "clarity": 8,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Exactly ten checks and useful per-row result blanks, with all required approved-reference fields preserved. Long action cells and the dense introductory rule require more reading to locate a particular hold condition; reviewer handoff remains usable."
+      },
+      "selected": "X",
+      "required_repairs": []
+    },
+    {
+      "id": "N03",
+      "X": {
+        "clarity": 8,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Standalone source covers every requested field, required-field error summary and focus links, report generation, copy fallback and stale-report protection. Full desktop/phone screenshots and their slices are readable, but the two long single-line examples are clipped on the phone and the opening is wordier."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Direct heading, shorter notice and fully visible phone examples clarify the task. Both HTML source and all desktop/phone images and slices inspected: responsive layout is legible, form submission supports the keyboard, generation focuses the report at its start, validation and copy fallback are present, and nothing is sent or saved."
+      },
+      "selected": "Y",
+      "required_repairs": []
+    },
+    {
+      "id": "N04",
+      "X": {
+        "clarity": 8,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Complete 45-minute agenda, six neutral main questions with probes, evidence/workaround/open-question notes and permission email. Extra phrasing in the questions and a separate facilitation-reminders block make the live guide slower to scan."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Shorter questions and probes are easier to deliver aloud while preserving six questions and the full 45-minute agenda. Distinguishes observed from reported behavior, gives quieter participants a way to pass, separates note categories and ends with a usable permission-seeking follow-up email."
+      },
+      "selected": "Y",
+      "required_repairs": []
+    },
+    {
+      "id": "N05",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "The short three-column comparison separates material, feel and when to try it, making this a practical pocket aid. Includes exactly three discovery questions, two dialogues and an honest try-both close; under 500 words. The linked official Allbirds product pages support the wool, blended tree upper and wool-blend lining descriptions."
+      },
+      "Y": {
+        "clarity": 8,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Under 500 words and includes all requested conversation elements and valid official links. The official Wool Runner page supports temperature regulation, and Tree Runner supports the stated upper and lining; however, paragraph-length comparison cells mix material facts and associate instructions, reducing scanability."
+      },
+      "selected": "X",
+      "required_repairs": []
+    },
+    {
+      "id": "N06",
+      "X": {
+        "clarity": 9,
+        "usefulness": 10,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Correct 11-pair A-to-B move, $55 transfer cost and $260 conditional contribution protected. The target column and total row make the reserve rule auditable, and the reserve-only pairs are clearly excluded from forecast sales. Two actionable checks; under 450 words."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Clear, concise recommendation with the same correct transfer, final reserves and $260 calculation. Under 450 words with two practical checks and explicit forecast uncertainty. Equally readable, but the balances omit the target and total cross-checks provided by X."
+      },
+      "selected": "X",
+      "required_repairs": []
+    },
+    {
+      "id": "N07",
+      "X": {
+        "clarity": 8,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "All four states, titles, bodies and CTAs meet the character limits; the rejection email is below 100 words and retains [REVIEWER_NOTE]. Actions, affidavit exception, payout schedule and off-platform meaning match the official Ramp reimbursement guide. Rejected and paid-outside bodies are more verbose than needed."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Shorter state bodies are easier to scan and keep approval distinct from arrival of funds. All character limits and the 100-word email limit pass. The options-menu Edit & resubmit action, affidavit limitation and no-bank-payment off-platform explanation match https://support.ramp.com/submitting-reimbursements/."
+      },
+      "selected": "Y",
+      "required_repairs": []
+    },
+    {
+      "id": "N08",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Clear fill-in fields cover signed scope, first workflow, entities/systems, decision authority, dependencies, sales promises and measurable rollout success. The simple owner/action/due table and concrete kickoff-question versus blocker examples are easy to apply. Unknowns and integration evidence remain for the AE to complete."
+      },
+      "Y": {
+        "clarity": 8,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Preserves all important fill-in fields and explicitly assigns TBDs, evidence and owners without inventing customer facts or entitlements. Multiple wide tables and combined slash-separated field labels are denser than X, and the readiness definitions take longer to interpret."
+      },
+      "selected": "X",
+      "required_repairs": []
+    },
+    {
+      "id": "N09",
+      "X": {
+        "clarity": 8,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "164 words including subject/signature before the internal note, with four numbered questions and a useful staggered-arrival recommendation. Catering formats and Outpost's individual ordering/batch delivery are supported by official Sweetgreen pages. More conditional wording and a longer close make the email less direct."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "144 words including subject/signature before the internal note. Direct recommendation, four next-step questions and a concise close make it ready to use. Official catering and office-meal information supports the format/location distinction; official Outpost information also verifies the individual-order, batched-delivery description. No prices, dietary guarantee or booking is invented."
+      },
+      "selected": "Y",
+      "required_repairs": []
+    },
+    {
+      "id": "N10",
+      "X": {
+        "clarity": 8,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Under 600 words; correctly derives 16 implied spaces versus 12 and the conditional 12-minute fit-on-average target. One pickup-lead change, a 24-word sign, baseline/trial schedule, tracking table and proposed keep/change/stop rules are usable. The measurement instructions are packed into a paragraph."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Under 600 words and preserves the correct capacity calculation, assumptions, existing-shift constraint and approved food-handling procedures. Bulleted daily measures and plainly separated pilot decisions are easier to apply. Includes a 24-word sign and handles insufficient matched days/samples as inconclusive."
+      },
+      "selected": "Y",
+      "required_repairs": []
+    },
+    {
+      "id": "N11",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Both HTML source and all full desktop/phone screenshots and supplied detail slices inspected. Direct separate-account heading, native radio choices, three-step role paths and four native FAQ disclosures are readable and keyboard accessible. Official Duolingo Family Plan and social-feature sources support separate accounts, six places, unrestricted groups, annual manager payment and invitation links."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Both HTML source and all full desktop/phone screenshots and supplied detail slices inspected. Equally legible responsive layout, accessible native role/FAQ controls and complete role paths; slightly longer steps offset the more explicit role headings. The same official Duolingo sources support the material claims. No sign-in, external dependency or simulated invitation."
+      },
+      "selected": "tie",
+      "required_repairs": []
+    },
+    {
+      "id": "N12",
+      "X": {
+        "clarity": 8,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Complete proposed rubric and ordered six-report queue with sensible access/correctness priorities, suggested owners and first checks. Preserves linguist confirmation, provisional severity and report-count uncertainty. Long table cells repeat rationale and make assignment scanning slower; handoff is under 120 words."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Compact rubric and six-row queue make priority, owner and first action easier to scan. Correctly prioritizes the screen-reader barrier, confirmed wrong grading and exposed answer, while requiring impact verification for audio/typo/image. Explicit promotion rules, hypothetical framing and the under-120-word handoff avoid invented reach, causes or release promises."
+      },
+      "selected": "Y",
+      "required_repairs": []
+    }
+  ]
+}

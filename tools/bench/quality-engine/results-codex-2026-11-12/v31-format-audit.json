@@ -1,0 +1,41 @@
+{
+  "schema": "codex-selected-format-audit/1",
+  "scope": "Post-selection contract faithfulness audit; final files and external panel unchanged.",
+  "findings": [
+    {
+      "id": "N06",
+      "request_sha256": "f26eda68ee3f0b0b624a6adea5565a250c460261687cd238096c8ca027fe4ec3",
+      "artifact_sha256": "6a0a8fe505e826c7f2025a3f82466ba613aa0d1a2a86ee9200fb8e0d9b9b5c0b",
+      "finding": "The request names no exact headings or table headers. The candidate-specific contract adds both. Its failures against the retained plain artifact are false acceptance failures. The native transfer table, balances, contribution calculation and two checks remain required.",
+      "disposition": "Preserve original contract and failed diagnostic; do not edit the independently selected artifact or external judge packet.",
+      "audited_mechanical_status": "PASS:450-word ceiling and native table widths"
+    },
+    {
+      "id": "N11",
+      "request_sha256": "6bfde03259729f18f2458231e725e5e4eed39816245f7ac9193912cef4eab512",
+      "artifact_sha256": "58e5be9d222d42349d7baf56941085873a367fbe1daeab44c0652ddd2f10d7ed",
+      "finding": "The request names no exact headings or exact source URLs. The candidate-specific heading rules are over-specific. Two accessible role paths, four requested FAQs and official source links require DOM and reader review.",
+      "disposition": "Preserve original contract and failed diagnostic; do not edit the independently selected artifact or external judge packet.",
+      "audited_mechanical_status": "Exact-title format contract not applicable; DOM/keyboard and independent reader checks cover the brief. No generic automated semantic PASS claimed."
+    }
+  ],
+  "html_review": {
+    "id": "N11",
+    "external_requests": 0,
+    "buttons": [],
+    "tabs": [],
+    "faqs": [
+      "Do we keep separate accounts?",
+      "Who can join?",
+      "Who pays?",
+      "What if the invitation does not work?"
+    ],
+    "source_links": 3,
+    "phone_horizontal_overflow": false,
+    "role_choices": 2,
+    "initial_invite_visible": true,
+    "keyboard_join_checked": true,
+    "keyboard_join_visible": true,
+    "keyboard_invite_hidden": true
+  }
+}

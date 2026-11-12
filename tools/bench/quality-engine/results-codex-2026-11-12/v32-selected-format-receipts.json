@@ -1,0 +1,122 @@
+[
+  {
+    "id": "F01",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 8,
+    "failures": [],
+    "file_sha256": "1124bd36685adc6315a15c38a74fa683e5acbd218d6dc7c2ee22ce5e816b6cf3",
+    "contract_sha256": "3f7fe0630fb5c1c7fc31dc43336ff1c40f2756587c489ffaf16fcfaa6e546089",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "F02",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 10,
+    "failures": [],
+    "file_sha256": "e0b0cde8fae80253e871b04a36d59b9f7298ae4de4a6800a859572f23598b06a",
+    "contract_sha256": "56536d3fb99c30067974cb8c51a93176e89fbc81c8115130f465191d8e079a97",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "F03",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 14,
+    "failures": [],
+    "file_sha256": "7a857ea9ac043386be7516672c57a727e02003cd17dbb72d408aed80ecfc60a1",
+    "contract_sha256": "ee35a9a4dba1d80375569c9548fedc013ffd4de96eacba6d964a0e7c9923e86f",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "F04",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 5,
+    "failures": [],
+    "file_sha256": "cf55d2c6c5ce604579ae903e93364153c0c581a57936b049c4df245a19df1087",
+    "contract_sha256": "ee35a9a4dba1d80375569c9548fedc013ffd4de96eacba6d964a0e7c9923e86f",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "F05",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 1,
+    "failures": [],
+    "file_sha256": "399ee506aacac1ae8c69652effa73b8c115e38f24ccbfc1e9eae2f25f6855046",
+    "contract_sha256": "fed18eeb3323aaf3ff4483a79be818c3a2f535cdf6b24bf07f87cca3cbe3fcc7",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "F06",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 9,
+    "failures": [],
+    "file_sha256": "007e22bd5a38d749ca178193ad0d35476b40bb5ccc8d4ce38f177928b8af6e53",
+    "contract_sha256": "3f7fe0630fb5c1c7fc31dc43336ff1c40f2756587c489ffaf16fcfaa6e546089",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "F07",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 8,
+    "failures": [],
+    "file_sha256": "1222022196f8be663bf71181e5cc107211d943ebbdccc2e7ff4112564e6ada15",
+    "contract_sha256": "ee35a9a4dba1d80375569c9548fedc013ffd4de96eacba6d964a0e7c9923e86f",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "F08",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 7,
+    "failures": [],
+    "file_sha256": "ab70d6d747fa9f41445f3318ab13778be0b7a6a51b2bafade07db701d7021a32",
+    "contract_sha256": "6004214fd9be1202539f5b8946f177d0dba859803cb904cd1e8e4f04a35326e0",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "F09",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 1,
+    "failures": [],
+    "file_sha256": "27e87b9966ec00ec585634c8c4cff193f1b582a2f4357539c0ba7d55106207c7",
+    "contract_sha256": "cf627c1cc8ebbd6d4040c4973e900d4ccd2d648c77ed529340199467ce10ce99",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "F10",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 9,
+    "failures": [],
+    "file_sha256": "e29c63b7b8ec157e9dea819fa6b8b3c4f9f81a47530800ba3b812420e23e896d",
+    "contract_sha256": "56536d3fb99c30067974cb8c51a93176e89fbc81c8115130f465191d8e079a97",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "F11",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 1,
+    "failures": [],
+    "file_sha256": "be8207ce99c09de33054d689aa0e05049006fc3e671d7009392620843fbe9695",
+    "contract_sha256": "ee35a9a4dba1d80375569c9548fedc013ffd4de96eacba6d964a0e7c9923e86f",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "F12",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 7,
+    "failures": [],
+    "file_sha256": "536c62e7126d1d51f9571889ee75792cf9b9d83268977b8a2863d99ba57c5419",
+    "contract_sha256": "ee35a9a4dba1d80375569c9548fedc013ffd4de96eacba6d964a0e7c9923e86f",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  }
+]

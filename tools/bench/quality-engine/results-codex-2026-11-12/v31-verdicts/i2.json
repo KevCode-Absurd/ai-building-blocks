@@ -1,0 +1,269 @@
+{
+  "judge": "i2",
+  "pairs": [
+    {
+      "id": "N01",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 8,
+        "overall": 8,
+        "note": "Complete, low-pressure event plan with clear stock reconciliation and appropriate packaging referrals. The roughly 60-word invitation needs trimming to work comfortably as the requested 20-second script."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 10,
+        "craft": 9,
+        "overall": 9,
+        "note": "The shorter invitation fits the requested timing better, while the run sheet retains clear roles, three neutral questions, optional participation and a usable stock tally. It avoids unsupported health advice or product-benefit claims."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "N02",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Ten useful checks cover receipt identity through traceability, with named approved-reference blanks and a documented hold/disposition handoff. The receiver must connect the shared hold instructions to each check."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 10,
+        "craft": 9,
+        "overall": 9,
+        "note": "The separate record and hold columns make receiver decisions easier to follow without a meeting, giving it the practical edge. It preserves company-defined specifications and authorization, and the exception form carries the hold through execution of the authorized decision."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "N03",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 8,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Complete local-only builder with custom linked errors, a semantic form, stale-report protection and clipboard fallback. Full and sliced screenshots render cleanly on phone and desktop, and the short input examples remain readable on the phone."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "The builder covers every field, validates required entries and offers accessible error and copy feedback without sending data. Its two long single-line examples are visibly cut off on the phone, and replacing the form with a section loses normal Enter-to-submit behavior from the short fields."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "N04",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 8,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "A coherent 45-minute guide with six non-leading questions, useful probes, observed-versus-reported evidence and a permission-based follow-up email. Some longer prompts and facilitation instructions add reading during an already tight group session."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 8,
+        "clarity": 10,
+        "craft": 9,
+        "overall": 9,
+        "note": "Retains the complete agenda, six behavior-based questions and evidence/workaround/open-question separation in shorter prompts that are easier to use live. That reduction in facilitator reading gives it a small practical advantage without sacrificing the research safeguards."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "N05",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "All requested conversation elements are present under the limit, with cautious recommendations and a genuine try-both close. The material descriptions match the official [Wool Runner](https://www.allbirds.com/products/mens-wool-runners) and [Tree Runner](https://www.allbirds.com/products/mens-tree-runners-jet-black) details, including the latter's wool-blend lining."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "A concise, usable associate aid with three discovery questions, two distinct dialogues and no universal comfort or weather claims. Its comparison and lining qualification agree with the official [Wool Runner](https://www.allbirds.com/products/mens-wool-runners) and [Tree Runner](https://www.allbirds.com/products/mens-tree-runners-jet-black) pages; the differences from X do not change usability materially."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "N06",
+      "X": {
+        "usefulness": 10,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 10,
+        "craft": 10,
+        "overall": 10,
+        "note": "The 11-pair A-to-B move is the minimum that meets all three forecast-plus-reserve targets, and the resulting balances are correct. It correctly protects nine forecast sales, charges for all 11 moved pairs, derives $260 net contribution and conditions that estimate on demand and execution."
+      },
+      "Y": {
+        "usefulness": 10,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 10,
+        "craft": 10,
+        "overall": 10,
+        "note": "The 11-pair A-to-B move is the minimum that meets all three forecast-plus-reserve targets, and the resulting balances are correct. It correctly protects nine forecast sales, charges for all 11 moved pairs, derives $260 net contribution and conditions that estimate on demand and execution."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "N07",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "All four titles, bodies and CTAs fit their limits, and the short rejection email gives a concrete edit route and the affidavit exception. The actions and separation of approval, payout scheduling and off-platform tracking match [Ramp's employee guide](https://support.ramp.com/submitting-reimbursements/)."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Meets the copy and email limits with clear next steps and no implication that approval means funds have arrived. Its resubmission advice, affidavit restriction and paid-outside-Ramp explanation agree with [Ramp's employee guide](https://support.ramp.com/submitting-reimbursements/); neither version has a material usability advantage."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "N08",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Complete, straightforward handoff fields cover purchased scope, the first workflow, entities/systems, decision authority, sales promises and measurable acceptance. The short readiness distinction and owner/action/date table make it the easier two-page working template without asserting entitlements or integration behavior."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "Covers the required content and usefully marks unknowns TBD with owners, while keeping integration assumptions unverified. The several wide tables and combined multi-part cells make a simple two-page AE handoff denser to fill and review than necessary."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "N09",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The under-180-word email makes a sensible individual-meal recommendation for late arrivals, asks four relevant questions and leaves pricing and booking conditional. Formats and location limits match [Sweetgreen catering](https://www.sweetgreen.com/catering), and the official [Outpost listing](https://outpost.sweetgreen.com/) describes workplace batch delivery, although its live page fetch was unavailable."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Equally usable short email: the recommendation, four questions and conditional quotation avoid invented prices, address availability or dietary guarantees. The [catering page](https://www.sweetgreen.com/catering) supports both formats, and the [office-meal inquiry](https://www.sweetgreen.com/catering-inquiry?path=recurring-office-meals) confirms the one-time-versus-recurring service distinction."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "N10",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 8,
+        "overall": 8,
+        "note": "Correctly derives 16 average order spaces versus 12 available and offers a feasible within-shift lead/sign pilot with relevant tracking. Its keep rule does not explicitly require avoiding observed overflow, and it lacks an inconclusive outcome when comparable days or completed samples are insufficient."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Correct capacity math, a short useful sign and a practical paper measurement plan fit the constraints. Explicit overflow/handling guardrails, immediate restoration after operational harm and an inconclusive option make its final decision safer and more useful than X's."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "N11",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 10,
+        "craft": 9,
+        "overall": 9,
+        "note": "A clean phone/desktop explainer with accessible native role choices, short separate paths and four relevant FAQs; all supplied full images and slices render well. The six separate accounts, manager's annual payment and dashboard invitation link match [Duolingo's official Family Plan explanation](https://blog.duolingo.com/plus-family-plan/), with no unverified platform-specific sequence."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 10,
+        "craft": 9,
+        "overall": 9,
+        "note": "A clean phone/desktop explainer with accessible native role choices, short separate paths and four relevant FAQs; all supplied full images and slices render well. The six separate accounts, manager's annual payment and dashboard invitation link match [Duolingo's official Family Plan explanation](https://blog.duolingo.com/plus-family-plan/), with no unverified platform-specific sequence."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "N12",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 10,
+        "craft": 9,
+        "overall": 9,
+        "note": "The compact queue prioritizes the screen-reader barrier, confirmed wrong grading and exposed answer before lower-impact provisional defects. It retains all six owners, concrete first actions, escalation conditions and a short cautious handoff with less reading, giving it a small operational advantage."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Sound proposed rubric and queue distinguish report volume from learner reach and reassess audio, typo and image severity when impact is verified. The longer cells repeat several qualifications already established in the rubric and handoff, so the same triage decisions take more scanning than in X."
+      },
+      "winner": "X"
+    }
+  ]
+}

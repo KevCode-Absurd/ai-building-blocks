@@ -1,0 +1,170 @@
+[
+  {
+    "id": "C01",
+    "brand": "gruns",
+    "ext": "md",
+    "brief": "I lead customer insights at Grüns (https://gruns.co). Build a Markdown coding guide for cancellation feedback, then code these ten entirely hypothetical exercise comments, not real customer records: (1) 'I still have four unopened bags'; (2) 'I lost my job and need to cut spending'; (3) 'I liked it but forgot it most mornings'; (4) 'I meant to buy once, not subscribe'; (5) 'The taste isn't for me'; (6) 'My parcel never arrived'; (7) 'I'm traveling for six weeks'; (8) 'I don't notice a difference and it's expensive'; (9) 'My clinician asked me to stop supplements for now'; (10) 'Please cancel.' Give each a primary code, an optional secondary code, and a confidence or clarification flag. Keep stated reasons separate from inferred causes, and include rules for mixed and unspecified feedback. End with three useful reporting cuts and two cautions about interpreting this tiny sample. Keep it under 600 words; do not draft customer replies, diagnose health concerns, or turn these examples into company cancellation rates.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "C02",
+    "brand": "gruns",
+    "ext": "md",
+    "brief": "I'm preparing for a wholesale negotiation at Grüns (https://gruns.co). Write a Markdown preparation brief under 550 words for this entirely hypothetical commercial exercise; none of the figures or terms are Grüns policies. A prospective specialty retailer wants four deliveries of 300 cases over eight weeks, a 12% introductory discount, payment 60 days after each delivery, and permission to return unsold stock after 90 days. Our exercise starting position is a 500-case minimum per delivery, four-week production lead time, payment within 30 days, and no routine sale-or-return arrangement. We can offer a single 1,200-case production commitment with staged releases if the buyer confirms the full quantity, but cannot promise faster production. Identify the main tradeoffs, propose an opening package and two conditional concessions, and give a compact give/get table plus a short meeting opener. Separate negotiable proposals from items requiring finance or operations approval. Use the public site only for current brand and product terminology as of November 12, 2026; do not invent margins, legal rights, or an agreed deal.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "C03",
+    "brand": "gruns",
+    "ext": "md",
+    "brief": "I'm a researcher at Grüns (https://gruns.co). Design a seven-day remote diary study to understand how adults fit our adult gummies into an existing routine and handle the packaging. This is a proposed usability study, not a health-outcomes study. Assume, for this exercise, 12 adult volunteers who already chose to use the product and will receive the same incentive regardless of how often they use it. Deliver a Markdown field pack under 650 words: a participant introduction, a brief daily entry that takes about two minutes, a final interview guide, and a researcher notes template. Capture missed days, where packets are kept, opening or carrying difficulties, and workarounds without suggesting the desired answer. Explain how to record 'did not use' without pressuring consumption, and keep health details and identifiable household information out of the diary. Refer suitability and serving questions to current official packaging. Give a practical consent and withdrawal reminder and explain what this small study can and cannot establish; do not fabricate findings.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "C04",
+    "brand": "gruns",
+    "ext": "html",
+    "brief": "I work on subscriber education at Grüns (https://gruns.co). Build a local packet-stock planner as one standalone responsive HTML file with inline CSS and JavaScript and no external dependencies. This is a planning prototype for an adult subscriber, using an explicit exercise assumption of one sealed daily serving packet used per day; it must not recommend changing serving size. Let readers enter packets on hand (0–120), days until a hypothetical next delivery (0–60), and packets in that delivery (1–120). Treat the delivery as arriving at the start of its day, before that day's use. Show whether the current supply lasts until delivery, any days without a packet, and the stock remaining after 14 days of use beginning on delivery day. Provide a readable day-by-day stock table that distinguishes unmet demand from negative stock, a reset example, and clear validation for nonwhole or out-of-range values. Include a short official-source note on where subscribers can review delivery timing, verified as of November 12, 2026. Keep the interface calm, keyboard accessible, and usable on a phone. Label the scenario as hypothetical and the tool as sending nothing; it must not connect to an account, save personal data, place an order, or promise a shipment date.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "C05",
+    "brand": "linear",
+    "ext": "md",
+    "brief": "I'm a customer success manager at Linear (https://linear.app). A product lead says, 'I miss direct requests in a noisy Inbox, get the same alert on several devices, and only need a weekly overview of projects outside my team.' Write a practical Markdown notification-reset guide under 600 words that the lead can follow themselves. Use current official Inbox, Notifications, and Pulse documentation as of November 12, 2026. Separate issue subscriptions, Inbox organization, delivery channels, and project-update summaries; explain which choices reduce interruptions and which actually stop a subscription. Give an ordered setup sequence, a small before/after recommendation table, and a three-day check to see whether important requests are still reaching them. Link sources for consequential product behavior, distinguish your recommendations from Linear defaults, and flag any current documentation conflict rather than silently choosing one. Do not access a workspace or claim that hiding, snoozing, or deleting a notification deletes the underlying issue.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "C06",
+    "brand": "linear",
+    "ext": "md",
+    "brief": "I'm helping a Linear (https://linear.app) customer turn an approved product brief into manageable work. Use this entirely hypothetical brief: 'Let signed-in mobile users keep their ten most recent search phrases on the device, reopen a phrase without typing, remove one phrase, and clear all recent phrases. Recents must remain available offline. Signing out removes them. We are not adding cross-device sync or saving search results.' Draft a Markdown project handoff under 700 words with a short scope statement, six to eight proposed issues, testable acceptance criteria for each, suggested owner roles, and only the blocking relationships actually justified by the brief. Add a small list of unresolved product decisions that can be settled before implementation, without asking me follow-up questions or inventing an architecture, delivery dates, or estimates. Use current official Linear documentation as of November 12, 2026 to explain how you would organize the project and related issues, and clearly separate verified product capabilities from your recommended breakdown. Provide a reviewable plan only; create no live issues.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "C07",
+    "brand": "linear",
+    "ext": "md",
+    "brief": "I run product operations for a team that uses Linear (https://linear.app). Help prepare the next cycle commitment using these entirely hypothetical exercise inputs, not a real team's velocity. In the last three equal-length cycles, the team completed 18, 21, and 20 estimated points with five fully available engineers. For the next cycle, one engineer will be unavailable for the entire cycle; the other four have their usual availability. Use the mean completed points as the starting capacity estimate, scale it linearly for availability for this exercise, and reserve 20% of the scaled capacity for unplanned work. The proposed issues, in business-priority order, have estimates of 5, 3, 3, 2, 2, and 1 points; issues cannot be split for this planning exercise, and no lower-priority issue should displace a higher-priority one. Write a Markdown recommendation under 500 words showing the capacity calculation, a feasible committed set, and what remains uncommitted. Explain why this is a planning estimate rather than a guarantee or a measure of individual productivity. Verify current cycle rollover behavior in official Linear documentation as of November 12, 2026 and give one end-of-cycle check.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "C08",
+    "brand": "linear",
+    "ext": "html",
+    "brief": "I teach new Linear (https://linear.app) users. Build a small shortcut study deck as one standalone responsive HTML file with inline CSS and JavaScript and no external assets or libraries. Choose eight common, currently documented Linear shortcuts spanning navigation, finding work, and issue actions; use official sources checked as of November 12, 2026. Let readers select Mac or Windows notation, reveal each card's answer, mark it 'practice again' or 'got it,' see a progress count, revisit the practice-again pile, and reset the session. Include the context needed for each shortcut to work, such as having an issue highlighted or being in the Inbox. Use ordinary accessible buttons for the study activity; do not capture or execute the actual shortcuts or override browser keys. Give the page a compact reference-card feel with clear keycaps and visible focus. Keep all eight action/shortcut pairs available as a useful reference when JavaScript is disabled, link the official sources, and explain that this is a local learning aid with no connection to a Linear workspace.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "C09",
+    "brand": "allbirds",
+    "ext": "md",
+    "brief": "I'm on the product insights team at Allbirds (https://www.allbirds.com). Synthesize these eight entirely hypothetical review excerpts about an unnamed everyday shoe; they are exercise data, not live reviews or evidence about a current model: A 'Great underfoot on my commute, but my heel slips'; B 'My usual size squeezed my toes, the next size was too loose'; C 'The collar rubbed on the first two wears, then settled'; D 'Very easy to pack and wear on trips'; E 'Heel lining wore through after four months of weekday use'; F 'Love the simple look; wish the heel held more securely'; G 'Tried on indoors and the forefoot felt narrow'; H 'Comfortable for my desk job, but the inner heel fabric is thinning.' Write a Markdown product-learning brief under 600 words with a traceable theme table, separate fit, initial experience, and wear-related signals, and choose two follow-up investigations. Include what to inspect or ask next and who should own each investigation. Keep positive evidence visible, count excerpts rather than claiming prevalence, and do not infer root causes, prescribe a redesign, or promise refunds.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "C10",
+    "brand": "allbirds",
+    "ext": "md",
+    "brief": "I work on retail presentation at Allbirds (https://www.allbirds.com). Create a Markdown merchandising handoff for a hypothetical three-day indoor pop-up, not an announced company event. The exercise space is a 3 m by 4 m rectangle with the entire 3 m front open, one 1.2 m-wide table, two freestanding display plinths each 0.5 m square, a mirror, and stock stored elsewhere. We will display six sample pairs representing three current everyday styles you choose from the official US site as of November 12, 2026. Give a simple text-based floor plan with dimensions, the purpose of each display, short sign copy, and a setup/teardown checklist. Make it easy for a visitor to browse and ask for a size without entering a stock area; flag any need for a separate fitting area for venue review. Keep a clear circulation route in the concept and mark venue/accessibility review as a check rather than claiming code compliance. Source the selected style names and any material statements; do not invent product performance, discounts, fixtures, electrical access, or a store opening.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "C11",
+    "brand": "allbirds",
+    "ext": "md",
+    "brief": "I manage an Allbirds (https://www.allbirds.com) customer-service planning exercise. Compare keeping the proposed staffing versus moving one agent for a two-hour peak window. All inputs are hypothetical, not Allbirds service levels or staffing: 90 contacts arrive evenly per hour; average handling plus wrap-up time is six minutes; ten agents are scheduled, but one is in training for the full window and one takes a 30-minute break during it. An eleventh trained agent can be moved from nonurgent back-office work for the full two hours. Assume one contact at a time per agent, no opening backlog, and no variability for the arithmetic. Write a Markdown recommendation under 500 words with available agent-minutes, theoretical contact capacity, demand, and any capacity shortfall in both options. Explain why a two-hour average can conceal a break-period bottleneck and why the simple capacity calculation does not predict actual waiting time. Recommend a break/coverage arrangement and two observations to monitor in a real pilot. Do not invent queueing precision, cut required breaks, or present the exercise as a company staffing policy.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "C12",
+    "brand": "allbirds",
+    "ext": "md",
+    "brief": "I'm onboarding a retail partner at Allbirds (https://www.allbirds.com). Write a Markdown purchase-order readiness note under 600 words using the current official US wholesale terms at https://www.allbirds.com/pages/allbirds-terms-of-use-wholesale as of November 12, 2026. The partner is confused about a requested delivery date versus a start-ship date, how an initial floor-set order differs from a fill-in order, whether an email conversation confirms a contract order, and who pays freight. Explain those four points in a compact table, then give the buyer a checklist of information and dates to verify with their sales representative before issuing a PO. Add a short internal note on documenting any agreed exception and handling an unfilled balance without assuming it has been canceled. Link the exact source and distinguish published terms from questions for the account's written agreement. Do not create an order, claim that stock or a delivery date is confirmed, invent credit approval, or give legal advice.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "C13",
+    "brand": "ramp",
+    "ext": "html",
+    "brief": "I work on customer education at Ramp (https://ramp.com). Build a local expense-allocation worksheet as one standalone responsive HTML file with inline CSS and JavaScript and no external dependencies. It should help an analyst prepare a proposed split of one USD transaction across two to six department lines. Let the reader enter a transaction total, department names, and dollar allocations; show allocated and remaining amounts, flag duplicate or blank department names, and allow a valid proposal to be copied as a readable memo. Use integer cents for calculations and reject negative allocations, more than two decimal places, and totals that do not reconcile. Provide add/remove-line controls, a hypothetical example, and reset. A removed line must stop affecting the total. Keep the interaction keyboard accessible with visible focus and clear validation beside the relevant field. Use current official Ramp split-transaction documentation as of November 12, 2026 to explain that this is preparation for accounting line splits, not a way to charge multiple cards or move money. Link sources and state that the prototype sends nothing and does not check account permissions, accounting-field availability, or post entries to Ramp.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "C14",
+    "brand": "ramp",
+    "ext": "md",
+    "brief": "I'm preparing vendor-master cleanup at a finance team using Ramp (https://ramp.com). Create a Markdown review plan for these entirely hypothetical records, not actual vendors: V01 Northstar Design LLC, tax-ID ending 1042, email ap@northstardesign.example; V02 Northstar Design, tax-ID ending 1042, email billing@northstardesign.example; V03 Northstar Design UK Ltd, tax-ID ending 7710, email uk@northstardesign.example; V04 North Star Office Supply, tax-ID missing, email accounts@northstaroffice.example; V05 Northstar Design LLC, tax-ID missing, email ap@northstardesign.example. V01 and V02 each have an open unpaid bill, V03 has a scheduled payment, and V05 has no bills. No bank details are supplied. Give a candidate-match table with confidence, evidence, and the next check; distinguish likely duplicates from distinct legal entities and unresolved cases. Propose a safe order of review, an owner/check/action log, and controls that preserve payment and audit history. Verify any Ramp-specific vendor editing, archival, or merge behavior against current official help as of November 12, 2026. Do not assume a merge feature exists, declare a record fraudulent, or change any records or payments.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "C15",
+    "brand": "ramp",
+    "ext": "md",
+    "brief": "I'm a finance manager using Ramp (https://ramp.com) to prepare for a software renewal. Write a Markdown negotiation brief under 600 words using this entirely hypothetical exercise, not a Ramp offer or real vendor quote. Our current contract is 80 seats at $30 per seat per month, billed annually; 52 seats were active in the last 30 days, and team leads say eight of the inactive seats are required for seasonal staff. The vendor proposes 90 seats at $33 per seat per month for a one-year renewal. We expect no headcount growth. Additional seats can be added later at the same unit price, with no minimum add-on quantity; all renewal seats are committed for the year. Calculate the current annual cost, proposed annual cost, and a 60-seat counterproposal at the vendor's new unit price. Recommend an opening position and a fallback, identify the limits of the 30-day usage snapshot, and draft a short negotiation email that requests written terms rather than claiming agreement. Add a renewal action table with owner roles and decision checks; do not assume that canceling a payment card cancels the software contract.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "C16",
+    "brand": "ramp",
+    "ext": "md",
+    "brief": "I lead finance operations for a company using Ramp (https://ramp.com). Write a Markdown offboarding checklist under 650 words for this hypothetical exercise: an employee leaves on Friday, owns a virtual card used for a critical software subscription, has two submitted reimbursements awaiting review, and has a physical card with one hotel authorization still pending. Use current official Ramp documentation on removing or deactivating users and card ownership as of November 12, 2026. Give a sequenced plan for the finance admin and manager, distinguish actions before departure from follow-up checks afterward, and identify who should confirm each step. Separate platform access, card controls, subscription ownership, reimbursements, and unsettled activity rather than treating one removal action as proof that all obligations are resolved. Make any current limitations or uncertain behavior explicit and provide the source links. This is a preparation document only: do not access an account, make changes, invent the employee's amounts, or promise that a pending authorization will disappear by Friday.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "C17",
+    "brand": "sweetgreen",
+    "ext": "md",
+    "brief": "I'm preparing a Sweetgreen (https://www.sweetgreen.com) restaurant manager's weekly business review. Use these entirely hypothetical exercise inputs, not company financials: budget sales $100,000, food cost 30% of sales, labor cost 25% of sales, and other operating costs $20,000. Actual sales were $92,000, food cost $30,360, labor cost $25,760, and other operating costs $20,500. Assume these are the only costs and use restaurant contribution defined as sales minus those three costs. Write a Markdown variance memo under 550 words showing budget and actual contribution, actual food/labor percentages, and a bridge that separates the sales-volume effect at budget variable-cost rates from food-rate, labor-rate, and other-cost effects. Reconcile the bridge to the total contribution change and use a consistent favorable/unfavorable convention. Recommend two checks before choosing an operating response, distinguishing a cost-rate signal from proof of waste or overstaffing. Do not label the result corporate profit, invent causes, or propose changes to food-safety practices.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "C18",
+    "brand": "sweetgreen",
+    "ext": "md",
+    "brief": "I'm a Sweetgreen (https://www.sweetgreen.com) general manager preparing a coaching conversation. This is an entirely hypothetical people-management exercise, not a real employee case: a shift lead has handed over an incomplete stock-count sheet on three recent evenings, the opening team spent time reconstructing it, and one opener complained about the lead in the team chat. I have not yet asked the lead what happened. Write a Markdown conversation guide under 500 words with a private opening grounded in observable facts, questions to understand the cause, a clear expectation for a complete handoff, and an agreed-action record with a check-in date placeholder. Include a separate short note on addressing the public complaint without disclosing the coaching discussion. Leave room for workload, training, or process problems rather than assuming carelessness, and distinguish this coaching conversation from any formal disciplinary process governed by our actual policy. Do not invent employee history, legal obligations, threats, or a completed agreement.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "C19",
+    "brand": "sweetgreen",
+    "ext": "md",
+    "brief": "I maintain public restaurant information for Sweetgreen (https://www.sweetgreen.com). Audit the official public listing for one currently open US location you choose from https://www.sweetgreen.com/locations as of November 12, 2026. Deliver a Markdown content handoff under 600 words with the exact location name, street address, regular published hours, any dated temporary hours visible for the next seven days, and official ordering or location-page links. Separate facts you can verify from fields that are absent or ambiguous. Draft a concise neutral location description using only supported information and propose a repeatable weekly check for the owner of the listing. Include a small change-request table with field, evidence, proposed action, and review owner; if nothing appears wrong, do not manufacture errors. Do not infer holiday hours, delivery radius, parking, accessibility features, menu availability, or services from another restaurant, and do not access or edit a business account. Link the official evidence with the snapshot date.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "C20",
+    "brand": "sweetgreen",
+    "ext": "md",
+    "brief": "I'm a menu copywriter at Sweetgreen (https://www.sweetgreen.com). Develop names for a hypothetical seasonal bowl concept for an internal review, not a real launch. The exercise ingredient list is roasted carrots, warm quinoa, arugula, lentils, cucumber, pickled red onion, pumpkin seeds, and lemon-herb dressing. There is no approved price, nutrition calculation, sourcing claim, or dietary certification. Deliver a Markdown proposal under 500 words with eight distinct name options, a short menu description for each of your best three, and a recommendation explaining how the names help a guest picture the meal without becoming a list of ingredients. Use current official menu writing as of November 12, 2026 for voice and naming context, and avoid duplicating a current entrée name. Include a short prelaunch fact-check list. Do not imply the concept is available, invent a promotion, assign calories or allergens, call it suitable for a medical diet, or make an unsupported environmental claim.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "C21",
+    "brand": "duolingo",
+    "ext": "html",
+    "brief": "I work on learner education at Duolingo (https://www.duolingo.com). Build a four-week practice-planning worksheet for adult language learners as one standalone responsive HTML file with inline CSS and JavaScript and no external dependencies. Let a reader write a personal communication goal, choose one to seven preferred practice days per week, and choose 5, 10, 15, or 20 planned minutes for each selected day. Generate a readable four-week schedule and weekly/total planned minutes, allow the reader to check sessions complete, and reset or print the plan. Changing the day or time choices should clearly regenerate the schedule rather than carrying completed marks onto different sessions. Provide a helpful empty state and validation if no day is selected. Use current official Duolingo learning guidance checked as of November 12, 2026 for two brief tips, with links; keep user-chosen time targets separate from shipped Duolingo settings. Give it a friendly workbook feel, strong phone readability, accessible labels, and visible focus. This local worksheet sends and saves nothing, does not schedule real notifications, and must not equate minutes, XP, or a streak with guaranteed proficiency.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "C22",
+    "brand": "duolingo",
+    "ext": "md",
+    "brief": "I'm a localization PM at Duolingo (https://www.duolingo.com). Prepare a Markdown English-to-Spanish (Mexico) UI handoff for this proposed adult-learning reminder feature; it is a hypothetical design exercise, not a shipped change. The source strings are: 'Make time for a little practice'; 'Choose your practice days'; 'Remind me at {time}'; 'You can change this later'; 'Save reminder'; 'Not now'; and '{count} days selected'. For each string, give the proposed Spanish, a back-translation, and any translator or engineering note. Preserve placeholders exactly, explain how the count string should handle singular and plural, and keep buttons concise without relying on ambiguous abbreviations. Add three QA cases covering long display times, one selected day, and the largest supported selection of seven days, plus a short tone note appropriate to an encouraging adult experience. Keep it under 600 words. Do not imitate a threatening Duo joke, assume a locale-specific time format has already been implemented, invent notification permissions, or claim these are official translations.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "C23",
+    "brand": "duolingo",
+    "ext": "md",
+    "brief": "I'm a QA lead reviewing a proposed Duolingo (https://www.duolingo.com) lesson-completion screen. Write a Markdown acceptance-test matrix under 650 words for this entirely hypothetical design: after a learner finishes a lesson, a celebratory animation plays automatically, the screen announces their earned XP, and a 'Continue' button becomes available. A setting can reduce nonessential motion; the same reward information must remain available when motion is reduced. The design must support keyboard use on web and a screen reader without requiring the user to wait for decorative motion. Give ten prioritized test cases with setup, action, expected observable result, and suggested test mode. Cover motion preference changes, focus placement/order, announcement duplication, repeated activation, narrow-screen text growth, and the transition to the next screen. Separate behavior required by this proposed brief from assumptions to resolve with design; do not report tests as passed, invent the current app's implementation, or prescribe animation technology. Add a brief release-review note identifying what evidence the team should capture.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "C24",
+    "brand": "duolingo",
+    "ext": "md",
+    "brief": "I make learner education videos at Duolingo (https://www.duolingo.com). Write a 60-second explainer storyboard for adults who confuse XP, their streak, and the Duolingo Score. Use current official public explanations as of November 12, 2026, and link the sources supporting what each measure represents and where Score availability is limited. Deliver a Markdown table with approximate timing, spoken narration, and a simple on-screen visual for each beat, followed by the final voiceover as one readable block. Use a concrete everyday example to show that doing more activity and advancing through course content answer different questions; keep the example clearly illustrative rather than a claimed conversion formula. The explanation should help learners choose a sensible progress check without dismissing motivation features. Keep spoken copy suitable for the allotted time and do not equate XP or a streak with fluency, invent a Score for an unsupported course, promise a completion time, or require a login or screen recording from a private account.",
+    "evaluation_set": "held-out"
+  }
+]

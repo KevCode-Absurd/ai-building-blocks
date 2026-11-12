@@ -1,0 +1,269 @@
+{
+  "judge": "i1",
+  "pairs": [
+    {
+      "id": "N01",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Complete, practical run sheet with a voluntary invitation, neutral questions, packaging-only suitability guidance, and stock reconciliation. The role swap and closeout are usable without additional instructions."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Covers the full event in a compact run sheet, including a comfortable decline, optional research, packaging referrals, and a reconciled tally. Its slightly shorter wording is offset by a somewhat repetitive timing table; neither answer needs a substantive change."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "N02",
+      "X": {
+        "usefulness": 8,
+        "accuracy": 9,
+        "specificity": 8,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "Preserves all requested blanks and supplies sound lot-level records, hold control, and authorized reviewer handoff without inventing thresholds. The dense action-and-record table and repeated procedural language make it slower for a receiver to scan."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 8,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The ten-row what-to-record/when-to-hold format makes receiver decisions especially clear, while the finish and exception form preserve traceability and release control. It leaves standards and disposition authority for the company to complete and is ready to adopt as a template."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "N03",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Delivers all requested fields, linked required-field feedback, safe text generation, stale-report handling, and copy fallback in readable phone and desktop layouts. Concise single-line examples and native form submission give it a practical edge for customer testing."
+      },
+      "Y": {
+        "usefulness": 8,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "Complete local generator with accessible labels, linked validation, sensitive-information reminders, and a copy fallback; both rendered layouts hold together. Its long single-line examples are cut off on the phone, and the input section lacks the normal form submission behavior that X provides."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "N04",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 8,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "A coherent 45-minute guide with six behavioral questions, useful probes, balanced participation, and a notes table that distinguishes observed from reported evidence. The permission-based follow-up and explicit separation from research findings make it ready for the session."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 8,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Keeps the same sound research arc in fewer words, with neutral questions, concrete probes, participant rotation, and the requested evidence/workaround/open-question fields. Both guides are equally usable; the shorter version gives up only minor facilitator detail."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "N05",
+      "X": {
+        "usefulness": 8,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "Material descriptions, including temperature regulation and the Tree Runner's wool-blend lining, match the linked [Wool Runner](https://www.allbirds.com/products/mens-wool-runners) and [Tree Runner](https://www.allbirds.com/products/mens-tree-runners-jet-black) pages. It meets the brief, but the long comparison cells are less convenient to scan during a shopper conversation."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The concise material/feel/when-to-try table and natural dialogues work well as a pocket conversation aid, with no price or universal-comfort promises. Its composition and lining details agree with the official [Tree Runner page](https://www.allbirds.com/products/mens-tree-runners-jet-black), and the sources are easy to find."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "N06",
+      "X": {
+        "usefulness": 10,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 10,
+        "craft": 10,
+        "overall": 10,
+        "note": "Correctly moves 11 pairs from A to B, shows the 11/14/7 pre-demand balances, and calculates $315 protected contribution less $55 transfer cost as $260. It explicitly charges for the reserve pairs without counting them as forecast sales and includes two useful authorization checks."
+      },
+      "Y": {
+        "usefulness": 10,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 10,
+        "craft": 10,
+        "overall": 10,
+        "note": "Correctly moves 11 pairs from A to B, shows the 11/14/7 pre-demand balances, and calculates $315 protected contribution less $55 transfer cost as $260. It explicitly charges for the reserve pairs without counting them as forecast sales and includes two useful authorization checks."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "N07",
+      "X": {
+        "usefulness": 8,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 8,
+        "overall": 8,
+        "note": "All titles, bodies and CTAs fit their limits, and the short email's edit/resubmit path and affidavit exception match [Ramp's employee guide](https://support.ramp.com/submitting-reimbursements/). The rejected-state body only says to check a next step, leaving useful conditional resubmission guidance to the email."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Fits all character and email limits while clearly distinguishing review, approval, scheduled payment, and off-platform tracking. It gives the rejected state a useful conditional edit/resubmit next step and accurately follows [Ramp's documented actions and payment explanation](https://support.ramp.com/submitting-reimbursements/)."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "N08",
+      "X": {
+        "usefulness": 8,
+        "accuracy": 9,
+        "specificity": 8,
+        "clarity": 9,
+        "craft": 8,
+        "overall": 8,
+        "note": "Covers purchased scope, first workflow, entities, systems, decision-makers, promises, success evidence, and a clear blocker distinction without inventing customer facts. The promises section relies on repeating a prose block, and unknown fields are less visibly distinguished from unanswered omissions."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 8,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The repeatable people, promises, entity and action tables make this a strong reusable handoff, with explicit TBD ownership and evidence for scope and integration assumptions. It defines a successful rollout and resolves or replans blockers without inventing entitlements or rollout timing."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "N09",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The under-180-word email makes a reasonable individual-meal recommendation, asks four useful grouped questions, and avoids an invented quote or dietary guarantee. Its catering/Outpost distinction is supported by [catering](https://www.sweetgreen.com/catering) and [Outpost](https://outpost.sweetgreen.com/); both versions are equally ready to send."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "A concise sendable reply with a useful preliminary choice, four next-step questions, and a conditional quote rather than a booking or price claim. The formats and location qualification match [Sweetgreen catering](https://www.sweetgreen.com/catering), while its internal source note keeps links out of the customer email."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "N10",
+      "X": {
+        "usefulness": 8,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 8,
+        "overall": 8,
+        "note": "The capacity arithmetic is correct: 16 average spaces implied versus 12 available, requiring a 25% wait reduction merely to fit on average. The pilot is executable within the constraints, but its keep decision omits an explicit overflow guardrail and an inconclusive outcome for insufficient comparable evidence."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Correct capacity reasoning supports a feasible pickup-lead-and-sign pilot, with a 24-word guest sign, concrete sampling, and displaced-work tracking. The keep/change/stop criteria explicitly address overflow and handling concerns, and it calls thin evidence inconclusive instead of forcing a success decision."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "N11",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Both role paths, four FAQs, accessible radio controls and disclosure are complete, and all phone/desktop views render cleanly. The six separate accounts, invitation links and annual manager payment agree with [Duolingo's official Family Plan explainer](https://blog.duolingo.com/plus-family-plan/); troubleshooting appropriately stays brief and avoids unverifiable platform steps."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Both role paths, four FAQs, accessible radio controls and disclosure are complete, and all phone/desktop views render cleanly. The six separate accounts, invitation links and annual manager payment agree with [Duolingo's official Family Plan explainer](https://blog.duolingo.com/plus-family-plan/); troubleshooting appropriately stays brief and avoids unverifiable platform steps."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "N12",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "A compact, well-ordered queue puts the screen-reader completion barrier first and confirmed wrong grading ahead of lower-confidence defects. It gives each report an owner and concrete first verification, retains provisional severity where impact is unknown, and keeps counts separate from learner reach."
+      },
+      "Y": {
+        "usefulness": 8,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "The priority order, suggested owners and verification actions are sound, and it avoids invented causes or commitments. Several rows repeat qualifications already covered by the rubric, making the triage sheet harder to scan without materially improving the first handoff over X."
+      },
+      "winner": "X"
+    }
+  ]
+}

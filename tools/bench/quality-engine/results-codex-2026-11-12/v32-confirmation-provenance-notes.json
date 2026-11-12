@@ -1,0 +1,8 @@
+{
+  "deviations": [
+    "MDwriterinitialtasksreadexposed4unassignedHTMLbriefs; correctedassignedscope, noHTMLartifacts/results/keysread.",
+    "HTMLBinitialtasksreadexposedall24briefs; correctedC04/C08scope andcheckedcaseinputs; nootheranswers/results/keysread.",
+    "HTMLAincorrectrerendercreateddirectorylistingPNGsunderR/C13/C21; removedonlyverifiedexactPNGsandemptydirsnonrecursively; correctedcapturesactualcandidates, no sourcechanges."
+  ],
+  "scope": "Extra task-brief reads by builders only; no prior answers, keys, methods/results or origin information reached final readers or external judges. Accidental PNGs were removed before packing."
+}

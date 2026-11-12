@@ -1,0 +1,199 @@
+{
+  "schema": "codex-fresh-selection/1",
+  "rule": "Both clarity and usefulness scores must meet the other usable candidate; tradeoffs require a narrow repair plus fresh check. Exact ties retain plain. No edits after independent choice.",
+  "reader_sha256": "5899f13256341341299e259597f142a339383bfa276cd132f2f7b4b9f795738b",
+  "selections": [
+    {
+      "id": "C01",
+      "label": "X",
+      "source_arm": "v32",
+      "sha256": "a17ed8b45c625777354ebe66a5201cf4f0e4b31ee45808fa95675c81c8ffa1eb",
+      "reason": "Ten complete coded rows; PRICE preserves the explicit expensive/value signal separately from financial pressure, with mixed and unspecified rules and the required reporting cuts.",
+      "ext": "md"
+    },
+    {
+      "id": "C02",
+      "label": "Y",
+      "source_arm": "plain",
+      "sha256": "fb1445af19bcc134083fdd96ff33eaf5a0e2bd45e89d029fa4fac358d59b082f",
+      "reason": "Same complete negotiating substance with tradeoffs before the package; totals, conditions and approvals are explicit. Official product name verified.",
+      "ext": "md"
+    },
+    {
+      "id": "C03",
+      "label": "Y",
+      "source_arm": "plain",
+      "sha256": "c19d7cc3c426670bab8e8173ea71939179f3da1bf7dc64aee2ebd761cc2d0c0e",
+      "reason": "Same complete study workflow and coding fields; omission of an action/owner column does not remove the consent, diary, interview or researcher-note requirements.",
+      "ext": "md"
+    },
+    {
+      "id": "C04",
+      "label": "X",
+      "source_arm": "v32",
+      "sha256": "50f832323d569bafe2edc582f9779bba9e2bcc3c49ebe1300d375ab651401d5b",
+      "reason": "Both source and every desktop/phone preview inspected. Correct start-of-day arrival and 14-day horizon, bounded nonnegative stock, validation/reset; phone rows retain all labels and edited inputs invalidate results. Edge-case logic checks passed; official timing help verified.",
+      "ext": "html"
+    },
+    {
+      "id": "C05",
+      "label": "X",
+      "source_arm": "plain",
+      "sha256": "c063c3eebf6e21c7624ce927a2080fa8128fe82d9bad3a89353282180c400ee9",
+      "reason": "Ordered setup distinguishes subscriptions, Inbox organization, channels and Pulse cadence, with accurate official links and both documented conflicts. Three-day check protects requests.",
+      "ext": "md"
+    },
+    {
+      "id": "C06",
+      "label": "X",
+      "source_arm": "plain",
+      "sha256": "7863ad196c04eeab9c453a68f20e2f87659357c5b4d03a79f75cc5e6f65b000d",
+      "reason": "Seven issues cover all stated behaviors with owner roles and testable criteria, narrowly justified integrated-test blockers and unresolved decisions. Official Linear organization capabilities verified.",
+      "ext": "md"
+    },
+    {
+      "id": "C07",
+      "label": "Y",
+      "source_arm": "v32",
+      "sha256": "f14df3652edf81d4449363a9179dd320cc3ea387fcaab1484ca5291e8ab7b4e0",
+      "reason": "Same correct capacity, commitment and rollover guidance; explicitly describes scaling in direct proportion to availability, making the exercise assumption easier to understand.",
+      "ext": "md"
+    },
+    {
+      "id": "C08",
+      "label": "Y",
+      "source_arm": "v32",
+      "sha256": "750ee54e20f9d6f2dcbbb62f599ebe6b57edeea4e6f28c79490e6a6ab2a1c680",
+      "reason": "All previews inspected; same eight verified shortcuts and no-JS reference. Compact study layout and explicit full-deck return preserve the unfinished pass when revisiting practice cards; logic checks passed.",
+      "ext": "html"
+    },
+    {
+      "id": "C09",
+      "label": "Y",
+      "source_arm": "plain",
+      "sha256": "44af083aaf63e3cba03fca2d43ae9f2fdb9cdfe94e5074d5b16acd26b559d52b",
+      "reason": "Same evidence table, accurate overlapping counts, owners and follow-up deliverables. Removing the opening restatement does not lose an investigation or necessary instruction.",
+      "ext": "md"
+    },
+    {
+      "id": "C10",
+      "label": "Y",
+      "source_arm": "plain",
+      "sha256": "894e66785572033ea84e6c96e8382bb4f8f77b04795640ba99ba9a77f2bca0cc",
+      "reason": "Same complete fixture plan, six-pair display, signs, conditional fitting review and checklists; official style names verified without unsupported material or performance claims.",
+      "ext": "md"
+    },
+    {
+      "id": "C11",
+      "label": "Y",
+      "source_arm": "v32",
+      "sha256": "ac6b1fef2e9fce1a50ec45731cdb339b63846c9c638dff5753df100d0c7bea8a",
+      "reason": "Same correct arithmetic and coverage plan, with agent-minutes explicitly labeled so capacity gaps cannot readily be confused with predicted waiting time.",
+      "ext": "md"
+    },
+    {
+      "id": "C12",
+      "label": "X",
+      "source_arm": "v32",
+      "sha256": "7993980630be7c534010062a50d4107ad049bf68aa8924aa844fe4d337fbbe33",
+      "reason": "Exact official terms verified: four questions answered, both early-shipment date bases and both 90-day clocks retained for written reconciliation. Buyer checklist and exception record support PO readiness.",
+      "ext": "md"
+    },
+    {
+      "id": "C13",
+      "label": "X",
+      "source_arm": "v32",
+      "sha256": "e1190957ce087b797237f84a8a8fbd8909a611caac8bccb31179c0d202bd8eba",
+      "reason": "Both sources and every preview inspected. Clear calm initial state, readable phone fields and adjacent memo. Integer-cent, duplicate/blank/invalid input, 2–6 rows, removed-row totals, memo and reset checks passed; source verified.",
+      "ext": "html"
+    },
+    {
+      "id": "C14",
+      "label": "Y",
+      "source_arm": "plain",
+      "sha256": "74bfafdcdc1348b0a8b4ddd4bb176a810c93d8a6ae8b9cf1c80ecdb372214238",
+      "reason": "Same complete candidate table, safe review order and verified editing/merge/inactivation conditions. Opening summary wording does not change the operational handoff.",
+      "ext": "md"
+    },
+    {
+      "id": "C15",
+      "label": "X",
+      "source_arm": "plain",
+      "sha256": "85d72abf02bbdf120b22dd80e1dcbcd05cdcfd3ae7f2154a6bc1f35d0e16809d",
+      "reason": "All annual costs, differences and percentages reconcile; 60-seat opening/fallback preserve add-on flexibility, roster uncertainty, written terms and contract termination checks.",
+      "ext": "md"
+    },
+    {
+      "id": "C16",
+      "label": "Y",
+      "source_arm": "v32",
+      "sha256": "631075ae8c60df146148f39941d5b1bfd4e4b356581cbd58741c710082c8540c",
+      "reason": "Before/cutoff/after sections make the same verified controls easier to execute, preserving confirming roles, claim deletion risk, card transfer limits, unsettled activity and closeout exceptions.",
+      "ext": "md"
+    },
+    {
+      "id": "C17",
+      "label": "X",
+      "source_arm": "plain",
+      "sha256": "1d1073c9c0754215de054d9f1742c72404fa0e92a52976b29cd933437361b92c",
+      "reason": "Correct $25,000/$15,380 contributions, 33%/28% rates and -$3,600/-$2,760/-$2,760/-$500 bridge; investigation checks preserve uncertainty about causes.",
+      "ext": "md"
+    },
+    {
+      "id": "C18",
+      "label": "X",
+      "source_arm": "plain",
+      "sha256": "e722ebcfbc069dbb694f4432ff9ed2729ace3d5341882a466dff9d7776b10d2a",
+      "reason": "Private fact-based opening, neutral causal questions, concrete handoff expectations and joint record include support, owners and check-in placeholder; public complaint handled separately.",
+      "ext": "md"
+    },
+    {
+      "id": "C19",
+      "label": "Y",
+      "source_arm": "plain",
+      "sha256": "29fec828d9a039ba931d0fc2fef9544bcb715b2565fa8e02ca4e1d440f77860e",
+      "reason": "Same verified public snapshot, neutral description and evidence/action/owner workflow; no unsupported services or holiday claims. Ordering-page extraction cannot independently establish live availability.",
+      "ext": "md"
+    },
+    {
+      "id": "C20",
+      "label": "Y",
+      "source_arm": "v32",
+      "sha256": "a3de1741158ea30c789e9ae016a476414a36c766929718827cb323eda3ee13cc",
+      "reason": "Same useful names, descriptions and recommendation, correcting the cue to lentil-and-greens. Official current menu names checked; none of the eight options duplicates the inspected menu.",
+      "ext": "md"
+    },
+    {
+      "id": "C21",
+      "label": "Y",
+      "source_arm": "v32",
+      "sha256": "7205c6e77ac835f34b7dedd8dbf5c5b9e7b5bc9b3388f8de377d58e206a01665",
+      "reason": "Every preview inspected; clear empty state and stronger phone hierarchy. Logic checks confirm days/minutes, totals, fresh completion marks and reset; goal/day validation and print readiness stay consistent. Both learning tips source-supported.",
+      "ext": "html"
+    },
+    {
+      "id": "C22",
+      "label": "X",
+      "source_arm": "plain",
+      "sha256": "2d958a20619451184a9586f0d794d716b22f13e41457d53298167ba18793b737",
+      "reason": "All seven strings, exact placeholders, singular/plural branches, back-translations and three required QA cases are complete; adult tone and formatter uncertainty are explicit.",
+      "ext": "md"
+    },
+    {
+      "id": "C23",
+      "label": "Y",
+      "source_arm": "v32",
+      "sha256": "70a693faf7f65502d3510c99f17635f3a6f5fcdd0eb9b3872d2582cf52287207",
+      "reason": "Same complete ten-case matrix and release evidence, with automatic celebration start explicitly asserted in case 1, preserving a required observable behavior.",
+      "ext": "md"
+    },
+    {
+      "id": "C24",
+      "label": "X",
+      "source_arm": "v32",
+      "sha256": "98f870d10fd255812b28eceb53868c235187d96cc4abb4b3403e84b3d2dbe997",
+      "reason": "121-word voiceover and timed beats distinguish activity, consistency and course progress in plain adult language. Spanish review example and concrete weekly lunch task are useful; official XP, streak and limited Score availability verified.",
+      "ext": "md"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "judge": "j2",
+  "pairs": [
+    {
+      "id": "N01",
+      "X": {"usefulness": 8, "accuracy": 10, "specificity": 9, "clarity": 8, "craft": 8, "overall": 8, "note": "The invitation, voluntary questions, packaging referral and stock reconciliation are ready to use. After the role swap, however, the Staff B column still assigns replenishment and stock tracking, making the second-half division of work ambiguous."},
+      "Y": {"usefulness": 9, "accuracy": 10, "specificity": 9, "clarity": 9, "craft": 9, "overall": 9, "note": "The lead-based timetable explicitly assigns Staff B to welcoming and Staff A to stock after the swap. It retains the comfortable decline, optional feedback, packaging boundary and complete closeout without making the staff resolve conflicting instructions."},
+      "winner": "Y"
+    },
+    {
+      "id": "N02",
+      "X": {"usefulness": 9, "accuracy": 10, "specificity": 9, "clarity": 8, "craft": 8, "overall": 9, "note": "A complete, disciplined receiving template with named approved-reference blanks, traceability, result recording and an authorized disposition handoff. The wide action-and-record table makes the hold triggers less immediately visible to a receiver."},
+      "Y": {"usefulness": 9, "accuracy": 10, "specificity": 9, "clarity": 9, "craft": 9, "overall": 9, "note": "Separating what to record from when to hold makes the ten checks easier to execute at the dock. The clear escalation contact and maintain-the-hold instruction complete the handoff while leaving standards and release authority for the company to supply."},
+      "winner": "Y"
+    },
+    {
+      "id": "N03",
+      "X": {"usefulness": 9, "accuracy": 10, "specificity": 9, "clarity": 9, "craft": 9, "overall": 9, "note": "The full desktop and phone renders are clean, and the shorter title and single-line examples remain readable on the phone. The semantic form supports submission, while script checks passed empty-field errors, URL rejection, generation, stale-report disabling and copy fallback."},
+      "Y": {"usefulness": 9, "accuracy": 10, "specificity": 9, "clarity": 8, "craft": 8, "overall": 9, "note": "This also implements the requested local, accessible reporting flow and passed the same script checks. Its more consistent example story and explicit required labels help, but the summary and location examples visibly clip on the phone and the larger opening delays the form."},
+      "winner": "X"
+    },
+    {
+      "id": "N04",
+      "X": {"usefulness": 9, "accuracy": 10, "specificity": 9, "clarity": 9, "craft": 9, "overall": 9, "note": "The neutral questions follow actual decisions, rejected feedback and later evidence, with a workable 45-minute agenda and participation guidance. The notes table explicitly asks for the example, evidence or quote, and workaround consequence, giving the eventual research record a useful edge."},
+      "Y": {"usefulness": 9, "accuracy": 10, "specificity": 9, "clarity": 9, "craft": 8, "overall": 9, "note": "A usable discussion guide with neutral probes, clear timeboxes and a permission-based follow-up email. Its simplified notes columns lose the explicit example and consequence prompts that would help the facilitator distinguish evidence from a thin summary."},
+      "winner": "X"
+    },
+    {
+      "id": "N05",
+      "X": {"usefulness": 9, "accuracy": 10, "specificity": 10, "clarity": 8, "craft": 9, "overall": 9, "note": "The material claims, including temperature regulation and the tree shoe's wool-blend lining, match the official [Wool Runner](https://www.allbirds.com/products/mens-wool-runners) and [Tree Runner](https://www.allbirds.com/products/mens-tree-runners-jet-black) pages. The conversations are sensible, but the paragraph-filled comparison cells are slower to consult during a shopper conversation."},
+      "Y": {"usefulness": 9, "accuracy": 10, "specificity": 10, "clarity": 10, "craft": 9, "overall": 9, "note": "The three-column material/description/try-first comparison gives an associate an immediate conversational cue, and the dialogues leave comfort to an actual try-on. Its materials and lining qualification agree with the linked official [product details](https://www.allbirds.com/products/mens-tree-runners-jet-black), and it satisfies the word and claim constraints."},
+      "winner": "Y"
+    },
+    {
+      "id": "N06",
+      "X": {"usefulness": 10, "accuracy": 10, "specificity": 10, "clarity": 9, "craft": 9, "overall": 10, "note": "Correctly moves 11 pairs from A to B, preserves every reserve, and calculates $315 protected contribution less $55 transfer cost as $260. It explicitly separates the nine forecast sales from the two reserve pairs and gives two relevant authorization checks; the answers are identical."},
+      "Y": {"usefulness": 10, "accuracy": 10, "specificity": 10, "clarity": 9, "craft": 9, "overall": 10, "note": "Correctly moves 11 pairs from A to B, preserves every reserve, and calculates $315 protected contribution less $55 transfer cost as $260. It explicitly separates the nine forecast sales from the two reserve pairs and gives two relevant authorization checks; the answers are identical."},
+      "winner": "tie"
+    },
+    {
+      "id": "N07",
+      "X": {"usefulness": 9, "accuracy": 10, "specificity": 10, "clarity": 9, "craft": 8, "overall": 9, "note": "The copy meets all character limits and the email stays under 100 words; the actions, affidavit limitation and payment distinction match [Ramp's guide](https://support.ramp.com/submitting-reimbursements/). The rejected-state body asks the employee to check a next step without offering the useful edit/resubmit cue available in Y."},
+      "Y": {"usefulness": 9, "accuracy": 10, "specificity": 10, "clarity": 9, "craft": 9, "overall": 9, "note": "The rejected state gives a concrete, conditional next step, and the off-platform state explains who marked the record while separating that record from money arriving. All copy limits pass, and [Ramp's public guide](https://support.ramp.com/submitting-reimbursements/) supports the named actions and affidavit restriction."},
+      "winner": "Y"
+    },
+    {
+      "id": "N08",
+      "X": {"usefulness": 9, "accuracy": 10, "specificity": 9, "clarity": 9, "craft": 8, "overall": 9, "note": "Covers the full sales-to-implementation scope without inventing entitlements, integration behavior or timelines. The fill-in fields and blocker distinction work, but unknowns and stakeholder authority are less consistently structured for the implementation lead's next action."},
+      "Y": {"usefulness": 9, "accuracy": 10, "specificity": 9, "clarity": 9, "craft": 9, "overall": 9, "note": "Explicit TBD ownership, stakeholder decision authority and availability, and evidence/status in the action table make unresolved commitments easier to manage. The readiness rule correctly permits discovery questions while requiring scope, authority or promise blockers to be resolved or the kickoff replanned."},
+      "winner": "Y"
+    },
+    {
+      "id": "N09",
+      "X": {"usefulness": 9, "accuracy": 10, "specificity": 10, "clarity": 9, "craft": 9, "overall": 9, "note": "A usable, under-180-word email that connects individual packaging to staggered arrivals, asks four actionable questions and avoids a premature quote. Its internal references directly substantiate both the [catering formats](https://www.sweetgreen.com/catering) and [Outpost's individual ordering and batched delivery](https://outpost.sweetgreen.com/)."},
+      "Y": {"usefulness": 9, "accuracy": 10, "specificity": 9, "clarity": 9, "craft": 9, "overall": 9, "note": "Also gives a sound preliminary recommendation, four useful questions and no invented price, booking or dietary guarantee. Its [office-meals reference](https://www.sweetgreen.com/catering-inquiry?path=recurring-office-meals) supports recurring versus one-time service, but is less direct evidence for the precise branded Outpost description than X's source."},
+      "winner": "X"
+    },
+    {
+      "id": "N10",
+      "X": {"usefulness": 9, "accuracy": 10, "specificity": 10, "clarity": 9, "craft": 9, "overall": 9, "note": "The capacity calculation and 25% wait reduction are correct under explicit assumptions, and the lead/sign pilot respects labor and food-handling constraints. Its decision criteria are useful, but do not explicitly rule out observed overflow when keeping the change or classify insufficient evidence as inconclusive."},
+      "Y": {"usefulness": 9, "accuracy": 10, "specificity": 10, "clarity": 9, "craft": 9, "overall": 9, "note": "Correct capacity reasoning, a practical single operating change and normalized question tracking make this a strong local pilot. The no-observed-overflow keep condition and explicit inconclusive outcome improve the final operating decision without claiming the assignment will necessarily solve the capacity problem."},
+      "winner": "Y"
+    },
+    {
+      "id": "N11",
+      "X": {"usefulness": 9, "accuracy": 10, "specificity": 10, "clarity": 9, "craft": 9, "overall": 9, "note": "The source and full phone/desktop renders are identical to Y: clear role selection, friendly paths and concise native FAQ controls. Role switching passed the script check, and the account, six-member and annual-payment claims match [Duolingo's official explanation](https://blog.duolingo.com/plus-family-plan/)."},
+      "Y": {"usefulness": 9, "accuracy": 10, "specificity": 10, "clarity": 9, "craft": 9, "overall": 9, "note": "The source and full phone/desktop renders are identical to X: clear role selection, friendly paths and concise native FAQ controls. Role switching passed the script check, and the account, six-member and annual-payment claims match [Duolingo's official explanation](https://blog.duolingo.com/plus-family-plan/)."},
+      "winner": "tie"
+    },
+    {
+      "id": "N12",
+      "X": {"usefulness": 9, "accuracy": 10, "specificity": 10, "clarity": 9, "craft": 9, "overall": 9, "note": "Sensibly places the screen-reader barrier first, confirmed wrong grading next, and makes lower-impact classifications provisional. It preserves all hypothetical report counts and avoids root-cause and release inventions, though several first actions leave more reproduction detail for the receiving owner to infer."},
+      "Y": {"usefulness": 9, "accuracy": 10, "specificity": 10, "clarity": 9, "craft": 9, "overall": 9, "note": "The same defensible priority order is paired with more actionable verification: exact exercise identifiers, tested configurations, audio settings and whether a highlight actually identifies the answer. The proposed rubric and short handoff clearly preserve uncertainty and distinguish report volume from learner reach."},
+      "winner": "Y"
+    }
+  ]
+}

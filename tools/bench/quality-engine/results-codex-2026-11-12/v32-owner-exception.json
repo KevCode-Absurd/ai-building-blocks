@@ -1,0 +1,13 @@
+{
+  "approved": true,
+  "authority": "Owner explicit response in this chat",
+  "approved_at": "2026-11-12T07:45:02.096Z",
+  "criteria": {
+    "new_confirmation_wins_greater_than_losses": true,
+    "new_confirmation_mean_clarity_delta_at_least": 0,
+    "new_confirmation_mean_accuracy_delta_at_least": 0
+  },
+  "original_gate_preserved": true,
+  "approval_before_confirmation_unblinding": true,
+  "approval_sha256": "f389ff21580e1799399814ec2610adfc2d520f17dc7954f49ff1acf1825c6ac7"
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "N01",
+    "brand": "gruns",
+    "kind": "sampling event run sheet",
+    "ext": "md",
+    "brief": "I run field marketing at Grüns (https://gruns.co). I'm planning a small adult-product sampling table at a coworking space. For this exercise, assume a 90-minute lunch window, two staff members, 120 sealed sample packs supplied by us, and no on-site sales. Write a Markdown run sheet that includes setup, a simple division of roles, a 20-second invitation, three neutral questions to learn why someone would or wouldn't try the product, and a short end-of-event tally form. Keep it to two pages at most. Make the script comfortable for someone to decline, and refer ingredient or suitability questions to the current packaging rather than improvising health advice.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "N02",
+    "brand": "gruns",
+    "kind": "receiving inspection template",
+    "ext": "md",
+    "brief": "I manage fulfillment at Grüns (https://gruns.co). I need a reusable Markdown receiving checklist for finished adult-product shipments from a contract manufacturer so a warehouse receiver knows what to record and when to hold a delivery for review. Give me 10 checks covering paperwork, counts, packaging condition, and traceability, followed by a compact exception handoff form. This is a template for us to complete: leave clearly named blanks for our approved SKU list, pack configuration, minimum remaining shelf life, and storage specifications. Don't invent our manufacturing standards, release authority, or acceptance thresholds. Make the receiver's actions and the reviewer handoff clear enough to use without a meeting.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "N03",
+    "brand": "linear",
+    "kind": "bug report builder",
+    "ext": "html",
+    "brief": "I'm on the support team at Linear (https://linear.app). Build a customer-facing bug report builder that we can test as a prototype. Deliver one standalone responsive HTML file with inline CSS and JavaScript and no external dependencies. It should collect a short summary, where in Linear it happens, steps to reproduce, expected versus actual behavior, environment, and impact, with an optional issue URL. Let the customer generate and copy a readable report to paste into a support message. Include useful examples, required-field feedback, keyboard-accessible controls, and a short reminder to redact sensitive information. Clearly label it as a prototype that sends nothing; don't add login, uploads, a backend, or claims about our response times.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "N04",
+    "brand": "linear",
+    "kind": "customer advisory discussion guide",
+    "ext": "md",
+    "brief": "I'm a product manager at Linear (https://linear.app). I have 45 minutes with six customers who work in product or customer support, and I want to understand how they decide which customer feedback becomes product work. Write a Markdown facilitator guide with a timed agenda, six main questions with optional probes, and a fill-in notes table that separates observed behavior, workarounds, and unanswered questions. Keep product explanation to a two-minute opening and avoid leading people toward a feature request we already favor. End with a short follow-up email I can send asking permission to clarify their notes. I need a discussion guide, not research findings.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "N05",
+    "brand": "allbirds",
+    "kind": "retail conversation job aid",
+    "ext": "md",
+    "brief": "I train retail associates at Allbirds (https://www.allbirds.com). Write a one-page Markdown pocket guide for a conversation with a shopper deciding between our wool and tree-fiber shoes for everyday wear. Include three discovery questions, a plain-language material comparison, two short example recommendation dialogues for different shopper needs, and an honest closing line when the shopper needs to try both. Use current public Allbirds information and link the relevant sources. Keep it under 500 words, leave prices and promotions out, and don't promise medical benefits, waterproofing, or universal comfort. This is an associate's conversation aid, not product-page copy.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "N06",
+    "brand": "allbirds",
+    "kind": "stock transfer decision memo",
+    "ext": "md",
+    "brief": "I oversee retail inventory at Allbirds (https://www.allbirds.com). Help me decide an inter-store transfer for one size/color SKU using these entirely hypothetical exercise inputs: Store A has 22 pairs and a seven-day demand forecast of 6; Store B has 3 pairs and a forecast of 12; Store C has 7 pairs and a forecast of 5. No replenishment arrives during those seven days. Transfers arrive before the period starts and cost $5 per pair moved; each otherwise-lost sale contributes $35 before transfer cost. Our planning rule is to retain a two-pair reserve above forecast demand at every store. Write a Markdown recommendation under 450 words with a transfer table, the resulting balances, the expected contribution protected after transfer costs, and two checks to make before authorizing the move. Treat forecasts as planning estimates, not guaranteed sales.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "N07",
+    "brand": "ramp",
+    "kind": "reimbursement status microcopy",
+    "ext": "md",
+    "brief": "I'm a content designer at Ramp (https://ramp.com). I need employee-facing microcopy for four reimbursement states in a proposed design: submitted and awaiting review; rejected with a reviewer note; approved but awaiting the company's scheduled payment; and marked paid outside Ramp. Treat these as design scenarios, not a shipped change. In a Markdown table, give each state a title of at most 40 characters, body of at most 150 characters, and one appropriate CTA of at most 24 characters. Then write one email, at most 100 words, for the rejected state using a [REVIEWER_NOTE] placeholder. Keep approval separate from money arriving, explain the off-platform case accurately, and verify any action you name against Ramp's public help documentation.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "N08",
+    "brand": "ramp",
+    "kind": "sales to implementation handoff template",
+    "ext": "md",
+    "brief": "I lead customer onboarding at Ramp (https://ramp.com). Create the Markdown handoff template our account executive fills in before an implementation kickoff. I want the implementation lead to see what the customer bought, their first workflow to launch, entities and accounting systems involved, decision-makers, dependencies, promises made during the sale, and the definition of a successful first rollout. Use clear fill-in fields and a small owner/action/due-date table. Add a short readiness checklist that distinguishes a missing answer we can resolve during kickoff from a blocker we need to settle first. Keep it to two pages and don't invent a customer's details, package entitlements, integration behavior, or standard rollout duration.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "N09",
+    "brand": "sweetgreen",
+    "kind": "catering inquiry reply",
+    "ext": "md",
+    "brief": "I handle catering inquiries at Sweetgreen (https://www.sweetgreen.com). For this hypothetical inquiry, an office administrator writes: 'We're feeding about 40 people at a working lunch next Wednesday. Some people may arrive late, and we have vegetarian guests. Should we order individual meals or a build-your-own bar? Can you quote it?' Draft the email I should send, at most 180 words, with a useful preliminary recommendation and no more than four questions needed for the next step. Use our current public catering information, distinguish catering from Outpost, and don't invent prices, availability at their address, dietary guarantees, or a confirmed booking. Put any source links in a brief internal note below the email, not in the customer's body copy.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "N10",
+    "brand": "sweetgreen",
+    "kind": "pickup congestion pilot proposal",
+    "ext": "md",
+    "brief": "I'm a Sweetgreen (https://www.sweetgreen.com) restaurant manager. I want a practical two-week pilot to reduce confusion at our mobile-order pickup area. These are hypothetical exercise observations, not company results: from noon to 1 p.m. we average 60 pickup orders, ready orders wait an average of 16 minutes, and the pickup shelf has 12 order spaces; guests often ask staff whether their order is ready. I can rearrange signage and assignments within the existing shift, but can't add labor hours, shelving, or software. Write a Markdown proposal under 600 words with the capacity implication of those inputs, one recommended operating change, a guest-facing sign of at most 35 words, and a small daily tracking table with a clear keep/change/stop decision at the end. State any assumptions and leave food-handling requirements to our existing approved procedures.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "N11",
+    "brand": "duolingo",
+    "kind": "family plan invitation explainer",
+    "ext": "html",
+    "brief": "I'm on the learner education team at Duolingo (https://www.duolingo.com). Build a simple explainer for adults who are confused about inviting someone to a Super Family Plan versus joining through an invitation. Deliver one standalone responsive HTML file with inline styling and no external dependencies. Give readers an accessible choice between 'I'm inviting someone' and 'I'm joining,' show a short path for each role, and include four concise FAQs about separate accounts, who can join, who pays, and what to check when an invite doesn't work. Use current official Duolingo sources and include source links in a small footer. Keep the tone friendly, avoid fixed prices or platform-specific steps you can't verify, and don't build sign-in or pretend an invitation has been sent.",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "N12",
+    "brand": "duolingo",
+    "kind": "learning issue triage sheet",
+    "ext": "md",
+    "brief": "I coordinate lesson-quality triage at Duolingo (https://www.duolingo.com). Create a Markdown triage sheet for these six entirely hypothetical exercise reports: audio fails on one Android device with three reports; an illustration is missing from one exercise with one report; a typo appears in a grammar explanation with one report; a linguist has confirmed that a valid Spanish translation is rejected, with 40 reports; the correct answer is visibly highlighted before submission, with 12 reports; and a lesson cannot be completed with a screen reader, with four reports. Propose a simple severity rubric, then give an ordered table with priority, reasoning, suggested owner role, and the first verification or containment action for each report. End with a handoff note under 120 words. Don't treat report counts as total affected learners or invent root causes, release commitments, or our existing internal severity policy.",
+    "evaluation_set": "held-out"
+  }
+]

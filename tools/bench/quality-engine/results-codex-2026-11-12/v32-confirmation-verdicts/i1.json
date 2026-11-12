@@ -1,0 +1,533 @@
+{
+  "judge": "i1",
+  "pairs": [
+    {
+      "id": "C01",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Complete, usable coding rules and all ten classifications; separating PRICE from BUDGET preserves the stated expensive assessment without inferring financial hardship. Mixed priority, unspecified feedback and the hypothetical sample limitations are handled explicitly."
+      },
+      "Y": {
+        "usefulness": 8,
+        "accuracy": 8,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 8,
+        "overall": 8,
+        "note": "The guide is otherwise complete and cautious, but assigning BUDGET to 'it's expensive' conflates price/value judgment with spending pressure despite the instruction to separate stated reasons from inferred causes. A distinct price code would prevent misleading reporting."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "C02",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "A complete, commercially usable package with correct 1,200-case arithmetic, firm quantity commitment, four-week lead-time protection and explicit finance/operations boundaries; the official product page confirms the Grüns Superfood Gummies terminology ([official source](https://gruns.co/products/gruns)). Both concessions are clearly proposed alternatives rather than invented company policy."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "A complete, commercially usable package with correct 1,200-case arithmetic, firm quantity commitment, four-week lead-time protection and explicit finance/operations boundaries; the official product page confirms the Grüns Superfood Gummies terminology ([official source](https://gruns.co/products/gruns)). Both concessions are clearly proposed alternatives rather than invented company policy."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C03",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The pack covers nonuse, missing entries, storage, handling and workarounds with neutral questions, voluntary participation and clear privacy/withdrawal handling. It keeps observations separate from interpretation and correctly limits what 12 self-selected volunteers can establish."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The pack covers nonuse, missing entries, storage, handling and workarounds with neutral questions, voluntary participation and clear privacy/withdrawal handling. It keeps observations separate from interpretation and correctly limits what 12 self-selected volunteers can establish."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C04",
+      "X": {
+        "usefulness": 8,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "The local planner correctly models arrival before use, zero-floor stock and unmet demand, with robust integer/range checks and the verified account-timing note ([official source](https://gruns.co/pages/contact?a=How-can-I-manage-my-order---id--ts4r9AGMTYiiTyoQb933xg)). Desktop and phone render cleanly, but the phone table needs horizontal scrolling and results remain visible after inputs change until recalculated."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Correct stock logic and validation, with no network/storage behavior or serving-size advice; the account-timing note matches the official Grüns help page. The mobile day cards expose every stock field without sideways scrolling, and changing inputs hides stale results with an explicit recalculation message."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "C05",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The ordered reset distinguishes subscriptions, Inbox sorting, delivery channels and Pulse cadence, includes a practical three-day check and accurately surfaces both documentation conflicts. Current official Inbox, Notifications and Pulse pages support the consequential behavior ([official source](https://linear.app/docs/inbox); [official source](https://linear.app/docs/notifications); [official source](https://linear.app/docs/pulse))."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The ordered reset distinguishes subscriptions, Inbox sorting, delivery channels and Pulse cadence, includes a practical three-day check and accurately surfaces both documentation conflicts. Current official Inbox, Notifications and Pulse pages support the consequential behavior ([official source](https://linear.app/docs/inbox); [official source](https://linear.app/docs/notifications); [official source](https://linear.app/docs/pulse))."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C06",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Seven concrete issues cover the brief with testable offline, persistence, removal and sign-out criteria, plausible owner roles and only integrated acceptance blockers. Project resources, one-project-per-issue and relationships match official Linear documentation ([official source](https://linear.app/docs/projects); [official source](https://linear.app/docs/issue-properties-home)), and unresolved behavior stays explicitly undecided."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Seven concrete issues cover the brief with testable offline, persistence, removal and sign-out criteria, plausible owner roles and only integrated acceptance blockers. Project resources, one-project-per-issue and relationships match official Linear documentation ([official source](https://linear.app/docs/projects); [official source](https://linear.app/docs/issue-properties-home)), and unresolved behavior stays explicitly undecided."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C07",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Correctly computes the 12.59-point planned ceiling, commits the 11-point priority prefix and leaves five points uncommitted without spending the reserve. The rollover explanation matches current Linear Cycles documentation ([official source](https://linear.app/docs/use-cycles)), and the estimate/productivity caveats and end check are practical."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Correctly computes the 12.59-point planned ceiling, commits the 11-point priority prefix and leaves five points uncommitted without spending the reserve. The rollover explanation matches current Linear Cycles documentation ([official source](https://linear.app/docs/use-cycles)), and the estimate/productivity caveats and end check are practical."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C08",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "All eight shortcut pairs and contexts match their linked official Linear docs, and the complete static reference survives disabled JavaScript. Both supplied layouts are clean and compact; the practice pile preserves a route back to the unfinished full deck, with clear progress and ordinary buttons."
+      },
+      "Y": {
+        "usefulness": 8,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "The eight documented shortcuts, Mac/Windows keycaps, static reference and core study controls are accurate and render readably on both screens. Entering the practice pile midway replaces the remaining deck with no way to resume it except resetting all progress, a useful session-flow fix before shipping."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "C09",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "All theme counts trace accurately to A–H, preserve positives and distinguish fit, first-wear rubbing and later wear without inventing a common cause. Both investigations have specific inspection questions, owners and useful outputs while avoiding prevalence, redesign or refund claims."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "All theme counts trace accurately to A–H, preserve positives and distinguish fit, first-wear rubbing and later wear without inventing a common cause. Both investigations have specific inspection questions, owners and useful outputs while avoiding prevalence, redesign or refund claims."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C10",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 9,
+        "overall": 9,
+        "note": "The six-pair plan fits the supplied fixtures conceptually, defines a 1.2 m clear route and flags the unknown table/mirror footprints and separate fitting area for review. All three selected style names match their linked current official US product pages, and the operational checklist keeps visitors away from stock without inventing facilities or compliance."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 9,
+        "overall": 9,
+        "note": "The six-pair plan fits the supplied fixtures conceptually, defines a 1.2 m clear route and flags the unknown table/mirror footprints and separate fitting area for review. All three selected style names match their linked current official US product pages, and the operational checklist keeps visitors away from stock without inventing facilities or compliance."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C11",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 10,
+        "craft": 9,
+        "overall": 9,
+        "note": "The 1,050/1,170 agent-minute totals, 175/195 capacities and break-period bottleneck are correct, with a workable coverage recommendation and two pilot observations. Explicit agent-minute labels avoid confusing workload shortage with elapsed waiting time."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The same correct capacity calculations and sound break coverage make this readily usable, with appropriate limits on waiting-time prediction. Its shortfall/surplus rows abbreviate agent-minutes as 'minutes'; X is marginally clearer about these units in a queueing discussion."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "C12",
+      "X": {
+        "usefulness": 8,
+        "accuracy": 8,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 8,
+        "overall": 8,
+        "note": "The four-point table and buyer checklist are useful, and the freight rates and PO confirmation requirements match the official terms. It omits the separate requested-delivery early-shipment clause and automatic backorder rule tied to the PO cancel date, leaving material date checks incomplete ([official source](https://www.allbirds.com/pages/allbirds-terms-of-use-wholesale))."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Accurately covers freight, PO confirmation and floor-set/fill-in deadlines, while identifying both early-shipment references and both unfilled-balance date rules in the current official wholesale terms. The checklist and written-exception handling make this the more complete readiness note ([official source](https://www.allbirds.com/pages/allbirds-terms-of-use-wholesale))."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "C13",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Exact BigInt cents, live reconciliation, unique-name checks, line removal and copy fallback meet the worksheet requirements, and the accounting-split explanation matches official Ramp help ([official source](https://support.ramp.com/splitting-transactions-or-reimbursements)). Both layouts are readable; full-width phone fields, a clean initial state and side-by-side desktop review make it immediately usable."
+      },
+      "Y": {
+        "usefulness": 8,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "The calculation, validation and memo logic are sound, and the linked older support URL redirects to the correct current Ramp documentation. Both layouts work, but the page loads with every empty field already in error and its phone allocation fields/error text occupy only half the available width, adding avoidable friction."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "C14",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 8,
+        "craft": 9,
+        "overall": 9,
+        "note": "The match table distinguishes incomplete identity evidence, likely duplicates and the UK legal entity, with a safe review log and preserved bill/payment history. Merge irreversibility, the Primary/open-bill restriction, deletion limits, ERP behavior and inactive-status caveat all match current official Ramp help ([official source](https://support.ramp.com/merging-vendors); [official source](https://support.ramp.com/vendor-management-on-ramp/); [official source](https://support.ramp.com/vendor-lifecycle-statuses/))."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 8,
+        "craft": 9,
+        "overall": 9,
+        "note": "The match table distinguishes incomplete identity evidence, likely duplicates and the UK legal entity, with a safe review log and preserved bill/payment history. Merge irreversibility, the Primary/open-bill restriction, deletion limits, ERP behavior and inactive-status caveat all match current official Ramp help ([official source](https://support.ramp.com/merging-vendors); [official source](https://support.ramp.com/vendor-management-on-ramp/); [official source](https://support.ramp.com/vendor-lifecycle-statuses/))."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C15",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "All annual totals, differences and percentages are correct, and the 60-seat quantity logic respects seasonal demand and flexible add-ons. The opening/fallback, written-terms email, usage limitations and owner/decision table form a complete, commercially sound brief without confusing card cancellation with contract termination."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "All annual totals, differences and percentages are correct, and the 60-seat quantity logic respects seasonal demand and flexible add-ons. The opening/fallback, written-terms email, usage limitations and owner/decision table form a complete, commercially sound brief without confusing card cancellation with contract termination."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C16",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The sequence separates subscription access, virtual/physical cards, sign-in, both claims and hotel settlement, with explicit confirmation owners and postdeparture checks. Current Ramp removal/transfer help supports the consequential behavior and the indexed-versus-direct card-number conflict is real ([official source](https://support.ramp.com/deactivating-and-removing-users-from-ramp); [official source](https://support.ramp.com/transferring-ramp-cards-and-funds))."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The sequence separates subscription access, virtual/physical cards, sign-in, both claims and hotel settlement, with explicit confirmation owners and postdeparture checks. Current Ramp removal/transfer help supports the consequential behavior and the indexed-versus-direct card-number conflict is real ([official source](https://support.ramp.com/deactivating-and-removing-users-from-ramp); [official source](https://support.ramp.com/transferring-ramp-cards-and-funds))."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C17",
+      "X": {
+        "usefulness": 10,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 10,
+        "overall": 10,
+        "note": "The $25,000 budget and $15,380 actual contribution, 33%/28% cost rates and all four bridge effects reconcile exactly to $9,620 unfavorable. It is a complete manager-ready memo that distinguishes the revenue-based flex and rate signals from causal proof and offers two focused evidence checks."
+      },
+      "Y": {
+        "usefulness": 10,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 10,
+        "overall": 10,
+        "note": "The $25,000 budget and $15,380 actual contribution, 33%/28% cost rates and all four bridge effects reconcile exactly to $9,620 unfavorable. It is a complete manager-ready memo that distinguishes the revenue-based flex and rate signals from causal proof and offers two focused evidence checks."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C18",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The private opening sticks to the three observed handoffs, the questions leave workload/training/process causes open, and the action record cannot be mistaken for a completed agreement. The separate response to the opener protects privacy while acknowledging the operational burden, with formal discipline correctly deferred to actual policy."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The private opening sticks to the three observed handoffs, the questions leave workload/training/process causes open, and the action record cannot be mistaken for a completed agreement. The separate response to the opener protects privacy while acknowledging the operational burden, with formal discipline correctly deferred to actual policy."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C19",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The Georgetown name, 1044 Wisconsin Ave NW address and daily 9:30 a.m.–9 p.m. hours match the current official location page and directory ([official source](https://www.sweetgreen.com/locations/georgetown); [official source](https://www.sweetgreen.com/locations)). It honestly distinguishes absent temporary hours and unreadable ordering data, gives a supported neutral description and useful weekly evidence/review process without manufacturing corrections."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The Georgetown name, 1044 Wisconsin Ave NW address and daily 9:30 a.m.–9 p.m. hours match the current official location page and directory ([official source](https://www.sweetgreen.com/locations/georgetown); [official source](https://www.sweetgreen.com/locations)). It honestly distinguishes absent temporary hours and unreadable ordering data, gives a supported neutral description and useful weekly evidence/review process without manufacturing corrections."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C20",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Eight distinct options, three complete ingredient-grounded descriptions and a clear Carrot Crunch recommendation fit the current official menu voice ([official source](https://www.sweetgreen.com/menu)). The internal fact checks are sound; the one small correction is describing Lentil & Leaf as a 'grain-and-greens cue' when lentils are legumes."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Provides eight distinct options and three usable descriptions with a well-supported Carrot Crunch recommendation and practical prelaunch checks. Current official menu names support the voice context and none of the proposals duplicates a listed entrée; the Lentil & Leaf rationale accurately says lentil-and-greens ([official source](https://www.sweetgreen.com/menu))."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "C21",
+      "X": {
+        "usefulness": 8,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "The four-week schedule logic, totals, completion reset and source-backed tips satisfy the core task, and phone/desktop text is readable ([official source](https://blog.duolingo.com/spaced-repetition-for-learning/); [official source](https://blog.duolingo.com/sticking-with-it-tips-for-staying-motivated/)). A blank green stats bar leaks into the empty state because .stats overrides hidden, and the day group lacks an invalid-state attribute; both are minor finishing fixes."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Correct four-week totals and fresh completion checkboxes after day/time changes, with clear empty-state and field-group validation and readable responsive layouts. The workbook also handles a cleared goal before printing and its two restrained tips match the linked official Duolingo guidance, without implying app settings or proficiency guarantees."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "C22",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "All seven strings have appropriate proposed es-MX copy, back-translations and practical engineering notes, with placeholders preserved exactly. Singular 1 versus plural 2–7 matches Spanish cardinal rules, and the three QA cases address time expansion and selection bounds without claiming official translations or implemented permissions ([official source](https://www.unicode.org/cldr/charts/49/supplemental/language_plural_rules.html))."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "All seven strings have appropriate proposed es-MX copy, back-translations and practical engineering notes, with placeholders preserved exactly. Singular 1 versus plural 2–7 matches Spanish cardinal rules, and the three QA cases address time expansion and selection bounds without claiming official translations or implemented permissions ([official source](https://www.unicode.org/cldr/charts/49/supplemental/language_plural_rules.html))."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C23",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Ten prioritized, observable cases cover every requested area, including explicitly verifying that the standard-motion celebration starts automatically and Continue needs no decorative wait. Setup/action/expected/mode columns, unresolved design assumptions and captured release evidence make it directly usable without claiming executed tests."
+      },
+      "Y": {
+        "usefulness": 8,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 8,
+        "overall": 8,
+        "note": "The ten-case matrix is otherwise comprehensive, especially focus, announcement duplication, repeated activation and transition behavior. Its standard-motion case never expects the celebration to start automatically, leaving a stated core behavior untested and requiring a small but substantive acceptance-coverage addition."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "C24",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The 121-word voiceover fits a minute, distinguishes activity, consistency and covered course content, and adds a concrete weekly ordering-lunch check without dismissing motivation. Definitions and the explicit English/French/Spanish limitation match the linked official explanations ([official source](https://blog.duolingo.com/duolingo-101-how-to-learn-a-language-on-duolingo/); [official source](https://blog.duolingo.com/duolingo-score/))."
+      },
+      "Y": {
+        "usefulness": 8,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 8,
+        "overall": 8,
+        "note": "The accurate 123-word narration and original visual beats explain the three measures and correctly qualify Score availability using official sources. Its final progress advice stays at 'notice what you can understand and say,' while X gives the team a more concrete everyday communication check; the final nine-second beat also needs brisker delivery."
+      },
+      "winner": "X"
+    }
+  ]
+}

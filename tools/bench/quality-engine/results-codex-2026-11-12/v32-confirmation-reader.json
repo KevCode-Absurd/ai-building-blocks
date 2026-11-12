@@ -1,0 +1,461 @@
+{
+  "reader": "r1",
+  "pairs": [
+    {
+      "id": "C01",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Ten complete coded rows; PRICE preserves the explicit expensive/value signal separately from financial pressure, with mixed and unspecified rules and the required reporting cuts."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 8,
+        "accuracy": 8,
+        "usable": true,
+        "note": "Complete guide, but #8 assigns BUDGET to 'expensive' although no spending reduction or inability to afford is stated; that conflates price/value with financial pressure."
+      },
+      "selected": "X",
+      "required_repairs": []
+    },
+    {
+      "id": "C02",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Opening package preserves the four-week lead time and firm 1,200-case commitment; two alternative concessions, approval boundaries and give/get terms are actionable. Official product name verified."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Same complete negotiating substance with tradeoffs before the package; totals, conditions and approvals are explicit. Official product name verified."
+      },
+      "selected": "tie",
+      "required_repairs": []
+    },
+    {
+      "id": "C03",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Complete seven-day field pack, valid nonuse and missing-entry rules, privacy/withdrawal process and practical prompts. Added action/owner field is helpful but not essential to this proposed study."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Same complete study workflow and coding fields; omission of an action/owner column does not remove the consent, diary, interview or researcher-note requirements."
+      },
+      "selected": "tie",
+      "required_repairs": []
+    },
+    {
+      "id": "C04",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Both source and every desktop/phone preview inspected. Correct start-of-day arrival and 14-day horizon, bounded nonnegative stock, validation/reset; phone rows retain all labels and edited inputs invalidate results. Edge-case logic checks passed; official timing help verified."
+      },
+      "Y": {
+        "clarity": 8,
+        "usefulness": 8,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Correct calculations and controls; all previews inspected and edge-case logic checks passed. Phone table requires horizontal scrolling and edited inputs leave the prior result visible until calculation, making comparison less direct. Official timing help verified."
+      },
+      "selected": "X",
+      "required_repairs": []
+    },
+    {
+      "id": "C05",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Ordered setup distinguishes subscriptions, Inbox organization, channels and Pulse cadence, with accurate official links and both documented conflicts. Three-day check protects requests."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Same source-supported setup and checks; shorter opening changes no necessary instructions or context. Official Inbox, Notifications and Pulse behavior verified."
+      },
+      "selected": "tie",
+      "required_repairs": []
+    },
+    {
+      "id": "C06",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Seven issues cover all stated behaviors with owner roles and testable criteria, narrowly justified integrated-test blockers and unresolved decisions. Official Linear organization capabilities verified."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Same seven-issue handoff, acceptance criteria, owners, blockers and decisions; no architecture or live changes invented. Official capabilities verified."
+      },
+      "selected": "tie",
+      "required_repairs": []
+    },
+    {
+      "id": "C07",
+      "X": {
+        "clarity": 8,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Correct 19.67, 15.73, 3.15 and 12.59 calculations and 11-point priority prefix; whole-issue constraints and official rollover exceptions preserved. 'Linear availability scaling' is less immediately plain than proportional scaling."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Same correct capacity, commitment and rollover guidance; explicitly describes scaling in direct proportion to availability, making the exercise assumption easier to understand."
+      },
+      "selected": "Y",
+      "required_repairs": []
+    },
+    {
+      "id": "C08",
+      "X": {
+        "clarity": 8,
+        "usefulness": 8,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Both sources and all supplied previews inspected; eight current documented shortcuts, contexts and no-JS reference are complete. Session completion/reset work, but entering the practice pile midpass loses a way back to unseen cards without resetting."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "All previews inspected; same eight verified shortcuts and no-JS reference. Compact study layout and explicit full-deck return preserve the unfinished pass when revisiting practice cards; logic checks passed."
+      },
+      "selected": "Y",
+      "required_repairs": []
+    },
+    {
+      "id": "C09",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Traceable counts preserve all eight excerpts, positive evidence and separation of fit, rubbing and wear; two investigations have concrete inspection steps, owners and deliverables."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Same evidence table, accurate overlapping counts, owners and follow-up deliverables. Removing the opening restatement does not lose an investigation or necessary instruction."
+      },
+      "selected": "tie",
+      "required_repairs": []
+    },
+    {
+      "id": "C10",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Six samples across three verified current styles; dimensioned positions preserve the 1.2 m route and flag unknown fixture depth, mirror footprint and fitting review. Setup/daily/teardown checklists are practical."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Same complete fixture plan, six-pair display, signs, conditional fitting review and checklists; official style names verified without unsupported material or performance claims."
+      },
+      "selected": "tie",
+      "required_repairs": []
+    },
+    {
+      "id": "C11",
+      "X": {
+        "clarity": 8,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Correct 1,050/1,170 agent-minutes and 175/195 capacity with five-contact baseline shortfall; break bottleneck and pilot checks are sound. '30 minutes' and '90 minutes' in the table are less precise workload units."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Same correct arithmetic and coverage plan, with agent-minutes explicitly labeled so capacity gaps cannot readily be confused with predicted waiting time."
+      },
+      "selected": "Y",
+      "required_repairs": []
+    },
+    {
+      "id": "C12",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Exact official terms verified: four questions answered, both early-shipment date bases and both 90-day clocks retained for written reconciliation. Buyer checklist and exception record support PO readiness."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 8,
+        "accuracy": 9,
+        "usable": true,
+        "note": "Usable baseline and checklist, but omits the ordering section's requested-delivery early-shipment rule and PO-cancel-date backorder cancellation clock; buyer lacks material dates needed to reconcile the published terms."
+      },
+      "selected": "X",
+      "required_repairs": []
+    },
+    {
+      "id": "C13",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Both sources and every preview inspected. Clear calm initial state, readable phone fields and adjacent memo. Integer-cent, duplicate/blank/invalid input, 2–6 rows, removed-row totals, memo and reset checks passed; source verified."
+      },
+      "Y": {
+        "clarity": 8,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Same correct allocation behavior and accessible controls; every preview inspected and logic checks passed. It labels every blank field erroneous immediately and makes phone amount errors wrap into narrow columns, reducing clarity. Older source URL redirects correctly."
+      },
+      "selected": "X",
+      "required_repairs": []
+    },
+    {
+      "id": "C14",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Candidate confidence distinguishes suffix evidence from full identity; payment baseline, owner/action log, irreversible merge restrictions and ERP/audit controls are specific and verified in current Ramp help."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Same complete candidate table, safe review order and verified editing/merge/inactivation conditions. Opening summary wording does not change the operational handoff."
+      },
+      "selected": "tie",
+      "required_repairs": []
+    },
+    {
+      "id": "C15",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "All annual costs, differences and percentages reconcile; 60-seat opening/fallback preserve add-on flexibility, roster uncertainty, written terms and contract termination checks."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Same correct cost arithmetic, conditional negotiation email and owner/check table; minor seat/user wording does not change a required decision or step."
+      },
+      "selected": "tie",
+      "required_repairs": []
+    },
+    {
+      "id": "C16",
+      "X": {
+        "clarity": 8,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Complete and currently supported separation of access, virtual/physical cards, subscription, claims and hotel settlement; transfer conflict and SCIM limitation are explicit. Wide repeated table is harder to follow by stage."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Before/cutoff/after sections make the same verified controls easier to execute, preserving confirming roles, claim deletion risk, card transfer limits, unsettled activity and closeout exceptions."
+      },
+      "selected": "Y",
+      "required_repairs": []
+    },
+    {
+      "id": "C17",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Correct $25,000/$15,380 contributions, 33%/28% rates and -$3,600/-$2,760/-$2,760/-$500 bridge; investigation checks preserve uncertainty about causes."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Same exact reconciled bridge and two evidence checks; upfront result restates the already clear table without changing the decision content."
+      },
+      "selected": "tie",
+      "required_repairs": []
+    },
+    {
+      "id": "C18",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Private fact-based opening, neutral causal questions, concrete handoff expectations and joint record include support, owners and check-in placeholder; public complaint handled separately."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Same complete proposed coaching guide, with no invented history/agreement and clear separation from actual disciplinary policy; within the word limit."
+      },
+      "selected": "tie",
+      "required_repairs": []
+    },
+    {
+      "id": "C19",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Official Georgetown name/address and daily 9:30–21:00 hours verified against directory and location page. Seven-day temporary-hours absence and unreadable ordering extraction are honestly limited; review queue and owners are actionable."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Same verified public snapshot, neutral description and evidence/action/owner workflow; no unsupported services or holiday claims. Ordering-page extraction cannot independently establish live availability."
+      },
+      "selected": "tie",
+      "required_repairs": []
+    },
+    {
+      "id": "C20",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 9,
+        "usable": true,
+        "note": "Eight distinct options and three full descriptions use only exercise ingredients, with appropriate tasting and prelaunch checks. 'Grain-and-greens cue' for Lentil & Leaf is imprecise because lentils are legumes."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Same useful names, descriptions and recommendation, correcting the cue to lentil-and-greens. Official current menu names checked; none of the eight options duplicates the inspected menu."
+      },
+      "selected": "Y",
+      "required_repairs": []
+    },
+    {
+      "id": "C21",
+      "X": {
+        "clarity": 8,
+        "usefulness": 8,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Both sources and all previews inspected. Correct 28-session maximum, weekly/total minutes and regeneration clearing; checks passed. Hidden stats show an empty strip due to CSS override, and clearing a generated goal leaves printing enabled."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Every preview inspected; clear empty state and stronger phone hierarchy. Logic checks confirm days/minutes, totals, fresh completion marks and reset; goal/day validation and print readiness stay consistent. Both learning tips source-supported."
+      },
+      "selected": "Y",
+      "required_repairs": []
+    },
+    {
+      "id": "C22",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "All seven strings, exact placeholders, singular/plural branches, back-translations and three required QA cases are complete; adult tone and formatter uncertainty are explicit."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Same complete es-MX proposal and engineering/QA handoff; no claimed official translation, permission assumption or missing plural condition."
+      },
+      "selected": "tie",
+      "required_repairs": []
+    },
+    {
+      "id": "C23",
+      "X": {
+        "clarity": 9,
+        "usefulness": 8,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Ten prioritized observable cases cover motion, focus, duplicate announcement, repeat activation, reflow and transition evidence; standard-mode case does not explicitly check the required automatic celebration start."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Same complete ten-case matrix and release evidence, with automatic celebration start explicitly asserted in case 1, preserving a required observable behavior."
+      },
+      "selected": "Y",
+      "required_repairs": []
+    },
+    {
+      "id": "C24",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "121-word voiceover and timed beats distinguish activity, consistency and course progress in plain adult language. Spanish review example and concrete weekly lunch task are useful; official XP, streak and limited Score availability verified."
+      },
+      "Y": {
+        "clarity": 8,
+        "usefulness": 8,
+        "accuracy": 10,
+        "usable": true,
+        "note": "123-word voiceover is feasible and factually supported, but spoken CEFR terminology needs explanation and the progress check stays general. Maya's review-versus-new-units comparison remains usable, with sources and limits."
+      },
+      "selected": "X",
+      "required_repairs": []
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "schema": "codex-fresh-selection/1",
+  "rule": "Both clarity and usefulness scores must meet the other usable candidate; tradeoffs require a narrow repair plus fresh check. Exact ties retain plain. No edits after independent choice.",
+  "reader_sha256": "38a128f9112b8a6cc76b0ce9af929c821093ab60c01f7406c70be8ab4137455b",
+  "selections": [
+    {
+      "id": "F01",
+      "label": "Y",
+      "source_arm": "v32",
+      "sha256": "1124bd36685adc6315a15c38a74fa683e5acbd218d6dc7c2ee22ce5e816b6cf3",
+      "reason": "The narrower channel/period table and explicit $216 lead make the decision easier to follow. Retains every contribution, payback qualification, repeat-order explanation, and the same two actionable missing inputs; under 550 words.",
+      "ext": "md"
+    },
+    {
+      "id": "F02",
+      "label": "Y",
+      "source_arm": "plain",
+      "sha256": "e0b0cde8fae80253e871b04a36d59b9f7298ae4de4a6800a859572f23598b06a",
+      "reason": "Substantively identical eight-row handoff, with the same concise alts, duplicate/decorative treatment, accessible control naming, source verification, and implementer checks. No meaningful clarity or usefulness difference.",
+      "ext": "md"
+    },
+    {
+      "id": "F03",
+      "label": "Y",
+      "source_arm": "plain",
+      "sha256": "7a857ea9ac043386be7516672c57a727e02003cd17dbb72d408aed80ecfc60a1",
+      "reason": "Preserves the same complete mapping, definitions, native-field distinctions, ambiguous-blocker treatment, cross-platform support, and recoverable rollout. Governance and verified behavior remain distinct; the small phrasing/layout differences do not change usability or clarity.",
+      "ext": "md"
+    },
+    {
+      "id": "F04",
+      "label": "Y",
+      "source_arm": "v32",
+      "sha256": "cf55d2c6c5ce604579ae903e93364153c0c581a57936b049c4df245a19df1087",
+      "reason": "Correctly identifies the Enterprise owner-only workspace export exception and links its specific source. Retains all three role/team/sharing configurations, nonmember tests, shared-issue limits, project-shell disclosure, and the three downstream checks. Permissions are supported by official Linear pages.",
+      "ext": "md"
+    },
+    {
+      "id": "F05",
+      "label": "Y",
+      "source_arm": "v32",
+      "sha256": "399ee506aacac1ae8c69652effa73b8c115e38f24ccbfc1e9eae2f25f6855046",
+      "reason": "The model question and answers sit together in the care panel, with clearer selected-path styling and readable phone layout. Preserves the functional branches, check/reset behavior, and fallback; adds a directly linked, verified Cruiser Terralux spot-clean example. Care instructions match the official guide and product pages.",
+      "ext": "html"
+    },
+    {
+      "id": "F06",
+      "label": "Y",
+      "source_arm": "plain",
+      "sha256": "007e22bd5a38d749ca178193ad0d35476b40bb5ccc8d4ce38f177928b8af6e53",
+      "reason": "Substantively identical recommendation and calculations, including all combinations, fixed assumptions, two validations, official context, and separation from whole-life/carbon-neutrality claims. No meaningful clarity or usefulness difference.",
+      "ext": "md"
+    },
+    {
+      "id": "F07",
+      "label": "Y",
+      "source_arm": "plain",
+      "sha256": "1222022196f8be663bf71181e5cc107211d943ebbdccc2e7ff4112564e6ada15",
+      "reason": "Pairs each timed facilitator prompt with its expected safe response, so it is easier to run without searching across sections. Retains both verification tests, six checks, three debriefs, support/IC3 contingencies, uncertainty about fraud, and the prohibition on actual exercise actions; under 650 words.",
+      "ext": "md"
+    },
+    {
+      "id": "F08",
+      "label": "Y",
+      "source_arm": "plain",
+      "sha256": "ab70d6d747fa9f41445f3318ab13778be0b7a6a51b2bafade07db701d7021a32",
+      "reason": "Substantively identical note, preserving all classifications, arithmetic, hold-release qualification, separate refund traceability, two analyst checks, and the activity-versus-amount-due distinction. No meaningful clarity or usefulness difference.",
+      "ext": "md"
+    },
+    {
+      "id": "F09",
+      "label": "X",
+      "source_arm": "v32",
+      "sha256": "27e87b9966ec00ec585634c8c4cff193f1b582a2f4357539c0ba7d55106207c7",
+      "reason": "Source implements two-item limit feedback, one-item placeholders, missing-value messages, clear/reset, keyboard focus, and a numerical comparison. Full desktop/phone previews and every detail slice were inspected; phone controls and text are easy to scan. All three items' values and allergens match https://www.sweetgreen.com/nutrition/back-bay, with location/date and visible cross-contact notice.",
+      "ext": "html"
+    },
+    {
+      "id": "F10",
+      "label": "Y",
+      "source_arm": "v32",
+      "sha256": "e29c63b7b8ec157e9dea819fa6b8b3c4f9f81a47530800ba3b812420e23e896d",
+      "reason": "Splits the sensitivity into demand and resulting-prep tables keyed by orders, making the same complete calculations readable without losing any metric. Correctly recommends two batches for 160 orders, with 1.200 kg overage versus unbuffered demand, and retains both manager checks and exercise labeling.",
+      "ext": "md"
+    },
+    {
+      "id": "F11",
+      "label": "X",
+      "source_arm": "v32",
+      "sha256": "be8207ce99c09de33054d689aa0e05049006fc3e671d7009392620843fbe9695",
+      "reason": "Clearly separates current abilities, unavailable functions, and July 31, 2027 access end in short briefing bullets. Includes six assigned checks, three dated pre-sunset checkpoints, and a learner draft under 120 words. Facts agree with the specified sunset notice and related official overview; no invented export, migration, deletion, or subscription promises.",
+      "ext": "md"
+    },
+    {
+      "id": "F12",
+      "label": "Y",
+      "source_arm": "v32",
+      "sha256": "536c62e7126d1d51f9571889ee75792cf9b9d83268977b8a2863d99ba57c5419",
+      "reason": "Clearer findings/limits sections retain the same decision-useful study scope, outcome values, causal and transfer qualifications, pilot steps, and three questions. Correctly names intended proficiency as the framework's fourth category and documents company authorship using pp. 1 and 14. Report and framework checks support the digest.",
+      "ext": "md"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "codex-fixed-confirmation/1",
+  "started": "2026-11-12",
+  "method": "UNCHANGED frozenv3.2 from1aa623c0c, integration170e7d11f. No tuning from P4 or confirmation outcomes.",
+  "sample": "Exactly24 new independently authored requests,4perbrand,20MD4HTML; combinedwiththeexisting12v3.2tasks.",
+  "prior_v32": {
+    "panel": "P4",
+    "tasks": 12,
+    "verdicts": 48,
+    "wins": 23,
+    "ties": 25,
+    "losses": 0,
+    "clarity_delta": 0.375,
+    "gate": "FAIL strictmajority; preserve."
+  },
+  "selection": "Same freshanonymous reader, factual/native/usefulcoveragegates. Bothclarityandusefulnessscores mustmeetotherusablecandidate. Oneboundednarrowrepair+freshcheck; selectedbytesunchanged.",
+  "judging": "Four NEW independent contexts,2briefA2independentbriefB,each24cases. BothversionsofeachHTML source/fullphone/desktopandslicesmandatory.",
+  "promotion_gate": "UNMODIFIED strictmajority/tiesnotwins and no meanclarityregression. RequirethisonBOTH new24 confirmation (96verdicts)ANDcombined36v3.2tasks(144verdicts,oldP4votesincluded). No outcome-dependent sampleextension beyond this fixed24.",
+  "integrity": "KeepP5keycloseduntilall96verdictscomplete. CombineexactfrozenP4/P5snapshots+keys+rawscoresONLYafterall96validate; neverrepackorrelabelscoredbytes. OriginalfailedP1,P2,P3,P4remainreported.",
+  "limits": [
+    "This fixedconfirmation was chosen after inspecting a small nonpassing v3.2 pilot; disclose adaptive samplesize, no formal statistical-confirmation claim.",
+    "Single model family, unequal compute; AIpreferences are not customer acceptance or business lift."
+  ],
+  "tasks_sha256": "4bf74d6469abd1e76265b07aaa90b0c63abd1fe9498f4051e2e23690e9f0a1df"
+}

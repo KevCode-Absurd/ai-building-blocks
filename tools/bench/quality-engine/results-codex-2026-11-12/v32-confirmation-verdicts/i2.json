@@ -1,0 +1,533 @@
+{
+  "judge": "i2",
+  "pairs": [
+    {
+      "id": "C01",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Complete, restrained coding guide; PRICE preserves the stated expense objection without inferring inability to afford it. Mixed and missing reasons, reporting cuts and tiny-sample limits are handled cleanly; preference survives the swap check."
+      },
+      "Y": {
+        "usefulness": 8,
+        "accuracy": 8,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 8,
+        "overall": 8,
+        "note": "Almost ready to use, but coding 'expensive' as BUDGET conflates a price/value objection with spending or affordability pressure despite the request to separate inference. Everything else, including mixed feedback and missingness, is strong."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "C02",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "A usable negotiation package with reciprocal conditional concessions and clear finance/operations boundaries. The 1,200-case arithmetic and four-week constraint are respected, and the official product page confirms the product name; swap check yields no preference."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "A usable negotiation package with reciprocal conditional concessions and clear finance/operations boundaries. The 1,200-case arithmetic and four-week constraint are respected, and the official product page confirms the product name; swap check yields no preference."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C03",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "A complete field pack with neutral handling prompts, valid non-use entries, separate missingness, practical withdrawal language and no health-outcome inference. Packaging is the explicit source for serving/suitability; the daily diary remains brief, and swap check gives no preference."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "A complete field pack with neutral handling prompts, valid non-use entries, separate missingness, practical withdrawal language and no health-outcome inference. Packaging is the explicit source for serving/suitability; the daily diary remains brief, and swap check gives no preference."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C04",
+      "X": {
+        "usefulness": 8,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "Correct arrival-before-use arithmetic, nonnegative stock, explicit unmet demand and strong local/privacy boundaries. All renders are readable, but the phone requires horizontal table scrolling and edited inputs leave old results visible until recalculation; official help confirms the timing instructions, though the link goes to the contact page."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Correct stock logic and validation with the same honest hypothetical limits; phone rows expose every quantity with labels and stale results disappear when inputs change. All full renders and slices hold together, and official help supports the scheduling note; the contact-page citation needs a small link update, but Y remains preferable when order is swapped."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "C05",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "A practical self-service sequence distinguishes subscriptions, Inbox filtering, delivery channels and weekly Pulse, with a useful three-day check. Official Inbox, Notifications and Pulse docs support the behavior and the two flagged conflicts; both answers are equally shippable after the swap check."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "A practical self-service sequence distinguishes subscriptions, Inbox filtering, delivery channels and weekly Pulse, with a useful three-day check. Official Inbox, Notifications and Pulse docs support the behavior and the two flagged conflicts; both answers are equally shippable after the swap check."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C06",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Seven well-bounded proposed issues cover the full brief with observable acceptance criteria and owner roles, without imposing architecture or fictional estimates. Official Linear docs confirm project/relationship capabilities, and only integrated acceptance is blocked by completion of the behaviors; swap check produces a tie."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Seven well-bounded proposed issues cover the full brief with observable acceptance criteria and owner roles, without imposing architecture or fictional estimates. Official Linear docs confirm project/relationship capabilities, and only integrated acceptance is blocked by completion of the behaviors; swap check produces a tie."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C07",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The unrounded capacity ceiling is 12.5867, so the priority-respecting 11-point prefix is correct and the 5 uncommitted points are explicit. Official Linear documentation confirms the rollover exceptions, and the estimate/productivity caveats and end-of-cycle reconciliation are useful; wording differences do not alter the swap check."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The unrounded capacity ceiling is 12.5867, so the priority-respecting 11-point prefix is correct and the 5 uncommitted points are explicit. Official Linear documentation confirms the rollover exceptions, and the estimate/productivity caveats and end-of-cycle reconciliation are useful; wording differences do not alter the swap check."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C08",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "All eight context-qualified shortcuts match official Linear docs, and the source includes a full no-JavaScript reference without capturing keys. Both-size renders are clean; the practice pile preserves a return path to the unfinished full deck, a concrete usability advantage that survives swapping the order."
+      },
+      "Y": {
+        "usefulness": 8,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "An accurate, accessible study deck with complete no-JavaScript reference and readable phone/desktop renders. Entering the practice pile midway replaces the full-deck queue, leaving no way back to unseen cards except a progress-erasing reset; this needs a small functional fix."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "C09",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Traceable excerpt counts keep fit, initial rubbing, wear and positive evidence distinct, with two owned investigations and no causal leap or model claim. All counts match the supplied exercise; both are equally usable after the swap check."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Traceable excerpt counts keep fit, initial rubbing, wear and positive evidence distinct, with two owned investigations and no causal leap or model claim. All counts match the supplied exercise; both are equally usable after the swap check."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C10",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "A workable measured concept retains a continuous 1.2 m route, uses only supplied fixtures and flags unknown table/mirror dimensions plus fitting/accessibility review. The three named everyday styles are on the official US site, and both plans make external-stock size requests straightforward; swap check gives no preference."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "A workable measured concept retains a continuous 1.2 m route, uses only supplied fixtures and flags unknown table/mirror dimensions plus fitting/accessibility review. The three named everyday styles are on the official US site, and both plans make external-stock size requests straightforward; swap check gives no preference."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C11",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Correctly derives 1,050/1,170 available agent-minutes and 175/195 theoretical contacts against 180 demand, including the break-only five-contact gap. Explicit agent-minute units avoid a waiting-time inference; protected breaks, coverage and pilot observations make this the preferred handoff even with order reversed."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 9,
+        "overall": 8,
+        "note": "The arithmetic, break bottleneck, recommendation and practical pilot checks are sound. The table's '30 minutes' and '90 minutes' omit the agent-minute unit, inviting an elapsed-time reading even though the prose later correctly warns that capacity does not predict waits."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "C12",
+      "X": {
+        "usefulness": 8,
+        "accuracy": 8,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 8,
+        "overall": 8,
+        "note": "Correct on confirmation, submission deadlines and freight, but the official terms also tie early shipping to requested delivery and backorder cancellation to the PO cancel date. Omitting those parallel clauses leaves the buyer with an incomplete date checklist and balance-handling picture."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Accurately covers the four buyer questions and captures both early-shipment references plus both 90-day provisions in the official wholesale terms. Written schedule/exception confirmation and tracking both dates are the more reliable readiness handoff; preference is unchanged by the swap check."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "C13",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The worksheet uses exact BigInt cents, validates names and amounts, recalculates from surviving rows and enables a readable memo only on reconciliation. All full renders/slices are readable, the initial state is calm and mobile fields are generous; official Ramp docs support the accounting-only explanation, making X preferable after swapping order."
+      },
+      "Y": {
+        "usefulness": 8,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "The same core cents/reconciliation safeguards, removal behavior and memo fallback make this usable, and its official source link redirects correctly. Every empty field is marked erroneous on first load/reset, while narrow phone allocation fields produce cramped multi-line errors; these interaction/layout issues need cleanup."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "C14",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "A careful match/evidence plan preserves legal-entity distinctions, unpaid bills, scheduled payments and an auditable baseline. Current Ramp help confirms irreversible merging, the open-bill restriction on Primary vendors, ERP effects and deletion/status limits; both give the same usable review controls, unchanged by the swap check."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "A careful match/evidence plan preserves legal-entity distinctions, unpaid bills, scheduled payments and an auditable baseline. Current Ramp help confirms irreversible merging, the open-bill restriction on Primary vendors, ERP effects and deletion/status limits; both give the same usable review controls, unchanged by the swap check."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C15",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "All annual costs and percentage differences reconcile, and the 60-seat opening/fallback respects seasonal needs and add-on flexibility. Usage uncertainty, approval checks and written terms are well handled; Ramp help confirms payment/card controls do not cancel external subscriptions, and both are equally ready after the swap check."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "All annual costs and percentage differences reconcile, and the 60-seat opening/fallback respects seasonal needs and add-on flexibility. Usage uncertainty, approval checks and written terms are well handled; Ramp help confirms payment/card controls do not cancel external subscriptions, and both are equally ready after the swap check."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C16",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Both separate access, card controls, software ownership, reimbursements and hotel settlement with named confirmations before/after departure. Current Ramp help supports the irreversible reimbursement loss, reversible deactivation and transfer limits, including the real indexed/current card-number conflict; presentation changes do not create a substantive preference after swapping order."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Both separate access, card controls, software ownership, reimbursements and hotel settlement with named confirmations before/after departure. Current Ramp help supports the irreversible reimbursement loss, reversible deactivation and transfer limits, including the real indexed/current card-number conflict; presentation changes do not create a substantive preference after swapping order."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C17",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The contribution bridge reconciles exactly to the $9,620 unfavorable change: $3,600 sales flex, $2,760 food rate, $2,760 labor rate and $500 other cost. Actual 33%/28% rates and $15,380 contribution are correct, with useful pre-response checks and no invented causes; swap check leaves the answers equally shippable."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The contribution bridge reconciles exactly to the $9,620 unfavorable change: $3,600 sales flex, $2,760 food rate, $2,760 labor rate and $500 other cost. Actual 33%/28% rates and $15,380 contribution are correct, with useful pre-response checks and no invented causes; swap check leaves the answers equally shippable."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C18",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "A grounded private opening, neutral diagnostic questions and a fill-in action record meet the manager's need without inventing agreement or employee history. The public-complaint note protects the coaching discussion and keeps formal discipline under actual policy; both provide the same usable conversation after the swap check."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "A grounded private opening, neutral diagnostic questions and a fill-in action record meet the manager's need without inventing agreement or employee history. The public-complaint note protects the coaching discussion and keeps formal discipline under actual policy; both provide the same usable conversation after the swap check."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C19",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Official directory and Georgetown page confirm the exact name, address and 9:30 a.m.–9 p.m. daily hours; no dated exceptions are visible, and ordering-page uncertainty is stated honestly. The neutral description and evidence/owner queue support repeatable upkeep without manufacturing errors; both remain equal after swapping order."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Official directory and Georgetown page confirm the exact name, address and 9:30 a.m.–9 p.m. daily hours; no dated exceptions are visible, and ordering-page uncertainty is stated honestly. The neutral description and evidence/owner queue support repeatable upkeep without manufacturing errors; both remain equal after swapping order."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C20",
+      "X": {
+        "usefulness": 8,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 9,
+        "overall": 8,
+        "note": "Eight distinct names, accurate ingredient-only descriptions and a sensible tasting/fact-check list fit the internal concept brief and current Sweetgreen menu voice. 'Lentil & Leaf' is described as a grain-and-greens naming cue, an imprecise rationale for that name that merits a small edit."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The names are distinct from current public entrées, and the top three descriptions use only the supplied recipe with no unsupported nutrition, diet or sourcing claim. The lentil-and-greens cue matches its proposed name precisely; that small handoff advantage survives the swap check."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "C21",
+      "X": {
+        "usefulness": 8,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "Correct schedule totals and regeneration clear completion marks, and the two tips match official Duolingo guidance. All renders remain readable, but CSS exposes an empty statistics strip in the empty state and clearing the goal leaves printing enabled; these small state-handling defects need cleanup."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The four-week controls, totals, completion tracking and explicit regeneration rules meet the brief with readable full renders and detail slices. Hidden empty-state metrics, goal validation before print and grouped-day invalid state are handled more consistently; official sources support both tips, and Y remains preferable after swapping order."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "C22",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "All seven proposed strings preserve placeholders, use natural adult-facing Spanish and include useful back-translations and engineering notes. Singular/plural handling matches Unicode's Spanish rules for 1–7, with the required QA cases and no invented time formatter or permission behavior; swap check leaves a tie."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "All seven proposed strings preserve placeholders, use natural adult-facing Spanish and include useful back-translations and engineering notes. Singular/plural handling matches Unicode's Spanish rules for 1–7, with the required QA cases and no invented time formatter or permission behavior; swap check leaves a tie."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C23",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Ten prioritized observable cases cover the requested motion, focus, announcement, repeat-activation, reflow and navigation paths without claiming execution. Crucially, standard-motion case 1 checks that celebration actually starts automatically as the brief requires; assumptions and release evidence are separated, and X still wins after swapping order."
+      },
+      "Y": {
+        "usefulness": 8,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 8,
+        "overall": 8,
+        "note": "A strong ten-case matrix with meaningful assistive-technology and integration checks plus a useful evidence list. It omits the explicit expected result that the standard-mode celebration starts automatically, so the matrix could approve a screen missing one of the brief's stated behaviors."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "C24",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The 121-word narration fits a minute and fairly separates activity, consistency and course progress, with an illustrative review/new-unit example and concrete lunch-order progress check. Official sources support XP, streak and limited Score availability; both fulfill the educational job with no decisive preference after the swap check."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "A feasible 123-word voiceover and simple visuals explain XP, streak and course progress without a conversion formula or fluency promise. The CEFR and availability qualification matches the official Score guide; its review/new-unit example and progress check are useful enough that swapping order leaves no decisive preference."
+      },
+      "winner": "tie"
+    }
+  ]
+}

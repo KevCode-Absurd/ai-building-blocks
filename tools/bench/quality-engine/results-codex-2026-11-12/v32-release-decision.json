@@ -1,0 +1,115 @@
+{
+  "schema": "codex-quality-promotion/1",
+  "method_version": "3.2",
+  "pass": false,
+  "rule": "Strict majority of all verdicts and no mean clarity regression on BOTH fixed24 confirmation and combined36; ties not wins.",
+  "confirmation": {
+    "scores": {
+      "usefulness": {
+        "plain": 8.739583333333334,
+        "engine": 9.125,
+        "delta": 0.3854166666666667
+      },
+      "accuracy": {
+        "plain": 9.572916666666666,
+        "engine": 9.770833333333334,
+        "delta": 0.19791666666666666
+      },
+      "specificity": {
+        "plain": 9.510416666666666,
+        "engine": 9.5625,
+        "delta": 0.052083333333333336
+      },
+      "clarity": {
+        "plain": 8.770833333333334,
+        "engine": 9.052083333333334,
+        "delta": 0.28125
+      },
+      "craft": {
+        "plain": 8.677083333333334,
+        "engine": 8.989583333333334,
+        "delta": 0.3125
+      },
+      "overall": {
+        "plain": 8.677083333333334,
+        "engine": 9.03125,
+        "delta": 0.3541666666666667
+      }
+    },
+    "task_clustered_win_rate_ci95": [
+      0.25,
+      0.625
+    ],
+    "verdicts": 96,
+    "wins": 42,
+    "ties": 54,
+    "win_rate": 0.4375,
+    "clarity_delta": 0.28125,
+    "overall_delta": 0.3541666666666667
+  },
+  "combined": {
+    "scores": {
+      "usefulness": {
+        "plain": 8.8125,
+        "engine": 9.180555555555555,
+        "delta": 0.3680555555555556
+      },
+      "accuracy": {
+        "plain": 9.534722222222221,
+        "engine": 9.784722222222221,
+        "delta": 0.25
+      },
+      "specificity": {
+        "plain": 9.534722222222221,
+        "engine": 9.604166666666666,
+        "delta": 0.06944444444444445
+      },
+      "clarity": {
+        "plain": 8.791666666666666,
+        "engine": 9.104166666666666,
+        "delta": 0.3125
+      },
+      "craft": {
+        "plain": 8.6875,
+        "engine": 8.993055555555555,
+        "delta": 0.3055555555555556
+      },
+      "overall": {
+        "plain": 8.722222222222221,
+        "engine": 9.118055555555555,
+        "delta": 0.3958333333333333
+      }
+    },
+    "task_clustered_win_rate_ci95": [
+      0.2986111111111111,
+      0.6041666666666666
+    ],
+    "verdicts": 144,
+    "wins": 65,
+    "ties": 79,
+    "win_rate": 0.4513888888888889,
+    "clarity_delta": 0.3125,
+    "overall_delta": 0.3958333333333333
+  },
+  "pilot_preserved_gate": {
+    "pass": false,
+    "rule": "More than 50% wins overall and on held-out tasks; no mean clarity regression."
+  },
+  "limits": [
+    "Adaptive fixed sample extension after the nonpassing 12-case pilot.",
+    "Four judgments per task, from four pilot and four fresh confirmation contexts.",
+    "No formal statistical confirmation, customer acceptance or business lift claim."
+  ],
+  "owner_exception": {
+    "approved": true,
+    "approval_sha256": "f389ff21580e1799399814ec2610adfc2d520f17dc7954f49ff1acf1825c6ac7",
+    "rule": "New blind confirmation: more wins than losses, no mean clarity regression, no mean accuracy regression.",
+    "wins": 42,
+    "ties": 54,
+    "losses": 0,
+    "clarity_delta": 0.28125,
+    "accuracy_delta": 0.19791666666666666,
+    "qualified": true
+  },
+  "release_allowed": true
+}

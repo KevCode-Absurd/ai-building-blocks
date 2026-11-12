@@ -1,0 +1,233 @@
+{
+  "reader": "r1",
+  "pairs": [
+    {
+      "id": "F01",
+      "X": {
+        "clarity": 8,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Correct period and cumulative contributions, period-3 payback, $784 repeat-order benefit versus $1,000 acquisition premium, and two scaling checks. The seven-column table takes more horizontal scanning to read."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "The narrower channel/period table and explicit $216 lead make the decision easier to follow. Retains every contribution, payback qualification, repeat-order explanation, and the same two actionable missing inputs; under 550 words."
+      },
+      "selected": "Y",
+      "required_repairs": []
+    },
+    {
+      "id": "F02",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Complete eight-asset handoff with appropriate informational versus empty-alt decisions, caption/link handling, and exactly two rendered-page checks. All proposed nonempty alts are under 110 characters. Official Grüns terminology is supported at https://gruns.co/."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Substantively identical eight-row handoff, with the same concise alts, duplicate/decorative treatment, accessible control naming, source verification, and implementer checks. No meaningful clarity or usefulness difference."
+      },
+      "selected": "tie",
+      "required_repairs": []
+    },
+    {
+      "id": "F03",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "All 12 labels are mapped, seven retained labels defined, and the five-step rollout protects saved views, issue history, and API consumers. Explicit multi-select Surface supports iOS plus Android, and unknown blockers retain a documented flag. Product claims match https://linear.app/docs/issue-property."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Preserves the same complete mapping, definitions, native-field distinctions, ambiguous-blocker treatment, cross-platform support, and recoverable rollout. Governance and verified behavior remain distinct; the small phrasing/layout differences do not change usability or clarity."
+      },
+      "selected": "tie",
+      "required_repairs": []
+    },
+    {
+      "id": "F04",
+      "X": {
+        "clarity": 9,
+        "usefulness": 8,
+        "accuracy": 8,
+        "usable": false,
+        "note": "The three configurations and approval checks are otherwise actionable, but the Enterprise memo says administrators can run workspace exports including private issues. https://linear.app/docs/exporting-data specifies only owners on Enterprise. That consequential actor error makes this access design unsafe to approve as written."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Correctly identifies the Enterprise owner-only workspace export exception and links its specific source. Retains all three role/team/sharing configurations, nonmember tests, shared-issue limits, project-shell disclosure, and the three downstream checks. Permissions are supported by official Linear pages."
+      },
+      "selected": "Y",
+      "required_repairs": []
+    },
+    {
+      "id": "F05",
+      "X": {
+        "clarity": 8,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Standalone source implements all three paths, a machine-wash permission gate, useful uncertainty guidance, progress/reset, fresh checkmarks on path/answer changes, visible focus, and a useful fallback. All four full previews and all six detail slices for the pair were inspected. Repeated preflight text and the narrow desktop sidebar slow the first choice."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "The model question and answers sit together in the care panel, with clearer selected-path styling and readable phone layout. Preserves the functional branches, check/reset behavior, and fallback; adds a directly linked, verified Cruiser Terralux spot-clean example. Care instructions match the official guide and product pages."
+      },
+      "selected": "Y",
+      "required_repairs": []
+    },
+    {
+      "id": "F06",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "All seven combinations, feasibility flags, and arithmetic are correct. A+C maximizes feasible savings at 8,000 kg, gives 7.20 kg per pair and $1,250/t, with two concrete sourcing validations and a clear partial-boundary disclaimer. Context matches https://www.allbirds.com/pages/materials-making."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Substantively identical recommendation and calculations, including all combinations, fixed assumptions, two validations, official context, and separation from whole-life/carbon-neutrality claims. No meaningful clarity or usefulness difference."
+      },
+      "selected": "tie",
+      "required_repairs": []
+    },
+    {
+      "id": "F07",
+      "X": {
+        "clarity": 8,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Complete 20-minute exercise with two injects, six observer checks, three debrief questions, and safe conditional actions. Independent contact, ownership review, edit approval, holds, and escalation are all present and supported by the official Ramp pages, but the facilitator must connect the agenda to responses in later sections."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Pairs each timed facilitator prompt with its expected safe response, so it is easier to run without searching across sections. Retains both verification tests, six checks, three debriefs, support/IC3 contingencies, uncertainty about fraud, and the prohibition on actual exercise actions; under 650 words."
+      },
+      "selected": "Y",
+      "required_repairs": []
+    },
+    {
+      "id": "F08",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Correct five-row classification and totals: $960 posted purchases, $150 credit, $810 net, and $300 pending. Explains the misleading $1,110 visible-row sum, retains both airline entries and the pending hold, and assigns two concrete follow-ups. Current official Ramp guidance supports the claims."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Substantively identical note, preserving all classifications, arithmetic, hold-release qualification, separate refund traceability, two analyst checks, and the activity-versus-amount-due distinction. No meaningful clarity or usefulness difference."
+      },
+      "selected": "tie",
+      "required_repairs": []
+    },
+    {
+      "id": "F09",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Source implements two-item limit feedback, one-item placeholders, missing-value messages, clear/reset, keyboard focus, and a numerical comparison. Full desktop/phone previews and every detail slice were inspected; phone controls and text are easy to scan. All three items' values and allergens match https://www.sweetgreen.com/nutrition/back-bay, with location/date and visible cross-contact notice."
+      },
+      "Y": {
+        "clarity": 8,
+        "usefulness": 9,
+        "accuracy": 9,
+        "usable": true,
+        "note": "Also provides the required standalone comparison and understandable disabled-at-limit, one-item, and missing-data states. Preserves the snapshot/cross-contact qualifications. Phone cards separate their checkbox from the item name more awkwardly and use smaller supporting text. Official Dupont location content corroborates calories, protein, and allergens; its specific sodium table/update date could not be independently retrieved through the supplied guide route."
+      },
+      "selected": "X",
+      "required_repairs": []
+    },
+    {
+      "id": "F10",
+      "X": {
+        "clarity": 8,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "All demand, stock subtraction, yield, raw conversion, whole-batch rounding, and overage figures are correct in all three scenarios. Two appropriate precommit checks are supplied without inventing handling rules. The nine-column sensitivity table is difficult to scan at ordinary reading widths."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Splits the sensitivity into demand and resulting-prep tables keyed by orders, making the same complete calculations readable without losing any metric. Correctly recommends two batches for 160 orders, with 1.200 kg overage versus unbuffered demand, and retains both manager checks and exercise labeling."
+      },
+      "selected": "Y",
+      "required_repairs": []
+    },
+    {
+      "id": "F11",
+      "X": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Clearly separates current abilities, unavailable functions, and July 31, 2027 access end in short briefing bullets. Includes six assigned checks, three dated pre-sunset checkpoints, and a learner draft under 120 words. Facts agree with the specified sunset notice and related official overview; no invented export, migration, deletion, or subscription promises."
+      },
+      "Y": {
+        "clarity": 8,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Preserves the complete transition content, owners, dates, source links, and short learner-facing draft. Its single long row across three briefing columns is harder to read than X's separate categories, without providing additional actionable substance."
+      },
+      "selected": "X",
+      "required_repairs": []
+    },
+    {
+      "id": "F12",
+      "X": {
+        "clarity": 8,
+        "usefulness": 9,
+        "accuracy": 9,
+        "usable": true,
+        "note": "Correctly reports population, course stage, instrument, observational design, author/date, Table 2 outcomes, and three decision-relevant limitations with page references. Practical questions and pilot advice are usable. The framework paragraph loosely substitutes 'broader impact' for its fourth category, which is intended proficiency."
+      },
+      "Y": {
+        "clarity": 9,
+        "usefulness": 9,
+        "accuracy": 10,
+        "usable": true,
+        "note": "Clearer findings/limits sections retain the same decision-useful study scope, outcome values, causal and transfer qualifications, pilot steps, and three questions. Correctly names intended proficiency as the framework's fourth category and documents company authorship using pp. 1 and 14. Report and framework checks support the digest."
+      },
+      "selected": "Y",
+      "required_repairs": []
+    }
+  ]
+}

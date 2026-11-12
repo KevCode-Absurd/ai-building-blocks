@@ -1,0 +1,18 @@
+{
+  "schema": "codex-fresh-validation/2",
+  "started": "2026-11-12",
+  "tasks": 12,
+  "brands": 6,
+  "generation_model": "Codex session model, both arms",
+  "method": "Frozen3.2 before maintainer reads fresh briefs/answers. Preserve the useful plain content while improving actionability and structure; contracts cannot invent exact-heading requirements.",
+  "selection": "Fresh anonymous final reader checks factual/format/operational coverage, with no material usefulness or clarity loss. One narrow repair round with fresh check if a tradeoff needs repair; chosen bytes frozen unchanged.",
+  "judging": "Four new contexts, j1/j2 briefA and i1/i2 independently authored briefB; all12 tasks, both views of both HTML versions.",
+  "gate": "Strict majority wins overall and heldout, ties not wins; no mean clarity regression. No threshold or winner-rule changes after unblinding.",
+  "prior_rounds": "P1v3,P2v2.1,P3v3.1 all preserved as failed. P3clarity improved+0.4375 but22/48wins failedmajority.",
+  "limits": [
+    "Single model family, unequal compute.",
+    "Repeated development cycles; heldout set is fresh within this cycle, not a claim of statistical confirmation or customer outcomes."
+  ],
+  "tasks_sha256": "63532bdc8f48fd9df70424f63afe8c7d78db61f5754f01e04a5a15c47a44035d",
+  "selection_score_interpretation": "A lower usefulness score against another usable candidate counts as material for this evaluation. A clarity/usefulness tradeoff requires the bounded repair and fresh check; no score-floor relaxation after outcomes."
+}

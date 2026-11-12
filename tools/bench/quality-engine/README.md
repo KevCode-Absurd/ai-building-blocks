@@ -60,3 +60,9 @@ node tools/bench/quality-engine/v3-bench.mjs tally <run> P1
 ```
 
 The renderer is `marketplace/packs/shared/tools/quality/render.cjs`. Run from a host with Playwright and Chromium installed, or set `PW_CHANNEL=chrome` to use installed Chrome. Judges write `<run>/verdicts/P1/<judge>.json` using ids j1, j2, i1, i2. Keep `<run>/keys/` closed until all verdicts are in. To evaluate the 24-task v2.1 continuation, use a new panel name and the arm `v21`.
+
+## Codex release decision (12 November 2026)
+
+V3, v2.1, v3.1 and the v3.2 pilot retain their original failed gates. The unchanged v3.2 method then received a fixed 24-request confirmation: 42 wins, 54 ties and no losses, with clarity +0.281 and accuracy +0.198 out of 10. The original strict-majority gate still fails. The owner explicitly approved a separate release exception before confirmation unblinding: more wins than losses and no mean clarity or accuracy regression. That exception is met.
+
+[Full report and limitations](RESULTS-CODEX-2026-11-12.md) include all failed rounds, the 36-request combined evidence, raw votes, immutable hashes, adaptive sampling and scope deviations. This is a single-model-family Codex evaluation, not a mixed-model Claude replication or proof of customer outcomes.

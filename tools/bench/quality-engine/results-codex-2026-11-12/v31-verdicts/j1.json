@@ -1,0 +1,269 @@
+{
+  "judge": "j1",
+  "pairs": [
+    {
+      "id": "N01",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 9,
+        "overall": 9,
+        "note": "A usable run sheet with neutral questions, a comfortable decline, packaging referrals and a reconcilable stock tally. Its staff-column instructions after the swap require slightly more interpretation than the paired lead-based assignments."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Welcome and stock responsibilities stay clear through the role swap, and optional feedback never becomes a condition of receiving a pack. It covers setup, the invitation, packaging referral and closeout without unsupported product claims."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "N02",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 9,
+        "note": "Covers the required ten checks, approved-reference blanks, traceability and an accountable exception handoff without inventing acceptance standards or release authority. The longer action cells are somewhat harder for a receiver to scan."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The separate record and hold-trigger columns make the receiver's next action particularly clear. Missing references, uncertain scope, restricted stock and authorized disposition are handled explicitly while all company standards remain blanks."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "N03",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The supplied desktop and phone views are readable, and the native form supports submission from the keyboard with useful error links, stale-report protection and copy fallback. Its short mobile examples and direct heading work well, although the summary example refers to a title while later examples refer to a description."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "Provides all requested fields, clear required labels, generation, validation and copy fallback, with no transmission or persistence code. The phone screenshots truncate the long single-line examples, and using a section with a click-only generator loses the native form's convenient Enter submission."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "N04",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "A neutral, realistically timed discussion guide that follows concrete feedback through decisions, handoffs and outcomes. The notes prompts for evidence, quotes and workaround consequences make it especially useful for the eventual synthesis without presenting findings."
+      },
+      "Y": {
+        "usefulness": 8,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 8,
+        "overall": 8,
+        "note": "The agenda, six questions and permission-based follow-up meet the request and avoid pitching a favored feature. The notes table gives less help capturing the specific example, evidence and consequence of a workaround than the paired guide."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "N05",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The linked current Allbirds product pages support the Merino description, temperature-regulation statement and Tree Runner blend and wool lining. The material comparison gives associates a useful distinction while the dialogues preserve try-on judgment and avoid universal comfort or health promises."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 8,
+        "overall": 8,
+        "note": "Accurate, practical and within the word limit, including the important qualification that the tree-fiber shoe has a wool-blend lining. Its comparison is a little less informative about how the wool material differs, although both recommendation dialogues are usable."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "N06",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 10,
+        "craft": 9,
+        "overall": 9,
+        "note": "Correctly moves 11 pairs from A to B, preserves every reserve target and calculates $315 protected contribution less $55 transfer cost as $260. It separates the two reserve pairs from forecast sales and clearly conditions the outcome on uncertain demand; the paired answer is identical."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 10,
+        "craft": 9,
+        "overall": 9,
+        "note": "Correctly moves 11 pairs from A to B, preserves every reserve target and calculates $315 protected contribution less $55 transfer cost as $260. It separates the two reserve pairs from forecast sales and clearly conditions the outcome on uncertain demand; the paired answer is identical."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "N07",
+      "X": {
+        "usefulness": 8,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 8,
+        "overall": 8,
+        "note": "All copy fits the requested limits, and Ramp's public employee guide supports the edit-and-resubmit steps, affidavit exception and off-platform payment distinction. The rejected-state body gives a less useful indication of the possible next action, and the off-platform wording is more abstract."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The rejected state explains the conditional edit-and-resubmit route and the off-platform state clearly names the company's action. The email and payment distinctions match Ramp's public guide, remain within the limits and keep approval separate from funds arriving."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "N08",
+      "X": {
+        "usefulness": 8,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 8,
+        "overall": 8,
+        "note": "A clear handoff covering purchased scope, workflow, systems, stakeholders, promises and measurable rollout success without assumed entitlements or duration. Its people and promise sections are less structured for comparing decision authority, availability and multiple unresolved commitments."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 9,
+        "overall": 9,
+        "note": "Decision authority and availability, promise evidence and resolution ownership are captured in reusable tables, and unverified integration behavior is explicitly treated as a requirement to validate. The readiness distinction is strong, although the wider tables are denser to scan."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "N09",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "The recommendation fits staggered arrivals, asks only four useful questions and does not fabricate a quote, address coverage or dietary guarantee. Its format and Outpost distinctions are supported by official Sweetgreen information, but some customer-facing phrasing feels procedural."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "A natural customer email with the same useful preliminary recommendation, four next-step questions and clear qualification of pricing and availability. Official catering and office-meal pages support the formats and one-time versus recurring distinction, and links stay in the internal note."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "N10",
+      "X": {
+        "usefulness": 8,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 8,
+        "overall": 8,
+        "note": "The capacity calculation and conditional assumptions are correct, and the proposed reassignment stays within the staffing constraint. Its keep rule can be met despite observed overflow, even though overflow is tracked, so the capacity concern is not fully reflected in the final decision."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Combines the correct 16-versus-12 capacity implication with a feasible local assignment, specific measurement and a compliant short sign. The no-overflow keep condition, immediate stop triggers and inconclusive outcome for weak samples make the decision more dependable."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "N11",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The source and all supplied desktop and phone images show a readable explainer with native radio choices, short role paths and accessible FAQ controls. Official Duolingo pages support separate accounts, five invitees, manager payment and invitation links; this answer is identical to its pair."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The source and all supplied desktop and phone images show a readable explainer with native radio choices, short role paths and accessible FAQ controls. Official Duolingo pages support separate accounts, five invitees, manager payment and invitation links; this answer is identical to its pair."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "N12",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The ordering prioritizes access and confirmed learning-integrity problems, keeps report counts distinct from learner reach and makes uncertain severities provisional. The compact queue is usable, although some first-verification instructions are less explicit about the test configuration and evidence to preserve."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 8,
+        "craft": 9,
+        "overall": 9,
+        "note": "Provides particularly precise first checks for assistive technology, the rejected translation, answer highlighting and the Android configuration. It preserves the given evidence, flags conditional promotions and invents neither causes nor commitments, though the wide table is more demanding to scan."
+      },
+      "winner": "Y"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "schema": "codex-fresh-selection/1",
+  "rule": "Clearest usable artifact, usefulness breaks a clarity tie; exact ties retain plain. No edits after independent choice.",
+  "reader_sha256": "fc189a4ede35b516a07c2a805ae58107e699b41413241cee1e69b43119921bc5",
+  "selections": [
+    {
+      "id": "N01",
+      "label": "Y",
+      "source_arm": "v31",
+      "sha256": "24d8675e5796acd7335d417d2649854334b33c6ec7806323c94ec0dec65750be",
+      "reason": "Clear lead-role labels and a shorter invitation make this easier to use at the table. Preserves the 90-minute window, 120 sealed packs, optional feedback, packaging referral, three neutral questions and closing tally.",
+      "ext": "md"
+    },
+    {
+      "id": "N02",
+      "label": "X",
+      "source_arm": "v31",
+      "sha256": "5bd605d5bed72236c1115b2093eedede571dc39462564afb3a68be039b4329ab",
+      "reason": "Exactly ten checks. Separate record and hold-trigger columns make the receiver's decision easy to find. Required approved-reference blanks, uncertain-scope hold, named handoff, acknowledgment and authorized disposition remain explicit without invented thresholds.",
+      "ext": "md"
+    },
+    {
+      "id": "N03",
+      "label": "Y",
+      "source_arm": "v31",
+      "sha256": "c46ffedaf8948520619d837ced17e6a580c00cec8be08d12e13628e4b3efeb5b",
+      "reason": "Direct heading, shorter notice and fully visible phone examples clarify the task. Both HTML source and all desktop/phone images and slices inspected: responsive layout is legible, form submission supports the keyboard, generation focuses the report at its start, validation and copy fallback are present, and nothing is sent or saved.",
+      "ext": "html"
+    },
+    {
+      "id": "N04",
+      "label": "Y",
+      "source_arm": "v31",
+      "sha256": "85187fe7eebb9b27e8dadd7017cb8713707440e59849cc3479801f634c33f21d",
+      "reason": "Shorter questions and probes are easier to deliver aloud while preserving six questions and the full 45-minute agenda. Distinguishes observed from reported behavior, gives quieter participants a way to pass, separates note categories and ends with a usable permission-seeking follow-up email.",
+      "ext": "md"
+    },
+    {
+      "id": "N05",
+      "label": "X",
+      "source_arm": "v31",
+      "sha256": "0eb48738dfe97a897760a11ba0821b8154773df9f090781fc3a3f232e169d6b7",
+      "reason": "The short three-column comparison separates material, feel and when to try it, making this a practical pocket aid. Includes exactly three discovery questions, two dialogues and an honest try-both close; under 500 words. The linked official Allbirds product pages support the wool, blended tree upper and wool-blend lining descriptions.",
+      "ext": "md"
+    },
+    {
+      "id": "N06",
+      "label": "X",
+      "source_arm": "plain",
+      "sha256": "6a0a8fe505e826c7f2025a3f82466ba613aa0d1a2a86ee9200fb8e0d9b9b5c0b",
+      "reason": "Correct 11-pair A-to-B move, $55 transfer cost and $260 conditional contribution protected. The target column and total row make the reserve rule auditable, and the reserve-only pairs are clearly excluded from forecast sales. Two actionable checks; under 450 words.",
+      "ext": "md"
+    },
+    {
+      "id": "N07",
+      "label": "Y",
+      "source_arm": "v31",
+      "sha256": "ddcf7dfec96f6a060ae06251fa8d51692d67ecaac15a49a202a13a8056d93a6c",
+      "reason": "Shorter state bodies are easier to scan and keep approval distinct from arrival of funds. All character limits and the 100-word email limit pass. The options-menu Edit & resubmit action, affidavit limitation and no-bank-payment off-platform explanation match https://support.ramp.com/submitting-reimbursements/.",
+      "ext": "md"
+    },
+    {
+      "id": "N08",
+      "label": "X",
+      "source_arm": "v31",
+      "sha256": "b209b2caaaca59fef98141545c0f4180351aca9f4453f7512002a8fe30b0a5b2",
+      "reason": "Clear fill-in fields cover signed scope, first workflow, entities/systems, decision authority, dependencies, sales promises and measurable rollout success. The simple owner/action/due table and concrete kickoff-question versus blocker examples are easy to apply. Unknowns and integration evidence remain for the AE to complete.",
+      "ext": "md"
+    },
+    {
+      "id": "N09",
+      "label": "Y",
+      "source_arm": "v31",
+      "sha256": "1ff363c064083b858c00e0f34afa40703217025984473361680aaf3290ba88b9",
+      "reason": "144 words including subject/signature before the internal note. Direct recommendation, four next-step questions and a concise close make it ready to use. Official catering and office-meal information supports the format/location distinction; official Outpost information also verifies the individual-order, batched-delivery description. No prices, dietary guarantee or booking is invented.",
+      "ext": "md"
+    },
+    {
+      "id": "N10",
+      "label": "Y",
+      "source_arm": "v31",
+      "sha256": "7aed3c7b495c79626abc42b8dc1131a1b739236012bc6ba3265ac592021b966d",
+      "reason": "Under 600 words and preserves the correct capacity calculation, assumptions, existing-shift constraint and approved food-handling procedures. Bulleted daily measures and plainly separated pilot decisions are easier to apply. Includes a 24-word sign and handles insufficient matched days/samples as inconclusive.",
+      "ext": "md"
+    },
+    {
+      "id": "N11",
+      "label": "Y",
+      "source_arm": "plain",
+      "sha256": "58e5be9d222d42349d7baf56941085873a367fbe1daeab44c0652ddd2f10d7ed",
+      "reason": "Both HTML source and all full desktop/phone screenshots and supplied detail slices inspected. Equally legible responsive layout, accessible native role/FAQ controls and complete role paths; slightly longer steps offset the more explicit role headings. The same official Duolingo sources support the material claims. No sign-in, external dependency or simulated invitation.",
+      "ext": "html"
+    },
+    {
+      "id": "N12",
+      "label": "Y",
+      "source_arm": "v31",
+      "sha256": "e1dd3331170165c02cff8e6568b4c85edf957ceed1a853881319587e95a06e4b",
+      "reason": "Compact rubric and six-row queue make priority, owner and first action easier to scan. Correctly prioritizes the screen-reader barrier, confirmed wrong grading and exposed answer, while requiring impact verification for audio/typo/image. Explicit promotion rules, hypothetical framing and the under-120-word handoff avoid invented reach, causes or release promises.",
+      "ext": "md"
+    }
+  ]
+}

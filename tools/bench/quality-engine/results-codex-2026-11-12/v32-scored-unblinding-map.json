@@ -1,0 +1,422 @@
+{
+  "schema": "codex-quality-blind/1",
+  "panel": "combined",
+  "arm": "v32",
+  "candidate_file": "final",
+  "generator_model": "Codex session model",
+  "judge_contexts": 8,
+  "source_panels": [
+    "P4",
+    "P5"
+  ],
+  "key": {
+    "F01": {
+      "X": {
+        "arm": "v32",
+        "sha256": "1124bd36685adc6315a15c38a74fa683e5acbd218d6dc7c2ee22ce5e816b6cf3"
+      },
+      "Y": {
+        "arm": "plain",
+        "sha256": "d9304db21849ce219c7f6d619e3c2adf576c7024e7eefe2f809d76ca6332c123"
+      }
+    },
+    "F02": {
+      "X": {
+        "arm": "v32",
+        "sha256": "e0b0cde8fae80253e871b04a36d59b9f7298ae4de4a6800a859572f23598b06a"
+      },
+      "Y": {
+        "arm": "plain",
+        "sha256": "e0b0cde8fae80253e871b04a36d59b9f7298ae4de4a6800a859572f23598b06a"
+      }
+    },
+    "F03": {
+      "X": {
+        "arm": "plain",
+        "sha256": "7a857ea9ac043386be7516672c57a727e02003cd17dbb72d408aed80ecfc60a1"
+      },
+      "Y": {
+        "arm": "v32",
+        "sha256": "7a857ea9ac043386be7516672c57a727e02003cd17dbb72d408aed80ecfc60a1"
+      }
+    },
+    "F04": {
+      "X": {
+        "arm": "plain",
+        "sha256": "39a097e836f9606babbcb11d173d1e493b8d69de449102eb7f47bb78b7db1ee7"
+      },
+      "Y": {
+        "arm": "v32",
+        "sha256": "cf55d2c6c5ce604579ae903e93364153c0c581a57936b049c4df245a19df1087"
+      }
+    },
+    "F05": {
+      "X": {
+        "arm": "v32",
+        "sha256": "399ee506aacac1ae8c69652effa73b8c115e38f24ccbfc1e9eae2f25f6855046",
+        "screenshots": {
+          "phone": "9a752093aa7eea8fa870246910a58dff2c867b3c0c920d9740e8c6586282fdbf",
+          "desktop": "d87d61813b01b89ea8e23885a5db95620e42426696398d033c04a3b071941a6b"
+        }
+      },
+      "Y": {
+        "arm": "plain",
+        "sha256": "990565ec347ddb45c9d5fb4ebfa23c6a328516838702971e534dba2263000f86",
+        "screenshots": {
+          "phone": "0f94ba8dad94a3a6a9db53bc82ba2c466864b07045d2a828cadd4f2f71d41948",
+          "desktop": "ab35e369499a0b11debe95216126fcc93d99205e0847919333846d6cbb4fbbde"
+        }
+      }
+    },
+    "F06": {
+      "X": {
+        "arm": "plain",
+        "sha256": "007e22bd5a38d749ca178193ad0d35476b40bb5ccc8d4ce38f177928b8af6e53"
+      },
+      "Y": {
+        "arm": "v32",
+        "sha256": "007e22bd5a38d749ca178193ad0d35476b40bb5ccc8d4ce38f177928b8af6e53"
+      }
+    },
+    "F07": {
+      "X": {
+        "arm": "v32",
+        "sha256": "1222022196f8be663bf71181e5cc107211d943ebbdccc2e7ff4112564e6ada15"
+      },
+      "Y": {
+        "arm": "plain",
+        "sha256": "1222022196f8be663bf71181e5cc107211d943ebbdccc2e7ff4112564e6ada15"
+      }
+    },
+    "F08": {
+      "X": {
+        "arm": "plain",
+        "sha256": "ab70d6d747fa9f41445f3318ab13778be0b7a6a51b2bafade07db701d7021a32"
+      },
+      "Y": {
+        "arm": "v32",
+        "sha256": "ab70d6d747fa9f41445f3318ab13778be0b7a6a51b2bafade07db701d7021a32"
+      }
+    },
+    "F09": {
+      "X": {
+        "arm": "v32",
+        "sha256": "27e87b9966ec00ec585634c8c4cff193f1b582a2f4357539c0ba7d55106207c7",
+        "screenshots": {
+          "phone": "b12f2b9d22aef399847d207ad61495707042ea60fdfda3391894d5630ada7aca",
+          "desktop": "d3d3de93ab011f3011b8fb0d1eb976bacfff0367eec38512b14dc5da169a31e8"
+        }
+      },
+      "Y": {
+        "arm": "plain",
+        "sha256": "e964661a76f2d897f9e06b0f575f188ed52c916cdc4e2bdb3f58921e1999f318",
+        "screenshots": {
+          "phone": "138bc29558d5f10715764618c5c7779c447672c5800904c96b9652507d914a19",
+          "desktop": "3e5075684f944af81274cbef5c202ab5ab2dceff1a6655b84ccce7da5e874d2c"
+        }
+      }
+    },
+    "F10": {
+      "X": {
+        "arm": "v32",
+        "sha256": "e29c63b7b8ec157e9dea819fa6b8b3c4f9f81a47530800ba3b812420e23e896d"
+      },
+      "Y": {
+        "arm": "plain",
+        "sha256": "fb88f5ba83cbaf76ec22eda62c81c9da0482fcfa50d7dbb9e19aa4189a120872"
+      }
+    },
+    "F11": {
+      "X": {
+        "arm": "v32",
+        "sha256": "be8207ce99c09de33054d689aa0e05049006fc3e671d7009392620843fbe9695"
+      },
+      "Y": {
+        "arm": "plain",
+        "sha256": "76f58ccc338fb366646111ff1139dfff39fd87c2c21027da3e3d8c05c1c43037"
+      }
+    },
+    "F12": {
+      "X": {
+        "arm": "plain",
+        "sha256": "b77a2a2147f0d329afa1e016737ad660b184f6256b5a820c2c1a0ae36a3b2c23"
+      },
+      "Y": {
+        "arm": "v32",
+        "sha256": "536c62e7126d1d51f9571889ee75792cf9b9d83268977b8a2863d99ba57c5419"
+      }
+    },
+    "C01": {
+      "X": {
+        "arm": "v32",
+        "sha256": "a17ed8b45c625777354ebe66a5201cf4f0e4b31ee45808fa95675c81c8ffa1eb"
+      },
+      "Y": {
+        "arm": "plain",
+        "sha256": "db8d1fd9e394c38c4586ba6f5d22efd4c8f68f73c7a621cc53b59a2cc368ab37"
+      }
+    },
+    "C02": {
+      "X": {
+        "arm": "plain",
+        "sha256": "fb1445af19bcc134083fdd96ff33eaf5a0e2bd45e89d029fa4fac358d59b082f"
+      },
+      "Y": {
+        "arm": "v32",
+        "sha256": "fb1445af19bcc134083fdd96ff33eaf5a0e2bd45e89d029fa4fac358d59b082f"
+      }
+    },
+    "C03": {
+      "X": {
+        "arm": "v32",
+        "sha256": "c19d7cc3c426670bab8e8173ea71939179f3da1bf7dc64aee2ebd761cc2d0c0e"
+      },
+      "Y": {
+        "arm": "plain",
+        "sha256": "c19d7cc3c426670bab8e8173ea71939179f3da1bf7dc64aee2ebd761cc2d0c0e"
+      }
+    },
+    "C04": {
+      "X": {
+        "arm": "plain",
+        "sha256": "20cc0411e9c0874210bd1c07b876caf49500dbef4f1527d0b00018aecf208dbc",
+        "screenshots": {
+          "phone": "f5878f0786a9a3dbe839d246ee11583b8e31d48057657f6bfa6ceedaabc8134f",
+          "desktop": "5a5d6929f0fb4ba6f8c0b0b27f5aee6150dd64750c76cf6aefed4946f316b435"
+        }
+      },
+      "Y": {
+        "arm": "v32",
+        "sha256": "50f832323d569bafe2edc582f9779bba9e2bcc3c49ebe1300d375ab651401d5b",
+        "screenshots": {
+          "phone": "3c99834610d6164b840c45fad171797b782a1cee1af331b36891ab085b7bfb41",
+          "desktop": "87d2934c3826a8fb3fe5f3363bc96c70486d72ac864dff90dde8fda32ce757ee"
+        }
+      }
+    },
+    "C05": {
+      "X": {
+        "arm": "plain",
+        "sha256": "c063c3eebf6e21c7624ce927a2080fa8128fe82d9bad3a89353282180c400ee9"
+      },
+      "Y": {
+        "arm": "v32",
+        "sha256": "c063c3eebf6e21c7624ce927a2080fa8128fe82d9bad3a89353282180c400ee9"
+      }
+    },
+    "C06": {
+      "X": {
+        "arm": "plain",
+        "sha256": "7863ad196c04eeab9c453a68f20e2f87659357c5b4d03a79f75cc5e6f65b000d"
+      },
+      "Y": {
+        "arm": "v32",
+        "sha256": "7863ad196c04eeab9c453a68f20e2f87659357c5b4d03a79f75cc5e6f65b000d"
+      }
+    },
+    "C07": {
+      "X": {
+        "arm": "v32",
+        "sha256": "f14df3652edf81d4449363a9179dd320cc3ea387fcaab1484ca5291e8ab7b4e0"
+      },
+      "Y": {
+        "arm": "plain",
+        "sha256": "4436b2ad07ed5c990b28eaf82f4dd5ebd6f942c1433c2bc3a2c03441ad8a64a5"
+      }
+    },
+    "C08": {
+      "X": {
+        "arm": "v32",
+        "sha256": "750ee54e20f9d6f2dcbbb62f599ebe6b57edeea4e6f28c79490e6a6ab2a1c680",
+        "screenshots": {
+          "phone": "9fbd0245028059b03118f875707e8c3cc7d14e9ec652081b02f10989e85bcbef",
+          "desktop": "b341da21afd4653181d8c269a67a6ca42477f3d6707cc091fb255cea921cc938"
+        }
+      },
+      "Y": {
+        "arm": "plain",
+        "sha256": "647b9323e7e19f5793fcb29efe5871dcfdbbaa7124524742e6f0242b12853aab",
+        "screenshots": {
+          "phone": "3ab0abdd7c550722dacdcb4fb8d08e6c44fff6864e9ed5652a06160b6c220c0a",
+          "desktop": "aba07e5ad0a531d3321a95203d6d956b61d11575b8e4f92a5a67f639e858fe1a"
+        }
+      }
+    },
+    "C09": {
+      "X": {
+        "arm": "v32",
+        "sha256": "44af083aaf63e3cba03fca2d43ae9f2fdb9cdfe94e5074d5b16acd26b559d52b"
+      },
+      "Y": {
+        "arm": "plain",
+        "sha256": "44af083aaf63e3cba03fca2d43ae9f2fdb9cdfe94e5074d5b16acd26b559d52b"
+      }
+    },
+    "C10": {
+      "X": {
+        "arm": "plain",
+        "sha256": "894e66785572033ea84e6c96e8382bb4f8f77b04795640ba99ba9a77f2bca0cc"
+      },
+      "Y": {
+        "arm": "v32",
+        "sha256": "894e66785572033ea84e6c96e8382bb4f8f77b04795640ba99ba9a77f2bca0cc"
+      }
+    },
+    "C11": {
+      "X": {
+        "arm": "v32",
+        "sha256": "ac6b1fef2e9fce1a50ec45731cdb339b63846c9c638dff5753df100d0c7bea8a"
+      },
+      "Y": {
+        "arm": "plain",
+        "sha256": "4b1207f87971ceeee82f54a4a33f3ce23c9e5c143f90cd184532183d037ef92c"
+      }
+    },
+    "C12": {
+      "X": {
+        "arm": "plain",
+        "sha256": "8b2cb5879733e04f927dbd5c34e00e18a9f3190080379c46d56338e08c5fd643"
+      },
+      "Y": {
+        "arm": "v32",
+        "sha256": "7993980630be7c534010062a50d4107ad049bf68aa8924aa844fe4d337fbbe33"
+      }
+    },
+    "C13": {
+      "X": {
+        "arm": "v32",
+        "sha256": "e1190957ce087b797237f84a8a8fbd8909a611caac8bccb31179c0d202bd8eba",
+        "screenshots": {
+          "phone": "672d769e94de6022281332aa486fd379e76aade972100f9ceeea335f9b90144f",
+          "desktop": "9ed34e9db7b7f0135c5f4180d6c8508c4e26bb8a538bf57db7e74e31ffd667b3"
+        }
+      },
+      "Y": {
+        "arm": "plain",
+        "sha256": "ec3a1b5f5307d1913ee27ef6ba8388c013a15a16a11de1a47ed82eaca8449236",
+        "screenshots": {
+          "phone": "dd4d0476bb0fc82efc4ca53bb1dd6a4a1c6b9e0dadbc7807559d820658c042d5",
+          "desktop": "7fca2b6ee9bdf6f27a3f786f9130ad1c0c96cb003f0e1007abc2a82cd092190b"
+        }
+      }
+    },
+    "C14": {
+      "X": {
+        "arm": "plain",
+        "sha256": "74bfafdcdc1348b0a8b4ddd4bb176a810c93d8a6ae8b9cf1c80ecdb372214238"
+      },
+      "Y": {
+        "arm": "v32",
+        "sha256": "74bfafdcdc1348b0a8b4ddd4bb176a810c93d8a6ae8b9cf1c80ecdb372214238"
+      }
+    },
+    "C15": {
+      "X": {
+        "arm": "plain",
+        "sha256": "85d72abf02bbdf120b22dd80e1dcbcd05cdcfd3ae7f2154a6bc1f35d0e16809d"
+      },
+      "Y": {
+        "arm": "v32",
+        "sha256": "85d72abf02bbdf120b22dd80e1dcbcd05cdcfd3ae7f2154a6bc1f35d0e16809d"
+      }
+    },
+    "C16": {
+      "X": {
+        "arm": "plain",
+        "sha256": "7ffd3f0762547f9e00b515ade030590ce2f613e863e5fa56981add0493e7aa94"
+      },
+      "Y": {
+        "arm": "v32",
+        "sha256": "631075ae8c60df146148f39941d5b1bfd4e4b356581cbd58741c710082c8540c"
+      }
+    },
+    "C17": {
+      "X": {
+        "arm": "v32",
+        "sha256": "1d1073c9c0754215de054d9f1742c72404fa0e92a52976b29cd933437361b92c"
+      },
+      "Y": {
+        "arm": "plain",
+        "sha256": "1d1073c9c0754215de054d9f1742c72404fa0e92a52976b29cd933437361b92c"
+      }
+    },
+    "C18": {
+      "X": {
+        "arm": "v32",
+        "sha256": "e722ebcfbc069dbb694f4432ff9ed2729ace3d5341882a466dff9d7776b10d2a"
+      },
+      "Y": {
+        "arm": "plain",
+        "sha256": "e722ebcfbc069dbb694f4432ff9ed2729ace3d5341882a466dff9d7776b10d2a"
+      }
+    },
+    "C19": {
+      "X": {
+        "arm": "plain",
+        "sha256": "29fec828d9a039ba931d0fc2fef9544bcb715b2565fa8e02ca4e1d440f77860e"
+      },
+      "Y": {
+        "arm": "v32",
+        "sha256": "29fec828d9a039ba931d0fc2fef9544bcb715b2565fa8e02ca4e1d440f77860e"
+      }
+    },
+    "C20": {
+      "X": {
+        "arm": "plain",
+        "sha256": "d4169e845d26963b74106d2c19f2df26c9cc854b7b4f1c84c35a4699c1d536fb"
+      },
+      "Y": {
+        "arm": "v32",
+        "sha256": "a3de1741158ea30c789e9ae016a476414a36c766929718827cb323eda3ee13cc"
+      }
+    },
+    "C21": {
+      "X": {
+        "arm": "plain",
+        "sha256": "577f5067189683b26a613391d1008bfe83e89157ff3a193edef34f7ec36a7078",
+        "screenshots": {
+          "phone": "16e500981594766ff2a3defe35d7ae41dd01a032c799faf5dc1f33b7a39c9984",
+          "desktop": "6a29a9a7a7e9993cd61c8df229f8004d66e5cae1cd04eeacbb9afa746316ede8"
+        }
+      },
+      "Y": {
+        "arm": "v32",
+        "sha256": "7205c6e77ac835f34b7dedd8dbf5c5b9e7b5bc9b3388f8de377d58e206a01665",
+        "screenshots": {
+          "phone": "ba2835eab156f0475da13b807d31e05719363b73ca2fa31cf242d382cafc6b67",
+          "desktop": "8a962d9ecf79b37483f57ea9994fc895000223bb8b31be6dee59e18a36240e52"
+        }
+      }
+    },
+    "C22": {
+      "X": {
+        "arm": "plain",
+        "sha256": "2d958a20619451184a9586f0d794d716b22f13e41457d53298167ba18793b737"
+      },
+      "Y": {
+        "arm": "v32",
+        "sha256": "2d958a20619451184a9586f0d794d716b22f13e41457d53298167ba18793b737"
+      }
+    },
+    "C23": {
+      "X": {
+        "arm": "v32",
+        "sha256": "70a693faf7f65502d3510c99f17635f3a6f5fcdd0eb9b3872d2582cf52287207"
+      },
+      "Y": {
+        "arm": "plain",
+        "sha256": "84d7f81d400f15262283a42fa1cc3e2b1ef2d8ecc48a3a17f3000c5329df5474"
+      }
+    },
+    "C24": {
+      "X": {
+        "arm": "v32",
+        "sha256": "98f870d10fd255812b28eceb53868c235187d96cc4abb4b3403e84b3d2dbe997"
+      },
+      "Y": {
+        "arm": "plain",
+        "sha256": "ab32755db67c5e5ac904666ec7b07c4e474c8ef9908e3e69b94b6b276e5d673d"
+      }
+    }
+  }
+}

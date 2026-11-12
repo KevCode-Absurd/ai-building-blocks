@@ -1,0 +1,35 @@
+{
+  "schema": "codex-unchanged-method-combination/1",
+  "rule": "Exact previously scored snapshots and raw votes; no repacking, relabelling, exclusions or replacements.",
+  "method_version": "3.2",
+  "source_panels": [
+    {
+      "panel": "P4",
+      "tasks": 12,
+      "key_sha256": "bd223fa72ce48237d8137a21cf5472ab0375fdf699432773dd0baab0bb8a1fbd",
+      "verdict_sha256": {
+        "j1": "ae9c8fab6cf458a366a8590fd427b090abc158568976b4ae9c30abeaa4d217ab",
+        "j2": "85b002cb38fb7f450c52b6c2c8d28349b29fde8bb8dd14eea9714d57adea87cb",
+        "i1": "72f5fec7a007d56c43afa78973f09393cc9746409f8f6dcb0589503efcfc00b0",
+        "i2": "162a23959bec10c35a7b1871045aa959d7bd9d682f66f07f3cedd807e1c14266"
+      }
+    },
+    {
+      "panel": "P5",
+      "tasks": 24,
+      "key_sha256": "7b915e0f3426abef25c70387435cd74615b4a314d9cfcdaec5e839cb6e8b6146",
+      "verdict_sha256": {
+        "j1": "d6a6c4cbef4b5eb6f669e733ef4c0aa7c6db16e77588fb57a71e80e434e4a842",
+        "j2": "bdd4eb364aed67770bf1473d2f396e51bddcecc73d033ea385648a8a50d8de02",
+        "i1": "934ee431e5ef8780c104d5e429cc9f834ce9ef852c5908b3dda1c6f68b0287a0",
+        "i2": "71a8aa4773b682654863367a949aa9e041dcf20d3dbebc7fbd41be3f1e7aee66"
+      }
+    }
+  ],
+  "protocol_sha256": "04981d2603409958578350f6e7df871d28c94cc1478015e6d258563679cab9d7",
+  "limits": [
+    "Adaptive fixed sample extension after the nonpassing 12-case pilot.",
+    "Four judgments per task, from four pilot and four fresh confirmation contexts.",
+    "No formal statistical confirmation, customer acceptance or business lift claim."
+  ]
+}

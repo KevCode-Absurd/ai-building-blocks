@@ -1,0 +1,533 @@
+{
+  "judge": "j1",
+  "pairs": [
+    {
+      "id": "C01",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "A complete, traceable guide that separates stated price objections from affordability pressure and handles the mixed and unspecified comments without inferring causes."
+      },
+      "Y": {
+        "usefulness": 8,
+        "accuracy": 8,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 8,
+        "note": "The guide is otherwise usable, but coding 'it's expensive' as BUDGET introduces affordability pressure that the comment does not state; X's separate PRICE code better protects the requested evidence/inference boundary."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "C02",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The same actionable package, conditional give/get trades, and finance/operations boundaries appear in both answers. The 1,200-case arithmetic and four-week constraint are preserved, and the product terminology matches https://gruns.co/products/gruns."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The same actionable package, conditional give/get trades, and finance/operations boundaries appear in both answers. The 1,200-case arithmetic and four-week constraint are preserved, and the product terminology matches https://gruns.co/products/gruns."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C03",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Both provide the same usable field pack: neutral prompts, explicit nonuse and missing-entry handling, privacy limits, voluntary withdrawal, and separate observations and interpretations. The proposed protocol stays within usability research and makes no findings or health claims."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Both provide the same usable field pack: neutral prompts, explicit nonuse and missing-entry handling, privacy limits, voluntary withdrawal, and separate observations and interpretations. The proposed protocol stays within usability research and makes no findings or health claims."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C04",
+      "X": {
+        "usefulness": 8,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "Correct arrival-before-use arithmetic, validation, unmet-demand accounting, and official timing guidance. Editing an input leaves the old result visible until recalculation, and the phone table requires horizontal scrolling across the stock columns."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The same correct calculations are easier to use on a phone through labeled daily cards, and changed inputs hide stale results with an update prompt. The official timing note accurately distinguishes an order date from an arrival promise; https://gruns.co/pages/contact?a=How-can-I-manage-my-order---id--ts4r9AGMTYiiTyoQb933xg supports it."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "C05",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Identical, practical separation of subscriptions, Inbox organization, delivery channels and Pulse summaries, with an actionable three-day check. The shortcut and retention conflicts are real in https://linear.app/docs/inbox and https://linear.app/docs/notifications, and https://linear.app/docs/pulse supports the cadence guidance."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Identical, practical separation of subscriptions, Inbox organization, delivery channels and Pulse summaries, with an actionable three-day check. The shortcut and retention conflicts are real in https://linear.app/docs/inbox and https://linear.app/docs/notifications, and https://linear.app/docs/pulse supports the cadence guidance."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C06",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Both supply the same well-scoped seven-issue handoff with testable criteria, sensible owners, explicit product decisions and no invented architecture or serial blockers. Project and relationship capabilities match https://linear.app/docs/projects and https://linear.app/docs/issue-properties-home."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Both supply the same well-scoped seven-issue handoff with testable criteria, sensible owners, explicit product decisions and no invented architecture or serial blockers. Project and relationship capabilities match https://linear.app/docs/projects and https://linear.app/docs/issue-properties-home."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C07",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 10,
+        "craft": 9,
+        "overall": 9,
+        "note": "The 12.5867-point ceiling, 11-point priority prefix, five uncommitted points and separate reserve all reconcile. 'Direct proportion to availability' clearly identifies the exercise assumption, and rollover matches https://linear.app/docs/use-cycles."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The calculations, commitment and rollover advice are equally correct. 'Linear availability scaling' is less clear in a Linear product guide because it can be read as a named product behavior, giving X a small clarity advantage."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "C08",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "All eight shortcuts and contexts match the linked official documentation; the reference survives without JavaScript. The compact study view and Back to full deck control let a learner review an early practice pile and resume unseen cards without losing session progress."
+      },
+      "Y": {
+        "usefulness": 8,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "The shortcuts, accessible buttons, reveal and progress features work, and the reference is complete. Entering the practice pile before finishing the full deck discards the remaining queue; returning to all cards requires reset, while X preserves a return position."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "C09",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The answers are identical and preserve all excerpt IDs, correct overlapping counts, positive evidence and separate fit, initial and wear signals. Both investigations have useful owners and evidence checks without asserting a root cause or redesign."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The answers are identical and preserve all excerpt IDs, correct overlapping counts, positive evidence and separate fit, initial and wear signals. Both investigations have useful owners and evidence checks without asserting a root cause or redesign."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C10",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Both give the same dimensioned, reviewable concept, six samples, concise signs and practical setup/teardown checks while identifying unknown fixture dimensions and fitting needs. All three selected style names are current on their linked official Allbirds US product pages."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Both give the same dimensioned, reviewable concept, six samples, concise signs and practical setup/teardown checks while identifying unknown fixture dimensions and fitting needs. All three selected style names are current on their linked official Allbirds US product pages."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C11",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 10,
+        "craft": 9,
+        "overall": 9,
+        "note": "Both capacity options and the break bottleneck reconcile correctly, with proper limits on waiting-time prediction. Explicit 'agent-minutes' in the shortfall and surplus rows keeps workload units distinct from elapsed queue time."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The recommendation, 1,050/1,170 available minutes and 175/195 contact capacities are correct. The table's bare '30 minutes' and '90 minutes' are less precise than X's agent-minute labels in a memo that expressly avoids predicting waiting time."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "C12",
+      "X": {
+        "usefulness": 8,
+        "accuracy": 8,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 8,
+        "note": "The core table is correct, but the published baseline omits the separate requested-delivery early-shipping provision and the PO-cancel-date backorder rule. Those omissions matter when tracking an unfilled balance under https://www.allbirds.com/pages/allbirds-terms-of-use-wholesale."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Accurately retains both early-shipping references and both distinct 90-day clocks, with a written-confirmation check instead of assuming cancellation. Freight, contract confirmation and floor-set/fill-in deadlines also match https://www.allbirds.com/pages/allbirds-terms-of-use-wholesale."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "C13",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Integer-cent reconciliation, duplicate/blank-name checks, line removal, six-line limit and valid-memo gating work. The side-by-side desktop review and full-width phone fields are clear, and the initial blank worksheet avoids premature errors while preserving adjacent validation."
+      },
+      "Y": {
+        "usefulness": 8,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "The calculations and controls also work, and its older source link redirects to current official Ramp documentation. Showing every blank field as invalid and moving focus on initial load creates a noisy entry state; narrow allocation fields and unrenumbered remaining lines make the phone workflow less clear."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "C14",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Both contain the same careful candidate evidence, owner/action log and payment-history controls. The unusual Primary-vendor open-bill restriction, irreversible merge, ERP effects and inactive-status caveats are supported by https://support.ramp.com/merging-vendors and https://support.ramp.com/vendor-lifecycle-statuses/."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Both contain the same careful candidate evidence, owner/action log and payment-history controls. The unusual Primary-vendor open-bill restriction, irreversible merge, ERP effects and inactive-status caveats are supported by https://support.ramp.com/merging-vendors and https://support.ramp.com/vendor-lifecycle-statuses/."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C15",
+      "X": {
+        "usefulness": 10,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Identical, decision-ready negotiation briefs with correct annual costs, differences and percentages, a supported 60-seat working quantity, and a realistic usage-validation step. The draft requests written terms and correctly separates payment-card cancellation from contractual termination."
+      },
+      "Y": {
+        "usefulness": 10,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Identical, decision-ready negotiation briefs with correct annual costs, differences and percentages, a supported 60-seat working quantity, and a realistic usage-validation step. The draft requests written terms and correctly separates payment-card cancellation from contractual termination."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C16",
+      "X": {
+        "usefulness": 8,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "The plan correctly protects the subscription, pending reimbursements and unsettled hotel activity, and flags the verified transfer-guide conflict. Its long checklist sentences inside a broad table make role-specific cutoff and follow-up actions harder to scan than Y."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The sequenced Before Friday, cutoff and after-cutoff checklist makes owners and confirmations easier to follow while retaining all material safeguards. Deactivation, reimbursement deletion and ownership behavior match https://support.ramp.com/deactivating-and-removing-users-from-ramp and https://support.ramp.com/transferring-ramp-cards-and-funds."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "C17",
+      "X": {
+        "usefulness": 10,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 10,
+        "craft": 9,
+        "overall": 10,
+        "note": "The identical memos correctly reconcile the $9,620 unfavorable bridge to $15,380 contribution and distinguish three-percentage-point rate signals from proven causes. The revenue-based volume qualification and evidence checks make the analysis ready for an operating review."
+      },
+      "Y": {
+        "usefulness": 10,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 10,
+        "craft": 9,
+        "overall": 10,
+        "note": "The identical memos correctly reconcile the $9,620 unfavorable bridge to $15,380 contribution and distinguish three-percentage-point rate signals from proven causes. The revenue-based volume qualification and evidence checks make the analysis ready for an operating review."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C18",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Both provide the same usable private coaching guide, fact-based opening, diagnostic questions, handoff expectation and uncompleted action record. The separate public-complaint response protects privacy and leaves any formal discipline to actual policy."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Both provide the same usable private coaching guide, fact-based opening, diagnostic questions, handoff expectation and uncompleted action record. The separate public-complaint response protects privacy and leaves any formal discipline to actual policy."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C19",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Both accurately report Georgetown's address, daily 9:30–21:00 published hours and official links, with a bounded November 12–18 window and no invented temporary changes. https://www.sweetgreen.com/locations/georgetown and the official directory agree; the weekly review queue is practical."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Both accurately report Georgetown's address, daily 9:30–21:00 published hours and official links, with a bounded November 12–18 window and no invented temporary changes. https://www.sweetgreen.com/locations/georgetown and the official directory agree; the weekly review queue is practical."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C20",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The naming set and three descriptions are usable and match the supplied ingredients without unsupported launch claims. The 'grain-and-greens' rationale for Lentil & Leaf is imprecise because lentils are legumes; the rest of the creative work is the same as Y."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The same distinct options and accurate descriptions use the more precise 'lentil-and-greens' cue. The cited current menu supports the naming context, and the texture-tasting and prelaunch checks make the recommendation reviewable."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "C21",
+      "X": {
+        "usefulness": 8,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "The four-week totals, completion tracking and clearing of marks on day/minute changes work correctly. The empty state renders an unexplained green statistics bar, and clearing an existing goal leaves printing enabled; Y handles these states more coherently."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "A clear workbook layout on both screens, stronger day-group validation and a clean empty state support the same correct scheduling behavior. Generating brings the plan into view, and removing the goal disables print until repaired; the two tips match the official Duolingo guidance."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "C22",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Identical, sound es-MX proposals preserve both placeholders, give back-translations and engineering context, and cover the three requested QA cases. Singular 1 and plural 2–7 are correct, with time-format decisions and unofficial status made explicit."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Identical, sound es-MX proposals preserve both placeholders, give back-translations and engineering context, and cover the three requested QA cases. Singular 1 and plural 2–7 are correct, with time-format decisions and unofficial status made explicit."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "C23",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The ten observable cases cover all requested interactions and explicitly verify that standard-motion celebration starts automatically. Useful release evidence and unresolved design policies are separated from unexecuted test results."
+      },
+      "Y": {
+        "usefulness": 8,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 8,
+        "note": "The accessibility, repeated-activation and transition coverage is equally useful, but the first case never asserts that the celebratory animation actually starts automatically. That leaves an explicit functional requirement without an observable acceptance check."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "C24",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The 121-word voiceover fits a minute and gives a concrete Spanish review-versus-new-content example plus a practical weekly lunch-order check. Definitions and limited Score availability match https://blog.duolingo.com/duolingo-score/ and the linked official XP/streak guidance."
+      },
+      "Y": {
+        "usefulness": 8,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "The definitions, official sources and illustrative distinction are accurate, and the spoken copy is feasible overall. Spoken CEFR jargon adds an unexplained term, and the ending gives a less concrete progress check than X's weekly real-world lunch-order task."
+      },
+      "winner": "X"
+    }
+  ]
+}

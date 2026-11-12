@@ -1,0 +1,1926 @@
+{
+  "schema": "codex-quality-results/1",
+  "panel": "P1",
+  "arm": "v3",
+  "expected_judges": [
+    "j1",
+    "j2",
+    "i1",
+    "i2"
+  ],
+  "verdicts": 160,
+  "groups": {
+    "all": {
+      "scores": {
+        "usefulness": {
+          "plain": 8.2625,
+          "engine": 8.63125,
+          "delta": 0.36875
+        },
+        "accuracy": {
+          "plain": 8.89375,
+          "engine": 9.025,
+          "delta": 0.13125
+        },
+        "specificity": {
+          "plain": 8.59375,
+          "engine": 8.825,
+          "delta": 0.23125
+        },
+        "clarity": {
+          "plain": 8.95625,
+          "engine": 8.725,
+          "delta": -0.23125
+        },
+        "craft": {
+          "plain": 8.41875,
+          "engine": 8.5125,
+          "delta": 0.09375
+        },
+        "overall": {
+          "plain": 8.24375,
+          "engine": 8.625,
+          "delta": 0.38125
+        }
+      },
+      "task_clustered_win_rate_ci95": [
+        0.525,
+        0.75625
+      ],
+      "verdicts": 160,
+      "wins": 103,
+      "ties": 20,
+      "win_rate": 0.64375,
+      "clarity_delta": -0.23125,
+      "overall_delta": 0.38125
+    },
+    "practice": {
+      "scores": {
+        "usefulness": {
+          "plain": 7.96875,
+          "engine": 8.671875,
+          "delta": 0.703125
+        },
+        "accuracy": {
+          "plain": 8.796875,
+          "engine": 8.921875,
+          "delta": 0.125
+        },
+        "specificity": {
+          "plain": 8.15625,
+          "engine": 8.875,
+          "delta": 0.71875
+        },
+        "clarity": {
+          "plain": 8.953125,
+          "engine": 8.65625,
+          "delta": -0.296875
+        },
+        "craft": {
+          "plain": 8.21875,
+          "engine": 8.390625,
+          "delta": 0.171875
+        },
+        "overall": {
+          "plain": 7.953125,
+          "engine": 8.65625,
+          "delta": 0.703125
+        }
+      },
+      "task_clustered_win_rate_ci95": [
+        0.546875,
+        0.890625
+      ],
+      "verdicts": 64,
+      "wins": 47,
+      "ties": 4,
+      "win_rate": 0.734375,
+      "clarity_delta": -0.296875,
+      "overall_delta": 0.703125
+    },
+    "held-out": {
+      "scores": {
+        "usefulness": {
+          "plain": 8.458333333333334,
+          "engine": 8.604166666666666,
+          "delta": 0.14583333333333334
+        },
+        "accuracy": {
+          "plain": 8.958333333333334,
+          "engine": 9.09375,
+          "delta": 0.13541666666666666
+        },
+        "specificity": {
+          "plain": 8.885416666666666,
+          "engine": 8.791666666666666,
+          "delta": -0.09375
+        },
+        "clarity": {
+          "plain": 8.958333333333334,
+          "engine": 8.770833333333334,
+          "delta": -0.1875
+        },
+        "craft": {
+          "plain": 8.552083333333334,
+          "engine": 8.59375,
+          "delta": 0.041666666666666664
+        },
+        "overall": {
+          "plain": 8.4375,
+          "engine": 8.604166666666666,
+          "delta": 0.16666666666666666
+        }
+      },
+      "task_clustered_win_rate_ci95": [
+        0.4270833333333333,
+        0.7395833333333334
+      ],
+      "verdicts": 96,
+      "wins": 56,
+      "ties": 16,
+      "win_rate": 0.5833333333333334,
+      "clarity_delta": -0.1875,
+      "overall_delta": 0.16666666666666666
+    },
+    "original brief": {
+      "scores": {
+        "usefulness": {
+          "plain": 8.275,
+          "engine": 8.6125,
+          "delta": 0.3375
+        },
+        "accuracy": {
+          "plain": 9.0625,
+          "engine": 9.075,
+          "delta": 0.0125
+        },
+        "specificity": {
+          "plain": 8.6125,
+          "engine": 8.8375,
+          "delta": 0.225
+        },
+        "clarity": {
+          "plain": 8.9625,
+          "engine": 8.725,
+          "delta": -0.2375
+        },
+        "craft": {
+          "plain": 8.325,
+          "engine": 8.4375,
+          "delta": 0.1125
+        },
+        "overall": {
+          "plain": 8.2625,
+          "engine": 8.6,
+          "delta": 0.3375
+        }
+      },
+      "task_clustered_win_rate_ci95": [
+        0.6,
+        0.8375
+      ],
+      "verdicts": 80,
+      "wins": 58,
+      "ties": 3,
+      "win_rate": 0.725,
+      "clarity_delta": -0.2375,
+      "overall_delta": 0.3375
+    },
+    "independent brief": {
+      "scores": {
+        "usefulness": {
+          "plain": 8.25,
+          "engine": 8.65,
+          "delta": 0.4
+        },
+        "accuracy": {
+          "plain": 8.725,
+          "engine": 8.975,
+          "delta": 0.25
+        },
+        "specificity": {
+          "plain": 8.575,
+          "engine": 8.8125,
+          "delta": 0.2375
+        },
+        "clarity": {
+          "plain": 8.95,
+          "engine": 8.725,
+          "delta": -0.225
+        },
+        "craft": {
+          "plain": 8.5125,
+          "engine": 8.5875,
+          "delta": 0.075
+        },
+        "overall": {
+          "plain": 8.225,
+          "engine": 8.65,
+          "delta": 0.425
+        }
+      },
+      "task_clustered_win_rate_ci95": [
+        0.425,
+        0.7
+      ],
+      "verdicts": 80,
+      "wins": 45,
+      "ties": 17,
+      "win_rate": 0.5625,
+      "clarity_delta": -0.225,
+      "overall_delta": 0.425
+    }
+  },
+  "release_gate": {
+    "pass": false,
+    "rule": "More than 50% wins overall and on held-out tasks; no mean clarity regression."
+  },
+  "limits": [
+    "Single model family for generation and judging.",
+    "AI preference, not customer acceptance or measured business results.",
+    "Builders used same-context internal checks; external judges are independent contexts.",
+    "Separate from the interrupted Claude benchmark; no cross-model gain is claimed."
+  ],
+  "per_task": [
+    {
+      "id": "T01",
+      "scores": {
+        "usefulness": {
+          "plain": 7.5,
+          "engine": 8,
+          "delta": 0.5
+        },
+        "accuracy": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 7,
+          "engine": 7.25,
+          "delta": 0.25
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "craft": {
+          "plain": 7.25,
+          "engine": 7.25,
+          "delta": 0
+        },
+        "overall": {
+          "plain": 7.5,
+          "engine": 8,
+          "delta": 0.5
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 2,
+      "ties": 2,
+      "win_rate": 0.5,
+      "clarity_delta": 0,
+      "overall_delta": 0.5
+    },
+    {
+      "id": "T02",
+      "scores": {
+        "usefulness": {
+          "plain": 7,
+          "engine": 8.75,
+          "delta": 1.75
+        },
+        "accuracy": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 7,
+          "engine": 9,
+          "delta": 2
+        },
+        "clarity": {
+          "plain": 8.75,
+          "engine": 9,
+          "delta": 0.25
+        },
+        "craft": {
+          "plain": 8,
+          "engine": 8.25,
+          "delta": 0.25
+        },
+        "overall": {
+          "plain": 7,
+          "engine": 8.75,
+          "delta": 1.75
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 4,
+      "ties": 0,
+      "win_rate": 1,
+      "clarity_delta": 0.25,
+      "overall_delta": 1.75
+    },
+    {
+      "id": "T03",
+      "scores": {
+        "usefulness": {
+          "plain": 7.5,
+          "engine": 8.5,
+          "delta": 1
+        },
+        "accuracy": {
+          "plain": 7.75,
+          "engine": 9,
+          "delta": 1.25
+        },
+        "specificity": {
+          "plain": 8,
+          "engine": 8.25,
+          "delta": 0.25
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 8.75,
+          "delta": -0.25
+        },
+        "craft": {
+          "plain": 8,
+          "engine": 8,
+          "delta": 0
+        },
+        "overall": {
+          "plain": 7.25,
+          "engine": 8.5,
+          "delta": 1.25
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 4,
+      "ties": 0,
+      "win_rate": 1,
+      "clarity_delta": -0.25,
+      "overall_delta": 1.25
+    },
+    {
+      "id": "T04",
+      "scores": {
+        "usefulness": {
+          "plain": 7.75,
+          "engine": 9,
+          "delta": 1.25
+        },
+        "accuracy": {
+          "plain": 8.5,
+          "engine": 8.5,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 8.5,
+          "engine": 9.5,
+          "delta": 1
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "craft": {
+          "plain": 8,
+          "engine": 9,
+          "delta": 1
+        },
+        "overall": {
+          "plain": 7.75,
+          "engine": 9,
+          "delta": 1.25
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 4,
+      "ties": 0,
+      "win_rate": 1,
+      "clarity_delta": 0,
+      "overall_delta": 1.25
+    },
+    {
+      "id": "T05",
+      "scores": {
+        "usefulness": {
+          "plain": 8,
+          "engine": 8.5,
+          "delta": 0.5
+        },
+        "accuracy": {
+          "plain": 8.75,
+          "engine": 9,
+          "delta": 0.25
+        },
+        "specificity": {
+          "plain": 8,
+          "engine": 9,
+          "delta": 1
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 8,
+          "delta": -1
+        },
+        "craft": {
+          "plain": 8.25,
+          "engine": 8,
+          "delta": -0.25
+        },
+        "overall": {
+          "plain": 8,
+          "engine": 8.5,
+          "delta": 0.5
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 3,
+      "ties": 0,
+      "win_rate": 0.75,
+      "clarity_delta": -1,
+      "overall_delta": 0.5
+    },
+    {
+      "id": "T06",
+      "scores": {
+        "usefulness": {
+          "plain": 8,
+          "engine": 9,
+          "delta": 1
+        },
+        "accuracy": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 8,
+          "engine": 9,
+          "delta": 1
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 8.5,
+          "delta": -0.5
+        },
+        "craft": {
+          "plain": 8,
+          "engine": 8.5,
+          "delta": 0.5
+        },
+        "overall": {
+          "plain": 8,
+          "engine": 9,
+          "delta": 1
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 4,
+      "ties": 0,
+      "win_rate": 1,
+      "clarity_delta": -0.5,
+      "overall_delta": 1
+    },
+    {
+      "id": "T07",
+      "scores": {
+        "usefulness": {
+          "plain": 8.25,
+          "engine": 8.75,
+          "delta": 0.5
+        },
+        "accuracy": {
+          "plain": 9,
+          "engine": 8.75,
+          "delta": -0.25
+        },
+        "specificity": {
+          "plain": 8.5,
+          "engine": 9,
+          "delta": 0.5
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 8,
+          "delta": -1
+        },
+        "craft": {
+          "plain": 8.5,
+          "engine": 8.5,
+          "delta": 0
+        },
+        "overall": {
+          "plain": 8.25,
+          "engine": 8.75,
+          "delta": 0.5
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 3,
+      "ties": 0,
+      "win_rate": 0.75,
+      "clarity_delta": -1,
+      "overall_delta": 0.5
+    },
+    {
+      "id": "T08",
+      "scores": {
+        "usefulness": {
+          "plain": 8,
+          "engine": 9,
+          "delta": 1
+        },
+        "accuracy": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 8,
+          "engine": 9,
+          "delta": 1
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "craft": {
+          "plain": 8.5,
+          "engine": 8.75,
+          "delta": 0.25
+        },
+        "overall": {
+          "plain": 8,
+          "engine": 9,
+          "delta": 1
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 4,
+      "ties": 0,
+      "win_rate": 1,
+      "clarity_delta": 0,
+      "overall_delta": 1
+    },
+    {
+      "id": "T09",
+      "scores": {
+        "usefulness": {
+          "plain": 8.25,
+          "engine": 8.75,
+          "delta": 0.5
+        },
+        "accuracy": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 8,
+          "engine": 9,
+          "delta": 1
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 8.75,
+          "delta": -0.25
+        },
+        "craft": {
+          "plain": 8.5,
+          "engine": 8.5,
+          "delta": 0
+        },
+        "overall": {
+          "plain": 8.25,
+          "engine": 8.75,
+          "delta": 0.5
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 3,
+      "ties": 0,
+      "win_rate": 0.75,
+      "clarity_delta": -0.25,
+      "overall_delta": 0.5
+    },
+    {
+      "id": "T10",
+      "scores": {
+        "usefulness": {
+          "plain": 8.75,
+          "engine": 8.5,
+          "delta": -0.25
+        },
+        "accuracy": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 8.75,
+          "delta": -0.25
+        },
+        "craft": {
+          "plain": 8.75,
+          "engine": 8.5,
+          "delta": -0.25
+        },
+        "overall": {
+          "plain": 8.75,
+          "engine": 8.5,
+          "delta": -0.25
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 1,
+      "ties": 1,
+      "win_rate": 0.25,
+      "clarity_delta": -0.25,
+      "overall_delta": -0.25
+    },
+    {
+      "id": "L01",
+      "scores": {
+        "usefulness": {
+          "plain": 7.75,
+          "engine": 8.75,
+          "delta": 1
+        },
+        "accuracy": {
+          "plain": 8.5,
+          "engine": 8.5,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 7.5,
+          "engine": 9,
+          "delta": 1.5
+        },
+        "clarity": {
+          "plain": 8.5,
+          "engine": 8.75,
+          "delta": 0.25
+        },
+        "craft": {
+          "plain": 7.75,
+          "engine": 8.75,
+          "delta": 1
+        },
+        "overall": {
+          "plain": 7.75,
+          "engine": 8.5,
+          "delta": 0.75
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 3,
+      "ties": 0,
+      "win_rate": 0.75,
+      "clarity_delta": 0.25,
+      "overall_delta": 0.75
+    },
+    {
+      "id": "L02",
+      "scores": {
+        "usefulness": {
+          "plain": 7.75,
+          "engine": 9,
+          "delta": 1.25
+        },
+        "accuracy": {
+          "plain": 8.75,
+          "engine": 9,
+          "delta": 0.25
+        },
+        "specificity": {
+          "plain": 8,
+          "engine": 9.25,
+          "delta": 1.25
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 8,
+          "delta": -1
+        },
+        "craft": {
+          "plain": 8,
+          "engine": 8.5,
+          "delta": 0.5
+        },
+        "overall": {
+          "plain": 7.75,
+          "engine": 9,
+          "delta": 1.25
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 4,
+      "ties": 0,
+      "win_rate": 1,
+      "clarity_delta": -1,
+      "overall_delta": 1.25
+    },
+    {
+      "id": "L03",
+      "scores": {
+        "usefulness": {
+          "plain": 9,
+          "engine": 8,
+          "delta": -1
+        },
+        "accuracy": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 8,
+          "delta": -1
+        },
+        "craft": {
+          "plain": 8.5,
+          "engine": 8,
+          "delta": -0.5
+        },
+        "overall": {
+          "plain": 9,
+          "engine": 8,
+          "delta": -1
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 0,
+      "ties": 0,
+      "win_rate": 0,
+      "clarity_delta": -1,
+      "overall_delta": -1
+    },
+    {
+      "id": "L04",
+      "scores": {
+        "usefulness": {
+          "plain": 7,
+          "engine": 9,
+          "delta": 2
+        },
+        "accuracy": {
+          "plain": 8.5,
+          "engine": 9,
+          "delta": 0.5
+        },
+        "specificity": {
+          "plain": 8,
+          "engine": 9,
+          "delta": 1
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "craft": {
+          "plain": 8.25,
+          "engine": 8.5,
+          "delta": 0.25
+        },
+        "overall": {
+          "plain": 7,
+          "engine": 9,
+          "delta": 2
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 4,
+      "ties": 0,
+      "win_rate": 1,
+      "clarity_delta": 0,
+      "overall_delta": 2
+    },
+    {
+      "id": "L05",
+      "scores": {
+        "usefulness": {
+          "plain": 8,
+          "engine": 9,
+          "delta": 1
+        },
+        "accuracy": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "craft": {
+          "plain": 8.25,
+          "engine": 9,
+          "delta": 0.75
+        },
+        "overall": {
+          "plain": 8,
+          "engine": 9,
+          "delta": 1
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 4,
+      "ties": 0,
+      "win_rate": 1,
+      "clarity_delta": 0,
+      "overall_delta": 1
+    },
+    {
+      "id": "L06",
+      "scores": {
+        "usefulness": {
+          "plain": 9,
+          "engine": 8.25,
+          "delta": -0.75
+        },
+        "accuracy": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 9,
+          "engine": 8.75,
+          "delta": -0.25
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "craft": {
+          "plain": 9,
+          "engine": 8.25,
+          "delta": -0.75
+        },
+        "overall": {
+          "plain": 9,
+          "engine": 8.25,
+          "delta": -0.75
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 0,
+      "ties": 1,
+      "win_rate": 0,
+      "clarity_delta": 0,
+      "overall_delta": -0.75
+    },
+    {
+      "id": "A01",
+      "scores": {
+        "usefulness": {
+          "plain": 8,
+          "engine": 9,
+          "delta": 1
+        },
+        "accuracy": {
+          "plain": 8.5,
+          "engine": 9,
+          "delta": 0.5
+        },
+        "specificity": {
+          "plain": 8.25,
+          "engine": 9,
+          "delta": 0.75
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "craft": {
+          "plain": 8,
+          "engine": 9,
+          "delta": 1
+        },
+        "overall": {
+          "plain": 8,
+          "engine": 9,
+          "delta": 1
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 4,
+      "ties": 0,
+      "win_rate": 1,
+      "clarity_delta": 0,
+      "overall_delta": 1
+    },
+    {
+      "id": "A02",
+      "scores": {
+        "usefulness": {
+          "plain": 8.75,
+          "engine": 9,
+          "delta": 0.25
+        },
+        "accuracy": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "craft": {
+          "plain": 8.75,
+          "engine": 9,
+          "delta": 0.25
+        },
+        "overall": {
+          "plain": 8.75,
+          "engine": 9,
+          "delta": 0.25
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 2,
+      "ties": 2,
+      "win_rate": 0.5,
+      "clarity_delta": 0,
+      "overall_delta": 0.25
+    },
+    {
+      "id": "A03",
+      "scores": {
+        "usefulness": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "accuracy": {
+          "plain": 9.5,
+          "engine": 9.5,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "clarity": {
+          "plain": 8.75,
+          "engine": 9,
+          "delta": 0.25
+        },
+        "craft": {
+          "plain": 8.75,
+          "engine": 9,
+          "delta": 0.25
+        },
+        "overall": {
+          "plain": 8.75,
+          "engine": 9,
+          "delta": 0.25
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 2,
+      "ties": 2,
+      "win_rate": 0.5,
+      "clarity_delta": 0.25,
+      "overall_delta": 0.25
+    },
+    {
+      "id": "A04",
+      "scores": {
+        "usefulness": {
+          "plain": 8.5,
+          "engine": 9,
+          "delta": 0.5
+        },
+        "accuracy": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "craft": {
+          "plain": 8.5,
+          "engine": 9,
+          "delta": 0.5
+        },
+        "overall": {
+          "plain": 8.5,
+          "engine": 9,
+          "delta": 0.5
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 3,
+      "ties": 1,
+      "win_rate": 0.75,
+      "clarity_delta": 0,
+      "overall_delta": 0.5
+    },
+    {
+      "id": "A05",
+      "scores": {
+        "usefulness": {
+          "plain": 8.25,
+          "engine": 9,
+          "delta": 0.75
+        },
+        "accuracy": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "craft": {
+          "plain": 8.5,
+          "engine": 9,
+          "delta": 0.5
+        },
+        "overall": {
+          "plain": 8.25,
+          "engine": 9,
+          "delta": 0.75
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 4,
+      "ties": 0,
+      "win_rate": 1,
+      "clarity_delta": 0,
+      "overall_delta": 0.75
+    },
+    {
+      "id": "A06",
+      "scores": {
+        "usefulness": {
+          "plain": 8.5,
+          "engine": 8.5,
+          "delta": 0
+        },
+        "accuracy": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 9,
+          "engine": 8.75,
+          "delta": -0.25
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 8.25,
+          "delta": -0.75
+        },
+        "craft": {
+          "plain": 8.5,
+          "engine": 8.5,
+          "delta": 0
+        },
+        "overall": {
+          "plain": 8.5,
+          "engine": 8.5,
+          "delta": 0
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 2,
+      "ties": 0,
+      "win_rate": 0.5,
+      "clarity_delta": -0.75,
+      "overall_delta": 0
+    },
+    {
+      "id": "R01",
+      "scores": {
+        "usefulness": {
+          "plain": 8,
+          "engine": 9,
+          "delta": 1
+        },
+        "accuracy": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "craft": {
+          "plain": 8,
+          "engine": 9,
+          "delta": 1
+        },
+        "overall": {
+          "plain": 8,
+          "engine": 9,
+          "delta": 1
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 4,
+      "ties": 0,
+      "win_rate": 1,
+      "clarity_delta": 0,
+      "overall_delta": 1
+    },
+    {
+      "id": "R02",
+      "scores": {
+        "usefulness": {
+          "plain": 9,
+          "engine": 8,
+          "delta": -1
+        },
+        "accuracy": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 9.25,
+          "engine": 8.5,
+          "delta": -0.75
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "craft": {
+          "plain": 9,
+          "engine": 8.25,
+          "delta": -0.75
+        },
+        "overall": {
+          "plain": 9,
+          "engine": 8,
+          "delta": -1
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 0,
+      "ties": 0,
+      "win_rate": 0,
+      "clarity_delta": 0,
+      "overall_delta": -1
+    },
+    {
+      "id": "R03",
+      "scores": {
+        "usefulness": {
+          "plain": 9,
+          "engine": 7.75,
+          "delta": -1.25
+        },
+        "accuracy": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 9,
+          "engine": 8,
+          "delta": -1
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "craft": {
+          "plain": 8.75,
+          "engine": 7.75,
+          "delta": -1
+        },
+        "overall": {
+          "plain": 9,
+          "engine": 7.75,
+          "delta": -1.25
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 0,
+      "ties": 0,
+      "win_rate": 0,
+      "clarity_delta": 0,
+      "overall_delta": -1.25
+    },
+    {
+      "id": "R04",
+      "scores": {
+        "usefulness": {
+          "plain": 8.75,
+          "engine": 9,
+          "delta": 0.25
+        },
+        "accuracy": {
+          "plain": 9.25,
+          "engine": 9.25,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "craft": {
+          "plain": 8.5,
+          "engine": 9,
+          "delta": 0.5
+        },
+        "overall": {
+          "plain": 8.75,
+          "engine": 9,
+          "delta": 0.25
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 2,
+      "ties": 2,
+      "win_rate": 0.5,
+      "clarity_delta": 0,
+      "overall_delta": 0.25
+    },
+    {
+      "id": "R05",
+      "scores": {
+        "usefulness": {
+          "plain": 8,
+          "engine": 9,
+          "delta": 1
+        },
+        "accuracy": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 7.75,
+          "engine": 9,
+          "delta": 1.25
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 8.75,
+          "delta": -0.25
+        },
+        "craft": {
+          "plain": 8.25,
+          "engine": 9,
+          "delta": 0.75
+        },
+        "overall": {
+          "plain": 8,
+          "engine": 9,
+          "delta": 1
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 4,
+      "ties": 0,
+      "win_rate": 1,
+      "clarity_delta": -0.25,
+      "overall_delta": 1
+    },
+    {
+      "id": "R06",
+      "scores": {
+        "usefulness": {
+          "plain": 8.75,
+          "engine": 9,
+          "delta": 0.25
+        },
+        "accuracy": {
+          "plain": 9.25,
+          "engine": 9.25,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 9,
+          "engine": 9.5,
+          "delta": 0.5
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "craft": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "overall": {
+          "plain": 8.75,
+          "engine": 9,
+          "delta": 0.25
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 3,
+      "ties": 1,
+      "win_rate": 0.75,
+      "clarity_delta": 0,
+      "overall_delta": 0.25
+    },
+    {
+      "id": "S01",
+      "scores": {
+        "usefulness": {
+          "plain": 8.75,
+          "engine": 9,
+          "delta": 0.25
+        },
+        "accuracy": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 9,
+          "engine": 9.25,
+          "delta": 0.25
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 8.75,
+          "delta": -0.25
+        },
+        "craft": {
+          "plain": 8.75,
+          "engine": 9,
+          "delta": 0.25
+        },
+        "overall": {
+          "plain": 8.75,
+          "engine": 9,
+          "delta": 0.25
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 2,
+      "ties": 2,
+      "win_rate": 0.5,
+      "clarity_delta": -0.25,
+      "overall_delta": 0.25
+    },
+    {
+      "id": "S02",
+      "scores": {
+        "usefulness": {
+          "plain": 7.5,
+          "engine": 9,
+          "delta": 1.5
+        },
+        "accuracy": {
+          "plain": 7.75,
+          "engine": 9,
+          "delta": 1.25
+        },
+        "specificity": {
+          "plain": 8.5,
+          "engine": 8.5,
+          "delta": 0
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "craft": {
+          "plain": 8,
+          "engine": 8.25,
+          "delta": 0.25
+        },
+        "overall": {
+          "plain": 7.5,
+          "engine": 9,
+          "delta": 1.5
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 4,
+      "ties": 0,
+      "win_rate": 1,
+      "clarity_delta": 0,
+      "overall_delta": 1.5
+    },
+    {
+      "id": "S03",
+      "scores": {
+        "usefulness": {
+          "plain": 8.5,
+          "engine": 7.5,
+          "delta": -1
+        },
+        "accuracy": {
+          "plain": 8.75,
+          "engine": 9,
+          "delta": 0.25
+        },
+        "specificity": {
+          "plain": 9.25,
+          "engine": 7.5,
+          "delta": -1.75
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "craft": {
+          "plain": 9,
+          "engine": 8,
+          "delta": -1
+        },
+        "overall": {
+          "plain": 8.5,
+          "engine": 7.5,
+          "delta": -1
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 1,
+      "ties": 0,
+      "win_rate": 0.25,
+      "clarity_delta": 0,
+      "overall_delta": -1
+    },
+    {
+      "id": "S04",
+      "scores": {
+        "usefulness": {
+          "plain": 8,
+          "engine": 9,
+          "delta": 1
+        },
+        "accuracy": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 8.75,
+          "engine": 9.25,
+          "delta": 0.5
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 8.25,
+          "delta": -0.75
+        },
+        "craft": {
+          "plain": 8.25,
+          "engine": 9,
+          "delta": 0.75
+        },
+        "overall": {
+          "plain": 8,
+          "engine": 9,
+          "delta": 1
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 4,
+      "ties": 0,
+      "win_rate": 1,
+      "clarity_delta": -0.75,
+      "overall_delta": 1
+    },
+    {
+      "id": "S05",
+      "scores": {
+        "usefulness": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "accuracy": {
+          "plain": 9.5,
+          "engine": 9.5,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "craft": {
+          "plain": 8.75,
+          "engine": 9,
+          "delta": 0.25
+        },
+        "overall": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 1,
+      "ties": 2,
+      "win_rate": 0.25,
+      "clarity_delta": 0,
+      "overall_delta": 0
+    },
+    {
+      "id": "S06",
+      "scores": {
+        "usefulness": {
+          "plain": 8.25,
+          "engine": 9.25,
+          "delta": 1
+        },
+        "accuracy": {
+          "plain": 9.25,
+          "engine": 9.25,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 9,
+          "engine": 9.5,
+          "delta": 0.5
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "craft": {
+          "plain": 8.5,
+          "engine": 9,
+          "delta": 0.5
+        },
+        "overall": {
+          "plain": 8.25,
+          "engine": 9.25,
+          "delta": 1
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 4,
+      "ties": 0,
+      "win_rate": 1,
+      "clarity_delta": 0,
+      "overall_delta": 1
+    },
+    {
+      "id": "D01",
+      "scores": {
+        "usefulness": {
+          "plain": 8.5,
+          "engine": 8.5,
+          "delta": 0
+        },
+        "accuracy": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 9.25,
+          "engine": 8.5,
+          "delta": -0.75
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 8.25,
+          "delta": -0.75
+        },
+        "craft": {
+          "plain": 9,
+          "engine": 8.5,
+          "delta": -0.5
+        },
+        "overall": {
+          "plain": 8.5,
+          "engine": 8.5,
+          "delta": 0
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 2,
+      "ties": 0,
+      "win_rate": 0.5,
+      "clarity_delta": -0.75,
+      "overall_delta": 0
+    },
+    {
+      "id": "D02",
+      "scores": {
+        "usefulness": {
+          "plain": 7.75,
+          "engine": 9,
+          "delta": 1.25
+        },
+        "accuracy": {
+          "plain": 7.75,
+          "engine": 9,
+          "delta": 1.25
+        },
+        "specificity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "craft": {
+          "plain": 8.75,
+          "engine": 9,
+          "delta": 0.25
+        },
+        "overall": {
+          "plain": 7.75,
+          "engine": 9,
+          "delta": 1.25
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 4,
+      "ties": 0,
+      "win_rate": 1,
+      "clarity_delta": 0,
+      "overall_delta": 1.25
+    },
+    {
+      "id": "D03",
+      "scores": {
+        "usefulness": {
+          "plain": 7,
+          "engine": 8.5,
+          "delta": 1.5
+        },
+        "accuracy": {
+          "plain": 8.75,
+          "engine": 9,
+          "delta": 0.25
+        },
+        "specificity": {
+          "plain": 8,
+          "engine": 9,
+          "delta": 1
+        },
+        "clarity": {
+          "plain": 8.25,
+          "engine": 9,
+          "delta": 0.75
+        },
+        "craft": {
+          "plain": 7.25,
+          "engine": 8.5,
+          "delta": 1.25
+        },
+        "overall": {
+          "plain": 7,
+          "engine": 8.5,
+          "delta": 1.5
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 4,
+      "ties": 0,
+      "win_rate": 1,
+      "clarity_delta": 0.75,
+      "overall_delta": 1.5
+    },
+    {
+      "id": "D04",
+      "scores": {
+        "usefulness": {
+          "plain": 9,
+          "engine": 8,
+          "delta": -1
+        },
+        "accuracy": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 9,
+          "engine": 8.75,
+          "delta": -0.25
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 7.25,
+          "delta": -1.75
+        },
+        "craft": {
+          "plain": 9,
+          "engine": 7.75,
+          "delta": -1.25
+        },
+        "overall": {
+          "plain": 9,
+          "engine": 8,
+          "delta": -1
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 0,
+      "ties": 0,
+      "win_rate": 0,
+      "clarity_delta": -1.75,
+      "overall_delta": -1
+    },
+    {
+      "id": "D05",
+      "scores": {
+        "usefulness": {
+          "plain": 9.5,
+          "engine": 5.75,
+          "delta": -3.75
+        },
+        "accuracy": {
+          "plain": 9.5,
+          "engine": 9.25,
+          "delta": -0.25
+        },
+        "specificity": {
+          "plain": 9.25,
+          "engine": 7,
+          "delta": -2.25
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 8,
+          "delta": -1
+        },
+        "craft": {
+          "plain": 9,
+          "engine": 6.25,
+          "delta": -2.75
+        },
+        "overall": {
+          "plain": 9.25,
+          "engine": 5.75,
+          "delta": -3.5
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 0,
+      "ties": 0,
+      "win_rate": 0,
+      "clarity_delta": -1,
+      "overall_delta": -3.5
+    },
+    {
+      "id": "D06",
+      "scores": {
+        "usefulness": {
+          "plain": 8.75,
+          "engine": 8.75,
+          "delta": 0
+        },
+        "accuracy": {
+          "plain": 9.25,
+          "engine": 9.25,
+          "delta": 0
+        },
+        "specificity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "clarity": {
+          "plain": 9,
+          "engine": 9,
+          "delta": 0
+        },
+        "craft": {
+          "plain": 8.5,
+          "engine": 8.5,
+          "delta": 0
+        },
+        "overall": {
+          "plain": 8.75,
+          "engine": 8.75,
+          "delta": 0
+        }
+      },
+      "task_clustered_win_rate_ci95": null,
+      "verdicts": 4,
+      "wins": 0,
+      "ties": 4,
+      "win_rate": 0,
+      "clarity_delta": 0,
+      "overall_delta": 0
+    }
+  ]
+}

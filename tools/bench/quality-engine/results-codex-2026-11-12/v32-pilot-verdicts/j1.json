@@ -1,0 +1,269 @@
+{
+  "judge": "j1",
+  "pairs": [
+    {
+      "id": "F01",
+      "X": {
+        "usefulness": 10,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 10,
+        "craft": 9,
+        "overall": 10,
+        "note": "Correctly calculates every period and cumulative balance, places both paybacks in period 3, and explains the $784 repeat-order benefit versus the $1,000 acquisition premium. Its channel-by-period table is easier to read in Markdown than the eight-column alternative."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The calculations, payback qualification, incremental-spend argument, and missing inputs are all correct and usable. The eight-column table makes a simple decision harder to scan, although the underlying recommendation is equally well supported."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "F02",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "All eight decisions follow the supplied asset descriptions, preserve the badge wording, and correctly handle redundant images, captions, and the combined account link. The Grüns product heading is verified on its official site, and the concise alt texts and two rendered-page checks make this a useful implementation handoff."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "All eight decisions follow the supplied asset descriptions, preserve the badge wording, and correctly handle redundant images, captions, and the combined account link. The Grüns product heading is verified on its official site, and the concise alt texts and two rendered-page checks make this a useful implementation handoff."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "F03",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The complete mapping, explicitly multi-select Surface group, temporary unknown-blocker label, and staged migration address the actual reporting risks. Official Linear documentation supports the scope, filtering, relations, and archival guidance; the general statement about new groups defaulting to single-select omits the documented multi-select exception when grouping existing labels."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The complete mapping, explicitly multi-select Surface group, temporary unknown-blocker label, and staged migration address the actual reporting risks. Official Linear documentation supports the scope, filtering, relations, and archival guidance; the general statement about new groups defaulting to single-select omits the documented multi-select exception when grouping existing labels."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "F04",
+      "X": {
+        "usefulness": 8,
+        "accuracy": 8,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 8,
+        "note": "The three access designs and downstream disclosure checks are practical and largely supported. However, saying administrators can include private-team issues in workspace exports misstates the Enterprise role boundary: the current Exporting Data page restricts workspace CSV exports to owners."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Accurately distinguishes Enterprise owners from admins for workspace exports while preserving the five-person private team, limited Guest access, and individually shared Security issue designs. Its concrete recipient tests, project-shell review, and integration/API checks address real disclosure paths with supporting official links."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "F05",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Both HTML and all supplied full screenshots/detail slices show a clear responsive field guide, with a strong selected-path treatment and the model question beside the resulting guide. Source review confirms the gate, fresh checkmarks on route changes, progress/reset, keyboard focus, and no-JavaScript fallback; official Courier and Cruiser Terralux pages support its contrasting care examples."
+      },
+      "Y": {
+        "usefulness": 8,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "The care instructions, model gate, uncertain path, progress/reset, and fallback are sound and supported by the official guide. In the supplied desktop and phone renders, the question is separated from a largely empty checklist panel and then repeated there, while the phone masthead wraps awkwardly; this makes the first-use flow less direct."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "F06",
+      "X": {
+        "usefulness": 10,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 10,
+        "craft": 9,
+        "overall": 10,
+        "note": "All seven packages, feasibility results, the A+C optimum, 7.20 kg per-pair footprint, and $1,250 per metric tonne avoided check out. It uses current official sustainability context modestly, keeps the partial boundary separate from whole-life claims, and names concrete model and delivery validations."
+      },
+      "Y": {
+        "usefulness": 10,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 10,
+        "craft": 9,
+        "overall": 10,
+        "note": "All seven packages, feasibility results, the A+C optimum, 7.20 kg per-pair footprint, and $1,250 per metric tonne avoided check out. It uses current official sustainability context modestly, keeps the partial boundary separate from whole-life claims, and names concrete model and delivery validations."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "F07",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The timed exercise, two pressure injects, six observable actions, and debrief questions are ready for a facilitator and retain uncertainty about the changed account. Current Ramp pages support the independent callback, alert limitations, ownership-review distinction, and escalation contingency, without requiring participants to execute live actions."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The timed exercise, two pressure injects, six observable actions, and debrief questions are ready for a facilitator and retain uncertainty about the changed account. Current Ramp pages support the independent callback, alert limitations, ownership-review distinction, and escalation contingency, without requiring participants to execute live actions."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "F08",
+      "X": {
+        "usefulness": 10,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 10,
+        "craft": 9,
+        "overall": 10,
+        "note": "Correctly separates $960 posted purchases, $150 credits, $810 posted net activity, and the still-pending $300 authorization, explaining the misleading $1,110 sum. Ramp documentation supports the retained original purchase, separate refund credit, and qualified hotel-hold follow-up; it avoids presenting activity as an amount due."
+      },
+      "Y": {
+        "usefulness": 10,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 10,
+        "craft": 9,
+        "overall": 10,
+        "note": "Correctly separates $960 posted purchases, $150 credits, $810 posted net activity, and the still-pending $300 authorization, explaining the misleading $1,110 sum. Ramp documentation supports the retained original purchase, separate refund credit, and qualified hotel-hold follow-up; it avoids presenting activity as an amount due."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "F09",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The Back Bay nutrition page verifies all displayed values and allergen lists, and its direct source link makes the snapshot straightforward to audit. Across all full renders and detail slices, the larger supporting type, compact phone cards, early snapshot qualification, and visible cross-contact notice work well; source review confirms selection limits, one-item placeholders, missing-value text, and clear/reset behavior."
+      },
+      "Y": {
+        "usefulness": 8,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "Provides the required comparison logic, accessible selection limit, missing-data text, and visible cross-contact guidance in a restrained responsive design. Its broad nutrition-guide link makes the Dupont-specific snapshot and claimed guide-update date harder to audit, and the phone render uses smaller supporting text and a less compact selection flow than X."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "F10",
+      "X": {
+        "usefulness": 10,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 10,
+        "craft": 9,
+        "overall": 10,
+        "note": "The demand, buffer, stock deduction, raw conversion, batch rounding, and overages are correct for all three scenarios. Splitting the sensitivity into two narrow, consistently keyed tables makes the prep decision easier to use in Markdown while keeping the exercise and approved-procedure boundaries clear."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 9,
+        "note": "All calculations and manager observations are correct and the exercise is appropriately scoped. Putting nine fields into a single Markdown sensitivity table makes the otherwise actionable prep recommendation harder to read across ordinary screens."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "F11",
+      "X": {
+        "usefulness": 10,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 10,
+        "craft": 9,
+        "overall": 10,
+        "note": "The current official notices support the July 31, 2027 endpoint and its precise distinction between ongoing existing-classroom functions and unavailable creation/direct-add functions. The staff bullets, six assigned checks, dated checkpoints, and short learner draft are particularly easy for the program to review and use."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 8,
+        "overall": 9,
+        "note": "Factually matches the official sunset and overview pages and supplies all requested owner checks, checkpoints, and learner communication safeguards. The long three-column staff-briefing row is less convenient to scan or adapt than X’s separate categories, with no substantive informational advantage."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "F12",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Accurately reports the selected sample, endpoint design, authorship/date, proficiency figures, and limits on causal or workplace inference, with useful report-page citations. It loosely replaces the framework’s fourth question about intended proficiency with broader impact; the official efficacy framework is more precisely represented in Y."
+      },
+      "Y": {
+        "usefulness": 10,
+        "accuracy": 10,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 10,
+        "note": "The report verifies its sample, methods, Table 2 values, authorship, date, and page references, and it correctly identifies intended proficiency as the framework’s fourth component. It gives a balanced employer decision digest that separates engagement, tested proficiency, and workplace performance without overclaiming causality or fluency."
+      },
+      "winner": "Y"
+    }
+  ]
+}

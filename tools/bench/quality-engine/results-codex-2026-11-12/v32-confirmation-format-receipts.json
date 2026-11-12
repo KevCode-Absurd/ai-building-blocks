@@ -1,0 +1,235 @@
+[
+  {
+    "id": "C01",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 24,
+    "failures": [],
+    "file_sha256": "a17ed8b45c625777354ebe66a5201cf4f0e4b31ee45808fa95675c81c8ffa1eb",
+    "contract_sha256": "21f301aa752c332aa7594ab73a0fdfa2f2ad4b9711e3a11506a962c949fe7bb5",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "C02",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 5,
+    "failures": [],
+    "file_sha256": "fb1445af19bcc134083fdd96ff33eaf5a0e2bd45e89d029fa4fac358d59b082f",
+    "contract_sha256": "31f4adf95a36096dacedf69899564bce498676bf0ac4eeafe5e2e287bde87e21",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "C03",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 1,
+    "failures": [],
+    "file_sha256": "c19d7cc3c426670bab8e8173ea71939179f3da1bf7dc64aee2ebd761cc2d0c0e",
+    "contract_sha256": "d5a118bd5fad39e234e55860ecc385a5b73f4a3b0d9569ef4d6a74dbfecf76b5",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "C04",
+    "schema": "ai-blocks-selected-format-status/1",
+    "status": "NOT_RUN",
+    "detail": "Format check not run: No brief-derived format rules supplied\n",
+    "file_sha256": "50f832323d569bafe2edc582f9779bba9e2bcc3c49ebe1300d375ab651401d5b",
+    "contract_sha256": "a5fb373e7d42be54a9f76bb678c251e1607f243fd30b1f65fb9ea6ffceb806e4",
+    "semantic_review": "Independent AI final reader accepted usable; no mechanical validation claimed for unsupported rules."
+  },
+  {
+    "id": "C05",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 6,
+    "failures": [],
+    "file_sha256": "c063c3eebf6e21c7624ce927a2080fa8128fe82d9bad3a89353282180c400ee9",
+    "contract_sha256": "21f301aa752c332aa7594ab73a0fdfa2f2ad4b9711e3a11506a962c949fe7bb5",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "C06",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 9,
+    "failures": [],
+    "file_sha256": "7863ad196c04eeab9c453a68f20e2f87659357c5b4d03a79f75cc5e6f65b000d",
+    "contract_sha256": "6d5760245a4413a27bd88daf5276c2f69519c94439568c55d2657d74f073005c",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "C07",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 13,
+    "failures": [],
+    "file_sha256": "f14df3652edf81d4449363a9179dd320cc3ea387fcaab1484ca5291e8ab7b4e0",
+    "contract_sha256": "770bc50327fa5df727796769d30819eaefc682aaa1d757bb8bf6127ad6bf7786",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "C08",
+    "schema": "ai-blocks-selected-format-status/1",
+    "status": "NOT_RUN",
+    "detail": "Format check not run: No brief-derived format rules supplied\n",
+    "file_sha256": "750ee54e20f9d6f2dcbbb62f599ebe6b57edeea4e6f28c79490e6a6ab2a1c680",
+    "contract_sha256": "a5fb373e7d42be54a9f76bb678c251e1607f243fd30b1f65fb9ea6ffceb806e4",
+    "semantic_review": "Independent AI final reader accepted usable; no mechanical validation claimed for unsupported rules."
+  },
+  {
+    "id": "C09",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 10,
+    "failures": [],
+    "file_sha256": "44af083aaf63e3cba03fca2d43ae9f2fdb9cdfe94e5074d5b16acd26b559d52b",
+    "contract_sha256": "21f301aa752c332aa7594ab73a0fdfa2f2ad4b9711e3a11506a962c949fe7bb5",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "C10",
+    "schema": "ai-blocks-selected-format-status/1",
+    "status": "NOT_RUN",
+    "detail": "Format check not run: No brief-derived format rules supplied\n",
+    "file_sha256": "894e66785572033ea84e6c96e8382bb4f8f77b04795640ba99ba9a77f2bca0cc",
+    "contract_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "semantic_review": "Independent AI final reader accepted usable; no mechanical validation claimed for unsupported rules."
+  },
+  {
+    "id": "C11",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 10,
+    "failures": [],
+    "file_sha256": "ac6b1fef2e9fce1a50ec45731cdb339b63846c9c638dff5753df100d0c7bea8a",
+    "contract_sha256": "770bc50327fa5df727796769d30819eaefc682aaa1d757bb8bf6127ad6bf7786",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "C12",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 7,
+    "failures": [],
+    "file_sha256": "7993980630be7c534010062a50d4107ad049bf68aa8924aa844fe4d337fbbe33",
+    "contract_sha256": "0bcd0f6216dc59aa8cd181b8d3561e8dc6dfeb7aac0088e6597abb5718f96e5e",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "C13",
+    "schema": "ai-blocks-selected-format-status/1",
+    "status": "NOT_RUN",
+    "detail": "Format check not run: No brief-derived format rules supplied\n",
+    "file_sha256": "e1190957ce087b797237f84a8a8fbd8909a611caac8bccb31179c0d202bd8eba",
+    "contract_sha256": "61083a4205d753cc96ced28174bb2db5eb04f7edd1741937387f8a51ec629a6d",
+    "semantic_review": "Independent AI final reader accepted usable; no mechanical validation claimed for unsupported rules."
+  },
+  {
+    "id": "C14",
+    "schema": "ai-blocks-selected-format-status/1",
+    "status": "NOT_RUN",
+    "detail": "Format check not run: No brief-derived format rules supplied\n",
+    "file_sha256": "74bfafdcdc1348b0a8b4ddd4bb176a810c93d8a6ae8b9cf1c80ecdb372214238",
+    "contract_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "semantic_review": "Independent AI final reader accepted usable; no mechanical validation claimed for unsupported rules."
+  },
+  {
+    "id": "C15",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 12,
+    "failures": [],
+    "file_sha256": "85d72abf02bbdf120b22dd80e1dcbcd05cdcfd3ae7f2154a6bc1f35d0e16809d",
+    "contract_sha256": "21f301aa752c332aa7594ab73a0fdfa2f2ad4b9711e3a11506a962c949fe7bb5",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "C16",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 1,
+    "failures": [],
+    "file_sha256": "631075ae8c60df146148f39941d5b1bfd4e4b356581cbd58741c710082c8540c",
+    "contract_sha256": "d5a118bd5fad39e234e55860ecc385a5b73f4a3b0d9569ef4d6a74dbfecf76b5",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "C17",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 15,
+    "failures": [],
+    "file_sha256": "1d1073c9c0754215de054d9f1742c72404fa0e92a52976b29cd933437361b92c",
+    "contract_sha256": "31f4adf95a36096dacedf69899564bce498676bf0ac4eeafe5e2e287bde87e21",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "C18",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 8,
+    "failures": [],
+    "file_sha256": "e722ebcfbc069dbb694f4432ff9ed2729ace3d5341882a466dff9d7776b10d2a",
+    "contract_sha256": "770bc50327fa5df727796769d30819eaefc682aaa1d757bb8bf6127ad6bf7786",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "C19",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 12,
+    "failures": [],
+    "file_sha256": "29fec828d9a039ba931d0fc2fef9544bcb715b2565fa8e02ca4e1d440f77860e",
+    "contract_sha256": "21f301aa752c332aa7594ab73a0fdfa2f2ad4b9711e3a11506a962c949fe7bb5",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "C20",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 10,
+    "failures": [],
+    "file_sha256": "a3de1741158ea30c789e9ae016a476414a36c766929718827cb323eda3ee13cc",
+    "contract_sha256": "770bc50327fa5df727796769d30819eaefc682aaa1d757bb8bf6127ad6bf7786",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "C21",
+    "schema": "ai-blocks-selected-format-status/1",
+    "status": "NOT_RUN",
+    "detail": "Format check not run: No brief-derived format rules supplied\n",
+    "file_sha256": "7205c6e77ac835f34b7dedd8dbf5c5b9e7b5bc9b3388f8de377d58e206a01665",
+    "contract_sha256": "ff976a7e077f18eb0d6453ee74bfc1ad2952c04085d262c1b9bce0dca55166b4",
+    "semantic_review": "Independent AI final reader accepted usable; no mechanical validation claimed for unsupported rules."
+  },
+  {
+    "id": "C22",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 13,
+    "failures": [],
+    "file_sha256": "2d958a20619451184a9586f0d794d716b22f13e41457d53298167ba18793b737",
+    "contract_sha256": "21f301aa752c332aa7594ab73a0fdfa2f2ad4b9711e3a11506a962c949fe7bb5",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "C23",
+    "schema": "ai-blocks-format-check/1",
+    "status": "PASS",
+    "checks": 12,
+    "failures": [],
+    "file_sha256": "70a693faf7f65502d3510c99f17635f3a6f5fcdd0eb9b3872d2582cf52287207",
+    "contract_sha256": "d5a118bd5fad39e234e55860ecc385a5b73f4a3b0d9569ef4d6a74dbfecf76b5",
+    "assurance": "Current bytes only. Contract faithfulness, semantics, live links and future filled values require separate review."
+  },
+  {
+    "id": "C24",
+    "schema": "ai-blocks-selected-format-status/1",
+    "status": "NOT_RUN",
+    "detail": "Format check not run: No brief-derived format rules supplied\n",
+    "file_sha256": "98f870d10fd255812b28eceb53868c235187d96cc4abb4b3403e84b3d2dbe997",
+    "contract_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "semantic_review": "Independent AI final reader accepted usable; no mechanical validation claimed for unsupported rules."
+  }
+]

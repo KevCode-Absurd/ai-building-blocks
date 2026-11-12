@@ -1,0 +1,269 @@
+{
+  "judge": "i2",
+  "pairs": [
+    {
+      "id": "F01",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Correct period and cumulative contributions, period-3 payback, and the $216 social advantage; the $784 incremental repeat-order contribution is correctly weighed against the $1,000 acquisition premium. The two scaling inputs are actionable and no lifetime value is invented."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The same correct economics and bounded recommendation are delivered in a compact comparison table, with exact payback-day uncertainty handled properly. Swap check: either reading order leaves these equally ready to use."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "F02",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Covers all eight assets with concise descriptive alternatives, correct empty-alt decisions, caption/link treatment, and two useful rendered checks; the [official site](https://gruns.co/) confirms the product heading. The decisions also align with the [W3C alt decision tree](https://www.w3.org/WAI/tutorials/images/decision-tree/)."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Complete, restrained handoff: the otherwise unavailable badge text is preserved and the account icon does not duplicate its link label. Swap check: both answers supply the same usable instructions, so presentation order creates no preference."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "F03",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "All 12 mappings, retained definitions, and five rollout steps are practical; the multi-select Surface group supports iOS plus Android, and unknown blockers retain a managed label. Scope, grouping, archived-label filtering, and API-ID distinctions match [Linear issue properties](https://linear.app/docs/issue-property)."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 10,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Equally complete taxonomy and migration plan, with reporting dependencies checked before retiring labels and recommendations clearly separated from product rules. Swap check: the answers contain the same substantive work and remain tied."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "F04",
+      "X": {
+        "usefulness": 8,
+        "accuracy": 7,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "The three access configurations and downstream-disclosure checks are strong, but its Enterprise export warning incorrectly attributes workspace exports to administrators. [Linear exporting-data documentation](https://linear.app/docs/exporting-data) specifically limits Enterprise workspace CSV exports to owners, so this consequential permissions sentence needs correction."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 9,
+        "overall": 9,
+        "note": "Provides the required configurations, sharing limitations, test-account checks, project-shell warning, and three downstream controls; it accurately names owners for Enterprise workspace CSV exports under [Linear export guidance](https://linear.app/docs/exporting-data). Swap check: Y remains preferable because it resolves a permissions error, regardless of reading order."
+      },
+      "winner": "Y"
+    },
+    {
+      "id": "F05",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Full phone/desktop images and every detail slice are clean; the model-permission question sits beside the care action, with useful contrasting [Courier](https://www.allbirds.com/products/mens-couriers) and [Cruiser Terralux](https://www.allbirds.com/products/mens-cruiser-terralux) guidance. Source inspection confirms native checklists, progress/reset, cleared marks on path changes, visible focus, and a useful no-JavaScript fallback."
+      },
+      "Y": {
+        "usefulness": 8,
+        "accuracy": 9,
+        "specificity": 8,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "Meets the functional and care-safety requirements, with clean phone/desktop rendering and all detail slices inspected, but repeats the gating question across separate panels and offers less concrete model-specific help near the action. Swap check: X still needs fewer usability edits because its question, exceptions, and checklist occupy the same working panel."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "F06",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "All seven combinations calculate correctly, and A+C is the maximum feasible reduction: 8 tonnes, 7.20 kg per pair, and $1,250 per tonne. The [official sustainability context](https://www.allbirds.com/pages/materials-making) is represented fairly, and the fixed-boundary exercise is kept separate from public footprint claims."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Correct optimization and arithmetic, with two material validations covering emissions evidence and execution economics, rather than assuming the hypothetical savings are real. Swap check: the answers provide the same decision-ready recommendation and remain tied."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "F07",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The agenda totals 20 minutes and includes both pressure-testing injects, six observer checks, and three debrief questions while keeping every action simulated. Separate-channel verification and the ownership-review/edit-approval distinction match [Bill Pay Fraud](https://support.ramp.com/bill-pay-fraud/) and [vendor verification](https://support.ramp.com/vendor-verification/)."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Provides the same runnable tabletop without prejudging the changed account or equating invoice approval, submission, or an alert with verified payment instructions. Swap check: identical substantive content leaves no defensible winner in either reading order."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "F08",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The row classifications and $960 purchases, $150 credits, $810 net activity, and separate $300 pending hold are correct. Refund traceability and the qualified hotel-hold follow-up match [Ramp pending-charge guidance](https://support.ramp.com/pending-charges-faqs/), without inventing amount due or journal entries."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Preserves both airline rows, explains the misleading $1,110 visible-row sum, and assigns two concrete follow-up checks without assuming the hotel hold disappeared. Swap check: both versions deliver the same correct, ready-to-use note."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "F09",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The three nutrition/allergen rows match the [official Back Bay guide](https://www.sweetgreen.com/nutrition/back-bay); all full screenshots and detail slices render cleanly with readable controls and a prominent cross-contact notice. The source implements explicit empty/one/two-item states, a keyboard-operable limit, clear/reset behavior, and missing-value labels without inferring allergen safety."
+      },
+      "Y": {
+        "usefulness": 8,
+        "accuracy": 8,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 8,
+        "overall": 8,
+        "note": "A complete comparison with clean full phone/desktop images and detail slices, but smaller supporting text and weaker source traceability: the [Dupont location page](https://www.sweetgreen.com/locations/dupont) corroborates item calories/protein/allergens, while location-specific sodium and the claimed November 11 guide update could not be independently confirmed, which is uncertainty rather than proof of wrong values. Swap check: X remains preferable for its directly checkable location nutrition source and clearer supporting text."
+      },
+      "winner": "X"
+    },
+    {
+      "id": "F10",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Correctly subtracts eligible stock before yield conversion and batch rounding: two batches provide 8.24 kg cooked with 1.20 kg overage against unbuffered demand. Every sensitivity scenario and the buffer-versus-rounding decomposition check out, with no invented food-safety procedure."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "The same correct demand, raw quantities, whole batches, and scenario overages appear in one wider table, followed by two useful manager observations. Swap check: the table-layout difference does not change readiness enough to choose a winner."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "F11",
+      "X": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Accurately distinguishes current classroom functions, disabled creation/direct-add functions, and the July 31, 2027 access end under the [official sunset notice](https://duolingoschools.zendesk.com/hc/en-us/articles/44824545841805-Important-information-regarding-Duolingo-for-Schools). Six assigned checks, three earlier checkpoints, and the short learner draft are usable without inventing export, deletion, migration, or subscription promises."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 8,
+        "craft": 9,
+        "overall": 9,
+        "note": "Delivers the same accurate transition decisions and owner-assigned checks, though the long briefing-table cells are slightly less easy to scan than X’s bullets; the learner note stays under 120 words. Swap check: that small presentation difference does not outweigh equivalent completeness and accuracy, so the overall result remains tied."
+      },
+      "winner": "tie"
+    },
+    {
+      "id": "F12",
+      "X": {
+        "usefulness": 8,
+        "accuracy": 8,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 8,
+        "overall": 8,
+        "note": "Study scope, authors/date, page-cited proficiency findings, and limits agree with the [report](https://duolingo-papers.s3.amazonaws.com/reports/Duolingo_whitepaper_language_read_listen_write_speak_2024.pdf), but the framework summary substitutes broader impact for its actual fourth category, intended proficiency. That source-description error requires an edit despite the otherwise balanced employer advice."
+      },
+      "Y": {
+        "usefulness": 9,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "craft": 9,
+        "overall": 9,
+        "note": "Accurately summarizes the company-authored report and the [framework’s intended-proficiency category](https://blog.duolingo.com/duolingo-efficacy-research-framework/), while separating engagement and measured proficiency from workplace performance. Swap check: Y retains the advantage because it fixes a factual source-summary error and fully preserves the requested evidence and limitations."
+      },
+      "winner": "Y"
+    }
+  ]
+}

@@ -20,7 +20,7 @@ Without MCP, follow the steps below and keep the files in `jobs/<job-id>/`. Mark
 
 ## 1. Ask, then write the spec sheet
 
-Ask up to four questions in one short message. Ask only what you cannot read from the person's site or files, and choose them for this kind of job: for ads, the offer, the audience, the placements and what has been tried; for a page, where visitors come from, the one action and the proof. Give each question a default, so "you decide" is a full answer.
+Ask up to three questions in one short message. Ask only what you cannot read from the person's site or files, and choose them for this kind of job: for ads, the offer, the audience and the placements; for a page, where visitors come from, the one action and the proof. Give each question a default, so "you decide" is a full answer.
 
 Then write the spec sheet (`JOB-CARD.json`), one screen:
 

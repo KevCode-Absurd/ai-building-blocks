@@ -18,7 +18,7 @@ const ACCESS_NAMED = /\b(?:analytics|ga4|search console|ads manager|ad account|h
 const DEADLINE_NAMED = /\b(?:by|before|within)\s+(?:the\s+)?(?:end of\s+)?(?:next\s+|this\s+)?(?:monday|tuesday|wednesday|thursday|friday|week|month|quarter|year|q[1-4]|january|february|march|april|may|june|july|august|september|october|november|december|\d{1,2}\s+(?:days|weeks|months))\b/i;
 const STACK_NAMED = /\b(?:shopify|wordpress|webflow|next\.?js|react|vue|svelte|python|node|typescript|javascript|php|rails|django|sql|postgres|supabase|cloudflare|aws|github|repo)\b/i;
 
-/** Up to five candidates per kind, in the order they matter. The first four the request has not answered are asked. */
+/** Up to five candidates per kind, in the order they matter. The first three the request has not answered are asked. */
 const QUESTIONS = Object.freeze({
   web_page: [
     q('traffic_source', 'Where will visitors come from: ads (on which platform), email, search or your own site?', 'Paid social ads, seen on a phone by people new to the brand.', TRAFFIC_NAMED),
@@ -86,7 +86,7 @@ const KIND_ALIAS = Object.freeze({ plan: 'strategy' });
 // When a caller knows only the rubric family, use its most common kind.
 const KIND_BY_FAMILY = Object.freeze({ web_page: 'web_page', ad_creative: 'ad_creative', copy_email: 'copy', audit_analysis: 'audit', strategy_plan: 'strategy', code_ops_other: 'other' });
 
-export const MAX_INTAKE_QUESTIONS = 4;
+export const MAX_INTAKE_QUESTIONS = 3;
 export const INTAKE_KINDS = Object.freeze(Object.keys(QUESTIONS));
 /** How to put the questions to the client. One message, never a form per question. */
 export const INTAKE_ASK = 'Ask these in one short message. Each has a default: if the client skips one or says "you decide", use its default and say so in one line.';
@@ -94,7 +94,7 @@ export const INTAKE_ASK = 'Ask these in one short message. Each has a default: i
 /**
  * The questions to ask before this job starts.
  * @param {{ deliverableKind?: string, family?: string, request?: string }} [job]
- * @returns {{ id: string, question: string, default: string }[]} at most four, in the order to ask them
+ * @returns {{ id: string, question: string, default: string }[]} at most three, in the order to ask them
  */
 export function intakeQuestions({ deliverableKind, family, request = '' } = {}) {
   const named = KIND_ALIAS[deliverableKind] ?? deliverableKind;

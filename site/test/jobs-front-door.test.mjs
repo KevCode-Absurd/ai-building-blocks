@@ -10,7 +10,7 @@ const words = text => (text.match(/\S+/g) ?? []).length;
 test('the front door returns the questions and who should do the job', async () => {
   const page = await callJobTool('prepare_job_context', { request: 'Build a landing page for our Tree Runner shoes that we can send Meta ad traffic to', deliverable_kind: 'web_page' });
   assert.deepEqual(Object.keys(page).slice(0, 5), ['schema', 'brief', 'questions', 'questions_note', 'route']);
-  assert.deepEqual(page.questions.map(q => q.id), ['one_action', 'proof', 'offer', 'keep']); assert.match(page.questions_note, /you decide/);
+  assert.deepEqual(page.questions.map(q => q.id), ['one_action', 'proof', 'offer']); assert.match(page.questions_note, /you decide/);
   assert.equal(page.route.mode, 'single'); assert.match(page.route.reason, /one lead/);
   assert.deepEqual(page.route.next.arguments, { request: 'Build a landing page for our Tree Runner shoes that we can send Meta ad traffic to', deliverable_kind: 'web_page' }); assert.equal(page.route.next.tool, 'start_job');
   const mixed = await callJobTool('prepare_job_context', { request: 'Launch our new product: landing page, 6 ads and a 5-email sequence' });
@@ -18,7 +18,7 @@ test('the front door returns the questions and who should do the job', async () 
   assert.equal((await callJobTool('prepare_job_context', { request: 'I need more customers' })).route.next.tool, 'start_outcome');
   // Ads and pages get different questions from the same door.
   const ads = await callJobTool('prepare_job_context', { request: 'Give me 5 Meta ad concepts for our running shoe' });
-  assert.deepEqual(ads.questions.map(q => q.id), ['offer', 'audience', 'placements', 'tried']);
+  assert.deepEqual(ads.questions.map(q => q.id), ['offer', 'audience', 'placements']);
 });
 
 test('the team method is short, and the record detail is a reference opened only when a check fails', async () => {
@@ -74,7 +74,7 @@ test('the team-mode pack file teaches the same method: spec sheet, one lead, job
   const { STANDARD_CRITERIA } = await import('../src/jobs/rubric.mjs');
   const pack = fs.readFileSync(new URL('../src/jobs/pack/TEAM-MODE.md', import.meta.url), 'utf8');
   assert.doesNotMatch(pack, /brand brain|taste question|at most three questions|job card/i);
-  for (const phrase of ['One lead is the default', 'Ask up to four questions in one short message', 'Give each question a default', 'write the spec sheet (`JOB-CARD.json`)', 'Acceptance tests:', 'Do not ask for a brand file when the job does not need one', 'Do not search the library during the job', 'one maker for each kind of work the request names', 'sends the work back to the lead once, with the failed tests named', 'never flagged and left in']) assert.ok(pack.includes(phrase), phrase);
+  for (const phrase of ['One lead is the default', 'Ask up to three questions in one short message', 'Give each question a default', 'write the spec sheet (`JOB-CARD.json`)', 'Acceptance tests:', 'Do not ask for a brand file when the job does not need one', 'Do not search the library during the job', 'one maker for each kind of work the request names', 'sends the work back to the lead once, with the failed tests named', 'never flagged and left in']) assert.ok(pack.includes(phrase), phrase);
   // A brand file is asked for only where a page, ad, copy or email needs it.
   assert.match(pack, /\*\*A page, ad, copy or email\*\* needs the brand file/); assert.equal(pack.match(/brand file/g).length, 2);
   // The rubric table carries the same weights as the engine, largest first.

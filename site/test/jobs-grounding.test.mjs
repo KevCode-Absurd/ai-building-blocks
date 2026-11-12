@@ -29,7 +29,7 @@ test('prepare_job_context returns a short brief and a structured annex for each 
   assert.deepEqual(page.brief.split('\n').map(line => line.split(/[: ]/)[0]), ['Job', 'SPEC', 'GROUND', 'TRUTH', 'ASK', 'AVOID', 'CANDIDATES', 'BUILD', 'CHECK', 'HAND-OVER']);
   // One question list: the job's intake questions, each with its default. The old fixed taste set is gone.
   assert.deepEqual(page.annex.questions, intakeQuestions({ deliverableKind: 'web_page', request: 'Build a landing page for my jewellery brand' }));
-  assert.deepEqual(page.annex.questions.map(q => q.id), ['traffic_source', 'one_action', 'proof', 'offer']); assert.ok(page.annex.questions.every(q => q.default));
+  assert.deepEqual(page.annex.questions.map(q => q.id), ['traffic_source', 'one_action', 'proof']); assert.ok(page.annex.questions.every(q => q.default));
   assert.doesNotMatch(page.brief, /price point|admire|TASTE/);
   const a = page.annex;
   assert.equal(a.deliverable_kind, 'web_page'); assert.equal(a.kind_source, 'suggested'); assert.equal(a.family, 'web_page');
@@ -119,7 +119,7 @@ test('start_job states the dials in one line and spends the questions on what th
   const r = await startJob({ ...f.input, request: 'Write a welcome email for our jewellery store', deliverable_kind: 'email' }, f.context);
   assert.equal(r.phase, 'SCOPE'); assert.equal(r.dials, undefined); assert.equal(r.dial_questions, undefined);
   assert.match(r.dials_line, /^Using a balanced mix, 1 output and a (standard|quick|deep) review; say if you want otherwise\.$/);
-  // Q1: up to four intake questions for the job type (intake-questions.mjs), each with a default; no fixed taste set.
+  // Q1: up to three intake questions for the job type (intake-questions.mjs), each with a default; no fixed taste set.
   assert.deepEqual(r.questions.map(q => q.id), ['offer_rules', 'reader_action', 'sender']); assert.ok(r.questions.every(q => q.default)); assert.equal(r.taste_questions, undefined);
   assert.ok(r.brief.length <= 1500); assert.equal(Object.keys(r)[1], 'brief');
   assert.match(r.next_action.instruction, /Ask the questions in one message/); assert.match(r.next_action.instruction, /context\/brand-dna\.json/);
@@ -290,7 +290,7 @@ test('one question list: the brief, the annex, the front door and start_job all 
   for (const [request, kind] of [['Build a landing page for my jewellery brand', 'web_page'], ['Make 6 image ads for our candles', 'ad_creative'], ['Write a welcome email', 'email'], ['audit my Meta ad account', 'audit'], ['Plan our Q1 launch', 'plan'], ['Fix the checkout bug in our Shopify theme', 'code']]) {
     const expected = intakeQuestions({ deliverableKind: kind, request });
     const context = prepareJobContext({ request, deliverable_kind: kind });
-    assert.deepEqual(context.annex.questions, expected, kind); assert.ok(expected.length >= 1 && expected.length <= 4, kind);
+    assert.deepEqual(context.annex.questions, expected, kind); assert.ok(expected.length >= 1 && expected.length <= 3, kind);
     // The brief quotes the first questions in full and counts the rest; it never invents a second set.
     const asked = [...context.brief.split('\n').find(line => line.startsWith('ASK once')).matchAll(/"([^"]+)"/g)].map(m => m[1]);
     assert.ok(asked.length >= 1 && asked.every((question, n) => question === expected[n].question), kind);

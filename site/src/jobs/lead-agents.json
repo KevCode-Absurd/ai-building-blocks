@@ -1646,7 +1646,19 @@
     },
     "support-macros": {
       "job": "help-customers",
-      "agent": "araceli-inbox"
+      "agent": "araceli-inbox",
+      "variants": [
+        {
+          "words": [
+            "staffing",
+            "coverage",
+            "backlog",
+            "seasonal agents",
+            "support plan"
+          ],
+          "agent": "doreen-support-ops"
+        }
+      ]
     },
     "notification-copy": {
       "job": "keep-customers",
@@ -1732,15 +1744,74 @@
     },
     "job-description": {
       "job": "hire-people",
-      "agent": "anjali-recruiter"
+      "agent": "anjali-recruiter",
+      "variants": [
+        {
+          "pattern": "^(?![\\s\\S]*\\bjob (?:post|posting|description|ad|advert|listing)\\b)[\\s\\S]*(?:interview (?:guide|kit|loop|plan|questions)|(?:structured|final|panel|behaviou?ral|on-?site)(?: [\\w-]+)? interview)",
+          "agent": "obinna-interviewkit"
+        },
+        {
+          "words": [
+            "scorecard"
+          ],
+          "agent": "ignacio-hiring-scorecards"
+        }
+      ]
     },
     "creator-brief": {
       "job": "grow-social",
       "agent": "chelsea-creator-partnerships"
     },
+    "creative-brief": {
+      "job": "write-ad-copy",
+      "agent": "brittany-image-ads",
+      "variants": [
+        {
+          "words": [
+            "menu",
+            "restaurant",
+            "restaurants",
+            "cafe",
+            "café",
+            "salad",
+            "bowls"
+          ],
+          "agent": "angelica-restaurant-marketing"
+        },
+        {
+          "words": [
+            "video",
+            "tiktok",
+            "reels"
+          ],
+          "agent": "bryony-video-ads"
+        },
+        {
+          "words": [
+            "in-store",
+            "store traffic",
+            "retail store"
+          ],
+          "agent": "bayani-retail-shops"
+        }
+      ]
+    },
     "outbound-sales": {
       "job": "sell-and-negotiate",
-      "agent": "isaiah-outreach"
+      "agent": "isaiah-outreach",
+      "variants": [
+        {
+          "words": [
+            "wholesale",
+            "stockist",
+            "stockists",
+            "retailer",
+            "retailers",
+            "distributor"
+          ],
+          "agent": "rodrigo-wholesale"
+        }
+      ]
     },
     "partnership-pitch": {
       "job": "sell-and-negotiate",
@@ -1818,6 +1889,41 @@
             "lender"
           ],
           "agent": "paloma-investorupdate"
+        }
+      ]
+    },
+    "analysis-memo": {
+      "job": "analyse-data",
+      "agent": "valeria-data-analysis",
+      "variants": [
+        {
+          "words": [
+            "contribution",
+            "margin",
+            "unit economics",
+            "payback",
+            "cash flow",
+            "profit"
+          ],
+          "agent": "nicole-fpa"
+        },
+        {
+          "words": [
+            "churn",
+            "inactive",
+            "retention",
+            "lapsed",
+            "cancellations"
+          ],
+          "agent": "hyun-woo-retention"
+        },
+        {
+          "words": [
+            "experiment",
+            "a/b test",
+            "holdout"
+          ],
+          "agent": "harriet-abtests"
         }
       ]
     },

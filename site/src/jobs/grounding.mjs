@@ -602,7 +602,7 @@ const askQuestions = (kind, family, request) => intakeQuestions({ deliverableKin
 const AVOID_RESERVE = 150;
 /** prepare_job_context: a short brief for the model plus a structured annex. The brief names the annex parts to open. */
 // Cards whose work sells nothing at a price: no stock, price or link check for them.
-const NOT_SELLING_CARDS = new Set(['notification-copy', 'support-macros', 'crisis-response', 'help-docs', 'job-description', 'investor-update', 'review-replies', 'research-design', 'webinar-script']);
+const NOT_SELLING_CARDS = new Set(['analysis-memo', 'creative-brief', 'notification-copy', 'support-macros', 'crisis-response', 'help-docs', 'job-description', 'investor-update', 'review-replies', 'research-design', 'webinar-script']);
 export function prepareJobContext(input = {}, context = {}) {
   const request = String(input.request ?? '').trim();
   const resolved = resolveDeliverableKind(input.deliverable_kind, request), kind = resolved.kind, family = familyOf(kind);

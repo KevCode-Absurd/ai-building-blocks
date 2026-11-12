@@ -10,7 +10,7 @@ import { askOf, qualityFamily, qualityEngineContext } from '../src/jobs/quality-
 
 const GOLDEN = JSON.parse(fs.readFileSync(new URL('./fixtures/routing-golden.json', import.meta.url), 'utf8'));
 const bench = name => { const value = JSON.parse(fs.readFileSync(new URL(`../../tools/bench/quality-engine/${name}`, import.meta.url), 'utf8')); return Array.isArray(value) ? value : value.tasks ?? Object.values(value); };
-const TASKS = [...bench('tasks-v3.json'), ...bench('results-codex-2026-11-12/v32-confirmation-tasks.json'), ...bench('results-codex-2026-11-12/v31-fresh-tasks.json')];
+const TASKS = [...bench('tasks-v3.json'), ...bench('results-codex-2026-11-12/v32-confirmation-tasks.json'), ...bench('results-codex-2026-11-12/v31-fresh-tasks.json'), ...bench('results-claude-2026-11-12/tasks.json')];
 const INDEX_FILE = new URL('../public/data/approach-index.json', import.meta.url);
 const index = fs.existsSync(INDEX_FILE) ? JSON.parse(fs.readFileSync(INDEX_FILE, 'utf8')) : null;
 
@@ -40,6 +40,7 @@ test('every quality card can be chosen from the words people use', () => {
     'research-design': 'Write the survey for lapsed buyers', 'investor-update': 'Draft our quarterly leadership update',
     'social-calendar': 'Plan a content calendar for November', 'seo-article': 'Write a blog post about protein',
     'paid-social-ads': 'Write 5 Meta ad concepts',
+    'creative-brief': 'Write a one-page creative brief for our agency', 'analysis-memo': 'Write an analysis memo on why customers go inactive',
   };
   for (const card of cards) {
     assert.ok(asks[card], `add a sample ask for the new card ${card}`);
@@ -60,6 +61,12 @@ test('a named deliverable is led by the specialist who does exactly that', () =>
   // Variants pick inside a card: investor letters and translation work have their own specialists.
   assert.equal(deliverableLead('Draft our quarterly investor update')?.id, 'paloma-investorupdate');
   assert.equal(deliverableLead('Prepare a Spanish UI handoff for these push notification strings')?.id, 'behrouz-translation');
+  // A job post that mentions its interview steps stays with the recruiter; an interview guide goes to the interview specialist.
+  assert.equal(deliverableLead('Write the job posting, including how the interview process works and answers to common questions')?.id, 'anjali-recruiter');
+  assert.equal(deliverableLead('Write a structured guide for the final 45-minute interview for a store manager')?.id, 'obinna-interviewkit');
+  // The deliverable named first decides the card: an analysis memo that proposes experiments is still an analysis memo.
+  assert.equal(qualityFamily('Write an analysis memo on why accounts go inactive. Cover three hypotheses and an experiment to test each.'), 'analysis-memo');
+  assert.equal(qualityFamily('Write a decision memo on whether to ship the experiment.'), 'experiment-design');
   // A card with no specialist of its own leaves the job's lead in place.
   assert.equal(deliverableLead('Make a landing page for our subscription')?.id, null);
   assert.equal(leadAgentFor('write-landing-page', 'Make a landing page for our subscription').id, 'bao-website-copy');

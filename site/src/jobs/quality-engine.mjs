@@ -9,16 +9,17 @@ const matches = [
   ['claims-review', /claims? (?:review|audit|check)|regulatory claims|(?:fda|ftc|asa)\b[^.]{0,40}\b(?:risk|claims?)|claims? substantiation|marketing compliance/i],
   ['crisis-response', /crisis|holding statement|press (?:reply|statement|inquiry|enquiry)|statement (?:we'?ll |to )?send|\breporter\b|going viral|public apology|recall notice|breach notice|outage update/i],
   ['review-replies', /review repl|repl(?:y|ies|ying) to (?:a |the |this |that |our )?(?:\w+ )?reviews?|respon(?:d|se|ses|ding) to (?:a |the |this |that )?(?:\w+ )?reviews?|\b(?:g2|trustpilot|yelp|app store|google) reviews?\b|negative review|angry customer|public reply/i],
-  ['support-macros', /support macros?|\bmacros?\b|canned (?:responses?|replies)|saved replies|reply templates|help ?desk|customer support repl|ticket types?|chat scripts?/i],
+  ['support-macros', /(?:customer|subscriber|guest|member|shopper|client|buyer|user) (?:who )?(?:emailed|e-mailed|wrote in|wrote to us|messaged|complained)|(?:e-?mail|ticket|chat) repl(?:y|ies) to (?:a |an |the |this |her |his |their )?(?:customer|subscriber|guest|member|shopper|complaint)|write (?:my|our|a|the) (?:e-?mail )?reply|support macros?|\bmacros?\b|canned (?:responses?|replies)|saved replies|reply templates|help ?desk|customer support repl|ticket types?|chat scripts?/i],
   ['notification-copy', /push notifications?|\bpush (?:messages?|copy|lines?|alerts?)|in-app (?:messages?|copy|banners?|prompts?)|\bsms\b|text messages?|microcopy|\bui (?:copy|strings?|text|handoff)|(?:error|button|empty.state|tooltip) (?:copy|text|strings?|messages?)|streak reminders?/i],
   ['product-announcement', /release notes|changelog|product announcement|launch announcement|feature announcement|press release|news release|launch (?:email|post|blog)/i],
   ['launch-plan', /launch plan|go-to-market|\bgtm\b|rollout plan|launch calendar|release plan/i],
   ['experiment-design', /pric(?:e|ing) test|experiment|a\/b test|split test|holdout|test(?:ing)? the price|\bpilot\b/i],
   ['pricing', /pricing(?! pages?)|price (?:change|increase|rise|point|recommendation)|menu price|rais(?:e|ing) (?:the |our )?(?:\w+ ){0,3}price|rate card|discount rules|good.better.best/i],
   ['competitor-analysis', /competitor|competitive|battlecard|\bswot\b|market landscape/i],
-  ['job-description', /job (?:description|post(?:ing)?|ad|advert|listing)|(?:hiring|interview) scorecard|role description|vacancy/i],
+  ['job-description', /job (?:description|post(?:ing)?|ad|advert|listing)|(?:hiring|candidate|job|final|structured|panel|behaviou?ral|on-?site)(?: [\w-]+)? interview(?! (?:with|of) (?:customers?|users?|guests?|buyers?))|interview (?:kit|loop)|interview (?:guide|questions|plan)[^.]{0,40}\b(?:hir(?:e|ing)|candidates?|role|position|vacancy)\b|\bhir(?:e|ing)\b[^.]{0,60}interview (?:guide|questions|plan)|(?:hiring|interview) scorecard|role description|vacancy/i],
   ['creator-brief', /creator brief|influencer brief|ugc brief|brief (?:we send )?(?:to|for) (?:the |our )?(?:\w+ )?(?:creators|influencers)|creator campaign|ambassador brief|gifting brief/i],
-  ['outbound-sales', /outbound|cold (?:e-?mails?|outreach|call)|sales (?:e-?mails?|sequence|cadence)|prospecting/i],
+  ['creative-brief', /creative brief|agency brief|campaign brief|design brief|brief (?:for|to) (?:our |the |an? )?(?:creative |ad |design )?agency/i],
+  ['outbound-sales', /outbound|first[- ]touch|introductory e-?mail|(?:met|meeting) (?:\w+ ){0,5}at (?:a |the |last month's )?(?:trade ?show|conference|expo)|cold (?:e-?mails?|outreach|call)|sales (?:e-?mails?|sequence|cadence)|prospecting/i],
   ['partnership-pitch', /partnership (?:pitch|proposal)|partner proposal|co-marketing|reseller|referral pitch|channel partner|alliance proposal/i],
   ['sales-pitch', /sales (?:deck|pitch|presentation|proposal)|sell sheet|one-pager|one.page pitch|buyer pitch|retail pitch|line review|pitch (?:to|for) (?:a |the )?(?:\w+ )?buyer/i],
   ['onboarding-flow', /onboarding (?:flow|emails?|sequence|journey|checklist)|first-run|activation flow|getting.started journey/i],
@@ -28,6 +29,7 @@ const matches = [
   ['help-docs', /help[- ]?(?:cent(?:er|re)|guide|doc|article)|knowledge base|\bfaqs?\b|how.to guide|user guide|getting started guide|troubleshooting (?:article|guide)/i],
   ['research-design', /survey|research (?:design|plan)|diary study|interview guide|usability (?:test|study)|discovery plan|study protocol|focus group|facilitator guide/i],
   ['investor-update', /(?:leadership|investor|board|shareholder|stakeholder|founder|lender) (?:update|report|letter)|quarterly (?:update|letter)|monthly update/i],
+  ['analysis-memo', /(?:analysis|decision|recommendation|options|strategy|finance|board) (?:memo|paper|note)|business case|root.cause analysis|churn analysis|unit economics|memo (?:on|about) (?:why|whether|how)/i],
   ['social-calendar', /social (?:media )?(?:calendar|plan)|content calendar|posting schedule|post schedule/i],
   ['seo-article', /blog post|\bseo\b|\barticle\b|pillar page|long-form guide/i],
   ['paid-social-ads', /\bads?\b|ad campaign|paid social|ad concepts?|ad copy|ad creative/i],
@@ -36,6 +38,12 @@ const matches = [
 // People often open with who they are ("I run marketing at Grüns.") or the situation, and ask afterwards. Read as the
 // job, "run" in "I run marketing" sent ad requests to a store agent. The ask is the first sentence that asks for
 // something, through to the end; a bare "Write them." keeps the sentence before it.
+// The sentence that names the deliverable: the first that asks, plus the one before it when a short ask leans on it.
+export function askHead(ask = '') {
+  const sentences = String(ask).split(SENTENCES).filter(s => s.trim());
+  const at = sentences.findIndex(s => ASK_START.test(s) || ASK_ANYWHERE.test(s));
+  return sentences.slice(0, Math.max(at, 0) + 1).join(' ');
+}
 const ASK_START = /^\s*(?:(?:please|now|so|then|next|also),?\s+)?(?:write|draft|build|create|make|design|prepare|compare|review|audit|plan|put together|develop|synthesi[sz]e|analy[sz]e|help|give|produce|turn|use|summari[sz]e|translate|rewrite|fix|set up|generate|outline|map out|list|suggest|recommend|propose|find|research|test|check|decide|estimate|calculate|explain|edit|improve|update|tell|show|deliver|assess|evaluate|diagnose|identify|rank|code|name|come up with|develop|turn)\b/i;
 const ASK_ANYWHERE = /\b(?:i|we)(?:'d| would)? (?:need|want|like) (?!to know\b)|\b(?:need|want|would like|'d like)\s+(?:a|an|the|to|some|you|our|my|help|\d+)\b|\bhelp me\b|\b(?:can|could|would) you\b|\bplease\b/i;
 const SENTENCES = /(?<=[.!?])\s+(?=[A-Z'"‘“(])|\n+/;
@@ -48,17 +56,22 @@ export function askOf(request = '') {
   return sentences.slice(at).join(' ');
 }
 
-/** The quality card for a request: the first card whose words appear in the ask (else the whole request), else the
- *  deliverable kind's card, else _any. */
+/** The quality card for a request: the first card whose words appear in the sentence that names the deliverable, else
+ *  in the rest of the ask, else in the whole request, else the deliverable kind's card, else _any. "Write an analysis
+ *  memo ... Cover ... an experiment to test each" is an analysis memo, not an experiment design. */
 export function qualityFamily(request = '', kind = 'other') {
   const text = String(request), ask = askOf(text);
   const fallback = { web_page: 'landing-page', ad_creative: 'paid-social-ads', email: 'lifecycle-email' };
   const match = value => matches.find(([, pattern]) => pattern.test(value))?.[0];
-  return match(ask) ?? (ask === text ? undefined : match(text)) ?? fallback[kind] ?? '_any';
+  return match(askHead(ask)) ?? match(ask) ?? (ask === text ? undefined : match(text)) ?? fallback[kind] ?? '_any';
 }
 
 /** A page with ads or emails: separate writing disciplines own separate deliverables, so no single card leads. */
-export const isMixedRequest = request => /(?:page|website).*(?:and|plus|,).*(?:ads|e-?mails?)|(?:ads|e-?mails?).*(?:and|plus|,).*(?:page|website)/i.test(String(request));
+// A web page counts, not "a one-page brief" or "her account page"; an email counts, not "she emailed us".
+const WEB_PAGE = String.raw`(?:\b(?:landing|web|home|sales|product|signup|sign-up|pricing|lead|squeeze)[ -]?pages?\b|\bwebsites?\b|(?<!\b(?:one|two|single|half|account|settings|profile|status|order|\d+)[ -])\bpages?\b)`;
+const ADS_OR_EMAILS = String.raw`(?:\bads?\b|\be-?mails?\b(?! (?:us|me|them|her|him)\b))`;
+const MIXED = new RegExp(`${WEB_PAGE}.*(?:and|plus|,).*${ADS_OR_EMAILS}|${ADS_OR_EMAILS}.*(?:and|plus|,).*${WEB_PAGE}`, 'i');
+export const isMixedRequest = request => MIXED.test(String(request));
 
 export function qualityEngineContext(request = '', kind = 'other') {
   const text = String(request);

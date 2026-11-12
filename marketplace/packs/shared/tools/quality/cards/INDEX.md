@@ -1,5 +1,7 @@
+analysis-memo | decision memo, analysis memo, business case, recommendation memo, unit economics memo, churn analysis, root-cause analysis, options paper | tools/quality/cards/analysis-memo.md
 claims-review | ad claims check, marketing compliance review, substantiation review, copy legal review, label claims audit, health claims check, green claims check, testimonial review | tools/quality/cards/claims-review.md
 competitor-analysis | competitive analysis, competitor teardown, market landscape, positioning gaps, battlecard, pricing comparison, rival comparison, SWOT | tools/quality/cards/competitor-analysis.md
+creative-brief | agency brief, campaign brief, creative brief, design brief, seasonal campaign brief, launch campaign brief, production brief | tools/quality/cards/creative-brief.md
 creator-brief | influencer brief, UGC brief, creator content brief, sponsored post brief, ambassador brief, gifting brief, creator campaign brief, partnership content brief | tools/quality/cards/creator-brief.md
 crisis-response | crisis statement, holding statement, incident communication, public apology, recall notice, data breach notice, outage update, reputation crisis | tools/quality/cards/crisis-response.md
 experiment-design | A/B test plan, split test, test plan, experiment brief, growth experiment, pricing test, holdout test, multivariate test | tools/quality/cards/experiment-design.md

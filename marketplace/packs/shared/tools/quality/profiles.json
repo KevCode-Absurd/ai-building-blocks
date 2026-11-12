@@ -41,6 +41,20 @@
     "reader_minutes": 8,
     "notes": "Dev: 1.27x won 8 of 8 but clarity fell about 2 points from codes and abbreviations; agents must load a macro in seconds, so spell everything out."
   },
+  "creative-brief": {
+    "aim": 1.0,
+    "ceiling": 1.2,
+    "shape": "One page: objective, audience and tension, single-minded message, reasons to believe with sources or placeholders, tone with one example line, mandatories, deliverables table with specs, timeline table with owners.",
+    "reader_minutes": 4,
+    "notes": "New in v3.3 after the 12 Nov fresh set routed an agency brief to the lifecycle-email card. One page means one page; strategy belongs in a separate note only if asked."
+  },
+  "analysis-memo": {
+    "aim": 1.0,
+    "ceiling": 1.2,
+    "shape": "Recommendation box first; the numbers with inputs and one worked example; what the data does and does not show; ranked options or hypotheses; risks with mitigations; decision rule, owners and dates.",
+    "reader_minutes": 6,
+    "notes": "New in v3.3 after the 12 Nov fresh set routed an analysis memo to experiment design and a finance memo to the generic card. Show every calculation step; keep to the asked length."
+  },
   "notification-copy": {
     "aim": 1.0,
     "ceiling": 1.2,

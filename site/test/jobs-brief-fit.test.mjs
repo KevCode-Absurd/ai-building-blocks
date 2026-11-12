@@ -36,6 +36,14 @@ test('questions the request already answers are not asked again', () => {
   assert.doesNotMatch(reader.default, /first-time visitor/);
 });
 
+test('mixed means a web page plus ads or emails, not a one-page brief or an emailed customer', async () => {
+  const { isMixedRequest } = await import('../src/jobs/quality-engine.mjs');
+  assert.equal(isMixedRequest('Build a landing page plus 3 Meta ads and a welcome email'), true);
+  assert.equal(isMixedRequest('Write a page and 3 emails'), true);
+  assert.equal(isMixedRequest('Write a one-page creative brief. Channels: app push, email, Instagram and in-store signage.'), false);
+  assert.equal(isMixedRequest('A subscriber emailed us. She can pause from her account page. Write my email reply.'), false);
+});
+
 test('a requested count of three is the client\'s choice, not the rule-of-three habit', () => {
   assert.equal(requestedCount('Write 3 push notification lines'), 3);
   const ids = request => prepareJobContext({ request, deliverable_kind: 'copy' }).annex.defaults_to_avoid.map(row => row.id);

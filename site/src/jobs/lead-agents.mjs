@@ -25,8 +25,12 @@ export function deliverableLead(request, { personas = null, table = TABLE, kind 
   if (isMixedRequest(request)) return null;
   const card = qualityFamily(request, kind), row = table.deliverables?.[card];
   if (!row) return null;
-  const have = wordsOf(askOf(request)), ids = personas ? new Set(personas) : null;
-  const variant = (row.variants ?? []).find(v => (v.words ?? []).some(phrase => hasAll(have, phrase)) && known(v.agent, ids));
+  const ids = personas ? new Set(personas) : null;
+  // The ask decides first; the whole request (who is asking, their team) decides when the ask names no variant.
+  // A variant names words that must all appear, or a pattern for phrasing that loose words would confuse.
+  const fits = (v, text) => (v.pattern && new RegExp(v.pattern, 'i').test(text)) || (v.words ?? []).some(phrase => hasAll(wordsOf(text), phrase));
+  const pick = text => (row.variants ?? []).find(v => fits(v, text) && known(v.agent, ids));
+  const variant = pick(askOf(request)) ?? pick(String(request ?? ''));
   const id = variant?.agent ?? (known(row.agent, ids) ? row.agent : null);
   return { id, basis: `deliverable:${card}`, card, job: row.job ?? null };
 }

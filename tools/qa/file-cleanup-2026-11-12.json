@@ -1056,7 +1056,112 @@
       "source": "PASS; zero source/contract failures; legacy semantic coverage remains explicitly incomplete",
       "focused_tests": "21 passed; production file guard, release order, font integrity"
     },
-    "standard_deployments": "Required next: npm run deploy:production in marketplace, then node tools/release.mjs --deploy at repository root. Publication is serial and includes all normal gates.",
-    "live_verification": "The final deployment receipt records published versions, exact quality-resource checks and the three removed maintenance URLs."
+    "standard_deployments": {
+      "status": "PASS",
+      "marketplace": "npm run deploy:production; 521 tests, typecheck, full build and production file audit",
+      "library": "node tools/release.mjs --deploy; all ordered gates, 1685 unit tests passed, 1 optional skip, 97 Chrome checks, live verification and IndexNow state"
+    },
+    "live_verification": {
+      "verified_at": "2026-11-12T10:12:07.236Z",
+      "maintenance_assets_removed": [
+        {
+          "url": "https://agents.useaiblocks.com/agents/manifest.json",
+          "status": 200,
+          "response_mode": "existing SPA fallback, exact built HTML bytes",
+          "old_sha256": "eb7e60d6dc09fa57eaf2b9a36d9349fb6ce144be5b2792964b62e2555a897073"
+        },
+        {
+          "url": "https://useaiblocks.com/fonts/ai-blocks-intro-sans.json",
+          "status": 404,
+          "response_mode": "not found",
+          "old_sha256": "60a6f6e4fab8293e4ff055c8563a2fd8e387e5ff1f98b1ebfd186a3500323429"
+        },
+        {
+          "url": "https://useaiblocks.com/fonts/README-intro-font.md",
+          "status": 404,
+          "response_mode": "not found",
+          "old_sha256": "6c822a91f8a6370669803671e5fa35abaa78714420b1ef53d8c06d3efa246a03"
+        }
+      ],
+      "generated_public_files_byte_verified": 93,
+      "font_and_licence_files_byte_verified": 3,
+      "quality_resources_byte_verified": 44,
+      "sampled_pack_files_byte_verified": 3,
+      "job_context": {
+        "rest_quality_version": "3.2",
+        "mcp_quality_version": "3.2",
+        "intake_questions": 3,
+        "fresh_final_reader": true,
+        "model_calls": false,
+        "hosted_execution": false,
+        "composer_enabled": true
+      }
+    }
+  },
+  "publication": {
+    "code_source": "52b4c0cf7746f1f5e80866139d536ac9d420567d",
+    "marketplace": "bae7cfb6-1fbc-4cf5-9f6c-023052ad75de",
+    "library": "f54cd262-e324-4b93-b5f9-622560b5190e",
+    "status": "LIVE_VERIFIED",
+    "inventory": {
+      "marketplace": {
+        "files": 18775,
+        "bytes": 797628033
+      },
+      "library": {
+        "files": 62200,
+        "directories": 9597,
+        "entries": 71797,
+        "limit": 95000,
+        "headroom": 23203,
+        "used": "75.6%"
+      }
+    }
+  },
+  "protected_source_identity": {
+    "catalogue": {
+      "files": 33367,
+      "bytes": 300958110,
+      "git_blob_identity": "unchanged"
+    },
+    "saved_tour": {
+      "files": 2230,
+      "bytes": 178614238,
+      "git_blob_identity": "unchanged"
+    },
+    "quality_method": {
+      "files": 44,
+      "bytes": 188051,
+      "git_blob_identity": "unchanged"
+    },
+    "evaluation_evidence": {
+      "files": 41,
+      "bytes": 525007,
+      "git_blob_identity": "unchanged"
+    },
+    "licences": {
+      "files": 2726,
+      "bytes": 6349064,
+      "git_blob_identity": "unchanged"
+    }
+  },
+  "source_tree_reduction_at_publication": {
+    "commit": "52b4c0cf7746f1f5e80866139d536ac9d420567d",
+    "tracked_files": 41660,
+    "net_files_removed": 96,
+    "net_bytes_removed": 2502153
+  },
+  "quality_evaluation": {
+    "version": "3.2",
+    "evaluation": "separate Codex continuation",
+    "original_majority_gate": false,
+    "release": "Owner-approved exception; confirmation 42 wins, 54 ties, 0 losses, with no mean clarity or accuracy regression. All original failed gates and raw evidence remain unchanged."
+  },
+  "frontend_asset_comparison": {
+    "previous_files": 199,
+    "current_files": 199,
+    "byte_identical": 199,
+    "changed": 0,
+    "missing": 0
   }
 }

@@ -1629,5 +1629,205 @@
       "ios",
       "android"
     ]
+  },
+  "deliverables_note": "A named deliverable (its quality card, from quality-engine.mjs) is more specific than a job type: its specialist leads, and when the job type is only a guess, the card job replaces it. Variants pick within the card by request words.",
+  "deliverables": {
+    "claims-review": {
+      "job": "check-ads",
+      "agent": "lesley-regsummary"
+    },
+    "crisis-response": {
+      "job": "write-and-tell-stories",
+      "agent": "ghada-crisis-comms"
+    },
+    "review-replies": {
+      "job": "help-customers",
+      "agent": "brenda-reputation"
+    },
+    "support-macros": {
+      "job": "help-customers",
+      "agent": "araceli-inbox"
+    },
+    "notification-copy": {
+      "job": "keep-customers",
+      "agent": "makayla-pushmessages",
+      "variants": [
+        {
+          "words": [
+            "translate",
+            "translation",
+            "localization",
+            "localisation",
+            "spanish",
+            "french",
+            "german",
+            "portuguese"
+          ],
+          "agent": "behrouz-translation"
+        },
+        {
+          "words": [
+            "microcopy",
+            "ui",
+            "error",
+            "button",
+            "tooltip",
+            "empty",
+            "label",
+            "labels",
+            "strings"
+          ],
+          "agent": "jenna-ux-writing"
+        }
+      ]
+    },
+    "product-announcement": {
+      "job": "write-and-tell-stories",
+      "agent": "jocelyn-product-launch",
+      "variants": [
+        {
+          "words": [
+            "release notes",
+            "changelog"
+          ],
+          "agent": "kamran-release-notes"
+        },
+        {
+          "words": [
+            "press release",
+            "news release"
+          ],
+          "agent": "bayo-press-releases"
+        }
+      ]
+    },
+    "launch-plan": {
+      "job": "plan-strategy",
+      "agent": "jocelyn-product-launch"
+    },
+    "experiment-design": {
+      "job": "test-store-changes",
+      "agent": "harriet-abtests"
+    },
+    "pricing": {
+      "job": "set-prices",
+      "agent": "olu-pricing",
+      "variants": [
+        {
+          "words": [
+            "subscription",
+            "saas",
+            "seat",
+            "seats",
+            "annual",
+            "monthly plan"
+          ],
+          "agent": "osman-subscriptionpricing"
+        }
+      ]
+    },
+    "competitor-analysis": {
+      "job": "study-competitors",
+      "agent": "kojo-competitor-analysis"
+    },
+    "job-description": {
+      "job": "hire-people",
+      "agent": "anjali-recruiter"
+    },
+    "creator-brief": {
+      "job": "grow-social",
+      "agent": "chelsea-creator-partnerships"
+    },
+    "outbound-sales": {
+      "job": "sell-and-negotiate",
+      "agent": "isaiah-outreach"
+    },
+    "partnership-pitch": {
+      "job": "sell-and-negotiate",
+      "agent": "rekha-partners",
+      "variants": [
+        {
+          "words": [
+            "wholesale"
+          ],
+          "agent": "rodrigo-wholesale"
+        }
+      ]
+    },
+    "sales-pitch": {
+      "job": "sell-and-negotiate",
+      "agent": "bradley-sales-decks",
+      "variants": [
+        {
+          "words": [
+            "wholesale"
+          ],
+          "agent": "rodrigo-wholesale"
+        }
+      ]
+    },
+    "onboarding-flow": {
+      "job": "keep-customers",
+      "agent": "imani-onboarding"
+    },
+    "lifecycle-email": {
+      "job": "write-emails",
+      "agent": "candice-email-marketing"
+    },
+    "landing-page": {
+      "job": "write-landing-page"
+    },
+    "webinar-script": {
+      "job": "speak-and-persuade",
+      "agent": "pradeep-webinar-events"
+    },
+    "help-docs": {
+      "job": "document-work",
+      "agent": "ankit-help-docs"
+    },
+    "research-design": {
+      "job": "understand-customers",
+      "agent": "mauricio-customer-interviews",
+      "variants": [
+        {
+          "words": [
+            "survey",
+            "questionnaire"
+          ],
+          "agent": "megan-survey-design"
+        },
+        {
+          "words": [
+            "diary study",
+            "usability"
+          ],
+          "agent": "rahul-ux-review"
+        }
+      ]
+    },
+    "investor-update": {
+      "job": "track-numbers",
+      "agent": "shalini-kpireports",
+      "variants": [
+        {
+          "words": [
+            "investor",
+            "investors",
+            "shareholder",
+            "shareholders",
+            "lender"
+          ],
+          "agent": "paloma-investorupdate"
+        }
+      ]
+    },
+    "social-calendar": {
+      "job": "grow-social",
+      "agent": "ximena-social-media"
+    },
+    "seo-article": {
+      "job": "get-found-in-search",
+      "agent": "andile-seo-articles"
+    }
   }
 }

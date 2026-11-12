@@ -41,6 +41,13 @@
     "reader_minutes": 8,
     "notes": "Dev: 1.27x won 8 of 8 but clarity fell about 2 points from codes and abbreviations; agents must load a macro in seconds, so spell everything out."
   },
+  "notification-copy": {
+    "aim": 1.0,
+    "ceiling": 1.2,
+    "shape": "One row per asked message: moment or trigger, title and body (or the exact string), character counts, action or deep link; then one line on which to send first and one short cadence and stop note.",
+    "reader_minutes": 3,
+    "notes": "New in v3.3 for push, SMS, in-app and UI copy. The v3 dev push task lost 0 of 4 and the fresh microcopy task 1 of 4 on the generic card; length must stay at or under plain."
+  },
   "sales-pitch": {
     "aim": 1.3,
     "ceiling": 1.5,

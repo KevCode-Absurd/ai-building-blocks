@@ -3,6 +3,7 @@
 // agents' titles and role toolboxes: a variant whose words appear in the request wins, then a setting match (store,
 // software, local, nonprofit), then the job's default. Deterministic and model-free.
 import TABLE from './lead-agents.json' with { type: 'json' };
+import { askOf, isMixedRequest, qualityFamily } from './quality-engine.mjs';
 
 export const AGENTS_ORIGIN = 'https://agents.useaiblocks.com';
 
@@ -17,10 +18,26 @@ export function settingsOf(request, table = TABLE) {
 }
 
 /**
+ * The specialist for the deliverable a request names (its quality card), or null: { id, basis, card, job }. A named
+ * deliverable ("push notifications", "a crisis statement") is more specific than a job type, so it leads first.
+ */
+export function deliverableLead(request, { personas = null, table = TABLE, kind } = {}) {
+  if (isMixedRequest(request)) return null;
+  const card = qualityFamily(request, kind), row = table.deliverables?.[card];
+  if (!row) return null;
+  const have = wordsOf(askOf(request)), ids = personas ? new Set(personas) : null;
+  const variant = (row.variants ?? []).find(v => (v.words ?? []).some(phrase => hasAll(have, phrase)) && known(v.agent, ids));
+  const id = variant?.agent ?? (known(row.agent, ids) ? row.agent : null);
+  return { id, basis: `deliverable:${card}`, card, job: row.job ?? null };
+}
+
+/**
  * The lead agent for a job type and request: { id, basis, why } or null. `personas`, when given, is the set of agent
- * ids that exist; an agent missing from it is skipped.
+ * ids that exist; an agent missing from it is skipped. A named deliverable's specialist comes first.
  */
 export function leadAgentFor(job, request, { personas = null, table = TABLE } = {}) {
+  const named = deliverableLead(request, { personas, table });
+  if (named?.id) return { id: named.id, basis: named.basis, why: `The request names ${named.card.replace(/-/g, ' ')} work, and this specialist does exactly that.` };
   const row = table.jobs?.[job];
   if (!row) return null;
   const have = wordsOf(request), ids = personas ? new Set(personas) : null;

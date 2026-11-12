@@ -2,6 +2,8 @@
 // lead or a team should do it (routeJob). Job knowledge stays in the published approach data.
 import {isStaticAdRequest} from './studio-discovery.mjs';
 import {DELIVERABLE_KINDS,suggestDeliverableKind} from './grounding.mjs';
+import {askOf} from './quality-engine.mjs';
+import {deliverableLead} from './lead-agents.mjs';
 const STOP = new Set('a an and are as at be by for from get give have i in into is it its me my of on or our please that the their them these this to us want we with you your'.split(' '));
 const VERBS={create:'make',generate:'make',produce:'make',draft:'write',redesign:'design',audit:'check',review:'check',read:'check',analyze:'analyse',analyses:'analyse'};
 const token = word => {const v=VERBS[word]??word;return v.length>3&&v.endsWith('s')&&!v.endsWith('ss')?v.slice(0,-1):v;};
@@ -110,6 +112,23 @@ const NAMED_DELIVERABLES=[
  // "Audit our store" in plain words means: where does it lose buyers. A security or speed audit says so.
  [/\b(?:audit|review) (?:of )?(?:our|my|the|your|this) (?:online )?(?:store|shop|website|site)\b(?! (?:security|speed|apps?))|\b(?:store|shop|website|site) audits?\b/,['audit-landing-page','speed-up-store']],
  [/\bcold (?:e-?mails?|outreach)\b|\boutreach e-?mails?\b/,['write-emails','sell-and-negotiate']],
+ // Working documents people name in plain words. Each goes to the job whose lead writes that document.
+ [/\bnegotiation (?:brief|plan|prep(?:aration)?)\b|\bpreparation brief\b|\bpurchase[- ]order\b/,['sell-and-negotiate']],
+ [/\b(?:expense|travel|returns?|internal|leave|remote[- ]work|hr) polic(?:y|ies)\b/,['document-work','check-contracts']],
+ [/\btraining (?:plans?|guides?|sessions?)\b|\bpocket guides?\b|\blesson plans?\b/,['teach-and-train']],
+ [/\b(?:conversation|coaching) (?:guides?|conversations?)\b|\bperformance (?:reviews?|conversations?)\b|\bone[- ]to[- ]ones?\b/,['lead-people']],
+ [/\bacceptance[- ]tests?\b|\btest (?:matrix|matrices|cases?|plans?)\b|\btriage (?:sheets?|plans?)\b|\bbug reports?\b/,['test-and-fix-code']],
+ [/\bstoryboards?\b/,['make-video-ads','write-and-tell-stories']],
+ [/\b(?:short|bedtime|kids'?|children'?s|duolingo|reading) stor(?:y|ies)\b|\bstor(?:y|ies) (?:for|where|about)\b/,['write-and-tell-stories']],
+ [/\bcoding guides?\b|\bsynthesi[sz]e (?:these|the) (?:\w+ ){0,4}(?:reviews?|comments?|interviews?|feedback|excerpts?)\b/,['understand-customers','analyse-data']],
+ [/\bdata requests?\b/,['analyse-data']],
+ [/\b(?:cycle|sprint) (?:commitments?|plan(?:ning)?)\b|\bcapacity plans?\b/,['manage-projects']],
+ [/\bmerchandising (?:handoffs?|plans?)\b|\bplanograms?\b/,['run-your-store']],
+ [/\b(?:weekly |monthly )?business reviews?\b|\bvariance (?:bridges?|analys[ie]s)\b/,['track-numbers','analyse-data']],
+ [/\bvendor(?:[- ]master)? (?:cleanup|review)\b|\bmonth[- ]end close\b/,['manage-accounting']],
+ [/\b(?:shift|opening|closing|offboarding|receiving|onboarding) checklists?\b|\bhandoff templates?\b/,['document-work','organise-work']],
+ [/\bnames? for\b|\bnaming (?:options|ideas)\b/,['write-ad-copy','brand-file']],
+ [/\b(?:standalone|single|one|self-contained) (?:local )?(?:responsive )?html (?:files?|pages?)\b/,['build-websites']],
 ];
 /** The words that name the deliverable, as text: from the first action verb to where the setting starts. */
 function headText(request) {
@@ -134,6 +153,15 @@ function namedJob(request,jobs,declared) {
  * @param {{deliverable_kind?: string}} [options] a declared kind filters candidates; without one the word guess only nudges
  */
 export function classifyJob(request, approaches = {}, { deliverable_kind } = {}) {
+ // Classify the ask, not the introduction: "I run marketing at Grüns. Write 5 Meta ad concepts" is ads, not a store.
+ const full=String(request??''),ask=askOf(full);
+ if(ask!==full){const result=classifyAsk(ask,approaches,{deliverable_kind,full});if(result.job)return result;}
+ return classifyAsk(full,approaches,{deliverable_kind,full});
+}
+
+// The named deliverable's job (its quality card) replaces a job type that is only a guess.
+const CARD_CONFIDENCE=.7;
+function classifyAsk(request, approaches = {}, { deliverable_kind, full = request } = {}) {
  const jobs=approaches.jobs??approaches,query=new Set(words(request));
  const declared=DELIVERABLE_KINDS.includes(deliverable_kind)?deliverable_kind:null,guessed=declared?null:guessKind(request),kind=declared??guessed;
  const documents=Object.entries(jobs).filter(([,v])=>v&&typeof v==='object').map(([job,entry])=>({job,title:new Set(words(job+' '+(entry.name??''))),body:new Set(words([...(entry.keywords??[]),...(entry.families??[]).flatMap(f=>[f.name,f.what_it_looks_like])].join(' ')))}));
@@ -173,6 +201,9 @@ export function classifyJob(request, approaches = {}, { deliverable_kind } = {})
   // A page, ad or email job reached through its own kind of noun ("a website") is supported too.
   if(!nouns.some(w=>own.has(w))&&!PREFERRED[kind]?.includes(job))confidence=Math.min(confidence,LOW_CONFIDENCE);
  }
+ const card=named?null:deliverableLead(full);
+ if(card?.job&&card.job!==job&&confidence<CARD_CONFIDENCE&&Object.hasOwn(jobs,card.job)&&(!declared||kindAllows(declared,card.job))){alternatives=[job,...alternatives.filter(x=>x!==card.job)].filter(Boolean).slice(0,3);job=card.job;confidence=CARD_CONFIDENCE;}
+ else if(card?.job===job)confidence=Math.max(confidence,CARD_CONFIDENCE);
  return {job,confidence:Math.round(confidence*100)/100,alternatives};
 }
 
@@ -239,7 +270,7 @@ export function routeJob({ request, mode = 'auto', item_id, role_id, persona_id,
   const deliverable = /\b(?:make|create|write|draft|produce|design|build|audit|diagnose|review|compare|plan|fix|debug|repair|refactor|rewrite|translate|summari[sz]e|edit|research|analy[sz]e|report|analysis|strategy|scripts?|creatives?|assets?|emails?|pages?|workflow|app|system|options|proposal|decision)\b/.test(text);
   const goal = /\b(?:more|fewer|less|increase|decrease|improve|grow|reduce|boost|falling|down|struggling|stuck|not working|not doing well|sales|revenue|customers|costs|retention|launch|learn)\b/.test(text);
   if (!parent_outcome_id && goal && !deliverable) return { ok: true, mode: 'outcome', mode_reason: 'This is a goal or problem without a named deliverable.', job_type: classification };
-  const work = requestedWork(request), asked = TEAM_ASKED.test(text) || dials?.depth === 'deep';
+  const work = requestedWork(askOf(request)), asked = TEAM_ASKED.test(text) || dials?.depth === 'deep';
   const result = (chosen, mode_reason, extra = {}) => ({ ok: true, mode: chosen, mode_reason, job_type: classification, work, ...extra });
   if (asked) return result('team', 'You asked for a team.');
   if (work.kinds.length > 1) return result('team', `This needs different kinds of work (${list(work.kinds.map(kind => kind.label))}), so one lead runs a small team of helpers.`);

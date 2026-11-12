@@ -9,6 +9,7 @@ job-description | job post, job ad, job listing, role description, position desc
 landing-page | landing page copy, sales page, product page, signup page, waitlist page, page teardown, CRO review, conversion audit | tools/quality/cards/landing-page.md
 launch-plan | go-to-market plan, GTM plan, product launch, feature launch, launch calendar, rollout plan, release plan | tools/quality/cards/launch-plan.md
 lifecycle-email | email flow, abandoned cart emails, win-back, re-engagement, retention emails, post-purchase emails, reorder reminders, SMS flow | tools/quality/cards/lifecycle-email.md
+notification-copy | push notifications, in-app messages, SMS, text messages, microcopy, UI strings, error messages, empty states, button labels, reminders | tools/quality/cards/notification-copy.md
 onboarding-flow | user onboarding, customer onboarding, welcome series, first-run experience, activation flow, setup guide, getting-started journey, client onboarding | tools/quality/cards/onboarding-flow.md
 outbound-sales | cold email, cold outreach, prospecting sequence, SDR cadence, social selling messages, cold call script, sales sequence, lead generation emails | tools/quality/cards/outbound-sales.md
 paid-social-ads | social ads, image ads, video ad scripts, ad creative, ad concepts, ad copy, carousel ads, creative test batch | tools/quality/cards/paid-social-ads.md

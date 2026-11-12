@@ -132,6 +132,7 @@ export const TOOL_FILES: { name: string; purpose: string }[] = [
   { name: "quality/cards/landing-page.md", purpose: "Quality Engine v3: cards/landing-page.md" },
   { name: "quality/cards/launch-plan.md", purpose: "Quality Engine v3: cards/launch-plan.md" },
   { name: "quality/cards/lifecycle-email.md", purpose: "Quality Engine v3: cards/lifecycle-email.md" },
+  { name: "quality/cards/notification-copy.md", purpose: "Quality Engine v3: cards/notification-copy.md" },
   { name: "quality/cards/onboarding-flow.md", purpose: "Quality Engine v3: cards/onboarding-flow.md" },
   { name: "quality/cards/outbound-sales.md", purpose: "Quality Engine v3: cards/outbound-sales.md" },
   { name: "quality/cards/paid-social-ads.md", purpose: "Quality Engine v3: cards/paid-social-ads.md" },

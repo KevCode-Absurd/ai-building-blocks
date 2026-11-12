@@ -15,6 +15,7 @@ Families: paid-social-ads; also: social ads, image ads, video ad scripts, ad cre
 3. Invented stats, reviews, discounts, deadlines or "#1" claims.
 4. Personal-attribute callouts ("Struggling with...?"), fake urgency or before-and-after claims that get ads rejected.
 5. Winners called on a handful of results.
+6. A logo or wordmark that blends into its background (dark mark on a dark panel); check it with check-logo-contrast.cjs where a logo is used.
 
 **SHAPE:** 3 to 5 opening lines (main bet, first test); a short concept table; each concept in full, up to 150 words; test plan. The asked number of concepts; with no count set, enough to test the named angles, usually 3 to 6; video gives the first 3 seconds and scene order.
 

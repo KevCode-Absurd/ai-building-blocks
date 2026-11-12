@@ -60,7 +60,7 @@ Use --requested-template only when the request explicitly requires input fields.
 
 ## 7. Look at visual work
 
-For pages, layout emails, decks and image ads, render and inspect phone first, then desktop. `node tools/quality/render.cjs <page.html> <prefix>` captures both; the host may set PW_CHANNEL to an installed browser. Read every slice, tables and expanded states. Check clipping, hierarchy, legibility, links and keyboard access. Repair and look again.
+For pages, layout emails, decks and image ads, render and inspect phone first, then desktop. `node tools/quality/render.cjs <page.html> <prefix>` captures both; the host may set PW_CHANNEL to an installed browser. Read every slice, tables and expanded states. Check clipping, hierarchy, legibility, links and keyboard access. Where an image ad carries a logo or wordmark, run `node tools/quality/check-logo-contrast.cjs <ad.png> --box x,y,w,h` on the box where it sits; below 3:1, switch to the light or dark logo version or move it to a calmer area. Native and creator-style ads may rightly carry no logo. Repair and look again.
 
 ## 8. Fresh final choice with a clarity floor
 

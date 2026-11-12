@@ -118,6 +118,7 @@ export const TOOL_FILES: { name: string; purpose: string }[] = [
   { name: "quality/proof.cjs", purpose: "Quality Engine v3: proof.cjs" },
   { name: "quality/render.cjs", purpose: "Quality Engine v3: render.cjs" },
   { name: "quality/leakcheck.cjs", purpose: "Quality Engine v3: leakcheck.cjs" },
+  { name: "quality/check-logo-contrast.cjs", purpose: "Checks that a logo or wordmark on an image ad reaches a 3:1 contrast with what is behind it, with a file-hash receipt." },
   { name: "quality/check-format.cjs", purpose: "Checks actual output counts, headings, links, table fields and character limits against a brief-derived contract, with file and contract hashes." },
   { name: "quality/cards/_any.md", purpose: "Quality Engine v3: cards/_any.md" },
   { name: "quality/cards/claims-review.md", purpose: "Quality Engine v3: cards/claims-review.md" },

@@ -27,7 +27,7 @@ test('job context exposes the portable v3 method and all six check tools without
   const context = prepareJobContext({request: 'Build a procurement landing page', deliverable_kind: 'web_page'});
   assert.equal(context.model_calls, 0);
   assert.equal(context.stored_by_service, false);
-  assert.equal(context.annex.quality_engine.version, '3.2');
+  assert.equal(context.annex.quality_engine.version, '3.3');
   assert.equal(context.annex.quality_engine.final_choice.material_usefulness_below_plain, 'VETO');
   assert.match(context.annex.quality_engine.final_choice.edit_base, /useful content of the fresh plain draft/);
   assert.equal(context.annex.quality_engine.family, 'landing-page');

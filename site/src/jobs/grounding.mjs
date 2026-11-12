@@ -8,7 +8,7 @@
 
 import { intakeQuestions } from './intake-questions.mjs';
 import { brandFileStep } from './brand-file.mjs';
-import { qualityEngineContext } from './quality-engine.mjs';
+import { QUALITY_ENGINE_VERSION, askOf, qualityEngineContext } from './quality-engine.mjs';
 
 const list = value => Array.isArray(value) ? value : [];
 const text = value => typeof value === 'string' && value.trim().length > 0;
@@ -29,7 +29,7 @@ export const GJP_STEPS = Object.freeze([
   { id: 'frame', name: 'Spec sheet', do: 'Write the one-screen spec sheet: who must do what after seeing this, the deliverables with counts in the client\'s words, 5 to 7 acceptance tests, the decisions you must take, your assumptions, the mode (patch what exists by default) and the brand context this job needs.' },
   { id: 'ground', name: 'Ground what the job needs', do: 'Capture only what the acceptance tests depend on: the live site into context/brand-dna.json and context/screenshots/, or the real account or data for audits. Every fact gets a source and a date. Check the thing being sold is live, in stock, at the stated price and at the link you will use.' },
   { id: 'taste', name: 'Taste and tools', do: 'For work a buyer sees, write context/taste-brief.md: brand codes to keep, 2 admired references and 1 to avoid, and the named defaults to avoid. When you were given a toolbox, pick from it at your own discretion and open only what you pick.' },
-  { id: 'diverge', name: 'Real candidates, someone else chooses', do: 'Make about 3 candidates of the part that decides the outcome, as real work, differing on at least two of promise, proof, structure, buyer moment, offer and visual world. A fresh reviewer answers each acceptance test per candidate, picks one and names what to take from the others. One extra round at most.' },
+  { id: 'diverge', name: 'Real candidates, someone else chooses', do: 'Make the drafts annex.quality_engine.drafts names for this depth, as real work: light and standard are one expert draft and one fresh plain request-only draft; full adds a distinct creative alternative that differs on at least two of promise, proof, structure, buyer moment, offer and visual world. Before editing, list the expert edge: what the expert adds that the plain draft lacks. A fresh reviewer answers each acceptance test per candidate, picks one and names what to take from the others. One extra round at most.' },
   { id: 'build', name: 'Build to the craft floor', do: 'Give true facts a new framing and add no new facts. Every piece earns its place commercially. Decide; never hand over a menu. Working figures only for planning numbers the client will tune, with the sum shown. Finish the format\'s completeness list.' },
   { id: 'check', name: 'Client\'s-eye check', do: 'A fresh reviewer gets only the brief, the deliverable and the captured facts. They answer each acceptance test with the proving line, mark every claim sourced or not, and name the weakest piece, what the client would have to ask, and what can be cut. Remove unsourced claims, fix, cut, stop.' },
   { id: 'record', name: 'Hand over', do: 'The native work first; add context only when needed to use it. Nothing internal reaches the client. Keep working notes in DECISIONS.md.' },
@@ -296,7 +296,7 @@ const DECISIONS = Object.freeze({
 });
 export const decisionsFor = kind => [...(DECISIONS[kind] ?? DECISIONS[familyOf(kind)])];
 const NUMBER_WORDS = Object.freeze({ one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, twelve: 12 });
-const COUNTED = '(?:ads?|creatives?|concepts?|emails?|pages?|posts?|headlines?|subject lines?|scripts?|carousels?|slides?|articles?|variants?|versions?|images?|videos?|documents?|templates?|reports?|plans?)';
+const COUNTED = '(?:ads?|creatives?|concepts?|emails?|pages?|posts?|headlines?|subject lines?|scripts?|carousels?|slides?|articles?|variants?|versions?|images?|videos?|documents?|templates?|reports?|plans?|lines?|notifications?|messages?|names?|options?|ideas?|hooks?|taglines?|captions?|replies|macros?)';
 /** The count the request names for its deliverable ("6 image ads", "a 5-email series"), else null. A guess the maker confirms. */
 export function requestedCount(request = '') {
   const m = new RegExp(`\\b(\\d{1,3}|${Object.keys(NUMBER_WORDS).join('|')}|an?)[\\s-]+(?:[a-z-]+\\s+){0,2}?${COUNTED}\\b`, 'i').exec(String(request ?? ''));
@@ -392,13 +392,13 @@ export const GJP_SKILLS = Object.freeze({ protocol: 'grounded-job-protocol', cap
 
 /** Capture spec per family: what goes into context/ and how. */
 const BRAND_DNA_FIELDS = Object.freeze(['colours with their share of page area', 'font families, weights and sizes per role', 'radius', 'button and link styles', 'nav and footer structure', 'section order of key pages', 'image density and style', '5 to 10 verbatim voice samples', 'live facts (prices, offers, shipping, reviews, guarantees), each with its capture date']);
-export function contextRequirements(kind, { siteUrl, hasExistingAsset } = {}) {
+export function contextRequirements(kind, { siteUrl, hasExistingAsset, light = false } = {}) {
   const family = familyOf(kind), noAsset = hasExistingAsset === false;
   if (BRAND_KINDS.includes(kind)) return [
     { id: 'site_url', label: 'The live site or asset URL', required: !noAsset, how: siteUrl ? `Use ${siteUrl}.` : 'Ask for it. If there is no site, ask for screenshots and the brand guide.' },
     { id: 'brand_dna', label: 'context/brand-dna.json and context/screenshots/', required: !noAsset, how: `Run capture-brand-dna.mjs, else brand-dna-snippet.js, else ask for URL, screenshots and CSS. Capture: ${BRAND_DNA_FIELDS.join('; ')}.` },
     { id: 'existing_assets', label: 'The existing page, ad or email being changed', required: hasExistingAsset === true, how: 'Capture or open the current version before any change (patch mode).' },
-    { id: 'competitors', label: '2 or 3 competitors or references', required: true, how: 'Ask the client to name them, or find them; capture each the same way.' },
+    { id: 'competitors', label: '2 or 3 competitors or references', required: !light, how: light ? 'Optional for a short piece in one voice: use them only if the client names them.' : 'Ask the client to name them, or find them; capture each the same way.' },
     { id: 'brand_guide', label: 'Brand guide, if one exists', required: false, how: 'Ask; a guide overrides a capture where they disagree.' },
   ];
   if (family === 'audit_analysis') return [
@@ -555,7 +555,7 @@ export function skillPreamble(item = {}) {
     `BUILD: give true facts a new framing and add no new facts. Decide; never hand over a menu. Name the AI defaults you will avoid (prepare_job_context lists them). ${TOOLBOX_ONLY}`,
     'CHECK with a fresh reviewer who sees only the brief, the work and the captured facts: each acceptance test pass or fail, every claim sourced or not. Remove unsourced claims. Hand over the work first, with nothing internal in it.',
   ];
-  return { title: 'Before you run this', kind, lines, quality_engine: { version: '3.2', method_url: qualityEngineContext().method_url }, tool: { name: 'prepare_job_context', arguments: { request: '<the user\'s request>', deliverable_kind: kind === 'assess' ? 'audit' : '<web_page|ad_creative|copy|email>' } }, precedence: 'The spec sheet and the client\'s captured context come first. Read prepare_job_context annex.quality_engine for family shape, length, clarity, proof and visual checks before using generic defaults. Truth and permission rules always apply.' };
+  return { title: 'Before you run this', kind, lines, quality_engine: { version: QUALITY_ENGINE_VERSION, method_url: qualityEngineContext().method_url }, tool: { name: 'prepare_job_context', arguments: { request: '<the user\'s request>', deliverable_kind: kind === 'assess' ? 'audit' : '<web_page|ad_creative|copy|email>' } }, precedence: 'The spec sheet and the client\'s captured context come first. Read prepare_job_context annex.quality_engine for family shape, length, clarity, proof and visual checks before using generic defaults. Truth and permission rules always apply.' };
 }
 
 /** The craft floor: what the build must clear whatever the kind of work. */
@@ -601,6 +601,8 @@ const askQuestions = (kind, family, request) => intakeQuestions({ deliverableKin
  *  default at full length. */
 const AVOID_RESERVE = 150;
 /** prepare_job_context: a short brief for the model plus a structured annex. The brief names the annex parts to open. */
+// Cards whose work sells nothing at a price: no stock, price or link check for them.
+const NOT_SELLING_CARDS = new Set(['notification-copy', 'support-macros', 'crisis-response', 'help-docs', 'job-description', 'investor-update', 'review-replies', 'research-design', 'webinar-script']);
 export function prepareJobContext(input = {}, context = {}) {
   const request = String(input.request ?? '').trim();
   const resolved = resolveDeliverableKind(input.deliverable_kind, request), kind = resolved.kind, family = familyOf(kind);
@@ -608,9 +610,9 @@ export function prepareJobContext(input = {}, context = {}) {
   const draftPlan = quality.depth === 'full' ? 'Expert and plain drafts, plus one real creative alternative.' : quality.depth === 'team' ? 'Specialist parts integrated by one lead, plus a plain draft.' : 'One expert draft and one plain request-only draft.';
   const siteUrl = typeof input.site_url === 'string' && /^https?:\/\/[^\s]+$/i.test(input.site_url) ? input.site_url : undefined;
   const mode = resolveMode({ request, site_url: siteUrl, has_existing_asset: input.has_existing_asset, kind });
-  const patterns = normalizePatterns(context.patterns), defaults = defaultsFor(kind, patterns);
+  const patterns = normalizePatterns(context.patterns), defaults = defaultsFor(kind, patterns).filter(d => !(d.id === 'copy-rule-of-three' && requestedCount(askOf(request)) === 3));
   const questions = askQuestions(kind, family, request).map(q => ({ ...q })), rubric = craftRubric(kind), gates = gatesFor(kind), need = groundingRequirement(kind), levers = leversFor(kind);
-  const complete = completenessFor(kind), spec = specSheet({ request, kind, mode, kindSource: resolved.source }), selling = BRAND_KINDS.includes(kind);
+  const complete = completenessFor(kind), spec = specSheet({ request, kind, mode, kindSource: resolved.source }), selling = BRAND_KINDS.includes(kind) && !NOT_SELLING_CARDS.has(quality.family);
   const audit = family === 'audit_analysis', method = candidateMethod(kind);
   const steps = GJP_STEPS.map(step => ({ ...step, do: audit && AUDIT_STEP_OVERRIDES[step.id] ? AUDIT_STEP_OVERRIDES[step.id] : step.do }));
   const scripts = CAPTURE_TOOLS.filter(t => BRAND_KINDS.includes(kind) || (t.skill === 'brand-dna-capture' && family === 'strategy_plan')).map(tool => {
@@ -619,10 +621,10 @@ export function prepareJobContext(input = {}, context = {}) {
     return { ...row, get_skill: { slug: tool.skill, response_format: 'detailed' }, get_resource: { slug: resolvedTool?.slug ?? tool.skill, path: resolvedTool?.path ?? tool.path, revision_sha256: resolvedTool?.revision_sha256 ?? null }, resource_url: resolvedTool?.resource_url ?? null, marketplace_url: tool.agents_app === false ? null : MARKETPLACE_TOOLS_BASE + tool.file, status: resolvedTool ? 'PUBLISHED' : 'CHECK_GET_SKILL' };
   });
   const ground = need.data_snapshot ? 'GROUND what the tests need: pull the real account or data at read level into context/ (for example context/data-snapshot.json) with source and date range.'
-    : need.brand_dna ? `GROUND what the tests need: ${siteUrl ? `capture ${short(siteUrl, 120)}` : 'get the live site URL and capture it'} into context/brand-dna.json. Check what is sold is live, in stock, at that price and link.`
+    : need.brand_dna ? `GROUND what the tests need: ${siteUrl ? `capture ${short(siteUrl, 120)}` : 'get the live site URL and capture it'} into context/brand-dna.json.${selling ? ' Check what is sold is live, in stock, at that price and link.' : ''}`
     : 'GROUND what the tests need: open the real facts, system or files this job changes.';
   const ticks = [...(complete.length ? ['annex.completeness'] : []), ...(levers.length ? ['annex.proven_levers'] : [])];
-  const build = selling ? 'reframe true facts, add none. Decide; hand over no menu.'
+  const build = BRAND_KINDS.includes(kind) ? 'reframe true facts, add none. Decide; hand over no menu.'
     : audit ? 'diagnose this account or data, rank the fixes and recommend the first. Hand over no menu.'
     : family === 'strategy_plan' ? 'one recommendation, the runner-up in a line, no menu. Working figures only for numbers the client will tune, with the sum shown; no blanks.'
     : 'fit the existing system. Decide the approach yourself; hand over no menu.';
@@ -663,14 +665,14 @@ export function prepareJobContext(input = {}, context = {}) {
       questions,
       brand_context: { ...contextNeed(kind), next: brandFileStep({ kind, status: input.brand_file_status && typeof input.brand_file_status === 'object' ? input.brand_file_status : null }) },
       protocol: steps,
-      context_requirements: contextRequirements(kind, { siteUrl, hasExistingAsset: input.has_existing_asset }),
+      context_requirements: contextRequirements(kind, { siteUrl, hasExistingAsset: input.has_existing_asset, light: quality.depth === 'light' }),
       capture: { order: ['capture-brand-dna.mjs (Node + Playwright)', 'brand-dna-snippet.js (browser console)', 'ask for URL, screenshots and CSS'], fields: need.brand_dna ? [...BRAND_DNA_FIELDS] : [], tools: scripts, skills: Object.values(GJP_SKILLS).map(slug => ({ slug, get_skill: { slug, response_format: 'detailed' } })) },
       artifacts: { spec_sheet: 'context/spec.md', facts: 'context/facts.md', ...(need.brand_dna ? { brand_dna: 'context/brand-dna.json', screenshots: 'context/screenshots/' } : {}), ...(need.data_snapshot ? { data_snapshot: 'context/data-snapshot.json' } : {}), ...(need.taste_brief ? { taste_brief: 'context/taste-brief.md' } : {}), working_notes: 'DECISIONS.md' },
       taste_brief: { path: 'context/taste-brief.md', required_before_production: need.taste_brief, sections: [...TASTE_BRIEF_SECTIONS], fill_from: 'The capture, the answers to annex.questions and the references you find. Ask nothing more.' },
       production_gate: { requires: need, report_as: need.data_snapshot ? { grounding: { data_snapshot: { path: 'context/data-snapshot.json', sha256: '<sha256>', source: '<account or connector>', captured_at: '<ISO date>' } } } : need.brand_dna ? { grounding: { brand_dna: { path: 'context/brand-dna.json', sha256: '<sha256>', source: siteUrl ?? '<site URL>', captured_at: '<ISO date>', method: 'capture-brand-dna.mjs' }, taste_brief: { path: 'context/taste-brief.md', sha256: '<sha256>', brand_codes: ['<code>'], references_admired: ['<ref>', '<ref>'], reference_avoid: ['<ref>'], defaults_to_avoid: defaults.slice(0, 3).map(d => d.id), conventions_break: [] } } } : null, note: 'start_job and advance_job check this structure before PRODUCE. It is a host report, not proof of capture.' },
       truth: { rule: 'Every fact a reader sees needs a dated source. Cut what has none, or rewrite it to what the source says. Never flag it and leave it in.', method: craftMethod(CRAFT_METHODS.truth) },
       buyer_can_act: selling ? { check: 'Before you build, confirm the thing being sold is live, in stock in the sizes or variants that matter, at the stated price, at the link you will use.', if_not: 'Make the call yourself, build for the option that works, and say so in the first line of the hand-over.', method: craftMethod(CRAFT_METHODS.buyer) } : null,
-      candidates: { make: draftPlan, family_reference: candidatesFor(kind), ...(method ? { method } : {}), ...(['web_page', 'ad_creative'].includes(kind) ? { when_the_look_is_open: craftMethod(CRAFT_METHODS.look) } : {}), ...(selling ? { compare_with: 'compare-candidates.mjs (annex.capture.tools): puts the candidates side by side under blind labels for the reviewer.' } : {}), as: 'Real work, not descriptions.', axes: selling && quality.depth === 'full' ? [...CANDIDATE_AXES] : [], differ_on_at_least: selling && quality.depth === 'full' ? 2 : null, reject: 'Candidates that differ only in colour, crop, wording or style label.', patch_mode: mode.mode === 'patch' ? 'Each candidate is the live asset as you would change it, with its ranked edits and their evidence.' : null },
+      candidates: { make: draftPlan, ...(quality.depth === 'light' ? {} : { family_reference: candidatesFor(kind) }), ...(method ? { method } : {}), ...(['web_page', 'ad_creative'].includes(kind) ? { when_the_look_is_open: craftMethod(CRAFT_METHODS.look) } : {}), ...(selling ? { compare_with: 'compare-candidates.mjs (annex.capture.tools): puts the candidates side by side under blind labels for the reviewer.' } : {}), as: 'Real work, not descriptions.', axes: selling && quality.depth === 'full' ? [...CANDIDATE_AXES] : [], differ_on_at_least: selling && quality.depth === 'full' ? 2 : null, reject: 'Candidates that differ only in colour, crop, wording or style label.', patch_mode: mode.mode === 'patch' ? 'Each candidate is the live asset as you would change it, with its ranked edits and their evidence.' : null },
       reviewer: { who: REVIEWER.who, choose: { ...REVIEWER.choose, method: craftMethod(CRAFT_METHODS.choose) }, clients_eye: { ...REVIEWER.clients_eye, method: craftMethod(CRAFT_METHODS.check) } },
       craft_floor: [...CRAFT_RULES],
       completeness: complete,

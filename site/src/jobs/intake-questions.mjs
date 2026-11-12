@@ -16,6 +16,8 @@ const TRIGGER_NAMED = /\b(?:welcome|abandon\w*|win-?back|post-?purchase|lapsed|o
 const METRIC_NAMED = /\b(?:conversion rate|cvr|bounce rate|roas|cpa|cac|ctr|aov|add-to-cart rate|open rate|click rate|churn|retention)\b/i;
 const ACCESS_NAMED = /\b(?:analytics|ga4|search console|ads manager|ad account|heatmaps?|recordings|export|csv|spreadsheet|dashboard)\b/i;
 const DEADLINE_NAMED = /\b(?:by|before|within)\s+(?:the\s+)?(?:end of\s+)?(?:next\s+|this\s+)?(?:monday|tuesday|wednesday|thursday|friday|week|month|quarter|year|q[1-4]|january|february|march|april|may|june|july|august|september|october|november|december|\d{1,2}\s+(?:days|weeks|months))\b/i;
+const CHANNEL_NAMED = /\b(?:push(?: notifications?)?|notifications?|sms|text messages?|in-app|e-?mails?|newsletters?|landing pages?|home ?pages?|product pages?|web ?pages?|websites?|ads?|banners?|billboards?|packaging|labels?|menus?|app store|social posts?|captions?|posts?|tweets?|linkedin|instagram|tiktok|ui|buttons?|error messages?|screens?|scripts?|signs?|signage|flyers?|brochures?)\b/i;
+const READER_NAMED = /\b(?:aimed at|for (?:adults?|learners?|users?|customers?|subscribers?|buyers?|visitors?|people|parents|teams?|managers?|members?|shoppers?|guests?|employees?|staff|developers?|engineers?|founders?|vps?|cfos?|controllers?)|who (?:lapsed|lost|signed|bought|joined|abandoned|left|cancelled|haven't)|lapsed|churned|new (?:users?|customers?|subscribers?|members?))\b/i;
 const STACK_NAMED = /\b(?:shopify|wordpress|webflow|next\.?js|react|vue|svelte|python|node|typescript|javascript|php|rails|django|sql|postgres|supabase|cloudflare|aws|github|repo)\b/i;
 
 /** Up to five candidates per kind, in the order they matter. The first three the request has not answered are asked. */
@@ -40,8 +42,8 @@ const QUESTIONS = Object.freeze({
     q('sender', 'Which email tool sends them, and are they from the brand or a named person?', 'From the brand, as plain text and HTML you can paste into any email tool.', /\b(?:klaviyo|mailchimp|shopify email|omnisend|brevo|convertkit|hubspot|activecampaign|beehiiv|substack)\b/i),
   ],
   copy: [
-    q('where_used', 'Where will this copy appear, and how long should it be?', 'The same place and length as the copy it replaces.'),
-    q('reader_action', 'Who reads it, and what should they do next?', 'A first-time visitor who should take your site\'s main action.'),
+    q('where_used', 'Where will this copy appear, and how long should it be?', 'The same place and length as the copy it replaces.', CHANNEL_NAMED),
+    q('reader_action', 'Who reads it, and what should they do next?', 'The reader the request names, and the one action this piece exists for.', READER_NAMED),
     q('proof', 'What proof can it use: reviews, numbers, press or guarantees?', 'Only proof already published on your site, each with its source.'),
     q('never_say', 'Are there words, claims or topics to avoid?', 'No claim beyond what your site already says.'),
   ],

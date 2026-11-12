@@ -1,4 +1,4 @@
-# Checker brief (v3.2)
+# Checker brief (v3.3)
 
 Judge as the person who asked and as a seasoned practitioner. Read the original request and actual anonymous artifacts. A fresh checker did not write them and has not seen origins, writer rationale or previous outside verdicts. Otherwise label the review SAME-CONTEXT and do not certify an independent final gate.
 
@@ -28,8 +28,8 @@ For customer copy, check the actual channel against a few short public brand exa
 
 ## Final anonymous choice
 
-Check both candidates fully. Usable means ready for the receiver's actual next action, not merely free of forbidden claims. Lower clarity or material usefulness loss vetoes a final, even if its weighted score is higher. Choose the clearer fully useful work; break a clarity tie on usefulness. If the clearer piece loses useful substance, request a narrow restoration in that clearer layout and a fresh check. Do not settle for a vague version or an unnecessarily dense one.
+Check both candidates fully. Usable means ready for the receiver's actual next action, not merely free of forbidden claims. Lower clarity or material usefulness loss vetoes a final, even if its weighted score is higher. Choose the clearer fully useful work; break a clarity tie on usefulness. If both still tie, compare what each adds that the other lacks: a correct client-specific fact, a card must-have, an avoided card failure or a ready-to-use piece. Prefer the one whose additions you confirm as correct and useful, unless it runs past the family aim; call it a tie only when neither adds anything you can confirm. If the clearer piece loses useful substance, request a narrow restoration in that clearer layout and a fresh check. Do not settle for a vague version or an unnecessarily dense one.
 
 Return both clarity judgments, usable/not usable with the failing gate, selected label, concrete reasons and indispensable repairs. If neither can ship, return repair-needed. Freeze a chosen artifact unchanged; any later edit requires checking the changed version again.
 
-Without a fresh reader, plain is the base with only necessary verified fact or requirement repairs. Record the limitation honestly. AI preference scores are not customer acceptance, legal sign-off or measured business results.
+Without a fresh reader, plain is the base with its verified edge items and necessary fact or requirement repairs. Record the limitation honestly. AI preference scores are not customer acceptance, legal sign-off or measured business results.

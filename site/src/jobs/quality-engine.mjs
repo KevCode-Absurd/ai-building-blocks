@@ -1,7 +1,7 @@
 // Model-free routing. The host confirms the family and depth against the brief.
 import { QUALITY_PROFILES } from './quality-profiles.mjs';
 
-export const QUALITY_ENGINE_VERSION = '3.2';
+export const QUALITY_ENGINE_VERSION = '3.3';
 const BASE = 'https://agents.useaiblocks.com/tools/quality/';
 // Checked in order, specific before general: every card in cards/INDEX.md is reachable. The words follow INDEX.md and
 // the plain names people use in briefs ("going viral", "ticket types", "interview scorecard").
@@ -81,7 +81,7 @@ export function qualityEngineContext(request = '', kind = 'other') {
     precedence: 'Task and brand first. This method governs draft depth and family length; existing truth, access and delivery gates still apply. No library search at job time. A same-context review is never independent.',
     length: 'The family ceiling is a cap, never a target. The brief can ask for more. Keep directly used customer copy no longer than the plain version.',
     learning: 'Only opted-in feedback proposes scoped changes. No feedback is stored by this response. Blind evaluation decides method changes.',
-    final_choice: { fresh_context: true, clarity_below_plain: 'VETO', material_usefulness_below_plain: 'VETO', edit_base: 'Correct useful content of the fresh plain draft; preserve action and evidence coverage while improving structure.', requested_artifact_first: true, requested_template_fields: 'PRESERVE', no_fresh_reader: 'Plain base plus necessary verified repairs; disclose SAME-CONTEXT.' },
+    final_choice: { fresh_context: true, clarity_below_plain: 'VETO', material_usefulness_below_plain: 'VETO', edit_base: 'Correct useful content of the fresh plain draft; preserve action and evidence coverage while improving structure.', expert_edge: 'Before editing, list up to 3 edge items specific to this client: a current fact that changes the work, a card must-have plain misses, a card failure plain commits, or a ready-to-use piece the reader would otherwise build. Build them in within the family aim. General advice and caveats are not edge items.', tie: 'EXPERT_IF_VERIFIED_EDGE: on equal clarity and usefulness, choose the candidate whose edge items the fresh reader confirms; ship plain unchanged only when none survives.', requested_artifact_first: true, requested_template_fields: 'PRESERVE', no_fresh_reader: 'Plain base plus its verified edge items and necessary repairs; disclose SAME-CONTEXT.' },
     assurance: 'Guidance and host-reported checks do not prove semantic quality, independent review, customer acceptance or business results.',
   };
 }

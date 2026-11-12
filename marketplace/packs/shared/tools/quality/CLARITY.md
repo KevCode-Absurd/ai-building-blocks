@@ -1,9 +1,9 @@
 # Clarity rules (editor pass)
 
-In blind tests, length did not predict clarity (r = -0.03). Density did: long-sentence share (r = -0.67), parentheses (r = -0.63), average sentence length (r = -0.53), method talk (r = -0.47).
+Clarity means finding, understanding and doing the job with little effort. Sentence and length measures can flag editing work; they do not prove clarity or justify losing useful content.
 
 ## BASE RULE
-When the clearest draft is a plain one and the expert drafts' extra substance can be added to it, build on the clear draft and graft the substance in, rather than cutting an expert draft down. Add each expert fact, guard or tool as its own short sentence, bullet or table row in the right section. A graft that needs a long sentence goes in a table or appendix.
+Start from the plain draft's correct useful content. Keep a private coverage ledger while editing. Preserve the actual action, actor, condition, decision and evidence that make it usable. Improve hierarchy, phrasing and layout before removing substance. Add an indispensable expert fact as its own sentence, bullet, field or row where it is used. An appendix must not hide an action the reader needs now.
 
 ## 1. Answer first
 - The first two sentences answer the request. No date line, audience list, method note or "what we won't do" list before it.
@@ -29,13 +29,13 @@ When the clearest draft is a plain one and the expert drafts' extra substance ca
 - Hedge once, where the doubt lives. No stacked caveats or defensive asides.
 
 ## 5. Scannability by length
-- Under 300 words: no headings, short paragraphs.
-- 300-1,200: 3-6 headings phrased as reader questions; bullets for lists.
+- Under 300 words: short paragraphs; use headings or labels when they help locate a needed part.
+- 300-1,200: a few useful headings and bullets for lists; preserve a requested native format.
 - Over 1,200: summary first, numbered sections, each opening with its point; paragraphs under 80 words.
 
 ## 6. Tables help when
 - Comparing 2+ options on 2+ attributes, schedules, price ladders, if-then decision rules, who-does-what.
-- Not for reasoning. Cells under 15 words; one sentence above says what it shows.
+- Avoid packing long reasoning into cells. If a useful field needs more space, use a narrower table or a repeatable record; do not delete the field or its condition to meet a word target.
 
 ## 7. Cut or move
 - Method talk: how the work was made, files, "checked live", inline sign-off stamps, review tags. Open items go in one short "To confirm" box at the end.
@@ -43,4 +43,4 @@ When the clearest draft is a plain one and the expert drafts' extra substance ca
 - Build specs, tokens, rosters and sources go after the content.
 
 ## 8. Check
-Run `node tools/quality/readability.cjs <final> --audience <a>`. Fix exit 1; meet the editor targets. The final's long-sentence share and parentheses rate must not exceed the plain draft's. Read customer copy aloud.
+Run `node tools/quality/readability.cjs <final> --audience <a>`. Review its warnings against the reader and job; required terms and operating detail can justify an exception, recorded privately. Check that concrete actions, evidence and conditions survive the edit. Read customer copy aloud. A fresh reader must find no material loss of usefulness or clarity.

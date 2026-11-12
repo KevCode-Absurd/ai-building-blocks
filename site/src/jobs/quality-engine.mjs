@@ -1,7 +1,7 @@
 // Model-free routing. The host confirms the family and depth against the brief.
 import { QUALITY_PROFILES } from './quality-profiles.mjs';
 
-export const QUALITY_ENGINE_VERSION = '3.1';
+export const QUALITY_ENGINE_VERSION = '3.2';
 const BASE = 'https://agents.useaiblocks.com/tools/quality/';
 const matches = [
   ['claims-review', /claims? (?:review|audit)|regulatory claims/i],
@@ -47,7 +47,7 @@ export function qualityEngineContext(request = '', kind = 'other') {
     precedence: 'Task and brand first. This method governs draft depth and family length; existing truth, access and delivery gates still apply. No library search at job time. A same-context review is never independent.',
     length: 'The family ceiling is a cap, never a target. The brief can ask for more. Keep directly used customer copy no longer than the plain version.',
     learning: 'Only opted-in feedback proposes scoped changes. No feedback is stored by this response. Blind evaluation decides method changes.',
-    final_choice: { fresh_context: true, clarity_below_plain: 'VETO', requested_artifact_first: true, requested_template_fields: 'PRESERVE', no_fresh_reader: 'Plain base plus necessary verified repairs; disclose SAME-CONTEXT.' },
+    final_choice: { fresh_context: true, clarity_below_plain: 'VETO', material_usefulness_below_plain: 'VETO', edit_base: 'Correct useful content of the fresh plain draft; preserve action and evidence coverage while improving structure.', requested_artifact_first: true, requested_template_fields: 'PRESERVE', no_fresh_reader: 'Plain base plus necessary verified repairs; disclose SAME-CONTEXT.' },
     assurance: 'Guidance and host-reported checks do not prove semantic quality, independent review, customer acceptance or business results.',
   };
 }

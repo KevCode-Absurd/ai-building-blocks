@@ -2,7 +2,7 @@
 
 Make work the client will use.
 
-**Version 3.1:** follow `tools/quality/QUALITY-ENGINE-v3.md`: routing, cards, profiles, clarity, proof and visual checks. Task and brand come first; existing gates apply. No library search at job time.
+**Version 3.2:** follow `tools/quality/QUALITY-ENGINE-v3.md`: routing, cards, profiles, clarity, proof and visual checks. Task and brand come first; existing gates apply. No library search at job time.
 
 ## 0. Frame: the spec sheet
 

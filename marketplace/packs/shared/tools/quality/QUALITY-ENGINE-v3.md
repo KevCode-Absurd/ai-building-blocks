@@ -1,4 +1,4 @@
-# The Quality Engine (v3.1)
+# The Quality Engine (v3.2)
 
 Goal: finished work the reader would choose over one plain attempt. The task, requested format and brand come first. Truth, access and action permissions always apply. All files below are under tools/quality/; client memory stays in context/brand-file/ in the client's own project.
 
@@ -26,7 +26,9 @@ For decisions, verify the core design before drafting: one question, a valid com
 
 ## 3. Make real alternatives at the right depth
 
-Every depth has an expert draft and a plain request-only draft. Full adds a distinct creative alternative. Team uses specialists only for parts needing different expertise, with one lead integrating them. Light and standard have no creative third draft. Candidates are actual work, never descriptions.
+Every depth has an expert draft and a fresh plain request-only draft. Read plain before editing: use its correct, useful native content as the starting base. Improve it with the equipped expert's judgment, factual corrections and structure. Do not rewrite a strong piece merely to sound expert. Full adds a distinct creative alternative. Team integrates specialist parts under one lead. Light and standard have no third draft. Candidates are actual work.
+
+Keep a private coverage ledger: requested result, useful action or evidence in plain, where it survives in the final, and a reason for any removal. Preserve the actor, condition and concrete next step; research prompts that capture examples and consequences; decision authority, unknown ownership and repeatable records; and reproduction details a receiving owner needs. Include these only where the job uses them. Replace vague shortcuts such as "check next steps" with the applicable action. Improve layout before cutting useful substance.
 
 Use CHECKER-v3.md on anonymous drafts. A fresh reader is preferred; otherwise label the internal review SAME-CONTEXT. Check the requested artifact, card must-haves, claims and core decision before polishing. Pick the clearest usable base and name only indispensable grafts.
 
@@ -50,7 +52,7 @@ For customer-facing copy, compare channel-matched brand examples and write origi
 - `node tools/quality/check-format.cjs <final> --contract <output-contract.json>`
 - `node tools/quality/leakcheck.cjs <final>`
 
-The output contract comes from the brief, not the draft: required counts, headings, links and verified field limits. The format checker binds its report to both file hashes. Check Markdown header/delimiter/data widths; every requested row and field must survive rendering. Fix every failure; resolve warnings honestly. Offline proof does not check live destinations.
+The output contract comes from the brief, not the draft. Require exact headings, column names or URLs only when the brief specifies those exact strings. Keep semantic requirements in a separate manual checklist; do not turn your own design choices into acceptance rules. The format checker binds its report to both file hashes. Check table widths and requested fields. Fix truth, format and leak failures; use readability targets as diagnostics without deleting needed operating detail. Offline proof does not check live destinations.
 
 Use --requested-template only when the request explicitly requires input fields. It accepts those fields, not internal notes, TODO, UNKNOWN or invented actuals. Do not claim that a template's future filled values were checked. Finish the hand-over check with the matched family profile.
 
@@ -62,7 +64,7 @@ For pages, layout emails, decks and image ads, render and inspect phone first, t
 
 Give a fresh reader only the original request and anonymous final/plain candidates in shuffled order, plus actual renders. Exclude origins, writer rationale and earlier outside verdicts. They check factual and requested-format gates, then the effort needed to read and use the native piece.
 
-Lower clarity vetoes a candidate even if its weighted total is higher. Choose the clearer usable work; break a clarity tie on usefulness. If neither is usable, make one narrow repair round and obtain a fresh check. Freeze the selected artifact unchanged. A later edit needs a new check.
+"Usable" means the receiver can perform the job without reconstructing a missing action, condition, evidence field or handoff detail. Compare useful coverage as well as stated requirements. Lower clarity or a material usefulness regression vetoes a candidate even if its weighted score is higher. Choose the clearer fully useful work; break a clarity tie on usefulness. If one is clearer but loses useful substance, make one narrow repair to restore that substance in the clearer layout, then obtain a fresh check. If neither is usable, use the same bounded repair round. Freeze the selected artifact unchanged. A later edit needs a new check.
 
 Without a fresh reader, use plain as the base plus only necessary verified fact or requirement repairs. Label SAME-CONTEXT; do not claim an independent gate or validated improvement.
 

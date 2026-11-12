@@ -555,7 +555,7 @@ export function skillPreamble(item = {}) {
     `BUILD: give true facts a new framing and add no new facts. Decide; never hand over a menu. Name the AI defaults you will avoid (prepare_job_context lists them). ${TOOLBOX_ONLY}`,
     'CHECK with a fresh reviewer who sees only the brief, the work and the captured facts: each acceptance test pass or fail, every claim sourced or not. Remove unsourced claims. Hand over the work first, with nothing internal in it.',
   ];
-  return { title: 'Before you run this', kind, lines, quality_engine: { version: '3.1', method_url: qualityEngineContext().method_url }, tool: { name: 'prepare_job_context', arguments: { request: '<the user\'s request>', deliverable_kind: kind === 'assess' ? 'audit' : '<web_page|ad_creative|copy|email>' } }, precedence: 'The spec sheet and the client\'s captured context come first. Read prepare_job_context annex.quality_engine for family shape, length, clarity, proof and visual checks before using generic defaults. Truth and permission rules always apply.' };
+  return { title: 'Before you run this', kind, lines, quality_engine: { version: '3.2', method_url: qualityEngineContext().method_url }, tool: { name: 'prepare_job_context', arguments: { request: '<the user\'s request>', deliverable_kind: kind === 'assess' ? 'audit' : '<web_page|ad_creative|copy|email>' } }, precedence: 'The spec sheet and the client\'s captured context come first. Read prepare_job_context annex.quality_engine for family shape, length, clarity, proof and visual checks before using generic defaults. Truth and permission rules always apply.' };
 }
 
 /** The craft floor: what the build must clear whatever the kind of work. */

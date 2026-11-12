@@ -1,26 +1,26 @@
 {
   "aaliyah-social-replies": {
-    "hash": "3aebb35614c495b4b80abf82a02d6ad180388ac38bec30cb405f401d07bbe604",
+    "hash": "135ce4cd6381151d3e16bb182b15e46a927b8d2ab293934918275a86a2db38cc",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "aaliyah-social-replies-train": {
-    "hash": "e901c20fcdee1a6f08ef25e42c21c28b35bc2c121493a0889a38b5c00082cf63",
+    "hash": "15db1e1f4578d48fab589c8288717433debfa95a8604c6813e7781081b42630f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "abena-instagram": {
-    "hash": "9c8ab1a74882cf917f2751a69d387b199a45d5fa95ba1e91647409845d062442",
+    "hash": "0bb2bcd2c880332eb2e14656270521bb1e850e9daf03d967cf446d224c2af3bb",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "abena-instagram-train": {
-    "hash": "7499285ab68d796673ea0a6f206143fb7bb7520dff06ffe21855153cf68124c2",
+    "hash": "7c165da0008b616f991bf8e43cd46df51c82d7c33ff733778e5feef1b0732294",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "abimbola-internships": {
-    "hash": "c18316e592d761d748f832dc3f7e013085ad6af0c9f7575a69f0156b1de745ff",
+    "hash": "7a2c5e0ecacc61e372769de206257183de8011e36310ba8083949704208044bb",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -30,17 +30,17 @@
     "updated": "2026-11-12"
   },
   "achieng-content-strategy": {
-    "hash": "522c5c092a4d089d4080a7316556366aac8d01bcfb794db7739e317b59a65690",
+    "hash": "de1c6e8e0a930d2bc0f9cc9e80811625cfdaed3f5a6344722417178390421dd1",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "achieng-content-strategy-train": {
-    "hash": "53c50b49ec17c85f4f0013dcb744cb80e968b687abdbfeff6857f40e6717a24c",
+    "hash": "84533cebf38bb70b6a5f9e15dc61752bdd388fbe95301c92fa593359da9f0370",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "adaeze-whatsapp-support": {
-    "hash": "eb6cd087d1c953d3610e58f0de6e29636d48b99746ee468c2148f30a23d3d7fa",
+    "hash": "31f246c37cf38447687c0e3512defe3cab10bf9e13d7df1ab84bb913cd68b070",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -50,7 +50,7 @@
     "updated": "2026-11-12"
   },
   "aditya-financemodel": {
-    "hash": "dfa86951b448f97ef89ef7eeeca22486a382b343cbfc6a5bdc44c73369ec1d51",
+    "hash": "090da3796746dee5aae2997ead74dde42e0db341de4875232d257ad14676df34",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -60,17 +60,17 @@
     "updated": "2026-11-12"
   },
   "agata-product-feeds": {
-    "hash": "de0dcd95dc893e8125620b0d2cf2e6690699356f13ed6868247e7c20b7e9fc20",
+    "hash": "0c9da26e1c4a1220ce8b58c2bd0f3e364bc82301bccac28053f49db0d1719493",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "agata-product-feeds-train": {
-    "hash": "0b8943d490c4a9759c32cfa543efc072b6a8feede7f49e3740746d64bae04ab4",
+    "hash": "8dda2510afb832d59f076b2f5edaa44f67f2aaca38a4cc638f4ff250e9893d5d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "agnieszka-business-plans": {
-    "hash": "d41b919f8293bd53b25474f29422fb81dee2c30824299f04feb16553700bd409",
+    "hash": "b400dbd0cb258594298544e20e28955b0f3b9ab9aff03b771bf0b48d27d906e6",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -80,7 +80,7 @@
     "updated": "2026-11-12"
   },
   "alejandra-journeys": {
-    "hash": "be4db2e3f85624e3bddb828429ffe24fcefd8e057f0cc9ac0e4eceac5fcd5f15",
+    "hash": "29b4ad6d35a877243c3121183264896968ead356e2b6d0f523066a08a3d1cd60",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -90,27 +90,27 @@
     "updated": "2026-11-12"
   },
   "alfonso-content-refresh": {
-    "hash": "d6335b6f690d7bec7ee597b0a04c8482ca35a7a0b949bd42e659ee095893b926",
+    "hash": "601656fbebd73d241c61f74dbcc74e2cb57c7134d7b7e004ec728a3e4cb884f5",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "alfonso-content-refresh-train": {
-    "hash": "51cf4c6450055039b3279551fd43db87de77526e21d8c71d0d49eaaf0da849c9",
+    "hash": "410bdb9e7383f16f702765c8cca4e5f21d9dc11c93da755440c53798b27fb04e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "alyssa-testimonials": {
-    "hash": "52511aac9cdc19f0d2bce850b74edd8488b1c18e1d731d4abfdb03b9d600c5f3",
+    "hash": "3a01894d5d10394e423da7a15cb665e4d51181829712bca148e6cdcce7ee1598",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "alyssa-testimonials-train": {
-    "hash": "5c699425f61056988cd4f41c667b7bd6881227daa924d06cfb58fc0151994d6b",
+    "hash": "17551bc621ec5d3aa65d8f4d613aea7007a45143f6b115ee21fa191e854a2253",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "amira-ai-features": {
-    "hash": "7687a5e6866342538a306175a06d20088aca67ca3a42196e2bb2d9c5c0a33122",
+    "hash": "b01bc43dcd78434d55daa4adb7ee566a65ffcf3f1fb005b3a7439c7fb6d8d481",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -120,17 +120,17 @@
     "updated": "2026-11-12"
   },
   "anahera-brand-naming": {
-    "hash": "900f081e9908ea7c937bd91ad11b5c0f74eb88715ab06e1440acfae8638ad420",
+    "hash": "50da41fd83ba3c9e6a3af37ab02c66b780fd6fda6e1106753dd6ddc554cfb0ff",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "anahera-brand-naming-train": {
-    "hash": "d0bd4277a30606e38d428075dc83342fc6d41c7ba46a7f7302fdfcf539c7fda6",
+    "hash": "609ab5cb2ae1bdb65ba26c72a2deb9e9904c87f9d7c3b1630ff7bdf3ef0549e3",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "anand-culture-research": {
-    "hash": "5b2ede76a73f4fc247e9a5ebf8f42a6bd1443e9f6c6b0e474074dbb3a7a66f0b",
+    "hash": "c7bb6cc5a7ec41e0fe4a5b1d39758451a500aa404189d436ba0a482f44ee2273",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -140,37 +140,37 @@
     "updated": "2026-11-12"
   },
   "anders-competitor-ads": {
-    "hash": "2bdf76532c1bf279f965790f9f2ceaf21533b0069fd3a8c23af03bcb8918ddd2",
+    "hash": "8d7b6325f68c15687dc511ebbf1b8cc1346cc409a1939ce64d5f7a08fa5ebf80",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "anders-competitor-ads-train": {
-    "hash": "b99c46bad4f68c746294c4e4b1eefef2dcfc58f6e90fdce16e4b9151fb7b0e3c",
+    "hash": "e807dd8d53cf19b3a2d945125339a55d4d77b285e678fbc45c1acf3ce7fad7ba",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "andile-seo-articles": {
-    "hash": "a643b5635dcac85e1c7dfbc202d361be033ac159502e34fe02fff78d7a81d339",
+    "hash": "2f2d3fa520ab2deed518d005cda664a3ea5aef4bb35bc2b9c4ad98eec794076a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "andile-seo-articles-train": {
-    "hash": "a6e4fea07850cb8fde35a388f4a3f5350cf0e3cc550438b0cb629075cb5832c2",
+    "hash": "b5469771a4fdd66512b070e1e0270256d10902eb29a4901ca688ca564df9c535",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "angelica-restaurant-marketing": {
-    "hash": "7ddb0a1910615323b568dffe04551a1e01461aa03e1b83c4841950b948accc2f",
+    "hash": "74c0646516d61a0447328651f78b39e184d99cafc4c0297656aab415709365e0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "angelica-restaurant-marketing-train": {
-    "hash": "07b533f326096dfa09529850979814f707fc63a8fa47eba17db89f184de2358d",
+    "hash": "a2bb5546485328042d7195b2794321910db2f3738a759827e8e82c19e34e18e2",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "anil-query-speed": {
-    "hash": "fb0e327738dfd25989ea58e089ea0327093e86c78c509ea39be448b6dfb78adc",
+    "hash": "3d898ac42a3b548fcad3f7a3aa78f4e9255b9f4fd511e25df2ea839c3e0d9ee3",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -180,7 +180,7 @@
     "updated": "2026-11-12"
   },
   "anjali-recruiter": {
-    "hash": "e1586c2fc3aa9979e05ca54257c7108e292ad2aac16a11bb9f0302ab7cad0a22",
+    "hash": "983f9ac80ff3fed51f7f41498fd7bd457998dbd3590058133cace53b7d781e91",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -190,17 +190,17 @@
     "updated": "2026-11-12"
   },
   "ankit-help-docs": {
-    "hash": "bc402d864f44dbc15d46f1e3e18818cb4715a80282fc3bf3bb417a1772dfa17e",
+    "hash": "13a3871a63256a2dba65d797c6dac2dc64371c4fa4d9e67d67b9f6c82bf20cc3",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ankit-help-docs-train": {
-    "hash": "ac31ff1f8c0af1415921a83ee16954db617dda5fdbde00fa89bca771295e79b0",
+    "hash": "1f9b1b1b65fbe7ab383d1c1d1e3d3a7f2e38021ad3d3bccb8ec61d02664c24fc",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "anneliese-ld-plan": {
-    "hash": "a99b9544276a3337b366926c7ef73e0939437f8183e245aab7c209390f31ec9f",
+    "hash": "e8ae27c336c4485617cf42992dff33d91ec0139e5b25cb6eaa763f562ff7898e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -210,17 +210,17 @@
     "updated": "2026-11-12"
   },
   "anthony-video-scripts": {
-    "hash": "f78bca28ff00fb82657ab8d5dccce3caf71d8f000d6e998cdeb3df08207e6e46",
+    "hash": "4f4f72852692847b0feed7d2d71bae12bbb0fea2581bc8dbb24ce845a2513a37",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "anthony-video-scripts-train": {
-    "hash": "79fbc299c32ac7074cd56dc7a2190ba290f1f4c2ad1f65a6e9c9c39c1d5a74dc",
+    "hash": "b9b4f21a7d0629e9845733c7d9aebe3e92b169c643f3010d4370c088429ee267",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "anton-docker-ci": {
-    "hash": "b7494ca9759e5c7ffa04af741c6631b6c1d99ade3c3a5be368d68cc2779be732",
+    "hash": "da03f6b452f5070708649166907818ab17ab8f00fb89875b6a5ceafcb0871542",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -230,7 +230,7 @@
     "updated": "2026-11-12"
   },
   "anwar-pricing-research": {
-    "hash": "7c38762803478a1a15a8fb8dc87705b8767d831259c2afd9c3fdd3c051ac7981",
+    "hash": "105d55bb2a21d43e6486334127778a1febb2589d1c859f97efd8adf0228d71b7",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -240,7 +240,7 @@
     "updated": "2026-11-12"
   },
   "aoife-accessible-code": {
-    "hash": "b1f2a08bb5e9880d69e7a5e58008093ae22d0a55596ce57fed207407c226eb49",
+    "hash": "fff344df749450c9cbb32ce13218eda13d1898898485d1c35a5ac0e21d495947",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -250,7 +250,7 @@
     "updated": "2026-11-12"
   },
   "araceli-inbox": {
-    "hash": "28770e530bf0a4246ce3b24780b3ebb4ea690034951f552f1fda643e190b7136",
+    "hash": "675bacbd11bcdac5225bee616756dc1ec1eeed280e92e39433f4a5cce58e14a2",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -260,7 +260,7 @@
     "updated": "2026-11-12"
   },
   "armando-contracts": {
-    "hash": "5045c2b3952ddd95e5e5fcd7a2821925579680f049ce55e36afb83391fd11138",
+    "hash": "ad9b34051f85f9e4ad9543df6ef857b1fd3961b72d413ec6b1816a3b3b783b06",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -270,7 +270,7 @@
     "updated": "2026-11-12"
   },
   "arnel-officeit": {
-    "hash": "5a374cc7d5989dbc137fd43a0e7694fafe31f297695f3a29bce5367578e0c8b0",
+    "hash": "89ab4b57278affcb495f3a1d7a50fbb92039bdb15051da27c7e56f509476948e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -280,27 +280,27 @@
     "updated": "2026-11-12"
   },
   "aroha-podcast": {
-    "hash": "b358eebe4ec92d338a2d1097cdd0f01240e922571956de6e586d40b1ebcea910",
+    "hash": "e55a0a223f8cc734467169c498d4b8c891bfc41bb94318529b1254bf62bdda16",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "aroha-podcast-train": {
-    "hash": "b4637d31ef537678c9c683a06edef500e9da6b8fa989a36ea43832edccb253f0",
+    "hash": "c0146d8f22de6aade8de0f8ec0588d208010946775eb955960b3368a467a43c0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "arshad-positioning": {
-    "hash": "b64a48111f3fa3f462d82cadff375949ba9c8065af409f2efad47cd2dbac9a92",
+    "hash": "40871a87683efc2406901fda0b009c56879c09ed605c0fd54130142911ec56d6",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "arshad-positioning-train": {
-    "hash": "5c3eb3794814344012a2c09a907f984e34631f49dbdae27d611f20a98c906b6c",
+    "hash": "cde8c5d2a49bb92e1d4350cfe82ff338d8cc7bf8c891749fe8d5d90980819771",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "arturo-cloud-costs": {
-    "hash": "4a6b87851b7c3676deea482536bf2ca1d7927c2c7bb617684cb3c51b40630fc7",
+    "hash": "d4765b43cb4bd0ad2fba096f6587360823bcb939f81d3c4cb46321a026566860",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -310,7 +310,7 @@
     "updated": "2026-11-12"
   },
   "asel-system-architect": {
-    "hash": "b0ad4b6637c8fd29d503374bfd18d774a9a13aa1f8aa494a88a881ce93640cc9",
+    "hash": "266a08377570bb571aecbd3bd152056f3634571d94098e8a74c757ad0225e7bc",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -320,37 +320,37 @@
     "updated": "2026-11-12"
   },
   "ashraf-reports-ebooks": {
-    "hash": "d74584ea91f53465ec760c876d48a76959fb4f9a6b09250c128eb01cb1d1a4e6",
+    "hash": "e400815b197b8eec7cacbe9ab237ada7bffadacc6e47ecf9372a9eb632dff7ea",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ashraf-reports-ebooks-train": {
-    "hash": "40d91c90f05c3b91c91a55016d49b255e743e230180f1dd722d4b9ab4916891f",
+    "hash": "a7542bdd9527fadb0ed68feb9d64d94a71cae5f12674086746ac9cde9fa8c7fb",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "astrid-ghostwriter": {
-    "hash": "224b49c815015a1d0dde34f02150e6c20b289b35ebcea2bc675de255b00ee25c",
+    "hash": "6700e01621eab7acf88d2edb908d5c9ad6ff44ecda34be557550593ab83ea2d3",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "astrid-ghostwriter-train": {
-    "hash": "0f034e226dcc0a8745f89125804644f6e53f6f980570bfaab6dd44abd7c3b9f5",
+    "hash": "aaab0065c4be81d7919af85a0bd0c03c9987745ef052e8dbad76288c04840677",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ayumi-brand-voice": {
-    "hash": "c963923ec9539037b5796792ef4609acada6ddf97d68e774e7f6f427b0f7b9c1",
+    "hash": "f23eac1fc602b0091e7501319ee19a0610d367c71674de8e532a4dd00f02071b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ayumi-brand-voice-train": {
-    "hash": "32b952bc6380ed0e4e56535c9657f1385f4b0e5bbf4578afd8967e3a8f4cc01f",
+    "hash": "4974f5b705086744c2335237b29547a303599f42ad0b86c2bd45ae2f663152c1",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "babajide-power-platform": {
-    "hash": "ca4f3307ca305fe6d9e5c98c96f7d58de95979a65fef28799c3b740d7a708a42",
+    "hash": "4ac5f97554b67b78b524b5badb88c3403882626f0821c430229cdea129b973e6",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -360,27 +360,27 @@
     "updated": "2026-11-12"
   },
   "bakary-ai-search": {
-    "hash": "e6ce5d501c4c40442752ff35dc714884d9b5b749cd80304bfef1b11c5e167577",
+    "hash": "0281aaad8bdc18908394f089263e87e4ad7161a240288bdcf4bd5aad7e492af2",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bakary-ai-search-train": {
-    "hash": "2b465c767168a756c6c6197963054cda76c6c07510d3f4020a16c6ee1a040168",
+    "hash": "dfc5bded42565973dc9652244b5a9d526408d74cc0be3a88fcdb88ae5bec085c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bao-website-copy": {
-    "hash": "18d2cde89e611c1cd8fb62b694127d2918d749b24e77137f6ae79c22fcc7ed73",
+    "hash": "2614235f9490913695dea50651d8643ac9d67351a89dc8801fc0121eb978a49b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bao-website-copy-train": {
-    "hash": "e84489b846ea7c0dcf0933a1bda0446388be60b32f160ee63390fe6f19333a3e",
+    "hash": "8fcc82f1b7ee0a07937c2927683bd22672565263fb1a63e771e6f7590f28ca66",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bart-legacy-refactor": {
-    "hash": "6ce93a64cceea2ac96828b384588e0083a72b6f7966c7acf85cb29b959338e48",
+    "hash": "fba088a0893905db404aff0163a2934077c8ef6143c32816fec08917eeaa6b51",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -390,57 +390,57 @@
     "updated": "2026-11-12"
   },
   "bassam-talks-pitches": {
-    "hash": "46d1db88c525b5a1054d7a218aded500529a3b87cad997cb4e071b41b5ea0f24",
+    "hash": "745e3db39eddb591100fbaeadeb9be7a2338d8955d86ac40a3c39b37f8d6fee9",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bassam-talks-pitches-train": {
-    "hash": "ac6618f563acdb31ccb807206fee34ad0f7b4806f03476596372b90b6d36c6a9",
+    "hash": "f2837cf1787c113197794a440cfd02bf5cd977fdf7c36ab10d81a03fddcb3429",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bayani-retail-shops": {
-    "hash": "dcb73883e45327242886035f9f5a091008f058b5e8b25f7be2c18c461cb1d07b",
+    "hash": "dde4dc3c87560f86a5644f545f9043671544f7f2ef05953c50e030b571574b8a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bayani-retail-shops-train": {
-    "hash": "9fed1059d0482b8a3a165f780920660421271364fede6ec76bd1d4e20a2e38f5",
+    "hash": "5023f25eeb0481ff7dd254780d0fa678c808e03d5dc7588cdab52076b72676da",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bayo-press-releases": {
-    "hash": "6653bc561804a85a69748c7672c243a655e53aa90e286134ada8c4ab8a499787",
+    "hash": "a96e41817d683d19eb59cfa4e11dace3e5e117f01763306f39b9d15f09a9fb0e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bayo-press-releases-train": {
-    "hash": "16dbd66823ca6480ce394ea1d4224786341a20781019dd709ffb61a6a0df550e",
+    "hash": "9c85d3d6aa057a96fb0e3e0684221fbeac0acbd1fd37d3db54c5b4a109a47a87",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "beatriz-local-marketing": {
-    "hash": "0607ec80d2bf5ecc085486e2ec0253fb763526b30362940db5aa1549271aa20f",
+    "hash": "0ceea4ae482fed9189e7fcb44d5a1f7ef1d7f3667dae3b4212306ba34760f3d2",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "beatriz-local-marketing-train": {
-    "hash": "2dddbeced5c85a92bdd961a9e3abdd2e5486647c51fc28cb0a19ed1197d80806",
+    "hash": "cb5e0cb3d3387701900263a1703bcb35e730dd2a8290c39201d725211902fb69",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "behrouz-translation": {
-    "hash": "0f3bc2d0fed89c2e8f32c606bf451d6fe5c3f5c8049dc1c738924da9c0157661",
+    "hash": "929c1fcdd6e4c67abb1e24eaafc3315bef1e5c03720cbd3c222321b7b1c96c5a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "behrouz-translation-train": {
-    "hash": "b10b54069a2c59702f0706d4df32483a64b844419dcf599560b99e3228207642",
+    "hash": "9fb64b9d3cbb22b09f4c8071659bc8e6de1fe0be4b866c6f01a81e4992a19118",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "benedikt-org-design": {
-    "hash": "15f60443cfe68e797dfa0f3db7a459d3f04dd5f6763cb7c967ba06077680f9a2",
+    "hash": "d39be153008427e8458ffe8ef6f5e359187433201bc29973e15242d55b7ca3f7",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -450,17 +450,17 @@
     "updated": "2026-11-12"
   },
   "bernadette-moderation": {
-    "hash": "ff5b3d78128a32bc53fe20da9da1dfb3a70c00a117e3df83f2f4acb949e1cec8",
+    "hash": "8e161d911f2e0be5eecd52532ccdf6fe5086b459e4541ddcd9423feb6c98b14c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bernadette-moderation-train": {
-    "hash": "52d3619105fde6a848c7ec6d02ce9ac5a5c6fa5985b2c5363c3a5df3d442c0d8",
+    "hash": "490c551c24ead4a8c29aa145dbf93fa55c4fffe798cae1954cccf62c0dff3f3d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bethany-lead-scoring": {
-    "hash": "838d899988d68514ef8883cb72e85f127f0e9ac1aa4f4e167444ba4986c452cf",
+    "hash": "3c86d7b15f083f168a6ff8c8ee7e3cd9fcf1601404b97f2ba3ab329130f713b5",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -470,57 +470,57 @@
     "updated": "2026-11-12"
   },
   "bettina-comparison-pages": {
-    "hash": "f4efa1825f356b13ef8d97809d4d3a2de48e1cc865aa5c18a35a5f70550773a9",
+    "hash": "75775ffb12044cceed410f04f1a51f65d355da4390352d1088061d08ddcb4a13",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bettina-comparison-pages-train": {
-    "hash": "962309c56e2719e23a1825d313922380d49cd90c1a80e411930cb703a6555580",
+    "hash": "10573a8a7e022a8fa3fd3bd20315df5ee13620b742ab4598d3b65430498984ea",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "beverley-editor": {
-    "hash": "ddc8ea10485e416d0c1a82f5bbcbf7cd44902dc8478f5246389659e8e6474060",
+    "hash": "6265c10e47da0d759d2f6961aac351960c6a1849f4d732524010e5c5526166fc",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "beverley-editor-train": {
-    "hash": "36b35d5542641933a4f6c80e498dbc68bd9c2e85668f5d3926f627585184482e",
+    "hash": "97708b0bd0ef36fc389b9810b8a3d4dcbd43c9ca1109d2c5d3554611bd3f2a73",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bianca-meta-ads": {
-    "hash": "56a5007888636c1c3edce500e5af8e9388fb284d9232a49d0ddef8e21d1ebb50",
+    "hash": "5a4aa310b29c9a3226d1c00857f82da2ae96d823a4fa5d19a11abc2cd518c3c5",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bianca-meta-ads-train": {
-    "hash": "087a9fa2c434c4a79c61b499cd4d1420e1dfa15b24e38e13302f6703b9f92a22",
+    "hash": "5963b97a1173c1e721acd4ccd105847dc11f3027e96cc557395a3287a6efc5d3",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bilal-sales-letters": {
-    "hash": "665bb71732c0bd6de459bc76dd868c541ec348ea60288dbdfc0a9f0bfeaf0de0",
+    "hash": "230cf2f993b050c41ea471c145b1ed47e219f1c606696be5bda0e1b9732dc017",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bilal-sales-letters-train": {
-    "hash": "889f2eda945793418457ee911bcc23ec375f225935230a003873760509ce61cd",
+    "hash": "8972e61faca801a1c3f10cb5e6608c550647d22460c3e8d5d43fc78a874a9bbe",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bilge-presales": {
-    "hash": "a307a380dac7dd709540059d6834df2a559a55e63005ed9915eb947eff3f987b",
+    "hash": "f31e24cbeb649aa1c93a38c60a07f85f686760af969b0d874d79621b937594d7",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bilge-presales-train": {
-    "hash": "3612b453201dc3e84058f1520e994f8718a6a8fd601146ce4a407f6bf08c8e67",
+    "hash": "3d6a8bcea01b14ee6b8e90af14ac25417b42fba9cd6c9f86c753f49b43dd6bc8",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "blessing-clinic-marketing": {
-    "hash": "0676a8df2440e690a45fe1d7825793229e4492a763c294fefe91e4a311c67848",
+    "hash": "0321af4b3325280b928b35550d7494b9be7665b46ad0dd6aa1513ba0326603ba",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -530,117 +530,117 @@
     "updated": "2026-11-12"
   },
   "bogdan-marketing-reports": {
-    "hash": "e15832eb22a41fe3545e5425d5dec5061ea186059fef6dbb2da7ad70a326f8b7",
+    "hash": "b7ae5425f2407bdcbe80c7cc5656cf8eb24845c221a62a6dd946d56cf0076a75",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bogdan-marketing-reports-train": {
-    "hash": "5de42c76daf0c5b71d350a2b4afa5e924e7758d3a756521d72ebb8fd51cc74a6",
+    "hash": "06c7c7b907a9a5663273aeace31bb909a4e9c7295d8f4127e34c19eabf3ec1e3",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bojana-link-building": {
-    "hash": "e294400da3eab231484bc84f1273030e37e970da95b405e8833edcf348a80f21",
+    "hash": "4d484afbe8cfa308be3de5aef7dd28cabc81c5a9215e3168204f4d94046bf3cf",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bojana-link-building-train": {
-    "hash": "3b633193a9162fe9e54d8863ec6341edafdedf336a51d1d8afb71d72013eb291",
+    "hash": "a2f36d0fe5114c172a52eb21f4f9e42a98f06d1ef463127d4a139f0dc62128a0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bongani-explainer-videos": {
-    "hash": "71fa8141c176e47b13083ebf14eae4a21aeb3ea239f5761b409daadce41bf619",
+    "hash": "e0c48a0942f13f1378f30cf21af71438995e4e3fabcac896812b1f60510e57d0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bongani-explainer-videos-train": {
-    "hash": "f9e5f94194a21a9407cfcaafbf5d51bda6b13576477d4e9c92e6cf96089234ed",
+    "hash": "a27aad715f5587de0994c9d67068d3922e00fdcd27c042319856e08683caf19e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bonnie-traction-local": {
-    "hash": "aca51a34e4317ec261ac0233cbdfb6436e199a34fc884736364c26dd104510f5",
+    "hash": "4118b361a9f5f070de095af4e2355445da1c36e366cd31e1852171bed40a5f57",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bonnie-traction-local-train": {
-    "hash": "2cfc0d8f39bcfd0410c39e9d8f6f03932195a1296dac1d2fc33b9d1788247c03",
+    "hash": "4ae8e3f0236ef518e7fa706e5d6509be43dc7709986b1be7e817ba7699485ef5",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bradley-sales-decks": {
-    "hash": "e6e5835624eeda9ab57a70acef08a05d763a84b64833bea99a8d6bcdd5db5479",
+    "hash": "3536c79425dd3f0c3114ff3f5d5906a3556fdd51a61d867d658a332a76bcc7d7",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bradley-sales-decks-train": {
-    "hash": "a02c01e77101d650cdf799c3d3a7058ad7f38a0a3d4b2b791d04daf8fbe5bdfe",
+    "hash": "61d68a41ffee5ee1183ccb3fc1bf234639447d4943fae5f13ae6d9221b4a6e60",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "brenda-reputation": {
-    "hash": "fa394d701e5b60fa1937d62ee014e5466d59f0a62a939366ff99cf070f9ab1fa",
+    "hash": "9da7ff91659a1a5510ab5acd03c6df086be8cbce6bdb5ba59a504f2025a4a149",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "brenda-reputation-train": {
-    "hash": "7f466c87b7a48381e77386fbbb67d5404893edec27dde0e77bb8062299f67330",
+    "hash": "e15de0f4c706a978d16e02f662143026bc071f4621f1e893ff759fec589e2c4c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "brett-meta-store-ads": {
-    "hash": "f435587995370f0a1ea06b9e52a49af82972d5632d70a690f4bb2b578cfcfc80",
+    "hash": "c0ab05f976a7bb070a88f3059f9ee5a54750876168801e694dcf78b07f197688",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "brett-meta-store-ads-train": {
-    "hash": "5fd35e65b5ed5b723d2bae92ea50979f1370c3444071ed7075756e0feeb4fe00",
+    "hash": "63376d734b6ade5bab028daa6ec5ae1927a4669bb7f0d200cd167cadbf0ba618",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "brianna-youtube-growth": {
-    "hash": "ff44e11de1ebf59c51e691ac3e55c352afd81c561c03c6959c7474932e824859",
+    "hash": "e10681425283d8935d24b0e1c1a1e85f53ba9e6296b404af6c224cfb1acd29bf",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "brianna-youtube-growth-train": {
-    "hash": "ae8c271629c1611311349c2a699a168f8800a2aca5943c5a0c1898745588e480",
+    "hash": "9957c04b248a1b7edf447534d3ac5d2838a7947606883319e71ac5d4bd0726d7",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "brigid-nonprofit-campaigns": {
-    "hash": "f17ec73ae0ef9973843523e4d712102abf88f66dcfa9cbdf462aadcaa9923af8",
+    "hash": "a4fca207a020a5b89461f5d2f29ed90e648a125a9b7d40d812893fd4d66463c0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "brigid-nonprofit-campaigns-train": {
-    "hash": "99af5b3b1e22f5df341570faa97495e811f76eec2330f26a7c3eaa43711b043b",
+    "hash": "2ad55e6b090f04ad2595b0d9fa40884e31557a919ab12071157789bc3f09ee6b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "brittany-image-ads": {
-    "hash": "905f0b8b49f8b91b0646ed94b9482eeffe607e1ef831615f235d399f0e9fb16c",
+    "hash": "5db4e66858f24b699d26cc1da072f6237d8d30faab3a432f4473eefa77104db6",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "brittany-image-ads-train": {
-    "hash": "9af9c302be9bf2c726389f16e2fc53899bb82809bbd87fd3f9c54446469f54f8",
+    "hash": "b3eb5c19a177e15992a659447bdd2c9d80d7768326369e938f8b2b203b91a64a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "brody-van-livery": {
-    "hash": "9aa65778e088d9e6fa5bc1e926262d4b2d4042aa69df15a566f3efc4a48a9d27",
+    "hash": "1be9f07a76fcc1a61930c563e65093077f3b0f7d466e0649c5110e6eb29b64dd",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "brody-van-livery-train": {
-    "hash": "30b2f1aeed60e87ab7a963d787e2a5a8d4d435bfd4a25fe8122117de10acf1a9",
+    "hash": "97c4f039c02c8fb1753ff5ac0caea7f87a148ae6d332f1d35a219f3dca9bb524",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "brooke-ui-components": {
-    "hash": "6d7a0232eda50733aa43cb769f93cab1c33f1c9969559547a6bf492b04db2398",
+    "hash": "f8e765c3c18ada1a54b0d67259f53dbf5f0f99b503c81bf25bd604fc8639f206",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -650,27 +650,27 @@
     "updated": "2026-11-12"
   },
   "bruno-ad-copy": {
-    "hash": "4bce3308ea22adc1273e4985492d8fc240a9dc1bbb91e117d1a8fbba164c54dd",
+    "hash": "2dc976fb341d75af29ae0b540faea85f358e43a6f74d7a030768f4829175ca11",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bruno-ad-copy-train": {
-    "hash": "3e916e175b9c09238485e3544300e56dc6f5659054ea6892f0b8111a72fa49f3",
+    "hash": "2f5d698970f960be870a55e43e30eca6510c079b1d9e285380b2dd1de37a7b57",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bryony-video-ads": {
-    "hash": "497477d1c06412fca799d174c7382bb23b27cee638b7e2b80458d3102c1931a6",
+    "hash": "768f26ca14d0342e0a3c36aeb1339cbea63e7b78659a1dc88f78ff2dab50ee18",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "bryony-video-ads-train": {
-    "hash": "c1825600f5a7c9cf0624407cf4f8c9965bcaeca56f93556e719eb76602c46390",
+    "hash": "5a4c129783f3ccaa2cf50281436ff277f5deffc278c5bc45c2301232d00b46a1",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "caleb-email-courses": {
-    "hash": "f5380a975851829c92204d0eacd9d6b299c1b4544a8d3bfc040b15a1c9c6adb5",
+    "hash": "dcb3ef56096c63d4463ba0517b64407153df34a4d9dfad37bb29f05bbdda8ca9",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -680,37 +680,37 @@
     "updated": "2026-11-12"
   },
   "camille-traction-ecommerce": {
-    "hash": "e110b821417e80889104d786b2d5c3189581b8c51621a7fb252c053f6779cea3",
+    "hash": "f52e22d26495e045b83101fa4e8ef860c9d79d499b6121c796bc83c60a4ce0b2",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "camille-traction-ecommerce-train": {
-    "hash": "8c51049f00c937d46c87e1ec81641250fa7475617cc188a36300e1a5037a033b",
+    "hash": "829998947996a1eb83b5758442c0a35dac6cd916359923124cc57f24ca291722",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "candice-email-marketing": {
-    "hash": "e41e4343cd5cf2eded5c35091e510b08ce941a578c6430072ec256c90d6e09b2",
+    "hash": "83f7624dbb9dc317d9a61a40c104802e67a8f8396fb84881ae4cc320b7a19421",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "candice-email-marketing-train": {
-    "hash": "eaf718a20c80a99aef5c783af0f3d3f5779054fe79cf3d48f0a0c6fcf4e689fc",
+    "hash": "25883a5d9670e4ceb2c508c1b73e2063ea2b654bd9fb376f0cbffc2dfc505d9b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "carlton-commercial-accounts": {
-    "hash": "eca2b871f3396b27cea76f7da3d09b758322cc8db22770e4d1365a5f82d9846e",
+    "hash": "bf1f473075fd37bd9786e1a42e0422e8eaeac47e501f4f72b51c35dd95cd3562",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "carlton-commercial-accounts-train": {
-    "hash": "386d2892b979de957f54e17da7ad1b104ec99674eb772ea029aa56272101da7b",
+    "hash": "86228d8709ebfbc8e3705af372c9e406d6656bfd69fbe4e85dedae0c05b79208",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "carol-excel-vba": {
-    "hash": "ed29358278f64b40cc221f3e653061e72928a6db9ca348f76c4f7386dbc291a8",
+    "hash": "bea00a80312191f91a44c94fc218a9cb77f85c54df1c4dff15774a19ba908ec8",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -720,7 +720,7 @@
     "updated": "2026-11-12"
   },
   "carys-wp-plugins": {
-    "hash": "1e4081e027f88bcb16350af28d9fcb769ae70268cc77aedc1a542341231b0f23",
+    "hash": "b54d8143c959c97342c27b5a11cdbb0f2a7e3025783435d131698543de6bb75e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -730,7 +730,7 @@
     "updated": "2026-11-12"
   },
   "catalina-nocode-automation": {
-    "hash": "f830147d9db6e76efe9e2620f0acc3c47b557a904a60a3ed38f474211de8d76d",
+    "hash": "ee076d359da1c177790c3f325c2060d583670c32bf55a68d7291999ed6d2c53d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -740,57 +740,57 @@
     "updated": "2026-11-12"
   },
   "cedric-marketing-plan": {
-    "hash": "c32f834dda6a47d582a75a7be61059c06c73c63744c28717a9c50dd3aa7d2c9b",
+    "hash": "d17ea9a54d1df9d257bdc2f8c125b7784d3adb26aebe988808606650b90faa63",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "cedric-marketing-plan-train": {
-    "hash": "b857dbec0690f0b55ecf9e87a7481cb3148c2cc95181e80f4fca5f0153f447a8",
+    "hash": "04e5c2f6f7bf76e51f31add0c95cd962679378b4d588e2aff0fca241cf865b5c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "celeste-case-studies": {
-    "hash": "62bf176b6c34a77de01e10a027a34d500d88ef680c09b281987cb93679722f40",
+    "hash": "0c42ec9006a5d862cf9923d789758edd5b0320b5467b873cfb93ba1b1daa1909",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "celeste-case-studies-train": {
-    "hash": "97432bb846781e6a826471701a8552ee3c8137184605c38d6f9cbc5458fef33d",
+    "hash": "756479c7eda78a33c8da4ae25d1d69c4c99f7d0ff624bbb0b53fd3f2e686e146",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "chae-won-ui-design": {
-    "hash": "78772c4d25a8598d9eca619e1b8ead08b0e3264a14035d40a002c28ed5fd8fb3",
+    "hash": "1cf5ce6dc9e73d1ccb35cfadf6af6da4eb70e19498c08af71056a6242568ea79",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "chae-won-ui-design-train": {
-    "hash": "0c55cabe77f168f7caabb848b3b2ea7e9b9618671e525e219a28cf21d11a795d",
+    "hash": "12a02fd52dc6a6c9a49d127fdc2e93322ce7a673570ea96a5a2aecdc31424bc0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "chaminda-technical-seo": {
-    "hash": "f7953e78dafb72628bd4cab854eeb89bf8a6c453b9025295376b231b64da7ab7",
+    "hash": "158f9f4ba175945ad66bd2c37b57bf8f8067efa4a5df62d5526e7ffe0839703c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "chaminda-technical-seo-train": {
-    "hash": "457f50ff2b9b993949e5167d9ef2525cff7dc05aed8a4731b25304c96c40f34f",
+    "hash": "1c6e90537d2a6d62df05a2edd566e8ec7bc031a1ac10033d8088ed1e86edd1cd",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "chanida-pinterest": {
-    "hash": "361545e1a3d368276633e42e5b7c4dd87b38dcb43eaef5e1fd996adf728a7f87",
+    "hash": "ed7e18e4e5d30930fb3c5a6e648819f3799ea5aadfa873b3661a8cd8c9c61b22",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "chanida-pinterest-train": {
-    "hash": "079d00061792ee4696400d266c7afac29a3b748d64a883bfde93cc3443b6fb57",
+    "hash": "730d3592fa2215f57de529b81567f6ef2a49270eab4d3f8cfbb1f703b1b22916",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "charmaine-transactions": {
-    "hash": "67445cd493dd1e00c20691375f4d1bbe9626caf249fedc0af4b91a7c4b36bcb2",
+    "hash": "4707c184dc2c124950de666983acc65188af4e3e3fe52249a4ea3366ff644e2d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -800,17 +800,17 @@
     "updated": "2026-11-12"
   },
   "chelsea-creator-partnerships": {
-    "hash": "a5b188a34d7a0fbe8e4c71db10fcf18c788936d9053d837ea4ac6f25137a96cf",
+    "hash": "659ef0110d9a0e9b2b2465891d3ade7ac567a05b557f201b7bf59bee7414100c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "chelsea-creator-partnerships-train": {
-    "hash": "3ae7196e1f4ad19baf18ede99e1fd60a600061bc363baf54ed3676c53654ccae",
+    "hash": "f9ce6a38717c25ca27c68e3437dbce204324b88d43a7b4a256d4deea665283c0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "cheryl-market-analysis": {
-    "hash": "3b0dd32ac07a6987746e3369d16f1afed43f633ed50cf641abcfde2d01aa03c4",
+    "hash": "2e451f4c0b02972117bf2ffcbb7349ee7ba599ba934fb0dc630e3b5f570a4441",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -820,17 +820,17 @@
     "updated": "2026-11-12"
   },
   "chiara-newsletter": {
-    "hash": "a71a18cf7a8f96119e2658e68e78e8d96923bae6af6925dde7312c63a90e5dad",
+    "hash": "652bf10876e65a7254678caa4e28dabfbce4988f8f3676eff7bf771c12252b78",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "chiara-newsletter-train": {
-    "hash": "1a11177be558d199952a7ad2c823f61ccb33f498ccfa8c90b303a1bac5aaa3f2",
+    "hash": "a7113a693bc24c0e516747e0f3e3fbec96f1f350de84b1ebc9ce9bb2374520f0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "chidi-mobile-screens": {
-    "hash": "2b329bfe033a8795ebca8ab456dab2d6f3f196d5df6bd008070c1c3c13391154",
+    "hash": "4f1d5181c40905a376ec23397ccb9db0d9db4cce05f3e63cd8da4b5380f289c5",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -840,7 +840,7 @@
     "updated": "2026-11-12"
   },
   "chloe-unity-scripts": {
-    "hash": "2f4bbb43011a38f1bab18dc4082ce3e372c7c4c26985cd64f8d157ee46430c4f",
+    "hash": "73265898d809b8ef3d924d4f2cc0ab03a98f2d93f83e6707541c62e83080b4c0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -850,27 +850,27 @@
     "updated": "2026-11-12"
   },
   "citlali-print-copy": {
-    "hash": "338345a424ba686a7bb2efb464d35cb6fa2eb49e376a1b6e13755011816b1bf9",
+    "hash": "d8063eb961a0096c39b082efb91ef474470192add2255987ddad13526c70ab5e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "citlali-print-copy-train": {
-    "hash": "7a49566a4f24db021e0f3535375a022342e585ea7c38d679d1eba15f6fbb657d",
+    "hash": "19ca2872f0277f7084262c2999b14e9b8e6063cb6401732a3ad8f6a35e6cf763",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "claire-proposals": {
-    "hash": "bb086e70aea6dde51e88aa85b261d0b6b1631df905f1b3df1af56f8c0e1e0430",
+    "hash": "dae3be9cd4cd71b854834c02d19f8f271b8805d1abee66fbb044dba6b1133bae",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "claire-proposals-train": {
-    "hash": "e10c11d1bb14ca3291333cc97249b96b512d2a16df62d741f23bc702776348b3",
+    "hash": "cec3b85a5f567ace773010dbf40521c450f7b87d7e4f83d4ad1a7b8e286c6021",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "clifford-business-systems": {
-    "hash": "5e34017c215135d0904d044680ee6d39a272944b3424fe39b8b62d0c6b9746bd",
+    "hash": "703c89189fc96ff558d29252fe703ba4aafd3c188babb99c30acdade1722a14d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -880,7 +880,7 @@
     "updated": "2026-11-12"
   },
   "clive-maker-projects": {
-    "hash": "4d522a305e291f458419ec3bbf49688cf7d9ebc93d273880cbd0e629f08648e7",
+    "hash": "21671a79cacdea61b612e6ba1b2e89df438393fa6387c635f0f4ee17911e5efe",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -890,7 +890,7 @@
     "updated": "2026-11-12"
   },
   "colin-workspace-planner": {
-    "hash": "9a63e90987bf13b2b3e5a81ddee22e9545553fef83cec8e408d1747c692f788a",
+    "hash": "67a8e9cfa99cf29fa7d95777257e46008e59a9d29ff1378bb8fa1d46ea0e1fdd",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -900,7 +900,7 @@
     "updated": "2026-11-12"
   },
   "constance-mentoring": {
-    "hash": "9635bd709fb1bf4fbce77389d07465dfa86700cd3682a48272c68d904effdfe9",
+    "hash": "d84e72b07f6c8741f0ec29d27840541c3bad19ee56a6752f3dc55f26c4cd3dd6",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -910,37 +910,37 @@
     "updated": "2026-11-12"
   },
   "corey-saas-growth": {
-    "hash": "daaf68491881ed963308712ae85ff9daea8a9982fe0875229d1e70d359724d0f",
+    "hash": "43bbc3167038ecb64aac7de1af64f0c2b08feda1f75f9ccb777df495e677dc41",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "corey-saas-growth-train": {
-    "hash": "440fe90ff41b7736749a037193ffeb5a36fc4d41b1781191fbaab990277afdb6",
+    "hash": "64c2e5dccbad1bca03b6359e353b28bf10bd8d1d41632fed060e45dc27ab0ed9",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "cormac-linkedin": {
-    "hash": "4c1168cb9d6e015fbf01c067435b502ef52f8656257aecb3f8a3d197f6d92ce7",
+    "hash": "7440332cc611f91c42c3bc2b239ca0341ff8736386cea8fa4e2bc30d4d124aa0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "cormac-linkedin-train": {
-    "hash": "84ec5af3cb5b8ac3c364d03fe4d6406f44f7c2655b7b6517315dc17d4e6b91c2",
+    "hash": "f635395dd6da259fe848b0a9464e6f9ddd84be8875c0c4debfb3baa239b2005d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "courtney-local-seo": {
-    "hash": "bae04151b50611c68426485c902454f90aae306cd204faded2aa8b259bfc17ac",
+    "hash": "a0c7025f11eb217966cd6ab95f157da9873d11d15b04db855520a080094cffff",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "courtney-local-seo-train": {
-    "hash": "dfe915ba80acdf08f2bc1cd74ac66a94c49510f95a93d692f0a7b9ba1978feef",
+    "hash": "451e68d5ca0f578f5a53b650b5adbde7cc4f776abcb7fb1d26b7c2231801a702",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "craig-trade-shows": {
-    "hash": "9f296bd404e58995f888a9573fbbd6a60e48563369ab3bb9e396a5b52d7c2c5e",
+    "hash": "543a6222d34edcca34c9ddfabbdb6f83731d867517488f5e7e7501a7a8097979",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -950,27 +950,27 @@
     "updated": "2026-11-12"
   },
   "crystal-coach-marketing": {
-    "hash": "e990fd7369f18848cbb3d550ffce7cf4ff8fce1b765788cc1de7e84b402e7db8",
+    "hash": "36e03d1f0351285c8717b6fa9a847f1073356dc083af3d931e101700941389c1",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "crystal-coach-marketing-train": {
-    "hash": "aaf1ae79c8e32f15ae173e892eaa0ea2c175138fe92105b163f89ab2dbafd65c",
+    "hash": "602cbbc3c30edfe142991a3a4d9a7d741e27ade54ce4bbbe5c3272827a946cc2",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "curtis-podcast-guesting": {
-    "hash": "f7cf85f25c25eab8bd1e0bd53b171f741ef435b96c09c254a553b0419a73c64b",
+    "hash": "af7be91ef002c2dcae73f20f0ac48ea390f46c22204bc4113c8d6a37c3fc7066",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "curtis-podcast-guesting-train": {
-    "hash": "e1915c01e33146357afaa89b3149df01a7e71c227765900d1bea732a8c542cba",
+    "hash": "3a3c10c02d1ff19864b405ac37f5102775adbfefe890f172149255420ba44983",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "dagny-test-writer": {
-    "hash": "2b7423299e08ee3045a2c2a6e9ca5be28561224f57c0647a355518a4021b4857",
+    "hash": "2f97e80828d5d45561f1c20707e5a8da8173185b620fa24cee88665a0c2b9b94",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -980,7 +980,7 @@
     "updated": "2026-11-12"
   },
   "daisuke-upgrades": {
-    "hash": "2fada2d38f946f895d946f1a8a6e571a87dcbe65aed9d043b2d04133f8341833",
+    "hash": "eddaeef6a2776b4e1db2ea53b0593a162d1c24614de82330f22629faf0d35ec7",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -990,7 +990,7 @@
     "updated": "2026-11-12"
   },
   "dale-shell-scripts": {
-    "hash": "0ddfea1e8079fef40bd93d55be46bffa0e294ee3edf958115f3a7170486b1b10",
+    "hash": "76fd879fb034873cbfdaba8486a641ed657341a5ba8837486fe0ff7230dc2507",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1000,27 +1000,27 @@
     "updated": "2026-11-12"
   },
   "danielle-seo": {
-    "hash": "44847ec4abe6489a9aa08ca75d93257b2938fe83ee25bb8bcc8cce3a9938eff1",
+    "hash": "f1e37e58c210332c7591323f10988cd0bae9c2e2213f92bdca42b2f489d06c3c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "danielle-seo-train": {
-    "hash": "36108e14a1b42b3fdde99777b872193888f20ed6c6630f40d5cd16a88d1f1d2c",
+    "hash": "8438485800e36ad5a06f21586e415d6937f35b2b9d2b91758f2fe62125450549",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "dario-community": {
-    "hash": "8cca402c17428b0d2f35f2093a3982922bad5ecd87df34e59866ee049440dda1",
+    "hash": "534d642f3ac8b473c9e8b83d16f7635e695d26fd09dcb6304230b51d633dc85e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "dario-community-train": {
-    "hash": "94a8406e081cf52abd3f3cde2e84024f8fde066aa285b435309b0739e0fce513",
+    "hash": "5012c00e910af5fb3f0e948c13b864105b6ccdcf9417499bba5b22680d58a6e1",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "darius-code-review": {
-    "hash": "928bab3dbceafe4f515f5976aa87134f67e16f7200c403923a7befd8db216dae",
+    "hash": "8fa582992d4f35f0738eaf342d463bf0e5d095a0d9f1e78d755bcde1053cf6b3",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1030,7 +1030,7 @@
     "updated": "2026-11-12"
   },
   "darnell-sales-training": {
-    "hash": "2531f2aaa5f02e139941088105a875366bb69e738393a6aebc2ba126588d1dd4",
+    "hash": "47d2953b5fdf44e82e4109be81ca7d7495191b5ee31d1b2eeefe813a0dfe06b8",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1040,17 +1040,17 @@
     "updated": "2026-11-12"
   },
   "darren-shopping-ads": {
-    "hash": "d8395999b67c82213968de46fc91e1f867a062ffced3ccc716c1892bc8841166",
+    "hash": "f1aa255bf5a9f9bbd84b0f8c437d5039761d3469e32ed9cbceee5821d27e2454",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "darren-shopping-ads-train": {
-    "hash": "ac7adaf2093ea0b1bd65865b7e91b994334472224844369ca6793455601eccb6",
+    "hash": "ce960658606f3448bcc1874bdd6af083aaf7e27d6c2778a373d661a89263f985",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "darya-courses": {
-    "hash": "cc903f5a2724366b4f660d40af509c76c812a21be7000f7b96b54a8c0d7efe8f",
+    "hash": "8bb9e7e6be0982ae6aafbb971fa5ea4f1f24d8aee5737b357e1048b4dd656c5f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1060,27 +1060,27 @@
     "updated": "2026-11-12"
   },
   "dawei-landing-pages": {
-    "hash": "452a3d73c1a27f47515743285705041b8012c5f08b45f7354a174f19b016202e",
+    "hash": "a5bfbe3fd75d448ae5485b4b69bb601b65c0e61714263557d8d0f6f3cd7a9ac4",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "dawei-landing-pages-train": {
-    "hash": "1e2c8e00c40c621e0df40f7e110212f598287e6796b23cad2f28bb60a302f3f5",
+    "hash": "46e1f8c4ed2877b26c926c2f3546771d63abfebb751cad148d94375481f612f1",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "dawit-deliverability": {
-    "hash": "4df325034b287dd1fa7a311c0b9f7c3050b97081bff229c38dcc0c66f1af6ec9",
+    "hash": "7f1a647227164e861055eb62a57b90ed695e7e39bc4b3f9eac54a2622c1bc62f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "dawit-deliverability-train": {
-    "hash": "e40a6cb0f1db8b0bb7a5b8e71982476c497fe7a8ff9802f462b5a18ea1e38b36",
+    "hash": "86fdd63dbeb77e7e34908c73aab52d7578d44c2835086673e4a628685796c53e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "declan-coaching-sessions": {
-    "hash": "3c9d765514fcebf42f0f97f59d0889ab22f7de6d4c33c081e4c5a898417fd067",
+    "hash": "eea8da4dce9a26b322cc77ec89436fbcbb6e8b54079c44df2de019b715926ede",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1090,7 +1090,7 @@
     "updated": "2026-11-12"
   },
   "deirdre-bottlenecks": {
-    "hash": "ee3ff43bb831a60c5db34e5e4a480a2926f43389b3329151fb2364490b3c4767",
+    "hash": "e3e80d71e61fc215239a37f0211a8f9c3145b6025052d91df5f3bd2436b739a6",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1100,17 +1100,17 @@
     "updated": "2026-11-12"
   },
   "delia-traction-coaching": {
-    "hash": "c6b1195c481086f187ebe4f5bf8672bb8798973eee9b23985274e7f633036abf",
+    "hash": "09701bf2bf7770917e8949473f6f726494cd2c18c0e56a9995a950b50adaf470",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "delia-traction-coaching-train": {
-    "hash": "d6deb3dc0471c4b45f8f8c6d3f3b7925e936efe46a4617438ab1bd8355e8b3e4",
+    "hash": "78a92dcb3cf03ca9d18a8a1237dd44d337e1f4cf14d1e6a86d81bcddc9050e38",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "delphine-offers": {
-    "hash": "ca3afaaf3f8fca4055cfedf7db363ce802dc76bc23c44ae406ae2e4c60cf9707",
+    "hash": "43e47cae4e6bea4dfbdf942658cddf37c363859795564cc95edae7c2d121511c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1120,7 +1120,7 @@
     "updated": "2026-11-12"
   },
   "delroy-secure-code": {
-    "hash": "8c2bde406867e9b57323b3f6f7e837062558fe51bfff5f29df60a9c6329054ad",
+    "hash": "9875ff7761143bc25b9211a789054158f58761d0e9ce317f3386e34d52000b37",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1130,17 +1130,17 @@
     "updated": "2026-11-12"
   },
   "denise-abm": {
-    "hash": "699564c73143e2fb0eda4fb14a71f14229e98a9512cf6dc10364cfac403e7df4",
+    "hash": "692c1309dffe47c83c5ba98bc9f483af3c7092b41b4b460cbc3b0f02b293b3c5",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "denise-abm-train": {
-    "hash": "e2cf970fe95e625bd07bde81c00fe420034ad41c9611b09b8a8d0e9b37f8feb9",
+    "hash": "ae6a760256a2132572736c1c244d6b83cbd55c971346f00ee25e0364c2e226bb",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "desmond-segments": {
-    "hash": "cd5039d4cd7c59c976ca58c4c9e566b815174489d5ef1f3f38723b73c6572604",
+    "hash": "169284e339a03966541c993957b30a225ec6116ce9a8d6f35f9764680e560a02",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1150,27 +1150,27 @@
     "updated": "2026-11-12"
   },
   "destiny-landing-pages": {
-    "hash": "82e61c370c07ac457cc05c0f622d86b97bba55e34a769c2686060057e762a4a4",
+    "hash": "c53d4f00ae602e16305da1d22f5963e7a490dda06bdf466f4166431ec167c76c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "destiny-landing-pages-train": {
-    "hash": "b96a08f4e8d20a18bb3b57dec8cc8abc5a5aaf1f83e20bb719ba18c1d0242093",
+    "hash": "ffe856d9650d10e5cea0a6240520754c6cf228b13b8091c148bf868e9c600254",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "devi-grant-writer": {
-    "hash": "c7ad9cf11a94e71368afc8f6cf96c08563d1471c968d513e8e56cbaffde8302c",
+    "hash": "15895e54cd5f2a3b6516c2dfe5b63b301f5d4bb77acb89d71a675636fbeb80ff",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "devi-grant-writer-train": {
-    "hash": "04a6810f45bb20629b06158c70f1ba0abaff2e5e4cd37510af7c9cb4a24dc83b",
+    "hash": "dc70ea9ab28a5d1a63d6f5e0ab2573b4e9fb134578642768d1f28a63bc669bec",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "diego-integrations": {
-    "hash": "e3fda666332b47b5d53ddad7a3fb62fc3d58da711a6a66cb1639fa4b9e3d4cb5",
+    "hash": "34bd9c08bd2b25b710d00177dc4ac3209a08d64b0ecb6cdc7b12b083255024d5",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1180,17 +1180,17 @@
     "updated": "2026-11-12"
   },
   "dilnoza-linkedin-ads": {
-    "hash": "17ec8438b05405fed57e62135a23adee9b10026221f7ac606d9c69119bbea7c5",
+    "hash": "7324a4ec6bdfcc8dc31dbb071a62ccc21cbda3df594a6d5d932c1837d9c1f333",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "dilnoza-linkedin-ads-train": {
-    "hash": "c8fadacd518e08c31e62bb32ee7a1d4ab1c378bbe97b38e266689f08d7a17863",
+    "hash": "517ded0732b5c20f50cc7886ac37b47fb38b7bb590a86a909927da8718c59898",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "dmitri-api-endpoints": {
-    "hash": "3d330599edc24ee940f7eb85ffc2e602d2ab604347f1b3f1bb7b9eeb6f04b5d2",
+    "hash": "591e05a30a6e4d83063316523716306c0649f42ca7cca160f6f45f997ead7a1c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1200,7 +1200,7 @@
     "updated": "2026-11-12"
   },
   "dolores-program-evaluation": {
-    "hash": "575d5490fd7dcf729fac1373450502ab51c41a36631af72af296d8c0563dd522",
+    "hash": "8616ba4639a545facdc170597a2375f972b1e572c949c2bb7ef5b1d623b696ee",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1210,7 +1210,7 @@
     "updated": "2026-11-12"
   },
   "dominic-warehouse-ops": {
-    "hash": "3329ed90372eeb80dc27aeda254108bcf2debfea6c6ff6032f419d418a934836",
+    "hash": "35c5e306017ddae02e911b0c91293502e5d3470f5be0ae7658befdc6c5187105",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1220,17 +1220,17 @@
     "updated": "2026-11-12"
   },
   "donghyun-repurposing": {
-    "hash": "bd36d5691606a0f716f43e861d78b0701eb51ef486bbf9af9d4c6627166afb4c",
+    "hash": "4fb9aa9bd03a5414f8a6c44038a0933947747ddbe951304123e5fcb295e43ab0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "donghyun-repurposing-train": {
-    "hash": "0084357a905d4429368e570d8821a14bb0bb26074a3130b68f7b5ed463db47e2",
+    "hash": "164eb8eca2397ecafdfd22203afc0f6f6772c71aabe4fa0b2d2f3d3747dfaade",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "doreen-support-ops": {
-    "hash": "c9ab2c7adb1b4260f58a24a52b2b9aea07076731a3a1d5e72f7cb1eaedf8ee0b",
+    "hash": "336ecd3e5de89c939bfd3c98b01cda2efe530ab5d5a3a562ebf759cbefcc795e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1240,7 +1240,7 @@
     "updated": "2026-11-12"
   },
   "duane-construction-wip": {
-    "hash": "42478bbbc02ae173c017a3134b9a1e3f582aac2bec1d7f8016f731f129cd20dc",
+    "hash": "e06d202718ae1dc97bcb69aed6f9751ed8adac95b3dcc9be497a35eda3d01b2b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1250,7 +1250,7 @@
     "updated": "2026-11-12"
   },
   "earl-debugger": {
-    "hash": "f8d7c8872654ac0ad0ee7f683c9c201e80cd2618adf090aaff83c368f4479272",
+    "hash": "f8b0b819bd28ba9a714d2f6579805d991cf5917f5e01df4bd75ec9a4e55466a8",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1260,7 +1260,7 @@
     "updated": "2026-11-12"
   },
   "ebony-store-safety": {
-    "hash": "4cecff6b3c03f575ba8c4fbd9964f661eefccb08c6259f1af0b5fa27762393cb",
+    "hash": "bb8e28e835244d0478ca853c7d0ecac816dc5312628297cfbd3d6b1a247d2d04",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1270,17 +1270,17 @@
     "updated": "2026-11-12"
   },
   "efrain-meta-lead-ads": {
-    "hash": "0547c33793f2bc2dbb084284e97983efdf17cd125d9c3805b7671af05293eae1",
+    "hash": "bd30660d7c9837a9f9811ffff901be80ce42e0d7dcc070df25cdd474c3954255",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "efrain-meta-lead-ads-train": {
-    "hash": "962ce59a37d966b7ce3e5ceade0e4a9545d6c15550c04fca7855e05a06fb265e",
+    "hash": "0f10e6af145377eb0f452ea98e4f0d7678d476cd9d937fba3d5cd473fa8928c1",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ekow-member-education": {
-    "hash": "9f411dccdb93e6e329763f545d41bb6acd36c01b430e42872a7cd7fcde26f2e3",
+    "hash": "7e8a52388f599e070ff80ccd802f18d580330b92418659fed4387012c49ccc03",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1290,17 +1290,17 @@
     "updated": "2026-11-12"
   },
   "eleanor-dev-docs": {
-    "hash": "c12b70302fae35822ecb0ac69ca25a09cee0422c3ae243813408d45ee8da9885",
+    "hash": "517ac35bb1f5f1346b4ed23bc37537c6772d5e623c406f17d768302df31a1959",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "eleanor-dev-docs-train": {
-    "hash": "5371f0cffaab1507034077ca675cb4ecb5f20bc680f6b100c4618b4379e379d4",
+    "hash": "c59757dcdff8506bc8e91f05403f06a481690bbbd32dbd4b2c84177add693992",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "elliot-social-listening": {
-    "hash": "fd1ed66dfd7dcd22f65568fe67f8fa2543f560f87025262fb68a3a3f1711fa1c",
+    "hash": "08bb6d7adb5e844741bdf1257395b526469160d1eb56079e1f7ecdeeb0011173",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1310,7 +1310,7 @@
     "updated": "2026-11-12"
   },
   "ellis-macros": {
-    "hash": "6a52dec7842f3079ce06ccd9cc925e96dca46d17a35cade2b8ca0e97ec235c14",
+    "hash": "79c133bf737c6c192711efc901863caecf7b195e77857f9c560da3607c4cf4f0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1320,17 +1320,17 @@
     "updated": "2026-11-12"
   },
   "eloise-site-builders": {
-    "hash": "4b246a1c3ca024f3e031f7be7a9e8a2cee74510490f8e2ef500887f186afa823",
+    "hash": "f9a7b46ed3b49c957642977ecc57f023ac43bddced3aac969e87100abc0eca79",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "eloise-site-builders-train": {
-    "hash": "ac9afc37ff65094194d2d5665903cb1933bc4263da7759ca3894c37ca7530bfb",
+    "hash": "50e4d347dcb16a26019b78eabffdae86df53d3d33e34782e4d5b09770a56c5e1",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "emeka-energy-costs": {
-    "hash": "620df422ad5829a6ea0393d214f08b6140a8cd0ae99ef4ecb866c6100f3575cc",
+    "hash": "728d32561fac44061c63e5f0a925cdfacd724aac1fdbbf8b7defa6e0c4714bb9",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1340,17 +1340,17 @@
     "updated": "2026-11-12"
   },
   "emilio-short-video": {
-    "hash": "06d36044e36824d7dd075597a1b2c57d86e0e0c01f6be1a998186b1c4de74370",
+    "hash": "76cf914a7f252c1e3fd6bd998849bca9b0864cc06049aab14ca859984b3ff352",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "emilio-short-video-train": {
-    "hash": "5d316ba96089f4ad0fc04971b24fb1e191c9bffbd43f0bb93c7703cc6271ca6a",
+    "hash": "7cc51c795b5de6ad85ec03d3142d301a205324d911fc1442a1103b1364bb24d8",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ernesto-page-speed": {
-    "hash": "f76fcfa83e003f7940f9f2ebe541487220daa34f08df18c334807509f7642799",
+    "hash": "7490404c46a4b9e6c7e13d0eef371e1f9afa714af9a881bb15fc96cc7d5a0dfe",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1360,27 +1360,27 @@
     "updated": "2026-11-12"
   },
   "esi-funding-prospects": {
-    "hash": "ee7ec9d6b96d038f363cba0d8af6ff0ce1c59486506201fb7fd3c60207a3d54e",
+    "hash": "98459fae438bfab988a0ad9705ed11889fc0d518a899b9d96fca05f01b8d769c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "esi-funding-prospects-train": {
-    "hash": "0cec2e027a459fde7b33974ef14458deb474f46edf6e85b0a5d2003d58d5e2e7",
+    "hash": "f999ed42cd7c0d2f43c187d398b902722b3e858742ab37251d59aab03378bd1b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "esme-first-customers": {
-    "hash": "ed58b77cd5632eeb9076534a21eff9ec9780b0fe58b4ec3f0f79a3fd870a2284",
+    "hash": "2ee0c1fb0b6bdde835f7024220b637737a834d296d7ceda418c4d1a570cd1688",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "esme-first-customers-train": {
-    "hash": "3e5e88f003a9b84f0169cb7b79e5e893c78ebcd1a0f156b47901ce911e75cbf2",
+    "hash": "00d5141a443d0561f71885d690aa2231f411ec3c65962e499208ea2b116004c3",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "esperanza-db-schema": {
-    "hash": "bc7e8e00c64d8536b8ced60089ed46f5d61684bcefb6132ff8733085ae5b760d",
+    "hash": "d6caf00da4628049118987da3e7e951a963bd53b11db73bd847f257f802e80dd",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1390,17 +1390,17 @@
     "updated": "2026-11-12"
   },
   "estelle-order-value": {
-    "hash": "dd13c3facce5415b2beacdbf60993d392c382a70a5892dc5a331314c23337933",
+    "hash": "0ef5ea642566b82bbdd576baf7fe11fa75a0ba408e4eb80571ad6e828a84e532",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "estelle-order-value-train": {
-    "hash": "8a4cd4c3f1eb3ac153a5ccb841d7f3027a918bef8a11b35cf73d3916962bdf9a",
+    "hash": "bcbdb6e566062bcf1d1ddc69252691aeaa9aebbb8f2fc5b6191bcf0875b49010",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "esther-crm": {
-    "hash": "6e07e104bfdffb53a43a855664ab0e92b37358eff222cede28415dd89bc3e957",
+    "hash": "f87eaaed9711d0b414685250c93e37fbd7c153a460b150fe7c1ac0b09b75bb33",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1410,7 +1410,7 @@
     "updated": "2026-11-12"
   },
   "eunji-regex": {
-    "hash": "8bc7903eaf3516107585f212989029703f3b83fbd839854e94d92015381988d3",
+    "hash": "845ad59171beb16b4bff68631efa663c98ca93167732ee55f9fefa2387ec587b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1420,7 +1420,7 @@
     "updated": "2026-11-12"
   },
   "ezra-browser-extensions": {
-    "hash": "70dca268eabb3bdc58e0b9b0e24ff98c9280eacebc405078732b68696cd54354",
+    "hash": "0d26aec842195ad3d049875d186135459cf0f1980c520239d3ab63fd319eda1e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1430,7 +1430,7 @@
     "updated": "2026-11-12"
   },
   "fabienne-mystery-shopping": {
-    "hash": "2f4c86b9a120a87aa5c3507286e5ad1ee1d3ecb072350f58e90fc097630f2ec0",
+    "hash": "be356cf1f304ee1827ff126e0d6f4b10ff353d7d9eb54f551e55a2b531578404",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1440,7 +1440,7 @@
     "updated": "2026-11-12"
   },
   "faisal-sops": {
-    "hash": "c459fafb335fd77752f08b18676460d4a238c9ef410e63ac52df51dfabf7531b",
+    "hash": "b960a14fd9ef99a5a767ddb90cc68694a234f1e32e0f086e80f013a7f2bdc925",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1450,7 +1450,7 @@
     "updated": "2026-11-12"
   },
   "farhan-commission-plans": {
-    "hash": "5dad0d2eee41f6d2c61171c711718ebd598ef697d2c5495c7aebd64ae2e6e619",
+    "hash": "2b17a9646e74ece64c5c78e50b75db67fffb57e38f6d376790d48fd458735b56",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1460,7 +1460,7 @@
     "updated": "2026-11-12"
   },
   "farid-data-privacy": {
-    "hash": "2efb2e964fbebd8373284f5ca82b25bc3f4200ba6fd2f6b14d4fae861c85bfb8",
+    "hash": "b4336b1890fbee9265c435ca0c212f235d1ae36df1d15badfe893f2b40c9c9af",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1470,7 +1470,7 @@
     "updated": "2026-11-12"
   },
   "farzana-wellbeing": {
-    "hash": "691b0118676885a5435be674821a2b8f938e606cd004d33c42ca3835be0bec20",
+    "hash": "8041d8e9193ce3fdd03f0bb39212b45a349bb93858c2acea43772924a251be11",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1480,7 +1480,7 @@
     "updated": "2026-11-12"
   },
   "fatou-quotes": {
-    "hash": "6e6967186118f37b5b0e2fa0ff3cda02a5925c92c74d06ad116af7ba0cbc76d7",
+    "hash": "baba075b0eece1d78c695c26498b113f43b80a0f9d2f7409e5ec664c42265e1a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1490,37 +1490,37 @@
     "updated": "2026-11-12"
   },
   "faye-product-pages": {
-    "hash": "7c4ad09c988c076b75a01caa2c9a6c8f960c25ff5d8b19f651c2c4f84661f96d",
+    "hash": "06a58603c651f1b6b18239c84b45edf6bab6249de118fd168ae5fff61875818e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "faye-product-pages-train": {
-    "hash": "fb3e2bad049f8c10cd6332d0710e38a9ef6eac85238acdb546b0984090658005",
+    "hash": "dacb4978eebd4ff58fb975373addbd9af783dd06b5ada06e394158be941df92f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "felicia-discovery": {
-    "hash": "87fe645f112f7cfa47de434b9ddf014c3c9a547eaea22ef6939a93a61aa64df6",
+    "hash": "5a246e10d92113d098eb196e25a159be91500442e61ec273ed415ce4f89f48f2",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "felicia-discovery-train": {
-    "hash": "03b0f8f1d254a416586807d893b59d41f2538ae85ece9a9b5d589266fe2bd299",
+    "hash": "b0581ea7a81dd40585aa7b7d58f0ec113f6fd7537721de3fccf7e157ca67f177",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "felix-ga4": {
-    "hash": "f0af52d4a52824eaac94a3082864cdb9e05ee5d4c195530478ce90c54cc397cb",
+    "hash": "45d2aa0c3229e29d81d53f26066e835e50a11336cac0cda8c6d7c57d7878c4bc",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "felix-ga4-train": {
-    "hash": "e111d3aedc6f7744ddda68f79de824fda2d5ada2bec7fd2c2828ce4d2eb678bd",
+    "hash": "8a427d34df0d39359e96df3644e1ad4387e2116a3e73eb546823e9e6f93ec8de",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "fergus-datadictionary": {
-    "hash": "1e2f7455c0918eb79f3abc3150dfad01e2b6e28eb381dcc551f8af162ee153a6",
+    "hash": "779178e29b28f484e9cf6ccfa68dbe4cf9f264c38482092f5e106fc6d781df9b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1530,7 +1530,7 @@
     "updated": "2026-11-12"
   },
   "fernando-bookings": {
-    "hash": "954c44ba4092d1d5fa12fd292777f207017c0907d604602c153ff86e45a14f5f",
+    "hash": "7544e5f6ca9cfec7894355f5dff17a76a3165b41c970c89d319e7d3b3b7f0506",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1540,17 +1540,17 @@
     "updated": "2026-11-12"
   },
   "ffion-packaging-copy": {
-    "hash": "a85bf1f20295870c8bea18bdddaf1381d53fe2bfca2e8d275279d31d21e44b38",
+    "hash": "425d9bef45c39f1b170bcb9eea3729fd3f3c7154f5a56b37015296bfe95966c8",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ffion-packaging-copy-train": {
-    "hash": "955c3f118355e6902b51b627b48a8c845b6dda5084ab9dc60581d6383b27cbc6",
+    "hash": "5b11567a75e2602f030ea1394e87805e4e23c88fa185911b7bed2e197a68f98b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "folake-dataquality": {
-    "hash": "bfd7c7f552781ac3c9b41644407d6a19266111945f638151b86c5534cf96da0d",
+    "hash": "0f84fd8d576ed602560cd5ae9d57932de3fcc16fbf7d558f0933cb7e303e83d8",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1560,7 +1560,7 @@
     "updated": "2026-11-12"
   },
   "frank-salesforecast": {
-    "hash": "1678fff929b1b3697ada8749202431060c6bac1c5cf11e66ef9f619e71005a5e",
+    "hash": "d168dfe23fa7d4c55820a53acc7628af2dc24b59b865dac85083f7d2adace0b9",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1570,17 +1570,17 @@
     "updated": "2026-11-12"
   },
   "fraser-subscriptions": {
-    "hash": "4d30092ae548d72600afd96f4016ab97f11486222417dccadc190ea7ad7e815d",
+    "hash": "1533da6e4106442c8630808c4f1c167528dee96be62bddcc0cdd8b9aeee54135",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "fraser-subscriptions-train": {
-    "hash": "fb6e469c55f04d9807f6de2b01924d13999033fa7ff286dbfa4bc92e195c8414",
+    "hash": "fd3f1ce1e41eea63fb681d0b44e5f1b35fc2e5ae61508dbdc24fb45b6a816c7e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "gareth-account-research": {
-    "hash": "5e80276b7f6e92e2eaa86e58729e7ea63bff6eac8f2625c386a9bd9595ed67b6",
+    "hash": "b55b3ea6a824a145f281c38abbcdeca0be8365b64b17251d1c375ece19ff98a9",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1590,37 +1590,37 @@
     "updated": "2026-11-12"
   },
   "gaurav-accounting-firm": {
-    "hash": "e0f5d6f6d378854f29433b59da66e831e7ab996918cba940d235e218c0b9a7bf",
+    "hash": "0c416e698d7647bc2adf49c5a98cfa1656e0a916b722ef322d479d8eee54579a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "gaurav-accounting-firm-train": {
-    "hash": "1a36b2b3b78604d690ee958b72d92f9ec9fd37afa92ee5e7e28be6e0d589cb06",
+    "hash": "199b95fbf4e1288a6fd42f80b9d2348d1e1175efbe89e3390e0ff4ecd5be01a1",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "gavin-awards-speaking": {
-    "hash": "e3bffc88e4acab19aa4015f25f3aef89b373360bffa0487a65be015ace950b22",
+    "hash": "50f899c403079fdb307fa90729970a1f4fa941c93de76472c987551258949909",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "gavin-awards-speaking-train": {
-    "hash": "629722cb17913105c93cc65ce59e63ac7a8128c668d969ce81870e76a6a57498",
+    "hash": "d473558a1451589935b7eb752068df8a3e1b0748417478636ed2d26abd8bedfd",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "gemma-crowdfunding": {
-    "hash": "1fb273cc0f43485a7b81f3fbe1214ee3be7cff2c37dd4ccaf16a093b34978849",
+    "hash": "27423647901e3d25adfea81b3a3e05ddf78f403c4a92e844a61aff822440c51b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "gemma-crowdfunding-train": {
-    "hash": "6be5d6d9b3a392a000efa325c1af07da3afd00780890a2063eae19c394364bb3",
+    "hash": "4d2d08e7d2478af5a61de513351591c10e4483f94acff817ffbc6d582a791837",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "gethin-aftercare-packs": {
-    "hash": "1dbcbe127f5dee8a42d731c753c057fdc1b757bacd5bb4367cd7dfec2f4a4d5a",
+    "hash": "035adae29ba4f1cdccc3cd820b5946c8be325aa822f886fabfd504c034837b1d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1630,37 +1630,37 @@
     "updated": "2026-11-12"
   },
   "ghada-crisis-comms": {
-    "hash": "c3e7352426b4e003d4a631645923e4638148856c1906149512740c55f5ef2090",
+    "hash": "4800f55d1fec6aae9326989661de33d3ac00213b2d4162bce279cdf8a6c0855a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ghada-crisis-comms-train": {
-    "hash": "ffda8e9be3be7077576e4cb0ac60e2661e1bd8fee995a23d0155ae156d5f8158",
+    "hash": "fc725e115cd42889e0d724c525338b072ff0aa2308ae11746948048f5a091389",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "gillian-business-books": {
-    "hash": "75a1df112e2a7589d18b624e4672023f4813453ab52058da7c95aa0a12aba1b5",
+    "hash": "a5cb18a2687b4f3d77809c9704ad8b0079c31dae20cd255f8c0ce889b9cdc9fd",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "gillian-business-books-train": {
-    "hash": "f48138e6fb0a65548230a3a119fd90ff4265c836b003015dbf77f2366dfd76bb",
+    "hash": "7ded632c252ad3f96513dec38f765a8fc57ef55caf49d5f9508659b16d95261a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "gina-amazon-launch": {
-    "hash": "73fd64ee08ec2d6cdb8567358112e308975a2bc97c32bcf11b92b15ce777ff61",
+    "hash": "324dbbc43eefa274be67ff85fe66a513e0ca8fb6be613ba70eac283a1ec273b4",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "gina-amazon-launch-train": {
-    "hash": "4e7d91688ed55f3724a544fca539235857a10edc804abd27b841e3a85712e396",
+    "hash": "eb8506fa74c4a6830be3aab4ae118e4123eb2c0f190881b5a9a6c9b02824de95",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "giulia-taste-tests": {
-    "hash": "0992e39ac1299124a1a120acc0a061a116288654d755504629ded1dc9f9623e9",
+    "hash": "a223867b3f7d74f9b7ef1e46a39b56f1f7f6d7df3af5ac32ee7cb780ee4407dd",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1670,7 +1670,7 @@
     "updated": "2026-11-12"
   },
   "glenn-aiworkflow": {
-    "hash": "ac29872644db77dc23818674a4d17c841554ad51eb740b8711a20db9c6266649",
+    "hash": "0df04a9c45100068743796a8aa28d336a632aa7a65c1042c6964f601bf556e86",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1680,7 +1680,7 @@
     "updated": "2026-11-12"
   },
   "glenys-pivots": {
-    "hash": "df1e97baa1d84053c4d5ede7d1b83086ef8f5ffa261e9b04f24c527b151c8a7e",
+    "hash": "4b8db432f7391fd4d0b5fd3aba5604cd2ed447afa915cc9a1b1a536b398c798d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1690,7 +1690,7 @@
     "updated": "2026-11-12"
   },
   "goran-customer-success": {
-    "hash": "ec68ef8b46c9ce0f262f31c61a409babaa3d4a04cdfa945bba186f8945d29cb5",
+    "hash": "c287064aebdcd21534c53351cde08a5125f22a4ad3998f17fa51543c58fd2ddd",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1700,7 +1700,7 @@
     "updated": "2026-11-12"
   },
   "gordon-toolbox-talks": {
-    "hash": "c53216fc854f89413217a047e268f3bd95cb0f5a7deb1d9c607d146f0db30dd1",
+    "hash": "d9d0d2b16127d0aedd4982729fe9fc856d19091035fb3c4c7f7df906b38496d6",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1710,27 +1710,27 @@
     "updated": "2026-11-12"
   },
   "graciela-insurance": {
-    "hash": "af548793c6c908d3125d9d6de4a828190afed4cc303b238d311a3438c6af6e7f",
+    "hash": "59eb293feb154cc79c30459289ecc066ee05a161f9ac998fcdd6756c4ca3b9ae",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "graciela-insurance-train": {
-    "hash": "3fd49a9d2dd9fd2284d24fa0717331653fe15ce4a41ceb93672068f2f80794d4",
+    "hash": "9768d9f702850e024d4afac073690f71df8d06a37798cdbf5ef419de9bb06f5d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "grady-home-services": {
-    "hash": "9b0e8291cd5be866b383047973dc5d46294e62379b48668f73d1c3dced9e1627",
+    "hash": "2ee606f586fb43db76b6832100d8b40fa43c37d67c1f5b2c6ff8befc5091ba0f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "grady-home-services-train": {
-    "hash": "0d75a8babf80f2c5960e97771503347b077bbde894624a4eab76af3688fd7d26",
+    "hash": "c909086f743e5057980120b1a232c45d7b8a8bf85e814fde3a3883eb67dde7db",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "graham-property": {
-    "hash": "23f1e9704c9dae68d0cebf0b4043746a2b38d6026e087f3f3e8f60931222af5d",
+    "hash": "88da6e78a51cf4ef5ff9b6331d626c3baaecefde459153e37a4af458c074cc15",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1740,7 +1740,7 @@
     "updated": "2026-11-12"
   },
   "gregory-territories": {
-    "hash": "3495b2c417c111eba20017765cbe73a3552c6651098488373893747f8a4d2a07",
+    "hash": "820305bebf4f225127f6804f0929daf3a281f3e0452483a697b9a6182a372d6d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1750,7 +1750,7 @@
     "updated": "2026-11-12"
   },
   "gustavo-dashboards": {
-    "hash": "bfd1ac2ebe686815dfe1cac8996602bdd4a8852ad9cb83796e7f5d123549ff8d",
+    "hash": "8c6222055f2a24d33451660ec7faf47d48adc7d55745c81d2fda30ddaf4e0fab",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1760,7 +1760,7 @@
     "updated": "2026-11-12"
   },
   "hallie-support-insights": {
-    "hash": "05e252868b6dca44f6acf6f704df39a4a063219c40c11e8f00afe2a1f4744ae4",
+    "hash": "4123646b32464349bae4ebe8ef9f8f85a1d35bfe9f5210bb4ee1b470601936c8",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1770,7 +1770,7 @@
     "updated": "2026-11-12"
   },
   "halyna-cybersecurity": {
-    "hash": "2658b636cea37a8eb0ab18ad6288bc46c023658fa470c907a55c2a22f5e38e1c",
+    "hash": "2dfd8e5fe2c5089c133d13fc235099db92181e3da324fe82bb3c61fee2cd9274",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1780,7 +1780,7 @@
     "updated": "2026-11-12"
   },
   "hamish-estimates": {
-    "hash": "92dd737a2b10ae0a74ed0971a0e18dbabd60966e61a8013e0a3091402337f664",
+    "hash": "e65a87e74fbd221df1cbc45d68dc08f28eb568ec7a3ece29625f60e31c902d39",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1790,7 +1790,7 @@
     "updated": "2026-11-12"
   },
   "hamza-customer-notices": {
-    "hash": "d6888e68994d258f5789cd5890fe7c13368d9ab97bc74a70321dfe5b3f0d2eec",
+    "hash": "633399d4c0ac2d08ebfc664516e2322aa57a54ae17cf8aacbd07dbdc7becf69c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1800,7 +1800,7 @@
     "updated": "2026-11-12"
   },
   "hank-service-plans": {
-    "hash": "6cabd95ff066bd257ae47b20bc4194e4a3f0d086bc6f637ee207d42c77bbe227",
+    "hash": "6784490d63fe74ef881c5cc6913e1011eab37abb1e3e19205ff44fde2c85ade8",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1810,17 +1810,17 @@
     "updated": "2026-11-12"
   },
   "harriet-abtests": {
-    "hash": "d42ad679bb7d67f11826f7bc5e137958502073ed8a970f1ac738c2e81252e884",
+    "hash": "474c18fe518913893a7b4e5ae9b04bb5b668ad785397afc353d01beb1068feaa",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "harriet-abtests-train": {
-    "hash": "bdfe0452991990caf10064ceafc59f601beee326932038b0a65ad3b5ba28dea1",
+    "hash": "56adfa75175e5075e3488dcb5b6776b6dd48b381b3817d6b061df007b7f3cfc9",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "haruka-admin": {
-    "hash": "4ea5ee9ba4ec1c507e2c498d5760206ea44f43314f1a87bebb153d31505dd05a",
+    "hash": "79343bfc133ce22fb7091df0779f3871959d4d0cdd392e4ddb84d88ccad6145f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1830,7 +1830,7 @@
     "updated": "2026-11-12"
   },
   "haruto-powerquery": {
-    "hash": "36d8be167cfc5ced2334b5650fd869f36e7c599e6f0687dae8e1b4ef056f234e",
+    "hash": "69dc96b1270c0546c2d4b1190448ca639cb0da1d549e68b1fbf5c5e80e320ea3",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1840,17 +1840,17 @@
     "updated": "2026-11-12"
   },
   "hassan-product-research": {
-    "hash": "ffd60cd19e0dc5c5bb287eaf58b11354959edd149c5eec23c01aac11be3d8b73",
+    "hash": "b17f129ad9230532640438540f4bba70c13ed136651e05e9e94053fa3a01c43b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "hassan-product-research-train": {
-    "hash": "416e31577f91dbd854f7e155bf39b24ce7c53774a68e60aa4371e6aff74f0c71",
+    "hash": "545605d453d7774c4e7814de9655e61ee64dc1458a32df833a8b0d9d883332b7",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "hayden-no-code-apps": {
-    "hash": "29f4b0595bd705b6226531f8966fc4b84d9c79ae9212a7787d91d6d02f248181",
+    "hash": "048034537d32b40a17f5674ec8d893134bc109a9d0b61f17167ea9547f162d57",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1860,7 +1860,7 @@
     "updated": "2026-11-12"
   },
   "hazel-testdata": {
-    "hash": "513cdabfa7f465442fbabab8f1cb169dee5b13280d39e1eb882ff6fb8fd5e8ee",
+    "hash": "73b8a0eb913f8873901292154c7a391bf2d1c67d5ef5a8aaf65149520b526da5",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1870,7 +1870,7 @@
     "updated": "2026-11-12"
   },
   "hector-negotiation": {
-    "hash": "f35e87f350017b0818bb6fd831f29542f309878c16f37b37fcb9ee97973f006a",
+    "hash": "abc609d59811fd3a6052dbeece971e8ede942f3f9fef2d5d6e79201c0fa3ee33",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1880,7 +1880,7 @@
     "updated": "2026-11-12"
   },
   "heidi-clubdata": {
-    "hash": "07f82ea8af40b6d5d639f645fe73626492b53630fe5b3d3c98b3e05b2ae96a3a",
+    "hash": "ba6265fc9eb825250324152fae7cdc66d8202a08d4c755eb1e5e7c548f8b4f1f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1890,7 +1890,7 @@
     "updated": "2026-11-12"
   },
   "helga-orders-watch": {
-    "hash": "7e99be7c0737774d30424d4ef53b277f768b8edfd72cdfa6f58b262e9931e392",
+    "hash": "1679c11f2116e779e095bb42dc9d98b815cd79660aee4eb53809cff8e6b5e9e9",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1900,17 +1900,17 @@
     "updated": "2026-11-12"
   },
   "henrik-spec-sheets": {
-    "hash": "089d85af2958f373c1e8dfa1e4d44b0cf29e0240b520dc0fc44cc015aeee82a4",
+    "hash": "793456bbe43bce46853e230237c469d32e01340156189a0f31562cbb4a4600f3",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "henrik-spec-sheets-train": {
-    "hash": "d1b75355b230116835535fa29a6d0612ffb40a032e5d81b7dceeb32d678f2397",
+    "hash": "79a808db4df5b84c4fa7dfdc1eb352b39936e8d6b784d037b9be958c0b728d50",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "hideki-stock-planner": {
-    "hash": "43720c9b049dff308ed8cf702bd7fa70aa9cd33dc431ffd0a577f7d5b8516e98",
+    "hash": "cf335955f8b480eff6088666cb8c66763dd8bc3f9b07e630df2283fc98d4d079",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1920,7 +1920,7 @@
     "updated": "2026-11-12"
   },
   "hilary-easy-read": {
-    "hash": "60b2577bf26c2bbfde5e5d16976f04a23ba9898c2f49bfd64c6851b4c5a36b1f",
+    "hash": "34f2fee944e91d0fec7a1047f0966b804bffc46c03f99a1a8e458449b31fe30b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1930,7 +1930,7 @@
     "updated": "2026-11-12"
   },
   "hiwot-supportqa": {
-    "hash": "cc948b44a798661b502d929a59a059b9d381d71099d0d2636e8349473e49b18b",
+    "hash": "7d53c7386dece8d668fd0e3c84310d2100e117a54b9316d6165c95b0a750074c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1940,27 +1940,27 @@
     "updated": "2026-11-12"
   },
   "holly-store-emails": {
-    "hash": "778b4e3121656ee311fbd1b60a886cf8b0c6491f513e928242201e20a535e35c",
+    "hash": "2376487f772c6c70a8cdc6c37866b6aa0c758202b8fa1978e559dece4fcd41a5",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "holly-store-emails-train": {
-    "hash": "04536553a364185cb44f75ee0e9dc784b9c4750e7057b409b3766b218175b5f7",
+    "hash": "bc2c7e1ef958dfce841d7ca1a8122bc989cb0b51d817d9a9e9901b1e3757190b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "houda-catalogue": {
-    "hash": "7b706b850fc544c59ba535a49074b620be5be490a2a37a7d48571a2b73664bf7",
+    "hash": "c475eb7fec65f15dd7cdf495246166bee2c76187e783bce41fd1fcb51516d63c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "houda-catalogue-train": {
-    "hash": "81ce4854eede229976b625db398c94db66b68d8ecf38955860bfc02b5f5daad7",
+    "hash": "61df29609a39f6918174aea7feaf65f9f60bb4cf33434674ecd7f7a51b1406fb",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "hugo-pipeline": {
-    "hash": "86bbbc2f46d42fe3d0127726daffd483b95f7b6b276c5fa12d4684cd2e1e7261",
+    "hash": "5337ebf8bb046efe8805cea95db77edc9f7d863b5c352a3978dfce0dec9d048a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1970,17 +1970,17 @@
     "updated": "2026-11-12"
   },
   "huiling-cross-border": {
-    "hash": "e1ca284d345e87c184d703bb67d7dd119ef4afdf9f8a32d808d8778ed06dda86",
+    "hash": "fbc0791d4b1fa90f28cf4957ab72d08aa617868b3e00879982f7f1e31120a3a6",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "huiling-cross-border-train": {
-    "hash": "d28a667b23d153a4b7af713189256bbacee27aac602f2d0f668e66d1649cea03",
+    "hash": "1f37cfe969b1ac3c86d32ca865b7f4da1ffb2d9189f288e09a9ca81b5df41081",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "huong-sourcing": {
-    "hash": "4f531b53abee894cf682a73510b260b4e3da0ab2eadcf3cde6c15bf8d416b07a",
+    "hash": "fa58ecf51d9d476691715f8a51438b5e3965e694685e54b509df1dc315ff0e5d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -1990,7 +1990,7 @@
     "updated": "2026-11-12"
   },
   "hyejin-returns": {
-    "hash": "4bf56f92e954f69b30d92060232e2f10f7543b06363bad48a4e042ad097feeec",
+    "hash": "ca35e5bc1d2ee10d432a219ddd35469214f6c776222a2b636bbb30eca9edfdca",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2000,7 +2000,7 @@
     "updated": "2026-11-12"
   },
   "hyun-woo-retention": {
-    "hash": "0e6ecd7ce520b7988863e1902c84ff0dcb7d3844e5a089027a48f93bbbefc972",
+    "hash": "401c090f9c0f7985a7351a0b6e65998ca930ea8161f7cc05730988302db89666",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2010,7 +2010,7 @@
     "updated": "2026-11-12"
   },
   "ignacio-hiring-scorecards": {
-    "hash": "f79f8556323e0dec55b6c85eef215ce31f2b568bcc5b82e4c5828be270d17b26",
+    "hash": "c45b73e831674a6b3423e5220586b1adebe2583c41efc2e3a42e5d8e857280a1",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2020,7 +2020,7 @@
     "updated": "2026-11-12"
   },
   "ilse-kpitree": {
-    "hash": "f691a9223d8610f0007643a31a0eefd8f7438048db802275f88eaf424145f840",
+    "hash": "280039edf57d9c3237c1da6377629774ebd0dcf89b9c344fb08e08ca50ab9018",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2030,7 +2030,7 @@
     "updated": "2026-11-12"
   },
   "ilya-data-pipelines": {
-    "hash": "7ae29705e29bde2478b398147d2fd37457014b10a3661b7f0611f682ca77e271",
+    "hash": "5c2fe82474040f7a59a99f5431899548e1e268a8ff343ced643d95ac07ba1aba",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2040,7 +2040,7 @@
     "updated": "2026-11-12"
   },
   "imani-onboarding": {
-    "hash": "3c2399d1b2b0951c97d35a1af4e825a3f118e1ef9ad7bbf3d28adf88cc4af07c",
+    "hash": "18a87e1d7f43b9e51b9d59250eebdcf535668a576cafec3c19ff7e58365de09f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2050,27 +2050,27 @@
     "updated": "2026-11-12"
   },
   "imelda-merchandising": {
-    "hash": "5d1d34efd7c607cfb9487c7f6cd74d027961f4a244963bffd8a2701fa0f1a8b0",
+    "hash": "0d3d859c3cb034e5e93c1261c840191c0cb5b2524d4b38bd410cfc0b53cbae99",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "imelda-merchandising-train": {
-    "hash": "b778611597be2bafc25f3de76e74c5a18a638b3008ff238ce4ca32ca2a68943c",
+    "hash": "6e9a98e497a4b09715d1cd8ec99de125706ce765386b1c71aae5f928b049396b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "imran-conversion": {
-    "hash": "50d1850fb44113667f471cd937bfa2ce760ed26bd6e666d3eaa7ad0e3dcfdc04",
+    "hash": "a695f7e0708e9a49fa509479ef296c6f37078596e0f9b4c773c2cc34f167c5c3",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "imran-conversion-train": {
-    "hash": "c682841fdc15187883cf7f7f1eb7d42fadba59159bc543109497e4e9ab6a773f",
+    "hash": "fbaaf030e1a29fe9a6269a518211fa1965182130790b33ee9ac37d03cb4901e1",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ines-win-loss": {
-    "hash": "0914eea85e07bbdf39af65abddd853fcbd40e6412aca6b810a164bf3c1b42350",
+    "hash": "8a191cd581df45ca5d6e50c18f69533834d7b9ed2c8eca1327fef40b324ce5f6",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2080,37 +2080,37 @@
     "updated": "2026-11-12"
   },
   "ingrid-store-search": {
-    "hash": "4608574d05ac67f5281c1a86bc7870020267c749ff860743e4ce69b7277fc012",
+    "hash": "873302382693d21364cbc502082540331292485e7406b57677e92812280f70fe",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ingrid-store-search-train": {
-    "hash": "46294fe8145b236c03e15611c42ae267c83d6e3e46767ad893cd803c00528329",
+    "hash": "f5c554a3914cc2bd074e80ce90f4ed4457c479f59260cdb26af24199e81ded86",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "intan-storereports": {
-    "hash": "7948250960d33e00beec70919918711dc3ceadc8b89a75df26b9db5d677ea7e0",
+    "hash": "db5cea62f88f422da6e617776792343955fe91da81396248855ebd919536a28a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "intan-storereports-train": {
-    "hash": "e611de2cb44a2c08c368f68bedcc33630eaa69fed56e8881016cb75cdca72adf",
+    "hash": "4ec6b17c66c96c720b0922a04dffbcd400601e0f2b80e7aa0858c5b3d5130451",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "isaiah-outreach": {
-    "hash": "316555ad5148673e0203ce6ddde45368e5c153d0fe92ccfe3996f173be68cf88",
+    "hash": "8c814bdc0792c505e7df660eb1c1dcd7656684f3f5cecaf2eb8eee5b7166a2ea",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "isaiah-outreach-train": {
-    "hash": "0f96062016b52dde050c0c1cb1f849e7c49f68ea75ea6270e38708f01468092c",
+    "hash": "fd4c92f0b206456b56fe347c87f75c9121bf345a03a88843c039eb9e1bb9f10c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ishaan-customgpt": {
-    "hash": "f6cf8827e637c577d3835a1c62149149f6b7ffb0cc36341260353490092420a6",
+    "hash": "e29f9e4b1d3864c3546ea5075cfbd1e458292110f0da91837adb6fe6e6703c21",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2120,17 +2120,17 @@
     "updated": "2026-11-12"
   },
   "itzel-redesign": {
-    "hash": "72531ff27ab8329818c3a1086c16ca4802c75fc801b03bbb483f71174b7f32aa",
+    "hash": "1e75ad878e80912fc29605ebfcca2db1ae0aa5dea1f942c49e852a1b4bebc7a7",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "itzel-redesign-train": {
-    "hash": "84f4c80a391a13e65a2c9b74612f0a97bb59b5bbdc49ca374f9b12c25ed1446d",
+    "hash": "bb8a9887fa6d1d3e323e6587e458aadc214f8aa6a134532839e6ce0739d00c07",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "jamal-extraction": {
-    "hash": "e0990b366bc0dbc87c5ce5ca47d24cd56b2c2f86a6646bb3f5b90b66ffa27787",
+    "hash": "a022fd26ba1f5dd31c001a00d500230858060b51be609be10b54758aaede4f6c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2140,7 +2140,7 @@
     "updated": "2026-11-12"
   },
   "janelle-variance": {
-    "hash": "abaa64795c35827ebb7aae2133d5ee568fc7104b4f45debd8030a09bbf679b31",
+    "hash": "e884e31bd8c5db1d168f686a4b447e23c88bcacaef16eced12721fbb0643d7ce",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2150,17 +2150,17 @@
     "updated": "2026-11-12"
   },
   "javier-store-launch": {
-    "hash": "50821961834196fd1d1a38e78c8c2f7c83e5b1cbdfe22f4a2e59768bfead97f2",
+    "hash": "115affcaafb51302a649577f21bc3dad3280138aa8add915d3fa95ae20886585",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "javier-store-launch-train": {
-    "hash": "dcda0e0054a81d6b2452ee8e57903519f8a509f5cd20c882c3c9f179896ff0c1",
+    "hash": "f865bde090dba2aa04367972cf157291db8f6a20c1fd5e329526685056b7f6ce",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "jaya-product-analytics": {
-    "hash": "03bd95772258adf2e1c1c00ce7f03a8e9b394fef0b98882e7a3d072986d28d05",
+    "hash": "7450719a3b3ac5ce2a62118b7fbe969aa2c36118c8135aa0cc5dc1f60c0202f2",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2170,27 +2170,27 @@
     "updated": "2026-11-12"
   },
   "jaylen-tiktokshop": {
-    "hash": "e53d13e6f587ca9c21e0f06a474321fcaecff97beb708391ed3470a7ee9967ed",
+    "hash": "9449545771263e9a13b91430653e43b8aae801635ba69bc795fee8434a96fb92",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "jaylen-tiktokshop-train": {
-    "hash": "5459d9387373c509ddc887259f8f6e1c744a42e45552c2639b5dd8fb497563cb",
+    "hash": "0323f8edd37f92e98a9a2b15e0df418c7cab49a9be1f8fdb37f22a4a0de1275a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "jenna-ux-writing": {
-    "hash": "b5e5693718a1ca79107b97cc155c75a399d2196921e7ce8da1258f8e2f5e9f0c",
+    "hash": "7d81e6ef3288d5e54f93f58992203b3a7ddca8c944fef38106649f9de841eab8",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "jenna-ux-writing-train": {
-    "hash": "ab92e5e27951e204c13445db2bcb4d4058ac638dd17a55b00118806e1f229c27",
+    "hash": "f5132bac7276daeb8476a568f1fe4f6361f43099aec77192cdd709e562fec225",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "jerome-investoroutreach": {
-    "hash": "7b64b4e406391ce91272492cdba3597d691aac1b8b1ced6233c62d65c5e771a0",
+    "hash": "41d74e60f8ab18a2d34a5527a1aabdf090d180fd49a26783d545ef977bcd95f7",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2200,7 +2200,7 @@
     "updated": "2026-11-12"
   },
   "ji-young-skillsmatrix": {
-    "hash": "a14acd10cd96883d48f0270d88183294660509b64c404e5bed709969890f9785",
+    "hash": "385dee16a6a237e9a78b64084ce3e47a284511e3e3ebb11e5bb2a2cb4425b635",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2210,7 +2210,7 @@
     "updated": "2026-11-12"
   },
   "jihan-knowledgebase": {
-    "hash": "d58f9335074b6fa5c60c537ff9414e2d0ced2ef7db63d40fd79396ec726b4b19",
+    "hash": "9341e75fbae3803fb863d05a1e59bd7490c8ae94792dd59bb3abbfb5bdae2cb2",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2220,7 +2220,7 @@
     "updated": "2026-11-12"
   },
   "jing-botknowledge": {
-    "hash": "ce45bf29685912d61ce47df60f53d4d2d7ef8e225b41e9eb133877a3d651a80c",
+    "hash": "7b1e6c3acc279cb7bb5fe7ea41a1ac278d6da38f71fbfb307e0619ef24860c58",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2230,17 +2230,17 @@
     "updated": "2026-11-12"
   },
   "joanne-popups": {
-    "hash": "67a47bba67bcb1c1f37f0de0b2bbbf33466d18c33bd6627735c66cefcd93a5dc",
+    "hash": "5431a2f7540994629a1bf004720407e1822401bb6e5138e341593f7493743f08",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "joanne-popups-train": {
-    "hash": "f30db6e8f0ed9cfa8dfc00dcca2a8b1c5bd433fa3bf1afc0ac2505c6ef939c57",
+    "hash": "2eb33850eea47835a1a8864fa3cf48fd724bb224432f8d83de6228d444292221",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "joaquin-priceeffect": {
-    "hash": "f2f8c742730e8243deded0fe1e8f83292eeb26bc49e19f8e39104e4ad25434e9",
+    "hash": "dcaa9ea2c0b489941225bdabbc1812d9eb17e40b95bf3201813c125073416c91",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2250,27 +2250,27 @@
     "updated": "2026-11-12"
   },
   "jocelyn-product-launch": {
-    "hash": "52e2498c6d2e28294a1ea6b394e69672a2dd2d9e8fae9e2170aedaa3f4382dd2",
+    "hash": "cde49b910ebad82d269c173b3aeaa05a0da38213ea0c3ce8f54167429c382ccf",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "jocelyn-product-launch-train": {
-    "hash": "6c637ec3924743272fb0a1aaf9f64e4ae69c8fa44709b2daf4f23aa0babcc291",
+    "hash": "bea5514b91f1d1c0de9579b73788b798f40d1503d43fdcd49266301b0e92e850",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "jolene-sponsorship": {
-    "hash": "fb00aee2469b91007bb8650fa02af7dce023ae130c352e62c3ccb4e64e18d9f3",
+    "hash": "30836b818403c4261c305bf5bf85811266be716480d737d00a34da6fac3c08b0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "jolene-sponsorship-train": {
-    "hash": "709d5c82b00b26fbe06810ecb091337e16046b810c2dd9f533905a7d3f1da02c",
+    "hash": "6d9f51e5142231dd7f7f9df056c7db6d00aa45fd1adf9eb97773f7539bf0b364",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "jonah-customer-discovery": {
-    "hash": "73a40ec544cd30c4a9d6511701fe0dee9387482520cc55d5fa46abca3c741e2f",
+    "hash": "a65e3dd9b61dd3bc44b73977a25b565aa9df8ef9bfcddffbee2377ff3804f793",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2280,7 +2280,7 @@
     "updated": "2026-11-12"
   },
   "joshua-ai-quality": {
-    "hash": "f5c3a0863be9165d7066a2d1c9bd45ff7f66ccb84e5bde5387664294d12fa46d",
+    "hash": "3ebdac5c2f6ef1aa2c66442b2e1566649af592eda887a8141a9ea5bbcfd4e4ae",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2290,7 +2290,7 @@
     "updated": "2026-11-12"
   },
   "joyce-capacity": {
-    "hash": "74a3ce4f8b5cd232ac89345ff958910ba62e4b7a5b191efae200950a93ff1b99",
+    "hash": "b5cdb9dec2d5b7de083854fc559700fa3bba92b50a619a6e73d0dabe44f184c5",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2300,7 +2300,7 @@
     "updated": "2026-11-12"
   },
   "judith-profit-allocation": {
-    "hash": "7c2920642bda31ce29b68e5f898087a4dd380e194758dd2444ce2204554b218b",
+    "hash": "ced71a560c43fc4878c3a0b4c8a5ba5dbfc7caaef6be4ed50b8c43be2f25567a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2310,7 +2310,7 @@
     "updated": "2026-11-12"
   },
   "julian-history-research": {
-    "hash": "dbae7b1357d41a0caa486e01ba2351a3b413b8c49df5123cb72a1313906865b3",
+    "hash": "bc4c724c6913841106d3bbbadeb3466ff0a690079acad2bbaa5b6eea4abd589c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2320,7 +2320,7 @@
     "updated": "2026-11-12"
   },
   "jun-ai-skills": {
-    "hash": "c0bc5f6ee3bf1d88c3e94d97cc345477be14cf438921c170bed9f21f261af479",
+    "hash": "36601c183e0b8dae0c8d6a418df8b5ea0e258174616a3ccd430982d4f10f720f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2330,7 +2330,7 @@
     "updated": "2026-11-12"
   },
   "kagiso-python": {
-    "hash": "a48e73bb20d3739612a686f48c9296bf245e390b140a5a7365430325f9269881",
+    "hash": "2f192eb0218a367bf2127795916d84a017c2a130ea5eab59fc71a9be5e24f51f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2340,7 +2340,7 @@
     "updated": "2026-11-12"
   },
   "kalani-modelexplainer": {
-    "hash": "d14a031533d56938314349f8652edd70bfa4f168124bd1e0a2abee7406e88e6c",
+    "hash": "22a4953288fdd60dd86e734adf71364a08bb640ba5d2d1a1336ed563c6aca6e0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2350,7 +2350,7 @@
     "updated": "2026-11-12"
   },
   "kalpana-demand": {
-    "hash": "de8d886c22130054aba4730c100de14ec7d795f0234e9fcbcd56327d6c4ae96d",
+    "hash": "ae246716f7c9da05d5f84a3480039e7f6914d78fe5b118a1eb29847196cfb00d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2360,7 +2360,7 @@
     "updated": "2026-11-12"
   },
   "kamran-release-notes": {
-    "hash": "6f986b958e95107782f7b2e096c7b0fc7ef7632109df82b3e6b6f83deb9c7462",
+    "hash": "25ee971b5afd13148d57d7c57e8b0feadee9a6044d940f2b447936d81d229665",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2370,7 +2370,7 @@
     "updated": "2026-11-12"
   },
   "kareem-app-security": {
-    "hash": "1c66b3581fbd75fe331527cf9ef683a7f3b5ee0eb03f390a751ac4505d36f3d2",
+    "hash": "e38bccc159a307f50fbe0374cda8f85554db697ee5625227d0c154f3401549aa",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2380,7 +2380,7 @@
     "updated": "2026-11-12"
   },
   "karthik-margins": {
-    "hash": "fad146679f0d5edd328617a8a701db68d11898cb8ca2d0ebdd1f0dbedfa5dcd6",
+    "hash": "d6503f97802f5665f60437689dbf98729405b8e29d990fa0b7db394fe34332f3",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2390,7 +2390,7 @@
     "updated": "2026-11-12"
   },
   "katya-charts": {
-    "hash": "3d71593a7524a4802faf806aa23405a9f1a462645dd82e60f5e4126ad12c7b5e",
+    "hash": "30e51ad6e099d655f2edb3a31b4b051492f96fef5bc93d2de7f91f76a94af24d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2400,7 +2400,7 @@
     "updated": "2026-11-12"
   },
   "kavitha-renewals": {
-    "hash": "f467c2ff43d65e9f8c2ea0cade2c0d47ed220fac134fad4afef40748de337802",
+    "hash": "abdc61be0d9960e263d3ab5f5d6f2fc8f37f2ff96c821cd825253e403d61e69b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2410,7 +2410,7 @@
     "updated": "2026-11-12"
   },
   "keeley-workspaces": {
-    "hash": "a562d2529b1a3981edcd146ff40408ae94d948b7a3912c484739453b55bb8871",
+    "hash": "792d08aa23a39207d47f7cb47ae072b3491fc1f8d0ef4f70a1b762c366d3dcd9",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2420,7 +2420,7 @@
     "updated": "2026-11-12"
   },
   "keisha-market-research": {
-    "hash": "fd3f4bcd23edead7f15bfbd360cc072eb00475e2f61a80c0e5e8b2fdcf6a1bba",
+    "hash": "5785a6d747f44d387e233d9fe295abd16ad45a0eaff6fb7b7989ea084e971f8a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2430,7 +2430,7 @@
     "updated": "2026-11-12"
   },
   "keith-airules": {
-    "hash": "526cf6bb445833b313b26da3516336f309d48759c779c094eb3b6c908a7a608a",
+    "hash": "9b1df71c502ced2ba28285a597592c388b22f52e96ee3653b6ac8f7a485644c9",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2440,27 +2440,27 @@
     "updated": "2026-11-12"
   },
   "kemar-ebaywalmart": {
-    "hash": "8a42322a11b62002c49ae40e4d103bda5ada90c31ef8ad02575573468d80ea80",
+    "hash": "4aaaf813dee73be5ae52e0da6de9bd87ca2ef60ed6333c3b2434e62ec7f8c946",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "kemar-ebaywalmart-train": {
-    "hash": "2392de1ab08da7069f7d5964ae37e11a9f43ebaceb77c5287076fc4f2750b028",
+    "hash": "79a09d53eaa16f2de8cc5f6497e465fa7b69840146a8f0502a221c3110d371ef",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "kendra-attribution": {
-    "hash": "a5f530056ecb9ed03ba6bbc1ac76a3a369e6437438b07882bdb5e5c8dced5506",
+    "hash": "693df79ef464c6dbdaa434f2649708b3d92f326fd7d374dfbd2048dbfe460d18",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "kendra-attribution-train": {
-    "hash": "23beb05e9b203527cd4f8eb2c4f2cfd0fbb1c09214bf8ab5bef450272540281e",
+    "hash": "59a91ce944ee89f57cb6603f9291d502bdb4edd269370af7230f8a27449119a5",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "kenneth-statistics": {
-    "hash": "7dbd8d2dc0517f6cefa9e7af8919b7e3baafd8dcfe92a97a03e0d8bff0cc9b72",
+    "hash": "73353f439414e4e99585deb24ab593b967f673d9b361ad7e9e5b89d4b36e68f1",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2470,7 +2470,7 @@
     "updated": "2026-11-12"
   },
   "khairul-sql-help": {
-    "hash": "9f7d18e2c26e7eb17fbea763e9440ed46b21c329bd6e50546509f47a04f726ef",
+    "hash": "178e996df276bf772942913ba84dc6b2347592900cccc14e368040cf7e5a5f0c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2480,17 +2480,17 @@
     "updated": "2026-11-12"
   },
   "khoa-amazon-ppc": {
-    "hash": "a2a2c483dd8db0aa7b779730653f20db34ab2a24583b9ae249a2ba3b47f0a545",
+    "hash": "127651ba163753aa4ddd056cdc589121b435489382c9dbac214a067e731e0737",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "khoa-amazon-ppc-train": {
-    "hash": "71fa8cf01036757d4208648ae25ebed5fcc106307b648a00ab3b2e17fbeee698",
+    "hash": "b40332aab05784590c974478d30dd68c224dff929abbd0dfdae290cc47d66abf",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "kiara-prompt-design": {
-    "hash": "4ded2f6661822c19170e32f2b8e895695580b15ccde88e01e97064a88780071f",
+    "hash": "49c37aaeded6e1034ab37b9454ddc3d601823877a0d7d735abd7a6c54aab7b52",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2500,7 +2500,7 @@
     "updated": "2026-11-12"
   },
   "kimberly-review-mining": {
-    "hash": "c3b166c814089e0547e86752487dc1add7a6c47ad2a2e18aa7de6584cc914f00",
+    "hash": "40b792543a16b8838578e5d7c0aaeda4811fd180f9e4cfb600fb2b8a03f488d0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2510,17 +2510,17 @@
     "updated": "2026-11-12"
   },
   "kioko-shotlists": {
-    "hash": "7abfcdee385fd319a3f571997de5d86670d45d74d96ff3872a53d67e998eae1c",
+    "hash": "f152a6444e21b8863843fc701376428eae4c29a07d8a1df1e81b6ca94964c925",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "kioko-shotlists-train": {
-    "hash": "f41992d558a34162de8a1290d348e48a1654e49ec610236de2b51df680e5adec",
+    "hash": "7ac18c0270520af2f2fa4cbe196c87d36e81ab036ea492a974148a3fdab78343",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "kiran-firsthire": {
-    "hash": "d9f9ed47011fbe2913ef3c47c828b1d9cc2d56381e9c92220017b1050e0c9e09",
+    "hash": "9536a5866fb54c6d638d7ab23fb64450df6c71b60f06b8be0a7cd6f08ccbd93b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2530,7 +2530,7 @@
     "updated": "2026-11-12"
   },
   "kirsty-nps": {
-    "hash": "2da73a4c6ca20ba130969a5092d8bec0768580e8fe79f3986026587f81bbab2a",
+    "hash": "946840ce3e1edc128d1bcded217861f9c3286a94a02bf484d199bcf5825c75d7",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2540,7 +2540,7 @@
     "updated": "2026-11-12"
   },
   "kojo-competitor-analysis": {
-    "hash": "5dc2c5b6514c75df6bebc8900a9381ce82cf76c633fec903d4793c1b516b6ff6",
+    "hash": "9ff1e942555f4c3d4b004079a64fcae00e8332b3ad4c9889933bdde5670a12df",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2550,7 +2550,7 @@
     "updated": "2026-11-12"
   },
   "kunal-pitch-decks": {
-    "hash": "aaa835cdc8c7ff614730e01457354b5cee10860df0f701f91f529c265e660019",
+    "hash": "0c7cc7e079d31d834a928da35f66255f8b2e6e3787fc1044f8ba6147feee082d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2560,7 +2560,7 @@
     "updated": "2026-11-12"
   },
   "kurt-calculators": {
-    "hash": "3bdb2d792ba12c76f6fa50d854cea209c5be5d8ace5cb6b14194998fb069969e",
+    "hash": "74a5cc5902f454243e1e4238f8cbbb4461dca37a224a25449ab569fb8afabfac",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2570,7 +2570,7 @@
     "updated": "2026-11-12"
   },
   "kwame-benchmarks": {
-    "hash": "bd3004013f531ac9f46bf8cf2202c964a59d060916a9d9cb588c4172d54644b2",
+    "hash": "565fb9ed71451daea01922ffacfffc272418a1e8f7f5a6a02dddd5c4d857d0ed",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2580,7 +2580,7 @@
     "updated": "2026-11-12"
   },
   "kyle-shippingcosts": {
-    "hash": "a7af7ca7ef966e55da202ea65356b39ef29367570cb5ab660964488c01369c9e",
+    "hash": "373a2abb287a17375e39e53249f72a5609f6e5579ea54296d92410fa1f1b3059",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2590,7 +2590,7 @@
     "updated": "2026-11-12"
   },
   "lahiru-ivr": {
-    "hash": "0e91cb767c1d25c070613f38ab7ec77ab4b524e1a7426b03bf61850d2cb054b2",
+    "hash": "d90fdb00e8141610b4f14fbeb6a3779db7e0d3ca5a15b0f3673012ea4f17e56c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2600,7 +2600,7 @@
     "updated": "2026-11-12"
   },
   "lakshmi-payrollcheck": {
-    "hash": "48a34bb89055a5828694f7b2293cc8fe6a961882ce47c29b44fde9877b77cb09",
+    "hash": "5bc7bc5585c2a45e95fa0086b2038a26d1e30e4e06a6c10e76fc9cbf00384688",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2610,7 +2610,7 @@
     "updated": "2026-11-12"
   },
   "lars-export-markets": {
-    "hash": "3c0d20a808284f33230b51dd60f600b4b6977343a34d469207415132e2dd7d0a",
+    "hash": "7ddc3f6ddb670428265289b8c1827ce36fb416f494206c9f3a2c48c299d20c85",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2620,27 +2620,27 @@
     "updated": "2026-11-12"
   },
   "lauren-workbooks": {
-    "hash": "e262afbd7314c2ea1d75a826f7c9d001b19997728700150c1a3ff6ddfeac99d9",
+    "hash": "129c7e02f0f6807185f3fc0e6ab6579c9ef28aad74da247c5ce8b4405c49e7fe",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "lauren-workbooks-train": {
-    "hash": "f93effa3303bb18ecc03be0c457a9729d53cad751952e234a7fb38ca6944762f",
+    "hash": "6cef9078fe5d6f9a7a79087c5190888f71bca43629bacb595e5573cc8276f339",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "lavanya-ai-images": {
-    "hash": "318d1f762cf27d087c68c92e7c6377484d2f5aacf2e6749071ef66d9c0c2bb1b",
+    "hash": "69d762aaea17836fe164c489cdbe9672dbbde6512a102505cbd5cc234196c9f4",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "lavanya-ai-images-train": {
-    "hash": "2a0e5b22044864067222e0885e976926e72ebc427516e03c8ee877588289c307",
+    "hash": "a5b0a7dc3d0eb1aeeaac50ce4853288159733dfe9ba097178b7c74739c3d160a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "lawrence-literature-review": {
-    "hash": "0570ccbd1bee766d692cb3c4b8364cbeb53b77bbc5d9b244dbb22bfd00de8b1f",
+    "hash": "1c269155481e288b30090c0049b3044fb3e271536415ea0e8a8bb909b6bc6301",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2650,7 +2650,7 @@
     "updated": "2026-11-12"
   },
   "leandro-frontend-build": {
-    "hash": "bd9640b9d0fc820fea7f8e54eaf7e320132861b3f641d5bebb380f38bc785756",
+    "hash": "4bf8b2930cd2e5a732c8894be76d99c269a3717ddba37ec15ad37e005c73abc0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2660,7 +2660,7 @@
     "updated": "2026-11-12"
   },
   "lee-spreadsheet-help": {
-    "hash": "818ec61ce8fba4ce3ade2aa0ffcc36894500929967933040d01ef5a221cda2ef",
+    "hash": "44a700ab8d257c675fdeead8b9612884e777f63455215ef4f794f139ae70efe4",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2670,7 +2670,7 @@
     "updated": "2026-11-12"
   },
   "leon-roadmap-planning": {
-    "hash": "17fb29f375ef8fbe7651a98dd127d62a6fca58e312b135eb88be2f2f6acc9cab",
+    "hash": "eeb08e0f9f8457f1be06c93b845fb636d36fe1b123555c39c5f9fe3badeaf481",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2680,7 +2680,7 @@
     "updated": "2026-11-12"
   },
   "lesley-regsummary": {
-    "hash": "00a996278ee654af4875c32f57cdb7342dacd5137f61e865c3f1987a5462958b",
+    "hash": "870ad6e7d745896f64086adac05b5c363c7720fb1367bc37e148350624aa693a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2690,7 +2690,7 @@
     "updated": "2026-11-12"
   },
   "lestari-location-research": {
-    "hash": "8cfaa42d36c707ce54213b0b44cf8a12cd5ab53c50090e8746f94f146470b40e",
+    "hash": "55480f6a1f38a0a172eb381d226836762c08669e49dc941bf4d5a402779374f9",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2700,7 +2700,7 @@
     "updated": "2026-11-12"
   },
   "lewis-idea-validation": {
-    "hash": "5a2d43be1a8139bb1d4d7a5a8ff4d6635b27a5ff948be20d6ffc7356992d8461",
+    "hash": "2ae31b21a0d3d2765f9bece502f85540834a20eeaa387be1388635e4673465fb",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2710,17 +2710,17 @@
     "updated": "2026-11-12"
   },
   "ligaya-etsy": {
-    "hash": "73466ddebb8e01df701d46b6450e1c1d447c9b1dfd9ee94101421d28354b7ea0",
+    "hash": "c5fd1d99db4767cfe88c48a759d82adb8d62017eb283077cfbced16d694dadc5",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ligaya-etsy-train": {
-    "hash": "6759c89c179bcf284ad8ba9d81106aa1fcc1712b7ce542f5a1f52b66cbaaacec",
+    "hash": "4d4ea5102d25e65fcb9b75e8cf13fabc08f299e04f177250802d899454f77678",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "limor-codebase-guide": {
-    "hash": "c047950051fa16b5aec4035141f7efff6200fc9fe9a891bf14ff6a7c0e0c3c07",
+    "hash": "cffdd31934e677c54b15bb4d463cb1540029eb6ff1c95cf0bfee4a5d7016e3f0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2730,27 +2730,27 @@
     "updated": "2026-11-12"
   },
   "lindiwe-local-aeo": {
-    "hash": "217efc3662e0bd0f31032f02fce45d15650c596bcfc8095c6e8e1f4d5b88f166",
+    "hash": "1ccf6fb65c3442d0b4e5ae61ab136a04c484da277c9866b245b31db34970fce7",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "lindiwe-local-aeo-train": {
-    "hash": "301b3e93d388a322354d55393cbb771e28b03aae36284d64aa02abb30084117a",
+    "hash": "2d269abf97d6f7a63b4d89cb6dc32889de366cc8bb90ead4b571b72181653ab3",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "linh-infographics": {
-    "hash": "642c3c30e7cd485098d1e79b85ef0ef39d3734b9bfae8656994dfa02e4ce205a",
+    "hash": "6c492500d2a8ab6ab996d13af560157053548fd389b93b7d363beeb4b05dc97c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "linh-infographics-train": {
-    "hash": "35b18e0373ae45b48b68afc315ea4624791e26a54359100b961dc3407228ddcc",
+    "hash": "60adbd09115bf225a285e447e871a8f99428d4af285f529002d33dcdaa11b996",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "lionel-maintenance": {
-    "hash": "cde8bd7807f47b7e37932e287b5be75b7ea0e141efe61c6d471681f8b515349f",
+    "hash": "dddf654ae2c345970a79b6ae1ea8fc8cee893e4cec61661f72792f02ad72ffa9",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2760,37 +2760,37 @@
     "updated": "2026-11-12"
   },
   "lloyd-print-layout": {
-    "hash": "41f54a1bb0a200a50bbb12432f427ab7495624d73f0b9aab5899a4a7b9e82fdd",
+    "hash": "b59a5b16f845f943314c7b676494768c6746a22aaf336c11e0338852f0a68b5e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "lloyd-print-layout-train": {
-    "hash": "f0a9ad00289992698192b94fc134b33d391740062d90e32675361914af02b94c",
+    "hash": "1ab100eb0de773e6736c8ee5ffe2f939262aec8733573e43d0ffa49db3e6b645",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "lorena-salon": {
-    "hash": "04383be95f75e786b5b5e0a9ce61e1b53d52a1830045022b24561d9e7ad31c69",
+    "hash": "611b361c5cdfe4025b1731affc35d59c104065c18c7bb4330bace7b3b627ede1",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "lorena-salon-train": {
-    "hash": "3b68a6bc378af4b996a1c607a678876c22e72761adbc89a97fe2f19703696305",
+    "hash": "ab8540b64628ecf749e85b2c50d8e4493d095cd2936cd8feba611266bcb747d9",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "lorenzo-merch": {
-    "hash": "e86311c931c8352219e9e530a6e92da194c5c4aa2444763326ab58ef5dd1d59b",
+    "hash": "e8b7d14125dc858cd80d4fdd8eb6f1f50ff04eca39114e65eea34b604b12019a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "lorenzo-merch-train": {
-    "hash": "740b474a5c25127b14e46db9ec448637b77bee22498c727b5030937e7c0814ed",
+    "hash": "63ab49536f3322a4d3e58ae96460a32688c3bfbcfeeec24ae5efaed72db08a6d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "loretta-cs-training": {
-    "hash": "e0a72d52676f02e8b0e8d0eaed7b6e040b42c9a67a9fda7b2d9722131ebd0bb3",
+    "hash": "d91eb6ae0c916508c8544b756c6c5903d350930aa41e3576092b7ad4f67d2411",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2800,27 +2800,27 @@
     "updated": "2026-11-12"
   },
   "lorraine-paper-review": {
-    "hash": "7433ac071f09f2e41d717157aef1b3749cd0028e4cb54c42068ca56eafd06919",
+    "hash": "e88338030af0fbbf945b977f977efa3c872b25df90a351d71c511b0b48eb3a11",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "lorraine-paper-review-train": {
-    "hash": "e2c49d15b1353144bbd133577c9feedc480bd5ac61ce257f20b62ab92cc087c9",
+    "hash": "7512db6a97b56303d98cca0bedeb29d31cccc1466ab2a507e0bd190db9df75ab",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "lowri-manuals": {
-    "hash": "e5af7a8c0c326a0ccff2356146ffb292dbeeb5ab0ed8466ee649b934b0f8ee50",
+    "hash": "594c6ad6c148d9ff23701c09ad9fb9071ff83c61e9414b234efbffa3e26a2641",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "lowri-manuals-train": {
-    "hash": "ab0e41c28c0a074df42cff8884d5cd8ec1ed2bde64604c1bf2e353ec7519392f",
+    "hash": "cc430b446e9782fcc94db6d9e767db8bbad06d8bd410c17bae1c84ede92cce98",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "lubna-source-checker": {
-    "hash": "dbd5c01a8264a4e62eed53b5cb0add88ec382788e0ab2fb74eb01ab482a8cbd0",
+    "hash": "24e230e4ad09f815401c814f9e2ac2d3b6034836f8c36148d263ec130e5ccedc",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2830,7 +2830,7 @@
     "updated": "2026-11-12"
   },
   "lucinda-branching-scenarios": {
-    "hash": "7f1ed816f208b022238442a57c92d89a4d9bbb4740a80e5afd619d94b5d69571",
+    "hash": "4d717c48052493e5f39dadd8687b39dc4517cc33ff9f1eac8e2641dd79d477fc",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2840,27 +2840,27 @@
     "updated": "2026-11-12"
   },
   "lwazi-photo-style": {
-    "hash": "875dc2b6dc713217a439d043b43889d0df9681e7bee4b30411cf73b3076b8b81",
+    "hash": "30346c4ff1931c441acc38084b8171ffdb56bc2f766cbaf17c17833bc08964a4",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "lwazi-photo-style-train": {
-    "hash": "e50b6f0c692432a9551fb301905c3b6a31b54b8368f36432663c2de3467b21fe",
+    "hash": "74235a6681b74d56d8bf47ca6dcbc997bf22de734e2c5e2c7c727c14e2d65fca",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "makayla-pushmessages": {
-    "hash": "1b29bd19e140af7197ac35762bacab42574e7a3aac5c9c90d56334dc6b2588ba",
+    "hash": "f08679b7725f7e648fcf8de6961ed50be15513964201144e661cdf65613766f9",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "makayla-pushmessages-train": {
-    "hash": "e70446c793188d1b7c8304ec35e22f6499c4aa1b2f1733b7312767f8e0e96a92",
+    "hash": "5f2508bf17bb615980c49f51ab70f39ab752c0d47bdd6f16dd97951581829989",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "makena-incident-reports": {
-    "hash": "8a3f70f679ed5bc84919223c8f0e2a6345a5c67130bcb87b17a279e1e75c3a22",
+    "hash": "02534ce627959cf06ca56f9ec3ef8bd2c4a3139282ede549f4e595537e3eaa55",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2870,27 +2870,27 @@
     "updated": "2026-11-12"
   },
   "malik-audio-ads": {
-    "hash": "74a6fa6fc7e9d23c9be6084bdbebc3b4abae2edc808614a2b5e98b652bd33ef7",
+    "hash": "7ccf22653b26f21bc0e107bd055987a801b27271711e32854dbb62e52d575345",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "malik-audio-ads-train": {
-    "hash": "aaa255bf84424fdf70f78faa05fa61357a3b86e5700e66ca14b7ff483f16f20f",
+    "hash": "7463545b8418b416977be275e705d79d3678e8460e8f1a0e089dec44d8e0d7fc",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "mariam-impact-reports": {
-    "hash": "1ae02f8855eddf5dcf6c12230d233a9b27c350a8d46a9ce38b1a1efa4fce1792",
+    "hash": "e6b93864be8c0f2f9c1cb26386abb99405bf972a663cbb86e142869065bb427f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "mariam-impact-reports-train": {
-    "hash": "775fa499c706c1dfb9adf03f1028f92fa36668658454bb8db8b14129d827fd69",
+    "hash": "c366f788d43de7d0ec03251a2ab8284635aa4b7703022d4b18c099cd0d9cdd42",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "marisol-expenses": {
-    "hash": "ab7e1d77299f4006b08ad9e9b682ce48995f461707956a34c90444404a76ef45",
+    "hash": "f430c264b4932cfff7de75c2ca358dbf77f2bd980c771eda1a5726c6f4cf9d4b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2900,7 +2900,7 @@
     "updated": "2026-11-12"
   },
   "marjorie-data-entry": {
-    "hash": "b5c3fe8280402e5526edfa92750721d143658aec1285d8dcf7df2ccdfdb3f5e6",
+    "hash": "849641cccc02337524a9ea78be8e28faced77d47e8e62da03f45cf634cb696ec",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2910,57 +2910,57 @@
     "updated": "2026-11-12"
   },
   "marlon-api-docs": {
-    "hash": "8f13aad7be9d83ef62352a64a0de4ddbe67cb3658d0c624dc052ab4dc732accf",
+    "hash": "627ae0dd8dcc5a88554da4793eb32be8e0d950af8c4cf43cf0e3e90c3c8529da",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "marlon-api-docs-train": {
-    "hash": "c08fe4f214d09de9bb40a4cecfa238e417b9ed365d289495a39b21d9e50b2525",
+    "hash": "9bcafd398cb78cb5f89bf275ff25337eb91f9a8228888fe3925d9320949cb110",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "marsha-jingles": {
-    "hash": "001f120feca25eff85b5d586169c4f111bb423febe986f9fa361f6c561475699",
+    "hash": "2031725e3153d3eb3974108fb806d8f991ec6d527ef8d571a9ff38c4b6d86306",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "marsha-jingles-train": {
-    "hash": "b6a01b09e97679704d46fe218b912f4c8f30865bd05f9032126193f6f6cb7b51",
+    "hash": "2dfd20ecf3e6062ae345f55eda1b5946cef5740a9a499eb6915fed54d21ec0fd",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "martin-event-signage": {
-    "hash": "099f26f0b3b353590dd002c0087789691f27fff718ec8881e7a60b9327c13d1a",
+    "hash": "cb34a85d4cf5bc614a2cbe87195ac31ae10c167c559f04795f91af25e006a728",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "martin-event-signage-train": {
-    "hash": "404ee75f07132e6e0427d5c1bf40a54c29ca124a64d69697633b22d630d0b97d",
+    "hash": "fb7d81356bc5b8b7e7b86323661722b1b49e2510cbec0e3e26bcb2daf73e3a3b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "mateo-reddit-communities": {
-    "hash": "1d3d2476d8fd69fca5e985804e9c12355a947cdd763d65ce000d4a333b5a6472",
+    "hash": "5cf016d69522ab60a10742112a6e06e96bf5c1443c10d19ec1ef34531a7f4e61",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "mateo-reddit-communities-train": {
-    "hash": "69d06a65733c6f46da38526e6306485d147fca95c36b1edbce7b59a2f18fb52b",
+    "hash": "0e89f367ab959cf814ef597dd62dfbdc777a7521946c13f8c132d570b75ac7eb",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "mathilde-design-systems": {
-    "hash": "1168ae0f213f75175f83615515715f1fbb928fee238d73c4c204186745342e7e",
+    "hash": "d458c34dd35973863aaeb85829eb82e217784d4c654666d258be9112877b67cf",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "mathilde-design-systems-train": {
-    "hash": "d3fa791f325e2a8b9aae7206db6516ad444d5c3824a61e7c728342062e55c6af",
+    "hash": "ea3259b6046c260d587cd3617e953cb0c9cd4fa16774450650d74fc04ce1ba76",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "matiu-aiadoption": {
-    "hash": "cb7b8af6bbd189ae51f59197d4c331d7fe8ba9e4d4e10a69595bd26045279688",
+    "hash": "bfe07ddcf43da571160e832d450e14af8a8b2348db2b88b47e96c0fb62dc687f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2970,7 +2970,7 @@
     "updated": "2026-11-12"
   },
   "mattias-seasonal-hiring": {
-    "hash": "db8c36ab0b84fb89c7e61c316864f361d8cb925856f514f9638f6ff12c4d9911",
+    "hash": "1369fea9320dd67202e487d8482be55525cec875764576b19959587117a36540",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2980,7 +2980,7 @@
     "updated": "2026-11-12"
   },
   "maureen-software-rollout": {
-    "hash": "62c27bfe77b691a2a2dee167c54a5a740d99a4e24809851df7b38ac044c72efb",
+    "hash": "bfbb0bc2487d712e7e53f7da231ef78d66efab602f6927e4c857205c577c46da",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -2990,7 +2990,7 @@
     "updated": "2026-11-12"
   },
   "mauricio-customer-interviews": {
-    "hash": "10eb6b799935bead75742b3b5935f7d064c959c8c7497b71cf296605efb11ee4",
+    "hash": "6b3eab9c88a7ebf3f1695cffdff4d8f94e688457d031a8c454cf3b1eeabaf131",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3000,7 +3000,7 @@
     "updated": "2026-11-12"
   },
   "mazen-warranty": {
-    "hash": "10b478b5d8871b828becb35e3273b15b4e5c6be38804419d5d849c64df102f05",
+    "hash": "5ae5e9e530efa02d2a300aaf1428f0edc2379f3bfc93db73225f9719483affac",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3010,7 +3010,7 @@
     "updated": "2026-11-12"
   },
   "megan-survey-design": {
-    "hash": "c0974cc9895e720935e8750b2368c45ab285ca4bb93259b094422308f8acdc4a",
+    "hash": "6feb377d42022624670222f78d3ce11aeaa32577607b8d55cb2ebc6d9ef0b928",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3020,17 +3020,17 @@
     "updated": "2026-11-12"
   },
   "mehdi-traction-general": {
-    "hash": "1aa5397e21170059292d02b4258cbf74acacae17a4b4094db071616f06ac8592",
+    "hash": "933fcb34cb533c1b60053f9cf549307ab39dcc0d9a0cd4f3ac0b215b68712fa6",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "mehdi-traction-general-train": {
-    "hash": "083fae26cca3e2403efa73111e135477d77d8bfc73a9cb5f62402cf5c56c350b",
+    "hash": "9c4674a15497c3f8ecd29f6217dabc4dc1dfe4e5dee2e86b1b39cb5fef1ee215",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "mehwish-appsscript": {
-    "hash": "de5794a7b5b623f1198da146f733b674b889ac2ef9f18541e333a811cd09012c",
+    "hash": "d87a6b2d78cf52d1ef5dce0584dfeb486b8066642573294a66909ab4d292e8a9",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3040,7 +3040,7 @@
     "updated": "2026-11-12"
   },
   "melanie-accessibility-audit": {
-    "hash": "412701f560aabe3fd2ca117bb732504daa809b1942c0ddda893f9861a77275c3",
+    "hash": "b9a2eee2792124a236ef62e265f544abce84ca5750da308c0ab6834ae57a21e8",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3050,7 +3050,7 @@
     "updated": "2026-11-12"
   },
   "mercedes-cancel-save": {
-    "hash": "19f8963a43fb7e8173b0509de9e130cc2b17ceeab8c58c8901c03296b850be6b",
+    "hash": "a104d838431307c30b59a43132b1290e60c270dc2d646de8714070d9a519d408",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3060,7 +3060,7 @@
     "updated": "2026-11-12"
   },
   "meron-data-storytelling": {
-    "hash": "c8f68844b1c7bd093c7f58a89a80c44789b123da2293066e3276964070df93ec",
+    "hash": "4399df28b4dca0773a7fb2772cbcc126a10397265115d11a21898bc9a871da0e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3070,47 +3070,47 @@
     "updated": "2026-11-12"
   },
   "miles-thumbnails": {
-    "hash": "f1926e0597ccc98fa637850865616cf7d9dcaa4ec051c3c34d609fb1809b7cd1",
+    "hash": "6774ce5789d3d77741ed802b6e3f2a0c90f30baae40fe840a6e2e362d7dd8136",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "miles-thumbnails-train": {
-    "hash": "bdc5be63ac0c7746dfc3fce9149a9be672fed848dd4d894d60076607dab3e16a",
+    "hash": "6ff7ff9e4b197078fa82f23788bcce6c6d99dd940a74fc07261d3055ae324b78",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "min-jun-design-tokens": {
-    "hash": "c97558b2bdac3997531e53e841e0c04350dfb521d2ab46651b2b593a88363182",
+    "hash": "1440fea3862500cc2d2853de1a4ed4c66724508d29db12dee0cee6a12c8c61df",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "min-jun-design-tokens-train": {
-    "hash": "79d645f1188a4ebe3309be69cedc14fdbc449d7249c314a88d77aed597331015",
+    "hash": "4d06612bec88f76e69fdc72821e0a9827d23ca4d7abf5ec6fadb1425095e2699",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "minji-emailhtml": {
-    "hash": "b1f9188e321538b4ece99f7b32e7d0e78a3800e905a44052759fc4c3ab41d042",
+    "hash": "444b1e59fdabdb8c49f25a2be8445664bd796a4bfa42efa30e21fdd518c7ab86",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "minji-emailhtml-train": {
-    "hash": "2da54f721cb5ab6345c5cedefed04b66da8af395bf0394264ab51b82032bd872",
+    "hash": "4d4a96051a5a036e0de7f26857fa4eb7a89c1f45d2b1f13e0f829763309586a8",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "mirela-displays": {
-    "hash": "a669f8578337f2af4bb293d5ca7e18df44afd8f19dfab8fbf6b35947f9a4ceec",
+    "hash": "efbdf3536b1d44a5a1c1f6bf7a5d9c9bc54aa0a30bb550a7560a4e8b010526f7",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "mirela-displays-train": {
-    "hash": "f06fbee92be9fa7d6331d3c41e135554a0c895c3d2023d7b421fa800bc9981b9",
+    "hash": "99233ab903580daa2de883f0fac37f15bc39275b703d2ed89d8d65a56085dca0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "mladen-wordpress": {
-    "hash": "fac129d833d9318bbb2d254e80a945037dd4dfdee408cac7fc1489bea0d5248f",
+    "hash": "96a5ea88c9974e55535af005b9d40cb433388d55b89a8d749b3c12e99cc5b032",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3120,7 +3120,7 @@
     "updated": "2026-11-12"
   },
   "moira-credit-terms": {
-    "hash": "29d9d48a908f096616ff7a9c3d188ebce81059fcf9b5aa3ee785173cf6d187a0",
+    "hash": "18106abd81e75ed366a0c3cb6b396e3dc5aee3c2c60a70b452340311c970ab53",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3130,17 +3130,17 @@
     "updated": "2026-11-12"
   },
   "monique-membership": {
-    "hash": "50b5bffe336d3927d40f90c6eeb95e2d3d18d6ea27c4bc79886a3a71c6574d90",
+    "hash": "91686ce2dfc982c88a3ee7928eb4fefe4067c4fcdac78bc476aac4cb362cef1a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "monique-membership-train": {
-    "hash": "40996c591ed81fc202f7972f6319c7255fa97a1ae40dbf44b45cdbe3adc410b6",
+    "hash": "e1995d50aa4f3f163e0721241bf8135c0096a1aa8f2a120af2b3b53a77d08fde",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "muriel-donor-data": {
-    "hash": "f305522e63c2a39f688b6a37d4d471423de5d46bc8b3ade8f821e0ab8cd7ad5c",
+    "hash": "968c99e68239560cfad3df857c4edd6a1bfa83d28a5fa88eab8341d467ed95d0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3150,17 +3150,17 @@
     "updated": "2026-11-12"
   },
   "nabin-shopifytheme": {
-    "hash": "7621ba484a6bc5729cd388544ef66292bed5e0a05934ea87a78c1aef1bc7c1f9",
+    "hash": "d052440bc4455fc73ca8d97595d4d87e031d7c7b89d3bc705a3eabdc812ee6c8",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "nabin-shopifytheme-train": {
-    "hash": "aabde14a6c1f8b3def008b912211790d5b9c14ed7f3a8990537efe53e955863b",
+    "hash": "2067c4598dd52799b3bbd29c4a2aae7b407a1f9adc0bc008fb75b049177bb78b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "nadia-cashflow": {
-    "hash": "f767b1a032f3b339942f4910992871270de1ed91c38dda3cdd50796c378a5a88",
+    "hash": "b1cfe70ff9a42c05b85db4161b29d69f059a52ede933ffe379bcf31245d01474",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3170,7 +3170,7 @@
     "updated": "2026-11-12"
   },
   "naledi-culture": {
-    "hash": "f6b9f1dfa4caf0ef9bb4d37eb38e2a9b53265541603098bf458b2bb728ccdf1f",
+    "hash": "f8764aecf47af0798e5cf43e298c6784f400e32163e260e9c02c92108b603030",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3180,7 +3180,7 @@
     "updated": "2026-11-12"
   },
   "nasir-diligence": {
-    "hash": "e8590d978fbb62dd86bb03bf210c05c15a7e2641ca996dba3d271da1c7773417",
+    "hash": "45483c396f32b3fc265c599c23491f5ab5c60d1b91a86020c9509123ebc99d89",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3190,7 +3190,7 @@
     "updated": "2026-11-12"
   },
   "nasrin-tech-packs": {
-    "hash": "436decc574a14ecaaf9aa83cfa4cecc542008d9d8133404d6751fdd0d2c815df",
+    "hash": "8a739cad57109f3e69392fad694f783fcd24372c01141e85187d02759725d0a0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3200,7 +3200,7 @@
     "updated": "2026-11-12"
   },
   "nathan-jobpost": {
-    "hash": "821976634e273080adbfafd1aedbf7c17f51fac7ddf8d23e77ac79a3897f4b9d",
+    "hash": "e89f473e2dd96183fd62679d810ae44d817d8e659bbf5df68260387383f8b760",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3210,7 +3210,7 @@
     "updated": "2026-11-12"
   },
   "navid-qa-testing": {
-    "hash": "55cfe9324c80c83def6f2968c9524eae8aad04ff692981d6526be5422fae30be",
+    "hash": "0d1035c2bf4c252b9db47962d38270263c137aec226886721db44d0881a9250a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3220,7 +3220,7 @@
     "updated": "2026-11-12"
   },
   "nazmul-handbook": {
-    "hash": "e0086db4349305a612d0b3796b0b5cdc04c2fc3b1f73484d53beb07ed684f9cc",
+    "hash": "47fa860f937c628394fb8a8599582c4f0c7a1d200706edea37c76291b8c6a37e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3230,7 +3230,7 @@
     "updated": "2026-11-12"
   },
   "neha-product-management": {
-    "hash": "46f9fce5ea987f0639c8ba2d52960e76ceeb33c537dc9265188967100994df19",
+    "hash": "fc4c5058cb5cb48c9b52d6c5b0b006cf65308e728f6b251c3b7039eef6b4a790",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3240,7 +3240,7 @@
     "updated": "2026-11-12"
   },
   "neil-costs": {
-    "hash": "9fac9fd997ab713f10d0e535c1d2265c83673d0c18dc22a86a0b41e8fc560b29",
+    "hash": "2f2def0f20a6cbdc2577638a1c78b6ce46740f2c81b38a3d715a961823ede671",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3250,17 +3250,17 @@
     "updated": "2026-11-12"
   },
   "neville-bid-no-bid": {
-    "hash": "7bfa9a865dc53b6a0e24e38325de3ef6cd1d2d8eb1fecee253a444e3357fa3af",
+    "hash": "db4c99742af954b8d1c9feecda86b75e05f32f784317cb16e2236855bb5c137b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "neville-bid-no-bid-train": {
-    "hash": "61c89289800637d94e5b5aae987ffe9aa632fa9fa85590639a52399f38a408d0",
+    "hash": "640b38a0a4b752d8a6c3ed9bfa0bccacd947d80e30db9f90af144017bbbe93ad",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ngozi-learning-support": {
-    "hash": "d2b88b5b90c575e5d2b43018cc9c9b3b2b6d2c261766bdadb601d4b765d0645d",
+    "hash": "b7d7c45cbaf3062d11b1de35f74e6eb0e656d8fdd1fa418a86fa89d17ca7ddda",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3270,7 +3270,7 @@
     "updated": "2026-11-12"
   },
   "nicole-fpa": {
-    "hash": "1ec1f89ffbe917aaf4638a5e479728337587ecd9032c4f938b593b035f17637b",
+    "hash": "b8b69fb4a61b1778072105987a004a7d9c3d1e2c321c1628031031aa5425d05c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3280,7 +3280,7 @@
     "updated": "2026-11-12"
   },
   "nigel-deploychecks": {
-    "hash": "a503cdd117cebe224bba239b3d68f78a1dc764be9c5bd6449cbe5a67c6fb4ace",
+    "hash": "59760b1683729e0039ebe2ef109c2bb3a984c68153915172ae8dfd1f61ee9705",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3290,27 +3290,27 @@
     "updated": "2026-11-12"
   },
   "nikhil-google-ads": {
-    "hash": "3bd6f6a0656fe03258881a403e3fa49672f0cc5f12a3b02e2e11908e1103f9b7",
+    "hash": "660484d6970e0855b460e4fc65a80a8f379f1014e0d7aa912819ee085a74612f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "nikhil-google-ads-train": {
-    "hash": "e0b9fc30e8b7d506b1e956d9976bd1d0d2c1c0ca04f0b3af785da52202a7a221",
+    "hash": "11039044b057459efa1d0212b3d98b5682d47b0fca31c46318387c49b582edb7",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "nikolai-store-migration": {
-    "hash": "91b8d17db3b9e012f7df7ec33cd7fe7080b4d15c4d33e79c488ea6de5b070d9a",
+    "hash": "23a06d3cc666335bb1a24ce1a57280ad3396bd629347f2056679094ddd63715f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "nikolai-store-migration-train": {
-    "hash": "21fd7385799d423c9316b60d2340c017971e4b416273acb9eea40fdc2d694d5e",
+    "hash": "2f744dcd68553aecc993b867e93acefc33687e5a6294c8ab9517258d2023297f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "nisha-saasmetrics": {
-    "hash": "3e2f624d6f90cde820668f9a02e4c189284050c02a92d4bb2a1e01546ef77977",
+    "hash": "bac2f2475048b73fb6b92ae430deb65e9aa588065ed1979b7afe1c84a86b283e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3320,17 +3320,17 @@
     "updated": "2026-11-12"
   },
   "nkechi-interiors": {
-    "hash": "a9840d0d3d2419cc2b88a98b00b812fef783e1100ce1008c966037307e4c6cd6",
+    "hash": "37b556e07eae5a3ae16ec28a59fc175c1d42845a1e6f105ba28bca2834bddfe2",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "nkechi-interiors-train": {
-    "hash": "ef48de7b17447f91b57030a3c0f98c5dfe54aefc5ba3a7012ffe772b7d0ad28b",
+    "hash": "7a916c1d6111d2428f66880c7514dccbfbb3d05b8f13d086225e8a66e918beea",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "nneka-paybands": {
-    "hash": "c2574c46f753bb045ec01c76a1148afea206f31f75a35fb4e071a6b15ed707f4",
+    "hash": "8edc60c23c095985e595c31dd6480eb28a025ed56acdcbc57136c07fccba3ba1",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3340,27 +3340,27 @@
     "updated": "2026-11-12"
   },
   "nolan-wireframes": {
-    "hash": "a0845bda419c6a8419589408763261413b95596e696c2b40b3f9d142a26909bf",
+    "hash": "205b3723710ab1f195cf5639884de517cf8c8c7b8900911c51644cbf5fa4e99f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "nolan-wireframes-train": {
-    "hash": "5c794a95c5dfe8af7a63e3dcd6b95b5b31e11333aa20b6bb56bce4083b04c4a1",
+    "hash": "f2873961cc21727b8486a0df3a3be8235b8e03d5f6aee152e5a089b74dafbf04",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "noor-packaging-layout": {
-    "hash": "fb46bae9cdc4501fc9fc3f16de98d584ba17513acf9155aa9bd24659bdfb8320",
+    "hash": "77c1d18a35b7f0e9dcd056bc79a94ce290fb5a11b718f48fba6aa982fe718c81",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "noor-packaging-layout-train": {
-    "hash": "ffd72ce3e28b317cc741f21879d5c0f9668e06fe2c37b9e19d6dc8fd9e312452",
+    "hash": "e12e418b07ca21eacdbff46b9e0588fa6f788dd21295a6ecccbd7c556e4a3ac4",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "nora-alt-text": {
-    "hash": "b8ba827442d30cbe6e7d2e8be1574bad014573686eab2f9299f673dea6d82a94",
+    "hash": "3a674f00d4e62dfcdaf2bd183558a31c9230fa6c5e75fce6c0414de5d97bf78a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3370,17 +3370,17 @@
     "updated": "2026-11-12"
   },
   "nurlan-rfm": {
-    "hash": "acc07e5670f4ba4f3ac0f795eab0efdf0d0cd443a18ed1e92e235e9a3adcc296",
+    "hash": "e7c9b00c470268cf2553e0953233e68f8c07f5a3299fab4117096665ffd35697",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "nurlan-rfm-train": {
-    "hash": "cc2fac6f123ad12537eeaa9032eaba70456b8af97e0fca5b15508a0d36fee506",
+    "hash": "8e2d57a8066a1039bce76be5d21b97bc8fa995c72a6c7da45cfaea8573d315ab",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "obinna-interviewkit": {
-    "hash": "49974a4a218c0a2f406b42835c3aa9ebc639ebe164fe8c842f80164158b31a12",
+    "hash": "83234532cf3f175714563cfa27fd9bf3fbd685bf968db0694e98e1ed917c3f1d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3390,17 +3390,17 @@
     "updated": "2026-11-12"
   },
   "octavio-storyboards": {
-    "hash": "fe7c90d103302f6fccf4a699960bfe4b0b95868dbe5364831f5008a0b1e4d444",
+    "hash": "4bbfccce0c99df50514a67444bd9b49b6494ab20114265196c3aa514ea4d3bdc",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "octavio-storyboards-train": {
-    "hash": "cbecf542305ed7980eeeca3c5ea79f1780aed44fa430f10d441d2cd66bd45b26",
+    "hash": "19e03f4bed080800a56db7751336f8eaef128433e90a2daefb26877021bba599",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "odette-payables": {
-    "hash": "e117fa12c4c0aa28a7d3ab0dd189725a228c2fb2e1892c7b79a4640ba7346596",
+    "hash": "f9665a684e532e486308a7f0e313d6158e61e9193c9163f16642f4d8b5850f58",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3410,7 +3410,7 @@
     "updated": "2026-11-12"
   },
   "oksana-training": {
-    "hash": "7b07af214d050d051cda11e657843d8dd1bcd809cf200aff63e96f5ea11562bd",
+    "hash": "161785cdcf8334a0b8beb9645378fbfadfde428d1b59ab3d39381ff967571e9f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3420,7 +3420,7 @@
     "updated": "2026-11-12"
   },
   "olu-pricing": {
-    "hash": "9b12e9ddd07dba8cdbfacc2ea7d208e41b295b70a5734ec9a9b051ea9adc0890",
+    "hash": "2ec864a49c415ef41c51c24d032b79c2f6938128c6c2290b3ffc14fcc5286002",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3430,17 +3430,17 @@
     "updated": "2026-11-12"
   },
   "ondrej-illustration-briefs": {
-    "hash": "49a81450797d75b1025c0fba8f8887896db5505213a7c597c5efb9f23facbfa5",
+    "hash": "d2da093b114102f7e1ca8258e6249ae2bad81f6ca7cd8ab0cb78a98c184c807f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ondrej-illustration-briefs-train": {
-    "hash": "8921af5df911c8390eeecb6f57f72c71ce21faefdb89f587de72310415468ac2",
+    "hash": "cf71af5f067c3d2a5dfdfed07b4050abbe6d87bb3546794cd24c90275dbebded",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "orla-nonprofit": {
-    "hash": "a06c125c55d36d63d6f33efe6432e1c09446c308c03f0099b0a7625229270f62",
+    "hash": "391817594768481ff608ab48e64e6851b00923cdf6ffe52f1f56c91e01bf6f48",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3450,7 +3450,7 @@
     "updated": "2026-11-12"
   },
   "oskar-business-cases": {
-    "hash": "80e2cca1cfc630d45b95e4fcd9320f16d11393b8758f41dee4209933cd23394c",
+    "hash": "20c7a9ddfdfaeaae7f8df036b2ff286117134037f24e8f4e7b99bd2b211407f6",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3460,7 +3460,7 @@
     "updated": "2026-11-12"
   },
   "osman-subscriptionpricing": {
-    "hash": "f41911b6ade8b1ef2df5a0d7543074c6ac1437b51b312c512b60bf63f2d15f32",
+    "hash": "7770d1e3ba83483bf2ed4999da33798b4e476352c17c1bf3f9b867a8d349f495",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3470,7 +3470,7 @@
     "updated": "2026-11-12"
   },
   "otto-headcount": {
-    "hash": "2e84612f486960d2bef96b1ab1ccb7e10b669b9919510afeb67b487bbc8a8fa3",
+    "hash": "330302d1b8258eda9436fb0739b0a7aa52e301cce4365e09953bde2b81de7fde",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3480,7 +3480,7 @@
     "updated": "2026-11-12"
   },
   "owen-continuity": {
-    "hash": "981f408a1b21cb0fda6b68e1b8282014e50f75c791d0cc783cc9835c9a4eb64c",
+    "hash": "9cd6d49506c3355c25d16129152d26b532d0986dddf85614e7e360dbd1cd4089",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3490,7 +3490,7 @@
     "updated": "2026-11-12"
   },
   "paige-onboarding": {
-    "hash": "450a1a8574602e14840a7b216b4aae7ced310269064f9139ef25d93695304178",
+    "hash": "5513079fa4e8972768c44761973bc6bd7b6a1ff1e28dd328d36c5413e1f38ca0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3500,7 +3500,7 @@
     "updated": "2026-11-12"
   },
   "palesa-rota": {
-    "hash": "5b36361e91a60c7098373be30f1fa456147df0393e1e02cc797d9a53c5382df2",
+    "hash": "1c76bc1412ac6a72b263141302e8d5c58d47e202efd44e78d65d94b52b2b2f67",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3510,7 +3510,7 @@
     "updated": "2026-11-12"
   },
   "paloma-investorupdate": {
-    "hash": "b80c2bac2647056cce7796b37001ac5cc260b9a81129db9f27a13d780b1b8acd",
+    "hash": "e35a0b33be634cee22578bfa66dcb27606a5372ad936788aeb9a1b24ea915c0d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3520,7 +3520,7 @@
     "updated": "2026-11-12"
   },
   "pamela-practice-ops": {
-    "hash": "d62515534aad99ef05aa8eb940e7b7ece74edf8bb9dddf67b9249eebb68014d9",
+    "hash": "8cb10a50056385602c7746dba47614c00e6fca9c90ee8b8a13910dd9371ef412",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3530,17 +3530,17 @@
     "updated": "2026-11-12"
   },
   "paolo-app-store": {
-    "hash": "c4c5a93423c6c5b30a63e7edd620548589341936d210340f3793e270237021e3",
+    "hash": "febe65f09dead0565a87bdbdbcc433876a7ffd08472580bdeb8ab0460f8777f0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "paolo-app-store-train": {
-    "hash": "78f75cc2cc29cb0c33fdc208de18059844ab979801a92d4a0b06cf5346a6585c",
+    "hash": "0fa4281825475c51d143ddacb2a06fd08847695d08a7a185e9e4ff5c158cfd19",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "pauline-volunteers": {
-    "hash": "f9e97c30434af6d62f60e2c96f34ce9c175925a12f2e0d23ac761d753584cd3a",
+    "hash": "e24321f3a2622ba20cf960512cc85b8fbca37958b685f1463f30728ec89a611a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3550,7 +3550,7 @@
     "updated": "2026-11-12"
   },
   "pavel-staffcomms": {
-    "hash": "a3c53ef451cbeedf7fe1abf66624ac876ba96f5c8a4ad92667e2e618aa54981a",
+    "hash": "045dce40e9be72529c392194155804eb26664e680e7c52638d6da62394be1747",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3560,7 +3560,7 @@
     "updated": "2026-11-12"
   },
   "paz-staffsurvey": {
-    "hash": "8d359422fbeaedcb5a6786d5d4763f28316ef43cf8ea5541e886d8e3537ab226",
+    "hash": "6fcac813c8e91a13611fd49e5d3cbacd62b8428b8409d67cf3c51a4b42b0cfed",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3570,7 +3570,7 @@
     "updated": "2026-11-12"
   },
   "pedro-payouts": {
-    "hash": "42104eca96e8c7ec46c1c3ad69c470b30319edcbd1b4137355a59a2616b1ffc9",
+    "hash": "5664a6fd26a71c807a7d93167d398fc5f9d7125945c0288041f5015618fa2aff",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3580,47 +3580,47 @@
     "updated": "2026-11-12"
   },
   "penny-book-covers": {
-    "hash": "1ae5474f5b33ea07011d362236cde5acaa0c61f92154eaf60aceb80d061a97f6",
+    "hash": "125bbf76464ee88343ef7ca9cfaa808c4d2c8964a27f3af156248c11b938e1e4",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "penny-book-covers-train": {
-    "hash": "66b30ff67c3d232aa5ab9c33c62797414ff6c4acf006518ff2ad8a7360b6e159",
+    "hash": "82a70476116d3ea7d06e235bb9e735d0a46440a01a16c7aa6f7242ad04a2033f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "phoebe-captions": {
-    "hash": "c0a94ee10ef8dd532be8a234246117625a3a3080d6925c236b7c96280b1b390a",
+    "hash": "39a541e8328bb7ceb93238b95095b1e4d7d9ad44696da896a4b51d7e6797269c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "phoebe-captions-train": {
-    "hash": "43eb37d8997a9537d97d2ff33d94814c35c8ad94a9c4d642b1218f0248d7ac21",
+    "hash": "60ce4e6e14ab444761b3169fd6d158814afe63b17484e5282062e36c89b1bf58",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "piotr-order-desk": {
-    "hash": "8898ea7a7ae472d49dcf1c4f181c595621467b187be443dd924635e76789ed73",
+    "hash": "b29e6cfe8c35ed8c1eca4974839d53b0f0716ea7dd0dcae9f7a0404331e25864",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "piotr-order-desk-train": {
-    "hash": "adbb84bd2109f66ae31be43e140f5bab95f593f164e4865871ec511d904d20a4",
+    "hash": "b47d8a0701ab4de5f5fbe720616071d948fdc2670691434a72e2a01b3504b3f2",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "pooja-lead-funnels": {
-    "hash": "8d384dcd233ddff79356a66b8c0b7dcb0328f4988b1536f28685e074eb73ba7d",
+    "hash": "c42b20fdf52610bdaed4415242e62c4c3840fcbfa19133937a1bc1003b912ae6",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "pooja-lead-funnels-train": {
-    "hash": "a1e9ea7cf8f50b622e6a966f4230900206951ad55eca9febcd76984b889a967f",
+    "hash": "c804a58c51e3d83e7f4120a156f791e3df74b522b4473e632446520831549e65",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "poppy-sustainability": {
-    "hash": "197c7fa9408dcf9b8554fbae52e40af59e64ffb5033b1ab93b04a25609a7270c",
+    "hash": "63cf6901657a4f4677f7a7e6e7db946805f64a30e30a4f5478d6a8522d27f050",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3630,17 +3630,17 @@
     "updated": "2026-11-12"
   },
   "pradeep-webinar-events": {
-    "hash": "fc26a36f32f34e66768bd81594df36c89fae40efa63e38e099e38950932b58e7",
+    "hash": "f097bc2d011edbf9ede432e5c40abb5e7ef71e0fbb58290653a5efb75c3be4a7",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "pradeep-webinar-events-train": {
-    "hash": "d4afdad6f19b16c93b1d452477859720fd7aeed047105e340b1403c2afd821f6",
+    "hash": "384dd4a2dc97c89fc2bd94f012adc4ea654267d319d8d1cdd424a340b1eab736",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "pranav-training-videos": {
-    "hash": "9620baed6c038135d7c0b7da5767f1a36ffba2b2bb8215baecab2e6f23d5ee0c",
+    "hash": "7b69ac5d8a3f41abdb67c32fc618f3976ca22d37a11430a748e08bfc8e270482",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3650,7 +3650,7 @@
     "updated": "2026-11-12"
   },
   "prasanna-booksetup": {
-    "hash": "ba1e7fdf3e4c1d0d6463db4d2eef55cfefbccb335260cc1f5020ccc8b84e1db2",
+    "hash": "c4ff8e6bcd95aceaea126b057dee9c13b1e470e15db5c3b45c5ff9c182db8c39",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3660,7 +3660,7 @@
     "updated": "2026-11-12"
   },
   "quincy-managercoach": {
-    "hash": "b5dbe5c5f8989ec9b3b2b2980cac0cd7f4029410a3bf473ff818b43cbb772f74",
+    "hash": "af59fe711addf8e289799245f35241cecaea21331410d06210e71ebc8f577430",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3670,7 +3670,7 @@
     "updated": "2026-11-12"
   },
   "radhika-services-profit": {
-    "hash": "c59c59bfd6e1f3d9438df5e50a8d66a66bff07f698ad5e8dd985e4447a0fbfeb",
+    "hash": "1038d4cd107b402c129b2a3bd8ef59f5b055bbe1bb50d0dbf270715b246378a7",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3680,7 +3680,7 @@
     "updated": "2026-11-12"
   },
   "rafael-collections": {
-    "hash": "8f85d2cd593c9f738fa18eae40261081a649db6359cff20f4da59feac2da869f",
+    "hash": "9154bb35ee9d6d9f40314a29c04208b97a6e5427922f9df5f2b60344add3383c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3690,17 +3690,17 @@
     "updated": "2026-11-12"
   },
   "rahul-ux-review": {
-    "hash": "96776b8584838a5fd9c0c02e9c8302952ff164476bb16933662ad78154fa0bb5",
+    "hash": "08048347dfebc57c71f74ec167bc9a6e30ac71e7e324fbdc997e78f71265402a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "rahul-ux-review-train": {
-    "hash": "3e20ea95fd13eb272ff571ce6f8ea8a43f9ea7625c091ecc23c8f635828fe50f",
+    "hash": "8e6fde330358f5a52176debad0b5211c0b7df9f97dfbf6191e50079ca0595176",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ramesh-taxprep": {
-    "hash": "2f47aeb2683aa778fc2ebb7d4b6e0edafabff09f54ab61aa7fc64e42ef021335",
+    "hash": "95d1e17afe2b3d9f8ce78f0c8c0e5b7bea9d19e904d22386431880d0a6cfc212",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3710,17 +3710,17 @@
     "updated": "2026-11-12"
   },
   "ramona-business-forms": {
-    "hash": "af98220963bf26ece2dc722afe8cb78ead6322e9aab1539ae6c6e56b89bde3b9",
+    "hash": "9ddf71d3bc5876e55d06015bb53d66847d86a40058b0fb75ac19a7a73148cb30",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ramona-business-forms-train": {
-    "hash": "42fbf61c0204ba5bdb8c53bd19e08a7088983e938fb1b83a35762bec898cdf1d",
+    "hash": "82fd9057a765ab093d433bb491f81d93094c743fa2cfe2a03bb461ffbfe4e1bf",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "rangi-freelancesetup": {
-    "hash": "cb2f6ad19a66ff0dc06b1512aaed45327e03434d63d39f81f1ab9b51203d4346",
+    "hash": "f29e05d3e392e98794a8afeb4bde0ba82a7bb4b041dbb2c4bc265d8cd680e3db",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3730,17 +3730,17 @@
     "updated": "2026-11-12"
   },
   "rania-menu-design": {
-    "hash": "a2f1d63fb0bd4bfca3dfad67a9416da71927dd4f06670a9590ba166cf9c92bdf",
+    "hash": "ec1537e78e3da2770d8ccf5ac02847d3778edffce25d49d236e647c1a3bbb5dc",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "rania-menu-design-train": {
-    "hash": "840140c6c146174cbc375db35173cef252a3a8a394382bd05ec35a8fb1347925",
+    "hash": "ccf70c8535e922c52cc04f5ba21b3d46174fec7cddc1b772d54d6c8eafed6488",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "rashid-carrier-claims": {
-    "hash": "b772912475546c7836ecb471c391564924743e8bde611462dc8fcc976041bca8",
+    "hash": "db8c109aa113683672afb14bab1d5f488e90c91cac56e30ed6a89860f4e064c7",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3750,7 +3750,7 @@
     "updated": "2026-11-12"
   },
   "rebecca-internal-comms": {
-    "hash": "cbd98128e7d6adffa3508e569ad894a2310f3f3655293f3fb35b207933282ed4",
+    "hash": "cca9256e1d4947abf8df3cd9743ae020a8f6f0b1e4da5ecf1f9eed47478f8536",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3760,7 +3760,7 @@
     "updated": "2026-11-12"
   },
   "regina-debtplan": {
-    "hash": "067cb8b8e9733e9c996aa98f4aef576c18ca7ba18fd56a2e0cb7e598240c344e",
+    "hash": "8051615009781882104732cea96cf09642c4c697563a6ad68f5ecaedef80dd40",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3770,7 +3770,7 @@
     "updated": "2026-11-12"
   },
   "reginald-controls": {
-    "hash": "e6764e724ef269184a69cc84c6765f000ee00e5201ea2498d88eb3e95e75213a",
+    "hash": "92626ca2de540bfaa2ebf08d1af4f1cb027d90771027cad6d247a5977bca7b63",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3780,27 +3780,27 @@
     "updated": "2026-11-12"
   },
   "rekha-partners": {
-    "hash": "c2440de3d9faa2f41ad8b826cdd81c75e8cd2e7e36abd211e921f91d1a108b6d",
+    "hash": "db33e42f05749bebeed59ed243a9112a1229c79aaec314186f13ffaa0caba5a1",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "rekha-partners-train": {
-    "hash": "d80e66f25e64f4b5110a80d688e05fd17d2afad99f7cf3139bf76a020fc2cb63",
+    "hash": "a040415cf745c34c59fa6ec18d13b9ba0a7fca86b3e2bef96126cd03192d7ea0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "renata-brand-identity": {
-    "hash": "2df14079d8f788aa766105703894b527598182c75032129ee0d4ec58fa058628",
+    "hash": "dc7082be5e27e73aad7f1ec323e3a3f629dfa9d2c79f92c1cfbd196852f5cfed",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "renata-brand-identity-train": {
-    "hash": "97073078ec507105da2f52ad0f48fc810012bf108f1098428bd5e5fbff9154fb",
+    "hash": "3339da35505c4709a925c21f0cd2ea56b81d2145dc02a41c063bdb9034736805",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "reza-peopleops": {
-    "hash": "6e329d18fd9950d7536317d65cc0af78c3930553862c519e5192e31f4b70aad9",
+    "hash": "fbe34040b8e01a5910b6a4b6b7e18cc74e16ef9d9955f8ab5134640d37a70a53",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3810,7 +3810,7 @@
     "updated": "2026-11-12"
   },
   "rhiannon-clientonboarding": {
-    "hash": "e4e9ff71f94b794df5a070bf423232a6f04fa4e297927172f575c9d06f1c69f7",
+    "hash": "db03718e9cdb8a329b6a7c4b6223906a47690882230fc259b1df5b347780c4eb",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3820,7 +3820,7 @@
     "updated": "2026-11-12"
   },
   "rhonda-shortstay": {
-    "hash": "338c6f0c0647ff4b971d5842f1a3a2c71bae0f980c3cc0ea6a9ade77bd706b21",
+    "hash": "7fdf0709566e723d2d1f8545a67e6185086eb63b902164f098d4c4636e4bd1f0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3830,47 +3830,47 @@
     "updated": "2026-11-12"
   },
   "rhys-traction-saas": {
-    "hash": "d7babda9485625de97b507b4de6036998e376c1f26790ae00703c09f65858ad6",
+    "hash": "2bcbaaeb3a564699c255341d1c7d3b011f672ccdb5814e8dc0c2a6474875e113",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "rhys-traction-saas-train": {
-    "hash": "0da78642cfe3eab0296a0c0046a07e42e5f66adce54463c4b6794479ae27dc8a",
+    "hash": "82328f8077094e646d37bce77d149a2cbbe3db46ebe9cb01ae81acc3f3b6ae10",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ricardo-buyer-progress": {
-    "hash": "8d2f9ff11f7d14a598437b9f395ea0095f0394e5c444a01255d6ec17db39fb29",
+    "hash": "70d1f9da99da25043e734fcb3d7d8669b1e06bf14d5e92b3579c88e45bcf75da",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ricardo-buyer-progress-train": {
-    "hash": "fb49a142b3b3bacbddd39922bb8cb69dbb1e017370eb3c30e3c35903201da2d5",
+    "hash": "bd373af3684581deb061487f6aef44bee970713ce8c661576304156f15bc9037",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "riley-carousels": {
-    "hash": "0c6b284cfb8c73153424f948496b2ad7d56dec258b95caf9a40dc5df8bd90981",
+    "hash": "a93ff7346c25b783d4f6ea98b939d01068285b59cc023c54eac04ec2ca31b5ea",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "riley-carousels-train": {
-    "hash": "333fa962cd2f6d52dc1e9dc3cca9b58e0a1f23b7690ade6eee8802136c3b89db",
+    "hash": "28625c083c77ee0af990445e779f2469b242626c8c4445e22a30584edd766c75",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "roberta-direct-mail": {
-    "hash": "577de12656bdf2b6af712a0106cb7dea4aed3faf189d1f85018a95b5f1a720c5",
+    "hash": "f5c02e12d4bf5e69ea582814ecfd815f71b73118a09b46462c759ee0c2f6eaec",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "roberta-direct-mail-train": {
-    "hash": "fcf8d13725000cbe8ead558f3219f44edc92468e6b13bbe3a0c56316062ba387",
+    "hash": "8a0324fad6a942dab1bdef80dd0d3c3076c94b3e5a89176a767a8e4466a778b6",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "rochelle-retention": {
-    "hash": "2f8f63f55b45631eae7aabfd06f0ed7efe655b75382aea3ae366377eb07dd4db",
+    "hash": "b3755256c429d24f2f6e2fd68fcedf3344274ef9b4e9a438941640cdbf8a111f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3880,17 +3880,17 @@
     "updated": "2026-11-12"
   },
   "rocio-tour-scripts": {
-    "hash": "6747c9f0002c09470cf1286e324e797ecd0e33a8b0639e1eba0ca54efe690882",
+    "hash": "5dfca20bfcdaa6f297e162e3f8d0eb7a5aa2108e96477fd2143c367c3c9f274d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "rocio-tour-scripts-train": {
-    "hash": "742946c374b034763a65ecab7fc66b5260ee84bc1068b9fa829b263ce7f93070",
+    "hash": "51927e4c53ccb36ce49451085b3b178b5926dc68a34d844132823af2b095e08f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "rodney-contractors": {
-    "hash": "b11c7327cfb6f1b1f43ba014db3d2b80658e7844db617402a3c17a71c218759a",
+    "hash": "fa8147a146adc102bdf1e5f387988d776a8f2d47a5c71b3b08c50ebc84115f99",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3900,37 +3900,37 @@
     "updated": "2026-11-12"
   },
   "rodrigo-wholesale": {
-    "hash": "76c7a62d70223cfac6cdc60613e51f1342cb9d5419564cd687794934db1fca34",
+    "hash": "84e25b09f62d90b0460278536973d7ebdd8e99a207d10e439d932fea62bafffc",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "rodrigo-wholesale-train": {
-    "hash": "8e99c131eff59fb9285af428971a96c5e9dc5850d82ce57659a2cf5845f0ede3",
+    "hash": "ee20474010a1eacd7867cb05fbfddb9898bac73072d6a57fb437d41a3c76cc96",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "rory-slide-design": {
-    "hash": "c4c6755b7bd275be83266eae5084581f4bf5a2be0755832392d2c37be539dcc0",
+    "hash": "d690165128e3070181e66ee1428042379078c0815020a4ed719c75c36db681cd",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "rory-slide-design-train": {
-    "hash": "da5a7c020d18a5c2b58d7bad61a638e0988563c573be5b92792bf814ce683f96",
+    "hash": "5f155001048d8e5309be06edcafea05d6f0641f9d2787653178b3a9890a00076",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "rosalind-major-gifts": {
-    "hash": "c26c461151bf80ab8aaa9c1ef4eb70208158b61e97c07dc5f7c964336d23560b",
+    "hash": "88dcf0cdf04e61276bca8768a5a0196181752a5354b97fc87f12738f8dfd7192",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "rosalind-major-gifts-train": {
-    "hash": "d5f5b6d016d1eff81c999f31150c2718645a16d78de24ad90ca5bb6594bfb6a2",
+    "hash": "ebd4d9ef1df2ee5f0708e91a90c0144765594d17ba17367c0b3afbca4c45f4b3",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "rosemary-coaching-plans": {
-    "hash": "fffe30dc8d9953a0a7d1b7cc7d65af63512ac03041b87cd9cf473406f6084f8e",
+    "hash": "bae022f6e17db72da93f88b8ad3ba1b3b80e56d901177ef662e819e5757ecc56",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3940,17 +3940,17 @@
     "updated": "2026-11-12"
   },
   "ross-drinks": {
-    "hash": "aea40501a18cbdd65da1154f30057885a50a7b81be9c912a50f8d64598d32eb0",
+    "hash": "c59bcc00cca3a902588aadae5ed2acd2d4abf652d483bb9567f66b36623fd1b2",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ross-drinks-train": {
-    "hash": "c4195a6e430c457bc8e595c22bfa5336124a93f16b3b6065e634e544ae21cfd8",
+    "hash": "a890ddb54910f01b6814f3cd9ca3d2b7d8cfd57a102a7b817004d3d9de34f821",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ruben-monthend": {
-    "hash": "7eb9df17d5b530ce629f5514d36da0fba123e4330e5bc5b40bb4b8b006254318",
+    "hash": "172e871c9cebaf00e845eb7bb98d34a15a89b8020c0207d5723c1d882fb22478",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3960,7 +3960,7 @@
     "updated": "2026-11-12"
   },
   "rupert-it-helpdesk": {
-    "hash": "693f04d201272d1780c304528330f60808799f9798bf42afe8e23d7a3253651c",
+    "hash": "d9f37ea29b85811e05ccf87591d638a85f24d9ca7b8fe9ac80753091d0c438f0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3970,7 +3970,7 @@
     "updated": "2026-11-12"
   },
   "russell-bookkeeping": {
-    "hash": "4abaf71035ceb361c9b91c5bce2955c00087b2bc612d58ec168ccc3f8008aed0",
+    "hash": "5177cf9b3c410afdd22792a377716db22d415491bdd8674716638d4a8a882f61",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3980,7 +3980,7 @@
     "updated": "2026-11-12"
   },
   "ruth-offers": {
-    "hash": "1676db84caaf51ef539a45aa3422a3f9852efe4b2b4b4d5a773f5a472f441def",
+    "hash": "f645c990339be73c9997a189f48e5b07be9ab7ca171ac313fdd43dd18889c51a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -3990,47 +3990,47 @@
     "updated": "2026-11-12"
   },
   "ryo-motion": {
-    "hash": "62734ff95808872e7efc6229f5b9ee28c0f2e5a57a1bb2db548e55fd56f36f44",
+    "hash": "140ce8b9ffbf9d9b5aa079dad027a273d89d4c312e5cdf88ba92d0769f61cec6",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ryo-motion-train": {
-    "hash": "d711b599a00379bb7f360a3b5ca2faf056698b2d8b73b6a929649415aa6a9d11",
+    "hash": "f674f4cc535401fdb5c7a27202d70e7274db17050a04321e49ac6c14e7293f02",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ryota-navigation": {
-    "hash": "c4850ecd1f8975677facc0623ad7b0514f3b2b6d24b707bd178bc813dded758f",
+    "hash": "39a0e1c2e09d2e88f6e458cab0a4609931f5915b3bd20c91c7497f012f51a733",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ryota-navigation-train": {
-    "hash": "fac36351a9a28ecbaf8ad98ebfddc1605ace2ab54d9d94b4a5a19be1e053e11c",
+    "hash": "b9c3e7a75851db1ba0bb6c4b9d8739ba703bc1d0e2f2c68544b5a08f6703f57d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "sabrina-childcare": {
-    "hash": "d300169e93c245f430eeeb60799d5a99812bf811c8f617e118ea889265c7f04f",
+    "hash": "b5b3634ad4d82490eb36ce9c182639f19b7cee132329affd65d7ef640d6b99f4",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "sabrina-childcare-train": {
-    "hash": "8d71bae2cdd3951e0491e3015aabf0a92f3865dc7b5d4aa9acfc93adf952bb95",
+    "hash": "08943a89e106c2443347f025c960f7db00eeb925a98d4a8c41fde2fe69095897",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "samantha-listings": {
-    "hash": "fc41bea541a85aa3d88dbce0a6062e26185505830f5ee1850f011c2e25c72f04",
+    "hash": "b72a308a089a935b19c2f61b451378c0449bf4ee7eeca23208e90e3ebf89daba",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "samantha-listings-train": {
-    "hash": "7108cffd528be00ca69f8f86d43b4d9a16416b8d0457147d5cbe9b3489ed0e15",
+    "hash": "4973fe0d9891825987c0e3fedd012b7be3ece6bba12cada4b3e98186b4025f9c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "samir-escalations": {
-    "hash": "a5855eeb3f29a59e7ae0603248196ac3b8de83fcd774695a5fd6d7683af218c1",
+    "hash": "9b6632cc14e38f3e65245efb59c2de56f397f39efcc51efce453e56443afcc08",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4040,17 +4040,17 @@
     "updated": "2026-11-12"
   },
   "sanjay-law-intake": {
-    "hash": "db66e6d836b94b8826a637bd0a2f442e17b9658075c9589f3fbca6c934edc27d",
+    "hash": "ec70794444b74ef4d7d5b2a72f34a480dc5667f4e8a8254a583b27537a33d22f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "sanjay-law-intake-train": {
-    "hash": "e1566dbbee803fcf7eb443f9fbdda07947ee4a4970d61d72b1f4e6e8d981ca2f",
+    "hash": "08554dbcab9c15e56ac51ccd218c64c307c1d7d43bf0970f4aa9dd954a000ca2",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "saoirse-stays": {
-    "hash": "2d27773c95fded9911119a6fd48a657228b3df76276001946ba9d4840c73995e",
+    "hash": "59558e3d4808f99be1d27a08a09b7d702f3b39cfcca3a65e593aea6d4a2ef7f1",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4060,7 +4060,7 @@
     "updated": "2026-11-12"
   },
   "saule-captable": {
-    "hash": "92ac92dfccf7b06aba11864ca50e62f7f0333aa2439ec2817b023075e104a3e2",
+    "hash": "c62282609b22699b9e7231d15822d7a972bb872def587f923b318856d29d5d70",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4070,37 +4070,37 @@
     "updated": "2026-11-12"
   },
   "sebastian-brand-guidelines": {
-    "hash": "b1fb3d6f15f0fbf973ae7d2d44f6601d6e62819f37fb3ee4513fa773d51285f7",
+    "hash": "2efb0af7c9c6136a7fbff76e5a5a3a52a435f9268051e9d182b77c08d3669c79",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "sebastian-brand-guidelines-train": {
-    "hash": "c2cd6dc6793bba5ed04a7251029ede35a7d700ae0ba578c7d902511fa681370b",
+    "hash": "25b37ffdca0f29c7d60c114de9294862f8c305ac96341a7752f64a63fc46fd7c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "sela-faith": {
-    "hash": "cd4e8ff024ef01f4cbd726e3bb438fc612a6f5ed7057d2e55738530101d55c30",
+    "hash": "e81ef5aae256a74c338f7fed1b0e2a94e0ca160beb4c283750a552001b21b0e1",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "sela-faith-train": {
-    "hash": "26db79778417f755e8f6f70c917422c1d1e9febe0f7d4fa638605498a5ecf3ed",
+    "hash": "b2d0c5e898763a1c13132f8a642fd40bf6017a54876e56a3afe7ac905e40a37f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "selim-delivery-apps": {
-    "hash": "22b51eba2d6a460c145f25565fcf5de10f47b7c400d10f2917eadde1b1a8957b",
+    "hash": "2b718508bc58b78a10b9f5029a365e3354004be9fe6b86f8f47604607c0ac12e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "selim-delivery-apps-train": {
-    "hash": "08827e59c4b58126fcdfe55f7abd6cf354c0fa68e94147f41e8666175a12ecc3",
+    "hash": "a5de35838142e689e8df8928a4729558d66ed7143a485f32d4c6479aae3a1908",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "seo-yeon-elearning": {
-    "hash": "b002154103b17bf06c54edd63e59e8626b58beab10c4c98feffdb928ee228f21",
+    "hash": "6f73180ce042824fcc96be7d7d4b480644f3defb5ac3e136fed2e40e15515c07",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4110,7 +4110,7 @@
     "updated": "2026-11-12"
   },
   "shalini-kpireports": {
-    "hash": "afe5fc03a75b163f214cb5d7a1b28c85fe0faa18a1ab5dd5e1ebc90890375fba",
+    "hash": "5eefc0bd5ee40528c767f0223c9e8118931cd39f90e25b6bd8f7fcdcb693a7cd",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4120,17 +4120,17 @@
     "updated": "2026-11-12"
   },
   "shanice-marketplace-service": {
-    "hash": "5397d0291b9cabb6a2b0fa3d8a887aa7e76dc0d9059c390d68460b17178f8b20",
+    "hash": "ad506a4c410b0ed39f421b101cfe7c4112d92557f351b2ccad952c47de8405e8",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "shanice-marketplace-service-train": {
-    "hash": "6c9546495c4e8979180324610c60e5b47b76458ec458cfeaf4097d0afdaf7fe5",
+    "hash": "36e98343dca84e0b9899fb3d0038eb2332d1a7289b58351f4df364f270f01367",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "sharon-lesson-plans": {
-    "hash": "b8537f96d13449be66d5a51433328d705a5bdb7e2d077c3af4a1da8e8ae110ba",
+    "hash": "e3242ba296ad0b6b6b2500d4ea34ed2075479c94c6b6d6234407b8233b0beeb0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4140,7 +4140,7 @@
     "updated": "2026-11-12"
   },
   "shauna-agency-ops": {
-    "hash": "322156b9630770335f1aa5b9095cd43589a5ab0ede69615180510af6d2910670",
+    "hash": "066c676288e972a0f6e2f935e0ad8ae875387b7ec39b648aa6a177a11457fbc8",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4150,7 +4150,7 @@
     "updated": "2026-11-12"
   },
   "shayla-employerbrand": {
-    "hash": "b286e7d94c1bbc44eb2c9289edbe9ab44b124ec94558e7b6ff64afc4500efc43",
+    "hash": "0755e0db40b3dcfe1e2379524214fb1fdffcb7c48f5198b95522bcffd846360c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4160,7 +4160,7 @@
     "updated": "2026-11-12"
   },
   "sian-apprentices": {
-    "hash": "ba00a3312222e42e79aea190ac6e4066b6b2d2953c243fbaf7f1cc55d89f3862",
+    "hash": "9d173ea0c5c44fe8016cbb5f0f2cfabb266df038051cebf88443b5f27d7d95ea",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4170,7 +4170,7 @@
     "updated": "2026-11-12"
   },
   "siddharth-marketing-automation": {
-    "hash": "5a9f5f7d14f0d863d20cba9e416a326d0eae7817300be84ed7507979f3e1e3f7",
+    "hash": "69f17b8adc70e3f58c0a338df2b286572b0f6fc118e9e7b55087661cceb95ba8",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4180,27 +4180,27 @@
     "updated": "2026-11-12"
   },
   "sierra-pets": {
-    "hash": "70a88ba8e69c621502e55b1a1c386e5c646fddce78223734a095e0c05265baa9",
+    "hash": "fd1550352458abf651ac6021c2e4f3963929f28002853861a4367a7dac5b4ece",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "sierra-pets-train": {
-    "hash": "fd5b1132cf4e9ac83cd19d16b184233c6226aba67e1088611719222b93562e93",
+    "hash": "c9da09c6decadbf0ad20e78a7debcf08a5535e00e4a9d934e2e848be72f4e900",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "sigrid-b2b-geo": {
-    "hash": "f36116f98ecd99a0d99919015393e82a792fbe16f245d54b25e786728c187abb",
+    "hash": "1c01292e841b480c92bad3ccee575fef1d556edb94307f37a581801009be7713",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "sigrid-b2b-geo-train": {
-    "hash": "5324ddbb30493be01b21ae53d0c12b7940d0bab3f005fc42723350f76c4d7db9",
+    "hash": "0355c9bd27be4e2c39d3d11f62cc07da8b12c4302b58a940203fe70cbf7e6a40",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "silvia-sales-playbooks": {
-    "hash": "8d7ff18295b4308a5679c24eee72a1c8b1ba16d39ce5c5829c3478b1191c6c1a",
+    "hash": "26d8605f14627066f8e3ae5c6be82b1eb2b0218ca1af37435e40fc0f585d89d6",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4210,17 +4210,17 @@
     "updated": "2026-11-12"
   },
   "skye-tiktok-ads": {
-    "hash": "5d6dd7f48365d67536668d028a0536604c8c558a3cf49ea445b251db3febaf03",
+    "hash": "9b32b9c48bad871512b9d4905dba3ab67502c97b6537dbe61709954c25a9b2df",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "skye-tiktok-ads-train": {
-    "hash": "545499eabc3a2072fdb16e79f1833ba19f13f6f42af162639768b81f0002a9cc",
+    "hash": "ce7aac042dedfeb100a8a9d45527c0e1e30306a88f0432f06f9724d2f63c66c3",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "sophie-study-notes": {
-    "hash": "3d9f283373d87df7609dbd5743504ff9bde3130432770fd09ed357d67bf9dca3",
+    "hash": "03b3c6dc1ba2a18450293f83fbec7381e7899afc46596bd6fe85b2ad899ab0e4",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4230,7 +4230,7 @@
     "updated": "2026-11-12"
   },
   "soren-vendors": {
-    "hash": "64eee4d13eae50ac242e3c9979f1fff9cb21328f235527f6ea38b7dd59371352",
+    "hash": "34fee8fe0987fb7ce44f2ed7597262cd849be2ad606d23d4dfb1a48ae8cce94b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4240,7 +4240,7 @@
     "updated": "2026-11-12"
   },
   "spencer-club-members": {
-    "hash": "19b8f63f7c464e4a54cca065ea3e5c4cd5ec293abacff62ada78c4d8eac58dd1",
+    "hash": "25ea3861f0dd3c7a14bac837416be608a59564df15abb8cf43d250bdcca594d9",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4250,7 +4250,7 @@
     "updated": "2026-11-12"
   },
   "steven-resumes": {
-    "hash": "474d20166c25f53b344c22d1d45e52bf5eff08ec000d31b57af220931c8a1dba",
+    "hash": "3df6d541034a497da3a4e13f08e7194ea6032a938eddfb32523150c146a61a56",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4260,17 +4260,17 @@
     "updated": "2026-11-12"
   },
   "sujan-farm": {
-    "hash": "6be07a3184eb8ae011203ad08a3b5ba0f416687e2afa1dad8c9722225ed912b4",
+    "hash": "a0f2c8ae46e22a384406ed862809129f85ede2adae258dd284249680d7c99774",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "sujan-farm-train": {
-    "hash": "9a5f0e698c1c5a357e8996f23ab4217d5690667649743e767e13592c94f37e02",
+    "hash": "694f7c7978e85b99e20340bcd5cabdca77f46af9afb0dc996ba64f72a154d3f6",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "sung-min-chat-flows": {
-    "hash": "7dd7c9110105155803f4473034ea3edb9432c81e6f9881b2a7abfd8174bc60b5",
+    "hash": "2894bb7b42b9ea367da75d5aa2c1224f1542551aaf51fab03473af24fbae2378",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4280,17 +4280,17 @@
     "updated": "2026-11-12"
   },
   "sunil-cold-calls": {
-    "hash": "2fa5e44ffdd4bf26c816914fe14588dd8d1db312614895ef9357db5bc1f98d94",
+    "hash": "78d3fe2011cdd2bf93910266ab28be63a60e0116f486d1762f633aa6adb32cf2",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "sunil-cold-calls-train": {
-    "hash": "6087f969cbeb31417c5a35987274c664783d3b52a30111da9170292e3a568b56",
+    "hash": "e8086ecfb9b874d2d0e9ee5925647f3b5a062a66cb7327a3bcf90323b3f0e20a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "sunita-ops": {
-    "hash": "5cd02cefd61b6fd8fa136bc37f7601067157d42059f94b31e4dfbf294df2433f",
+    "hash": "042af13a9627c91ab23194d01fe5fbb430f787a4777f209fe8e8f61f644716c3",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4300,7 +4300,7 @@
     "updated": "2026-11-12"
   },
   "svetlana-scope-sequence": {
-    "hash": "18961a707e8aded9b016ec0b4e86f7c68af3f5d6fbefe8f59463ff2ae8f51310",
+    "hash": "9e74142b4a65ebe6b4811656697d5a4b8f1c159bf511d4722ec4125e1aed5533",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4310,7 +4310,7 @@
     "updated": "2026-11-12"
   },
   "syafiqah-billing": {
-    "hash": "89b303aed5fc12b7350709b7521642dbc97c69c6f7adee08c1ede422cfc06dd6",
+    "hash": "cfc694a5bd5a4a0c9960ce09c8d2601c80e92e697998ba584ad7ec9cf3cd2a1b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4320,7 +4320,7 @@
     "updated": "2026-11-12"
   },
   "tahmina-governance": {
-    "hash": "1689d0a9f0ccf96327ec0084085fc2876a3de58853381dd8a103a378f519e857",
+    "hash": "c7f2d8efe6fc7fa5cdca951c5f2095f96761e8a3d513deb43bce52ea8c7a99a6",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4330,7 +4330,7 @@
     "updated": "2026-11-12"
   },
   "takeshi-product-development": {
-    "hash": "8eb3864c20bbb4079606dbef68fd281ff8bc7468ce0a2b64bdd4f9f60690980c",
+    "hash": "8bd42888e8a8ec4445f909ead1537935694324ca527ba872e08a2f37799d717c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4340,7 +4340,7 @@
     "updated": "2026-11-12"
   },
   "tala-restaurantops": {
-    "hash": "5e720c2f44e5f9c039a26443e0256b5f16f8152ac45443222630bc409f9385e3",
+    "hash": "b30df4e3ada9dd30fba158fa9d4d746ab239d51541f02d82abdc5fffef442782",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4350,7 +4350,7 @@
     "updated": "2026-11-12"
   },
   "tamara-hiring-process": {
-    "hash": "47f80dc8e7269f20af69a6b1324c1727f3a65a04f045c0e339f3cb7c8f0fd597",
+    "hash": "99d0b944ede28b9f7dd747e89370589a3b6157fec2e41a9a1a5944b1479bfa08",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4360,7 +4360,7 @@
     "updated": "2026-11-12"
   },
   "tamika-cleaning": {
-    "hash": "9e5e88ab5ee823937c2a913baac88903ca8d2e41b7e25d8060ce9c6df1ae6b27",
+    "hash": "07f0b8b0b536c9d9aec8f6de04773a6bcf7b6615a5e550fb363ab8c660c5633f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4370,7 +4370,7 @@
     "updated": "2026-11-12"
   },
   "tamsin-okrs": {
-    "hash": "16b005abc0c4722a5c7a824ae39c035e4adbb925b69126583bc6c7c619f47073",
+    "hash": "cb21737b7a1621476fc9a1490ef27d6c447915ced41099f6f05aa445f6b1d613",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4380,37 +4380,37 @@
     "updated": "2026-11-12"
   },
   "tara-venues": {
-    "hash": "93a1f487a8c0501e4600d6818e6841ad13bc26479a0675c6ae02504a9276f8c8",
+    "hash": "9f6305215a35f06ca354f94ab268092ab89ad1933840dcd3298a76a71c78a16e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "tara-venues-train": {
-    "hash": "af119fe934a25aead6e45a1a0375838b5850952321a6e2e4946273ced9c5089d",
+    "hash": "fe73890c2dd2fafedb78f1f286a5172761a9ef0e31e26ef3d5b8386823f2041d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "teodor-tutoring": {
-    "hash": "b92f9311a5a6ba4d2d3c0886ce63bd31da2b61e63916838f8b57425198754e97",
+    "hash": "ef0fea653a1c074cab70972847c0627b7c1c3054a2d9d4a002cbd1baa15c6937",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "teodor-tutoring-train": {
-    "hash": "e15983b47e5029377a923d1945358b262099bf5c3a902eea23cae781d25f0f0e",
+    "hash": "ca1821b14a74269ee3d00500834c1f6748e87c57cfd23a2de4baaf6aa6651ee0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "terrence-rfps": {
-    "hash": "403eaa3514e742bc75d0959b1bb64b72f9a4cd79ebfa2dcc11010e450bcc34bb",
+    "hash": "5767d6bac192d87de07a037d300a68d263059da4cfc4ccaf201d0a794b6a53d3",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "terrence-rfps-train": {
-    "hash": "f3094dbfe1b4f65e51ff6c6cea588857e9ff324668d540334ee88896d439678e",
+    "hash": "6588120f03610942280025febc31be462767489b85dd0b4bb84b0b3348e54960",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "tesfaye-propertydeals": {
-    "hash": "1096a3b95728045623eb2eec0cf847218c1642d1ae4f90ce7b29dafb57afa93b",
+    "hash": "bf03380208782c99b8a4e781bf613fc8c012c6ea2226c11723619193c45e996b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4420,7 +4420,7 @@
     "updated": "2026-11-12"
   },
   "tessa-profiles": {
-    "hash": "81fe28655c4534cad49ea77b73586a07e9c61b4b37acdbd6195bbf4d8ed781c1",
+    "hash": "abff4d1b7ab333bda241ec9c262ed6faec059a70b2e9b00a86f927c57dd7461e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4430,17 +4430,17 @@
     "updated": "2026-11-12"
   },
   "tevita-video-edits": {
-    "hash": "246a9a85042cfe3f49cbe999298307b7e1b4128c7974754f5f918efe01dcccce",
+    "hash": "148017f3b8cd5101057eb3406666b921a5e8dbf6ec7f98d95698a870c92c639a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "tevita-video-edits-train": {
-    "hash": "09ef51e97956136f42b39d3dda78b4e1be74dab420d382f8751d1246de6271fc",
+    "hash": "4a1c07de2248b22171ff1bddcab29e2337a94a612c5869f7b2eabba20f1e3a0d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "thabo-staffing": {
-    "hash": "7da0131f8dcbeab91b84d0c1db5f9a937b11393ea2719c0fc90f0ce3d84a43e1",
+    "hash": "24bcc7ff98d400383027c024e83b0f3eeb6d827dd44644aeb77c408eb94172ab",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4450,7 +4450,7 @@
     "updated": "2026-11-12"
   },
   "thandi-automation": {
-    "hash": "ca063536d1f6d9ba992cd17b48e3ff5965b8bf5c1c2453ac06b25c97c1e0d17d",
+    "hash": "2cc61b53647da67369bdc3b5a2e66f1b8a3f85f83037753069b08625763d5510",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4460,7 +4460,7 @@
     "updated": "2026-11-12"
   },
   "thiago-customer-academy": {
-    "hash": "98f26cfe49312b46fec2227d786d4c3eeb7650b312e7ebd2320ca795ae98471f",
+    "hash": "3342f6c4b20e032c8cb5d58d4ffd993bca6dd13c9607c66bf1be252bdd93822d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4470,7 +4470,7 @@
     "updated": "2026-11-12"
   },
   "thulani-crm-setup": {
-    "hash": "406d22d2234e61edaa270a59d0a5c319f06a19e19cfc999dcfa012dea28ae69d",
+    "hash": "8d2eef2f843e57c0721a1f278207f7cc182d057a091235ce772a2673a267029f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4480,37 +4480,37 @@
     "updated": "2026-11-12"
   },
   "thuy-recipes": {
-    "hash": "d23f19293a478f1cdef44cc1fb032571cb5db6159509a2bc055bab436d3fcde4",
+    "hash": "1585247d43e4b2c77944c194e0a6294802bde526ecc9cb7c1418bc32ac440224",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "thuy-recipes-train": {
-    "hash": "37c54fe9ab6301d41ee2cfe3a29352bafd25fc2e2526bd97709f214241402a5b",
+    "hash": "e95813f0fed4a74859a88830bbd3c5e31ea990885b3de689b61dd0cc1625db1e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "tia-photographer": {
-    "hash": "710bff48f59a62a1a6905b3ee13c30cf62329a5a598bda923b5c5d7ad44ef471",
+    "hash": "39fca9c632f19ae652bf5e8dd21a2a4e244aa5a37b40088e24480f40f237b8c5",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "tia-photographer-train": {
-    "hash": "10de689b73195814956605c9ea3bd0c46d1ab7c680b2e26254b6ce4fcd6feab8",
+    "hash": "6ee3724647cc488a7624d7bab64b49ebc6daf8364151c5548efde7576d7bce5e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "tilly-digital-products": {
-    "hash": "a4632cc5d4d7182e4e583f212e48db999c4a1f498459085540f26a90a49f55ca",
+    "hash": "5ee91c50ba2d89c92b92d68b5891bd68fc9c5208d379177488d44fec6de3d9c6",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "tilly-digital-products-train": {
-    "hash": "c6d150de0a156281894fa3175c3883f9cd0808bf3e89e0ecfdcd8bf5fb7ba446",
+    "hash": "75b7d7baccfe61d9ab921f41d7a4372855a033e5fbc0d3e943d8c134cde19f39",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "tobias-service-levels": {
-    "hash": "4b6960a9840f41504e873cc59f4eccf98c7144eb38fe9b7a5a863241ec2fbe53",
+    "hash": "42ff2fe4253ef91846b6d7cb66740dd723f94c3920af4d9ed5418fcf5bb50c70",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4520,7 +4520,7 @@
     "updated": "2026-11-12"
   },
   "todd-renovation-quotes": {
-    "hash": "cb460f2b216e68f6764d04a070468006fed3296002d6deaa6964729a489961e7",
+    "hash": "6fcf649adc3a4a99268cd3fe41ae11b613435c9fe9a4389978aa1aa770f48fb0",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4530,7 +4530,7 @@
     "updated": "2026-11-12"
   },
   "tomasz-assessments": {
-    "hash": "52b4435068b0dd7f400c49ee481dcf4e956face76bcc187f6c5dc651826a6747",
+    "hash": "b540410fa3368033ad31507c3f8b35aba94786431a3058c1d0bd25f3bb6adb4b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4540,7 +4540,7 @@
     "updated": "2026-11-12"
   },
   "tove-process": {
-    "hash": "d7d8cdbd855f63aef22bc85ff1d3df11903155bd6370fb305fff356f86c41144",
+    "hash": "57463bfc642afe5f04dd810f15803718bc1d0e5f79fd0e37c9032f374066be21",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4550,7 +4550,7 @@
     "updated": "2026-11-12"
   },
   "trang-data-migration": {
-    "hash": "366ed2e3712482e2ad1feb93bc9544dee45607886c17f380e9b8a081e802c690",
+    "hash": "af6f11e121f1de65454e1069617e1cb7c98d1954978fbdbdc2afabf128eebd53",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4560,7 +4560,7 @@
     "updated": "2026-11-12"
   },
   "travis-recognition": {
-    "hash": "ff0ec77df2a77b24c9e144ff30d4943d91c4ea549c49681bcb4c78674f586848",
+    "hash": "d20130de5955ae53a45f44d28bced858f924dc5cdde5d4372c58435ba56a7b0e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4570,7 +4570,7 @@
     "updated": "2026-11-12"
   },
   "trevor-safety": {
-    "hash": "b1c56df707d1c6826f55e7305013cbf23f1450c21969d1de50cca657612e3811",
+    "hash": "6f1025ca46a51846ee30476602d85e6f3a18955e5923e665597ea9e1f967a1a6",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4580,7 +4580,7 @@
     "updated": "2026-11-12"
   },
   "trudy-complaint-letters": {
-    "hash": "66cb2e6c5d113c037cdac449e14ed4768661f8e9b4f0552b6a5720132d892088",
+    "hash": "d38bf4bbedd67e40f9254f84fab9d1eab1fa8245fa4d4cadd66ce3aadc9babef",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4590,17 +4590,17 @@
     "updated": "2026-11-12"
   },
   "tyler-inbound-leads": {
-    "hash": "3b53a0d6c247ec10fcc1beb35c82a036c82ff8b29c90e7b762f3190620668b1a",
+    "hash": "db3026e359ba08e0a905c3008bdc7e2098b1fd1651e21f02c5cd7b280857a57f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "tyler-inbound-leads-train": {
-    "hash": "cee189cc7fedaa20f48bcdf8c6901289105eb7bb66c340fa8c69c4c3c7c80af8",
+    "hash": "32b5d3bf2b5c1076af6b829326c13c05b015f427b0579e8a19e0cbe002e57edc",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "uchenna-workshops": {
-    "hash": "8a345ef9639340105e28d6a423200047b49f75d6dd6dc2869c112dffa1e7ed2f",
+    "hash": "178078e9b7499c771d0aa1d5e788163e250b17961cdbbe36721867098f35cd3e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4610,7 +4610,7 @@
     "updated": "2026-11-12"
   },
   "ugo-chiefofstaff": {
-    "hash": "eebaa97daed1c0ed03b87d90b31a22f8b1c1855b876fb554b71f5877bf87942c",
+    "hash": "ce86f406fa4f880196f73d9b2e00fa3b3ddb77783f44f0e1598d8b9db3ea105c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4620,17 +4620,17 @@
     "updated": "2026-11-12"
   },
   "ursula-book-blurbs": {
-    "hash": "0465e9df7e44d9645d6da56f56bc113e3e39f0de28fcc48ef8ad7a1f869d48f4",
+    "hash": "42e782ea8a777022ca7bb015e9891046bb36ee22d4fe72c27c42af3d7f097791",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ursula-book-blurbs-train": {
-    "hash": "dba7021c8741bdd16ba88b4c0531b4c4babb37ad8220c2b0576942877ba77289",
+    "hash": "1d6daa96b6e8a4debd666b1361d93e9668678752ca98c3e3ac9c626f1ee80e9d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "usha-hr-specialist": {
-    "hash": "23902a071bb034d503382bc771ef81662607ee366e67c071d63e7652762d74a2",
+    "hash": "81e52b5b8d6d19dfd6c2f7f5aa834cf7e42e5f7f379604299672040e97af1233",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4640,7 +4640,7 @@
     "updated": "2026-11-12"
   },
   "valeria-data-analysis": {
-    "hash": "2c08cee8e2d676808af5c0b3a13181740046d0d3097fe272158f3e13820d1b9b",
+    "hash": "138d3d4b545fa6d4c9e94a5f71755e71d56c44d55fa66eff7845c93e8f218415",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4650,7 +4650,7 @@
     "updated": "2026-11-12"
   },
   "vanessa-vet": {
-    "hash": "21f0c7bf091c40d413c3c3df871c6a480f5196002470af41065054f018cf815b",
+    "hash": "58480494ec7ccead95dac126b1f3b2be10093e8dd00998e0de6e6b084bb0b000",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4660,17 +4660,17 @@
     "updated": "2026-11-12"
   },
   "varun-affiliates": {
-    "hash": "d885418d16bd533d86f7b28360f11e11dd79a9fbb8f1b77872a5f019441c0745",
+    "hash": "453e61764dfa510fa0011798805177ba35e4d78964e37a3ea2435ad0f21ca718",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "varun-affiliates-train": {
-    "hash": "79145d65ac4cef1f43f5caa47ae1bbd523da647f82cb5b6ea547cd8621c49962",
+    "hash": "f12cd3233c038b48b3e1409e48c2728027802636d9dc567f6cac7034e41a5ccc",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "venkat-software-architecture": {
-    "hash": "eb26dbff239190fd34a26e7a9b6a584e7bdd8b0a54b93ccd5b0aa0506b965d6d",
+    "hash": "b699aac959b2b36b8901e08724bea994f880c49b11df355699e62d879c63422a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4680,7 +4680,7 @@
     "updated": "2026-11-12"
   },
   "vernon-cfo": {
-    "hash": "feb94496252ff3353906b5a61e082c4cf563fffe9e424d82accc5f0cd924d847",
+    "hash": "430f171fda4f791430f05868cfa81a18715d1b0ab8e3d0c20786464f17df6a70",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4690,27 +4690,27 @@
     "updated": "2026-11-12"
   },
   "victoria-travel": {
-    "hash": "7d9c81ed400dc35cae2009740afb3953d8ac16e19a9e6ef89f97d7d0024f90ff",
+    "hash": "5a1166a825e0afeac80d9fe8d8cd211bc7a08cc0acc27295553808891bb336c2",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "victoria-travel-train": {
-    "hash": "fac8c7d120752308f722fe36a2966b9dbda2feef48fe4f81fa9111ed0c54651b",
+    "hash": "a387218a71016268e3d6bff410ebc0264115406023c72509a4f753afe6a9a963",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "vikram-deal-strategy": {
-    "hash": "e3f06110edc460116b0399c9c274046d007fa5763235c1f4c6fb3c778429533c",
+    "hash": "01261d9993014abb0c6d1ee4b5f3a130964fc15ff799cd69a3732565db6bcd6a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "vikram-deal-strategy-train": {
-    "hash": "932de5ff542fc6ee145729d0e9cc955826eec7ea42fd9e30fded0ebd39d0e26b",
+    "hash": "838f8b726f4c12e6856bf5f880fc31b6d290ae6949e9689c89d3127619a46d36",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "viktor-paper-summaries": {
-    "hash": "f93990b6364e95091375e5a69a7dc54bb5525d0385e4e92635de74eec8b2ec9d",
+    "hash": "2b664d2a5be2dd7bd0d1b4d81e3bafe97da0a4ec5eb3b5077224d92bdf70dc89",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4720,7 +4720,7 @@
     "updated": "2026-11-12"
   },
   "vince-construction": {
-    "hash": "477391b2ddf4b1f7771387c911ea52b39484dc93a1d4a7d96c78b934d84caa09",
+    "hash": "7de284adf965700f449d47cf85fc7b0d3bf11de81ce0e9d982ea9cdee9f014e2",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4730,7 +4730,7 @@
     "updated": "2026-11-12"
   },
   "vivek-delivery": {
-    "hash": "22677e83947a883e004a2cb10f3183a4920174852de04d4371778239743aca24",
+    "hash": "cb8202ecadd42ad106f2f68b429198dc36933322855a19a59043d2251251c9b3",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4740,7 +4740,7 @@
     "updated": "2026-11-12"
   },
   "wade-exam-practice": {
-    "hash": "4a0c1d8e255023e945b408689dc6fc3190cdb79fcb540575b3f25744b4857684",
+    "hash": "85d60fdb95771c5dd00d1139d142b264b663c4721236b601e92a871a1bfa8872",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4750,7 +4750,7 @@
     "updated": "2026-11-12"
   },
   "waleed-manufacturing": {
-    "hash": "cdb732ce43ee47717e7b1b01a03b735d899ac5ebf70aaa9ed261d567c5a2b36d",
+    "hash": "db7f6ab526846c205c6a9baaff8274da945b5e6ba784b5965c987cd51bd54372",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4760,7 +4760,7 @@
     "updated": "2026-11-12"
   },
   "walt-autoshop": {
-    "hash": "a485f2c145663fea17ec598f0ad2dad9dad6c68e02009eaa96a6097a22782925",
+    "hash": "50234fddb2989515c76bf60c597749d511c68c685427a71fb74c07ad62dc091d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4770,7 +4770,7 @@
     "updated": "2026-11-12"
   },
   "wanjiru-onboarding": {
-    "hash": "2b2d0d587b21aa951e5779302fa763512617976a05200c86a4e77ddc0531c389",
+    "hash": "710bb02c02a1dbec9b9e252f8dfa658727a3b225cb8a3ec422a9f87246e65aff",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4780,7 +4780,7 @@
     "updated": "2026-11-12"
   },
   "wayne-continuity": {
-    "hash": "cfa6059cf9bf4894a8799fbb224b9ddcd7c0a807869c14524071a82115733b9e",
+    "hash": "67b81eda32f5ba443858421382897749fd20ba1dd9ea07018fe00e1cd817ae98",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4790,7 +4790,7 @@
     "updated": "2026-11-12"
   },
   "weiming-businesssale": {
-    "hash": "6110d8ffa0635d8f47cef3c82a9423bc5acec0dcd30b6f7e7f15580db6362681",
+    "hash": "771c3d27b2154f78140b3df53a680e9cffcef8fb9e5d554e7546c32fa9b90630",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4800,7 +4800,7 @@
     "updated": "2026-11-12"
   },
   "wendell-staff-training": {
-    "hash": "4cd39ff547610f54a87012094340825d254f0bde56040936431352f80a568231",
+    "hash": "c74500e759e1b422d6f47a074936d270218d35b503a33ec6ec07fbcc496c2886",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4810,7 +4810,7 @@
     "updated": "2026-11-12"
   },
   "wendy-procurement-admin": {
-    "hash": "143ed8fbaef0103fe80f173f8b752bff0220a89c5b821a7831ebc01bd885c6ba",
+    "hash": "ca4978863516b48366929e4553d2e25a59a299044900f8d18ea0a0b33e30bf6b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4820,7 +4820,7 @@
     "updated": "2026-11-12"
   },
   "wenjing-behaviour-research": {
-    "hash": "5566cc0d4f9ab271ff3b7bfb6ed0e1d1cad856660ef9b517f9cb2f7b64015946",
+    "hash": "9ea1f8c07b44f6ac7f9ba25679eef26478f19cf7258271774c0c3b0958272a7f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4830,7 +4830,7 @@
     "updated": "2026-11-12"
   },
   "whitney-projects": {
-    "hash": "c04e701a4de511f068c189ff58ccc03c11cc8b15bafafcb175aeed7719f48493",
+    "hash": "830db94b802acfaf16096c8a36757109a796b42a15da99d319b5f6a16d7a78ed",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4840,7 +4840,7 @@
     "updated": "2026-11-12"
   },
   "winston-events": {
-    "hash": "850cf38aa7475c89acd8ef464f7c4e9dc4904944fcbb1f7a5ff3444a3b818fea",
+    "hash": "3c9b8879fe6fb71bd40be5ce38079814445fc92638468db64c62b8856e9bb100",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4850,47 +4850,47 @@
     "updated": "2026-11-12"
   },
   "wiremu-speeches": {
-    "hash": "de74bb8b2053dfb814deec412ceb9cc61a43a76033050d34ad3b1ef767d6944b",
+    "hash": "9dfad4e7daf7b258dbebfd9bf5806e84a7cd172712c2b008cf83092ac583aafb",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "wiremu-speeches-train": {
-    "hash": "6ba641d11789062d04e5d828c3bd6cb5fd7bbd0e7b0bc85dc051311ab689245a",
+    "hash": "8cf67b44bf01d70af58028cbd7aaff4d2621ee03fb20e6f1890a51d116b8b824",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "wyatt-local-google-ads": {
-    "hash": "15f1da787e8c2ea6814b54129626b54ffc93bfd366695cbfdbb7ea68e9335261",
+    "hash": "c18d0991567de2cb5324da8d89881d20e8eed7177af55bc1a9be49ca3b20a9dd",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "wyatt-local-google-ads-train": {
-    "hash": "f60fdbc05e04b9fd24a64210f57b8908be7419f4e23032b15cb02d3349574436",
+    "hash": "64a2597c4701854dc54d07c2d4b395c421761b95100bc0b89a482791bcab008c",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "xavier-musicbooking": {
-    "hash": "5790bb066db630b4bd7edb94fb29b40c57d36188005a9a4615ba24111b6d8faa",
+    "hash": "6c2783463ffe26b8d297920c3042be48dda62b590a6fb25e4e8b95a9d44dd83a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "xavier-musicbooking-train": {
-    "hash": "a16fd6d7e3ebb415a6d89fba5cdd193d1a330d3c11b8a695c062583704edaabc",
+    "hash": "05d94bbd3db266ff1182aed87dd4b55c44d3720048102159c7936a70f1df3a90",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ximena-social-media": {
-    "hash": "689e04a9a2dd75725ac234888d91134c8a66bbe9b32f11481ca1581c45a9a06e",
+    "hash": "5c1535d278f9c3ffb47e2704da0403013e62d2e21d714a47678298f7d7444451",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "ximena-social-media-train": {
-    "hash": "d763ee79fc954a43c9b262550936ce267b363aa7e59652922e7d952c3d0fb246",
+    "hash": "5ba1c356d7b11514fdddd4a6ba8b392f79b8f315b8b9b5bb786ab29c11c35aff",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "xin-flashcards": {
-    "hash": "bf4a5cd79631adac9f219958344aef54b227ef2c9a0723ee841efa31a1963015",
+    "hash": "71ebf870e667892c42c59069f281a86fa6317bf0bc6c699ec2f03dcc1d03913a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4900,17 +4900,17 @@
     "updated": "2026-11-12"
   },
   "xiomara-weddings": {
-    "hash": "ea9242db91c0cfa685372c6b76e3f7a2bcc6858d409a8ef416e96d59d3a352e3",
+    "hash": "3684d70906259e0581865ce60dacb83f610bced54a9174c18bce74698b7b08dd",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "xiomara-weddings-train": {
-    "hash": "634e0b0e897ce4131a7aefa9db56d1ba3190bc53c03afa640821eeb1f1092f1d",
+    "hash": "6ce711d0ea669ecc948727a1c090e206e71f013edc9d8f009a9d72a4dd191dac",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "xochitl-opsmanual": {
-    "hash": "b9393dc613279b09bf06608edcd2b249577d0b6608c3d289d52d335eec43a65b",
+    "hash": "c09b2c14f517df1a7f3b67fe70d79fd60ef961f8e9fa5c3a4a1d64eb52f310ab",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4920,7 +4920,7 @@
     "updated": "2026-11-12"
   },
   "yadira-language-practice": {
-    "hash": "f0ff4496995683dcc916d825b1cb077b651edbf9e5b526c3147745a74cbabc61",
+    "hash": "273f402b8eb2710d8a282e6967bc7027f5dc297121c0c37395bab290cc0d3782",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4930,37 +4930,37 @@
     "updated": "2026-11-12"
   },
   "yasmin-foodmaker": {
-    "hash": "e6e00e20341b894761b64063d1fc196ad0f73f3428b0e7a095ef46a2c09e1453",
+    "hash": "c4cbdff2014ea792b95d82814b623cc47253e5d3c97817b74022c381500394e3",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "yasmin-foodmaker-train": {
-    "hash": "505411bbae16003e4e76da8bf87be06d7cc3dbeb840df0cf64a6e2a877aac169",
+    "hash": "4e7c1122ad0798afe0da96ca2050b7d3fb5a50e8aca12a310ee98fb549199f7b",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "yaw-freelance-bids": {
-    "hash": "2990623f9f842077727c9cf4dc428e666e0f1b53bd6062cb92f343ed10791dd1",
+    "hash": "7860b81390a20f441371fd881081a64d2997793f661e53b50705f0732032d6c5",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "yaw-freelance-bids-train": {
-    "hash": "06d9ba1e89f236f71b7a066a93936b3d2d977e53b6d70b8006933f2d231082cf",
+    "hash": "074ae0311cb2109891c6ea26ccda1503b7368b82679bb832dc167b667a03151d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "yesenia-nurture": {
-    "hash": "a3b8f34e52834090e4ae6939fab7c7c893610fa63a5401440958f0b54d4eb261",
+    "hash": "e61c2bc24b4b7fd08e578b086228298a1dc8691f19bbb01685f2a9a948472102",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "yesenia-nurture-train": {
-    "hash": "8f706232fa7cfa17b580fa59f259bb4b02f2d66cffaa9890c8b6eb6e86a76563",
+    "hash": "3345ce8e793cab337b92bf42a194d1bea0574144cbb59b84914ea5facfa7f845",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "yolanda-performance": {
-    "hash": "45a981cb915e0102ecdcaa850099ca133474760fbbc0383b963dd214192f9395",
+    "hash": "51913986804997260a5f32296befcdca2f66dd481ddfbe19305cf2838cc0c1d6",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4970,17 +4970,17 @@
     "updated": "2026-11-12"
   },
   "yu-ting-designstudio": {
-    "hash": "f4fdbaa92577ec01d32e93f1200492ab8225e8c44a91944f6b8c06a0f99827c9",
+    "hash": "b098805a2ba3eb0afe8b142e4069a250d3752c538e59a916acc7cdc1eecc8f1a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "yu-ting-designstudio-train": {
-    "hash": "ba986f088ee7261f31e468f6d613cb7a1fd7d054482b9538ed872ffb9b24340d",
+    "hash": "995c3b73a3b88f7f2f0d1d1d6ab6259eac8944ead2da03d25ea7821f301fc2d9",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "yvonne-quality": {
-    "hash": "8c978a16a9bb964ac271725ee1fc9937a472b89d6f612538a66c4e9f4960032f",
+    "hash": "0eebf9acff6272e97971527fdbe3ef42ef1f680979e0e4cf5d9d1dab9e24efda",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -4990,7 +4990,7 @@
     "updated": "2026-11-12"
   },
   "zachary-meetings": {
-    "hash": "faa9ecdc80a2a0e95db4acd1d35f242a1a699cea2576b77604c811227af2b844",
+    "hash": "ca8e980efd47fc7bfa911b309f549cb71d07c85301626b76db06f3afa55e042e",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -5000,7 +5000,7 @@
     "updated": "2026-11-12"
   },
   "zainab-interview-prep": {
-    "hash": "4399b0412a076d30446163a085625539b04a3c96a150f607fb3aad4e70431ce5",
+    "hash": "9081c775e1197c765b157100b87202425fe7ab35c2b7248828e79cccd31a7b76",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -5010,7 +5010,7 @@
     "updated": "2026-11-12"
   },
   "zeynep-focus-groups": {
-    "hash": "a22e34742ac54da84ed76924ee9d7d623de4ce997b1bd8ea44b44d7f5dbab1bb",
+    "hash": "24320d614f961b5e42e233a84345c9108e1d45dcf9b10e98637664892226000a",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -5020,7 +5020,7 @@
     "updated": "2026-11-12"
   },
   "ziad-menucosting": {
-    "hash": "01739008ca1c6f1ddb052f2f85eba964fadb573c19e2cb51afdf67366687ace9",
+    "hash": "a8b5ae83bf558347af82fb14bf48bafee31a431b4c0d4a55616d725b8fecd3b3",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
@@ -5030,17 +5030,17 @@
     "updated": "2026-11-12"
   },
   "zola-fitness": {
-    "hash": "2457df3fc3c570428a34bca0147636b96e0fa0647ba26c137e9e63aafebcdb49",
+    "hash": "7d2f4f15720a679690711d01d5ab3850646d48052b4564356f8a3e5e9e8dd0cd",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "zola-fitness-train": {
-    "hash": "0cfb90b84a1a0a336bd19b63fcd74ebd644710cab08fe0a220b4cb05cf15abaf",
+    "hash": "79a250c7726180b5655bfd1c9f9e267f35815594c5a083a0dc5111ce1074475f",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
   "zoran-jobcosting": {
-    "hash": "9a667a92726b323638f3c49af086ae62222915b47b44b6f7c3dce76101500422",
+    "hash": "64cbcdcd343059bd1cc5a06197444a4697897514505be23868bf73b0b2c65649",
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },

@@ -22,3 +22,21 @@ wrangler.local.jsonc
 wrangler.production.jsonc
 wrangler.jsonc
 .index-build.lock
+
+# Build-derived public files: canonical inputs stay in source; index/build recreates these.
+public/llms.txt
+public/llms-full.txt
+public/llms/
+public/feed.json
+public/feed.xml
+public/sitemap-*.xml
+public/_redirects
+public/packs/team-mode.md
+public/favicon-96.png
+public/apple-touch-icon.png
+public/icon-192.png
+public/icon-512.png
+public/favicon.ico
+public/site.webmanifest
+public/templates/ai-agent-starter-pack.zip
+public/templates/me-md-starter-pack.zip

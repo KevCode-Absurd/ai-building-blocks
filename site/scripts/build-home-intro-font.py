@@ -60,5 +60,5 @@ for code in codes:
     after[b].draw(bp)
     assert ap.value == bp.value, code
 receipt = {'source': source.as_posix(), 'source_sha256': sha256(source.read_bytes()).hexdigest(), 'output': output.as_posix(), 'bytes': output.stat().st_size, 'sha256': sha256(output.read_bytes()).hexdigest(), 'weight': 400, 'text': intro, 'codepoints': codes, 'glyphs_and_metrics_identical': True, 'original_font_retained': True, 'license': 'SIL Open Font License 1.1: original notice retained and full licence embedded in name table 13', 'tools': {'fonttools': fontTools.__version__, 'brotli': brotli.__version__}}
-Path('site/public/fonts/ai-blocks-intro-sans.json').write_text(json.dumps(receipt, indent=2) + '\n', newline='\n')
+Path('site/scripts/font-assets/ai-blocks-intro-sans.json').write_text(json.dumps(receipt, indent=2) + '\n', newline='\n')
 print(json.dumps(receipt))

@@ -1,0 +1,1062 @@
+{
+  "schema": "ai-blocks-file-cleanup/1",
+  "baseline": "1749c671d2c1bca9841093d34808b923b5686110",
+  "shutdown": false,
+  "actions": [
+    {
+      "path": ".github/workflows/catalogue-checks.yml",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "69f7cb4368a8a151a8ba7f5a185d9298147c4c13",
+      "bytes": 2000,
+      "sha256": "c826713effe6253375b68ac00442a57fd589195675f8f5857bb19d8e6d31f2eb",
+      "action": "delete-obsolete",
+      "reason": "Disabled, unused hosted workflow; owner requires local checks without GitHub Actions. All local checks and release gates remain."
+    },
+    {
+      "path": "example-app-site/_redirects",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "03c085cae468174849b58cf17ff2818aae0ff50a",
+      "bytes": 20,
+      "sha256": "aad46bc83844831c3ae5fb558c90a6b6422179a1cd80772fb1a33cd6e0311a22",
+      "action": "delete-obsolete",
+      "reason": "Obsolete standalone-host redirect. The library copies only example-app-site/example-app and serves the tour at /example-app/."
+    },
+    {
+      "path": "marketplace/public/agents/manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "6d9147237ed09f371449a1b49db41cb7878c45a1",
+      "bytes": 96901,
+      "sha256": "eb7e60d6dc09fa57eaf2b9a36d9349fb6ce144be5b2792964b62e2555a897073",
+      "action": "move-out-of-public",
+      "to": "marketplace/scripts/data/portrait-manifest.json",
+      "reason": "Build/generation evidence required by maintainers, not a visitor asset; retain bytes outside the public deployment tree."
+    },
+    {
+      "path": "site/public/_redirects",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "44887ae85f25984d3d7e591367b4e636f8b1bc2d",
+      "bytes": 65665,
+      "sha256": "ccbcad48d5e113909c30b7710f64b0fd1ef11d1b5ada95e155fdd92c35b14d25",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/apple-touch-icon.png",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "96e33db15cead9c039fc27e16dbfd5a16b18356a",
+      "bytes": 2958,
+      "sha256": "215fa555949200dad50ec26faac7a98c77aaf183117f5c5274fabfbee2d5a515",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/favicon-96.png",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "53fcc2e508849a11575abc7fc5fb40497c8c0c9f",
+      "bytes": 1640,
+      "sha256": "8e19fe34958cae97362437d79e775fe9925fb13cc14c970d5f5811e616babc3b",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/favicon.ico",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "d565272481265fee63c53ddf856249ff11df408c",
+      "bytes": 3887,
+      "sha256": "e20fff74564c0c2d70e1b2631ac55c76ca8bafe56f3997253a76759d207dd48a",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/feed.json",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "037215b4a07d7baf5fb47b3b191f9e811a576e24",
+      "bytes": 133749,
+      "sha256": "d813a91230df5527d31eeb166ec8ccad776999c59f3979c4f7bcc3bb72e9b60a",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/feed.xml",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "757863906ac5f4cb1bd9bc42901f462a942498b5",
+      "bytes": 59923,
+      "sha256": "cd4e6052a6f938d895fa51820e18f92bdac20da0c886c6f1a2d17f82268ea456",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/fonts/README-intro-font.md",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "6e90b4b26b2d5daec57f0810f85105e852fd53d1",
+      "bytes": 1696,
+      "sha256": "6c822a91f8a6370669803671e5fa35abaa78714420b1ef53d8c06d3efa246a03",
+      "action": "move-out-of-public",
+      "to": "site/scripts/font-assets/README-intro-font.md",
+      "reason": "Build/generation evidence required by maintainers, not a visitor asset; retain bytes outside the public deployment tree."
+    },
+    {
+      "path": "site/public/fonts/ai-blocks-intro-sans.json",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "2984b388b295775d7a219a2e19b5b8dd949f9860",
+      "bytes": 973,
+      "sha256": "60a6f6e4fab8293e4ff055c8563a2fd8e387e5ff1f98b1ebfd186a3500323429",
+      "action": "move-out-of-public",
+      "to": "site/scripts/font-assets/ai-blocks-intro-sans.json",
+      "reason": "Build/generation evidence required by maintainers, not a visitor asset; retain bytes outside the public deployment tree."
+    },
+    {
+      "path": "site/public/icon-192.png",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "8114b019e8816adb1ad2264169c1eca72fc07fa3",
+      "bytes": 3047,
+      "sha256": "c28d748757d03fcea3c3b2d2b6fa0fd9df67df5eec30dcdd2af44cb1d0345bb8",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/icon-512.png",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "a3edf7b8d76b3f1162c8c9100ebab6ebc0656171",
+      "bytes": 12638,
+      "sha256": "d347d882b65574e73965050783380dc1a6ff293770f29de1fecbbd0da7eb20a1",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms-full.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "b818ff2a977a63d607d8d1a0124870ab05d11dfa",
+      "bytes": 28961,
+      "sha256": "af294212ddb88dae5825c4aa3691f98aa5c2c8e33398d50eb3399e83970ba977",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "514cf1042c5e6d5210daa200dd60f7accb2045e1",
+      "bytes": 29104,
+      "sha256": "092cccb7087ae405cd579612c1637dcb68d3908907e49e58d25704c9e3f3fdbf",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/analyse-data.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "b3164427b7f403d564031cbfa0106d11c0775f7f",
+      "bytes": 5974,
+      "sha256": "d523fea0190e6dc98dd6c0466124c3b3581069261fbb90f957408a2535b6974f",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/audit-landing-page.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "5f3898d97677fd7f21046613ea6126d21af2ca1d",
+      "bytes": 8068,
+      "sha256": "7f57d191c0365e0a432e7ffcb8e1a6e804750e349513f2038d5e03add06a5dce",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/brand-file.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "049d5c5d24748c9f236593fceaf44a0886e445e9",
+      "bytes": 10987,
+      "sha256": "6017cf99706b6842487594c58ffe6ca4f3f1c28943b864c7a015a8471dee4256",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/build-product.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "340d07f85b8eedd7f31c30f41d3ef6590071daee",
+      "bytes": 14319,
+      "sha256": "90d8a08386cb0e3acb77f9e13164c0ee5b5f4dbe986d8763bf04da20bc9b14cf",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/build-software.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "b5d313ba1a9ce33da42673151d1e1609f81c8d42",
+      "bytes": 90845,
+      "sha256": "2219ca5aaf03925700a2d85f450a39bdc97f08d77cc35364b15f1d6e4148141a",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/build-websites.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "71c2e2bbc121b0ad55d4d3737be503a935df59be",
+      "bytes": 13770,
+      "sha256": "e32acf7e0bfdfe1cc252dca2bc1514db0f33cab27ab6ae4f62e96e89cffd2b47",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/check-ads.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "0e69677d509abb3f440e8bf31145c7b9137880b9",
+      "bytes": 9424,
+      "sha256": "dc8de66fdccb15b09db50cab16095ea65b4acc5f803babb6de1eb3b9cc4a8069",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/check-contracts.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "fb86b66cdc582f5838b541330df3b320a6532c8f",
+      "bytes": 23698,
+      "sha256": "745640c9b29752f4fe5927150746e44c99955645430b472c1729bd0687e03eb1",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/connect-tools.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "709652e690fec024fadcf4ab8978485dcef6590f",
+      "bytes": 9242,
+      "sha256": "c40f7088456ffcd06c5e6d589f88566ed0348b00c80a9b33391ea220ce1df5d1",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/design-work.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "1c75165ca2aab199c782c5b8dec8c17981f945e6",
+      "bytes": 26491,
+      "sha256": "5e5d901a4e3345c81e6cdee29c8530ea8ca44a3042aa5bd213ce030c02926c06",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/document-work.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "85f19e1e14aec4496ff1de9fecbee691dd6957c9",
+      "bytes": 13194,
+      "sha256": "5d488136f747a2048556c6e0cbfd9b82cbbe8a6fb726403a2b7f2e9e1e227eb4",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/engineer-systems.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "7e1765376fc3fb275b2eeb50f487799378ec5f05",
+      "bytes": 3452,
+      "sha256": "56f7dcd06b993ded850fc2e59cc4d932d0684ed1a12012b2d707ea7a407cf250",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/find-a-job.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "e0e13b8002f92eebda981518364ef26be3439a02",
+      "bytes": 3178,
+      "sha256": "7b83f98bb1a77025acea89a999f15bbf325cc87231fd42a47bd36d95940eb145",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/find-products.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "cee33300f8398b7790f97dd523c3f115d0e00c47",
+      "bytes": 3511,
+      "sha256": "56c12f4b62fe8f041b8a2a90bbb219e01a188a95f79f7697db746406246383b5",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/get-found-in-search.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "901c39fa8946ac2528eb10e9009ccd72d22e8595",
+      "bytes": 22321,
+      "sha256": "59f6dfb06a57ee038da0185408d495606be2b6c4ebaa3dbdf6f06eab5e077d51",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/grow-social.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "688c43d4d69401fe101242801cc5745f97eb18c2",
+      "bytes": 26027,
+      "sha256": "67c584c39471de0eba1df1d44709bd65e2ab9a73f8dcd96de2b65438625c2c32",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/health-and-fitness.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "1555f646e740b363520a05cce0f13c12ccce977e",
+      "bytes": 330,
+      "sha256": "03c19e989c7043fd6addf3e853e44ea46b4fa2d0c5ab1ee22a7e25eaa70e8b18",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/help-customers.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "1b3d647b3bd1ca686e8a194986f0c8cd2d528224",
+      "bytes": 16790,
+      "sha256": "d58ae6bce93a91b3ec35ecd7262cb3bcaf50e1509caf9eb048059bbb2e287228",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/hire-people.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "a52fa02236c25ef0ae080e330e505ba8244db7fa",
+      "bytes": 25508,
+      "sha256": "6431c19c8f59939c62bd0db96167cccc513eac54279cf5dc8ba014dfe1834e51",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/keep-customers.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "b3abc8988dbbe331f69150bd5df70bdf9bc87756",
+      "bytes": 7767,
+      "sha256": "4c4d2e2a66173b5589f14e67d1a137dff914b46561dfbb3acb5af067e493d01a",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/launch-and-scale-ads.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "07c7ca615a11c954573d9425021722d1d50c314b",
+      "bytes": 6805,
+      "sha256": "3273859a41b4a16759781059a9104411a18a4b49481a88758ee500625cdeda79",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/lead-people.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "8f65a15a14a1de183ad50ae2fbfb6b46cbaca3dc",
+      "bytes": 19786,
+      "sha256": "7c323a3a065ef3e86fbef4747ad704ccadff6705986a850b2c621dea9ecb643d",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/make-image-ads.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "916516e20b9d63ef560824d98da8dd39774ebd38",
+      "bytes": 14626,
+      "sha256": "a13afbc34d884cb1538410509bcc7b0e901ebc2b53db94ef1f135ce3a54b5141",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/make-images.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "4456f2ca14a00dd55270200b5e6c27c44396cc9c",
+      "bytes": 6352,
+      "sha256": "d29eb6d5e717afdb56b6e4abc6bd471fc0f1a9ec7ed10c8c81c39a6bcbc38dbb",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/make-offer.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "86ce6358c4b38e26e2a6ea7621ca4ceb8bab2a6e",
+      "bytes": 17070,
+      "sha256": "f09db946dec9ad2eda668325c35a6168a8d44160c4687cfb2cdc3219be0c73b5",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/make-skills.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "c79b92ee8509e3ede4dbd6c2826f68d9f2f54a2c",
+      "bytes": 4511,
+      "sha256": "6e58fe49eac4c46315cdc09cfe18e6f5b0647ef13da1eecc637e6e616f8ee40e",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/make-video-ads.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "6c6ad766d475bce80c6725a0473818505583143b",
+      "bytes": 20003,
+      "sha256": "db9acd71d77646a05a18b121c3401ae573457afa1cf693c74248f265bd74097b",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/manage-accounting.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "aeb6757403bd6e2bec8e37eef0d316698f90d689",
+      "bytes": 12787,
+      "sha256": "1bbf8574d184aedb2c25af4fc7502232b2f62bd9ca13865dd4e5cdbc0c218dd6",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/manage-it.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "01fded3c2113a16b4de315e590f0573e148d44d0",
+      "bytes": 1017,
+      "sha256": "d4cdb47a8da55db66dd12e830cba7851351b8302730019ab3493101f6e0915d3",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/manage-personal-finances.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "8f84a6c37427d0164fc27be421dd4498fd3f4722",
+      "bytes": 2140,
+      "sha256": "2b8a586ff9fbb95ab232daf6d57c10c81c2a72bc3c0b7610417ed0218ee0efbb",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/manage-projects.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "ede3248a75d37b2909321ad4e46c256a024b0960",
+      "bytes": 4054,
+      "sha256": "5256ac6f038672ef59834e56e0ba9ad9bea83d1fd8d127376354051f057e1dda",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/manage-tax.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "c80df169ed178a184d4936c683e9e2715d18155c",
+      "bytes": 1462,
+      "sha256": "6f75047dc9e98fd2e2cbca88350553e4b858404f440df0f29dc072c9d144be72",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/minds.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "823273e6a3a35061ab0643b527c7964eafef8bd3",
+      "bytes": 94519,
+      "sha256": "654115755451d4a7e79d892110e019ebaee0ee203c84fafd9ea8a1df4c052f1b",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/money-and-investing.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "bbcd7d7e4c9e585b8b33a9d1ee1754005ae7e0eb",
+      "bytes": 56452,
+      "sha256": "dcaa9442de3d84a16357797d272b69296b79d31eaf84f1a56709ac8070e44238",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/organise-work.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "894b5c9f307fbb6896f2120a7a49e9491a16eacb",
+      "bytes": 26964,
+      "sha256": "33674f14b65e4d4a46b6f902837e77211214a9c04cdfc3ee39b83c8f6d7fc91a",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/plan-ad-tests.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "be23e7268613f6834435456bec59c2ec9185633c",
+      "bytes": 11395,
+      "sha256": "e5d897b886e03ceb106e51ab65d1e4de431166b2eb9e3c0f442e60a97b81b739",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/plan-budgets-and-cash.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "4323c06c2753cd037425597e5c802f38b68c4208",
+      "bytes": 16354,
+      "sha256": "b64d7bb32209bfd052c4ad914ecc77c4021a10d64337f449f8ccd52ca1f234e7",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/plan-strategy.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "659edc4653658acb43759e7766c06d7a4a657c8b",
+      "bytes": 47171,
+      "sha256": "f17cc4d0e179fedea2e1e3d7b2fd9e8b7389da479eacbeb2d889fb2f45ce5137",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/plan-supply-chain.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "927ab217a9197d0ea588ac378e6d1f399ddee63c",
+      "bytes": 21359,
+      "sha256": "6efe38339cdc42852aad19e73bd255c112a0b64faecae6f1a5602f918b666ec7",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/product-photos.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "2655cfd0d527a879da4c1d2ae644b22200c7a2cd",
+      "bytes": 7907,
+      "sha256": "d5520a9eb26ddae35c116e45912bf863e0959f71bc7882033bb403a24f713e91",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/protect-your-store.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "84c7ba00141404030b025772a9c7498e6fdef29d",
+      "bytes": 3055,
+      "sha256": "db0563769a461ae50b8720c78fd2d24f3bb6a7f7aad5e8a590f6a7a981599d6f",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/raise-funding.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "d9eb4ddf97167473e8836037009ec77a59b68f23",
+      "bytes": 4174,
+      "sha256": "0836766b6642860de92cab49750873e7d708a5cee74fb1c471d382f110d9a65c",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/read-ad-results.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "efebefab9bb82ab26ed9a011e2524185181e2779",
+      "bytes": 13612,
+      "sha256": "fefaf7ecab32980939266d3bfc7c789706d6a78e277849abdd089079177d97c3",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/research-topics.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "c34db3e7744f2bb63935f55a8d20b25ca85769a5",
+      "bytes": 25730,
+      "sha256": "13f9fd0b32eb344df599b7bdee9c7d9d85a4352064b0ef66898e38c2a16d84da",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/run-google-ads.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "17873af831dfca41b88b663231c3582b532a9141",
+      "bytes": 9968,
+      "sha256": "b10d0c669a0b12f5d2acb9d0c40faa711cb7b3b2df70d4d48b535921dfc54804",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/run-your-store.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "db40ad13b85c9af14ec176fd2adce608ac4ca5e2",
+      "bytes": 27574,
+      "sha256": "909ba082225b685091e9d8c14f0668ef20e722cee94b2952e41bbe72489390ce",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/secure-code.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "0e503a16434f9266bed82d27212a825803147391",
+      "bytes": 22152,
+      "sha256": "90499c4af94c207ae7f48ece44e02ebc4786da72f43c25704b59e42aa417b1b5",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/sell-and-negotiate.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "5392c225ca02ce74706934510072bcd0d9898208",
+      "bytes": 27281,
+      "sha256": "236bb6fa62548c20acc4ed03471eedb67a43ea357a5693c0516cf476725f6e8f",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/sell-on-amazon.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "45029f53fada6ad38303be648838fa4239aeeeaa",
+      "bytes": 3727,
+      "sha256": "f914ab5aa3e7352145895707e42148bc443f7b93f384ad744e6be68dfc438554",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/set-prices.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "34e56e45f739b6e8d991b2177fc8b252efb49cee",
+      "bytes": 9116,
+      "sha256": "5e3749f6bd3aca240cc7f1a6401a3654b61f1fd7cc371cd34dfad756067ff04e",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/set-up-ai.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "040aa9f18683df28674e552e595bfd0346bb6d23",
+      "bytes": 21173,
+      "sha256": "2cd3fc3a5a0638a154dab3bb4fed702d5add66561b7c91869e9ced3fda67058e",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/set-up-store.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "1acc20476916269c148a819e4225a82dbd1415da",
+      "bytes": 4634,
+      "sha256": "4abfd0d63780442019e694280ba3f15c6ff0a76c680aaacca83d0d895e67c1dc",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/ship-and-host.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "965e2ad5fdb98918570d63753ccd97c6cc81e9fd",
+      "bytes": 21886,
+      "sha256": "3714b9f95c9bd8ab5a720f706e4b3f2e55dca734fe3044bf15f20b1065435ba3",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/speak-and-persuade.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "deef74933146cedc20338c185d74ea19bda8fa1f",
+      "bytes": 10649,
+      "sha256": "0ffd53bd1f28a325c83a466711b28b9af4db55d563d116c69f40962c46587382",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/specialists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "6ada6695121f4d124062253169c6f35ca790de17",
+      "bytes": 252531,
+      "sha256": "efbe725f93b15b5ccc4abfa881c00f8dc482adf30a69a132a891a6f87d75b08b",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/speed-up-store.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "94a6bfacfbe3cbc83991da7004d925f60afa14ed",
+      "bytes": 4443,
+      "sha256": "fb1c946652d0934ef0008557e3af02006ecbc3b775752a0b2e4a46d65c9e0001",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/study-and-practice.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "1667dc441d6c89cea1396e4df27501aeee5f4247",
+      "bytes": 7110,
+      "sha256": "8d1054ac10e6f412bae348185232f478bb0d5790bea482346823d258938966e9",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/study-competitors.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "b58bdbc25701ee708f413fcf0e6e09ff35e5097f",
+      "bytes": 9396,
+      "sha256": "328220c0494b6a2e5d73c1e1564aac472070e60ec834c14f156b49981522cb04",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/teach-and-train.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "b3b0a1e87c5cb79e146d73524c601caafa09b3a1",
+      "bytes": 36518,
+      "sha256": "cf91ee99dcb3b5d87d6c0139f8ee985ac0abd393abf384e9c6757141fee76f6c",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/test-an-idea.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "d95bba680487744df3c3736cdd10b1fe35b15dba",
+      "bytes": 14454,
+      "sha256": "0b7afc4f06a3801085347bfe760b29d808c2edfd68f01813150954ed56ea78d9",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/test-and-fix-code.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "e32f70cb77399e9458ccdacc94398b4a83105499",
+      "bytes": 32138,
+      "sha256": "c626075aff61fa94ae226d1a8f6d77b755a3e893d767cd1a979cbb8adba2699a",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/test-store-changes.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "aa5dc4cad2aad58508b98520f649601504cc3c04",
+      "bytes": 2656,
+      "sha256": "b2829a6f41bac3a102cb3bb781e812d8bfb568730345edac4d1d9a937912b308",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/think-and-decide.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "bbb48dcfdcea52df1195a6b080378bd845b31d93",
+      "bytes": 30017,
+      "sha256": "dfbb8affc00847ab0309e0ce821166c714984457b34b17c38469a5215b3b4c49",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/think-with-minds.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "6f22fdad9cfd4672edb76b29aee5e466e7dcf4fc",
+      "bytes": 843,
+      "sha256": "a81b6920ade9e59809651588eff194a23bce6b60e804ed620529956e3107f5ce",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/track-numbers.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "c3b28c2b81ff0e0a420f0899ffe78e8a90553da0",
+      "bytes": 24829,
+      "sha256": "ca49d6b4d60f63591ff482700ce8f742522402ecb4a2423cd52447dd8960cc77",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/understand-customers.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "e8b2a2527bd59592a713eb0afbbc4c5fdd1e1067",
+      "bytes": 21699,
+      "sha256": "d870936ce4f46c98f8487e7944342a500418c36dc04fad5af604a5e05ffa370f",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/work-with-audio.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "9c0b684de4e7cb18dd09b465814c1f85d2e94a65",
+      "bytes": 5815,
+      "sha256": "5d87bb1c1e96a3de4d991dc374a4e10b565e02a03cad4c8856d1deec455d784f",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/work-with-files.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "933908bf12af242d4907634440892a6b8879c4e5",
+      "bytes": 19619,
+      "sha256": "4b6f96e659a68721554e18e06815596b1e425a2a9ebec1ca386ce1cb057a4e66",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/write-ad-copy.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "03dcfbe606e88fef1c369eeff34e31bd2968603b",
+      "bytes": 16384,
+      "sha256": "12c53f2e34a3dde6c8fd05566d3da27e8169e8a8a666ae076678689b8d43d702",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/write-and-tell-stories.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "60ae73855e94b39e7ab26f25d45a950250ce14d8",
+      "bytes": 23589,
+      "sha256": "baad3bd4f3be75e193d75145d4ddfcea85de7286bf7839099c3c60a0f28f4bd8",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/write-emails.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "60cc2d947039ff2d3bbb00d85052f5cf2ea8e843",
+      "bytes": 16838,
+      "sha256": "f3210f3b051fd1758ef2dfe47adf76ba49d459f6b1937c92d270d9fcb45ef63a",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/llms/write-landing-page.txt",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "10f6acd5b0d924bb6bc8838f7cfae1b0d1d42d8a",
+      "bytes": 10479,
+      "sha256": "f837ec2a6045757c453fa7f208a19f3b0a8aa49e3a9bc3875acc9904efd5b9e1",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/packs/team-mode.md",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "879ebd02538d9989821052419a6d92b472bd4dc2",
+      "bytes": 13524,
+      "sha256": "9e2b49e31712e9c3c4a5f69f21769957402c2966ab79e1d9c5e29be3daf6fd40",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/site.webmanifest",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "b990df635dcffdf858841a91ea9229c5abfd6349",
+      "bytes": 367,
+      "sha256": "9328140b019e1503f12a984d17b69fc8598c5c8855a068773b278a984dba8ca7",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/sitemap-agents.xml",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "8e1d06894c45720f5ef5fcff364ec7ff93eb0ef8",
+      "bytes": 21048,
+      "sha256": "b061efca30b57d04da15b41b9fff9f6d1337c0764bdb742391c2c0f767df56ae",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/sitemap-ai-tools.xml",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "5fba6c944905c6dca4488c8d32516604a81a27e9",
+      "bytes": 7272,
+      "sha256": "bd1bbba10705c7ecbacfea42c1464cd6d6d44cb92dfc210eb0e03843cab54673",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/sitemap-blog.xml",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "f3bc7a91fd45ad16609adf2e60baa21a41eeb245",
+      "bytes": 4310,
+      "sha256": "6cb082e6ff17e9c9b43f073478c893e8dc66ba50fec60f8205dde40b840e9e89",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/sitemap-minds.xml",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "4442ac092cc433cc4c38fb63ec1f677d567dd16a",
+      "bytes": 49068,
+      "sha256": "306b3e6589fdb03e2de641a3693c23b5f1bd728944b2dbee9b1e93c2bca80738",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/sitemap-pages.xml",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "f1c2eef1398cf8c48d08c47936bc6b4ff9cb2d7e",
+      "bytes": 109526,
+      "sha256": "69cce96df204caa5fcc2bd1f8778c4c00654c73042a8daf5132e1e45f6a638b9",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/sitemap-prompts.xml",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "20845542f3486a3b66bf71016ba9b3d15f536754",
+      "bytes": 20541,
+      "sha256": "b9fca005a55cb7e91ce753809824de751fed4e6c6fcdc3916e936464fb171775",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/sitemap-skills.xml",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "39f066978046f5b952e31f3a2d20ab1f51df56c8",
+      "bytes": 418026,
+      "sha256": "a25c5499c3b0a49e5e778e201ada234ba70e28d1142ccd673ba00707755b6abf",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/sitemap-workflows.xml",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "cfd6d7f5ad9e5a4fad146995d22e38e305ca0858",
+      "bytes": 75701,
+      "sha256": "396107c71cb7bf3f6b5c062c8b4b1a0a69b6162d36e2310e61d10112ee0a4156",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/templates/ai-agent-starter-pack.zip",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "dce4aeab7ca77dbb8b6fa9a2ebdad8c1a155a785",
+      "bytes": 8695,
+      "sha256": "03880573c9e9c475aebf0f333f3d7dc438dd7a7f306551b2db1ec791c25323d0",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/public/templates/me-md-starter-pack.zip",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "07d94c6573a2143a9b6791717d9421211c67c330",
+      "bytes": 5898,
+      "sha256": "40761cd5797eba59c24248cbb682ee9e58d822b872b1d20d36548b9febd84907",
+      "action": "regenerate-and-untrack",
+      "reason": "Build-derived output; canonical source and normal index/build commands reproduce this file. Remains in production."
+    },
+    {
+      "path": "site/src/Persistence.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "2317cc1523e8789f877649ab9db8b2ca7cb50cca",
+      "bytes": 4359,
+      "sha256": "5ec373eb960142287e3e77def79fd4ffcae009a96bc638032bf68bd791ba82ca",
+      "action": "delete-obsolete",
+      "reason": "Superseded by AccountPersistence.tsx, the actual main.tsx import; no imports or tests reference this module."
+    },
+    {
+      "path": "site/src/lib/mind-use-cases.ts",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "f45b404ac3d09fe8c0d45c44a46885837f4115e1",
+      "bytes": 10552,
+      "sha256": "7b8bf5390110cf596bb499c46ba420c20c396a82a62116f99d8c58c294f6b5c5",
+      "action": "delete-obsolete",
+      "reason": "Unreferenced old curated roster; active MindsPage reads the current catalogue and does not import this dataset."
+    },
+    {
+      "path": "site/src/mind-use-cases.css",
+      "mode": "100644",
+      "type": "blob",
+      "oid": "03ef0de02701db68c4645f8e156ae344d6596680",
+      "bytes": 1831,
+      "sha256": "6b380dcde2685462ae2171c3ca50ad9a98ee58d85bd697ef89e47b7e7286c242",
+      "action": "delete-obsolete",
+      "reason": "Unimported stylesheet belonging to the removed curated roster; none of its selectors are used outside this stylesheet."
+    }
+  ],
+  "inventory_review": {
+    "github_main": "1749c671d2c1bca9841093d34808b923b5686110",
+    "tracked_files": 41756,
+    "tracked_bytes": 553067963,
+    "library": 62266,
+    "marketplace": 18776,
+    "scope": "All tracked GitHub paths and sizes, all built deployment paths and sizes, plus static module/reference and duplicate-file analysis. This does not claim semantic review or HTTP download of every asset."
+  },
+  "protected": [
+    "The active saved Mercatura app tour and its query assets/fallbacks",
+    "All catalogue methods, licences and provenance",
+    "Raw evaluation evidence, including every original failed gate",
+    "All 44 frozen v3.2 quality resources",
+    "Current and one previous deployment asset set retained by the normal release process",
+    "User changes in the original checkout; credentials, databases and other worktrees"
+  ],
+  "recovery": "All old blobs remain in Git history at the baseline commit. The manifest records preimage SHA-256 and Git object IDs. There is no history rewrite.",
+  "validation": {
+    "fresh_generation": {
+      "status": "PASS",
+      "removed_before_rebuild": 94,
+      "regenerated": 94,
+      "ignored": 94,
+      "byte_identical_to_baseline": 94
+    },
+    "source_and_unit_checks": {
+      "source": "PASS; zero source/contract failures; legacy semantic coverage remains explicitly incomplete",
+      "focused_tests": "21 passed; production file guard, release order, font integrity"
+    },
+    "standard_deployments": "Required next: npm run deploy:production in marketplace, then node tools/release.mjs --deploy at repository root. Publication is serial and includes all normal gates.",
+    "live_verification": "The final deployment receipt records published versions, exact quality-resource checks and the three removed maintenance URLs."
+  }
+}

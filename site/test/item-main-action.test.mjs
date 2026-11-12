@@ -61,7 +61,7 @@ test('the first HTML, the app and the intro font agree on the home introduction'
   assert.ok(shell.includes(`<p class="lede typed" data-done="true">${intro}</p>`));
   assert.ok(shell.includes('<h1 class="h1">Use AI like the top 1%</h1>'));
   assert.ok(home.includes('<h1 className="h1">Use AI like the top 1%</h1>'));
-  const font = JSON.parse(fs.readFileSync('public/fonts/ai-blocks-intro-sans.json', 'utf8'));
+  const font = JSON.parse(fs.readFileSync('scripts/font-assets/ai-blocks-intro-sans.json', 'utf8'));
   for (const ch of intro) assert.ok(font.codepoints.includes(ch.codePointAt(0)), `intro font lacks ${JSON.stringify(ch)}`);
   assert.ok(!shell.includes('hero-goal'), 'the home hero has no goal box');
 });

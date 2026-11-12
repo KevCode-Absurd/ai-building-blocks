@@ -26,3 +26,7 @@ TypeScript on Node, to match Creative Engine and the future Next.js site. See `d
 | `grade` | Code checks first, then a blind judge (never the model that wrote the output); count the costliest mistakes |
 | `build-graph` | Work out each item's needs / improves-with / feeds-into from `_types.yaml` |
 | `register-source`, `split-source`, `group-pieces`, `map-pieces` | Turn learning sources into pieces of know-how and map them to items |
+
+## File cleanup and production inventory
+
+`qa/check-production-files.mjs --library` (or `--marketplace`) inspects every built path and size, rejects maintenance records and build debris, and preserves downloadable methods, examples and licences. Both normal production release commands run this check. The [12 November cleanup manifest](qa/file-cleanup-2026-11-12.json) records 102 exact paths, their original hashes, recovery commit and the reason for each removal or move. Generated crawl files and starter downloads are rebuilt before development, tests and publication rather than duplicated in Git.

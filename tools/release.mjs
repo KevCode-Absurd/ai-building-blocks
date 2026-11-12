@@ -27,6 +27,7 @@ export const gateSteps=[
   ['Production build','npm',['run','build'],'site'],
   ['Byte budgets',process.execPath,['scripts/byte-budgets.mjs'],'site'],
   ['SEO','npm',['run','seo'],'site'],
+  ['Production file audit',process.execPath,['tools/qa/check-production-files.mjs','--library'],'.'],
   ['Browser checks','npx',['playwright','test','--config','playwright.context.config.ts'],'site'],
 ];
 export async function runSteps(steps,execute){for(const step of steps){const result=await execute(step);if(result?.status!==0)throw Error(`Stopped at: ${step[0]}`);}}

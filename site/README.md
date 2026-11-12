@@ -16,7 +16,7 @@ npm run test:e2e
 npm run seo
 ```
 
-Use Node 22 from `.nvmrc`. Generated indexes, skill assets and `dist/` are rebuilt from the repository. Display copy comes from `../catalogue-items/display-copy.yaml`; imported source instructions remain unchanged. Playwright uses installed Chrome; `PW_CHANNEL=msedge` selects Edge.
+Use Node 22 from `.nvmrc`. `npm run index` recreates crawl feeds, sitemaps, LLM indexes, redirects, icons and starter downloads from their canonical sources. These outputs stay out of Git; both normal development and the production build run this step. Generated indexes, skill assets and `dist/` are rebuilt from the repository. Display copy comes from `../catalogue-items/display-copy.yaml`; imported source instructions remain unchanged. Playwright uses installed Chrome; `PW_CHANNEL=msedge` selects Edge.
 
 The library initially renders 16 cards. Show more adds 16. Builder and other large pages load separately. The production build includes a real 404 page, search metadata, job hubs and `/example-app/`; that saved tour is excluded from search.
 

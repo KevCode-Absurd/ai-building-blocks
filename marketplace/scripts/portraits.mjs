@@ -11,6 +11,8 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "..");
 const DATA_DIR = path.join(root, "src/modules/directory/data");
 const OUT_DIR = path.join(root, "public/agents");
+// Generation hashes and the cumulative spend ledger are maintenance data, never public assets.
+const STATE_FILE = path.join(root, "scripts/data/portrait-manifest.json");
 const SAMPLE_DIR = "C:\\Users\\kevin\\AppData\\Local\\Temp\\claude\\6a935229b688e82c\\eb348924-2cd2-4d74-8f03-520bd31fe384\\scratchpad\\portrait-samples";
 const ENV_FILE = "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\.env";
 const QUALITY = "medium", SIZE = "1024x1024", OUTPUT_FORMAT = "png";
@@ -97,7 +99,7 @@ function loadPersonas() {
 
 const outDir = samples ? SAMPLE_DIR : OUT_DIR;
 fs.mkdirSync(outDir, { recursive: true });
-const manifestPath = path.join(outDir, "manifest.json");
+const manifestPath = samples ? path.join(outDir, "manifest.json") : STATE_FILE;
 let manifest = {}; try { manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8")); } catch {}
 
 const model = await findModel();
@@ -115,12 +117,12 @@ jobs = jobs.filter(j => {
 jobs = jobs.slice(0, limit);
 console.log(`model=${model} quality=${QUALITY} size=${SIZE} output_format=${OUTPUT_FORMAT} jobs=${jobs.length} -> ${outDir}`);
 
-// Spend tracking. spent_usd lives in public/agents/manifest.json (shared by sample and full runs).
-const mainPath = path.join(OUT_DIR, "manifest.json");
+// Spend tracking. The private maintenance ledger is shared by sample and full runs.
+const mainPath = STATE_FILE;
 let main = samples ? {} : manifest;
 if (samples) { try { main = JSON.parse(fs.readFileSync(mainPath, "utf8")); } catch {} }
 if (typeof main.spent_usd !== "number") main.spent_usd = SEED_SPENT_USD; // 8 samples + 3 test images already made
-const saveMain = () => { fs.mkdirSync(OUT_DIR, { recursive: true }); fs.writeFileSync(mainPath, JSON.stringify(main, null, 2)); };
+const saveMain = () => { fs.mkdirSync(path.dirname(mainPath), { recursive: true }); fs.writeFileSync(mainPath, JSON.stringify(main, null, 2)); };
 const costOf = u => {
   const d = u.input_tokens_details ?? {};
   const imgIn = d.image_tokens ?? 0, txtIn = d.text_tokens ?? Math.max(0, (u.input_tokens ?? 0) - imgIn);

@@ -1,0 +1,110 @@
+[
+ {
+  "id": "E01",
+  "job": "write-emails",
+  "lead": "candice-email-marketing",
+  "basis": "default",
+  "card": "lifecycle-email",
+  "depth": "team",
+  "kind": "email"
+ },
+ {
+  "id": "E02",
+  "job": "build-product",
+  "lead": "neha-product-management",
+  "basis": "default",
+  "card": "_any",
+  "depth": "standard",
+  "kind": "plan"
+ },
+ {
+  "id": "E03",
+  "job": "hire-people",
+  "lead": "anjali-recruiter",
+  "basis": "deliverable:job-description",
+  "card": "job-description",
+  "depth": "standard",
+  "kind": "ops_doc"
+ },
+ {
+  "id": "E04",
+  "job": "keep-customers",
+  "lead": "jenna-ux-writing",
+  "basis": "deliverable:notification-copy",
+  "card": "notification-copy",
+  "depth": "standard",
+  "kind": "copy"
+ },
+ {
+  "id": "E05",
+  "job": "write-emails",
+  "lead": "holly-store-emails",
+  "basis": "setting:store",
+  "card": "lifecycle-email",
+  "depth": "standard",
+  "kind": "email"
+ },
+ {
+  "id": "E06",
+  "job": "help-customers",
+  "lead": "araceli-inbox",
+  "basis": "deliverable:support-macros",
+  "card": "support-macros",
+  "depth": "standard",
+  "kind": "plan"
+ },
+ {
+  "id": "E07",
+  "job": "sell-and-negotiate",
+  "lead": "isaiah-outreach",
+  "basis": "deliverable:outbound-sales",
+  "card": "outbound-sales",
+  "depth": "standard",
+  "kind": "email"
+ },
+ {
+  "id": "E08",
+  "job": "test-store-changes",
+  "lead": "harriet-abtests",
+  "basis": "deliverable:experiment-design",
+  "card": "experiment-design",
+  "depth": "standard",
+  "kind": "strategy"
+ },
+ {
+  "id": "E09",
+  "job": "write-emails",
+  "lead": "holly-store-emails",
+  "basis": "setting:store",
+  "card": "lifecycle-email",
+  "depth": "team",
+  "kind": "email"
+ },
+ {
+  "id": "E10",
+  "job": "hire-people",
+  "lead": "anjali-recruiter",
+  "basis": "default",
+  "card": "_any",
+  "depth": "standard",
+  "kind": "ops_doc"
+ },
+ {
+  "id": "E11",
+  "job": "keep-customers",
+  "lead": "makayla-pushmessages",
+  "basis": "deliverable:notification-copy",
+  "card": "notification-copy",
+  "depth": "light",
+  "kind": "other"
+ },
+ {
+  "id": "E12",
+  "job": "test-store-changes",
+  "lead": "harriet-abtests",
+  "basis": "deliverable:experiment-design",
+  "card": "experiment-design",
+  "depth": "standard",
+  "kind": "other"
+ }
+]

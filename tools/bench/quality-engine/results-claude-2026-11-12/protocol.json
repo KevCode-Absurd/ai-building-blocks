@@ -1,0 +1,18 @@
+{
+  "schema": "claude-v33-blind/1",
+  "frozen": "2026-11-12, before any task was authored or answered",
+  "question": "Does Quality Engine v3.3 (expert edge; tie goes to a verified expert edge) beat a plain one-pass answer from the same model, blind?",
+  "method_under_test": "branch claude/top10-quality at 302d9a749: QUALITY-ENGINE-v3.md v3.3, CHECKER-v3.md v3.3, cards, profiles, prepareJobContext and leadAgentFor from site/src/jobs. No method edits during the run.",
+  "sample": "12 new requests (E01-E12), 2 per company for Grüns, Linear, Allbirds, Ramp, Sweetgreen, Duolingo, all Markdown, written by a separate agent that sees no method file, answer or result. All 12 are held-out.",
+  "arms": {
+    "plain": "Fresh Claude Opus 5.5 context per batch, request only, one pass, web allowed.",
+    "v33": "Fresh Claude Opus 5.5 context; reads the request, the plain answer, the prepare_job_context brief, the lead specialist's method and the v3.3 method; builds and self-checks (SAME-CONTEXT). May ship the plain answer unchanged only as v3.3 allows."
+  },
+  "judging": "4 fresh judge contexts, each sees all 12 shuffled X/Y pairs: j1 (Opus) and j2 (Sonnet) with judge-brief-v3.md; i1 (Opus) and i2 (Sonnet) with judge-brief-independent-v3.md. Key sealed until all 48 verdicts validate. Judges' tool calls audited for opening anything outside their folder.",
+  "gates": {
+    "ship_expert_edge": "v3.3 wins more verdicts than it loses AND mean clarity and accuracy do not fall (the standard the owner approved for v3.2 on 12 Nov).",
+    "strict_majority": "Also reported: more than 50% of all 48 verdicts are wins with no clarity regression (the original gate).",
+    "if_fail": "Revert the expert-edge rule to v3.2 wording before release; routing, card, brief-fit and logo-check fixes ship regardless, since they are bug fixes covered by unit tests."
+  },
+  "limits": ["Single model family (Claude) generates and judges.", "AI preference, not customer acceptance or business lift.", "12 tasks is small; the task-clustered interval will be wide.", "Markdown only; no HTML pages in this set."]
+}

@@ -1,0 +1,199 @@
+# Holiday Support Plan: 15 November 2026 to 15 January 2027
+
+**For:** Support team leads | **Owner:** Support Operations
+*Volumes and staffing figures are hypothetical planning numbers, not company data. Replace the in-between weekly multipliers with last year's actual curve if we have it.*
+
+---
+
+## 1. The short version
+
+- **Our normal capacity is already tight.** 14 agents × 140 tickets = **1,960 a week** against a normal 1,800 (92% busy).
+- **Peak week (30 Nov – 6 Dec) brings about 4,500 tickets.** Even with all 8 seasonal agents, overtime and a surge bench, we can handle about 3,300. We close the rest of the gap with **deflection** (proactive tracking emails, self-serve returns) and a **planned backlog** that we clear by 20 December.
+- **The seasonal class must start Monday 16 November.** Two weeks of training puts them live on **Monday 30 November**, the first day of peak week. Every day the class slips costs about 130 tickets of peak-week capacity.
+- **Expect to come close to the 48-hour trigger during peak week.** Section 7 is the playbook. Read it now, not on 2 December.
+
+---
+
+## 2. Key dates
+
+| Date | Event | What it means for us |
+|---|---|---|
+| Mon 16 Nov | Seasonal training starts | Trainers and one lead pulled off the queue part-time |
+| Thu 26 Nov | Thanksgiving | Reduced hours. Volunteers on holiday pay |
+| Fri 27 Nov – Mon 30 Nov | Black Friday to Cyber Monday | Promo, sizing and order-change contacts |
+| Mon 30 Nov | Seasonal agents go live | Supervised. Lower-complexity queues only for week 1 |
+| 30 Nov – 6 Dec | **Peak week (2.5×)** | All hands. PTO blackout |
+| Mid-Dec (confirm with Ecommerce) | Last ground and express ship-by dates for Christmas | "Will it arrive in time?" contacts spike the day before each cutoff |
+| 24–25 Dec, 31 Dec – 1 Jan | Holidays | Reduced or closed. Auto-replies updated |
+| 4 – 10 Jan | **Returns and exchanges spike (2×)** | Overtime back on. PTO blackout |
+| Fri 15 Jan | Plan ends. Seasonal contracts end | Debrief within a week |
+
+**PTO blackout:** 23 Nov – 13 Dec and 4 – 10 Jan. PTO is approved for up to 3 core agents in each of the weeks 21 – 27 Dec and 28 Dec – 3 Jan.
+
+---
+
+## 3. Staffing by week
+
+**How capacity is built:**
+
+- **Core:** 14 agents × 140 = 1,960 a week (11 agents = 1,540 in the two PTO weeks).
+- **Overtime:** voluntary, +10% of core (196) in the shoulder weeks and +20% (392) in peak week.
+- **Seasonal:** 8 agents, live from 30 Nov. They ramp from 60% to 80% to 100% of 140 tickets over their first three weeks (672, then 896, then 1,120).
+- **Surge bench:** about 6 trained staff from other teams, peak week only. They handle WISMO ("where is my order") tickets only, about 50 each (300 total).
+- **Deflection target:** 15% of forecast in the heaviest weeks and 10% in the others. It comes from proactive shipping emails, a "track your order" link in every auto-reply and help-centre banner, and self-serve returns.
+
+| Week | Forecast (× normal) | After deflection | Core | Overtime | Seasonal | Surge | **Capacity** | Gap (+ = spare) | **Backlog at week end** |
+|---|---|---|---|---|---|---|---|---|---|
+| 16–22 Nov | 1,980 (1.1×) | 1,980 | 1,960 | – | training | – | **1,960** | −20 | 20 |
+| 23–29 Nov | 2,880 (1.6×) | 2,448 | 1,960 | 196 | training | – | **2,156** | −292 | 312 |
+| **30 Nov–6 Dec** | **4,500 (2.5×)** | 3,825 | 1,960 | 392 | 672 | 300 | **3,324** | −501 | **813** |
+| 7–13 Dec | 3,240 (1.8×) | 2,754 | 1,960 | 196 | 896 | – | **3,052** | +298 | 515 |
+| 14–20 Dec | 2,700 (1.5×) | 2,430 | 1,960 | – | 1,120 | – | **3,080** | +650 | 0 |
+| 21–27 Dec | 2,160 (1.2×) | 1,944 | 1,540 | – | 1,120 | – | **2,660** | +716 | 0 |
+| 28 Dec–3 Jan | 2,700 (1.5×) | 2,430 | 1,540 | – | 1,120 | – | **2,660** | +230 | 0 |
+| **4–10 Jan** | **3,600 (2.0×)** | 3,060 | 1,960 | 196 | 1,120 | – | **3,276** | +216 | 0 |
+| 11–15 Jan (5 days) | ~1,500 | ~1,350 | ~1,400 | – | ~800 | – | **~2,200** | spare | 0 |
+
+**How to read this:**
+
+- **Peak week ends with about 800 tickets waiting.** That is about 1.7 days of work at peak pace, so our oldest tickets will be close to 48 hours. If deflection only reaches 5% instead of 15% in the two Thanksgiving weeks, the backlog nearly doubles to about 1,550 (more than 3 days of work) and we **will** trip the trigger. Deflection is not optional.
+- **The January spike is covered** only because the seasonal agents are still with us and fully up to speed. Do not release seasonal agents early in December, even when the queue looks calm.
+- **Spare weeks (14 Dec – 3 Jan)** go to clearing the backlog first, then QA coaching, macro clean-up and getting returns macros ready for January.
+
+---
+
+## 4. Coverage hours
+
+*Adjust to our current base hours and channel mix. These are the holiday targets.*
+
+| Period | Email / web form | Chat | Social DMs |
+|---|---|---|---|
+| Standard holiday days (16 Nov – 15 Jan) | Staffed 6:00–21:00 PT, 7 days. Auto-reply 24/7 with tracking link | 6:00–20:00 PT, 7 days | 8:00–18:00 PT, 7 days |
+| Thanksgiving (26 Nov) | 8:00–16:00 PT, volunteers | Closed | Monitored twice |
+| Black Friday – Cyber Monday (27–30 Nov) | 5:00–22:00 PT | 6:00–21:00 PT | 7:00–20:00 PT |
+| 24 Dec / 31 Dec | 6:00–14:00 PT | 6:00–13:00 PT | Monitored twice |
+| 25 Dec / 1 Jan | Closed. Holiday auto-reply | Closed | Monitored once (escalations only) |
+
+**Shift pattern:** staggered shifts so the 11:00–15:00 PT overlap (East and West Coast both online) has the most people.
+
+- Early 6:00–14:30: about 40% of agents
+- Mid 9:30–18:00: about 40% of agents
+- Late 12:30–21:00: about 20% of agents
+- Weekends on a rota. Everyone works at least one weekend day in the peak and January weeks.
+- At least one lead or senior agent is on every shift as escalation owner.
+
+**Seasonal agents** work early and mid shifts only for their first two weeks live, so a lead is always nearby.
+
+---
+
+## 5. Top contact reasons: macros to prepare by 25 November
+
+Each macro needs: a short answer, the policy, links (tracking, returns portal, size guide), and what the agent should check before sending. Review the holiday dates and return-window wording with Ecommerce before publishing.
+
+| # | Contact reason | Peak period | Macro set to prepare |
+|---|---|---|---|
+| 1 | **Where is my order** / tracking not updating | Late Nov – Dec | In transit (with tracking). Label created, no scan yet. Delayed by carrier |
+| 2 | **Late parcel / won't arrive by the holiday** | Dec | Delay apology plus options. Holiday cutoff missed. Expedite approved (lead only) |
+| 3 | **Marked delivered but not received** | Dec | First contact (check neighbours and safe places, wait 48h). Claim opened. Reship or refund |
+| 4 | **Lost parcel** (trace confirms) | Dec | Reship. Refund if out of stock |
+| 5 | **Order changes** before shipping (address, size, cancel) | BF – Cyber Monday | Change made. Too late to change (already shipped, then return or exchange route) |
+| 6 | **Promo code / Black Friday pricing / price adjustment** | 27 Nov – early Dec | Code terms. Why a code failed. Price adjustment policy |
+| 7 | **Sizing and fit** (pre-purchase) | Nov – Dec | Size guide by product line. Half sizes. Between sizes |
+| 8 | **Returns and exchanges: how to** | Late Dec – Jan | Holiday return window. Starting a return. Label problems. Exchange for a different size |
+| 9 | **Gift orders** | Dec – Jan | Gift receipt. Gift recipient returns (refund to giver or store credit, per policy). Gift cards |
+| 10 | **Refund status** | Jan | Refund timeline (returns processing plus bank time). Refund not received after X days |
+| 11 | **Damaged or defective item / care questions** | Ongoing | Photos request. Replacement. Washing and care guide |
+| 12 | **Payment issues** (declined, charged twice) | BF – Cyber Monday | Pending vs posted charges. When to escalate to Payments |
+
+**Before peak week, every agent (including seasonal) must have used macros 1–6 on live or practice tickets.**
+
+---
+
+## 6. Escalation path: lost or late parcels
+
+**Agent authority (holiday only):** agents can approve one reship or refund **up to $150** without a lead, once per order. Above that, a second claim on the same order, or a customer with **2 or more "not received" claims in 12 months** goes to a lead.
+
+| Level | Trigger | Owner | Action | Time limit |
+|---|---|---|---|---|
+| **0. First contact** | Customer asks where the order is. Tracking shows movement within the carrier's window | Any agent | WISMO macro with tracking. Set expectations. No promises on carrier dates | Same contact |
+| **1. Late** | No scan for **3 business days**, or **2+ business days** past the estimated delivery date | Agent | Open a carrier trace (carrier portal or 3PL). Tag `late-trace`. Tell the customer we'll update within 48h. Set a follow-up reminder | Trace opened same day |
+| **2. Delivered, not received** | Carrier shows delivered. Customer says no | Agent | Check address and photo proof. Ask the customer to check neighbours and safe places and wait 48h. Then file the carrier claim | Claim filed within 48h of first contact |
+| **3. Lost** | Trace comes back lost, **or** no movement for **7 business days** | Agent (≤$150), Lead (>$150) | Reship if in stock, otherwise refund. Close the carrier claim loop. Tag `lost-confirmed` | Within 1 business day of trace result |
+| **4. Gift-critical** | Customer needs it for a specific date and Level 1–3 applies | Lead | May approve an expedited reship or upgrade within budget. Log the cost | Same shift |
+| **5. Fraud signal** | 2+ "not received" claims in 12 months, high-value order, or address mismatch | Lead, then Fraud / Loss Prevention | Hold the reship until reviewed. Use a neutral macro | Review within 1 business day |
+| **6. Carrier-wide disruption** | Same carrier or region shows delays on **more than 3% of shipments**, or a carrier announces an outage or weather delays | Support Ops manager, then Logistics | Agree the customer message with Logistics. Help-centre banner. Proactive email to affected orders. Swap to the disruption macro | Banner and macro live within 4 hours |
+| **7. Public or high-risk** | Social complaint going viral, press, legal threat, safety issue | Lead, then Support Ops manager, then Comms / Legal | Respond privately. Do not debate in public | Lead acknowledges within 1 hour |
+
+---
+
+## 7. Daily metrics and thresholds
+
+Leads review these at the **9:00 PT stand-up** and again at **15:00 PT**. Support Ops posts the dashboard in the team channel daily.
+
+| Metric | Green | Amber (lead acts that shift) | Red (Ops manager acts that day) |
+|---|---|---|---|
+| Inbound volume vs forecast | Within ±10% | 10–25% over | More than 25% over |
+| **Oldest open ticket (email)** | Under 24h | 24–48h | **Over 48h, triggers Section 8** |
+| Backlog in days of capacity | Under 1 day | 1–1.5 days | More than 1.5 days |
+| Median first response time (email) | Under 12h | 12–24h | Over 24h |
+| Chat wait time (average) | Under 2 min | 2–5 min | Over 5 min |
+| Chat abandonment | Under 8% | 8–15% | Over 15% |
+| CSAT (7-day rolling) | 85% or higher | 80–84% | Under 80% |
+| Reopen rate | Under 8% | 8–12% | Over 12% |
+| WISMO share of volume | Under 35% | 35–45% | Over 45% (push proactive emails or banner) |
+| Late / lost rate by carrier | Under 2% of shipments | 2–3% | Over 3% (Level 6 escalation) |
+| Tickets per agent per day (tenured) | 28 or more | 24–27 | Under 24 |
+| Seasonal agent QA score | 85% or higher | 75–84% | Under 75% (pull back to supervised queue) |
+| Schedule adherence | 90% or higher | 85–89% | Under 85% |
+
+**Seasonal productivity targets per day:** week 1 live = 17, week 2 = 22, week 3 onward = 28.
+
+---
+
+## 8. If the backlog passes 48 hours
+
+**Trigger:** the oldest open email ticket is **over 48 hours old**, **or** the backlog is **more than 2 days of capacity**. Either one counts.
+
+**Hour 0: declare it**
+1. The Support Ops manager declares **"Backlog Red"** in the team channel and tells the Head of CX.
+2. 15-minute leads huddle: confirm the size and mix of the backlog and assign an owner to each step below.
+
+**First 4 hours: shrink the queue without losing quality**
+
+3. **Merge duplicates.** Close extra tickets from customers chasing the same order. During peak this often removes 10% or more of the queue.
+4. **Sort by priority.** Work in this order:
+   - (a) payment problems, damaged items, lost parcels, safety
+   - (b) order changes that are still possible (not yet shipped)
+   - (c) gift-critical late parcels
+   - (d) WISMO where tracking is moving
+   - (e) pre-purchase and general questions
+5. **Bulk-answer WISMO tickets with live tracking.** Send the tracking macro in batches, after a lead spot-checks a sample of 20. The ticket reopens automatically if the customer replies.
+6. **Update customer-facing messages.** Change the auto-reply and help-centre banner to show honest current response times and the tracking and returns self-serve links.
+
+**Same day: add capacity**
+
+7. Approve extra overtime, capped at 10 extra hours per agent per week.
+8. Leads spend 50% of their shift on the queue. Cancel non-essential meetings, 1:1s and calibration. Keep QA for seasonal agents, at half the sample.
+9. Call in the surge bench for WISMO and returns-how-to tickets only.
+10. If chat wait is red at the same time, close chat 2 hours early and move chat agents to email.
+
+**If still red after 48 hours**
+
+11. Temporarily raise agent authority for reships and refunds from $150 to $250 to cut handoffs. Leads review the log daily.
+12. Ask Logistics or Ecommerce for a proactive email to every customer with an affected order, to stop repeat contacts.
+
+**Exit:** oldest ticket under 36 hours for **2 days in a row**. Then go back to normal hours and authority and note what caused the backlog for the debrief.
+
+---
+
+## 9. Lead responsibilities summary
+
+| Who | Owns |
+|---|---|
+| Support Ops manager | Forecast vs actual, daily dashboard, declaring Backlog Red, links with Logistics and Ecommerce |
+| Lead: Training | Seasonal class 16–27 Nov, nesting (supervised live work) plan, seasonal QA |
+| Lead: Knowledge | Macros ready by 25 Nov, holiday dates and return-window copy, help-centre banners |
+| Lead: Escalations | Levels 3–7 queue, carrier traces and claims, fraud referrals |
+| All leads | One lead per shift as escalation owner. Daily stand-ups. Overtime sign-up sheet |
+
+**Debrief:** week of 18 January. Bring actual vs forecast by week, deflection achieved, peak backlog, CSAT trend and the top 5 macro gaps.

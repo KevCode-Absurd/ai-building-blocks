@@ -1,0 +1,269 @@
+{
+ "judge": "i2",
+ "pairs": [
+  {
+   "id": "E01",
+   "X": {
+    "usefulness": 7,
+    "accuracy": 8,
+    "specificity": 7,
+    "clarity": 8,
+    "craft": 7,
+    "overall": 7,
+    "note": "Warm, safe on health, but never really answers why keep paying beyond pausing; leaves an optional placeholder line."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 7,
+    "clarity": 8,
+    "craft": 8,
+    "overall": 8,
+    "note": "Same safe health wording and policy, and directly answers the 'why keep paying' question with timing control."
+   },
+   "winner": "Y"
+  },
+  {
+   "id": "E02",
+   "X": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 7,
+    "craft": 8,
+    "overall": 8,
+    "note": "Math checks out; adds guarantee/refund exposure, California auto-renewal notice rules, owners and dates. Runs well past one page and assumes a 4-week cycle and a no-partial-refund policy."
+   },
+   "Y": {
+    "usefulness": 7,
+    "accuracy": 8,
+    "specificity": 7,
+    "clarity": 8,
+    "craft": 7,
+    "overall": 7,
+    "note": "Same correct math and sensitivity, tighter, but legal risk is only a generic 'Legal should review' and there is no refund or notice detail."
+   },
+   "winner": "X"
+  },
+  {
+   "id": "E03",
+   "X": {
+    "usefulness": 7,
+    "accuracy": 7,
+    "specificity": 7,
+    "clarity": 8,
+    "craft": 7,
+    "overall": 7,
+    "note": "Under 600 words, good 90 days; but invents a 2-5 day paid work trial and daily rate, which is not 'simple', and discloses range at intro call."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 7,
+    "clarity": 8,
+    "craft": 8,
+    "overall": 8,
+    "note": "Under 600 words, four simple steps, [range] left as asked; invented two-years and two-hour exercise are clearly flagged for checking."
+   },
+   "winner": "Y"
+  },
+  {
+   "id": "E04",
+   "X": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 8,
+    "craft": 8,
+    "overall": 8,
+    "note": "All limits met; descriptions precise (cycle rollover, PR by ID) and notes that importer and GitHub integration are separate connections."
+   },
+   "Y": {
+    "usefulness": 7,
+    "accuracy": 7,
+    "specificity": 7,
+    "clarity": 8,
+    "craft": 7,
+    "overall": 7,
+    "note": "Meets limits, but item 5 description is vaguer and it adds an extra alternative line and backup completion text nobody asked for."
+   },
+   "winner": "X"
+  },
+  {
+   "id": "E05",
+   "X": {
+    "usefulness": 7,
+    "accuracy": 8,
+    "specificity": 6,
+    "clarity": 8,
+    "craft": 7,
+    "overall": 7,
+    "note": "Safe and friendly, under 140 words, no promises; generic and leans on a placeholder to feel personal."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 9,
+    "specificity": 8,
+    "clarity": 8,
+    "craft": 8,
+    "overall": 8,
+    "note": "Under 140 words, no promises; adds a true and relevant hook (Allbirds closed full-price US stores and is leaning on wholesale partners) and a walking-shopper angle."
+   },
+   "winner": "Y"
+  },
+  {
+   "id": "E06",
+   "X": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 7,
+    "craft": 8,
+    "overall": 8,
+    "note": "Same strong plan and math; macros and returns lines are grounded in Allbirds' posted 30-day, unworn, tags policy, with open items flagged for Ecommerce."
+   },
+   "Y": {
+    "usefulness": 7,
+    "accuracy": 7,
+    "specificity": 6,
+    "clarity": 7,
+    "craft": 7,
+    "overall": 7,
+    "note": "Same staffing math and structure, but macros are generic with placeholders like 'refund after X days' and 'per policy'."
+   },
+   "winner": "X"
+  },
+  {
+   "id": "E07",
+   "X": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 8,
+    "craft": 8,
+    "overall": 8,
+    "note": "Identical to Y."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 8,
+    "craft": 8,
+    "overall": 8,
+    "note": "Identical to X."
+   },
+   "winner": "tie"
+  },
+  {
+   "id": "E08",
+   "X": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 7,
+    "craft": 8,
+    "overall": 8,
+    "note": "Adds sample-size math and ship/stop rules, and uses real Ramp pricing and accounting-integration facts; slightly over 1,400 words."
+   },
+   "Y": {
+    "usefulness": 7,
+    "accuracy": 8,
+    "specificity": 7,
+    "clarity": 8,
+    "craft": 7,
+    "overall": 7,
+    "note": "Solid memo within length, but more generic and has no decision thresholds or product-specific constraints."
+   },
+   "winner": "X"
+  },
+  {
+   "id": "E09",
+   "X": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 8,
+    "craft": 8,
+    "overall": 8,
+    "note": "Reasons to believe include a verified SG Rewards fact (10 points per $1, 180-day expiry), a holdout and exit rule, correct lowercase brand."
+   },
+   "Y": {
+    "usefulness": 7,
+    "accuracy": 8,
+    "specificity": 6,
+    "clarity": 8,
+    "craft": 7,
+    "overall": 7,
+    "note": "Clean brief but nearly all reasons to believe are placeholders and there is no real hook or measurement design."
+   },
+   "winner": "X"
+  },
+  {
+   "id": "E10",
+   "X": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 7,
+    "craft": 8,
+    "overall": 8,
+    "note": "Adds Infinite Kitchen and recall variants specific to Sweetgreen; a few questions carry multiple follow-ups, tight for 45 minutes, and cites an unverified opening share."
+   },
+   "Y": {
+    "usefulness": 7,
+    "accuracy": 8,
+    "specificity": 7,
+    "clarity": 8,
+    "craft": 7,
+    "overall": 7,
+    "note": "Clean, fits the 45-minute slot, legal and job-related, but more generic."
+   },
+   "winner": "X"
+  },
+  {
+   "id": "E11",
+   "X": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 8,
+    "craft": 8,
+    "overall": 8,
+    "note": "Identical to Y."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 8,
+    "craft": 8,
+    "overall": 8,
+    "note": "Identical to X."
+   },
+   "winner": "tie"
+  },
+  {
+   "id": "E12",
+   "X": {
+    "usefulness": 7,
+    "accuracy": 8,
+    "specificity": 7,
+    "clarity": 8,
+    "craft": 8,
+    "overall": 7,
+    "note": "Sound reasoning and flags the p-value mismatch, but no sample size and a looser decision rule."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 9,
+    "specificity": 8,
+    "clarity": 8,
+    "craft": 8,
+    "overall": 8,
+    "note": "Same reasoning plus derived counts, confidence interval, a checked sample-size number, a decision table and a real Practice-tab Mistakes fact."
+   },
+   "winner": "Y"
+  }
+ ]
+}

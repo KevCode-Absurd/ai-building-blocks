@@ -1,0 +1,269 @@
+{
+ "judge": "j2",
+ "pairs": [
+  {
+   "id": "E01",
+   "X": {
+    "usefulness": 8,
+    "accuracy": 9,
+    "specificity": 8,
+    "clarity": 8,
+    "craft": 8,
+    "overall": 8,
+    "note": "Answers safety and pause, but dodges the 'why keep paying' question and leaves an optional placeholder; slightly over 180 words with notes."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 9,
+    "note": "Directly addresses the subscription worry and is ready to send, about 165 words; 'never locked in' is a mild unsupported line."
+   },
+   "winner": "Y"
+  },
+  {
+   "id": "E02",
+   "X": {
+    "usefulness": 9,
+    "accuracy": 8,
+    "specificity": 9,
+    "clarity": 8,
+    "craft": 9,
+    "overall": 9,
+    "note": "Adds a concrete guarantee-based rule set, California auto-renewal notice timing, sample-size and dated timeline; longer than one page."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 9,
+    "specificity": 8,
+    "clarity": 8,
+    "craft": 8,
+    "overall": 8,
+    "note": "Same core math, tidier and closer to one page, but legal and timeline detail is thinner."
+   },
+   "winner": "X"
+  },
+  {
+   "id": "E03",
+   "X": {
+    "usefulness": 9,
+    "accuracy": 8,
+    "specificity": 9,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 9,
+    "note": "Under 600, includes real-style paid work trial and apply-safety line; 4-6 weeks timing is invented but flagged for checking."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 9,
+    "specificity": 8,
+    "clarity": 8,
+    "craft": 8,
+    "overall": 8,
+    "note": "Good posting but the 'posting ~560 words' is wrong-ish (about 650 with all text) and steps are generic."
+   },
+   "winner": "X"
+  },
+  {
+   "id": "E04",
+   "X": {
+    "usefulness": 9,
+    "accuracy": 9,
+    "specificity": 9,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 9,
+    "note": "Correct limits, useful build notes on separate GitHub connections."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 9,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Fine, but item 5 title is only two words and buttons/descriptions are slightly vaguer."
+   },
+   "winner": "X"
+  },
+  {
+   "id": "E05",
+   "X": {
+    "usefulness": 7,
+    "accuracy": 8,
+    "specificity": 6,
+    "clarity": 8,
+    "craft": 6,
+    "overall": 7,
+    "note": "Generic and the 'stayed on my mind' line is slightly salesy; placeholder-heavy."
+   },
+   "Y": {
+    "usefulness": 9,
+    "accuracy": 9,
+    "specificity": 9,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 9,
+    "note": "Uses the verified fact that Allbirds closed full-price US stores and moved to wholesale; specific, under 140 words."
+   },
+   "winner": "Y"
+  },
+  {
+   "id": "E06",
+   "X": {
+    "usefulness": 9,
+    "accuracy": 9,
+    "specificity": 9,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 9,
+    "note": "Policy-grounded macros (30-day, unworn, label deduction) verified on allbirds.com; adds key dates and ticket-reason table."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 8,
+    "craft": 8,
+    "overall": 8,
+    "note": "Same plan skeleton but generic macros, vague policy and a section-number mismatch."
+   },
+   "winner": "X"
+  },
+  {
+   "id": "E07",
+   "X": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Identical to the other answer."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Identical to the other answer."
+   },
+   "winner": "tie"
+  },
+  {
+   "id": "E08",
+   "X": {
+    "usefulness": 9,
+    "accuracy": 9,
+    "specificity": 9,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 9,
+    "note": "Adds verified Ramp plan facts, worked sample-size math and a ship/retest/stop table."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 9,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Sound and clear but less specific and with no decision rules."
+   },
+   "winner": "X"
+  },
+  {
+   "id": "E09",
+   "X": {
+    "usefulness": 9,
+    "accuracy": 9,
+    "specificity": 9,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 9,
+    "note": "Adds a holdout, exit rule and a verified SG Rewards point fact for reasons to believe."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 9,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Solid but more generic reasons to believe."
+   },
+   "winner": "X"
+  },
+  {
+   "id": "E10",
+   "X": {
+    "usefulness": 9,
+    "accuracy": 8,
+    "specificity": 9,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 9,
+    "note": "Sweetgreen-specific Infinite Kitchen and digital-order complications, richer food-safety follow-ups."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 9,
+    "specificity": 7,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Clean and legal but more generic restaurant guide."
+   },
+   "winner": "X"
+  },
+  {
+   "id": "E11",
+   "X": {
+    "usefulness": 8,
+    "accuracy": 9,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Identical to the other answer."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 9,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Identical to the other answer."
+   },
+   "winner": "tie"
+  },
+  {
+   "id": "E12",
+   "X": {
+    "usefulness": 9,
+    "accuracy": 9,
+    "specificity": 9,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 9,
+    "note": "Strong skeptical read of the p-value and regression to the mean."
+   },
+   "Y": {
+    "usefulness": 9,
+    "accuracy": 8,
+    "specificity": 9,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 9,
+    "note": "Same analysis plus counts, confidence interval and Practice-tab risk; the Mistakes-free fact is unverified."
+   },
+   "winner": "Y"
+  }
+ ]
+}

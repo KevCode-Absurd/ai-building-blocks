@@ -37,6 +37,7 @@ Report the fresh set separately: tasks used to tune the engine are a development
 | v1 | 46% of 50 | More accurate, but blanks, dense writing and a checker grading its own style |
 | v2 | 85% of 80 | Ten fixes; outputs ran 2 to 4 times longer than plain answers |
 | v2.1 | 88% of 128 | Length near the plain answer; Linear (fresh) 98%, Grüns 83%; Panel A 89%, Panel B 88% |
+| v3.3 (12 Nov, Claude) | 81% of 48 | 39 wins, 8 ties, 1 loss on 12 fresh requests; ties are the 2 tasks that kept the plain answer; [report](RESULTS-CLAUDE-2026-11-12.md) |
 
 Limits: the judges are AI, not customers; the engine spends far more compute than one plain attempt; the checker was
 calibrated on v1's judge verdicts.

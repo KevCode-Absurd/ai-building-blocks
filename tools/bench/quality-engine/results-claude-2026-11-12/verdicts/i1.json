@@ -1,0 +1,77 @@
+{
+  "judge": "i1",
+  "pairs": [
+    {
+      "id": "E01",
+      "X": {"usefulness": 7, "accuracy": 8, "specificity": 7, "clarity": 8, "craft": 7, "overall": 7, "note": "Safe, warm reply that follows the policy, about 172 words. But it never really answers her 'why keep paying' question. It concedes 'summer heat and gummies don't mix' and leaves an optional placeholder line, so it needs an edit before sending."},
+      "Y": {"usefulness": 8, "accuracy": 8, "specificity": 8, "clarity": 9, "craft": 8, "overall": 8, "note": "Same safe handling of the safety question and policy, about 176 words. It also answers the subscription doubt directly: she's never locked in and controls timing, which fits Grüns' posted pause/cancel-anytime terms. Ready to send."},
+      "winner": "Y"
+    },
+    {
+      "id": "E02",
+      "X": {"usefulness": 9, "accuracy": 8, "specificity": 9, "clarity": 7, "craft": 9, "overall": 8, "note": "The math is correct ($267.62 vs $244.03, break-even lift 2.7%). It is grounded in real Grüns terms (4-week cycles, 30-day money-back guarantee, both on gruns.co) and has a concrete CA auto-renewal notice window and a dated owner timeline. The 7-30 day fee-change rule checks out; the 3-21 day promo rule is plausible but I could not confirm it. It runs a bit past one page."},
+      "Y": {"usefulness": 8, "accuracy": 8, "specificity": 7, "clarity": 8, "craft": 8, "overall": 7, "note": "Same correct math, sensitivity table and keep criteria, and slightly tighter. But it treats a 'month' as a calendar month, ignoring Grüns' 4-week cycle. Its auto-renewal and refund points stay generic ('Legal should review'), and it has no owners or dates."},
+      "winner": "X"
+    },
+    {
+      "id": "E03",
+      "X": {"usefulness": 9, "accuracy": 9, "specificity": 9, "clarity": 9, "craft": 9, "overall": 9, "note": "Clean posting under 600 words with a [range] placeholder. The interview process matches Linear's real hiring: a paid 2-5 day work trial with the daily rate shared up front, 4-6 weeks overall, and 'we never ask for money' (all on Linear's blog). Inclusive wording and an accommodations line."},
+      "Y": {"usefulness": 8, "accuracy": 8, "specificity": 7, "clarity": 8, "craft": 8, "overall": 7, "note": "Solid, cliché-free posting. But its process (an unpaid-sounding two-hour take-home and a final chat) doesn't reflect Linear's well-known paid work trial. The hard '2+ years' requirement and the extra preamble and notes add editing."},
+      "winner": "X"
+    },
+    {
+      "id": "E04",
+      "X": {"usefulness": 9, "accuracy": 9, "specificity": 9, "clarity": 9, "craft": 8, "overall": 9, "note": "All six items fit the word limits with a calm tone. The build notes are useful: the GitHub Issues importer and the GitHub PR integration are separate and shouldn't tick each other, the button matches Linear's 'Enable cycles' toggle, and the 'Done on merge' default is correctly described."},
+      "Y": {"usefulness": 8, "accuracy": 9, "specificity": 8, "clarity": 8, "craft": 8, "overall": 8, "note": "Nearly the same table, also within limits, with a per-item word count. It adds a preamble and alternate options that weren't asked for. Its notes are less useful for engineering than X's."},
+      "winner": "X"
+    },
+    {
+      "id": "E05",
+      "X": {"usefulness": 7, "accuracy": 9, "specificity": 6, "clarity": 8, "craft": 7, "overall": 7, "note": "Within limits (115 words), no promises, offers two time slots. It relies on a placeholder line for personalisation and gives the owner little Allbirds-specific reason to talk. 'Stayed on my mind since' leans slightly salesy."},
+      "Y": {"usefulness": 8, "accuracy": 8, "specificity": 8, "clarity": 8, "craft": 8, "overall": 8, "note": "Same length and limits. It gives a true, relevant reason: Allbirds closed its full-price US stores in early 2026 to focus on wholesale partners, confirmed by its January 2026 announcement. It positions the shoes for walking and errands rather than the running wall, which is smart for this shop."},
+      "winner": "Y"
+    },
+    {
+      "id": "E06",
+      "X": {"usefulness": 9, "accuracy": 9, "specificity": 9, "clarity": 7, "craft": 9, "overall": 9, "note": "Correct capacity math and a full plan. The macros quote Allbirds' live return policy accurately: 30 days from delivery, unworn and unwashed with tags, label cost deducted without return coverage, gift cards and insoles final sale, socks unopened, country of purchase. It flags the January out-of-window gift risk. Long."},
+      "Y": {"usefulness": 8, "accuracy": 8, "specificity": 7, "clarity": 7, "craft": 8, "overall": 8, "note": "Same staffing, escalation and metrics content. The return and gift macros are generic ('per policy', 'after X days') and miss the 30-day window issue. The summary points to Section 7 for the backlog playbook, but it is Section 8."},
+      "winner": "X"
+    },
+    {
+      "id": "E07",
+      "X": {"usefulness": 8, "accuracy": 7, "specificity": 8, "clarity": 9, "craft": 8, "overall": 8, "note": "Three tight emails, each under 120 words with one ask and the requested angles. Product details (SMS receipt reply, card limits by merchant/category/date, spend requests) match Ramp. No opt-out or postal address line is noted for a cold commercial email."},
+      "Y": {"usefulness": 8, "accuracy": 7, "specificity": 8, "clarity": 9, "craft": 8, "overall": 8, "note": "Identical to X: same strengths, and the same missing opt-out and address reminder."},
+      "winner": "tie"
+    },
+    {
+      "id": "E08",
+      "X": {"usefulness": 9, "accuracy": 9, "specificity": 9, "clarity": 8, "craft": 9, "overall": 9, "note": "Sound limits section and ranked hypotheses. Correct sample-size math (8-pt MDE at 667 per cell, about 1,370 per arm for 26%→21% with Bonferroni) and pre-set ship/stop rules. Uses verified Ramp facts: Free plan $0 with unlimited cards, QBO/Xero on Free with Intacct/NetSuite on Plus, and the firm invite rejecting Gmail with an internal Accounting-role fallback."},
+      "Y": {"usefulness": 8, "accuracy": 9, "specificity": 7, "clarity": 8, "craft": 8, "overall": 8, "note": "Same strong structure, and its sample size (about 1,100 per arm) is correct for unadjusted alpha. But there are no decision rules, and the experiments are less tied to how Ramp actually works (no pricing or accounting-integration specifics)."},
+      "winner": "X"
+    },
+    {
+      "id": "E09",
+      "X": {"usefulness": 9, "accuracy": 9, "specificity": 9, "clarity": 8, "craft": 9, "overall": 9, "note": "One-page brief with a measurable win-back definition, a 10% holdout and an exit rule. It uses verified SG Rewards facts as reasons to believe (10 points per $1, points expire 180 days) and the brand's lowercase 'sweetgreen' style."},
+      "Y": {"usefulness": 8, "accuracy": 9, "specificity": 7, "clarity": 8, "craft": 8, "overall": 8, "note": "Same solid brief and timeline. The reasons to believe are almost all placeholders, and the measurement is vaguer ('[holdout group / baseline rate]'). It misses the rewards program as a real lever."},
+      "winner": "X"
+    },
+    {
+      "id": "E10",
+      "X": {"usefulness": 9, "accuracy": 9, "specificity": 9, "clarity": 8, "craft": 9, "overall": 9, "note": "Legal, structured guide with strong anchors. It adds Sweetgreen-specific touches: an Infinite Kitchen variant (about half of 2026 openings, which matches the Q2 2026 release) and a recall follow-up in the food-safety question. The food-safety question is long for 4-5 minutes."},
+      "Y": {"usefulness": 8, "accuracy": 9, "specificity": 7, "clarity": 8, "craft": 8, "overall": 8, "note": "Same strong, lawful guide and scoring table. It is slightly more generic, with no Infinite Kitchen or recall scenario, but fits the 45 minutes more easily."},
+      "winner": "X"
+    },
+    {
+      "id": "E11",
+      "X": {"usefulness": 8, "accuracy": 9, "specificity": 8, "clarity": 9, "craft": 8, "overall": 8, "note": "Ten kind, playful options. Every character count is correct and within limits, and the 5-minute and new-streak quotas are met. The Streak Repair check is smart."},
+      "Y": {"usefulness": 8, "accuracy": 9, "specificity": 8, "clarity": 9, "craft": 8, "overall": 8, "note": "Identical to X."},
+      "winner": "tie"
+    },
+    {
+      "id": "E12",
+      "X": {"usefulness": 8, "accuracy": 9, "specificity": 7, "clarity": 8, "craft": 8, "overall": 8, "note": "Strong reading of each metric. It correctly flags that p = 0.08 is inconsistent with n = 400k, and covers regression to the mean and self-selection. The follow-up test has a clear rule but no sample-size reasoning."},
+      "Y": {"usefulness": 9, "accuracy": 9, "specificity": 9, "clarity": 8, "craft": 9, "overall": 9, "note": "Same analysis with worked counts and a 95% CI. It adds a correct sample-size calculation (about 9,600 per arm) and a decision table. It ties the recap to the real, now-free Practice tab Mistakes review (Duolingo blog) as a guardrail."},
+      "winner": "Y"
+    }
+  ]
+}

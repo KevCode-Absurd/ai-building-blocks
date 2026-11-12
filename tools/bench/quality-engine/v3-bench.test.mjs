@@ -1,12 +1,26 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { validateVerdicts, DIMENSIONS, tally } from './v3-bench.mjs';
+import { validateVerdicts, DIMENSIONS, tally, pack } from './v3-bench.mjs';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import crypto from 'node:crypto';
 const score = () => ({...Object.fromEntries(DIMENSIONS.map(d=>[d,8])),note:'Usable and accurate.'});
 const pair = id => ({id,X:score(),Y:score(),winner:'tie'});
+test('internal candidate selection freezes separately from final judging and cannot overwrite a panel', () => {
+  const run=fs.mkdtempSync(path.join(os.tmpdir(),'blind-candidate-'));
+  const write=(file,value)=>{const out=path.join(run,file);fs.mkdirSync(path.dirname(out),{recursive:true});fs.writeFileSync(out,value);};
+  const candidate='Expert candidate. '.repeat(12),plain='Request-only answer. '.repeat(12);
+  write('tasks.json',JSON.stringify([{id:'N01',brand:'linear',ext:'md',brief:'Write the requested artifact.'}]));
+  write('codex/v31/N01/candidate.md',candidate);
+  write('codex/plain/N01/final.md',plain);
+  assert.deepEqual(pack(run,'selection','v31',undefined,'candidate'),{pairs:1,html:0});
+  const outputs=['X','Y'].map(label=>fs.readFileSync(path.join(run,'judge/selection/N01',label+'.md'),'utf8'));
+  assert.deepEqual(new Set(outputs),new Set([candidate,plain]));
+  assert.throws(()=>pack(run,'selection','v31',undefined,'candidate'),/already frozen/);
+  assert.throws(()=>pack(run,'external','v31'),/Missing or empty deliverable/);
+  assert.throws(()=>pack(run,'other','v31',undefined,'../final'),/candidate or final/);
+});
 test('an incomplete judge set cannot produce a completed benchmark', () => {
   assert.throws(()=>validateVerdicts([{judge:'j1',pairs:[pair('A01')]}],['A01'],['j1','i1']),/Missing verdict/);
 });

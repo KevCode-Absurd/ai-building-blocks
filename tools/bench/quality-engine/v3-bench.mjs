@@ -29,12 +29,13 @@ export function validateVerdicts(results, ids, expectedJudges) {
   return seen.size;
 }
 
-export function pack(run, panel = 'v3', arm = 'v3', renderTool) {
+export function pack(run, panel = 'v3', arm = 'v3', renderTool, candidateFile = 'final') {
+  if (!['candidate','final'].includes(candidateFile)) throw Error('Candidate file must be candidate or final');
   const tasks = json(path.join(run, 'tasks.json'));
   const selected = arm === 'v21' ? tasks.filter(t => !['gruns','linear'].includes(t.brand)) : tasks;
   const keyFile = path.join(run, 'keys', panel + '.json');
   if (fs.existsSync(keyFile)) throw Error('This panel is already frozen; use a new panel name');
-  const files = selected.map(t => ({t, a:path.join(run,'codex',arm,t.id,'final.'+t.ext), b:path.join(run,'codex','plain',t.id,'final.'+t.ext)}));
+  const files = selected.map(t => ({t, a:path.join(run,'codex',arm,t.id,candidateFile+'.'+t.ext), b:path.join(run,'codex','plain',t.id,'final.'+t.ext)}));
   for (const {t,a,b} of files) if (![a,b].every(f => fs.existsSync(f) && fs.statSync(f).size > 100)) throw Error('Missing or empty deliverable: ' + t.id);
   if (files.some(f => f.t.ext === 'html') && !renderTool) throw Error('HTML comparisons require the screenshot renderer');
   const key = {};
@@ -54,7 +55,7 @@ export function pack(run, panel = 'v3', arm = 'v3', renderTool) {
     }
   }
   write(path.join(run,'panels',panel+'.json'),{schema:'codex-quality-panel/1',ids:files.map(f=>f.t.id)});
-  write(keyFile,{schema:'codex-quality-blind/1',panel,arm,generator_model:'Codex (session model)',baseline_model:'Codex (session model)',original_claude_run:'interrupted, preserved separately',key});
+  write(keyFile,{schema:'codex-quality-blind/1',panel,arm,candidate_file:candidateFile,generator_model:'Codex (session model)',baseline_model:'Codex (session model)',original_claude_run:'interrupted, preserved separately',key});
   return {pairs:files.length,html:files.filter(f=>f.t.ext==='html').length};
 }
 
@@ -98,8 +99,8 @@ export function tally(run, panel = 'v3', expectedJudges = ['j1','j2','i1','i2'])
 
 if (process.argv[1] && path.resolve(process.argv[1])===fileURLToPath(import.meta.url)) {
   try {
-    const [cmd,run,panel='v3',arm='v3',renderTool] = process.argv.slice(2);
-    if (!run || !['pack','tally'].includes(cmd)) throw Error('Usage: v3-bench.mjs pack <run> <panel> <arm> <renderer> | tally <run> <panel>');
-    console.log(JSON.stringify(cmd==='pack'?pack(run,panel,arm,renderTool):tally(run,panel),null,2));
+    const [cmd,run,panel='v3',arm='v3',renderTool,candidateFile='final'] = process.argv.slice(2);
+    if (!run || !['pack','tally'].includes(cmd)) throw Error('Usage: v3-bench.mjs pack <run> <panel> <arm> <renderer> [final|candidate] | tally <run> <panel>');
+    console.log(JSON.stringify(cmd==='pack'?pack(run,panel,arm,renderTool,candidateFile):tally(run,panel),null,2));
   } catch(error) {console.error(error.message);process.exitCode=1;}
 }

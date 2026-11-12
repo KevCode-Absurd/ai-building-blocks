@@ -22,7 +22,7 @@ A small business owner, marketer or freelancer. They are smart and busy. They do
 
 ## Reading level: grade 10 at most
 
-Most of our pages read at grade 5 to 8, and that is good. Never go above 10. To get there:
+Site pages, cards and buttons read at grade 10 or below. Blog posts and guides read at grade 8 to 9: 8 is the floor, because very short, choppy sentences read as too simple. Measure prose only (paragraphs and list items, not prompts, tables or headings) with `node tools/readability.mjs`. To get there:
 
 1. **Short sentences.** Aim for 15 words. Split anything over 25 into two.
 2. **Short words.** Use the simple word unless the long one says more. Long words are fine when they're the exact name for the thing ("landing page", "subscription").
@@ -62,7 +62,7 @@ Wrong copy loses trust faster than plain copy loses attention.
 - **Never invent a number, result, time saved or customer quote.** If you don't have it, leave it out.
 - **Steps must work as written.** If a page says "open Settings, then Capabilities", that must be where it is today. When you aren't sure an app's menu is called that, say less ("in your AI's settings") rather than guess.
 - **Name what's not here yet.** If the library doesn't have something, say "not yet". Don't promise a date.
-- **Examples use Sprout**, our real brand with its name changed. Never a made-up business, never a real client.
+- **Examples use real, named businesses** (since 5 Nov 2026; Sprout is retired). State only public facts and link the source. Never say they used AI Blocks or AI, or got a result, without a public source. Label copy written for them as an example. Never a made-up business, never a private client.
 
 ## Cut every word that isn't working
 

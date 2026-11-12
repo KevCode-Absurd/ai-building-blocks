@@ -22,11 +22,20 @@ Owners, marketers and freelancers who are busy and not AI experts. They don't ca
 
 ## The promise
 
-- **Headline on the home page:** Making humanity AI native.
-- **Subhead:** Stop doing the work AI could do for you. Save hours every week, and spend them on the work only you can do. Or at the beach (we won't tell).
+- **Headline on the home page:** Use AI like the top 1%
+- **Subhead:** Turn hours of work into minutes. Spend the time you save on the work only you can do. Or at the beach (we won't tell).
 - **Every block:** one clear outcome you can picture, a real example of the output, and steps simple enough to follow on your first try.
 - **Every skill:** added to your AI once (Claude, Claude Code, ChatGPT, Gemini or a text expander), then started by name. Copy and paste is the fallback.
 
 ## Personality
 
 Sharp, warm, a bit dry. A friend who's very good at this and doesn't show off. The look has an old-computer character (a globe of 0s and 1s, mono type, code windows) because we're the people who make the machine do the work.
+
+## The look
+
+The source of truth is `site/src/styles.css`. This is a summary.
+
+- **Logo:** a round pixel-grid mark of 36 squares, some solid and some at 32% opacity. Files are in `exports/`: `ai-blocks-logo.svg` for light backgrounds, `ai-blocks-logo-white.svg` and `.png` for dark ones.
+- **Colour:** black and white only. Light mode uses background `#fafafa`, panels `#ffffff`, text `#0a0a0a`, muted text `#575757` and lines `#e4e4e4`. Dark mode flips to background `#0a0a0a`, panels `#141414`, text `#ffffff`, muted text `#a3a3a3` and lines `#262626`. Green (`#1f8a5b`, dark `#5ad19a`) means success and amber (`#a56a00`, dark `#f0b85a`) means a warning. Neither is used for decoration.
+- **Type:** Space Grotesk for headings and body. Headings use weight 600 with tight letter spacing. JetBrains Mono is for code, labels and the machine feel.
+- **Details:** the main button is solid (black in light mode, white in dark mode). Other details are a hard offset shadow in the text colour, pill shapes with a 2px border, and plenty of space between sections.

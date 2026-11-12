@@ -29,5 +29,12 @@ Every headline, name, subhead, button and page passes this before it goes live. 
 
 ## Honesty
 - [ ] No invented statistics, testimonials or results.
-- [ ] No real brand names in examples; the example business is labelled.
+- [ ] Examples use a real, named business. Every fact about it is public and linked to its source. No made-up or disguised businesses.
+- [ ] Nothing says a real business used AI Blocks or AI, or got a result, unless a public source shows it. Their numbers, quotes and reviews are never invented.
+- [ ] Copy written for a real business is labelled as an example made for this page, not the brand's own copy.
 - [ ] Practice numbers are labelled as practice numbers.
+- [ ] No private client data, ever.
+
+## Reading level
+- [ ] Blog posts and guides read at grade 8 to 9, measured on the prose only (`node tools/readability.mjs`). Leave out prompts, tables and headings.
+- [ ] Other site text reads at grade 10 or below.

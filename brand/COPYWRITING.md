@@ -40,6 +40,7 @@ Energetic outcome verbs are good when the promise is true: get, win, sell more, 
 4. **Confident over qualified.** Cut "almost", "very", "really", "quite".
 5. **Show, don't tell.** Describe the outcome instead of piling on adverbs.
 6. **Honest over sensational.** Never make up a number, a testimonial or a result. Made-up statistics lose trust and can break the law.
+7. **Real businesses in examples** (Kevin, 5 Nov 2026). Use real, named businesses that readers recognise and can check, not made-up or disguised ones. State only public facts and link the source. Never say they used AI Blocks or AI, or got a result, without a public source. Label any copy written for them as an example made for the page.
 
 ## Headings and subheads are never vague
 
@@ -136,7 +137,7 @@ Say exactly what happens: "Copy the skill", "Download the workflow", "Open in th
 
 Run `CHECKLIST.md`. For a line-by-line edit, use the copy editing skill in the library ("Edit a draft so it reads clean and sells").
 
-Everything a visitor reads stays at a grade 10 reading level or below. The `plain-writing` skill (`.claude/skills/plain-writing/SKILL.md`) has the voice, the word swaps and the steps for importing a block. Check any text with `node tools/reading-level.mjs`.
+Blog posts and guides read at grade 8 to 9 (Kevin, 5 Nov 2026). Grade 8 is the floor as well as 9 the ceiling, because very short, choppy sentences read as too simple for owners and marketers. Measure the prose only, meaning paragraphs and list items, with `node tools/readability.mjs`. Prompts, tables and headings drag the score down by several grades, so leave them out. Everything else a visitor reads stays at grade 10 or below. The `plain-writing` skill (`.claude/skills/plain-writing/SKILL.md`) has the voice, the word swaps and the steps for importing a block. Check any text with `node tools/reading-level.mjs`.
 
 ## Natural names come first (21 October 2026)
 

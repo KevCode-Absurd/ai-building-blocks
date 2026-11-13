@@ -39,7 +39,7 @@ If gross profit per unit is missing, stop: offers cannot be ranked. Building off
 1. **Gross profit per unit known** for both the anchor and the offered product [MEA-0037]. Fail: compute it first.
 2. **Enough orders.** At least about 300 multi-item orders in the window for basket analysis (practitioner default). Fewer: build pairings from product logic and reviews (Step 2), and mark them as untested.
 3. **Stock can carry it.** An offered SKU needs cover for the whole offer window plus lead time. Fail: drop it or cap it.
-4. **Honest mechanics.** No pre-ticked add-ons, no items added to the cart without a tap, no fake "only today" on always-on offers. India's 2023 dark-pattern guidelines name adding items without consent (basket sneaking) and false urgency; US consumer protection law treats them as deceptive too.
+4. **Honest mechanics.** No pre-ticked add-ons, no items added to the cart without a tap, no fake "only today" on always-on offers. India's 2023 dark-pattern guidelines name adding items without consent (basket sneaking) and false urgency [CRO-6606] [OFF-6607], and from 1 January 2027 stores must self-audit against them [MCR-6605]; US consumer protection law treats them as deceptive too.
 
 ## Steps
 
@@ -140,5 +140,8 @@ Offers can take credit for items buyers would have bought anyway. Where the app 
 - OFF-0052: more of the same, or the product for the next problem.
 - OFF-0053: a 3-pack under add to cart.
 - OFF-0074: deep-discount post-purchase offer of the same item.
+- [CRO-6606]: checkout dark patterns: basket sneaking, drip pricing, forced action.
+- [OFF-6607]: offer dark patterns: false urgency, bait and switch, confirm shaming.
+- [MCR-6605]: from 2027, yearly dark-pattern self-audit for every e-commerce entity.
 
 What makes this skill ours: pairings come from the store's own baskets (attach rate and lift) and second orders, not an app's generic suggestions; each slot gets one offer ranked by added gross profit after discount and shipping; mechanics that India's dark-pattern guidelines and US law treat as deceptive are banned up front; COD orders are routed away from one-click offers; and a holdout proves the offers add profit rather than just taking credit.

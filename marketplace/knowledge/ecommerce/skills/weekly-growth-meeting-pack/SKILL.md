@@ -45,17 +45,20 @@ If gross profit per order is missing, the pack shows revenue only, marks every p
 
 ## Steps
 
-### 1. Pull the five headline numbers
+### 1. Pull the goal metric and the five headline numbers
+
+The first line is the owner's goal metric in their words (from `store-90-day-growth-plan`; if none, contribution after ads as a share of net sales), sum shown.
 
 | Number | Formula |
 |---|---|
+| Owner's goal metric | As defined in the plan, working shown |
 | Contribution after ads | Net sales - delivered costs - ad spend |
 | New customers | First-time buyers from store orders |
 | Cost per new customer | Paid acquisition cost / new customers |
 | Acquisition MER | New-customer revenue / ad spend [MEA-0039] |
 | Returning customer profit | Gross profit from repeat orders [MEA-0055] |
 
-Show each against last week, the 4-week average and the same week last year.
+Show each against last week, the 4-week average, the same week last year and the quarter's baseline and day-90 target. Each line has one owner and the threshold that triggers action.
 
 ### 2. Correct the reporting traps
 
@@ -75,7 +78,7 @@ Sales = sessions x conversion rate x order value. Break the change into those th
 - Conversion rate falls when cold spend grows, because cold traffic converts less than warm [MEA-0015]. Read contribution per visitor, not conversion rate alone.
 - In small accounts, daily swings are noise; read 7 days [ADC-0064].
 
-Mark each move "real", "noise" or "immature".
+Mark each move "real", "noise" or "immature". Any screen or rule of thumb that decides something is shown with its sum and source, or dropped.
 
 ### 4. Find why, in a fixed order
 
@@ -102,7 +105,7 @@ For each entry in the log: done or not, the signal it predicted, what happened, 
 
 ### 7. Draft the actions
 
-Up to five. Each needs: the issue, the exact next step, owner, due date, the signal that shows it worked, a guard line (what makes us stop), and the access level it needs. "Monitor" is not an action unless it names the number, the threshold and the response. Any spend, send or live change in an action still needs the owner's yes before it happens.
+Up to five. Each needs: the issue, its size in the goal metric's unit and money per week (sum shown, one unit for all, so they rank by sorting), the exact next step, owner, due date, the signal that shows it worked, a guard line (what makes us stop), and the access level it needs. "Monitor" is not an action unless it names the number, the threshold and the response. Any spend, send or live change in an action still needs the owner's yes before it happens.
 
 India note: on COD-heavy stores add delivered orders and RTO rate to the headline table, as placed orders overstate the week.
 
@@ -113,7 +116,9 @@ India note: on COD-heavy stores add delivered orders and RTO rate to the headlin
 ## Checks before you hand it over
 
 - The pack fits on one page; detail is in an appendix.
-- Contribution after ads and new-customer cost lead, not revenue or ROAS.
+- The owner's goal metric leads, with working; then contribution after ads and new-customer cost, not revenue or ROAS.
+- Every headline line has a baseline, day-90 target, owner and action threshold.
+- Every action is sized in the goal metric's unit and money per week. Mixed units fail.
 - Every headline number names its source and basis.
 - The sales change splits into sessions, conversion and order value that add up.
 - Immature days and noise are labelled, not explained away.
@@ -125,11 +130,11 @@ India note: on COD-heavy stores add delivered orders and RTO rate to the headlin
 
 **The one-page pack:**
 
-1. **Headline table:** Number, This week, Last week, 4-week average, Same week last year, Source.
+1. **Headline table:** Number, This week, Last week, 4-week average, Same week last year, Baseline, Day-90 target, Owner, Action threshold, Source.
 2. **Corrected for:** one line.
 3. **What changed:** sessions, conversion, order value effects in money, each marked real, noise or immature.
 4. **Main constraint / Win / Oddity:** three short paragraphs.
-5. **Actions:** Issue, Next step, Owner, Due, Signal, Guard line, Access needed.
+5. **Actions:** Issue, Goal-metric impact, Money per week, Next step, Owner, Due, Signal, Guard line, Access needed.
 
 **Decision log** (`growth-decisions.csv`, one row per decision): Date, Decision, Basis, Owner, Expected signal, Review date, Undo if, Grade, Grade note.
 
@@ -139,7 +144,8 @@ India note: on COD-heavy stores add delivered orders and RTO rate to the headlin
 
 ## Common mistakes
 
-- **Leading with ROAS or revenue.** Step 1 leads with contribution and new customers.
+- **Leading with ROAS or revenue.** Step 1 leads with the owner's goal metric, contribution and new customers.
+- **Numbers with no target.** Step 1 gives each line a baseline, target, owner and action threshold.
 - **Arguing about whose number is right.** Gate 2 and step 2 reconcile before the meeting.
 - **Explaining noise.** Step 3 labels normal swings as noise.
 - **Deciding on immature days.** Gate 4 labels the last days of Google data.

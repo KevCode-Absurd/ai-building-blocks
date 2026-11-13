@@ -30,6 +30,7 @@ Required (read access):
 3. **Traffic and orders** by page and channel for the last 30 to 90 days (Shopify Analytics or GA4, ad managers).
 4. **Team capacity**: owners (people and agents) and their hours per week.
 5. **Cash available** for the next 90 days.
+6. **The owner's goal metric** in their words (contribution margin as a share of revenue, cash, new customers under a cost cap), with its baseline. Take it from `store-90-day-growth-plan` if one exists.
 
 Optional: past hit rates by idea type from `recommendation-scorekeeping`, test results, heatmaps, surveys.
 
@@ -62,13 +63,16 @@ For each idea:
 - **Size of effect if it works:** a percentage change on one number (conversion, order value, repeat rate, cost per new customer), taken from the evidence, not hope.
 - **Chance it works:** start from base rates. Only about 10 to 20% of well-run tests produce a clear winner [CRO-0012]; a 30 to 35% win rate is very good [CRO-0020]. Raise the chance only with evidence: one point for each independent piece (store data, buyer words from surveys or reviews, a result elsewhere in this store, a public card that fits its conditions). An idea with fewer than two pieces stays at the base rate and cannot enter the top five [CRO-0013]. If `recommendation-scorekeeping` shows a hit rate for this idea type, use it.
 - **Expected profit per month** = chance x effect x gross profit per order x monthly orders or sessions it touches [CRO-0013]. Weight by gross profit, not revenue: an idea that shifts sales to low-margin products can raise revenue and cut profit.
+- **Goal-metric impact:** expected profit turned into the owner's goal metric, sum shown (for example, points of contribution margin = expected profit per month / monthly net sales). One unit and one period for every lane 3 idea; mixed units cannot be sorted.
 - **Money cost** (one-off and monthly), **effort hours**, **cash needed** and **time to a readable result**.
+
+A screen or rule of thumb used in a score shows its sum and source (a card, platform documentation, or "practitioner default, test it"), or is dropped.
 
 ### 4. Rank
 
 - Lane 1 first, by reach and severity.
 - Then one or two lane 2 items whose answer unlocks big lane 3 ideas.
-- Then lane 3 by expected profit per month minus monthly cost, divided by effort hours. Break ties by faster time to result, then by how easy the change is to undo.
+- Then lane 3 by goal-metric impact net of monthly cost, divided by effort hours. This is a sort on one number, not a judgement. Break ties by faster time to result, then by how easy the change is to undo.
 - Check cash: if the top items together need more cash than is free, drop the lowest until they fit.
 
 ### 5. Cap work in progress
@@ -77,7 +81,7 @@ Each owner gets at most two items in progress at once (practitioner default, tes
 
 ### 6. Write the do-next list
 
-For each of the top five: the change, lane, owner (agent and approver), start date, what "done" means, the signal to read and when, and expected profit range. List the next ten in order. List dropped ideas with a one-line reason.
+For each of the top five: the change, lane, owner (agent and approver), start date, what "done" means, the signal with its baseline, target and action threshold, the read date, and expected impact in the goal metric and in money. List the next ten in order. List dropped ideas with a one-line reason.
 
 ### 7. Set the rhythm
 
@@ -94,10 +98,12 @@ Re-rank every two weeks; collect new ideas through one form or one tab in betwee
 - Duplicates and overlapping ideas are merged.
 - Lane 1 items sit at the top regardless of score.
 - Every lane 3 score shows chance, effect, gross profit per order and reach, with evidence counted.
+- Every lane 3 idea is sized in the goal metric's unit, per month, sum shown. Mixed units fail.
+- Every screen or rule of thumb shows its sum and source, or is cut.
 - No idea with fewer than two pieces of evidence is in the top five.
 - No scorer scored their own idea.
 - The top five fit owners' hours and the cash available.
-- Each top item has an owner, start date, done definition and read date.
+- Each top item has an owner, start date, done definition, read date, and a signal with baseline, target and action threshold.
 
 ## Output
 
@@ -105,7 +111,7 @@ Re-rank every two weeks; collect new ideas through one form or one tab in betwee
 
 **Backlog sheet** (`growth-backlog.csv` or Google Sheet):
 
-| ID | Idea (change X on Y so that Z) | Source | Proposed by | Scored by | Lane | Number it moves | Effect if it works | Evidence (count and list) | Chance | Gross profit per order | Reach per month | Expected profit per month | One-off cost | Monthly cost | Effort hours | Cash needed | Time to result | Score | Rank | Owner | Status | Start | Read date | Result |
+| ID | Idea (change X on Y so that Z) | Source | Proposed by | Scored by | Lane | Number it moves | Effect if it works | Evidence (count and list) | Chance | Gross profit per order | Reach per month | Expected profit per month | Goal-metric impact (sum) | One-off cost | Monthly cost | Effort hours | Cash needed | Time to result | Score | Rank | Owner | Signal baseline | Target | Action threshold | Status | Start | Read date | Result |
 
 **To confirm:** owners' hours, cash available, any lane 1 item the client wants to accept as a known risk.
 
@@ -114,6 +120,7 @@ Re-rank every two weeks; collect new ideas through one form or one tab in betwee
 - **Everyone scores their own idea.** The gates assign a different scorer.
 - **Guessing the chance high.** Step 3 starts from base rates and counts evidence.
 - **Revenue instead of profit.** Step 3 weights by gross profit per order.
+- **Mixed units.** Per 1,000 customers here, per quarter there. Step 3 puts every idea in the goal metric per month.
 - **Ranking growth above broken checkout.** Step 2 puts lane 1 first.
 - **Five top items for one person.** Step 5 caps work in progress.
 - **Never re-ranking.** Step 7 sets a two-week rhythm and feeds results back.

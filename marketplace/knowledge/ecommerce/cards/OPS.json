@@ -1065,5 +1065,47 @@
     },
     "strength": "platform_rule",
     "public": true
+  },
+  {
+    "id": "OPS-6601",
+    "modules": [
+      "OPS",
+      "CXP"
+    ],
+    "topics": [
+      "india",
+      "consumer law",
+      "grievance officer",
+      "returns and refunds",
+      "cancellation"
+    ],
+    "claim": "In India, every e-commerce entity and marketplace seller needs a grievance officer who acknowledges complaints within 48 hours and resolves them within one month, and may charge cancellation fees only if it bears similar charges when it cancels.",
+    "body": "IndiaLaw's summary of the Consumer Protection (E-Commerce) Rules, 2020 says every e-commerce entity must run a grievance mechanism with a grievance officer whose details are visible, who acknowledges a complaint within 48 hours and resolves it within one month. Sellers on a marketplace must appoint their own grievance officer on the same timelines, so the platform's officer does not cover the brand. Marketplaces and inventory entities must give a ticket number so a buyer can track a complaint, and every entity must cooperate with the National Consumer Helpline. No entity may charge a cancellation fee unless it bears similar charges when it cancels an order itself. Refunds must be processed under Reserve Bank of India rules. Sellers and inventory entities must not refuse a return or refund for goods that are defective, not as described, or delivered late, unless force majeure applies. How to apply: publish the grievance officer's name, designation and contacts; send an automatic acknowledgement with a ticket number on every complaint; track a one-month resolution deadline per ticket; and remove any cancellation fee unless your own cancellations carry a matching payout to the buyer.",
+    "conditions": "Any business selling to Indian consumers online, including D2C stores and sellers on marketplaces.",
+    "fails_when": "From 1 January 2027 the 2026 amendment also requires giving the complainant a copy of the complaint as recorded. The summary gives no refund day count; check RBI and payment gateway rules.",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "acknowledge within 48 hours",
+      "resolve within one month"
+    ],
+    "asks": [
+      "Do I need a grievance officer for my online store in India?",
+      "How fast must I answer customer complaints in India?",
+      "Can I charge a cancellation fee on orders in India?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6600",
+    "evidence": {
+      "where": "Duties of all e-commerce entities and of sellers on marketplaces"
+    },
+    "strength": "regulator_rule",
+    "public": true
   }
 ]

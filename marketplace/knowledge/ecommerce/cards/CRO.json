@@ -164,8 +164,8 @@
     "topics": [
       "sample size and power"
     ],
-    "claim": "At 95% confidence and 80% power you need about 1,000 conversions per variant to detect a 10% relative lift, 260 for 20%, 120 for 30%, 3,830 for 5%.",
-    "body": "Required sample is driven by the minimum detectable effect (MDE), not by a magic conversion count. Evan Miller's rule is n = 16 x p(1-p) / delta squared visitors per variant, where delta is the absolute effect and the 16 builds in 95% two-sided significance and 80% power; halving the MDE quadruples the sample. At a 2% baseline, typical for DTC, detecting a 10% relative lift (2.0% to 2.2%) needs about 80,700 visitors per variant, a 20% lift about 21,100, a 5% lift about 315,200. At 1% baseline a 10% lift needs about 163,100; at 5% baseline about 31,200. Expressed as conversions per variant, the number barely depends on baseline: roughly 3,830 for 5%, 1,000 for 10%, 260 for 20%, 120 for 30%. So the common rule that a test needs 400 conversions a month is misleading: 400 per variant only powers lifts of about 25% or more. How to apply: before any test, set the MDE to the smallest lift worth shipping, compute the sample with a calculator, convert it to weeks of traffic, and do not run the test if it would take more than a few weeks. Be clear whether the calculator wants relative or absolute MDE; confusing them is a common error.",
+    "claim": "At 95% confidence and 80% power and a 2% baseline, you need about 1,600 conversions per variant to detect a 10% relative lift, 420 for 20%, 190 for 30%, 6,300 for 5%.",
+    "body": "Required sample is driven by the minimum detectable effect (MDE), not by a magic conversion count. Evan Miller's rule is n = 16 x p(1-p) / delta squared visitors per variant, where delta is the absolute effect and the 16 builds in 95% two-sided significance and 80% power; halving the MDE quadruples the sample. At a 2% baseline, typical for DTC, detecting a 10% relative lift (2.0% to 2.2%) needs about 80,700 visitors per variant, a 20% lift about 21,100, a 5% lift about 315,200. At 1% baseline a 10% lift needs about 163,100; at 5% baseline about 31,200. Expressed as conversions per variant (visitors times baseline), the rule becomes about 16 x (1 - p) / r squared, where r is the relative lift, so it barely depends on baseline: at 2% that is roughly 6,300 for 5%, 1,600 for 10%, 420 for 20% and 190 for 30%. So the common rule that a test needs 400 conversions a month is misleading: 400 per variant only powers lifts of about 20% or more. How to apply: before any test, set the MDE to the smallest lift worth shipping, compute the sample with a calculator, convert it to weeks of traffic, and do not run the test if it would take more than a few weeks. Be clear whether the calculator wants relative or absolute MDE; confusing them is a common error.",
     "conditions": "Two-variant tests on a binary conversion metric, 95% two-sided significance, 80% power; tables from Evan Miller's calculator and statsunlock reference.",
     "fails_when": "",
     "scope": "baseline",
@@ -174,8 +174,8 @@
       "2% baseline, 10% relative lift: about 80,682 visitors per variant",
       "2% baseline, 20% lift: about 21,109 per variant",
       "2% baseline, 5% lift: about 315,206 per variant",
-      "about 3,830 / 1,000 / 260 / 120 conversions per variant for 5 / 10 / 20 / 30% lifts",
-      "400 conversions per variant powers only about 25%+ lifts"
+      "about 6,300 / 1,600 / 420 / 190 conversions per variant for 5 / 10 / 20 / 30% lifts at a 2% baseline",
+      "400 conversions per variant powers only about 20%+ lifts"
     ],
     "asks": [
       "How many visitors do I need to run an A/B test?",
@@ -907,15 +907,15 @@
       "stopping rules",
       "common invalidations"
     ],
-    "claim": "Trusting a 10 to 20% conversion lift needs about 1,000 conversions per variant: at 2.5% conversion, roughly 40,000 sessions per variant, 80,000 for a simple A/B test.",
-    "body": "The presenter's rule of thumb for landing-page tests: to believe a 10 to 20% relative lift, you need roughly 1,000 conversions in each arm. At a 2.5% conversion rate that is about 40,000 sessions per variant, so 80,000 for a two-arm test. Most seven-figure brands cannot send that much traffic to one product page in a month, so a 'winning' test after two weeks and about 100 conversions is noise. Three common invalidations he names. Peeking: checking daily and stopping when the result looks significant inflates false positives. Email contamination: a Klaviyo campaign spikes conversion and revenue, and if on-page testing software splits all traffic, email visitors pollute both arms. Multi-click journeys: across his large clients it takes about 1.5 Meta clicks on average to convert, so a visitor may see both variants. How to apply: compute the sample size before starting and fix the duration in advance; run page tests on dedicated landing pages fed only by cold paid traffic; exclude email and SMS traffic; and below roughly $40 million a year online, prefer fixing clear problems (clarity, offer, proof, friction) over testing small design tweaks. Judge the program by revenue per visitor trend over months, not by a list of green tests.",
+    "claim": "A common rule of 1,000 conversions per variant only powers lifts of about 13% or more; a 10% lift needs about 1,600, about 64,000 sessions per variant at 2.5% conversion.",
+    "body": "The presenter's rule of thumb for landing-page tests is roughly 1,000 conversions in each arm to believe a 10 to 20% relative lift. Checked against the standard sample-size rule (95% confidence, 80% power), 1,000 per arm detects lifts of about 13% or more; a 10% lift needs about 1,600 per arm, which at a 2.5% conversion rate is about 64,000 sessions per variant, 128,000 for a two-arm test. Most seven-figure brands cannot send that much traffic to one product page in a month, so a 'winning' test after two weeks and about 100 conversions is noise. Three common invalidations he names. Peeking: checking daily and stopping when the result looks significant inflates false positives. Email contamination: a Klaviyo campaign spikes conversion and revenue, and if on-page testing software splits all traffic, email visitors pollute both arms. Multi-click journeys: across his large clients it takes about 1.5 Meta clicks on average to convert, so a visitor may see both variants. How to apply: compute the sample size before starting and fix the duration in advance; run page tests on dedicated landing pages fed only by cold paid traffic; exclude email and SMS traffic; and below roughly $40 million a year online, prefer fixing clear problems (clarity, offer, proof, friction) over testing small design tweaks. Judge the program by revenue per visitor trend over months, not by a list of green tests.",
     "conditions": "Stores running on-page A/B tests or hiring a CRO agency; most relevant to brands under 8 figures with limited traffic per page.",
     "fails_when": "Very high-traffic brands or tests expecting very large effects (a headline or offer change), where fewer conversions can detect the difference; sequential testing methods designed for peeking change the stopping math.",
     "scope": "growth",
     "tier": 3,
     "numbers": [
-      "about 1,000 conversions per variant to trust a 10 to 20% lift",
-      "about 40,000 sessions per variant at 2.5% conversion, 80,000 total",
+      "about 1,000 conversions per variant powers lifts of about 13% or more; about 1,600 for a 10% lift",
+      "about 64,000 sessions per variant at 2.5% conversion for a 10% lift, 128,000 total",
       "two weeks and about 100 conversions is noise",
       "average about 1.5 Meta clicks before purchase (presenter's large clients)",
       "A/B micro-testing worth it from about $40 million a year online"
@@ -1110,6 +1110,47 @@
       "quote": "must also have available prompt, clear, and direct escalation paths"
     },
     "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "CRO-6606",
+    "modules": [
+      "CRO",
+      "LPG",
+      "OFF"
+    ],
+    "topics": [
+      "india",
+      "dark patterns",
+      "checkout",
+      "pricing"
+    ],
+    "claim": "India's dark pattern guidelines bar adding items or charges to a cart without consent, revealing the real price only at checkout, forcing sign-ups or data sharing to buy, hiding a 'no' option, and trick-question opt-outs.",
+    "body": "Khaitan & Co. summarise five of the 13 dark patterns in the CCPA's 2023 guidelines, which apply to online platforms, advertisers and sellers in India, that sit in the cart and checkout. Basket sneaking is adding products or services without consent, such as travel insurance added to a flight booking; free samples, complimentary services and disclosed necessary fees or taxes do not count. Drip pricing is not showing the real price upfront, for example revealing it only at checkout, or calling something free when continued use needs in-app purchases; a marketplace is not liable for price changes caused by third-party sellers. Forced action is requiring a buyer to buy something extra, sign up for an unrelated service, or share personal information to get what they wanted. Interface interference is hiding or dimming relevant information, such as a faint 'no' button on a purchase pop-up, or reversing what symbols mean. A trick question uses confusing wording to steer a buyer to an answer they did not intend. How to apply: never pre-add shipping protection, gift wrap, donations or warranties; show delivery, COD and platform fees on the product page, not just at payment; do not make newsletter or app sign-up a condition of buying; give accept and decline buttons equal weight; and word every opt-in so 'yes' means yes.",
+    "conditions": "Websites, apps and marketplaces selling to consumers in India.",
+    "fails_when": "The list is not exhaustive and the regulator can add patterns. Taxes and necessary fees disclosed at purchase are allowed. This is a law-firm summary, not the gazette text.",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "13 specified patterns in Annexure 1"
+    ],
+    "asks": [
+      "Can I pre-add shipping protection to the cart in India?",
+      "Is showing delivery charges only at checkout legal in India?",
+      "Can I force account sign-up before checkout in India?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6603",
+    "evidence": {
+      "where": "Summary of patterns 2, 4, 6, 8 and 11"
+    },
+    "strength": "regulator_rule",
     "public": true
   }
 ]

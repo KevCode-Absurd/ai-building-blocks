@@ -2810,5 +2810,86 @@
     },
     "strength": "stated_by_practitioner",
     "public": true
+  },
+  {
+    "id": "LPG-6600",
+    "modules": [
+      "LPG",
+      "OPS"
+    ],
+    "topics": [
+      "india",
+      "consumer law",
+      "product page disclosure",
+      "pricing"
+    ],
+    "claim": "Under India's E-Commerce Rules 2020, an online store or marketplace seller must show the total price with a breakdown of other charges, country of origin, importer details for imports, return and delivery terms, and grievance officer contacts.",
+    "body": "The Consumer Protection (E-Commerce) Rules, 2020 cover marketplace entities, sellers on marketplaces, and inventory e-commerce entities, which sell stock they own; a brand selling its own products on its own website is the inventory model. IndiaLaw's summary lists what a seller on a marketplace must give the platform to display: legal name and address, website and customer care details, GSTIN and PAN where they apply, the total price with a breakdown of charges, mandatory notices and expiry dates, product details including country of origin, grievance officer contacts, importer details and guarantees for imported products, return and refund terms including shipping costs, and delivery details. An inventory entity must itself display returns, refunds, exchanges, warranties, delivery, shipping costs, payment methods, payment security, how to cancel and any fees, the total price broken down into charges such as delivery and taxes, and a ticket number for tracking complaints. Every e-commerce entity must show its legal name, head office and branch addresses, and customer support email and phone. How to apply: give every product a country of origin field and, for imports, the importer's name; show one all-in price with delivery and other fees itemised before payment; and link the return policy and grievance officer from every product page and the footer.",
+    "conditions": "Online sales of goods or services to consumers in India, through an own website or a marketplace.",
+    "fails_when": "From 1 January 2027 the 2026 amendment adds fields (full country of origin, GSTIN or MSME number); see that card. Food has its own labelling law. This is a law-firm summary, so check the rule text before a dispute.",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [],
+    "asks": [
+      "What must an Indian D2C website show on a product page?",
+      "Do I need to show country of origin on my Shopify store in India?",
+      "What details must a marketplace seller give Amazon or Flipkart in India?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6600",
+    "evidence": {
+      "where": "Sections on duties of sellers on marketplaces and of inventory e-commerce entities"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "LPG-6604",
+    "modules": [
+      "LPG",
+      "OPS"
+    ],
+    "topics": [
+      "india",
+      "consumer law",
+      "product page disclosure",
+      "marketplaces",
+      "invoices"
+    ],
+    "claim": "India's 2026 E-Commerce amendment, in force 1 January 2027, adds GSTIN or MSME number and full country of origin to listings, a copy of the recorded complaint for buyers, and the seller's name on invoices in the platform's font size.",
+    "body": "SCC Online's summary of the Consumer Protection (E-Commerce) (Amendment) Rules, 2026, notified on 9 September 2026 and effective 1 January 2027, lists these changes. Every e-commerce entity must prominently show its legal name, principal address, website, and customer care and grievance officer contacts. Grievance officers must acknowledge a complaint within 48 hours, give the complainant a copy of the complaint as recorded, and resolve it within one month. Entities selling imported goods must disclose the importer's details and the full country of origin. Invoices must show the seller's name in the same font size as the platform's name. Sellers must display country of origin, best before or use by dates where relevant, return, refund and exchange terms, warranties, delivery details, return shipping costs and payment methods, and under new Rule 6(5)(j) a government ID number such as GSTIN or MSME registration. Marketplaces must explain in plain language the main factors behind product rankings, may not use consumer data to promote their own brands or present sellers as linked to them without express consent, and may not charge bundled fees for services unrelated to the platform, except loyalty or membership programmes. How to apply: add GSTIN to listings and the store footer, store a complaint copy with each ticket, and check invoice templates before January 2027.",
+    "conditions": "Sellers, D2C stores and marketplaces selling to consumers in India from 1 January 2027.",
+    "fails_when": "The article does not say whether a standalone D2C site is treated differently from a marketplace seller, or how the dark pattern self-audit is filed. Check the gazette notification for exact wording.",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "notified 9 September 2026",
+      "in force 1 January 2027",
+      "acknowledge within 48 hours, resolve within one month"
+    ],
+    "asks": [
+      "What changes in India's e-commerce rules in January 2027?",
+      "Do I need to show GSTIN on my product listings in India?",
+      "What must an invoice show when I sell on a marketplace in India?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6601",
+    "evidence": {
+      "where": "Sections on Rule 4, amended Rules 6(5)(d) and 6(5)(j), marketplaces and Rule 7(1)(a)"
+    },
+    "strength": "regulator_rule",
+    "public": true
   }
 ]

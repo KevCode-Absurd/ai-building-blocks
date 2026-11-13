@@ -45,3 +45,16 @@ test("length: over 1.6 times the plain answer fails, and one page is about 450 w
   assert.equal(aim.status, 0); assert.match(aim.stdout, /over the 1\.3 aim/);
   assert.equal(run(put("page.md", words(600)), "--one-page").status, 1);
 });
+
+test("short blanks like [X] and [link] fail, but task boxes and real links pass", () => {
+  const bad = run(put("blanks.md", "Holds up to [X] notes.\nSee our roomier wallets. [Link to that range.]\n"));
+  assert.equal(bad.status, 1); assert.match(bad.stdout, /a blank to fill "\[X\]"/); assert.match(bad.stdout, /a fill-in blank/);
+  const ok = run(put("boxes.md", "- [x] Pixel checked\n- [ ] Survey added\nRead [the policy](https://example.com/policy) first.\n"));
+  assert.equal(ok.status, 0, ok.stdout);
+});
+
+test("a stock line repeated across variants is noted without failing", () => {
+  const line = "Twelve grams of protein in every bar, no added sugar";
+  const r = run(put("variants.md", `A. Hook one. ${line}.\nB. Hook two. ${line}.\nC. Hook three. ${line}.\n`));
+  assert.equal(r.status, 0, r.stdout); assert.match(r.stdout, /Worth a look/); assert.match(r.stdout, /repeats on 3 lines/);
+});

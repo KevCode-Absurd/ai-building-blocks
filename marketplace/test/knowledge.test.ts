@@ -119,6 +119,11 @@ test("own skills go to the agents they name, else to the module's agents, with a
   assert.match(kit.content, /## Check and diagnose\n\n- \*\*Skill A\*\*\. You get: Ten checked headlines\. Use it when the job needs it\./);
   assert.match(kit.content, /## Make and deliver\n\n- \*\*Skill C\*\*/, "the title falls back to the skill's heading");
   assert.match(verticalKnowledgeSection(copywriter, b, personaVerticalFiles(copywriter, b).map(f => f.path), "https://x/mcp"), /My toolkit: `knowledge\/ecommerce\/toolkit\.md`/);
+  const bare = verticalBundle({ ...VERTICAL, house_rules: [] }, [card("MCR-0001")], [src("S0001")], { toolbox, vendor });
+  assert.doesNotMatch(personaVerticalFiles(copywriter, bare).find(f => f.path.endsWith("toolkit.md"))!.content, /Rules for every deliverable/, "no house rules, no section");
+  const ruled = verticalBundle({ ...VERTICAL, house_rules: ["Rank in one unit. Size every option the same way."] }, [card("MCR-0001")], [src("S0001")], { toolbox, vendor });
+  const ruledKit = personaVerticalFiles(copywriter, ruled).find(f => f.path.endsWith("toolkit.md"))!;
+  assert.match(ruledKit.content, /## Rules for every deliverable\n\n1\. \*\*Rank in one unit\.\*\* Size every option the same way\.\n\n## Check and diagnose/, "house rules sit above the skills");
 });
 
 test("query options from loose input keep only known modules and values", () => {

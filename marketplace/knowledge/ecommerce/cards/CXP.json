@@ -1175,5 +1175,45 @@
     },
     "strength": "platform_rule",
     "public": true
+  },
+  {
+    "id": "CXP-6608",
+    "modules": [
+      "CXP",
+      "OFF",
+      "EML"
+    ],
+    "topics": [
+      "india",
+      "dark patterns",
+      "subscriptions",
+      "free trials",
+      "cancellation"
+    ],
+    "claim": "India's dark pattern guidelines treat hard or hidden cancellation, requiring payment details for auto-debit during a free subscription, and charging recurring payments without the user's knowledge, such as an unannounced trial-to-paid switch or auto-renewal, as dark patterns.",
+    "body": "Khaitan & Co. summarise two subscription patterns from the CCPA's 2023 guidelines. A subscription trap is requiring payment details for auto-debits during a free subscription, or making cancellation hard through complicated steps or a hidden cancel button. SaaS billing is collecting recurring payments in a software-as-a-service model without the user's consent or knowledge, for example not telling users when a free trial becomes paid, or auto-renewing without notice. Nagging, a separate pattern, covers repeated prompts the user has not agreed to. For a store with subscribe and save, refills or memberships, the subscription trap pattern is the one that clearly applies. How to apply: put a cancel button in the customer account that works in as few steps as it took to subscribe; do not hide it behind chat or phone calls; if a free trial needs a card, state the charge date and amount before sign-up; send a reminder before each renewal or trial conversion; and keep records of consent to recurring charges.",
+    "conditions": "Subscriptions, memberships and free trials offered to consumers in India.",
+    "fails_when": "SaaS billing is written for software services; physical product subscriptions may be judged under the subscription trap pattern instead. RBI rules on recurring card mandates also apply. This is a law-firm summary.",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [],
+    "asks": [
+      "How easy must subscription cancellation be in India?",
+      "Can I ask for card details for a free trial in India?",
+      "Do I need to remind customers before a subscription renews in India?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6603",
+    "evidence": {
+      "where": "Summary of patterns 5 and 12"
+    },
+    "strength": "regulator_rule",
+    "public": true
   }
 ]

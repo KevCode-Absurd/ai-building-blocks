@@ -19,7 +19,7 @@ description: "Find where each of a store's video ads loses people (the opening s
 
 - Statics and carousels: use `store-meta-creative-review`.
 - Writing new openers once the diagnosis says "weak opener": use `ad-opener-writer`.
-- Checking that every part of the story is present: use `ad-structure-check`.
+- Checking that every part of the story is present: use `ad-structure-map`.
 - Campaign budgets after the sort: use `store-meta-budget`.
 
 ## What you need

@@ -73,6 +73,7 @@ Per set: headline, subhead or link description, body (short and long), call to a
 - **Headline and subhead work as a pair:** the subhead adds something new. If the headline is feeling-led, the subhead carries the proof; if the headline is proof, the subhead carries the feeling.
 - Open with curiosity, proof or a promise, not the pain every rival names [LPG-0045].
 - Each testimonial is a real, dated review answering one objection; a generic "love it" earns no space [LPG-0053]. Never label a quote "verified" unless the review app marks it so.
+- **Each body leads with its own proof** (the review, mechanism, label fact or scene that answers its objection). A price or spec line appears in at most 2 bodies; headlines and descriptions can carry it. Bodies that share one string test less and can group as one ad [MCR-0078].
 - One awareness stage per set [MCR-0056]; the call to action matches it: softer ("See how it works") early, direct ("Shop now") late.
 - No "it's not X, it's Y" lines [MCR-0016]; no launch openers ("Introducing", "Meet"); no hype words (game-changer, revolutionary, unlock); no all-caps sentences.
 - Match voice by ear: five brand lines beside five of yours; fix any that sound like someone else.
@@ -113,6 +114,7 @@ Score each set 0 to 2 on: objection rank, proof strength, fit with the destinati
 
 - Sets run on the same visual in one ad set, or as variations on one body; 2 to 4 at a time at modest budgets [MCR-0013].
 - Budget per set: 3 times target cost per purchase over at least 7 days [ADC-0039] [ADC-0064]. Impressions alone cannot settle a purchase test.
+- **Size the read bar to the budget.** Purchases a set can reach = its test budget / target cost per purchase. Any bar you write must sit at or under that. If not, read on a cheaper upstream event (cost per add to cart) or pool sets that share the variable, and say so [ADC-0066]; confirm on purchases before rewriting other creative [MCR-0029].
 - Read at ad set level on 7-day click [ADC-0059]; check Shopify orders by UTM.
 - Most tests are flat; only about 10 to 20% of well-run tests find a clear winner [CRO-0012]. A tie means keep the simpler copy.
 - Write what each outcome would mean: if proof wins, lead future creative with proof; if mechanism wins, buyers want the why. Confirm with a second test before rewriting everything.
@@ -125,16 +127,18 @@ Score each set 0 to 2 on: objection rank, proof strength, fit with the destinati
 4. Every line shows its count and fits its placement; every set has a call to action.
 5. Every testimonial is real, dated and answers a named objection.
 6. The first pair isolates one stated variable; test cost fits the test cash.
-7. Nothing is live; paused drafts only with a yes.
-8. A plain one-pass draft would not beat the top set on proof and clarity.
+7. Each body opens on its own proof; no price or spec string sits in more than 2 bodies.
+8. Every read bar is reachable at its budget, or the plan names the upstream or pooled read.
+9. Nothing is live; paused drafts only with a yes.
+10. A plain one-pass draft would not beat the top set on proof and clarity.
 
 ## Output
 
 1. **One-screen summary:** concept, the two sets to test first, the variable isolated, test cost, read date, claims struck.
 2. **Objection table:** rank, objection, customer phrase, review date, facts row that answers it.
-3. **Copy sets:** set ID, structure, objection, headline (chars), subhead (chars), body short (chars), body long (chars), call to action, facts rows, score.
+3. **Copy sets:** set ID, structure, objection, proof that opens the body, headline (chars), subhead (chars), body short (chars), body long (chars), call to action, facts rows, score.
 4. **Compliance log:** line, rule, verdict, rewrite.
-5. **Test plan:** set, ad set, daily budget, UTM content value, start, read date, keep or cut rule, what a win means.
+5. **Test plan:** set, ad set, daily budget, purchases reachable (budget / target cost per purchase), read metric, UTM content value, start, read date, keep or cut rule, what a win means.
 6. **To confirm:** short list for the owner.
 
 ## Common mistakes
@@ -145,6 +149,8 @@ Score each set 0 to 2 on: objection rank, proof strength, fit with the destinati
 - **A disease word in skincare copy.** Step 5 catches it.
 - **Judging on a thousand impressions.** Step 7 reads purchases.
 - **Calling a flat test a win.** Step 7 sets the tie rule.
+- **One price and spec line in every body.** Step 3 caps it at 2.
+- **A read bar the budget cannot reach.** Step 7 sizes it first.
 
 ## Sources
 
@@ -162,5 +168,8 @@ Score each set 0 to 2 on: objection rank, proof strength, fit with the destinati
 - [ADC-0064]: read over 7 days at low spend.
 - [ADC-0059]: judge at ad set level.
 - [CRO-0012]: only 10 to 20% of tests find a winner.
+- [MCR-0078]: near-duplicate ads group under one Meta entity.
+- [ADC-0066]: test budget formula; higher-funnel event when purchases are few.
+- [MCR-0029]: a high-CTR ad can be a false winner.
 
 What makes this skill ours: each set answers a ranked objection with a dated fact and a real review; a line-by-line compliance pass covers Meta, ASCI and FTC rules, including fake urgency; and the number of sets comes from test cash and target cost per purchase, read on store orders with a stated learning rule.

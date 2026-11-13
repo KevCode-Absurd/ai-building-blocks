@@ -7,7 +7,7 @@ description: "Designs a store's free-shipping threshold, bundles, gifts, upsells
 
 **You get:** a recommended free-shipping threshold, bundle tiers, gift, upsells and discount rules modelled on gross profit per session, with an order value chart, offer and upsell tables, a set-up list and an offer model sheet.
 
-Pick the offers that raise gross profit per session, not just order value, and place them where buyers will see them. Worked numbers are illustrative; replace them with the store's.
+Pick offers that raise gross profit per session, not just order value. Worked numbers are illustrative; use the store's.
 
 ## When to use
 
@@ -97,14 +97,14 @@ Added profit per exposed order = take rate x order value added x that item's gro
 Service add-ons count only at their true margin:
 
 - **Shipping protection:** take rate near 30% at a small fee [OFF-0010], but the store must pay every valid claim. Margin = fee minus expected claims cost minus any provider fee.
-- **Priority processing:** a paid "packed first" option is worth offering only if the warehouse can really pack those orders first; otherwise it is a broken promise.
+- **Priority processing:** offer a paid "packed first" option only if the warehouse can really pack those orders first.
 
 ### 8. Decide on discounts
 
 - Model every discount depth before using it. A 30% discount on a 40% margin order moved break-even ROAS from 2.5 to about 7 [OFF-0065].
 - Small 5 to 10% codes usually lose profit because units per order do not move [OFF-0014].
 - Keep straight sitewide discounts to once or twice a year, on high-margin or slow stock [OFF-0008].
-- Welcome offers: above about 100 order value a money-off amount tends to beat the same percentage [OFF-0026]; one email card puts the line nearer 200 [EML-0047]. Both agree fixed amounts win at high order value; use 100 as the line and test it.
+- Welcome offers: at high order value a money-off amount beats the same percentage; cards put the line between 100 [OFF-0026] and 200 [EML-0047]. Use 100 and test it.
 - Check whether discount-led customers repeat less before scaling a code; at many brands they had worse lifetime value [CXP-0016].
 - Urgency must be real: a stated end date that is kept. Never use countdown timers that reset.
 - A "was" or compare-at price must be a price the store genuinely charged; consumer rules in most markets require it. Do not invent an anchor to make a discount look bigger.
@@ -123,7 +123,12 @@ Practitioner default, test it: show a small COD fee or a prepaid discount at the
 
 ### 11. Plan the test
 
-Never test two prices for the same product; test tiers, framing and thresholds [CRO-0009]. Judge on gross profit per session [OFF-0015]. Use the order-volume rules in `storefront-conversion-audit` to decide whether the store can test or should ship and watch.
+Never test two prices for the same product; test tiers, framing and thresholds [CRO-0009]. Judge on gross profit per session [OFF-0015]. Write a guardrail and its stop line before launch: conversion rate, and in cash on delivery stores the delivered rate, counting a refused order as lost.
+
+- **Default: a concurrent random split.** Both versions run on the same days, visitors assigned at random by a split-test app, a theme split or a shipping or discount code split. If the store cannot split by visitor, split by region with matched past sales. Run full weeks, 2 to 4 of them [CRO-0021].
+- **Before and after only when no split is possible** (too little traffic [CRO-0001] or no tool): compare matched weeks in the same season, skip sale and festival weeks, and write the caveat that season and ad changes can explain the result.
+
+Use the order-volume rules in `storefront-conversion-audit` to size the test.
 
 ## Checks before you hand it over
 
@@ -134,6 +139,7 @@ Never test two prices for the same product; test tiers, framing and thresholds [
 - Each discount has its break-even ROAS line handed to `store-meta-math`.
 - Gift and bundle SKUs have stock for the offer window.
 - No price test of one product at two prices; no fake urgency.
+- Pass: the test is a concurrent random split with a guardrail and stop line. Fail: a before and after, unless a split is impossible and the plan uses matched weeks with a written caveat.
 - Nothing was switched on without a client yes.
 
 ## Output
@@ -142,17 +148,19 @@ Never test two prices for the same product; test tiers, framing and thresholds [
 2. **Order value chart** with peaks and the chosen threshold marked.
 3. **Offer table:** Offer, Placement, Price, Units, Gross profit per order, Expected take, Gross profit per session change, Stock check, Break-even ROAS.
 4. **Upsell table:** Item, Slot, Take rate (planning), Value added, Margin, Added profit per exposed order.
-5. **Set-up list for approval:** each Shopify setting or app change, numbered.
-6. **File:** `offer-model.csv` or a Google Sheet with live formulas.
+5. **Test plan:** Offer, Split method, Arms, Main metric, Guardrail and stop line, Weeks, Caveat.
+6. **Set-up list for approval:** each Shopify setting or app change, numbered.
+7. **File:** `offer-model.csv` or a Google Sheet with live formulas.
 
 ## Common mistakes
 
 - **Threshold from the mean.** Step 2 uses the distribution's peaks.
-- **Judging by order value.** A bigger default pack can raise order value and lose profit [OFF-0015]. Step 1 sets profit per session as the bar.
+- **Judging by order value.** Step 1 sets profit per session as the bar [OFF-0015].
 - **Average shipping in bundle maths.** Step 3 prices the nth unit.
 - **Small codes everywhere.** Step 8 shows why they lose.
 - **Gifts nobody values.** Step 6 lists gifts for sale and checks their cost.
 - **Price tests on one product.** Step 11 tests structure instead.
+- **Comparing December with January.** Step 11 runs both versions on the same days.
 
 ## Sources
 
@@ -169,5 +177,6 @@ Never test two prices for the same product; test tiers, framing and thresholds [
 - OFF-0053, LPG-0001: placement on page and cart.
 - CXP-0016: discount cohorts repeat less.
 - CRO-0009: never test two prices for one product.
+- CRO-0001, CRO-0021: when a split test is possible; full weekly cycles.
 
-What makes this skill ours: every offer is judged on gross profit per session, not order value; the threshold comes from the peaks of the store's own order distribution; bundle discounts are funded from the real cost of the nth unit; and each discount carries its own break-even line before anyone switches it on.
+What makes this skill ours: every offer is judged on gross profit per session, not order value; the threshold comes from the peaks of the store's own order distribution; bundle discounts are funded from the real cost of the nth unit; each discount carries its own break-even line; and tests run both versions on the same days.

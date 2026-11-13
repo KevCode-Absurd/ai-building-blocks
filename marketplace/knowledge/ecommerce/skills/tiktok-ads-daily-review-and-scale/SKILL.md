@@ -31,7 +31,7 @@ Required (read access, level 1):
 4. **Stock** for each advertised SKU and its reorder lead time.
 5. **The decision log** from earlier days.
 
-Optional: post-purchase survey answers, Meta and Google results for the same days (to spot halo or shifts), TikTok account notices.
+Optional (needed for step 9): post-purchase survey answers, the pre-launch baseline of new customers and blended cost per new customer, Meta and Google results for the same days (to spot halo or shifts), TikTok account notices.
 
 Making changes needs level 3 within written limits (maximum daily budget, maximum raise per step, which actions are allowed), or level 2 with each change approved. Anything outside the limits needs a fresh yes, using `ad-change-approval-gate`.
 
@@ -77,6 +77,8 @@ Use rolling 3-day and 7-day numbers, never today alone. Below about $1,000 a day
 
 Step size: raise about 20 to 30% at a time, then wait 48 to 72 hours (practitioner default, test it). There is no platform rule behind fixed percentage limits [ADC-0056]; the real limit is the cost of the extra purchases.
 
+**Too many thin ad groups.** The learning bar per ad group is about 25 x allowed cost per purchase / 7 a day [ADC-0063]. When several test ad groups sit below it and stay in learning, propose merging them: fewer ad groups, each funded to the bar, with the concepts as ads inside. Show the arithmetic in the change list.
+
 ### 5. Check the cost of the extra purchases
 
 After each raise, compare: extra spend / extra store-adjusted purchases. If that marginal cost is above break-even, step back to the last good budget even if the average still looks fine; in one account a 25% raise kept the average under target while the extra buyers cost far more [ADC-0049]. When stock is tight, hold winners at a steady budget so they last; when stock must clear, push harder [ADC-0012].
@@ -97,6 +99,17 @@ Every decision goes into the log with a prediction ("adjusted cost per purchase 
 
 Weekly: recompute the store-truth factor, check new-customer cost from `new-customer-cost-by-channel`, and read the 90-day value bands for TikTok buyers: under 1 loses money, 2 to 3 is the zone to scale [MEA-0024].
 
+### 9. Make budget verdicts on two reads that agree
+
+A verdict on TikTok's budget (a raise past the written limits, or the day-30 or month-end call) needs at least two of these to agree:
+
+1. Store-adjusted cost per new customer from step 2. UTM-tagged orders miss view-through, in-app browser and cross-device buyers, so this is a floor, never the verdict alone.
+2. TikTok's survey share against its spend share [MEA-0045].
+3. Blended cost per new customer across all paid channels against the pre-launch baseline, other channels held steady [MEA-0040].
+4. A geo or time holdout.
+
+If the reads disagree, hold budget and run a holdout before raising or cutting.
+
 ## Checks before you hand it over
 
 - Breakage checks ran before any performance call.
@@ -106,6 +119,8 @@ Weekly: recompute the store-truth factor, check new-customer cost from `new-cust
 - Every raise is within the written step and daily limits.
 - Marginal cost was checked after the last raise.
 - Every change has a rule, a prediction and a review date.
+- Pass: test ad groups are funded to the learning bar, or a merge is proposed. Fail: many thin ad groups left alone.
+- Pass: a budget verdict cites two reads that agree. Fail: it rests on UTM-tagged orders alone.
 - Nothing outside limits went live without the owner's yes.
 
 ## Output
@@ -116,7 +131,7 @@ Weekly: recompute the store-truth factor, check new-customer cost from `new-cust
 
 **Decision log** (`tiktok-decision-log.csv`): Date, Item, Change, Prediction, Review date, Outcome, Grade.
 
-**Weekly line:** store-truth factor, survey share vs spend share, TikTok new-customer cost, 90-day value band.
+**Weekly line:** store-truth factor, survey share vs spend share, TikTok new-customer cost, blended new-customer cost vs the pre-launch baseline, 90-day value band, and whether the reads agree.
 
 ## Common mistakes
 
@@ -127,6 +142,8 @@ Weekly: recompute the store-truth factor, check new-customer cost from `new-cust
 - **Scaling into a stock-out.** Step 1 checks stock first.
 - **Tidying winners.** Step 6 leaves ads in a working ad group alone.
 - **No memory of past calls.** Step 8 grades predictions.
+- **Test money spread thin.** Step 4 merges ad groups below the learning bar.
+- **Judging TikTok on UTM orders alone.** They under-count; step 9 needs two reads that agree.
 
 ## Sources
 
@@ -143,4 +160,4 @@ Weekly: recompute the store-truth factor, check new-customer cost from `new-cust
 - MEA-0040: a new channel's effect can show elsewhere.
 - MEA-0045: survey share should track spend share.
 
-What makes this skill ours: breakages and stock are checked before any performance call; TikTok's purchases are corrected by a weekly store-truth factor from Shopify orders; raises are judged on the cost of the extra purchases, not the average; and every change carries a prediction that is graded later.
+What makes this skill ours: breakages and stock are checked before any performance call; TikTok's purchases are corrected by a weekly store-truth factor from Shopify orders; raises are judged on the cost of the extra purchases, not the average; every change carries a prediction that is graded later; and budget verdicts need two agreeing reads, never UTM orders alone.

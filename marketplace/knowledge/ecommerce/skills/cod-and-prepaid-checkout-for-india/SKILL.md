@@ -41,7 +41,7 @@ If courier data is missing, ask once; without RTO costs the COD economics cannot
 1. **Delivered economics known.** Gross profit per delivered order, forward and return shipping, COD remittance charge and RTO rate by payment method. Margin must be on delivered cost [MEA-0037]. Fail: compute it in Step 1 or stop.
 2. **COD orders are counted honestly.** On Shopify, COD is a manual payment: orders stay unpaid until marked paid after cash is collected [SET-6186]. Revenue reports that count unpaid COD orders as sales overstate the business. Fail: rebuild the numbers on delivered orders.
 3. **Cash.** COD cash arrives days after delivery through remittance; check the store can carry that wait. A prepaid push also shortens the cash cycle; note it.
-4. **Rules are shown up front.** Any COD fee or condition must appear before the payment step (on the product page or cart). Surprise charges at checkout are drip pricing under India's 2023 dark-pattern guidelines and the top stated reason buyers leave checkout [CRO-6180].
+4. **Rules are shown up front.** Any COD fee or condition must appear before the payment step (on the product page or cart). Surprise charges at checkout are drip pricing under India's 2023 dark-pattern guidelines [CRO-6606], and the E-Commerce Rules require the total price with other charges broken out [LPG-6600] and the top stated reason buyers leave checkout [CRO-6180].
 
 ## Steps
 
@@ -143,5 +143,7 @@ Weekly for 8 weeks: prepaid share, RTO rate by payment type, orders per session,
 - MEA-0037: gross margin is delivered cost.
 - SET-6186: Shopify COD is a manual payment, unpaid until collected.
 - SET-6187: payment customization apps can hide, reorder and rename payment methods.
+- [CRO-6606]: drip pricing and other checkout dark patterns.
+- [LPG-6600]: India E-Commerce Rules: total price with charges broken out, origin, grievance officer.
 
 What makes this skill ours: COD is valued per order placed after RTO and remittance costs, by cart value band; the prepaid incentive is priced against every prepaid order, not just converts; fees and conditions must show before the payment step to avoid drip pricing; and the policy is proven with switchback weeks read on delivered gross profit per session after RTO lands.

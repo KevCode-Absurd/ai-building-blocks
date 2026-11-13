@@ -11,6 +11,17 @@
     "capacity": "OPS",
     "rule": "No play is ranked until gross profit per purchase can be computed (MEA). FIN (cash) and OPS (capacity) are preconditions on every play: a plan the brand cannot pay for or staff is not a plan."
   },
+  "house_rules": [
+    "Rank in one unit. Size every option in the same unit, tied to the goal the owner named (for example contribution margin as a share of revenue, or gross profit per month), and show the working. Options sized in mixed units cannot be ranked.",
+    "Totals match. Every count, total and target in the summary matches the tables under it, and every target shows how it was worked out from the owner's numbers.",
+    "Show the after. When you change budgets, prices or offers, forecast gross profit before and after the change, not just the new split.",
+    "Test at the same time. Compare options in a split that runs at the same time, with a guardrail metric. Use before and after only when a split is impossible, in matching weeks of the same season, and say so.",
+    "Fund each test cell to its read. Run fewer cells, each with enough budget to reach its decision point (cell budget divided by target cost per purchase). If a cell cannot get there, read an earlier metric or merge cells, and say which.",
+    "Two reads before a verdict. Judge a channel on at least two reads that agree, such as blended new-customer cost, a post-purchase survey or a holdout, never on tagged orders alone.",
+    "Keep the wrong-fit buyer. When a limit causes returns, state it with a number where the buyer decides, and point them to the product that fits.",
+    "Each variant earns its own words. Ad and email variants lead with their own angle's proof; a stock price or spec line appears in no more than two of them.",
+    "Publishable means finished. Copy meant to go live has no [X], [link] or TBD; list unknown facts separately under \"To confirm\". Run tools/check-handover.mjs before you hand over."
+  ],
   "tiers": {
     "1": "Platform primary source only: Shopify, Meta, Google, Amazon Seller Central or Klaviyo documentation.",
     "2": "Large-sample research or benchmarks: Baymard, academic work, platform benchmark reports, research-grounded books.",

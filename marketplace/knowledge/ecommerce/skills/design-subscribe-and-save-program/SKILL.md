@@ -40,7 +40,7 @@ Setting up plans and the cancel flow needs draft access (level 2); turning subsc
 1. **Repeat use is real.** At least one product is used up on a cycle and is bought again by a meaningful share of buyers. Fail: no subscription; use bundles instead.
 2. **Margin after discount.** Gross profit per subscription order, after the recurring discount, shipping and fees, must stay positive and above the one-time order's gross profit per month of customer life. Computed in step 5.
 3. **Payments can recur.** US: card on file through the subscription app. India: recurring card charges need an e-mandate with extra authentication, a bank notice at least 24 hours before each charge, and the buyer can opt out any time [OFF-6307]; COD cannot be a subscription. Fail: offer a prepaid multi-month pack instead.
-4. **Legal terms.** US online subscriptions need clear terms before billing details, express consent, and a simple way to stop charges [OFF-6304]. In India, making cancellation hard is treated as a deceptive design practice; keep cancel as easy as sign-up. General practice, not a legal ruling.
+4. **Legal terms.** US online subscriptions need clear terms before billing details, express consent, and a simple way to stop charges [OFF-6304]. In India, making cancellation hard, or taking card details for auto-debit during a free period, is a subscription trap under the dark-pattern guidelines [CXP-6608]; keep cancel as easy as sign-up. General practice, not a legal ruling.
 5. **Capacity.** Recurring orders need stock planned ahead and a monthly shipping peak the warehouse can handle.
 
 ## Steps
@@ -163,5 +163,6 @@ Show subscribe and one-time as two clear options with the price per delivery, fr
 - OFF-6304: US online subscription law.
 - OFF-6306: Shopify Subscriptions self-serve features.
 - OFF-6307: India recurring card mandate rules.
+- [CXP-6608]: India subscription traps: hard cancellation, hidden auto-debit, unannounced renewals.
 
 What makes this skill ours: frequencies come from units per pack and daily use, not round numbers; the margin model runs 12 months by cohort with churn and failed payments; cancel stays as easy as sign-up under US and Indian rules; and COD-heavy Indian buyers get prepaid packs instead of subscriptions that cannot be charged.

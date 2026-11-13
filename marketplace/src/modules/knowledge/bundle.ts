@@ -183,6 +183,8 @@ export function toolkitMarkdown(persona: Persona, bundle: VerticalBundle, kit: {
   return [
     `# My ${bundle.vertical.name.toLowerCase()} toolkit`, "",
     `The ${kit.length} skills I carry as ${persona.title}. Each one delivers one finished thing. Pick the skill whose result matches the job, open only that file and follow it. When no skill fits, say so and follow the work method.`, "",
+    // House rules: lessons from blind tests that hold for every deliverable in this vertical, whichever skill runs.
+    ...(bundle.vertical.house_rules?.length ? ["## Rules for every deliverable", "", ...bundle.vertical.house_rules.map((r, i) => `${i + 1}. ${r.replace(/^([^.]+\.)/, "**$1**")}`), ""] : []),
     ...sections.flatMap(([label, g]) => g.length ? [`## ${label}`, "", ...g.map(k => line(k.item)), ""] : []),
   ].join("\n");
 }

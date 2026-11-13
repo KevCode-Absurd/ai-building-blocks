@@ -3847,5 +3847,90 @@
     },
     "strength": "platform_rule",
     "public": true
+  },
+  {
+    "id": "MCR-6602",
+    "modules": [
+      "MCR",
+      "ADC",
+      "CRO",
+      "OFF"
+    ],
+    "topics": [
+      "india",
+      "consumer law",
+      "reviews",
+      "consent",
+      "pricing"
+    ],
+    "claim": "India's E-Commerce Rules bar posing as buyers to post reviews, ads that misstate a product, pre-ticked consent boxes, manipulating prices for unfair profit, and treating buyers of the same class differently.",
+    "body": "IndiaLaw's summary of the Consumer Protection (E-Commerce) Rules, 2020 lists conduct rules that reach ads, reviews and checkout. All e-commerce entities must avoid unfair trade practices, record a buyer's consent to a purchase only when it is clearly given and not through pre-checked boxes, must not manipulate prices to make unfair profits, and must not discriminate between consumers of the same class. Sellers on marketplaces and inventory entities must not pose as consumers to post reviews, must not misrepresent the quality or features of a product, and must make sure their advertisements match the product's actual characteristics and conditions of use. An inventory entity that claims its goods are authentic is responsible for that claim. How to apply: never seed reviews from staff, agencies or friends posing as buyers; untick every add-on, insurance, donation and marketing box at checkout; check each ad claim against the product as shipped; and keep a written reason for any price difference between buyer groups, such as a published member price.",
+    "conditions": "Online selling to consumers in India, including ads that lead to an Indian store or listing.",
+    "fails_when": "The summary does not define unfair profit or the same class of consumer; the Consumer Protection Act and ASCI's code also apply to ads. Check the rule text for borderline pricing cases.",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [],
+    "asks": [
+      "Can I ask friends to review my products in India?",
+      "Are pre-ticked boxes at checkout legal in India?",
+      "Can I show different prices to different customers in India?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6600",
+    "evidence": {
+      "where": "Duties of all e-commerce entities, sellers on marketplaces and inventory entities"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "MCR-6605",
+    "modules": [
+      "MCR",
+      "CRO",
+      "LPG",
+      "OPS"
+    ],
+    "topics": [
+      "india",
+      "dark patterns",
+      "compliance audit"
+    ],
+    "claim": "From 1 January 2027, India's E-Commerce Rules require every e-commerce entity to follow the 2023 dark patterns guidelines, run a yearly self-audit, and prominently display a certificate that its platform is free of dark patterns.",
+    "body": "Poovayya & Co. write that new Rule 4(15) of the Consumer Protection (E-Commerce) (Amendment) Rules, 2026 gives statutory force to the Central Consumer Protection Authority's 2023 Guidelines for Prevention and Regulation of Dark Patterns. Every e-commerce entity must complete a yearly self-audit confirming its platform is free of such patterns and must prominently display a certificate saying so. The rules were notified on 9 September 2026 and take effect on 1 January 2027. The guidelines specify 13 patterns, including false urgency, basket sneaking, confirm shaming, forced action, subscription traps, interface interference, bait and switch, drip pricing, disguised ads, nagging, trick questions, SaaS billing and rogue malware. How to apply: before January 2027, walk every flow a buyer sees (ads, product page, cart, checkout, pop-ups, emails, subscription and cancellation) against all 13 patterns; screenshot each step as evidence; fix what fails; then publish the certificate where buyers can find it, such as the footer, and repeat the audit every year and after major checkout changes.",
+    "conditions": "E-commerce entities selling to consumers in India, including D2C stores and marketplaces.",
+    "fails_when": "This source does not say what format the audit or certificate must take or whether it is filed with the regulator. Before 2027 lawyers disputed how binding the guidelines were; treat them as binding now.",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "13 specified dark patterns",
+      "yearly self-audit",
+      "in force 1 January 2027"
+    ],
+    "asks": [
+      "Do I need a dark pattern audit for my Indian online store?",
+      "What is the dark pattern self-audit certificate in India?",
+      "Are India's dark pattern guidelines legally binding?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6602",
+    "evidence": {
+      "where": "Commentary on Rule 4(15)",
+      "quote": "a yearly self-audit confirming that its platform is free of such patterns"
+    },
+    "strength": "regulator_rule",
+    "public": true
   }
 ]

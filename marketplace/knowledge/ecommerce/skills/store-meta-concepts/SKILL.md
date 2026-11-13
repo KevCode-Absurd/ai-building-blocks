@@ -53,7 +53,7 @@ A concept is a reason to buy, aimed at one kind of buyer, for one product the st
 
 Test spend per concept is 3 times target cost per purchase at minimum, 5 times for a firm call [ADC-0039]. Concepts this month = test cap divided by that figure, rounded down. Example: $40 target, $1,200 cap gives 10 concepts at 3x, 6 at 5x. Write one or two spare.
 
-Meta documents about 50 optimisation events in 7 days to leave learning. Most stores cannot fund that per test and do not need to: daily budget = purchases wanted x expected cost per purchase / days [ADC-0066].
+Meta documents about 50 optimisation events in 7 days to leave learning; most stores cannot fund that per test. Daily budget = purchases wanted x expected cost per purchase / days [ADC-0066].
 
 Under about $100k a month, an account needs only 1 to 3 winning concepts at once [MCR-0058].
 
@@ -73,11 +73,11 @@ A concept is product x buyer group x angle x offer, with format as an optional f
 | Founder story | A real origin tied to the buyer's problem | Founder story links to the problem | The founder need not be on camera [MCR-0005] |
 | User-generated | Customer photos or video with permission, or a creator brief | Product is shown well in real use | Mine real customer content for angles the brand never used [MCR-0035] |
 
-For broad prospecting on larger accounts, most new concepts should speak to people who know the problem but not the product [MCR-0057]. A small store under its warm demand can start with product, proof and offer concepts; move up when cold frequency passes about 2 [MCR-0040].
+On larger accounts, most new concepts should speak to people who know the problem but not the product [MCR-0057]. A small store can start with product, proof and offer concepts; move up when cold frequency passes about 2 [MCR-0040].
 
 ### 4. Tie every concept to money and evidence
 
-For each concept record: product SKU, gross profit per purchase, target cost per purchase, the proof row it uses, the quote it uses, the buyer group, and the landing page. Match the destination to the ad: a curiosity ad needs a page that explains, a clear ad can go to the product page [MCR-0030]. If you test several buyer groups for one product, give each its own page leading with its benefit where traffic allows [LPG-0064].
+For each concept record: SKU, gross profit per purchase, target cost per purchase, proof row, quote, buyer group and landing page. A curiosity ad needs a page that explains; a clear ad can go to the product page [MCR-0030]. If you test several buyer groups for one product, give each its own page leading with its benefit where traffic allows [LPG-0064].
 
 For offer concepts, recompute break-even ROAS at the offer's discount depth; a 25% sitewide discount on a 60% margin product can need about 50% more ROAS to earn the same [OFF-0005]. Above about $100 order value, show savings in money; below it, a percentage usually reads bigger [OFF-0026].
 
@@ -95,6 +95,7 @@ Per concept, write:
 Rules for every line:
 
 - Hooks use customer words from the quote bank.
+- Each primary text leads with its own angle's proof (quote, label fact, mechanism or scene). A price or spec line appears in at most 2 primary texts; headlines and descriptions carry it. Repeated strings can group variants as one ad [MCR-0078].
 - Every claim, number and price must sit in claims allowed and match the landing page as captured today. Never invent a count such as "10,000+ customers".
 - No "it's not X, it's Y" lines; buyers read the pattern as AI copy [MCR-0016].
 - Price, currency, shipping threshold and COD availability exactly as on the site.
@@ -110,22 +111,23 @@ For `store-meta-ad-images`: format, the real product photo to use, the proof ele
 - Daily budget per ad set from step 1. Exclude existing customers so returning buyers do not flatter a concept.
 - Read on 7-day click, at ad set level, not ad level [ADC-0059]. Below about $1,000 a day of spend, ignore daily swings and read over at least 7 days [ADC-0064].
 - Decision at 3 times target cost per purchase: 3 or more purchases, keep; 2, allow one more target cost per purchase; 0 or 1, cut [ADC-0039].
+- Every read bar must be reachable: purchases a cell can reach = cell budget / target cost per purchase. If under the bar, read on a cheaper upstream event (cost per add to cart) or pool cells, and say so [ADC-0066].
 - High CTR without purchases is not a win [MCR-0029].
 - Before calling a winner, check Shopify: new-customer orders of that SKU in the test dates should not contradict Meta's count. Store orders decide when they disagree.
 
 ### 8. Check facts and fit
 
-Open each landing page and confirm price, offer and stock against the copy; rerun the counts; remove any line that fails.
+Confirm each landing page's price, offer and stock against the copy; rerun the counts; remove any line that fails.
 
 ## Checks before you hand it over
 
 1. Every concept names a SKU in Advertise status, its gross profit per purchase and target cost per purchase.
 2. Every concept cites one Verified proof row and one customer quote.
 3. No two concepts share the same buyer group, angle and offer.
-4. Every line is within Meta's recommended length, with the count shown.
+4. Every line is within Meta's recommended length, with the count shown. Each primary text opens on its own proof; no price or spec string sits in more than 2.
 5. Every claim, number and price is in claims allowed and matches the live page today.
 6. Offer concepts show the break-even ROAS at their discount depth.
-7. Total test spend fits the owner's test cap, and every ad set has a read date and a keep or cut rule.
+7. Total test spend fits the owner's test cap, and every ad set has a read date, a keep or cut rule and a bar its budget can reach.
 8. Nothing is set to launch; everything is a proposal or a paused draft.
 
 ## Output
@@ -134,7 +136,7 @@ Open each landing page and confirm price, offer and stock against the copy; reru
 2. **Concept table:** ID, name, product SKU, gross profit per purchase, target cost per purchase, buyer group, angle, offer, awareness, proof row, quote, format, landing page.
 3. **Copy deck:** concept ID, variant, primary text, characters, headline, characters, description, characters, CTA.
 4. **Visual briefs**, one per concept.
-5. **Test plan table:** ad set name, concepts, daily budget, start date, read date, keep or cut rule, store-side check.
+5. **Test plan table:** ad set name, concepts, daily budget, purchases reachable, read metric, start date, read date, keep or cut rule, store-side check.
 6. **To confirm:** a short list for the owner.
 
 Save it all as `campaign-brief.md`.
@@ -147,6 +149,8 @@ Save it all as `campaign-brief.md`.
 - **Sending a curiosity ad to the product page.** Step 4 matches destination to ad.
 - **Promoting a product about to sell out.** Gate 2 allows only Advertise products.
 - **Picking winners on CTR or Ads Manager alone.** Step 7 reads purchases at ad set level and checks Shopify.
+- **One price and spec line in every primary text.** Step 5 caps it at 2.
+- **A purchase bar the budget cannot reach.** Step 7 sizes it first.
 
 ## Sources
 
@@ -179,4 +183,4 @@ Meta documentation: Ads Guide text recommendations, learning phase (about 50 opt
 
 Coverage checked against the open-source meta-ads skill set (MIT), https://github.com/AI-Marketing-Hub/meta-ads.
 
-What this skill does that the open-source one did not: sets the number of concepts from the test budget and target cost per purchase instead of a fixed three; ties every concept to a product's gross profit, a verified proof point and a real customer quote, and bans invented numbers; replaces the unsupported "similarity score" rule with concept uniqueness by buyer group, angle and offer; adds a test plan with keep or cut rules checked against store orders.
+What this skill does that the open-source one did not: sizes concepts and read bars from the test budget and target cost per purchase; ties every concept to gross profit, a verified proof point and a real quote; judges uniqueness by buyer group, angle and offer; and checks keep or cut calls against store orders.

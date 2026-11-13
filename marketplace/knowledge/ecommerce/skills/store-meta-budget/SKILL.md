@@ -7,7 +7,7 @@ description: "Makes a scale, hold or cut call for every Meta campaign from the s
 
 **You get:** a scale, hold or cut call for every Meta campaign based on store profit, with new daily budgets, a numbered change list for approval and review dates.
 
-A campaign earns more budget only when the store makes money on the extra sales, has the stock to ship them and the cash to wait for payment. This skill turns those three limits and Meta's learning phase into one call per campaign.
+A campaign earns more budget only when the store profits on the extra sales and has the stock and cash to back them.
 
 ## When to use
 
@@ -55,9 +55,11 @@ Meta over- or under-credits by the store-truth factor, so translate once instead
 
 Illustrative only: store break-even ROAS 2.25 and prospecting factor 0.70 give a Meta-basis break-even of 3.21. A target of 20 per purchase becomes 14 on Meta's numbers. Use the lower retargeting factor for retargeting and catalog campaigns.
 
+Write every target as a sum from the client's numbers: order value, each cost, the factor, the result. A target set between two counts names both ends and the rule that picks the point. Never a bare percent the reader cannot rebuild.
+
 ### 2. Read the right window
 
-Judge on at least 7 days; below about 1,000 a day of spend, day-to-day swings carry almost no information [ADC-0064]. For campaigns raised recently, use a window covering the store's usual time from first click to purchase, because extra spend reaches people who buy days later [ADC-0056]. Judge creative at ad set level, not ad level [ADC-0059].
+Judge on at least 7 days; below about 1,000 a day of spend, day-to-day swings are noise [ADC-0064]. For campaigns raised recently, use a window covering the store's usual time from first click to purchase, because extra spend reaches people who buy days later [ADC-0056]. Judge creative at ad set level, not ad level [ADC-0059].
 
 ### 3. Check the learning phase
 
@@ -67,7 +69,7 @@ Meta documentation: an ad set needs about 50 optimisation events in the 7 days a
 - If the store cannot fund that for each ad set, run fewer ad sets. Many ad sets in Learning limited means the budget is spread too thin.
 - Do not edit an ad set in learning except to stop clear losses.
 
-Where cards disagree: concept tests can be read on less, for example after spending 3 times the target cost per purchase [ADC-0039] or a budget set from 20 conversions [ADC-0066]. Those rules read whether an ad sells. Meta's 50 events decides whether delivery is stable enough to scale. Use the test rules for test ad sets and Meta's rule for scale calls.
+Concept tests can be read on less: 3 times the target cost per purchase [ADC-0039] or a budget set from 20 conversions [ADC-0066]. Use those for test ad sets and Meta's 50 events for scale calls.
 
 ### 4. Make the call per campaign
 
@@ -93,7 +95,7 @@ Where cards disagree: concept tests can be read on less, for example after spend
 
 ### 5. Size each change
 
-Meta lists budget changes as significant edits but documents no fixed percentage; the "never more than 20%" rule has no Meta source [ADC-0056]. Practitioner default, test it: for ad sets near the 50-event line, raise 20 to 30% every 3 to 4 days; for campaigns well above it, larger steps are fine. After each step, recompute marginal cost per purchase and stop when it reaches break-even. Cut losses in one step; a pause longer than 7 days restarts learning.
+Meta documents no fixed raise percentage; the "never more than 20%" rule has no Meta source [ADC-0056]. Practitioner default, test it: for ad sets near the 50-event line, raise 20 to 30% every 3 to 4 days; for campaigns well above it, larger steps are fine. After each step, recompute marginal cost per purchase and stop when it reaches break-even. Cut losses in one step; a pause longer than 7 days restarts learning.
 
 ### 6. Set bid goals from the store's numbers
 
@@ -101,7 +103,7 @@ Default to highest volume. When a campaign scales into losses, add a cost per re
 
 ### 7. Budget existing customers in money, not percent
 
-Existing-customer spend = matched customers x CPM / 1,000 x monthly frequency wanted [ADC-0068]. Illustrative only: 20,000 matched customers, CPM 10, frequency 6 gives 1,200 a month. Audits often find existing customers seeing 20 to 100 ads a month when about 10 is plenty [ADC-0042]; a 30-day frequency near 30 on customers means overspend [ADC-0029]. Exclude existing customers from prospecting, and keep catalog retargeting small; its ROAS is the most inflated [ADC-0010].
+Existing-customer spend = matched customers x CPM / 1,000 x monthly frequency wanted [ADC-0068]. Illustrative only: 20,000 matched customers, CPM 10, frequency 6 gives 1,200 a month. Audits often find existing customers seeing 20 to 100 ads a month when about 10 is plenty [ADC-0042]; a 30-day frequency near 30 on customers means overspend [ADC-0029]. Exclude existing customers from prospecting, and keep catalog retargeting small; its ROAS is the most inflated [ADC-0010]. When retargeting and catalog ads both run, split the pool so they stop paying for the same people: catalog ads for product viewers who did not add to cart, retargeting for recent add to cart and checkout visitors, both excluding recent buyers (practitioner default, test it).
 
 ### 8. Split proven and test money
 
@@ -109,11 +111,15 @@ When the account is profitable, about 70% on proven ads and 30% on tests; when i
 
 ### 9. Plan sale periods ahead
 
-Put about 31 to 43% of September to December paid budget into September and October, and plan November near 1.8 times October [ADC-0048]. Recompute break-even for each sale discount with `store-meta-math`. Write scale and cut rules before the sale, using a 3-day rolling marginal read [ADC-0050]. Hold back when stock would sell out into December, which forces ads back into learning [OPS-0019]. Late December is the cheapest auction of the quarter; plan an offer for it [ADC-0043].
+Put about 31 to 43% of September to December paid budget into September and October, and plan November near 1.8 times October [ADC-0048]. Recompute break-even for each sale discount with `store-meta-math`. Write scale and cut rules before the sale, on a 3-day rolling marginal read [ADC-0050]. Do not sell out into December [OPS-0019]. Late December is the cheapest auction of the quarter; plan an offer for it [ADC-0043].
 
-### 10. Add up and hand over
+### 10. Add up, forecast and hand over
 
-Sum the new daily budgets. The total must fit the client's monthly limit and the stock and cash ceilings. Write each change as one approvable line.
+- Sum the new daily budgets; the total fits the monthly limit and the stock and cash ceilings.
+- Copy the summary's call counts and totals from the table; never write the headline first.
+- Forecast the new split, if each ad set keeps its last cost per purchase: purchases = new budget / cost per purchase; profit after ads = purchases x gross profit per purchase minus spend. Show before and after, on Meta's count and the store's.
+- When cash on delivery refusals or returns are a big cost, show gross profit per prepaid and per cash order and name the payment-mix lever: a prepaid offer in the ad and on the page, or a checkout rule hiding cash on delivery above an order value or in high-refusal areas [SET-6187]. The owner decides.
+- Write each change as one approvable line.
 
 ## Checks before you hand it over
 
@@ -123,13 +129,18 @@ Sum the new daily budgets. The total must fit the client's monthly limit and the
 - Each scale step has a marginal cost per purchase check scheduled.
 - The new total fits the monthly limit, stock and cash ceilings.
 - Existing-customer spend is set in money with the frequency stated.
+- The summary's counts and totals match the table's check line, and every target shows its working.
+- The before and after forecast totals add up.
+- Big refusal or return costs come with the payment-mix lever in money per order.
 - Nothing is marked done; every change waits for a client yes.
 
 ## Output
 
-**Summary, one screen:** total spend now and proposed, number of campaigns to scale, hold and cut, expected change in gross profit per week (estimate, with method), and the one limit that binds (profit, stock, cash or learning).
+**Summary, one screen:** total spend now and proposed, number of campaigns per call (from the table's check line), forecast change in profit after ads, and the one limit that binds (profit, stock, cash or learning).
 
-**Table "Budget calls":** Campaign, Spend last 7 days, Meta ROAS (chosen basis), Factor, Store-basis ROAS, Break-even ROAS, Target cost per purchase versus actual, Purchases per ad set last 7 days, Learning status, Days of cover versus lead time, Call, Current daily budget, New daily budget, Rule used, Review date.
+**Table "Budget calls":** Campaign, Spend last 7 days, Meta ROAS (chosen basis), Factor, Store-basis ROAS, Break-even ROAS, Target cost per purchase versus actual, Purchases per ad set last 7 days, Learning status, Days of cover versus lead time, Call, Current daily budget, New daily budget, Rule used, Review date. Last row, the check line: calls counted by type, total current and new daily budget.
+
+**Table "Forecast of the new split":** Campaign, Spend, Purchases, Profit after ads on Meta's count and on the store's count, before and after, with totals.
 
 **Change list for approval:** number, change, access needed, risk (for example "restarts learning on one ad set"), expected effect, review date.
 
@@ -141,9 +152,10 @@ Sum the new daily budgets. The total must fit the client's monthly limit and the
 - **Average cost per purchase hiding a bad last raise.** Step 4 checks marginal cost [ADC-0049].
 - **Selling out the hero SKU on full spend.** Step 4 ties spend to stock cover [ADC-0023].
 - **Too many ad sets for the budget.** Each stays in learning. Step 3 sizes ad sets to 50 events a week.
-- **Treating 20% as Meta's rule.** It is a habit, not documentation [ADC-0056]. Step 5 uses marginal cost instead.
+- **Treating 20% as Meta's rule.** Step 5 uses marginal cost instead [ADC-0056].
 - **Budgeting customers as a percent.** Step 7 sets it from list size and frequency.
 - **Cutting a profitable ad set's weak ads.** Step 4 leaves winning ad sets alone [ADC-0009].
+- **A headline that contradicts the table, or a target with no working.** Steps 1 and 10 build both from the numbers, with a profit forecast.
 
 ## Sources
 
@@ -162,8 +174,9 @@ Sum the new daily budgets. The total must fit the client's monthly limit and the
 - ADC-0059, ADC-0064: judge at ad set level, over 7 days or more.
 - FIN-0026: slow stock may run at break-even.
 - OPS-0019: do not sell out into December.
+- SET-6187: Shopify checkout rules can hide or reorder payment methods.
 - Meta documentation: learning phase of about 50 optimisation events in 7 days; significant edits.
 
 Coverage checked against the open-source meta-ads skill set (MIT), https://github.com/AI-Marketing-Hub/meta-ads.
 
-What this skill does that the open-source one did not: converts the store's break-even into Meta's reporting basis so each call rests on store profit; adds stock cover, cash and marginal cost as hard limits on scaling; replaces the fixed 20% and 3x kill rules with documented learning-phase limits and marked practitioner defaults; and budgets existing customers in money from list size and frequency.
+What this skill adds: calls on store profit in Meta's reporting basis; stock, cash and marginal cost as hard limits on scaling; learning-phase limits in place of fixed 20% and 3x rules; existing-customer spend in money; and a checked profit forecast of the new split.

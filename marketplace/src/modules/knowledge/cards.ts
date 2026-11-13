@@ -20,7 +20,7 @@ export type Tier = 1 | 2 | 3 | 4;
 export interface ModuleDef { code: string; name: string; review_due_days: number; required?: string[]; gate?: boolean; never_outranks_baseline?: boolean }
 export interface Vertical {
   schema: "ai-blocks-vertical/1"; id: string; name: string; summary: string; updated: string;
-  constraints?: Record<string, string>; tiers: Record<string, string>; modules: ModuleDef[]; aliases?: Record<string, string | null>;
+  constraints?: Record<string, string>; house_rules?: string[]; tiers: Record<string, string>; modules: ModuleDef[]; aliases?: Record<string, string | null>;
 }
 
 export interface Source {

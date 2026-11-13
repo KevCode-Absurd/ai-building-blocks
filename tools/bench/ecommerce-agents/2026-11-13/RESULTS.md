@@ -43,8 +43,8 @@ Of the agents' wins, 61 were slight and 34 clear. Of plain Opus's wins, 19 were 
 ## Why the agents lost where they lost (fix list)
 
 - **J09 growth plan, 0 to 10.** Both arms found the same break-even. Plain Opus sized every move in one unit, a share of revenue, and tied it to the board's own goal: contribution margin, about 13.6% falling to 7.8%. The agent mixed units ("per 1,000 customers", monthly, quarterly), so its moves could not be ranked, and it used an unsupported "300" screen.
-- **J06 product page, 2 to 7.** The agent left `[X]` placeholders in publishable copy and added one unsupported claim. Plain Opus also sent cash-heavy buyers to a wallet that holds more notes, which saved the sale instead of risking a return.
-- **J05 ad copy, 7 to 2.** The agent repeated the same spec string and price in every primary text. Its "30 purchases per ad" test bar was unrealistic for the budget.
+- **J06 product page, 2 to 7.** The agent's copy was publishable as written. Plain Opus left `[X]` placeholders and one unsupported claim, but it won anyway. It sent cash-heavy buyers to a wallet that holds more notes, which saved the sale instead of risking a return, and it gave a fallback if conversion dropped.
+- **J05 ad copy, 7 to 2.** The agent repeated the same spec string and price in every primary text. Judges also marked plain Opus down for a "30 purchases per ad" test bar its budget could not reach, so the skills now size the read bar to the budget.
 - **J01 Meta budget, 8 to 2.** In one version the headline count contradicted its own table, and it used a fudged target.
 - **J10 offers, 9 to 1.** The one loss compared before and after periods across December and January instead of running a 50/50 split.
 - **J02 TikTok, 9 to 1.** The one loss spread $100 per ad group, too thin to learn from, and judged day 30 on UTM-tagged orders only.

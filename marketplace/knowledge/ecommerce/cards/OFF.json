@@ -3420,5 +3420,93 @@
     },
     "strength": "platform_rule",
     "public": true
+  },
+  {
+    "id": "OFF-6603",
+    "modules": [
+      "OFF",
+      "LPG",
+      "ADC",
+      "MCR"
+    ],
+    "topics": [
+      "india",
+      "consumer law",
+      "discounts",
+      "reference price",
+      "sponsored listings"
+    ],
+    "claim": "From 1 January 2027, any announced price cut on an Indian e-commerce site must show the prior price, meaning the lowest price offered in the 30 days before the announcement, and sponsored listings must be clearly labelled.",
+    "body": "The Consumer Protection (E-Commerce) (Amendment) Rules, 2026 were notified on 9 September 2026 and take effect on 1 January 2027, according to Poovayya & Co. Under new Rule 4(13), when an e-commerce entity announces a price reduction it must show the reduced price next to a prior price, which is the lowest price at which the item was offered in the 30 days before the announcement. Rule 4(12) requires sponsored listings to be clearly and prominently identified as such, and Rule 4(11)(c) bars manipulating search results or indexes in a misleading way. The authors note the rules do not deal with newly listed products, personalised pricing or layered discounts. How to apply: keep a daily price log per SKU; before any sale, set the strikethrough or compare-at price to the lowest price charged in the previous 30 days, not a list price or MRP you rarely charged; and label paid placements on your own site or app.",
+    "conditions": "E-commerce entities and sellers announcing discounts to consumers in India from 1 January 2027.",
+    "fails_when": "New products with under 30 days of history, personalised prices and stacked discounts are not addressed. This summary is from a law firm, so check the gazette text before relying on clause numbers.",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "notified 9 September 2026",
+      "in force 1 January 2027",
+      "prior price = lowest price in preceding 30 days"
+    ],
+    "asks": [
+      "What strikethrough price can I show in a sale in India?",
+      "What is the 30-day prior price rule in India?",
+      "Do sponsored products need a label in India?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6602",
+    "evidence": {
+      "where": "Commentary on Rules 4(11)(c), 4(12) and 4(13)",
+      "quote": "the lowest price at which the good or service was offered"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "OFF-6607",
+    "modules": [
+      "OFF",
+      "ADC",
+      "MCR",
+      "EML"
+    ],
+    "topics": [
+      "india",
+      "dark patterns",
+      "urgency",
+      "offers",
+      "ad disclosure"
+    ],
+    "claim": "India's dark pattern guidelines cover false scarcity or popularity claims, advertising one product then pushing a pricier one, shaming decline buttons, ads made to look like user posts or news, and repeated unpermitted prompts.",
+    "body": "Khaitan & Co.'s summary of the CCPA's 2023 dark patterns guidelines describes five patterns that sit in offers, ads and pop-ups. False urgency is creating a false sense of popularity or scarcity to pressure a purchase, such as saying the chosen item is the last one in stock. Bait and switch is advertising one product to draw a buyer in and then delivering a different, often pricier one, for example showing an item as available, then saying it is out of stock and offering a costlier substitute. Confirm shaming uses fear, shame or guilt to push a choice, such as a decline button that reads 'I will stay unsecured'. Disguised advertisement is masking ads as user-generated content or news articles; the seller or advertiser is responsible for the disclosure, and the 2022 misleading advertisement guidelines also apply. Nagging is repeatedly interrupting users with requests for commercial gain, such as prompts to enable notifications or accept cookies, unless the user has allowed them. How to apply: tie every stock or 'X people viewing' counter to live data; only run a countdown when the offer really ends at zero and does not reset; keep advertised items in stock or pause the ad; write neutral decline text; label creator and advertorial content as ads; and cap repeat pop-ups once a user says no.",
+    "conditions": "Ads, landing pages, apps and websites selling to consumers in India.",
+    "fails_when": "The summary gives no rule on countdown timers by name; the timer advice applies the false urgency definition. ASCI's ad rules on the same patterns also apply. This is a law-firm summary.",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [],
+    "asks": [
+      "Is an 'only 2 left' message legal in India?",
+      "Are countdown timers allowed on Indian sales pages?",
+      "Do influencer posts need an ad label under India's dark pattern rules?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6603",
+    "evidence": {
+      "where": "Summary of patterns 1, 3, 7, 9 and 10",
+      "quote": "I will stay unsecured"
+    },
+    "strength": "regulator_rule",
+    "public": true
   }
 ]

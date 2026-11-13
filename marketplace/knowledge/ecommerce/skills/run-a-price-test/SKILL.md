@@ -68,7 +68,7 @@ Default to A or D; both keep one price per product at any time. Use B when the c
 
 ### 4. Size it
 
-- For a split (design A): about 1,000 conversions per variant are needed to detect a 10% lift, 260 for 20% and 120 for 30% [CRO-0005]. Revenue or profit per visitor needs far more traffic than conversion rate, roughly six times [CRO-0014]. If the store cannot reach the count, test a bigger difference or use design B or D.
+- For a split (design A): about 1,600 conversions per variant are needed to detect a 10% lift, 420 for 20% and 190 for 30% at a 2% baseline [CRO-0005]. Revenue or profit per visitor needs far more traffic than conversion rate, roughly six times [CRO-0014]. If the store cannot reach the count, test a bigger difference or use design B or D.
 - For a timed switch (design B): at least two full weeks per period, so each covers whole weekly cycles [CRO-0015], and three periods (P, P2, P) so a trend is not mistaken for a price effect.
 - Write the end date before launch. Do not stop the first time the result looks good; peeking can push false winners from 5% to about 26% [CRO-0017].
 

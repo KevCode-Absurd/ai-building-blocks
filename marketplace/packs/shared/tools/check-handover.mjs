@@ -4,7 +4,9 @@
 //   node tools/check-handover.mjs <deliverable> [plain-answer] [--one-page]
 //
 // 1. Leaks: anything internal or unfinished a reader would see, such as working file names, notes to self,
-//    placeholders, TBD or UNKNOWN. For HTML it reads the text a visitor sees and flags elements that look like notes.
+//    placeholders ([X], [link], TBD, UNKNOWN). For HTML it reads the text a visitor sees and flags elements that look
+//    like notes. It also notes (without failing) a run of 6+ words repeated on 3+ lines, such as one stock line in
+//    every ad variant.
 // 2. Length: the words a reader sees, against the plain answer written from the brief alone. Up to 1.3 times is the
 //    aim; over 1.6 times fails unless the brief asked for more. --one-page fails over about 450 words.
 // --profile <family> uses the shipped v3 family aim and ceiling. Legacy calls retain their old limits.
@@ -54,6 +56,8 @@ const LEAKS = [
   [/\b(?:TBD|TODO|UNKNOWN|UNCONFIRMED)\b/, "an unfinished marker"],
   [/\[(?:insert|fill|your|add)\b[^\]]*\]/i, "a fill-in blank"],
   [/\bX{3,}\b|\b_{4,}\b/, "a blank to fill"],
+  [/(?<!^\s*[-*]\s*)\[(?:X{1,2}|N|#|\?+|\.{3}|…)\](?!\()/, "a blank to fill"],
+  [/\[(?:number|amount|price|link|url|name|date|brand|product|code|percent|count)\b[^\]]{0,30}\](?!\()/i, "a fill-in blank"],
   [/\b(?:internal notes?|notes? (?:to self|for (?:the )?(?:team|reviewer|editor))|not for publication|do not publish|for internal use)\b/i, "a note not meant for the reader"],
   [/\b(?:the spec sheet|acceptance tests?|SAME-CONTEXT|the fresh reviewer|the yardstick|candidate [A-D]\b|context\/)/i, "method words"],
 ];
@@ -68,6 +72,26 @@ text.split(/\r?\n/).forEach((line, i) => {
   }
 });
 
+// Repetition: the same run of 6 or more words in 3 or more separate lines (variants that all lean on one stock line).
+// A note, not a failure: a repeated legal line can be right, a repeated price or spec string in every variant rarely is.
+const notes = [];
+const seen = new Map();
+text.split(/\r?\n/).forEach((line, i) => {
+  const w = line.replace(/[|*_#>`]/g, " ").toLowerCase().match(/[\p{L}\p{N}₹$%.,']+/gu) ?? [];
+  const mine = new Set();
+  for (let k = 0; k + 6 <= w.length; k++) mine.add(w.slice(k, k + 6).join(" "));
+  for (const g of mine) (seen.get(g) ?? seen.set(g, []).get(g)).push(i + 1);
+});
+const repeated = [...seen.entries()].filter(([, lines]) => lines.length >= 3)
+  .filter(([g], _, all) => !all.some(([h, l]) => h !== g && h.includes(g) && l.length >= 3));
+const reported = new Set();
+for (const [g, lines] of repeated.sort((a, b) => b[1].length - a[1].length)) {
+  const key = lines.join(",");
+  if (reported.has(key)) continue; reported.add(key);
+  if (reported.size > 5) break;
+  notes.push(`"${g}" repeats on ${lines.length} lines (${lines.slice(0, 6).join(", ")}): give each variant its own words or proof unless the repeat is required`);
+}
+
 const n = words(text);
 let lengthNote = `${n} words`;
 if (plain) {
@@ -81,6 +105,7 @@ if (onePage && n > 450) problems.push(`length: ${n} words is more than one page 
 
 console.log(`Hand-over check: ${lengthNote}.`);
 if (requestedTemplate) console.log(`Requested-template mode: ${acceptedTemplateFields} intentional field matches accepted; field completion is not claimed.`);
+if (notes.length) console.log(`Worth a look (does not fail):\n- ${notes.join("\n- ")}`);
 if (problems.length) {
   console.log(`${problems.length} to fix:\n- ${problems.join("\n- ")}`);
   process.exitCode = 1;

@@ -40,7 +40,7 @@ If there is no ticket export, take the last 300 emails and chats by hand and tag
 1. **Policy is settled.** Each reply quotes a policy page that matches what the warehouse really does. If the page and practice differ, stop that reply and send the gap to `write-store-policy-pages`.
 2. **Offer limits are costed.** A no-approval budget per ticket needs gross profit per order and repeat value. Fail: set offers to "ask the owner" until the numbers exist.
 3. **Payment and data safety.** No reply asks for full card numbers, UPI PINs, OTPs or passwords. No reply shares another customer's data.
-4. **Legal timing rules.** US orders: a late shipment needs a delay notice and the option to cancel with a prompt refund (FTC mail order rule; general practice, not a legal ruling). India: refund timelines and grievance contact must match the published policy.
+4. **Legal timing rules.** US orders: a late shipment needs a delay notice and the option to cancel with a prompt refund (FTC mail order rule; general practice, not a legal ruling). India: refund timelines and grievance contact must match the published policy; the grievance officer acknowledges within 48 hours and resolves within one month [OPS-6601].
 
 ## Steps
 
@@ -131,5 +131,6 @@ Run each macro against five real past tickets of its reason. If any needs heavy 
 - CXP-0015: fast refunds keep the buyer's intent.
 - CXP-0018: returnless refunds for low-value items, fraud rate.
 - OPS-0009: no-approval budget per incident.
+- [OPS-6601]: India grievance officer: acknowledge in 48 hours, resolve in one month.
 
 What makes this skill ours: macros are ranked by the store's own ticket count times handling time; every reply opens with the facts to check before promising; offer caps come from gross profit per order; and India COD refunds, language and GST invoice cases are built in.

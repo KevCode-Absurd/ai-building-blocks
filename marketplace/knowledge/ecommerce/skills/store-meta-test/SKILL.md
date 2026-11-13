@@ -62,7 +62,7 @@ For a two-cell test at 95% confidence and 80% power, each cell needs about 16 / 
 | 20% | about 400 | 800 | 200 |
 | 10% | about 1,600 | 3,200 | 800 |
 
-Cards disagree here. [CRO-0005] also lists shorter counts (120, 260 and 1,000 conversions for 30, 20 and 10% lifts), but its own visitor table works out to about 420 purchases per cell at a 20% lift. The formula wins because it matches that table; use the larger numbers.
+These match [CRO-0005] at a 2% baseline (about 190, 420 and 1,600 conversions per variant for 30, 20 and 10% lifts). A rule of 1,000 conversions per cell only powers lifts of about 13% or more [CRO-0024].
 
 - Weeks needed = both cells / weekly purchases you can route into the test.
 - Test budget = both cells x expected cost per purchase [ADC-0066].
@@ -144,6 +144,7 @@ File: `meta-test-plan-<name>.md`.
 
 - [CRO-0001]: small traffic cannot run weekly split tests.
 - [CRO-0005]: sample size per variant by minimum lift.
+- [CRO-0024]: 1,000 conversions per cell only powers lifts of about 13% or more.
 - [CRO-0007]: lopsided splits make results untrustworthy.
 - [CRO-0009]: never test prices on the same product.
 - [CRO-0010]: extra metrics add false positives.

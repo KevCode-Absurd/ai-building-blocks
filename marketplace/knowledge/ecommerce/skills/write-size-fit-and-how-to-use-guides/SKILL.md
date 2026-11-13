@@ -1,6 +1,6 @@
 ---
 name: write-size-fit-and-how-to-use-guides
-description: "Writes size and fit guides for apparel, footwear and fitted goods, or how-to-use guides for products that need setup, dosing or a routine, built from the store's return reasons, exchange data, support tickets and reviews. Covers measurements in two units, how to measure, fit notes per product, model size worn, 'between sizes' advice, and for how-to guides the steps, first-use expectations and common mistakes, each placed beside the size picker, on the product page and in the post-purchase email. Sets a baseline return and ticket rate so the effect can be read. Use when size or misuse drives returns, exchanges or tickets."
+description: "Writes size and fit guides for apparel, footwear and fitted goods, or how-to-use guides for products that need setup, dosing or a routine, built from the store's return reasons, exchange data, support tickets and reviews. Covers measurements in two units, how to measure, fit notes per product, model size worn, 'between sizes' advice, and for how-to guides the steps, first-use expectations and common mistakes, each placed beside the size picker, on the product page and in the post-purchase email. Sets a baseline return and ticket rate so the effect can be read. Use when size, capacity or misuse drives returns, exchanges or tickets."
 ---
 
 # Size, fit and how-to-use guides
@@ -12,6 +12,7 @@ description: "Writes size and fit guides for apparel, footwear and fitted goods,
 - "Too small", "too big" or "did not fit" leads the return or exchange reasons.
 - Tickets ask which size to pick, or how to set up, use, dose or care for the product.
 - Reviews say "it didn't work" in ways that point to wrong use.
+- Returns say the product holds, covers or fits less than the buyer expected (a wallet, bag, case or container).
 - A new product type or size range is launching.
 
 ## Not for
@@ -48,17 +49,18 @@ If real measurements are missing, the guide cannot be written for that product; 
 2. **Read the exchange pattern.** For fit returns, note which way buyers exchange (size up or down) per product. If most exchanges on a product go one size up, that product runs small; write that in its fit note.
 3. **Write the size table.** Follow the large-sample sizing checklist: conventional sizes (S, M, L), numeric sizes where used, measurements in both centimetres and inches, international conversions where the store sells abroad, and a table per product type, ideally per product [CXP-6161]. In India add the common size labels buyers know (for example UK sizes for footwear) only if they map correctly.
 4. **Write how to measure.** Three to five steps with a simple diagram brief: what to measure, with what, and how to read it. Add a "compare with a piece you own" method, which buyers find easier than body measuring (practitioner default, test it).
-5. **Write per-product fit notes.** One to two lines: "Runs small: most buyers size up", "Relaxed fit: take your usual size", "Fabric has no stretch". Add model height, measurements and size worn next to on-model photos [CXP-6161]. Add a between-sizes rule and say which way to go and why.
+5. **Write per-product fit notes.** One to two lines: "Runs small: most buyers size up", "Relaxed fit: take your usual size", "Fabric has no stretch". Add model height, measurements and size worn next to on-model photos [CXP-6161]. Add a between-sizes rule and say which way to go and why. For "less than expected" returns, the fit note states the limit as a measured number ("fits a 14-inch laptop"), names who it is not for and links the better-fit product in the range; `write-product-page-copy` reuses it in the details and FAQ. An unmeasured limit goes on the To confirm list, never as a bracket on the page.
 6. **Write the how-to guide** (for products that need use instructions). Steps: what is in the box, first setup, first use, routine, care, storage. Then "what to expect": how long until results, what feels normal at first. Products without an instant effect do better with an early frame that sets the timeline [CXP-0003]. Then "mistakes to avoid" from the misuse returns and tickets, and "when to contact us".
 7. **Place each block.** Size guide link right next to the size picker, opening over the page and closing back to it with the Back button, with a support or chat link inside the guide [CXP-6161]. Fit note under the product title or above the size picker. How-to summary on the product page; full guide on a help page; the steps also go in the delivery or post-purchase email, handed to `write-post-purchase-emails`. Dead clicks on size options and quick backs from product pages often mean missing size information [CRO-0023].
 8. **Collect fit data going forward.** Ask the review app to collect a fit rating (runs small, true to size, runs large) and show the summary; a "what almost stopped you" survey catches the next doubts [LPG-0042]. Real buyer photos that show fit and claims carry weight once a product has its first reviews [LPG-0062].
 9. **India and US notes.** India: size and misuse issues also drive COD refusals and RTO; add the fit note and size guide link to the WhatsApp or SMS order confirmation for COD orders where the buyer opted in, and offer a Hindi or regional version of how-to steps if tickets arrive in those languages. US: keep measurements in inches first and centimetres second.
-10. **Set the measure.** Record, per product, size or misuse returns per 100 orders, exchanges per 100 orders and related tickets per 100 orders for the last 90 days. Read again after 60 to 90 days of orders. Poor return experiences hurt repeat purchase [CXP-0007], so also watch repeat rate among buyers who exchanged.
+10. **Set the measure.** Record, per product, size or misuse returns per 100 orders, exchanges per 100 orders and related tickets per 100 orders for the last 90 days. Read again after 60 to 90 days of orders. Poor return experiences hurt repeat purchase [CXP-0007], so also watch repeat rate among buyers who exchanged. Guardrail: add-to-cart rate. If it drops after a limit line goes up, move the line below the fold before cutting it (practitioner default, test it).
 
 ## Checks before you hand it over
 
 - Every size number comes from measured products, with the measurement date.
 - Each top return product has a fit note based on its exchange direction.
+- Each "less than expected" product shows its limit as a number, with a better-fit link.
 - Measurements show in both centimetres and inches.
 - The size guide link sits next to the size picker and closes back to the product.
 - How-to steps match the maker's instructions and warnings.
@@ -91,6 +93,7 @@ If real measurements are missing, the guide cannot be written for that product; 
 - **Size guide buried in a tab.** Step 7 puts it next to the picker.
 - **How-to guides only on a help page.** Step 7 also sends steps after purchase.
 - **No baseline.** Step 10 records rates before the change.
+- **"Holds a few" instead of a number.** Step 5 measures the limit and points the wrong buyer to a better-fit product.
 - **Unsafe paraphrase of instructions.** Gate 3 keeps the maker's warnings.
 
 ## Sources

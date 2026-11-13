@@ -26,12 +26,12 @@ description: "Gets a store from no TikTok ads to a first sales campaign ready fo
 Required:
 
 1. **Allowed cost per purchase** (break-even and target) from `store-meta-math` or `set-ad-budget-from-profit-target`.
-2. **Shopify order export**, last 90 days, to check new orders against TikTok during the test.
+2. **Shopify order export**, last 90 days, to check new orders against TikTok and set the pre-launch baseline: new customers a day and blended cost per new customer across all paid channels.
 3. **Videos**: 3 to 6 vertical 9:16 videos with usage rights, ideally in different styles (demo, problem and fix, customer story).
 4. **Target country and landing page**: the page that converts best on other channels.
 5. **The owner's monthly cap** for TikTok.
 
-Optional: a customer email list (for an exclusion audience, uploaded by the owner), organic TikTok posts with views, competitor ads from the TikTok Creative Center.
+Optional: a customer email list (for an exclusion audience, uploaded by the owner), a post-purchase "how did you hear about us" question with TikTok as an answer (add it before launch if missing), organic TikTok posts with views, competitor ads from the TikTok Creative Center.
 
 Access: the owner creates the Business Center, ad account and payment method and signs in to install the TikTok app on Shopify; the agent never handles passwords or card numbers. The agent drafts the campaign at level 2. Turning it on, and every budget raise, needs the owner's yes.
 
@@ -39,7 +39,7 @@ Access: the owner creates the Business Center, ad account and payment method and
 
 1. **Buyers can be reached.** TikTok has been blocked in India since 2020, so an India store can only use TikTok ads to sell to countries it ships to. Fail for India-only stores: use Instagram Reels or YouTube Shorts instead.
 2. **Break-even is known.** Fail: compute it first; no budget line can be set.
-3. **Budget can learn.** The ad group needs about two times the allowed cost per purchase a day, with TikTok's floor of $20 a day, to have a chance of about 25 purchases in the 7-day learning phase [ADC-0063]. Fail: if that is too much, optimise to add to cart and say the read is weaker, or wait.
+3. **Budget can learn.** At least one ad group can be funded to its learning bar (step 3), and never below about two times the allowed cost per purchase a day or TikTok's $20 floor [ADC-0063]. Fail: optimise to add to cart and say the read is weaker, or wait.
 4. **Native video exists.** Fail: brief creators with `write-tiktok-ad-scripts` first; resized Meta ads with small text are not enough.
 5. **Tracking passes** the launch test in step 2. Fail: do not launch.
 
@@ -61,10 +61,12 @@ Install the pixel and Events API through the official TikTok app for Shopify wit
 
 | Daily budget the store can fund | Structure |
 |---|---|
-| Under about $100 | One campaign, one broad ad group, 3 to 5 ads |
-| About $100 or more | One campaign, two ad groups (broad and one test audience), the same 3 ads in each |
+| Under two learning bars (below) | One campaign, one broad ad group, 3 to 5 ads |
+| Two learning bars or more | One campaign, only as many ad groups as the budget funds to the bar (broad first, then one test audience), 3 to 6 ads each |
 
-The second row follows one agency's starter test: three styles across two audiences, at least $50 a day per ad group for 3 to 4 days, roughly $300 to $400 [ADC-0036]. Start with a manual campaign so results can be read per ad; try TikTok's automated campaign type later as a side-by-side test once purchases are steady (practitioner default, test it).
+The second row adapts one agency's starter test of three styles across two audiences [ADC-0036]; its $50 a day per ad group is a floor, not the bar. Start with a manual campaign so results can be read per ad; try TikTok's automated campaign type later as a side-by-side test once purchases are steady (practitioner default, test it).
+
+**Fund fewer ad groups fully, not many thinly.** Learning settles after about 25 results in 7 days [ADC-0063], so the learning bar per ad group = 25 x allowed cost per purchase / 7, about 3.6 times the allowed cost a day. Each ad also needs about 3 times the allowed cost to be judged [ADC-0039], so check: ads in the group x 3 x allowed cost / days you will wait. Fund each test ad group at the larger figure. Number of ad groups = daily test budget / that figure, rounded down; extra concepts go in as ads inside those groups, not as new groups. Write this arithmetic in the plan. Illustrative only: at an allowed cost of 40, the bar is about 143 a day, so 700 a day funds 4 ad groups, not 7 at 100. Below one bar, run a single ad group and say the read will be slower.
 
 ### 4. Draft the settings
 
@@ -72,7 +74,7 @@ The second row follows one agency's starter test: three styles across two audien
 - **Targeting:** country, a sensible age floor, everything else broad. If interests are used, two or three parent categories at most; stacking 15 interests raised cost in one fashion account [ADC-0035].
 - **Exclusions:** existing customers, from a customer file the owner uploads.
 - **Placement:** TikTok only to start, so results are not mixed with other apps.
-- **Budget:** about two times allowed cost per purchase per ad group per day, above the $20 floor [ADC-0063]. Lowest-cost bidding first; cost caps only after the account has steady purchases.
+- **Budget:** each ad group at its learning bar from step 3, never below two times allowed cost per purchase or the $20 floor [ADC-0063]. Lowest-cost bidding first; cost caps only after the account has steady purchases.
 - **Attribution:** keep the default window, but judge on store orders.
 - **Schedule:** run all day; no dayparting.
 - **Naming:** product, angle, format, date, so results sort later.
@@ -102,17 +104,25 @@ List every setting, the daily and monthly cap, the stop line, and the start date
 | 8 to 13 | Daily review starts via `tiktok-ads-daily-review-and-scale` | Add 1 to 2 new ads if fewer than 3 are spending |
 | 14 | Decision | Continue and scale, fix creative, or stop |
 
-Day 14 decision: continue when store-side cost per new customer is at or under the allowance; fix creative when clicks are cheap but purchases are not; stop when cost is above 1.5 times the allowance with no trend down (practitioner default, test it). Watch Meta during the test too: a new channel's effect can show up in another platform's numbers [MEA-0040].
+**The verdict needs two reads that agree.** UTM-tagged store orders under-report TikTok: they miss view-through, in-app browser and cross-device buyers. Treat them as a floor, never the verdict alone. Use at least two of:
+
+1. Store orders tagged TikTok (UTM or ttclid): cost per new customer.
+2. Post-purchase survey: TikTok's share of answers against its share of paid spend [MEA-0045].
+3. Blended cost per new customer across all paid channels against the pre-launch baseline, other channels held steady. A new channel's effect can show up in Meta's numbers [MEA-0040].
+4. A geo or time holdout, when budget allows.
+
+Day 14 decision (and any later one, such as day 30): continue when two reads agree cost per new customer is at or under the allowance; fix creative when clicks are cheap but purchases are not; stop when the reads agree cost is above 1.5 times the allowance with no trend down (practitioner default, test it). If the reads disagree, hold budget and run a holdout before scaling or stopping.
 
 ## Checks before you hand it over
 
 - Time zone and currency match the store.
 - A real test order reached TikTok once with the right value.
-- Ad group budget is at least $20 and near two times the allowed cost per purchase.
+- Pass: each test ad group is funded to its learning bar, with the arithmetic shown. Fail: many ad groups at two times the allowed cost or less.
 - Targeting is broad or uses three interests at most.
 - Every ad uses licensed sound and has AI labels where needed.
 - Existing customers are excluded.
 - The 14-day sheet has a day-14 rule written in money.
+- Pass: the verdict needs two reads that agree. Fail: it rests on UTM-tagged orders alone.
 - Nothing went live without the owner's yes.
 
 ## Output
@@ -123,18 +133,18 @@ Day 14 decision: continue when store-side cost per new customer is at or under t
 
 1. Account checklist: Item, Done by, Status.
 2. Tracking pass: Test order, Value in Shopify, Value in TikTok, Count, Pass or fail.
-3. Campaign settings table: Level (campaign, ad group, ad), Setting, Value, Reason.
+3. Campaign settings table: Level (campaign, ad group, ad), Setting, Value, Reason. Under it, the budget line: allowed cost, learning bar, ad groups funded.
 4. Ad list: Ad name, Angle, Style, Length, Sound source, AI label yes or no, Landing URL with UTM.
-5. 14-day sheet (`tiktok-first-14-days.csv`): Day, Spend, Impressions, CTR, Watch time, CPM, Add to cart, TikTok purchases, Store new customers, Cost per new customer, Action taken, Approved by.
+5. 14-day sheet (`tiktok-first-14-days.csv`): Day, Spend, Impressions, CTR, Watch time, CPM, Add to cart, TikTok purchases, Store new customers, Cost per new customer, Survey share, Blended cost per new customer, Action taken, Approved by.
 
 ## Common mistakes
 
-- **Budget too thin to learn.** Gate 3 sizes it from allowed cost per purchase.
+- **Test money spread thin.** Six ad groups at two times cost learn nothing. Step 3 funds fewer groups to the learning bar.
 - **Copying the agency's $30 purchase line.** Step 7 uses the store's own break-even.
 - **Stacked interests.** Step 4 keeps targeting broad.
 - **Editing during learning.** Step 7 keeps days 4 to 7 hands off.
 - **App sounds in ads.** Step 5 uses the commercial library.
-- **Trusting TikTok's purchase count alone.** Day 7 compares it with store orders.
+- **Trusting one count.** TikTok over-claims and UTM orders under-count. Step 7 needs two reads that agree.
 
 ## Sources
 
@@ -146,6 +156,7 @@ Day 14 decision: continue when store-side cost per new customer is at or under t
 - MCR-0061: spoken calls to action on TikTok are contested.
 - MCR-6021: US ban on fake testimonials, including AI avatars.
 - MEA-0040: a new channel's effect can show in other platforms.
+- MEA-0045: survey share should track spend share.
 - ORG-0035: outlier organic posts belong in ads.
 
-What makes this skill ours: the budget comes from the store's own allowed cost per purchase instead of TikTok's suggestion or an agency's fixed number; launch waits for one real order to reach TikTok exactly once; India stores are told plainly that TikTok cannot reach Indian buyers; and day 14 is decided on store-side new customers with licensed sound and AI labels checked before approval.
+What makes this skill ours: the budget comes from the store's own allowed cost per purchase instead of TikTok's suggestion or an agency's fixed number; launch waits for one real order to reach TikTok exactly once; India stores are told plainly that TikTok cannot reach Indian buyers; test money goes to fewer ad groups funded to learn; and day 14 is decided on two agreeing reads of new customers, never UTM orders alone.

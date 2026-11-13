@@ -1,18 +1,18 @@
 ---
 name: store-90-day-growth-plan
-description: "A 90-day growth plan for a store: the one constraint holding growth back, found in a fixed order (tracking, unit economics, conversion, traffic, retention, stock and cash), the three biggest bets against it with an owner, a budget by month that fits the cash plan, a low, likely and high profit range for each, and 13 weekly checkpoints with continue, change or stop lines. Gated on gross profit per order, cash runway and team capacity, so nothing is planned that the store cannot pay for or staff. Use at the start of a quarter, after an audit, when growth has stalled, or when the owner has too many ideas and needs three."
+description: "A 90-day growth plan for a store: the one constraint holding growth back, found in a fixed order (tracking, unit economics, conversion, traffic, retention, stock and cash), the three biggest bets against it, each sized in the owner's goal metric and money per month, with an owner, a budget by month that fits the cash plan, a low, likely and high profit range for each, and 13 weekly checkpoints with continue, change or stop lines. Gated on gross profit per order, cash runway and team capacity, so nothing is planned that the store cannot pay for or staff. Use at the start of a quarter, after an audit, when growth has stalled, or when the owner has too many ideas and needs three."
 ---
 
 # Ninety-day growth plan
 
-**You get:** a one-page plan (baseline, the constraint, three bets, owners, budget, what success looks like at day 90) plus a bets table with profit ranges, a monthly budget against the cash plan, and a 13-week checkpoint grid with the line that decides continue, change or stop for each bet.
+**You get:** a one-page plan (baseline, the constraint, three bets, owners, budget, what success looks like at day 90) plus a bets table with profit ranges, a monthly budget against the cash plan, a 13-week grid with each bet's continue, change or stop line, and a weekly scorecard.
 
 ## When to use
 
 - A new quarter starts and the team needs one plan, not twelve.
-- An audit produced a long list of fixes and the owner must choose.
+- An audit produced a long list and the owner must choose.
 - Growth stalled and nobody agrees why.
-- The store is about to raise ad spend and wants a plan that cash and the team can carry.
+- Ad spend is about to rise and the plan must fit cash and the team.
 
 ## Not for
 
@@ -34,7 +34,7 @@ Required (read access):
 
 Optional: cohort repeat data, stock and PO schedule, sessions and conversion by device, last quarter's plan and results.
 
-If gross profit per order is missing, the plan's first bet is to build it; nothing else is ranked [MEA-0026]. This skill needs read access only. Each bet's actions run at the access level the client sets, and every spend, price change or customer message is approved by the client.
+If gross profit per order is missing, the plan's first bet is to build it; nothing else is ranked [MEA-0026]. This skill needs read access only; every spend, price change or customer message is approved by the client.
 
 ## Before you start: the gates
 
@@ -45,9 +45,11 @@ If gross profit per order is missing, the plan's first bet is to build it; nothi
 
 ## Steps
 
-### 1. Write the baseline
+### 1. Name the goal metric, then write the baseline
 
-From the last 90 days: net sales, gross profit, ad spend, contribution after ads, new customers, cost per new customer, first-order gross profit divided by cost per new customer, repeat rate at 90 days, cash. Split the P&L into first-time and returning customers; returning profit can hide a loss on new customers [MEA-0055].
+Name the owner's goal metric in their words (contribution margin as a share of revenue, cash at day 90, new customers under a cost cap); if none, use contribution after ads as a share of net sales [MEA-0030]. Compute it now and a year ago, writing out the sum and its assumptions. Then work out what each lever is worth in it: points per $10 of cost per new customer, per $1 of first-order value, per point of returns cost. Step 4 sizes bets with these rates.
+
+Then, from the last 90 days: net sales, gross profit, ad spend, contribution after ads, new customers, cost per new customer, first-order gross profit divided by cost per new customer, repeat rate at 90 days, cash. Split the P&L into first-time and returning customers; returning profit can hide a loss on new customers [MEA-0055].
 
 Read first-order gross profit over cost per new customer in bands: under 1 loses money, 1 to 2 needs proven repeat, 2 to 3 is the zone to grow, above 3 means the store is probably under-spending [MEA-0032] [MEA-0024].
 
@@ -57,12 +59,12 @@ Check each and stop at the first that fails:
 
 1. **Tracking and data:** wrong data makes every other decision wrong; fix data first, structure next, creative third [ADC-0028].
 2. **Unit economics:** first-order contribution below cost per new customer with weak repeat means stop scaling and fix margin, price or offer [MEA-0026].
-3. **Conversion and order value:** conversion rate (as a percent) times order value under about 300 means paid traffic rarely scales [MEA-0047]. Fix the page, offer or price.
+3. **Conversion and order value:** conversion rate (as a percent) times order value is revenue per 100 visitors. Compare it with what 100 clicks cost at the store's own cost per click; under about 300 rarely scales at about $3 a click [MEA-0047]. Fix the page, offer or price.
 4. **Traffic and creative:** profitable but not enough new buyers.
 5. **Retention:** good first orders, weak repeat.
 6. **Stock and cash:** demand exists but stock or cash caps it.
 
-Write the constraint in one sentence with the number that proves it.
+Write the constraint in one sentence with the number that proves it. Any screen or rule of thumb that decides something goes into the plan with its sum and its source (a card, platform documentation, or "practitioner default, test it"). If you cannot show both, drop it.
 
 ### 3. Pick three bets
 
@@ -72,9 +74,11 @@ From the backlog, pick the three with the highest expected profit that work on t
 - Bets that touch the same result (an ad, a page and an offer for one product) are one initiative with one baseline; do not add separate guessed lifts.
 - Prefer bets that can be judged inside 90 days; some gains only show in cash after 60 to 180 days [FIN-0029], so say what the day-90 read can and cannot prove.
 
-### 4. Size each bet
+### 4. Size each bet in one unit
 
-For each bet: what changes, expected effect on the constraint's number, profit range per month (low, likely, high, built from the store's own gross profit per order and volumes), cost, cash needed by month, hours, owner (agent and the person who approves), and whether it is tested or shipped. Under about 300 orders a month most changes are shipped and watched rather than split tested [CRO-0011].
+Size every bet in the goal metric's unit and in money per month, using step 1's rates, sum written out. Never mix units (per 1,000 customers, per quarter, "high"). If volumes are missing, a share of revenue still works; state the volume behind the money figure. Rank by goal-metric impact divided by effort, so the order is a sort, not a judgement. Overlapping bets are marked "do not add".
+
+Also give: what changes, expected effect on the constraint's number, profit range per month (low, likely, high, built from the store's own gross profit per order and volumes), cost, cash needed by month, hours, owner (agent and the person who approves), and whether it is tested or shipped. Under about 300 orders a month most changes are shipped and watched rather than split tested [CRO-0011].
 
 Measurement must match the store's size: smaller stores use 7-day click and a new-customer dashboard; lift tests come later [MEA-0041].
 
@@ -86,12 +90,12 @@ Add each bet's spend and cash by month to the cash plan. Ad budgets come from th
 
 For each bet, write:
 
-- **Leading signal** (weekly): for example add-to-cart rate on the new page, cost per new customer on the new offer, reply rate on win-back.
+- **Leading signal** (weekly): for example cost per new customer on the new offer.
 - **Week 2 line:** is it live and working as built?
 - **Week 4 and week 8 lines:** continue if the signal is at or above the line; change if below but moving; stop if below and flat.
 - **Day 90 read:** the result against the low, likely and high range.
 
-Put all bets on one 13-week grid, read in the weekly review.
+Put all bets on one 13-week grid. Then write the weekly scorecard, goal metric first: each line has its baseline (or "set in week 1"), day-90 target, owner, and the threshold that triggers action.
 
 ### 7. India and US notes
 
@@ -100,40 +104,46 @@ Put all bets on one 13-week grid, read in the weekly review.
 
 ### 8. Approve and start
 
-The client approves the plan, budget caps and owners. Log each bet's approval date. Nothing starts spending or goes live before that.
+The client approves the plan, budget caps and owners, with dates logged. Nothing spends or goes live before that.
 
 ## Checks before you hand it over
 
-- The baseline shows contribution after ads and first-order gross profit over cost per new customer.
+- The goal metric is named in the owner's words, baseline now and a year ago, working shown; the baseline also shows first-order gross profit over cost per new customer.
 - The constraint is named with the number that proves it, found in the fixed order.
-- Exactly three bets, at least two working on the constraint.
+- Every screen or rule of thumb that decides something shows its sum and source, or is cut.
+- Three bets (or the number the owner asked for), at least two working on the constraint.
+- Every bet is sized in the goal metric's unit and money per month, sum shown; the rank is a sort on it. Mixed units fail.
 - Each bet has an owner, approver, hours, cost and a low, likely and high profit range.
+- Every scorecard line has a baseline, day-90 target, owner and action threshold.
 - The monthly budget fits the cash plan with the named floor every week.
 - Every bet has week 2, 4 and 8 lines and a day-90 read.
 - No guessed lifts from overlapping bets are added together.
 
 ## Output
 
-**One-page plan:** baseline (five numbers), the constraint in one sentence, three bets with owners, total budget, day-90 targets as ranges, the runner-up bet in one line.
+**One-page plan:** the goal metric (baseline, how it moved, day-90 target), baseline (five numbers), the constraint in one sentence, bets with owners, total budget, day-90 targets as ranges, the runner-up bet in one line.
 
-**Bets table:** Bet | Constraint it works on | What changes | Owner (agent) | Approver | Hours a week | Cost | Cash by month | Profit per month low / likely / high | Test or ship | Leading signal | Week 4 line | Week 8 line.
+**Bets table:** Rank | Bet | Constraint it works on | Goal-metric impact (sum shown) | Money per month | Owner (agent) | Approver | Hours a week | Cost | Profit per month low / likely / high | Test or ship | Leading signal | Week 4 line | Week 8 line.
 
 **Budget by month:** Month | Bet spend | Normal bills | Cash in | Lowest weekly cash | Floor | Pass.
 
 **13-week grid:** Week | Bet | Signal value | Line | Status (on track, change, stop) | Note.
 
+**Weekly scorecard:** Line | Baseline | Day-90 target | Owner | Action threshold | Action.
+
 ## Common mistakes
 
 - **Ten bets.** Step 3 allows three.
+- **Mixed units, no link to the owner's goal.** Steps 1 and 4 size every bet in the goal metric.
+- **An unexplained screen.** Step 2 shows the sum and source, or drops it.
 - **Planning growth on broken unit economics.** Step 2 checks profit before traffic.
-- **Adding lifts that overlap.** Step 3 merges them into one initiative.
 - **A plan cash cannot carry.** Step 5 checks every week against the floor.
 - **No stop rule.** Step 6 writes the line before the bet starts.
-- **Judging slow bets at day 90.** Step 3 says what the day-90 read can prove.
 
 ## Sources
 
 - MEA-0026: fix unit economics before scaling.
+- MEA-0030: contribution margin without fixed costs.
 - MEA-0055: split first-time and returning P&L.
 - MEA-0032, MEA-0024: gross profit over cost per customer bands.
 - ADC-0028: data first, structure second, creative third.
@@ -142,4 +152,4 @@ The client approves the plan, budget caps and owners. Log each bet's approval da
 - CRO-0011: order-volume gates for testing.
 - MEA-0041: measurement matched to size.
 
-What makes this skill ours: the constraint is found in a fixed order that checks data and unit economics before traffic; only three bets survive, each with an owner, approver and a profit range from the store's own numbers; the budget is checked week by week against a cash floor; and every bet carries its stop line before it starts.
+What makes this skill ours: the constraint is found in a fixed order, data and unit economics before traffic; only three bets survive, each sized in the owner's goal metric with an owner; the budget is checked weekly against a cash floor; and every bet carries its stop line before it starts.

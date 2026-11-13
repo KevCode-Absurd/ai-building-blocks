@@ -6986,5 +6986,77 @@
     "why": "A 'lifetime' guarantee must say whose or what lifetime it covers.",
     "cards": 1,
     "public": true
+  },
+  {
+    "id": "S6600",
+    "file": "web",
+    "title": "A summary of the Consumer Protection (E-Commerce) Rules, 2020",
+    "author": "IndiaLaw LLP (Rahul Sundaram)",
+    "url": "https://www.indialaw.in/blog/civil/consumer-protection-e-commerce-rules/",
+    "date": "2026-08-24",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "LPG",
+      "OPS",
+      "MCR"
+    ],
+    "why": "Indian law-firm summary (tier 2) used because the official consumeraffairs.nic.in PDF refused the connection; lists duties of all e-commerce entities, marketplaces, marketplace sellers and inventory entities, including grievance officer timelines, cancellation charges and price disclosure.",
+    "cards": 3,
+    "public": true
+  },
+  {
+    "id": "S6601",
+    "file": "web",
+    "title": "Consumer Protection (E-Commerce) (Amendment) Rules, 2026 explained",
+    "author": "SCC Times, SCC Online (Shubhi)",
+    "url": "https://www.scconline.com/blog/post/2026/09/14/consumer-protection-e-commerce-amendment-rules-2026/",
+    "date": "2026-09-14",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "LPG",
+      "OPS"
+    ],
+    "why": "Legal publisher summary (tier 2) of the 2026 amendment notified 9 September 2026 and in force 1 January 2027; the gazette text was not fetched because government sites block automated access. Covers new seller disclosures, grievance copy, invoice font rule and marketplace duties.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6602",
+    "file": "web",
+    "title": "Consumer Protection (E-Commerce) (Amendment) Rules 2026: From consumer disclosure to platform governance",
+    "author": "Poovayya & Co. (Siddhartha George, Harini Sudersan, Bilal Lateefi), Bar & Bench",
+    "url": "https://www.barandbench.com/law-firms/view-point/consumer-protection-e-commerce-amendment-rules-2026-from-consumer-disclosure-to-platform-governance",
+    "date": "2026-09-28",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "OFF",
+      "MCR",
+      "LPG"
+    ],
+    "why": "Indian law-firm analysis (tier 2) of the 2026 amendment with rule numbers: prior price over 30 days (Rule 4(13)), sponsored listing labels (Rule 4(12)), and the yearly dark pattern self-audit and certificate (Rule 4(15)), effective 1 January 2027. Used because the gazette is not reachable by WebFetch.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S6603",
+    "file": "web",
+    "title": "CCPA steps in to curb Dark Patterns",
+    "author": "Khaitan & Co. (Karun Mehta, Yugam Taneja, Kaarunya Lakshmi), Bar & Bench",
+    "url": "https://www.barandbench.com/law-firms/view-point/ccpa-steps-in-to-curb-dark-patterns",
+    "date": "2023-12-18",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "CRO",
+      "OFF",
+      "CXP",
+      "MCR"
+    ],
+    "why": "Indian law-firm summary (tier 2) of the CCPA Guidelines for Prevention and Regulation of Dark Patterns, 2023, listing all 13 specified patterns with illustrations and exceptions; used because consumeraffairs.nic.in and the gazette block automated access.",
+    "cards": 3,
+    "public": true
   }
 ]
